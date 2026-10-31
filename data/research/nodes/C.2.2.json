@@ -1,0 +1,57 @@
+{
+ "id": "C.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "CSE 333 Systems Programming（University of Washington，公开讲义）",
+  "url": "https://courses.cs.washington.edu/courses/cse333/25au/",
+  "lang": "en",
+  "free": true,
+  "covers": "讲义与作业围绕 C/C++ 系统编程：C 内存模型与指针、malloc/free 等动态内存管理、链接与库和底层 OS 服务的关系、编译/调试/make/内存泄漏检测等工具链，以及网络编程（TCP/IP 客户端与服务器）和 C/C++ 并发（线程、异步 I/O）；课程有大作业逐层递进，24au 讲义目录公开可见并发、线程、进程的讲义 PDF。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Washington",
+   "course": "CSE 333 Systems Programming",
+   "url": "https://courses.cs.washington.edu/courses/cse333/25au/syllabus.html",
+   "prereq_text": "Prerequisites: CSE351 (The Hardware/Software Interface): CSE 351 provides students with rudimentary knowledge of C programming; the ability to write, run, and debug programs; ... a solid mental model of the relationship between high-level code (C) and assembly-level compiled code. CSE 143 (Intro Programming II): CSE 143 is not a direct prerequisite (CSE 351 prerequisite), but some of its topics are beneficial to review for CSE 333.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-213/15-513/14-513 Introduction to Computer Systems",
+   "url": "https://www.cs.cmu.edu/~213/",
+   "prereq_text": "Prerequisites: 15-122",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 333 先修为 CSE 351 The Hardware/Software Interface（机器级表示、汇编与内存模型）"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "UW CSE 333 syllabus：CSE 351 提供 C 编程与 Linux 工具基础；课程本身大量 C/C++ 与显式内存管理"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "CMU 15-213 先修 15-122（命令式程序设计）"
+  }
+ ],
+ "notes": "CSE 333 明确写了 CSE 143 不是直接先修（见 prereq_text 原文），因此没有把 F.1.1 列为 extra。两门课都不要求先学操作系统，所以 C.2.1 判 not_mentioned；若按 MIT 6.1810 的 xv6 路线（https://pdos.csail.mit.edu/6.1810/2024/index.html ，已核实含 syscall/page table/traps/lock 等 lab）作为本节点的进阶资源，则会隐含操作系统知识，但该站未列出先修要求，故未计入。"
+}

@@ -1,0 +1,54 @@
+{
+ "id": "C.1.2",
+ "resource": {
+  "tier": "website",
+  "title": "Digital Design and Computer Architecture (ETH Zürich, Spring 2024)",
+  "url": "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php?id=schedule",
+  "lang": "en",
+  "free": true,
+  "covers": "课程日程页列出全部讲义 PDF/PPT 与 YouTube 录像：MIPS 汇编与指令集、单周期微架构（L16-17）、流水线（L18-19）、乱序执行（L20）、SIMD/GPU 架构（L21-22）、存储层次与 cache（L24）、多核 cache 与一致性（L25a）、预取（L25b）、虚拟内存（L26），并配有习题、实验与考试题。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "UC Berkeley",
+   "course": "CS 152/252A Computer Architecture and Engineering",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS152/",
+   "prereq_text": "Prerequisites: 61C.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "18-447 Introduction to Computer Architecture",
+   "url": "https://users.ece.cmu.edu/~jhoe/doku/doku.php?id=18-447_introduction_to_computer_architecture",
+   "prereq_text": "Prerequisites: (18240) and (15213 or 18213) and (18320 or 18330 or 18340 or 18341 or 18344 or 18349)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.2",
+    "C.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.1.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 152 要求 61C（含 C 语言与机器级编程）；CMU 18-447 要求 15-213/18-213"
+  },
+  {
+   "id": "H.1.2",
+   "kind": "required",
+   "evidence": "CMU 18-447 先修写作 (18240)，即 18-240 Structure and Design of Digital Systems（数字逻辑）"
+  }
+ ],
+ "notes": "Berkeley CS 152 的课程页（含 calendar、labs）为 https://cs152.org/ ，已打开核实，也可作为备选（偏 Verilog/FPGA 实验，自学友好度低于 ETH DDCA 的视频+讲义）。ETH DDCA Spring 2024 由 Frank K. Gürkaynak 主讲（课程站 Contact 栏已核实），早年版次（SS18-SS23）与 CMU SS15 的录像链接也在该站侧栏（不同学年的讲授版本）。日程页已核实包含上列讲义标题与 PDF 链接；该页未见单独的 branch prediction 讲义标题（可能在 L18/L19 流水线讲义内部），因此 covers 未把分支预测写成已核实项。"
+}

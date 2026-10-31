@@ -1,0 +1,59 @@
+{
+ "id": "C.1.4",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford CS149 Parallel Computing (Fall 2025, Kayvon Fatahalian & Kunle Olukotun)",
+  "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+  "lang": "en",
+  "free": true,
+  "covers": "课程日程与讲义覆盖：现代多核处理器的并行形式（多核/SIMD/多线程）、latency 与 bandwidth、GPU 架构与 CUDA 编程模型、数据并行与调度、DNN 在 GPU 上的高效执行、硬件专用化与 DNN 加速器设计、面向专用硬件的编程系统、数据中心级 AI 服务、cache 一致性与内存一致性，正对 SIMD/SIMT、存储层次、吞吐计算、加速器与异构调度。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS149 Parallel Computing",
+   "url": "https://gfxcourses.stanford.edu/cs149/fall25/courseinfo",
+   "prereq_text": "CS111: Operating Systems Principles is a strongly recommended prerequisite for CS149. ... Concepts we expect you to be familiar with: The idea that a compiled computer program is a sequence of machine instructions. That a processor executes machine instructions ... The motivation for a modern memory hierarchy ... You should be familiar with reading, writing, and debugging C/C++ code",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "C.2.1",
+    "C.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-418/15-618 Parallel Computer Architecture and Programming",
+   "url": "https://www.cs.cmu.edu/afs/cs/academic/class/15418-s23/www/index.html",
+   "prereq_text": "Prerequisites: 15-213, 15-513, 18-213, or 18-600, ...",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.1.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "CMU 15-418 先修 15-213/18-213 等机器结构课；Stanford CS149 的 course info 要求熟悉机器指令、处理器执行与存储层次"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "CMU 15-418 先修 15-213（含 C 语言系统编程）；CS149 要求能读写调试 C/C++ 并自学 CUDA/ISPC"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS149 course info: 'CS111: Operating Systems Principles is a strongly recommended prerequisite for CS149.'"
+  }
+ ],
+ "notes": "两门课都没有把体系结构（C.1.2）写成先修，而是把机器结构/系统课（15-213 这类）当作基础，所以 C.1.2 判为 not_mentioned；CS149 的 CS111 是操作系统原理，映射到 C.2.1。资源页 https://gfxcourses.stanford.edu/cs149/fall25 已打开核实（课程简介+逐次课主题），course info 页也已核实先修原文。CS149 与 C.5.1 并行编程有重叠，用在本节点时以 9/25-9/30 多核架构、10/14 GPU 架构、10/23 硬件专用化几讲为主。"
+}

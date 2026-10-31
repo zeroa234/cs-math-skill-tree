@@ -1,0 +1,42 @@
+{
+ "id": "C.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "Learning Containers From The Bottom Up（Ivan Velichko 的容器学习路径）",
+  "url": "https://iximiuz.com/en/posts/container-learning-path/",
+  "lang": "en",
+  "free": true,
+  "covers": "按“先底层后上层”组织的学习路线：容器即被 namespaces 隔离、被 cgroups/capabilities/seccomp 限制的进程；fork/exec 与 namespace/cgroup 配置、runc 等容器运行时与 bundle、OCI 镜像的构建与分发、containerd 等容器管理器、Kubernetes 调度单元 Pod，以及 Kata 这类用真虚拟机实现的容器，覆盖虚拟机与容器的区别、隔离与资源控制、镜像与运行时。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.033 Computer System Engineering",
+   "url": "https://web.mit.edu/6.033/www/general.shtml",
+   "prereq_text": "Prerequisites: 6.004 and 6.009",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.033 先修 6.004（Computation Structures，机器结构与数字系统）"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.033 先修 6.009（Fundamentals of Programming）"
+  }
+ ],
+ "notes": "6.033 的日程（https://web.mit.edu/6.033/www/ ，已核实）含 LEC 3 Virtual memory、LEC 6 'OS structure, Virtual Machines'、LEC 14 'Datacenters and Clouds'，是虚拟化/云的大学课程证据；但 6.033 把 6.004+6.009 列为先修，没有要求操作系统课，故 C.2.1 记为 not_mentioned。本次会话没有 Tavily 搜索工具（只能直接 fetch 已知 URL），所以未能找到“以操作系统为先修的虚拟化/容器课”公开 syllabus；可作补充的官方文档：Linux 内核 cgroup v2（https://docs.kernel.org/admin-guide/cgroup-v2.html ，已打开）与 Docker Get started（https://docs.docker.com/get-started/ ，已打开）。资源是个人作者维护的学习路径（非大学站点），若需更“官方”的替代，可用内核文档 + Docker 文档组合，但系统性不如该路径。"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "C.1.3",
+ "resource": {
+  "tier": "website",
+  "title": "Dive into Systems (Suzanne J. Matthews, Tia Newhall, Kevin C. Webb；免费在线教材)",
+  "url": "https://diveintosystems.org/book/",
+  "lang": "en",
+  "free": true,
+  "covers": "第 5 章讲指令集/处理器执行与流水线；第 7-9 章分别用 64 位 x86、32 位 x86、ARMv8 (AArch64) 讲汇编基础、常用指令、条件与循环、函数调用（栈帧 sp/x29、参数传递）、递归、数组/结构体与缓冲区溢出；第 10 章汇总几种汇编的异同，可对照 CISC/RISC 思路。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Michigan",
+   "course": "EECS 373 Introduction to Embedded System Design",
+   "url": "https://www.eecs.umich.edu/courses/eecs373/overview.html",
+   "prereq_text": "Prerequisites: EECS 270; EECS 370 ... To be successful in EECS 373 students should be familiar with: ... (on the computer architecture side) assembly language, pipelining, memory, and caching",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.2",
+    "C.1.1",
+    "C.1.2"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 61C Great Ideas of Computer Architecture (Machine Structures)",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS61C/",
+   "prereq_text": "Prerequisites: 61A, along with either 61B or 61BL, or programming experience equivalent to that gained in 9C, 9F, or 9G.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.1.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "H.1.2",
+   "kind": "required",
+   "evidence": "University of Michigan EECS 373 先修含 EECS 270（数字逻辑），并要求熟悉布尔代数、门电路、触发器与状态机"
+  },
+  {
+   "id": "C.1.2",
+   "kind": "recommended",
+   "evidence": "EECS 373 overview: 'To be successful ... should be familiar with ... pipelining, memory, and caching'"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 61C 要求 61A（其汇编/ABI 部分即本节点入门内容）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 61C 要求 61B/61BL（数据结构）"
+  }
+ ],
+ "notes": "Dive into Systems 的 ARMv8 一章目录与 9.5 Functions in Assembly 正文均已打开核实（https://diveintosystems.org/book/C9-ARM64/functions.html 有 sp/x29 栈帧、函数调用管理的内容）。该教材不专门讲 AArch64 异常级 EL0-EL3，异常/中断部分需另配 Arm 官方架构文档；EECS 373 的 overview 页未在正文里点名 ARM 型号，故只把它当作“嵌入式/汇编课要求机器结构先修”的证据。"
+}

@@ -1,0 +1,64 @@
+{
+ "id": "C.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.033 Computer System Engineering（Spring 2022 课程站：日程、讲义与作业）",
+  "url": "https://web.mit.edu/6.033/www/",
+  "lang": "en",
+  "free": true,
+  "covers": "日程含 LEC 7 OS Performance (Storage)、LEC 15 Reliability、LEC 16 Transactions、LEC 17 Logging、LEC 19 Distributed Transactions、LEC 20 Replication，以及 GFS、ZFS、Raft、一致性等 recitation 与 hands-on logging/MapReduce 作业，对应日志、崩溃一致性、可靠性、分布式存储接口与复制。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.033 Computer System Engineering",
+   "url": "https://web.mit.edu/6.033/www/general.shtml",
+   "prereq_text": "Prerequisites: 6.004 and 6.009",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "CSE 452 Distributed Systems",
+   "url": "https://courses.cs.washington.edu/courses/cse452/",
+   "prereq_text": "Prerequisite: CSE 332 and CSE 333; recommended: CSE 451",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.2.2",
+    "C.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.1": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.033 先修 6.004（Computation Structures，机器结构）"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.033 先修 6.009（Fundamentals of Programming）"
+  },
+  {
+   "id": "C.2.2",
+   "kind": "required",
+   "evidence": "UW CSE 452 先修 CSE 333（系统编程）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 452 先修 CSE 332（数据结构与算法）"
+  }
+ ],
+ "notes": "C.2.1（操作系统）的先修地位在课程里写法不一：MIT 6.033 只要求 6.004+6.009，没提 OS；UW CSE 452 Distributed Systems（目录描述含 distributed storage systems、distributed caches）写作 'recommended: CSE 451'（CSE 451 为操作系统课），故 candidate_check 判为 recommended。补充核对过 UC Berkeley CS 162（https://www2.eecs.berkeley.edu/Courses/CS162/ ，已打开）先修写作 'COMPSCI 61B, COMPSCI 61C, and COMPSCI 70'，它本身就是 OS 课，同样没把先修 OS 当门槛。块设备与页缓存等底层细节 6.033 只讲到 'OS Performance (Storage)' 一讲，需用 OSTEP 的 persistence 部分补齐（OSTEP 已在 C.2.1 节点作为主资源，https://pages.cs.wisc.edu/~remzi/OSTEP/ 已核实）。6.033 课程站、general information 页与 CSE 452 页均已打开核实。"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "C.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.004 Computation Structures (Spring 2017, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+  "lang": "en",
+  "free": true,
+  "covers": "第 1 章信息表示（二进制编码），4-6 章组合逻辑、时序逻辑与有限状态机（控制器），9-13 章指令集设计、汇编、编译、过程与栈、Beta 处理器数据通路设计，14-18 章 cache/存储层次、流水线、虚拟内存、设备与中断，19-21 章并发同步、系统级通信与并行处理；含讲义、视频、习题与 7 个 lab。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.004 Computation Structures",
+   "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/syllabus/",
+   "prereq_text": "Prerequisites: 8.02 Physics II: Electricity and Magnetism",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 61C Great Ideas of Computer Architecture (Machine Structures)",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS61C/",
+   "prereq_text": "Prerequisites: 61A, along with either 61B or 61BL, or programming experience equivalent to that gained in 9C, 9F, or 9G.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.1.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 61C 要求 61A（程序设计基础）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 61C 要求 61B/61BL（数据结构）"
+  },
+  {
+   "id": "H.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.004 官方先修为 8.02 Physics II: Electricity and Magnetism（电学基础）"
+  }
+ ],
+ "notes": "两门课程都没有把数字逻辑（H.1.2）列为先修：MIT 6.004 自己从 MOS 管/门电路讲起（第 2-6 章），Berkeley 61C 也不要求数字电路；补充核对过 CMU 15-213（https://www.cs.cmu.edu/~213/ ，已打开）先修仅写 'Prerequisites: 15-122'。作为对照，CMU 18-447 Introduction to Computer Architecture 的官方先修写作 'Prerequisites: (18240) and (15213 or 18213) and (18320 or ...)'（https://users.ece.cmu.edu/~jhoe/doku/doku.php?id=18-447_introduction_to_computer_architecture，已打开核实），即在体系结构层次上数字逻辑才是必修，所以 H.1.2 对入门组成原理课更多是“有帮助”而非硬性先修。MIT 6.004 的 syllabus 另写 'a rudimentary knowledge of programming language concepts ... is assumed'，所以 P.1.1 对它是“假定具备”而非正式先修；资源覆盖范围按 6.004 的章节列表（syllabus 页与课程首页均已打开核实）。"
+}

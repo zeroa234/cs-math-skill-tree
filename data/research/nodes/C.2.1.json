@@ -1,0 +1,66 @@
+{
+ "id": "C.2.1",
+ "resource": {
+  "tier": "website",
+  "title": "Operating Systems: Three Easy Pieces（Remzi H. Arpaci-Dusseau & Andrea C. Arpaci-Dusseau, University of Wisconsin-Madison；免费在线教材）",
+  "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+  "lang": "en",
+  "free": true,
+  "covers": "全书按 virtualization / concurrency / persistence 三部分组织：进程与地址空间、CPU 调度（MLFQ、多处理器调度）、虚拟内存与分页/TLB/置换策略、线程与锁/条件变量/信号量、并发 bug、I/O 设备与磁盘、RAID、文件系统实现与日志/崩溃一致性，正好覆盖进程线程、调度、虚拟内存、文件系统、I/O、同步与隔离。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "UC Berkeley",
+   "course": "CS 162 Operating Systems and System Programming",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS162/",
+   "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1",
+    "M.5.3",
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-410/605 Operating System Design and Implementation",
+   "url": "https://www.cs.cmu.edu/~410/",
+   "prereq_text": "Preparatory coursework: The best preparation for this class is taking 15-213/513 (18-213, 18-613, 14-513) followed by one of the 15-4xx/6xx \"Systems electives\": 15-411/611, 15-418/618, 15-440/640, 15-441/641, 15-445/645.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.1.1": "supported",
+  "P.1.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 162 要求 COMPSCI 61B（数据结构）"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 162 先修 COMPSCI 61C（含 C 语言与机器级编程）；CMU 15-410 只是建议先修 15-213，故不计入 required"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 162 要求 COMPSCI 70（离散数学与概率论，含证明与离散结构）"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 162 要求 COMPSCI 70（含离散概率，对应概率论基础）"
+  }
+ ],
+ "notes": "两门课都没有直接写“程序设计入门”作为先修：Berkeley 要求 61B（数据结构），而 61B 本身以 61A（P.1.1）为前提，故 P.1.1 判为 not_mentioned 而非 supported，是否视为必修由主代理按传递关系决定。CMU 15-410 的先修写在 'Preparatory coursework' 段，措辞是 'The best preparation ... is taking ...'，故记为 recommended。OSTEP 页面已核实为 v1.10 免费在线书（含全部章节 PDF 链接）。"
+}
