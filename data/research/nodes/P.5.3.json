@@ -1,0 +1,59 @@
+{
+ "id": "P.5.3",
+ "resource": {
+  "tier": "website",
+  "title": "The Site Reliability Workbook（Google 官方免费在线版，SRE 实践手册）",
+  "url": "https://sre.google/workbook/table-of-contents/",
+  "lang": "en",
+  "free": true,
+  "covers": "第 1 章 SRE 与 DevOps 的关系、第 2-3 章实现 SLO/SLO 案例、第 4-5 章监控与基于 SLO 的告警、第 8-10 章 On-call/事件响应/复盘文化、第 11 章 Managing Load（容量与负载）、第 14-15 章配置设计与实践、第 16 章 Canarying Releases（金丝雀发布），覆盖可观测性、SLO、发布策略、故障恢复与容量。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Chicago (MPCS)",
+   "course": "MPCS 56550 Introduction to DevOps",
+   "url": "https://mpcs-courses.cs.uchicago.edu/2025-26/summer/courses/mpcs-56550-1",
+   "prereq_text": "MPCS Students: Core Programming completed (MPCS 51036, or 51040, or 51042, or 51046, or 51100) or Core Programming Waiver. Non-MPCS Students: Must have completed CMSC 14200, CAPP 30122 or MACS 30122 or MPCS Programming Placement Exam I.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "Cornell University",
+   "course": "CS 5150 Software Engineering（课程描述含 continuous integration、release management）",
+   "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/syllabus.html",
+   "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.1.2",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.1": "recommended",
+  "P.2.4": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UChicago MPCS 56550 必修 Core Programming（MPCS 51036 等编程课）；Cornell CS 5150 必修 CS 2110"
+  },
+  {
+   "id": "P.1.2",
+   "kind": "required",
+   "evidence": "Cornell CS 5150 的 CS 2110 为面向对象程序设计课"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Cornell CS 2110 含数据结构"
+  }
+ ],
+ "notes": "C.2.1=recommended 来自 Cornell CS 5150：syllabus 写 CS 4410/4414（操作系统）为“strongly recommended”。两门课都在课内教版本控制/构建，但都没把它列为先修，故 P.2.4=not_mentioned。资源页 2026-10-31 打开核实：SRE Workbook 目录含 SLO/监控/告警/On-call/事件响应/复盘/Managing Load/配置/Canarying。覆盖缺口：这本书讲的是“交付之后”的可靠性，CI/CD 流水线本身讲得少（金丝雀发布有），配 Google《Software Engineering at Google》第 23-24 章 Continuous Integration / Continuous Delivery（https://abseil.io/resources/swe-book/html/ch23.html 、ch24.html，均 200）更完整；入门型中文替代可看《SRE：Google 运维解密》（英文原书免费在线：https://sre.google/sre-book/table-of-contents/ ）。"
+}

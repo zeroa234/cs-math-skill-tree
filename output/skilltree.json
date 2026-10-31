@@ -3,11 +3,11 @@
   "built": "2026-10-31",
   "skills": 201,
   "steps": 7,
-  "requiredEdges": 265,
-  "recommendedEdges": 271,
-  "verifiedPrereqs": 89,
-  "withResource": 90,
-  "withExercise": 89,
+  "requiredEdges": 264,
+  "recommendedEdges": 282,
+  "verifiedPrereqs": 97,
+  "withResource": 99,
+  "withExercise": 99,
   "card": {
    "w": 176,
    "h": 58,
@@ -263,7 +263,7 @@
    "en": "Programming & Software Engineering",
    "color": "#1f9d74",
    "optional": false,
-   "height": 666,
+   "height": 810,
    "count": 20
   },
   {
@@ -303,7 +303,7 @@
    "en": "Cybersecurity",
    "color": "#d0463b",
    "optional": false,
-   "height": 464,
+   "height": 396,
    "count": 17
   },
   {
@@ -7405,7 +7405,9 @@
     "P.2.3",
     "P.2.4",
     "P.4.1",
+    "P.4.5",
     "P.5.1",
+    "P.5.2",
     "C.1.1",
     "C.3.2",
     "D.2.1",
@@ -7455,7 +7457,7 @@
    },
    "droppedOriginal": [],
    "x": 0,
-   "y": 304
+   "y": 376
   },
   {
    "id": "P.1.2",
@@ -7493,8 +7495,7 @@
    "prereqStatus": "verified",
    "prereqSummary": "Cornell CS 2110 与 Georgia Tech CS 1331 都要求先修入门编程课。",
    "unlocks": [
-    "P.4.3",
-    "P.5.2"
+    "P.4.3"
    ],
    "related": [
     {
@@ -7503,7 +7504,7 @@
     }
    ],
    "step": 2,
-   "reach": 4,
+   "reach": 2,
    "resource": {
     "tier": "website",
     "title": "Cornell CS 2110: Object-Oriented Programming and Data Structures（公开课程网站，含 slides、代码与作业说明）",
@@ -7547,7 +7548,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 376
+   "y": 16
   },
   {
    "id": "P.1.3",
@@ -7641,7 +7642,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 520
+   "y": 88
   },
   {
    "id": "P.1.4",
@@ -7733,7 +7734,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 304
+   "y": 160
   },
   {
    "id": "P.2.1",
@@ -7828,7 +7829,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 160
+   "y": 232
   },
   {
    "id": "P.2.2",
@@ -7928,7 +7929,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 88
+   "y": 304
   },
   {
    "id": "P.2.3",
@@ -8014,7 +8015,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 448
+   "y": 376
   },
   {
    "id": "P.2.4",
@@ -8094,7 +8095,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 592
+   "y": 448
   },
   {
    "id": "P.3.1",
@@ -8211,7 +8212,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 376
+   "y": 268
   },
   {
    "id": "P.3.2",
@@ -8312,7 +8313,7 @@
    },
    "droppedOriginal": [],
    "x": 696,
-   "y": 376
+   "y": 412
   },
   {
    "id": "P.4.1",
@@ -8342,23 +8343,22 @@
    "required": [
     {
      "id": "P.1.1",
-     "why": "工程原则需要基本程序构造经验。",
+     "why": "CMU 17-313 先修 15-122/15-121，Berkeley CS 169A 先修 61A：没写过程序就体会不到迭代、评审、集成要解决的问题。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "F.1.1",
-     "why": "",
+     "why": "Berkeley CS 169A 必修 61B（数据结构）；入门的过程模型本身不依赖数据结构，团队项目实践时才需要。",
      "kind": "recommended"
     }
    ],
    "prereqStatus": "verified",
-   "prereqSummary": "",
+   "prereqSummary": "CMU 17-313：先修 15-122 或 15-121；Berkeley CS 169A：先修 61A + 61B。",
    "unlocks": [
     "P.4.2",
-    "P.4.3",
-    "P.4.5"
+    "P.4.6"
    ],
    "related": [
     {
@@ -8367,7 +8367,7 @@
     }
    ],
    "step": 2,
-   "reach": 6,
+   "reach": 2,
    "resource": {
     "tier": "website",
     "title": "Cooperative Software Development（Amy J. Ko，华盛顿大学，免费在线教材）",
@@ -8396,10 +8396,25 @@
      "prereq_kind": "required"
     }
    ],
-   "exercise": null,
+   "exercise": {
+    "id": "P.4.1",
+    "level": "D1",
+    "time_min": 30,
+    "question": "(1) 为下面三个项目各选一种开发过程模型（瀑布、迭代增量、Scrum 式敏捷），每个用一两句话说明理由：\nA. 飞机刹车控制固件，需求由适航标准事先固定，每个阶段的文档都要接受第三方审查；\nB. 一家初创公司的社交 App，用户需求还在摸索，希望每两周看到可试用的版本；\nC. 一个大型政务系统，总体范围已明确，但要求分三期上线，每期交付一批可用模块。\n(2) 某 Scrum 团队冲刺长度为 2 周，前三个冲刺完成的故事点分别是 21、18、24。产品待办列表还剩 130 点。按平均速度估算还需要几个冲刺、几周？如果产品负责人要求 10 周内全部完成，团队应该和他讨论哪两类调整？\n(3) 项目经理想把团队从 4 人扩到 8 人来赶进度。两两之间都需要沟通时，沟通路径数从多少变成多少？据此解释为什么“加人不一定能加快进度”。\n(4) 下面每条实践主要是为了降低哪种风险？各写一句：a. 每次合并前都要求另一名成员做代码评审；b. 每天多次把代码合入主干并自动跑测试；c. 每个迭代结束都给客户演示可运行的软件。",
+    "answer": "(1) A 选瀑布（或带严格阶段评审的计划驱动模型）：需求稳定，且认证要求每阶段有完整文档与审查，阶段式推进最合适。B 选 Scrum 式敏捷：需求不确定，需要两周一次的可试用增量来获取反馈、调整待办列表。C 选迭代增量：总体范围明确，可预先规划并分三期交付，每期在前一期基础上增加功能。\n(2) 平均速度 = (21+18+24)/3 = 63/3 = 21 点/冲刺；130/21 ≈ 6.19，向上取整为 7 个冲刺，即 7×2 = 14 周。10 周只有 5 个冲刺，按平均速度约能完成 5×21 = 105 点，还差约 25 点。应讨论：① 缩减或重新排序范围（只做优先级最高的约 105 点）；② 调整时间或资源（延期，或在接受磨合成本的前提下增加人手），而不是要求团队靠加班“提速”。\n(3) 沟通路径数 n(n−1)/2：4 人时 4×3/2 = 6 条，8 人时 8×7/2 = 28 条。新人需要培训和熟悉代码，沟通协调成本随人数近似平方增长，所以项目后期加人往往不能按比例缩短工期，甚至会更慢（布鲁克斯定律）。\n(4) a. 降低缺陷和设计问题进入主干的风险，同时传播知识，避免只有一个人懂某段代码；b. 降低集成冲突长期累积、到后期才集中爆发的风险（持续集成，问题尽早暴露）；c. 降低做出来的东西不符合客户真实需求的风险（尽早获得反馈，及时纠偏）。",
+    "covers": [
+     "生命周期与过程模型选择",
+     "迭代/敏捷：冲刺与速度估算",
+     "团队规模与沟通成本",
+     "评审、持续集成、迭代演示等工程实践的目的"
+    ],
+    "uses_prereqs": [
+     "P.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 232
+   "y": 520
   },
   {
    "id": "P.4.2",
@@ -8428,13 +8443,19 @@
    "required": [
     {
      "id": "P.4.1",
-     "why": "",
+     "why": "Chalmers DAT232 要求先修一门软件开发项目课（如 DAT257 敏捷项目管理）；需求活动嵌在开发过程里。",
      "kind": "required"
     }
    ],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [
+    {
+     "id": "P.1.2",
+     "why": "领域模型常用类图表达；Cornell CS 5150 要求 CS 2110（面向对象）。",
+     "kind": "recommended"
+    }
+   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "Cornell CS 5150：先修 CS 2110；Chalmers DAT232：先修编程课 + 软件工程项目课。",
    "unlocks": [],
    "related": [
     {
@@ -8444,13 +8465,50 @@
    ],
    "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Cornell CS 5150: Software Engineering（康奈尔大学课程站，讲义公开：Lecture 3 Requirements / Lecture 4 Models）",
+    "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/",
+    "lang": "en",
+    "free": true,
+    "covers": "Lecture 3 讲需求获取（利益相关者与视点分析）、功能/非功能需求、可验证需求、需求分析-建模-规格化三步与验收测试；Lecture 4 讲 UML 建模（用例、活动/流程、状态图、类图、顺序图）、领域术语与系统状态，覆盖需求获取、用例、约束、验收标准与领域建模。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Cornell University",
+     "course": "CS 5150 Software Engineering",
+     "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/syllabus.html",
+     "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Chalmers University of Technology",
+     "course": "DAT232 Advanced requirements engineering",
+     "url": "https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/DAT232/",
+     "prereq_text": "To be eligible for this course the student should have a bachelor degree in Software Engineering, Computer Science, Information Technology, Information Systems, or equivalent; a completed course in programming (e.g., TDA548 Introductory software development, DAT043/DAT050 Object-oriented Programming, TDA452 Functional Programming, or equivalent); a completed project course (or bachelor thesis) in applied software development or software engineering (e.g., TDA367 Object-oriented programming project, or DAT257 - Agile software project management).",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.4.2",
+    "level": "D2",
+    "time_min": 45,
+    "question": "场景：为大学生做一个“校园二手书交易平台”。\n(1) 写出 3 条用户故事（作为……我想要……以便……），每条配 2 条 Given/When/Then 形式的验收标准。\n(2) 分别写 2 条功能需求和 2 条非功能需求；把“系统要快”改写成可以验证的非功能需求。\n(3) 建立领域模型：识别至少 5 个概念类（如用户、书、挂单、订单、评价），写出它们的关系和多重性。\n(4) 卖家希望匿名，买家希望看到卖家的信用——怎样协调这个需求冲突？用 MoSCoW 法给 6 个候选功能排优先级。",
+    "answer": "(1) 示例：① 作为卖家，我想拍照上架一本书并填写价格，以便尽快卖掉不用的教材。验收：Given 已登录，When 提交书名、ISBN、价格和至少 1 张照片，Then 挂单出现在“我的在售”且状态为“在售”；Given 价格为空，When 提交，Then 提示“请填写价格”且不创建挂单。② 作为买家，我想按课程名或 ISBN 搜索，以便找到指定教材。验收：Given 存在 ISBN 为 X 的在售书，When 搜索 X，Then 结果第一页包含它；Given 没有匹配，When 搜索，Then 显示“暂无结果”和订阅提醒入口。③ 作为买家，我想在交易完成后评价卖家，以便帮助别人判断信用。验收：Given 订单已完成，When 提交 1–5 星评分，Then 卖家信用分更新；Given 订单未完成，Then 评价按钮不可用。\n(2) 功能：用户可以发布、编辑、下架挂单；买家可以下单并与卖家站内沟通。非功能：校园网环境下搜索请求的 95 分位响应时间 ≤ 500 ms（这就是“要快”的可验证版本）；用户手机号只对交易双方可见，存储时加密。\n(3) 用户 1 —— 0..* 挂单（作为卖家）；书 1 —— 0..* 挂单（同一本书可被多人挂）；挂单 1 —— 0..1 订单；用户 1 —— 0..* 订单（作为买家）；订单 1 —— 0..2 评价（买卖双方各一条）；用户 1 —— 0..* 评价（作为被评价者）。\n(4) 协调：卖家对外显示昵称而不是真实身份，但平台展示由历史订单计算的信用分和评价数；真实身份只在平台内部实名认证时使用。MoSCoW：Must——发布挂单、搜索、下单；Should——站内消息、信用评价；Could——降价提醒订阅；Won't（本期不做）——在线支付担保。",
+    "covers": [
+     "用户故事与验收标准",
+     "功能与非功能需求",
+     "领域建模",
+     "需求冲突与优先级"
+    ],
+    "uses_prereqs": [
+     "P.4.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 160
+   "y": 484
   },
   {
    "id": "P.4.3",
@@ -8479,38 +8537,80 @@
    "required": [
     {
      "id": "P.1.2",
-     "why": "对象与接口概念支撑面向对象分析设计。",
-     "kind": "required"
-    },
-    {
-     "id": "P.4.1",
-     "why": "",
+     "why": "Cornell CS 5150 要求 CS 2110（面向对象），CMU 17-214 要求两学期编程课：设计模式建立在类、接口、多态上。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "P.4.1",
+     "why": "设计活动放在开发过程里理解更完整。",
+     "kind": "recommended"
+    },
+    {
      "id": "P.4.2",
-     "why": "明确需求与约束后分配软件职责。",
+     "why": "分析模型来自需求和领域模型。",
+     "kind": "recommended"
+    },
+    {
+     "id": "F.1.1",
+     "why": "CMU 17-214 的先修含数据结构。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "CMU 17-214：先修 15-121/15-122；Cornell CS 5150：先修 CS 2110。两门课都没把需求工程列为先修。",
    "unlocks": [
-    "P.4.4",
-    "P.4.6"
+    "P.4.4"
    ],
    "related": [],
    "step": 3,
-   "reach": 2,
-   "resource": null,
+   "reach": 1,
+   "resource": {
+    "tier": "website",
+    "title": "Refactoring.Guru — Design Patterns 与 Refactoring（含 22 个经典模式的分类目录、代码坏味与重构手法）",
+    "url": "https://refactoring.guru/design-patterns",
+    "lang": "en",
+    "free": true,
+    "covers": "按创建型/结构型/行为型组织的 22 个经典设计模式（每个含意图、类图、优缺点、多语言示例），另一板块 Refactoring 讲代码坏味与逐条重构手法；覆盖设计模式、接口与职责划分、重构，并以类图（UML 子集）表达结构。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Carnegie Mellon University",
+     "course": "17-214/514 Principles of Software Construction: Objects, Design, and Concurrency",
+     "url": "https://cmu-17-214.github.io/f2026/",
+     "prereq_text": "Prerequisites: 15-121 or 15-122, or equivalent with instructors' permission. The equivalent of 2 semester-long programming classes. Ability to write and reason about small programs (preconditions, postconditions, invariants).",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Cornell University",
+     "course": "CS 5150 Software Engineering（含 Lecture 8-10 Program Design / Design Patterns）",
+     "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/syllabus.html",
+     "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.4.3",
+    "level": "D2",
+    "time_min": 50,
+    "question": "下面的类同时负责读数据库、计算统计结果、按格式输出：\n```python\nclass ReportGenerator:\n    def generate(self, fmt):\n        rows = sqlite3.connect(\"sales.db\").execute(\"SELECT * FROM sales\").fetchall()\n        total = sum(r[2] for r in rows)\n        if fmt == \"html\":\n            return f\"<h1>Total {total}</h1>\"\n        elif fmt == \"csv\":\n            return f\"total,{total}\"\n        else:\n            raise ValueError(fmt)\n```\n(1) 它违反了哪些设计原则（单一职责、开闭原则等）？会带来什么维护问题？\n(2) 用策略模式重构输出格式部分，写出代码，并说明新增 PDF 格式时需要改哪些地方。\n(3) 用依赖倒置 + 依赖注入，让 ReportGenerator 在单元测试中不必连接真实数据库。\n(4) 观察者模式：股价变化时要通知多个显示组件。写出主题和观察者的接口，以及注册和通知的过程。\n(5) 用文字描述“下订单”用例的 UML 时序图，参与者为 OrderController、OrderService、Inventory、Payment。",
+    "answer": "(1) 单一职责：数据访问、业务计算、展示格式三种变化原因混在一个类里，改任何一项都要动它。开闭原则：每加一种格式都要修改 if 分支。依赖倒置：直接依赖具体的 sqlite3 和文件名，无法替换，测试必须准备真实数据库。\n(2)\n```python\nclass Formatter(Protocol):\n    def format(self, total: float) -> str: ...\nclass HtmlFormatter:\n    def format(self, total): return f\"<h1>Total {total}</h1>\"\nclass CsvFormatter:\n    def format(self, total): return f\"total,{total}\"\n\nclass ReportGenerator:\n    def __init__(self, repo, formatter: Formatter):\n        self.repo, self.formatter = repo, formatter\n    def generate(self):\n        total = sum(r.amount for r in self.repo.all_sales())\n        return self.formatter.format(total)\n```\n新增 PDF 只需写一个 PdfFormatter 类，在组装处传入，不改 ReportGenerator：对扩展开放、对修改关闭。\n(3) 定义抽象 SalesRepository（all_sales()），生产环境用 SqliteSalesRepository，测试时注入内存假实现：ReportGenerator(FakeRepo([Sale(amount=3), Sale(amount=4)]), CsvFormatter()).generate() == \"total,7\"。高层模块依赖抽象，具体实现由外部注入。\n(4)\n```python\nclass Observer(Protocol):\n    def update(self, symbol: str, price: float) -> None: ...\nclass Stock:\n    def __init__(self, symbol):\n        self.symbol, self._observers = symbol, []\n    def attach(self, o: Observer): self._observers.append(o)\n    def set_price(self, p):\n        self.price = p\n        for o in self._observers:\n            o.update(self.symbol, p)\n```\n显示组件实现 update 并调用 attach 注册；价格变化时主题逐个通知。主题不需要知道观察者的具体类型。\n(5) OrderController → OrderService：placeOrder(cart)；OrderService → Inventory：reserve(items)，返回成功；OrderService → Payment：charge(amount)，返回成功；OrderService → Inventory：commit(reservation)；OrderService → OrderController：返回 orderId。可选分支：charge 失败时 OrderService → Inventory：release(reservation)，向 Controller 返回失败。",
+    "covers": [
+     "设计原则（SOLID）",
+     "策略模式与重构",
+     "依赖注入与可测试性",
+     "观察者模式",
+     "UML 时序图"
+    ],
+    "uses_prereqs": [
+     "P.1.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 232
+   "y": 196
   },
   {
    "id": "P.4.4",
@@ -8540,24 +8640,29 @@
    "required": [
     {
      "id": "P.4.3",
-     "why": "模块设计推广到系统级结构与质量权衡。",
+     "why": "UQ CSSE6400 Software Architecture 先修 CSSE3200（设计、实现与测试工作室课）。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "P.4.5",
+     "why": "CSSE3200 同时包含测试；架构评估要考虑可测试性。",
+     "kind": "recommended"
+    },
+    {
      "id": "C.3.2",
-     "why": "",
+     "why": "分布式架构要懂网络通信（深入层）。",
      "kind": "recommended"
     },
     {
      "id": "D.1.1",
-     "why": "",
+     "why": "数据架构和存储选型要懂数据库（深入层）。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UQ CSSE6400：先修 CSSE3200 或 DECO2800；Cornell CS 5150：先修 CS 2110。",
    "unlocks": [],
    "related": [
     {
@@ -8567,13 +8672,50 @@
    ],
    "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "The University of Queensland — CSSE6400 Software Architecture（完整课程站，每周主题 + 讲义 handout）",
+    "url": "https://csse6400.uqcloud.net/",
+    "lang": "en",
+    "free": true,
+    "covers": "按周组织的课程内容：架构与组件边界、分层架构、管道架构、微内核与容器、架构视图（Architectural Views）、架构决策记录（ADR）、安全原则、基础设施即代码，覆盖组件与边界、架构风格、质量属性与架构决策。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "The University of Queensland",
+     "course": "CSSE6400 Software Architecture",
+     "url": "https://programs-courses.uq.edu.au/course.html?course_code=CSSE6400",
+     "prereq_text": "Prerequisite: CSSE3200 or DECO2800",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Cornell University",
+     "course": "CS 5150 Software Engineering（含 Lecture 5-8 Planning / Architecture / Program Design）",
+     "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/syllabus.html",
+     "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.4.4",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 比较分层架构、微服务架构、事件驱动架构的优缺点。一个 5 人团队的初创电商应该选哪种？为什么？\n(2) 为“下单接口在峰值 1000 次/秒时，99% 的请求在 300 ms 内返回”写出完整的质量属性场景（来源、刺激、环境、制品、响应、响应度量），并列出两种以上能满足它的架构策略。\n(3) 购物车服务部署在两个数据中心。发生网络分区时选 CP 还是 AP？两种选择下用户分别会看到什么？\n(4) 写一份简短的架构决策记录（ADR）：订单数据用 PostgreSQL 还是 MongoDB（背景、决策、后果）。",
+    "answer": "(1) 分层架构：结构简单、易于理解和部署，但各层耦合在一个部署单元里，规模大了以后难以独立扩展。微服务：按业务能力拆分、可独立部署和扩展、技术栈灵活，但带来分布式复杂度（网络故障、数据一致性、监控、运维），需要成熟的 DevOps。事件驱动：生产者和消费者松耦合、易于扩展和异步处理，但流程分散，难以追踪和调试，只能做到最终一致。5 人初创团队建议用模块化的单体（内部分层、按业务划清模块边界）：交付快、运维简单；等出现明确的独立扩展需求时，再沿模块边界拆出服务。\n(2) 来源：用户客户端；刺激：下单请求；环境：促销高峰，1000 次/秒；制品：订单服务及其数据库；响应：请求被处理并返回订单号；度量：99 分位延迟 ≤ 300 ms，错误率 < 0.1%。策略：无状态服务 + 负载均衡水平扩展；商品、库存信息读缓存；扣库存等耗时步骤放进消息队列异步处理（先返回“处理中”）；数据库读写分离、连接池；限流和降级保护核心链路。\n(3) CP：分区期间为保证一致，少数派一侧拒绝写入，用户看到“暂时无法加入购物车”。AP：两边都继续接受写入，用户能正常操作，但两个数据中心的购物车暂时不一致，分区恢复后合并（例如取并集，可能出现删掉的商品又回来了）。购物车通常选 AP，因为可用性带来的收入比短暂不一致的代价更重要；支付、扣款这类则选 CP。\n(4) ADR-007 订单存储。背景：订单包含订单头和明细行，需要事务（扣库存与创建订单要原子）、按用户和时间查询，以及财务报表；团队熟悉 SQL。决策：使用 PostgreSQL，可变的扩展属性用 JSONB 列存放。后果：获得 ACID 事务、外键约束和成熟的报表查询能力；表结构变更需要迁移脚本；单机写入能力有上限，未来可通过分区表或按用户分库扩展。",
+    "covers": [
+     "架构风格对比",
+     "质量属性场景与架构策略",
+     "分布式权衡（CAP）",
+     "架构决策记录"
+    ],
+    "uses_prereqs": [
+     "P.4.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 232
+   "y": 340
   },
   {
    "id": "P.4.5",
@@ -8602,14 +8744,30 @@
    "optional": false,
    "required": [
     {
-     "id": "P.4.1",
-     "why": "生命周期与规格为测试层次和质量评价提供背景。",
+     "id": "P.1.1",
+     "why": "Cornell CS 5150 与 UQ CSSE3200 都只要求编程课；单元测试就是写程序来检查程序。",
      "kind": "required"
     }
    ],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [
+    {
+     "id": "P.1.2",
+     "why": "两门课的编程先修都是面向对象课，mock、依赖注入常在 OOP 语境里讲。",
+     "kind": "recommended"
+    },
+    {
+     "id": "P.4.1",
+     "why": "测试策略放在开发过程中理解更完整。",
+     "kind": "recommended"
+    },
+    {
+     "id": "F.1.1",
+     "why": "两门课的先修含数据结构。",
+     "kind": "recommended"
+    }
+   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "Cornell CS 5150：先修 CS 2110；UQ CSSE3200：先修 CSSE2002。都没要求软件工程基础课。",
    "unlocks": [
     "S.3.2"
    ],
@@ -8619,15 +8777,53 @@
      "why": "测试提供有限执行证据；形式验证针对模型和规格推导保证。"
     }
    ],
-   "step": 3,
+   "step": 2,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Software Engineering at Google（免费在线版，Part III: Testing 第 11–14 章）",
+    "url": "https://abseil.io/resources/swe-book/html/ch11.html",
+    "lang": "en",
+    "free": true,
+    "covers": "第 11 章 Testing Overview（为何测试、测试与可变更性的关系）、第 12 章 Unit Testing（单元测试的价值、覆盖率的意义、防止脆弱测试）、第 13 章 Test Doubles（替身对设计与测试的影响）、第 14 章 Larger Testing（集成测试与端到端/系统测试、单元测试覆盖不到的缺口）；覆盖单元/集成/系统测试、覆盖率与质量评估。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Cornell University",
+     "course": "CS 5150 Software Engineering（Lecture 13-16 Testing / Testing 2 / Dynamic Analysis, Fuzzing / Unit Test Generation）",
+     "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/schedule.html",
+     "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "The University of Queensland",
+     "course": "CSSE3200 Software Engineering Studio: Design, Implement and Test",
+     "url": "https://programs-courses.uq.edu.au/course.html?course_code=CSSE3200",
+     "prereq_text": "Prerequisite: CSSE2002",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.4.5",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 函数 classify_triangle(a, b, c) 返回“等边”“等腰”“不等边”或“非法”。用等价类划分和边界值分析设计至少 8 个测试用例，说明每个用例代表哪一类。\n(2) 用 pytest 写出其中 4 个测试（可用 @pytest.mark.parametrize），说明 Arrange–Act–Assert 结构。\n(3) 对语句 if (a > 0 && b > 0) { … }，语句覆盖、分支覆盖、条件覆盖、MC/DC 各最少需要哪些测试输入？\n(4) 测试金字塔中单元测试、集成测试、端到端测试应该怎样分配？什么是 mock？过度使用 mock 有什么风险？\n(5) 系统平均无故障时间 MTBF = 500 小时，平均修复时间 MTTR = 2 小时，可用性是多少？要达到 99.99% 的可用性，一年最多能停机多久？",
+    "answer": "(1) 有效类：等边 (3, 3, 3)；等腰三种位置 (3, 3, 4)、(3, 4, 3)、(4, 3, 3)；不等边 (3, 4, 5)。无效类：有边 ≤ 0 (0, 4, 5)、(−1, 4, 5)；违反三角不等式 (1, 2, 5)。边界：两边之和恰好等于第三边 (1, 2, 3)，应判“非法”（退化三角形）；刚好满足 (2, 2, 3)。\n(2)\n```python\nimport pytest\n@pytest.mark.parametrize(\"a,b,c,expected\", [\n    (3, 3, 3, \"等边\"),\n    (3, 4, 3, \"等腰\"),\n    (3, 4, 5, \"不等边\"),\n    (1, 2, 3, \"非法\"),\n])\ndef test_classify(a, b, c, expected):\n    # Arrange：参数已经准备好；Act：调用被测函数\n    result = classify_triangle(a, b, c)\n    # Assert：检查结果\n    assert result == expected\n```\n(3) 语句覆盖：(1, 1)，让 if 内语句执行一次。分支覆盖：(1, 1) 为真，(−1, 1) 为假。条件覆盖：每个原子条件都取过真和假，如 (1, −1) 与 (−1, 1)（注意这两个用例的判定结果都为假，所以条件覆盖不保证分支覆盖）。MC/DC：(1, 1) → 真；(−1, 1) → 假，只改变 a 就改变结果；(1, −1) → 假，只改变 b 就改变结果。共 3 个用例。\n(4) 金字塔：大量快速、稳定的单元测试，适量的集成测试（真实数据库、服务之间的交互），少量覆盖关键用户流程的端到端测试（慢、脆弱、维护成本高）。mock 是用可编程的替身代替真实依赖，用来隔离被测单元、模拟错误情况。过度 mock 会让测试与实现细节耦合（重构就失败），而且 mock 的行为可能与真实依赖不一致，测试全部通过、线上照样出错。\n(5) A = MTBF / (MTBF + MTTR) = 500/502 ≈ 99.60%。99.99% 意味着每年停机不超过 0.0001 × 8760 h ≈ 0.876 h ≈ 52.6 分钟。",
+    "covers": [
+     "测试用例设计（等价类、边界值）",
+     "单元测试",
+     "覆盖准则",
+     "测试策略与 mock",
+     "可靠性指标"
+    ],
+    "uses_prereqs": [
+     "P.1.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 464,
-   "y": 88
+   "x": 232,
+   "y": 592
   },
   {
    "id": "P.4.6",
@@ -8656,36 +8852,72 @@
    "optional": false,
    "required": [
     {
-     "id": "P.4.3",
-     "why": "理解已有设计后分析演化、兼容和重构。",
+     "id": "P.4.1",
+     "why": "苏黎世大学 Software Maintenance and Evolution 要求先修软件工程模块和软件实习项目。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "P.4.3",
+     "why": "识别设计债、重构到模式需要设计知识。",
+     "kind": "recommended"
+    },
+    {
      "id": "P.4.5",
-     "why": "",
+     "why": "安全重构依赖测试保护。",
      "kind": "recommended"
     },
     {
      "id": "P.2.4",
-     "why": "",
+     "why": "演化分析常基于版本历史。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UZH Software Maintenance and Evolution：先修软件工程 + 软件实习。",
    "unlocks": [],
    "related": [],
-   "step": 4,
+   "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Software Engineering at Google（免费在线版：第 1 章 Programming over Time、第 15 章 Deprecation、第 17 章 Code Search、第 22 章 Large-Scale Changes）",
+    "url": "https://abseil.io/resources/swe-book/html/toc.html",
+    "lang": "en",
+    "free": true,
+    "covers": "第 1 章讲“软件工程 = 编程对时间积分”、可持续性与长期变更成本（技术债的根源）；第 15 章 Deprecation 讲系统老化、弃用策略、兼容期与迁移；第 17 章 Code Search 讲在大代码库中定位与阅读陌生代码；第 22 章 Large-Scale Changes 讲大规模重构/迁移的流程与工具。覆盖可维护性、兼容性、迁移、代码理解与技术债。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of Zurich",
+     "course": "Software Maintenance and Evolution（HS21，s.e.a.l. 组）",
+     "url": "https://www.ifi.uzh.ch/en/seal/teaching/courses/archive/HS21/sme.html",
+     "prereq_text": "Prerequisites: BSc Informatik: Assessmentstufe, Module Software Engineering und Software-Praktikum",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.4.6",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) Lehman 演化定律里的“持续变更”和“复杂度递增”是什么意思？为什么软件需要持续重构？\n(2) 下列代码坏味各用什么重构手法处理：长方法、重复代码、过长参数列表、发散式变化（一个类因多种原因被修改）、霰弹式修改（一个改动要改很多类）？\n(3) 团队为赶上线跳过了测试，并把配置写死在代码里。用技术债象限（鲁莽 / 谨慎 × 故意 / 无意）归类，并提出一个可执行的偿还计划。\n(4) 一段没有测试的遗留代码需要修改其中一个函数，怎样安全地改？解释特征测试（characterization test）、接缝（seam）和绞杀者模式（strangler fig）。\n(5) 怎样安全地废弃一个被很多服务调用的 API？",
+    "answer": "(1) 持续变更：被使用的软件必须不断修改以适应环境，否则会逐渐失去用处。复杂度递增：随着不断修改，结构会退化、复杂度上升，除非专门投入工作去降低它。因此重构不是一次性的工作，而要作为日常开发的一部分，控制演化带来的熵增。\n(2) 长方法 → 提取函数；重复代码 → 提取函数 / 提取父类或公共模块；过长参数列表 → 引入参数对象或直接传入整个对象；发散式变化 → 按变化原因拆分类（提取类）；霰弹式修改 → 把分散的逻辑移到同一个模块（搬移函数、内联类）。\n(3) 为赶工期明知而为，属于“谨慎且故意”（如果是不知道测试的重要性则属于“鲁莽”）。计划：把债务登记进待办列表并估算代价；每个迭代固定留出约 15–20% 的时间偿还；先给最常修改、最关键的模块补测试，把硬编码的配置抽到配置文件或环境变量；规定新代码必须带测试（在 CI 中设覆盖率门槛）；用缺陷率、修改前置时间等指标跟踪效果。\n(4) 先写特征测试：不判断对错，只记录当前的实际行为，作为安全网。找接缝：在不修改调用方的前提下替换依赖的位置（如把直接 new 出来的对象改成参数传入），以便在测试中隔离依赖。再在测试保护下小步修改和重构。绞杀者模式：要替换整个老系统时，在其前面放一个路由层，把功能逐个用新实现接管，老系统逐步萎缩直到下线，避免一次性重写的风险。\n(5) 新增 v2 接口并保持 v1 可用；把 v1 标记为弃用（文档、响应头 Deprecation / Sunset、日志告警），公布下线日期；监控 v1 的调用量和调用方，主动联系仍在使用的团队并提供迁移指南或工具；调用量降到 0（或到达截止日期并获得批准）后再下线，下线前可以先做短时间的“限流 / 故意失败”演练。",
+    "covers": [
+     "软件演化规律",
+     "代码坏味与重构",
+     "技术债管理",
+     "遗留代码的安全修改",
+     "API 弃用"
+    ],
+    "uses_prereqs": [
+     "P.4.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 696,
-   "y": 304
+   "x": 464,
+   "y": 556
   },
   {
    "id": "P.5.1",
@@ -8714,24 +8946,29 @@
    "required": [
     {
      "id": "P.1.1",
-     "why": "Web应用实现需要基础编程。",
+     "why": "UW CSE 154 先修任一门入门编程课（CSE 122/123/142/143/160/163）。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "C.3.2",
-     "why": "网络协议帮助理解HTTP、连接、代理与服务。",
+     "why": "HTTP、DNS、TCP 的原理在 Web 课里只讲到够用，深入调优要学网络。",
      "kind": "recommended"
     },
     {
      "id": "D.1.1",
-     "why": "",
+     "why": "后端开发要存数据。",
+     "kind": "recommended"
+    },
+    {
+     "id": "F.1.1",
+     "why": "Berkeley CS 169A 要求 61B。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UW CSE 154 Web Programming：先修入门编程课；Berkeley CS 169A：先修 61A + 61B。",
    "unlocks": [
     "S.3.1"
    ],
@@ -8747,13 +8984,54 @@
    ],
    "step": 2,
    "reach": 1,
-   "resource": null,
-   "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "resource": {
+    "tier": "website",
+    "title": "MDN Web Docs — Learn web development（Mozilla 官方 Web 开发学习路径）",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+    "lang": "en",
+    "free": true,
+    "covers": "结构化模块化教程：HTML、CSS、JavaScript 核心模块，Extensions 下的 Server-side website programming（服务端/后端入门），加上站内的 HTTP、Web API（Fetch、Service Worker 等）、可访问性、性能与安全专题，覆盖前后端、浏览器 API、HTTP 应用与服务端开发。"
+   },
+   "zhAlt": {
+    "title": "MDN 中文 — 学习 Web 开发（官方简体中文版）",
+    "url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development"
+   },
+   "courses": [
+    {
+     "school": "University of Washington",
+     "course": "CSE 154 Web Programming",
+     "url": "https://courses.cs.washington.edu/courses/cse154/",
+     "prereq_text": "Prerequisite: a minimum grade of 2.0 in either CSE 122, CSE 123, CSE 142, CSE 143, CSE 160, or CSE 163.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 169A Introduction to Software Engineering",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS169A/",
+     "prereq_text": "Prerequisites: COMPSCI C88C or DATA C88C or COMPSCI 61A or COMPSCI 47A; and COMPSCI 61B or COMPSCI 61BL or COMPSCI 47B.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.5.1",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 从在浏览器地址栏输入 URL 到页面显示出来，依次经过哪些步骤？\n(2) 写一个最小的 HTML + JavaScript 页面：一个输入框和一个按钮，点击后用 fetch 调用 GET /api/greet?name=…，把返回的 JSON 中的 message 显示在页面上；再用 Flask 或 Express 写出对应的后端接口。\n(3) GET 和 POST 有什么区别？说明状态码 200、201、301、304、400、401、403、404、500 的含义。按 REST 风格，“删除 id 为 5 的文章”应该发什么请求？\n(4) Cookie + 服务端 Session 与 JWT 两种登录状态方案有什么区别？什么是同源策略？CORS 解决什么问题？\n(5) 列出三种缩短首屏加载时间的方法。",
+    "answer": "(1) 解析 URL → DNS 查询得到 IP（依次查浏览器缓存、系统缓存、递归解析）→ 建立 TCP 连接（HTTPS 还要 TLS 握手）→ 发送 HTTP 请求 → 服务器处理并返回响应 → 浏览器解析 HTML 构建 DOM，解析 CSS 构建 CSSOM，下载并执行 JS → 合成渲染树、布局、绘制，页面显示。\n(2)\n```html\n<input id=\"name\"><button id=\"go\">问好</button><p id=\"out\"></p>\n<script>\ndocument.getElementById(\"go\").onclick = async () => {\n  const name = encodeURIComponent(document.getElementById(\"name\").value);\n  const res = await fetch(`/api/greet?name=${name}`);\n  const data = await res.json();\n  document.getElementById(\"out\").textContent = data.message;\n};\n</script>\n```\n```python\nfrom flask import Flask, request, jsonify\napp = Flask(__name__)\n@app.get(\"/api/greet\")\ndef greet():\n    return jsonify(message=f\"Hello, {request.args.get('name', 'world')}!\")\n```\n用 textContent 而不是 innerHTML，避免把用户输入当作 HTML 执行（XSS）。\n(3) GET 用来获取资源，应当安全、幂等，参数在 URL 中，可被缓存；POST 用来提交数据或创建资源，数据在请求体中，不幂等。200 成功；201 已创建；301 永久重定向；304 未修改（使用缓存）；400 请求有误；401 未认证；403 已认证但无权限；404 资源不存在；500 服务器内部错误。删除文章：DELETE /articles/5，成功返回 204 或 200。\n(4) Session：服务端保存会话数据，Cookie 里只放会话 ID，可以随时在服务端注销，但需要共享会话存储才能横向扩展。JWT：把签名过的用户信息直接交给客户端，服务端无状态、易扩展，但签发后在过期前难以撤销，令牌也较大。同源策略：浏览器禁止页面脚本读取不同源（协议、域名、端口任一不同）的响应。CORS 让服务器通过 Access-Control-Allow-Origin 等响应头声明允许哪些来源跨域访问。\n(5) 压缩并合并资源、对图片使用现代格式和懒加载；用 CDN 和 HTTP 缓存（带内容哈希的文件名 + 长缓存时间）；代码分割，只加载首屏需要的 JS，把非关键脚本设为 defer / async；对首屏内容做服务端渲染或静态生成。",
+    "covers": [
+     "Web 请求的完整流程",
+     "前后端基本开发",
+     "HTTP 与 REST",
+     "会话、同源策略与 CORS",
+     "前端性能"
+    ],
+    "uses_prereqs": [
+     "P.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 16
+   "y": 664
   },
   {
    "id": "P.5.2",
@@ -8781,36 +9059,84 @@
    "optional": false,
    "required": [
     {
-     "id": "P.1.2",
-     "why": "",
+     "id": "P.1.1",
+     "why": "Stanford CS 193A 要求 CS 106B（编程抽象）；NTNU INFT2508 建议有编程基础。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "P.1.2",
+     "why": "NTNU INFT2508 建议会面向对象编程，Android/iOS 框架都基于类和回调。",
+     "kind": "recommended"
+    },
+    {
+     "id": "P.2.1",
+     "why": "Stanford CS 193A：Java experience recommended。",
+     "kind": "recommended"
+    },
+    {
      "id": "P.5.1",
-     "why": "",
+     "why": "NTNU INFT2508 建议先有 Web 开发和 JavaScript 经验（跨平台框架常用 Web 技术栈）。",
      "kind": "recommended"
     },
     {
      "id": "V.2.1",
-     "why": "",
+     "why": "移动界面设计要考虑交互与人因。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Stanford CS 193A：先修 CS 106B，建议有 Java 经验；NTNU INFT2508：建议编程、OOP、Web 基础。",
    "unlocks": [],
    "related": [],
-   "step": 3,
+   "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Android Developers — Android Basics with Compose（Google 官方免费自学课程，Unit 1–8）",
+    "url": "https://developer.android.com/courses/android-basics-compose/course",
+    "lang": "en",
+    "free": true,
+    "covers": "Unit 1 第一个 App、Unit 2 界面构建、Unit 3 列表与 Material Design、Unit 4 导航与应用架构（生命週期、状态提升）、Unit 5 连接互联网、Unit 6 数据持久化、Unit 7 WorkManager（后台任务/离线同步）、Unit 8 Views 与 Compose，覆盖平台生命周期、界面状态、设备能力与数据持久化/离线同步。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Stanford University",
+     "course": "CS 193A Android Application Development",
+     "url": "https://web.stanford.edu/class/cs193a/",
+     "prereq_text": "Prerequisite: CS 106B or equivalent. Java experience recommended.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Norwegian University of Science and Technology (NTNU)",
+     "course": "INFT2508 Cross-platform Applications Development for Mobile Devices",
+     "url": "https://www.ntnu.edu/studies/courses/INFT2508",
+     "prereq_text": "Recommended previous knowledge: Basic programming / Object-oriented programming / Web development / Basic JavaScript",
+     "prereq_kind": "recommended"
+    }
+   ],
+   "exercise": {
+    "id": "P.5.2",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 比较原生开发（Swift / Kotlin）、跨平台框架（Flutter、React Native）和桌面框架（Electron、Qt）的优缺点。\n(2) 写出 Android Activity 的生命周期回调顺序（onCreate、onStart、onResume、onPause、onStop、onDestroy）。旋转屏幕时会发生什么？应该怎样保存界面状态？\n(3) 用 Jetpack Compose 或 Flutter 写一个计数器界面：一个显示数字的文本、两个按钮（+1 和重置）。解释声明式 UI 中“状态驱动界面”是什么意思。\n(4) 移动端特有的约束有哪些？为“离线也能用的待办清单”设计数据同步策略。\n(5) Electron 应用为什么体积大、内存占用高？安全上要注意哪些设置？",
+    "answer": "(1) 原生：性能和平台体验最好，能第一时间使用新的系统 API，但 iOS 和 Android 要各写一套。Flutter：自绘引擎、一套 Dart 代码、各平台界面一致，包体积较大，平台特性要通过插件调用。React Native：用 JavaScript / React，调用原生组件，Web 团队上手快，需要处理桥接层的性能和兼容问题。Electron：用 Web 技术写桌面应用，开发快，但体积大、占内存。Qt：C++ 原生性能、跨平台，学习成本较高，有商业授权方面的考虑。\n(2) 启动：onCreate → onStart → onResume；切到后台：onPause → onStop；销毁：onDestroy。旋转屏幕属于配置变化，默认会销毁并重建 Activity，普通成员变量里的状态丢失。可以把界面状态放进 ViewModel（配置变化后仍保留），少量需要在进程被杀后恢复的状态写进 onSaveInstanceState / SavedStateHandle，持久数据存数据库。\n(3) Compose：\n```kotlin\n@Composable\nfun Counter() {\n    var count by rememberSaveable { mutableStateOf(0) }\n    Column {\n        Text(\"Count: $count\")\n        Button(onClick = { count++ }) { Text(\"+1\") }\n        Button(onClick = { count = 0 }) { Text(\"重置\") }\n    }\n}\n```\n界面是“状态 → UI”的函数：代码只描述在当前状态下界面长什么样，状态改变后框架自动重组受影响的部分，不需要手动找到控件去修改。\n(4) 约束：网络不稳定或断开、电量和流量有限、内存小、需要申请权限、应用随时可能被系统杀掉。离线待办：本地数据库是唯一的读写来源，界面只读本地；每次修改写入本地并记录一条待同步的操作（带时间戳或版本号）；联网后在后台批量上传，再拉取服务器的增量变更；冲突按“最后写入者胜”或字段级合并处理（复杂场景可用 CRDT）；同步任务交给 WorkManager 之类的系统调度，在有网络、充电时执行。\n(5) 每个 Electron 应用都打包了一个完整的 Chromium 和 Node.js 运行时（安装包常常超过 100 MB），每个窗口还是一个独立的渲染进程。安全：渲染进程关闭 nodeIntegration，打开 contextIsolation 和 sandbox，通过 preload 脚本用 contextBridge 只暴露必要的接口；不加载远程不可信内容；设置内容安全策略（CSP）；对 IPC 消息做参数校验。",
+    "covers": [
+     "客户端技术选型",
+     "应用生命周期与状态保存",
+     "声明式 UI",
+     "离线与同步",
+     "桌面应用的体积与安全"
+    ],
+    "uses_prereqs": [
+     "P.1.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 464,
-   "y": 304
+   "x": 232,
+   "y": 736
   },
   {
    "id": "P.5.3",
@@ -8840,24 +9166,24 @@
    "required": [
     {
      "id": "P.2.4",
-     "why": "版本、构建与依赖是自动交付的基础。",
+     "why": "CI/CD 流水线由 Git 提交触发、调用构建和测试工具，这是内容上的直接依赖；UChicago MPCS 56550 与 Cornell CS 5150 只写了编程课先修，没有单列。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "C.2.1",
-     "why": "进程、资源与故障知识支撑部署和运维。",
+     "why": "部署、容器、排障都要懂 Linux 进程与资源。",
      "kind": "recommended"
     },
     {
      "id": "C.3.2",
-     "why": "",
+     "why": "负载均衡、服务发现要懂网络。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UChicago MPCS 56550 Introduction to DevOps：先修核心编程课；Cornell CS 5150 讲持续集成与发布管理，先修 CS 2110。",
    "unlocks": [],
    "related": [
     {
@@ -8867,13 +9193,51 @@
    ],
    "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "The Site Reliability Workbook（Google 官方免费在线版，SRE 实践手册）",
+    "url": "https://sre.google/workbook/table-of-contents/",
+    "lang": "en",
+    "free": true,
+    "covers": "第 1 章 SRE 与 DevOps 的关系、第 2-3 章实现 SLO/SLO 案例、第 4-5 章监控与基于 SLO 的告警、第 8-10 章 On-call/事件响应/复盘文化、第 11 章 Managing Load（容量与负载）、第 14-15 章配置设计与实践、第 16 章 Canarying Releases（金丝雀发布），覆盖可观测性、SLO、发布策略、故障恢复与容量。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of Chicago (MPCS)",
+     "course": "MPCS 56550 Introduction to DevOps",
+     "url": "https://mpcs-courses.cs.uchicago.edu/2025-26/summer/courses/mpcs-56550-1",
+     "prereq_text": "MPCS Students: Core Programming completed (MPCS 51036, or 51040, or 51042, or 51046, or 51100) or Core Programming Waiver. Non-MPCS Students: Must have completed CMSC 14200, CAPP 30122 or MACS 30122 or MPCS Programming Placement Exam I.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Cornell University",
+     "course": "CS 5150 Software Engineering（课程描述含 continuous integration、release management）",
+     "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/syllabus.html",
+     "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.5.3",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 写一个 GitHub Actions 工作流：每次 push 到 main 时安装 Python 依赖、运行测试，测试通过后构建 Docker 镜像。\n(2) 持续集成、持续交付、持续部署三者有什么区别？什么是蓝绿部署和金丝雀发布？\n(3) 某服务的 SLO 是“月可用性 99.9%”。按 30 天计，一个月的错误预算是多少分钟？本月已经用掉 30 分钟，还剩多少？预算用完后团队应该怎么做？\n(4) 可观测性的三大支柱是什么？为什么基于 SLO 燃烧速率的告警比“CPU 使用率 > 80%”的告警更好？\n(5) 一份无责的事后复盘（blameless postmortem）应该包含哪些部分？",
+    "answer": "(1)\n```yaml\nname: ci\non:\n  push:\n    branches: [main]\njobs:\n  test-and-build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: \"3.12\"\n      - run: pip install -r requirements.txt\n      - run: pytest -q\n      - run: docker build -t myapp:${{ github.sha }} .\n```\n后一步只有前面全部成功才会执行。\n(2) 持续集成：开发者频繁把代码合入主干，每次合入都自动构建和测试。持续交付：在 CI 的基础上，主干始终处于可发布状态，发布到生产只需人工点一下。持续部署：通过所有检查的变更自动发布到生产，不需要人工审批。蓝绿部署：同时保留新旧两套环境，切换流量即可上线，回滚只需切回。金丝雀发布：先把新版本放给一小部分流量（如 5%），观察指标正常后再逐步放大。\n(3) 30 × 24 × 60 × 0.1% = 43.2 分钟；还剩 13.2 分钟。预算用完时冻结新功能发布（只允许修复和可靠性改进），把工程精力转向稳定性，直到下个统计周期或预算恢复。\n(4) 日志、指标、链路追踪。CPU 高不一定影响用户（也可能是批处理在跑），CPU 正常也不代表用户没问题；SLO 燃烧速率直接衡量用户感受到的错误和延迟消耗预算的速度，例如 1 小时内消耗了月预算的 2% 就呼叫值班。这样告警更少、更准，每条都对应真实的用户影响。\n(5) 摘要和影响（时长、受影响的用户和请求、错误预算消耗）；时间线（何时发现、何时缓解、何时恢复）；根因与触发因素；哪些做得好、哪些做得不好、哪里运气好；有负责人和截止日期的改进项。全文对事不对人，关注系统和流程为什么允许错误发生，而不是追究个人。",
+    "covers": [
+     "CI/CD 流水线",
+     "发布策略",
+     "SLO 与错误预算",
+     "可观测性与告警",
+     "事后复盘"
+    ],
+    "uses_prereqs": [
+     "P.2.4"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 520
+   "y": 340
   },
   {
    "id": "P.5.4",
@@ -8903,24 +9267,24 @@
    "required": [
     {
      "id": "P.2.4",
-     "why": "",
+     "why": "依赖管理、锁文件、构建工具是供应链安全的工作对象。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "P.5.3",
-     "why": "",
+     "why": "签名、溯源证明都在 CI/CD 流水线里实施。",
      "kind": "recommended"
     },
     {
      "id": "S.1.1",
-     "why": "",
+     "why": "供应链攻击属于威胁建模的范畴。",
      "kind": "recommended"
     }
    ],
    "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqSummary": "证据不足：找到的 CMU 17-313、Berkeley CS 169A 是通用软件工程课，并不专门讲供应链；按内容需要起草，待核实。",
    "unlocks": [],
    "related": [
     {
@@ -8930,13 +9294,50 @@
    ],
    "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "SLSA（Supply-chain Levels for Software Artifacts）规范 v1.0 与配套指南",
+    "url": "https://slsa.dev/spec/v1.0/",
+    "lang": "en",
+    "free": true,
+    "covers": "规范含 Supply chain threats、Security levels（Build L0-L3：provenance、hosted build platform、hardened build）、Producing artifacts、Distributing provenance、Verifying artifacts/build platforms、Attestation formats（provenance、verification summary）与 Threats & mitigations，覆盖制品与来源、构建溯源、依赖与构建平台的完整性保证。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Carnegie Mellon University",
+     "course": "17-313 Foundations of Software Engineering",
+     "url": "https://cmu-313.github.io/syllabus/",
+     "prereq_text": "This class has a pre-requisite of 15-122 or 15-121. If you have not taken those classes, but you think you have similar experiences, please reach out to the instructors.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 169A Introduction to Software Engineering",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS169A/",
+     "prereq_text": "Prerequisites: COMPSCI C88C or DATA C88C or COMPSCI 61A or COMPSCI 47A; and COMPSCI 61B or COMPSCI 61BL or COMPSCI 47B.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "P.5.4",
+    "level": "D2",
+    "time_min": 40,
+    "question": "(1) 什么是软件供应链攻击？举出三类不同的例子。\n(2) 可复现构建：要让同一份源码两次构建得到逐字节相同的产物，需要控制哪些因素？为什么它能帮助发现被篡改的构建？\n(3) pip install --require-hashes 和 npm ci 分别做了什么？SBOM（软件物料清单）有什么用？\n(4) SLSA 中的溯源证明（provenance）记录了哪些信息？用 Sigstore 的 cosign 给容器镜像签名和验证的基本流程是什么？",
+    "answer": "(1) 攻击者不直接攻击目标，而是篡改目标所依赖的代码、工具或构建、分发环节。例：拼写抢注或依赖混淆（发布与内部包同名或名字相近的恶意公共包）；维护者账号被盗后发布带后门的新版本；构建系统被入侵，在编译时注入恶意代码（如 SolarWinds 事件）。\n(2) 需要控制：时间戳（用 SOURCE_DATE_EPOCH 固定）、文件和归档内条目的顺序、构建路径、区域和时区设置、编译器等工具链的版本、所有依赖的确切版本，以及构建过程中的随机性（如随机种子、并行构建导致的顺序差异）。可以由多方独立构建并比较哈希：如果官方发布的二进制与独立重建的结果不一致，就说明构建环境或产物被动过手脚。\n(3) --require-hashes 要求每个依赖都锁定版本并附带哈希，下载后校验，哈希不符就拒绝安装。npm ci 严格按 package-lock.json 安装（不修改锁文件，与 package.json 不一致时直接报错），并校验 integrity 字段。SBOM 列出软件包含的所有组件、版本和来源，出现新漏洞（如 Log4Shell）时可以快速查出哪些产品受影响，也用于许可证合规审查。\n(4) 溯源证明记录：产物的摘要、用哪个构建平台和构建定义构建、源码仓库和确切的提交、构建参数，并由构建平台签名，消费方可以据此验证“这个产物确实是由这份源码在这个平台上构建出来的”。cosign：在 CI 中通过 OIDC 身份进行无密钥签名（由 Fulcio 签发短期证书，签名记录写入 Rekor 透明日志）：cosign sign 镜像摘要；部署前 cosign verify，指定预期的签名身份和签发方，验证不通过就拒绝运行（可以在 Kubernetes 准入控制中强制执行）。",
+    "covers": [
+     "供应链攻击类型",
+     "可复现构建",
+     "依赖锁定与 SBOM",
+     "溯源证明与签名"
+    ],
+    "uses_prereqs": [
+     "P.2.4"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 448
+   "y": 412
   },
   {
    "id": "C.1.1",
@@ -12464,7 +12865,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 0,
-   "y": 203
+   "y": 169
   },
   {
    "id": "S.1.2",
@@ -12550,7 +12951,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 95
+   "y": 61
   },
   {
    "id": "S.1.3",
@@ -12616,7 +13017,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 1160,
-   "y": 167
+   "y": 133
   },
   {
    "id": "S.2.1",
@@ -12676,7 +13077,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 696,
-   "y": 239
+   "y": 88
   },
   {
    "id": "S.2.2",
@@ -12737,7 +13138,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 464,
-   "y": 113
+   "y": 49
   },
   {
    "id": "S.2.3",
@@ -12863,7 +13264,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 311
+   "y": 205
   },
   {
    "id": "S.2.5",
@@ -12925,7 +13326,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 167
+   "y": 277
   },
   {
    "id": "S.3.1",
@@ -12982,7 +13383,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 464,
-   "y": 271
+   "y": 218
   },
   {
    "id": "S.3.2",
@@ -13042,15 +13443,15 @@
      "why": "依赖、制品与构建完整性连接软件工程和软件安全。"
     }
    ],
-   "step": 4,
+   "step": 3,
    "reach": 0,
    "resource": null,
    "zhAlt": null,
    "courses": [],
    "exercise": null,
    "droppedOriginal": [],
-   "x": 696,
-   "y": 311
+   "x": 464,
+   "y": 290
   },
   {
    "id": "S.3.3",
@@ -13121,7 +13522,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 232,
-   "y": 214
+   "y": 202
   },
   {
    "id": "S.4.1",
@@ -13188,7 +13589,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 696,
-   "y": 88
+   "y": 160
   },
   {
    "id": "S.4.2",
@@ -13251,7 +13652,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 696,
-   "y": 390
+   "y": 322
   },
   {
    "id": "S.4.3",
@@ -13313,7 +13714,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 464,
-   "y": 192
+   "y": 139
   },
   {
    "id": "S.4.4",
@@ -13380,7 +13781,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 696,
-   "y": 160
+   "y": 232
   },
   {
    "id": "S.5.1",
@@ -13431,7 +13832,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 1160,
-   "y": 239
+   "y": 205
   },
   {
    "id": "S.5.2",
@@ -13488,7 +13889,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 239
+   "y": 133
   },
   {
    "id": "H.1.1",

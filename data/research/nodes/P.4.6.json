@@ -1,0 +1,36 @@
+{
+ "id": "P.4.6",
+ "resource": {
+  "tier": "website",
+  "title": "Software Engineering at Google（免费在线版：第 1 章 Programming over Time、第 15 章 Deprecation、第 17 章 Code Search、第 22 章 Large-Scale Changes）",
+  "url": "https://abseil.io/resources/swe-book/html/toc.html",
+  "lang": "en",
+  "free": true,
+  "covers": "第 1 章讲“软件工程 = 编程对时间积分”、可持续性与长期变更成本（技术债的根源）；第 15 章 Deprecation 讲系统老化、弃用策略、兼容期与迁移；第 17 章 Code Search 讲在大代码库中定位与阅读陌生代码；第 22 章 Large-Scale Changes 讲大规模重构/迁移的流程与工具。覆盖可维护性、兼容性、迁移、代码理解与技术债。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Zurich",
+   "course": "Software Maintenance and Evolution（HS21，s.e.a.l. 组）",
+   "url": "https://www.ifi.uzh.ch/en/seal/teaching/courses/archive/HS21/sme.html",
+   "prereq_text": "Prerequisites: BSc Informatik: Assessmentstufe, Module Software Engineering und Software-Praktikum",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.4.3": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.4.1",
+   "kind": "required",
+   "evidence": "UZH Software Maintenance and Evolution 要求先修“Module Software Engineering und Software-Praktikum”（软件工程模块 + 软件实习项目）"
+  }
+ ],
+ "notes": "UZH 课程页面明写要修过软件工程模块，因此 P.4.1 是 required；页面对设计课（P.4.3）只字未提，故 not_mentioned。资源页 2026-10-31 打开核实：TOC、ch01、ch15、ch17 均 200，ch01 已确认含 sustainability / 时间与规模 / 维护用语，ch15 已确认讲“systems age / 弃用与迁移”。明显缺口：这本工业界经验书不涉及“经验研究（empirical studies）”方法，也没有系统的维护过程模型；这层可用 UZH SME 课程页列的读物（legacy systems、reengineering、change patterns、empirical analysis）补，但那门课的幻灯片放在 OLAT 里不公开（页面无直接 PDF 链接）。另一个内容高度对口的公开课程描述：UCLouvain LINFO2252 Software Maintenance and Evolution（https://uclouvain.be/en-cours-2023-linfo2252.html ，含 technical debt、laws of software evolution、code smells、refactoring），但该页面没有列先修要求，故未作为先修证据。备选书：Feathers《Working Effectively with Legacy Code》。"
+}

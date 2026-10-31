@@ -1,0 +1,53 @@
+{
+ "id": "P.5.1",
+ "resource": {
+  "tier": "website",
+  "title": "MDN Web Docs — Learn web development（Mozilla 官方 Web 开发学习路径）",
+  "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+  "lang": "en",
+  "free": true,
+  "covers": "结构化模块化教程：HTML、CSS、JavaScript 核心模块，Extensions 下的 Server-side website programming（服务端/后端入门），加上站内的 HTTP、Web API（Fetch、Service Worker 等）、可访问性、性能与安全专题，覆盖前后端、浏览器 API、HTTP 应用与服务端开发。",
+  "verified": true
+ },
+ "zh_alt": {
+  "title": "MDN 中文 — 学习 Web 开发（官方简体中文版）",
+  "url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "University of Washington",
+   "course": "CSE 154 Web Programming",
+   "url": "https://courses.cs.washington.edu/courses/cse154/",
+   "prereq_text": "Prerequisite: a minimum grade of 2.0 in either CSE 122, CSE 123, CSE 142, CSE 143, CSE 160, or CSE 163.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 169A Introduction to Software Engineering",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS169A/",
+   "prereq_text": "Prerequisites: COMPSCI C88C or DATA C88C or COMPSCI 61A or COMPSCI 47A; and COMPSCI 61B or COMPSCI 61BL or COMPSCI 47B.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.1.1": "supported",
+  "C.3.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 154 要求 CSE 143（数据结构）或同等课；Berkeley CS 169A 必修 COMPSCI 61B（数据结构）"
+  }
+ ],
+ "notes": "两门课都只要求编程入门课（CSE 142/61A）与数据结构课（CSE 143/61B），没有把网络协议课（C.3.2）列为先修，故 C.3.2=not_mentioned；Web 课通常把 HTTP 当课内内容讲（CSE 154 目录里就有 client/server、web security、数据库）。资源页 2026-10-31 打开核实：MDN Learn 首页写明是“structured set of tutorials”，模块列表含 HTML/CSS/JavaScript 与 Extensions；Server-side 模块路径 /Learn_web_development/Extensions/Server-side/First_steps 返回 200。中文版页面同样 200。备选资源：Helsinki 大学 Full Stack Open（https://fullstackopen.com/ ，覆盖 React/Node/REST/认证/JWT/CI，偏全栈实战）。"
+}

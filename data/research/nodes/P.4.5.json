@@ -1,0 +1,60 @@
+{
+ "id": "P.4.5",
+ "resource": {
+  "tier": "website",
+  "title": "Software Engineering at Google（免费在线版，Part III: Testing 第 11–14 章）",
+  "url": "https://abseil.io/resources/swe-book/html/ch11.html",
+  "lang": "en",
+  "free": true,
+  "covers": "第 11 章 Testing Overview（为何测试、测试与可变更性的关系）、第 12 章 Unit Testing（单元测试的价值、覆盖率的意义、防止脆弱测试）、第 13 章 Test Doubles（替身对设计与测试的影响）、第 14 章 Larger Testing（集成测试与端到端/系统测试、单元测试覆盖不到的缺口）；覆盖单元/集成/系统测试、覆盖率与质量评估。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Cornell University",
+   "course": "CS 5150 Software Engineering（Lecture 13-16 Testing / Testing 2 / Dynamic Analysis, Fuzzing / Unit Test Generation）",
+   "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/schedule.html",
+   "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.1.2",
+    "F.1.1"
+   ]
+  },
+  {
+   "school": "The University of Queensland",
+   "course": "CSSE3200 Software Engineering Studio: Design, Implement and Test",
+   "url": "https://programs-courses.uq.edu.au/course.html?course_code=CSSE3200",
+   "prereq_text": "Prerequisite: CSSE2002",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.1.2",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.4.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Cornell CS 5150 必修 CS 2110；UQ CSSE3200 必修 CSSE2002（Java 程序设计/大规模程序设计）"
+  },
+  {
+   "id": "P.1.2",
+   "kind": "required",
+   "evidence": "Cornell CS 2110 为面向对象程序设计课；UQ CSSE2002 为面向对象的大规模程序设计课"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Cornell CS 2110 含数据结构；UQ CSSE2002 也以数据结构与抽象为内容"
+  }
+ ],
+ "notes": "两门课都没有把软件工程基础（P.4.1）列为先修，P.4.1=not_mentioned。资源页 2026-10-31 打开核实（ch11 正文已读，ch12/ch14 用 grep 核对了 coverage、单元/集成/端到端测试、test doubles 等小节）。覆盖缺口：性质测试（property-based testing）与故障注入这两项在本书里没有专章，只有 fuzzing 零星提及；这部分建议配 Cornell CS 5150 的 Lecture 15-16（Dynamic Analysis, Fuzzing / Unit Test Generation）幻灯片（https://www.cs.cornell.edu/courses/cs5150/2026sp/schedule.html 上的 PDF）。备选读物：Pezzè & Young《Software Testing and Analysis》、ISTQB 大纲（偏工程实践）。"
+}

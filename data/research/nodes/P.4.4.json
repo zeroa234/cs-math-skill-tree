@@ -1,0 +1,59 @@
+{
+ "id": "P.4.4",
+ "resource": {
+  "tier": "website",
+  "title": "The University of Queensland — CSSE6400 Software Architecture（完整课程站，每周主题 + 讲义 handout）",
+  "url": "https://csse6400.uqcloud.net/",
+  "lang": "en",
+  "free": true,
+  "covers": "按周组织的课程内容：架构与组件边界、分层架构、管道架构、微内核与容器、架构视图（Architectural Views）、架构决策记录（ADR）、安全原则、基础设施即代码，覆盖组件与边界、架构风格、质量属性与架构决策。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "The University of Queensland",
+   "course": "CSSE6400 Software Architecture",
+   "url": "https://programs-courses.uq.edu.au/course.html?course_code=CSSE6400",
+   "prereq_text": "Prerequisite: CSSE3200 or DECO2800",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.4.3",
+    "P.4.5"
+   ]
+  },
+  {
+   "school": "Cornell University",
+   "course": "CS 5150 Software Engineering（含 Lecture 5-8 Planning / Architecture / Program Design）",
+   "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/syllabus.html",
+   "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.1.2",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.4.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.4.5",
+   "kind": "required",
+   "evidence": "UQ CSSE6400 必修 CSSE3200 “Software Engineering Studio: Design, Implement and Test”（设计与测试一体）"
+  },
+  {
+   "id": "P.1.2",
+   "kind": "required",
+   "evidence": "Cornell CS 5150 必修 CS 2110（面向对象程序设计）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Cornell CS 5150 必修 CS 2110（含数据结构）"
+  }
+ ],
+ "notes": "P.4.3=supported 是经 CSSE3200 传递的：CSSE6400 必修 CSSE3200，而 CSSE3200 的课程名与简介就是“设计、实现、测试”的软件工程工作坊（见 https://programs-courses.uq.edu.au/course.html?course_code=CSSE3200 ，其自身另需 CSSE2002 程序设计课）。两门课都没写“必须先学设计课（UML/模式）”的具体要求，Cornell CS 5150 更是完全没提 P.4.3，因此这一条是按课程实际内容映射的，置信度中等。资源页 2026-10-31 打开核实（首页课表可见每周主题；单周 handout 如 handouts/architecture.pdf 也是 200 的 PDF）。备选读物：Bass/Clements/Kazman《Software Architecture in Practice》4e、CMU 17-635 Software Architectures 课程大纲（PDF）。"
+}

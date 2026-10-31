@@ -1,0 +1,55 @@
+{
+ "id": "P.4.3",
+ "resource": {
+  "tier": "website",
+  "title": "Refactoring.Guru — Design Patterns 与 Refactoring（含 22 个经典模式的分类目录、代码坏味与重构手法）",
+  "url": "https://refactoring.guru/design-patterns",
+  "lang": "en",
+  "free": true,
+  "covers": "按创建型/结构型/行为型组织的 22 个经典设计模式（每个含意图、类图、优缺点、多语言示例），另一板块 Refactoring 讲代码坏味与逐条重构手法；覆盖设计模式、接口与职责划分、重构，并以类图（UML 子集）表达结构。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "17-214/514 Principles of Software Construction: Objects, Design, and Concurrency",
+   "url": "https://cmu-17-214.github.io/f2026/",
+   "prereq_text": "Prerequisites: 15-121 or 15-122, or equivalent with instructors' permission. The equivalent of 2 semester-long programming classes. Ability to write and reason about small programs (preconditions, postconditions, invariants).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1"
+   ]
+  },
+  {
+   "school": "Cornell University",
+   "course": "CS 5150 Software Engineering（含 Lecture 8-10 Program Design / Design Patterns）",
+   "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/syllabus.html",
+   "prereq_text": "Minimum: CS 2110 or equivalent experience programming in Java or C++. CS 3110 or CS 4410/4414 strongly recommended for Cornell undergraduates.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.1.2",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.4.2": "not_mentioned",
+  "P.1.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "CMU 17-214 必修 15-121/15-122；Cornell CS 5150 必修 CS 2110"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "CMU 17-214 要求相当于两学期编程课（15-121/15-122 含数据结构）；Cornell CS 2110 含数据结构"
+  }
+ ],
+ "notes": "两门课都没有把需求工程（P.4.2）列为先修，故 P.4.2=not_mentioned；CS 5150 把面向对象的 CS 2110 列为必修，支撑 P.1.2=supported。资源页 2026-10-31 打开核实（design-patterns 首页、catalog、what-is-pattern、refactoring 四个页面均 200）。注意：refactoring.guru 是个人作者站点（Alexander Shvets），内容长期维护、被广泛使用，但不是大学站；UML 只讲了类图，职责分配（GRASP）与完整 UML 图型覆盖不足，这部分可用 Cornell CS 5150 的 Lecture 8-10 幻灯片补。"
+}

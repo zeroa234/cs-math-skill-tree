@@ -1,0 +1,67 @@
+{
+ "id": "P.5.2",
+ "resource": {
+  "tier": "website",
+  "title": "Android Developers — Android Basics with Compose（Google 官方免费自学课程，Unit 1–8）",
+  "url": "https://developer.android.com/courses/android-basics-compose/course",
+  "lang": "en",
+  "free": true,
+  "covers": "Unit 1 第一个 App、Unit 2 界面构建、Unit 3 列表与 Material Design、Unit 4 导航与应用架构（生命週期、状态提升）、Unit 5 连接互联网、Unit 6 数据持久化、Unit 7 WorkManager（后台任务/离线同步）、Unit 8 Views 与 Compose，覆盖平台生命周期、界面状态、设备能力与数据持久化/离线同步。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 193A Android Application Development",
+   "url": "https://web.stanford.edu/class/cs193a/",
+   "prereq_text": "Prerequisite: CS 106B or equivalent. Java experience recommended.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1"
+   ]
+  },
+  {
+   "school": "Norwegian University of Science and Technology (NTNU)",
+   "course": "INFT2508 Cross-platform Applications Development for Mobile Devices",
+   "url": "https://www.ntnu.edu/studies/courses/INFT2508",
+   "prereq_text": "Recommended previous knowledge: Basic programming / Object-oriented programming / Web development / Basic JavaScript",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "P.1.1",
+    "P.1.2",
+    "P.5.1"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS 193A 必修 CS 106B（编程入门/抽象）；NTNU INFT2508 建议有基础编程"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS 193A 的 CS 106B 含数据结构与抽象数据类型"
+  },
+  {
+   "id": "P.2.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS 193A 页面写“Java experience recommended”"
+  },
+  {
+   "id": "P.1.2",
+   "kind": "recommended",
+   "evidence": "NTNU INFT2508 建议先会面向对象编程"
+  },
+  {
+   "id": "P.5.1",
+   "kind": "recommended",
+   "evidence": "NTNU INFT2508 建议先有 Web 开发与基础 JavaScript 经验（跨平台框架常用 Web 技术栈）"
+  }
+ ],
+ "notes": "原图未给前置，candidate_check 为空。资源页 2026-10-31 打开核实：课程页列出 Unit 1–8 及每单元学时。CS 193A 页面明确“Prerequisite: CS 106B or equivalent”，Java 部分写的是 recommended（同一句里混了必修与建议，prereq_kind 按必修记）。NTNU 页面用 tavily_extract 取到原文：技术类先修写在“Recommended previous knowledge”，而“Required previous knowledge”只写了招生范围（限 IT 本科项目学生，交换生可申请），无技术必修。覆盖缺口：这门课是纯 Android（Kotlin/Compose），桌面端与 iOS 不涉及；跨平台要补 Flutter 官方文档（https://docs.flutter.dev/ ）或 .NET MAUI 文档。"
+}
