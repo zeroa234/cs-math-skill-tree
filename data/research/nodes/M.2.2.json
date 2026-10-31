@@ -1,0 +1,64 @@
+{
+ "id": "M.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "MIT OpenCourseWare 18.303 Linear Partial Differential Equations: Analysis and Numerics (Fall 2014)",
+  "url": "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-analysis-and-numerics-fall-2014/pages/syllabus/",
+  "lang": "en",
+  "free": true,
+  "covers": "热/扩散方程、波方程、Poisson 方程；解析部分用线性代数视角讲算子伴随、本征问题、级数解、Green 函数与分离变量；数值部分用有限差分/有限元把 PDE 化为矩阵问题，含稳定性与收敛性分析、显隐式时间推进；弱解与 Sobolev 空间不在其中。附讲义摘要、作业、考试与项目。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "18.303 Linear Partial Differential Equations: Analysis and Numerics",
+   "url": "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-analysis-and-numerics-fall-2014/pages/syllabus/",
+   "prereq_text": "Prerequisites: 18.06 Linear Algebra, 18.700 Linear Algebra or equivalent.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 110 Introduction to Partial Differential Equations",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Prerequisites: MATH 18 or MATH 20F or MATH 31AH and MATH 20D and MATH 20E or MATH 31CH.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.2.1",
+    "M.1.4.1",
+    "M.1.4.5"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.4.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 110 要求 MATH 20D（常微分方程）；MIT 18.303 的旧版（Fall 2006）也把 18.03/18.034 写成先修，2014 版改为只要求线性代数。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "MIT 18.303 要求 18.06/18.700（线性代数），本征问题与算子理论是课程主线；UCSD MATH 110 同样要求 MATH 18/20F/31AH。"
+  },
+  {
+   "id": "M.1.4.5",
+   "kind": "required",
+   "evidence": "UCSD MATH 110 要求 MATH 20E（向量微积分：Gauss/Stokes、散度与旋度），对应曲线曲面积分与向量分析。"
+  },
+  {
+   "id": "M.1.8",
+   "kind": "recommended",
+   "evidence": "MIT 18.303 Fall 2006 版把 18.04/18.112（复变函数）写成 'useful'（有帮助，非必需）；2014 版已不再列出。"
+  }
+ ],
+ "notes": "原图只列了多元微分学（M.1.4.1）。MIT 18.303 不点名它，但 UCSD MATH 110 明确要求 MATH 20E（含多元泰勒展开、Jacobian、向量微积分），所以判 supported。MIT 18.303 有两个版本：2014 版（Analysis and Numerics，先修只有线性代数，含有限差分/有限元与稳定性分析）和 2006 版（先修 18.03，含特征线法与 Bessel 函数）。资源选 2014 版，因为它同时覆盖解析与数值两侧；两版公开的大纲/讲义里都没有弱解或 Sobolev 空间的内容，那属研究生 PDE（如 UCSD MATH 231A，先修 210B 或 240C）。"
+}

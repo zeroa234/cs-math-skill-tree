@@ -1,0 +1,47 @@
+{
+ "id": "M.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "MIT OpenCourseWare 16.323 Principles of Optimal Control (Spring 2008)",
+  "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/pages/syllabus/",
+  "lang": "en",
+  "free": true,
+  "covers": "变分法（Lecture 5：一阶变分、Euler–Lagrange 方程）及其在最优控制中的应用（Lecture 6）、动态规划与 HJB 方程、Pontryagin 最小值原理、LQR/LQG、数值最优控制；附全套讲义与习题。以工程控制为语境，不是纯粹泛函分析。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "16.323 Principles of Optimal Control",
+   "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/pages/syllabus/",
+   "prereq_text": "Course assumes a good working knowledge of linear algebra and differential equations. New material will be covered in depth in the class, but a strong background will be necessary. Solid background in control design is best to fully understand this material, but not essential.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.4": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "MIT 16.323 写 'assumes a good working knowledge of linear algebra'。"
+  },
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "MIT 16.323 写 'assumes a good working knowledge of ... differential equations'。"
+  },
+  {
+   "id": "H.4.1",
+   "kind": "recommended",
+   "evidence": "MIT 16.323 写 'Solid background in control design is best to fully understand this material, but not essential'（控制理论/状态估计背景有帮助，非必需）。"
+  }
+ ],
+ "notes": "只找到 1 门能核实到官方先修原文、且确实教变分法/最优控制的公开课程。16.323 是研究生课（节点入门层 D3，故未违反‘D1 不给研究生课’的限制），但内容自洽、讲义公开。更偏数学的本科变分法材料只找到 PDF：CMU 21-470（Selected Topics in Analysis）的公开讲义、Edinburgh 的 'Brief notes on the calculus of variations'（https://webhomes.maths.ed.ac.uk/~jmf/Teaching/Lectures/CoV.pdf ，页面可打开但抓取工具未能提取 PDF 正文），两者都无法亲自核对官方先修原文，故未作为课程证据。原图建议的 M.1.4（多元微积分）在 16.323 的先修说明里没有出现（判 not_mentioned）；从内容上说变分法的一阶变分与分部积分确实要用多元微积分/一元积分，但课程没写，不能算作课程要求。16.323 还假设 MATLAB 熟练（对应计算工具类节点，未映射）。"
+}

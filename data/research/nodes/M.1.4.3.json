@@ -1,0 +1,39 @@
+{
+ "id": "M.1.4.3",
+ "resource": {
+  "tier": "website",
+  "title": "OpenStax Calculus Volume 3 — 4.7 Maxima/Minima Problems",
+  "url": "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems",
+  "lang": "en",
+  "free": true,
+  "covers": "二元函数临界点、二阶偏差分、二阶导数判别法（判别式 D=f_xx·f_yy−(f_xy)²，即 Hessian 行列式）以及局部极大/极小/鞍点判别；一般 n 元 Hessian 矩阵与二阶泰勒近似未展开。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 20E Vector Calculus",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Prerequisites: MATH 18 or MATH 31AH and MATH 20C or MATH 31BH with a grade of C– or better.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1",
+    "M.1.4.2",
+    "M.1.4.4"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.4.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "UC San Diego MATH 20E 官方先修要求 MATH 18 或 MATH 31AH（线性代数）。"
+  }
+ ],
+ "notes": "20E 的课程简介含 'Taylor series in several variables'，即用 Hessian 的二阶展开，其先修 MATH 20C 含 'Partial differentiation. Maxima and minima.'，映射为 M.1.4.1 + M.1.4.2（梯度/临界点部分），故 M.1.4.2 判为 supported。OpenStax 4.7 用判别式 D 讲二阶判别法（Hessian 行列式），但未显式命名 Hessian 矩阵，也未给 n 元二次型；对 D1 入门够用，深入需补线性代数中的二次型。"
+}

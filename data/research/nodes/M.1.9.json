@@ -1,0 +1,53 @@
+{
+ "id": "M.1.9",
+ "resource": {
+  "tier": "website",
+  "title": "MIT OpenCourseWare 18.103 Fourier Analysis (Fall 2013)",
+  "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/",
+  "lang": "en",
+  "free": true,
+  "covers": "傅里叶级数、均方收敛与 Parseval 公式、傅里叶积分/变换及其在概率（布朗运动、随机游走连续极限）中的应用；前半学期用 Lebesgue 积分与 L^2 理论建立严格基础。小波与一般调和分析（奇异积分、Littlewood–Paley 等）不在课程内。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "18.103 Fourier Analysis",
+   "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/",
+   "prereq_text": "Prerequisites: 18.100 Analysis I; 18.06 Linear Algebra, 18.700 Linear Algebra, or 18.701 Algebra I",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.6",
+    "M.3.1",
+    "M.1.5"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 144 Introduction to Fourier Analysis",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Prerequisites: MATH 140B or MATH 142B. Students who have not completed listed prerequisite(s) may enroll with the consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.6"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.5": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.6",
+   "kind": "required",
+   "evidence": "MIT 18.103 与 UCSD MATH 144 都把实分析（18.100 / MATH 140B/142B）写成必修先修；傅里叶级数的均方收敛与 Parseval 公式需要 Lebesgue 积分。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "MIT 18.103 同时要求 18.06/18.700/18.701 线性代数（Hilbert 空间与正交展开）。"
+  }
+ ],
+ "notes": "M.1.5 计入 supported 是因为必修先修 18.100 Analysis I 本身讲数列与级数收敛（18.100A 官方描述含 'convergence of sequences and series'），不是 18.103 直接点名级数课。小波部分没有覆盖：若需要小波，MIT 18.327 Wavelets, Filter Banks and Applications（Spring 2003，研究生层次）的公开讲义可作补充（https://ocw.mit.edu/courses/18-327-wavelets-filter-banks-and-applications-spring-2003/ ）。18.103 是本科课程，覆盖面（级数+积分变换+均方收敛）在本批节点里最完整，故选它作为单一入口。"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "M.5.3",
+ "resource": {
+  "tier": "website",
+  "title": "MIT OpenCourseWare 6.042J Mathematics for Computer Science (Fall 2010)",
+  "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+  "lang": "en",
+  "free": true,
+  "covers": "直接证明、反证与逆否证明、良序原理、归纳法与强归纳法（含递归定义）、状态机与不变式、等价关系与偏序、求和与递推式求解、数论与同余、图论基础、计数与离散概率；配套教材 Mathematics for Computer Science 免费 PDF、完整视频讲座、习题与解答。覆盖节点的‘归纳/反证/不变式/等价关系/偏序/递推/结构化证明’。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "6.042J Mathematics for Computer Science",
+   "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/pages/syllabus/",
+   "prereq_text": "Prerequisites: The only prerequisite is 18.01. If you have already taken 18.310 or 6.046, then you should not take 6.042.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 109 Mathematical Reasoning",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "This course uses a variety of topics in mathematics to introduce the students to rigorous mathematical proof, emphasizing quantifiers, induction, negation, proof by contradiction, naive set theory, equivalence relations and epsilon-delta proofs. Required of all departmental majors. Prerequisites: MATH 18 or MATH 20F or MATH 31AH, and MATH 20C.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.2",
+   "kind": "required",
+   "evidence": "MIT 6.042J syllabus 写明 'The only prerequisite is 18.01'（18.01 = 一元微积分），对应 M.1.2。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 109 要求 MATH 18/20F/31AH（线性代数）之一。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 109 要求 MATH 20C（多元微积分）。"
+  }
+ ],
+ "notes": "原图建议前置 M.5.2（数理逻辑）在两门课里都没有出现：MIT 6.042J 明说唯一先修是 18.01，UCSD MATH 109 只要求线性代数+多元微积分，因此记 not_mentioned（不是说逻辑有害，只是课程不要求；6.042J 本身自带少量逻辑/量词内容）。反过来两门课都要微积分（M.1.2 / M.1.4.1）与线性代数（UCSD），原图没列，记入 extra_prereqs。资源是免费 OCW 课程（视频+教材+习题），入门层 D1 合适。"
+}

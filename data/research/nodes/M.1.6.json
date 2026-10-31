@@ -1,0 +1,56 @@
+{
+ "id": "M.1.6",
+ "resource": {
+  "tier": "website",
+  "title": "MIT OpenCourseWare 18.100A Real Analysis (Fall 2020)",
+  "url": "https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/pages/syllabus/",
+  "lang": "en",
+  "free": true,
+  "covers": "实数系的基本性质、数列与级数收敛、连续、可微、Riemann 积分、函数项级数、一致收敛与极限交换（课程官方描述原文：convergence of sequences and series, continuity, differentiability, Riemann integral, sequences and series of functions, uniformity, and the interchange of limit operations）；不含 Lebesgue 测度/积分（属 M.1.6.1）。附完整讲义 PDF/TEX、习题与考试。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "18.100A Real Analysis",
+   "url": "https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/pages/syllabus/",
+   "prereq_text": "Prerequisites: 18.02 Multivariable Calculus",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.1",
+    "M.1.2",
+    "M.1.3",
+    "M.1.4.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 142A Introduction to Analysis I",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Prerequisites: MATH 31CH or MATH 109. Students who have not completed listed prerequisites may enroll with consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1",
+    "M.1.4.5",
+    "M.5.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "MIT 18.100A 只列 18.02（多元微积分，含偏导数与重积分）；UCSD MATH 142A 要求 MATH 31CH（honors 向量微积分）或 MATH 109（数学推理）。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UCSD MATH 142A 的先修是 MATH 31CH 或 MATH 109 二选一；MATH 109 Mathematical Reasoning 讲证明方法（量词、归纳、反证、朴素集合论、等价关系、ε-δ），所以证明方法课可以替代多元微积分作为这条路的先修。"
+  }
+ ],
+ "notes": "M.1.3 的支持是间接的：18.100A 官方先修是 18.02，而 18.02 的先修是 18.01（Single Variable Calculus，官方大纲含定积分与微积分基本定理，见 https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/syllabus/），因此一元积分学确实在链条里；UCSD 142A 则完全不提一元积分（它假定 31CH 已包含）。"
+}

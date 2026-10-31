@@ -1,0 +1,46 @@
+{
+ "id": "M.4.5",
+ "resource": {
+  "tier": "book",
+  "title": "Elementary Applied Topology (Robert Ghrist, ed. 1.0, 2014) — 作者主页，PDF 章节可免费阅读",
+  "url": "https://www2.math.upenn.edu/~ghrist/notes.html",
+  "lang": "en",
+  "free": true,
+  "covers": "面向‘应用拓扑’的入门书，数学与应用并讲、插图密集、作者明确说 'suitable for self-study or as part of a course'。章目：Manifolds、Complexes（单纯复形/复形构造）、Euler Characteristic、Homology、Sequences（持久模/条形码即持久同调的代数框架）、Cohomology、Morse Theory、Homotopy、Sheaves、Categorification，附背景附录。对应节点的持续同调、单纯复形与流形方法、以及‘与数据/AI 共享的应用’。作者把各章 PDF 免费开放供个人使用。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Duke University",
+   "course": "COMPSCI 434 / MATH 412 Topological Data Analysis",
+   "url": "https://cs.duke.edu/courses/topological-data-analysis",
+   "prereq_text": "Introduction to topology from a computational view-point, with a focus on applications. Themes include: basic notions of point-set topology, persistent homology, finding multi-scale topological structure in point cloud data. Algorithmic considerations emphasized. Prerequisite: Mathematics 221 or equivalent.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "Auburn University",
+   "course": "MATH 7970 Topological Data Analysis",
+   "url": "http://webhome.auburn.edu/~hks0015/AuburnTDA.html",
+   "prereq_text": "This month long class (prerequisite: interest in math and undergraduate linear algebra) will introduce students to the basics of PH. The first part will be an Algebra and Topology \"Boot Camp\", bringing students up to speed on the necessary mathematical background.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.4.3": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Duke COMPSCI 434/MATH 412 要求 'Mathematics 221 or equivalent'，而 Duke 的 MATH 221 就是 Linear Algebra（同页面课程列表已核对）；Auburn MATH 7970 写明 prerequisite 是 'interest in math and undergraduate linear algebra'。"
+  }
+ ],
+ "notes": "原图建议前置 M.4.3（拓扑学）在两门 TDA 课里都不是硬先修：Duke 那门把 'basic notions of point-set topology' 当作课内内容教，Auburn 那门第一周就是 'Topology Boot Camp'，故记 not_mentioned。两门课真正要求的只有线性代数（M.3.1），原图没列，记入 extra_prereqs。资源只能选 book 层：TDA 目前没有稳定、系统、免费的公开课程网站（本次检索到的 Duke 课程页只有描述、无公开材料；Rutgers 2026 春季同名课只有 syllabus PDF，未取正文）。Ghrist 的书是应用拓扑领域最常用的自修教材，持久同调对应第 5 章 Sequences；缺口是本节点后半的‘几何学习数学’（几何深度学习、群等变表征等）此书不覆盖，那部分可参考 Bronstein 等人的 Geometric Deep Learning 免费 proto-book：https://geometricdeeplearning.com/ （已确认页面存在，未逐章阅读）。"
+}

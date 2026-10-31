@@ -3,11 +3,11 @@
   "built": "2026-10-31",
   "skills": 201,
   "steps": 7,
-  "requiredEdges": 267,
-  "recommendedEdges": 237,
-  "verifiedPrereqs": 1,
-  "withResource": 0,
-  "withExercise": 0,
+  "requiredEdges": 269,
+  "recommendedEdges": 234,
+  "verifiedPrereqs": 35,
+  "withResource": 35,
+  "withExercise": 34,
   "card": {
    "w": 176,
    "h": 58,
@@ -223,7 +223,7 @@
    "en": "Math · Calculus, Analysis & DEs",
    "color": "#2f7fd1",
    "optional": false,
-   "height": 666,
+   "height": 522,
    "count": 18
   },
   {
@@ -233,7 +233,7 @@
    "en": "Math · Algebra, Geometry & Discrete Math",
    "color": "#2f7fd1",
    "optional": false,
-   "height": 475,
+   "height": 608,
    "count": 16
   },
   {
@@ -373,28 +373,50 @@
    "milestones": null,
    "optional": false,
    "required": [],
-   "recommended": [
-    {
-     "id": "M.4.1",
-     "why": "",
-     "kind": "recommended"
-    }
-   ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.01SC 只要求高中代数与三角，不需要技能树里的其他节点。",
    "unlocks": [
     "M.1.2"
    ],
    "related": [],
    "step": 1,
-   "reach": 74,
-   "resource": null,
+   "reach": 75,
+   "resource": {
+    "tier": "website",
+    "title": "Paul's Online Math Notes: Calculus I — Limits",
+    "url": "https://tutorial.math.lamar.edu/Classes/CalcI/LimitsIntro.aspx",
+    "lang": "en",
+    "free": true,
+    "covers": "数列/函数极限的直观定义、单侧极限、无穷极限与无穷远处极限、极限运算法则、连续性、介值定理、ε-δ 精确定义；紧致区间上的最值定理（EVT）在本章未单列，只在连续性/应用章节涉及。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.01SC Single Variable Calculus",
+     "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisites are high school algebra and trigonometry. Prior experience with calculus is helpful but not essential.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.1",
+    "level": "D1",
+    "time_min": 35,
+    "question": "(1) 求极限：a) lim(n→∞) (3n² − n)/(2n² + 5)；b) lim(x→0) sin(3x)/x；c) lim(x→0) (√(1+x) − 1)/x。\n(2) 当 x→0 时，比较无穷小 1 − cos x 与 x² 的阶（求 lim(x→0) (1 − cos x)/x²）。\n(3) 设 f(x) = (x² − 4)/(x − 2)（x ≠ 2），f(2) = a。a 取何值时 f 在 x = 2 处连续？\n(4) 用介值定理说明方程 x³ + x − 1 = 0 在 (0, 1) 内至少有一个根；再说明 f(x) = 1/x 在 (0, 1] 上没有最大值，为什么不违反闭区间上的最值定理。",
+    "answer": "(1) a) 分子分母同除以 n²，得 3/2；b) sin(3x)/x = 3·sin(3x)/(3x) → 3；c) 分子有理化：(√(1+x) − 1)/x = 1/(√(1+x) + 1) → 1/2。\n(2) 1 − cos x = 2sin²(x/2)，比值 → 2·(1/2)² = 1/2，极限是非零常数，所以两者是同阶无穷小（1 − cos x ~ x²/2）。\n(3) x ≠ 2 时 f(x) = x + 2，极限为 4，所以 a = 4。\n(4) 令 g(x) = x³ + x − 1，g 连续，g(0) = −1 < 0，g(1) = 1 > 0，由介值定理存在 c ∈ (0,1) 使 g(c) = 0。最值定理要求闭区间 [a, b]（有界闭集）上的连续函数；(0, 1] 不是闭区间，x→0⁺ 时 1/x → +∞，所以没有最大值并不矛盾。",
+    "covers": [
+     "数列与函数极限",
+     "等价无穷小与阶的比较",
+     "连续性",
+     "闭区间上连续函数的性质"
+    ],
+    "uses_prereqs": []
+   },
    "droppedOriginal": [],
    "x": 0,
-   "y": 304
+   "y": 232
   },
   {
    "id": "M.1.2",
@@ -424,27 +446,65 @@
    "required": [
     {
      "id": "M.1.1",
-     "why": "极限与连续支撑导数定义及相关定理。",
+     "why": "导数用极限定义；MIT 18.02、UCSD 20B 的先修课都从极限讲起。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.01 / UCSD 20A 先讲极限再讲导数。",
    "unlocks": [
     "M.1.3",
-    "M.1.4.1"
+    "M.1.4.1",
+    "M.1.5"
    ],
    "related": [],
    "step": 2,
-   "reach": 73,
-   "resource": null,
+   "reach": 74,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.01SC Single Variable Calculus",
+    "url": "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/",
+    "lang": "en",
+    "free": true,
+    "covers": "导数定义与求导法则、隐函数求导、线性近似、极值与相关变化率、中值定理，以及 Taylor 级数与局部近似；课程还含定积分与级数单元，范围略大于本节点。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.02SC Multivariable Calculus",
+     "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20B Calculus for Science and Engineering",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: AP Calculus AB score of 4 or 5, or AP Calculus BC score of 3, or MATH 20A with a grade of C– or better, or MATH 10B with a grade of C– or better, or MATH 10C with a grade of C– or better.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.2",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 求导：a) y = x³e^(2x)；b) y = ln(1 + x²)；c) y = sin(x²)。\n(2) 求 y = x³ − 3x 的单调区间和极值。\n(3) 对 f(x) = x² 在 [1, 3] 上验证拉格朗日中值定理，求出定理中的 ξ。\n(4) 写出 eˣ 在 x = 0 处的 3 阶泰勒多项式 P₃(x)，用它估算 e^0.1，并用拉格朗日余项给出误差上界（可用 e^0.1 < 1.2）。",
+    "answer": "(1) a) y′ = 3x²e^(2x) + 2x³e^(2x) = x²(2x + 3)e^(2x)；b) y′ = 2x/(1 + x²)；c) y′ = 2x·cos(x²)。\n(2) y′ = 3x² − 3 = 0 ⇒ x = ±1。y′ > 0 于 (−∞, −1) 与 (1, +∞)，单调递增；y′ < 0 于 (−1, 1)，单调递减。x = −1 处极大值 y = 2，x = 1 处极小值 y = −2。\n(3) [f(3) − f(1)]/(3 − 1) = (9 − 1)/2 = 4 = f′(ξ) = 2ξ，ξ = 2 ∈ (1, 3)。\n(4) P₃(x) = 1 + x + x²/2 + x³/6，P₃(0.1) = 1 + 0.1 + 0.005 + 0.000167 ≈ 1.105167。余项 R₃ = e^ξ·x⁴/4!（0 < ξ < 0.1），|R₃| ≤ 1.2 × 0.1⁴/24 = 5×10⁻⁶。（真实值 e^0.1 ≈ 1.105171，误差约 4.3×10⁻⁶，在上界内。）",
+    "covers": [
+     "求导法则与链式法则",
+     "用导数判断单调性与极值",
+     "微分中值定理",
+     "泰勒公式与局部近似"
+    ],
+    "uses_prereqs": [
+     "M.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 304
+   "y": 232
   },
   {
    "id": "M.1.3",
@@ -474,17 +534,17 @@
    "required": [
     {
      "id": "M.1.2",
-     "why": "导数与原函数连接积分计算和微积分基本定理。",
+     "why": "原函数和微积分基本定理建立在导数上；MIT 18.01、UCSD 20B（要求 20A 导数）都按这个顺序。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 20B 先修 20A（导数）。",
    "unlocks": [
     "M.1.4.4",
-    "M.1.5",
     "M.1.6",
+    "M.1.9",
     "M.2.1",
     "M.6.1",
     "M.8.2",
@@ -492,14 +552,44 @@
    ],
    "related": [],
    "step": 3,
-   "reach": 65,
-   "resource": null,
+   "reach": 64,
+   "resource": {
+    "tier": "website",
+    "title": "OpenStax Calculus Volume 2",
+    "url": "https://openstax.org/books/calculus-volume-2/pages/1-introduction",
+    "lang": "en",
+    "free": true,
+    "covers": "定积分与微积分基本定理（第 1 章）、原函数/不定积分与换元（第 1 章）、分部积分等积分技巧（第 3 章）、反常积分（3.7 节）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.02SC Multivariable Calculus",
+     "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.3",
+    "level": "D1",
+    "time_min": 35,
+    "question": "(1) 求不定积分：a) ∫ x·eˣ dx；b) ∫ 2x/(1 + x²) dx。\n(2) 用牛顿–莱布尼茨公式计算 ∫₀^π sin x dx，并说明它的几何意义。\n(3) 设 F(x) = ∫₀^(x²) e^(−t²) dt，求 F′(x)。\n(4) 判断下列反常积分是否收敛，收敛时求值：a) ∫₁^∞ 1/x² dx；b) ∫₁^∞ 1/x dx；c) ∫₀¹ 1/√x dx。",
+    "answer": "(1) a) 分部积分：u = x，dv = eˣdx，得 x·eˣ − eˣ + C = (x − 1)eˣ + C；b) 令 u = 1 + x²，du = 2x dx，得 ln(1 + x²) + C。\n(2) ∫₀^π sin x dx = [−cos x]₀^π = 1 + 1 = 2，是曲线 y = sin x 与 x 轴在 [0, π] 之间的面积。\n(3) 由微积分基本定理和链式法则：F′(x) = e^(−(x²)²)·2x = 2x·e^(−x⁴)。\n(4) a) [−1/x]₁^∞ = 1，收敛；b) [ln x]₁^∞ = ∞，发散；c) [2√x]₀¹ = 2，收敛（瑕积分）。",
+    "covers": [
+     "不定积分：分部与换元",
+     "定积分与牛顿–莱布尼茨公式",
+     "微积分基本定理（变上限积分求导）",
+     "反常积分"
+    ],
+    "uses_prereqs": [
+     "M.1.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 340
+   "y": 160
   },
   {
    "id": "M.1.4.1",
@@ -533,22 +623,21 @@
    "required": [
     {
      "id": "M.1.2",
-     "why": "从一元变化率推广到多元导数。",
+     "why": "偏导数就是固定其他变量的一元导数；MIT 18.02 先修 18.01。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.4.1",
-     "why": "",
+     "id": "M.1.3",
+     "why": "UCSD 20C 要求先修完 20B（积分与级数），MIT 只要求 18.01 整门。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.02：先修 18.01；UCSD 20C：先修 20B。",
    "unlocks": [
     "M.1.4.2",
-    "M.1.4.4",
     "M.1.8",
     "M.2.2",
     "M.2.4",
@@ -556,14 +645,51 @@
    ],
    "related": [],
    "step": 3,
-   "reach": 20,
-   "resource": null,
+   "reach": 19,
+   "resource": {
+    "tier": "website",
+    "title": "OpenStax Calculus Volume 3 — Chapter 4 Differentiation of Functions of Several Variables",
+    "url": "https://openstax.org/books/calculus-volume-3/pages/4-introduction",
+    "lang": "en",
+    "free": true,
+    "covers": "第 4 章：多元函数与极限（4.1–4.2）、偏导数（4.3）、切平面与全微分（4.4）、链式法则与隐函数求导（4.5）、方向导数与梯度（4.6）；逆函数定理属于高等微积分内容，本章未涉及。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.02SC Multivariable Calculus",
+     "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20C Calculus and Analytic Geometry for Science and Engineering",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: AP Calculus BC score of 4 or 5, or MATH 20B with a grade of C– or better.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.4.1",
+    "level": "D1",
+    "time_min": 35,
+    "question": "(1) f(x, y) = x²y + e^(xy)，求 f_x、f_y 和 f_xy。\n(2) 写出 z = x² + y² 在点 (1, 2) 处的全微分 dz，用它近似计算 1.02² + 1.97²，并与精确值比较。\n(3) 求 f(x, y) = x² + 3xy 在点 (1, 1) 处沿方向 (3, 4) 的方向导数。\n(4) 方程 x² + y² + z² = 3 在点 (1, 1, 1) 附近确定隐函数 z = z(x, y)，用隐函数求导法求该点处的 ∂z/∂x 与 ∂z/∂y。",
+    "answer": "(1) f_x = 2xy + y·e^(xy)；f_y = x² + x·e^(xy)；f_xy = ∂(f_x)/∂y = 2x + e^(xy) + xy·e^(xy)。\n(2) dz = 2x dx + 2y dy，在 (1, 2) 处 dx = 0.02、dy = −0.03：dz = 2(0.02) + 4(−0.03) = −0.08，近似值 5 − 0.08 = 4.92；精确值 1.0404 + 3.8809 = 4.9213，误差约 0.0013。\n(3) 梯度 (2x + 3y, 3x) 在 (1, 1) 处为 (5, 3)；单位方向 (3/5, 4/5)；方向导数 = 5·0.6 + 3·0.8 = 5.4。\n(4) 设 F = x² + y² + z² − 3，∂z/∂x = −F_x/F_z = −x/z = −1，∂z/∂y = −y/z = −1。",
+    "covers": [
+     "偏导数与混合偏导",
+     "全微分与线性近似",
+     "方向导数",
+     "隐函数求导"
+    ],
+    "uses_prereqs": [
+     "M.1.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 268
+   "y": 304
   },
   {
    "id": "M.1.4.2",
@@ -597,19 +723,18 @@
    "required": [
     {
      "id": "M.1.4.1",
-     "why": "偏导与全微分支撑梯度、Jacobian。",
+     "why": "梯度和雅可比矩阵由偏导数组成。",
+     "kind": "required"
+    },
+    {
+     "id": "M.3.1",
+     "why": "雅可比矩阵与多元链式法则是矩阵乘法；UCSD MATH 20E（向量微积分）把线性代数 MATH 18 列为必修先修。",
      "kind": "required"
     }
    ],
-   "recommended": [
-    {
-     "id": "M.3.1",
-     "why": "线性映射与矩阵表示支撑Jacobian。",
-     "kind": "recommended"
-    }
-   ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 20E：先修 MATH 18（线性代数）和 20C（偏导数）。",
    "unlocks": [
     "M.1.4.3",
     "M.1.4.5",
@@ -625,13 +750,51 @@
    ],
    "step": 4,
    "reach": 14,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "OpenStax Calculus Volume 3",
+    "url": "https://openstax.org/books/calculus-volume-3/pages/1-introduction",
+    "lang": "en",
+    "free": true,
+    "covers": "第 4 章：多元链式法则（4.5）、方向导数与梯度（4.6）；第 5.7 节：多重积分换元公式与雅可比行列式（坐标变换）。向量值映射的雅可比矩阵在 4.5 的链式法则与 5.7 的换元中体现。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20E Vector Calculus",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 18 or MATH 31AH and MATH 20C or MATH 31BH with a grade of C– or better.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Stanford University",
+     "course": "CS229 Machine Learning",
+     "url": "https://cs229.stanford.edu/",
+     "prereq_text": "Prerequisites: knowledge of basic computer science principles and skills at a level sufficient to write a reasonably non-trivial computer program in Python/NumPy to the equivalency of CS106A or CS106B, familiarity with probability theory to the equivalency of CS 109 or MATH151, and familiarity with multivariable calculus and linear algebra to the equivalency of MATH51 or CS205L.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.4.2",
+    "level": "D1",
+    "time_min": 35,
+    "question": "(1) f(x, y, z) = x²y + yz³，求 ∇f(1, 2, 1)。f 在该点沿哪个方向增长最快？最大变化率是多少？\n(2) 极坐标变换 (r, θ) ↦ (x, y) = (r cos θ, r sin θ)：写出雅可比矩阵 J 和行列式 det J。\n(3) 设 g(u, v) = (u + v, uv)，h(x, y) = x² + y²。用矩阵形式的链式法则 D(h∘g) = Dh·Dg 求 ∂(h∘g)/∂u 和 ∂(h∘g)/∂v，再把 g 直接代入 h 求偏导验证。",
+    "answer": "(1) ∇f = (2xy, x² + z³, 3yz²)，在 (1, 2, 1) 处为 (4, 2, 6)。沿梯度方向 (4, 2, 6)/|(4, 2, 6)| 增长最快，最大变化率 |∇f| = √56 = 2√14 ≈ 7.48。\n(2) J = [[∂x/∂r, ∂x/∂θ], [∂y/∂r, ∂y/∂θ]] = [[cos θ, −r sin θ], [sin θ, r cos θ]]，det J = r cos²θ + r sin²θ = r。\n(3) Dh = [2x, 2y]，Dg = [[1, 1], [v, u]]。D(h∘g) = [2x + 2yv, 2x + 2yu]，代入 x = u + v、y = uv：∂/∂u = 2u + 2v + 2uv²，∂/∂v = 2u + 2v + 2u²v。验证：h∘g = (u + v)² + u²v²，∂/∂u = 2(u + v) + 2uv²，∂/∂v = 2(u + v) + 2u²v，一致。",
+    "covers": [
+     "梯度与最速上升方向",
+     "雅可比矩阵与行列式",
+     "多元链式法则（矩阵形式）",
+     "坐标变换"
+    ],
+    "uses_prereqs": [
+     "M.1.4.1",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 148
+   "y": 410
   },
   {
    "id": "M.1.4.3",
@@ -665,19 +828,13 @@
    "required": [
     {
      "id": "M.1.4.2",
-     "why": "一阶导数结构推广到二阶导数矩阵。",
+     "why": "Hessian 是梯度的导数，二阶近似从一阶的梯度近似推广而来；UCSD 20E 先修 20C。",
      "kind": "required"
     }
    ],
-   "recommended": [
-    {
-     "id": "M.3.1",
-     "why": "",
-     "kind": "recommended"
-    }
-   ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 20E 讲多元泰勒展开（Hessian），先修 20C 与线性代数（经梯度节点继承）。",
    "unlocks": [
     "M.7.3"
    ],
@@ -689,13 +846,42 @@
    ],
    "step": 5,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "OpenStax Calculus Volume 3 — 4.7 Maxima/Minima Problems",
+    "url": "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems",
+    "lang": "en",
+    "free": true,
+    "covers": "二元函数临界点、二阶偏差分、二阶导数判别法（判别式 D=f_xx·f_yy−(f_xy)²，即 Hessian 行列式）以及局部极大/极小/鞍点判别；一般 n 元 Hessian 矩阵与二阶泰勒近似未展开。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20E Vector Calculus",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 18 or MATH 31AH and MATH 20C or MATH 31BH with a grade of C– or better.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.4.3",
+    "level": "D1",
+    "time_min": 35,
+    "question": "设 f(x, y) = x³ − 3x + y² − 2y。\n(1) 求所有临界点。\n(2) 写出 Hessian 矩阵，判别每个临界点是极大值、极小值还是鞍点，并求出对应的函数值。\n(3) 写出 f 在点 (1, 1) 处的二阶泰勒近似，用它估算 f(1.1, 0.9)，并与精确值比较。",
+    "answer": "(1) f_x = 3x² − 3 = 0 ⇒ x = ±1；f_y = 2y − 2 = 0 ⇒ y = 1。临界点 (1, 1)、(−1, 1)。\n(2) H = [[6x, 0], [0, 2]]。(1, 1)：H = [[6, 0], [0, 2]] 正定 ⇒ 局部极小，f = −3。(−1, 1)：H = [[−6, 0], [0, 2]] 不定（det < 0）⇒ 鞍点，f = 1。\n(3) 在 (1, 1) 处 ∇f = 0，f ≈ −3 + ½(6Δx² + 2Δy²)。Δx = 0.1、Δy = −0.1：≈ −3 + ½(0.06 + 0.02) = −2.96；精确值 1.331 − 3.3 + 0.81 − 1.8 = −2.959，误差 0.001（来自三阶项 Δx³ = 0.001）。",
+    "covers": [
+     "二阶偏导与 Hessian 矩阵",
+     "二阶判别法（极大/极小/鞍点）",
+     "二阶泰勒近似"
+    ],
+    "uses_prereqs": [
+     "M.1.4.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 16
+   "y": 448
   },
   {
    "id": "M.1.4.4",
@@ -729,37 +915,74 @@
    "required": [
     {
      "id": "M.1.3",
-     "why": "定积分推广到高维区域上的积分。",
-     "kind": "required"
-    },
-    {
-     "id": "M.1.4.1",
-     "why": "",
+     "why": "重积分化成累次的一元定积分；MIT 18.02 和 UCSD 20C 都只要求一元微积分。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "M.1.4.1",
+     "why": "同一门多元微积分课里通常先讲偏导数，但算重积分不依赖它。",
+     "kind": "recommended"
+    },
+    {
      "id": "M.1.4.2",
-     "why": "多元换元需要Jacobian。",
+     "why": "一般换元公式要用雅可比行列式；极坐标换元可以在本节点里直接学。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.02 先修 18.01；UCSD 20C 先修 20B。两门都没要求梯度/雅可比。",
    "unlocks": [
     "M.1.4.5"
    ],
    "related": [],
    "step": 4,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Paul's Online Math Notes: Calculus III — Multiple Integrals",
+    "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/MultipleIntegralsIntro.aspx",
+    "lang": "en",
+    "free": true,
+    "covers": "二重积分（矩形/一般区域/极坐标）、三重积分（柱坐标/球坐标）、换元与雅可比、曲面面积；覆盖区域分割与重积分换元。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.02SC Multivariable Calculus",
+     "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20C Calculus and Analytic Geometry for Science and Engineering",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: AP Calculus BC score of 4 or 5, or MATH 20B with a grade of C– or better.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.4.4",
+    "level": "D1",
+    "time_min": 45,
+    "question": "(1) 计算 ∬_D xy dA，D = [0, 1] × [0, 2]。\n(2) D 由 y = x² 与 y = x 围成。分别按“先 y 后 x”和“先 x 后 y”写出累次积分，计算 ∬_D x dA 并核对两种次序结果一致。\n(3) 用极坐标计算 ∬_{x²+y²≤4} e^(−(x²+y²)) dA，并说明 dA = r dr dθ 里的 r 从哪里来。\n(4) 计算 ∭_E z dV，E：0 ≤ x ≤ 1，0 ≤ y ≤ 1，0 ≤ z ≤ x + y。",
+    "answer": "(1) ∫₀¹ x dx · ∫₀² y dy = (1/2)(2) = 1。\n(2) D：0 ≤ x ≤ 1，x² ≤ y ≤ x。先 y 后 x：∫₀¹ ∫_{x²}^{x} x dy dx = ∫₀¹ (x² − x³) dx = 1/3 − 1/4 = 1/12。先 x 后 y：0 ≤ y ≤ 1，y ≤ x ≤ √y，∫₀¹ ∫_y^{√y} x dx dy = ∫₀¹ (y − y²)/2 dy = (1/2)(1/2 − 1/3) = 1/12。\n(3) ∫₀^{2π} ∫₀² e^(−r²) r dr dθ = 2π · [−e^(−r²)/2]₀² = π(1 − e^(−4)) ≈ 3.084。r 是极坐标变换的雅可比行列式 |det J| = r：小矩形 dr × dθ 映到面积约 r dr dθ 的小扇形。\n(4) ∫₀¹ ∫₀¹ (x + y)²/2 dy dx = (1/2)(1/3 + 2·1/4 + 1/3) = 7/12。",
+    "covers": [
+     "二重积分与累次积分",
+     "交换积分次序与区域描述",
+     "极坐标换元与雅可比行列式",
+     "三重积分"
+    ],
+    "uses_prereqs": [
+     "M.1.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 238
+   "y": 115
   },
   {
    "id": "M.1.4.5",
@@ -793,29 +1016,68 @@
    "required": [
     {
      "id": "M.1.4.4",
-     "why": "曲面参数化、通量与积分定理需要多元积分。",
+     "why": "曲面积分、高斯定理把通量化成重积分；UCSD 20E 先修 20C（含二重积分）。",
      "kind": "required"
     },
     {
      "id": "M.1.4.2",
-     "why": "",
+     "why": "梯度、散度、旋度都是偏导数组合，线积分要用参数化求导；UCSD 20E 同时要求线性代数。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 20E：先修 MATH 18 + 20C。",
    "unlocks": [],
    "related": [],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.02SC Multivariable Calculus",
+    "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
+    "lang": "en",
+    "free": true,
+    "covers": "向量场与线积分、Green 定理、通量与散度定理、曲面积分与 Stokes 定理；梯度、散度、旋度在相应单元中讲解。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20E Vector Calculus",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 18 or MATH 31AH and MATH 20C or MATH 31BH with a grade of C– or better.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.02SC Multivariable Calculus",
+     "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.4.5",
+    "level": "D1",
+    "time_min": 45,
+    "question": "(1) F = (y, x)。计算沿曲线 r(t) = (t, t²)，0 ≤ t ≤ 1 的线积分 ∫_C F·dr；判断 F 是否为保守场，若是，求势函数并用它验证结果。\n(2) F = (x²y, xy², z)，求 div F 和 curl F。\n(3) 用格林定理计算 ∮_C (−y dx + x dy)，C 为以原点为心、半径 2 的圆，逆时针方向；说明结果和圆面积的关系。\n(4) 用高斯散度定理求 F = (x, y, z) 穿过单位球面（外法向）的通量。",
+    "answer": "(1) r′(t) = (1, 2t)，F(r(t)) = (t², t)，F·r′ = t² + 2t² = 3t²，积分 = 1。∂Q/∂x − ∂P/∂y = 1 − 1 = 0，在全平面上 F 是保守场，势函数 φ = xy，φ(1, 1) − φ(0, 0) = 1，一致。\n(2) div F = 2xy + 2xy + 1 = 4xy + 1；curl F = (∂R/∂y − ∂Q/∂z, ∂P/∂z − ∂R/∂x, ∂Q/∂x − ∂P/∂y) = (0, 0, y² − x²)。\n(3) P = −y，Q = x，∂Q/∂x − ∂P/∂y = 2，∮ = ∬ 2 dA = 2 × 4π = 8π，即这个线积分等于所围面积的 2 倍。\n(4) div F = 3，通量 = ∭ 3 dV = 3 × (4/3)π = 4π。",
+    "covers": [
+     "第二型曲线积分",
+     "保守场与势函数",
+     "散度与旋度",
+     "格林定理",
+     "高斯散度定理"
+    ],
+    "uses_prereqs": [
+     "M.1.4.4",
+     "M.1.4.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 88
+   "y": 232
   },
   {
    "id": "M.1.5",
@@ -843,30 +1105,75 @@
    "optional": false,
    "required": [
     {
-     "id": "M.1.3",
-     "why": "",
+     "id": "M.1.2",
+     "why": "泰勒级数和幂级数逐项求导要会求导；UCSD MATH 20B（积分与级数）先修 20A。",
      "kind": "required"
     }
    ],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [
+    {
+     "id": "M.1.3",
+     "why": "积分判别法和逐项积分会用到定积分，常和级数放在同一门课里学。",
+     "kind": "recommended"
+    }
+   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 20B 讲积分与级数，先修只要求 20A（极限与导数）。",
    "unlocks": [
     "M.1.8",
     "M.1.9"
    ],
    "related": [],
-   "step": 4,
+   "step": 3,
    "reach": 2,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Paul's Online Math Notes: Calculus II — Series & Sequences",
+    "url": "https://tutorial.math.lamar.edu/Classes/CalcII/SeriesIntro.aspx",
+    "lang": "en",
+    "free": true,
+    "covers": "数项级数、收敛/发散判别（积分、比较、交错、比值、根值）、绝对收敛、幂级数与函数、Taylor 级数、二项级数；一致收敛未涉及（属分析课程）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20B Calculus for Science and Engineering",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: AP Calculus AB score of 4 or 5, or AP Calculus BC score of 3, or MATH 20A with a grade of C– or better, or MATH 10B with a grade of C– or better, or MATH 10C with a grade of C– or better.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.02SC Multivariable Calculus",
+     "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.5",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 判断收敛性：a) Σ 1/n²；b) Σ 1/n；c) Σ n/2ⁿ；d) Σ (−1)ⁿ⁺¹/n（绝对收敛还是条件收敛？）。\n(2) 求幂级数 Σ_{n≥1} xⁿ/(n·3ⁿ) 的收敛半径和收敛区间（讨论端点）。\n(3) 从 1/(1 + x) = Σ (−1)ⁿxⁿ（|x| < 1）出发，逐项积分得到 ln(1 + x) 的幂级数，并用前 3 项估算 ln 1.1。\n(4) fₙ(x) = xⁿ 在 [0, 1] 上逐点收敛到什么函数？为什么不是一致收敛？",
+    "answer": "(1) a) p = 2 > 1 的 p 级数，收敛；b) 调和级数，发散；c) 比值 (n+1)/(2n) → 1/2 < 1，收敛（和为 2）；d) 莱布尼茨判别法收敛，但 Σ|aₙ| 是调和级数发散，所以条件收敛。\n(2) |aₙ₊₁/aₙ|·|x| → |x|/3，R = 3。x = 3 时为 Σ 1/n 发散；x = −3 时为 Σ (−1)ⁿ/n 收敛。收敛区间 [−3, 3)。\n(3) ln(1 + x) = x − x²/2 + x³/3 − …（|x| < 1）。ln 1.1 ≈ 0.1 − 0.005 + 0.000333 = 0.095333（真实值 0.095310，误差 2.3×10⁻⁵，小于下一项 0.1⁴/4 = 2.5×10⁻⁵）。\n(4) 极限函数 f(x) = 0（0 ≤ x < 1），f(1) = 1。每个 fₙ 连续而极限函数不连续；一致收敛的连续函数列极限必连续，所以不是一致收敛（也可直接看 sup_{[0,1)} |xⁿ − 0| = 1 不趋于 0）。",
+    "covers": [
+     "数项级数判别法",
+     "绝对收敛与条件收敛",
+     "幂级数收敛半径与区间",
+     "逐项积分",
+     "一致收敛"
+    ],
+    "uses_prereqs": [
+     "M.1.2",
+     "M.1.3"
+    ]
+   },
    "droppedOriginal": [
     "M.1.1"
    ],
-   "x": 696,
-   "y": 389
+   "x": 464,
+   "y": 232
   },
   {
    "id": "M.1.6",
@@ -895,43 +1202,82 @@
    "required": [
     {
      "id": "M.1.3",
-     "why": "从微积分进入严格的分析理论；证明训练需同步补足。",
+     "why": "实分析要把微积分的定理严格证明一遍，得先会算；MIT 18.100A 先修 18.02（再往前是 18.01）。",
      "kind": "required"
     },
     {
      "id": "M.5.3",
-     "why": "",
+     "why": "整门课都是证明；UCSD MATH 142A 可用 MATH 109（证明方法）作先修。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.1.5",
-     "why": "",
+     "id": "M.1.4.1",
+     "why": "MIT 18.100A 写的先修是 18.02 多元微积分。",
      "kind": "recommended"
     },
     {
-     "id": "M.5.1",
-     "why": "",
+     "id": "M.1.5",
+     "why": "数列与级数的收敛是实分析的第一部分内容，提前熟悉会轻松很多。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.100A：先修 18.02；UCSD 142A：先修 31CH 或 MATH 109（数学推理）。",
    "unlocks": [
     "M.1.6.1",
-    "M.1.7"
+    "M.1.7",
+    "M.4.3"
    ],
    "related": [],
    "step": 4,
-   "reach": 3,
-   "resource": null,
+   "reach": 4,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.100A Real Analysis (Fall 2020)",
+    "url": "https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "实数系的基本性质、数列与级数收敛、连续、可微、Riemann 积分、函数项级数、一致收敛与极限交换（课程官方描述原文：convergence of sequences and series, continuity, differentiability, Riemann integral, sequences and series of functions, uniformity, and the interchange of limit operations）；不含 Lebesgue 测度/积分（属 M.1.6.1）。附完整讲义 PDF/TEX、习题与考试。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.100A Real Analysis",
+     "url": "https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/pages/syllabus/",
+     "prereq_text": "Prerequisites: 18.02 Multivariable Calculus",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 142A Introduction to Analysis I",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 31CH or MATH 109. Students who have not completed listed prerequisites may enroll with consent of instructor.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.6",
+    "level": "D3",
+    "time_min": 50,
+    "question": "(1) 用 ε–N 定义证明 lim(n→∞) (2n + 1)/(n + 3) = 2。\n(2) 用确界原理证明：单调递增且有上界的实数列收敛。再举一个有理数列说明这个结论在 ℚ 中不成立。\n(3) fₙ(x) = x/n，x ∈ [0, 1]。证明 fₙ 在 [0, 1] 上一致收敛到 0，并说明为什么可以交换极限与积分：lim ∫₀¹ fₙ = ∫₀¹ lim fₙ。\n(4) 定义“帐篷函数”gₙ：在 [0, 1/(2n)] 上 gₙ(x) = 2n²x，在 [1/(2n), 1/n] 上 gₙ(x) = 2n − 2n²x，其余为 0。求 lim gₙ(x)（逐点）和 lim ∫₀¹ gₙ，说明极限与积分不能交换的原因。",
+    "answer": "(1) |(2n + 1)/(n + 3) − 2| = 5/(n + 3) < 5/n。对任意 ε > 0 取 N > 5/ε，则 n ≥ N 时差 < ε。\n(2) 设 L = sup{aₙ}（由确界原理存在）。对 ε > 0，L − ε 不是上界，存在 N 使 a_N > L − ε；单调性给出 n ≥ N 时 L − ε < aₙ ≤ L，故 aₙ → L。在 ℚ 中：√2 的十进制截断 1, 1.4, 1.41, 1.414, … 单调递增、以 2 为上界，但极限 √2 ∉ ℚ——ℚ 不完备。\n(3) sup_{[0,1]} |x/n − 0| = 1/n → 0，所以一致收敛。|∫₀¹ fₙ − ∫₀¹ 0| ≤ 1 · sup|fₙ − 0| → 0，故可交换；实际 ∫₀¹ x/n dx = 1/(2n) → 0。\n(4) 对固定 x > 0，n 足够大时 1/n < x，gₙ(x) = 0；gₙ(0) = 0，所以逐点极限为 0，∫₀¹ 0 = 0。而 ∫₀¹ gₙ = 帐篷面积 = ½ · (1/n) · n = 1/2，所以 lim ∫ gₙ = 1/2 ≠ 0。收敛不是一致的（sup gₙ = n → ∞），交换的条件不满足。",
+    "covers": [
+     "ε–N 定义",
+     "实数完备性（确界原理）",
+     "函数列的一致收敛",
+     "极限与积分交换的条件"
+    ],
+    "uses_prereqs": [
+     "M.1.3",
+     "M.5.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 461
+   "y": 43
   },
   {
    "id": "M.1.6.1",
@@ -964,19 +1310,13 @@
    "required": [
     {
      "id": "M.1.6",
-     "why": "严格收敛理论支撑测度和积分。",
+     "why": "MIT 18.125 和 UCSD 140C 都只要求实分析。",
      "kind": "required"
     }
    ],
-   "recommended": [
-    {
-     "id": "M.5.1",
-     "why": "集合、映射与可数运算是测度论的语言。",
-     "kind": "recommended"
-    }
-   ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.125：Prerequisite Analysis I (18.100)；UCSD 140C：先修 140B。",
    "unlocks": [
     "M.6.3.2"
    ],
@@ -988,13 +1328,53 @@
    ],
    "step": 5,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.125 Measure and Integration (Fall 2003)",
+    "url": "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "抽象测度与 Lebesgue 积分、主要收敛定理、R^n 上的 Lebesgue 测度、L^p 空间、Radon–Nikodym 定理、Lebesgue 微分定理、Fubini 定理（乘积测度）、Hausdorff 测度与面积/余面积公式。附讲义与习题。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
-   "droppedOriginal": [],
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.125 Measure and Integration",
+     "url": "https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/pages/syllabus/",
+     "prereq_text": "Prerequisite: Analysis I (18.100)",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 140C Foundations of Real Analysis III",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 140B or consent of instructor.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.6.1",
+    "level": "D3",
+    "time_min": 50,
+    "question": "(1) X = {1, 2, 3, 4}。写出由子集族 {{1}, {2, 3}} 生成的 σ 代数（列出全部元素）。\n(2) f = 1_ℚ 是 [0, 1] 上有理数的指示函数。说明它为什么不是 Riemann 可积、却是 Lebesgue 可积，并求 ∫_{[0,1]} f dλ。\n(3) fₙ(x) = min(n, 1/√x)，x ∈ (0, 1]。说明可以用单调收敛定理，并通过计算 ∫ fₙ 求出 ∫₀¹ x^(−1/2) dλ。\n(4) 用控制收敛定理求 lim(n→∞) ∫₀¹ nx/(1 + n²x²) dx（找出控制函数）。\n(5) f(x, y) = e^(−(x+y)) 定义在 [0, ∞)² 上。说明为什么可以按任意次序做累次积分（Tonelli 定理），并求积分值。",
+    "answer": "(1) 原子是 {1}、{2, 3}、{4}，σ 代数由它们的所有并组成，共 2³ = 8 个：∅、{1}、{2,3}、{4}、{1,2,3}、{1,4}、{2,3,4}、X。\n(2) 任何划分的每个小区间里都有有理数和无理数，上和恒为 1、下和恒为 0，不 Riemann 可积。ℚ ∩ [0,1] 可数，Lebesgue 测度为 0，f 几乎处处为 0，可测且 ∫ f dλ = 0。\n(3) fₙ ≥ 0 可测，且关于 n 单调递增地趋于 x^(−1/2)。∫ fₙ = n · (1/n²) + ∫_{1/n²}^{1} x^(−1/2) dx = 1/n + 2 − 2/n = 2 − 1/n → 2，所以 ∫₀¹ x^(−1/2) = 2。\n(4) 逐点：x > 0 时 nx/(1 + n²x²) ≤ 1/(nx) → 0，x = 0 时为 0。由 2·nx ≤ 1 + n²x² 得被积函数 ≤ 1/2，常数 1/2 在 [0,1] 上可积，可作控制函数，因此极限为 ∫ 0 = 0。（直接计算：∫ = ln(1 + n²)/(2n) → 0。）\n(5) f 非负可测，Tonelli 定理保证两种次序的累次积分都等于乘积测度下的积分：∫₀^∞ e^(−x) dx · ∫₀^∞ e^(−y) dy = 1。",
+    "covers": [
+     "σ 代数",
+     "Lebesgue 测度与零测集",
+     "单调收敛定理",
+     "控制收敛定理",
+     "乘积测度与 Tonelli 定理"
+    ],
+    "uses_prereqs": [
+     "M.1.6"
+    ]
+   },
+   "droppedOriginal": [
+    "M.5.1"
+   ],
    "x": 928,
-   "y": 520
+   "y": 16
   },
   {
    "id": "M.1.7",
@@ -1023,29 +1403,24 @@
    "required": [
     {
      "id": "M.1.6",
-     "why": "完备性、连续性和收敛是泛函分析基础。",
+     "why": "MIT 18.102 要求 18.100 系列实分析。",
      "kind": "required"
     },
     {
      "id": "M.3.1",
-     "why": "由有限维向量空间推广到函数空间。",
+     "why": "MIT 18.102 要求 18.06 / 18.700 线性代数；赋范空间与算子是线性代数的无限维推广。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.1.6.1",
-     "why": "",
-     "kind": "recommended"
-    },
-    {
-     "id": "M.4.3",
-     "why": "",
+     "why": "L^p 空间要用 Lebesgue 积分，18.102 讲义里会复习一遍。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.102：先修线性代数（18.06/18.700/18.701）和实分析（18.100）。",
    "unlocks": [],
    "related": [
     {
@@ -1055,13 +1430,45 @@
    ],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.102 Introduction to Functional Analysis (Spring 2021)",
+    "url": "https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "赋范空间与完备性、有界线性泛函、Hahn–Banach 定理、对偶空间、算子、L^p 空间的完备性、Hilbert 空间、紧算子与自伴算子、谱定理；附讲义与录播讲座。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.102 Introduction to Functional Analysis",
+     "url": "https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/pages/syllabus/",
+     "prereq_text": "Prerequisites: 18.06 Linear Algebra, 18.700 Linear Algebra, or 18.701 Algebra I; and 18.100A Introduction to Analysis, 18.100B Analysis I, 18.100P Real Analysis, or 18.100Q Real Analysis; or permission of the instructor.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.7",
+    "level": "D3",
+    "time_min": 50,
+    "question": "(1) 在 C[0, 1] 上，‖f‖∞ = max|f|，‖f‖₁ = ∫₀¹ |f|。证明 ‖f‖₁ ≤ ‖f‖∞；再用 fₙ(x) = xⁿ 说明这两个范数不等价。\n(2) 在 ℓ² 中，eₙ 是第 n 个坐标为 1、其余为 0 的序列。计算 ‖eₙ − eₘ‖（n ≠ m），说明 {eₙ} 有界但没有收敛子列，并说明这与有限维空间有什么不同。\n(3) T: ℓ² → ℓ²，T(x₁, x₂, x₃, …) = (x₁, x₂/2, x₃/3, …)。证明 T 有界并求 ‖T‖，求 T 的全部特征值。\n(4) 在 ℝ³（标准内积）上，线性泛函 φ(x) = 2x₁ − x₂ + 3x₃。按 Riesz 表示定理找出向量 y 使 φ(x) = ⟨x, y⟩，并求 ‖φ‖。",
+    "answer": "(1) ∫₀¹ |f| ≤ ∫₀¹ ‖f‖∞ = ‖f‖∞。‖xⁿ‖₁ = 1/(n + 1) → 0，而 ‖xⁿ‖∞ = 1。若等价，存在 c 使 ‖f‖∞ ≤ c‖f‖₁，即 1 ≤ c/(n + 1) 对所有 n 成立，矛盾。\n(2) ‖eₙ − eₘ‖ = √(1² + 1²) = √2，‖eₙ‖ = 1。任意两项距离都是 √2，任何子列都不是 Cauchy 列，所以没有收敛子列。有限维空间里有界闭集是紧的（Bolzano–Weierstrass），有界序列一定有收敛子列；无限维空间的闭单位球不紧。\n(3) ‖Tx‖² = Σ |x_k|²/k² ≤ Σ |x_k|² = ‖x‖²，故 ‖T‖ ≤ 1；Te₁ = e₁ 给出 ‖T‖ = 1。Te_k = (1/k)e_k，特征值为 1/k（k = 1, 2, 3, …）；T 是单射，0 不是特征值（但 0 在谱中，因为 1/k → 0）。\n(4) y = (2, −1, 3)。由 Cauchy–Schwarz，|φ(x)| ≤ ‖x‖‖y‖，取 x = y 时取等号，‖φ‖ = ‖y‖ = √14。",
+    "covers": [
+     "赋范空间与范数等价",
+     "无限维空间与紧性",
+     "有界线性算子与算子范数",
+     "特征值与谱",
+     "对偶空间与 Riesz 表示"
+    ],
+    "uses_prereqs": [
+     "M.1.6",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 592
+   "y": 88
   },
   {
    "id": "M.1.8",
@@ -1090,42 +1497,85 @@
    "required": [
     {
      "id": "M.1.4.1",
-     "why": "",
+     "why": "柯西–黎曼方程是偏导数关系，复积分是线积分；MIT 18.04 先修 18.02。",
      "kind": "required"
     },
     {
      "id": "M.1.5",
-     "why": "",
+     "why": "解析函数的幂级数、洛朗级数展开以级数为基础。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "M.2.1",
+     "why": "MIT 18.04 也要求 18.03 微分方程，主要用在应用部分。",
+     "kind": "recommended"
+    },
+    {
      "id": "M.1.4.5",
-     "why": "",
+     "why": "柯西积分定理可用格林定理来理解。",
      "kind": "recommended"
     },
     {
      "id": "M.1.6",
-     "why": "",
+     "why": "严格版本（MIT 18.112）要求实分析。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.04：先修 18.02 + 18.03；更严格的 18.112 先修 Analysis I。",
    "unlocks": [],
    "related": [],
-   "step": 5,
+   "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.04 Complex Variables with Applications (Spring 2018)",
+    "url": "https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "复变函数与解析性、Cauchy 定理与 Cauchy 积分公式、调和函数、Taylor 与 Laurent 级数、留数定理及用留数算实积分、保角变换（Topic 10）、应用（二维流体、Laplace/Fourier 变换）。附完整讲义与习题。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.04 Complex Variables with Applications",
+     "url": "https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/pages/syllabus/",
+     "prereq_text": "Prerequisites: 18.02 Multivariable Calculus and 18.03 Differential Equations or 18.032 Differential Equations",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.112 Functions of a Complex Variable",
+     "url": "https://ocw.mit.edu/courses/18-112-functions-of-a-complex-variable-fall-2008/pages/syllabus/",
+     "prereq_text": "Prerequisite: Analysis I (18.100B) or the equivalent.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.8",
+    "level": "D3",
+    "time_min": 45,
+    "question": "(1) 写出 f(z) = z² 的实部 u 与虚部 v，验证柯西–黎曼方程成立；再说明 g(z) = z̄ 在任何点都不满足柯西–黎曼方程。\n(2) 计算 ∮_{|z|=2} dz/(z − 1) 和 ∮_{|z|=2} e^z/(z − 1)² dz（逆时针）。\n(3) 用留数定理计算 ∫_{−∞}^{∞} dx/(1 + x²)：写出闭合路径、路径内的极点与留数，并说明大半圆上的积分为什么趋于 0。\n(4) w = 1/z 把区域 |z| > 1 映到哪里？它在哪些点是保角的？",
+    "answer": "(1) z² = (x² − y²) + i·2xy，u = x² − y²，v = 2xy：u_x = 2x = v_y，u_y = −2y = −v_x，成立。z̄ = x − iy：u_x = 1，v_y = −1，u_x ≠ v_y 处处成立，所以 z̄ 处处不解析。\n(2) 由柯西积分公式：∮ dz/(z − 1) = 2πi；∮ e^z/(z − 1)² dz = 2πi · (e^z)′|_{z=1} = 2πi·e。\n(3) 取实轴 [−R, R] 加上半平面半圆 C_R。上半平面内只有极点 z = i，Res = 1/(z + i)|_{z=i} = 1/(2i)。∮ = 2πi · 1/(2i) = π。在 C_R 上 |1/(1 + z²)| ≤ 1/(R² − 1)，长度 πR，积分 ≤ πR/(R² − 1) → 0。所以原积分 = π。\n(4) |w| = 1/|z| < 1，像是去心单位圆盘 0 < |w| < 1。导数 w′ = −1/z² 在定义域内（z ≠ 0）处处不为 0，所以在 |z| > 1 的每一点都保角。",
+    "covers": [
+     "解析函数与柯西–黎曼方程",
+     "柯西积分公式",
+     "留数定理计算实积分",
+     "保角映射"
+    ],
+    "uses_prereqs": [
+     "M.1.4.1",
+     "M.1.5"
+    ]
+   },
    "droppedOriginal": [
     "M.1.3"
    ],
-   "x": 928,
-   "y": 304
+   "x": 696,
+   "y": 331
   },
   {
    "id": "M.1.9",
@@ -1155,35 +1605,83 @@
    "required": [
     {
      "id": "M.1.5",
-     "why": "傅里叶级数依赖级数与收敛。",
+     "why": "傅里叶级数本身是函数项级数，收敛性要用级数知识。",
+     "kind": "required"
+    },
+    {
+     "id": "M.1.3",
+     "why": "傅里叶系数是定积分，要会分部积分。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.3.1",
-     "why": "",
+     "why": "正交展开就是在内积空间里投影；MIT 18.103 要求线性代数。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.1.6",
+     "why": "严格的收敛理论（MIT 18.103、UCSD 144）要求实分析，入门计算不需要。",
      "kind": "recommended"
     },
     {
      "id": "M.1.8",
-     "why": "",
+     "why": "傅里叶变换的很多计算用到留数。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.103：先修 18.100 + 线性代数；UCSD 144：先修 140B/142B。这两门是严格的数学课，入门层 D2 只需级数和积分。",
    "unlocks": [],
    "related": [],
-   "step": 5,
+   "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.103 Fourier Analysis (Fall 2013)",
+    "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "傅里叶级数、均方收敛与 Parseval 公式、傅里叶积分/变换及其在概率（布朗运动、随机游走连续极限）中的应用；前半学期用 Lebesgue 积分与 L^2 理论建立严格基础。小波与一般调和分析（奇异积分、Littlewood–Paley 等）不在课程内。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.103 Fourier Analysis",
+     "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/",
+     "prereq_text": "Prerequisites: 18.100 Analysis I; 18.06 Linear Algebra, 18.700 Linear Algebra, or 18.701 Algebra I",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 144 Introduction to Fourier Analysis",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 140B or MATH 142B. Students who have not completed listed prerequisite(s) may enroll with the consent of instructor.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.1.9",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 求 f(x) = x 在 [−π, π] 上的傅里叶级数（求出 aₙ、bₙ）。\n(2) 在 (1) 的结果中令 x = π/2，推出 1 − 1/3 + 1/5 − 1/7 + … = π/4。\n(3) 求矩形脉冲 f(t) = 1（|t| ≤ 1），f(t) = 0（|t| > 1）的傅里叶变换 F(ω) = ∫ f(t)e^(−iωt) dt。\n(4) 编程（Python + NumPy）：以 64 Hz 采样 x(t) = sin(2π·5t) + 0.5 sin(2π·12t)，取 64 个点，用 np.fft.rfft 找出两个峰对应的频率和幅值之比，并解释频率分辨率是多少。",
+    "answer": "(1) f 是奇函数，aₙ = 0。bₙ = (1/π)∫_{−π}^{π} x sin(nx) dx = 2(−1)ⁿ⁺¹/n。所以 x = 2 Σ_{n≥1} (−1)ⁿ⁺¹ sin(nx)/n（−π < x < π）。\n(2) sin(nπ/2) 在 n 为偶数时为 0，n = 1, 3, 5, … 时为 1, −1, 1, …。代入得 π/2 = 2(1 − 1/3 + 1/5 − …)，即和为 π/4。\n(3) F(ω) = ∫_{−1}^{1} e^(−iωt) dt = 2 sin(ω)/ω（ω = 0 时为 2）。\n(4) 频率分辨率 = fs/N = 64/64 = 1 Hz，所以两个正弦正好落在第 5、12 个频点。|X[5]| = 32、|X[12]| = 16（= N/2 × 振幅），幅值比 2 : 1，与振幅 1 和 0.5 一致。参考代码：\n```python\nimport numpy as np\nfs, N = 64, 64\nt = np.arange(N) / fs\nX = np.abs(np.fft.rfft(np.sin(2*np.pi*5*t) + 0.5*np.sin(2*np.pi*12*t)))\nf = np.fft.rfftfreq(N, 1/fs)\nprint(f[np.argsort(X)[-2:]], X[5], X[12])\n```",
+    "covers": [
+     "傅里叶级数",
+     "用级数求数项和",
+     "傅里叶变换",
+     "频域表示与 FFT 频率分辨率"
+    ],
+    "uses_prereqs": [
+     "M.1.5",
+     "M.1.3"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 928,
-   "y": 448
+   "x": 696,
+   "y": 259
   },
   {
    "id": "M.2.1",
@@ -1213,24 +1711,24 @@
    "required": [
     {
      "id": "M.1.3",
-     "why": "积分与微分支撑初等ODE求解。",
+     "why": "解微分方程本质上是积分；MIT 18.03 先修 18.01。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.3.1",
-     "why": "线性ODE方程组使用特征值和线性系统。",
+     "why": "UCSD 20D 要求线性代数，线性方程组一章要用矩阵和特征值。",
      "kind": "recommended"
     },
     {
      "id": "M.1.4.1",
-     "why": "",
+     "why": "MIT 18.03 把 18.02 列为可同修，UCSD 20D 列为先修。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.03：先修 18.01，18.02 可同修；UCSD 20D：先修 20C + MATH 18。",
    "unlocks": [
     "M.2.2",
     "M.2.3",
@@ -1241,13 +1739,52 @@
    "related": [],
    "step": 4,
    "reach": 6,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.03SC Differential Equations (Fall 2011)",
+    "url": "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/",
+    "lang": "en",
+    "free": true,
+    "covers": "一阶方程（分离变量、线性、积分因子、数值方法）、二阶常系数线性方程（特征方程、待定系数、共振、频率响应）、傅里叶级数与 Laplace 变换、一阶线性系统与矩阵方法、相图、非线性系统与线性化、极限环与混沌初步。有完整讲课视频、讲义与习题。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.03 Differential Equations",
+     "url": "https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/pages/syllabus/",
+     "prereq_text": "18.03 Differential Equations has 18.01 Single Variable Calculus as a prerequisite. 18.02 Multivariable Calculus is a corequisite, meaning students can take 18.02 and 18.03 simultaneously.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 20D Introduction to Differential Equations",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 20C or MATH 31BH and MATH 18 or MATH 31AH with a grade of C– or better.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.2.1",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 用积分因子法解 y′ + 2y = e^(−x)，y(0) = 2。\n(2) 求 y″ + 4y′ + 13y = 0 的通解，并说明 x → ∞ 时解的行为。\n(3) 线性方程组 x′ = Ax，A = [[0, 1], [−2, −3]]：求特征值与特征向量，写出通解，判断平衡点 0 的稳定性。\n(4) 对 (1) 用步长 h = 0.1 的欧拉法走两步，求 y(0.2) 的近似值，与精确解比较；再写出保证 (1) 这类初值问题解存在且唯一的条件（Picard 定理）。",
+    "answer": "(1) 积分因子 e^(2x)：(y·e^(2x))′ = e^x，y·e^(2x) = e^x + C，y = e^(−x) + C·e^(−2x)。y(0) = 2 ⇒ C = 1，y = e^(−x) + e^(−2x)。\n(2) 特征方程 r² + 4r + 13 = 0，r = −2 ± 3i，通解 y = e^(−2x)(C₁cos 3x + C₂sin 3x)，振荡衰减到 0。\n(3) det(A − λI) = λ² + 3λ + 2 = 0，λ = −1、−2。λ = −1：特征向量 (1, −1)；λ = −2：(1, −2)。x(t) = c₁e^(−t)(1, −1) + c₂e^(−2t)(1, −2)。两个特征值都是负实数，0 是渐近稳定的结点。\n(4) f(x, y) = e^(−x) − 2y。y₁ = 2 + 0.1·(1 − 4) = 1.7；y₂ = 1.7 + 0.1·(e^(−0.1) − 3.4) ≈ 1.7 − 0.2495 = 1.4505。精确值 y(0.2) = e^(−0.2) + e^(−0.4) ≈ 1.4891，误差约 0.039（欧拉法是一阶方法，误差与 h 同阶）。Picard 定理：若 f 在初值点附近连续，且关于 y 满足 Lipschitz 条件，则局部解存在且唯一。",
+    "covers": [
+     "一阶线性方程",
+     "常系数高阶线性方程",
+     "线性方程组与平衡点稳定性",
+     "存在唯一性",
+     "数值求解（欧拉法）"
+    ],
+    "uses_prereqs": [
+     "M.1.3",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 317
+   "y": 187
   },
   {
    "id": "M.2.2",
@@ -1277,34 +1814,34 @@
    "required": [
     {
      "id": "M.2.1",
-     "why": "",
+     "why": "分离变量后得到的是常微分方程；UCSD MATH 110 先修 20D。",
      "kind": "required"
     },
     {
      "id": "M.1.4.1",
-     "why": "偏导和多变量分析支撑PDE。",
+     "why": "PDE 里全是偏导数；UCSD 110 要求 20E。",
+     "kind": "required"
+    },
+    {
+     "id": "M.3.1",
+     "why": "本征值问题与叠加原理是主线；MIT 18.303 和 UCSD 110 都要求线性代数。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.1.9",
-     "why": "",
+     "why": "分离变量的解用傅里叶级数表示。",
      "kind": "recommended"
     },
     {
      "id": "M.1.4.5",
-     "why": "",
-     "kind": "recommended"
-    },
-    {
-     "id": "M.3.1",
-     "why": "",
+     "why": "UCSD 110 要求 20E 向量微积分，推导守恒律时用散度定理。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.303：先修 18.06 线性代数；UCSD MATH 110：先修 MATH 18、20D、20E。",
    "unlocks": [],
    "related": [
     {
@@ -1318,13 +1855,52 @@
    ],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.303 Linear Partial Differential Equations: Analysis and Numerics (Fall 2014)",
+    "url": "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-analysis-and-numerics-fall-2014/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "热/扩散方程、波方程、Poisson 方程；解析部分用线性代数视角讲算子伴随、本征问题、级数解、Green 函数与分离变量；数值部分用有限差分/有限元把 PDE 化为矩阵问题，含稳定性与收敛性分析、显隐式时间推进；弱解与 Sobolev 空间不在其中。附讲义摘要、作业、考试与项目。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.303 Linear Partial Differential Equations: Analysis and Numerics",
+     "url": "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-analysis-and-numerics-fall-2014/pages/syllabus/",
+     "prereq_text": "Prerequisites: 18.06 Linear Algebra, 18.700 Linear Algebra or equivalent.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 110 Introduction to Partial Differential Equations",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 18 or MATH 20F or MATH 31AH and MATH 20D and MATH 20E or MATH 31CH.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.2.2",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 判断类型（椭圆 / 抛物 / 双曲）：a) u_xx + u_yy = 0；b) u_t = k·u_xx（k > 0）；c) u_tt = c²·u_xx；d) u_xx + 4u_xy + u_yy = 0。\n(2) 用分离变量法解热方程 u_t = u_xx，0 < x < π，边界条件 u(0, t) = u(π, t) = 0，初值 u(x, 0) = 3 sin x − sin 4x。\n(3) 验证 u(x, t) = F(x − ct) + G(x + ct) 满足波动方程 u_tt = c²u_xx（F、G 二阶可导），并说明两部分的物理意义。\n(4) 写出 Hadamard 适定性的三个条件。用 (2) 中 e^(−n²t) 因子说明：已知 u(x, T) 反求 u(x, 0)（逆时间热方程）为什么不适定。",
+    "answer": "(1) 对 A·u_xx + B·u_xy + C·u_yy，看 B² − 4AC：a) −4 < 0 椭圆；b) 抛物；c) 双曲；d) 16 − 4 = 12 > 0 双曲。\n(2) 设 u = X(x)T(t)，得 X″ + λX = 0、T′ + λT = 0，边界条件给出 λ = n²、X = sin nx，T = e^(−n²t)。初值只含 n = 1、4 两项：u = 3e^(−t) sin x − e^(−16t) sin 4x。\n(3) u_tt = c²F″ + c²G″，u_xx = F″ + G″，所以 u_tt = c²u_xx。F(x − ct) 是向右以速度 c 传播的波形，G(x + ct) 向左传播（达朗贝尔解）。\n(4) 解存在、唯一、连续依赖于数据。逆时间求解时第 n 个模态要乘 e^(+n²T)：在 u(x, T) 上加一个很小的扰动 ε sin(nx)，反推到 t = 0 会变成 ε e^(n²T) sin(nx)，n 越大放大越多，数据的微小误差导致解任意大的变化，连续依赖性不成立。",
+    "covers": [
+     "二阶 PDE 分类",
+     "分离变量法与边界条件",
+     "波动方程的达朗贝尔解",
+     "适定性"
+    ],
+    "uses_prereqs": [
+     "M.2.1",
+     "M.1.4.1",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 160
+   "y": 304
   },
   {
    "id": "M.2.3",
@@ -1353,35 +1929,73 @@
    "required": [
     {
      "id": "M.2.1",
-     "why": "ODE与稳定性基础支撑动力系统。",
+     "why": "MIT 18.353J：Knowledge of ordinary differential equations is essential.",
      "kind": "required"
     },
     {
      "id": "M.3.1",
-     "why": "",
+     "why": "MIT 18.353J：some linear algebra (eigenvectors and eigenvalues) is also necessary——线性化稳定性靠特征值。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.1.4.1",
-     "why": "",
+     "why": "雅可比矩阵线性化要用偏导数。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.353J：先修 18.03 + 8.02，并要求特征值知识；UCSD MATH 130：先修线性代数 + 20D。",
    "unlocks": [],
    "related": [],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.353J Nonlinear Dynamics I: Chaos (Fall 2012)",
+    "url": "https://ocw.mit.edu/courses/18-353j-nonlinear-dynamics-i-chaos-fall-2012/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "相空间与流、不动点与线性化、一维与二维系统、分岔、极限环、Lorenz 与奇怪吸引子、混沌、分形维数；配 Strogatz 教材阅读、习题与考试。无公开讲义（但有习题/考试与阅读安排）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.353J Nonlinear Dynamics I: Chaos",
+     "url": "https://ocw.mit.edu/courses/18-353j-nonlinear-dynamics-i-chaos-fall-2012/pages/syllabus/",
+     "prereq_text": "Prerequisites for this course are 8.02 Electricity and Magnetism, and 18.03 Differential Equations. Knowledge of ordinary differential equations is essential. Some linear algebra (knowledge of eigenvectors and eigenvalues) is also necessary.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 130 Differential Equations and Dynamical Systems",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prerequisites: MATH 18 or MATH 20F or MATH 31AH and MATH 20D.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.2.3",
+    "level": "D3",
+    "time_min": 50,
+    "question": "(1) x′ = rx − x³。求平衡点随参数 r 的变化，判断各自的稳定性，描述分岔图，并说出这是哪一类分岔。\n(2) 平面系统 x′ = y，y′ = −sin x − 0.5y（带阻尼的摆）。求平衡点 (0, 0) 和 (π, 0) 处的雅可比矩阵，判断平衡点类型。\n(3) Logistic 映射 x_{n+1} = r·xₙ(1 − xₙ)：求不动点，求 r 在什么范围内非零不动点稳定。（编程可选）取 r = 3.2、x₀ = 0.3 迭代 1000 步，观察到的是什么样的吸引子？",
+    "answer": "(1) 平衡点：x = 0（任意 r）；r > 0 时另有 x = ±√r。f′(x) = r − 3x²：在 0 处 f′ = r，r < 0 稳定、r > 0 不稳定；在 ±√r 处 f′ = −2r < 0，稳定。分岔图：r < 0 只有一条稳定支 x = 0；r 穿过 0 后 x = 0 变不稳定，分出两条稳定支 ±√r（抛物线形）。这是超临界叉式分岔。\n(2) J = [[0, 1], [−cos x, −0.5]]。(0, 0)：J = [[0, 1], [−1, −0.5]]，迹 −0.5、行列式 1，判别式 0.25 − 4 < 0，特征值为实部负的复数，稳定焦点（螺旋衰减）。(π, 0)：J = [[0, 1], [1, −0.5]]，行列式 −1 < 0，鞍点（倒立摆不稳定）。\n(3) 不动点 x* = 0 与 x* = 1 − 1/r。f′(x) = r(1 − 2x)，在 x* = 1 − 1/r 处 f′ = 2 − r，稳定条件 |2 − r| < 1，即 1 < r < 3。r = 3.2 时该不动点已失稳，迭代收敛到周期 2 轨道，在约 0.513 与 0.7995 之间交替（周期倍化后的吸引子）。",
+    "covers": [
+     "平衡点与线性化稳定性",
+     "分岔（叉式分岔）",
+     "相平面上的平衡点分类",
+     "离散映射与周期倍化"
+    ],
+    "uses_prereqs": [
+     "M.2.1",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 376
+   "y": 160
   },
   {
    "id": "M.2.4",
@@ -1410,42 +2024,79 @@
    "required": [
     {
      "id": "M.1.4.1",
-     "why": "",
+     "why": "Euler–Lagrange 方程由对 y、y′ 的偏导数构成。",
      "kind": "required"
     },
     {
      "id": "M.2.1",
-     "why": "",
+     "why": "MIT 16.323 assumes a good working knowledge of differential equations；E–L 方程本身是 ODE。",
+     "kind": "required"
+    },
+    {
+     "id": "M.3.1",
+     "why": "MIT 16.323 同样要求线性代数（LQR、状态空间）。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.7.1",
-     "why": "",
+     "id": "H.4.1",
+     "why": "MIT 16.323：control design background is best ... but not essential。",
      "kind": "recommended"
     },
     {
-     "id": "M.1.6",
-     "why": "",
+     "id": "M.7.1",
+     "why": "最优性条件和有限维优化的一阶条件是同一套思路。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 16.323 Principles of Optimal Control：要求线性代数和微分方程，控制背景有帮助但非必需。",
    "unlocks": [],
    "related": [],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 16.323 Principles of Optimal Control (Spring 2008)",
+    "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/pages/syllabus/",
+    "lang": "en",
+    "free": true,
+    "covers": "变分法（Lecture 5：一阶变分、Euler–Lagrange 方程）及其在最优控制中的应用（Lecture 6）、动态规划与 HJB 方程、Pontryagin 最小值原理、LQR/LQG、数值最优控制；附全套讲义与习题。以工程控制为语境，不是纯粹泛函分析。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "16.323 Principles of Optimal Control",
+     "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/pages/syllabus/",
+     "prereq_text": "Course assumes a good working knowledge of linear algebra and differential equations. New material will be covered in depth in the class, but a strong background will be necessary. Solid background in control design is best to fully understand this material, but not essential.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.2.4",
+    "level": "D3",
+    "time_min": 55,
+    "question": "(1) 推导泛函 J[y] = ∫ₐᵇ F(x, y, y′) dx（端点固定）的 Euler–Lagrange 方程，写出关键步骤：取变分 y + εη、对 ε 求导、分部积分、变分基本引理。\n(2) 求 J[y] = ∫₀¹ (y′² + y²) dx 在 y(0) = 0、y(1) = 1 下的极值曲线。\n(3) 用弧长泛函 ∫ √(1 + y′²) dx 证明平面上连接两点的最短曲线是直线段。\n(4) 最优控制：x′ = u，x(0) = 1，x(1) 自由，最小化 J = ∫₀¹ (x² + u²) dt。写出哈密顿量 H = x² + u² + λu，用 ∂H/∂u = 0、λ′ = −∂H/∂x 和横截条件 λ(1) = 0 求最优轨迹 x(t) 与控制 u(t)。",
+    "answer": "(1) 令 φ(ε) = J[y + εη]，η(a) = η(b) = 0。φ′(0) = ∫ (F_y η + F_{y′} η′) dx = 0。对第二项分部积分，边界项因 η 在端点为 0 而消失，得 ∫ (F_y − d/dx F_{y′}) η dx = 0 对所有这样的 η 成立。由变分基本引理，F_y − d/dx F_{y′} = 0。\n(2) F = y′² + y²：2y − 2y″ = 0，即 y″ = y，通解 y = A sinh x + B cosh x。y(0) = 0 ⇒ B = 0；y(1) = 1 ⇒ A = 1/sinh 1。极值曲线 y = sinh x / sinh 1。\n(3) F = √(1 + y′²) 不显含 y，E–L 方程化为 d/dx F_{y′} = 0，即 y′/√(1 + y′²) = 常数，所以 y′ 为常数，曲线是直线；再由两端点确定这条线段。\n(4) ∂H/∂u = 2u + λ = 0 ⇒ u = −λ/2；λ′ = −2x；x′ = u。于是 x″ = −λ′/2 = x，x = A cosh t + B sinh t。x(0) = 1 ⇒ A = 1。λ = −2x′，λ(1) = 0 ⇒ x′(1) = 0 ⇒ sinh 1 + B cosh 1 = 0 ⇒ B = −tanh 1。x(t) = cosh(1 − t)/cosh 1，u(t) = x′(t) = −sinh(1 − t)/cosh 1。",
+    "covers": [
+     "泛函极值与变分",
+     "Euler–Lagrange 方程",
+     "变分原理（最短路径）",
+     "最优控制的最优性条件（Pontryagin）"
+    ],
+    "uses_prereqs": [
+     "M.1.4.1",
+     "M.2.1",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [
     "M.1.4"
    ],
    "x": 928,
-   "y": 232
+   "y": 376
   },
   {
    "id": "M.3.1",
@@ -1477,18 +2128,15 @@
    },
    "optional": false,
    "required": [],
-   "recommended": [
-    {
-     "id": "M.4.1",
-     "why": "",
-     "kind": "recommended"
-    }
-   ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.06 写先修 18.02（多元微积分），多伦多 MAT223 只要求高中微积分；线性代数内容本身不依赖微积分，所以作为第 1 步的起点。",
    "unlocks": [
+    "M.1.4.2",
     "M.1.7",
+    "M.2.2",
     "M.2.3",
+    "M.2.4",
     "M.3.2",
     "M.3.3",
     "M.3.6",
@@ -1517,14 +2165,49 @@
     }
    ],
    "step": 1,
-   "reach": 42,
-   "resource": null,
+   "reach": 48,
+   "resource": {
+    "tier": "website",
+    "title": "Linear Algebra (18.06), MIT OpenCourseWare — Gilbert Strang",
+    "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/",
+    "lang": "en",
+    "free": true,
+    "covers": "线性方程组与消元、向量空间与子空间、正交性与投影、行列式、特征值与对角化、正定矩阵与 SVD；配全套讲义视频与习题"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "18.06 Linear Algebra (Spring 2010, OCW)",
+     "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/syllabus/",
+     "prereq_text": "Prerequisites: Multivariable Calculus (18.02)",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Toronto",
+     "course": "MAT223H1 Linear Algebra I",
+     "url": "https://artsci.calendar.utoronto.ca/course/mat223h1",
+     "prereq_text": "Prerequisite: High school level calculus",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.3.1",
+    "level": "D1",
+    "time_min": 45,
+    "question": "(1) 用高斯消元解方程组：x + 2y + z = 4，2x + 5y + 3z = 9，x + 3y + 3z = 6。\n(2) A = [[1, 2, 3], [2, 4, 6], [1, 0, 1]]。求 rank A 和零空间 N(A) 的一组基。\n(3) B = [[2, 1], [1, 2]]。求特征值和单位特征向量，写出正交对角化 B = QΛQᵀ。\n(4) 求 b = (1, 2, 2) 在 u = (1, 0, 1) 方向上的正交投影 p，以及 e = b − p，验证 e 与 u 正交。",
+    "answer": "(1) 第二式减 2 倍第一式：y + z = 1；第三式减第一式：y + 2z = 2。得 z = 1，y = 0，x = 4 − 0 − 1 = 3。解 (3, 0, 1)，代回三式均成立。\n(2) 第二行是第一行的 2 倍，消元后剩两个独立行：x + 2y + 3z = 0、x + z = 0，rank A = 2。由 x = −z、y = −z，零空间基为 (−1, −1, 1)（维数 = 3 − 2 = 1）。\n(3) det(B − λI) = (2 − λ)² − 1 = 0，λ = 3、1。λ = 3：q₁ = (1, 1)/√2；λ = 1：q₂ = (1, −1)/√2。Q = [q₁ q₂]，Λ = diag(3, 1)，B = QΛQᵀ。\n(4) p = (b·u / u·u)·u = (3/2)(1, 0, 1) = (1.5, 0, 1.5)；e = (−0.5, 2, 0.5)；e·u = −0.5 + 0.5 = 0，正交。",
+    "covers": [
+     "线性方程组与高斯消元",
+     "秩与零空间",
+     "特征值与正交对角化",
+     "内积与正交投影"
+    ],
+    "uses_prereqs": []
+   },
    "droppedOriginal": [],
    "x": 0,
-   "y": 250
+   "y": 383
   },
   {
    "id": "M.3.2",
@@ -1558,13 +2241,13 @@
    "required": [
     {
      "id": "M.3.1",
-     "why": "矩阵理论以线性代数为基础深入谱、范数与扰动。",
+     "why": "MIT 18.065 与多伦多 MAT247 都把第一门线性代数列为先修；SVD、范数都建立在特征值和正交上。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.065：Prerequisites 18.06 Linear Algebra。",
    "unlocks": [],
    "related": [
     {
@@ -1578,13 +2261,51 @@
    ],
    "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Matrix Methods in Data Analysis, Signal Processing, and Machine Learning (18.065), MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/",
+    "lang": "en",
+    "free": true,
+    "covers": "SVD 与 Eckart-Young 低秩逼近、特征值与正定/半正定矩阵、向量与矩阵范数、四类最小二乘解法、谱方法在数据中的应用；不含矩阵函数与扰动分析的完整内容"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning",
+     "url": "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/pages/syllabus/",
+     "prereq_text": "Prerequisites: 18.06 Linear Algebra",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Toronto",
+     "course": "MAT247H1 Algebra II",
+     "url": "https://artsci.calendar.utoronto.ca/course/mat247h1",
+     "prereq_text": "Prerequisite: MAT240H1/ MAT240H5",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.3.2",
+    "level": "D2",
+    "time_min": 45,
+    "question": "A = [[3, 0], [4, 5]]。\n(1) 求 ‖A‖₁、‖A‖∞ 和 Frobenius 范数 ‖A‖_F。\n(2) 由 AᵀA 的特征值求 A 的奇异值、‖A‖₂ 和条件数 κ₂(A)。若解 Ax = b 时 b 有 1% 的相对误差，x 的相对误差最多是多少？\n(3) 判断 M = [[2, −1, 0], [−1, 2, −1], [0, −1, 2]] 是否正定（用顺序主子式或 Cholesky 分解）。\n(4) 编程（NumPy）：对 A 做 SVD，构造最佳秩 1 近似 A₁ = σ₁u₁v₁ᵀ，验证 ‖A − A₁‖₂ = σ₂（Eckart–Young 定理）。",
+    "answer": "(1) ‖A‖₁ = 最大列和 = max(7, 5) = 7；‖A‖∞ = 最大行和 = max(3, 9) = 9；‖A‖_F = √(9 + 16 + 25) = √50 ≈ 7.07。\n(2) AᵀA = [[25, 20], [20, 25]]，特征值 45、5，奇异值 σ₁ = 3√5 ≈ 6.708，σ₂ = √5 ≈ 2.236（核对：σ₁σ₂ = 15 = |det A|）。‖A‖₂ = 3√5，κ₂ = σ₁/σ₂ = 3。‖δx‖/‖x‖ ≤ κ·‖δb‖/‖b‖，最多约 3%。\n(3) 顺序主子式 2、3、4 全为正，M 正定。\n(4) U, S, Vt = np.linalg.svd(A)；A1 = S[0]*np.outer(U[:,0], Vt[0])；np.linalg.norm(A − A1, 2) 得 2.2360… = √5 = σ₂。",
+    "covers": [
+     "矩阵范数",
+     "奇异值分解与条件数",
+     "扰动与误差放大",
+     "正定性判别",
+     "低秩近似（Eckart–Young）"
+    ],
+    "uses_prereqs": [
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 322
+   "y": 534
   },
   {
    "id": "M.3.3",
@@ -1614,19 +2335,24 @@
    "required": [
     {
      "id": "M.3.1",
-     "why": "多重线性构造建立在线性空间上。",
+     "why": "张量积和坐标变换是线性代数的多线性推广；Rutgers 640:495 要求 Math 250（线性代数）。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.3.2",
-     "why": "",
+     "why": "张量分解常借助矩阵展开和 SVD。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.1.4.1",
+     "why": "Rutgers 640:495 同时要求多元微积分（Math 251）。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Rutgers 640:495 Multilinear Algebra and Tensor Networks：先修线性代数 + 多元微积分。",
    "unlocks": [],
    "related": [
     {
@@ -1636,13 +2362,43 @@
    ],
    "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Euclidean Tensor Analysis — Tensor Algebra (Amuthan A. Ramabathiran, IIT Bombay)",
+    "url": "https://amuthan.github.io/tensors-intro/tensor_algebra/",
+    "lang": "en",
+    "free": true,
+    "covers": "多重线性函数与张量的定义、张量积、基表示与换基（坐标变换）、缩并、张量广义点积、体积形式；前接内积空间与线性映射章节"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Rutgers University",
+     "course": "01:640:495 Selected Topics in Mathematics, Section 02: Multilinear Algebra and Tensor Networks",
+     "url": "https://math.rutgers.edu/academics/undergraduate/course-descriptions/1179-01-640-495-selected-topics-in-mathematics",
+     "prereq_text": "Prerequisites: Math 251 and Math 250, but Webreg lists Calc IV = Math 244/252 and Math 250 as the prerequisites.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.3.3",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) u = (1, 2)，v = (3, 0, −1)。写出 u ⊗ v 的 2×3 分量矩阵，并说明它的秩为什么是 1。\n(2) 用爱因斯坦求和约定写出：矩阵乘法 C = AB、迹 tr(A)、双线性型 xᵀMy。“缩并”指什么？它把张量的阶数改变多少？\n(3) 二阶张量在正交基变换 x′ = Rx 下按 T′ = RTRᵀ 变换。取 R = [[0, −1], [1, 0]]（旋转 90°），T = [[1, 2], [0, 3]]，求 T′，并验证迹不变。\n(4) 编程（NumPy）：X 是形状 (2, 3, 4) 的张量，w 是长度 3 的向量，用 np.einsum 写出 X 沿第 2 个指标与 w 的缩并（结果 2×4）。再说明 CP 分解 X ≈ Σ_r a_r ⊗ b_r ⊗ c_r 中“秩”的含义。",
+    "answer": "(1) (u ⊗ v)_{ij} = uᵢvⱼ = [[3, 0, −1], [6, 0, −2]]。第二行是第一行的 2 倍，所有行都与 v 成比例，秩为 1——秩 1 矩阵正好是两个向量的外积。\n(2) C_ik = A_ij B_jk；tr A = A_ii；xᵀMy = x_i M_ij y_j。缩并是把一对上下（或重复）指标相加，阶数减 2（如二阶张量缩并成标量迹）。\n(3) RT = [[0, −3], [1, 2]]，T′ = (RT)Rᵀ = [[3, 0], [−2, 1]]。tr T′ = 4 = tr T。\n(4) Y = np.einsum('ijk,j->ik', X, w)，即 Y[i,k] = Σ_j X[i,j,k]·w[j]。CP 秩是把 X 写成秩 1 张量（三个向量外积）之和所需的最少项数；与矩阵不同，张量秩一般难以计算。",
+    "covers": [
+     "张量积",
+     "指标记号与缩并",
+     "坐标变换下的分量变换",
+     "张量分解（CP）"
+    ],
+    "uses_prereqs": [
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 401
+   "y": 462
   },
   {
    "id": "M.3.4",
@@ -1672,24 +2428,24 @@
    "required": [
     {
      "id": "M.5.3",
-     "why": "集合、映射、等价关系和证明支撑抽象结构。",
+     "why": "抽象代数全是定义—定理—证明；多伦多 MAT301 要求 MAT246（证明入门）。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.3.1",
-     "why": "",
+     "why": "多伦多 MAT301 也要求线性代数，矩阵群是最常见的例子。",
      "kind": "recommended"
     },
     {
      "id": "M.3.5",
-     "why": "",
+     "why": "同余和模运算是群、环、有限域的第一批例子。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "多伦多 MAT301：先修证明课 + 线性代数 + 多元微积分；MIT 18.703 只写 18.02。",
    "unlocks": [
     "M.3.6"
    ],
@@ -1701,10 +2457,47 @@
    ],
    "step": 2,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Modern Algebra (18.703), MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/18-703-modern-algebra-spring-2013/",
+    "lang": "en",
+    "free": true,
+    "covers": "群论（侧重有限群）、环论（理想、多项式环与欧氏环上的唯一分解）、域论与有限域；含讲义、习题与考试"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "18.703 Modern Algebra (Spring 2013, OCW)",
+     "url": "https://ocw.mit.edu/courses/18-703-modern-algebra-spring-2013/pages/syllabus/",
+     "prereq_text": "Prerequisites: Multivariable Calculus (18.02)",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Toronto",
+     "course": "MAT301H1 Groups and Symmetries",
+     "url": "https://artsci.calendar.utoronto.ca/course/mat301h1",
+     "prereq_text": "Prerequisite: MAT257Y1/ ( MAT224H1/ MAT247H1,( MAT235H1, MAT236H1)/ MAT235Y1/ MAT237Y1, MAT246H1/ ( MAT158H1, MAT159H1)/ MAT157Y1/ ...)",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.3.4",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 判断下列是否构成群，说明理由：a) (ℤ, +)；b) (ℤ, ×)；c) ({1, −1, i, −i}, ×)；d) ({1, 2, 3, 4, 5}, 模 6 乘法)。\n(2) 求 ℤ₁₂ 的全部子群，并用它们验证拉格朗日定理。\n(3) φ: ℤ → ℤ₅，φ(n) = n mod 5，是否为群同态？求 ker φ，并用第一同构定理说明 ℤ/ker φ ≅ ℤ₅。\n(4) 证明 ℤ₇ 是域，求 3 在 ℤ₇ 中的乘法逆元；说明 ℤ₆ 为什么不是域。",
+    "answer": "(1) a) 是：封闭、结合、单位元 0、逆元 −n；b) 不是：2 没有整数乘法逆元；c) 是：由 i 生成的 4 阶循环群；d) 不是：不封闭，2·3 ≡ 0（mod 6）不在集合里。\n(2) 循环群的子群与 12 的因数一一对应：{0}（1 阶）、⟨6⟩（2 阶）、⟨4⟩（3 阶）、⟨3⟩（4 阶）、⟨2⟩（6 阶）、ℤ₁₂（12 阶）。阶数 1、2、3、4、6、12 都整除 12。\n(3) 是同态：φ(a + b) = φ(a) + φ(b)。ker φ = 5ℤ。φ 满射，第一同构定理给出 ℤ/5ℤ ≅ ℤ₅。\n(4) 7 是素数，对 a ≠ 0 有 gcd(a, 7) = 1，由裴蜀等式存在 x 使 ax ≡ 1，因此每个非零元可逆，ℤ₇ 是域。3·5 = 15 ≡ 1，所以 3⁻¹ = 5。ℤ₆ 中 2·3 = 0，有零因子，2 没有逆元。",
+    "covers": [
+     "群的定义",
+     "子群与拉格朗日定理",
+     "同态、核与商群",
+     "环与域、有限域"
+    ],
+    "uses_prereqs": [
+     "M.5.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
    "y": 232
@@ -1734,27 +2527,64 @@
    "desc": "整除与同余、素数、数论算法、代数数论与解析数论专题。",
    "milestones": null,
    "optional": false,
-   "required": [],
-   "recommended": [
+   "required": [
     {
      "id": "M.5.3",
-     "why": "",
-     "kind": "recommended"
+     "why": "数论入门全是证明；多伦多 MAT315 要求 MAT246/CSC236（证明课），MIT 18.781 也说熟悉证明会有帮助。",
+     "kind": "required"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.781 没有正式先修（建议熟悉证明）；多伦多 MAT315 要求证明课 + 线性代数 + 多元微积分（后两项属于数学成熟度门槛，未计入）。",
    "unlocks": [],
    "related": [],
-   "step": 1,
+   "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Theory of Numbers (18.781), MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/",
+    "lang": "en",
+    "free": true,
+    "covers": "素数性与算术基本定理、GCD 与欧几里得算法、同余与中国剩余定理、原根、二次剩余与互反律、算术函数、丢番图方程、连分数；含讲义、习题与解答"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "18.781 Theory of Numbers (Spring 2012, OCW)",
+     "url": "https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/pages/syllabus/",
+     "prereq_text": "There are no formal prerequisites for the class, but some familiarity with proofs will be helpful as we’ll be doing plenty of those in class and homework.",
+     "prereq_kind": "unspecified"
+    },
+    {
+     "school": "University of Toronto",
+     "course": "MAT315H1 Introduction to Number Theory",
+     "url": "https://artsci.calendar.utoronto.ca/course/mat315h1",
+     "prereq_text": "Prerequisite: ( MAT223H1/ MATA23H3/ MAT223H5/ MAT240H1/ MAT240H5, ( MAT235H1, MAT236H1)/ MAT235Y1 / ... MAT237Y1 / ..., MAT246H1/ CSC236H1/ CSC240H1)/ ...",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.3.5",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 用扩展欧几里得算法求 gcd(252, 198)，并找整数 x、y 使 252x + 198y = gcd(252, 198)。\n(2) 解同余方程 17x ≡ 3 (mod 29)。\n(3) 用中国剩余定理求最小正整数 x：x ≡ 2 (mod 3)，x ≡ 3 (mod 5)，x ≡ 2 (mod 7)。\n(4) 用费马小定理计算 3¹⁰⁰ mod 7。再写一个快速幂（平方–乘）函数 pow_mod(a, n, m)，说明为什么只需 O(log n) 次乘法。",
+    "answer": "(1) 252 = 1·198 + 54；198 = 3·54 + 36；54 = 1·36 + 18；36 = 2·18。gcd = 18。回代：18 = 54 − 36 = 4·54 − 198 = 4·252 − 5·198，x = 4、y = −5（1008 − 990 = 18）。\n(2) 求 17⁻¹ mod 29：29 = 17 + 12，17 = 12 + 5，12 = 2·5 + 2，5 = 2·2 + 1，回代得 1 = 12·17 − 7·29，17⁻¹ ≡ 12。x ≡ 12·3 = 36 ≡ 7（mod 29）。验证：17·7 = 119 = 4·29 + 3。\n(3) 前后两式合并为 x ≡ 2（mod 21），候选 2, 23, 44, …，其中 23 ≡ 3（mod 5），所以 x = 23（模 105 唯一）。\n(4) 3⁶ ≡ 1（mod 7），100 = 6·16 + 4，3¹⁰⁰ ≡ 3⁴ = 81 ≡ 4。\n```python\ndef pow_mod(a, n, m):\n    r = 1\n    a %= m\n    while n:\n        if n & 1:\n            r = r * a % m\n        a = a * a % m\n        n >>= 1\n    return r\n```\n每轮把 n 的二进制右移一位，循环次数是 n 的二进制位数 ⌊log₂n⌋ + 1，每轮至多两次乘法。",
+    "covers": [
+     "整除与扩展欧几里得算法",
+     "同余方程与模逆元",
+     "中国剩余定理",
+     "费马小定理与快速幂"
+    ],
+    "uses_prereqs": [
+     "M.5.3"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 0,
-   "y": 34
+   "x": 232,
+   "y": 88
   },
   {
    "id": "M.3.6",
@@ -1782,35 +2612,67 @@
    "required": [
     {
      "id": "M.3.4",
-     "why": "群、环、域与同态支撑代数几何和表示论。",
+     "why": "MIT 18.725 要求交换代数基础（局部化、素理想），18.712 要求 Algebra I/II。",
      "kind": "required"
     },
     {
      "id": "M.3.1",
-     "why": "",
+     "why": "MIT 18.712：necessary and sufficient to have a strong background in linear algebra。",
      "kind": "required"
     }
    ],
-   "recommended": [
-    {
-     "id": "M.4.3",
-     "why": "",
-     "kind": "recommended"
-    }
-   ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.725（代数几何）要求交换代数；MIT 18.712（表示论）要求 18.701/18.702 或 18.700/18.703。",
    "unlocks": [],
    "related": [],
    "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Algebraic Geometry (18.725), MIT OpenCourseWare",
+    "url": "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/",
+    "lang": "en",
+    "free": true,
+    "covers": "代数闭域上的代数簇、多项式理想与基本概念技巧、复代数簇与复解析簇的关系及例子；含讲义与习题（研究生层）"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "18.725 Algebraic Geometry (Fall 2015, OCW)",
+     "url": "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/syllabus/",
+     "prereq_text": "There are no prerequisite courses, but 18.705 Commutative Algebra must be taken concurrently. In addition, students should understand the basic notions of commutative algebra, such as localization, Noetherian property and prime ideals.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "MIT",
+     "course": "18.712 Introduction to Representation Theory (Fall 2010, OCW)",
+     "url": "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisites for the course are the standard algebra sequences Algebra I and II (18.701, 18.702) or Linear Algebra and Modern Algebra (18.700, 18.703). This means that to understand this course, it is necessary and sufficient to have a strong background in linear algebra and a decent understanding of basic algebraic structures, such as groups, rings, and fields.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.3.6",
+    "level": "D4",
+    "time_min": 60,
+    "question": "(1) I = ⟨x² + y² − 1, x − y⟩ ⊂ ℂ[x, y]。求代数簇 V(I)，并在字典序 x > y 下写出 I 的约化 Gröbner 基（说明约化过程）。\n(2) V(xy) ⊂ 𝔸² 是否不可约？写出它的不可约分解；⟨xy⟩ 是不是素理想？\n(3) 写出对称群 S₃ 的特征标表（共轭类：单位元、3 个对换、2 个 3-轮换），验证 Σ (dim)² = |G| 和第二行（符号表示）与第三行（2 维标准表示）的正交关系。\n(4) S₃ 在 ℂ³ 上置换坐标，求这个置换表示的特征标，并用内积把它分解成不可约表示之和。",
+    "answer": "(1) 由 x − y 得 x = y，代入 2y² = 1，V(I) = {(1/√2, 1/√2), (−1/√2, −1/√2)}。用 x − y 约化 x² + y² − 1：x² → y²，得 2y² − 1。约化 Gröbner 基 {x − y, y² − 1/2}（两元首项 x、y² 互素，S 多项式约化为 0）。\n(2) V(xy) = V(x) ∪ V(y)（两条坐标轴），可约。xy ∈ ⟨xy⟩ 但 x、y 都不在其中，⟨xy⟩ 不是素理想。\n(3) 共轭类大小 1、3、2。平凡 χ₁ = (1, 1, 1)；符号 χ₂ = (1, −1, 1)；标准 χ₃ = (2, 0, −1)。1² + 1² + 2² = 6 = |S₃|。⟨χ₂, χ₃⟩ = (1·1·2 + 3·(−1)·0 + 2·1·(−1))/6 = 0。\n(4) 特征标 = 不动点个数：χ = (3, 1, 0)。⟨χ, χ₁⟩ = (3 + 3 + 0)/6 = 1，⟨χ, χ₂⟩ = (3 − 3 + 0)/6 = 0，⟨χ, χ₃⟩ = (6 + 0 + 0)/6 = 1。置换表示 = 平凡表示 ⊕ 标准表示。",
+    "covers": [
+     "多项式理想与代数簇",
+     "Gröbner 基",
+     "不可约性与素理想",
+     "群表示与特征标"
+    ],
+    "uses_prereqs": [
+     "M.3.4",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 239
+   "y": 270
   },
   {
    "id": "M.4.1",
@@ -1839,10 +2701,9 @@
    "optional": false,
    "required": [],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "北美通常把它放在多元微积分前半段（MIT 18.02 先修 18.01），但向量运算、直线与平面方程本身不用微积分，作为第 1 步的起点。",
    "unlocks": [
-    "M.4.4",
     "H.4.2"
    ],
    "related": [
@@ -1852,14 +2713,42 @@
     }
    ],
    "step": 1,
-   "reach": 3,
-   "resource": null,
+   "reach": 2,
+   "resource": {
+    "tier": "website",
+    "title": "Calculus III — Paul's Online Math Notes (Lamar University)",
+    "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx",
+    "lang": "en",
+    "free": true,
+    "covers": "三维坐标系、向量运算（点积/叉积与投影）、空间直线与平面的向量/参数/对称方程、二次曲面（锥面、柱面、椭球、椭圆抛物面）、向量值函数；配套大量例题与练习"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "18.02SC Multivariable Calculus (Fall 2010, OCW)",
+     "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+     "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.4.1",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) a = (1, 2, −1)，b = (2, 0, 1)。求 a·b、a × b、夹角余弦，以及以 a、b 为邻边的平行四边形面积。\n(2) 求过点 P(1, 0, 2)、法向量 n = (2, −1, 3) 的平面方程，并求点 Q(3, 1, 0) 到该平面的距离。\n(3) 求直线 L：(x, y, z) = (1, 1, 0) + t(1, −1, 2) 与 (2) 中平面的交点。\n(4) 配方判断二次曲线 x² + 4y² − 2x + 16y + 13 = 0 的类型并写出标准方程；说出二次曲面 x² + y² − z² = 1 的名称。",
+    "answer": "(1) a·b = 2 + 0 − 1 = 1；a × b = (2·1 − (−1)·0, (−1)·2 − 1·1, 1·0 − 2·2) = (2, −3, −4)；cos θ = 1/(√6·√5) = 1/√30 ≈ 0.183；面积 = |a × b| = √29 ≈ 5.39。\n(2) 2(x − 1) − y + 3(z − 2) = 0，即 2x − y + 3z = 8。距离 = |2·3 − 1 + 0 − 8|/√(4 + 1 + 9) = 3/√14 ≈ 0.80。\n(3) 代入：2(1 + t) − (1 − t) + 3·2t = 8 ⇒ 9t = 7，t = 7/9，交点 (16/9, 2/9, 14/9)。\n(4) (x − 1)² + 4(y + 2)² = 1 + 16 − 13 = 4，即 (x − 1)²/4 + (y + 2)² = 1，中心 (1, −2)、半轴 2 和 1 的椭圆。x² + y² − z² = 1 是单叶双曲面。",
+    "covers": [
+     "向量的数量积与向量积",
+     "平面方程与点到平面距离",
+     "直线与平面的交点",
+     "二次曲线与二次曲面"
+    ],
+    "uses_prereqs": []
+   },
    "droppedOriginal": [],
    "x": 0,
-   "y": 394
+   "y": 167
   },
   {
    "id": "M.4.2",
@@ -1888,29 +2777,29 @@
    "required": [
     {
      "id": "M.1.4.1",
-     "why": "流形、切空间与曲率使用多元微分。",
+     "why": "曲线曲面的切向量、度量都靠偏导数；多伦多 MAT363 要求 MAT237（多元微积分）。",
      "kind": "required"
     },
     {
      "id": "M.3.1",
-     "why": "切空间、度量与线性映射需要线性代数。",
+     "why": "切空间是向量空间，第一基本形式是内积；MIT 18.950 与多伦多 MAT363 都要求线性代数。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.1.4.5",
-     "why": "",
+     "id": "M.1.6",
+     "why": "MIT 18.950 要求 Analysis I，讲流形部分时需要。",
      "kind": "recommended"
     },
     {
-     "id": "M.4.3",
-     "why": "",
+     "id": "M.1.4.5",
+     "why": "曲面积分和 Stokes 定理在曲面论里反复出现。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.950：Analysis I + 线性代数；多伦多 MAT363：线性代数 + MAT237 多元微积分。",
    "unlocks": [],
    "related": [
     {
@@ -1920,13 +2809,51 @@
    ],
    "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Differential Geometry (18.950), MIT OpenCourseWare — Prof. Paul Seidel",
+    "url": "https://ocw.mit.edu/courses/18-950-differential-geometry-fall-2008/",
+    "lang": "en",
+    "free": true,
+    "covers": "曲线与曲面的局部微分几何，以曲率概念为核心（课程描述原文：introduction to differential geometry ... centered on the notion of curvature）；含完整讲义与习题"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "18.950 Differential Geometry (Fall 2008, OCW)",
+     "url": "https://ocw.mit.edu/courses/18-950-differential-geometry-fall-2008/pages/syllabus/",
+     "prereq_text": "Prerequisites: Analysis I (18.100) plus Linear Algebra (18.06 or 18.700) or Algebra I (18.701)",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Toronto",
+     "course": "MAT363H1 Geometry of Curves and Surfaces",
+     "url": "https://artsci.calendar.utoronto.ca/course/mat363h1",
+     "prereq_text": "Prerequisite: MAT224H1/ MATB24H3/ MAT224H5/ MAT247H1/ MAT247H5, MAT237Y1/ ( MATB41H3, MATB42H3, MATB43H3)/ MAT237Y5/ MAT257Y1 ( MAT257Y1 can be taken concurrently).",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.4.2",
+    "level": "D3",
+    "time_min": 55,
+    "question": "(1) 螺旋线 r(t) = (cos t, sin t, t)：求弧长参数、曲率 κ 和挠率 τ。\n(2) 半径 R 的球面参数化 X(θ, φ) = (R sinθ cosφ, R sinθ sinφ, R cosθ)：求第一基本形式的系数 E、F、G，并用它算出球面面积。\n(3) 求球面的高斯曲率 K，并用 Gauss–Bonnet 定理 ∬ K dA = 2πχ(S²) 验证（χ(S²) = 2）。\n(4) 切空间 T_pS² 是什么？写出北极 p = (0, 0, R) 处 T_pS² 的一组基，并说明它为什么是二维的。",
+    "answer": "(1) r′ = (−sin t, cos t, 1)，|r′| = √2，弧长 s = √2·t。r″ = (−cos t, −sin t, 0)，r′ × r″ = (sin t, −cos t, 1)，|r′ × r″| = √2。κ = |r′ × r″|/|r′|³ = √2/(2√2) = 1/2。r‴ = (sin t, −cos t, 0)，τ = (r′ × r″)·r‴/|r′ × r″|² = 1/2。\n(2) X_θ = (R cosθ cosφ, R cosθ sinφ, −R sinθ)，X_φ = (−R sinθ sinφ, R sinθ cosφ, 0)。E = X_θ·X_θ = R²，F = 0，G = R² sin²θ。面积 = ∫₀^{2π}∫₀^π √(EG − F²) dθ dφ = ∫∫ R² sinθ dθ dφ = 4πR²。\n(3) 球面每点两个主曲率都是 1/R，K = 1/R²。∬ K dA = 4πR²/R² = 4π = 2π·2，与 Gauss–Bonnet 一致。\n(4) T_pS² 是曲面在 p 处所有切向量组成的向量空间，对球面就是 {v : v·p = 0}。北极处为 z = 0 方向的平面，基 (1, 0, 0)、(0, 1, 0)。由 X_θ、X_φ 张成（参数化在该点附近非退化时），所以是二维的。",
+    "covers": [
+     "曲线的曲率与挠率",
+     "曲面的第一基本形式（度量）",
+     "高斯曲率与 Gauss–Bonnet",
+     "切空间"
+    ],
+    "uses_prereqs": [
+     "M.1.4.1",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 178
+   "y": 239
   },
   {
    "id": "M.4.3",
@@ -1954,38 +2881,64 @@
    "optional": false,
    "required": [
     {
-     "id": "M.5.1",
-     "why": "集合、映射与关系是拓扑空间的形式语言。",
+     "id": "M.1.6",
+     "why": "MIT 18.901 要求 Rudin 水平的分析课，说明这一背景对内容和写证明都是 essential；UCSD 190A 要求实分析或 31CH。",
      "kind": "required"
+    }
+   ],
+   "recommended": [],
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.901（Munkres 讲授）：先修 18.100B；集合论基础在课内前两周现教，不另列前置。",
+   "unlocks": [],
+   "related": [],
+   "step": 5,
+   "reach": 0,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 18.901 Introduction to Topology (Fall 2004, taught by James Munkres)",
+    "url": "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/",
+    "lang": "en",
+    "free": true,
+    "covers": "点集拓扑的完整一轮：逻辑与基础、关系/基数/选择公理、拓扑空间与闭集、连续函数与任意乘积、度量拓扑、商拓扑、连通与紧致、可数性与分离公理、Urysohn 引理与度量化、Tietze 定理、Tychonoff 定理与 Stone-Čech 紧化、Baire 空间、维数论、欧氏空间嵌入。有讲义（lecture notes）与习题，教材为 Munkres《Topology》2nd ed.（需自备）。节点里的‘基本群与同调初步’不在此课范围，属 D4，需要 MIT 18.905 Algebraic Topology I（https://ocw.mit.edu/courses/18-905-algebraic-topology-i-fall-2016/ ，已确认可打开）等后续课程。"
+   },
+   "zhAlt": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "18.901 Introduction to Topology",
+     "url": "https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/syllabus/",
+     "prereq_text": "The prerequisite for the course is a first course in Analysis, at the level of Rudin's “Principles of Mathematical Analysis” (18.100B here at MIT.) This background is essential both for the knowledge of the subject matter and for the experience in formulating proofs.",
+     "prereq_kind": "required"
     },
     {
-     "id": "M.5.3",
-     "why": "",
-     "kind": "required"
+     "school": "University of California, San Diego",
+     "course": "MATH 190A Foundations of Topology I",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "An introduction to point set topology: topological spaces, subspace topologies, product topologies, quotient topologies, continuous maps and homeomorphisms, metric spaces, connectedness, compactness, basic separation, and countability axioms. Examples. Instructor may choose further topics such as Urysohn's lemma, Urysohn's metrization theorem. Formerly MATH 190. Students may not receive credit for MATH 190A and MATH 190. Prerequisites: MATH 31CH or MATH 140A or MATH 142A.",
+     "prereq_kind": "required"
     }
    ],
-   "recommended": [
-    {
-     "id": "M.1.6",
-     "why": "",
-     "kind": "recommended"
-    }
+   "exercise": {
+    "id": "M.4.3",
+    "level": "D3",
+    "time_min": 55,
+    "question": "(1) X = {a, b, c}。判断 τ₁ = {∅, {a}, {a, b}, X} 与 τ₂ = {∅, {a}, {b}, X} 是否为 X 上的拓扑。\n(2) 证明：紧空间在连续映射下的像是紧的。由此说明 [0, 1] 与 ℝ 不同胚。\n(3) 证明 ℝ \\ {0} 不连通而 ℝ² \\ {0} 道路连通，并据此证明 ℝ 与 ℝ² 不同胚。\n(4) 写出 S¹ 与环面 T² 的基本群；说明 S² 与 T² 为什么不同胚（用基本群或欧拉示性数）。",
+    "answer": "(1) τ₁ 是拓扑：含 ∅ 与 X，任意并与有限交都在其中（{a} ∪ {a, b} = {a, b}，{a} ∩ {a, b} = {a}）。τ₂ 不是：{a} ∪ {b} = {a, b} ∉ τ₂。\n(2) 设 K 紧、f 连续，{Uα} 是 f(K) 的开覆盖，则 {f⁻¹(Uα)} 是 K 的开覆盖，取有限子覆盖 f⁻¹(U₁), …, f⁻¹(Uₙ)，则 U₁, …, Uₙ 覆盖 f(K)。[0, 1] 紧（Heine–Borel），ℝ 不紧（{(−n, n)} 无有限子覆盖），同胚把紧集映为紧集，所以二者不同胚。\n(3) ℝ \\ {0} = (−∞, 0) ∪ (0, ∞)，两个不交的非空开集，不连通。ℝ² \\ {0} 中任意两点可用折线（必要时绕过原点经过第三点）连接，道路连通从而连通。若 f: ℝ → ℝ² 是同胚，则 ℝ \\ {0} 与 ℝ² \\ {f(0)} 同胚，但前者不连通、后者连通，矛盾。\n(4) π₁(S¹) ≅ ℤ，π₁(T²) ≅ ℤ × ℤ。π₁(S²) 平凡，与 ℤ × ℤ 不同构，所以 S² 与 T² 不同胚（也可看欧拉示性数 χ(S²) = 2，χ(T²) = 0）。",
+    "covers": [
+     "拓扑空间的定义",
+     "连续映射与紧致性",
+     "连通性与道路连通",
+     "基本群与拓扑不变量"
+    ],
+    "uses_prereqs": [
+     "M.1.6"
+    ]
+   },
+   "droppedOriginal": [
+    "M.5.1"
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
-   "unlocks": [
-    "M.4.5"
-   ],
-   "related": [],
-   "step": 2,
-   "reach": 1,
-   "resource": null,
-   "zhAlt": null,
-   "courses": [],
-   "exercise": null,
-   "droppedOriginal": [],
-   "x": 232,
-   "y": 88
+   "x": 928,
+   "y": 275
   },
   {
    "id": "M.4.4",
@@ -2015,35 +2968,75 @@
    "required": [
     {
      "id": "F.1.2",
-     "why": "几何算法需要复杂度和算法设计。",
-     "kind": "required"
-    },
-    {
-     "id": "M.4.1",
-     "why": "",
+     "why": "UMD CMSC 754 要求 CMSC451 Algorithms，Berkeley CS 274 要求 CS 170：分治、扫描线、摊还分析都是前置。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.5.5",
-     "why": "图结构与离散组合支撑几何算法。",
+     "id": "M.4.1",
+     "why": "几何谓词就是向量的叉积和点积，课程默认会。",
+     "kind": "recommended"
+    },
+    {
+     "id": "F.1.3",
+     "why": "Berkeley CS 274 点名要求会 Dijkstra、拓扑排序等图算法。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UMD CMSC 754：CMSC451 + CMSC420；Berkeley CS 274：CS 170 或同等。两门都没要求图论课。",
    "unlocks": [],
    "related": [],
    "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "CMSC 754 Computational Geometry (Fall 2023, Dave Mount, University of Maryland) — 课程主页 + 全套讲义",
+    "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
+    "lang": "en",
+    "free": true,
+    "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与平面点定位、Voronoi 图、Delaunay 三角剖分（性质与构造）、直线/超平面排列、范围搜索与 kd-树/正交范围树、well-separated pair decomposition、coresets、采样与 VC 维、运动规划。讲义 PDF 全公开。对应节点的凸包、空间划分/空间数据结构、三角网格与几何算法；‘曲面处理/网格处理’只到三角剖分层面。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
-   "droppedOriginal": [],
+   "courses": [
+    {
+     "school": "University of Maryland (College Park)",
+     "course": "CMSC 754 Computational Geometry",
+     "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/syllabus.html",
+     "prereq_text": "Prerequisites: CMSC451 (Algorithms) and CMSC420 (Advanced Data Structures) or permission of instructor. Knowledge of basic algorithm design techniques, such as divide-and-conquer, greedy algorithms, dynamic programming. Knowledge of basic analysis techniques such as asymptotic notation, solving summations and recurrences, basic probability theory. Knowledge of basic data structures (e.g. balanced binary trees, heaps, and hashing).",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, Berkeley",
+     "course": "CS 274 Computational Geometry",
+     "url": "https://people.eecs.berkeley.edu/~jrs/274/",
+     "prereq_text": "Prerequisites: CS 170 (Advanced Algorithms) or the equivalent. In particular, you should know and understand amortized analysis; how to solve recurrences; sorting algorithms; graph algorithms like Dijkstra's shortest path algorithm, connected components, and topological sorting; and basic data structures like binary heaps, hash tables, ...",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.4.4",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 写出用叉积判断三点 p、q、r 的走向（左转 / 右转 / 共线）的公式，并对 p = (0, 0)、q = (4, 0)、r = (2, 3) 计算。\n(2) 实现 Andrew 单调链凸包算法，对点集 {(0,0), (2,1), (4,0), (3,3), (1,2), (2,4), (0,3)} 求凸包顶点（逆时针），说明时间复杂度。\n(3) 用鞋带公式计算 (2) 中凸包的面积。\n(4) 闭合三角网格（同胚于球面）有 V 个顶点、E 条边、F 个面。写出欧拉公式；由“每个面都是三角形”推出 E 与 F 的关系，并用 V = 12 的正二十面体验证。",
+    "answer": "(1) cross(p, q, r) = (q.x − p.x)(r.y − p.y) − (q.y − p.y)(r.x − p.x)；> 0 左转（逆时针），< 0 右转，= 0 共线。本例 4·3 − 0·2 = 12 > 0，左转。\n(2) 点按 (x, y) 排序后分别扫描下凸壳和上凸壳，遇到非左转就弹栈。\n```python\ndef hull(pts):\n    pts = sorted(pts)\n    def half(seq):\n        h = []\n        for p in seq:\n            while len(h) >= 2 and cross(h[-2], h[-1], p) <= 0:\n                h.pop()\n            h.append(p)\n        return h\n    lo, up = half(pts), half(reversed(pts))\n    return lo[:-1] + up[:-1]\n```\n结果 (0,0) → (4,0) → (3,3) → (2,4) → (0,3)。排序 O(n log n)，扫描 O(n)，总 O(n log n)。\n(3) Σ(xᵢyᵢ₊₁ − xᵢ₊₁yᵢ) = 0 + 12 + 6 + 6 + 0 = 24，面积 = 24/2 = 12。\n(4) V − E + F = 2。每个面 3 条边、每条边被 2 个面共享：3F = 2E。二十面体 E = 30、F = 20：12 − 30 + 20 = 2，3·20 = 2·30。",
+    "covers": [
+     "几何谓词（叉积走向判断）",
+     "凸包算法与复杂度",
+     "多边形面积",
+     "网格与欧拉公式"
+    ],
+    "uses_prereqs": [
+     "F.1.2",
+     "M.4.1"
+    ]
+   },
+   "droppedOriginal": [
+    "M.5.5"
+   ],
    "x": 696,
-   "y": 250
+   "y": 311
   },
   {
    "id": "M.4.5",
@@ -2071,30 +3064,30 @@
    "optional": false,
    "required": [
     {
-     "id": "M.4.3",
-     "why": "同调与拓扑不变量支撑拓扑数据分析。",
-     "kind": "required"
-    },
-    {
      "id": "M.3.1",
-     "why": "",
+     "why": "持续同调的计算是有限域上的矩阵秩；Duke COMPSCI 434 要求 MATH 221（线性代数），Auburn MATH 7970 只要求本科线性代数。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.6.2",
-     "why": "",
+     "id": "M.4.3",
+     "why": "两门课都在课内补点集拓扑（Auburn 第一周是 Topology Boot Camp），先学过会轻松很多。",
      "kind": "recommended"
     },
     {
      "id": "F.1.2",
-     "why": "",
+     "why": "Duke 课程强调算法实现。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.6.2",
+     "why": "把条形码用于数据分析时要做统计推断。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Duke COMPSCI 434/MATH 412 与 Auburn MATH 7970 都只要求线性代数，拓扑在课内补。",
    "unlocks": [],
    "related": [
     {
@@ -2102,15 +3095,52 @@
      "why": "拓扑不变量可作为数据形状分析和特征提取工具。"
     }
    ],
-   "step": 3,
+   "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "book",
+    "title": "Elementary Applied Topology (Robert Ghrist, ed. 1.0, 2014) — 作者主页，PDF 章节可免费阅读",
+    "url": "https://www2.math.upenn.edu/~ghrist/notes.html",
+    "lang": "en",
+    "free": true,
+    "covers": "面向‘应用拓扑’的入门书，数学与应用并讲、插图密集、作者明确说 'suitable for self-study or as part of a course'。章目：Manifolds、Complexes（单纯复形/复形构造）、Euler Characteristic、Homology、Sequences（持久模/条形码即持久同调的代数框架）、Cohomology、Morse Theory、Homotopy、Sheaves、Categorification，附背景附录。对应节点的持续同调、单纯复形与流形方法、以及‘与数据/AI 共享的应用’。作者把各章 PDF 免费开放供个人使用。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Duke University",
+     "course": "COMPSCI 434 / MATH 412 Topological Data Analysis",
+     "url": "https://cs.duke.edu/courses/topological-data-analysis",
+     "prereq_text": "Introduction to topology from a computational view-point, with a focus on applications. Themes include: basic notions of point-set topology, persistent homology, finding multi-scale topological structure in point cloud data. Algorithmic considerations emphasized. Prerequisite: Mathematics 221 or equivalent.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Auburn University",
+     "course": "MATH 7970 Topological Data Analysis",
+     "url": "http://webhome.auburn.edu/~hks0015/AuburnTDA.html",
+     "prereq_text": "This month long class (prerequisite: interest in math and undergraduate linear algebra) will introduce students to the basics of PH. The first part will be an Algebra and Topology \"Boot Camp\", bringing students up to speed on the necessary mathematical background.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.4.5",
+    "level": "D3",
+    "time_min": 50,
+    "question": "点云取单位正方形的四个顶点 (0,0)、(1,0)、(1,1)、(0,1)，Vietoris–Rips 复形 VR_ε 中两点距离 ≤ ε 就连边，一组点两两相连就加入对应的单纯形。\n(1) 分别描述 ε < 1、1 ≤ ε < √2、ε ≥ √2 时 VR_ε 中有哪些单纯形，并求 Betti 数 β₀、β₁。\n(2) 写出这个过滤的持续条形码（H₀ 与 H₁ 的区间 [birth, death)）。\n(3) 单纯复形：顶点 {a, b, c}，边 {ab, bc, ca}，没有三角形。写出 ℤ₂ 系数的边界矩阵 ∂₁，求其秩，算出 β₀ 与 β₁ = dim ker ∂₁ − rank ∂₂。\n(4) 说明持续同调稳定性定理的大意（瓶颈距离），以及它为什么让 TDA 对噪声鲁棒。",
+    "answer": "(1) ε < 1：只有 4 个顶点，β₀ = 4、β₁ = 0。1 ≤ ε < √2：4 条边长为 1 的边构成一个四边形环，任意 3 点都含一条对角线，所以没有三角形，β₀ = 1、β₁ = 1。ε ≥ √2：6 条边、4 个三角形和整个四面体全部加入，可缩，β₀ = 1、β₁ = 0。\n(2) H₀：一条 [0, ∞)，三条 [0, 1)。H₁：一条 [1, √2)。\n(3) 行 a、b、c，列 ab、bc、ca：∂₁ = [[1, 0, 1], [1, 1, 0], [0, 1, 1]]。三列之和在 ℤ₂ 中为 0，任两列线性无关，rank ∂₁ = 2。β₀ = 3 − rank ∂₁ = 1；dim ker ∂₁ = 3 − 2 = 1，rank ∂₂ = 0，β₁ = 1（一个空心三角形环）。\n(4) 两个函数（或点云）的持续图之间的瓶颈距离不超过它们差的上确界范数（点云情形由 Hausdorff 距离控制）。数据的小扰动只让持续图里的点小幅移动，短条形（噪声）靠近对角线，长条形（真实结构）保留下来。",
+    "covers": [
+     "单纯复形与 Vietoris–Rips 过滤",
+     "Betti 数与边界矩阵",
+     "持续同调与条形码",
+     "稳定性定理"
+    ],
+    "uses_prereqs": [
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 464,
-   "y": 167
+   "x": 232,
+   "y": 383
   },
   {
    "id": "M.5.1",
@@ -2137,29 +3167,70 @@
    "desc": "集合运算、关系、映射、基数、序数与公理集合论。",
    "milestones": null,
    "optional": false,
-   "required": [],
+   "required": [
+    {
+     "id": "M.5.3",
+     "why": "集合论课程全是证明；Rutgers 640:361 要求 640:300（数学推理），并注明 makes extensive use of the proof techniques。",
+     "kind": "required"
+    }
+   ],
    "recommended": [
     {
      "id": "M.5.2",
-     "why": "",
+     "why": "公理集合论用一阶逻辑写公理。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
-   "unlocks": [
-    "M.4.3"
-   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "Rutgers 640:361：先修 640:300 + 线性代数或 CALC3；CU Boulder 4730 要求证明类课程。",
+   "unlocks": [],
    "related": [],
-   "step": 1,
-   "reach": 2,
-   "resource": null,
+   "step": 2,
+   "reach": 0,
+   "resource": {
+    "tier": "material",
+    "title": "Introduction to Set Theory — UCLA M114S lecture notes (作者个人课程页，Winter 2022)",
+    "url": "https://math.berkeley.edu/~pglutz/114snotes.html",
+    "lang": "en",
+    "free": true,
+    "covers": "按讲的课程笔记，覆盖面与节点简介几乎一一对应：朴素集合论与 Russell 悖论、一阶逻辑与集合论公理（Extensionality/Comprehension 等）、关系、各类关系（等价/偏序）、函数、自然数到整数/有理数/实数的集合论重构、基数（可数/不可数、Cantor–Schröder–Bernstein、基数算术）、良序、序数（超限递归、序数算术）、累积层谱（rank）、选择公理及等价命题、独立性证明入门。每讲一个 PDF，附期中期末与答案。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Rutgers University (Department of Mathematics)",
+     "course": "01:640:361 Set Theory",
+     "url": "https://math.rutgers.edu/academics/undergraduate/course-descriptions/967-01-640-361-set-theory",
+     "prereq_text": "Prerequisite: 01:640:300 and either 01:640:250 or CALC3, or permission of department",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Colorado Boulder",
+     "course": "MATH 4730 Set Theory",
+     "url": "https://catalog.colorado.edu/courses-a-z/math/",
+     "prereq_text": "MATH 4730 (3) Set Theory ... Requisites: Requires prerequisite courses of MATH 3001 or MATH 3110 or MATH 3140 or MATH 3170 or MATH 3210 or MATH 3510 or MATH 4230 (all minimum grade C-).",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.5.1",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 全集 U = {1, …, 6}，A = {1, 2, 3, 4}，B = {3, 4, 5}。求 A ∪ B、A ∩ B、A \\ B、Aᶜ、|A × B|，列出幂集 P(B)，并验证德摩根律 (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ。\n(2) 在 ℤ 上定义 a ~ b ⇔ 3 | (a − b)。证明 ~ 是等价关系，写出全部等价类。\n(3) f: ℝ → ℝ，f(x) = 2x + 1；g: ℤ → ℤ，g(n) = n²。分别判断单射、满射、双射；是双射的写出逆映射。\n(4) 构造 ℕ = {0, 1, 2, …} 到 ℤ 的双射，证明二者等势；用康托尔对角线法证明 (0, 1) 不可数。",
+    "answer": "(1) A ∪ B = {1,2,3,4,5}，A ∩ B = {3,4}，A \\ B = {1,2}，Aᶜ = {5,6}，|A × B| = 4 × 3 = 12。P(B) = {∅, {3}, {4}, {5}, {3,4}, {3,5}, {4,5}, {3,4,5}}（8 个）。(A ∪ B)ᶜ = {6}，Aᶜ ∩ Bᶜ = {5,6} ∩ {1,2,6} = {6}，成立。\n(2) 自反：3 | 0；对称：3 | (a − b) ⇒ 3 | (b − a)；传递：3 | (a − b) 且 3 | (b − c) ⇒ 3 | (a − c)。等价类 [0]、[1]、[2]（按除以 3 的余数）。\n(3) f 是双射，f⁻¹(y) = (y − 1)/2。g 不是单射（g(1) = g(−1)），也不是满射（2 不是平方数）。\n(4) h(n) = n/2（n 偶），h(n) = −(n + 1)/2（n 奇），依次给出 0, −1, 1, −2, 2, …，是双射。对角线法：设 (0, 1) 可列为 x₁, x₂, …，构造 y 的第 k 位小数与 x_k 的第 k 位不同（且只用 1–8 中的数字，避开 0.0999… = 0.1 这类双重表示），则 y ∈ (0, 1) 不等于任何 x_k，矛盾。",
+    "covers": [
+     "集合运算与幂集",
+     "关系与等价类",
+     "映射的单射、满射、双射",
+     "基数：可数与不可数"
+    ],
+    "uses_prereqs": [
+     "M.5.3"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 0,
-   "y": 106
+   "x": 232,
+   "y": 16
   },
   {
    "id": "M.5.2",
@@ -2187,9 +3258,15 @@
    "milestones": null,
    "optional": false,
    "required": [],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [
+    {
+     "id": "M.5.3",
+     "why": "数学系的逻辑课（UCSD MATH 160A）要求先有证明训练；入门的形式逻辑（MIT 24.241）不需要。",
+     "kind": "recommended"
+    }
+   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 24.241 Logic I 没写先修；UCSD MATH 160A（数理逻辑）要求证明课。入门层按前者，作为第 1 步的起点。",
    "unlocks": [
     "F.2.4",
     "F.3.3",
@@ -2198,13 +3275,48 @@
    "related": [],
    "step": 1,
    "reach": 5,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "forall x: Calgary — A Free and Open Introduction to Formal Logic (Open Logic Project / Richard Zach et al.)",
+    "url": "https://forallx.openlogicproject.org/",
+    "lang": "en",
+    "free": true,
+    "covers": "论元（argument）的后果与有效性、真值函项命题逻辑 TFL 的语法与真值表语义、一阶（谓词）逻辑 FOL（含等词）的语法与一阶解释（模型）、把英文翻译成 TFL/FOL、TFL 与 FOL 的 Fitch 式自然演绎证明系统，另附 soundness、函数完全性、模态逻辑等进阶章节；有在线 HTML 版（可加交互/答案）与免费 PDF。对应节点里的命题与谓词逻辑、推理与证明、形式系统与语义（模型）基础。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 160A Elementary Mathematical Logic I",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "An introduction to recursion theory, set theory, proof theory, model theory. Turing machines. Undecidability of arithmetic and predicate logic. Proof by induction and definition by recursion. Cardinal and ordinal numbers. Completeness and compactness theorems for propositional and predicate calculi. Prerequisites: MATH 100A, or MATH 103A, or MATH 140A, or consent of instructor.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "24.241 Logic I",
+     "url": "https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/pages/syllabus/",
+     "prereq_text": "In this course we will cover central aspects of modern formal logic, beginning with an explanation of what constitutes good reasoning. Topics will include validity and soundness of arguments, formal derivations, truth-functions, translations to and from a formal language, and truth-tables. We will thoroughly cover sentential calculus and predicate logic, including soundness and completeness results.",
+     "prereq_kind": "unspecified"
+    }
+   ],
+   "exercise": {
+    "id": "M.5.2",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 用真值表判断 ((p → q) ∧ (q → r)) → (p → r) 是否为重言式；判断 p → q 与 ¬q → ¬p 是否等价，p → q 与 q → p 是否等价。\n(2) 论域为所有人和所有课，S(x)：x 是学生，C(y)：y 是课，T(x, y)：x 选了 y。形式化：a) 每个学生都至少选了一门课；b) 有一门课没有任何学生选。写出 a) 的否定，并把 ¬ 推到最内层。\n(3) 从前提 ∀x (P(x) → Q(x)) 和 P(a) 推出 Q(a)，写出每一步用到的推理规则。\n(4) 构造一个解释（模型），说明 ∀x ∃y R(x, y) 不蕴含 ∃y ∀x R(x, y)。",
+    "answer": "(1) 列出 8 行，表达式恒为真，是重言式（假言三段论）。p → q 与逆否命题 ¬q → ¬p 等价；与逆命题 q → p 不等价：p 假、q 真时 p → q 为真，q → p 为假。\n(2) a) ∀x (S(x) → ∃y (C(y) ∧ T(x, y)))；b) ∃y (C(y) ∧ ∀x (S(x) → ¬T(x, y)))。a) 的否定：∃x (S(x) ∧ ∀y (C(y) → ¬T(x, y)))，即存在一个学生一门课都没选。\n(3) ① ∀x (P(x) → Q(x))（前提）；② P(a)（前提）；③ P(a) → Q(a)（由 ① 全称消去，x 取 a）；④ Q(a)（由 ②③ 蕴含消去 / 假言推理）。\n(4) 论域 ℕ，R(x, y) 解释为 y > x。∀x ∃y (y > x) 为真（取 y = x + 1）；∃y ∀x (y > x) 为假（取 x = y 时 y > y 不成立）。",
+    "covers": [
+     "命题逻辑与真值表",
+     "谓词逻辑与量词",
+     "形式推理规则",
+     "解释与模型"
+    ],
+    "uses_prereqs": []
+   },
    "droppedOriginal": [],
    "x": 0,
-   "y": 322
+   "y": 239
   },
   {
    "id": "M.5.3",
@@ -2234,22 +3346,18 @@
    "required": [],
    "recommended": [
     {
-     "id": "M.5.2",
-     "why": "逻辑推理支撑证明组织；二者可交替学习。",
-     "kind": "recommended"
-    },
-    {
-     "id": "M.5.1",
-     "why": "",
+     "id": "M.1.2",
+     "why": "MIT 6.042J 写明唯一先修是 18.01，内容里只在求和估计、渐近分析时用到一点微积分。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 6.042J：The only prerequisite is 18.01；UCSD MATH 109 要求线性代数 + 多元微积分（数学成熟度门槛）。作为第 1 步的起点。",
    "unlocks": [
     "M.1.6",
     "M.3.4",
-    "M.4.3",
+    "M.3.5",
+    "M.5.1",
     "M.5.4",
     "M.5.5",
     "F.1.2",
@@ -2260,14 +3368,52 @@
    ],
    "related": [],
    "step": 1,
-   "reach": 34,
-   "resource": null,
+   "reach": 35,
+   "resource": {
+    "tier": "website",
+    "title": "MIT OpenCourseWare 6.042J Mathematics for Computer Science (Fall 2010)",
+    "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+    "lang": "en",
+    "free": true,
+    "covers": "直接证明、反证与逆否证明、良序原理、归纳法与强归纳法（含递归定义）、状态机与不变式、等价关系与偏序、求和与递推式求解、数论与同余、图论基础、计数与离散概率；配套教材 Mathematics for Computer Science 免费 PDF、完整视频讲座、习题与解答。覆盖节点的‘归纳/反证/不变式/等价关系/偏序/递推/结构化证明’。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
-   "droppedOriginal": [],
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+     "course": "6.042J Mathematics for Computer Science",
+     "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/pages/syllabus/",
+     "prereq_text": "Prerequisites: The only prerequisite is 18.01. If you have already taken 18.310 or 6.046, then you should not take 6.042.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 109 Mathematical Reasoning",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "This course uses a variety of topics in mathematics to introduce the students to rigorous mathematical proof, emphasizing quantifiers, induction, negation, proof by contradiction, naive set theory, equivalence relations and epsilon-delta proofs. Required of all departmental majors. Prerequisites: MATH 18 or MATH 20F or MATH 31AH, and MATH 20C.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.5.3",
+    "level": "D1",
+    "time_min": 45,
+    "question": "(1) 用数学归纳法证明 1 + 3 + 5 + … + (2n − 1) = n²。\n(2) 用反证法证明 √2 是无理数。\n(3) 8×8 棋盘去掉对角线两端的两个角格，能否用 31 张 1×2 多米诺骨牌恰好覆盖？用染色不变式说明。\n(4) 在 {1, 2, 3, 4, 6, 12} 上定义 a ≼ b ⇔ a | b。证明这是偏序，描述哈斯图，指出最小元与最大元；它是全序吗？\n(5) 解递推 aₙ = aₙ₋₁ + 2aₙ₋₂，a₀ = 0，a₁ = 1，求通项。",
+    "answer": "(1) n = 1：1 = 1²。设 n = k 成立，则加上第 k + 1 项 2k + 1：k² + 2k + 1 = (k + 1)²，成立。\n(2) 设 √2 = p/q 为既约分数，则 p² = 2q²，p 为偶数，记 p = 2m，得 q² = 2m²，q 也是偶数，与既约矛盾。\n(3) 不能。棋盘黑白交替，每张骨牌恰好盖一黑一白；对角的两个角格同色，去掉后剩 30 个同色格与 32 个另一色格，数量不等，不可能用 31 张骨牌覆盖。\n(4) 自反 a | a；反对称：a | b 且 b | a ⇒ a = b（正整数）；传递：a | b、b | c ⇒ a | c。哈斯图：1 在最下，连 2 和 3；2 连 4 和 6；3 连 6；4 和 6 都连 12。最小元 1，最大元 12。不是全序：2 与 3 不可比。\n(5) 特征方程 r² = r + 2，r = 2 或 −1，aₙ = A·2ⁿ + B(−1)ⁿ。由 a₀ = 0、a₁ = 1 得 A = 1/3、B = −1/3，aₙ = (2ⁿ − (−1)ⁿ)/3（前几项 0, 1, 1, 3, 5, 11）。",
+    "covers": [
+     "数学归纳法",
+     "反证法",
+     "不变式",
+     "偏序与哈斯图",
+     "线性递推"
+    ],
+    "uses_prereqs": []
+   },
+   "droppedOriginal": [
+    "M.5.2"
+   ],
    "x": 0,
-   "y": 178
+   "y": 311
   },
   {
    "id": "M.5.4",
@@ -2297,24 +3443,62 @@
    "required": [
     {
      "id": "M.5.3",
-     "why": "归纳、递推和证明是组合数学基础。",
+     "why": "CU Boulder MATH 3170 要求 MATH 2001（离散数学入门），UCSD MATH 184 要求 MATH 109（数学推理）。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "CU Boulder MATH 3170 与 UCSD MATH 184 都要求一门证明/离散数学课。",
    "unlocks": [],
    "related": [],
    "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Applied Combinatorics (Mitchel T. Keller & William T. Trotter) — free open textbook, HTML edition",
+    "url": "https://appliedcombinatorics.org/appcomb/",
+    "lang": "en",
+    "free": true,
+    "covers": "基础计数（排列、组合、子集、鸽巢原理）、递归与数学归纳、进阶计数（容斥、普通与指数生成函数、递推关系、Pólya 计数理论）、离散结构（图、有向图、偏序集、区间序）、离散优化（最小生成树、最短路、网络流），另有离散概率、Ramsey 理论（极值/存在性结果）与网络流的组合应用。对应节点的计数、容斥、生成函数、组合设计雏形（Pólya）、极值与概率方法（Ramsey + 概率章）。Georgia Tech MATH 3012 的正式教材，HTML 免费在线阅读。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of Colorado Boulder",
+     "course": "MATH 3170 Combinatorics 1",
+     "url": "https://catalog.colorado.edu/courses-a-z/math/",
+     "prereq_text": "MATH 3170 (3) Combinatorics 1 — Covers basic methods and results in combinatorial theory. Includes enumeration methods, elementary properties of functions and relations, and graph theory. Emphasizes applications. Requisites: Requires prerequisite of MATH 2001 or MATH 2002 (both minimum grade C-).",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 184 Enumerative Combinatorics",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Introduction to the theory and applications of combinatorics. Enumeration of combinatorial structures (permutations, integer partitions, set partitions). Bijections, inclusion-exclusion, ordinary and exponential generating functions. Renumbered from MATH 184A; credit not offered for MATH 184 if MATH 184A if previously taken. Credit not offered for MATH 184 if MATH 188 previously taken. If MATH 184 and MATH 188 are concurrently taken, credit only offered for MATH 188. Prerequisites: MATH 31CH or MATH 109.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.5.4",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 从 10 人中选 3 人组成委员会有多少种选法？选出主席、副主席、秘书各一人呢？单词 MISSISSIPPI 的字母有多少种不同排列？\n(2) 1 到 1000 中不能被 2、3、5 中任何一个整除的数有多少个？（容斥原理）\n(3) 用 1 元和 2 元硬币凑出 n 元（不计顺序），写出方法数 aₙ 的生成函数，并求 a₁₀。\n(4) 在边长为 2 的正方形内任放 5 个点，证明必有两点距离 ≤ √2。\n(5) 把完全图 Kₙ 的每条边独立地以 1/2 概率染红或蓝，求单色三角形个数的期望。",
+    "answer": "(1) C(10, 3) = 120；P(10, 3) = 10·9·8 = 720；11!/(1!·4!·4!·2!) = 34650。\n(2) |A₂| = 500，|A₃| = 333，|A₅| = 200，|A₂∩A₃| = 166，|A₂∩A₅| = 100，|A₃∩A₅| = 66，|A₂∩A₃∩A₅| = 33。并集 = 500 + 333 + 200 − 166 − 100 − 66 + 33 = 734，所求 = 1000 − 734 = 266。\n(3) G(x) = 1/((1 − x)(1 − x²))。直接计数：用 k 枚 2 元（0 ≤ k ≤ ⌊n/2⌋），其余用 1 元，aₙ = ⌊n/2⌋ + 1，a₁₀ = 6。\n(4) 把正方形分成 4 个边长为 1 的小正方形，5 个点必有两个落在同一个小正方形（鸽巢原理），它们距离不超过对角线 √2。\n(5) 每个三角形单色的概率 = 2·(1/2)³ = 1/4，由期望的线性性，期望 = C(n, 3)/4。",
+    "covers": [
+     "排列组合与多重集排列",
+     "容斥原理",
+     "生成函数",
+     "鸽巢原理",
+     "概率方法（期望线性性）"
+    ],
+    "uses_prereqs": [
+     "M.5.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 16
+   "y": 160
   },
   {
    "id": "M.5.5",
@@ -2345,13 +3529,13 @@
    "required": [
     {
      "id": "M.5.3",
-     "why": "离散结构与证明支撑图论。",
+     "why": "UCSD MATH 154/158 都要求 MATH 109（数学推理）；图论结论靠归纳和构造证明。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 154 Discrete Mathematics and Graph Theory：先修 MATH 109 或 31CH。",
    "unlocks": [
     "M.7.5"
    ],
@@ -2363,13 +3547,52 @@
    ],
    "step": 2,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Combinatorics and Graph Theory (David Guichard, Whitman College) — free online textbook, graph theory chapters",
+    "url": "https://www.whitman.edu/mathematics/cgt_online/book/",
+    "lang": "en",
+    "free": true,
+    "covers": "第 5 章 Graph Theory 覆盖：图的基本概念（度、同构、路与圈）、Euler 回路与迹、Hamilton 圈与路、二分图、树与最优生成树（Kruskal/Prim）、连通性、点/边着色与色多项式、平面图着色（Euler 公式）、有向图；第 4 章 Systems of Distinct Representatives 讲 Hall 定理与匹配（含 Latin squares）。对应节点的图、树、连通性、匹配、着色；网络流与谱图理论只部分/未覆盖。全文 HTML 免费在线阅读，含例题与习题，另有 PDF/LaTeX 源。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 154 Discrete Mathematics and Graph Theory",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Basic concepts in graph theory, including trees, walks, paths, and connectivity, cycles, matching theory, vertex and edge-coloring, planar graphs, flows and combinatorial algorithms, covering Hall's theorems, the max-flow min-cut theorem, Euler's formula, and the travelling salesman problem. ... Prerequisites: MATH 31CH or MATH 109.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 158 Extremal Combinatorics and Graph Theory",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Extremal combinatorics is the study of how large or small a finite set can be under combinatorial restrictions. We will give an introduction to graph theory, connectivity, coloring, factors, and matchings, extremal graph theory, Ramsey theory, extremal set theory, and an introduction to probabilistic combinatorics. ... A strong performance in MATH 109 or MATH 31CH is recommended. Prerequisites: MATH 31CH or MATH 109.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.5.5",
+    "level": "D1",
+    "time_min": 45,
+    "question": "(1) 一个图有 10 条边，每个顶点度数都是 4，它有几个顶点？是否存在 7 个顶点、每个顶点度数都是 3 的图？\n(2) 证明 n 个顶点的树恰有 n − 1 条边。K₄ 有没有欧拉回路？有没有哈密顿回路？\n(3) 二部图左侧 {a, b, c}、右侧 {1, 2, 3}，边为 a1、a2、b1、c2、c3。求最大匹配，并用 Hall 定理判断是否有完美匹配。\n(4) 求圈 C₅ 与完全图 K₄ 的色数；用欧拉公式证明 K₅ 不是平面图。\n(5) 网络 s→a 容量 3，s→b 容量 2，a→b 容量 1，a→t 容量 2，b→t 容量 3。求最大流和一个最小割。",
+    "answer": "(1) 握手定理 Σdeg = 2E = 20，4V = 20，V = 5。7 个 3 度顶点的度数和为 21，是奇数，不存在。\n(2) 归纳：n ≥ 2 的树必有叶子（取最长路的端点），删去它得到 n − 1 个顶点的树，由归纳假设有 n − 2 条边，加回来共 n − 1 条。K₄ 每个顶点度数 3（奇数），没有欧拉回路；1-2-3-4-1 是哈密顿回路。\n(3) b 只连 1，取 b1；a 再取 2；c 取 3。{a2, b1, c3} 是完美匹配。Hall 条件：任意左侧子集的邻居数都不少于其大小（如 {a, b} 的邻居 {1, 2}），满足。\n(4) χ(C₅) = 3（奇圈不能 2 着色），χ(K₄) = 4。简单连通平面图（V ≥ 3）每个面至少 3 条边，3F ≤ 2E，结合 V − E + F = 2 得 E ≤ 3V − 6。K₅：E = 10 > 3·5 − 6 = 9，不是平面图。\n(5) 送 s→a 3（其中 2 走 a→t，1 走 a→b），s→b 2，b→t 共 3。最大流 5。最小割 {s} | {a, b, t}，容量 3 + 2 = 5，等于最大流。",
+    "covers": [
+     "度数与握手定理",
+     "树的性质",
+     "欧拉回路与哈密顿回路",
+     "二部匹配与 Hall 定理",
+     "着色与平面性",
+     "网络流与最小割"
+    ],
+    "uses_prereqs": [
+     "M.5.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 160
+   "y": 304
   },
   {
    "id": "M.6.1",
@@ -5315,9 +6538,34 @@
    ],
    "step": 2,
    "reach": 6,
-   "resource": null,
-   "zhAlt": null,
-   "courses": [],
+   "resource": {
+    "tier": "website",
+    "title": "Cooperative Software Development（Amy J. Ko，华盛顿大学，免费在线教材）",
+    "url": "https://faculty.washington.edu/ajko/books/cooperative-software-development/",
+    "lang": "en",
+    "free": true,
+    "covers": "Process 章讲瀑布、螺旋、XP/敏捷、Scrum 与 Kanban 及其取舍；Organizations、Communication、Productivity、Quality 等章讲团队协作、沟通与质量观，覆盖生命周期、迭代/敏捷、协作与方法选择。"
+   },
+   "zhAlt": {
+    "title": "北京大学《软件工程》（孙艳春，Coursera 中文课程：软件过程、需求、结构化/面向对象方法、敏捷、测试、项目管理）",
+    "url": "https://www.coursera.org/learn/ruanjian-gongcheng"
+   },
+   "courses": [
+    {
+     "school": "Carnegie Mellon University",
+     "course": "17-313 Foundations of Software Engineering",
+     "url": "https://cmu-313.github.io/syllabus/",
+     "prereq_text": "This class has a pre-requisite of 15-122 or 15-121. If you have not taken those classes, but you think you have similar experiences, please reach out to the instructors.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 169A Introduction to Software Engineering",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS169A/",
+     "prereq_text": "Prerequisites: COMPSCI C88C or DATA C88C or COMPSCI 61A or COMPSCI 47A; and COMPSCI 61B or COMPSCI 61BL or COMPSCI 47B.",
+     "prereq_kind": "required"
+    }
+   ],
    "exercise": null,
    "droppedOriginal": [],
    "x": 232,

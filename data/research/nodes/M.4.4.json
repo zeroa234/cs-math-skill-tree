@@ -1,0 +1,55 @@
+{
+ "id": "M.4.4",
+ "resource": {
+  "tier": "website",
+  "title": "CMSC 754 Computational Geometry (Fall 2023, Dave Mount, University of Maryland) — 课程主页 + 全套讲义",
+  "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
+  "lang": "en",
+  "free": true,
+  "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与平面点定位、Voronoi 图、Delaunay 三角剖分（性质与构造）、直线/超平面排列、范围搜索与 kd-树/正交范围树、well-separated pair decomposition、coresets、采样与 VC 维、运动规划。讲义 PDF 全公开。对应节点的凸包、空间划分/空间数据结构、三角网格与几何算法；‘曲面处理/网格处理’只到三角剖分层面。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Maryland (College Park)",
+   "course": "CMSC 754 Computational Geometry",
+   "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/syllabus.html",
+   "prereq_text": "Prerequisites: CMSC451 (Algorithms) and CMSC420 (Advanced Data Structures) or permission of instructor. Knowledge of basic algorithm design techniques, such as divide-and-conquer, greedy algorithms, dynamic programming. Knowledge of basic analysis techniques such as asymptotic notation, solving summations and recurrences, basic probability theory. Knowledge of basic data structures (e.g. balanced binary trees, heaps, and hashing).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2",
+    "F.1.1"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 274 Computational Geometry",
+   "url": "https://people.eecs.berkeley.edu/~jrs/274/",
+   "prereq_text": "Prerequisites: CS 170 (Advanced Algorithms) or the equivalent. In particular, you should know and understand amortized analysis; how to solve recurrences; sorting algorithms; graph algorithms like Dijkstra's shortest path algorithm, connected components, and topological sorting; and basic data structures like binary heaps, hash tables, ...",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2",
+    "F.1.1",
+    "F.1.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.5": "not_mentioned",
+  "F.1.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UMD CMSC 754 要求 CMSC420（Advanced Data Structures）；Berkeley CS 274 要求 'basic data structures like binary heaps, hash tables'。"
+  },
+  {
+   "id": "F.1.3",
+   "kind": "required",
+   "evidence": "Berkeley CS 274 的先修说明里点名要会 'graph algorithms like Dijkstra's shortest path algorithm, connected components, and topological sorting'（图算法）。"
+  }
+ ],
+ "notes": "原图建议前置 F.1.2（算法分析与设计）有直接证据：UMD 要 CMSC451 Algorithms，Berkeley 要 CS 170 Advanced Algorithms，记 supported。原图另一个建议 M.5.5（图论）两门课都没要求——它们只要‘会用图算法’，不要求上过图论课，故记 not_mentioned；真正额外要的是数据结构（F.1.1），UMD 甚至要求研究生级数据结构课 CMSC420，Berkeley 另外点名图算法（F.1.3），都记入 extra_prereqs。资源选 UMD CMSC 754：自称 'introductory course on computational geometry'、讲义全公开、覆盖面与本节点最贴（凸包/Voronoi/Delaunay/范围搜索/排列），比 Berkeley CS 274（研究生级、偏 combinatorial geometry 证明）更贴近入门层 D2。缺口：网格与曲面处理（geometry processing）本资源不覆盖，D3/D4 部分需要另找（本批未核实具体替代资源）。"
+}

@@ -1,0 +1,54 @@
+{
+ "id": "M.3.4",
+ "resource": {
+  "tier": "website",
+  "title": "Modern Algebra (18.703), MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/18-703-modern-algebra-spring-2013/",
+  "lang": "en",
+  "free": true,
+  "covers": "群论（侧重有限群）、环论（理想、多项式环与欧氏环上的唯一分解）、域论与有限域；含讲义、习题与考试",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "18.703 Modern Algebra (Spring 2013, OCW)",
+   "url": "https://ocw.mit.edu/courses/18-703-modern-algebra-spring-2013/pages/syllabus/",
+   "prereq_text": "Prerequisites: Multivariable Calculus (18.02)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1",
+    "M.1.4.4"
+   ]
+  },
+  {
+   "school": "University of Toronto",
+   "course": "MAT301H1 Groups and Symmetries",
+   "url": "https://artsci.calendar.utoronto.ca/course/mat301h1",
+   "prereq_text": "Prerequisite: MAT257Y1/ ( MAT224H1/ MAT247H1,( MAT235H1, MAT236H1)/ MAT235Y1/ MAT237Y1, MAT246H1/ ( MAT158H1, MAT159H1)/ MAT157Y1/ ...)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1",
+    "M.5.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "MIT 18.703 要求 18.02 Multivariable Calculus；多伦多 MAT301H1 要求 MAT235/237 多元微积分"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Toronto MAT301H1 要求 MAT224H1/MAT247H1（线性代数/代数 II：内积空间、谱定理、Jordan 型）"
+  }
+ ],
+ "notes": "映射说明：MAT246H1 «Concepts in Abstract Mathematics»（证明入门、模运算、无穷集合基数）= M.5.3，故 M.5.3 记为 supported；CSC236 同属证明/离散课。MAT240H1=高级线性代数、MAT247H1=代数 II（谱定理/Jordan 型），均归 M.3.1，未按「抽象代数」重复计入。MIT 18.703 反而只列 18.02，未提证明课——两校口径不同，原图把 M.5.3 列为前置在北美课程体系中有明确支持（多伦多），MIT 侧则无要求。资源覆盖范围按 18.703 官方课程描述核对：群论/环论/域论（含有限域）明确列出；「同态、商结构」未在描述里逐条点出，但属该课标准内容，故 covers 未写入未核实项。"
+}

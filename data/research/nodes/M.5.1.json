@@ -1,0 +1,60 @@
+{
+ "id": "M.5.1",
+ "resource": {
+  "tier": "material",
+  "title": "Introduction to Set Theory — UCLA M114S lecture notes (作者个人课程页，Winter 2022)",
+  "url": "https://math.berkeley.edu/~pglutz/114snotes.html",
+  "lang": "en",
+  "free": true,
+  "covers": "按讲的课程笔记，覆盖面与节点简介几乎一一对应：朴素集合论与 Russell 悖论、一阶逻辑与集合论公理（Extensionality/Comprehension 等）、关系、各类关系（等价/偏序）、函数、自然数到整数/有理数/实数的集合论重构、基数（可数/不可数、Cantor–Schröder–Bernstein、基数算术）、良序、序数（超限递归、序数算术）、累积层谱（rank）、选择公理及等价命题、独立性证明入门。每讲一个 PDF，附期中期末与答案。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Rutgers University (Department of Mathematics)",
+   "course": "01:640:361 Set Theory",
+   "url": "https://math.rutgers.edu/academics/undergraduate/course-descriptions/967-01-640-361-set-theory",
+   "prereq_text": "Prerequisite: 01:640:300 and either 01:640:250 or CALC3, or permission of department",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "M.3.1",
+    "M.1.4.1"
+   ]
+  },
+  {
+   "school": "University of Colorado Boulder",
+   "course": "MATH 4730 Set Theory",
+   "url": "https://catalog.colorado.edu/courses-a-z/math/",
+   "prereq_text": "MATH 4730 (3) Set Theory ... Requisites: Requires prerequisite courses of MATH 3001 or MATH 3110 or MATH 3140 or MATH 3170 or MATH 3210 or MATH 3510 or MATH 4230 (all minimum grade C-).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "M.1.6",
+    "M.3.4",
+    "M.3.5",
+    "M.4.2"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "Rutgers 01:640:361 硬性要求 01:640:300（Introduction to Mathematical Reasoning，即证明写作课），并在 Note 里明说 'This course makes extensive use of the proof writing skills students develop in Math 300'；CU Boulder MATH 4730 要求 3001/3110/3140/3170/3210/3510/4230 之一（任一门证明密集的高年级数学课）。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Rutgers 01:640:361 要求 01:640:250（Introductory Linear Algebra）或 CALC3 二者之一；线性代数一项对应 M.3.1。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "Rutgers 01:640:361 的 'either 01:640:250 or CALC3' 里的 CALC3 即多元微积分，对应 M.1.4.1（与 M.3.1 二者择一）。"
+  }
+ ],
+ "notes": "原图建议前置为空，因此 candidate_check 为空对象。两门课程都没有要求拓扑、数理逻辑等额外前置，只要求‘会写证明’，所以 extra_prereqs 全是证明成熟度类。资源选 UCLA Math 114S 的公开课程笔记页（托管在作者 Berkeley 个人目录 ~pglutz 下；页面未写作者姓名，故标题不署名。HTML 索引逐讲链接手写 PDF）：讲次列表逐条与节点内容对得上（第 3–10 讲 ZFC 重构数系、11–13 基数、14–21 序数、22–23 选择公理、24–25 独立性证明），非研究生课。缺点：手写扫描 PDF，且托管在作者在 Berkeley 的个人目录下（页面本身 HTTP 200 可打开、正文可读）。CU Boulder 的先修原文取自学校现行 2026–2027 catalog 的 Mathematics (MATH) 页面（含 MATH 4730 条目）。"
+}

@@ -1,0 +1,37 @@
+{
+ "id": "M.3.3",
+ "resource": {
+  "tier": "website",
+  "title": "Euclidean Tensor Analysis — Tensor Algebra (Amuthan A. Ramabathiran, IIT Bombay)",
+  "url": "https://amuthan.github.io/tensors-intro/tensor_algebra/",
+  "lang": "en",
+  "free": true,
+  "covers": "多重线性函数与张量的定义、张量积、基表示与换基（坐标变换）、缩并、张量广义点积、体积形式；前接内积空间与线性映射章节",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Rutgers University",
+   "course": "01:640:495 Selected Topics in Mathematics, Section 02: Multilinear Algebra and Tensor Networks",
+   "url": "https://math.rutgers.edu/academics/undergraduate/course-descriptions/1179-01-640-495-selected-topics-in-mathematics",
+   "prereq_text": "Prerequisites: Math 251 and Math 250, but Webreg lists Calc IV = Math 244/252 and Math 250 as the prerequisites.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "Rutgers 640:495 Section 02 (Multilinear Algebra and Tensor Networks) 要求 Math 251 (Multivariable Calculus) / Calc IV"
+  }
+ ],
+ "notes": "Rutgers 640:250 = 线性代数、640:251 = 多元微积分，故映射 M.3.1 + M.1.4.1。该站点是 IIT Bombay 航空航天系教师写的在线讲义站（同站还有 Curvilinear Coordinates 等章节，可承接坐标变换），HTML 全文可读；但**不含张量分解（CP/Tucker）**，节点简介里「张量分解」需另找资料。补充（已用 tavily_extract 读过正文，作为数学严格化材料）：Ivo Terek《A mini-course on tensors》https://web.williams.edu/Mathematics/it3/texts/tensors.pdf ，从多重线性映射、张量积的泛性质讲起，可作 D3 提升。"
+}

@@ -1,0 +1,48 @@
+{
+ "id": "M.5.5",
+ "resource": {
+  "tier": "website",
+  "title": "Combinatorics and Graph Theory (David Guichard, Whitman College) — free online textbook, graph theory chapters",
+  "url": "https://www.whitman.edu/mathematics/cgt_online/book/",
+  "lang": "en",
+  "free": true,
+  "covers": "第 5 章 Graph Theory 覆盖：图的基本概念（度、同构、路与圈）、Euler 回路与迹、Hamilton 圈与路、二分图、树与最优生成树（Kruskal/Prim）、连通性、点/边着色与色多项式、平面图着色（Euler 公式）、有向图；第 4 章 Systems of Distinct Representatives 讲 Hall 定理与匹配（含 Latin squares）。对应节点的图、树、连通性、匹配、着色；网络流与谱图理论只部分/未覆盖。全文 HTML 免费在线阅读，含例题与习题，另有 PDF/LaTeX 源。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 154 Discrete Mathematics and Graph Theory",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Basic concepts in graph theory, including trees, walks, paths, and connectivity, cycles, matching theory, vertex and edge-coloring, planar graphs, flows and combinatorial algorithms, covering Hall's theorems, the max-flow min-cut theorem, Euler's formula, and the travelling salesman problem. ... Prerequisites: MATH 31CH or MATH 109.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "M.1.4.5"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 158 Extremal Combinatorics and Graph Theory",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Extremal combinatorics is the study of how large or small a finite set can be under combinatorial restrictions. We will give an introduction to graph theory, connectivity, coloring, factors, and matchings, extremal graph theory, Ramsey theory, extremal set theory, and an introduction to probabilistic combinatorics. ... A strong performance in MATH 109 or MATH 31CH is recommended. Prerequisites: MATH 31CH or MATH 109.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "M.1.4.5"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UCSD MATH 154 与 MATH 158 的 Prerequisites 都写 'MATH 31CH or MATH 109'，其中 MATH 109 = Mathematical Reasoning（证明写作课），即图论课要求先会写证明；MATH 158 还额外写 'A strong performance in MATH 109 or MATH 31CH is recommended'。"
+  }
+ ],
+ "notes": "原图建议前置 M.5.3 有直接证据（UCSD MATH 154/158 都要 MATH 109 或 31CH），记 supported。MATH 31CH 是荣誉向量微积分（M.1.4.5），属于与 MATH 109 二选一的替代，故未列为 required 的 extra_prereq。资源是 Guichard 的免费在线教材（CC BY-NC-SA），HTML 逐节可读，同一页面还提供 PDF 与 LaTeX 源（本次只打开了 HTML 版）。两点缺口如实标注：(1) 网络流只有 Hall 定理/匹配层面，没有系统讲 max-flow min-cut；(2) 谱图理论完全没有。若补这两块，标准参考是 Diestel《Graph Theory》(https://diestel-graph-theory.com/ 已打开，第 6 版含 flows/matching 章节，但完整 eBook 需付费，网页只提供正文免费的在线预览)。"
+}

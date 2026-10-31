@@ -1,0 +1,47 @@
+{
+ "id": "M.3.6",
+ "resource": {
+  "tier": "website",
+  "title": "Algebraic Geometry (18.725), MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/",
+  "lang": "en",
+  "free": true,
+  "covers": "代数闭域上的代数簇、多项式理想与基本概念技巧、复代数簇与复解析簇的关系及例子；含讲义与习题（研究生层）",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "18.725 Algebraic Geometry (Fall 2015, OCW)",
+   "url": "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/syllabus/",
+   "prereq_text": "There are no prerequisite courses, but 18.705 Commutative Algebra must be taken concurrently. In addition, students should understand the basic notions of commutative algebra, such as localization, Noetherian property and prime ideals.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.4"
+   ]
+  },
+  {
+   "school": "MIT",
+   "course": "18.712 Introduction to Representation Theory (Fall 2010, OCW)",
+   "url": "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/pages/syllabus/",
+   "prereq_text": "The prerequisites for the course are the standard algebra sequences Algebra I and II (18.701, 18.702) or Linear Algebra and Modern Algebra (18.700, 18.703). This means that to understand this course, it is necessary and sufficient to have a strong background in linear algebra and a decent understanding of basic algebraic structures, such as groups, rings, and fields.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.4",
+    "M.3.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.4": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "MIT 18.712 明确写「necessary and sufficient to have a strong background in linear algebra」"
+  }
+ ],
+ "notes": "两门课分工：18.725 只覆盖代数几何（代数簇/多项式理想），18.712 只覆盖表示论——本节点标题里的两半内容需各取一门，故 resource 取 18.725，表示论一半用同为 MIT OCW、带完整讲义的 18.712。映射说明：18.725 要求的「交换代数基础（局部化、Noether 性、素理想）」属环论，归入 M.3.4；其另列的范畴论/流形微积分/研究生拓扑/复分析只是「有帮助但非必需」，未计入 extra_prereqs。两门课都是研究生/高阶本科，符合 D4 入门层，但都不适合作为 D1–D2 起步资源。"
+}

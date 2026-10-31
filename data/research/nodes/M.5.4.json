@@ -1,0 +1,47 @@
+{
+ "id": "M.5.4",
+ "resource": {
+  "tier": "website",
+  "title": "Applied Combinatorics (Mitchel T. Keller & William T. Trotter) — free open textbook, HTML edition",
+  "url": "https://appliedcombinatorics.org/appcomb/",
+  "lang": "en",
+  "free": true,
+  "covers": "基础计数（排列、组合、子集、鸽巢原理）、递归与数学归纳、进阶计数（容斥、普通与指数生成函数、递推关系、Pólya 计数理论）、离散结构（图、有向图、偏序集、区间序）、离散优化（最小生成树、最短路、网络流），另有离散概率、Ramsey 理论（极值/存在性结果）与网络流的组合应用。对应节点的计数、容斥、生成函数、组合设计雏形（Pólya）、极值与概率方法（Ramsey + 概率章）。Georgia Tech MATH 3012 的正式教材，HTML 免费在线阅读。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Colorado Boulder",
+   "course": "MATH 3170 Combinatorics 1",
+   "url": "https://catalog.colorado.edu/courses-a-z/math/",
+   "prereq_text": "MATH 3170 (3) Combinatorics 1 — Covers basic methods and results in combinatorial theory. Includes enumeration methods, elementary properties of functions and relations, and graph theory. Emphasizes applications. Requisites: Requires prerequisite of MATH 2001 or MATH 2002 (both minimum grade C-).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 184 Enumerative Combinatorics",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Introduction to the theory and applications of combinatorics. Enumeration of combinatorial structures (permutations, integer partitions, set partitions). Bijections, inclusion-exclusion, ordinary and exponential generating functions. Renumbered from MATH 184A; credit not offered for MATH 184 if MATH 184A if previously taken. Credit not offered for MATH 184 if MATH 188 previously taken. If MATH 184 and MATH 188 are concurrently taken, credit only offered for MATH 188. Prerequisites: MATH 31CH or MATH 109.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "M.1.4.5"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "CU Boulder MATH 3170 要求 MATH 2001（Introduction to Discrete Mathematics）或 MATH 2002（Number Systems: An Introduction to Higher Mathematics）之一；UCSD MATH 184 要求 MATH 109（Mathematical Reasoning）或 MATH 31CH。两校都把‘证明/离散数学课’写成硬先修。"
+  }
+ ],
+ "notes": "原图建议前置 M.5.3 有直接证据（CU MATH 3170 要 MATH 2001；UCSD MATH 184 要 MATH 109），记 supported。UCSD 写法是 'MATH 31CH or MATH 109'，31CH 是荣誉向量微积分（对应 M.1.4.5），属于替代选项而非额外必修，所以没写进 extra_prereqs 的 required。资源选用 Keller & Trotter 的开放教材：HTML 免费、Georgia Tech MATH 3012 长期使用、入门友好；覆盖面里‘组合设计’与‘概率方法’只到 Pólya 计数与 Ramsey/离散概率章的程度，若需要设计理论（BIBD 等）与概率方法的系统处理要再补料，本文件不作无据声称。"
+}

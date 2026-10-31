@@ -1,0 +1,44 @@
+{
+ "id": "M.1.4.4",
+ "resource": {
+  "tier": "website",
+  "title": "Paul's Online Math Notes: Calculus III — Multiple Integrals",
+  "url": "https://tutorial.math.lamar.edu/Classes/CalcIII/MultipleIntegralsIntro.aspx",
+  "lang": "en",
+  "free": true,
+  "covers": "二重积分（矩形/一般区域/极坐标）、三重积分（柱坐标/球坐标）、换元与雅可比、曲面面积；覆盖区域分割与重积分换元。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "18.02SC Multivariable Calculus",
+   "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/syllabus/",
+   "prereq_text": "The prerequisite to this course is 18.01 Single Variable Calculus.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.1",
+    "M.1.2",
+    "M.1.3"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 20C Calculus and Analytic Geometry for Science and Engineering",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Prerequisites: AP Calculus BC score of 4 or 5, or MATH 20B with a grade of C– or better.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.3",
+    "M.1.5"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.3": "supported",
+  "M.1.4.2": "not_mentioned"
+ },
+ "extra_prereqs": [],
+ "notes": "两门课都只把一元积分（18.01 / 20B）列为必修先修，没有把梯度/雅可比（M.1.4.2）列为先修；雅可比通常在重积分换元（Paul's 的 Change of Variables 节）里随内容引入。20B 也含无穷级数，故 mapped_ids 里带 M.1.5。"
+}

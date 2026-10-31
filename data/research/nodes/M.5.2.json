@@ -1,0 +1,53 @@
+{
+ "id": "M.5.2",
+ "resource": {
+  "tier": "website",
+  "title": "forall x: Calgary — A Free and Open Introduction to Formal Logic (Open Logic Project / Richard Zach et al.)",
+  "url": "https://forallx.openlogicproject.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "论元（argument）的后果与有效性、真值函项命题逻辑 TFL 的语法与真值表语义、一阶（谓词）逻辑 FOL（含等词）的语法与一阶解释（模型）、把英文翻译成 TFL/FOL、TFL 与 FOL 的 Fitch 式自然演绎证明系统，另附 soundness、函数完全性、模态逻辑等进阶章节；有在线 HTML 版（可加交互/答案）与免费 PDF。对应节点里的命题与谓词逻辑、推理与证明、形式系统与语义（模型）基础。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 160A Elementary Mathematical Logic I",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "An introduction to recursion theory, set theory, proof theory, model theory. Turing machines. Undecidability of arithmetic and predicate logic. Proof by induction and definition by recursion. Cardinal and ordinal numbers. Completeness and compactness theorems for propositional and predicate calculi. Prerequisites: MATH 100A, or MATH 103A, or MATH 140A, or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.4",
+    "M.1.6"
+   ]
+  },
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "24.241 Logic I",
+   "url": "https://ocw.mit.edu/courses/24-241-logic-i-fall-2009/pages/syllabus/",
+   "prereq_text": "In this course we will cover central aspects of modern formal logic, beginning with an explanation of what constitutes good reasoning. Topics will include validity and soundness of arguments, formal derivations, truth-functions, translations to and from a formal language, and truth-tables. We will thoroughly cover sentential calculus and predicate logic, including soundness and completeness results.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UCSD MATH 160A 要求 MATH 100A/103A/140A 之一，而这三门各自的先修都是 'MATH 31CH or MATH 109'（MATH 109 = Mathematical Reasoning，证明写作课），即逻辑课实际要求先有证明训练。"
+  },
+  {
+   "id": "M.1.6",
+   "kind": "required",
+   "evidence": "UCSD MATH 160A 直接列出 MATH 140A（Foundations of Real Analysis I）为一个可用先修。"
+  },
+  {
+   "id": "M.3.4",
+   "kind": "required",
+   "evidence": "UCSD MATH 160A 直接列出 MATH 100A（Abstract Algebra I）或 MATH 103A（Modern Algebra I）为可用先修。"
+  }
+ ],
+ "notes": "原图建议前置为空，candidate_check 是空对象。资源选 forall x: Calgary：free + HTML 在线阅读 + 覆盖 TFL/FOL 语法、真值表与一阶解释语义、Fitch 自然演绎、soundness；节点里的‘模型论与证明论基础’只到解释/可靠性的程度，若需 completeness/incompleteness 的完整证明，可用 Open Logic Text（https://openlogicproject.org/ ，免费 PDF，本批未逐页核对正文）。第二门课 MIT 24.241：OCW 的 Syllabus 与 Course Info 页没有 Prerequisites 栏目，所以 prereq_text 抄的是它的 Course Description（说明课程从‘什么算好的推理’讲起，未要求先修），prereq_kind 记 unspecified。UCSD 先修原文取自 catalog.ucsd.edu/courses/MATH.html 页面正文。"
+}
