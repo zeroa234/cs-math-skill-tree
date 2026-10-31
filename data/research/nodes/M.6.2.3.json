@@ -1,0 +1,59 @@
+{
+ "id": "M.6.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "Causal Inference: The Mixtape (2nd ed., retitled “The Remix”) — Scott Cunningham, Baylor University（免费在线阅读）",
+  "url": "https://mixtape.scunning.com/",
+  "lang": "en",
+  "free": true,
+  "covers": "整本书以网页形式免费开放。站点目录：Foundational Ideas（潜在结果与随机化、该用哪种因果推断方法）；Causal Cross-Sectional Designs（DAG 与后门准则、无混杂假设下的匹配/回归/倾向得分、断点回归、工具变量）；Causal Panel Designs（面板方法、双重差分及其复杂变体）。对应节点的随机实验与潜在结果框架、混杂与因果图、识别策略与估计方法；书里大量给 Stata/R 代码示例，理论深度略浅于计量经济学教材，适合入门到中等。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Chalmers University of Technology",
+   "course": "DAT465 Causality and machine learning",
+   "url": "https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/DAT465",
+   "prereq_text": "A course in programming in a general-purpose language (e.g. C/C++/Java/Python). One course each in calculus, linear algebra and mathematical statistics. We strongly recommend that the student has taken a course in Machine learning, for example DAT340, TDA233 or similar, or that such a course is taken in parallel alongside this course.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "M.1.2",
+    "M.3.1",
+    "M.6.2"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 181F Sampling Surveys and Experimental Design",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Design of sampling surveys: simple, stratified, systematic, cluster, network surveys. Sources of bias in surveys. Estimators and confidence intervals based on unequal probability sampling. Design and analysis of experiments: block, factorial, crossover, matched-pairs designs. Analysis of variance, re-randomization, and multiple comparisons. Prerequisites: ECE 109 or ECON 120A or MAE 108 or MATH 11 or MATH 181A or MATH 183 or MATH 186 or MATH 189. Students who have not completed listed prerequisites may enroll with consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Chalmers DAT465 课程大纲列 'One course each in calculus, linear algebra and mathematical statistics'。"
+  },
+  {
+   "id": "M.1.2",
+   "kind": "required",
+   "evidence": "Chalmers DAT465 同上，要求一门微积分课。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Chalmers DAT465 要求 'A course in programming in a general-purpose language (e.g. C/C++/Java/Python)'。"
+  }
+ ],
+ "notes": "两个不同取向的证据值得并记：Chalmers DAT465 走统计路线，把「一门数理统计课」列为必修先修（故 M.6.2 记 supported）；而 Brady Neal 的公开课 Introduction to Causal Inference（https://www.bradyneal.com/causal-inference-course ，已打开）从机器学习视角讲，原文写 'There is one main prerequisite: basic probability... Topics from statistics and machine learning will pop up... some familiarity with those will be helpful, but is not necessary'，即统计只算有帮助。这说明因果推断的统计前置在课程之间差异较大，M.6.2 的判定以 Chalmers 的 required 为准。Brady Neal 那门不是大学开设的学位课，故没放进 courses，只在此备注。实验设计那一半用 UCSD MATH 181F 佐证，它的先修是一串可选课（MATH 181A 即本节点的 M.6.2 数理统计）。"
+}

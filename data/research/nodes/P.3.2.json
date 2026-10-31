@@ -1,0 +1,46 @@
+{
+ "id": "P.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "Crafting Interpreters（Robert Nystrom，作者主页免费全文版；页面版权标注 © 2015–2021）",
+  "url": "https://craftinginterpreters.com/",
+  "lang": "en",
+  "free": true,
+  "covers": "全书目录逐章核对：第一部分用 Java 做树遍历解释器（4 Scanning、5 Representing Code、6 Parsing Expressions、7 Evaluating、10 Functions、11 Resolving and Binding、12–13 Classes/Inheritance），第二部分用 C 做字节码虚拟机（14 Chunks of Bytecode、15 A Virtual Machine、16 Scanning on Demand、18 Types of Values、19 Strings、20 Hash Tables、21 Global/Local Variables、24 Calls and Functions（调用栈/栈帧）、25 Closures（upvalue 与堆上环境）、26 Garbage Collection（标记-清除 + 设计笔记『Generational Collectors』）、30 Optimization（NaN boxing、superinstruction））。正好覆盖节点的解释执行、栈与堆、GC 与运行时性能；JIT 与 FFI 不在书里（见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "17-470 Virtual Machines and Managed Runtimes",
+   "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
+   "prereq_text": "17-470 Virtual Machines and Managed Runtimes — Fall: 12 units. ... Prerequisites: 15-611 or 15-411",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.3.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-411/611 Compiler Design",
+   "url": "https://www.cs.cmu.edu/~411/policies.html",
+   "prereq_text": "This course covers the design and implementation of compiler and runtime systems for high-level languages, and examines the interaction between language design, compiler design, and runtime organization. Topics covered include lexical and syntactic analysis, type-checking, program analysis, code generation and optimization, memory management, and runtime organization. ... Additionally, because your compilers will target x86-64 assembly, Chapter 3 of ... Computer Systems: A Programmer's Perspective ... will be indispensible.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "C.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.3.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "recommended",
+   "evidence": "CMU 15-411 课程政策页把 15-213 的讲义与 CS:APP 第 3 章（machine-level 表示）写成 indispensable 参考，对应 C.1.1；这属于课程自述的强烈建议而非 formal prerequisite。"
+  }
+ ],
+ "notes": "原图建议前置 P.3.1（编译原理）：CMU 课程目录里 17-470 Virtual Machines and Managed Runtimes 明写 'Prerequisites: 15-611 or 15-411'（15-411 就是 Compiler Design），这是本节点最直接对口的课，映射 P.3.1，记 supported。15-411 自身官方描述包含 'memory management, and runtime organization'，也教本节点一部分内容，但它的 home/policies 页没有 Prerequisites 段落，只把 15-213 讲义/CS:APP 第 3 章写成 indispensible（记 recommended → C.1.1）。资源选 Crafting Interpreters：作者主页提供免费全文（同时列有印刷版/电子版的购买链接），章节标题从 contents.html 逐条核对，覆盖解释执行/字节码 VM/栈帧/GC；JIT（如 HotSpot/template JIT）、FFI 与 native 互操作不在书中，D3/D4 深度的 JIT 与 GC 调优可看 Cornell CS 6120 Advanced Compilers（https://www.cs.cornell.edu/courses/cs6120/2023fa/ ，已核对：有 Lesson 11 Memory Management、GC & Reference Counting 的讨论课，且提供 self-guided 版本，但 syllabus 没有先修段落）。"
+}

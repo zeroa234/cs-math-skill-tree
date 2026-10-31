@@ -1,0 +1,65 @@
+{
+ "id": "F.1.4",
+ "resource": {
+  "tier": "website",
+  "title": "A Course in Graduate Algorithms（Bo Waggoner, CU Boulder CSCI 5454）讲义与视频",
+  "url": "https://bowaggoner.com/courses/gradalg/",
+  "lang": "en",
+  "free": true,
+  "covers": "16 讲完整讲义＋视频。第 6 讲 近似算法入门（近似比、顶点覆盖/集合覆盖/带权背包等），第 7 讲 在线算法入门（竞争比、ski rental、确定性下界），第 8 讲 随机化算法（期望/高概率保证、随机化舍入），第 10 讲 流算法（草图/摘要、heavy hitters）；另有 Word-RAM 与 Big-O、DFS/拓扑排序、最短路、DP、最大流最小割等基础模块。正对应节点的随机化保证、近似比、竞争分析与下界。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Cornell University",
+   "course": "CS 6820 Analysis of Algorithms",
+   "url": "https://www.cs.cornell.edu/courses/cs6820/2016fa/",
+   "prereq_text": "CS 4820 or equivalent, i.e. an advanced undergraduate-level algorithms course. ... We will assume knowledge of: discrete mathematical structures, including graphs, trees, DAGs; basic data structures such as lists, trees, heaps, sorting and searching; asymptotic complexity, O( ) and o( ) notation, solving recurrences; machine models and general computability; algebra: linear algebra (including eigenvalues and eigenvectors); probability: sample spaces, random variables, expectation and variance, independence, conditional probability and expectation.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2",
+    "M.6.1",
+    "M.5.3",
+    "F.1.1",
+    "M.3.1",
+    "F.2.2"
+   ]
+  },
+  {
+   "school": "University of Colorado Boulder",
+   "course": "CSCI 5454 Design and Analysis of Algorithms (课程讲义站)",
+   "url": "https://bowaggoner.com/courses/gradalg/",
+   "prereq_text": "It is intended to also be accessible (with work) to students who are a bit rusty or never took undergrad algorithms but have programming and mathematics backgrounds.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "F.1.2": "supported",
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "Cornell CS 6820 的 'We will assume knowledge of' 列表含 discrete mathematical structures（graphs, trees, DAGs）与 solving recurrences。"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "同一列表含 'basic data structures such as lists, trees, heaps, sorting and searching'。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "同一列表含 'linear algebra (including eigenvalues and eigenvectors)'。"
+  },
+  {
+   "id": "F.2.2",
+   "kind": "required",
+   "evidence": "同一列表含 'machine models and general computability'（可计算性基础）。"
+  }
+ ],
+ "notes": "原图两个前置都有课程证据：Cornell CS 6820 明确要求 CS 4820（算法课，映射 F.1.2）并在假定知识里列出概率（M.6.1）。注意证据分歧：CU Boulder CSCI 5454 的讲义站自述 'intended to also be accessible ... to students who are a bit rusty or never took undergrad algorithms'，即该课不把算法课当硬性先修（记 unspecified，不是 contradicted，因为它没否认证价值）。资源选 bowaggoner（CU Boulder）而不是 CS 6820，原因：CS 6820 的 2016fa/2017fa 站点里 schedule.html 已经变成另一门课（CS 2110）的内容，讲义链接不可靠；bowaggoner 站的讲义与视频（Module 2 正是 approximation/online/randomized）目前完整可访问（已逐条打开核对目录）。CS 6820 页面本身仍可访问，仅用它作先修证据。"
+}

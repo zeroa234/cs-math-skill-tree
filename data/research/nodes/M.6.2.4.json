@@ -1,0 +1,37 @@
+{
+ "id": "M.6.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "36-708 Statistical Methods for Machine Learning — Prof. Larry Wasserman, Carnegie Mellon University（公开课程主页 + 全套讲义）",
+  "url": "https://www.stat.cmu.edu/~larry/=sml/",
+  "lang": "en",
+  "free": true,
+  "covers": "CMU 统计系研究生课主页，页面自述为「advanced course focusing on the intersection of Statistics and Machine Learning ... to study modern methods and the underlying theory for those methods」，讲义列表（可直接点开 PDF）：回顾、密度估计、非参数回归、线性回归、Sparsity、Nonparametric Sparsity、线性与非线性分类器、随机森林、聚类、图模型、有向图模型、因果推断、Minimax Theory、非参数贝叶斯、Conformal Prediction、差分隐私。对应节点的高维统计（稀疏性/高维估计）与统计学习理论（风险界、minimax 下界）；集中不等式散落在复习与 minimax 讲义里，不是单独一章。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "36-708 Statistical Methods for Machine Learning（同页授课信息，Larry Wasserman）",
+   "url": "https://www.stat.cmu.edu/~larry/=sml/",
+   "prereq_text": "There are two pre-requisites for this course: 36-705 (Intermediate Statistical Theory) 36-707 (Regression)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2",
+    "M.6.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.2.2",
+   "kind": "required",
+   "evidence": "CMU 36-708 把 36-707 (Regression) 与 36-705 一起列为两门必修前置。"
+  }
+ ],
+ "notes": "只找到一门写出先修清单的高维统计/统计学习理论课（CMU 36-708），故 courses 只有一条；同一组老师 2017 年开的 10-702/36-702 Statistical Machine Learning（https://www.stat.cmu.edu/~ryantibs/statml/ ，已打开）也有成套讲义，但主页没有 Prerequisites 段落（syllabus.pdf 抓到的是 200 但正文未解析），无法抄原文，故未列入。36-705 Intermediate Statistical Theory 就是节点 M.6.2 的数理统计内容，因此 M.6.2 记 supported。若需要更偏「集中不等式 + 高维概率」的教材，可补 Vershynin《High-Dimensional Probability》（作者主页有免费 PDF，本批未核验）。"
+}

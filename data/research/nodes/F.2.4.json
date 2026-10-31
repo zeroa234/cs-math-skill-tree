@@ -1,0 +1,36 @@
+{
+ "id": "F.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "CMU 15-414 Bug Catching: Automated Program Verification and Testing (Spring 2021)",
+  "url": "https://www.cs.cmu.edu/~15414/s21/",
+  "lang": "en",
+  "free": true,
+  "covers": "课表（已核对）含整段决策过程内容：SAT Solving、SAT Encodings、SMT Solving、SMT Theories、SMT Encodings 五讲，每讲有讲义 PDF 与录播；前置部分讲命题/一阶逻辑与证明规则，后续用 Why3 做机器可检查（machine-checked）的验证证明。对应节点的可满足性、SAT/SMT、证明搜索与可检查证明。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Cornell University",
+   "course": "CS 4860 Applied Logic",
+   "url": "https://classes.cornell.edu/browse/roster/FA23/class/CS/4860",
+   "prereq_text": "Prerequisite: MATH 2210, MATH 2230, MATH 2940, or equivalent.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Cornell 官方 Class Roster 记 CS 4860 先修为 MATH 2210 / 2230 / 2940（线性代数类课程），对应 M.3.1。"
+  }
+ ],
+ "notes": "证据情况：我打开的 CMU 15-414（s21 主页与课表）、JKU SAT Solving（fmv.jku.at/sat/）、LMU Automated Theorem Proving 三个页面都没有写正式先修要求，所以本节点只找到一门带官方先修原文的课（Cornell CS 4860）。CS 4860 的先修是线性代数类课程（MATH 2210/2230/2940），看着奇怪但官方原文如此（该课 CS/数学合开，2019 秋季由 CS 的 Robert Constable 讲，课程页明确 'when taught by Computer Science this course involves elements of Formal Methods and Automated Reasoning'）。没有任何课要求先修数理逻辑课，故 M.5.2 记 not_mentioned。资源侧提醒：15-414 的框架是程序验证，SAT/SMT 只是其中一段；它的讲义是 PDF，research_tool 只能拿到 '(PDF)' 无法抽正文，所以'归结（resolution）'这一项我没有逐页核实，未写进 covers；如需要专攻可补 JKU Armin Biere 的 SAT Solving 幻灯片（https://fmv.jku.at/sat/ ）与 Kroening & Strichman《Decision Procedures》。LMU 那门课的站点因 TLS 证书链问题 fetch 打不开（已用 tavily_extract 打开过首页），未用作资源。"
+}

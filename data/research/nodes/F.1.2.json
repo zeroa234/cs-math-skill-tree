@@ -1,0 +1,54 @@
+{
+ "id": "F.1.2",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.046J Design and Analysis of Algorithms (Spring 2015, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
+  "lang": "en",
+  "free": true,
+  "covers": "第 1-4 讲（含习题课）分治与主定理（凸包、中位数、FFT、van Emde Boas 树），第 5 讲摊还分析（聚合/记账/势能，含 union-find），第 6-8 讲随机化（矩阵乘、快排、跳表、通用与完美哈希），第 10-11 讲动态规划（高级 DP、全点对最短路），第 12 讲贪心与 MST，第 13-14 讲最大流/最小割与匹配，第 15 讲线性规划，第 16-18 讲 P/NP/归约/近似/固定参数，另含分布式算法、密码学与 cache-oblivious 算法；有全套讲课视频、讲义、习题与解答。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 170 Efficient Algorithms and Intractable Problems",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS170/",
+   "prereq_text": "Prerequisites: COMPSCI 61B and COMPSCI 70.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.006 Introduction to Algorithms",
+   "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/pages/syllabus/",
+   "prereq_text": "A firm grasp of Python and a solid background in discrete mathematics are necessary prerequisites to this course. You are expected to have mastered the material presented in 6.01 Introduction to EECS I and 6.042J Mathematics for Computer Science.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "M.5.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.1.1": "supported",
+  "M.5.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.006 syllabus 要求先修 6.01 Introduction to EECS I（Python 编程），对应 P.1.1。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "recommended",
+   "evidence": "Berkeley CS 70（CS 170 的必修前置）同时覆盖离散数学与概率论，故概率基础是隐含需要的；课程目录只写 'COMPSCI 70'，未单列概率课。"
+  }
+ ],
+ "notes": "原图两个建议前置都有明确课程证据：Berkeley CS 170 必修 61B（数据结构 F.1.1）与 CS 70（离散数学 M.5.3）；MIT 6.006 明确要求 6.042J（M.5.3）。资源选了 MIT 6.046J（本科课程，非研究生）因为它同时覆盖分治、摊还、贪心、DP、流/匹配，而 6.006 (2011) 的课表里没有贪心算法（有摊还/table doubling，见 6.006 calendar，已打开核对）。代价是 6.046 假定学生已上过 6.006，真正的零起点可以先看 6.006（https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/ ，同样免费有视频）。"
+}

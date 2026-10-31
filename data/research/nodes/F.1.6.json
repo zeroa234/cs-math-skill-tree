@@ -1,0 +1,48 @@
+{
+ "id": "F.1.6",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.890 Algorithmic Lower Bounds: Fun with Hardness Proofs (Fall 2014, Erik Demaine, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/",
+  "lang": "en",
+  "free": true,
+  "covers": "23 讲视频＋讲义＋习题（含解答）：从 3-partition、SAT/Circuit SAT/Planar SAT 的归约框架讲起，到不可近似性（gap inapproximability）、参数化复杂度 I/II（W 层谱与固定参数不可解性、ETH 与平面情形）、P 与 ASP、NP&PSPACE 完全的游戏、3SUM 与 APSP 等精细复杂度下界、PPAD。覆盖节点的固定参数可解性/难解性与条件性复杂度界（ETH、3SUM/APSP 假设）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.890 Algorithmic Lower Bounds: Fun with Hardness Proofs",
+   "url": "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/pages/syllabus/",
+   "prereq_text": "Prerequisites: 6.046 Design and Analysis of Algorithms or equivalent background in discrete mathematics and algorithms.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "Fine-Grained Complexity and Algorithms (Russell Impagliazzo, 2019)",
+   "url": "https://cseweb.ucsd.edu/~russell/FGCA",
+   "prereq_text": "We will assume that students have had at least some exposure to algorithms and their analysis (with familiarity with randomized algorithms and dynamic programming), and basic complexity theory (e.g., familiarity with the concept of NP-completeness). Otherwise, the class will be self-contained, developping new concepts as needed.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2",
+    "F.1.4",
+    "F.2.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.2.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.4",
+   "kind": "required",
+   "evidence": "UCSD Fine-Grained Complexity 要求熟悉 randomized algorithms（随机化算法）与动态规划。"
+  }
+ ],
+ "notes": "原图建议前置 F.2.3（计算复杂性）证据分裂：MIT 6.890 只要 6.046（算法课，映射 F.1.2），完全没提复杂性课；UCSD 的 Fine-Grained Complexity 明确假定 'basic complexity theory (e.g., familiarity with the concept of NP-completeness)'，即要求 F.2.3，所以记 supported 并在 extra_prereqs 里补 F.1.4（该校同时要求熟悉随机化算法）。资源侧说明：6.890 的 calendar（已打开）里没有性质测试/次线性算法专题，这块是本节点的缺口；性质测试可另看 NUS CS 5234 第 3 讲（见 F.1.5）或 Goldreich 的 property testing 综述。"
+}

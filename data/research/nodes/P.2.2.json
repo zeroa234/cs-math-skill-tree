@@ -1,0 +1,47 @@
+{
+ "id": "P.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford CS107: Computer Organization & Systems（Autumn 2026 课程网站，lectures + assignments + labs 公开）",
+  "url": "https://web.stanford.edu/class/cs107/",
+  "lang": "en",
+  "free": true,
+  "covers": "逐讲核对：02 Unix and C、03 Integers, Bits and Bytes、04–05 Bitwise Operators、06–07 Chars and C Strings（含 buffer overflow 与安全）、08 Introduction to Pointers、09 Stack and Heap、10 Heap Wrap, Generics and void *、11–12 Generics, void*, and Function Pointers、13–17 x86-64（寄存器、ALU、条件码与控制流）；配套 Assign0 Intro to Unix and C、Assign2 C Strings、Assign3 A Heap of Fun（自己写 malloc）、Assign4 Into the void*，以及 GDB/Valgrind/Callgrind 指南。对应节点的内存布局、指针、栈/堆生命周期与系统/Unix 接口。链接与单独编译（linking）讲得较少（见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS107 Computer Organization & Systems",
+   "url": "https://web.stanford.edu/class/cs107/syllabus.html",
+   "prereq_text": "The prerequisite for CS107 is CS106B (or equivalent). You should have practical C/C++ skills using recursion, dynamic data structures (pointers, linked lists, trees, graphs), data abstraction, classic data structures (lists, stacks, queues, sets, maps), and standard algorithms (searching, sorting, hashing).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-213 Introduction to Computer Systems",
+   "url": "https://www.cs.cmu.edu/~213/",
+   "prereq_text": "Course Syllabus Prerequisites: 15-122",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.1.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS107 官方先修是 CS106B (or equivalent)，并明确要求 'dynamic data structures (pointers, linked lists, trees, graphs)... classic data structures (lists, stacks, queues, sets, maps)'，即数据结构课，映射 F.1.1。"
+  }
+ ],
+ "notes": "原图建议前置 P.1.1：两门课都隐含或明写要先有一门程序设计课——Stanford CS107 要求 CS106B（其先修是 CS106A 入门程序设计），CMU 15-213 要求 15-122 Principles of Imperative Computation（CMU 的入门命令式编程课），故 P.1.1 记 supported。额外发现 F.1.1（数据结构）是 CS107 的硬性前置，写入 extra_prereqs。资源选 Stanford CS107 而不是 15-213：节点入门层是 D1，CS107 从 Unix/C 语法与指针讲起并按 D1 节奏推进，15-213 更偏 C.1.1（机器级/系统级），可作为 D2–D3 的进阶（其 schedule 页有 Bits/Bytes、machine-level programming、memory hierarchy、linking、exceptional control flow、virtual memory、concurrency 全套 slides，已核对可访问）。节点里的「C++」部分 CS107 只到 C+void*/函数指针，泛型元编程（模板）需另补；「链接」在 CS107 lectures 列表里没有单独一讲，15-213 有。"
+}

@@ -1,5 +1,5 @@
-"""Copy reviewed pi research (temp/research/nodes/<id>.json) into data/research/nodes/ for every skill whose
-prerequisites are marked verified in data/curation/prereqs.txt. Strips the exercise field (exercises live in
+"""Copy reviewed pi research (temp/research/nodes/<id>.json) into data/research/nodes/ for every skill the main
+agent has reviewed (i.e. has an entry in data/curation/prereq-notes.json, verified or still draft). Strips the exercise field (exercises live in
 data/exercises/). Reports resource URLs that never went through the fetch cache so they can be checked by hand.
 
   python scripts/archive_research.py
@@ -19,11 +19,7 @@ def cache_status(url):
     return json.loads(p.read_text(encoding="utf-8")).get("status") if p.exists() else None
 
 
-verified = []
-for line in (ROOT / "data/curation/prereqs.txt").read_text(encoding="utf-8").splitlines():
-    parts = [x.strip() for x in line.split("#")[0].split("|")]
-    if len(parts) == 4 and parts[3] == "verified":
-        verified.append(parts[0])
+verified = list(json.loads((ROOT / "data/curation/prereq-notes.json").read_text(encoding="utf-8")))
 
 OUT.mkdir(parents=True, exist_ok=True)
 copied, unchecked = 0, []
@@ -39,6 +35,6 @@ for i in verified:
         unchecked.append(f"{i} {url} (cache: {cache_status(url)})")
     (OUT / f"{i}.json").write_text(json.dumps(r, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     copied += 1
-print(f"archived {copied} of {len(verified)} verified skills")
+print(f"archived {copied} of {len(verified)} reviewed skills")
 for u in unchecked:
     print("CHECK", u)

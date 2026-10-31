@@ -1,0 +1,59 @@
+{
+ "id": "M.6.3",
+ "resource": {
+  "tier": "website",
+  "title": "STAT 150: Stochastic Processes — Prof. David Aldous, UC Berkeley（公开课程主页，含逐次课提要、阅读任务、每周作业与考试）",
+  "url": "https://www.stat.berkeley.edu/~aldous/150/",
+  "lang": "en",
+  "free": true,
+  "covers": "伯克利统计系随机过程课（第二门概率课）的公开主页。页面自述 'This is a second course in Probability, studying the mathematically basic kinds of random process'，并给出完整 topic outline：第2章 条件概率与条件期望；Markov 链入门与长期行为；Poisson 过程；连续时间 Markov 链；鞅（martingales）；Brown 运动；另有分支过程与生成函数等课堂日志式提要。对应节点的随机序列/随机函数、鞅、Poisson 过程与 Brown 运动，以及（通过 Markov 链与长期行为）遍历性；平稳性的系统论述不在该课大纲内。每周作业题、两次期中与期末卷都在站上。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Berkeley",
+   "course": "STAT 150 Stochastic Processes (Fall 2015, David Aldous)",
+   "url": "https://www.stat.berkeley.edu/~aldous/150/",
+   "prereq_text": "The prerequisite is STAT 134 or similar upper-division course. If you did not get at least a B+ in that course then you will find this course very tough.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 180B Introduction to Stochastic Processes I",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Random vectors, multivariate densities, covariance matrix, multivariate normal distribution. Random walk, Poisson process. Other topics if time permits. Prerequisites: MATH 20D and either MATH 18 or MATH 20F or MATH 31AH, and MATH 109 or MATH 31CH, and MATH 180A. Students who have not completed listed prerequisites may enroll with consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "M.2.1",
+    "M.3.1",
+    "M.5.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 180B 明确要求 MATH 20D（初等微分方程），连续时间链的 Kolmogorov 前向/后向方程要用到。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 180B 要求 'either MATH 18 or MATH 20F or MATH 31AH'（线性代数），用于转移矩阵与协方差矩阵。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UCSD MATH 180B 要求 'MATH 109 or MATH 31CH'，即证明写作或荣誉高等微积分。"
+  }
+ ],
+ "notes": "资源与第一门课用的是同一个页面（Aldous 的 STAT 150 主页）：它既是可系统跟着学的课程站（逐次课提要 + 指定教材章节 + 每周作业 + 期中期末），也是写出先修原文的官方课程页，故两处复用。教材为 Pinsky & Karlin《An Introduction to Stochastic Modeling》4th ed（必读）与 Brzezniak & Zastawniak《Basic Stochastic Processes》（参考）。节点里的「平稳性」在该课 outline 中未单列，若要系统学平稳过程需另加教材。UCSD MATH 180B 把微分方程、线性代数、证明课都列为必修，属于该校打包式先修，故一条条记进 extra_prereqs。"
+}

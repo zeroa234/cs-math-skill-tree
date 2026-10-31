@@ -1,0 +1,54 @@
+{
+ "id": "M.6.2.2",
+ "resource": {
+  "tier": "book",
+  "title": "An Introduction to Statistical Learning with Applications in R / Python (ISLR / ISLP, 2nd Edition) — Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani",
+  "url": "https://www.statlearning.com/",
+  "lang": "en",
+  "free": true,
+  "covers": "作者官网提供两版全文免费 PDF（R 版与 Python 版），每章末尾带 R/Python lab。站点自述章节主题依次为：什么是统计学习、回归（线性回归与推断）、分类（logistic 回归、LDA 等广义线性分类）、重抽样（交叉验证/bootstrap）、线性模型选择与正则化（子集选择、岭回归、lasso、降维）、超越线性（多项式、样条、GAM）、树方法、SVM、深度学习、生存分析、无监督学习、多重检验。对应节点的线性/广义线性模型与正则化两条最齐；残差诊断与不确定性的处理散在各章的推断段与 lab 里，不如专门的回归诊断教材系统。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Toronto",
+   "course": "STA302H1 Methods of Data Analysis",
+   "url": "https://artsci.calendar.utoronto.ca/course/sta302h1",
+   "prereq_text": "Introduction to data analysis with a focus on regression. Initial Examination of data. Correlation. Simple and multiple regression models using least squares. Inference for regression parameters, confidence and prediction intervals. Diagnostics and remedial measures. Interactions and dummy variables. Variable selection. Least squares estimation and inference for non-linear regression. Prerequisite: STA238H1/ STA248H1/ STA255H1/ STA261H1/ ECO227Y1/ STAB57H3/ STA258H5/ STA260H5/ ECO227Y5; CSC108H1/ CSC110Y1/ CSC148H1/ CSCA08H3/ CSCA20H3/ CSCA48H3/ CSC108H5/ CSC148H5; MAT223H1/ MAT224H1/ MAT240H1/ MATA22H3/ MATA23H3/ MAT223H5/ MAT240H5/ MATB24H3/ MAT224H5",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.6.2",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 282A Applied Statistics I",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "General theory of linear models with applications to regression analysis. Ordinary and generalized least squares estimators and their properties. Hypothesis testing, including analysis of variance, and confidence intervals. Completion of courses in linear algebra and basic statistics are recommended prior to enrollment. Prerequisites: graduate standing or consent of instructor.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.3.1",
+    "M.6.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.2",
+   "kind": "required",
+   "evidence": "多伦多 STA302H1 要求 STA238H1/STA248H1/STA255H1/STA261H1（概率与统计系列，含估计与推断）之一；UCSD MATH 282A 写 'basic statistics are recommended'。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "多伦多 STA302H1 要求 CSC108H1/CSC148H1 等入门编程课之一。"
+  }
+ ],
+ "notes": "资源先用过 Penn State 的在线回归讲义（online.stat.psu.edu），但本机 fetch 报 SSLCertVerificationError、tavily_extract 对 stat462 与 stat415 两个路径一个失败一个成功，状态不稳定，故不采用；CMU Shalizi 的 mreg 只有目录式 PDF 索引页，不算学习网站。最终选 ISLR：官网可正常打开，作者亲自给出章节清单与免费 PDF，覆盖线性/广义线性模型与正则化最完整。先修侧：多伦多 STA302H1 的先修里 MAT223H1/224H1/240H1 都是线性代数，故 M.3.1 记 supported（required）；UCSD MATH 282A 只是 recommended，且是研究生课，只当补充证据。"
+}

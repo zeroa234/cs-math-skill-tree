@@ -1,0 +1,47 @@
+{
+ "id": "M.6.5",
+ "resource": {
+  "tier": "website",
+  "title": "Information Theory, Inference, and Learning Algorithms — David J. C. MacKay（作者主页，全书免费下载 + 16 讲视频）",
+  "url": "https://www.inference.org.uk/itila/book.html",
+  "lang": "en",
+  "free": true,
+  "covers": "剑桥大学出版社 2003 年出版、作者主页提供全书（640 页）免费下载：PDF(A4)、Postscript、DJVU、EPUB，另有单独的图与逐章下载入口；本站首页还挂出 MacKay 本人 16 讲的视频。内容范围站点上由 Caltech 的 Bob McEliece 推荐语概括为 'covering everything from Shannon's fundamental theorems to the postmodern theory of LDPC codes'，即香农基本定理（熵、互信息、信源编码、信道容量）一直到 LDPC 等现代纠错码。对应节点的熵、互信息、KL 散度、信源/信道编码与容量；率失真（rate-distortion）不是该书主线，需要时另补。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "EE 376A Information Theory (Tsachy Weissman)",
+   "url": "https://web.stanford.edu/class/ee376a/",
+   "prereq_text": "We'll assume you've been exposed to basic probability at the level encountered in a first undergraduate course, or have the motivation to dedicate the first few weeks of the quarter to acquainting yourself (under our guidance) with this material.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "ECE 159 Introduction to Data Processing and Information Theory",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html",
+   "prereq_text": "Introduction to information theory and coding, including entropy, average mutual information, channel capacity, block codes, and convolutional codes. Renumbered from ECE 154C. Students may not receive credit for ECE 159 and ECE 154C. Prerequisites: ECE 153.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "M.6.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.3",
+   "kind": "required",
+   "evidence": "UCSD ECE 159 的唯一先修 ECE 153 在同一目录页写明内容为 'Random processes. Stationary processes: correlation, power spectral density. Gaussian processes ... Point processes'，即随机过程；不先修随机过程就进不了这门信息论课。"
+  }
+ ],
+ "notes": "Stanford EE376A 的先修写法偏软（'We'll assume you've been exposed to basic probability...'，同时又说欢迎文科生选课），但字面上是 assume，故记 required；它是把「基础概率」当作唯一门槛的典型例子，正好支撑 M.6.1。UCSD ECE 159 更硬：先修 ECE 153（随机过程），因此额外记入 M.6.3。资源用 MacKay 的书：站点确认可下载 640 页全书（多种格式）并有作者 16 讲视频，故按 website 记；Cover & Thomas《Elements of Information Theory》更标准但需购买，未采用。"
+}

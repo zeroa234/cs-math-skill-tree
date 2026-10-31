@@ -1,0 +1,42 @@
+{
+ "id": "M.6.3.2",
+ "resource": {
+  "tier": "material",
+  "title": "Stochastic Calculus（依据 J.-F. Le Gall 教材整理的讲义）— Russell Lyons, Indiana University",
+  "url": "https://rdlyons.pages.iu.edu/pdf/StochCalc.pdf",
+  "lang": "en",
+  "free": true,
+  "covers": "印第安纳大学数学系 Russell Lyons 的公开讲义 PDF（约 3.4 MB，站点直接可下）。开篇目录显示结构为：Gaussian 变量与 Gaussian 过程、Gaussian 向量与 Gaussian 空间、鞅与滤过、Brown 运动、随机积分（Itô 积分）、随机微分方程等，按 Le Gall《Brownian Motion, Martingales, and Stochastic Calculus》的思路组织。对应节点的滤过、Itô 积分与 SDE 三条主线，属于 D4 级严格处理（含测度论前提）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 286 Stochastic Differential Equations",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Review of continuous martingale theory. Stochastic integration for continuous semimartingales. Existence and uniqueness theory for stochastic differential equations. Strong Markov property. Selected applications. Prerequisites: MATH 280A-B or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.6.1",
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "STAT 493 Stochastic Calculus for Option Pricing",
+   "url": "https://www.washington.edu/students/crscat/stat.html",
+   "prereq_text": "Introductory stochastic calculus mathematical foundation for pricing options and derivatives. Basic stochastic analysis tools, including stochastic integrals, stochastic differential equations, Ito's formula, theorems of Girsanov and Feynman-Kac, Black-Scholes option pricing, American and exotic options, bond options. Course overlaps with: CFRM 450. Prerequisite: a minimum grade of 2.0 in MATH 491/STAT 491.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.6.1": "supported",
+  "M.6.3": "supported"
+ },
+ "extra_prereqs": [],
+ "notes": "两条原图前置各由一门课支撑：UCSD MATH 286 的唯一先修是 MATH 280A-B，而 MATH 280A 在同一目录页写的是「measure-theoretic foundations of probability theory」（即本节点的 M.1.6.1 测度论，顺带覆盖 M.6.1）；UW STAT 493 的先修 MATH 491/STAT 491 是「Random walks, Markov chains, branching processes, Poisson process, ... stationary processes」的随机过程课（M.6.3）。资源侧：Evans《An Introduction to Stochastic Differential Equations》原来的免费 PDF（math.berkeley.edu/~evans/SDE.course.pdf）现在 404，作者主页只剩勘误，故换成 Lyons 的讲义；该 PDF 本地 fetch 返回 200 但不解析文本，正文目录是通过抓取该 URL 得到的检索摘要核对的，未能逐页读正文。"
+}

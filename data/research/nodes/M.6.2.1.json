@@ -1,0 +1,46 @@
+{
+ "id": "M.6.2.1",
+ "resource": {
+  "tier": "website",
+  "title": "An Introduction to Bayesian Thinking — Merlise Clyde et al., Duke University (StatsWithR, free online book)",
+  "url": "https://statswithr.github.io/book/",
+  "lang": "en",
+  "free": true,
+  "covers": "「Statistics with R」课程的配套免费在线教材（bookdown 出版，作者为 Duke 统计系 Merlise Clyde 等）。目录：1 贝叶斯基础（Bayes 法则、贝叶斯更新、频率派与贝叶斯派对比）；2 共轭先验（二项-贝塔、伽马-泊松、正态-正态）、可信区间与预测推断；3 损失函数与贝叶斯决策、Bayes 因子；4 多参数模型（正态-伽马共轭、蒙特卡洛推断、参考先验、共轭混合、MCMC）；5 用 Bayes 因子做假设检验；6 贝叶斯回归；7 模型选择（BIC、模型不确定性、BMA）；8 用 MCMC 做随机搜索。对应节点的先验/似然/后验、后验计算（解析共轭 + MCMC）与模型比较（Bayes 因子/BIC/BMA）；层级模型只到多参数共轭与 BMA 的程度，没有单独讲多层/层级模型章节。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Washington",
+   "course": "STAT 544 Bayesian Statistical Methods",
+   "url": "https://www.washington.edu/students/crscat/stat.html",
+   "prereq_text": "Statistical methods based on the idea of a probability distribution over the parameter space. Coherence and utility. Subjective probability. Likelihood principle. Conjugate families. Structure of Bayesian inference. Limit theory for posterior distributions. Sequential experiments. Exchangeability. Bayesian nonparametrics. Empirical Bayes methods. Prerequisite: STAT 513 or permission of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2"
+   ]
+  },
+  {
+   "school": "University of Toronto",
+   "course": "STA365H1 Applied Bayesian Statistics",
+   "url": "https://artsci.calendar.utoronto.ca/course/sta365h1",
+   "prereq_text": "Prerequisite: STA302H1/ STAC67H3/ STA302H5",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.2.2",
+   "kind": "required",
+   "evidence": "多伦多 STA365H1（应用贝叶斯统计）的唯一先修是 STA302H1 Methods of Data Analysis（回归/数据建模课），即该校把回归建模放在贝叶斯课之前。"
+  }
+ ],
+ "notes": "STAT 544 的先修 STAT 513 Statistical Inference 在同一页写明内容为「random variables; transformations, conditional expectation, convergence, limit theorems, estimation; Cramer-Rao; MLE; sufficiency; Neyman-Pearson; likelihood-ratio tests; large-sample theory; decision theory」，正是节点 M.6.2 的范围，故 M.6.2 记 supported。多伦多 STA365H1 先修的是 STA302H1（回归），说明有些学校把 M.6.2.2 而非 M.6.2 当作贝叶斯课的门槛，这一条只作为单校课程设计证据，不代表普遍要求。资源方面：若需要完整的层级/多层模型与后验采样（Stan/PyMC），本书只覆盖到正态-伽马与 BMA，可再补 McElreath《Statistical Rethinking》（https://xcelab.net/rm/statistical-rethinking/ ，本批未核验）。"
+}

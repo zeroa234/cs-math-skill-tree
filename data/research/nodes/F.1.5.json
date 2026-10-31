@@ -1,0 +1,47 @@
+{
+ "id": "F.1.5",
+ "resource": {
+  "tier": "website",
+  "title": "CS 5234 Algorithms at Scale (Fall 2019, Seth Gilbert, NUS School of Computing)",
+  "url": "https://www.comp.nus.edu.sg/~gilbert/CS5234/",
+  "lang": "en",
+  "free": true,
+  "covers": "按周主题组织、每周有讲义 slides + 手写笔记 + 习题与解答：Part 1 次线性时间（抽样估计 MST 权重、性质测试、Yao 原理）；Part 2 草图与流（流上抽样、Flajolet-Martin 计数、Misra-Gries heavy hitters、图流算法、动态连通性草图、流式聚类）；Part 3 现代机器上的高效算法（缓存/外部存储：B 树与 buffer trees、cache-efficient 与 cache-oblivious 图算法）；Part 4 并行算法（多核并行模型、MapReduce/MPC 并行算法、并行前缀和与 fork-join 的工作量/跨度分析）。正好覆盖节点的工作量/跨度、通信与 I/O 复杂度、草图和流式摘要。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.827 Algorithm Engineering",
+   "url": "https://jshun.csail.mit.edu/6827-s22/",
+   "prereq_text": "Prerequisites: 6.046, 6.172",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.851 Advanced Data Structures",
+   "url": "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/pages/syllabus/",
+   "prereq_text": "The prerequisite for this course is 6.046, Design and Analysis of Algorithms, or an equivalently thorough undergraduate algorithms class from another school",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.1.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "MIT 6.827 Algorithm Engineering 必修 6.172 Performance Engineering of Software Systems（C/C++ 底层性能工程），对应 P.2.2。"
+  }
+ ],
+ "notes": "原图唯一前置 F.1.2（算法分析与设计）在两门 MIT 课里都是白纸黑字的必修（6.827: 'Prerequisites: 6.046, 6.172'；6.851: 'The prerequisite for this course is 6.046 ... or an equivalently thorough undergraduate algorithms class'），故记 supported。资源选 NUS CS 5234 而不是 MIT 6.827：6.827 是 paper-reading 型研究课，且课表里没有流式/草图（只有并行、外部存储与 cache-oblivious，已核对其 schedule）；CS 5234 是唯一同时覆盖并行工作量/跨度、缓存/外部存储与草图/流式的公开课页。CS 5234 页面本身没有写正式先修要求（只写评分与作业政策），所以先修证据取自 MIT 的两门课。"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "F.3.3",
+ "resource": {
+  "tier": "website",
+  "title": "CMU 15-414 Bug Catching: Automated Program Verification and Testing（Fall 2026 课程网站，逐讲 PDF 讲义 + 工具链 Why3）",
+  "url": "https://www.cs.cmu.edu/~15414/",
+  "lang": "en",
+  "free": true,
+  "covers": "schedule 逐讲核对：Contracts（契约）、Data Structures、Arrays and Ghosts、Semantics（形式语义）、Semantics in Why3、Dynamic Logic（动态逻辑，即 Hoare 逻辑的推广）、Loops（循环不变式）、Arrays、Induction、Convergence，后半学期 Linear Temporal Logic、LTL Model Checking、Branching Time Properties、CTL Model Checking、Software and Bounded Model Checking，即节点里的契约、Hoare 逻辑、不变式、时序逻辑与状态空间（模型检查）全在；每讲有 pdf 讲义与 live code，作业用 Why3 写机器检查的验证代码。抽象解释不在本课（见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-414 Bug Catching: Automated Program Verification",
+   "url": "https://www.cs.cmu.edu/~15414/",
+   "prereq_text": "In this course we will study tools for finding and preventing logical errors.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "17-355/17-665/17-819 Program Analysis",
+   "url": "https://www.cs.cmu.edu/~aldrich/courses/17-355/syllabus.html",
+   "prereq_text": "Prerequisites 15-251 and (15-150 or 15-214)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "F.2.1",
+    "P.1.3",
+    "P.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "CMU 17-355 Program Analysis 先修写 '15-251 and (15-150 or 15-214)'；15-251 Great Theoretical Ideas in CS 是证明/离散结构与理论课，对应 M.5.3。"
+  },
+  {
+   "id": "F.2.1",
+   "kind": "required",
+   "evidence": "同上：15-251 的内容包含 automata/formal languages（正则语言、CFG、图灵机），对应 F.2.1 形式语言与自动机。"
+  },
+  {
+   "id": "P.1.3",
+   "kind": "required",
+   "evidence": "17-355 先修里的 '15-150' 是 Principles of Functional Programming（函数式编程课），对应 P.1.3；也可用 15-214（软件系统构造，Java/OOP）满足这一项，对应 P.1.2。"
+  },
+  {
+   "id": "P.1.2",
+   "kind": "required",
+   "evidence": "17-355 先修里的 '15-214' 是 Principles of Software System Construction（面向对象设计与实现课），对应 P.1.2。"
+  }
+ ],
+ "notes": "原图建议前置 M.5.2（数理逻辑）：两门课都没有把它写成先修——15-414 从 Contracts/Semantics/Dynamic Logic 起讲，逻辑是课内内容而不是入学要求；17-355 的先修是 15-251 与 15-150/15-214，也没提数理逻辑，故 M.5.2 记 not_mentioned。资源选 15-414：契约、Hoare/动态逻辑、循环不变式、LTL/CTL 模型检查与 bounded model checking 全部在 Fall 2026 的 schedule 里，正是节点主体；抽象解释这一项它不覆盖，由第二门课 17-355 补（其 schedule 有 'Dataflow Analysis and Abstract Interpretation' 与 'Program Semantics'，讲义/幻灯片公开）。17-355 的先修原文取自它自己的 syllabus 页（'Prerequisites 15-251 and (15-150 or 15-214)'）。15-414 的先修情况要小心：CMU 课程目录页里它后面只跟了 'Course Website'，没有 Prerequisites 行，syllabus 页也 grep 不到 prerequisit，因此按 unspecified 记录，prereq_text 引用的是课程描述原句。"
+}

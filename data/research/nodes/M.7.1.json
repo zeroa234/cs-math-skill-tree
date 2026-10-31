@@ -1,0 +1,53 @@
+{
+ "id": "M.7.1",
+ "resource": {
+  "tier": "website",
+  "title": "Applied Mathematical Programming — Bradley, Hax & Magnanti（MIT 15.053 Optimization Methods in Business Analytics 的官方在线参考书，分章免费下载）",
+  "url": "https://web.mit.edu/15.053/www/AMP.htm",
+  "lang": "en",
+  "free": true,
+  "covers": "MIT 15.053 课程网站上放的全书（Addison-Wesley 1977，页面自述 'This book is a reference book for 15.053, Optimization Methods in Business Analytics, taught at MIT'），可按整本或分章下载。章节：1 Mathematical Programming: An Overview；2 Solving Linear Programs（单纯形）；3 Sensitivity Analysis；4 Duality in Linear Programming；5 Mathematical Programming in Practice（建模实务）；6/7 铝业与海运船队的规划案例（扫描版）；8 Network Models；9 Integer Programming；10 海军修船厂案例；11 Dynamic Programming；12 Large-Scale Systems；13 Nonlinear Programming；14 A System for Bank Portfolio Planning；附录 A 向量与矩阵、B 矩阵形式的线性规划、C 最大流标号算法。正好覆盖节点的目标与约束建模、线性规划、对偶、灵敏度分析、网络优化与资源配置（第5章与第14章银行组合规划）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 171A Introduction to Numerical Optimization: Linear Programming",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Linear optimization and applications. Linear programming, the simplex method, duality. Selected topics from integer programming, network flows, transportation problems, inventory problems, and other applications. Three lectures, one recitation. Knowledge of programming recommended. (Credit not allowed for both MATH 171A and ECON 172A.) Prerequisites: MATH 18 or MATH 20F or MATH 31AH, and MATH 20C. Students who have not completed listed prerequisites may enroll with consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "IND E 310 Linear and Network Programming",
+   "url": "https://www.washington.edu/students/crscat/inde.html",
+   "prereq_text": "Modeling and optimization of linear network problems. Topics include: optimization of linear systems, mathematical model design, simplex method, primal-dual algorithms, parametric programming, goal programming, network problems and algorithms, and PERT/CPM. Prerequisite: either MATH 136 or MATH 208; and either CSE 121, CSE 122, or CSE 142. Offered: A.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 171A 要求 MATH 20C（多元微积分与向量分析）。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UW IND E 310 要求 CSE 121/CSE 122/CSE 142 之一（入门编程）；UCSD MATH 171A 只把编程写作 'recommended'。"
+  }
+ ],
+ "notes": "资源核验方式说明：MIT 这个页面是 Word 导出的 UTF-16 HTML，research_tool.py fetch 只能拿到乱码标题，tavily_extract 也抓不动，最后用 curl 下载后 iconv 转码才读出完整章节表，上面的章节名与「15.053 参考书」那句都是原文。tier 记 website 是因为它是 MIT 15.053 课程站上的在线课程参考书（可逐章在线阅读/下载），内容本身是 1977 年的教材。先修侧两门课都把线性代数列为必修（UCSD 的 MATH 18/20F/31AH、UW 的 MATH 208/MATH 136），故 M.3.1 记 supported；UCSD 额外要多元微积分，UW 额外要一门编程课。"
+}

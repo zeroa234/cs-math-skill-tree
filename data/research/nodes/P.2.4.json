@@ -1,0 +1,26 @@
+{
+ "id": "P.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "The Missing Semester of Your CS Education（MIT，2026 版课程网站，视频+讲义全公开）",
+  "url": "https://missing.csail.mit.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "2026 版 syllabus 逐讲：Course Overview + Introduction to the Shell、Command-line Environment（shell 脚本、alias、dotfiles）、Development Environment and Tools、Debugging and Profiling（gdb/valgrind/perf 与性能剖析）、Version Control and Git、Packaging and Shipping Code（包管理、依赖、发布）、Agentic Coding、Beyond the Code、Code Quality；每讲配讲义与视频，往届还有 Data Wrangling、Security and Cryptography 等专题。站点首页写明『We’ll teach you how to master the command-line, use a powerful text editor, use fancy features of version control systems』，正好是节点里的 Git、调试器、构建/包管理与自动化工作流。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-131 Great Practical Ideas in CS",
+   "url": "https://www.cs.cmu.edu/~15131/f17/",
+   "prereq_text": "Throughout your education as a Computer Scientist at Carnegie Mellon, you will take courses on programming, theoretical ideas, logic, systems, etc. As you progress, you will be expected to pick up the so-called \"tools of the trade.\" This course is intended to help you learn what you need to know in a friendly, low-stress, high-support way. We will discuss UNIX, LaTeX, debugging and many other essential tools.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [],
+ "notes": "原图建议前置为「无」，candidate_check 为空对象。资源选 MIT Missing Semester：2026 版首页的 syllabus 与 lectures 链接都在同一站，Debugging and Profiling、Version Control and Git、Packaging and Shipping Code 三讲直接对上节点的调试器/构建/包管理/依赖；它本身是 MIT IAP 学期课，官方 about 页只讲动机（『These topics are not taught as part of the university curriculum』），没有写先修要求。第二门课 CMU 15-131 Great Practical Ideas in CS 的内容与本节点几乎一一对应（Terminal usage → Vim → Bash → Git → Makefiles，另加 LaTeX、terminal configuration、package managers 等 extratations），但它的 syllabus 页没有任何先修段落（我抓了 f17 的 syllabus 页，grep prerequisit/required 均 0 条），所以 prereq_kind 记 unspecified、prereq_text 抄的是课程 overview 原文。两门课都没有把 P.1.1 写成必修，因此 extra_prereqs 为空；本节点可以当作整棵树的零前置工具入口。注意 15-131 引用的是 2017 秋季归档页（该页有 'Click for Current GPI Website' 链接，当前站点本次未打开核实）。"
+}

@@ -1,0 +1,51 @@
+{
+ "id": "F.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.045J Automata, Computability, and Complexity (Spring 2011, Scott Aaronson, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/",
+  "lang": "en",
+  "free": true,
+  "covers": "23 讲（讲义与 6 套习题；OCW 未列习题解答）：第 6-10 讲正是本节点核心——图灵机、可判定性、不可判定问题（含 Post 对应问题）、映射归约与 Rice 定理、自指与递归定理；前后还接 DFA/NFA/正则语言（第 3-5 讲）以及复杂度、NP 完全性、概率图灵机（第 12-17 讲）、密码学与量子计算。覆盖 Turing 机、可判定与不可判定、归约与递归理论。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 172 Computability and Complexity",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS172/",
+   "prereq_text": "Prerequisites: COMPSCI 170",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2"
+   ]
+  },
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "18.404J Theory of Computation",
+   "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/syllabus/",
+   "prereq_text": "Prerequisites: 6.042J Mathematics for Computer Science, 18.200 Principles of Discrete Applied Mathematics",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "Berkeley CS 172 必修 COMPSCI 170（算法课）。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "MIT 18.404J 必修 6.042J/18.200（离散数学与证明）。"
+  }
+ ],
+ "notes": "原图把 F.2.1（形式语言与自动机）列为 F.2.2 的前置，但两门真实的可计算性课程都没有这样要求：Berkeley CS 172 的官方描述自己就包含 'Finite automata, Turing machines and RAMs. Undecidable, exponential, and polynomial-time problems'（即自动机在这门课里讲，不是先修）；MIT 18.404J 只要求离散数学，其课程大纲里自动机与语言理论只占前 2 周。故记 not_mentioned。实际证据显示更强的先修是离散数学（M.5.3）或算法课（F.1.2）。资源选 6.045J 而不是 18.404J，是为了避免与 F.2.1 的推荐资源重复；6.045J 的可计算性部分（第 6-10 讲）同样系统，且免费。"
+}

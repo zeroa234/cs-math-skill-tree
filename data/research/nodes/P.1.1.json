@@ -1,0 +1,42 @@
+{
+ "id": "P.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "CS50x: CS50's Introduction to Computer Science (Harvard University, David J. Malan)",
+  "url": "https://cs50.harvard.edu/x/",
+  "lang": "en",
+  "free": true,
+  "covers": "完整入门课（含视频、讲义、problem sets）：Week 0 Scratch 与计算思维；Week 1 C（变量、条件、循环、函数）；Week 2 Arrays（字符串、数组、命令行参数、退出码）；Week 3 Algorithms（线性/二分查找、排序、递归、渐近记号）；Week 4 Memory（指针、内存布局、文件 I/O）；Week 5 Data Structures（链表、哈希表、树、trie）；Week 6 Python；另配 VS Code 与命令行工具链讲解（站点导航列出 Visual Studio Code）。对应节点的变量与控制流、函数与模块化、基本数据类型、输入输出与调试。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
+   "course": "6.100L Introduction to CS and Programming using Python",
+   "url": "https://ocw.mit.edu/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/pages/syllabus/",
+   "prereq_text": "Course Prerequisites: No prerequisites. ... This subject is aimed at students with little to no programming experience.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 61A Structure and Interpretation of Computer Programs",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS61A/",
+   "prereq_text": "Prerequisites: MATH 1A (may be taken concurrently) or Math 10A or Math 16A. Programming experience equivalent to that gained from a score of 3 or above on the Advanced Placement Computer Science exam. ... While CS 61A does not require any prior programming experience, students with little or no programming experience often find CS 61A to be very challenging.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "M.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 61A 官方先修写 'MATH 1A (may be taken concurrently) or Math 10A or Math 16A'（一元微积分，对应 M.1.1 极限与连续/一元微积分入门），属于选课时的并行数学要求，不是编程内容上的前置。"
+  }
+ ],
+ "notes": "原图建议前置为「无」，candidate_check 为空对象。资源选 CS50x：官网 cs50.harvard.edu/x/ 已核对（当前为 2026 版），讲义页 cs50.harvard.edu/x/2025/syllabus/ 给出课程描述与 ten problem sets + final project 的考核结构；周次列表取自同站 2024 版首页（C、Arrays、Algorithms、Memory、Data Structures、Python…）与 2025 版 syllabus。P.1.1 是整棵树的根节点，两门课都从零起点教编程：MIT 6.100L 官方写 'No prerequisites'，Berkeley CS 61A 明写 'does not require any prior programming experience'（但对零基础学生偏难，建议先上 CS 10）。CS 61A 的 MATH 1A 先修按实情记为 required 并映射到 M.1.1，若只看编程先修则相当于无前置。"
+}

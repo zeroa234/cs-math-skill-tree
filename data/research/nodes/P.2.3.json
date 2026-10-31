@@ -1,0 +1,38 @@
+{
+ "id": "P.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "Scipy Lecture Notes — One document to learn numerics, science, and data with Python（EuroSciPy 社区维护，免费 HTML + PDF）",
+  "url": "https://scipy-lectures.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "第 1 章 Getting started with Python for science：1.1 Python scientific computing ecosystem 与『Installing a working environment / interactive environments』、1.2 Python 语言基础（容器、控制流、函数、脚本）、1.4 NumPy（数组创建、dtype、索引切片、view/copy、fancy indexing、broadcasting、shape 操作）、1.5 Matplotlib plotting、1.6 SciPy（插值 scipy.interpolate、优化与拟合 scipy.optimize 等）；第 3 章 3.1 Statistics in Python 用 pandas 的 DataFrame 做『data as a table』、读文件与表格操作。每章 1–2 小时、由浅入深，附可下载代码与 PDF。环境管理只到『装一个可用的科学计算环境』一节，虚拟环境/包管理与自动化脚本要另外补（见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Washington",
+   "course": "CSE 163 Intermediate Data Programming",
+   "url": "https://courses.cs.washington.edu/courses/cse163/",
+   "prereq_text": "Catalog Description: Intermediate data programming. Topics include writing programs that manipulate different types of data; leveraging the growing ecosystem of tools and libraries for data programming; writing programs that are both efficient and elegant; and writing medium-scale programs (100 to 200 lines). Prerequisites: either CSE 122, CSE 123, CSE 142, CSE 143, or CSE 160",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "CSE 160 Data Programming",
+   "url": "https://courses.cs.washington.edu/courses/cse160/",
+   "prereq_text": "Catalog Description: Introduction to computer programming. Assignments solve real data manipulation tasks from science, engineering, business, and the humanities. Concepts of computational thinking, problem-solving, data analysis, Python programming, control and data abstraction, file processing, and data visualization. Intended for students without prior programming experience. ... Prerequisities: (none listed)",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "P.1.1": "supported"
+ },
+ "extra_prereqs": [],
+ "notes": "原图建议前置 P.1.1：UW CSE 163（讲『用库做数据编程』的课，最接近本节点）把 CSE 122/123/142/143/160 任一列为必修先修，这些全是入门程序设计课，映射 P.1.1，记 supported；同一门系的 CSE 160 则写明 'Intended for students without prior programming experience' 且 'Prerequisities: (none listed)'，说明 Python 科学计算工具本身可以从零学，故 P.1.1 在最低层是可绕过的（notes 层面说明，不改变 supported 判定）。资源选 Scipy Lecture Notes：1.4 NumPy、1.5 Matplotlib、1.6 SciPy、3.1 pandas DataFrame 四章都逐条核对过标题，正好对上节点的『数组与数据框』与『科学计算』；『环境管理与自动化』它只讲了装环境和交互式工作流，缺 conda/venv 与脚本自动化，可与 P.2.4（Missing Semester 的 Command-line Environment / Packaging and Shipping Code）配合。"
+}

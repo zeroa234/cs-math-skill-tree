@@ -1,0 +1,58 @@
+{
+ "id": "F.3.4",
+ "resource": {
+  "tier": "website",
+  "title": "Software Foundations（University of Pennsylvania，Benjamin C. Pierce 等，6 卷全免费在线，Rocq/Coq）",
+  "url": "https://softwarefoundations.cis.upenn.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "官方描述逐句核对：整套书『every detail is one hundred percent formalized and machine-checked: the entire text of each volume, including the exercises, is literally a proof script for the Rocq proof assistant』；Vol 1 Logical Foundations（函数式编程、逻辑基础、machine-checked 定理证明、Rocq，含命题/谓词逻辑的 Curry-Howard 式处理）、Vol 2 Programming Language Foundations（operational semantics、Hoare logic、static type systems，与 F.3.2 接得上）、Vol 3 Verified Functional Algorithms（数据结构的形式化验证）、Vol 5 Verifiable C（用 Princeton Verified Software Toolchain 验证真实 C 程序，正是『精化 + 可信计算基』的实战）；官方还写明『No specific background in logic or programming languages is assumed』。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Columbia University",
+   "course": "COMS 6998 007 Types, Languages, and Compilers",
+   "url": "https://www.cs.columbia.edu/~sedwards/classes/2023/6998-spring-tlc/",
+   "prereq_text": "Prerequisites: COMS 4115 Programming Languages and Translators; COMS 3203 Discrete Mathematics; COMS 3261 Computer Science Theory. Equivalents acceptable.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.3.2",
+    "M.5.3",
+    "F.2.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-317/15-657 Constructive Logic",
+   "url": "https://www.cs.cmu.edu/~fp/courses/15317-s23/",
+   "prereq_text": "Prerequisites: 15-317 is an introductory undergraduate course with a minimum grade of C in 15-150 as prerequisite. For the cross-listed graduate version, 15-657, some experience with functional program is recommended.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.3.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "Columbia COMS 6998 007 先修含 'COMS 3203 Discrete Mathematics'，对应 M.5.3 证明方法与离散结构。"
+  },
+  {
+   "id": "F.2.1",
+   "kind": "required",
+   "evidence": "Columbia COMS 6998 007 先修含 'COMS 3261 Computer Science Theory'（自动机、可计算性、复杂度），对应 F.2.1（并部分覆盖 F.2.3）。"
+  },
+  {
+   "id": "P.1.3",
+   "kind": "required",
+   "evidence": "CMU 15-317 Constructive Logic 明写 'a minimum grade of C in 15-150 as prerequisite'，15-150 是函数式编程课，对应 P.1.3。"
+  }
+ ],
+ "notes": "原图建议前置 F.3.2（类型系统与程序语义）：Columbia COMS 6998 007 把 'COMS 4115 Programming Languages and Translators'（讲语法/语义与类型检查的 PL 课）列为必修先修，映射 F.3.2，记 supported；CMU 15-317 只要求 15-150（函数式编程），没提类型系统，所以在它那里 F.3.2 属 not_mentioned，但整体判定取 supported。资源选 Software Foundations 而不是 Theorem Proving in Lean 4：节点三项里『精化与可信计算基』只有 SF 的 Vol 5 Verifiable C（VST + 分离逻辑）真正覆盖，Vol 1 又讲 machine-checked 证明与命题-类型对应；SF 站点首段还给了明确的无先修声明与各卷内容概述。Columbia 课程的 schedule 页我核到了 'Dependent Type Systems'（Mon Apr 24）与 'Curry-Howard Correspondence'（Mon May 1）两讲及依赖类型语言期末项目，即本节点内容；其 6998 是专题课，2023 春季只开一次，站点可能不会再更新。"
+}

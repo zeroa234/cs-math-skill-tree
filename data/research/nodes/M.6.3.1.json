@@ -1,0 +1,30 @@
+{
+ "id": "M.6.3.1",
+ "resource": {
+  "tier": "book",
+  "title": "Markov Chains and Mixing Times, 2nd Edition — David A. Levin & Yuval Peres（作者主页提供全书免费 PDF，AMS 出版）",
+  "url": "https://pages.uoregon.edu/dlevin/MARKOV/",
+  "lang": "en",
+  "free": true,
+  "covers": "作者主页可直接下第二版与第一版全书 PDF（另有勘误表）。全书讲有限状态离散时间 Markov 链：转移矩阵、类结构与不可约性、首达时间与吸收概率、强 Markov 性、常返与瞬态、平稳分布与极限定理、可逆性、遍历定理、混合时间（coupling、谱隙、对数 Sobolev 等）以及 MCMC 与 Coupling from the Past。正好覆盖节点的离散时间链、转移、平稳分布、混合与遍历性；连续时间链只在书末/附录提及，需另补。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 180C Introduction to Stochastic Processes II",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Markov chains in discrete and continuous time, random walk, recurrent events. If time permits, topics chosen from stationary normal processes, branching processes, queuing theory. Prerequisites: MATH 180B or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.3": "supported"
+ },
+ "extra_prereqs": [],
+ "notes": "只找到一门把「随机过程」明写为必修先修、且课程内容就是 Markov 链的课（UCSD MATH 180C，先修 MATH 180B = 本节点的 M.6.3）。查过的其他候选：UW STAT 491 Introduction to Stochastic Processes I 虽然讲 Markov 链，但先修直接是概率课（MATH 394/STAT 394 + MATH 395/396，即 M.6.1），没有把 M.6.3 列为门槛；UW STAT 516 的先修是 STAT 342/396；Cambridge 的 Norris《Markov Chains》网页只放章节预览（https://www.statslab.cam.ac.uk/~james/Markov/ ，已打开），不含先修信息。资源侧按 tier 顺序本该先找网站，但没找到内容成体系、长期稳定的免费 Markov 链教学网站，故退到书：Levin–Peres 这本免费 PDF 是平稳分布与混合时间的标准参考，且比纯入门的书更贴合节点里的「混合」一条。"
+}

@@ -1,0 +1,52 @@
+{
+ "id": "P.1.3",
+ "resource": {
+  "tier": "website",
+  "title": "OCaml Programming: Correct + Efficient + Beautiful（Cornell CS 3110 官方开放教材网站，配 YouTube 视频系列）",
+  "url": "https://cs3110.github.io/textbook/cover.html",
+  "lang": "en",
+  "free": true,
+  "covers": "第 2 章 表达式/函数/调试、第 3 章 lists、variants、records、Advanced Pattern Matching、Algebraic Data Types、第 4 章 Higher-Order Programming（Higher-Order Functions、map、filter、currying、函数代数律）、第 5 章 Module Systems/Modules/Encapsulation/Functors，第 5.6 章 Functional Data Structures、第 6 章 Mutability（refs、mutable fields、arrays）；即节点里的不可变（持久）数据、高阶函数、模式匹配与抽象机制都在内，另有配套视频与练习。逻辑式/规则查询不在本书范围（见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-150 Principles of Functional Programming",
+   "url": "https://www.cs.cmu.edu/~15150/index.html",
+   "prereq_text": "Prerequisite courses are (15-151 or 21-127 or 21-128) and (15-112 or 15-122).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "CSE 341 Programming Languages",
+   "url": "https://courses.cs.washington.edu/courses/cse341/",
+   "prereq_text": "Catalog Description: Basic concepts of programming languages, including abstraction mechanisms, static and dynamic typing, scope, syntax vs. semantics, first-class function closures, and algebraic datatypes. Detailed study of functional programming and other paradigms. ... Prerequisite: CSE 123 or CSE 143. Prerequisites: CSE 123 or CSE 143",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.1.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "CMU 15-150 先修写 '(15-151 or 21-127 or 21-128)'，这三门都是离散数学/证明课（Concepts of Mathematics、Honors Math）；其 FAQ 也明确说 21-127 的内容是 15-150 所需思维的 'important prerequisites'、不给 waive。"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 341 官方先修写 'CSE 123 or CSE 143'，CSE 143 是计算机程序设计 II（数据结构课），对应 F.1.1。"
+  }
+ ],
+ "notes": "原图建议前置 P.1.1：两门课都要求先有一门程序设计课——CMU 15-150 要求 (15-112 Fundamentals of Programming 或 15-122 Principles of Imperative Computation)，UW CSE 341 要求 CSE 123/CSE 143（后者即数据结构），故 P.1.1 记 supported，且额外发现 M.5.3（离散数学与证明）与 F.1.1（数据结构）两门必修前置。资源选 Cornell CS 3110 的开放教材（cs3110.github.io/textbook/，已验证 200，目录逐章核对含 Higher-Order Programming、Advanced Pattern Matching、Module Systems、Functors），它是网站 + 视频 + 免费，覆盖节点前 3 项；第 4 项「规则与查询式表达」（逻辑式/声明式，如 Prolog/Datalog）该教材不覆盖，需要时另找 Prolog 材料（本次试打开 learnprolognow.org 时 TLS 握手失败，未取得正文，故未写入任何 Prolog 链接）。若更看重一网打尽 functional + logic + constraint，可考虑 Van Roy & Haridi 的 CTM 教材（本次未核实，未写入）。"
+}

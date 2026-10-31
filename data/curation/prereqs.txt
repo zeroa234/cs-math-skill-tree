@@ -41,17 +41,17 @@ M.5.3   |                     | M.1.2               | verified
 M.5.4   | M.5.3               |                     | verified
 M.5.5   | M.5.3               |                     | verified
 M.6.1   | M.1.3               | M.1.4.4 M.5.4       | verified
-M.6.2   | M.6.1               | M.3.1 M.1.4.1       | draft
-M.6.2.1 | M.6.2               |                     | draft
-M.6.2.2 | M.6.2 M.3.1         |                     | draft
-M.6.2.3 | M.6.2               | M.6.2.2             | draft
-M.6.2.4 | M.6.2 M.3.1         | M.6.2.2 M.7.2       | draft
-M.6.3   | M.6.1               | M.3.1               | draft
-M.6.3.1 | M.6.3               | M.3.1               | draft
-M.6.3.2 | M.6.3 M.1.6.1       | M.2.1               | draft
-M.6.4   | M.6.1               | M.6.2 M.6.3.1 M.6.2.2 | draft
-M.6.5   | M.6.1               |                     | draft
-M.7.1   | M.3.1               | M.1.4.2             | draft
+M.6.2   | M.6.1               | M.3.1 M.1.4.1 M.5.3 | verified
+M.6.2.1 | M.6.2               | M.6.2.2             | verified
+M.6.2.2 | M.6.2 M.3.1         | P.1.1               | verified
+M.6.2.3 | M.6.2               | M.6.2.2 M.3.1 P.1.1 | verified
+M.6.2.4 | M.6.2 M.6.2.2       | M.7.2               | verified
+M.6.3   | M.6.1               | M.3.1 M.2.1         | verified
+M.6.3.1 | M.6.3               | M.3.1               | verified
+M.6.3.2 | M.6.3 M.1.6.1       | M.2.1               | verified
+M.6.4   | M.6.2.2             | M.6.3.1 M.1.4.1     | verified
+M.6.5   | M.6.1               | M.6.3               | verified
+M.7.1   | M.3.1               | M.1.4.1 P.1.1       | verified
 M.7.2   | M.3.1 M.1.4.2       | M.7.1 M.1.4.3 M.6.1 P.2.3| verified
 M.7.3   | M.7.2 M.1.4.3       | M.7.1               | verified
 M.7.4   | M.7.2               | M.6.1 M.6.2         | verified
@@ -65,32 +65,32 @@ M.8.5   | M.1.4.2 P.1.1       | F.1.1               | verified
 M.8.6   | F.1.2               | M.3.4 M.3.5         | verified
 
 # ── F 理论计算机 ──
-F.1.1   | P.1.1               | M.5.3               | draft
-F.1.2   | F.1.1 M.5.3         | M.5.4               | draft
-F.1.3   | F.1.2               | M.5.5               | draft
-F.1.4   | F.1.2 M.6.1         |                     | draft
-F.1.5   | F.1.2               | M.6.1 C.1.2         | draft
-F.1.6   | F.2.3               | F.1.4               | draft
-F.2.1   | M.5.3               | M.5.1 M.5.2         | draft
-F.2.2   | F.2.1               |                     | draft
-F.2.3   | F.2.2 F.1.2         |                     | draft
+F.1.1   | P.1.1               | M.5.3               | verified
+F.1.2   | F.1.1 M.5.3         | M.6.1 M.5.4         | verified
+F.1.3   | F.1.2               |                     | verified
+F.1.4   | F.1.2 M.6.1         | M.3.1 F.2.3         | verified
+F.1.5   | F.1.2               | M.6.1 C.1.2 P.2.2   | verified
+F.1.6   | F.2.3 F.1.4         |                     | verified
+F.2.1   | M.5.3               |                     | verified
+F.2.2   | F.2.1               | F.1.2               | verified
+F.2.3   | F.2.2 F.1.2         |                     | verified
 F.2.4   | M.5.2 M.5.3         | F.2.1               | draft
-F.3.1   | P.1.1 M.5.3         | P.1.3               | draft
-F.3.2   | F.3.1               | P.1.3               | draft
-F.3.3   | M.5.2 P.1.1         | F.2.1 M.5.3         | draft
-F.3.4   | F.3.2               | F.2.4               | draft
+F.3.1   | P.1.1               | M.5.3 P.1.3         | verified
+F.3.2   | M.5.3               | F.3.1 P.1.3 C.1.1   | verified
+F.3.3   | M.5.3 P.1.1         | M.5.2 F.2.1 P.1.3   | verified
+F.3.4   | F.3.2               | P.1.3 F.2.4         | verified
 
 # ── P 程序设计与软件工程 ──
-P.1.1   |                     |                     | draft
-P.1.2   | P.1.1               |                     | draft
-P.1.3   | P.1.1               | F.1.1               | draft
-P.1.4   | P.1.2               | F.1.1 C.2.2         | draft
-P.2.1   | P.1.1               | P.1.2               | draft
-P.2.2   | P.1.1               |                     | draft
-P.2.3   | P.1.1               |                     | draft
-P.2.4   | P.1.1               |                     | draft
-P.3.1   | F.1.1 F.2.1         | C.1.1 P.2.2         | draft
-P.3.2   | P.3.1 P.2.2         | C.2.1               | draft
+P.1.1   |                     |                     | verified
+P.1.2   | P.1.1               |                     | verified
+P.1.3   | P.1.1               | M.5.3 F.1.1         | verified
+P.1.4   | P.1.1               | P.1.2 F.1.1 P.2.4   | verified
+P.2.1   | P.1.1               | P.1.2               | verified
+P.2.2   | P.1.1               | F.1.1               | verified
+P.2.3   | P.1.1               |                     | verified
+P.2.4   | P.1.1               |                     | verified
+P.3.1   | F.1.1 C.1.1         | P.1.3 F.2.1 P.2.2   | verified
+P.3.2   | P.3.1               | P.2.2 C.2.1 C.1.1   | verified
 P.4.1   | P.1.1               | F.1.1               | verified
 P.4.2   | P.4.1               |                     | draft
 P.4.3   | P.1.2 P.4.1         | P.4.2               | draft

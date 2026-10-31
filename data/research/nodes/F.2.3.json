@@ -1,0 +1,46 @@
+{
+ "id": "F.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "CMU 15-455 Undergraduate Complexity Theory (Spring 2017, Ryan O'Donnell)",
+  "url": "https://www.cs.cmu.edu/~odonnell/15455-s17/",
+  "lang": "en",
+  "free": true,
+  "covers": "按 Sipser 第 3 部分（第 7-9 章）逐讲组织，每讲给出主题与阅读节号：Turing 机与模拟、时间复杂度与通用 TM、时间层次定理、P 与 NP、Cook-Levin 与 NP 完全性归约、search-to-decision 与 padding、空间复杂度（L/NL/Savitch/PSPACE/TQBF 完全性）、Immerman-Szelepcsényi 定理、随机化复杂度（RP、coRP、ZPP）、多项式层次；课程描述还写明覆盖 circuits（线路）等模型。对应节点的 P/NP、完备性、空间/随机复杂度、线路复杂度与下界。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "18.405J Advanced Complexity Theory",
+   "url": "https://ocw.mit.edu/courses/18-405j-advanced-complexity-theory-spring-2016/pages/syllabus/",
+   "prereq_text": "The formal perquisite is 18.404J Theory of Computation which covers the early chapters of the required textbook book (see below). However, students who have not taken the above specific course who still have a basic knowledge of complexity theory, either through the MIT undergraduate class 6.045J / 18.400J Automata, Computability, and Complexity, or through another basic course elsewhere, are likely to have enough background to register.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.2.2"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 278 Machine-Based Complexity Theory",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS278/",
+   "prereq_text": "Prerequisites: 170.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.2.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "Berkeley CS 278 的官方唯一先修是 CS 170（算法课），未要求可计算性/复杂性课。"
+  }
+ ],
+ "notes": "原图建议前置 F.2.2 有硬证据：MIT 18.405J 写 'The formal perquisite is 18.404J Theory of Computation'（原文拼写如此），并允许用 6.045J 等基础理论课替代——这些课都含可计算性内容，映射到 F.2.2。但 Berkeley CS 278 只要 CS 170，说明并非所有复杂性课都要求可计算性课。资源选 CMU 15-455 而不是 MIT 18.405J：18.405J 是研究生课（Level: Graduate），而本节点入门层是 D3，15-455 是本科同名课、讲义按讲公开、同样用 Sipser 第 3 部分。15-455 页面没有写先修要求（已在页面检索 'prereq' 无结果），所以先修证据取自 18.405J 与 CS 278。"
+}

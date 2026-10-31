@@ -1,0 +1,54 @@
+{
+ "id": "P.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Cornell CS 4120/5120 Introduction to Compilers（Spring 2026 课程网站，slides + 视频 + 全套 lecture notes）",
+  "url": "https://www.cs.cornell.edu/courses/cs4120/2026sp/",
+  "lang": "en",
+  "free": true,
+  "covers": "Schedule 逐讲核对并配 video/slides，还有一份可打印的合并版 lecture notes：Lexical analysis and regular expressions、Automating lexical analysis、Grammars and parsing、Top-down (LL) parsing、Bottom-up parsing、LR parsing and parser generators、ASTs and errors、Semantic analysis and symbol tables、Type systems、Modules and visitors、Intermediate representations、code generation，后半学期的 Optimization and program analysis：Overview of optimization、Dataflow analysis、Register allocation、Loop optimizations + abstract interpretation。节点里的词法/语法分析、语义分析、中间表示、代码生成、编译优化五块齐全。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Cornell University",
+   "course": "CS 4120/4121/5120/5121 Introduction to Compilers",
+   "url": "https://www.cs.cornell.edu/courses/cs4120/2026sp/",
+   "prereq_text": "Prerequisites Computer Science 3110 and either CS 3410 or 3420. The practicum (CS 4121 or 5121) is a required co-requisite.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "P.1.3",
+    "C.1.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-411/611 Compiler Design",
+   "url": "https://www.cs.cmu.edu/~411/policies.html",
+   "prereq_text": "Additionally, because your compilers will target x86-64 assembly, Chapter 3 of the second or (even better) the third edition of Bryant and O'Hallaron's Computer Systems: A Programmer's Perspective, or some equivalent reference, will be indispensible. The posted slides from 213, or your own 213 notes, will probably suffice.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "C.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.2.1": "not_mentioned",
+  "F.1.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.3",
+   "kind": "required",
+   "evidence": "Cornell CS 4120 先修写 'Computer Science 3110'，而 CS 3110 是 Data Structures and Functional Programming（OCaml 函数式 + 数据结构），其函数式编程部分对应 P.1.3。"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "Cornell CS 4120 先修还要求 'either CS 3410 or 3420'（Computer System Organization and Programming），对应 C.1.1（计算机组成原理）；CMU 15-411 也把 x86-64 目标代码与 CS:APP 第 3 章/15-213 slides 写成 indispensible 参考。"
+  }
+ ],
+ "notes": "原图建议前置 F.2.1（形式语言与自动机）+ F.1.1（数据结构）：Cornell CS 4120 的 Prerequisites 只有 'Computer Science 3110 and either CS 3410 or 3420'，全文没有形式语言/自动机要求（词法用 regex、语法用 CFG/LL/LR 都在课上从零讲），故 F.2.1 记 not_mentioned；CS 3110 是数据结构 + 函数式编程课，F.1.1 记 supported。CMU 15-411 的 home/policies 页没有 Prerequisites 段落（grep 无匹配），只把 213 的讲义与 CS:APP 第 3 章写成 indispensible，因此 prereq_text 抄的是那句话、kind 记 recommended，映射 C.1.1。资源与第一门课是同一门（CS 4120），2026sp 站点 slides/视频/合并 notes 全部公开。"
+}

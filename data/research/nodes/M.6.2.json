@@ -1,0 +1,59 @@
+{
+ "id": "M.6.2",
+ "resource": {
+  "tier": "website",
+  "title": "STAT 415: Introduction to Mathematical Statistics — Penn State Department of Statistics (free online course notes, OER)",
+  "url": "https://online.stat.psu.edu/stat415/",
+  "lang": "en",
+  "free": true,
+  "covers": "Penn State 统计学系做的公开课讲义网站（CC BY-NC 授权，自述为 open educational resources），目录为：0 复习 STAT 414；1 次序统计量；2–3 点估计（无偏、MSE、充分性、因子分解）；4–5 最大似然估计；6 置信区间；7–8 MLE 的渐近分布；9–10 假设检验（含 Wald 检验、p 值、功效）；11 贝叶斯方法；12 简单线性回归。对应节点的抽样分布、估计、检验、似然、置信区间与渐近理论；决策一条只到检验的势函数层面。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 181A Introduction to Mathematical Statistics I",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Prior or concurrent enrollment in MATH 109 is highly recommended. Prerequisites: MATH 180A, and MATH 18 or MATH 20F or MATH 31AH, and MATH 20C. Students who have not completed listed prerequisites may enroll with consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "M.3.1",
+    "M.1.4.1",
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "STAT 341 Introduction to Probability and Mathematical Statistics II",
+   "url": "https://www.washington.edu/students/crscat/stat.html",
+   "prereq_text": "Brief review of: sample spaces, random variables, probability. Distribution: binomial, normal, Poisson, geometric. Followed by: expectation, variance, central limit theorem. Basic concepts of estimation, testing, and confidence intervals. Maximum likelihood estimators and likelihood ratio tests, efficiency. Introduction to regression. Course overlaps with: TSTAT 346. Prerequisite: STAT 340 or MATH 394/STAT 394; and STAT 311 or STAT 390.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 181A 明确要求 'MATH 18 or MATH 20F or MATH 31AH'（三者都是线性代数）。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 181A 明确要求 MATH 20C（多元微积分），用于多元分布与随机变量变换。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "recommended",
+   "evidence": "UCSD MATH 181A 原文：'Prior or concurrent enrollment in MATH 109 is highly recommended'（MATH 109 = Mathematical Reasoning，证明写作）。"
+  }
+ ],
+ "notes": "资源站点用 tavily_extract 打开成功并读到完整目录与 About 段；本机 research_tool.py fetch 对该域名一直报 SSLCertVerificationError（'unable to get local issuer certificate'，环境证书问题，非站点失效），所以没能在本地缓存正文。两门课的先修原文都取自可正常抓取的公开课程目录（UCSD catalog、UW course catalog）。UW STAT 341 的先修里 STAT 340 就是节点 M.6.1 的内容；UCSD 那条把线性代数与多元微积分也列为必修，故另记入 extra_prereqs。"
+}

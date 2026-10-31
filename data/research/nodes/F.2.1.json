@@ -1,0 +1,51 @@
+{
+ "id": "F.2.1",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 18.404J Theory of Computation (Fall 2020, Michael Sipser, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+  "lang": "en",
+  "free": true,
+  "covers": "以 Sipser《Introduction to the Theory of Computation》第 1、2、3 章为主线：有限自动机（DFA/NFA）、正则表达式、正则语言的泵引理与封闭性、上下文无关文法与下推自动机、CFL 的泵引理；后半学期接图灵机、可判定性、归约与递归定理，再进入 P/NP、空间复杂度与层次定理。有全套讲课视频、讲义、习题与考试（含解答）。正对应节点的正则/上下文无关语言、有限/下推自动机、文法与语言层级。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "18.404J Theory of Computation",
+   "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/syllabus/",
+   "prereq_text": "Prerequisites: 6.042J Mathematics for Computer Science, 18.200 Principles of Discrete Applied Mathematics",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 172 Computability and Complexity",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS172/",
+   "prereq_text": "Prerequisites: COMPSCI 170",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "MIT 18.404J 必修 6.042J Mathematics for Computer Science 或 18.200（离散数学/证明）。"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "Berkeley CS 172 必修 COMPSCI 170（Efficient Algorithms and Intractable Problems）。"
+  }
+ ],
+ "notes": "原图建议前置 M.5.2（数理逻辑）在两门课里都没有出现：MIT 18.404J 只要求离散数学 6.042J/18.200，Berkeley CS 172 只要求算法课 CS 170；两门课都是把'会读写证明'当作数学成熟度来要求，而不是要求一门逻辑课，故记 not_mentioned（不是说逻辑无用，只是课程不列）。反过来，两门课都要离散数学或算法课，原图未列，记入 extra_prereqs。资源用 Sipser 本人的 18.404J：入门层 D1 只需要会证明，课程第 1-2 周就是自动机与语言，不超纲。"
+}

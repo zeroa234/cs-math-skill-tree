@@ -1,0 +1,46 @@
+{
+ "id": "F.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Programming Language Principles and Paradigms（University of Michigan EECS 390）在线讲义",
+  "url": "https://eecs390.github.io/notes/",
+  "lang": "en",
+  "free": true,
+  "covers": "自成体系的公开在线讲义：基础部分讲名字、环境、作用域、参数传递、函数调用求值、递归与尾递归、高阶函数、lambda 函数；然后分范式展开——函数式编程（Scheme：表达式、递归、高阶函数、函数对象）与声明式/逻辑编程（Logic Programming、Prolog：事实规则、列表、算术）；最后是理论章 Lambda Calculus（非终止计算、正规序求值 normal-order evaluation、替换、Church 数、递归、'Equivalent Models'（与图灵机等其他计算模型等价）、λ 演算的操作语义与形式类型系统）。正对应节点的函数式/逻辑式计算、替换、求值策略与计算模型。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 61A Structure and Interpretation of Computer Programs",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS61A/",
+   "prereq_text": "Prerequisites: MATH 1A (may be taken concurrently) or Math 10A or Math 16A. Programming experience equivalent to that gained from a score of 3 or above on the Advanced Placement Computer Science exam.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of Texas at Austin",
+   "course": "CS 345H Programming Languages (Honors)",
+   "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/syllabus/",
+   "prereq_text": "Prerequisites CS 345H: CS 429 or CS 429H, with a grade of C- or better. Registration is open only to honors computer science majors.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.1.1": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UT Austin CS 345H 必修 CS 429（Computer Organization and Architecture，映射 C.1.1 组成原理）。"
+  }
+ ],
+ "notes": "原图建议前置 P.1.1 的证据是'建议'级别而非硬性必修：Berkeley 官方目录把 'Programming experience equivalent to ... AP Computer Science' 列在 Prerequisites 里，但同一页面的课程说明又写 'While CS 61A does not require any prior programming experience, students with little or no programming experience often find CS 61A to be very challenging'，因此记 recommended。两门课都没把 P.1.1 写成硬性先修：UT Austin CS 345H 要的是计算机组成课 CS 429（C.1.1），说明这门课假定你会写代码但不以'程序设计基础'课为先修。资源选 Michigan EECS 390 的讲义站而不是某门课的课页：它把函数式、逻辑式、λ 演算三块都写成了可在线读的正文（已逐节核对目录与 theory.html 的 Lambda Calculus 一章），免费、无视频但结构完整。EECS 390 讲义站没有写课程先修要求（页面里检索不到），所以先修证据取自 Berkeley 与 UT Austin。"
+}

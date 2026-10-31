@@ -1,0 +1,36 @@
+{
+ "id": "P.1.4",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.102 Software Construction（Spring 2025 课程网站，全部 readings 公开）",
+  "url": "https://web.mit.edu/6.102/www/sp25/",
+  "lang": "en",
+  "free": true,
+  "covers": "19 个 readings 覆盖本节点的工程化抽象与并发：01 Static Checking、02 Testing、03 Code Review、04–05 Specifications、06 Abstract Data Types、07 Abstraction Functions & Rep Invariants、08 Interfaces & Subtyping、09 Functional Programming、10 Equality、11 Recursive Data Types、12 Grammars & Parsing、13 Debugging、14 Concurrency、15 Promises（异步）、16 Mutual Exclusion、17 Callbacks & GUIs、18 Message-Passing & Networking、19 Little Languages；配 Git 1–3 与 PS0–PS4 作业（含 PS4 Memory Scramble 并发题）。泛型由课程使用的 TypeScript 泛型贯穿；RAII/析构这类资源管理内容本课不系统讲（见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.1020 Software Construction",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "6.1020 Software Construction — Prereq: 6.1010",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.1.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "MIT 课程目录 6.1020（原 6.031）先修写 'Prereq: 6.1010'，6.1010 Fundamentals of Programming 即入门程序设计课；课程网站 sp25 主页也把 Git 1–3 列为开学前必须自学的 tools。"
+  }
+ ],
+ "notes": "原图建议前置 P.1.2（面向对象程序设计）：MIT 官方先修只写 6.1010（Python 入门程序设计），全文未提面向对象/继承/接口，故 P.1.2 记 not_mentioned；同时发现真实存在的必修前置是 P.1.1（6.1010），写入 extra_prereqs。资源与课程是同一门课（6.102 = 原 6.031），readings 列表从 sp25 主页逐条抄下（含 Concurrency、Promises、Mutual Exclusion、Debugging）。节点里的「资源管理」与「泛型元编程」只被部分覆盖：泛型由 TypeScript 泛型间接体现，RAII/生命周期不在 readings 里；若这两点更重要，可补 The Rust Programming Language（官方免费书 https://doc.rust-lang.org/book/ ，已核对可访问），其所有权/借用/Drop、generics & traits、threads/async 正好补上该缺口，但本次未逐章核对。另：MIT 6.1060 Software Performance Engineering 目录写 'Prereq: 6.1020, 6.1210, and 6.1910'，可作为「性能剖析」方向的后继课。"
+}

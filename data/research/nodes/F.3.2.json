@@ -1,0 +1,52 @@
+{
+ "id": "F.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "UT Austin CS 345H Programming Languages (Honors), Spring 2024（James Bornholt）",
+  "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/",
+  "lang": "en",
+  "free": true,
+  "covers": "课表已逐讲核对：函数式编程与 ADT、用解释器定义语义（Semantics via Interpreters）、迁移系统（Transition Systems）、IMP 语言与操作语义、公理语义与 Hoare 逻辑（含 Dafny 实践）、λ 演算、简单类型 λ 演算与 type safety、线性类型与 Rust、多态与 System F、积类型与和类型，全部用 Coq 写机器检查的证明（每讲有 Lecture.v 代码）。覆盖节点的操作/公理语义、类型安全、多态与（和/积）类型构造；指称语义、子类型与依赖类型不是这条主线上的内容。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-814 Types and Programming Languages",
+   "url": "https://www.cs.cmu.edu/~fp/courses/15814-f21/",
+   "prereq_text": "Prerequisites: This is an introductory graduate course with no formal prerequisites, but an exposure to various forms of mathematical induction will be helpful.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": [
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "University of Texas at Austin",
+   "course": "CS 345H / CS 386L Programming Languages",
+   "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/syllabus/",
+   "prereq_text": "Prerequisites CS 345H: CS 429 or CS 429H, with a grade of C- or better. ... CS 386L: no formal prerequisites, but we will assume familiarity with discrete mathematics (CS 311H or equivalent) and computer organization (CS 429H or equivalent).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "M.5.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.3.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UT Austin CS 345H 必修 CS 429/CS 429H（计算机组成，映射 C.1.1）。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "recommended",
+   "evidence": "CS 386L 版本写明 'we will assume familiarity with discrete mathematics (CS 311H or equivalent)'；CMU 15-814 也把'会数学归纳'列为 helpful。"
+  }
+ ],
+ "notes": "原图把 F.3.1（计算范式与 λ 演算）列为 F.3.2 的前置，但两门真实的类型/语义课都没有这样要求：CMU 15-814 明说 'no formal prerequisites'（只建议会数学归纳），UT Austin CS 345H 要的是组成原理课 CS 429，λ 演算本身在课内第 10-11 讲才讲（课表已核对）。故记 not_mentioned（不是 contradicted：15-814 的'no formal prerequisites'不是专门否定 λ 演算的价值）。反过来两门课都隐含需要离散数学/归纳法（M.5.3）与组成原理（C.1.1），原图未列，记入 extra_prereqs。资源说明：这门课用 Coq 讲课（教材对标 Software Foundations），所以类型理论部分是从'证明'入手而非纯文字；如果只想读文字，15-814 的讲义 PDF（https://www.cs.cmu.edu/~fp/courses/15814-f21/ ）也是公开的。指称语义（denotational semantics）在本节点推荐资源里没有独立章节，需要另找（例如 Winskel《The Formal Semantics of Programming Languages》）。"
+}
