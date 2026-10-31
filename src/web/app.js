@@ -418,7 +418,7 @@
         `取消「${s.name}」后，这 ${names.length} 个已点亮的技能会失去必须前置：${names.join("、")}。要一起取消吗？`));
       box.append(el("div", { class: "status-actions" },
         el("button", { class: "btn primary", onclick: () => unlearn([id, ...opts.confirmUnlearn], `已取消「${s.name}」及 ${names.length} 个后续技能`) }, "一起取消"),
-        el("button", { class: "btn", onclick: () => renderPanel(id) }, "保留")));
+        el("button", { class: "btn", onclick: () => renderPanel(id) }, "都不取消")));
     } else if (st === "lit") {
       box.append(el("div", { class: "status-line" }, el("span", { class: "st-ico lit", html: ICON.lit }), "已点亮"));
       box.append(el("div", { class: "status-actions" }, el("button", { class: "btn", onclick: () => toggleLearn(id) }, "取消点亮")));

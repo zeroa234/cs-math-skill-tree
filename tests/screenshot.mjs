@@ -123,6 +123,26 @@ await page("15-goal-cancel", DESK, async (p) => {
   await p.click("#btn-plan-clear");
   if ((await p.locator("#route-select").inputValue()) !== "") throw new Error("leaving the route did not reset the route menu");
 });
+await page("16-cascade-unlearn", DESK, async (p) => {
+  const lit = async () => Number(await p.locator("#lit-count").textContent());
+  const btn = (name) => p.locator("#panel .status-actions button", { hasText: name });
+  await p.goto(`${url}#skill/P.1.1`);
+  await p.waitForTimeout(300);
+  await btn("学会了，点亮").click();
+  await p.goto(`${url}#skill/P.2.2`);
+  await p.waitForTimeout(300);
+  await btn("学会了，点亮").click();
+  await p.goto(`${url}#skill/P.1.1`);
+  await p.waitForTimeout(300);
+  await btn("取消点亮").click();
+  await btn("都不取消").click();
+  if ((await lit()) !== 2) throw new Error("都不取消 changed the progress");
+  await btn("取消点亮").click();
+  await btn("一起取消").click();
+  if ((await lit()) !== 0) throw new Error("一起取消 did not cancel the skill and its lit dependents");
+  await p.click("#toast-action");
+  if ((await lit()) !== 2) throw new Error("撤销 did not restore both skills");
+});
 await page("14-phone-overview-scroll", PHONE, async (p) => {
   const y = await p.evaluate(() => { const a = document.querySelector(".ov-scroll"); a.scrollTop = 600; return a.scrollTop; });
   if (y < 500) throw new Error(`phone overview list does not scroll (scrollTop ${y})`);
