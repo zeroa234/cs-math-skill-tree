@@ -56,6 +56,7 @@ src/web/data.js         同上 + 布局坐标，页面直接加载
 | `scripts/set_prereqs.py <decisions.json>` | 把一批判定写回 `prereqs.txt` 和 `prereq-notes.json` |
 | `scripts/archive_research.py` | 把审核过的检索结果从 `temp/research/nodes/` 归档到 `data/research/nodes/` |
 | `node tests/screenshot.mjs`、`node tests/screenshot-panel.mjs <id>` | 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器），含深链回归检查 |
+| `python -X utf8 scripts/package_web.py` | 把网页打成 `output/cs-math-skill-tree-<日期>.zip` 分享给别人（解压后双击 index.html；含 README.txt 和 Panzoom 许可证）。先跑 build |
 | `node tests/a11y.mjs [report.json]` | axe-core 按 WCAG 2.2 AA 审计 12 个界面状态，并跑一遍纯键盘的主流程；结论见 `docs/hci-ux-review.md` |
 
 截图和 pip 安装时把 `TEMP`/`TMP` 指到项目的 `temp/`，避免写 C 盘。验算练习题用的 sympy / numpy / scipy 装在 `temp/pylib`（`PYTHONPATH=temp/pylib`）。
