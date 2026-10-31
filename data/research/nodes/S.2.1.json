@@ -1,0 +1,76 @@
+{
+ "id": "S.2.1",
+ "resource": {
+  "tier": "website",
+  "title": "6.858 Computer Systems Security（MIT OpenCourseWare，Fall 2014，Nickolai Zeldovich；含全套 lecture notes、视频、labs）",
+  "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程描述写明 topics 含 operating system (OS) security、capabilities、information flow control、language security、network protocols、hardware security、web application security；calendar 逐讲为：威胁模型、控制流劫持攻击、缓冲区溢出利用与防御、特权分离（privilege separation）、capabilities、原生代码沙箱、Web 安全模型、符号执行、网络协议与 SSL/HTTPS、侧信道攻击、用户认证、隐私浏览、匿名通信、移动设备安全。正好覆盖系统安全的操作系统防护、内存安全、权限、隔离与系统加固。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.858 Computer Systems Security",
+   "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/pages/syllabus/",
+   "prereq_text": "Prerequisites\n6.033 Computer System Engineering",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.2.1",
+    "C.3.2"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 161 Computer Security",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+   "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1",
+    "P.2.2",
+    "M.5.3",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "MIT 6.858 先修 6.033 Computer System Engineering；OCW 6.033 的课程安排是 “Operating Systems I–IV + Networking I–III”，含网络协议部分"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61B（数据结构）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61C（机器结构）"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61C（C 语言与机器级编程）"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（离散数学与概率论）"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（含离散概率）"
+  }
+ ],
+ "notes": "C.2.1 判 supported 的直接依据是 MIT 6.858 把 6.033 列为唯一先修，而 6.033 的前半就是操作系统（Operating Systems I–IV）；Berkeley CS 161 虽然教 OS 安全（“Operating system security, access control”），但目录里没有把操作系统课列为先修。6.858 是研究生课（OCW 标 Level: Graduate），节点入门层是 D2，用作业/lab 与 lecture notes 自学可行；2014 版课表里“可信执行/固件”只散见于 privileged code、sandbox 与侧信道几讲，更完整的 TEE/固件内容建议放到 S.2.5。"
+}

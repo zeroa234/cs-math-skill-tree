@@ -3,11 +3,11 @@
   "built": "2026-10-31",
   "skills": 201,
   "steps": 7,
-  "requiredEdges": 277,
-  "recommendedEdges": 328,
-  "verifiedPrereqs": 137,
-  "withResource": 141,
-  "withExercise": 141,
+  "requiredEdges": 273,
+  "recommendedEdges": 339,
+  "verifiedPrereqs": 145,
+  "withResource": 150,
+  "withExercise": 150,
   "card": {
    "w": 176,
    "h": 58,
@@ -303,7 +303,7 @@
    "en": "Cybersecurity",
    "color": "#d0463b",
    "optional": false,
-   "height": 450,
+   "height": 396,
    "count": 17
   },
   {
@@ -6049,7 +6049,7 @@
    ],
    "related": [],
    "step": 2,
-   "reach": 40,
+   "reach": 41,
    "resource": {
     "tier": "website",
     "title": "UC Berkeley CS 61B Data Structures (Spring 2021, Josh Hug) 课程网站",
@@ -7428,7 +7428,8 @@
     "C.5.3",
     "D.1.1",
     "D.3.3",
-    "A.3.2"
+    "A.3.2",
+    "S.1.1"
    ],
    "related": [],
    "step": 1,
@@ -7897,13 +7898,12 @@
     "C.3.3",
     "C.5.1",
     "C.5.2",
-    "S.2.1",
     "S.4.3",
     "H.3.1"
    ],
    "related": [],
    "step": 2,
-   "reach": 32,
+   "reach": 31,
    "resource": {
     "tier": "website",
     "title": "Stanford CS107: Computer Organization & Systems（Autumn 2026 课程网站，lectures + assignments + labs 公开）",
@@ -9424,7 +9424,7 @@
    ],
    "related": [],
    "step": 2,
-   "reach": 27,
+   "reach": 29,
    "resource": {
     "tier": "website",
     "title": "MIT 6.004 Computation Structures (Spring 2017, MIT OpenCourseWare)",
@@ -9841,12 +9841,13 @@
     "C.2.4",
     "C.4.3",
     "S.2.1",
+    "S.2.2",
     "S.4.2",
     "H.3.4"
    ],
    "related": [],
    "step": 3,
-   "reach": 8,
+   "reach": 11,
    "resource": {
     "tier": "website",
     "title": "Operating Systems: Three Easy Pieces（Remzi H. Arpaci-Dusseau & Andrea C. Arpaci-Dusseau, University of Wisconsin-Madison；免费在线教材）",
@@ -10349,6 +10350,7 @@
    "unlocks": [
     "C.3.4",
     "S.2.2",
+    "S.2.3",
     "H.4.3"
    ],
    "related": [
@@ -10358,7 +10360,7 @@
     }
    ],
    "step": 3,
-   "reach": 5,
+   "reach": 6,
    "resource": {
     "tier": "website",
     "title": "Stanford CS 144: Introduction to Computer Networking（公开课程主页、讲义与 lab）",
@@ -10457,12 +10459,10 @@
    ],
    "prereqStatus": "verified",
    "prereqSummary": "CMU 18-452/18-750 Wireless Networks：先修 15-213/18-213（或同等背景），建议先学网络。",
-   "unlocks": [
-    "S.2.3"
-   ],
+   "unlocks": [],
    "related": [],
    "step": 3,
-   "reach": 1,
+   "reach": 0,
    "resource": {
     "tier": "website",
     "title": "CMU 18-452 / 18-750 Wireless Networks and Applications（Spring 2024，课程主页）",
@@ -14715,42 +14715,86 @@
    "desc": "机密性/完整性/可用性、认证授权、最小权限、攻击面与风险管理。",
    "milestones": null,
    "optional": false,
-   "required": [],
-   "recommended": [
+   "required": [
     {
      "id": "P.1.1",
-     "why": "",
+     "why": "Berkeley CS 161 与 Stanford CS 155 都以编程课为先修；攻击面、输入校验这些原则要结合程序来理解。",
+     "kind": "required"
+    }
+   ],
+   "recommended": [
+    {
+     "id": "C.2.1",
+     "why": "Stanford CS 155 要求懂操作系统；系统攻击与防护部分会用到。",
      "kind": "recommended"
     },
     {
      "id": "C.3.2",
-     "why": "",
+     "why": "Stanford CS 155 要求懂网络协议；网络攻击部分会用到。",
+     "kind": "recommended"
+    },
+    {
+     "id": "C.1.1",
+     "why": "Berkeley CS 161 要求 61C（机器结构）。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Berkeley CS 161：先修 61B、61C、70；Stanford CS 155：要求懂操作系统、网络协议和编程语言。这两门是完整的安全课，本节点只取原则部分。",
    "unlocks": [
-    "S.2.2",
-    "S.2.3",
-    "S.2.4",
-    "S.2.5",
-    "S.3.1",
     "S.3.2",
     "S.3.3",
     "S.4.2",
     "S.4.4"
    ],
    "related": [],
-   "step": 1,
-   "reach": 10,
-   "resource": null,
+   "step": 2,
+   "reach": 4,
+   "resource": {
+    "tier": "website",
+    "title": "Computer Security（UC Berkeley CS 161 在线教材；David Wagner, Nicholas Weaver, Peyrin Kao 等，免费、CC BY-SA）",
+    "url": "https://textbook.cs161.org/",
+    "lang": "en",
+    "free": true,
+    "covers": "第 1 部分“Security Principles”就是节点要的原理清单：威胁模型（1.1 Know your threat model：攻击者是谁、动机与资源）、人是系统的一环、安全经济学（风险与成本权衡）、纵深防御、最小权限、职责分离、完全中介、fail-safe defaults、TCB、TOCTTOU；第 5 章 5.6 节给出机密性/完整性/真实性的形式定义；第 14 章口令与 Web 部分的 Cookie/会话讲认证与授权边界；内存安全（2–4 章）讲攻击面如何形成、如何缓解。可作为 D1 入门主线读物。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "UC Berkeley",
+     "course": "CS 161 Computer Security",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+     "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Stanford University",
+     "course": "CS 155 Computer and Network Security",
+     "url": "https://cs155.stanford.edu/info.html",
+     "prereq_text": "The course requires an understanding of operating systems, networking protocols, and a basic understanding of programming languages. Programming projects will be done primarily in C and JavaScript, but other languages may be needed. Pre-requisites: CS110/CS111 (Principles of Computer Systems)",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "S.1.1",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 以“校园一卡通系统”为例，分别举出破坏机密性、完整性、可用性的一个威胁。\n(2) 用 STRIDE（仿冒、篡改、抵赖、信息泄露、拒绝服务、权限提升）对“用户上传头像”这个功能做威胁建模，每一类写出至少一个威胁及缓解措施。\n(3) 认证和授权有什么区别？多因素认证的三类因素是什么？分别举例说明最小权限原则和纵深防御。\n(4) 某资产价值 50 万元，一次事件的暴露因子为 40%，年发生率 ARO = 0.5。求单次损失期望 SLE 和年度损失期望 ALE。一项每年花费 3 万元的控制措施能把 ARO 降到 0.1，值不值得做？\n(5) 举出三种缩小攻击面的方法。",
+    "answer": "(1) 机密性：消费记录被未授权的人查看，泄露学生的行踪。完整性：攻击者篡改卡内余额或交易记录。可用性：刷卡服务器被 DDoS 攻击，食堂无法刷卡。\n(2) 仿冒：用他人会话上传 → 强认证、会话保护。篡改：上传文件被替换或在传输中被修改 → HTTPS、服务端校验。抵赖：用户否认上传过违规图片 → 记录带时间和用户 ID 的审计日志。信息泄露：图片的 EXIF 数据泄露拍摄位置 → 服务端去除元数据；头像 URL 可被枚举 → 使用随机文件名。拒绝服务：上传超大文件耗尽存储 → 限制文件大小和上传频率。权限提升：上传 .php 等可执行文件后被服务器执行 → 校验文件类型和内容、重新编码图片、存放在不可执行的目录或独立域名下。\n(3) 认证回答“你是谁”（验证身份），授权回答“你能做什么”（检查权限）。三类因素：你知道的（口令）、你拥有的（手机、硬件密钥）、你本身的特征（指纹）。最小权限：报表服务的数据库账号只给 SELECT 权限。纵深防御：在防火墙之外，应用自身还做输入校验，数据库再做权限控制和加密，任何单一层被突破都不至于直接失守。\n(4) SLE = 50 万 × 40% = 20 万元；ALE = 20 万 × 0.5 = 10 万元/年。控制后 ALE = 20 万 × 0.1 = 2 万元，每年减少损失 8 万元，大于 3 万元的成本，净收益约 5 万元/年，值得。\n(5) 关闭不需要的服务和端口；删除不用的功能、接口和默认账号；把内部管理界面限制为只能从内网或 VPN 访问；减少第三方依赖并及时更新。",
+    "covers": [
+     "CIA 三要素",
+     "威胁建模（STRIDE）",
+     "认证、授权与安全设计原则",
+     "风险量化",
+     "攻击面"
+    ],
+    "uses_prereqs": [
+     "P.1.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 0,
-   "y": 196
+   "x": 232,
+   "y": 169
   },
   {
    "id": "S.1.2",
@@ -14786,29 +14830,34 @@
    "required": [
     {
      "id": "M.5.3",
-     "why": "",
+     "why": "Berkeley CS 171 唯一的正式先修是 CS 70（离散数学），要用到模运算与归约证明。",
      "kind": "required"
     },
     {
      "id": "M.6.1",
-     "why": "随机性、概率与可忽略成功率支撑安全定义。",
+     "why": "Berkeley CS 171 假定熟悉离散概率；Stanford CS 255 也说概率有帮助。安全定义全是概率表述。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.3.5",
-     "why": "数论支撑部分公钥体系；不是所有密码学的统一前置。",
+     "why": "两门课都提到模运算；RSA、DH 用到的数论课内会讲，学过数论更轻松。",
+     "kind": "recommended"
+    },
+    {
+     "id": "F.1.2",
+     "why": "Berkeley CS 171 要求接触过算法、熟悉大 O。",
      "kind": "recommended"
     },
     {
      "id": "S.1.1",
-     "why": "威胁、目标和攻击模型帮助定义密码安全。",
+     "why": "密码学放在安全目标与威胁模型中理解更完整。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Berkeley CS 171：先修 CS 70，要求离散概率与模运算；Stanford CS 255：自成体系，概率与模运算有帮助。",
    "unlocks": [
     "S.1.3",
     "S.5.1",
@@ -14830,13 +14879,52 @@
    ],
    "step": 5,
    "reach": 3,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "CS255: Introduction to Cryptography（Stanford，Dan Boneh；课程主页 + 完整 lecture 列表/slides + cs255 online 视频）",
+    "url": "https://crypto.stanford.edu/~dabo/cs255/",
+    "lang": "en",
+    "free": true,
+    "covers": "syllabus 逐讲讲：一次一密与流密码、语义安全、分组密码（AES、Even-Mansour、Luby-Rackoff）、PRP/PRF 与工作模式、CBC-MAC/PMAC、抗碰撞哈希（Merkle-Damgård、Davies-Meyer、SHA/HMAC）、公钥密码（ElGamal、RSA trapdoor）、数字签名定义与 RSA 签名、哈希签名与证书/证书透明/吊销、认证密钥交换与 SSL/TLS 会话建立，末尾还讲后量子签名与零知识证明入门——正好覆盖对称/公钥、哈希、MAC、签名、密钥管理（PKI/证书）与协议。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Stanford University",
+     "course": "CS 255 Introduction to Cryptography",
+     "url": "https://crypto.stanford.edu/~dabo/cs255/overview.html",
+     "prereq_text": "Prerequisites: The course is self contained, however a basic understanding of probability theory and modular arithmetic will be helpful. The course is intended for advanced undergraduates and masters students. Students are expected to have experience with basic proof techniques and some programming experience.",
+     "prereq_kind": "recommended"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 171 Introduction to Cryptography",
+     "url": "https://sanjamg.github.io/cs171-fall26/about/",
+     "prereq_text": "The only formal prerequisite is a course on discrete mathematics (CS70). Specifically, we will assume familiarity with basic (discrete) probability and modular arithmetic. Students enrolled are also expected to have had some exposure to algorithms, mainly to be comfortable reading pseudocode and to be familiar with big-O notation.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "S.1.2",
+    "level": "D1",
+    "time_min": 50,
+    "question": "(1) 对称加密和公钥加密各有什么优缺点？为什么 TLS 等实际系统采用混合加密？\n(2) RSA：p = 11，q = 17，e = 7。求 n、φ(n) 和私钥 d；加密明文 m = 5 得到密文 c，再解密验证。为什么实际中不能直接这样用“教科书 RSA”？\n(3) 写出哈希函数的三个安全性质。为什么输出 n 位的哈希大约 2^(n/2) 次尝试就可能找到碰撞？对 128 位和 256 位的哈希分别意味着什么？\n(4) MAC 和数字签名有什么区别？为什么存储口令要用加盐的慢哈希（bcrypt、Argon2），而不是直接用 SHA-256？\n(5) Diffie–Hellman：公开参数 p = 23，g = 5，Alice 私钥 a = 4，Bob 私钥 b = 9。求双方的公开值和共享密钥。什么是中间人攻击？怎样防御？",
+    "answer": "(1) 对称加密快，适合大量数据，但双方要事先安全地共享密钥，n 个人两两通信需要 O(n²) 个密钥。公钥加密不需要事先共享秘密，可用于密钥交换和签名，但慢得多。混合加密：用公钥机制（如 ECDHE）协商出一个会话密钥，再用对称算法（如 AES-GCM）加密实际数据，兼顾两者的优点。\n(2) n = 187，φ(n) = 10 × 16 = 160。7d ≡ 1 (mod 160)，d = 23（7 × 23 = 161）。c = 5⁷ mod 187 = 146；解密 146²³ mod 187 = 5。教科书 RSA 是确定性的（同一明文总得到同一密文，能被猜测验证），而且具有乘法同态，可被篡改利用，必须使用 OAEP 填充（签名用 PSS），并且密钥长度至少 2048 位。\n(3) 抗原像：给定 h，难以找到 x 使 H(x) = h。抗第二原像：给定 x，难以找到 x′ ≠ x 使 H(x′) = H(x)。抗碰撞：难以找到任意一对 x ≠ x′ 使哈希相同。生日悖论：随机取约 √(2^n) = 2^(n/2) 个输入时，出现两者哈希相同的概率已经接近 1/2。128 位哈希只有约 2⁶⁴ 的抗碰撞强度（已经可行，MD5 的碰撞更是可以直接构造）；256 位约 2¹²⁸，目前安全。\n(4) MAC 用双方共享的密钥生成和验证，能保证完整性和来源，但双方都能生成，无法向第三方证明是谁发的；数字签名用私钥签名、公钥验证，任何人都能验证，并且具有不可否认性。SHA-256 设计得很快，攻击者拿到口令库后每秒能试数十亿次；盐让每个用户的哈希都不同，使彩虹表失效，也不能一次破解所有相同的口令；慢哈希（可调的迭代次数和内存消耗）让每次尝试都很昂贵。\n(5) A = 5⁴ mod 23 = 4，B = 5⁹ mod 23 = 11。Alice 计算 B⁴ mod 23 = 13，Bob 计算 A⁹ mod 23 = 13，共享密钥为 13。中间人攻击：攻击者分别与 Alice、Bob 各做一次 DH，双方都以为在和对方通信，攻击者可以解密、篡改所有消息。防御：对交换的公开值做认证——用证书和数字签名（TLS），或者事先确认的公钥指纹。",
+    "covers": [
+     "对称与公钥加密",
+     "RSA",
+     "哈希函数与生日攻击",
+     "MAC、签名与口令存储",
+     "密钥交换与中间人攻击"
+    ],
+    "uses_prereqs": [
+     "M.5.3",
+     "M.6.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 160
+   "y": 25
   },
   {
    "id": "S.1.3",
@@ -14865,24 +14953,24 @@
    "required": [
     {
      "id": "S.1.2",
-     "why": "密码原语、协议与安全定义支撑现代密码专题。",
+     "why": "Stanford CS 355：先修 CS 255 或同等的密码学入门课。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.3.4",
-     "why": "",
+     "why": "格、椭圆曲线、有限域上的构造要用抽象代数。",
      "kind": "recommended"
     },
     {
      "id": "F.2.3",
-     "why": "",
+     "why": "可证明安全基于计算复杂性的困难性假设。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Stanford CS 355 Topics in Cryptography：先修 CS 255；Berkeley CS 276 研究生密码学：要求密码学基础或足够的数学成熟度。",
    "unlocks": [],
    "related": [
     {
@@ -14896,13 +14984,51 @@
    ],
    "step": 6,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "CS 355: Topics in Cryptography（Stanford，Spring 2026；schedule + lecture notes）",
+    "url": "https://cs355.stanford.edu/",
+    "lang": "en",
+    "free": true,
+    "covers": "课程简介明确覆盖 “basic proof techniques, zero knowledge, multiparty computation, elliptic-curve cryptography, cryptanalysis, privacy, and post-quantum cryptography”；schedule 逐讲列出：OWF/PRG/PRF、承诺方案、椭圆曲线与配对、交互式证明与零知识、Sigma 协议、Fiat-Shamir 与非交互化、多项式承诺、IOP、OT 与混淆电路、秘密分享、PIR、LWE 与 Regev 加密、全同态加密（FHE），以及对抗性密码分析与后量子方向——与本节点的可证明安全、零知识、MPC、同态加密、后量子五个主题一一对应。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Stanford University",
+     "course": "CS 355 Topics in Cryptography",
+     "url": "https://cs355.stanford.edu/",
+     "prereq_text": "CS 255, or an equivalent introductory cryptography course.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 276 Graduate Cryptography",
+     "url": "https://crypto-berkeley.github.io/cs276-spring26/about/",
+     "prereq_text": "This course is designed for graduate students with basic familiary with cryptographic or sufficient mathematical maturity to catup with the material in class. Students without sufficient background should consider taking the Undergraduate Cryptogrphy Class CS 171.",
+     "prereq_kind": "unspecified"
+    }
+   ],
+   "exercise": {
+    "id": "S.1.3",
+    "level": "D3",
+    "time_min": 55,
+    "question": "(1) 用“挑战者–敌手”游戏写出 IND-CPA（选择明文攻击下的不可区分性）的定义。为什么任何确定性的加密方案（如 ECB 模式、不加填充的 RSA）都不满足 IND-CPA？\n(2) 以 Schnorr 协议（证明知道离散对数 x，使 y = g^x）为例，写出三轮交互，并说明完备性、可靠性（特殊可靠性）、诚实验证者零知识分别指什么。Fiat–Shamir 变换做了什么？\n(3) 三个人的工资分别是 300、450、200，要在不泄露各自工资的情况下算出总和。用模 1000 的加法秘密分享给出具体的份额，演示计算过程。\n(4) Paillier 加密为什么具有加法同态性？全同态加密的主要瓶颈是什么？\n(5) Shor 算法对 RSA 和椭圆曲线密码有什么威胁？为什么现在就要迁移到后量子密码（如基于格的 ML-KEM）？",
+    "answer": "(1) 挑战者生成密钥；敌手可以随时请求任意明文的加密（加密谕言）；敌手提交两个等长的明文 m₀、m₁，挑战者随机选 b，返回 Enc(m_b)；敌手继续查询后猜 b′。如果任何多项式时间的敌手猜对的概率都不超过 1/2 加上可忽略的量，方案就是 IND-CPA 安全的。确定性方案下，敌手直接请求加密 m₀，把结果与挑战密文比较，就能以概率 1 猜对；所以安全的加密必须是随机化的（或有状态的）。\n(2) 证明者随机选 r，发送承诺 t = g^r；验证者发送随机挑战 c；证明者回复 s = r + cx；验证者检查 g^s = t·y^c。完备性：诚实的证明者总能通过验证。可靠性：如果对同一个承诺能回答两个不同的挑战，就能从中算出 x（x = (s − s′)/(c − c′)），所以不知道 x 的人几乎无法通过。零知识：模拟器可以先选 s 和 c，再令 t = g^s·y^(−c)，生成与真实交互分布相同的记录，说明验证者除了“声明为真”之外什么都没学到。Fiat–Shamir：用哈希值 c = H(g, y, t) 代替验证者的随机挑战，把交互式证明变成非交互式证明（可用于签名），安全性在随机谕言模型下成立。\n(3) 每个人把自己的工资拆成 3 个和为工资（模 1000）的随机份额，分给三个人各一份：P1 的 300 拆成 (111, 222, 967)，P2 的 450 拆成 (500, 300, 650)，P3 的 200 拆成 (700, 100, 400)。第 j 个人把收到的第 j 份相加：P1 得 111 + 500 + 700 = 1311 ≡ 311，P2 得 222 + 300 + 100 = 622，P3 得 967 + 650 + 400 = 2017 ≡ 17。公开这三个和：311 + 622 + 17 = 950 = 300 + 450 + 200。任何单个人看到的份额都是均匀随机数，得不到别人的工资（假设参与者不合谋，且总和小于模数）。\n(4) Paillier 密文 E(m) = g^m·r^n mod n²。两个密文相乘：g^(m₁+m₂)·(r₁r₂)^n，正是 m₁ + m₂ 的一个合法密文，所以在密文上做乘法就等于在明文上做加法（用于电子投票、隐私求和）。全同态加密支持任意计算，但密文中的噪声随运算增长，需要昂贵的自举（bootstrapping）操作刷新；密文膨胀大、计算比明文慢好几个数量级，目前只适合特定的小规模计算。\n(5) Shor 算法在足够大的容错量子计算机上能在多项式时间内分解大整数、求离散对数，RSA、DH、ECC 会被完全攻破（对称密码只受 Grover 算法的平方根加速影响，把密钥加长一倍即可）。“先存储、后解密”：敌手现在就截获、保存加密流量，等将来有了量子计算机再解密，所以需要长期保密的数据现在就要换成后量子方案。基于格的方案（如 ML-KEM、ML-DSA）依赖 LWE 等问题，目前没有已知的高效量子算法，效率可以接受，已被 NIST 标准化；迁移初期常采用传统算法与后量子算法的混合方案。",
+    "covers": [
+     "可证明安全（IND-CPA）",
+     "零知识证明",
+     "安全多方计算",
+     "同态加密",
+     "后量子密码"
+    ],
+    "uses_prereqs": [
+     "S.1.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 160
+   "y": 133
   },
   {
    "id": "S.2.1",
@@ -14932,37 +15058,75 @@
    "required": [
     {
      "id": "C.2.1",
-     "why": "内存、权限、进程和隔离是系统安全基础。",
-     "kind": "required"
-    },
-    {
-     "id": "P.2.2",
-     "why": "",
+     "why": "MIT 6.858 先修 6.033（操作系统与系统工程）；Berkeley CS 161 先修 61C。内存安全、权限、隔离都建立在操作系统机制上。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "C.1.1",
-     "why": "",
+     "id": "C.3.2",
+     "why": "MIT 6.033 含网络部分，系统安全会涉及网络服务。",
+     "kind": "recommended"
+    },
+    {
+     "id": "S.1.1",
+     "why": "两门课都在课内讲安全原则。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 6.858 Computer Systems Security：先修 6.033；Berkeley CS 161：先修 61B、61C、70。",
    "unlocks": [
     "S.5.2"
    ],
    "related": [],
    "step": 4,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "6.858 Computer Systems Security（MIT OpenCourseWare，Fall 2014，Nickolai Zeldovich；含全套 lecture notes、视频、labs）",
+    "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+    "lang": "en",
+    "free": true,
+    "covers": "课程描述写明 topics 含 operating system (OS) security、capabilities、information flow control、language security、network protocols、hardware security、web application security；calendar 逐讲为：威胁模型、控制流劫持攻击、缓冲区溢出利用与防御、特权分离（privilege separation）、capabilities、原生代码沙箱、Web 安全模型、符号执行、网络协议与 SSL/HTTPS、侧信道攻击、用户认证、隐私浏览、匿名通信、移动设备安全。正好覆盖系统安全的操作系统防护、内存安全、权限、隔离与系统加固。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "6.858 Computer Systems Security",
+     "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/pages/syllabus/",
+     "prereq_text": "Prerequisites\n6.033 Computer System Engineering",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 161 Computer Security",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+     "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "S.2.1",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 用概念说明栈缓冲区溢出：为什么把用户输入 strcpy 到固定大小的局部数组很危险？栈金丝雀、DEP/NX、ASLR 三种缓解措施分别阻止了攻击的哪一步？为什么要组合使用？\n(2) Unix 的用户、组和权限位怎样控制文件访问？chmod 4755 是什么意思？setuid 程序为什么特别需要谨慎编写？\n(3) 进程隔离、seccomp 沙箱、虚拟机、可信执行环境（如 SGX、TrustZone）各自的信任边界在哪里？\n(4) Rust 的所有权和借用规则怎样在编译期防止 use-after-free 和数据竞争？\n(5) 列出一份 Linux 服务器加固清单（至少 5 条）。",
+    "answer": "(1) strcpy 不检查长度，输入超过数组大小时会继续写到栈上相邻的位置，包括保存的返回地址；函数返回时控制流就会跳到攻击者指定的地址。栈金丝雀：在返回地址前放一个随机值，函数返回前检查它是否被改动，发现溢出就终止程序。DEP/NX：把栈和堆标记为不可执行，注入到数据区的代码无法运行。ASLR：随机化栈、堆、库的加载地址，攻击者难以知道该跳到哪里。单独的措施都能被绕过（如用返回导向编程 ROP 绕过 NX、借信息泄露绕过 ASLR），组合起来才能大幅提高攻击难度；根本办法是使用有边界检查的函数或内存安全语言。\n(2) 每个文件有所有者、所属组和其他人三组 rwx 权限，进程按其有效用户 ID 和组 ID 匹配对应的权限组。4755：最前面的 4 表示 setuid，755 表示所有者可读写执行、组和其他人可读和执行。setuid 程序以文件所有者（常常是 root）的身份运行，任何漏洞（缓冲区溢出、环境变量或路径注入、竞态条件）都会被普通用户利用来提权，所以要尽量少用，尽早放弃特权，并严格校验所有输入。\n(3) 进程隔离：依赖操作系统内核，内核被攻破则失效。seccomp：进一步限制进程能调用的系统调用，缩小内核的攻击面，但仍信任内核。虚拟机：隔离边界是 hypervisor，客户机内核被攻破也不影响宿主，但 hypervisor 必须可信。TEE：连操作系统和 hypervisor 都不信任，只信任 CPU 硬件和飞地中的代码，仍然面临侧信道攻击。\n(4) 每个值只有一个所有者，所有者离开作用域时值被释放；借用分为多个共享引用（只读）或者一个可变引用，二者不能同时存在；编译器检查引用的生命周期不超过被引用值的生命周期，所以不可能在释放之后再使用。跨线程传递数据必须满足 Send / Sync 约束，共享的可变状态必须放在 Mutex 等同步原语之后，编译期就排除了数据竞争。\n(5) 及时更新系统和软件补丁；关闭不需要的服务和端口；禁用 root 远程登录，SSH 只允许密钥登录；按最小权限设置用户和 sudo 规则；开启防火墙；打开审计和集中日志；使用 SELinux / AppArmor 等强制访问控制；启用安全启动和磁盘加密；定期做漏洞扫描和备份。",
+    "covers": [
+     "内存安全与缓解措施",
+     "访问控制与权限",
+     "隔离与可信执行",
+     "内存安全语言",
+     "系统加固"
+    ],
+    "uses_prereqs": [
+     "C.2.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 76
+   "y": 56
   },
   {
    "id": "S.2.2",
@@ -14992,24 +15156,29 @@
    "required": [
     {
      "id": "C.3.2",
-     "why": "理解正常协议行为后分析网络威胁与防护。",
+     "why": "Stanford CS 155 要求懂网络协议；协议层攻击要先懂协议本身。",
      "kind": "required"
     },
     {
-     "id": "S.1.1",
-     "why": "",
+     "id": "C.2.1",
+     "why": "Stanford CS 155：The course requires an understanding of operating systems。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "S.1.1",
+     "why": "两门课都在课内讲安全原则。",
+     "kind": "recommended"
+    },
+    {
      "id": "S.1.2",
-     "why": "",
+     "why": "TLS、VPN 使用密码学原语。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Stanford CS 155：操作系统 + 网络协议 + 编程；Berkeley CS 161：先修 61B、61C、70。",
    "unlocks": [
     "S.4.1",
     "S.4.4"
@@ -15017,13 +15186,52 @@
    "related": [],
    "step": 4,
    "reach": 2,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "CS155 Computer and Network Security（Stanford，Spring 2026；讲义 slides 与论文阅读清单全部公开）",
+    "url": "https://cs155.stanford.edu/",
+    "lang": "en",
+    "free": true,
+    "covers": "Part 1 系统安全（控制流劫持、隔离/沙箱、硬件与微架构安全）；Part 2 Web 与传输安全（Web 安全模型、XSS/SQLi/CSRF 与防御、Cookie 会话、HTTPS 的目标与陷阱/TLS 攻击）；Part 3 “Network Security and Privacy” 依次是 BGP 安全（部分部署）、DNS 缓存投毒、DNSSEC/NSEC3 评测、distributed firewalls（分段/边界防护）、Bro 实时入侵检测、DoS 与 DDoS 放大攻击与防御、IP traceback。协议攻击面、分段与防火墙、入侵检测、传输保护、网络监测都有对应讲义。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Stanford University",
+     "course": "CS 155 Computer and Network Security",
+     "url": "https://cs155.stanford.edu/info.html",
+     "prereq_text": "The course requires an understanding of operating systems, networking protocols, and a basic understanding of programming languages. Programming projects will be done primarily in C and JavaScript, but other languages may be needed. Pre-requisites: CS110/CS111 (Principles of Computer Systems)",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 161 Computer Security",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+     "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "S.2.2",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 按网络层次举例说明 ARP 欺骗、IP 地址伪造、TCP SYN 洪泛、DNS 缓存投毒的原理和防御方法。\n(2) 网络分为内网、DMZ 和外网。用有状态防火墙的规则描述：内网可以访问外网的 HTTP/HTTPS；外网只能访问 DMZ 中 Web 服务器的 443 端口；其余流量一律拒绝。为什么默认拒绝？\n(3) 简述 TLS 1.3 握手的主要步骤。客户端怎样验证服务器证书？什么是前向保密？\n(4) 基于签名的入侵检测和基于异常的入侵检测有什么区别？某 IDS 每天处理 10⁶ 个事件，其中只有 10 个是真正的攻击；检测率 99%，误报率 0.1%。告警中真正攻击所占的比例是多少？这说明了什么？\n(5) 什么是网络分段？零信任架构的核心思想是什么？",
+    "answer": "(1) ARP 欺骗（链路层）：伪造 ARP 应答，把网关的 IP 映射到攻击者的 MAC，实现中间人；防御：交换机的动态 ARP 检测、静态绑定、使用端到端加密。IP 伪造（网络层）：伪造源地址，用于反射放大攻击；防御：在网络入口做源地址过滤（BCP 38）。SYN 洪泛（传输层）：大量半开连接耗尽服务器的连接表；防御：SYN cookies、限速、云端清洗。DNS 缓存投毒（应用层）：伪造应答让解析器缓存错误的记录；防御：随机化源端口和查询 ID、部署 DNSSEC。\n(2) 规则（按顺序匹配）：允许 内网 → 任意 TCP 80、443（新建连接）；允许 任意 → DMZ Web 服务器 TCP 443（新建连接）；允许已建立和相关连接的回程流量；最后一条：拒绝所有。有状态防火墙跟踪连接状态，回包自动放行，不需要另开反向规则。默认拒绝保证凡是没有明确允许的都被阻止，规则写漏了也是更安全的一边。\n(3) 客户端发送 ClientHello（支持的密码套件和密钥共享参数）；服务器回 ServerHello（选定的参数和自己的密钥共享），此后的握手消息都已加密；服务器发送证书和 CertificateVerify（用私钥对握手记录签名），以及 Finished；客户端验证后发送 Finished，开始传输应用数据。证书验证：检查证书链能追溯到受信任的根 CA、签名有效、在有效期内、域名与访问的主机名匹配、未被吊销。前向保密：会话密钥由每次临时生成的（EC）DHE 密钥协商得出，即使服务器长期私钥日后泄露，过去截获的流量也无法解密。\n(4) 签名检测匹配已知攻击的特征，准确但发现不了新攻击；异常检测学习正常行为的基线，偏离基线就告警，能发现未知攻击，但误报多。真正的攻击被检出 10 × 0.99 = 9.9 个，误报约 999 990 × 0.001 ≈ 1000 个，告警中真攻击只占约 9.9/1010 ≈ 1%。基率极低时，即使误报率很小，告警也几乎都是误报（基率谬误），分析人员会被淹没，所以要降低误报率、做告警关联和分级。\n(5) 网络分段：按功能或安全等级把网络划分成若干区域，区域之间只开放必要的流量，限制攻击者进入后的横向移动。零信任：不再因为“在内网”就默认信任；每一次访问都要验证用户和设备的身份与状态，按最小权限动态授权，并持续监控。",
+    "covers": [
+     "协议层攻击与防御",
+     "防火墙与网络分区",
+     "传输层安全（TLS）",
+     "入侵检测与基率谬误",
+     "分段与零信任"
+    ],
+    "uses_prereqs": [
+     "C.3.2",
+     "C.2.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 227
+   "y": 128
   },
   {
    "id": "S.2.3",
@@ -15052,41 +15260,84 @@
    "optional": false,
    "required": [
     {
-     "id": "C.3.3",
-     "why": "无线和移动通信机制是相关安全分析背景。",
-     "kind": "required"
-    },
-    {
-     "id": "S.1.1",
-     "why": "",
+     "id": "C.3.2",
+     "why": "WUSTL CSE 571S（含无线网络安全两讲）先修 CSE 473S 计算机网络。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "C.3.3",
+     "why": "无线链路和蜂窝网络的细节在无线网络课里讲。",
+     "kind": "recommended"
+    },
+    {
      "id": "S.2.2",
-     "why": "",
+     "why": "无线安全是网络安全的延伸。",
      "kind": "recommended"
     },
     {
      "id": "P.5.2",
-     "why": "",
+     "why": "移动应用安全要懂移动开发。",
+     "kind": "recommended"
+    },
+    {
+     "id": "S.1.1",
+     "why": "安全原则与威胁模型。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "WUSTL CSE 571S Network Security：先修 CSE 473S；Berkeley CS 161 含 802.11/WPA2 章节。",
    "unlocks": [],
    "related": [],
    "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "OWASP Mobile Application Security（MASVS / MASTG / MASWE，免费在线）",
+    "url": "https://mas.owasp.org/",
+    "lang": "en",
+    "free": true,
+    "covers": "按 MASVS 域组织：移动平台与运行时（Android/iOS 架构、沙箱、权限模型、Root/Jailbreak 检测）、设备身份与凭据（Keystore/Keychain、生物识别、硬件支持的密钥与 attestation）、移动应用安全（存储、加密、网络通信与 TLS/证书固定、平台交互、代码质量与防篡改）、以及 MASWE 弱点分类与对应测试，适合把“移动平台 + 设备身份 + 移动应用”三块系统过一遍。注意：不含 802.11/蓝牙/蜂窝等无线协议细节（那部分见 notes 的补充链接）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Washington University in St. Louis",
+     "course": "CSE 571S Network Security",
+     "url": "https://www.cse.wustl.edu/~jain/cse571-14/index.html",
+     "prereq_text": "Prerequisites: CSE 473S (Introduction to Computer Networking) or equivalent.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 161 Computer Security",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+     "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "S.2.3",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 从 WEP 到 WPA2 再到 WPA3，Wi-Fi 安全分别解决了什么问题？WPA2-PSK 四次握手为什么可能遭受离线字典攻击？WPA3 的 SAE 怎样改进？\n(2) 蓝牙低功耗（BLE）的配对方式有哪些？为什么“Just Works”配对无法防御中间人攻击？\n(3) 比较 Android 和 iOS 的应用安全模型（沙箱、权限、代码签名、应用审核）。\n(4) 参照 OWASP MASVS，各举一个移动应用“不安全的本地数据存储”“缺少证书校验”“硬编码密钥”的例子，并给出修复方法。\n(5) 伪基站（IMSI 捕获器）是怎样工作的？5G 用什么方式保护用户的永久身份？",
+    "answer": "(1) WEP：RC4 密钥流配合短 IV 会重复、没有真正的完整性保护，几分钟内就能恢复密钥。WPA2：AES-CCMP 加密和完整性校验，四次握手为每个会话派生新密钥。但在 PSK 模式下，攻击者只要抓到一次握手报文，就能离线逐个猜测口令并验证 MIC，弱口令很快被破解。WPA3-SAE 基于口令认证的密钥交换（Dragonfly）：每猜一次口令都必须与接入点在线交互，抓包无法离线破解，并且提供前向保密。\n(2) 配对方式：Just Works、数字比较、Passkey 输入、带外配对（如 NFC）。Just Works 用于没有屏幕和键盘的设备，双方无法确认对端的身份，中间人可以分别与两端配对；若用旧版的 LE Legacy 配对，临时密钥还很容易被嗅探破解。应尽量使用 LE Secure Connections 加数字比较或 Passkey。\n(3) Android：每个应用以独立的 Linux 用户 ID 运行在沙箱里，加上 SELinux；敏感权限需要用户在运行时授予；APK 必须签名，签名用来识别开发者和保证更新的连续性；允许从商店以外的来源安装（侧载）。iOS：应用沙箱更严格；所有代码必须经过苹果签名，默认只能从 App Store 安装并经过审核；权限同样在运行时请求。iOS 生态更封闭、可控，Android 更开放、碎片化（系统更新覆盖不均）。\n(4) 不安全存储：把令牌或个人信息以明文写进 SharedPreferences / 外部存储 → 改用 Android Keystore 或 iOS Keychain 保护密钥，敏感数据加密存储，不写日志。缺少证书校验：为了方便测试接受任何证书（自定义 TrustManager 什么都不检查），可被中间人截获 → 使用系统默认的证书校验，必要时做证书固定（pinning）。硬编码密钥：API 密钥或加密密钥直接写在代码里，反编译就能拿到 → 密钥不要放在客户端，由服务端代为调用或下发短期令牌，按用户授权。\n(5) 伪基站发射比真基站更强的信号，诱使手机连接；2G 时代网络不向手机证明自己的身份，伪基站可以要求手机报出 IMSI（永久身份）并实现跟踪，甚至降级到无加密的连接。4G 有双向认证，但仍可能在认证前请求 IMSI。5G 用 SUCI：手机用运营商的公钥加密 SUPI（永久身份）后再发送，只有归属网络能解密，空口上不再出现明文的永久身份。",
+    "covers": [
+     "Wi-Fi 安全协议",
+     "蓝牙安全",
+     "移动平台安全模型",
+     "移动应用安全",
+     "蜂窝网络安全"
+    ],
+    "uses_prereqs": [
+     "C.3.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 155
+   "y": 200
   },
   {
    "id": "S.2.4",
@@ -15116,40 +15367,71 @@
    "required": [
     {
      "id": "C.2.3",
-     "why": "",
-     "kind": "required"
-    },
-    {
-     "id": "S.1.1",
-     "why": "",
+     "why": "容器隔离、镜像、编排的安全以虚拟化和容器机制为基础。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "C.4.2",
-     "why": "云控制面、租户和编排机制决定云安全边界。",
+     "why": "云服务模型与 IAM。",
      "kind": "recommended"
     },
     {
      "id": "S.2.2",
-     "why": "",
+     "why": "云网络的分段与防护。",
+     "kind": "recommended"
+    },
+    {
+     "id": "S.1.1",
+     "why": "共享责任模型下的威胁建模。",
      "kind": "recommended"
     }
    ],
    "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqSummary": "证据不足：Berkeley CYBER 212 Cloud Security 只写了 MICS 学生专用，没有课程先修；资源是 Kubernetes 官方安全文档。按内容需要起草，待核实。",
    "unlocks": [],
    "related": [],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Kubernetes 官方文档 · Security（Concepts → Security，含 Cloud Native Security、访问控制、加固与检查清单）",
+    "url": "https://kubernetes.io/docs/concepts/security/",
+    "lang": "en",
+    "free": true,
+    "covers": "该章节下的页面正好对应节点条目：Cloud Native Security（4C 分层：Cloud/Cluster/Container/Code）、Controlling Access to the Kubernetes API 与 Role Based RBAC Good Practices、Service Accounts（身份与权限）、Good practices for Kubernetes Secrets（凭据与配置）、Pod Security Standards / Pod Security Admission（配置基线）、Multi-tenancy（多租户隔离）、Hardening Guide - Authentication Mechanisms、Kubernetes API Server Bypass Risks、Security For Linux Nodes / Linux kernel security constraints for Pods and containers（节点与控制平面加固）、Security Checklist 与 Application Security Checklist（审计与自查清单）。镜像与编排层面在同站还有 Images（docs/concepts/containers/images）、Configure a kubelet image credential provider 与 Admission Webhook Good Practices 等相关页，但不属于 Security 章节正文。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "UC Berkeley",
+     "course": "CYBER 212 Cloud Security",
+     "url": "https://undergraduate.catalog.berkeley.edu/courses/1678111",
+     "prereq_text": "Prerequisite Requirement: Complete ALL of the following Courses: — Course Enrollment Requirement: MICS students only.",
+     "prereq_kind": "unspecified"
+    }
+   ],
+   "exercise": {
+    "id": "S.2.4",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 在 IaaS 的共享责任模型下，用户要负责哪些安全？列举三类最常见的云安全事故，以及它们的共同根源。\n(2) 写一个 AWS IAM 策略（JSON）：只允许读取桶 company-data 中前缀为 reports/ 的对象，并且只允许从公司的 IP 段 203.0.113.0/24 访问。\n(3) 从镜像构建到运行，列出至少五项容器安全措施，并写一个体现其中几项的 Dockerfile。\n(4) Kubernetes 中 RBAC、NetworkPolicy、Pod Security Standards 分别控制什么？默认的 Secret 对象有什么安全问题？\n(5) CloudTrail 这类云审计日志有什么作用？举两个值得告警的异常 API 调用模式。",
+    "answer": "(1) 用户负责：操作系统和应用的补丁、网络配置（安全组）、身份与访问管理、数据加密和备份、日志监控。常见事故：存储桶被设成公开、泄露数据；IAM 权限过宽（如应用角色拥有管理员权限）；访问密钥泄露到代码仓库后被滥用。共同根源是配置错误和身份凭证管理不当，而不是云平台本身被攻破。\n(2)\n```json\n{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"arn:aws:s3:::company-data/reports/*\",\n      \"Condition\": { \"IpAddress\": { \"aws:SourceIp\": \"203.0.113.0/24\" } }\n    },\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:ListBucket\",\n      \"Resource\": \"arn:aws:s3:::company-data\",\n      \"Condition\": {\n        \"StringLike\": { \"s3:prefix\": \"reports/*\" },\n        \"IpAddress\": { \"aws:SourceIp\": \"203.0.113.0/24\" }\n      }\n    }\n  ]\n}\n```\n没有被显式允许的操作默认都被拒绝；列出对象的权限作用在桶上，要用 prefix 条件限制范围。\n(3) 使用最小化的基础镜像（distroless / alpine）并固定版本；构建时扫描镜像漏洞，签名后再推送；不以 root 运行；以只读根文件系统运行，丢弃不需要的 Linux capabilities，禁止特权容器；限制 CPU 和内存；密钥不写进镜像。\n```dockerfile\nFROM python:3.12-slim\nRUN useradd --create-home --uid 10001 app\nWORKDIR /home/app\nCOPY --chown=app requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\nCOPY --chown=app . .\nUSER app\nCMD [\"python\", \"main.py\"]\n```\n运行时再加 --read-only --cap-drop=ALL --security-opt=no-new-privileges。\n(4) RBAC：哪个用户或服务账号可以对哪些资源执行哪些操作（应遵循最小权限，避免随意授予 cluster-admin）。NetworkPolicy：Pod 之间、Pod 与外部之间允许哪些流量（默认全部互通，应先默认拒绝再按需放开）。Pod Security Standards：限制 Pod 的安全上下文，如禁止特权容器、禁止挂载宿主机路径、要求以非 root 用户运行。Secret 默认只是 base64 编码，并不是加密；能读 etcd 或有 get secret 权限的人都能看到明文。应启用 etcd 静态加密、严格限制访问权限，或使用外部密钥管理服务。\n(5) 记录谁在什么时间、从哪里调用了哪个 API、结果如何，用于事后调查、合规审计和实时检测。告警模式：关闭或删除审计日志（攻击者在掩盖痕迹）；从陌生的国家或 IP 使用根账号登录；短时间内大量调用 ListBuckets / GetObject，或大量创建高配实例（数据窃取、挖矿）；IAM 策略被修改为允许所有操作。",
+    "covers": [
+     "共享责任与常见云风险",
+     "身份与权限策略",
+     "容器与镜像安全",
+     "编排平台安全",
+     "云审计"
+    ],
+    "uses_prereqs": [
+     "C.2.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 88
+   "y": 169
   },
   {
    "id": "S.2.5",
@@ -15177,25 +15459,25 @@
    "optional": false,
    "required": [
     {
-     "id": "H.3.2",
-     "why": "固件、启动、接口与资源约束支撑设备安全研究。",
-     "kind": "required"
-    },
-    {
-     "id": "S.1.1",
-     "why": "",
+     "id": "H.2.1",
+     "why": "University of Idaho ECE 4040/5040 要求修过数字逻辑并能读写基础的 Verilog/SystemVerilog；课程以 RTL 实验为主。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "S.1.2",
-     "why": "",
+     "id": "H.3.2",
+     "why": "嵌入式与物联网部分要懂固件、驱动与启动流程。",
+     "kind": "recommended"
+    },
+    {
+     "id": "S.1.1",
+     "why": "安全原则与威胁模型。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "University of Idaho ECE 4040/5040 Hardware Security（已用 curl 核实）：数字逻辑 + Verilog，RTL 经验推荐，明确不要求密码学背景。",
    "unlocks": [],
    "related": [
     {
@@ -15203,15 +15485,46 @@
      "why": "芯片可信设计、侧信道与故障模型连接硬件和安全。"
     }
    ],
-   "step": 5,
+   "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "ECE 4040/5040 Introduction to Hardware Security（University of Idaho，Fall 2026，Prof. Zain Ul Abideen；课程主页公开大纲、作业与评分）",
+    "url": "https://hsc-research.org/hwsec.html",
+    "lang": "en",
+    "free": true,
+    "covers": "课程目标与作业逐条对应节点内容：跨 design / fabrication / test / deployment / end-of-life 的硬件威胁与 IC 供应链（仿冒、逆向、硬件木马、logic locking 与 SAT 攻击、reconfigurable obfuscation）；威胁建模（资产、可信/不可信方、攻击者能力、安全目标）；PUF/TRNG/DRBG 等设备身份与密钥原语；时序/功耗侧信道分析与对策；故障注入建模、RTL/门级 fault campaign 与容错；scan 与 debug 接口暴露、Linux/内核层约束；以及安全验证（断言、信息流推理、等价性检查）。实践用 Verilog、真实硅 PUF 数据集、功耗轨迹与故障日志。注意：安全启动与固件更新只作为“secure hardware subsystem”的一部分，没有单独的 secure boot/firmware 章节。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of Idaho",
+     "course": "ECE 4040/5040 Introduction to Hardware Security",
+     "url": "https://hsc-research.org/hwsec.html",
+     "prereq_text": "Students should have completed a digital-logic course such as ECE 2400 and should be able to read and write basic Verilog or SystemVerilog. ECE 4450 or equivalent RTL experience is recommended. Prior coursework in cryptography is not required.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "S.2.5",
+    "level": "D3",
+    "time_min": 50,
+    "question": "(1) 描述安全启动的信任链：从 ROM 中的根信任到 bootloader、内核依次怎样验证？为什么根公钥（或其哈希）必须放在不可改写的存储中？怎样防止回滚到有漏洞的旧版固件？\n(2) 设备上留下的 JTAG / SWD 调试接口有什么风险？量产时怎样保护？\n(3) 用“平方–乘”算法实现 RSA 模幂时，简单功耗分析（SPA）为什么能从一条功耗曲线中读出私钥的每一位？常数时间实现和掩码技术分别怎样防御？\n(4) 电压或时钟毛刺等故障注入攻击的原理是什么？以签名验证为例说明攻击者可能获得什么，以及相应的对策。\n(5) 物理不可克隆函数（PUF）有什么用途？物联网设备的 OTA 固件更新应当满足哪些安全要求？",
+    "answer": "(1) 芯片上电后执行固化在 ROM 中的启动代码，它用保存在一次性可编程熔丝中的公钥（或其哈希）验证下一级 bootloader 的签名，验证通过才跳转执行；bootloader 再验证内核，内核再验证驱动或应用，逐级传递信任。根信任如果能被改写，攻击者换上自己的公钥就能签名任意固件，整条链就失效了。防回滚：在熔丝或受保护的单调计数器中记录允许的最低版本号，固件头部带版本号，低于记录值的固件拒绝启动。\n(2) 调试接口可以读写内存和闪存、单步执行、修改寄存器：攻击者能提取固件和密钥、绕过安全检查，进而分析出可批量利用的漏洞。保护：量产时通过熔丝永久禁用，或者改为需要认证的调试（挑战–应答，每台设备的密钥不同）；不要在 PCB 上留下明显的测试点；对密钥使用安全元件或受保护的存储区。\n(3) 平方–乘算法逐位扫描私钥：每一位都要做一次平方，位为 1 时再额外做一次乘法。乘法会在功耗曲线上形成可辨认的波形，于是“只有平方”和“平方 + 乘法”的序列直接对应私钥的 0 和 1。常数时间：无论私钥位是什么都执行相同的操作序列和内存访问（如 Montgomery 阶梯，或“总是乘、按位选择结果”的写法），消除与秘密相关的差异。掩码：用随机数对中间值盲化（如对指数或底数做随机化），使每次运算的功耗与秘密在统计上不相关，可以抵御需要大量曲线的差分功耗分析（DPA）。\n(4) 在关键指令执行时短暂地拉低电压或插入异常短的时钟周期，使 CPU 跳过指令或产生错误的计算结果。例如签名验证的结果判断（if (valid)）被跳过，未签名的固件就被接受；对 RSA-CRT 签名注入一次故障，用一个错误签名和正确签名就能分解模数（Bellcore 攻击）。对策：关键检查做冗余（重复判断、使用不易被单比特翻转改变的魔数而不是布尔值）；签名输出前先验证一次；加入电压、时钟和光传感器检测异常；在关键代码中插入随机延迟。\n(5) PUF 利用芯片制造过程中不可控的微小差异，为每颗芯片产生独特而稳定的响应，可以作为设备指纹或者在需要时再生成密钥，密钥不必长期存放在非易失存储中，物理提取更困难。OTA 安全要求：固件包由厂商签名，设备验证签名后才安装；通过加密通道传输（必要时固件本身也加密）；防回滚（版本检查）；A/B 双分区，更新失败可以恢复；更新服务器的签名私钥放在硬件安全模块中，并能吊销泄露的密钥。",
+    "covers": [
+     "安全启动与信任链",
+     "调试接口",
+     "侧信道攻击与防护",
+     "故障注入",
+     "PUF 与固件更新安全"
+    ],
+    "uses_prereqs": [
+     "H.2.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 928,
-   "y": 376
+   "x": 464,
+   "y": 16
   },
   {
    "id": "S.3.1",
@@ -15241,18 +15554,29 @@
    "required": [
     {
      "id": "P.5.1",
-     "why": "Web/API正常数据流与认证流程是分析攻击面的基础。",
-     "kind": "required"
-    },
-    {
-     "id": "S.1.1",
-     "why": "",
+     "why": "Stanford CS 253 Web Security：CS 142 或同等的 Web 开发经验是先修。",
      "kind": "required"
     }
    ],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [
+    {
+     "id": "S.1.1",
+     "why": "安全原则与威胁模型。",
+     "kind": "recommended"
+    },
+    {
+     "id": "D.1.1",
+     "why": "SQL 注入要懂 SQL。",
+     "kind": "recommended"
+    },
+    {
+     "id": "C.3.2",
+     "why": "HTTP、TLS、DNS 等协议知识。",
+     "kind": "recommended"
+    }
+   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "Stanford CS 253：先修 CS 142（Web 开发）；UW CSE 484：先修 CSE 332 + 351。",
    "unlocks": [],
    "related": [
     {
@@ -15262,13 +15586,51 @@
    ],
    "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Web Security Academy（PortSwigger，免费在线，含学习路径 + 逐主题文字/视频 + 交互式 labs）",
+    "url": "https://portswigger.net/web-security",
+    "lang": "en",
+    "free": true,
+    "covers": "All topics 覆盖本节点全部子项：输入/输出边界与注入（SQL injection、NoSQL injection、command injection、SSTI、XXE、path traversal、file upload、insecure deserialization）；认证与会话（Authentication、OAuth authentication、JWT attacks、race conditions）；访问控制（Access control、Business logic vulnerabilities）；客户端与服务端安全（XSS、CSRF、CORS、clickjacking、DOM-based、request smuggling、cache poisoning、Host header、information disclosure）；接口安全（API testing、GraphQL API vulnerabilities、WebSockets）。每个主题都有讲解 + 分级 lab（Apprentice/Practitioner/Expert），从 D2 入门到 D4 深入都能顺着学。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Stanford University",
+     "course": "CS 253 Web Security",
+     "url": "https://web.stanford.edu/class/cs253/",
+     "prereq_text": "CS 142, or an equivalent amount of web development experience, is a prerequisite. You should also be curious about web security and excited to learn clever attacks, defenses, and techniques for writing secure code. An introductory security course, such as CS 155, is not a formal prerequisite.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Washington",
+     "course": "CSE 484 Computer Security",
+     "url": "https://courses.cs.washington.edu/courses/cse484/",
+     "prereq_text": "Prerequisites: CSE 332; CSE 351.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "S.3.1",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 分别说明 SQL 注入、跨站脚本（反射型、存储型、DOM 型）、跨站请求伪造（CSRF）的原理和标准防御。\n(2) 会话 Cookie 应当设置哪些安全属性？各防什么？口令找回流程有哪些常见漏洞？\n(3) 接口 GET /api/orders/123 只校验了用户已登录。这是什么漏洞？怎样修复？\n(4) OAuth 2.0 授权码流程中，PKCE 解决了什么问题？使用 JWT 时有哪些常见错误？\n(5) 什么是 SSRF？为什么在云环境中特别危险？怎样防御？",
+    "answer": "(1) SQL 注入：用户输入被拼接进 SQL 语句并被当作代码执行；防御：参数化查询，数据库账号最小权限。XSS：攻击者的脚本在其他用户的浏览器里、以受害网站的身份执行，可窃取会话、代替用户操作；反射型来自请求参数，存储型保存在服务端再展示给其他人，DOM 型由前端脚本把不可信数据写进页面造成。防御：按输出位置做上下文相关的编码（HTML、属性、JS、URL），前端避免 innerHTML 等危险接口，配合内容安全策略（CSP）。CSRF：受害者登录了网站 A，访问攻击者的页面时，浏览器自动带上 A 的 Cookie 发出攻击者构造的请求；防御：Cookie 设置 SameSite，状态变更操作使用不可预测的 CSRF 令牌，敏感操作要求重新认证。\n(2) HttpOnly：脚本无法读取 Cookie，减轻 XSS 窃取会话；Secure：只通过 HTTPS 发送；SameSite=Lax/Strict：跨站请求不带 Cookie，防 CSRF；再加上合理的过期时间、限定 Path 和 Domain。找回流程的漏洞：重置令牌可预测或不过期、可重复使用；响应信息泄露“该邮箱是否已注册”；重置链接的域名取自请求的 Host 头（可被注入成攻击者的域名）；安全问题的答案很容易被查到；修改口令后没有让旧会话失效。\n(3) IDOR（不安全的直接对象引用），属于越权访问：只要把 123 换成别人的订单号，就能查看别人的订单。修复：服务端每次都按当前登录用户检查对象的归属或权限（如 WHERE id = ? AND user_id = 当前用户），不能依赖“ID 难猜”；在统一的访问控制层实现，并编写越权测试。\n(4) 授权码可能在重定向过程中被截获（例如移动应用中被恶意应用注册了同一个 URL scheme）。PKCE：客户端先生成随机的 code_verifier，把它的哈希 code_challenge 随授权请求发出；兑换令牌时必须提交原始的 code_verifier，截获了授权码的人没有它就换不到令牌。JWT 常见错误：接受 alg=none 或者混淆算法（用 RSA 公钥当作 HMAC 密钥）；不校验签名、过期时间、受众和签发者；有效期过长又没有吊销机制；把敏感数据放在载荷里（载荷只是 base64 编码，不是加密）；存放在 localStorage 中，一旦有 XSS 就被窃取。\n(5) 服务端请求伪造：服务端会根据用户提供的 URL 去发请求（如抓取网页预览、导入图片），攻击者让它访问内部地址。云环境中可以访问实例元数据服务（如 169.254.169.254），获取临时访问凭证，从而接管云资源。防御：只允许白名单内的协议和域名；解析域名后拒绝私有地址和链路本地地址，并防范 DNS 重绑定；不跟随重定向；用独立的、受出口限制的网络发出请求；启用需要会话令牌的元数据服务版本（如 IMDSv2）。",
+    "covers": [
+     "注入与跨站攻击",
+     "认证与会话安全",
+     "访问控制",
+     "API 授权（OAuth、JWT）",
+     "服务端请求伪造"
+    ],
+    "uses_prereqs": [
+     "P.5.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 324
+   "y": 88
   },
   {
    "id": "S.3.2",
@@ -15336,7 +15698,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 464,
-   "y": 252
+   "y": 160
   },
   {
    "id": "S.3.3",
@@ -15407,7 +15769,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 464,
-   "y": 180
+   "y": 232
   },
   {
    "id": "S.4.1",
@@ -15474,7 +15836,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 232
+   "y": 241
   },
   {
    "id": "S.4.2",
@@ -15537,7 +15899,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 696,
-   "y": 306
+   "y": 272
   },
   {
    "id": "S.4.3",
@@ -15599,7 +15961,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 464,
-   "y": 101
+   "y": 322
   },
   {
    "id": "S.4.4",
@@ -15666,7 +16028,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 304
+   "y": 313
   },
   {
    "id": "S.5.1",
@@ -15717,7 +16079,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 1160,
-   "y": 232
+   "y": 205
   },
   {
    "id": "S.5.2",
@@ -15774,7 +16136,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 16
+   "y": 97
   },
   {
    "id": "H.1.1",
@@ -16006,6 +16368,7 @@
    "prereqStatus": "draft",
    "prereqSummary": "",
    "unlocks": [
+    "S.2.5",
     "H.2.2"
    ],
    "related": [
@@ -16015,7 +16378,7 @@
     }
    ],
    "step": 2,
-   "reach": 1,
+   "reach": 2,
    "resource": null,
    "zhAlt": null,
    "courses": [],
@@ -16304,7 +16667,7 @@
    ],
    "related": [],
    "step": 3,
-   "reach": 5,
+   "reach": 4,
    "resource": null,
    "zhAlt": null,
    "courses": [],
@@ -16354,9 +16717,7 @@
    ],
    "prereqStatus": "draft",
    "prereqSummary": "",
-   "unlocks": [
-    "S.2.5"
-   ],
+   "unlocks": [],
    "related": [
     {
      "id": "C.1.3",
@@ -16364,7 +16725,7 @@
     }
    ],
    "step": 4,
-   "reach": 1,
+   "reach": 0,
    "resource": null,
    "zhAlt": null,
    "courses": [],

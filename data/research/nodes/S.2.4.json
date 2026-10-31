@@ -1,0 +1,28 @@
+{
+ "id": "S.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "Kubernetes 官方文档 · Security（Concepts → Security，含 Cloud Native Security、访问控制、加固与检查清单）",
+  "url": "https://kubernetes.io/docs/concepts/security/",
+  "lang": "en",
+  "free": true,
+  "covers": "该章节下的页面正好对应节点条目：Cloud Native Security（4C 分层：Cloud/Cluster/Container/Code）、Controlling Access to the Kubernetes API 与 Role Based RBAC Good Practices、Service Accounts（身份与权限）、Good practices for Kubernetes Secrets（凭据与配置）、Pod Security Standards / Pod Security Admission（配置基线）、Multi-tenancy（多租户隔离）、Hardening Guide - Authentication Mechanisms、Kubernetes API Server Bypass Risks、Security For Linux Nodes / Linux kernel security constraints for Pods and containers（节点与控制平面加固）、Security Checklist 与 Application Security Checklist（审计与自查清单）。镜像与编排层面在同站还有 Images（docs/concepts/containers/images）、Configure a kubelet image credential provider 与 Admission Webhook Good Practices 等相关页，但不属于 Security 章节正文。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "UC Berkeley",
+   "course": "CYBER 212 Cloud Security",
+   "url": "https://undergraduate.catalog.berkeley.edu/courses/1678111",
+   "prereq_text": "Prerequisite Requirement: Complete ALL of the following Courses: — Course Enrollment Requirement: MICS students only.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "C.4.2": "not_mentioned"
+ },
+ "extra_prereqs": [],
+ "notes": "诚实说明：本节点只找到一门可公开核实的“云安全”课程（Berkeley CYBER 212，目录里 Prerequisite 一栏没有课程型先修，只有 “MICS students only” 的选课限制，故记 unspecified、mapped_ids 为空）；两次 Tavily 搜索都没有命中带公开 syllabus 的云/容器安全课程主页，因此课程证据只有一条，candidate_check 里 C.4.2（云计算）判 not_mentioned 也只是“这门课没写”，证据力度有限。资源选择上，Kubernetes 官方文档覆盖节点 7 项中的大部分且完全免费、长期稳定；它不覆盖“云厂商侧”的多租户隔离、IAM 策略与云审计，可补充（均已打开核实存在）：CSA《Security Guidance for Cloud Computing v5》https://cloudsecurityalliance.org/artifacts/security-guidance-v5 、NIST SP 800-144《Guidelines on Security and Privacy in Public Cloud Computing》https://csrc.nist.gov/pubs/sp/800/144/final 、NIST SP 800-190《Application Container Security Guide》https://csrc.nist.gov/pubs/sp/800/190/final （镜像/registry/orchestrator/宿主机的威胁与对策）。"
+}

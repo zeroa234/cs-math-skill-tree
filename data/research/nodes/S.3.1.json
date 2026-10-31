@@ -1,0 +1,52 @@
+{
+ "id": "S.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Web Security Academy（PortSwigger，免费在线，含学习路径 + 逐主题文字/视频 + 交互式 labs）",
+  "url": "https://portswigger.net/web-security",
+  "lang": "en",
+  "free": true,
+  "covers": "All topics 覆盖本节点全部子项：输入/输出边界与注入（SQL injection、NoSQL injection、command injection、SSTI、XXE、path traversal、file upload、insecure deserialization）；认证与会话（Authentication、OAuth authentication、JWT attacks、race conditions）；访问控制（Access control、Business logic vulnerabilities）；客户端与服务端安全（XSS、CSRF、CORS、clickjacking、DOM-based、request smuggling、cache poisoning、Host header、information disclosure）；接口安全（API testing、GraphQL API vulnerabilities、WebSockets）。每个主题都有讲解 + 分级 lab（Apprentice/Practitioner/Expert），从 D2 入门到 D4 深入都能顺着学。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 253 Web Security",
+   "url": "https://web.stanford.edu/class/cs253/",
+   "prereq_text": "CS 142, or an equivalent amount of web development experience, is a prerequisite. You should also be curious about web security and excited to learn clever attacks, defenses, and techniques for writing secure code. An introductory security course, such as CS 155, is not a formal prerequisite.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.5.1"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "CSE 484 Computer Security",
+   "url": "https://courses.cs.washington.edu/courses/cse484/",
+   "prereq_text": "Prerequisites: CSE 332; CSE 351.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.5.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 484 先修 CSE 332（数据结构与并行性）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 484 先修 CSE 351（硬件/软件接口，对应计算机组成）"
+  }
+ ],
+ "notes": "P.5.1 判 supported 的依据很直接：Stanford CS 253 把 CS 142（Web Applications，即 Web 开发）或其等价经历写成 prerequisite；同时它明确说 CS 155 这类安全导论课“不是正式先修”。CSE 484 的目录描述里含 “…human factors, authentication, anonymity, and web security”，所以也算教本节点内容的课，但它的先修是数据结构 + 硬件接口，与 Web 开发无关，故只有 P.5.1 一条被支持。CS 253 的课程主页已打开核实（https://web.stanford.edu/class/cs253/ 会跳转到 https://web.stanford.edu/class/cs253/），课表里每讲都有 Slides 与 Reading 链接（页面未写视频，故本文件不声称有视频）。"
+}

@@ -1,0 +1,83 @@
+{
+ "id": "S.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "CS155 Computer and Network Security（Stanford，Spring 2026；讲义 slides 与论文阅读清单全部公开）",
+  "url": "https://cs155.stanford.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "Part 1 系统安全（控制流劫持、隔离/沙箱、硬件与微架构安全）；Part 2 Web 与传输安全（Web 安全模型、XSS/SQLi/CSRF 与防御、Cookie 会话、HTTPS 的目标与陷阱/TLS 攻击）；Part 3 “Network Security and Privacy” 依次是 BGP 安全（部分部署）、DNS 缓存投毒、DNSSEC/NSEC3 评测、distributed firewalls（分段/边界防护）、Bro 实时入侵检测、DoS 与 DDoS 放大攻击与防御、IP traceback。协议攻击面、分段与防火墙、入侵检测、传输保护、网络监测都有对应讲义。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 155 Computer and Network Security",
+   "url": "https://cs155.stanford.edu/info.html",
+   "prereq_text": "The course requires an understanding of operating systems, networking protocols, and a basic understanding of programming languages. Programming projects will be done primarily in C and JavaScript, but other languages may be needed. Pre-requisites: CS110/CS111 (Principles of Computer Systems)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.2.1",
+    "C.3.2",
+    "P.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 161 Computer Security",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+   "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1",
+    "P.2.2",
+    "M.5.3",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.3.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "Stanford CS 155 写明 “The course requires an understanding of operating systems”"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS 155 要求 “a basic understanding of programming languages”，先修 CS110/CS111"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Stanford CS 155 的编程项目主要用 C 与 JavaScript；UC Berkeley CS 161 先修 COMPSCI 61C"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61B（数据结构）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61C（机器结构）"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（离散数学与概率论）"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（含离散概率）"
+  }
+ ],
+ "notes": "CS 155 没有单独把“网络课”列为先修，而是用 CS110/CS111（系统编程，含 socket/协议基础）+ 一句“requires an understanding of … networking protocols”表达，故 C.3.2 记为 supported（required 措辞）。备选免费资源：UC Berkeley CS 161 在线教材的 Network Security 部分 https://textbook.cs161.org/network/（已打开核实，目录含 TLS、DNS/DNSSEC、DoW/DoS、Firewalls、Intrusion Detection 等专章，比 CS155 的论文式阅读更系统、更适合 D2 入门；本节点把整本 CS161 给了 S.1.1，避免重复所以主资源选 CS155）。"
+}

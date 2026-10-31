@@ -1,0 +1,36 @@
+{
+ "id": "S.2.5",
+ "resource": {
+  "tier": "website",
+  "title": "ECE 4040/5040 Introduction to Hardware Security（University of Idaho，Fall 2026，Prof. Zain Ul Abideen；课程主页公开大纲、作业与评分）",
+  "url": "https://hsc-research.org/hwsec.html",
+  "lang": "en",
+  "free": true,
+  "covers": "课程目标与作业逐条对应节点内容：跨 design / fabrication / test / deployment / end-of-life 的硬件威胁与 IC 供应链（仿冒、逆向、硬件木马、logic locking 与 SAT 攻击、reconfigurable obfuscation）；威胁建模（资产、可信/不可信方、攻击者能力、安全目标）；PUF/TRNG/DRBG 等设备身份与密钥原语；时序/功耗侧信道分析与对策；故障注入建模、RTL/门级 fault campaign 与容错；scan 与 debug 接口暴露、Linux/内核层约束；以及安全验证（断言、信息流推理、等价性检查）。实践用 Verilog、真实硅 PUF 数据集、功耗轨迹与故障日志。注意：安全启动与固件更新只作为“secure hardware subsystem”的一部分，没有单独的 secure boot/firmware 章节。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Idaho",
+   "course": "ECE 4040/5040 Introduction to Hardware Security",
+   "url": "https://hsc-research.org/hwsec.html",
+   "prereq_text": "Students should have completed a digital-logic course such as ECE 2400 and should be able to read and write basic Verilog or SystemVerilog. ECE 4450 or equivalent RTL experience is recommended. Prior coursework in cryptography is not required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.3.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "H.1.2",
+   "kind": "required",
+   "evidence": "University of Idaho ECE 4040/5040 要求修过数字逻辑课（如 ECE 2400）并能读写 Verilog/SystemVerilog"
+  }
+ ],
+ "notes": "两点说明：(1) 该页用 python 直连会因自签证书报 SSL 错误，改用 tavily_extract 取到正文，内容已逐条核对；syllabus PDF 是 Canvas 内部链接，未公开。(2) 节点原图建议前置 H.3.2（嵌入式系统、驱动与 RTOS）在这门课上没有被要求（课程反而明确说“Prior coursework in cryptography is not required”，先修是数字逻辑/RTL），故判 not_mentioned，并补上 H.1.2。只有一门课程证据：两次 Tavily 搜索都没有找到带公开 syllabus 的 IoT/嵌入式安全课程主页。若需要补“安全启动 + 固件 + 供应链”这一块，可加 NIST SP 800-193《Platform Firmware Resiliency Guidelines》（https://csrc.nist.gov/pubs/sp/800/193/final ，已打开核实：讲 platform firmware 与数据在启动/更新/恢复过程中被破坏性攻击时的韧性与恢复）与 Bhunia & Tehranipoor《Hardware Security: A Hands-on Learning Approach》（该书列在本课程的 core references 中，未给链接）。"
+}

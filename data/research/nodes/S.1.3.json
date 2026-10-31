@@ -1,0 +1,38 @@
+{
+ "id": "S.1.3",
+ "resource": {
+  "tier": "website",
+  "title": "CS 355: Topics in Cryptography（Stanford，Spring 2026；schedule + lecture notes）",
+  "url": "https://cs355.stanford.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程简介明确覆盖 “basic proof techniques, zero knowledge, multiparty computation, elliptic-curve cryptography, cryptanalysis, privacy, and post-quantum cryptography”；schedule 逐讲列出：OWF/PRG/PRF、承诺方案、椭圆曲线与配对、交互式证明与零知识、Sigma 协议、Fiat-Shamir 与非交互化、多项式承诺、IOP、OT 与混淆电路、秘密分享、PIR、LWE 与 Regev 加密、全同态加密（FHE），以及对抗性密码分析与后量子方向——与本节点的可证明安全、零知识、MPC、同态加密、后量子五个主题一一对应。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 355 Topics in Cryptography",
+   "url": "https://cs355.stanford.edu/",
+   "prereq_text": "CS 255, or an equivalent introductory cryptography course.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "S.1.2"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 276 Graduate Cryptography",
+   "url": "https://crypto-berkeley.github.io/cs276-spring26/about/",
+   "prereq_text": "This course is designed for graduate students with basic familiary with cryptographic or sufficient mathematical maturity to catup with the material in class. Students without sufficient background should consider taking the Undergraduate Cryptogrphy Class CS 171.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "S.1.2": "supported"
+ },
+ "extra_prereqs": [],
+ "notes": "两门课都没有其它具名前置：Stanford CS355 只要求 CS 255 或等价的密码学入门课；Berkeley CS 276 的先修写得含糊（“basic familiarity with cryptographic … or sufficient mathematical maturity”），只建议背景不足者先修 CS 171，未列出具体课程，故 mapped_ids 为空、kind 记为 unspecified。CS276 Spring 2026 的课表确认包含可证明安全（OWF/PRG/PRF/MAC/AE 的定义与归约）与 Zero-Knowledge Proofs 一讲，但该学期未列 MPC/HE/PQC，故选 CS355 作主资源。"
+}

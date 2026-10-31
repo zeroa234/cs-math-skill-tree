@@ -870,5 +870,67 @@
   "P.5.3": "签名、溯源证明都在 CI/CD 流水线里实施。",
   "S.1.1": "供应链攻击属于威胁建模的范畴。",
   "_summary": "证据不足：找到的 CMU 17-313、Berkeley CS 169A 是通用软件工程课，并不专门讲供应链；按内容需要起草，待核实。"
+ },
+ "S.1.1": {
+  "P.1.1": "Berkeley CS 161 与 Stanford CS 155 都以编程课为先修；攻击面、输入校验这些原则要结合程序来理解。",
+  "C.2.1": "Stanford CS 155 要求懂操作系统；系统攻击与防护部分会用到。",
+  "C.3.2": "Stanford CS 155 要求懂网络协议；网络攻击部分会用到。",
+  "C.1.1": "Berkeley CS 161 要求 61C（机器结构）。",
+  "_summary": "Berkeley CS 161：先修 61B、61C、70；Stanford CS 155：要求懂操作系统、网络协议和编程语言。这两门是完整的安全课，本节点只取原则部分。"
+ },
+ "S.1.2": {
+  "M.5.3": "Berkeley CS 171 唯一的正式先修是 CS 70（离散数学），要用到模运算与归约证明。",
+  "M.6.1": "Berkeley CS 171 假定熟悉离散概率；Stanford CS 255 也说概率有帮助。安全定义全是概率表述。",
+  "M.3.5": "两门课都提到模运算；RSA、DH 用到的数论课内会讲，学过数论更轻松。",
+  "F.1.2": "Berkeley CS 171 要求接触过算法、熟悉大 O。",
+  "S.1.1": "密码学放在安全目标与威胁模型中理解更完整。",
+  "_summary": "Berkeley CS 171：先修 CS 70，要求离散概率与模运算；Stanford CS 255：自成体系，概率与模运算有帮助。"
+ },
+ "S.1.3": {
+  "S.1.2": "Stanford CS 355：先修 CS 255 或同等的密码学入门课。",
+  "M.3.4": "格、椭圆曲线、有限域上的构造要用抽象代数。",
+  "F.2.3": "可证明安全基于计算复杂性的困难性假设。",
+  "_summary": "Stanford CS 355 Topics in Cryptography：先修 CS 255；Berkeley CS 276 研究生密码学：要求密码学基础或足够的数学成熟度。"
+ },
+ "S.2.1": {
+  "C.2.1": "MIT 6.858 先修 6.033（操作系统与系统工程）；Berkeley CS 161 先修 61C。内存安全、权限、隔离都建立在操作系统机制上。",
+  "C.3.2": "MIT 6.033 含网络部分，系统安全会涉及网络服务。",
+  "S.1.1": "两门课都在课内讲安全原则。",
+  "_summary": "MIT 6.858 Computer Systems Security：先修 6.033；Berkeley CS 161：先修 61B、61C、70。"
+ },
+ "S.2.2": {
+  "C.3.2": "Stanford CS 155 要求懂网络协议；协议层攻击要先懂协议本身。",
+  "C.2.1": "Stanford CS 155：The course requires an understanding of operating systems。",
+  "S.1.1": "两门课都在课内讲安全原则。",
+  "S.1.2": "TLS、VPN 使用密码学原语。",
+  "_summary": "Stanford CS 155：操作系统 + 网络协议 + 编程；Berkeley CS 161：先修 61B、61C、70。"
+ },
+ "S.2.3": {
+  "C.3.2": "WUSTL CSE 571S（含无线网络安全两讲）先修 CSE 473S 计算机网络。",
+  "C.3.3": "无线链路和蜂窝网络的细节在无线网络课里讲。",
+  "S.2.2": "无线安全是网络安全的延伸。",
+  "P.5.2": "移动应用安全要懂移动开发。",
+  "S.1.1": "安全原则与威胁模型。",
+  "_summary": "WUSTL CSE 571S Network Security：先修 CSE 473S；Berkeley CS 161 含 802.11/WPA2 章节。"
+ },
+ "S.2.4": {
+  "C.2.3": "容器隔离、镜像、编排的安全以虚拟化和容器机制为基础。",
+  "C.4.2": "云服务模型与 IAM。",
+  "S.2.2": "云网络的分段与防护。",
+  "S.1.1": "共享责任模型下的威胁建模。",
+  "_summary": "证据不足：Berkeley CYBER 212 Cloud Security 只写了 MICS 学生专用，没有课程先修；资源是 Kubernetes 官方安全文档。按内容需要起草，待核实。"
+ },
+ "S.2.5": {
+  "H.2.1": "University of Idaho ECE 4040/5040 要求修过数字逻辑并能读写基础的 Verilog/SystemVerilog；课程以 RTL 实验为主。",
+  "H.3.2": "嵌入式与物联网部分要懂固件、驱动与启动流程。",
+  "S.1.1": "安全原则与威胁模型。",
+  "_summary": "University of Idaho ECE 4040/5040 Hardware Security（已用 curl 核实）：数字逻辑 + Verilog，RTL 经验推荐，明确不要求密码学背景。"
+ },
+ "S.3.1": {
+  "P.5.1": "Stanford CS 253 Web Security：CS 142 或同等的 Web 开发经验是先修。",
+  "S.1.1": "安全原则与威胁模型。",
+  "D.1.1": "SQL 注入要懂 SQL。",
+  "C.3.2": "HTTP、TLS、DNS 等协议知识。",
+  "_summary": "Stanford CS 253：先修 CS 142（Web 开发）；UW CSE 484：先修 CSE 332 + 351。"
  }
 }

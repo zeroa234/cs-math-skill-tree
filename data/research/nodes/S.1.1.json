@@ -1,0 +1,81 @@
+{
+ "id": "S.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "Computer Security（UC Berkeley CS 161 在线教材；David Wagner, Nicholas Weaver, Peyrin Kao 等，免费、CC BY-SA）",
+  "url": "https://textbook.cs161.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "第 1 部分“Security Principles”就是节点要的原理清单：威胁模型（1.1 Know your threat model：攻击者是谁、动机与资源）、人是系统的一环、安全经济学（风险与成本权衡）、纵深防御、最小权限、职责分离、完全中介、fail-safe defaults、TCB、TOCTTOU；第 5 章 5.6 节给出机密性/完整性/真实性的形式定义；第 14 章口令与 Web 部分的 Cookie/会话讲认证与授权边界；内存安全（2–4 章）讲攻击面如何形成、如何缓解。可作为 D1 入门主线读物。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "UC Berkeley",
+   "course": "CS 161 Computer Security",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+   "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1",
+    "P.2.2",
+    "M.5.3",
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 155 Computer and Network Security",
+   "url": "https://cs155.stanford.edu/info.html",
+   "prereq_text": "The course requires an understanding of operating systems, networking protocols, and a basic understanding of programming languages. Programming projects will be done primarily in C and JavaScript, but other languages may be needed. Pre-requisites: CS110/CS111 (Principles of Computer Systems)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.2.1",
+    "C.3.2",
+    "P.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61B（数据结构）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61C（机器结构）"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61C（C 语言与机器级编程）；Stanford CS 155 的编程项目主要用 C 与 JavaScript"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "Stanford CS 155 写明 “requires an understanding of operating systems”，先修课 CS110/CS111 即系统编程课"
+  },
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "Stanford CS 155 写明 “requires an understanding of ... networking protocols”"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（离散数学与概率论）"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（含离散概率）"
+  }
+ ],
+ "notes": "原图建议前置为“无”，故 candidate_check 为空对象；上表 extra_prereqs 是该节点两门真实课程写明的先修，供主代理判断入门层是否需要补基础。教材本身对“风险管理”的覆盖是“安全经济学”一节（成本收益/期望损失），没有专门的风险管理章节，故如需更完整的风险与威胁建模工程视角，可用 Ross Anderson《Security Engineering》第 3 版（作者页 https://www.cl.cam.ac.uk/~rja14/book.html，各章免费 PDF，已打开核实）作补充；本节点仍按优先级给了免费的网站型资源。Stanford CS 155 的先修原文出自 info.html（“Course overview”页），syllabus.html 只有周次与阅读材料。"
+}

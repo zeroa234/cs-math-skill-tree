@@ -1,0 +1,75 @@
+{
+ "id": "S.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "OWASP Mobile Application Security（MASVS / MASTG / MASWE，免费在线）",
+  "url": "https://mas.owasp.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "按 MASVS 域组织：移动平台与运行时（Android/iOS 架构、沙箱、权限模型、Root/Jailbreak 检测）、设备身份与凭据（Keystore/Keychain、生物识别、硬件支持的密钥与 attestation）、移动应用安全（存储、加密、网络通信与 TLS/证书固定、平台交互、代码质量与防篡改）、以及 MASWE 弱点分类与对应测试，适合把“移动平台 + 设备身份 + 移动应用”三块系统过一遍。注意：不含 802.11/蓝牙/蜂窝等无线协议细节（那部分见 notes 的补充链接）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Washington University in St. Louis",
+   "course": "CSE 571S Network Security",
+   "url": "https://www.cse.wustl.edu/~jain/cse571-14/index.html",
+   "prereq_text": "Prerequisites: CSE 473S (Introduction to Computer Networking) or equivalent.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.3.2"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 161 Computer Security",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS161/",
+   "prereq_text": "Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1",
+    "P.2.2",
+    "M.5.3",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.3.3": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "WUSTL CSE 571S 先修 CSE 473S（Introduction to Computer Networking），其课表含 Wireless Network Security Part 1/Part 2 两讲"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61B（其 Network Security 部分含 802.11/WPA2 一章）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61C"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 61C（C 语言与机器级编程）"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（离散数学与概率论）"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 161 先修 COMPSCI 70（含离散概率）"
+  }
+ ],
+ "notes": "难点说明：没有找到一门同时讲“无线协议 + 移动平台/应用”的免费大学课程网站（两次搜索与多次直接探测均未命中可公开访问的移动安全课程主页），所以主资源选了覆盖移动平台/设备身份/移动应用三块的 OWASP MAS；无线协议部分的补充（都已打开核实）：(1) UC Berkeley CS 161 教材第 28 章 WPA2 https://textbook.cs161.org/network/wpa.html（WiFi 背景、协议、攻击、WPA2-Enterprise 防御）；(2) WUSTL CSE 571S 的 Wireless Network Security Part 1/2 讲义；(3) NIST Mobile Threat Catalogue https://pages.nist.gov/mobile-threat-catalogue/（按 Application / Authentication / Cellular / LAN & PAN / Stack / Supply Chain 分类列出移动与无线威胁模型与对策）。两门课都没有把“无线/移动网络”课列为先修（只要求普通网络课或系统/数据结构基础），故 C.3.3 判 not_mentioned。"
+}
