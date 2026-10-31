@@ -1,0 +1,73 @@
+{
+ "id": "C.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.02 Introduction to EECS II: Digital Communication Systems（MIT OpenCourseWare，Fall 2012）",
+  "url": "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/",
+  "lang": "en",
+  "free": true,
+  "covers": "本科层次（OCW 标注 Level: Undergraduate）的数字通信课，按 bits / signals / packets 三层组织：比特层讲信源编码与压缩、信道编码与差错控制；信号层讲采样与频率域表示、调制与噪声；分组层讲链路共享与可靠传输。站点公开讲义幻灯、讲课视频、开放教材（Open Textbook）、9 次习题与考试，覆盖采样、调制、编码、复用与误码这些基础内容。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.02 Introduction to EECS II: Digital Communication Systems",
+   "url": "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/pages/syllabus/",
+   "prereq_text": "Prerequisites: 18.03, 6.01. The problem sets involve programming; they require knowledge of Python at the level of 6.00 or 6.01.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.2.1",
+    "H.1.1",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "CSE 461 Introduction to Computer Communication Networks",
+   "url": "https://courses.cs.washington.edu/courses/cse461/",
+   "prereq_text": "Prerequisite: either CSE 326 or CSE 332; either CSE 303 or CSE 333.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "MIT 6.02 先修 18.03（Differential Equations）"
+  },
+  {
+   "id": "H.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.02 先修 6.01（Introduction to EECS I，含电路与信号基础）"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.02 要求达到 6.00/6.01 水平的 Python 编程"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 461 要求 CSE 326 或 CSE 332（数据结构）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 461 要求 CSE 303 或 CSE 333（硬件/软件接口、机器级编程）"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "UW CSE 461 的 CSE 333 分支是 C/C++ 系统编程"
+  }
+ ],
+ "notes": "原图该节点没有建议前置，故 candidate_check 为空对象。UW CSE 461 的官方课程描述里明确写了 'Transmission media, encoding systems, switching, multiple access arbitration'，是少见的把物理层/信号与数据通信写进课程内容的本科网络课，所以用它做第二门证据课。6.01 按实际内容（电路、信号、Python 编程）映射到 H.1.1 与 P.1.1，主代理若要更严格可只保留 18.03 与 Python 两条。"
+}

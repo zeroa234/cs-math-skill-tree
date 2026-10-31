@@ -1,0 +1,63 @@
+{
+ "id": "C.5.1",
+ "resource": {
+  "tier": "website",
+  "title": "CMU 15-418/618 Parallel Computer Architecture and Programming（Fall 2026 课程主页）",
+  "url": "https://www.cs.cmu.edu/~418/",
+  "lang": "en",
+  "free": true,
+  "covers": "主页与 schedule 页公开逐讲 topic、slides 链接、作业与考试安排。已核实的讲次：Why Parallelism、Out-of-order 与多核处理器、Parallel Programming Models、Parallel Programming Basics、GPU Architecture and CUDA Programming、Performance Optimization I/II、Interconnection Networks、Snooping/Directory-Based Cache Coherence、Performance Analysis/Profiling、Implementing Synchronization、Fine-Grained Synchronization 与 Lock-Free Programming、Transactional Memory、Heterogeneous Parallelism、Memory Consistency、Parallel Deep Learning；配合 4 次作业与期末项目，要求学生自己并行化并调优代码，覆盖线程与任务、同步、性能剖析、数据划分与负载均衡。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-418/618 Parallel Computer Architecture and Programming",
+   "url": "https://www.cs.cmu.edu/~418/",
+   "prereq_text": "15-213 (Introduction to Computer Systems) is a strict prerequisite. ... You are expected to be a strong C/C++ programmer ... 18-447 (Introduction to Computer Architecture) is helpful, but not required. Previous experience with operating systems (15-410), distributed systems (15-440), or compilers (15-411) may also prove helpful.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS149 Parallel Computing",
+   "url": "https://gfxcourses.stanford.edu/cs149/fall25/courseinfo",
+   "prereq_text": "CS111: Operating Systems Principles is a strongly recommended prerequisite for CS149. If you have not taken CS111 and feel like you have the background to take CS149 ..., please contact your friendly instructors.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "C.2.1",
+    "C.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.2": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "CMU 15-418 写 '15-213 ... is a strict prerequisite'（内存层次、内存管理、基本网络）"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "CMU 15-418 要求“strong C/C++ programmer”；15-213 本身即 C 与机器级编程课"
+  },
+  {
+   "id": "C.1.2",
+   "kind": "recommended",
+   "evidence": "CMU 15-418：'18-447 (Introduction to Computer Architecture) is helpful, but not required'"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS149 把 CS111 Operating Systems Principles 列为 strongly recommended；CMU 15-418 说 15-410（OS）'may also prove helpful'"
+  }
+ ],
+ "notes": "C.2.2 记 recommended：CS149 把 CS111（操作系统原理，含线程与同步）写成 strongly recommended，15-418 只是说 OS/分布式/编译器等经历 “may prove helpful”，没有课程把“系统编程与并发同步”列为硬性先修（硬性的是 15-213，按约定映射到 C.1.1 + P.2.2，已计入 extra_prereqs）。两门课的 schedule 都核实过：15-418 有 Parallel Programming Models/Basics、Performance Analysis/Profiling、实现同步与 fine-grained sync、CUDA 等讲次；CS149 的日程逐条写明 ISPC 编程抽象、work stealing 调度 Cilk 程序、message passing 与流水线、以及 CUDA 作业。"
+}

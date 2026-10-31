@@ -1,0 +1,59 @@
+{
+ "id": "C.3.4",
+ "resource": {
+  "tier": "website",
+  "title": "Software-Defined Networks: A Systems Approach（Peterson, Cascone, O'Connor, Vachuska, Davie；免费在线教材站点）",
+  "url": "https://sdn.systemsapproach.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "免费在线书，章节为 Introduction（SDN 的定义与技术景观）、Use Cases（网络虚拟化、交换 fabric、WAN 流量工程、SD-WAN）、Basic Architecture（控制平面/数据平面与控制器接口）、Bare-Metal Switches 与 Switch OS（可编程转发、流水线、P4 式可编程解析/匹配动作）、Network OS 与 Leaf-Spine Fabric（配置与自动化）、Network Virtualization、Access Networks、Future of SDN，另附 Hands-on Programming 实验；覆盖控制/数据平面、配置与自动化、可编程转发，网络测量只在用例中间接涉及。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Waterloo",
+   "course": "CS 856 Programmable Networks",
+   "url": "https://mina.arashloo.net/courses/programmable_networks/w24.html",
+   "prereq_text": "Prerequisites: Familiarity with basic networking concepts such as different networking layers (e.g., data link, network, and transport layers), forwarding and routing, and common protocols (e.g., Ethernet, IP, UDP, TCP, HTTP, and DNS), through CS 456/656 or an equivalent course.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.3.2"
+   ]
+  },
+  {
+   "school": "Princeton University",
+   "course": "COS 461 Computer Networks（含 Lecture 19: Software-Defined Networking、网络测量单元）",
+   "url": "https://www.cs.princeton.edu/courses/archive/spring23/cos461/schedule.html",
+   "prereq_text": "Prerequisites: Students must have taken COS 217 and one of COS 316, COS 333, COS 318, COS 418, or COS 432 prior to enrolling in this course.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2",
+    "C.1.1",
+    "C.2.1",
+    "C.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.3.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Princeton COS 461 要求 COS 217（C/机器级编程的系统课）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "Princeton COS 461 要求 COS 217 或 COS 316/COS 318 等系统课"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "Princeton COS 461 的“one of COS 316/333/318/418/432”含操作系统与系统设计课（COS 316/318）"
+  }
+ ],
+ "notes": "Waterloo CS 856（w24）是专门讲可编程网络的研究生课，先修明确写“通过 CS 456/656 或等价课程具备基本网络概念”，CS 456 即 Computer Networks，故 C.3.2 判 supported。Princeton COS 461 的 schedule 页有 'Lecture 19: Software-Defined Networking' 与 network measurement 单元，可作为 SDN 教学的第二证据课，但它的先修里没有网络课（只有系统课），不改变 candidate 结论。伊利诺伊 ECE509/CS598HPN（High-speed and Programmable Networks）日程也系统讲 SDN/OpenFlow/P4，但其 syllabus 页未列先修要求，故未计入。"
+}

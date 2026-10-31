@@ -1,0 +1,66 @@
+{
+ "id": "C.4.1",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.5840 (6.824) Distributed Systems（课程主页，讲义/论文清单/lab）",
+  "url": "https://pdos.csail.mit.edu/6.824/",
+  "lang": "en",
+  "free": true,
+  "covers": "MIT 研究生分布式系统课，主页公开日程、阅读论文清单、5 个 lab（MapReduce、Raft、kvraft、分片 KV 等）、往年试题与讲义。主题按官方描述为 fault tolerance、replication 与 consistency，课程以分布式系统案例研究为主，正好覆盖时钟/顺序、复制、一致性、共识、容错与分布式调试（lab 里大量 race/断点式排错）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Washington",
+   "course": "CSE 452 Distributed Systems",
+   "url": "https://courses.cs.washington.edu/courses/cse452/",
+   "prereq_text": "Prerequisite: CSE 332 and CSE 333; recommended: CSE 451",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.2.2",
+    "C.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "MIT",
+   "course": "6.5840 (6.824) Distributed Systems",
+   "url": "https://pdos.csail.mit.edu/6.824/",
+   "prereq_text": "Prerequisites: 6.1910 (6.004) and one of 6.1800 (6.033) or 6.1810, or equivalent. Substantial programming experience will be helpful for the lab assignments.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "C.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.2": "supported",
+  "C.3.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 452 先修 CSE 332（数据结构与并行）"
+  },
+  {
+   "id": "C.2.2",
+   "kind": "required",
+   "evidence": "UW CSE 452 先修 CSE 333 Systems Programming（C/C++、并发与网络编程）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.5840 先修 6.1910/6.004（Computation Structures，机器结构）；UW CSE 333 亦含机器级内容"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "recommended",
+   "evidence": "UW CSE 452 写 'recommended: CSE 451'（操作系统）；MIT 6.5840 的 6.1800/6.1810 都是系统课程"
+  }
+ ],
+ "notes": "C.2.2 判 supported 依据 UW CSE 452 把 CSE 333（系统编程与并发同步，也是 C.2.2 节点的资源课）写成硬性先修。C.3.2 判 not_mentioned：CSE 452 与 MIT 6.5840 都没有要求先修网络课（6.033 里确有 internetworking 内容，但它按体系归到 C.2.1 的系统课，未据此把 C.3.2 记为 supported）。CMU 15-440/640 的先修只写“必须修过 15-213 且成绩 ≥ C，并熟练 C/Java on UNIX”（https://www.andrew.cmu.edu/course/15-440/ ，已核实），可作第三条旁证但未单列。"
+}

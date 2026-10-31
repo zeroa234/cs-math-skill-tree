@@ -1,0 +1,65 @@
+{
+ "id": "C.5.2",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford CS149 Parallel Computing（Fall 2025 课程主页：讲义、作业与 CUDA 项目）",
+  "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+  "lang": "en",
+  "free": true,
+  "covers": "主页公开完整日程、讲义页与作业说明。与 GPU 直接相关的部分：'GPU Architecture and CUDA Programming'（CUDA 编程抽象与其在现代 GPU 上的实现）、'Efficiently Evaluating DNNs on GPUs'、'Program Optimization 2: Locality and Communication'（提高算术强度、避免争用）、fine-grained synchronization 与内存一致性；作业 3 用 CUDA 写圆渲染器、作业 4 在加速器上做 fused Conv+MaxPool（算子融合）、作业 5 'Make the World's Fastest CUDA Kernels'，并要求用性能剖析与 roofline/带宽分析指导优化，正好覆盖核函数、访存、同步、算子融合、带宽与性能剖析。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS149 Parallel Computing",
+   "url": "https://gfxcourses.stanford.edu/cs149/fall25/courseinfo",
+   "prereq_text": "CS111: Operating Systems Principles is a strongly recommended prerequisite for CS149. ... Concepts we expect you to be familiar with: ... You should be familiar with reading, writing, and debugging C/C++ code (basic C++ features like classes, STL vector types) ... The idea that a compiled computer program is a sequence of machine instructions ... The motivation for a modern memory hierarchy and it's implementation via registers, on-chip caches, off-chip memory, persistent storage.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "C.2.1",
+    "C.2.2",
+    "C.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-418/618 Parallel Computer Architecture and Programming",
+   "url": "https://www.cs.cmu.edu/~418/",
+   "prereq_text": "15-213 (Introduction to Computer Systems) is a strict prerequisite. ... You are expected to be a strong C/C++ programmer ... 18-447 (Introduction to Computer Architecture) is helpful, but not required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.1.4": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Stanford CS149 明确“expect you to be familiar with reading, writing, and debugging C/C++ code”；CMU 15-418 要求 strong C/C++ programmer"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "CMU 15-418 写 '15-213 is a strict prerequisite'；CS149 也期望学生懂机器指令与内存层次"
+  },
+  {
+   "id": "C.1.2",
+   "kind": "recommended",
+   "evidence": "CMU 15-418：'18-447 (Introduction to Computer Architecture) is helpful, but not required'"
+  },
+  {
+   "id": "C.2.2",
+   "kind": "recommended",
+   "evidence": "Stanford CS149 把 CS111 Operating Systems Principles（含线程与同步）列为 strongly recommended prerequisite"
+  }
+ ],
+ "notes": "C.1.4 判 not_mentioned：两门课都把 GPU 架构与异构加速器当作课程内容来讲（CS149 有 GPU/CUDA 与 Trainium2 加速器作业，15-418 讲 GPU 与并行硬件），没有任何先修要求指向“GPU、加速器与异构系统”。CS149 的 CS111 先修按内容映射到 C.2.1（操作系统）与 C.2.2（并发同步），标为 recommended；若主代理认为 OS 课只应映射到 C.2.1，请把 C.2.2 一条删掉。"
+}

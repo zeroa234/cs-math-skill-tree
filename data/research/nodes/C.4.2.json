@@ -1,0 +1,66 @@
+{
+ "id": "C.4.2",
+ "resource": {
+  "tier": "website",
+  "title": "Cornell CS5412 Topics in Cloud Computing（Fall 2022，含逐讲 syllabus、阅读与课堂录像）",
+  "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页公开逐讲 syllabus（每讲有要点说明、必读论文与录像链接）。内容沿云平台展开：云的经济性与规模成本、数据中心硬件与容错、分片与数据放置、hypervisor 虚拟化（Xen）与容器、托管微服务与“弹性池”、函数服务器（serverless/function-as-a-service）、云上的复制与一致性问题、IoT/边缘接入，覆盖 IaaS/PaaS、弹性、编排/托管服务与成本模型；多租户只在按租户隔离与计价处提及。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Cornell University",
+   "course": "CS5412 Topics in Cloud Computing",
+   "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/FAQ.html",
+   "prereq_text": "CS5412 assumes that you have a solid background doing systems programming and are comfortable writing small amounts of code in C# or Python or a similar language ... CS4414 is an ideal [background], but some people would have taken operating systems, distributed systems, networking, database systems.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2",
+    "C.2.1",
+    "C.4.1"
+   ]
+  },
+  {
+   "school": "Tufts University",
+   "course": "CS 118 Cloud Computing",
+   "url": "https://www.cs.tufts.edu/comp/118/index.html",
+   "prereq_text": "For undergraduates: CS 40 (Machine Structure & Assembly Language Programming). Though not required, having taken CS 111 (Operating Systems), CS 112 (Networking), or CS 117 (Internet-scale distributed systems) will help significantly.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "C.2.1",
+    "C.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.4.1": "recommended",
+  "C.2.3": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Cornell CS5412 FAQ：假定有扎实的系统编程背景，能写 C#/Python 之类的小程序"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "Tufts CS 118 对本科生要求 CS 40（Machine Structure & Assembly Language Programming）"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "recommended",
+   "evidence": "Tufts CS 118：学过 CS 111 Operating Systems 会“help significantly”；Cornell CS5412 也把操作系统课列为可接受的背景来源"
+  },
+  {
+   "id": "C.4.1",
+   "kind": "recommended",
+   "evidence": "Tufts CS 118：CS 117 Internet-scale distributed systems 会“help significantly”；Cornell CS5412 把 distributed systems 列为可接受背景"
+  }
+ ],
+ "notes": "C.4.1 记 recommended 而不是 supported：两门课都只说“学过分布式系统有帮助/是常见背景之一”，没有写成硬性先修。C.2.3（虚拟化、容器与资源管理）判 not_mentioned：Cornell CS5412 与 Tufts CS 118 都把虚拟机和容器当作课程内容来讲（Tufts 有 'Virtual machines & containers' 两讲），不是先修要求。Cornell CS5412 的先修原文写在 FAQ.html（首页只有引导语），已核实。"
+}

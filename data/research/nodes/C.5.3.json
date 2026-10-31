@@ -1,0 +1,58 @@
+{
+ "id": "C.5.3",
+ "resource": {
+  "tier": "website",
+  "title": "High Performance Scientific Computing（Randall J. LeVeque, University of Washington，免费在线讲义）",
+  "url": "https://faculty.washington.edu/rjl/uwhpsc-coursera/",
+  "lang": "en",
+  "free": true,
+  "covers": "UW AMath 483/583 的公开讲义（Sphinx 站点，含目录、代码与作业）。技术主题为 Python/numpy 科学计算、Fortran 90/95、编译与优化、性能与 profiling、OpenMP 与 MPI 并行（含 Jacobi 迭代的 OpenMP/MPI 版本与计时）、版本控制与可复现的软件环境，应用章节给数值工作负载与并行求解的具体实现；通信优化、可扩展性与能耗只在并行章节中部分涉及。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Washington",
+   "course": "AMath 483/583 High Performance Scientific Computing",
+   "url": "https://faculty.washington.edu/rjl/classes/am583s2014/",
+   "prereq_text": "Recommended Background — Experience writing and debugging computer programs is required --- preferably experience with scientific, mathematical, or statistical computing applications. Many of the examples used in lectures and assignments will require this background. Past exposure to numerical analysis is a plus.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.2.3"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 267 Applications of Parallel Computers",
+   "url": "https://people.eecs.berkeley.edu/~demmel/cs267_Spr16/",
+   "prereq_text": "CS267 is intended to be useful for students from many departments and with different backgrounds, although we will assume reasonable programming skills in a conventional (non-parallel) language, as well as enough mathematical skills to understand the problems and algorithmic solutions presented.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.8.1": "recommended",
+  "C.5.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UW AMath 483/583 写 'Experience writing and debugging computer programs is required'；Berkeley CS267 假设 'reasonable programming skills in a conventional (non-parallel) language'"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "recommended",
+   "evidence": "UW AMath 483/583：'preferably experience with scientific, mathematical, or statistical computing applications'"
+  },
+  {
+   "id": "M.8.1",
+   "kind": "recommended",
+   "evidence": "UW AMath 483/583：'Past exposure to numerical analysis is a plus'"
+  }
+ ],
+ "notes": "M.8.1 记 recommended：UW AMath 483/583 只说“学过一点数值分析是加分”。C.5.1 记 not_mentioned：CS267 的原文反而明确假设学生只会“conventional (non-parallel) language”编程（即不要求先修并行编程），UW 那门课也没提并行先修；按“contradicted 需要课程明说不需要”的定义，这里只是没提，故不写 contradicted。资源用 LeVeque 的讲义而不是 CS267 主页，是因为讲义本身可系统阅读（Python/Fortran/OpenMP/MPI/应用/作业），CS267 主页只给日程与 slides 链接；CS267 用的是 2016 年版公开页面，仍然可访问。"
+}

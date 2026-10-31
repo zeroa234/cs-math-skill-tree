@@ -1,0 +1,66 @@
+{
+ "id": "C.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford CS 144: Introduction to Computer Networking（公开课程主页、讲义与 lab）",
+  "url": "https://cs144.github.io/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页公开讲义（slides + lecture notes PDF）、按周日程与 handout，主题依次是数据报与封装/复用、从不可靠到可靠传输、TCP（收/发端）、分组交换、拥塞控制（why/what/how）、路由入门；配套 8 个 checkpoint 的 lab 用 C++ 自己实现字节流、TCP receiver/sender 与拥塞窗口，正好对应链路/IP/TCP/UDP、路由、拥塞控制与应用协议这些内容。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Princeton University",
+   "course": "COS 461 Computer Networks",
+   "url": "https://www.cs.princeton.edu/courses/archive/spring23/cos461/",
+   "prereq_text": "Prerequisites: Students must have taken COS 217 and one of COS 316, COS 333, COS 318, COS 418, or COS 432 prior to enrolling in this course. Exceptions require explicit permission from the instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2",
+    "C.1.1",
+    "C.2.1",
+    "C.2.2"
+   ]
+  },
+  {
+   "school": "University of Washington",
+   "course": "CSE 461 Introduction to Computer Communication Networks",
+   "url": "https://courses.cs.washington.edu/courses/cse461/",
+   "prereq_text": "Prerequisite: either CSE 326 or CSE 332; either CSE 303 or CSE 333.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.3.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Princeton COS 461 要求 COS 217（C 与机器级编程的系统编程课）；UW CSE 461 要求 CSE 333"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "两门课都要求机器结构/系统课（COS 217、CSE 303 或 CSE 333）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 461 要求 CSE 326 或 CSE 332（数据结构）"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "Princeton COS 461 要求 COS 316/COS 318 等系统课之一（操作系统/系统设计），属“多选一”的强制集合"
+  }
+ ],
+ "notes": "CS 144 的公开页面没有列先修要求（只给 syllabus/logistics handout 与可选教材），所以只作为资源、不作为先修证据。Princeton COS 461 的先修是“COS 217 + 一组系统课之一”，映射后同时落 C.1.1/C.2.1/C.2.2；UW CSE 461 只要求数据结构 + 系统编程。两门教网络的课都没有要求先修“数据通信与信号”课，故 C.3.1 判 not_mentioned。"
+}

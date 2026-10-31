@@ -1,0 +1,76 @@
+{
+ "id": "C.4.3",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.852J / 18.437J Distributed Algorithms（MIT OpenCourseWare，Nancy Lynch，含完整讲义）",
+  "url": "https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/",
+  "lang": "en",
+  "free": true,
+  "covers": "以形式模型讲分布式算法的研究生课，OCW 公开完整讲义（Lecture Notes）、阅读清单、习题与考试。内容为同步/异步网络与共享内存模型、故障模型、互斥与资源分配、leader election、生成树、一致性（consensus）与 Byzantine agreement、原子广播与事务、下界与通信复杂度证明，正是“故障模型、线性化/一致性、共识可解性、可用性与通信复杂度”的范围。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.852J / 18.437J Distributed Algorithms",
+   "url": "https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/pages/syllabus/",
+   "prereq_text": "To take 6.852/18.437, you should have: \"Mathematical maturity.\" In particular, you should be very good at reading and writing mathematical proofs. General knowledge about some distributed systems. For instance, MIT's undergraduate course 6.033 Computer System Engineering would be good background. Experience with sequential algorithms and their analysis. MIT's undergraduate course 6.046J/18.410J Design and Analysis of Algorithms is sufficient. Experience with formal models of computation (desirable, but not essential).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "C.2.1",
+    "F.1.2",
+    "F.2.2"
+   ]
+  },
+  {
+   "school": "EPFL",
+   "course": "CS-451 Distributed Algorithms",
+   "url": "https://edu.epfl.ch/coursebook/en/distributed-algorithms-CS-451",
+   "prereq_text": "Learning Prerequisites — Required courses: Basics of Algorithms, networking and operating systems",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.3.2",
+    "C.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.4.1": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "MIT 6.852 要求 “Mathematical maturity”，明确要“very good at reading and writing mathematical proofs”"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "MIT 6.852 要求 6.046J 级别的算法设计与分析；EPFL CS-451 要求 algorithms 基础"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "EPFL CS-451 的 Required courses 明确含 operating systems；MIT 6.852 以 6.033 作为系统背景"
+  },
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "EPFL CS-451 的 Required courses 明确含 networking"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "EPFL CS-451 要求 algorithms 基础（可按数据结构/算法课映射）"
+  },
+  {
+   "id": "F.2.2",
+   "kind": "recommended",
+   "evidence": "MIT 6.852 写 'Experience with formal models of computation (desirable, but not essential)'"
+  }
+ ],
+ "notes": "C.4.1 判 recommended：MIT 6.852 原文只写 “General knowledge about some distributed systems … would be good background”，措辞是“有帮助的背景”而非硬性先修，且举例的 6.033 本身是系统课。EPFL CS-451 虽然讲 replication/consensus/atomic broadcast/2PC，但先修只列算法、网络与操作系统，没有把分布式系统课写进先修，因此不构成 supported。"
+}
