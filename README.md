@@ -1,7 +1,7 @@
 # CS × 数学技能树
 
 把 ChatGPT 生成的“知识星图”（`data/source/chatgpt-outputs/`，只读）重做成一棵**能按步骤点亮的技能树**：
-每个技能分清“必须前置”和“推荐前置”，必须前置没点亮就不能点亮下一个；每个技能配一个学习资源和一道练习题。
+每个技能分清“必须前置”和“推荐前置”，必须前置没点亮就不能点亮下一个；每个技能配英文学习资源和一道练习题；已为 166 个技能补充中文资源，未找到合适中文资料的节点会明确说明。
 
 ## 打开
 
@@ -15,7 +15,7 @@
 - 卡片状态：已点亮（暖色 + ✓）、现在能学（蓝框 + ⊕）、未解锁（灰 + 锁）。颜色之外都有图标，色弱也能分辨。
 - 平时只画领域内部的必须前置连线；用到其他领域前置的卡片，左上角有彩点（颜色就是那个领域）。选中一个技能时，高亮它的整条必须前置链（实线）、推荐前置（虚线）和它直接解锁的技能（绿线），其余卡片去掉颜色变成灰色（文字仍然清晰）。
 - 左栏“现在能学”按“学完能解锁的后续技能数”排序；选一条路线或“设为目标”后，左栏给出按顺序编号的学习清单，地图上也标出序号。
-- 详情面板：必须 / 推荐前置及理由、学什么、去哪学（网站 > 讲义资料 > 书）、练习题（答案折叠）、前置依据（真实课程的官方先修原文）。
+- 详情面板：必须 / 推荐前置及理由、学什么、去哪学（英文与中文资源分别展示，附访问条件和学习范围）、练习题（答案折叠）、前置依据（真实课程的官方先修原文）。
 
 ## 必须 / 推荐前置的判定规则
 
@@ -24,9 +24,10 @@
 - 每个技能的状态写在 `data/curation/prereqs.txt` 最后一列：`verified` = 已用课程证据核实；`draft` = 找不到可用的课程先修说明，按内容需要起草，页面上显示“前置待核实”。
 - 理由和证据摘要在 `data/curation/prereq-notes.json`；原始证据（课程名、官方先修原文、链接）在 `data/research/nodes/<id>.json`。
 
-## 当前完成度（2026-10-31）
+## 当前完成度（2026-11-01）
 
-- 201 个技能：前置已核实 191，学习资源 201，练习题 201。
+- 201 个技能：前置已核实 191，英文学习资源 201，中文资源 166，练习题 201。
+- “去哪学”已按可访问性、内容匹配和学习入口复核；修正了章节错配、停在大纲页、旧地址及付费标注。逐节点结论和中文缺口见 `docs/learning-resources-review.md`，检查快照见 `docs/learning-resources-link-check.json`。中文导读只覆盖部分主题时会明确注明。
 - 前置待核实（draft，10 个）：F.2.4、P.5.4、C.4.4、D.1.5、S.2.4、S.5.2、H.4.4、I.2.3、X.2.4、X.2.5。原因是没找到能用的课程先修说明，或者课程要求的是树外的专业课（如 GIS、医学）。
 - 入门层 D2 以上却没有必须前置的技能：H.2.3、H.4.3、V.2.3。这是有证据的：对应课程写明不需要先修，构建时的警告可以忽略。
 
@@ -37,6 +38,9 @@ data/source/chatgpt-outputs/knowledge-map-data.json   ChatGPT 原图（只读）
 data/curation/prereqs.txt                              必须 / 推荐前置（主代理维护）
 data/curation/prereq-notes.json                        每条前置的理由 + 证据摘要
 data/curation/names-en.tsv                             英文名
+data/curation/learning-resources.json                  学习资源审核、英文修正、中文来源目录与逐技能映射
+data/curation/learning-resources.json                  学习资源审核、英文修正、中文来源目录与逐技能映射
+data/curation/learning-resources.json                  学习资源审核、英文修正、中文来源目录与逐技能映射
 data/research/nodes/<id>.json                          审核过的检索结果：资源 + 课程先修证据
 data/exercises/*.json                                  每个技能一道练习题（答案已验算）
         │  node scripts/build.mjs   （检查环、算步骤、ELK 分层布局）
@@ -51,6 +55,12 @@ src/web/data.js         同上 + 布局坐标，页面直接加载
 |---|---|
 | `npm install` 后 `node scripts/build.mjs` | 重新生成 `src/web/data.js` 与 `output/skilltree.json`；前置有环、ID 写错、卡片重叠都会直接报错 |
 | `scripts/make_research_batches.py` | 把技能切成检索批次 `temp/research/batches/batch-XXy.md` |
+| `python -X utf8 scripts/audit_resources.py` | 对构建后的中英文学习资源做 HTTP 检查，临时结果写入 `temp/resource-audit/final-links.json`；HTTP 200 不等于内容合适，需结合人工审核 |
+| `node tests/resources.mjs` | 遍历 201 个详情面板核对真实链接，验证桌面/手机展示、费用标签、中文缺口和回退行为 |
+| `python -X utf8 scripts/audit_resources.py` | 对构建后的中英文学习资源做 HTTP 检查，临时结果写入 `temp/resource-audit/final-links.json`；HTTP 200 不等于内容合适，需结合人工审核 |
+| `node tests/resources.mjs` | 遍历 201 个详情面板核对真实链接，验证桌面/手机展示、费用标签、中文缺口和回退行为 |
+| `python -X utf8 scripts/audit_resources.py` | 对构建后的中英文学习资源做 HTTP 检查，临时结果写入 `temp/resource-audit/final-links.json`；HTTP 200 不等于内容合适，需结合人工审核 |
+| `node tests/resources.mjs` | 遍历 201 个详情面板核对真实链接，验证桌面/手机展示、费用标签、中文缺口和回退行为 |
 | `scripts/research_tool.py fetch <url>` | 打开网页并缓存（免费）；pi 检索时用它核实每个链接 |
 | `scripts/research_digest.py <id前缀>` | 把 pi 的检索结果压成几行摘要，供主代理判定前置 |
 | `scripts/set_prereqs.py <decisions.json>` | 把一批判定写回 `prereqs.txt` 和 `prereq-notes.json` |
@@ -60,6 +70,24 @@ src/web/data.js         同上 + 布局坐标，页面直接加载
 | `node tests/a11y.mjs [report.json]` | axe-core 按 WCAG 2.2 AA 审计 12 个界面状态，并跑一遍纯键盘的主流程；结论见 `docs/hci-ux-review.md` |
 
 截图和 pip 安装时把 `TEMP`/`TMP` 指到项目的 `temp/`，避免写 C 盘。验算练习题用的 sympy / numpy / scipy 装在 `temp/pylib`（`PYTHONPATH=temp/pylib`）。
+
+## 学习资源维护
+
+`data/research/nodes/` 保留原始课程和先修证据；新增或修正学习资源写入 `data/curation/learning-resources.json`，构建时只覆盖学习资源字段。`chineseCatalog` 存真实来源，`chinese` 为每个技能指定来源和阅读范围，`chineseGaps` 记录尚未核实到合适中文资源的节点。不要直接编辑生成的 `src/web/data.js`。
+
+优先选可以直接学习的中文课程、在线教材和官方教程；中文界面不代表正文或录像为中文。MOOC、书籍或云平台要区分公开介绍、注册后学习、收费证书/全文和实际服务费用。只提供导读或部分分支时，在 `covers` 中说明边界。早期检索说明中“中文默认 null”的要求只描述当时任务，当前中文覆盖以此文件为准。
+
+## 学习资源维护
+
+`data/research/nodes/` 保留原始课程和先修证据；新增或修正学习资源写入 `data/curation/learning-resources.json`，构建时只覆盖学习资源字段。`chineseCatalog` 存真实来源，`chinese` 为每个技能指定来源和阅读范围，`chineseGaps` 记录尚未核实到合适中文资源的节点。不要直接编辑生成的 `src/web/data.js`。
+
+优先选可以直接学习的中文课程、在线教材和官方教程；中文界面不代表正文或录像为中文。MOOC、书籍或云平台要区分公开介绍、注册后学习、收费证书/全文和实际服务费用。只提供导读或部分分支时，在 `covers` 中说明边界。早期检索说明中“中文默认 null”的要求只描述当时任务，当前中文覆盖以此文件为准。
+
+## 学习资源维护
+
+`data/research/nodes/` 保留原始课程和先修证据；新增或修正学习资源写入 `data/curation/learning-resources.json`，构建时只覆盖学习资源字段。`chineseCatalog` 存真实来源，`chinese` 为每个技能指定来源和阅读范围，`chineseGaps` 记录尚未核实到合适中文资源的节点。不要直接编辑生成的 `src/web/data.js`。
+
+优先选可以直接学习的中文课程、在线教材和官方教程；中文界面不代表正文或录像为中文。MOOC、书籍或云平台要区分公开介绍、注册后学习、收费证书/全文和实际服务费用。只提供导读或部分分支时，在 `covers` 中说明边界。早期检索说明中“中文默认 null”的要求只描述当时任务，当前中文覆盖以此文件为准。
 
 ## 检索流程（给接手的代理）
 

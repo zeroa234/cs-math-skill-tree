@@ -389,6 +389,20 @@
       : esc(p).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\n/g, "<br>")).join("");
   }
 
+  function resourceCard(res, label) {
+    if (!res) return null;
+    const cost = res.free === true ? "免费" : res.free === false ? "付费 / 部分免费" : "访问条件见说明";
+    return el("div", { class: "res" },
+      el("h4", { class: "res-heading" }, label),
+      el("span", { class: "res-tier" }, `${TIER_TEXT[res.tier] || res.tier} · ${cost}`),
+      el("a", { href: res.url, target: "_blank", rel: "noopener noreferrer" }, res.title),
+      res.access ? el("span", { class: "res-access" }, res.access) : null,
+      res.covers || res.note ? el("details", { class: "res-details" },
+        el("summary", {}, "学习范围与建议"),
+        res.covers ? el("p", { class: "res-covers" }, res.covers) : null,
+        res.note ? el("p", { class: "res-covers" }, res.note) : null) : null);
+  }
+
   function renderPanel(id, opts = {}) {
     const s = SK.get(id);
     const st = status(id);
@@ -470,16 +484,14 @@
       el("p", {}, s.desc),
       ms.length ? el("ul", { class: "milestones" }, ms.map(([lv, g]) => el("li", {}, el("b", {}, `D${lv}：`), g))) : null));
 
-    // resource
-    const res = s.resource;
-    kids.push(el("section", { class: "p-sec" },
+    // Learning resources share the same presentation so Chinese materials are easy to find.
+    kids.push(el("section", { class: "p-sec learning-resources" },
       el("h3", {}, "去哪学"),
-      res ? el("div", { class: "res" },
-        el("span", { class: "res-tier" }, `${TIER_TEXT[res.tier] || res.tier}${res.free === false ? " · 付费" : " · 免费"}${res.lang === "zh" ? " · 中文" : " · 英文"}`),
-        el("a", { href: res.url, target: "_blank", rel: "noopener" }, res.title),
-        res.covers ? el("span", { class: "res-covers" }, res.covers) : null,
-        s.zhAlt ? el("span", { class: "res-covers" }, "中文备选：", el("a", { href: s.zhAlt.url, target: "_blank", rel: "noopener" }, s.zhAlt.title)) : null)
-        : el("p", { class: "pending" }, "暂无核实过的学习资源。")));
+      el("div", { class: "res-list" },
+        resourceCard(s.resource, s.resource?.lang === "zh" ? "中文资源" : "英文资源"),
+        resourceCard(s.zhAlt, "中文资源")),
+      !s.resource && !s.zhAlt ? el("p", { class: "pending" }, "暂无核实过的学习资源。") : null,
+      !s.zhAlt && s.resource?.lang !== "zh" ? el("p", { class: "pending" }, s.zhResourceNote || "暂未找到并核实适合本节点的中文资源。") : null));
 
     // exercise
     const ex = s.exercise;
