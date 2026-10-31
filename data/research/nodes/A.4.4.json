@@ -1,0 +1,51 @@
+{
+ "id": "A.4.4",
+ "resource": {
+  "tier": "website",
+  "title": "Multi-Agent Reinforcement Learning: Foundations and Modern Approaches（Albrecht/Christianos/Schäfer，MIT Press 2024，免费 PDF + slides + 代码）",
+  "url": "https://marl-book.com/",
+  "lang": "en",
+  "free": true,
+  "covers": "MIT Press 2024 教材官网，PDF 免费下载，章 1-9 的 lecture slides（PDF + LaTeX 源）与 Python 代码库也公开。目录：1 Introduction；Part 1（2 Reinforcement Learning、3 Games: Models of Multi-Agent Interaction、4 Solution Concepts for Games、5 MARL in Games: First Steps and Challenges、6 MARL: Foundational Algorithms）；Part 2（7 Deep Learning、8 Deep Reinforcement Learning、9 Multi-Agent Deep RL、10 Multi-Agent Deep RL in Practice、11 Multi-Agent Environments）。正好覆盖节点里的「协作与博弈」：多智能体交互的博弈模型、均衡等解概念、合作/竞争场景下的学习算法与实践。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "10-747 Neuro-Symbolic AI (Fall 2025)",
+   "url": "https://www.cs.cmu.edu/~pradeepr/747/",
+   "prereq_text": "Prerequisites: Basics of probability and statistical inference, and basics of machine learning (such as regression, classification, clustering). This course is for students who have already taken introductory courses in machine learning and statistics.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2",
+    "A.2.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "80-516/80-816 Causality and Machine Learning (Spring 2025)",
+   "url": "https://www.andrew.cmu.edu/course/80-516/",
+   "prereq_text": "Prerequisites are not required, but introductory statistics or machine learning would be helpful.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.6.2",
+    "A.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "A.2.1",
+   "kind": "required",
+   "evidence": "CMU 10-747 'This course is for students who have already taken introductory courses in machine learning and statistics'。"
+  },
+  {
+   "id": "M.6.2",
+   "kind": "required",
+   "evidence": "CMU 10-747 'Basics of probability and statistical inference'；CMU 80-516 说 'introductory statistics or machine learning would be helpful'。"
+  }
+ ],
+ "notes": "原图对本节点没给建议前置（candidate_check 为空）。证据显示两个子方向的门槛都在机器学习/统计：CMU 10-747 明说要上过 ML 与统计导论；CMU 80-516 说统计或机器学习「有帮助」但不是必需。资源只覆盖三分之一的主题，这点必须说清楚：marl-book 解决「协作与博弈」，但「因果表征」和「神经符号」它不讲。补充（均已打开核实）：因果方向用 Brady Neal 的免费在线课程 Introduction to Causal Inference（https://www.bradyneal.com/causal-inference-course ，原文 'There is one main prerequisite: basic probability'，含免费书稿与 slides）或 CMU 80-516；神经符号方向用 CMU 10-747（半天讲课 + 半天学生读 paper 的研讨课，讲稿/课表公开）。若只能给一个资源，marl-book 是三者中唯一成体系、免费、带代码与 slides 的完整教材，且节点首个关键词就是多智能体协作与博弈。另：marl-book 第 2 章自带 RL 基础，所以不要求 A.2.4（强化学习）作先修——它把 RL 讲在书里。 另：marl-book 前言自述读者前提 'Readers are assumed to have an undergraduate background in basic mathematics and a basic familiarity with programming to use the codebase.'（这是书的前言，不是课程先修声明，所以没写进 extra_prereqs）。"
+}

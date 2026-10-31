@@ -1,0 +1,76 @@
+{
+ "id": "A.4.2",
+ "resource": {
+  "tier": "website",
+  "title": "CIS 4270/5270 Trustworthy Machine Learning（UPenn，Spring 2026，slides 公开）",
+  "url": "https://cis5270.engineering.upenn.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页 + 详细课表（每讲带公开 slides，https://cis5270.engineering.upenn.edu/schedule.html ）：Adversarial Robustness、Jailbreaking LLMs、Robust Training、Formal Methods for Robustness Verification、Label Shift、Covariate Shift、Conformal Prediction、Calibrated Prediction、Uncertainty Quantification for LLMs、Explainability（SHAP、counterfactual / concept-based、data attribution）、RLHF 与 DPO、Neurosymbolic Learning。覆盖节点的鲁棒性与分布偏移、校准/不确定性量化、解释（可解释性）这几块的分析与测量方法。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Pennsylvania",
+   "course": "CIS 4270/5270 Trustworthy Machine Learning",
+   "url": "https://cis5270.engineering.upenn.edu/",
+   "prereq_text": "prerequisites: The main prerequisite is either CIS 5200 (Machine Learning), or CIS 4190/5190 (Applied Machine Learning) AND CIS 3333 (Mathematics of Machine Learning). The course requires both mathematical maturity, including experience with mathematical proofs, and familiarity with machine learning libraries. It is appropriate for students who wish to pursue research in machine learning.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "A.2.1",
+    "A.2.2",
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "Boise State University",
+   "course": "CS 4727/5727 Adversarial Machine Learning",
+   "url": "https://www.idahofallshighered.org/vakanski/Courses/Adversarial_Machine_Learning.html",
+   "prereq_text": "Prerequisites: CS 2120 Practical Python, or CS 4771 Python for Machine Learning, or Instructor Permission. Students are expected to have a basic understanding of linear algebra, probability and statistics, and machine learning concepts. Familiarity with neural networks and deep learning is recommended, but not required. A working knowledge of Python programming is required to complete the course.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.3",
+    "M.3.1",
+    "M.6.1",
+    "A.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "Penn CIS 4270/5270 原文 'The course requires both mathematical maturity, including experience with mathematical proofs'（需要证明方法/离散数学训练）。"
+  },
+  {
+   "id": "A.2.2",
+   "kind": "required",
+   "evidence": "Penn CIS 4270/5270 把 CIS 3333 'Mathematics of Machine Learning' 作为另一条必修线（泛化/学习理论取向）。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "Boise CS 4727/5727 'A working knowledge of Python programming is required to complete the course'。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Boise CS 4727/5727 'basic understanding of linear algebra, probability and statistics, and machine learning concepts'。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "同上（probability and statistics）。"
+  },
+  {
+   "id": "A.2.3",
+   "kind": "recommended",
+   "evidence": "Boise CS 4727/5727 'Familiarity with neural networks and deep learning is recommended, but not required'。"
+  }
+ ],
+ "notes": "A.2.1 记 supported：Penn 的主先修就是一门 ML 课（CIS 5200 或 CIS 4190/5190 + CIS 3333），Boise 也要求 'basic understanding of ... machine learning concepts'。注意覆盖缺口：节点简介还包含「公平」与「隐私」，Penn 这门课表里没有 fairness/privacy 专讲（只在课程描述里提到 'fair and ethical manner' 是动机之一），Boise 那门课则有 Privacy Attacks and Defenses、Bias and Fairness in Machine Learning 两讲（同一页面 topics 列表，已核实）。公平方向的系统免费资料推荐 Fairness and Machine Learning（Barocas/Hardt/Narayanan，MIT Press，全文免费在线：https://fairmlbook.org/ ，已打开核实，含 classification 判据、因果、US 反歧视法、歧视测量、数据集几章）。所以本节点建议「Penn 的 slides 学鲁棒性/校准/解释 + fairmlbook 学公平 + Boise 那两讲补隐私」，单个资源都覆盖不全。另：Penn 这门课面向想读 paper 的学生（原文 'appropriate for students who wish to pursue research in machine learning'），比 D2 入门层高一档。"
+}

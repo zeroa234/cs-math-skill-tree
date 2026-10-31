@@ -1,0 +1,77 @@
+{
+ "id": "A.3.4",
+ "resource": {
+  "tier": "website",
+  "title": "CSE 158/258 Web Mining and Recommender Systems（Julian McAuley, UC San Diego）",
+  "url": "https://cseweb.ucsd.edu/classes/fa26/cse258-001/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页免费放出 slides、notebook、数据集与 YouTube 录播（讲师页 https://cseweb.ucsd.edu/~jmcauley/ 上也挂着往季版本）。课表：监督学习（回归、分类）→ 推荐系统（协同过滤、矩阵分解，对应 PML 教材 ch.4-5）→ 时序与序列数据建模（ch.7）→ 文本挖掘（ch.8）→ 推荐系统中的内容与结构（ch.6）；作业与项目要求对模型做排序/评测。课程用书 Personalized Machine Learning 草稿 PDF 也免费开放。覆盖节点的召回/排序（评分预测与排序任务）、协同过滤、上下文（内容与结构信息）与离线评测。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "UC San Diego",
+   "course": "CSE 258 Web Mining and Recommender Systems（与 CSE 158 / MGTA 461 / DSC 256 同开）",
+   "url": "https://cseweb.ucsd.edu/classes/fa26/cse258-001/",
+   "prereq_text": "No previous background in machine learning is required, but all participants should be comfortable with programming (all example code will be in Python), and with basic optimization and linear algebra.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.3",
+    "M.7.1",
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 246 Mining Massive Data Sets",
+   "url": "https://web.stanford.edu/class/cs246/",
+   "prereq_text": "Prerequisites — Students are expected to have the following background: Knowledge of basic computer science principles and skills, at a level sufficient to write a reasonably non-trivial computer program (e.g., CS107 or CS145 or equivalent are recommended). Good knowledge of Java and Python will be extremely helpful since most assignments will require the use of Spark. Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary). Familiarity with algorithmic analysis (e.g., CS 161 would be much more than necessary).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2",
+    "P.2.1",
+    "P.2.3",
+    "M.6.1",
+    "F.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.1": "contradicted"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "CSE 258 原文 'all participants should be comfortable with programming (all example code will be in Python)'；CS 246 'Good knowledge of Java and Python'。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CSE 258 原文 'comfortable with ... basic optimization and linear algebra'。"
+  },
+  {
+   "id": "M.7.1",
+   "kind": "required",
+   "evidence": "同上（basic optimization，对应矩阵分解/梯度类方法的建模基础）。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "recommended",
+   "evidence": "CS 246 'Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary)'。"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "recommended",
+   "evidence": "CS 246 'Familiarity with algorithmic analysis (e.g., CS 161 would be much more than necessary)'。"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "recommended",
+   "evidence": "CS 246 原文把 'CS107' 列为 'recommended'（CS107 是用 C 的系统编程课）。"
+  }
+ ],
+ "notes": "A.2.1 记 contradicted，但需要区分层次：UCSD CSE 258 首页原文明写 'No previous background in machine learning is required'，Stanford CS 246（也讲 Recommendation Systems：课程 topics 与课表 'Recommender Systems I' 都列出）同样不要求机器学习课，只要求编程 + 概率。所以对「入门级推荐系统」来说 A.2.1 不是先修，原图这条边偏保守。但节点简介里的后半段（反馈偏差、多目标、在线实验）属于 D3/D4 内容，那部分确实建立在监督学习与评估方法之上（CSE 258 课表里监督学习回归/分类排在最前面，相当于课内补）。资源选 CSE 258 而不是 Coursera 上明尼苏达那套推荐系统专项：课程主页免费、有录播和教材草稿、且把「协同过滤→排序评估→内容与结构」串起来；注意该 URL 是当季地址（fa26），长期入口是讲师页 https://cseweb.ucsd.edu/~jmcauley/ （已核实会指向最新一季）。"
+}

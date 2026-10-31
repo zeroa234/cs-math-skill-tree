@@ -1,0 +1,77 @@
+{
+ "id": "A.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Speech and Language Processing (3rd ed. draft) — Jurafsky & Martin 免费在线教材",
+  "url": "https://web.stanford.edu/~jurafsky/slp3/",
+  "lang": "en",
+  "free": true,
+  "covers": "作者按章免费放出的 3 版草稿（含幻灯片），可逐章在浏览器里系统学 NLP：第 2 章 Words and Tokens（分词/文本表示）、第 3 章 n-gram 语言模型、第 4 章逻辑回归与文本分类、第 5 章 Embeddings、第 6-7 章神经网络与 Transformer/预训练、第 8 章后训练、第 9 章掩码语言模型、第 11 章信息检索与 RAG、第 13 章机器翻译、第 14 章 RNN/LSTM、第 18 章序列标注（词性、命名实体）、第 19-20 章 CFG 与依存句法分析、第 21 章信息抽取（关系、事件、时间）、第 22 章语义角色、第 24 章共指与实体链接、第 25-26 章篇章与会话。正好覆盖节点的文本表示、语言建模、结构预测、信息抽取、检索与语言评测（各章附带评测指标与基准讨论）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 224N Natural Language Processing with Deep Learning",
+   "url": "https://web.stanford.edu/class/cs224n/",
+   "prereq_text": "Prerequisites: Proficiency in Python / College Calculus, Linear Algebra (e.g. MATH 51, CME 100) / Basic Probability and Statistics (e.g. CS 109 or equivalent) / Foundations of Machine Learning (e.g. CS221, CS229, CS230, or CS124). We will be formulating cost functions, taking derivatives and performing optimization with gradient descent. If you already have basic machine learning and/or deep learning knowledge, the course will be easier; however it is possible to take CS224N without it.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.3",
+    "M.1.4.1",
+    "M.3.1",
+    "M.6.1",
+    "A.2.1"
+   ]
+  },
+  {
+   "school": "University of Toronto",
+   "course": "CSC485H1 Computational Linguistics",
+   "url": "https://artsci.calendar.utoronto.ca/course/csc485h1",
+   "prereq_text": "Prerequisite: CSC209H1/ CSC209H5/ CSCB09H3; STA237H1/ STA247H1/ STA255H1/ STA257H1 ... Recommended Preparation: CSC311H1, CSC324H1/ CSC384H1",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2",
+    "M.6.2",
+    "A.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "Stanford CS224N 第一条：'Proficiency in Python'，作业全部用 Python/NumPy/PyTorch。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CS224N 要求 'College Calculus, Linear Algebra (e.g. MATH 51, CME 100)' 并能读矩阵/向量记号。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "CS224N 原文 'You should be comfortable taking (multivariable) derivatives'。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "CS224N 要求 'Basic Probability and Statistics (e.g. CS 109 or equivalent)'。"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "U of T CSC485 必修 CSC209（Software Tools and Systems Programming，用 C 做系统编程）。"
+  },
+  {
+   "id": "M.6.2",
+   "kind": "required",
+   "evidence": "U of T CSC485 必修 STA237/247/255/257 统计课。"
+  }
+ ],
+ "notes": "A.2.1 记 supported 但要看语气：CS224N 把 'Foundations of Machine Learning (CS221/CS229/CS230/CS124)' 列在 Prerequisites 里，却紧接着写 'it is possible to take CS224N without it'；U of T CSC485（本科计算语言学）只把 CSC311（机器学习导论）放在 Recommended Preparation。两门课都不把 ML 当作硬门槛，所以原图把 A.2.1 当前置方向正确、强度偏保守。资源选 Jurafsky & Martin 的免费在线书而不是 CS224N 的公开课：SLP3 是逐章教材，覆盖文本表示→语言模型→句法/信息抽取→检索与评测的完整脉络，且不要求深度学习基础；CS224N 偏神经 NLP，适合作为 A.3.1 之后的进阶。SLP3 里第 15-17 章讲语音（发音学、ASR、TTS），与 A.3.3 有重叠，A.3.3 已另选资源避免重复。"
+}

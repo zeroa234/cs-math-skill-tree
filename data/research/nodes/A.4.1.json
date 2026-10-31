@@ -1,0 +1,66 @@
+{
+ "id": "A.4.1",
+ "resource": {
+  "tier": "website",
+  "title": "MLOps Course — Made With ML（Goku Mohandas，免费课程站）",
+  "url": "https://madewithml.com/courses/mlops/",
+  "lang": "en",
+  "free": true,
+  "covers": "按工程阶段组织的免费 MLOps 课程，可边读边跑代码：Design（Setup / Product / Systems）、Data（Preparation / Exploration / Preprocessing / Distributed）、Model（Training / Tracking / Tuning / Evaluation / Serving）、Develop（Scripting / Pre-commit / Testing）、Reproducibility（Versioning）、Production（Jobs & Services / CI/CD workflows / Monitoring / Data engineering）。对应节点的数据与模型版本（Versioning）、训练管线（Training + Jobs & Services）、部署与服务（Serving）、CI/CD 与监测（Monitoring）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "17-445/17-645/17-745 Machine Learning in Production (Fall 2026, MLiP)",
+   "url": "https://mlip-cmu.github.io/f2026/",
+   "prereq_text": "This Fall 2026 offering is designed for students with some data science and GenAI experience (e.g., has taken a machine learning course, has used sklearn and LLMs) and basic programming skills (e.g., basic Python programming with libraries, can navigate a Unix shell), but will not expect a software engineering background (i.e., experience with testing, requirements, architecture, process, or teams is not required).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "A.2.1",
+    "P.2.3",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 329S Machine Learning Systems Design",
+   "url": "https://stanford-cs329s.github.io/",
+   "prereq_text": "Prerequisites — Students are expected to have the following background: Knowledge of basic computer science principles and skills, at a level sufficient to write a reasonably non-trivial computer program (e.g., CS106B/X or equivalent). Good understanding of machine learning algorithms (e.g. at least one of CS229, CS230, CS231N, CS224N or equivalent). Familiar with at least one framework such as TensorFlow, PyTorch, JAX. Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "A.2.1",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.1": "supported",
+  "P.5.3": "contradicted"
+ },
+ "extra_prereqs": [
+  {
+   "id": "A.2.1",
+   "kind": "required",
+   "evidence": "CMU 17-445 'has taken a machine learning course'；Stanford CS 329S 'Good understanding of machine learning algorithms (e.g. at least one of CS229, CS230, CS231N, CS224N or equivalent)'。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "CMU 17-445 'basic programming skills (e.g., basic Python programming with libraries, can navigate a Unix shell)'。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS 329S 要求能 'write a reasonably non-trivial computer program (e.g., CS106B/X or equivalent)'。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS 329S 'Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary)'。"
+  }
+ ],
+ "notes": "P.5.3 记 contradicted：CMU 17-445 原文明写 'will not expect a software engineering background (i.e., experience with testing, requirements, architecture, process, or teams is not required)'——课程把 CI/CD、测试、监控当成课内内容教（mlip 站上另有公开教材），所以原图把 DevOps/持续交付列为先修是「有帮助但非必需」。A.2.1 记 supported：两门课都把机器学习课当门槛（CS329S 用 'Good understanding of machine learning algorithms' 表述）。资源选 Made With ML 而不是 CMU mlip：前者是手把手把一个模型做到部署+监控的实操课（含版本、管线、CI/CD、监测），后者偏「系统与风险」的课程/教材，两者互补；mlip 的免费教材也在 https://mlip-cmu.github.io/ 上（已核实）。注意：madewithml 的目录里没有单列「特征服务/feature store」章节（只有 Data 阶段的特征工程与 Serving），节点里的特征服务需要另找 Feast 之类文档补，本次未核实。"
+}
