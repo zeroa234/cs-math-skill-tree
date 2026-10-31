@@ -6,12 +6,14 @@
 ## 打开
 
 双击 `src/web/index.html`（不需要联网，不需要构建）。进度保存在浏览器的 localStorage 里，可在“进度 ▾”导出 / 导入 JSON。
+每个视图都有自己的地址，可以收藏或分享：`#overview` 总览，`#map/<领域>` 某个领域的地图，`#skill/<id>` 某个技能。
 
 ## 怎么读这张图
 
-- 每条横向泳道是一个领域（数学拆成三条）。横轴“第 N 步” = 前面最长有 N−1 层必须前置。第 1 步的技能没有必须前置，是起点。
+- **领域总览（首页）**：每块是一个领域，块里的小方块是它的技能（按步骤从左到右排列，和地图一致）。连线表示右边领域的技能用到了左边领域的必须前置，线越粗条数越多。领域的列位置由 ELK 按领域间依赖的最长链排出，第 1 列可以直接开始。每块上写着进度、状态、“下一步”（这个领域现在最值得学的技能）或“先学：…”。点一块进入它的技能地图；Esc 或浏览器后退键返回总览。
+- **技能地图**：每条横向泳道是一个领域（数学拆成三条）。横轴“第 N 步” = 前面最长有 N−1 层必须前置。第 1 步的技能没有必须前置，是起点。
 - 卡片状态：已点亮（暖色 + ✓）、现在能学（蓝框 + ⊕）、未解锁（灰 + 锁）。颜色之外都有图标，色弱也能分辨。
-- 平时只淡淡画出必须前置连线；选中一个技能时，高亮它的整条必须前置链（实线）、推荐前置（虚线）和它直接解锁的技能（绿线），其余变暗。
+- 平时只画领域内部的必须前置连线；用到其他领域前置的卡片，左上角有彩点（颜色就是那个领域）。选中一个技能时，高亮它的整条必须前置链（实线）、推荐前置（虚线）和它直接解锁的技能（绿线），其余卡片去掉颜色变成灰色（文字仍然清晰）。
 - 左栏“现在能学”按“学完能解锁的后续技能数”排序；选一条路线或“设为目标”后，左栏给出按顺序编号的学习清单，地图上也标出序号。
 - 详情面板：必须 / 推荐前置及理由、学什么、去哪学（网站 > 讲义资料 > 书）、练习题（答案折叠）、前置依据（真实课程的官方先修原文）。
 
@@ -54,7 +56,8 @@ src/web/data.js         同上 + 布局坐标，页面直接加载
 | `scripts/research_digest.py <id前缀>` | 把 pi 的检索结果压成几行摘要，供主代理判定前置 |
 | `scripts/set_prereqs.py <decisions.json>` | 把一批判定写回 `prereqs.txt` 和 `prereq-notes.json` |
 | `scripts/archive_research.py` | 把审核过的检索结果从 `temp/research/nodes/` 归档到 `data/research/nodes/` |
-| `node tests/screenshot.mjs`、`node tests/screenshot-panel.mjs <id>` | 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器） |
+| `node tests/screenshot.mjs`、`node tests/screenshot-panel.mjs <id>` | 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器），含深链回归检查 |
+| `node tests/a11y.mjs [report.json]` | axe-core 按 WCAG 2.2 AA 审计 12 个界面状态，并跑一遍纯键盘的主流程；结论见 `docs/hci-ux-review.md` |
 
 截图和 pip 安装时把 `TEMP`/`TMP` 指到项目的 `temp/`，避免写 C 盘。验算练习题用的 sympy / numpy / scipy 装在 `temp/pylib`（`PYTHONPATH=temp/pylib`）。
 
@@ -69,5 +72,7 @@ src/web/data.js         同上 + 布局坐标，页面直接加载
 ## 用到的现成组件
 
 - 布局：[elkjs](https://github.com/kieler/elkjs) 0.12.1（ELK layered，按步骤分区；构建时运行，EPL-2.0）
-- 平移缩放：[@panzoom/panzoom](https://github.com/timmywil/panzoom) 4.6.2（MIT，`src/web/vendor/`）
-- 自己写的部分：构建脚本里的数据合并与校验、页面的渲染与交互（`src/web/app.js`）。
+- 平移缩放：[@panzoom/panzoom](https://github.com/timmywil/panzoom) 4.6.2（MIT，`src/web/vendor/`）。注意它的构造函数会用 `setTimeout` 延迟平移到起点，所以页面的首次路由也放在 `setTimeout` 里，否则深链偶尔会被拉回原点
+- 总览布局：同一个 elkjs，在 13 个领域组成的依赖图上做 layered 布局（`LONGEST_PATH_SOURCE` 分层），见 `scripts/build.mjs`
+- 无障碍审计：[axe-core](https://github.com/dequelabs/axe-core) 4.11.4（MPL-2.0，devDependency）
+- 自己写的部分：构建脚本里的数据合并与校验、页面的渲染与交互（`src/web/app.js`、`src/web/overview.js`）、总览连线的端口分配和曲线、审计脚本里对 axe 判断不了的对比度项的手算。

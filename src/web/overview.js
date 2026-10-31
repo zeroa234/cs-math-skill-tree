@@ -152,7 +152,7 @@ window.SkillTreeOverview = (() => {
         el("span", { class: "rg-swatch", "aria-hidden": "true" }),
         el("span", { class: "rg-titles" },
           el("span", { class: "rg-name" }, lane.name),
-          el("span", { class: "rg-en" }, lane.en)));
+          el("span", { class: "rg-en", lang: "en" }, lane.en)));
       const badge = el("span", { class: "rg-badge" });
       const bar = el("span", { class: "rg-bar", "aria-hidden": "true" }, el("span", { class: "rg-bar-fill" }));
       const progText = el("span", { class: "rg-prog-text" });
@@ -255,7 +255,7 @@ window.SkillTreeOverview = (() => {
     if (focusLane) setFocus(focusLane);
   }
 
-  // Fit the whole map into the view when it stays readable; otherwise keep 0.62 and let the page scroll.
+  // Fit the whole map into the view when it stays readable; otherwise keep 0.8 and let the area scroll.
   function fit() {
     const wrap = document.querySelector("#ov-wrap");
     const area = wrap.querySelector(".ov-scroll");
@@ -265,7 +265,7 @@ window.SkillTreeOverview = (() => {
     if (narrow) { stage.style.transform = ""; stage.parentElement.style.width = stage.parentElement.style.height = ""; return; }
     const { width, height } = D.overview;
     const r = area.getBoundingClientRect();
-    const s = Math.max(0.62, Math.min(1, (r.width - 48) / width, (r.height - 32) / height));
+    const s = Math.max(0.8, Math.min(1, (r.width - 48) / width, (r.height - 32) / height));
     stage.style.transform = `scale(${s})`;
     Object.assign(stage.parentElement.style, { width: `${width * s}px`, height: `${height * s}px` });
   }

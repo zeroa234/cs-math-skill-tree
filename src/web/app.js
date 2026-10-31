@@ -115,7 +115,7 @@
     const head = el("button", { class: "lane-head", "aria-expanded": "true", onclick: (e) => { e.stopPropagation(); toggleLane(lane.id); } },
       el("span", { class: "swatch" }),
       el("span", { class: "lane-name" }, lane.name),
-      el("span", { class: "lane-en" }, lane.en),
+      el("span", { class: "lane-en", lang: "en" }, lane.en),
       lane.optional ? el("span", { class: "lane-tag" }, "选修") : null,
       prog,
       el("span", { class: "chev", "aria-hidden": "true" }, "▾"));
@@ -135,7 +135,7 @@
       title: s.desc,
     },
     el("span", { class: "c-ico", "aria-hidden": "true" }),
-    el("span", { class: "c-text" }, el("span", { class: "c-name" }, s.name), el("span", { class: "c-en" }, s.en)),
+    el("span", { class: "c-text" }, el("span", { class: "c-name" }, s.name), el("span", { class: "c-en", lang: "en" }, s.en)),
     el("span", { class: "c-lv", "aria-hidden": "true" }, `D${s.entry}`));
     // Prerequisites from other lanes are not drawn until the card is selected (they would cross every lane);
     // a stub with one dot per source lane says they exist.
@@ -297,7 +297,7 @@
     const st = status(id);
     return el("button", { onclick: () => { openSkill(id); closeSideOnNarrow(); } },
       el("span", { class: `st-ico ${st}`, html: ICON[st], title: STATE_TEXT[st] }),
-      el("span", {}, el("span", { class: "it-name" }, s.name), el("span", { class: "it-sub" }, showStep ? `第 ${s.step} 步 · ${s.en}` : s.en)),
+      el("span", {}, el("span", { class: "it-name" }, s.name), el("span", { class: "it-sub" }, showStep ? `第 ${s.step} 步 · ` : "", el("span", { lang: "en" }, s.en))),
       extra);
   }
   function renderNext() {
@@ -376,7 +376,7 @@
     return el("li", {}, el("button", { onclick: () => select(r.id) },
       el("span", { class: `st-ico ${st}`, html: ICON[st], title: STATE_TEXT[st] }),
       el("span", {},
-        el("span", { class: "pr-name" }, s.name, el("span", { class: "pr-en" }, s.en)),
+        el("span", { class: "pr-name" }, s.name, el("span", { class: "pr-en", lang: "en" }, s.en)),
         r.why ? el("span", { class: "pr-why" }, r.why) : null)));
   }
 
@@ -384,7 +384,7 @@
   function fmt(text) {
     const parts = String(text || "").split(/```(?:\w+)?\n?/);
     return parts.map((p, i) => i % 2
-      ? `<pre><code>${esc(p.replace(/\n$/, ""))}</code></pre>`
+      ? `<pre tabindex="0"><code>${esc(p.replace(/\n$/, ""))}</code></pre>`
       : esc(p).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\n/g, "<br>")).join("");
   }
 
@@ -398,7 +398,7 @@
     kids.push(el("div", {},
       el("div", { class: "p-crumb" }, s.path.map((p) => p.name).join(" › ")),
       el("h2", { class: "p-title" }, s.name),
-      el("div", { class: "p-en" }, s.en),
+      el("div", { class: "p-en", lang: "en" }, s.en),
       el("div", { class: "chips" },
         el("span", { class: "chip", title: "前面至少有这么多层必须前置" }, `第 ${s.step} 步`),
         el("span", { class: "chip", title: D.depths[s.entry]?.goal }, `入门层 D${s.entry} ${D.depths[s.entry]?.name || ""}`),
@@ -539,10 +539,13 @@
   wrap.addEventListener("pointerup", () => { downAt = null; }, true);
   wrap.addEventListener("click", () => { if (!dragMoved && selected) select(null); });
 
-  function fit() {
+  // fit(): every step column in view (button / key 0). fit(false), used when entering the map, keeps cards
+  // readable (scale >= 0.8) and lets a wide map pan instead.
+  function fit(all = true) {
     const r = wrap.getBoundingClientRect();
+    const toWidth = Math.min(1, (r.width - 40) / (mapW + 40));
     // phones: stay readable and show the first columns instead of shrinking the whole width
-    const scale = narrow() ? 0.62 : Math.max(0.3, Math.min(1, (r.width - 40) / (mapW + 40)));
+    const scale = narrow() ? 0.62 : Math.max(all ? 0.3 : 0.8, toWidth);
     pz.zoom(scale, { animate: false, force: true });
     panTo(30, 10, 0, 0, false);
   }
@@ -556,13 +559,13 @@
     const p = pos(id);
     panTo(r.width / 2, r.height / 2, p.x + CW / 2, p.y + CH / 2, true);
   }
-  $("#btn-fit").addEventListener("click", fit);
+  $("#btn-fit").addEventListener("click", () => fit());
   $("#btn-zoom-in").addEventListener("click", () => pz.zoomIn());
   $("#btn-zoom-out").addEventListener("click", () => pz.zoomOut());
   // Show one lane from its top at the fit-to-width scale, and flash it so the eye lands on it.
   function focusLaneInMap(laneId) {
     if (state.collapsed.has(laneId)) toggleLane(laneId);
-    fit();
+    fit(false);
     panTo(30, 14, 0, laneTop.get(laneId), false);
     const box = laneEls.get(laneId);
     box.classList.remove("flash");
@@ -586,7 +589,7 @@
     $("#tab-map").setAttribute("aria-pressed", String(v === "map"));
     if (v === "overview") { panel.hidden = true; Overview.fit(); return; }
     if (selected) panel.hidden = false;
-    if (!mapFitted) { mapFitted = true; fit(); }
+    if (!mapFitted) { mapFitted = true; fit(false); }
   }
   function route() {
     const [v, arg] = decodeURIComponent(location.hash.slice(1)).split("/");
@@ -605,6 +608,12 @@
   $("#tab-overview").addEventListener("click", () => go("#overview"));
   $("#tab-map").addEventListener("click", () => go(selected ? `#skill/${selected}` : "#map"));
   const Overview = window.SkillTreeOverview;
+  $("#skip-link").addEventListener("click", () => {
+    const target = view === "overview"
+      ? document.querySelector(".region .rg-main")
+      : (selected && cards.get(selected)) || [...cards.values()].find((c) => !c.hidden && c.classList.contains("avail"));
+    target?.focus();
+  });
 
   // ── search ────────────────────────────────────────────────────────
   const input = $("#search-input");
@@ -614,21 +623,28 @@
   function runSearch() {
     const q = input.value.trim().toLowerCase();
     for (const c of cards.values()) c.classList.remove("match");
-    if (!q) { results.hidden = true; return; }
+    if (!q) { closeResults(); return; }
     hits = D.skills.filter((s) => [s.name, s.en, s.id, s.desc].some((t) => t.toLowerCase().includes(q)))
       .sort((a, b) => (b.name.toLowerCase().includes(q) || b.en.toLowerCase().includes(q)) - (a.name.toLowerCase().includes(q) || a.en.toLowerCase().includes(q)))
       .slice(0, 10);
     hitIdx = 0;
     for (const s of hits) cards.get(s.id).classList.add("match");
     results.replaceChildren(...(hits.length ? hits.map((s, i) => el("li", {
-      role: "option", "aria-selected": String(i === hitIdx),
+      role: "option", id: `sr-${i}`, "aria-selected": String(i === hitIdx),
       onmousedown: (e) => { e.preventDefault(); pick(s.id); },
-    }, el("span", {}, s.name), el("span", { class: "r-en" }, s.en), el("span", { class: "r-state" }, STATE_TEXT[status(s.id)])))
-      : [el("li", { "aria-disabled": "true" }, "没有找到")]));
+    }, el("span", {}, s.name), el("span", { class: "r-en", lang: "en" }, s.en), el("span", { class: "r-state" }, STATE_TEXT[status(s.id)])))
+      : [el("li", { role: "option", "aria-disabled": "true" }, "没有找到")]));
     results.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+    if (hits.length) input.setAttribute("aria-activedescendant", "sr-0"); else input.removeAttribute("aria-activedescendant");
+  }
+  function closeResults() {
+    results.hidden = true;
+    input.setAttribute("aria-expanded", "false");
+    input.removeAttribute("aria-activedescendant");
   }
   function pick(id) {
-    results.hidden = true;
+    closeResults();
     input.blur();
     for (const c of cards.values()) c.classList.remove("match");
     if (state.collapsed.has(SK.get(id).lane)) toggleLane(SK.get(id).lane);
@@ -640,10 +656,11 @@
       e.preventDefault();
       hitIdx = (hitIdx + (e.key === "ArrowDown" ? 1 : -1) + hits.length) % hits.length;
       [...results.children].forEach((li, i) => li.setAttribute("aria-selected", String(i === hitIdx)));
+      input.setAttribute("aria-activedescendant", `sr-${hitIdx}`);
     } else if (e.key === "Enter" && hits[hitIdx]) pick(hits[hitIdx].id);
     else if (e.key === "Escape") { input.value = ""; runSearch(); input.blur(); }
   });
-  input.addEventListener("blur", () => setTimeout(() => { results.hidden = true; }, 100));
+  input.addEventListener("blur", () => setTimeout(closeResults, 100));
 
   // ── routes ────────────────────────────────────────────────────────
   const routeSel = $("#route-select");
@@ -761,5 +778,7 @@
     const i = D.routes.findIndex((r) => `路线：${r.name}` === state.goalLabel);
     if (i >= 0) routeSel.value = String(i);
   }
-  requestAnimationFrame(route);
+  // Panzoom's constructor queues setTimeout(() => pan(startX, startY)); timers run in order, so routing from a
+  // later timer keeps a deep link (#map/<lane>, #skill/<id>) from being reset to the origin.
+  setTimeout(route);
 })();

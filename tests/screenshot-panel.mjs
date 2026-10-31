@@ -11,10 +11,8 @@ const ctx = await browser.newContext({ viewport: { width: 1600, height: 960 } })
 const p = await ctx.newPage();
 const errors = [];
 p.on("pageerror", (e) => errors.push(e.message));
-await p.goto(pathToFileURL(path.join(ROOT, "src/web/index.html")).href);
-await p.click("#btn-intro-ok");
-await p.evaluate((sid) => document.querySelector(`.card[data-id="${sid}"]`).click(), id);
-await p.waitForTimeout(500);
+await p.goto(`${pathToFileURL(path.join(ROOT, "src/web/index.html")).href}#skill/${id}`);
+await p.waitForTimeout(600);
 const panel = p.locator("#panel");
 for (let i = 0; i < 3; i++) {
   await panel.screenshot({ path: path.join(out, `panel-${id}-${i}.png`) });

@@ -72,5 +72,14 @@ await page("11-back-to-overview", DESK, async (p) => {
   if (!(await p.locator("#map-wrap").isVisible())) throw new Error("Back did not return to the map");
   await p.goBack();
 });
+await page("12-deep-link", DESK, async (p) => {
+  // regression: Panzoom's deferred start pan used to reset a deep link to the origin now and then
+  for (let i = 0; i < 3; i++) {
+    await p.goto(`${url}#map/A`);
+    await p.waitForTimeout(500);
+    const top = await p.evaluate(() => [...document.querySelectorAll(".lane")].find((l) => l.textContent.includes("人工智能")).getBoundingClientRect().top);
+    if (top < 40 || top > 200) throw new Error(`#map/A left lane A at y=${Math.round(top)}`);
+  }
+});
 await browser.close();
 console.log(errors.length ? errors.join("\n") : "no console errors");

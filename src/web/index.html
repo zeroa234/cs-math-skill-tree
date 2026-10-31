@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<button class="skip-link" id="skip-link">跳到主要内容</button>
 <header class="topbar">
   <button class="icon-btn only-narrow" id="btn-side" aria-label="打开学习计划" aria-controls="side" aria-expanded="false">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -28,9 +29,10 @@
   </div>
   <div class="search">
     <label class="sr-only" for="search-input">搜索技能</label>
-    <input id="search-input" type="search" placeholder="搜索技能（中文 / English）" autocomplete="off" aria-controls="search-results">
+    <input id="search-input" type="search" placeholder="搜索技能（中文 / English）" autocomplete="off"
+      role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-results">
     <kbd class="hint-key">/</kbd>
-    <ul id="search-results" class="search-results" role="listbox" hidden></ul>
+    <ul id="search-results" class="search-results" role="listbox" aria-label="搜索结果" hidden></ul>
   </div>
   <div class="actions">
     <label class="sr-only" for="route-select">学习路线</label>
@@ -112,7 +114,7 @@
     <div class="ov-scroll">
       <div class="ov-sizer"><div class="ov-stage"></div></div>
     </div>
-    <p class="ov-caption" id="ov-caption" aria-live="polite" data-idle="把鼠标移到一个领域上（或用 Tab 选中），看它用到哪些领域的前置、又是哪些领域的前置。"></p>
+    <p class="ov-caption" id="ov-caption" data-idle="把鼠标移到一个领域上（或用 Tab 选中），看它用到哪些领域的前置、又是哪些领域的前置。"></p>
   </section>
 
   <section class="map-wrap" id="map-wrap" hidden aria-label="技能树地图。用 Tab 在技能之间移动，回车查看详情，L 点亮，Esc 取消选择。">
