@@ -35,6 +35,12 @@ const DOMAIN_COLORS = {
   S: "#d0463b", H: "#5f7f22", V: "#1c97ad", I: "#7b7f8c", X: "#9a6b4f",
 };
 
+// Short names for compact labels (overview roads, "先学" hints).
+const SHORT = {
+  M1: "数学·分析", M2: "数学·代数离散", M3: "数学·概率优化", F: "理论", P: "程序设计", C: "系统与网络", D: "数据",
+  A: "人工智能", S: "安全", H: "硬件与嵌入式", V: "图形与交互", I: "信息系统", X: "交叉前沿",
+};
+
 // Lanes = domains, except mathematics (57 skills), which is split by branch so each lane stays readable.
 const LANES = [
   { id: "M1", domain: "M", prefixes: ["M.1", "M.2"], name: "数学 · 微积分、分析与微分方程", en: "Math · Calculus, Analysis & DEs" },
@@ -258,6 +264,7 @@ for (const d of laneOrder) {
     id: d,
     domain: dn.id,
     name: custom ? custom.name : dn.name,
+    short: SHORT[d] || dn.name,
     en: custom ? custom.en : en.get(d) || "",
     color: DOMAIN_COLORS[dn.id],
     optional: !!dn.optional,
@@ -267,6 +274,64 @@ for (const d of laneOrder) {
 }
 
 const steps = Math.max(...out.map((s) => s.step));
+
+// ── overview: one tile per lane, laid out by ELK on the lane-level dependency graph ──
+// A road A → B counts the required edges from a skill in lane A to a skill in lane B. Between two lanes only
+// the dominant direction drives the layout (ties and single edges are too weak to order whole regions);
+// every directed pair is still kept so the page can show it on focus.
+const OV_TILE_W = 232;
+const OV_PAD_X = 14;
+const OV_HEAD_H = 62;
+const OV_FOOT_H = 66;
+const mapW = (steps - 1) * COL_W + CARD_W;
+// The tile's mini map keeps the real step columns (x) but squeezes heights, so tall lanes do not dominate.
+const miniScale = (OV_TILE_W - 2 * OV_PAD_X) / mapW;
+const miniScaleY = 0.085;
+const laneOfSkill = new Map(out.map((s) => [s.id, s.lane]));
+const roadCount = new Map();
+for (const s of out) {
+  for (const q of s.required) {
+    const a = laneOfSkill.get(q.id);
+    if (a !== s.lane) roadCount.set(`${a}>${s.lane}`, (roadCount.get(`${a}>${s.lane}`) || 0) + 1);
+  }
+}
+const roads = [...roadCount].map(([k, count]) => {
+  const [from, to] = k.split(">");
+  return { from, to, count, dominant: count >= 2 && count > (roadCount.get(`${to}>${from}`) || 0) };
+});
+const tileH = (lane) => OV_HEAD_H + Math.round(lane.height * miniScaleY) + 12 + OV_FOOT_H;
+const ov = await elk.layout({
+  id: "overview",
+  layoutOptions: {
+    "elk.algorithm": "layered",
+    "elk.direction": "RIGHT",
+    // sources (regions with no prerequisite region) and the isolated one all start in column 1
+    "elk.layered.layering.strategy": "LONGEST_PATH_SOURCE",
+    "elk.separateConnectedComponents": "false",
+    "elk.edgeRouting": "POLYLINE", // the page draws its own roads; orthogonal routing would widen the gaps
+    "elk.spacing.nodeNode": "24",
+    "elk.layered.spacing.nodeNodeBetweenLayers": "40",
+    "elk.layered.nodePlacement.strategy": "NETWORK_SIMPLEX",
+    "elk.layered.considerModelOrder.strategy": "NODES_AND_EDGES",
+    "elk.padding": "[top=8,left=8,bottom=8,right=8]",
+  },
+  children: lanes.map((l) => ({ id: l.id, width: OV_TILE_W, height: tileH(l) })),
+  edges: roads.filter((r) => r.dominant).map((r) => ({ id: `${r.from}>${r.to}`, sources: [r.from], targets: [r.to] })),
+});
+const layerXs = [...new Set(ov.children.map((c) => Math.round(c.x)))].sort((a, b) => a - b);
+const overview = {
+  width: Math.round(ov.width),
+  height: Math.round(ov.height),
+  tile: { w: OV_TILE_W, padX: OV_PAD_X, headH: OV_HEAD_H, footH: OV_FOOT_H, miniScale, miniScaleY },
+  regions: ov.children.map((c) => ({
+    lane: c.id, x: Math.round(c.x), y: Math.round(c.y), w: OV_TILE_W, h: Math.round(c.height),
+    layer: layerXs.indexOf(Math.round(c.x)) + 1,
+  })),
+  roads,
+};
+console.log(`overview ${overview.width}x${overview.height} columns:`,
+  layerXs.map((x, i) => `${i + 1}[${overview.regions.filter((r) => r.layer === i + 1).map((r) => r.lane).join(" ")}]`).join(" "));
+
 const verifiedPrereqs = out.filter((s) => s.prereqStatus === "verified").length;
 const data = {
   meta: {
@@ -288,6 +353,7 @@ const data = {
     ids: [...new Set(r.ids.flatMap((id) => (skillIds.has(id) ? [id] : out.filter((s) => s.id.startsWith(id + ".")).map((s) => s.id))))],
   })),
   lanes,
+  overview,
   skills: out,
 };
 

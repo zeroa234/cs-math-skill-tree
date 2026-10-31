@@ -5,6 +5,7 @@
 
   const D = window.SKILLTREE;
   const SK = new Map(D.skills.map((s) => [s.id, s]));
+  const LANE = new Map(D.lanes.map((l) => [l.id, l]));
   const { w: CW, h: CH, colW: COLW } = D.meta.card;
   const STORE = "cs-math-skilltree/v1";
   const TOP = 48; // room for step labels
@@ -126,7 +127,7 @@
   }
 
   for (const s of D.skills) {
-    const lane = D.lanes.find((l) => l.id === s.lane);
+    const lane = LANE.get(s.lane);
     const c = el("button", {
       class: "card" + (s.optional ? " opt" : ""),
       style: `--dc:${lane.color};width:${CW}px;height:${CH}px`,
@@ -136,6 +137,16 @@
     el("span", { class: "c-ico", "aria-hidden": "true" }),
     el("span", { class: "c-text" }, el("span", { class: "c-name" }, s.name), el("span", { class: "c-en" }, s.en)),
     el("span", { class: "c-lv", "aria-hidden": "true" }, `D${s.entry}`));
+    // Prerequisites from other lanes are not drawn until the card is selected (they would cross every lane);
+    // a stub with one dot per source lane says they exist.
+    const ext = s.required.filter((r) => SK.get(r.id).lane !== s.lane);
+    if (ext.length) {
+      const from = [...new Set(ext.map((r) => SK.get(r.id).lane))];
+      c.append(el("span", {
+        class: "c-ext", "aria-hidden": "true",
+        title: `还要用到其他领域的必须前置：${ext.map((r) => `${SK.get(r.id).name}（${LANE.get(SK.get(r.id).lane).short}）`).join("、")}`,
+      }, from.slice(0, 3).map((l) => el("i", { style: `background:${LANE.get(l).color}` }))));
+    }
     c.addEventListener("click", (e) => { if (!dragMoved) select(s.id); e.stopPropagation(); });
     c.addEventListener("focus", () => ensureVisible(s.id));
     cards.set(s.id, c);
@@ -210,7 +221,7 @@
     gBase.replaceChildren();
     for (const s of D.skills) {
       for (const r of s.required) {
-        if (!visible(s.id) || !visible(r.id)) continue;
+        if (!visible(s.id) || !visible(r.id) || SK.get(r.id).lane !== s.lane) continue;
         const p = pathEl(edgePath(r.id, s.id), "e-base");
         p.dataset.from = r.id;
         p.dataset.to = s.id;
@@ -276,6 +287,7 @@
     renderPlan();
     drawFocus();
     if (selected) renderPanel(selected);
+    Overview.render();
   }
 
   // ── side: next + plan ─────────────────────────────────────────────
@@ -283,7 +295,7 @@
   function itemButton(id, extra, showStep) {
     const s = SK.get(id);
     const st = status(id);
-    return el("button", { onclick: () => { select(id); closeSideOnNarrow(); } },
+    return el("button", { onclick: () => { openSkill(id); closeSideOnNarrow(); } },
       el("span", { class: `st-ico ${st}`, html: ICON[st], title: STATE_TEXT[st] }),
       el("span", {}, el("span", { class: "it-name" }, s.name), el("span", { class: "it-sub" }, showStep ? `第 ${s.step} 步 · ${s.en}` : s.en)),
       extra);
@@ -496,6 +508,7 @@
     if (id) { renderPanel(id); panel.scrollTop = 0; } else panel.hidden = true;
     drawFocus();
     if (id) ensureVisible(id);
+    if (view === "map") history.replaceState(null, "", id ? `#skill/${id}` : "#map");
   }
 
   // ── pan / zoom ────────────────────────────────────────────────────
@@ -514,6 +527,9 @@
     pz.pan((sx - mapW / 2) / s + mapW / 2 - px, (sy - mapH / 2) / s + mapH / 2 - py, { animate, force: true });
   }
   wrap.addEventListener("wheel", (e) => { e.preventDefault(); pz.zoomWithWheel(e); }, { passive: false });
+  // Focusing an off-screen card (Tab) makes the browser scroll this overflow:hidden box, which shifts the
+  // zoom buttons and breaks the pan maths. Undo it; the card's focus handler pans instead.
+  wrap.addEventListener("scroll", () => { wrap.scrollTop = 0; wrap.scrollLeft = 0; });
   let dragMoved = false;
   let downAt = null;
   wrap.addEventListener("pointerdown", (e) => { downAt = [e.clientX, e.clientY]; dragMoved = false; }, true);
@@ -543,6 +559,52 @@
   $("#btn-fit").addEventListener("click", fit);
   $("#btn-zoom-in").addEventListener("click", () => pz.zoomIn());
   $("#btn-zoom-out").addEventListener("click", () => pz.zoomOut());
+  // Show one lane from its top at the fit-to-width scale, and flash it so the eye lands on it.
+  function focusLaneInMap(laneId) {
+    if (state.collapsed.has(laneId)) toggleLane(laneId);
+    fit();
+    panTo(30, 14, 0, laneTop.get(laneId), false);
+    const box = laneEls.get(laneId);
+    box.classList.remove("flash");
+    void box.offsetWidth; // restart the animation
+    box.classList.add("flash");
+  }
+
+  // ── views: overview ⇄ map, mirrored in the URL hash so Back / links work ──
+  // #overview · #map · #map/<lane> · #skill/<id>
+  const layoutEl = $("#layout");
+  const ovWrap = $("#ov-wrap");
+  let view = "";
+  let mapFitted = false;
+  function showView(v) {
+    if (v === view) return;
+    view = v;
+    layoutEl.dataset.view = v;
+    ovWrap.hidden = v !== "overview";
+    wrap.hidden = v !== "map";
+    $("#tab-overview").setAttribute("aria-pressed", String(v === "overview"));
+    $("#tab-map").setAttribute("aria-pressed", String(v === "map"));
+    if (v === "overview") { panel.hidden = true; Overview.fit(); return; }
+    if (selected) panel.hidden = false;
+    if (!mapFitted) { mapFitted = true; fit(); }
+  }
+  function route() {
+    const [v, arg] = decodeURIComponent(location.hash.slice(1)).split("/");
+    if (v === "skill" && SK.has(arg)) {
+      showView("map");
+      if (state.collapsed.has(SK.get(arg).lane)) toggleLane(SK.get(arg).lane);
+      select(arg);
+    } else if (v === "map") {
+      showView("map");
+      if (LANE.has(arg)) { mapFitted = true; focusLaneInMap(arg); }
+    } else showView("overview");
+  }
+  const go = (hash) => { if (location.hash === hash) route(); else location.hash = hash; };
+  const openSkill = (id) => (view === "map" ? select(id) : go(`#skill/${id}`));
+  window.addEventListener("hashchange", route);
+  $("#tab-overview").addEventListener("click", () => go("#overview"));
+  $("#tab-map").addEventListener("click", () => go(selected ? `#skill/${selected}` : "#map"));
+  const Overview = window.SkillTreeOverview;
 
   // ── search ────────────────────────────────────────────────────────
   const input = $("#search-input");
@@ -570,7 +632,7 @@
     input.blur();
     for (const c of cards.values()) c.classList.remove("match");
     if (state.collapsed.has(SK.get(id).lane)) toggleLane(SK.get(id).lane);
-    select(id);
+    openSkill(id);
   }
   input.addEventListener("input", runSearch);
   input.addEventListener("keydown", (e) => {
@@ -670,9 +732,10 @@
   // ── keyboard ──────────────────────────────────────────────────────
   document.addEventListener("keydown", (e) => {
     const typing = /INPUT|SELECT|TEXTAREA/.test(document.activeElement?.tagName);
+    if (document.querySelector("dialog[open]")) return;
     if (e.key === "/" && !typing) { e.preventDefault(); input.focus(); return; }
-    if (typing || e.ctrlKey || e.metaKey || e.altKey) return;
-    if (e.key === "Escape") { if (selected) select(null); }
+    if (typing || e.ctrlKey || e.metaKey || e.altKey || view !== "map") return;
+    if (e.key === "Escape") { if (selected) select(null); else go("#overview"); }
     else if ((e.key === "l" || e.key === "L") && selected) toggleLearn(selected);
     else if (e.key === "0") fit();
     else if (e.key === "+" || e.key === "=") pz.zoomIn();
@@ -680,11 +743,23 @@
   });
 
   // ── go ────────────────────────────────────────────────────────────
+  Overview.init({
+    data: D,
+    status,
+    icon: (st) => ICON[st],
+    planIds: () => (state.goal.length ? planFor(state.goal) : []),
+    laneProgress: (laneId) => {
+      const m = D.skills.filter((s) => s.lane === laneId);
+      return m.filter((s) => state.learned.has(s.id)).length / m.length;
+    },
+    enterLane: (laneId) => go(`#map/${laneId}`),
+    pickSkill: (id) => go(`#skill/${id}`),
+  });
   layout();
   refresh();
   if (state.goal.length) {
     const i = D.routes.findIndex((r) => `路线：${r.name}` === state.goalLabel);
     if (i >= 0) routeSel.value = String(i);
   }
-  requestAnimationFrame(fit);
+  requestAnimationFrame(route);
 })();
