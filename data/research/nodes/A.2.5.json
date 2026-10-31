@@ -1,0 +1,79 @@
+{
+ "id": "A.2.5",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford CS 330 Deep Multi-Task and Meta Learning（课程主页 + 公开讲义与历年录像）",
+  "url": "https://cs330.stanford.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页列出完整 schedule 与材料，并提供 Fall 2019–2022 各版的公开录像（'Publicly available recordings of previous offerings are available below'）。与节点对应：课程导论与多任务学习（共享表示、硬/软参数共享、任务关系）、Transfer learning & fine-tuning（迁移学习与微调）、black-box meta-learning 与 in-context learning、optimization-based meta-learning / MAML、few-shot 与 metric learning、对比式与生成式无监督预训练做迁移、curriculum 与 lifelong learning（持续迁移）。联邦学习（非独立同分布数据、通信与隐私约束）不在本课范围，属该资源之外——那部分可用 Aalto CS-E4740（见 courses 第二条，免费、材料公开）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 330 Deep Multi-Task and Meta Learning",
+   "url": "https://cs330.stanford.edu/",
+   "prereq_text": "Prerequisites — Machine learning: CS229 or equivalent is a prerequisite. We will be assuming knowledge of concepts including, but not limited to (stochastic) gradient descent and cross-validation, and pre-requisites such as probability theory, multivariable calculus, and linear algebra. Some familiarity with deep learning: The course will build on deep learning concepts such as backpropagation, convolutional networks, and recurrent neural networks. The assignments will involve programming in PyTorch.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "A.2.1",
+    "M.6.1",
+    "M.1.4.1",
+    "M.3.1",
+    "A.2.3",
+    "P.2.3"
+   ]
+  },
+  {
+   "school": "Aalto University",
+   "course": "CS-E4740 Federated Learning",
+   "url": "https://federatedlearningaalto.github.io",
+   "prereq_text": "Prerequisites: Empirical risk minimization and the basics of supervised learning; gradient descent; linear algebra; Python with numpy and scikit-learn. Graph theory is developed from scratch, and no prior knowledge of distributed systems is assumed.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "A.2.1",
+    "M.7.2",
+    "M.3.1",
+    "P.2.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "A.2.3",
+   "kind": "required",
+   "evidence": "Stanford CS330 原文 'Some familiarity with deep learning: The course will build on deep learning concepts such as backpropagation, convolutional networks, and recurrent neural networks'。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "CS330 把 'probability theory' 列为先修的一部分。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "CS330 把 'multivariable calculus' 列为先修的一部分。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CS330 列出 'linear algebra'；Aalto CS-E4740 也要求 'linear algebra'。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "CS330 作业用 PyTorch；Aalto CS-E4740 要求 'Python with numpy and scikit-learn'。"
+  },
+  {
+   "id": "M.7.2",
+   "kind": "required",
+   "evidence": "Aalto CS-E4740 先修里点名 'gradient descent'（凸/一阶优化的基本方法）。"
+  }
+ ],
+ "notes": "A.2.1 记 supported：CS330 原文 'CS229 or equivalent is a prerequisite'；Aalto 那门要求 ERM + 监督学习基础。资源取舍说明：本节点横跨“迁移/多任务”和“联邦”两半，没有一个免费站点同时覆盖；CS330 覆盖前三项（迁移、多任务、元学习/持续学习），联邦学习完全不在其中，所以在 covers 里写明缺口，并把 Aalto CS-E4740（免费、slides 与 arXiv 教材公开、2025 版有录像）作为课程条目给出，供主代理决定是否拆成“迁移/多任务”与“联邦/隐私”两个资源。Aalto 页面还明确写 'no prior knowledge of distributed systems is assumed'，即分布式系统（C.4.1）不是先修，故不写进 extra_prereqs。"
+}

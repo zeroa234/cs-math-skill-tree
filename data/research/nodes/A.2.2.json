@@ -1,0 +1,71 @@
+{
+ "id": "A.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "Learning From Data — Caltech 公开课（Yaser Abu-Mostafa，含 18 讲视频、作业与逐主题视频索引）",
+  "url": "https://work.caltech.edu/telecourse",
+  "lang": "en",
+  "free": true,
+  "covers": "Caltech CS 156 的完整公开课站点（免费、可自定进度）。讲次覆盖：The Learning Problem、Is Learning Feasible?（学习可行性与 Hoeffding/概率近似论证）、Training versus Testing、Theory of Generalization（增长函数与 VC 界）、The VC Dimension、Bias-Variance Tradeoff、Validation、Regularization 与验证选择。也就是说节点里的经验风险最小化、泛化界与 VC 维、偏差-方差这几块有系统讲授；稳定性（algorithmic stability）与分布外泛化不在其范围，属该资源之外（那两块要到研究生学习理论课/专著）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "36-708 Statistical Machine Learning",
+   "url": "https://www.stat.cmu.edu/~larry/=sml/",
+   "prereq_text": "There are two pre-requisites for this course: 36-705 (Intermediate Statistical Theory) 36-707 (Regression)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2",
+    "M.6.2.2"
+   ]
+  },
+  {
+   "school": "California Institute of Technology",
+   "course": "CS 156 Learning From Data（公开 MOOC 版）",
+   "url": "https://work.caltech.edu/telecourse",
+   "prereq_text": "Prerequisites: Basic probability, matrices, and calculus",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "M.3.1",
+    "M.1.2",
+    "M.1.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.2": "supported",
+  "A.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "Caltech CS 156 写 'Prerequisites: Basic probability, matrices, and calculus'；泛化界整段建立在概率不等式上。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "同一句里的 'matrices'（矩阵/线性代数），线性分类器与 VC 分析都要用。"
+  },
+  {
+   "id": "M.1.2",
+   "kind": "required",
+   "evidence": "CS 156 要求 'calculus'（微分学部分，用于梯度与优化式推导）。"
+  },
+  {
+   "id": "M.1.3",
+   "kind": "required",
+   "evidence": "CS 156 的 'calculus' 也包含积分学（概率密度、期望的计算）。"
+  },
+  {
+   "id": "M.6.2.2",
+   "kind": "required",
+   "evidence": "CMU 36-708 要求 36-707 Regression；该课的泛化/模型选择讨论默认学生会回归建模。"
+  }
+ ],
+ "notes": "M.6.2 记 supported：CMU 36-708 明写先修 36-705（Intermediate Statistical Theory）；Caltech CS 156 的整门课就是统计学习理论入门。A.2.1 记 not_mentioned：这两门课都没有把“机器学习导论课”写成先修（36-708 只要求统计理论 + 回归；CS 156 本身就是入门 ML 课，先修只列数学），故不给 supported/recommended。资源侧：本想把 Shalev-Shwartz & Ben-David 的《Understanding Machine Learning》免费 PDF 作为首选（PAC/VC/稳定性最全），但 cs.huji.ac.il 在本机 fetch 与 tavily_extract 都超时/被拒，无法核验，按规则不写入；Princeton COS 511（PAC/VC/Rademacher 讲义）页面编码为 UTF-16、正文抓不出来，也无法核验。最终取 Caltech LFD：站点可打开、课程大纲与讲次逐条对得上，且免费。稳定性与 OOD 泛化在 notes 里已说明不在覆盖范围。"
+}

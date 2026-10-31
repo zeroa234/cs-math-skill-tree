@@ -1,0 +1,73 @@
+{
+ "id": "A.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "Artificial Intelligence: Foundations of Computational Agents（Poole & Mackworth, 3rd ed.，全文在线免费）",
+  "url": "https://artint.info/3e/html/ArtInt3e.html",
+  "lang": "en",
+  "free": true,
+  "covers": "剑桥大学出版社授权、CC BY-NC-ND 的完整 HTML 教材网站（可按章在线阅读，另配代码与练习）。第 3 章 Searching for Solutions：问题求解即搜索、状态空间、图搜索与通用搜索算法、无信息搜索（BFS/DFS/最低代价）、启发式（informed）搜索、剪枝与搜索改进；第 4 章 Reasoning with Constraints：约束网与软/硬约束、用搜索解 CSP、相容性算法（约束传播）、domain splitting、变量消去、局部搜索与群体方法、约束优化；第 6 章 Deterministic Planning：状态/动作/目标表示、前向规划、回归规划、把规划转成 CSP 求解、偏序规划。不确定条件下的规划与强化学习在第 12–13 章（属节点 D3 的上沿）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 221 Artificial Intelligence: Principles and Techniques",
+   "url": "https://stanford-cs221.github.io/autumn2023/",
+   "prereq_text": "(Required) Programming CS 106A, CS 106B; (Required) Discrete math, mathematical rigor: CS 103; (Required) Probability: CS 109; (Required) Linear algebra: Math 51; (recommended, but not required) Algorithms: CS 161; (recommended, but not required) Systems: CS 107",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1",
+    "M.5.3",
+    "M.6.1",
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "COMPSCI 188 Introduction to Artificial Intelligence",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS188/",
+   "prereq_text": "Prerequisites: COMPSCI 61A, COMPSCI 61B, and COMPSCI 70.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1",
+    "M.5.3",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.1.2": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS221 把 'Programming CS 106A, CS 106B' 列为 Required；Berkeley CS188 要求 COMPSCI 61A。"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Berkeley CS188 要求 COMPSCI 61B（Data Structures）；CS221 的 CS 106B 也是数据结构与抽象编程课。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "Berkeley CS188 要求 COMPSCI 70（离散数学与概率论）；CS221 要求 'Discrete math, mathematical rigor: CS 103'。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "CS221 要求 'Probability: CS 109'；CS188 的 COMPSCI 70 含概率论。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CS221 要求 'Linear algebra: Math 51'（AI 课的线性代数要求主要体现在搜索之外的后半部分与后续 ML 内容）。"
+  }
+ ],
+ "notes": "F.1.2 记 recommended：原图建议的算法设计与分析在先修里只以“建议”出现——Stanford CS221 原文 '(recommended, but not required) Algorithms: CS 161'（CS 161 = Design and Analysis of Algorithms）；Berkeley CS188 只列到 COMPSCI 61B（数据结构，映射 F.1.1），没有点名算法分析课，故不给 supported。artint.info 第三版（2023）比第二版更适合：目录里搜索/约束/确定性规划三章齐全，且全文 HTML 可逐节读、无付费墙。资源侧没用 CS188 课程页，因为它只放 slides/项目、缺少可系统阅读的正文。"
+}

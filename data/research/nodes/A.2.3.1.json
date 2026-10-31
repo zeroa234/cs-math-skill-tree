@@ -1,0 +1,73 @@
+{
+ "id": "A.2.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Dive into Deep Learning（d2l.ai，交互式在线教材，按架构分章 + 可运行代码）",
+  "url": "https://d2l.ai/",
+  "lang": "en",
+  "free": true,
+  "covers": "免费在线教材网站，正文可在浏览器逐节读，每节配 PyTorch/MXNet notebook。按架构铺开：第 5 章多层感知机（含 5.3 前向/反向传播与计算图、5.6 dropout）、第 6 章 Builders' Guide（自己搭层与训练循环）、第 7–8 章卷积网络与现代 CNN（VGG/ResNet 等设计模式）、第 9–10 章循环网络与现代 RNN（LSTM/GRU、seq2seq）、第 11 章注意力机制与 Transformer（含自注意力、位置编码）、第 14 章计算机视觉（数据增广、微调、目标检测、风格迁移）、第 15–16 章 NLP 预训练（word2vec、BERT 式预训练——即自监督表征学习的一支）。图神经网络（GNN）不在其覆盖范围，属该资源之外。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 224N Natural Language Processing with Deep Learning",
+   "url": "https://web.stanford.edu/class/cs224n/",
+   "prereq_text": "Prerequisites: Proficiency in Python ... College Calculus, Linear Algebra (e.g. MATH 51, CME 100) ... Basic Probability and Statistics (e.g. CS 109 or equivalent) ... Foundations of Machine Learning (e.g. CS221, CS229, CS230, or CS124) ... If you already have basic machine learning and/or deep learning knowledge, the course will be easier; however it is possible to take CS224N without it.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.3",
+    "M.1.4.1",
+    "M.3.1",
+    "M.6.1",
+    "A.2.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 231n Deep Learning for Computer Vision",
+   "url": "https://cs231n.stanford.edu/",
+   "prereq_text": "Prerequisites: Proficiency in Python; College Calculus, Linear Algebra (e.g. MATH 19, MATH 51); Basic Probability and Statistics (e.g. CS 109 or other stats course)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.3",
+    "M.1.2",
+    "M.3.1",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.3": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "A.2.1",
+   "kind": "required",
+   "evidence": "CS224N 把 'Foundations of Machine Learning (e.g. CS221, CS229, CS230, or CS124)' 列为先修。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CS224N 要求 'Linear Algebra (e.g. MATH 51, CME 100)'；CS231n 要求 MATH 19/51 中的线性代数部分。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "CS224N 原文括注 '(multivariable) derivatives'，即多元微积分；CS231n 写 MATH 19/51 的微积分部分。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "两门课都要求 'Basic Probability and Statistics (e.g. CS 109)'。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "CS224N 先修第一条 'Proficiency in Python'（作业用 NumPy 与 PyTorch）；CS231n 同样要求 Python。"
+  }
+ ],
+ "notes": "A.2.3 记 recommended：没有任何一门架构课把“深度学习”写成硬先修。CS224N 原文说 'If you already have basic machine learning and/or deep learning knowledge, the course will be easier; however it is possible to take CS224N without it'，属于“有帮助但非必需”；CS231n 的先修只到数学 + Python + 概率。extra_prereqs 里的 A.2.1 反而是硬要求（CS224N 明确列 ML 基础课）。资源用 d2l 而不是 CS231n 讲义：CS231n notes 首页目前只到 Module 2（卷积网络）与 RNN 一节，注意力/Transformer/自监督那部分还标着 '(Releasing May 14)'，无法当作“已可读”的覆盖证据；d2l 第 7–11 章把 CNN/RNN/注意力/Transformer 成章铺开，更适合“架构谱系”。父节点 A.2.3 用的是 Nielsen 的在线书（不重复）。GNN 缺口的说明已写进 covers；若需要 GNN 可另找专书，本轮未核验合适站点。"
+}

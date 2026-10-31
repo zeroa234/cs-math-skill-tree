@@ -1,0 +1,88 @@
+{
+ "id": "A.2.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "Deep Learning Systems: Algorithms and Implementation（CMU 10-414/714，dlsyscourse.org 公开讲义与视频）",
+  "url": "https://dlsyscourse.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页 + Lectures 页给出全部公开 slides/notebook 与 2022 版 YouTube 录像（站点自述 'Primary Resource: Lecture slides and implementation notebooks'、'No required textbook'）。与节点对应：3–5 讲 前向/反向传播与自动微分、6 讲 Optimization（SGD/动量/Adam 等优化器及其实现）、8 讲 Normalization 与 Dropout、10–13 讲 硬件加速与 GPU（含 kernel 级实现）、14 讲 卷积实现、15–18 讲 序列模型与 Transformer、19 讲 Training Large Models（大模型训练、并行与内存）、23 讲 Model Deployment（部署与推理）。量化/蒸馏这类压缩技术在部署相关讲次里只是提及，系统覆盖不如专门的压缩文献，属该资源之外。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "10-414/714 Deep Learning Systems: Algorithms and Implementation",
+   "url": "https://dlsyscourse.org/",
+   "prereq_text": "Students must be proficient in: Systems programming (15-213 or equivalent); Linear algebra (21-240 or 21-241); Mathematical background including calculus, probability, and basic proofs (21-127 or 15-151); Python and C++ programming; Basic machine learning concepts (prior experience required)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2",
+    "M.3.1",
+    "M.5.3",
+    "M.6.1",
+    "M.1.2",
+    "P.2.3",
+    "A.2.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 329S Machine Learning Systems Design",
+   "url": "https://stanford-cs329s.github.io/",
+   "prereq_text": "Students are expected to have the following background: Knowledge of basic computer science principles and skills, at a level sufficient to write a reasonably non-trivial computer program (e.g., CS106B/X or equivalent). Good understanding of machine learning algorithms (e.g. at least one of CS229, CS230, CS231N, CS224N or equivalent). Familiar with at least one framework such as TensorFlow, PyTorch, JAX. Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "A.2.1",
+    "A.2.3",
+    "P.2.3",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.7.4": "not_mentioned",
+  "A.2.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "CMU 10-414/714 要求 'Systems programming (15-213 or equivalent)'，15-213 = Introduction to Computer Systems（计算机组成 + 系统编程）。"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "同一句里的 15-213 与 'Python and C++ programming'，C/C++ 与底层编程是硬要求（作业要写 CUDA/CPU kernel）。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CMU 10-414/714 要求 'Linear algebra (21-240 or 21-241)'。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "CMU 10-414/714 要求 'basic proofs (21-127 or 15-151)'（21-127 = Concepts of Mathematics）。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "CMU 10-414/714 要求数学背景含 'probability'；CS329S 提到 CS109 级概率。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "CMU 10-414/714 要求 'Python and C++ programming'；CS329S 要求至少熟悉一个框架（TensorFlow/PyTorch/JAX）。"
+  },
+  {
+   "id": "A.2.1",
+   "kind": "required",
+   "evidence": "CMU 10-414/714 要求 'Basic machine learning concepts (prior experience required)'；CS329S 要求 'Good understanding of machine learning algorithms'。"
+  }
+ ],
+ "notes": "A.2.3 记 supported：CS329S 的机器学习先修原文是 'at least one of CS229, CS230, CS231N, CS224N or equivalent'，其中 CS230/CS231N/CS224N 都是深度学习课（A.2.3），即“用一门深度学习课满足该先修”是被官方接受的路径；CMU 10-414/714 只写 'Basic machine learning concepts'（更接近 A.2.1）。M.7.4（随机优化）记 not_mentioned：两门课都把优化器当课程内容来讲（dlsyscourse 第 6 讲 Optimization），没有把“随机优化”列为先修。资源说明：mlsysbook.ai/vol1（Harvard/MIT Press 开放获取的 Machine Learning Systems 第 I 卷）在主题上更贴“压缩/量化/推理服务”，但抓取该页只得到大量 LaTeX 宏定义、正文未能逐章核验，故未选；dlsyscourse 的讲次列表可逐条核对，故选它，并在 covers 里标出量化/蒸馏的覆盖缺口。"
+}

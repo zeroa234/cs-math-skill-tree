@@ -1,0 +1,64 @@
+{
+ "id": "A.1.2",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford CS228 Probabilistic Graphical Models — 公开课程讲义（Kuleshov & Ermon）",
+  "url": "https://ermongroup.github.io/cs228-notes/",
+  "lang": "en",
+  "free": true,
+  "covers": "由 CS228 课程讲义整理成的免费在线教材网站（按 Representation / Inference / Learning 三部分组织，逐节网页可读）。Representation：贝叶斯网络、马尔可夫随机场、条件随机场、有向与无向模型的独立性；Inference：变量消去与推断复杂度、置信传播与 junction tree、MAP 推断（max-sum、graph cuts、LP 松弛、对偶分解）、采样推断（前向/拒绝/重要性采样、MCMC）、变分推断（平均场、边缘多面体）；Learning：有向与无向模型的极大似然、隐变量模型与 EM、结构学习，末尾讲到 VAE。结构建模与学习两路都有，正好覆盖节点 D2 的主体。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 228 Probabilistic Graphical Models",
+   "url": "https://cs228.stanford.edu/",
+   "prereq_text": "Students are expected to have background in basic probability theory, statistics, programming, algorithm design and analysis. If you are able to comfortably complete homework 1 then you likely have all the relevant background knowledge.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "M.6.2",
+    "P.1.1",
+    "F.1.2"
+   ]
+  },
+  {
+   "school": "University of Toronto",
+   "course": "CSC412H1 Probabilistic Learning and Reasoning",
+   "url": "https://artsci.calendar.utoronto.ca/course/csc412h1",
+   "prereq_text": "Prerequisite: CSC311H1/ STA314H1/ CSCC11H3/ CSC311H5 Prerequisite for Faculty of Applied Science and Engineering students: ECE421H1/ ROB313H1",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "A.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "Stanford CS228 原文要求 'algorithm design and analysis'；变量消去、置信传播的复杂度分析确实要用算法分析。"
+  },
+  {
+   "id": "M.6.2",
+   "kind": "required",
+   "evidence": "Stanford CS228 原文要求 'statistics'（参数估计、MLE、结构学习都靠统计基础）。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS228 原文要求 'programming'；作业是写推断算法。"
+  },
+  {
+   "id": "A.2.1",
+   "kind": "required",
+   "evidence": "U of T CSC412 的先修是 CSC311/ECE421（机器学习导论课），本节点在课程体系里排在入门 ML 之后。"
+  }
+ ],
+ "notes": "M.6.1 记 supported：CS228 明确写 'background in basic probability theory'，PGM 的整个表示层就是概率分布的语言。资源用 CS228 讲义而不是 Koller 的 Coursera 课：coursera.org 需登录、正文不可核验；CS228 讲义可逐节在线阅读并与课程主页（ermongroup.github.io/cs228/，Winter 2023-24）对应。CMU 10-708（epxing）主页与 logistics/homework 页都抓不到任何先修说明，故未用作证据。"
+}

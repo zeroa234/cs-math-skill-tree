@@ -1,0 +1,72 @@
+{
+ "id": "A.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "Neural Networks and Deep Learning（Michael Nielsen，免费在线教材网站）",
+  "url": "http://neuralnetworksanddeeplearning.com/",
+  "lang": "en",
+  "free": true,
+  "covers": "可逐章在线阅读的免费教材（带可运行代码）。第 1 章用 MNIST 引入感知机与 sigmoid 神经元、网络架构、梯度下降与完整训练循环；第 2 章讲反向传播（四种基本方程、算法流程图、为何反向传播快、代码实现）；第 3 章讲训练与正则化（交叉熵代价、过拟合与正则化、权重初始化、超参数选择）；第 4 章用可视化证明网络能逼近任意函数（表示的普适性）；第 5 章讲深层网络为何难训（梯度消失与其他障碍）；第 6 章 Deep learning 讲卷积网络、实践与近年图像识别进展。正好对应节点的神经网络、反向传播、训练、正则化与“深层表示”入门层。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Toronto",
+   "course": "CSC413H1 Neural Networks and Deep Learning",
+   "url": "https://artsci.calendar.utoronto.ca/course/csc413h1",
+   "prereq_text": "Prerequisite: CSC311H1/ CSC311H5/ CSCC11H3/ STA314H1; MAT235H1/ MAT235Y1/ MAT237Y1/ MAT257Y1/ MAT257Y5/ MAT232H5/ MAT233H5/ MATB41H3; MAT223H1/ MAT240H1/ MAT223H5/ MATA23H3",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "A.2.1",
+    "M.1.4.1",
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 231n Deep Learning for Computer Vision",
+   "url": "https://cs231n.stanford.edu/",
+   "prereq_text": "Prerequisites: Proficiency in Python; College Calculus, Linear Algebra (e.g. MATH 19, MATH 51) ... Basic Probability and Statistics (e.g. CS 109 or other stats course)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.3",
+    "M.1.2",
+    "M.3.1",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.1": "supported",
+  "M.8.5": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CS231n 要求 'College Calculus, Linear Algebra (e.g. MATH 19, MATH 51)'；U of T CSC413 要求 MAT223/240（线性代数）。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "U of T CSC413 要求 MAT235/237/257（多元微积分）。"
+  },
+  {
+   "id": "M.1.2",
+   "kind": "required",
+   "evidence": "CS231n 的 'College Calculus ... You should be comfortable taking derivatives'（反向传播就靠这个）。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "CS231n 要求 'Basic Probability and Statistics (e.g. CS 109 or other stats course)'。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "CS231n 第一条先修是 'Proficiency in Python'，作业全用 Python/numpy。"
+  }
+ ],
+ "notes": "A.2.1 记 supported：U of T CSC413 明确要求 CSC311/ECE421（机器学习导论课）；Berkeley CS182 只是把 CS189 写为 'recommended'（原文：'COMPSCI 189 is recommended'），所以本条主要靠 CSC413。M.8.5（自动微分与计算图）记 not_mentioned：三门深度学习课都没把它列为先修——它是深度学习课内部讲授的内容（CS231n 有 backprop 模块，d2l 第 2.5 节讲 autograd），因此原图把它当先修偏保守，但没有课程证据支持。资源选 Nielsen 的在线书而不是 Goodfellow《Deep Learning》：本节点是 D2 入门层，Nielsen 的推导（反向传播四方程、交叉熵、正则化）更循序渐进；架构谱系（CNN/RNN/Transformer）放到子节点 A.2.3.1 用 d2l.ai 覆盖，避免两个节点重复同一本书。另：Berkeley CS 182（https://www2.eecs.berkeley.edu/Courses/CS182/ ，原文 'Prerequisites: MATH 53, MATH 54, and COMPSCI 61B; COMPSCI 70 or STAT 134; COMPSCI 189 is recommended.'）可作为第三条旁证——它把数据结构（F.1.1）列为必修、把 CS189（A.2.1）列为建议；因每节点只登记 1–2 门课，未写入 courses。"
+}

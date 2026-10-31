@@ -1,0 +1,69 @@
+{
+ "id": "A.2.1",
+ "resource": {
+  "tier": "book",
+  "title": "An Introduction to Statistical Learning with Applications in R/Python（James, Witten, Hastie, Tibshirani，2nd ed., 2021/2023）",
+  "url": "https://www.statlearning.com/",
+  "lang": "en",
+  "free": true,
+  "covers": "作者官方站点，页面明确提供 'Download ISL with R' / 'Download ISL with Python' 的免费 PDF（两版都有），每章带 R 与 Python lab。内容正好覆盖本节点入门层：第 2 章统计学习的偏差-方差与泛化直觉；第 3 章线性回归；第 4 章分类（logistic、LDA/QDA、KNN）；第 5–6 章重采样、模型选择与正则化（ridge/lasso）；第 7 章非线性与样条/GAM；第 8 章树与集成；第 9 章 SVM；第 10 章神经网络入门；第 12 章无监督学习（PCA、k-means、层次聚类）。特征工程与半监督只在零散处提及，属该资源之外。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 229 Machine Learning",
+   "url": "https://cs229.stanford.edu/",
+   "prereq_text": "Prerequisites: knowledge of basic computer science principles and skills at a level sufficient to write a reasonably non-trivial computer program in Python/NumPy to the equivalency of CS106A or CS106B, familiarity with probability theory to the equivalency of CS 109 or MATH151, and familiarity with multivariable calculus and linear algebra to the equivalency of MATH51 or CS205L.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.2.3",
+    "M.6.1",
+    "M.1.4.1",
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "COMPSCI 189 Introduction to Machine Learning",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS189/",
+   "prereq_text": "Prerequisites: MATH 53 and MATH 54; and COMPSCI 70 or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1",
+    "M.3.1",
+    "M.5.3",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.1": "supported",
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS229 要求能写 'a reasonably non-trivial computer program ... to the equivalency of CS106A or CS106B'。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "CS229 原文点名 'in Python/NumPy'，作业与讲义都按这个工具栈。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "CS229 要求 'multivariable calculus ... to the equivalency of MATH51'；Berkeley CS189 要求 MATH 53。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "Berkeley CS189 要求 COMPSCI 70（离散数学与概率论），用于概率与证明基础；CS229 未单列。"
+  }
+ ],
+ "notes": "M.3.1、M.6.1 都记 supported：CS229 把 'linear algebra ... MATH51' 与 'probability theory ... CS 109' 都写成 Prerequisites，CS189 用 MATH 54 + CS 70 覆盖同一对前置。资源侧说明为什么落到 book：优先想用公开课程网站，但 MIT OCW 6.036 只有课程首页能打开，syllabus/lecture-notes 子页在本机 fetch 时 301 死循环（与本项目此前 18.02SC 可读、6.036 不可读的情况一致），无法核验其正文覆盖；CS229 站点的课程文档对非 Stanford 用户关闭。ISLR 官方站明确给出免费 PDF，内容与节点（回归/分类/聚类/降维/模型选择）逐章对得上，故取 book 一级。"
+}
