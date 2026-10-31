@@ -1,0 +1,41 @@
+{
+ "id": "V.2.4",
+ "resource": {
+  "tier": "book",
+  "title": "Virtual Reality（Steven M. LaValle, Cambridge University Press, 2023；作者主页免费全文 + 配套免费 MOOC 讲座）",
+  "url": "https://lavalle.pl/vr/",
+  "lang": "en",
+  "free": true,
+  "covers": "作者主页原文：这本免费 VR 书覆盖 'geometric modeling, transformations, graphical rendering, optics, the human vision, auditory, and vestibular systems, tracking systems, interface design, human factors, developer recommendations, and technological issues'；配套 YouTube 讲座属于免费 MOOC。对应节点里的虚实融合显示与光学、追踪（tracking，含 inertial/optical 等）、空间界面与交互设计、人的视觉/前庭系统与舒适度（human factors）、协作与沉浸体验的设计建议；多用户协作系统只在人因/设计章节间接触及。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Santa Cruz",
+   "course": "CSE 168 Introduction to Augmented Reality and Virtual Reality",
+   "url": "https://catalog.ucsc.edu/en/current/general-catalog/courses/cse-computer-science-and-engineering",
+   "prereq_text": "Prerequisite(s): CSE 160. Some knowledge of mobile platforms (e.g., CSE 118 or CSE 167) is helpful, but not required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "V.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "V.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "V.1.1",
+   "kind": "required",
+   "evidence": "UCSC CSE 168 硬性先修 CSE 160（Introduction to Computer Graphics）"
+  },
+  {
+   "id": "P.5.2",
+   "kind": "recommended",
+   "evidence": "UCSC CSE 168 写 'Some knowledge of mobile platforms (e.g., CSE 118 or CSE 167) is helpful, but not required'"
+  }
+ ],
+ "notes": "V.2.1 判 not_mentioned：UCSC CSE 168 的官方先修是 CSE 160（图形学），加上『移动平台知识有帮助但不要求』，没有要求任何 HCI/交互基础的先修课——也就是说 XR 课的入门门槛被放在图形学而不是人因课上。extra 里把 V.1.1 记成硬性先修。资源退到 book 层：本批没找到免费且可系统自学的 XR 课程网站（UIUC CS 498VR 的 cs498vr 根路径已 404；LaValle 在 UIUC 的课现在以 MOOC 形式挂在作者页），LaValle 这本 Cambridge 教材由作者主页免费提供全文 PDF，且明确覆盖 tracking、显示/光学、interface design、human factors，配合免费讲座可直接自学，等级判 book（链接用作者主页，符合 brief 的『链接用出版社页或作者主页』）。"
+}

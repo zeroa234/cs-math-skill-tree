@@ -1,0 +1,58 @@
+{
+ "id": "V.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "UC Berkeley CS184/284A Computer Graphics and Imaging（课程主页，含全部讲义、公开录像、作业与项目）",
+  "url": "https://cs184.eecs.berkeley.edu/sp24",
+  "lang": "en",
+  "free": true,
+  "covers": "官方课程描述：broad introduction to the fundamentals of computer graphics，主线为 modeling / rendering / animation / imaging；专题含 2D 与 3D 变换、光栅显示与绘制、采样与抗锯齿、纹理、几何建模、光线追踪与全局光照、动画、相机、图像处理与计算成像，并强调数学与几何、要求学生写出完整 3D 图形程序（栅格器与路径追踪器项目）。对应节点里的几何表示、变换、光栅化、光照、渲染、动画；物理仿真只在动画/成像部分一带而过。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 184 / CS 284A Computer Graphics and Imaging",
+   "url": "https://cs184.eecs.berkeley.edu/sp24/policies",
+   "prereq_text": "We will assume a data structures course (e.g. CS 61B), C/C++ programming ability, fluency with development environment and debugging programs, knowledge of vectors, matrices basic linear algebra, calculus and trigonometry. Helpful: exposure to statistics, signal processing, and the Fourier transform.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "P.2.2",
+    "M.3.1",
+    "M.4.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 148 Introduction to Computer Graphics and Imaging",
+   "url": "https://web.stanford.edu/class/cs148/",
+   "prereq_text": "Prerequisites: CS 107, MATH 51. Must be fluent in Python.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2",
+    "M.3.1",
+    "M.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.1": "supported",
+  "M.4.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Berkeley CS184 写 'We will assume a data structures course (e.g. CS 61B)'"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Berkeley CS184 要求 'C/C++ programming ability'；Stanford CS148 要求 CS 107（C 与机器级编程），并要求 Python 流利"
+  }
+ ],
+ "notes": "两条原图建议前置都有直接写法：Berkeley 的 'knowledge of vectors, matrices basic linear algebra' 同时覆盖 M.3.1 与 M.4.1（vectors 那部分是向量代数与解析几何），Stanford CS148 用 MATH 51（线性代数 + 多元微积分）与 CS 107（对应 C.1.1 计算机组成 + P.2.2）作硬性先修。两份先修原文分别取自 CS184 Policies 页与 CS148 主页的 Prerequisites 段，均已打开核对。资源选 CS184 而非 CS148：CS184 的讲义与课堂录像公开挂在课程主页、并有两个经典项目（software rasterizer、path tracer），更适合 D2 自学；CS148 更入门（用 Blender 起步）但录像在 Canvas 里，非在校生拿不到。节点简介末尾的『物理仿真』在两门入门课里都不是重点，属 V.1.3 的范围。"
+}

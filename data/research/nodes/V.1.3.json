@@ -1,0 +1,66 @@
+{
+ "id": "V.1.3",
+ "resource": {
+  "tier": "website",
+  "title": "Physically Based Rendering: From Theory to Implementation（第 4 版全文免费在线，Pharr / Jakob / Humphreys）",
+  "url": "https://pbr-book.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "在线全文（4ed 目录已核对）：第 2 章 Monte Carlo Integration（含 importance sampling、采样与分布的变换）、第 3 章几何与变换、第 4 章辐射度量学/光谱/颜色、第 8 章采样与重建、第 9 章反射模型（BRDF/BSDF）、第 11 章体积散射、第 12 章光源、第 13-14 章 Light Transport I/II（表面与体积光传输、path tracing、bidirectional 方法，含 Further Reading 的 photon mapping 等）、第 15 章 GPU wavefront 渲染。对应节点里的光传输、蒙特卡洛渲染与渲染器实现；物理仿真与可微/逆向渲染不在书里。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-468 / 15-668 / 15-868 Physics-based rendering",
+   "url": "https://imaging.cs.cmu.edu/15-468",
+   "prereq_text": "This course requires familiarity with: programming (at the level of 15-112, 15-122, 15-110, or 02-201), linear algebra (at the level of 21-240, 21-241, 21-341, 21-242, or 21-254), multivariable calculus (at the level of 21-256, 21-268, 21-259, 21-269, or 21-254). Alternatively, if you have taken any other courses on computer graphics (for example, 15-362, 15-662) ... you satisfy the prerequisites for this course.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "M.3.1",
+    "M.4.1",
+    "V.1.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 348B Image Synthesis Techniques",
+   "url": "https://bulletin.stanford.edu/courses/1058651",
+   "prereq_text": "Prerequisite: 248 or equivalent. Recommended: Fourier analysis or digital signal processing.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "V.1.1",
+    "H.1.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "V.1.1": "supported",
+  "M.8.4": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "CMU 15-468 要求 linear algebra（21-240/21-241/21-341/21-242/21-254 水平）"
+  },
+  {
+   "id": "M.4.1",
+   "kind": "required",
+   "evidence": "CMU 15-468 要求 multivariable calculus（21-259 等 3D 微积分课水平）"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "CMU 15-468 要求 programming（15-112/15-122 水平）"
+  },
+  {
+   "id": "H.1.3",
+   "kind": "recommended",
+   "evidence": "Stanford CS 348B 写 'Recommended: Fourier analysis or digital signal processing'"
+  }
+ ],
+ "notes": "V.1.1 判 supported：Stanford CS 348B 硬性先修 CS 248（Stanford 的图形学课），CMU 15-468 则写明『修过任意一门计算机图形学课（15-362、15-662 等）即满足先修』。M.8.4（蒙特卡洛方法）判 not_mentioned：两门课都把 Monte Carlo 当成课内内容教（15-468 要自己写 Monte Carlo renderer，CS348B 有 direct/global illumination 的 MC 算法），没有把它列为先修；也没有哪门课要求先修概率统计。资源侧选 PBRT 在线全文：免费、可整本按章读、第 2 章就是蒙特卡洛积分，第 13-14 章是光传输与体积渲染，正对节点前两项。缺口写清楚：可微/逆向渲染不在书里——CMU 15-468 的公开课程描述明确覆盖 'differentiable, inverse, and neural rendering'，可作该子题的入口（但课件在 Canvas，非在校生只能看大纲）；『物理仿真』属于基于物理的动画（15-462 大纲里的 differential equations / time integration / physically-based animation），PBRT 不涉及。"
+}

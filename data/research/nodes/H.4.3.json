@@ -1,0 +1,68 @@
+{
+ "id": "H.4.3",
+ "resource": {
+  "tier": "website",
+  "title": "IoT for Beginners（Microsoft 官方 12 周 24 课免费教程，带 quiz / 作业 / 解决方案）",
+  "url": "https://microsoft.github.io/IoT-For-Beginners/",
+  "lang": "en",
+  "free": true,
+  "covers": "24 课按「农场→运输→制造→零售→消费」端到端项目推进：第 1-4 课讲 IoT 组成、微控制器 vs 单板机、传感器与执行器、把设备连上互联网并用 MQTT 收发消息；第 8-10 课讲云平台与云端应用逻辑、密钥/证书安全；第 11-14 课讲 GPS 定位、数据存储、地图可视化、地理围栏；第 15-18 课讲在设备端（边缘）跑推理；最后是语音交互项目。覆盖节点里的设备、连接、消息、平台、端到端集成与边缘侧处理；功耗管理只零散出现在设备选型/电池供电的提示里，没有独立课程。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "FITech（芬兰多校联合，Aalto / Tampere 等）",
+   "course": "Introduction to the Internet of Things MOOC",
+   "url": "https://fitech.io/en/studies/introduction-to-the-internet-of-things-mooc/",
+   "prereq_text": "General prerequisites: Basic courses in networking, data structures, programming, machine learning, and data science can be beneficial for some of the contents but are not required for completion.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "C.3.2",
+    "C.3.3",
+    "F.1.1",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of Tartu",
+   "course": "Internet of Things Introduction（15 天 6 ECTS 动手课，syllabus 公开）",
+   "url": "https://github.com/iotempire/iotempire-teaching/blob/main/full-classes/unitartu-IoT-intro-15d/syllabus.md",
+   "prereq_text": "This course assumes basic technical curiosity—no advanced prior knowledge is required. Helpful starting points include: Git/GitHub, Linux basics (CLI navigation), Python/JavaScript basics, C++ basics, network protocols (MQTT/http), and user stories/scenarios.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "P.1.1",
+    "P.2.2",
+    "P.2.4",
+    "C.3.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.3.2": "not_mentioned",
+  "C.3.3": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.3.2",
+   "kind": "recommended",
+   "evidence": "Tartu 课把 'network protocols (MQTT/http)' 列为 helpful starting point；FITech 写 basic courses in networking 'can be beneficial ... but are not required'"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "recommended",
+   "evidence": "FITech 与 Tartu 都把 programming 基础列为有帮助但不强制"
+  },
+  {
+   "id": "P.2.4",
+   "kind": "recommended",
+   "evidence": "Tartu 写 helpful starting points 包含 Git/GitHub 与 Linux basics"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "recommended",
+   "evidence": "Tartu 写 'C++ basics' 为 helpful starting point"
+  }
+ ],
+ "notes": "两门课都没有把嵌入式系统/驱动/RTOS（H.3.2）写成先修：FITech 明确说网络、数据结构、编程等基础『can be beneficial ... but are not required』；Tartu 明确说『no advanced prior knowledge is required』，工具和语言都在课上 scaffold。原图的 C.3.3（无线/移动/物联网网络）只能算 recommended：FITech 的 'networking' 是笼统表述，Tartu 具体点的是 MQTT/http 这类应用层协议，所以我按 C.3.2 记了 mapped_ids，C.3.3 只在 candidate_check 判 recommended。另外核实过 Binghamton University CS 426 Internet of Things（https://catalog.binghamton.edu/preview_course_nopop.php?catoid=7&coid=67573&print= ，原文 'Prerequisite: CS 320 or CS 350. Prerequisites must have a grade of C- or better.'），课程简介还专门讲 IoT 的功耗限制与无线通信；但我没能打开 CS 320 / CS 350 的课程页确认它们对应哪个节点，所以没写进 courses，避免按印象映射。资源侧：Microsoft 这套教程对 Azure 有一定绑定，但 24 课的概念链条（设备→连接→消息→云平台→端到端项目→边缘）是本批里最系统又免费的自学路径。"
+}

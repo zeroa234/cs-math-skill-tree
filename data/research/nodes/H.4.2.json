@@ -1,0 +1,55 @@
+{
+ "id": "H.4.2",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford Engineering Everywhere CS223A - Introduction to Robotics（课程视频 + 讲义 handouts + 作业，免费）",
+  "url": "https://see.stanford.edu/Course/CS223A",
+  "lang": "en",
+  "free": true,
+  "covers": "SEE 公开的 Stanford CS223A（Khatib）完整 16 讲视频、讲义（Kinematics 1-2、Jacobian、Robots and Vision、Trajectory Planning、Dynamics、Control）与 6 次作业；官方主题写作 robotics foundations in kinematics, dynamics, control, motion planning, trajectory generation, programming and design，正好覆盖节点的运动学/雅可比、动力学、轨迹规划与机器人控制。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS223A / ME320 Introduction to Robotics",
+   "url": "https://see.stanford.edu/Course/CS223A",
+   "prereq_text": "Prerequisites: matrix algebra.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "16-281 General Robotics（原 16-311 Introduction to Robotics）",
+   "url": "https://www.cs.cmu.edu/~16311/current/shouldknow.html",
+   "prereq_text": "Before taking this class, students should know: Programming concepts... Pointers, Structs, Searching, Sorting. Linear algebra... Bases definitions and transformations, Vector definitions and manipulation, Matrix arithmetic and manipulation.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.2.2",
+    "M.3.1",
+    "M.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.4.1": "not_mentioned",
+  "M.4.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Stanford CS223A 写 'Prerequisites: matrix algebra'；CMU 16-281 要求线性代数（基底变换、矩阵运算）"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "CMU 16-281 先修知识页列出编程概念（变量、条件、循环、函数、数组、查找、排序）"
+  }
+ ],
+ "notes": "H.4.1 判 not_mentioned：两门入门机器人课都没把控制理论/状态估计写成先修（CS223A 自己在讲义里教 Control 与 Trajectory Planning，CMU 16-281 也不要求控制课）。M.4.1 判 supported 依据 CMU 16-281 先修页的 'Vector definitions and manipulation'（向量代数）；Stanford 只写 matrix algebra，按 M.3.1 记。资源侧取舍：节点简介含『定位建图、感知融合』，SEE CS223A 以机械臂建模/控制为主、不含 SLAM；若补这部分需另配 Bonn 的 Robot Mapping（Stachniss）或《Probabilistic Robotics》，已在 notes 说明而不写进 resource。CMU 16-281 描述为 vision, motion planning, mobile mechanisms, kinematics, inverse kinematics, sensors，覆盖面更接近节点简介，但其讲义未公开。"
+}

@@ -1,0 +1,34 @@
+{
+ "id": "V.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Fundamentals of Data Visualization（Claus O. Wilke, O'Reilly 2019；作者主页免费全文在线）",
+  "url": "https://clauswilke.com/dataviz/",
+  "lang": "en",
+  "free": true,
+  "covers": "免费在线教材，目录已核对：从「Ugly, bad, and wrong figures」讲起，Part I 是 Mapping data onto aesthetics（aesthetics 与数据类型）、coordinate systems and axes（含非线性轴）、color scales（区分类别/表示数值/高亮）、directory of visualizations（amounts、distributions、proportions、x–y relationships、geospatial、uncertainty），再到 visualizing amounts / distributions / proportions / associations、图设计美学、感知与色盲、常见错误与误导性图表、叙事化呈现。对应节点里的数据类型、视觉编码、图表选择、布局与读图误差；交互技术（筛选、刷选、联动）不是本书重点。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Washington",
+   "course": "CSE 412 Introduction to Data Visualization",
+   "url": "https://courses.cs.washington.edu/courses/cse412/",
+   "prereq_text": "Catalog Description: Introduction to data visualization design and use for both data exploration and explanation. Methods for creating effective visualizations using principles from graphic design, psychology, and statistics. ... Prerequisites: either CSE 123, CSE 143, or CSE 163",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UW CSE 412 官方先修 CSE 123/143/163（任一门程序设计入门课）"
+  }
+ ],
+ "notes": "本节点原图无建议前置，candidate_check 为空。UW CSE 412 的官方目录描述几乎与节点简介逐条对应（data models、visual encoding methods、data preparation、exploratory analysis、uncertainty、cartography、interaction techniques、visual perception、evaluation methods），但它唯一写明的先修只是编程入门课，说明数据可视化入门课不设数学/统计先修。资源没选 CSE 412 主页：该页只有日历与 office hours，讲义在 Canvas，非在校生拿不到；改用 Wilke 的免费在线教材，从视觉编码到误导性图表都能按章读，入门友好、长期稳定（作者个人站点，书由 O'Reilly 出版）。短板：交互式可视化（筛选/刷选/联动、D3 实现）需另补，CSE 412 或 Munzner《Visualization Analysis and Design》可接上。"
+}
