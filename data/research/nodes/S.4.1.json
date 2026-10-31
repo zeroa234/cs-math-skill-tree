@@ -1,0 +1,52 @@
+{
+ "id": "S.4.1",
+ "resource": {
+  "tier": "website",
+  "title": "OWASP Web Security Testing Guide (WSTG) v4.2（官方旗舰项目，在线全文，免费）",
+  "url": "https://wstg.owasp.org/v4.2/",
+  "lang": "en",
+  "free": true,
+  "covers": "完整的测试框架与流程：2.2 Principles of Testing、2.3 Testing Techniques Explained、2.4 Manual Inspections and Reviews、2.5 Threat Modeling、2.10 Security Tests Integrated in Development/Testing Workflows、2.11 Security Test Data Analysis and Reporting（证据整理与报告）；技术面 4.1 Information Gathering（资产与暴露面识别）、4.2 Configuration and Deployment、4.3 Identity Management、4.4 Authentication、4.5 Authorization Testing（目录穿越、绕过授权模式、提权、IDOR）、4.6 Session Management、4.7 Input Validation、4.8 Error Handling、4.9 Cryptography、4.10 Business Logic、4.11 Client-side。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Florida",
+   "course": "CIS 4XXX Penetration Testing and Ethical Hacking",
+   "url": "https://www.cise.ufl.edu/~jnw/PenetrationTestingandEthicalHacking.pdf",
+   "prereq_text": "2. Pre-requisites and Co-requisites: Cybersecurity (CIS 3XXX)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "S.1.1"
+   ]
+  },
+  {
+   "school": "Texas A&M University-San Antonio",
+   "course": "CSEC 4324 Penetration Testing（Advanced 课 CSEC 4483 的先修正是它）",
+   "url": "https://catalog.tamusa.edu/undergraduate/courses-az/csec",
+   "prereq_text": "Prerequisites: C or better in MATH 1314, CSEC 2306 or CSCI 4306, CSEC 3321 or CSCI 3321.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.3.2",
+    "S.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "S.2.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "S.1.1",
+   "kind": "required",
+   "evidence": "UF CIS 4XXX 先修 “Cybersecurity (CIS 3XXX)”；TAMUSA CSEC 4324 先修 CSEC 3321 Information Security"
+  },
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "TAMUSA CSEC 4324 先修 CSEC 2306 Computer Networks（TCP/IP 与 OSI 模型、网络应用）"
+  }
+ ],
+ "notes": "原图建议前置 S.2.2（网络安全）在两门课的先修里都没有出现：UF 只要一门通用 cybersecurity 导论课，TAMUSA 要的是 Computer Networks（CSEC 2306，按内容映射到 C.3.2 而不是“网络安全”）+ Information Security，所以记 not_mentioned；真正被要求的是“网络基础”和“安全导论”。资源方面：WSTG 是免费、长期稳定、能按章在线读的行业标准测试方法（含 recon、授权/权限测试、证据分析与报告），但它是 Web 应用导向，且“授权范围/rules of engagement”和“修复后复测”写得较薄；PTES（pentest-standard.org）本来更贴合这两个点，实测 http://www.pentest-standard.org/index.php/Main_Page 连接超时打不开，故不采用。UF 课程的 lecture outline 里正好有 Pre-engagement、scoping、Ethical requirements and legal issues、Penetration test report structure，可作为授权与报告部分的补充。TAMUSA 的 MATH 1314（College Algebra）在节点表里没有对应项，未映射。"
+}

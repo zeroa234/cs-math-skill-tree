@@ -1,0 +1,50 @@
+{
+ "id": "S.3.3",
+ "resource": {
+  "tier": "website",
+  "title": "CS 59000-DSP / CS 55600 Data Security and Privacy（Purdue，Ninghui Li；每周 slides + 作业全部公开）",
+  "url": "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/lectures.html",
+  "lang": "en",
+  "free": true,
+  "covers": "访问控制全部主干：UNIX 访问控制、为什么访问控制在恶意软件下失效（confused deputy）、DAC 弱点分析、Bell-LaPadula 机密性模型、Biba 与 Clark-Wilson 完整性模型（含审计/账本完整性思路）、non-interference 与 non-deducability、RBAC、ABAC、数据库访问控制；数据隐私主干：隐私政策、k-anonymity / l-diversity / t-closeness、重建攻击、ε-差分隐私定义与机制、近似 DP 与高斯机制、直方图与边际查询发布、SVT、本地差分隐私（LDP）；加密部分：对称/非对称加密、同态加密与安全函数求值。数据脱敏（匿名化）与隐私设计在这一串里都有对应讲义。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Virginia",
+   "course": "CS 4501-003 Special Topics in Computer Science: Data Privacy",
+   "url": "https://tianhao.wang/f26-dataprivacy/",
+   "prereq_text": "Required preparation: Completion of an introductory programming course plus at least one 2000-level computing course, or equivalent programming experience. Basic probability and statistics, including distributions, averages, and simple evaluation metrics. ... Helpful UVA courses, but not prerequisites: CS 3710: Introduction to Cybersecurity, for threat models, attacks, and defenses. ... No prior coursework in privacy, cybersecurity, machine learning, cryptography, or AI is required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "Purdue University",
+   "course": "CS 59000-DSP / CS 55600 Data Security and Privacy",
+   "url": "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/",
+   "prereq_text": "（该课程主页“Textbook Information: No required textbook.”等栏目未列出任何先修要求，全页没有 Prerequisite 字样）",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "S.1.1": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UVA CS 4501-003 写 “Completion of an introductory programming course plus at least one 2000-level computing course, or equivalent programming experience”"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "UVA CS 4501-003 写 “Basic probability and statistics, including distributions, averages, and simple evaluation metrics”"
+  }
+ ],
+ "notes": "Purdue 这门课的 slides 同时覆盖访问控制与数据隐私/差分隐私，是少数能把本节点两大块一次讲全的公开课程网站（加密部分也有对称/非对称/同态加密讲义），所以选它做主资源；缺点是研究生课（CS590/CS556）、DP 部分偏数学，D2 入门可先看前半学期的访问控制与 k-anonymity 讲义再看 DP。原图建议前置 S.1.1 记 recommended：UVA 的 Data Privacy 把 CS 3710（Introduction to Cybersecurity，含 threat models、attacks、defenses）列为 “Helpful UVA courses, but not prerequisites”，同时又明说 “No prior coursework in privacy, cybersecurity ... is required”，所以不是 required。另一个备选：Berkeley iSchool Cyber 233 Privacy Engineering（https://www.ischool.berkeley.edu/courses/cyber/233，已打开，讲隐私史、美欧法律框架、三种隐私设计框架），但先修写 “MICS students only. CYBER 206.”，只对项目内学生开放，不适合当通用资源。"
+}

@@ -1,0 +1,98 @@
+{
+ "id": "S.5.1",
+ "resource": {
+  "tier": "website",
+  "title": "15-316 Software Foundations of Security & Privacy（CMU，Matt Fredrikson；课程主页 + 讲义 PDF + 作业）",
+  "url": "https://15316-cmu.github.io/2026/",
+  "lang": "en",
+  "free": true,
+  "covers": "策略模型（safety & liveness、information flow 信息流、capabilities）、reference monitors（引用监控器/可信基的经典构造）、security type systems（用类型系统静态保证非干扰）、隔离与可信基的实现手段（software fault isolation、control-flow integrity、hardware protection）、trusted computing（authorization logic、PKI、硬件与软件支持）、侧信道漏洞与防御；逻辑与语言基础正好补齐形式验证那一段：formal proof、soundness/completeness、program semantics、specification and verification of program behavior、software model checking。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-316 Software Foundations of Security & Privacy",
+   "url": "https://15316-cmu.github.io/2026/syllabus.html",
+   "prereq_text": "Pre-requisites: 15-213 (Introduction to Computer Systems) or 15-150 (Principles of Functional Programming).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "C.2.1",
+    "P.2.2",
+    "P.1.3"
+   ]
+  },
+  {
+   "school": "University of North Carolina at Chapel Hill",
+   "course": "COMP 590-132 Using Formal Methods for Security",
+   "url": "https://www.cs.unc.edu/~csturton/courses/verifiedsec/590-790-132-sp23-syllabus.pdf",
+   "prereq_text": "The 590 course is open to CS undergraduate students who have completed (with a grade of C or higher) COMP 283, 210, 211, 301, 455. A course in security (COMP 435, 535) or cryptography is recommended as a pre- or corequisite.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.3",
+    "F.1.1",
+    "C.2.2",
+    "P.1.1",
+    "F.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.3.3": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "CMU 15-316 先修 15-213 Introduction to Computer Systems"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "同上，15-213 含进程/虚拟内存等 OS 概念"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "同上，15-213 以 C 与机器级编程为主"
+  },
+  {
+   "id": "P.1.3",
+   "kind": "required",
+   "evidence": "CMU 15-316 允许用 15-150 Principles of Functional Programming 代替 15-213（函数式编程路线）"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UNC COMP 590 先修 COMP 283 Discrete Structures（逻辑、证明、归纳）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UNC COMP 590 先修 COMP 210 Data Structures and Analysis"
+  },
+  {
+   "id": "C.2.2",
+   "kind": "required",
+   "evidence": "UNC COMP 590 先修 COMP 211 Systems Fundamentals（指针、内存管理、进程模型、系统调用）"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UNC COMP 590 先修 COMP 301 Foundations of Programming"
+  },
+  {
+   "id": "F.2.1",
+   "kind": "required",
+   "evidence": "UNC COMP 590 先修 COMP 455 Models of Languages and Computation（自动机/图灵机）"
+  },
+  {
+   "id": "S.1.1",
+   "kind": "recommended",
+   "evidence": "UNC COMP 590 写 “A course in security (COMP 435, 535) or cryptography is recommended as a pre- or corequisite”，COMP 435 是 Computer Security Concepts"
+  }
+ ],
+ "notes": "原图建议前置 F.3.3（程序验证与模型检查）在两门课里都没有写成先修：CMU 15-316 自己就教 software model checking（属于课程内容而非先修），UNC COMP 590 要求的是离散数学＋数据结构＋系统基础＋计算理论（COMP 455），所以记 not_mentioned。资源选择说明：ETH Zurich 的 263-4600-00L “Formal Methods for Information Security”（https://infsec.ethz.ch/education/ss2025/fmsec.html，已打开核实）内容与本节点几乎逐条对应——协议建模与验证（SSL/TLS、SSH、Kerberos、SAML、IPSec 的攻击与验证）、non-interference 的语义与类型系统视角、runtime verification——但它的讲义/笔记放在 Moodle，站上只有课程描述和参考书目，不能当“能直接系统学”的网站资源，所以主资源选了公开讲义的 CMU 15-316；CMU 这门课对“协议模型/认证性质”这块覆盖较弱，需要协议部分时按 ETH 大纲自学或用 Tamarin/ProVerif 手册补。UNC 的先修原文来自 syllabus PDF（fetch 抓不到 PDF 正文，用了一次 tavily_extract 读取）。UNC 课程编号对应名称已用 https://catalog.unc.edu/courses/comp/ 核实。"
+}

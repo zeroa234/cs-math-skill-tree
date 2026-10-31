@@ -1,0 +1,48 @@
+{
+ "id": "S.5.2",
+ "resource": {
+  "tier": "book",
+  "title": "Security Engineering: A Guide to Building Dependable Distributed Systems（Ross Anderson，第 3 版；作者主页提供全书各章免费下载）",
+  "url": "https://www.cl.cam.ac.uk/~rja14/book.html",
+  "lang": "en",
+  "free": true,
+  "covers": "漏洞成因与真实系统剖析（银行与账务、核指挥控制、打印与封印、电话/移动网络等成章的攻击与失效分析）、缓解设计（Ch 27 Secure Systems Development、Ch 28 Assurance and Sustainability、Ch 21 Network Attack and Defence）、测量与监测（Ch 14 Monitoring and Metering；Ch 17 Biometrics 里的错误率度量；Ch 19 Side Channels）、以及本节点特别提到的安全经济学（Ch 8 Economics）、策略与边界（Ch 9/10/11）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.858 Computer Systems Security",
+   "url": "https://css.csail.mit.edu/6.858/2022/general.html",
+   "prereq_text": "MIT catalog description ... Prereq.: 6.033",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.2.1",
+    "C.3.2",
+    "C.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "S.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "MIT 6.858 先修 6.033（Computer System Engineering，操作系统部分）"
+  },
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "同上，6.033 含网络部分"
+  },
+  {
+   "id": "C.4.1",
+   "kind": "required",
+   "evidence": "同上，6.033 含分布式系统部分"
+  }
+ ],
+ "notes": "两次检索都没找到“安全测量/系统安全研究”的大学课程页（结果全是 research security 合规培训、USENIX 论文页或别的话题），可核实的只有 MIT 6.858（系统安全，含大量论文阅读、5 个 lab 与最终项目，先修只写 6.033），所以 courses 只填一门，且它并不要求先修安全课——原图建议前置 S.2.1 记 not_mentioned。资源按优先级退到 book：Anderson 第 3 版整本各章可在作者主页免费下载，是唯一同时覆盖“漏洞成因＋缓解设计＋安全经济学＋监控/计量”的经典教材；但它不教“可复现实验”和网络测量的方法论，那部分需要另配 USENIX Security / IMC 的论文与 artifact evaluation 实践。查过 Cambridge 的 Security 课程页想升级成 website（https://www.cl.cam.ac.uk/teaching/2425/Security/ 与 /2324/Security/ 均 404），故未采用。"
+}

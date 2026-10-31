@@ -1,0 +1,37 @@
+{
+ "id": "S.4.3",
+ "resource": {
+  "tier": "material",
+  "title": "Malware Analysis — CSCI 4976（Rensselaer Polytechnic Institute，RPISEC 授课；12 讲讲义 + 实验全部公开）",
+  "url": "https://github.com/RPISEC/Malware",
+  "lang": "en",
+  "free": true,
+  "covers": "讲次直接对应节点内容：01 Introduction（Basic Static Analysis、Basic Dynamic Analysis）、02 Advanced Static Analysis（x86、IDA、code constructs）、03 Analyzing Windows Programs（WinAPI、handles、Windows internals、networking、COM）、04 Advanced Dynamic Analysis（调试概念与工具）、05 Malware Behavior（恶意行为与技术）、06 Data Encoding & Countermeasures、07 Covert Launching、08 Anti-Analysis（anti-disassembly / anti-VM / anti-debugging / anti-AV）、09 Packing and Unpacking、10 Intro to Windows Kernel、11 Rootkit Techniques（hooking、DKOM）、12 Rootkit Anti-Forensics & Covert Channels；配套 lab 用真实样本做基本分析，样本加密压缩（口令 infected）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Rensselaer Polytechnic Institute (RPI)",
+   "course": "CSCI 4976 Malware Analysis（RPISEC）",
+   "url": "https://github.com/RPISEC/Malware",
+   "prereq_text": "This course carried a prereq of Computer Organization - CSCI 2500 at RPI. ... Our expected demographic for Malware Analysis was students with zero reverse engineering experience. That said, to be able to take this course you will probably need at least the following skills. * Working knowledge of C/C++ * Any assembly level experience",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2",
+    "C.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.2.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "RPI CSCI 4976 先修 “Computer Organization - CSCI 2500”（含 C、MIPS/x86 汇编、datapaths、CPU 流水线与缓存、内存映射），并写 “Any assembly level experience”"
+  }
+ ],
+ "notes": "原图建议前置 P.2.2（C/C++ 与底层编程）记 supported：课程把 “Working knowledge of C/C++” 写成必需技能，并把 Computer Organization 列为先修。另外课程要求汇编/组成原理层次的知识，因此把 C.1.1 记进 extra_prereqs。资源优先级说明：OST2（https://ost2.fyi/，已打开核实，站内确有 “Reverse Engineering & Malware Analysis” 学习路径，免费开放课程材料）是更“网站”型的候选，但站点上课程目录的具体页面试了三个 URL 都是 404，无法核实其讲次内容，故未把它写成主资源，只在 notes 里给出；RPISEC 这门课的讲义与实验目录能逐讲核实，所以按 material（课程讲义/实验）落档。第二门课本想用 Johns Hopkins EP 695.744 Reverse Engineering and Vulnerability Analysis（https://apps.ep.jhu.edu/syllabus/fall-2026/695.744.81），fetch 返回 403 打不开，按规则不写进 courses。"
+}

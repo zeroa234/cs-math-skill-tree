@@ -1,0 +1,82 @@
+{
+ "id": "S.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "Introduction to Software Security（UW-Madison，Barton P. Miller & Elisa R. Heymann；免费开放教材＋课程模块，单章可在线看）",
+  "url": "https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/",
+  "lang": "en",
+  "free": true,
+  "covers": "Module 2 安全设计（Secure Design Principles、威胁建模 SDL / DREAD / PASTA）、Module 3 安全编码（指针与字符串、整数/浮点数值错误、目录穿越、异常、序列化、各类注入与 XSS/CSRF/会话/CORS/SSRF）、Module 4 防御技术（ASLR、内存安全检查、CFI）、Module 5 FPVA 第一原理漏洞评估（架构分析、资源识别、信任与权限分析、组件分析、结果发布 = 代码审查方法论）、Module 6 自动化评估工具（静态分析工具概念、依赖分析工具）、Module 7 动态技术（fuzz testing 原理、命令行/GUI 研究、AFL++）、Chapter 35 漏洞响应（修复与管理者视角）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Manchester",
+   "course": "COMP63342 Software Security（course unit，MSc）",
+   "url": "https://ssvlab.github.io/lucasccordeiro/courses/2022/01/software-security/index.html",
+   "prereq_text": "Prerequisites: Fundamental programming skills, including familiarity with C and Python 3. In more detail: For C, the student should know how pointers and dynamic memories work. The student should know how to develop basic algorithms/data structures ... Basic Notions in Linux System Administration: ... Understand the difference between user space and kernel space. Some interest/knowledge of logic and modeling: Understand propositional and first-order logic. Understand linear-time temporal logic.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.2.2",
+    "P.2.3",
+    "C.2.1",
+    "F.1.1",
+    "M.5.2",
+    "F.3.3"
+   ]
+  },
+  {
+   "school": "Florida Polytechnic University",
+   "course": "CEN 4033 Secure Software Engineering",
+   "url": "https://floridapoly.edu/wp-content/uploads/2026/01/CEN-4033-03_SP-2026.pdf",
+   "prereq_text": "Prerequisite(s): COP 3415 - Data Structures or COP 3530 - Data Structures & Algorithms",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.4.5": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Manchester COMP63342 写 “Fundamental programming skills”"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Manchester COMP63342 要求熟悉 C，“the student should know how pointers and dynamic memories work”"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "Manchester COMP63342 要求 “familiarity with C and Python 3”"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Manchester COMP63342 要求会写 “basic algorithms/data structures”；Florida Poly CEN 4033 先修 Data Structures"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "Manchester COMP63342 要求 “Basic Notions in Linux System Administration ... user space and kernel space”"
+  },
+  {
+   "id": "M.5.2",
+   "kind": "required",
+   "evidence": "Manchester COMP63342 要求 “Understand propositional and first-order logic”"
+  },
+  {
+   "id": "F.3.3",
+   "kind": "required",
+   "evidence": "Manchester COMP63342 要求 “Understand linear-time temporal logic”（LTL 通常出现在模型检查/验证课）"
+  }
+ ],
+ "notes": "主资源是 UW-Madison 的开放课程网站：全书各章（含静态分析工具概念、fuzz testing 与 AFL++、FPVA 代码审查方法）都能在浏览器里直接看，正文与 slides 免费，符合“网站优先”。原图建议前置 P.4.5（软件测试、质量与可靠性）在两门课的先修说明里都没有出现：Manchester 只在“Relationship to other courses”里提到 test-driven development，佛罗里达理工只写 Data Structures，所以记 not_mentioned。另注：RIT SE 331 “Engineering Secure Software” 的主题列表与本节点几乎一一对应（security in requirements engineering / fuzzing / static analysis），但其 syllabus 只写 “Prerequisite: SE362”，无法核实 SE362 的内容，故未采用。"
+}

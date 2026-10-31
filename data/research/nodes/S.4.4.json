@@ -1,0 +1,54 @@
+{
+ "id": "S.4.4",
+ "resource": {
+  "tier": "website",
+  "title": "MITRE ATT&CK®（官方知识库，免费在线：Matrices / Tactics / Techniques / Mitigations / Detections / CTI）",
+  "url": "https://attack.mitre.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "威胁情报与对手行为建模（Groups、Software、Campaigns，即 CTI 部分）、按战术-技术组织的攻击行为目录（Enterprise/Mobile/ICS 三套矩阵）、检测工程侧（Defenses 下的 Detection Strategies、Analytics、Data Components，说明每个技术该看哪些数据源与日志组件）、缓解（Mitigations）；结合 TTP 做攻防评估与演练（红队模拟哪些技术、蓝队覆盖到哪里），并可用来给检测覆盖率定度量口径。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Texas A&M University-San Antonio",
+   "course": "CSEC 4326 Security & Operation Practicum",
+   "url": "https://catalog.tamusa.edu/undergraduate/courses-az/csec",
+   "prereq_text": "Prerequisites: C or better in MATH 1314, CSEC 2306 or CSCI 4306, CSEC 3321 or CSCI 3321, CSEC 3325, and CSEC 4324.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.3.2",
+    "S.1.1",
+    "S.2.2",
+    "S.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "S.4.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "TAMUSA CSEC 4326 先修 CSEC 2306 Computer Networks（TCP/IP 与 OSI 模型、网络应用）"
+  },
+  {
+   "id": "S.1.1",
+   "kind": "required",
+   "evidence": "TAMUSA CSEC 4326 先修 CSEC 3321 Information Security"
+  },
+  {
+   "id": "S.2.2",
+   "kind": "required",
+   "evidence": "TAMUSA CSEC 4326 先修 CSEC 3325 Network Security"
+  },
+  {
+   "id": "S.4.1",
+   "kind": "required",
+   "evidence": "TAMUSA CSEC 4326 先修 CSEC 4324 Penetration Testing"
+  }
+ ],
+ "notes": "两次检索找到的“安全运营/SOC/检测工程”课程几乎全是厂商或付费培训（SANS SEC450/SEC555、TCM SOC101、CyberDefenders、Coursera Packt 课），没有可核实的大学课程页，只有 Texas A&M-San Antonio 的 CSEC 4326 Security & Operation Practicum 是正规大学课且有明确先修；但它的定位偏“网络/系统管理员与架构师的运维实务”，对日志关联、威胁情报、检测工程、度量讲得浅，所以只算勉强合格的证据，candidate_check 里原图建议前置 S.4.2（取证与事件响应）没有被列为先修，记 not_mentioned。资源侧：MITRE ATT&CK 是免费、官方、长期稳定的行业标准，威胁情报（CTI）、检测数据源/检测策略（Detection Strategies、Analytics、Data Components）和 mitigations 都能在站内系统读；不足是它不教 SIEM 日志关联的具体实现和运营度量方法，这部分建议配合 SANS SEC555 的公开大纲或 Sigma 规则库自学（未核实，不作推荐依据）。JWU 的 CYB 课程目录（catalog.jwu.edu/courses/cyb/cyb.pdf）里有 “Active Cyber Defense and Countermeasures” 等课，但 PDF 抓不到正文，未采用。"
+}

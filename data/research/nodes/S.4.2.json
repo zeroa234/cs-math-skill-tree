@@ -1,0 +1,44 @@
+{
+ "id": "S.4.2",
+ "resource": {
+  "tier": "material",
+  "title": "A Course on Digital Forensics（Texas Tech University 计算机系，Dr. Akbar Siami Namin 授课；讲义、实验与工具教程全部公开在 GitHub）",
+  "url": "https://github.com/asiamina/A-Course-on-Digital-Forensics",
+  "lang": "en",
+  "free": true,
+  "covers": "取证与应急响应的主干：设定隔离小实验室、live collection and acquisition（现场采集）、磁盘与介质取证（磁盘结构、NTFS/HFS 等文件系统、SleuthKit/Autopsy/foremost/scalpel）、内存取证（Volatility、WinDBG、Rekall）、网络取证（Wireshark、NetworkMiner、抓包取证、Snort 日志用 SQL 查）、Windows/Linux/macOS 取证、移动设备取证（恶意 APK 样本集）、事件响应基础、恶意软件分析与 Cuckoo 沙箱、以及用真实数据练手。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "INI 14-822 Host Based Forensics",
+   "url": "https://www.andrew.cmu.edu/course/14-822/syllabus/",
+   "prereq_text": "Prerequisites: AIA (14-761)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "S.1.1"
+   ]
+  },
+  {
+   "school": "University at Albany (SUNY)",
+   "course": "BFOR 303 Computer and Memory Forensics（及 BFOR 301 Computer Forensics）",
+   "url": "https://www.albany.edu/undergraduate-bulletin/digital-forensics-courses.php",
+   "prereq_text": "BFOR 303 ... Prerequisite(s): BFOR 201. ／ BFOR 301 ... Prerequisite(s): BFOR 201.",
+   "prereq_kind": "required",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "C.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "S.1.1",
+   "kind": "required",
+   "evidence": "CMU 14-822 先修 “AIA (14-761)”（Applied Information Assurance，信息系统保障/安全导论类课）"
+  }
+ ],
+ "notes": "原图建议前置 C.2.1（操作系统）在两门课里都没有以先修形式出现：CMU 14-822 只写 AIA (14-761)，Albany 的 BFOR 301/303 只写内部课 BFOR 201（Introduction to Digital Forensics），所以记 not_mentioned；不过 CMU 课程日历里有 “Technical Foundations; Volume Analysis / File Systems I” 等偏 OS 的内容，Albany BFOR 303 直接做 Windows/Linux/macOS 内存分析，实际动手离不开 OS 知识——这属于课程内容而非写明先修，故不升级为 required。资源方面：优先找过“网站”型资源，搜索结果里能系统学的主要是 SANS FOR508、Mile2、Coursera 这类付费课，以及若干 syllabus PDF（BU MET CS 693、UT Dallas MIS 6333 等，PDF 抓不到正文），免费且覆盖磁盘/内存/网络＋事件响应的完整大学课程材料只有 Texas Tech 这个公开仓库，所以按优先级降到 material。"
+}
