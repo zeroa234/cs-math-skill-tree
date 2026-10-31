@@ -1,0 +1,30 @@
+{
+ "id": "D.1.4",
+ "resource": {
+  "tier": "website",
+  "title": "PostgreSQL 18 Documentation, Part III. Server Administration（官方文档，全文免费）",
+  "url": "https://www.postgresql.org/docs/current/admin.html",
+  "lang": "en",
+  "free": true,
+  "covers": "逐章核对目录：Ch18 Server Setup（18.8 Encryption Options、18.9 SSL、18.10 GSSAPI、18.11 SSH Tunnels）、Ch19 Server Configuration（19.3 Connections and Authentication、19.5 WAL、19.8 Error Reporting and Logging、19.9 Run-time Statistics、19.10 Vacuuming）、Ch20 Client Authentication（pg_hba.conf 与 password/LDAP/RADIUS/cert/PAM 等方法）、Ch21 Database Roles（role attributes、membership、predefined roles、function security）＝授权、Ch24 Routine Maintenance（vacuum、reindex、log file maintenance）、Ch25 Backup and Restore（SQL dump、文件级备份、连续归档与 PITR）、Ch26 High Availability / Replication、Ch27 Monitoring（累积统计、锁、progress reporting、磁盘用量）、Ch28 WAL 与可靠性、Ch29 Logical Replication。备份恢复、授权、加密、监控与运维全覆盖；『审计』只有日志与统计这类基础件，没有专门的审计章节（pgaudit 属扩展）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "New York City College of Technology (CUNY)",
+   "course": "CST 4714 Database Administration",
+   "url": "https://www.citytech.cuny.edu/computer-systems/docs/courses/CST4714.pdf",
+   "prereq_text": "PREREQUISITES Student must have successfully completed CST3604 with a grade of C or higher.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "D.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "D.1.1": "supported"
+ },
+ "extra_prereqs": [],
+ "notes": "D.1.1 判 supported 的依据：CST4714 的唯一先修是 CST3604，而 CST4714 自己的 COURSE OUTLINE 第 1 周就是『Database administration – tasks and roles / Review of Database design and modeling』，即先修课教的是数据库设计与建模（关系模型/SQL 部分），对应 D.1.1；课程描述为『planning, building, tuning, troubleshooting, securing and monitoring databases … manage users, privileges, and resources, implement basic backup and recovery procedures』，正好是本节点内容，先修原文已用页面正文核对（PDF 通过 Tavily 取文核实，正文含 PREREQUISITES Student must have successfully completed CST3604 with a grade of C or higher）。只找到这一门明确把数据库设计/建模课列为先修的 DBA 课程，因此 courses 只列 1 门。资源说明：PostgreSQL 官方文档是产品文档式的『官方教程』，第 18/20/21/24/25/26/27 章正好按备份恢复→授权→加密→监控运维的顺序讲，适合 D2 入门；它不覆盖 MySQL/SQL Server 特有机制，也不覆盖审计合规（未在 covers 里虚报）。"
+}

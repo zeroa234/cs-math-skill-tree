@@ -1,0 +1,52 @@
+{
+ "id": "D.4.1",
+ "resource": {
+  "tier": "website",
+  "title": "Knowledge Graphs（Hogan, Blomqvist, Cochez 等 18 位作者，Springer 2021，免费 HTML 全书 kgbook.org）",
+  "url": "https://kgbook.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "目录逐条核对，且书里声明『we do not assume that readers have specific expertise on knowledge graphs』：Ch2 Data Graphs（directed edge-labelled graphs、property graphs、graph stores；2.2 Querying 的 basic/complex/navigational graph patterns 与查询接口）、Ch3 Schema/Identity/Context（semantic schema、validating schema 即语义约束、persistent identifiers、external identity links、reification/context）、Ch4 Deductive Knowledge（Ontologies：interpretations、entailment；Reasoning：Rules、Description Logics）、Ch5 Inductive Knowledge（graph analytics、embeddings、GNN、symbolic learning）、Ch6 Creation and Enrichment（NER/entity linking/relation extraction、表格与结构化源映射、3.2 的 identity links 与 6.4.3 的跨图谱映射即知识融合）、Ch7 Quality Assessment、Ch8 Refinement、Ch9 Publication。实体关系、本体、规则、语义约束、知识融合、图谱查询六项全覆盖。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "openHPI (Hasso Plattner Institute) / FIZ Karlsruhe – KIT",
+   "course": "Knowledge Graphs（Harald Sack, Mehwish Alam 主讲，6 周英文 MOOC）",
+   "url": "https://open.hpi.de/learn/knowledgegraphs2020",
+   "prereq_text": "Requirements for this Course: Basic understanding of web technologies, such as URL and HTTP; Basic understanding of mathematics, in particular statistics and probability theory; Basic knowledge of database technology, such as relational databases and SQL query language",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "D.1.1",
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "CSIR Meraka Institute / Free University of Bozen-Bolzano（Masters Ontology Winter School 2010，授课人 Maria Keet）",
+   "course": "Introduction to Ontology Engineering, with emphasis on Semantic Web Technologies",
+   "url": "http://www.meteck.org/teaching/SA/MOWS10OntoEngCouse.html",
+   "prereq_text": "It is assumed the participant is familiar with first order logic and conceptual data modelling, such as UML and ER.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.5.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "D.1.1",
+   "kind": "required",
+   "evidence": "openHPI Knowledge Graphs 课程要求『Basic knowledge of database technology, such as relational databases and SQL query language』"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "openHPI Knowledge Graphs 课程要求『Basic understanding of mathematics, in particular statistics and probability theory』"
+  }
+ ],
+ "notes": "M.5.2（数理逻辑）判 supported：Maria Keet 的本体工程课（CSIR Meraka / FUB，2010 冬季学校，课程内容即本体工程与 Semantic Web 技术）明写『It is assumed the participant is familiar with first order logic and conceptual data modelling, such as UML and ER』，一阶逻辑即 M.5.2；openHPI 那门课的 requirements 三条里没有逻辑课，不构成 M.5.2 的证据。资源 kgbook.org 与备选的 openHPI 课程、Birkbeck《Semantic Technologies》课程 slides 都在本机打开核实过；kgbook 另有 Ch4.2.1 Rules / 4.2.2 Description Logics，也正好是 D.4.2 的核心内容，两个节点会共用这本书（已在 D.4.2 的 notes 里给出换成 Birkbeck slides 或 W3C OWL 2 Primer 的方案）。"
+}

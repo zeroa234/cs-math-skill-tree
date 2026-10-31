@@ -1,0 +1,59 @@
+{
+ "id": "D.1.3",
+ "resource": {
+  "tier": "website",
+  "title": "UC Berkeley CS 186 公开在线讲义 Database Systems（NoSQL / Distributed Transactions / Consensus / Parallel Query 等章节）",
+  "url": "https://cs186berkeley.net/notes/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程公开 notes 目录已逐条核对：『NoSQL』一讲讲 NoSQL 动机（OLTP vs OLAP）、Partitioning（即 sharding，说明按分区并行、写只落单机）、Replication（主/副本、读写代价、单点故障动机）、CAP 定理与 eventual consistency、Key-Value Stores、Wide-column Stores（列族）、Document Stores（JSON/MongoDB，schema-on-write vs schema-on-read）；另有『Parallel Query Processing』『Distributed Transactions』（2PC、Paxos）『Consensus』三讲。合起来覆盖分片、复制、分布式事务与键值/列族/文档三类数据模型；图数据模型这一讲未覆盖（见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-721 Advanced Database Systems",
+   "url": "https://www.cs.cmu.edu/~15721-f25/",
+   "prereq_text": "Prerequisites: CMU 15-445/645 or equivalent. If you have concerns about meeting the prerequisites, please contact the instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "D.1.2"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 186 Introduction to Database Systems",
+   "url": "https://cs186berkeley.net/syllabus/",
+   "prereq_text": "We will expect students to have taken CS 61A, CS 61B, and CS 61C. CS61A/B will be enforced as a prerequisite. For Fall 2026, CS61C is no longer an enforced prerequisite, but we expect you to be familiar with the relevant content.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1",
+    "C.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "D.1.2": "supported",
+  "C.4.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 186 强制先修 CS 61A"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 186 强制先修 CS 61B（数据结构）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "recommended",
+   "evidence": "CS 186 自 Fall 2026 起不再强制 CS 61C 但要求熟悉其内容；CMU 15-721 要求 15-445，而 15-445 要求 15-213（机器结构）"
+  }
+ ],
+ "notes": "D.1.2 判 supported：CMU 15-721（讲授 parallel and distributed data systems）把 15-445/645（即 D.1.2 的内核课后半）写成唯一先修。C.4.1（分布式系统）判 not_mentioned：CS 186 与 15-721 的先修里都没有分布式系统课，15-721 的分布式内容以数据库论文形式直接讲。资源侧缺口：CS 186 notes 只讲到 KV / wide-column / document 三类数据模型，没有图数据库一讲；notes 首页亦自述『our notes are under construction and are not comprehensive』。若需要补齐图模型，主代理可考虑加一本 NoSQL Distilled（Sadalage & Fowler）或 kgbook.org 第 2 章（property graph）作为补充，本文件不把未核实页面写成资源。"
+}

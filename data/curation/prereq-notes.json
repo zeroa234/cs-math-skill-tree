@@ -194,6 +194,93 @@
   "P.2.2": "Berkeley CS 267 的作业用 C/C++ 实现并行算法。",
   "_summary": "UW AMath 483/583：要求编程经验，数值分析是加分项；Berkeley CS 267：假定会编程和必要的数学。"
  },
+ "D.1.1": {
+  "P.1.1": "Berkeley CS 186 强制先修 CS 61A；数据库课程都假定会编程，SQL 也要在程序里调用。",
+  "F.1.1": "Berkeley CS 186 同时强制 61B；理解索引、规范化后的连接代价要用到。",
+  "_summary": "Berkeley CS 186：强制先修 61A、61B，建议熟悉 61C；CMU 15-445：先修 15-213 与 C++（这两门偏数据库内核，本节点只取编程基础）。原图的“集合论”两门课都没提。"
+ },
+ "D.1.2": {
+  "D.1.1": "Berkeley CS 186 先讲 SQL 和关系代数，再讲存储、索引、执行和优化；查询优化处理的就是关系代数表达式。",
+  "F.1.1": "Berkeley CS 186 强制先修 61B；B+ 树、哈希表、外部排序都是数据结构。",
+  "C.1.1": "CMU 15-445 先修 15-213；Berkeley CS 186 要求熟悉 61C：缓冲池、磁盘页、存储层次是数据库内核的硬件背景。",
+  "P.2.2": "CMU 15-445 不教 C++17，项目要在 C++ 代码库上完成。",
+  "C.2.1": "并发控制、日志恢复与操作系统的线程、文件 I/O 相关。",
+  "C.2.4": "存储管理与文件系统、磁盘特性相关。",
+  "_summary": "CMU 15-445：先修 15-213 + C++17；Berkeley CS 186：强制 61A/61B，期望熟悉 61C。"
+ },
+ "D.1.3": {
+  "D.1.2": "CMU 15-721 先修 15-445；Berkeley CS 186 把分布式事务、复制放在单机内核之后讲。",
+  "C.4.1": "共识、复制、分区容错属于分布式系统；两门课都没把它列为先修，课内会讲到够用。",
+  "_summary": "CMU 15-721：先修 15-445/645；Berkeley CS 186 讲义含 NoSQL、分布式事务与共识章节。"
+ },
+ "D.1.4": {
+  "D.1.1": "CUNY CST 4714 Database Administration 先修 CST3604（数据库课，C 以上）。",
+  "S.1.1": "授权、审计、加密要放在威胁模型里理解。",
+  "C.2.1": "数据库运维要管理 Linux 服务器、进程与文件。",
+  "_summary": "CUNY CST 4714 Database Administration：先修 CST3604。"
+ },
+ "D.1.5": {
+  "D.1.1": "质量规则、血缘、模式演化都以关系模型和 SQL 表达。",
+  "_summary": "证据不足：UIUC IS 524 Data Governance 课程页没写先修；资源是 DAMA-DMBOK（书）。按内容需要起草，待核实。"
+ },
+ "D.2.1": {
+  "D.3.1": "Berkeley Data 101（数据工程）要求先修 Data 100 等数据科学课。",
+  "F.1.1": "Berkeley Data 101 要求 CS 61B 或同等的编程课。",
+  "D.1.1": "Data 101 课内会复习 SQL；入库和转换常用 SQL 表达。",
+  "P.2.3": "管线常用 Python 编写。",
+  "_summary": "Berkeley Data 101 / CS 187 Data Engineering：先修高年级数据科学课 + CS 61B。"
+ },
+ "D.2.2": {
+  "D.3.1": "Berkeley Data 101 要求先修数据科学课。",
+  "F.1.1": "Berkeley Data 101 要求 CS 61B。",
+  "D.2.1": "批处理作业通常嵌在数据管线里调度。",
+  "C.4.1": "Spark 等系统的容错、shuffle 以分布式系统为基础；两门课都没把它列为先修。",
+  "F.1.2": "Stanford CS 246 期望 CS 161 水平的算法分析。",
+  "M.6.1": "Stanford CS 246 期望概率基础（采样、哈希类算法）。",
+  "_summary": "Berkeley Data 101：先修数据科学课 + 61B；Stanford CS 246：期望概率、证明、线性代数、算法分析。"
+ },
+ "D.2.3": {
+  "F.1.2": "Stanford CS 276 要求 CS 161（算法设计与分析）；倒排索引压缩、求交、近似最近邻都是算法问题。",
+  "M.6.1": "Stanford CS 276 要求扎实的概率统计基础；语言模型检索、评估都要用。",
+  "P.2.2": "CS 276 建议先修 CS 107（C 与机器级编程）。",
+  "F.1.3": "CS 161 含图与字符串算法，PageRank、字符串匹配会用到。",
+  "M.3.1": "向量空间模型、向量检索用线性代数。",
+  "P.2.3": "CS 276 作业全用 Python。",
+  "_summary": "Stanford CS 276 Information Retrieval：CS 107 + CS 161 + 概率统计，作业用 Python。"
+ },
+ "D.3.1": {
+  "P.2.3": "Python 数据工具（pandas、NumPy）在课内会讲；先会 Python 上手更快。",
+  "M.6.1": "Data 8 在课内讲基础统计推断，有概率基础会更轻松。",
+  "_summary": "Berkeley Data 8 Foundations of Data Science：专为没学过统计和计算机的学生设计，作为第 1 步的起点；后续的 Data 100 才要求 Data 8 + 编程 + 线性代数。"
+ },
+ "D.3.2": {
+  "M.6.1": "Stanford CS 246 期望概率基础（CS 109 水平）；关联度量、采样、局部敏感哈希都是概率论证。",
+  "M.3.1": "Stanford CS 246 期望线性代数基础；降维、PageRank、矩阵分解要用。",
+  "F.1.2": "Stanford CS 246 期望 CS 161 水平的算法分析；挖掘大数据的核心是算法复杂度。",
+  "D.3.1": "数据清洗、探索分析是挖掘之前的步骤。",
+  "A.2.1": "聚类、异常检测与机器学习方法重合。",
+  "M.6.2": "评估发现的模式是否显著要用统计。",
+  "_summary": "Stanford CS 246 Mining Massive Datasets：期望概率、严格证明、线性代数、算法分析背景。"
+ },
+ "D.3.3": {
+  "D.3.1": "Berkeley Data 100 强制先修 Data 8（数据科学导论）。",
+  "P.1.1": "Berkeley Data 100 强制先修 CS 61A。",
+  "M.6.2": "置信区间、假设检验、功效分析属于数理统计；Data 100 只讲到够用。",
+  "M.3.1": "Data 100 要求线性代数。",
+  "_summary": "Berkeley Data 100：强制先修 Data 8 + CS 61A + 线性代数。"
+ },
+ "D.4.1": {
+  "M.5.2": "本体工程课程（Keet 的 Ontology Winter School）假定熟悉一阶逻辑；OWL/描述逻辑是一阶逻辑的片段。",
+  "D.1.1": "openHPI Knowledge Graphs 要求关系数据库与 SQL 基础，本体课程也假定会 ER 建模。",
+  "M.6.1": "openHPI 要求统计与概率基础，用于知识抽取和嵌入。",
+  "_summary": "openHPI Knowledge Graphs：Web 技术、统计概率、关系数据库与 SQL；Ontology Engineering 课程：一阶逻辑 + ER/UML 建模。"
+ },
+ "D.4.2": {
+  "D.4.1": "kgbook 和 openHPI 课程都先讲数据模型与本体，再讲演绎推理（kgbook 第 4 章 Deductive Knowledge）。",
+  "F.2.4": "描述逻辑推理、规则引擎与自动推理技术相通。",
+  "M.6.1": "归纳推理与知识图谱嵌入要用概率统计。",
+  "_summary": "openHPI Knowledge Graphs：先讲表示再讲推理；Stanford CS 520 是研究研讨课，没写先修。"
+ },
  "F.1.1": {
   "P.1.1": "Berkeley CS 61B 必修 61A；数据结构要写代码实现。",
   "M.5.3": "MIT 6.006 要求 6.042J（离散数学），不变量和复杂度的论证要用归纳。",

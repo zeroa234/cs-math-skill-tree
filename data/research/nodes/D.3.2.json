@@ -1,0 +1,56 @@
+{
+ "id": "D.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "Mining of Massive Datasets（Stanford CS246 教材，作者站点提供全书 PDF + 讲义 slides + 配套视频）",
+  "url": "http://www.mmds.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "站点核实：全书可按章免费下载 PDF，另配 CS246 用的 lecture slides 与视频；作者说明『designed at the undergraduate computer science level with no formal prerequisites』。第 3 版目录含 Ch1 Data Mining、Ch5 Link Analysis、Ch6 Frequent Itemsets（关联规则/频繁项集）、Ch7 Clustering、Ch9 Recommendation Systems、Ch10 Mining Social-Network Graphs、Ch11 Dimensionality Reduction，覆盖关联与聚类两大类模式挖掘和相似性/图上的发现过程；异常检测（anomaly detection）与『避免假发现』不是这本书的章节。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 246 Mining Massive Datasets",
+   "url": "http://web.stanford.edu/class/cs246/",
+   "prereq_text": "Prerequisites — Students are expected to have the following background: Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary). Familiarity with writing rigorous proofs (at a minimum, at the level of CS 103). Familiarity with basic linear algebra (e.g., any of Math 51, Math 103, Math 113, CS 205, or EE 263 would be much more than necessary). Familiarity with algorithmic analysis (e.g., CS 161 would be much more than necessary).",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.6.1",
+    "M.6.2",
+    "M.5.3",
+    "M.3.1",
+    "F.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.2": "recommended",
+  "D.3.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望具备 basic probability theory（CS109 / Stat116 水平，且写明 sufficient but not necessary）"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望会写严格证明，至少 CS 103 水平"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望 basic linear algebra（Math 51 等）"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望 algorithmic analysis，CS 161 水平即可"
+  }
+ ],
+ "notes": "M.6.2 判 recommended 而非 supported：CS 246 只写『basic probability theory（CS109/Stat116 …sufficient but not necessary）』，是按概率/统计素养的『期望背景』措辞，且明说不是必要条件，没有把任何统计课列为强制先修。D.3.1（数据科学导论与工具箱）判 not_mentioned：CS 246 的先修清单里没有数据科学入门课。资源侧缺口：节点提到的『异常检测』不在 MMDS 章节里；核实过的替代书是 Tan/Steinbach/Karpatne/Kumar《Introduction to Data Mining》(2nd ed) 作者页 https://www-users.cse.umn.edu/~kumar001/dmbook/index.php ，其页面写明 topics 含 anomaly detection 与 avoiding false discoveries、且只需 modest statistics background，但该书站点只放 sample chapters（非全书免费），故本节点仍选免费的 MMDS。"
+}

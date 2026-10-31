@@ -1,0 +1,50 @@
+{
+ "id": "D.4.2",
+ "resource": {
+  "tier": "website",
+  "title": "Knowledge Graphs（Springer 2021 开放获取 HTML 全书，第 4 章 Deductive Knowledge + 第 5 章 Inductive Knowledge）",
+  "url": "https://kgbook.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "逐节核对目录：4.1 Ontologies（interpretations and models、ontology features、entailment、if-then vs if-and-only-if 语义）＝描述逻辑/本体的模型论基础；4.2.1 Rules（规则推理，含 Datalog 式规则与 OWL 的关系）、4.2.2 Description Logics（DL 语法与推理）；3.1.2 Validating schema 与 3.2.2 External identity links 对应语义约束与跨源语义互操作；第 5 章 Inductive Knowledge：5.2 Knowledge Graph Embeddings、5.3 Graph Neural Networks、5.4 Symbolic Learning（rule mining、axiom mining）正是神经符号结合；第 7–8 章的质量评估与 refinement 讲推理结果如何被校验与修复。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "openHPI (Hasso Plattner Institute) / FIZ Karlsruhe – KIT",
+   "course": "Knowledge Graphs（Harald Sack, Mehwish Alam，6 周英文 MOOC）",
+   "url": "https://open.hpi.de/learn/knowledgegraphs2020",
+   "prereq_text": "Requirements for this Course: Basic understanding of web technologies, such as URL and HTTP; Basic understanding of mathematics, in particular statistics and probability theory; Basic knowledge of database technology, such as relational databases and SQL query language",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "D.1.1",
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 520 Knowledge Graphs: Data Models, Knowledge Acquisition, Inference and Applications",
+   "url": "https://web.stanford.edu/class/cs520/",
+   "prereq_text": "This class is a graduate level research seminar and will include lectures on knowledge graph topics (e.g., data models, creation, inference, access) and invited lectures from prominent researchers and industry practitioners.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "D.4.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "D.1.1",
+   "kind": "required",
+   "evidence": "openHPI Knowledge Graphs 要求『Basic knowledge of database technology, such as relational databases and SQL query language』"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "openHPI Knowledge Graphs 要求『statistics and probability theory』基础"
+  }
+ ],
+ "notes": "D.4.1 判 not_mentioned：能查到的两门课（openHPI 的 Knowledge Graphs、Stanford CS 520）都把知识表示与推理放在同一门课里教，没有任何课程把『先学过知识表示/本体课』写成推理课的先修；CS 520 页面根本没写先修（按 unspecified 记）。资源重复风险已披露：kgbook.org 与 D.4.1 用的是同一本书（D.4.1 偏 Ch2–3、6–7 的表示与融合，本节点偏 Ch4–5 的推理与神经符号）；若主代理要求两节点资源不重复，可换成已核实的两份替代：(1) Birkbeck《Semantic Technologies》课程 slides（Michael Zakharyaschev，含 'The OWL 2 Web Ontology Language' 与 'Reasoning with description logic' 两讲，https://titan.dcs.bbk.ac.uk/~michael/sw15/sw15.html ）；(2) W3C《OWL 2 Web Ontology Language Primer (Second Edition)》（https://www.w3.org/TR/owl2-primer/ ，官方规范文档，覆盖 OWL 2 DL 语义、profile 与 entailment，但没有规则推理与神经符号内容）。"
+}

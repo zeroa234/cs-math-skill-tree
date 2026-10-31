@@ -1,0 +1,51 @@
+{
+ "id": "D.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Python Data Science Handbook（Jake VanderPlas，全书 HTML 免费在线阅读）",
+  "url": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+  "lang": "en",
+  "free": true,
+  "covers": "站点自述含全书正文，目录为五章：1 IPython/Jupyter（交互式环境与 notebook 工作流）、2 NumPy（数组、索引、广播、聚合、向量化）、3 Pandas（Series/DataFrame、缺失值、合并、分组、时间序列、字符串/分类数据）、4 Matplotlib（绘图 API 与常见图表）、5 机器学习（scikit-learn：模型验证、特征工程、朴素贝叶斯、回归、SVM、决策树、聚类、降维）。对应节点的 Notebook 工作流、NumPy/Pandas/统计包、数据获取与清洗、探索性分析；『问题定义』与工程化工作流只有零星涉及。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Berkeley",
+   "course": "Data 8 The Foundations of Data Science",
+   "url": "https://data8.org/fa26/syllabus/",
+   "prereq_text": "The curriculum and format are designed specifically for students who have not previously taken statistics or computer science courses.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "Data 100 Principles and Techniques of Data Science",
+   "url": "https://ds100.org/fa26/syllabus/",
+   "prereq_text": "While we are working to make this class widely accessible, we currently require the following (or equivalent) prerequisites. Prerequisites will be enforced in Data 100. ... Foundations of Data Science: Data 8 ... Computing: The Structure and Interpretation of Computer Programs (CS 61A) or Computational Structures in Data Science (Data 88C). These courses provide additional background in python programming ... Math: Linear Algebra (Math 54, EECS 16A, Math 56, Math 110, or Stat 89A).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.2.3",
+    "M.3.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.2.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Berkeley Data 100 强制执行 CS 61A（程序设计入门）作为先修"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Berkeley Data 100 要求线性代数（Math 54 / EECS 16A 等）"
+  }
+ ],
+ "notes": "P.2.3 判 supported 的依据是 Data 100：它把 CS 61A 列为强制执行先修，并在原文说明这门课提供 python programming 背景，作业也在 Python 里做；同时 Data 8 的 syllabus 明说本课『为没学过统计或计算机课程的学生设计』，所以 P.2.3 在 Data 8 层面不成立。两门课都教本节点内容（Data 8 教完整数据科学入门，Data 100 教生命周期与工具箱），因此按要求都记为讲授本节点的课程；Data 8 对 Data 100 而言也是本节点的先修，属自指，未写进 mapped_ids。"
+}

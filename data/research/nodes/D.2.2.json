@@ -1,0 +1,76 @@
+{
+ "id": "D.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "Data Engineering Zoomcamp（DataTalks.Club 免费 9 周课程，逐模块视频 + 作业 + 最终项目）",
+  "url": "https://datatalksclub.github.io/docs/courses/data-engineering-zoomcamp/curriculum/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程页逐条核对六个模块：M1 Containerization & Infrastructure as Code（Docker + Postgres、Terraform、本地与 GCP 环境）；M2 Workflow Orchestration（Kestra，调度/重试/backfill 的管线、数据落 GCS 与 BigQuery）；dlt 采集 workshop；M3 Data Warehouse（BigQuery，partitioning / clustering 做性能与 cost optimization＝存储布局与资源权衡）；M4 Analytics Engineering（dbt staging/intermediate/mart 分层建模、测试与文档）；M5 Batch Processing（Spark + PySpark，跑在 Dataproc 上＝分布式批处理）；M6 Streaming（Kafka + Flink 流处理、schema registry 与数据序列化＝批流两套栈）。数据湖侧靠 GCS/dlt，湖仓一体与资源权衡直接落在 M3 的 partitioning/clustering 与成本优化上。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 246 Mining Massive Datasets",
+   "url": "http://web.stanford.edu/class/cs246/",
+   "prereq_text": "Prerequisites — Students are expected to have the following background: Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary). Familiarity with writing rigorous proofs (at a minimum, at the level of CS 103). Familiarity with basic linear algebra (e.g., any of Math 51 ...). Familiarity with algorithmic analysis (e.g., CS 161 would be much more than necessary).",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.6.1",
+    "M.5.3",
+    "M.3.1",
+    "F.1.2"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "Data 101 / CS 187 Data Engineering",
+   "url": "https://data101.org/fa26/syllabus/",
+   "prereq_text": "COMPSCI C100/DATA C100/STAT C100 or COMPSCI 189 or INFO 251 or DATA 144/INFO 254 or equivalent upper-division course in data science. COMPSCI 61B or INFO 206B or equivalent courses in programming. This class will not assume deep experience with databases or big data solutions.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "D.3.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.4.1": "not_mentioned",
+  "D.2.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "Berkeley Data 101 要求 CS 61B（程序设计/数据结构）"
+  },
+  {
+   "id": "D.3.1",
+   "kind": "required",
+   "evidence": "Berkeley Data 101 要求 Data C100/Stat C100 或 CS 189 等等价数据科学课"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望 basic probability theory（CS109/Stat116 水平，sufficient but not necessary）"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望会写严格证明（CS 103 水平）"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望 basic linear algebra"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "recommended",
+   "evidence": "Stanford CS 246 期望 algorithmic analysis（CS 161 水平）"
+  }
+ ],
+ "notes": "C.4.1（分布式系统）判 not_mentioned：两门课的先修清单里都没有分布式系统课——Data 101 只要求数据科学高年级课 + 程序设计，且明确『will not assume deep experience with databases or big data solutions』；CS 246 只要求概率/证明/线代/算法。D.2.1（ETL/ELT 与数据管线）判 not_mentioned：没有课程把管线课写成大数据课的先修（Data 101 自己是数据工程课，不要求先修管线）。资源说明：Zoomcamp 是 DataTalks.Club 的免费社区课程（不是大学学分课），但模块、视频、作业、项目齐全且长期更新，比公开的大学大数据课更贴本节点『湖/仓 + 批 + 流 + 成本权衡』的组合；课程证据另用两门真实大学课（Stanford CS 246、Berkeley Data 101）。"
+}

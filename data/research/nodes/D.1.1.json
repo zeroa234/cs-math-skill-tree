@@ -1,0 +1,64 @@
+{
+ "id": "D.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "Database Design – 2nd Edition（Adrienne Watt, BCcampus Open Textbook，免费在线书）",
+  "url": "https://opentextbc.ca/dbdesign01/",
+  "lang": "en",
+  "free": true,
+  "covers": "免费在线教材，目录核实含：数据库基本概念与数据模型类型（Ch2–Ch4）、The Relational Data Model（Ch7）、The Entity Relationship Data Model（Ch8）、Integrity Rules and Constraints（Ch9）、ER Modelling（Ch10）、Functional Dependencies（Ch11）、Normalization（Ch12）、Database Development Process（Ch13）等；书描述写明本版新增 SQL 内容，配关键术语与章末练习，正好覆盖实体关系建模、关系模型、约束、规范化、查询与数据建模。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "UC Berkeley",
+   "course": "CS 186 Introduction to Database Systems",
+   "url": "https://cs186berkeley.net/syllabus/",
+   "prereq_text": "We will expect students to have taken CS 61A, CS 61B, and CS 61C. CS61A/B will be enforced as a prerequisite. For Fall 2026, CS61C is no longer an enforced prerequisite, but we expect you to be familiar with the relevant content.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "F.1.1",
+    "C.1.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-445/645 Intro to Database Systems",
+   "url": "https://15445.courses.cs.cmu.edu/fall2026/syllabus.html",
+   "prereq_text": "Pre-requisites: CMU 15-213/513 ... The course instructors and TAs will not teach students how to write/debug C++17 programs during the semester. It is a prerequisite for this course.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "P.2.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.5.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 186 要求并强制 CS 61A（程序设计入门）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UC Berkeley CS 186 要求并强制 CS 61B（数据结构）"
+  },
+  {
+   "id": "C.1.1",
+   "kind": "recommended",
+   "evidence": "UC Berkeley CS 186：CS 61C 自 Fall 2026 起不再强制执行，但“we expect you to be familiar with the relevant content”"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "CMU 15-445 先修 15-213/513，并要求能写/调试 C++17（不提供相关教学）"
+  }
+ ],
+ "notes": "M.5.1（集合论）判 not_mentioned：两门数据库课的先修都是程序设计与机器结构类课程，没有提到集合论；关系模型的集合语义是课程内容（Watt 书 Ch7 讲关系与集合运算），不是先修。CS 186 的先修原文在 syllabus 页，已核实；CMU 15-445 的先修原文在 syllabus 页 'Pre-requisites: CMU 15-213/513'。"
+}

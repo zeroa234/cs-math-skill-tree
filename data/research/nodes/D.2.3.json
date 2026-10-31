@@ -1,0 +1,73 @@
+{
+ "id": "D.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "Stanford CS 276 / LING 286 Information Retrieval and Web Search（课程主页，逐讲 slides 与必读书目公开）",
+  "url": "https://web.stanford.edu/class/cs276/",
+  "lang": "en",
+  "free": true,
+  "covers": "官方 schedule 逐讲核对：Introduction、Inverted Indices（dictionary/postings、boolean query、skip list、Porter stemming）、Index Construction、postings list 压缩、dictionary 与 tolerant retrieval、Vector space model 与 tf-idf 排序、IR 评估（precision/recall 等）、文本分类与聚类、web crawling 与 link analysis（PageRank 类）、machine-learning based ranking（learning to rank）。每讲都有 PPT/PDF slides 与 IIR 章节阅读，正好覆盖倒排索引、排序、检索评估与在线检索服务这条主线；词向量/稠密向量检索与推荐系统在线服务不是这门 2019 版的重点（视频在 Canvas，需校内外身份）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 276 / LING 286 Information Retrieval and Web Search",
+   "url": "https://web.stanford.edu/class/cs276/",
+   "prereq_text": "Core programming and algorithm skills: CS 107, CS 161, and ideally other courses in the \"core\" for CS majors provide good preparation. ... Basic probability and statistics: You should have a good grasp of the fundamentals of probability distributions and basic statistical calculations (mean, standard deviation, etc.) at the level of a course like CS 109. Proficiency in Python: All class assignments this year will be in Python.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2",
+    "F.1.2",
+    "F.1.3",
+    "M.6.1",
+    "P.2.3"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "CS 161 Design and Analysis of Algorithms（用于核实被要求课程的实际内容）",
+   "url": "https://web.stanford.edu/class/archive/cs/cs161/cs161.1236/",
+   "prereq_text": "Algorithms for fundamental graph problems: minimum-cost spanning tree, connected components, topological sort, and shortest paths. Possible additional topics: network flow, string searching. Prerequisites: CS 103 or CS 103B; CS 109 or STATS 116; CS106B/X.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2",
+    "F.1.3",
+    "M.5.3",
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "F.1.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Stanford CS 276 要求 CS 107（Computer Organization & Systems，C 与机器级编程）"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "Stanford CS 276 要求 CS 161（算法设计与分析）"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "Stanford CS 276 要求概率统计达到 CS 109 水平"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "required",
+   "evidence": "Stanford CS 276 写明所有作业用 Python，需具备 Python 能力"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "CS 161（作为 CS 276 的先修）要求 CS 103 或 103B（离散数学/证明）"
+  }
+ ],
+ "notes": "F.1.3 判 supported 的依据链：CS 276 明确要求 CS 161，而 CS 161 Spring 2023 课程描述把『minimum-cost spanning tree, connected components, topological sort, shortest paths（以及可能的 network flow、string searching）』列为课程内容，正对 F.1.3 的图算法部分；字符串算法只写作『possible additional topics』，所以这条映射在图算法一侧是硬的、字符串一侧是软的（已在 notes 里说明，供主代理复核）。另核过 UMass CIIR 的免费书 Search Engines: Information Retrieval in Practice（https://ciir.cs.umass.edu/irbook/ ，页面存在、免费下载），但它是 2010 年的书且没有配套讲课，故未选为资源。nlp.stanford.edu 在本机网络下超时不可达，因此 Manning 的 IIR 免费在线版没有被采用。"
+}

@@ -1,0 +1,49 @@
+{
+ "id": "D.3.3",
+ "resource": {
+  "tier": "website",
+  "title": "Learning Data Science（Berkeley Data 100 官方在线教材，全书 HTML 免费）",
+  "url": "https://learningds.org/intro.html",
+  "lang": "en",
+  "free": true,
+  "covers": "目录逐条核对：第 1–3 章数据科学生命周期、Questions and Data Scope（Target Population / Access Frame / Sample、Accuracy）、Simulation and Data Design（用模拟演示民调偏差与随机试验）；第 9 章 Quality Checks 与缺失值处理；第 16 章 Model Selection：Overfitting、Train-Test Split、Cross-Validation、Regularization、Model Bias and Variance；第 17 章 Theory for Inference and Prediction：population/empirical/sampling 分布、假设检验、Bootstrapping、置信区间与预测区间；第 19 章 Classification（19.2 Modeling and Classification、19.5 From Probabilities to Classification）、第 20 章 Numerical Optimization、第 21 章假新闻检测案例。抽样偏差、交叉验证、不确定性都有独立小节；『指标（accuracy/precision/recall 这类评估指标）』没有专门章节——在 ch/16/ms_cv 里只出现 1 次、ch/19 全文 0 次，『数据泄漏（leakage）』也检索不到，实验记录/可复现性不是这本书的重点。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, Berkeley",
+   "course": "Data 100 Principles and Techniques of Data Science",
+   "url": "https://ds100.org/fa26/syllabus/",
+   "prereq_text": "While we are working to make this class widely accessible, we currently require the following (or equivalent) prerequisites. Prerequisites will be enforced in Data 100. ... Foundations of Data Science: Data 8 ... Computing: The Structure and Interpretation of Computer Programs (CS 61A) or Computational Structures in Data Science (Data 88C) ... Math: Linear Algebra (Math 54, EECS 16A, Math 56, Math 110, or Stat 89A).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "D.3.1",
+    "P.1.1",
+    "P.2.3",
+    "M.3.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "D.3.1",
+   "kind": "required",
+   "evidence": "Berkeley Data 100 强制执行 Data 8（数据科学导论）作为先修"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Berkeley Data 100 强制执行 CS 61A（程序设计入门）"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Berkeley Data 100 要求线性代数（Math 54 / EECS 16A 等）"
+  }
+ ],
+ "notes": "M.6.2（数理统计）判 not_mentioned：Data 100 是先修被强制执行的数据科学课，其 syllabus 列出的先修只有 Data 8、CS 61A、线性代数三门，没有把任何概率或数理统计课写成先修（推断与不确定性是它自己教的内容）。资源侧说明：learningds.org 就是 Data 100 的官方教材，因此资源与证据课程同源（同 F.1.1 的处理）。核实时在 ch/16 的 overfitting、cross-validation 两节与 ch/15 全文里都检索不到 'leak' 一词，accuracy 在 ch/19 出现 0 次、ch/16/ms_cv 出现 1 次，故 covers 里如实写明指标、数据泄漏与实验记录不是该书重点；若主线需要补这三项，可另配《The Turing Way》或 Kaggle model validation 类材料，本文件不写入未核实页面。"
+}
