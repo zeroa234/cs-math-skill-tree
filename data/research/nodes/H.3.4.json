@@ -1,0 +1,63 @@
+{
+ "id": "H.3.4",
+ "resource": {
+  "tier": "website",
+  "title": "Lee & Seshia, Introduction to Embedded Systems: A Cyber-Physical Systems Approach（第二版，MIT Press，PDF 免费下载）",
+  "url": "https://ptolemy.berkeley.edu/books/leeseshia/",
+  "lang": "en",
+  "free": true,
+  "covers": "以 cyber-physical systems 视角把嵌入式系统作为「建模—设计—分析」来组织（书站原话），按三部分、可 14 周讲完；Berkeley 用它在 EECS 149/249A 讲含 real-time 与并发行为的系统，属于实时系统与安全关键系统方向的标准免费教材。页面还明确了读者基础：'Readers should have some familiarity with machine structures, computer programming, basic discrete mathematics and algorithms, and signals and systems.'",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Chalmers University of Technology",
+   "course": "EDA223 Real time systems",
+   "url": "https://www.chalmers.se/en/education/your-studies/find-course-and-programme-syllabi/course-syllabus/EDA223",
+   "prereq_text": "Course specific prerequisites: Knowledge corresponding to a course in machine-oriented programming using the high-level language C. Courses in concurrent programming and operating systems are recommended.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "The University of Texas at Austin",
+   "course": "ECE 445M Embedded and Real-Time Operating Systems",
+   "url": "https://users.ece.utexas.edu/~valvano/EE445M/syllabus.html",
+   "prereq_text": "ECE306 (or EE306) or ECE306H (or EE306H); ECE312 (or EE312) or ECE312H (or EE312H); and ECE319K (or EE319K) or ECE319H (or EE319H) with a grade of at least C- in each.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.3.1",
+    "P.1.1",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "C.2.1": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "Chalmers EDA223 要求 C 语言机器级编程"
+  },
+  {
+   "id": "C.2.2",
+   "kind": "recommended",
+   "evidence": "Chalmers EDA223 原文 'Courses in concurrent programming and operating systems are recommended'"
+  },
+  {
+   "id": "H.3.1",
+   "kind": "required",
+   "evidence": "UT Austin ECE 445M 要求 ECE 319K（单片机实验）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UT Austin ECE 445M 要求 ECE 312（数据结构）"
+  }
+ ],
+ "notes": "原图建议前置 C.2.1（操作系统）在 Chalmers EDA223 里与并发编程并列写成 recommended，不是必修，因此判 recommended；UT Austin 的实时课甚至只要求数据结构+单片机+计算导论，没要求 OS。Chalmers EDA223 的学习目标里明确含调度理论与运行时的术语、为实时应用构造并发任务并与传感器/执行器接口、按性能需求论证调度算法取舍，与本节点的「时限/调度可分析性」最对口；最坏执行时间(WCET)、失效安全与认证（DO-178C/ISO 26262）没有找到写出先修原文的英文大学课，只有教材与课程站点覆盖。Lee & Seshia 书站的结构页只有依赖图、没有逐章标题，所以 covers 只写到书站能核实的三部分结构与 EECS 149 的用途，没有编造具体章节。"
+}

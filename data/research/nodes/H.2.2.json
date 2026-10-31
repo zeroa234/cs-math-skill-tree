@@ -1,0 +1,40 @@
+{
+ "id": "H.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "CMPE 691 Hardware Design Verification（UMBC，R. Robucci；讲义全部公开）",
+  "url": "https://eclipse.umbc.edu/robucci/cmpeHDV/",
+  "lang": "en",
+  "free": true,
+  "covers": "以 SystemVerilog 为中心的系统级验证课，讲义按周公开下载：SV 面向对象与类、受约束随机激励、断言（SVA）、功能覆盖率、UVM（agent/TLM/RAL/寄存器模型）以及验证计划与回归。覆盖节点里的仿真、形式化属性验证（断言/等价性检查的用法）与验证方法学；综合、布局布线、时序收敛这类 EDA 流程只作背景，需要配合 MIT 6.375 的 synthesis/placement&routing 讲义补。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Maryland, Baltimore County",
+   "course": "CMPE 691 Hardware Design Verification",
+   "url": "https://eclipse.umbc.edu/robucci/cmpeHDV/",
+   "prereq_text": "Prequisite: CMPE 317 (FPGA Course)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.2.1"
+   ]
+  },
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.6040 Digital Systems Laboratory II",
+   "url": "http://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: (6.2050 and 6.3000) or permission of instructor",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.2.1": "supported"
+ },
+ "extra_prereqs": [],
+ "notes": "两门验证课的必修先修都是 HDL/FPGA 课（UMBC 写 CMPE 317 = FPGA 课；MIT 6.6040 要 6.2050 与 6.3000），原图的建议前置 H.2.1 得到直接支持。MIT 6.6040 的目录描述明确写 'modern design verification practices, SystemVerilog, and Universal Verification Methodology (UVM)'。补充材料：MIT 6.375 Complex Digital Systems（http://csg.csail.mit.edu/6.375/6_375_2019_www/index.html ，已核实可访问）含 VLSI CAD flow 的 logic synthesis / placement & routing 讲义，可用来补节点的设计自动化与布局布线部分（未单列为资源，因为它是设计课而非 EDA 课）。"
+}

@@ -1,0 +1,50 @@
+{
+ "id": "H.1.2",
+ "resource": {
+  "tier": "website",
+  "title": "Computation Structures (MIT 6.004 / 6.1910, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+  "lang": "en",
+  "free": true,
+  "covers": "OCW 课程日历列出的模块 1–8 正是本节点的内容：1 Basics of Information、2 The Digital Abstraction、3 CMOS、4 Combinational Logic（布尔代数/门级实现）、5 Sequential Logic（锁存器与触发器）、6 Finite State Machines、7 Performance Measures（延迟、时钟与关键路径）、8 Design Tradeoffs；每个模块都有标注讲义、主题视频和习题。模块 9–21 转向指令集、汇编、缓存、流水线与虚拟内存（与 C.1.1 重叠），做数字逻辑入门时可先停在模块 8。OCW 大纲另写明实验要求每人完成一个 RISC 处理器的门级设计。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.1910 Computation Structures",
+   "url": "http://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: (Physics II (GIR), 6.100A, and (6.1903 or 6.1904)) or permission of instructor",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "ECE 25 Introduction to Digital Design",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html",
+   "prereq_text": "Topics include Boolean algebra, combination and sequential logic, gates and their implementation in digital circuits. (Course materials and/or program fees may apply.) Prerequisites: none.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "M.5.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.1910 要求 6.100A（Python 编程入门）"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "MIT 6.1910 要求 6.1903 或 6.1904（用 C 与汇编的底层编程）"
+  }
+ ],
+ "notes": "两门课都没有把数理逻辑（M.5.2）列为先修：UCSD ECE 25 的目录原文直接写 'Prerequisites: none.'，MIT 6.1910 要求的是编程与机器级编程（P.1.1、P.2.2）。布尔代数由数字逻辑课自己教（6.004 的模块 4），形式逻辑（命题/谓词演算、完备性）不是入门前提，因此 M.5.2 判 not_mentioned。ECE 25 的 prereq_kind 记为 unspecified 是因为目录写的是 none（JSON 里没有 none 这一档）。资源侧提醒：6.004 后半（模块 9 起）是体系结构，本节点只需模块 1–8。"
+}

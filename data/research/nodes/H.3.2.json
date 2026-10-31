@@ -1,0 +1,43 @@
+{
+ "id": "H.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "Bootlin 免费培训资料（embedded Linux / kernel & driver development）",
+  "url": "https://bootlin.com/docs/",
+  "lang": "en",
+  "free": true,
+  "covers": "页面原文：'Free training materials and conference presentations from Bootlin, covering kernel, real-time, Android, embedded Linux system and device driver development.' 完整课程资料包括 Embedded Linux system development（交叉工具链、U-Boot 与启动链、内核配置编译、设备树、rootfs、buildroot/Yocto）与 Linux kernel 驱动开发（字符设备、平台设备、I2C/SPI、中断与并发、调试追踪）。RTOS 内核内部的调度实现不在其中，需要另配 FreeRTOS/Lee-Seshia 一类材料。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "The University of Texas at Austin",
+   "course": "ECE 445M Embedded and Real-Time Operating Systems",
+   "url": "https://users.ece.utexas.edu/~valvano/EE445M/syllabus.html",
+   "prereq_text": "ECE306 (or EE306) or ECE306H (or EE306H); ECE312 (or EE312) or ECE312H (or EE312H); and ECE319K (or EE319K) or ECE319H (or EE319H) with a grade of at least C- in each. This class assumes prior knowledge with microcontroller laboratories.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.3.1",
+    "P.1.1",
+    "F.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.3.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UT Austin ECE 445M 要求 ECE 312（数据结构）"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "UT Austin ECE 445M 要求 ECE 306（计算导论，含 C 语言入门）"
+  }
+ ],
+ "notes": "ECE 445M 的课程描述正好覆盖本节点：'Real-time operating systems; implementation of context switching, threads, multitasking, real-time scheduling, synchronization, communication, storage, file systems, memory management, process linking and loading, hardware interfacing, and networking; debugging and testing; ... latency, jitter, deadlines, deadlocks, and starvation'，并且明确要求先修单片机实验课（ECE 319K），原图建议前置 H.3.1 得到直接支持。只找到 1 门写了明确先修原文的嵌入式/RTOS 课程，因此没有凑第二门。资源侧选 Bootlin 是因为它把启动链与驱动这两条主线讲全且完全免费公开；若重点在 RTOS 内部机制，可用 FreeRTOS 官方文档或 H.3.4 里那份 Lee & Seshia 教材补充。"
+}

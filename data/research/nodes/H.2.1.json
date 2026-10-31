@@ -1,0 +1,40 @@
+{
+ "id": "H.2.1",
+ "resource": {
+  "tier": "website",
+  "title": "Introductory Digital Systems Laboratory (MIT 6.111, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+  "lang": "en",
+  "free": true,
+  "covers": "数字逻辑与抽象层次、时序积木（计数器/寄存器）、有限状态机、FPGA 结构、时序与同步（建立/保持、时钟域）、以及用 Verilog/硬件描述语言写 RTL、仿真、综合并下载到 FPGA 的完整流程；后半学期以开放式大作业收尾，正好对应 D2 验收（写 RTL、仿真、部署一个时序正确的模块）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.2050 Digital Systems Laboratory",
+   "url": "http://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.1910 or permission of instructor",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.2"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "ECE 111 Advanced Digital Design Project",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html",
+   "prereq_text": "Advanced topics in digital circuits and systems. Use of computers and design automation tools. Hazard elimination, synchronous/asynchronous FSM synthesis, synchronization and arbitration, pipelining and timing issues. Problem sets and design exercises. A large-scale design project. Simulation and/or rapid prototyping. Prerequisites: ECE 25 or CSE 140.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.1.2": "supported"
+ },
+ "extra_prereqs": [],
+ "notes": "两门教 FPGA/HDL 的课都把数字逻辑课（MIT 6.1910 = 原 6.004；UCSD ECE 25/CSE 140）写成必修先修，原图的建议前置 H.1.2 得到直接支持。MIT 6.2050 的课程描述明确以 FPGA 为重点，含 timing、synchronization、finite-state machines、communication protocols；UCSD ECE 111 明确写设计自动化工具、流水线与时序问题、仿真与快速原型。两门课都没有要求 C/C++（MIT 6.1910 内部隐含了 P.2.2，但 6.2050 本身没有写）。"
+}

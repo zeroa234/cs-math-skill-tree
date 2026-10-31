@@ -1,0 +1,40 @@
+{
+ "id": "H.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "The Art and Science of PCB Design（MIT IAP 课程 6.S092 / EC.S03，课程站点公开）",
+  "url": "https://pcb.mit.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "从系统需求到量产的完整板级流程：系统设计与参数建模、SPICE 仿真、原理图绘制、器件选型与数据手册阅读、PCB 布局布线、EDA 工具（Altium / KiCad / LTspice）、板厂制造工艺（DFM）、以及手工贴装焊接；课程站点开放讲义、lab 与历年归档，非 MIT 学生也能看。供电完整性、信号完整性与 EMC 只在高级仿真与客座讲座里点到，不是主线。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.S092 / EC.S03 The Art and Science of PCB Design",
+   "url": "https://pcb.mit.edu/syllabus/",
+   "prereq_text": "Prerequisites: It is recommended to understand basic circuit analysis provided in 6.200, 2.678/2.679, or equivalent. This generally entails understanding how to analyze/implement resistors, inductors, capacitors, and operational amplifiers in an electrical circuit.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "H.1.1"
+   ]
+  },
+  {
+   "school": "University of California, Santa Cruz (Silicon Valley Extension)",
+   "course": "Printed Circuit Board Design for Signal Integrity and EMC Compliance",
+   "url": "https://www.ucsc-extension.edu/courses/printed-circuit-board-design-signal-integrity-and-emc-compliance",
+   "prereq_text": "Prior experience with printed circuit board and system level design and testing is highly desired. A solid foundation in basic electrical engineering principles helps one understand fundamental design concepts.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "H.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.1.1": "recommended"
+ },
+ "extra_prereqs": [],
+ "notes": "两门课都只把电路基础写成建议（MIT 原文 'It is recommended to understand basic circuit analysis ... 6.200'，UCSC 原文 'A solid foundation in basic electrical engineering principles helps ...'），没有列为必修，故 H.1.1 判 recommended。UCSC 那门是大学的职业延伸学院课程（收费，USD 580），不是学位课，但它是找到的唯一明确以信号完整性 + EMC 为主线的正式课程；MIT 的 IAP 课免费、讲义与 lab 全部公开，但供电/信号完整性部分较浅。PCB 课普遍不设硬性先修，这与节点简介里偏向工程实践的性质相符。"
+}

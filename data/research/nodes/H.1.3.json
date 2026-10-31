@@ -1,0 +1,52 @@
+{
+ "id": "H.1.3",
+ "resource": {
+  "tier": "website",
+  "title": "Signals and Systems (MIT 6.003, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+  "lang": "en",
+  "free": true,
+  "covers": "连续与离散时间信号的表示（奇异函数、复指数）、LTI 系统的表示（微分/差分方程、框图、卷积）、傅里叶级数与傅里叶变换、Laplace 与 z 变换、系统函数与零极点、采样与重建、频率响应与滤波。以讲授+习题为主，定点 DSP 实现与嵌入式部署不在其中（那部分在 H.2.1/H.3.x 的实验课里）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "ECE 45 Circuits and Systems",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html",
+   "prereq_text": "Steady-state circuit analysis, first and second order systems, Fourier Series and Transforms, time domain analysis, convolution, transient response, Laplace Transform, and filter design. Prerequisites: ECE 35.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1"
+   ]
+  },
+  {
+   "school": "Stanford University",
+   "course": "EE 102A Signals and Systems I",
+   "url": "https://bulletin.stanford.edu/courses/2031051",
+   "prereq_text": "Recommended Prerequisite — Complete ANY of the following Courses: CME102 / MATH53（页面只给课程编号 1043151 与 1172611，对应的课名取自 Stanford Bulletin 的课程页：CME 102 Ordinary Differential Equations for Engineers、MATH 53 Differential Equations with Linear Algebra, Fourier Methods, and Modern Applications）。原文续：'EE 102A may be taken concurrently with MATH 53 or CME 102, provided students have proficiency in complex numbers.'",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.3": "not_mentioned",
+  "M.1.9": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.2.1",
+   "kind": "recommended",
+   "evidence": "Stanford EE 102A 的 'Recommended Prerequisite' 是 CME102 或 MATH53（常微分方程）"
+  },
+  {
+   "id": "H.1.1",
+   "kind": "required",
+   "evidence": "UC San Diego ECE 45 要求 ECE 35（模拟电路，对应电路与模拟电子基础）"
+  }
+ ],
+ "notes": "原图把一元积分学（M.1.3）与傅里叶分析（M.1.9）列为建议前置，但两门真实的信号课都没有这样写：傅里叶分析正是本节点的教学内容（UCSD ECE 45 的课程描述里 Fourier Series and Transforms 就是内容本身），一元积分学在 UCSD 只是通过 ECE 35 的传递先修出现（ECE 35 要 MATH 20A-B），Stanford EE 102A 则只把 ODE 课列为 Recommended Prerequisite。MIT 6.003 的 OCW 大纲写的先修是 6.02，属于校内课程序列，映射价值低，故未作为 course 条目。"
+}

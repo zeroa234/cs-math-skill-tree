@@ -1,0 +1,52 @@
+{
+ "id": "H.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "Analysis and Design of Digital Integrated Circuits (MIT 6.374, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
+  "lang": "en",
+  "free": true,
+  "covers": "MOS 器件模型（含深亚微米效应）、逻辑/算术/时序单元的电路设计风格、功耗估算与最小化、互连模型与寄生参数、器件尺寸与 logical effort、时钟偏斜与抖动等时序问题、低功耗技术、集成电路测试；配套 Magic 版图与 SPICE 实验。覆盖标准单元式的 CMOS 数字设计、时序/功耗/面积权衡、版图与测试，正对 D2 入门层。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.6010 Analysis and Design of Digital Integrated Circuits",
+   "url": "http://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.1910 and (6.2080 or 6.2500[J])",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.2",
+    "H.2.5"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "ECE 165 Digital Integrated Circuit Design",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html",
+   "prereq_text": "VLSI digital systems. Circuit characterization, performance estimation, and optimization. ... Techniques for gate arrays, standard cell, and custom design. Design and simulation using CAD tools. Students may not receive credit for both ECE 165 and ECE 108. Prerequisites: ECE 102. Open to EC27, EC28, and EC37 major codes only.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.1.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "H.2.5",
+   "kind": "required",
+   "evidence": "MIT 6.6010 要求 6.2080（半导体电子电路）或 6.2500[J]（纳米电子学）"
+  },
+  {
+   "id": "H.1.1",
+   "kind": "required",
+   "evidence": "UC San Diego ECE 165 要求 ECE 102（有源电路设计，即模拟电子）"
+  }
+ ],
+ "notes": "MIT 6.6010 是研究生课（G），先修同时要数字系统（6.1910 = H.1.2）和器件/半导体电路（6.2080 = H.2.5），说明真正做 VLSI 要「数字设计 + 器件/模拟」两条腿，原图只列了 H.1.2；UCSD 的 ECE 165 只要求模拟电路课（ECE 102 = H.1.1），器件物理放在 ECE 103 里另教。OCW 6.374 是 2003 年的研究生课（Hodges/Rabaey 路线），概念与流程仍然适用，但器件尺寸/工艺例子偏老，FinFET 相关内容要另找。"
+}

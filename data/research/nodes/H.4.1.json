@@ -1,0 +1,52 @@
+{
+ "id": "H.4.1",
+ "resource": {
+  "tier": "website",
+  "title": "Feedback Systems (MIT 6.302, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
+  "lang": "en",
+  "free": true,
+  "covers": "反馈系统的性质与优点、时域与频域性能指标、稳定性与稳定裕度、根轨迹法、Nyquist 判据、频域设计、补偿技术以及在各物理系统上的应用；讲义、习题、考试全公开，参考书是 Åström & Murray 的 Feedback Systems（作者网站免费）。以频域方法为主，状态空间/Kalman 滤波/MPC 只作延伸，需要另配状态空间与估计方面的材料。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.3100 Dynamical System Modeling and Control Design",
+   "url": "http://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: Physics II (GIR) and (18.06 or 18.C06[J])",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MAE 143B Linear Control",
+   "url": "https://catalog.ucsd.edu/courses/MAE.html",
+   "prereq_text": "Analysis and design of feedback systems in the frequency domain. Transfer functions. Time response specifications. PID controllers and Ziegler-Nichols tuning. Stability via Routh-Hurwitz test. Root locus method. Frequence response: Bode and Nyquist diagrams. Dynamic compensators, phase-lead and phase-lag. Actuator saturation and integrator wind-up. Prerequisites: MAE 143A or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.2.1": "supported",
+  "M.3.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "UC San Diego MAE 143B 的先修 MAE 143A（Signals and Systems）目录原文要求 MATH 20D 或 21D（微分方程）"
+  },
+  {
+   "id": "H.1.3",
+   "kind": "required",
+   "evidence": "UC San Diego MAE 143B 要求 MAE 143A（信号与系统），MAE 143A 的内容为动态建模、Laplace、传递函数、z 变换"
+  }
+ ],
+ "notes": "M.3.1（线性代数）由 MIT 6.3100 直接要求 18.06；M.2.1（常微分方程）在 UCSD 那边是传递关系：143B 目录只写 'MAE 143A or consent'，而 MAE 143A 的目录原文要求 'MATH 20D or 21D'（微分方程）与 'MATH 18 or 20F or 31AH'（线性代数），所以判 supported 而非 not_mentioned，但判定依据是链条而非同一行的原文。MIT 6.302 自己的先修原文是 'The prerequisites for 6.302 are linear systems, circuits, physics, and math. Officially, this requirement is 6.003 or 2.003 or 16.04. Previous laboratory experience with circuits is assumed, such as in 6.002 or 6.071 or 16.04.'，即 H.1.3 为必修、H.1.1 为假定；没有把它列成第三条 course，是因为同一节点只留两条证据更清爽。状态估计（Kalman）与 MPC 未出现在这两门课的先修链路里，属于本节点更上层内容。"
+}

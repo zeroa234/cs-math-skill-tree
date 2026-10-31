@@ -1,0 +1,43 @@
+{
+ "id": "H.3.3",
+ "resource": {
+  "tier": "website",
+  "title": "Introduction to Electronics, Signals, and Measurement (MIT 6.071J, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/",
+  "lang": "en",
+  "free": true,
+  "covers": "以测量（measurement and signals）为主线的动手课：仪器与「虚拟仪器」、测量的误差与不确定度、噪声、信号调理（放大、滤波、差分）、数据采集与 ADC/DAC 接口、以及配套的实验室实验；讲义、实验、习题全公开。传感器件本身的物理与选型、以及执行器驱动不是它的重点。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "ECE 118 Computer Interfacing",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html",
+   "prereq_text": "Interfacing computers and embedded controllers to the real world: busses, interrupts, DMA, memory mapping, concurrency, digital I/O, standards for serial and parallel communications, A/D, D/A, sensors, signal conditioning, video, and closed loop control. Prerequisites: ECE 30 or CSE 30 and ECE 35, 45, 65.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1",
+    "C.1.1",
+    "H.1.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.1.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "UC San Diego ECE 118 要求 ECE 30 或 CSE 30（计算机组成/计算导论）"
+  },
+  {
+   "id": "H.1.3",
+   "kind": "required",
+   "evidence": "UC San Diego ECE 118 要求 ECE 45（电路与系统）"
+  }
+ ],
+ "notes": "ECE 118 的课程描述逐条列了 sensors、signal conditioning、A/D、D/A、busses、interrupts、DMA、closed loop control，是找到的最贴合本节点的课程，其先修里明确有电路课（ECE 35），所以原图的 H.1.1 判 supported；另外它还要计算机组成（ECE 30 → C.1.1）与电路系统（ECE 45 → H.1.3），这两条原图没列。第二门课没找到：同类「传感器」课要么是未公开讲义的个人页面，要么是不稳定的 PDF 讲义仓库，没有找到第二门写出先修要求的英文大学课。资源侧 6.071J 偏测量与仪器（误差、噪声、信号调理、采集），传感器原理与执行器部分需要靠实验或另找材料补齐。"
+}

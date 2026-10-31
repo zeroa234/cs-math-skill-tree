@@ -1,0 +1,61 @@
+{
+ "id": "H.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "Circuits and Electronics (MIT 6.002 / 6.2000, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+  "lang": "en",
+  "free": true,
+  "covers": "MIT 本科 EE 核心第一门电路课，全部讲义/实验/视频免费。内容为集总电路抽象、KVL/KCL 与电阻网络、受控源、运算放大器、RC/RL 一阶动态与能量存储元件、频率响应与简单滤波、MOS 管开关与数字抽象，最后用含模拟与数字部分的音频播放系统做课程设计（lab 里有 DAC/ADC 一类接口）；噪声与 ADC/DAC 接口的工程细节只点到，不深入。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.002 Circuits and Electronics",
+   "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/syllabus/",
+   "prereq_text": "Prerequisites: 8.02 Physics II: Electricity and Magnetism, and 18.03 Differential Equations.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.2.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "ECE 35 Introduction to Analog Design",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html",
+   "prereq_text": "It is highly recommended taking MATH 20C and PHYS 2B prior or during the same quarter. Program or materials fees may apply. Prerequisites: MATH 18, 20A–B, and PHYS 2A.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.2",
+    "M.1.3"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "MIT 6.002（OCW 大纲）要求 18.03 Differential Equations"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "UC San Diego ECE 35 要求 MATH 18（线性代数）"
+  },
+  {
+   "id": "M.1.3",
+   "kind": "required",
+   "evidence": "UC San Diego ECE 35 要求 MATH 20A-B（一元微积分，含积分）"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "recommended",
+   "evidence": "UC San Diego ECE 35 原文 'It is highly recommended taking MATH 20C ... prior or during the same quarter'（MATH 20C 为多元微积分）"
+  }
+ ],
+ "notes": "数学课的对应关系取自 UCSD MATH 课表原文：MATH 18 = Linear Algebra，MATH 20A = 一元微分、MATH 20B = 一元积分、MATH 20C = 多元微积分、MATH 20D = Introduction to Differential Equations。原图未给该节点建议前置，故 candidate_check 为空。两门课都把大学物理（电磁学，MIT 8.02 / UCSD PHYS 2A）列为必修，但物理不在本技能树节点里，无法映射。注意 MIT 现行课表（catalog）里 6.2000 只写 'Prereq: Physics II (GIR)'，18.03 的 ODE 要求出现在 2007 版 OCW 大纲上；UCSD 则直接用 MATH 18（线性代数）作为电类基础课先修。"
+}
