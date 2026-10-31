@@ -1,0 +1,45 @@
+{
+ "id": "X.2.4",
+ "resource": {
+  "tier": "website",
+  "title": "Health Informatics Specialization（Johns Hopkins University，Coursera 五门课系列）",
+  "url": "https://www.coursera.org/specializations/health-informatics",
+  "lang": "en",
+  "free": true,
+  "covers": "五门课串起节点主干：Course 1《The Social and Technical Context of Health Informatics》讲医疗信息系统所处的临床与社会技术语境、临床信息学与临床数据管理基本概念；Course 2《Leading Change in Health Informatics》讲系统上线、工作流再造与变更管理；Course 3《The Outcomes and Interventions of Health Informatics》讲干预与结果评价；Course 4《The Data Science of Health Informatics》讲从临床数据库检索数据并分析；Course 5 是整合式 capstone（用数据检索与分析回答一个健康信息学问题、为决策支持设计方案）。页面明确列出技能项含 Databases、Decision Support Systems、Clinical Data Management。面向'健康专业人员/管理者/IT 人员'设计，难度标为 Beginner。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "HST.951J Medical Decision Support",
+   "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/pages/syllabus/",
+   "prereq_text": "Prerequisites: Familiarity with SAS and MATLAB® will be helpful, and consultation with respective user manuals may be necessary.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "P.2.3"
+   ]
+  },
+  {
+   "school": "Johns Hopkins University",
+   "course": "Health Informatics Specialization (Coursera, 5 courses)",
+   "url": "https://www.coursera.org/specializations/health-informatics",
+   "prereq_text": "Beginner level / Recommended experience（页面给出的难度标签原文；正文未写具体先修课程，只在'What you'll learn'里要求能'Answer a health informatics problem through data retrieval and analysis'）",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "D.1.1": "not_mentioned",
+  "M.6.2.3": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.2.3",
+   "kind": "recommended",
+   "evidence": "MIT HST.951J 写 'Familiarity with SAS and MATLAB® will be helpful'（决策支持课作业要写代码跑模型；对应科学计算工具能力）。"
+  }
+ ],
+ "notes": "两个候选都记 not_mentioned，证据偏薄，主代理要注意：(1) 医疗信息学的课几乎都不把'数据库课'写成先修——JHU 这套只在技能清单里写 Databases（课内讲），MIT HST.950J/HST.951J 的 syllabus 也没有数据库先修；所以 D.1.1 更像'并行/课内'而非硬前置。(2) M.6.2.3（实验设计与因果推断）：JHU 的 Course 3 讲 interventions/outcomes、Course 4 讲数据检索与分析，但页面没写统计或实验设计先修，MIT 两门课也没有——本节点真正涉及'评价'时统计/因果是必要的，只是没有课程把它写成 prerequisite。补充可用证据（未计入 courses，因为没抓到先修原文）：Georgia Tech OMSCS 的 CS 6440 Intro to Health Informatics（https://omscs.gatech.edu/cs-6440-intro-health-informatics）确实教这门课的内容、页面上有公开的 Sample Syllabus PDF，但页面本身没写先修要求；OHSU DMICE 的课程目录页（https://www.ohsu.edu/school-of-medicine/medical-informatics-and-clinical-epidemiology/course-catalog）是 JS 动态加载，抓不到每门课的 prerequisite 原文，故未采用。另外 MIT HST.950J Medical Computing（https://ocw.mit.edu/courses/hst-950j-medical-computing-spring-2003/）的 syllabus 只有 Topics and Format / Homework / Required Text / Projects，没有 Prerequisites 一节，可作为'临床数据、医疗信息系统、专家系统'的二手参考（2003 年，偏旧，且是 graduate 层）。"
+}

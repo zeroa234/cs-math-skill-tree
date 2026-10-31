@@ -1,0 +1,66 @@
+{
+ "id": "X.3.3",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 18.337J/6.338J Parallel Computing and Scientific Machine Learning（SciML 在线教材 + 课程主页 + 作业）",
+  "url": "https://book.sciml.ai/",
+  "lang": "en",
+  "free": true,
+  "covers": "整本在线教材可逐章读，配课程主页、作业与录像：序列/并行代码、动力系统与 ODE 积分器、刚性 ODE、前向与反向自动微分、伴随方法（adjoints）与 δP、反问题与可微编程、neural ODE、GPU 与 MPI、PDE 离散化、Physics-Informed Learning（PINN/神经微分方程）、概率编程与不确定性量化。对应节点里'物理约束学习、反问题、可微求解与科学验证'的主干；每讲都按'数值方法 + 性能工程 + 科学应用'三件套组织，正好是本节点要的那种交叉训练。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Northwestern University",
+   "course": "ELEC_ENG/COMP_ENG 395, 495: Scientific Machine Learning",
+   "url": "https://www.mccormick.northwestern.edu/electrical-computer/academics/courses/descriptions/elec_eng-395495-scientific-machine-learning.html",
+   "prereq_text": "No specific prerequisites are required. Essential material in optimization, deep learning, and differential equations will be reviewed during the first weeks so students from different backgrounds can follow. However, it is recommended that students have some familiarity with: Machine learning and optimization theory ... Basic physics (from general physics courses or an engineering physics sequence)",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "A.2.3",
+    "M.2.1",
+    "M.7.2"
+   ]
+  },
+  {
+   "school": "MIT",
+   "course": "18.337J/6.338J Parallel Computing and Scientific Machine Learning (SciML)",
+   "url": "https://book.sciml.ai/course/",
+   "prereq_text": "Prerequisites: While this course will be mixing ideas from high performance computing, numerical analysis, and machine learning, no one in the course is expected to have covered all of these topics before. Understanding of calculus, linear algebra, and programming is essential.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2",
+    "M.3.1",
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.8.3": "contradicted",
+  "A.2.3": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "MIT SciML 课程主页写 'Understanding of calculus, linear algebra, and programming is essential.'"
+  },
+  {
+   "id": "M.1.2",
+   "kind": "required",
+   "evidence": "同上：'Understanding of calculus ... is essential.'"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "同上：'... and programming is essential'（作业用 Julia 实现，课程明说 Julia 可以零基础现学）。"
+  },
+  {
+   "id": "M.2.1",
+   "kind": "recommended",
+   "evidence": "Northwestern 395/495 把 'differential equations' 的材料放在前几周复习，但'it is recommended that students have some familiarity with ... Machine learning and optimization theory / Basic physics'，微分方程属课内补。"
+  }
+ ],
+ "notes": "两条候选都被课程原文弱化，主代理要重新考虑：(1) M.8.3（微分方程数值解与科学计算）记 contradicted——Northwestern 明写 'No specific prerequisites are required. Essential material in optimization, deep learning, and differential equations will be reviewed during the first weeks'，MIT SciML 也写 'no one in the course is expected to have covered all of these topics before'（把 numerical analysis 列在'不预期先修过'的混合内容里）。也就是说数值分析/科学计算是这门课的教学内容而不是入口门槛；若坚持要前置，至少应降为 recommended。(2) A.2.3（深度学习）记 recommended——Northwestern 只是 'recommended that students have some familiarity with Machine learning and optimization theory'，MIT SciML 更彻底：神经网络基础放在第 9 周课内讲（'Basics of neural networks and definitions'），所以深度学习不是硬前置。真正被两门课当成必需的是微积分 + 线性代数 + 编程（见 extra_prereqs）。资源选择说明：book.sciml.ai 有完整讲义 + 作业 + 课程主页（含先修原文），一个站覆盖 PINN、可微编程/伴随、反问题、刚性 ODE、概率编程；它的短板是'神经算子（DeepONet/FNO）'讲得少，需要补：Northwestern 395/495 的课程描述明确含 'Neural Operators. DeepONets. Fourier Neural Operators. Physics-informed neural operator (PINO). Differentiable Physics ... Adjoint methods'，但只有描述没有公开材料；补材料可用 Krishna Kumar（UT Austin）的 SciML 课程站 https://kks32-courses.github.io/sciml （已打开确认存在，含函数空间/投影/MLP 等 notebook 章节）。另外 https://physicsbaseddeeplearning.org/ 抓取回来是空正文（JS 渲染），未采用。"
+}

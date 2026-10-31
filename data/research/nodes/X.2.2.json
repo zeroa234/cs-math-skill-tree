@@ -1,0 +1,75 @@
+{
+ "id": "X.2.2",
+ "resource": {
+  "tier": "website",
+  "title": "18.S096 Topics in Mathematics with Applications in Finance（MIT OpenCourseWare，含讲课视频与讲义）",
+  "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/",
+  "lang": "en",
+  "free": true,
+  "covers": "本科层次的免费课程网站（讲义、视频、习题、case studies、期末论文）：把线性代数、概率、统计、随机过程与数值方法逐块讲到金融应用上——价格-收益率关系与凸性、收益率曲线 bootstrap、Value at Risk 及其假设、期权波动率估计、用风险中性论证推 Black-Scholes、统计视角的矩阵分解（PCA）、极限定理、Itô 引理与 Girsanov 定理；数学课与 Morgan Stanley 等业界讲者的应用课交替。正好覆盖节点里'量化建模 + 风控'两块主干（支付/账本那半块见 notes）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "18.S096 Topics in Mathematics with Applications in Finance (Fall 2013)",
+   "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/pages/syllabus/",
+   "prereq_text": "Prerequisites: 18.01 Single Variable Calculus; 18.02 Multivariable Calculus; 18.03 Differential Equations; 18.05 Introduction to Probability and Statistics or 18.440 Probability and Random Variables; 18.06 Linear Algebra。同页另写 'Prior knowledge of economics or finance is not required but may be helpful for some lectures.'",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2",
+    "M.1.4.1",
+    "M.2.1",
+    "M.6.1",
+    "M.6.2",
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "MIT",
+   "course": "15.450 Analytics of Finance (Fall 2010, Sloan)",
+   "url": "https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/pages/syllabus/",
+   "prereq_text": "15.401 Finance Theory I is a prerequisite for this course. 15.437 Options and Futures Markets is a recommended co-requisite. Rudimentary programming skills are necessary. ... the course assumes solid undergraduate-level background in calculus, probability, and statistics.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "M.6.2",
+    "M.1.2",
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.2": "supported",
+  "D.1.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "MIT 18.S096 把 '18.06 Linear Algebra' 列为必修先修。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "MIT 18.S096 要求 '18.05 Introduction to Probability and Statistics or 18.440'；15.450 写明 'assumes solid undergraduate-level background in ... probability'。"
+  },
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "MIT 18.S096 把 '18.03 Differential Equations' 列为必修先修（Black-Scholes 与随机过程部分要用）。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "MIT 18.S096 要求 '18.02 Multivariable Calculus'。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "MIT 15.450 写 'Rudimentary programming skills are necessary. Homework assignments involve computer implementation ... in MATLAB'。"
+  }
+ ],
+ "notes": "D.1 在批次清单里是分组名，节点索引里没有 D.1 这个 id，这里按最贴近的 D.1.1（数据建模、关系模型与 SQL）判定并记 not_mentioned：两门课都是数学/金融系课程，先修里完全没提数据库；节点的'支付与金融系统工程'那半块（账本、对账、系统实现）在两门课里也不覆盖，若要补，工程侧应另找 fintech 工程课。M.6.2 记 supported：18.S096 的 18.05 与 15.450 的 'solid undergraduate-level background in ... statistics' 都直接点到统计。另有两点值得主代理注意：(1) 节点写的'外部前置为金融经济知识'得到正面证据——15.450 要求 15.401 Finance Theory I 这门金融理论课；但反过来 18.S096 明写 'Prior knowledge of economics or finance is not required'，说明这条外部前置在入门层可以是软性的。(2) 18.S096 的 syllabus 指明它是 18.642（Fall 2024）的前身、新版本有更多材料和录像（https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/pages/syllabus/ 原文：'This is the first version of 18.642 ... Please visit the 18.642 site for more materials and lecture recordings.'），长期稳定性没问题。"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "X.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "CS 251: Blockchain Technologies（Stanford，Dan Boneh 组课程主页，公开 syllabus + 每讲讲义 pdf/pptx）",
+  "url": "https://cs251.stanford.edu/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页公开 syllabus 与每讲 slides（pdf/pptx 可直接下载），自述覆盖 'distributed consensus, smart contracts, economics, scalability, and applications'，以 Bitcoin 和 Ethereum 为案例，讲义含 'Intro to cryptography & cryptocurrencies'、同步/异步共识下界、'Foundations of Distributed Consensus and Blockchains' 阅读，并要求用 Python 与 Solidity 写项目。对应节点里'密码承诺、共识、账本、智能合约和机制'全套（机制/经济学与可扩展性也在 syllabus 里）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "CS 251: Blockchain Technologies (Fall 2026)",
+   "url": "https://cs251.stanford.edu/info.html",
+   "prereq_text": "The course assumes a familiarity with computer programming. CS107 (Computer Organization) or equivalent is required. ... CS255 (Introduction to Cryptography) is helpful but not required; we will introduce concepts from cryptography as needed during class.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "C.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "MIT",
+   "course": "15.S12 Blockchain and Money (Fall 2018, Sloan)",
+   "url": "https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/pages/syllabus/",
+   "prereq_text": "Prerequisites: MIT students were required to obtain the permission of the instructor.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "S.1.2": "recommended",
+  "C.4.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS 251 写 'CS107 (Computer Organization) or equivalent is required'——CS107 是计算机组成/系统课。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford CS 251 写 'The course assumes a familiarity with computer programming'，项目用 Python 与 Solidity 实现。"
+  },
+  {
+   "id": "P.2.2",
+   "kind": "required",
+   "evidence": "同上一条：CS107 本身是 C/C++ 的底层编程课（节点索引里对应 P.2.2 C/C++ 与底层编程 + C.1.1）。"
+  }
+ ],
+ "notes": "两条候选判定：S.1.2（密码学）记 recommended——CS 251 原文只说 'CS255 (Introduction to Cryptography) is helpful but not required; we will introduce concepts from cryptography as needed'，即密码学在课内补，属建议而非必修；C.4.1（分布式系统）记 not_mentioned——CS 251 讲'分布式共识'但先修只要求计算机组成，没有把分布式系统课列为前置。反过来说，节点把 S.1.2/C.4.1 都写成硬前置偏保守，尤其 C.4.1：本节点内容里的共识算法是课内自学的（CS 251 的 readings 就是《Foundations of Distributed Consensus and Blockchains》）。补充资源建议（未计入 resource）：Princeton 的《Bitcoin and Cryptocurrency Technologies》官方站 https://bitcoinbook.cs.princeton.edu/ 可免费下载全书 pre-print，同站 'Courses that use the book' 列了 Cornell/Stanford/NYU/TU Delft/UIUC 等采用该书的课程；配套 Coursera 课 https://www.coursera.org/learn/cryptocurrency （Princeton，免费旁听）模块更平缓（Distributed Consensus / Consensus without Identity: the Block Chain / Incentives and Proof of Work / Bitcoin Mining / Altcoins），比 CS 251 更适合 D2 第一遍，但它对'智能合约'覆盖少，所以主资源选 CS 251。UIUC ECE/CS 598AM（http://soc1024.ece.illinois.edu/teaching/ece598am/fall2016/ ，已打开确认存在）是研究型讨论课，页面上没有先修原文（syllabus 在 Google Doc 里），故未采用。"
+}

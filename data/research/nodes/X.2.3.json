@@ -1,0 +1,65 @@
+{
+ "id": "X.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "Learning Analytics Methods（lamethods.org，配套两本开放获取教材 + R 教程与真实教育数据集）",
+  "url": "https://lamethods.org/",
+  "lang": "en",
+  "free": true,
+  "covers": "面向学习分析（LA）的免费教程型网站，站上两本书都开放获取：第 1 本《Learning Analytics Methods and Tutorials: A Practical Guide Using R》从 R 语言基础、数据清洗、统计与数据操作讲起，再逐种方法讲聚类、序列/过程挖掘、网络分析、预测建模等主流 LA 方法，每章都带 step-by-step 教程、可运行 R 代码和真实教育数据集；第 2 本《Advanced Learning Analytics Methods: AI, Precision and Complexity》接上 AI 与复杂系统方法。对应节点里'学习分析'与'测量/效果评估的计算方法'这块主干。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "05-823 E-Learning Design Principles and Methods (HCII/METALS)",
+   "url": "https://hcii.cmu.edu/course/e-learning-design-principles-and-methods",
+   "prereq_text": "Prerequisite Knowledge: Some prior experience in Psychology research, qualitative research methods, and/or end-user programming are desirable. ... Some readings assume background in experimental design and statistical analysis.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2",
+    "M.6.2.3",
+    "V.2.2",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "05-499/05-899 Special Topics: Learning Analytics and Educational Data Science",
+   "url": "https://hcii.cmu.edu/course/special-topics-learning-analytics-and-educational-data-science",
+   "prereq_text": "Skills: Basic knowledge of statistics and data analysis. Familiarity with educational technology is beneficial but not required.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.6.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "V.2.2": "recommended",
+  "M.6.2.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.2",
+   "kind": "required",
+   "evidence": "CMU 05-823 写 'Some readings assume background in experimental design and statistical analysis'；05-899 写 'Skills: Basic knowledge of statistics and data analysis'。"
+  },
+  {
+   "id": "M.6.2.3",
+   "kind": "required",
+   "evidence": "CMU 05-823 的 Prerequisite Knowledge 明确 'assume background in experimental design'，课程作业本身就是设计并跑 A/B 实验。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "recommended",
+   "evidence": "CMU 05-823 写 'Some prior experience in ... end-user programming are desirable'（项目里要用 OLI Torus / Qualtrics / HTML5 做可运行模块）。"
+  },
+  {
+   "id": "V.2.2",
+   "kind": "recommended",
+   "evidence": "CMU 05-823 写 'prior experience in Psychology research, qualitative research methods ... are desirable'，课程目标里也有 'user/learner experience' 方法。"
+  }
+ ],
+ "notes": "资源覆盖缺口的说明：lamethods.org 强在'学习分析的计算方法与测量'，但节点简介里的'学习平台工程'和'智能辅导系统（ITS）'不是它的主线——这两块建议用课程补齐：CMU 05-823 的 20 个 module 覆盖学习科学原理 + 教学设计（backward design：目标-测评-教学对齐）+ 学习工程（Cognitive Task Analysis、A/B 实验），正好对上 D2 验收要求的'明确学习目标与效果指标'和 D3 要求的'区分易用/参与/真实学习效果'。candidate_check 两条：M.6.2.3 记 supported，因为 05-823 原文就是 'Some readings assume background in experimental design'（assume = 默认已具备），且课程用 A/B experiment 做'连续改进'；V.2.2 记 recommended，因为原文用的是 desirable（'qualitative research methods'/'user/learner experience' 属用户研究方法，映射到 V.2.2）。另注意到 05-899 那句 'Familiarity with educational technology is beneficial but not required'——说明本节点自身的领域知识在研究生课里是软要求，D2 入门不必先修教育技术。搜索过程中的两个失败尝试：solaresearch.org 的 Handbook of Learning Analytics（SSL 证书验证失败，未采用）、pressbooks.pub/lidtfoundations（403，未采用）。"
+}

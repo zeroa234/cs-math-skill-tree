@@ -1,0 +1,60 @@
+{
+ "id": "X.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Ph219/CS219 Quantum Computation（Caltech，John Preskill 课程站：全套讲义 PDF + 2020 秋录播视频）",
+  "url": "https://www.preskill.caltech.edu/ph219/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程站免费给出整套讲义和讲课录像（chapters 1-6 有视频），章节正好对上节点全部要点：Ch1 导论、Ch2 Foundations I: States and Ensembles（量子态与密度算符）、Ch3 Foundations II: Measurement and Evolution（测量与演化/幺正门）、Ch4 Quantum Entanglement、Ch5 Classical and Quantum Circuits、Ch6 Quantum Algorithms（含 Shor/Grover 谱系）、Ch7 Quantum Error Correction（86 页，2026-03 更新）、Ch9 Topological Quantum Computation、Ch10 Quantum Shannon Theory（量子信息论，2025-06 更新）。另列了 Nielsen & Chuang 等参考书与 Watrous/Vazirani/Childs/Aaronson/de Wolf 的补充讲义。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Maryland",
+   "course": "CMSC/PHYS 457 Introduction to Quantum Computing (Spring 2025)",
+   "url": "https://www.cs.umd.edu/class/spring2025/cmsc457/",
+   "prereq_text": "Generics — Prerequisite: Familiarity with complex numbers and basic concepts in linear algebra (e.g., eigenvalues, eigenvectors, Hermitian and unitary matrices). 1 course with a minimum grade of C- from (MATH240, PHYS274); and 1 course with a minimum grade of C- from (CMSC351, PHYS373).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "F.1.2"
+   ]
+  },
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-859BB Quantum Computation and Quantum Information (2018, Ryan O'Donnell)",
+   "url": "http://www.cs.cmu.edu/~odonnell/quantum18/",
+   "prereq_text": "A strong undergraduate background in linear algebra (e.g., CMU's 21-341), discrete probability (e.g., CMU's 15-359), and theory of computation (e.g., CMU's 15-251). No background in physics is required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.6.1",
+    "F.2.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.1": "supported",
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "CMU 15-859BB 要求 'discrete probability (e.g., CMU's 15-359)'——量子测量、量子概率、信息论这几章都建立在其上。"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "UMD CMSC/PHYS 457 要求 '1 course with a minimum grade of C- from (CMSC351, PHYS373)'，CMSC351 是算法课（量子算法的复杂度分析要用）。"
+  },
+  {
+   "id": "F.2.1",
+   "kind": "required",
+   "evidence": "CMU 15-859BB 要求 'theory of computation (e.g., CMU's 15-251)'，对应形式语言/可计算性/复杂性这条线（节点索引里最贴近的是 F.2.1，实际也涉及 F.2.3）。"
+  }
+ ],
+ "notes": "两条候选前置都拿到硬证据：M.3.1——UMD 要求 MATH240（线性代数）并且明写 'basic concepts in linear algebra (e.g., eigenvalues, eigenvectors, Hermitian and unitary matrices)'，CMU 要求 21-341；M.6.1——CMU 明写 'discrete probability'，UMD 未把概率列为先修（只要求线性代数 + 算法/物理课任一门），所以 M.6.1 是 supported 但偏'部分课程要求'。对节点里写的外部前置'量子力学基础'，CMU 15-859BB 明确反向表述：'No background in physics is required.'；UMD 也把课程定位成跨学科、'will cover basic concepts in theoretical computer science and physics in addition to introducing core quantum computing topics'，即物理概念在课内补。建议主代理把'量子力学基础'从硬前置降为 recommended/可选。资源选 Preskill 而不是 UMD/CMU 的课：Preskill 的站是纯公开的完整讲义 + 视频（Ch7 纠错 86 页、Ch10 量子信息论 97 页），一个站就覆盖'量子态、门与测量、量子算法、纠错、量子信息'全部五项；若觉得偏物理/偏深，更适合 D3 入门第一遍的是 UMD CMSC/PHYS 457（本科导论课，站点也有 syllabus/homework/project，https://www.cs.umd.edu/class/spring2025/cmsc457/ ）或 CMU 15-859BB（有讲义 PDF 与视频，http://www.cs.cmu.edu/~odonnell/quantum18/ ）。IBM Quantum Learning（https://learning.quantum.ibm.com/course/basics-of-quantum-information ，现跳转到 quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information）也可作动手练习的补充，页面对外可访问但不是大学课程。"
+}

@@ -1,0 +1,80 @@
+{
+ "id": "X.1.3",
+ "resource": {
+  "tier": "website",
+  "title": "Self-Driving Cars Specialization（University of Toronto，Coursera 四门课系列）",
+  "url": "https://www.coursera.org/specializations/self-driving-cars",
+  "lang": "en",
+  "free": true,
+  "covers": "系统覆盖节点主干：Course 1《Introduction to Self-Driving Cars》讲术语、硬件选型、软件栈架构、车辆运动学/动力学建模与控制、以及 safety frameworks（安全评估）；Course 2《State Estimation and Localization》讲卡尔曼滤波、GNSS/INS、激光雷达定位与建图；Course 3《Visual Perception》讲 CNN 目标检测、语义分割、深度图；Course 4《Motion Planning》讲 mission/behaviour/local 三级规划、Dijkstra 与 A* 找最短路、有限状态机选行为、生成平滑路径与速度曲线，并在 CARLA 仿真器里做真实场景工程。Python + CARLA 动手项目贯穿全系列。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Toronto",
+   "course": "Self-Driving Cars Specialization（Coursera，4 门课）",
+   "url": "https://www.coursera.org/specializations/self-driving-cars",
+   "prereq_text": "It is recommended that you have some background in linear algebra, probability, statistics, calculus, physics, control theory, and Python programming.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.3.1",
+    "M.6.1",
+    "M.6.2",
+    "M.1.2",
+    "H.4.1",
+    "P.2.3"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "CS 287 Advanced Robotics (Fall 2019, Pieter Abbeel)",
+   "url": "https://people.eecs.berkeley.edu/~pabbeel/cs287-fa19/",
+   "prereq_text": "Familiarity with mathematical proofs, probability, algorithms, linear algebra; ability to implement algorithmic ideas in code. ... Key Berkeley courses that can build your background: CS188, EE126, EE127.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "F.1.2",
+    "M.3.1",
+    "A.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "H.4.2": "not_mentioned",
+  "A.3.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "recommended",
+   "evidence": "U of T 官方写 'recommended ... background in linear algebra'；Berkeley CS287 写 'Familiarity with ... linear algebra'。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "recommended",
+   "evidence": "两门课都把 probability 列为背景要求（U of T 的 FAQ 是 recommended，CS287 是 required 语气）。"
+  },
+  {
+   "id": "M.1.2",
+   "kind": "recommended",
+   "evidence": "U of T 官方 'background in ... calculus, physics'。"
+  },
+  {
+   "id": "H.4.1",
+   "kind": "recommended",
+   "evidence": "U of T 官方 'background in ... control theory'——节点讲'控制'与实车动力学，控制理论是直接前置。"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "recommended",
+   "evidence": "U of T 官方 'background in ... Python programming'，作业在 CARLA 里用 Python 写。"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "Berkeley CS287 写 'Familiarity with ... algorithms'（规划部分直接用搜索/优化算法）。"
+  }
+ ],
+ "notes": "资源选 U of T 的 Coursera 系列而非某门单课：节点要求'感知、定位、预测、规划、控制、实时与安全评估'全链路，这套四门课正好一门一块（Course 1 还专门讲 safety frameworks），且可在 Coursera 免费旁听（audit），CARLA 项目是公开可装的仿真器。candidate_check 两项都记 not_mentioned：两门课的先修原文里都没有出现机器人学课或计算机视觉课——CS287 本身是'从 AI 视角入门机器人'的研究生课，只把 CS188（A.1.1 搜索与规划）、EE126（概率）、EE127（凸优化/线性代数）写作'building your background'；U of T 那份 FAQ 里有'Some exposure to computer vision, AI or robotics is also useful'一句，但该句只出现在 Tavily 摘要、我抓取的页面正文里没有，故不写入 evidence，A.3.2 保守记 not_mentioned。补充判断：H.4.2 作为先修偏保守——本节点课程是把'车辆建模与控制'当作课内内容讲，而不是要求先修过机器人学。"
+}
