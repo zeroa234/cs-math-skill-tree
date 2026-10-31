@@ -1,0 +1,40 @@
+{
+ "id": "M.8.6",
+ "resource": {
+  "tier": "website",
+  "title": "MACM 401 Introduction to Computer Algebra (Michael Monagan, Simon Fraser University) — 全课程视频 + 讲义 + Maple 工作表",
+  "url": "https://www.cecm.sfu.ca/~mmonagan/teaching/MACM401/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页公开全套 mp4 讲课视频、讲义（handouts）、填写版笔记与 Maple 工作表，按模块组织：Introduction to Computer Algebra（整数乘法 Karatsuba、算法复杂度、整数 gcd、Euclid 环）、Polynomial Algorithms（扩展欧几里得、F[x] 除法与 gcd 代价、多元多项式与内容/伪除法、结式）、Modular Algorithms and the FFT（模算法乘法、插值、FFT、模 gcd）、p-adic/Hensel 提升（多项式平方根、gcd）、Polynomial Factorization（Z[x] 与有限域上分解）、以及符号积分（Risch 算法）。对应节点的表达式化简、精确运算、多项式算法与 CAS 使用；D2 到 D4 都有内容（复杂度分析、模算法）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Simon Fraser University",
+   "course": "MACM 401 Introduction to Computer Algebra",
+   "url": "http://www.sfu.ca/students/calendar/2026/fall/courses/macm/401.html",
+   "prereq_text": "Data structures and algorithms for mathematical objects. Topics include long integer arithmetic, computing polynomial greatest common divisors, the fast Fourier transform, Hensel's lemma and p-adic methods, differentiation and simplification of formulae, and polynomial factorization. Students will use a computer algebra system such as Maple for calculations and programming. Prerequisite: CMPT 307",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "F.1.2"
+   ]
+  }
+ ],
+ "candidate_check": {},
+ "extra_prereqs": [
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "SFU MACM 401 官方先修 'CMPT 307'，而 CMPT 307 是 Data Structures and Algorithms（'Design and analysis of efficient data structures and algorithms'）。"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "同上：CMPT 307 同时是算法分析与设计课（greedy、divide & conquer、动态规划、网络流、NP-完全性入门）。"
+  }
+ ],
+ "notes": "原图对 M.8.6 没列建议前置，故 candidate_check 为空。资源选 Monagan 的 MACM 401：这是少数把『多项式算法 + 模算法 + 因式分解 + 符号积分』完整讲出来、且视频/讲义全免费的本科 CAS 课程；比单纯看 SymPy 官方教程（https://docs.sympy.org/latest/tutorials/intro-tutorial/index.html 也已打开确认存在）更贴合『多项式算法』这一半内容。先修判定：课程目录只写了一条 'Prerequisite: CMPT 307'，映射到 F.1.1 与 F.1.2（数据结构、算法分析与设计），这是原图没列但课程明确要求的先修；数学侧（抽象代数/环与域）目录没写，但讲义用到 Euclidean domain，属隐含背景。只找到 1 门有官方先修文字的 CAS 课程（Waterloo CS 487 的旧页面返回 404，ucalendar.uwaterloo.ca 在本机 SSL 证书校验失败，均无法核验，故未采用）。"
+}

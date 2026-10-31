@@ -1,0 +1,58 @@
+{
+ "id": "M.8.1",
+ "resource": {
+  "tier": "website",
+  "title": "18.335J Introduction to Numerical Methods (Steven G. Johnson, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/",
+  "lang": "en",
+  "free": true,
+  "covers": "OCW 课程页含 Lecture Notes（按周组织）、Problem Sets 与解答、考试。官方描述：'an advanced introduction to numerical linear algebra and related numerical methods. Topics include direct and iterative methods for linear systems, eigenvalue decompositions and QR/SVD factorizations, stability and accuracy of numerical algorithms, the IEEE floating-point standard, sparse and structured matrices, and linear algebra software'，另可能涉及内存层次与 cache、数值积分、FFT、灵敏度分析 —— 正对节点的浮点数、条件数/后向稳定性、直接与迭代线性求解、特征值计算。课程用 Julia（'little or no prior experience required'）。层次在 OCW 标 Graduate，但先修只要 18.06，内容自洽，是这门课最标准的免费讲义来源。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "18.335J / 6.335J Introduction to Numerical Methods",
+   "url": "https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/pages/syllabus/",
+   "prereq_text": "Prerequisites: 18.06 Linear Algebra, 18.700 Linear Algebra, or equivalents",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 170A Introduction to Numerical Analysis: Linear Algebra",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "This course covers analysis of numerical methods for linear algebraic systems and least squares problems. Topics include orthogonalization methods. Ill conditioned problems. Eigenvalue and singular value computations. Knowledge of programming recommended. Prerequisites: MATH 18 or MATH 31AH, and MATH 20C or MATH 31BH and CSE 20 or MATH 15A or MATH 31CH or MATH 109.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1",
+    "M.5.3"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.3.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 170A：'Prerequisites: MATH 18 or MATH 31AH, and MATH 20C or MATH 31BH and ...'（MATH 20C = 多元微积分）。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "UCSD MATH 170A 同一条先修中的 'CSE 20 or MATH 15A or MATH 31CH or MATH 109'（CSE 20 = 离散数学，MATH 109 = 数学推理/证明写作）。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "recommended",
+   "evidence": "UCSD MATH 170A 原文 'Knowledge of programming recommended'；MIT 18.335 用 Julia 但写 'little or no prior experience required'。"
+  }
+ ],
+ "notes": "资源是 MIT 18.335J：讲义、习题与解答全免费，内容与节点的『浮点数/条件数/后向稳定性/直接与迭代求解/特征值』几乎逐项对应，配套教材是 Trefethen & Bau《Numerical Linear Algebra》。注意 OCW 标 Level: Graduate，对 D2 入门层偏重，但先修只要 18.06。先修判定：M.3.1 有硬证据（两门课都要求线性代数）；额外的 M.1.4.1（多元微积分）与 M.5.3（离散数学/证明写作）来自 UCSD MATH 170A 的目录文字，属于原图没列但课程要求的先修。"
+}

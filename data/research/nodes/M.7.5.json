@@ -1,0 +1,50 @@
+{
+ "id": "M.7.5",
+ "resource": {
+  "tier": "website",
+  "title": "15.053 Optimization Methods in Management Science (MIT OpenCourseWare) — 讲义 + 习题 + 案例",
+  "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
+  "lang": "en",
+  "free": true,
+  "covers": "OCW 课程页含 Lecture Notes、Recitation Problems、Assignments、Projects、Tutorials。Syllabus 明确分模块：Linear Programming Theory and Applications (7 lectures)、Integer Programming Theory (5 lectures)、Network Flows and Heuristics (3 lectures)、Decision Trees、Behavioral Economics。对应节点的整数规划（建模与 IP 理论含 branch-and-bound）、组合结构（网络流）、启发式方法；LP/对偶打基础。缺口：近似比/近似算法复杂性、以及精确的组合优化理论（多面体、割平面）没有系统讲；软件走 Excel Solver，编程实践弱。层次为本科（Level: Undergraduate），入口友好。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 171A Introduction to Numerical Optimization: Linear Programming",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Linear optimization and applications. Linear programming, the simplex method, duality. Selected topics from integer programming, network flows, transportation problems, inventory problems, and other applications. ... Prerequisites: MATH 18 or MATH 20F or MATH 31AH, and MATH 20C.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1"
+   ]
+  },
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "15.053 Optimization Methods in Management Science",
+   "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/syllabus/",
+   "prereq_text": "This subject has no formal prerequisites.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "M.5.5": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 171A：'Prerequisites: MATH 18 or MATH 20F or MATH 31AH, and MATH 20C'（MATH 18 = 线性代数）。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 171A 同一条先修里的 'MATH 20C'（多元微积分）。"
+  }
+ ],
+ "notes": "资源用 MIT 15.053 而不是 Coursera 上的 Discrete Optimization：coursera.org/learn/discrete-optimization 直接返回 404（已试），无法核验，按硬性规则不能用。15.053 的 IP 模块含 branch-and-bound，Network Flows and Heuristics 模块覆盖组合结构与启发式，是能系统学的免费课程主页；短板是近似算法与组合优化理论深度不足。先修判定：原图建议前置 M.5.5（图论）没有证据 —— UCSD MATH 171A 的先修只有线代+多元微积分，MIT 15.053 官方写明 'This subject has no formal prerequisites.'（如实记为 unspecified，未记 contradicted，因为『无正式先修』并不等于『图论没用』）。两门课都确实用到图结构（网络流、最短路），但目录文字没要求先修图论，故 M.5.5 记 not_mentioned。"
+}

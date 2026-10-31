@@ -1,0 +1,60 @@
+{
+ "id": "M.7.2",
+ "resource": {
+  "tier": "website",
+  "title": "EE364a: Convex Optimization I (Stephen Boyd, Stanford University) — 全套讲义、习题与 CVXPY 教程",
+  "url": "https://web.stanford.edu/class/ee364a/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页免费给出全套讲义 PDF（'The full set of slides is available as one PDF file here'）、CVXPY 教程、以及凸优化应用专题讲义（stochastic programming、chance constrained optimization、filter design、L1 方法、convex-concave procedure）。官方 catalog description 覆盖：凸集/凸函数/凸优化问题、凸分析基础、最小二乘与 LP/QP/SDP、最优性条件、对偶理论、内点法、应用。正好对应节点的凸集凸函数、对偶、KKT（'optimality conditions' 与对偶理论章节）、内点方法；近端方法只部分涉及（EE364b 更完整，主页有链接）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Stanford University",
+   "course": "EE364a / CME364a Convex Optimization I",
+   "url": "https://web.stanford.edu/class/ee364a/",
+   "prereq_text": "Good knowledge of linear algebra (as in EE263) and probability. Exposure to numerical computing, optimization, and application fields helpful but not required; the applications will be kept basic and simple. You will use CVXPY to write simple scripts, so basic familiarity with elementary Python programming is required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.6.1",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "EE 227BT Convex Optimization",
+   "url": "https://www2.eecs.berkeley.edu/Courses/EE227BT/",
+   "prereq_text": "Prerequisites: Mathematics 54 and Statistics 2 or equivalents.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.4.2": "not_mentioned",
+  "M.7.1": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "Stanford EE364a: 'Good knowledge of linear algebra (as in EE263)'; UC Berkeley EE 227BT: 'Prerequisites: Mathematics 54 and Statistics 2 or equivalents'（Math 54 = Linear Algebra and Differential Equations）。"
+  },
+  {
+   "id": "M.6.1",
+   "kind": "required",
+   "evidence": "Stanford EE364a 先修原文含 'and probability'；UC Berkeley EE 227BT 要求 'Statistics 2'（入门统计/概率课）。"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Stanford EE364a: 'You will use CVXPY to write simple scripts, so basic familiarity with elementary Python programming is required.'"
+  }
+ ],
+ "notes": "资源用 Stanford EE364a 课程主页（website tier，讲义全免费公开），而非 Boyd & Vandenberghe 教材 PDF（属于 book tier，https://web.stanford.edu/~boyd/cvxbook/ 也已打开确认：Cambridge 允许作者网站长期免费提供全书 PDF，可作为配套读物）。先修判定：两门课都只写『线性代数 + 概率』，没有列出多元微积分/梯度，故 M.1.4.2 记 not_mentioned —— 这是课程目录的写法问题，不是内容不需要（凸函数的一阶/二阶条件必然用到梯度与 Hessian，EE364a 讲义第 3 章就是 gradients/Hessians）。同理 M.1.4.3（Hessian）也没写，若要保留该边，证据只能来自讲义内容而非先修文字。M.7.1 记 recommended 的依据是 EE364a 'Exposure to numerical computing, optimization, and application fields helpful but not required'。Berkeley Math 54 同时含 ODE（M.2.1），但课程目录只把它当作线性代数先修，故未列入 extra_prereqs。"
+}

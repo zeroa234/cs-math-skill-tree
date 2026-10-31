@@ -3,11 +3,11 @@
   "built": "2026-10-31",
   "skills": 201,
   "steps": 7,
-  "requiredEdges": 269,
-  "recommendedEdges": 234,
-  "verifiedPrereqs": 35,
-  "withResource": 35,
-  "withExercise": 34,
+  "requiredEdges": 265,
+  "recommendedEdges": 245,
+  "verifiedPrereqs": 47,
+  "withResource": 47,
+  "withExercise": 57,
   "card": {
    "w": 176,
    "h": 58,
@@ -243,7 +243,7 @@
    "en": "Math · Probability, Statistics, Optimization & Numerics",
    "color": "#2f7fd1",
    "optional": false,
-   "height": 673,
+   "height": 666,
    "count": 23
   },
   {
@@ -552,7 +552,7 @@
    ],
    "related": [],
    "step": 3,
-   "reach": 64,
+   "reach": 63,
    "resource": {
     "tier": "website",
     "title": "OpenStax Calculus Volume 2",
@@ -3536,9 +3536,7 @@
    "recommended": [],
    "prereqStatus": "verified",
    "prereqSummary": "UCSD MATH 154 Discrete Mathematics and Graph Theory：先修 MATH 109 或 31CH。",
-   "unlocks": [
-    "M.7.5"
-   ],
+   "unlocks": [],
    "related": [
     {
      "id": "D.4.1",
@@ -3546,7 +3544,7 @@
     }
    ],
    "step": 2,
-   "reach": 1,
+   "reach": 0,
    "resource": {
     "tier": "website",
     "title": "Combinatorics and Graph Theory (David Guichard, Whitman College) — free online textbook, graph theory chapters",
@@ -3628,30 +3626,29 @@
    "required": [
     {
      "id": "M.1.3",
-     "why": "连续随机变量的计算需要积分；离散概率可提前学习。",
+     "why": "连续分布的概率、期望都是积分；多伦多 STA257 要求整年一元微积分。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.5.4",
-     "why": "",
+     "id": "M.1.4.4",
+     "why": "联合分布、二维随机变量要用重积分；UCSD MATH 180A 要求多元微积分 MATH 20C。",
      "kind": "recommended"
     },
     {
-     "id": "M.1.4.4",
-     "why": "",
+     "id": "M.5.4",
+     "why": "古典概型的计数要用排列组合。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "多伦多 STA257：先修一元微积分；UCSD MATH 180A：先修 MATH 20C，强烈建议同修证明课 MATH 109。",
    "unlocks": [
     "M.6.2",
     "M.6.3",
     "M.6.4",
     "M.6.5",
-    "M.7.4",
     "M.7.6",
     "M.8.4",
     "F.1.4",
@@ -3669,14 +3666,51 @@
     }
    ],
    "step": 4,
-   "reach": 47,
-   "resource": null,
+   "reach": 46,
+   "resource": {
+    "tier": "website",
+    "title": "Introduction to Probability, Statistics, and Random Processes — Hossein Pishro-Nik (probabilitycourse.com)",
+    "url": "https://www.probabilitycourse.com/",
+    "lang": "en",
+    "free": true,
+    "covers": "开放获取且经同行评议的在线教材网站，正文全部网页化，配短视频讲解、在线分布计算器与习题。站点自述覆盖：概率公理、条件概率与计数方法；单个与多个随机变量（离散/连续/混合）、矩母函数与特征函数、随机向量与不等式；极限定理与收敛；数理统计入门（贝叶斯与经典两路）。正好对应节点的概率空间、随机变量、分布、条件概率、期望与极限定理（测度化表述不在此书，属 D4）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of Toronto",
+     "course": "STA257H1 Probability and Statistics I",
+     "url": "https://artsci.calendar.utoronto.ca/course/sta257h1",
+     "prereq_text": "Prerequisite: ( MAT148H1, MAT149H1)/ MAT137Y1/ ( MAT158H1, MAT159H1)/ MAT157Y1/ ( MATA31H3, MATA37H3)/ MAT137Y5/ MAT157Y5/ ( MAT137H5, MAT139H5)/ ( MAT157H5, MAT159H5)",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 180A Introduction to Probability",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Prior or concurrent enrollment in MATH 109 is highly recommended. Prerequisites: Math 20C or MATH 31BH, or consent of instructor.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.6.1",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 掷两颗均匀骰子，点数和为 7 的概率是多少？已知至少有一颗是 6，点数和为 7 的条件概率是多少？\n(2) 某病患病率 1%，检测灵敏度 95%（患病者检测阳性的概率），特异度 90%（未患病者检测阴性的概率）。一个人检测阳性，他真正患病的概率是多少？\n(3) X ~ Exp(λ = 2)。求 P(X > 1)、E[X]、Var(X)，并验证无记忆性 P(X > 3 | X > 2) = P(X > 1)。\n(4) 掷均匀硬币 100 次，用中心极限定理（加连续性修正）近似 P(正面次数 ≥ 60)。（可选：写程序模拟 10⁵ 次核对。）",
+    "answer": "(1) 和为 7 的结果有 6 种，概率 6/36 = 1/6。至少一颗 6 的结果有 11 种，其中和为 7 的是 (1,6)、(6,1)，条件概率 2/11。\n(2) 全概率：P(+) = 0.01×0.95 + 0.99×0.10 = 0.1085。贝叶斯：P(病 | +) = 0.0095/0.1085 ≈ 0.088，即只有约 8.8%——患病率低时阳性多半是假阳性。\n(3) P(X > 1) = e^(−2) ≈ 0.135；E[X] = 1/λ = 0.5；Var(X) = 1/λ² = 0.25。P(X > 3 | X > 2) = e^(−6)/e^(−4) = e^(−2) = P(X > 1)。\n(4) 次数 S ~ B(100, 0.5)，均值 50、标准差 5。P(S ≥ 60) ≈ P(Z ≥ (59.5 − 50)/5) = P(Z ≥ 1.9) ≈ 0.0287（精确二项值约 0.0284；不做连续性修正得 0.0228，偏差更大）。",
+    "covers": [
+     "条件概率与贝叶斯公式",
+     "常用分布、期望与方差",
+     "无记忆性",
+     "中心极限定理"
+    ],
+    "uses_prereqs": [
+     "M.1.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 277
+   "y": 238
   },
   {
    "id": "M.6.2",
@@ -3748,7 +3782,22 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.2",
+    "level": "D1",
+    "time_min": 45,
+    "question": "某零件长度（mm）的 10 个样本：4.8, 5.1, 5.3, 4.9, 5.4, 5.0, 5.2, 4.7, 5.1, 5.5。设总体正态。\n(1) 求样本均值、样本标准差，并在 σ 未知时求总体均值 μ 的 95% 置信区间（t₀.₀₂₅,₉ = 2.262）。\n(2) 检验 H₀: μ = 5.3 对 H₁: μ ≠ 5.3（α = 0.05），写出 t 统计量和结论，并解释 p 值的含义。\n(3) X₁, …, Xₙ 独立同分布于 Poisson(λ)，求 λ 的最大似然估计，它是否无偏？\n(4) “μ 的 95% 置信区间”和“下一个零件长度的 95% 预测区间”分别是什么意思？哪个更宽，为什么？",
+    "answer": "(1) x̄ = 51.0/10 = 5.10。离差平方和 0.60，s² = 0.60/9 ≈ 0.0667，s ≈ 0.258。标准误 s/√10 ≈ 0.0816。置信区间 5.10 ± 2.262×0.0816 = [4.915, 5.285]。\n(2) t = (5.10 − 5.3)/0.0816 ≈ −2.45，|t| > 2.262，拒绝 H₀（双侧 p ≈ 0.037）。p 值：若 H₀ 为真，得到至少这么极端的统计量的概率；它不是“H₀ 为真的概率”。（也可看出 5.3 不在 (1) 的置信区间里，结论一致。）\n(3) 对数似然 ℓ(λ) = Σxᵢ ln λ − nλ − Σ ln xᵢ!，令 ℓ′ = Σxᵢ/λ − n = 0 得 λ̂ = x̄。E[x̄] = λ，无偏。\n(4) 置信区间估计的是固定未知参数 μ：重复抽样时约 95% 的区间覆盖 μ。预测区间针对一个新观测值，要同时考虑 μ 的估计误差和个体波动：x̄ ± t·s·√(1 + 1/n)，比置信区间 x̄ ± t·s·√(1/n) 宽得多。",
+    "covers": [
+     "抽样分布与 t 置信区间",
+     "假设检验与 p 值",
+     "最大似然估计与无偏性",
+     "区分置信区间与预测区间"
+    ],
+    "uses_prereqs": [
+     "M.6.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
    "y": 88
@@ -3808,10 +3857,25 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.2.1",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 硬币正面概率 θ 的先验为 Beta(2, 2)，抛 10 次得到 7 次正面。写出后验分布，求后验均值和 MAP 估计，并与最大似然估计比较。\n(2) 求后验预测概率：下一次抛出正面的概率。\n(3) 正态模型：观测 x₁, …, x₄ ~ N(μ, σ² = 4)，样本均值 x̄ = 3，先验 μ ~ N(0, 1)。用共轭更新求 μ 的后验均值和方差，并解释后验均值为什么落在先验均值和 x̄ 之间。\n(4) 写一个随机游走 Metropolis 采样器对 (1) 的后验抽样（提议 θ′ = θ + N(0, 0.1²)，超出 (0, 1) 直接拒绝），说明怎样用样本均值核对解析后验均值。",
+    "answer": "(1) Beta 先验与二项似然共轭：后验 Beta(2 + 7, 2 + 3) = Beta(9, 5)。后验均值 9/14 ≈ 0.643；MAP = (9 − 1)/(9 + 5 − 2) = 8/12 ≈ 0.667；MLE = 0.7。先验把估计往 0.5 拉。\n(2) P(下一次正面 | 数据) = E[θ | 数据] = 9/14 ≈ 0.643。\n(3) 先验精度 1，数据精度 n/σ² = 4/4 = 1，后验精度 2，后验方差 0.5；后验均值 = (1×0 + 1×3)/2 = 1.5。后验均值是先验均值与 x̄ 按精度加权的平均，所以落在两者之间，数据越多越靠近 x̄。\n(4) 目标对数密度 log p(θ) = 8 log θ + 4 log(1 − θ)（相差常数）。每步提议 θ′，以概率 min(1, p(θ′)/p(θ)) 接受。\n```python\nimport numpy as np\nrng = np.random.default_rng(0)\nlogp = lambda t: 8*np.log(t) + 4*np.log(1-t)\nt, xs = 0.5, []\nfor _ in range(50000):\n    p = t + 0.1*rng.standard_normal()\n    if 0 < p < 1 and np.log(rng.random()) < logp(p) - logp(t):\n        t = p\n    xs.append(t)\nprint(np.mean(xs[5000:]))   # ≈ 0.643\n```\n丢掉前面的预热样本后，样本均值应接近 9/14。",
+    "covers": [
+     "共轭先验与后验",
+     "后验均值、MAP 与 MLE",
+     "后验预测",
+     "MCMC 采样核对"
+    ],
+    "uses_prereqs": [
+     "M.6.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 56
+   "y": 52
   },
   {
    "id": "M.6.2.2",
@@ -3869,10 +3933,26 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.2.2",
+    "level": "D1",
+    "time_min": 40,
+    "question": "数据 (x, y)：(1, 2)、(2, 3)、(3, 5)、(4, 4)、(5, 6)。\n(1) 求最小二乘回归直线 ŷ = b₀ + b₁x 和决定系数 R²。\n(2) 写出设计矩阵 X 和正规方程 XᵀXβ = Xᵀy，用它重新求出 (1) 的系数。\n(3) 某个回归的残差图呈“漏斗形”（x 越大残差越分散），说明违反了哪个假设、会影响什么，并给出一种处理办法。\n(4) 解释 b₁ 的含义；如果数据来自观察而非实验，能否说“x 每增加 1 导致 y 增加 b₁”？",
+    "answer": "(1) x̄ = 3，ȳ = 4，Sxy = Σ(x − x̄)(y − ȳ) = 9，Sxx = 10。b₁ = 0.9，b₀ = 4 − 0.9×3 = 1.3。残差 −0.2, −0.1, 1.0, −0.9, 0.2，SSE = 1.90，SST = 10，R² = 1 − 0.19 = 0.81。\n(2) X 的第一列全为 1，第二列为 x。XᵀX = [[5, 15], [15, 55]]，Xᵀy = (20, 69)。解得 β = (1.3, 0.9)，与 (1) 一致。\n(3) 违反同方差假设（异方差）。系数估计仍无偏，但标准误、置信区间和检验不再可靠。可以对 y 做对数等变换、用加权最小二乘，或改用稳健（异方差一致）标准误。\n(4) b₁ 表示 x 每大 1 个单位，y 的平均值大约高 0.9。观察数据只能说明关联：可能有混杂变量同时影响 x 和 y，所以不能直接下因果结论。",
+    "covers": [
+     "最小二乘与 R²",
+     "矩阵形式与正规方程",
+     "残差诊断",
+     "系数解释与相关≠因果"
+    ],
+    "uses_prereqs": [
+     "M.6.2",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 128
+   "y": 124
   },
   {
    "id": "M.6.2.3",
@@ -3939,10 +4019,25 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.2.3",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 用潜在结果 Y(1)、Y(0) 说明：为什么随机分组能无偏地估计平均处理效应 ATE = E[Y(1) − Y(0)]，而观察数据一般不能？\n(2) 两种治疗在轻症和重症病人中的治愈数据：治疗 A：轻症 81/87，重症 192/263；治疗 B：轻症 234/270，重症 55/80。分别计算各层和合并后的治愈率，解释为什么结论相反。\n(3) 设病情 Z 同时影响治疗选择 T 和结果 Y。画出因果图，写出后门调整公式 P(Y | do(T = t)) = Σ_z P(Y | T = t, Z = z)P(Z = z)，用 (2) 的数据计算两种治疗调整后的治愈率，并据此给出结论。\n(4) A/B 测试：基线转化率 10%，希望能检测到提升到 12%，α = 0.05（双侧）、功效 80%。用 n ≈ (z_{α/2} + z_β)²[p₁(1 − p₁) + p₂(1 − p₂)]/(p₁ − p₂)² 估算每组样本量（z₀.₀₂₅ = 1.96，z₀.₂ = 0.84）。",
+    "answer": "(1) 随机化使处理分配 T 与潜在结果 (Y(1), Y(0)) 独立，于是 E[Y | T = 1] = E[Y(1)]、E[Y | T = 0] = E[Y(0)]，两组均值之差就是 ATE。观察数据中，选择处理的人可能本来就不同（混杂），组间差异混入了选择偏差。\n(2) A：轻症 93.1%，重症 73.0%，合并 273/350 = 78.0%。B：轻症 86.7%，重症 68.8%，合并 289/350 = 82.6%。A 在每层都更好，合并后却更差：A 主要用在难治的重症上（263 vs 80），病情这个混杂变量在合并时扭曲了比较（辛普森悖论）。\n(3) 因果图 Z → T、Z → Y、T → Y，Z 打开了一条后门路径，需要对 Z 调整。P(轻症) = 357/700 = 0.51，P(重症) = 0.49。A：0.931×0.51 + 0.730×0.49 ≈ 0.833；B：0.867×0.51 + 0.688×0.49 ≈ 0.779。调整后 A 更好，应看分层（调整后）的结论。\n(4) n ≈ (1.96 + 0.84)² × (0.09 + 0.1056)/0.02² ≈ 7.84 × 0.1956/0.0004 ≈ 3830，每组约 3800–3900 人（用精确分位数算得约 3838）。",
+    "covers": [
+     "潜在结果框架与随机化",
+     "混杂与辛普森悖论",
+     "因果图与后门调整",
+     "实验的样本量与功效"
+    ],
+    "uses_prereqs": [
+     "M.6.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 200
+   "y": 196
   },
   {
    "id": "M.6.2.4",
@@ -4010,10 +4105,26 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.2.4",
+    "level": "D3",
+    "time_min": 55,
+    "question": "(1) 线性回归中 p > n（特征数多于样本数）时，XᵀX 为什么不可逆？写出岭回归解 β̂ = (XᵀX + λI)⁻¹Xᵀy，证明 λ > 0 时矩阵可逆。\n(2) Lasso 目标 ½‖y − Xβ‖² + λ‖β‖₁，在正交设计 XᵀX = I 下，记 z = Xᵀy。推导 β̂ⱼ = sign(zⱼ)·max(|zⱼ| − λ, 0)（软阈值），并说明 Lasso 为什么会产生稀疏解。\n(3) 有限假设类 |H| = 1000，0-1 损失。用 Hoeffding 不等式加联合界：要以至少 95% 的概率保证所有 h ∈ H 的训练误差与真实误差之差都不超过 0.05，需要多少样本？（P(|R̂ − R| > ε) ≤ 2e^(−2nε²)）\n(4) 求 VC 维：一维阈值分类器 h_a(x) = 1[x ≥ a]；区间分类器 h_{a,b}(x) = 1[a ≤ x ≤ b]。",
+    "answer": "(1) rank(XᵀX) = rank(X) ≤ n < p，p×p 矩阵不满秩，不可逆。对任意 v ≠ 0，vᵀ(XᵀX + λI)v = ‖Xv‖² + λ‖v‖² > 0，矩阵正定，所以可逆。\n(2) 展开：½‖y‖² − βᵀz + ½‖β‖² + λΣ|βⱼ|，各坐标分离为 ½βⱼ² − zⱼβⱼ + λ|βⱼ|。βⱼ ≠ 0 时求导得 βⱼ = zⱼ − λ·sign(βⱼ)，只有 |zⱼ| > λ 时才有解；|zⱼ| ≤ λ 时由次梯度条件 0 ∈ −zⱼ + λ[−1, 1] 得 βⱼ = 0。合起来就是软阈值。ℓ₁ 罚在 0 处不可导，系数小于阈值时被精确压到 0，因此解稀疏。\n(3) 联合界：P(∃h, |R̂ − R| > ε) ≤ 2|H|e^(−2nε²) ≤ δ ⇒ n ≥ ln(2|H|/δ)/(2ε²) = ln(40000)/0.005 ≈ 2120。\n(4) 阈值：能打散任意 1 个点；2 个点 x₁ < x₂ 无法实现标签 (1, 0)，VC 维 = 1。区间：能打散任意 2 个点；3 个点 x₁ < x₂ < x₃ 无法实现 (1, 0, 1)，VC 维 = 2。",
+    "covers": [
+     "高维回归与岭回归",
+     "Lasso 与稀疏性",
+     "一致收敛与样本复杂度",
+     "VC 维"
+    ],
+    "uses_prereqs": [
+     "M.6.2",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 272
+   "y": 268
   },
   {
    "id": "M.6.3",
@@ -4066,7 +4177,22 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.3",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 顾客按强度 λ = 3（人/小时）的 Poisson 过程到达。求 1 小时内恰好来 2 人的概率；相邻两次到达间隔的分布和均值；2 小时内至少来 1 人的概率。\n(2) 简单对称随机游走 Sₙ = X₁ + … + Xₙ，Xᵢ 独立且取 ±1 各一半概率。求 E[Sₙ]、Var(Sₙ)；证明 Sₙ 和 Sₙ² − n 都是鞅。\n(3) 赌徒从 3 元开始，每局输赢 1 元各一半概率，到 0 元或 10 元时停止。用鞅的可选停止定理求最终到达 10 元的概率。\n(4) X(t) = A cos(ωt) + B sin(ωt)，A、B 独立且都服从 N(0, 1)。求均值函数和自协方差函数，判断它是否宽平稳。",
+    "answer": "(1) P(N(1) = 2) = e^(−3)·3²/2! = 4.5e^(−3) ≈ 0.224。间隔服从 Exp(3)，均值 1/3 小时 = 20 分钟。P(N(2) ≥ 1) = 1 − e^(−6) ≈ 0.9975。\n(2) E[Sₙ] = 0，Var(Sₙ) = n。E[Sₙ₊₁ | Fₙ] = Sₙ + E[Xₙ₊₁] = Sₙ。E[Sₙ₊₁² − (n + 1) | Fₙ] = Sₙ² + 2SₙE[Xₙ₊₁] + 1 − n − 1 = Sₙ² − n，两者都是鞅。\n(3) 停时 τ 有界期望，Sτ 有界，可选停止定理给出 E[S_τ] = S₀ = 3。S_τ 取 10（概率 p）或 0，10p = 3，p = 0.3。\n(4) E[X(t)] = 0。Cov(X(s), X(t)) = cos ωs·cos ωt + sin ωs·sin ωt = cos(ω(t − s))，只依赖时间差，且方差有限，所以宽平稳。",
+    "covers": [
+     "Poisson 过程",
+     "随机游走与鞅",
+     "可选停止定理",
+     "平稳性"
+    ],
+    "uses_prereqs": [
+     "M.6.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
    "y": 160
@@ -4128,10 +4254,26 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.3.1",
+    "level": "D2",
+    "time_min": 40,
+    "question": "(1) 天气马尔可夫链：状态 {晴, 雨}，转移矩阵 P = [[0.8, 0.2], [0.4, 0.6]]（行是今天，列是明天）。今天晴，后天下雨的概率是多少？求平稳分布。\n(2) 这条链是否不可约、非周期？据此说明 Pⁿ 为什么会收敛到每一行都等于平稳分布的矩阵。\n(3) 三状态链 P = [[0, 1, 0], [0.5, 0, 0.5], [0, 1, 0]]。它的周期是多少？有没有平稳分布？Pⁿ 收敛吗？\n(4) 吸收链：状态 0、1、2、3，0 和 3 是吸收态，在 1、2 时每步以 1/2 的概率左移或右移。求从状态 1 出发到被吸收的期望步数。",
+    "answer": "(1) P²[晴→雨] = 0.8×0.2 + 0.2×0.6 = 0.28。平稳分布满足 π晴×0.2 = π雨×0.4，得 π = (2/3, 1/3)。\n(2) 两个状态互相可达，不可约；P[晴→晴] > 0，存在自环，非周期。有限、不可约、非周期的链是遍历的，Pⁿ 的每一行都收敛到唯一的平稳分布（P⁵⁰ 的第一行已约为 (0.667, 0.333)）。\n(3) 状态 1 只能在偶数步回到自己（1→0→1 或 1→2→1），周期为 2。平稳分布 π = (1/4, 1/2, 1/4) 存在（验证 πP = π），但 Pⁿ 在两个矩阵之间来回振荡，不收敛。\n(4) 设 t₁、t₂ 为期望步数：t₁ = 1 + ½t₂（左移即被吸收），t₂ = 1 + ½t₁。解得 t₁ = 2（与赌徒破产公式 k(N − k) = 1×2 一致）。",
+    "covers": [
+     "转移矩阵与多步转移",
+     "平稳分布",
+     "不可约性、周期性与收敛",
+     "吸收时间"
+    ],
+    "uses_prereqs": [
+     "M.6.3",
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 344
+   "y": 340
   },
   {
    "id": "M.6.3.2",
@@ -4188,10 +4330,26 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.3.2",
+    "level": "D4",
+    "time_min": 60,
+    "question": "Wₜ 为标准布朗运动。\n(1) 用 Itô 公式求 d(Wₜ²)，由此推出 ∫₀ᵗ W_s dW_s = (Wₜ² − t)/2，并说明它与普通微积分结果 Wₜ²/2 不同的原因。\n(2) 几何布朗运动 dSₜ = μSₜ dt + σSₜ dWₜ：用 Itô 公式求 d(ln Sₜ)，写出 Sₜ 的显式解和 E[Sₜ]。\n(3) Ornstein–Uhlenbeck 过程 dXₜ = −θXₜ dt + σ dWₜ（θ > 0），X₀ = x₀。求 E[Xₜ]、Var(Xₜ) 和 t → ∞ 时的平稳分布。\n(4) 用 Euler–Maruyama 法模拟 (2)（μ = 0.05，σ = 0.2，S₀ = 1，T = 1，步长 0.01，10⁴ 条路径）。写出更新公式，说明样本均值应当接近什么、误差大约多大。",
+    "answer": "(1) f(w) = w²，Itô 公式 df = f′dW + ½f″(dW)² = 2W dW + dt。积分得 Wₜ² = 2∫W dW + t，即 ∫₀ᵗ W dW = (Wₜ² − t)/2。差别来自二次变差 (dW)² = dt：布朗运动路径的二次变差不为 0，泰勒展开的二阶项不能丢。\n(2) d ln S = dS/S − ½(dS)²/S² = (μ − σ²/2)dt + σ dW。Sₜ = S₀ exp((μ − σ²/2)t + σWₜ)。由 E[e^(σWₜ)] = e^(σ²t/2)，E[Sₜ] = S₀e^(μt)。\n(3) d(e^(θt)Xₜ) = σe^(θt)dWₜ，Xₜ = x₀e^(−θt) + σ∫₀ᵗ e^(−θ(t−s)) dW_s。E[Xₜ] = x₀e^(−θt)；由 Itô 等距，Var(Xₜ) = σ²(1 − e^(−2θt))/(2θ)。平稳分布 N(0, σ²/(2θ))。\n(4) S_{k+1} = S_k + μS_kΔt + σS_k√Δt·Z_k，Z_k ~ N(0, 1)。样本均值应接近 E[S₁] = e^(0.05) ≈ 1.0513；S₁ 的标准差约 0.21，10⁴ 条路径的蒙特卡洛标准误约 0.002，另有 O(Δt) 的离散化偏差。",
+    "covers": [
+     "Itô 公式与二次变差",
+     "几何布朗运动",
+     "线性 SDE（OU 过程）",
+     "SDE 数值模拟"
+    ],
+    "uses_prereqs": [
+     "M.6.3",
+     "M.1.6.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 416
+   "y": 412
   },
   {
    "id": "M.6.4",
@@ -4256,7 +4414,22 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.4",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) AR(1) 模型 Xₜ = 0.6Xₜ₋₁ + εₜ，εₜ 是均值 0、方差 1 的白噪声。写出平稳条件，求平稳时的均值、方差和自相关函数 ρ(k)。\n(2) 已知 X₁₀₀ = 2，求 X₁₀₁ 和 X₁₀₂ 的预测值（一步、两步），以及一步预测误差的方差。\n(3) M/M/1 排队：顾客到达率 λ = 8 人/小时，服务率 μ = 10 人/小时。求利用率 ρ、系统内平均人数 L、平均逗留时间 W，并验证 Little 定律 L = λW。\n(4) 到达率升到 9.5 人/小时后 W 是多少？解释为什么利用率接近 1 时等待时间会急剧增加。",
+    "answer": "(1) 平稳条件 |φ| < 1（这里 0.6）。均值 0；方差 γ(0) = σ²/(1 − φ²) = 1/0.64 = 1.5625；ρ(k) = 0.6^k。\n(2) X̂₁₀₁ = 0.6×2 = 1.2，X̂₁₀₂ = 0.6²×2 = 0.72；一步预测误差就是 ε₁₀₁，方差 1。\n(3) ρ = λ/μ = 0.8；L = ρ/(1 − ρ) = 4 人；W = 1/(μ − λ) = 0.5 小时。λW = 8×0.5 = 4 = L。\n(4) W = 1/(10 − 9.5) = 2 小时，是原来的 4 倍。W = 1/(μ(1 − ρ)) 与 1 − ρ 成反比，ρ → 1 时趋于无穷：随机到达的波动没有富余服务能力去消化。",
+    "covers": [
+     "AR 模型与平稳性",
+     "自相关与预测",
+     "M/M/1 排队指标",
+     "Little 定律与利用率"
+    ],
+    "uses_prereqs": [
+     "M.6.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
    "y": 232
@@ -4316,7 +4489,22 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.6.5",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 信源有 4 个符号 A、B、C、D，概率分别为 1/2、1/4、1/8、1/8。求信源熵 H（以 bit 为单位）。\n(2) 为它构造 Huffman 码，求平均码长，并与熵比较。\n(3) 二元对称信道的错误概率 p = 0.1，求信道容量 C = 1 − H(p)。\n(4) (7, 4) 汉明码的最小距离是 3，它能纠正几位错误？再计算 P = (1/2, 1/2) 与 Q = (3/4, 1/4) 的 KL 散度 D(P‖Q)（以 bit 为单位），并说明它为什么不对称。",
+    "answer": "(1) H = ½×1 + ¼×2 + ⅛×3 + ⅛×3 = 1.75 bit。\n(2) 合并最小的 C、D，再与 B 合并，最后与 A 合并：A = 0，B = 10，C = 110，D = 111。平均码长 = ½×1 + ¼×2 + ⅛×3×2 = 1.75 = H（概率都是 2 的负整数次幂时 Huffman 码恰好达到熵）。\n(3) H(0.1) = −0.1 log₂0.1 − 0.9 log₂0.9 ≈ 0.469，C ≈ 0.531 bit/次。\n(4) 最小距离 d 能纠正 ⌊(d − 1)/2⌋ = 1 位错误。D(P‖Q) = ½ log₂(0.5/0.75) + ½ log₂(0.5/0.25) ≈ −0.292 + 0.5 = 0.208 bit。D(Q‖P) 按 Q 的权重计算，一般不同，所以 KL 散度不是距离。",
+    "covers": [
+     "信息熵",
+     "Huffman 编码与信源编码定理",
+     "信道容量",
+     "纠错码与 KL 散度"
+    ],
+    "uses_prereqs": [
+     "M.6.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
    "y": 304
@@ -4371,10 +4559,25 @@
    "resource": null,
    "zhAlt": null,
    "courses": [],
-   "exercise": null,
+   "exercise": {
+    "id": "M.7.1",
+    "level": "D1",
+    "time_min": 40,
+    "question": "工厂生产产品 A、B，每件利润分别是 4 和 3（百元）。A 受设备限制每天最多 5 件，B 受市场限制每天最多 8 件，两者共用工时：A 每件 2 小时、B 每件 1 小时，每天共 14 小时。\n(1) 建立线性规划模型，用图解法求最优产量和最大利润。\n(2) 写出对偶问题，用互补松弛条件求对偶最优解，解释每个对偶变量（影子价格）的经济含义。\n(3) 如果每天工时从 14 增加到 15，最大利润变为多少？与影子价格一致吗？\n(4) 用 scipy.optimize.linprog 求解 (1) 并核对（写出代码）。",
+    "answer": "(1) max 4x + 3y，s.t. x ≤ 5，y ≤ 8，2x + y ≤ 14，x, y ≥ 0。可行域顶点 (0,0)、(5,0)、(5,4)、(3,8)、(0,8)，目标值 0、20、32、36、24。最优 x = 3、y = 8，利润 36。\n(2) 对偶：min 5u₁ + 8u₂ + 14u₃，s.t. u₁ + 2u₃ ≥ 4，u₂ + u₃ ≥ 3，u ≥ 0。x = 3 < 5，第一个约束不紧 ⇒ u₁ = 0；x > 0 ⇒ u₁ + 2u₃ = 4 ⇒ u₃ = 2；y > 0 ⇒ u₂ + u₃ = 3 ⇒ u₂ = 1。对偶目标 8 + 28 = 36，与原问题相等。影子价格：多一个工时多赚 2，B 的市场上限放宽 1 件多赚 1，A 的设备上限没用满，价值 0。\n(3) 新最优 x = 3.5、y = 8，利润 38，增加 2，与 u₃ = 2 一致（最优基不变的范围内成立）。\n(4)\n```python\nfrom scipy.optimize import linprog\nres = linprog([-4, -3], A_ub=[[1, 0], [0, 1], [2, 1]], b_ub=[5, 8, 14])\nprint(res.x, -res.fun, -res.ineqlin.marginals)   # [3. 8.] 36.0 [0. 1. 2.]\n```",
+    "covers": [
+     "线性规划建模",
+     "图解法与顶点最优",
+     "对偶与互补松弛",
+     "灵敏度分析（影子价格）"
+    ],
+    "uses_prereqs": [
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 236
+   "y": 268
   },
   {
    "id": "M.7.2",
@@ -4408,29 +4611,39 @@
    "required": [
     {
      "id": "M.3.1",
-     "why": "",
+     "why": "Stanford EE364a：Good knowledge of linear algebra；UCSD MATH 173A 要求 MATH 18。",
      "kind": "required"
     },
     {
      "id": "M.1.4.2",
-     "why": "梯度、一阶近似与链式法则支撑可微凸优化。",
+     "why": "一阶条件、KKT 都直接用梯度；UCSD MATH 173A（凸性、最优性条件、对偶）要求 MATH 20C 多元微积分。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.7.1",
-     "why": "建模、可行域和对偶入门支撑凸优化。",
+     "why": "EE364a：exposure to optimization helpful but not required；线性规划和对偶是凸优化的特例。",
      "kind": "recommended"
     },
     {
      "id": "M.1.4.3",
-     "why": "",
+     "why": "二阶条件判断凸性要用 Hessian。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.6.1",
+     "why": "EE364a 和 Berkeley EE 227BT 都写了概率，主要用在统计估计类应用。",
+     "kind": "recommended"
+    },
+    {
+     "id": "P.2.3",
+     "why": "EE364a 作业用 CVXPY，要求会基本的 Python。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Stanford EE364a：线性代数 + 概率，Python 用于 CVXPY；Berkeley EE 227BT：Math 54 + Stat 2；UCSD MATH 173A：MATH 20C + MATH 18。",
    "unlocks": [
     "M.7.3",
     "M.7.4"
@@ -4447,10 +4660,48 @@
    ],
    "step": 5,
    "reach": 2,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "EE364a: Convex Optimization I (Stephen Boyd, Stanford University) — 全套讲义、习题与 CVXPY 教程",
+    "url": "https://web.stanford.edu/class/ee364a/",
+    "lang": "en",
+    "free": true,
+    "covers": "课程主页免费给出全套讲义 PDF（'The full set of slides is available as one PDF file here'）、CVXPY 教程、以及凸优化应用专题讲义（stochastic programming、chance constrained optimization、filter design、L1 方法、convex-concave procedure）。官方 catalog description 覆盖：凸集/凸函数/凸优化问题、凸分析基础、最小二乘与 LP/QP/SDP、最优性条件、对偶理论、内点法、应用。正好对应节点的凸集凸函数、对偶、KKT（'optimality conditions' 与对偶理论章节）、内点方法；近端方法只部分涉及（EE364b 更完整，主页有链接）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Stanford University",
+     "course": "EE364a / CME364a Convex Optimization I",
+     "url": "https://web.stanford.edu/class/ee364a/",
+     "prereq_text": "Good knowledge of linear algebra (as in EE263) and probability. Exposure to numerical computing, optimization, and application fields helpful but not required; the applications will be kept basic and simple. You will use CVXPY to write simple scripts, so basic familiarity with elementary Python programming is required.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, Berkeley",
+     "course": "EE 227BT Convex Optimization",
+     "url": "https://www2.eecs.berkeley.edu/Courses/EE227BT/",
+     "prereq_text": "Prerequisites: Mathematics 54 and Statistics 2 or equivalents.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.7.2",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 判断凸性并说明理由：a) f(x) = eˣ + x²；b) f(x, y) = x² + xy + y²；c) f(x) = ln x（x > 0）是凸还是凹；d) 集合 {x : ‖x‖₂ ≤ 1} 与 {(x₁, x₂) : x₁x₂ ≥ 1, x₁ > 0, x₂ > 0} 是否为凸集。\n(2) 用拉格朗日乘子求 min x² + y²，s.t. x + 2y = 5，并给出几何解释。\n(3) 写出 min (x − 2)² + (y − 1)²，s.t. x + y ≤ 1 的 KKT 条件并求解（包括乘子）。\n(4) 用 CVXPY 解 (3)，读出约束的对偶变量，与 (3) 的乘子核对（写出代码）。",
+    "answer": "(1) a) 凸，两个凸函数之和；b) Hessian [[2, 1], [1, 2]] 正定，凸；c) (ln x)″ = −1/x² < 0，凹；d) 单位球是凸集（范数的下水平集）；x₁x₂ ≥ 1 等价于 √(x₁x₂) ≥ 1，几何平均在正象限是凹函数，其上水平集是凸集，所以也是凸集。\n(2) L = x² + y² − ν(x + 2y − 5)：2x = ν，2y = 2ν ⇒ y = 2x，代入约束得 x = 1、y = 2，最优值 5，ν = 2。几何上是原点到直线 x + 2y = 5 的最近点（距离 √5）。\n(3) KKT：2(x − 2) + λ = 0，2(y − 1) + λ = 0，λ ≥ 0，x + y ≤ 1，λ(x + y − 1) = 0。无约束最优点 (2, 1) 违反约束，所以约束紧：x + y = 1，且 x − 2 = y − 1 ⇒ x = 1、y = 0，λ = 2 ≥ 0。最优值 2。\n(4)\n```python\nimport cvxpy as cp\nx = cp.Variable(2)\ncon = [x[0] + x[1] <= 1]\nprob = cp.Problem(cp.Minimize(cp.sum_squares(x - [2, 1])), con)\nprob.solve()\nprint(x.value, prob.value, con[0].dual_value)   # [1, 0] 2.0 2.0\n```",
+    "covers": [
+     "凸集与凸函数判别",
+     "等式约束与拉格朗日乘子",
+     "KKT 条件",
+     "用求解器建模并检查对偶"
+    ],
+    "uses_prereqs": [
+     "M.3.1",
+     "M.1.4.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
    "y": 376
@@ -4483,18 +4734,24 @@
    "required": [
     {
      "id": "M.7.2",
-     "why": "凸情形提供非凸分析的比较基础；不构成全部非凸路线的硬门槛。",
+     "why": "UCSD MATH 173B 要求 173A（凸优化）；非凸方法和最优性条件建立在凸优化概念上。",
      "kind": "required"
     },
     {
      "id": "M.1.4.3",
-     "why": "曲率与二阶条件帮助分析局部极值和鞍点。",
+     "why": "二阶最优性条件、牛顿法和鞍点判别都靠 Hessian；UCSD MATH 171B 首先复习多元泰勒展开（先修 20C）。",
      "kind": "required"
     }
    ],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [
+    {
+     "id": "M.7.1",
+     "why": "UCSD MATH 171B 要求 171A（线性规划）。",
+     "kind": "recommended"
+    }
+   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 171B：先修 MATH 20C + 171A；MATH 173B：先修 173A。",
    "unlocks": [],
    "related": [
     {
@@ -4504,13 +4761,51 @@
    ],
    "step": 6,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "6.252J Nonlinear Programming (Dimitri P. Bertsekas, MIT OpenCourseWare) — 完整讲义免费下载",
+    "url": "https://ocw.mit.edu/courses/6-252j-nonlinear-programming-spring-2003/",
+    "lang": "en",
+    "free": true,
+    "covers": "OCW 课程页含 Syllabus、Calendar、Lecture Notes、Assignments（讲义可整包下载）。官方描述覆盖：无约束方法（梯度、共轭方向、Newton、拟 Newton）、约束方法（可行方向、投影、内点、Lagrange 乘子）、凸分析、Lagrangian 松弛、不可微优化、最优性条件（局部/全局）、Lagrange 乘子理论与对偶、以及在整数规划中的应用。对非凸问题即『不假设凸性的一般非线性规划』：非凸约束用 KKT/乘子处理，局部解用二阶条件判别。缺口：鞍点/逃离鞍点的近代分析、连续全局优化（空间分支定界）与复杂度下界不在课程描述里，D3/D4 层需要另找资料。层次为研究生课（OCW 标 Level: Graduate），入门层 D2 偏难，但讲义自洽、无前置要求说明。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 171B Introduction to Numerical Optimization: Nonlinear Programming",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Convergence of sequences in Rn, multivariate Taylor series. Bisection and related methods for nonlinear equations in one variable. Newton's methods for nonlinear equations in one and many variables. Unconstrained optimization and Newton's method. Equality-constrained optimization, Kuhn-Tucker theorem. Inequality-constrained optimization. ... Prerequisites: MATH 20C or MATH 31BH and MATH 171A or consent of instructor.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 173B Optimization Methods for Data Science II",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Unconstrained optimization: linear least squares; randomized linear least squares; method(s) of steepest descent; line-search methods; conjugate-gradient method; ... nonlinear least squares; norm minimization methods. Convex constrained optimization: optimality conditions; convex programming; Lagrangian relaxation; the method of multipliers; the alternating direction method of multipliers; minimizing combinations of norms. ... Prerequisites: DSC 123A or MATH 173A.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.7.3",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) f(x) = x⁴ − 4x² + x。求所有驻点（可数值求解），用二阶导数判断局部极小 / 极大，找出全局最小点。\n(2) f(x, y) = x² − y²：原点是什么类型的驻点？梯度下降从 (1, 0) 出发会收敛到哪里？从 (1, 10⁻⁶) 出发呢？\n(3) 对 (1) 用梯度下降（步长 0.01）分别从 x₀ = 2 和 x₀ = −2 出发，各收敛到哪里？为什么不同？给出一种简单的找全局最优的策略。\n(4) 写出牛顿法用于 (1) 的迭代公式。在 f″(x) < 0 的区域牛顿法会出什么问题？怎么修正？",
+    "answer": "(1) f′(x) = 4x³ − 8x + 1 = 0 的三个实根约为 −1.473、0.126、1.347。f″(x) = 12x² − 8：在 −1.473 处 > 0（局部极小，f ≈ −5.444），0.126 处 < 0（局部极大），1.347 处 > 0（局部极小，f ≈ −2.619）。全局最小在 x ≈ −1.473。\n(2) Hessian diag(2, −2) 不定，原点是鞍点。从 (1, 0) 出发，y 方向梯度一直为 0，迭代沿 x 轴收敛到鞍点。从 (1, 10⁻⁶) 出发，y 分量每步乘以 (1 + 2η) 被放大，最终远离鞍点（这个函数无下界，y → ±∞）。\n(3) x₀ = 2 收敛到局部极小 1.347，x₀ = −2 收敛到全局极小 −1.473：梯度下降只会走到所在“盆地”的底部。简单策略：多起点（随机重启）后取最好的结果，或者模拟退火等带随机扰动的方法。\n(4) x_{k+1} = x_k − f′(x_k)/f″(x_k)。f″ < 0 时这一步不是下降方向，会走向极大值或鞍点。修正：把 f″ 换成 max(f″, δ) 或 |f″| + δ（正则化 / 信赖域），并配合线搜索保证函数值下降。",
+    "covers": [
+     "局部最优与全局最优",
+     "鞍点",
+     "初值依赖与多起点策略",
+     "二阶方法在非凸区域的问题"
+    ],
+    "uses_prereqs": [
+     "M.7.2",
+     "M.1.4.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 488
+   "y": 484
   },
   {
    "id": "M.7.4",
@@ -4540,29 +4835,65 @@
    "required": [
     {
      "id": "M.7.2",
-     "why": "确定性梯度与凸性是常见随机优化入门路线。",
-     "kind": "required"
-    },
-    {
-     "id": "M.6.1",
-     "why": "随机估计、方差与期望支撑随机优化分析。",
+     "why": "UCSD MATH 173B（含随机方法）要求 173A 凸优化；收敛分析在凸函数上进行。",
      "kind": "required"
     }
    ],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "recommended": [
+    {
+     "id": "M.6.1",
+     "why": "随机梯度的无偏性、方差都是期望的计算；173B 没把概率列为先修，入门实现可以边学边补。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.6.2",
+     "why": "随机规划要用样本均值近似和统计误差。",
+     "kind": "recommended"
+    }
+   ],
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 173B：先修 DSC 123A 或 MATH 173A；Princeton ELE522 页面未写先修。",
    "unlocks": [],
    "related": [],
    "step": 6,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "ELE522: Large-Scale Optimization for Data Science (Yuxin Chen, Princeton University) — 公开讲义",
+    "url": "https://yuxinchen2020.github.io/ele522_optimization/",
+    "lang": "en",
+    "free": true,
+    "covers": "课程主页 + Lectures 页公开全部讲义 PDF。与节点直接对应的两份：'Stochastic gradient methods'（12/4）与 'Variance reduction for stochastic optimization'（12/9）；Syllabus 主题清单另含 stochastic optimization、variance reduction、saddle-escaping algorithms，以及 subgradient/proximal/ADMM 等配套工具。讲义含 SG 方法的收敛率推导（与 GD 的 1/k、1/ε 对比）与 SVRG/SAGA 类方差缩减分析，正好对应随机梯度、方差缩减与收敛分析。缺口：随机规划（scenario/sample average approximation）与 Robbins–Monro 随机逼近的经典处理不在讲义列表里，D3/D4 需要另补。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 173B Optimization Methods for Data Science II",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Unconstrained optimization: linear least squares; randomized linear least squares; method(s) of steepest descent; line-search methods; conjugate-gradient method; comparing the efficiency of methods; randomized/stochastic methods; nonlinear least squares; norm minimization methods. ... Prerequisites: DSC 123A or MATH 173A.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.7.4",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 目标 F(w) = (1/n)Σᵢ fᵢ(w)。写出全梯度下降和随机梯度下降（SGD）的更新式，说明 SGD 的随机梯度为什么是 ∇F 的无偏估计。\n(2) 一维问题 fᵢ(w) = ½(w − aᵢ)²，a = (1, 2, 3, 4, 10)。求 F 的最小值点。从 w₀ = 0 出发，第 k 步（k = 0, 1, 2, …）用步长 η_k = 1/(k + 1) 并均匀随机抽一个 aᵢ，证明 w_k 恰好是前 k 次抽到的 a 的平均值。\n(3) 为什么固定步长的 SGD 不会收敛到精确最优点，而是在附近振荡？方差缩减方法（如 SVRG）是怎么解决的？\n(4) 编程：对一个线性回归问题分别用批量大小 1、16 和全量做梯度下降，画出“损失–处理的样本数”曲线，说明你预期看到什么。",
+    "answer": "(1) GD：w ← w − η∇F(w)。SGD：均匀随机抽 i，w ← w − η∇fᵢ(w)。E[∇fᵢ(w)] = (1/n)Σ∇fᵢ(w) = ∇F(w)，所以无偏。\n(2) F′(w) = (1/n)Σ(w − aᵢ) = 0 ⇒ w* = ā = 4。更新 w_{k+1} = w_k − (1/(k + 1))(w_k − a_{iₖ}) = (k/(k + 1))w_k + a_{iₖ}/(k + 1)。k = 0 时 w₁ = a_{i₀}；若 w_k 是前 k 个样本的平均，则 w_{k+1} = (k·w_k + a_{iₖ})/(k + 1) 正是前 k + 1 个的平均。由大数定律，w_k → 4。\n(3) 在最优点 ∇F = 0，但单个 ∇fᵢ 不为 0，随机梯度的方差不会消失，固定步长下迭代在 w* 附近以与 η·方差相当的幅度振荡。办法是让步长递减，或用 SVRG：用控制变量 ∇fᵢ(w) − ∇fᵢ(w̃) + ∇F(w̃) 代替 ∇fᵢ(w)，它仍然无偏，且 w、w̃ 接近 w* 时方差趋于 0，可以用固定步长线性收敛。\n(4) 按“处理的样本数”计：批量 1 最初下降最快但曲线噪声大，最后在最优值附近抖动；全量每步最稳但每步代价是 n 个样本，前期最慢；批量 16 居中，噪声小、还能利用向量化，实践中通常最划算。",
+    "covers": [
+     "随机梯度与无偏性",
+     "随机逼近（递减步长）",
+     "方差与方差缩减",
+     "批量大小的取舍"
+    ],
+    "uses_prereqs": [
+     "M.7.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 560
+   "y": 556
   },
   {
    "id": "M.7.5",
@@ -4592,24 +4923,24 @@
    "required": [
     {
      "id": "M.7.1",
-     "why": "",
-     "kind": "required"
-    },
-    {
-     "id": "M.5.5",
-     "why": "网络与图结构支撑组合优化。",
+     "why": "整数规划的分支定界要反复解线性规划松弛；UCSD MATH 171A 把整数规划、网络流放在线性规划之后讲。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "M.5.5",
+     "why": "网络流、匹配等组合结构用图来描述；MIT 15.053 在课内介绍。",
+     "kind": "recommended"
+    },
+    {
      "id": "F.1.2",
-     "why": "",
+     "why": "动态规划、近似算法与算法分析相通。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "UCSD MATH 171A：先修 MATH 18 + 20C；MIT 15.053：This subject has no formal prerequisites。",
    "unlocks": [],
    "related": [
     {
@@ -4619,13 +4950,51 @@
    ],
    "step": 3,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "15.053 Optimization Methods in Management Science (MIT OpenCourseWare) — 讲义 + 习题 + 案例",
+    "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
+    "lang": "en",
+    "free": true,
+    "covers": "OCW 课程页含 Lecture Notes、Recitation Problems、Assignments、Projects、Tutorials。Syllabus 明确分模块：Linear Programming Theory and Applications (7 lectures)、Integer Programming Theory (5 lectures)、Network Flows and Heuristics (3 lectures)、Decision Trees、Behavioral Economics。对应节点的整数规划（建模与 IP 理论含 branch-and-bound）、组合结构（网络流）、启发式方法；LP/对偶打基础。缺口：近似比/近似算法复杂性、以及精确的组合优化理论（多面体、割平面）没有系统讲；软件走 Excel Solver，编程实践弱。层次为本科（Level: Undergraduate），入口友好。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 171A Introduction to Numerical Optimization: Linear Programming",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Linear optimization and applications. Linear programming, the simplex method, duality. Selected topics from integer programming, network flows, transportation problems, inventory problems, and other applications. ... Prerequisites: MATH 18 or MATH 20F or MATH 31AH, and MATH 20C.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Massachusetts Institute of Technology",
+     "course": "15.053 Optimization Methods in Management Science",
+     "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/syllabus/",
+     "prereq_text": "This subject has no formal prerequisites.",
+     "prereq_kind": "unspecified"
+    }
+   ],
+   "exercise": {
+    "id": "M.7.5",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 0-1 背包：容量 10，物品（重量，价值）为 ①(5, 10)、②(4, 40)、③(6, 30)、④(3, 50)。写出整数规划模型，并用动态规划求最优解。\n(2) 用 LP 松弛加分支定界解 (1)：求根节点 LP 松弛的最优值（按价值密度贪心，允许取分数），说明下一步对哪个变量分支、两个子问题的界各是多少。\n(3) 4 个城市 A、B、C、D，距离 AB = 1，BC = 1，CD = 10，DA = 2，AC = 3，BD = 3。用最近邻启发式从 A 出发构造回路，与最优回路比较。\n(4) 顶点覆盖的 2-近似算法：反复取一条未被覆盖的边，把两个端点都加入覆盖（即取一个极大匹配的所有端点）。证明它的结果不超过最优解的 2 倍。",
+    "answer": "(1) max 10x₁ + 40x₂ + 30x₃ + 50x₄，s.t. 5x₁ + 4x₂ + 6x₃ + 3x₄ ≤ 10，xᵢ ∈ {0, 1}。动态规划 dp[c] = 容量 c 下的最大价值，逐个物品倒序更新；最优选 ②④，重量 7，价值 90（剩余容量 3 放不下任何其他物品）。\n(2) 价值密度：④ 16.7、② 10、③ 5、① 2。依次取 ④、②（已用 7），③ 只能取 3/6 = 0.5，LP 界 = 50 + 40 + 15 = 105。对分数变量 x₃ 分支：x₃ = 0 时依次取 ④、②，再取 ① 的 3/5，界 = 50 + 40 + 6 = 96；x₃ = 1 时剩余容量 4，取 ④ 后剩 1，取 ② 的 1/4，界 = 30 + 50 + 10 = 90。x₃ = 1 分支的界 90 不超过已知整数解 90，可以剪掉；继续搜索 x₃ = 0 分支，最终证明 90 最优。\n(3) 最近邻：A→B(1)→C(1)→D(10)→A(2)，总长 14。4 个城市只有 3 条不同回路：ABCDA = 14，ABDCA = 1 + 3 + 10 + 3 = 17，ACBDA = 3 + 1 + 3 + 2 = 9。最优 9，贪心比最优长约 56%。\n(4) 算法取到的边互不相交，构成匹配 M，输出 |C| = 2|M|。任何顶点覆盖都必须在每条匹配边上至少选一个端点，且这些边互不相交，所以 OPT ≥ |M|，于是 |C| ≤ 2·OPT。C 确实是覆盖：若还有边两端都不在 C 里，算法就会继续选它。",
+    "covers": [
+     "整数规划建模",
+     "动态规划",
+     "LP 松弛与分支定界",
+     "启发式方法",
+     "近似算法"
+    ],
+    "uses_prereqs": [
+     "M.7.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 464,
-   "y": 302
+   "y": 299
   },
   {
    "id": "M.7.6",
@@ -4654,24 +5023,24 @@
    "required": [
     {
      "id": "M.6.1",
-     "why": "",
+     "why": "MIT 6.254：A course in probability and mathematical maturity；混合策略和期望效用都是概率计算。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "M.7.1",
-     "why": "",
+     "id": "M.1.2",
+     "why": "Yale ECON 159：We will use calculus (mostly one variable)。",
      "kind": "recommended"
     },
     {
-     "id": "M.3.1",
-     "why": "",
+     "id": "M.7.1",
+     "why": "MIT 6.254：a course in optimization would be helpful, but is not required。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 6.254：先修概率课；Yale ECON 159：要求微观经济学入门，会用到一元微积分和概率。",
    "unlocks": [],
    "related": [
     {
@@ -4681,13 +5050,50 @@
    ],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "ECON 159 Game Theory (Ben Polak, Open Yale Courses) — 24 讲完整视频 + 讲义 + 习题",
+    "url": "https://oyc.yale.edu/economics/econ-159",
+    "lang": "en",
+    "free": true,
+    "covers": "Open Yale Courses 免费提供全部 24 讲视频、讲义（transcript）与作业。官方 Description：dominance、backward induction、Nash equilibrium、evolutionary stability、commitment、credibility、asymmetric information、adverse selection、signaling；课程目录里还有 L11–12 Evolutionary Stability、L17 Backward Induction: Ultimatum and Bargaining、L24 Asymmetric Information: Auctions and the Winner's Curse。对应节点的均衡概念、序贯决策（逆向归纳/子博弈精炼）、效用与风险（预期效用讲）、多主体相互作用；机制设计（VCG、显示原理）与形式化决策理论只部分覆盖，D4 层需另补。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Yale University",
+     "course": "ECON 159 Game Theory (Open Yale Courses)",
+     "url": "https://oyc.yale.edu/economics/econ-159",
+     "prereq_text": "Requirements: ... Introductory microeconomics (115 or equivalent) is required. Intermediate micro (150/2) is not required, but it is recommended. We will use calculus (mostly one variable) in this course. We will also refer to ideas like probability and expectation.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Massachusetts Institute of Technology",
+     "course": "6.254 Game Theory with Engineering Applications",
+     "url": "https://ocw.mit.edu/courses/6-254-game-theory-with-engineering-applications-spring-2010/pages/syllabus/",
+     "prereq_text": "Prerequisites: A course in probability (6.041 or equivalent) and mathematical maturity. A course in analysis (18.100 or equivalent), and a course in optimization (6.251, 6.255 or equivalent) would be helpful, but is not required.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.7.6",
+    "level": "D3",
+    "time_min": 50,
+    "question": "(1) 囚徒困境（收益为（甲，乙））：都合作 (−1, −1)；甲合作乙背叛 (−3, 0)；甲背叛乙合作 (0, −3)；都背叛 (−2, −2)。求纯策略纳什均衡，说明它为什么不是帕累托最优。\n(2) 匹配硬币：两人同时出正或反，相同则甲得 1、乙得 −1，不同则相反。求混合策略纳什均衡和甲的期望收益。\n(3) 第二价格密封拍卖（Vickrey 拍卖）：出价最高者赢，支付第二高的出价。证明对估值为 v 的竞买人，如实出价 b = v 是弱占优策略。\n(4) 序贯博弈：进入者先选“进入 / 不进入”，若进入，在位者再选“斗争 / 容纳”。收益（进入者，在位者）：不进入 (0, 5)；进入后斗争 (−1, 1)；进入后容纳 (2, 2)。用逆向归纳求子博弈完美均衡；再指出一个靠“不可置信威胁”维持的纳什均衡。",
+    "answer": "(1) 对每个人，无论对方怎么做，背叛都更好（0 > −1，−2 > −3），背叛是严格占优策略，唯一纳什均衡是（背叛，背叛），收益 (−2, −2)。（合作，合作）让两人都更好 (−1, −1)，所以均衡不是帕累托最优。\n(2) 唯一均衡是双方都以 1/2 的概率出正：这样对方出正或出反的期望收益相同，没人有动机偏离。甲的期望收益为 0。\n(3) 设其他人的最高出价为 p。如实出价时，v > p 则赢并得 v − p > 0，v < p 则输得 0，都是可能结果中最好的。改报 b > v：只有当 v < p < b 时结果改变，此时赢了却付 p > v，收益为负，更差。改报 b < v：只有当 b < p < v 时结果改变，此时本来能赚 v − p > 0 却输了，更差。其余情况结果不变，所以如实出价弱占优。\n(4) 逆向归纳：进入后在位者容纳得 2 > 斗争得 1，会选容纳；预见到这一点，进入者进入得 2 > 0，选进入。子博弈完美均衡：（进入，容纳），收益 (2, 2)。纳什均衡（不进入，若进入就斗争）：给定在位者威胁斗争，进入者不进入（0 > −1）；在位者的威胁不会被执行，偏离也不得益，所以是纳什均衡，但“斗争”在进入后的子博弈里不是最优反应，属于不可置信威胁。",
+    "covers": [
+     "纳什均衡与占优策略",
+     "混合策略均衡",
+     "机制设计（Vickrey 拍卖）",
+     "序贯博弈与子博弈完美均衡"
+    ],
+    "uses_prereqs": [
+     "M.6.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 455
+   "y": 448
   },
   {
    "id": "M.8.1",
@@ -4717,29 +5123,29 @@
    "required": [
     {
      "id": "M.3.1",
-     "why": "线性方程、矩阵分解与谱是数值线性代数基础。",
-     "kind": "required"
-    },
-    {
-     "id": "P.1.1",
-     "why": "",
+     "why": "MIT 18.335J 要求 18.06 / 18.700，UCSD MATH 170A 要求 MATH 18；条件数、LU、特征值算法都是线性代数。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "P.2.3",
-     "why": "",
+     "id": "P.1.1",
+     "why": "UCSD MATH 170A：Knowledge of programming recommended；MIT 18.335 用 Julia，说 little or no prior experience required。",
      "kind": "recommended"
     },
     {
-     "id": "M.1.2",
-     "why": "",
+     "id": "P.2.3",
+     "why": "用 NumPy 做实验最方便。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.1.4.1",
+     "why": "UCSD MATH 170A 同时要求 MATH 20C。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.335J：先修 18.06/18.700；UCSD MATH 170A：MATH 18 + 20C + 离散数学，建议会编程。",
    "unlocks": [
     "M.8.3",
     "C.5.3"
@@ -4756,13 +5162,50 @@
    ],
    "step": 2,
    "reach": 3,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "18.335J Introduction to Numerical Methods (Steven G. Johnson, MIT OpenCourseWare)",
+    "url": "https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/",
+    "lang": "en",
+    "free": true,
+    "covers": "OCW 课程页含 Lecture Notes（按周组织）、Problem Sets 与解答、考试。官方描述：'an advanced introduction to numerical linear algebra and related numerical methods. Topics include direct and iterative methods for linear systems, eigenvalue decompositions and QR/SVD factorizations, stability and accuracy of numerical algorithms, the IEEE floating-point standard, sparse and structured matrices, and linear algebra software'，另可能涉及内存层次与 cache、数值积分、FFT、灵敏度分析 —— 正对节点的浮点数、条件数/后向稳定性、直接与迭代线性求解、特征值计算。课程用 Julia（'little or no prior experience required'）。层次在 OCW 标 Graduate，但先修只要 18.06，内容自洽，是这门课最标准的免费讲义来源。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology",
+     "course": "18.335J / 6.335J Introduction to Numerical Methods",
+     "url": "https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/pages/syllabus/",
+     "prereq_text": "Prerequisites: 18.06 Linear Algebra, 18.700 Linear Algebra, or equivalents",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 170A Introduction to Numerical Analysis: Linear Algebra",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "This course covers analysis of numerical methods for linear algebraic systems and least squares problems. Topics include orthogonalization methods. Ill conditioned problems. Eigenvalue and singular value computations. Knowledge of programming recommended. Prerequisites: MATH 18 or MATH 31AH, and MATH 20C or MATH 31BH and CSE 20 or MATH 15A or MATH 31CH or MATH 109.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.8.1",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 在 IEEE 双精度浮点下，为什么 0.1 + 0.2 == 0.3 的结果是 False？机器精度 ε ≈ 2.2×10⁻¹⁶ 表示什么？\n(2) A = [[1, 1], [1, 1.0001]]，b = (2, 2.0001) 时解为 (1, 1)。求 κ∞(A)。把 b 改为 (2, 2.0002) 后，解变成多少？用条件数解释发生了什么。\n(3) 对 A = [[2, 1], [4, 3]] 做 LU 分解（不选主元），用它解 Ax = (3, 7)。\n(4) 编程：用 Jacobi 迭代解 [[4, 1], [2, 5]]x = (9, 13)，从 0 开始迭代 20 步，与精确解比较；说明严格对角占优为什么保证 Jacobi 迭代收敛。",
+    "answer": "(1) 0.1、0.2 在二进制下是无限循环小数，存储时都被舍入；两次舍入误差相加后的结果与 0.3 的舍入值差一个最低位。ε 是 1 与下一个可表示浮点数的间距，即单次舍入的相对误差上界约 ε/2。比较浮点数应使用 |a − b| ≤ tol。\n(2) det A = 0.0001，A⁻¹ = 10⁴·[[1.0001, −1], [−1, 1]]。‖A‖∞ = 2.0001，‖A⁻¹‖∞ = 20001，κ∞ ≈ 4.0×10⁴。新的 b 给出 0.0001y = 0.0002，y = 2、x = 0，解从 (1, 1) 变成 (0, 2)。b 的相对变化只有约 5×10⁻⁵，乘以 κ ≈ 4×10⁴ 后，解的相对变化可达 O(1)：病态问题会把数据误差放大 κ 倍。\n(3) L = [[1, 0], [2, 1]]，U = [[2, 1], [0, 1]]。Ly = b ⇒ y = (3, 1)；Ux = y ⇒ x₂ = 1，x₁ = (3 − 1)/2 = 1。\n(4) 精确解 x = 16/9 ≈ 1.7778，y = 17/9 ≈ 1.8889，20 步 Jacobi 已与它一致到小数点后 8 位。\n```python\nimport numpy as np\nA, b = np.array([[4., 1], [2, 5]]), np.array([9., 13])\nD, R = np.diag(A), A - np.diag(np.diag(A))\nx = np.zeros(2)\nfor _ in range(20):\n    x = (b - R @ x) / D\n```\n迭代矩阵 G = −D⁻¹R 的 ∞-范数 = max(1/4, 2/5) = 0.4 < 1，误差每步至少缩小为 0.4 倍，所以收敛；严格对角占优一般地保证 ‖G‖∞ < 1。",
+    "covers": [
+     "浮点数与舍入误差",
+     "条件数与病态问题",
+     "直接法（LU 分解）",
+     "迭代法（Jacobi）与收敛条件"
+    ],
+    "uses_prereqs": [
+     "M.3.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
-   "y": 308
+   "y": 340
   },
   {
    "id": "M.8.2",
@@ -4792,40 +5235,82 @@
    "required": [
     {
      "id": "M.1.3",
-     "why": "微积分与误差项支撑逼近和求积。",
-     "kind": "required"
-    },
-    {
-     "id": "P.1.1",
-     "why": "",
+     "why": "求积公式逼近的是定积分，误差估计用积分中值定理；MIT 18.330 要求 18.01/18.02。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.8.1",
-     "why": "",
+     "why": "UCSD MATH 170B 要求 170A（误差与数值线性代数）。",
      "kind": "recommended"
     },
     {
      "id": "M.1.5",
-     "why": "",
+     "why": "插值和求积的误差估计用泰勒展开与余项。",
+     "kind": "recommended"
+    },
+    {
+     "id": "P.1.1",
+     "why": "MIT 18.330 的作业需要基本编程。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.3.1",
+     "why": "MIT 18.330：线性代数 helps, but is not required。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.330：先修 18.01、18.02、18.03，作业需编程；UCSD MATH 170B：先修 170A。",
    "unlocks": [],
    "related": [],
    "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "18.330 Introduction to Numerical Analysis (Laurent Demanet, MIT OpenCourseWare)",
+    "url": "https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/",
+    "lang": "en",
+    "free": true,
+    "covers": "OCW 课程页含 Lecture Notes、Assignments、Tools（本科 Level: Undergraduate）。Syllabus 的 Topics 明确写：'Series expansions: from calculus to computation'、'Integrals as sums and derivatives as differences'、'Interpolation, splines, and a second look at numerical calculus'、'Least-squares approximation'、'Fourier transform, Fourier series, Shannon sampling theory'、'Bandlimited interpolation, spectral methods'、以及 ODE 初值/边值问题的数值方法；Summary 强调 'understanding of the speed of convergence of Taylor, Fourier, and other series expansions' 即误差估计。对应节点的多项式/样条插值、函数逼近、数值积分（integrals as sums）与误差估计；自适应求积（adaptive quadrature）没有单列，属部分缺口。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology",
+     "course": "18.330 Introduction to Numerical Analysis",
+     "url": "https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/pages/syllabus/",
+     "prereq_text": "Prerequisites: Calculus (18.01), Calculus (18.02), and Differential Equations (18.03). Some exposure to linear algebra (matrices) at the level of Linear Algebra (18.06) helps, but is not required. The assignments will involve basic computer programming in the language of your choice (Matlab® recommended; this class encourages you to learn Matlab if you don't already know it).",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 170B Introduction to Numerical Analysis: Approximation and Nonlinear Equations",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Rounding and discretization errors. Calculation of roots of polynomials and nonlinear equations. Interpolation. Approximation of functions. Knowledge of programming recommended. Prerequisites: MATH 170A.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.8.2",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 求过点 (0, 1)、(1, 3)、(2, 2) 的二次插值多项式（用牛顿差商或拉格朗日形式）。\n(2) 用复合梯形公式（n = 4）和复合辛普森公式（n = 4）计算 ∫₀¹ eˣ dx，分别与精确值 e − 1 比较误差。\n(3) 在 [−1, 1] 上用等距节点对 f(x) = 1/(1 + 25x²) 做高次多项式插值，会出现什么现象？给出两种补救办法。\n(4) 复合梯形公式的误差是 O(h²)。h 减半时误差大约变为原来的几分之一？用 n = 2 和 n = 4 的梯形结果验证，并做一次 Richardson 外推，看看得到的值和误差。",
+    "answer": "(1) 差商：f[0] = 1，f[0,1] = 2，f[1,2] = −1，f[0,1,2] = (−1 − 2)/2 = −1.5。p(x) = 1 + 2x − 1.5x(x − 1) = 1 + 3.5x − 1.5x²，验证 p(2) = 2。\n(2) 精确值 1.718282。梯形 T₄ ≈ 1.727222，误差约 8.9×10⁻³；辛普森 S₄ ≈ 1.718319，误差约 3.7×10⁻⁵，高出两个数量级（辛普森误差为 O(h⁴)）。\n(3) 龙格现象：节点越多，区间两端附近的插值多项式振荡越剧烈，误差不降反升。补救：改用切比雪夫节点（端点附近更密），或用分段低次插值 / 三次样条。\n(4) 误差约为原来的 1/4。T₂ 误差约 0.0356，T₄ 误差约 0.0089，比值约 3.99。Richardson 外推 (4T₄ − T₂)/3 ≈ 1.718319，误差约 3.7×10⁻⁵——恰好就是辛普森公式的结果。",
+    "covers": [
+     "多项式插值",
+     "数值积分（梯形、辛普森）",
+     "插值误差与龙格现象",
+     "误差阶与 Richardson 外推"
+    ],
+    "uses_prereqs": [
+     "M.1.3"
+    ]
+   },
    "droppedOriginal": [],
    "x": 696,
-   "y": 349
+   "y": 310
   },
   {
    "id": "M.8.3",
@@ -4855,39 +5340,82 @@
    "required": [
     {
      "id": "M.8.1",
-     "why": "离散方程需要数值线性求解与稳定性分析。",
+     "why": "隐式格式每步要解线性方程组，稳定性分析看放大矩阵；UCSD MATH 175 要求数值线性代数。",
      "kind": "required"
     },
     {
      "id": "M.2.1",
-     "why": "了解连续问题后再评价ODE/PDE离散求解。",
+     "why": "MIT 18.086 要求 18.03；时间步进求的是微分方程的解。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.8.2",
-     "why": "",
+     "why": "高阶格式由插值和求积公式推出来。",
      "kind": "recommended"
     },
     {
      "id": "M.2.2",
-     "why": "",
+     "why": "有限差分 / 有限元主要用在 PDE 上。",
+     "kind": "recommended"
+    },
+    {
+     "id": "M.1.4.1",
+     "why": "MIT 18.086 要求 18.02。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.086：先修 18.02 + 18.03；UCSD MATH 175：要求数值线性代数。",
    "unlocks": [
     "X.3.3"
    ],
    "related": [],
    "step": 5,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "18.086 Mathematical Methods for Engineers II (Gilbert Strang, MIT OpenCourseWare)",
+    "url": "https://ocw.mit.edu/courses/18-086-mathematical-methods-for-engineers-ii-spring-2006/",
+    "lang": "en",
+    "free": true,
+    "covers": "OCW 课程页含完整 Video Lectures、Readings、Assignments 与两个 computational projects。官方 Description 分两大块：(1) Initial Value Problems —— wave/heat/convection 方程、非线性守恒律与 Navier-Stokes、Finite Difference Methods: Accuracy and Stability、Lax Equivalence Theorem: CFL 与 Von Neumann 条件、Fourier 分析（diffusion/dissipation/dispersion）、separation of variables 与 spectral methods；(2) Solution of Large Linear Systems —— 有限差分/有限元、minimum degree 重排、Jacobi/Gauss-Seidel/ILU、Arnoldi、CG 与 GMRES、multigrid、反问题与正则化。正好覆盖节点的时间步进、有限差分、收敛与稳定性、有限元与大规模线性求解；有限体积法（finite volume）与多物理耦合没有单列（守恒律部分最接近），属部分缺口。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology",
+     "course": "18.086 Mathematical Methods for Engineers II",
+     "url": "https://ocw.mit.edu/courses/18-086-mathematical-methods-for-engineers-ii-spring-2006/pages/syllabus/",
+     "prereq_text": "Prerequisites: Calculus (18.02), Differential Equations (18.03) or Honors Differential Equations (18.034).",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 175 Numerical Methods for Partial Differential Equations",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "(Conjoined with MATH 275.) Mathematical background for working with partial differential equations. Survey of finite difference, finite element, and other numerical methods for the solution of elliptic, parabolic, and hyperbolic partial differential equations. ... Prerequisites: MATH 174 or MATH 274, or consent of instructor.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.8.3",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 对 y′ = −10y，y(0) = 1，用显式欧拉法分别以 h = 0.25 和 h = 0.05 走几步，结果为什么一个发散、一个衰减？推导显式欧拉法对这个方程的稳定条件。\n(2) 对同一方程用隐式欧拉法，写出迭代公式，说明它为什么对任何 h > 0 都稳定。\n(3) 一维热方程 u_t = u_xx 的显式有限差分格式（FTCS）：写出格式，并用 von Neumann 分析给出稳定条件 r = Δt/Δx² ≤ 1/2。\n(4) 改进欧拉法（Heun，二阶 Runge–Kutta）的局部截断误差和整体误差各是几阶？把步长减半，整体误差应缩小约多少倍？",
+    "answer": "(1) y_{n+1} = (1 − 10h)y_n。h = 0.25 时放大因子为 −1.5：1, −1.5, 2.25, −3.375, …，振荡发散；h = 0.05 时因子为 0.5：1, 0.5, 0.25, …，正确衰减。稳定要求 |1 − 10h| < 1，即 0 < h < 0.2。\n(2) y_{n+1} = y_n + h(−10y_{n+1}) ⇒ y_{n+1} = y_n/(1 + 10h)。对任意 h > 0，因子在 (0, 1) 内，所以无条件稳定（A-稳定），适合刚性问题。\n(3) u_i^{n+1} = u_i^n + r(u_{i+1}^n − 2u_i^n + u_{i−1}^n)。代入 u_i^n = gⁿe^{ikiΔx} 得放大因子 g = 1 − 4r sin²(kΔx/2)。要求对所有 k 有 |g| ≤ 1，最坏情况 sin² = 1 时 1 − 4r ≥ −1，即 r ≤ 1/2。\n(4) 局部截断误差 O(h³)，整体误差 O(h²)；步长减半，整体误差约缩小为 1/4。",
+    "covers": [
+     "时间步进与稳定性",
+     "显式与隐式方法",
+     "有限差分与 von Neumann 分析",
+     "收敛阶"
+    ],
+    "uses_prereqs": [
+     "M.8.1",
+     "M.2.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
    "y": 16
@@ -4924,24 +5452,29 @@
    "required": [
     {
      "id": "M.6.1",
-     "why": "抽样、期望和大数定律支撑Monte Carlo。",
+     "why": "CMU 21-387：Students need a basic background in probability；估计量、方差、大数定律都是概率论。",
      "kind": "required"
     },
     {
      "id": "P.1.1",
-     "why": "",
+     "why": "CMU 21-387 要求 some coding experience；UCSD MATH 114：Students should complete a computer programming course before。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "M.1.4.1",
+     "why": "CMU 21-387 要求多元微积分（多维积分、换元抽样）。",
+     "kind": "recommended"
+    },
+    {
      "id": "M.6.2",
-     "why": "",
+     "why": "标准误、置信区间属于统计推断。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "CMU 21-387：概率 + 多元微积分 + 编程经验；UCSD MATH 114：建议先修编程课。",
    "unlocks": [
     "V.1.3"
    ],
@@ -4957,13 +5490,51 @@
    ],
    "step": 5,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "21-387 / 15-327 Monte Carlo Methods and Applications (Keenan Crane & Gautam Iyer, Carnegie Mellon University)",
+    "url": "https://math.cmu.edu/~mcm-cmu",
+    "lang": "en",
+    "free": true,
+    "covers": "课程主页（math.cmu.edu/~mcm-cmu，实际跳到 gi1242.codeberg.page/cmu-math-cs-mcm/）公开逐讲 notes（HTML/PDF 幻灯片）与每周作业、考试与解答。Schedule 逐条对应节点：Basic Monte Carlo Integration（bias/consistency、sample variance、convergence rate）、Convergence of Monte Carlo Integration（tail bounds、Chebyshev、弱大数律、特征函数）、Variance Reduction I（control variates、stratified sampling）、Variance Reduction II（importance sampling、quasi-Monte Carlo）、Numerics and Random Numbers（浮点、伪随机数质量）、Sample Generation（inversion、rejection、alias table）、Markov Chains（平稳分布、不可约、非周期、TV 收敛、mixing time、ergodicity）、MCMC Algorithms、Metropolis-Hastings（含 burn-in）、Langevin Monte Carlo / MALA、Simulated Annealing。正好覆盖随机抽样、方差缩减、重要性抽样、MCMC 与误差评估；与贝叶斯统计的交叉只到『用 MCMC 从后验采样』的应用层面。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Carnegie Mellon University",
+     "course": "21-387 / 15-327 / 15-627 / 15-860 Monte Carlo Methods and Applications",
+     "url": "https://math.cmu.edu/~mcm-cmu",
+     "prereq_text": "Students need a basic background in probability, multivariable calculus, and some coding experience in any language.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of California, San Diego",
+     "course": "MATH 114 Introduction to Computational Stochastics",
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "prereq_text": "Topics include random number generators, variance reduction, Monte Carlo (including Markov Chain Monte Carlo) simulation, and numerical methods for stochastic differential equations. ... Recommended preparation: CSE 5A, CSE 8A, CSE 11, or ECE 15. Students should complete a computer programming course before enrolling in MATH 114. Prerequisites: MATH 180A.",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.8.4",
+    "level": "D2",
+    "time_min": 50,
+    "question": "(1) 在单位正方形内均匀撒 N 个点，用落入四分之一单位圆的比例估计 π。写出估计量、它的方差和标准误；要让标准误不超过 0.001，大约需要多少个点？\n(2) 估计 I = ∫₀¹ e^(−x²) dx：写出朴素蒙特卡洛估计量；再用对偶变量（同时用 U 和 1 − U）构造估计量，说明它的方差为什么更小。\n(3) 估计 P(Z > 4)（Z 是标准正态）：为什么朴素蒙特卡洛效率很低？用从 N(4, 1) 抽样再加权的重要性抽样写出估计量。\n(4) 对目标密度 π(x) ∝ e^(−x⁴) 用随机游走 Metropolis–Hastings 采样，写出接受概率；列出三种判断链是否混合良好的方法。",
+    "answer": "(1) π̂ = 4·(命中数/N)。单点命中概率 p = π/4，Var(π̂) = 16p(1 − p)/N ≈ 2.697/N，标准误 ≈ 1.64/√N。要求 1.64/√N ≤ 0.001，得 N ≈ 2.7×10⁶。蒙特卡洛误差按 1/√N 下降：精度提高 10 倍，样本要增加 100 倍。\n(2) 朴素估计 Î = (1/N)Σ e^(−Uᵢ²)，Uᵢ ~ U(0, 1)。对偶估计 (1/N)Σ [e^(−Uᵢ²) + e^(−(1−Uᵢ)²)]/2。被积函数在 [0, 1] 上单调递减，f(U) 与 f(1 − U) 负相关，平均后方差小于用 2N 个独立样本的朴素估计。\n(3) P(Z > 4) ≈ 3.17×10⁻⁵，平均每 3 万个样本才命中 1 次，相对误差极大。重要性抽样：Yᵢ ~ N(4, 1)，估计量 (1/N)Σ 1[Yᵢ > 4]·φ(Yᵢ)/φ(Yᵢ − 4) = (1/N)Σ 1[Yᵢ > 4]·e^(8 − 4Yᵢ)，约一半样本落在关心的区域，方差大大降低。\n(4) 对称提议 x′ = x + N(0, s²)，接受概率 α = min(1, π(x′)/π(x)) = min(1, e^(x⁴ − x′⁴))。判断混合：看迹图是否在整个支撑上来回游走、没有长时间停滞；看自相关函数衰减快慢；计算有效样本量（ESS）或多条链的 R̂（接近 1）。",
+    "covers": [
+     "随机抽样估计与标准误",
+     "方差缩减（对偶变量）",
+     "重要性抽样",
+     "MCMC 与混合诊断"
+    ],
+    "uses_prereqs": [
+     "M.6.1",
+     "P.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 527
+   "y": 520
   },
   {
    "id": "M.8.5",
@@ -4993,24 +5564,24 @@
    "required": [
     {
      "id": "M.1.4.2",
-     "why": "链式法则与Jacobian乘积支撑自动微分。",
+     "why": "自动微分实现的就是链式法则与雅可比乘积；MIT 18.S096 要求线性代数 + 多元微积分。",
      "kind": "required"
     },
     {
      "id": "P.1.1",
-     "why": "",
+     "why": "计算图、反向传播要写程序实现；CMU 10-414 的作业是手写 autodiff。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "F.1.1",
-     "why": "",
+     "why": "反向模式要按拓扑序遍历计算图。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 18.S096 Matrix Calculus：先修 18.06 + 18.02；CMU 10-414（dlsyscourse）第 4–5 讲实现自动微分。",
    "unlocks": [],
    "related": [
     {
@@ -5024,13 +5595,45 @@
    ],
    "step": 5,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "18.S096 Matrix Calculus for Machine Learning and Beyond (Alan Edelman & Steven G. Johnson, MIT OpenCourseWare)",
+    "url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/",
+    "lang": "en",
+    "free": true,
+    "covers": "OCW 课程页含完整 Lecture Notes and Readings、Lecture Videos、Problem Sets（本科 Level: Undergraduate）。Topics 与节点逐项对应：'Multidimensional chain rules, and the significance of right-to-left (\"forward\") vs. left-to-right (\"reverse\") composition'、'Chain rules on computational graphs (e.g., neural networks)'、'Forward- and reverse-mode manual and automatic multivariate differentiation'、'Adjoint methods (vJp/pullback rules)'、'Second derivatives, Hessian matrices, quadratic approximations, and quasi-Newton methods'，课程描述还写 'We will discuss reverse/adjoint/backpropagation differentiation, custom vector-Jacobian products, and how modern automatic differentiation is more computer science than calculus (it is neither symbolic formulas nor finite differences)'。前向/反向模式、VJP、计算图上的可微程序全覆盖；梯度验证的具体工具（finite-difference check / gradcheck）没有单列为一节，属小缺口。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Massachusetts Institute of Technology",
+     "course": "18.S096 Matrix Calculus for Machine Learning and Beyond",
+     "url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/pages/syllabus/",
+     "prereq_text": "Prerequisites: Courses in linear algebra (such as 18.06 Linear Algebra) and multivariate calculus (such as 18.02 Multivariable Calculus)",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.8.5",
+    "level": "D2",
+    "time_min": 45,
+    "question": "f(x₁, x₂) = x₁x₂ + sin x₁。\n(1) 画出计算图（中间变量 v₁ = x₁x₂，v₂ = sin x₁，f = v₁ + v₂），在点 (2, 3) 处用前向模式（种子 ẋ = (1, 0)）计算 ∂f/∂x₁，写出每个中间量的值和导数。\n(2) 用反向模式在一次反向传播中求出 ∇f(2, 3)，写出伴随量 v̄ 的传播过程。\n(3) 对 F: ℝⁿ → ℝᵐ，一次前向模式得到 Jacobian–向量积（JVP，雅可比的一列），一次反向模式得到向量–Jacobian 积（VJP，一行）。神经网络的损失函数（m = 1，n = 10⁶）该用哪种模式？为什么？\n(4) 用中心差分 (f(x + h) − f(x − h))/(2h) 检查 (2) 的梯度。h 太大和太小各有什么问题？h 大约取多少合适？",
+    "answer": "(1) v₁ = 6，v₂ = sin 2 ≈ 0.9093，f ≈ 6.9093。前向：v̇₁ = ẋ₁x₂ + x₁ẋ₂ = 3，v̇₂ = cos(x₁)·ẋ₁ ≈ −0.4161，ḟ = v̇₁ + v̇₂ ≈ 2.5839。\n(2) f̄ = 1 ⇒ v̄₁ = 1，v̄₂ = 1。x̄₁ = v̄₁·x₂ + v̄₂·cos x₁ = 3 + cos 2 ≈ 2.5839；x̄₂ = v̄₁·x₁ = 2。∇f(2, 3) ≈ (2.5839, 2)。\n(3) 用反向模式：完整梯度需要 m 次反向（这里 1 次），而前向需要 n 次（10⁶ 次）。代价是要保存前向的中间值（内存）。\n(4) h 太大：截断误差 O(h²) 主导；h 太小：f(x + h) 与 f(x − h) 几乎相等，相减时发生抵消，舍入误差约 ε/h 主导。双精度下 h ≈ ε^(1/3) ≈ 10⁻⁵ 左右较好，并用相对误差 |g_AD − g_FD|/max(|g_AD|, |g_FD|) 判断。",
+    "covers": [
+     "计算图",
+     "前向模式自动微分",
+     "反向模式与伴随量",
+     "JVP / VJP 的选择",
+     "梯度验证"
+    ],
+    "uses_prereqs": [
+     "M.1.4.2",
+     "P.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 928,
-   "y": 599
+   "y": 592
   },
   {
    "id": "M.8.6",
@@ -5059,36 +5662,66 @@
    "optional": false,
    "required": [
     {
-     "id": "P.1.1",
-     "why": "",
+     "id": "F.1.2",
+     "why": "SFU MACM 401 的先修是 CMPT 307 数据结构与算法：大整数、多项式算法的复杂度分析是课程主线。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.3.4",
-     "why": "",
+     "why": "多项式环、有限域是计算代数的工作对象。",
      "kind": "recommended"
     },
     {
-     "id": "M.3.1",
-     "why": "",
+     "id": "M.3.5",
+     "why": "模方法、中国剩余定理、扩展欧几里得算法反复使用。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "SFU MACM 401 Introduction to Computer Algebra：先修 CMPT 307（数据结构与算法）。",
    "unlocks": [],
    "related": [],
-   "step": 2,
+   "step": 4,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MACM 401 Introduction to Computer Algebra (Michael Monagan, Simon Fraser University) — 全课程视频 + 讲义 + Maple 工作表",
+    "url": "https://www.cecm.sfu.ca/~mmonagan/teaching/MACM401/",
+    "lang": "en",
+    "free": true,
+    "covers": "课程主页公开全套 mp4 讲课视频、讲义（handouts）、填写版笔记与 Maple 工作表，按模块组织：Introduction to Computer Algebra（整数乘法 Karatsuba、算法复杂度、整数 gcd、Euclid 环）、Polynomial Algorithms（扩展欧几里得、F[x] 除法与 gcd 代价、多元多项式与内容/伪除法、结式）、Modular Algorithms and the FFT（模算法乘法、插值、FFT、模 gcd）、p-adic/Hensel 提升（多项式平方根、gcd）、Polynomial Factorization（Z[x] 与有限域上分解）、以及符号积分（Risch 算法）。对应节点的表达式化简、精确运算、多项式算法与 CAS 使用；D2 到 D4 都有内容（复杂度分析、模算法）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Simon Fraser University",
+     "course": "MACM 401 Introduction to Computer Algebra",
+     "url": "http://www.sfu.ca/students/calendar/2026/fall/courses/macm/401.html",
+     "prereq_text": "Data structures and algorithms for mathematical objects. Topics include long integer arithmetic, computing polynomial greatest common divisors, the fast Fourier transform, Hensel's lemma and p-adic methods, differentiation and simplification of formulae, and polynomial factorization. Students will use a computer algebra system such as Maple for calculations and programming. Prerequisite: CMPT 307",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "M.8.6",
+    "level": "D2",
+    "time_min": 40,
+    "question": "(1) 用欧几里得算法求有理数系数多项式 gcd(x³ − 1, x² − 1)。\n(2) 用 SymPy 完成并写出结果：化简 (x² − 1)/(x − 1)；展开 (x + y)⁵；求 ∫ x² sin x dx；解 x³ − 6x² + 11x − 6 = 0。\n(3) 计算机代数系统为什么用精确有理数运算？比较浮点计算 Σ_{k=1}^{10} 1/k 与精确有理数结果；说明“中间表达式膨胀”是什么问题。\n(4) 计算 det [[3, 1], [4, 2]] 的整数值和模 5 的值。说明“先在若干小素数下计算，再用中国剩余定理恢复整数结果”的模方法为什么可行，需要事先知道什么。",
+    "answer": "(1) x³ − 1 = x·(x² − 1) + (x − 1)；x² − 1 = (x + 1)(x − 1) + 0，gcd = x − 1。\n(2)\n```python\nfrom sympy import symbols, cancel, expand, integrate, sin, solve\nx, y = symbols('x y')\ncancel((x**2 - 1)/(x - 1))            # x + 1\nexpand((x + y)**5)                      # x⁵ + 5x⁴y + 10x³y² + 10x²y³ + 5xy⁴ + y⁵\nintegrate(x**2*sin(x), x)               # −x²cos x + 2x sin x + 2cos x\nsolve(x**3 - 6*x**2 + 11*x - 6, x)      # [1, 2, 3]\n```\n注意化简 (x² − 1)/(x − 1) = x + 1 隐含了 x ≠ 1。\n(3) 精确运算不会累积舍入误差，相等判断和零判断才可靠（比如判断一个系数是否为 0）。Σ1/k 的精确值是 7381/2520，浮点得到 2.9289682539682538，只是近似。中间表达式膨胀：最终结果可能很小，但计算过程中的系数位数或项数爆炸性增长（如有理数系数的多项式欧几里得算法），需要模方法、子结式等算法控制。\n(4) det = 3×2 − 1×4 = 2，模 5 也是 2。行列式是矩阵元素的整系数多项式，模 p 运算与取模交换；只要所选素数之积大于 2×|det| 的上界（如 Hadamard 界），就能由各个余数用中国剩余定理唯一恢复带符号的整数结果。",
+    "covers": [
+     "多项式算法（欧几里得 gcd）",
+     "使用计算机代数系统",
+     "精确运算与表达式膨胀",
+     "模方法与中国剩余定理"
+    ],
+    "uses_prereqs": [
+     "F.1.2"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 232,
-   "y": 380
+   "x": 696,
+   "y": 382
   },
   {
    "id": "F.1.1",
@@ -5140,7 +5773,7 @@
    ],
    "related": [],
    "step": 2,
-   "reach": 33,
+   "reach": 34,
    "resource": null,
    "zhAlt": null,
    "courses": [],
@@ -5197,6 +5830,7 @@
    "prereqSummary": "",
    "unlocks": [
     "M.4.4",
+    "M.8.6",
     "F.1.3",
     "F.1.4",
     "F.1.5",
@@ -5208,7 +5842,7 @@
    ],
    "related": [],
    "step": 3,
-   "reach": 10,
+   "reach": 11,
    "resource": null,
    "zhAlt": null,
    "courses": [],
@@ -5944,11 +6578,8 @@
    "prereqStatus": "draft",
    "prereqSummary": "",
    "unlocks": [
-    "M.8.1",
-    "M.8.2",
     "M.8.4",
     "M.8.5",
-    "M.8.6",
     "F.1.1",
     "F.3.1",
     "F.3.3",
@@ -5967,7 +6598,7 @@
    ],
    "related": [],
    "step": 1,
-   "reach": 107,
+   "reach": 104,
    "resource": null,
    "zhAlt": null,
    "courses": [],

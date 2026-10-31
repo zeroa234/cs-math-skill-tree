@@ -1,0 +1,53 @@
+{
+ "id": "M.8.4",
+ "resource": {
+  "tier": "website",
+  "title": "21-387 / 15-327 Monte Carlo Methods and Applications (Keenan Crane & Gautam Iyer, Carnegie Mellon University)",
+  "url": "https://math.cmu.edu/~mcm-cmu",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页（math.cmu.edu/~mcm-cmu，实际跳到 gi1242.codeberg.page/cmu-math-cs-mcm/）公开逐讲 notes（HTML/PDF 幻灯片）与每周作业、考试与解答。Schedule 逐条对应节点：Basic Monte Carlo Integration（bias/consistency、sample variance、convergence rate）、Convergence of Monte Carlo Integration（tail bounds、Chebyshev、弱大数律、特征函数）、Variance Reduction I（control variates、stratified sampling）、Variance Reduction II（importance sampling、quasi-Monte Carlo）、Numerics and Random Numbers（浮点、伪随机数质量）、Sample Generation（inversion、rejection、alias table）、Markov Chains（平稳分布、不可约、非周期、TV 收敛、mixing time、ergodicity）、MCMC Algorithms、Metropolis-Hastings（含 burn-in）、Langevin Monte Carlo / MALA、Simulated Annealing。正好覆盖随机抽样、方差缩减、重要性抽样、MCMC 与误差评估；与贝叶斯统计的交叉只到『用 MCMC 从后验采样』的应用层面。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "21-387 / 15-327 / 15-627 / 15-860 Monte Carlo Methods and Applications",
+   "url": "https://math.cmu.edu/~mcm-cmu",
+   "prereq_text": "Students need a basic background in probability, multivariable calculus, and some coding experience in any language.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "M.1.4.1",
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 114 Introduction to Computational Stochastics",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Topics include random number generators, variance reduction, Monte Carlo (including Markov Chain Monte Carlo) simulation, and numerical methods for stochastic differential equations. ... Recommended preparation: CSE 5A, CSE 8A, CSE 11, or ECE 15. Students should complete a computer programming course before enrolling in MATH 114. Prerequisites: MATH 180A.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "CMU 21-387 课程介绍：'Students need a basic background in probability, multivariable calculus, and some coding experience in any language.'"
+  },
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "CMU 21-387：'some coding experience in any language'（作业用 Python）；UCSD MATH 114：'Students should complete a computer programming course before enrolling'。"
+  }
+ ],
+ "notes": "资源选 CMU 21-387：它是少见的本科向 Monte Carlo 专门课，notes 与 slides 全公开，MCMC、importance sampling、mixing time 逐讲都有，最贴合节点的 D2/D3 验收（抽样、标准误、链混合、方差缩减、遍历性）。注意 math.cmu.edu/~mcm-cmu 会重定向到 gi1242.codeberg.page/cmu-math-cs-mcm/（2024 版），两处内容一致。先修判定：M.6.1（概率论）supported —— CMU 明写 'basic background in probability'，UCSD MATH 114 明确 'Prerequisites: MATH 180A'（概率论）。额外的 M.1.4.1（多元微积分）与 P.1.1（程序设计）是原图没列但课程要求的。"
+}

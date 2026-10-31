@@ -1,0 +1,53 @@
+{
+ "id": "M.7.3",
+ "resource": {
+  "tier": "website",
+  "title": "6.252J Nonlinear Programming (Dimitri P. Bertsekas, MIT OpenCourseWare) — 完整讲义免费下载",
+  "url": "https://ocw.mit.edu/courses/6-252j-nonlinear-programming-spring-2003/",
+  "lang": "en",
+  "free": true,
+  "covers": "OCW 课程页含 Syllabus、Calendar、Lecture Notes、Assignments（讲义可整包下载）。官方描述覆盖：无约束方法（梯度、共轭方向、Newton、拟 Newton）、约束方法（可行方向、投影、内点、Lagrange 乘子）、凸分析、Lagrangian 松弛、不可微优化、最优性条件（局部/全局）、Lagrange 乘子理论与对偶、以及在整数规划中的应用。对非凸问题即『不假设凸性的一般非线性规划』：非凸约束用 KKT/乘子处理，局部解用二阶条件判别。缺口：鞍点/逃离鞍点的近代分析、连续全局优化（空间分支定界）与复杂度下界不在课程描述里，D3/D4 层需要另找资料。层次为研究生课（OCW 标 Level: Graduate），入门层 D2 偏难，但讲义自洽、无前置要求说明。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 171B Introduction to Numerical Optimization: Nonlinear Programming",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Convergence of sequences in Rn, multivariate Taylor series. Bisection and related methods for nonlinear equations in one variable. Newton's methods for nonlinear equations in one and many variables. Unconstrained optimization and Newton's method. Equality-constrained optimization, Kuhn-Tucker theorem. Inequality-constrained optimization. ... Prerequisites: MATH 20C or MATH 31BH and MATH 171A or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1",
+    "M.7.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 173B Optimization Methods for Data Science II",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Unconstrained optimization: linear least squares; randomized linear least squares; method(s) of steepest descent; line-search methods; conjugate-gradient method; ... nonlinear least squares; norm minimization methods. Convex constrained optimization: optimality conditions; convex programming; Lagrangian relaxation; the method of multipliers; the alternating direction method of multipliers; minimizing combinations of norms. ... Prerequisites: DSC 123A or MATH 173A.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.7.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.4.3": "not_mentioned",
+  "M.7.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 171B：'Prerequisites: MATH 20C or MATH 31BH and MATH 171A'（MATH 20C = 多元微积分）；课程内容首句就是 'Convergence of sequences in Rn, multivariate Taylor series'。"
+  },
+  {
+   "id": "M.7.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 171B 要求 MATH 171A（Introduction to Numerical Optimization: Linear Programming，讲 LP/simplex/duality/IP/网络流），即优化建模与 OR 基础。"
+  }
+ ],
+ "notes": "资源选择：MIT 6.252J 是少数把非凸/一般非线性规划讲全（最优性条件、对偶、约束方法）且讲义全免费的课程网站。两个已知缺口如实标注：(1) 没有鞍点逃逸、二阶方法复杂度这类近代非凸理论；(2) 没有连续全局优化（spatial branch-and-bound、区间方法）与 NP-hard 复杂性讨论；D3/D4 层建议补 Bertsekas《Nonlinear Programming》后续章节或 MINLP 全局优化讲义。先修判定：原图建议的 M.7.2（凸优化）有硬证据 —— UCSD MATH 173B 明确要求 MATH 173A/DSC 123A（凸优化课，内容含 convex sets/functions、duality、interior methods）；M.1.4.3（海森矩阵）两门课的目录文字都没点名 Hessian（171B 只说 multivariate Taylor series、Newton's method，实际上离不开 Hessian），故记 not_mentioned，若要保留该边，证据只能来自讲义正文而非先修文字。另：MATH 171B 用 171A 当先修，171A 是 LP/IP 课，所以映射到 M.7.1 而非本节点的 M.7.2。"
+}

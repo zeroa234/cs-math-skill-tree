@@ -1,0 +1,64 @@
+{
+ "id": "M.8.2",
+ "resource": {
+  "tier": "website",
+  "title": "18.330 Introduction to Numerical Analysis (Laurent Demanet, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/",
+  "lang": "en",
+  "free": true,
+  "covers": "OCW 课程页含 Lecture Notes、Assignments、Tools（本科 Level: Undergraduate）。Syllabus 的 Topics 明确写：'Series expansions: from calculus to computation'、'Integrals as sums and derivatives as differences'、'Interpolation, splines, and a second look at numerical calculus'、'Least-squares approximation'、'Fourier transform, Fourier series, Shannon sampling theory'、'Bandlimited interpolation, spectral methods'、以及 ODE 初值/边值问题的数值方法；Summary 强调 'understanding of the speed of convergence of Taylor, Fourier, and other series expansions' 即误差估计。对应节点的多项式/样条插值、函数逼近、数值积分（integrals as sums）与误差估计；自适应求积（adaptive quadrature）没有单列，属部分缺口。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "18.330 Introduction to Numerical Analysis",
+   "url": "https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/pages/syllabus/",
+   "prereq_text": "Prerequisites: Calculus (18.01), Calculus (18.02), and Differential Equations (18.03). Some exposure to linear algebra (matrices) at the level of Linear Algebra (18.06) helps, but is not required. The assignments will involve basic computer programming in the language of your choice (Matlab® recommended; this class encourages you to learn Matlab if you don't already know it).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.1",
+    "M.1.3",
+    "M.1.4.1",
+    "M.2.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 170B Introduction to Numerical Analysis: Approximation and Nonlinear Equations",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Rounding and discretization errors. Calculation of roots of polynomials and nonlinear equations. Interpolation. Approximation of functions. Knowledge of programming recommended. Prerequisites: MATH 170A.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.8.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.8.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 170B（讲 rounding/discretization errors、interpolation、approximation of functions 的那门课）原文 'Prerequisites: MATH 170A'，170A 是数值线性代数。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "MIT 18.330：'Prerequisites: Calculus (18.01), Calculus (18.02), and Differential Equations (18.03)'（18.02 = 多元微积分，插值与逼近要用到多变量展开）。"
+  },
+  {
+   "id": "M.2.1",
+   "kind": "required",
+   "evidence": "MIT 18.330 同一条先修里的 18.03 Differential Equations（Topics 含 'Numerical methods for ODE, initial-value problems'）。"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "recommended",
+   "evidence": "MIT 18.330：'Some exposure to linear algebra (matrices) at the level of Linear Algebra (18.06) helps, but is not required.'"
+  }
+ ],
+ "notes": "资源选 MIT 18.330（本科、讲义免费），内容对节点『插值/样条、函数逼近、数值积分、误差估计』逐项命中；它同时覆盖 ODE 数值解，所以和 M.8.3 有重叠，M.8.3 那边改用 18.086 以免两节点给同一资源。先修判定：M.1.3（一元积分学）记 supported，依据是 18.330 必修 18.01/18.02（含定积分），且课程第一个主题就是 'Integrals as sums'；额外发现 UCSD MATH 170B 把数值线性代数（M.8.1）写死为必修先修。缺口：自适应求积（adaptive quadrature）与正交多项式理论在 OCW 的 Topics 里没有单列，D3/D4 层可补 Süli & Mayers 或 Trefethen《Approximation Theory and Approximation Practice》。"
+}

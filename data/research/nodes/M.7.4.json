@@ -1,0 +1,37 @@
+{
+ "id": "M.7.4",
+ "resource": {
+  "tier": "website",
+  "title": "ELE522: Large-Scale Optimization for Data Science (Yuxin Chen, Princeton University) — 公开讲义",
+  "url": "https://yuxinchen2020.github.io/ele522_optimization/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程主页 + Lectures 页公开全部讲义 PDF。与节点直接对应的两份：'Stochastic gradient methods'（12/4）与 'Variance reduction for stochastic optimization'（12/9）；Syllabus 主题清单另含 stochastic optimization、variance reduction、saddle-escaping algorithms，以及 subgradient/proximal/ADMM 等配套工具。讲义含 SG 方法的收敛率推导（与 GD 的 1/k、1/ε 对比）与 SVRG/SAGA 类方差缩减分析，正好对应随机梯度、方差缩减与收敛分析。缺口：随机规划（scenario/sample average approximation）与 Robbins–Monro 随机逼近的经典处理不在讲义列表里，D3/D4 需要另补。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 173B Optimization Methods for Data Science II",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Unconstrained optimization: linear least squares; randomized linear least squares; method(s) of steepest descent; line-search methods; conjugate-gradient method; comparing the efficiency of methods; randomized/stochastic methods; nonlinear least squares; norm minimization methods. ... Prerequisites: DSC 123A or MATH 173A.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.7.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.1": "not_mentioned",
+  "M.7.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.7.2",
+   "kind": "required",
+   "evidence": "UCSD MATH 173B（讲 randomized/stochastic methods 的那门课）原文 'Prerequisites: DSC 123A or MATH 173A'，后者是凸优化课（convex sets/functions、duality、interior methods）。"
+  }
+ ],
+ "notes": "只找到 1 门课程可写：UCSD MATH 173B 明确把随机化/随机方法放在课程大纲里，并且有官方先修原文。Princeton ELE522（本节点的资源）页面虽然有完整讲义，但主页/Syllabus/Lectures 三页都没有 Prerequisites 一节（已用 grep 查 'requisite|background|assume'，0 命中），不能凭记忆替它补先修。M.6.1（概率论）记 not_mentioned 是如实的缺口：随机优化的课几乎都默认会概率，但 173B 目录没写，ELE522 也没写。若要为 M.6.1 找硬证据，需要再查一门带 'probability prerequisite' 字样的随机优化/随机规划课程目录。"
+}

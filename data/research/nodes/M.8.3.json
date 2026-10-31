@@ -1,0 +1,48 @@
+{
+ "id": "M.8.3",
+ "resource": {
+  "tier": "website",
+  "title": "18.086 Mathematical Methods for Engineers II (Gilbert Strang, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/18-086-mathematical-methods-for-engineers-ii-spring-2006/",
+  "lang": "en",
+  "free": true,
+  "covers": "OCW 课程页含完整 Video Lectures、Readings、Assignments 与两个 computational projects。官方 Description 分两大块：(1) Initial Value Problems —— wave/heat/convection 方程、非线性守恒律与 Navier-Stokes、Finite Difference Methods: Accuracy and Stability、Lax Equivalence Theorem: CFL 与 Von Neumann 条件、Fourier 分析（diffusion/dissipation/dispersion）、separation of variables 与 spectral methods；(2) Solution of Large Linear Systems —— 有限差分/有限元、minimum degree 重排、Jacobi/Gauss-Seidel/ILU、Arnoldi、CG 与 GMRES、multigrid、反问题与正则化。正好覆盖节点的时间步进、有限差分、收敛与稳定性、有限元与大规模线性求解；有限体积法（finite volume）与多物理耦合没有单列（守恒律部分最接近），属部分缺口。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "18.086 Mathematical Methods for Engineers II",
+   "url": "https://ocw.mit.edu/courses/18-086-mathematical-methods-for-engineers-ii-spring-2006/pages/syllabus/",
+   "prereq_text": "Prerequisites: Calculus (18.02), Differential Equations (18.03) or Honors Differential Equations (18.034).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1",
+    "M.2.1"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 175 Numerical Methods for Partial Differential Equations",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "(Conjoined with MATH 275.) Mathematical background for working with partial differential equations. Survey of finite difference, finite element, and other numerical methods for the solution of elliptic, parabolic, and hyperbolic partial differential equations. ... Prerequisites: MATH 174 or MATH 274, or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.8.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.8.1": "supported",
+  "M.2.1": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "MIT 18.086：'Prerequisites: Calculus (18.02), Differential Equations (18.03)'（18.02 = 多元微积分）。"
+  }
+ ],
+ "notes": "资源选 18.086（Strang，全视频+讲义+两个计算项目，本科工程向、入口友好），内容里 finite difference 的 accuracy/stability、Lax equivalence、CFL/von Neumann 与 CG/GMRES/multigrid 都直接对应节点的 D2/D3 验收。先修判定：M.2.1（ODE）supported —— 18.086 必修 18.03；M.8.1（数值线性代数）supported —— UCSD MATH 175 的官方先修是 'MATH 174 or MATH 274'，而 MATH 174 的内容首句就是 'Floating point arithmetic, direct and iterative solution of linear equations'。补充：MATH 174 同时还含 interpolation/quadrature（即 M.8.2），所以 MATH 175 其实也隐含要求 M.8.2，这条没写进 extra_prereqs（属于经 174 的间接要求）。缺口：finite volume 与多物理耦合（multiphysics）只在守恒律/耦合求解层面涉及，没有专门讲。"
+}

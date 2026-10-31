@@ -1,0 +1,43 @@
+{
+ "id": "M.8.5",
+ "resource": {
+  "tier": "website",
+  "title": "18.S096 Matrix Calculus for Machine Learning and Beyond (Alan Edelman & Steven G. Johnson, MIT OpenCourseWare)",
+  "url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/",
+  "lang": "en",
+  "free": true,
+  "covers": "OCW 课程页含完整 Lecture Notes and Readings、Lecture Videos、Problem Sets（本科 Level: Undergraduate）。Topics 与节点逐项对应：'Multidimensional chain rules, and the significance of right-to-left (\"forward\") vs. left-to-right (\"reverse\") composition'、'Chain rules on computational graphs (e.g., neural networks)'、'Forward- and reverse-mode manual and automatic multivariate differentiation'、'Adjoint methods (vJp/pullback rules)'、'Second derivatives, Hessian matrices, quadratic approximations, and quasi-Newton methods'，课程描述还写 'We will discuss reverse/adjoint/backpropagation differentiation, custom vector-Jacobian products, and how modern automatic differentiation is more computer science than calculus (it is neither symbolic formulas nor finite differences)'。前向/反向模式、VJP、计算图上的可微程序全覆盖；梯度验证的具体工具（finite-difference check / gradcheck）没有单列为一节，属小缺口。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "18.S096 Matrix Calculus for Machine Learning and Beyond",
+   "url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/pages/syllabus/",
+   "prereq_text": "Prerequisites: Courses in linear algebra (such as 18.06 Linear Algebra) and multivariate calculus (such as 18.02 Multivariable Calculus)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1",
+    "M.1.4.1",
+    "M.1.4.2"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.4.2": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.3.1",
+   "kind": "required",
+   "evidence": "MIT 18.S096：'Courses in linear algebra (such as 18.06 Linear Algebra) and multivariate calculus (such as 18.02 Multivariable Calculus)'。"
+  },
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "同一条先修里的 'multivariate calculus (such as 18.02)'。"
+  }
+ ],
+ "notes": "资源选 MIT 18.S096 而不是 CMU 10-414/714（dlsyscourse.org）：两者都已打开核验，18.S096 的 Topics 恰好逐条命中『前向/反向模式、VJP/pullback、计算图链式法则』且是数学系视角，适合本节点的 D2/D3；dlsyscourse 第 4–5 讲 'Automatic Differentiation' + 'Automatic Differentiation Implementation'（HW1 是手写 autodiff 框架）更适合练实现，但它页面里没有 Prerequisites 一节（grep 'requisite|Requirement|background' 无命中），不能用来做先修证据，故只在 notes 里提。M.1.4.2（梯度与雅可比）记 supported：18.S096 的先修写死 18.02（多元微积分含梯度/雅可比），课程描述自己也说内容是 'beyond gradients and Jacobians'，即默认已会这两样。梯度验证（gradient checking）没有单列主题，属小缺口。"
+}

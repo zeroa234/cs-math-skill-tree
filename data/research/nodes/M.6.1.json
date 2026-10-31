@@ -1,0 +1,55 @@
+{
+ "id": "M.6.1",
+ "resource": {
+  "tier": "website",
+  "title": "Introduction to Probability, Statistics, and Random Processes — Hossein Pishro-Nik (probabilitycourse.com)",
+  "url": "https://www.probabilitycourse.com/",
+  "lang": "en",
+  "free": true,
+  "covers": "开放获取且经同行评议的在线教材网站，正文全部网页化，配短视频讲解、在线分布计算器与习题。站点自述覆盖：概率公理、条件概率与计数方法；单个与多个随机变量（离散/连续/混合）、矩母函数与特征函数、随机向量与不等式；极限定理与收敛；数理统计入门（贝叶斯与经典两路）。正好对应节点的概率空间、随机变量、分布、条件概率、期望与极限定理（测度化表述不在此书，属 D4）。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "University of Toronto",
+   "course": "STA257H1 Probability and Statistics I",
+   "url": "https://artsci.calendar.utoronto.ca/course/sta257h1",
+   "prereq_text": "Prerequisite: ( MAT148H1, MAT149H1)/ MAT137Y1/ ( MAT158H1, MAT159H1)/ MAT157Y1/ ( MATA31H3, MATA37H3)/ MAT137Y5/ MAT157Y5/ ( MAT137H5, MAT139H5)/ ( MAT157H5, MAT159H5)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.1",
+    "M.1.2",
+    "M.1.3",
+    "M.1.5",
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "MATH 180A Introduction to Probability",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "prereq_text": "Prior or concurrent enrollment in MATH 109 is highly recommended. Prerequisites: Math 20C or MATH 31BH, or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.1.3": "supported"
+ },
+ "extra_prereqs": [
+  {
+   "id": "M.1.4.1",
+   "kind": "required",
+   "evidence": "UCSD MATH 180A 要求 MATH 20C（多元微积分与向量分析）或 MATH 31BH；原因是不论联合分布需要多重积分。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "recommended",
+   "evidence": "UCSD MATH 180A 原文：'Prior or concurrent enrollment in MATH 109 is highly recommended'（MATH 109 = Mathematical Reasoning，证明写作）；多伦多 STA257H1 要求的 MAT137Y1/MAT157Y1 本身也是带证明的微积分课。"
+  }
+ ],
+ "notes": "资源选 probabilitycourse.com 而不是 MIT 18.05：ocw.mit.edu 在本机 fetch 时返回 301 重定向死循环、tavily_extract 也抓不到（'Failed to fetch url'），无法核验，故弃用；probabilitycourse.com 首页可正常打开并列出完整目录。课程侧：U of T STA257H1 的先修是整年单变量微积分（MAT137Y1 = Calculus with Proofs / MAT157Y1 = Analysis I），覆盖极限连续、微分、积分与级数，故 M.1.3 记 supported；UCSD MATH 180A 走的是「多元微积分」路线，官方没列一元积分（隐含在 MATH 20C 的链式先修里），因此 M.1.3 的判定用多伦多那条。"
+}
