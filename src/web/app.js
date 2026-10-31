@@ -461,7 +461,7 @@
         el("a", { href: res.url, target: "_blank", rel: "noopener" }, res.title),
         res.covers ? el("span", { class: "res-covers" }, res.covers) : null,
         s.zhAlt ? el("span", { class: "res-covers" }, "中文备选：", el("a", { href: s.zhAlt.url, target: "_blank", rel: "noopener" }, s.zhAlt.title)) : null)
-        : el("p", { class: "pending" }, "资源还在检索中。")));
+        : el("p", { class: "pending" }, "暂无核实过的学习资源。")));
 
     // exercise
     const ex = s.exercise;
@@ -471,7 +471,7 @@
         el("div", { class: "ex-meta" }, `约 ${ex.time_min || 40} 分钟${ex.covers?.length ? " · 覆盖：" + ex.covers.join("、") : ""}`),
         el("div", { html: fmt(ex.question) }),
         el("details", {}, el("summary", {}, "看参考答案"), el("div", { class: "ex-answer", html: fmt(ex.answer) })))
-        : el("p", { class: "pending" }, "练习题还在编写中。")));
+        : el("p", { class: "pending" }, "这个技能暂时没有配练习题。")));
 
     // evidence
     if (s.courses.length) {

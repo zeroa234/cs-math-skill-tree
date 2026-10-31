@@ -4,10 +4,10 @@
   "skills": 201,
   "steps": 7,
   "requiredEdges": 274,
-  "recommendedEdges": 354,
-  "verifiedPrereqs": 165,
-  "withResource": 171,
-  "withExercise": 163,
+  "recommendedEdges": 358,
+  "verifiedPrereqs": 173,
+  "withResource": 180,
+  "withExercise": 172,
   "card": {
    "w": 176,
    "h": 58,
@@ -343,7 +343,7 @@
    "en": "Interdisciplinary & Frontier Topics",
    "color": "#9a6b4f",
    "optional": true,
-   "height": 450,
+   "height": 594,
    "count": 11
   }
  ],
@@ -7911,7 +7911,7 @@
    ],
    "related": [],
    "step": 2,
-   "reach": 30,
+   "reach": 29,
    "resource": {
     "tier": "website",
     "title": "Stanford CS107: Computer Organization & Systems（Autumn 2026 课程网站，lectures + assignments + labs 公开）",
@@ -9427,11 +9427,12 @@
     "C.5.2",
     "D.1.2",
     "S.4.3",
-    "H.3.3"
+    "H.3.3",
+    "X.1.1"
    ],
    "related": [],
    "step": 2,
-   "reach": 27,
+   "reach": 28,
    "resource": {
     "tier": "website",
     "title": "MIT 6.004 Computation Structures (Spring 2017, MIT OpenCourseWare)",
@@ -12967,7 +12968,9 @@
     "A.4.1",
     "A.4.2",
     "A.4.3",
-    "A.4.4"
+    "A.4.4",
+    "X.1.1",
+    "X.1.2"
    ],
    "related": [
     {
@@ -13188,8 +13191,6 @@
     "A.2.3.2",
     "A.2.5",
     "A.3.5",
-    "X.1.1",
-    "X.1.2",
     "X.3.3"
    ],
    "related": [
@@ -13219,7 +13220,7 @@
     }
    ],
    "step": 6,
-   "reach": 7,
+   "reach": 5,
    "resource": {
     "tier": "website",
     "title": "Neural Networks and Deep Learning（Michael Nielsen，免费在线教材网站）",
@@ -17178,12 +17179,11 @@
    "prereqSummary": "UCSD ECE 16：先修 CSE 8B/11、ECE 15 或 MAE 8；MIT 6.2060：先修 6.1910、6.2000、6.3000 三选一。",
    "unlocks": [
     "H.3.2",
-    "H.4.3",
-    "X.1.1"
+    "H.4.3"
    ],
    "related": [],
    "step": 3,
-   "reach": 3,
+   "reach": 2,
    "resource": {
     "tier": "website",
     "title": "Embedded Systems - Shape The World（Valvano & Yerraballi，UT Austin，免费在线教材 + 视频）",
@@ -18396,8 +18396,8 @@
    "optional": false,
    "required": [],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 15.561 Information Technology Essentials 面向几乎没有技术背景的学生；Penn State MIS 390 的先修是入门 MIS 课。作为第 1 步的起点。",
    "unlocks": [
     "I.1.2",
     "I.1.3",
@@ -18406,10 +18406,46 @@
    "related": [],
    "step": 1,
    "reach": 3,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "BUS206: Management Information Systems（Saylor University，免费自学课程）",
+    "url": "https://learn.saylor.org/course/info.php?id=41",
+    "lang": "en",
+    "free": true,
+    "covers": "Saylor 官方课程简介原文：'Learn about the components of business information systems, with an emphasis on data transmission, management information software, and the ways that businesses manage data.' 即信息系统的组成要素、数据传输与网络、管理信息软件与数据管理，并把技术放在企业业务与组织管理的语境里讲，对应节点要求的系统构成、数据/流程/决策与企业应用。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Pennsylvania State University（Smeal 商学院 MIS 专业）",
+     "course": "MIS 390: Foundations of Information Systems",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/mis/",
+     "prereq_text": "Enforced Prerequisite at Enrollment: MIS 204 or MIS 250",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "MIT（OpenCourseWare）",
+     "course": "15.561 Information Technology Essentials",
+     "url": "https://ocw.mit.edu/courses/15-561-information-technology-essentials-spring-2005/pages/syllabus/",
+     "prereq_text": "This course is intended for students with little or no background in computer technology. Students with extensive education or work experience in computer technology should consider taking a more advanced course.",
+     "prereq_kind": "unspecified"
+    }
+   ],
+   "exercise": {
+    "id": "I.1.1",
+    "level": "D1",
+    "time_min": 35,
+    "question": "(1) 信息系统由哪五个部分组成？以超市收银系统为例逐一说明。\n(2) TPS、MIS、DSS、ERP、CRM、SCM 各是什么？各举一个典型用途。\n(3) 数据、信息、知识有什么区别？用销售场景各举一例。\n(4) 结合波特的价值链，说明信息系统怎样支持“进货物流、生产运营、出货物流、市场销售、售后服务”这些主要活动。\n(5) 一家小网店要上线订单管理系统，是自己开发还是直接用 SaaS？列出应考虑的因素并给出建议。",
+    "answer": "(1) 硬件：收银机、扫码枪、服务器；软件：收银程序、库存管理系统、数据库；数据：商品、价格、交易记录；流程：结账、退货、日终对账的操作规程；人：收银员、店长、IT 维护人员。缺少任何一部分系统都无法发挥作用。\n(2) TPS（事务处理系统）：记录日常交易，如收银。MIS（管理信息系统）：汇总生成定期报表，如月度销售报表。DSS（决策支持系统）：支持半结构化决策的分析与模拟，如选址分析。ERP（企业资源计划）：把财务、采购、生产、人事集成在同一套系统和数据库中。CRM（客户关系管理）：管理客户资料、销售机会和售后服务。SCM（供应链管理）：协调供应商、库存和物流。\n(3) 数据：原始记录，如“2026-10-31，商品 A，单价 12，数量 3”。信息：经过整理、有意义的数据，如“本月商品 A 销量比上月下降 20%”。知识：从信息中得出、可以指导行动的理解，如“A 销量下降是因为竞品促销，适当打折能挽回销量”。\n(4) 进货物流：供应商门户、库存系统自动补货。生产运营：生产计划与排程系统、质量监控。出货物流：仓储管理与运输调度系统、订单跟踪。市场销售：电商平台、CRM、营销数据分析。售后服务：工单系统、客服知识库、退换货管理。\n(5) 考虑因素：初始投入和长期成本（开发 + 运维 vs 订阅费）；功能是否标准化（订单管理大多是标准需求）；定制和扩展的需要；数据的归属、导出能力与安全合规；上线速度；团队的技术能力和维护负担；供应商锁定风险。建议：小网店需求标准、技术力量有限，优先选成熟的 SaaS，确认能导出数据、有开放接口；等业务出现明显的差异化需求时再考虑自研部分模块。",
+    "covers": [
+     "信息系统的组成",
+     "信息系统的类型与企业应用",
+     "数据、信息与知识",
+     "信息系统与价值链",
+     "获取方式决策"
+    ],
+    "uses_prereqs": []
+   },
    "droppedOriginal": [],
    "x": 0,
    "y": 52
@@ -18441,13 +18477,13 @@
    "required": [
     {
      "id": "I.1.1",
-     "why": "理解组织中的信息系统再讨论战略、治理和投资。",
+     "why": "Penn State MIS 446（IT 与业务战略）强制先修 MIS 390（信息系统基础）；IST 442 先修 IST 110。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Penn State MIS 446：先修 MIS 301 或 MIS 390；IST 442：先修 IST 110。",
    "unlocks": [],
    "related": [
     {
@@ -18457,10 +18493,48 @@
    ],
    "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "15.571 Generating Business Value from Information Technology（MIT OpenCourseWare，Sloan，含讲义 PDF、讨论题与项目）",
+    "url": "https://ocw.mit.edu/courses/15-571-generating-business-value-from-information-technology-spring-2009/",
+    "lang": "en",
+    "free": true,
+    "covers": "课程简介：'This course covers what every senior manager needs to know about using IT to enable strategy and get more value from IT... we take the strategic perspective of the general manager and study how leading firms get more value from their IT investments via digitization of business processes.' 讲义目录逐讲给出：Aligning IT with business strategy、business operating models（Unification / Diversification / Replication / Coordination）、IT decision making、'IT governance: decisions, rights and accountability'、IT investment、project governance、enterprise architecture 与 change management——正好覆盖业务对齐、IT 治理、投资（组合）决策与组织变革；采购/服务管理（sourcing、ITIL）没有单独成讲，需要另补。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Pennsylvania State University（Smeal 商学院 MIS 专业）",
+     "course": "MIS 446: Information Technology and Business Strategy",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/mis/",
+     "prereq_text": "Enforced Prerequisite at Enrollment: MIS 301 or MIS 390",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Pennsylvania State University（信息科学与技术学院）",
+     "course": "IST 442: Information Technology in an International Context",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
+     "prereq_text": "Enforced Prerequisite at Enrollment: IST 110",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "I.1.2",
+    "level": "D2",
+    "time_min": 40,
+    "question": "(1) IT 治理和 IT 管理有什么区别？COBIT 和 ITIL 分别侧重什么？\n(2) 一家连锁咖啡店的战略目标是“提高会员复购率”。设计 3 个与之对齐的 IT 举措，并为每个举措给出衡量指标。\n(3) 某 IT 项目初始投资 100 万元，之后 5 年每年净收益 30 万元，折现率 8%。计算净现值（NPV）和静态回收期。无形收益应该怎样纳入评估？\n(4) 比较自主开发、外包开发、购买商业软件、使用 SaaS 的优缺点。服务水平协议（SLA）应包含哪些条款？\n(5) 新系统上线失败的常见组织原因有哪些？用一个变革管理模型（如 ADKAR）说明怎样推动员工接受新系统。",
+    "answer": "(1) IT 治理决定“做什么、由谁决策、怎样问责”：确保 IT 投资与业务战略一致、风险可控、价值可衡量，由董事会和高层负责；IT 管理负责“怎样做好”：在治理框架内规划、建设、运行和监控 IT 服务。COBIT 是治理与管理的整体框架（目标、控制、成熟度）；ITIL 是 IT 服务管理的最佳实践（事件管理、变更管理、服务台等）。\n(2) ① 会员 App 的个性化优惠：根据购买历史推送优惠券，衡量券核销率和 30 天复购率。② 统一会员与积分系统，打通线上线下：衡量会员识别率（交易中能识别出会员的比例）和积分活跃度。③ 移动点单与到店自取：缩短排队时间，衡量平均等待时间、移动订单占比和使用者的复购频次。每个举措都要设定基线，最好用 A/B 或分门店试点来评估效果。\n(3) 5 年年金现值系数 Σ 1/1.08ᵗ ≈ 3.993，收益现值 ≈ 119.8 万元，NPV ≈ 19.8 万元 > 0，从财务上看可行。静态回收期 100/30 ≈ 3.3 年（不考虑时间价值）。无形收益（客户满意度、决策质量、合规风险下降）可以尽量转化为可量化的代理指标，或者用平衡计分卡、加权打分法与财务指标并列评估，并做敏感性分析。\n(4) 自主开发：最贴合需求、掌控程度高，但成本高、周期长、需要团队长期维护。外包：借用外部能力，但需求沟通成本高、存在质量和知识转移风险。商业软件：成熟、上线快，但要调整流程去适应软件，许可与定制费用高。SaaS：按订阅付费、免运维、上线最快，但定制有限，数据放在第三方，存在锁定风险。SLA 条款：可用性指标及计算方式、响应和解决时限（按故障级别）、性能指标、数据备份与恢复（RPO/RTO）、安全与合规责任、未达标的赔偿、变更通知、合同终止时的数据返还与删除。\n(5) 常见原因：高层支持不足、用户没有参与需求、培训不够、新流程增加了工作量、旧习惯和部门利益的抵触、上线后缺少支持。ADKAR：Awareness——说明为什么要换系统（旧系统的问题和风险）；Desire——让员工看到对自己的好处，请关键用户参与设计；Knowledge——分角色培训、提供操作手册；Ability——试点、上线初期驻场支持、在实际工作中练习；Reinforcement——跟踪使用率、表彰早期采用者、及时根据反馈改进，并逐步关闭旧系统。",
+    "covers": [
+     "IT 治理与管理框架",
+     "业务与 IT 对齐",
+     "IT 投资评估",
+     "采购与服务水平协议",
+     "组织变革管理"
+    ],
+    "uses_prereqs": [
+     "I.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
    "y": 16
@@ -18492,13 +18566,13 @@
    "required": [
     {
      "id": "I.1.1",
-     "why": "业务、流程与数据概念支撑流程管理。",
+     "why": "Penn State MIS 420 Business Process Management 强制先修 MIS 390。",
      "kind": "required"
     }
    ],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Penn State MIS 420：先修 MIS 390；Indiana BUS-K 315：先修 BUS-K303/304。",
    "unlocks": [],
    "related": [
     {
@@ -18508,10 +18582,48 @@
    ],
    "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Fundamentals of Business Process Management 配套网站（Marlon Dumas, Marcello La Rosa, Jan Mendling, Hajo A. Reijers；免费提供 slides 与视频讲座）",
+    "url": "https://fundamentals-of-bpm.org/",
+    "lang": "en",
+    "free": true,
+    "covers": "站点原文说明：'In this website you will find slides and video lectures, figures and other supplementary material associated with the book'，并交代第二版结构：'extended and completely revised chapters on process identification, process discovery, qualitative process analysis, process redesign, process automation and process monitoring. We also added a new chapter on BPM as an enterprise capability'——正好覆盖流程发现、建模/分析、重设计、自动化与持续监控改进这条主线。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Pennsylvania State University（Smeal 商学院）",
+     "course": "MIS 420: Business Process Management",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/mis/",
+     "prereq_text": "Enforced Prerequisite at Enrollment: MIS 390",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Indiana University（Kelley School of Business）",
+     "course": "BUS-K 315: Business Process Management",
+     "url": "https://kelley.iu.edu/faculty-research/courses/course.html?ID=BUS-K315-428",
+     "prereq_text": "Prerequisite(s): BUS-K303 or BUS-K304 (honors) with a grade of C or higher",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "I.1.3",
+    "level": "D2",
+    "time_min": 40,
+    "question": "(1) 写出 BPM 生命周期的各个阶段。\n(2) 用文字描述一个报销流程的 BPMN 图：员工提交报销单 → 主管审批 → 金额超过 5000 元时还要财务总监复核 → 财务付款；任何一步被驳回就退回员工修改。说明用到的泳道、事件、任务和网关类型。\n(3) 一个流程有三个步骤，处理时间分别为 10、20、5 分钟，前面的等待时间分别为 30、60、15 分钟。求流程周期时间和流程效率（增值时间 / 周期时间），并指出最应优先改进的环节。\n(4) 审批岗位每小时到达 8 件申请，每件平均处理 6 分钟。利用率是多少？如果到达率升到每小时 10 件，会发生什么？\n(5) 流程挖掘是什么？它需要什么样的数据？RPA（机器人流程自动化）适合哪些场景、不适合哪些场景？",
+    "answer": "(1) 流程识别 → 流程发现（建立现状模型）→ 流程分析（找问题、量化）→ 流程重设计 → 流程实施（组织变革与系统自动化）→ 流程监控与控制，然后循环。\n(2) 泳道：员工、主管、财务总监、财务。开始事件：员工提交报销单（任务）。主管“审批”任务之后接排他网关：驳回 → 回到员工“修改报销单”任务；通过 → 第二个排他网关判断金额：> 5000 → 财务总监“复核”任务（之后再接一个排他网关处理驳回），≤ 5000 → 直接到财务“付款”任务。付款后到达结束事件。排他网关（XOR）表示多条出路只走一条。\n(3) 增值时间 10 + 20 + 5 = 35 分钟，等待 30 + 60 + 15 = 105 分钟，周期时间 140 分钟，流程效率 35/140 = 25%。时间大部分花在等待上，最应优先缩短第二步前的 60 分钟等待（如增加审批人手、设置提醒或时限、并行审批），第二步本身也是最长的处理环节。\n(4) 处理能力 60/6 = 10 件/小时，利用率 8/10 = 80%。到达率升到 10 件/小时，利用率达到 100%，任何波动都会让队列越积越长，等待时间无限增长（排队论中 ρ → 1 时等待时间趋于无穷），必须增加人手或缩短处理时间。\n(5) 流程挖掘从信息系统的事件日志中自动发现实际执行的流程、比对它与设计的流程是否一致、找出瓶颈和偏差。需要的数据至少包括案例 ID、活动名称、时间戳（最好还有执行人、成本等属性）。RPA 用软件机器人模拟人在界面上的操作，适合规则明确、重复量大、系统稳定、缺少接口的工作（如在两个系统之间搬运数据）；不适合需要判断、规则经常变化、界面频繁改版的流程，也不应当用来掩盖本该重新设计或通过接口集成解决的问题。",
+    "covers": [
+     "BPM 生命周期",
+     "流程建模（BPMN）",
+     "流程分析指标",
+     "产能与排队",
+     "流程挖掘与自动化"
+    ],
+    "uses_prereqs": [
+     "I.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
    "y": 88
@@ -18543,19 +18655,19 @@
    "required": [
     {
      "id": "I.1.1",
-     "why": "",
+     "why": "Penn State MIS 425 Managing IS Projects 强制先修 MIS 390（与 MIS 307）。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "P.4.1",
-     "why": "软件生命周期是IT项目管理的重要背景之一。",
+     "why": "软件项目的开发过程与项目管理紧密相关；两门课都没把它列为先修。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Penn State MIS 425：先修 MIS 307 + MIS 390；MIT 1.040 Project Management 没写先修。",
    "unlocks": [],
    "related": [
     {
@@ -18565,10 +18677,48 @@
    ],
    "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "1.040 Project Management（MIT OpenCourseWare，本科课，含讲义、日程、阅读、项目作业）",
+    "url": "https://ocw.mit.edu/courses/1-040-project-management-spring-2004/",
+    "lang": "en",
+    "free": true,
+    "covers": "课程按 Project Organization / Planning / Monitoring / Control / Learning 五段组织：组织与 OBS、WBS 与成本分解、CPM/PDM/PERT/GERT 进度、Resource Loading、Earned Value 进度与成本监控、scope/schedule/budget 变更控制、Risk Management 与 Quality Monitoring、以及项目复盘学习——覆盖节点的范围、进度、资源、成本、风险、质量与组织沟通；缺点是案例面向建筑/工程（A/E/C），没有 IT 项目专有内容（敏捷、外包、软件估算），需要自行换成 IT 案例。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Pennsylvania State University（Smeal 商学院）",
+     "course": "MIS 425: Managing Information Systems Projects",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/mis/",
+     "prereq_text": "Enforced Prerequisite at Enrollment: MIS 307 and MIS 390",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "MIT（OpenCourseWare）",
+     "course": "1.040 Project Management",
+     "url": "https://ocw.mit.edu/courses/1-040-project-management-spring-2004/pages/syllabus/",
+     "prereq_text": "（syllabus 只有 Course Meeting Times / Course Description / Homework Submission and Evaluation / Academic Honesty 等小节，没有 Prerequisites 小节，也没有写任何先修课）",
+     "prereq_kind": "unspecified"
+    }
+   ],
+   "exercise": {
+    "id": "I.1.4",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 什么是项目的三重约束？工作分解结构（WBS）是什么，有什么作用？\n(2) 活动及工期（天）：A(3)；B(2，依赖 A)；C(4，依赖 A)；D(2，依赖 B、C)；E(3，依赖 C)；F(1，依赖 D、E)。求项目总工期和关键路径，以及活动 B、D 的总浮动时间。\n(3) 挣值管理：项目预算 BAC = 100 万元。在检查点，计划完成 50%，实际完成 40%，实际花费 45 万元。求 PV、EV、AC、SV、CV、SPI、CPI，以及按当前效率估算的完工总成本 EAC = BAC/CPI，并解释项目状况。\n(4) 怎样建立风险登记册？什么是概率–影响矩阵？风险应对的四种策略是什么？各举一例。\n(5) 什么情况下适合用敏捷方法，什么情况下适合用预测型（瀑布）方法？沟通计划应包含哪些内容？",
+    "answer": "(1) 范围、时间、成本相互制约，任何一项变化都会影响另外两项，并且共同决定质量。WBS 把项目交付物逐层分解成可管理的工作包，是估算工期和成本、分配责任、跟踪进度的基础，也能防止遗漏工作。\n(2) 最早时间：A 0–3，B 3–5，C 3–7，D 7–9（等 B、C 都完成），E 7–10，F 10–11。总工期 11 天。关键路径 A → C → E → F（3 + 4 + 3 + 1 = 11）。最迟时间倒推：F 最迟 10 开始；D 最迟 10 完成、8 开始；E 最迟 7 开始；C 最迟 7 完成；B 最迟 8 完成、6 开始。B 的总浮动 = 6 − 3 = 3 天，D 的总浮动 = 8 − 7 = 1 天。\n(3) PV = 50，EV = 40，AC = 45（单位：万元）。SV = EV − PV = −10（进度落后），CV = EV − AC = −5（超支）。SPI = 0.8，CPI ≈ 0.889。EAC = 100/0.889 ≈ 112.5 万元。项目既落后于进度、又超出预算，按当前效率完工约超支 12.5 万元，需要分析原因并采取纠正措施（调整范围、资源或计划）。\n(4) 风险登记册记录每个风险的描述、原因、发生概率、影响、风险等级、负责人、应对措施和当前状态，并定期更新。概率–影响矩阵按“概率 × 影响”给风险分级，确定优先处理哪些。应对策略：规避（改变计划消除风险，如不用不成熟的技术）、转移（把影响转给第三方，如购买保险、固定价格外包）、减轻（降低概率或影响，如提前做原型验证、增加测试）、接受（主动或被动接受，主动接受时预留应急储备）。\n(5) 需求不确定、需要快速获得反馈、客户能持续参与、可以增量交付时适合敏捷；需求稳定明确、受强监管或合同约束、需要大量前期设计（如硬件、建筑）时适合预测型；也常采用混合方式。沟通计划：利益相关者及其信息需求、沟通内容、频率、方式和渠道、负责人、升级路径。",
+    "covers": [
+     "三重约束与 WBS",
+     "进度管理（关键路径）",
+     "成本控制（挣值）",
+     "风险管理",
+     "方法选择与沟通"
+    ],
+    "uses_prereqs": [
+     "I.1.1"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
    "y": 160
@@ -18601,8 +18751,8 @@
    "optional": false,
    "required": [],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 6.805 / STS.085：There are no formal prerequisites。作为第 1 步的起点。",
    "unlocks": [],
    "related": [
     {
@@ -18612,10 +18762,46 @@
    ],
    "step": 1,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "6.805 / STS.085 Ethics and the Law on the Electronic Frontier（MIT OpenCourseWare，本科课，含阅读书目、讲义、作业与项目）",
+    "url": "https://ocw.mit.edu/courses/6-805-ethics-and-the-law-on-the-electronic-frontier-fall-2005/",
+    "lang": "en",
+    "free": true,
+    "covers": "日程（Calendar）按单元组织：Unit A 'Regulating the Decentralized Internet'（互联网与宪法、过滤与用户控制）、Unit B 'Regulating Government Use of Surveillance Technology'（第四修正案与电子监控、国际问题、Crypto Wars、9/11 后的画像与数据挖掘）等；配合 Brin《The Transparent Society》与 O'Harrow《No Place to Hide》两本必读书，讨论隐私、监控、言论与知识产权类政策、责任与公共利益，正是节点的隐私/知识产权/偏见/责任与社会影响议题（不涉及具体地区法规条文的时效性内容）。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "6.805 / STS.085 Ethics and the Law on the Electronic Frontier",
+     "url": "https://ocw.mit.edu/courses/6-805-ethics-and-the-law-on-the-electronic-frontier-fall-2005/pages/syllabus/",
+     "prereq_text": "There are no formal prerequisites for this subject, but students should be prepared to do extensive independent research, involving both technology and policy analysis. In selecting participants for the class, we will be looking for people with appropriate backgrounds, such as knowledge of 6.033.",
+     "prereq_kind": "recommended"
+    },
+    {
+     "school": "Pennsylvania State University",
+     "course": "IST 431: The Information Environment（信息环境的社会、法律与伦理议题）",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
+     "prereq_text": "Enforced Prerequisite at Enrollment: IST 210 and (IST 220 or IEC 200)",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "I.2.1",
+    "level": "D1",
+    "time_min": 40,
+    "question": "(1) 分别用后果主义、义务论和美德伦理分析：一家 App 公司是否应当把用户的位置数据卖给广告商？\n(2) “告知与同意”作为隐私保护手段有什么局限？为什么“去掉姓名”往往不足以保护隐私？\n(3) 某公司用历史招聘数据训练简历筛选模型，结果模型给女性求职者的评分系统性偏低。偏见可能来自哪里？公司应采取哪些措施？\n(4) 版权、专利、商业秘密分别保护什么？开源许可 GPL 和 MIT 有什么关键区别？在商业产品中使用开源代码要注意什么？\n(5) ACM 职业道德准则的核心原则有哪些？如果上级要求你在产品发布前隐瞒一个已知的安全缺陷，你应该怎么做？",
+    "answer": "(1) 后果主义：权衡各方的结果——公司获得收入、用户得到免费服务，但位置数据可能暴露住址、行踪、健康和宗教信息，被滥用的伤害巨大、难以逆转，总体后果很可能是负面的。义务论：把用户当作手段而不是目的，违背了对用户的诚实和尊重义务；即使用户协议里写了，也很难构成真正知情的同意。美德伦理：一个诚实、值得信任的企业会这样做吗？不会。结论通常是不应出售，至少需要单独、明确、可撤回的同意，并只提供最少必要、经过聚合处理的数据。\n(2) 隐私政策冗长难懂，用户没有时间阅读、也没有真正的选择（不同意就无法使用服务）；数据日后用于什么目的事先难以预见；同意是一次性的，而风险会随时间变化。去标识化后，剩下的属性组合（邮编、性别、出生日期等准标识符）常常能唯一确定一个人，或者与其他公开数据关联后被重新识别；位置轨迹尤其难以匿名。\n(3) 来源：历史招聘决策本身存在偏见，模型学会了复制它；训练数据中女性样本少；看似中性的特征充当了性别的代理（如女子学院、社团名称、职业空窗期）；“成功”标签的定义本身有偏差。措施：发布前和上线后按群体审计模型（比较选中率、错误率）；删除或修正代理特征、重新加权或补充数据；保留人工复核和申诉渠道；对外透明说明；如果无法消除偏见，就不应使用该模型。\n(4) 版权保护作品的具体表达（代码、文档），自动产生；专利保护新颖、非显而易见、有实用性的发明，需要申请并公开，有期限；商业秘密保护通过保密措施维持价值的信息（如配方、内部算法），一旦泄露保护就失去。GPL 是强著佐权（copyleft）：分发包含 GPL 代码的衍生作品时必须以 GPL 开放其源代码；MIT 是宽松许可：保留版权声明即可闭源使用。商业使用要做许可证清点（SBOM），确认义务（署名、附带许可文本、是否需要开源），注意许可证之间的兼容性，以及对 AGPL“通过网络提供服务也触发义务”这类条款的影响。\n(5) 核心原则：为社会和人类福祉做贡献、避免伤害、诚实可信、公平不歧视、尊重隐私、尊重知识产权、保密；职业责任方面要追求高质量、具备胜任能力、了解并遵守规则、接受和提供专业评审、全面评估系统的风险。做法：以书面形式清楚地向上级说明缺陷的风险和可能造成的伤害，提出修复或延期方案；如果被拒绝，按公司规定的渠道向上级的上级、安全或合规部门反映；仍然无效且公众面临严重伤害时，考虑通过合法途径向监管机构报告。过程中保留记录，不要自行公开泄露机密、给攻击者可乘之机。",
+    "covers": [
+     "伦理分析框架",
+     "隐私与再识别",
+     "算法偏见",
+     "知识产权与开源许可",
+     "职业责任"
+    ],
+    "uses_prereqs": []
+   },
    "droppedOriginal": [],
    "x": 0,
    "y": 124
@@ -18648,18 +18834,47 @@
    "optional": false,
    "required": [],
    "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Penn State ENGL 202C Technical Writing 的先修是大一写作课（不在本技能树中）。作为第 1 步的起点。",
    "unlocks": [
     "I.2.3"
    ],
    "related": [],
    "step": 1,
    "reach": 1,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Purdue OWL: Professional, Technical Writing（普渡大学线上写作实验室，免费）",
+    "url": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html",
+    "lang": "en",
+    "free": true,
+    "covers": "索引页逐条列出：Workplace Writers（effective workplace writing、rhetorical awareness and user-centered design）、Audience Analysis、Stakeholder Considerations、Higher/Lower Order Concerns（文档是否站得住、是否专业）、Activity and Postmortem Reports、Business Letters、Memos、Grant Writing（含 Grant Writing in the Sciences）、Technical Reports & Report Abstracts、White Papers 等；同一 OWL 站另有 Research and Citation 一栏（APA/MLA/Chicago/IEEE/AMA/ASA 引文格式、Avoiding Plagiarism、Conducting Research），合起来覆盖技术表达、文档审查、文献检索与引用规范。'团队沟通'只覆盖到读者/利益相关者分析与协作写作，没有专门的项目团队沟通训练。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Pennsylvania State University",
+     "course": "ENGL 202C: Effective Writing: Technical Writing",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/engl/",
+     "prereq_text": "Enforced Prerequisite at Enrollment: ENGL 15 or ENGL 15A or ENGL 15S or ENGL 15E or ESL 15 or ENGL 30H or ENGL 30T or ENGL 137H or CAS 137H and 4th Semester",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "I.2.2",
+    "level": "D1",
+    "time_min": 35,
+    "question": "(1) 把下面这段含糊的描述改写成清晰、可执行的技术说明：“系统有时候会比较慢，可能是数据库的问题，我们觉得应该优化一下。”（可以自拟合理的数据。）\n(2) 一份好的缺陷（bug）报告应该包含哪些部分？\n(3) 代码评审时怎样提出建设性的意见？把评论“这段代码写得太烂了”改写成好的评审意见。\n(4) 说明 Keshav 的“三遍阅读法”。查找某个主题的学术文献有哪些有效的方法？\n(5) 一个开源项目的 README 应该包含哪些内容？写技术文档前为什么要先分析读者？",
+    "answer": "(1) 示例：“过去 7 天，订单查询接口在 19:00–22:00 的 95 分位响应时间从 300 ms 升到 2.1 s（见监控截图）。慢查询日志显示，按 user_id 和 created_at 查询 orders 表的语句平均耗时 1.8 s，执行计划为全表扫描（表中 1200 万行）。建议在 (user_id, created_at) 上建立复合索引，预计能把该查询降到 50 ms 以内；建索引在 20 分钟内完成，计划在周四凌晨低峰期执行，执行后对比同时段的 95 分位延迟验证效果。”要点：说明具体现象和指标、证据、原因分析、具体方案、预期效果和验证方法。\n(2) 简洁具体的标题；环境（版本、操作系统、浏览器、配置）；最少的复现步骤；期望结果与实际结果；出现频率；日志、截图、错误信息；严重程度和影响范围；已经尝试过的排查。\n(3) 针对代码而不是针对人；具体说明问题和原因；给出建议或提出问题；区分“必须修改”和“可选建议”；也指出写得好的地方。改写：“这里的嵌套循环让查找变成 O(n²)，数据量大时会很慢。建议先把 users 转成以 id 为键的字典，查找就是 O(1)。另外这个函数同时处理解析和保存，可以考虑拆开，方便测试。你觉得呢？”\n(4) 第一遍（5–10 分钟）：读标题、摘要、引言、各节标题和结论，判断论文的类别、背景、主要贡献，决定是否继续读。第二遍（约 1 小时）：仔细阅读，看懂图表，标出不懂的地方和相关引用，但跳过证明细节。第三遍：设身处地重新推导或复现论文的工作，找出隐含的假设和不足。检索方法：用关键词及其同义词在 Google Scholar、dblp、ACM DL、IEEE Xplore 中检索；从一篇核心论文出发做前向和后向引用追踪；查综述论文；关注顶级会议的论文集。\n(5) 项目是什么、解决什么问题；安装方法；快速上手示例；使用说明或文档链接；配置项；贡献指南；许可证；联系方式或支持渠道；项目状态和徽章（构建、版本）。读者决定了要写什么、写多深、用什么术语：给终端用户的文档讲操作步骤，给开发者的讲接口和架构，给决策者的讲收益和风险；先弄清读者已经知道什么、想完成什么任务。",
+    "covers": [
+     "清晰的技术表达",
+     "缺陷报告",
+     "代码评审沟通",
+     "文献阅读与检索",
+     "文档与读者分析"
+    ],
+    "uses_prereqs": []
+   },
    "droppedOriginal": [],
    "x": 0,
    "y": 196
@@ -18692,24 +18907,24 @@
    "required": [
     {
      "id": "I.2.2",
-     "why": "文献检索和批判阅读支持研究设计。",
+     "why": "研究设计要先会检索、阅读文献和写作。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.6.2",
-     "why": "",
+     "why": "假设检验、功效分析要用数理统计。",
      "kind": "recommended"
     },
     {
      "id": "M.6.2.3",
-     "why": "",
+     "why": "实验设计与因果推断是研究方法的核心工具。",
      "kind": "recommended"
     }
    ],
    "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqSummary": "证据不足：CMU 17-803 Empirical Methods 与 Penn State IST 489 的课程页都没写先修。按内容需要起草，待核实。",
    "unlocks": [],
    "related": [
     {
@@ -18723,10 +18938,48 @@
    ],
    "step": 2,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "The Turing Way: A handbook for reproducible, ethical and collaborative data science（社区维护，CC-BY，网页版全书）",
+    "url": "https://book.the-turing-way.org/",
+    "lang": "en",
+    "free": true,
+    "covers": "目录结构即节点主线：Guide for Reproducible Research、Guide for Project Design、Guide for Communication、Guide for Collaboration、Guide for Ethical Research 与 Community Handbook；导语说明目标是 'to ensure that the projects they work on are easy to reproduce and reuse'，并强调 'investing in the socio-technical skills required to work in a team'。覆盖可复现研究、项目/实验设计、数据与代码公开、学术诚信与团队协作规范；假设检验、误差与效度这类统计细节需另配教材。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Carnegie Mellon University",
+     "course": "17-803 Empirical Methods（含研究设计、效度威胁、可复现实证研究）",
+     "url": "https://bvasiles.github.io/empirical-methods/",
+     "prereq_text": "This course is a survey of empirical methods designed primarily for computer science PhD students, that teaches you how to go about each of these activities in a principled and rigorous way. … And you will learn how to design valid studies applying and combining these methods.",
+     "prereq_kind": "unspecified"
+    },
+    {
+     "school": "Pennsylvania State University",
+     "course": "IST 489: Research Methods for the Information Sciences and Technology",
+     "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ist/",
+     "prereq_text": "（课程条目只有名称、学分与描述 'Seminar course focused on approaches to studying information and communication technologies and writing theses and other research reports.'，没有 Prerequisite / Enforced Prerequisite 字段）",
+     "prereq_kind": "unspecified"
+    }
+   ],
+   "exercise": {
+    "id": "I.2.3",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 把“新的代码补全工具能提高开发者效率”变成可以检验的研究问题：怎样操作化“效率”？设计一个对照实验，说明分组、任务、指标和分析方法。\n(2) 说明内部效度、外部效度、构念效度、统计结论效度，并结合 (1) 的实验各举一个威胁。\n(3) 什么是统计功效？p-hacking 是什么，预注册怎样防止它？同时做 20 个独立检验、总体显著性水平控制在 0.05 时，按 Bonferroni 校正每个检验的阈值是多少？\n(4) 复现（reproduce）和重复（replicate）有什么区别？为了让别人能复现你的研究，需要公开哪些材料？\n(5) 学术不端中的抄袭、伪造、篡改分别指什么？论文署名应当遵循什么原则？使用 AI 写作或编程工具时应该怎样披露？",
+    "answer": "(1) 研究问题：在完成一组标准化编程任务时，使用该工具的开发者是否比不使用的开发者用时更短、而缺陷数不增加？操作化：任务完成时间、通过隐藏测试用例的比例、提交代码中的缺陷数，必要时加主观工作负荷问卷。设计：招募经验水平相近的开发者，随机分为实验组和对照组（或采用两组任务交叉、平衡顺序的被试内设计）；任务、环境、时间限制统一；事先确定样本量和主要指标；用 t 检验或混合效应模型（考虑个体和任务差异）分析，报告效应量和置信区间。\n(2) 内部效度（因果推断是否成立）：实验组恰好经验更丰富——随机分组可以缓解。外部效度（能否推广）：只用学生和小型练习题，结论未必适用于大型真实项目。构念效度（指标是否测到了想测的东西）：“完成时间”无法反映可维护性和代码质量。统计结论效度：样本太小、功效不足，或者检验了很多指标却只报告显著的那个。\n(3) 统计功效：真实效应存在时检验能检测出来的概率（1 − β），受样本量、效应大小和 α 影响，通常要求 0.8 以上。p-hacking：反复尝试不同的分析方法、剔除数据、挑选指标，直到 p < 0.05 才报告，导致假阳性泛滥。预注册：在收集数据之前公开假设、主要指标、样本量和分析计划，事后的探索性分析要明确标注。Bonferroni：0.05/20 = 0.0025。\n(4) 复现：使用原作者的数据和代码，重新得到相同的结果；重复：用新的数据（或新的实验）独立重做研究，检验结论是否依然成立。需要公开：数据（或获取方式和预处理脚本）、完整代码、环境与依赖版本、随机种子、超参数和配置、实验协议和材料（如问卷、任务说明），以及原始结果。\n(5) 抄袭：使用他人的文字、思想或成果而不注明出处（包括大量复用自己已发表的内容而不说明）；伪造：凭空编造数据或结果；篡改：操纵实验、选择性删改数据或图片，使结果失真。署名：对研究构思、实施或分析有实质性贡献，参与撰写或关键修改，并能对内容负责的人才应署名；只提供资金或一般性帮助的人放在致谢中；作者顺序按领域惯例事先商定。AI 工具：遵守期刊、会议和学校的政策，在方法或致谢部分说明用了哪个工具、用于什么环节；AI 不能作为作者，作者要核实所有生成的内容（包括引用是否真实存在）并承担责任。",
+    "covers": [
+     "研究问题与实验设计",
+     "效度威胁",
+     "统计功效与多重比较",
+     "可复现性",
+     "学术诚信与署名"
+    ],
+    "uses_prereqs": [
+     "I.2.2"
+    ]
+   },
    "droppedOriginal": [],
    "x": 232,
    "y": 232
@@ -18758,25 +19011,35 @@
    "optional": true,
    "required": [
     {
-     "id": "A.2.3",
-     "why": "常见嵌入式AI路线需要模型和推理知识。",
+     "id": "A.2.1",
+     "why": "MIT 6.5940 TinyML 先修 6.3900（机器学习入门）。",
      "kind": "required"
     },
     {
-     "id": "H.3.1",
-     "why": "",
+     "id": "C.1.1",
+     "why": "MIT 6.5940 先修 6.1910（计算结构）；量化、内存规划、算子加速都和硬件结构相关。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "A.2.3",
+     "why": "部署的多是深度网络，课程在课内讲压缩方法。",
+     "kind": "recommended"
+    },
+    {
+     "id": "H.3.1",
+     "why": "部署到微控制器需要单片机开发经验。",
+     "kind": "recommended"
+    },
+    {
      "id": "H.3.2",
-     "why": "设备资源、实时性与驱动决定嵌入式部署约束。",
+     "why": "嵌入式系统与驱动知识。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "MIT 6.5940 TinyML and Efficient Deep Learning Computing：先修 6.1910 + 6.3900；Harvard TinyML（MLSysBook）：假定会 Python 和基础线性代数。",
    "unlocks": [],
    "related": [
     {
@@ -18784,15 +19047,54 @@
      "why": "嵌入式AI强调设备约束，边缘AI强调部署位置；范围相交而非同义。"
     }
    ],
-   "step": 7,
+   "step": 6,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "MIT 6.5940 TinyML and Efficient Deep Learning Computing（Song Han，含每讲 slides 与视频、5 个 Lab）",
+    "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+    "lang": "en",
+    "free": true,
+    "covers": "课程页原文：'introduces efficient AI computing techniques that enable powerful deep learning applications on resource-constrained devices. Topics include model compression, pruning, quantization, neural architecture search, distributed training, data/model parallelism, gradient compression, and on-device fine-tuning… application-specific acceleration techniques for large language models and diffusion models. Students will get hands-on experience implementing model compression techniques and deploying large language models (Llama2-7B) on a laptop.' 对应节点的受限设备推理、模型压缩（剪枝/量化/NAS）与硬件协同优化。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "MIT",
+     "course": "6.5940 TinyML and Efficient Deep Learning Computing（研究生课）",
+     "url": "https://catalog.mit.edu/subjects/6/",
+     "prereq_text": "6.5940 TinyML and Efficient Deep Learning Computing — Prereq: 6.1910 and 6.3900",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Harvard University（CS249r / HarvardX TinyML 课程材料，经 MLSysBook 汇集）",
+     "course": "TinyML（在微控制器上训练与部署模型）",
+     "url": "https://mlsysbook.ai/courses/tinyml/",
+     "prereq_text": "Students train models and deploy them on microcontrollers, where limits on memory, energy, and latency shape every design choice. … The course assumes Python and basic linear algebra.",
+     "prereq_kind": "recommended"
+    }
+   ],
+   "exercise": {
+    "id": "X.1.1",
+    "level": "D2",
+    "time_min": 45,
+    "question": "(1) 某单片机有 256 KB RAM、1 MB 闪存。一个 50 万参数的模型用 float32 和 int8 存储各需要多少空间？能放进闪存吗？推理时还要考虑什么内存开销？\n(2) 对称线性量化：s = max|x|/127，q = round(x/s)。对 x = [−1.0, 0.5, 0.25, 2.0] 求缩放因子 s、int8 量化值和反量化后的误差。\n(3) 3×3 卷积，输入 64 通道、输出 128 通道。分别计算标准卷积和深度可分离卷积（3×3 逐通道卷积 + 1×1 逐点卷积）的参数量（不计偏置），后者减少了多少倍？剪枝和知识蒸馏各是什么思路？\n(4) 写出把一个训练好的模型部署到微控制器上的流程。怎样测量推理延迟和能耗？\n(5) 硬件上有哪些手段可以加速嵌入式推理？为什么“层间缓冲复用”对 RAM 很小的设备特别重要？",
+    "answer": "(1) float32：50 万 × 4 B = 2 MB，超过 1 MB 闪存，放不下；int8：0.5 MB，可以放下。推理时还需要 RAM 存放中间激活值（同时存活的最大张量）、输入缓冲和推理引擎的工作区，256 KB RAM 往往比闪存更紧张，要控制每层激活的大小。\n(2) s = 2.0/127 ≈ 0.01575。q：−1.0/s = −63.5 → −64（四舍五入到偶数），0.5/s = 31.75 → 32，0.25/s = 15.875 → 16，2.0/s = 127。反量化：−64s ≈ −1.0079（误差 0.0079），32s ≈ 0.5039（误差 0.0039），16s ≈ 0.2520（误差 0.0020），127s = 2.0（误差 0）。误差最多为 s/2，最大值（离群值）越大，s 越大，所有数的误差都随之变大。\n(3) 标准卷积 3×3×64×128 = 73 728；深度可分离 3×3×64 + 64×128 = 576 + 8192 = 8768，约减少 8.4 倍（计算量按相同比例减少）。剪枝：去掉不重要的权重（非结构化）或整个通道、滤波器（结构化，更容易真正提速），再微调恢复精度。知识蒸馏：用大模型（教师）的软标签训练小模型（学生），让小模型以更少的参数达到接近的精度。\n(4) 训练（选择适合设备的小型架构）→ 训练后量化或量化感知训练 → 转换为设备端格式（如 TensorFlow Lite for Microcontrollers 的扁平模型，或用厂商工具链编译）→ 和推理运行库、传感器读取代码一起编译烧录 → 在设备上用真实数据验证精度。延迟：在推理前后读取硬件计时器（周期计数器），多次运行取统计值。能耗：用功率分析仪或电流探头测量推理期间的电流和电压，积分得到每次推理的能量。\n(5) 使用带 SIMD / DSP 指令的内核和优化过的算子库（如 CMSIS-NN）、内置的 NPU 或加速器、定点运算代替浮点、算子融合减少内存读写。RAM 只有几百 KB 时，若每层的输出都单独分配缓冲区很快就会耗尽；推理引擎按张量的生命周期规划内存，让已经用完的缓冲区被后续层复用，峰值内存只取决于同时存活的张量，这决定了模型能不能在设备上运行。",
+    "covers": [
+     "资源约束估算",
+     "量化",
+     "模型压缩",
+     "部署流程与测量",
+     "硬件协同与内存规划"
+    ],
+    "uses_prereqs": [
+     "A.2.1",
+     "C.1.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 1392,
-   "y": 124
+   "x": 1160,
+   "y": 16
   },
   {
    "id": "X.1.2",
@@ -18821,30 +19123,40 @@
    "optional": true,
    "required": [
     {
-     "id": "A.2.3",
-     "why": "",
+     "id": "A.2.1",
+     "why": "Harvard Edge AI 学习路径假定入门机器学习；MIT 6.5940 先修 6.3900。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "C.1.1",
+     "why": "MIT 6.5940 先修 6.1910。",
+     "kind": "recommended"
+    },
+    {
+     "id": "A.2.3",
+     "why": "边缘部署的模型多是深度网络。",
+     "kind": "recommended"
+    },
+    {
      "id": "H.4.4",
-     "why": "边缘计算的资源、网络和时延模型支撑边缘AI。",
+     "why": "边缘计算架构。",
      "kind": "recommended"
     },
     {
      "id": "A.4.1",
-     "why": "模型部署与生命周期扩展到端边云环境。",
+     "why": "模型的部署、更新和监控属于 MLOps。",
      "kind": "recommended"
     },
     {
      "id": "X.1.1",
-     "why": "",
+     "why": "嵌入式推理的压缩与量化方法。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "",
+   "prereqStatus": "verified",
+   "prereqSummary": "Harvard Edge AI 学习路径（MLSysBook）：假定 Python 与入门机器学习；MIT 6.5940：先修 6.1910 + 6.3900。",
    "unlocks": [],
    "related": [
     {
@@ -18852,15 +19164,53 @@
      "why": "嵌入式AI强调设备约束，边缘AI强调部署位置；范围相交而非同义。"
     }
    ],
-   "step": 7,
+   "step": 6,
    "reach": 0,
-   "resource": null,
+   "resource": {
+    "tier": "website",
+    "title": "Edge AI learning path（MLSysBook / Machine Learning Systems，Harvard 维护，CC-BY-NC-SA；配 Volume I 阅读 + Raspberry Pi 实验）",
+    "url": "https://mlsysbook.ai/courses/edge-ai/",
+    "lang": "en",
+    "free": true,
+    "covers": "页面原文：'Edge AI runs models on Linux devices close to the sensors and people that use the results, so memory, power, and response time limit the design. This learning path pairs Introduction to Machine Learning Systems with experiments on a Raspberry Pi.' 材料清单含 Volume I（lifecycle、model compression、hardware acceleration、deployment 各章）、讲义、Raspberry Pi 套件实验（图像分类、目标检测、本地语言模型）。对节点：覆盖边缘部署与推理、时延/内存/功耗约束下的设计取舍；端边云协同与隐私权衡只在设计动机层面出现，没有专门章节，需要再补。"
+   },
    "zhAlt": null,
-   "courses": [],
-   "exercise": null,
+   "courses": [
+    {
+     "school": "Harvard University（MLSysBook / CS249r 课程材料）",
+     "course": "Edge AI learning path（Linux 边缘设备上的推理与加速器部署）",
+     "url": "https://mlsysbook.ai/courses/edge-ai/",
+     "prereq_text": "It assumes Python and introductory machine learning.",
+     "prereq_kind": "recommended"
+    },
+    {
+     "school": "MIT",
+     "course": "6.5940 TinyML and Efficient Deep Learning Computing（on-device 推理与压缩）",
+     "url": "https://catalog.mit.edu/subjects/6/",
+     "prereq_text": "6.5940 TinyML and Efficient Deep Learning Computing — Prereq: 6.1910 and 6.3900",
+     "prereq_kind": "required"
+    }
+   ],
+   "exercise": {
+    "id": "X.1.2",
+    "level": "D2",
+    "time_min": 40,
+    "question": "(1) 为什么要把 AI 推理放在边缘？从时延、带宽、隐私、离线可用性四方面各举一个应用例子。\n(2) 摄像头以 30 fps 采集，要求逐帧实时处理。方案 A：上传云端，网络往返 80 ms + 云端推理 10 ms；方案 B：边缘设备本地推理 25 ms。哪个方案能满足要求？为什么？\n(3) 10 路 1080p 视频，每路码率 4 Mbps，全部上传云端需要多少带宽？如果边缘只上传检测到的事件（每路每分钟 10 条，每条 1 KB），带宽降低多少倍？\n(4) 部署在成百上千台边缘设备上的模型，应该怎样更新、做灰度验证并监控效果？\n(5) 计算卸载：设备算力有限时，怎样决定一个任务在本地执行还是卸载到边缘服务器或云端？列出决策需要考虑的量。",
+    "answer": "(1) 时延：工厂产线缺陷检测，要在毫秒级触发剔除动作。带宽：城市里大量摄像头，只回传分析结果而不是原始视频。隐私：智能家居的语音和图像在本地处理，不离开家庭。离线：农田或矿山中的设备在网络不稳定时仍要能识别病虫害、安全隐患。\n(2) 每帧预算 1000/30 ≈ 33.3 ms。方案 A 每帧至少 90 ms，不能逐帧实时处理（还要叠加网络抖动）；方案 B 25 ms < 33.3 ms，可以满足（还要计入采集和预处理的时间，留出余量）。\n(3) 全部上传 10 × 4 = 40 Mbps。事件：10 路 × 10 条 × 1 KB = 100 KB/分钟 ≈ 13.3 kbps，降低约 3000 倍。\n(4) 模型打包时带版本号和签名，通过 OTA 下发，设备校验后安装，保留旧版本以便回滚；先对少量设备做灰度（金丝雀）发布，或者以影子模式运行新模型、只记录结果做对比；按设备、区域监控延迟、资源占用、预测分布和可得的准确率指标，发现漂移或退化时自动回滚；设备的硬件型号和环境差异大，要分组验证。\n(5) 比较本地执行时间（计算量 / 本地算力）与卸载总时间（上传数据量 / 带宽 + 网络时延 + 远端执行时间 + 结果下载），在满足时延截止期的前提下再考虑能耗（本地计算能耗 vs 无线传输能耗）、远端服务器的负载和排队、网络稳定性、隐私约束，以及云端的成本。也可以把模型切分成两段：前几层在本地算、压缩后的中间特征传到边缘继续算。",
+    "covers": [
+     "边缘部署的动机",
+     "时延预算",
+     "带宽权衡",
+     "模型更新与监控",
+     "计算卸载"
+    ],
+    "uses_prereqs": [
+     "A.2.1"
+    ]
+   },
    "droppedOriginal": [],
-   "x": 1392,
-   "y": 196
+   "x": 1160,
+   "y": 88
   },
   {
    "id": "X.1.3",
@@ -18917,7 +19267,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 1160,
-   "y": 16
+   "y": 160
   },
   {
    "id": "X.2.1",
@@ -18975,7 +19325,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 1160,
-   "y": 88
+   "y": 232
   },
   {
    "id": "X.2.2",
@@ -19040,7 +19390,7 @@
     "D.1"
    ],
    "x": 1160,
-   "y": 160
+   "y": 304
   },
   {
    "id": "X.2.3",
@@ -19107,7 +19457,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 1160,
-   "y": 232
+   "y": 376
   },
   {
    "id": "X.2.4",
@@ -19172,7 +19522,7 @@
     "D.1"
    ],
    "x": 1160,
-   "y": 304
+   "y": 448
   },
   {
    "id": "X.2.5",
@@ -19235,7 +19585,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 232,
-   "y": 196
+   "y": 268
   },
   {
    "id": "X.3.1",
@@ -19297,7 +19647,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 928,
-   "y": 196
+   "y": 268
   },
   {
    "id": "X.3.2",
@@ -19354,7 +19704,7 @@
    "exercise": null,
    "droppedOriginal": [],
    "x": 1160,
-   "y": 376
+   "y": 520
   },
   {
    "id": "X.3.3",

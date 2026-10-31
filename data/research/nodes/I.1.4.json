@@ -1,0 +1,50 @@
+{
+ "id": "I.1.4",
+ "resource": {
+  "tier": "website",
+  "title": "1.040 Project Management（MIT OpenCourseWare，本科课，含讲义、日程、阅读、项目作业）",
+  "url": "https://ocw.mit.edu/courses/1-040-project-management-spring-2004/",
+  "lang": "en",
+  "free": true,
+  "covers": "课程按 Project Organization / Planning / Monitoring / Control / Learning 五段组织：组织与 OBS、WBS 与成本分解、CPM/PDM/PERT/GERT 进度、Resource Loading、Earned Value 进度与成本监控、scope/schedule/budget 变更控制、Risk Management 与 Quality Monitoring、以及项目复盘学习——覆盖节点的范围、进度、资源、成本、风险、质量与组织沟通；缺点是案例面向建筑/工程（A/E/C），没有 IT 项目专有内容（敏捷、外包、软件估算），需要自行换成 IT 案例。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Pennsylvania State University（Smeal 商学院）",
+   "course": "MIS 425: Managing Information Systems Projects",
+   "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/mis/",
+   "prereq_text": "Enforced Prerequisite at Enrollment: MIS 307 and MIS 390",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "I.1.1",
+    "P.1.2"
+   ]
+  },
+  {
+   "school": "MIT（OpenCourseWare）",
+   "course": "1.040 Project Management",
+   "url": "https://ocw.mit.edu/courses/1-040-project-management-spring-2004/pages/syllabus/",
+   "prereq_text": "（syllabus 只有 Course Meeting Times / Course Description / Homework Submission and Evaluation / Academic Honesty 等小节，没有 Prerequisites 小节，也没有写任何先修课）",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  }
+ ],
+ "candidate_check": {
+  "P.4.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "I.1.1",
+   "kind": "required",
+   "evidence": "Penn State MIS 425 要求 MIS 390（Foundations of Information Systems）"
+  },
+  {
+   "id": "P.1.2",
+   "kind": "required",
+   "evidence": "Penn State MIS 425 要求 MIS 307（Object-Oriented Programming and Application Development）"
+  }
+ ],
+ "notes": "原图建议的 P.4.1（软件工程基础与开发方法）在两门课里都没有作为先修出现：MIS 425 的课程描述里提到 agile/scrum，但那是课程内容而非入学要求，故判 not_mentioned。真正被硬性要求的是信息系统基础（MIS 390→I.1.1）和面向对象程序设计（MIS 307→P.1.2，其自身又以 IST 140/CMPSC 101/121 编程入门为门槛，可视为 P.1.1 的传递前置）。资源侧提醒：1.040 是土木/建筑工程管理课，虽然 PM 知识域齐全（范围/进度/资源/成本/风险/质量/监控），IT 专属内容缺失；若要更贴题可用 Schwalbe《Information Technology Project Management》（Cengage）作书，但我没有核到其公开页面，故未填。"
+}

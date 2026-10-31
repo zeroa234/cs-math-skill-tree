@@ -1,0 +1,64 @@
+{
+ "id": "X.1.1",
+ "resource": {
+  "tier": "website",
+  "title": "MIT 6.5940 TinyML and Efficient Deep Learning Computing（Song Han，含每讲 slides 与视频、5 个 Lab）",
+  "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+  "lang": "en",
+  "free": true,
+  "covers": "课程页原文：'introduces efficient AI computing techniques that enable powerful deep learning applications on resource-constrained devices. Topics include model compression, pruning, quantization, neural architecture search, distributed training, data/model parallelism, gradient compression, and on-device fine-tuning… application-specific acceleration techniques for large language models and diffusion models. Students will get hands-on experience implementing model compression techniques and deploying large language models (Llama2-7B) on a laptop.' 对应节点的受限设备推理、模型压缩（剪枝/量化/NAS）与硬件协同优化。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.5940 TinyML and Efficient Deep Learning Computing（研究生课）",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "6.5940 TinyML and Efficient Deep Learning Computing — Prereq: 6.1910 and 6.3900",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.1.1",
+    "A.2.1"
+   ]
+  },
+  {
+   "school": "Harvard University（CS249r / HarvardX TinyML 课程材料，经 MLSysBook 汇集）",
+   "course": "TinyML（在微控制器上训练与部署模型）",
+   "url": "https://mlsysbook.ai/courses/tinyml/",
+   "prereq_text": "Students train models and deploy them on microcontrollers, where limits on memory, energy, and latency shape every design choice. … The course assumes Python and basic linear algebra.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "P.2.3",
+    "M.3.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "A.2.3": "not_mentioned",
+  "H.3.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "C.1.1",
+   "kind": "required",
+   "evidence": "MIT 6.5940 官方课表要求 6.1910 Computation Structures（计算机组成/数字系统）"
+  },
+  {
+   "id": "A.2.1",
+   "kind": "required",
+   "evidence": "MIT 6.5940 官方课表要求 6.3900 Introduction to Machine Learning（监督/无监督学习入门）"
+  },
+  {
+   "id": "P.2.3",
+   "kind": "recommended",
+   "evidence": "Harvard TinyML 课程材料写明 'The course assumes Python'"
+  },
+  {
+   "id": "M.3.1",
+   "kind": "recommended",
+   "evidence": "Harvard TinyML 课程材料写明 'basic linear algebra'"
+  }
+ ],
+ "notes": "原图建议的两个前置都没被这两门课写出来：MIT 6.5940 官方课表要求的是 6.1910（计算结构，对应 C.1.1）与 6.3900（机器学习入门，对应 A.2.1），并没有要求深度学习（A.2.3）或嵌入式系统/RTOS（H.3.2）；Harvard TinyML 只假设 Python 与线性代数。因此 A.2.3、H.3.2 都判 not_mentioned，真正的门槛是组成原理 + 机器学习入门。注意 6.3900 本身还要求 (6.1000 或 6.1210) 与 (18.03 或 18.06)，即 P.1.1 与 M.3.1 的传递前置。资源侧：6.5940 有完整 slides/视频与 Lab（Lab 5 等），但它是研究生课；节点入门层是 D2，可接受。"
+}
