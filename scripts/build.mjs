@@ -155,10 +155,30 @@ function prereqEntry(id, q, kind) {
   return { id: q, why: note || reasonOf.get(`${q}>${id}`) || "", kind };
 }
 
-function resourceOf(r) {
-  if (!r?.resource?.url) return null;
-  const { tier, title, url, lang, free, covers } = r.resource;
-  return { tier, title, url, lang, free, covers };
+// Curated learning resources override only learning links, never prerequisite evidence.
+const resourceReview = readJson(rel("data/curation/learning-resources.json"));
+for (const [id, entry] of Object.entries(resourceReview.chinese)) {
+  if (!skillIds.has(id)) fail(`unknown Chinese resource skill ${id}`);
+  if (!resourceReview.chineseCatalog[entry.source]) fail(`unknown resource source ${entry.source} for ${id}`);
+}
+for (const id of Object.keys(resourceReview.english)) {
+  if (!skillIds.has(id)) fail(`unknown resource review skill ${id}`);
+}
+function resourceOf(resource) {
+  if (!resource?.url) return null;
+  const { tier, title, url, lang, free, covers, access, note } = resource;
+  if (!["http:", "https:"].includes(new URL(url).protocol)) fail(`invalid learning URL ${url}`);
+  return { tier, title, url, lang, free, covers, access, note };
+}
+function learningResources(id, research) {
+  const { review, ...changes } = resourceReview.english[id] || {};
+  const entry = resourceReview.chinese[id];
+  const zh = entry ? { ...resourceReview.chineseCatalog[entry.source], covers: entry.covers } : research?.zh_alt;
+  return {
+    resource: resourceOf({ ...research?.resource, ...changes }),
+    zhAlt: resourceOf(zh ? { tier: "website", lang: "zh", free: null, ...zh } : null),
+    zhResourceNote: resourceReview.chineseGaps[id] || "",
+  };
 }
 
 const unlocks = new Map(skills.map((s) => [s.id, []]));
@@ -198,8 +218,7 @@ const out = skills.map((n) => {
       .filter((e) => skillIds.has(e.id)),
     step: step.get(n.id),
     reach: downstream(n.id).size,
-    resource: resourceOf(r),
-    zhAlt: r?.zh_alt?.url ? { title: r.zh_alt.title, url: r.zh_alt.url } : null,
+    ...learningResources(n.id, r),
     courses: (r?.courses || []).map(({ school, course, url, prereq_text, prereq_kind }) => ({ school, course, url, prereq_text, prereq_kind })),
     exercise: exercises.get(n.id) || null,
     droppedOriginal: dropped,
@@ -342,6 +361,8 @@ const data = {
     recommendedEdges: out.reduce((a, s) => a + s.recommended.length, 0),
     verifiedPrereqs,
     withResource: out.filter((s) => s.resource).length,
+    withChineseResource: out.filter((s) => s.zhAlt).length,
+    resourcesReviewed: resourceReview.checkedAt,
     withExercise: out.filter((s) => s.exercise).length,
     card: { w: CARD_W, h: CARD_H, colW: COL_W },
   },
