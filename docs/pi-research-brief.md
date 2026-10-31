@@ -30,9 +30,10 @@
 
 ## 硬性规则
 
-- 不许编造。每个 URL 都要用 `tavily_extract` 打开，确认页面存在且内容对得上，才能写 `verified: true`。打不开或对不上就换一个；实在找不到就填 null，并在 notes 里说明。
+- 不许编造。每个 URL 都要用 `python -I scripts/research_tool.py fetch <url>` 打开（可加 `--grep "prereq|先修|Prerequisite"` 只看匹配行），确认页面存在且内容对得上，才能写 `verified: true`。打不开或对不上就换一个；实在找不到就填 null，并在 notes 里说明。
 - 先修原文必须来自你打开过的页面，不要凭记忆写。
-- 用 `tavily_search` 搜索，中英文都可以。
+- 省搜索额度：先用你已知的权威页面（课程主页、课程目录、官方教程）直接 fetch 核实，fetch 不花额度；只有找不到时才用 `python -I scripts/research_tool.py search "<query>"`，每个节点最多 3 次。全组共用的额度用完时脚本会拒绝，那时只能靠 fetch。
+- 不要自己另写调用 Tavily 的脚本，也不要读 API key；所有查找都走 `scripts/research_tool.py`（命令都在项目目录下运行）。
 - 临时文件只能放 `temp/research/scratch/`，不要用 /tmp，也不要写 C 盘。
 - 每完成一个节点，立刻写一个文件 `temp/research/nodes/<节点id>.json`（例如 `temp/research/nodes/C.2.1.json`）。不要攒到最后一次性写，也不要一次生成特别长的输出。
 

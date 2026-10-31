@@ -1,7 +1,7 @@
 """Split the skill nodes into research batches for pi sub-agents.
 
 Input : data/source/chatgpt-outputs/knowledge-map-data.json (ChatGPT original, read-only)
-Output: temp/research/batches/batch-XX.md  (one brief per batch, lists nodes + candidate prereqs)
+Output: temp/research/batches/batch-XXy.md (one brief per sub-agent: nodes, depth levels, candidate prereqs)
 
 Skill nodes = every "主题" node plus branch nodes that are themselves a course
 (实分析 / 数理统计 / 随机过程 / 深度学习); pure grouping branches are not skills.
@@ -51,14 +51,20 @@ def main():
     seen = set()
     for i, prefixes in enumerate(BATCHES, 1):
         batch = [n for n in skills if any(in_prefix(n["id"], p) for p in prefixes)]
-        lines = [f"# batch-{i:02d}（{len(batch)} 个节点）", ""]
-        for n in batch:
-            seen.add(n["id"])
-            cands = "、".join(f"{c}({nodes[c]['name']})" for c in incoming.get(n["id"], [])) or "无"
-            lines.append(f"- `{n['id']}` **{n['name']}**：{n['desc']}  ")
-            lines.append(f"  原图建议前置：{cands}")
-        (OUT / f"batch-{i:02d}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-        print(f"batch-{i:02d}: {len(batch)}")
+        half = (len(batch) + 1) // 2
+        for suffix, part in (("a", batch[:half]), ("b", batch[half:])):
+            name = f"batch-{i:02d}{suffix}"
+            lines = [f"# {name}（{len(part)} 个节点）", ""]
+            for n in part:
+                seen.add(n["id"])
+                cands = "、".join(f"{c}({nodes[c]['name']})" for c in incoming.get(n["id"], [])) or "无"
+                levels = "、".join(f"D{x}" for x in n["levels"])
+                lines.append(f"- `{n['id']}` **{n['name']}**（深度 {levels}，入门层 D{min(n['levels'])}）：{n['desc']}  ")
+                lines.append(f"  原图建议前置：{cands}")
+                for lv, goal in (n.get("milestones") or {}).items():
+                    lines.append(f"  D{lv} 验收：{goal}")
+            (OUT / f"{name}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+            print(f"{name}: {len(part)}")
     missing = [n["id"] for n in skills if n["id"] not in seen]
     print("skills", len(skills), "unassigned", missing)
 
