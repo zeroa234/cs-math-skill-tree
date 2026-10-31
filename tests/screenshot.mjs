@@ -81,5 +81,35 @@ await page("12-deep-link", DESK, async (p) => {
     if (top < 40 || top > 200) throw new Error(`#map/A left lane A at y=${Math.round(top)}`);
   }
 });
+await page("13-overview-zoom", DESK, async (p) => {
+  await dismissIntro(p);
+  const scale = () => p.evaluate(() => Number(/scale\(([\d.]+)\)/.exec(document.querySelector(".ov-stage").style.transform)?.[1]));
+  const s0 = await scale();
+  await p.mouse.move(900, 500);
+  await p.mouse.wheel(0, -400);
+  await p.waitForTimeout(300);
+  const s1 = await scale();
+  if (!(s1 > s0)) throw new Error(`wheel did not zoom the overview (${s0} -> ${s1})`);
+  // a drag that starts on a tile pans and must not open the lane
+  const box = await p.locator('.region[data-lane="F"] .rg-mini-wrap').boundingBox();
+  await p.mouse.move(box.x + 20, box.y + 10);
+  await p.mouse.down();
+  await p.mouse.move(box.x + 160, box.y + 90, { steps: 8 });
+  await p.mouse.up();
+  await p.waitForTimeout(300);
+  if (!(await p.locator("#ov-wrap").isVisible())) throw new Error("dragging a tile opened the map");
+  await p.keyboard.press("0");
+  await p.waitForTimeout(200);
+  if (Math.abs((await scale()) - s0) > 0.01) throw new Error("key 0 did not fit the overview again");
+  await p.click('.region[data-lane="F"] .rg-mini-wrap', { force: true });
+  await p.waitForTimeout(300);
+  if (!(await p.locator("#map-wrap").isVisible())) throw new Error("a plain click on a tile did not open the map");
+  await p.goBack();
+  await p.waitForTimeout(300);
+});
+await page("14-phone-overview-scroll", PHONE, async (p) => {
+  const y = await p.evaluate(() => { const a = document.querySelector(".ov-scroll"); a.scrollTop = 600; return a.scrollTop; });
+  if (y < 500) throw new Error(`phone overview list does not scroll (scrollTop ${y})`);
+});
 await browser.close();
 console.log(errors.length ? errors.join("\n") : "no console errors");

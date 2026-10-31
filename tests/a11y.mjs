@@ -148,8 +148,8 @@ const kb = [];
   await p.keyboard.press("Escape");
   await p.waitForTimeout(300);
   kb.push((await p.locator("#ov-wrap").isVisible()) ? "PASS Esc, Esc closes the panel and returns to the overview" : "FAIL Esc did not return to the overview");
-  const scroll = await p.evaluate(() => [document.querySelector("#map-wrap").scrollTop, document.querySelector("#map-wrap").scrollLeft]);
-  kb.push(scroll[0] === 0 && scroll[1] === 0 ? "PASS map box never scrolled by focus" : `FAIL map box scrolled to ${scroll}`);
+  const scroll = await p.evaluate(() => ["#map-wrap", ".ov-scroll"].flatMap((s) => [document.querySelector(s).scrollTop, document.querySelector(s).scrollLeft]));
+  kb.push(scroll.every((v) => v === 0) ? "PASS map and overview boxes never scrolled by focus" : `FAIL boxes scrolled to ${scroll}`);
   await ctx.close();
 }
 await browser.close();

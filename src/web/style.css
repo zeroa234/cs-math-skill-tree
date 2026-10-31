@@ -160,7 +160,6 @@ a { color: var(--accent); }
 .menu-pop button:hover, .menu-pop .as-btn:hover { background: var(--surface-2); }
 .menu-pop .danger { color: var(--danger); }
 .only-narrow { display: none; }
-body:has(#layout[data-view="overview"]) #btn-fit { display: none; }
 
 /* ── layout ── */
 .layout { flex: 1; display: flex; min-height: 0; position: relative; }
@@ -229,9 +228,9 @@ body:has(#layout[data-view="overview"]) #btn-fit { display: none; }
 .ov-axis i::after {
   content: ""; position: absolute; right: -2px; top: -5px; border: 4.5px solid transparent; border-left-color: var(--line-strong);
 }
-.ov-scroll { flex: 1; overflow: auto; padding: 10px 26px 8px; min-height: 0; }
-.ov-sizer { position: relative; margin: 0 auto; }
-.ov-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.ov-scroll { flex: 1; min-height: 0; position: relative; overflow: hidden; cursor: grab; touch-action: none; }
+.ov-scroll:active { cursor: grabbing; }
+.ov-stage { position: absolute; left: 0; top: 0; }
 .ov-roads { position: absolute; left: 0; top: 0; overflow: visible; }
 .ov-road { fill: none; opacity: 0; stroke-linecap: round; transition: opacity .18s; }
 .ov-road.major { opacity: .28; }
@@ -240,9 +239,11 @@ body:has(#layout[data-view="overview"]) #btn-fit { display: none; }
 .ov-road.dim { opacity: 0; }
 .ov-labels circle { fill: var(--surface); stroke: var(--line-strong); stroke-width: 1.2; }
 .ov-labels text { font: 700 11px var(--font); fill: var(--text); }
+/* fixed two-line height: the hover text must not resize the map area above it */
 .ov-caption {
-  margin: 0; padding: 8px 26px 14px; min-height: 3.2em; font-size: 13px; color: var(--text-2);
-  background: linear-gradient(to top, var(--bg) 60%, transparent);
+  margin: 0; padding: 8px 26px 14px; height: calc(13px * 1.55 * 2 + 22px); overflow: hidden; flex: none;
+  font-size: 13px; line-height: 1.55; color: var(--text-2);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
 }
 
 .region {
@@ -510,7 +511,8 @@ dialog li + li { margin-top: 6px; }
   #btn-fit { display: none; }
   .ov-head { flex-direction: column; align-items: flex-start; padding: 14px 16px 4px; gap: 10px; }
   .ov-axis { display: none; }
-  .ov-scroll { padding: 10px 16px; }
+  .ov-scroll { padding: 10px 16px; overflow: auto; cursor: auto; touch-action: auto; }
+  .ov-wrap .zoom-ctl { display: none; }
   .ov-caption { display: none; }
 }
 @media (max-width: 560px) {

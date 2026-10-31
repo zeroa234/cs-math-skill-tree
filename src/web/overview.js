@@ -12,6 +12,11 @@ window.SkillTreeOverview = (() => {
   let labelsG = null;
   let caption = null;
   let focusLane = null;
+  let area = null; // the pan / zoom viewport (.ov-scroll)
+  let pz = null; // Panzoom on wide screens; phones get a plain scrolling list instead
+  let fitted = false;
+  let moved = false;
+  let downAt = null;
   const SVGNS = "http://www.w3.org/2000/svg";
 
   const el = (tag, attrs = {}, ...kids) => {
@@ -84,7 +89,9 @@ window.SkillTreeOverview = (() => {
   function build() {
     const wrap = document.querySelector("#ov-wrap");
     stage = wrap.querySelector(".ov-stage");
+    area = wrap.querySelector(".ov-scroll");
     caption = wrap.querySelector("#ov-caption");
+    caption.textContent = caption.dataset.idle; // filled from the start so the map area keeps one height
     const { width, height, tile } = D.overview;
     Object.assign(stage.style, { width: `${width}px`, height: `${height}px` });
 
@@ -164,12 +171,37 @@ window.SkillTreeOverview = (() => {
       }, main, el("div", { class: "rg-mini-wrap" }, mini), el("div", { class: "rg-foot" }, el("div", { class: "rg-prog" }, badge, bar, progText), next));
       box.addEventListener("pointerenter", () => setFocus(r.lane));
       box.addEventListener("pointerleave", () => setFocus(null));
-      box.addEventListener("focusin", () => setFocus(r.lane));
+      box.addEventListener("focusin", () => { setFocus(r.lane); if (pz) ensureTileVisible(r); });
       box.addEventListener("focusout", (e) => { if (!box.contains(e.relatedTarget)) setFocus(null); });
       tiles.set(r.lane, { box, main, badge, bar, progText, next, rects, members, lane });
       stage.append(box);
     }
+    // Same handling as the skill map: wheel zooms, drag pans, a press that moved > 5px is a pan and not a click.
+    area.addEventListener("wheel", (e) => { if (!pz) return; e.preventDefault(); pz.zoomWithWheel(e); }, { passive: false });
+    area.addEventListener("pointerdown", (e) => { downAt = [e.clientX, e.clientY]; moved = false; }, true);
+    area.addEventListener("pointermove", (e) => {
+      if (downAt && Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) > 5) moved = true;
+    }, true);
+    area.addEventListener("pointerup", () => { downAt = null; }, true);
+    area.addEventListener("click", (e) => { if (moved) { e.stopPropagation(); e.preventDefault(); } }, true);
+    // focusing an off-screen tile (Tab) would scroll this overflow:hidden box; undo it, focusin pans instead
+    area.addEventListener("scroll", () => { if (pz) { area.scrollTop = 0; area.scrollLeft = 0; } });
+    wrap.querySelector("#ov-zoom-in").addEventListener("click", () => pz?.zoomIn());
+    wrap.querySelector("#ov-zoom-out").addEventListener("click", () => pz?.zoomOut());
     window.addEventListener("resize", fit);
+  }
+
+  // Panzoom keeps the default transform-origin (the stage centre c), so screen = c + (p + t − c)·s.
+  function panTo(sx, sy, px, py) {
+    const s = pz.getScale();
+    const { width: W, height: H } = D.overview;
+    pz.pan((sx - W / 2) / s + W / 2 - px, (sy - H / 2) / s + H / 2 - py, { animate: false, force: true });
+  }
+  function ensureTileVisible(r) {
+    const a = area.getBoundingClientRect();
+    const b = tiles.get(r.lane).box.getBoundingClientRect();
+    if (b.left >= a.left && b.right <= a.right && b.top >= a.top && b.bottom <= a.bottom) return;
+    panTo(a.width / 2, a.height / 2, r.x + r.w / 2, r.y + r.h / 2);
   }
 
   function regionText(laneId) {
@@ -255,20 +287,32 @@ window.SkillTreeOverview = (() => {
     if (focusLane) setFocus(focusLane);
   }
 
-  // Fit the whole map into the view when it stays readable; otherwise keep 0.8 and let the area scroll.
+  // Wide screens: the whole map in view, then wheel / buttons / keys zoom it like the skill map.
+  // Phones: a plain list that scrolls natively (Panzoom would swallow the touch scroll).
   function fit() {
-    const wrap = document.querySelector("#ov-wrap");
-    const area = wrap.querySelector(".ov-scroll");
-    if (!area || wrap.hidden) return;
+    if (document.querySelector("#ov-wrap").hidden) { fitted = false; return; }
     const narrow = window.matchMedia("(max-width: 900px)").matches;
     stage.classList.toggle("list", narrow);
-    if (narrow) { stage.style.transform = ""; stage.parentElement.style.width = stage.parentElement.style.height = ""; return; }
-    const { width, height } = D.overview;
-    const r = area.getBoundingClientRect();
-    const s = Math.max(0.8, Math.min(1, (r.width - 48) / width, (r.height - 32) / height));
-    stage.style.transform = `scale(${s})`;
-    Object.assign(stage.parentElement.style, { width: `${width * s}px`, height: `${height * s}px` });
+    if (narrow) {
+      if (pz) { pz.resetStyle(); pz.destroy(); pz = null; }
+      stage.style.transform = "";
+      fitted = true;
+      return;
+    }
+    const created = !pz;
+    if (created) pz = window.Panzoom(stage, { canvas: true, maxScale: 2, minScale: 0.3, step: 0.2, cursor: "" });
+    const place = () => {
+      const { width, height } = D.overview;
+      const r = area.getBoundingClientRect();
+      pz.zoom(Math.max(0.4, Math.min(1, (r.width - 32) / width, (r.height - 20) / height)), { animate: false, force: true });
+      panTo(r.width / 2, 10, width / 2, 0);
+      fitted = true;
+    };
+    // a new Panzoom queues setTimeout(() => pan(startX, startY)); place the map after it or it gets reset
+    if (created) setTimeout(place); else place();
   }
+  // Returning to the overview keeps the zoom the user left it at.
+  const show = () => { if (!fitted) fit(); };
 
   return {
     init(a) {
@@ -279,5 +323,8 @@ window.SkillTreeOverview = (() => {
     },
     render,
     fit,
+    show,
+    zoomIn: () => pz?.zoomIn(),
+    zoomOut: () => pz?.zoomOut(),
   };
 })();

@@ -559,7 +559,7 @@
     const p = pos(id);
     panTo(r.width / 2, r.height / 2, p.x + CW / 2, p.y + CH / 2, true);
   }
-  $("#btn-fit").addEventListener("click", () => fit());
+  $("#btn-fit").addEventListener("click", () => (view === "map" ? fit() : Overview.fit()));
   $("#btn-zoom-in").addEventListener("click", () => pz.zoomIn());
   $("#btn-zoom-out").addEventListener("click", () => pz.zoomOut());
   // Show one lane from its top at the fit-to-width scale, and flash it so the eye lands on it.
@@ -587,7 +587,7 @@
     wrap.hidden = v !== "map";
     $("#tab-overview").setAttribute("aria-pressed", String(v === "overview"));
     $("#tab-map").setAttribute("aria-pressed", String(v === "map"));
-    if (v === "overview") { panel.hidden = true; Overview.fit(); return; }
+    if (v === "overview") { panel.hidden = true; Overview.show(); return; }
     if (selected) panel.hidden = false;
     if (!mapFitted) { mapFitted = true; fit(false); }
   }
@@ -751,7 +751,13 @@
     const typing = /INPUT|SELECT|TEXTAREA/.test(document.activeElement?.tagName);
     if (document.querySelector("dialog[open]")) return;
     if (e.key === "/" && !typing) { e.preventDefault(); input.focus(); return; }
-    if (typing || e.ctrlKey || e.metaKey || e.altKey || view !== "map") return;
+    if (typing || e.ctrlKey || e.metaKey || e.altKey) return;
+    if (view === "overview") {
+      if (e.key === "0") Overview.fit();
+      else if (e.key === "+" || e.key === "=") Overview.zoomIn();
+      else if (e.key === "-") Overview.zoomOut();
+      return;
+    }
     if (e.key === "Escape") { if (selected) select(null); else go("#overview"); }
     else if ((e.key === "l" || e.key === "L") && selected) toggleLearn(selected);
     else if (e.key === "0") fit();
