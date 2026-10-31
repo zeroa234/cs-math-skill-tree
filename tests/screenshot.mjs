@@ -107,6 +107,22 @@ await page("13-overview-zoom", DESK, async (p) => {
   await p.goBack();
   await p.waitForTimeout(300);
 });
+await page("15-goal-cancel", DESK, async (p) => {
+  await p.goto(`${url}#skill/C.2.1`);
+  await p.waitForTimeout(400);
+  await p.click("text=设为目标，排出学习顺序");
+  if (!(await p.locator("#plan").isVisible())) throw new Error("setting a goal did not show the plan");
+  await p.click("#panel >> text=取消目标");
+  if (await p.locator("#plan").isVisible()) throw new Error("取消目标 in the panel did not clear the goal");
+  await p.click("text=设为目标，排出学习顺序");
+  if ((await p.locator("#btn-plan-clear").textContent()) !== "取消目标") throw new Error("plan button is not labelled 取消目标");
+  await p.click("#btn-plan-clear");
+  if (await p.locator("#plan").isVisible()) throw new Error("the plan button did not clear the goal");
+  await p.selectOption("#route-select", "1");
+  if ((await p.locator("#btn-plan-clear").textContent()) !== "退出路线") throw new Error("route plan button is not labelled 退出路线");
+  await p.click("#btn-plan-clear");
+  if ((await p.locator("#route-select").inputValue()) !== "") throw new Error("leaving the route did not reset the route menu");
+});
 await page("14-phone-overview-scroll", PHONE, async (p) => {
   const y = await p.evaluate(() => { const a = document.querySelector(".ov-scroll"); a.scrollTop = 600; return a.scrollTop; });
   if (y < 500) throw new Error(`phone overview list does not scroll (scrollTop ${y})`);

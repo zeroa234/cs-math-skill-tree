@@ -318,6 +318,7 @@
     const plan = planFor(state.goal);
     const todo = plan.filter((id) => !state.learned.has(id));
     $("#plan-title").textContent = state.goalLabel || "学习计划";
+    $("#btn-plan-clear").textContent = state.goalLabel.startsWith("路线：") ? "退出路线" : "取消目标";
     $("#plan-note").textContent = todo.length
       ? `还要学 ${todo.length} 个技能（已完成 ${plan.length - todo.length}）。按编号顺序学，每个都只依赖前面的。`
       : "这条路线已经全部点亮了！";
@@ -392,6 +393,7 @@
     const s = SK.get(id);
     const st = status(id);
     const missing = s.required.filter((r) => !state.learned.has(r.id));
+    const isGoal = state.goal.length === 1 && state.goal[0] === id;
     const kids = [];
 
     kids.push(el("button", { class: "icon-btn p-close", "aria-label": "关闭详情", onclick: () => select(null) }, "×"));
@@ -432,12 +434,16 @@
       box.append(el("div", { class: "confirm" }, `先点亮：${missing.map((r) => SK.get(r.id).name).join("、")}。`));
       box.append(el("div", { class: "status-actions" },
         el("button", { class: "btn primary", disabled: true, title: "必须前置都点亮后才能点亮" }, "点亮"),
-        el("button", { class: "btn", onclick: () => setGoal([id], `目标：${s.name}`) }, "设为目标，排出学习顺序"),
+        isGoal
+          ? el("button", { class: "btn", onclick: () => setGoal([], "") }, "取消目标")
+          : el("button", { class: "btn", onclick: () => setGoal([id], `目标：${s.name}`) }, "设为目标，排出学习顺序"),
         el("button", { class: "btn small", title: "如果这些前置你其实已经学过", onclick: () => learn([...chainTodo, id], `已点亮「${s.name}」和它的 ${chainTodo.length} 个前置`) },
           `我都会：连同 ${chainTodo.length} 个前置一起点亮`)));
     }
-    if (st !== "locked" && !opts.confirmUnlearn && !(state.goal.length === 1 && state.goal[0] === id)) {
-      box.lastChild.append(el("button", { class: "btn small", onclick: () => setGoal([id], `目标：${s.name}`) }, "设为目标"));
+    if (st !== "locked" && !opts.confirmUnlearn) {
+      box.lastChild.append(isGoal
+        ? el("button", { class: "btn small", onclick: () => setGoal([], "") }, "取消目标")
+        : el("button", { class: "btn small", onclick: () => setGoal([id], `目标：${s.name}`) }, "设为目标"));
     }
     kids.push(box);
 
