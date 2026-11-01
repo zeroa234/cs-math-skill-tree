@@ -1,6 +1,6 @@
 # 宣传片：我把计算机专业做成了一棵技能树
 
-约 2 分 04 秒，1920×1080 / 30 fps。鲸鱼娘旁白 + 中文字幕 + CC0 背景音乐。成片 `output/promo/cs-math-promo.mp4`（不入库，可按下面的步骤重新生成）。
+约 2 分 04 秒（124.1 s），1920×1080 / 30 fps，H.264 + AAC，响度 -16 LUFS。鲸鱼娘旁白 + 中文字幕 + CC0 背景音乐。成片 `output/promo/cs-math-promo.mp4`，封面 `output/promo/cover.jpg`（标题那一帧，10.6 s），混音前的画面 `cs-math-promo.raw.mp4`（只换 BGM 时从它重混，不用重渲）。都不入库，可按下面的步骤重新生成。
 
 ## 段落
 
@@ -38,11 +38,13 @@ bash scripts/promo/render-blender.sh        # → src/promo/public/blender/intro
 # 5. 先抽帧看版面，再出成片
 (cd src/promo && TEMP=D:/agent/projects/cs-math-skill-tree/temp/promo/tmp node stills.mjs --every 2.5)   # → temp/promo/stills/
 bash scripts/promo/render.sh                # Remotion 渲染 + 混 BGM + -16 LUFS → output/promo/cs-math-promo.mp4
+ffmpeg -ss 10.6 -i output/promo/cs-math-promo.mp4 -frames:v 1 -q:v 2 output/promo/cover.jpg   # 封面
+rm -rf temp/promo/blender                   # Blender 的 PNG 帧（约 1.4 GB），编成 mp4 后可删
 ```
 
 文稿 `data/promo/script.json` 只有中文，数字写汉字（送 TTS 的就是原文）。改了文稿：重跑第 1 步（只重合成改过的拍）、`word-times.mjs`、Blender 两段和成片。只改画面代码：直接第 5 步。
 
-各步用时（RTX 3080）：Breeze 13 拍 74 s；对齐 + ASR 质检约 1 分钟；截图约 1 分钟；Blender 开场 341 帧、片尾 333 帧各约 2 分钟（Eevee 48 采样，约 0.3 s / 帧）；抽帧 48 张约 50 s。
+各步用时（RTX 3080，16 线程）：成片渲染 + 混音约 12 分钟（并发 6）；Breeze 13 拍 74 s；对齐 + ASR 质检约 1 分钟；截图约 1 分钟；Blender 开场 341 帧、片尾 333 帧各约 2 分钟（Eevee 48 采样，约 0.3 s / 帧）；抽帧 48 张约 50 s。
 
 ## 画面代码
 
