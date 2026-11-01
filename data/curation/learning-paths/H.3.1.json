@@ -1,0 +1,262 @@
+{
+ "id": "H.3.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "江协科技《STM32 入门教程》2023 版（50 集，B 站）",
+   "url": "https://www.bilibili.com/video/BV1th411z7sn",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "GPIO 输入/输出、OLED 调试、EXTI 外部中断、TIM 定时中断/输出比较/PWM/输入捕获/编码器、ADC、DMA、USART 串口、I2C/SPI、STLINK 下载；以 STM32 裸机 C 为主线。",
+   "access": "B 站免费；2023 版，标题标“中文字幕”，未核实是人工还是自动字幕；配套资料在 jiangxiekeji.com 免费下载。",
+   "publisher": "江协科技",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1th411z7sn",
+    "location": "B 站章节目录：[3-1] GPIO 输出、[4-1] OLED 调试工具、[5-1] EXTI 外部中断、[6-1] TIM 定时中断、[7-1] ADC、[8-1] DMA、[9-1] USART、[10-1] I2C",
+    "finding": "页面章节目录逐条列出 GPIO、OLED 调试、外部中断、定时器/PWM/输入捕获、ADC、DMA、USART、I2C/SPI，覆盖裸机外设开发。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "电子科技大学《嵌入式系统及应用》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/UESTC-1206862805",
+   "tier": "website",
+   "free": null,
+   "role": "supplement",
+   "covers": "ARM 处理器编程模型与 Keil4 实验；uC/OS-II 任务管理、同步通信、中断、时间与内存管理；可补中断/资源管理概念。",
+   "access": "视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "电子科技大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/UESTC-1206862805",
+    "location": "课程概述：ARM 编程模型/Keil4、uC/OS-II 中断与内存管理",
+    "finding": "页面说明课程含 ARM 编程模型实验与 uC/OS-II 的中断/时间/内存管理，可补 RTOS 视角的资源限制。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Embedded Systems - Shape The World（Valvano & Yerraballi, UT Austin，免费在线教材 + 视频）",
+   "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "基本概念、电子学、数字逻辑、C、微控制器端口（GPIO）、设计与调试流程、开关/LED、数组与功能调试、FSM、UART、中断（定时器/SysTick）、DAC、ADC、LCD、IoT；每章配 EE319K lab 与视频。",
+   "access": "作者电子教材免费；实践需教材指定 Cortex-M 板卡或兼容仿真环境；英文。",
+   "publisher": "Jonathan Valvano & Ramesh Yerraballi, University of Texas at Austin",
+   "evidence": {
+    "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+    "location": "Table of Contents：Ch.6 Microcontroller Ports、Ch.7 Design and Development Process、Ch.9 Functional Debugging、Ch.12 Interrupts、Ch.14 ADC",
+    "finding": "目录逐章列出 GPIO 端口、设计/调试流程、功能调试、中断、DAC/ADC、LCD 与 IoT，覆盖裸机 C 与外设。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "野火《STM32 库开发实战指南——基于野火指南者开发板》（官方中文在线书）",
+   "url": "https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/index.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "调试：第 3 章 DAP 仿真器下载程序、第 43 章 MDK 编译过程及文件类型全解、第 44 章在 SRAM 中调试代码（调试版本、分散加载文件、中断向量表配置）、第 45–46 章读写内部 FLASH 及其读写保护；资源限制：第 15 章启动文件详解（Stack 栈、Heap 堆、向量表、用户堆栈初始化）、RAM/FLASH 容量与启动方式。",
+   "access": "野火官方文档站免费在线阅读，全中文；配套开发板与例程，无需注册。",
+   "publisher": "野火电子（embedfire）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/book/Startup_file.html",
+    "location": "第 15 章目录：15.3.1 Stack—栈、15.3.2 Heap 堆、15.3.3 向量表、15.3.6 用户堆栈初始化；第 44 章目录：44.1 在 RAM 中调试代码、44.4.2.3 配置分散加载文件、44.4.2.4 配置中断向量表",
+    "finding": "两章正文确认：启动文件讲清栈/堆大小与内存布局（资源限制的根），SRAM 调试章讲分散加载与中断向量表重定位（调试与内存预算的实际操作）；书目录第 3 章另有 DAP 仿真器下载。"
+   },
+   "added_by": "review/pi-additions/H.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "GPIO",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "[3-1] GPIO 输出、[3-3] GPIO 输入",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 6 Microcontroller Ports；Lab 3 switches/LEDs",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从 GPIO 输入/输出开始。"
+  },
+  {
+   "topic": "定时器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "[6-1] TIM 定时中断、[6-3] 输出比较、[6-5] 输入捕获",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 12 Interrupts（SysTick/定时器）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文定时器章节更细（PWM/输入捕获/编码器）。"
+  },
+  {
+   "topic": "中断",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "[5-1] EXTI 外部中断、[6-1] TIM 定时中断",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 12 Interrupts",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都讲中断向量、优先级与 ISR。"
+  },
+  {
+   "topic": "外设",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "ADC、DMA、USART、I2C/SPI、OLED",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.11 UART、Ch.13 DAC、Ch.14 ADC、Ch.17 LCD",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文外设种类更多（DMA/I2C/SPI）；英文有 DAC/LCD。"
+  },
+  {
+   "topic": "裸机程序",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "全程裸机 C（寄存器/标准库）实验",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.5 C、Ch.6 端口、各章 lab（无 OS）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都不依赖 RTOS。"
+  },
+  {
+   "topic": "调试与资源限制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "[4-1] OLED 调试、[9-6] STLINK 下载；资源限制未单列",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 3 章 DAP 仿真器下载、第 43 章 MDK 编译过程及文件类型、第 44 章在 SRAM 中调试代码；第 15 章启动文件的 Stack/Heap/向量表；第 45–46 章内部 FLASH 读写与保护",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.7 Design and Development Process、Ch.9 Functional Debugging",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有调试手段但没有 RAM/Flash/功耗预算的系统讨论；英文有设计流程与功能调试章。；江协科技课只有 OLED 显示调试和 STLINK 下载两处（旧记录 partial），既没讲调试器/断点/分散加载，也没讲 RAM/FLASH/栈堆预算；野火这两章把“怎么调（仿真器、SRAM 调试、分散加载）”和“资源怎么算（启动文件栈堆、FLASH 容量、读写保护）”都讲成可操作步骤，正好补上该知识点。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 GPIO→OLED 调试→EXTI→TIM/PWM→ADC→DMA→USART→I2C/SPI 顺序看视频并动手，每个外设写一个裸机程序。"
+    },
+    {
+     "source": "zh2",
+     "read": "补 uC/OS-II 的中断/时间/内存管理，理解资源受限下的调度。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "在江协科技课学到能点灯、跑通串口之后，读野火第 15 章搞清启动文件里 Stack_Size/Heap_Size 与内存布局，读第 43–44 章按“调试版本 + 分散加载文件 + 中断向量表重定位”把程序放到 SRAM 里调试一遍，再用第 45–46 章看内部 FLASH 读写与保护，最后给自己的工程算一次 RAM/FLASH 余量。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按第 5–14 章学 C/端口/调试/FSM/UART/中断/DAC/ADC，完成 EE319K 对应 lab。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "江协科技 STM32 入门教程 B 站 GPIO 定时器 中断",
+   "result": "采纳；B 站章节目录与“中文字幕”标题可核。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/index.html",
+   "result": "读目录发现第 3 章 DAP 下载、第 15 章启动文件、第 43–44 章编译与 SRAM 调试、第 45–46 章内部 FLASH，正好对“调试与资源限制”，逐章打开核对后采纳。",
+   "by": "review/pi-additions/H.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/book/Startup_file.html 与 .../book/SRAM.html",
+   "result": "确认正文含 Stack/Heap/向量表与分散加载、SRAM 调试步骤，非仅目录。",
+   "by": "review/pi-additions/H.3.1.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有 ESP-IDF 文档，依赖 FreeRTOS，不是裸机入门；已换江协 STM32 视频。",
+  "旧英文 UT Austin 教材保留，GPIO/中断/外设/调试都有章。",
+  "中文缺资源限制，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "单片机与微控制器",
+ "description": "GPIO、定时器、中断、外设、裸机程序、调试与资源限制。",
+ "applied_additions": [
+  "review/pi-additions/H.3.1.json@f4bc0ee885"
+ ]
+}

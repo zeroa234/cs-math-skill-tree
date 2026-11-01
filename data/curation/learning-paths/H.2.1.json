@@ -1,0 +1,354 @@
+{
+ "id": "H.2.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《Verilog 数字系统设计教程》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/detail.htm?cid=1451700161",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "Verilog 语言基础与建模、组合/时序电路实例、状态机设计、Quartus II 开发流程（综合/下载）、FPGA 设计实例（售货机、交通灯）；含实验与考试。",
+   "access": "课程页公开授课大纲与章节；视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "中国大学MOOC 课程团队",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/detail.htm?cid=1451700161",
+    "location": "授课大纲：第 1 章绪论（FPGA 设计流程）、第 2 章 Verilog 基础、第 3 章 Quartus II、第 4 章 FPGA 设计实例",
+    "finding": "大纲逐节列 Verilog 语法、状态机、Quartus II 综合/下载与 FPGA 实例；未列 testbench/约束文件/时序收敛。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "“一生一芯”官方中文课程（E1 硬件描述语言、E4 仿真和验证、B2 时序分析和优化、E8 后端物理设计）",
+   "url": "https://ysyx.oscc.cc/docs/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "E1 硬件描述语言、E4 处理器仿真与验证（difftest/波形）、E7 总线与 SoC、E8 后端物理设计、D6 RTL 到可流片版图；B2“时序分析和优化”页面正文标注“建设中”，暂无教学内容。",
+   "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA 工具链。",
+   "publisher": "“一生一芯”教学团队",
+   "evidence": {
+    "url": "https://ysyx.oscc.cc/docs/2607/b/2.html",
+    "location": "页面正文：“# B2 时序分析和优化 / 建设中 / 本页面的内容仍在建设中, 但暂无编程内容.”",
+    "finding": "打开 B2 页面确认只有“建设中”提示，没有时序分析教学内容，故不能把 B2 当作时序/约束的中文材料。"
+   },
+   "updated_by": [
+    "review/pi-additions/H.2.1.json"
+   ]
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Introductory Digital Systems Laboratory (MIT 6.111, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "数字逻辑与抽象、时序积木（计数器/寄存器）、FSM、FPGA 结构、时序与同步（建立/保持、时钟域）、Verilog RTL、仿真、综合并下载到 FPGA；开放式大作业。",
+   "access": "MIT OCW 免费公开讲义、lab 与项目；英文，字幕未核对。",
+   "publisher": "MIT EECS（Anantha Chandrakasan）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+    "location": "Course Description 与 Lecture Notes/Labs 目录",
+    "finding": "课程描述明确覆盖 digital logic、sequential blocks、FSM、FPGA、timing and synchronization，并以 lab 完成 Verilog 设计到 FPGA 下载。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "高云半导体《Gowin 设计时序约束用户指南》SUG940（v1.4.3，官方中文 PDF）",
+   "url": "https://cdn.gowinsemi.com.cn/SUG940-1.4.3_Gowin%E8%AE%BE%E8%AE%A1%E6%97%B6%E5%BA%8F%E7%BA%A6%E6%9D%9F%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "约束文件与 STA：SDC 文件与语法规范（附录 A）、create_clock / create_generated_clock、set_input_delay / set_output_delay（I/O 延迟与 tIn/tOut 报告含义）、set_multicycle_path、set_max_delay/set_min_delay、set_false_path、set_clock_groups、约束优先级、跨时钟域路径分析、时序报告（Path Slacks / Minimum Pulse Width）与时序收敛。",
+   "access": "高云官网 CDN 免费下载 PDF（85 页，中文）；面向 Gowin 云源软件，命令语法是标准 SDC，换到 Vivado/Quartus 需改工具差异；无需注册。",
+   "publisher": "高云半导体（Gowin Semiconductor）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://cdn.gowinsemi.com.cn/SUG940-1.4.3_Gowin%E8%AE%BE%E8%AE%A1%E6%97%B6%E5%BA%8F%E7%BA%A6%E6%9D%9F%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf",
+    "location": "p5 目录（A.1.1 create_clock、A.1.2 create_generated_clock…）；p25 “4.7.1 时钟约束 Create Clock”；p33 “4.7.2 I/O 延迟约束 set_input_delay / set_output_delay”；p46 约束优先级；p64–65 附录 A create_clock 语法与应用示例；p51 跨时钟域路径与 set_false_path/set_clock_groups",
+    "finding": "PDF 全文 85 页，逐条给出 SDC 命令语法、参数含义、示例与报告解读，确认可承担“约束”这一知识点的中文教学。"
+   },
+   "added_by": "review/pi-additions/H.2.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "野火《FPGA Verilog 开发实战指南》第 5 章“时序分析理论基础”（官方中文在线文档）",
+   "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "时序约束的动机与模型：静态/动态时序分析、寄存器到寄存器路径、Ts/Th 公式、时钟偏斜 △T、亚稳态，说明“做时序约束的目的”。",
+   "access": "免费在线阅读，中文；配套 Quartus 工程。",
+   "publisher": "野火电子（embedfire）官方文档",
+   "reupload": false,
+   "evidence": {
+    "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+    "location": "第 5 章正文：建立/保持时间公式推导、△T 时钟偏斜、“我们做时序约束的目的就是要解决这种问题”",
+    "finding": "正文用波形图和公式解释为什么要约束、约束要解决什么时序问题，可与 SUG940 的命令语法配套使用。"
+   },
+   "added_by": "review/pi-additions/H.2.1.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Vivado Design Suite User Guide: Using Constraints (UG903, v2016.1, AMD/Xilinx)",
+   "url": "https://docs.amd.com/api/khub/documents/eG7Sc4SvBBo6KERDMQTuMA/content",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "约束与 STA：时钟约束（create_clock / create_generated_clock、clock uncertainty、clock groups）、I/O 时序约束（set_input_delay / set_output_delay 与模板）、时序例外（set_false_path、set_max_delay -datapath_only、set_multicycle_path）、异步跨时钟域约束建议、时序分析与收敛流程（report_timing、时序报告解读）。",
+   "access": "AMD 文档站 PDF 免费（178 页，英文）；无需注册。",
+   "publisher": "AMD / Xilinx",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.amd.com/api/khub/documents/eG7Sc4SvBBo6KERDMQTuMA/content",
+    "location": "p1 封面 “Vivado Design Suite User Guide Using Constraints UG903 (v2016.1)”；p44–46 异步时钟域与 set_clock_groups/set_false_path/set_max_delay -datapath_only；p56 I/O Delay Constraint Template；p58 影响综合的时序约束清单；p68 set_input_delay/set_output_delay 只能用于顶层端口",
+    "finding": "下载并读正文确认：UG903 完整版 178 页，逐类讲解时钟/IO/例外约束并给出模板与 CDC 建议，可承担英文侧“约束”知识点。"
+   },
+   "added_by": "review/pi-additions/H.2.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "RTL",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Verilog 语言基础与组合/时序/状态机建模",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "E1 硬件描述语言",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Verilog RTL 讲义与 lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从 Verilog 语法写到可综合 RTL。"
+  },
+  {
+   "topic": "仿真",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Quartus II 流程中的功能仿真；未单列 testbench 章",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "E4 处理器的仿真和验证（difftest/波形）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lab 的仿真与验证流程",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 Verilog 课有仿真但未列 testbench 教学；ysyx E4 补协同仿真。"
+  },
+  {
+   "topic": "综合",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Quartus II 综合/下载流程",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "E8 后端物理设计",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "FPGA 综合与下载 lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都有综合到 FPGA 的流程。"
+  },
+  {
+   "topic": "约束",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "B2 时序分析和优化；未列 SDC/XDC 约束语法",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 4 章时序约束编辑器与附录 A 语法规范：create_clock / create_generated_clock、set_input_delay / set_output_delay、set_multicycle_path、set_false_path、set_clock_groups，以及第 5 章时序报告与跨时钟域分析",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 5 章 时序分析理论基础：寄存器到寄存器路径、Ts/Th、时钟偏斜与时序约束的目的",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Timing and synchronization 讲义；未列约束文件语法",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "UG903 第 2 章：时钟约束、I/O 延迟约束模板、时序例外（false path / max delay / multicycle）、异步时钟组建议、时序报告",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都讲时序概念，但没有系统教约束文件（时钟/IO 延迟/False path）。；旧记录里中文只有“一生一芯 B2”（页面实为建设中，无内容）；SUG940 是中文官方约束指南，逐条给出 SDC 命令语法、示例和报告含义，按简介要求“约束只讲到实验够用”的深度足够。；野火这一章解释约束要解决的物理问题（数据与时钟到达时刻差、偏斜、亚稳态），与 SUG940 的命令语法互补，避免只背约束写法而不知道在约束什么。；6.111 只讲时序与同步概念，没有约束文件语法；UG903 是官方完整约束指南，逐类讲时钟、I/O 延迟、例外与 CDC 约束并给模板，补上英文侧“约束”。"
+  },
+  {
+   "topic": "时序收敛与可编程逻辑",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "B2 时序分析和优化、E8 后端物理设计",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "FPGA 结构与 Quartus 流程",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Timing/synchronization 与 FPGA lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有 B2 时序优化；两侧都只到实验级时序收敛，不是专家级 STA。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 Verilog 基础→组合/时序/状态机→Quartus II 综合下载→FPGA 实例学习，完成板上验证。"
+    },
+    {
+     "source": "zh2",
+     "read": "用 E1/E4 写 HDL 并做仿真，再用 B2 做时序分析与优化。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "先读野火第 5 章，弄清寄存器到寄存器路径上 Ts/Th 与时钟偏斜 △T 的关系，以及为什么需要时序约束。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "再按 SUG940 动手：给自己的工程用 create_clock 定义主时钟、用 create_generated_clock 处理分频/PLL 输出，用 set_input_delay/set_output_delay 约束板级 I/O，给异步域加 set_clock_groups 或 set_false_path，然后打开时序报告看 Path Slacks 与跨时钟域路径，改到收敛为止。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按讲义学数字逻辑→FSM→FPGA→时序/同步，完成 lab 的 Verilog 设计、仿真、综合与下载。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "Use UG903 chapter 2 as the lab companion: define primary/generated clocks, fill the I/O delay template with board-level numbers, add false-path/clock-group exceptions for CDC, then run report_timing and iterate until WNS is positive."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "Verilog HDL FPGA 数字系统设计 中国大学MOOC 课程",
+   "result": "采纳 Verilog 数字系统设计教程；补“一生一芯”E4/B2 的仿真与时序。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://ysyx.oscc.cc/docs/2607/b/2.html",
+   "result": "B2 页面只有“建设中”，确认不能作为时序/约束材料，并回写 zh2 的 covers。",
+   "by": "review/pi-additions/H.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "野火 FPGA 时序约束 教程 建立时间 保持时间 时钟偏斜 文档",
+   "result": "命中野火官方文档第 5 章，采纳为“约束动机”材料。",
+   "by": "review/pi-additions/H.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch bili Vivado 时序约束 XDC 教程 / FPGA 时序约束 从入门到精通；bvinfo BV1NE411h7qP、BV1bd6oBkECc",
+   "result": "小梅哥《FPGA 时序分析和约束实例演练课程》只有 5 讲（FPGA 基本原理/数据传输模型/时序传输模型/时序分析工具/TimeQuest 路径），偏工具演练且停在路径详解 01，未采纳为覆盖来源；小梅哥 2024 全套 FPGA 课也没有约束分 P。",
+   "by": "review/pi-additions/H.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "高云 Gowin 时序约束 用户指南 sdc create_clock pdf",
+   "result": "命中 Gowin 官方中文《设计时序约束用户指南》SUG940，下载 PDF 读正文确认覆盖 create_clock/IO 延迟/例外/CDC，采纳。",
+   "by": "review/pi-additions/H.2.1.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "tavily_extract",
+   "query_or_url": "https://docs.amd.com/r/en-US/ug903-vivado-using-constraints 与 zh-CN 版",
+   "result": "AMD 文档站页面为 JS 应用且拒绝提取，未取到正文；改用 docs.amd.com 的 PDF 内容接口取到完整 178 页 UG903。",
+   "by": "review/pi-additions/H.2.1.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.amd.com/api/khub/documents/eG7Sc4SvBBo6KERDMQTuMA/content",
+   "result": "下载成功（4.0 MB PDF），读封面、p44–46、p56、p58、p68 确认是 UG903 完整版并覆盖约束各类命令，采纳。",
+   "by": "review/pi-additions/H.2.1.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有“一生一芯”，偏处理器实现，缺 Verilog 语法系统教学；已补 Verilog MOOC。",
+  "旧英文 MIT 6.111 保留，RTL/仿真/综合/时序都有 lab。",
+  "约束文件两侧都缺，故本节点 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "FPGA与Verilog/HDL",
+ "description": "RTL、仿真、综合、约束、时序收敛与可编程逻辑。",
+ "applied_additions": [
+  "review/pi-additions/H.2.1.json@e6cfa97d2a"
+ ]
+}

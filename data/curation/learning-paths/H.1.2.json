@@ -1,0 +1,264 @@
+{
+ "id": "H.1.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "南京理工大学《数字逻辑电路》（中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/NJUST-1001753091",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "数字逻辑基础、逻辑门电路、组合逻辑电路与功能模块、时序逻辑电路与功能模块、半导体存储器、可编程逻辑器件、脉冲信号产生与整形、ADC/DAC；含 EDA 设计与实验。",
+   "access": "课程页公开概述与教材；视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "南京理工大学（蒋立平等）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/NJUST-1001753091",
+    "location": "课程概述：教学内容逐项列表；授课目标中的 EDA/测试",
+    "finding": "页面明确列数字逻辑基础、门电路、组合/时序逻辑、存储器、PLD、脉冲产生与整形、ADC/DAC，并含 EDA 设计与实验；未单列状态机/时钟时序分析。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "“一生一芯”官方中文课程：F3 数字逻辑电路基础、F4 计算机系统的状态机模型",
+   "url": "https://ysyx.oscc.cc/docs/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "F3 数字逻辑电路基础、F4 状态机模型、F5 简单处理器、F6 输入输出；用 Logisim 从逻辑门搭到状态机。",
+   "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA 工具链。",
+   "publisher": "“一生一芯”教学团队（中国科学院大学等）",
+   "evidence": {
+    "url": "https://ysyx.oscc.cc/docs/",
+    "location": "学习讲义目录：F3 数字逻辑电路基础、F4 计算机系统的状态机模型",
+    "finding": "讲义目录明确列出数字逻辑与状态机两节，可作为组合/时序与状态机的中文动手材料；不讲 setup/hold 时序收敛。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.004 Computation Structures（MIT OpenCourseWare，Spring 2017）",
+   "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "模块 1 信息表示、3 CMOS、4 组合逻辑（布尔代数/门级实现）、5 时序逻辑（锁存器/触发器）、6 有限状态机、7 性能度量（延迟/时钟/关键路径）、8 设计权衡；每模块含讲义、视频、习题。",
+   "access": "MIT OCW 免费公开；英文，字幕未核对。",
+   "publisher": "MIT EECS / MIT OpenCourseWare",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+    "location": "课程材料目录：4 Combinational Logic、5 Sequential Logic、6 Finite State Machines、7 Performance Measures、8 Design Tradeoffs",
+    "finding": "目录逐模块列出组合逻辑、时序逻辑、FSM、性能度量与设计权衡，并附讲义/视频/worksheet。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "野火《FPGA Verilog 开发实战指南——基于 Altera EP4CE10 征途 Mini 开发板》第 5 章“时序分析理论基础”（官方中文在线文档）",
+   "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "时钟与同步时序：静态/动态时序分析的区别、寄存器到寄存器路径分析、时钟偏斜 △T、建立时间 Ts 与保持时间 Th 的公式推导、亚稳态、做时序约束的目的。",
+   "access": "野火官方文档站免费阅读，中文；配套开发板与 Quartus 工程，无需注册。",
+   "publisher": "野火电子（embedfire）官方文档",
+   "reupload": false,
+   "evidence": {
+    "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+    "location": "第 5 章“时序分析理论基础”正文：Ts = T_cycle –（Tco + Tdata）+ △T、Th 公式、“△T 为时钟偏斜”、亚稳态与“我们做时序约束的目的就是要解决这种问题”",
+    "finding": "正文逐段推导建立/保持时间与时钟偏斜的关系，并说明时序约束的目的；不是只列目录，确实是同步时钟时序的中文教学。"
+   },
+   "added_by": "review/pi-additions/H.1.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "布尔代数",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数字逻辑基础与逻辑门电路",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 4 Combinational Logic（布尔代数、门级实现）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从布尔代数讲到门级实现。"
+  },
+  {
+   "topic": "组合/时序逻辑",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "组合逻辑电路与功能模块；时序逻辑电路与功能模块",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 4 Combinational Logic；Module 5 Sequential Logic",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文含常用组合/时序模块；英文含锁存器/触发器。"
+  },
+  {
+   "topic": "状态机",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "F4 计算机系统的状态机模型",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 6 Finite State Machines",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文由“一生一芯”补 FSM；南理工课程页未单列。"
+  },
+  {
+   "topic": "时钟",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "脉冲信号的产生与整形；未讲 setup/hold 与时钟偏斜",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 5 章 时序分析理论基础：寄存器到寄存器路径、Ts/Th 公式、时钟偏斜 △T、亚稳态与时序约束目的",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 7 Performance Measures（延迟、时钟、关键路径）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有脉冲电路，缺同步时序的建立/保持与时钟约束。；南理工数字逻辑课只讲到脉冲信号的产生与整形（旧记录 partial），缺同步时序的建立/保持与时钟偏斜；野火官方文档用公式和波形图完整推导 Ts、Th 与 △T，并解释时钟采样为何会失效，正好补上“时钟”这一知识点。"
+  },
+  {
+   "topic": "时序与逻辑实现",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "可编程逻辑器件与 EDA 设计；实验",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "F3/F4 Logisim 实现",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 8 Design Tradeoffs；CMOS 与 lab 的门级实现",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有 PLD/EDA 与 Logisim；英文有设计权衡与门级 lab。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按数字逻辑基础→门电路→组合/时序逻辑→PLD/EDA 学习，完成组合与时序电路实验。"
+    },
+    {
+     "source": "zh2",
+     "read": "用 F3/F4 的 Logisim 实验补状态机建模与实现。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "在南理工数字逻辑课学完时序逻辑电路后，读野火第 5 章：先分清静态/动态时序分析，再跟着图 57-2～57-4 推 Ts = T_cycle –(Tco+Tdata)+△T 与 Th 的公式，理解时钟偏斜 △T 为何同时影响建立与保持裕量，最后说清“为什么要做时序约束”。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按模块 4→5→6→7→8 学组合/时序/FSM/性能/权衡，完成对应 worksheet 与门级 lab。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "数字逻辑电路 中国大学MOOC 组合逻辑 时序逻辑 状态机 课程",
+   "result": "采纳南京理工大学数字逻辑电路；状态机由“一生一芯”F4 补。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/NJUST-1001753091",
+   "result": "重读南理工课程页正文：教学内容只有数字逻辑基础、门电路、组合/时序逻辑、存储器、PLD、脉冲产生与整形、ADC/DAC，未提建立/保持与时钟约束，确认旧记录 partial 的判断。",
+   "by": "review/pi-additions/H.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch bili 建立时间 保持时间 时钟偏斜 时序分析",
+   "result": "找到 BV13s4y1y7un《从门级理解D触发器的建立时间和保持时间》（IC硅农场，单集）与 BV1bd6oBkECc 小梅哥 FPGA 时序分析系列（仅 4 个分 P，仍在更新），内容偏单点/未成体系，未采纳为覆盖来源。",
+   "by": "review/pi-additions/H.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "野火 FPGA 时序约束 教程 建立时间 保持时间 时钟偏斜 文档",
+   "result": "命中野火官方文档第 5 章“时序分析理论基础”，打开正文确认有公式推导与时钟偏斜讲解，采纳。",
+   "by": "review/pi-additions/H.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ysyx.oscc.cc/docs/2607/b/2.html（一生一芯 B2 时序分析和优化）",
+   "result": "页面正文只有“建设中”，无教学内容，不采纳。",
+   "by": "review/pi-additions/H.1.2.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有“一生一芯”，偏处理器实现，不能覆盖布尔代数/组合时序系统课；已补南理工数字逻辑。",
+  "旧英文 6.004 模块 1–8 保留，正好是本节点范围。",
+  "中文缺时钟约束/setup-hold，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "数字电路与数字逻辑",
+ "description": "布尔代数、组合/时序逻辑、状态机、时钟、时序与逻辑实现。",
+ "applied_additions": [
+  "review/pi-additions/H.1.2.json@9257e68fe4"
+ ]
+}

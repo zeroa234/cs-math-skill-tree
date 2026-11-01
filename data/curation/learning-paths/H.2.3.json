@@ -1,0 +1,387 @@
+{
+ "id": "H.2.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "嘉立创 EDA 专业版快速入门（官方中文用户指南）",
+   "url": "https://prodocs.lceda.cn/cn/quick-start.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "原理图绘制、器件标准化、原理图到 PCB 的更新、板框、设计规则、图层、布局布线、制造文件输出；配视频教程入口。",
+   "access": "官方文档免费；使用需注册嘉立创 EDA 账号。中文。",
+   "publisher": "嘉立创 EDA（深圳嘉立创）",
+   "evidence": {
+    "url": "https://prodocs.lceda.cn/cn/quick-start.html",
+    "location": "快速入门章节：原理图整体检查、设计→更新/转换原理图到 PCB、新建 PCB、绘制板框、设置设计规则、设置 PCB 图层",
+    "finding": "文档按原理图→PCB→设计规则→图层的顺序给出操作步骤，覆盖布局布线与制造约束；未讲供电完整性/SI/EMC。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "KiCad 9.0 入门（官方简体中文文档）",
+   "url": "https://docs.kicad.org/9.0/zh/getting_started_in_kicad/getting_started_in_kicad.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "KiCad 工程、原理图编辑器、PCB 编辑器、封装/网络表、布线、Gerber 输出与制造文件。",
+   "access": "官方文档免费；中文。",
+   "publisher": "KiCad 项目",
+   "evidence": {
+    "url": "https://docs.kicad.org/9.0/zh/getting_started_in_kicad/getting_started_in_kicad.html",
+    "location": "目录：原理图编辑器、PCB 编辑器、Gerber 浏览器、PCB 计算器",
+    "finding": "中文入门文档覆盖原理图、PCB 编辑与 Gerber 输出，可作第二套 EDA 流程；不含 SI/EMC 理论。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "The Art and Science of PCB Design（MIT IAP 6.S092 / EC.S03）",
+   "url": "https://pcb.mit.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "系统设计与参数建模、SPICE 仿真、原理图、器件选型与数据手册、PCB 布局布线、Altium/KiCad/LTspice、板厂 DFM、手工贴装；供电/SI/EMC 只在高级仿真与客座讲座。",
+   "access": "课程站与 lab 免费公开；英文。",
+   "publisher": "MIT（IAP 课程团队）",
+   "evidence": {
+    "url": "https://pcb.mit.edu/",
+    "location": "Syllabus 与课程目标：schematic、layout、DFM、SPICE、Altium/KiCad/LTspice；高级仿真/客座讲座",
+    "finding": "课程站列出从系统需求到板厂制造的完整流程与 lab；供电完整性、SI、EMC 只在高级仿真/客座讲座，不是主线。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《信号完整性与电源完整性分析（第二版）》（Eric Bogatin，李玉山等译，电子工业出版社）",
+   "url": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=49483",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "信号完整性：第 7 章传输线的物理基础、第 8 章传输线与反射、第 9 章有损线与上升边退化、第 10 章传输线的串扰、第 11 章差分对与差分阻抗；供电：第 6 章含“电源分配网络和回路电感”“平面对与过孔的回路电感”，并给出电源分配网络（PDN）设计实例；电磁兼容：第 1 章 1.4 轨道塌陷噪声、1.5 电磁干扰，以及 S 参数应用。",
+   "access": "电子工业出版社正式商品页，纸质书定价 ¥69.0（第二版，李玉山等译）；全文需购买，未购买，目录公开可核。",
+   "publisher": "Eric Bogatin（E. 伯格丁）着，李玉山等译，电子工业出版社",
+   "reupload": false,
+   "evidence": {
+    "url": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=49483",
+    "location": "商品页目录：第 1 章 1.3 串扰 / 1.4 轨道塌陷噪声 / 1.5 电磁干扰；第 6 章 6.9 电源分配网络和回路电感、6.11 平面对与过孔的回路电感；第 7 章 传输线的物理基础；第 8 章 传输线与反射；第 9 章 有损线、上升边退化与材料特性；第 10 章 传输线的串扰；第 11 章 差分对与差分阻抗；简介提到“给出了电源分配网络的设计实例”",
+    "finding": "电子工业出版社商品页把逐章逐节目录列全，确认该书同时覆盖 SI（传输线/反射/串扰/差分）与 PI（PDN/回路电感/去耦）并涉及电磁干扰，可承担中文侧“信号完整性”“供电”的主教学。"
+   },
+   "added_by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《ESP 硬件设计指南》（乐鑫 Espressif 官方中文文档）——原理图设计与 PCB 版图布局",
+   "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/zh_CN/latest/esp32/schematic-checklist.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "板级供电与布局落地：数字电源/模拟电源与去耦、上电时序与复位；PCB 版图的地平面完整性、四层/两层板叠层安排、电源走线、射频与晶振区域的屏蔽，以及“电源纹波不大但射频性能差”这类 EMI/供电耦合问题的排查。",
+   "access": "乐鑫官方文档站免费，中文；针对 ESP32 系列，通用板级原则可迁移。",
+   "publisher": "乐鑫信息科技（Espressif Systems）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/zh_CN/latest/esp32/pcb-layout-design.html",
+    "location": "“PCB 版图布局”页：基于芯片的版图设计通用要点、电源、四层板设计（第二层完整地平面、第三层铺地平面“使射频及晶振部分可以得到更好的屏蔽”）、两层板设计、版图设计常见问题（电源纹波/射频 TX 性能）",
+    "finding": "正文给出叠层、地平面、电源走线与屏蔽的具体做法和现象排查，属于板级供电与 EMC 的实操层教学；原理图页另有“电源（数字电源/模拟电源）”小节。"
+   },
+   "added_by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "MIT 6.776 High Speed Communication Circuits — Lecture Notes 3–5（Transmission lines, S-parameters, reflection/Smith chart）",
+   "url": "https://ocw.mit.edu/courses/6-776-high-speed-communication-circuits-spring-2005/pages/lecture-notes/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "信号完整性的电气基础：波导与传输线模型、S 参数与阻抗变换、广义反射系数与 Smith 圆图、匹配；为 PCB 走线的反射/端接与插损分析提供理论。",
+   "access": "MIT OCW 免费讲义 PDF；英文。",
+   "publisher": "MIT EECS / MIT OpenCourseWare",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-776-high-speed-communication-circuits-spring-2005/pages/lecture-notes/",
+    "location": "Lecture Notes：3 Wave Guides and Transmission Lines、4 S-Parameters and Impedance Transformers、5 Generalized Reflection Coefficient, Smith Chart",
+    "finding": "讲次标题与 PDF 明确按传输线、S 参数、反射系数组织，可作为 SI 的英文理论材料（板级应用仍需配合布局实践）。"
+   },
+   "added_by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "ESP Hardware Design Guidelines (Espressif, official English) — Schematic Checklist & PCB Layout Design",
+   "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Board-level power delivery and EMC practice: digital/analog power supply and decoupling, power-up/reset sequencing; PCB stack-up with solid ground plane, power routing, shielding of RF/crystal areas, and debugging of supply-noise-induced RF degradation.",
+   "access": "Free official docs, English.",
+   "publisher": "Espressif Systems",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html",
+    "location": "Schematic Checklist: “Power Supply / Digital Power Supply / Analog Power Supply”, “Chip Power-up and Reset Timing”；PCB Layout Design 页有四层/两层叠层、ground plane 与 shielding 说明",
+    "finding": "英文正文逐节给电源与去耦、叠层与地平面、屏蔽的具体建议，可作英文侧供电与 EMC 的板级实操材料。"
+   },
+   "added_by": "review/pi-additions/H.2.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "原理图",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "原理图绘制、器件标准化、原理图检查",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Schematic capture 与器件选型/lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都有从原理图到网表的流程。"
+  },
+  {
+   "topic": "布局布线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "原理图转 PCB、板框、设计规则、图层、布线",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "PCB layout 与 Altium/KiCad lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都用真实 EDA 工具做布局布线。"
+  },
+  {
+   "topic": "供电",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未讲电源完整性与去耦设计",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 6 章 6.9 电源分配网络和回路电感、6.11 平面对与过孔的回路电感；书中的电源分配网络设计实例",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "原理图设计“电源（数字电源/模拟电源）”与 PCB 版图“电源”“四层板/两层板设计”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "供电完整性只在高级仿真/客座讲座",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Schematic Checklist: Power Supply (digital/analog), decoupling, power-up/reset；PCB Layout: stack-up, power routing",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都没有系统的 PDN/去耦/电源树教学。；嘉立创/KiCad 文档只讲布线操作，不涉及 PDN；Bogatin 中译用回路电感、平面对与过孔解释 PDN 阻抗，并给出 PDN 设计实例，补上“供电”的电气原理。；乐鑫官方文档把去耦、电源分层与地平面做法落到具体板子上，与 Bogatin 的原理互补，达到简介要求的“浅”层供电完整性。；MIT PCB 课把供电完整性放在高级仿真/客座讲座；ESP 英文官方文档给出电源与去耦、叠层与电源走线的具体做法，补上英文侧的板级供电。"
+  },
+  {
+   "topic": "信号完整性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未讲传输线/反射/串扰",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 7–11 章：传输线物理基础、反射、有损线与上升边退化、串扰、差分对与差分阻抗",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "SI 只在高级仿真/客座讲座",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "6.776 Lectures 3–5：传输线、S 参数与阻抗变换、反射系数与 Smith 圆图",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都缺 SI 主线章节。；中文侧原来只有 EDA 操作文档，完全没有传输线/反射/串扰；这本书按 SI 六类问题逐章讲并有估算公式与设计准则，覆盖“信号完整性”。；英文侧原来只有课程里的高级仿真讲座；6.776 的这三讲讲清传输线模型、反射与 S 参数，是 SI 分析的理论核心。"
+  },
+  {
+   "topic": "电磁兼容与制造约束",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "设计规则/板厂工艺/制造文件；EMC 未讲",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 1 章 1.5 电磁干扰、1.4 轨道塌陷噪声；第 11 章差分对（共模与差模）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "PCB 版图布局：完整地平面、射频与晶振区域屏蔽、电源走线，以及版图常见问题排查",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "DFM 与板厂工艺；EMC 只在客座讲座",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "PCB Layout Design：四层/两层叠层、完整地平面、RF/晶振屏蔽、电源相关 EMI 排查",
+     "extent": "covered"
+    }
+   ],
+   "note": "制造约束（DFM/DRC/Gerber）covered；EMC 两侧都缺。；EMC 部分只需要入门：Bogatin 讲清 EMI 的来源（差模/共模电流、轨道塌陷）与差分对的影响。；制造约束一侧由已有 zh1（设计规则、板厂工艺、Gerber 输出）承担；EMC 一侧由乐鑫文档给出屏蔽/地平面/电源走线的板级规则，两者合起来覆盖该知识点，深度按简介要求保持“浅”。；制造约束（DFM/板厂工艺/Gerber）由已有 en1（MIT PCB 课）承担；EMC 由 ESP 英文文档的叠层/地平面/屏蔽与噪声排查补上，合起来覆盖该知识点（浅层）。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按原理图→器件/封装→PCB 布局布线→设计规则→Gerber 输出做一块完整小板，并打样。"
+    },
+    {
+     "source": "zh2",
+     "read": "用 KiCad 入门文档走第二套工具流程，理解封装/网络表/制造文件。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "在嘉立创 EDA 画完第一块板后读这本书：先第 7–9 章（传输线、反射、有损线）算一条走线的阻抗与临界长度，再第 10–11 章看串扰与差分对，最后第 6 章 PDN 与回路电感，给自己板子的电源平面做一次去耦与过孔布置。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "对照乐鑫《ESP 硬件设计指南》：按“电源（数字/模拟）”“四层/两层板”把地平面、电源走线与射频屏蔽落到自己的板子上，并读“版图设计常见问题”学会从现象反查供电/EMC 原因。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 syllabus 学系统设计/SPICE→原理图→布局布线→DFM→手工贴装，完成 lab 板。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "Read 6.776 lectures 3–5 and redo the reflection/Smith-chart exercises for a 50-ohm PCB trace, so you can compute reflection from a mismatched load and read an S-parameter plot."
+    },
+    {
+     "source": "r7-en2",
+     "read": "Follow the ESP hardware design guidelines: place decoupling per the power-supply section, choose a 4-layer stack-up with a solid ground plane, keep RF/crystal areas shielded, and use the layout FAQ to debug supply-noise-related RF problems."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "PCB设计 嘉立创EDA 官方教程 原理图 布局布线 中文",
+   "result": "采纳嘉立创 EDA 快速入门；KiCad 中文文档作第二工具。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信号完整性分析 Bogatin 中文版 电子工业出版社 目录 电源完整性 电磁兼容",
+   "result": "命中电子工业出版社《信号完整性与电源完整性分析（第二版）》商品页，采纳并读目录；同时出现的网盘/文件站镜像未使用。",
+   "by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch bili 信号完整性 电源完整性 教程 / EMC 电磁兼容 PCB设计 教程",
+   "result": "只有零散单集（鹿-末“信号完整性”系列、知用电子 EMC 测试实操、凡亿 EMC 课程宣传片），没有系统性中文免费课程，未采纳为覆盖来源。",
+   "by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/zh_CN/latest/esp32/schematic-checklist.html 与 pcb-layout-design.html",
+   "result": "采纳：原理图“电源”小节与版图“电源/四层板/两层板/常见问题”给出供电与 EMC 的板级实操。",
+   "by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "电磁兼容 EMC 印制板 设计 中文 教材 目录 电子工业出版社 电磁兼容原理与设计",
+   "result": "只返回《电磁兼容原理、技术及应用》样章 PDF 与《电磁兼容导论（第2版）》目录分享页，均非出版社官方页、目录无法确证，未登记；EMC 改由 Bogatin 中译与乐鑫文档的板级规则覆盖。",
+   "by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.mit.edu/courses/6-776-high-speed-communication-circuits-spring-2005/pages/lecture-notes/",
+   "result": "采纳：Lec 3–5 覆盖传输线、S 参数、反射系数，补英文 SI 理论。",
+   "by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 电磁兼容 课程",
+   "result": "只返回各校主页，没有电磁兼容课程页，未采纳。",
+   "by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.ti.com/about-ti/events/power-supply-design-seminar.html",
+   "result": "TI 电源设计研讨会现为线下活动报名页，无免费讲义正文，未采纳为供电材料。",
+   "by": "review/pi-additions/H.2.3.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有 KiCad 入门，覆盖原理图/布线但缺制造流程；已补嘉立创 EDA。",
+  "旧英文 MIT PCB 保留：原理图/布局/DFM 完整，但 SI/EMC 确实浅。",
+  "供电、SI、EMC 两侧都缺，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "PCB设计与板级工程",
+ "description": "原理图、布局布线、供电、信号完整性、电磁兼容与制造约束。",
+ "applied_additions": [
+  "review/pi-additions/H.2.3.json@cf4b72436e"
+ ]
+}

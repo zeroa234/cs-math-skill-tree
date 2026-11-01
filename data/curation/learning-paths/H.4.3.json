@@ -1,0 +1,370 @@
+{
+ "id": "H.4.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Microsoft《初学者物联网课程》（IoT for Beginners 简体中文译本，12 周 24 课）",
+   "url": "https://github.com/microsoft/IoT-For-Beginners/blob/main/translations/zh-CN/README.md",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "24 课按入门/农场/运输/制造/零售/消费项目推进：IoT 组成、微控制器 vs 单板机、传感器/执行器、连接互联网与 MQTT、云平台与云端应用逻辑、密钥/证书安全、GPS/数据存储/地图/地理围栏、边缘推理、语音交互。",
+   "access": "GitHub 免费中文译本（简体），与原英文课程同步；每课含课前/课后测验、书面指导、作业与解答；需要硬件或仿真环境。",
+   "publisher": "Microsoft Azure Cloud Advocates（中文由学生大使团队翻译）",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/microsoft/IoT-For-Beginners/main/translations/zh-CN/README.md",
+    "location": "课程列表第 01–24 课：物联网简介、深入探讨、传感器/执行器、连接互联网/MQTT、迁移到云端、应用逻辑、安全、GPS、地理围栏、边缘推理、语音",
+    "finding": "中文 README 明确 12 周 24 课，并逐课列出设备、连接/MQTT、云平台/应用逻辑、安全、位置与边缘推理；未单列设备管理与功耗。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "南京邮电大学《物联网导论》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/NJUPT-1003224005",
+   "tier": "website",
+   "free": null,
+   "role": "supplement",
+   "covers": "物联网体系结构四层（感知识别、网络构建、管理服务、综合应用）、RFID、传感器、无线传感器网络、无线宽带网络、数据库、隐私保护与智能应用。",
+   "access": "视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "南京邮电大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/NJUPT-1003224005",
+    "location": "课程概述：四层体系与 RFID/传感器/WSN/无线宽带/数据库/隐私",
+    "finding": "页面按四层讲物联网概念与关键技术，可补体系结构与网络层知识；不含 MQTT 编程、设备管理平台与端到端项目。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "IoT for Beginners（Microsoft，12 weeks / 24 lessons）",
+   "url": "https://github.com/microsoft/IoT-For-Beginners",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "同上 24 课英文原版：IoT 组成、设备、传感器/执行器、MQTT、云平台、应用逻辑、安全、GPS/存储/地理围栏、边缘 AI、语音；含 quiz/作业/解答。",
+   "access": "GitHub 免费开源课程；英文；需要硬件或仿真环境。",
+   "publisher": "Microsoft Azure Cloud Advocates",
+   "evidence": {
+    "url": "https://github.com/microsoft/IoT-For-Beginners",
+    "location": "Repository 标题与描述：12 Weeks, 24 Lessons, IoT for All；课程目录",
+    "finding": "仓库标题/描述确认 12 周 24 课，README 列出从设备/传感器到 MQTT、云、边缘 AI 的项目链。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "使用 Microsoft Azure IoT 中心进行设备管理的概述（微软官方简体中文文档）",
+   "url": "https://learn.microsoft.com/zh-cn/azure/iot-hub/iot-hub-device-management-overview",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "设备管理：设备生命周期五个阶段、常见设备管理原则与模式、设备孪生（device twin）、直接方法、作业（jobs）、设备预配与分层（基本层/标准层功能差异）。",
+   "access": "Microsoft Learn 免费中文文档，无需注册；举例基于 Azure IoT 中心，概念可迁移到其他平台。",
+   "publisher": "Microsoft（Microsoft Learn 官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/iot-hub/iot-hub-device-management-overview",
+    "location": "正文：“Azure IoT 中心提供功能和可扩展性模型…”“设备生命周期有五个阶段”“本文提供…常见设备管理原则的说明、设备生命周期的说明、常见设备管理模式的概述”；提示框列出设备孪生、设备管理等仅在标准层提供",
+    "finding": "页面按设备生命周期、管理原则与管理模式组织，并点明设备孪生/直接方法/作业这些管理手段，可承担中文“设备管理”。"
+   },
+   "added_by": "review/pi-additions/H.4.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "ESP-IDF 编程指南：电源管理（乐鑫官方简体中文文档）",
+   "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-reference/system/power_management.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "设备侧功耗管理：动态调频（DFS）、自动 Light-sleep 与唤醒时间补偿、睡眠模式、电源管理锁（Power Management Locks）、功耗算法与调试/性能分析、应用示例。",
+   "access": "乐鑫官方文档免费中文；需 ESP32 硬件与 ESP-IDF 环境。",
+   "publisher": "乐鑫信息科技（Espressif Systems）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-reference/system/power_management.html",
+    "location": "页面目录：ESP32 电源管理算法、自动 Light-sleep 时间补偿机制、调试和性能分析、应用示例、睡眠模式、电源管理锁",
+    "finding": "正文逐节讲调频/睡眠与功耗锁，属于设备侧功耗管理的可操作材料。"
+   },
+   "added_by": "review/pi-additions/H.4.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Overview of device management with Microsoft Azure IoT Hub (Microsoft Learn, English)",
+   "url": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Device management: five device-lifecycle stages, common device management principles and patterns, device twins, direct methods, jobs, provisioning and tier differences.",
+   "access": "Free Microsoft Learn documentation, English.",
+   "publisher": "Microsoft",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview",
+    "location": "Body: “Azure IoT Hub provides the features and an extensibility model …”, “the device lifecycle has five stages”, note listing “cloud-to-device messaging, device twins, and device management”",
+    "finding": "Page organizes device management by lifecycle, principles and patterns and names twins/direct methods/jobs, so it covers the English 'device management' topic."
+   },
+   "added_by": "review/pi-additions/H.4.3.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "ESP-IDF Programming Guide: Power Management (Espressif, English)",
+   "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/power_management.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Device-side power management: dynamic frequency scaling, automatic light-sleep with time compensation, sleep modes, power management locks, the ESP32 power management algorithm, debugging/profiling and examples.",
+   "access": "Free official docs, English.",
+   "publisher": "Espressif Systems",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/power_management.html",
+    "location": "Page sections: Overview, Configuration, Power Management Locks, ESP32 Power Management Algorithm, Performance Monitor",
+    "finding": "The page explains DFS, sleep modes and power locks with configuration steps, covering the power-consumption half of the topic."
+   },
+   "added_by": "review/pi-additions/H.4.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "设备",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 01–02 课：IoT 组成、微控制器 vs 单板机；第 03 课传感器/执行器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lessons 1–3：IoT introduction、microcontroller vs SBC、sensors/actuators",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧同一课程，设备选型与传感器/执行器都有项目。"
+  },
+  {
+   "topic": "连接",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 04 课：把设备连接到互联网、MQTT 代理；第 08 课云托管服务",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lesson 4：connect to internet/MQTT；Lesson 8：cloud IoT service",
+     "extent": "covered"
+    }
+   ],
+   "note": "覆盖 Wi-Fi/MQTT 与云托管连接。"
+  },
+  {
+   "topic": "消息",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 04/07/09 课：MQTT 发布/订阅与云端消息处理",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lessons 4/7/9：MQTT publish/subscribe、cloud application logic",
+     "extent": "covered"
+    }
+   ],
+   "note": "以 MQTT 为主线讲消息收发与应用逻辑。"
+  },
+  {
+   "topic": "平台",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 08–10 课：云平台、云端应用逻辑、安全",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lessons 8–10：cloud platform、cloud app logic、security",
+     "extent": "covered"
+    }
+   ],
+   "note": "以 Azure IoT 服务为例；平台概念可迁移。"
+  },
+  {
+   "topic": "设备管理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "课程列表未列设备注册/配置/OTA/生命周期管理",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "设备生命周期五阶段、设备管理原则与模式、设备孪生/直接方法/作业、分层与预配",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "课程列表未列 device management/OTA",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Five lifecycle stages, management principles/patterns, device twins, direct methods, jobs, provisioning",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都没有设备注册、配置下发、OTA 与生命周期管理专课。；Microsoft 24 课中文译本与南邮导论都没有设备注册/孪生/作业/OTA 这一层（旧记录 partial）；Azure IoT 中文文档把设备生命周期与管理手段讲成体系，补上中文“设备管理”。；IoT for Beginners 24 课没有设备管理模块（旧记录 partial）；Azure IoT 英文文档成体系讲设备生命周期与孪生/方法/作业，补上英文侧“设备管理”。"
+  },
+  {
+   "topic": "功耗与端到端集成",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "端到端项目（农场→运输→制造→零售→消费）；功耗只在电池供电提示中出现",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "电源管理：DFS、自动 Light-sleep、睡眠模式、电源管理锁、功耗算法与示例",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "24 课端到端项目（入门→农场→运输→制造→零售→消费）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "24 课端到端项目；功耗无独立模块",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Power Management: DFS, light-sleep, sleep modes, power locks, algorithm and examples",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "24-lesson end-to-end projects（farm → transport → manufacturing → retail → consumer）",
+     "extent": "covered"
+    }
+   ],
+   "note": "端到端集成 covered；功耗管理没有独立课程。；课程里功耗只在电池供电提示中出现（旧记录 partial）；ESP-IDF 电源管理文档给出设备侧功耗预算与睡眠策略的具体做法。；端到端集成由已有中文译本课程的六个项目串起来（设备→连接→云→应用），与 r7-zh2 的功耗管理合起来覆盖“功耗与端到端集成”。；英文课程没有独立功耗模块；ESP-IDF 英文功率管理文档补上设备侧功耗策略。；端到端集成由英文原版课程的六个项目承担，与 r7-en2 的功耗管理合起来覆盖该知识点。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 24 课顺序做项目：设备/传感器→MQTT 连接→云平台/应用逻辑→安全→GPS/存储→边缘推理→语音，完成每课作业。"
+    },
+    {
+     "source": "zh2",
+     "read": "补物联网四层体系、RFID/WSN/无线宽带等概念。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "学完 24 课后读 Azure IoT 设备管理中文文档：按设备生命周期五阶段（预配→配置→监控→更新→退役）画一张自己的设备管理表，写清每一阶段用设备孪生、直接方法还是作业来实现。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "在 ESP32 上做一次功耗实测：先在 DFS 下测平均电流，再开自动 Light-sleep 并加时间补偿，最后用电源管理锁避免关键任务被降频，记录三种状态的电流与唤醒延迟。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Lessons 1–24 做端到端项目，从设备/MQTT 到云平台、边缘 AI 与语音。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "Map the IoT solution you built from the 24 lessons onto the five device-lifecycle stages and implement one stage each with device twins, a direct method and a job."
+    },
+    {
+     "source": "r7-en2",
+     "read": "Measure current in DFS mode, then with automatic light-sleep, then with power management locks held; explain the trade-off between latency and energy for your end-to-end pipeline."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "物联网 导论 中国大学MOOC 课程 感知层 网络层 应用层 MQTT",
+   "result": "采纳南邮物联网导论；另发现 Microsoft IoT for Beginners 有简体中文全译本，改作中文主课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://raw.githubusercontent.com/microsoft/IoT-For-Beginners/main/translations/zh-CN/README.md",
+   "result": "核对 24 课中文目录，确认设备/MQTT/云/边缘均覆盖。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/azure/iot-hub/iot-hub-device-management-overview",
+   "result": "采纳：中文设备管理概述含生命周期/孪生/作业，补中文设备管理。",
+   "by": "review/pi-additions/H.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-reference/system/power_management.html",
+   "result": "采纳：电源管理文档含 DFS/Light-sleep/功耗锁，补中文功耗。",
+   "by": "review/pi-additions/H.4.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview 与 https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/power_management.html",
+   "result": "两页英文正文均确认覆盖设备管理与功耗管理，采纳为 r7-en1 / r7-en2。",
+   "by": "review/pi-additions/H.4.3.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有 ESP-IDF 文档，只覆盖设备侧；已换 Microsoft 课程的完整中文译本为主。",
+  "旧英文 IoT for Beginners 保留，但两侧都缺设备管理与功耗模块。",
+  "南邮物联网导论补四层体系，但不能替代端到端项目。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "物联网",
+ "description": "设备、连接、消息、平台、设备管理、功耗与端到端集成。",
+ "applied_additions": [
+  "review/pi-additions/H.4.3.json@ddc248a3fb"
+ ]
+}

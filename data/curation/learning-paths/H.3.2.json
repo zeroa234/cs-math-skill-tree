@@ -1,0 +1,365 @@
+{
+ "id": "H.3.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "野火《FreeRTOS 内核实现与应用开发实战指南—基于 STM32》（中文在线书）",
+   "url": "https://doc.embedfire.com/rtos/freertos/zh/latest/index.html",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "从 0 写 FreeRTOS 内核：任务定义与切换、临界段、空闲任务/阻塞延时、多优先级、延时列表、时间片；应用开发：任务、队列、信号量、事件、内存管理、中断与移植。",
+   "access": "野火官方文档免费在线；中文；实验需 STM32 板卡。",
+   "publisher": "野火（EmbedFire）",
+   "evidence": {
+    "url": "https://doc.embedfire.com/rtos/freertos/zh/latest/index.html",
+    "location": "目录：任务的定义与切换、临界段保护、支持多优先级、支持时间片、FreeRTOS 内核应用开发",
+    "finding": "目录逐章列出任务切换、临界段、优先级与时间片，以及应用层的任务/队列/信号量/内存管理，是完整中文 RTOS 教材。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "野火《嵌入式 Linux 驱动开发实战指南—基于 i.MX6ULL》（中文在线书）",
+   "url": "https://doc.embedfire.com/linux/imx6/driver/zh/latest/index.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "裸机开发（GPIO/中断/时钟/UART）、Linux 内核模块、字符设备、设备模型、平台驱动、设备树、pinctrl/gpio、I2C/SPI/中断/输入/PWM/Framebuffer 子系统。",
+   "access": "官方文档免费；中文；实验需 i.MX6ULL 板卡。",
+   "publisher": "野火（EmbedFire）",
+   "evidence": {
+    "url": "https://doc.embedfire.com/linux/imx6/driver/zh/latest/index.html",
+    "location": "目录：Linux 驱动基础知识（内核模块/字符设备/设备模型/平台驱动/设备树）、Linux 驱动框架（pinctrl/gpio、I2C、SPI、中断、PWM）",
+    "finding": "目录覆盖内核模块、设备树与各类驱动子系统；没有 BootROM/SPL/U-Boot 启动链章节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Bootlin 免费培训资料（embedded Linux / kernel & driver development / PREEMPT_RT）",
+   "url": "https://bootlin.com/docs/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Embedded Linux system development、Linux kernel and driver development（设备树、设备模型、字符设备、内存管理、锁、中断处理与睡眠）、Yocto/Buildroot、boot time reduction、Real-time Linux with PREEMPT_RT、debugging/profiling/tracing；含启动链、驱动、中断并发与内核内存/资源管理。",
+   "access": "CC BY-SA 3.0 免费 PDF/幻灯片；英文。",
+   "publisher": "Bootlin",
+   "evidence": {
+    "url": "https://bootlin.com/training/kernel/",
+    "location": "课程目标：“Be able to use the major kernel mechanisms needed for device driver development: memory management, locking, interrupt handling, sleeping”，以及 “debug Linux kernel issues”",
+    "finding": "Bootlin 内核驱动课页面明确把 memory management 列为核心机制之一，可用于补英文侧“资源”。"
+   },
+   "updated_by": [
+    "review/pi-additions/H.3.2.json"
+   ]
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "ECE 445M Embedded and Real-Time Operating Systems（UT Austin, syllabus）",
+   "url": "https://users.ece.utexas.edu/~valvano/EE445M/syllabus.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "RTOS 实现：上下文切换、线程、多任务、实时调度、同步通信、存储/文件系统、内存管理、链接加载、硬件接口、网络；性能（latency/jitter/deadline/deadlock/starvation）与调试测试。",
+   "access": "syllabus 与讲次/实验入口公开；教材需购买，板卡实验需硬件。",
+   "publisher": "University of Texas at Austin（Jonathan Valvano）",
+   "evidence": {
+    "url": "https://users.ece.utexas.edu/~valvano/EE445M/syllabus.html",
+    "location": "Description 段：context switching、real-time scheduling、latency/jitter/deadlines、debugging and testing",
+    "finding": "课程描述逐项列出 RTOS 调度、同步、内存、硬件接口与 latency/jitter/deadline 分析，可补 FreeRTOS 书的调度理论。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "野火《i.MX6ULL 嵌入式 Linux 基础教程》第 5 章“Debian 系统启动过程（加载 uboot、设备树、内核等）”（官方中文在线书）",
+   "url": "https://doc.embedfire.com/linux/imx6/base/zh/latest/building_image/debian_starting_procedure.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "启动链：5.1 uboot 启动流程分析、5.1.1 PC/Linux/Android 启动过程对比、5.1.2 u-boot 启动流程简要分析，以及后续加载设备树与内核、构建 Debian 固件的完整链路。",
+   "access": "野火官方文档站免费，中文；配合 i.MX6ULL 开发板与固件构建步骤。",
+   "publisher": "野火电子（embedfire）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://doc.embedfire.com/linux/imx6/base/zh/latest/building_image/debian_starting_procedure.html",
+    "location": "第 5 章目录：5 debian 系统启动过程（加载 uboot、设备树、内核等）、5.1 uboot 启动流程分析、5.1.1 PC机、Linux、Andorid 启动过程对比分析、5.1.2 u-boot 启动流程简要分析",
+    "finding": "页面正文按 uboot→设备树→内核的顺序分析启动链，并与其他系统启动过程对比，补上旧记录里中文缺的 BootROM/U-Boot/内核这一段。"
+   },
+   "added_by": "review/pi-additions/H.3.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "苏州大学《嵌入式系统及应用》（中国大学 MOOC，一流课程；配套《嵌入式技术基础与实践（第6版）》）",
+   "url": "https://www.icourse163.org/course/SUDA-1001754273",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "以 ARM Cortex-M 为蓝本、软硬件构件为主线的系统课：底层硬件接口与驱动构件、软硬件结合的开发调试；课程大纲含 11.2 复位模块与看门狗模块、12.1 嵌入式系统稳定性问题、12.2 外接传感器及执行部件的编程方法、12.3 实时操作系统实例。",
+   "access": "中国大学 MOOC 课程页公开概述；视频需注册选课、按学期开放，认证证书收费；中文。",
+   "publisher": "苏州大学（王宜怀团队）／中国大学 MOOC",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/SUDA-1001754273",
+    "location": "课程概述：“以嵌入式硬件构件及底层软件构件设计为主线…注重软件硬件协同，注重底层硬件接口、驱动及软硬件密切结合的开发调试技能”；大纲条文（11.2 复位模块与看门狗模块、12.1 嵌入式系统稳定性问题、12.2 外接传感器及执行部件的编程方法）见该课宣传页 https://community.aijishu.com/a/1060000000235232 的大纲摘录",
+    "finding": "课程页确认这是以软硬件协同为主线的系统课；大纲里的看门狗、稳定性问题与外设编程条目由同一课程的大纲摘录核对，可支撑“可靠性与硬件软件协同”。"
+   },
+   "added_by": "review/pi-additions/H.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "启动链",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "裸机开发与内核模块/设备树；无 BootROM/SPL/U-Boot 启动链章节",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 5 章：uboot 启动流程分析、PC/Linux/Android 启动过程对比、u-boot 启动流程简要分析、加载设备树与内核",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Embedded Linux system development：boot chain、U-Boot、kernel/rootfs",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文驱动书从裸机直接到内核模块，缺启动链；英文 Bootlin 有完整启动流程。；旧中文材料（驱动书）只讲裸机与内核模块，没有 BootROM/SPL/U-Boot 启动链；野火这一章逐段分析 uboot 启动流程并与设备树、内核加载串起来，补上中文侧“启动链”。"
+  },
+  {
+   "topic": "驱动",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "字符设备、平台驱动、设备树、pinctrl/gpio、I2C/SPI/中断/PWM 子系统",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Linux kernel and driver development course",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从内核模块讲到设备树与子系统驱动。"
+  },
+  {
+   "topic": "实时调度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "多优先级、时间片、任务切换、阻塞延时",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "real-time scheduling、latency/jitter/deadlines；Bootlin PREEMPT_RT",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文是 FreeRTOS 抢占式调度实现；英文有 RTOS 调度分析与 PREEMPT_RT。"
+  },
+  {
+   "topic": "中断",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "临界段保护、中断与 FreeRTOS 移植",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "中断子系统–按键中断实验",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "内核驱动课程的中断处理与并发",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都讲中断上下文与并发保护。"
+  },
+  {
+   "topic": "资源",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "FreeRTOS 内存管理（heap_1–5）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "memory management、storage/file systems；Bootlin 部分",
+     "extent": "partial"
+    },
+    {
+     "source": "en1",
+     "section": "Bootlin Linux kernel and driver development：memory management、locking、interrupt handling，以及调试与 profiling 工具",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "ECE 445M：memory management、storage/file systems、performance（latency/jitter/deadline）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 FreeRTOS 内存管理明确；英文 RTOS 课有内存管理但材料以 syllabus 为主。；旧记录里英文“资源”只靠 ECE445M 的内存管理一段；Bootlin 内核课把内核内存管理、锁与中断等资源机制列为驱动开发的必备机制，两者合起来覆盖“资源”。；RTOS 侧的资源约束（内存分配、存储、时限）由 ECE445M 承担，与 Bootlin 的内核资源机制互补。"
+  },
+  {
+   "topic": "可靠性与硬件软件协同",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "临界段/优先级反转讨论有限；可靠性未单列",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "驱动与硬件接口实验",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "11.2 复位模块与看门狗模块；12.1 嵌入式系统稳定性问题；12.2 外接传感器及执行部件的编程方法（底层硬件接口/驱动构件）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "debugging and testing、deadlock/starvation、hardware interfacing",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "debugging/profiling/tracing 课程",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文缺系统的可靠性/失效分析；英文有调试/测试与死锁/饥饿讨论。；旧中文只有 FreeRTOS 临界段与驱动实验的 partial；苏州大学这门课把“稳定性问题—看门狗复位—外设接口编程”作为独立单元，且整门课以软硬件构件协同为主线，正好覆盖“可靠性与硬件软件协同”。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按“从 0 写内核”理解任务切换/临界段/优先级/时间片，再用应用篇做任务、队列、信号量实验。"
+    },
+    {
+     "source": "zh2",
+     "read": "学内核模块、设备树与字符/平台/I2C/SPI 驱动，完成板级驱动实验。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "在看驱动书之前先读第 5 章：把 PC/Linux/Android 启动过程对比看一遍，再跟 5.1.2 的 u-boot 启动流程走一遍，标出 BootROM→SPL/U-Boot→设备树→内核→rootfs 各阶段做了什么、失败时从哪里看串口日志。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "按苏州大学课学 11.2 看门狗与复位、12.1 稳定性问题、12.2 外设接口编程：给自己的板子加独立看门狗并在死循环里验证复位，再写一个传感器/执行器驱动构件，记录软硬件交界处的时序与容错处理。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Embedded Linux system development→kernel/driver→PREEMPT_RT 学习启动链、设备树、驱动与实时内核。"
+    },
+    {
+     "source": "en2",
+     "read": "用 ECE445M 的 RTOS 主题补调度、latency/jitter/deadline 与调试测试。"
+    },
+    {
+     "source": "en1",
+     "read": "In the Bootlin kernel course, do the memory-management and locking labs (kmalloc vs vmalloc, spinlock vs mutex, sleeping in interrupt context) and use the debugging/profiling material to trace a leak or a lockup."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "FreeRTOS 中文 教程 野火 任务 调度 信号量",
+   "result": "采纳野火 FreeRTOS 在线书；补野火 Linux 驱动书。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://bootlin.com/docs/ 与 ECE445M syllabus",
+   "result": "采纳 Bootlin 培训材料与 ECE445M 课程大纲。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://doc.embedfire.com/linux/imx6/base/zh/latest/index.html 与 .../building_image/debian_starting_procedure.html",
+   "result": "采纳：第 5 章有 uboot 启动流程分析与启动过程对比，补中文启动链。",
+   "by": "review/pi-additions/H.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "嵌入式系统 可靠性设计 看门狗 异常处理 软硬件协同 中文 课程 慕课",
+   "result": "命中苏州大学《嵌入式系统及应用》（SUDA-1001754273，一流课程）与中国大学 MOOC《嵌入式系统设计》，采纳苏州大学课并核对其大纲（看门狗/稳定性问题/外设编程）。",
+   "by": "review/pi-additions/H.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/SUDA-1001754273",
+   "result": "确认课程以软硬件协同为主线、含底层硬件接口与驱动构件；大纲条文由该课宣传页大纲摘录交叉核对。",
+   "by": "review/pi-additions/H.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://bootlin.com/training/kernel/",
+   "result": "采纳：课程目标列出 memory management/locking/interrupt handling，回写 en1 的 covers 与 evidence。",
+   "by": "review/pi-additions/H.3.2.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有 ESP-IDF 文档，不是完整 RTOS/驱动课程；已换野火两本在线书。",
+  "旧英文 Bootlin 保留，但缺微控制器 RTOS 调度；补 ECE445M。",
+  "启动链与可靠性两侧不完整，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "嵌入式系统、驱动与RTOS",
+ "description": "启动链、驱动、实时调度、中断、资源、可靠性与硬件软件协同。",
+ "applied_additions": [
+  "review/pi-additions/H.3.2.json@d099372e81"
+ ]
+}

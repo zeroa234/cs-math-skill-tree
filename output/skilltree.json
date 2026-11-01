@@ -9,9 +9,9 @@
   "mainSkills": 121,
   "withResource": 192,
   "withChineseResource": 192,
-  "withBilingualPath": 138,
-  "completeChinesePaths": 130,
-  "completeEnglishPaths": 138,
+  "withBilingualPath": 151,
+  "completeChinesePaths": 142,
+  "completeEnglishPaths": 151,
   "resourcesReviewed": "2026-11-01",
   "withExercise": 192,
   "withGuide": 192,
@@ -57789,20 +57789,433 @@
     "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
     "lang": "en",
     "free": true,
-    "covers": "MIT 本科 EE 核心第一门电路课，全部讲义/实验/视频免费。内容为集总电路抽象、KVL/KCL 与电阻网络、受控源、运算放大器、RC/RL 一阶动态与能量存储元件、频率响应与简单滤波、MOS 管开关与数字抽象，最后用含模拟与数字部分的音频播放系统做课程设计（lab 里有 DAC/ADC 一类接口）；噪声与 ADC/DAC 接口的工程细节只点到，不深入。"
+    "covers": "集总电路抽象、KVL/KCL 与电阻网络、受控源、运算放大器、RC/RL 一阶动态与能量存储、频率响应与简单滤波、MOS 开关与数字抽象；实验含 ADC/DAC 接口。",
+    "access": "MIT OCW 免费公开讲义、实验与视频；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "course",
-    "title": "南京信息职业技术学院《模拟电子技术》（中国大学MOOC）",
-    "url": "https://www.icourse163.org/course/NJCIT-1001753062",
+    "tier": "website",
+    "title": "清华大学《模拟电子技术基础（基础部分）》与《模拟电子技术基础（应用部分）》（华成英，学堂在线官方慕课）",
+    "url": "https://www.xuetangx.com/course/THU08071000349/4231300",
     "lang": "zh",
-    "free": null,
-    "covers": "从器件特性、放大电路、运放、反馈及实验仿真入门；KCL/KVL、RC/RL电路分析与系统噪声预算需另配基础电路课。",
-    "access": "中文课程介绍、大纲及实验安排可查；完整视频与作业依注册和开放学期，证书另计。"
+    "free": true,
+    "covers": "半导体器件基础、基本与多级放大电路、集成运算放大电路、放大电路的频率响应、反馈、信号的运算和处理（含有源滤波）、波形的产生和信号的转换（含 D/A 与 A/D 转换）、功率放大、直流电源。",
+    "access": "学堂在线免费注册学习，中文授课；证书是否收费未核对；逐讲目录 JS 渲染未取到，讲次按同一门课的分 P 标题核对。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "video",
+     "title": "清华大学《电路原理》于歆杰（90 讲公开课，YouTube 合集）",
+     "url": "https://www.youtube.com/watch?v=8IaOzUhCoTo",
+     "lang": "zh",
+     "free": true,
+     "covers": "线性电阻电路分析（KVL/KCL、节点/网孔）、动态电路时域分析（RC/RL 一阶电路）、正弦激励下稳态分析与频率响应、运放与简单滤波。",
+     "access": "第三方转载，授权未核。YouTube 免费；上传者为“小鹿课堂”，非清华官方频道；标题为第 0–45 讲/全 90 讲，需在频道内找后续讲次；中文讲解，字幕未核对。",
+     "role": "alternative"
+    },
+    {
+     "tier": "video",
+     "title": "清华大学《模拟电子技术基础》华成英（全 189P，B 站课程合集）",
+     "url": "https://www.bilibili.com/video/BV1Vp411f71S",
+     "lang": "zh",
+     "free": true,
+     "covers": "半导体基础、放大电路基础与多级放大、集成运放、频率响应、反馈、信号运算与处理（含滤波）、波形产生与信号转换（ADC/DAC）、功率放大、直流稳压电源。",
+     "access": "第三方转载，授权未核。B 站免费；上传者为课程搬运，非清华官方账号；中文讲解，字幕未核对。",
+     "role": "alternative"
+    },
+    {
+     "tier": "website",
+     "title": "清华大学《电路原理》（于歆杰，学堂在线官方慕课）",
+     "url": "https://www.xuetangx.com/course/THU08061000294",
+     "lang": "zh",
+     "free": true,
+     "covers": "线性电阻电路分析（KVL/KCL、节点/网孔）、非线性电阻电路分析、动态电路的时域分析（一阶 RC/RL）、正弦激励下动态电路的稳态分析与频率响应。",
+     "access": "学堂在线免费注册学习，中文授课；是否有收费证书未核对；逐讲目录为 JS 渲染，未核对字幕。",
+     "role": "supplement"
+    },
+    {
+     "tier": "video",
+     "title": "TI 高精度实验室（中文直播回放）：输入电压噪声、输入电流噪声和滤波技术",
+     "url": "https://www.bilibili.com/video/BV1NnjBz3EAV",
+     "lang": "zh",
+     "free": true,
+     "covers": "运放电路的噪声来源与量化：输入电压噪声、输入电流噪声、噪声增益、用滤波/带宽限制降低输出噪声，是 ADC 前端误差预算的入门部分。",
+     "access": "B 站免费；上传者为“德州仪器”官方账号（copyright=1 自制）；中文讲解，字幕未核对；单集直播回放，无分 P。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "MIT 6.012 Microelectronic Devices and Circuits — Lecture Notes 19–24（Single-stage and multistage amplifiers）",
+     "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-spring-2009/pages/lecture-notes/",
+     "lang": "en",
+     "free": true,
+     "covers": "放大器：两端口小信号模型、共源/共射单级放大器（电阻负载与电流源负载）、共栅/共基与共漏/共集放大器、增益频响、Miller 近似与开路时间常数、多级放大器级联；对应教材 8.1–8.9、10.1–10.6 章。",
+     "access": "MIT OCW 免费公开讲稿 PDF；英文，字幕（录像）未核对。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "TI Precision Labs — Op amps（Noise 模块 9 讲 + “Design a front-end to drive a differential ADC”）",
+     "url": "https://www.ti.com/video/series/precision-labs/ti-precision-labs-op-amps.html",
+     "lang": "en",
+     "free": true,
+     "covers": "噪声与 ADC 接口：spectral density、RMS noise 计算、total noise、噪声 SPICE 仿真与模型核对、系统噪声测量、1/f 闪烁噪声、noise lab，以及用运放设计驱动差分 ADC 的前端（噪声/带宽折中）。",
+     "access": "TI 官网免费视频 + 讲义 PDF + 测验，英文；需邮箱注册下载部分材料（未核对是否强制）。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "清华大学《电路原理》于歆杰（90 讲公开课，YouTube 合集）",
+      "url": "https://www.youtube.com/watch?v=8IaOzUhCoTo",
+      "tier": "video",
+      "free": true,
+      "role": "alternative",
+      "covers": "线性电阻电路分析（KVL/KCL、节点/网孔）、动态电路时域分析（RC/RL 一阶电路）、正弦激励下稳态分析与频率响应、运放与简单滤波。",
+      "access": "第三方转载，授权未核。YouTube 免费；上传者为“小鹿课堂”，非清华官方频道；标题为第 0–45 讲/全 90 讲，需在频道内找后续讲次；中文讲解，字幕未核对。",
+      "publisher": "清华大学 于歆杰（视频由第三方上传）",
+      "reupload": true,
+      "official_search": "查学堂在线（site:xuetangx.com 电路原理）找到官方慕课 THU08061000294，并核到清华大学新闻网报道该课 2013 年在学堂在线与 edX 上线；官方版免费，故本 YouTube 合集降为 alternative，覆盖记在 r7-zh1 名下。",
+      "updated_by": [
+       "review/pi-additions/H.1.1.json"
+      ]
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "清华大学《模拟电子技术基础》华成英（全 189P，B 站课程合集）",
+      "url": "https://www.bilibili.com/video/BV1Vp411f71S",
+      "tier": "video",
+      "free": true,
+      "role": "alternative",
+      "covers": "半导体基础、放大电路基础与多级放大、集成运放、频率响应、反馈、信号运算与处理（含滤波）、波形产生与信号转换（ADC/DAC）、功率放大、直流稳压电源。",
+      "access": "第三方转载，授权未核。B 站免费；上传者为课程搬运，非清华官方账号；中文讲解，字幕未核对。",
+      "publisher": "清华大学 华成英（视频由第三方上传）",
+      "reupload": true,
+      "official_search": "查学堂在线（site:xuetangx.com 模拟电子技术基础 华成英）找到官方慕课基础部分 THU08071000349 与应用部分 THU08071000350，课程简介与 B 站合集简介逐字一致；官方版免费，故本合集降为 alternative，覆盖记在 r7-zh2 名下。",
+      "updated_by": [
+       "review/pi-additions/H.1.1.json"
+      ]
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Circuits and Electronics (MIT 6.002 / 6.2000, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "集总电路抽象、KVL/KCL 与电阻网络、受控源、运算放大器、RC/RL 一阶动态与能量存储、频率响应与简单滤波、MOS 开关与数字抽象；实验含 ADC/DAC 接口。",
+      "access": "MIT OCW 免费公开讲义、实验与视频；英文，字幕未核对。",
+      "publisher": "MIT EECS / MIT OpenCourseWare"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "清华大学《电路原理》（于歆杰，学堂在线官方慕课）",
+      "url": "https://www.xuetangx.com/course/THU08061000294",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "线性电阻电路分析（KVL/KCL、节点/网孔）、非线性电阻电路分析、动态电路的时域分析（一阶 RC/RL）、正弦激励下动态电路的稳态分析与频率响应。",
+      "access": "学堂在线免费注册学习，中文授课；是否有收费证书未核对；逐讲目录为 JS 渲染，未核对字幕。",
+      "publisher": "清华大学 于歆杰 / 学堂在线（清华官方慕课平台）",
+      "reupload": false,
+      "official_search": "由旧来源 zh1（YouTube 第三方合集）追查官方版：查学堂在线站内（site:xuetangx.com）与清华大学新闻网，确认官方慕课为 THU08061000294；edX 同名课程页面未打开。",
+      "added_by": "review/pi-additions/H.1.1.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "清华大学《模拟电子技术基础（基础部分）》与《模拟电子技术基础（应用部分）》（华成英，学堂在线官方慕课）",
+      "url": "https://www.xuetangx.com/course/THU08071000349/4231300",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "半导体器件基础、基本与多级放大电路、集成运算放大电路、放大电路的频率响应、反馈、信号的运算和处理（含有源滤波）、波形的产生和信号的转换（含 D/A 与 A/D 转换）、功率放大、直流电源。",
+      "access": "学堂在线免费注册学习，中文授课；证书是否收费未核对；逐讲目录 JS 渲染未取到，讲次按同一门课的分 P 标题核对。",
+      "publisher": "清华大学 华成英 / 学堂在线（清华官方慕课平台）",
+      "reupload": false,
+      "official_search": "由旧来源 zh2（B 站第三方合集）追查官方版：查学堂在线站内（site:xuetangx.com 模拟电子技术基础 华成英），确认官方慕课拆为基础部分 THU08071000349 与应用部分 THU08071000350，两页课程简介与 B 站合集简介逐字一致。",
+      "added_by": "review/pi-additions/H.1.1.json"
+     },
+     {
+      "key": "r7-zh3",
+      "lang": "zh",
+      "title": "TI 高精度实验室（中文直播回放）：输入电压噪声、输入电流噪声和滤波技术",
+      "url": "https://www.bilibili.com/video/BV1NnjBz3EAV",
+      "tier": "video",
+      "free": true,
+      "role": "supplement",
+      "covers": "运放电路的噪声来源与量化：输入电压噪声、输入电流噪声、噪声增益、用滤波/带宽限制降低输出噪声，是 ADC 前端误差预算的入门部分。",
+      "access": "B 站免费；上传者为“德州仪器”官方账号（copyright=1 自制）；中文讲解，字幕未核对；单集直播回放，无分 P。",
+      "publisher": "德州仪器（TI）官方 B 站账号",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.1.1.json"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "MIT 6.012 Microelectronic Devices and Circuits — Lecture Notes 19–24（Single-stage and multistage amplifiers）",
+      "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-spring-2009/pages/lecture-notes/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "放大器：两端口小信号模型、共源/共射单级放大器（电阻负载与电流源负载）、共栅/共基与共漏/共集放大器、增益频响、Miller 近似与开路时间常数、多级放大器级联；对应教材 8.1–8.9、10.1–10.6 章。",
+      "access": "MIT OCW 免费公开讲稿 PDF；英文，字幕（录像）未核对。",
+      "publisher": "MIT EECS / MIT OpenCourseWare",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.1.1.json"
+     },
+     {
+      "key": "r7-en2",
+      "lang": "en",
+      "title": "TI Precision Labs — Op amps（Noise 模块 9 讲 + “Design a front-end to drive a differential ADC”）",
+      "url": "https://www.ti.com/video/series/precision-labs/ti-precision-labs-op-amps.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "噪声与 ADC 接口：spectral density、RMS noise 计算、total noise、噪声 SPICE 仿真与模型核对、系统噪声测量、1/f 闪烁噪声、noise lab，以及用运放设计驱动差分 ADC 的前端（噪声/带宽折中）。",
+      "access": "TI 官网免费视频 + 讲义 PDF + 测验，英文；需邮箱注册下载部分材料（未核对是否强制）。",
+      "publisher": "Texas Instruments",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.1.1.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "电路定律",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "线性电阻电路分析：KVL/KCL、节点/网孔分析",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "课程简介所列“线性电阻电路分析”（KVL/KCL、节点/网孔）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Lumped circuit abstraction；KVL/KCL 与 resistor networks",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文视频为第三方合集，讲次范围需自行补齐。；清华官方慕课就是原转载的同一门于歆杰《电路原理》，课程简介明确含线性电阻电路分析；覆盖改记在官方版名下，转载只用于核对讲次范围（第0–45讲/全90讲）。"
+     },
+     {
+      "topic": "RC/RL",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "动态电路时域分析（一阶 RC/RL）",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "动态电路的时域分析（一阶 RC/RL）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "RC/RL first-order dynamics and energy storage",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲一阶动态与时间常数。；官方课程简介列出“动态电路的时域分析”，与旧记录里转载合集的 RC/RL 讲次对应同一门课。"
+     },
+     {
+      "topic": "放大器",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "放大电路基础、多级放大、频率响应、反馈",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "课时16–48：放大的概念与性能指标、基本共射放大电路、图解法与失真、h 参数等效模型、静态工作点稳定、多级放大电路",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "受控源与放大器模型；MOS 放大基础",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "MIT 6.012 Lecture 19–24：单级放大器（共源/共射、共栅/共基、共漏/共集）、频响与 Miller 近似、多级放大器",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文模电系统讲 BJT/MOS 放大；6.002 只到受控源/ MOS 开关层，放大器深度较浅。；官方模电课（基础部分）从放大概念讲到多级放大与动态参数分析，分 P 标题逐条可核，覆盖 BJT/MOS 小信号放大器这一知识点。；6.002 只到受控源与 MOS 开关层，放大器深度不够；6.012 的 19–24 讲正是晶体管单级/多级放大器的小信号分析与频响，补上英文侧的“放大器”。"
+     },
+     {
+      "topic": "运放",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "集成运算放大电路、信号的运算和处理",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "课时49–66：集成运放概述、双极型与 CMOS 集成运放原理电路、主要性能指标、分类、保护电路与低频等效电路",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Operational amplifiers",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都有运放章节。；官方模电课有完整集成运放单元（结构、指标、等效电路），覆盖“运放”知识点；覆盖记在官方版名下。"
+     },
+     {
+      "topic": "滤波",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "频率响应与简单滤波",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "信号运算与处理中的有源滤波",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "正弦激励下动态电路的稳态分析与频率响应",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "课时109–112：有源滤波器概述、一阶/二阶低通滤波器、其它滤波器",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Frequency response and simple filters",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文从无源/有源两侧覆盖。；电路原理课给出频率响应与一阶滤波的概念基础。；模电课的有源滤波单元给出实际滤波器电路与设计，与电路原理的频率响应合起来覆盖“滤波”。"
+     },
+     {
+      "topic": "噪声与ADC/DAC接口",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "信号的转换（ADC/DAC）；噪声未单列",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "课时133–134：信号转换电路及讨论（D/A 与 A/D 转换）",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh3",
+        "section": "TI 高精度实验室中文直播回放：输入电压噪声、输入电流噪声和滤波技术",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Lab 的 ADC/DAC 接口；噪声只作误差提及",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en2",
+        "section": "Noise 模块 9 讲（谱密度、RMS/总噪声计算、仿真与测量、1/f 噪声、噪声实验）+ 差分 ADC 前端设计",
+        "extent": "covered"
+       },
+       {
+        "source": "en1",
+        "section": "6.002 lab：音频播放器实验中的 ADC/DAC 接口",
+        "extent": "covered"
+       }
+      ],
+      "note": "ADC/DAC 接口两侧都有；噪声预算/低噪声设计没有系统教学。；模电课“信号的转换”单元讲 D/A、A/D 转换器原理与接口指标，承担 ADC/DAC 接口部分。；华成英课不设噪声章节，中文噪声教学由 TI 官方账号这一集补上：噪声源、噪声增益与带宽/滤波对输出噪声的影响，正好是简介所说“噪声只作接口与误差入门”的深度；与课时133–134 的 ADC/DAC 转换合起来覆盖整个知识点。；TI 高精度实验室的噪声模块把噪声量化、仿真与测量讲成一套，并用“驱动差分 ADC 的前端”把噪声预算接到 ADC 接口上。；6.002 的实验给出 DAC/ADC 在系统中的实际接法，与 r7-en2 的噪声/ADC 前端分析合起来覆盖“噪声与 ADC/DAC 接口”，后者负责噪声，前者负责转换器接口。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "先学 KVL/KCL、节点/网孔与一阶 RC/RL，再做频率响应练习；在频道内补齐 46–90 讲。"
+       },
+       {
+        "source": "zh2",
+        "read": "按放大电路→集成运放→频率响应/反馈→信号运算与滤波→信号转换（ADC/DAC）学习，配套教材做习题。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "在学堂在线学官方《电路原理》：先 KVL/KCL 与节点/网孔，再一阶 RC/RL 动态电路，最后正弦稳态与频率响应，做课后题确认能算时间常数与幅频特性。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "接着学官方《模拟电子技术基础》：基础部分按 放大概念→基本共射放大→图解法/等效模型→多级放大→集成运放→频率响应→反馈 推进；应用部分学有源滤波，最后到“信号的转换”单元（课时133–134）搞清 D/A、A/D 转换器与接口指标。"
+       },
+       {
+        "source": "r7-zh3",
+        "read": "看 TI 官方中文直播回放，记下输入电压噪声/电流噪声如何折算到输出、噪声增益与带宽限制的作用，再回到 ADC 前端算一次噪声预算。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按课程讲义学电路抽象/KVL/KCL→受控源/运放→RC/RL→频率响应，完成 lab 的音频系统与 ADC/DAC 接口。"
+       },
+       {
+        "source": "r7-en1",
+        "read": "Work through MIT 6.012 lectures 19–24 with the readings (8.1–8.9, 10.1–10.6): derive gain of common-source/emitter, common-gate/base, common-drain/collector stages, then multistage cascading and the Miller/open-circuit time-constant estimates. (After 6.002's op-amp and RC/RL material.)"
+       },
+       {
+        "source": "r7-en2",
+        "read": "Do TI Precision Labs Op Amps: Noise (9 videos + lab) — compute RMS and total noise from spectral density, verify a noise model in SPICE, then use “Design a front-end to drive a differential ADC” to size the front end against the converter's noise and bandwidth."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Massachusetts Institute of Technology",
@@ -57928,24 +58341,244 @@
    "reach": 4,
    "resource": {
     "tier": "website",
-    "title": "Computation Structures (MIT 6.004 / 6.1910, MIT OpenCourseWare)",
+    "title": "MIT 6.004 Computation Structures（MIT OpenCourseWare，Spring 2017）",
     "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
     "lang": "en",
     "free": true,
-    "covers": "OCW 课程日历列出的模块 1–8 正是本节点的内容：1 Basics of Information、2 The Digital Abstraction、3 CMOS、4 Combinational Logic（布尔代数/门级实现）、5 Sequential Logic（锁存器与触发器）、6 Finite State Machines、7 Performance Measures（延迟、时钟与关键路径）、8 Design Tradeoffs；每个模块都有标注讲义、主题视频和习题。模块 9–21 转向指令集、汇编、缓存、流水线与虚拟内存（与 C.1.1 重叠），做数字逻辑入门时可先停在模块 8。OCW 大纲另写明实验要求每人完成一个 RISC 处理器的门级设计。"
+    "covers": "模块 1 信息表示、3 CMOS、4 组合逻辑（布尔代数/门级实现）、5 时序逻辑（锁存器/触发器）、6 有限状态机、7 性能度量（延迟/时钟/关键路径）、8 设计权衡；每模块含讲义、视频、习题。",
+    "access": "MIT OCW 免费公开；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "“一生一芯”官方中文课程",
-    "url": "https://ysyx.oscc.cc/docs/",
+    "title": "南京理工大学《数字逻辑电路》（中国大学MOOC，国家精品在线开放课程）",
+    "url": "https://www.icourse163.org/course/NJUST-1001753091",
     "lang": "zh",
-    "free": true,
-    "covers": "数字逻辑、Verilog、处理器实现、仿真验证与芯片设计实践；VLSI 电路理论需英文教材补充。",
-    "access": "免费阅读"
+    "free": null,
+    "covers": "数字逻辑基础、逻辑门电路、组合逻辑电路与功能模块、时序逻辑电路与功能模块、半导体存储器、可编程逻辑器件、脉冲信号产生与整形、ADC/DAC；含 EDA 设计与实验。",
+    "access": "课程页公开概述与教材；视频需注册选课，按学期开放，认证证书收费。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "“一生一芯”官方中文课程：F3 数字逻辑电路基础、F4 计算机系统的状态机模型",
+     "url": "https://ysyx.oscc.cc/docs/",
+     "lang": "zh",
+     "free": true,
+     "covers": "F3 数字逻辑电路基础、F4 状态机模型、F5 简单处理器、F6 输入输出；用 Logisim 从逻辑门搭到状态机。",
+     "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA 工具链。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "野火《FPGA Verilog 开发实战指南——基于 Altera EP4CE10 征途 Mini 开发板》第 5 章“时序分析理论基础”（官方中文在线文档）",
+     "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "时钟与同步时序：静态/动态时序分析的区别、寄存器到寄存器路径分析、时钟偏斜 △T、建立时间 Ts 与保持时间 Th 的公式推导、亚稳态、做时序约束的目的。",
+     "access": "野火官方文档站免费阅读，中文；配套开发板与 Quartus 工程，无需注册。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "南京理工大学《数字逻辑电路》（中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/NJUST-1001753091",
+      "tier": "website",
+      "free": null,
+      "role": "primary",
+      "covers": "数字逻辑基础、逻辑门电路、组合逻辑电路与功能模块、时序逻辑电路与功能模块、半导体存储器、可编程逻辑器件、脉冲信号产生与整形、ADC/DAC；含 EDA 设计与实验。",
+      "access": "课程页公开概述与教材；视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "南京理工大学（蒋立平等）"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "“一生一芯”官方中文课程：F3 数字逻辑电路基础、F4 计算机系统的状态机模型",
+      "url": "https://ysyx.oscc.cc/docs/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "F3 数字逻辑电路基础、F4 状态机模型、F5 简单处理器、F6 输入输出；用 Logisim 从逻辑门搭到状态机。",
+      "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA 工具链。",
+      "publisher": "“一生一芯”教学团队（中国科学院大学等）"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "MIT 6.004 Computation Structures（MIT OpenCourseWare，Spring 2017）",
+      "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "模块 1 信息表示、3 CMOS、4 组合逻辑（布尔代数/门级实现）、5 时序逻辑（锁存器/触发器）、6 有限状态机、7 性能度量（延迟/时钟/关键路径）、8 设计权衡；每模块含讲义、视频、习题。",
+      "access": "MIT OCW 免费公开；英文，字幕未核对。",
+      "publisher": "MIT EECS / MIT OpenCourseWare"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "野火《FPGA Verilog 开发实战指南——基于 Altera EP4CE10 征途 Mini 开发板》第 5 章“时序分析理论基础”（官方中文在线文档）",
+      "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "时钟与同步时序：静态/动态时序分析的区别、寄存器到寄存器路径分析、时钟偏斜 △T、建立时间 Ts 与保持时间 Th 的公式推导、亚稳态、做时序约束的目的。",
+      "access": "野火官方文档站免费阅读，中文；配套开发板与 Quartus 工程，无需注册。",
+      "publisher": "野火电子（embedfire）官方文档",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.1.2.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "布尔代数",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "数字逻辑基础与逻辑门电路",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Module 4 Combinational Logic（布尔代数、门级实现）",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从布尔代数讲到门级实现。"
+     },
+     {
+      "topic": "组合/时序逻辑",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "组合逻辑电路与功能模块；时序逻辑电路与功能模块",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Module 4 Combinational Logic；Module 5 Sequential Logic",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文含常用组合/时序模块；英文含锁存器/触发器。"
+     },
+     {
+      "topic": "状态机",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "F4 计算机系统的状态机模型",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Module 6 Finite State Machines",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文由“一生一芯”补 FSM；南理工课程页未单列。"
+     },
+     {
+      "topic": "时钟",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "脉冲信号的产生与整形；未讲 setup/hold 与时钟偏斜",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 5 章 时序分析理论基础：寄存器到寄存器路径、Ts/Th 公式、时钟偏斜 △T、亚稳态与时序约束目的",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Module 7 Performance Measures（延迟、时钟、关键路径）",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文只有脉冲电路，缺同步时序的建立/保持与时钟约束。；南理工数字逻辑课只讲到脉冲信号的产生与整形（旧记录 partial），缺同步时序的建立/保持与时钟偏斜；野火官方文档用公式和波形图完整推导 Ts、Th 与 △T，并解释时钟采样为何会失效，正好补上“时钟”这一知识点。"
+     },
+     {
+      "topic": "时序与逻辑实现",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "可编程逻辑器件与 EDA 设计；实验",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "F3/F4 Logisim 实现",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Module 8 Design Tradeoffs；CMOS 与 lab 的门级实现",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有 PLD/EDA 与 Logisim；英文有设计权衡与门级 lab。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按数字逻辑基础→门电路→组合/时序逻辑→PLD/EDA 学习，完成组合与时序电路实验。"
+       },
+       {
+        "source": "zh2",
+        "read": "用 F3/F4 的 Logisim 实验补状态机建模与实现。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "在南理工数字逻辑课学完时序逻辑电路后，读野火第 5 章：先分清静态/动态时序分析，再跟着图 57-2～57-4 推 Ts = T_cycle –(Tco+Tdata)+△T 与 Th 的公式，理解时钟偏斜 △T 为何同时影响建立与保持裕量，最后说清“为什么要做时序约束”。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按模块 4→5→6→7→8 学组合/时序/FSM/性能/权衡，完成对应 worksheet 与门级 lab。"
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Massachusetts Institute of Technology",
@@ -58457,20 +59090,324 @@
     "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
     "lang": "en",
     "free": true,
-    "covers": "数字逻辑与抽象层次、时序积木（计数器/寄存器）、有限状态机、FPGA 结构、时序与同步（建立/保持、时钟域）、以及用 Verilog/硬件描述语言写 RTL、仿真、综合并下载到 FPGA 的完整流程；后半学期以开放式大作业收尾，正好对应 D2 验收（写 RTL、仿真、部署一个时序正确的模块）。"
+    "covers": "数字逻辑与抽象、时序积木（计数器/寄存器）、FSM、FPGA 结构、时序与同步（建立/保持、时钟域）、Verilog RTL、仿真、综合并下载到 FPGA；开放式大作业。",
+    "access": "MIT OCW 免费公开讲义、lab 与项目；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "“一生一芯”官方中文课程",
-    "url": "https://ysyx.oscc.cc/docs/",
+    "title": "《Verilog 数字系统设计教程》（中国大学MOOC）",
+    "url": "https://www.icourse163.org/course/detail.htm?cid=1451700161",
     "lang": "zh",
-    "free": true,
-    "covers": "数字逻辑、Verilog、处理器实现、仿真验证与芯片设计实践；VLSI 电路理论需英文教材补充。",
-    "access": "免费阅读"
+    "free": null,
+    "covers": "Verilog 语言基础与建模、组合/时序电路实例、状态机设计、Quartus II 开发流程（综合/下载）、FPGA 设计实例（售货机、交通灯）；含实验与考试。",
+    "access": "课程页公开授课大纲与章节；视频需注册选课，按学期开放，认证证书收费。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "“一生一芯”官方中文课程（E1 硬件描述语言、E4 仿真和验证、B2 时序分析和优化、E8 后端物理设计）",
+     "url": "https://ysyx.oscc.cc/docs/",
+     "lang": "zh",
+     "free": true,
+     "covers": "E1 硬件描述语言、E4 处理器仿真与验证（difftest/波形）、E7 总线与 SoC、E8 后端物理设计、D6 RTL 到可流片版图；B2“时序分析和优化”页面正文标注“建设中”，暂无教学内容。",
+     "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA 工具链。",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "高云半导体《Gowin 设计时序约束用户指南》SUG940（v1.4.3，官方中文 PDF）",
+     "url": "https://cdn.gowinsemi.com.cn/SUG940-1.4.3_Gowin%E8%AE%BE%E8%AE%A1%E6%97%B6%E5%BA%8F%E7%BA%A6%E6%9D%9F%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf",
+     "lang": "zh",
+     "free": true,
+     "covers": "约束文件与 STA：SDC 文件与语法规范（附录 A）、create_clock / create_generated_clock、set_input_delay / set_output_delay（I/O 延迟与 tIn/tOut 报告含义）、set_multicycle_path、set_max_delay/set_min_delay、set_false_path、set_clock_groups、约束优先级、跨时钟域路径分析、时序报告（Path Slacks / Minimum Pulse Width）与时序收敛。",
+     "access": "高云官网 CDN 免费下载 PDF（85 页，中文）；面向 Gowin 云源软件，命令语法是标准 SDC，换到 Vivado/Quartus 需改工具差异；无需注册。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "野火《FPGA Verilog 开发实战指南》第 5 章“时序分析理论基础”（官方中文在线文档）",
+     "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "时序约束的动机与模型：静态/动态时序分析、寄存器到寄存器路径、Ts/Th 公式、时钟偏斜 △T、亚稳态，说明“做时序约束的目的”。",
+     "access": "免费在线阅读，中文；配套 Quartus 工程。",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "Vivado Design Suite User Guide: Using Constraints (UG903, v2016.1, AMD/Xilinx)",
+     "url": "https://docs.amd.com/api/khub/documents/eG7Sc4SvBBo6KERDMQTuMA/content",
+     "lang": "en",
+     "free": true,
+     "covers": "约束与 STA：时钟约束（create_clock / create_generated_clock、clock uncertainty、clock groups）、I/O 时序约束（set_input_delay / set_output_delay 与模板）、时序例外（set_false_path、set_max_delay -datapath_only、set_multicycle_path）、异步跨时钟域约束建议、时序分析与收敛流程（report_timing、时序报告解读）。",
+     "access": "AMD 文档站 PDF 免费（178 页，英文）；无需注册。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "《Verilog 数字系统设计教程》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/detail.htm?cid=1451700161",
+      "tier": "website",
+      "free": null,
+      "role": "primary",
+      "covers": "Verilog 语言基础与建模、组合/时序电路实例、状态机设计、Quartus II 开发流程（综合/下载）、FPGA 设计实例（售货机、交通灯）；含实验与考试。",
+      "access": "课程页公开授课大纲与章节；视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "中国大学MOOC 课程团队"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "“一生一芯”官方中文课程（E1 硬件描述语言、E4 仿真和验证、B2 时序分析和优化、E8 后端物理设计）",
+      "url": "https://ysyx.oscc.cc/docs/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "E1 硬件描述语言、E4 处理器仿真与验证（difftest/波形）、E7 总线与 SoC、E8 后端物理设计、D6 RTL 到可流片版图；B2“时序分析和优化”页面正文标注“建设中”，暂无教学内容。",
+      "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA 工具链。",
+      "publisher": "“一生一芯”教学团队",
+      "updated_by": [
+       "review/pi-additions/H.2.1.json"
+      ]
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Introductory Digital Systems Laboratory (MIT 6.111, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "数字逻辑与抽象、时序积木（计数器/寄存器）、FSM、FPGA 结构、时序与同步（建立/保持、时钟域）、Verilog RTL、仿真、综合并下载到 FPGA；开放式大作业。",
+      "access": "MIT OCW 免费公开讲义、lab 与项目；英文，字幕未核对。",
+      "publisher": "MIT EECS（Anantha Chandrakasan）"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "高云半导体《Gowin 设计时序约束用户指南》SUG940（v1.4.3，官方中文 PDF）",
+      "url": "https://cdn.gowinsemi.com.cn/SUG940-1.4.3_Gowin%E8%AE%BE%E8%AE%A1%E6%97%B6%E5%BA%8F%E7%BA%A6%E6%9D%9F%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "约束文件与 STA：SDC 文件与语法规范（附录 A）、create_clock / create_generated_clock、set_input_delay / set_output_delay（I/O 延迟与 tIn/tOut 报告含义）、set_multicycle_path、set_max_delay/set_min_delay、set_false_path、set_clock_groups、约束优先级、跨时钟域路径分析、时序报告（Path Slacks / Minimum Pulse Width）与时序收敛。",
+      "access": "高云官网 CDN 免费下载 PDF（85 页，中文）；面向 Gowin 云源软件，命令语法是标准 SDC，换到 Vivado/Quartus 需改工具差异；无需注册。",
+      "publisher": "高云半导体（Gowin Semiconductor）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.1.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "野火《FPGA Verilog 开发实战指南》第 5 章“时序分析理论基础”（官方中文在线文档）",
+      "url": "https://doc.embedfire.com/fpga/altera/ep4ce10_mini/zh/latest/fpga/Time_analysis.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "时序约束的动机与模型：静态/动态时序分析、寄存器到寄存器路径、Ts/Th 公式、时钟偏斜 △T、亚稳态，说明“做时序约束的目的”。",
+      "access": "免费在线阅读，中文；配套 Quartus 工程。",
+      "publisher": "野火电子（embedfire）官方文档",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.1.json"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "Vivado Design Suite User Guide: Using Constraints (UG903, v2016.1, AMD/Xilinx)",
+      "url": "https://docs.amd.com/api/khub/documents/eG7Sc4SvBBo6KERDMQTuMA/content",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "约束与 STA：时钟约束（create_clock / create_generated_clock、clock uncertainty、clock groups）、I/O 时序约束（set_input_delay / set_output_delay 与模板）、时序例外（set_false_path、set_max_delay -datapath_only、set_multicycle_path）、异步跨时钟域约束建议、时序分析与收敛流程（report_timing、时序报告解读）。",
+      "access": "AMD 文档站 PDF 免费（178 页，英文）；无需注册。",
+      "publisher": "AMD / Xilinx",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.1.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "RTL",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "Verilog 语言基础与组合/时序/状态机建模",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "E1 硬件描述语言",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Verilog RTL 讲义与 lab",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从 Verilog 语法写到可综合 RTL。"
+     },
+     {
+      "topic": "仿真",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "Quartus II 流程中的功能仿真；未单列 testbench 章",
+        "extent": "partial"
+       },
+       {
+        "source": "zh2",
+        "section": "E4 处理器的仿真和验证（difftest/波形）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Lab 的仿真与验证流程",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文 Verilog 课有仿真但未列 testbench 教学；ysyx E4 补协同仿真。"
+     },
+     {
+      "topic": "综合",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "Quartus II 综合/下载流程",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "E8 后端物理设计",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "FPGA 综合与下载 lab",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都有综合到 FPGA 的流程。"
+     },
+     {
+      "topic": "约束",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "B2 时序分析和优化；未列 SDC/XDC 约束语法",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 4 章时序约束编辑器与附录 A 语法规范：create_clock / create_generated_clock、set_input_delay / set_output_delay、set_multicycle_path、set_false_path、set_clock_groups，以及第 5 章时序报告与跨时钟域分析",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "第 5 章 时序分析理论基础：寄存器到寄存器路径、Ts/Th、时钟偏斜与时序约束的目的",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Timing and synchronization 讲义；未列约束文件语法",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "UG903 第 2 章：时钟约束、I/O 延迟约束模板、时序例外（false path / max delay / multicycle）、异步时钟组建议、时序报告",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲时序概念，但没有系统教约束文件（时钟/IO 延迟/False path）。；旧记录里中文只有“一生一芯 B2”（页面实为建设中，无内容）；SUG940 是中文官方约束指南，逐条给出 SDC 命令语法、示例和报告含义，按简介要求“约束只讲到实验够用”的深度足够。；野火这一章解释约束要解决的物理问题（数据与时钟到达时刻差、偏斜、亚稳态），与 SUG940 的命令语法互补，避免只背约束写法而不知道在约束什么。；6.111 只讲时序与同步概念，没有约束文件语法；UG903 是官方完整约束指南，逐类讲时钟、I/O 延迟、例外与 CDC 约束并给模板，补上英文侧“约束”。"
+     },
+     {
+      "topic": "时序收敛与可编程逻辑",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "B2 时序分析和优化、E8 后端物理设计",
+        "extent": "covered"
+       },
+       {
+        "source": "zh1",
+        "section": "FPGA 结构与 Quartus 流程",
+        "extent": "partial"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Timing/synchronization 与 FPGA lab",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有 B2 时序优化；两侧都只到实验级时序收敛，不是专家级 STA。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按 Verilog 基础→组合/时序/状态机→Quartus II 综合下载→FPGA 实例学习，完成板上验证。"
+       },
+       {
+        "source": "zh2",
+        "read": "用 E1/E4 写 HDL 并做仿真，再用 B2 做时序分析与优化。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "先读野火第 5 章，弄清寄存器到寄存器路径上 Ts/Th 与时钟偏斜 △T 的关系，以及为什么需要时序约束。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "再按 SUG940 动手：给自己的工程用 create_clock 定义主时钟、用 create_generated_clock 处理分频/PLL 输出，用 set_input_delay/set_output_delay 约束板级 I/O，给异步域加 set_clock_groups 或 set_false_path，然后打开时序报告看 Path Slacks 与跨时钟域路径，改到收敛为止。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按讲义学数字逻辑→FSM→FPGA→时序/同步，完成 lab 的 Verilog 设计、仿真、综合与下载。"
+       },
+       {
+        "source": "r7-en1",
+        "read": "Use UG903 chapter 2 as the lab companion: define primary/generated clocks, fill the I/O delay template with board-level numbers, add false-path/clock-group exceptions for CDC, then run report_timing and iterate until WNS is positive."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Massachusetts Institute of Technology",
@@ -58588,62 +59525,314 @@
    "reach": 0,
    "resource": {
     "tier": "material",
-    "title": "Accellera UVM 1.2 User’s Guide（官方完整免费指南）",
+    "title": "Accellera UVM 1.2 User's Guide（官方完整免费指南）",
     "url": "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf",
     "lang": "en",
     "free": true,
-    "covers": "测试平台架构、事务级建模、驱动/监视器/序列器/代理/环境、随机激励约束、检查与计分板、功能覆盖及验证组件复用。补充的 SBY 官方教程讲形式断言与反例；ECE 519 课程补等价性和模型检查。指南不是 SystemVerilog 语法全书，UVM 1.2 的 API 需对照现代 IEEE 1800.2 工具版本。",
-    "access": "Accellera 官方公开完整 PDF，2015 年 UVM 1.2 指南，无需注册。UMBC HDV 仅作课程规模证据：其部分讲义需要密码，不能视作免费正文。"
+    "covers": "测试平台架构、事务级建模、driver/monitor/sequencer/agent/env、受约束随机激励、scoreboard/检查、功能覆盖率、验证组件复用；UVM 1.2 API。",
+    "access": "Accellera 官方免费 PDF，无需注册；2015 年版本，需对照 IEEE 1800.2 现代实现。",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "“一生一芯”官方中文课程讲义（v26.07）",
-    "url": "https://ysyx.oscc.cc/docs/",
+    "tier": "book",
+    "title": "《芯片验证漫游指南——从系统理论到 UVM 的验证全视界》（刘斌，电子工业出版社，2018）",
+    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890",
     "lang": "zh",
-    "free": true,
-    "covers": "中文的 RTL→SoC 全流程讲义：F 阶段数字逻辑与状态机、E 阶段 HDL/处理器设计/E4“处理器的仿真和验证”（以 difftest 协同仿真与波形调试为主）/E7 总线与 SoC/E8 后端物理设计、B2 时序分析和优化、D6 从 RTL 到可流片版图。对本技能只是局部覆盖：只有 E4 属于设计验证（功能仿真+对比测试），不含 SVA/断言、覆盖率驱动验证、受约束随机、UVM 与形式验证/等价性检查——这五项正是收窄后技能的主体，必须用英文主资源。",
-    "access": "免费：讲义、reveal.js 课件与 B 站录播公开；实验需自备 Linux 环境与开源 EDA 工具链。"
+    "free": false,
+    "covers": "第 1 章验证全视（流程/周期/检查点）、第 2 章验证策略、第 3 章验证方法（定向/随机/覆盖率驱动随机/TLM/断言；静态检查含语法/语义/跨时钟域/形式验证）、第 4–5 章验证计划与管理、第 6 章验证结构、第 7 章起 SystemVerilog 环境与 UVM。",
+    "access": "电子工业出版社正式商品页，纸质书定价 ¥99.0（2018 年版，560 页）；全文需购买，未购买。目录可公开核对。",
+    "role": "primary"
    },
    "zhResourceNote": "",
    "extraResources": [
     {
+     "tier": "website",
+     "title": "“一生一芯”官方中文课程：E4 处理器的仿真和验证",
+     "url": "https://ysyx.oscc.cc/docs/",
+     "lang": "zh",
+     "free": true,
+     "covers": "以 difftest 协同仿真、波形调试为主的处理器功能验证；不含 SVA/断言、覆盖率驱动随机、UVM 与形式验证/等价性检查。",
+     "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA。",
+     "role": "supplement"
+    },
+    {
      "tier": "material",
-     "title": "YosysHQ SBY：Getting started",
+     "title": "YosysHQ SBY：Getting started（形式验证入门）",
      "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html",
      "lang": "en",
      "free": true,
-     "covers": "补可运行的 FIFO 断言与形式验证、反例和覆盖测试。",
-     "access": "免费公开正文，无需注册。"
+     "covers": "用 SBY 写形式属性、运行 k-induction/ BMC、读反例与覆盖率；以 FIFO 等小设计为例。",
+     "access": "免费文档；需安装 Yosys/SBY 开源工具链。",
+     "role": "supplement"
     },
     {
      "tier": "material",
-     "title": "Accellera：当前 UVM 实现与标准入口",
-     "url": "https://accellera.org/downloads/standards/uvm",
+     "title": "YosysHQ EQY: EQuivalence checking with Yosys — Getting Started（官方文档）",
+     "url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/quickstart.html",
      "lang": "en",
      "free": true,
-     "covers": "对照 UVM 1.2 指南与现代 IEEE 1800.2 实现版本；不要把旧 API 原封不动套到新工具。",
-     "access": "免费公开正文，无需注册。"
-    },
-    {
-     "tier": "video",
-     "title": "“一生一芯”官方 B 站账号（课程录播与直播；讲义站点 ysyx.oscc.cc）",
-     "url": "https://space.bilibili.com/2107852263",
-     "lang": "zh",
-     "free": true,
-     "covers": "与验证相关的是 E4“处理器的仿真和验证”（以 difftest 协同仿真与波形调试为主）和 B2“时序分析和优化”；其余是数字逻辑、HDL、处理器实现、总线/SoC、后端物理设计。对收窄后的“仿真/SVA/UVM/形式/等价性”只覆盖“仿真”一项，不含 SVA/断言、覆盖率驱动验证、受约束随机、UVM、形式验证与等价性检查。",
-     "access": "免费：B 站账号“一生一芯-视频号”公开录播，直播在 live.bilibili.com/24416626；讲义与课件在 ysyx.oscc.cc/docs 公开；实验需自备 Linux 与开源 EDA 工具链。 字幕未核对。"
+     "covers": "等价性检查（LEC）入门：gold/gate 两个设计的划分、用 .eqy 配置写 Yosys 脚本分别处理参考设计与待检网表、分区匹配、反例定位（以一个综合后功能被改坏的例子演示失配），以及 X 传播与 safe-replacement 等价。",
+     "access": "YosysHQ 官方文档免费；需安装 Yosys/EQY 开源工具链；英文。",
+     "role": "supplement"
     },
     {
      "tier": "book",
-     "title": "芯片验证漫游指南——从系统理论到UVM的验证全视界（刘斌，电子工业出版社，2018，ISBN 9787121339011，560 页）",
-     "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890",
+     "title": "《形式化验证：现代 VLSI 设计的必备工具包（原书第 2 版）》（Seligman 等，李建文、蒲戈光译，机械工业出版社，2026）",
+     "url": "https://xhwxt.sdjzu.edu.cn/mspace/searchDetailLocal/m9ce180564c87c7f46701d25c96341ec8",
      "lang": "zh",
      "free": false,
-     "covers": "出版社目录：第1章 芯片验证全视（验证流程/周期/检查点）、第2章 验证策略（层次、透明度、激励原则、检查方法）、第3章 验证方法（动态仿真：定向/随机/覆盖率驱动随机/TLM/断言检查；静态检查：语法/语义/跨时钟域/形式验证；硬件加速；效能与性能验证）、第4–5章 验证计划与管理、第6章 验证结构、第7章起 SV 环境构建与组件实现，后段为 UVM。与收窄后的仿真/SVA/UVM/形式四项对得上，且把“形式验证”放在静态检查一节讲清定位。边界：等价性检查（LEC）在目录里没有独立章节，需另补；书是方法论+代码示例，不替代 Accellera UVM 1.2 参考文档与 SBY 的形式方法手册。",
-     "access": "出版社正式商品页和目录可核，全文需购买；未购买。"
+     "covers": "书目记录为 Seligman《Formal Verification: An Essential Toolkit for Modern VLSI Design》第 2 版的中文译本；原书体系含 FPV（属性检查）、等价性检查（LEC）、覆盖率与形式验证部署。具体章节目录本轮未打开核对。",
+     "access": "机械工业出版社 2026 年版，需购买；馆藏检索页可见书名/作者/译者/出版项，正文与目录为 JS 渲染未取到。",
+     "role": "supplement"
     }
    ],
-   "learningPath": null,
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "《芯片验证漫游指南——从系统理论到 UVM 的验证全视界》（刘斌，电子工业出版社，2018）",
+      "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890",
+      "tier": "book",
+      "free": false,
+      "role": "primary",
+      "covers": "第 1 章验证全视（流程/周期/检查点）、第 2 章验证策略、第 3 章验证方法（定向/随机/覆盖率驱动随机/TLM/断言；静态检查含语法/语义/跨时钟域/形式验证）、第 4–5 章验证计划与管理、第 6 章验证结构、第 7 章起 SystemVerilog 环境与 UVM。",
+      "access": "电子工业出版社正式商品页，纸质书定价 ¥99.0（2018 年版，560 页）；全文需购买，未购买。目录可公开核对。",
+      "publisher": "刘斌（路桑），电子工业出版社"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "“一生一芯”官方中文课程：E4 处理器的仿真和验证",
+      "url": "https://ysyx.oscc.cc/docs/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "以 difftest 协同仿真、波形调试为主的处理器功能验证；不含 SVA/断言、覆盖率驱动随机、UVM 与形式验证/等价性检查。",
+      "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA。",
+      "publisher": "“一生一芯”教学团队"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Accellera UVM 1.2 User's Guide（官方完整免费指南）",
+      "url": "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf",
+      "tier": "material",
+      "free": true,
+      "role": "primary",
+      "covers": "测试平台架构、事务级建模、driver/monitor/sequencer/agent/env、受约束随机激励、scoreboard/检查、功能覆盖率、验证组件复用；UVM 1.2 API。",
+      "access": "Accellera 官方免费 PDF，无需注册；2015 年版本，需对照 IEEE 1800.2 现代实现。",
+      "publisher": "Accellera Systems Initiative"
+     },
+     {
+      "key": "en2",
+      "lang": "en",
+      "title": "YosysHQ SBY：Getting started（形式验证入门）",
+      "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "用 SBY 写形式属性、运行 k-induction/ BMC、读反例与覆盖率；以 FIFO 等小设计为例。",
+      "access": "免费文档；需安装 Yosys/SBY 开源工具链。",
+      "publisher": "YosysHQ"
+     },
+     {
+      "key": "r7-en3",
+      "lang": "en",
+      "title": "YosysHQ EQY: EQuivalence checking with Yosys — Getting Started（官方文档）",
+      "url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/quickstart.html",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "等价性检查（LEC）入门：gold/gate 两个设计的划分、用 .eqy 配置写 Yosys 脚本分别处理参考设计与待检网表、分区匹配、反例定位（以一个综合后功能被改坏的例子演示失配），以及 X 传播与 safe-replacement 等价。",
+      "access": "YosysHQ 官方文档免费；需安装 Yosys/EQY 开源工具链；英文。",
+      "publisher": "YosysHQ GmbH",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.2.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "《形式化验证：现代 VLSI 设计的必备工具包（原书第 2 版）》（Seligman 等，李建文、蒲戈光译，机械工业出版社，2026）",
+      "url": "https://xhwxt.sdjzu.edu.cn/mspace/searchDetailLocal/m9ce180564c87c7f46701d25c96341ec8",
+      "tier": "book",
+      "free": false,
+      "role": "supplement",
+      "covers": "书目记录为 Seligman《Formal Verification: An Essential Toolkit for Modern VLSI Design》第 2 版的中文译本；原书体系含 FPV（属性检查）、等价性检查（LEC）、覆盖率与形式验证部署。具体章节目录本轮未打开核对。",
+      "access": "机械工业出版社 2026 年版，需购买；馆藏检索页可见书名/作者/译者/出版项，正文与目录为 JS 渲染未取到。",
+      "publisher": "机械工业出版社（原着 Erik Seligman 等；译者 李建文、蒲戈光）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.2.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "仿真与测试平台",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 3 章动态仿真、第 6 章验证结构",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "E4 difftest/波形调试",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Testbench architecture、driver/monitor/scoreboard",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文书系统讲测试平台；ysyx 提供真实处理器验证案例。"
+     },
+     {
+      "topic": "受约束随机激励",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 3 章覆盖率驱动随机、第 7 章起 SV 随机约束",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Constrained random stimulus、sequences",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲 constrained random 与 sequence。"
+     },
+     {
+      "topic": "断言与覆盖率",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 3 章断言检查与功能覆盖",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Assertions、functional coverage；SBY 的 SVA 属性",
+        "extent": "covered"
+       },
+       {
+        "source": "en2",
+        "section": "SVA 属性与 cover 语句",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都覆盖 SVA 与覆盖率；SBY 补形式断言。"
+     },
+     {
+      "topic": "UVM 验证流程",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 7 章起 SystemVerilog 环境与 UVM",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "UVM 1.2 User's Guide 全书",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文书后段讲 UVM；英文官方指南是完整 UVM 流程。"
+     },
+     {
+      "topic": "形式验证与等价性检查入门",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 3 章静态检查/形式验证一节；等价性检查无独立章",
+        "extent": "partial"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "SBY 形式属性验证；不含 LEC",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en3",
+        "section": "EQY Getting Started：gold/gate 划分、.eqy 配置、等价性失配定位、X 传播与 safe-replacement 等价",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都只有形式属性验证入门，缺等价性检查（LEC）教学。；旧的 en2（SBY）只讲属性检查（k-induction/BMC），缺等价性检查；EQY 官方 quickstart 正是用 gold 设计与被综合改坏的 gate 设计做等价性验证并定位失配，补上 LEC 这一半，两者合起来覆盖“形式验证与等价性检查入门”。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "partial",
+      "covered": 4,
+      "total": 5,
+      "gaps": [
+       "形式验证与等价性检查入门"
+      ],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按第 1–3 章建立验证流程/策略/方法，再读第 6–7 章 SV 环境与 UVM，动手写 driver/monitor/sequence 与覆盖率。"
+       },
+       {
+        "source": "zh2",
+        "read": "用 E4 的 difftest 流程对一个处理器做功能仿真与波形调试。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按 UVM 指南搭 agent/env/sequence，写 constrained random 与 coverage，跑回归。"
+       },
+       {
+        "source": "en2",
+        "read": "用 SBY quickstart 写 SVA 属性并读反例。"
+       },
+       {
+        "source": "r7-en3",
+        "read": "After the SBY quickstart: install Yosys+EQY, run the nerv example (gold = nerv.sv, gate = nerv_change.sv), read how [gold]/[gate] partitions are built, then break your own RTL on purpose, re-run EQY and use the reported mismatched cells to find the injected bug."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": [
+     {
+      "lang_missing": "zh",
+      "topic": "形式验证与等价性检查入门",
+      "source": "r7-en3",
+      "reason": "中文三个渠道都查过：文字（Tavily 两轮，只有维基/公司新闻/知乎短文/已失效的 EasyFormal）、视频（B 站站内 5 组关键词 + site:bilibili.com 一次，无形式验证或 LEC 课程）、付费（现有《芯片验证漫游指南》只有第 3 章一节；Seligman 中译本已登记但目录未核）。因此本轮中文侧仍只有概念级 partial，形式验证与 LEC 的实际操作入门先借用英文 EQY（r7-en3）与 SBY（en2）。",
+      "searched_channels": [
+       "text",
+       "video",
+       "paid"
+      ],
+      "confirmed_by": "review/pi-additions/H.2.2.json"
+     }
+    ]
+   },
    "courses": [
     {
      "school": "University of Maryland, Baltimore County",
@@ -58756,24 +59945,358 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "The Art and Science of PCB Design（MIT IAP 课程 6.S092 / EC.S03，课程站点公开）",
+    "title": "The Art and Science of PCB Design（MIT IAP 6.S092 / EC.S03）",
     "url": "https://pcb.mit.edu/",
     "lang": "en",
     "free": true,
-    "covers": "从系统需求到量产的完整板级流程：系统设计与参数建模、SPICE 仿真、原理图绘制、器件选型与数据手册阅读、PCB 布局布线、EDA 工具（Altium / KiCad / LTspice）、板厂制造工艺（DFM）、以及手工贴装焊接；课程站点开放讲义、lab 与历年归档，非 MIT 学生也能看。供电完整性、信号完整性与 EMC 只在高级仿真与客座讲座里点到，不是主线。"
+    "covers": "系统设计与参数建模、SPICE 仿真、原理图、器件选型与数据手册、PCB 布局布线、Altium/KiCad/LTspice、板厂 DFM、手工贴装；供电/SI/EMC 只在高级仿真与客座讲座。",
+    "access": "课程站与 lab 免费公开；英文。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "KiCad 官方中文入门教程",
-    "url": "https://docs.kicad.org/9.0/zh/getting_started_in_kicad/getting_started_in_kicad.html",
+    "title": "嘉立创 EDA 专业版快速入门（官方中文用户指南）",
+    "url": "https://prodocs.lceda.cn/cn/quick-start.html",
     "lang": "zh",
     "free": true,
-    "covers": "从原理图、元件封装、PCB 布线到设计检查与制造文件。",
-    "access": "免费阅读"
+    "covers": "原理图绘制、器件标准化、原理图到 PCB 的更新、板框、设计规则、图层、布局布线、制造文件输出；配视频教程入口。",
+    "access": "官方文档免费；使用需注册嘉立创 EDA 账号。中文。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "KiCad 9.0 入门（官方简体中文文档）",
+     "url": "https://docs.kicad.org/9.0/zh/getting_started_in_kicad/getting_started_in_kicad.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "KiCad 工程、原理图编辑器、PCB 编辑器、封装/网络表、布线、Gerber 输出与制造文件。",
+     "access": "官方文档免费；中文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "《信号完整性与电源完整性分析（第二版）》（Eric Bogatin，李玉山等译，电子工业出版社）",
+     "url": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=49483",
+     "lang": "zh",
+     "free": false,
+     "covers": "信号完整性：第 7 章传输线的物理基础、第 8 章传输线与反射、第 9 章有损线与上升边退化、第 10 章传输线的串扰、第 11 章差分对与差分阻抗；供电：第 6 章含“电源分配网络和回路电感”“平面对与过孔的回路电感”，并给出电源分配网络（PDN）设计实例；电磁兼容：第 1 章 1.4 轨道塌陷噪声、1.5 电磁干扰，以及 S 参数应用。",
+     "access": "电子工业出版社正式商品页，纸质书定价 ¥69.0（第二版，李玉山等译）；全文需购买，未购买，目录公开可核。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "《ESP 硬件设计指南》（乐鑫 Espressif 官方中文文档）——原理图设计与 PCB 版图布局",
+     "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/zh_CN/latest/esp32/schematic-checklist.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "板级供电与布局落地：数字电源/模拟电源与去耦、上电时序与复位；PCB 版图的地平面完整性、四层/两层板叠层安排、电源走线、射频与晶振区域的屏蔽，以及“电源纹波不大但射频性能差”这类 EMI/供电耦合问题的排查。",
+     "access": "乐鑫官方文档站免费，中文；针对 ESP32 系列，通用板级原则可迁移。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "MIT 6.776 High Speed Communication Circuits — Lecture Notes 3–5（Transmission lines, S-parameters, reflection/Smith chart）",
+     "url": "https://ocw.mit.edu/courses/6-776-high-speed-communication-circuits-spring-2005/pages/lecture-notes/",
+     "lang": "en",
+     "free": true,
+     "covers": "信号完整性的电气基础：波导与传输线模型、S 参数与阻抗变换、广义反射系数与 Smith 圆图、匹配；为 PCB 走线的反射/端接与插损分析提供理论。",
+     "access": "MIT OCW 免费讲义 PDF；英文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "ESP Hardware Design Guidelines (Espressif, official English) — Schematic Checklist & PCB Layout Design",
+     "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html",
+     "lang": "en",
+     "free": true,
+     "covers": "Board-level power delivery and EMC practice: digital/analog power supply and decoupling, power-up/reset sequencing; PCB stack-up with solid ground plane, power routing, shielding of RF/crystal areas, and debugging of supply-noise-induced RF degradation.",
+     "access": "Free official docs, English.",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "嘉立创 EDA 专业版快速入门（官方中文用户指南）",
+      "url": "https://prodocs.lceda.cn/cn/quick-start.html",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "原理图绘制、器件标准化、原理图到 PCB 的更新、板框、设计规则、图层、布局布线、制造文件输出；配视频教程入口。",
+      "access": "官方文档免费；使用需注册嘉立创 EDA 账号。中文。",
+      "publisher": "嘉立创 EDA（深圳嘉立创）"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "KiCad 9.0 入门（官方简体中文文档）",
+      "url": "https://docs.kicad.org/9.0/zh/getting_started_in_kicad/getting_started_in_kicad.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "KiCad 工程、原理图编辑器、PCB 编辑器、封装/网络表、布线、Gerber 输出与制造文件。",
+      "access": "官方文档免费；中文。",
+      "publisher": "KiCad 项目"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "The Art and Science of PCB Design（MIT IAP 6.S092 / EC.S03）",
+      "url": "https://pcb.mit.edu/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "系统设计与参数建模、SPICE 仿真、原理图、器件选型与数据手册、PCB 布局布线、Altium/KiCad/LTspice、板厂 DFM、手工贴装；供电/SI/EMC 只在高级仿真与客座讲座。",
+      "access": "课程站与 lab 免费公开；英文。",
+      "publisher": "MIT（IAP 课程团队）"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "《信号完整性与电源完整性分析（第二版）》（Eric Bogatin，李玉山等译，电子工业出版社）",
+      "url": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=49483",
+      "tier": "book",
+      "free": false,
+      "role": "supplement",
+      "covers": "信号完整性：第 7 章传输线的物理基础、第 8 章传输线与反射、第 9 章有损线与上升边退化、第 10 章传输线的串扰、第 11 章差分对与差分阻抗；供电：第 6 章含“电源分配网络和回路电感”“平面对与过孔的回路电感”，并给出电源分配网络（PDN）设计实例；电磁兼容：第 1 章 1.4 轨道塌陷噪声、1.5 电磁干扰，以及 S 参数应用。",
+      "access": "电子工业出版社正式商品页，纸质书定价 ¥69.0（第二版，李玉山等译）；全文需购买，未购买，目录公开可核。",
+      "publisher": "Eric Bogatin（E. 伯格丁）着，李玉山等译，电子工业出版社",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.3.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "《ESP 硬件设计指南》（乐鑫 Espressif 官方中文文档）——原理图设计与 PCB 版图布局",
+      "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/zh_CN/latest/esp32/schematic-checklist.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "板级供电与布局落地：数字电源/模拟电源与去耦、上电时序与复位；PCB 版图的地平面完整性、四层/两层板叠层安排、电源走线、射频与晶振区域的屏蔽，以及“电源纹波不大但射频性能差”这类 EMI/供电耦合问题的排查。",
+      "access": "乐鑫官方文档站免费，中文；针对 ESP32 系列，通用板级原则可迁移。",
+      "publisher": "乐鑫信息科技（Espressif Systems）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.3.json"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "MIT 6.776 High Speed Communication Circuits — Lecture Notes 3–5（Transmission lines, S-parameters, reflection/Smith chart）",
+      "url": "https://ocw.mit.edu/courses/6-776-high-speed-communication-circuits-spring-2005/pages/lecture-notes/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "信号完整性的电气基础：波导与传输线模型、S 参数与阻抗变换、广义反射系数与 Smith 圆图、匹配；为 PCB 走线的反射/端接与插损分析提供理论。",
+      "access": "MIT OCW 免费讲义 PDF；英文。",
+      "publisher": "MIT EECS / MIT OpenCourseWare",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.3.json"
+     },
+     {
+      "key": "r7-en2",
+      "lang": "en",
+      "title": "ESP Hardware Design Guidelines (Espressif, official English) — Schematic Checklist & PCB Layout Design",
+      "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "Board-level power delivery and EMC practice: digital/analog power supply and decoupling, power-up/reset sequencing; PCB stack-up with solid ground plane, power routing, shielding of RF/crystal areas, and debugging of supply-noise-induced RF degradation.",
+      "access": "Free official docs, English.",
+      "publisher": "Espressif Systems",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.3.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "原理图",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "原理图绘制、器件标准化、原理图检查",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Schematic capture 与器件选型/lab",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都有从原理图到网表的流程。"
+     },
+     {
+      "topic": "布局布线",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "原理图转 PCB、板框、设计规则、图层、布线",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "PCB layout 与 Altium/KiCad lab",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都用真实 EDA 工具做布局布线。"
+     },
+     {
+      "topic": "供电",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "未讲电源完整性与去耦设计",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 6 章 6.9 电源分配网络和回路电感、6.11 平面对与过孔的回路电感；书中的电源分配网络设计实例",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "原理图设计“电源（数字电源/模拟电源）”与 PCB 版图“电源”“四层板/两层板设计”",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "供电完整性只在高级仿真/客座讲座",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en2",
+        "section": "Schematic Checklist: Power Supply (digital/analog), decoupling, power-up/reset；PCB Layout: stack-up, power routing",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都没有系统的 PDN/去耦/电源树教学。；嘉立创/KiCad 文档只讲布线操作，不涉及 PDN；Bogatin 中译用回路电感、平面对与过孔解释 PDN 阻抗，并给出 PDN 设计实例，补上“供电”的电气原理。；乐鑫官方文档把去耦、电源分层与地平面做法落到具体板子上，与 Bogatin 的原理互补，达到简介要求的“浅”层供电完整性。；MIT PCB 课把供电完整性放在高级仿真/客座讲座；ESP 英文官方文档给出电源与去耦、叠层与电源走线的具体做法，补上英文侧的板级供电。"
+     },
+     {
+      "topic": "信号完整性",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "未讲传输线/反射/串扰",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 7–11 章：传输线物理基础、反射、有损线与上升边退化、串扰、差分对与差分阻抗",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "SI 只在高级仿真/客座讲座",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "6.776 Lectures 3–5：传输线、S 参数与阻抗变换、反射系数与 Smith 圆图",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都缺 SI 主线章节。；中文侧原来只有 EDA 操作文档，完全没有传输线/反射/串扰；这本书按 SI 六类问题逐章讲并有估算公式与设计准则，覆盖“信号完整性”。；英文侧原来只有课程里的高级仿真讲座；6.776 的这三讲讲清传输线模型、反射与 S 参数，是 SI 分析的理论核心。"
+     },
+     {
+      "topic": "电磁兼容与制造约束",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "设计规则/板厂工艺/制造文件；EMC 未讲",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 1 章 1.5 电磁干扰、1.4 轨道塌陷噪声；第 11 章差分对（共模与差模）",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "PCB 版图布局：完整地平面、射频与晶振区域屏蔽、电源走线，以及版图常见问题排查",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "DFM 与板厂工艺；EMC 只在客座讲座",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en2",
+        "section": "PCB Layout Design：四层/两层叠层、完整地平面、RF/晶振屏蔽、电源相关 EMI 排查",
+        "extent": "covered"
+       }
+      ],
+      "note": "制造约束（DFM/DRC/Gerber）covered；EMC 两侧都缺。；EMC 部分只需要入门：Bogatin 讲清 EMI 的来源（差模/共模电流、轨道塌陷）与差分对的影响。；制造约束一侧由已有 zh1（设计规则、板厂工艺、Gerber 输出）承担；EMC 一侧由乐鑫文档给出屏蔽/地平面/电源走线的板级规则，两者合起来覆盖该知识点，深度按简介要求保持“浅”。；制造约束（DFM/板厂工艺/Gerber）由已有 en1（MIT PCB 课）承担；EMC 由 ESP 英文文档的叠层/地平面/屏蔽与噪声排查补上，合起来覆盖该知识点（浅层）。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按原理图→器件/封装→PCB 布局布线→设计规则→Gerber 输出做一块完整小板，并打样。"
+       },
+       {
+        "source": "zh2",
+        "read": "用 KiCad 入门文档走第二套工具流程，理解封装/网络表/制造文件。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "在嘉立创 EDA 画完第一块板后读这本书：先第 7–9 章（传输线、反射、有损线）算一条走线的阻抗与临界长度，再第 10–11 章看串扰与差分对，最后第 6 章 PDN 与回路电感，给自己板子的电源平面做一次去耦与过孔布置。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "对照乐鑫《ESP 硬件设计指南》：按“电源（数字/模拟）”“四层/两层板”把地平面、电源走线与射频屏蔽落到自己的板子上，并读“版图设计常见问题”学会从现象反查供电/EMC 原因。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按 syllabus 学系统设计/SPICE→原理图→布局布线→DFM→手工贴装，完成 lab 板。"
+       },
+       {
+        "source": "r7-en1",
+        "read": "Read 6.776 lectures 3–5 and redo the reflection/Smith-chart exercises for a 50-ohm PCB trace, so you can compute reflection from a mismatched load and read an S-parameter plot."
+       },
+       {
+        "source": "r7-en2",
+        "read": "Follow the ESP hardware design guidelines: place decoupling per the power-supply section, choose a 4-layer stack-up with a solid ground plane, keep RF/crystal areas shielded, and use the layout FAQ to debug supply-noise-related RF problems."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Massachusetts Institute of Technology",
@@ -58906,20 +60429,325 @@
     "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
     "lang": "en",
     "free": true,
-    "covers": "MOS 器件模型（含深亚微米效应）、逻辑/算术/时序单元的电路设计风格、功耗估算与最小化、互连模型与寄生参数、器件尺寸与 logical effort、时钟偏斜与抖动等时序问题、低功耗技术、集成电路测试；配套 Magic 版图与 SPICE 实验。覆盖标准单元式的 CMOS 数字设计、时序/功耗/面积权衡、版图与测试，正对 D2 入门层。"
+    "covers": "MOS 器件模型（深亚微米效应）、逻辑/算术/时序单元电路、功耗估算与最小化、互连模型与寄生、器件尺寸/logical effort、时钟偏斜与抖动、低功耗、IC 测试；Magic 版图与 SPICE 实验。",
+    "access": "MIT OCW 免费公开讲义、习题与实验；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "“一生一芯”官方中文课程",
-    "url": "https://ysyx.oscc.cc/docs/",
+    "title": "东南大学《VLSI 设计基础（数字集成电路设计基础）》（中国大学MOOC，国家精品在线开放课程）",
+    "url": "https://www.icourse163.org/course/SEU-1001752359",
     "lang": "zh",
-    "free": true,
-    "covers": "数字逻辑、Verilog、处理器实现、仿真验证与芯片设计实践；VLSI 电路理论需英文教材补充。",
-    "access": "免费阅读"
+    "free": null,
+    "covers": "VLSI 概述、MOS 器件原理与模型、反相器与组合逻辑、时序逻辑与同步设计、标准单元与 IO 设计、存储器电路与架构、微处理器/加法器/乘法器、低功耗专题。",
+    "access": "视频需注册选课，按学期开放，认证证书收费。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "东北大学《集成电路测试与验证》（中国大学MOOC）",
+     "url": "https://www.icourse163.org/course/NEU-1206704818",
+     "lang": "zh",
+     "free": null,
+     "covers": "集成电路测试背景、可测试性分析、故障模拟与仿真、自动测试生成（ATPG）、扫描设计、内建自测试（BIST）、测试经济学。",
+     "access": "视频需注册选课，按学期开放，认证证书收费。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "“一生一芯”官方中文课程：E8 后端物理设计、D6 从 RTL 代码到可流片版图",
+     "url": "https://ysyx.oscc.cc/docs/",
+     "lang": "zh",
+     "free": true,
+     "covers": "RTL 到可流片版图的后端流程：逻辑综合、布局布线、时序/面积/功耗权衡与流片准备（开源 EDA 工具链）。",
+     "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "VLSI CAD Part I: Logic（Coursera, Rob Rutenbar）",
+     "url": "https://www.coursera.org/learn/vlsi-cad-logic",
+     "lang": "en",
+     "free": null,
+     "covers": "VLSI CAD 与 ASIC 设计流程、布尔逻辑/可满足性、BDD、逻辑综合与优化、时序分析；以编程作业实现 CAD 算法。",
+     "access": "Coursera 课程，6 模块；旁听/证书政策随平台变化，未验证免费旁听全部作业。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "VLSI CAD Part II: Layout（Coursera, Rob A. Rutenbar）",
+     "url": "https://www.coursera.org/learn/vlsi-cad-layout",
+     "lang": "en",
+     "free": true,
+     "covers": "ASIC 布局布线：ASIC layout 流程概述、technology library 与 technology mapping 的作用、placement（迭代改进、模拟退火、二次解析放置、递归划分）、routing（迷宫布线及其扩展）、时序评估；含放置器/布线器编程作业。",
+     "access": "Coursera 可免费旁听（作业与证书收费），英文授课，字幕未核对。",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "OpenLane Documentation — PDK Configuration Variables（standard cell library views: TECH_LEF / CELLS_LEF / GDS_FILES / liberty / tracks）",
+     "url": "https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html",
+     "lang": "en",
+     "free": true,
+     "covers": "标准单元库在流程中的实际形态：STD_CELL_LIBRARY 选择、tech LEF 与 cell LEF 视图、GDS 视图、liberty 时序库、tracks/site 定义、DRC 排除单元与 no-synthesis 单元列表；说明综合与布图工具如何消费同一套标准单元视图。",
+     "access": "OpenLane 官方文档免费，英文；需配合 sky130 PDK 与开源工具链。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "东南大学《VLSI 设计基础（数字集成电路设计基础）》（中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/SEU-1001752359",
+      "tier": "website",
+      "free": null,
+      "role": "primary",
+      "covers": "VLSI 概述、MOS 器件原理与模型、反相器与组合逻辑、时序逻辑与同步设计、标准单元与 IO 设计、存储器电路与架构、微处理器/加法器/乘法器、低功耗专题。",
+      "access": "视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "东南大学"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "东北大学《集成电路测试与验证》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NEU-1206704818",
+      "tier": "website",
+      "free": null,
+      "role": "supplement",
+      "covers": "集成电路测试背景、可测试性分析、故障模拟与仿真、自动测试生成（ATPG）、扫描设计、内建自测试（BIST）、测试经济学。",
+      "access": "视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "东北大学"
+     },
+     {
+      "key": "zh3",
+      "lang": "zh",
+      "title": "“一生一芯”官方中文课程：E8 后端物理设计、D6 从 RTL 代码到可流片版图",
+      "url": "https://ysyx.oscc.cc/docs/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "RTL 到可流片版图的后端流程：逻辑综合、布局布线、时序/面积/功耗权衡与流片准备（开源 EDA 工具链）。",
+      "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA。",
+      "publisher": "“一生一芯”教学团队"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Analysis and Design of Digital Integrated Circuits (MIT 6.374, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "MOS 器件模型（深亚微米效应）、逻辑/算术/时序单元电路、功耗估算与最小化、互连模型与寄生、器件尺寸/logical effort、时钟偏斜与抖动、低功耗、IC 测试；Magic 版图与 SPICE 实验。",
+      "access": "MIT OCW 免费公开讲义、习题与实验；英文，字幕未核对。",
+      "publisher": "MIT EECS / MIT OpenCourseWare"
+     },
+     {
+      "key": "en2",
+      "lang": "en",
+      "title": "VLSI CAD Part I: Logic（Coursera, Rob Rutenbar）",
+      "url": "https://www.coursera.org/learn/vlsi-cad-logic",
+      "tier": "website",
+      "free": null,
+      "role": "supplement",
+      "covers": "VLSI CAD 与 ASIC 设计流程、布尔逻辑/可满足性、BDD、逻辑综合与优化、时序分析；以编程作业实现 CAD 算法。",
+      "access": "Coursera 课程，6 模块；旁听/证书政策随平台变化，未验证免费旁听全部作业。",
+      "publisher": "University of Illinois Urbana-Champaign（Rob A. Rutenbar）"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "VLSI CAD Part II: Layout（Coursera, Rob A. Rutenbar）",
+      "url": "https://www.coursera.org/learn/vlsi-cad-layout",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "ASIC 布局布线：ASIC layout 流程概述、technology library 与 technology mapping 的作用、placement（迭代改进、模拟退火、二次解析放置、递归划分）、routing（迷宫布线及其扩展）、时序评估；含放置器/布线器编程作业。",
+      "access": "Coursera 可免费旁听（作业与证书收费），英文授课，字幕未核对。",
+      "publisher": "University of Illinois Urbana-Champaign / Coursera（Rob A. Rutenbar）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.4.json"
+     },
+     {
+      "key": "r7-en2",
+      "lang": "en",
+      "title": "OpenLane Documentation — PDK Configuration Variables（standard cell library views: TECH_LEF / CELLS_LEF / GDS_FILES / liberty / tracks）",
+      "url": "https://openlane.readthedocs.io/en/latest/reference/pdk_configuration.html",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "标准单元库在流程中的实际形态：STD_CELL_LIBRARY 选择、tech LEF 与 cell LEF 视图、GDS 视图、liberty 时序库、tracks/site 定义、DRC 排除单元与 no-synthesis 单元列表；说明综合与布图工具如何消费同一套标准单元视图。",
+      "access": "OpenLane 官方文档免费，英文；需配合 sky130 PDK 与开源工具链。",
+      "publisher": "OpenLane（efabless / OpenROAD 生态）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.4.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "CMOS 数字设计",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第二章 MOS 器件、第三章反相器/组合逻辑、第四章时序逻辑",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "MOS models、logic/arithmetic/sequential unit circuits",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从器件到 CMOS 门/时序单元。"
+     },
+     {
+      "topic": "标准单元",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第五章单元库设计技术（标准单元和 IO）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "标准单元式电路设计（课程以单元电路为主，未单列库章）",
+        "extent": "partial"
+       },
+       {
+        "source": "en1",
+        "section": "6.374 的单元电路设计（反相器/逻辑门/时序单元）与 Magic 版图实验",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-en2",
+        "section": "OpenLane PDK 配置：STD_CELL_LIBRARY、CELLS_LEF/GDS_FILES/liberty/tracks、DRC 排除与 no-synthesis 单元",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有标准单元/IO 专章；英文 6.374 讲单元电路但不讲标准单元库。；6.374 用 Magic 让学生画出可复用逻辑单元的版图并做 SPICE 验证，这正是标准单元电路级设计。；标准单元不只是一张电路图：它要作为库交给综合和布图工具。OpenLane 文档把库的 LEF/GDS/liberty/tracks 视图及配置讲清楚，补上“标准单元库如何被工具消费”的一面，与 6.374 的单元电路/版图设计合起来覆盖该知识点。"
+     },
+     {
+      "topic": "时序/功耗/面积",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "时序逻辑与同步设计、低功耗专题；面积/时序权衡贯穿",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "功耗估算与最小化、logical effort、clock skew/jitter、低功耗",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都覆盖时序与功耗；面积通过 logical effort/版图讨论。"
+     },
+     {
+      "topic": "逻辑综合与布局布线",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh3",
+        "section": "E8 后端物理设计、D6 RTL 到可流片版图（开源流程）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "VLSI CAD：逻辑综合与时序分析（布局布线未逐一核实）",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "Modules：Technology Mapping（Detailed Covering Example）、ASIC Placement（迭代/模拟退火/解析放置/递归划分）、ASIC Routing（迷宫布线）、时序评估",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有完整 RTL-to-GDS 实践；英文 6.374 不含综合/P&R，Coursera 只到逻辑综合。；旧的 en2 只有 VLSI CAD Part I（布尔/BDD/逻辑综合），布局布线没有；Part II 正是 placement 与 routing 的算法课，并含 technology mapping，两者合起来覆盖“逻辑综合与布局布线”。"
+     },
+     {
+      "topic": "芯片测试",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "故障建模/仿真、ATPG、扫描、BIST",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "IC testing（6.374 测试章）",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有专门测试课；英文 6.374 有测试章。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按 MOS→反相器/组合→时序/同步→标准单元/IO→存储器→低功耗学，做 SPICE/版图练习。"
+       },
+       {
+        "source": "zh2",
+        "read": "学故障建模、ATPG、扫描与 BIST，理解可测试性设计。"
+       },
+       {
+        "source": "zh3",
+        "read": "跟 E8/D6 走一遍 RTL→综合→布局布线→版图，记录时序/面积/功耗结果。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按器件模型→单元电路→功耗/互连→时序/时钟→测试学，做 Magic/SPICE 实验。"
+       },
+       {
+        "source": "en2",
+        "read": "补逻辑综合与 CAD 算法；布局布线需另找 Part II 或开源流程。"
+       },
+       {
+        "source": "r7-en1",
+        "read": "Take VLSI CAD Part II after Part I: follow the ASIC layout flow (technology library → tech mapping → placement → routing), implement the placer assignment on the benchmark netlists, then the optional maze-router assignment, and read timing after each step."
+       },
+       {
+        "source": "r7-en2",
+        "read": "Open the OpenLane PDK configuration page while running a small sky130 design: identify which file supplies cell LEF, GDS and liberty, how tracks/site come from the tech LEF, and why DRC-excluded / no-synthesis cells exist."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Massachusetts Institute of Technology",
@@ -59046,20 +60874,268 @@
     "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-spring-2009/",
     "lang": "en",
     "free": true,
-    "covers": "器件建模与物理：pn 结、BJT、MOS 器件的物理电子学与端特性；大信号与小信号模型、单级放大器、电流源/电流镜、频率响应与反馈入门，以及器件行为如何约束电路实现（含版图/工艺常识）；有习题、实验 project 与完整讲义。"
+    "covers": "微电子器件建模、pn 结与 MOS 器件的物理电子学、端特性、大/小信号模型、单级放大器、电流源/电流镜、频率响应与反馈入门，以及器件行为对电路实现的约束。",
+    "access": "MIT OCW 免费公开讲义、习题与 project；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "course",
-    "title": "新竹交通大学《半导体元件物理》（中国大学MOOC）",
-    "url": "https://www.icourse163.org/course/NCTU-1001615018",
+    "tier": "website",
+    "title": "复旦大学《半导体物理与器件原理》（中国大学MOOC，国家精品在线开放课程）",
+    "url": "https://www.icourse163.org/course/FUDAN-1003164004",
     "lang": "zh",
     "free": null,
-    "covers": "按半导体基础、PN结、MOS电容、MOSFET与非挥发存储器学习；BJT、完整制造工艺和PDK模型仍配英文。",
-    "access": "中文课程，含繁体用语和英文专业术语；完整单元按注册、开放学期和平台条件访问。"
+    "covers": "半导体能带论、载流子统计与输运、非平衡载流子、pn 结、金属-半导体接触、MIS 结构；BJT 的直流/频率/开关特性；MOSFET 阈值电压、直流/频率/开关特性、小尺寸效应与非理想效应。",
+    "access": "视频需注册选课，按学期开放，认证证书收费；课程建议连续六周集中学习。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "新竹交通大学《半导体元件物理》（中国大学MOOC）",
+     "url": "https://www.icourse163.org/course/NCTU-1001615018",
+     "lang": "zh",
+     "free": null,
+     "covers": "半导体基础、PN 结、MOS 电容、MOSFET 与非挥发存储器；繁体中文与英文术语混用。",
+     "access": "视频需注册选课，按学期开放，认证证书收费。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "哈尔滨工业大学《微电子工艺》（中国大学 MOOC，国家精品在线开放课程）",
+     "url": "https://www.icourse163.org/course/hit-154002",
+     "lang": "zh",
+     "free": true,
+     "covers": "芯片制造单项工艺：外延、热氧化、扩散、离子注入、化学汽相淀积（CVD）、物理汽相淀积（PVD）、光刻、刻蚀；以及金属互连、典型工艺集成、关键工艺设备与工艺发展趋势；含关键工艺参数测试的实验视频。",
+     "access": "中国大学 MOOC 课程页公开概述与授课目标；视频需注册选课、按学期开放，认证证书收费；中文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "“一生一芯”官方中文课程：E8 后端物理设计和流片准备（DRC/LVS/签核检查）",
+     "url": "https://ysyx.oscc.cc/docs/2607/e/8.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "电路实现的工艺约束落地：综合网表→布局布线→时序（STA）、DRC、LVS 等签核检查项，不达标时如何调整目标频率/利用率；说明版图必须满足代工厂的物理与电学规则才能流片。",
+     "access": "官方讲义免费，中文；需 Linux 与开源 EDA 工具链。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Micro/Nano Processing Technology (MIT 6.152J, MIT OpenCourseWare)",
+     "url": "https://ocw.mit.edu/courses/6-152j-micro-nano-processing-technology-fall-2005/",
+     "lang": "en",
+     "free": true,
+     "covers": "微纳加工工艺：扩散、氧化、光刻、化学气相沉积、刻蚀等单项工艺的原理与设备，以及这些工艺如何组合成器件制造流程（process integration）；配实验室模块。",
+     "access": "MIT OCW 免费公开讲义与实验材料；英文。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "复旦大学《半导体物理与器件原理》（中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/FUDAN-1003164004",
+      "tier": "website",
+      "free": null,
+      "role": "primary",
+      "covers": "半导体能带论、载流子统计与输运、非平衡载流子、pn 结、金属-半导体接触、MIS 结构；BJT 的直流/频率/开关特性；MOSFET 阈值电压、直流/频率/开关特性、小尺寸效应与非理想效应。",
+      "access": "视频需注册选课，按学期开放，认证证书收费；课程建议连续六周集中学习。",
+      "publisher": "复旦大学（蒋玉龙等）"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "新竹交通大学《半导体元件物理》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NCTU-1001615018",
+      "tier": "website",
+      "free": null,
+      "role": "supplement",
+      "covers": "半导体基础、PN 结、MOS 电容、MOSFET 与非挥发存储器；繁体中文与英文术语混用。",
+      "access": "视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "新竹交通大学"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Microelectronic Devices and Circuits (MIT 6.012, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-spring-2009/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "微电子器件建模、pn 结与 MOS 器件的物理电子学、端特性、大/小信号模型、单级放大器、电流源/电流镜、频率响应与反馈入门，以及器件行为对电路实现的约束。",
+      "access": "MIT OCW 免费公开讲义、习题与 project；英文，字幕未核对。",
+      "publisher": "MIT EECS / MIT OpenCourseWare"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "哈尔滨工业大学《微电子工艺》（中国大学 MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/hit-154002",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "芯片制造单项工艺：外延、热氧化、扩散、离子注入、化学汽相淀积（CVD）、物理汽相淀积（PVD）、光刻、刻蚀；以及金属互连、典型工艺集成、关键工艺设备与工艺发展趋势；含关键工艺参数测试的实验视频。",
+      "access": "中国大学 MOOC 课程页公开概述与授课目标；视频需注册选课、按学期开放，认证证书收费；中文。",
+      "publisher": "哈尔滨工业大学（王蔚、田丽等）／中国大学 MOOC",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.5.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "“一生一芯”官方中文课程：E8 后端物理设计和流片准备（DRC/LVS/签核检查）",
+      "url": "https://ysyx.oscc.cc/docs/2607/e/8.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "电路实现的工艺约束落地：综合网表→布局布线→时序（STA）、DRC、LVS 等签核检查项，不达标时如何调整目标频率/利用率；说明版图必须满足代工厂的物理与电学规则才能流片。",
+      "access": "官方讲义免费，中文；需 Linux 与开源 EDA 工具链。",
+      "publisher": "“一生一芯”教学团队（中国科学院大学等）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.5.json"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "Micro/Nano Processing Technology (MIT 6.152J, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-152j-micro-nano-processing-technology-fall-2005/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "微纳加工工艺：扩散、氧化、光刻、化学气相沉积、刻蚀等单项工艺的原理与设备，以及这些工艺如何组合成器件制造流程（process integration）；配实验室模块。",
+      "access": "MIT OCW 免费公开讲义与实验材料；英文。",
+      "publisher": "MIT EECS / MIT OpenCourseWare",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.2.5.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "晶体管模型",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "BJT 与 MOSFET 的直流/频率/开关特性、小信号模型",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Device modeling、large/small-signal models、current sources/mirrors",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从物理特性推到电路模型。"
+     },
+     {
+      "topic": "器件物理",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "能带论、载流子统计/输运、非平衡载流子、pn 结、MIS",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Physical electronics of semiconductor junction and MOS devices",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都覆盖能带/载流子/pn 结/MOS。"
+     },
+     {
+      "topic": "工艺与电路实现约束",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "器件结构与版图常识；未讲光刻/刻蚀/良率",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "单项工艺（外延/热氧化/扩散/离子注入/CVD/PVD/光刻/刻蚀）+ 金属互连 + 典型工艺集成",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "E8 后端物理设计：STA/DRC/LVS 签核检查与不达标时的调整",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "器件行为对电路实现的约束；工艺集成只在结构处提及",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "6.152J 单项工艺与 process integration（扩散、氧化、光刻、CVD、刻蚀）",
+        "extent": "covered"
+       },
+       {
+        "source": "en1",
+        "section": "6.012：器件模型与器件行为对电路实现的约束（阈值、跨导、寄生、速度）",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都缺制造工艺集成（光刻/刻蚀/掺杂/良率）的系统教学。；复旦《半导体物理与器件原理》只讲器件物理，不涉及怎么做出来；哈工大《微电子工艺》系统讲单项工艺与工艺集成，补上“工艺”这一半。；“电路实现约束”需要落到版图/流片规则上；一生一芯 E8 把 DRC、LVS、STA 作为签核门槛讲清，说明工艺规则如何约束电路实现，与哈工大工艺课合起来覆盖整个知识点。；6.012 只从器件端讲“器件行为约束电路”，没有制造工艺；6.152J 讲清工艺步骤与集成，补上英文“工艺”部分。；英文侧“电路实现约束”由 6.012 的器件-电路约束承担：工艺参数（氧化层厚度、掺杂）决定 Vt、gm 与寄生，从而约束电路能做成什么样；与 6.152J 的工艺侧合起来覆盖。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 3,
+      "total": 3,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按能带/载流子→pn 结/MIS→BJT→MOSFET→小尺寸效应学习，配合器件特性曲线练习。"
+       },
+       {
+        "source": "zh2",
+        "read": "用 NCTU 课程补 PN 结/MOS 电容/存储器的第二套讲解。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "在复旦器件课之后按哈工大《微电子工艺》学：外延/氧化→扩散与离子注入→CVD/PVD→光刻→刻蚀→金属互连，最后看“典型工艺集成”把前面单项工艺串成 CMOS 流程。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "用 E8 走一遍后端：综合→布局布线→看 STA/DRC/LVS 报告，故意把目标频率或利用率调高，观察违例如何出现、又该如何回退。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 3,
+      "total": 3,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按器件物理→端特性→大/小信号模型→单级放大器/电流镜→频率响应学习，完成习题与 project。"
+       },
+       {
+        "source": "r7-en1",
+        "read": "Work through 6.152J lectures/labs: diffusion, oxidation, photolithography, CVD and etch, then write down how a CMOS process integrates them and which step controls Vt/parasitics."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Massachusetts Institute of Technology",
@@ -59190,26 +61266,259 @@
    "step": 3,
    "reach": 1,
    "resource": {
-    "tier": "website",
-    "title": "Embedded Systems - Shape The World（Valvano & Yerraballi，UT Austin，免费在线教材 + 视频）",
+    "tier": "book",
+    "title": "Embedded Systems - Shape The World（Valvano & Yerraballi, UT Austin，免费在线教材 + 视频）",
     "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
     "lang": "en",
     "free": true,
-    "covers": "以 ARM Cortex-M 裸机 C 为主线，章节依次是：基本概念、电子学、数字逻辑、C 语言、微控制器端口（GPIO）、设计与调试流程、开关与 LED、数组与功能调试、有限状态机、UART 串口、中断（含定时器/SysTick）、DAC 与声音、ADC 与数据采集、LCD 输出、IoT；每章配套 EE319K 的 lab 与视频，正是 D2 层「写裸机程序、驱动外设、会调试」的内容。",
-    "access": "作者电子教材免费；实践需要教材指定Cortex-M板卡或兼容仿真环境，硬件另备。"
+    "covers": "基本概念、电子学、数字逻辑、C、微控制器端口（GPIO）、设计与调试流程、开关/LED、数组与功能调试、FSM、UART、中断（定时器/SysTick）、DAC、ADC、LCD、IoT；每章配 EE319K lab 与视频。",
+    "access": "作者电子教材免费；实践需教材指定 Cortex-M 板卡或兼容仿真环境；英文。",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "乐鑫 ESP-IDF 官方中文编程指南",
-    "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/",
+    "tier": "video",
+    "title": "江协科技《STM32 入门教程》2023 版（50 集，B 站）",
+    "url": "https://www.bilibili.com/video/BV1th411z7sn",
     "lang": "zh",
     "free": true,
-    "covers": "按目录选择 FreeRTOS、外设驱动、GPIO/I2C/SPI、Wi-Fi/Bluetooth 与联网示例；以 ESP32 为实践平台。 适用范围：ESP-IDF通常依赖FreeRTOS与SDK，不等同纯裸机入门；可作不同MCU平台补充。",
-    "access": "免费阅读"
+    "covers": "GPIO 输入/输出、OLED 调试、EXTI 外部中断、TIM 定时中断/输出比较/PWM/输入捕获/编码器、ADC、DMA、USART 串口、I2C/SPI、STLINK 下载；以 STM32 裸机 C 为主线。",
+    "access": "B 站免费；2023 版，标题标“中文字幕”，未核实是人工还是自动字幕；配套资料在 jiangxiekeji.com 免费下载。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "电子科技大学《嵌入式系统及应用》（中国大学MOOC）",
+     "url": "https://www.icourse163.org/course/UESTC-1206862805",
+     "lang": "zh",
+     "free": null,
+     "covers": "ARM 处理器编程模型与 Keil4 实验；uC/OS-II 任务管理、同步通信、中断、时间与内存管理；可补中断/资源管理概念。",
+     "access": "视频需注册选课，按学期开放，认证证书收费。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "野火《STM32 库开发实战指南——基于野火指南者开发板》（官方中文在线书）",
+     "url": "https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/index.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "调试：第 3 章 DAP 仿真器下载程序、第 43 章 MDK 编译过程及文件类型全解、第 44 章在 SRAM 中调试代码（调试版本、分散加载文件、中断向量表配置）、第 45–46 章读写内部 FLASH 及其读写保护；资源限制：第 15 章启动文件详解（Stack 栈、Heap 堆、向量表、用户堆栈初始化）、RAM/FLASH 容量与启动方式。",
+     "access": "野火官方文档站免费在线阅读，全中文；配套开发板与例程，无需注册。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "江协科技《STM32 入门教程》2023 版（50 集，B 站）",
+      "url": "https://www.bilibili.com/video/BV1th411z7sn",
+      "tier": "video",
+      "free": true,
+      "role": "primary",
+      "covers": "GPIO 输入/输出、OLED 调试、EXTI 外部中断、TIM 定时中断/输出比较/PWM/输入捕获/编码器、ADC、DMA、USART 串口、I2C/SPI、STLINK 下载；以 STM32 裸机 C 为主线。",
+      "access": "B 站免费；2023 版，标题标“中文字幕”，未核实是人工还是自动字幕；配套资料在 jiangxiekeji.com 免费下载。",
+      "publisher": "江协科技"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "电子科技大学《嵌入式系统及应用》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/UESTC-1206862805",
+      "tier": "website",
+      "free": null,
+      "role": "supplement",
+      "covers": "ARM 处理器编程模型与 Keil4 实验；uC/OS-II 任务管理、同步通信、中断、时间与内存管理；可补中断/资源管理概念。",
+      "access": "视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "电子科技大学"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Embedded Systems - Shape The World（Valvano & Yerraballi, UT Austin，免费在线教材 + 视频）",
+      "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+      "tier": "book",
+      "free": true,
+      "role": "primary",
+      "covers": "基本概念、电子学、数字逻辑、C、微控制器端口（GPIO）、设计与调试流程、开关/LED、数组与功能调试、FSM、UART、中断（定时器/SysTick）、DAC、ADC、LCD、IoT；每章配 EE319K lab 与视频。",
+      "access": "作者电子教材免费；实践需教材指定 Cortex-M 板卡或兼容仿真环境；英文。",
+      "publisher": "Jonathan Valvano & Ramesh Yerraballi, University of Texas at Austin"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "野火《STM32 库开发实战指南——基于野火指南者开发板》（官方中文在线书）",
+      "url": "https://doc.embedfire.com/mcu/stm32/f103zhinanzhe/std/zh/latest/index.html",
+      "tier": "book",
+      "free": true,
+      "role": "supplement",
+      "covers": "调试：第 3 章 DAP 仿真器下载程序、第 43 章 MDK 编译过程及文件类型全解、第 44 章在 SRAM 中调试代码（调试版本、分散加载文件、中断向量表配置）、第 45–46 章读写内部 FLASH 及其读写保护；资源限制：第 15 章启动文件详解（Stack 栈、Heap 堆、向量表、用户堆栈初始化）、RAM/FLASH 容量与启动方式。",
+      "access": "野火官方文档站免费在线阅读，全中文；配套开发板与例程，无需注册。",
+      "publisher": "野火电子（embedfire）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.3.1.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "GPIO",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "[3-1] GPIO 输出、[3-3] GPIO 输入",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Chapter 6 Microcontroller Ports；Lab 3 switches/LEDs",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从 GPIO 输入/输出开始。"
+     },
+     {
+      "topic": "定时器",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "[6-1] TIM 定时中断、[6-3] 输出比较、[6-5] 输入捕获",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Chapter 12 Interrupts（SysTick/定时器）",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文定时器章节更细（PWM/输入捕获/编码器）。"
+     },
+     {
+      "topic": "中断",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "[5-1] EXTI 外部中断、[6-1] TIM 定时中断",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Chapter 12 Interrupts",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲中断向量、优先级与 ISR。"
+     },
+     {
+      "topic": "外设",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "ADC、DMA、USART、I2C/SPI、OLED",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Ch.11 UART、Ch.13 DAC、Ch.14 ADC、Ch.17 LCD",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文外设种类更多（DMA/I2C/SPI）；英文有 DAC/LCD。"
+     },
+     {
+      "topic": "裸机程序",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "全程裸机 C（寄存器/标准库）实验",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Ch.5 C、Ch.6 端口、各章 lab（无 OS）",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都不依赖 RTOS。"
+     },
+     {
+      "topic": "调试与资源限制",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "[4-1] OLED 调试、[9-6] STLINK 下载；资源限制未单列",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 3 章 DAP 仿真器下载、第 43 章 MDK 编译过程及文件类型、第 44 章在 SRAM 中调试代码；第 15 章启动文件的 Stack/Heap/向量表；第 45–46 章内部 FLASH 读写与保护",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Ch.7 Design and Development Process、Ch.9 Functional Debugging",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有调试手段但没有 RAM/Flash/功耗预算的系统讨论；英文有设计流程与功能调试章。；江协科技课只有 OLED 显示调试和 STLINK 下载两处（旧记录 partial），既没讲调试器/断点/分散加载，也没讲 RAM/FLASH/栈堆预算；野火这两章把“怎么调（仿真器、SRAM 调试、分散加载）”和“资源怎么算（启动文件栈堆、FLASH 容量、读写保护）”都讲成可操作步骤，正好补上该知识点。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按 GPIO→OLED 调试→EXTI→TIM/PWM→ADC→DMA→USART→I2C/SPI 顺序看视频并动手，每个外设写一个裸机程序。"
+       },
+       {
+        "source": "zh2",
+        "read": "补 uC/OS-II 的中断/时间/内存管理，理解资源受限下的调度。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "在江协科技课学到能点灯、跑通串口之后，读野火第 15 章搞清启动文件里 Stack_Size/Heap_Size 与内存布局，读第 43–44 章按“调试版本 + 分散加载文件 + 中断向量表重定位”把程序放到 SRAM 里调试一遍，再用第 45–46 章看内部 FLASH 读写与保护，最后给自己的工程算一次 RAM/FLASH 余量。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按第 5–14 章学 C/端口/调试/FSM/UART/中断/DAC/ADC，完成 EE319K 对应 lab。"
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "University of California, San Diego",
@@ -59340,24 +61649,349 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "Bootlin 免费培训资料（embedded Linux / kernel & driver development）",
+    "title": "Bootlin 免费培训资料（embedded Linux / kernel & driver development / PREEMPT_RT）",
     "url": "https://bootlin.com/docs/",
     "lang": "en",
     "free": true,
-    "covers": "Bootlin免费资料覆盖嵌入式Linux启动、设备树、内核、驱动、中断、并发和调试，也有PREEMPT_RT实时Linux课程；不等同于FreeRTOS等微控制器RTOS的完整内核课程。"
+    "covers": "Embedded Linux system development、Linux kernel and driver development（设备树、设备模型、字符设备、内存管理、锁、中断处理与睡眠）、Yocto/Buildroot、boot time reduction、Real-time Linux with PREEMPT_RT、debugging/profiling/tracing；含启动链、驱动、中断并发与内核内存/资源管理。",
+    "access": "CC BY-SA 3.0 免费 PDF/幻灯片；英文。",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "乐鑫 ESP-IDF 官方中文编程指南",
-    "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/",
+    "tier": "book",
+    "title": "野火《FreeRTOS 内核实现与应用开发实战指南—基于 STM32》（中文在线书）",
+    "url": "https://doc.embedfire.com/rtos/freertos/zh/latest/index.html",
     "lang": "zh",
     "free": true,
-    "covers": "按目录选择 FreeRTOS、外设驱动、GPIO/I2C/SPI、Wi-Fi/Bluetooth 与联网示例；以 ESP32 为实践平台。",
-    "access": "免费阅读"
+    "covers": "从 0 写 FreeRTOS 内核：任务定义与切换、临界段、空闲任务/阻塞延时、多优先级、延时列表、时间片；应用开发：任务、队列、信号量、事件、内存管理、中断与移植。",
+    "access": "野火官方文档免费在线；中文；实验需 STM32 板卡。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "book",
+     "title": "野火《嵌入式 Linux 驱动开发实战指南—基于 i.MX6ULL》（中文在线书）",
+     "url": "https://doc.embedfire.com/linux/imx6/driver/zh/latest/index.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "裸机开发（GPIO/中断/时钟/UART）、Linux 内核模块、字符设备、设备模型、平台驱动、设备树、pinctrl/gpio、I2C/SPI/中断/输入/PWM/Framebuffer 子系统。",
+     "access": "官方文档免费；中文；实验需 i.MX6ULL 板卡。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "ECE 445M Embedded and Real-Time Operating Systems（UT Austin, syllabus）",
+     "url": "https://users.ece.utexas.edu/~valvano/EE445M/syllabus.html",
+     "lang": "en",
+     "free": true,
+     "covers": "RTOS 实现：上下文切换、线程、多任务、实时调度、同步通信、存储/文件系统、内存管理、链接加载、硬件接口、网络；性能（latency/jitter/deadline/deadlock/starvation）与调试测试。",
+     "access": "syllabus 与讲次/实验入口公开；教材需购买，板卡实验需硬件。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "野火《i.MX6ULL 嵌入式 Linux 基础教程》第 5 章“Debian 系统启动过程（加载 uboot、设备树、内核等）”（官方中文在线书）",
+     "url": "https://doc.embedfire.com/linux/imx6/base/zh/latest/building_image/debian_starting_procedure.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "启动链：5.1 uboot 启动流程分析、5.1.1 PC/Linux/Android 启动过程对比、5.1.2 u-boot 启动流程简要分析，以及后续加载设备树与内核、构建 Debian 固件的完整链路。",
+     "access": "野火官方文档站免费，中文；配合 i.MX6ULL 开发板与固件构建步骤。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "苏州大学《嵌入式系统及应用》（中国大学 MOOC，一流课程；配套《嵌入式技术基础与实践（第6版）》）",
+     "url": "https://www.icourse163.org/course/SUDA-1001754273",
+     "lang": "zh",
+     "free": true,
+     "covers": "以 ARM Cortex-M 为蓝本、软硬件构件为主线的系统课：底层硬件接口与驱动构件、软硬件结合的开发调试；课程大纲含 11.2 复位模块与看门狗模块、12.1 嵌入式系统稳定性问题、12.2 外接传感器及执行部件的编程方法、12.3 实时操作系统实例。",
+     "access": "中国大学 MOOC 课程页公开概述；视频需注册选课、按学期开放，认证证书收费；中文。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "野火《FreeRTOS 内核实现与应用开发实战指南—基于 STM32》（中文在线书）",
+      "url": "https://doc.embedfire.com/rtos/freertos/zh/latest/index.html",
+      "tier": "book",
+      "free": true,
+      "role": "primary",
+      "covers": "从 0 写 FreeRTOS 内核：任务定义与切换、临界段、空闲任务/阻塞延时、多优先级、延时列表、时间片；应用开发：任务、队列、信号量、事件、内存管理、中断与移植。",
+      "access": "野火官方文档免费在线；中文；实验需 STM32 板卡。",
+      "publisher": "野火（EmbedFire）"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "野火《嵌入式 Linux 驱动开发实战指南—基于 i.MX6ULL》（中文在线书）",
+      "url": "https://doc.embedfire.com/linux/imx6/driver/zh/latest/index.html",
+      "tier": "book",
+      "free": true,
+      "role": "supplement",
+      "covers": "裸机开发（GPIO/中断/时钟/UART）、Linux 内核模块、字符设备、设备模型、平台驱动、设备树、pinctrl/gpio、I2C/SPI/中断/输入/PWM/Framebuffer 子系统。",
+      "access": "官方文档免费；中文；实验需 i.MX6ULL 板卡。",
+      "publisher": "野火（EmbedFire）"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Bootlin 免费培训资料（embedded Linux / kernel & driver development / PREEMPT_RT）",
+      "url": "https://bootlin.com/docs/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "Embedded Linux system development、Linux kernel and driver development（设备树、设备模型、字符设备、内存管理、锁、中断处理与睡眠）、Yocto/Buildroot、boot time reduction、Real-time Linux with PREEMPT_RT、debugging/profiling/tracing；含启动链、驱动、中断并发与内核内存/资源管理。",
+      "access": "CC BY-SA 3.0 免费 PDF/幻灯片；英文。",
+      "publisher": "Bootlin",
+      "updated_by": [
+       "review/pi-additions/H.3.2.json"
+      ]
+     },
+     {
+      "key": "en2",
+      "lang": "en",
+      "title": "ECE 445M Embedded and Real-Time Operating Systems（UT Austin, syllabus）",
+      "url": "https://users.ece.utexas.edu/~valvano/EE445M/syllabus.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "RTOS 实现：上下文切换、线程、多任务、实时调度、同步通信、存储/文件系统、内存管理、链接加载、硬件接口、网络；性能（latency/jitter/deadline/deadlock/starvation）与调试测试。",
+      "access": "syllabus 与讲次/实验入口公开；教材需购买，板卡实验需硬件。",
+      "publisher": "University of Texas at Austin（Jonathan Valvano）"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "野火《i.MX6ULL 嵌入式 Linux 基础教程》第 5 章“Debian 系统启动过程（加载 uboot、设备树、内核等）”（官方中文在线书）",
+      "url": "https://doc.embedfire.com/linux/imx6/base/zh/latest/building_image/debian_starting_procedure.html",
+      "tier": "book",
+      "free": true,
+      "role": "supplement",
+      "covers": "启动链：5.1 uboot 启动流程分析、5.1.1 PC/Linux/Android 启动过程对比、5.1.2 u-boot 启动流程简要分析，以及后续加载设备树与内核、构建 Debian 固件的完整链路。",
+      "access": "野火官方文档站免费，中文；配合 i.MX6ULL 开发板与固件构建步骤。",
+      "publisher": "野火电子（embedfire）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.3.2.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "苏州大学《嵌入式系统及应用》（中国大学 MOOC，一流课程；配套《嵌入式技术基础与实践（第6版）》）",
+      "url": "https://www.icourse163.org/course/SUDA-1001754273",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "以 ARM Cortex-M 为蓝本、软硬件构件为主线的系统课：底层硬件接口与驱动构件、软硬件结合的开发调试；课程大纲含 11.2 复位模块与看门狗模块、12.1 嵌入式系统稳定性问题、12.2 外接传感器及执行部件的编程方法、12.3 实时操作系统实例。",
+      "access": "中国大学 MOOC 课程页公开概述；视频需注册选课、按学期开放，认证证书收费；中文。",
+      "publisher": "苏州大学（王宜怀团队）／中国大学 MOOC",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.3.2.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "启动链",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "裸机开发与内核模块/设备树；无 BootROM/SPL/U-Boot 启动链章节",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 5 章：uboot 启动流程分析、PC/Linux/Android 启动过程对比、u-boot 启动流程简要分析、加载设备树与内核",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Embedded Linux system development：boot chain、U-Boot、kernel/rootfs",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文驱动书从裸机直接到内核模块，缺启动链；英文 Bootlin 有完整启动流程。；旧中文材料（驱动书）只讲裸机与内核模块，没有 BootROM/SPL/U-Boot 启动链；野火这一章逐段分析 uboot 启动流程并与设备树、内核加载串起来，补上中文侧“启动链”。"
+     },
+     {
+      "topic": "驱动",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "字符设备、平台驱动、设备树、pinctrl/gpio、I2C/SPI/中断/PWM 子系统",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Linux kernel and driver development course",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从内核模块讲到设备树与子系统驱动。"
+     },
+     {
+      "topic": "实时调度",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "多优先级、时间片、任务切换、阻塞延时",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "real-time scheduling、latency/jitter/deadlines；Bootlin PREEMPT_RT",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文是 FreeRTOS 抢占式调度实现；英文有 RTOS 调度分析与 PREEMPT_RT。"
+     },
+     {
+      "topic": "中断",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "临界段保护、中断与 FreeRTOS 移植",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "中断子系统–按键中断实验",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "内核驱动课程的中断处理与并发",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲中断上下文与并发保护。"
+     },
+     {
+      "topic": "资源",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "FreeRTOS 内存管理（heap_1–5）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "memory management、storage/file systems；Bootlin 部分",
+        "extent": "partial"
+       },
+       {
+        "source": "en1",
+        "section": "Bootlin Linux kernel and driver development：memory management、locking、interrupt handling，以及调试与 profiling 工具",
+        "extent": "covered"
+       },
+       {
+        "source": "en2",
+        "section": "ECE 445M：memory management、storage/file systems、performance（latency/jitter/deadline）",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文 FreeRTOS 内存管理明确；英文 RTOS 课有内存管理但材料以 syllabus 为主。；旧记录里英文“资源”只靠 ECE445M 的内存管理一段；Bootlin 内核课把内核内存管理、锁与中断等资源机制列为驱动开发的必备机制，两者合起来覆盖“资源”。；RTOS 侧的资源约束（内存分配、存储、时限）由 ECE445M 承担，与 Bootlin 的内核资源机制互补。"
+     },
+     {
+      "topic": "可靠性与硬件软件协同",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "临界段/优先级反转讨论有限；可靠性未单列",
+        "extent": "partial"
+       },
+       {
+        "source": "zh2",
+        "section": "驱动与硬件接口实验",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "11.2 复位模块与看门狗模块；12.1 嵌入式系统稳定性问题；12.2 外接传感器及执行部件的编程方法（底层硬件接口/驱动构件）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "debugging and testing、deadlock/starvation、hardware interfacing",
+        "extent": "covered"
+       },
+       {
+        "source": "en1",
+        "section": "debugging/profiling/tracing 课程",
+        "extent": "partial"
+       }
+      ],
+      "note": "中文缺系统的可靠性/失效分析；英文有调试/测试与死锁/饥饿讨论。；旧中文只有 FreeRTOS 临界段与驱动实验的 partial；苏州大学这门课把“稳定性问题—看门狗复位—外设接口编程”作为独立单元，且整门课以软硬件构件协同为主线，正好覆盖“可靠性与硬件软件协同”。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按“从 0 写内核”理解任务切换/临界段/优先级/时间片，再用应用篇做任务、队列、信号量实验。"
+       },
+       {
+        "source": "zh2",
+        "read": "学内核模块、设备树与字符/平台/I2C/SPI 驱动，完成板级驱动实验。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "在看驱动书之前先读第 5 章：把 PC/Linux/Android 启动过程对比看一遍，再跟 5.1.2 的 u-boot 启动流程走一遍，标出 BootROM→SPL/U-Boot→设备树→内核→rootfs 各阶段做了什么、失败时从哪里看串口日志。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "按苏州大学课学 11.2 看门狗与复位、12.1 稳定性问题、12.2 外设接口编程：给自己的板子加独立看门狗并在死循环里验证复位，再写一个传感器/执行器驱动构件，记录软硬件交界处的时序与容错处理。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按 Embedded Linux system development→kernel/driver→PREEMPT_RT 学习启动链、设备树、驱动与实时内核。"
+       },
+       {
+        "source": "en2",
+        "read": "用 ECE445M 的 RTOS 主题补调度、latency/jitter/deadline 与调试测试。"
+       },
+       {
+        "source": "en1",
+        "read": "In the Bootlin kernel course, do the memory-management and locking labs (kmalloc vs vmalloc, spinlock vs mutex, sleeping in interrupt context) and use the debugging/profiling material to trace a leak or a lockup."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "The University of Texas at Austin",
@@ -59485,20 +62119,285 @@
     "url": "https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/",
     "lang": "en",
     "free": true,
-    "covers": "以测量（measurement and signals）为主线的动手课：仪器与「虚拟仪器」、测量的误差与不确定度、噪声、信号调理（放大、滤波、差分）、数据采集与 ADC/DAC 接口、以及配套的实验室实验；讲义、实验、习题全公开。传感器件本身的物理与选型、以及执行器驱动不是它的重点。"
+    "covers": "仪器与虚拟仪器、测量误差与不确定度、噪声、信号调理（放大/滤波/差分）、数据采集与 ADC/DAC 接口、配套实验室实验。",
+    "access": "MIT OCW 免费公开讲义、实验与习题；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "乐鑫 ESP-IDF 官方中文编程指南",
-    "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/",
+    "title": "《传感器与检测技术》（中国大学MOOC，12 个教学单元）",
+    "url": "https://www.icourse163.org/course/detail.htm?cid=1451620164",
     "lang": "zh",
-    "free": true,
-    "covers": "按目录选择 FreeRTOS、外设驱动、GPIO/I2C/SPI、Wi-Fi/Bluetooth 与联网示例；以 ESP32 为实践平台。",
-    "access": "免费阅读"
+    "free": null,
+    "covers": "传感器与测量系统基本特性（静态/动态/不失真）、测量误差分析、标定、电阻/电容/电感/压电/霍尔/热电/光电/超声波传感器、信号调理、测量数据处理、智能传感器、多传感器融合、抗干扰与可靠性。",
+    "access": "视频需注册选课，按学期开放，认证证书收费；页面公开 12 单元大纲。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "video",
+     "title": "江协科技《STM32 入门教程》2023 版（ADC/DMA/I2C/SPI/PWM）",
+     "url": "https://www.bilibili.com/video/BV1th411z7sn",
+     "lang": "zh",
+     "free": true,
+     "covers": "ADC 单/多通道采集、DMA 数据转运、I2C/SPI 读写传感器（MPU6050/OLED）、USART、PWM 驱动舵机/直流电机；提供采集与执行器接口的裸机实现。",
+     "access": "B 站免费，标题标“中文字幕”；配套资料免费下载。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "Embedded Systems - Shape The World（UT Austin，免费在线教材）",
+     "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+     "lang": "en",
+     "free": true,
+     "covers": "ADC 数据采集、DAC/声音、PWM、LCD、中断、UART；提供采集与执行器接口的裸机实现。",
+     "access": "免费电子教材；英文；实验需 Cortex-M 板卡。",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "Introduction to Microcontrollers and Embedded Systems（Auburn University MECH 4240/50 课程讲义，David Beale）",
+     "url": "https://www.eng.auburn.edu/~dbeale/MECH4240-50/Introduction%20to%20Microcontrollers%20and%20Embedded%20Systems.pdf",
+     "lang": "en",
+     "free": true,
+     "covers": "总线：UART（第 87 页起）、SPI（95 页起）、I2C（102 页起）、CAN Bus（108 页起）、OneWire（110 页起）的信号与时序；执行器与软硬件接口：微控制器与传感器/执行器的接口电路、滤波与控制、Load Cells（122 页）、Electric Motors 步进电机与直流电机（125–133 页）、Thermocouples（134 页）。",
+     "access": "Auburn 大学课程站免费 PDF（英文，约 140 页）；无注册。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "《传感器与检测技术》（中国大学MOOC，12 个教学单元）",
+      "url": "https://www.icourse163.org/course/detail.htm?cid=1451620164",
+      "tier": "website",
+      "free": null,
+      "role": "primary",
+      "covers": "传感器与测量系统基本特性（静态/动态/不失真）、测量误差分析、标定、电阻/电容/电感/压电/霍尔/热电/光电/超声波传感器、信号调理、测量数据处理、智能传感器、多传感器融合、抗干扰与可靠性。",
+      "access": "视频需注册选课，按学期开放，认证证书收费；页面公开 12 单元大纲。",
+      "publisher": "中国大学MOOC 课程团队"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "江协科技《STM32 入门教程》2023 版（ADC/DMA/I2C/SPI/PWM）",
+      "url": "https://www.bilibili.com/video/BV1th411z7sn",
+      "tier": "video",
+      "free": true,
+      "role": "supplement",
+      "covers": "ADC 单/多通道采集、DMA 数据转运、I2C/SPI 读写传感器（MPU6050/OLED）、USART、PWM 驱动舵机/直流电机；提供采集与执行器接口的裸机实现。",
+      "access": "B 站免费，标题标“中文字幕”；配套资料免费下载。",
+      "publisher": "江协科技"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Introduction to Electronics, Signals, and Measurement (MIT 6.071J, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "仪器与虚拟仪器、测量误差与不确定度、噪声、信号调理（放大/滤波/差分）、数据采集与 ADC/DAC 接口、配套实验室实验。",
+      "access": "MIT OCW 免费公开讲义、实验与习题；英文，字幕未核对。",
+      "publisher": "MIT EECS / Nuclear Science and Engineering"
+     },
+     {
+      "key": "en2",
+      "lang": "en",
+      "title": "Embedded Systems - Shape The World（UT Austin，免费在线教材）",
+      "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+      "tier": "book",
+      "free": true,
+      "role": "supplement",
+      "covers": "ADC 数据采集、DAC/声音、PWM、LCD、中断、UART；提供采集与执行器接口的裸机实现。",
+      "access": "免费电子教材；英文；实验需 Cortex-M 板卡。",
+      "publisher": "Jonathan Valvano & Ramesh Yerraballi, UT Austin"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "Introduction to Microcontrollers and Embedded Systems（Auburn University MECH 4240/50 课程讲义，David Beale）",
+      "url": "https://www.eng.auburn.edu/~dbeale/MECH4240-50/Introduction%20to%20Microcontrollers%20and%20Embedded%20Systems.pdf",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "总线：UART（第 87 页起）、SPI（95 页起）、I2C（102 页起）、CAN Bus（108 页起）、OneWire（110 页起）的信号与时序；执行器与软硬件接口：微控制器与传感器/执行器的接口电路、滤波与控制、Load Cells（122 页）、Electric Motors 步进电机与直流电机（125–133 页）、Thermocouples（134 页）。",
+      "access": "Auburn 大学课程站免费 PDF（英文，约 140 页）；无注册。",
+      "publisher": "Auburn University（MECH 4240/50 课程，David Beale）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.3.3.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "测量",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第二讲传感器与测量系统基本特性；测量系统结构",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Measurement and signals、instrumentation labs",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从测量系统与静态/动态特性讲起。"
+     },
+     {
+      "topic": "校准",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "传感器的标定方法（第二/三讲）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "测量误差/不确定度与实验校准",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有标定专节；英文通过实验做校准。"
+     },
+     {
+      "topic": "误差",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第三讲测量误差分析",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Measurement error and uncertainty、noise",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲误差来源与不确定度。"
+     },
+     {
+      "topic": "总线",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "I2C/SPI/USART 读写传感器",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "UART；无 I2C/SPI 章",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "SPI Signals（95 页起）、I2C Signals（102 页起）、CAN Bus（108 页起）、UART/OneWire 对照",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有 I2C/SPI 动手；英文教材只有 UART，I2C/SPI 总线缺。；旧英文材料只有 UART，没有 I2C/SPI/CAN；这份课程讲义按总线逐类讲信号线、时序与典型接法，把数字总线补全。"
+     },
+     {
+      "topic": "采集",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "ADC 单/多通道 + DMA 数据转运",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Data acquisition 与 ADC/DAC 接口；6.071J lab",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都覆盖采样/量化/ADC 接口。"
+     },
+     {
+      "topic": "执行器和软硬件接口",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "PWM 驱动舵机/直流电机；GPIO/中断接口",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "PWM/DAC 输出与硬件接口；执行器理论未讲",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "Electric Motors（步进电机 125 页、直流电机 131 页）、Load Cells、Thermocouples，以及“circuits for interfacing microcontrollers with sensors and actuators”的接口电路与滤波章节",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有电机 PWM 实验；两侧都没有执行器选型/驱动电路/闭环接口的系统教学。；旧英文只用 PWM/DAC 输出举例，没有执行器本身的类型与驱动；该讲义讲步进/直流电机的驱动方式与接口电路，并把传感器接口、滤波与控制放在同一门课里，覆盖“执行器和软硬件接口”。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按测量特性→误差→标定→各类传感器→信号调理学习，做传感器特性与误差实验。"
+       },
+       {
+        "source": "zh2",
+        "read": "用 STM32 做 ADC+DMA 采集、I2C/SPI 读传感器、PWM 驱动电机，打通软硬件接口。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按测量/误差/噪声→信号调理→数据采集/ADC 学习，完成 lab。"
+       },
+       {
+        "source": "en2",
+        "read": "补 DAC/PWM/ADC 的裸机实现与串口。"
+       },
+       {
+        "source": "r7-en1",
+        "read": "Read the bus chapters (UART → SPI → I2C → CAN) and, for each, wire one device to an MCU and decode a frame on a logic analyzer; then read the Electric Motors chapter and drive a DC motor with PWM plus a stepper with a driver IC, noting the interface/protection circuitry between MCU and actuator."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "University of California, San Diego",
@@ -59818,20 +62717,394 @@
     "url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
     "lang": "en",
     "free": true,
-    "covers": "反馈系统的性质与优点、时域与频域性能指标、稳定性与稳定裕度、根轨迹法、Nyquist 判据、频域设计、补偿技术以及在各物理系统上的应用；讲义、习题、考试全公开，参考书是 Åström & Murray 的 Feedback Systems（作者网站免费）。以频域方法为主，状态空间/Kalman 滤波/MPC 只作延伸，需要另配状态空间与估计方面的材料。"
+    "covers": "反馈系统性质、时域/频域性能、稳定性与稳定裕度、根轨迹、Nyquist、频域设计与补偿；讲义/习题/考试公开。",
+    "access": "MIT OCW 免费；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "中国大学 MOOC《控制工程基础》",
-    "url": "https://www.icourse163.org/course/detail.htm?cid=1207110819",
+    "title": "中国矿业大学《自动控制原理》（中国大学MOOC）",
+    "url": "https://www.icourse163.org/course/CUMT-1469865180",
     "lang": "zh",
     "free": null,
-    "covers": "系统建模、稳定性、动态性能与反馈控制；状态估计和 Kalman 滤波需另读英文材料。",
-    "access": "课程大纲公开；视频可能需注册，开放范围以开课页为准"
+    "covers": "控制系统建模、时域/根轨迹/频域分析、稳定性与稳态误差、PID 与超前-滞后校正、状态空间模型、能控能观、极点配置/状态反馈。",
+    "access": "视频需注册选课，按学期开放，认证证书收费。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "KalmanFilter.NET 中文教程《通过示例讲解卡尔曼滤波》",
+     "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+     "lang": "zh",
+     "free": true,
+     "covers": "卡尔曼滤波直观解释与推导、数值示例、扩展卡尔曼滤波（EKF）、无迹卡尔曼滤波（UKF）、传感器融合与实现。",
+     "access": "中文网页教程免费；进阶书收费。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Multivariable Control Systems (MIT 6.245, MIT OpenCourseWare)",
+     "url": "https://ocw.mit.edu/courses/6-245-multivariable-control-systems-spring-2004/",
+     "lang": "en",
+     "free": true,
+     "covers": "多变量反馈综合、性能/鲁棒性权衡、Q 参数化、线性二次优化（LQR）、H-infinity、模型简化。",
+     "access": "MIT OCW 免费；英文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Principles of Optimal Control (MIT 16.323, MIT OpenCourseWare)",
+     "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/",
+     "lang": "en",
+     "free": true,
+     "covers": "确定/随机系统最优控制、数值搜索、模型预测控制（MPC）、动态规划、变分法、Pontryagin 最大值原理；含例子与作业。",
+     "access": "MIT OCW 免费；英文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "Kalman and Bayesian Filters in Python（Roger Labbe，免费在线书）",
+     "url": "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python",
+     "lang": "en",
+     "free": true,
+     "covers": "卡尔曼滤波、扩展/无迹卡尔曼、粒子滤波，Jupyter Notebook 讲解与练习（含解答）。",
+     "access": "GitHub 免费开源书；英文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "席裕庚、李德伟、林姝《模型预测控制——现状与挑战》（自动化学报，2013，39(3): 222–236）",
+     "url": "https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.00222",
+     "lang": "zh",
+     "free": true,
+     "covers": "模型预测控制（MPC）的定位与原理：作为约束优化控制，回顾预测控制理论与工业应用的发展（模型算法控制、动态矩阵控制、广义预测控制），分析现有理论与技术的局限，指出大系统/快速系统/非线性系统预测控制的研究方向。",
+     "access": "自动化学报官网免费 HTML 摘要与参考文献，PDF 全文可下载；中文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "胡耀华、贾欣乐《广义预测控制综述》（信息与控制）",
+     "url": "https://xk.sia.cn/cn/article/pdf/preview/2203.pdf",
+     "lang": "zh",
+     "free": true,
+     "covers": "预测控制三大要素与算法结构：以有限阶跃/脉冲响应为预测模型、每个控制周期“滚动推移”在线有限时域优化（滚动优化）、利用测量信息做反馈校正；广义预测控制（GPC）的递推/直接/组合算法、稳定性与鲁棒性分析结论。",
+     "access": "信息与控制期刊官网免费 PDF 预览；中文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "video",
+     "title": "DR_CAN《【MPC模型预测控制器】》系列（作者本人 B 站账号）",
+     "url": "https://www.bilibili.com/video/BV1SQ4y1Y7FG",
+     "lang": "zh",
+     "free": true,
+     "covers": "MPC 的最优化控制基本概念（第 1 讲）与数学建模推导（第 2 讲：代价函数、把状态预测代入后消去中间状态、化成标准二次型/二次规划）。",
+     "access": "作者本人账号免费观看（平台标注自制），中文讲解；字幕未核对。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "中国矿业大学《自动控制原理》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/CUMT-1469865180",
+      "tier": "website",
+      "free": null,
+      "role": "primary",
+      "covers": "控制系统建模、时域/根轨迹/频域分析、稳定性与稳态误差、PID 与超前-滞后校正、状态空间模型、能控能观、极点配置/状态反馈。",
+      "access": "视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "中国矿业大学"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "KalmanFilter.NET 中文教程《通过示例讲解卡尔曼滤波》",
+      "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "卡尔曼滤波直观解释与推导、数值示例、扩展卡尔曼滤波（EKF）、无迹卡尔曼滤波（UKF）、传感器融合与实现。",
+      "access": "中文网页教程免费；进阶书收费。",
+      "publisher": "KalmanFilter.NET（Alex Becker）"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Feedback Systems (MIT 6.302, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "反馈系统性质、时域/频域性能、稳定性与稳定裕度、根轨迹、Nyquist、频域设计与补偿；讲义/习题/考试公开。",
+      "access": "MIT OCW 免费；英文，字幕未核对。",
+      "publisher": "MIT EECS"
+     },
+     {
+      "key": "en2",
+      "lang": "en",
+      "title": "Multivariable Control Systems (MIT 6.245, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-245-multivariable-control-systems-spring-2004/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "多变量反馈综合、性能/鲁棒性权衡、Q 参数化、线性二次优化（LQR）、H-infinity、模型简化。",
+      "access": "MIT OCW 免费；英文。",
+      "publisher": "MIT EECS"
+     },
+     {
+      "key": "en3",
+      "lang": "en",
+      "title": "Principles of Optimal Control (MIT 16.323, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "确定/随机系统最优控制、数值搜索、模型预测控制（MPC）、动态规划、变分法、Pontryagin 最大值原理；含例子与作业。",
+      "access": "MIT OCW 免费；英文。",
+      "publisher": "MIT AeroAstro（Jonathan How）"
+     },
+     {
+      "key": "en4",
+      "lang": "en",
+      "title": "Kalman and Bayesian Filters in Python（Roger Labbe，免费在线书）",
+      "url": "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python",
+      "tier": "book",
+      "free": true,
+      "role": "supplement",
+      "covers": "卡尔曼滤波、扩展/无迹卡尔曼、粒子滤波，Jupyter Notebook 讲解与练习（含解答）。",
+      "access": "GitHub 免费开源书；英文。",
+      "publisher": "Roger Labbe"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "席裕庚、李德伟、林姝《模型预测控制——现状与挑战》（自动化学报，2013，39(3): 222–236）",
+      "url": "https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.00222",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "模型预测控制（MPC）的定位与原理：作为约束优化控制，回顾预测控制理论与工业应用的发展（模型算法控制、动态矩阵控制、广义预测控制），分析现有理论与技术的局限，指出大系统/快速系统/非线性系统预测控制的研究方向。",
+      "access": "自动化学报官网免费 HTML 摘要与参考文献，PDF 全文可下载；中文。",
+      "publisher": "中国自动化学会／自动化学报（上海交通大学 席裕庚等）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.1.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "胡耀华、贾欣乐《广义预测控制综述》（信息与控制）",
+      "url": "https://xk.sia.cn/cn/article/pdf/preview/2203.pdf",
+      "tier": "material",
+      "free": true,
+      "role": "supplement",
+      "covers": "预测控制三大要素与算法结构：以有限阶跃/脉冲响应为预测模型、每个控制周期“滚动推移”在线有限时域优化（滚动优化）、利用测量信息做反馈校正；广义预测控制（GPC）的递推/直接/组合算法、稳定性与鲁棒性分析结论。",
+      "access": "信息与控制期刊官网免费 PDF 预览；中文。",
+      "publisher": "信息与控制（大连海事大学 胡耀华、贾欣乐）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.1.json"
+     },
+     {
+      "key": "main-zh-drcan-mpc",
+      "lang": "zh",
+      "title": "DR_CAN《【MPC模型预测控制器】》系列（作者本人 B 站账号）",
+      "url": "https://www.bilibili.com/video/BV1SQ4y1Y7FG",
+      "tier": "video",
+      "free": true,
+      "role": "supplement",
+      "covers": "MPC 的最优化控制基本概念（第 1 讲）与数学建模推导（第 2 讲：代价函数、把状态预测代入后消去中间状态、化成标准二次型/二次规划）。",
+      "access": "作者本人账号免费观看（平台标注自制），中文讲解；字幕未核对。",
+      "publisher": "DR_CAN（王天威，作者本人账号）",
+      "reupload": false,
+      "added_by": "review/main-additions/H.4.1.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "反馈",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "反馈控制系统建模、PID 与校正",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Feedback、root locus、Nyquist、frequency design",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都从反馈与稳定性讲起。"
+     },
+     {
+      "topic": "稳定性",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "时域/频域稳定性、稳态误差、校正",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Stability、stability margins、Nyquist",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都覆盖稳定裕度与判据。"
+     },
+     {
+      "topic": "状态空间",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "状态空间模型、状态反馈/极点配置",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "多变量状态空间综合、LQR；6.302 不覆盖",
+        "extent": "covered"
+       },
+       {
+        "source": "en3",
+        "section": "动态规划/最优控制的状态空间表述",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文有状态空间与极点配置；英文 6.245/16.323 补 LQR/最优控制。"
+     },
+     {
+      "topic": "可控/可观",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "能控性与能观性",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "多变量系统的可控/可观与状态反馈设计",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲能控/能观。"
+     },
+     {
+      "topic": "Kalman滤波与模型预测控制",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "Kalman/EKF/UKF 与传感器融合；MPC 未覆盖",
+        "extent": "partial"
+       },
+       {
+        "source": "zh2",
+        "section": "KalmanFilter.NET 中文教程：卡尔曼滤波直观解释与推导、数值示例、EKF、UKF、传感器融合",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "摘要与正文：MPC 作为约束优化控制的定位、DMC/GPC 等算法脉络、理论与应用局限",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "引言与第 2 节起：预测模型/滚动优化/反馈校正三要素、GPC 算法族、稳定性与鲁棒性结论",
+        "extent": "covered"
+       },
+       {
+        "source": "main-zh-drcan-mpc",
+        "section": "MPC 系列第 1–2 讲：最优化控制概念、二次规划形式的推导",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en4",
+        "section": "Kalman/EKF/UKF/particle filters",
+        "extent": "covered"
+       },
+       {
+        "source": "en3",
+        "section": "Model predictive control",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文 Kalman 有免费教程但 MPC 缺失；英文 Kalman 书 + 16.323 的 MPC 覆盖两项。；Kalman 一侧由已有的中文教程承担：从一维示例推到多维 KF，再扩到 EKF/UKF，深度足够入门。；旧记录里中文 MPC 完全没有材料（旧结论说“未找到中文课程或公开正文”）；这篇中文综述给出 MPC 的定义、为什么要约束优化、工业应用与局限，补上概念层。；在概念之上补算法结构：MPC 每一步做什么（用模型预测、滚动求解有限时域优化、用测量做反馈校正），以及 GPC 的几种实现路线；这样中文侧“Kalman + MPC”都有可读材料，深度到入门（不含 QP 求解器实现与工程整定）。；原记录的 MPC 中文只有两篇期刊综述（讲算法脉络，不讲怎么列出和求解优化问题）；DR_CAN 系列从代价函数一步步推到二次规划，补上可操作的教学。Kalman 部分仍由 KalmanFilter.NET 中文教程承担。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按建模→时域/频域/根轨迹→稳定性→PID/校正→状态空间/能控能观/极点配置学习。"
+       },
+       {
+        "source": "zh2",
+        "read": "读 Kalman 滤波示例教程，完成 EKF/UKF 数值练习。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "先读席裕庚综述的引言与展望：弄清 MPC 与 PID/LQR 的区别（在线解约束优化、滚动时域），记下 DMC/GPC 各自的模型形式与适用场景。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "再读《广义预测控制综述》第 1–2 节，把“预测模型—滚动优化—反馈校正”三要素写成自己的话，并用一个一阶系统手算一步预测与滚动优化的目标函数；最后对照 zh2 的 Kalman 教程理解状态估计如何给 MPC 提供初始状态。"
+       },
+       {
+        "source": "main-zh-drcan-mpc",
+        "read": "看 DR_CAN MPC 系列第 1–2 讲，为一个二阶系统写出预测时域内的代价函数并整理成二次规划，再读席裕庚综述了解 DMC/GPC 的发展。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "先学反馈/稳定性/频域设计。"
+       },
+       {
+        "source": "en2",
+        "read": "再学状态空间、LQR 与多变量综合。"
+       },
+       {
+        "source": "en4",
+        "read": "补 Kalman/EKF/UKF 状态估计。"
+       },
+       {
+        "source": "en3",
+        "read": "最后学 MPC/动态规划/最优控制。"
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Massachusetts Institute of Technology",
@@ -59968,24 +63241,314 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "Stanford Engineering Everywhere CS223A - Introduction to Robotics（课程视频 + 讲义 handouts + 作业，免费）",
+    "title": "Stanford CS223A Introduction to Robotics（SEE 公开 16 讲视频 + 讲义 + 作业）",
     "url": "https://see.stanford.edu/Course/CS223A",
     "lang": "en",
     "free": true,
-    "covers": "SEE 公开的 Stanford CS223A（Khatib）完整 16 讲视频、讲义（Kinematics 1-2、Jacobian、Robots and Vision、Trajectory Planning、Dynamics、Control）与 6 次作业；官方主题写作 robotics foundations in kinematics, dynamics, control, motion planning, trajectory generation, programming and design，正好覆盖节点的运动学/雅可比、动力学、轨迹规划与机器人控制。"
+    "covers": "Kinematics 1–2、Jacobian、Robots and Vision、Trajectory Planning、Dynamics、Control；6 次作业。",
+    "access": "SEE 免费公开视频、handouts 与作业；英文，字幕未核对。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "小鱼《动手学 ROS 2》",
-    "url": "https://fishros.com/d2lros2/",
+    "title": "东北大学《机器人基础原理》（中国大学MOOC，国家级一流课程）",
+    "url": "https://www.icourse163.org/course/NEU-1003431001",
     "lang": "zh",
-    "free": true,
-    "covers": "ROS 2 通信、机器人软件和导航实践；运动学、动力学与控制推导仍配合英文课程。",
-    "access": "免费阅读"
+    "free": null,
+    "covers": "机构组成、坐标变换、位姿运动学、速度建模、动力学建模、驱动系统、位姿轨迹控制、力控制、智能控制；11 章，含 MATLAB 仿真。",
+    "access": "视频需注册选课，按学期开放，认证证书收费；课程说明视频/课件是提纲性的，需配合教材。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "台大开放式课程《机器人学一》林沛群（7 讲，中文授课）",
+     "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0031",
+     "lang": "zh",
+     "free": true,
+     "covers": "物体在空间运动的描述、机械手臂正/逆运动学、Jacobian、机械手臂轨迹规划与实例；共 7 讲。",
+     "access": "NTU OCW 免费影片；中文授课。Coursera 版自 2025 年 8 月起只免费预览第一单元，完整需付费，故以 OCW 为准。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Robot Mapping (WS 2022/23, University of Freiburg, Cyrill Stachniss)",
+     "url": "http://ais.informatik.uni-freiburg.de/teaching/ws22/mapping",
+     "lang": "en",
+     "free": true,
+     "covers": "SLAM 问题定义、占据栅格/特征地图、Kalman/EKF/信息滤波/粒子滤波、图优化与最小二乘、回环检测/数据关联；含讲义 PDF 与 MP4。",
+     "access": "课程站免费公开讲义与视频；英文，字幕未核对。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "《视觉 SLAM 十四讲：从理论到实践（第 2 版）》（高翔等，电子工业出版社，2019）",
+     "url": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=54412",
+     "lang": "zh",
+     "free": false,
+     "covers": "定位与建图全流程：第 2 讲经典视觉 SLAM 框架（视觉里程计/后端优化/回环检测/建图）与 SLAM 的数学表述；第 7–8 讲视觉里程计 1–2（特征点法、直接法、光流）；第 9–10 讲后端（状态估计的概率解释、滑动窗口滤波与优化）；后续回环检测与建图章节。",
+     "access": "电子工业出版社正式商品页，纸质书定价 ¥108.0（第 2 版，2019-07，408 页，ISBN 9787121369421）；全文需购买，未购买，目录公开可核。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "KalmanFilter.NET 中文教程《通过示例讲解卡尔曼滤波》（传感器融合章节）",
+     "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+     "lang": "zh",
+     "free": true,
+     "covers": "多传感器感知融合的估计基础：卡尔曼滤波的一维/多维推导与数值示例、扩展与无迹卡尔曼；教程正文强调“将预测与测量加权融合、对不确定度较低的一方赋更大权重”，即以卡尔曼增益做多源信息融合（该站付费书另含传感器融合专题）。",
+     "access": "作者官方站点免费中文版；中文讲解，无需注册。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "台大开放式课程《机器人学一》林沛群（7 讲，中文授课）",
+      "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0031",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "物体在空间运动的描述、机械手臂正/逆运动学、Jacobian、机械手臂轨迹规划与实例；共 7 讲。",
+      "access": "NTU OCW 免费影片；中文授课。Coursera 版自 2025 年 8 月起只免费预览第一单元，完整需付费，故以 OCW 为准。",
+      "publisher": "国立台湾大学（林沛群）"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "东北大学《机器人基础原理》（中国大学MOOC，国家级一流课程）",
+      "url": "https://www.icourse163.org/course/NEU-1003431001",
+      "tier": "website",
+      "free": null,
+      "role": "primary",
+      "covers": "机构组成、坐标变换、位姿运动学、速度建模、动力学建模、驱动系统、位姿轨迹控制、力控制、智能控制；11 章，含 MATLAB 仿真。",
+      "access": "视频需注册选课，按学期开放，认证证书收费；课程说明视频/课件是提纲性的，需配合教材。",
+      "publisher": "东北大学机器人科学与工程学院"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Stanford CS223A Introduction to Robotics（SEE 公开 16 讲视频 + 讲义 + 作业）",
+      "url": "https://see.stanford.edu/Course/CS223A",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "Kinematics 1–2、Jacobian、Robots and Vision、Trajectory Planning、Dynamics、Control；6 次作业。",
+      "access": "SEE 免费公开视频、handouts 与作业；英文，字幕未核对。",
+      "publisher": "Stanford University（Oussama Khatib）"
+     },
+     {
+      "key": "en2",
+      "lang": "en",
+      "title": "Robot Mapping (WS 2022/23, University of Freiburg, Cyrill Stachniss)",
+      "url": "http://ais.informatik.uni-freiburg.de/teaching/ws22/mapping",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "SLAM 问题定义、占据栅格/特征地图、Kalman/EKF/信息滤波/粒子滤波、图优化与最小二乘、回环检测/数据关联；含讲义 PDF 与 MP4。",
+      "access": "课程站免费公开讲义与视频；英文，字幕未核对。",
+      "publisher": "University of Freiburg（Cyrill Stachniss）"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "《视觉 SLAM 十四讲：从理论到实践（第 2 版）》（高翔等，电子工业出版社，2019）",
+      "url": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=54412",
+      "tier": "book",
+      "free": false,
+      "role": "supplement",
+      "covers": "定位与建图全流程：第 2 讲经典视觉 SLAM 框架（视觉里程计/后端优化/回环检测/建图）与 SLAM 的数学表述；第 7–8 讲视觉里程计 1–2（特征点法、直接法、光流）；第 9–10 讲后端（状态估计的概率解释、滑动窗口滤波与优化）；后续回环检测与建图章节。",
+      "access": "电子工业出版社正式商品页，纸质书定价 ¥108.0（第 2 版，2019-07，408 页，ISBN 9787121369421）；全文需购买，未购买，目录公开可核。",
+      "publisher": "高翔 等，电子工业出版社",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.2.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "KalmanFilter.NET 中文教程《通过示例讲解卡尔曼滤波》（传感器融合章节）",
+      "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "多传感器感知融合的估计基础：卡尔曼滤波的一维/多维推导与数值示例、扩展与无迹卡尔曼；教程正文强调“将预测与测量加权融合、对不确定度较低的一方赋更大权重”，即以卡尔曼增益做多源信息融合（该站付费书另含传感器融合专题）。",
+      "access": "作者官方站点免费中文版；中文讲解，无需注册。",
+      "publisher": "kalmanfilter.net（Alex Becker）官方中文版",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.2.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "运动学/动力学",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "正/逆运动学、Jacobian",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "第 1–5 章位姿运动学、速度建模、动力学建模",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Kinematics 1–2、Jacobian、Dynamics",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文运动学由台大课讲，动力学由东北大学课补；英文一门课覆盖。"
+     },
+     {
+      "topic": "定位建图",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "未涉及 SLAM/定位建图",
+        "extent": "partial"
+       },
+       {
+        "source": "zh2",
+        "section": "未涉及 SLAM",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "第 2 讲 2.2 经典视觉 SLAM 框架（视觉里程计/后端优化/回环检测/建图）+ 第 7–10 讲视觉里程计与后端",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en2",
+        "section": "SLAM 定义、EKF SLAM、graph-based SLAM、data association",
+        "extent": "covered"
+       }
+      ],
+      "note": "英文由 Freiburg Robot Mapping 补 SLAM；中文仍无 SLAM 课程。；旧中文只有台大与东北大学的运动学/控制课，完全不含 SLAM；《视觉 SLAM 十四讲》第 2 讲给出完整框架，再用视觉里程计、后端优化、回环检测、建图四部分展开，补上中文“定位建图”。"
+     },
+     {
+      "topic": "轨迹规划",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "机械手臂轨迹规划（一）（二）与实例",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "位姿轨迹控制章",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Trajectory Planning 讲次",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都讲关节空间/笛卡尔空间轨迹。"
+     },
+     {
+      "topic": "感知融合与机器人控制",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "第 6–8 章位姿轨迹控制、力控制、智能控制；感知融合未讲",
+        "extent": "partial"
+       },
+       {
+        "source": "zh1",
+        "section": "无控制/感知融合",
+        "extent": "partial"
+       },
+       {
+        "source": "zh2",
+        "section": "东北大学《机器人基础原理》第 6–8 章：位姿轨迹控制、力控制、智能控制",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "正文：卡尔曼滤波把“预测与测量加权融合、对不确定度较低的一方赋更大权重”（卡尔曼增益即融合权重）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Control 讲次；Robots and Vision 只作感知入门",
+        "extent": "partial"
+       },
+       {
+        "source": "en2",
+        "section": "Robot Mapping：EKF SLAM、信息滤波、粒子滤波、数据关联（多传感器/多观测的概率融合）",
+        "extent": "covered"
+       },
+       {
+        "source": "en1",
+        "section": "CS223A Control 讲次：关节空间控制、PD/计算力矩控制",
+        "extent": "covered"
+       }
+      ],
+      "note": "控制两侧都有；多传感器感知融合没有系统教学。；机器人控制一侧由东北大学课程承担：从位姿轨迹控制到力控制与智能控制，并配 MATLAB 仿真。；感知融合一侧旧中文缺失；KalmanFilter.NET 中文教程用数值例子讲预测与测量的加权融合，即多源信息融合的核心机制，与东北大学的控制内容合起来覆盖该知识点（入门深度）。；英文侧旧记录只有 CS223A 的 Control 一讲；Robot Mapping 讲 EKF/粒子滤波与数据关联，正是多传感器概率融合的核心方法。；控制一侧由 CS223A 的 Control 讲次承担，与 Robot Mapping 的融合方法合起来覆盖“感知融合与机器人控制”。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 4,
+      "total": 4,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "先看台大 7 讲，掌握空间描述、正/逆运动学、Jacobian 与轨迹规划。"
+       },
+       {
+        "source": "zh2",
+        "read": "再学东北大学第 1–8 章补动力学、驱动与位姿/力控制，做 MATLAB 仿真。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "在台大/东北大学学完运动学与控制后读《视觉 SLAM 十四讲》：先第 2 讲建立“视觉里程计—后端优化—回环检测—建图”框架与数学表述，再按第 7–8 讲实现特征点法与直接法里程计，第 9–10 讲做后端优化与回环，最后建图；配套跑通书里的代码。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "用 KalmanFilter.NET 中文站的传感器融合一章，把里程计与 IMU/视觉的测量写进同一状态向量做一次融合，观察协方差如何随观测更新。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 4,
+      "total": 4,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按 16 讲学运动学→Jacobian→视觉→轨迹规划→动力学→控制，完成 6 次作业。"
+       },
+       {
+        "source": "en2",
+        "read": "用 Robot Mapping 的 SLAM/EKF/图优化讲义补定位建图。"
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "Stanford University",
@@ -60121,24 +63684,367 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "IoT for Beginners（Microsoft 官方 12 周 24 课免费教程，带 quiz / 作业 / 解决方案）",
-    "url": "https://microsoft.github.io/IoT-For-Beginners/",
+    "title": "IoT for Beginners（Microsoft，12 weeks / 24 lessons）",
+    "url": "https://github.com/microsoft/IoT-For-Beginners",
     "lang": "en",
     "free": true,
-    "covers": "24 课按「农场→运输→制造→零售→消费」端到端项目推进：第 1-4 课讲 IoT 组成、微控制器 vs 单板机、传感器与执行器、把设备连上互联网并用 MQTT 收发消息；第 8-10 课讲云平台与云端应用逻辑、密钥/证书安全；第 11-14 课讲 GPS 定位、数据存储、地图可视化、地理围栏；第 15-18 课讲在设备端（边缘）跑推理；最后是语音交互项目。覆盖节点里的设备、连接、消息、平台、端到端集成与边缘侧处理；功耗管理只零散出现在设备选型/电池供电的提示里，没有独立课程。"
+    "covers": "同上 24 课英文原版：IoT 组成、设备、传感器/执行器、MQTT、云平台、应用逻辑、安全、GPS/存储/地理围栏、边缘 AI、语音；含 quiz/作业/解答。",
+    "access": "GitHub 免费开源课程；英文；需要硬件或仿真环境。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "乐鑫 ESP-IDF 官方中文编程指南",
-    "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/",
+    "title": "Microsoft《初学者物联网课程》（IoT for Beginners 简体中文译本，12 周 24 课）",
+    "url": "https://github.com/microsoft/IoT-For-Beginners/blob/main/translations/zh-CN/README.md",
     "lang": "zh",
     "free": true,
-    "covers": "按目录选择 FreeRTOS、外设驱动、GPIO/I2C/SPI、Wi-Fi/Bluetooth 与联网示例；以 ESP32 为实践平台。",
-    "access": "免费阅读"
+    "covers": "24 课按入门/农场/运输/制造/零售/消费项目推进：IoT 组成、微控制器 vs 单板机、传感器/执行器、连接互联网与 MQTT、云平台与云端应用逻辑、密钥/证书安全、GPS/数据存储/地图/地理围栏、边缘推理、语音交互。",
+    "access": "GitHub 免费中文译本（简体），与原英文课程同步；每课含课前/课后测验、书面指导、作业与解答；需要硬件或仿真环境。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "南京邮电大学《物联网导论》（中国大学MOOC）",
+     "url": "https://www.icourse163.org/course/NJUPT-1003224005",
+     "lang": "zh",
+     "free": null,
+     "covers": "物联网体系结构四层（感知识别、网络构建、管理服务、综合应用）、RFID、传感器、无线传感器网络、无线宽带网络、数据库、隐私保护与智能应用。",
+     "access": "视频需注册选课，按学期开放，认证证书收费。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "使用 Microsoft Azure IoT 中心进行设备管理的概述（微软官方简体中文文档）",
+     "url": "https://learn.microsoft.com/zh-cn/azure/iot-hub/iot-hub-device-management-overview",
+     "lang": "zh",
+     "free": true,
+     "covers": "设备管理：设备生命周期五个阶段、常见设备管理原则与模式、设备孪生（device twin）、直接方法、作业（jobs）、设备预配与分层（基本层/标准层功能差异）。",
+     "access": "Microsoft Learn 免费中文文档，无需注册；举例基于 Azure IoT 中心，概念可迁移到其他平台。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "ESP-IDF 编程指南：电源管理（乐鑫官方简体中文文档）",
+     "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-reference/system/power_management.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "设备侧功耗管理：动态调频（DFS）、自动 Light-sleep 与唤醒时间补偿、睡眠模式、电源管理锁（Power Management Locks）、功耗算法与调试/性能分析、应用示例。",
+     "access": "乐鑫官方文档免费中文；需 ESP32 硬件与 ESP-IDF 环境。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Overview of device management with Microsoft Azure IoT Hub (Microsoft Learn, English)",
+     "url": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview",
+     "lang": "en",
+     "free": true,
+     "covers": "Device management: five device-lifecycle stages, common device management principles and patterns, device twins, direct methods, jobs, provisioning and tier differences.",
+     "access": "Free Microsoft Learn documentation, English.",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "ESP-IDF Programming Guide: Power Management (Espressif, English)",
+     "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/power_management.html",
+     "lang": "en",
+     "free": true,
+     "covers": "Device-side power management: dynamic frequency scaling, automatic light-sleep with time compensation, sleep modes, power management locks, the ESP32 power management algorithm, debugging/profiling and examples.",
+     "access": "Free official docs, English.",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "Microsoft《初学者物联网课程》（IoT for Beginners 简体中文译本，12 周 24 课）",
+      "url": "https://github.com/microsoft/IoT-For-Beginners/blob/main/translations/zh-CN/README.md",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "24 课按入门/农场/运输/制造/零售/消费项目推进：IoT 组成、微控制器 vs 单板机、传感器/执行器、连接互联网与 MQTT、云平台与云端应用逻辑、密钥/证书安全、GPS/数据存储/地图/地理围栏、边缘推理、语音交互。",
+      "access": "GitHub 免费中文译本（简体），与原英文课程同步；每课含课前/课后测验、书面指导、作业与解答；需要硬件或仿真环境。",
+      "publisher": "Microsoft Azure Cloud Advocates（中文由学生大使团队翻译）"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "南京邮电大学《物联网导论》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NJUPT-1003224005",
+      "tier": "website",
+      "free": null,
+      "role": "supplement",
+      "covers": "物联网体系结构四层（感知识别、网络构建、管理服务、综合应用）、RFID、传感器、无线传感器网络、无线宽带网络、数据库、隐私保护与智能应用。",
+      "access": "视频需注册选课，按学期开放，认证证书收费。",
+      "publisher": "南京邮电大学"
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "IoT for Beginners（Microsoft，12 weeks / 24 lessons）",
+      "url": "https://github.com/microsoft/IoT-For-Beginners",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "同上 24 课英文原版：IoT 组成、设备、传感器/执行器、MQTT、云平台、应用逻辑、安全、GPS/存储/地理围栏、边缘 AI、语音；含 quiz/作业/解答。",
+      "access": "GitHub 免费开源课程；英文；需要硬件或仿真环境。",
+      "publisher": "Microsoft Azure Cloud Advocates"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "使用 Microsoft Azure IoT 中心进行设备管理的概述（微软官方简体中文文档）",
+      "url": "https://learn.microsoft.com/zh-cn/azure/iot-hub/iot-hub-device-management-overview",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "设备管理：设备生命周期五个阶段、常见设备管理原则与模式、设备孪生（device twin）、直接方法、作业（jobs）、设备预配与分层（基本层/标准层功能差异）。",
+      "access": "Microsoft Learn 免费中文文档，无需注册；举例基于 Azure IoT 中心，概念可迁移到其他平台。",
+      "publisher": "Microsoft（Microsoft Learn 官方文档）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.3.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "ESP-IDF 编程指南：电源管理（乐鑫官方简体中文文档）",
+      "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/api-reference/system/power_management.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "设备侧功耗管理：动态调频（DFS）、自动 Light-sleep 与唤醒时间补偿、睡眠模式、电源管理锁（Power Management Locks）、功耗算法与调试/性能分析、应用示例。",
+      "access": "乐鑫官方文档免费中文；需 ESP32 硬件与 ESP-IDF 环境。",
+      "publisher": "乐鑫信息科技（Espressif Systems）",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.3.json"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "Overview of device management with Microsoft Azure IoT Hub (Microsoft Learn, English)",
+      "url": "https://learn.microsoft.com/en-us/azure/iot-hub/iot-hub-device-management-overview",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "Device management: five device-lifecycle stages, common device management principles and patterns, device twins, direct methods, jobs, provisioning and tier differences.",
+      "access": "Free Microsoft Learn documentation, English.",
+      "publisher": "Microsoft",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.3.json"
+     },
+     {
+      "key": "r7-en2",
+      "lang": "en",
+      "title": "ESP-IDF Programming Guide: Power Management (Espressif, English)",
+      "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/power_management.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "Device-side power management: dynamic frequency scaling, automatic light-sleep with time compensation, sleep modes, power management locks, the ESP32 power management algorithm, debugging/profiling and examples.",
+      "access": "Free official docs, English.",
+      "publisher": "Espressif Systems",
+      "reupload": false,
+      "added_by": "review/pi-additions/H.4.3.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "设备",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 01–02 课：IoT 组成、微控制器 vs 单板机；第 03 课传感器/执行器",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Lessons 1–3：IoT introduction、microcontroller vs SBC、sensors/actuators",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧同一课程，设备选型与传感器/执行器都有项目。"
+     },
+     {
+      "topic": "连接",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 04 课：把设备连接到互联网、MQTT 代理；第 08 课云托管服务",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Lesson 4：connect to internet/MQTT；Lesson 8：cloud IoT service",
+        "extent": "covered"
+       }
+      ],
+      "note": "覆盖 Wi-Fi/MQTT 与云托管连接。"
+     },
+     {
+      "topic": "消息",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 04/07/09 课：MQTT 发布/订阅与云端消息处理",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Lessons 4/7/9：MQTT publish/subscribe、cloud application logic",
+        "extent": "covered"
+       }
+      ],
+      "note": "以 MQTT 为主线讲消息收发与应用逻辑。"
+     },
+     {
+      "topic": "平台",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 08–10 课：云平台、云端应用逻辑、安全",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Lessons 8–10：cloud platform、cloud app logic、security",
+        "extent": "covered"
+       }
+      ],
+      "note": "以 Azure IoT 服务为例；平台概念可迁移。"
+     },
+     {
+      "topic": "设备管理",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "课程列表未列设备注册/配置/OTA/生命周期管理",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "设备生命周期五阶段、设备管理原则与模式、设备孪生/直接方法/作业、分层与预配",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "课程列表未列 device management/OTA",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en1",
+        "section": "Five lifecycle stages, management principles/patterns, device twins, direct methods, jobs, provisioning",
+        "extent": "covered"
+       }
+      ],
+      "note": "两侧都没有设备注册、配置下发、OTA 与生命周期管理专课。；Microsoft 24 课中文译本与南邮导论都没有设备注册/孪生/作业/OTA 这一层（旧记录 partial）；Azure IoT 中文文档把设备生命周期与管理手段讲成体系，补上中文“设备管理”。；IoT for Beginners 24 课没有设备管理模块（旧记录 partial）；Azure IoT 英文文档成体系讲设备生命周期与孪生/方法/作业，补上英文侧“设备管理”。"
+     },
+     {
+      "topic": "功耗与端到端集成",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "端到端项目（农场→运输→制造→零售→消费）；功耗只在电池供电提示中出现",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "电源管理：DFS、自动 Light-sleep、睡眠模式、电源管理锁、功耗算法与示例",
+        "extent": "covered"
+       },
+       {
+        "source": "zh1",
+        "section": "24 课端到端项目（入门→农场→运输→制造→零售→消费）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "24 课端到端项目；功耗无独立模块",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en2",
+        "section": "Power Management: DFS, light-sleep, sleep modes, power locks, algorithm and examples",
+        "extent": "covered"
+       },
+       {
+        "source": "en1",
+        "section": "24-lesson end-to-end projects（farm → transport → manufacturing → retail → consumer）",
+        "extent": "covered"
+       }
+      ],
+      "note": "端到端集成 covered；功耗管理没有独立课程。；课程里功耗只在电池供电提示中出现（旧记录 partial）；ESP-IDF 电源管理文档给出设备侧功耗预算与睡眠策略的具体做法。；端到端集成由已有中文译本课程的六个项目串起来（设备→连接→云→应用），与 r7-zh2 的功耗管理合起来覆盖“功耗与端到端集成”。；英文课程没有独立功耗模块；ESP-IDF 英文功率管理文档补上设备侧功耗策略。；端到端集成由英文原版课程的六个项目承担，与 r7-en2 的功耗管理合起来覆盖该知识点。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "按 24 课顺序做项目：设备/传感器→MQTT 连接→云平台/应用逻辑→安全→GPS/存储→边缘推理→语音，完成每课作业。"
+       },
+       {
+        "source": "zh2",
+        "read": "补物联网四层体系、RFID/WSN/无线宽带等概念。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "学完 24 课后读 Azure IoT 设备管理中文文档：按设备生命周期五阶段（预配→配置→监控→更新→退役）画一张自己的设备管理表，写清每一阶段用设备孪生、直接方法还是作业来实现。"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "在 ESP32 上做一次功耗实测：先在 DFS 下测平均电流，再开自动 Light-sleep 并加时间补偿，最后用电源管理锁避免关键任务被降频，记录三种状态的电流与唤醒延迟。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 6,
+      "total": 6,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "按 Lessons 1–24 做端到端项目，从设备/MQTT 到云平台、边缘 AI 与语音。"
+       },
+       {
+        "source": "r7-en1",
+        "read": "Map the IoT solution you built from the 24 lessons onto the five device-lifecycle stages and implement one stage each with device twins, a direct method and a job."
+       },
+       {
+        "source": "r7-en2",
+        "read": "Measure current in DFS mode, then with automatic light-sleep, then with power management locks held; explain the trade-off between latency and energy for your end-to-end pipeline."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "FITech（芬兰多校联合，Aalto / Tampere 等）",

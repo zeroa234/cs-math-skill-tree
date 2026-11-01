@@ -1,0 +1,288 @@
+{
+ "id": "H.3.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《传感器与检测技术》（中国大学MOOC，12 个教学单元）",
+   "url": "https://www.icourse163.org/course/detail.htm?cid=1451620164",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "传感器与测量系统基本特性（静态/动态/不失真）、测量误差分析、标定、电阻/电容/电感/压电/霍尔/热电/光电/超声波传感器、信号调理、测量数据处理、智能传感器、多传感器融合、抗干扰与可靠性。",
+   "access": "视频需注册选课，按学期开放，认证证书收费；页面公开 12 单元大纲。",
+   "publisher": "中国大学MOOC 课程团队",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/detail.htm?cid=1451620164",
+    "location": "课程概述与授课大纲：第一讲绪论、第二讲基本特性、第三讲测量误差、第四至十一讲各类传感器、信号调理",
+    "finding": "大纲逐讲列测量特性、误差、标定与各类传感器，并含信号调理/多传感器融合；未列数字总线与执行器驱动。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "江协科技《STM32 入门教程》2023 版（ADC/DMA/I2C/SPI/PWM）",
+   "url": "https://www.bilibili.com/video/BV1th411z7sn",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "ADC 单/多通道采集、DMA 数据转运、I2C/SPI 读写传感器（MPU6050/OLED）、USART、PWM 驱动舵机/直流电机；提供采集与执行器接口的裸机实现。",
+   "access": "B 站免费，标题标“中文字幕”；配套资料免费下载。",
+   "publisher": "江协科技",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1th411z7sn",
+    "location": "章节目录：[7-1] ADC、[8-1] DMA、[9-1] USART、[10-1] I2C、[6-4] PWM 驱动舵机/直流电机",
+    "finding": "章节明确有 ADC/DMA/I2C/SPI 与 PWM 电机实验，可补总线、采集与执行器接口的动手实现。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Introduction to Electronics, Signals, and Measurement (MIT 6.071J, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "仪器与虚拟仪器、测量误差与不确定度、噪声、信号调理（放大/滤波/差分）、数据采集与 ADC/DAC 接口、配套实验室实验。",
+   "access": "MIT OCW 免费公开讲义、实验与习题；英文，字幕未核对。",
+   "publisher": "MIT EECS / Nuclear Science and Engineering",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/",
+    "location": "Syllabus/Calendar/Labs：measurement、error、noise、signal conditioning、data acquisition、ADC/DAC",
+    "finding": "课程以测量与信号为主线，公开讲义与 lab；传感器件物理/选型与执行器驱动不是重点。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Embedded Systems - Shape The World（UT Austin，免费在线教材）",
+   "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "ADC 数据采集、DAC/声音、PWM、LCD、中断、UART；提供采集与执行器接口的裸机实现。",
+   "access": "免费电子教材；英文；实验需 Cortex-M 板卡。",
+   "publisher": "Jonathan Valvano & Ramesh Yerraballi, UT Austin",
+   "evidence": {
+    "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+    "location": "目录：Ch.13 DAC and Sound、Ch.14 ADC and Data Acquisition、Ch.11 UART",
+    "finding": "目录明确有 DAC/ADC/数据采集与串口章，可补采集与执行器接口；无 I2C/SPI 传感器总线章。"
+   }
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Introduction to Microcontrollers and Embedded Systems（Auburn University MECH 4240/50 课程讲义，David Beale）",
+   "url": "https://www.eng.auburn.edu/~dbeale/MECH4240-50/Introduction%20to%20Microcontrollers%20and%20Embedded%20Systems.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "总线：UART（第 87 页起）、SPI（95 页起）、I2C（102 页起）、CAN Bus（108 页起）、OneWire（110 页起）的信号与时序；执行器与软硬件接口：微控制器与传感器/执行器的接口电路、滤波与控制、Load Cells（122 页）、Electric Motors 步进电机与直流电机（125–133 页）、Thermocouples（134 页）。",
+   "access": "Auburn 大学课程站免费 PDF（英文，约 140 页）；无注册。",
+   "publisher": "Auburn University（MECH 4240/50 课程，David Beale）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.eng.auburn.edu/~dbeale/MECH4240-50/Introduction%20to%20Microcontrollers%20and%20Embedded%20Systems.pdf",
+    "location": "目录页：UART Signals 87、SPI Signals 95、I2C Signals 102、CAN Bus 108、OneWire Bus 110、Load Cells 122、Electric Motors 125（Stepper Motors 125、DC Motors 131）、Thermocouples 134；正文开头写明 “circuits for interfacing microcontrollers with sensors and actuators”",
+    "finding": "PDF 全文 23 万字符，目录与正文确认逐类讲 UART/SPI/I2C/CAN 的信号与时序，并讲电机（步进/直流）等执行器及其驱动接口，可一次补上英文侧“总线”和“执行器和软硬件接口”。"
+   },
+   "added_by": "review/pi-additions/H.3.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "测量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二讲传感器与测量系统基本特性；测量系统结构",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Measurement and signals、instrumentation labs",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从测量系统与静态/动态特性讲起。"
+  },
+  {
+   "topic": "校准",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "传感器的标定方法（第二/三讲）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "测量误差/不确定度与实验校准",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有标定专节；英文通过实验做校准。"
+  },
+  {
+   "topic": "误差",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第三讲测量误差分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Measurement error and uncertainty、noise",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都讲误差来源与不确定度。"
+  },
+  {
+   "topic": "总线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "I2C/SPI/USART 读写传感器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "UART；无 I2C/SPI 章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "SPI Signals（95 页起）、I2C Signals（102 页起）、CAN Bus（108 页起）、UART/OneWire 对照",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有 I2C/SPI 动手；英文教材只有 UART，I2C/SPI 总线缺。；旧英文材料只有 UART，没有 I2C/SPI/CAN；这份课程讲义按总线逐类讲信号线、时序与典型接法，把数字总线补全。"
+  },
+  {
+   "topic": "采集",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "ADC 单/多通道 + DMA 数据转运",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data acquisition 与 ADC/DAC 接口；6.071J lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都覆盖采样/量化/ADC 接口。"
+  },
+  {
+   "topic": "执行器和软硬件接口",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "PWM 驱动舵机/直流电机；GPIO/中断接口",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "PWM/DAC 输出与硬件接口；执行器理论未讲",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Electric Motors（步进电机 125 页、直流电机 131 页）、Load Cells、Thermocouples，以及“circuits for interfacing microcontrollers with sensors and actuators”的接口电路与滤波章节",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有电机 PWM 实验；两侧都没有执行器选型/驱动电路/闭环接口的系统教学。；旧英文只用 PWM/DAC 输出举例，没有执行器本身的类型与驱动；该讲义讲步进/直流电机的驱动方式与接口电路，并把传感器接口、滤波与控制放在同一门课里，覆盖“执行器和软硬件接口”。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按测量特性→误差→标定→各类传感器→信号调理学习，做传感器特性与误差实验。"
+    },
+    {
+     "source": "zh2",
+     "read": "用 STM32 做 ADC+DMA 采集、I2C/SPI 读传感器、PWM 驱动电机，打通软硬件接口。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按测量/误差/噪声→信号调理→数据采集/ADC 学习，完成 lab。"
+    },
+    {
+     "source": "en2",
+     "read": "补 DAC/PWM/ADC 的裸机实现与串口。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "Read the bus chapters (UART → SPI → I2C → CAN) and, for each, wire one device to an MCU and decode a frame on a logic analyzer; then read the Electric Motors chapter and drive a DC motor with PWM plus a stepper with a driver IC, noting the interface/protection circuitry between MCU and actuator."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "传感器与检测技术 中国大学MOOC 课程 测量 误差 标定",
+   "result": "采纳 12 单元传感器课；补江协 STM32 总线/采集/执行器实验。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "embedded systems course lecture notes I2C SPI CAN bus actuators hardware software interface pdf",
+   "result": "采纳 Auburn MECH4240/50 讲义（大学课程 PDF，含 SPI/I2C/CAN 与电机章节）；其余为培训机构宣传、博客短文与印度学院讲义，未采纳。",
+   "by": "review/pi-additions/H.3.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.eng.auburn.edu/~dbeale/MECH4240-50/Introduction%20to%20Microcontrollers%20and%20Embedded%20Systems.pdf",
+   "result": "读目录与正文确认 UART/SPI/I2C/CAN、Load Cells、Electric Motors（步进/直流）、Thermocouples 章节，采纳。",
+   "by": "review/pi-additions/H.3.3.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有 ESP-IDF 文档，不含测量/误差/标定；已换传感器与检测技术课。",
+  "旧英文 MIT 6.071J 保留，测量/误差/采集强，但传感器物理与执行器弱。",
+  "执行器与 I2C/SPI 两侧不完整，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "传感器与接口",
+ "description": "测量、校准、误差、总线、采集、执行器和软硬件接口。",
+ "applied_additions": [
+  "review/pi-additions/H.3.3.json@dd65b7dc76"
+ ]
+}

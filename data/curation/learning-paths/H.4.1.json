@@ -1,0 +1,422 @@
+{
+ "id": "H.4.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "中国矿业大学《自动控制原理》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/CUMT-1469865180",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "控制系统建模、时域/根轨迹/频域分析、稳定性与稳态误差、PID 与超前-滞后校正、状态空间模型、能控能观、极点配置/状态反馈。",
+   "access": "视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "中国矿业大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/CUMT-1469865180",
+    "location": "课程概述“两大板块：经典控制理论、现代控制基础”；授课目标 1–2",
+    "finding": "页面明确经典部分含传递函数、时域/频域、校正设计，现代部分含状态空间、能控能观、极点配置；未提 Kalman 滤波与 MPC。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "KalmanFilter.NET 中文教程《通过示例讲解卡尔曼滤波》",
+   "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "卡尔曼滤波直观解释与推导、数值示例、扩展卡尔曼滤波（EKF）、无迹卡尔曼滤波（UKF）、传感器融合与实现。",
+   "access": "中文网页教程免费；进阶书收费。",
+   "publisher": "KalmanFilter.NET（Alex Becker）",
+   "evidence": {
+    "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+    "location": "首页：卡尔曼滤波简介、学习路径、免费示例教程、EKF/UKF/传感器融合",
+    "finding": "页面提供中文免费示例教程并说明覆盖 EKF/UKF 与传感器融合，可补 Kalman 滤波；不含 MPC。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Feedback Systems (MIT 6.302, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "反馈系统性质、时域/频域性能、稳定性与稳定裕度、根轨迹、Nyquist、频域设计与补偿；讲义/习题/考试公开。",
+   "access": "MIT OCW 免费；英文，字幕未核对。",
+   "publisher": "MIT EECS",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
+    "location": "Syllabus/Calendar：feedback、stability、root locus、Nyquist、frequency design",
+    "finding": "课程页列出反馈、稳定性、根轨迹、Nyquist 与频域设计，偏经典控制；状态空间/Kalman/MPC 不在其中。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Multivariable Control Systems (MIT 6.245, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/6-245-multivariable-control-systems-spring-2004/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "多变量反馈综合、性能/鲁棒性权衡、Q 参数化、线性二次优化（LQR）、H-infinity、模型简化。",
+   "access": "MIT OCW 免费；英文。",
+   "publisher": "MIT EECS",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-245-multivariable-control-systems-spring-2004/",
+    "location": "Course Description：performance/robustness、linear-quadratic optimization、H-infinity",
+    "finding": "课程描述包含 LQR 与多变量反馈综合，可补状态空间控制器设计；未单列 Kalman/MPC。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "Principles of Optimal Control (MIT 16.323, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "确定/随机系统最优控制、数值搜索、模型预测控制（MPC）、动态规划、变分法、Pontryagin 最大值原理；含例子与作业。",
+   "access": "MIT OCW 免费；英文。",
+   "publisher": "MIT AeroAstro（Jonathan How）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/",
+    "location": "Course Description：model predictive control、dynamic programming、stochastic problems",
+    "finding": "课程描述明确列 model predictive control 与随机最优控制，可补 MPC。"
+   }
+  },
+  {
+   "key": "en4",
+   "lang": "en",
+   "title": "Kalman and Bayesian Filters in Python（Roger Labbe，免费在线书）",
+   "url": "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "卡尔曼滤波、扩展/无迹卡尔曼、粒子滤波，Jupyter Notebook 讲解与练习（含解答）。",
+   "access": "GitHub 免费开源书；英文。",
+   "publisher": "Roger Labbe",
+   "evidence": {
+    "url": "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python",
+    "location": "Repository 描述：Kalman/EKF/UKF/particle filters，Jupyter notebooks，exercises with solutions",
+    "finding": "仓库说明覆盖 Kalman/EKF/UKF/粒子滤波，并提供 notebook 与习题解答，可补状态估计。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "席裕庚、李德伟、林姝《模型预测控制——现状与挑战》（自动化学报，2013，39(3): 222–236）",
+   "url": "https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.00222",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "模型预测控制（MPC）的定位与原理：作为约束优化控制，回顾预测控制理论与工业应用的发展（模型算法控制、动态矩阵控制、广义预测控制），分析现有理论与技术的局限，指出大系统/快速系统/非线性系统预测控制的研究方向。",
+   "access": "自动化学报官网免费 HTML 摘要与参考文献，PDF 全文可下载；中文。",
+   "publisher": "中国自动化学会／自动化学报（上海交通大学 席裕庚等）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.00222",
+    "location": "摘要：“30 多年来, 模型预测控制(Model predictive control, MPC)的理论和技术得到了长足的发展, 但面对经济社会迅速发展对约束优化控制提出的不断增长的要求…”；关键词：模型预测控制/约束控制/大系统/非线性系统",
+    "finding": "页面确认这是中文 MPC 综述，明确把 MPC 界定为约束优化控制并梳理其理论与工业应用脉络，可作为中文 MPC 的入口材料。"
+   },
+   "added_by": "review/pi-additions/H.4.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "胡耀华、贾欣乐《广义预测控制综述》（信息与控制）",
+   "url": "https://xk.sia.cn/cn/article/pdf/preview/2203.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "预测控制三大要素与算法结构：以有限阶跃/脉冲响应为预测模型、每个控制周期“滚动推移”在线有限时域优化（滚动优化）、利用测量信息做反馈校正；广义预测控制（GPC）的递推/直接/组合算法、稳定性与鲁棒性分析结论。",
+   "access": "信息与控制期刊官网免费 PDF 预览；中文。",
+   "publisher": "信息与控制（大连海事大学 胡耀华、贾欣乐）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://xk.sia.cn/cn/article/pdf/preview/2203.pdf",
+    "location": "第 1 节引言：“以对象的有限阶跃响应或有限脉冲响应为模型，在每一个控制周期内采用滚动推移的方式在线对过程进行有限时域内的优化控制（即滚动优化）…在优化过程中不断利用测量信息进行反馈校正”；摘要列出 GPC 各类算法与稳定性/鲁棒性结论",
+    "finding": "PDF 正文确实讲清预测模型、滚动优化、反馈校正三要素及 GPC 算法族，属于可读的中文 MPC 原理教学材料。"
+   },
+   "added_by": "review/pi-additions/H.4.1.json"
+  },
+  {
+   "key": "main-zh-drcan-mpc",
+   "lang": "zh",
+   "title": "DR_CAN《【MPC模型预测控制器】》系列（作者本人 B 站账号）",
+   "url": "https://www.bilibili.com/video/BV1SQ4y1Y7FG",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "MPC 的最优化控制基本概念（第 1 讲）与数学建模推导（第 2 讲：代价函数、把状态预测代入后消去中间状态、化成标准二次型/二次规划）。",
+   "access": "作者本人账号免费观看（平台标注自制），中文讲解；字幕未核对。",
+   "publisher": "DR_CAN（王天威，作者本人账号）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1SQ4y1Y7FG",
+    "location": "第 2 讲《最优化数学建模推导》",
+    "finding": "视频页标注自制、上传者 DR_CAN；简介与检索摘要写明推导代价函数、消去状态并化成标准二次型。"
+   },
+   "added_by": "review/main-additions/H.4.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "反馈",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "反馈控制系统建模、PID 与校正",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Feedback、root locus、Nyquist、frequency design",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从反馈与稳定性讲起。"
+  },
+  {
+   "topic": "稳定性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "时域/频域稳定性、稳态误差、校正",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Stability、stability margins、Nyquist",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都覆盖稳定裕度与判据。"
+  },
+  {
+   "topic": "状态空间",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "状态空间模型、状态反馈/极点配置",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "多变量状态空间综合、LQR；6.302 不覆盖",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "动态规划/最优控制的状态空间表述",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有状态空间与极点配置；英文 6.245/16.323 补 LQR/最优控制。"
+  },
+  {
+   "topic": "可控/可观",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "能控性与能观性",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "多变量系统的可控/可观与状态反馈设计",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都讲能控/能观。"
+  },
+  {
+   "topic": "Kalman滤波与模型预测控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "Kalman/EKF/UKF 与传感器融合；MPC 未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "KalmanFilter.NET 中文教程：卡尔曼滤波直观解释与推导、数值示例、EKF、UKF、传感器融合",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "摘要与正文：MPC 作为约束优化控制的定位、DMC/GPC 等算法脉络、理论与应用局限",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "引言与第 2 节起：预测模型/滚动优化/反馈校正三要素、GPC 算法族、稳定性与鲁棒性结论",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-drcan-mpc",
+     "section": "MPC 系列第 1–2 讲：最优化控制概念、二次规划形式的推导",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en4",
+     "section": "Kalman/EKF/UKF/particle filters",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "Model predictive control",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 Kalman 有免费教程但 MPC 缺失；英文 Kalman 书 + 16.323 的 MPC 覆盖两项。；Kalman 一侧由已有的中文教程承担：从一维示例推到多维 KF，再扩到 EKF/UKF，深度足够入门。；旧记录里中文 MPC 完全没有材料（旧结论说“未找到中文课程或公开正文”）；这篇中文综述给出 MPC 的定义、为什么要约束优化、工业应用与局限，补上概念层。；在概念之上补算法结构：MPC 每一步做什么（用模型预测、滚动求解有限时域优化、用测量做反馈校正），以及 GPC 的几种实现路线；这样中文侧“Kalman + MPC”都有可读材料，深度到入门（不含 QP 求解器实现与工程整定）。；原记录的 MPC 中文只有两篇期刊综述（讲算法脉络，不讲怎么列出和求解优化问题）；DR_CAN 系列从代价函数一步步推到二次规划，补上可操作的教学。Kalman 部分仍由 KalmanFilter.NET 中文教程承担。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按建模→时域/频域/根轨迹→稳定性→PID/校正→状态空间/能控能观/极点配置学习。"
+    },
+    {
+     "source": "zh2",
+     "read": "读 Kalman 滤波示例教程，完成 EKF/UKF 数值练习。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读席裕庚综述的引言与展望：弄清 MPC 与 PID/LQR 的区别（在线解约束优化、滚动时域），记下 DMC/GPC 各自的模型形式与适用场景。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "再读《广义预测控制综述》第 1–2 节，把“预测模型—滚动优化—反馈校正”三要素写成自己的话，并用一个一阶系统手算一步预测与滚动优化的目标函数；最后对照 zh2 的 Kalman 教程理解状态估计如何给 MPC 提供初始状态。"
+    },
+    {
+     "source": "main-zh-drcan-mpc",
+     "read": "看 DR_CAN MPC 系列第 1–2 讲，为一个二阶系统写出预测时域内的代价函数并整理成二次规划，再读席裕庚综述了解 DMC/GPC 的发展。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "先学反馈/稳定性/频域设计。"
+    },
+    {
+     "source": "en2",
+     "read": "再学状态空间、LQR 与多变量综合。"
+    },
+    {
+     "source": "en4",
+     "read": "补 Kalman/EKF/UKF 状态估计。"
+    },
+    {
+     "source": "en3",
+     "read": "最后学 MPC/动态规划/最优控制。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "自动控制原理 中国大学MOOC 状态空间 根轨迹 频域 课程",
+   "result": "采纳中国矿业大学自动控制原理；Kalman 用中文教程补。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "模型预测控制 中国大学MOOC MPC 滚动优化",
+   "result": "未找到可核实的中文 MPC 课程；记缺口。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "MIT 16.323 optimal control MPC",
+   "result": "采纳 16.323 补 MPC/最优控制。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch bili 模型预测控制 MPC 教程 中文 / 模型预测控制 原理 推导 二次规划 系列课",
+   "result": "只有电机/微网/路径跟踪的 MPC 应用演示与单集 MATLAB 实现，没有成体系的中文 MPC 课程，未采纳为覆盖来源。",
+   "by": "review/pi-additions/H.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "模型预测控制 中国大学MOOC 课程 预测模型 滚动优化 反馈校正 中文",
+   "result": "没有中国大学 MOOC 的 MPC 课程；返回博客园/知乎类短文、apxml 机器翻译课程与 MathWorks 中文短视频，未采纳。",
+   "by": "review/pi-additions/H.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "席裕庚 模型预测控制 现状与挑战 自动化学报 pdf 滚动优化",
+   "result": "命中自动化学报官网原文页，采纳为 r7-zh1。",
+   "by": "review/pi-additions/H.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "模型预测控制 课件 讲义 pdf 大学 预测控制 动态矩阵控制 广义预测控制 教学",
+   "result": "命中《广义预测控制综述》PDF（讲滚动优化/反馈校正）与自动化学报 DMC 论文；采纳前者为 r7-zh2，后者只用于核对“预测模型/滚动优化/反馈校正”三要素说法。",
+   "by": "review/pi-additions/H.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://xk.sia.cn/cn/article/pdf/preview/2203.pdf",
+   "result": "打开 PDF 正文确认三要素与 GPC 算法族讲解，采纳。",
+   "by": "review/pi-additions/H.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "模型预测控制 课程 中文 讲授 MOOC 滚动优化 二次规划 site:bilibili.com",
+   "result": "找到 DR_CAN 本人 MPC 系列与天津大学《控制理论基础》MPC 一讲，采纳前者。",
+   "by": "review/main-additions/H.4.1.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有“控制工程基础”且只到经典控制；已换中国矿业大学课程并补 Kalman 中文教程。",
+  "旧英文 MIT 6.302 只覆盖经典控制；补 6.245、16.323 与 Kalman 书后覆盖状态空间/估计/MPC。",
+  "中文仍缺 MPC，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "控制理论与状态估计",
+ "description": "反馈、稳定性、状态空间、可控/可观、Kalman滤波与模型预测控制。",
+ "applied_additions": [
+  "review/pi-additions/H.4.1.json@c1026cc678",
+  "review/main-additions/H.4.1.json@5be7119ac3"
+ ]
+}

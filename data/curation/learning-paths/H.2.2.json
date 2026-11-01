@@ -1,0 +1,331 @@
+{
+ "id": "H.2.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《芯片验证漫游指南——从系统理论到 UVM 的验证全视界》（刘斌，电子工业出版社，2018）",
+   "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "第 1 章验证全视（流程/周期/检查点）、第 2 章验证策略、第 3 章验证方法（定向/随机/覆盖率驱动随机/TLM/断言；静态检查含语法/语义/跨时钟域/形式验证）、第 4–5 章验证计划与管理、第 6 章验证结构、第 7 章起 SystemVerilog 环境与 UVM。",
+   "access": "电子工业出版社正式商品页，纸质书定价 ¥99.0（2018 年版，560 页）；全文需购买，未购买。目录可公开核对。",
+   "publisher": "刘斌（路桑），电子工业出版社",
+   "evidence": {
+    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890",
+    "location": "商品页目录：第 1–7 章标题；定价 ¥99.0",
+    "finding": "页面列出第 1 章芯片验证全视、第 2 章验证策略、第 3 章验证方法（动态仿真/静态检查/形式验证）、第 6 章验证结构、第 7 章起 SV/UVM，并标价 99 元。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "“一生一芯”官方中文课程：E4 处理器的仿真和验证",
+   "url": "https://ysyx.oscc.cc/docs/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "以 difftest 协同仿真、波形调试为主的处理器功能验证；不含 SVA/断言、覆盖率驱动随机、UVM 与形式验证/等价性检查。",
+   "access": "讲义与 B 站录播免费；实验需 Linux 与开源 EDA。",
+   "publisher": "“一生一芯”教学团队",
+   "evidence": {
+    "url": "https://ysyx.oscc.cc/docs/",
+    "location": "学习讲义目录：E4 处理器的仿真和验证",
+    "finding": "目录只有 E4 一项与验证相关，内容以仿真/比对测试为主；无断言、覆盖率、UVM、形式验证章节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Accellera UVM 1.2 User's Guide（官方完整免费指南）",
+   "url": "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "测试平台架构、事务级建模、driver/monitor/sequencer/agent/env、受约束随机激励、scoreboard/检查、功能覆盖率、验证组件复用；UVM 1.2 API。",
+   "access": "Accellera 官方免费 PDF，无需注册；2015 年版本，需对照 IEEE 1800.2 现代实现。",
+   "publisher": "Accellera Systems Initiative",
+   "evidence": {
+    "url": "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf",
+    "location": "PDF 目录与章节：Testbench Architecture、Transactions、Sequences、Coverage、UVM components",
+    "finding": "PDF 正文按 UVM 组件与验证流程组织，含 constrained random、coverage 与 scoreboard 章节；不含等价性检查。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "YosysHQ SBY：Getting started（形式验证入门）",
+   "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "用 SBY 写形式属性、运行 k-induction/ BMC、读反例与覆盖率；以 FIFO 等小设计为例。",
+   "access": "免费文档；需安装 Yosys/SBY 开源工具链。",
+   "publisher": "YosysHQ",
+   "evidence": {
+    "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html",
+    "location": "Quickstart：安装、SVA 属性、sby 配置、反例",
+    "finding": "文档以可运行示例讲形式属性与反例，不涉及等价性检查（LEC）。"
+   }
+  },
+  {
+   "key": "r7-en3",
+   "lang": "en",
+   "title": "YosysHQ EQY: EQuivalence checking with Yosys — Getting Started（官方文档）",
+   "url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/quickstart.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "等价性检查（LEC）入门：gold/gate 两个设计的划分、用 .eqy 配置写 Yosys 脚本分别处理参考设计与待检网表、分区匹配、反例定位（以一个综合后功能被改坏的例子演示失配），以及 X 传播与 safe-replacement 等价。",
+   "access": "YosysHQ 官方文档免费；需安装 Yosys/EQY 开源工具链；英文。",
+   "publisher": "YosysHQ GmbH",
+   "reupload": false,
+   "evidence": {
+    "url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/quickstart.html",
+    "location": "Getting Started 正文：“EQY - EQuivalence checking with Yosys - is a tool designed to perform formal verification that two designs are equivalent, such as ensuring that a synthesis tool has not introduced functional changes”；[gold] / [gate] 两段 Yosys 命令、nerv_change_fail.eqy 失配示例",
+    "finding": "正文确实用一个“综合后被改坏”的设计演示 gold 与 gate 的等价检查与失配定位，属于等价性检查（而非仅属性验证）的入门教学。"
+   },
+   "added_by": "review/pi-additions/H.2.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《形式化验证：现代 VLSI 设计的必备工具包（原书第 2 版）》（Seligman 等，李建文、蒲戈光译，机械工业出版社，2026）",
+   "url": "https://xhwxt.sdjzu.edu.cn/mspace/searchDetailLocal/m9ce180564c87c7f46701d25c96341ec8",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "书目记录为 Seligman《Formal Verification: An Essential Toolkit for Modern VLSI Design》第 2 版的中文译本；原书体系含 FPV（属性检查）、等价性检查（LEC）、覆盖率与形式验证部署。具体章节目录本轮未打开核对。",
+   "access": "机械工业出版社 2026 年版，需购买；馆藏检索页可见书名/作者/译者/出版项，正文与目录为 JS 渲染未取到。",
+   "publisher": "机械工业出版社（原着 Erik Seligman 等；译者 李建文、蒲戈光）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://xhwxt.sdjzu.edu.cn/mspace/searchDetailLocal/m9ce180564c87c7f46701d25c96341ec8",
+    "location": "图书馆书目检索结果：题名《形式化验证:现代VLSI设计的必备工具包》、着者“埃里克·塞利格曼…”、译者“李建文, 蒲戈光”、出版项“北京:机械工业出版社, 2026”、附“目录”链接",
+    "finding": "页面确认存在这部中译本及其版本/译者信息，但页面为 JS 应用，实际目录未渲染出来，故本轮不据此判定章节覆盖。"
+   },
+   "added_by": "review/pi-additions/H.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "仿真与测试平台",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 3 章动态仿真、第 6 章验证结构",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "E4 difftest/波形调试",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Testbench architecture、driver/monitor/scoreboard",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文书系统讲测试平台；ysyx 提供真实处理器验证案例。"
+  },
+  {
+   "topic": "受约束随机激励",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 3 章覆盖率驱动随机、第 7 章起 SV 随机约束",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Constrained random stimulus、sequences",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都讲 constrained random 与 sequence。"
+  },
+  {
+   "topic": "断言与覆盖率",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 3 章断言检查与功能覆盖",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Assertions、functional coverage；SBY 的 SVA 属性",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "SVA 属性与 cover 语句",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都覆盖 SVA 与覆盖率；SBY 补形式断言。"
+  },
+  {
+   "topic": "UVM 验证流程",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7 章起 SystemVerilog 环境与 UVM",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "UVM 1.2 User's Guide 全书",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文书后段讲 UVM；英文官方指南是完整 UVM 流程。"
+  },
+  {
+   "topic": "形式验证与等价性检查入门",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 3 章静态检查/形式验证一节；等价性检查无独立章",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "SBY 形式属性验证；不含 LEC",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en3",
+     "section": "EQY Getting Started：gold/gate 划分、.eqy 配置、等价性失配定位、X 传播与 safe-replacement 等价",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都只有形式属性验证入门，缺等价性检查（LEC）教学。；旧的 en2（SBY）只讲属性检查（k-induction/BMC），缺等价性检查；EQY 官方 quickstart 正是用 gold 设计与被综合改坏的 gate 设计做等价性验证并定位失配，补上 LEC 这一半，两者合起来覆盖“形式验证与等价性检查入门”。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按第 1–3 章建立验证流程/策略/方法，再读第 6–7 章 SV 环境与 UVM，动手写 driver/monitor/sequence 与覆盖率。"
+    },
+    {
+     "source": "zh2",
+     "read": "用 E4 的 difftest 流程对一个处理器做功能仿真与波形调试。"
+    }
+   ],
+   "gaps": [
+    "形式验证与等价性检查入门"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 UVM 指南搭 agent/env/sequence，写 constrained random 与 coverage，跑回归。"
+    },
+    {
+     "source": "en2",
+     "read": "用 SBY quickstart 写 SVA 属性并读反例。"
+    },
+    {
+     "source": "r7-en3",
+     "read": "After the SBY quickstart: install Yosys+EQY, run the nerv example (gold = nerv.sv, gate = nerv_change.sv), read how [gold]/[gate] partitions are built, then break your own RTL on purpose, re-run EQY and use the reported mismatched cells to find the injected bug."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "芯片验证漫游指南 电子工业出版社 目录 定价",
+   "result": "采纳为中文主书；目录覆盖随机/断言/覆盖率/UVM/形式验证，等价性检查未列。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "Accellera UVM 1.2 User's Guide PDF",
+   "result": "采纳为英文主指南；SBY quickstart 补形式验证。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "形式验证 等价性检查 中文 教程 集成电路 形式化验证 课程",
+   "result": "只得到中文维基、S2C 公司新闻、EasyFormal 站点（域名已无法解析）、新思中文博客与中科大教学论文，均非系统教学，未采纳。",
+   "by": "review/pi-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch bili 形式验证 等价性检查 / JasperGold 形式验证 入门 / 形式化验证 芯片 验证 课程 / Formality 等价性验证 教程 / Conformal LEC 逻辑等价性检查；tavily site:bilibili.com 形式验证 FPGA 等价性检查 教程",
+   "result": "两轮 B 站站内搜索与一次 site:bilibili.com 搜索均只返回无关内容（综艺、软件安装、数学考研），没有中文形式验证/等价性检查课程，故不写“B 站有”。",
+   "by": "review/pi-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "形式验证 中文版 书 现代VLSI设计必备工具包 等价性检查 出版社 目录",
+   "result": "找到 Seligman 原书第 2 版中译本（机械工业出版社 2026，李建文/蒲戈光译），已登记为 r7-zh2；但馆藏页与书店页目录均为 JS/反爬，未读到章节。",
+   "by": "review/pi-additions/H.2.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/quickstart.html",
+   "result": "采纳：EQY quickstart 用 gold/gate 设计与 .eqy 配置讲等价性检查，补英文 LEC 缺口。",
+   "by": "review/pi-additions/H.2.2.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有“一生一芯”E4，只覆盖仿真，不能证明 SVA/UVM/形式验证；已补正式出版的中文书。",
+  "旧英文 UVM 指南与 SBY 保留；两者都不含等价性检查。",
+  "本节点两侧都缺 LEC，故为 partial。",
+  "[review/pi-additions/H.2.2.json] 未解决 zh「形式验证与等价性检查入门」：只有 zh1 第 3 章“静态检查/形式验证”一节的 partial，且新登记的 Seligman 中译本目录未能打开核对；中文免费渠道无系统教学，需主代理复核该译本目录后再决定是否把 zh 侧升为 covered。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "形式验证与等价性检查入门",
+   "source": "r7-en3",
+   "reason": "中文三个渠道都查过：文字（Tavily 两轮，只有维基/公司新闻/知乎短文/已失效的 EasyFormal）、视频（B 站站内 5 组关键词 + site:bilibili.com 一次，无形式验证或 LEC 课程）、付费（现有《芯片验证漫游指南》只有第 3 章一节；Seligman 中译本已登记但目录未核）。因此本轮中文侧仍只有概念级 partial，形式验证与 LEC 的实际操作入门先借用英文 EQY（r7-en3）与 SBY（en2）。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/H.2.2.json"
+  }
+ ],
+ "name": "硬件设计验证",
+ "description": "仿真与测试平台、受约束随机激励、断言与覆盖率、UVM 验证流程；形式验证与等价性检查入门。",
+ "applied_additions": [
+  "review/pi-additions/H.2.2.json@49ba5f2824"
+ ]
+}
