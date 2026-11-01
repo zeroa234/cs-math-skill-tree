@@ -41,6 +41,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 | `python -X utf8 scripts/merge_skills.py merge/drop/move-source/drop-source …` | 改技能划分时搬数据：前置、理由、课程证据、练习题、导览图来源、学习资源、英文名一起改，见下面“改技能划分” |
 | `scripts/archive_research.py` | 把审核过的检索结果从 `temp/research/nodes/` 归档到 `data/research/nodes/` |
 | `node tests/screenshot.mjs`、`node tests/screenshot-panel.mjs <id>` | 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器），含深链回归检查 |
+| `node scripts/readme-images.mjs` | 按当前构建重截 README 的四张预览图 `docs/images/{overview,skill-map,goal,guide}.webp`（1920×1080 深色，转 WebP 要 Python + Pillow）；数据变了就重跑。封面 `cover.webp` 另由 `scripts/promo/cover.py` 生成 |
 | `python -X utf8 scripts/package_web.py` | 把网页打成 `output/cs-math-skill-tree-<日期>.zip` 分享给别人（解压后双击 index.html；含 README.txt 和第三方许可证）。先跑 build |
 | `node tests/a11y.mjs [report.json]` | axe-core 按 WCAG 2.2 AA 审计 15 个界面状态（含知识导览图），并跑一遍纯键盘的主流程；结论见 `docs/hci-ux-review.md` |
 | `scripts/promo/`（`capture-app.mjs`、`build-graph.mjs`、`word-times.mjs`、`blender-tree.py`、`render-blender.sh`、`render.sh`） | 宣传片：页面截图、动画数据、Blender 3D 技能树、成片。画面代码在 `src/promo/`（Remotion），文稿 `data/promo/script.json`，步骤和坑见 `docs/promo-video.md` |
