@@ -15,15 +15,15 @@
   },
   {
    "key": "B",
-   "kind": "book",
-   "title": "Software Engineering, 9th Edition",
-   "by": "Ian Sommerville",
-   "year": 2010,
-   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "kind": "docs",
+   "title": "Guide to the Software Engineering Body of Knowledge (SWEBOK Guide), v4.0a",
+   "by": "IEEE Computer Society, ed. Hironori Washizaki",
+   "year": 2026,
+   "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
    "toc_urls": [
-    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+    "https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf"
    ],
-   "why": "A 只有章级目录、章内没有小标题，节点又是 D1 入门层；用这本本科标准教材（CMU 17-313 课堂用书）的节级目录补生命周期（第 2 章）、敏捷方法（第 3 章）、团队协作（第 22 章）与过程改进/方法选择（第 26 章）的细化。"
+   "why": "换源后补节级细节：上一版补来源是 Sommerville《Software Engineering》9th ed. 的整书 PDF（挂在 CMU Qatar 课程站上），不是作者或出版社公开的地址，按本轮要求删掉。SWEBOK Guide 是 IEEE Computer Society 官方免费公开的软件工程知识体系，第 10 章（软件工程过程）讲生命周期与方法裁剪，第 11 章（模型与方法）讲启发式/形式化/原型/敏捷四类方法，第 14 章（职业实践）讲团队动态与沟通，第 18 章（工程基础）讲工程过程、抽象与封装，正好补上节点缺的节级细节。"
   }
  ],
  "outline": [
@@ -64,122 +64,172 @@
   },
   {
    "src": "B",
-   "ref": "2",
-   "title": "Software processes",
-   "zh": "软件过程",
-   "fill": "补生命周期：通用过程模型（瀑布、增量、复用、螺旋）与过程活动、应对变更、统一过程",
+   "ref": "10",
+   "title": "Software Engineering Process",
+   "zh": "软件工程过程",
+   "fill": "补生命周期与方法选择：生命周期定义、过程模型与生命周期模型、几类开发模型、生命周期裁剪、过程评估与改进（含 GQM 与敏捷中的过程改进）",
    "items": [
     {
+     "ref": "1.2",
+     "title": "Software Engineering Process Definition",
+     "zh": "软件工程过程的定义"
+    },
+    {
      "ref": "2.1",
-     "title": "Software process models",
-     "zh": "软件过程模型"
+     "title": "Life Cycle Definition, Process Categories, and Terminology",
+     "zh": "生命周期定义、过程类别与术语"
     },
     {
      "ref": "2.2",
-     "title": "Process activities",
-     "zh": "过程活动"
+     "title": "Rationale for Life Cycles",
+     "zh": "采用生命周期的理由"
     },
     {
      "ref": "2.3",
-     "title": "Coping with change",
-     "zh": "应对变更"
+     "title": "The Concepts of Process Models and Life Cycle Models",
+     "zh": "过程模型与生命周期模型的概念"
     },
     {
      "ref": "2.4",
-     "title": "The rational unified process",
-     "zh": "统一过程（RUP）"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "3",
-   "title": "Agile software development",
-   "zh": "敏捷软件开发",
-   "fill": "补迭代/敏捷与方法选择：敏捷方法、计划驱动与敏捷的取舍、XP、敏捷项目管理、规模化",
-   "items": [
+     "title": "Some Paradigms for Development Life Cycle Models",
+     "zh": "几种开发生命周期模型范式"
+    },
+    {
+     "ref": "2.5",
+     "title": "Development Life Cycle Models and Their Engineering Dimension",
+     "zh": "开发生命周期模型及其工程维度"
+    },
+    {
+     "ref": "2.6",
+     "title": "The Management of SLCPs",
+     "zh": "软件生命周期过程（SLCP）的管理"
+    },
+    {
+     "ref": "2.8",
+     "title": "Software Life Cycle Adaptation",
+     "zh": "软件生命周期的裁剪"
+    },
     {
      "ref": "3.1",
-     "title": "Agile methods",
-     "zh": "敏捷方法"
+     "title": "Overview of Software Process Assessment and Improvement",
+     "zh": "软件过程评估与改进概览"
     },
     {
      "ref": "3.2",
-     "title": "Plan-driven and agile development",
-     "zh": "计划驱动与敏捷开发"
+     "title": "Goal-Question-Metric (GQM)",
+     "zh": "目标-问题-度量（GQM）"
     },
     {
      "ref": "3.3",
-     "title": "Extreme programming",
-     "zh": "极限编程"
+     "title": "Framework-Based Methods",
+     "zh": "基于框架的方法"
     },
     {
      "ref": "3.4",
-     "title": "Agile project management",
-     "zh": "敏捷项目管理"
-    },
-    {
-     "ref": "3.5",
-     "title": "Scaling agile methods",
-     "zh": "敏捷方法的规模化"
+     "title": "Process Assessment and Improvement in Agile",
+     "zh": "敏捷中的过程评估与改进"
     }
    ]
   },
   {
    "src": "B",
-   "ref": "22",
-   "title": "Project management",
-   "zh": "项目管理",
-   "fill": "补协作：风险管理、人员管理与团队工作（谁做什么、团队如何组织）",
+   "ref": "11",
+   "title": "Software Engineering Models and Methods",
+   "zh": "软件工程模型与方法",
+   "fill": "补工程方法与迭代/敏捷的选择依据：启发式、形式化、原型与敏捷四类方法",
    "items": [
     {
-     "ref": "22.1",
-     "title": "Risk management",
-     "zh": "风险管理"
+     "ref": "4.1",
+     "title": "Heuristic Methods",
+     "zh": "启发式方法"
     },
     {
-     "ref": "22.2",
-     "title": "Managing people",
-     "zh": "人员管理"
+     "ref": "4.2",
+     "title": "Formal Methods",
+     "zh": "形式化方法"
     },
     {
-     "ref": "22.3",
-     "title": "Teamwork",
-     "zh": "团队工作"
+     "ref": "4.3",
+     "title": "Prototyping Methods",
+     "zh": "原型方法"
+    },
+    {
+     "ref": "4.4",
+     "title": "Agile Methods",
+     "zh": "敏捷方法"
     }
    ]
   },
   {
    "src": "B",
-   "ref": "26",
-   "title": "Process improvement",
-   "zh": "过程改进",
-   "fill": "补方法选择：如何度量、分析并替换团队正在用的过程（含 CMMI 参考模型）",
+   "ref": "14",
+   "title": "Software Engineering Professional Practice",
+   "zh": "软件工程职业实践",
+   "fill": "补协作：团队动态、个体认知、与利益相关者互动、团队沟通",
    "items": [
     {
-     "ref": "26.1",
-     "title": "The process improvement process",
-     "zh": "过程改进的流程"
+     "ref": "2.1",
+     "title": "Dynamics of Working in Teams/Groups",
+     "zh": "团队/小组工作的动态"
     },
     {
-     "ref": "26.2",
-     "title": "Process measurement",
-     "zh": "过程度量"
+     "ref": "2.2",
+     "title": "Individual Cognition",
+     "zh": "个体认知"
     },
     {
-     "ref": "26.3",
-     "title": "Process analysis",
-     "zh": "过程分析"
+     "ref": "2.3",
+     "title": "Dealing with Problem Complexity",
+     "zh": "应对问题复杂性"
     },
     {
-     "ref": "26.4",
-     "title": "Process change",
-     "zh": "过程变革"
+     "ref": "2.4",
+     "title": "Interacting with Stakeholders",
+     "zh": "与利益相关者互动"
     },
     {
-     "ref": "26.5",
-     "title": "The CMMI process improvement framework",
-     "zh": "CMMI 过程改进框架"
+     "ref": "2.5",
+     "title": "Dealing with Uncertainty and Ambiguity",
+     "zh": "应对不确定性与歧义"
+    },
+    {
+     "ref": "3.3",
+     "title": "Team and Group Communication",
+     "zh": "团队与小组沟通"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "18",
+   "title": "Engineering Foundations",
+   "zh": "工程基础",
+   "fill": "补工程原则：工程过程、抽象与封装、层次结构",
+   "items": [
+    {
+     "ref": "1",
+     "title": "The Engineering Process",
+     "zh": "工程过程"
+    },
+    {
+     "ref": "3",
+     "title": "Abstraction and Encapsulation",
+     "zh": "抽象与封装"
+    },
+    {
+     "ref": "3.1",
+     "title": "Levels of Abstraction",
+     "zh": "抽象层次"
+    },
+    {
+     "ref": "3.2",
+     "title": "Encapsulation",
+     "zh": "封装"
+    },
+    {
+     "ref": "3.3",
+     "title": "Hierarchy",
+     "zh": "层次结构"
     }
    ]
   }
@@ -189,18 +239,17 @@
    "topic": "生命周期",
    "refs": [
     "A:9",
-    "B:2",
+    "B:10",
     "B:2.1",
-    "B:2.2"
+    "B:2.4"
    ]
   },
   {
    "topic": "迭代/敏捷",
    "refs": [
     "A:9",
-    "B:3",
-    "B:3.1",
-    "B:3.3",
+    "B:11",
+    "B:4.4",
     "B:3.4"
    ]
   },
@@ -209,7 +258,9 @@
    "refs": [
     "A:4",
     "A:5",
-    "B:2.2"
+    "B:18",
+    "B:3",
+    "B:3.2"
    ]
   },
   {
@@ -217,25 +268,25 @@
    "refs": [
     "A:2",
     "A:3",
-    "B:22",
-    "B:22.3"
+    "B:14",
+    "B:2.1"
    ]
   },
   {
    "topic": "方法选择",
    "refs": [
     "A:9",
-    "B:3.2",
-    "B:26",
-    "B:26.4"
+    "B:10",
+    "B:2.8",
+    "B:11"
    ]
   }
  ],
- "omitted": "A 未收 History、Requirements、Architecture、Specifications、Comprehension、Verification、Monitoring、Evolution、Debugging 九章（分别在需求、架构、验证、演化等节点讲）；B 只收第 2、3、22、26 章，其余章属需求（4、5）、设计（6、7）、测试（8）、演化（9）、可靠性安全（10–15）、复用与分布式（16–19）、配置管理（25）等其他节点。",
- "notes": "A 的章内是连续正文、没有小节标题（首页只列 Chapter 1–14），所以 A 的分支只有章、没有叶子；节级细节全部来自 B。B 的 PDF 由 CMU 17-313 课程站（qatar.cmu.edu/cs/17313）托管，与节点“先修证据里的课程 CMU 17-313”是同一门课的用书；目录在第 9–16 页。",
+ "omitted": "A 未收 History、Requirements、Architecture、Specifications、Comprehension、Verification、Monitoring、Evolution、Debugging 九章（分别在需求、架构、验证、演化等节点讲）；B 只收第 10、11、14、18 章：第 1–9 章是需求、架构、设计、构造、测试、运行、维护、配置管理与项目管理（属其他节点），第 12、13 章是质量与安全，第 15–17 章是经济学、计算基础与数学基础。",
+ "notes": "本轮按要求删掉了 Sommerville《Software Engineering》9th ed. 的来源（web2.qatar.cmu.edu/cs/17313/...pdf 是课程站上的整书副本，不是作者或出版社公开的），它原先补的生命周期（第 2 章）、敏捷（第 3 章）、团队（第 22 章）、过程改进（第 26 章）改由 IEEE Computer Society 的 SWEBOK Guide v4.0a 补，官方免费地址 https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf（computer.org/swebok 页面分发）。A 的章内是连续正文、没有小节标题（首页只列 Chapter 1–14），所以 A 的 5 个分支仍只有章、没有叶子；节级细节全部来自 B，B 的 4 个分支共 27 个叶子。B 的章节号沿用 SWEBOK 原书编号（第 10、11、14、18 章），节号如 2.1 表示该章第 2 节下的第 1 小节；coverage 里的 B:2.1 指第 10 章 2.1 节（同一 ref 在第 14 章也出现，指向时以分支为准）。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 26,
+  "exact": 36,
   "fuzzy": 0,
   "dropped": []
  }

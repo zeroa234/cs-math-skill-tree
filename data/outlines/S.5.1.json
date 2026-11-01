@@ -9,7 +9,8 @@
    "year": 2024,
    "url": "https://15316-cmu.github.io/2026/",
    "toc_urls": [
-    "https://15316-cmu.github.io/2024/schedule.js"
+    "https://15316-cmu.github.io/2024/schedule.js",
+    "https://15316-cmu.github.io/2024/lectures/notes-15316-f24.pdf"
    ],
    "why": "节点现有英文资源就是这门课；2026 版课表还没有排讲，但同一门课 2024 版的 schedule.js 是完整的逐讲主题表（30 次课，每次一个具体题目），信息流、去分类、终止敏感非干扰、时序攻击、授权逻辑、信任引导都在里面，正好覆盖非干扰与可信基这一段。"
   },
@@ -31,31 +32,156 @@
    "src": "A",
    "title": "Propositional Logic and Proof",
    "zh": "命题逻辑与证明",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Propositional Formulas",
+     "zh": "命题公式"
+    },
+    {
+     "ref": "",
+     "title": "Simple Sequents",
+     "zh": "简单相继式"
+    },
+    {
+     "ref": "",
+     "title": "Right and Left Rules",
+     "zh": "右规则与左规则"
+    },
+    {
+     "ref": "",
+     "title": "Properties of Inference Systems",
+     "zh": "推理系统的性质"
+    },
+    {
+     "ref": "",
+     "title": "Proving Soundness",
+     "zh": "证明可靠性"
+    },
+    {
+     "ref": "",
+     "title": "Inversion",
+     "zh": "可逆性"
+    }
+   ]
   },
   {
    "src": "A",
    "title": "Dynamic Logic",
    "zh": "动态逻辑",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Countermodels",
+     "zh": "反模型"
+    },
+    {
+     "ref": "",
+     "title": "Safety and Liveness",
+     "zh": "安全性与活性"
+    },
+    {
+     "ref": "",
+     "title": "Dynamic Logic: A Logic with Programs",
+     "zh": "动态逻辑：带程序的逻辑"
+    },
+    {
+     "ref": "",
+     "title": "Conditionals and Assignments",
+     "zh": "条件式与赋值"
+    },
+    {
+     "ref": "",
+     "title": "Sequential Composition",
+     "zh": "顺序组合"
+    }
+   ]
   },
   {
    "src": "A",
    "title": "Semantics of Programs",
    "zh": "程序语义",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Loops",
+     "zh": "循环"
+    },
+    {
+     "ref": "",
+     "title": "Semantics of Expressions",
+     "zh": "表达式语义"
+    },
+    {
+     "ref": "",
+     "title": "Semantics of Programs",
+     "zh": "程序语义"
+    },
+    {
+     "ref": "",
+     "title": "Semantics of Formulas",
+     "zh": "公式语义"
+    },
+    {
+     "ref": "",
+     "title": "Quantification and Substitution",
+     "zh": "量化与替换"
+    },
+    {
+     "ref": "",
+     "title": "Rules versus Axioms",
+     "zh": "规则与公理之别"
+    },
+    {
+     "ref": "",
+     "title": "Some Axioms for Dynamic Logic",
+     "zh": "动态逻辑的若干公理"
+    }
+   ]
   },
   {
    "src": "A",
    "title": "Proving Safety",
    "zh": "安全性证明",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Unsafe Programs",
+     "zh": "不安全的程序"
+    },
+    {
+     "ref": "",
+     "title": "Reasoning about Safety",
+     "zh": "关于安全性的推理"
+    }
+   ]
   },
   {
    "src": "A",
    "title": "Generating Verification Conditions",
    "zh": "生成验证条件",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Weakest Liberal Precondition",
+     "zh": "最弱前置条件"
+    },
+    {
+     "ref": "",
+     "title": "Programs Without Loops",
+     "zh": "无循环的程序"
+    },
+    {
+     "ref": "",
+     "title": "Loops",
+     "zh": "循环"
+    },
+    {
+     "ref": "",
+     "title": "White Box",
+     "zh": "白盒"
+    }
+   ]
   },
   {
    "src": "A",
@@ -291,10 +417,10 @@
   }
  ],
  "omitted": "A（15-316 2024 秋课表）只收了与节点相关的讲次，导论、期中复习/考试、秋假、项目日、感恩节、民主日、Lab 3 Preview、Intermittent Computing、Differential Privacy 等与“协议验证 + 信息流 + 可信基”关系较远的课没有收（差分隐私只涉及隐私度量，不涉及信息流验证）；B（ProVerif 手册）只收建模、安全性质、观察等价、NS 案例与不完备性几节，安装、交互式模拟器、命令行选项、与 CryptoVerif 的兼容、附录语法不作为知识导览。",
- "notes": "1) 资源的 2026 版课程主页 https://15316-cmu.github.io/2026/ 的课表为空（“Lecture notes will be posted within a few days after each class meeting”），2025 版不存在，2024 版的 schedule.js 是同一门课最近一份完整逐讲表，因此目录取自 2024 版；2024 课表里的主题列没有讲次编号，ref 留空，coverage 用 A:#N 指第 N 个分支。2) B 的协议验证部分与 15-316 互补：CMU 这门课不覆盖安全协议验证（Needham-Schroeder、Dolev-Yao、ProVerif/Tamarin 一类），所以协议验证整段用 ProVerif 官方手册补。3) 若之后要换成理论教材，Cremers & Mauw《Operational Semantics and Verification of Security Protocols》（Springer 2012，8 章：Operational Semantics / Security Properties / Verification / Multi-protocol Attacks）在出版社页面有完整章目，可作为下一轮替换候选。",
+ "notes": "1) 资源的 2026 版课程主页 https://15316-cmu.github.io/2026/ 的课表为空（“Lecture notes will be posted within a few days after each class meeting”），2025 版不存在，2024 版的 schedule.js 是同一门课最近一份完整逐讲表，因此目录取自 2024 版；2024 课表里的主题列没有讲次编号，ref 留空，coverage 用 A:#N 指第 N 个分支。2) B 的协议验证部分与 15-316 互补：CMU 这门课不覆盖安全协议验证（Needham-Schroeder、Dolev-Yao、ProVerif/Tamarin 一类），所以协议验证整段用 ProVerif 官方手册补。3) 若之后要换成理论教材，Cremers & Mauw《Operational Semantics and Verification of Security Protocols》（Springer 2012，8 章：Operational Semantics / Security Properties / Verification / Multi-protocol Attacks）在出版社页面有完整章目，可作为下一轮替换候选。 4) 本轮（deepen-6）按第 1 种方式加深：课程站的官方讲义 PDF（https://15316-cmu.github.io/2024/lectures/notes-15316-f24.pdf，Frank Pfenning 写的 15-316 lecture notes）里有逐讲带编号小节的正文，前五个分支（命题逻辑与证明、动态逻辑、程序语义、安全性证明、生成验证条件）已按它的小节拆开；这份合集只写到第 7 讲（验证条件），站上 /2024/lectures/ 下只有这一个 notes 文件，2022/2023 版站点没有 notes、2026 版尚未发布讲义，所以信息流/去分类/终止敏感非干扰/时序攻击/授权逻辑/信任引导/符号求值/安全性之外的性质这几讲仍停在讲级，没有更细的来源可抄。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 35,
+  "exact": 59,
   "fuzzy": 0,
   "dropped": []
  }

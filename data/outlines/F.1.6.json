@@ -9,9 +9,12 @@
    "year": 2014,
    "url": "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/pages/calendar/"
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/pages/calendar/",
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/b613e7ab4aaf567bc424143c3dd46a4b_MIT6_890F14_Lec13.pdf",
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/9e33e6db99205dce7216547e44fddde7_MIT6_890F14_Lec14.pdf",
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/0f54b0ee1f3f47108c3bafaec54fd553_MIT6_890F14_Lec21.pdf"
    ],
-   "why": "节点现有英文资源；这是 Demaine 的研究生课，课表逐讲给出“参数化复杂度 I/II”“3SUM & APSP”等精细复杂度主题，固定参数可解性与条件性下界都能直接对上，深度也符合 D4。"
+   "why": "节点现有英文资源；OCW 课表给出“参数化复杂度 I/II”“3SUM & APSP”等精细复杂度讲次，而且每讲的 scribe notes 是带编号小节的正文（1 / 2.1 / 3.3 …），可以把每讲拆到节。"
   },
   {
    "key": "B",
@@ -23,7 +26,7 @@
    "toc_urls": [
     "https://www.comp.nus.edu.sg/~gilbert/CS5234/"
    ],
-   "why": "补“性质测试”（以及次线性时间算法）：6.890 讲硬度与下界，没有性质测试一讲；CS 5234 第 3 讲就是 Property Testing, Sorted, and Yao's Principle，第 1、2 讲给次线性时间下的采样与图性质估计。"
+   "why": "补“性质测试”（以及次线性时间算法）：6.890 讲硬度与下界，没有性质测试一讲；CS 5234 第 3 讲就是 Property Testing, Sorted, and Yao's Principle，第 1 讲给次线性时间下的采样与图性质估计。"
   }
  ],
  "outline": [
@@ -32,21 +35,169 @@
    "ref": "13",
    "title": "Parameterized Complexity I: W Hierarchy",
    "zh": "参数化复杂度 I：W 层级",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "General Idea",
+     "zh": "基本思想"
+    },
+    {
+     "ref": "",
+     "title": "Example: k-Vertex Cover",
+     "zh": "例子：k-顶点覆盖"
+    },
+    {
+     "ref": "",
+     "title": "EPTAS",
+     "zh": "EPTAS"
+    },
+    {
+     "ref": "",
+     "title": "Parameterized Reductions",
+     "zh": "参数化归约"
+    },
+    {
+     "ref": "",
+     "title": "Examples",
+     "zh": "例子"
+    },
+    {
+     "ref": "",
+     "title": "Independent Set is W[1]-complete",
+     "zh": "独立集是 W[1] 完全的"
+    },
+    {
+     "ref": "",
+     "title": "Multicolored Clique",
+     "zh": "多色团"
+    },
+    {
+     "ref": "",
+     "title": "Dominating Set",
+     "zh": "支配集"
+    },
+    {
+     "ref": "",
+     "title": "W[1] vs. W[2]",
+     "zh": "W[1] 与 W[2] 的关系"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "14",
    "title": "Parameterized Complexity II: ETH & Planar",
    "zh": "参数化复杂度 II：ETH 与平面图",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Exponential Time Hypothesis",
+     "zh": "指数时间假设"
+    },
+    {
+     "ref": "",
+     "title": "Strong Exponential Time Hypothesis",
+     "zh": "强指数时间假设"
+    },
+    {
+     "ref": "",
+     "title": "Some problems",
+     "zh": "若干问题"
+    },
+    {
+     "ref": "",
+     "title": "Size Blowup",
+     "zh": "规模膨胀"
+    },
+    {
+     "ref": "",
+     "title": "Planar Problems",
+     "zh": "平面问题"
+    },
+    {
+     "ref": "",
+     "title": "Parametrized Consequences",
+     "zh": "参数化推论"
+    },
+    {
+     "ref": "",
+     "title": "Parametrized Reductions",
+     "zh": "参数化归约"
+    },
+    {
+     "ref": "",
+     "title": "Grid Tiling",
+     "zh": "网格铺砌"
+    },
+    {
+     "ref": "",
+     "title": "List Coloring",
+     "zh": "列表染色"
+    },
+    {
+     "ref": "",
+     "title": "Scattered Set",
+     "zh": "分散集"
+    },
+    {
+     "ref": "",
+     "title": "Unit disk graphs",
+     "zh": "单位圆盘图"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "21",
    "title": "3SUM & APSP",
    "zh": "3SUM 与全源最短路径",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "3SUM motivation",
+     "zh": "3SUM 问题的动机"
+    },
+    {
+     "ref": "",
+     "title": "3SUM-Hardness",
+     "zh": "3SUM 困难性"
+    },
+    {
+     "ref": "",
+     "title": "Definition",
+     "zh": "定义"
+    },
+    {
+     "ref": "",
+     "title": "3SUM Reductions",
+     "zh": "3SUM 归约"
+    },
+    {
+     "ref": "",
+     "title": "3SUM-hard Problems",
+     "zh": "3SUM 困难的问题"
+    },
+    {
+     "ref": "",
+     "title": "3SUM-Variants",
+     "zh": "3SUM 的变体"
+    },
+    {
+     "ref": "",
+     "title": "Computational Geometry",
+     "zh": "计算几何"
+    },
+    {
+     "ref": "",
+     "title": "Nonquadratic LBs from 3SUM-Hardness",
+     "zh": "由 3SUM 困难性得到的非二次下界"
+    },
+    {
+     "ref": "",
+     "title": "Conjectured Cubic Graph Problems",
+     "zh": "猜想为三次时间难度的图问题"
+    }
+   ]
   },
   {
    "src": "B",
@@ -80,10 +231,9 @@
   {
    "topic": "固定参数可解性",
    "refs": [
-    "A:13",
-    "A:14"
+    "A:13"
    ],
-   "note": "13 讲 W 层级与 FPT/核化的关系，14 讲 ETH 下的参数化下界与平面图情形。"
+   "note": "第 13 讲从 FPT/XP 的定义（General Idea）讲到 k-顶点覆盖的 FPT 算法与 EPTAS，再到参数化归约与 W[1]/W[2] 层级（独立集是 W[1] 完全、多色团、支配集）。"
   },
   {
    "topic": "性质测试",
@@ -91,7 +241,7 @@
     "B:3",
     "B:1"
    ],
-   "note": "B 的第 3 讲是性质测试（含 Yao 原理这种下界工具），第 1、2 讲给次线性时间下的采样与图性质估计；6.890 里没有对应的一讲。"
+   "note": "B 的第 3 讲是性质测试（含 Yao 原理这种下界工具），第 1 讲给次线性时间下的采样与图性质估计；6.890 里没有对应的一讲。CS5234 的手写讲义提不出节标题（打字版幻灯片也只有零散的幻灯片标题），所以这两条分支仍是平坦的。"
   },
   {
    "topic": "条件性复杂度界",
@@ -99,14 +249,14 @@
     "A:14",
     "A:21"
    ],
-   "note": "ETH（14 讲）与 3SUM/APSP 猜想（21 讲）是两条主流条件性下界；6.890 还讲过 gap 不可近似性（第 12 讲），主题更偏近似，已在 F.1.4 收录。"
+   "note": "ETH 与 SETH 给出参数化与平面图上的下界（第 14 讲），3SUM/APSP 猜想给出另一条主流条件性下界（第 21 讲：3SUM-困难性、非二次下界、猜想的三次时间图问题）。"
   }
  ],
- "omitted": "6.890 的其他各讲未收：1–9（3-partition、SAT、Circuit SAT、Planar SAT、Hamiltonicity、Graph Problems）是 NP 完全性归约的准备工作；10–12 不可近似性属 F.1.4；15–20、22–23（P/ASP、视频游戏、NCL、PPAD 等）与本节点三个知识点无关。CS 5234 只取了 1、3 两讲，其余流算法/缓存/并行部分属 F.1.5。",
- "notes": "两个来源都是“逐讲”结构，没有编号小节，叶子停在“讲”一级。B 第 1 讲原文是“Introduction and logistics. Sampling. Graph connectivity.”，后两句做成了子条目。",
+ "omitted": "6.890 的其他各讲未收：1–9（3-partition、SAT、Circuit SAT、Planar SAT、Hamiltonicity、Graph Problems）是 NP 完全性归约的准备工作；10–12 不可近似性属 F.1.4；15–20、22–23（P/ASP、视频游戏、NCL、PPAD 等）与本节点三个知识点无关。13 讲里未收 1 Overview（过渡性小节）与 3.5 Partial Vertex Cover（原文标题带截断的冒号）；14 讲未收 1 Overview 与 4.1 “Stronger …”（原文标题被截断）。CS 5234 只取了 1、3 两讲，其余流算法/缓存/并行部分属 F.1.5。",
+ "notes": "本轮按做法 1 加深：6.890 的三份 scribe notes 都是带编号小节（1 / 2.1 / 3.3 …）的正文，已把 13、14、21 三讲的节标题抄成 items（三份 PDF 放进 A 的 toc_urls）。B（CS5234）的两条分支没法加深：该课的手写讲义是白板扫描，PDF 文本层只有页码（例如 10.Parallelism1.pdf 全文只有 page 1–16）；2019 年的打字版幻灯片（如 10.Parallel1_slides.pdf）能读出文字，但只有“Summary / Today: Parallelism / PRAM / Work / Span”这类零散幻灯片标题，凑不出可信的节级结构，故两条分支保留原样。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 7,
+  "exact": 36,
   "fuzzy": 0,
   "dropped": []
  }

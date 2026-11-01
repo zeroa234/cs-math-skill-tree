@@ -9,7 +9,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
 const shotsAt = args.indexOf("--shots");
 const out = path.resolve(shotsAt >= 0 ? args[shotsAt + 1] : path.join(ROOT, "temp/shots"));
-const wanted = args.filter((a, i) => !a.startsWith("--") && i !== shotsAt + 1);
+const wanted = args.filter((a, i) => !a.startsWith("--") && (shotsAt < 0 || i !== shotsAt + 1));
 fs.mkdirSync(out, { recursive: true });
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "output/skilltree.json"), "utf8"));

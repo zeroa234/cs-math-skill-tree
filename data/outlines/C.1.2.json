@@ -9,9 +9,15 @@
    "year": 2024,
    "url": "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php",
    "toc_urls": [
-    "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php?id=schedule"
+    "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php?id=schedule",
+    "https://safari.ethz.ch/digitaltechnik/spring2024/lib/exe/fetch.php?media=14_mips_assembly.pdf",
+    "https://safari.ethz.ch/digitaltechnik/spring2024/lib/exe/fetch.php?media=17_architecture_singlecycle.pdf",
+    "https://safari.ethz.ch/digitaltechnik/spring2024/lib/exe/fetch.php?media=18_architecture_pipelined.pdf",
+    "https://safari.ethz.ch/digitaltechnik/spring2024/lib/exe/fetch.php?media=ddca-spring2024-l20-out-of-order-execution-beforelecture.pdf",
+    "https://safari.ethz.ch/digitaltechnik/spring2024/lib/exe/fetch.php?media=ddca-2024-lecture25a-caches-in-multi-core-systems-beforelecture.pdf",
+    "https://safari.ethz.ch/digitaltechnik/spring2024/lib/exe/fetch.php?media=onur-digitaldesign_comparch-2024-lecture26-virtual-memory-afterlecture.pdf"
    ],
-   "why": "节点现有英文资源。课程日程逐讲给出主题（L12 MIPS Assembly、L16 Single-Cycle Microarchitecture、L18 Pipelined Processor Architecture、L24 Memory Hierarchy & Caches、L25a Caches in Multi-Core Systems、L26 Virtual Memory），覆盖指令集、流水线、缓存与多核缓存四块，是节点最直接的学习材料。"
+   "why": "节点现有英文资源。课程日程逐讲给出主题（L12 MIPS Assembly、L16 Single-Cycle Microarchitecture、L18 Pipelined Processor Architecture、L24 Memory Hierarchy & Caches、L25a Caches in Multi-Core Systems、L26 Virtual Memory），覆盖指令集、流水线、缓存与多核缓存四块；本轮把能下载的讲义 PDF 里“In This Lecture / Agenda for Today”页的节标题抄成每讲的小节。"
   },
   {
    "key": "B",
@@ -32,7 +38,28 @@
    "ref": "L12",
    "title": "MIPS Assembly",
    "zh": "MIPS 汇编",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Assembly Language",
+     "zh": "汇编语言"
+    },
+    {
+     "ref": "",
+     "title": "Architecture Design Principles",
+     "zh": "体系结构设计原则"
+    },
+    {
+     "ref": "",
+     "title": "Where to store data (memory/register)",
+     "zh": "数据放在哪里（内存/寄存器）"
+    },
+    {
+     "ref": "",
+     "title": "Main types of MIPS instructions",
+     "zh": "MIPS 指令的主要类型"
+    }
+   ]
   },
   {
    "src": "A",
@@ -46,7 +73,28 @@
    "ref": "L16",
    "title": "Single-Cycle Microarchitecture",
    "zh": "单周期微体系结构",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Overview of the MIPS Microprocessor",
+     "zh": "MIPS 微处理器概览"
+    },
+    {
+     "ref": "",
+     "title": "RTL Design Revisited",
+     "zh": "RTL 设计回顾"
+    },
+    {
+     "ref": "",
+     "title": "Single-Cycle Processor",
+     "zh": "单周期处理器"
+    },
+    {
+     "ref": "",
+     "title": "Performance Analysis",
+     "zh": "性能分析"
+    }
+   ]
   },
   {
    "src": "A",
@@ -60,7 +108,43 @@
    "ref": "L18",
    "title": "Pipelined Processor Architecture",
    "zh": "流水线处理器结构",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Pipelining",
+     "zh": "流水线"
+    },
+    {
+     "ref": "",
+     "title": "Single Cycle vs. Pipelined",
+     "zh": "单周期与流水线的对比"
+    },
+    {
+     "ref": "",
+     "title": "Pipelined MIPS architecture",
+     "zh": "流水线 MIPS 结构"
+    },
+    {
+     "ref": "",
+     "title": "Hazards and how to solve them",
+     "zh": "冒险及其解决办法"
+    },
+    {
+     "ref": "",
+     "title": "Data hazards",
+     "zh": "数据冒险"
+    },
+    {
+     "ref": "",
+     "title": "Control hazards",
+     "zh": "控制冒险"
+    },
+    {
+     "ref": "",
+     "title": "Performance of the Pipelined architecture",
+     "zh": "流水线结构的性能"
+    }
+   ]
   },
   {
    "src": "A",
@@ -74,28 +158,185 @@
    "ref": "L20",
    "title": "Out-of-Order Execution",
    "zh": "乱序执行",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Control & Data Dependence Handling",
+     "zh": "控制相关与数据相关的处理"
+    },
+    {
+     "ref": "",
+     "title": "Precise Exceptions: State Maintenance & Recovery",
+     "zh": "精确异常：状态的维护与恢复"
+    },
+    {
+     "ref": "",
+     "title": "Out-of-Order Execution",
+     "zh": "乱序执行"
+    },
+    {
+     "ref": "",
+     "title": "Issues in OoO Execution: Load-Store Handling",
+     "zh": "乱序执行中的问题：访存处理"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "L24",
    "title": "Memory Hierarchy & Caches",
    "zh": "存储层次与缓存",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "The Memory Hierarchy",
+     "zh": "存储层次"
+    },
+    {
+     "ref": "",
+     "title": "Cache Basics and Operation",
+     "zh": "缓存基础与工作方式"
+    },
+    {
+     "ref": "",
+     "title": "Cache Performance",
+     "zh": "缓存性能",
+     "items": [
+      {
+       "ref": "",
+       "title": "Cache Parameters vs. Miss/Hit Rate",
+       "zh": "sz"
+      },
+      {
+       "ref": "",
+       "title": "Classification of Cache Misses",
+       "zh": "sz"
+      },
+      {
+       "ref": "",
+       "title": "How to Improve Cache Performance",
+       "zh": "sz"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Multi-Core Issues in Caching",
+     "zh": "多核带来的缓存问题",
+     "items": [
+      {
+       "ref": "",
+       "title": "Private vs. Shared Caches",
+       "zh": "sz"
+      },
+      {
+       "ref": "",
+       "title": "Resource Sharing vs. Partitioning",
+       "zh": "sz"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Cache Coherence",
+     "zh": "缓存一致性",
+     "items": [
+      {
+       "ref": "",
+       "title": "The Cache Coherence Problem",
+       "zh": "sz"
+      },
+      {
+       "ref": "",
+       "title": "Hardware Cache Coherence",
+       "zh": "sz"
+      },
+      {
+       "ref": "",
+       "title": "Directory Based Coherence",
+       "zh": "sz"
+      },
+      {
+       "ref": "",
+       "title": "Coherence: Update vs. Invalidate",
+       "zh": "sz"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "L25a",
    "title": "Caches in Multi-Core Systems",
    "zh": "多核系统中的缓存",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Part 1: Multi-core issues in Caching",
+     "zh": "第一部分：多核带来的缓存问题"
+    },
+    {
+     "ref": "",
+     "title": "Cache sharing/partitioning",
+     "zh": "缓存共享与划分"
+    },
+    {
+     "ref": "",
+     "title": "Brief intro to cache coherence",
+     "zh": "缓存一致性简介"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "L26",
    "title": "Virtual Memory",
    "zh": "虚拟内存",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Virtual Memory",
+     "zh": "虚拟内存"
+    },
+    {
+     "ref": "",
+     "title": "Virtual Memory Support and Examples",
+     "zh": "虚拟内存的支持与例子",
+     "items": [
+      {
+       "ref": "",
+       "title": "Address Translation: Page Hit",
+       "zh": "地址翻译：页命中"
+      },
+      {
+       "ref": "",
+       "title": "Address Translation: Page Fault",
+       "zh": "地址翻译：缺页"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Memory Protection",
+     "zh": "内存保护"
+    },
+    {
+     "ref": "",
+     "title": "Some Issues in Virtual Memory",
+     "zh": "虚拟内存中的若干问题"
+    },
+    {
+     "ref": "",
+     "title": "A Modern Example Virtual Memory System",
+     "zh": "现代虚拟内存系统实例"
+    },
+    {
+     "ref": "",
+     "title": "Virtual Memory Summary",
+     "zh": "虚拟内存小结"
+    }
+   ]
   },
   {
    "src": "B",
@@ -137,7 +378,8 @@
     "A:L12",
     "A:L13a",
     "A:L16"
-   ]
+   ],
+   "note": "A:L12 的小节（Assembly Language、指令类型、数据存放）就是指令集层面的展开；A:L13a 在课程站上没有可下载的讲义 PDF，因此仍是讲级条目。"
   },
   {
    "topic": "流水线",
@@ -145,21 +387,24 @@
     "A:L18",
     "A:L19",
     "A:L20"
-   ]
+   ],
+   "note": "A:L18 的小节按讲义目录页分成 Pipelining / 单周期与流水线对比 / 流水线 MIPS 结构 / 冒险（数据、控制）/ 流水线性能；A:L19 没有可下载的讲义 PDF（讲级）。"
   },
   {
    "topic": "缓存",
    "refs": [
     "A:L24",
     "A:L25a"
-   ]
+   ],
+   "note": "A:L24 讲义按“存储层次 → 缓存基础与工作方式 → 缓存性能 → 多核缓存问题 → 缓存一致性”分节（本轮抄成分支下的节与小节），A:L25a 讲多核场景下的共享/划分与一致性简介。"
   },
   {
    "topic": "多核一致性",
    "refs": [
     "A:L25a",
     "B:17"
-   ]
+   ],
+   "note": "A:L25a 的小节给出“多核缓存问题 → 共享/划分 → 缓存一致性简介”，正式的一致性模型在 B:17。"
   },
   {
    "topic": "分支预测",
@@ -171,18 +416,20 @@
   {
    "topic": "性能模型",
    "refs": [
+    "A:L16",
+    "A:L18",
     "A:L20",
     "B:18"
    ],
-   "note": "乱序执行的性能工程（CPI、流水线停顿、性能建模）由 B:18 承担；A 侧只有 L20 一讲涉及乱序带来的性能问题。能耗/面积等设计权衡见 C.1.1 导览图第 8 章。"
+   "note": "A:L16 的 Performance Analysis 与 A:L18 的 Performance of the Pipelined architecture 是小节级的性能分析，A:L20 讲乱序执行带来的性能问题；乱序执行下的性能工程由 B:18 承担。能耗/面积等设计权衡见 C.1.1 导览图第 8 章。"
   }
  ],
- "omitted": "第 1–11 讲（数字电路、组合/时序电路、Verilog、数字系统设计）和第 23a/23b 讲（存储器件技术与鲁棒性）属 C.1.1 或更底层电路内容；第 21/22 讲（SIMD/GPU 架构）属 C.1.4；第 25b 讲（预取）未收；第 27 讲为习题课。",
- "notes": "A 的日程只有讲级主题、没有更细的分节，所以本图在 A 上是讲级分支；分支预测、内存一致性、乱序性能三块由 B（Berkeley CS152）的对应讲次补充分支。若只想跟一门课，按 A 的 L12→L26 顺序即可；要补研究性深度（分支预测器设计、内存序模型）再看 B 的 12/13/17/18 讲。此外 6.004（C.1.1 的主来源）第 15 章 Basic 5-Stage Pipeline、Data Hazards、Control Hazards 可作为 A:L18/L19 的配套细讲。",
+ "omitted": "第 1–11 讲（数字电路、组合/时序电路、Verilog、数字系统设计）和第 23a/23b 讲（存储器件技术与鲁棒性）属 C.1.1 或更底层电路内容；第 21/22 讲（SIMD/GPU 架构）属 C.1.4；第 25b 讲（预取）未收，A:L25a 讲义里“Part 2: Prefetching”那一半也因此没有收进小节；第 27 讲为习题课。",
+ "notes": "本轮（第二轮加深）的做法：对课程站上能下载的讲义 PDF，抄每讲自己的节标题作为该分支的 items —— 有议程页的（L12、L16、L18、L20、L25a）用其“In This Lecture / Agenda for Today”页的条目；没有议程页的 Mutlu/SAFARI 讲义（L24、L26）用章节分隔页（section divider）作二级小节，再从每节里挑 2–6 张主题片的标题作三级小节。没能加深的分支及原因：L13a（MIPS Assembly II）、L17（Single-Cycle Microarchitecture II）、L19（Pipelined Processor Architecture II）在三处课程页（schedule / materials / lectures）都没有对应的讲义 PDF 链接（PDF 与 PPT 都缺），保持讲级；B（Berkeley CS152）的 12/13/17/18 讲同样只有讲级标题：cs152.org 的 schedule 每讲只写一个主题名并链到 Slides，slides 不是静态 PDF（页面里没有 /assets/lectures 的直链），无法逐讲打开抄节标题，故保持讲级并在此说明。另外 6.004（C.1.1 的主来源）第 15 章 Basic 5-Stage Pipeline、Data Hazards、Control Hazards 可作为 A:L18/L19 的配套细讲。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 14,
-  "fuzzy": 0,
+  "exact": 56,
+  "fuzzy": 2,
   "dropped": []
  }
 }

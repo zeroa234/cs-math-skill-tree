@@ -3,113 +3,298 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "Automata, Computability, and Complexity (6.045J, Spring 2011)",
-   "by": "Scott Aaronson",
-   "year": 2011,
-   "url": "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/",
+   "kind": "book",
+   "title": "Automata, Computability and Complexity: Theory and Applications",
+   "by": "Elaine Rich",
+   "year": 2007,
+   "url": "https://www.cs.utexas.edu/~ear/cs341/automatabook/",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/pages/calendar/",
-    "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/pages/lecture-notes/"
+    "https://www.cs.utexas.edu/~ear/cs341/automatabook/AutomataTheoryBook.pdf"
    ],
-   "why": "节点现有英文资源；OCW 的 Calendar / Lecture Notes 页逐讲列出主题，第 6–10 讲正好是图灵机、可判定性、不可判定与 PCP、映射归约与 Rice 定理、自指与递归定理，与节点简介四条知识点一一对应。"
-  },
-  {
-   "key": "B",
-   "kind": "course",
-   "title": "Theory of Computation (18.404J, Fall 2020)",
-   "by": "Michael Sipser",
-   "year": 2020,
-   "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
-   "toc_urls": [
-    "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/readings/"
-   ],
-   "why": "补递归理论中“逻辑理论的可判定性”这一块：A 只讲到自指与递归定理，Sipser 本人的课在第 11 讲把递归定理与逻辑（Sipser §6.1–6.2）放在一起讲。"
+   "why": "本轮换源：6.045J 里本节点要用的第 7–10 讲（Nancy Lynch）都是幻灯片，没有章—节结构；第 6 讲虽是分节写本，但只讲图灵机与停机问题。Rich 这本作者主页公开的教材第四部分（第 17–23、25 章）按“图灵机 → 丘奇-图灵论题 → 停机问题 → D/SD 语言 → 归约与 Rice 定理 → PCP 与逻辑理论 → 非限制文法 → 可计算函数与递归定理”逐章逐节展开，正好覆盖本节点的四条知识点，而且和 F.2.1 是同一本书。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "6",
-   "title": "Turing machines",
+   "ref": "17",
+   "title": "Turing Machines",
    "zh": "图灵机",
-   "items": []
+   "items": [
+    {
+     "ref": "17.1",
+     "title": "Definition, Notation and Examples",
+     "zh": "定义、记号与例子"
+    },
+    {
+     "ref": "17.2",
+     "title": "Computing With Turing Machines",
+     "zh": "用图灵机计算"
+    },
+    {
+     "ref": "17.3",
+     "title": "Adding Multiple Tapes and Nondeterminism",
+     "zh": "增加多条纸带与非确定性"
+    },
+    {
+     "ref": "17.5",
+     "title": "Alternative Turing Machine Definitions",
+     "zh": "图灵机的其他定义"
+    },
+    {
+     "ref": "17.6",
+     "title": "Encoding Turing Machines as Strings",
+     "zh": "把图灵机编码为字符串"
+    },
+    {
+     "ref": "17.7",
+     "title": "The Universal Turing Machine",
+     "zh": "通用图灵机"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "7",
-   "title": "Decidability",
-   "zh": "可判定性",
-   "items": []
+   "ref": "18",
+   "title": "The Church-Turing Thesis",
+   "zh": "丘奇-图灵论题",
+   "items": [
+    {
+     "ref": "18.1",
+     "title": "The Thesis",
+     "zh": "论题的内容"
+    },
+    {
+     "ref": "18.2",
+     "title": "Examples of Equivalent Formalisms",
+     "zh": "等价形式系统的例子"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "8",
-   "title": "Undecidable problems and Post correspondence problem (PCP)",
-   "zh": "不可判定问题与波斯特对应问题（PCP）",
-   "items": []
+   "ref": "19",
+   "title": "The Unsolvability of the Halting Problem",
+   "zh": "停机问题的不可解性",
+   "items": [
+    {
+     "ref": "19.1",
+     "title": "The Language H is Semidecidable but Not Decidable",
+     "zh": "语言 H 是半可判定的但不是可判定的"
+    },
+    {
+     "ref": "19.2",
+     "title": "Some Implications of the Undecidability of H",
+     "zh": "H 不可判定的一些推论"
+    },
+    {
+     "ref": "19.3",
+     "title": "Back to Turing, Church, and the Entscheidungsproblem",
+     "zh": "回到图灵、丘奇与判定问题"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "9",
-   "title": "Mapping reducibility and Rice’s theorem",
-   "zh": "映射归约与莱斯定理",
-   "items": []
+   "ref": "20",
+   "title": "Decidable and Semidecidable Languages",
+   "zh": "可判定语言与半可判定语言",
+   "items": [
+    {
+     "ref": "20.1",
+     "title": "D: The Big Picture",
+     "zh": "D 类全貌"
+    },
+    {
+     "ref": "20.2",
+     "title": "SD: The Big Picture",
+     "zh": "SD 类全貌"
+    },
+    {
+     "ref": "20.3",
+     "title": "Subset Relationships between D and SD",
+     "zh": "D 与 SD 之间的包含关系"
+    },
+    {
+     "ref": "20.4",
+     "title": "The Classes D and SD Under Complement",
+     "zh": "补运算下的 D 类与 SD 类"
+    },
+    {
+     "ref": "20.5",
+     "title": "Enumerating a Language",
+     "zh": "语言的枚举"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "10",
-   "title": "Self-reference and the recursion theorem",
-   "zh": "自指与递归定理",
-   "items": []
+   "ref": "21",
+   "title": "Decidability and Undecidability Proofs",
+   "zh": "可判定性与不可判定性证明",
+   "items": [
+    {
+     "ref": "21.1",
+     "title": "Reduction",
+     "zh": "归约"
+    },
+    {
+     "ref": "21.2",
+     "title": "Using Reduction to Show that a Language is Not Decidable",
+     "zh": "用归约证明语言不可判定"
+    },
+    {
+     "ref": "21.3",
+     "title": "Are All Questions About Turing Machines Undecidable?",
+     "zh": "关于图灵机的问题都不可判定吗"
+    },
+    {
+     "ref": "21.4",
+     "title": "Rice’s Theorem",
+     "zh": "Rice 定理"
+    },
+    {
+     "ref": "21.5",
+     "title": "Undecidable Questions About Real Programs",
+     "zh": "关于真实程序的不可判定问题"
+    },
+    {
+     "ref": "21.6",
+     "title": "Showing That a Language is Not Semidecidable",
+     "zh": "证明语言不是半可判定的"
+    }
+   ]
   },
   {
-   "src": "B",
-   "ref": "11",
-   "title": "The Recursion Theorem and Logic",
-   "zh": "递归定理与逻辑",
-   "fill": "递归理论里的逻辑理论可判定性（Sipser §6.2），A 第 10 讲只讲自指与递归定理本身",
-   "items": []
+   "src": "A",
+   "ref": "22",
+   "title": "Decidability of Languages That Do Not (Obviously) Ask Questions about Turing Machines",
+   "zh": "不（显然）涉及图灵机的问题语言的可判定性",
+   "items": [
+    {
+     "ref": "22.1",
+     "title": "Diophantine Equations and Hilbert’s 10th Problem",
+     "zh": "丢番图方程与希尔伯特第十问题"
+    },
+    {
+     "ref": "22.2",
+     "title": "Post Correspondence Problem",
+     "zh": "Post 对应问题"
+    },
+    {
+     "ref": "22.3",
+     "title": "Tiling Problems",
+     "zh": "铺砖问题"
+    },
+    {
+     "ref": "22.4",
+     "title": "Logical Theories",
+     "zh": "逻辑理论"
+    },
+    {
+     "ref": "22.5",
+     "title": "Undecidable Problems about Context-Free Languages",
+     "zh": "上下文无关语言的不可判定问题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "23",
+   "title": "Unrestricted Grammars",
+   "zh": "非限制文法",
+   "items": [
+    {
+     "ref": "23.1",
+     "title": "Definition and Examples",
+     "zh": "定义与例子"
+    },
+    {
+     "ref": "23.2",
+     "title": "Equivalence of Unrestricted Grammars and Turing Machines",
+     "zh": "非限制文法与图灵机的等价性"
+    },
+    {
+     "ref": "23.3",
+     "title": "Grammars Compute Functions",
+     "zh": "文法如何计算函数"
+    },
+    {
+     "ref": "23.4",
+     "title": "Undecidable Problems About Unrestricted Grammars",
+     "zh": "非限制文法的不可判定问题"
+    },
+    {
+     "ref": "23.5",
+     "title": "The Word Problem for Semi-Thue Systems",
+     "zh": "半 Thue 系统的字问题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "25",
+   "title": "Computable Functions",
+   "zh": "可计算函数",
+   "items": [
+    {
+     "ref": "25.1",
+     "title": "What is a Computable Function?",
+     "zh": "什么是可计算函数"
+    },
+    {
+     "ref": "25.2",
+     "title": "Recursive Function Theory",
+     "zh": "递归函数论"
+    },
+    {
+     "ref": "25.3",
+     "title": "The Recursion Theorem and its Use",
+     "zh": "递归定理及其应用"
+    }
+   ]
   }
  ],
  "coverage": [
   {
    "topic": "Turing机",
    "refs": [
-    "A:6"
+    "A:17",
+    "A:17.1",
+    "A:17.3",
+    "A:18"
    ]
   },
   {
    "topic": "可判定与不可判定问题",
    "refs": [
-    "A:7",
-    "A:8"
+    "A:19",
+    "A:20",
+    "A:21",
+    "A:22"
    ]
   },
   {
    "topic": "归约",
    "refs": [
-    "A:9"
+    "A:21.1",
+    "A:21.2",
+    "A:21.6"
    ]
   },
   {
    "topic": "递归理论",
    "refs": [
-    "A:10",
-    "B:11"
+    "A:25.2",
+    "A:25.3"
    ]
-  },
-  {
-   "topic": "图灵归约与算术层级（Sipser §6.3–6.4）",
-   "refs": [],
-   "note": "A 第 10 讲停在递归定理，B 只补到逻辑理论的可判定性，两页都没有图灵归约、相对可计算性与算术层级的专门一讲，需要另找研究生教材（如 Soare）才讲得到"
   }
  ],
- "omitted": "主来源 6.045J 一共 23 讲：第 1–5 讲（逻辑门、DFA/NFA、正则表达式、泵引理）属 F.2.1 自动机部分；第 11–14 讲与第 18 讲是密码学；第 15–17 讲是复杂度（归 F.2.3）；第 19–20 讲 PAC 学习、第 21–23 讲量子计算，都与本节点无关。补充来源 18.404J 只取了第 11 讲，其余讲次与本节点或 F.2.1/F.2.3 重复。",
- "notes": "6.045J 的 Calendar 与 Lecture Notes 两页主题列表完全一致，逐讲只有一两个词，没有更细的小节；节点窄到“递归理论”时靠 B 的第 11 讲补了 §6.1–6.2。Sipser 原书（Introduction to the Theory of Computation, 3rd ed.）的章节目录没能找到可引用的权威在线目录页（出版社页面是 JS 渲染、读不到正文），所以没拿教材本身当来源。",
+ "omitted": "Rich 原书第四部分共 10 章，只收了第 17–23、25 章：第 24 章（乔姆斯基层级与上下文相关语言）归 F.2.1；第 26 章是总结与文献。第 17.4 节（模拟“真实”计算机）是工程性插曲，未收。第一至三部分（有限自动机、上下文无关语言）属 F.2.1，第五部分（复杂度）属 F.2.3。原主来源 6.045J 的 23 讲未保留：第 1–5 讲属 F.2.1，第 7–10 讲的内容被本书第 19–21 章覆盖且更系统，第 11–14、18 讲是密码学，第 15–17 讲属 F.2.3，第 19–23 讲是学习理论与量子计算，都不在本节点。",
+ "notes": "第二轮按办法 2 换了主来源。原主来源 MIT 6.045J 在 OCW 上的 Lecture Notes 里，第 1、2、6 讲是 GITCS 系列的分节写本，第 3–5、7–10 讲（Nancy Lynch）都是幻灯片，标题在页面间重复，抄不成章—节结构；本节点对应的第 6–10 讲正好只有第 6 讲是写本。改用作者 Elaine Rich 在 UT Austin 主页公开的整书 PDF（2007 年 1 月草稿），目录在第 4–6 页。仍未覆盖：图灵归约、相对可计算性与算术层级（这些要研究生教材如 Soare 才有专章，Rich 与 6.045J 都只到映射归约与递归定理）。原补充来源 18.404J 第 11 讲（递归定理与逻辑）已删，书里第 22.4 节逻辑理论与 25.3 节递归定理覆盖了同一块内容。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 6,
+  "exact": 43,
   "fuzzy": 0,
   "dropped": []
  }

@@ -4,14 +4,14 @@
   {
    "key": "A",
    "kind": "book",
-   "title": "Software Engineering, 9th Edition",
-   "by": "Ian Sommerville",
-   "year": 2010,
-   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "title": "Guide to the Software Engineering Body of Knowledge (SWEBOK Guide) v4.0a",
+   "by": "IEEE Computer Society (editor: Hironori Washizaki)",
+   "year": 2026,
+   "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
    "toc_urls": [
-    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+    "https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf"
    ],
-   "why": "本科标准软件工程教材（CMU 17-313 课堂用书，也是 Cornell CS 5150 指定的读本）：第 4 章需求工程按节给出获取、规格说明、确认与管理，第 5 章系统建模按节给出上下文、交互（用例）、结构（领域类模型）与行为模型，正好是节点简介的骨架。"
+   "why": "IEEE 计算机学会官方免费公开的软件工程知识体系（本科/研究生课程与认证的公认参考）：第 1 章 Software Requirements 按节给出需求分类、获取、分析、规格说明（含验收标准式规格）、确认与管理，第 7 节 Practical Considerations 里单列 Requirements Tracing，正好是节点简介的骨架。"
   },
   {
    "key": "B",
@@ -24,83 +24,257 @@
     "https://www.cs.cornell.edu/courses/cs5150/2026sp/lecture/lec03-slides-requirements.pdf",
     "https://www.cs.cornell.edu/courses/cs5150/2026sp/lecture/lec04-slides-models.pdf"
    ],
-   "why": "节点“现有英文学习资源”就是这门课的课程站；它的 schedule 只给 Lecture 3 Requirements / Lecture 4 Models 两讲，讲义 PDF 里有讲内的分节标题，用来补需求实践（可验证需求、确认与验证、追踪追溯、利益相关者与视点分析）和用例/场景建模的课堂切分。"
+   "why": "节点“现有英文学习资源”就是这门课的课程站；讲义 PDF 里有讲内的分节标题，补 SWEBOK 只有条目没有课堂切分的部分：可验证需求怎么写、确认与验证的区别、追踪追溯、利益相关者与视点分析，以及用例的基本流/备选流与顺序图、状态图。"
   }
  ],
  "outline": [
   {
    "src": "A",
+   "ref": "1",
+   "title": "Software Requirements Fundamentals",
+   "zh": "软件需求基础",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Definition of a Software Requirement",
+     "zh": "软件需求的定义"
+    },
+    {
+     "ref": "1.2",
+     "title": "Categories of Software Requirements",
+     "zh": "软件需求的分类"
+    },
+    {
+     "ref": "1.3",
+     "title": "Software Product Requirements and Software Project Requirements",
+     "zh": "软件产品需求与软件项目需求"
+    },
+    {
+     "ref": "1.4",
+     "title": "Functional Requirements",
+     "zh": "功能性需求"
+    },
+    {
+     "ref": "1.5",
+     "title": "Nonfunctional Requirements",
+     "zh": "非功能性需求"
+    },
+    {
+     "ref": "1.6",
+     "title": "Technology Constraints",
+     "zh": "技术约束"
+    },
+    {
+     "ref": "1.7",
+     "title": "Quality of Service Constraints",
+     "zh": "服务质量约束"
+    },
+    {
+     "ref": "1.9",
+     "title": "System Requirements and Software Requirements",
+     "zh": "系统需求与软件需求"
+    },
+    {
+     "ref": "1.10",
+     "title": "Derived Requirements",
+     "zh": "派生需求"
+    },
+    {
+     "ref": "1.11",
+     "title": "Software Requirements Activities",
+     "zh": "软件需求活动"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Requirements Elicitation",
+   "zh": "需求获取",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Requirements Sources",
+     "zh": "需求的来源"
+    },
+    {
+     "ref": "2.2",
+     "title": "Common Requirements Elicitation Techniques",
+     "zh": "常用的需求获取技术"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Requirements Analysis",
+   "zh": "需求分析",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Basic Requirements Analysis",
+     "zh": "基本需求分析"
+    },
+    {
+     "ref": "3.2",
+     "title": "Economics of Quality of Service Constraints",
+     "zh": "服务质量约束的经济性"
+    },
+    {
+     "ref": "3.3",
+     "title": "Formal Analysis",
+     "zh": "形式化分析"
+    },
+    {
+     "ref": "3.4",
+     "title": "Addressing Conflict in Requirements",
+     "zh": "需求冲突的处理"
+    }
+   ]
+  },
+  {
+   "src": "A",
    "ref": "4",
-   "title": "Requirements engineering",
-   "zh": "需求工程",
+   "title": "Requirements Specification",
+   "zh": "需求规格说明",
    "items": [
     {
      "ref": "4.1",
-     "title": "Functional and non-functional requirements",
-     "zh": "功能性与非功能性需求"
+     "title": "Unstructured Natural Language Requirements Specification",
+     "zh": "非结构化自然语言需求规格说明"
     },
     {
      "ref": "4.2",
-     "title": "The software requirements document",
-     "zh": "软件需求文档"
+     "title": "Structured Natural Language Requirements Specification",
+     "zh": "结构化自然语言需求规格说明"
     },
     {
      "ref": "4.3",
-     "title": "Requirements specification",
-     "zh": "需求规格说明"
+     "title": "Acceptance Criteria-Based Requirements Specification",
+     "zh": "基于验收标准的需求规格说明"
     },
     {
      "ref": "4.4",
-     "title": "Requirements engineering processes",
-     "zh": "需求工程过程"
+     "title": "Model-Based Requirements Specification",
+     "zh": "模型化需求规格说明"
     },
     {
      "ref": "4.5",
-     "title": "Requirements elicitation and analysis",
-     "zh": "需求获取与分析"
+     "title": "Additional Attributes of Requirement",
+     "zh": "需求的其他属性"
     },
     {
      "ref": "4.6",
-     "title": "Requirements validation",
-     "zh": "需求确认"
-    },
-    {
-     "ref": "4.7",
-     "title": "Requirements management",
-     "zh": "需求管理"
+     "title": "Incremental and Comprehensive Requirements Specification",
+     "zh": "增量式与完整式需求规格说明"
     }
    ]
   },
   {
    "src": "A",
    "ref": "5",
-   "title": "System modeling",
-   "zh": "系统建模",
+   "title": "Requirements Validation",
+   "zh": "需求确认",
    "items": [
     {
      "ref": "5.1",
-     "title": "Context models",
-     "zh": "上下文模型"
+     "title": "Requirements Reviews",
+     "zh": "需求评审"
     },
     {
      "ref": "5.2",
-     "title": "Interaction models",
-     "zh": "交互模型"
+     "title": "Simulation and Execution",
+     "zh": "仿真与执行"
     },
     {
      "ref": "5.3",
-     "title": "Structural models",
-     "zh": "结构模型"
+     "title": "Prototyping",
+     "zh": "原型化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Requirements Management Activities",
+   "zh": "需求管理活动",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Requirements Scrubbing",
+     "zh": "需求清理"
     },
     {
-     "ref": "5.4",
-     "title": "Behavioral models",
-     "zh": "行为模型"
+     "ref": "6.2",
+     "title": "Requirements Change Control",
+     "zh": "需求变更控制"
     },
     {
-     "ref": "5.5",
-     "title": "Model-driven engineering",
-     "zh": "模型驱动工程"
+     "ref": "6.3",
+     "title": "Scope Matching",
+     "zh": "范围匹配"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Practical Considerations",
+   "zh": "实践考虑",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Iterative Nature of the Requirements Process",
+     "zh": "需求过程的迭代性"
+    },
+    {
+     "ref": "7.2",
+     "title": "Requirements Prioritization",
+     "zh": "需求优先级排序"
+    },
+    {
+     "ref": "7.3",
+     "title": "Requirements Tracing",
+     "zh": "需求追踪"
+    },
+    {
+     "ref": "7.4",
+     "title": "Requirements Stability and Volatility",
+     "zh": "需求的稳定性与易变性"
+    },
+    {
+     "ref": "7.5",
+     "title": "Measuring Requirements",
+     "zh": "需求的度量"
+    },
+    {
+     "ref": "7.6",
+     "title": "Requirements Process Quality and Improvement",
+     "zh": "需求过程的质量与改进"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Software Design",
+   "zh": "软件设计（第 3 章，只取建模相关节）",
+   "fill": "补领域建模：SWEBOK 第 1 章只在“模型化需求规格说明”里提要模型，结构化的领域类模型与领域驱动设计在第 3 章的这两节",
+   "items": [
+    {
+     "ref": "3.4.1",
+     "title": "Model-Based Design",
+     "zh": "基于模型的设计"
+    },
+    {
+     "ref": "3.4.2",
+     "title": "Structural Design Descriptions",
+     "zh": "结构化设计描述"
+    },
+    {
+     "ref": "3.5.10",
+     "title": "Domain-Driven Design",
+     "zh": "领域驱动设计"
     }
    ]
   },
@@ -212,54 +386,62 @@
   {
    "topic": "需求获取",
    "refs": [
-    "A:4.5",
-    "A:4.4",
+    "A:2",
+    "A:2.1",
+    "A:2.2",
     "B:#1"
    ]
   },
   {
    "topic": "用例",
    "refs": [
-    "A:5.2",
+    "A:4.4",
     "B:#2"
-   ]
+   ],
+   "note": "SWEBOK 没有单独的用例章：4.4 模型化需求规格说明里把用例建模、交互图、状态建模列为需求模型的三种表示；逐条讲用例怎么写的在 B 的 Lecture 4（Use cases / Basic flow / Alternative flows）。"
   },
   {
    "topic": "约束",
    "refs": [
-    "A:4.1",
-    "A:5.1",
+    "A:1.6",
+    "A:1.7",
+    "A:3.2",
     "B:#1"
    ]
   },
   {
    "topic": "验收标准",
    "refs": [
-    "A:4.6",
     "A:4.3",
+    "A:5",
     "B:#1"
-   ]
+   ],
+   "note": "A:4.3 是“以验收标准写需求规格”的专门一节，A:5 讲需求确认（评审、仿真、原型）；B 的 Lecture 3 讲 Validation 与 Verification 的区别。"
   },
   {
    "topic": "领域模型",
    "refs": [
-    "A:5.3",
-    "A:5.1"
-   ]
+    "A:3.4.2",
+    "A:3.5.10",
+    "A:4.4",
+    "B:#2"
+   ],
+   "note": "SWEBOK 第 1 章没有“领域模型”专节（只在 4.4 提到结构/交互/状态三类需求模型），因此把第 3 章的结构化设计描述与领域驱动设计两节作为补充分支；域类图的画法在 B 的 Lecture 4（Structural / Class Diagrams）里，细讲见 P.4.3 的导览图。"
   },
   {
    "topic": "可追踪性",
    "refs": [
-    "A:4.7",
+    "A:7.3",
+    "A:6.2",
     "B:#1"
    ]
   }
  ],
- "omitted": "A 只收第 4、5 章：第 6–9 章（架构设计、设计与实现、测试、演化）属 P.4.3/P.4.4/P.4.5，第 12 章（可靠性安全规格说明）属安全/可靠性节点。B 只收需求与建模两讲，其余讲义（过程、规划、架构、设计、版本控制、测试、静态分析、依赖管理）属相邻节点；两讲讲义里的行政通知、投票、练习页也未收。",
- "notes": "A 的 PDF 由 CMU 17-313 课程站（qatar.cmu.edu/cs/17313）托管，目录在第 9–16 页；B 的两个 toc_url 是 Cornell CS 5150 的 Lecture 3/4 讲义 PDF，讲义里没有节编号，所以叶子的 ref 留空，coverage 里用 B:#3、B:#4 指这两个分支。",
+ "omitted": "A 只收第 1 章的 1–7 节与第 3 章的 3 节：1.8（为什么这样分类）是讨论性小节，第 8 节（需求工具）是工具清单；第 2、4、5、6、7、8（架构、构造、测试、运维、维护、配置管理）章分别属 P.4.3–P.4.5 等其他节点。B 只收需求与建模两讲，其余讲义（过程、规划、架构、设计、版本控制、测试、静态分析、依赖管理）属相邻节点；两讲讲义里的行政通知、投票、练习页也未收。",
+ "notes": "A 是 IEEE 计算机学会官方免费公开的 SWEBOK v4.0a（2026 年 8 月版）；目录在 PDF 第 6–9 页，ref 用的是 SWEBOK 自己的节号，第 3 章那三个补充节写了章节号前缀（3.4.1 / 3.4.2 / 3.5.10）以免与第 1 章的 4.1、4.2 冲突。第一轮用的 Sommerville《Software Engineering》9th ed. 整书 PDF 由 CMU 17-313 课程站托管，不是作者或出版社公开发布，已按第二轮要求删除，其覆盖的知识点改由 SWEBOK 承担。B 的两个 toc_url 是 Cornell CS 5150 的 Lecture 3/4 讲义 PDF，讲义里没有节编号，所以叶子的 ref 留空，coverage 里用 B:#1、B:#2 指这两个分支。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 33,
+  "exact": 64,
   "fuzzy": 0,
   "dropped": []
  }

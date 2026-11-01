@@ -3,6 +3,19 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Parallel Programming: for Multicore and Cluster Systems, 2nd ed.",
+   "by": "Thomas Rauber and Gudula Rünger",
+   "year": 2013,
+   "url": "https://link.springer.com/book/10.1007/978-3-642-37801-0",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-642-37801-0",
+    "https://link.springer.com/content/pdf/bfm:978-3-642-37801-0/1"
+   ],
+   "why": "主来源换成本科/研究生教材（出版社在书前页公开的完整目录，章 → 节 → 小节）：第 3 章并行编程模型（向量/SIMD、数组的数据分布、信息交换、进程与线程）、第 4 章并行程序性能分析（加速比与效率、可扩展性、全局通信的渐近时间、循环调度与分块）、第 5 章消息传递编程（MPI 点对点、集合通信、进程组）、第 6 章线程编程（Pthreads、OpenMP），正好把线程任务、向量化、消息传递、负载均衡、数据划分五个知识点落到节级。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "15-418/15-618 Parallel Computer Architecture and Programming, Fall 2026 — Schedule",
    "by": "Carnegie Mellon University",
@@ -11,236 +24,248 @@
    "toc_urls": [
     "https://www.cs.cmu.edu/~418/schedule.html"
    ],
-   "why": "节点现有英文学习资源。15-418 的官方 schedule 逐讲列出题目并附讲义：并行编程模型与并行编程基础、性能优化两讲、性能分析与剖析、实现同步、细粒度同步与无锁编程、异构并行，配合 4 次作业与期末项目（要求自己并行化并调优代码），覆盖线程与任务、调度、性能剖析这条主线。"
-  },
-  {
-   "key": "B",
-   "kind": "course",
-   "title": "CS149 Parallel Computing, Fall 2025 — Schedule",
-   "by": "Kayvon Fatahalian, Kunle Olukotun (Stanford University)",
-   "year": 2025,
-   "url": "https://gfxcourses.stanford.edu/cs149/fall25",
-   "toc_urls": [
-    "https://gfxcourses.stanford.edu/cs149/fall25"
-   ],
-   "why": "补“向量化”“消息传递”“负载均衡”“数据划分”：15-418 的讲次标题里没有 ISPC/SIMD、MPI 与数据划分的专门讲次；CS149 的日程有一讲 ISPC 编程抽象（向量化）、一讲 Work Distribution and Scheduling（负载均衡）、一讲 Locality and Communication（消息传递、阻塞/非阻塞发送）、一讲 Parallelizing Code（数据划分的思考过程）。"
-  },
-  {
-   "key": "C",
-   "kind": "book",
-   "title": "Parallel Programming for Science and Engineering (The Art of HPC, Volume 2)",
-   "by": "Victor Eijkhout (Texas Advanced Computing Center)",
-   "year": 2022,
-   "url": "https://theartofhpc.com/pcse/",
-   "toc_urls": [
-    "https://theartofhpc.com/pcse/"
-   ],
-   "why": "补“线程任务”与“消息传递”的具体编程章节：前两个来源只给讲次标题，没有把 OpenMP 与 MPI 的接口拆成章；这本书是作者公开的免费教材，目录按 MPI 与 OpenMP 的技术点逐章排列（并行区、循环并行、归约、工作共享、同步、点对点、集合通信、虚拟拓扑）。"
+   "why": "节点现有英文学习资源，保留它补教材里没有单独成节的工程内容：性能优化两讲、性能分析与剖析（profiling 工具）、细粒度同步与无锁编程、异构并行与硬件专用化。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "4",
+   "ref": "3",
    "title": "Parallel Programming Models",
    "zh": "并行编程模型",
-   "items": []
+   "items": [
+    {
+     "ref": "3.2",
+     "title": "Parallelization of programs",
+     "zh": "程序的并行化"
+    },
+    {
+     "ref": "3.3",
+     "title": "Levels of parallelism",
+     "zh": "并行的层次"
+    },
+    {
+     "ref": "3.4",
+     "title": "SIMD Computations",
+     "zh": "SIMD 计算"
+    },
+    {
+     "ref": "3.5",
+     "title": "Data distributions for arrays",
+     "zh": "数组的数据分布"
+    },
+    {
+     "ref": "3.6",
+     "title": "Information exchange",
+     "zh": "信息交换"
+    },
+    {
+     "ref": "3.7",
+     "title": "Parallel matrix-vector product",
+     "zh": "并行矩阵向量乘"
+    },
+    {
+     "ref": "3.8",
+     "title": "Processes and Threads",
+     "zh": "进程与线程"
+    },
+    {
+     "ref": "3.9",
+     "title": "Further parallel programming approaches",
+     "zh": "其他并行编程途径"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "7",
-   "title": "Parallel Programming Basics",
-   "zh": "并行编程基础",
-   "items": []
+   "ref": "4",
+   "title": "Performance Analysis of Parallel Programs",
+   "zh": "并行程序的性能分析",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Performance Evaluation of Computer Systems",
+     "zh": "计算机系统的性能评价"
+    },
+    {
+     "ref": "4.2",
+     "title": "Performance Metrics for Parallel Programs",
+     "zh": "并行程序的性能指标"
+    },
+    {
+     "ref": "4.3",
+     "title": "Asymptotic Times for Global Communication",
+     "zh": "全局通信的渐近时间"
+    },
+    {
+     "ref": "4.4",
+     "title": "Analysis of Parallel Execution Times",
+     "zh": "并行执行时间分析"
+    },
+    {
+     "ref": "4.5",
+     "title": "Parallel Computational Models",
+     "zh": "并行计算模型"
+    },
+    {
+     "ref": "4.6",
+     "title": "Loop Scheduling and Loop Tiling",
+     "zh": "循环调度与循环分块"
+    }
+   ]
   },
   {
    "src": "A",
+   "ref": "5",
+   "title": "Message-Passing Programming",
+   "zh": "消息传递编程",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Introduction to MPI",
+     "zh": "MPI 入门"
+    },
+    {
+     "ref": "5.2",
+     "title": "Collective Communication Operations",
+     "zh": "集合通信操作"
+    },
+    {
+     "ref": "5.3",
+     "title": "Process Groups and Communicators",
+     "zh": "进程组与通信子"
+    },
+    {
+     "ref": "5.4",
+     "title": "Introduction to MPI-2",
+     "zh": "MPI-2 入门"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Thread Programming",
+   "zh": "线程编程",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Programming with Pthreads",
+     "zh": "用 Pthreads 编程"
+    },
+    {
+     "ref": "6.2",
+     "title": "Java Threads",
+     "zh": "Java 线程"
+    },
+    {
+     "ref": "6.3",
+     "title": "OpenMP",
+     "zh": "OpenMP"
+    }
+   ]
+  },
+  {
+   "src": "B",
    "ref": "8",
    "title": "Performance Optimization I",
    "zh": "性能优化 I",
-   "items": [
-    {
-     "ref": "9",
-     "title": "Performance Optimization II",
-     "zh": "性能优化 II"
-    }
-   ]
+   "fill": "补“负载均衡”与“向量化”的工程做法：工作划分、调度开销、SIMD 利用",
+   "items": []
   },
   {
-   "src": "A",
+   "src": "B",
+   "ref": "9",
+   "title": "Performance Optimization II",
+   "zh": "性能优化 II",
+   "fill": "补性能优化的第二部分（内存与指令级优化）",
+   "items": []
+  },
+  {
+   "src": "B",
    "ref": "14",
    "title": "Performance Analysis / Profiling",
    "zh": "性能分析与剖析",
+   "fill": "补“负载均衡”里怎么量出瓶颈：剖析工具与指标",
    "items": []
   },
   {
-   "src": "A",
+   "src": "B",
    "ref": "16",
    "title": "Fine-Grained Synchronization, Lock-Free Programming",
    "zh": "细粒度同步与无锁编程",
+   "fill": "补“线程任务”里的同步细节：细粒度锁与无锁数据结构",
    "items": []
   },
   {
-   "src": "A",
+   "src": "B",
    "ref": "19",
    "title": "Heterogeneous Parallelism, Hardware Specialization",
    "zh": "异构并行与硬件专用化",
+   "fill": "补“向量化”之外的异构执行：专用加速器与异构编程",
    "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Modern Multi-Core Architecture (Part II) + ISPC Programming Abstractions",
-   "zh": "现代多核架构（下）与 ISPC 编程抽象",
-   "fill": "补“向量化”：SIMD 数据并行编程抽象与向量化实现",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Program Optimization 1: Work Distribution and Scheduling",
-   "zh": "程序优化 1：工作划分与调度",
-   "fill": "补“负载均衡”：工作划分、调度开销与 work stealing",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Program Optimization 2: Locality and Communication",
-   "zh": "程序优化 2：局部性与通信",
-   "fill": "补“消息传递”：消息传递、阻塞/非阻塞发送、流水线",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Parallelizing Code: An Example Thought Process",
-   "zh": "并行化代码：一个完整的思考过程",
-   "fill": "补“数据划分”：数据并行与共享地址空间两种模型下划分程序的过程",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Data-Parallel Thinking",
-   "zh": "数据并行思维",
-   "fill": "补“数据划分”：map、reduce、scan、groupByKey 等数据并行算子",
-   "items": []
-  },
-  {
-   "src": "C",
-   "ref": "17",
-   "title": "Getting started with OpenMP",
-   "zh": "OpenMP 入门",
-   "fill": "补“线程任务”：共享内存并行的线程与任务接口",
-   "items": [
-    {
-     "ref": "18",
-     "title": "OpenMP topic: Parallel regions",
-     "zh": "OpenMP 专题：并行区"
-    },
-    {
-     "ref": "19",
-     "title": "OpenMP topic: Loop parallelism",
-     "zh": "OpenMP 专题：循环并行"
-    },
-    {
-     "ref": "20",
-     "title": "OpenMP topic: Reductions",
-     "zh": "OpenMP 专题：归约"
-    },
-    {
-     "ref": "21",
-     "title": "OpenMP topic: Work sharing",
-     "zh": "OpenMP 专题：工作共享"
-    },
-    {
-     "ref": "23",
-     "title": "OpenMP topic: Synchronization",
-     "zh": "OpenMP 专题：同步"
-    }
-   ]
-  },
-  {
-   "src": "C",
-   "ref": "1",
-   "title": "Getting started with MPI",
-   "zh": "MPI 入门",
-   "fill": "补“消息传递”与“数据划分”：分布式内存的消息接口与进程拓扑",
-   "items": [
-    {
-     "ref": "3",
-     "title": "MPI topic: Collectives",
-     "zh": "MPI 专题：集合通信"
-    },
-    {
-     "ref": "4",
-     "title": "MPI topic: Point-to-point",
-     "zh": "MPI 专题：点对点通信"
-    },
-    {
-     "ref": "11",
-     "title": "MPI topic: Topologies",
-     "zh": "MPI 专题：拓扑"
-    }
-   ]
   }
  ],
  "coverage": [
   {
    "topic": "线程任务",
    "refs": [
-    "A:7",
-    "A:4",
-    "B:#2",
-    "B:#4",
-    "C:17",
-    "C:18",
-    "C:23"
+    "A:3.8",
+    "A:6",
+    "A:6.1",
+    "A:6.2",
+    "A:6.3",
+    "B:16"
    ]
   },
   {
    "topic": "向量化",
    "refs": [
-    "B:#1",
-    "B:#5"
+    "A:3.4",
+    "A:3.3",
+    "A:4.6",
+    "B:8",
+    "B:19"
    ]
   },
   {
    "topic": "消息传递",
    "refs": [
-    "B:#3",
-    "C:1",
-    "C:4",
-    "C:3"
-   ],
-   "note": "15-418 的讲次标题里没有 MPI 或消息传递（作业说明里有相关要求，但 schedule 上没有对应的讲次标题），所以这一项落在 CS149 的 Program Optimization 2 一讲与 Eijkhout 书的 MPI 各章。"
+    "A:5",
+    "A:5.1",
+    "A:5.2",
+    "A:5.3",
+    "A:5.4",
+    "A:3.6",
+    "A:4.3"
+   ]
   },
   {
    "topic": "负载均衡",
    "refs": [
-    "B:#2",
-    "C:19",
-    "C:21",
-    "A:7",
-    "A:14"
+    "A:4.6",
+    "A:4.2",
+    "A:4.4",
+    "B:8",
+    "B:9",
+    "B:14"
    ]
   },
   {
    "topic": "数据划分",
    "refs": [
-    "B:#4",
-    "B:#5",
-    "C:11",
-    "A:7"
+    "A:3.5",
+    "A:3.7",
+    "A:3.2",
+    "A:4.4"
    ]
   }
  ],
- "omitted": "A 里只收了编程与性能相关的六讲，未收 Why Parallelism、乱序流水线与多核处理器、GPU 两讲、互连网络、缓存一致性三讲、事务内存、虚拟内存、并行深度学习与客座讲；B 里只取了与 CPU 并行编程相关的五讲，未收 GPU、DNN、硬件专用化、缓存一致性、事务内存等讲次；C 里只取了 OpenMP 与 MPI 两部分的代表章，未收 MPI 的通信模式、数据类型、通信子、进程管理、单边通信、文件 I/O、混合编程等章与 OpenMP 的线程数据控制章。",
- "notes": "A 的 ref 用 15-418 schedule 上的讲次编号（第 9 讲是第 8 讲的续讲，放在第 8 讲之下）。B 的日程没有讲次编号，分支 ref 留空，coverage 用 B:#1–#5 指分支序号。C 的 ref 用原书目录的章号（书上按“17 Getting started with OpenMP”这样的章标题排列），只取了 OpenMP 与 MPI 两部分的代表章。具体接口与作业要求要在讲义/书里看；B 的作业 1–5（含 OpenMP 与 CUDA）与 A 的 4 次作业都是“自己写并行代码并调优”的练习入口。",
+ "omitted": "A 只收第 3–6 章：第 1 章（导论）、第 2 章（并行计算机体系结构：存储组织、互连网络、路由与交换、缓存一致性）、第 7 章（GPU 与 OpenCL，见 C.5.2）、第 8 章（线性方程组算法，见 C.5.3）不在本节点的知识点里；各章的习题节（3.10、4.7、5.5、6.4）未收。B 里没收：Why Parallelism、乱序流水线与多核处理器、GPU 两讲、互连网络、缓存一致性三讲、事务内存、虚拟内存、并行深度学习、客座讲与 wrap-up（属体系结构或 GPU 专题）。原先作为补充分支的 Eijkhout《Parallel Programming for Science and Engineering》已删掉：主来源第 5、6 章已把 MPI 与 OpenMP 讲到节一级，它不再补任何缺口。",
+ "notes": "本轮按第二轮第 2 条做法换源。先试第 1 条：15-418 课表上的讲义链接（www.cs.cmu.edu/afs/cs/academic/class/15418-*/public/lectures/*.pdf）现在会跳到 CMU 统一身份认证，读不到正文，无法从中抄节标题，故改用教材做主来源，课程保留为补充分支。A 的目录来自 Springer 公开的书前页 PDF（bfm），原文节标题里的编号与页码已按规则去掉。B 的 ref 用 15-418 schedule 上的讲次编号。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 22,
+  "exact": 30,
   "fuzzy": 0,
   "dropped": []
  }

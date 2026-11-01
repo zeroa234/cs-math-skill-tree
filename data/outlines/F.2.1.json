@@ -3,132 +3,426 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "Theory of Computation (18.404J, Fall 2020)",
-   "by": "Michael Sipser",
-   "year": 2020,
-   "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+   "kind": "book",
+   "title": "Automata, Computability and Complexity: Theory and Applications",
+   "by": "Elaine Rich",
+   "year": 2007,
+   "url": "https://www.cs.utexas.edu/~ear/cs341/automatabook/",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/readings/",
-    "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/lecture-notes/"
+    "https://www.cs.utexas.edu/~ear/cs341/automatabook/AutomataTheoryBook.pdf"
    ],
-   "why": "节点现有英文资源；OCW 的 Readings 页逐讲给出主题，并附上 Sipser 第 1–4 章的具体小节，正则语言、上下文无关语言、有限/下推自动机、文法四项都能逐讲对应，教材就是作者本人的书。"
+   "why": "本轮换源：18.404J 在 OCW 上只有幻灯片，没有章—节目录，Sipser 原书的官方目录在出版社页面是按需加载、正文里读不到小节标题。这本 UT Austin 作者主页公开的本科教材有完整的章→节目录，第 3 章讲语言层级，第 5–9 章讲有限状态机与正则语言，第 11–14 章讲上下文无关文法与下推自动机，第 24 章讲乔姆斯基层级，与本节点四条知识点逐一对应。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "1",
-   "title": "Introduction, Finite Automata, Regular Expressions",
-   "zh": "导论：有限自动机与正则表达式",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "2",
-   "title": "Nondeterminism, Closure Properties, Regular Expressions → Finite Automata",
-   "zh": "非确定性、闭包性质、正则表达式 → 有限自动机",
-   "items": []
-  },
-  {
-   "src": "A",
    "ref": "3",
-   "title": "The Regular Pumping Lemma, Finite Automata → Regular Expressions, CFGs",
-   "zh": "正则泵引理、有限自动机 → 正则表达式、上下文无关文法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "4",
-   "title": "Pushdown Automata, CFG ↔ PDA",
-   "zh": "下推自动机、上下文无关文法 ↔ 下推自动机",
-   "items": []
+   "title": "The Big Picture: A Language Hierarchy",
+   "zh": "全局图景：语言层级",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Defining the Task: Language Recognition",
+     "zh": "任务的定义：语言识别"
+    },
+    {
+     "ref": "3.2",
+     "title": "The Power of Encoding",
+     "zh": "编码的力量"
+    },
+    {
+     "ref": "3.3",
+     "title": "A Machine-Based Hierarchy of Language Classes",
+     "zh": "基于机器的语言类层级"
+    },
+    {
+     "ref": "3.4",
+     "title": "A Tractability Hierarchy of Language Classes",
+     "zh": "语言类的可处理性层级"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "5",
-   "title": "The CF Pumping Lemma, Turing Machines",
-   "zh": "上下文无关泵引理、图灵机",
-   "items": []
+   "title": "Finite State Machines",
+   "zh": "有限状态机",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Deterministic Finite State Machines",
+     "zh": "确定性有限状态机"
+    },
+    {
+     "ref": "5.3",
+     "title": "The Regular Languages",
+     "zh": "正则语言"
+    },
+    {
+     "ref": "5.4",
+     "title": "Designing Deterministic Finite State Machines",
+     "zh": "设计确定性有限状态机"
+    },
+    {
+     "ref": "5.5",
+     "title": "Nondeterministic FSMs",
+     "zh": "非确定性有限状态机"
+    },
+    {
+     "ref": "5.6",
+     "title": "From FSMs to Operational Systems",
+     "zh": "从有限状态机到运行系统"
+    },
+    {
+     "ref": "5.8",
+     "title": "Minimizing FSMs",
+     "zh": "最小化有限状态机"
+    },
+    {
+     "ref": "5.9",
+     "title": "A Canonical Form for Regular Languages",
+     "zh": "正则语言的规范形式"
+    },
+    {
+     "ref": "5.10",
+     "title": "Finite State Transducers",
+     "zh": "有限状态转换器"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "6",
-   "title": "TM Variants, the Church-Turing Thesis",
-   "zh": "图灵机变体、丘奇-图灵论题",
-   "items": []
+   "title": "Regular Expressions",
+   "zh": "正则表达式",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "What is a Regular Expression?",
+     "zh": "什么是正则表达式"
+    },
+    {
+     "ref": "6.2",
+     "title": "Kleene’s Theorem",
+     "zh": "Kleene 定理"
+    },
+    {
+     "ref": "6.3",
+     "title": "Applications of Regular Expressions",
+     "zh": "正则表达式的应用"
+    },
+    {
+     "ref": "6.4",
+     "title": "Manipulating and Simplifying Regular Expressions",
+     "zh": "正则表达式的运算与化简"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "7",
-   "title": "Decision Problems for Automata and Grammars",
-   "zh": "自动机与文法的判定问题",
-   "items": []
+   "title": "Regular Grammars",
+   "zh": "正则文法",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Definition of a Regular Grammar",
+     "zh": "正则文法的定义"
+    },
+    {
+     "ref": "7.2",
+     "title": "Regular Grammars and Regular Languages",
+     "zh": "正则文法与正则语言"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "8",
-   "title": "Undecidability",
-   "zh": "不可判定性",
-   "items": []
+   "title": "Regular and Nonregular Languages",
+   "zh": "正则语言与非正则语言",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "How Many Regular Languages Are There?",
+     "zh": "正则语言有多少个"
+    },
+    {
+     "ref": "8.2",
+     "title": "Showing That a Language Is Regular",
+     "zh": "证明一个语言是正则的"
+    },
+    {
+     "ref": "8.3",
+     "title": "Some Important Closure Properties of Regular Languages",
+     "zh": "正则语言的重要封闭性质"
+    },
+    {
+     "ref": "8.4",
+     "title": "Showing That a Language is Not Regular",
+     "zh": "证明一个语言不是正则的"
+    },
+    {
+     "ref": "8.5",
+     "title": "Exploiting Problem-Specific Knowledge",
+     "zh": "利用问题本身的信息"
+    },
+    {
+     "ref": "8.6",
+     "title": "Functions on Regular Languages",
+     "zh": "正则语言上的函数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Algorithms and Decision Procedures for Regular Languages",
+   "zh": "正则语言的算法与判定过程",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Fundamental Decision Procedures",
+     "zh": "基本判定过程"
+    },
+    {
+     "ref": "9.2",
+     "title": "Summary of Algorithms and Decision Procedures for Regular Languages",
+     "zh": "正则语言算法与判定过程小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Context-Free Grammars",
+   "zh": "上下文无关文法",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Introduction to Rewrite Systems and Grammars",
+     "zh": "重写系统与文法导论"
+    },
+    {
+     "ref": "11.2",
+     "title": "Context-Free Grammars and Languages",
+     "zh": "上下文无关文法与语言"
+    },
+    {
+     "ref": "11.3",
+     "title": "Designing Context-Free Grammars",
+     "zh": "设计上下文无关文法"
+    },
+    {
+     "ref": "11.4",
+     "title": "Simplifying Context-Free Grammars",
+     "zh": "化简上下文无关文法"
+    },
+    {
+     "ref": "11.5",
+     "title": "Proving That a Grammar is Correct",
+     "zh": "证明文法的正确性"
+    },
+    {
+     "ref": "11.6",
+     "title": "Derivations and Parse Trees",
+     "zh": "推导与语法分析树"
+    },
+    {
+     "ref": "11.7",
+     "title": "Ambiguity",
+     "zh": "歧义"
+    },
+    {
+     "ref": "11.8",
+     "title": "Normal Forms",
+     "zh": "范式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Pushdown Automata",
+   "zh": "下推自动机",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Definition of a (Nondeterministic) PDA",
+     "zh": "（非确定性）下推自动机的定义"
+    },
+    {
+     "ref": "12.2",
+     "title": "Deterministic and Nondeterministic PDAs",
+     "zh": "确定性与非确定性下推自动机"
+    },
+    {
+     "ref": "12.3",
+     "title": "Equivalence of Context-Free Grammars and PDAs",
+     "zh": "上下文无关文法与下推自动机的等价性"
+    },
+    {
+     "ref": "12.4",
+     "title": "Nondeterminism and Halting",
+     "zh": "非确定性与停机"
+    },
+    {
+     "ref": "12.5",
+     "title": "Alternative Equivalent Definitions of a PDA",
+     "zh": "下推自动机的其他等价定义"
+    },
+    {
+     "ref": "12.6",
+     "title": "Alternatives that are Not Equivalent to the PDA",
+     "zh": "与下推自动机不等价的变体"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Context-Free and Noncontext-Free Languages",
+   "zh": "上下文无关语言与非上下文无关语言",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Where Do the Context-Free Languages Fit in the Big Picture?",
+     "zh": "上下文无关语言在语言层级中的位置"
+    },
+    {
+     "ref": "13.2",
+     "title": "Showing That a Language is Context-Free",
+     "zh": "证明一个语言是上下文无关的"
+    },
+    {
+     "ref": "13.3",
+     "title": "The Pumping Theorem for Context-Free Languages",
+     "zh": "上下文无关语言的泵引理"
+    },
+    {
+     "ref": "13.4",
+     "title": "Some Important Closure Properties of Context-Free Languages",
+     "zh": "上下文无关语言的重要封闭性质"
+    },
+    {
+     "ref": "13.5",
+     "title": "Deterministic Context-Free Languages",
+     "zh": "确定性上下文无关语言"
+    },
+    {
+     "ref": "13.6",
+     "title": "Ogden’s Lemma",
+     "zh": "Ogden 引理"
+    },
+    {
+     "ref": "13.7",
+     "title": "Parikh’s Theorem",
+     "zh": "Parikh 定理"
+    },
+    {
+     "ref": "13.8",
+     "title": "Functions on Context-Free Languages",
+     "zh": "上下文无关语言上的函数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Algorithms and Decision Procedures for Context-Free Languages",
+   "zh": "上下文无关语言的算法与判定过程",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "The Decidable Questions",
+     "zh": "可判定的问题"
+    },
+    {
+     "ref": "14.2",
+     "title": "The Undecidable Questions",
+     "zh": "不可判定的问题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "24",
+   "title": "The Chomsky Hierarchy and Beyond",
+   "zh": "乔姆斯基层级及其扩展",
+   "items": [
+    {
+     "ref": "24.1",
+     "title": "The Context-Sensitive Languages",
+     "zh": "上下文相关语言"
+    },
+    {
+     "ref": "24.2",
+     "title": "The Chomsky Hierarchy",
+     "zh": "乔姆斯基层级"
+    }
+   ]
   }
  ],
  "coverage": [
   {
    "topic": "正则语言",
    "refs": [
-    "A:1",
-    "A:2",
-    "A:3"
+    "A:5.3",
+    "A:6",
+    "A:8",
+    "A:9"
    ]
   },
   {
    "topic": "上下文无关语言",
    "refs": [
-    "A:3",
-    "A:4",
-    "A:5"
+    "A:11.2",
+    "A:13"
    ]
   },
   {
    "topic": "有限自动机",
    "refs": [
-    "A:1",
-    "A:2",
-    "A:3"
+    "A:5",
+    "A:5.2",
+    "A:5.5",
+    "A:5.8"
    ]
   },
   {
    "topic": "下推自动机",
    "refs": [
-    "A:4"
+    "A:12",
+    "A:12.1",
+    "A:12.3",
+    "A:13.5"
    ]
   },
   {
    "topic": "文法",
    "refs": [
-    "A:3",
-    "A:4"
-   ],
-   "note": "第 3 讲引入上下文无关文法（Sipser 2.0、2.1），第 4 讲证 CFG 与下推自动机等价（Sipser 2.2）；乔姆斯基范式的细节在同一章，课程没有单列一讲。"
+    "A:7",
+    "A:11",
+    "A:11.6",
+    "A:11.8"
+   ]
   },
   {
    "topic": "形式语言层级",
    "refs": [
-    "A:1",
     "A:3",
-    "A:5",
-    "A:7",
-    "A:8"
-   ],
-   "note": "两个候选来源都没有专门一章讲乔姆斯基层级：18.404J 与 Sipser 的书是沿着“正则语言（第 1–3 讲）⊂ 上下文无关语言（第 3–5 讲）⊂ 可判定语言（第 7 讲）⊂ 可识别语言（第 8 讲）”这条主线逐层建立的，层级本身没有单独一讲，所以这里指向建立各层的那几讲，而不是指向某个题为“Chomsky hierarchy”的章节。"
+    "A:3.3",
+    "A:24",
+    "A:24.2"
+   ]
   }
  ],
- "omitted": "18.404J 第 9 讲之后的内容未收：可归约性（第 9–10 讲）、递归定理与逻辑（第 11 讲）、时间与空间复杂度（第 12–21 讲）、概率计算与交互证明（第 22–26 讲）属于可计算性与复杂度理论，超出本节点“正则/上下文无关语言、有限/下推自动机、文法与形式语言层级”的范围。",
- "notes": "OCW 的 calendar 页是前端渲染，抓不到正文，所以目录改从 Readings 页（LEC# / TOPICS / READINGS 三列）与 Lecture Notes 页逐条核对抄录，两页的讲题完全一致。若主代理希望细化到 Sipser 的小节（1.1 Finite Automata、1.2 Nondeterminism、1.3 Regular Expressions、1.4 Nonregular Languages、2.1 Context-Free Grammars、2.2 Pushdown Automata、2.3 Non-Context-Free Languages），Readings 页给出了每讲对应的节号，可以直接补成第三层。",
+ "omitted": "Rich 原书共 26 章：第 1–2 章（为什么学计算理论、字符串与语言）、第 4 章（判定过程与确定性/非确定性的一般讨论）是预备知识；第 10、16、26 章是各部分的总结与文献；第 15 章（上下文无关剖析）、第 11.9 岛文法、11.10 随机上下文无关文法、5.11–5.13（双向转换器、马尔可夫模型/HMM、Büchi 自动机）属应用与自然语言处理专题，不在“正则/上下文无关语言、有限/下推自动机、文法与形式语言层级”范围内；第 17 章以后（图灵机、可判定性、复杂度）归 F.2.2、F.2.3。",
+ "notes": "第二轮按办法 2 换了主来源。原主来源 MIT 18.404J 在 OCW 上只有 PPT/PDF 幻灯片（每讲十几张幻灯片，标题零散且常被公式拆断），Sipser 原书 3rd ed. 的出版社目录页（cengage.com）把章—节目录放在前端脚本里，fetch/extract 都只能读到 “Ch 0: Introduction” 及 Part 名，抄不出节标题，所以改用作者 Elaine Rich 在 UT Austin 主页公开的整书 PDF（书站 https://www.cs.utexas.edu/~ear/cs341/automatabook/ 上的 AutomataTheoryBook.pdf，2007 年 1 月草稿），目录在第 3–6 页。原 18.404J 的 8 个讲次已删除：书里从有限自动机到上下文无关语言、判定问题的内容与那 8 讲一一覆盖，保留讲次只会重复。注意原书第 5 章没有 5.1（章内直接起于 5.2）。第 24 章按节点“形式语言层级”只取 24.1、24.2。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 8,
+  "exact": 63,
   "fuzzy": 0,
   "dropped": []
  }

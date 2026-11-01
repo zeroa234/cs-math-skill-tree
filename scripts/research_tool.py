@@ -70,8 +70,23 @@ def _cache_path(kind, key):
 
 
 def _clean(text):
+    text = re.sub(r"[\ud800-\udfff]", "", text)  # unpaired surrogates from math-font PDFs cannot be written as UTF-8
     text = re.sub(r"[ \t\r\f\v]+", " ", text)
     return re.sub(r"\n\s*\n+", "\n", text).strip()
+
+
+def _save(cp, result):
+    # write-then-rename, so a crash never leaves an empty cache entry behind
+    tmp = cp.with_suffix(".tmp")
+    tmp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+    tmp.replace(cp)
+
+
+def _load(cp):
+    try:
+        return json.loads(cp.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
 
 
 def _pdf_text(raw):
@@ -83,7 +98,7 @@ def _pdf_text(raw):
     logging.getLogger("pypdf").setLevel(logging.ERROR)  # font-encoding warnings would flood the agent's output
     try:
         reader = PdfReader(io.BytesIO(raw))
-        pages = [page.extract_text() or "" for page in reader.pages[:60]]
+        pages = [page.extract_text() or "" for page in reader.pages[:400]]
     except Exception as e:
         return f"[PDF, {len(raw)} bytes; text extraction failed: {e!r}]"
     return _clean("\n".join(f"[page {i + 1}]\n{t}" for i, t in enumerate(pages)))
@@ -91,11 +106,10 @@ def _pdf_text(raw):
 
 def fetch(url):
     cp = _cache_path("page", url)
-    if cp.exists():
-        cached = json.loads(cp.read_text(encoding="utf-8"))
-        # entries cached before PDF extraction existed hold only a placeholder
-        if not cached.get("text", "").startswith("[PDF,"):
-            return cached
+    cached = _load(cp) if cp.exists() else None
+    # entries cached before PDF extraction existed hold only a placeholder
+    if cached and not cached.get("text", "").startswith("[PDF,"):
+        return cached
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en,zh;q=0.8"})
     try:
         with urllib.request.urlopen(req, timeout=40) as r:
@@ -105,7 +119,7 @@ def fetch(url):
                       "type": r.headers.get_content_type()}
     except urllib.error.HTTPError as e:
         result = {"url": url, "status": e.code, "error": str(e)}
-        cp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+        _save(cp, result)
         return result
     except Exception as e:  # network errors are not cached, so a retry can succeed
         return {"url": url, "status": None, "error": repr(e)}
@@ -114,8 +128,8 @@ def fetch(url):
     else:
         p = _Text()
         p.feed(raw.decode(charset, errors="replace"))
-        result.update(title=html.unescape(p.title.strip()), text=_clean("".join(p.parts)))
-    cp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+        result.update(title=_clean(html.unescape(p.title.strip())), text=_clean("".join(p.parts)))
+    _save(cp, result)
     return result
 
 
@@ -145,18 +159,18 @@ def _tavily(endpoint, payload, timeout):
 
 def search(query, n):
     cp = _cache_path("search", f"{query}|{n}")
-    if cp.exists():
-        return json.loads(cp.read_text(encoding="utf-8"))
+    if cp.exists() and _load(cp):
+        return _load(cp)
     _spend()
     result = _tavily("search", {"query": query, "max_results": n, "search_depth": "basic"}, 60)
-    cp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+    _save(cp, result)
     return result
 
 
 def extract(url):
     cp = _cache_path("extract", url)
-    if cp.exists():
-        return json.loads(cp.read_text(encoding="utf-8"))
+    if cp.exists() and _load(cp):
+        return _load(cp)
     _spend()
     res = _tavily("extract", {"urls": [url], "extract_depth": "basic", "format": "text"}, 90)
     hit = (res.get("results") or [None])[0]
@@ -164,7 +178,7 @@ def extract(url):
         return {"url": url, "status": None, "error": json.dumps(res.get("failed_results"), ensure_ascii=False)}
     result = {"url": url, "final_url": hit.get("url", url), "status": 200, "type": "tavily-extract",
               "title": "", "text": _clean(hit.get("raw_content") or "")}
-    cp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+    _save(cp, result)
     return result
 
 
@@ -172,10 +186,9 @@ def cached_text(url):
     """Text an agent has already read for url (plain fetch first, then Tavily extract), or None."""
     for kind in ("page", "extract"):
         cp = _cache_path(kind, url)
-        if cp.exists():
-            r = json.loads(cp.read_text(encoding="utf-8"))
-            if r.get("text") and not r["text"].startswith("[PDF,"):
-                return r["text"]
+        r = _load(cp) if cp.exists() else None
+        if r and r.get("text") and not r["text"].startswith("[PDF,"):
+            return r["text"]
     return None
 
 

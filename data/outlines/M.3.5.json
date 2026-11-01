@@ -3,6 +3,18 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Elementary Number Theory: Primes, Congruences, and Secrets",
+   "by": "William Stein",
+   "year": 2008,
+   "url": "https://wstein.org/ent/",
+   "toc_urls": [
+    "https://wstein.org/ent/ent.pdf"
+   ],
+   "why": "本科入门层次的标准教材（Springer Undergraduate Texts in Mathematics，作者主页提供合法免费全文 PDF，作者授权 Springer 公开）：目录是章 → 节两层——素数、模 n 的整数环、公钥密码、二次互反律、连分数、椭圆曲线，覆盖节点的整除与同余、素数、数论算法和代数数论专题。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "Theory of Numbers (18.781)",
    "by": "Abhinav Kumar — MIT OpenCourseWare",
@@ -12,177 +24,246 @@
     "https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/pages/calendar/",
     "https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/pages/lecture-notes/"
    ],
-   "why": "节点现有英文资源：MIT 18.781 的课表逐讲列出主题（从整除同余到二次互反、算术函数、连分数、Pell 方程、四平方和、圆锥曲线上的有理点），正好覆盖整除与同余、素数、数论算法、代数/解析数论专题四条线。"
+   "why": "补 Stein 没有的专题：解析数论（算术函数、Möbius 反演与 Zeta 函数、生成函数）、分圆多项式与 Pell 方程、四平方和、勾股三元组与 Fermat 下降、圆锥曲线上的有理点。"
   }
  ],
  "outline": [
   {
    "src": "A",
    "ref": "1",
-   "title": "Introduction, Diophantine Equations, Divisibility, GCD",
-   "zh": "引言、丢番图方程、整除、最大公约数",
-   "items": []
+   "title": "Prime Numbers",
+   "zh": "素数",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Prime Factorization",
+     "zh": "素因数分解"
+    },
+    {
+     "ref": "1.2",
+     "title": "The Sequence of Prime Numbers",
+     "zh": "素数序列"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "2",
-   "title": "Euclidean Algorithm, Primes",
-   "zh": "欧几里得算法、素数",
-   "items": []
+   "title": "The Ring of Integers Modulo n",
+   "zh": "模 n 的整数环",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Congruences Modulo n",
+     "zh": "模 n 同余"
+    },
+    {
+     "ref": "2.2",
+     "title": "The Chinese Remainder Theorem",
+     "zh": "中国剩余定理"
+    },
+    {
+     "ref": "2.3",
+     "title": "Quickly Computing Inverses and Huge Powers",
+     "zh": "快速计算逆元与大幂"
+    },
+    {
+     "ref": "2.4",
+     "title": "Primality Testing",
+     "zh": "素性检测"
+    },
+    {
+     "ref": "2.5",
+     "title": "The Structure of (Z/pZ)∗",
+     "zh": "(Z/pZ)* 的结构"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "3",
-   "title": "Binomial Coefficients, Congruences",
-   "zh": "二项式系数、同余",
-   "items": []
+   "title": "Public-key Cryptography",
+   "zh": "公钥密码",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Playing with Fire",
+     "zh": "玩火：公钥思想"
+    },
+    {
+     "ref": "3.2",
+     "title": "The Diffie-Hellman Key Exchange",
+     "zh": "Diffie–Hellman 密钥交换"
+    },
+    {
+     "ref": "3.3",
+     "title": "The RSA Cryptosystem",
+     "zh": "RSA 密码体制"
+    },
+    {
+     "ref": "3.4",
+     "title": "Attacking RSA",
+     "zh": "攻击 RSA"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "4",
-   "title": "Fermat, Euler, Wilson, Linear Congruences",
-   "zh": "Fermat、Euler、Wilson 定理与线性同余",
-   "items": []
+   "title": "Quadratic Reciprocity",
+   "zh": "二次互反律",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Statement of the Quadratic Reciprocity Law",
+     "zh": "二次互反律的表述"
+    },
+    {
+     "ref": "4.2",
+     "title": "Euler’s Criterion",
+     "zh": "Euler 判别法"
+    },
+    {
+     "ref": "4.3",
+     "title": "First Proof of Quadratic Reciprocity",
+     "zh": "二次互反律的第一个证明"
+    },
+    {
+     "ref": "4.4",
+     "title": "A Proof of Quadratic Reciprocity Using Gauss Sums",
+     "zh": "用 Gauss 和证明二次互反律"
+    },
+    {
+     "ref": "4.5",
+     "title": "Finding Square Roots",
+     "zh": "求平方根"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "5",
-   "title": "Linear Congruences, Chinese Remainder Theorem, Algorithms",
-   "zh": "线性同余、中国剩余定理、算法",
-   "items": []
+   "title": "Continued Fractions",
+   "zh": "连分数",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "The Definition",
+     "zh": "定义"
+    },
+    {
+     "ref": "5.2",
+     "title": "Finite Continued Fractions",
+     "zh": "有限连分数"
+    },
+    {
+     "ref": "5.3",
+     "title": "Infinite Continued Fractions",
+     "zh": "无限连分数"
+    },
+    {
+     "ref": "5.4",
+     "title": "The Continued Fraction of e",
+     "zh": "e 的连分数"
+    },
+    {
+     "ref": "5.5",
+     "title": "Quadratic Irrationals",
+     "zh": "二次无理数"
+    },
+    {
+     "ref": "5.6",
+     "title": "Recognizing Rational Numbers",
+     "zh": "识别有理数"
+    },
+    {
+     "ref": "5.7",
+     "title": "Sums of Two Squares",
+     "zh": "二平方和"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "6",
-   "title": "Primality, Factoring, RSA, Hensel’s Lemma",
-   "zh": "素性判定、因子分解、RSA、Hensel 引理",
-   "items": []
+   "title": "Elliptic Curves",
+   "zh": "椭圆曲线",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "The Definition",
+     "zh": "定义"
+    },
+    {
+     "ref": "6.2",
+     "title": "The Group Structure on an Elliptic Curve",
+     "zh": "椭圆曲线上的群结构"
+    },
+    {
+     "ref": "6.3",
+     "title": "Integer Factorization Using Elliptic Curves",
+     "zh": "用椭圆曲线做整数分解"
+    },
+    {
+     "ref": "6.4",
+     "title": "Elliptic Curve Cryptography",
+     "zh": "椭圆曲线密码"
+    },
+    {
+     "ref": "6.5",
+     "title": "Elliptic Curves Over the Rational Numbers",
+     "zh": "有理数域上的椭圆曲线"
+    }
+   ]
   },
   {
-   "src": "A",
-   "ref": "7",
-   "title": "Congruences mod Primes, Order, Primitive Roots",
-   "zh": "模素数的同余、阶、原根",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "8",
-   "title": "Primitive Roots (Prime Powers), Index Calculus",
-   "zh": "原根（素数幂情形）、指数演算",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "10",
-   "title": "Quadratic Residues, Quadratic Reciprocity",
-   "zh": "二次剩余、二次互反律",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "11",
-   "title": "Jacobi Symbol, Computation, Zolotareff’s Definition",
-   "zh": "Jacobi 符号、计算与 Zolotareff 定义",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "12",
-   "title": "Square Roots, Tonelli’s Algorithm, Number of Consecutive Pairs of Squares mod p",
-   "zh": "平方根、Tonelli 算法、模 p 连续平方对的个数",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "13",
-   "title": "Cyclotomic Polynomials, Primes Congruent to 1 mod n",
-   "zh": "分圆多项式、模 n 余 1 的素数",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "14",
-   "title": "Arithmetic Functions",
-   "zh": "算术函数",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "15",
-   "title": "Mobius Inversion Formula, Zeta Functions",
-   "zh": "Möbius 反演公式、Zeta 函数",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "16",
-   "title": "Linear Recurrences",
-   "zh": "线性递推",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "17",
-   "title": "Generating Functions",
-   "zh": "生成函数",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "19",
-   "title": "More on Generating Functions, Two Squares Theorem",
-   "zh": "生成函数续、二平方和定理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "20",
-   "title": "Continued Fractions I",
-   "zh": "连分数 I",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "21",
-   "title": "Continued Fractions II: Inequalities",
-   "zh": "连分数 II：不等式",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "22",
-   "title": "Periodic Continued Fractions, Quadratic Irrationalities",
-   "zh": "循环连分数、二次无理数",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "23",
-   "title": "Brahmagupta-Pell Equation",
-   "zh": "Brahmagupta-Pell 方程",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "24",
-   "title": "Four Squares Theorem",
-   "zh": "四平方和定理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "25",
-   "title": "Pythagorean Triples, Fermat Descent",
-   "zh": "勾股三元组、Fermat 下降法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "26",
-   "title": "Rational Points on Conics",
-   "zh": "圆锥曲线上的有理点",
-   "items": []
+   "src": "B",
+   "ref": "",
+   "title": "Topics",
+   "zh": "各讲主题",
+   "fill": "A（Stein）没有的专题：解析数论（算术函数、Möbius 反演与 Zeta 函数、生成函数）、分圆多项式与模 n 余 1 的素数、Pell 方程、四平方和定理、勾股三元组与 Fermat 下降法、圆锥曲线上的有理点",
+   "items": [
+    {
+     "ref": "13",
+     "title": "Cyclotomic Polynomials, Primes Congruent to 1 mod n",
+     "zh": "分圆多项式、模 n 余 1 的素数"
+    },
+    {
+     "ref": "14",
+     "title": "Arithmetic Functions",
+     "zh": "算术函数"
+    },
+    {
+     "ref": "15",
+     "title": "Mobius Inversion Formula, Zeta Functions",
+     "zh": "Möbius 反演公式、Zeta 函数"
+    },
+    {
+     "ref": "17",
+     "title": "Generating Functions",
+     "zh": "生成函数"
+    },
+    {
+     "ref": "23",
+     "title": "Brahmagupta-Pell Equation",
+     "zh": "Brahmagupta-Pell 方程"
+    },
+    {
+     "ref": "24",
+     "title": "Four Squares Theorem",
+     "zh": "四平方和定理"
+    },
+    {
+     "ref": "25",
+     "title": "Pythagorean Triples, Fermat Descent",
+     "zh": "勾股三元组、Fermat 下降法"
+    },
+    {
+     "ref": "26",
+     "title": "Rational Points on Conics",
+     "zh": "圆锥曲线上的有理点"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -190,57 +271,63 @@
    "topic": "整除与同余",
    "refs": [
     "A:1",
-    "A:3",
-    "A:4",
-    "A:5"
-   ]
+    "A:1.1",
+    "A:2",
+    "A:2.1",
+    "A:2.2"
+   ],
+   "note": "A 第 1.1 节是素因数分解（含算术基本定理与 gcd/lcm），第 2 章讲模 n 同余、中国剩余定理与单位群。"
   },
   {
    "topic": "素数",
    "refs": [
-    "A:2",
-    "A:6",
-    "A:7",
-    "A:13"
+    "A:1.2",
+    "A:2.4",
+    "A:2.5",
+    "B:13"
    ],
-   "note": "2 讲素数与算术基本定理，6–7 讲模素数结构、原根，13 讲模 n 余 1 的素数（分圆多项式）。"
+   "note": "A:1.2 素数序列（含素数计数与分布的开问题），2.4 素性检测，2.5 讨论 (Z/pZ)* 的结构；B:Lec 13 补模 n 余 1 的素数与分圆多项式。"
   },
   {
    "topic": "数论算法",
    "refs": [
-    "A:2",
-    "A:5",
-    "A:6",
-    "A:8",
-    "A:12"
+    "A:2.3",
+    "A:2.4",
+    "A:3.4",
+    "A:4.5",
+    "A:6.3"
    ],
-   "note": "欧几里得算法、中国剩余定理与算法、素性判定/因子分解/RSA、指数演算、Tonelli 算法。"
+   "note": "A:2.3 快速求逆元与快速幂，2.4 素性检测，3.4 攻击 RSA（分解与指数演算一类的计算问题），4.5 Tonelli 式求平方根，6.3 用椭圆曲线做整数分解。"
   },
   {
    "topic": "代数数论专题",
    "refs": [
-    "A:19",
-    "A:22",
-    "A:23",
-    "A:26"
+    "A:5.5",
+    "A:5.7",
+    "A:6.5",
+    "B:23",
+    "B:24",
+    "B:25",
+    "B:26"
    ],
-   "note": "18.781 是初等课程，代数数论只到经典专题层面：二平方和（Gauss 整数）、二次无理数与 Pell 方程、圆锥曲线上的有理点。"
+   "note": "A:5.5 二次无理数（二次域的入门形态）、5.7 二平方和（Gauss 整数）、6.5 有理数域上的椭圆曲线（Mordell–Weil 等）；B 补 Pell 方程、四平方和、Fermat 下降法与圆锥曲线上的有理点。"
   },
   {
    "topic": "解析数论专题",
    "refs": [
-    "A:14",
-    "A:15",
-    "A:17"
+    "B:14",
+    "B:15",
+    "B:17",
+    "A:1.2"
    ],
-   "note": "算术函数、Möbius 反演与 Zeta 函数、生成函数；课程没有讲素数定理的解析证明。"
+   "note": "A 是初等教材，没有 Zeta 函数与素数定理的解析处理；解析数论部分靠 B：算术函数、Möbius 反演与 Zeta 函数、生成函数，加上 A:1.2 的素数计数内容。"
   }
  ],
- "omitted": "SES 9、18 为两次期中考试，不是知识点；其余讲次全部与节点简介相关，故全部保留（课程目录本身是逐讲清单，没有更粗的章层次）。",
- "notes": "主来源是逐讲清单（24 讲），所以 outline 的分支就是讲次、没有节层次；ref 用课表里的 SES #。18.781 大纲推荐的教材是 Niven, Zuckerman & Montgomery《An Introduction to the Theory of Numbers》(Wiley, 1991)，其目录页（wiley.com）打不开，未作为第二来源收录；如需更细的书本章节结构，主代理可以用这本书的纸质目录补。",
+ "omitted": "A（Stein）的章末 Exercises 小节、Preface、Answers and Hints、References、Index 未收（习题与附录类）。B（18.781）的 SES 1–8、10–12（整除与 gcd、欧几里得算法、同余、Fermat/Euler/Wilson、中国剩余定理、RSA、原根、二次剩余与二次互反）与 SES 16、19–22（线性递推、生成函数续与二平方和、连分数 I–II）已由 A 的第 1、2、4、5 章覆盖，SES 9、18 是期中考试，均未收。",
+ "notes": "第一轮是 18.781 的逐讲清单（24 个分支、无小节）。本轮先试办法 1：18.781 课程站的官方讲义 PDF（lec1…lec25）是散文式讲义，正文里没有编号小节标题（打开 lec1.pdf 核对过），补不出小节；于是按办法 2 换成 Stein 的本科教材作为新主来源 A（作者主页的合法免费 PDF 里有完整章 → 节目录），18.781 只保留 A 没有的专题作为 B（解析数论、分圆多项式、Pell、四平方和、Fermat 下降、圆锥曲线有理点）。第一轮 notes 里提到的 Niven–Zuckerman–Montgomery 目录页仍不可得（Wiley 站点没有这本书的产品页），改用 Stein。 B 的八讲合成一个分支 “Topics”（课表页的列标题），逐讲主题作为它的 items。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 24,
+  "exact": 43,
   "fuzzy": 0,
   "dropped": []
  }

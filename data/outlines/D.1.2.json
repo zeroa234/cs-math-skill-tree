@@ -10,9 +10,25 @@
    "url": "https://15445.courses.cs.cmu.edu/fall2026/",
    "toc_urls": [
     "https://15445.courses.cs.cmu.edu/fall2026/schedule.html",
-    "https://15445.courses.cs.cmu.edu/fall2026/syllabus.html"
+    "https://15445.courses.cs.cmu.edu/fall2026/syllabus.html",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/07-hashtables.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/08-indexes1.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/09-indexes2.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/10-indexconcurrency.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/11-sorting.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/12-joins.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/13-queryexecution1.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2026/notes/14-queryexecution2.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/15-optimization1.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/16-optimization2.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/17-concurrencycontrol.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/18-twophaselocking.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/19-timestampordering.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/20-multiversioning.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/21-logging.pdf",
+    "https://15445.courses.cs.cmu.edu/fall2025/notes/22-recovery.pdf"
    ],
-   "why": "就是节点“现有英文学习资源”里的这门课：全部 slides / notes / 视频公开，schedule 逐讲列到具体主题（索引、连接与查询执行、查询规划与代价模型、并发控制、日志与恢复），正好是节点简介的五个知识点，且入门层 D2 用本科高年级课程合适。"
+   "why": "就是节点“现有英文学习资源”里的这门课：全部 slides / notes / 视频公开，schedule 逐讲列到具体主题（索引、连接与查询执行、查询规划与代价模型、并发控制、日志与恢复），正好是节点简介的五个知识点，且入门层 D2 用本科高年级课程合适；这门课的官方 lecture notes 是分节写的（每讲 3–14 个编号小节），正好给每讲补上小节。"
   }
  ],
  "outline": [
@@ -21,112 +37,583 @@
    "ref": "#07",
    "title": "Hash Tables",
    "zh": "哈希表",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Data Structures",
+     "zh": "数据结构"
+    },
+    {
+     "ref": "2",
+     "title": "Hash Table",
+     "zh": "哈希表"
+    },
+    {
+     "ref": "3",
+     "title": "Hash Functions",
+     "zh": "哈希函数"
+    },
+    {
+     "ref": "4",
+     "title": "Static Hashing Schemes",
+     "zh": "静态哈希方案"
+    },
+    {
+     "ref": "5",
+     "title": "Dynamic Hashing Schemes",
+     "zh": "动态哈希方案"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#08",
    "title": "Indexes & Filters I",
    "zh": "索引与过滤器 I",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Indexes",
+     "zh": "索引"
+    },
+    {
+     "ref": "2",
+     "title": "B+Tree",
+     "zh": "B+ 树"
+    },
+    {
+     "ref": "3",
+     "title": "B+Tree Design Choices",
+     "zh": "B+ 树的设计选择"
+    },
+    {
+     "ref": "4",
+     "title": "Optimizations",
+     "zh": "优化技术"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#09",
    "title": "Indexes & Filters II",
    "zh": "索引与过滤器 II",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Index vs. Filters",
+     "zh": "索引与过滤器的区别"
+    },
+    {
+     "ref": "2",
+     "title": "Bloom filter",
+     "zh": "布隆过滤器"
+    },
+    {
+     "ref": "3",
+     "title": "Skip List",
+     "zh": "跳表"
+    },
+    {
+     "ref": "4",
+     "title": "Trie",
+     "zh": "字典树"
+    },
+    {
+     "ref": "5",
+     "title": "Inverted Index",
+     "zh": "倒排索引"
+    },
+    {
+     "ref": "6",
+     "title": "Vector Index",
+     "zh": "向量索引"
+    },
+    {
+     "ref": "7",
+     "title": "Optimizations",
+     "zh": "优化技术"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#10",
    "title": "Index Concurrency Control",
    "zh": "索引并发控制",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Index Concurrency Control",
+     "zh": "索引并发控制"
+    },
+    {
+     "ref": "2",
+     "title": "Locks vs. Latches",
+     "zh": "锁与闩锁"
+    },
+    {
+     "ref": "3",
+     "title": "Latch Implementations",
+     "zh": "闩锁的实现"
+    },
+    {
+     "ref": "4",
+     "title": "Hash Table Latching",
+     "zh": "哈希表的闩锁"
+    },
+    {
+     "ref": "5",
+     "title": "B+Tree Latching",
+     "zh": "B+ 树的闩锁"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#11",
    "title": "Sorting & Aggregations Algorithms",
    "zh": "排序与聚合算法",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Query Plan",
+     "zh": "查询计划"
+    },
+    {
+     "ref": "2",
+     "title": "Sorting",
+     "zh": "排序"
+    },
+    {
+     "ref": "3",
+     "title": "Aggregations",
+     "zh": "聚合"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#13",
    "title": "Joins Algorithms",
    "zh": "连接算法",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "2",
+     "title": "Join Operators",
+     "zh": "连接算子"
+    },
+    {
+     "ref": "3",
+     "title": "Nested Loop Join",
+     "zh": "嵌套循环连接"
+    },
+    {
+     "ref": "4",
+     "title": "Sort-Merge Join",
+     "zh": "排序归并连接"
+    },
+    {
+     "ref": "5",
+     "title": "Hash Join",
+     "zh": "哈希连接"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#14",
    "title": "Query Execution I",
    "zh": "查询执行 I",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Query Plan",
+     "zh": "查询计划"
+    },
+    {
+     "ref": "2",
+     "title": "Processing Models",
+     "zh": "处理模型"
+    },
+    {
+     "ref": "3",
+     "title": "Access Methods",
+     "zh": "访问方法"
+    },
+    {
+     "ref": "4",
+     "title": "Modification Queries",
+     "zh": "修改类查询"
+    },
+    {
+     "ref": "5",
+     "title": "Expression Evaluation",
+     "zh": "表达式求值"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#15",
    "title": "Query Execution II",
    "zh": "查询执行 II",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Background",
+     "zh": "背景"
+    },
+    {
+     "ref": "2",
+     "title": "Parallel vs Distributed Databases",
+     "zh": "并行数据库与分布式数据库"
+    },
+    {
+     "ref": "3",
+     "title": "Process Models",
+     "zh": "进程模型"
+    },
+    {
+     "ref": "4",
+     "title": "Inter-Query Parallelism",
+     "zh": "查询间并行"
+    },
+    {
+     "ref": "5",
+     "title": "Intra-Query parallelism",
+     "zh": "查询内并行"
+    },
+    {
+     "ref": "6",
+     "title": "I/O Parallelism",
+     "zh": "I/O 并行"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#16",
    "title": "Query Planning & Optimization I",
    "zh": "查询规划与优化 I",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Overview",
+     "zh": "概览"
+    },
+    {
+     "ref": "2",
+     "title": "Relational Algebra Equivalence",
+     "zh": "关系代数等价变换"
+    },
+    {
+     "ref": "3",
+     "title": "Types of Query Optimization",
+     "zh": "查询优化的类型"
+    },
+    {
+     "ref": "4",
+     "title": "Logical Query Optimization",
+     "zh": "逻辑查询优化"
+    },
+    {
+     "ref": "5",
+     "title": "Cost-Based Query Optimization",
+     "zh": "基于代价的查询优化"
+    },
+    {
+     "ref": "6",
+     "title": "Cost Estimations",
+     "zh": "代价估计"
+    },
+    {
+     "ref": "7",
+     "title": "Search Termination",
+     "zh": "搜索的终止"
+    },
+    {
+     "ref": "8",
+     "title": "Access Path Transformation",
+     "zh": "访问路径变换"
+    },
+    {
+     "ref": "9",
+     "title": "Single-Relation Query Plans",
+     "zh": "单表查询计划"
+    },
+    {
+     "ref": "10",
+     "title": "Multi-Relation Query Plans",
+     "zh": "多表查询计划"
+    },
+    {
+     "ref": "11",
+     "title": "Bottom-up optimization example - System R",
+     "zh": "自底向上优化实例：System R"
+    },
+    {
+     "ref": "12",
+     "title": "Top-down optimization example - Volcano",
+     "zh": "自顶向下优化实例：Volcano"
+    },
+    {
+     "ref": "13",
+     "title": "Nested Sub-Queries",
+     "zh": "嵌套子查询"
+    },
+    {
+     "ref": "14",
+     "title": "Expression Rewriting",
+     "zh": "表达式重写"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#17",
    "title": "Query Planning & Optimization II",
    "zh": "查询规划与优化 II",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Multi-Relation Query Plans",
+     "zh": "多表查询计划"
+    },
+    {
+     "ref": "2",
+     "title": "Data Statistics",
+     "zh": "数据统计信息"
+    },
+    {
+     "ref": "3",
+     "title": "Cost Estimations",
+     "zh": "代价估计"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#18",
    "title": "Concurrency Control Theory",
    "zh": "并发控制理论",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Motivation",
+     "zh": "动机"
+    },
+    {
+     "ref": "2",
+     "title": "Transactions",
+     "zh": "事务"
+    },
+    {
+     "ref": "3",
+     "title": "Definitions",
+     "zh": "定义"
+    },
+    {
+     "ref": "4",
+     "title": "ACID: Atomicity",
+     "zh": "ACID：原子性"
+    },
+    {
+     "ref": "5",
+     "title": "ACID: Consistency",
+     "zh": "ACID：一致性"
+    },
+    {
+     "ref": "6",
+     "title": "ACID: Isolation",
+     "zh": "ACID：隔离性"
+    },
+    {
+     "ref": "7",
+     "title": "ACID: Durability",
+     "zh": "ACID：持久性"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#19",
    "title": "Two-Phase Locking Concurrency Control",
    "zh": "两阶段锁并发控制",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Transaction Locks",
+     "zh": "事务锁"
+    },
+    {
+     "ref": "2",
+     "title": "Two-Phase Locking",
+     "zh": "两阶段锁"
+    },
+    {
+     "ref": "3",
+     "title": "Deadlock Handling",
+     "zh": "死锁处理"
+    },
+    {
+     "ref": "4",
+     "title": "Lock Granularities",
+     "zh": "锁粒度"
+    },
+    {
+     "ref": "5",
+     "title": "Locking in Practice",
+     "zh": "锁的工程实践"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#20",
    "title": "Timestamp Ordering Concurrency Control",
    "zh": "时间戳排序并发控制",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Timestamp Ordering Concurrency Control",
+     "zh": "时间戳排序并发控制"
+    },
+    {
+     "ref": "2",
+     "title": "Optimistic Concurrency Control (OCC)",
+     "zh": "乐观并发控制（OCC）"
+    },
+    {
+     "ref": "3",
+     "title": "Dynamic Databases and The Phantom Problem",
+     "zh": "动态数据库与幻读问题"
+    },
+    {
+     "ref": "4",
+     "title": "Isolation Levels",
+     "zh": "隔离级别"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#21",
    "title": "Multi-Version Concurrency Control",
    "zh": "多版本并发控制（MVCC）",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Multi-Version Concurrency Control",
+     "zh": "多版本并发控制"
+    },
+    {
+     "ref": "2",
+     "title": "Design consideration: Version Storage",
+     "zh": "设计考量：版本存储"
+    },
+    {
+     "ref": "3",
+     "title": "Design consideration: Garbage Collection",
+     "zh": "设计考量：垃圾回收"
+    },
+    {
+     "ref": "4",
+     "title": "Design consideration: Index Management",
+     "zh": "设计考量：索引管理"
+    },
+    {
+     "ref": "5",
+     "title": "Design consideration: Deletes",
+     "zh": "设计考量：删除"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#22",
    "title": "Database Logging",
    "zh": "数据库日志",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Crash Recovery",
+     "zh": "崩溃恢复"
+    },
+    {
+     "ref": "2",
+     "title": "Buffer Pool Management Policies",
+     "zh": "缓冲池管理策略"
+    },
+    {
+     "ref": "3",
+     "title": "Naive NO-STEAL + FORCE",
+     "zh": "朴素 NO-STEAL + FORCE 策略"
+    },
+    {
+     "ref": "4",
+     "title": "Shadow Paging (Smarter NO-STEAL + FORCE)",
+     "zh": "影子分页（更聪明的 NO-STEAL + FORCE）"
+    },
+    {
+     "ref": "5",
+     "title": "Journal File (SQLite Pre-2010)",
+     "zh": "日志文件（2010 年前的 SQLite）"
+    },
+    {
+     "ref": "6",
+     "title": "Write-Ahead Logging",
+     "zh": "预写日志（WAL）"
+    },
+    {
+     "ref": "7",
+     "title": "Logging Schemes",
+     "zh": "日志记录方案"
+    },
+    {
+     "ref": "8",
+     "title": "Checkpoints",
+     "zh": "检查点"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "#23",
    "title": "Database Recovery",
    "zh": "数据库恢复",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Crash Recovery",
+     "zh": "崩溃恢复"
+    },
+    {
+     "ref": "2",
+     "title": "WAL Records",
+     "zh": "WAL 记录"
+    },
+    {
+     "ref": "3",
+     "title": "Normal Execution",
+     "zh": "正常执行"
+    },
+    {
+     "ref": "4",
+     "title": "Checkpointing",
+     "zh": "检查点"
+    },
+    {
+     "ref": "5",
+     "title": "ARIES Recovery",
+     "zh": "ARIES 恢复"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -138,17 +625,17 @@
     "A:#09",
     "A:#10"
    ],
-   "note": "第 7 讲 Hash Tables 讲哈希索引结构，第 8、9 讲 Indexes & Filters 讲 B+ 树索引与 Bloom 过滤器等，第 10 讲 Index Concurrency Control 讲索引结构上的并发控制（latch 与 crabbing）。"
+   "note": "第 7 讲 Hash Tables：数据结构选型、哈希表的两部分（哈希函数与哈希方案）、静态哈希（线性探查、Robin Hood、Cuckoo）与动态哈希（链式、可扩展、线性哈希）；第 8 讲 Indexes & Filters I：B+ 树的组织与设计选择（节点大小、合并阈值、变长键、结点内查找）、指针 swizzling 与前缀压缩等；第 9 讲 Indexes & Filters II：布隆过滤器、跳表、字典树、倒排索引、向量索引；第 10 讲 Index Concurrency Control：闩锁与 crabbing。"
   },
   {
    "topic": "执行计划",
    "refs": [
+    "A:#11",
     "A:#13",
     "A:#14",
-    "A:#15",
-    "A:#11"
+    "A:#15"
    ],
-   "note": "第 13 讲 Joins Algorithms 讲连接算子（nested loop / sort-merge / hash join），第 14、15 讲 Query Execution 讲火山模型、向量化与物化等执行模型与算子实现，第 11 讲 Sorting & Aggregations Algorithms 讲排序与聚合算子。"
+   "note": "第 11 讲 Sorting & Aggregations Algorithms 从“查询计划是算子树/DAG”讲起（1 Query Plan），再讲外排与聚合算子；第 13 讲 Joins Algorithms 把连接算子拆成嵌套循环/排序归并/哈希三类并给出 I/O 代价；第 14 讲 Query Execution I 讲处理模型（迭代器/物化/向量化）、访问方法、修改类查询与表达式求值；第 15 讲 Query Execution II 讲并行执行（查询间/查询内/I/O 并行）与进程模型。"
   },
   {
    "topic": "代价模型",
@@ -156,7 +643,7 @@
     "A:#16",
     "A:#17"
    ],
-   "note": "第 16、17 讲 Query Planning & Optimization：基于规则的重写、基于代价的规划、基数估计与统计信息（代价模型的组成部分在这两讲里讲）。"
+   "note": "第 16 讲 Query Planning & Optimization I 的小节直接对应：5 Cost-Based Query Optimization、6 Cost Estimations、7 Search Termination、9 Single-Relation Query Plans、10 Multi-Relation Query Plans、11 System R 自底向上、12 Volcano 自顶向下；第 17 讲 Query Planning & Optimization II 进一步讲 2 Data Statistics（直方图、选择率估计）与 3 Cost Estimations。"
   },
   {
    "topic": "并发控制",
@@ -166,7 +653,7 @@
     "A:#20",
     "A:#21"
    ],
-   "note": "第 18 讲 Concurrency Control Theory 讲 ACID、可串行化与冲突可串行化，第 19 讲 2PL、第 20 讲时间戳排序、第 21 讲 MVCC。"
+   "note": "第 18 讲 Concurrency Control Theory：事务与 ACID 四条性质逐条展开（4–7 小节），并给出可串行化与冲突可串行化；第 19 讲 2PL：事务锁、两阶段锁、死锁处理、锁粒度与工程实践；第 20 讲时间戳排序：OCC、幻读问题与隔离级别；第 21 讲 MVCC：版本存储、垃圾回收、索引管理、删除四个设计考量。"
   },
   {
    "topic": "日志与恢复",
@@ -174,14 +661,14 @@
     "A:#22",
     "A:#23"
    ],
-   "note": "第 22 讲 Database Logging 讲 WAL 与日志记录格式，第 23 讲 Database Recovery 讲 ARIES 式恢复（分析/重做/撤销、检查点）。"
+   "note": "第 22 讲 Database Logging 从崩溃恢复的目标讲起，依次是缓冲池管理策略（STEAL/FORCE 组合）、影子分页、日志文件、WAL、日志记录方案与检查点；第 23 讲 Database Recovery 讲 WAL 记录格式、正常执行、检查点与 ARIES 恢复（分析/重做/撤销）。"
   }
  ],
- "omitted": "A（CMU 15-445 Fall 2026 schedule）未收：第 1 讲 Relational Model & Algebra、第 2 讲 Modern SQL（属 D.1.1 数据建模/关系模型与 SQL）、第 3–6 讲 Database Storage / Memory Management / Storage Models & Compression（存储引擎与存储布局，属大数据与存储布局相关节点）、第 12 讲与第 25 讲 DRC（论文研讨课，无固定主题）、第 24 讲 Distributed Databases（属 D.1.3 分布式数据库）；Mid-Term Exam、Fall Break、Thanksgiving 等无课日期也不算目录条目。",
- "notes": "选源说明：节点“现有英文学习资源”就是这门课，它的目录形态是逐讲 lecture 列表（schedule.html 的 Topic 列），没有章级分组，所以每个分支直接对应一讲，ref 用课表上的编号（#07、#08…）。课程用的教材是 DB System Concepts (7th Ed.)，每讲后面列出对应章节，但没有公开的逐节目录页可抄，故未展开到小节课名。",
+ "omitted": "A（CMU 15-445 Fall 2026 schedule）未收：第 1 讲 Relational Model & Algebra、第 2 讲 Modern SQL（属 D.1.1 数据建模/关系模型与 SQL）、第 3–6 讲 Database Storage / Memory Management / Storage Models & Compression（存储引擎与存储布局，属大数据与存储布局相关节点）、第 12 讲与第 25 讲 DRC（论文研讨课，无固定主题）、第 24 讲 Distributed Databases（属 D.1.3 分布式数据库）；Mid-Term Exam、Fall Break、Thanksgiving 等无课日期也不算目录条目。小节层面未收的：第 #13 讲的 6 Conclusion（纯总结）、第 #09 讲 7 Optimizations 后的无编号小标题（PDF 里是“Partial Indexes”一类行内标题，不是编号小节）、第 #17 讲 PDF 里被抽取成“1 Multi-Relation !ery Plans”的乱码标题（正文里写的是“Multi-Relation query plans”，仍按正文标题收在分支里）。",
+ "notes": "本轮（deepen-6）做法：按第一轮说明的第 1 种方式加深——用同一门课的官方 lecture notes PDF 把每讲拆到节。两点需要主代理知道：(1) Fall 2026 的 notes 只发到第 15 讲（#15 Query Execution II），第 16–23 讲的 notes 与 slides 在课表上还是空的，所以这些讲的节标题取自同一门课 Fall 2025 版的 notes（讲次编号差 1：#16↔fall2025/15-optimization1.pdf 起，逐讲到 #23↔fall2025/22-recovery.pdf），Fall 2025 的课表主题与 Fall 2026 一一对应、内容同源，故并入同一个来源 A 的 toc_urls。(2) 分支的 ref 用课表上的讲次编号（#07…#23），节标题的 ref 用 notes PDF 里的原始编号（1、2、4.1…）；由于不同讲的节编号重复，coverage 一律引用讲次分支（A:#17 这类），不引用节编号。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 16,
+  "exact": 107,
   "fuzzy": 0,
   "dropped": []
  }

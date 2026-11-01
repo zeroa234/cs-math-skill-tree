@@ -10,9 +10,20 @@
    "url": "https://yuxinchen2020.github.io/ele522_optimization/",
    "toc_urls": [
     "https://yuxinchen2020.github.io/ele522_optimization/lectures.html",
-    "https://yuxinchen2020.github.io/ele522_optimization/syllabus.html"
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/grad_descent_unconstrained.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/grad_descent_constrained.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/subgradient_methods.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/mirror_descent.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/proximal_gradient.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/accelerated_gradient.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/smoothing.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/dual_method.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/ADMM.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/stochastic_gradient.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/variance_reduction.pdf",
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures/quasi_Newton.pdf"
    ],
-   "why": "节点现有英文资源：Princeton 研究生课，讲义页逐讲讲随机梯度法、随机优化的方差缩减，并给出收敛分析；是“随机优化”最直接的系统材料。"
+   "why": "节点现有英文资源：Princeton 研究生课，12 份官方讲义 PDF 每份开头都有 Outline 页列出讲内各节，逐讲补上小节后即可看到随机梯度、方差缩减与收敛分析的内部结构。"
   },
   {
    "key": "B",
@@ -33,84 +44,344 @@
    "ref": "",
    "title": "Gradient methods (unconstrained problems)",
    "zh": "梯度法（无约束问题）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Quadratic minimization problems",
+     "zh": "二次极小化问题"
+    },
+    {
+     "ref": "",
+     "title": "Strongly convex and smooth problems",
+     "zh": "强凸且光滑问题"
+    },
+    {
+     "ref": "",
+     "title": "Convex and smooth problems",
+     "zh": "凸且光滑问题"
+    },
+    {
+     "ref": "",
+     "title": "Nonconvex problems",
+     "zh": "非凸问题"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Gradient methods (constrained problems)",
    "zh": "梯度法（约束问题）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Frank-Wolfe algorithm",
+     "zh": "Frank-Wolfe 算法"
+    },
+    {
+     "ref": "",
+     "title": "Projected gradient methods",
+     "zh": "投影梯度法"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Subgradient methods",
    "zh": "次梯度法",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Steepest descent",
+     "zh": "最速下降"
+    },
+    {
+     "ref": "",
+     "title": "Subgradients",
+     "zh": "次梯度"
+    },
+    {
+     "ref": "",
+     "title": "Projected subgradient descent",
+     "zh": "投影次梯度下降",
+     "items": [
+      {
+       "ref": "",
+       "title": "Convex and Lipschitz problems",
+       "zh": "凸且 Lipschitz 的问题"
+      },
+      {
+       "ref": "",
+       "title": "Strongly convex and Lipschitz problems",
+       "zh": "强凸且 Lipschitz 的问题"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Convex-concave saddle point problems",
+     "zh": "凸-凹鞍点问题"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Mirror descent",
    "zh": "镜像下降",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Mirror descent",
+     "zh": "镜像下降"
+    },
+    {
+     "ref": "",
+     "title": "Bregman divergence",
+     "zh": "Bregman 散度"
+    },
+    {
+     "ref": "",
+     "title": "Alternative forms of mirror descent",
+     "zh": "镜像下降的等价形式"
+    },
+    {
+     "ref": "",
+     "title": "Convergence analysis",
+     "zh": "收敛性分析"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Proximal gradient methods",
    "zh": "近端梯度法",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Proximal gradient descent for composite functions",
+     "zh": "复合函数的近端梯度下降"
+    },
+    {
+     "ref": "",
+     "title": "Proximal mapping / operator",
+     "zh": "近端映射/算子"
+    },
+    {
+     "ref": "",
+     "title": "Convergence analysis",
+     "zh": "收敛性分析"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Accelerated gradient methods",
    "zh": "加速梯度法",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Heavy-ball methods",
+     "zh": "重球法"
+    },
+    {
+     "ref": "",
+     "title": "Nesterov’s accelerated gradient methods",
+     "zh": "Nesterov 加速梯度法"
+    },
+    {
+     "ref": "",
+     "title": "Accelerated proximal gradient methods (FISTA)",
+     "zh": "加速近端梯度法（FISTA）"
+    },
+    {
+     "ref": "",
+     "title": "Convergence analysis",
+     "zh": "收敛性分析"
+    },
+    {
+     "ref": "",
+     "title": "Lower bounds",
+     "zh": "下界"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Smoothing for nonsmooth optimization",
    "zh": "非光滑优化的光滑化",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Smoothing",
+     "zh": "光滑化"
+    },
+    {
+     "ref": "",
+     "title": "Smooth approximation",
+     "zh": "光滑近似"
+    },
+    {
+     "ref": "",
+     "title": "Algorithm and convergence analysis",
+     "zh": "算法与收敛性分析"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Dual and primal-dual methods",
    "zh": "对偶与原-对偶方法",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Dual proximal gradient method",
+     "zh": "对偶近端梯度法"
+    },
+    {
+     "ref": "",
+     "title": "Primal-dual proximal gradient method",
+     "zh": "原-对偶近端梯度法"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Alternating direction method of multipliers (ADMM)",
    "zh": "交替方向乘子法（ADMM）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Augmented Lagrangian method",
+     "zh": "增广 Lagrange 方法"
+    },
+    {
+     "ref": "",
+     "title": "Alternating direction method of multipliers",
+     "zh": "交替方向乘子法"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Stochastic gradient methods",
    "zh": "随机梯度法",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Stochastic gradient descent (stochastic approximation)",
+     "zh": "随机梯度下降（随机逼近）"
+    },
+    {
+     "ref": "",
+     "title": "Convergence analysis",
+     "zh": "收敛性分析"
+    },
+    {
+     "ref": "",
+     "title": "Reducing variance via iterate averaging",
+     "zh": "用迭代平均减小方差"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Variance reduction for stochastic optimization",
    "zh": "随机优化的方差缩减",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Stochastic variance reduced gradient (SVRG)",
+     "zh": "随机方差缩减梯度（SVRG）",
+     "items": [
+      {
+       "ref": "",
+       "title": "Convergence analysis for strongly convex problems",
+       "zh": "强凸问题的收敛性分析"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Stochastic recursive gradient algorithm (SARAH)",
+     "zh": "随机递归梯度算法（SARAH）",
+     "items": [
+      {
+       "ref": "",
+       "title": "Convergence analysis for nonconvex problems",
+       "zh": "非凸问题的收敛性分析"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Other variance reduced stochastic methods",
+     "zh": "其他方差缩减随机方法",
+     "items": [
+      {
+       "ref": "",
+       "title": "Stochastic dual coordinate ascent (SDCA)",
+       "zh": "随机对偶坐标上升（SDCA）"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Quasi-Newton methods",
    "zh": "拟 Newton 法",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Newton’s method",
+     "zh": "Newton 法"
+    },
+    {
+     "ref": "",
+     "title": "Quasi-Newton methods",
+     "zh": "拟 Newton 法"
+    },
+    {
+     "ref": "",
+     "title": "Criterion for choosing Ht",
+     "zh": "Ht 的选取准则"
+    },
+    {
+     "ref": "",
+     "title": "Secant equation",
+     "zh": "割线方程"
+    },
+    {
+     "ref": "",
+     "title": "Broyden-Fletcher-Goldfarb-Shanno (BFGS) method",
+     "zh": "BFGS 方法"
+    },
+    {
+     "ref": "",
+     "title": "Local superlinear convergence",
+     "zh": "局部超线性收敛"
+    },
+    {
+     "ref": "",
+     "title": "Limited-memory quasi-Newton methods",
+     "zh": "有限内存拟 Newton 法"
+    },
+    {
+     "ref": "",
+     "title": "Limited-memory BFGS (L-BFGS)",
+     "zh": "有限内存 BFGS（L-BFGS）"
+    }
+   ]
   },
   {
    "src": "B",
@@ -193,21 +464,23 @@
     "A:#1",
     "A:#11"
    ],
-   "note": "第 10 讲 Stochastic gradient methods 是主章；第 1 讲给梯度法的一般框架，第 11 讲讲随机梯度的方差缩减。"
+   "note": "第 10 讲 Stochastic gradient methods 的主节即“随机梯度下降（随机逼近）”+“收敛性分析”+“迭代平均降方差”；第 1 讲讲清梯度法在二次/强凸/凸/非凸四类问题上的框架，第 11 讲是随机梯度的方差缩减版本。"
   },
   {
    "topic": "随机逼近",
    "refs": [
-    "A:#10"
+    "A:#10",
+    "A:#3"
    ],
-   "note": "ELE522 用“随机优化/随机梯度”的现代叫法，没有单列 Robbins-Monro 随机逼近；其讲义第 10 讲即随机逼近型算法的收敛分析。B 书第 3 部分（蒙特卡洛、样本平均）是随机逼近的另一条路线。"
+   "note": "ELE522 用“随机优化/随机梯度”的现代叫法，Robbins-Monro 随机逼近只作为 SGD 一节里的别名出现（“Stochastic gradient descent (stochastic approximation)”），没有单列章节；第 3 讲的次梯度/投影次梯度是随机逼近的另一条路线。"
   },
   {
    "topic": "方差缩减",
    "refs": [
     "A:#11",
     "A:#10"
-   ]
+   ],
+   "note": "第 11 讲按 SVRG / SARAH / SDCA 三条路线组织，每个算法下面直接挂“强凸/非凸收敛性分析”；第 10 讲的“Reducing variance via iterate averaging”是更基础的降方差手段。"
   },
   {
    "topic": "随机规划",
@@ -221,18 +494,20 @@
    "topic": "收敛分析",
    "refs": [
     "A:#10",
+    "A:#11",
     "A:#1",
     "A:#6",
+    "A:#7",
     "B:#3"
    ],
-   "note": "A 的梯度法、加速梯度法与随机梯度讲义都给出收敛速率；随机规划侧的收敛性（样本平均近似的收敛）在 B 第 3 部分。"
+   "note": "A 的每份讲义末尾都有 Convergence analysis 一节（第 4、5、6、7 讲都有同名小节），第 10、11 讲给随机梯度的收敛速率；随机规划侧的收敛性（样本平均近似的收敛）在 B 第 3 部分。"
   }
  ],
- "omitted": "ELE522 的作业、项目页与其余不相关讲次已略；B 书 Front Matter、Back Matter（前言、索引、参考文献）以及与本节点无关的“随机整数规划”以外的建模讨论保留在同一部分内未再细分。",
- "notes": "ELE522 的讲义页是 12 条平铺的讲次标题（没有编号、没有单元分组），所以 A 的导览图按讲次排列，ref 留空，coverage 用 A:#序号 指向；课程 syllabus 页另有主题清单（含 Stochastic optimization、Variance reduction in stochastic optimization、Saddle-escaping algorithms），可对照。B 书只有章级目录（Springer 页面给出 Models / Solution Methods / Approximation and Sampling Methods 三个部分与 9 章），没有节级标题，因此补充分支是“部分 → 章”两层。",
+ "omitted": "ELE522 的作业、项目页与课程信息页已略；B 书 Front Matter、Back Matter（前言、索引、参考文献）未收，其余建模与求解章节保留在三个部分内未再细分。",
+ "notes": "本轮按做法 1 加深：ELE522 的讲义页仍是 12 条平铺讲次，但每份讲义 PDF 开头都有 Outline 页，本轮把这 12 份 PDF 的 Outline 各节抄成分支的 items（PDF 已放进 A 的 toc_urls，可逐条核对）。第 12 讲 Quasi-Newton 没有 Outline 页，用的是幻灯片里的一级标题（Newton's method、Quasi-Newton methods、Criterion for choosing Ht、Secant equation、BFGS、Local superlinear convergence、L-BFGS 等）。分支仍按讲次排列（ref 留空，coverage 用 A:#序号 指向），因为讲义页本身没有编号与单元分组。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 24,
+  "exact": 72,
   "fuzzy": 0,
   "dropped": []
  }

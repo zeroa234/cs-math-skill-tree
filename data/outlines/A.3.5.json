@@ -9,7 +9,11 @@
    "year": 2023,
    "url": "https://deepgenerativemodels.github.io/",
    "toc_urls": [
-    "https://deepgenerativemodels.github.io/syllabus.html"
+    "https://deepgenerativemodels.github.io/syllabus.html",
+    "https://deepgenerativemodels.github.io/notes/autoregressive/",
+    "https://deepgenerativemodels.github.io/notes/vae/",
+    "https://deepgenerativemodels.github.io/notes/flow/",
+    "https://deepgenerativemodels.github.io/notes/gan/"
    ],
    "why": "节点“现有英文学习资源”就是这门课，详细 syllabus 按周列出每讲的题目（不是只写 Week 1、Week 2）：autoregressive、maximum likelihood、VAE、normalizing flow、GAN、energy-based、score-based、generative-model evaluation、discrete latent variable、diffusion。正好覆盖本节点的自回归、潜变量、对抗、扩散与可靠评估。"
   },
@@ -58,7 +62,23 @@
    "ref": "",
    "title": "Autoregressive Models",
    "zh": "自回归模型",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Representation",
+     "zh": "表示"
+    },
+    {
+     "ref": "",
+     "title": "Extensions to NADE",
+     "zh": "NADE 的扩展"
+    },
+    {
+     "ref": "",
+     "title": "Learning and inference",
+     "zh": "学习与推断"
+    }
+   ]
   },
   {
    "src": "A",
@@ -72,21 +92,94 @@
    "ref": "",
    "title": "VAEs",
    "zh": "变分自编码器（VAE）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Representation",
+     "zh": "表示"
+    },
+    {
+     "ref": "",
+     "title": "Learning Directed Latent Variable Models",
+     "zh": "学习有向潜变量模型"
+    },
+    {
+     "ref": "",
+     "title": "Black-Box Variational Inference",
+     "zh": "黑箱变分推断"
+    },
+    {
+     "ref": "",
+     "title": "Gradient Estimation",
+     "zh": "梯度估计"
+    },
+    {
+     "ref": "",
+     "title": "Parameterizing Distributions via Deep Neural Networks",
+     "zh": "用深度神经网络参数化分布"
+    },
+    {
+     "ref": "",
+     "title": "Amortized Variational Inference",
+     "zh": "摊销变分推断"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Normalizing Flows",
    "zh": "归一化流",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Change of Variables Formula",
+     "zh": "变量替换公式"
+    },
+    {
+     "ref": "",
+     "title": "Normalizing Flow Models",
+     "zh": "归一化流模型"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "GANs",
    "zh": "生成对抗网络（GAN）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Likelihood-free learning",
+     "zh": "免似然学习"
+    },
+    {
+     "ref": "",
+     "title": "GAN Objective",
+     "zh": "GAN 的目标函数"
+    },
+    {
+     "ref": "",
+     "title": "GAN training algorithm",
+     "zh": "GAN 的训练算法"
+    },
+    {
+     "ref": "",
+     "title": "Challenges",
+     "zh": "训练中的挑战"
+    },
+    {
+     "ref": "",
+     "title": "Selected GANs",
+     "zh": "若干代表性 GAN"
+    },
+    {
+     "ref": "",
+     "title": "f-GAN",
+     "zh": "f-GAN"
+    }
+   ]
   },
   {
    "src": "A",
@@ -259,10 +352,10 @@
   }
  ],
  "omitted": "A（CS236）只收了 syllabus 上与生成模型直接相关的 13 讲；同一页的课程作业（HW 1–3）、期中期末、项目提案与最终报告、Additional Reading 的综述列表未收。B（CMU 11-777）只取 9.1、9.2 两讲，其余讲（单模态/多模态表示、对齐与 grounding、多模态 transformer、交互、转导、协同学习、量化、客座讲）不属于本节点的生成式 AI 主题；两讲里 “Xixture of Guassians, VAE, diffusion models” 这条原页面有拼写错误，未抄。C（Hugging Face LLM 课程第 12 单元）的 Introduction、Coming soon... 与练习说明未收。",
- "notes": "A 的 syllabus 是 2023 秋季版，课程主页同时挂着 notes 站（https://deepgenerativemodels.github.io/notes/）与往年版本；syllabus 页按周列每讲题目（有的周一次列两讲，如 “VAEs + Normalizing Flows”“Score Based Diffusion Models + Discrete Latent Variable Models”），这里按题目拆成 13 个分支，原文没有讲次编号，ref 留空。B 的课表页标题里写 “Lecture 9.1: Multimodal Generation”，分支配的 ref 即 9.1。",
+ "notes": "A 的 syllabus 是 2023 秋季版，课程主页同时挂着 notes 站（https://deepgenerativemodels.github.io/notes/）与往年版本；syllabus 页按周列每讲题目（有的周一次列两讲，如 “VAEs + Normalizing Flows”“Score Based Diffusion Models + Discrete Latent Variable Models”），这里按题目拆成 13 个分支，原文没有讲次编号，ref 留空。B 的课表页标题里写 “Lecture 9.1: Multimodal Generation”，分支配的 ref 即 9.1。 本轮（deepen-6）按第 1 种方式加深：CS236 课程站上的官方课程笔记（deepgenerativemodels.github.io/notes/，作者 Aditya Grover，据 CS236 讲义写成）只有五篇成文的笔记（Introduction、Autoregressive Models、Variational Autoencoders、Normalizing Flow Models、Generative Adversarial Networks），其中四篇与本节点的模型家族分支对应，已按笔记里的标题（Representation / Learning and inference / Black-Box Variational Inference / Change of Variables Formula / GAN Objective 等）拆到节；其余九个分支（Background、Maximum Likelihood Learning、Energy Based Models、Score Based Models、Evaluation of Generative Models、Score Based Diffusion Models、Discrete Latent Variable Models、Diffusion Models for Discrete Data）在课程站上只有 slides、没有带小节的讲义正文（slides 是逐页标题、没有分节结构，多份 deck 第二页直接是 Recap），所以仍停在讲级。也曾试过换一本有章→节两层目录的教材（Prince《Understanding Deep Learning》、Tomczak《Deep Generative Modeling》、Murphy《Probabilistic Machine Learning: Advanced Topics》），它们的官方 PDF 地址在本机都取不到（作者站点的下载链接是脚本渲染，按猜测的 release 地址返回 404），故本轮没有换源。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 26,
+  "exact": 43,
   "fuzzy": 0,
   "dropped": []
  }

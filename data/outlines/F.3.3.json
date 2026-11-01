@@ -9,9 +9,21 @@
    "year": 2026,
    "url": "https://www.cs.cmu.edu/~15414/",
    "toc_urls": [
-    "https://www.cs.cmu.edu/~15414/schedule.html"
+    "https://www.cs.cmu.edu/~15414/schedule.html",
+    "https://www.cs.cmu.edu/~15414/lectures/02-contracts.pdf",
+    "https://www.cs.cmu.edu/~15414/lectures/05-semantics.pdf",
+    "https://www.cs.cmu.edu/~15414/lectures/07-dynamiclogic.pdf",
+    "https://www.cs.cmu.edu/~15414/lectures/08-loops.pdf",
+    "https://www.cs.cmu.edu/~15414/lectures/10-induction.pdf",
+    "https://www.cs.cmu.edu/~15414/lectures/11-convergence.pdf",
+    "https://www.cs.cmu.edu/~15414/lectures/12-post.pdf",
+    "https://www.cs.cmu.edu/~15414/f17/lectures/15-temporal.pdf",
+    "https://www.cs.cmu.edu/~15414/f17/lectures/18-ltl.pdf",
+    "https://www.cs.cmu.edu/~15414/f17/lectures/19-software.pdf",
+    "https://www.cs.cmu.edu/~15414/f18/lectures/21-ctl.pdf",
+    "https://www.cs.cmu.edu/~15414/f18/lectures/22-ctl-checking.pdf"
    ],
-   "why": "节点现有英文资源；Schedule 页逐讲讲契约（Contracts）、动态逻辑与循环不变量、谓词变换器，再一路到 LTL/CTL 模型检查与有界模型检查，正好覆盖契约、Hoare 逻辑、不变式、时序逻辑与状态空间几条线。"
+   "why": "节点现有英文资源；Schedule 页逐讲讲契约（Contracts）、动态逻辑与循环不变量、谓词变换器，再一路到 LTL/CTL 模型检查与有界模型检查，正好覆盖契约、Hoare 逻辑、不变式、时序逻辑与状态空间几条线。本轮把每次课的 Lecture Notes（逐节写本，每讲 3–9 个编号小节）的节标题抄成分支的 items；Fall 2026 的 LTL / LTL 模型检查 / 分支时间 / CTL / 软件与有界模型检查几次课没有挂讲义，改用同一门课 Fall 2017、Fall 2018 的对应讲次讲义。"
   },
   {
    "key": "B",
@@ -21,9 +33,12 @@
    "year": 2019,
    "url": "https://www.cs.cmu.edu/~aldrich/courses/17-355/",
    "toc_urls": [
-    "https://www.cs.cmu.edu/~aldrich/courses/17-355/"
+    "https://www.cs.cmu.edu/~aldrich/courses/17-355/",
+    "https://www.cs.cmu.edu/~aldrich/courses/17-355/notes/notes03-dataflow-frameworks.pdf",
+    "https://www.cs.cmu.edu/~aldrich/courses/17-355/notes/notes04-dataflow-examples.pdf",
+    "https://www.cs.cmu.edu/~aldrich/courses/17-355/notes/notes06-widening-collecting.pdf"
    ],
-   "why": "补抽象解释：A 只到谓词变换器，没有抽象解释。CMU 的程序分析课把抽象解释当作整门课的理论主线（dataflow analysis 与 abstract interpretation、collecting semantics、widening），讲义与习题齐全。"
+   "why": "补抽象解释：A 只到谓词变换器，没有抽象解释。CMU 的程序分析课把抽象解释当作整门课的理论主线（数据流分析框架、收集语义、区间抽象域、拓宽），讲义是分节写本。"
   }
  ],
  "outline": [
@@ -32,84 +47,450 @@
    "ref": "",
    "title": "Contracts",
    "zh": "契约",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "A Mystery Function",
+     "zh": "一个神秘函数"
+    },
+    {
+     "ref": "",
+     "title": "From Executable to Logical Contracts",
+     "zh": "从可执行契约到逻辑契约"
+    },
+    {
+     "ref": "",
+     "title": "Nonexecutable Specifications",
+     "zh": "不可执行的规范"
+    },
+    {
+     "ref": "",
+     "title": "Some Examples of Verified Systems",
+     "zh": "几个经过验证的系统实例"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Semantics",
    "zh": "语义",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Straight-Line Programs",
+     "zh": "直线程序"
+    },
+    {
+     "ref": "",
+     "title": "Conditionals",
+     "zh": "条件语句"
+    },
+    {
+     "ref": "",
+     "title": "While Loops",
+     "zh": "while 循环"
+    },
+    {
+     "ref": "",
+     "title": "Tests",
+     "zh": "测试"
+    },
+    {
+     "ref": "",
+     "title": "Side Note on Conditionals and Arithmetic",
+     "zh": "关于条件与算术的附注"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Dynamic Logic",
    "zh": "动态逻辑",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "The Key Idea: Boxes and Diamonds",
+     "zh": "核心思想：盒算子与菱形算子"
+    },
+    {
+     "ref": "",
+     "title": "Determinism",
+     "zh": "确定性"
+    },
+    {
+     "ref": "",
+     "title": "Axioms",
+     "zh": "公理"
+    },
+    {
+     "ref": "",
+     "title": "Assignment",
+     "zh": "赋值"
+    },
+    {
+     "ref": "",
+     "title": "While Loops",
+     "zh": "while 循环"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Loops",
    "zh": "循环",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Summary: Axioms for Dynamic Logic So Far",
+     "zh": "小结：目前的动态逻辑公理"
+    },
+    {
+     "ref": "",
+     "title": "Nondeterministic Dynamic Logic",
+     "zh": "非确定性动态逻辑"
+    },
+    {
+     "ref": "",
+     "title": "The Induction Axiom for Repetition",
+     "zh": "重复的归纳公理"
+    },
+    {
+     "ref": "",
+     "title": "Validity and Loop Invariants",
+     "zh": "有效性与循环不变式"
+    },
+    {
+     "ref": "",
+     "title": "Strengthening the Loop Invariant",
+     "zh": "加强循环不变式"
+    },
+    {
+     "ref": "",
+     "title": "Back to While Loops",
+     "zh": "回到 while 循环"
+    },
+    {
+     "ref": "",
+     "title": "Aside: Regular Expressions Revisited",
+     "zh": "附注：重访正则表达式"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Induction",
    "zh": "归纳",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Peano’s Axioms",
+     "zh": "Peano 公理"
+    },
+    {
+     "ref": "",
+     "title": "Induction Proofs in NDL",
+     "zh": "NDL 中的归纳证明"
+    },
+    {
+     "ref": "",
+     "title": "Induction in Why3",
+     "zh": "Why3 中的归纳"
+    },
+    {
+     "ref": "",
+     "title": "Revisiting Dynamic Logic in Why3",
+     "zh": "重访 Why3 中的动态逻辑"
+    },
+    {
+     "ref": "",
+     "title": "Proving Induction for Dynamic Logic in Why3",
+     "zh": "在 Why3 中证明动态逻辑的归纳"
+    },
+    {
+     "ref": "",
+     "title": "Induction with Invariants",
+     "zh": "带不变式的归纳"
+    },
+    {
+     "ref": "",
+     "title": "Induction over Inductive Data Types",
+     "zh": "对归纳数据类型的归纳"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Convergence",
    "zh": "收敛性",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Box vs. Diamond",
+     "zh": "盒算子与菱形算子"
+    },
+    {
+     "ref": "",
+     "title": "One Axiom for Diamonds",
+     "zh": "菱形算子的一个公理"
+    },
+    {
+     "ref": "",
+     "title": "Other Axioms for Diamonds",
+     "zh": "菱形算子的其他公理"
+    },
+    {
+     "ref": "",
+     "title": "Convergence",
+     "zh": "收敛性"
+    },
+    {
+     "ref": "",
+     "title": "Interactions Between Box and Diamond",
+     "zh": "盒算子与菱形算子的相互作用"
+    },
+    {
+     "ref": "",
+     "title": "From Variant Formulas to Variant Expressions",
+     "zh": "从变体公式到变体表达式"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Predicate Transformers",
    "zh": "谓词变换器",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Hoare Triples",
+     "zh": "Hoare 三元组"
+    },
+    {
+     "ref": "",
+     "title": "Weakest Precondition",
+     "zh": "最弱前置条件"
+    },
+    {
+     "ref": "",
+     "title": "Strongest Postconditions",
+     "zh": "最强后置条件"
+    },
+    {
+     "ref": "",
+     "title": "Verification in Why3",
+     "zh": "在 Why3 中验证"
+    },
+    {
+     "ref": "",
+     "title": "Verification of Assignment",
+     "zh": "赋值的验证"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Linear Temporal Logic",
    "zh": "线性时序逻辑",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Traces Within Programs",
+     "zh": "程序内部的迹"
+    },
+    {
+     "ref": "",
+     "title": "Linear Temporal Logic",
+     "zh": "线性时序逻辑"
+    },
+    {
+     "ref": "",
+     "title": "LTL Formulas on Program Traces",
+     "zh": "程序迹上的 LTL 公式"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "LTL Model Checking",
    "zh": "LTL 模型检查",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Review: Transition structures, LTL",
+     "zh": "回顾：迁移结构与 LTL"
+    },
+    {
+     "ref": "",
+     "title": "Intersecting Büchi automata with Kripke structures",
+     "zh": "Büchi 自动机与 Kripke 结构的交"
+    },
+    {
+     "ref": "",
+     "title": "Emptiness checking via cycle detection",
+     "zh": "用环检测做空性检查"
+    },
+    {
+     "ref": "",
+     "title": "Translating LTL into Büchi automata",
+     "zh": "把 LTL 翻译成 Büchi 自动机"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Branching Time Properties",
    "zh": "分支时间性质",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Review",
+     "zh": "回顾"
+    },
+    {
+     "ref": "",
+     "title": "Computation Tree Logic",
+     "zh": "计算树逻辑",
+     "items": [
+      {
+       "ref": "",
+       "title": "Useful equivalences",
+       "zh": "有用的等价式"
+      },
+      {
+       "ref": "",
+       "title": "Comparison with LTL",
+       "zh": "与 LTL 的比较"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Example: Mutual Exclusion",
+     "zh": "例子：互斥"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "CTL Model Checking",
    "zh": "CTL 模型检查",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "CTL Model Checking",
+     "zh": "CTL 模型检查",
+     "items": [
+      {
+       "ref": "",
+       "title": "The algorithm",
+       "zh": "算法"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Example: Mutual Exclusion",
+     "zh": "例子：互斥"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Software and Bounded Model Checking",
    "zh": "软件模型检查与有界模型检查",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Review: Transition structures, LTL",
+     "zh": "回顾：迁移结构与 LTL"
+    },
+    {
+     "ref": "",
+     "title": "Bounded Model Checking",
+     "zh": "有界模型检查"
+    },
+    {
+     "ref": "",
+     "title": "Transition Structures for Programs",
+     "zh": "程序的迁移结构"
+    },
+    {
+     "ref": "",
+     "title": "Predicate Abstraction",
+     "zh": "谓词抽象"
+    }
+   ]
   },
   {
    "src": "B",
@@ -117,7 +498,45 @@
    "title": "Dataflow Analysis and Abstract Interpretation",
    "zh": "数据流分析与抽象解释",
    "fill": "抽象解释（用抽象域把具体执行抽象化、证明分析可靠）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Defining a dataflow analysis",
+     "zh": "定义一个数据流分析"
+    },
+    {
+     "ref": "",
+     "title": "Running a dataflow analysis",
+     "zh": "运行一个数据流分析",
+     "items": [
+      {
+       "ref": "",
+       "title": "Straightline code",
+       "zh": "直线代码"
+      },
+      {
+       "ref": "",
+       "title": "Alternative paths: Example",
+       "zh": "分支路径：例子"
+      },
+      {
+       "ref": "",
+       "title": "Join",
+       "zh": "合并"
+      },
+      {
+       "ref": "",
+       "title": "Dataflow analysis of loops",
+       "zh": "循环的数据流分析"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Analysis execution strategy",
+     "zh": "分析的执行策略"
+    }
+   ]
   },
   {
    "src": "B",
@@ -125,7 +544,18 @@
    "title": "Collecting semantics and interval analysis",
    "zh": "收集语义与区间分析",
    "fill": "抽象解释的一个具体实例：收集语义与区间抽象域",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "A Collecting Semantics for Reaching Definitions",
+     "zh": "到达定值的收集语义"
+    },
+    {
+     "ref": "",
+     "title": "Interval Analysis",
+     "zh": "区间分析"
+    }
+   ]
   },
   {
    "src": "B",
@@ -133,7 +563,18 @@
    "title": "Live variables and widening",
    "zh": "活跃变量与拓宽",
    "fill": "抽象解释的终止性手段（widening / 加宽）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Live Variables",
+     "zh": "活跃变量"
+    },
+    {
+     "ref": "",
+     "title": "The Widening Operator",
+     "zh": "拓宽算子"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -179,12 +620,12 @@
    ]
   }
  ],
- "omitted": "主来源 Fall 2026 共 22 个主题，只收了 12 讲：Introduction、Data Structures、Arrays and Ghosts、Arrays、Sequent Calculus、Certificates、Resolution、Equality and Uninterpreted Functions、Theory Combination 属 F.2.4（自动定理证明）或习题课；“Semantics in Why3”“Real World Verification”“Final Review”是工具与复习课。补充来源 17-355 只取抽象解释相关的三次课，其余（别名分析、过程间分析、符号执行、动态分析、Soot 工具课）超出本节点。",
- "notes": "A 的 Schedule 页只有日期无讲次号、B 的页面只有日期，故分支 ref 留空，coverage 用 A:#n / B:#n。A 里没有独立的“Hoare 逻辑”一讲，Hoare 三元组与最弱前置条件分别落在 Dynamic Logic、Loops、Predicate Transformers 三讲，故 Hoare 逻辑的 refs 取这三处。",
+ "omitted": "主来源 Fall 2026 共 22 个主题，只收了 12 讲：Introduction、Data Structures、Arrays and Ghosts、Arrays、Semantics in Why3、Project Day、Real World Verification、Final Review 是工具、作业与复习课；Sequent Calculus、Certificates、Resolution、Equality and Uninterpreted Functions、Theory Combination 属 F.2.4（自动定理证明）。补充来源 17-355 只取抽象解释相关的三份讲义（数据流分析框架、收集语义/区间分析、拓宽），其余（表示、过程间分析、别名分析、符号执行、动态分析、Soot 工具课）超出本节点。",
+ "notes": "A 的 Schedule 页只有日期无讲次号、B 的页面只有日期，故分支与节标题的 ref 留空，coverage 用 A:#n / B:#n。本轮给 12 个 A 分支和 3 个 B 分支都补了讲内编号小节。Fall 2026 的 Linear Temporal Logic、LTL Model Checking、Branching Time Properties、CTL Model Checking、Software and Bounded Model Checking 五次课在 Schedule 上没有 [pdf] 链接，因此这五讲的 items 取自同一门课 Fall 2017（15-temporal、18-ltl、19-software）与 Fall 2018（21-ctl、22-ctl-checking）的对应讲义，都已收进 A 的 toc_urls。A 里没有独立的“Hoare 逻辑”一讲，Hoare 三元组与最弱前置条件分别落在 Dynamic Logic、Loops、Predicate Transformers 三讲（后者的第 2 节就叫 Hoare Triples）。LTL 两讲的原文是 “B ¨ uchi automata”（ä 被 PDF 拆成 ¨+u），已按正确拼写 Büchi 录入，核对结果是 fuzzy。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 15,
-  "fuzzy": 0,
+  "exact": 94,
+  "fuzzy": 2,
   "dropped": []
  }
 }

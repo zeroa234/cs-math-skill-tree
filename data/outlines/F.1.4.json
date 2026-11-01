@@ -9,9 +9,12 @@
    "year": 2022,
    "url": "https://bowaggoner.com/courses/gradalg/",
    "toc_urls": [
-    "https://bowaggoner.com/courses/gradalg/"
+    "https://bowaggoner.com/courses/gradalg/",
+    "https://bowaggoner.com/courses/gradalg/notes/lect06-approx.pdf",
+    "https://bowaggoner.com/courses/gradalg/notes/lect07-online.pdf",
+    "https://bowaggoner.com/courses/gradalg/notes/lect08-rand.pdf"
    ],
-   "why": "节点现有英文资源；它的 Module 2 就叫“Approximation, Online, and Randomized Algorithms”，三讲与节点简介的随机化、近似、在线逐项对应，且每讲都有讲义与视频。"
+   "why": "节点现有英文资源；它的 Module 2 就叫“Approximation, Online, and Randomized Algorithms”，三讲的讲义 PDF 里各有带编号的节标题（如“Competitive Analysis”“Max-3SAT”），可以把每讲拆成节。"
   },
   {
    "key": "B",
@@ -21,9 +24,12 @@
    "year": 2014,
    "url": "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/pages/calendar/"
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/pages/calendar/",
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/29f2819af477b344690efcca4f0f0aac_MIT6_890F14_Lec10.pdf",
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/44ae977ae570cc94200756e774c7edc8_MIT6_890F14_Lec11.pdf",
+    "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/6c51eb5f928ea1091337b8fe3adbe0be_MIT6_890F14_Lec12.pdf"
    ],
-   "why": "补“下界”：Waggoner 的课讲怎么设计近似/在线/随机算法，不讲不可近似性与下界证明；6.890 的 Session 10–12 专门给近似比下界。"
+   "why": "补“下界”：Waggoner 的课讲怎么设计近似/在线/随机算法，不讲不可近似性与下界证明；6.890 的 Session 10–12 专门给近似比下界，且每讲的 scribe notes 有带编号的节。"
   }
  ],
  "outline": [
@@ -32,45 +38,281 @@
    "ref": "Lecture 6",
    "title": "Intro to Approximation Algorithms",
    "zh": "近似算法导论",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Bipartite Matching",
+     "zh": "二分图匹配"
+    },
+    {
+     "ref": "",
+     "title": "Approximation Algorithms in General",
+     "zh": "一般的近似算法"
+    },
+    {
+     "ref": "",
+     "title": "Max-Weighted Bipartite Matching",
+     "zh": "最大权二分图匹配"
+    },
+    {
+     "ref": "",
+     "title": "Load balancing",
+     "zh": "负载均衡",
+     "items": [
+      {
+       "ref": "",
+       "title": "Improving Greedy by Sorting",
+       "zh": "用排序改进贪心"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 7",
    "title": "Intro to Online Algorithms",
    "zh": "在线算法导论",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "The Ski Rental Problem",
+     "zh": "滑雪板租赁问题"
+    },
+    {
+     "ref": "",
+     "title": "Competitive Analysis",
+     "zh": "竞争分析"
+    },
+    {
+     "ref": "",
+     "title": "Online Bipartite Matching",
+     "zh": "在线二分图匹配",
+     "items": [
+      {
+       "ref": "",
+       "title": "Positive results",
+       "zh": "正面结果"
+      },
+      {
+       "ref": "",
+       "title": "Negative (impossibility) results",
+       "zh": "反面（不可能性）结果"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Online Bin Packing",
+     "zh": "在线装箱"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 8",
    "title": "Intro to Randomized Algorithms",
    "zh": "随机算法导论",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Probability review",
+     "zh": "概率复习",
+     "items": [
+      {
+       "ref": "",
+       "title": "Random variables",
+       "zh": "随机变量"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Randomized Algorithms",
+     "zh": "随机算法",
+     "items": [
+      {
+       "ref": "",
+       "title": "Randomized optimization algorithms",
+       "zh": "随机优化算法"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Max-3SAT",
+     "zh": "Max-3SAT"
+    },
+    {
+     "ref": "",
+     "title": "Derandomizing the Max-3SAT Algorithm",
+     "zh": "Max-3SAT 算法的去随机化"
+    },
+    {
+     "ref": "",
+     "title": "Min Weighted Vertex Cover",
+     "zh": "最小权顶点覆盖"
+    },
+    {
+     "ref": "",
+     "title": "Min-cut contraction algorithm",
+     "zh": "最小割收缩算法"
+    }
+   ]
   },
   {
    "src": "B",
    "ref": "10",
    "title": "Inapproximability Introduction",
    "zh": "不可近似性导论",
-   "fill": "下界",
-   "items": []
+   "fill": "下界（近似比的定义、NPO/PTAS/APX 等类与保近似归约）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Optimization Problems",
+     "zh": "优化问题"
+    },
+    {
+     "ref": "",
+     "title": "Approximation Algorithms",
+     "zh": "近似算法"
+    },
+    {
+     "ref": "",
+     "title": "Max 3SAT-3",
+     "zh": "Max 3SAT-3"
+    }
+   ]
   },
   {
    "src": "B",
    "ref": "11",
    "title": "Inapproximability Examples",
    "zh": "不可近似性例子",
-   "fill": "下界",
-   "items": []
+   "fill": "下界（APX 类逐级的具体不可近似问题）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Max 2SAT",
+     "zh": "Max 2SAT"
+    },
+    {
+     "ref": "",
+     "title": "Max NAE 3SAT",
+     "zh": "Max NAE 3SAT"
+    },
+    {
+     "ref": "",
+     "title": "Max CSP",
+     "zh": "Max CSP"
+    },
+    {
+     "ref": "",
+     "title": "Max Ones",
+     "zh": "Max Ones"
+    },
+    {
+     "ref": "",
+     "title": "Min Ones",
+     "zh": "Min Ones"
+    },
+    {
+     "ref": "",
+     "title": "Max Independent Set and Max 3DM-E2",
+     "zh": "最大独立集与 Max 3DM-E2"
+    },
+    {
+     "ref": "",
+     "title": "Max Edge Matching",
+     "zh": "最大边匹配"
+    },
+    {
+     "ref": "",
+     "title": "Log-APX-completeness",
+     "zh": "Log-APX 完全性"
+    },
+    {
+     "ref": "",
+     "title": "Poly-APX-complete",
+     "zh": "Poly-APX 完全"
+    },
+    {
+     "ref": "",
+     "title": "Exp-APX-complete",
+     "zh": "Exp-APX 完全"
+    },
+    {
+     "ref": "",
+     "title": "NPO-complete",
+     "zh": "NPO 完全"
+    },
+    {
+     "ref": "",
+     "title": "NPOPB-complete",
+     "zh": "NPOPB 完全"
+    }
+   ]
   },
   {
    "src": "B",
    "ref": "12",
    "title": "Gap Inapproximability",
    "zh": "间隙不可近似性",
-   "fill": "下界",
-   "items": []
+   "fill": "下界（gap 归约、PCP 与 Unique Games 假设）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Minimum-optimization definition of c-gap",
+     "zh": "c-间隙的最小化定义"
+    },
+    {
+     "ref": "",
+     "title": "Maximum-optimization definition of c-gap",
+     "zh": "c-间隙的最大化定义"
+    },
+    {
+     "ref": "",
+     "title": "Assumptions",
+     "zh": "假设"
+    },
+    {
+     "ref": "",
+     "title": "Hardness",
+     "zh": "困难性"
+    },
+    {
+     "ref": "",
+     "title": "Gap reductions",
+     "zh": "间隙归约",
+     "items": [
+      {
+       "ref": "",
+       "title": "Gap-producing reductions",
+       "zh": "产生间隙的归约"
+      },
+      {
+       "ref": "",
+       "title": "Gap-amplification reductions",
+       "zh": "放大间隙的归约"
+      },
+      {
+       "ref": "",
+       "title": "Gap-preserving reduction",
+       "zh": "保持间隙的归约"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Label cover",
+     "zh": "标签覆盖"
+    },
+    {
+     "ref": "",
+     "title": "Unique games",
+     "zh": "唯一博弈"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -79,35 +321,39 @@
    "refs": [
     "A:Lecture 8"
    ],
-   "note": "Lecture 8 讲随机算法的期望与高概率保证；讲义里紧接着的 Lecture 9（哈希表）是这类保证的实例，但主题属数据结构，未收进导览图。"
+   "note": "Lecture 8 的“概率复习/随机变量 → 随机算法 → 随机优化算法 → Max-3SAT 及其去随机化 → 最小权顶点覆盖 → 最小割收缩”一条线，给的正是期望与高概率保证，以及把随机保证转成确定性的方法。"
   },
   {
    "topic": "近似比",
    "refs": [
-    "A:Lecture 6"
-   ]
+    "A:Lecture 6",
+    "B:10"
+   ],
+   "note": "A 的第 6 讲用二分图匹配、最大权匹配与负载均衡给贪心近似比；B 的第 10 讲给近似比、PTAS/APX 类与保近似归约的正式定义（近似比的下界一侧）。"
   },
   {
    "topic": "竞争分析",
    "refs": [
     "A:Lecture 7"
-   ]
+   ],
+   "note": "从滑雪板租赁问题引入竞争比，再给竞争分析的形式定义、在线二分图匹配（正反两面结果）与在线装箱。"
   },
   {
    "topic": "下界",
    "refs": [
     "B:10",
     "B:11",
-    "B:12"
+    "B:12",
+    "A:Lecture 7"
    ],
-   "note": "B 给的是近似比的下界（不可近似性、gap 归约）；竞争比的下界与随机化的下界，两个来源都没有单独一讲，只能从 A:Lecture 7、A:Lecture 8 的分析里引申，没有专门章节。"
+   "note": "B 给近似比下界的三种证明路线：保近似归约（第 10 讲）、APX 类逐级的不可近似问题（第 11 讲）、gap 归约与 PCP/Unique Games 假设（第 12 讲）。竞争比与随机化的下界两源都没有单独一节，只能从 A 第 7 讲“反面（不可能性）结果”与第 8 讲的分析里引申。"
   }
  ],
- "omitted": "Waggoner 的其余各讲未收：Lecture 1–5（Word-RAM、DFS、最短路、DP、最大流）属 F.1.2/F.1.3，Lecture 10 流算法属 F.1.5，Lecture 11–16（随机游走、JL 变换、SVD、无遗憾学习、零和博弈、线性规划）与本节点三个知识点不对应。6.890 只取了 Session 10–12，其余（3-partition、SAT、图问题、参数化、博弈、PPAD 等）属 F.1.6 或无关。",
- "notes": "两个来源都是“逐讲”结构，讲义与视频按讲编号，没有更细的小节编号，所以本导览图的叶子停在“讲”一级。若需要下钻到技术点，Waggoner 每讲的讲义 PDF 里自带的节标题可直接作为第三层。",
+ "omitted": "Waggoner 的其余各讲未收：Lecture 1–5（Word-RAM、DFS、最短路、DP、最大流）属 F.1.2/F.1.3，Lecture 10 流算法属 F.1.5，Lecture 11–16（随机游走、JL 变换、SVD、无遗憾学习、零和博弈、线性规划）与本节点三个知识点不对应。6.890 只取 Session 10–12，其余（3-partition、SAT、图问题、参数化、博弈、PPAD 等）属 F.1.6 或无关；第 10 讲笔记里的“Examples”“Max E3-SAT-E5”等零散小标题未收。",
+ "notes": "本轮按做法 1 加深：三门/两份材料的讲义 PDF 都能直接打开，节标题是带编号的正文标题，已抄成分支的 items（4 份 PDF 全部放进 A、B 的 toc_urls）。第 10 讲（Inapproximability Introduction）的 scribe notes 用的是不带编号的段内标题，只能取到“Optimization Problems”“Approximation Algorithms”“Max 3SAT-3”三个干净的一级标题，因此该分支只有 3 个叶子。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 6,
+  "exact": 50,
   "fuzzy": 0,
   "dropped": []
  }

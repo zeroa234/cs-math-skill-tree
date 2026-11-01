@@ -15,15 +15,15 @@
   },
   {
    "key": "B",
-   "kind": "book",
-   "title": "Semantics with Applications: An Appetizer",
-   "by": "Hanne Riis Nielson and Flemming Nielson",
-   "year": 2007,
-   "url": "https://faculty.sist.shanghaitech.edu.cn/faculty/songfu/course/fall2018/CS131/sa.pdf",
+   "kind": "notes",
+   "title": "Lecture Notes on Denotational Semantics",
+   "by": "Andrew M. Pitts (University of Cambridge Computer Laboratory)",
+   "year": 2012,
+   "url": "https://www.cl.cam.ac.uk/teaching/1112/DenotSem/",
    "toc_urls": [
-    "https://faculty.sist.shanghaitech.edu.cn/faculty/songfu/course/fall2018/CS131/sa.pdf"
+    "https://www.cl.cam.ac.uk/teaching/1112/DenotSem/dens-notes-bw.pdf"
    ],
-   "why": "补指称语义：A 没有指称语义一讲。这是程序语义学的标准本科教材（Springer UTiCS），第 5 章把指称语义从直接风格语义、不动点理论到存在性证明讲完。"
+   "why": "换源后补指称语义：原来源是 Nielson《Semantics with Applications》的课程站镜像 PDF，作者与出版社的官方下载页（daimi.au.dk / cs.au.dk 的 Wiley_book）都已 404，按本轮要求换掉。剑桥 Computer Laboratory 这门课的官方讲义（Pitts 等编写，1997–2012）有完整的章→节目录，从指称语义的基本例子、最小不动点与论域构造一路讲到 PCF 的指称语义与操作/指称语义的对应，比原来的单章更细。"
   },
   {
    "key": "C",
@@ -102,30 +102,150 @@
   },
   {
    "src": "B",
-   "ref": "5",
-   "title": "Denotational Semantics",
-   "zh": "指称语义",
-   "fill": "指称语义（直接风格语义、不动点理论、语义的存在性）",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "导论",
+   "fill": "指称语义：把程序短语指称为论域中的数学对象",
    "items": [
     {
-     "ref": "5.1",
-     "title": "Direct Style Semantics: Specification",
-     "zh": "直接风格语义：规范"
+     "ref": "1.1",
+     "title": "Basic example of denotational semantics",
+     "zh": "指称语义的基本例子"
     },
     {
-     "ref": "5.2",
-     "title": "Fixed Point Theory",
-     "zh": "不动点理论"
+     "ref": "1.2",
+     "title": "Example: while-loops as fixed points",
+     "zh": "例子：while 循环作为不动点"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Least Fixed Points",
+   "zh": "最小不动点",
+   "fill": "指称语义的数学基础：偏序集、连续函数与最小不动点",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Posets and monotone functions",
+     "zh": "偏序集与单调函数",
+     "items": [
+      {
+       "ref": "2.1.1",
+       "title": "Posets",
+       "zh": "偏序集"
+      },
+      {
+       "ref": "2.1.2",
+       "title": "Monotone functions",
+       "zh": "单调函数"
+      }
+     ]
     },
     {
-     "ref": "5.3",
-     "title": "Direct Style Semantics: Existence",
-     "zh": "直接风格语义：存在性"
+     "ref": "2.2",
+     "title": "Least elements and pre-fixed points",
+     "zh": "最小元与前不动点"
     },
     {
-     "ref": "5.4",
-     "title": "An Equivalence Result",
-     "zh": "一个等价性结果"
+     "ref": "2.3",
+     "title": "Cpo’s and continuous functions",
+     "zh": "完全偏序与连续函数",
+     "items": [
+      {
+       "ref": "2.3.1",
+       "title": "Domains",
+       "zh": "论域"
+      },
+      {
+       "ref": "2.3.2",
+       "title": "Continuous functions",
+       "zh": "连续函数"
+      }
+     ]
+    },
+    {
+     "ref": "2.4",
+     "title": "Tarski’s fixed point theorem",
+     "zh": "Tarski 不动点定理"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Constructions on Domains",
+   "zh": "论域的构造",
+   "fill": "为带递归的程序语言构造合适的论域（平坦论域、积、函数空间）",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Flat domains",
+     "zh": "平坦论域"
+    },
+    {
+     "ref": "3.2",
+     "title": "Products of domains",
+     "zh": "论域的积"
+    },
+    {
+     "ref": "3.3",
+     "title": "Function domains",
+     "zh": "函数论域"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Denotational Semantics of PCF",
+   "zh": "PCF 的指称语义",
+   "fill": "指称语义的完整实例：递归函数的指称、组合性与可靠性",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Denotation of types",
+     "zh": "类型的指称"
+    },
+    {
+     "ref": "6.2",
+     "title": "Denotation of terms",
+     "zh": "项的指称"
+    },
+    {
+     "ref": "6.3",
+     "title": "Compositionality",
+     "zh": "组合性"
+    },
+    {
+     "ref": "6.4",
+     "title": "Soundness",
+     "zh": "可靠性"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Relating Denotational and Operational Semantics",
+   "zh": "指称语义与操作语义的对应",
+   "fill": "指称语义与操作语义的关系（逼近关系、外延性）",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Formal approximation relations",
+     "zh": "形式逼近关系"
+    },
+    {
+     "ref": "7.2",
+     "title": "Proof of the Fundamental Property of ◁",
+     "zh": "基本性质 ◁ 的证明"
+    },
+    {
+     "ref": "7.3",
+     "title": "Extensionality",
+     "zh": "外延性"
     }
    ]
   },
@@ -249,15 +369,19 @@
    "topic": "操作语义",
    "refs": [
     "A:#2",
-    "A:#3"
+    "A:#3",
+    "B:7"
    ]
   },
   {
    "topic": "指称语义",
    "refs": [
-    "B:5",
-    "B:5.1",
-    "B:5.3"
+    "B:1",
+    "B:1.1",
+    "B:1.2",
+    "B:2",
+    "B:2.4",
+    "B:6"
    ]
   },
   {
@@ -289,11 +413,11 @@
    ]
   }
  ],
- "omitted": "主来源 CS 345H 共 24 次课，只收了 7 讲：Functional Programming/ADTs、Rosette、Dafny、线性类型与 Rust 属实现工具与 F.3.1 范围，CompCert 与“Trusting trust”是阅读讨论（形式化验证与可信计算基，属 F.3.4），项目与习题课未收。补充来源 B 只取第 5 章；第 2 章操作语义、第 9 章公理语义与 A 重复，第 4、6、7、8、10 章是编译器正确性、符号检测与安全分析等应用，不在本节点。补充来源 D 只取第 6、8 章。",
- "notes": "CS 345H 的 schedule 页只有日期与主题、无讲次号，A 的分支 ref 留空；B 用教材原编号（5、5.1…）；C 是 Sphinx 讲义、无编号，coverage 用 C:#1；D 用 CPDT 原章号。EECS 390 讲义里 “Subtyping” 一节下还有协变/逆变等小节，此处取到第二层。",
+ "omitted": "主来源 CS 345H 共 24 次课，只收了 7 讲：Functional Programming/ADTs、Rosette、Dafny、线性类型与 Rust 属实现工具与 F.3.1 范围，CompCert 与“Trusting trust”是阅读讨论（形式化验证与可信计算基，属 F.3.4），项目与习题课未收。补充来源 B（剑桥讲义）只取第 1、2、3、6、7 章：第 4 章 Scott 归纳、第 8 章完全抽象（full abstraction）是研究生层次的进阶专题，第 5 章 PCF 只是第 6 章的语法预备。补充来源 D 只取第 6、8 章。",
+ "notes": "本轮按要求换掉了 Nielson《Semantics with Applications》的镜像 PDF（faculty.sist.shanghaitech.edu.cn 上的课程站副本）：作者与出版社的官方下载页 daimi.au.dk/~bra8130/Wiley_book/wiley.html、cs.au.dk/~bra8130/ 都已 404，Springer 的书籍页（link.springer.com/book/10.1007/978-1-84628-692-6）只有章级目录、章页也不列小节，无法给到 5.1–5.4 这一层，因此换成剑桥 Computer Laboratory 的官方课程讲义（目录在第 3–4 页，章节细到 2.1.1 三级）。B 的第 2 章按原文保留 2.1.1/2.1.2、2.3.1/2.3.2 第三层小节。CS 345H 的 schedule 页只有日期与主题、无讲次号，A 的分支 ref 留空；C 是 Sphinx 讲义、无编号，coverage 用 C:#1；D 用 CPDT 原章号。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 32,
+  "exact": 52,
   "fuzzy": 0,
   "dropped": []
  }

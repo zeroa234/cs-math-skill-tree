@@ -9,9 +9,17 @@
    "year": 2021,
    "url": "https://www.cs.cmu.edu/~15414/s21/",
    "toc_urls": [
-    "https://www.cs.cmu.edu/~15414/s21/schedule.html"
+    "https://www.cs.cmu.edu/~15414/s21/schedule.html",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/12-sat-solving.pdf",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/13-sat-encodings.pdf",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/16-smt.pdf",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/17-smt-theories.pdf",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/18-smt-encodings.pdf",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/10-sequents.pdf",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/09-diamonds.pdf",
+    "https://www.cs.cmu.edu/~15414/s21/lectures/11-induction.pdf"
    ],
-   "why": "节点现有英文资源；Schedule 页逐讲列出主题与讲义 PDF：SAT 求解与编码、SMT 求解/理论/编码/量词、相继式演算与归纳，正好是本节点的可满足性、SAT/SMT、证明搜索几条线。"
+   "why": "节点现有英文资源；Schedule 页逐讲列出主题与讲义 PDF：SAT 求解与编码、SMT 求解/理论/编码/量词、相继式演算、菱形算子与归纳，正好是本节点的可满足性、SAT/SMT、证明搜索几条线。讲义是逐节写下的 Lecture Notes（每讲 4–8 个编号小节），本轮把这些节标题抄成分支的 items。"
   },
   {
    "key": "B",
@@ -21,9 +29,11 @@
    "year": 2026,
    "url": "https://www.cs.cmu.edu/~15414/",
    "toc_urls": [
-    "https://www.cs.cmu.edu/~15414/schedule.html"
+    "https://www.cs.cmu.edu/~15414/schedule.html",
+    "https://www.cs.cmu.edu/~15414/lectures/15-resolution.pdf",
+    "https://www.cs.cmu.edu/~15414/lectures/14-certificates.pdf"
    ],
-   "why": "补 A 缺的两讲：归结（Resolution）与可检查证明（Certificates）。同一门课的较新一次开课，讲义 PDF 齐全。"
+   "why": "补 A 缺的两讲：归结（Resolution）与可检查证明（Certificates）。同一门课的较新一次开课，讲义 PDF 齐全，都是分节写本。"
   }
  ],
  "outline": [
@@ -32,35 +42,180 @@
    "ref": "",
    "title": "SAT Solving",
    "zh": "SAT 求解",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Review: Propositional Logic",
+     "zh": "回顾：命题逻辑"
+    },
+    {
+     "ref": "",
+     "title": "Normal Forms and Simplification",
+     "zh": "范式与化简"
+    },
+    {
+     "ref": "",
+     "title": "A Simple Incomplete Procedure",
+     "zh": "一个简单的不完备过程"
+    },
+    {
+     "ref": "",
+     "title": "A Simple Complete Procedure",
+     "zh": "一个简单的完备过程"
+    },
+    {
+     "ref": "",
+     "title": "Unit Propagation",
+     "zh": "单元传播"
+    },
+    {
+     "ref": "",
+     "title": "DPLL",
+     "zh": "DPLL 算法"
+    },
+    {
+     "ref": "",
+     "title": "SAT Solvers in Practice",
+     "zh": "实际中的 SAT 求解器"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "SAT Encodings",
    "zh": "SAT 编码",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Tseitin Encoding",
+     "zh": "Tseitin 编码"
+    },
+    {
+     "ref": "",
+     "title": "Finite Domains",
+     "zh": "有限域"
+    },
+    {
+     "ref": "",
+     "title": "Linear Constraints",
+     "zh": "线性约束"
+    },
+    {
+     "ref": "",
+     "title": "Encoding Graph Coloring as a SAT problem",
+     "zh": "把图着色编码为 SAT 问题"
+    },
+    {
+     "ref": "",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "SMT Solving",
    "zh": "SMT 求解",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Preliminaries",
+     "zh": "预备知识"
+    },
+    {
+     "ref": "",
+     "title": "The Nelson-Oppen Combination Procedure",
+     "zh": "Nelson-Oppen 组合过程"
+    },
+    {
+     "ref": "",
+     "title": "DPLL(T) framework",
+     "zh": "DPLL(T) 框架"
+    },
+    {
+     "ref": "",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "SMT Theories",
    "zh": "SMT 理论",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "SMT Theories",
+     "zh": "SMT 理论"
+    },
+    {
+     "ref": "",
+     "title": "Theory of equality with uninterpreted functions",
+     "zh": "带未解释函数的等词理论"
+    },
+    {
+     "ref": "",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "SMT Encodings",
    "zh": "SMT 编码",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Proving equivalence of programs",
+     "zh": "证明程序等价"
+    },
+    {
+     "ref": "",
+     "title": "Using SMT solvers",
+     "zh": "使用 SMT 求解器"
+    },
+    {
+     "ref": "",
+     "title": "Modeling: SAT vs. SMT",
+     "zh": "建模：SAT 与 SMT 的取舍"
+    },
+    {
+     "ref": "",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
   },
   {
    "src": "A",
@@ -74,21 +229,134 @@
    "ref": "",
    "title": "Sequent Calculus",
    "zh": "相继式演算",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "What is a Sequent?",
+     "zh": "什么是相继式"
+    },
+    {
+     "ref": "",
+     "title": "Inference Rules",
+     "zh": "推理规则"
+    },
+    {
+     "ref": "",
+     "title": "Multiple Conclusions",
+     "zh": "多结论"
+    },
+    {
+     "ref": "",
+     "title": "Intuitionistic vs. Classical Reasoning",
+     "zh": "直觉主义推理与经典推理"
+    },
+    {
+     "ref": "",
+     "title": "Quantification",
+     "zh": "量词"
+    },
+    {
+     "ref": "",
+     "title": "Validity of Formulas",
+     "zh": "公式的有效性"
+    },
+    {
+     "ref": "",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Diamonds",
    "zh": "菱形算子",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Box vs. Diamond",
+     "zh": "盒算子与菱形算子"
+    },
+    {
+     "ref": "",
+     "title": "Axioms for Diamonds",
+     "zh": "菱形算子的公理"
+    },
+    {
+     "ref": "",
+     "title": "Convergence",
+     "zh": "收敛性"
+    },
+    {
+     "ref": "",
+     "title": "Interactions Between Box and Diamond",
+     "zh": "盒算子与菱形算子的相互作用"
+    },
+    {
+     "ref": "",
+     "title": "From Variant Formulas to Variant Expressions",
+     "zh": "从变体公式到变体表达式"
+    },
+    {
+     "ref": "",
+     "title": "Extending Our Why3 Formalization of Dynamic Logic",
+     "zh": "扩展我们的 Why3 动态逻辑形式化"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "",
    "title": "Induction",
    "zh": "归纳",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Peano’s Axioms",
+     "zh": "Peano 公理"
+    },
+    {
+     "ref": "",
+     "title": "Induction in Why3",
+     "zh": "Why3 中的归纳"
+    },
+    {
+     "ref": "",
+     "title": "Induction via Recursion",
+     "zh": "通过递归做归纳"
+    },
+    {
+     "ref": "",
+     "title": "Revisiting Dynamic Logic in Why3",
+     "zh": "重访 Why3 中的动态逻辑"
+    },
+    {
+     "ref": "",
+     "title": "Proving Induction for Dynamic Logic in Why3",
+     "zh": "在 Why3 中证明动态逻辑的归纳"
+    },
+    {
+     "ref": "",
+     "title": "Induction with Invariants",
+     "zh": "带不变式的归纳"
+    }
+   ]
   },
   {
    "src": "B",
@@ -96,7 +364,43 @@
    "title": "Resolution",
    "zh": "归结",
    "fill": "归结原理与归结反驳（A 的 SAT 一讲只用 DPLL/CDCL 视角，没有把归结作为证明系统来讲）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "Satisfiability",
+     "zh": "可满足性"
+    },
+    {
+     "ref": "",
+     "title": "Clausal Form",
+     "zh": "子句形式"
+    },
+    {
+     "ref": "",
+     "title": "Binary Resolution",
+     "zh": "二元归结"
+    },
+    {
+     "ref": "",
+     "title": "Saturation",
+     "zh": "饱和"
+    },
+    {
+     "ref": "",
+     "title": "Checking Certificates",
+     "zh": "检查证书"
+    },
+    {
+     "ref": "",
+     "title": "Modern Solvers",
+     "zh": "现代求解器"
+    }
+   ]
   },
   {
    "src": "B",
@@ -104,7 +408,43 @@
    "title": "Certificates",
    "zh": "证明证书",
    "fill": "可检查证明：把求解器的结论导出成可独立检查的证书（A 只讲求解与演算，没有讲证书与检查器）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "",
+     "title": "A Certificate for Greatest Common Divisors",
+     "zh": "最大公约数的证书"
+    },
+    {
+     "ref": "",
+     "title": "Producing the Certificate",
+     "zh": "生成证书"
+    },
+    {
+     "ref": "",
+     "title": "Sorting with Fuel",
+     "zh": "用 fuel 写排序"
+    },
+    {
+     "ref": "",
+     "title": "Termination with Fuel",
+     "zh": "用 fuel 证明终止"
+    },
+    {
+     "ref": "",
+     "title": "Checking the Sorted Order",
+     "zh": "检查有序性"
+    },
+    {
+     "ref": "",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -149,10 +489,10 @@
   }
  ],
  "omitted": "主来源 Spring 2021 共 24 次课，只收了 9 讲：Introduction、Logical Contracts、Data Structures、Ghosts、Semantics、Dynamic Logic、Loops、Arrays、Convergence、Bounded Model Checking、Linear Temporal Logic、LTL/CTL Model Checking 等属于 F.3.3（程序验证与模型检查），Program Synthesis 超出本节点。补充来源 Fall 2026 的 22 个主题只取了 Resolution 与 Certificates 两讲，其余（契约、动态逻辑、循环、谓词变换器、时序逻辑与模型检查）与 A 重复或属 F.3.3。",
- "notes": "两次开课的 Schedule 页只有日期、没有讲次编号，所以分支的 ref 留空，coverage 用 A:#n / B:#n 指第几个分支。Spring 2021 页面把 SMT Quantifiers 那一讲的讲义链接放在 notes 列且没有 [pdf]，不过主题名在页面上是明确列出的。",
+ "notes": "两次开课的 Schedule 页只有日期、没有讲次编号，所以分支与节标题的 ref 都留空，coverage 用 A:#n / B:#n 指第几个分支。本轮给 10 个分支补了讲内编号小节（items 的标题照抄讲义 PDF 里的节标题），只有 “SMT Quantifiers” 仍是空分支：Schedule 里这一讲的讲义链接被注释成 lectures/??.pdf（从未发布），只有录屏链接，试过 19-/20-smt-quantifiers 等文件名都是 404，所以这一讲只能保留主题、没有小节可抄。Spring 2021 页面把 SMT Quantifiers 那一讲的讲义链接放在 notes 列且没有 [pdf]，不过主题名在页面上是明确列出的。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 11,
+  "exact": 75,
   "fuzzy": 0,
   "dropped": []
  }

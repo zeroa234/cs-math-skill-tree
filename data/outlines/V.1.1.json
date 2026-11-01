@@ -3,6 +3,18 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Computer Graphics: Principles and Practice, Third Edition",
+   "by": "John F. Hughes, Andries van Dam, Morgan McGuire, David F. Sklar, James D. Foley, Steven K. Feiner, Kurt Akeley (Addison-Wesley / Pearson)",
+   "year": 2014,
+   "url": "https://www.informit.com/store/computer-graphics-principles-and-practice-9780321399526",
+   "toc_urls": [
+    "https://ptgmedia.pearsoncmg.com/images/9780321399526/samplepages/0321399528.pdf"
+   ],
+   "why": "本科图形学标准教材，Pearson 官方公开的样章 PDF 里带完整目录（章→节→小节三层），按本节点的六个知识点取章：几何表示（样条与网格）、变换（二维/三维变换、相机）、光栅化（光线投射与光栅化、可见性判定）、光照（光、材质与散射）、渲染（光传输、实践中的渲染）、动画与物理仿真（Motion 的动力学），每个知识点都能落到具体小节。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "CS184/284A Computer Graphics and Imaging (Spring 2024 schedule)",
    "by": "UC Berkeley EECS (Ren Ng et al.)",
@@ -11,168 +23,535 @@
    "toc_urls": [
     "https://cs184.eecs.berkeley.edu/sp24"
    ],
-   "why": "节点现有的英文学习资源本身就是这门课；课程主页的日程表逐讲列出主题，覆盖几何表示、变换、光栅化、光照、渲染、动画与仿真六块内容，导览图与“去哪学”是同一份材料。"
+   "why": "节点现有的英文课程，保留为上课、作业与项目的入口：它的 15 讲主题（Transforms、Rasterization、Bezier、Ray Tracing、Radiometry、Monte Carlo、Path Tracing、Material、Simulation、Animation）与 A 的章一一对应，讲内没有可抄的节标题，故不再单独列分支。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "Lecture 2",
-   "title": "Drawing Triangles",
-   "zh": "绘制三角形",
-   "items": []
+   "ref": "10",
+   "title": "Transformations in Two Dimensions",
+   "zh": "二维变换",
+   "items": [
+    {
+     "ref": "10.3",
+     "title": "Important Facts about Transformations",
+     "zh": "变换的几个重要事实"
+    },
+    {
+     "ref": "10.4",
+     "title": "Translation",
+     "zh": "平移"
+    },
+    {
+     "ref": "10.7",
+     "title": "Windowing Transformations",
+     "zh": "窗口变换"
+    },
+    {
+     "ref": "10.8",
+     "title": "Building 3D Transformations",
+     "zh": "构造三维变换"
+    },
+    {
+     "ref": "10.10",
+     "title": "Coordinate Frames",
+     "zh": "坐标标架"
+    },
+    {
+     "ref": "10.11",
+     "title": "Application: Rendering from a Scene Graph",
+     "zh": "应用：从场景图渲染"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 3",
-   "title": "Sampling & Aliasing",
-   "zh": "采样与走样",
-   "items": []
+   "ref": "11",
+   "title": "Transformations in Three Dimensions",
+   "zh": "三维变换",
+   "items": [
+    {
+     "ref": "11.2",
+     "title": "Rotations",
+     "zh": "旋转"
+    },
+    {
+     "ref": "11.3",
+     "title": "Comparing Representations",
+     "zh": "各种表示的比较"
+    },
+    {
+     "ref": "11.5",
+     "title": "Interpolating Matrix Transformations",
+     "zh": "矩阵变换的插值"
+    },
+    {
+     "ref": "11.6",
+     "title": "Virtual Trackball and Arcball",
+     "zh": "虚拟轨迹球与 Arcball"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 4",
-   "title": "Transforms",
-   "zh": "变换",
-   "items": []
+   "ref": "13",
+   "title": "Camera Specifications and Transformations",
+   "zh": "相机规格与变换",
+   "items": [
+    {
+     "ref": "13.3",
+     "title": "Perspective Camera Specification",
+     "zh": "透视相机的参数设定"
+    },
+    {
+     "ref": "13.4",
+     "title": "Building Transformations from a View Specification",
+     "zh": "由视点规格构造变换"
+    },
+    {
+     "ref": "13.5",
+     "title": "Camera Transformations and the Rasterizing Renderer Pipeline",
+     "zh": "相机变换与光栅化渲染管线"
+    },
+    {
+     "ref": "13.6",
+     "title": "Perspective and z-values",
+     "zh": "透视与 z 值"
+    },
+    {
+     "ref": "13.8",
+     "title": "Orthographic Cameras",
+     "zh": "正交相机"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 5",
-   "title": "Texture Mapping",
-   "zh": "纹理映射",
-   "items": []
+   "ref": "15",
+   "title": "Ray Casting and Rasterization",
+   "zh": "光线投射与光栅化",
+   "items": [
+    {
+     "ref": "15.2",
+     "title": "High-Level Design Overview",
+     "zh": "高层设计概览"
+    },
+    {
+     "ref": "15.4",
+     "title": "A Ray-Casting Renderer",
+     "zh": "光线投射渲染器"
+    },
+    {
+     "ref": "15.6",
+     "title": "Rasterization",
+     "zh": "光栅化"
+    },
+    {
+     "ref": "15.7",
+     "title": "Rendering with a Rasterization API",
+     "zh": "用光栅化 API 渲染"
+    },
+    {
+     "ref": "15.8",
+     "title": "Performance and Optimization",
+     "zh": "性能与优化"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 6",
-   "title": "Rasterization Pipeline",
-   "zh": "光栅化管线",
-   "items": []
+   "ref": "18",
+   "title": "Images and Signal Processing",
+   "zh": "图像与信号处理",
+   "items": [
+    {
+     "ref": "18.3",
+     "title": "Convolution",
+     "zh": "卷积"
+    },
+    {
+     "ref": "18.6",
+     "title": "Reconstruction",
+     "zh": "重建"
+    },
+    {
+     "ref": "18.8",
+     "title": "Sampling",
+     "zh": "采样"
+    },
+    {
+     "ref": "18.10",
+     "title": "The Fourier Transform: Definitions",
+     "zh": "傅里叶变换：定义"
+    },
+    {
+     "ref": "18.20",
+     "title": "Aliasing Revisited",
+     "zh": "重访走样"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 7",
-   "title": "Bezier Curves & Surfaces",
-   "zh": "贝塞尔曲线与曲面",
-   "items": []
+   "ref": "20",
+   "title": "Textures and Texture Mapping",
+   "zh": "纹理与纹理映射",
+   "items": [
+    {
+     "ref": "20.2",
+     "title": "Variations of Texturing",
+     "zh": "纹理映射的各种做法"
+    },
+    {
+     "ref": "20.3",
+     "title": "Building Tangent Vectors from a Parameterization",
+     "zh": "由参数化构造切向量"
+    },
+    {
+     "ref": "20.5",
+     "title": "Assigning Texture Coordinates",
+     "zh": "指定纹理坐标"
+    },
+    {
+     "ref": "20.6",
+     "title": "Application Examples",
+     "zh": "应用实例"
+    },
+    {
+     "ref": "20.7",
+     "title": "Sampling, Aliasing, Filtering, and Reconstruction",
+     "zh": "采样、走样、滤波与重建"
+    },
+    {
+     "ref": "20.8",
+     "title": "Texture Synthesis",
+     "zh": "纹理合成"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 8",
-   "title": "Mesh Representations + Geometry Processing",
-   "zh": "网格表示与几何处理",
-   "items": []
+   "ref": "22",
+   "title": "Splines and Subdivision Curves",
+   "zh": "样条与细分曲线",
+   "items": [
+    {
+     "ref": "22.2",
+     "title": "Basic Polynomial Curves",
+     "zh": "基本多项式曲线"
+    },
+    {
+     "ref": "22.3",
+     "title": "Fitting a Curve Segment between Two Curves: The Hermite Curve",
+     "zh": "在两段曲线之间拟合曲线段：Hermite 曲线"
+    },
+    {
+     "ref": "22.4",
+     "title": "Gluing Together Curves and the Catmull-Rom Spline",
+     "zh": "拼接曲线与 Catmull-Rom 样条"
+    },
+    {
+     "ref": "22.5",
+     "title": "Cubic B-splines",
+     "zh": "三次 B 样条"
+    },
+    {
+     "ref": "22.6",
+     "title": "Subdivision Curves",
+     "zh": "细分曲线"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 9",
-   "title": "Ray Tracing",
-   "zh": "光线追踪",
-   "items": []
+   "ref": "25",
+   "title": "Meshes",
+   "zh": "网格",
+   "items": [
+    {
+     "ref": "25.2",
+     "title": "Mesh Topology",
+     "zh": "网格拓扑"
+    },
+    {
+     "ref": "25.3",
+     "title": "Mesh Geometry",
+     "zh": "网格几何"
+    },
+    {
+     "ref": "25.4",
+     "title": "Level of Detail",
+     "zh": "细节层次"
+    },
+    {
+     "ref": "25.5",
+     "title": "Mesh Applications 1: Marching Cubes, Mesh Repair, and Mesh Improvement",
+     "zh": "网格应用之一：Marching Cubes、网格修复与网格改进"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 10",
-   "title": "Ray Tracing - Acceleration Structures",
-   "zh": "光线追踪——加速结构",
-   "items": []
+   "ref": "26",
+   "title": "Light",
+   "zh": "光",
+   "items": [
+    {
+     "ref": "26.2",
+     "title": "The Physics of Light",
+     "zh": "光的物理"
+    },
+    {
+     "ref": "26.3",
+     "title": "The Microscopic View",
+     "zh": "微观视角"
+    },
+    {
+     "ref": "26.5",
+     "title": "Fresnel's Law and Polarization",
+     "zh": "Fresnel 定律与偏振"
+    },
+    {
+     "ref": "26.6",
+     "title": "Modeling Light as a Continuous Flow",
+     "zh": "把光建模为连续流"
+    },
+    {
+     "ref": "26.7",
+     "title": "Measuring Light",
+     "zh": "光的度量"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 11",
-   "title": "Radiometry and Photometry",
-   "zh": "辐射度量与光度学",
-   "items": []
+   "ref": "27",
+   "title": "Materials and Scattering",
+   "zh": "材质与散射",
+   "items": [
+    {
+     "ref": "27.3",
+     "title": "Surface Scattering",
+     "zh": "表面散射"
+    },
+    {
+     "ref": "27.4",
+     "title": "Kinds of Scattering",
+     "zh": "散射的种类"
+    },
+    {
+     "ref": "27.7",
+     "title": "Physical Models for Specular and Diffuse Reflection",
+     "zh": "镜面与漫反射的物理模型"
+    },
+    {
+     "ref": "27.8",
+     "title": "Physically Based Scattering Models",
+     "zh": "基于物理的散射模型"
+    },
+    {
+     "ref": "27.11",
+     "title": "Variations across Surfaces",
+     "zh": "表面上散射的空间变化"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 12",
-   "title": "Monte Carlo Integration",
-   "zh": "蒙特卡洛积分",
-   "items": []
+   "ref": "29",
+   "title": "Light Transport",
+   "zh": "光传输",
+   "items": [
+    {
+     "ref": "29.2",
+     "title": "Light Transport",
+     "zh": "光传输"
+    },
+    {
+     "ref": "29.4",
+     "title": "The Rendering Equation for General Scattering",
+     "zh": "一般散射下的渲染方程"
+    },
+    {
+     "ref": "29.6",
+     "title": "A Worked Example",
+     "zh": "一个完整的算例"
+    },
+    {
+     "ref": "29.7",
+     "title": "Solving the Rendering Equation",
+     "zh": "求解渲染方程"
+    },
+    {
+     "ref": "29.8",
+     "title": "The Classification of Light-Transport Paths",
+     "zh": "光传输路径的分类"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 13",
-   "title": "Global Illumination & Path Tracing",
-   "zh": "全局光照与路径追踪",
-   "items": []
+   "ref": "32",
+   "title": "Rendering in Practice",
+   "zh": "实践中的渲染",
+   "items": [
+    {
+     "ref": "32.3",
+     "title": "Surface Representations and Representing BSDFs Locally",
+     "zh": "表面表示与局部 BSDF 表示"
+    },
+    {
+     "ref": "32.4",
+     "title": "Representation of Light",
+     "zh": "光的表示"
+    },
+    {
+     "ref": "32.5",
+     "title": "A Basic Path Tracer",
+     "zh": "基础路径追踪器"
+    },
+    {
+     "ref": "32.6",
+     "title": "Photon Mapping",
+     "zh": "光子映射"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 14",
-   "title": "Material Modeling",
-   "zh": "材质建模",
-   "items": []
+   "ref": "35",
+   "title": "Motion",
+   "zh": "运动",
+   "items": [
+    {
+     "ref": "35.3",
+     "title": "Considerations for Rendering",
+     "zh": "渲染运动时的考虑"
+    },
+    {
+     "ref": "35.4",
+     "title": "Representations",
+     "zh": "运动的表示"
+    },
+    {
+     "ref": "35.5",
+     "title": "Pose Interpolation",
+     "zh": "位姿插值"
+    },
+    {
+     "ref": "35.6",
+     "title": "Dynamics",
+     "zh": "动力学"
+    },
+    {
+     "ref": "35.7",
+     "title": "Remarks on Stability in Dynamics",
+     "zh": "动力学稳定性的几点注记"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 17",
-   "title": "Introduction to Physical Simulation",
-   "zh": "物理仿真导论",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 18",
-   "title": "Intro to Animation",
-   "zh": "动画导论",
-   "items": []
+   "ref": "36",
+   "title": "Visibility Determination",
+   "zh": "可见性判定",
+   "items": [
+    {
+     "ref": "36.3",
+     "title": "The Depth Buffer",
+     "zh": "深度缓冲"
+    },
+    {
+     "ref": "36.4",
+     "title": "List-Priority Algorithms",
+     "zh": "列表优先级算法"
+    },
+    {
+     "ref": "36.5",
+     "title": "Frustum Culling and Clipping",
+     "zh": "视锥剔除与裁剪"
+    },
+    {
+     "ref": "36.6",
+     "title": "Backface Culling",
+     "zh": "背面剔除"
+    }
+   ]
   }
  ],
  "coverage": [
   {
    "topic": "几何表示",
    "refs": [
-    "A:Lecture 7",
-    "A:Lecture 8"
+    "A:22",
+    "A:22.2",
+    "A:22.5",
+    "A:22.6",
+    "A:25",
+    "A:25.2",
+    "A:25.3"
    ]
   },
   {
    "topic": "变换",
    "refs": [
-    "A:Lecture 4"
+    "A:10.3",
+    "A:10.4",
+    "A:10.8",
+    "A:10.10",
+    "A:11.2",
+    "A:13.4",
+    "A:13.5"
    ]
   },
   {
    "topic": "光栅化",
    "refs": [
-    "A:Lecture 2",
-    "A:Lecture 3",
-    "A:Lecture 5",
-    "A:Lecture 6"
+    "A:15.6",
+    "A:15.7",
+    "A:13.5",
+    "A:36.3",
+    "A:36.6",
+    "A:15.8"
    ]
   },
   {
    "topic": "光照",
    "refs": [
-    "A:Lecture 11",
-    "A:Lecture 14"
+    "A:26.2",
+    "A:26.7",
+    "A:27.3",
+    "A:27.7",
+    "A:27.8"
    ]
   },
   {
    "topic": "渲染",
    "refs": [
-    "A:Lecture 9",
-    "A:Lecture 10",
-    "A:Lecture 12",
-    "A:Lecture 13"
+    "A:29.4",
+    "A:29.7",
+    "A:32.5",
+    "A:32.6",
+    "A:15.4"
    ]
   },
   {
    "topic": "动画与物理仿真",
    "refs": [
-    "A:Lecture 17",
-    "A:Lecture 18"
+    "A:35.4",
+    "A:35.5",
+    "A:35.6",
+    "A:35.7",
+    "A:11.5"
    ]
   }
  ],
- "omitted": "同一张日程表里第 1 讲（课程介绍）、第 15–16 讲（相机与镜头）、第 19–28 讲（颜色科学、图像传感器、图像处理、VR、客座讲座、研究讲座）不与节点简介的六个知识点直接对应，未收；考试周与春假行也未收。",
- "notes": "CS184 的目录粒度是“每讲一个主题”，讲页（如 /sp24/lecture/4）只有幻灯片页数、没有小节标题，所以每个分支就是一片叶子（15 章 15 叶），没有再往下细分；每讲的参考读物页码见课程 Readings 页（读的是 Shirley《Fundamentals of Computer Graphics》各章），可作为深入时的补充。",
+ "omitted": "A 共 38 章，只取与节点六个知识点直接对应的 14 章。未收：1–6 章（导论、WPF 二维绘图、Dürer 渲染器、二维测试框架、视觉感知、固定功能三维与层次建模——多为平台/API 或感知基础）、7–9 章（二维/三维几何数学、图形形状描述、网格上的函数）、12 章（变换库）、14 章（标准近似与表示）、16 章（实时三维平台综述）、17 章（图像表示与合成）、19 章（图像缩放）、21 章（交互技术）、23–24 章（细分曲面、隐式形状表示）、28 章（颜色）、30–31 章（概率与蒙特卡洛积分、渲染方程的理论解法）、33–34 章（着色器、表现型渲染）、37–38 章（空间数据结构、现代图形硬件）；各章 Exercises、Discussion and Further Reading 与书末 List of Principles、Bibliography 亦未收。",
+ "notes": "本轮按“目录太平”的第 2 种做法换主来源：CS184 的讲页只有讲次主题，幻灯片 PDF 虽有少量分节页，但没有可成体系照抄的节标题，因此换成同主题的本科标准教材（Pearson 官方公开样章 PDF 内含完整三层目录，不是盗版镜像）。原 15 个 CS184 分支没有保留为分支：其主题（Transforms/Rasterization/Bezier/Ray Tracing/Radiometry/Monte Carlo/Path Tracing/Material/Simulation/Animation）全部被 A 更细的节覆盖（Transforms→10–13、Rasterization→15/36、Bezier→22、Mesh→25、Radiometry→26、Monte Carlo→29.7/29.8、Path Tracing→32.5、Material→27、Simulation/Animation→35），重复列出会翻倍；CS184 仍留在 sources 里作为上课与作业入口。A 的 ref 用书内节号；第 30 章（概率与蒙特卡洛积分）未单列分支，其内容并入 29.7“求解渲染方程”的说明。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 15,
+  "exact": 82,
   "fuzzy": 0,
   "dropped": []
  }

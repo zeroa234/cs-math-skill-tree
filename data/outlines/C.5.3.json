@@ -3,6 +3,19 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Parallel Programming: for Multicore and Cluster Systems, 2nd ed.",
+   "by": "Thomas Rauber and Gudula Rünger",
+   "year": 2013,
+   "url": "https://link.springer.com/book/10.1007/978-3-642-37801-0",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-642-37801-0",
+    "https://link.springer.com/content/pdf/bfm:978-3-642-37801-0/1"
+   ],
+   "why": "主来源换成本科/研究生教材（出版社公开的书前页目录，章 → 节 → 小节）：第 2 章的存储组织、线程级并行与处理器能耗，第 4 章并行程序性能分析（性能指标、加速比与效率、可扩展性、全局通信的渐近时间、并行计算模型、循环调度与分块），第 8 章线性方程组算法（高斯消元/LU、带状矩阵与 Poisson 离散、迭代法、共轭梯度、稀疏 Cholesky），正好覆盖数值工作负载、并行求解器、可扩展性、通信优化、能耗五个知识点。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "CS267 Applications of Parallel Computers, Spring 2016 — Lecture Notes and Schedule",
    "by": "James Demmel (UC Berkeley)",
@@ -11,10 +24,10 @@
    "toc_urls": [
     "https://people.eecs.berkeley.edu/~demmel/cs267_Spr16/"
    ],
-   "why": "先修证据里的课程，也是这门课的标准课程表：逐讲列出题目并附讲义（模拟中的并行性与局部性、共享内存与分布式内存编程、稠密线性代数、图划分、自动性能调优与 SpMV、结构网格、动态负载均衡、N 体问题的层次方法、通信下界与最优算法），正对“数值工作负载、并行求解器、通信优化”。"
+   "why": "先修证据里的课程，保留它的逐讲表补教材没有的应用视角：模拟中的并行性与局部性、稠密线性代数、图划分、自动性能调优与 SpMV、结构网格、动态负载均衡。"
   },
   {
-   "key": "B",
+   "key": "C",
    "kind": "notes",
    "title": "Contents of class notes for UW HPSC – Coursera Edition",
    "by": "Randall J. LeVeque (University of Washington)",
@@ -23,114 +36,168 @@
    "toc_urls": [
     "https://faculty.washington.edu/rjl/uwhpsc-coursera/"
    ],
-   "why": "节点现有英文学习资源（UW AMath 483/583 的公开讲义）。它的目录把 OpenMP、MPI、计时、BLAS/LAPACK 与三个应用（Poisson 问题的数值方法与迭代法、Jacobi 的 OpenMP/MPI 版本、蒙特卡洛）逐节列出，正好补 CS267 只给讲次标题、没有具体数值实现步骤的缺口。"
+   "why": "节点现有英文学习资源（UW AMath 483/583 的公开讲义），保留它补“并行求解器”的可运行代码路径：OpenMP 与 MPI 的归约、收发、主从模式，以及 Poisson 问题、Jacobi 迭代与蒙特卡洛三个应用。"
   }
  ],
  "outline": [
   {
    "src": "A",
    "ref": "2",
-   "title": "Single Processor Machines: Memory Hierarchies and Processor Features",
-   "zh": "单处理器机器：存储层次与处理器特性",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "3",
-   "title": "Parallel Machines and Programming Models",
-   "zh": "并行机器与编程模型",
-   "items": []
+   "title": "Parallel Computer Architecture",
+   "zh": "并行计算机体系结构",
+   "items": [
+    {
+     "ref": "2.3",
+     "title": "Memory Organization of Parallel Computers",
+     "zh": "并行计算机的存储组织"
+    },
+    {
+     "ref": "2.4",
+     "title": "Thread-Level Parallelism",
+     "zh": "线程级并行",
+     "items": [
+      {
+       "ref": "2.4.2",
+       "title": "Energy Consumption of Processors",
+       "zh": "处理器的能耗"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "4",
+   "title": "Performance Analysis of Parallel Programs",
+   "zh": "并行程序的性能分析",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Performance Evaluation of Computer Systems",
+     "zh": "计算机系统的性能评价"
+    },
+    {
+     "ref": "4.2",
+     "title": "Performance Metrics for Parallel Programs",
+     "zh": "并行程序的性能指标"
+    },
+    {
+     "ref": "4.3",
+     "title": "Asymptotic Times for Global Communication",
+     "zh": "全局通信的渐近时间"
+    },
+    {
+     "ref": "4.4",
+     "title": "Analysis of Parallel Execution Times",
+     "zh": "并行执行时间分析"
+    },
+    {
+     "ref": "4.5",
+     "title": "Parallel Computational Models",
+     "zh": "并行计算模型"
+    },
+    {
+     "ref": "4.6",
+     "title": "Loop Scheduling and Loop Tiling",
+     "zh": "循环调度与循环分块"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Algorithms for Systems of Linear Equations",
+   "zh": "线性方程组算法",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Gaussian Elimination",
+     "zh": "高斯消元"
+    },
+    {
+     "ref": "8.2",
+     "title": "Direct Methods for Linear Systems with Banded Structure",
+     "zh": "带状线性方程组的直接法"
+    },
+    {
+     "ref": "8.3",
+     "title": "Iterative Methods for Linear Systems",
+     "zh": "线性方程组的迭代法"
+    },
+    {
+     "ref": "8.4",
+     "title": "Conjugate Gradient Method",
+     "zh": "共轭梯度法"
+    },
+    {
+     "ref": "8.5",
+     "title": "Cholesky Factorization for Sparse Matrices",
+     "zh": "稀疏矩阵的 Cholesky 分解"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
    "title": "Sources of Parallelism and Locality in Simulation (Part 1)",
    "zh": "模拟中的并行性与局部性来源（上）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "5",
-   "title": "Sources of Parallelism and Locality in Simulation (Part 2)",
-   "zh": "模拟中的并行性与局部性来源（下）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "6",
-   "title": "Shared Memory Programming: Threads and OpenMP",
-   "zh": "共享内存编程：线程与 OpenMP",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "7",
-   "title": "Distributed Memory Machines and Programming",
-   "zh": "分布式内存机器与编程",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "12",
-   "title": "Dense Linear Algebra (Part 1)",
-   "zh": "稠密线性代数（上）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "13",
-   "title": "Dense Linear Algebra (Part 2)",
-   "zh": "稠密线性代数（下）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "14",
-   "title": "Graph Partitioning",
-   "zh": "图划分",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "15",
-   "title": "Automatic Performance Tuning and Sparse-Matrix-Vector-Multiplication",
-   "zh": "自动性能调优与稀疏矩阵向量乘",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "17",
-   "title": "Structured Grids",
-   "zh": "结构网格",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "23",
-   "title": "Dynamic Load Balancing",
-   "zh": "动态负载均衡",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "25",
-   "title": "Hierarchical Methods for the N-Body Problem",
-   "zh": "N 体问题的层次方法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Communication Lower Bounds and Optimal Algorithms",
-   "zh": "通信下界与最优算法",
+   "fill": "补“数值工作负载”：离散化仿真里时间步与空间网格带来的并行性与局部性",
    "items": []
   },
   {
    "src": "B",
+   "ref": "5",
+   "title": "Sources of Parallelism and Locality in Simulation (Part 2)",
+   "zh": "模拟中的并行性与局部性来源（下）",
+   "fill": "补“数值工作负载”：粒子方法与连续模型",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "12",
+   "title": "Dense Linear Algebra (Part 1)",
+   "zh": "稠密线性代数（上）",
+   "fill": "补“并行求解器”：稠密分解的通信下界与分块算法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "13",
+   "title": "Dense Linear Algebra (Part 2)",
+   "zh": "稠密线性代数（下）",
+   "fill": "补“并行求解器”与“通信优化”：分块与递归算法如何减少通信",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "15",
+   "title": "Automatic Performance Tuning and Sparse-Matrix-Vector-Multiplication",
+   "zh": "自动性能调优与稀疏矩阵向量乘",
+   "fill": "补“通信优化”：稀疏矩阵向量乘的访存与通信权衡、自动调优",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "17",
+   "title": "Structured Grids",
+   "zh": "结构网格",
+   "fill": "补“数值工作负载”里的网格计算与多重网格",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "23",
+   "title": "Dynamic Load Balancing",
+   "zh": "动态负载均衡",
+   "fill": "补“可扩展性”：负载不均衡如何吃掉并行效率",
+   "items": []
+  },
+  {
+   "src": "C",
    "ref": "",
    "title": "Parallel computing",
    "zh": "并行计算",
-   "fill": "补“并行求解器”的具体接口与例子：CS267 只给讲次标题，这一节把 OpenMP 与 MPI 的代码骨架和归约、收发、主从模式逐条列出",
+   "fill": "补“并行求解器”的可运行代码：OpenMP 与 MPI 的归约、收发与主从模式的代码骨架",
    "items": [
     {
      "ref": "",
@@ -169,45 +236,11 @@
    ]
   },
   {
-   "src": "B",
-   "ref": "",
-   "title": "Miscellaneous",
-   "zh": "杂项",
-   "fill": "补“带宽极限”的实测手段：计时、BLAS/LAPACK 为什么比自己写的三重循环快",
-   "items": [
-    {
-     "ref": "",
-     "title": "Timing code",
-     "zh": "给代码计时"
-    },
-    {
-     "ref": "",
-     "title": "Timing OpenMP code",
-     "zh": "给 OpenMP 代码计时"
-    },
-    {
-     "ref": "",
-     "title": "Linear Algebra software",
-     "zh": "线性代数软件"
-    },
-    {
-     "ref": "",
-     "title": "The BLAS",
-     "zh": "BLAS"
-    },
-    {
-     "ref": "",
-     "title": "LAPACK",
-     "zh": "LAPACK"
-    }
-   ]
-  },
-  {
-   "src": "B",
+   "src": "C",
    "ref": "",
    "title": "Applications",
    "zh": "应用",
-   "fill": "补“数值工作负载”：把区域分解、晕圈交换、迭代求解落到 Poisson 问题、Jacobi 与蒙特卡洛上",
+   "fill": "补“数值工作负载”的完整算例：把区域分解、晕圈交换、迭代求解落到 Poisson 问题、Jacobi 与蒙特卡洛上",
    "items": [
     {
      "ref": "",
@@ -246,52 +279,60 @@
   {
    "topic": "数值工作负载",
    "refs": [
-    "A:4",
-    "A:5",
-    "A:12",
-    "A:17",
-    "B:#3"
+    "A:8",
+    "A:8.1",
+    "A:8.2",
+    "B:4",
+    "B:5",
+    "B:17",
+    "C:#2"
    ]
   },
   {
    "topic": "并行求解器",
    "refs": [
-    "A:6",
-    "A:7",
-    "A:12",
-    "A:13",
-    "B:#1",
-    "B:#3"
+    "A:8.3",
+    "A:8.4",
+    "A:8.5",
+    "B:12",
+    "B:13",
+    "C:#1",
+    "C:#2"
    ]
   },
   {
    "topic": "可扩展性",
    "refs": [
-    "A:23",
-    "A:15"
-   ],
-   "note": "CS267（2016）的讲次表里没有以强扩展/弱扩展或加速比命名的讲次，最接近的是第 23 讲 Dynamic Load Balancing（负载与并行效率）与第 15 讲 Automatic Performance Tuning；LeVeque 讲义只有“给代码计时”一节。强弱扩展的定义与加速比计算要靠第 3 讲 Parallel Machines and Programming Models 的讲义内容，标题里看不出来。"
+    "A:4.2",
+    "A:4.4",
+    "A:4.5",
+    "A:4.6",
+    "B:23"
+   ]
   },
   {
    "topic": "通信优化",
    "refs": [
-    "A:#14",
-    "A:7",
-    "B:#1"
-   ],
-   "note": "通信下界与最优算法这一讲在 CS267 的讲次表里紧跟第 25 讲列出、没有自己的讲次编号，所以用分支序号引用。"
+    "A:4.3",
+    "A:4.4",
+    "B:13",
+    "B:15"
+   ]
   },
   {
    "topic": "能耗",
-   "refs": [],
-   "note": "两个来源都没有讲能耗的章：CS267（2016）的讲次表里没有功耗或能效相关的题目，LeVeque 的讲义目录只到计时、BLAS/LAPACK 与并行 Jacobi，也没有功耗章节；这一项需要另找教材（例如专门的能效/HPC 功耗资料），不在本次两个来源的目录里。"
+   "refs": [
+    "A:2.4",
+    "A:2.4.2"
+   ],
+   "note": "能耗只有教材里的一节（2.4.2 Energy Consumption of Processors，讲处理器的功耗与多核设计的关系）；CS267（2016）的讲次表和 LeVeque 的讲义目录里都没有能耗或能效的章节，所以这一项只能到节级，没有再往下的算法层内容。"
   }
  ],
- "omitted": "A 里没收：第 1 讲 Introduction、第 8 讲 UPC（分区全局地址空间语言）、第 9–11 讲（云计算与大数据、NERSC 与 Knights Landing、CUDA/OpenCL 入门）、第 18–22 讲（并行图算法、用模式架构并行软件、FFT、气候建模、科学软件生态）、第 24、27、28 讲（材料设计的数据挖掘、宇宙微波背景数据分析、大数据与百亿亿次），这些是体系结构、GPU、图算法与具体应用领域专题，与节点简介的五项关系较远；B 里只取了“并行计算 / 杂项 / 应用”三节，未收 Python、Fortran、Shell、版本控制、VM 与调试等语言与工具章节。",
- "notes": "A 是逐讲清单，分支 ref 用页面上的讲次编号；最后一讲（通信下界与最优算法）在页面上写作“then Communication Lower Bounds and Optimal Algorithms”，没有讲次编号，因此 ref 留空，coverage 里用 A:#14 指分支序号。B 是 Sphinx 生成的整书目录，分支标题是页面上的三个小节名（Parallel computing、Miscellaneous、Applications），其下条目按原目录的层次照抄，最内层没有编号，ref 留空；原目录里的拼写错误 paralellism 按原文保留。",
+ "omitted": "A 只收第 2、4、8 章：第 1、3 章（导论与编程模型）、第 5–6 章（MPI 与线程编程，见 C.5.1）、第 7 章（GPU，见 C.5.2）；第 2 章的互连网络、路由与交换、缓存一致性等节，以及第 4 章的 PRAM/BSP/LogP 三级小节未收。B 里没收：第 1 讲 Introduction、第 8 讲 UPC、第 9–11 讲（云计算与大数据、NERSC 与 Knights Landing、CUDA/OpenCL 入门）、第 14 讲 Graph Partitioning、第 18–22 讲（并行图算法、模式架构并行软件、FFT、气候建模、科学软件生态）、第 25 讲 N 体层次方法与第 24、27、28 讲的应用领域专题。C 里只收“并行计算”与“应用”两节，未收 Python、Fortran、Shell、版本控制、虚拟机与调试等语言与工具章节，也没有再收“杂项”（计时、BLAS/LAPACK）一节。",
+ "notes": "本轮按第二轮第 2 条做法换源。先试第 1 条：CS267 的讲次页只给幻灯片链接（Lectures/*_4pp.pdf，是 PPT 导出的幻灯片），LeVeque 的讲义目录页是 Sphinx 生成的整站目录、把每一小节标题平铺，两者都没有可当“节标题”的稳定层级；于是把主来源换成教材第 2/4/8 章，两个原有来源降为补充分支。C 的分支标题是 LeVeque 目录页上的小节名，其下条目按原目录层次照抄，最内层没有编号，ref 留空，coverage 用 C:#1、C:#2 指分支序号；原目录里的拼写错误 paralellism 按原文保留。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 34,
+  "exact": 38,
   "fuzzy": 0,
   "dropped": []
  }

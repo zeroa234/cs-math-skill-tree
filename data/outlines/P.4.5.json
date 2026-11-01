@@ -16,14 +16,14 @@
   {
    "key": "B",
    "kind": "book",
-   "title": "Software Engineering, 9th Edition",
-   "by": "Ian Sommerville",
-   "year": 2010,
-   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "title": "Guide to the Software Engineering Body of Knowledge (SWEBOK Guide) v4.0a",
+   "by": "IEEE Computer Society (editor: Hironori Washizaki)",
+   "year": 2026,
+   "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
    "toc_urls": [
-    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+    "https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf"
    ],
-   "why": "补测试层次的标准教材分节：A 按“单元/替身/更大的测试”组织，没有教材式的开发测试（单元→组件→系统）、发布测试、用户测试这条主线，也没有测试驱动开发。"
+   "why": "补 A 缺的教材式框架：SWEBOK 第 5 章 Software Testing 按节给测试层次（单元/集成/系统/验收）、测试技术（规格/结构/故障与变异/使用模型）、与测试相关的度量（故障注入、变异得分、可靠性评估），正好补齐节点简介里的测试层次、覆盖率、故障注入与质量评估。"
   },
   {
    "key": "C",
@@ -283,30 +283,172 @@
   },
   {
    "src": "B",
-   "ref": "8",
-   "title": "Software testing",
-   "zh": "软件测试",
-   "fill": "补测试层次主线与测试驱动开发：开发测试里的单元测试、组件测试（集成）、系统测试，以及发布测试与用户（验收）测试",
+   "ref": "1",
+   "title": "Software Testing Fundamentals",
+   "zh": "软件测试基础",
+   "fill": "补测试的基本概念与质量含义：故障（fault）与失效（failure）的区别、可测性、预言问题、测试有效性与质量改进",
    "items": [
     {
-     "ref": "8.1",
-     "title": "Development testing",
-     "zh": "开发测试"
+     "ref": "1.1",
+     "title": "Faults vs. Failures",
+     "zh": "故障与失效"
     },
     {
-     "ref": "8.2",
-     "title": "Test-driven development",
-     "zh": "测试驱动开发"
+     "ref": "1.2",
+     "title": "Key Issues",
+     "zh": "关键问题"
     },
     {
-     "ref": "8.3",
-     "title": "Release testing",
-     "zh": "发布测试"
+     "ref": "1.3",
+     "title": "Relationship of Testing to Other Activities",
+     "zh": "测试与其他活动的关系"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Test Levels",
+   "zh": "测试层次",
+   "fill": "补单元/集成/系统/验收这四层的教材式划分，以及回归测试等按目标的测试类型",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "The Target of the Test",
+     "zh": "测试的对象"
     },
     {
-     "ref": "8.4",
-     "title": "User testing",
-     "zh": "用户测试"
+     "ref": "2.1.1",
+     "title": "Unit Testing",
+     "zh": "单元测试"
+    },
+    {
+     "ref": "2.1.2",
+     "title": "Integration Testing",
+     "zh": "集成测试"
+    },
+    {
+     "ref": "2.1.3",
+     "title": "System Testing",
+     "zh": "系统测试"
+    },
+    {
+     "ref": "2.1.4",
+     "title": "Acceptance Testing",
+     "zh": "验收测试"
+    },
+    {
+     "ref": "2.2",
+     "title": "Objectives of Testing",
+     "zh": "测试的目标"
+    },
+    {
+     "ref": "2.2.5",
+     "title": "Regression Testing",
+     "zh": "回归测试"
+    },
+    {
+     "ref": "2.2.7",
+     "title": "Non-functional Testing",
+     "zh": "非功能测试"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Test Techniques",
+   "zh": "测试技术",
+   "fill": "补按规格/结构/故障/使用模型选测试用例的方法，其中结构类技术（控制流、数据流）给出覆盖准则的正式定义",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Specification-Based Techniques",
+     "zh": "基于规格说明的技术"
+    },
+    {
+     "ref": "3.1.1",
+     "title": "Equivalence Partitioning",
+     "zh": "等价类划分"
+    },
+    {
+     "ref": "3.1.2",
+     "title": "Boundary-Value Analysis",
+     "zh": "边界值分析"
+    },
+    {
+     "ref": "3.1.9",
+     "title": "Random Testing",
+     "zh": "随机测试"
+    },
+    {
+     "ref": "3.2",
+     "title": "Structure-Based Test Techniques",
+     "zh": "基于结构的技术"
+    },
+    {
+     "ref": "3.2.1",
+     "title": "Control Flow Testing",
+     "zh": "控制流测试"
+    },
+    {
+     "ref": "3.2.2",
+     "title": "Data Flow Testing",
+     "zh": "数据流测试"
+    },
+    {
+     "ref": "3.4",
+     "title": "Fault-Based and Mutation Techniques",
+     "zh": "基于故障与变异的技术"
+    },
+    {
+     "ref": "3.5",
+     "title": "Usage-Based Techniques",
+     "zh": "基于使用情况的技术"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Test-Related Measures",
+   "zh": "与测试相关的度量",
+   "fill": "补质量评估与故障注入：故障密度、可靠性评估与可靠性增长模型，以及用故障注入、变异得分衡量测试本身的有效性",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Evaluation of the SUT",
+     "zh": "对被测系统的评估"
+    },
+    {
+     "ref": "4.1.3",
+     "title": "Fault Density",
+     "zh": "故障密度"
+    },
+    {
+     "ref": "4.1.4",
+     "title": "Life Test, Reliability Evaluation",
+     "zh": "寿命测试与可靠性评估"
+    },
+    {
+     "ref": "4.1.5",
+     "title": "Reliability Growth Models",
+     "zh": "可靠性增长模型"
+    },
+    {
+     "ref": "4.2",
+     "title": "Evaluation of the Tests Performed",
+     "zh": "对已执行测试的评估"
+    },
+    {
+     "ref": "4.2.1",
+     "title": "Fault Injection",
+     "zh": "故障注入"
+    },
+    {
+     "ref": "4.2.2",
+     "title": "Mutation Score",
+     "zh": "变异得分"
     }
    ]
   },
@@ -356,56 +498,65 @@
    "refs": [
     "A:#2",
     "A:#1",
-    "B:8.1"
+    "B:2.1.1"
    ]
   },
   {
    "topic": "集成测试",
    "refs": [
     "A:#4",
-    "B:8.1"
+    "B:2.1.2"
    ]
   },
   {
    "topic": "系统测试",
    "refs": [
     "A:#4",
-    "B:8.1",
-    "B:8.3"
+    "B:2.1.3",
+    "B:2.1.4"
    ]
   },
   {
    "topic": "性质测试",
    "refs": [
-    "C:#1"
+    "C:#1",
+    "B:3.1.9"
    ],
-   "note": "A 的 Testing/Unit Testing/Larger Testing 与 B 的开发测试都没有性质测试；这一项只由 CMU 17-313 的性质测试讨论课覆盖。"
+   "note": "A 的 Testing/Unit Testing/Larger Testing 与 B 的测试技术都没有“性质测试”专节：B:3.1.9 只有随机测试（性质测试的底座），成体系的讲法在 C 的 CMU 17-313 讨论课（性质怎么写、怎么用变异体检验性质）。"
   },
   {
    "topic": "覆盖率",
    "refs": [
-    "A:#1"
-   ]
+    "A:#1",
+    "B:3.2",
+    "B:4.2"
+   ],
+   "note": "A 只有一节“关于代码覆盖率”讲它的意义与局限；覆盖准则的正式定义（控制流、数据流）在 B:3.2，把覆盖率当作测试充分性度量在 B:4.2。"
   },
   {
    "topic": "故障注入",
-   "refs": [],
-   "note": "两份来源都没有故障注入（fault injection / chaos engineering）的章：A 的 Larger Testing 讲性能、负载、压力测试与部署配置测试，B 讲单元/组件/系统/发布测试，都不是故障注入；这一项要另找可靠性工程材料（如 Google SRE 系列）补。"
+   "refs": [
+    "B:4.2.1",
+    "B:4.2.2",
+    "B:3.4"
+   ],
+   "note": "A 没有故障注入的章节；B:4.2.1 是故障注入的专门小节（用注入的故障衡量测试是否有效），B:4.2.2 变异得分、B:3.4 基于故障与变异的技术是它的近亲。线上故障演练（chaos engineering）不在 B 里，要看 Google SRE 系列。"
   },
   {
    "topic": "质量评估",
    "refs": [
     "A:#1",
     "A:#4",
-    "B:8.4"
+    "B:1.1",
+    "B:4.1"
    ]
   }
  ],
- "omitted": "A 只收 Part III 的四章：Part I（Thesis）、Part II（Culture）、Part IV/V（Processes、Code Review、Documentation、依赖管理、大型系统）属工程原则/协作/构建等其他节点；第 11 章里的“Test Certified”“Testing on the Toilet”“History of Testing at Google”等 Google 内部史与推广活动页未收。B 只收第 8 章，第 15 章（静态分析、可靠性测试、安全测试）属可靠性/安全节点。",
- "notes": "A 的目录页（toc.html）只列章名与小节名、没有编号，所以 A 的分支与叶子 ref 都留空，coverage 里用 A:#1–A:#4 指四个章。C 的 toc_url 是讨论课页面，页内小节没有编号，coverage 用 C:#1。",
+ "omitted": "A 只收 Part III 的四章：Part I（Thesis）、Part II（Culture）、Part IV/V（Processes、Code Review、Documentation、依赖管理、大型系统）属工程原则/协作/构建等其他节点；第 11 章里的“Test Certified”“Testing on the Toilet”“History of Testing at Google”等 Google 内部史与推广活动页未收。B 只收第 5 章的 1–4 节：1.2 下的十几个子问题只留节标题，3.1/3.2 下的具体技术只收与本节点最相关的几条，第 5 节（测试过程与测试团队）、第 6–8 节（开发过程中的测试、新兴技术测试、测试工具）属过程与工具，未收。",
+ "notes": "A 的目录页（toc.html）只列章名与小节名、没有编号，所以 A 的分支与叶子 ref 都留空，coverage 里用 A:#1–A:#4 指四个章。B 是 IEEE 计算机学会官方免费公开的 SWEBOK v4.0a（2026 年 8 月版），ref 用 SWEBOK 自己的节号；第一轮里给 B 用的 Sommerville《Software Engineering》9th ed. 整书 PDF 由 CMU 17-313 课程站托管、非作者或出版社公开，已按第二轮要求删除，其“测试层次主线”改由 SWEBOK 第 5 章第 2 节承担，原先缺的故障注入也由第 5 章 4.2.1 补上。C 的 toc_url 是讨论课页面，页内小节没有编号，coverage 用 C:#1。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 58,
+  "exact": 84,
   "fuzzy": 0,
   "dropped": []
  }

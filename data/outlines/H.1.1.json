@@ -3,142 +3,292 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Microelectronic Circuits",
+   "by": "Adel S. Sedra, Kenneth C. Smith",
+   "year": 2004,
+   "url": "https://catdir.loc.gov/catdir/enhancements/fy0636/2003066178-t.html",
+   "toc_urls": [
+    "https://catdir.loc.gov/catdir/enhancements/fy0636/2003066178-t.html"
+   ],
+   "why": "模拟电子学的标准本科教材（第 5 版），出版社提供的详目细到三级：第 1 章讲信号、放大器模型与频率响应（含单时间常数网络，即 RC/RL），第 2 章讲运放，第 7 章讲差分与多级放大器，第 9 章讲运放内部与 A/D、D/A 转换器，第 12 章讲滤波器，正好对上节点简介的放大器、运放、滤波、ADC/DAC 四块，且是章→节两层结构。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "6.002 Circuits and Electronics",
    "by": "MIT OpenCourseWare (Prof. Anant Agarwal)",
    "year": 2007,
    "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/video_galleries/lecture-videos/",
-    "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/readings/"
+    "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/video_galleries/lecture-videos/"
    ],
-   "why": "节点“现有英文学习资源”里的那门课，25 讲的逐讲列表本身就成体系：集总抽象与 KVL/KCL → 受控源与放大器 → 一阶/二阶系统 → 正弦稳态与阻抗 → 滤波器 → 运放，正好对上节点简介的电路定律、RC/RL、放大器、运放、滤波五块；本科层级，适合 D1 入门。"
-  },
-  {
-   "key": "B",
-   "kind": "course",
-   "title": "6.111 Introductory Digital Systems Laboratory",
-   "by": "MIT OpenCourseWare",
-   "year": 2006,
-   "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
-   "toc_urls": [
-    "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/pages/lecture-notes/"
-   ],
-   "why": "补“ADC/DAC 接口”：6.002 全篇停在模拟侧，第 10 讲 Analog building blocks 讲模拟块、数据转换与数字接口。"
+   "why": "补 Sedra 不讲的基础电路分析：集总抽象、KVL/KCL 节点法、叠加与戴维南/诺顿等效，以及电容与一阶系统。"
   }
  ],
  "outline": [
   {
    "src": "A",
+   "ref": "1",
+   "title": "Introduction to Electronics",
+   "zh": "电子学导论",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Signals",
+     "zh": "信号"
+    },
+    {
+     "ref": "1.2",
+     "title": "Frequency Spectrum of Signals",
+     "zh": "信号的频谱"
+    },
+    {
+     "ref": "1.4",
+     "title": "Amplifiers",
+     "zh": "放大器"
+    },
+    {
+     "ref": "1.5",
+     "title": "Circuit Models for Amplifiers",
+     "zh": "放大器的电路模型"
+    },
+    {
+     "ref": "1.6",
+     "title": "Frequency Response of Amplifiers",
+     "zh": "放大器的频率响应",
+     "items": [
+      {
+       "ref": "1.6.1",
+       "title": "Measuring the Amplifier Frequency Response",
+       "zh": "放大器频率响应的测量"
+      },
+      {
+       "ref": "1.6.2",
+       "title": "Amplifier Bandwidth",
+       "zh": "放大器带宽"
+      },
+      {
+       "ref": "1.6.4",
+       "title": "Single-Time-Constant Networks",
+       "zh": "单时间常数网络"
+      },
+      {
+       "ref": "1.6.5",
+       "title": "Classification of Amplifiers Based on Frequency Response",
+       "zh": "按频率响应划分的放大器"
+      }
+     ]
+    },
+    {
+     "ref": "1.8",
+     "title": "Circuit Simulation Using SPICE",
+     "zh": "用 SPICE 做电路仿真"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Operational Amplifiers",
+   "zh": "运算放大器",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "The Ideal Op Amp",
+     "zh": "理想运放"
+    },
+    {
+     "ref": "2.2",
+     "title": "The Inverting Configuration",
+     "zh": "反相组态"
+    },
+    {
+     "ref": "2.3",
+     "title": "The Noninverting Configuration",
+     "zh": "同相组态"
+    },
+    {
+     "ref": "2.4",
+     "title": "Difference Amplifiers",
+     "zh": "差分放大器"
+    },
+    {
+     "ref": "2.5",
+     "title": "Effect of Finite Open-Loop Gain and Bandwidth on Circuit Performance",
+     "zh": "有限开环增益与带宽对电路性能的影响"
+    },
+    {
+     "ref": "2.6",
+     "title": "Large-Signal Operation of Op Amps",
+     "zh": "运放的大信号工作"
+    },
+    {
+     "ref": "2.7",
+     "title": "DC Imperfections",
+     "zh": "直流非理想性"
+    },
+    {
+     "ref": "2.8",
+     "title": "Integrators and Differentiators",
+     "zh": "积分器与微分器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Differential and Multistage Amplifiers",
+   "zh": "差分与多级放大器",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "The MOS Differential Pair",
+     "zh": "MOS 差分对"
+    },
+    {
+     "ref": "7.2",
+     "title": "Small-Signal Operation of the MOS Differential Pair",
+     "zh": "MOS 差分对的小信号工作"
+    },
+    {
+     "ref": "7.3",
+     "title": "The BJT Differential Pair",
+     "zh": "BJT 差分对"
+    },
+    {
+     "ref": "7.5",
+     "title": "The Differential Amplifier with Active Load",
+     "zh": "带源负载的差分放大器"
+    },
+    {
+     "ref": "7.6",
+     "title": "Frequency Response of the Differential Amplifier",
+     "zh": "差分放大器的频率响应"
+    },
+    {
+     "ref": "7.7",
+     "title": "Multistage Amplifiers",
+     "zh": "多级放大器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Operational-Amplifier and Data-Converter Circuits",
+   "zh": "运放与数据转换器电路",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "The Two-Stage CMOS Op Amp",
+     "zh": "两级 CMOS 运放"
+    },
+    {
+     "ref": "9.2",
+     "title": "The Folded-Cascode CMOS Op Amp",
+     "zh": "折叠共源共栅 CMOS 运放"
+    },
+    {
+     "ref": "9.7",
+     "title": "Data Converters--an Introduction",
+     "zh": "数据转换器——导论"
+    },
+    {
+     "ref": "9.8",
+     "title": "D/A Converter Circuits",
+     "zh": "D/A 转换器电路"
+    },
+    {
+     "ref": "9.9",
+     "title": "A/D Converter Circuits",
+     "zh": "A/D 转换器电路"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Filters and Tuned Amplifiers",
+   "zh": "滤波器与调谐放大器",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Filter Transmission, Types, and Specification",
+     "zh": "滤波器的传输特性、类型与指标"
+    },
+    {
+     "ref": "12.2",
+     "title": "The Filter Transfer Function",
+     "zh": "滤波器传递函数"
+    },
+    {
+     "ref": "12.3",
+     "title": "Butterworth and Chebyshev Filters",
+     "zh": "巴特沃斯与切比雪夫滤波器"
+    },
+    {
+     "ref": "12.4",
+     "title": "First-Order and Second-Order Filter Functions",
+     "zh": "一阶与二阶滤波函数"
+    },
+    {
+     "ref": "12.5",
+     "title": "The Second-Order LCR Resonator",
+     "zh": "二阶 LCR 谐振电路"
+    },
+    {
+     "ref": "12.6",
+     "title": "Second-Order Active Filters Based on Inductor Replacement",
+     "zh": "用等效电感实现的二阶有源滤波器"
+    },
+    {
+     "ref": "12.7",
+     "title": "Second-Order Active Filters Based on the Two-Integrator-Loop Topology",
+     "zh": "基于双积分环拓扑的二阶有源滤波器"
+    },
+    {
+     "ref": "12.9",
+     "title": "Sensitivity",
+     "zh": "灵敏度"
+    },
+    {
+     "ref": "12.10",
+     "title": "Switched-Capacitor Filters",
+     "zh": "开关电容滤波器"
+    }
+   ]
+  },
+  {
+   "src": "B",
    "ref": "Lecture 1",
    "title": "Introduction and Lumped Abstraction",
    "zh": "导论与集总抽象",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 2",
-   "title": "Basic Circuit Analysis Method",
-   "zh": "基本电路分析方法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 3",
-   "title": "Superposition, Thévenin and Norton",
-   "zh": "叠加原理、戴维南与诺顿等效",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 8",
-   "title": "Dependent Sources and Amplifiers",
-   "zh": "受控源与放大器",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 9",
-   "title": "Mosfet Amplifier Large Signal Analysis (part 1)",
-   "zh": "MOSFET 放大器大信号分析（上）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 10",
-   "title": "Amplifiers - Small Signal Model",
-   "zh": "放大器——小信号模型",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 11",
-   "title": "Small Signal Circuits",
-   "zh": "小信号电路",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 12",
-   "title": "Capacitors and First-Order Systems",
-   "zh": "电容与一阶系统",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 15",
-   "title": "Second-Order Systems (part 1)",
-   "zh": "二阶系统（上）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 16",
-   "title": "Sinusoidal Steady State",
-   "zh": "正弦稳态",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 17",
-   "title": "The Impedance Model",
-   "zh": "阻抗模型",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 18",
-   "title": "Filters",
-   "zh": "滤波器",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 19",
-   "title": "The Operational Amplifier Abstraction",
-   "zh": "运算放大器抽象",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 20",
-   "title": "Operational Amplifier Circuits",
-   "zh": "运算放大器电路",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 21",
-   "title": "Op Amps Positive Feedback",
-   "zh": "运放与正反馈",
+   "fill": "补“电路定律”的集总电路抽象（为什么能用集总元件建模、KVL/KCL 的来历）",
    "items": []
   },
   {
    "src": "B",
-   "ref": "L10",
-   "title": "Analog building blocks",
-   "zh": "模拟基本单元",
-   "fill": "ADC/DAC 接口",
+   "ref": "Lecture 2",
+   "title": "Basic Circuit Analysis Method",
+   "zh": "基本电路分析方法",
+   "fill": "补“电路定律”里的节点法/KCL 求解（Sedra 直接从信号与放大器讲起，没有基本定律一节）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 3",
+   "title": "Superposition, Thévenin and Norton",
+   "zh": "叠加原理、戴维南与诺顿等效",
+   "fill": "补“电路定律”里的叠加定理与戴维南/诺顿等效电路",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 12",
+   "title": "Capacitors and First-Order Systems",
+   "zh": "电容与一阶系统",
+   "fill": "补“RC/RL”：一阶 RC/RL 电路的暂态与时间常数（Sedra 只有 1.6.4 的单时间常数网络一小节）",
    "items": []
   }
  ],
@@ -146,59 +296,64 @@
   {
    "topic": "电路定律",
    "refs": [
-    "A:Lecture 1",
-    "A:Lecture 2",
-    "A:Lecture 3"
+    "B:Lecture 1",
+    "B:Lecture 2",
+    "B:Lecture 3"
    ]
   },
   {
    "topic": "RC/RL",
    "refs": [
-    "A:Lecture 12",
-    "A:Lecture 15"
+    "A:1.6.4",
+    "B:Lecture 12"
    ]
   },
   {
    "topic": "放大器",
    "refs": [
-    "A:Lecture 8",
-    "A:Lecture 9",
-    "A:Lecture 10",
-    "A:Lecture 11"
+    "A:1.4",
+    "A:1.5",
+    "A:7.1",
+    "A:7.7"
    ]
   },
   {
    "topic": "运放",
    "refs": [
-    "A:Lecture 19",
-    "A:Lecture 20",
-    "A:Lecture 21"
+    "A:2.1",
+    "A:2.2",
+    "A:2.3",
+    "A:9.1"
    ]
   },
   {
    "topic": "滤波",
    "refs": [
-    "A:Lecture 17",
-    "A:Lecture 18"
+    "A:12.1",
+    "A:12.3",
+    "A:12.4",
+    "A:12.7"
    ]
   },
   {
    "topic": "噪声",
    "refs": [],
-   "note": "6.002 只在第 4 讲数字抽象里涉及噪声容限（属 H.1.2 的范围），没有器件/电路噪声分析（热噪声、散粒噪声、噪声系数）的章；本批未找到可核对的本科权威噪声目录，故不硬凑。"
+   "note": "Sedra & Smith 只在第 8 章 8.2.3“Noise Reduction”里讲负反馈降噪，没有器件噪声（热噪声、散粒噪声、噪声系数、噪声预算）的专门章节；本轮查过的 Agarwal & Lang（6.002 的教材）与 6.002 讲义都没有噪声专章，故不硬凑。"
   },
   {
    "topic": "ADC/DAC接口",
    "refs": [
-    "B:L10"
+    "A:9.7",
+    "A:9.8",
+    "A:9.9"
    ]
   }
  ],
- "omitted": "6.002 的 L4（数字抽象）、L5（数字门内部）、L6–L7（非线性电阻与增量分析）、L13–L14（数字电路速度、状态与存储）、L22–L23（能量与功率）、L25（打破抽象屏障）讲的是数字侧与功率，与节点简介的模拟电路主线无关，未收；6.111 只取 L10 一讲。",
- "notes": "A 的目录抄自 OCW 的 Lecture Videos 逐讲列表（Lecture 9 在视频页分成 part 1/part 2，只收 part 1）；Readings 页仅用于核对各讲对应的 Agarwal & Lang 教材章号。B 的“Analog building blocks”只是 6.111 的一讲，页面上没有更细的小节，所以只有一条分支。噪声一项见 coverage 里的说明。",
+ "omitted": "主来源 A 未收的章：3（二极管）、4（MOSFET）、5（BJT）、6（单级集成电路放大器）、8（反馈）、10（CMOS 数字逻辑电路）、11（存储器与先进数字电路）——器件物理与数字侧分别属于 H.2.5、H.2.2 与 H.1.2 的范围；第 12 章的 12.11（调谐放大器）与 12.8（单运放双二次滤波器）是射频/实现细节，未收。B 只收第 1–3 讲与第 12 讲，其余讲次（受控源、MOSFET 放大器、正弦稳态、阻抗、滤波器、运放电路、能量与功率等）与 A 重复，删掉。",
+ "notes": "本轮换源：6.002 的讲义页没有分节标题（Lecture Notes 页只有 LEC/TOPICS 两列，每讲一行），所以按“换一本标准教材”的做法把主来源换成 Sedra & Smith。A 的目录抄自 Library of Congress 书目页上的“DETAILED TABLE OF CONTENTS”，该页注明目录数据由出版社提供，是 Sedra & Smith 第 5 版的完整三级目录（章→节→小节）。B 的逐讲标题仍取自 OCW 6.002 的 Lecture Videos 页（第一轮已核对），这 4 讲在 OCW 页面上没有讲内小节，只能是单层分支。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 16,
+  "exact": 47,
   "fuzzy": 0,
   "dropped": []
  }

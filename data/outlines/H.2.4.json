@@ -11,121 +11,339 @@
    "toc_urls": [
     "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/"
    ],
-   "why": "节点“现有英文学习资源”里的那门课，讲义逐讲列表正好铺开 CMOS 数字设计的层次：MOS 器件与反相器（VTC、传播延迟、功耗）→ 组合逻辑族（静态/比率/传输门/动态，logical effort 尺寸优化）→ 时序电路与时钟 → 互连与时钟分布 → 测试；研究层级，适配 D2–D4。"
+   "why": "节点“现有英文学习资源”里的那门课，讲义按 Rabaey《Digital Integrated Circuits》组织；OCW 的 Lecture Notes 页除了讲次标题，每讲还列出该讲的几个子主题（器件模型、VTC、传播延迟、动态与静态功耗、逻辑努力、时序与锁存器、互连与时钟分布、测试），正好对上 CMOS 数字设计、时序/功耗/面积、物理设计与测试；研究生课，适合 D2–D4。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "Lecture 1",
-   "title": "Challenges in Digital IC Design",
-   "zh": "数字 IC 设计的挑战",
-   "items": []
-  },
-  {
-   "src": "A",
    "ref": "Lecture 2",
    "title": "CMOS Inverter I",
    "zh": "CMOS 反相器（一）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "MOS Device Model with Sub-micron Effects",
+     "zh": "考虑亚微米效应的 MOS 器件模型"
+    },
+    {
+     "ref": "",
+     "title": "VTC Parameters - DC Characteristics",
+     "zh": "电压传输特性参数——直流特性"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 3",
    "title": "CMOS Inverter II",
    "zh": "CMOS 反相器（二）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "CMOS Propagation Delay",
+     "zh": "CMOS 传播延迟"
+    },
+    {
+     "ref": "",
+     "title": "Parasitic Capacitance Estimation",
+     "zh": "寄生电容估算"
+    },
+    {
+     "ref": "",
+     "title": "Layout of an Inverter",
+     "zh": "反相器的版图"
+    },
+    {
+     "ref": "",
+     "title": "Supply and Threshold Voltage Scaling",
+     "zh": "电源电压与阈值电压的缩放"
+    },
+    {
+     "ref": "",
+     "title": "SPICE Simulation Techniques",
+     "zh": "SPICE 仿真技巧"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 4",
    "title": "CMOS Inverter III",
    "zh": "CMOS 反相器（三）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Components of Energy and Power",
+     "zh": "能量与功耗的组成"
+    },
+    {
+     "ref": "",
+     "title": "Switching, Short-Circuit and Leakage Components",
+     "zh": "开关、短路与漏电功耗"
+    },
+    {
+     "ref": "",
+     "title": "SPICE Simulation Techniques",
+     "zh": "SPICE 仿真技巧"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 5",
    "title": "Combinational Logic I",
    "zh": "组合逻辑（一）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Static CMOS Construction",
+     "zh": "静态 CMOS 门的构造"
+    },
+    {
+     "ref": "",
+     "title": "Ratioed Logic",
+     "zh": "有比逻辑"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 6",
    "title": "Combinational Logic II",
    "zh": "组合逻辑（二）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Pass Transistor / Transmission Gate Logic",
+     "zh": "传输管/传输门逻辑"
+    },
+    {
+     "ref": "",
+     "title": "DCVSL",
+     "zh": "差分级联电压开关逻辑（DCVSL）"
+    },
+    {
+     "ref": "",
+     "title": "Introduction to Dynamic Logic",
+     "zh": "动态逻辑导论"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 7",
    "title": "Combinational Logic III",
    "zh": "组合逻辑（三）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Dynamic Logic Design Considerations",
+     "zh": "动态逻辑的设计要点"
+    },
+    {
+     "ref": "",
+     "title": "Power Dissipation in CMOS",
+     "zh": "CMOS 功耗"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 8",
    "title": "Combinational Logic IV",
    "zh": "组合逻辑（四）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Power Consumption in CMOS Logic (cont.)",
+     "zh": "CMOS 逻辑的功耗（续）"
+    },
+    {
+     "ref": "",
+     "title": "Leakage Power Dissipation",
+     "zh": "漏电功耗"
+    },
+    {
+     "ref": "",
+     "title": "Logical Effort Sizing - Performance Optimization of Digital Circuits",
+     "zh": "逻辑努力尺寸设计——数字电路的性能优化"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 9",
    "title": "Arithmetic Structures / Bit Slice Design",
    "zh": "算术结构与位片设计",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Adders, Multipliers, Shifters",
+     "zh": "加法器、乘法器与移位器"
+    },
+    {
+     "ref": "",
+     "title": "Design Methodology",
+     "zh": "设计方法学"
+    },
+    {
+     "ref": "",
+     "title": "Layout Techniques and Mapping",
+     "zh": "版图技术与映射"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 12",
    "title": "Sequential Circuits I",
    "zh": "时序电路（一）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Classification / Parameters",
+     "zh": "时序元件的分类与参数"
+    },
+    {
+     "ref": "",
+     "title": "Static Latches and Register",
+     "zh": "静态锁存器与寄存器"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 13",
    "title": "Sequential Circuits II",
    "zh": "时序电路（二）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Race Condition",
+     "zh": "竞争冒险"
+    },
+    {
+     "ref": "",
+     "title": "Dynamic Latches and Registers",
+     "zh": "动态锁存器与寄存器"
+    },
+    {
+     "ref": "",
+     "title": "Two Phase vs. Single Phase",
+     "zh": "两相时钟与单相时钟"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 14",
    "title": "Sequential Circuits: III",
    "zh": "时序电路（三）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Pulse Based Registers",
+     "zh": "脉冲型寄存器"
+    },
+    {
+     "ref": "",
+     "title": "Latch vs. Register Systems",
+     "zh": "锁存器系统与寄存器系统"
+    },
+    {
+     "ref": "",
+     "title": "Metastability",
+     "zh": "亚稳态"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 15",
    "title": "Interconnect",
    "zh": "互连",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Capacitance Estimation",
+     "zh": "互连电容估算"
+    },
+    {
+     "ref": "",
+     "title": "Buffer Chains",
+     "zh": "缓冲器链"
+    },
+    {
+     "ref": "",
+     "title": "Low Swing Drivers",
+     "zh": "低摆幅驱动"
+    },
+    {
+     "ref": "",
+     "title": "Power Distribution",
+     "zh": "电源分布"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 16",
    "title": "Interconnect (cont.)",
    "zh": "互连（续）",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Issues in Timing - Impact of Clock Skew and Jitter",
+     "zh": "时序问题——时钟偏斜与抖动的影响"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 17",
    "title": "Clock Distribution",
    "zh": "时钟分布",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Origins of Clock Skew / Jitter and Impact on Performance",
+     "zh": "时钟偏斜/抖动的来源及其对性能的影响"
+    },
+    {
+     "ref": "",
+     "title": "Clock Distribution Techniques",
+     "zh": "时钟分布技术"
+    },
+    {
+     "ref": "",
+     "title": "Self-timed Circuits",
+     "zh": "自定时电路"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 22",
    "title": "Testing in VLSI",
    "zh": "VLSI 测试",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Power Reduction Through Switching Activity Reduction",
+     "zh": "通过降低翻转活动降低功耗"
+    },
+    {
+     "ref": "",
+     "title": "Defects, Fault Models, Path Sensitization",
+     "zh": "缺陷、故障模型与路径敏化"
+    },
+    {
+     "ref": "",
+     "title": "Scan, Built-in-self Test, IDDQ",
+     "zh": "扫描测试、内建自测试与 IDDQ 测试"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -134,30 +352,29 @@
    "refs": [
     "A:Lecture 2",
     "A:Lecture 5",
-    "A:Lecture 6",
-    "A:Lecture 7"
+    "A:Lecture 6"
    ]
   },
   {
    "topic": "标准单元",
    "refs": [
+    "A:Lecture 5",
     "A:Lecture 8"
    ],
-   "note": "6.374 没有专门的“标准单元库”章，最接近的是第 8 讲的 Logical Effort Sizing（门尺寸优化，以标准单元为基本单位）；标准单元的版图与表征需另找物理设计资料。"
+   "note": "标准单元库的构建（单元高度、引脚访问、库特征化）在本课没有专讲；这里给的是标准单元内部的两件事——静态 CMOS 门的构造与逻辑努力尺寸设计，库级内容见 notes。"
   },
   {
    "topic": "时序",
    "refs": [
-    "A:Lecture 3",
-    "A:Lecture 4",
+    "A:Lecture 12",
     "A:Lecture 13",
-    "A:Lecture 14",
     "A:Lecture 16"
    ]
   },
   {
    "topic": "功耗",
    "refs": [
+    "A:Lecture 4",
     "A:Lecture 7",
     "A:Lecture 8"
    ]
@@ -165,14 +382,13 @@
   {
    "topic": "面积",
    "refs": [
-    "A:Lecture 8",
+    "A:Lecture 3",
     "A:Lecture 9"
    ]
   },
   {
    "topic": "物理设计",
    "refs": [
-    "A:Lecture 9",
     "A:Lecture 15",
     "A:Lecture 17"
    ]
@@ -184,11 +400,11 @@
    ]
   }
  ],
- "omitted": "6.374 的 L10（晚间项目选题）、L11（集成 CMOS 工艺客座讲，本批放在 H.2.5）、L18–L20（ROM/EPROM/PLA、SRAM、DRAM 存储器设计）、L21（电压缩放与 DC-DC）与节点简介的“CMOS 数字设计—标准单元—时序/功耗/面积—物理设计与测试”主线关系较远，未收；各讲的章号、习题与项目说明也未收。",
- "notes": "目录抄自 OCW Lecture Notes 的 LEC/TOPICS 表：一个单元里有几行子主题时，取每讲的首行主题作为标题（如第 22 讲的 Testing in VLSI），其余子主题（Defects, Fault Models, Path Sensitization, Scan, Built-in-self Test, IDDQ）留在原页未逐条收。6.374 是研究生课，正合 D2–D4 的深度。",
+ "omitted": "6.374 未收的讲次：L1（课程概览与设计挑战，属导论）、L10（晚间项目选题）、L11（集成 CMOS 工艺客座讲，器件工艺属 H.2.5）、L18–L20（ROM/EPROM/PLA、SRAM、DRAM 存储器设计）与 L21（电压缩放与 DC-DC 变换）——存储器与电压调节不在节点简介的七块知识点里；各讲旁边的 Tutorial on Design Tools、Quiz、Project Schedule、Presentation 等管理性条目也未收。",
+ "notes": "本轮把每个分支加深了一层：6.374 的讲义 PDF 挂在教材网站上，OCW 页面本身没有 PDF 链接，但 Lecture Notes 页每讲下面列出了该讲的子主题（如 L3 的 CMOS Propagation Delay / Parasitic Capacitance Estimation / Layout of an Inverter …），这些就是讲内的知识块，已逐条作为 items 收进来（原文的行内换行与下划线前缀已去掉，例如 “_MOS Device Model with Sub-micron Effects” 写成 “MOS Device Model with Sub-micron Effects”）。原来作为 L1 的“Challenges in Digital IC Design”已删，使分支数落在 15 个；子主题行的 ref 留空，因为原文没有编号。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 16,
+  "exact": 57,
   "fuzzy": 0,
   "dropped": []
  }

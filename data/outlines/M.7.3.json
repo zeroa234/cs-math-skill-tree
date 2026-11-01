@@ -3,15 +3,15 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "6.252J Nonlinear Programming (Spring 2003)",
-   "by": "Dimitri P. Bertsekas, MIT OpenCourseWare",
-   "year": 2003,
-   "url": "https://ocw.mit.edu/courses/6-252j-nonlinear-programming-spring-2003/",
+   "kind": "book",
+   "title": "Nonlinear Programming, 3rd Edition",
+   "by": "Dimitri P. Bertsekas",
+   "year": 2016,
+   "url": "http://www.athenasc.com/nonlinbook.html",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/6-252j-nonlinear-programming-spring-2003/pages/lecture-notes/"
+    "http://www.athenasc.com/nonlincontents.html"
    ],
-   "why": "节点现有英文资源：MIT 研究生非线性规划课，OCW 给出 22 讲的逐讲主题（最优性条件、约束优化与 Lagrange 乘子、不等式约束、对偶），正是非凸连续优化的主干。"
+   "why": "节点现有英文资源 MIT 6.252J 的讲义就是这本书的幻灯片，作者主页给出完整的“章→节→小节”目录；书本身“focuses primarily on analytical and computational methods for possibly nonconvex differentiable problems”，正对本节点的局部/全局最优、非凸约束与全局方法。"
   },
   {
    "key": "B",
@@ -23,163 +23,433 @@
    "toc_urls": [
     "https://web.stanford.edu/class/ee364b/lectures.html"
    ],
-   "why": "补“鞍点”与“全局方法”：EE364b 的讲义分组里专门有 Nonconvex problems（序列凸规划、分支定界、SDP 松弛、L1 凸基数启发式）与非凸梯度下降、凸-凹博弈/极小极大讲义，6.252J 没有对应的全局优化内容。"
+   "why": "补“鞍点”与“全局方法”：EE364b 的讲义分组里专门有 Nonconvex problems（序列凸规划、分支定界、SDP 松弛、L1 凸基数启发式）与非凸梯度下降、凸-凹博弈/极小极大讲义。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "Lecture 1",
-   "title": "Introduction",
-   "zh": "导论",
-   "items": []
+   "ref": "1",
+   "title": "Unconstrained Optimization: Basic Methods",
+   "zh": "无约束优化：基本方法",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Optimality Conditions",
+     "zh": "最优性条件",
+     "items": [
+      {
+       "ref": "1.1.1",
+       "title": "Variational Ideas",
+       "zh": "变分思想"
+      },
+      {
+       "ref": "1.1.2",
+       "title": "Main Optimality Conditions",
+       "zh": "主要最优性条件"
+      }
+     ]
+    },
+    {
+     "ref": "1.2",
+     "title": "Gradient Methods -- Convergence",
+     "zh": "梯度法：收敛性",
+     "items": [
+      {
+       "ref": "1.2.1",
+       "title": "Descent Directions and Stepsize Rules",
+       "zh": "下降方向与步长规则"
+      },
+      {
+       "ref": "1.2.2",
+       "title": "Convergence Results",
+       "zh": "收敛性结果"
+      }
+     ]
+    },
+    {
+     "ref": "1.3",
+     "title": "Gradient Methods -- Rate of Convergence",
+     "zh": "梯度法：收敛速率",
+     "items": [
+      {
+       "ref": "1.3.1",
+       "title": "The Local Analysis Approach",
+       "zh": "局部分析方法"
+      },
+      {
+       "ref": "1.3.2",
+       "title": "The Role of the Condition Number",
+       "zh": "条件数的作用"
+      },
+      {
+       "ref": "1.3.3",
+       "title": "Convergence Rate Results",
+       "zh": "收敛速率结果"
+      }
+     ]
+    },
+    {
+     "ref": "1.4",
+     "title": "Newton's Method and Variations",
+     "zh": "牛顿法及其变体",
+     "items": [
+      {
+       "ref": "1.4.1",
+       "title": "Modified Cholesky Factorization",
+       "zh": "改进的 Cholesky 分解"
+      },
+      {
+       "ref": "1.4.2",
+       "title": "Trust Region Methods",
+       "zh": "信赖域方法"
+      },
+      {
+       "ref": "1.4.3",
+       "title": "Variants of Newton's Method",
+       "zh": "牛顿法的变体"
+      },
+      {
+       "ref": "1.4.4",
+       "title": "Least Squares and the Gauss-Newton Method",
+       "zh": "最小二乘与 Gauss-Newton 法"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 2",
-   "title": "Unconstrained Optimization - Optimality Conditions",
-   "zh": "无约束优化：最优性条件",
-   "items": []
+   "ref": "3",
+   "title": "Optimization Over a Convex Set",
+   "zh": "凸集上的优化",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Constrained Optimization Problems",
+     "zh": "约束优化问题",
+     "items": [
+      {
+       "ref": "3.1.1",
+       "title": "Necessary and Sufficient Conditions for Optimality",
+       "zh": "最优性的必要与充分条件"
+      },
+      {
+       "ref": "3.1.2",
+       "title": "Existence of Optimal Solutions",
+       "zh": "最优解的存在性"
+      }
+     ]
+    },
+    {
+     "ref": "3.2",
+     "title": "Feasible Directions - Conditional Gradient Method",
+     "zh": "可行方向：条件梯度法",
+     "items": [
+      {
+       "ref": "3.2.1",
+       "title": "Descent Directions and Stepsize Rules",
+       "zh": "下降方向与步长规则"
+      },
+      {
+       "ref": "3.2.2",
+       "title": "The Conditional Gradient Method",
+       "zh": "条件梯度法"
+      }
+     ]
+    },
+    {
+     "ref": "3.3",
+     "title": "Gradient Projection Methods",
+     "zh": "梯度投影法",
+     "items": [
+      {
+       "ref": "3.3.1",
+       "title": "Feasible Directions and Stepsize Rules Based on Projection",
+       "zh": "基于投影的可行方向与步长规则"
+      },
+      {
+       "ref": "3.3.2",
+       "title": "Convergence Analysis",
+       "zh": "收敛性分析"
+      }
+     ]
+    },
+    {
+     "ref": "3.4",
+     "title": "Two-Metric Projection Methods",
+     "zh": "双度量投影法"
+    },
+    {
+     "ref": "3.6",
+     "title": "Proximal Algorithms",
+     "zh": "近端算法",
+     "items": [
+      {
+       "ref": "3.6.1",
+       "title": "Rate of Convergence",
+       "zh": "收敛速率"
+      },
+      {
+       "ref": "3.6.2",
+       "title": "Variants of the Proximal Algorithm",
+       "zh": "近端算法的变体"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 3",
-   "title": "Gradient Methods",
-   "zh": "梯度法",
-   "items": []
+   "ref": "4",
+   "title": "Lagrange Multiplier Theory",
+   "zh": "Lagrange 乘子理论",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Necessary Conditions for Equality Constraints",
+     "zh": "等式约束的必要条件",
+     "items": [
+      {
+       "ref": "4.1.1",
+       "title": "The Penalty Approach",
+       "zh": "罚函数途径"
+      },
+      {
+       "ref": "4.1.2",
+       "title": "The Elimination Approach",
+       "zh": "消元途径"
+      },
+      {
+       "ref": "4.1.3",
+       "title": "The Lagrangian Function",
+       "zh": "Lagrange 函数"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "Sufficient Conditions and Sensitivity Analysis",
+     "zh": "充分条件与灵敏度分析",
+     "items": [
+      {
+       "ref": "4.2.1",
+       "title": "The Augmented Lagrangian Approach",
+       "zh": "增广 Lagrange 途径"
+      },
+      {
+       "ref": "4.2.2",
+       "title": "The Feasible Direction Approach",
+       "zh": "可行方向途径"
+      },
+      {
+       "ref": "4.2.3",
+       "title": "Sensitivity",
+       "zh": "灵敏度"
+      }
+     ]
+    },
+    {
+     "ref": "4.3",
+     "title": "Inequality Constraints",
+     "zh": "不等式约束",
+     "items": [
+      {
+       "ref": "4.3.1",
+       "title": "Karush-Kuhn-Tucker Optimality Conditions",
+       "zh": "KKT 最优性条件"
+      },
+      {
+       "ref": "4.3.2",
+       "title": "Sufficient Conditions and Sensitivity",
+       "zh": "充分条件与灵敏度"
+      },
+      {
+       "ref": "4.3.3",
+       "title": "Fritz John Optimality Conditions",
+       "zh": "Fritz John 最优性条件"
+      },
+      {
+       "ref": "4.3.4",
+       "title": "Constraint Qualifications and Pseudonormality",
+       "zh": "约束品性与伪规范性"
+      },
+      {
+       "ref": "4.3.5",
+       "title": "Abstract Set Constraints and the Tangent Cone",
+       "zh": "抽象集合约束与切锥"
+      },
+      {
+       "ref": "4.3.6",
+       "title": "Abstract Set Constraints, Equality, and Inequality Constraints",
+       "zh": "抽象集合约束、等式与不等式约束"
+      }
+     ]
+    },
+    {
+     "ref": "4.4",
+     "title": "Linear Constraints and Duality",
+     "zh": "线性约束与对偶",
+     "items": [
+      {
+       "ref": "4.4.1",
+       "title": "Convex Cost Functions and Linear Constraints",
+       "zh": "凸代价函数与线性约束"
+      },
+      {
+       "ref": "4.4.2",
+       "title": "Duality Theory: A Simple Form for Linear Constraints",
+       "zh": "对偶理论：线性约束的简单形式"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 4",
-   "title": "Convergence Analysis of Gradient Methods",
-   "zh": "梯度法的收敛性分析",
-   "items": []
+   "ref": "5",
+   "title": "Lagrange Multiplier Algorithms",
+   "zh": "Lagrange 乘子算法",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Penalty and Augmented Lagrangian Methods",
+     "zh": "罚函数与增广 Lagrange 方法",
+     "items": [
+      {
+       "ref": "5.2.1",
+       "title": "The Quadratic Penalty Function Method",
+       "zh": "二次罚函数法"
+      },
+      {
+       "ref": "5.2.2",
+       "title": "Multiplier Methods -- Main Ideas",
+       "zh": "乘子法：主要思想"
+      },
+      {
+       "ref": "5.2.3",
+       "title": "Convergence Analysis of Multiplier Methods",
+       "zh": "乘子法的收敛性分析"
+      },
+      {
+       "ref": "5.2.4",
+       "title": "Duality and Second Order Multiplier Methods",
+       "zh": "对偶与二阶乘子法"
+      },
+      {
+       "ref": "5.2.5",
+       "title": "Nonquadratic Augmented Lagrangians - The Exponential Method of Multipliers",
+       "zh": "非二次增广 Lagrange：指数乘子法"
+      }
+     ]
+    },
+    {
+     "ref": "5.3",
+     "title": "Exact Penalties - Sequential Quadratic Programming",
+     "zh": "精确罚函数：序列二次规划",
+     "items": [
+      {
+       "ref": "5.3.1",
+       "title": "Nondifferentiable Exact Penalty Functions",
+       "zh": "不可微精确罚函数"
+      },
+      {
+       "ref": "5.3.2",
+       "title": "Sequential Quadratic Programming",
+       "zh": "序列二次规划"
+      },
+      {
+       "ref": "5.3.3",
+       "title": "Differentiable Exact Penalty Functions",
+       "zh": "可微精确罚函数"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 5",
-   "title": "Rate of Convergence",
-   "zh": "收敛速率",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 6",
-   "title": "Newton and Gauss - Newton Methods",
-   "zh": "Newton 法与 Gauss-Newton 法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 7",
-   "title": "Additional Methods",
-   "zh": "其他方法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 8",
-   "title": "Optimization Over a Convex Set; Optimality Conditions",
-   "zh": "凸集上的优化：最优性条件",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 9",
-   "title": "Feasible Direction Methods",
-   "zh": "可行方向法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 10",
-   "title": "Alternatives to Gradient Projection",
-   "zh": "梯度投影的替代方法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 11",
-   "title": "Constrained Optimization; Lagrange Multipliers",
-   "zh": "约束优化：Lagrange 乘子",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 12",
-   "title": "Constrained Optimization; Lagrange Multipliers",
-   "zh": "约束优化：Lagrange 乘子（续）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 13",
-   "title": "Inequality Constraints",
-   "zh": "不等式约束",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 14",
-   "title": "Introduction to Duality",
-   "zh": "对偶导论",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 15",
-   "title": "Interior Point Methods",
-   "zh": "内点法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 16",
-   "title": "Penalty Methods",
-   "zh": "罚函数法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 17",
-   "title": "Augmented Lagrangian Methods",
-   "zh": "增广 Lagrange 方法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 18",
-   "title": "Duality Theory",
-   "zh": "对偶理论",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 19",
-   "title": "Duality Theorems",
-   "zh": "对偶定理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 20",
-   "title": "Strong Duality",
-   "zh": "强对偶",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 21",
-   "title": "Dual Computational Methods",
-   "zh": "对偶计算方法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 22",
-   "title": "Additional Dual Methods",
-   "zh": "其他对偶方法",
-   "items": []
+   "ref": "6",
+   "title": "Duality and Convex Programming",
+   "zh": "对偶与凸规划",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Duality and Dual Problems",
+     "zh": "对偶与对偶问题",
+     "items": [
+      {
+       "ref": "6.1.1",
+       "title": "Geometric Multipliers",
+       "zh": "几何乘子"
+      },
+      {
+       "ref": "6.1.2",
+       "title": "The Weak Duality Theorem",
+       "zh": "弱对偶定理"
+      },
+      {
+       "ref": "6.1.3",
+       "title": "Primal and Dual Optimal Solutions",
+       "zh": "原问题与对偶问题的最优解"
+      },
+      {
+       "ref": "6.1.4",
+       "title": "Treatment of Equality Constraints",
+       "zh": "等式约束的处理"
+      },
+      {
+       "ref": "6.1.5",
+       "title": "Separable Problems and Their Geometry",
+       "zh": "可分离问题及其几何"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Conjugate Functions and Fenchel Duality",
+     "zh": "共轭函数与 Fenchel 对偶",
+     "items": [
+      {
+       "ref": "6.4.1",
+       "title": "Conic Programming",
+       "zh": "锥规划"
+      },
+      {
+       "ref": "6.4.4",
+       "title": "Games and the Minimax Theorem",
+       "zh": "博弈与极小极大定理"
+      },
+      {
+       "ref": "6.4.5",
+       "title": "The Primal Function and Sensitivity Analysis",
+       "zh": "原函数与灵敏度分析"
+      }
+     ]
+    },
+    {
+     "ref": "6.5",
+     "title": "Discrete Optimization and Duality",
+     "zh": "离散优化与对偶",
+     "items": [
+      {
+       "ref": "6.5.1",
+       "title": "Examples of Discrete Optimization Problems",
+       "zh": "离散优化问题的例子"
+      },
+      {
+       "ref": "6.5.2",
+       "title": "Branch-and-Bound",
+       "zh": "分支定界"
+      },
+      {
+       "ref": "6.5.3",
+       "title": "Lagrangian Relaxation",
+       "zh": "Lagrange 松弛"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "B",
@@ -263,51 +533,57 @@
   {
    "topic": "局部与全局最优",
    "refs": [
-    "A:Lecture 2",
-    "A:Lecture 1",
-    "A:Lecture 8"
+    "A:1.1",
+    "A:1.1.2",
+    "A:3.1.2",
+    "A:4.1.3"
    ],
-   "note": "Lecture 2 的无约束最优性条件同时给出局部与全局最优的判别（凸与非凸分开讨论）；Lecture 8 把它推广到凸集上的问题。"
+   "note": "1.1 最优性条件把局部极小的一阶/二阶条件与非凸情形下的全局最优分开讨论，3.1.2 讲最优解的存在性，4.1.3 的 Lagrange 函数给出把局部条件转成全局结论的途径。"
   },
   {
    "topic": "鞍点",
    "refs": [
-    "A:Lecture 14",
-    "A:Lecture 18",
+    "A:6.4.4",
+    "A:6.1.2",
     "B:#1",
     "B:#3"
    ],
-   "note": "6.252J 的对偶各讲用 Lagrange 鞍点解释弱对偶；B 的第 1 组讲非凸下降的收敛与鞍点规避，第 3 组的“凸-凹博弈与极小极大”讲义专门讲鞍点。"
+   "note": "书的 6.4.4“博弈与极小极大定理”直接讲鞍点；6.1.2 弱对偶用 Lagrange 鞍点解释。B 的第 1 组讲非凸梯度下降的收敛与鞍点规避，第 3 组有专门的凸-凹博弈与极小极大讲义。"
   },
   {
    "topic": "非凸约束",
    "refs": [
-    "A:Lecture 11",
-    "A:Lecture 12",
-    "A:Lecture 13",
+    "A:4.3.1",
+    "A:4.3.4",
+    "A:4.3.3",
+    "A:5.3.2",
     "B:#2"
    ],
-   "note": "A 的 Lagrange 乘子与不等式约束（KKT）覆盖一般非凸约束；B 的“序列凸规划”是处理非凸约束的实用算法。"
+   "note": "4.3 不等式约束（KKT、Fritz John、约束品性）是非凸约束的一阶理论，5.3.2 序列二次规划与其在 B 中的“Sequential convex programming”是实用解法。"
   },
   {
    "topic": "全局方法",
    "refs": [
+    "A:6.5.2",
+    "A:6.5.3",
     "B:#2",
     "B:#3"
    ],
-   "note": "分支定界方法、SDP 松弛、非凸 QCQP 的松弛与随机方法、L1 凸基数启发式；6.252J 是局部方法课，不涉及全局优化。"
+   "note": "分支定界与 Lagrange 松弛（6.5）是离散/全局优化的经典框架；B 的 Nonconvex problems 分组给 SDP 松弛、凸基数 L1 启发式，补充讲义给非凸 QCQP 的松弛与随机方法。"
   },
   {
    "topic": "复杂性",
-   "refs": [],
-   "note": "两个来源都没有 NP 难性与复杂度下界的专门章节：6.252J 只讲收敛速率，EE364b 只给启发式与松弛。离散侧的复杂性理论要等 M.7.5（组合优化）节点。"
+   "refs": [
+    "A:6.5.1"
+   ],
+   "note": "只有 6.5.1“离散优化问题的例子”间接涉及难度（NP 难的离散问题为何要松弛/分支定界）；两源都没有复杂度下界的专门章节。系统的复杂性理论在 M.7.5（组合优化）。"
   }
  ],
- "omitted": "6.252J 的 assignments 与 tools 页（习题、软件）；EE364b 其余讲义分组（Localization methods、Decomposition and distributed optimization、Proximal and operator splitting methods、Self-concordance and Interior Point Method、Conjugate gradients、Neural networks、Monte Carlo sampling methods 及多数附加讲义）与“非凸优化”的四个知识点无关，未收。",
- "notes": "6.252J 的 OCW 页面只给 22 讲的平铺清单（LEC # + Topics），没有单元分组，所以导览图按讲次排列（ref = Lecture N），与课程进度逐讲对应。若要更细的章-节结构，可换用该课的教材 Bertsekas《Nonlinear Programming》（Athena Scientific），但出版社页面只提供章级目录，故未采用。",
+ "omitted": "主来源 A 未收：第 2 章 Unconstrained Optimization: Additional Methods（共轭方向、拟 Newton、增量与异步方法，偏实现而非非凸性理论）、第 5 章 5.1（Barrier and Interior Point Methods，凸问题内点法）与 5.4（Lagrangian Methods）、第 6 章 6.2/6.3（凸代价-线性/凸约束）、第 7 章 Dual Methods（对偶上升、ADMM、次梯度与分解），以及每章末尾的 Notes and Sources、四个附录、References 与 Index。B 只取与鞍点和非凸全局方法有关的讲义分组，其余（Localization methods、Decomposition、Proximal splitting、Conjugate gradients、Neural networks、Monte Carlo sampling 等）未收。",
+ "notes": "本轮按“换源”处理：原 A（MIT 6.252J）的 OCW 讲义页只有 22 条平铺讲次、没有节标题，逐讲补小节需要打开 22 份幻灯片且只能抄到 LECTURE OUTLINE 的项目符号，信息量低。改为该课用的教材本身（同作者 Bertsekas，Athena Scientific 作者主页的目录页给出章→节→小节三层），因此 6.252J 的讲次列表已删除——它讲的章与本书一一对应，见 nonlinbook.html 上“These lecture slides are based on the book: Nonlinear Programming”。作者主页目录页的章节号只在 HTML 锚点里（ch1、ch1.5、ch2…），正文按 1–7 顺序编排，本文件的 ref 已按正文顺序写成 1–7。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 35,
+  "exact": 88,
   "fuzzy": 0,
   "dropped": []
  }

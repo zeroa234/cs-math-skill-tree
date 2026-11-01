@@ -3,18 +3,6 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "6.033 Computer System Engineering, Spring 2022",
-   "by": "MIT",
-   "year": 2022,
-   "url": "https://web.mit.edu/6.033/www/general.shtml",
-   "toc_urls": [
-    "https://web.mit.edu/6.033/www/"
-   ],
-   "why": "节点现有英文资源。课程日历把存储这条线讲得很完整：LEC 7 OS Performance (Storage)、LEC 15 Reliability、LEC 16 Transactions、LEC 17 Logging、LEC 18 Isolation、LEC 19 Distributed Transactions、LEC 20 Replication，配套讨论课 GFS/ZFS/Raft，正好落在日志、崩溃一致性、分布式存储接口与可靠性这几个知识点上。"
-  },
-  {
-   "key": "B",
    "kind": "book",
    "title": "Operating Systems: Three Easy Pieces",
    "by": "Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau",
@@ -23,86 +11,27 @@
    "toc_urls": [
     "https://pages.cs.wisc.edu/~remzi/OSTEP/toc.pdf"
    ],
-   "why": "补块设备与文件系统层的细节：6.033 从系统/分布式角度讲存储，没有磁盘几何、I/O 时间计算与磁盘调度；OSTEP 第 37 章、第 40 章（含 40.7 Caching and Buffering）、第 42 章（FSCK 与日志）把块设备、缓存与崩溃一致性的实现补到节级。"
+   "why": "主来源改用它：持久化部分从块设备（硬盘、闪存 SSD、RAID）到文件系统实现、缓存、日志与崩溃一致性，逐章逐节排到底，正好把节点的五个知识点全部落到节级；作者免费公开原书，目录权威且可核对。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "6.033 Computer System Engineering, Spring 2022",
+   "by": "MIT",
+   "year": 2022,
+   "url": "https://web.mit.edu/6.033/www/general.shtml",
+   "toc_urls": [
+    "https://web.mit.edu/6.033/www/"
+   ],
+   "why": "补分布式存储接口与可靠性：OSTEP 讲单机持久化，6.033 的 LEC 15/19/20 与 GFS、ZFS、Raft 讨论课讲网络存储接口、复制与容错。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "LEC 7",
-   "title": "OS Performance (Storage)",
-   "zh": "操作系统性能（存储）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 15",
-   "title": "Reliability",
-   "zh": "可靠性",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 16",
-   "title": "Transactions",
-   "zh": "事务",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 17",
-   "title": "Logging",
-   "zh": "日志",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 18",
-   "title": "Isolation",
-   "zh": "隔离",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 19",
-   "title": "Distributed Transactions",
-   "zh": "分布式事务",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 20",
-   "title": "Replication",
-   "zh": "复制",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "REC 14",
-   "title": "GFS",
-   "zh": "GFS 案例",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "REC 17",
-   "title": "ZFS",
-   "zh": "ZFS 案例",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "REC 20",
-   "title": "Raft",
-   "zh": "Raft 案例",
-   "items": []
-  },
-  {
-   "src": "B",
    "ref": "37",
    "title": "Hard Disk Drives",
    "zh": "硬盘驱动器",
-   "fill": "块设备",
    "items": [
     {
      "ref": "37.1",
@@ -132,12 +61,112 @@
    ]
   },
   {
-   "src": "B",
+   "src": "A",
+   "ref": "38",
+   "title": "Redundant Arrays of Inexpensive Disks (RAIDs)",
+   "zh": "廉价磁盘冗余阵列（RAID）",
+   "items": [
+    {
+     "ref": "38.1",
+     "title": "Interface And RAID Internals",
+     "zh": "接口与 RAID 内部结构"
+    },
+    {
+     "ref": "38.2",
+     "title": "Fault Model",
+     "zh": "故障模型"
+    },
+    {
+     "ref": "38.3",
+     "title": "How To Evaluate A RAID",
+     "zh": "如何评价一个 RAID"
+    },
+    {
+     "ref": "38.4",
+     "title": "RAID Level 0: Striping",
+     "zh": "RAID 0：条带化"
+    },
+    {
+     "ref": "38.5",
+     "title": "RAID Level 1: Mirroring",
+     "zh": "RAID 1：镜像"
+    },
+    {
+     "ref": "38.6",
+     "title": "RAID Level 4: Saving Space With Parity",
+     "zh": "RAID 4：用校验省空间"
+    },
+    {
+     "ref": "38.7",
+     "title": "RAID Level 5: Rotating Parity",
+     "zh": "RAID 5：轮转校验"
+    },
+    {
+     "ref": "38.8",
+     "title": "RAID Comparison: A Summary",
+     "zh": "RAID 比较：小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "39",
+   "title": "Interlude: Files and Directories",
+   "zh": "插曲：文件与目录",
+   "items": [
+    {
+     "ref": "39.1",
+     "title": "Files And Directories",
+     "zh": "文件与目录"
+    },
+    {
+     "ref": "39.2",
+     "title": "The File System Interface",
+     "zh": "文件系统接口"
+    },
+    {
+     "ref": "39.3",
+     "title": "Creating Files",
+     "zh": "创建文件"
+    },
+    {
+     "ref": "39.4",
+     "title": "Reading And Writing Files",
+     "zh": "读写文件"
+    },
+    {
+     "ref": "39.7",
+     "title": "Writing Immediately With fsync()",
+     "zh": "用 fsync() 立即写入"
+    },
+    {
+     "ref": "39.14",
+     "title": "Hard Links",
+     "zh": "硬链接"
+    },
+    {
+     "ref": "39.15",
+     "title": "Symbolic Links",
+     "zh": "符号链接"
+    },
+    {
+     "ref": "39.17",
+     "title": "Making And Mounting A File System",
+     "zh": "创建与挂载文件系统"
+    }
+   ]
+  },
+  {
+   "src": "A",
    "ref": "40",
    "title": "File System Implementation",
    "zh": "文件系统实现",
-   "fill": "缓存",
    "items": [
+    {
+     "ref": "40.1",
+     "title": "The Way To Think",
+     "zh": "思考方式"
+    },
     {
      "ref": "40.2",
      "title": "Overall Organization",
@@ -147,6 +176,16 @@
      "ref": "40.3",
      "title": "File Organization: The Inode",
      "zh": "文件组织：inode"
+    },
+    {
+     "ref": "40.4",
+     "title": "Directory Organization",
+     "zh": "目录组织"
+    },
+    {
+     "ref": "40.5",
+     "title": "Free Space Management",
+     "zh": "空闲空间管理"
     },
     {
      "ref": "40.6",
@@ -161,11 +200,43 @@
    ]
   },
   {
-   "src": "B",
+   "src": "A",
+   "ref": "41",
+   "title": "Locality and The Fast File System",
+   "zh": "局部性与快速文件系统",
+   "items": [
+    {
+     "ref": "41.1",
+     "title": "The Problem: Poor Performance",
+     "zh": "问题：性能不佳"
+    },
+    {
+     "ref": "41.2",
+     "title": "FFS: Disk Awareness Is The Solution",
+     "zh": "FFS：磁盘感知是解法"
+    },
+    {
+     "ref": "41.3",
+     "title": "Organizing Structure: The Cylinder Group",
+     "zh": "组织结构：柱面组"
+    },
+    {
+     "ref": "41.4",
+     "title": "Policies: How To Allocate Files and Directories",
+     "zh": "策略：如何分配文件与目录"
+    },
+    {
+     "ref": "41.6",
+     "title": "The Large-File Exception",
+     "zh": "大文件的例外处理"
+    }
+   ]
+  },
+  {
+   "src": "A",
    "ref": "42",
    "title": "Crash Consistency: FSCK and Journaling",
    "zh": "崩溃一致性：FSCK 与日志",
-   "fill": "日志与崩溃一致性",
    "items": [
     {
      "ref": "42.1",
@@ -188,64 +259,202 @@
      "zh": "方案三：其他方法"
     }
    ]
+  },
+  {
+   "src": "A",
+   "ref": "43",
+   "title": "Log-structured File Systems",
+   "zh": "日志结构文件系统",
+   "items": [
+    {
+     "ref": "43.1",
+     "title": "Writing To Disk Sequentially",
+     "zh": "顺序写入磁盘"
+    },
+    {
+     "ref": "43.2",
+     "title": "Writing Sequentially And Effectively",
+     "zh": "既顺序又高效地写"
+    },
+    {
+     "ref": "43.5",
+     "title": "Solution Through Indirection: The Inode Map",
+     "zh": "间接层解法：inode 映射表"
+    },
+    {
+     "ref": "43.6",
+     "title": "Completing The Solution: The Checkpoint Region",
+     "zh": "补全方案：检查点区域"
+    },
+    {
+     "ref": "43.9",
+     "title": "A New Problem: Garbage Collection",
+     "zh": "新问题：垃圾回收"
+    },
+    {
+     "ref": "43.11",
+     "title": "A Policy Question: Which Blocks To Clean, And When?",
+     "zh": "策略问题：清理哪些块、何时清理"
+    },
+    {
+     "ref": "43.12",
+     "title": "Crash Recovery And The Log",
+     "zh": "崩溃恢复与日志"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "44",
+   "title": "Flash-based SSDs",
+   "zh": "基于闪存的固态盘",
+   "items": [
+    {
+     "ref": "44.1",
+     "title": "Storing a Single Bit",
+     "zh": "存储一个比特"
+    },
+    {
+     "ref": "44.3",
+     "title": "Basic Flash Operations",
+     "zh": "闪存基本操作"
+    },
+    {
+     "ref": "44.4",
+     "title": "Flash Performance And Reliability",
+     "zh": "闪存的性能与可靠性"
+    },
+    {
+     "ref": "44.5",
+     "title": "From Raw Flash to Flash-Based SSDs",
+     "zh": "从裸闪存到闪存固态盘"
+    },
+    {
+     "ref": "44.7",
+     "title": "A Log-Structured FTL",
+     "zh": "日志结构的闪存转换层"
+    },
+    {
+     "ref": "44.10",
+     "title": "Wear Leveling",
+     "zh": "磨损均衡"
+    },
+    {
+     "ref": "44.11",
+     "title": "SSD Performance And Cost",
+     "zh": "固态盘的性能与成本"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "LEC 15",
+   "title": "Reliability",
+   "zh": "可靠性",
+   "fill": "分布式存储的可靠性",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 19",
+   "title": "Distributed Transactions",
+   "zh": "分布式事务",
+   "fill": "分布式存储接口的原子性保证",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 20",
+   "title": "Replication",
+   "zh": "复制",
+   "fill": "分布式存储接口与可靠性",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "REC 14",
+   "title": "GFS",
+   "zh": "GFS 案例",
+   "fill": "大规模分布式文件系统的接口与容错",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "REC 17",
+   "title": "ZFS",
+   "zh": "ZFS 案例",
+   "fill": "端到端校验与写时复制的崩溃一致性",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "REC 20",
+   "title": "Raft",
+   "zh": "Raft 案例",
+   "fill": "复制协议的容错",
+   "items": []
   }
  ],
  "coverage": [
   {
    "topic": "块设备",
    "refs": [
-    "B:37",
-    "B:37.1",
-    "B:37.2",
-    "B:37.3",
-    "B:37.4",
-    "A:LEC 7"
+    "A:37",
+    "A:37.1",
+    "A:37.2",
+    "A:37.3",
+    "A:37.4",
+    "A:44",
+    "A:44.1",
+    "A:44.3"
    ]
   },
   {
    "topic": "日志",
    "refs": [
-    "A:LEC 17",
-    "B:42.3",
-    "B:42.2"
+    "A:42",
+    "A:42.3",
+    "A:43",
+    "A:43.1",
+    "A:43.2"
    ]
   },
   {
    "topic": "崩溃一致性",
    "refs": [
-    "A:LEC 16",
-    "A:LEC 17",
-    "B:42",
-    "B:42.1",
-    "B:42.4"
+    "A:42",
+    "A:42.1",
+    "A:42.2",
+    "A:42.4",
+    "A:43.12",
+    "B:REC 17"
    ]
   },
   {
    "topic": "缓存",
    "refs": [
-    "B:40.7",
-    "A:LEC 7"
+    "A:40.7",
+    "A:41.3"
    ],
-   "note": "6.033 把存储缓存放在 LEC 7 的存储性能里，没有单独一节；B 的 40.7 Caching and Buffering 讲文件系统层的缓冲与缓存（含写缓冲对一致性的影响）。"
+   "note": "OSTEP 40.7 讲页缓存与写缓冲（含对一致性的影响），41.3 讲 FFS 靠柱面组把相关数据放近以吃到块缓存/预取；分布式缓存另见 B:LEC 20 的复制缓存讨论。"
   },
   {
    "topic": "分布式存储接口与可靠性",
    "refs": [
-    "A:LEC 19",
-    "A:LEC 20",
-    "A:REC 14",
-    "A:REC 17",
-    "A:REC 20",
-    "A:LEC 15",
-    "A:LEC 18"
-   ]
+    "B:LEC 15",
+    "B:LEC 19",
+    "B:LEC 20",
+    "B:REC 14",
+    "B:REC 20"
+   ],
+   "note": "OSTEP 只讲单机存储栈，这一块全由 B 承担；B 是课程日程，只有讲次粒度，2022 版的幻灯片与讲纲 PDF 链接已全部 404（见 notes）。"
   }
  ],
- "omitted": "6.033 的 LEC 1–6（模块化与抽象、命名、虚拟内存、有界缓冲与锁、线程、OS 结构与虚拟机）、LEC 8–14（网络分层、路由、BGP、TCP、应用层、数据中心）、LEC 21–26（安全）与各 TUT 讨论课与本节点无关，未收；OSTEP 只收第 37/40/42 章里的相关节（37.6、40.8、42.5 是各章小结，其余章节见 C.2.1 导览图）。",
- "notes": "A 是讲级日程（ref 用“LEC 7”“REC 14”这样的原编号），所以 A 侧没有子项；B 侧的块设备/缓存/日志补到了节级。6.033 每讲还配有 hands-on（如 Hands-on logging）与 GFS/ZFS/Raft 讨论课读物，D3/D4 的“复现与评价”可以按这些作业和读物走。",
+ "omitted": "OSTEP 只收持久化部分的存储与文件系统章：第 36 章（I/O 设备与驱动，偏硬件协议）、第 45 章（数据完整性校验和，偏端到端校验，部分由 B:REC 17 的 ZFS 讨论课承担）、以及各章的 Summary、References、Homework 未收；虚拟化、并发、安全各章与分布式部分见其他节点的导览图。B 只收与存储可靠性/复制相关的六讲，其余讲次（命名、虚拟内存、网络、安全）与本节点无关。",
+ "notes": "本轮按第二轮第 2 条做法换源：先试第 1 条（6.033 Spring 2022 课程站上每讲的 slides/outline PDF，如 lec/s07.pdf、lec/l07.pdf、s15.pdf…），全部返回 HTTP 404，讲义读不到，于是把主来源换成 OSTEP（章→节两层），6.033 2022 日程降为补充分支 B 并写明 fill。B 侧仍是讲次粒度，没有小节可抄：MIT OCW 上 2018 版的 Lecture Outline 页（例如 https://ocw.mit.edu/courses/6-033-computer-system-engineering-spring-2018/pages/week-4/lecture-7-outline/）虽有逐条纲要，但那是 2018 年的讲次编号与主题，与 2022 日程的 LEC 15–20 不是同一套编号，硬拼会错位，故未采用。6.033 的作业与讨论课读物（Hands-on logging、GFS/ZFS/Raft 论文）仍是 D3/D4 复现与评价的主要材料。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 26,
+  "exact": 65,
   "fuzzy": 0,
   "dropped": []
  }

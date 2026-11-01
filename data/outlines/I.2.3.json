@@ -4,27 +4,27 @@
   {
    "key": "A",
    "kind": "book",
-   "title": "The Turing Way: A handbook for reproducible, ethical and collaborative data science",
-   "by": "The Turing Way Community (The Alan Turing Institute)",
-   "year": 2024,
-   "url": "https://book.the-turing-way.org/",
-   "toc_urls": [
-    "https://book.the-turing-way.org/reproducible-research/reproducible-research",
-    "https://book.the-turing-way.org/ethical-research/ethical-research"
-   ],
-   "why": "节点现有英文学习资源（CC-BY 的网页版全书）。它的“可复现研究指南”按章列出复现的知识地图（开放研究、版本控制、研究数据管理、可复现环境、代码文档/质量/测试/评审、可复用代码、研究纲要），伦理指南给出研究伦理导论，正好覆盖“复现、数据与代码、诚信”这条线。"
-  },
-  {
-   "key": "B",
-   "kind": "book",
    "title": "Experimentation in Software Engineering (Second Edition)",
    "by": "Claes Wohlin, Per Runeson, Martin Höst, Magnus C. Ohlsson, Björn Regnell, Anders Wesslén",
    "year": 2024,
    "url": "https://link.springer.com/book/10.1007/978-3-662-69306-3",
    "toc_urls": [
+    "https://link.springer.com/content/pdf/bfm%3A978-3-662-69306-3%2F1.pdf",
     "https://link.springer.com/book/10.1007/978-3-662-69306-3"
    ],
-   "why": "补“假设”“基线”“实验设计”“误差与效度”：The Turing Way 讲怎么做可复现的研究工件，不讲实验怎么设计。这本书是实证软件工程的标准教材，出版社 Springer 的书页按“实证研究的基础—实验—定范围—计划—操作—分析与解释—呈现与打包”列章，计划与分析章正是假设、对照基线与效度威胁的所在。"
+   "why": "软件工程实证方法的标准教材（Springer，第二版），出版社公开的前置页 PDF 带编号目录，章→节完整：研究设计、假设形成、变量与实验设计、效度威胁的四类划分、数据分析与假设检验，正对“假设、基线、实验设计、误差与效度”这几个知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "The Turing Way: A handbook for reproducible, ethical and collaborative data science",
+   "by": "The Turing Way Community",
+   "year": 2024,
+   "url": "https://book.the-turing-way.org/",
+   "toc_urls": [
+    "https://book.the-turing-way.org/reproducible-research/reproducible-research"
+   ],
+   "why": "补“复现”与“数据/代码”：可复现研究指南逐章讲版本控制、研究数据管理、可复现环境、代码文档/质量/测试/评审、可复用代码与研究汇编，是把复现落成具体做法的手册。"
   },
   {
    "key": "C",
@@ -32,168 +32,349 @@
    "title": "The European Code of Conduct for Research Integrity (Revised Edition 2023)",
    "by": "ALLEA – All European Academies",
    "year": 2023,
-   "url": "https://allea.org/code-of-conduct/",
+   "url": "https://allea.org/wp-content/uploads/2023/06/European-Code-of-Conduct-Revised-Edition-2023.pdf",
    "toc_urls": [
     "https://allea.org/wp-content/uploads/2023/06/European-Code-of-Conduct-Revised-Edition-2023.pdf"
    ],
-   "why": "补“学术诚信”：ALLEA 的这份行为准则被欧盟委员会认定为欧洲科研诚信的首要标准（CC-BY 4.0 公开 PDF），把良好研究实践拆成研究环境、培训与指导、研究程序、保障、数据实践、协作、发表与署名、评审与评估，并单列违规行为，是“诚信”这一块最规范的目录。"
+   "why": "补“学术诚信”：全欧科学院联盟的官方行为准则，编号到小节（2.1–2.8、3.1–3.2），给出良好研究实践的八个场景与违规行为的界定，比任何教材章节都更适合当规范依据。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "",
-   "title": "Overview",
-   "zh": "可复现研究概览",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Open Research",
-   "zh": "开放研究",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Version Control",
-   "zh": "版本控制",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Research Data Management",
-   "zh": "研究数据管理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Reproducible Environments",
-   "zh": "可复现的运行环境",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Code Documentation",
-   "zh": "代码文档",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Code Quality",
-   "zh": "代码质量",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Code Testing",
-   "zh": "代码测试",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Code Reviewing Process",
-   "zh": "代码评审流程",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Reusable Code",
-   "zh": "可复用代码",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Research Compendia",
-   "zh": "研究纲要",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Introduction to Research Ethics",
-   "zh": "研究伦理导论",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
+   "ref": "2",
    "title": "Empirical Research",
    "zh": "实证研究",
-   "fill": "补“实验设计”的研究范式背景（实证研究类型与证据强度）",
-   "items": []
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Selecting a Research Design",
+     "zh": "选择研究设计"
+    },
+    {
+     "ref": "2.2",
+     "title": "Strategy Phase",
+     "zh": "战略阶段"
+    },
+    {
+     "ref": "2.3",
+     "title": "Tactical Phase",
+     "zh": "战术阶段"
+    },
+    {
+     "ref": "2.4",
+     "title": "Operational Phase",
+     "zh": "执行阶段"
+    },
+    {
+     "ref": "2.5",
+     "title": "Example Decision-Making Structure",
+     "zh": "决策结构示例"
+    },
+    {
+     "ref": "2.6",
+     "title": "Research Approach Comparison",
+     "zh": "研究途径的比较"
+    },
+    {
+     "ref": "2.7",
+     "title": "Empirical Evaluation of Process Changes",
+     "zh": "过程变更的实证评价"
+    }
+   ]
   },
   {
-   "src": "B",
-   "ref": "",
+   "src": "A",
+   "ref": "3",
    "title": "Essential Areas in Empirical Research",
-   "zh": "实证研究的基本要素",
-   "fill": "补“假设”与“误差与效度”：变量、度量、研究问题与假设、效度威胁",
-   "items": []
+   "zh": "实证研究的关键领域",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Ethics",
+     "zh": "伦理"
+    },
+    {
+     "ref": "3.2",
+     "title": "Replications",
+     "zh": "重复研究"
+    },
+    {
+     "ref": "3.3",
+     "title": "Theory in Software Engineering",
+     "zh": "软件工程中的理论"
+    },
+    {
+     "ref": "3.4",
+     "title": "Measurement",
+     "zh": "度量"
+    },
+    {
+     "ref": "3.5",
+     "title": "Empiricism to Improve",
+     "zh": "以实证促改进"
+    },
+    {
+     "ref": "3.6",
+     "title": "Empirically Based Technology Transfer",
+     "zh": "基于实证的技术转移"
+    }
+   ]
   },
   {
-   "src": "B",
-   "ref": "",
+   "src": "A",
+   "ref": "6",
    "title": "Experiments",
    "zh": "实验",
-   "fill": "补“实验设计”：实验的组成、步骤与适用条件",
-   "items": []
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Experiment Principles",
+     "zh": "实验的基本原理"
+    },
+    {
+     "ref": "6.2",
+     "title": "Variables, Treatments, Objects, and Subjects",
+     "zh": "变量、处理、对象与被试"
+    },
+    {
+     "ref": "6.3",
+     "title": "Process",
+     "zh": "实验过程"
+    },
+    {
+     "ref": "6.4",
+     "title": "Overview",
+     "zh": "实验概览"
+    }
+   ]
   },
   {
-   "src": "B",
-   "ref": "",
+   "src": "A",
+   "ref": "8",
    "title": "Scoping",
-   "zh": "定范围",
-   "fill": "补“实验设计”：把研究问题落成可执行的实验目标",
-   "items": []
+   "zh": "界定实验范围",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Scope Experiment",
+     "zh": "界定实验"
+    },
+    {
+     "ref": "8.2",
+     "title": "Example Experiment",
+     "zh": "实验示例"
+    }
+   ]
   },
   {
-   "src": "B",
-   "ref": "",
+   "src": "A",
+   "ref": "9",
    "title": "Planning",
    "zh": "实验计划",
-   "fill": "补“基线”：实验设计、变量选择、对照处理（基线）与样本",
-   "items": []
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Context Selection",
+     "zh": "情境选择"
+    },
+    {
+     "ref": "9.2",
+     "title": "Hypothesis Formulation",
+     "zh": "假设的形成"
+    },
+    {
+     "ref": "9.3",
+     "title": "Variables Selection",
+     "zh": "变量的选择"
+    },
+    {
+     "ref": "9.4",
+     "title": "Selection of Subjects",
+     "zh": "被试的选择"
+    },
+    {
+     "ref": "9.5",
+     "title": "Experiment Design",
+     "zh": "实验设计"
+    },
+    {
+     "ref": "9.6",
+     "title": "Instrumentation",
+     "zh": "实验工具与测量手段"
+    },
+    {
+     "ref": "9.7",
+     "title": "Validity Evaluation",
+     "zh": "效度评估"
+    },
+    {
+     "ref": "9.8",
+     "title": "Detailed Description of Validity Threats",
+     "zh": "效度威胁的详细说明"
+    },
+    {
+     "ref": "9.9",
+     "title": "Priority Among Types of Validity Threats",
+     "zh": "各类效度威胁之间的优先级"
+    }
+   ]
   },
   {
-   "src": "B",
-   "ref": "",
+   "src": "A",
+   "ref": "10",
+   "title": "Operation",
+   "zh": "实验运行",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Preparation",
+     "zh": "准备"
+    },
+    {
+     "ref": "10.2",
+     "title": "Execution",
+     "zh": "执行"
+    },
+    {
+     "ref": "10.3",
+     "title": "Data Validation",
+     "zh": "数据校验"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
    "title": "Analysis and Interpretation",
    "zh": "分析与解释",
-   "fill": "补“误差与效度”：数据分析、统计推断与结果解释的边界",
-   "items": []
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Descriptive Statistics",
+     "zh": "描述性统计"
+    },
+    {
+     "ref": "11.2",
+     "title": "Data Set Reduction",
+     "zh": "数据集约简"
+    },
+    {
+     "ref": "11.3",
+     "title": "Hypothesis Testing",
+     "zh": "假设检验"
+    },
+    {
+     "ref": "11.4",
+     "title": "Example Analysis",
+     "zh": "分析示例"
+    }
+   ]
   },
   {
    "src": "B",
    "ref": "",
-   "title": "Presentation and Package",
-   "zh": "呈现与打包",
-   "fill": "补“复现”：把实验材料与数据打包以便他人重跑",
-   "items": []
+   "title": "Guide for Reproducible Research",
+   "zh": "可复现研究指南",
+   "fill": "补“复现”与“数据/代码”：版本控制、研究数据管理、可复现环境、代码文档/质量/测试/评审、研究汇编等把复现落到工具与流程上的章节",
+   "items": [
+    {
+     "ref": "",
+     "title": "Open Research",
+     "zh": "开放研究"
+    },
+    {
+     "ref": "",
+     "title": "Version Control",
+     "zh": "版本控制"
+    },
+    {
+     "ref": "",
+     "title": "Licensing",
+     "zh": "许可"
+    },
+    {
+     "ref": "",
+     "title": "Research Data Management",
+     "zh": "研究数据管理"
+    },
+    {
+     "ref": "",
+     "title": "Reproducible Environments",
+     "zh": "可复现的计算环境"
+    },
+    {
+     "ref": "",
+     "title": "Code Documentation",
+     "zh": "代码文档"
+    },
+    {
+     "ref": "",
+     "title": "Code Quality",
+     "zh": "代码质量"
+    },
+    {
+     "ref": "",
+     "title": "Code Testing",
+     "zh": "代码测试"
+    },
+    {
+     "ref": "",
+     "title": "Code Reviewing Process",
+     "zh": "代码评审流程"
+    },
+    {
+     "ref": "",
+     "title": "Reusable Code",
+     "zh": "可复用代码"
+    },
+    {
+     "ref": "",
+     "title": "Reproducible Research with Make",
+     "zh": "用 Make 做可复现研究"
+    },
+    {
+     "ref": "",
+     "title": "Research Compendia",
+     "zh": "研究汇编"
+    }
+   ]
   },
   {
    "src": "C",
    "ref": "1",
    "title": "Principles",
    "zh": "原则",
-   "fill": "补“学术诚信”：诚信的基本原则",
-   "items": []
+   "fill": "补“学术诚信”的基本原则：可靠性、诚实、尊重与问责",
+   "items": [
+    {
+     "ref": "",
+     "title": "Reliability",
+     "zh": "可靠性"
+    },
+    {
+     "ref": "",
+     "title": "Honesty",
+     "zh": "诚实"
+    },
+    {
+     "ref": "",
+     "title": "Respect",
+     "zh": "尊重"
+    },
+    {
+     "ref": "",
+     "title": "Accountability",
+     "zh": "问责"
+    }
+   ]
   },
   {
    "src": "C",
    "ref": "2",
    "title": "Good Research Practices",
    "zh": "良好研究实践",
-   "fill": "补“学术诚信”",
+   "fill": "补“学术诚信”的场景化规范：研究环境、培训与指导、研究程序、保障措施、数据实践、协作、发表与署名、评审与评估",
    "items": [
     {
      "ref": "2.1",
@@ -203,7 +384,7 @@
     {
      "ref": "2.2",
      "title": "Training, Supervision, and Mentoring",
-     "zh": "培训、指导与师徒关系"
+     "zh": "培训、监督与指导"
     },
     {
      "ref": "2.3",
@@ -241,67 +422,68 @@
    "src": "C",
    "ref": "3",
    "title": "Violations of Research Integrity",
-   "zh": "违反科研诚信的行为",
-   "fill": "补“学术诚信”：伪造、篡改、剽窃等违规行为",
-   "items": []
+   "zh": "研究诚信的违规行为",
+   "fill": "补“学术诚信”的违规认定与处理：伪造、篡改、剽窃（FFP）及其他不可接受的做法",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Research Misconduct and other Unacceptable Practices",
+     "zh": "研究不端与其他不可接受的做法"
+    },
+    {
+     "ref": "3.2",
+     "title": "Dealing with Violations",
+     "zh": "违规行为的处理"
+    }
+   ]
   }
  ],
  "coverage": [
   {
    "topic": "假设",
    "refs": [
-    "B:#2",
-    "B:#5"
+    "A:9",
+    "A:9.2",
+    "A:11.3"
    ]
   },
   {
    "topic": "基线",
    "refs": [
-    "B:#5"
-   ],
-   "note": "“基线／对照处理”在 Wohlin 的计划章里讲，没有单独的章标题。"
+    "A:6",
+    "A:6.2",
+    "A:9.5"
+   ]
   },
   {
    "topic": "实验设计",
    "refs": [
-    "B:#2",
-    "B:#3",
-    "B:#4",
-    "B:#5"
+    "A:2",
+    "A:6",
+    "A:9",
+    "A:9.5"
    ]
   },
   {
    "topic": "误差与效度",
    "refs": [
-    "B:#2",
-    "B:#6"
+    "A:9.7",
+    "A:9.8",
+    "A:11",
+    "A:11.1"
    ]
   },
   {
    "topic": "复现",
    "refs": [
-    "A:#1",
-    "A:#5",
-    "A:#10",
-    "A:#11",
-    "B:#7"
+    "B:#1",
+    "A:3.2"
    ]
   },
   {
-   "topic": "数据",
+   "topic": "数据与代码",
    "refs": [
-    "A:#4",
-    "A:#3"
-   ]
-  },
-  {
-   "topic": "代码",
-   "refs": [
-    "A:#6",
-    "A:#7",
-    "A:#8",
-    "A:#9",
-    "A:#10"
+    "B:#1"
    ]
   },
   {
@@ -309,16 +491,15 @@
    "refs": [
     "C:1",
     "C:2",
-    "C:3",
-    "A:#12"
+    "C:3"
    ]
   }
  ],
- "omitted": "Turing Way 只收了“可复现研究指南”与“研究伦理导论”：同书的开放研究许可（Licensing）、BinderHub、持续集成、用 Make 复现、风险评估、案例研究，以及项目设计、沟通、协作、社区手册各指南未收（与“研究设计＋可复现”主线关系较远，协作部分节点 I.2.2 已覆盖）。Wohlin 的书只收了与实验设计相关的章，系统文献研究、问卷调查、案例研究、实验示例三章未收。ALLEA 准则只收了正文三节，前言、附录（资源清单、修订过程）未收。",
- "notes": "Turing Way 的章节在网页上没有编号，故 ref 留空、coverage 用 A:#序号。Wohlin 的书在 Springer 目录页同样没有显示章号，ref 留空。节点要的“学术诚信”在图灵之路里只有研究伦理导论，具体规范（署名、评审、违规认定）由 ALLEA 准则补齐；如果要求按地区核验，美国一侧对应 ORI 的 Responsible Conduct of Research，中国一侧对应《科研诚信案件调查处理规则》。",
+ "omitted": "Wohlin 未收的章：第 1 章（语境）、第 4 章（系统文献研究）、第 5 章（问卷）、第 7 章（案例研究）、第 12 章（报告与打包，只有 12.1 一节）、第 13–14 章（完整示例与后续），属其他研究策略与举例；正文里的 Exercises 小节一律不当作节收。Turing Way 只收了“可复现研究指南”一章，其下的开放研究许可、BinderHub、持续集成、Make、风险评估、案例研究等节未收（太细）；“研究伦理”指南与项目设计/沟通/协作指南未收，因为伦理部分改由 ALLEA 准则覆盖。ALLEA 只收正文三节，Preamble 与四个 Annex 未收。",
+ "notes": "第二轮按 deepen 说明第 2 种做法处理：主来源换成有编号章节的 Wohlin 教材（原来它只是补充分支、且只有章名），Turing Way 从主来源降为补充分支（把 11 个平铺的章节收成“可复现研究指南”一个分支下的 12 个节，指南页的侧栏目录就是这些章的页标题），ALLEA 准则补上小节标题（2.1–2.8、3.1–3.2 在 PDF 里带编号，故 ref 按原文；第 1 节的四项原则在原文是项目符号而非标题，用作文档自列的四项原则）。Turing Way 的页面在网页上没有编号，故该分支条目的 ref 用 #序号 表示它在指南页目录里的次序。若要求按地区核验，美国一侧对应 ORI 的 Responsible Conduct of Research，中国一侧对应《科研诚信案件调查处理规则》。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 30,
+  "exact": 72,
   "fuzzy": 0,
   "dropped": []
  }

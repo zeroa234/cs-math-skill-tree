@@ -3,6 +3,18 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Computer Networking: A Top-Down Approach, 9th ed.",
+   "by": "James F. Kurose and Keith W. Ross",
+   "year": 2025,
+   "url": "https://www.pearson.com/en-us/subject-catalog/p/computer-networking-a-top-down-approach/P200000013385/9780135415603",
+   "toc_urls": [
+    "https://www.pearson.com/en-us/subject-catalog/p/computer-networking-a-top-down-approach/P200000013385/9780135415603"
+   ],
+   "why": "主来源换成本科标准教材第 7 章：出版社官网给出章 → 节 → 小节三层目录，无线信道与调制、无线接入网（802.11、5G RAN、唤醒休眠）、无线核心网、移动性原理与 WiFi/5G 切换、蓝牙与物联网，正好覆盖节点的五个知识点，且是 D2 入门层该用的本科教材。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "18-452 / 18-750: Wireless Networks and Applications (Spring 2024)",
    "by": "Peter Steenkiste, Carnegie Mellon University",
@@ -11,113 +23,197 @@
    "toc_urls": [
     "https://www.cs.cmu.edu/~prs/wirelessS24/"
    ],
-   "why": "节点现有英文资源，CMU 官方课程页的逐讲表（每讲一个具体主题，从无线信号、物理层调制到 WiFi、蜂窝 1G–5G、无线 IP/TCP、蓝牙、传感器网络与 RFID），正好覆盖无线介质、移动性、蜂窝/局域/低功耗与设备网络。"
+   "why": "节点现有英文资源，保留它的逐讲表补教材没有或讲得更细的点：MIMO、1G 蜂窝的由来、WiFi 管理细节、无线对 TCP 的影响、蓝牙/传感器网络/RFID 的具体技术。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "2",
-   "title": "Wireless challenges and signals",
-   "zh": "无线挑战与信号",
-   "items": []
+   "ref": "7",
+   "title": "Wireless and Mobile Networks",
+   "zh": "无线与移动网络",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "7.2",
+     "title": "The Physical Layer in Wireless Networks",
+     "zh": "无线网络的物理层",
+     "items": [
+      {
+       "ref": "7.2.1",
+       "title": "Characteristics of wireless Channel",
+       "zh": "无线信道的特性"
+      },
+      {
+       "ref": "7.2.2",
+       "title": "Coding and Modulation: from bits to symbols to waveforms",
+       "zh": "编码与调制：从比特到符号再到波形"
+      }
+     ]
+    },
+    {
+     "ref": "7.3",
+     "title": "The Wireless Access Network",
+     "zh": "无线接入网",
+     "items": [
+      {
+       "ref": "7.3.1",
+       "title": "Sharing the Wireless Channel",
+       "zh": "共享无线信道"
+      },
+      {
+       "ref": "7.3.2",
+       "title": "WiFi: the 802.11 Wireless LAN",
+       "zh": "WiFi：802.11 无线局域网"
+      },
+      {
+       "ref": "7.3.3",
+       "title": "The 5G Radio Access Network",
+       "zh": "5G 无线接入网"
+      },
+      {
+       "ref": "7.3.4",
+       "title": "Discovery: Attaching to a Wireless Network",
+       "zh": "发现：接入无线网络"
+      },
+      {
+       "ref": "7.3.5",
+       "title": "Scheduling Transmissions over the RAN/WLAN",
+       "zh": "RAN/WLAN 上的传输调度"
+      },
+      {
+       "ref": "7.3.6",
+       "title": "Energy Considerations: wake/sleep",
+       "zh": "能耗考量：唤醒与休眠"
+      }
+     ]
+    },
+    {
+     "ref": "7.4",
+     "title": "The Wireless Core Network",
+     "zh": "无线核心网",
+     "items": [
+      {
+       "ref": "7.4.1",
+       "title": "The 5G Core and Network Functions",
+       "zh": "5G 核心网与网络功能"
+      },
+      {
+       "ref": "7.4.2",
+       "title": "User-plane Function",
+       "zh": "用户面功能"
+      },
+      {
+       "ref": "7.4.3",
+       "title": "User identity, registration, and session establishment",
+       "zh": "用户标识、注册与会话建立"
+      }
+     ]
+    },
+    {
+     "ref": "7.5",
+     "title": "Mobility",
+     "zh": "移动性",
+     "items": [
+      {
+       "ref": "7.5.1",
+       "title": "Mobility Principles",
+       "zh": "移动性原理"
+      },
+      {
+       "ref": "7.5.2",
+       "title": "Mobility in a WiFi Network",
+       "zh": "WiFi 网络中的移动性"
+      },
+      {
+       "ref": "7.5.3",
+       "title": "Mobility in a 5G Network",
+       "zh": "5G 网络中的移动性"
+      }
+     ]
+    },
+    {
+     "ref": "7.6",
+     "title": "Bluetooth, Satellite and IoT Networks",
+     "zh": "蓝牙、卫星与物联网网络",
+     "items": [
+      {
+       "ref": "7.6.1",
+       "title": "Bluetooth Networks",
+       "zh": "蓝牙网络"
+      },
+      {
+       "ref": "7.6.2",
+       "title": "Satellite Networks",
+       "zh": "卫星网络"
+      },
+      {
+       "ref": "7.6.3",
+       "title": "Internet of Things (IoT) Networks",
+       "zh": "物联网网络"
+      }
+     ]
+    }
+   ]
   },
   {
-   "src": "A",
-   "ref": "3",
-   "title": "Physical layer: basics",
-   "zh": "物理层：基础",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "4",
-   "title": "Physical layer: modulation",
-   "zh": "物理层：调制",
-   "items": []
-  },
-  {
-   "src": "A",
+   "src": "B",
    "ref": "7",
    "title": "MIMO",
    "zh": "MIMO（多天线）",
+   "fill": "补“无线介质”里的多天线与空间复用",
    "items": []
   },
   {
-   "src": "A",
-   "ref": "8",
-   "title": "LANs",
-   "zh": "局域网",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "9",
-   "title": "WiFi basics",
-   "zh": "WiFi 基础",
-   "items": []
-  },
-  {
-   "src": "A",
+   "src": "B",
    "ref": "11",
    "title": "WiFi Management",
    "zh": "WiFi 管理",
+   "fill": "补“局域”里的关联、功率控制与安全管理",
    "items": []
   },
   {
-   "src": "A",
+   "src": "B",
    "ref": "13",
    "title": "Cellular Basics, 1G",
    "zh": "蜂窝基础与 1G",
+   "fill": "补“蜂窝”的演进起点与频分复用设计",
    "items": []
   },
   {
-   "src": "A",
-   "ref": "15",
-   "title": "Cellular LTE",
-   "zh": "蜂窝 LTE",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "16",
-   "title": "Cellular 5G",
-   "zh": "蜂窝 5G",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "18",
-   "title": "Wireless and IP",
-   "zh": "无线与 IP",
-   "items": []
-  },
-  {
-   "src": "A",
+   "src": "B",
    "ref": "29",
    "title": "Wireless and TCP/applications",
    "zh": "无线与 TCP/应用",
+   "fill": "补无线链路对上层协议与应用的影响",
    "items": []
   },
   {
-   "src": "A",
+   "src": "B",
    "ref": "20",
    "title": "PAN - Bluetooth",
    "zh": "个域网：蓝牙",
+   "fill": "补“低功耗通信与设备网络”里的蓝牙/802.15 协议栈",
    "items": []
   },
   {
-   "src": "A",
+   "src": "B",
    "ref": "21",
    "title": "Sensor networks",
    "zh": "传感器网络",
+   "fill": "补低功耗广域技术（BLE、802.15.4/Zigbee、LoRa、Sigfox）",
    "items": []
   },
   {
-   "src": "A",
+   "src": "B",
    "ref": "22",
    "title": "RFID",
    "zh": "RFID",
+   "fill": "补设备网络里的无源标签与 NFC",
    "items": []
   }
  ],
@@ -125,58 +221,70 @@
   {
    "topic": "无线介质",
    "refs": [
-    "A:2",
-    "A:3",
-    "A:4",
-    "A:7"
+    "A:7.2",
+    "A:7.2.1",
+    "A:7.2.2",
+    "B:7"
    ]
   },
   {
    "topic": "移动性",
    "refs": [
-    "A:18",
-    "A:29",
-    "A:15",
-    "A:16"
+    "A:7.5",
+    "A:7.5.1",
+    "A:7.5.2",
+    "A:7.5.3",
+    "A:7.3.4",
+    "B:29"
    ]
   },
   {
    "topic": "蜂窝",
    "refs": [
-    "A:13",
-    "A:15",
-    "A:16"
+    "A:7.3.3",
+    "A:7.4",
+    "A:7.4.1",
+    "A:7.4.2",
+    "A:7.4.3",
+    "B:13"
    ]
   },
   {
    "topic": "局域",
    "refs": [
-    "A:8",
-    "A:9",
-    "A:11"
+    "A:7.3",
+    "A:7.3.1",
+    "A:7.3.2",
+    "A:7.3.5",
+    "B:11"
    ]
   },
   {
    "topic": "低功耗通信",
    "refs": [
-    "A:20",
-    "A:21"
+    "A:7.3.6",
+    "A:7.6.1",
+    "A:7.6.3",
+    "B:21"
    ]
   },
   {
    "topic": "设备网络",
    "refs": [
-    "A:20",
-    "A:22",
-    "A:21"
+    "A:7.6",
+    "A:7.6.1",
+    "A:7.6.3",
+    "B:20",
+    "B:21",
+    "B:22"
    ]
   }
  ],
- "omitted": "18-452 的讲次表里没收：第 1 讲 Course overview and wireless introduction（课程导言）、第 5 讲 Physical layer: diversity 与第 6 讲（含 Recitation: Project 1）、第 10 讲 WiFi、第 12 讲 WiFi Standards - paper、第 14 讲 Cellular 2G、第 23 讲 Localization、第 24 讲 Lecture DSA，以及第 25–27 讲的学生 survey 报告；这些要么是课程事务，要么与节点简介的关系弱于已收的讲次。",
- "notes": "课表原文的编号有笔误：18 之后直接跳到 29，再回到 20（第 19 讲缺号），我按原文照抄 ref=29，标题仍是原文的 Wireless and TCP/applications。课程页上这门课同时有本科段（18-452）与研究生段（18-750），讲次表通用，适合 D2 入门层。",
+ "omitted": "A 只收第 7 章：第 1–6 章（概览、应用层、传输层、网络层、链路层）与第 8 章（网络安全）不属本节点，见 C.1–C.4 的相邻导览图；7.7 Summary、各节习题与编程作业未收。B 里没收：第 2–4 讲（无线挑战与物理层基础，已由教材 7.2 覆盖）、第 8 讲 LANs（通用链路层，归 C.2.x）、第 9 讲 WiFi basics 与第 15–16 讲 4G/5G（教材 7.3.2–7.4 讲得更系统）、第 18 讲 Wireless and IP（教材 7.5.1 的移动性原理覆盖）、第 23 讲 Localization、第 24 讲 DSA，以及第 25–27 讲的学生 survey 报告（课程事务性内容）。",
+ "notes": "本轮按第二轮第 2 条做法换源。先试第 1 条：CMU 课程站的讲义 PDF（handouts/L2-Challenges.pdf、L9-WiFi-basics.pdf 等）能打开，但内容是幻灯片，开头几页是课程问卷与作业通知，只有一张罗列全课主题的 Outline 页，没有可当“节标题”用的结构，故改用教材。教材目录取自出版社官网的 Table of contents（章 → 节 → 小节三层），第 7 章正好对应节点的五个知识点。B 保留了原导览图里的讲次，ref 沿用课程页原文编号（原文第 18 讲之后直接跳到 29 再回到 20，是课表自身的笔误，此处照抄）。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 15,
+  "exact": 31,
   "fuzzy": 0,
   "dropped": []
  }

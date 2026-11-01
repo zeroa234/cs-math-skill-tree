@@ -17,14 +17,14 @@
   {
    "key": "B",
    "kind": "book",
-   "title": "Software Engineering, 9th Edition",
-   "by": "Ian Sommerville",
-   "year": 2010,
-   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "title": "Guide to the Software Engineering Body of Knowledge (SWEBOK Guide) v4.0a",
+   "by": "IEEE Computer Society (editor: Hironori Washizaki)",
+   "year": 2026,
+   "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
    "toc_urls": [
-    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+    "https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf"
    ],
-   "why": "补“系统演化”：A 只有 Decomposing Monoliths、Deployment Strategies 两讲讲怎么改架构，没有演化过程、程序演化规律、维护与遗留系统的节级内容，用这本标准教材第 9 章补齐。"
+   "why": "补 A 缺的两块：A 的讲义只按“讲”给主题，没有把视图/风格/决策这些概念分节的理论框架，也没有系统演化（B 第 2 章 Software Architecture 的视图与视点、模式与风格、架构即重要决策、架构评审；第 7 章 Software Maintenance 的演化、维护类别、影响分析与再工程）。"
   }
  ],
  "outline": [
@@ -258,30 +258,74 @@
   },
   {
    "src": "B",
-   "ref": "9",
-   "title": "Software evolution",
-   "zh": "软件演化",
-   "fill": "补系统演化：演化过程、程序演化动力学、软件维护与遗留系统管理",
+   "ref": "2",
+   "title": "Software Architecture",
+   "zh": "软件架构（SWEBOK 第 2 章）",
+   "fill": "补架构的理论框架：架构的几种含义与利益相关者关注点、视图与视点、模式与风格、架构即一组重要决策、架构评审与度量",
    "items": [
     {
-     "ref": "9.1",
-     "title": "Evolution processes",
-     "zh": "演化过程"
+     "ref": "1.1",
+     "title": "The Senses of “Architecture”",
+     "zh": "“架构”的几种含义"
     },
     {
-     "ref": "9.2",
-     "title": "Program evolution dynamics",
-     "zh": "程序演化动力学"
+     "ref": "1.2",
+     "title": "Stakeholders and Concerns",
+     "zh": "利益相关者与其关注点"
     },
     {
-     "ref": "9.3",
-     "title": "Software maintenance",
-     "zh": "软件维护"
+     "ref": "2.1",
+     "title": "Architecture Views and Viewpoints",
+     "zh": "架构视图与视点"
     },
     {
-     "ref": "9.4",
-     "title": "Legacy system management",
-     "zh": "遗留系统管理"
+     "ref": "2.2",
+     "title": "Architecture Patterns, Styles and Reference Architectures",
+     "zh": "架构模式、风格与参考架构"
+    },
+    {
+     "ref": "2.4",
+     "title": "Architecture as Significant Decisions",
+     "zh": "架构即重要决策"
+    },
+    {
+     "ref": "4.1",
+     "title": "Goodness in Architecture",
+     "zh": "架构的好坏"
+    },
+    {
+     "ref": "4.3",
+     "title": "Architecture Reviews",
+     "zh": "架构评审"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Software Maintenance",
+   "zh": "软件维护（SWEBOK 第 7 章）",
+   "fill": "补系统演化：软件演化、维护的类别、影响分析与可维护性、再工程与逆向工程",
+   "items": [
+    {
+     "ref": "1.5",
+     "title": "Evolution of Software",
+     "zh": "软件的演化"
+    },
+    {
+     "ref": "1.6",
+     "title": "Categories of Software Maintenance",
+     "zh": "软件维护的类别"
+    },
+    {
+     "ref": "2.1.3",
+     "title": "Impact Analysis",
+     "zh": "影响分析"
+    },
+    {
+     "ref": "4.2",
+     "title": "Software Reengineering",
+     "zh": "软件再工程"
     }
    ]
   }
@@ -292,8 +336,10 @@
    "refs": [
     "A:#3",
     "A:#7",
-    "A:#13"
-   ]
+    "A:#13",
+    "B:1.2"
+   ],
+   "note": "A:#3 的视图（C4 的容器/组件、4+1）是按边界切系统的方式，A:#7 讲按技术还是按领域划分，A:#13 讲怎么从单体拆出边界，B:1.2 从利益相关者关注点解释边界为什么这么切。"
   },
   {
    "topic": "架构风格",
@@ -303,7 +349,8 @@
     "A:#8",
     "A:#9",
     "A:#10",
-    "A:#11"
+    "A:#11",
+    "B:2.2"
    ]
   },
   {
@@ -311,30 +358,35 @@
    "refs": [
     "A:#1",
     "A:#2",
-    "A:2.4"
-   ]
+    "A:2.4",
+    "B:4.1"
+   ],
+   "note": "A:2.4 是讲义里质量属性的一节（含场景式表达），B:4.1 讲架构“好”在哪些可评估的属性上。"
   },
   {
    "topic": "架构决策",
    "refs": [
     "A:#4",
-    "A:#1"
-   ]
+    "A:#1",
+    "B:2.4"
+   ],
+   "note": "A:#4 是架构决策记录（ADR）这一讲，B:2.4 把架构定义成一组重要决策。"
   },
   {
    "topic": "系统演化",
    "refs": [
     "A:#12",
     "A:#13",
-    "B:9"
-   ]
+    "B:#2"
+   ],
+   "note": "A 只有部署策略与拆解单体两讲讲“怎么改”，演化的规律与维护类别由 B 第 7 章补（演化、维护类别、影响分析、再工程）。"
   }
  ],
- "omitted": "A 的 schedule 还列了 Security Principles、Containers、Infrastructure as Code、Distributed Systems I/II/III、Monitoring & Logging、Soft Skills for Architects、Software Engineering Research、Technical Documentation 等讲，属安全、云基础设施、分布式系统（C.4.1）、运维与研究方法等其他节点；AWS 课程材料、案例研讨与 Practical 工作表也没收。B 只收第 9 章，其余章属需求、设计、测试等节点。",
- "notes": "A 的 schedule 每讲有 2–4 个主题要点，但页面本身没有编号（只有“Week One/two…”），所以分支与叶子的 ref 多留空；讲义 PDF 里有 2.1–2.5 的节号。coverage 里 A:#1–A:#13 指 A 的 13 个分支。“High Quality Software”同时是第 1 讲的要点和第 2 章标题，因此出现两次：分支 1 收讲内顺序，分支 2 收讲义的分节。",
+ "omitted": "A 的 schedule 还列了 Security Principles、Containers、Infrastructure as Code、Distributed Systems I/II/III、Monitoring & Logging、Soft Skills for Architects、Software Engineering Research、Technical Documentation 等讲，属安全、云基础设施、分布式系统（C.4.1）、运维与研究方法等其他节点；AWS 课程材料、案例研讨与 Practical 工作表也没收。B 的其余章（需求、设计、构造、测试、运维、配置管理、管理、过程、质量、安全）属其他节点，只取了第 2 章的架构核心节与第 7 章的演化相关节。",
+ "notes": "A 的 schedule 每讲有 2–4 个主题要点，但页面本身没有编号（只有“Week One/two…”），所以分支与叶子的 ref 多留空；讲义 PDF 里有 2.1–2.5 的节号。coverage 里 A:#1–A:#13 指 A 的 13 个分支、B:#2 指 B 的第 2 个分支（软件维护）。\"High Quality Software\" 同时是第 1 讲的要点和第 2 章标题，因此出现两次：分支 1 收讲内顺序，分支 2 收讲义的分节。B 是 IEEE 计算机学会官方免费公开的 SWEBOK v4.0a（2026 年 8 月版）；第一轮里给 B 用的 Sommerville《Software Engineering》9th ed. 整书 PDF 由 CMU 17-313 课程站托管、非作者或出版社公开，已按第二轮要求删除。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 44,
+  "exact": 52,
   "fuzzy": 0,
   "dropped": []
  }

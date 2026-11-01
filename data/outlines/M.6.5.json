@@ -4,44 +4,357 @@
   {
    "key": "A",
    "kind": "book",
+   "title": "Elements of Information Theory, 2nd Edition",
+   "by": "Thomas M. Cover, Joy A. Thomas",
+   "year": 2006,
+   "url": "https://www.wiley.com/en-us/Elements+of+Information+Theory%2C+2nd+Edition-p-9780471241959",
+   "toc_urls": [
+    "https://media.wiley.com/product_data/excerpt/54/04712419/0471241954-29.pdf"
+   ],
+   "why": "信息论的标准教材（本书也是本节点“先修证据”里 Stanford EE 376A 采用的教材），Wiley 官方提供的前置页 PDF 含完整目录（章 → 节 → 小节）：熵/相对熵/互信息、AEP、数据压缩、信道容量与信道编码定理、微分熵、高斯信道、率失真理论，正好覆盖节点简介里的熵、互信息、KL 散度、信源/信道编码、容量与率失真。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
    "title": "Information Theory, Inference, and Learning Algorithms",
    "by": "David J. C. MacKay",
    "year": 2003,
    "url": "https://www.inference.org.uk/itila/book.html",
    "toc_urls": [
-    "https://www.inference.org.uk/itprnn/book.pdf"
+    "https://www.inference.org.uk/itprnn/book.pdf",
+    "https://www.inference.org.uk/itprnn/booktext.txt"
    ],
-   "why": "节点“现有英文学习资源”本身：作者主页免费提供全书 PDF（剑桥大学出版社授权在线版），第 2 章定义熵、相关函数（含互信息）与相对熵，第 4、5 章是信源编码，第 9、10 章是信道容量与有噪信道编码定理，第 11、13 章是纠错码，正好覆盖节点的信息论半边。"
-  },
-  {
-   "key": "B",
-   "kind": "course",
-   "title": "EE 376A: Information Theory",
-   "by": "Tsachy Weissman, Stanford University",
-   "year": 2019,
-   "url": "https://web.stanford.edu/class/ee376a/",
-   "toc_urls": [
-    "https://web.stanford.edu/class/ee376a/outline.html"
-   ],
-   "why": "补率失真：A 全书没有率失真（有损压缩）的章节，B 是节点“先修证据”里的课，逐讲目录里用两次课讲率失真函数的定义、例子与可达性/逆定理。"
+   "why": "补 A 没细讲的编码构造：A 只在 7.11 讲 Hamming 码，MacKay 的第 11 章讲真实信道与实用纠错码的能力，第 13 章讲二元码的距离性质、重量枚举函数、完美码、级联与并界；第 1 章则是从二进制对称信道出发的直观入门（节点现有英文资源就是这本书）。"
   }
  ],
  "outline": [
   {
    "src": "A",
+   "ref": "2",
+   "title": "Entropy, Relative Entropy, and Mutual Information",
+   "zh": "熵、相对熵与互信息",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Entropy",
+     "zh": "熵"
+    },
+    {
+     "ref": "2.2",
+     "title": "Joint Entropy and Conditional Entropy",
+     "zh": "联合熵与条件熵"
+    },
+    {
+     "ref": "2.3",
+     "title": "Relative Entropy and Mutual Information",
+     "zh": "相对熵与互信息"
+    },
+    {
+     "ref": "2.4",
+     "title": "Relationship Between Entropy and Mutual Information",
+     "zh": "熵与互信息的关系"
+    },
+    {
+     "ref": "2.5",
+     "title": "Chain Rules for Entropy, Relative Entropy, and Mutual Information",
+     "zh": "熵、相对熵与互信息的链式法则"
+    },
+    {
+     "ref": "2.6",
+     "title": "Jensen’s Inequality and Its Consequences",
+     "zh": "Jensen 不等式及其推论"
+    },
+    {
+     "ref": "2.7",
+     "title": "Log Sum Inequality and Its Applications",
+     "zh": "对数求和不等式及其应用"
+    },
+    {
+     "ref": "2.8",
+     "title": "Data-Processing Inequality",
+     "zh": "数据处理不等式"
+    },
+    {
+     "ref": "2.9",
+     "title": "Sufficient Statistics",
+     "zh": "充分统计量"
+    },
+    {
+     "ref": "2.10",
+     "title": "Fano’s Inequality",
+     "zh": "Fano 不等式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Asymptotic Equipartition Property",
+   "zh": "渐近等分性",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Asymptotic Equipartition Property Theorem",
+     "zh": "渐近等分性定理"
+    },
+    {
+     "ref": "3.2",
+     "title": "Consequences of the AEP: Data Compression",
+     "zh": "AEP 的推论：数据压缩"
+    },
+    {
+     "ref": "3.3",
+     "title": "High-Probability Sets and the Typical Set",
+     "zh": "高概率集与典型集"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Data Compression",
+   "zh": "数据压缩",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Examples of Codes",
+     "zh": "编码的例子"
+    },
+    {
+     "ref": "5.2",
+     "title": "Kraft Inequality",
+     "zh": "Kraft 不等式"
+    },
+    {
+     "ref": "5.3",
+     "title": "Optimal Codes",
+     "zh": "最优码"
+    },
+    {
+     "ref": "5.4",
+     "title": "Bounds on the Optimal Code Length",
+     "zh": "最优码长的界"
+    },
+    {
+     "ref": "5.5",
+     "title": "Kraft Inequality for Uniquely Decodable Codes",
+     "zh": "唯一可译码的 Kraft 不等式"
+    },
+    {
+     "ref": "5.6",
+     "title": "Huffman Codes",
+     "zh": "Huffman 码"
+    },
+    {
+     "ref": "5.7",
+     "title": "Some Comments on Huffman Codes",
+     "zh": "关于 Huffman 码的若干说明"
+    },
+    {
+     "ref": "5.8",
+     "title": "Optimality of Huffman Codes",
+     "zh": "Huffman 码的最优性"
+    },
+    {
+     "ref": "5.9",
+     "title": "Shannon–Fano–Elias Coding",
+     "zh": "Shannon–Fano–Elias 编码"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Channel Capacity",
+   "zh": "信道容量",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Examples of Channel Capacity",
+     "zh": "信道容量的例子"
+    },
+    {
+     "ref": "7.2",
+     "title": "Symmetric Channels",
+     "zh": "对称信道"
+    },
+    {
+     "ref": "7.3",
+     "title": "Properties of Channel Capacity",
+     "zh": "信道容量的性质"
+    },
+    {
+     "ref": "7.4",
+     "title": "Preview of the Channel Coding Theorem",
+     "zh": "信道编码定理预览"
+    },
+    {
+     "ref": "7.5",
+     "title": "Definitions",
+     "zh": "定义"
+    },
+    {
+     "ref": "7.6",
+     "title": "Jointly Typical Sequences",
+     "zh": "联合典型序列"
+    },
+    {
+     "ref": "7.7",
+     "title": "Channel Coding Theorem",
+     "zh": "信道编码定理"
+    },
+    {
+     "ref": "7.9",
+     "title": "Fano’s Inequality and the Converse to the Coding Theorem",
+     "zh": "Fano 不等式与编码定理的逆定理"
+    },
+    {
+     "ref": "7.11",
+     "title": "Hamming Codes",
+     "zh": "Hamming 码"
+    },
+    {
+     "ref": "7.13",
+     "title": "Source–Channel Separation Theorem",
+     "zh": "信源–信道分离定理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Differential Entropy",
+   "zh": "微分熵",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Definitions",
+     "zh": "定义"
+    },
+    {
+     "ref": "8.2",
+     "title": "AEP for Continuous Random Variables",
+     "zh": "连续随机变量的 AEP"
+    },
+    {
+     "ref": "8.3",
+     "title": "Relation of Differential Entropy to Discrete Entropy",
+     "zh": "微分熵与离散熵的关系"
+    },
+    {
+     "ref": "8.4",
+     "title": "Joint and Conditional Differential Entropy",
+     "zh": "联合与条件微分熵"
+    },
+    {
+     "ref": "8.5",
+     "title": "Relative Entropy and Mutual Information",
+     "zh": "相对熵与互信息"
+    },
+    {
+     "ref": "8.6",
+     "title": "Properties of Differential Entropy, Relative Entropy, and Mutual Information",
+     "zh": "微分熵、相对熵与互信息的性质"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Gaussian Channel",
+   "zh": "高斯信道",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Gaussian Channel: Definitions",
+     "zh": "高斯信道：定义"
+    },
+    {
+     "ref": "9.2",
+     "title": "Converse to the Coding Theorem for Gaussian Channels",
+     "zh": "高斯信道编码定理的逆定理"
+    },
+    {
+     "ref": "9.3",
+     "title": "Bandlimited Channels",
+     "zh": "带限信道"
+    },
+    {
+     "ref": "9.5",
+     "title": "Channels with Colored Gaussian Noise",
+     "zh": "有色高斯噪声信道"
+    },
+    {
+     "ref": "9.6",
+     "title": "Gaussian Channels with Feedback",
+     "zh": "带反馈的高斯信道"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Rate Distortion Theory",
+   "zh": "率失真理论",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Quantization",
+     "zh": "量化"
+    },
+    {
+     "ref": "10.2",
+     "title": "Definitions",
+     "zh": "定义"
+    },
+    {
+     "ref": "10.3",
+     "title": "Calculation of the Rate Distortion Function",
+     "zh": "率失真函数的计算"
+    },
+    {
+     "ref": "10.4",
+     "title": "Converse to the Rate Distortion Theorem",
+     "zh": "率失真定理的逆定理"
+    },
+    {
+     "ref": "10.5",
+     "title": "Achievability of the Rate Distortion Function",
+     "zh": "率失真函数的可达性"
+    },
+    {
+     "ref": "10.6",
+     "title": "Strongly Typical Sequences and Rate Distortion",
+     "zh": "强典型序列与率失真"
+    },
+    {
+     "ref": "10.7",
+     "title": "Characterization of the Rate Distortion Function",
+     "zh": "率失真函数的刻画"
+    },
+    {
+     "ref": "10.8",
+     "title": "Computation of Channel Capacity and the Rate Distortion Function",
+     "zh": "信道容量与率失真函数的计算"
+    }
+   ]
+  },
+  {
+   "src": "B",
    "ref": "1",
    "title": "Introduction to Information Theory",
    "zh": "信息论引论",
+   "fill": "入门直觉：二进制对称信道上的纠错码与“最好的码能做到什么”",
    "items": [
     {
      "ref": "1.1",
      "title": "How can we achieve perfect communication over an imperfect, noisy communication channel?",
-     "zh": "如何在不完美、有噪声的信道上实现无差错通信"
+     "zh": "如何在有噪的不完美信道上实现无差错通信"
     },
     {
      "ref": "1.2",
      "title": "Error-correcting codes for the binary symmetric channel",
-     "zh": "二元对称信道的纠错码"
+     "zh": "二进制对称信道的纠错码"
     },
     {
      "ref": "1.3",
@@ -51,113 +364,95 @@
    ]
   },
   {
-   "src": "A",
-   "ref": "2",
-   "title": "Probability, Entropy, and Inference",
-   "zh": "概率、熵与推断",
+   "src": "B",
+   "ref": "11",
+   "title": "Error-Correcting Codes and Real Channels",
+   "zh": "纠错码与真实信道",
+   "fill": "信道编码（实用纠错码的能力、真实信道与非噪声错误）",
    "items": [
     {
-     "ref": "2.1",
-     "title": "Probabilities and ensembles",
-     "zh": "概率与系综"
+     "ref": "",
+     "title": "The Gaussian channel",
+     "zh": "高斯信道"
     },
     {
-     "ref": "2.2",
-     "title": "The meaning of probability",
-     "zh": "概率的含义"
+     "ref": "",
+     "title": "Inferring the input to a real channel",
+     "zh": "由输出推断真实信道的输入"
     },
     {
-     "ref": "2.3",
-     "title": "Forward probabilities and inverse probabilities",
-     "zh": "正向概率与逆向概率"
+     "ref": "",
+     "title": "Capacity of Gaussian channel",
+     "zh": "高斯信道容量"
     },
     {
-     "ref": "2.4",
-     "title": "Definition of entropy and related functions",
-     "zh": "熵及相关函数的定义（联合熵、条件熵、互信息、相对熵）"
+     "ref": "",
+     "title": "What are the capabilities of practical error-correcting codes?",
+     "zh": "实用纠错码的能力如何"
     },
     {
-     "ref": "2.5",
-     "title": "Decomposability of the entropy",
-     "zh": "熵的可分解性"
+     "ref": "",
+     "title": "The state of the art",
+     "zh": "当前最好的结果"
     },
     {
-     "ref": "2.6",
-     "title": "Gibbs’ inequality",
-     "zh": "Gibbs 不等式与相对熵"
+     "ref": "",
+     "title": "Nonlinear codes",
+     "zh": "非线性码"
     },
     {
-     "ref": "2.7",
-     "title": "Jensen’s inequality for convex functions",
-     "zh": "凸函数的 Jensen 不等式"
+     "ref": "",
+     "title": "Errors other than noise",
+     "zh": "噪声之外的错误"
     }
    ]
   },
   {
-   "src": "A",
-   "ref": "4",
-   "title": "The Source Coding Theorem",
-   "zh": "信源编码定理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "5",
-   "title": "Symbol Codes",
-   "zh": "符号码",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "8",
-   "title": "Dependent Random Variables",
-   "zh": "相依随机变量",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "9",
-   "title": "Communication over a Noisy Channel",
-   "zh": "有噪信道上的通信",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "10",
-   "title": "The Noisy-Channel Coding Theorem",
-   "zh": "有噪信道编码定理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "11",
-   "title": "Error-Correcting Codes and Real Channels",
-   "zh": "纠错码与实际信道",
-   "items": []
-  },
-  {
-   "src": "A",
+   "src": "B",
    "ref": "13",
    "title": "Binary Codes",
    "zh": "二元码",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Lossy Compression and Rate Distortion Theory",
-   "zh": "有损压缩与率失真理论",
-   "fill": "补率失真：率失真函数的定义与例子、可达性（直接部分）与逆定理",
+   "fill": "信道编码（码的距离性质、重量枚举函数、完美码、级联与并界等构造性内容）",
    "items": [
     {
      "ref": "",
-     "title": "Lossy compression I: rate-distortion function, examples",
-     "zh": "有损压缩（一）：率失真函数与例子"
+     "title": "Distance properties of a code",
+     "zh": "码的距离性质"
     },
     {
      "ref": "",
-     "title": "Lossy compression II: direct and converse parts of main result",
-     "zh": "有损压缩（二）：主要结果的直接部分与逆定理"
+     "title": "Weight enumerator function",
+     "zh": "重量枚举函数"
+    },
+    {
+     "ref": "",
+     "title": "Perfect codes",
+     "zh": "完美码"
+    },
+    {
+     "ref": "",
+     "title": "Perfectness is unattainable -- first proof",
+     "zh": "完美性不可达：第一个证明"
+    },
+    {
+     "ref": "",
+     "title": "Berlekamp's bats",
+     "zh": "Berlekamp 的蝙蝠"
+    },
+    {
+     "ref": "",
+     "title": "Concatenation",
+     "zh": "级联"
+    },
+    {
+     "ref": "",
+     "title": "Distance isn't everything",
+     "zh": "距离不是一切"
+    },
+    {
+     "ref": "",
+     "title": "The union bound",
+     "zh": "并界"
     }
    ]
   }
@@ -166,66 +461,87 @@
   {
    "topic": "熵",
    "refs": [
-    "A:1",
-    "A:2.4",
+    "A:2.1",
+    "A:2.2",
     "A:2.5",
-    "A:2.7"
-   ]
+    "A:2.6",
+    "A:8.1"
+   ],
+   "note": "A:2.1 定义熵，2.2 联合熵与条件熵，2.5 链式法则，2.6 Jensen 不等式及其推论；A:8.1 把熵推广到连续情形（微分熵）。"
   },
   {
    "topic": "互信息",
    "refs": [
+    "A:2.3",
     "A:2.4",
-    "A:8"
+    "A:2.8",
+    "A:8.5"
    ],
-   "note": "A 把互信息与联合熵、条件熵、相对熵一起放在 2.4“熵及相关函数”里定义，第 8 章再用相依随机变量展开并给出数据处理等内容。"
+   "note": "A:2.3 定义互信息，2.4 给熵与互信息的关系，2.8 数据处理不等式；A:8.5 是连续情形下的互信息。"
   },
   {
    "topic": "KL散度",
    "refs": [
-    "A:2.6",
-    "A:2.4"
+    "A:2.3",
+    "A:8.5",
+    "A:2.7"
    ],
-   "note": "A 称 relative entropy（相对熵），在 2.4 给出定义、2.6 用 Gibbs 不等式证明其非负性。"
+   "note": "A 称 relative entropy（相对熵，即 KL 散度），2.3 给定义与互信息的关系，2.7 的对数求和不等式用于证明其非负性，8.5 是连续版本。"
   },
   {
    "topic": "信源编码",
    "refs": [
-    "A:4",
-    "A:5"
-   ]
+    "A:3.2",
+    "A:5.1",
+    "A:5.2",
+    "A:5.4",
+    "A:5.6",
+    "A:5.8"
+   ],
+   "note": "A:3.2 由 AEP 得到信源编码定理的可达方向，第 5 章讲符号码（Kraft 不等式、最优码长界、Huffman 码及其最优性、Shannon–Fano–Elias）。"
   },
   {
    "topic": "信道编码",
    "refs": [
-    "A:9",
-    "A:10",
-    "A:11",
-    "A:13"
-   ]
+    "A:7.7",
+    "A:7.9",
+    "A:7.11",
+    "A:7.13",
+    "B:11",
+    "B:13"
+   ],
+   "note": "A:7.7 信道编码定理（可达性），7.9 逆定理（Fano 不等式），7.11 Hamming 码，7.13 信源–信道分离定理；B 的第 11、13 章补实用纠错码的能力与二元码的构造性内容（距离、重量枚举、完美码、级联、并界）。"
   },
   {
    "topic": "容量",
    "refs": [
-    "A:1.3",
-    "A:9",
-    "A:10"
-   ]
+    "A:7.1",
+    "A:7.2",
+    "A:7.3",
+    "A:7.5",
+    "A:9.3",
+    "A:10.8"
+   ],
+   "note": "A 第 7 章：容量的例子（无噪二元信道、BSC、BEC 等）、对称信道、容量的性质与定义；9.3 带限信道的容量；10.8 容量与率失真函数的计算（Blahut–Arimoto 算法）。"
   },
   {
    "topic": "率失真",
    "refs": [
-    "B:#1"
+    "A:10",
+    "A:10.3",
+    "A:10.4",
+    "A:10.5",
+    "A:10.7"
    ],
-   "note": "A 全书没有有损压缩/率失真章节，这一项完全靠 B 补。"
+   "note": "A 第 10 章整章：量化、定义、率失真函数的计算（二元源、高斯源）、逆定理与可达性、刻画。"
   }
  ],
- "omitted": "A 的目录只有章级标题，本导览图对第 1、2 章下到节（能从原书正文读到节标题），第 4、5、8、9、10、11、13 章只到章。A 未收的章：第 3 章（More about Inference）、第 6 章（流码）、第 7 章（整数编码）、第 12 章（散列码）、第 14 章（好线性码存在性）、第 15 章（信息论习题集）、第 16–19 章（消息传递、受限无噪信道、密码分析、进化）以及第四至第六部分（推断与学习算法、神经网络、稀疏图码），它们或属推断/机器学习，或属研究生层次的编码专题，与节点简介的六项知识点不是同一条主线。B 只取有损压缩与率失真两讲，其余讲次（信道编码可达性、联合信源信道编码、方法型、量子/区块链专题）与节点重复或无关，未收。",
- "notes": "A 是节点“现有英文学习资源”指向的 MacKay 书；toc_urls 用的是作者主页上的官方整书 PDF（书内页 iii–iv 的 Contents 只到章级，节标题取自各章正文开头的节标题）。B 的课程目录页把 2019 年的课程与 2018 年的课次都列了出来，本导览图用的是 2018 年那份逐讲清单里的两讲，因为 2019 年的课表把有损压缩合并进了 Lecture 11/12。",
+ "omitted": "A（Cover & Thomas）未收第 1 章（Introduction and Preview）、第 4 章（Entropy Rates of a Stochastic Process）、第 6 章（Gambling and Data Compression）、第 11 章（Information Theory and Statistics）、第 12 章（Maximum Entropy）、第 13 章（Universal Simulation）、第 14 章（Kolmogorov Complexity）、第 15 章（Network Information Theory）、第 16 章（Portfolio Theory）、第 17 章（Inequalities in Information Theory），以及各章 Summary/Problems/Historical Notes 与 7.1.1–7.1.5、10.3.1–10.3.3 这类小节；未收章与节点简介的六项知识点关系较远或是专题延伸。B（MacKay）只收第 1、11、13 章（其余章属推断/机器学习或与 A 重复），章末 Summary、Further reading、Exercises、Solutions 未收。",
+ "notes": "第一轮：A 是 MacKay 的整书 PDF，按章收录，只有第 1、2 章补到了节；B 是 Stanford EE 376A 的课程目录（两讲补率失真）。本轮先试办法 1：MacKay 的官方整书 PDF 用研究工具只能读到前 60 页（工具对 PDF 有 60 页上限），第 4 章以后的节标题读不到；作者站上的 LaTeX 源码（itprnn/booktext.txt）虽有 \\section 标题但那是 2001 年草稿、章标题与节序列与成书不一致（例如第 1 章第一节源码写作 “Communication over noisy channels”，成书是 “How can we achieve perfect communication…”），无法据此还原节号，不采用。于是走办法 2：把 Cover & Thomas《Elements of Information Theory》(2nd ed) 作为新主来源 A（目录抄自 Wiley 官方前置页 PDF，章 → 节编号完整，也是节点“先修证据”里 EE 376A 用的教材），MacKay 降为 B，只留 A 没有细讲的第 1、11、13 章（编码构造与真实信道，标题抄自作者官方 PDF/文本，原书的节号读不到，故 ref 留空）。原来的 B（EE 376A 的率失真两讲）已被 A 第 10 章整章覆盖，已删。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 21,
-  "fuzzy": 1,
+  "exact": 79,
+  "fuzzy": 0,
   "dropped": []
  }
 }

@@ -4,144 +4,308 @@
   {
    "key": "A",
    "kind": "book",
-   "title": "Biomedical Informatics: Computer Applications in Health Care and Biomedicine",
-   "by": "Edward H. Shortliffe, James J. Cimino (eds.)",
-   "year": 2021,
-   "url": "https://link.springer.com/book/10.1007/978-3-030-58721-5",
+   "title": "Health Information Systems: Technological and Management Perspectives (Third Edition)",
+   "by": "Alfred Winter, Elske Ammenwerth, Reinhold Haux, Michael Marschollek, Bianca Steiner, Franziska Jahn",
+   "year": 2023,
+   "url": "https://library.oapen.org/bitstream/id/5f31db6d-5945-49ad-ac3a-78cb2037af5b/978-3-031-12310-8.pdf",
    "toc_urls": [
-    "https://link.springer.com/book/10.1007/978-3-030-58721-5",
-    "https://link.springer.com/book/10.1007/978-3-030-58721-5?page=2"
+    "https://library.oapen.org/bitstream/id/5f31db6d-5945-49ad-ac3a-78cb2037af5b/978-3-031-12310-8.pdf"
    ],
-   "why": "生物医学信息学的标准教科书（第 5 版，Springer 出版），章目正好分成临床数据、医疗信息系统、临床决策支持、评价四块，与节点简介一一对应。"
+   "why": "Springer《Health Informatics》丛书里的标准教材第三版，作者团队同时是国际医学信息学联合会（IMIA）推荐教材的作者；OAPEN 开放获取（CC-BY），官方 PDF 的目录带完整编号（章→节→小节），临床数据的层级、信息系统架构与集成标准、管理与质量评价各有专章，正对节点的临床数据、医疗信息系统、决策支持与评价。"
   },
   {
    "key": "B",
    "kind": "course",
    "title": "HST.951J Medical Decision Support",
-   "by": "MIT OpenCourseWare (Isaac Kohane, Lucila Ohno-Machado, Peter Szolovits, Staal Vinterbo)",
+   "by": "MIT OpenCourseWare（Harvard-MIT Health Sciences and Technology）",
    "year": 2003,
-   "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/pages/syllabus/",
+   "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/",
    "toc_urls": [
     "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/pages/calendar/"
    ],
-   "why": "补决策支持与模型评价的细粒度（主来源只有章级）：贝叶斯网络、分类树、预测模型评价两讲，正是节点里“决策支持和评价”要落到的具体方法。"
+   "why": "补“决策支持”的方法层：主来源只在应用系统类型里带过决策支持，这门课按讲次给出贝叶斯推理、分类树、人工神经网络、预测模型评价等主题。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "",
-   "title": "Biomedical Informatics: The Science and the Pragmatics",
-   "zh": "生物医学信息学：科学与实践",
-   "items": []
+   "ref": "2",
+   "title": "Basic Concepts and Terms",
+   "zh": "基本概念与术语",
+   "items": [
+    {
+     "ref": "2.2",
+     "title": "Data, Information, and Knowledge",
+     "zh": "数据、信息与知识"
+    },
+    {
+     "ref": "2.3",
+     "title": "Health care Settings",
+     "zh": "医疗照护场景"
+    },
+    {
+     "ref": "2.5",
+     "title": "Information Systems",
+     "zh": "信息系统"
+    },
+    {
+     "ref": "2.6",
+     "title": "Health Information Systems",
+     "zh": "健康信息系统"
+    },
+    {
+     "ref": "2.7",
+     "title": "Information Logistics in Health Information Systems",
+     "zh": "健康信息系统中的信息后勤"
+    },
+    {
+     "ref": "2.8",
+     "title": "Functions, Processes, and Entity Types in Health care Settings",
+     "zh": "医疗场景中的功能、过程与实体类型"
+    },
+    {
+     "ref": "2.9",
+     "title": "Application Systems, Services, and Physical Data Processing Systems in Health Information Systems",
+     "zh": "健康信息系统中的应用系统、服务与物理数据处理系统"
+    },
+    {
+     "ref": "2.10",
+     "title": "Electronic Health Records as a Part of Health Information Systems",
+     "zh": "作为健康信息系统一部分的电子健康记录"
+    },
+    {
+     "ref": "2.11",
+     "title": "Architecture and Infrastructure of Health Information Systems",
+     "zh": "健康信息系统的体系结构与基础设施"
+    },
+    {
+     "ref": "2.12",
+     "title": "Management of Information Systems",
+     "zh": "信息系统的管理"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "",
-   "title": "Biomedical Data: Their Acquisition, Storage, and Use",
-   "zh": "生物医学数据：获取、存储与使用",
-   "items": []
+   "ref": "3",
+   "title": "Technological Perspective: Architecture, Integration, and Standards",
+   "zh": "技术视角：体系结构、集成与标准",
+   "items": [
+    {
+     "ref": "3.2",
+     "title": "Domain Layer: Data to be Processed and Provided",
+     "zh": "领域层：待处理与待提供的数据"
+    },
+    {
+     "ref": "3.3",
+     "title": "Domain Layer: Functions to Be Supported",
+     "zh": "领域层：需要被支持的功能"
+    },
+    {
+     "ref": "3.4",
+     "title": "Logical Tool Layer: Types of Application Systems in Health care Facilities",
+     "zh": "逻辑工具层：医疗机构中的应用系统类型"
+    },
+    {
+     "ref": "3.5",
+     "title": "Logical Tool Layer: Data Integrity",
+     "zh": "逻辑工具层：数据完整性"
+    },
+    {
+     "ref": "3.6",
+     "title": "Logical Tool Layer: Architectural Styles",
+     "zh": "逻辑工具层：体系结构风格"
+    },
+    {
+     "ref": "3.7",
+     "title": "Logical Tool Layer: Interoperability and Standards",
+     "zh": "逻辑工具层：互操作与标准"
+    },
+    {
+     "ref": "3.8",
+     "title": "Logical Tool Layer: Types of Integration",
+     "zh": "逻辑工具层：集成的类型"
+    },
+    {
+     "ref": "3.9",
+     "title": "Logical Tool Layer: Integration Technologies and Tools",
+     "zh": "逻辑工具层：集成技术与工具"
+    },
+    {
+     "ref": "3.10",
+     "title": "Physical Tool Layer",
+     "zh": "物理工具层"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "",
-   "title": "Biomedical Decision Making: Probabilistic Clinical Reasoning",
-   "zh": "生物医学决策：概率临床推理",
-   "items": []
+   "ref": "4",
+   "title": "Management Perspective: Scopes and Tasks of Managing Health Information Systems",
+   "zh": "管理视角：健康信息系统管理的范围与任务",
+   "items": [
+    {
+     "ref": "4.2",
+     "title": "Dimensions of Managing Health Information Systems",
+     "zh": "健康信息系统管理的维度"
+    },
+    {
+     "ref": "4.3",
+     "title": "Strategic Management of Information Systems",
+     "zh": "信息系统的战略管理"
+    },
+    {
+     "ref": "4.4",
+     "title": "Tactical Management of Information Systems",
+     "zh": "信息系统的战术管理"
+    },
+    {
+     "ref": "4.5",
+     "title": "Operational Management of Information Systems",
+     "zh": "信息系统的运营管理"
+    },
+    {
+     "ref": "4.6",
+     "title": "Organizational Structures for the Management of Health Information Systems",
+     "zh": "健康信息系统管理的组织结构"
+    },
+    {
+     "ref": "4.7",
+     "title": "Balance as a Challenge for the Management of Health Information Systems",
+     "zh": "平衡：健康信息系统管理中的挑战"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "",
-   "title": "Standards in Biomedical Informatics",
-   "zh": "生物医学信息学中的标准",
-   "items": []
+   "ref": "5",
+   "title": "Quality of Health Information Systems",
+   "zh": "健康信息系统的质量",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Quality of Management of Information Systems",
+     "zh": "信息系统管理的质量"
+    },
+    {
+     "ref": "5.3",
+     "title": "Quality of Architectures and Infrastructures",
+     "zh": "体系结构与基础设施的质量"
+    },
+    {
+     "ref": "5.4",
+     "title": "Evaluating the Quality of Health Information Systems",
+     "zh": "健康信息系统质量的评价"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "",
-   "title": "Human-Computer Interaction, Usability, and Workflow",
-   "zh": "人机交互、可用性与工作流",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Evaluation of Biomedical and Health Information Resources",
-   "zh": "生物医学与健康信息资源的评价",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Electronic Health Records",
-   "zh": "电子健康记录",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Health Information Infrastructure",
-   "zh": "健康信息基础设施",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Management of Information in Health Care Organizations",
-   "zh": "医疗机构中的信息管理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Clinical Decision-Support Systems",
-   "zh": "临床决策支持系统",
-   "items": []
+   "ref": "6",
+   "title": "Information Systems for Specific Health Care and Research Settings",
+   "zh": "面向特定医疗与研究场景的信息系统",
+   "items": [
+    {
+     "ref": "6.2",
+     "title": "Information Systems in Hospitals",
+     "zh": "医院信息系统"
+    },
+    {
+     "ref": "6.3",
+     "title": "Information Systems in Nursing Homes",
+     "zh": "养老机构信息系统"
+    },
+    {
+     "ref": "6.4",
+     "title": "Information Systems in Medical Offices",
+     "zh": "诊所信息系统"
+    },
+    {
+     "ref": "6.5",
+     "title": "Information Systems in Ambulatory Nursing Organizations",
+     "zh": "门诊护理机构信息系统"
+    },
+    {
+     "ref": "6.6",
+     "title": "Information Systems in Medical Research Facilities",
+     "zh": "医学研究机构信息系统"
+    },
+    {
+     "ref": "6.7",
+     "title": "Information Systems in Other Health care Settings",
+     "zh": "其他医疗场景的信息系统"
+    },
+    {
+     "ref": "6.8",
+     "title": "Information Systems in Personal Environments",
+     "zh": "个人环境中的信息系统"
+    },
+    {
+     "ref": "6.9",
+     "title": "Information Systems in States and Regions",
+     "zh": "州与区域层面的信息系统"
+    },
+    {
+     "ref": "6.10",
+     "title": "Life Situations and Their Consequences for Orchestrating Services in Transinstitutional Health Information Systems",
+     "zh": "生活情境及其对跨机构健康信息系统服务编排的影响"
+    }
+   ]
   },
   {
    "src": "B",
    "ref": "",
    "title": "Medical Decision Support",
    "zh": "医疗决策支持",
-   "fill": "补“决策支持和评价”的方法层：主来源只有章名，这里给出推理（贝叶斯网络）、分类建模与预测模型评价的逐讲主题。",
+   "fill": "补“决策支持”的方法层：主来源只在应用系统的类型与功能层提到决策支持，这里给出概率推理、贝叶斯网络、分类与预测建模、预测模型的评价等逐讲主题，以及决策支持在临床科室的落地案例。",
    "items": [
     {
-     "ref": "Lecture 1",
+     "ref": "1",
      "title": "Introduction to Medical Decision Support",
      "zh": "医疗决策支持导论"
     },
     {
-     "ref": "Lecture 2",
+     "ref": "2",
      "title": "Simple Probabilistic Reasoning",
-     "zh": "简单概率推理"
+     "zh": "简单的概率推理"
     },
     {
-     "ref": "Lecture 5",
+     "ref": "5",
      "title": "Bayesian Networks - Part 1: Representation & Reasoning",
-     "zh": "贝叶斯网络（一）：表示与推理"
+     "zh": "贝叶斯网络 I：表示与推理"
     },
     {
-     "ref": "Lecture 6",
+     "ref": "6",
      "title": "Bayesian Networks - Part 2: Learning From Data",
-     "zh": "贝叶斯网络（二）：从数据学习"
+     "zh": "贝叶斯网络 II：从数据学习"
     },
     {
-     "ref": "Lecture 10",
+     "ref": "10",
      "title": "Classification Trees & CART",
      "zh": "分类树与 CART"
     },
     {
-     "ref": "Lecture 13",
+     "ref": "11",
+     "title": "Artificial Neural Networks",
+     "zh": "人工神经网络"
+    },
+    {
+     "ref": "12",
+     "title": "Support Vector Machines",
+     "zh": "支持向量机"
+    },
+    {
+     "ref": "13",
      "title": "Evaluation of Predictive Models - Part 1",
-     "zh": "预测模型的评价（一）"
+     "zh": "预测模型的评价 I"
     },
     {
-     "ref": "Lecture 14",
+     "ref": "14",
      "title": "Evaluation of Predictive Models - Part 2",
-     "zh": "预测模型的评价（二）"
+     "zh": "预测模型的评价 II"
     },
     {
-     "ref": "Lecture 19",
+     "ref": "19",
      "title": "Applied Informatics in Cardiology",
      "zh": "心脏病学中的应用信息学"
     }
@@ -152,55 +316,56 @@
   {
    "topic": "临床数据",
    "refs": [
-    "A:#2",
-    "A:#7",
-    "A:#3"
-   ],
-   "note": "数据的获取/存储/使用、EHR 里的临床数据、以及从数据到概率临床推理。"
+    "A:3",
+    "A:3.2",
+    "A:2.8",
+    "A:2.9"
+   ]
   },
   {
    "topic": "医疗信息系统",
    "refs": [
-    "A:#6",
-    "A:#7",
-    "A:#8",
-    "A:#9",
-    "A:#4",
-    "A:#5"
-   ],
-   "note": "EHR、健康信息基础设施、机构信息管理三章讲系统本身，标准一章讲互操作，HCI 一章讲系统落地时的可用性与工作流。"
+    "A:2",
+    "A:2.6",
+    "A:2.10",
+    "A:2.11",
+    "A:3",
+    "A:6"
+   ]
   },
   {
    "topic": "决策支持",
    "refs": [
-    "A:#10",
-    "A:#3",
-    "B:Lecture 5",
-    "B:Lecture 6",
-    "B:Lecture 10"
-   ],
-   "note": "CDSS 一章给系统与知识表示，概率临床推理一章给决策分析（决策树、效用、敏感性分析），B 补贝叶斯网络与分类树的具体建模。"
+    "A:3.4",
+    "B:#1",
+    "B:5",
+    "B:10"
+   ]
   },
   {
    "topic": "评价",
    "refs": [
-    "A:#6",
-    "B:Lecture 13",
-    "B:Lecture 14"
-   ],
-   "note": "A 的 Evaluation 章给研究设计与评价框架，B 的两讲给预测模型的判别度、校准与验证方法。"
+    "A:5",
+    "A:5.3",
+    "A:5.4",
+    "B:13",
+    "B:14"
+   ]
   },
   {
-   "topic": "医学与临床流程",
-   "refs": [],
-   "note": "节点声明这是外部前置（医学与临床流程），主来源只把它当作背景，没有专门章节介绍临床流程本身；A 的 HCI/工作流章和 B 的心脏病学应用讲只在系统侧涉及流程。"
+   "topic": "外部前置（医学与临床流程）",
+   "refs": [
+    "A:2.3",
+    "A:2.8"
+   ],
+   "note": "本书第 2 章给出医疗机构的功能、过程与生活情境，可作为“医学与临床流程”这类外部前置的最小背景；系统的医学知识本身不在本节点范围内。"
   }
  ],
- "omitted": "收的是与临床数据、信息系统、决策支持、评价对应的章。未收：Cognitive Informatics、Software Engineering for Health Care and Biomedicine、Natural Language Processing for Health-Related Texts、Bioinformatics、Biomedical Imaging Informatics、Personal Health Informatics、Ethics（偏专项与伦理）、Information Retrieval（检索与 CDSS 的知识来源重合）、Population and Public Health Informatics、mHealth and Applications、Telemedicine and Telehealth、Patient Monitoring Systems、Imaging Systems in Radiology、Digital Technology in Health Science Education、Translational Bioinformatics、Clinical Research Informatics、Precision Medicine and Informatics、Health Information Technology Policy、The Future of Informatics in Biomedicine 以及两处 Front/Back Matter（各为其他应用方向、政策展望或索引附录）。B 里未收第 3、4、7、8、9、11、15、16、17、18、20 讲（模糊集、logistic 回归、无监督学习、神经网络、优化复杂度、复习课与课堂报告），与四个知识点关系较弱。",
- "notes": "Springer 目录页不印章号，故 ref 一律留空，coverage 用 A:#n 指分支序号（#1 起，按本文件 outline 里 A 分支的顺序）。A 的目录分两页（第 1、2 页），两条 toc_url 都读过。",
+ "omitted": "主来源未收的章与节：第 1 章（导论：生活情境与利益相关者需求）、第 2.13–2.14 节（信息系统建模与 3LGM2 元模型）、第 3.11 节与第 4.8、5.5、6.11 节的示例、各章末的 Exercises（2.15/2.16、3.12、4.9、5.6、6.12）、参考文献与索引；第 6.1 节 Introduction 与各节的 x.1 小节（如 6.2.1 医院特征）也略去，只保留该层的主干小节。MIT HST.951J 只收了 8 个讲次，课程页上的 Readings、Assignments、Projects 不是目录内容。",
+ "notes": "第二轮按 deepen 说明第 2 种做法处理：主来源从 Biomedical Informatics（第 5 版，只有章名、出版社公开的前置页也没有节标题）换成同样出自 Springer《Health Informatics》丛书、但开放获取且目录带编号的《Health Information Systems》第三版，这样每个分支都有节。原主来源的章级目录不再保留（它的话题已被新主来源与 HST.951J 覆盖）；若主代理还需要那本书，可作为“进一步阅读”单独列在技能树资源里。HST.951J 的讲次标题照课程 Calendar 页抄，该页讲次没有讲内小节，故这 8 条是课程级的主题而非节标题；若要求这一支也到节一层，需要改用有讲义的来源。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 19,
+  "exact": 53,
   "fuzzy": 0,
   "dropped": []
  }

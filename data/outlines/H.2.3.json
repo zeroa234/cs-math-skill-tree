@@ -3,6 +3,18 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Digital Systems Design with FPGAs and CPLDs",
+   "by": "Ian Grout",
+   "year": 2008,
+   "url": "https://catdir.loc.gov/catdir/toc/ecip083/2007044907.html",
+   "toc_urls": [
+    "https://catdir.loc.gov/catdir/toc/ecip083/2007044907.html"
+   ],
+   "why": "节点简介的六块里，原理图之外的布局布线/供电/电磁兼容/制造约束都能在这本教材里找到章→节结构：第 3 章 PCB Design 讲 PCB 结构与设计、制造、测试、环保法规（含电磁兼容），第 2 章 Electronic Systems Design 讲板级的复位、时钟、电源、电源管理与 I/O 电平/噪声容限。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "The Art and Science of PCB Design (MIT IAP 6.S092 / EC.S03)",
    "by": "MIT (course staff), pcb.mit.edu",
@@ -12,10 +24,10 @@
     "https://pcb.mit.edu/schedule/",
     "https://pcb.mit.edu/syllabus/"
    ],
-   "why": "节点“现有英文学习资源”里的那门课，官方 Schedule 页逐次列出讲次与实验主题：系统设计 → 基本元件 → 电气拓扑 → 布局（两轮）→ 高级布局（大功率 / 高速）→ 制造装配调试 → 案例研究，实验里另有原理图与 SPICE 仿真，覆盖原理图、布局布线、供电与制造约束；本科层级，适配 D2–D3。"
+   "why": "补现代 ECAD 实操流程：从原理图录入（Lab 01）、基础元件、电路拓扑，到布局入门、大功率与高速布局、制造/装配/调试——这是 A 的教材章节里没有的工具与流程视角。"
   },
   {
-   "key": "B",
+   "key": "C",
    "kind": "course",
    "title": "Printed Circuit Board Design for Signal Integrity and EMC Compliance (EMBD.X409)",
    "by": "UCSC Silicon Valley Extension (University of California, Santa Cruz)",
@@ -24,227 +36,324 @@
    "toc_urls": [
     "https://www.ucsc-extension.edu/courses/printed-circuit-board-design-signal-integrity-and-emc-compliance"
    ],
-   "why": "补“信号完整性、电磁兼容、供电（电源分配网络）”：MIT 那门课是 4 周 IAP 实操课，只把高速/大功率当作一次高级布局讲，没有专门的 EMC 与层叠、端接、PDN 目录；这份大学延伸课程的 Topics Include 清单正好逐条给出这些主题。"
+   "why": "补信号完整性与电磁兼容这一侧：课程说明逐条列出层叠分配、电源分配网络（旁路/去耦）、需要阻抗控制的传输线与布线、传输线端接、抑制与接地等主题，A 只在 3.4.5 用一小节点到电磁兼容。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "Lecture 01",
-   "title": "Introduction to System Design",
-   "zh": "系统设计导论",
-   "items": []
+   "ref": "3",
+   "title": "PCB Design",
+   "zh": "印制电路板设计",
+   "items": [
+    {
+     "ref": "3.2",
+     "title": "What is a PCB?",
+     "zh": "什么是 PCB",
+     "items": [
+      {
+       "ref": "3.2.1",
+       "title": "Definition",
+       "zh": "定义"
+      },
+      {
+       "ref": "3.2.2",
+       "title": "Structure of the PCB",
+       "zh": "PCB 的结构"
+      },
+      {
+       "ref": "3.2.3",
+       "title": "Typical Components",
+       "zh": "典型元件"
+      }
+     ]
+    },
+    {
+     "ref": "3.3",
+     "title": "Design, Manufacture and Test",
+     "zh": "设计、制造与测试",
+     "items": [
+      {
+       "ref": "3.3.1",
+       "title": "PCB Design",
+       "zh": "PCB 设计"
+      },
+      {
+       "ref": "3.3.2",
+       "title": "PCB Manufacture",
+       "zh": "PCB 制造"
+      },
+      {
+       "ref": "3.3.3",
+       "title": "PCB Test",
+       "zh": "PCB 测试"
+      }
+     ]
+    },
+    {
+     "ref": "3.4",
+     "title": "Environmental Issues",
+     "zh": "环境与法规问题",
+     "items": [
+      {
+       "ref": "3.4.5",
+       "title": "Electromagnetic Compatibility",
+       "zh": "电磁兼容"
+      }
+     ]
+    },
+    {
+     "ref": "3.5",
+     "title": "Case Study PCB Designs",
+     "zh": "PCB 设计案例"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 02",
-   "title": "Basic Components",
-   "zh": "基本元件",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 03",
-   "title": "Electrical Topologies Part 1/2",
-   "zh": "电气拓扑（1/2）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 04",
-   "title": "Electrical Topologies Part 2/2",
-   "zh": "电气拓扑（2/2）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lab 01",
-   "title": "Intro to ECAD: Schematic",
-   "zh": "ECAD 入门：原理图",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lab 02",
-   "title": "Intro to ECAD: SPICE",
-   "zh": "ECAD 入门：SPICE 仿真",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 05",
-   "title": "Introduction to Layout 1/2",
-   "zh": "布局导论（1/2）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 06",
-   "title": "Introduction to Layout 2/2",
-   "zh": "布局导论（2/2）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 07",
-   "title": "Advanced Layout: High Power (feat. Amanda Jackson)",
-   "zh": "高级布局：大功率（嘉宾 Amanda Jackson）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 08",
-   "title": "Advanced Layout: High-Speed",
-   "zh": "高级布局：高速",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 10",
-   "title": "Fabrication/Assembly/Debug",
-   "zh": "制造、装配与调试",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "Lecture 11",
-   "title": "PCB Case Study",
-   "zh": "PCB 案例研究",
-   "items": []
+   "ref": "2",
+   "title": "Electronic Systems Design",
+   "zh": "电子系统设计",
+   "items": [
+    {
+     "ref": "2.10",
+     "title": "Writing a Design Specification",
+     "zh": "编写设计规格说明"
+    },
+    {
+     "ref": "2.13",
+     "title": "Digital Input-Output",
+     "zh": "数字输入输出",
+     "items": [
+      {
+       "ref": "2.13.2",
+       "title": "Logic Level Definitions",
+       "zh": "逻辑电平的定义"
+      },
+      {
+       "ref": "2.13.3",
+       "title": "Noise Margin",
+       "zh": "噪声容限"
+      },
+      {
+       "ref": "2.13.4",
+       "title": "Interfacing Logic Families",
+       "zh": "逻辑门系列之间的互连"
+      }
+     ]
+    },
+    {
+     "ref": "2.14",
+     "title": "Parallel and Serial Interfacing",
+     "zh": "并行与串行接口",
+     "items": [
+      {
+       "ref": "2.14.2",
+       "title": "Parallel I/O",
+       "zh": "并行 I/O"
+      },
+      {
+       "ref": "2.14.3",
+       "title": "Serial I/O",
+       "zh": "串行 I/O"
+      }
+     ]
+    },
+    {
+     "ref": "2.15",
+     "title": "System Reset",
+     "zh": "系统复位"
+    },
+    {
+     "ref": "2.16",
+     "title": "System Clock",
+     "zh": "系统时钟"
+    },
+    {
+     "ref": "2.17",
+     "title": "Power Supplies",
+     "zh": "电源"
+    },
+    {
+     "ref": "2.18",
+     "title": "Power Management",
+     "zh": "电源管理"
+    },
+    {
+     "ref": "2.19",
+     "title": "Printed Circuit Boards and Multi-Chip Modules",
+     "zh": "印制电路板与多芯片模块"
+    }
+   ]
   },
   {
    "src": "B",
    "ref": "",
-   "title": "Fundamental concepts of signal integrity and EMC",
-   "zh": "信号完整性与 EMC 的基本概念",
-   "fill": "电磁兼容；信号完整性",
-   "items": []
+   "title": "Schedule (IAP 2026)",
+   "zh": "课程安排（IAP 2026）",
+   "fill": "原理图录入与工具流程：A 是教材式章节，没有 ECAD 操作与“原理图→仿真→布局→制板”的实际流程",
+   "items": [
+    {
+     "ref": "Lab 01",
+     "title": "Introduction to Electrical CAD: Schematic",
+     "zh": "电气 CAD 入门：原理图"
+    },
+    {
+     "ref": "Lecture 01",
+     "title": "Introduction to System Design",
+     "zh": "系统设计导论"
+    },
+    {
+     "ref": "Lecture 02",
+     "title": "Basic Components",
+     "zh": "基础元件"
+    },
+    {
+     "ref": "Lecture 03",
+     "title": "Electrical Topologies Part 1/2",
+     "zh": "电路拓扑（上）"
+    },
+    {
+     "ref": "Lecture 05",
+     "title": "Introduction to Layout 1/2",
+     "zh": "布局入门（上）"
+    },
+    {
+     "ref": "Lecture 06",
+     "title": "Introduction to Layout 2/2",
+     "zh": "布局入门（下）"
+    },
+    {
+     "ref": "Lecture 07",
+     "title": "Advanced Layout: High Power",
+     "zh": "高级布局：大功率"
+    },
+    {
+     "ref": "Lecture 08",
+     "title": "Advanced Layout: High-Speed",
+     "zh": "高级布局：高速"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "Fabrication/Assembly/Debug",
+     "zh": "制板、装配与调试"
+    }
+   ]
   },
   {
-   "src": "B",
+   "src": "C",
    "ref": "",
-   "title": "Material science related to construction of a printed circuit board",
-   "zh": "印制板构造相关的材料学",
-   "fill": "制造约束（板材与工艺）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Suppression and grounding",
-   "zh": "抑制与接地",
-   "fill": "电磁兼容；信号完整性",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Layer stackup assignments",
-   "zh": "层叠分配",
-   "fill": "布局布线（叠层规划）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Power distribution networks (bypassing/decoupling)",
-   "zh": "电源分配网络（旁路与去耦）",
-   "fill": "供电",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Transmission lines requiring impedance control and routing",
-   "zh": "需要阻抗控制的传输线与布线",
-   "fill": "信号完整性",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Transmission line termination",
-   "zh": "传输线端接",
-   "fill": "信号完整性",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Interconnects and I/O",
-   "zh": "互连与 I/O",
-   "fill": "信号完整性",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Backplanes and large busses",
-   "zh": "背板与大规模总线",
-   "fill": "信号完整性（板级互连）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Miscellaneous design techniques and concepts",
-   "zh": "其他设计技术与概念",
-   "fill": "布局布线的工程经验",
-   "items": []
+   "title": "Printed Circuit Board Design for Signal Integrity and EMC Compliance",
+   "zh": "面向信号完整性与 EMC 合规的 PCB 设计",
+   "fill": "信号完整性与电磁兼容：A 只有 3.4.5 一小节，B 只有一讲“高级布局：高速”",
+   "items": [
+    {
+     "ref": "",
+     "title": "Fundamental concepts of signal integrity and EMC",
+     "zh": "信号完整性与 EMC 的基本概念"
+    },
+    {
+     "ref": "",
+     "title": "Material science related to construction of a printed circuit board",
+     "zh": "与印制板构造相关的材料学"
+    },
+    {
+     "ref": "",
+     "title": "Suppression and grounding",
+     "zh": "抑制与接地"
+    },
+    {
+     "ref": "",
+     "title": "Layer stackup assignments",
+     "zh": "层叠分配"
+    },
+    {
+     "ref": "",
+     "title": "Power distribution networks (bypassing/decoupling)",
+     "zh": "电源分配网络（旁路与去耦）"
+    },
+    {
+     "ref": "",
+     "title": "Transmission lines requiring impedance control and routing",
+     "zh": "需要阻抗控制的传输线与布线"
+    },
+    {
+     "ref": "",
+     "title": "Transmission line termination",
+     "zh": "传输线端接"
+    },
+    {
+     "ref": "",
+     "title": "Interconnects and I/O",
+     "zh": "互连与 I/O"
+    },
+    {
+     "ref": "",
+     "title": "Backplanes and large busses",
+     "zh": "背板与大规模总线"
+    },
+    {
+     "ref": "",
+     "title": "Miscellaneous design techniques and concepts",
+     "zh": "其他设计技术与概念"
+    }
+   ]
   }
  ],
  "coverage": [
   {
    "topic": "原理图",
    "refs": [
-    "A:Lab 01"
-   ]
+    "B:Lab 01",
+    "B:Lecture 01"
+   ],
+   "note": "A 没有原理图录入的章节（它把“PCB 设计”压成 3.3.1 一节），原理图这一块只能靠 MIT IAP 的实验与导论课。"
   },
   {
    "topic": "布局布线",
    "refs": [
-    "A:Lecture 05",
-    "A:Lecture 06",
-    "B:#4"
+    "A:3.3.1",
+    "B:Lecture 05",
+    "B:Lecture 06",
+    "B:Lecture 07"
    ]
   },
   {
    "topic": "供电",
    "refs": [
-    "A:Lecture 07",
-    "B:#5"
+    "A:2.17",
+    "A:2.18",
+    "C:#1"
    ]
   },
   {
    "topic": "信号完整性",
    "refs": [
-    "A:Lecture 08",
-    "B:#6",
-    "B:#7",
-    "B:#8"
+    "C:#1",
+    "B:Lecture 08"
    ]
   },
   {
    "topic": "电磁兼容",
    "refs": [
-    "B:#1",
-    "B:#3"
-   ],
-   "note": "MIT 的 IAP 课只把高速布局当一次讲座，没有 EMC 专章；EMC 的条目全部来自 UCSC Extension 课程的 Topics 清单。"
+    "A:3.4.5",
+    "C:#1"
+   ]
   },
   {
    "topic": "制造约束",
    "refs": [
-    "A:Lecture 10",
-    "B:#2"
+    "A:3.3.2",
+    "A:3.3.3",
+    "B:Lecture 10"
    ]
   }
  ],
- "omitted": "A 未收 Lecture 09（课程站点上该日只有积雪停课，无主题）、Lab 03/04（项目设计）、Lab 05/06（布局实操，与 Lecture 05/06 重复）、Lab 07/08（项目搭建与调试）以及各次 Recitation（符号与封装创建等），这些是课程安排与重复练习，不是新的知识分支；B 只收 Topics Include 的主题清单，没收入学要求、学习产出、授课日程等页面内容。",
- "notes": "A目录抄自 pcb.mit.edu 的 Schedule（IAP 2026）页，讲次标题取“Topics:”行原文；Lab 01/02 两个实验是原理图与 SPICE 仿真唯一的正式条目，所以作为分支收入。B 是课程页面上的 Topics Include 清单，没有章号也没有小节，故每条单独成一支、ref 留空；这份材料是大学延伸课程的公开课程说明，主题层级不如教材目录细，主代理若认为权威性不足可只保留 A 的 12 支。",
+ "omitted": "A 只收第 3 章与第 2 章的板级相关小节：第 2 章的 2.1–2.9、2.11–2.12、2.20–2.26（流程管理、框图、协同设计、UML、数据手册、封装、认证等）与板级电气约束关系较远；第 3 章的 3.4.1–3.4.4（WEEE/RoHS/无铅焊料）是环保法规细节，未收；第 1 章（可编程逻辑器件）、第 4 章（设计语言）、第 5–8 章（逻辑设计、VHDL、DSP、接口转换）不属于 PCB 节点。B 只收 8 条与设计流程直接相关的讲次/实验，Lab 02（SPICE 仿真）与 Lab 03–08 的重复项目课未收；Recitation、Quiz、Office Hours 等管理性条目也未收。",
+ "notes": "本轮换源：MIT IAP 的 Schedule 页每讲只有一条“Topics:”行（一课一题，没有讲内小节），按“换一本标准教材”的做法把主来源换成 Grout 的《Digital Systems Design with FPGAs and CPLDs》，取它的第 3 章 PCB Design 与第 2 章的板级小节作为 A（真正的章→节→小节）。MIT 的课程安排不再一讲一支，而是收成一个分支、每讲（含 Lab 01）作为 items，这样导览图的两层结构完整；UCSC 那门的 Topics Include 清单同样收成一个分支 + 10 条 items。A 的目录抄自 Library of Congress 书目页上由出版社提供的目录数据（原文把章节号与标题分成两行，已合并为“号 + 标题”）。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 22,
+  "exact": 47,
   "fuzzy": 0,
   "dropped": []
  }

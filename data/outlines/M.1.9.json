@@ -3,6 +3,18 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "A First Course in Wavelets with Fourier Analysis, 2nd Edition",
+   "by": "Albert Boggess, Francis J. Narcowich",
+   "year": 2009,
+   "url": "https://www.wiley.com/en-gb/a-first-course-in-wavelets-with-fourier-analysis-2nd-edition-p-9781118211151",
+   "toc_urls": [
+    "https://media.wiley.com/product_data/excerpt/72/04704311/0470431172-1.pdf"
+   ],
+   "why": "本科层次的傅里叶分析 + 小波标准教材，Wiley 官方提供的前置页 PDF 含完整目录（章 → 节 → 小节）：内积空间与 L2、傅里叶级数及其收敛定理、傅里叶变换与采样/不确定性原理、DFT 与 FFT、Haar 小波、多分辨率分析、Daubechies 小波、小波变换，正好覆盖节点的傅里叶级数/变换、频域表示、小波与函数空间。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "Fourier Analysis (18.103)",
    "by": "David Jerison, MIT OpenCourseWare",
@@ -11,19 +23,7 @@
    "toc_urls": [
     "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/"
    ],
-   "why": "节点“现有英文学习资源”就是这门课：MIT 官方开放课程，syllabus 里的 Calendar 是逐讲清单（第 6 讲起是 Lebesgue 空间、Hilbert 空间、傅里叶级数及其收敛、应用、傅里叶积分、测度的傅里叶积分与中心极限定理），函数空间 + 傅里叶级数/变换一条线排下来，导览图和“去哪学”是同一份材料。"
-  },
-  {
-   "key": "B",
-   "kind": "course",
-   "title": "Wavelets, Filter Banks and Applications (18.327)",
-   "by": "Gilbert Strang, Kevin Amaratunga, MIT OpenCourseWare",
-   "year": 2003,
-   "url": "https://ocw.mit.edu/courses/18-327-wavelets-filter-banks-and-applications-spring-2003/",
-   "toc_urls": [
-    "https://ocw.mit.edu/courses/18-327-wavelets-filter-banks-and-applications-spring-2003/pages/calendar/"
-   ],
-   "why": "补“小波”：18.103 不讲小波，MIT 18.327 的 Calendar 按每讲给出多分辨率分析、细化方程、正交/双正交小波基、Mallat 金字塔算法、消失矩与光滑性的具体主题。"
+   "why": "补函数空间与测度版本：A 只在 L2 内积空间层面谈函数空间，18.103 的 Lecture 6–7 是 Lebesgue 空间、Hilbert 空间与正交基，Lecture 11 是测度的傅里叶积分与中心极限定理——这些 A 没有。"
   },
   {
    "key": "C",
@@ -35,99 +35,257 @@
    "toc_urls": [
     "https://www.routledge.com/A-Course-in-Abstract-Harmonic-Analysis/Folland/p/book/9781498727136"
    ],
-   "why": "补“调和分析专题”：18.103 只到欧氏空间上的傅里叶积分，Folland 这本书的目录给出抽象调和分析的骨架（局部紧群与 Haar 测度、局部紧阿贝尔群上的对偶与傅里叶变换、紧群上的 Peter-Weyl 理论）。"
+   "why": "补“调和分析专题”：A 与 B 都只在欧氏空间/圆周上做傅里叶分析，Folland 的目录给出抽象调和分析的骨架（局部紧群与 Haar 测度、局部紧阿贝尔群上的对偶与傅里叶变换、紧群上的 Peter-Weyl 理论）。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "Lecture 6",
-   "title": "Lebesgue Spaces, Inner Products",
-   "zh": "Lebesgue 空间与内积",
-   "items": []
+   "ref": "0",
+   "title": "Inner Product Spaces",
+   "zh": "内积空间",
+   "items": [
+    {
+     "ref": "0.1",
+     "title": "Motivation",
+     "zh": "动机"
+    },
+    {
+     "ref": "0.2",
+     "title": "Definition of Inner Product",
+     "zh": "内积的定义"
+    },
+    {
+     "ref": "0.3",
+     "title": "The Spaces L2 and l2",
+     "zh": "L2 与 l2 空间"
+    },
+    {
+     "ref": "0.4",
+     "title": "Schwarz and Triangle Inequalities",
+     "zh": "Schwarz 不等式与三角不等式"
+    },
+    {
+     "ref": "0.5",
+     "title": "Orthogonality",
+     "zh": "正交性"
+    },
+    {
+     "ref": "0.6",
+     "title": "Linear Operators and Their Adjoints",
+     "zh": "线性算子及其伴随"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 7",
-   "title": "Hilbert Space, Midterm Review",
-   "zh": "Hilbert 空间（含期中复习）",
-   "items": []
+   "ref": "1",
+   "title": "Fourier Series",
+   "zh": "傅里叶级数",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "1.2",
+     "title": "Computation of Fourier Series",
+     "zh": "傅里叶系数的计算"
+    },
+    {
+     "ref": "1.3",
+     "title": "Convergence Theorems for Fourier Series",
+     "zh": "傅里叶级数的收敛定理"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 8",
-   "title": "Fourier Series and their Convergence",
-   "zh": "傅里叶级数及其收敛性",
-   "items": []
+   "ref": "2",
+   "title": "The Fourier Transform",
+   "zh": "傅里叶变换",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Informal Development of the Fourier Transform",
+     "zh": "傅里叶变换的非形式推导"
+    },
+    {
+     "ref": "2.2",
+     "title": "Properties of the Fourier Transform",
+     "zh": "傅里叶变换的性质"
+    },
+    {
+     "ref": "2.3",
+     "title": "Linear Filters",
+     "zh": "线性滤波器"
+    },
+    {
+     "ref": "2.4",
+     "title": "The Sampling Theorem",
+     "zh": "采样定理"
+    },
+    {
+     "ref": "2.5",
+     "title": "The Uncertainty Principle",
+     "zh": "不确定性原理"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 9",
-   "title": "Applications of Fourier Series",
-   "zh": "傅里叶级数的应用",
-   "items": []
+   "ref": "3",
+   "title": "Discrete Fourier Analysis",
+   "zh": "离散傅里叶分析",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "The Discrete Fourier Transform",
+     "zh": "离散傅里叶变换"
+    },
+    {
+     "ref": "3.2",
+     "title": "Discrete Signals",
+     "zh": "离散信号"
+    },
+    {
+     "ref": "3.3",
+     "title": "Discrete Signals & Matlab",
+     "zh": "离散信号与 MATLAB"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 10",
-   "title": "Fourier Integrals",
-   "zh": "傅里叶积分",
-   "items": []
+   "ref": "4",
+   "title": "Haar Wavelet Analysis",
+   "zh": "Haar 小波分析",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Why Wavelets?",
+     "zh": "为什么用小波"
+    },
+    {
+     "ref": "4.2",
+     "title": "Haar Wavelets",
+     "zh": "Haar 小波"
+    },
+    {
+     "ref": "4.3",
+     "title": "Haar Decomposition and Reconstruction Algorithms",
+     "zh": "Haar 分解与重构算法"
+    },
+    {
+     "ref": "4.4",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "Lecture 11",
-   "title": "Fourier Integrals of Measures, Central Limit Theorem",
-   "zh": "测度的傅里叶积分与中心极限定理",
-   "items": []
+   "ref": "5",
+   "title": "Multiresolution Analysis",
+   "zh": "多分辨率分析",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "The Multiresolution Framework",
+     "zh": "多分辨率框架"
+    },
+    {
+     "ref": "5.2",
+     "title": "Implementing Decomposition and Reconstruction",
+     "zh": "分解与重构的实现"
+    },
+    {
+     "ref": "5.3",
+     "title": "Fourier Transform Criteria",
+     "zh": "傅里叶变换判据"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "The Daubechies Wavelets",
+   "zh": "Daubechies 小波",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Daubechies’ Construction",
+     "zh": "Daubechies 小波的构造"
+    },
+    {
+     "ref": "6.2",
+     "title": "Classification, Moments, and Smoothness",
+     "zh": "分类、矩与光滑性"
+    },
+    {
+     "ref": "6.3",
+     "title": "Computational Issues",
+     "zh": "计算问题"
+    },
+    {
+     "ref": "6.4",
+     "title": "The Scaling Function at Dyadic Points",
+     "zh": "二进点处的尺度函数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Other Wavelet Topics",
+   "zh": "其他小波专题",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Computational Complexity",
+     "zh": "计算复杂度"
+    },
+    {
+     "ref": "7.2",
+     "title": "Wavelets in Higher Dimensions",
+     "zh": "高维小波"
+    },
+    {
+     "ref": "7.3",
+     "title": "Relating Decomposition and Reconstruction",
+     "zh": "分解与重构的关系"
+    },
+    {
+     "ref": "7.4",
+     "title": "Wavelet Transform",
+     "zh": "小波变换"
+    }
+   ]
   },
   {
    "src": "B",
-   "ref": "Session 9",
-   "title": "Multiresolution Analysis (MRA): Requirements for MRA; Nested Spaces and Complementary Spaces; Scaling Functions and Wavelets",
-   "zh": "多分辨率分析（MRA）：MRA 的要求；嵌套空间与互补空间；尺度函数与小波",
-   "fill": "小波（多分辨率分析）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "Session 10",
-   "title": "Refinement Equation: Interative and Recursive Solution Techniques; Infinite Product Formula; Filter Bank Approach for Computing Scaling Functions and Wavelets",
-   "zh": "细化方程：迭代与递推求解技巧；无穷乘积公式；用滤波器组计算尺度函数与小波",
-   "fill": "小波（尺度函数与细化方程）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "Session 12",
-   "title": "Orthogonal Wavelet Bases: Connection to Orthogonal Filters; Orthogonality in the Frequency Domain. Biorthogonal Wavelet Bases",
-   "zh": "正交小波基：与正交滤波器的联系；频域中的正交性；双正交小波基",
-   "fill": "小波（正交与双正交小波基）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "Session 13",
-   "title": "Mallat Pyramid Algorithm",
-   "zh": "Mallat 金字塔算法",
-   "fill": "小波（快速算法）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "Session 14",
-   "title": "Accuracy of Wavelet Approximations (Condition A); Vanishing Moments; Polynomial Cancellation in Filter Banks",
-   "zh": "小波逼近的精度（条件 A）；消失矩；滤波器组中的多项式消去",
-   "fill": "小波（逼近性质）",
-   "items": []
-  },
-  {
-   "src": "B",
-   "ref": "Session 15",
-   "title": "Smoothness of Wavelet Bases: Convergence of the Cascade Algorithm (Condition E); Splines. Bases vs. Frames",
-   "zh": "小波基的光滑性：级联算法的收敛性（条件 E）；样条；基与框架",
-   "fill": "小波（光滑性与框架）",
-   "items": []
+   "ref": "",
+   "title": "Topics",
+   "zh": "各讲主题",
+   "fill": "函数空间与测度版本的傅里叶变换：Lebesgue 空间与内积、Hilbert 空间与正交基、测度的傅里叶积分与中心极限定理（A 没有的内容）",
+   "items": [
+    {
+     "ref": "6",
+     "title": "Lebesgue Spaces, Inner Products",
+     "zh": "Lebesgue 空间与内积"
+    },
+    {
+     "ref": "7",
+     "title": "Hilbert Space, Midterm Review",
+     "zh": "Hilbert 空间（含期中复习）"
+    },
+    {
+     "ref": "11",
+     "title": "Fourier Integrals of Measures, Central Limit Theorem",
+     "zh": "测度的傅里叶积分与中心极限定理"
+    }
+   ]
   },
   {
    "src": "C",
@@ -231,49 +389,58 @@
   {
    "topic": "傅里叶级数",
    "refs": [
-    "A:Lecture 8",
-    "A:Lecture 9"
+    "A:1",
+    "A:1.2",
+    "A:1.3"
    ],
-   "note": "Lecture 8 讲傅里叶级数及其收敛（含 Fejér/平方平均收敛的背景），Lecture 9 讲级数的应用。"
+   "note": "A 第 1 章：1.2 算傅里叶系数（各种区间、正余弦展开、复形式），1.3 是收敛定理（Riemann–Lebesgue 引理、连续点/间断点收敛、一致收敛、均方收敛）。"
   },
   {
    "topic": "傅里叶变换",
    "refs": [
-    "A:Lecture 10",
-    "A:Lecture 11",
-    "C:#2"
+    "A:2",
+    "A:2.1",
+    "A:2.2",
+    "B:11"
    ],
-   "note": "Lecture 10 在 R 上定义傅里叶积分，Lecture 11 把它推广到测度并用于中心极限定理；C:#2 是它在局部紧阿贝尔群上的抽象形式（对偶群 + 傅里叶变换 + Pontrjagin 对偶）。"
+   "note": "A 第 2 章：2.1 反演定理与例子，2.2 基本性质、卷积定理、伴随与 Plancherel 定理；B 的 Lecture 11 把它推到测度的傅里叶积分与中心极限定理。"
   },
   {
    "topic": "小波",
    "refs": [
-    "B:Session 9",
-    "B:Session 10",
-    "B:Session 12",
-    "B:Session 13",
-    "B:Session 14",
-    "B:Session 15"
+    "A:4",
+    "A:4.2",
+    "A:4.3",
+    "A:5",
+    "A:5.1",
+    "A:6",
+    "A:7.2",
+    "A:7.4"
    ],
-   "note": "B 的 Session 9–15 从多分辨率分析、细化方程讲到正交/双正交小波基、Mallat 算法、消失矩与光滑性。"
+   "note": "A 第 4 章 Haar 小波与其分解/重构算法，第 5 章多分辨率分析（尺度关系、小波空间、双基分解重构公式），第 6 章 Daubechies 小波，7.2 高维小波、7.4 连续小波变换。"
   },
   {
    "topic": "频域表示",
    "refs": [
-    "A:Lecture 10",
-    "B:Session 12",
-    "B:Session 13"
+    "A:2.2",
+    "A:2.4",
+    "A:2.5",
+    "A:3.1",
+    "A:3.2",
+    "A:7.4"
    ],
-   "note": "A:Lecture 10 是频域表示（傅里叶积分）本身；B:Session 12 讨论小波在频域的正交性，B:Session 13 的 Mallat 金字塔算法是时频/多分辨表示的计算方式。"
+   "note": "A:2.2 频域性质（卷积/伴随/Plancherel），2.4 采样定理与 2.5 不确定性原理讲时频域的对偶限制，第 3 章 DFT/FFT 与离散信号（Z 变换、传递函数），7.4 小波变换是另一种时频表示。"
   },
   {
    "topic": "函数空间",
    "refs": [
-    "A:Lecture 6",
-    "A:Lecture 7",
-    "C:#1"
+    "A:0",
+    "A:0.3",
+    "A:0.5",
+    "B:6",
+    "B:7"
    ],
-   "note": "A:Lecture 6 是 Lebesgue 空间与内积，A:Lecture 7 是 Hilbert 空间（傅里叶级数收敛的框架）；C:#1 给出局部紧群上的函数空间框架（Haar 测度）。"
+   "note": "A 第 0 章铺内积空间、L2/l2、正交投影与 Gram–Schmidt；B 的 Lecture 6–7 把它换成 Lebesgue 空间与 Hilbert 空间的正交基，是傅里叶级数收敛的严格框架。"
   },
   {
    "topic": "调和分析专题",
@@ -282,14 +449,14 @@
     "C:#2",
     "C:#3"
    ],
-   "note": "C:#1 局部紧群与 Haar 测度，C:#2 局部紧阿贝尔群上的对偶与傅里叶变换，C:#3 紧群上的 Peter-Weyl 理论；更专门的内容（诱导表示、Mackey 机、Plancherel 定理）在 C 的第 6–7 章，本节点未收。"
+   "note": "C:#1 局部紧群与 Haar 测度，C:#2 局部紧阿贝尔群上的对偶群、傅里叶变换与 Pontrjagin 对偶，C:#3 紧群上的 Peter-Weyl 理论；诱导表示、Mackey 机、Plancherel 定理等在 C 的第 6–7 章，本节点未收。"
   }
  ],
- "omitted": "A（18.103）的 Lecture 1–5（掷硬币与大数定律、测度论、可测函数与 Lebesgue 积分、收敛定理、Fubini 定理）属于测度论基础（见 M.1.6.1），未收；Lecture 12–13（布朗运动）超出节点简介，未收。B（18.327）的 Session 1–8（离散时间滤波器、采样率变换、滤波器组、多相表示、正交滤波器组、Daubechies/Meyer 公式）是滤波器组工程基础，未收；Session 11（Project Brief）、17（Guest Lecture，物理小波）、21（余弦调制滤波器组与多小波）及 22–25（项目汇报）未收。C（Folland）的 Banach 代数与谱理论、Basic Representation Theory、Induced Representations、Further Topics in Representation Theory 与 Appendices 未收；各章 Notes and References 未收。",
- "notes": "三个来源分工：A = 节点现有英文资源（MIT 18.103），负责傅里叶级数/变换与函数空间；B = MIT 18.327，补小波；C = Folland 的抽象调和分析教材，补“调和分析专题”。C 的目录来自 Routledge 的官方图书页（Table of Contents 展开后列出章与节，章没有编号，所以 C 分支的 ref 留空，coverage 用 C:#n）。18.103 的 Calendar 里第 7 讲标题含 “Midterm Review”，照抄未改。",
+ "omitted": "A 的第 0.7 节（Least Squares and Linear Predictive Coding，最小二乘与线性预测编码）、2.3 已收但 1.1/2.1 等纯导言类小节只保留在分支里；A 的 Appendix A–C（技术性证明、习题答案、MATLAB 例程）与各章 Exercises 未收。B（18.103）的 Lecture 1–5（掷硬币与大数定律、测度论、可测函数与 Lebesgue 积分、收敛定理、Fubini 定理）属测度论基础，Lecture 8–10（傅里叶级数及其收敛、应用、傅里叶积分）与 Lecture 12–13（布朗运动）已由 A 的对应章覆盖或超出简介，均未收。C（Folland）的 Banach 代数与谱理论、Basic Representation Theory、Induced Representations、Further Topics in Representation Theory 与 Appendices 未收。",
+ "notes": "第一轮用了 18.103 的逐讲清单（只有讲次）外加 18.327（小波）与 Folland（调和分析）。本轮先试办法 1：18.103 课程站的官方讲义 PDF 是散文式补充讲义（如 fseries1.pdf 通篇没有编号小节），补不出小节；于是改用办法 2，把本科标准教材 Boggess & Narcowich《A First Course in Wavelets with Fourier Analysis》(2nd ed) 作为新主来源 A（目录抄自 Wiley 官方前置页 PDF，含章 → 节 → 小节，导览图取到节一级），18.103 只保留填补函数空间与测度傅里叶积分/CLT 的三讲作为 B。原来的 18.327 讲次列表（Session 9–15：MRA、细化方程、正交/双正交小波基、Mallat 算法、消失矩、光滑性与框架）与 A 的第 4–7 章高度重叠，只多出“双正交小波基”与“基与框架”两点，为免重复已删，如需要可再补。C（Folland）的目录来自 Routledge 官方图书页，章没有编号，所以 C 分支的 ref 留空、coverage 用 C:#n。 B 的三讲合成一个分支 “Topics”（页面表格的列标题），逐讲主题作为它的 items，避免出现只有一层、没有下级的来源。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 29,
+  "exact": 61,
   "fuzzy": 0,
   "dropped": []
  }

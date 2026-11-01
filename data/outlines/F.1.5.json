@@ -4,6 +4,47 @@
   {
    "key": "A",
    "kind": "course",
+   "title": "6.851 Advanced Data Structures (Spring 2012)",
+   "by": "Erik Demaine, MIT OpenCourseWare",
+   "year": 2012,
+   "url": "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/pages/calendar-and-notes/",
+    "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/6ab00c67f451beda0bbd014ab7328c98_MIT6_851S12_L7.pdf",
+    "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/8ce9fad08080bbdfc3ea4bff3d62aac0_MIT6_851S12_L8.pdf",
+    "https://ocw.mit.edu/courses/6-851-advanced-data-structures-spring-2012/fcd6508d9ef036a1257f02c74442fb15_MIT6_851S12_L9.pdf"
+   ],
+   "why": "“通信与 I/O 复杂度”的主来源（也是本节点先修证据里列出的课）：第 7–9 讲专讲内存层级，教授讲义是带编号的正文（External Memory Model 2.1–2.5、Cache Oblivious Model 3.1–3.5、Cache Oblivious B-Trees 4.1–4.2），I/O 复杂度与 cache-oblivious 的界都在这里。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-210 Parallel and Sequential Data Structures and Algorithms (lecture notes)",
+   "by": "Carnegie Mellon University",
+   "year": 2017,
+   "url": "https://www.cs.cmu.edu/~15210/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~15210/schedule.html",
+    "https://www.cs.cmu.edu/~15210/notes/01-introduction.pdf",
+    "https://www.cs.cmu.edu/~15210/notes/04-scan.pdf"
+   ],
+   "why": "补“工作量/跨度”：6.851 只算 I/O 传输次数，不讲 work/span；CMU 15-210 的讲义第 3 章给出 work、span、parallelism 的形式定义与并行代价模型，第 4 份讲义把 contraction/scan 的 work 与 span 算到底。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "Foundations of Data Science",
+   "by": "Avrim Blum, John Hopcroft, Ravindran Kannan",
+   "year": 2020,
+   "url": "https://www.cs.cornell.edu/jeh/book.pdf",
+   "toc_urls": [
+    "https://www.cs.cornell.edu/jeh/book.pdf"
+   ],
+   "why": "补“草图和流式摘要”：作者主页公开的整书 PDF，第 6 章 “Algorithms for Massive Data Problems: Streaming, Sketching, and Sampling” 按频率矩、不同元素计数、二阶矩、矩阵采样、文档 sketch 分节，正是流式摘要的经典内容。"
+  },
+  {
+   "key": "D",
+   "kind": "course",
    "title": "CS 5234 - Algorithms at Scale (Fall 2019)",
    "by": "Seth Gilbert",
    "year": 2019,
@@ -11,96 +52,355 @@
    "toc_urls": [
     "https://www.comp.nus.edu.sg/~gilbert/CS5234/"
    ],
-   "why": "节点现有英文资源；课程主页的 schedule 逐次课给出具体主题，四个 part（次线性图性质、草图与流、缓存/外存、并行与 MPC）正好覆盖“工作量/跨度、通信与 I/O 复杂度、草图和流式摘要”三块。"
+   "why": "补“工作量/跨度”与“通信”的工程侧口径：这是节点现有英文资源，其 Part 4（多核与 MPC 并行算法）把 work/span 与 MPC 每轮通信量当作代价度量来讲，是 A/B 之外唯一直接讲大规模并行通信的官方材料。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "1",
-   "title": "Introduction and logistics",
-   "zh": "导论与课程安排",
+   "ref": "7",
+   "title": "Memory hierarchy: Models, cache-oblivious B-trees",
+   "zh": "内存层级：模型与缓存无关 B 树",
    "items": [
     {
-     "ref": "",
-     "title": "Sampling",
-     "zh": "采样"
+     "ref": "2",
+     "title": "External Memory Model",
+     "zh": "外存模型",
+     "items": [
+      {
+       "ref": "2.1",
+       "title": "Scanning",
+       "zh": "扫描"
+      },
+      {
+       "ref": "2.2",
+       "title": "Searching",
+       "zh": "查找"
+      },
+      {
+       "ref": "2.3",
+       "title": "Sorting",
+       "zh": "排序"
+      },
+      {
+       "ref": "2.4",
+       "title": "Permutation",
+       "zh": "置换"
+      },
+      {
+       "ref": "2.5",
+       "title": "Buffer Trees",
+       "zh": "缓冲树"
+      }
+     ]
     },
     {
-     "ref": "",
-     "title": "Graph connectivity",
-     "zh": "图的连通性"
+     "ref": "3",
+     "title": "Cache Oblivious Model",
+     "zh": "缓存无关模型",
+     "items": [
+      {
+       "ref": "3.1",
+       "title": "Scanning",
+       "zh": "扫描"
+      },
+      {
+       "ref": "3.2",
+       "title": "Search Trees",
+       "zh": "搜索树"
+      },
+      {
+       "ref": "3.3",
+       "title": "Sorting",
+       "zh": "排序"
+      },
+      {
+       "ref": "3.4",
+       "title": "Permuting",
+       "zh": "置换"
+      },
+      {
+       "ref": "3.5",
+       "title": "Priority Queues",
+       "zh": "优先队列"
+      }
+     ]
+    },
+    {
+     "ref": "4",
+     "title": "Cache Oblivious B-Trees",
+     "zh": "缓存无关 B 树",
+     "items": [
+      {
+       "ref": "4.1",
+       "title": "Static Search Trees",
+       "zh": "静态搜索树"
+      },
+      {
+       "ref": "4.2",
+       "title": "Dynamic Search Trees",
+       "zh": "动态搜索树"
+      }
+     ]
     }
    ]
   },
   {
    "src": "A",
-   "ref": "2",
-   "title": "Finding the weight of an MST using sampling",
-   "zh": "用采样求最小生成树的权重",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "3",
-   "title": "Property Testing, Sorted, and Yao’s Principle",
-   "zh": "性质测试、有序性与 Yao 原理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "4",
-   "title": "Sampling from a stream",
-   "zh": "从数据流中采样",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "5",
-   "title": "Streaming algorithms for graphs",
-   "zh": "图的流算法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "6",
-   "title": "Clustering and Streaming Algorithms for Clustering",
-   "zh": "聚类与流式聚类算法",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "7",
-   "title": "Introduction to Caching",
-   "zh": "缓存导论",
-   "items": []
-  },
-  {
-   "src": "A",
    "ref": "8",
-   "title": "Caches and cache-efficient algorithms (Part 2)",
-   "zh": "缓存与缓存高效算法（第二部分）",
-   "items": []
+   "title": "Memory hierarchy: Ordered-file maintenance, list labeling, order queries, cache-oblivious priority queues",
+   "zh": "内存层级：有序文件维护、表标号、顺序查询与缓存无关优先队列",
+   "items": [
+    {
+     "ref": "2",
+     "title": "Ordered File Maintenance",
+     "zh": "有序文件维护",
+     "items": [
+      {
+       "ref": "2.1",
+       "title": "Updates",
+       "zh": "更新"
+      },
+      {
+       "ref": "2.2",
+       "title": "Analysis",
+       "zh": "分析"
+      }
+     ]
+    },
+    {
+     "ref": "4",
+     "title": "Cache-Oblivious Priority Queues",
+     "zh": "缓存无关优先队列",
+     "items": [
+      {
+       "ref": "4.1",
+       "title": "Find-min",
+       "zh": "找最小元"
+      },
+      {
+       "ref": "4.2",
+       "title": "Delete-min",
+       "zh": "删除最小元"
+      },
+      {
+       "ref": "4.3",
+       "title": "Insertion",
+       "zh": "插入"
+      },
+      {
+       "ref": "4.4",
+       "title": "Push",
+       "zh": "压入"
+      },
+      {
+       "ref": "4.5",
+       "title": "Pull",
+       "zh": "弹出"
+      },
+      {
+       "ref": "4.6",
+       "title": "Analysis",
+       "zh": "分析"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
+   "ref": "9",
+   "title": "Memory hierarchy: Distribution sweeping via lazy funnelsort; cache-oblivious orthogonal 2D range searching: batched and online",
+   "zh": "内存层级：用惰性漏斗排序做分布扫描；缓存无关的正交二维范围查询（批量与在线）",
+   "items": [
+    {
+     "ref": "2",
+     "title": "Lazy Funnelsort",
+     "zh": "惰性漏斗排序",
+     "items": [
+      {
+       "ref": "2.1",
+       "title": "Filling buffers",
+       "zh": "填充缓冲区"
+      },
+      {
+       "ref": "2.2",
+       "title": "Distribution Sweeping via Lazy Funnelsort",
+       "zh": "用惰性漏斗排序做分布扫描"
+      }
+     ]
+    },
+    {
+     "ref": "3",
+     "title": "Orthogonal 2D Range Searching",
+     "zh": "正交二维范围查询",
+     "items": [
+      {
+       "ref": "3.1",
+       "title": "Batched",
+       "zh": "批量"
+      },
+      {
+       "ref": "3.2",
+       "title": "Online Orthogonal 2D range search",
+       "zh": "在线正交二维范围查询"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Abstraction: Models of Computation and Cost Models",
+   "zh": "抽象：计算模型与代价模型",
+   "fill": "工作量/跨度（work、span 与并行代价模型）",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Sequential Cost Model: Word RAM",
+     "zh": "串行代价模型：字 RAM"
+    },
+    {
+     "ref": "3.2",
+     "title": "Nested Parallel Programs",
+     "zh": "嵌套并行程序"
+    },
+    {
+     "ref": "3.3",
+     "title": "A parallel cost model: Work and Span",
+     "zh": "并行代价模型：工作量与跨度"
+    },
+    {
+     "ref": "3.4",
+     "title": "Example: Parallel Sum",
+     "zh": "例子：并行求和"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Contraction and Scan",
+   "zh": "收缩与扫描",
+   "fill": "工作量/跨度（把 work/span 算到具体并行算法上：reduce、scan 与结合函数）",
+   "items": [
+    {
+     "ref": "1",
+     "title": "Contraction",
+     "zh": "收缩",
+     "items": [
+      {
+       "ref": "1.1",
+       "title": "Reduce via Contraction",
+       "zh": "用收缩实现归约"
+      }
+     ]
+    },
+    {
+     "ref": "2",
+     "title": "Scan",
+     "zh": "扫描",
+     "items": [
+      {
+       "ref": "2.1",
+       "title": "Scan via Contraction",
+       "zh": "用收缩实现扫描"
+      }
+     ]
+    },
+    {
+     "ref": "3",
+     "title": "Associative Functions",
+     "zh": "结合函数"
+    },
+    {
+     "ref": "4",
+     "title": "Reduce with Custom Associative Functions",
+     "zh": "用自定义结合函数做归约"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "6",
+   "title": "Algorithms for Massive Data Problems: Streaming, Sketching, and Sampling",
+   "zh": "海量数据问题的算法：流式、草图与采样",
+   "fill": "草图和流式摘要（频率矩、不同元素计数、二阶矩与文档 sketch）",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "6.2",
+     "title": "Frequency Moments of Data Streams",
+     "zh": "数据流的频率矩",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Number of Distinct Elements in a Data Stream",
+       "zh": "数据流中不同元素的个数"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "Number of Occurrences of a Given Element",
+       "zh": "给定元素的出现次数"
+      },
+      {
+       "ref": "6.2.4",
+       "title": "The Second Moment",
+       "zh": "二阶矩"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Matrix Algorithms using Sampling",
+     "zh": "用采样的矩阵算法",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "Matrix Multiplication using Sampling",
+       "zh": "用采样做矩阵乘法"
+      },
+      {
+       "ref": "6.3.3",
+       "title": "Sketch of a Large Matrix",
+       "zh": "大矩阵的草图"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Sketches of Documents",
+     "zh": "文档的草图"
+    }
+   ]
+  },
+  {
+   "src": "D",
    "ref": "10",
    "title": "Multicore Parallel Algorithms",
    "zh": "多核并行算法",
+   "fill": "工作量/跨度（多核模型下的 work/span 与调度）",
    "items": []
   },
   {
-   "src": "A",
+   "src": "D",
    "ref": "11",
    "title": "MPC Parallel Algorithms (Part 1)",
    "zh": "MPC 并行算法（第一部分）",
+   "fill": "通信（MPC 模型：每轮通信量与轮数作为代价）",
    "items": []
   },
   {
-   "src": "A",
+   "src": "D",
    "ref": "12",
    "title": "MPC Parallel Algorithms (Part 2)",
    "zh": "MPC 并行算法（第二部分）",
+   "fill": "通信（MPC 上的连通性/MST 等大规模并行算法）",
    "items": []
   }
  ],
@@ -108,37 +408,38 @@
   {
    "topic": "工作量/跨度",
    "refs": [
-    "A:10",
-    "A:11",
-    "A:12"
+    "B:3",
+    "B:#2",
+    "D:10"
    ],
-   "note": "课程没有把 work/span 单列成一讲，它出现在 Part 4 的多核与 MPC 两讲里（官方资源页把 Acar & Blelloch 的 work-span 模型书章列为第 11 讲的补充材料）。"
+   "note": "B 的第 3 章给 work、span、parallelism 的形式定义与串行/并行代价模型（3.1–3.4），第 4 份讲义把 contraction/scan/reduce 的 work 与 span 算到底；D 的第 10 讲是多核模型下的同一套度量。"
   },
   {
    "topic": "通信与I/O复杂度",
    "refs": [
     "A:7",
     "A:8",
-    "A:11"
+    "A:9",
+    "D:11",
+    "D:12"
    ],
-   "note": "7、8 讲缓存与外存（I/O 复杂度、B-epsilon 树、buffer tree 等背景材料），11 讲的 MPC 模型把通信量作为核心代价。"
+   "note": "A 把 I/O 复杂度讲成内存转移次数：第 7 讲给 External Memory Model 与 Cache Oblivious Model 各自的扫描/查找/排序/置换界，第 8 讲讲有序文件维护与缓存无关优先队列的摊还界，第 9 讲讲分布扫描与范围查询；D 的第 11–12 讲换到 MPC，代价是每轮通信量。"
   },
   {
    "topic": "草图和流式摘要",
    "refs": [
-    "A:1",
-    "A:4",
-    "A:5",
-    "A:6"
+    "C:6.2",
+    "C:6.4",
+    "C:6.3.3"
    ],
-   "note": "1 的采样、4 的流上采样（Flajolet-Martin、Misra-Gries 重元素）、5 的图流（tug-of-war sketch、计数三角形）、6 的流式聚类。课程没把 CountSketch/CountMin 单列一讲，资源页把它们放在 Jelani Nelson 课程的延伸阅读里。"
+   "note": "C 第 6 章：频率矩（不同元素个数、出现次数、二阶矩）是流式摘要的核心，文档 sketch 与“大矩阵的草图”给草图技术的另外两支。"
   }
  ],
- "omitted": "schedule 里的 9（Mid-Term Exam）与 break、final exam 是考试/假期，不是知识点；Part 1 的次线性时间性质测试（第 1–3 讲中与性质测试相关的部分）虽在课表里，但已由第 3 讲这一条覆盖，且它的系统讲解更贴近 F.1.6 的“性质测试”，故本节点保留了 3 但未在别处重复；miniproject 展示（第 13 讲）是学生报告，也未收。",
- "notes": "标题按课程主页 schedule 的 Description 栏逐条抄录（原文是多行短句，去掉了句末句号与换行）。第 1 讲原文是“Introduction and logistics. Sampling. Graph connectivity.”，这里把后两句做成子条目。该课没有教材，课程主页与讲义链接就是原始材料，符合“权威官方文档/课程目录”的要求。",
+ "omitted": "A（6.851）只取第 7–9 讲的内存层级部分，其余讲次（Temporal 持久化、Geometric 范围查询、Dynamic optimality、Dictionaries、Integer 结构与下界、Static trees、Succinct 结构等）与本节点三块内容不对应；A 第 8 讲的第 1 节“From Last Lectures...”、第 9 讲的“Overview”是过渡性小节，未收。B（15-210）只取讲代价模型的第 3 章与“Contraction and Scan”一份讲义，其余讲义（序列、排序、哈希、平衡树、DP、概率）属别的节点。C 只取第 6 章，其余章节（高维空间、SVD、随机游走、学习、聚类）未收；C 的 6.5 Bibliographic Notes 与 6.6 Exercises 也不收。D 只取第 10–12 讲（并行/MPC），其余讲次（性质测试、流式采样、图流、流式聚类、缓存）已由 A/C 或 F.1.6 覆盖。",
+ "notes": "本轮按“换源”处理：原主来源 CS5234 的 11 条讲次没有小节，而它的讲义是手写白板扫描（PDF 文本层只有页码，例如“10.Parallelism1.pdf”全文只有 page 1–16），无法逐讲补节，因此把 CS5234 降为补充分支 D（只保留并行/MPC 三讲），主来源换成先修证据里列出的 MIT 6.851（内存层级三讲，教授讲义有 2.1–4.2 的编号小节），并行代价模型换成 CMU 15-210 的讲义，流式摘要换成 FODS 第 6 章。D 的三条分支仍是平坦的：手写讲义提不出节标题；2019 年另有一份打字版幻灯片（如 10.Parallel1_slides.pdf）能读出文字，但只有“Summary / Today: Parallelism / Models of Parallelism”这类零散幻灯片标题，凑不出可信的节级结构，因此没有硬凑。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 13,
+  "exact": 59,
   "fuzzy": 0,
   "dropped": []
  }

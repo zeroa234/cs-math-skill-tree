@@ -3,18 +3,6 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "15-455 Undergraduate Complexity Theory, Spring 2017",
-   "by": "Ryan O'Donnell",
-   "year": 2017,
-   "url": "https://www.cs.cmu.edu/~odonnell/15455-s17/",
-   "toc_urls": [
-    "https://www.cs.cmu.edu/~odonnell/15455-s17/"
-   ],
-   "why": "节点现有英文资源；课程主页逐讲列出 28 讲的具体主题（不是 Week 1/Week 2 那种），P、NP、归约与完备性、空间复杂度、随机复杂度、层级定理与 P vs NP 难点全覆盖，讲义作者是复杂度理论一线研究者。"
-  },
-  {
-   "key": "B",
    "kind": "book",
    "title": "Computational Complexity: A Modern Approach",
    "by": "Sanjeev Arora and Boaz Barak",
@@ -23,124 +11,157 @@
    "toc_urls": [
     "https://theory.cs.princeton.edu/complexity/book.pdf"
    ],
-   "why": "补线路复杂度：A 只在 Cook-Levin 证明里顺带用线路，没有专门的 P/poly、Karp-Lipton、电路下界内容。作者在普林斯顿的官方站放了免费全文 PDF，第 6 章 Circuits 正是这一块。"
+   "why": "本轮换源：CMU 15-455 课程页只有逐讲主题、没有讲义 PDF，也没有讲内小节。作者在普林斯顿课程站公开的整书 PDF 是复杂度理论的标准研究生教材，第 1–4、6、7、13 章正好覆盖 P/NP、完备性、空间复杂度、随机复杂度、线路复杂度与下界，目录细到 1.1 一级（原文还有 1.1.1 等更细的三级小节）。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "05",
-   "title": "Time Hierarchy Theorem",
-   "zh": "时间层级定理",
-   "items": []
+   "ref": "1",
+   "title": "The computational model —and why it doesn’t matter",
+   "zh": "计算模型——以及它为何无关紧要",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Encodings and Languages: Some conventions",
+     "zh": "编码与语言：一些约定"
+    },
+    {
+     "ref": "1.2",
+     "title": "Modeling computation and efficiency",
+     "zh": "计算与效率的建模"
+    },
+    {
+     "ref": "1.3",
+     "title": "Machines as strings and the universal Turing machines",
+     "zh": "机器作为字符串与通用图灵机"
+    },
+    {
+     "ref": "1.4",
+     "title": "Uncomputable functions",
+     "zh": "不可计算函数"
+    },
+    {
+     "ref": "1.5",
+     "title": "Deterministic time and the class P",
+     "zh": "确定性时间与 P 类"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "06",
-   "title": "Problems in P",
-   "zh": "P 类中的问题",
-   "items": []
+   "ref": "2",
+   "title": "NP and NP completeness",
+   "zh": "NP 与 NP 完全性",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "The class NP",
+     "zh": "NP 类"
+    },
+    {
+     "ref": "2.2",
+     "title": "Reducibility and NP-completeness",
+     "zh": "可归约性与 NP 完全性"
+    },
+    {
+     "ref": "2.3",
+     "title": "The Cook-Levin Theorem: Computation is Local",
+     "zh": "Cook-Levin 定理：计算是局部的"
+    },
+    {
+     "ref": "2.4",
+     "title": "The web of reductions",
+     "zh": "归约之网"
+    },
+    {
+     "ref": "2.5",
+     "title": "Decision versus search",
+     "zh": "判定问题与搜索问题"
+    },
+    {
+     "ref": "2.6",
+     "title": "coNP, EXP and NEXP",
+     "zh": "coNP、EXP 与 NEXP"
+    },
+    {
+     "ref": "2.7",
+     "title": "More thoughts about P, NP, and all that",
+     "zh": "关于 P、NP 等的进一步思考"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "08",
-   "title": "NP",
-   "zh": "NP 类",
-   "items": []
+   "ref": "3",
+   "title": "Diagonalization",
+   "zh": "对角化",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Time Hierarchy Theorem",
+     "zh": "时间层级定理"
+    },
+    {
+     "ref": "3.2",
+     "title": "Space Hierarchy Theorem",
+     "zh": "空间层级定理"
+    },
+    {
+     "ref": "3.3",
+     "title": "Nondeterministic Time Hierarchy Theorem",
+     "zh": "非确定性时间层级定理"
+    },
+    {
+     "ref": "3.4",
+     "title": "Ladner’s Theorem: Existence of NP-intermediate problems",
+     "zh": "Ladner 定理：NP 中间问题的存在性"
+    },
+    {
+     "ref": "3.5",
+     "title": "Oracle machines and the limits of diagonalization?",
+     "zh": "谕示机与对角化的局限"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "10",
-   "title": "Reductions",
-   "zh": "归约",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "11",
-   "title": "NP-completeness and the Cook-Levin Theorem",
-   "zh": "NP 完全性与 Cook-Levin 定理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "12",
-   "title": "NP-completeness reductions",
-   "zh": "NP 完全性归约",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "16",
+   "ref": "4",
    "title": "Space complexity",
    "zh": "空间复杂度",
-   "items": []
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Configuration graphs",
+     "zh": "格局图"
+    },
+    {
+     "ref": "4.2",
+     "title": "Some space complexity classes",
+     "zh": "几个空间复杂度类"
+    },
+    {
+     "ref": "4.3",
+     "title": "PSPACE completeness",
+     "zh": "PSPACE 完全性"
+    },
+    {
+     "ref": "4.4",
+     "title": "NL completeness",
+     "zh": "NL 完全性"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "17",
-   "title": "Savitch's Theorem and NL",
-   "zh": "Savitch 定理与 NL",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "18",
-   "title": "NL-completeness and log-space reductions",
-   "zh": "NL 完全性与对数空间归约",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "19",
-   "title": "From P-completeness to PSPACE-completeness",
-   "zh": "从 P 完全性到 PSPACE 完全性",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "20",
-   "title": "The Immerman--Szelepcsényi Theorem",
-   "zh": "Immerman-Szelepcsényi 定理",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "21",
-   "title": "Randomized complexity: RP, coRP, and ZPP",
-   "zh": "随机复杂度：RP、coRP 与 ZPP",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "22",
-   "title": "BPP",
-   "zh": "BPP 类",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "28",
-   "title": "Why is P vs. NP difficult?",
-   "zh": "P 与 NP 问题为何困难",
-   "items": []
-  },
-  {
-   "src": "B",
    "ref": "6",
    "title": "Circuits",
    "zh": "线路",
-   "fill": "线路复杂度与非一致计算的下界（P/poly、Karp-Lipton、电路下界、非一致层级定理）",
    "items": [
     {
      "ref": "6.1",
      "title": "Boolean circuits",
      "zh": "布尔线路"
-    },
-    {
-     "ref": "6.1.1",
-     "title": "Turing machines that take advice",
-     "zh": "带建议的图灵机"
     },
     {
      "ref": "6.2",
@@ -160,17 +181,108 @@
     {
      "ref": "6.5",
      "title": "Finer gradations among circuit classes",
-     "zh": "线路类的更细分级"
+     "zh": "线路类之间更细的分级"
     },
     {
      "ref": "6.6",
      "title": "Circuits of exponential size",
-     "zh": "指数规模线路"
+     "zh": "指数规模的线路"
     },
     {
      "ref": "6.7",
      "title": "Circuit Satisfiability and an alternative proof of the Cook-Levin Theorem",
      "zh": "线路可满足性与 Cook-Levin 定理的另一证明"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Randomized Computation",
+   "zh": "随机计算",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Probabilistic Turing machines",
+     "zh": "概率图灵机"
+    },
+    {
+     "ref": "7.2",
+     "title": "Some examples of PTMs",
+     "zh": "概率图灵机的几个例子"
+    },
+    {
+     "ref": "7.3",
+     "title": "One-sided and zero-sided error: RP, coRP, ZPP",
+     "zh": "单边与零边错误：RP、coRP、ZPP"
+    },
+    {
+     "ref": "7.4",
+     "title": "The robustness of our definitions",
+     "zh": "定义的稳健性"
+    },
+    {
+     "ref": "7.5",
+     "title": "Randomness efficient error reduction",
+     "zh": "随机性高效的错误缩减"
+    },
+    {
+     "ref": "7.6",
+     "title": "BPP⊆ P/poly",
+     "zh": "BPP ⊆ P/poly"
+    },
+    {
+     "ref": "7.7",
+     "title": "BPP is in PH",
+     "zh": "BPP 属于 PH"
+    },
+    {
+     "ref": "7.8",
+     "title": "State of our knowledge about BPP",
+     "zh": "关于 BPP 的已知状况"
+    },
+    {
+     "ref": "7.9",
+     "title": "Randomized reductions",
+     "zh": "随机归约"
+    },
+    {
+     "ref": "7.10",
+     "title": "Randomized space-bounded computation",
+     "zh": "随机空间受限计算"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Circuit lowerbounds",
+   "zh": "线路下界",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "AC0 and Håstad's Switching Lemma",
+     "zh": "AC0 与 Håstad 开关引理"
+    },
+    {
+     "ref": "13.2",
+     "title": "Circuits With “Counters”: ACC",
+     "zh": "带“计数器”的线路：ACC"
+    },
+    {
+     "ref": "13.3",
+     "title": "Lowerbounds for monotone circuits",
+     "zh": "单调线路的下界"
+    },
+    {
+     "ref": "13.4",
+     "title": "Circuit complexity: The frontier",
+     "zh": "线路复杂度的前沿"
+    },
+    {
+     "ref": "13.5",
+     "title": "Approaches using communication complexity",
+     "zh": "用通信复杂度的方法"
     }
    ]
   }
@@ -179,62 +291,69 @@
   {
    "topic": "P/NP",
    "refs": [
-    "A:06",
-    "A:08",
-    "A:10"
+    "A:1.5",
+    "A:2.1",
+    "A:2.5",
+    "A:2.7"
    ]
   },
   {
    "topic": "完备性",
    "refs": [
-    "A:11",
-    "A:12",
-    "A:19",
-    "A:18"
+    "A:2.2",
+    "A:2.3",
+    "A:2.4",
+    "A:4.3",
+    "A:4.4",
+    "A:6.5"
    ]
   },
   {
    "topic": "空间复杂度",
    "refs": [
-    "A:16",
-    "A:17",
-    "A:18",
-    "A:19",
-    "A:20"
+    "A:3.2",
+    "A:4",
+    "A:4.1",
+    "A:4.2"
    ]
   },
   {
    "topic": "随机复杂度",
    "refs": [
-    "A:21",
-    "A:22"
+    "A:7",
+    "A:7.1",
+    "A:7.3",
+    "A:7.8",
+    "A:7.10"
    ]
   },
   {
    "topic": "线路复杂度",
    "refs": [
-    "B:6",
-    "B:6.1",
-    "B:6.1.1",
-    "B:6.5"
+    "A:6",
+    "A:6.1",
+    "A:6.4",
+    "A:6.5",
+    "A:13"
    ]
   },
   {
    "topic": "下界",
    "refs": [
-    "A:05",
-    "A:28",
-    "B:6.3",
-    "B:6.4"
+    "A:3.1",
+    "A:3.3",
+    "A:6.3",
+    "A:13.1",
+    "A:13.3"
    ]
   }
  ],
- "omitted": "主来源 15-455 共 28 讲，只收了对应本节点四条知识点的 14 讲：第 01–03 讲（计算模型定义、图灵机模拟）属 F.2.1/F.2.2，第 07 讲 SAT、第 09 讲非确定性已并入第 08 讲 NP；第 13–15 讲（search-to-decision、Ladner/Mahaney、coNP）、第 23–27 讲（多项式层级、oracle、IP=PSPACE、细粒度复杂度）不在节点简介的知识点内。补充来源只取第 6 章 Circuits，其余章（NP 完全性、对角化、随机计算等）与 A 重复。",
- "notes": "A 的课程主页把每讲主题和 Sipser 章节对照写在一起，但页面本身没有小节级目录，所以分支只能到“讲”一层；线路复杂度这一块用 Arora-Barak 第 6 章的节标题补到 6.1.1 级。A 页面上写的是 “The Immerman--Szelepcsényi Theorem”（两个连字符），照抄未改。",
+ "omitted": "Arora-Barak 全书 17 章，只收了第 1–4、6、7、13 章：第 5 章（多项式层级与交替）与第 8 章（交互证明）、第 9 章（计数复杂度）、第 10 章（密码学）、第 11–12、14–17 章（判定树、通信复杂度、代数模型、平均情形、去随机化、硬度放大）都超出节点简介的四条知识点；原主来源 CMU 15-455 的 28 讲已删除，其 P/NP、归约与完备性、空间与随机复杂度内容被本书第 1–4、6、7 章完整覆盖且更系统，多出来的“Problems in P”“Why is P vs. NP difficult?”只是课程编排上的讲次，没有本书之外的独立知识点。",
+ "notes": "第二轮按办法 2 换了主来源。CMU 15-455 的课程主页只有逐讲主题与 Sipser 章节对照，没有任何讲义/幻灯片文件可读，故按教材目录加深。书稿 PDF 由作者放在普林斯顿课程站（theory.cs.princeton.edu/complexity/book.pdf，2007-01-08 草稿），目录在第 5–12 页，原文到 1.1.1 三级；本导览图只取到节（1.x）一级，第三级小节按约定不收。原文 PDF 文字层的 “PSP ACE”“eﬃciency”“Conﬁguration”“tradeoﬀs”等是断字/连字，已按正确拼写录入（核对脚本忽略这些差异）；13.1 的 “H ˚ astad’s” 是 å 的分解，按 Håstad 录入，核对结果是 fuzzy。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 23,
-  "fuzzy": 0,
+  "exact": 49,
+  "fuzzy": 1,
   "dropped": []
  }
 }

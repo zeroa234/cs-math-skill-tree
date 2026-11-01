@@ -9,9 +9,16 @@
    "year": 2025,
    "url": "https://gfxcourses.stanford.edu/cs149/fall25",
    "toc_urls": [
-    "https://gfxcourses.stanford.edu/cs149/fall25/lecture/"
+    "https://gfxcourses.stanford.edu/cs149/fall25/lecture/",
+    "https://gfxcourses.stanford.edu/cs149/fall25content/media/perfopt1/05_progperf1.pdf",
+    "https://gfxcourses.stanford.edu/cs149/fall25content/media/perfopt2/06_progperf2.pdf",
+    "https://gfxcourses.stanford.edu/cs149/fall25content/media/gpuarch/07_gpuarch.pdf",
+    "https://gfxcourses.stanford.edu/cs149/fall25content/media/dataparallel/08_dataparallel.pdf",
+    "https://gfxcourses.stanford.edu/cs149/fall25content/media/proghardware/11_SpecializedHardwareProgramming.pdf",
+    "https://gfxcourses.stanford.edu/cs149/fall25content/media/aidatacenter/12_AI_DatacenterMapping.pdf",
+    "https://gfxcourses.stanford.edu/cs149/fall25content/media/cachecoherence/14_coherence.pdf"
    ],
-   "why": "节点现有英文资源。官方 Lectures/Readings 页逐讲给出标题与主题说明（多核/SIMD/多线程、局部性与通信、GPU 架构与 CUDA、DNN 在 GPU 上的映射、硬件专用化、缓存一致性与内存一致性），是同时覆盖 SIMD/SIMT、存储层次、吞吐计算、加速器与异构调度的最贴切课程。"
+   "why": "节点现有英文资源。官方 Lectures/Readings 页逐讲给出标题与主题说明（多核/SIMD/多线程、局部性与通信、GPU 架构与 CUDA、DNN 在 GPU 上的映射、硬件专用化、缓存一致性与内存一致性），是同时覆盖 SIMD/SIMT、存储层次、吞吐计算、加速器与异构调度的最贴切课程；本轮把能下载的讲义里“Today / Today’s Theme”页的条目抄成每讲的小节。"
   }
  ],
  "outline": [
@@ -41,28 +48,107 @@
    "ref": "Lecture 5",
    "title": "Program Optimization 1: Work Distribution and Scheduling",
    "zh": "程序优化一：工作分配与调度",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Basic workload balancing techniques",
+     "zh": "基本的工作负载均衡技术"
+    },
+    {
+     "ref": "",
+     "title": "A deep dive into the work scheduler of a programming system called Cilk",
+     "zh": "深入 Cilk 这类编程系统的工作调度器"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 6",
    "title": "Program Optimization 2: Locality and Communication",
    "zh": "程序优化二：局部性与通信",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Techniques for reducing the costs of communication",
+     "zh": "降低通信开销的技术"
+    },
+    {
+     "ref": "",
+     "title": "General program optimization tips",
+     "zh": "一般的程序优化建议"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 7",
    "title": "GPU Architecture and CUDA Programming",
    "zh": "GPU 架构与 CUDA 编程",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "History: how graphics processors, originally designed to accelerate 3D games",
+     "zh": "历史：图形处理器最初为加速 3D 游戏而设计"
+    },
+    {
+     "ref": "",
+     "title": "Programming GPUs using the CUDA language",
+     "zh": "用 CUDA 语言编写 GPU 程序"
+    },
+    {
+     "ref": "",
+     "title": "A more detailed look at GPU architecture",
+     "zh": "更细致地看 GPU 架构"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 8",
    "title": "Data-Parallel Thinking",
    "zh": "数据并行思维",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "map",
+     "zh": "映射"
+    },
+    {
+     "ref": "",
+     "title": "filter",
+     "zh": "过滤"
+    },
+    {
+     "ref": "",
+     "title": "fold / reduce",
+     "zh": "折叠/归约"
+    },
+    {
+     "ref": "",
+     "title": "scan / segmented scan",
+     "zh": "扫描/分段扫描"
+    },
+    {
+     "ref": "",
+     "title": "sort",
+     "zh": "排序"
+    },
+    {
+     "ref": "",
+     "title": "groupBy",
+     "zh": "分组"
+    },
+    {
+     "ref": "",
+     "title": "join",
+     "zh": "连接"
+    },
+    {
+     "ref": "",
+     "title": "partition / flatten",
+     "zh": "切分/展平"
+    }
+   ]
   },
   {
    "src": "A",
@@ -83,21 +169,84 @@
    "ref": "Lecture 11",
    "title": "Programming Systems for Specialized Hardware",
    "zh": "专用硬件的编程系统",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Specialized HW for AI?",
+     "zh": "为 AI 做专用硬件？"
+    },
+    {
+     "ref": "",
+     "title": "How do you program specialized hardware?",
+     "zh": "怎么给专用硬件编程？"
+    },
+    {
+     "ref": "",
+     "title": "Google TPU",
+     "zh": "Google TPU"
+    },
+    {
+     "ref": "",
+     "title": "Nvidia H100 and B100",
+     "zh": "Nvidia H100 与 B100"
+    },
+    {
+     "ref": "",
+     "title": "SambaNova SN40L",
+     "zh": "SambaNova SN40L"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 12",
    "title": "Mapping AI Applications to the Datacenter Computer",
    "zh": "把 AI 应用映射到数据中心计算机",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "How do you design specialized HW for DNNs?",
+     "zh": "怎么为 DNN 设计专用硬件？"
+    },
+    {
+     "ref": "",
+     "title": "How do you program specialized hardware?",
+     "zh": "怎么给专用硬件编程？"
+    },
+    {
+     "ref": "",
+     "title": "Google TPU",
+     "zh": "Google TPU"
+    },
+    {
+     "ref": "",
+     "title": "Nvidia H100 and B100",
+     "zh": "Nvidia H100 与 B100"
+    },
+    {
+     "ref": "",
+     "title": "SambaNova SN40L",
+     "zh": "SambaNova SN40L"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 14",
    "title": "Cache Coherence",
    "zh": "缓存一致性",
-   "items": []
+   "items": [
+    {
+     "ref": "",
+     "title": "Memory coherence problem",
+     "zh": "内存一致性问题"
+    },
+    {
+     "ref": "",
+     "title": "Cache coherence protocols",
+     "zh": "缓存一致性协议"
+    }
+   ]
   },
   {
    "src": "A",
@@ -115,7 +264,8 @@
     "A:Lecture 3",
     "A:Lecture 7",
     "A:Lecture 8"
-   ]
+   ],
+   "note": "Lecture 2/3 在讲次内按“多核、SIMD、多线程”三种并行形式展开（讲义页没有议程页，因此仍是讲级）；Lecture 7 的 GPU 架构小节与 Lecture 8 的 map/filter/reduce/scan 等数据并行原语是小节级的展开。"
   },
   {
    "topic": "存储层次",
@@ -123,7 +273,8 @@
     "A:Lecture 2",
     "A:Lecture 6",
     "A:Lecture 14"
-   ]
+   ],
+   "note": "Lecture 6 的小节把“降低通信开销”拆成处理器之间与处理器/内存之间两类，Lecture 14 的小节是内存一致性问题与缓存一致性协议。"
   },
   {
    "topic": "吞吐计算",
@@ -132,7 +283,8 @@
     "A:Lecture 5",
     "A:Lecture 6",
     "A:Lecture 9"
-   ]
+   ],
+   "note": "Lecture 5 的小节是工作负载均衡与 Cilk 的工作调度器，Lecture 6 是通信开销与一般优化建议；Lecture 1 的效率论与 Lecture 9 的 DNN 计算仍是讲级（讲义无议程页 / PDF 正文提取失败）。"
   },
   {
    "topic": "专用加速器",
@@ -140,7 +292,8 @@
     "A:Lecture 9",
     "A:Lecture 10",
     "A:Lecture 11"
-   ]
+   ],
+   "note": "Lecture 11 的小节按 TPU（脉动阵列）、H100/B100（异步计算+Thunderkittens DSL）、SambaNova SN40L（数据流架构）三个实例展开；Lecture 9/10 的讲义没有议程页，保持讲级。"
   },
   {
    "topic": "异构调度",
@@ -149,14 +302,14 @@
     "A:Lecture 12",
     "A:Lecture 15"
    ],
-   "note": "异构调度没有单独一讲：L5 讲工作分配与调度（work stealing、开销），L12 讲把 AI 应用映射到数据中心（CPU/GPU/加速器的分工），L15 讲同步与内存一致性给跨核协作打底。"
+   "note": "异构调度没有单独一讲：Lecture 5 讲工作分配与调度（work stealing、开销），Lecture 12 的小节讲把 DNN 专用硬件（TPU/H100/SambaNova）映射进数据中心，Lecture 15 讲同步与内存一致性给跨核协作打底。"
   }
  ],
  "omitted": "第 4 讲（Parallelizing Code: An Example Thought Process）是 L5/L6 的引子；第 13 讲（Domain-Specific Programming Systems and AI-Driven Performance Optimization）、第 16 讲（Fine-Grained Locking and Lock-Free Programming）、第 17/18 讲（Transactional Memory I/II）偏并发编程与编译/系统软件细节，与 GPU、加速器、异构系统这条主线关系较远，未收。",
- "notes": "目录从 CS149 官方 Lectures/Readings 页逐讲抄录，ref 用原页面的“Lecture N”。该页每讲后括号里还有主题说明（如 Lecture 7 的 CUDA programming abstractions, and how they are implemented on modern GPUs），可作为每讲的学习要点。课程无指定教材，架构背景参考 Hennessy & Patterson《Computer Architecture: A Quantitative Approach》第 4 章（Data-Level Parallelism）与第 5 章（Thread-Level Parallelism）。Fall 2025 的视频不对公众开放，2023 版视频在 Stanford 的 YouTube 频道。",
+ "notes": "目录的主体从 CS149 官方 Lectures/Readings 页逐讲抄录，ref 用原页面的“Lecture N”。本轮（第二轮加深）的做法：从各讲讲义 PDF 里“Today / Today’s Theme”页抄条目作小节 —— 成功的有 Lecture 5（2 节）、6（2 节）、7（3 节）、8（8 个数据并行原语）、11（5 节）、12（5 节）、14（2 节）。没能加深的分支及原因：Lecture 1（Why Parallelism? Why Efficiency?）、Lecture 2（A Modern Multi-Core Processor Part I）、Lecture 3（Modern Multi-Core Architecture Part II + ISPC）、Lecture 10（Hardware Specialization）、Lecture 15（Implementing Synchronization + Memory Consistency）的讲义里没有 “Today/Today’s Theme” 这类议程页，页内也没有像 ETH DDCA 那样的章节分隔页，硬抄只会是随手挑的幻灯片标题，故保持讲级；Lecture 9（DNN on GPUs）的讲义 PDF 有 11 MB，pypdf 正文提取失败（LimitReachedError），读不到文字，也保持讲级。课程无指定教材，架构背景参考 Hennessy & Patterson《Computer Architecture: A Quantitative Approach》第 4 章（Data-Level Parallelism）与第 5 章（Thread-Level Parallelism）。Fall 2025 的视频不对公众开放，2023 版视频在 Stanford 的 YouTube 频道。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 13,
+  "exact": 40,
   "fuzzy": 0,
   "dropped": []
  }

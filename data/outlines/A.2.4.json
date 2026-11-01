@@ -9,9 +9,19 @@
    "year": 2015,
    "url": "https://davidstarsilver.wordpress.com/teaching/",
    "toc_urls": [
-    "https://davidstarsilver.wordpress.com/teaching/"
+    "https://davidstarsilver.wordpress.com/teaching/",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/intro_rl.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-2-mdp.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-3-planning-by-dynamic-programming-.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-4-model-free-prediction-.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-5-model-free-control-.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-6-value-function-approximation-.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-7-policy-gradient-methods.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-8-integrating-learning-and-planning.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-9-exploration-and-exploitation.pdf",
+    "https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/lecture-10-case-study-rl-in-classic-games.pdf"
    ],
-   "why": "就是节点“现有英文学习资源”（UCL 课程，10 讲 slides + 录像 + Easy21 作业）。页面把十讲的主题逐条列出，正好是这个节点的经典骨架：MDP、动态规划、无模型预测/控制（即价值与时序差分）、价值函数近似（策略评估与改进）、策略梯度、探索与利用，内容和节点对得上，不需要换书。"
+   "why": "就是节点“现有英文学习资源”（UCL 课程，10 讲 slides + 录像 + Easy21 作业）。作者本人的课程站把十讲 slides 都以 PDF 直接挂出，每份讲义第二页就是该讲的 Outline（编号小节，如第 3 讲的 Policy Evaluation / Policy Iteration / Value Iteration / Extensions to Dynamic Programming / Contraction Mapping），所以本轮把每讲拆到了节；十讲正好是这个节点的经典骨架：MDP、动态规划、无模型预测/控制（价值与时序差分）、价值函数近似、策略梯度、探索与利用。"
   },
   {
    "key": "B",
@@ -32,70 +42,260 @@
    "ref": "Lecture 1",
    "title": "Introduction to Reinforcement Learning",
    "zh": "强化学习导论",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "About Reinforcement Learning",
+     "zh": "关于强化学习"
+    },
+    {
+     "ref": "3",
+     "title": "The Reinforcement Learning Problem",
+     "zh": "强化学习问题"
+    },
+    {
+     "ref": "4",
+     "title": "Inside An RL Agent",
+     "zh": "强化学习智能体的内部"
+    },
+    {
+     "ref": "5",
+     "title": "Problems within Reinforcement Learning",
+     "zh": "强化学习内部的问题"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 2",
    "title": "Markov Decision Processes",
    "zh": "马尔可夫决策过程",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "Markov Processes",
+     "zh": "马尔可夫过程"
+    },
+    {
+     "ref": "2",
+     "title": "Markov Reward Processes",
+     "zh": "马尔可夫奖励过程"
+    },
+    {
+     "ref": "3",
+     "title": "Markov Decision Processes",
+     "zh": "马尔可夫决策过程"
+    },
+    {
+     "ref": "4",
+     "title": "Extensions to MDPs",
+     "zh": "MDP 的扩展"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 3",
    "title": "Planning by Dynamic Programming",
    "zh": "用动态规划做规划",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "Policy Evaluation",
+     "zh": "策略评估"
+    },
+    {
+     "ref": "3",
+     "title": "Policy Iteration",
+     "zh": "策略迭代"
+    },
+    {
+     "ref": "4",
+     "title": "Value Iteration",
+     "zh": "值迭代"
+    },
+    {
+     "ref": "5",
+     "title": "Extensions to Dynamic Programming",
+     "zh": "动态规划的扩展"
+    },
+    {
+     "ref": "6",
+     "title": "Contraction Mapping",
+     "zh": "压缩映射"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 4",
    "title": "Model-Free Prediction",
    "zh": "无模型预测",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "Monte-Carlo Learning",
+     "zh": "蒙特卡洛学习"
+    },
+    {
+     "ref": "3",
+     "title": "Temporal-Difference Learning",
+     "zh": "时序差分学习"
+    },
+    {
+     "ref": "4",
+     "title": "TD(λ)",
+     "zh": "TD(λ)"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 5",
    "title": "Model-Free Control",
    "zh": "无模型控制",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "On-Policy Monte-Carlo Control",
+     "zh": "同策略蒙特卡洛控制"
+    },
+    {
+     "ref": "3",
+     "title": "On-Policy Temporal-Difference Learning",
+     "zh": "同策略时序差分学习"
+    },
+    {
+     "ref": "4",
+     "title": "Off-Policy Learning",
+     "zh": "异策略学习"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 6",
    "title": "Value Function Approximation",
    "zh": "价值函数近似",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "Incremental Methods",
+     "zh": "增量式方法"
+    },
+    {
+     "ref": "3",
+     "title": "Batch Methods",
+     "zh": "批处理方法"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 7",
    "title": "Policy Gradient Methods",
    "zh": "策略梯度方法",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "Finite Difference Policy Gradient",
+     "zh": "有限差分策略梯度"
+    },
+    {
+     "ref": "3",
+     "title": "Monte-Carlo Policy Gradient",
+     "zh": "蒙特卡洛策略梯度"
+    },
+    {
+     "ref": "4",
+     "title": "Actor-Critic Policy Gradient",
+     "zh": "演员-评论家策略梯度"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 8",
    "title": "Integrating Learning and Planning",
    "zh": "学习与规划的结合",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "Model-Based Reinforcement Learning",
+     "zh": "基于模型的强化学习"
+    },
+    {
+     "ref": "3",
+     "title": "Integrated Architectures",
+     "zh": "集成的架构"
+    },
+    {
+     "ref": "4",
+     "title": "Simulation-Based Search",
+     "zh": "基于模拟的搜索"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 9",
    "title": "Exploration and Exploitation",
    "zh": "探索与利用",
-   "items": []
+   "items": [
+    {
+     "ref": "2",
+     "title": "Multi-Armed Bandits",
+     "zh": "多臂赌博机"
+    },
+    {
+     "ref": "3",
+     "title": "Contextual Bandits",
+     "zh": "上下文赌博机"
+    },
+    {
+     "ref": "4",
+     "title": "MDPs",
+     "zh": "MDP 中的探索"
+    }
+   ]
   },
   {
    "src": "A",
    "ref": "Lecture 10",
    "title": "Case Study: RL in Classic Games",
    "zh": "案例：经典游戏中的强化学习",
-   "items": []
+   "items": [
+    {
+     "ref": "1",
+     "title": "State of the Art",
+     "zh": "研究现状"
+    },
+    {
+     "ref": "2",
+     "title": "Game Theory",
+     "zh": "博弈论"
+    },
+    {
+     "ref": "3",
+     "title": "Minimax Search",
+     "zh": "极小极大搜索"
+    },
+    {
+     "ref": "4",
+     "title": "Self-Play Reinforcement Learning",
+     "zh": "自我对弈强化学习"
+    },
+    {
+     "ref": "5",
+     "title": "Combining Reinforcement Learning and Minimax Search",
+     "zh": "强化学习与极小极大搜索的结合"
+    },
+    {
+     "ref": "6",
+     "title": "Reinforcement Learning in Imperfect-Information Games",
+     "zh": "不完全信息博弈中的强化学习"
+    }
+   ]
   },
   {
    "src": "B",
@@ -153,7 +353,7 @@
     "A:Lecture 2",
     "A:Lecture 1"
    ],
-   "note": "A 第 2 讲是 MDP 的形式化（状态、动作、转移、奖励、折扣、值函数与贝尔曼期望/最优方程）；第 1 讲给智能体-环境交互的框架与 MDP 的动机。"
+   "note": "A 第 2 讲的四个小节正好是 MDP 的形式化链：Markov Processes（马尔可夫性、状态转移矩阵）→ Markov Reward Processes（回报、价值函数、贝尔曼期望方程）→ Markov Decision Processes（策略、值函数、贝尔曼期望/最优方程）→ Extensions to MDPs（无穷/连续状态、POMDP）；第 1 讲给智能体-环境交互的框架与 MDP 的动机。"
   },
   {
    "topic": "价值/策略",
@@ -163,7 +363,7 @@
     "A:Lecture 5",
     "A:Lecture 6"
    ],
-   "note": "价值：第 3 讲策略评估与策略迭代/值迭代（有模型），第 4 讲无模型下的价值预测（MC、TD(λ)），第 6 讲用函数逼近表示价值；策略：第 5 讲无模型控制（SARSA、Q-learning 等策略改进），第 6 讲把策略评估与改进都放到近似价值函数下，第 7 讲直接对策略参数做梯度。"
+   "note": "价值：第 3 讲的 Policy Evaluation 与 Value Iteration/Policy Iteration（有模型），第 4 讲的 Monte-Carlo Learning 与 Temporal-Difference Learning（无模型预测），第 6 讲的 Incremental Methods/Batch Methods（用函数逼近表示价值）；策略：第 5 讲 On-Policy Monte-Carlo Control 与 On-Policy Temporal-Difference Learning 做策略改进，第 6 讲把评估与改进都放到近似价值函数下，第 7 讲三层策略梯度（Finite Difference / Monte-Carlo / Actor-Critic）。"
   },
   {
    "topic": "时序差分",
@@ -171,15 +371,14 @@
     "A:Lecture 4",
     "A:Lecture 5"
    ],
-   "note": "TD 预测与 TD(λ)/资格迹在第 4 讲，TD 控制（SARSA、Q-learning、期望 SARSA）在第 5 讲；第 8 讲 Dyna 与第 10 讲的游戏案例里也再用到 TD。"
+   "note": "TD(λ) 与资格迹在第 4 讲第 4 节，TD 控制（SARSA、Q-learning、期望 SARSA）在第 5 讲 On-Policy Temporal-Difference Learning 与 Off-Policy Learning 两节；第 8 讲的 Model-Based Reinforcement Learning（Dyna）与第 10 讲的对弈案例里也再用到 TD。"
   },
   {
    "topic": "策略梯度",
    "refs": [
-    "A:Lecture 7",
-    "A:Lecture 6"
+    "A:Lecture 7"
    ],
-   "note": "A 第 7 讲：策略梯度定理、REINFORCE、带基线/actor-critic、策略梯度与 Q 值的关系；第 6 讲的近似价值函数是 critic 的基础。CS285 另有 Lecture 5/6/9/10 专门讲 policy gradient 与 actor-critic、高级策略梯度，本节点没有单列（见 omitted）。"
+   "note": "A 第 7 讲拆成三节：Finite Difference Policy Gradient（有限差分）、Monte-Carlo Policy Gradient（REINFORCE 与策略梯度定理）、Actor-Critic Policy Gradient（带基线、相容函数近似、优势函数）。CS285 另有 Lecture 5/6/9/10 专门讲 policy gradient 与 actor-critic、高级策略梯度，本节点没有单列（见 omitted）。"
   },
   {
    "topic": "探索",
@@ -188,32 +387,34 @@
     "B:Lecture 19",
     "B:Lecture 23"
    ],
-   "note": "A 第 9 讲：ε-greedy、softmax、UCB、乐观初始化等经典探索策略与多臂赌博机视角；B:Lecture 19 系统讲基于不确定性/计数/内在奖励的探索，B:Lecture 23 讲到稀疏奖励与分布式设定下的探索。"
+   "note": "A 第 9 讲分三节逐级上升：Multi-Armed Bandits（ε-greedy、softmax、UCB、乐观初始化）→ Contextual Bandits → MDPs（在 MDP 里做探索）；B:Lecture 19 系统讲基于不确定性/计数/内在奖励的探索，B:Lecture 23 讲到稀疏奖励与分布式设定下的探索。"
   },
   {
    "topic": "离线学习",
    "refs": [
     "B:Lecture 17",
-    "B:Lecture 18"
+    "B:Lecture 18",
+    "A:Lecture 5"
    ],
-   "note": "主来源 A（2015 年 UCL 课程）完全没有离线 RL：它假设能在线与环境交互做无模型控制。B 的 Offline RL 上下两讲专讲只用固定数据集训练的设定（分布偏移、离线策略评估、约束/不确定性方法、离线到在线）。"
+   "note": "主来源 A（2015 年 UCL 课程）没有离线 RL：它假设能在线与环境交互做无模型控制，只在第 5 讲 Off-Policy Learning 一节讲重要性采样式的异策略学习。B 的 Offline RL 上下两讲专讲只用固定数据集训练的设定（分布偏移、离线策略评估、约束/不确定性方法、离线到在线）。"
   },
   {
    "topic": "与控制和运筹的交叉",
    "refs": [
     "A:Lecture 2",
     "A:Lecture 3",
+    "A:Lecture 8",
     "B:Lecture 13",
     "B:Lecture 15"
    ],
-   "note": "与控制：A:2 的 MDP 与 A:3 的动态规划就是最优控制/运筹里动态规划那一套（贝尔曼方程、值迭代、策略迭代），B:Lecture 13 把控制写成推断，B:Lecture 15 讲基于模型的规划（等价于 MPC 式的前瞻）。与运筹：赌博机式的探索（A:Lecture 9）与 MDP 决策模型是运筹里的资源分配/库存/定价模型的同一形式化。两份来源都没有以“运筹”为题的专门章节，这一条是用共用的形式化对应出来的，不另找第二份研究生专著展开。"
+   "note": "与控制：A:Lecture 2 的 MDP 与 A:Lecture 3 的 Policy Evaluation/Policy Iteration/Value Iteration 就是最优控制里动态规划那一套（贝尔曼方程、压缩映射），A:Lecture 8 的 Model-Based Reinforcement Learning 与 Simulation-Based Search 对应 MPC 式前瞻，B:Lecture 13 把控制写成推断，B:Lecture 15 讲基于模型的规划。与运筹：赌博机式的探索（A:Lecture 9 的多臂/上下文赌博机）与 MDP 决策模型是运筹里资源分配/库存/定价模型的同一形式化。两份来源都没有以“运筹”为题的专门章节，这一条是用共用的形式化对应出来的。"
   }
  ],
- "omitted": "A（David Silver UCL 课程）只收了页面列出的 10 讲，没有收页面上的 Advanced Topics 2015 课程、Easy21 作业、往年考题等其余条目。B（CS285）未收：Lecture 1–4（导论、行为克隆、RL 基础）、Lecture 5–10（Policy Gradients、Actor Critic、Value-Based RL、Q-learning in Practice、Advanced Policy Gradients 上下 —— 策略梯度本节点已由 A:Lecture 7 承担）、Lecture 11–12（变分推断及其在 RL 中的用法）、Lecture 14（LLM RL）、Lecture 16（Model-Based RL Part 2）、Lecture 20（RL Theory）、Lecture 21–22（期中复习）、Lecture 24（Multi-task RL，属节点 A.2.5 的多任务学习）、Lecture 25（开放问题）。Sutton & Barto《Reinforcement Learning: An Introduction》是这个主题的经典教材，也很想用它做细到节的主来源，但作者主页的整书 PDF（RLbook2020.pdf，20 MB）超出 research_tool 单次读取上限、正文抽不出来，故未采用（详见 notes）。",
- "notes": "两点说明：(1) 两份来源都是课程逐讲列表，每讲在页面上只有标题、没有小节，所以导览图是 16 个讲级分支、没有第三层；策略梯度/价值近似的细节需要打开对应讲义的 slides。(2) 曾尝试用 Sutton & Barto 第 2 版整书目录做主来源（作者主页 incompleteideas.net 免费 PDF），但 research_tool 单次最多读 20 MB，RLbook2020.pdf 恰好 20 MB 被截断，PDF 解析报 PdfStreamError，目录读不出来；作者主页的 1998 年第 1 版 HTML 全文章节可读，但那一版没有策略梯度章，故未用它替代。若主代理想补一份更细的书目目录，可考虑第 2 版纸质书出版社（MIT Press）目录页，但该页对本机返回 403。B 的课程页是 Spring 2026 版本，年份按此写。",
+ "omitted": "本轮把主来源改成“这门课的官方讲义 PDF”之后：A 十份讲义里，每份 Outline 中的 “Admin”“Introduction”“Summary”“Conclusions” 四个通用小节没有收（分别是课程事务、本讲导引、小结与课程结论，不是知识点），所以第 1 讲只收 4 节（去掉 Admin）、第 3–9 讲各去掉 Introduction/Summary、第 10 讲去掉 Conclusions；第 6 讲与第 8 讲的 Deck 里 Introduction 只是复述上一讲，去掉后剩 2–3 节。B（CS285）未收：Lecture 1–4（导论、行为克隆、RL 基础）、Lecture 5–10（Policy Gradients、Actor Critic、Value-Based RL、Q-learning in Practice、Advanced Policy Gradients 上下 —— 策略梯度本节点已由 A:Lecture 7 承担）、Lecture 11–12（变分推断及其在 RL 中的用法）、Lecture 14（LLM RL）、Lecture 16（Model-Based RL Part 2）、Lecture 20（RL Theory）、Lecture 21–22（期中复习）、Lecture 24（Multi-task RL，属节点 A.2.5 的多任务学习）、Lecture 25（开放问题）。",
+ "notes": "本轮（deepen-6）的做法：按第 1 种方式（同一门课的官方讲义 PDF）加深，A 的十讲全部拆到了节，节标题照抄每份讲义第 2 页 Outline 的原文，ref 用 Outline 上的编号（1、2、3…），由于编号按讲重新起，coverage 一律引用讲次分支（A:Lecture N），不引用节编号。本来按批次说明的提示想用 Sutton & Barto《Reinforcement Learning: An Introduction》2nd ed 做有章节两层的主来源，但作者主页的整书 PDF（http://incompleteideas.net/book/RLbook2020.pdf）实测 73 129 769 字节（curl 取 Content-Length），超过 research_tool 单次读取上限 60 MB，下载被截断、pypdf 报 PdfStreamError，目录仍然读不出来，故放弃；因此仍用 Silver 课程的官方讲义做两层结构。B（CS285）的六个补充分支仍停在讲级：2026 版课程站的 calendar 页在纯 HTTP 下取不到正文（页面只有导航，课表由脚本渲染），站上也没有直接挂出的逐讲 slides PDF（static/ 下只有 homework、sections、misc），所以没有再往下拆；若后续要补，可换成 CS285 往年的 offering 页或直接换一本带章节的教材。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 16,
+  "exact": 52,
   "fuzzy": 0,
   "dropped": []
  }

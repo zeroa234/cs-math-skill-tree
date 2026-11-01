@@ -16,14 +16,14 @@
   {
    "key": "B",
    "kind": "book",
-   "title": "Software Engineering, 9th Edition",
-   "by": "Ian Sommerville",
-   "year": 2010,
-   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "title": "Guide to the Software Engineering Body of Knowledge (SWEBOK Guide) v4.0a",
+   "by": "IEEE Computer Society (editor: Hironori Washizaki)",
+   "year": 2026,
+   "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering",
    "toc_urls": [
-    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+    "https://ieeecs-media.computer.org/media/education/swebok/swebok-v4.pdf"
    ],
-   "why": "补 A 缺的部分：7.1 讲面向对象设计与 UML（识别对象、设计模型、定义接口），7.2 讲设计模式在开发过程中的位置；A 只讲模式本身，没有设计过程和 UML 的章节。"
+   "why": "补 A 缺的部分：SWEBOK 第 3 章 Software Design 按节给出设计原则、高层/详细设计、模型化记录（结构化与行为设计描述）、设计模式与风格、面向对象设计；A 只讲模式本身，没有设计过程、UML 表示与设计原则的章节。"
   },
   {
    "key": "C",
@@ -252,20 +252,102 @@
   },
   {
    "src": "B",
-   "ref": "7",
-   "title": "Design and implementation",
-   "zh": "设计与实现",
-   "fill": "补 UML 与面向对象设计过程：如何从需求识别对象与类、设计模型、定义接口，以及设计模式在过程中的位置",
+   "ref": "1",
+   "title": "Software Design Fundamentals",
+   "zh": "软件设计基础",
+   "fill": "补设计原则与设计的上下文：设计思维、设计的上下文、设计中的关键问题、软件设计原则（抽象、信息隐藏、模块化、耦合与内聚等）",
    "items": [
     {
-     "ref": "7.1",
-     "title": "Object-oriented design using the UML",
-     "zh": "使用 UML 的面向对象设计"
+     "ref": "1.1",
+     "title": "Design Thinking",
+     "zh": "设计思维"
     },
     {
-     "ref": "7.2",
-     "title": "Design patterns",
-     "zh": "设计模式"
+     "ref": "1.2",
+     "title": "Context of Software Design",
+     "zh": "软件设计的上下文"
+    },
+    {
+     "ref": "1.3",
+     "title": "Key Issues in Software Design",
+     "zh": "软件设计中的关键问题"
+    },
+    {
+     "ref": "1.4",
+     "title": "Software Design Principles",
+     "zh": "软件设计原则"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Software Design Processes",
+   "zh": "软件设计过程",
+   "fill": "补职责分配在过程中的位置：概要设计把需求分配到组件与接口，详细设计把职责分配到类与模块",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "High-Level Design",
+     "zh": "概要设计"
+    },
+    {
+     "ref": "2.2",
+     "title": "Detailed Design",
+     "zh": "详细设计"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Recording Software Designs",
+   "zh": "记录软件设计",
+   "fill": "补 UML 表示与设计模式在过程里的位置：模型化设计、结构/行为设计描述（类图、接口、交互图）、设计模式与风格、设计理由",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Model-Based Design",
+     "zh": "基于模型的设计"
+    },
+    {
+     "ref": "4.2",
+     "title": "Structural design descriptions",
+     "zh": "结构化设计描述"
+    },
+    {
+     "ref": "4.3",
+     "title": "Behavioral design descriptions",
+     "zh": "行为设计描述"
+    },
+    {
+     "ref": "4.4",
+     "title": "Design Patterns and Styles",
+     "zh": "设计模式与风格"
+    },
+    {
+     "ref": "4.6",
+     "title": "Design Rationale",
+     "zh": "设计理由"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Software Design Strategies and Methods",
+   "zh": "软件设计策略与方法",
+   "fill": "补面向对象分析与设计的成型方法，以及领域驱动设计这条 OOA/D 主线",
+   "items": [
+    {
+     "ref": "5.4",
+     "title": "Object-Oriented Design",
+     "zh": "面向对象设计"
+    },
+    {
+     "ref": "5.10",
+     "title": "Domain-Driven Design",
+     "zh": "领域驱动设计"
     }
    ]
   },
@@ -338,32 +420,39 @@
   {
    "topic": "职责分配",
    "refs": [
-    "C:#1",
-    "B:7.1"
+    "B:2.2",
+    "B:1.4",
+    "C:#1"
    ],
-   "note": "两份来源都没有专讲 GRASP 的章；职责落在“类设计／名词识别／应用类与解决方案类”这节，A 的行为型模式分组也以对象之间的职责分配为分类依据。"
+   "note": "两份来源都没有专讲 GRASP 的章；职责分配落在 B:2.2 详细设计（把职责分给类与模块）与 C:#1 的类设计（名词识别、应用类与解决方案类），A 的行为型模式分组也以对象之间的职责分配为分类依据。"
   },
   {
    "topic": "UML",
    "refs": [
-    "B:7.1",
+    "B:4.1",
+    "B:4.2",
+    "B:4.3",
     "C:#1"
-   ]
+   ],
+   "note": "SWEBOK 讲的是“记录设计”的模型种类（结构描述、行为描述），具体图型（类图、顺序图、状态图）的用法在 C 的 UML models for design 一节。"
   },
   {
    "topic": "接口",
    "refs": [
-    "B:7.1",
+    "B:4.2",
+    "B:2.1",
     "A:#2"
-   ]
+   ],
+   "note": "B:4.2 的结构化设计描述含类的接口定义，B:2.1 概要设计决定组件之间的接口；A 的结构型模式（适配器、外观、代理）讲的是给既有接口套壳的做法。"
   },
   {
    "topic": "设计原则",
    "refs": [
-    "A:#4",
-    "C:#1"
+    "B:1.4",
+    "B:1.3",
+    "A:#4"
    ],
-   "note": "没有单列 SOLID/GRASP 的章：A 讲的是违反原则后的症状（代码坏味）与修法，Cornell 讲义讲的是类设计的经验规则（如“类应易用对、难用错”）。"
+   "note": "B:1.4 是 SWEBOK 的设计原则一节，B:1.3 列设计中的关键问题；A 讲的是违反原则后的症状（代码坏味）与修法。"
   },
   {
    "topic": "模式",
@@ -371,7 +460,7 @@
     "A:#1",
     "A:#2",
     "A:#3",
-    "B:7.2"
+    "B:4.4"
    ]
   },
   {
@@ -382,11 +471,11 @@
    ]
   }
  ],
- "omitted": "A 未收站点上的入门栏目（What's a design pattern、History of patterns、Classification、Criticism）与代码示例的语言分支；B 只收第 7 章的 7.1、7.2，7.3 Implementation issues（复用、配置管理、宿主机-目标机开发）与第 6 章架构设计分别属于实现细节与架构节点；C 只收程序设计讲义，其第 9 讲后半的模式实例（Observer/Builder/Factory/Singleton/Composite/Visitor）与 A 重复，未重复收录。",
- "notes": "A 的目录页是 https://refactoring.guru/design-patterns/catalog（22 个模式的分类目录），代码坏味与重构手法列在同一页的侧栏里，所以只用一个 toc_url。三份来源都没有编号，coverage 里用 A:#1–A:#5、C:#1 指分支。",
+ "omitted": "A 未收站点上的入门栏目（What's a design pattern、History of patterns、Classification、Criticism）与代码示例的语言分支。B 只收第 3 章的五节：1.5（设计中的依赖关系等子问题）、3（设计质量：并发、持久化、分布、容错等）、5 的其余方法（函数式、数据中心、用户中心、构件、事件驱动、面向方面、约束式设计）、6（设计质量分析与评估）分别属构造、并发与质量等其他节点。C 只收程序设计讲义，其第 9 讲后半的模式实例（Observer/Builder/Factory/Singleton/Composite/Visitor）与 A 重复，未重复收录。",
+ "notes": "A 的目录页是 https://refactoring.guru/design-patterns/catalog（22 个模式的分类目录），代码坏味与重构手法列在同一页的侧栏里，所以只用一个 toc_url。B 是 IEEE 计算机学会官方免费公开的 SWEBOK v4.0a（2026 年 8 月版），ref 用 SWEBOK 自己的节号（1.4、2.2、4.4、5.10…）。第一轮里给 B 用的 Sommerville《Software Engineering》9th ed. 整书 PDF 由 CMU 17-313 课程站托管、非作者或出版社公开，已按第二轮要求删除，其覆盖的 UML 与面向对象设计过程改由 SWEBOK 第 3 章承担。三份来源里 A 与 C 都没有编号，coverage 里用 A:#1–A:#5、C:#1 指分支。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 54,
+  "exact": 68,
   "fuzzy": 0,
   "dropped": []
  }

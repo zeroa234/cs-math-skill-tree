@@ -3,121 +3,245 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "6.111 Introductory Digital Systems Laboratory",
-   "by": "MIT OpenCourseWare",
-   "year": 2006,
-   "url": "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/",
+   "kind": "book",
+   "title": "Digital Design and Computer Architecture",
+   "by": "David Money Harris, Sarah L. Harris",
+   "year": 2007,
+   "url": "https://catdir.loc.gov/catdir/toc/ecip071/2006030554.html",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/6-111-introductory-digital-systems-laboratory-spring-2006/pages/lecture-notes/"
+    "https://catdir.loc.gov/catdir/toc/ecip071/2006030554.html"
    ],
-   "why": "节点“现有英文学习资源”里的那门课，16 次课有明确主题：组合/时序基本单元 → Verilog 建模 → 状态机与同步 → 存储器与时序 → 算术结构 → 可编程逻辑架构 → 性能变换与功耗，正好覆盖 RTL、仿真、时序与可编程逻辑；本科课程，适合 D2–D3，D4 的硬件编译/专用加速题目在这门课的项目里也有落点。"
+   "why": "数字设计与 RTL 的标准本科教材（Morgan Kaufmann，Verilog 版），目录是完整的章→节：第 2 章组合逻辑（含门级延迟与毛刺）、第 3 章时序逻辑（锁存器/触发器、同步设计与时序约束、亚稳态）、第 4 章 HDL（仿真与综合、组合/时序/状态机建模、testbench）、第 5 章功能模块（算术电路、存储器、PLA/FPGA）、第 7 章微体系结构（流水线、HDL 表示），正好对上节点简介的 RTL、仿真、综合、可编程逻辑与时序。"
   },
   {
    "key": "B",
    "kind": "course",
-   "title": "CMPE 691 Reconfigurable System Design",
+   "title": "CMPE 691 Reconfigurable System Design — Physical Design Flow and Timing Analysis",
    "by": "Ryan Robucci, University of Maryland Baltimore County",
    "year": 2025,
    "url": "https://eclipse.umbc.edu/robucci/cmpeRSD/",
    "toc_urls": [
-    "https://eclipse.umbc.edu/robucci/cmpeRSD/",
     "https://eclipse.umbc.edu/robucci/cmpeRSD/lectures/Physical_Design_Flow_and_Timing_Analysis/Physical_Design_Flow_and_Timing_Analysis.html"
    ],
-   "why": "补“综合、约束、时序收敛”：6.111 只讲设计本身，这一讲的编号小节把 RTL→综合→映射→打包→布局布线→静态时序分析（时钟周期约束、建立/保持、skew、slack、多周期/伪路径、CDC）整条流程拆开讲。"
+   "why": "补主来源没有的工具链细节：RTL→综合→映射→打包→布局布线→静态时序分析的整条流程，以及时钟周期约束、建立/保持、skew、slack、多周期与伪路径、跨时钟域。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "L1",
-   "title": "Introduction",
-   "zh": "导论",
-   "items": []
+   "ref": "2",
+   "title": "Combinational Logic Design",
+   "zh": "组合逻辑设计",
+   "items": [
+    {
+     "ref": "2.2",
+     "title": "Boolean Equations",
+     "zh": "布尔方程"
+    },
+    {
+     "ref": "2.3",
+     "title": "Boolean Algebra",
+     "zh": "布尔代数"
+    },
+    {
+     "ref": "2.4",
+     "title": "From Logic to Gates",
+     "zh": "从逻辑式到门级电路"
+    },
+    {
+     "ref": "2.5",
+     "title": "Multilevel Combinational Logic",
+     "zh": "多级组合逻辑"
+    },
+    {
+     "ref": "2.7",
+     "title": "Karnaugh Maps",
+     "zh": "卡诺图"
+    },
+    {
+     "ref": "2.8",
+     "title": "Combinational Building Blocks",
+     "zh": "组合逻辑功能块"
+    },
+    {
+     "ref": "2.9",
+     "title": "Timing",
+     "zh": "组合逻辑的时序（传播延迟与毛刺）"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "L2",
-   "title": "Combinational logic",
-   "zh": "组合逻辑",
-   "items": []
+   "ref": "3",
+   "title": "Sequential Logic Design",
+   "zh": "时序逻辑设计",
+   "items": [
+    {
+     "ref": "3.2",
+     "title": "Latches and Flip-Flops",
+     "zh": "锁存器与触发器"
+    },
+    {
+     "ref": "3.3",
+     "title": "Synchronous Logic Design",
+     "zh": "同步逻辑设计"
+    },
+    {
+     "ref": "3.4",
+     "title": "Finite State Machines",
+     "zh": "有限状态机"
+    },
+    {
+     "ref": "3.5",
+     "title": "Timing of Sequential Logic",
+     "zh": "时序逻辑的时序分析"
+    },
+    {
+     "ref": "3.6",
+     "title": "Parallelism",
+     "zh": "并行化"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "L3",
-   "title": "Introduction to Verilog® - combinational logic",
-   "zh": "Verilog 入门——组合逻辑",
-   "items": []
+   "ref": "4",
+   "title": "Hardware Description Languages",
+   "zh": "硬件描述语言",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Introduction",
+     "zh": "导论（模块与仿真/综合）",
+     "items": [
+      {
+       "ref": "4.1.1",
+       "title": "Modules",
+       "zh": "模块"
+      },
+      {
+       "ref": "4.1.3",
+       "title": "Simulation and Synthesis",
+       "zh": "仿真与综合"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "Combinational Logic",
+     "zh": "组合逻辑的 Verilog 建模"
+    },
+    {
+     "ref": "4.3",
+     "title": "Structural Modeling",
+     "zh": "结构化建模"
+    },
+    {
+     "ref": "4.4",
+     "title": "Sequential Logic",
+     "zh": "时序逻辑的 Verilog 建模"
+    },
+    {
+     "ref": "4.5",
+     "title": "More Combinational Logic",
+     "zh": "更多组合逻辑写法"
+    },
+    {
+     "ref": "4.6",
+     "title": "Finite State Machines",
+     "zh": "有限状态机的 Verilog 建模"
+    },
+    {
+     "ref": "4.8",
+     "title": "Testbenches",
+     "zh": "测试激励（testbench）"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "L4",
-   "title": "Sequential building blocks",
-   "zh": "时序基本单元",
-   "items": []
+   "ref": "5",
+   "title": "Digital Building Blocks",
+   "zh": "数字功能模块",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Arithmetic Circuits",
+     "zh": "算术电路"
+    },
+    {
+     "ref": "5.4",
+     "title": "Sequential Building Blocks",
+     "zh": "时序功能块"
+    },
+    {
+     "ref": "5.5",
+     "title": "Memory Arrays",
+     "zh": "存储器阵列"
+    },
+    {
+     "ref": "5.6",
+     "title": "Logic Arrays",
+     "zh": "逻辑阵列",
+     "items": [
+      {
+       "ref": "5.6.1",
+       "title": "Programmable Logic Array (PLA)",
+       "zh": "可编程逻辑阵列（PLA）"
+      },
+      {
+       "ref": "5.6.2",
+       "title": "Field Programmable Gate Array (FPGA)",
+       "zh": "现场可编程门阵列（FPGA）"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "L5",
-   "title": "Simple sequential circuits and Verilog®",
-   "zh": "简单时序电路与 Verilog",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L6",
-   "title": "Finite-state machines and synchronization",
-   "zh": "有限状态机与同步",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L7",
-   "title": "Memory basics and timing",
-   "zh": "存储器基础与时序",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L8-L9",
-   "title": "Arithmetic structures",
-   "zh": "算术结构",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L10",
-   "title": "Analog building blocks",
-   "zh": "模拟基本单元",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L11",
-   "title": "System integration issues and major/minor FSM",
-   "zh": "系统集成问题与主/次状态机",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L12",
-   "title": "Reconfigurable logic architecture",
-   "zh": "可重构逻辑架构",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L15",
-   "title": "LSI integration and performance transformations",
-   "zh": "LSI 集成与性能变换",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L16",
-   "title": "Power dissipation in digital systems",
-   "zh": "数字系统中的功耗",
-   "items": []
+   "ref": "7",
+   "title": "Microarchitecture",
+   "zh": "微体系结构",
+   "items": [
+    {
+     "ref": "7.2",
+     "title": "Performance Analysis",
+     "zh": "性能分析"
+    },
+    {
+     "ref": "7.5",
+     "title": "Pipelined Processor",
+     "zh": "流水线处理器"
+    },
+    {
+     "ref": "7.6",
+     "title": "HDL Representation",
+     "zh": "HDL 描述",
+     "items": [
+      {
+       "ref": "7.6.1",
+       "title": "Single-Cycle Processor",
+       "zh": "单周期处理器的 RTL 描述"
+      },
+      {
+       "ref": "7.6.2",
+       "title": "Generic Building Blocks",
+       "zh": "通用功能块"
+      },
+      {
+       "ref": "7.6.3",
+       "title": "Testbench",
+       "zh": "测试平台"
+      }
+     ]
+    },
+    {
+     "ref": "7.8",
+     "title": "Advanced Microarchitecture",
+     "zh": "高级微体系结构"
+    }
+   ]
   },
   {
    "src": "B",
@@ -218,21 +342,26 @@
   {
    "topic": "RTL",
    "refs": [
-    "A:L3",
-    "A:L5",
-    "A:L11"
+    "A:4.2",
+    "A:4.3",
+    "A:4.4",
+    "A:4.6",
+    "A:7.6"
    ]
   },
   {
    "topic": "仿真",
    "refs": [
-    "A:L3",
+    "A:4.1.3",
+    "A:4.8",
+    "A:7.6.3",
     "B:10"
    ]
   },
   {
    "topic": "综合",
    "refs": [
+    "A:4.1.3",
     "B:6"
    ]
   },
@@ -240,6 +369,7 @@
    "topic": "约束",
    "refs": [
     "B:13",
+    "B:14",
     "B:31",
     "B:32"
    ]
@@ -247,25 +377,26 @@
   {
    "topic": "时序收敛",
    "refs": [
+    "A:2.9",
+    "A:3.5",
     "B:12",
     "B:23",
-    "B:25",
-    "B:19"
+    "B:25"
    ]
   },
   {
    "topic": "可编程逻辑",
    "refs": [
-    "A:L12",
-    "A:L15"
+    "A:5.6",
+    "A:5.6.2"
    ]
   }
  ],
- "omitted": "6.111 的 L13（Video）与 L14（Project kickoff）是课程项目安排，未收；B 只收“Physical Design Flow and Timing Analysis”这一讲的编号小节，其余讲次（Verilog 基础、数据流建模、FSM、数据通路、亚稳态、通信与时钟管理）未收，其中综合/约束/时序收敛之外的主题与 6.111 重复。",
- "notes": "A 的目录抄自 6.111 Lecture Notes 页的 SES/TOPICS 表（L8-L9 在原文合成一行，故 ref 写 L8-L9）。B 的目录抄自该讲正文的编号小节标题（1. References 与 2. Objectives、22. Interactive、40. Additional Materials 属导航，未收）；B 只到“讲”这一层，没有课程章号，故分支 ref 留空，coverage 用 B:#1 指代。",
+ "omitted": "A 未收的章：1（从 0 到 1：数字抽象与数制）、6（体系结构/汇编）、8（存储系统）——这些属于体系结构节点的范围；第 2 章的卡诺图细目、第 3 章的 3.2.7 与 3.5.3/3.5.6（晶体管级触发器、skew 推导、分辨率时间推导）等带 * 的选读小节未逐条收。B 的其余讲次（Verilog 基础、数据流建模、FSM、数据通路、亚稳态、通信与时钟管理）与 A 重复，未收。",
+ "notes": "本轮换源：6.111 的 Lecture Notes 页只有 SES/TOPICS 两列（每讲一行，无讲内小节），所以按“换一本标准教材”的做法把主来源换成 Harris & Harris 的《Digital Design and Computer Architecture》，原 6.111 的逐讲列表内容被 A、B 覆盖后删掉（它作为实验课的价值在“去学”链接里仍保留在节点资源中）。A 的目录抄自 Library of Congress 书目页上由出版社提供的目录数据；原页面里“Z¿s and X¿s”“Don¿t Cares”这类 ¿ 是 PDF 编码残缺，按规则写成 Z's/X's/Don't，未收录这些条目。B 的目录仍是那 17 个编号小节，未变。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 31,
+  "exact": 57,
   "fuzzy": 0,
   "dropped": []
  }

@@ -3,15 +3,16 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "Design and Analysis of Algorithms (6.046J, Spring 2015)",
-   "by": "Erik Demaine, Srini Devadas",
-   "year": 2015,
-   "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
+   "kind": "book",
+   "title": "Algorithms",
+   "by": "Sanjoy Dasgupta, Christos H. Papadimitriou, Umesh Vazirani",
+   "year": 2006,
+   "url": "https://cseweb.ucsd.edu/~dasgupta/book/index.html",
    "toc_urls": [
-    "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/calendar/"
+    "https://cseweb.ucsd.edu/~dasgupta/book/toc.pdf",
+    "https://cseweb.ucsd.edu/~dasgupta/book/index.html"
    ],
-   "why": "节点现有的英文资源就是这门课；OCW 的 calendar 逐讲列出 L1–L24 与复习课 R1–R11 的具体主题，分治、贪心、动态规划、摊还四项都能直接对上，课程同时声明以 CLRS 为教材。"
+   "why": "作者主页公开的整书目录（章→节两层，带节号与页码）：0.3 讲渐近记号、第 2 章讲递归式与分治、第 5 章讲贪心、第 6 章讲动态规划，正好覆盖本节点简介的六项；书是作者（Dasgupta/Papadimitriou/Vazirani）主页上免费公开的版本，节号可直接引用。"
   },
   {
    "key": "B",
@@ -23,100 +24,143 @@
    "toc_urls": [
     "https://algs4.cs.princeton.edu/14analysis/"
    ],
-   "why": "补“渐近分析”：6.046J 把渐近记号当作默认先修，课表里没有单列一节，第 1.4 节讲增长阶、代价模型、最坏情况保证与摊还分析，正好补这一段。"
+   "why": "补“渐近分析”与“摊还分析”：第 1.4 节按“数学模型—波浪号近似—增长阶分类—最坏情况保证—摊还分析—内存使用”分小节，DPV 没有摊还分析的专门小节。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "L1",
-   "title": "Overview, Interval Scheduling",
-   "zh": "概览、区间调度",
-   "items": []
+   "ref": "0",
+   "title": "Prologue",
+   "zh": "序幕",
+   "items": [
+    {
+     "ref": "0.2",
+     "title": "Enter Fibonacci",
+     "zh": "从斐波那契数说起"
+    },
+    {
+     "ref": "0.3",
+     "title": "Big-O notation",
+     "zh": "大 O 记号"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "L2",
-   "title": "Divide & Conquer: Convex Hull, Median Finding",
-   "zh": "分治：凸包、中位数查找",
-   "items": []
+   "ref": "2",
+   "title": "Divide-and-conquer algorithms",
+   "zh": "分治算法",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Multiplication",
+     "zh": "乘法"
+    },
+    {
+     "ref": "2.2",
+     "title": "Recurrence relations",
+     "zh": "递归式"
+    },
+    {
+     "ref": "2.3",
+     "title": "Mergesort",
+     "zh": "归并排序"
+    },
+    {
+     "ref": "2.4",
+     "title": "Medians",
+     "zh": "中位数"
+    },
+    {
+     "ref": "2.5",
+     "title": "Matrix multiplication",
+     "zh": "矩阵乘法"
+    },
+    {
+     "ref": "2.6",
+     "title": "The fast Fourier transform",
+     "zh": "快速傅里叶变换"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "R1",
-   "title": "Divide & Conquer: Smarter Interval Scheduling, Master Theorem, Strassen’s Algorithm",
-   "zh": "分治：更聪明的区间调度、主定理、Strassen 算法",
-   "items": []
+   "ref": "5",
+   "title": "Greedy algorithms",
+   "zh": "贪心算法",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Minimum spanning trees",
+     "zh": "最小生成树"
+    },
+    {
+     "ref": "5.2",
+     "title": "Huffman encoding",
+     "zh": "Huffman 编码"
+    },
+    {
+     "ref": "5.3",
+     "title": "Horn formulas",
+     "zh": "Horn 公式"
+    },
+    {
+     "ref": "5.4",
+     "title": "Set cover",
+     "zh": "集合覆盖"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "L3",
-   "title": "Divide & Conquer: FFT",
-   "zh": "分治：快速傅里叶变换",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L4",
-   "title": "Divide & Conquer: Van Emde Boas Trees",
-   "zh": "分治：van Emde Boas 树",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L5",
-   "title": "Amortization: Amortized Analysis",
-   "zh": "摊还：摊还分析",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "R3",
-   "title": "Amortization: Union-find",
-   "zh": "摊还：并查集",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "R5",
-   "title": "Dynamic Programming: More Examples",
-   "zh": "动态规划：更多例子",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L10",
-   "title": "Dynamic Programming: Advanced DP",
-   "zh": "动态规划：进阶动态规划",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L11",
-   "title": "Dynamic Programming: All-pairs Shortest Paths",
-   "zh": "动态规划：全源最短路径",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "L12",
-   "title": "Greedy Algorithms: Minimum Spanning Tree",
-   "zh": "贪心算法：最小生成树",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "R6",
-   "title": "Greedy Algorithms: More Examples",
-   "zh": "贪心算法：更多例子",
-   "items": []
+   "ref": "6",
+   "title": "Dynamic programming",
+   "zh": "动态规划",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Shortest paths in dags, revisited",
+     "zh": "有向无环图中的最短路径（重访）"
+    },
+    {
+     "ref": "6.2",
+     "title": "Longest increasing subsequences",
+     "zh": "最长递增子序列"
+    },
+    {
+     "ref": "6.3",
+     "title": "Edit distance",
+     "zh": "编辑距离"
+    },
+    {
+     "ref": "6.4",
+     "title": "Knapsack",
+     "zh": "背包问题"
+    },
+    {
+     "ref": "6.5",
+     "title": "Chain matrix multiplication",
+     "zh": "矩阵链乘法"
+    },
+    {
+     "ref": "6.6",
+     "title": "Shortest paths",
+     "zh": "最短路径"
+    },
+    {
+     "ref": "6.7",
+     "title": "Independent sets in trees",
+     "zh": "树上的独立集"
+    }
+   ]
   },
   {
    "src": "B",
    "ref": "1.4",
    "title": "Analysis of Algorithms",
    "zh": "算法分析",
-   "fill": "渐近分析",
+   "fill": "渐近分析（增长阶、代价模型、最坏情况保证）与摊还分析",
    "items": [
     {
      "ref": "",
@@ -155,76 +199,80 @@
   {
    "topic": "渐近分析",
    "refs": [
-    "B:1.4",
-    "A:L1"
+    "A:0.3",
+    "B:1.4"
    ],
-   "note": "6.046J 假定已会渐近记号，课表只在 L1 的概览里带过；增长阶、代价模型、最坏情况保证的正式定义在补充来源 B 的 1.4 节。"
+   "note": "DPV 0.3 给 O/Ω/Θ 记号的正式定义与常用阶；B 的 1.4 节再给代价模型、波浪号近似、增长阶分类与最坏情况保证。"
   },
   {
    "topic": "递归",
    "refs": [
-    "A:R1",
-    "A:L2"
+    "A:0.2",
+    "A:2.2"
    ],
-   "note": "递归式的求解集中在 R1 的主定理（Master Theorem）与 L2、L3 的分治递归分析里，课程没有单独的“递归”一讲。"
+   "note": "0.2 用 Fibonacci 讲递归写法与归纳证明，2.2 专门讲递归式的求解（展开法、递归树），分治各节的复杂度分析都建立在这一节上。"
   },
   {
    "topic": "分治",
    "refs": [
-    "A:L2",
-    "A:R1",
-    "A:L3",
-    "A:L4"
+    "A:2.1",
+    "A:2.3",
+    "A:2.4",
+    "A:2.5",
+    "A:2.6"
    ]
   },
   {
    "topic": "贪心",
    "refs": [
-    "A:L1",
-    "A:L12",
-    "A:R6"
-   ]
+    "A:5.1",
+    "A:5.2",
+    "A:5.3",
+    "A:5.4"
+   ],
+   "note": "5.1 最小生成树与 5.2 Huffman 编码是贪心的两个标准正确性证明，5.3/5.4 给贪心失效（集合覆盖只有近似比）的反面。"
   },
   {
    "topic": "动态规划",
    "refs": [
-    "A:R5",
-    "A:L10",
-    "A:L11"
+    "A:6.1",
+    "A:6.2",
+    "A:6.3",
+    "A:6.4",
+    "A:6.5",
+    "A:6.6",
+    "A:6.7"
    ]
   },
   {
    "topic": "摊还分析",
    "refs": [
-    "A:L5",
-    "A:R3",
     "B:1.4"
    ],
-   "note": "L5 讲摊还分析的三种方法，R3 用并查集做例子；补充来源 B 的 1.4 节也有一小节 Amortized analysis。"
+   "note": "DPV 全书的目录里没有摊还分析的章节（第 1 章讲的是数论算法），这一类内容由补充来源 B 的 1.4 节“Amortized analysis”小节承担。"
   },
   {
    "topic": "D2 验收：为给定问题选出正确范式并证明界",
    "refs": [
-    "A:R1",
-    "A:L10",
-    "A:L12"
+    "A:2.2",
+    "A:5.1",
+    "A:6.2"
    ],
-   "note": "主定理证分治界、进阶 DP 与 MST 贪心的正确性证明。"
+   "note": "2.2 的递归式求解给分治的界，5.1 的交换论证给贪心的正确性，6.2 的 DP 递推给最优性证明。"
   },
   {
    "topic": "D3 验收：独立完成归约、下界或最优性证明",
    "refs": [
-    "A:L5",
-    "A:R3"
+    "B:1.4"
    ],
-   "note": "摊还界（势能法、并查集反 Ackermann 界）是本科阶段能写完整下界证明的部分；更强的下界证明在 F.1.6 的课程里。"
+   "note": "本科范围内可完整写出的下界证明是摊还界（势能法/记账法），在 B 的 1.4 节；更强的条件性下界在 F.1.6。"
   }
  ],
- "omitted": "6.046J 课表里与本节点无关的部分未收：随机化 L6–L8（属 F.1.4）、数据结构增强 L9、网络流与匹配 L13–L14 及 R7（属 F.1.3）、线性规划 L15、复杂度与近似 L16–L18 及 R8–R9、分布式算法 L19–L20 及 R10、密码学 L21–L22 及 R11、缓存无关算法 L23–L24、复习课 R2（B 树）与 R4（随机中位数）。补充来源只取了第 1.4 节，其余章节与节点简介无关。",
- "notes": "6.046J 的 calendar 页同时给出教材：Cormen, Leiserson, Rivest, Stein《Introduction to Algorithms》3rd ed.，若主代理想换成教材视角，可把 CLRS 第 3、4、15、16、17 章按本导览图的六个知识点对应替换。",
+ "omitted": "DPV 未收：第 1 章（数论算法）、第 3–4 章（图的分解与最短路径，属其他节点）、第 7 章（线性规划与归约）、第 8–9 章（NP 完全性与应对，属 F.1.5/F.1.6）、第 10 章（量子算法），以及各章末尾的 Exercises 与随机算法虚拟章。B 只取第 1.4 节。",
+ "notes": "本轮按“换源”处理：原 A（MIT 6.046J）的 calendar 只有 12 条平铺讲次，课程站上的讲义 PDF 只有非正式的段内小标题（如“Theme of today's lecture”“Aggregate Method”），且 R1/R3/R5/R6 四讲是复习课、没有讲义，无法逐讲补出可信的节级结构，因此改用与这六个知识点最对齐的标准教材 DPV，原 6.046J 的讲次列表已删除；6.046J 的价值在别处：它冠名讲了 Master Theorem（R1）与并查集的摊还界（L5/R3），这两点在本导览图里由 DPV 2.2 的递归式求解与 B 的 1.4 节摊还分析承担，只是没有冠名。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 19,
+  "exact": 30,
   "fuzzy": 0,
   "dropped": []
  }

@@ -3,203 +3,429 @@
  "sources": [
   {
    "key": "A",
+   "kind": "book",
+   "title": "Distributed Systems: Principles and Paradigms, 2nd ed.",
+   "by": "Andrew S. Tanenbaum and Maarten van Steen",
+   "year": 2006,
+   "url": "https://catdir.loc.gov/catdir/toc/ecip0617/2006024063.html",
+   "toc_urls": [
+    "https://catdir.loc.gov/catdir/toc/ecip0617/2006024063.html"
+   ],
+   "why": "主来源换成本科/研究生通用的标准教材：美国国会图书馆编目记录里收的是出版社提供的完整目录（章 → 节 → 小节），第 6 章同步（物理时钟、逻辑时钟与向量时钟、互斥、选举）、第 7 章一致性与复制、第 8 章容错（故障模型、共识、原子多播、两阶段/三阶段提交、恢复），正好把时钟、复制、一致性、共识、事务、容错六个知识点落到节级。"
+  },
+  {
+   "key": "B",
    "kind": "course",
    "title": "6.5840 (6.824) Distributed Systems — Schedule, Spring 2026",
    "by": "Robert Morris, Frans Kaashoek et al., MIT PDOS",
    "year": 2026,
    "url": "https://pdos.csail.mit.edu/6.824/",
    "toc_urls": [
-    "https://pdos.csail.mit.edu/6.824/schedule.html"
+    "https://pdos.csail.mit.edu/6.824/schedule.html",
+    "https://pdos.csail.mit.edu/6.824/notes/l-raft.txt",
+    "https://pdos.csail.mit.edu/6.824/notes/l-raft2.txt"
    ],
-   "why": "节点现有英文资源，MIT 官方课表逐讲列出主题（GFS、Paxos、Raft 两讲、线性一致性、Zookeeper、分布式事务、Spanner、链式复制、乐观并发控制、缓存一致性、拜占庭容错），正好对着复制、一致性、共识、事务、容错。"
-  },
-  {
-   "key": "B",
-   "kind": "course",
-   "title": "15-440: Distributed Systems (Fall 2016) — Class Schedule",
-   "by": "Mohammad Hammoud, Carnegie Mellon University",
-   "year": 2016,
-   "url": "https://web2.qatar.cmu.edu/~mhhammou/15440-f16/15440_Syllabus_Fall2016.pdf",
-   "toc_urls": [
-    "https://web2.qatar.cmu.edu/~mhhammou/15440-f16/15440_Syllabus_Fall2016.pdf"
-   ],
-   "why": "补“时钟”：6.5840 现在的课表里没有物理时钟/逻辑时钟的讲次，CMU 15-440 的课表有两讲专讲物理时钟与逻辑时钟、向量时钟（因果序）。"
+   "why": "节点现有英文资源，保留它补教材没有的工程细节与论文级案例：GFS、Paxos 伪代码、Raft 两讲（讲义里有分节的主题）、线性一致性、Zookeeper、分布式事务、Spanner、链式复制、拜占庭容错。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "LEC 1",
-   "title": "Introduction",
-   "zh": "导论",
-   "items": []
+   "ref": "6",
+   "title": "SYNCHRONIZATION",
+   "zh": "同步",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "CLOCK SYNCHRONIZATION",
+     "zh": "时钟同步",
+     "items": [
+      {
+       "ref": "6.1.1",
+       "title": "Physical Clocks",
+       "zh": "物理时钟"
+      },
+      {
+       "ref": "6.1.2",
+       "title": "Global Positioning System",
+       "zh": "全球定位系统"
+      },
+      {
+       "ref": "6.1.3",
+       "title": "Clock Synchronization Algorithms",
+       "zh": "时钟同步算法"
+      }
+     ]
+    },
+    {
+     "ref": "6.2",
+     "title": "LOGICAL CLOCKS",
+     "zh": "逻辑时钟",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Lamport's Logical Clocks",
+       "zh": "Lamport 逻辑时钟"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "Vector Clocks",
+       "zh": "向量时钟"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "MUTUAL EXCLUSION",
+     "zh": "互斥"
+    },
+    {
+     "ref": "6.5",
+     "title": "ELECTION ALGORITHMS",
+     "zh": "选举算法"
+    }
+   ]
   },
   {
    "src": "A",
-   "ref": "LEC 2",
-   "title": "RPC and Threads, crawler.go, kv.go, vote examples",
-   "zh": "RPC 与线程（爬虫、KV、投票示例）",
-   "items": []
+   "ref": "7",
+   "title": "CONSISTENCY AND REPLICATION",
+   "zh": "一致性与复制",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "INTRODUCTION",
+     "zh": "引言"
+    },
+    {
+     "ref": "7.2",
+     "title": "DATA-CENTRIC CONSISTENCY MODELS",
+     "zh": "以数据为中心的一致性模型"
+    },
+    {
+     "ref": "7.3",
+     "title": "CLIENT-CENTRIC CONSISTENCY MODELS",
+     "zh": "以客户端为中心的一致性模型"
+    },
+    {
+     "ref": "7.4",
+     "title": "REPLICA MANAGEMENT",
+     "zh": "副本管理"
+    },
+    {
+     "ref": "7.5",
+     "title": "CONSISTENCY PROTOCOLS",
+     "zh": "一致性协议",
+     "items": [
+      {
+       "ref": "7.5.2",
+       "title": "Primary-Based Protocols",
+       "zh": "主备份协议"
+      },
+      {
+       "ref": "7.5.3",
+       "title": "Replicated-Write Protocols",
+       "zh": "副本写协议"
+      },
+      {
+       "ref": "7.5.4",
+       "title": "Cache-Coherence Protocols",
+       "zh": "缓存一致性协议"
+      }
+     ]
+    }
+   ]
   },
   {
    "src": "A",
+   "ref": "8",
+   "title": "FAULT TOLERANCE",
+   "zh": "容错",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "INTRODUCTION TO FAULT TOLERANCE",
+     "zh": "容错引论",
+     "items": [
+      {
+       "ref": "8.1.2",
+       "title": "Failure Models",
+       "zh": "故障模型"
+      },
+      {
+       "ref": "8.1.3",
+       "title": "Failure Masking by Redundancy",
+       "zh": "用冗余掩盖故障"
+      }
+     ]
+    },
+    {
+     "ref": "8.2",
+     "title": "PROCESS RESILIENCE",
+     "zh": "进程韧性",
+     "items": [
+      {
+       "ref": "8.2.2",
+       "title": "Failure Masking and Replication",
+       "zh": "故障掩盖与复制"
+      },
+      {
+       "ref": "8.2.3",
+       "title": "Agreement in Faulty Systems",
+       "zh": "故障系统中的协商"
+      },
+      {
+       "ref": "8.2.4",
+       "title": "Failure Detection",
+       "zh": "故障检测"
+      }
+     ]
+    },
+    {
+     "ref": "8.4",
+     "title": "RELIABLE GROUP COMMUNICATION",
+     "zh": "可靠组通信",
+     "items": [
+      {
+       "ref": "8.4.3",
+       "title": "Atomic Multicast",
+       "zh": "原子多播"
+      }
+     ]
+    },
+    {
+     "ref": "8.5",
+     "title": "DISTRIBUTED COMMIT",
+     "zh": "分布式提交",
+     "items": [
+      {
+       "ref": "8.5.1",
+       "title": "Two-Phase Commit",
+       "zh": "两阶段提交"
+      },
+      {
+       "ref": "8.5.2",
+       "title": "Three-Phase Commit",
+       "zh": "三阶段提交"
+      }
+     ]
+    },
+    {
+     "ref": "8.6",
+     "title": "RECOVERY",
+     "zh": "恢复",
+     "items": [
+      {
+       "ref": "8.6.2",
+       "title": "Checkpointing",
+       "zh": "检查点"
+      },
+      {
+       "ref": "8.6.3",
+       "title": "Message Logging",
+       "zh": "消息日志"
+      },
+      {
+       "ref": "8.6.4",
+       "title": "Recovery-Oriented Computing",
+       "zh": "面向恢复的计算"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
    "ref": "LEC 3",
    "title": "GFS",
    "zh": "GFS（Google 文件系统）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 4",
-   "title": "Paxos pseudo-code",
-   "zh": "Paxos 伪代码",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 6",
-   "title": "Fault Tolerance: Raft (1)",
-   "zh": "容错：Raft（上）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 7",
-   "title": "Fault Tolerance: Raft (2)",
-   "zh": "容错：Raft（下）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 8",
-   "title": "Consistency and Linearizability",
-   "zh": "一致性与线性一致性",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 9",
-   "title": "Zookeeper",
-   "zh": "Zookeeper",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 11",
-   "title": "Distributed Transactions",
-   "zh": "分布式事务",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 12",
-   "title": "Spanner",
-   "zh": "Spanner",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 13",
-   "title": "Chain Replication",
-   "zh": "链式复制",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 14",
-   "title": "Optimistic Concurrency Control",
-   "zh": "乐观并发控制",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 16",
-   "title": "Cache Consistency: Memcached at Facebook",
-   "zh": "缓存一致性：Facebook 的 Memcached",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "LEC 21",
-   "title": "Byzantine Fault Tolerance",
-   "zh": "拜占庭容错",
+   "fill": "补“复制”：大规模主备复制与一致性的取舍",
    "items": []
   },
   {
    "src": "B",
-   "ref": "11",
-   "title": "Synchronization – Motivation and Physical Clocks",
-   "zh": "同步：动机与物理时钟",
-   "fill": "补“时钟”：物理时钟同步与逻辑时钟/向量时钟（因果序）",
+   "ref": "LEC 4",
+   "title": "Paxos pseudo-code",
+   "zh": "Paxos 伪代码",
+   "fill": "补“共识”：教材 8.2.3 只讲协商的理论界限，这里给可实现的 Paxos",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 6",
+   "title": "Fault Tolerance: Raft (1)",
+   "zh": "容错：Raft（上）",
+   "fill": "补“共识”：Raft 的复制状态机与选举",
    "items": [
     {
-     "ref": "14",
-     "title": "Synchronization – Logical Clocks and Vector Clocks",
-     "zh": "同步：逻辑时钟与向量时钟"
+     "title": "replicated state machine",
+     "zh": "复制状态机"
+    },
+    {
+     "title": "state-machine replication with raft",
+     "zh": "用 Raft 做状态机复制"
+    },
+    {
+     "title": "leader election (Lab 3A)",
+     "zh": "领导者选举（Lab 3A）"
     }
    ]
+  },
+  {
+   "src": "B",
+   "ref": "LEC 7",
+   "title": "Fault Tolerance: Raft (2)",
+   "zh": "容错：Raft（下）",
+   "fill": "补“共识”的工程细节：日志、持久化与快照",
+   "items": [
+    {
+     "title": "the Raft log (Lab 2B)",
+     "zh": "Raft 日志（Lab 2B）"
+    },
+    {
+     "title": "persistence (Lab 2C)",
+     "zh": "持久化（Lab 2C）"
+    },
+    {
+     "title": "log compaction and Snapshots (Lab 2D)",
+     "zh": "日志压缩与快照（Lab 2D）"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "LEC 8",
+   "title": "Consistency and Linearizability",
+   "zh": "一致性与线性一致性",
+   "fill": "补“一致性”：线性一致性的形式定义与判定",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 9",
+   "title": "Zookeeper",
+   "zh": "Zookeeper",
+   "fill": "补“共识”在协调服务里的用法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 11",
+   "title": "Distributed Transactions",
+   "zh": "分布式事务",
+   "fill": "补“事务”：两阶段提交在真实系统里的分工与故障处理",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 12",
+   "title": "Spanner",
+   "zh": "Spanner",
+   "fill": "补“事务”与“时钟”的结合：真时间戳与外部一致性",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 13",
+   "title": "Chain Replication",
+   "zh": "链式复制",
+   "fill": "补“复制”的另一种拓扑与其容错论证",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 21",
+   "title": "Byzantine Fault Tolerance",
+   "zh": "拜占庭容错",
+   "fill": "补“容错”：非故障停止模型下的容错",
+   "items": []
   }
  ],
  "coverage": [
   {
    "topic": "时钟",
    "refs": [
-    "B:11",
-    "B:14"
+    "A:6.1",
+    "A:6.1.1",
+    "A:6.1.2",
+    "A:6.1.3",
+    "A:6.2",
+    "A:6.2.1",
+    "A:6.2.2",
+    "B:LEC 12"
    ]
   },
   {
    "topic": "复制",
    "refs": [
-    "A:LEC 3",
-    "A:LEC 6",
-    "A:LEC 12",
-    "A:LEC 13"
+    "A:7.1",
+    "A:7.4",
+    "A:7.5",
+    "A:7.5.2",
+    "A:7.5.3",
+    "B:LEC 3",
+    "B:LEC 13"
    ]
   },
   {
    "topic": "一致性",
    "refs": [
-    "A:LEC 8",
-    "A:LEC 16"
+    "A:7.2",
+    "A:7.3",
+    "A:7.5.4",
+    "B:LEC 8",
+    "B:LEC 12"
    ]
   },
   {
    "topic": "共识",
    "refs": [
-    "A:LEC 4",
-    "A:LEC 7",
-    "A:LEC 9"
+    "A:8.2.3",
+    "A:6.5",
+    "B:LEC 4",
+    "B:LEC 6",
+    "B:LEC 7",
+    "B:LEC 9"
    ]
   },
   {
    "topic": "事务",
    "refs": [
-    "A:LEC 11",
-    "A:LEC 12",
-    "A:LEC 14"
+    "A:8.5",
+    "A:8.5.1",
+    "A:8.5.2",
+    "A:8.4.3",
+    "B:LEC 11",
+    "B:LEC 12"
    ]
   },
   {
    "topic": "容错",
    "refs": [
-    "A:LEC 6",
-    "A:LEC 7",
-    "A:LEC 13",
-    "A:LEC 21"
+    "A:8.1",
+    "A:8.1.2",
+    "A:8.1.3",
+    "A:8.2",
+    "A:8.2.2",
+    "A:8.2.4",
+    "A:8.6",
+    "A:8.6.2",
+    "A:8.6.3",
+    "A:8.6.4",
+    "B:LEC 21"
    ]
   },
   {
    "topic": "分布式调试",
    "refs": [],
-   "note": "两个来源都没有专门章节：6.5840 的 LEC 15 是 Verification of distributed systems（形式化验证），不是调试方法；15-440 的课表里也没有调试讲次。A 的 LEC 2 只把调试放进 Go 工具链示例里，不够格单列。"
+   "note": "两个来源都没有专门章节：教材第 8 章讲故障检测与恢复，但没有调试/可观测性方法；6.5840 的相关讲次是 LEC 15 Verification of distributed systems（形式化验证，不是调试），课表里也没有调试专题。不硬凑。"
   }
  ],
- "omitted": "A 里没收：LEC 5（Go patterns）、LEC 10（Lab 3A+B 答疑）、LEC 15（Verification of distributed systems，偏形式化验证）、LEC 17（AWS Lambda）、LEC 18（Ray）、LEC 19（Fork Consistency, SUNDR）、LEC 20（Bitcoin/点对点）、LEC 22（Project demos）以及 hacking day、考试；B 里只取了同步两讲，其余（命名、编程模型 MPI/MapReduce/GraphLab/Pregel、虚拟化、分布式文件系统）与节点简介重复或无关。",
- "notes": "A 是逐讲清单，每讲即一个分支叶子，没有节一级目录；coverage 用 LEC 号作 ref。B 是课程 Syllabus PDF 里的 Class Schedule 表（第 11、14 次课），标题按表中原样抄。",
+ "omitted": "A 只收第 6–8 章：第 1–5 章（引言、体系结构、进程、通信、命名）与第 9–13 章（安全、分布式对象系统、分布式文件系统、分布式 Web 系统、基于协调的分布式系统）不属节点简介里的知识点；各章 SUMMARY 与 6.4 GLOBAL POSITIONING OF NODES（定位，偏应用）未收。B 里没收：LEC 1 导论、LEC 2 RPC 与线程（语言与工具层）、LEC 10 Lab 答疑、LEC 14 乐观并发控制（教材 8.5 已覆盖并发控制的基本权衡）、LEC 15 形式化验证、LEC 16 缓存一致性（教材 7.5.4 有对应节）、LEC 17–20（AWS Lambda、Ray、Fork Consistency、Bitcoin，属云与点对点专题）、LEC 22 项目展示。",
+ "notes": "本轮按第二轮第 2 条做法换源。先试第 1 条：6.5840 的讲义文本（notes/l-raft.txt、l-raft2.txt）能打开，但只有这两讲的讲义用 “*** topic:” 标出了分节主题，其余（l-gfs.txt、l-paxos.txt、l-linearizability.txt、l-2pc.txt、l-spanner.txt、l-cr.txt、l-memcached.txt、l-bft.txt、l-zookeeper.txt、l01.txt）都是问答式笔记，没有可当节标题的层级，故改用教材做主来源，两讲 Raft 讲义的主题作为 B 的分支小节保留。A 的目录来自国会图书馆编目页收录的出版社目录数据（原文全大写，未改大小写）；教材是 2006 年第 2 版，共识部分（8.2.3 Agreement in Faulty Systems）只讲理论界限，Paxos/Raft 的工程实现靠 B。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 16,
+  "exact": 52,
   "fuzzy": 0,
   "dropped": []
  }
