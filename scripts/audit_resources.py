@@ -83,7 +83,11 @@ def main():
         except urllib.error.HTTPError as exc:
             result.update(status=exc.code, error=str(exc))
         except Exception as exc:
-            result.update(status=None, error=str(exc))
+            if 'status' in result:
+                # A parser/evidence-path failure must not erase an observed HTTP status.
+                result.update(needsReview='Content or evidence processing failed', processingError=str(exc))
+            else:
+                result.update(status=None, error=str(exc))
         return result
 
     results = []

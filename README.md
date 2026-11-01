@@ -35,9 +35,10 @@
 ## 当前完成度（2026-11-01）
 
 - 201 个技能：前置已核实 191，英文学习资源 201，中文资源 166，练习题 201，知识导览图 201。
-- 知识导览图：201 个，共 1889 个分支、8642 个知识点（每个技能中位数 41 个）。10562 条标题逐字命中来源原文，11 条因 PDF 抽取差异（如 σ 被抽成 s）判为近似，0 条缺失。第二轮给 62 个只有讲次一层的节点补了讲内小节或换成章 → 节两层的教材，并换掉了 7 个不合格来源（课程站上的商业教材整书 PDF、镜像）。
-- 仍以讲次为主、没能补到小节的 3 个：A.2.3.2、C.3.3、S.2.1（讲义只有幻灯片或放在网盘 / 需登录，原因写在各自 `data/outlines/<id>.json` 的 `notes`）。简介里有 16 个知识点在所有来源里都没有专门章节，导览图右栏标“—”并写明原因（多数是“与某领域交叉”这类说明性短语，或树外的专业前置）。
+- 知识导览图：201 个，共 1890 个分支、8643 个知识点（每个技能中位数 41 个）。10563 条标题逐字命中来源原文，11 条因 PDF 抽取差异（如 σ 被抽成 s）判为近似，0 条缺失。第二轮给 62 个只有讲次一层的节点补了讲内小节或换成章 → 节两层的教材，并换掉了 7 个不合格来源（课程站上的商业教材整书 PDF、镜像）。本次给 D.2.1 补上 Airflow 官方幂等重试章节。
+- 仍以讲次为主、没能补到小节的 3 个：A.2.3.2、C.3.3、S.2.1（讲义只有幻灯片或放在网盘 / 需登录，原因写在各自 `data/outlines/<id>.json` 的 `notes`）。简介里有 15 个知识点在所有来源里都没有专门章节，导览图右栏标“—”并写明原因（多数是“与某领域交叉”这类说明性短语，或树外的专业前置）。
 - “去哪学”已按可访问性、内容匹配和学习入口复核；修正了章节错配、停在大纲页、旧地址及付费标注。逐节点结论和中文缺口见 `docs/learning-resources-review.md`，检查快照见 `docs/learning-resources-link-check.json`。中文导读只覆盖部分主题时会明确注明。
+- 新一轮逐节点来源与适用性审查见 [完整报告](reports/source-review-2026-11-01.md)：英文入口 90 个适合主学、99 个覆盖部分、6 个入口偏难、4 个历史资料、2 个仅作导读。检查学习/导览/先修证据共 1386 个不同 URL；7 个仍未确认当前访问。目录标题核对使用既有正文缓存，不等于所有当前正文或完整付费课程均已验证。
 - 前置待核实（draft，10 个）：F.2.4、P.5.4、C.4.4、D.1.5、S.2.4、S.5.2、H.4.4、I.2.3、X.2.4、X.2.5。原因是没找到能用的课程先修说明，或者课程要求的是树外的专业课（如 GIS、医学）。
 - 入门层 D2 以上却没有必须前置的技能：H.2.3、H.4.3、V.2.3。这是有证据的：对应课程写明不需要先修，构建时的警告可以忽略。
 
@@ -69,6 +70,8 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 | `python -X utf8 scripts/make_outline_batches.py` | 把技能切成导览图检索批次 `temp/outlines/batches/outline-XX.md`；`--deepen [--fix ID=原因]` 生成第二轮（加深只有讲次一层的导览图、换掉不合格来源） |
 | `python -X utf8 -I scripts/check_outlines.py [id…]` | 逐条核对导览图标题与来源原文；`--summary` 一行一节点看规模和扁平程度；`--archive` 把核对过的导览图写进 `data/outlines/` |
 | `python -X utf8 scripts/audit_resources.py` | 对构建后的中英文学习资源做 HTTP 检查，临时结果写入 `temp/resource-audit/final-links.json`；HTTP 200 不等于内容合适，需结合人工审核 |
+| `python -X utf8 scripts/audit_resources.py --scope all --output temp/resource-audit/all-source-links.json --evidence-dir temp/resource-audit/current-pages` | 同时检查全部导览来源、目录与先修证据链接；正文只留临时目录，`--only-url URL` 可复查指定清单网址 |
+| `python -X utf8 scripts/build_source_review.py` | 合并 `data/curation/source-review.tsv` 的人工判定、已归档 HTTP 快照与目录核对，生成 `reports/source-review-2026-11-01.md` 和 JSON；需要原有目录缓存及通过的界面检查日志 |
 | `node tests/resources.mjs` | 遍历 201 个详情面板核对真实链接，验证桌面/手机展示、费用标签、中文缺口和回退行为 |
 | `node tests/guide.mjs [id…]` | 用深链打开每张知识导览图，核对画出的节点数、查漏补缺列表、Esc 关闭和地址，桌面和手机各截图一组 |
 | `scripts/research_tool.py fetch <url>` | 打开网页并缓存（免费，PDF 用 pypdf 抽文字）；`extract` 走 Tavily（花额度）读 JS 渲染页面，同样缓存 |
