@@ -132,7 +132,7 @@
       class: "card" + (s.optional ? " opt" : ""),
       style: `--dc:${lane.color};width:${CW}px;height:${CH}px`,
       "data-id": s.id,
-      title: s.desc,
+      title: s.guide ? `${s.desc}\n双击打开知识导览图` : s.desc,
     },
     el("span", { class: "c-ico", "aria-hidden": "true" }),
     el("span", { class: "c-text" }, el("span", { class: "c-name" }, s.name), el("span", { class: "c-en", lang: "en" }, s.en)),
@@ -148,6 +148,7 @@
       }, from.slice(0, 3).map((l) => el("i", { style: `background:${LANE.get(l).color}` }))));
     }
     c.addEventListener("click", (e) => { if (!dragMoved) select(s.id); e.stopPropagation(); });
+    c.addEventListener("dblclick", (e) => { if (!dragMoved) Guide.open(s.id); e.stopPropagation(); });
     c.addEventListener("focus", () => ensureVisible(s.id));
     cards.set(s.id, c);
     cardsEl.append(c);
@@ -781,6 +782,7 @@
     }
     if (e.key === "Escape") { if (selected) select(null); else go("#overview"); }
     else if ((e.key === "l" || e.key === "L") && selected) toggleLearn(selected);
+    else if ((e.key === "g" || e.key === "G") && selected) Guide.open(selected);
     else if (e.key === "0") fit();
     else if (e.key === "+" || e.key === "=") pz.zoomIn();
     else if (e.key === "-") pz.zoomOut();

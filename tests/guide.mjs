@@ -70,6 +70,25 @@ for (const [i, id] of ids.entries()) {
   const r = await check(desktop, id, i === 0 || wanted.length ? "desktop" : "");
   console.log(`${id} nodes ${r.nodes} coverage ${r.coverage}`);
 }
+// Double-clicking a card on the skill map, or G on the selected skill, opens its knowledge map.
+{
+  const id = ids[0];
+  const lane = data.skills.find((x) => x.id === id).lane;
+  const opened = async (how) => {
+    await desktop.waitForSelector("dialog.guide[open] .markmap-node", { timeout: 8000 }).catch(() => {});
+    const r = await desktop.evaluate(() => ({ open: !!document.querySelector("dialog.guide[open]"), hash: location.hash }));
+    if (!r.open || r.hash !== `#skill/${id}/guide`) failures.push(`${id}: ${how} did not open the map ${JSON.stringify(r)}`);
+    await desktop.keyboard.press("Escape");
+    await desktop.waitForTimeout(150);
+  };
+  await desktop.goto(`${url}#map/${lane}`);
+  await desktop.waitForTimeout(800);
+  await desktop.dblclick(`.card[data-id="${id}"]`);
+  await opened("double-click");
+  await desktop.keyboard.press("g");
+  await opened("G key");
+}
+
 const phone = await (await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true })).newPage();
 const r = await check(phone, ids[0], "phone");
 if (r.overflowX) failures.push(`${ids[0]}: horizontal scroll on phone`);
