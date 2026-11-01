@@ -40,6 +40,7 @@
 - “去哪学”已按可访问性、内容匹配和学习入口复核；修正了章节错配、停在大纲页、旧地址及付费标注。早期结论与缺口记录在 `docs/learning-resources-review.md`，早期检查快照在 `docs/learning-resources-link-check.json`；当前覆盖和访问状态以以下完整报告为准。
 - 全部节点的来源与适用性见 [完整报告](reports/source-review-2026-11-01.md)；中文增补与视频发布者依据见 [增补报告](reports/chinese-resources-expansion-2026-11-01.md)。本轮补齐35个中文空缺、升级11个导读，并替换1个中文与2个英文付费入口。目录标题核对沿用已读取正文缓存，MOOC完整单元与视频字幕未逐条登录核验。
 - 前置待核实（draft，10 个）：F.2.4、P.5.4、C.4.4、D.1.5、S.2.4、S.5.2、H.4.4、I.2.3、X.2.4、X.2.5。原因是没找到能用的课程先修说明，或者课程要求的是树外的专业课（如 GIS、医学）。
+- 宣传片《我把计算机专业做成了一棵技能树》（约 2 分 04 秒，鲸鱼娘旁白 + 字幕 + CC0 音乐）：`output/promo/cs-math-promo.mp4`（不入库），做法见 `docs/promo-video.md`。
 - 入门层 D2 以上却没有必须前置的技能：H.2.3、H.4.3、V.2.3。这是有证据的：对应课程写明不需要先修，构建时的警告可以忽略。
 
 ## 数据流
@@ -81,6 +82,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 | `node tests/screenshot.mjs`、`node tests/screenshot-panel.mjs <id>` | 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器），含深链回归检查 |
 | `python -X utf8 scripts/package_web.py` | 把网页打成 `output/cs-math-skill-tree-<日期>.zip` 分享给别人（解压后双击 index.html；含 README.txt 和第三方许可证）。先跑 build |
 | `node tests/a11y.mjs [report.json]` | axe-core 按 WCAG 2.2 AA 审计 15 个界面状态（含知识导览图），并跑一遍纯键盘的主流程；结论见 `docs/hci-ux-review.md` |
+| `scripts/promo/`（`capture-app.mjs`、`build-graph.mjs`、`word-times.mjs`、`blender-tree.py`、`render-blender.sh`、`render.sh`） | 宣传片：页面截图、动画数据、Blender 3D 技能树、成片。画面代码在 `src/promo/`（Remotion），文稿 `data/promo/script.json`，步骤和坑见 `docs/promo-video.md` |
 
 截图和 pip 安装时把 `TEMP`/`TMP` 指到项目的 `temp/`，避免写 C 盘。验算练习题用的 sympy / numpy / scipy 和抽 PDF 文字用的 pypdf 装在 `temp/pylib`（`pip install --target temp/pylib`；`research_tool.py` 会自己把它加进路径）。
 
