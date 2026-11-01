@@ -1,31 +1,24 @@
 {
  "id": "A.2.5",
  "resource": {
+  "title": "Aalto CS-E4740 Federated Learning：课程与开放教材",
+  "url": "https://federatedlearningaalto.github.io/",
   "tier": "website",
-  "title": "Stanford CS 330 Deep Multi-Task and Meta Learning（课程主页 + 公开讲义与历年录像）",
-  "url": "https://cs330.stanford.edu/",
   "lang": "en",
   "free": true,
-  "covers": "课程主页列出完整 schedule 与材料，并提供 Fall 2019–2022 各版的公开录像（'Publicly available recordings of previous offerings are available below'）。与节点对应：课程导论与多任务学习（共享表示、硬/软参数共享、任务关系）、Transfer learning & fine-tuning（迁移学习与微调）、black-box meta-learning 与 in-context learning、optimization-based meta-learning / MAML、few-shot 与 metric learning、对比式与生成式无监督预训练做迁移、curriculum 与 lifelong learning（持续迁移）。联邦学习（非独立同分布数据、通信与隐私约束）不在本课范围，属该资源之外——那部分可用 Aalto CS-E4740（见 courses 第二条，免费、材料公开）。",
-  "verified": true
+  "covers": "整门课只讲联邦学习，从“经验图上的广义全变差（GTVMin）最小化”一个设计原则推出算法：FedGD/FedAvg/FedProx 与 clustered federated learning 的推导、聚合的不动点与异步迭代、通信轮数与精度的权衡（多少轮买多少精度）、看不到数据时如何判断哪些设备该一起学（经验图与联邦聚类，即设备数据异构下的分组）、恶意参与者的鲁棒性、差分隐私的效用代价、以及交换的模型参数何时仍算个人数据（GDPR/EU AI Act）。对应收窄后的四项：非独立同分布（异构分组）、聚合、通信、隐私；不含迁移学习、多任务与元学习。",
+  "access": "免费：站点公开 12 讲大纲与 slides（课程仓库），2027 版录像尚未发布，可先看 2025 版录像；外校无需注册即可跟随作业与截止日期（Aalto 学生走 Sisu）；教材为 arXiv 开放稿。 2027 年课表属于计划；当前使用已公开的教材、slides 与 2025 录像。录像字幕未核对。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "隐语 SecretFlow 官方中文文档 · 教程（联邦学习 / 隐私计算）",
+  "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+  "tier": "website",
+  "lang": "zh",
+  "free": true,
+  "access": "免费在线阅读；文档随 stable 分支更新；跑例子需安装 SecretFlow 并准备多参与方环境。",
+  "covers": "教程目录的“联邦学习”一组给出十多个可运行例子：水平联邦（图像分类、PyTorch 后端、水平 XGBoost）、垂直联邦 XGB（SecureBoost）、拆分学习（银行营销、图神经网络）、混合联邦逻辑回归、预训练模型微调，以及拆分学习中的通信压缩、流水线并行与 FeatureInferenceAttack/LabelInferenceAttack（隐私攻击示例）；另有 PSI、SPU、TEEU 等隐私计算组件教程。覆盖聚合（FedAvg 类框架）、通信压缩与隐私三块；数据异构（非 IID）与收敛分析没有专门教程，理论部分靠英文主资源。"
+ },
  "courses": [
-  {
-   "school": "Stanford University",
-   "course": "CS 330 Deep Multi-Task and Meta Learning",
-   "url": "https://cs330.stanford.edu/",
-   "prereq_text": "Prerequisites — Machine learning: CS229 or equivalent is a prerequisite. We will be assuming knowledge of concepts including, but not limited to (stochastic) gradient descent and cross-validation, and pre-requisites such as probability theory, multivariable calculus, and linear algebra. Some familiarity with deep learning: The course will build on deep learning concepts such as backpropagation, convolutional networks, and recurrent neural networks. The assignments will involve programming in PyTorch.",
-   "prereq_kind": "required",
-   "mapped_ids": [
-    "A.2.1",
-    "M.6.1",
-    "M.1.4.1",
-    "M.3.1",
-    "A.2.3",
-    "P.2.3"
-   ]
-  },
   {
    "school": "Aalto University",
    "course": "CS-E4740 Federated Learning",
@@ -34,14 +27,15 @@
    "prereq_kind": "required",
    "mapped_ids": [
     "A.2.1",
-    "M.7.2",
     "M.3.1",
     "P.2.3"
    ]
   }
  ],
  "candidate_check": {
-  "A.2.1": "supported"
+  "A.2.1": "supported",
+  "A.2.3": "recommended",
+  "M.7.4": "recommended"
  },
  "extra_prereqs": [
   {
@@ -75,5 +69,9 @@
    "evidence": "Aalto CS-E4740 先修里点名 'gradient descent'（凸/一阶优化的基本方法）。"
   }
  ],
- "notes": "A.2.1 记 supported：CS330 原文 'CS229 or equivalent is a prerequisite'；Aalto 那门要求 ERM + 监督学习基础。资源取舍说明：本节点横跨“迁移/多任务”和“联邦”两半，没有一个免费站点同时覆盖；CS330 覆盖前三项（迁移、多任务、元学习/持续学习），联邦学习完全不在其中，所以在 covers 里写明缺口，并把 Aalto CS-E4740（免费、slides 与 arXiv 教材公开、2025 版有录像）作为课程条目给出，供主代理决定是否拆成“迁移/多任务”与“联邦/隐私”两个资源。Aalto 页面还明确写 'no prior knowledge of distributed systems is assumed'，即分布式系统（C.4.1）不是先修，故不写进 extra_prereqs。"
+ "notes": "A.2.1 记 supported：CS330 原文 'CS229 or equivalent is a prerequisite'；Aalto 那门要求 ERM + 监督学习基础。资源取舍说明：本节点横跨“迁移/多任务”和“联邦”两半，没有一个免费站点同时覆盖；CS330 覆盖前三项（迁移、多任务、元学习/持续学习），联邦学习完全不在其中，所以在 covers 里写明缺口，并把 Aalto CS-E4740（免费、slides 与 arXiv 教材公开、2025 版有录像）作为课程条目给出，供主代理决定是否拆成“迁移/多任务”与“联邦/隐私”两个资源。Aalto 页面还明确写 'no prior knowledge of distributed systems is assumed'，即分布式系统（C.4.1）不是先修，故不写进 extra_prereqs。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "按 parent 决定：英文主资源从 Stanford CS330 换成 Aalto CS-E4740（收窄后技能=联邦学习，CS330 只有 1 讲迁移 + 2 讲多任务，不再适合作主资源；CS330 可留作“迁移/多任务”并入 A.2.3 时的延伸阅读）。SecretFlow 保留：它是框架文档不是课程，非 IID 与收敛理论必须配 Aalto。课程层证据即 CS-E4740 本身（Aalto 学期课，2027 春 3/1–4/14）。不需要再找第二本英文教材——站点自带的 arXiv 教材就是开放稿。"
+ }
 }

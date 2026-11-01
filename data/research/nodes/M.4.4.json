@@ -1,15 +1,23 @@
 {
  "id": "M.4.4",
  "resource": {
-  "tier": "website",
-  "title": "CMSC 754 Computational Geometry (Fall 2023, Dave Mount, University of Maryland) — 课程主页 + 全套讲义",
+  "title": "CMSC 754 Computational Geometry（University of Maryland, Fall 2023, Dave Mount）— 课程主页 + 全套讲义 PDF",
   "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
+  "tier": "website",
   "lang": "en",
   "free": true,
-  "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与平面点定位、Voronoi 图、Delaunay 三角剖分（性质与构造）、直线/超平面排列、范围搜索与 kd-树/正交范围树、well-separated pair decomposition、coresets、采样与 VC 维、运动规划。讲义 PDF 全公开。对应节点的凸包、空间划分/空间数据结构、三角网格与几何算法；‘曲面处理/网格处理’只到三角剖分层面。",
-  "verified": true
+  "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与点定位、Voronoi 图、Delaunay 三角剖分及构造、直线/超平面排列、范围搜索与 kd-树/正交范围树、WSPD、coresets、采样与 VC 维、运动规划。对应收窄后的凸包/线段求交/三角剖分/Voronoi/Delaunay/范围搜索；课程描述与 20 讲讲义里都没有曲面网格处理，几何处理不属本资源。",
+  "access": "课程主页与 20 讲讲义 PDF 公开；整套讲义 PDF 版权声明允许为教育目的免费复制与分发；无视频。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "OI Wiki：计算几何（凸包、三角剖分含 Delaunay/Voronoi）",
+  "url": "https://oi-wiki.org/geometry/",
+  "tier": "website",
+  "lang": "zh",
+  "free": true,
+  "access": "免费在线阅读（CC BY-SA 4.0）；无视频；条目偏竞赛与工程算法，定理与复杂度论证不如英文课程系统。",
+  "covers": "二维/三维计算几何基础、凸包（Andrew 算法）、三角剖分（Delaunay 三角剖分与 Voronoi 图及对偶关系）、半平面交、旋转卡壳、平面最近点对、最小圆覆盖、反演变换；扫描线页只讲矩形面积并与二维数点，不是线段求交；范围搜索/点定位/排列没有对应条目。"
+ },
  "courses": [
   {
    "school": "University of Maryland (College Park)",
@@ -30,8 +38,7 @@
    "prereq_kind": "required",
    "mapped_ids": [
     "F.1.2",
-    "F.1.1",
-    "F.1.3"
+    "F.1.1"
    ]
   }
  ],
@@ -51,5 +58,9 @@
    "evidence": "Berkeley CS 274 的先修说明里点名要会 'graph algorithms like Dijkstra's shortest path algorithm, connected components, and topological sorting'（图算法）。"
   }
  ],
- "notes": "原图建议前置 F.1.2（算法分析与设计）有直接证据：UMD 要 CMSC451 Algorithms，Berkeley 要 CS 170 Advanced Algorithms，记 supported。原图另一个建议 M.5.5（图论）两门课都没要求——它们只要‘会用图算法’，不要求上过图论课，故记 not_mentioned；真正额外要的是数据结构（F.1.1），UMD 甚至要求研究生级数据结构课 CMSC420，Berkeley 另外点名图算法（F.1.3），都记入 extra_prereqs。资源选 UMD CMSC 754：自称 'introductory course on computational geometry'、讲义全公开、覆盖面与本节点最贴（凸包/Voronoi/Delaunay/范围搜索/排列），比 Berkeley CS 274（研究生级、偏 combinatorial geometry 证明）更贴近入门层 D2。缺口：网格与曲面处理（geometry processing）本资源不覆盖，D3/D4 部分需要另找（本批未核实具体替代资源）。"
+ "notes": "原图建议前置 F.1.2（算法分析与设计）有直接证据：UMD 要 CMSC451 Algorithms，Berkeley 要 CS 170 Advanced Algorithms，记 supported。原图另一个建议 M.5.5（图论）两门课都没要求——它们只要‘会用图算法’，不要求上过图论课，故记 not_mentioned；真正额外要的是数据结构（F.1.1），UMD 甚至要求研究生级数据结构课 CMSC420，Berkeley 另外点名图算法（F.1.3），都记入 extra_prereqs。资源选 UMD CMSC 754：自称 'introductory course on computational geometry'、讲义全公开、覆盖面与本节点最贴（凸包/Voronoi/Delaunay/范围搜索/排列），比 Berkeley CS 274（研究生级、偏 combinatorial geometry 证明）更贴近入门层 D2。缺口：网格与曲面处理（geometry processing）本资源不覆盖，D3/D4 部分需要另找（本批未核实具体替代资源）。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "保留旧英文资源 CMSC 754（Fall 2023, Dave Mount）：课程描述原文就写 convex hulls, geometric intersections, Voronoi diagrams and Delaunay triangulations, arrangements, range searching；讲义页逐讲列出 02–03 Convex Hulls、04 Line Segment Intersection、05 Polygon Triangulation、Delaunay Triangulations - Construction、14–15 Range Searching/kd-Trees，与收窄后的范围逐项对应。整套讲义 PDF 的版权声明允许教育用途免费复制分发，属免费正文而非只有课程主页目录。旧 covers 写了“曲面处理/网格处理”，但课程描述与讲义都没有网格/曲面处理内容，本次改写为只写计算几何并注明几何处理不在本课（如需要另挂离散微分几何课程）。中文保留 OI Wiki 并重写 covers：其三角剖分页确有 Delaunay 与 Voronoi（含“互为对偶”的原文），凸包页有 Andrew 算法；但扫描线页讲的是矩形面积并与二维数点，不是线段求交，范围搜索/点定位/排列也没有条目，故 covers 明确划界。另查清华大学《计算几何》（学堂在线，检索摘要称含凸包、Voronoi、Delaunay、点定位、范围查找），但课程页是 JS 单页，抓不到正文与教学大纲，按“不能拿课程目录/摘要当免费正文”的规则未采用；OI Wiki 是能直接核对正文的中文条目，故保留。本条无视频，不涉及字幕。复核日期 2026-11-01。"
+ }
 }

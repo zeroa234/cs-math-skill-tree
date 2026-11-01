@@ -38,7 +38,8 @@
  ],
  "candidate_check": {
   "M.8.3": "contradicted",
-  "A.2.3": "recommended"
+  "A.2.3": "recommended",
+  "M.1.3": "recommended"
  },
  "extra_prereqs": [
   {
@@ -60,13 +61,9 @@
    "id": "M.2.1",
    "kind": "recommended",
    "evidence": "Northwestern 395/495 把 'differential equations' 的材料放在前几周复习，但'it is recommended that students have some familiarity with ... Machine learning and optimization theory / Basic physics'，微分方程属课内补。"
-  },
-  {
-   "id": "M.1.3",
-   "kind": "required",
-   "basis": "course",
-   "evidence": "MIT 18.337J 写明微积分是 essential。"
   }
  ],
- "notes": "两条候选都被课程原文弱化，主代理要重新考虑：(1) M.8.3（微分方程数值解与科学计算）记 contradicted——Northwestern 明写 'No specific prerequisites are required. Essential material in optimization, deep learning, and differential equations will be reviewed during the first weeks'，MIT SciML 也写 'no one in the course is expected to have covered all of these topics before'（把 numerical analysis 列在'不预期先修过'的混合内容里）。也就是说数值分析/科学计算是这门课的教学内容而不是入口门槛；若坚持要前置，至少应降为 recommended。(2) A.2.3（深度学习）记 recommended——Northwestern 只是 'recommended that students have some familiarity with Machine learning and optimization theory'，MIT SciML 更彻底：神经网络基础放在第 9 周课内讲（'Basics of neural networks and definitions'），所以深度学习不是硬前置。真正被两门课当成必需的是微积分 + 线性代数 + 编程（见 extra_prereqs）。资源选择说明：book.sciml.ai 有完整讲义 + 作业 + 课程主页（含先修原文），一个站覆盖 PINN、可微编程/伴随、反问题、刚性 ODE、概率编程；它的短板是'神经算子（DeepONet/FNO）'讲得少，需要补：Northwestern 395/495 的课程描述明确含 'Neural Operators. DeepONets. Fourier Neural Operators. Physics-informed neural operator (PINO). Differentiable Physics ... Adjoint methods'，但只有描述没有公开材料；补材料可用 Krishna Kumar（UT Austin）的 SciML 课程站 https://kks32-courses.github.io/sciml （已打开确认存在，含函数空间/投影/MLP 等 notebook 章节）。另外 https://physicsbaseddeeplearning.org/ 抓取回来是空正文（JS 渲染），未采用。"
+ "notes": "两条候选都被课程原文弱化，主代理要重新考虑：(1) M.8.3（微分方程数值解与科学计算）记 contradicted——Northwestern 明写 'No specific prerequisites are required. Essential material in optimization, deep learning, and differential equations will be reviewed during the first weeks'，MIT SciML 也写 'no one in the course is expected to have covered all of these topics before'（把 numerical analysis 列在'不预期先修过'的混合内容里）。也就是说数值分析/科学计算是这门课的教学内容而不是入口门槛；若坚持要前置，至少应降为 recommended。(2) A.2.3（深度学习）记 recommended——Northwestern 只是 'recommended that students have some familiarity with Machine learning and optimization theory'，MIT SciML 更彻底：神经网络基础放在第 9 周课内讲（'Basics of neural networks and definitions'），所以深度学习不是硬前置。真正被两门课当成必需的是微积分 + 线性代数 + 编程（见 extra_prereqs）。资源选择说明：book.sciml.ai 有完整讲义 + 作业 + 课程主页（含先修原文），一个站覆盖 PINN、可微编程/伴随、反问题、刚性 ODE、概率编程；它的短板是'神经算子（DeepONet/FNO）'讲得少，需要补：Northwestern 395/495 的课程描述明确含 'Neural Operators. DeepONets. Fourier Neural Operators. Physics-informed neural operator (PINO). Differentiable Physics ... Adjoint methods'，但只有描述没有公开材料；补材料可用 Krishna Kumar（UT Austin）的 SciML 课程站 https://kks32-courses.github.io/sciml （已打开确认存在，含函数空间/投影/MLP 等 notebook 章节）。另外 https://physicsbaseddeeplearning.org/ 抓取回来是空正文（JS 渲染），未采用。",
+ "required_evidence": [],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

@@ -1,15 +1,23 @@
 {
  "id": "S.5.2",
  "resource": {
+  "title": "Security Engineering: A Guide to Building Dependable Distributed Systems（Ross Anderson，第 3 版；作者主页全书各章免费）",
+  "url": "https://www.cl.cam.ac.uk/archive/rja14/book.html",
   "tier": "book",
-  "title": "Security Engineering: A Guide to Building Dependable Distributed Systems（Ross Anderson，第 3 版；作者主页提供全书各章免费下载）",
-  "url": "https://www.cl.cam.ac.uk/~rja14/book.html",
   "lang": "en",
   "free": true,
-  "covers": "漏洞成因与真实系统剖析（银行与账务、核指挥控制、打印与封印、电话/移动网络等成章的攻击与失效分析）、缓解设计（Ch 27 Secure Systems Development、Ch 28 Assurance and Sustainability、Ch 21 Network Attack and Defence）、测量与监测（Ch 14 Monitoring and Metering；Ch 17 Biometrics 里的错误率度量；Ch 19 Side Channels）、以及本节点特别提到的安全经济学（Ch 8 Economics）、策略与边界（Ch 9/10/11）。",
-  "verified": true
+  "covers": "漏洞成因与真实系统剖析（银行与账务、核指挥控制、打印与封印、电话/移动网络等成章的攻击与失效分析）、缓解设计（Ch 27 Secure Systems Development、Ch 28 Assurance and Sustainability、Ch 21 Network Attack and Defence）、测量与监测（Ch 14 Monitoring and Metering、Ch 17 生物识别的错误率度量、Ch 19 Side Channels）、安全经济学（Ch 8）与策略边界（Ch 9–11）。它是教材不是课程：没有实验/复现流程、没有网络测量的数据与方法课，这两块见 notes 的补充。",
+  "access": "免费：作者主页按章提供 PDF（第 3 版），无需注册；另有配套 slides。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "软件定义网络的测量方法研究（戴冕、程光、周余阳，《软件学报》2019, 30(6): 1853–1874）",
+  "url": "https://www.jos.org.cn/html/2019/6/5832.htm",
+  "tier": "material",
+  "lang": "zh",
+  "free": true,
+  "access": "期刊原站公开中文全文（HTML/PDF），免费阅读；需要网络与统计基础。",
+  "covers": "中文综述，按测量架构、测量对象、流量与资源开销分析 SDN 的测量方法与评价指标，带参考文献列表；对应本技能的“网络测量”这一支。它不是系统安全教材：漏洞成因、缓解设计、可复现实验与安全经济学继续用英文主资源。"
+ },
  "courses": [
   {
    "school": "University of Michigan",
@@ -81,5 +89,9 @@
    "evidence": "MIT 6.1800（Computer System Engineering）覆盖分布式系统，被 6.5660 列为二选一先修"
   }
  ],
- "notes": "第四轮（2026-11-01）补课程证据：上一轮唯一证据是 MIT 6.858 的二手表述；本轮在 MIT 官方课程目录里找到同名条目 6.5660 Computer Systems Security，先修原文 'Prereq: 6.1020 and (6.1800 or 6.1810)'（旧站 css.csail.mit.edu/6.858 的 2024 版首页标题已是 '6.566 / Spring 2024'，两处是同一门课；旧先修 6.033 对应新号 6.1800）。另补两门新证据：Michigan EECS 588（论文研讨型安全课，明确写 'prepare for research in the area'，先修 OS 或网络）和 Berkeley CS 261（研究生安全综述，先修 COMPSCI 162＝OS）。三门课都没有把“系统安全/计算机安全”课（S.2.1）列为先修：Berkeley 的入门安全课 CS 161（先修 COMPSCI 61B、61C、70，已在 https://www2.eecs.berkeley.edu/Courses/CS161/ 核对）只是本科导论，研究生安全课反而只要求 OS；故 S.2.1 判 not_mentioned。研究设计/可复现（I.2.3）与数理统计（M.6.2）也没有出现在任何先修条款里；EECS 588 是在课内教 Bayesian 方法用于入侵检测与垃圾邮件过滤，不是先修要求。安全测量与安全经济学在这三门课里只有零散覆盖（EECS 588 的测量/检测、CS 261 的案例研究），本轮只找先修证据，未处理资源。 旧笔记：两次检索都没找到“安全测量/系统安全研究”的大学课程页（结果全是 research security 合规培训、USENIX 论文页或别的话题），可核实的只有 MIT 6.858（系统安全，含大量论文阅读、5 个 lab 与最终项目，先修只写 6.033），所以 courses 只填一门，且它并不要求先修安全课——原图建议前置 S.2.1 记 not_mentioned。资源按优先级退到 book：Anderson 第 3 版整本各章可在作者主页免费下载，是唯一同时覆盖“漏洞成因＋缓解设计＋安全经济学＋监控/计量”的经典教材；但它不教“可复现实验”和网络测量的方法论，那部分需要另配 USENIX Security / IMC 的论文与 artifact evaluation 实践。查过 Cambridge 的 Security 课程页想升级成 website（https://www.cl.cam.ac.uk/teaching/2425/Security/ 与 /2324/Security/ 均 404），故未采用。"
+ "notes": "第四轮（2026-11-01）补课程证据：上一轮唯一证据是 MIT 6.858 的二手表述；本轮在 MIT 官方课程目录里找到同名条目 6.5660 Computer Systems Security，先修原文 'Prereq: 6.1020 and (6.1800 or 6.1810)'（旧站 css.csail.mit.edu/6.858 的 2024 版首页标题已是 '6.566 / Spring 2024'，两处是同一门课；旧先修 6.033 对应新号 6.1800）。另补两门新证据：Michigan EECS 588（论文研讨型安全课，明确写 'prepare for research in the area'，先修 OS 或网络）和 Berkeley CS 261（研究生安全综述，先修 COMPSCI 162＝OS）。三门课都没有把“系统安全/计算机安全”课（S.2.1）列为先修：Berkeley 的入门安全课 CS 161（先修 COMPSCI 61B、61C、70，已在 https://www2.eecs.berkeley.edu/Courses/CS161/ 核对）只是本科导论，研究生安全课反而只要求 OS；故 S.2.1 判 not_mentioned。研究设计/可复现（I.2.3）与数理统计（M.6.2）也没有出现在任何先修条款里；EECS 588 是在课内教 Bayesian 方法用于入侵检测与垃圾邮件过滤，不是先修要求。安全测量与安全经济学在这三门课里只有零散覆盖（EECS 588 的测量/检测、CS 261 的案例研究），本轮只找先修证据，未处理资源。 旧笔记：两次检索都没找到“安全测量/系统安全研究”的大学课程页（结果全是 research security 合规培训、USENIX 论文页或别的话题），可核实的只有 MIT 6.858（系统安全，含大量论文阅读、5 个 lab 与最终项目，先修只写 6.033），所以 courses 只填一门，且它并不要求先修安全课——原图建议前置 S.2.1 记 not_mentioned。资源按优先级退到 book：Anderson 第 3 版整本各章可在作者主页免费下载，是唯一同时覆盖“漏洞成因＋缓解设计＋安全经济学＋监控/计量”的经典教材；但它不教“可复现实验”和网络测量的方法论，那部分需要另配 USENIX Security / IMC 的论文与 artifact evaluation 实践。查过 Cambridge 的 Security 课程页想升级成 website（https://www.cl.cam.ac.uk/teaching/2425/Security/ 与 /2324/Security/ 均 404），故未采用。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "课程层补证（parent 找到）：RIT CSCI-531 Introduction to Security Measurement，3 学分（Fall），syllabus https://www.cs.rit.edu/~lr/courses/531/CSCI-531-IntroSecurityMeasure-syll.html ——目录描述为“security evaluation 的算法基础与现代方法”，结合安全评估方法/模型的理论梳理与“用户实践”调查，考核含作业、课堂报告与团队项目；必读书为 Bishop《Computer Security: Art and Science》与 IATAC《Measuring Cyber Security and Information Assurance: State of the Art Report》；课程目录页 https://www.cs.rit.edu/~lr/courses/531/ 还挂着 lecture 页与 introductory.pdf（2012 年版）。它补上了“安全测量/评估”的课程建制，但偏“评估与测试方法”，不是网络测量；IATAC 报告原链接（buildsecurityin.us-cert.gov）已不可用。免费可点补充：(1) 安全度量指标 NIST SP 800-55r1 https://csrc.nist.gov/pubs/sp/800/55/r1/final ；(2) 可复现实验与 artifact 规范 ACM Artifact Review and Badging https://www.acm.org/publications/policies/artifact-review-and-badging-current ；(3) RIT 531 课程目录/讲义索引 https://www.cs.rit.edu/~lr/courses/531/ 。另：树里 zhAlt 把这篇综述写成“周宇洋”“测量方法”，原刊是“周余阳”、标题带“研究”二字（2019, 30(6): 1853–1874），重写资源时一并改正。网络测量若要英文系统材料，目前没有找到免费课程（只能靠 IMC/CAIDA 的论文与数据），这一点仍未补齐。"
+ }
 }

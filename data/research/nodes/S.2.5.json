@@ -15,28 +15,25 @@
    "school": "University of Idaho",
    "course": "ECE 4040/5040 Introduction to Hardware Security",
    "url": "https://hsc-research.org/hwsec.html",
-   "prereq_text": "Students should have completed a digital-logic course such as ECE 2400 and should be able to read and write basic Verilog or SystemVerilog. ECE 4450 or equivalent RTL experience is recommended. Prior coursework in cryptography is not required.",
-   "prereq_kind": "required",
+   "prereq_text": "Recommended Background and Tools: Students should have completed a digital-logic course such as ECE 2400 and should be able to read and write basic Verilog or SystemVerilog. ECE 4450 or equivalent RTL experience is recommended. Prior coursework in cryptography is not required.",
+   "prereq_kind": "recommended",
    "mapped_ids": [
     "H.1.2"
    ]
   }
  ],
  "candidate_check": {
-  "H.3.2": "not_mentioned"
+  "H.3.2": "not_mentioned",
+  "H.2.1": "recommended"
  },
  "extra_prereqs": [
   {
    "id": "H.1.2",
    "kind": "required",
    "evidence": "University of Idaho ECE 4040/5040 要求修过数字逻辑课（如 ECE 2400）并能读写 Verilog/SystemVerilog"
-  },
-  {
-   "id": "H.2.1",
-   "kind": "required",
-   "basis": "course",
-   "evidence": "University of Idaho ECE 4040/5040 要求修过数字逻辑并能读写基础的 Verilog/SystemVerilog。"
   }
  ],
- "notes": "两点说明：(1) 该页用 python 直连会因自签证书报 SSL 错误，改用 tavily_extract 取到正文，内容已逐条核对；syllabus PDF 是 Canvas 内部链接，未公开。(2) 节点原图建议前置 H.3.2（嵌入式系统、驱动与 RTOS）在这门课上没有被要求（课程反而明确说“Prior coursework in cryptography is not required”，先修是数字逻辑/RTL），故判 not_mentioned，并补上 H.1.2。只有一门课程证据：两次 Tavily 搜索都没有找到带公开 syllabus 的 IoT/嵌入式安全课程主页。若需要补“安全启动 + 固件 + 供应链”这一块，可加 NIST SP 800-193《Platform Firmware Resiliency Guidelines》（https://csrc.nist.gov/pubs/sp/800/193/final ，已打开核实：讲 platform firmware 与数据在启动/更新/恢复过程中被破坏性攻击时的韧性与恢复）与 Bhunia & Tehranipoor《Hardware Security: A Hands-on Learning Approach》（该书列在本课程的 core references 中，未给链接）。"
+ "notes": "两点说明：(1) 该页用 python 直连会因自签证书报 SSL 错误，改用 tavily_extract 取到正文，内容已逐条核对；syllabus PDF 是 Canvas 内部链接，未公开。(2) 节点原图建议前置 H.3.2（嵌入式系统、驱动与 RTOS）在这门课上没有被要求（课程反而明确说“Prior coursework in cryptography is not required”，先修是数字逻辑/RTL），故判 not_mentioned，并补上 H.1.2。只有一门课程证据：两次 Tavily 搜索都没有找到带公开 syllabus 的 IoT/嵌入式安全课程主页。若需要补“安全启动 + 固件 + 供应链”这一块，可加 NIST SP 800-193《Platform Firmware Resiliency Guidelines》（https://csrc.nist.gov/pubs/sp/800/193/final ，已打开核实：讲 platform firmware 与数据在启动/更新/恢复过程中被破坏性攻击时的韧性与恢复）与 Bhunia & Tehranipoor《Hardware Security: A Hands-on Learning Approach》（该书列在本课程的 core references 中，未给链接）。",
+ "required_evidence": [],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

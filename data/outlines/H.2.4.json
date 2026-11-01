@@ -12,6 +12,18 @@
     "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/"
    ],
    "why": "节点“现有英文学习资源”里的那门课，讲义按 Rabaey《Digital Integrated Circuits》组织；OCW 的 Lecture Notes 页除了讲次标题，每讲还列出该讲的几个子主题（器件模型、VTC、传播延迟、动态与静态功耗、逻辑努力、时序与锁存器、互连与时钟分布、测试），正好对上 CMOS 数字设计、时序/功耗/面积、物理设计与测试；研究生课，适合 D2–D4。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "CMPE 691 Reconfigurable System Design — Physical Design Flow and Timing Analysis",
+   "by": "Ryan Robucci, University of Maryland Baltimore County",
+   "year": 2025,
+   "url": "https://eclipse.umbc.edu/robucci/cmpeRSD/",
+   "toc_urls": [
+    "https://eclipse.umbc.edu/robucci/cmpeRSD/lectures/Physical_Design_Flow_and_Timing_Analysis/Physical_Design_Flow_and_Timing_Analysis.html"
+   ],
+   "why": "节点简介里的“设计自动化、综合、布局布线、等价性/时序验证”在这份大学讲义的编号小节里逐条拆开：EDA 工具分工、自动化物理设计、综合与映射、打包、布局布线、静态/动态时序分析、时序验证与逻辑验证的分工。节点现有的 CMPE 691 HDV 讲义页是加密的，所以把这一讲作为主来源。"
   }
  ],
  "outline": [
@@ -344,6 +356,120 @@
      "zh": "扫描测试、内建自测试与 IDDQ 测试"
     }
    ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Physical Design Flow and Timing Analysis",
+   "zh": "物理设计流程与时序分析",
+   "items": [
+    {
+     "ref": "3",
+     "title": "Electronic Design Tools",
+     "zh": "电子设计工具"
+    },
+    {
+     "ref": "5",
+     "title": "Automated Physical Design",
+     "zh": "自动化物理设计"
+    },
+    {
+     "ref": "6",
+     "title": "Synthesis and Mapping",
+     "zh": "综合与映射"
+    },
+    {
+     "ref": "7",
+     "title": "Packing",
+     "zh": "打包"
+    },
+    {
+     "ref": "8",
+     "title": "Place and Route",
+     "zh": "布局布线"
+    },
+    {
+     "ref": "9",
+     "title": "Timing Verification vs Logical Verification",
+     "zh": "时序验证与逻辑验证的区别"
+    },
+    {
+     "ref": "10",
+     "title": "Timing Analysis and Post-Place-and-Route simulation",
+     "zh": "时序分析与布局布线后仿真"
+    },
+    {
+     "ref": "12",
+     "title": "Static Timing Analysis",
+     "zh": "静态时序分析"
+    },
+    {
+     "ref": "13",
+     "title": "Clock Period Constraint",
+     "zh": "时钟周期约束"
+    },
+    {
+     "ref": "18",
+     "title": "Setup and Hold Times",
+     "zh": "建立时间与保持时间"
+    },
+    {
+     "ref": "19",
+     "title": "Clock Skew",
+     "zh": "时钟偏斜"
+    },
+    {
+     "ref": "23",
+     "title": "Setup Timing Slack in Critical Path",
+     "zh": "关键路径的建立时间裕量"
+    },
+    {
+     "ref": "25",
+     "title": "Hold Time Analysis and Slack",
+     "zh": "保持时间分析与裕量"
+    },
+    {
+     "ref": "27",
+     "title": "Unconstrained Paths and CDC Clock Domain Crossing",
+     "zh": "未约束路径与跨时钟域"
+    },
+    {
+     "ref": "28",
+     "title": "Clock Domain Crossing (CDC) Signals",
+     "zh": "跨时钟域（CDC）信号"
+    },
+    {
+     "ref": "31",
+     "title": "Multicycle Paths",
+     "zh": "多周期路径"
+    },
+    {
+     "ref": "32",
+     "title": "False Paths",
+     "zh": "伪路径"
+    },
+    {
+     "ref": "34",
+     "title": "Dynamic Timing Analysis",
+     "zh": "动态时序分析"
+    },
+    {
+     "ref": "35",
+     "title": "Dynamic Timing Analysis using Event-Driven Simulation",
+     "zh": "基于事件驱动仿真的动态时序分析"
+    },
+    {
+     "ref": "37",
+     "title": "Dynamic vs Static Timing Analysis; Functional vs Timing Verification",
+     "zh": "动态与静态时序分析；功能验证与时序验证"
+    },
+    {
+     "ref": "39",
+     "title": "FPGA vendors role in EDA",
+     "zh": "FPGA 厂商在 EDA 中的角色"
+    }
+   ],
+   "fill": "补数字芯片的逻辑综合、放置与布线流程。"
   }
  ],
  "coverage": [
@@ -398,13 +524,22 @@
    "refs": [
     "A:Lecture 22"
    ]
+  },
+  {
+   "topic": "逻辑综合与布局布线",
+   "refs": [
+    "B:6",
+    "B:7",
+    "B:8"
+   ],
+   "note": ""
   }
  ],
  "omitted": "6.374 未收的讲次：L1（课程概览与设计挑战，属导论）、L10（晚间项目选题）、L11（集成 CMOS 工艺客座讲，器件工艺属 H.2.5）、L18–L20（ROM/EPROM/PLA、SRAM、DRAM 存储器设计）与 L21（电压缩放与 DC-DC 变换）——存储器与电压调节不在节点简介的七块知识点里；各讲旁边的 Tutorial on Design Tools、Quiz、Project Schedule、Presentation 等管理性条目也未收。",
  "notes": "本轮把每个分支加深了一层：6.374 的讲义 PDF 挂在教材网站上，OCW 页面本身没有 PDF 链接，但 Lecture Notes 页每讲下面列出了该讲的子主题（如 L3 的 CMOS Propagation Delay / Parasitic Capacitance Estimation / Layout of an Inverter …），这些就是讲内的知识块，已逐条作为 items 收进来（原文的行内换行与下划线前缀已去掉，例如 “_MOS Device Model with Sub-micron Effects” 写成 “MOS Device Model with Sub-micron Effects”）。原来作为 L1 的“Challenges in Digital IC Design”已删，使分支数落在 15 个；子主题行的 ref 留空，因为原文没有编号。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 57,
+  "exact": 79,
   "fuzzy": 0,
   "dropped": []
  }

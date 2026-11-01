@@ -1,15 +1,23 @@
 {
  "id": "X.2.2",
  "resource": {
-  "tier": "website",
-  "title": "18.S096 Topics in Mathematics with Applications in Finance（MIT OpenCourseWare，含讲课视频与讲义）",
+  "title": "18.S096 Topics in Mathematics with Applications in Finance（MIT OpenCourseWare，含讲课视频、讲义、习题与 case studies）",
   "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/",
+  "tier": "website",
   "lang": "en",
   "free": true,
-  "covers": "本科层次的免费课程网站（讲义、视频、习题、case studies、期末论文）：把线性代数、概率、统计、随机过程与数值方法逐块讲到金融应用上——价格-收益率关系与凸性、收益率曲线 bootstrap、Value at Risk 及其假设、期权波动率估计、用风险中性论证推 Black-Scholes、统计视角的矩阵分解（PCA）、极限定理、Itô 引理与 Girsanov 定理；数学课与 Morgan Stanley 等业界讲者的应用课交替。正好覆盖节点里'量化建模 + 风控'两块主干（支付/账本那半块见 notes）。",
-  "verified": true
+  "covers": "以线性代数、概率、统计、随机过程与数值方法讲金融应用：价格-收益率关系与凸性、收益率曲线 bootstrap、Value at Risk 及其假设、期权波动率估计、用风险中性论证推 Black-Scholes、统计视角的矩阵分解（PCA）、极限定理、Itô 引理与 Girsanov；数学课与 Morgan Stanley 等业界讲者的应用课交替，另有 case studies 与期末论文。正好对应收窄后的“建模/定价/风险度量”三项；支付、账本、清结算等金融科技系统不在本课（已移出本技能）。",
+  "access": "免费：OCW 公开讲义、视频、习题与项目，无需注册；课程明写不要求经济/金融先修（15.450 才要求 15.401 金融理论）。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "金融数学（常州工学院，中国大学MOOC）",
+  "url": "https://www.icourse163.org/course/CZU-1465310161",
+  "tier": "website",
+  "lang": "zh",
+  "free": true,
+  "access": "中国大学MOOC 免费注册学习；完整视频与作业按开放学期提供，证书可能收费；预备知识为概率统计、随机过程、微分方程、数值计算与金融市场学。",
+  "covers": "中文慕课，课程概述列出：金融数学基础、投资组合理论、资本资产定价模型、套利定价理论、二叉树模型、Black-Scholes 期权定价、希腊字母、隐含波动率、奇异期权、期权定价数值方法、债券与随机利率模型；授课目标写明“对远期/期货/互换/期权定价”和“用衍生品管理金融风险”。对应收窄后的建模/定价/风险度量；支付与金融科技系统不在其中。"
+ },
  "courses": [
   {
    "school": "MIT",
@@ -71,5 +79,9 @@
    "evidence": "MIT 15.450 写 'Rudimentary programming skills are necessary. Homework assignments involve computer implementation ... in MATLAB'。"
   }
  ],
- "notes": "D.1 在批次清单里是分组名，节点索引里没有 D.1 这个 id，这里按最贴近的 D.1.1（数据建模、关系模型与 SQL）判定并记 not_mentioned：两门课都是数学/金融系课程，先修里完全没提数据库；节点的'支付与金融系统工程'那半块（账本、对账、系统实现）在两门课里也不覆盖，若要补，工程侧应另找 fintech 工程课。M.6.2 记 supported：18.S096 的 18.05 与 15.450 的 'solid undergraduate-level background in ... statistics' 都直接点到统计。另有两点值得主代理注意：(1) 节点写的'外部前置为金融经济知识'得到正面证据——15.450 要求 15.401 Finance Theory I 这门金融理论课；但反过来 18.S096 明写 'Prior knowledge of economics or finance is not required'，说明这条外部前置在入门层可以是软性的。(2) 18.S096 的 syllabus 指明它是 18.642（Fall 2024）的前身、新版本有更多材料和录像（https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/pages/syllabus/ 原文：'This is the first version of 18.642 ... Please visit the 18.642 site for more materials and lecture recordings.'），长期稳定性没问题。"
+ "notes": "D.1 在批次清单里是分组名，节点索引里没有 D.1 这个 id，这里按最贴近的 D.1.1（数据建模、关系模型与 SQL）判定并记 not_mentioned：两门课都是数学/金融系课程，先修里完全没提数据库；节点的'支付与金融系统工程'那半块（账本、对账、系统实现）在两门课里也不覆盖，若要补，工程侧应另找 fintech 工程课。M.6.2 记 supported：18.S096 的 18.05 与 15.450 的 'solid undergraduate-level background in ... statistics' 都直接点到统计。另有两点值得主代理注意：(1) 节点写的'外部前置为金融经济知识'得到正面证据——15.450 要求 15.401 Finance Theory I 这门金融理论课；但反过来 18.S096 明写 'Prior knowledge of economics or finance is not required'，说明这条外部前置在入门层可以是软性的。(2) 18.S096 的 syllabus 指明它是 18.642（Fall 2024）的前身、新版本有更多材料和录像（https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/pages/syllabus/ 原文：'This is the first version of 18.642 ... Please visit the 18.642 site for more materials and lecture recordings.'），长期稳定性没问题。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "英文主资源维持 18.S096（parent 允许保留重写 covers）：它的目标是“能推 Black-Scholes、算 VaR、估波动率、bootstrap 收益率曲线”，与收窄后的计算金融一一对应。新版 18.642（Fall 2024）https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/ 可作更新版入口，但它自己写“更多材料与录像见 18.S096 站”，所以主链接仍用 18.S096；18.642 额外有投资博弈可玩。15.450 Analytics of Finance 是更难的替代（要求 15.401）。中文常州工学院《金融数学》是整门课，覆盖定价与风险；金融/经济基础按 parent 决定算树外背景，不新建节点。"
+ }
 }

@@ -3,18 +3,6 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "CS 330 Deep Multi-Task and Meta Learning",
-   "by": "Chelsea Finn (Stanford University)",
-   "year": 2023,
-   "url": "https://cs330.stanford.edu/",
-   "toc_urls": [
-    "https://cs330.stanford.edu/"
-   ],
-   "why": "就是节点“现有英文学习资源”（课程主页 + 公开讲义与历年录像）。主页的课程表逐次列出每次课的主题（Multi-task learning、Transfer learning & fine-tuning、对比式预训练、Domain Adaptation and Domain Generalization、Lifelong learning 等），正好覆盖“任务迁移”和“多任务”两半；联邦学习那一半它不讲，用补充分支 B 补。"
-  },
-  {
-   "key": "B",
    "kind": "notes",
    "title": "Advances and Open Problems in Federated Learning",
    "by": "Peter Kairouz, H. Brendan McMahan, et al.",
@@ -23,58 +11,15 @@
    "toc_urls": [
     "https://arxiv.org/pdf/1912.04977"
    ],
-   "why": "补联邦学习：主来源 A 完全不涉及。这是联邦学习领域引用最多的长综述（几十位作者合写，arXiv:1912.04977，v3 2021），目录本身按主题分层——联邦训练的典型流程、点对点/跨机构设定、Non-IID 数据、优化算法、个性化与多任务/元学习、通信与压缩、隐私威胁模型与差分隐私——正好逐条对上本节点的知识点。"
+   "why": "联邦学习的作者综述，按统计异质性、聚合优化、通信和隐私组织。"
   }
  ],
  "outline": [
   {
    "src": "A",
-   "ref": "",
-   "title": "Course introduction & start of multi-task learning",
-   "zh": "课程导论与多任务学习引子",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Multi-task learning",
-   "zh": "多任务学习",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Transfer learning & fine-tuning",
-   "zh": "迁移学习与微调",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Unsupervised pre-training for few-shot learning (contrastive)",
-   "zh": "面向少样本学习的无监督预训练（对比式）",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Domain Adaptation and Domain Generalization",
-   "zh": "域适应与域泛化",
-   "items": []
-  },
-  {
-   "src": "A",
-   "ref": "",
-   "title": "Lifelong learning",
-   "zh": "终身学习",
-   "items": []
-  },
-  {
-   "src": "B",
    "ref": "1",
    "title": "Introduction",
    "zh": "引言",
-   "fill": "补“协同训练”：联邦学习的基本设定——多个客户端在服务端协调下共同训练、数据始终留在本地",
    "items": [
     {
      "ref": "1.1",
@@ -101,11 +46,10 @@
    ]
   },
   {
-   "src": "B",
+   "src": "A",
    "ref": "2",
    "title": "Relaxing the Core FL Assumptions: Applications to Emerging Settings and Scenarios",
    "zh": "放宽联邦学习的基本假设：新兴设定与场景",
-   "fill": "补“协同训练”的不同拓扑：没有中心服务端的点对点协同训练、机构间的跨机构联邦学习、切分学习",
    "items": [
     {
      "ref": "2.1",
@@ -125,11 +69,10 @@
    ]
   },
   {
-   "src": "B",
+   "src": "A",
    "ref": "3",
    "title": "Improving Efficiency and Effectiveness",
    "zh": "提升效率与效果",
-   "fill": "补“非独立同分布数据”“通信与隐私约束”，以及联邦设定下的多任务与个性化",
    "items": [
     {
      "ref": "3.1",
@@ -195,11 +138,10 @@
    ]
   },
   {
-   "src": "B",
+   "src": "A",
    "ref": "4",
    "title": "Preserving the Privacy of User Data",
    "zh": "保护用户数据的隐私",
-   "fill": "补“隐私约束”：威胁模型、安全计算与差分隐私这类隐私保护技术，以及隐私与效用的权衡",
    "items": [
     {
      "ref": "4.1",
@@ -262,74 +204,45 @@
  ],
  "coverage": [
   {
-   "topic": "任务迁移",
+   "topic": "多客户端协同训练与模型聚合",
    "refs": [
-    "A:#3",
-    "A:#4",
-    "A:#5",
-    "B:3.3.3"
+    "A:1.1",
+    "A:1.1.2",
+    "A:3.2.2"
    ],
-   "note": "A:#3 迁移学习与微调（从预训练任务迁移到下游任务的两种典型做法及陷阱）；A:#4 对比式无监督预训练作为迁移的来源；A:#5 域适应与域泛化（源域训练、目标域偏移）；B:3.3.3 从联邦学习角度讲本地微调与元学习这两条“把全局模型迁移到本地数据”的路子。"
-  },
-  {
-   "topic": "多任务学习",
-   "refs": [
-    "A:#1",
-    "A:#2",
-    "B:3.3.2"
-   ],
-   "note": "A:#1 课程导论里先引出多任务设定；A:#2 是核心一讲（共享表示、任务分组、辅助任务、多任务与迁移的关系）；B:3.3.2 讲联邦设定下把每个客户端当成一个任务的多任务视角。"
-  },
-  {
-   "topic": "协同训练",
-   "refs": [
-    "B:#1",
-    "B:1.1",
-    "B:1.1.2",
-    "B:2.1",
-    "B:2.2",
-    "B:2.3"
-   ],
-   "note": "B:#1 给出“多客户端在服务端协调下共同训练、数据不出本地”的设定与模型生命周期（B:1.1、B:1.1.2 是典型训练流程）；B:2.1 点对点式协同训练（无中心端）、B:2.2 跨机构联邦学习、B:2.3 切分学习，都是“协同训练”的不同拓扑。A（多任务/元学习课程）里没有跨设备协同训练的内容。"
+   "note": ""
   },
   {
    "topic": "非独立同分布数据",
    "refs": [
-    "B:3.1",
-    "B:3.1.1",
-    "B:3.2.2"
+    "A:3.1",
+    "A:3.1.1"
    ],
-   "note": "B:3.1 专讲非 IID 数据带来的问题，B:3.1.1 是应对策略（数据共享/增强、个性化、聚类式联邦等），B:3.2.2 给出非 IID 下的优化算法与收敛率；B:3.3.4 讨论全局模型与本地数据分布不一致时何时还值得用全局模型。"
+   "note": ""
   },
   {
-   "topic": "通信与隐私约束",
+   "topic": "通信效率",
    "refs": [
-    "B:3.5",
-    "B:4",
-    "B:4.1",
-    "B:4.2",
-    "B:4.2.1",
-    "B:4.2.2",
-    "B:4.3.2",
-    "B:4.4.3"
+    "A:3.5"
    ],
-   "note": "通信：B:3.5 Communication and Compression（上传下行的带宽/轮数约束、梯度压缩与量化）。隐私：B:4 全章——B:4.1 威胁模型与参与者，B:4.2 工具与技术（B:4.2.1 安全计算如安全聚合、秘密共享，B:4.2.2 差分隐私式的隐私保护发布），B:4.3.2 中心式差分隐私训练，B:4.4.3 分布式差分隐私（本地扰动）应对不可信服务器。"
+   "note": ""
   },
   {
-   "topic": "联邦学习（节点标题里的第三块）",
+   "topic": "隐私约束",
    "refs": [
-    "B:#1",
-    "B:#2",
-    "B:#3"
+    "A:4",
+    "A:4.1",
+    "A:4.2",
+    "A:4.2.2"
    ],
-   "note": "节点标题含“联邦学习”，而简介的知识点只列到“协同训练、非独立同分布、通信与隐私约束”。补充分支 B 的第 1–4 章就是联邦学习的完整导览；若只想看入门，读 B:1 与 B:3.1 即可。"
+   "note": ""
   }
  ],
- "omitted": "A（CS 330 Fall 2023）未收：PyTorch 教程与各 TA session、以及元学习主线（Black-box meta-learning & in-context learning、Optimization-based meta-learning、Few-shot learning via metric learning、Unsupervised pre-training for few-shot learning (generative)、Advanced meta-learning topics (task construction)、Variational inference、Bayesian meta-learning、Advanced meta-learning topics (large-scale meta-optimization)、客座讲座 Learned Optimizers）——元学习不在本节点简介的知识点里；也没有收各次作业与项目页。B（Kairouz et al.）未收：第 5 章 Defending Against Attacks and Failures（投毒、后门、隐私与鲁棒性的张力）、第 6 章及以后（系统与部署、开源框架、数据集、激励机制与社会影响、开放问题清单），以及 1.3 Organization、2.4 / 3.7 / 4.6 各章 Executive summary、3.4 Adapting ML Workflows for Federated Learning、3.6 Application To More Types of Machine Learning Problems and Models、4.3.1/4.3.4/4.3.5、4.4.1/4.4.2、4.4.4、4.5 等细目；这些偏系统实现、攻击防御与治理，超出本节点“迁移/多任务/联邦”的知识点。",
- "notes": "两点说明：(1) A 是课程表，每次课只有主题、没有小节，且原文没有讲次编号（课程表按日期排），所以 A 的六条分支 ref 留空，coverage 里用 A:#1…A:#6 指代（顺序即 outline 里的顺序：导论、多任务、迁移与微调、对比式预训练、域适应与域泛化、终身学习）。(2) 节点简介里的“通信与隐私约束”其实是两件事，本导览图合成一条 coverage，其中通信在 B:3.5、隐私在 B:4；若主代理希望拆成两条可以拆。节点中文资源是隐语 SecretFlow 文档（联邦学习框架的工程文档），与本导览图的学术来源互补，未作为目录来源使用。",
+ "omitted": "按联邦学习入门目标选作者综述第 1–4 章；安全攻击、复杂部署与激励治理作为后续专题。",
+ "notes": "收窄为联邦学习。一般迁移/多任务/元学习不作为该卡片的必备内容；相关 CS330 课程见网络架构与表征技能的补充材料。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 38,
+  "exact": 32,
   "fuzzy": 0,
   "dropped": []
  }

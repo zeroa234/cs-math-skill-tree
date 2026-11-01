@@ -38,5 +38,10 @@ try{
   await p.waitForFunction(()=>document.querySelector('#toast').textContent.includes('已导入'));
   assert.equal(await p.locator('.card[data-id="F.1.2"]').evaluate(e=>e.classList.contains('lit')),false,'Import also respects merged skill boundaries');
  });
+ await check({version:2,learned:[],introSeen:true},async p=>{
+  await p.goto(url+'#skill/P.5.4/guide');
+  await p.waitForSelector('dialog.guide[open] .markmap-node');
+  assert.equal(await p.evaluate(()=>location.hash),'#skill/P.5.3/guide');
+ });
  console.log('PASS: partial/full legacy completion, goal remap, exported backup, new schema, legacy import');
 }finally{await browser.close();}

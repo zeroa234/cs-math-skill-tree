@@ -37,10 +37,18 @@ def main():
             resource = skill.get(key)
             if resource:
                 uses.setdefault(resource['url'], []).append({'id': skill['id'], 'language': resource['lang'], 'role': key})
+        for resource in skill.get('extraResources', []):
+            uses.setdefault(resource['url'], []).append({'id': skill['id'], 'language': resource['lang'], 'role': 'supplementary'})
         if args.scope == 'all':
             for course in skill.get('courses', []):
                 uses.setdefault(course['url'], []).append({'id': skill['id'], 'role': 'prerequisite'})
     if args.scope == 'all':
+        for skill in data['skills']:
+            if skill.get('granularity', {}).get('url'):
+                uses.setdefault(skill['granularity']['url'], []).append({'id': skill['id'], 'role': 'granularity'})
+            for evidence in skill.get('requiredEvidence', []):
+                for source in evidence['sources']:
+                    uses.setdefault(source['url'], []).append({'id': skill['id'], 'role': 'required-evidence'})
         for path in sorted((ROOT / 'data/outlines').glob('*.json')):
             outline = json.loads(path.read_text(encoding='utf-8'))
             for source in outline['sources']:

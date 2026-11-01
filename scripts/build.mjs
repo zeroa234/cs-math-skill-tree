@@ -300,6 +300,14 @@ for (const queue = [...mainWhy.keys()]; queue.length;) {
 }
 const scopeOf = (id) => mainWhy.get(id) || `选修：${scopeData[id].note || "CS2023 的核心主题里没有它"}`;
 
+const granularity = readJson(rel("data/curation/granularity.json")).skills;
+for (const id of Object.keys(granularity)) if (!skillIds.has(id)) fail(`granularity for unknown skill ${id}`);
+for (const n of skills) {
+  const g = granularity[n.id];
+  if (!g || g.description !== n.desc || g.name !== n.name) fail(`missing or stale granularity decision for ${n.id}`);
+  if (!["课程单元", "基础模块", "进阶模块", "教材单元"].includes(g.unit) || !g.source_title || !g.url || !g.evidence) fail(`incomplete granularity evidence for ${n.id}`);
+}
+
 const out = skills.map((n) => {
   const p = prereqs.get(n.id);
   const r = research.get(n.id);
@@ -323,6 +331,8 @@ const out = skills.map((n) => {
     recommended: p.recommended.map((q) => prereqEntry(n.id, q, "recommended")),
     prereqStatus: p.status,
     prereqSummary: notes[n.id]?._summary || "",
+    requiredEvidence: r?.required_evidence || [],
+    granularity: granularity[n.id],
     unlocks: unlocks.get(n.id),
     related: srcEdges
       .filter((e) => e.type === "related" && (e.source === n.id || e.target === n.id))

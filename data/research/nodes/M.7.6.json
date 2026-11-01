@@ -1,15 +1,23 @@
 {
  "id": "M.7.6",
  "resource": {
-  "tier": "website",
-  "title": "ECON 159 Game Theory (Ben Polak, Open Yale Courses) — 24 讲完整视频 + 讲义 + 习题",
+  "title": "ECON 159 Game Theory（Ben Polak, Open Yale Courses）— 24 讲视频 + transcript + 习题",
   "url": "https://oyc.yale.edu/economics/econ-159",
+  "tier": "website",
   "lang": "en",
   "free": true,
-  "covers": "Open Yale Courses 免费提供全部 24 讲视频、讲义（transcript）与作业。官方 Description：dominance、backward induction、Nash equilibrium、evolutionary stability、commitment、credibility、asymmetric information、adverse selection、signaling；课程目录里还有 L11–12 Evolutionary Stability、L17 Backward Induction: Ultimatum and Bargaining、L24 Asymmetric Information: Auctions and the Winner's Curse。对应节点的均衡概念、序贯决策（逆向归纳/子博弈精炼）、效用与风险（预期效用讲）、多主体相互作用；机制设计（VCG、显示原理）与形式化决策理论只部分覆盖，D4 层需另补。",
-  "verified": true
+  "covers": "dominance、backward induction（L14–17）、Nash equilibrium 与演化稳定（L11–12）、imperfect information 与子博弈完美（L18）、repeated games（L21–22）、asymmetric information/signaling（L23）、auctions 与 winner's curse（L24）；对应收窄后的均衡/逆向归纳/重复/不完全信息/博弈效用。机制设计只到拍卖与赢家诅咒，VCG 与显示原理不在课内。",
+  "access": "Open Yale Courses 免费提供 24 讲视频；每讲页面附完整 transcript 文本与音频（mp3）；课程页公开大纲、参考书与评分；视频字幕未核对（正文可用 transcript）。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "哈尔滨工业大学《博弈论——策略互动的艺术》（中国大学MOOC）",
+  "url": "https://www.icourse163.org/course/HIT-1207106820?tid=1467128692",
+  "tier": "course",
+  "lang": "zh",
+  "free": null,
+  "access": "中国大学MOOC 课程页公开课程概述、预备知识与参考书；视频需注册登录，认证证书收费；页面未公开逐章大纲文本，字幕未核对。",
+  "covers": "按课程概述列出的单元：引言、策略式表述博弈、扩展式表述博弈、重复博弈、非对称信息博弈、机制设计、改变博弈；覆盖收窄后的均衡/逆向归纳/重复/不完全信息/机制设计入门。一般决策理论与序贯决策不在课内。"
+ },
  "courses": [
   {
    "school": "Yale University",
@@ -55,5 +63,9 @@
    "evidence": "MIT 6.254：'a course in optimization (6.251, 6.255 or equivalent) would be helpful, but is not required.'"
   }
  ],
- "notes": "原图对 M.7.6 没列任何建议前置，故 candidate_check 为空，只写 extra_prereqs。资源选 Yale ECON 159（入门、全视频、免费、英文），MIT 6.254 作进阶对照：它把机制设计（VCG、显示原理、拍卖收益等价）讲全，适合 D3/D4。两门课的『先修』都在要求段落里写得很明确。映射说明：Yale 要求的 'Introductory microeconomics (115)' 在技能树里没有对应节点，故未映射；Yale 只用一元微积分（M.1.2），没有要求线性代数或证明课；MIT 6.254 的 'mathematical maturity' 无具体课程，未强行映射到 M.5.3。"
+ "notes": "原图对 M.7.6 没列任何建议前置，故 candidate_check 为空，只写 extra_prereqs。资源选 Yale ECON 159（入门、全视频、免费、英文），MIT 6.254 作进阶对照：它把机制设计（VCG、显示原理、拍卖收益等价）讲全，适合 D3/D4。两门课的『先修』都在要求段落里写得很明确。映射说明：Yale 要求的 'Introductory microeconomics (115)' 在技能树里没有对应节点，故未映射；Yale 只用一元微积分（M.1.2），没有要求线性代数或证明课；MIT 6.254 的 'mathematical maturity' 无具体课程，未强行映射到 M.5.3。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "保留旧英文资源 ECON 159：官方描述原文含 dominance、backward induction、Nash equilibrium、asymmetric information、signaling；讲次表里 L18 是 Imperfect Information 与子博弈完美、L21–22 是 Repeated Games、L24 是 Auctions and the Winner's Curse，正好覆盖收窄后的均衡/逆向归纳/重复/不完全信息/博弈效用。它只把机制设计讲到拍卖与赢家诅咒，VCG/显示原理不在课内；补法：MIT 6.254 OCW 的 syllabus 明写 Mechanism design (3-4 lectures) 含 Revelation principle、Incentive compatibility、VCG mechanisms，可作 D3/D4 补充（本次只核 syllabus，未核其讲义正文篇幅）。中文旧资源北京大学《博弈论》课程页只公开概述与参考书，逐章大纲不可见，无法证明含重复博弈/机制设计；改选哈尔滨工业大学《博弈论——策略互动的艺术》，课程概述原文逐项列出策略式表述博弈、扩展式表述博弈、重复博弈、非对称信息博弈、机制设计、改变博弈，与收窄范围（含机制设计入门）直接对应。另有深圳大学黄嘉平《博弈论》课程网站：免费中文讲义，正文含“4.3 逆向归纳法和子博弈完美性”“6.5 拍卖”，可作免费文字备选，但逐章检索没有“重复博弈”与“机制设计”，故不作主资源；如需中文纯文本可改挂它并在 covers 说明缺重复博弈。一般决策理论/序贯决策已从节点删除，不再需要额外来源（M.2.4、A.2.4 各自已有课）。全部免费（MOOC 仅证书收费，不影响学习）；ECON 159 视频字幕未核对但有 transcript 正文，哈工大 MOOC 字幕未核对。复核日期 2026-11-01。"
+ }
 }

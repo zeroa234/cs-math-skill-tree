@@ -498,6 +498,10 @@
     kids.push(el("section", { class: "p-sec" },
       el("h3", {}, "学什么"),
       el("p", {}, s.desc),
+      s.granularity ? el("details", {},
+        el("summary", {}, `划分依据（${s.granularity.unit}）`),
+        el("p", {}, s.granularity.boundary || s.granularity.note || s.granularity.evidence),
+        el("a", { href: s.granularity.url, target: "_blank", rel: "noopener noreferrer" }, s.granularity.source_title)) : null,
       ms.length ? el("ul", { class: "milestones" }, ms.map(([lv, g]) => el("li", {}, el("b", {}, `D${lv}：`), g))) : null));
     kids.push(Guide.section(s));
 
@@ -509,7 +513,7 @@
         resourceCard(s.zhAlt, "中文资源")),
       s.extraResources?.length ? el("details", { class: "extra-resources" },
         el("summary", {}, "补充材料（填补主资源的覆盖缺口）"),
-        el("div", { class: "res-list" }, s.extraResources.map(r => resourceCard(r, r.lang === "zh" ? "中文补充" : "英文补充")))) : null,
+        el("div", { class: "res-list" }, s.extraResources.map(r => resourceCard(r, r.lang === "zh" ? "中文补充" : r.lang === "en" ? "英文补充" : "补充（语言见说明）")))) : null,
       !s.resource && !s.zhAlt ? el("p", { class: "pending" }, "暂无核实过的学习资源。") : null,
       !s.zhAlt && s.resource?.lang !== "zh" ? el("p", { class: "pending" }, s.zhResourceNote || "暂未找到并核实适合本节点的中文资源。") : null));
 
@@ -526,10 +530,23 @@
     // evidence
     if (s.courses.length) {
       kids.push(el("section", { class: "p-sec courses" },
-        el("details", {}, el("summary", {}, `前置依据：${s.courses.length} 门真实课程的先修要求`),
+        el("details", {}, el("summary", {}, `前置依据：${s.courses.length} 条课程资料`),
           el("ul", {}, s.courses.map((c) => el("li", {},
             el("a", { href: c.url, target: "_blank", rel: "noopener" }, `${c.school} ${c.course}`), "：",
             el("q", {}, c.prereq_text || "未写明先修")))))));
+    }
+    if (s.requiredEvidence?.length) {
+      const basis = { course: "课程背景", same_course: "同课顺序", chain: "先修链" };
+      const entries = s.requiredEvidence.map(e => {
+        const sources = e.sources.map((x, i) => el("p", {},
+          el("q", {}, x.quote), " ",
+          el("a", { href: x.url, target: "_blank", rel: "noopener noreferrer" }, `查看官方原文 ${i + 1}`)));
+        return el("li", {},
+          el("strong", {}, `${SK.get(e.id)?.name || e.id} · ${basis[e.basis]}`),
+          el("p", {}, e.reason), e.limits ? el("p", {}, e.limits) : null, sources);
+      });
+      kids.push(el("section", { class: "p-sec" },
+        el("details", {}, el("summary", {}, "必须前置的补充证据"), el("ul", {}, entries))));
     }
     if (s.related.length) {
       kids.push(el("section", { class: "p-sec" },
@@ -631,6 +648,11 @@
   }
   function route() {
     const [v, arg, sub] = decodeURIComponent(location.hash.slice(1)).split("/");
+    const alias = v === "skill" && D.progressMerges?.[arg];
+    if (alias) {
+      history.replaceState(null, "", `#skill/${alias}${sub ? "/" + sub : ""}`);
+      return route();
+    }
     if (v === "skill" && SK.has(arg)) {
       showView("map");
       if (state.collapsed.has(SK.get(arg).lane)) toggleLane(SK.get(arg).lane);

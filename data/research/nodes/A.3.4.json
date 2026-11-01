@@ -31,7 +31,7 @@
    "prereq_kind": "required",
    "mapped_ids": [
     "P.2.2",
-    "P.2.1",
+    "P.1.2",
     "P.2.3",
     "M.6.1",
     "F.1.2"
@@ -39,7 +39,8 @@
   }
  ],
  "candidate_check": {
-  "A.2.1": "contradicted"
+  "A.2.1": "contradicted",
+  "M.1.4.1": "recommended"
  },
  "extra_prereqs": [
   {
@@ -71,13 +72,9 @@
    "id": "P.2.2",
    "kind": "recommended",
    "evidence": "CS 246 原文把 'CS107' 列为 'recommended'（CS107 是用 C 的系统编程课）。"
-  },
-  {
-   "id": "M.1.4.1",
-   "kind": "required",
-   "basis": "course",
-   "evidence": "UCSD CSE 258 要求 comfortable with basic optimization and linear algebra；基础优化即梯度方法。"
   }
  ],
- "notes": "A.2.1 记 contradicted，但需要区分层次：UCSD CSE 258 首页原文明写 'No previous background in machine learning is required'，Stanford CS 246（也讲 Recommendation Systems：课程 topics 与课表 'Recommender Systems I' 都列出）同样不要求机器学习课，只要求编程 + 概率。所以对「入门级推荐系统」来说 A.2.1 不是先修，原图这条边偏保守。但节点简介里的后半段（反馈偏差、多目标、在线实验）属于 D3/D4 内容，那部分确实建立在监督学习与评估方法之上（CSE 258 课表里监督学习回归/分类排在最前面，相当于课内补）。资源选 CSE 258 而不是 Coursera 上明尼苏达那套推荐系统专项：课程主页免费、有录播和教材草稿、且把「协同过滤→排序评估→内容与结构」串起来；注意该 URL 是当季地址（fa26），长期入口是讲师页 https://cseweb.ucsd.edu/~jmcauley/ （已核实会指向最新一季）。"
+ "notes": "A.2.1 记 contradicted，但需要区分层次：UCSD CSE 258 首页原文明写 'No previous background in machine learning is required'，Stanford CS 246（也讲 Recommendation Systems：课程 topics 与课表 'Recommender Systems I' 都列出）同样不要求机器学习课，只要求编程 + 概率。所以对「入门级推荐系统」来说 A.2.1 不是先修，原图这条边偏保守。但节点简介里的后半段（反馈偏差、多目标、在线实验）属于 D3/D4 内容，那部分确实建立在监督学习与评估方法之上（CSE 258 课表里监督学习回归/分类排在最前面，相当于课内补）。资源选 CSE 258 而不是 Coursera 上明尼苏达那套推荐系统专项：课程主页免费、有录播和教材草稿、且把「协同过滤→排序评估→内容与结构」串起来；注意该 URL 是当季地址（fa26），长期入口是讲师页 https://cseweb.ucsd.edu/~jmcauley/ （已核实会指向最新一季）。",
+ "required_evidence": [],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

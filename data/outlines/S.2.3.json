@@ -12,18 +12,6 @@
     "https://mas.owasp.org/"
    ],
    "why": "节点现有英文资源就是这套标准；站点目录把 MASVS 的 8 组控制要求、MASTG 的通用概念与 Android/iOS 两条平台测试线逐条列出，正好对上移动平台、移动应用与设备身份这几块，且是事实上的行业标准。"
-  },
-  {
-   "key": "B",
-   "kind": "book",
-   "title": "Computer Security (CS 161 online textbook)",
-   "by": "David Wagner, Nicholas Weaver, Peyrin Kao, Fuzail Shakir, Andrew Law, Nicholas Ngai (UC Berkeley)",
-   "year": 2024,
-   "url": "https://textbook.cs161.org/",
-   "toc_urls": [
-    "https://textbook.cs161.org/network/wpa.html"
-   ],
-   "why": "补无线这一半：OWASP MAS 只讲移动应用层，没有无线协议；CS161 第 28 章 WPA 按“WiFi 背景—协议—攻击—防护”讲无线链路的威胁模型与 WPA2-Enterprise 防护。"
   }
  ],
  "outline": [
@@ -228,53 +216,9 @@
      "zh": "iOS 反逆向防护"
     }
    ]
-  },
-  {
-   "src": "B",
-   "ref": "28",
-   "title": "WPA",
-   "zh": "WPA 无线安全",
-   "fill": "无线协议与无线威胁模型：OWASP MAS 只覆盖移动应用与平台，没有无线链路这一层",
-   "items": [
-    {
-     "ref": "28.1",
-     "title": "Cheat sheet",
-     "zh": "速查表"
-    },
-    {
-     "ref": "28.2",
-     "title": "Networking background: WiFi",
-     "zh": "网络背景：WiFi"
-    },
-    {
-     "ref": "28.3",
-     "title": "Protocol",
-     "zh": "协议"
-    },
-    {
-     "ref": "28.4",
-     "title": "Attacks",
-     "zh": "攻击"
-    },
-    {
-     "ref": "28.5",
-     "title": "Defenses: WPA2-Enterprise",
-     "zh": "防护：WPA2-Enterprise"
-    }
-   ]
   }
  ],
  "coverage": [
-  {
-   "topic": "无线协议",
-   "refs": [
-    "B:28",
-    "B:28.2",
-    "B:28.3",
-    "B:28.5"
-   ],
-   "note": "B 第 28 章从 802.11 背景与 WPA/WPA2 握手讲到 WPA2-Enterprise（802.1X、EAP）；蜂窝网与蓝牙不在两个来源里。"
-  },
   {
    "topic": "移动平台",
    "refs": [
@@ -301,21 +245,13 @@
     "A:#4"
    ],
    "note": "A:MASVS 是 8 组控制要求（存储、密码、认证、网络、平台、代码、抗逆向、隐私），A:#2 是通用概念（应用分类、测试方法、篡改与逆向、认证架构），A:#3、A:#4 是 Android/iOS 两侧的测试领域。"
-  },
-  {
-   "topic": "无线威胁模型",
-   "refs": [
-    "B:28.4",
-    "B:28.1"
-   ],
-   "note": "B 的 28.4 Attacks 按对手能力列无线攻击（嗅探、伪造 AP、deauth、KRACK 一类握手攻击），28.1 速查表把威胁与防护压成一张表；A 侧没有无线内容。"
   }
  ],
  "omitted": "A（mas.owasp.org）的目录很大，我只收了 4 组：MASVS 的 8 个控制族、MASTG 的 General Concepts、Android Security Testing、iOS Security Testing。未收 MASWE 的一百多条弱点条目（它们挂在 MASVS 各控制族下，属细目）、MASTG 的 Best Practices（MASTG-BEST-0001…0074）、Knowledge（MASTG-KNOW-…，按 Android/iOS 技术点罗列）、MAS Profiles、MAS Crackmes、Tools、News/Talks 等，避免导览图变成清单。B 只收第 28 章 WPA，CS161 的其它网络章属 S.2.2。",
- "notes": "A 是单页站点（mas.owasp.org 首页即全站导航），所以 toc_urls 只有一个 URL，分支与小节的 title 都取自该页导航里的条目文字；MASVS 各控制族在导航里写作“MASVS-STORAGE: Storage”，我去掉编号只留“Storage”，ref 留编号。Android/iOS 与通用概念两组的条目在原文里没有编号，ref 留空，coverage 里用 A:#2（General Concepts）、A:#3（Android）、A:#4（iOS）指代这些分支。",
+ "notes": "只覆盖移动平台与应用安全；无线协议安全移至网络安全。中文 CTF Wiki 仅为 Android 部分补充。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 44,
+  "exact": 38,
   "fuzzy": 0,
   "dropped": []
  }

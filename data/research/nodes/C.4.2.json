@@ -18,9 +18,8 @@
    "prereq_text": "CS5412 assumes that you have a solid background doing systems programming and are comfortable writing small amounts of code in C# or Python or a similar language ... CS4414 is an ideal [background], but some people would have taken operating systems, distributed systems, networking, database systems.",
    "prereq_kind": "required",
    "mapped_ids": [
-    "P.2.2",
-    "C.2.1",
-    "C.4.1"
+    "C.2.2",
+    "P.1.1"
    ]
   },
   {
@@ -30,9 +29,7 @@
    "prereq_text": "For undergraduates: CS 40 (Machine Structure & Assembly Language Programming). Though not required, having taken CS 111 (Operating Systems), CS 112 (Networking), or CS 117 (Internet-scale distributed systems) will help significantly.",
    "prereq_kind": "required",
    "mapped_ids": [
-    "C.1.1",
-    "C.2.1",
-    "C.4.1"
+    "C.1.1"
    ]
   }
  ],
@@ -60,13 +57,22 @@
    "id": "C.4.1",
    "kind": "recommended",
    "evidence": "Tufts CS 118：CS 117 Internet-scale distributed systems 会“help significantly”；Cornell CS5412 把 distributed systems 列为可接受背景"
-  },
-  {
-   "id": "C.2.2",
-   "kind": "required",
-   "basis": "course",
-   "evidence": "Cornell CS5412 假定 solid background doing systems programming。"
   }
  ],
- "notes": "C.4.1 记 recommended 而不是 supported：两门课都只说“学过分布式系统有帮助/是常见背景之一”，没有写成硬性先修。C.2.3（虚拟化、容器与资源管理）判 not_mentioned：Cornell CS5412 与 Tufts CS 118 都把虚拟机和容器当作课程内容来讲（Tufts 有 'Virtual machines & containers' 两讲），不是先修要求。Cornell CS5412 的先修原文写在 FAQ.html（首页只有引导语），已核实。"
+ "notes": "C.4.1 记 recommended 而不是 supported：两门课都只说“学过分布式系统有帮助/是常见背景之一”，没有写成硬性先修。C.2.3（虚拟化、容器与资源管理）判 not_mentioned：Cornell CS5412 与 Tufts CS 118 都把虚拟机和容器当作课程内容来讲（Tufts 有 'Virtual machines & containers' 两讲），不是先修要求。Cornell CS5412 的先修原文写在 FAQ.html（首页只有引导语），已核实。",
+ "required_evidence": [
+  {
+   "id": "C.2.2",
+   "basis": "course",
+   "sources": [
+    {
+     "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/FAQ.html",
+     "quote": "What background is required? CS5412 assumes that you have a solid background doing systems programming and are comfortable writing small amounts of code in C# or Python or a similar language … ／ Who should take this class? … We welcome undergraduates who are far enough into their studies to have a solid “systems” background, but require that all students will be strong programmers with plenty of experience writing systems software. CS4414 is an ideal background, but some people would have taken operating systems, distributed systems, networking, database systems. So background can come from many kinds of courses — but every student must have a strong background."
+    }
+   ],
+   "reason": "Cornell CS5412 的 FAQ 在「What background is required?」里写课程「assumes that you have a solid background doing systems programming」；同一页「Who should take this class?」又说背景可以来自 OS、分布式、网络、数据库等多种课程（CS4414 最理想，但不是唯一）。属 expected background，没有把任何一门系统编程/并发课列为必修先修。节点收录的 Tufts CS 118 原文虽把 CS 40 列为必修，但 OS/网络/分布式只写「Though not required, having taken … will help significantly」。",
+   "limits": "课程代码可替代，但 FAQ 明确 every student must have a strong background、require ... experience writing systems software。必须的是系统编程能力，不能因没有唯一课程代码而降级。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

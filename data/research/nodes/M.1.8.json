@@ -54,13 +54,30 @@
    "id": "M.1.6",
    "kind": "required",
    "evidence": "MIT 18.112 Functions of a Complex Variable（更严格版本的复分析课）把 Analysis I (18.100B) 写成先修，说明严格复分析需要实分析。"
-  },
-  {
-   "id": "M.1.5",
-   "kind": "required",
-   "basis": "chain",
-   "evidence": "MIT 18.04 先修 18.02 与 18.03，二者以含无穷级数的一元微积分 18.01 为先修。"
   }
  ],
- "notes": "M.1.3 的支持是间接的：18.04 的先修 18.02 本身要求 18.01（含定积分与 FTC）。两种层次的课差异明显：18.04（应用型，先修 18.02+18.03）适合入门；18.112（Helgason，几何/严格风格，先修 18.100B）覆盖保角映射与 Riemann 映射更深入但超出入门层。18.04 讲义 Topic 10 明确有 Conformal Transformations，覆盖了本节点的‘保角映射’。"
+ "notes": "M.1.3 的支持是间接的：18.04 的先修 18.02 本身要求 18.01（含定积分与 FTC）。两种层次的课差异明显：18.04（应用型，先修 18.02+18.03）适合入门；18.112（Helgason，几何/严格风格，先修 18.100B）覆盖保角映射与 Riemann 映射更深入但超出入门层。18.04 讲义 Topic 10 明确有 Conformal Transformations，覆盖了本节点的‘保角映射’。",
+ "required_evidence": [
+  {
+   "id": "M.1.5",
+   "basis": "chain",
+   "sources": [
+    {
+     "url": "https://catalog.mit.edu/subjects/18/",
+     "quote": "[1] 18.04 Complex Variables with Applications — Prereq: Calculus II (GIR) and (18.03 or 18.032)"
+    },
+    {
+     "url": "https://catalog.mit.edu/subjects/18/",
+     "quote": "[2] 18.02 Calculus — Prereq: Calculus I (GIR)"
+    },
+    {
+     "url": "https://catalog.mit.edu/subjects/18/",
+     "quote": "[3] 18.01 Calculus — … Definite integral; fundamental theorem of calculus. … Infinite series: geometric, p-harmonic, simple comparison tests, power series for some elementary functions."
+    }
+   ],
+   "reason": "MIT 课程目录先修链：[1] 18.04 Complex Variables 的 Prereq 是 Calculus II (GIR) 与 (18.03 或 18.032)；[2] Calculus II 即 18.02，其 Prereq: Calculus I (GIR)；[3] Calculus I 即 18.01，官方描述含「Infinite series: geometric, p-harmonic, simple comparison tests, power series for some elementary functions」。复分析入门层的 Taylor/Laurent 展开直接建立在幂级数与收敛判别上（18.04 自己的课程描述就写着 singularities, Taylor and Laurent series）。18.03 不参与本链：它的目录原文是「Prereq: None. Coreq: Calculus II (GIR)」。",
+   "limits": "两跳链，每环都是 MIT 课程目录写明的必修先修。链只支撑 M.1.5 的入门层（数项级数、幂级数、收敛判别）；M.1.5 里的一致收敛/逐项运算属 M.1.6 实分析，不在本链证据内。原 extra_prereqs 写「MIT 18.04 先修 18.02 与 18.03，二者以含无穷级数的一元微积分 18.01 为先修」，对 18.03 不成立（18.03 无先修、只有 Coreq），本条目已改掉。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

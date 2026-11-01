@@ -20,7 +20,8 @@
     "https://textbook.cs161.org/network/dos.html",
     "https://textbook.cs161.org/network/firewalls.html",
     "https://textbook.cs161.org/network/intrusion-detection.html",
-    "https://textbook.cs161.org/network/abusing-intrusion-detection.html"
+    "https://textbook.cs161.org/network/abusing-intrusion-detection.html",
+    "https://textbook.cs161.org/network/wpa.html"
    ],
    "why": "这本书的网络部分按协议逐章组织，每章固定“背景—协议—攻击—防护”四段（如 ARP、DHCP、BGP、TCP/UDP、DNS、DNSSEC 均有 Attack/Defenses 小节），正好对上节点要的协议攻击面、防火墙、入侵检测与传输保护，且是节点先修证据里的 UC Berkeley CS 161 官方教材。"
   }
@@ -445,6 +446,40 @@
    "title": "Abusing Intrusion Detection",
    "zh": "入侵检测的滥用",
    "items": []
+  },
+  {
+   "src": "A",
+   "ref": "28",
+   "title": "WPA",
+   "zh": "WPA 无线安全",
+   "fill": "无线协议与无线威胁模型：OWASP MAS 只覆盖移动应用与平台，没有无线链路这一层",
+   "items": [
+    {
+     "ref": "28.1",
+     "title": "Cheat sheet",
+     "zh": "速查表"
+    },
+    {
+     "ref": "28.2",
+     "title": "Networking background: WiFi",
+     "zh": "网络背景：WiFi"
+    },
+    {
+     "ref": "28.3",
+     "title": "Protocol",
+     "zh": "协议"
+    },
+    {
+     "ref": "28.4",
+     "title": "Attacks",
+     "zh": "攻击"
+    },
+    {
+     "ref": "28.5",
+     "title": "Defenses: WPA2-Enterprise",
+     "zh": "防护：WPA2-Enterprise"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -510,13 +545,20 @@
     "A:37"
    ],
    "note": "网络监测在教材里落在 36.2 NIDS（线上流量检测）与 36.4 Logging（日志），第 37 章讲大规模监听（NSA 式的 NIDS＋数据库）及其法律边界。"
+  },
+  {
+   "topic": "无线链路安全",
+   "refs": [
+    "A:28"
+   ],
+   "note": "无线协议链路层安全，与移动应用自身的沙箱/权限安全区分。"
   }
  ],
  "omitted": "只收 CS161 网络部分的第 25–27、29–37 章。未收：28 WPA（属无线安全 S.2.3）、38 Malware（恶意软件不在节点简介的知识点内）、39 Anonymity and Tor（匿名通信属隐私专题）；书的内存安全、密码学、Web 安全各章属其它节点。节点“现有英文学习资源”Stanford CS155 的 syllabus 只到讲级（L12 HTTPS、L14 Internet Protocols、L15 Internet Security、L16 DoS Attacks and Network Defenses），没有节级目录，故未作为主来源。",
  "notes": "节点现有英文资源是 Stanford CS155，但它的 syllabus 每讲只有一行主题，做不出“章→节”的导览图；因此主来源换成同一节点先修证据里的 UC Berkeley CS161 教材网络部分（12 章、65 节，粒度到节）。CS155 的对应关系：L12 HTTPS ↔ 第 31 章 TLS，L14 Internet Protocols ↔ 第 25/26/29/30/32 章，L15 Internet Security ↔ 第 33 章 DNSSEC 与第 35 章 Firewalls，L16 DoS Attacks and Network Defenses ↔ 第 34 章 DoS 与第 35 章。第 37 章没有小节标题，故只有一个分支、没有叶子。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 77,
+  "exact": 83,
   "fuzzy": 0,
   "dropped": []
  }

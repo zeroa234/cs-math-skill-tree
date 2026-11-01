@@ -36,13 +36,22 @@
    "id": "P.1.1",
    "kind": "required",
    "evidence": "MIT 6.033 先修 6.009（Fundamentals of Programming）"
-  },
-  {
-   "id": "C.2.1",
-   "kind": "required",
-   "basis": "same_course",
-   "evidence": "MIT 6.033 在课内先讲操作系统基础（进程隔离、虚拟内存）再讲虚拟化。"
   }
  ],
- "notes": "6.033 的日程（https://web.mit.edu/6.033/www/ ，已核实）含 LEC 3 Virtual memory、LEC 6 'OS structure, Virtual Machines'、LEC 14 'Datacenters and Clouds'，是虚拟化/云的大学课程证据；但 6.033 把 6.004+6.009 列为先修，没有要求操作系统课，故 C.2.1 记为 not_mentioned。本次会话没有 Tavily 搜索工具（只能直接 fetch 已知 URL），所以未能找到“以操作系统为先修的虚拟化/容器课”公开 syllabus；可作补充的官方文档：Linux 内核 cgroup v2（https://docs.kernel.org/admin-guide/cgroup-v2.html ，已打开）与 Docker Get started（https://docs.docker.com/get-started/ ，已打开）。资源是个人作者维护的学习路径（非大学站点），若需更“官方”的替代，可用内核文档 + Docker 文档组合，但系统性不如该路径。"
+ "notes": "6.033 的日程（https://web.mit.edu/6.033/www/ ，已核实）含 LEC 3 Virtual memory、LEC 6 'OS structure, Virtual Machines'、LEC 14 'Datacenters and Clouds'，是虚拟化/云的大学课程证据；但 6.033 把 6.004+6.009 列为先修，没有要求操作系统课，故 C.2.1 记为 not_mentioned。本次会话没有 Tavily 搜索工具（只能直接 fetch 已知 URL），所以未能找到“以操作系统为先修的虚拟化/容器课”公开 syllabus；可作补充的官方文档：Linux 内核 cgroup v2（https://docs.kernel.org/admin-guide/cgroup-v2.html ，已打开）与 Docker Get started（https://docs.docker.com/get-started/ ，已打开）。资源是个人作者维护的学习路径（非大学站点），若需更“官方”的替代，可用内核文档 + Docker 文档组合，但系统性不如该路径。",
+ "required_evidence": [
+  {
+   "id": "C.2.1",
+   "basis": "same_course",
+   "sources": [
+    {
+     "url": "https://web.mit.edu/6.033/www/",
+     "quote": "LEC 1: Modularity, Abstraction, and the Impact of Systems ／ LEC 3: Virtual memory ／ LEC 4: Bounded buffers and locks ／ LEC 5: Threads ／ LEC 6: OS structure, Virtual Machines"
+    }
+   ],
+   "reason": "MIT 6.033（Spring 2022 官方日历）在同一门课里先讲系统抽象与 OS 机制：LEC 1 Modularity, Abstraction, and the Impact of Systems、LEC 3 Virtual memory、LEC 4 Bounded buffers and locks、LEC 5 Threads，LEC 6 才讲 OS structure, Virtual Machines。容器（namespaces/cgroups）本身就是 OS 级隔离，OS 基础属入门层必需。",
+   "limits": "6.033 的虚拟化讲次只覆盖虚拟机，不含容器运行时（namespaces/cgroups）——容器做法由 C.2.3 的资源补，所以这条边支撑的是「OS 先于虚拟化」，不是「课程教了容器」。2018 版 6.033 的 OCW 日历只按周写 Operating Systems I-IV / Networking / Distributed Systems / Security，逐讲题目只给『Lecture N Outline』链接，取不到可引用的讲题；因此用 2022 版系站（web.mit.edu/6.033/www/）的逐讲题目。原 extra_prereqs 引的正是 6.033 但没写版本与出处。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

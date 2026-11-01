@@ -1,15 +1,23 @@
 {
  "id": "I.2.2",
  "resource": {
-  "tier": "website",
-  "title": "Purdue OWL: Professional, Technical Writing（普渡大学线上写作实验室，免费）",
-  "url": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html",
+  "title": "Technical Writing Essentials: Introduction to Professional Communications in the Technical Fields（Suzan Last，BCcampus 开放教材，CC BY 4.0）",
+  "url": "https://pressbooks.bccampus.ca/technicalwriting/",
+  "tier": "book",
   "lang": "en",
   "free": true,
-  "covers": "索引页逐条列出：Workplace Writers（effective workplace writing、rhetorical awareness and user-centered design）、Audience Analysis、Stakeholder Considerations、Higher/Lower Order Concerns（文档是否站得住、是否专业）、Activity and Postmortem Reports、Business Letters、Memos、Grant Writing（含 Grant Writing in the Sciences）、Technical Reports & Report Abstracts、White Papers 等；同一 OWL 站另有 Research and Citation 一栏（APA/MLA/Chicago/IEEE/AMA/ASA 引文格式、Avoiding Plagiarism、Conducting Research），合起来覆盖技术表达、文档审查、文献检索与引用规范。'团队沟通'只覆盖到读者/利益相关者分析与协作写作，没有专门的项目团队沟通训练。",
-  "verified": true
+  "covers": "第1章 技术沟通的问题解决取向、惯例与修辞情境、写作过程；第2章 职业文体（读者中心写作、7C、精确用词、说服与伦理）；第3章 文档设计（可读性、标题、列表、图表、样式指南与模板）；第4章 团队与沟通（团队项目工具、团队章程/议程/纪要/Gantt/工作日志、Tuckman/DISC/GRIP/Thomas-Kilmann、协作写作、冲突管理）；第5章 做研究（研究术语、来源查找与评估、逻辑谬误、范围界定、人类研究伦理、问卷与访谈）；第6章 IEEE 引用与参考文献；第7章 常见文档类型（邮件/备忘录/信件、提案、进度报告、技术描述、长篇建议与可行性报告、实验报告、操作说明）；第8章 口头与视觉展示；附录 H 同行评审要点。正好对应收窄后的“技术文档/审查/读者与团队沟通 + 文献检索批判阅读作为写作中的信息处理”。",
+  "access": "免费：CC BY 4.0，网页全文 + EPUB / 数字 PDF / 打印 PDF / MOBI 下载；无需注册。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "科技文献检索与论文写作（南京理工大学，中国大学MOOC）",
+  "url": "https://www.icourse163.org/course/NJUST-1468779200",
+  "tier": "website",
+  "lang": "zh",
+  "free": true,
+  "access": "中国大学MOOC 免费注册学习；完整视频与作业按当前开放学期提供，证书/认证可能收费。",
+  "covers": "中文慕课：文献检索（数据库与检索式）、文献管理与阅读、选题与开题、论文结构与写作、投稿与规范、实验报告——对应“写作中的信息处理（检索/批判阅读/引用）”这一块。技术文档体裁（提案、进度报告、操作说明）、审查（peer review）与团队沟通不在本课范围，用英文主资源补。"
+ },
  "courses": [
   {
    "school": "Pennsylvania State University",
@@ -22,5 +30,9 @@
  ],
  "candidate_check": {},
  "extra_prereqs": [],
- "notes": "原图对本节点没有建议前置；唯一找到的硬性要求是第一年写作课（ENGL 15 等）+ 第四学期学分级，这些都不在 all-nodes 索引里，所以 mapped_ids 与 extra_prereqs 都为空。课程条目原文还写 'ENGL 202C is an advanced writing course designed to help students in science and engineering develop the writing strategies that they will need to communicate successfully on the job'，并列出 reports、descriptions、definitions、procedures、job application documents、emails、memos、web applications 等文体，正是节点的技术表达部分。只找到一门可核实的对口课程（brief 允许 1–2 门），没有再凑第二门。"
+ "notes": "原图对本节点没有建议前置；唯一找到的硬性要求是第一年写作课（ENGL 15 等）+ 第四学期学分级，这些都不在 all-nodes 索引里，所以 mapped_ids 与 extra_prereqs 都为空。课程条目原文还写 'ENGL 202C is an advanced writing course designed to help students in science and engineering develop the writing strategies that they will need to communicate successfully on the job'，并列出 reports、descriptions、definitions、procedures、job application documents、emails、memos、web applications 等文体，正是节点的技术表达部分。只找到一门可核实的对口课程（brief 允许 1–2 门），没有再凑第二门。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "英文主资源从 Purdue OWL 换成开放教材 Technical Writing Essentials：OWL 是条目式参考，缺“团队沟通/协作写作/冲突管理”和“来源评估+同行评审”的教材化章节，新教材第4–5章与附录 H 正好补上收窄后的范围；OWL 仍可作速查（https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html ）。中文一侧没有免费的技术沟通教材：中国大学MOOC 的写作课都是学术论文写作（哈工大《学术写作与学术规范》、电子科大《学术规范与论文写作》），与“技术文档/团队沟通”不是一回事；若只想要中文文档风格规范，可另加阮一峰《中文技术文档写作规范》https://github.com/ruanyf/document-style-guide 作补充，但它只是风格规范，不承载课程。"
+ }
 }

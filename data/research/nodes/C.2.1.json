@@ -47,11 +47,6 @@
    "evidence": "UC Berkeley CS 162 要求 COMPSCI 61B（数据结构）"
   },
   {
-   "id": "P.2.2",
-   "kind": "required",
-   "evidence": "UC Berkeley CS 162 先修 COMPSCI 61C（含 C 语言与机器级编程）；CMU 15-410 只是建议先修 15-213，故不计入 required"
-  },
-  {
    "id": "M.5.3",
    "kind": "required",
    "evidence": "UC Berkeley CS 162 要求 COMPSCI 70（离散数学与概率论，含证明与离散结构）"
@@ -62,5 +57,24 @@
    "evidence": "UC Berkeley CS 162 要求 COMPSCI 70（含离散概率，对应概率论基础）"
   }
  ],
- "notes": "两门课都没有直接写“程序设计入门”作为先修：Berkeley 要求 61B（数据结构），而 61B 本身以 61A（P.1.1）为前提，故 P.1.1 判为 not_mentioned 而非 supported，是否视为必修由主代理按传递关系决定。CMU 15-410 的先修写在 'Preparatory coursework' 段，措辞是 'The best preparation ... is taking ...'，故记为 recommended。OSTEP 页面已核实为 v1.10 免费在线书（含全部章节 PDF 链接）。"
+ "notes": "两门课都没有直接写“程序设计入门”作为先修：Berkeley 要求 61B（数据结构），而 61B 本身以 61A（P.1.1）为前提，故 P.1.1 判为 not_mentioned 而非 supported，是否视为必修由主代理按传递关系决定。CMU 15-410 的先修写在 'Preparatory coursework' 段，措辞是 'The best preparation ... is taking ...'，故记为 recommended。OSTEP 页面已核实为 v1.10 免费在线书（含全部章节 PDF 链接）。",
+ "required_evidence": [
+  {
+   "id": "P.2.2",
+   "basis": "course",
+   "sources": [
+    {
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS162/",
+     "quote": "CS 162. Operating Systems and System Programming … Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70."
+    },
+    {
+     "url": "https://cs61c.org/fa26/",
+     "quote": "CS61C Fall 2026: Lecture 3: C Intro - Basics ／ Lecture 4: C Intro - Pointers, Arrays, Strings ／ Lecture 5: C Memory Management"
+    }
+   ],
+   "reason": "Berkeley CS 162 官方课程页先修写 COMPSCI 61B/61C/70。61C（Machine Structures）的 Fall 2026 课表前几讲就是 C、指针/数组/字符串、内存管理（L3 C Intro - Basics、L4 C Intro - Pointers, Arrays, Strings、L5 C Memory Management）。OS 的进程/内存/文件系统作业要用 C 写，P.2.2 属入门层必需。",
+   "limits": "这是「先修课内容覆盖 Q」的 course 型映射，与项目既有做法一致（CMU 15-213、15-122 也被节点映射到 P.2.2）。注意 Berkeley 目录对 61C 的官方描述没有逐字写 C，C 语言部分取自 61C 课程站课表。CMU 15-410 只把 15-213 写成建议准备（Preparatory coursework），不作必须依据。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

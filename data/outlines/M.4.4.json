@@ -12,19 +12,6 @@
     "https://www.cs.umd.edu/class/fall2023/cmsc754/lectures.html"
    ],
    "why": "节点现有英文资源：UMD 计算几何研究生课，逐讲给出具体主题（凸包、线段求交、多边形三角剖分、半平面交与点线对偶、线性规划、梯形图与点定位、Voronoi 图与 Delaunay 三角剖分、直线排列、范围搜索与 kd 树、WSPD、coreset、VC 维、运动规划），覆盖节点的凸包、空间划分与几何算法。"
-  },
-  {
-   "key": "B",
-   "kind": "book",
-   "title": "Polygon Mesh Processing",
-   "by": "Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, Bruno Levy",
-   "year": 2010,
-   "url": "https://www.pmp-book.org/",
-   "toc_urls": [
-    "https://www.pmp-book.org/",
-    "https://www.routledge.com/Polygon-Mesh-Processing/Botsch-Kobbelt-Pauly-Alliez-Levy/p/book/9781568814261"
-   ],
-   "why": "几何处理的标准教材（A K Peters/CRC Press，作者维护的官方站点 pmp-book.org 与出版社 Routledge 页面），覆盖节点的网格与曲面处理：曲面表示、网格数据结构、离散微分几何、光滑化、参数化、重网格化、简化、模型修复、形变；本书目录里章没有编号，节标题来自出版社页面的 Table of Contents。"
   }
  ],
  "outline": [
@@ -135,297 +122,6 @@
      "zh": "运动规划"
     }
    ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Surface Representations",
-   "zh": "曲面表示",
-   "fill": "曲面处理（曲面的数学表示与逼近能力）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Surface Definition and Properties",
-     "zh": "曲面的定义与性质"
-    },
-    {
-     "ref": "",
-     "title": "Approximation Power",
-     "zh": "逼近能力"
-    },
-    {
-     "ref": "",
-     "title": "Parametric Surface Representations",
-     "zh": "参数曲面表示"
-    },
-    {
-     "ref": "",
-     "title": "Implicit Surface Representations",
-     "zh": "隐式曲面表示"
-    },
-    {
-     "ref": "",
-     "title": "Conversion Methods",
-     "zh": "转换方法"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Mesh Data Structures",
-   "zh": "网格数据结构",
-   "fill": "网格（网格的数据结构）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Face-Based Data Structures",
-     "zh": "基于面的数据结构"
-    },
-    {
-     "ref": "",
-     "title": "Edge-Based Data Structures",
-     "zh": "基于边的数据结构"
-    },
-    {
-     "ref": "",
-     "title": "Halfedge-Based Data Structure",
-     "zh": "半边数据结构"
-    },
-    {
-     "ref": "",
-     "title": "Directed-Edge Data Structure",
-     "zh": "有向边数据结构"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Differential Geometry",
-   "zh": "微分几何",
-   "fill": "曲面处理（曲率、梯度、散度等离散量的数学基础）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Curves",
-     "zh": "曲线"
-    },
-    {
-     "ref": "",
-     "title": "Surfaces",
-     "zh": "曲面"
-    },
-    {
-     "ref": "",
-     "title": "Discrete Differential Operators",
-     "zh": "离散微分算子"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Smoothing",
-   "zh": "光滑化",
-   "fill": "曲面处理（去噪与光顺）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Fourier Transform and Manifold Harmonics",
-     "zh": "傅里叶变换与流形谐波"
-    },
-    {
-     "ref": "",
-     "title": "Diffusion Flow",
-     "zh": "扩散流"
-    },
-    {
-     "ref": "",
-     "title": "Fairing",
-     "zh": "光顺"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Parameterization",
-   "zh": "参数化",
-   "fill": "曲面处理（网格参数化与纹理映射）",
-   "items": [
-    {
-     "ref": "",
-     "title": "General Goals",
-     "zh": "总体目标"
-    },
-    {
-     "ref": "",
-     "title": "Parameterization of a Triangulated Surface",
-     "zh": "三角曲面的参数化"
-    },
-    {
-     "ref": "",
-     "title": "Barycentric Mapping",
-     "zh": "重心映射"
-    },
-    {
-     "ref": "",
-     "title": "Conformal Mapping",
-     "zh": "共形映射"
-    },
-    {
-     "ref": "",
-     "title": "Methods Based on Distortion Analysis",
-     "zh": "基于畸变分析的方法"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Remeshing",
-   "zh": "重网格化",
-   "fill": "网格（重建与各向同性/各向异性重网格化）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Local Structure",
-     "zh": "局部结构"
-    },
-    {
-     "ref": "",
-     "title": "Global Structure",
-     "zh": "全局结构"
-    },
-    {
-     "ref": "",
-     "title": "Correspondences",
-     "zh": "对应关系"
-    },
-    {
-     "ref": "",
-     "title": "Voronoi Diagrams and Delaunay Triangulations",
-     "zh": "Voronoi 图与 Delaunay 三角剖分"
-    },
-    {
-     "ref": "",
-     "title": "Triangle-Based Remeshing",
-     "zh": "基于三角形的重网格化"
-    },
-    {
-     "ref": "",
-     "title": "Quad-dominant Remeshing",
-     "zh": "以四边形为主的重网格化"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Simplification & Approximation",
-   "zh": "简化与逼近",
-   "fill": "网格（网格简化与逼近误差）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Vertex Clustering",
-     "zh": "顶点聚类"
-    },
-    {
-     "ref": "",
-     "title": "Incremental Decimation",
-     "zh": "增量式简化"
-    },
-    {
-     "ref": "",
-     "title": "Shape Approximation",
-     "zh": "形状逼近"
-    },
-    {
-     "ref": "",
-     "title": "Out-of-Core Methods",
-     "zh": "外存方法"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Model Repair",
-   "zh": "模型修复",
-   "fill": "网格（破损网格的修复）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Types of Artifacts: The \"Freak Show\"",
-     "zh": "瑕疵类型：“畸形秀”"
-    },
-    {
-     "ref": "",
-     "title": "Types of Repair Algorithms",
-     "zh": "修复算法的类型"
-    },
-    {
-     "ref": "",
-     "title": "Types of Input",
-     "zh": "输入类型"
-    },
-    {
-     "ref": "",
-     "title": "Surface-Oriented Algorithms",
-     "zh": "面向曲面的算法"
-    },
-    {
-     "ref": "",
-     "title": "Volumetric Repair Algorithms",
-     "zh": "体修复算法"
-    }
-   ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Deformation",
-   "zh": "形变",
-   "fill": "曲面处理（网格形变与编辑）",
-   "items": [
-    {
-     "ref": "",
-     "title": "Transformation Propagation",
-     "zh": "变换传播"
-    },
-    {
-     "ref": "",
-     "title": "Shell-Based Deformation",
-     "zh": "基于壳的形变"
-    },
-    {
-     "ref": "",
-     "title": "Multi-Scale Deformation",
-     "zh": "多尺度形变"
-    },
-    {
-     "ref": "",
-     "title": "Differential Coordinates",
-     "zh": "微分坐标"
-    },
-    {
-     "ref": "",
-     "title": "Freeform Deformation",
-     "zh": "自由形变"
-    },
-    {
-     "ref": "",
-     "title": "Radial Basis Functions",
-     "zh": "径向基函数"
-    },
-    {
-     "ref": "",
-     "title": "Limitations of Linear Methods",
-     "zh": "线性方法的局限"
-    }
-   ]
   }
  ],
  "coverage": [
@@ -453,29 +149,6 @@
    "note": "梯形图与点定位（08–09）、直线排列（13）、kd 树与正交范围树（14–15）、良分离点对分解（16–17）都是空间划分结构；Delaunay 三角剖分（11–12）本身也是网格化的空间划分。"
   },
   {
-   "topic": "网格",
-   "refs": [
-    "A:05",
-    "A:10",
-    "B:#2",
-    "B:#6",
-    "B:#7",
-    "B:#8"
-   ],
-   "note": "A 侧是多边形三角剖分（05）与 Voronoi/Delaunay 网格（10–12）；B 侧是网格数据结构（B:#2）、重网格化（B:#6）、简化与逼近（B:#7）、模型修复（B:#8）。"
-  },
-  {
-   "topic": "曲面处理",
-   "refs": [
-    "B:#1",
-    "B:#3",
-    "B:#4",
-    "B:#5",
-    "B:#9"
-   ],
-   "note": "B:#1 曲面表示与逼近能力，B:#3 离散微分几何（曲线、曲面、离散微分算子），B:#4 光滑化/光顺，B:#5 参数化，B:#9 形变。"
-  },
-  {
    "topic": "几何算法",
    "refs": [
     "A:04",
@@ -486,13 +159,22 @@
     "A:20"
    ],
    "note": "线段求交（04）、半平面交与对偶（06）、线性规划（07）、coreset 与核（18）、采样与 VC 维（19）、运动规划（20）。"
+  },
+  {
+   "topic": "Voronoi 与 Delaunay 结构",
+   "refs": [
+    "A:10",
+    "A:11",
+    "A:12"
+   ],
+   "note": "离散几何结构与构造算法，区别于曲面光顺/参数化的几何处理。"
   }
  ],
  "omitted": "A（CMSC 754）日历里的 Review/Midterm Exam、Thanksgiving break 等没有讲号的条目未收。B（Polygon Mesh Processing）的每章末尾 “Summary and Further Reading”、附录 A（Numerics，讲线性求解器等数值基础）、Preface、Bibliography、Index 未收。",
- "notes": "第一轮：A（CMSC 754）的 20 讲作为条目，B（Polygon Mesh Processing）按章收录、没有小节。本轮先试办法 1：pmp-book.org 站上每章有作者官方幻灯片 PDF（download/slides/*.pdf），但那是按要点逐条展开的讲课幻灯，页标题重复且无编号（打开 Representations.pdf 核对过），不能当目录用；于是走办法 2 的出版社目录：Routledge 产品页的 Table of Contents 列出全书章 → 节，据此给 B 的每一章补上节级 items。Routledge 的目录里章、节都没有编号（书的章号在正文里），所以 B 的分支与条目 ref 留空，coverage 用 B:#n；B 的分支按该目录拆成 9 章（第一轮把 “Surface Representations & Mesh Data Structures” 合成了一章，现拆开）。每章末尾的 “Summary and Further Reading” 属小结/延伸阅读，未收。",
+ "notes": "以 CMSC 754 的离散几何算法为界；曲面光顺、参数化、重网格化移作图形学的可选进阶材料。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 72,
+  "exact": 21,
   "fuzzy": 0,
   "dropped": []
  }

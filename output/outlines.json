@@ -3511,18 +3511,6 @@
   "sources": [
    {
     "key": "A",
-    "kind": "course",
-    "title": "CS 330 Deep Multi-Task and Meta Learning",
-    "by": "Chelsea Finn (Stanford University)",
-    "year": 2023,
-    "url": "https://cs330.stanford.edu/",
-    "toc_urls": [
-     "https://cs330.stanford.edu/"
-    ],
-    "why": "就是节点“现有英文学习资源”（课程主页 + 公开讲义与历年录像）。主页的课程表逐次列出每次课的主题（Multi-task learning、Transfer learning & fine-tuning、对比式预训练、Domain Adaptation and Domain Generalization、Lifelong learning 等），正好覆盖“任务迁移”和“多任务”两半；联邦学习那一半它不讲，用补充分支 B 补。"
-   },
-   {
-    "key": "B",
     "kind": "notes",
     "title": "Advances and Open Problems in Federated Learning",
     "by": "Peter Kairouz, H. Brendan McMahan, et al.",
@@ -3531,58 +3519,15 @@
     "toc_urls": [
      "https://arxiv.org/pdf/1912.04977"
     ],
-    "why": "补联邦学习：主来源 A 完全不涉及。这是联邦学习领域引用最多的长综述（几十位作者合写，arXiv:1912.04977，v3 2021），目录本身按主题分层——联邦训练的典型流程、点对点/跨机构设定、Non-IID 数据、优化算法、个性化与多任务/元学习、通信与压缩、隐私威胁模型与差分隐私——正好逐条对上本节点的知识点。"
+    "why": "联邦学习的作者综述，按统计异质性、聚合优化、通信和隐私组织。"
    }
   ],
   "outline": [
    {
     "src": "A",
-    "ref": "",
-    "title": "Course introduction & start of multi-task learning",
-    "zh": "课程导论与多任务学习引子",
-    "items": []
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Multi-task learning",
-    "zh": "多任务学习",
-    "items": []
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Transfer learning & fine-tuning",
-    "zh": "迁移学习与微调",
-    "items": []
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Unsupervised pre-training for few-shot learning (contrastive)",
-    "zh": "面向少样本学习的无监督预训练（对比式）",
-    "items": []
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Domain Adaptation and Domain Generalization",
-    "zh": "域适应与域泛化",
-    "items": []
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Lifelong learning",
-    "zh": "终身学习",
-    "items": []
-   },
-   {
-    "src": "B",
     "ref": "1",
     "title": "Introduction",
     "zh": "引言",
-    "fill": "补“协同训练”：联邦学习的基本设定——多个客户端在服务端协调下共同训练、数据始终留在本地",
     "items": [
      {
       "ref": "1.1",
@@ -3609,11 +3554,10 @@
     ]
    },
    {
-    "src": "B",
+    "src": "A",
     "ref": "2",
     "title": "Relaxing the Core FL Assumptions: Applications to Emerging Settings and Scenarios",
     "zh": "放宽联邦学习的基本假设：新兴设定与场景",
-    "fill": "补“协同训练”的不同拓扑：没有中心服务端的点对点协同训练、机构间的跨机构联邦学习、切分学习",
     "items": [
      {
       "ref": "2.1",
@@ -3633,11 +3577,10 @@
     ]
    },
    {
-    "src": "B",
+    "src": "A",
     "ref": "3",
     "title": "Improving Efficiency and Effectiveness",
     "zh": "提升效率与效果",
-    "fill": "补“非独立同分布数据”“通信与隐私约束”，以及联邦设定下的多任务与个性化",
     "items": [
      {
       "ref": "3.1",
@@ -3703,11 +3646,10 @@
     ]
    },
    {
-    "src": "B",
+    "src": "A",
     "ref": "4",
     "title": "Preserving the Privacy of User Data",
     "zh": "保护用户数据的隐私",
-    "fill": "补“隐私约束”：威胁模型、安全计算与差分隐私这类隐私保护技术，以及隐私与效用的权衡",
     "items": [
      {
       "ref": "4.1",
@@ -3770,70 +3712,41 @@
   ],
   "coverage": [
    {
-    "topic": "任务迁移",
+    "topic": "多客户端协同训练与模型聚合",
     "refs": [
-     "A:#3",
-     "A:#4",
-     "A:#5",
-     "B:3.3.3"
+     "A:1.1",
+     "A:1.1.2",
+     "A:3.2.2"
     ],
-    "note": "A:#3 迁移学习与微调（从预训练任务迁移到下游任务的两种典型做法及陷阱）；A:#4 对比式无监督预训练作为迁移的来源；A:#5 域适应与域泛化（源域训练、目标域偏移）；B:3.3.3 从联邦学习角度讲本地微调与元学习这两条“把全局模型迁移到本地数据”的路子。"
-   },
-   {
-    "topic": "多任务学习",
-    "refs": [
-     "A:#1",
-     "A:#2",
-     "B:3.3.2"
-    ],
-    "note": "A:#1 课程导论里先引出多任务设定；A:#2 是核心一讲（共享表示、任务分组、辅助任务、多任务与迁移的关系）；B:3.3.2 讲联邦设定下把每个客户端当成一个任务的多任务视角。"
-   },
-   {
-    "topic": "协同训练",
-    "refs": [
-     "B:#1",
-     "B:1.1",
-     "B:1.1.2",
-     "B:2.1",
-     "B:2.2",
-     "B:2.3"
-    ],
-    "note": "B:#1 给出“多客户端在服务端协调下共同训练、数据不出本地”的设定与模型生命周期（B:1.1、B:1.1.2 是典型训练流程）；B:2.1 点对点式协同训练（无中心端）、B:2.2 跨机构联邦学习、B:2.3 切分学习，都是“协同训练”的不同拓扑。A（多任务/元学习课程）里没有跨设备协同训练的内容。"
+    "note": ""
    },
    {
     "topic": "非独立同分布数据",
     "refs": [
-     "B:3.1",
-     "B:3.1.1",
-     "B:3.2.2"
+     "A:3.1",
+     "A:3.1.1"
     ],
-    "note": "B:3.1 专讲非 IID 数据带来的问题，B:3.1.1 是应对策略（数据共享/增强、个性化、聚类式联邦等），B:3.2.2 给出非 IID 下的优化算法与收敛率；B:3.3.4 讨论全局模型与本地数据分布不一致时何时还值得用全局模型。"
+    "note": ""
    },
    {
-    "topic": "通信与隐私约束",
+    "topic": "通信效率",
     "refs": [
-     "B:3.5",
-     "B:4",
-     "B:4.1",
-     "B:4.2",
-     "B:4.2.1",
-     "B:4.2.2",
-     "B:4.3.2",
-     "B:4.4.3"
+     "A:3.5"
     ],
-    "note": "通信：B:3.5 Communication and Compression（上传下行的带宽/轮数约束、梯度压缩与量化）。隐私：B:4 全章——B:4.1 威胁模型与参与者，B:4.2 工具与技术（B:4.2.1 安全计算如安全聚合、秘密共享，B:4.2.2 差分隐私式的隐私保护发布），B:4.3.2 中心式差分隐私训练，B:4.4.3 分布式差分隐私（本地扰动）应对不可信服务器。"
+    "note": ""
    },
    {
-    "topic": "联邦学习（节点标题里的第三块）",
+    "topic": "隐私约束",
     "refs": [
-     "B:#1",
-     "B:#2",
-     "B:#3"
+     "A:4",
+     "A:4.1",
+     "A:4.2",
+     "A:4.2.2"
     ],
-    "note": "节点标题含“联邦学习”，而简介的知识点只列到“协同训练、非独立同分布、通信与隐私约束”。补充分支 B 的第 1–4 章就是联邦学习的完整导览；若只想看入门，读 B:1 与 B:3.1 即可。"
+    "note": ""
    }
   ],
-  "omitted": "A（CS 330 Fall 2023）未收：PyTorch 教程与各 TA session、以及元学习主线（Black-box meta-learning & in-context learning、Optimization-based meta-learning、Few-shot learning via metric learning、Unsupervised pre-training for few-shot learning (generative)、Advanced meta-learning topics (task construction)、Variational inference、Bayesian meta-learning、Advanced meta-learning topics (large-scale meta-optimization)、客座讲座 Learned Optimizers）——元学习不在本节点简介的知识点里；也没有收各次作业与项目页。B（Kairouz et al.）未收：第 5 章 Defending Against Attacks and Failures（投毒、后门、隐私与鲁棒性的张力）、第 6 章及以后（系统与部署、开源框架、数据集、激励机制与社会影响、开放问题清单），以及 1.3 Organization、2.4 / 3.7 / 4.6 各章 Executive summary、3.4 Adapting ML Workflows for Federated Learning、3.6 Application To More Types of Machine Learning Problems and Models、4.3.1/4.3.4/4.3.5、4.4.1/4.4.2、4.4.4、4.5 等细目；这些偏系统实现、攻击防御与治理，超出本节点“迁移/多任务/联邦”的知识点。"
+  "omitted": "按联邦学习入门目标选作者综述第 1–4 章；安全攻击、复杂部署与激励治理作为后续专题。"
  },
  "A.3.1": {
   "sources": [
@@ -25223,27 +25136,26 @@
   "sources": [
    {
     "key": "A",
-    "kind": "course",
-    "title": "CMPE 691 Reconfigurable System Design — Physical Design Flow and Timing Analysis",
-    "by": "Ryan Robucci, University of Maryland Baltimore County",
-    "year": 2025,
-    "url": "https://eclipse.umbc.edu/robucci/cmpeRSD/",
+    "kind": "docs",
+    "title": "Universal Verification Methodology (UVM) 1.2 User’s Guide",
+    "by": "Accellera Systems Initiative",
+    "year": 2015,
+    "url": "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf",
     "toc_urls": [
-     "https://eclipse.umbc.edu/robucci/cmpeRSD/lectures/Physical_Design_Flow_and_Timing_Analysis/Physical_Design_Flow_and_Timing_Analysis.html"
+     "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf"
     ],
-    "why": "节点简介里的“设计自动化、综合、布局布线、等价性/时序验证”在这份大学讲义的编号小节里逐条拆开：EDA 工具分工、自动化物理设计、综合与映射、打包、布局布线、静态/动态时序分析、时序验证与逻辑验证的分工。节点现有的 CMPE 691 HDV 讲义页是加密的，所以把这一讲作为主来源。"
+    "why": "标准维护组织正式免费指南；从 testbench 到组件、激励、检查与覆盖，直接对齐验证主线。属于 UVM 1.2 教学资料，现代 IEEE 1800.2 差异另查最新版。"
    },
    {
     "key": "B",
-    "kind": "book",
-    "title": "Digital Systems Design with FPGAs and CPLDs",
-    "by": "Ian Grout",
-    "year": 2008,
-    "url": "https://catdir.loc.gov/catdir/toc/ecip083/2007044907.html",
+    "kind": "docs",
+    "title": "SymbiYosys Getting started",
+    "by": "YosysHQ",
+    "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html",
     "toc_urls": [
-     "https://catdir.loc.gov/catdir/toc/ecip083/2007044907.html"
+     "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html"
     ],
-    "why": "补 A 不讲的另外三块，且都是章→节结构：1.9 可编程逻辑的设计方法与工具（含典型 PLD 设计流程）、2.7 形式验证、第 9 章电子系统测试（IC 测试、PCB 测试、边界扫描）。"
+    "why": "开发者官方的可运行形式验证入门，补断言、反例与证明的区别。"
    },
    {
     "key": "C",
@@ -25261,180 +25173,172 @@
   "outline": [
    {
     "src": "A",
-    "ref": "",
-    "title": "Physical Design Flow and Timing Analysis",
-    "zh": "物理设计流程与时序分析",
-    "items": [
-     {
-      "ref": "3",
-      "title": "Electronic Design Tools",
-      "zh": "电子设计工具"
-     },
-     {
-      "ref": "5",
-      "title": "Automated Physical Design",
-      "zh": "自动化物理设计"
-     },
-     {
-      "ref": "6",
-      "title": "Synthesis and Mapping",
-      "zh": "综合与映射"
-     },
-     {
-      "ref": "7",
-      "title": "Packing",
-      "zh": "打包"
-     },
-     {
-      "ref": "8",
-      "title": "Place and Route",
-      "zh": "布局布线"
-     },
-     {
-      "ref": "9",
-      "title": "Timing Verification vs Logical Verification",
-      "zh": "时序验证与逻辑验证的区别"
-     },
-     {
-      "ref": "10",
-      "title": "Timing Analysis and Post-Place-and-Route simulation",
-      "zh": "时序分析与布局布线后仿真"
-     },
-     {
-      "ref": "12",
-      "title": "Static Timing Analysis",
-      "zh": "静态时序分析"
-     },
-     {
-      "ref": "13",
-      "title": "Clock Period Constraint",
-      "zh": "时钟周期约束"
-     },
-     {
-      "ref": "18",
-      "title": "Setup and Hold Times",
-      "zh": "建立时间与保持时间"
-     },
-     {
-      "ref": "19",
-      "title": "Clock Skew",
-      "zh": "时钟偏斜"
-     },
-     {
-      "ref": "23",
-      "title": "Setup Timing Slack in Critical Path",
-      "zh": "关键路径的建立时间裕量"
-     },
-     {
-      "ref": "25",
-      "title": "Hold Time Analysis and Slack",
-      "zh": "保持时间分析与裕量"
-     },
-     {
-      "ref": "27",
-      "title": "Unconstrained Paths and CDC Clock Domain Crossing",
-      "zh": "未约束路径与跨时钟域"
-     },
-     {
-      "ref": "28",
-      "title": "Clock Domain Crossing (CDC) Signals",
-      "zh": "跨时钟域（CDC）信号"
-     },
-     {
-      "ref": "31",
-      "title": "Multicycle Paths",
-      "zh": "多周期路径"
-     },
-     {
-      "ref": "32",
-      "title": "False Paths",
-      "zh": "伪路径"
-     },
-     {
-      "ref": "34",
-      "title": "Dynamic Timing Analysis",
-      "zh": "动态时序分析"
-     },
-     {
-      "ref": "35",
-      "title": "Dynamic Timing Analysis using Event-Driven Simulation",
-      "zh": "基于事件驱动仿真的动态时序分析"
-     },
-     {
-      "ref": "37",
-      "title": "Dynamic vs Static Timing Analysis; Functional vs Timing Verification",
-      "zh": "动态与静态时序分析；功能验证与时序验证"
-     },
-     {
-      "ref": "39",
-      "title": "FPGA vendors role in EDA",
-      "zh": "FPGA 厂商在 EDA 中的角色"
-     }
-    ]
-   },
-   {
-    "src": "B",
     "ref": "1",
-    "title": "Introduction to Programmable Logic",
-    "zh": "可编程逻辑导论",
-    "fill": "设计自动化：EDA 工具在 PLD 设计流程里的分工（A 只讲工具类别，不讲流程）",
+    "title": "Overview",
+    "zh": "概览",
     "items": [
      {
-      "ref": "1.9",
-      "title": "Programmable Logic Design Methods and Tools",
-      "zh": "可编程逻辑的设计方法与工具",
-      "items": [
-       {
-        "ref": "1.9.2",
-        "title": "Typical PLD Design Flow",
-        "zh": "典型 PLD 设计流程"
-       }
-      ]
+      "ref": "1.1",
+      "title": "The Typical UVM Testbench Architecture",
+      "zh": "典型 UVM 测试平台架构"
+     },
+     {
+      "ref": "1.2",
+      "title": "The UVM Class Library",
+      "zh": "UVM 类库"
      }
     ]
    },
    {
-    "src": "B",
+    "src": "A",
     "ref": "2",
-    "title": "Electronic Systems Design",
-    "zh": "电子系统设计",
-    "fill": "形式验证：从系统设计流程的角度讲形式验证要替代/补充什么（A、C 讲的是算法与工具细节）",
+    "title": "Transaction-Level Modeling (TLM)",
+    "zh": "事务级建模",
     "items": [
      {
-      "ref": "2.7",
-      "title": "Formal Verification",
-      "zh": "形式验证"
+      "ref": "2.1",
+      "title": "Overview",
+      "zh": "概览"
+     },
+     {
+      "ref": "2.2",
+      "title": "TLM, TLM-1, and TLM-2.0",
+      "zh": "TLM 与版本"
+     },
+     {
+      "ref": "2.3",
+      "title": "TLM-1 Implementation",
+      "zh": "TLM-1 实现"
+     },
+     {
+      "ref": "2.4",
+      "title": "TLM-2.0 Implementation",
+      "zh": "TLM-2.0 实现"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "3",
+    "title": "Developing Reusable Verification Components",
+    "zh": "开发可复用验证组件",
+    "items": [
+     {
+      "ref": "3.1",
+      "title": "Modeling Data Items for Generation",
+      "zh": "建模激励数据项"
+     },
+     {
+      "ref": "3.3",
+      "title": "Creating the Driver",
+      "zh": "创建驱动器"
+     },
+     {
+      "ref": "3.4",
+      "title": "Creating the Sequencer",
+      "zh": "创建序列器"
+     },
+     {
+      "ref": "3.6",
+      "title": "Creating the Monitor",
+      "zh": "创建监视器"
+     },
+     {
+      "ref": "3.8",
+      "title": "Creating the Agent",
+      "zh": "创建代理"
+     },
+     {
+      "ref": "3.9",
+      "title": "Creating the Environment",
+      "zh": "创建环境"
+     },
+     {
+      "ref": "3.10",
+      "title": "Enabling Scenario Creation",
+      "zh": "创建场景"
+     },
+     {
+      "ref": "3.11",
+      "title": "Managing End of Test",
+      "zh": "管理测试结束"
+     },
+     {
+      "ref": "3.12",
+      "title": "Implementing Checks and Coverage",
+      "zh": "实现检查与覆盖"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "4",
+    "title": "Using Verification Components",
+    "zh": "使用验证组件",
+    "items": [
+     {
+      "ref": "4.3",
+      "title": "Creating Test Classes",
+      "zh": "创建测试类"
+     },
+     {
+      "ref": "4.4",
+      "title": "Verification Component Configuration",
+      "zh": "验证组件配置"
+     },
+     {
+      "ref": "4.6",
+      "title": "Creating Meaningful Tests",
+      "zh": "创建有意义的测试"
+     },
+     {
+      "ref": "4.7",
+      "title": "Virtual Sequences",
+      "zh": "虚拟序列"
+     },
+     {
+      "ref": "4.8",
+      "title": "Checking for DUT Correctness",
+      "zh": "检查待测设计正确性"
+     },
+     {
+      "ref": "4.9",
+      "title": "Scoreboards",
+      "zh": "计分板"
+     },
+     {
+      "ref": "4.10",
+      "title": "Implementing a Coverage Model",
+      "zh": "实现覆盖模型"
      }
     ]
    },
    {
     "src": "B",
-    "ref": "9",
-    "title": "Testing the Electronic System",
-    "zh": "电子系统测试",
-    "fill": "验证的另一半是测试：IC 测试、PCB 测试与边界扫描（节点简介的“验证”常与测试混谈，A、C 都没有测试章）",
+    "ref": "getting-started",
+    "title": "Getting started",
+    "zh": "入门",
+    "fill": "补形式断言、反例与可运行的 FIFO 验证实例。",
     "items": [
      {
-      "ref": "9.2",
-      "title": "Integrated Circuit Testing",
-      "zh": "集成电路测试",
-      "items": [
-       {
-        "ref": "9.2.2",
-        "title": "Digital IC Test",
-        "zh": "数字 IC 测试"
-       }
-      ]
+      "ref": "properties",
+      "title": "Verification properties",
+      "zh": "验证性质"
      },
      {
-      "ref": "9.3",
-      "title": "Printed Circuit Board Testing",
-      "zh": "印制电路板测试"
+      "ref": "sby",
+      "title": "SymbiYosys",
+      "zh": "SymbiYosys 验证流程"
      },
      {
-      "ref": "9.4",
-      "title": "Boundary Scan Test",
-      "zh": "边界扫描测试"
+      "ref": "exercise",
+      "title": "Exercise",
+      "zh": "练习"
+     },
+     {
+      "ref": "concurrent",
+      "title": "Concurrent assertions",
+      "zh": "并发断言"
      }
     ]
    },
@@ -25443,112 +25347,103 @@
     "ref": "Lecture 1",
     "title": "Introduction to Hardware Verification",
     "zh": "硬件验证导论",
-    "fill": "形式验证/等价性一侧的总览（C 全部条目都是补这一块）",
-    "items": []
+    "items": [],
+    "fill": "补形式验证、等价性检查与时序规约的课程概念。"
    },
    {
     "src": "C",
     "ref": "Lecture 2",
     "title": "Equivalence Checking",
     "zh": "等价性检查",
-    "fill": "等价性：等价性检查的问题定义与整体思路",
-    "items": []
+    "items": [],
+    "fill": "补形式验证、等价性检查与时序规约的课程概念。"
    },
    {
     "src": "C",
     "ref": "Lecture 3",
     "title": "Combinational Equivalence Checking",
     "zh": "组合等价性检查",
-    "fill": "等价性：组合电路的等价性检查",
-    "items": []
+    "items": [],
+    "fill": "补形式验证、等价性检查与时序规约的课程概念。"
    },
    {
     "src": "C",
     "ref": "Lecture 7",
     "title": "Equivalence Checking Using SAT",
     "zh": "基于 SAT 的等价性检查",
-    "fill": "等价性：把等价性化成 SAT 求解（综合前后网表的实际做法）",
-    "items": []
+    "items": [],
+    "fill": "补形式验证、等价性检查与时序规约的课程概念。"
    },
    {
     "src": "C",
     "ref": "Lecture 13",
     "title": "Introduction to property/assertion checking",
     "zh": "属性与断言检查导论",
-    "fill": "形式验证：从等价性转到属性/断言检查",
-    "items": []
+    "items": [],
+    "fill": "补形式验证、等价性检查与时序规约的课程概念。"
    },
    {
     "src": "C",
     "ref": "Lecture 14",
     "title": "Temporal Logics, Specification and Properties",
     "zh": "时序逻辑、规约与属性",
-    "fill": "形式验证：用什么语言写待证的性质（时序逻辑与规约）",
-    "items": []
+    "items": [],
+    "fill": "补形式验证、等价性检查与时序规约的课程概念。"
    },
    {
     "src": "C",
     "ref": "Lecture 17",
     "title": "Model checking",
     "zh": "模型检查",
-    "fill": "形式验证：模型检查算法",
-    "items": []
+    "items": [],
+    "fill": "补形式验证、等价性检查与时序规约的课程概念。"
    }
   ],
   "coverage": [
    {
-    "topic": "设计自动化",
+    "topic": "仿真与测试平台",
     "refs": [
+     "A:1.1",
+     "A:3.3",
+     "A:3.6",
+     "A:4.9"
+    ]
+   },
+   {
+    "topic": "受约束随机激励",
+    "refs": [
+     "A:3.1",
+     "A:4.6"
+    ]
+   },
+   {
+    "topic": "断言与覆盖率",
+    "refs": [
+     "A:3.12",
+     "A:4.10",
+     "B:properties",
+     "B:concurrent"
+    ]
+   },
+   {
+    "topic": "UVM 验证流程",
+    "refs": [
+     "A:2",
      "A:3",
-     "A:5",
-     "A:39",
-     "B:1.9",
-     "B:1.9.2"
+     "A:4"
     ]
    },
    {
-    "topic": "仿真",
+    "topic": "形式验证与等价性检查入门",
     "refs": [
-     "A:10",
-     "A:34",
-     "A:35"
-    ],
-    "note": "这里能给到的是仿真在 EDA 流程里的位置（布局布线后仿真、事件驱动仿真做动态时序分析）；仿真平台本身（testbench 组织、断言、覆盖率、UVM）只能到讲次一层，因为 CMPE 691 HDV 的每讲页面是 PageCrypt 加密的，读不到正文小节（见 notes）。"
-   },
-   {
-    "topic": "形式验证",
-    "refs": [
-     "B:2.7",
-     "C:Lecture 13",
-     "C:Lecture 14",
-     "C:Lecture 17"
-    ]
-   },
-   {
-    "topic": "综合",
-    "refs": [
-     "A:6",
-     "B:1.9.2"
-    ]
-   },
-   {
-    "topic": "布局布线",
-    "refs": [
-     "A:7",
-     "A:8",
-     "A:5"
-    ]
-   },
-   {
-    "topic": "等价性",
-    "refs": [
+     "B:getting-started",
      "C:Lecture 2",
-     "C:Lecture 3",
-     "C:Lecture 7"
+     "C:Lecture 7",
+     "C:Lecture 17"
     ]
    }
   ],
-  "omitted": "A 讲义里 Reference/Objectives/Interactive/Additional Materials 之类导航小节未收。B 只收 1.9、2.7 与第 9 章：第 1 章其余小节讲可编程逻辑器件类型与厂商、第 2 章其余小节讲流程管理、I/O、复位、电源、封装、认证（属于 H.2.3 板级工程的范围）、第 5–8、10 章讲逻辑设计、VHDL、DSP 与系统级设计；附录 E“Introduction to the Design Tools”是工具操作教程，按“附录不收”的规则未收。C 只收形式验证与等价性相关的 7 讲，项目讨论（Lecture 10/11）与工业 testbench 架构等其余讲次未收。"
+  "omitted": "UVM 高级寄存器层、工厂/配置等深度 API 只在实际项目需要时进一步查阅；指南为 1.2 版本，现代工具需对照 IEEE 1800.2。"
  },
  "H.2.3": {
   "sources": [
@@ -25915,6 +25810,18 @@
      "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/"
     ],
     "why": "节点“现有英文学习资源”里的那门课，讲义按 Rabaey《Digital Integrated Circuits》组织；OCW 的 Lecture Notes 页除了讲次标题，每讲还列出该讲的几个子主题（器件模型、VTC、传播延迟、动态与静态功耗、逻辑努力、时序与锁存器、互连与时钟分布、测试），正好对上 CMOS 数字设计、时序/功耗/面积、物理设计与测试；研究生课，适合 D2–D4。"
+   },
+   {
+    "key": "B",
+    "kind": "course",
+    "title": "CMPE 691 Reconfigurable System Design — Physical Design Flow and Timing Analysis",
+    "by": "Ryan Robucci, University of Maryland Baltimore County",
+    "year": 2025,
+    "url": "https://eclipse.umbc.edu/robucci/cmpeRSD/",
+    "toc_urls": [
+     "https://eclipse.umbc.edu/robucci/cmpeRSD/lectures/Physical_Design_Flow_and_Timing_Analysis/Physical_Design_Flow_and_Timing_Analysis.html"
+    ],
+    "why": "节点简介里的“设计自动化、综合、布局布线、等价性/时序验证”在这份大学讲义的编号小节里逐条拆开：EDA 工具分工、自动化物理设计、综合与映射、打包、布局布线、静态/动态时序分析、时序验证与逻辑验证的分工。节点现有的 CMPE 691 HDV 讲义页是加密的，所以把这一讲作为主来源。"
    }
   ],
   "outline": [
@@ -26247,6 +26154,120 @@
       "zh": "扫描测试、内建自测试与 IDDQ 测试"
      }
     ]
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "Physical Design Flow and Timing Analysis",
+    "zh": "物理设计流程与时序分析",
+    "items": [
+     {
+      "ref": "3",
+      "title": "Electronic Design Tools",
+      "zh": "电子设计工具"
+     },
+     {
+      "ref": "5",
+      "title": "Automated Physical Design",
+      "zh": "自动化物理设计"
+     },
+     {
+      "ref": "6",
+      "title": "Synthesis and Mapping",
+      "zh": "综合与映射"
+     },
+     {
+      "ref": "7",
+      "title": "Packing",
+      "zh": "打包"
+     },
+     {
+      "ref": "8",
+      "title": "Place and Route",
+      "zh": "布局布线"
+     },
+     {
+      "ref": "9",
+      "title": "Timing Verification vs Logical Verification",
+      "zh": "时序验证与逻辑验证的区别"
+     },
+     {
+      "ref": "10",
+      "title": "Timing Analysis and Post-Place-and-Route simulation",
+      "zh": "时序分析与布局布线后仿真"
+     },
+     {
+      "ref": "12",
+      "title": "Static Timing Analysis",
+      "zh": "静态时序分析"
+     },
+     {
+      "ref": "13",
+      "title": "Clock Period Constraint",
+      "zh": "时钟周期约束"
+     },
+     {
+      "ref": "18",
+      "title": "Setup and Hold Times",
+      "zh": "建立时间与保持时间"
+     },
+     {
+      "ref": "19",
+      "title": "Clock Skew",
+      "zh": "时钟偏斜"
+     },
+     {
+      "ref": "23",
+      "title": "Setup Timing Slack in Critical Path",
+      "zh": "关键路径的建立时间裕量"
+     },
+     {
+      "ref": "25",
+      "title": "Hold Time Analysis and Slack",
+      "zh": "保持时间分析与裕量"
+     },
+     {
+      "ref": "27",
+      "title": "Unconstrained Paths and CDC Clock Domain Crossing",
+      "zh": "未约束路径与跨时钟域"
+     },
+     {
+      "ref": "28",
+      "title": "Clock Domain Crossing (CDC) Signals",
+      "zh": "跨时钟域（CDC）信号"
+     },
+     {
+      "ref": "31",
+      "title": "Multicycle Paths",
+      "zh": "多周期路径"
+     },
+     {
+      "ref": "32",
+      "title": "False Paths",
+      "zh": "伪路径"
+     },
+     {
+      "ref": "34",
+      "title": "Dynamic Timing Analysis",
+      "zh": "动态时序分析"
+     },
+     {
+      "ref": "35",
+      "title": "Dynamic Timing Analysis using Event-Driven Simulation",
+      "zh": "基于事件驱动仿真的动态时序分析"
+     },
+     {
+      "ref": "37",
+      "title": "Dynamic vs Static Timing Analysis; Functional vs Timing Verification",
+      "zh": "动态与静态时序分析；功能验证与时序验证"
+     },
+     {
+      "ref": "39",
+      "title": "FPGA vendors role in EDA",
+      "zh": "FPGA 厂商在 EDA 中的角色"
+     }
+    ],
+    "fill": "补数字芯片的逻辑综合、放置与布线流程。"
    }
   ],
   "coverage": [
@@ -26301,6 +26322,15 @@
     "refs": [
      "A:Lecture 22"
     ]
+   },
+   {
+    "topic": "逻辑综合与布局布线",
+    "refs": [
+     "B:6",
+     "B:7",
+     "B:8"
+    ],
+    "note": ""
    }
   ],
   "omitted": "6.374 未收的讲次：L1（课程概览与设计挑战，属导论）、L10（晚间项目选题）、L11（集成 CMOS 工艺客座讲，器件工艺属 H.2.5）、L18–L20（ROM/EPROM/PLA、SRAM、DRAM 存储器设计）与 L21（电压缩放与 DC-DC 变换）——存储器与电压调节不在节点简介的七块知识点里；各讲旁边的 Tutorial on Design Tools、Quiz、Project Schedule、Presentation 等管理性条目也未收。"
@@ -32002,438 +32032,252 @@
    {
     "key": "A",
     "kind": "book",
-    "title": "Technical Communication, Global Edition (Fifteenth Edition)",
-    "by": "John M. Lannon, Laura J. Gurak",
-    "year": 2021,
-    "url": "https://www.pearson.com/en-gb/subject-catalog/p/technical-communication-global-edition/P200000004701",
+    "title": "Technical Writing Essentials",
+    "by": "Suzan Last / BCcampus",
+    "url": "https://pressbooks.bccampus.ca/technicalwriting/",
     "toc_urls": [
-     "https://www.pearson.de/media/muster/toc/toc_9781292363646.pdf"
+     "https://pressbooks.bccampus.ca/technicalwriting/"
     ],
-    "why": "技术写作课最常用的标准教材之一，出版社官方目录到“章→节→小节”三层，团队与评审、研究过程、信息评估、组织、编辑与语调、分析报告、口头汇报各有专章，正对节点的六个知识点；只抄目录，未使用任何非授权整书 PDF。"
-   },
-   {
-    "key": "B",
-    "kind": "docs",
-    "title": "Purdue OWL: Professional, Technical Writing",
-    "by": "Purdue University Online Writing Lab",
-    "year": 2026,
-    "url": "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html",
-    "toc_urls": [
-     "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html",
-     "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/technical_reports_and_report_abstracts/index.html",
-     "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/revision_in_business_writing/index.html"
-    ],
-    "why": "补“技术表达”与“审查”的动手做法：摘要的两种类型与写作步骤、修订时如何转换视角并取舍细节，都是免费、可直接打开的权威写作指南页面，教材里这两处只有原则。"
+    "why": "免费开放技术沟通教材，整合技术文档、读者分析、团队沟通、来源评价与引用。"
    }
   ],
   "outline": [
    {
     "src": "A",
     "ref": "1",
-    "title": "Introduction to Technical Communication",
-    "zh": "技术传播导论",
+    "title": "WHAT IS TECHNICAL COMMUNICATION?",
+    "zh": "技术沟通是什么",
     "items": [
      {
-      "ref": "",
-      "title": "What Is Technical Communication?",
-      "zh": "什么是技术传播"
+      "ref": "1.1",
+      "title": "KEY CONCEPT: Problem-Solving Approach to Communications Tasks",
+      "zh": "以问题解决为导向的沟通任务"
      },
      {
-      "ref": "",
-      "title": "Main Features of Technical Communication",
-      "zh": "技术传播的主要特征"
+      "ref": "1.2",
+      "title": "Conventions and Characteristics",
+      "zh": "惯例与特点"
      },
      {
-      "ref": "",
-      "title": "Purposes of Technical Communication",
-      "zh": "技术传播的目的"
+      "ref": "1.3",
+      "title": "Understanding the Rhetorical Situation",
+      "zh": "理解修辞情境"
      },
      {
-      "ref": "",
-      "title": "Preparing Effective Technical Documents",
-      "zh": "撰写有效的技术文档"
+      "ref": "1.4",
+      "title": "Case Study: The Cost of Poor Communication",
+      "zh": "案例：沟通不良的代价"
+     },
+     {
+      "ref": "1.5",
+      "title": "Writing Processes",
+      "zh": "写作过程"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "2",
+    "title": "PROFESSIONAL STYLE",
+    "zh": "专业文风",
+    "items": [
+     {
+      "ref": "2.1",
+      "title": "KEY CONCEPT: Reader-Centred Writing",
+      "zh": "以读者为中心的写作"
+     },
+     {
+      "ref": "2.2",
+      "title": "Communicating with Precision",
+      "zh": "精确表达"
+     },
+     {
+      "ref": "2.3",
+      "title": "Writing To Persuade",
+      "zh": "说服性写作"
+     },
+     {
+      "ref": "2.4",
+      "title": "The Importance of Verbs",
+      "zh": "动词的重要性"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "3",
+    "title": "DOCUMENT DESIGN",
+    "zh": "文档设计",
+    "items": [
+     {
+      "ref": "3.1",
+      "title": "KEY CONCEPT: Readability",
+      "zh": "可读性"
+     },
+     {
+      "ref": "3.2",
+      "title": "Headings",
+      "zh": "标题"
+     },
+     {
+      "ref": "3.3",
+      "title": "Lists",
+      "zh": "列表"
+     },
+     {
+      "ref": "3.4",
+      "title": "Figures and Tables",
+      "zh": "图与表"
+     },
+     {
+      "ref": "3.5",
+      "title": "Style Tips: Revising to Enhance Readability",
+      "zh": "通过修订提升可读性"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "4",
+    "title": "TEAMWORK AND COMMUNICATION",
+    "zh": "团队协作与沟通",
+    "items": [
+     {
+      "ref": "4.1",
+      "title": "Team Project Management Tools and Strategies",
+      "zh": "团队项目管理工具与策略"
+     },
+     {
+      "ref": "4.2",
+      "title": "Five Models for Understanding Team Dynamics",
+      "zh": "理解团队动态的五种模型"
+     },
+     {
+      "ref": "4.3",
+      "title": "Collaborative Writing",
+      "zh": "协作写作"
+     },
+     {
+      "ref": "4.4",
+      "title": "Managing Team Conflict",
+      "zh": "处理团队冲突"
      }
     ]
    },
    {
     "src": "A",
     "ref": "5",
-    "title": "Teamwork and Global Considerations",
-    "zh": "团队协作与全球化考量",
+    "title": "CONDUCTING RESEARCH",
+    "zh": "开展研究",
     "items": [
      {
-      "ref": "",
-      "title": "Teamwork and Project Management",
-      "zh": "团队协作与项目管理"
+      "ref": "5.1",
+      "title": "Research Terminology",
+      "zh": "研究术语"
      },
      {
-      "ref": "",
-      "title": "Teamwork: Virtual and Face to Face",
-      "zh": "虚拟团队与面对面团队"
+      "ref": "5.2",
+      "title": "Finding and Evaluating Research Sources",
+      "zh": "查找与评价研究来源"
      },
      {
-      "ref": "",
-      "title": "Identifying and Managing Conflicts in Collaborative Groups",
-      "zh": "协作群体中冲突的识别与处理"
+      "ref": "5.3",
+      "title": "Defining the Scope of your Project",
+      "zh": "界定项目范围"
      },
      {
-      "ref": "",
-      "title": "Thinking Creatively",
-      "zh": "创造性思考"
+      "ref": "5.4",
+      "title": "Human Research Ethics",
+      "zh": "涉及人的研究伦理"
      },
      {
-      "ref": "",
-      "title": "Reviewing and Editing Others' Work",
-      "zh": "评审与编辑他人文稿"
-     },
-     {
-      "ref": "",
-      "title": "Ethical Issues in Workplace Collaboration",
-      "zh": "职场协作中的伦理问题"
-     },
-     {
-      "ref": "",
-      "title": "Global Considerations When Working in Teams",
-      "zh": "团队工作中的全球化考量"
+      "ref": "5.5",
+      "title": "Engagement and Consultation",
+      "zh": "参与和咨询"
      }
     ]
    },
    {
     "src": "A",
     "ref": "6",
-    "title": "An Overview of the Technical Writing Process",
-    "zh": "技术写作过程概览",
+    "title": "CITING AND DOCUMENTING SOURCES IN IEEE STYLE",
+    "zh": "IEEE 引用与文献记录",
     "items": [
      {
-      "ref": "",
-      "title": "Critical Thinking in the Writing Process",
-      "zh": "写作过程中的批判性思考"
+      "ref": "6.1",
+      "title": "Frequently Asked Questions",
+      "zh": "常见问题"
      },
      {
-      "ref": "",
-      "title": "A Sample Writing Situation",
-      "zh": "一个写作情境示例"
-     },
-     {
-      "ref": "",
-      "title": "Planning the Document",
-      "zh": "规划文档"
-     },
-     {
-      "ref": "",
-      "title": "Drafting the Document",
-      "zh": "起草文档"
-     },
-     {
-      "ref": "",
-      "title": "Revising the Document",
-      "zh": "修订文档"
-     },
-     {
-      "ref": "",
-      "title": "Make Proofreading Your Final Step",
-      "zh": "以校对待最后的收尾步骤"
-     },
-     {
-      "ref": "",
-      "title": "Digital Technology and the Writing Process",
-      "zh": "数字技术与写作过程"
+      "ref": "6.2",
+      "title": "Setting Up A Reference List - Sample Entries",
+      "zh": "编排参考文献列表：条目示例"
      }
     ]
    },
    {
     "src": "A",
     "ref": "7",
-    "title": "Thinking Critically about the Research Process",
-    "zh": "批判性地看待研究过程",
+    "title": "COMMON DOCUMENT TYPES",
+    "zh": "常见文档类型",
     "items": [
      {
-      "ref": "",
-      "title": "Three Essential Approaches to Research",
-      "zh": "研究的三种基本途径"
+      "ref": "7.1",
+      "title": "Correspondence: Text Messages, Emails, Memos, and Letters",
+      "zh": "短信、电子邮件、备忘录与信件"
      },
      {
-      "ref": "",
-      "title": "Asking the Right Questions",
-      "zh": "提出正确的问题"
+      "ref": "7.2",
+      "title": "Proposals",
+      "zh": "提案"
      },
      {
-      "ref": "",
-      "title": "Exploring a Balance of Views",
-      "zh": "兼顾各方观点"
+      "ref": "7.3",
+      "title": "Progress Reports",
+      "zh": "进度报告"
      },
      {
-      "ref": "",
-      "title": "Evaluating and Interpreting Your Findings",
-      "zh": "评价与解释检索结果"
+      "ref": "7.4",
+      "title": "Technical Descriptions and Definitions",
+      "zh": "技术描述与定义"
      },
      {
-      "ref": "",
-      "title": "Exploring Secondary Sources",
-      "zh": "查找二手文献"
+      "ref": "7.5",
+      "title": "Long Reports - Recommendation Reports and Feasibility Studies",
+      "zh": "长报告：建议报告与可行性研究"
      },
      {
-      "ref": "",
-      "title": "Exploring Primary Sources",
-      "zh": "查找一手资料"
+      "ref": "7.6",
+      "title": "Lab Reports",
+      "zh": "实验报告"
+     },
+     {
+      "ref": "7.7",
+      "title": "Writing Instructions",
+      "zh": "编写操作说明"
      }
     ]
    },
    {
     "src": "A",
     "ref": "8",
-    "title": "Evaluating and Interpreting Information",
-    "zh": "评价与解释信息",
+    "title": "ORAL AND VISUAL PRESENTATIONS",
+    "zh": "口头与视觉展示",
     "items": [
      {
-      "ref": "",
-      "title": "Evaluate the Sources",
-      "zh": "评价信息来源"
+      "ref": "8.1",
+      "title": "Building Confidence as a Presenter",
+      "zh": "建立演讲自信"
      },
      {
-      "ref": "",
-      "title": "Evaluate the Evidence",
-      "zh": "评价证据"
+      "ref": "8.2",
+      "title": "Developing Presentation Skills",
+      "zh": "培养展示技巧"
      },
      {
-      "ref": "",
-      "title": "Interpret Your Findings",
-      "zh": "解释检索与研究发现"
-     },
-     {
-      "ref": "",
-      "title": "Avoid Distorted or Unethical Reasoning",
-      "zh": "避免扭曲或不道德的推理"
-     },
-     {
-      "ref": "",
-      "title": "Acknowledge the Limits of Research",
-      "zh": "承认研究的局限"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "10",
-    "title": "Organizing for Readers",
-    "zh": "为读者组织结构",
-    "items": [
-     {
-      "ref": "",
-      "title": "The Typical Shape of Workplace Documents",
-      "zh": "职场文档的典型结构"
-     },
-     {
-      "ref": "",
-      "title": "Outlining",
-      "zh": "列提纲"
-     },
-     {
-      "ref": "",
-      "title": "Storyboarding",
-      "zh": "故事板"
-     },
-     {
-      "ref": "",
-      "title": "Paragraphing",
-      "zh": "段落组织"
-     },
-     {
-      "ref": "",
-      "title": "Chunking",
-      "zh": "分块"
-     },
-     {
-      "ref": "",
-      "title": "Providing an Overview",
-      "zh": "提供导读"
-     },
-     {
-      "ref": "",
-      "title": "Organizing for Social Media and Global Audiences",
-      "zh": "面向社交媒体与全球读者组织内容"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "11",
-    "title": "Editing for a Professional Style and Tone",
-    "zh": "编辑出专业的文风与语调",
-    "items": [
-     {
-      "ref": "",
-      "title": "Editing for Clarity",
-      "zh": "编辑以求清晰"
-     },
-     {
-      "ref": "",
-      "title": "Editing for Conciseness",
-      "zh": "编辑以求简洁"
-     },
-     {
-      "ref": "",
-      "title": "Editing for Fluency",
-      "zh": "编辑以求流畅"
-     },
-     {
-      "ref": "",
-      "title": "Finding the Exact Words",
-      "zh": "找到准确的词"
-     },
-     {
-      "ref": "",
-      "title": "Adjusting Your Tone",
-      "zh": "调整语调"
-     },
-     {
-      "ref": "",
-      "title": "Global, Legal, and Ethical Implications of Style and Tone",
-      "zh": "文风与语调的全球化、法律与伦理影响"
-     },
-     {
-      "ref": "",
-      "title": "Digital Writing and Editing",
-      "zh": "数字化写作与编辑"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "21",
-    "title": "Formal Analytical Reports",
-    "zh": "正式分析报告",
-    "items": [
-     {
-      "ref": "",
-      "title": "Considering Audience and Purpose",
-      "zh": "考虑读者与目的"
-     },
-     {
-      "ref": "",
-      "title": "Typical Analytical Problems",
-      "zh": "典型的分析问题"
-     },
-     {
-      "ref": "",
-      "title": "Elements of an Effective Analysis",
-      "zh": "有效分析的要素"
-     },
-     {
-      "ref": "",
-      "title": "Structuring a Formal Report",
-      "zh": "正式报告的结构"
-     },
-     {
-      "ref": "",
-      "title": "Front Matter and End Matter Supplements",
-      "zh": "前置与后置材料的补充件"
-     },
-     {
-      "ref": "",
-      "title": "A Situation Requiring an Analytical Report",
-      "zh": "需要分析报告的情境"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "23",
-    "title": "Oral Presentations and Video Conferencing",
-    "zh": "口头汇报与视频会议",
-    "items": [
-     {
-      "ref": "",
-      "title": "Advantages and Drawbacks of Oral Presentations",
-      "zh": "口头汇报的利弊"
-     },
-     {
-      "ref": "",
-      "title": "Avoiding Presentation Pitfalls",
-      "zh": "避开汇报的常见陷阱"
-     },
-     {
-      "ref": "",
-      "title": "Planning Your Presentation",
-      "zh": "规划汇报"
-     },
-     {
-      "ref": "",
-      "title": "Preparing Your Presentation",
-      "zh": "准备汇报"
-     },
-     {
-      "ref": "",
-      "title": "Planning Your Visuals and Choosing a Media Format",
-      "zh": "规划视觉材料并选择媒介形式"
-     },
-     {
-      "ref": "",
-      "title": "Using PowerPoint and Other Presentation Apps",
-      "zh": "使用 PowerPoint 等演示软件"
-     },
-     {
-      "ref": "",
-      "title": "When and How to Use Handouts",
-      "zh": "何时以及如何使用讲义"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Technical Reports & Report Abstracts",
-    "zh": "技术报告与报告摘要",
-    "fill": "补“技术表达”：报告摘要的两种类型（信息性/描述性）、好摘要的标准与四步写法",
-    "items": [
-     {
-      "ref": "",
-      "title": "Types of abstracts",
-      "zh": "摘要的类型"
-     },
-     {
-      "ref": "",
-      "title": "Informational abstracts",
-      "zh": "信息性摘要"
-     },
-     {
-      "ref": "",
-      "title": "Descriptive abstracts",
-      "zh": "描述性摘要"
-     },
-     {
-      "ref": "",
-      "title": "Qualities of a good abstract",
-      "zh": "好摘要的品质"
-     },
-     {
-      "ref": "",
-      "title": "Steps for writing effective report abstracts",
-      "zh": "写好报告摘要的步骤"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Revision in Business Writing",
-    "zh": "商务写作中的修订",
-    "fill": "补“审查”：修订时以读者为中心的视角转换与细节取舍",
-    "items": [
-     {
-      "ref": "",
-      "title": "Revision Provides a Service for Your Reader",
-      "zh": "修订是为读者提供的服务"
-     },
-     {
-      "ref": "",
-      "title": "Revision Requires a Shift in Your Perspective",
-      "zh": "修订要求转换视角"
-     },
-     {
-      "ref": "",
-      "title": "Detail: Deciding What to Include",
-      "zh": "细节：决定写进哪些内容"
+      "ref": "8.3",
+      "title": "Presenting as a Team",
+      "zh": "团队展示"
      }
     ]
    }
@@ -32443,48 +32287,42 @@
     "topic": "技术表达",
     "refs": [
      "A:1",
-     "A:10",
-     "A:11",
-     "A:21",
-     "B:#1"
+     "A:2",
+     "A:7",
+     "A:8"
     ]
    },
    {
-    "topic": "审查",
+    "topic": "文档审查",
     "refs": [
-     "A:5",
-     "A:11",
-     "B:#2"
+     "A:1.5",
+     "A:3.5"
     ]
    },
    {
-    "topic": "检索",
+    "topic": "读者分析",
     "refs": [
-     "A:7"
+     "A:1.3",
+     "A:2.1"
     ]
    },
    {
-    "topic": "批判阅读",
+    "topic": "写作中的信息检索与批判阅读",
     "refs": [
-     "A:8",
-     "A:7"
-    ]
-   },
-   {
-    "topic": "研究问题",
-    "refs": [
-     "A:7"
+     "A:5.2",
+     "A:6"
     ]
    },
    {
     "topic": "团队沟通",
     "refs": [
-     "A:5",
-     "A:23"
+     "A:4",
+     "A:4.3",
+     "A:4.4"
     ]
    }
   ],
-  "omitted": "教材未收的章：第 2 章（特定读者的需求）、第 3 章（说服读者）、第 4 章（伦理议题）偏修辞与伦理，第 9 章（摘要与综述的写作）、第 12 章（视觉信息设计）、第 13 章（页面与文档设计）属体裁与版式，第 14–20 章（邮件、备忘录与信件、简历、技术定义、技术描述与规格、操作说明、非正式报告）、第 22 章（提案）、第 24–25 章（博客与网页、社交媒体）是具体体裁，第五部分的写作资源与附录未收——都超出“技术表达、审查、检索、批判阅读、研究问题、团队沟通”这条主线。OWL 只收了报告摘要与修订两篇与主线最贴合的 handout；该分区下的读者分析、职场写作两篇页面正文只有一个总标题，撑不起“章→节”而没有收录。"
+  "omitted": ""
  },
  "I.2.3": {
   "sources": [
@@ -36478,18 +36316,6 @@
      "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/"
     ],
     "why": "补函数空间与测度版本：A 只在 L2 内积空间层面谈函数空间，18.103 的 Lecture 6–7 是 Lebesgue 空间、Hilbert 空间与正交基，Lecture 11 是测度的傅里叶积分与中心极限定理——这些 A 没有。"
-   },
-   {
-    "key": "C",
-    "kind": "book",
-    "title": "A Course in Abstract Harmonic Analysis, 2nd Edition",
-    "by": "Gerald B. Folland",
-    "year": 2015,
-    "url": "https://www.routledge.com/A-Course-in-Abstract-Harmonic-Analysis/Folland/p/book/9781498727136",
-    "toc_urls": [
-     "https://www.routledge.com/A-Course-in-Abstract-Harmonic-Analysis/Folland/p/book/9781498727136"
-    ],
-    "why": "补“调和分析专题”：A 与 B 都只在欧氏空间/圆周上做傅里叶分析，Folland 的目录给出抽象调和分析的骨架（局部紧群与 Haar 测度、局部紧阿贝尔群上的对偶与傅里叶变换、紧群上的 Peter-Weyl 理论）。"
    }
   ],
   "outline": [
@@ -36611,113 +36437,6 @@
     ]
    },
    {
-    "src": "A",
-    "ref": "4",
-    "title": "Haar Wavelet Analysis",
-    "zh": "Haar 小波分析",
-    "items": [
-     {
-      "ref": "4.1",
-      "title": "Why Wavelets?",
-      "zh": "为什么用小波"
-     },
-     {
-      "ref": "4.2",
-      "title": "Haar Wavelets",
-      "zh": "Haar 小波"
-     },
-     {
-      "ref": "4.3",
-      "title": "Haar Decomposition and Reconstruction Algorithms",
-      "zh": "Haar 分解与重构算法"
-     },
-     {
-      "ref": "4.4",
-      "title": "Summary",
-      "zh": "小结"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "5",
-    "title": "Multiresolution Analysis",
-    "zh": "多分辨率分析",
-    "items": [
-     {
-      "ref": "5.1",
-      "title": "The Multiresolution Framework",
-      "zh": "多分辨率框架"
-     },
-     {
-      "ref": "5.2",
-      "title": "Implementing Decomposition and Reconstruction",
-      "zh": "分解与重构的实现"
-     },
-     {
-      "ref": "5.3",
-      "title": "Fourier Transform Criteria",
-      "zh": "傅里叶变换判据"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "6",
-    "title": "The Daubechies Wavelets",
-    "zh": "Daubechies 小波",
-    "items": [
-     {
-      "ref": "6.1",
-      "title": "Daubechies’ Construction",
-      "zh": "Daubechies 小波的构造"
-     },
-     {
-      "ref": "6.2",
-      "title": "Classification, Moments, and Smoothness",
-      "zh": "分类、矩与光滑性"
-     },
-     {
-      "ref": "6.3",
-      "title": "Computational Issues",
-      "zh": "计算问题"
-     },
-     {
-      "ref": "6.4",
-      "title": "The Scaling Function at Dyadic Points",
-      "zh": "二进点处的尺度函数"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "7",
-    "title": "Other Wavelet Topics",
-    "zh": "其他小波专题",
-    "items": [
-     {
-      "ref": "7.1",
-      "title": "Computational Complexity",
-      "zh": "计算复杂度"
-     },
-     {
-      "ref": "7.2",
-      "title": "Wavelets in Higher Dimensions",
-      "zh": "高维小波"
-     },
-     {
-      "ref": "7.3",
-      "title": "Relating Decomposition and Reconstruction",
-      "zh": "分解与重构的关系"
-     },
-     {
-      "ref": "7.4",
-      "title": "Wavelet Transform",
-      "zh": "小波变换"
-     }
-    ]
-   },
-   {
     "src": "B",
     "ref": "",
     "title": "Topics",
@@ -36738,103 +36457,6 @@
       "ref": "11",
       "title": "Fourier Integrals of Measures, Central Limit Theorem",
       "zh": "测度的傅里叶积分与中心极限定理"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "",
-    "title": "Locally Compact Groups",
-    "zh": "局部紧群",
-    "fill": "调和分析专题（抽象框架与 Haar 测度）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Topological Groups",
-      "zh": "拓扑群"
-     },
-     {
-      "ref": "",
-      "title": "Haar Measure",
-      "zh": "Haar 测度"
-     },
-     {
-      "ref": "",
-      "title": "Interlude: Some Technicalities",
-      "zh": "插曲：若干技术细节"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "",
-    "title": "Analysis on Locally Compact Abelian Groups",
-    "zh": "局部紧阿贝尔群上的分析",
-    "fill": "调和分析专题（对偶群与傅里叶变换的抽象形式）",
-    "items": [
-     {
-      "ref": "",
-      "title": "The Dual Group",
-      "zh": "对偶群"
-     },
-     {
-      "ref": "",
-      "title": "The Fourier Transform",
-      "zh": "傅里叶变换"
-     },
-     {
-      "ref": "",
-      "title": "The Pontrjagin Duality Theorem",
-      "zh": "庞特里亚金对偶定理"
-     },
-     {
-      "ref": "",
-      "title": "Representations of Locally Compact Abelian Groups",
-      "zh": "局部紧阿贝尔群的表示"
-     },
-     {
-      "ref": "",
-      "title": "Closed Ideals in L1(G)",
-      "zh": "L1(G) 中的闭理想"
-     },
-     {
-      "ref": "",
-      "title": "Spectral Synthesis",
-      "zh": "谱合成"
-     },
-     {
-      "ref": "",
-      "title": "The Bohr Compactification",
-      "zh": "Bohr 紧化"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "",
-    "title": "Analysis on Compact Groups",
-    "zh": "紧群上的分析",
-    "fill": "调和分析专题（紧群上的傅里叶分析、Peter-Weyl 定理）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Representations of Compact Groups",
-      "zh": "紧群的表示"
-     },
-     {
-      "ref": "",
-      "title": "The Peter-Weyl Theorem",
-      "zh": "Peter-Weyl 定理"
-     },
-     {
-      "ref": "",
-      "title": "Fourier Analysis on Compact Groups",
-      "zh": "紧群上的傅里叶分析"
-     },
-     {
-      "ref": "",
-      "title": "Examples",
-      "zh": "例子"
      }
     ]
    }
@@ -36860,30 +36482,15 @@
     "note": "A 第 2 章：2.1 反演定理与例子，2.2 基本性质、卷积定理、伴随与 Plancherel 定理；B 的 Lecture 11 把它推到测度的傅里叶积分与中心极限定理。"
    },
    {
-    "topic": "小波",
-    "refs": [
-     "A:4",
-     "A:4.2",
-     "A:4.3",
-     "A:5",
-     "A:5.1",
-     "A:6",
-     "A:7.2",
-     "A:7.4"
-    ],
-    "note": "A 第 4 章 Haar 小波与其分解/重构算法，第 5 章多分辨率分析（尺度关系、小波空间、双基分解重构公式），第 6 章 Daubechies 小波，7.2 高维小波、7.4 连续小波变换。"
-   },
-   {
     "topic": "频域表示",
     "refs": [
      "A:2.2",
      "A:2.4",
      "A:2.5",
      "A:3.1",
-     "A:3.2",
-     "A:7.4"
+     "A:3.2"
     ],
-    "note": "A:2.2 频域性质（卷积/伴随/Plancherel），2.4 采样定理与 2.5 不确定性原理讲时频域的对偶限制，第 3 章 DFT/FFT 与离散信号（Z 变换、传递函数），7.4 小波变换是另一种时频表示。"
+    "note": "傅里叶变换的卷积与 Plancherel 性质，离散傅里叶变换及频域计算。"
    },
    {
     "topic": "函数空间",
@@ -36895,15 +36502,6 @@
      "B:7"
     ],
     "note": "A 第 0 章铺内积空间、L2/l2、正交投影与 Gram–Schmidt；B 的 Lecture 6–7 把它换成 Lebesgue 空间与 Hilbert 空间的正交基，是傅里叶级数收敛的严格框架。"
-   },
-   {
-    "topic": "调和分析专题",
-    "refs": [
-     "C:#1",
-     "C:#2",
-     "C:#3"
-    ],
-    "note": "C:#1 局部紧群与 Haar 测度，C:#2 局部紧阿贝尔群上的对偶群、傅里叶变换与 Pontrjagin 对偶，C:#3 紧群上的 Peter-Weyl 理论；诱导表示、Mackey 机、Plancherel 定理等在 C 的第 6–7 章，本节点未收。"
    }
   ],
   "omitted": "A 的第 0.7 节（Least Squares and Linear Predictive Coding，最小二乘与线性预测编码）、2.3 已收但 1.1/2.1 等纯导言类小节只保留在分支里；A 的 Appendix A–C（技术性证明、习题答案、MATLAB 例程）与各章 Exercises 未收。B（18.103）的 Lecture 1–5（掷硬币与大数定律、测度论、可测函数与 Lebesgue 积分、收敛定理、Fubini 定理）属测度论基础，Lecture 8–10（傅里叶级数及其收敛、应用、傅里叶积分）与 Lecture 12–13（布朗运动）已由 A 的对应章覆盖或超出简介，均未收。C（Folland）的 Banach 代数与谱理论、Basic Representation Theory、Induced Representations、Further Topics in Representation Theory 与 Appendices 未收。"
@@ -40289,19 +39887,6 @@
      "https://www.cs.umd.edu/class/fall2023/cmsc754/lectures.html"
     ],
     "why": "节点现有英文资源：UMD 计算几何研究生课，逐讲给出具体主题（凸包、线段求交、多边形三角剖分、半平面交与点线对偶、线性规划、梯形图与点定位、Voronoi 图与 Delaunay 三角剖分、直线排列、范围搜索与 kd 树、WSPD、coreset、VC 维、运动规划），覆盖节点的凸包、空间划分与几何算法。"
-   },
-   {
-    "key": "B",
-    "kind": "book",
-    "title": "Polygon Mesh Processing",
-    "by": "Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, Bruno Levy",
-    "year": 2010,
-    "url": "https://www.pmp-book.org/",
-    "toc_urls": [
-     "https://www.pmp-book.org/",
-     "https://www.routledge.com/Polygon-Mesh-Processing/Botsch-Kobbelt-Pauly-Alliez-Levy/p/book/9781568814261"
-    ],
-    "why": "几何处理的标准教材（A K Peters/CRC Press，作者维护的官方站点 pmp-book.org 与出版社 Routledge 页面），覆盖节点的网格与曲面处理：曲面表示、网格数据结构、离散微分几何、光滑化、参数化、重网格化、简化、模型修复、形变；本书目录里章没有编号，节标题来自出版社页面的 Table of Contents。"
    }
   ],
   "outline": [
@@ -40412,297 +39997,6 @@
       "zh": "运动规划"
      }
     ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Surface Representations",
-    "zh": "曲面表示",
-    "fill": "曲面处理（曲面的数学表示与逼近能力）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Surface Definition and Properties",
-      "zh": "曲面的定义与性质"
-     },
-     {
-      "ref": "",
-      "title": "Approximation Power",
-      "zh": "逼近能力"
-     },
-     {
-      "ref": "",
-      "title": "Parametric Surface Representations",
-      "zh": "参数曲面表示"
-     },
-     {
-      "ref": "",
-      "title": "Implicit Surface Representations",
-      "zh": "隐式曲面表示"
-     },
-     {
-      "ref": "",
-      "title": "Conversion Methods",
-      "zh": "转换方法"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Mesh Data Structures",
-    "zh": "网格数据结构",
-    "fill": "网格（网格的数据结构）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Face-Based Data Structures",
-      "zh": "基于面的数据结构"
-     },
-     {
-      "ref": "",
-      "title": "Edge-Based Data Structures",
-      "zh": "基于边的数据结构"
-     },
-     {
-      "ref": "",
-      "title": "Halfedge-Based Data Structure",
-      "zh": "半边数据结构"
-     },
-     {
-      "ref": "",
-      "title": "Directed-Edge Data Structure",
-      "zh": "有向边数据结构"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Differential Geometry",
-    "zh": "微分几何",
-    "fill": "曲面处理（曲率、梯度、散度等离散量的数学基础）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Curves",
-      "zh": "曲线"
-     },
-     {
-      "ref": "",
-      "title": "Surfaces",
-      "zh": "曲面"
-     },
-     {
-      "ref": "",
-      "title": "Discrete Differential Operators",
-      "zh": "离散微分算子"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Smoothing",
-    "zh": "光滑化",
-    "fill": "曲面处理（去噪与光顺）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Fourier Transform and Manifold Harmonics",
-      "zh": "傅里叶变换与流形谐波"
-     },
-     {
-      "ref": "",
-      "title": "Diffusion Flow",
-      "zh": "扩散流"
-     },
-     {
-      "ref": "",
-      "title": "Fairing",
-      "zh": "光顺"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Parameterization",
-    "zh": "参数化",
-    "fill": "曲面处理（网格参数化与纹理映射）",
-    "items": [
-     {
-      "ref": "",
-      "title": "General Goals",
-      "zh": "总体目标"
-     },
-     {
-      "ref": "",
-      "title": "Parameterization of a Triangulated Surface",
-      "zh": "三角曲面的参数化"
-     },
-     {
-      "ref": "",
-      "title": "Barycentric Mapping",
-      "zh": "重心映射"
-     },
-     {
-      "ref": "",
-      "title": "Conformal Mapping",
-      "zh": "共形映射"
-     },
-     {
-      "ref": "",
-      "title": "Methods Based on Distortion Analysis",
-      "zh": "基于畸变分析的方法"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Remeshing",
-    "zh": "重网格化",
-    "fill": "网格（重建与各向同性/各向异性重网格化）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Local Structure",
-      "zh": "局部结构"
-     },
-     {
-      "ref": "",
-      "title": "Global Structure",
-      "zh": "全局结构"
-     },
-     {
-      "ref": "",
-      "title": "Correspondences",
-      "zh": "对应关系"
-     },
-     {
-      "ref": "",
-      "title": "Voronoi Diagrams and Delaunay Triangulations",
-      "zh": "Voronoi 图与 Delaunay 三角剖分"
-     },
-     {
-      "ref": "",
-      "title": "Triangle-Based Remeshing",
-      "zh": "基于三角形的重网格化"
-     },
-     {
-      "ref": "",
-      "title": "Quad-dominant Remeshing",
-      "zh": "以四边形为主的重网格化"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Simplification & Approximation",
-    "zh": "简化与逼近",
-    "fill": "网格（网格简化与逼近误差）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Vertex Clustering",
-      "zh": "顶点聚类"
-     },
-     {
-      "ref": "",
-      "title": "Incremental Decimation",
-      "zh": "增量式简化"
-     },
-     {
-      "ref": "",
-      "title": "Shape Approximation",
-      "zh": "形状逼近"
-     },
-     {
-      "ref": "",
-      "title": "Out-of-Core Methods",
-      "zh": "外存方法"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Model Repair",
-    "zh": "模型修复",
-    "fill": "网格（破损网格的修复）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Types of Artifacts: The \"Freak Show\"",
-      "zh": "瑕疵类型：“畸形秀”"
-     },
-     {
-      "ref": "",
-      "title": "Types of Repair Algorithms",
-      "zh": "修复算法的类型"
-     },
-     {
-      "ref": "",
-      "title": "Types of Input",
-      "zh": "输入类型"
-     },
-     {
-      "ref": "",
-      "title": "Surface-Oriented Algorithms",
-      "zh": "面向曲面的算法"
-     },
-     {
-      "ref": "",
-      "title": "Volumetric Repair Algorithms",
-      "zh": "体修复算法"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Deformation",
-    "zh": "形变",
-    "fill": "曲面处理（网格形变与编辑）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Transformation Propagation",
-      "zh": "变换传播"
-     },
-     {
-      "ref": "",
-      "title": "Shell-Based Deformation",
-      "zh": "基于壳的形变"
-     },
-     {
-      "ref": "",
-      "title": "Multi-Scale Deformation",
-      "zh": "多尺度形变"
-     },
-     {
-      "ref": "",
-      "title": "Differential Coordinates",
-      "zh": "微分坐标"
-     },
-     {
-      "ref": "",
-      "title": "Freeform Deformation",
-      "zh": "自由形变"
-     },
-     {
-      "ref": "",
-      "title": "Radial Basis Functions",
-      "zh": "径向基函数"
-     },
-     {
-      "ref": "",
-      "title": "Limitations of Linear Methods",
-      "zh": "线性方法的局限"
-     }
-    ]
    }
   ],
   "coverage": [
@@ -40730,29 +40024,6 @@
     "note": "梯形图与点定位（08–09）、直线排列（13）、kd 树与正交范围树（14–15）、良分离点对分解（16–17）都是空间划分结构；Delaunay 三角剖分（11–12）本身也是网格化的空间划分。"
    },
    {
-    "topic": "网格",
-    "refs": [
-     "A:05",
-     "A:10",
-     "B:#2",
-     "B:#6",
-     "B:#7",
-     "B:#8"
-    ],
-    "note": "A 侧是多边形三角剖分（05）与 Voronoi/Delaunay 网格（10–12）；B 侧是网格数据结构（B:#2）、重网格化（B:#6）、简化与逼近（B:#7）、模型修复（B:#8）。"
-   },
-   {
-    "topic": "曲面处理",
-    "refs": [
-     "B:#1",
-     "B:#3",
-     "B:#4",
-     "B:#5",
-     "B:#9"
-    ],
-    "note": "B:#1 曲面表示与逼近能力，B:#3 离散微分几何（曲线、曲面、离散微分算子），B:#4 光滑化/光顺，B:#5 参数化，B:#9 形变。"
-   },
-   {
     "topic": "几何算法",
     "refs": [
      "A:04",
@@ -40763,6 +40034,15 @@
      "A:20"
     ],
     "note": "线段求交（04）、半平面交与对偶（06）、线性规划（07）、coreset 与核（18）、采样与 VC 维（19）、运动规划（20）。"
+   },
+   {
+    "topic": "Voronoi 与 Delaunay 结构",
+    "refs": [
+     "A:10",
+     "A:11",
+     "A:12"
+    ],
+    "note": "离散几何结构与构造算法，区别于曲面光顺/参数化的几何处理。"
    }
   ],
   "omitted": "A（CMSC 754）日历里的 Review/Midterm Exam、Thanksgiving break 等没有讲号的条目未收。B（Polygon Mesh Processing）的每章末尾 “Summary and Further Reading”、附录 A（Numerics，讲线性求解器等数值基础）、Preface、Bibliography、Index 未收。"
@@ -40771,208 +40051,195 @@
   "sources": [
    {
     "key": "A",
-    "kind": "book",
-    "title": "Elementary Applied Topology",
-    "by": "Robert Ghrist",
-    "year": 2014,
-    "url": "https://www2.math.upenn.edu/~ghrist/notes.html",
+    "kind": "notes",
+    "title": "Introduction to Topological Data Analysis — Lecture Notes FS 2026",
+    "by": "Patrick Schnider, Lucas Slot, Simon Weber / ETH Zürich",
+    "year": 2026,
+    "url": "https://ti.inf.ethz.ch/ew/courses/TDA26/Script.pdf",
     "toc_urls": [
-     "https://www2.math.upenn.edu/~ghrist/notes.html"
+     "https://ti.inf.ethz.ch/ew/courses/TDA26/Script.pdf"
     ],
-    "why": "节点现有英文资源，作者主页逐章给出全书章节表；从流形、复形、同调到序列（条形码/持续同调）正是 TDA 的主干。"
-   },
-   {
-    "key": "B",
-    "kind": "book",
-    "title": "Algebraic Foundations for Applied Topology and Data Analysis",
-    "by": "Hal Schenck (Auburn University)",
-    "url": "http://webhome.auburn.edu/~hks0015/AuburnTDA.html",
-    "toc_urls": [
-     "http://webhome.auburn.edu/~hks0015/data2.pdf"
-    ],
-    "why": "补“持续同调”的代数基础与细节：单纯复形/Čech-Rips 复形、PID 上的模与结构定理、单参数持续同调（条形码、稳定性）、多参数持续同调；EAT 的章级目录给不到这个颗粒度。"
+    "why": "ETH 14 周课程配套完整讲义，明确只需线性代数；与拓扑数据分析、持续性和稳定性直接对应。"
    }
   ],
   "outline": [
    {
     "src": "A",
-    "ref": "1",
-    "title": "Manifolds",
-    "zh": "流形",
-    "items": []
-   },
-   {
-    "src": "A",
     "ref": "2",
-    "title": "Complexes",
-    "zh": "复形",
-    "items": []
+    "title": "Mathematical Foundations",
+    "zh": "数学基础",
+    "items": [
+     {
+      "ref": "2.1",
+      "title": "Topological Spaces",
+      "zh": "拓扑空间"
+     },
+     {
+      "ref": "2.2",
+      "title": "Metric Spaces",
+      "zh": "度量空间"
+     },
+     {
+      "ref": "2.3",
+      "title": "Maps Between Topological Spaces",
+      "zh": "拓扑空间之间的映射"
+     },
+     {
+      "ref": "2.4",
+      "title": "Algebra",
+      "zh": "代数"
+     }
+    ]
    },
    {
     "src": "A",
     "ref": "3",
-    "title": "Euler Characteristic",
-    "zh": "Euler 示性数",
-    "items": []
+    "title": "Homology",
+    "zh": "同调",
+    "items": [
+     {
+      "ref": "3.1",
+      "title": "Simplicial Complexes",
+      "zh": "单纯复形"
+     },
+     {
+      "ref": "3.2",
+      "title": "Homology",
+      "zh": "同调"
+     }
+    ]
    },
    {
     "src": "A",
     "ref": "4",
-    "title": "Homology",
-    "zh": "同调",
-    "items": []
+    "title": "Persistence",
+    "zh": "持续结构",
+    "items": [
+     {
+      "ref": "4.1",
+      "title": "Filtrations",
+      "zh": "过滤"
+     },
+     {
+      "ref": "4.2",
+      "title": "Persistent Homology",
+      "zh": "持续同调"
+     },
+     {
+      "ref": "4.3",
+      "title": "Algorithms for Persistent Homology",
+      "zh": "持续同调算法"
+     }
+    ]
    },
    {
     "src": "A",
     "ref": "5",
-    "title": "Sequences",
-    "zh": "序列",
-    "items": []
+    "title": "Simplicial Complexes on Point Clouds",
+    "zh": "点云上的单纯复形",
+    "items": [
+     {
+      "ref": "5.1",
+      "title": "Čech and Vietoris-Rips complexes",
+      "zh": "Čech 与 Rips 复形"
+     },
+     {
+      "ref": "5.2",
+      "title": "Delaunay and Alpha complexes",
+      "zh": "Delaunay 与 Alpha 复形"
+     },
+     {
+      "ref": "5.3",
+      "title": "Subsample Complexes",
+      "zh": "子采样复形"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "6",
+    "title": "Distances and Stability",
+    "zh": "距离与稳定性",
+    "items": [
+     {
+      "ref": "6.1",
+      "title": "Distance Metrics on Persistence Diagrams",
+      "zh": "持续图上的距离"
+     },
+     {
+      "ref": "6.2",
+      "title": "Interleaving of Persistence Modules",
+      "zh": "持续模的交错"
+     },
+     {
+      "ref": "6.3",
+      "title": "Interval Decomposition of Persistence Modules",
+      "zh": "持续模的区间分解"
+     }
+    ]
    },
    {
     "src": "A",
     "ref": "7",
-    "title": "Morse Theory",
-    "zh": "Morse 理论",
-    "items": []
-   },
-   {
-    "src": "B",
-    "ref": "4",
-    "title": "Homology I: Simplicial Complexes to Sensor Networks",
-    "zh": "同调 I：从单纯复形到传感器网络",
-    "fill": "补的是“几何结构与数据表征”：把点云/覆盖变成单纯复形（神经、Čech 与 Rips 复形）再算同调",
-    "items": [
-     {
-      "ref": "4.1",
-      "title": "Simplicial Complexes, Nerve of a Cover",
-      "zh": "单纯复形与覆盖的神经"
-     },
-     {
-      "ref": "4.2",
-      "title": "Simplicial and Singular Homology",
-      "zh": "单纯同调与奇异同调"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "6",
-    "title": "Persistent Algebra: Modules over a PID",
-    "zh": "持续同调的代数：主理想整环上的模",
-    "fill": "补的是“持续同调”的代数基础：PID 上模的结构定理如何给出持续同调的分类",
-    "items": [
-     {
-      "ref": "6.1",
-      "title": "Principal Ideal Domains and Euclidean Domains",
-      "zh": "主理想整环与欧几里得整环"
-     },
-     {
-      "ref": "6.2",
-      "title": "Rational Canonical Form of a Matrix",
-      "zh": "矩阵的有理标准形"
-     },
-     {
-      "ref": "6.4",
-      "title": "Structure of Abelian Groups and Persistent Homology",
-      "zh": "Abel 群的结构定理与持续同调"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "7",
-    "title": "Persistent Homology",
-    "zh": "持续同调",
-    "fill": "补的是“持续同调”的主体内容：条形码与持续图、Morse 理论、稳定性定理",
+    "title": "Reeb Graphs and Mapper",
+    "zh": "Reeb 图与 Mapper",
     "items": [
      {
       "ref": "7.1",
-      "title": "Barcodes, Persistence Diagrams, Bottleneck Distance",
-      "zh": "条形码、持续图与瓶颈距离"
+      "title": "Reeb Graphs",
+      "zh": "Reeb 图"
      },
      {
       "ref": "7.2",
-      "title": "Morse Theory",
-      "zh": "Morse 理论"
+      "title": "Distances for Reeb Graphs",
+      "zh": "Reeb 图的距离"
      },
      {
       "ref": "7.3",
-      "title": "The Stability Theorem",
-      "zh": "稳定性定理"
+      "title": "Mapper",
+      "zh": "Mapper"
      },
      {
       "ref": "7.4",
-      "title": "Interleaving and Categories",
-      "zh": "交错与范畴"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "8",
-    "title": "Multiparameter Persistent Homology",
-    "zh": "多参数持续同调",
-    "fill": "补的是“持续同调”的进阶方向：多参数滤过下的持续同调与分次模",
-    "items": [
-     {
-      "ref": "8.1",
-      "title": "Definition and Examples",
-      "zh": "定义与例子"
-     },
-     {
-      "ref": "8.2",
-      "title": "Graded algebra, Hilbert function, series, polynomial",
-      "zh": "分次代数、Hilbert 函数、Hilbert 级数与多项式"
-     },
-     {
-      "ref": "8.3",
-      "title": "Associated Primes and Zn-graded modules",
-      "zh": "伴随素理想与 Z^n-分次模"
-     },
-     {
-      "ref": "8.4",
-      "title": "Filtrations and Ext",
-      "zh": "滤过与 Ext"
+      "title": "Multiscale Mapper",
+      "zh": "多尺度 Mapper"
      }
     ]
    }
   ],
   "coverage": [
    {
-    "topic": "持续同调",
+    "topic": "单纯复形与同调",
     "refs": [
-     "A:5",
-     "B:7",
-     "B:7.1",
-     "B:7.3",
-     "B:8"
-    ],
-    "note": "EAT 只有章级目录，persistent homology 与 barcodes 属于第 5 章 Sequences；小节级细节见 B 第 7、8 章。"
-   },
-   {
-    "topic": "流形方法",
-    "refs": [
-     "A:1"
-    ],
-    "note": "EAT 第 1 章 Manifolds 讲流形作为数据分析的对象；流形本身的严格理论属于 M.4.2 微分几何节点，这里不重复。"
-   },
-   {
-    "topic": "几何结构与数据表征",
-    "refs": [
-     "A:2",
-     "A:4",
-     "B:4",
-     "B:4.1"
+     "A:3.1",
+     "A:3.2"
     ]
    },
    {
-    "topic": "与AI共享应用",
-    "refs": [],
-    "note": "这是节点定位（TDA 与机器学习/AI 共享应用场景）的说明，不是独立知识点，两份来源都没有对应章节。"
+    "topic": "持续同调与条形码",
+    "refs": [
+     "A:4.2",
+     "A:4.3"
+    ]
+   },
+   {
+    "topic": "点云的多尺度拓扑结构",
+    "refs": [
+     "A:5.1",
+     "A:5.2",
+     "A:7"
+    ]
+   },
+   {
+    "topic": "拓扑摘要的稳定性",
+    "refs": [
+     "A:6.1",
+     "A:6.2",
+     "A:6.3"
+    ]
    }
   ],
-  "omitted": "EAT 只收了 1、2、3、4、5、7 章：第 6 章 Cohomology、第 8 章 Homotopy 属于同调之后的进阶工具，第 9 章 Sheaves、第 10 章 Categorification 更偏范畴化，均未直接对应节点简介的知识点；B 只收了 4、6、7、8 章，第 1–3 章（线性代数、环与模、拓扑与层）是背景，第 5 章（上同调与排序问题）、第 9 章（导出函子与谱序列）与附录（软件包）超出节点范围。"
+  "omitted": ""
  },
  "M.5.1": {
   "sources": [
@@ -49386,18 +48653,6 @@
      "https://web.stanford.edu/~jacksonm/mechtheo.pdf"
     ],
     "why": "补“机制设计”：ECON 159 只有最后一讲讲拍卖，没有揭示原理、Gibbard-Satterthwaite、Groves 机制等机制设计主干；这是作者主页公开的 EOLSS 综述，章节结构完整。"
-   },
-   {
-    "key": "C",
-    "kind": "notes",
-    "title": "Decision Theory",
-    "by": "Stanford Encyclopedia of Philosophy",
-    "year": 2023,
-    "url": "https://plato.stanford.edu/entries/decision-theory/",
-    "toc_urls": [
-     "https://plato.stanford.edu/entries/decision-theory/"
-    ],
-    "why": "补“效用”与决策论意义上的“序贯决策”：ECON 159 只把效用当作博弈的支付，不讲期望效用表示定理、Savage/Jeffrey 决策理论与风险态度；SEP 条目由斯坦福维护，小节结构清晰。"
    }
   ],
   "outline": [
@@ -50258,68 +49513,6 @@
     "zh": "实施",
     "fill": "机制设计（机制实施理论）",
     "items": []
-   },
-   {
-    "src": "C",
-    "ref": "2",
-    "title": "Utility measures of preference",
-    "zh": "偏好的效用度量",
-    "fill": "效用（序数效用、基数效用与 vNM 期望效用表示定理）",
-    "items": [
-     {
-      "ref": "2.1",
-      "title": "Ordinal utilities",
-      "zh": "序数效用"
-     },
-     {
-      "ref": "2.2",
-      "title": "Cardinalizing utility",
-      "zh": "效用的基数化"
-     },
-     {
-      "ref": "2.3",
-      "title": "The von Neumann and Morgenstern (vNM) representation theorem",
-      "zh": "von Neumann-Morgenstern（vNM）表示定理"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "3",
-    "title": "Making real decisions",
-    "zh": "做实际决策",
-    "fill": "效用与不确定下的决策（Savage、Jeffrey 决策理论）",
-    "items": [
-     {
-      "ref": "3.1",
-      "title": "Savage's theory",
-      "zh": "Savage 理论"
-     },
-     {
-      "ref": "3.2",
-      "title": "Jeffrey's theory",
-      "zh": "Jeffrey 理论"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "6",
-    "title": "Sequential decisions",
-    "zh": "序贯决策",
-    "fill": "序贯决策（决策论视角：跨期偏好与 EU 公理）",
-    "items": [
-     {
-      "ref": "6.1",
-      "title": "Was Ulysses rational?",
-      "zh": "奥德修斯是理性的吗？"
-     },
-     {
-      "ref": "6.2",
-      "title": "The EU axioms revisited",
-      "zh": "重新审视期望效用公理"
-     }
-    ]
    }
   ],
   "coverage": [
@@ -50327,61 +49520,38 @@
     "topic": "均衡",
     "refs": [
      "A:Lecture 5",
-     "A:Lecture 6",
-     "A:Lecture 7",
-     "A:Lecture 8",
      "A:Lecture 9",
-     "A:Lecture 10",
-     "A:Lecture 18",
      "A:Lecture 19"
-    ],
-    "note": "L5 给 Nash 均衡的定义与与优势策略的关系，L6–L8 给 Cournot/Bertrand/选址等应用，L9–L10 给混合策略均衡（含三种解释），L18–L19 给子博弈完美均衡。"
+    ]
    },
    {
-    "topic": "机制设计",
+    "topic": "机制设计入门",
     "refs": [
-     "B:#1",
-     "B:#2",
-     "B:#3",
      "A:Lecture 13",
-     "A:Lecture 24"
+     "A:Lecture 24",
+     "B:3.1",
+     "B:3.6"
     ],
-    "note": "B 的第 3、4 节是占优策略与 Bayes 机制设计的主干，第 5 节讲实施；A 的 L13“激励设计”是激励问题的直觉版，L24 讲拍卖（赢者诅咒、收益比较）。"
+    "note": "先掌握激励与二价拍卖；完整实施理论为 D4 选读。"
    },
    {
-    "topic": "效用",
+    "topic": "博弈中的效用与逆向归纳",
     "refs": [
-     "C:#1",
-     "C:#2",
      "A:Lecture 1",
-     "A:Lecture 4"
-    ],
-    "note": "C 的第 2 章讲序数/基数效用与 vNM 表示定理，第 3 章讲 Savage 与 Jeffrey 决策理论；A 的 L1 把支付当效用用，L4 讲外部性下的支付结构。"
-   },
-   {
-    "topic": "序贯决策",
-    "refs": [
+     "A:Lecture 4",
      "A:Lecture 13",
      "A:Lecture 14",
-     "A:Lecture 15",
-     "A:Lecture 16",
-     "A:Lecture 17",
-     "A:Lecture 18",
-     "C:#3"
-    ],
-    "note": "博弈侧的序贯决策是逆向归纳（L13–L18：承诺、Stackelberg、Zermelo、声誉与决斗、最后通牒与讨价还价、不完全信息），决策论侧的序贯决策（跨期偏好、EU 公理）在 C 第 6 章。"
+     "A:Lecture 15"
+    ]
    },
    {
-    "topic": "多主体相互作用",
+    "topic": "重复与不完全信息博弈",
     "refs": [
-     "A:Lecture 1",
-     "A:Lecture 3",
-     "A:Lecture 11",
-     "A:Lecture 12",
      "A:Lecture 21",
-     "A:Lecture 22"
-    ],
-    "note": "博弈论整门课都是多主体相互作用；L1 给五个入门教训，L3 讲迭代剔除与公共知识，L11–L12 讲演化稳定（大群体），L21–L22 讲重复互动下的合作与惩罚。"
+     "A:Lecture 22",
+     "A:Lecture 23",
+     "A:Lecture 24"
+    ]
    }
   ],
   "omitted": "ECON 159 不收每讲的行政与回顾性分章（L1 的“(Administrative Issues)”与“Lesson Recap”）以及两次考试（Midterm/Final）与作业；B（Jackson 综述）只收第 3–5 节，第 1–2 节（导论与一般机制设计设定）与 3.8–3.10、4.6–4.7 的专门小节（大数近似效率、Groves 机制缺乏个体理性、低效决策、相关类型、相互依赖估值）以及 Bibliography/Glossary 未收；C（SEP 条目）只收效用、实际决策与序贯决策三章，第 1 章（偏好与前景）、第 4 章（EU 的更广意义）、第 5 章（对 EU 的挑战：风险与后悔、完备性、灾难性风险、无意识）与第 7 章结论未收。"
@@ -61795,7 +60965,8 @@
      "https://textbook.cs161.org/network/dos.html",
      "https://textbook.cs161.org/network/firewalls.html",
      "https://textbook.cs161.org/network/intrusion-detection.html",
-     "https://textbook.cs161.org/network/abusing-intrusion-detection.html"
+     "https://textbook.cs161.org/network/abusing-intrusion-detection.html",
+     "https://textbook.cs161.org/network/wpa.html"
     ],
     "why": "这本书的网络部分按协议逐章组织，每章固定“背景—协议—攻击—防护”四段（如 ARP、DHCP、BGP、TCP/UDP、DNS、DNSSEC 均有 Attack/Defenses 小节），正好对上节点要的协议攻击面、防火墙、入侵检测与传输保护，且是节点先修证据里的 UC Berkeley CS 161 官方教材。"
    }
@@ -62220,6 +61391,40 @@
     "title": "Abusing Intrusion Detection",
     "zh": "入侵检测的滥用",
     "items": []
+   },
+   {
+    "src": "A",
+    "ref": "28",
+    "title": "WPA",
+    "zh": "WPA 无线安全",
+    "fill": "无线协议与无线威胁模型：OWASP MAS 只覆盖移动应用与平台，没有无线链路这一层",
+    "items": [
+     {
+      "ref": "28.1",
+      "title": "Cheat sheet",
+      "zh": "速查表"
+     },
+     {
+      "ref": "28.2",
+      "title": "Networking background: WiFi",
+      "zh": "网络背景：WiFi"
+     },
+     {
+      "ref": "28.3",
+      "title": "Protocol",
+      "zh": "协议"
+     },
+     {
+      "ref": "28.4",
+      "title": "Attacks",
+      "zh": "攻击"
+     },
+     {
+      "ref": "28.5",
+      "title": "Defenses: WPA2-Enterprise",
+      "zh": "防护：WPA2-Enterprise"
+     }
+    ]
    }
   ],
   "coverage": [
@@ -62285,6 +61490,13 @@
      "A:37"
     ],
     "note": "网络监测在教材里落在 36.2 NIDS（线上流量检测）与 36.4 Logging（日志），第 37 章讲大规模监听（NSA 式的 NIDS＋数据库）及其法律边界。"
+   },
+   {
+    "topic": "无线链路安全",
+    "refs": [
+     "A:28"
+    ],
+    "note": "无线协议链路层安全，与移动应用自身的沙箱/权限安全区分。"
    }
   ],
   "omitted": "只收 CS161 网络部分的第 25–27、29–37 章。未收：28 WPA（属无线安全 S.2.3）、38 Malware（恶意软件不在节点简介的知识点内）、39 Anonymity and Tor（匿名通信属隐私专题）；书的内存安全、密码学、Web 安全各章属其它节点。节点“现有英文学习资源”Stanford CS155 的 syllabus 只到讲级（L12 HTTPS、L14 Internet Protocols、L15 Internet Security、L16 DoS Attacks and Network Defenses），没有节级目录，故未作为主来源。"
@@ -62302,18 +61514,6 @@
      "https://mas.owasp.org/"
     ],
     "why": "节点现有英文资源就是这套标准；站点目录把 MASVS 的 8 组控制要求、MASTG 的通用概念与 Android/iOS 两条平台测试线逐条列出，正好对上移动平台、移动应用与设备身份这几块，且是事实上的行业标准。"
-   },
-   {
-    "key": "B",
-    "kind": "book",
-    "title": "Computer Security (CS 161 online textbook)",
-    "by": "David Wagner, Nicholas Weaver, Peyrin Kao, Fuzail Shakir, Andrew Law, Nicholas Ngai (UC Berkeley)",
-    "year": 2024,
-    "url": "https://textbook.cs161.org/",
-    "toc_urls": [
-     "https://textbook.cs161.org/network/wpa.html"
-    ],
-    "why": "补无线这一半：OWASP MAS 只讲移动应用层，没有无线协议；CS161 第 28 章 WPA 按“WiFi 背景—协议—攻击—防护”讲无线链路的威胁模型与 WPA2-Enterprise 防护。"
    }
   ],
   "outline": [
@@ -62518,53 +61718,9 @@
       "zh": "iOS 反逆向防护"
      }
     ]
-   },
-   {
-    "src": "B",
-    "ref": "28",
-    "title": "WPA",
-    "zh": "WPA 无线安全",
-    "fill": "无线协议与无线威胁模型：OWASP MAS 只覆盖移动应用与平台，没有无线链路这一层",
-    "items": [
-     {
-      "ref": "28.1",
-      "title": "Cheat sheet",
-      "zh": "速查表"
-     },
-     {
-      "ref": "28.2",
-      "title": "Networking background: WiFi",
-      "zh": "网络背景：WiFi"
-     },
-     {
-      "ref": "28.3",
-      "title": "Protocol",
-      "zh": "协议"
-     },
-     {
-      "ref": "28.4",
-      "title": "Attacks",
-      "zh": "攻击"
-     },
-     {
-      "ref": "28.5",
-      "title": "Defenses: WPA2-Enterprise",
-      "zh": "防护：WPA2-Enterprise"
-     }
-    ]
    }
   ],
   "coverage": [
-   {
-    "topic": "无线协议",
-    "refs": [
-     "B:28",
-     "B:28.2",
-     "B:28.3",
-     "B:28.5"
-    ],
-    "note": "B 第 28 章从 802.11 背景与 WPA/WPA2 握手讲到 WPA2-Enterprise（802.1X、EAP）；蜂窝网与蓝牙不在两个来源里。"
-   },
    {
     "topic": "移动平台",
     "refs": [
@@ -62591,14 +61747,6 @@
      "A:#4"
     ],
     "note": "A:MASVS 是 8 组控制要求（存储、密码、认证、网络、平台、代码、抗逆向、隐私），A:#2 是通用概念（应用分类、测试方法、篡改与逆向、认证架构），A:#3、A:#4 是 Android/iOS 两侧的测试领域。"
-   },
-   {
-    "topic": "无线威胁模型",
-    "refs": [
-     "B:28.4",
-     "B:28.1"
-    ],
-    "note": "B 的 28.4 Attacks 按对手能力列无线攻击（嗅探、伪造 AP、deauth、KRACK 一类握手攻击），28.1 速查表把威胁与防护压成一张表；A 侧没有无线内容。"
    }
   ],
   "omitted": "A（mas.owasp.org）的目录很大，我只收了 4 组：MASVS 的 8 个控制族、MASTG 的 General Concepts、Android Security Testing、iOS Security Testing。未收 MASWE 的一百多条弱点条目（它们挂在 MASVS 各控制族下，属细目）、MASTG 的 Best Practices（MASTG-BEST-0001…0074）、Knowledge（MASTG-KNOW-…，按 Android/iOS 技术点罗列）、MAS Profiles、MAS Crackmes、Tools、News/Talks 等，避免导览图变成清单。B 只收第 28 章 WPA，CS161 的其它网络章属 S.2.2。"
@@ -73075,30 +72223,6 @@
      "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/pages/lecture-notes/"
     ],
     "why": "节点“现有英文学习资源”就是这门 MIT 本科课：课表逐讲列出 26 个专题，并标明每讲属于 Math（线代、概率、随机过程、时间序列、投资组合、因子模型、伊藤微积分、随机微分方程）还是 Applications（VAR 模型、正则化定价与风险模型、大宗商品、组合管理、Black-Scholes 与风险中性定价、外汇执行、信用对冲、HJM、交易对手信用风险），正对节点的“量化建模”与“风控”。"
-   },
-   {
-    "key": "B",
-    "kind": "docs",
-    "title": "Principles for Financial Market Infrastructures",
-    "by": "Committee on Payments and Market Infrastructures (CPMI) and IOSCO",
-    "year": 2012,
-    "url": "https://www.bis.org/publications/principles-financial-market-infrastructures",
-    "toc_urls": [
-     "https://www.bis.org/publications/principles-financial-market-infrastructures.pdf"
-    ],
-    "why": "补“支付与金融系统”：国际清算银行 CPMI 与 IOSCO 发布的支付、清算与结算系统国际标准，官方 PDF 目录带编号小节，讲清支付系统等金融基础设施的定义与类型、系统性风险与运营风险、结算最终性等，是把“支付”讲成系统而不是产品的地方。"
-   },
-   {
-    "key": "C",
-    "kind": "docs",
-    "title": "OWASP Top 10 Privacy Risks",
-    "by": "OWASP Foundation",
-    "year": 2021,
-    "url": "https://owasp.org/www-project-top-10-privacy-risks/",
-    "toc_urls": [
-     "https://owasp.org/www-project-top-10-privacy-risks/"
-    ],
-    "why": "补“隐私与系统工程”：OWASP 的十大隐私风险榜单把隐私落到系统实现层面（Web 应用漏洞、运营方数据泄漏、同意与删除、会话过期、数据最小化等），是工程侧最常用的权威清单。"
    }
   ],
   "outline": [
@@ -73247,197 +72371,6 @@
       "zh": "交易对手信用风险导论与总结"
      }
     ]
-   },
-   {
-    "src": "B",
-    "ref": "1.0",
-    "title": "Introduction",
-    "zh": "导论",
-    "fill": "补“支付与金融系统”：支付、清算、结算系统作为金融基础设施的定义、类型、政策目标与适用范围",
-    "items": [
-     {
-      "ref": "",
-      "title": "Background",
-      "zh": "背景"
-     },
-     {
-      "ref": "",
-      "title": "FMIs: definition, organisation, and function",
-      "zh": "金融基础设施：定义、组织与功能"
-     },
-     {
-      "ref": "",
-      "title": "Public policy objectives: safety and efficiency",
-      "zh": "公共政策目标：安全与效率"
-     },
-     {
-      "ref": "",
-      "title": "Scope of the principles for FMIs",
-      "zh": "金融基础设施原则的适用范围"
-     },
-     {
-      "ref": "",
-      "title": "Implementation, use, and assessments of observance of the principles and responsibilities",
-      "zh": "原则与职责的实施、使用与遵循情况评估"
-     },
-     {
-      "ref": "",
-      "title": "Organisation of the report",
-      "zh": "报告的组织"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "2.0",
-    "title": "Overview of key risks in financial market infrastructures",
-    "zh": "金融基础设施的关键风险概览",
-    "fill": "补“支付与金融系统”：支付与结算系统面临的系统性、法律、信用、流动性、托管与运营风险",
-    "items": [
-     {
-      "ref": "",
-      "title": "Systemic risk",
-      "zh": "系统性风险"
-     },
-     {
-      "ref": "",
-      "title": "Legal risk",
-      "zh": "法律风险"
-     },
-     {
-      "ref": "",
-      "title": "Credit risk",
-      "zh": "信用风险"
-     },
-     {
-      "ref": "",
-      "title": "Liquidity risk",
-      "zh": "流动性风险"
-     },
-     {
-      "ref": "",
-      "title": "General business risk",
-      "zh": "一般业务风险"
-     },
-     {
-      "ref": "",
-      "title": "Custody and investment risks",
-      "zh": "托管与投资风险"
-     },
-     {
-      "ref": "",
-      "title": "Operational risk",
-      "zh": "运营风险"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "3.0",
-    "title": "Principles for financial market infrastructures",
-    "zh": "金融基础设施原则",
-    "fill": "补“支付与金融系统”：支付与结算系统必须满足的原则（法律基础、治理、风险管理、结算最终性、资金结算、中央证券存管、运营风险）",
-    "items": [
-     {
-      "ref": "Principle 1",
-      "title": "Principle 1: Legal basis",
-      "zh": "原则 1：法律基础"
-     },
-     {
-      "ref": "Principle 2",
-      "title": "Principle 2: Governance",
-      "zh": "原则 2：治理"
-     },
-     {
-      "ref": "Principle 3",
-      "title": "Principle 3: Framework for the comprehensive management of risks",
-      "zh": "原则 3：全面风险管理的框架"
-     },
-     {
-      "ref": "Principle 8",
-      "title": "Principle 8: Settlement finality",
-      "zh": "原则 8：结算最终性"
-     },
-     {
-      "ref": "Principle 9",
-      "title": "Principle 9: Money settlements",
-      "zh": "原则 9：资金结算"
-     },
-     {
-      "ref": "Principle 11",
-      "title": "Principle 11: Central securities depositories",
-      "zh": "原则 11：中央证券存管"
-     },
-     {
-      "ref": "Principle 15",
-      "title": "Principle 15: General business risk",
-      "zh": "原则 15：一般业务风险"
-     },
-     {
-      "ref": "Principle 17",
-      "title": "Principle 17: Operational risk",
-      "zh": "原则 17：运营风险"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "",
-    "title": "Top 10 Privacy Risks",
-    "zh": "十大隐私风险",
-    "fill": "补“隐私与系统工程”：把隐私要求落成系统设计与实现层面的十条风险清单",
-    "items": [
-     {
-      "ref": "P1",
-      "title": "Web Application Vulnerabilities",
-      "zh": "Web 应用漏洞"
-     },
-     {
-      "ref": "P2",
-      "title": "Operator-sided Data Leakage",
-      "zh": "运营方侧的数据泄漏"
-     },
-     {
-      "ref": "P3",
-      "title": "Insufficient Data Breach Response",
-      "zh": "数据泄露响应不足"
-     },
-     {
-      "ref": "P4",
-      "title": "Consent on Everything",
-      "zh": "事事征求同意"
-     },
-     {
-      "ref": "P5",
-      "title": "Non-transparent Policies, Terms and Conditions",
-      "zh": "不透明的政策与条款"
-     },
-     {
-      "ref": "P6",
-      "title": "Insufficient Deletion of User Data",
-      "zh": "用户数据删除不足"
-     },
-     {
-      "ref": "P7",
-      "title": "Insufficient Data Quality",
-      "zh": "数据质量不足"
-     },
-     {
-      "ref": "P8",
-      "title": "Missing or Insufficient Session Expiration",
-      "zh": "会话过期缺失或不足"
-     },
-     {
-      "ref": "P9",
-      "title": "Inability of Users to Access and Modify Data",
-      "zh": "用户无法访问和修改自己的数据"
-     },
-     {
-      "ref": "P10",
-      "title": "Collection of Data Not Required for the User-Consented Purpose",
-      "zh": "收集超出用户同意目的所需的数据"
-     }
-    ]
    }
   ],
   "coverage": [
@@ -73471,21 +72404,6 @@
      "A:26"
     ],
     "note": "VAR 模型（第 7 讲）、正则化定价与风险模型（第 10 讲）、大宗商品模型（13）、Quanto 信用对冲（23）、利率与信用的 HJM 模型（24）、交易对手信用风险（26）。"
-   },
-   {
-    "topic": "支付与金融系统",
-    "refs": [
-     "B:1.0",
-     "B:2.0",
-     "B:3.0"
-    ]
-   },
-   {
-    "topic": "隐私与系统工程",
-    "refs": [
-     "C:#1"
-    ],
-    "note": "OWASP 榜单给的是隐私风险的实现面；若还要隐私增强技术本身（差分隐私、联邦学习、零知识证明）的数学，需另找一门专门课程，本轮没有找到结构合适的权威来源。"
    }
   ],
   "omitted": "A 未收：课程页的 Syllabus（先修、评分）、Assignments、Projects、Case Studies、Instructor Insights 不是目录内容；26 讲全部收录（Math 13 讲、Applications 13 讲），没有省略的讲次。 B（PFMI）只收了第 1–3 章（导论、关键风险概览、24 条原则中的 8 条），第 4 章（央行与监管当局的职责）及评估方法、披露框架两份配套文件未收；C（OWASP）只收一页榜单，其详细说明页与译版未收。"

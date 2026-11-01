@@ -29,7 +29,8 @@ README = """CS × 数学技能树
 
 进度：只保存在你自己的浏览器里，换电脑或清缓存会丢。用右上角“进度 → 导出”备份。
 
-说明：必须前置都以真实大学课程的先修要求为依据；标“前置待核实”的 {drafts} 个技能还没找到课程证据。
+说明：共 {skills} 个学习单元、{required} 条必须前置；{prereq_status}。每条连线附课程先修、同课顺序或先修链证据与入门理由。
+技能分课程、基础模块与进阶模块，学习量不同；详情可查划分依据。补充材料含免费/注册/付费备选，字幕和覆盖缺口均按说明。
 知识导览图的每个标题都和来源目录页逐条核对过。
 第三方组件：Panzoom 4.6.2（MIT）、d3 7.9.0（ISC）、markmap-view 0.18.12（MIT），许可证见 vendor/ 下的同名 txt。
 项目主页：https://github.com/zeroa234/cs-math-skill-tree （MIT 许可，见 LICENSE.txt；在线版 https://zeroa234.github.io/cs-math-skill-tree/）
@@ -39,7 +40,8 @@ README = """CS × 数学技能树
 def main():
     tag = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
     out = ROOT / "output" / f"cs-math-skill-tree-{tag}.zip"
-    skills = json.loads((ROOT / "output/skilltree.json").read_text(encoding="utf-8"))["skills"]
+    data = json.loads((ROOT / "output/skilltree.json").read_text(encoding="utf-8"))
+    skills = data["skills"]
     drafts = sum(s["prereqStatus"] != "verified" for s in skills)
     out.parent.mkdir(exist_ok=True)
     top = "cs-math-skill-tree"
@@ -50,7 +52,7 @@ def main():
             z.write(WEB / name, f"{top}/{name}")
         z.write(ROOT / "LICENSE", f"{top}/LICENSE.txt")
         # UTF-8 with BOM so Windows Notepad shows the Chinese text correctly
-        z.writestr(f"{top}/README.txt", "﻿" + README.format(drafts=drafts).replace("\n", "\r\n"))
+        z.writestr(f"{top}/README.txt", "﻿" + README.format(skills=len(skills), required=data["meta"]["requiredEdges"], prereq_status=(f"{drafts} 个技能的前置仍待核实" if drafts else "当前没有标为前置待核实的技能")).replace("\n", "\r\n"))
     print(out, f"{out.stat().st_size / 1024:.0f} KB")
 
 

@@ -1,15 +1,23 @@
 {
  "id": "M.1.9",
  "resource": {
+  "title": "EE261 The Fourier Transform and its Applications（Stanford Engineering Everywhere，Brad Osgood）",
+  "url": "https://see.stanford.edu/Course/EE261",
   "tier": "website",
-  "title": "MIT OpenCourseWare 18.103 Fourier Analysis (Fall 2013)",
-  "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/",
   "lang": "en",
   "free": true,
-  "covers": "傅里叶级数、均方收敛与 Parseval 公式、傅里叶积分/变换及其在概率（布朗运动、随机游走连续极限）中的应用；前半学期用 Lebesgue 积分与 L^2 理论建立严格基础。小波与一般调和分析（奇异积分、Littlewood–Paley 等）不在课程内。",
-  "verified": true
+  "covers": "傅里叶级数（系数、收敛与不连续点、均方/能量收敛）、正交展开（内积、复指数正交完备、系数即投影、Rayleigh 恒等式 = Parseval 定理）、傅里叶变换及位移/缩放/卷积/导数性质、δ 与广义函数、卷积与相关、抽样与插值、离散傅里叶变换与 FFT、LTI 系统与滤波、n 维傅里叶变换。对应收窄后的级数/变换/DFT/正交展开/Parseval；不含小波，也不含一般调和分析（奇异积分、Littlewood–Paley）。",
+  "access": "课程页公开 30 讲的在线观看/下载、每讲 HTML 与 PDF transcript、习题；配套讲义书《Lecture Notes for EE 261》book-fall-07.pdf 可直接下载；未见登录或付费要求（未做登录测试）；视频字幕未核对，正文可用每讲 transcript。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "东南大学《信号与系统》（中国大学MOOC）",
+  "url": "https://www.icourse163.org/course/SEU-204001?tid=1003067007",
+  "tier": "course",
+  "lang": "zh",
+  "free": null,
+  "access": "中国大学MOOC 课程页公开课程概述、授课大纲与参考书；视频学习需注册登录，认证证书收费（页面写明付费申请）；逐讲字幕未核对。",
+  "covers": "按课程授课大纲：信号的正交分解、两种傅里叶级数展开（三角/复指数）、周期性方波与 Gibbs 现象、信号功率与帕斯瓦尔定理、周期信号频谱、傅里叶变换与常见信号变换、抽样定理；之后进入拉普拉斯变换、Z 变换、系统函数与频响。DFT/FFT 不在本课，需数字信号处理课补充；严格收敛理论与 L2 证明需英文补充。"
+ },
  "courses": [
   {
    "school": "Massachusetts Institute of Technology (MIT OpenCourseWare)",
@@ -47,13 +55,34 @@
    "id": "M.3.1",
    "kind": "required",
    "evidence": "MIT 18.103 同时要求 18.06/18.700/18.701 线性代数（Hilbert 空间与正交展开）。"
-  },
-  {
-   "id": "M.1.3",
-   "kind": "required",
-   "basis": "chain",
-   "evidence": "MIT 18.103 先修 18.100 实分析，后者以一元微积分为先修。"
   }
  ],
- "notes": "M.1.5 计入 supported 是因为必修先修 18.100 Analysis I 本身讲数列与级数收敛（18.100A 官方描述含 'convergence of sequences and series'），不是 18.103 直接点名级数课。小波部分没有覆盖：若需要小波，MIT 18.327 Wavelets, Filter Banks and Applications（Spring 2003，研究生层次）的公开讲义可作补充（https://ocw.mit.edu/courses/18-327-wavelets-filter-banks-and-applications-spring-2003/ ）。18.103 是本科课程，覆盖面（级数+积分变换+均方收敛）在本批节点里最完整，故选它作为单一入口。"
+ "notes": "M.1.5 计入 supported 是因为必修先修 18.100 Analysis I 本身讲数列与级数收敛（18.100A 官方描述含 'convergence of sequences and series'），不是 18.103 直接点名级数课。小波部分没有覆盖：若需要小波，MIT 18.327 Wavelets, Filter Banks and Applications（Spring 2003，研究生层次）的公开讲义可作补充（https://ocw.mit.edu/courses/18-327-wavelets-filter-banks-and-applications-spring-2003/ ）。18.103 是本科课程，覆盖面（级数+积分变换+均方收敛）在本批节点里最完整，故选它作为单一入口。",
+ "required_evidence": [
+  {
+   "id": "M.1.3",
+   "basis": "chain",
+   "sources": [
+    {
+     "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/",
+     "quote": "[1] Prerequisites: 18.100 Analysis I; 18.06 Linear Algebra, 18.700 Linear Algebra, or 18.701 Algebra I"
+    },
+    {
+     "url": "https://catalog.mit.edu/subjects/18/",
+     "quote": "[2] 18.100A/B Real Analysis — Prereq: Calculus II (GIR)"
+    },
+    {
+     "url": "https://catalog.mit.edu/subjects/18/",
+     "quote": "[3] 18.02 Calculus — Prereq: Calculus I (GIR)；18.01 — Definite integral; fundamental theorem of calculus. … Techniques of integration. … Improper integrals."
+    }
+   ],
+   "reason": "[1] MIT 18.103 Fourier Analysis 官方 syllabus 先修 18.100 Analysis I（另需 18.06/18.700/18.701）；[2] 18.100A/B Real Analysis 的 Prereq: Calculus II (GIR)，即 18.02；[3] 18.02 的 Prereq: Calculus I (GIR)，即 18.01，其描述含定积分、微积分基本定理、积分技巧、反常积分。18.103 自述「the systematic study of Fourier series requires the Lebesgue integral」，傅里叶级数本身就建在积分理论上。",
+   "limits": "三跳链；[1] 出自 18.103 的 OCW syllabus，[2][3] 出自 MIT 课程目录（同一页）。没有用「18.103 课内先教积分」这种说法——该课是把积分理论当先修。UCSD MATH 144（同节点另一门课）只要实分析 MATH 140B/142B，同样不直接到一元积分，故不作依据。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "收窄为“傅里叶分析”后换英文主资源为 Stanford SEE EE261（Brad Osgood）课程页 + 配套讲义书 book-fall-07.pdf。理由：课程页原文同时列出 Fourier series 与 The discrete Fourier transform and the FFT algorithm，第 4 讲 Topics 明确写内积、复指数正交、系数即投影、Rayleigh's Identity，教材正文原句把 Rayleigh 恒等式与 Parseval 定理并称；这正好对上收窄后的级数/变换/DFT/正交展开/Parseval，并且是本科工程难度、有可读正文（每讲 transcript + 整本讲义书 PDF），不是只有课程目录。旧英文资源 MIT 18.103 仍免费，但 syllabus 明写约一半学时用于 Lebesgue 积分与概率、另一半才是傅里叶级数与傅里叶积分；Calendar 的 13 讲止于 Brownian Motion，没有 DFT/FFT 讲次，故保留为 D3 严格路线（不删除、不占主资源位）；其 Lecture Notes & Readings 入口存在，本次未逐讲清点页数。中文旧资源浙江大学《信号分析与处理》课程页只公开课程概述，逐章大纲不可见，无法把“傅里叶级数/DFT”写进 covers；改选东南大学《信号与系统》：课程页标题给身份（东南大学），授课大纲原文列出 3-2 信号的正交分解、3-3(6) 信号的功率与帕斯瓦尔定理、3-5-1 傅里叶变换、7-2 抽样定理，且与 SEU-204001 页的概述、预备知识、参考书完全一致（cid=204001 为同一门课旧入口）。中文先查过免费正文：检索只得到课程教学大纲（如同济《信号与系统》大纲页）、学生复习笔记与付费教材（Stein–Shakarchi 中译本、郑君里《信号与系统》），没有能逐章核对的完整中文讲义，所以按“正文优先、文字不齐再看大学官方视频”的顺序选了东南大学 MOOC。DFT/FFT 中文缺口可加北京交通大学《数字信号处理》（页面原文：主要讨论离散Fourier变换(DFT)及其应用，快速Fourier变换算法）。小波与一般调和分析已从节点移除，故不再挂小波来源。四条资源均免费，未动用付费项。复核日期 2026-11-01。"
+ }
 }

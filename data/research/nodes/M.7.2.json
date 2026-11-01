@@ -54,13 +54,22 @@
    "id": "P.1.1",
    "kind": "required",
    "evidence": "Stanford EE364a: 'You will use CVXPY to write simple scripts, so basic familiarity with elementary Python programming is required.'"
-  },
-  {
-   "id": "M.1.4.1",
-   "kind": "required",
-   "basis": "course",
-   "evidence": "UCSD MATH 173A 先修 MATH 20C 多元微积分。"
   }
  ],
- "notes": "资源用 Stanford EE364a 课程主页（website tier，讲义全免费公开），而非 Boyd & Vandenberghe 教材 PDF（属于 book tier，https://web.stanford.edu/~boyd/cvxbook/ 也已打开确认：Cambridge 允许作者网站长期免费提供全书 PDF，可作为配套读物）。先修判定：两门课都只写『线性代数 + 概率』，没有列出多元微积分/梯度，故 M.1.4.2 记 not_mentioned —— 这是课程目录的写法问题，不是内容不需要（凸函数的一阶/二阶条件必然用到梯度与 Hessian，EE364a 讲义第 3 章就是 gradients/Hessians）。同理 M.1.4.3（Hessian）也没写，若要保留该边，证据只能来自讲义内容而非先修文字。M.7.1 记 recommended 的依据是 EE364a 'Exposure to numerical computing, optimization, and application fields helpful but not required'。Berkeley Math 54 同时含 ODE（M.2.1），但课程目录只把它当作线性代数先修，故未列入 extra_prereqs。"
+ "notes": "资源用 Stanford EE364a 课程主页（website tier，讲义全免费公开），而非 Boyd & Vandenberghe 教材 PDF（属于 book tier，https://web.stanford.edu/~boyd/cvxbook/ 也已打开确认：Cambridge 允许作者网站长期免费提供全书 PDF，可作为配套读物）。先修判定：两门课都只写『线性代数 + 概率』，没有列出多元微积分/梯度，故 M.1.4.2 记 not_mentioned —— 这是课程目录的写法问题，不是内容不需要（凸函数的一阶/二阶条件必然用到梯度与 Hessian，EE364a 讲义第 3 章就是 gradients/Hessians）。同理 M.1.4.3（Hessian）也没写，若要保留该边，证据只能来自讲义内容而非先修文字。M.7.1 记 recommended 的依据是 EE364a 'Exposure to numerical computing, optimization, and application fields helpful but not required'。Berkeley Math 54 同时含 ODE（M.2.1），但课程目录只把它当作线性代数先修，故未列入 extra_prereqs。",
+ "required_evidence": [
+  {
+   "id": "M.1.4.1",
+   "basis": "course",
+   "sources": [
+    {
+     "url": "https://catalog.ucsd.edu/courses/MATH.html",
+     "quote": "MATH 173A. Optimization Methods for Data Science I … Introduction to convexity: convex sets, convex functions; geometry of hyperplanes … Linear and quadratic programming: optimality conditions; duality … Prerequisites: MATH 20C or MATH 31BH and MATH 18 or 31AH. ／ MATH 20C. … Vector geometry, vector functions and their derivatives. Partial differentiation. Maxima and minima. Double integration. Prerequisites: … MATH 20B"
+    }
+   ],
+   "reason": "UCSD MATH 173A 是一门凸优化课（凸集/凸函数、支撑超平面、线性与二次规划的最优性条件、对偶、内点法），官方先修写 MATH 20C（或 31BH）与 MATH 18/31AH；而 MATH 20C 的官方描述正是偏微分、极值与二重积分。凸性判定、梯度/Hessian、二阶条件用到的就是 M.1.4.1 的内容。",
+   "limits": "节点收录的 Stanford EE364a 先修原文只写「Good knowledge of linear algebra (as in EE263) and probability」，不要求微积分；Berkeley EE 227BT 的原文只要 Mathematics 54 与 Statistics 2。所以这条边的课程证据只有 MATH 173A。映射只取 MATH 20C 的偏微分部分（M.1.4.1），不扩成 M.1.4.4（多元积分）或整门微积分。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

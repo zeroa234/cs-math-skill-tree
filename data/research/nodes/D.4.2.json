@@ -44,13 +44,22 @@
    "id": "M.6.1",
    "kind": "required",
    "evidence": "openHPI Knowledge Graphs 要求『statistics and probability theory』基础"
-  },
-  {
-   "id": "D.4.1",
-   "kind": "required",
-   "basis": "same_course",
-   "evidence": "kgbook 与 openHPI Knowledge Graphs 都先讲数据模型与本体，再讲演绎推理。"
   }
  ],
- "notes": "D.4.1 判 not_mentioned：能查到的两门课（openHPI 的 Knowledge Graphs、Stanford CS 520）都把知识表示与推理放在同一门课里教，没有任何课程把『先学过知识表示/本体课』写成推理课的先修；CS 520 页面根本没写先修（按 unspecified 记）。资源重复风险已披露：kgbook.org 与 D.4.1 用的是同一本书（D.4.1 偏 Ch2–3、6–7 的表示与融合，本节点偏 Ch4–5 的推理与神经符号）；若主代理要求两节点资源不重复，可换成已核实的两份替代：(1) Birkbeck《Semantic Technologies》课程 slides（Michael Zakharyaschev，含 'The OWL 2 Web Ontology Language' 与 'Reasoning with description logic' 两讲，https://titan.dcs.bbk.ac.uk/~michael/sw15/sw15.html ）；(2) W3C《OWL 2 Web Ontology Language Primer (Second Edition)》（https://www.w3.org/TR/owl2-primer/ ，官方规范文档，覆盖 OWL 2 DL 语义、profile 与 entailment，但没有规则推理与神经符号内容）。"
+ "notes": "D.4.1 判 not_mentioned：能查到的两门课（openHPI 的 Knowledge Graphs、Stanford CS 520）都把知识表示与推理放在同一门课里教，没有任何课程把『先学过知识表示/本体课』写成推理课的先修；CS 520 页面根本没写先修（按 unspecified 记）。资源重复风险已披露：kgbook.org 与 D.4.1 用的是同一本书（D.4.1 偏 Ch2–3、6–7 的表示与融合，本节点偏 Ch4–5 的推理与神经符号）；若主代理要求两节点资源不重复，可换成已核实的两份替代：(1) Birkbeck《Semantic Technologies》课程 slides（Michael Zakharyaschev，含 'The OWL 2 Web Ontology Language' 与 'Reasoning with description logic' 两讲，https://titan.dcs.bbk.ac.uk/~michael/sw15/sw15.html ）；(2) W3C《OWL 2 Web Ontology Language Primer (Second Edition)》（https://www.w3.org/TR/owl2-primer/ ，官方规范文档，覆盖 OWL 2 DL 语义、profile 与 entailment，但没有规则推理与神经符号内容）。",
+ "required_evidence": [
+  {
+   "id": "D.4.1",
+   "basis": "same_course",
+   "sources": [
+    {
+     "url": "https://web.stanford.edu/class/cs520/",
+     "quote": "Week 1 What is a Knowledge Graph? ／ Week 2 What are some Knowledge Graph data models? ／ Week 3 How to design the schema of a Knowledge Graph? … Week 6 What are some inference algorithms for Knowledge Graphs?"
+    }
+   ],
+   "reason": "Stanford CS 520 Knowledge Graphs 的官方日程：Week 1 What is a Knowledge Graph?、Week 2 What are some Knowledge Graph data models?、Week 3 How to design the schema of a Knowledge Graph?、Week 4-5 建图（从结构化/非结构化数据），Week 6 才 What are some inference algorithms for Knowledge Graphs?。数据模型与本体/schema 先讲，推理算法后讲。",
+   "limits": "openHPI 2020 版 6 周大纲是 Web of Data → 基本语义技术 → SPARQL → 本体 → 图谱应用 → 进阶应用，没有演绎/归纳推理周，不能作 same_course 依据；kgbook（Hogan et al.）第 2-3 章数据模型/本体 → 第 4 章演绎推理只是教材顺序，按规则不算。描述逻辑与规则推理以本体（TBox/ABox）为输入，入门层绕不开 D.4.1。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

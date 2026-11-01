@@ -32,25 +32,49 @@
  },
  "extra_prereqs": [
   {
-   "id": "M.6.1",
-   "kind": "recommended",
-   "evidence": "Stanford CS 246 期望具备 basic probability theory（CS109 / Stat116 水平，且写明 sufficient but not necessary）"
-  },
-  {
    "id": "M.5.3",
    "kind": "recommended",
    "evidence": "Stanford CS 246 期望会写严格证明，至少 CS 103 水平"
+  }
+ ],
+ "notes": "M.6.2 判 recommended 而非 supported：CS 246 只写『basic probability theory（CS109/Stat116 …sufficient but not necessary）』，是按概率/统计素养的『期望背景』措辞，且明说不是必要条件，没有把任何统计课列为强制先修。D.3.1（数据科学导论与工具箱）判 not_mentioned：CS 246 的先修清单里没有数据科学入门课。资源侧缺口：节点提到的『异常检测』不在 MMDS 章节里；核实过的替代书是 Tan/Steinbach/Karpatne/Kumar《Introduction to Data Mining》(2nd ed) 作者页 https://www-users.cse.umn.edu/~kumar001/dmbook/index.php ，其页面写明 topics 含 anomaly detection 与 avoiding false discoveries、且只需 modest statistics background，但该书站点只放 sample chapters（非全书免费），故本节点仍选免费的 MMDS。",
+ "required_evidence": [
+  {
+   "id": "M.6.1",
+   "basis": "course",
+   "sources": [
+    {
+     "url": "https://web.stanford.edu/class/cs246/",
+     "quote": "Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary)."
+    }
+   ],
+   "reason": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。",
+   "limits": "课程代码 CS109 或 Stat116（或等价）；要求的基础知识 = 基本概率论（条件概率、分布、期望），用于 MinHash/LSH 碰撞分析、采样与聚类评估。节点数据把 CS 246 记成 recommended kind，与 A.3.4 里同一门课记 required 不一致；这里按原文标题 Prerequisites + expected background 判为必须，只到入门层。"
   },
   {
    "id": "M.3.1",
-   "kind": "recommended",
-   "evidence": "Stanford CS 246 期望 basic linear algebra（Math 51 等）"
+   "basis": "course",
+   "sources": [
+    {
+     "url": "https://web.stanford.edu/class/cs246/",
+     "quote": "Familiarity with basic linear algebra (e.g., any of Math 51, Math 103, Math 113, CS 205, or EE 263 would be much more than necessary)."
+    }
+   ],
+   "reason": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。",
+   "limits": "课程代码 Math 51/103/113、CS 205、EE 263 任一（原文说这些 would be much more than necessary）；要求的基础知识 = 矩阵/向量运算与特征分解，用于 SVD 降维、PageRank、矩阵分解。据此不要把「整门线性代数」当成硬门槛的全部内容：入门层只需 M.3.1 的矩阵与特征值部分。"
   },
   {
    "id": "F.1.2",
-   "kind": "recommended",
-   "evidence": "Stanford CS 246 期望 algorithmic analysis，CS 161 水平即可"
+   "basis": "course",
+   "sources": [
+    {
+     "url": "https://web.stanford.edu/class/cs246/",
+     "quote": "Familiarity with algorithmic analysis (e.g., CS 161 would be much more than necessary)."
+    }
+   ],
+   "reason": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。",
+   "limits": "课程代码 CS 161（原文说 would be much more than necessary）；要求的基础知识 = 会读写渐近复杂度，用于频繁项集挖掘、LSH、聚类算法的代价分析。同理只要求 F.1.2 的渐近分析入门层，不等同整门算法设计。"
   }
  ],
- "notes": "M.6.2 判 recommended 而非 supported：CS 246 只写『basic probability theory（CS109/Stat116 …sufficient but not necessary）』，是按概率/统计素养的『期望背景』措辞，且明说不是必要条件，没有把任何统计课列为强制先修。D.3.1（数据科学导论与工具箱）判 not_mentioned：CS 246 的先修清单里没有数据科学入门课。资源侧缺口：节点提到的『异常检测』不在 MMDS 章节里；核实过的替代书是 Tan/Steinbach/Karpatne/Kumar《Introduction to Data Mining》(2nd ed) 作者页 https://www-users.cse.umn.edu/~kumar001/dmbook/index.php ，其页面写明 topics 含 anomaly detection 与 avoiding false discoveries、且只需 modest statistics background，但该书站点只放 sample chapters（非全书免费），故本节点仍选免费的 MMDS。"
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

@@ -3,27 +3,26 @@
  "sources": [
   {
    "key": "A",
-   "kind": "course",
-   "title": "CMPE 691 Reconfigurable System Design — Physical Design Flow and Timing Analysis",
-   "by": "Ryan Robucci, University of Maryland Baltimore County",
-   "year": 2025,
-   "url": "https://eclipse.umbc.edu/robucci/cmpeRSD/",
+   "kind": "docs",
+   "title": "Universal Verification Methodology (UVM) 1.2 User’s Guide",
+   "by": "Accellera Systems Initiative",
+   "year": 2015,
+   "url": "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf",
    "toc_urls": [
-    "https://eclipse.umbc.edu/robucci/cmpeRSD/lectures/Physical_Design_Flow_and_Timing_Analysis/Physical_Design_Flow_and_Timing_Analysis.html"
+    "https://www.accellera.org/images/downloads/standards/uvm/uvm_users_guide_1.2.pdf"
    ],
-   "why": "节点简介里的“设计自动化、综合、布局布线、等价性/时序验证”在这份大学讲义的编号小节里逐条拆开：EDA 工具分工、自动化物理设计、综合与映射、打包、布局布线、静态/动态时序分析、时序验证与逻辑验证的分工。节点现有的 CMPE 691 HDV 讲义页是加密的，所以把这一讲作为主来源。"
+   "why": "标准维护组织正式免费指南；从 testbench 到组件、激励、检查与覆盖，直接对齐验证主线。属于 UVM 1.2 教学资料，现代 IEEE 1800.2 差异另查最新版。"
   },
   {
    "key": "B",
-   "kind": "book",
-   "title": "Digital Systems Design with FPGAs and CPLDs",
-   "by": "Ian Grout",
-   "year": 2008,
-   "url": "https://catdir.loc.gov/catdir/toc/ecip083/2007044907.html",
+   "kind": "docs",
+   "title": "SymbiYosys Getting started",
+   "by": "YosysHQ",
+   "url": "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html",
    "toc_urls": [
-    "https://catdir.loc.gov/catdir/toc/ecip083/2007044907.html"
+    "https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html"
    ],
-   "why": "补 A 不讲的另外三块，且都是章→节结构：1.9 可编程逻辑的设计方法与工具（含典型 PLD 设计流程）、2.7 形式验证、第 9 章电子系统测试（IC 测试、PCB 测试、边界扫描）。"
+   "why": "开发者官方的可运行形式验证入门，补断言、反例与证明的区别。"
   },
   {
    "key": "C",
@@ -41,180 +40,172 @@
  "outline": [
   {
    "src": "A",
-   "ref": "",
-   "title": "Physical Design Flow and Timing Analysis",
-   "zh": "物理设计流程与时序分析",
-   "items": [
-    {
-     "ref": "3",
-     "title": "Electronic Design Tools",
-     "zh": "电子设计工具"
-    },
-    {
-     "ref": "5",
-     "title": "Automated Physical Design",
-     "zh": "自动化物理设计"
-    },
-    {
-     "ref": "6",
-     "title": "Synthesis and Mapping",
-     "zh": "综合与映射"
-    },
-    {
-     "ref": "7",
-     "title": "Packing",
-     "zh": "打包"
-    },
-    {
-     "ref": "8",
-     "title": "Place and Route",
-     "zh": "布局布线"
-    },
-    {
-     "ref": "9",
-     "title": "Timing Verification vs Logical Verification",
-     "zh": "时序验证与逻辑验证的区别"
-    },
-    {
-     "ref": "10",
-     "title": "Timing Analysis and Post-Place-and-Route simulation",
-     "zh": "时序分析与布局布线后仿真"
-    },
-    {
-     "ref": "12",
-     "title": "Static Timing Analysis",
-     "zh": "静态时序分析"
-    },
-    {
-     "ref": "13",
-     "title": "Clock Period Constraint",
-     "zh": "时钟周期约束"
-    },
-    {
-     "ref": "18",
-     "title": "Setup and Hold Times",
-     "zh": "建立时间与保持时间"
-    },
-    {
-     "ref": "19",
-     "title": "Clock Skew",
-     "zh": "时钟偏斜"
-    },
-    {
-     "ref": "23",
-     "title": "Setup Timing Slack in Critical Path",
-     "zh": "关键路径的建立时间裕量"
-    },
-    {
-     "ref": "25",
-     "title": "Hold Time Analysis and Slack",
-     "zh": "保持时间分析与裕量"
-    },
-    {
-     "ref": "27",
-     "title": "Unconstrained Paths and CDC Clock Domain Crossing",
-     "zh": "未约束路径与跨时钟域"
-    },
-    {
-     "ref": "28",
-     "title": "Clock Domain Crossing (CDC) Signals",
-     "zh": "跨时钟域（CDC）信号"
-    },
-    {
-     "ref": "31",
-     "title": "Multicycle Paths",
-     "zh": "多周期路径"
-    },
-    {
-     "ref": "32",
-     "title": "False Paths",
-     "zh": "伪路径"
-    },
-    {
-     "ref": "34",
-     "title": "Dynamic Timing Analysis",
-     "zh": "动态时序分析"
-    },
-    {
-     "ref": "35",
-     "title": "Dynamic Timing Analysis using Event-Driven Simulation",
-     "zh": "基于事件驱动仿真的动态时序分析"
-    },
-    {
-     "ref": "37",
-     "title": "Dynamic vs Static Timing Analysis; Functional vs Timing Verification",
-     "zh": "动态与静态时序分析；功能验证与时序验证"
-    },
-    {
-     "ref": "39",
-     "title": "FPGA vendors role in EDA",
-     "zh": "FPGA 厂商在 EDA 中的角色"
-    }
-   ]
-  },
-  {
-   "src": "B",
    "ref": "1",
-   "title": "Introduction to Programmable Logic",
-   "zh": "可编程逻辑导论",
-   "fill": "设计自动化：EDA 工具在 PLD 设计流程里的分工（A 只讲工具类别，不讲流程）",
+   "title": "Overview",
+   "zh": "概览",
    "items": [
     {
-     "ref": "1.9",
-     "title": "Programmable Logic Design Methods and Tools",
-     "zh": "可编程逻辑的设计方法与工具",
-     "items": [
-      {
-       "ref": "1.9.2",
-       "title": "Typical PLD Design Flow",
-       "zh": "典型 PLD 设计流程"
-      }
-     ]
+     "ref": "1.1",
+     "title": "The Typical UVM Testbench Architecture",
+     "zh": "典型 UVM 测试平台架构"
+    },
+    {
+     "ref": "1.2",
+     "title": "The UVM Class Library",
+     "zh": "UVM 类库"
     }
    ]
   },
   {
-   "src": "B",
+   "src": "A",
    "ref": "2",
-   "title": "Electronic Systems Design",
-   "zh": "电子系统设计",
-   "fill": "形式验证：从系统设计流程的角度讲形式验证要替代/补充什么（A、C 讲的是算法与工具细节）",
+   "title": "Transaction-Level Modeling (TLM)",
+   "zh": "事务级建模",
    "items": [
     {
-     "ref": "2.7",
-     "title": "Formal Verification",
-     "zh": "形式验证"
+     "ref": "2.1",
+     "title": "Overview",
+     "zh": "概览"
+    },
+    {
+     "ref": "2.2",
+     "title": "TLM, TLM-1, and TLM-2.0",
+     "zh": "TLM 与版本"
+    },
+    {
+     "ref": "2.3",
+     "title": "TLM-1 Implementation",
+     "zh": "TLM-1 实现"
+    },
+    {
+     "ref": "2.4",
+     "title": "TLM-2.0 Implementation",
+     "zh": "TLM-2.0 实现"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Developing Reusable Verification Components",
+   "zh": "开发可复用验证组件",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Modeling Data Items for Generation",
+     "zh": "建模激励数据项"
+    },
+    {
+     "ref": "3.3",
+     "title": "Creating the Driver",
+     "zh": "创建驱动器"
+    },
+    {
+     "ref": "3.4",
+     "title": "Creating the Sequencer",
+     "zh": "创建序列器"
+    },
+    {
+     "ref": "3.6",
+     "title": "Creating the Monitor",
+     "zh": "创建监视器"
+    },
+    {
+     "ref": "3.8",
+     "title": "Creating the Agent",
+     "zh": "创建代理"
+    },
+    {
+     "ref": "3.9",
+     "title": "Creating the Environment",
+     "zh": "创建环境"
+    },
+    {
+     "ref": "3.10",
+     "title": "Enabling Scenario Creation",
+     "zh": "创建场景"
+    },
+    {
+     "ref": "3.11",
+     "title": "Managing End of Test",
+     "zh": "管理测试结束"
+    },
+    {
+     "ref": "3.12",
+     "title": "Implementing Checks and Coverage",
+     "zh": "实现检查与覆盖"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Using Verification Components",
+   "zh": "使用验证组件",
+   "items": [
+    {
+     "ref": "4.3",
+     "title": "Creating Test Classes",
+     "zh": "创建测试类"
+    },
+    {
+     "ref": "4.4",
+     "title": "Verification Component Configuration",
+     "zh": "验证组件配置"
+    },
+    {
+     "ref": "4.6",
+     "title": "Creating Meaningful Tests",
+     "zh": "创建有意义的测试"
+    },
+    {
+     "ref": "4.7",
+     "title": "Virtual Sequences",
+     "zh": "虚拟序列"
+    },
+    {
+     "ref": "4.8",
+     "title": "Checking for DUT Correctness",
+     "zh": "检查待测设计正确性"
+    },
+    {
+     "ref": "4.9",
+     "title": "Scoreboards",
+     "zh": "计分板"
+    },
+    {
+     "ref": "4.10",
+     "title": "Implementing a Coverage Model",
+     "zh": "实现覆盖模型"
     }
    ]
   },
   {
    "src": "B",
-   "ref": "9",
-   "title": "Testing the Electronic System",
-   "zh": "电子系统测试",
-   "fill": "验证的另一半是测试：IC 测试、PCB 测试与边界扫描（节点简介的“验证”常与测试混谈，A、C 都没有测试章）",
+   "ref": "getting-started",
+   "title": "Getting started",
+   "zh": "入门",
+   "fill": "补形式断言、反例与可运行的 FIFO 验证实例。",
    "items": [
     {
-     "ref": "9.2",
-     "title": "Integrated Circuit Testing",
-     "zh": "集成电路测试",
-     "items": [
-      {
-       "ref": "9.2.2",
-       "title": "Digital IC Test",
-       "zh": "数字 IC 测试"
-      }
-     ]
+     "ref": "properties",
+     "title": "Verification properties",
+     "zh": "验证性质"
     },
     {
-     "ref": "9.3",
-     "title": "Printed Circuit Board Testing",
-     "zh": "印制电路板测试"
+     "ref": "sby",
+     "title": "SymbiYosys",
+     "zh": "SymbiYosys 验证流程"
     },
     {
-     "ref": "9.4",
-     "title": "Boundary Scan Test",
-     "zh": "边界扫描测试"
+     "ref": "exercise",
+     "title": "Exercise",
+     "zh": "练习"
+    },
+    {
+     "ref": "concurrent",
+     "title": "Concurrent assertions",
+     "zh": "并发断言"
     }
    ]
   },
@@ -223,116 +214,107 @@
    "ref": "Lecture 1",
    "title": "Introduction to Hardware Verification",
    "zh": "硬件验证导论",
-   "fill": "形式验证/等价性一侧的总览（C 全部条目都是补这一块）",
-   "items": []
+   "items": [],
+   "fill": "补形式验证、等价性检查与时序规约的课程概念。"
   },
   {
    "src": "C",
    "ref": "Lecture 2",
    "title": "Equivalence Checking",
    "zh": "等价性检查",
-   "fill": "等价性：等价性检查的问题定义与整体思路",
-   "items": []
+   "items": [],
+   "fill": "补形式验证、等价性检查与时序规约的课程概念。"
   },
   {
    "src": "C",
    "ref": "Lecture 3",
    "title": "Combinational Equivalence Checking",
    "zh": "组合等价性检查",
-   "fill": "等价性：组合电路的等价性检查",
-   "items": []
+   "items": [],
+   "fill": "补形式验证、等价性检查与时序规约的课程概念。"
   },
   {
    "src": "C",
    "ref": "Lecture 7",
    "title": "Equivalence Checking Using SAT",
    "zh": "基于 SAT 的等价性检查",
-   "fill": "等价性：把等价性化成 SAT 求解（综合前后网表的实际做法）",
-   "items": []
+   "items": [],
+   "fill": "补形式验证、等价性检查与时序规约的课程概念。"
   },
   {
    "src": "C",
    "ref": "Lecture 13",
    "title": "Introduction to property/assertion checking",
    "zh": "属性与断言检查导论",
-   "fill": "形式验证：从等价性转到属性/断言检查",
-   "items": []
+   "items": [],
+   "fill": "补形式验证、等价性检查与时序规约的课程概念。"
   },
   {
    "src": "C",
    "ref": "Lecture 14",
    "title": "Temporal Logics, Specification and Properties",
    "zh": "时序逻辑、规约与属性",
-   "fill": "形式验证：用什么语言写待证的性质（时序逻辑与规约）",
-   "items": []
+   "items": [],
+   "fill": "补形式验证、等价性检查与时序规约的课程概念。"
   },
   {
    "src": "C",
    "ref": "Lecture 17",
    "title": "Model checking",
    "zh": "模型检查",
-   "fill": "形式验证：模型检查算法",
-   "items": []
+   "items": [],
+   "fill": "补形式验证、等价性检查与时序规约的课程概念。"
   }
  ],
  "coverage": [
   {
-   "topic": "设计自动化",
+   "topic": "仿真与测试平台",
    "refs": [
+    "A:1.1",
+    "A:3.3",
+    "A:3.6",
+    "A:4.9"
+   ]
+  },
+  {
+   "topic": "受约束随机激励",
+   "refs": [
+    "A:3.1",
+    "A:4.6"
+   ]
+  },
+  {
+   "topic": "断言与覆盖率",
+   "refs": [
+    "A:3.12",
+    "A:4.10",
+    "B:properties",
+    "B:concurrent"
+   ]
+  },
+  {
+   "topic": "UVM 验证流程",
+   "refs": [
+    "A:2",
     "A:3",
-    "A:5",
-    "A:39",
-    "B:1.9",
-    "B:1.9.2"
+    "A:4"
    ]
   },
   {
-   "topic": "仿真",
+   "topic": "形式验证与等价性检查入门",
    "refs": [
-    "A:10",
-    "A:34",
-    "A:35"
-   ],
-   "note": "这里能给到的是仿真在 EDA 流程里的位置（布局布线后仿真、事件驱动仿真做动态时序分析）；仿真平台本身（testbench 组织、断言、覆盖率、UVM）只能到讲次一层，因为 CMPE 691 HDV 的每讲页面是 PageCrypt 加密的，读不到正文小节（见 notes）。"
-  },
-  {
-   "topic": "形式验证",
-   "refs": [
-    "B:2.7",
-    "C:Lecture 13",
-    "C:Lecture 14",
-    "C:Lecture 17"
-   ]
-  },
-  {
-   "topic": "综合",
-   "refs": [
-    "A:6",
-    "B:1.9.2"
-   ]
-  },
-  {
-   "topic": "布局布线",
-   "refs": [
-    "A:7",
-    "A:8",
-    "A:5"
-   ]
-  },
-  {
-   "topic": "等价性",
-   "refs": [
+    "B:getting-started",
     "C:Lecture 2",
-    "C:Lecture 3",
-    "C:Lecture 7"
+    "C:Lecture 7",
+    "C:Lecture 17"
    ]
   }
  ],
- "omitted": "A 讲义里 Reference/Objectives/Interactive/Additional Materials 之类导航小节未收。B 只收 1.9、2.7 与第 9 章：第 1 章其余小节讲可编程逻辑器件类型与厂商、第 2 章其余小节讲流程管理、I/O、复位、电源、封装、认证（属于 H.2.3 板级工程的范围）、第 5–8、10 章讲逻辑设计、VHDL、DSP 与系统级设计；附录 E“Introduction to the Design Tools”是工具操作教程，按“附录不收”的规则未收。C 只收形式验证与等价性相关的 7 讲，项目讨论（Lecture 10/11）与工业 testbench 架构等其余讲次未收。",
- "notes": "本轮的三点情况：① A（CMPE 691 物理设计讲）本来就是两层结构，原样保留；② 节点资源里另一门课 CMPE 691 HDV 的 18 讲目录太“平”，想按做法 1 读每讲讲义补小节，但 https://eclipse.umbc.edu/robucci/cmpeHDV/Lectures/… 下的每讲页面都是 PageCrypt 密码保护页（读到的是“This page is password protected”），拿不到讲内小节，于是按做法 2 换源，用 Grout 的教材补上设计流程、形式验证与测试三块；③ C（ECE 519）课程表只有逐讲主题、没有讲内小节，保留但只取形式验证/等价性的 7 讲，作为等价性一条的落点。B 的目录抄自 Library of Congress 书目页上由出版社提供的目录数据（原文把章节号与标题分成两行，这里按“号 + 标题”合并）。",
+ "notes": "UMBC HDV 仅课表公开，多份讲义为密码页，不作为免费正文入口。主线读 Accellera 的 UVM 指南，形式方法用 SBY 实例与 ECE 519 课表补；设计综合与布局布线归 VLSI。",
+ "omitted": "UVM 高级寄存器层、工厂/配置等深度 API 只在实际项目需要时进一步查阅；指南为 1.2 版本，现代工具需对照 IEEE 1800.2。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 39,
+  "exact": 38,
   "fuzzy": 0,
   "dropped": []
  }

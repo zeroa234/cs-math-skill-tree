@@ -37,7 +37,7 @@
   "M.1.4.1": "反向传播就是多元链式法则；CSC413 要求多元微积分，CS 231n 要求熟练求导。"
  },
  "A.2.3.1": {
-  "A.2.3": "Stanford CS 231n、CS 224N 都是先讲反向传播与训练，再讲卷积、循环、Transformer 等架构。",
+  "A.2.3": "Stanford cs231n（Spring 2026）课表：Lecture 3 Regularization and Optimization、Lecture 4 Neural Networks and Backpropagation 在前；Lecture 5 Image Classification with CNNs、Lecture 7 Recurrent Neural Networks、Lecture 8 Attention and Transformers 在后。同一门课先讲优化/正则、MLP 与反向传播（A.2.3），再讲各类架构（A.2.3.1）。 CS224N / CS231n 的先修段都没有把「深度学习」写成必修先修（CS224N 只说已有 ML/DL 基础会更轻松，但可以不带），所以只能靠同课顺序；原 candidate_check 给的建议是 recommended，与本判定方向一致。节点资源 d2l 也是按「先训练/反向传播、再架构」组织章节，但那属教材顺序，不作依据。",
   "_summary": "Stanford CS 224N：Python、微积分、线性代数、概率、机器学习基础；CS 231n：Python、微积分、线性代数、概率统计。"
  },
  "A.2.3.2": {
@@ -58,9 +58,10 @@
   "_summary": "Stanford CS 234：Python、微积分、线性代数、概率统计、机器学习基础；CMU 10-703：算法、数值编程、10-601。"
  },
  "A.2.5": {
-  "A.2.3": "Stanford CS 330 要求熟悉反向传播、卷积等深度学习概念；迁移与多任务都是在深度网络上做的。",
-  "M.7.4": "FedAvg、本地 SGD 都是随机优化方法。",
-  "_summary": "Stanford CS 330：CS 229 + 深度学习基础；Aalto CS-E4740 联邦学习：监督学习、梯度下降、线性代数、Python，明确说不需要分布式系统背景（因此去掉原图的“分布式系统”前置）。"
+  "A.2.1": "Aalto CS-E4740 明确要求经验风险最小化、监督学习和梯度下降；线性代数与 Python 已由机器学习基础的必须前置覆盖。",
+  "M.7.4": "分布式优化有助于分析联邦更新，课程并不要求预先学完整分布式系统。",
+  "A.2.3": "联邦学习也能用于线性等浅层模型，深度学习只在训练神经网络时有帮助，不设为必修门槛。",
+  "_summary": "收窄为联邦学习后，以 Aalto CS-E4740 的先修为据，移除仅用于迁移/元学习的 CS330 先修映射。"
  },
  "A.3.1": {
   "A.2.1": "Stanford CS 224N 要求机器学习基础（CS 221/229/230/124 之一）；多伦多 CSC485 也建议先修 CSC311。",
@@ -72,7 +73,7 @@
   "M.3.1": "相机模型、几何变换、单应矩阵都是线性代数；CMU 16-385 要求 21-240/241。",
   "M.1.4.1": "图像梯度、优化求解要用多元微积分；CMU 16-385 要求 21-259。",
   "M.6.1": "CMU 16-385 要求 basic probability（RANSAC、概率模型）。",
-  "P.1.1": "CMU 16-385 要求编程（15-122）。",
+  "P.1.1": "CMU 16-385 官方 Prerequisites 把 15-122 Principles of Imperative Computation 列为必修先修（两套课程组合里都含 15-122）；15-122 官方 syllabus 先修「5 on the AP Computer Science A exam or passed 15-112 (Fundamentals of Programming) or equivalent」。即 16-385 → 15-122 → 15-112 = P.1.1。 16-385 里 15-122 更直接对应 P.2.2（节点已这样映射）；P.1.1 这一环靠 15-122 自己的先修（15-112/AP CS A）成立，是两跳链。视觉课作业要写代码，P.1.1 属入门层必需。",
   "A.2.1": "多伦多 CSC420 要求 CSC311（机器学习）；识别、检测、分割部分需要，滤波和几何部分不需要。",
   "H.1.3": "卷积、频域滤波来自信号处理。",
   "A.2.3": "现代检测、分割模型基于深度网络。",
@@ -91,10 +92,10 @@
   "M.6.1": "Stanford CS 246 期望概率基础。",
   "D.1.1": "交互日志和特征通常存放在数据库或数据仓库中。",
   "_summary": "UCSD CSE 158/258：不要求机器学习背景，要求 Python、基础优化和线性代数；Stanford CS 246：编程、概率、算法分析。",
-  "M.1.4.1": "UCSD CSE 258 要求 comfortable with basic optimization and linear algebra；矩阵分解用梯度下降求解。"
+  "M.1.4.1": "推荐：建议降为推荐前置（或删除）。「basic optimization」在这门课的 mapped_ids 里已经映射到 M.7.1（优化建模与运筹基础），把同一句再映射成 M.1.4.1 等于重复计算，并把「应懂 basic optimization」放大成「整门多元微积分必修」。若要保留必须，需要一门明确把微积分写进先修的推荐系统课；本次没找到。"
  },
  "A.3.5": {
-  "A.2.3": "Stanford CS236 的课前复习内容是 CNN、RNN、Transformer 与 PyTorch，默认已经学过深度学习。",
+  "A.2.3": "Stanford cs231n（Spring 2026）课表：Lecture 4 Neural Networks and Backpropagation 讲 MLP/反向传播（A.2.3），到 Lecture 13 Generative Models 1（VAE、GAN、自回归）与 Lecture 14 Generative Models 2（diffusion）才讲生成式模型（A.3.5 入门层）。VAE/GAN/扩散都是深度网络的训练方法，反向传播与正则化属入门层必需。 Stanford CS236（节点资源课程）没有 Prerequisites 段落，只在 Sections 栏复习 PyTorch 与 CNNs/RNNs/Transformers（属假定已学的 expected background，而且更像 A.2.3.1）；MIT 6.S191 只要求微积分与线性代数。所以课程证据取 cs231n 的同课顺序，而不是 CS236 的复习栏。",
   "A.2.3.1": "Transformer、U-Net 等架构是生成模型的骨架。",
   "M.6.2.1": "变分推断、隐变量模型来自贝叶斯统计。",
   "M.6.1": "CS236 课前复习概率与线性代数。",
@@ -153,7 +154,7 @@
   "_summary": "CMU 15-418/618：先修 15-213；Stanford CS149：强烈建议先修 CS111 操作系统。"
  },
  "C.2.1": {
-  "P.2.2": "Berkeley CS 162 的先修 61C 含 C 语言；内核和作业都用 C 写，要懂指针和内存布局。",
+  "P.2.2": "Berkeley CS 162 官方课程页先修写 COMPSCI 61B/61C/70。61C（Machine Structures）的 Fall 2026 课表前几讲就是 C、指针/数组/字符串、内存管理（L3 C Intro - Basics、L4 C Intro - Pointers, Arrays, Strings、L5 C Memory Management）。OS 的进程/内存/文件系统作业要用 C 写，P.2.2 属入门层必需。 这是「先修课内容覆盖 Q」的 course 型映射，与项目既有做法一致（CMU 15-213、15-122 也被节点映射到 P.2.2）。注意 Berkeley 目录对 61C 的官方描述没有逐字写 C，C 语言部分取自 61C 课程站课表。CMU 15-410 只把 15-213 写成建议准备（Preparatory coursework），不作必须依据。",
   "F.1.1": "Berkeley CS 162 要求 61B；调度队列、页表、文件系统都是数据结构。",
   "C.1.1": "Berkeley CS 162 要求 61C，CMU 15-410 建议先修 15-213：中断、地址翻译、存储层次是操作系统的硬件背景。",
   "C.1.2": "两门课的先修里都没有体系结构课；多核同步、缓存一致性、TLB 等深入内容会用到。",
@@ -167,7 +168,7 @@
   "_summary": "UW CSE 333：先修 CSE 351；CMU 15-213：先修 15-122。"
  },
  "C.2.3": {
-  "C.2.1": "虚拟化建立在进程隔离、虚拟内存、特权级之上；MIT 6.033 和 OSTEP 都先讲这些再讲虚拟机，容器学习路径也从 Linux 进程和命名空间开始。",
+  "C.2.1": "MIT 6.033（Spring 2022 官方日历）在同一门课里先讲系统抽象与 OS 机制：LEC 1 Modularity, Abstraction, and the Impact of Systems、LEC 3 Virtual memory、LEC 4 Bounded buffers and locks、LEC 5 Threads，LEC 6 才讲 OS structure, Virtual Machines。容器（namespaces/cgroups）本身就是 OS 级隔离，OS 基础属入门层必需。 6.033 的虚拟化讲次只覆盖虚拟机，不含容器运行时（namespaces/cgroups）——容器做法由 C.2.3 的资源补，所以这条边支撑的是「OS 先于虚拟化」，不是「课程教了容器」。2018 版 6.033 的 OCW 日历只按周写 Operating Systems I-IV / Networking / Distributed Systems / Security，逐讲题目只给『Lecture N Outline』链接，取不到可引用的讲题；因此用 2022 版系站（web.mit.edu/6.033/www/）的逐讲题目。原 extra_prereqs 引的正是 6.033 但没写版本与出处。",
   "_summary": "MIT 6.033：先修 6.004 + 6.009，课内先讲操作系统基础再讲虚拟化；iximiuz 容器学习路径从 Linux 进程讲起。"
  },
  "C.2.4": {
@@ -177,7 +178,7 @@
   "_summary": "MIT 6.033：先修 6.004 + 6.009；OSTEP 把持久化放在虚拟化与并发之后。"
  },
  "C.3.1": {
-  "M.1.3": "采样、频谱、信噪比的计算要用积分和对数；MIT 6.02 要求 18.03（其先修含一元微积分）。",
+  "M.1.3": "UCSD ECE 45（Fourier 级数/变换、卷积、瞬态、Laplace、滤波——即 C.3.1 的信号与链路基础）必修先修 ECE 35；ECE 35 官方先修是 MATH 18、MATH 20A–B、PHYS 2A；MATH 20B 官方描述就是「Integral calculus of one variable and its applications … Infinite series」。 MIT 6.02 的先修 18.03 在 MIT 目录里写「Prereq: None. Coreq: Calculus II (GIR)」，不构成到 18.01 的先修链，所以原 extra_prereqs 的链不成立；这里改用 UCSD ECE 45 → ECE 35 → MATH 20B（两跳，均为官方目录原文）。ECE 45 不在节点现有课程里，是按同一内容（信号与通信基础）引入的真实课程。",
   "P.1.1": "MIT 6.02：problem sets involve programming，要求 Python 达到 6.00/6.01 水平。",
   "M.2.1": "MIT 6.02 把 18.03 微分方程列为先修，线性时不变系统的部分会用到。",
   "M.6.1": "误码率、信道模型是概率计算。",
@@ -214,7 +215,7 @@
   "_summary": "UW CSE 452：先修 CSE 332 + 333，建议 CSE 451；MIT 6.5840：先修 6.1910 + 6.1800/6.1810。"
  },
  "C.4.2": {
-  "C.2.2": "Cornell CS5412 假定 solid background doing systems programming；Tufts CS 118 要求 CS 40（机器结构与汇编）。",
+  "C.2.2": "Cornell CS5412 的 FAQ 在「What background is required?」里写课程「assumes that you have a solid background doing systems programming」；同一页「Who should take this class?」又说背景可以来自 OS、分布式、网络、数据库等多种课程（CS4414 最理想，但不是唯一）。属 expected background，没有把任何一门系统编程/并发课列为必修先修。节点收录的 Tufts CS 118 原文虽把 CS 40 列为必修，但 OS/网络/分布式只写「Though not required, having taken … will help significantly」。 课程代码可替代，但 FAQ 明确 every student must have a strong background、require ... experience writing systems software。必须的是系统编程能力，不能因没有唯一课程代码而降级。",
   "C.2.3": "虚拟化和容器是云的基础，课程内会讲。",
   "C.3.2": "Tufts CS 118：学过网络会 help significantly。",
   "C.4.1": "Tufts CS 118 与 Cornell CS5412 都把分布式系统列为有帮助的背景。",
@@ -261,7 +262,7 @@
   "_summary": "Berkeley CS 186：强制先修 61A、61B，建议熟悉 61C；CMU 15-445：先修 15-213 与 C++（这两门偏数据库内核，本节点只取编程基础）。原图的“集合论”两门课都没提。"
  },
  "D.1.2": {
-  "D.1.1": "Berkeley CS 186 先讲 SQL 和关系代数，再讲存储、索引、执行和优化；查询优化处理的就是关系代数表达式。",
+  "D.1.1": "CMU 15-445 课表：#01 Relational Model & Algebra、#02 Modern SQL 在最前，存储从 #03 Database Storage I 起，查询执行在 #14 Query Execution I；Berkeley CS 186（Fall 2026）课表：Lecture 0-1 Introduction and SQL I、2 SQL II … 4 Cost Models and Index、6 Index Files … 11 Iterators and Relational Algebra、12-13 Query Optimization。两门课都在同一门课内先讲关系模型/关系代数与 SQL，再讲存储、索引、执行与查询优化。 原证据写「先讲 SQL 和关系代数，再讲存储、索引、执行和优化」，但 CS 186 2026 秋把关系代数放在第 11 讲（索引之后）。实际成立的顺序是：SQL/关系模型（0-3）→ 存储/索引（4-6）→ 关系代数/迭代器（11）→ 查询优化（12-13），而查询优化确实建在关系代数之上。用 CMU 15-445 的课表则是最干净的「关系模型 + SQL 最先」。",
   "F.1.1": "Berkeley CS 186 强制先修 61B；B+ 树、哈希表、外部排序都是数据结构。",
   "C.1.1": "CMU 15-445 先修 15-213；Berkeley CS 186 要求熟悉 61C：缓冲池、磁盘页、存储层次是数据库内核的硬件背景。",
   "P.2.2": "CMU 15-445 不教 C++17，项目要在 C++ 代码库上完成。",
@@ -312,9 +313,9 @@
   "_summary": "Berkeley Data 8 Foundations of Data Science：专为没学过统计和计算机的学生设计；Berkeley Data 100：强制先修 Data 8 + CS 61A + 线性代数（评估、交叉验证、偏差方差等内容在这门课里）。"
  },
  "D.3.2": {
-  "M.6.1": "Stanford CS 246 期望概率基础（CS 109 水平）；关联度量、采样、局部敏感哈希都是概率论证。",
-  "M.3.1": "Stanford CS 246 期望线性代数基础；降维、PageRank、矩阵分解要用。",
-  "F.1.2": "Stanford CS 246 期望 CS 161 水平的算法分析；挖掘大数据的核心是算法复杂度。",
+  "M.6.1": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。 课程代码 CS109 或 Stat116（或等价）；要求的基础知识 = 基本概率论（条件概率、分布、期望），用于 MinHash/LSH 碰撞分析、采样与聚类评估。节点数据把 CS 246 记成 recommended kind，与 A.3.4 里同一门课记 required 不一致；这里按原文标题 Prerequisites + expected background 判为必须，只到入门层。",
+  "M.3.1": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。 课程代码 Math 51/103/113、CS 205、EE 263 任一（原文说这些 would be much more than necessary）；要求的基础知识 = 矩阵/向量运算与特征分解，用于 SVD 降维、PageRank、矩阵分解。据此不要把「整门线性代数」当成硬门槛的全部内容：入门层只需 M.3.1 的矩阵与特征值部分。",
+  "F.1.2": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。 课程代码 CS 161（原文说 would be much more than necessary）；要求的基础知识 = 会读写渐近复杂度，用于频繁项集挖掘、LSH、聚类算法的代价分析。同理只要求 F.1.2 的渐近分析入门层，不等同整门算法设计。",
   "D.3.1": "数据清洗、探索分析是挖掘之前的步骤。",
   "A.2.1": "聚类、异常检测与机器学习方法重合。",
   "M.6.2": "评估发现的模式是否显著要用统计。",
@@ -327,7 +328,7 @@
   "_summary": "openHPI Knowledge Graphs：Web 技术、统计概率、关系数据库与 SQL；Ontology Engineering 课程：一阶逻辑 + ER/UML 建模。"
  },
  "D.4.2": {
-  "D.4.1": "kgbook 和 openHPI 课程都先讲数据模型与本体，再讲演绎推理（kgbook 第 4 章 Deductive Knowledge）。",
+  "D.4.1": "Stanford CS 520 Knowledge Graphs 的官方日程：Week 1 What is a Knowledge Graph?、Week 2 What are some Knowledge Graph data models?、Week 3 How to design the schema of a Knowledge Graph?、Week 4-5 建图（从结构化/非结构化数据），Week 6 才 What are some inference algorithms for Knowledge Graphs?。数据模型与本体/schema 先讲，推理算法后讲。 openHPI 2020 版 6 周大纲是 Web of Data → 基本语义技术 → SPARQL → 本体 → 图谱应用 → 进阶应用，没有演绎/归纳推理周，不能作 same_course 依据；kgbook（Hogan et al.）第 2-3 章数据模型/本体 → 第 4 章演绎推理只是教材顺序，按规则不算。描述逻辑与规则推理以本体（TBox/ABox）为输入，入门层绕不开 D.4.1。",
   "F.2.4": "描述逻辑推理、规则引擎与自动推理技术相通。",
   "M.6.1": "归纳推理与知识图谱嵌入要用概率统计。",
   "_summary": "openHPI Knowledge Graphs：先讲表示再讲推理；Stanford CS 520 是研究研讨课，没写先修。"
@@ -368,7 +369,7 @@
   "_summary": "MIT 18.404J Theory of Computation（Sipser）：先修 6.042J 或 18.200；没有要求逻辑课。"
  },
  "F.2.2": {
-  "F.2.1": "MIT 18.404J 与 Berkeley CS 172 都在同一门课里先讲自动机再讲图灵机，图灵机的定义和归约方法建立在自动机之上；分成两个技能后，自动机就是前一步。",
+  "F.2.1": "MIT 18.404J 官方 Readings 表按课次给出教学顺序：LEC 1 Introduction, Finite Automata, Regular Expressions（Sipser §1.1）→ LEC 5 The CF Pumping Lemma, Turing Machines（§2.3, 3.1）→ LEC 6 TM Variants, the Church-Turing Thesis（§3.2, 3.3）→ LEC 8 Undecidability（§4.2）。同一门课先讲有限自动机/正则/上下文无关语言，再讲图灵机、不可判定与归约。 原 extra_prereqs 说「MIT 18.404J 与 Berkeley CS 172 在同一门课里先讲自动机再讲可计算性」但没给任何出处；这里补上 18.404J 的课次/章节表，并删去无法验证的 Berkeley CS 172 那半句（CS 172 官方先修只写 COMPSCI 170，没有自动机先修）。",
   "F.1.2": "Berkeley CS 172 先修 CS 170（算法）。",
   "_summary": "MIT 18.404J：先修 6.042J/18.200；Berkeley CS 172：先修 CS 170。两门课都是课内先讲自动机，再讲可计算性。"
  },
@@ -378,13 +379,13 @@
   "_summary": "MIT 18.405J：先修 18.404J；Berkeley CS 278：先修 CS 170。"
  },
  "F.2.4": {
-  "M.5.2": "Iowa CS:4980 自动推理的先修 CS:2210 离散结构包含逻辑；Edinburgh INFR10087 建议先熟悉命题与谓词逻辑。SAT、归结都直接在逻辑公式上操作。",
+  "M.5.2": "Iowa CS:4980 Introduction to Automated Reasoning 的官方 syllabus 自述教学顺序：先从命题逻辑与 SAT 开始，再进入一阶逻辑/SMT 的理论，最后是任意一阶公式的可满足性；同一页还把 CS:2210（Discrete Structures，含逻辑）与 CS:2230 写成必修先修（最低 C-）。SAT、归结、CNF 直接作用在命题/谓词逻辑公式上，属本节点入门层核心。 双证据：同课顺序 + 必修先修课。节点收录的 Edinburgh INFR10087 先修原文写的是「Prior familiarity with propositional and predicate logic is recommended」（其 prereq_kind 因此是 recommended），属推荐措辞，不单独作必须依据；也不能拿「expected background」替代这里的同课顺序证据。",
   "M.5.3": "Iowa CS:4980 先修 CS:2210 离散结构（含证明方法与归纳）；可靠性、完备性证明都要用。",
   "F.1.1": "Iowa CS:4980 还要求 CS:2230 数据结构；实现 DPLL/CDCL 求解器时用得上，入门理解不依赖它。",
   "_summary": "Iowa CS:4980 Introduction to Automated Reasoning：先修 CS:2210 离散结构（逻辑、证明方法）和 CS:2230 数据结构；Edinburgh INFR10087 Automated Reasoning：本校无先修，建议熟悉命题与谓词逻辑。"
  },
  "F.3.1": {
-  "P.1.1": "Berkeley CS 61A 的先修写了等同 AP CS 的编程经验；λ 演算要拿程序来类比理解。",
+  "P.1.1": "[1] UT Austin CS 345H 官方 syllabus：先修 CS 429 或 429H，C- 以上；[2] UT CS 429 课程页：必需先修 C S 311（离散数学）与 C S 314（Data Structures）；[3] UT 官方课程目录：C S 314 的先修是 Computer Science 312 or 312H（C- 以上），C S 312 是「First part of a two-part sequence in programming. Fundamental concepts of structured programming; procedures and data structures …」，即 P.1.1 的内容。 三跳链，每环都有官方页可核。Berkeley CS 61A 在节点里只是 recommended（它的先修段写的是「Programming experience equivalent to AP CS」），不能单独当必须依据，所以没用它。λ 演算要用程序/求值器来体会，P.1.1 属入门层必需。",
   "M.5.3": "结构归纳在证明归约性质时常用。",
   "P.1.3": "写过函数式程序，λ 演算会很自然。",
   "_summary": "Berkeley CS 61A：建议有编程经验；UT Austin CS 345H：先修 CS 429（计算机组成）。"
@@ -398,7 +399,7 @@
  },
  "F.3.3": {
   "M.5.3": "CMU 17-355 程序分析要求 15-251（离散结构与理论）；不变式证明就是归纳。",
-  "P.1.1": "验证的对象是程序；CMU 17-355 要求 15-150 或 15-214。",
+  "P.1.1": "CMU 17-355 Program Analysis（本节点课程）先修 15-251 与（15-150 或 15-214）；15-150 官方页先修（15-151/21-127/21-128）与（15-112 或 15-122）；15-122 官方 syllabus 先修「5 on the AP Computer Science A exam or passed 15-112 (Fundamentals of Programming) or equivalent」。即 17-355 → 15-150 → 15-112 = P.1.1。 两跳链（15-150 → 15-112 这一环是必修先修）；走 15-214 那条分支同样落到 15-122 → 15-112。写 Hoare 逻辑、不变式、契约都要读程序、写小程序，入门层绕不开 P.1.1。",
   "M.5.2": "Hoare 逻辑和时序逻辑在 15-414 课内现讲，但有逻辑基础会更快。",
   "F.2.1": "15-251 含自动机，模型检查用状态机描述系统。",
   "P.1.3": "17-355 可用 15-150（函数式）满足编程要求。",
@@ -421,7 +422,7 @@
   "_summary": "UCSD ECE 25 Introduction to Digital Design：Prerequisites: none，作为第 1 步的起点。原图的“数理逻辑”两门课都没提，布尔代数在课内讲。"
  },
  "H.1.3": {
-  "M.1.3": "卷积积分、傅里叶变换、拉普拉斯变换都是积分运算；UCSD ECE 45 的先修 ECE 35 要求一元微积分。",
+  "M.1.3": "节点里已引的 UCSD ECE 45（Signals and Systems，其先修 ECE 35 已被映射为 H.1.1）官方先修 ECE 35；ECE 35 官方先修 MATH 18、MATH 20A–B（MATH 20B = 一元积分）。卷积积分、傅里叶/拉普拉斯变换、滤波都直接做积分。 两跳链，起点是本节点已引的 ECE 45（节点把它映射成 H.1.1）。节点收录的 Stanford EE 102A 先修原文写的是『Recommended Prerequisite — Complete ANY of the following Courses: CME102 / MATH53』，属推荐措辞，不能作必须依据。",
   "M.2.1": "Stanford EE 102A 建议先修常微分方程（CME 102）。",
   "H.1.1": "UCSD 把信号与系统（ECE 45）放在电路（ECE 35）之后。",
   "M.1.9": "傅里叶级数与变换在课内会讲。",
@@ -434,7 +435,7 @@
  },
  "H.2.2": {
   "H.2.1": "UMBC CMPE 691 先修 CMPE 317（FPGA 课）；MIT 6.6040 先修 6.2050。",
-  "_summary": "UMBC CMPE 691 Hardware Design Verification：先修 FPGA 课；MIT 6.6040：先修 6.2050 + 6.3000。"
+  "_summary": "硬件设计验证：UMBC CMPE 691 明确先修 CMPE 317 (FPGA Course)。综合与布局布线已归入 VLSI，验证主线改用可直接阅读的 UVM/SBY 材料。"
  },
  "H.2.3": {
   "H.1.1": "MIT 6.S092 建议先懂基础电路分析（电阻、电感、电容）；UCSC 的课程也说电气基础有帮助。",
@@ -480,7 +481,7 @@
   "_summary": "Chalmers EDA223 Real time systems：要求 C 语言面向机器编程，建议并发编程与操作系统；UT Austin ECE 445M：先修 ECE 306、312、319K。"
  },
  "H.4.1": {
-  "M.2.1": "系统动态由微分方程描述；控制课程都以微分方程为前提。",
+  "M.2.1": "UCSD MAE 143B（Linear Control，本节点课程）官方先修 MAE 143A；MAE 143A（Signals and Systems）官方先修 MATH 20D 或 21D、MATH 20E、MATH 18/20F/31AH；MATH 20D 就是「Introduction to Differential Equations」。控制课的传递函数、Routh-Hurwitz、根轨迹都以二阶/高阶微分方程为基础。 MIT 6.3100（本节点另一门课）只写 Physics II 与 18.06，不含微分方程，所以依据取 UCSD 链。原 extra_prereqs 只写「MAE 143B 的先修 MAE 143A 目录原文要求 MATH 20D」但没有 URL，这里补齐整条链（143B → 143A → MATH 20D）并换成可核的目录页。",
   "M.3.1": "MIT 6.3100 要求 18.06（线性代数）；状态空间、可控性都是矩阵问题。",
   "H.1.3": "UCSD MAE 143B 在频域分析，以信号与系统为基础。",
   "_summary": "MIT 6.3100 Dynamical System Modeling and Control Design：先修 Physics II + 18.06；UCSD MAE 143B Linear Control：频域方法。"
@@ -528,7 +529,7 @@
   "_summary": "MIT 6.805 / STS.085：There are no formal prerequisites。作为第 1 步的起点。"
  },
  "I.2.2": {
-  "_summary": "Penn State ENGL 202C Technical Writing 的先修是大一写作课（不在本技能树中）。作为第 1 步的起点。"
+  "_summary": "技术沟通与写作：Penn State ENGL202C 有 3 学分课程，正式先修是大学写作与学期要求，属于树外通用写作基础；不设置技术技能硬门槛。"
  },
  "I.2.3": {
   "M.6.2": "Maryland CMSC634 Empirical Research Methods 建议先修统计入门；实验设计和效度分析要用统计推断。",
@@ -583,7 +584,7 @@
  },
  "M.1.8": {
   "M.1.4.1": "柯西–黎曼方程是偏导数关系，复积分是线积分；MIT 18.04 先修 18.02。",
-  "M.1.5": "解析函数的幂级数、洛朗级数展开以级数为基础。",
+  "M.1.5": "MIT 课程目录先修链：[1] 18.04 Complex Variables 的 Prereq 是 Calculus II (GIR) 与 (18.03 或 18.032)；[2] Calculus II 即 18.02，其 Prereq: Calculus I (GIR)；[3] Calculus I 即 18.01，官方描述含「Infinite series: geometric, p-harmonic, simple comparison tests, power series for some elementary functions」。复分析入门层的 Taylor/Laurent 展开直接建立在幂级数与收敛判别上（18.04 自己的课程描述就写着 singularities, Taylor and Laurent series）。18.03 不参与本链：它的目录原文是「Prereq: None. Coreq: Calculus II (GIR)」。 两跳链，每环都是 MIT 课程目录写明的必修先修。链只支撑 M.1.5 的入门层（数项级数、幂级数、收敛判别）；M.1.5 里的一致收敛/逐项运算属 M.1.6 实分析，不在本链证据内。原 extra_prereqs 写「MIT 18.04 先修 18.02 与 18.03，二者以含无穷级数的一元微积分 18.01 为先修」，对 18.03 不成立（18.03 无先修、只有 Coreq），本条目已改掉。",
   "M.2.1": "MIT 18.04 也要求 18.03 微分方程，主要用在应用部分。",
   "M.1.6": "严格版本（MIT 18.112）要求实分析。",
   "_summary": "MIT 18.04：先修 18.02 + 18.03；更严格的 18.112 先修 Analysis I。",
@@ -591,7 +592,7 @@
  },
  "M.1.9": {
   "M.1.5": "傅里叶级数本身是函数项级数，收敛性要用级数知识。",
-  "M.1.3": "傅里叶系数是定积分，要会分部积分。",
+  "M.1.3": "[1] MIT 18.103 Fourier Analysis 官方 syllabus 先修 18.100 Analysis I（另需 18.06/18.700/18.701）；[2] 18.100A/B Real Analysis 的 Prereq: Calculus II (GIR)，即 18.02；[3] 18.02 的 Prereq: Calculus I (GIR)，即 18.01，其描述含定积分、微积分基本定理、积分技巧、反常积分。18.103 自述「the systematic study of Fourier series requires the Lebesgue integral」，傅里叶级数本身就建在积分理论上。 三跳链；[1] 出自 18.103 的 OCW syllabus，[2][3] 出自 MIT 课程目录（同一页）。没有用「18.103 课内先教积分」这种说法——该课是把积分理论当先修。UCSD MATH 144（同节点另一门课）只要实分析 MATH 140B/142B，同样不直接到一元积分，故不作依据。",
   "M.3.1": "正交展开就是在内积空间里投影；MIT 18.103 要求线性代数。",
   "M.1.6": "严格的收敛理论（MIT 18.103、UCSD 144）要求实分析，入门计算不需要。",
   "M.1.8": "傅里叶变换的很多计算用到留数。",
@@ -778,7 +779,7 @@
   "M.6.1": "EE364a 和 Berkeley EE 227BT 都写了概率，主要用在统计估计类应用。",
   "P.2.3": "EE364a 作业用 CVXPY，要求会基本的 Python。",
   "_summary": "Stanford EE364a：线性代数 + 概率，Python 用于 CVXPY；Berkeley EE 227BT：Math 54 + Stat 2；UCSD MATH 173A：MATH 20C + MATH 18。",
-  "M.1.4.1": "一阶条件、KKT 都直接用梯度；UCSD MATH 173A（凸性、最优性条件、对偶）要求 MATH 20C 多元微积分。；二阶条件判断凸性要用 Hessian。"
+  "M.1.4.1": "UCSD MATH 173A 是一门凸优化课（凸集/凸函数、支撑超平面、线性与二次规划的最优性条件、对偶、内点法），官方先修写 MATH 20C（或 31BH）与 MATH 18/31AH；而 MATH 20C 的官方描述正是偏微分、极值与二重积分。凸性判定、梯度/Hessian、二阶条件用到的就是 M.1.4.1 的内容。 节点收录的 Stanford EE364a 先修原文只写「Good knowledge of linear algebra (as in EE263) and probability」，不要求微积分；Berkeley EE 227BT 的原文只要 Mathematics 54 与 Statistics 2。所以这条边的课程证据只有 MATH 173A。映射只取 MATH 20C 的偏微分部分（M.1.4.1），不扩成 M.1.4.4（多元积分）或整门微积分。"
  },
  "M.7.3": {
   "M.7.2": "UCSD MATH 173B 要求 173A（凸优化）；非凸方法和最优性条件建立在凸优化概念上。",
@@ -793,7 +794,7 @@
   "_summary": "UCSD MATH 173B：先修 DSC 123A 或 MATH 173A；Princeton ELE522 页面未写先修。"
  },
  "M.7.5": {
-  "M.7.1": "整数规划的分支定界要反复解线性规划松弛；UCSD MATH 171A 把整数规划、网络流放在线性规划之后讲。",
+  "M.7.1": "本节点资源 MIT 15.053 的官方 syllabus 写明课程结构：先 7 讲 Linear Programming Theory and Applications，再 5 讲 Integer Programming Theory、3 讲 Network Flows and Heuristics、2 讲 Decision Trees，并明说「integer programming concepts do build on linear programming」；同一 syllabus 的课次表里 L10 才是 Introduction to integer programming。UCSD MATH 171A 也是先讲线性规划（单纯形、对偶），再把整数规划/网络流列为后续选题。 同课顺序证据来自模块讲数（LP 7 讲 → IP 5 讲）加一句明写的 build on，另可用 MATH 171A 的目录描述顺序互证。15.053 官方写「This subject has no formal prerequisites」，所以这条边不可能是 course 型。OCW 15.053 的 calendar 页取回 301 死循环，故未用分周日历，而用 syllabus 的模块讲数。",
   "M.5.5": "网络流、匹配等组合结构用图来描述；MIT 15.053 在课内介绍。",
   "F.1.2": "动态规划、近似算法与算法分析相通。",
   "_summary": "UCSD MATH 171A：先修 MATH 18 + 20C；MIT 15.053：This subject has no formal prerequisites。"
@@ -999,12 +1000,11 @@
   "_summary": "Stanford CS 155：操作系统 + 网络协议 + 编程；Berkeley CS 161：先修 61B、61C、70。"
  },
  "S.2.3": {
-  "C.3.2": "WUSTL CSE 571S（含无线网络安全两讲）先修 CSE 473S 计算机网络。",
-  "C.3.3": "无线链路和蜂窝网络的细节在无线网络课里讲。",
+  "C.3.2": "移动应用网络通信的有用基础；收窄后的平台与权限入门不强制学完整网络协议课。",
   "S.2.2": "无线安全是网络安全的延伸。",
   "P.5.2": "移动应用安全要懂移动开发。",
   "S.1.1": "安全原则与威胁模型。",
-  "_summary": "WUSTL CSE 571S Network Security：先修 CSE 473S；Berkeley CS 161 含 802.11/WPA2 章节。"
+  "_summary": "收窄为移动应用与设备安全。APUS ISSC412 有移动应用安全课程建制；无线协议背景不再作为整张卡片的硬门槛，平台/权限/存储与通信保护按 OWASP MAS 学习。"
  },
  "S.2.4": {
   "S.1.1": "BU MET CS 690 Network and Cloud Security 先修 MET CS 595 / CY 100 网络安全基础；云安全的身份、权限与威胁建模都建立在安全原理上。",
@@ -1017,7 +1017,7 @@
   "_summary": "BU MET CS 690 Network and Cloud Security：先修计算机网络（MET CS 535/625）和网络安全基础（MET CS 595/CY 100）；UT Dallas CS 6343 Cloud Computing：先修 CS 5343 算法与数据结构、CS 5348 操作系统。"
  },
  "S.2.5": {
-  "H.2.1": "University of Idaho ECE 4040/5040 要求修过数字逻辑并能读写基础的 Verilog/SystemVerilog；课程以 RTL 实验为主。",
+  "H.2.1": "推荐：建议降为推荐前置（虚线）。精确区分：课程建议先学的课程代码 = ECE 2400（数字逻辑 = H.1.2）；要求的基础知识 = 基础 Verilog/SystemVerilog RTL 读写（对应 H.2.1 的 RTL/仿真入门层，不含综合/时序收敛）。若要保留必须，需另找一门把 HDL/FPGA 明确列进 Prerequisites 的安全课；本次没找到，故不为清零而保留无据的必须边。另注：节点把同一段的 H.1.2 记成 required，口径上与本条不一致。",
   "H.3.2": "嵌入式与物联网部分要懂固件、驱动与启动流程。",
   "S.1.1": "安全原则与威胁模型。",
   "_summary": "University of Idaho ECE 4040/5040 Hardware Security（已用 curl 核实）：数字逻辑 + Verilog，RTL 经验推荐，明确不要求密码学背景。"
@@ -1107,7 +1107,7 @@
  },
  "V.1.3": {
   "V.1.1": "Stanford CS 348B 先修 CS 248（计算机图形学）；CMU 15-468 也以图形学基础为前提。",
-  "M.1.4.1": "CMU 15-468 要求多元微积分（渲染方程是多维积分）。",
+  "M.1.4.1": "CMU 15-468 Physics-based rendering 官方 Prerequisites 明确要求多元微积分，并给出课程粒度（21-256/21-268/21-259/21-269/21-254）。渲染方程是多维积分，BRDF、Jacobian、二阶导数在入门层就要用。 同一句里的多元微积分也覆盖 M.1.4.4（多重积分），那条边不在本次审计范围；这里只判 M.1.4.1（偏导/雅可比/二阶导）。节点已把该句映射到 P.1.1/M.3.1/M.4.1，漏了 M.1.4.1。",
   "M.8.4": "蒙特卡洛积分是课内核心内容，先学过会轻松很多。",
   "H.1.3": "Stanford CS 348B 建议先学傅里叶分析或数字信号处理（采样与走样）。",
   "M.8.5": "可微渲染要用自动微分。",
@@ -1183,8 +1183,7 @@
   "M.2.1": "18.S096 列 18.03 微分方程为先修，用于 Black-Scholes 与随机过程部分，超出入门内容。",
   "M.6.4": "金融时间序列建模。",
   "P.1.1": "MIT 15.450 要求基本编程能力。",
-  "D.1.1": "支付与账本系统工程要用数据库，两门课都没有列为先修。",
-  "_summary": "MIT 18.S096 Topics in Mathematics with Applications in Finance：先修 18.01、18.02、18.03、18.05 或 18.440、18.06；MIT 15.450 Analytics of Finance：先修 15.401（金融，树外），要求概率、统计和基本编程。"
+  "_summary": "收窄为计算金融：MIT 18.S096 的概率统计、线性代数先修支持建模与风险计算；不再把数据库/支付系统知识列为本技能推荐。"
  },
  "X.2.3": {
   "M.6.2": "CMU 05-823 的部分阅读材料假定具备统计分析背景；CMU 05-499/899 要求统计和数据分析基础。",
@@ -1227,12 +1226,13 @@
  },
  "X.3.3": {
   "M.3.1": "MIT 18.337 写理解线性代数是“essential”。",
-  "M.1.3": "MIT 18.337 写理解微积分是“essential”；PINN 损失、伴随方法都用到微积分。",
+  "M.1.3": "推荐：三跳行政先修链不足以说明积分是 SciML 入门不可绕过的概念。把官方明确要求的 calculus 映射到求导基础 M.1.2；积分用于深入求解器和模型分析，推荐。",
   "P.1.1": "MIT 18.337 写编程是“essential”。",
   "A.2.3": "Northwestern SciML 建议熟悉机器学习，深度学习内容在前几周复习。",
   "M.2.1": "Northwestern SciML 在前几周复习微分方程。",
   "M.8.3": "数值求解器是可微仿真的基础，但两门课都不把它列为先修。",
   "M.8.5": "自动微分是 PINN 与可微求解的核心工具。",
-  "_summary": "MIT 18.337J Parallel Computing and Scientific Machine Learning：微积分、线性代数和编程为“essential”，其余内容课内讲；Northwestern ELEC_ENG 395/495 Scientific ML：无硬性先修，优化、深度学习和微分方程在前几周复习。"
+  "_summary": "MIT 18.337J Parallel Computing and Scientific Machine Learning：微积分、线性代数和编程为“essential”，其余内容课内讲；Northwestern ELEC_ENG 395/495 Scientific ML：无硬性先修，优化、深度学习和微分方程在前几周复习。",
+  "M.1.2": "MIT 18.337J 明确说 calculus is essential；自动微分、损失梯度和微分方程求解的入门层需要求导。"
  }
 }

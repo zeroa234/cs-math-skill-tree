@@ -98,7 +98,7 @@ results.push(await audit("help-dialog", DESK, "light", "", (p) => p.click("#btn-
 const guideDrawn = (p) => p.waitForSelector("dialog.guide[open] .markmap-node", { timeout: 8000 });
 results.push(await audit("guide-light", DESK, "light", "#skill/M.3.1/guide", guideDrawn));
 results.push(await audit("guide-dark", DESK, "dark", "#skill/S.1.2/guide", guideDrawn));
-results.push(await audit("phone-guide", PHONE, "light", "#skill/P.5.4/guide", guideDrawn));
+results.push(await audit("phone-guide", PHONE, "light", "#skill/P.5.3/guide", guideDrawn));
 results.push(await audit("phone-overview", PHONE, "light", ""));
 results.push(await audit("phone-map-panel", PHONE, "light", "#skill/P.1.1"));
 results.push(await audit("reflow-320", { width: 320, height: 640 }, "light", ""));

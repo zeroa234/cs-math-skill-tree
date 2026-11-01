@@ -69,5 +69,20 @@
    "evidence": "CS224N 先修第一条 'Proficiency in Python'（作业用 NumPy 与 PyTorch）；CS231n 同样要求 Python。"
   }
  ],
- "notes": "A.2.3 记 recommended：没有任何一门架构课把“深度学习”写成硬先修。CS224N 原文说 'If you already have basic machine learning and/or deep learning knowledge, the course will be easier; however it is possible to take CS224N without it'，属于“有帮助但非必需”；CS231n 的先修只到数学 + Python + 概率。extra_prereqs 里的 A.2.1 反而是硬要求（CS224N 明确列 ML 基础课）。资源用 d2l 而不是 CS231n 讲义：CS231n notes 首页目前只到 Module 2（卷积网络）与 RNN 一节，注意力/Transformer/自监督那部分还标着 '(Releasing May 14)'，无法当作“已可读”的覆盖证据；d2l 第 7–11 章把 CNN/RNN/注意力/Transformer 成章铺开，更适合“架构谱系”。父节点 A.2.3 用的是 Nielsen 的在线书（不重复）。GNN 缺口的说明已写进 covers；若需要 GNN 可另找专书，本轮未核验合适站点。"
+ "notes": "A.2.3 记 recommended：没有任何一门架构课把“深度学习”写成硬先修。CS224N 原文说 'If you already have basic machine learning and/or deep learning knowledge, the course will be easier; however it is possible to take CS224N without it'，属于“有帮助但非必需”；CS231n 的先修只到数学 + Python + 概率。extra_prereqs 里的 A.2.1 反而是硬要求（CS224N 明确列 ML 基础课）。资源用 d2l 而不是 CS231n 讲义：CS231n notes 首页目前只到 Module 2（卷积网络）与 RNN 一节，注意力/Transformer/自监督那部分还标着 '(Releasing May 14)'，无法当作“已可读”的覆盖证据；d2l 第 7–11 章把 CNN/RNN/注意力/Transformer 成章铺开，更适合“架构谱系”。父节点 A.2.3 用的是 Nielsen 的在线书（不重复）。GNN 缺口的说明已写进 covers；若需要 GNN 可另找专书，本轮未核验合适站点。",
+ "required_evidence": [
+  {
+   "id": "A.2.3",
+   "basis": "same_course",
+   "sources": [
+    {
+     "url": "https://cs231n.stanford.edu/schedule.html",
+     "quote": "Lecture 3: Regularization and Optimization … Lecture 4: Neural Networks and Backpropagation … Lecture 5: Image Classification with CNNs … Lecture 7: Recurrent Neural Networks … Lecture 8: Attention and Transformers"
+    }
+   ],
+   "reason": "Stanford cs231n（Spring 2026）课表：Lecture 3 Regularization and Optimization、Lecture 4 Neural Networks and Backpropagation 在前；Lecture 5 Image Classification with CNNs、Lecture 7 Recurrent Neural Networks、Lecture 8 Attention and Transformers 在后。同一门课先讲优化/正则、MLP 与反向传播（A.2.3），再讲各类架构（A.2.3.1）。",
+   "limits": "CS224N / CS231n 的先修段都没有把「深度学习」写成必修先修（CS224N 只说已有 ML/DL 基础会更轻松，但可以不带），所以只能靠同课顺序；原 candidate_check 给的建议是 recommended，与本判定方向一致。节点资源 d2l 也是按「先训练/反向传播、再架构」组织章节，但那属教材顺序，不作依据。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

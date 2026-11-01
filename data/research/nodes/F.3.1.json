@@ -7,7 +7,8 @@
   "lang": "en",
   "free": true,
   "covers": "自成体系的公开在线讲义：基础部分讲名字、环境、作用域、参数传递、函数调用求值、递归与尾递归、高阶函数、lambda 函数；然后分范式展开——函数式编程（Scheme：表达式、递归、高阶函数、函数对象）与声明式/逻辑编程（Logic Programming、Prolog：事实规则、列表、算术）；最后是理论章 Lambda Calculus（非终止计算、正规序求值 normal-order evaluation、替换、Church 数、递归、'Equivalent Models'（与图灵机等其他计算模型等价）、λ 演算的操作语义与形式类型系统）。正对应节点的函数式/逻辑式计算、替换、求值策略与计算模型。",
-  "verified": true
+  "verified": true,
+  "note": "资源讲义原为 University of Michigan EECS 490 Programming Languages 编写；EECS 390 Programming Paradigms 是相关课程，不能把讲义归成同一门课。"
  },
  "zh_alt": null,
  "courses": [
@@ -42,5 +43,28 @@
    "evidence": "UT Austin CS 345H 必修 CS 429（Computer Organization and Architecture，映射 C.1.1 组成原理）。"
   }
  ],
- "notes": "原图建议前置 P.1.1 的证据是'建议'级别而非硬性必修：Berkeley 官方目录把 'Programming experience equivalent to ... AP Computer Science' 列在 Prerequisites 里，但同一页面的课程说明又写 'While CS 61A does not require any prior programming experience, students with little or no programming experience often find CS 61A to be very challenging'，因此记 recommended。两门课都没把 P.1.1 写成硬性先修：UT Austin CS 345H 要的是计算机组成课 CS 429（C.1.1），说明这门课假定你会写代码但不以'程序设计基础'课为先修。资源选 Michigan EECS 390 的讲义站而不是某门课的课页：它把函数式、逻辑式、λ 演算三块都写成了可在线读的正文（已逐节核对目录与 theory.html 的 Lambda Calculus 一章），免费、无视频但结构完整。EECS 390 讲义站没有写课程先修要求（页面里检索不到），所以先修证据取自 Berkeley 与 UT Austin。"
+ "notes": "原图建议前置 P.1.1 的证据是'建议'级别而非硬性必修：Berkeley 官方目录把 'Programming experience equivalent to ... AP Computer Science' 列在 Prerequisites 里，但同一页面的课程说明又写 'While CS 61A does not require any prior programming experience, students with little or no programming experience often find CS 61A to be very challenging'，因此记 recommended。两门课都没把 P.1.1 写成硬性先修：UT Austin CS 345H 要的是计算机组成课 CS 429（C.1.1），说明这门课假定你会写代码但不以'程序设计基础'课为先修。资源选 Michigan EECS 390 的讲义站而不是某门课的课页：它把函数式、逻辑式、λ 演算三块都写成了可在线读的正文（已逐节核对目录与 theory.html 的 Lambda Calculus 一章），免费、无视频但结构完整。EECS 390 讲义站没有写课程先修要求（页面里检索不到），所以先修证据取自 Berkeley 与 UT Austin。",
+ "required_evidence": [
+  {
+   "id": "P.1.1",
+   "basis": "chain",
+   "sources": [
+    {
+     "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/syllabus/",
+     "quote": "[1] Prerequisites CS 345H: CS 429 or CS 429H, with a grade of C- or better."
+    },
+    {
+     "url": "https://www.cs.utexas.edu/~sidchat/2026fall/429.html",
+     "quote": "[2] The following coursework is required, with a grade of at least C- in each. Discrete Math for Computer Science: C S 311 or C S 311H. Data Structures: C S 314 or C S 314H."
+    },
+    {
+     "url": "https://catalog.utexas.edu/archive/2025-26/general-information/coursesatoz/c-s/c-s.pdf",
+     "quote": "[3] C S 314. Data Structures. … Prerequisite: Computer Science 312 or 312H with a grade of at least C-. ；C S 312. Introduction to Programming. First part of a two-part sequence in programming. Fundamental concepts of structured programming; procedures and data structures …"
+    }
+   ],
+   "reason": "[1] UT Austin CS 345H 官方 syllabus：先修 CS 429 或 429H，C- 以上；[2] UT CS 429 课程页：必需先修 C S 311（离散数学）与 C S 314（Data Structures）；[3] UT 官方课程目录：C S 314 的先修是 Computer Science 312 or 312H（C- 以上），C S 312 是「First part of a two-part sequence in programming. Fundamental concepts of structured programming; procedures and data structures …」，即 P.1.1 的内容。",
+   "limits": "三跳链，每环都有官方页可核。Berkeley CS 61A 在节点里只是 recommended（它的先修段写的是「Programming experience equivalent to AP CS」），不能单独当必须依据，所以没用它。λ 演算要用程序/求值器来体会，P.1.1 属入门层必需。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

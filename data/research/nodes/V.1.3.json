@@ -60,13 +60,22 @@
    "id": "H.1.3",
    "kind": "recommended",
    "evidence": "Stanford CS 348B 写 'Recommended: Fourier analysis or digital signal processing'"
-  },
-  {
-   "id": "M.1.4.1",
-   "kind": "required",
-   "basis": "course",
-   "evidence": "CMU 15-468 要求多元微积分。"
   }
  ],
- "notes": "V.1.1 判 supported：Stanford CS 348B 硬性先修 CS 248（Stanford 的图形学课），CMU 15-468 则写明『修过任意一门计算机图形学课（15-362、15-662 等）即满足先修』。M.8.4（蒙特卡洛方法）判 not_mentioned：两门课都把 Monte Carlo 当成课内内容教（15-468 要自己写 Monte Carlo renderer，CS348B 有 direct/global illumination 的 MC 算法），没有把它列为先修；也没有哪门课要求先修概率统计。资源侧选 PBRT 在线全文：免费、可整本按章读、第 2 章就是蒙特卡洛积分，第 13-14 章是光传输与体积渲染，正对节点前两项。缺口写清楚：可微/逆向渲染不在书里——CMU 15-468 的公开课程描述明确覆盖 'differentiable, inverse, and neural rendering'，可作该子题的入口（但课件在 Canvas，非在校生只能看大纲）；『物理仿真』属于基于物理的动画（15-462 大纲里的 differential equations / time integration / physically-based animation），PBRT 不涉及。"
+ "notes": "V.1.1 判 supported：Stanford CS 348B 硬性先修 CS 248（Stanford 的图形学课），CMU 15-468 则写明『修过任意一门计算机图形学课（15-362、15-662 等）即满足先修』。M.8.4（蒙特卡洛方法）判 not_mentioned：两门课都把 Monte Carlo 当成课内内容教（15-468 要自己写 Monte Carlo renderer，CS348B 有 direct/global illumination 的 MC 算法），没有把它列为先修；也没有哪门课要求先修概率统计。资源侧选 PBRT 在线全文：免费、可整本按章读、第 2 章就是蒙特卡洛积分，第 13-14 章是光传输与体积渲染，正对节点前两项。缺口写清楚：可微/逆向渲染不在书里——CMU 15-468 的公开课程描述明确覆盖 'differentiable, inverse, and neural rendering'，可作该子题的入口（但课件在 Canvas，非在校生只能看大纲）；『物理仿真』属于基于物理的动画（15-462 大纲里的 differential equations / time integration / physically-based animation），PBRT 不涉及。",
+ "required_evidence": [
+  {
+   "id": "M.1.4.1",
+   "basis": "course",
+   "sources": [
+    {
+     "url": "https://imaging.cs.cmu.edu/15-468/",
+     "quote": "Prerequisites — This course requires familiarity with: programming (at the level of 15-112, 15-122, 15-110, or 02-201), … multivariable calculus (at the level of 21-256, 21-268, 21-259, 21-269, or 21-254)."
+    }
+   ],
+   "reason": "CMU 15-468 Physics-based rendering 官方 Prerequisites 明确要求多元微积分，并给出课程粒度（21-256/21-268/21-259/21-269/21-254）。渲染方程是多维积分，BRDF、Jacobian、二阶导数在入门层就要用。",
+   "limits": "同一句里的多元微积分也覆盖 M.1.4.4（多重积分），那条边不在本次审计范围；这里只判 M.1.4.1（偏导/雅可比/二阶导）。节点已把该句映射到 P.1.1/M.3.1/M.4.1，漏了 M.1.4.1。"
+  }
+ ],
+ "prereq_recheck": "2026-11-01 对无直接 required 映射的边重新读官方原文；采用 required_evidence 的结构化来源，历史 extra_prereqs 仅作为检索线索。"
 }

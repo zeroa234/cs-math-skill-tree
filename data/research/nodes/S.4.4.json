@@ -1,15 +1,23 @@
 {
  "id": "S.4.4",
  "resource": {
-  "tier": "website",
-  "title": "MITRE ATT&CK®（官方知识库，免费在线：Matrices / Tactics / Techniques / Mitigations / Detections / CTI）",
+  "title": "MITRE ATT&CK®（官方知识库：Matrices / Tactics / Techniques / Mitigations / Detections / CTI）",
   "url": "https://attack.mitre.org/",
+  "tier": "website",
   "lang": "en",
   "free": true,
-  "covers": "威胁情报与对手行为建模（Groups、Software、Campaigns，即 CTI 部分）、按战术-技术组织的攻击行为目录（Enterprise/Mobile/ICS 三套矩阵）、检测工程侧（Defenses 下的 Detection Strategies、Analytics、Data Components，说明每个技术该看哪些数据源与日志组件）、缓解（Mitigations）；结合 TTP 做攻防评估与演练（红队模拟哪些技术、蓝队覆盖到哪里），并可用来给检测覆盖率定度量口径。",
-  "verified": true
+  "covers": "对手行为与威胁情报建模（Groups、Software、Campaigns 的 CTI 部分）、按战术-技术组织的攻击行为目录（Enterprise/Mobile/ICS 三套矩阵）、检测工程侧（Defenses 下的 Detection Strategies、Analytics、Data Components，说明每个技术该看哪些数据源与日志组件）、缓解（Mitigations）；可用来把红队模拟与蓝队覆盖对齐、给检测覆盖率定口径。它是知识库不是课程：没有练习、没有日志/SIEM 实操、没有度量方法，这三块见 notes 的补充。",
+  "access": "免费在线（MITRE 官方）；矩阵可按平台筛选，技术与缓解页可深链；无注册。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "title": "Microsoft Sentinel 官方中文文档：检测、调查、响应与威胁搜寻",
+  "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/",
+  "tier": "website",
+  "lang": "zh",
+  "free": true,
+  "access": "文档与教程免费；实际工作区、日志摄取、存储与自动化按 Azure 订阅计费，动手前需确认额度。",
+  "covers": "中文文档按 SOC 工作流组织：日志接入与规范化（数据连接器、规范化和分析数据）、分析规则与告警、威胁情报与 ATT&CK 框架、UEBA、事件调查与案例管理、KQL 搜寻、自动化规则与攻略（playbook）、工作簿与监控。适合把“日志关联→检测→调查→响应”走一遍；通用演练方法、检测覆盖率度量与厂商无关的检测工程不在其中。"
+ },
  "courses": [
   {
    "school": "Texas A&M University-San Antonio",
@@ -50,5 +58,9 @@
    "evidence": "TAMUSA CSEC 4326 先修 CSEC 4324 Penetration Testing"
   }
  ],
- "notes": "两次检索找到的“安全运营/SOC/检测工程”课程几乎全是厂商或付费培训（SANS SEC450/SEC555、TCM SOC101、CyberDefenders、Coursera Packt 课），没有可核实的大学课程页，只有 Texas A&M-San Antonio 的 CSEC 4326 Security & Operation Practicum 是正规大学课且有明确先修；但它的定位偏“网络/系统管理员与架构师的运维实务”，对日志关联、威胁情报、检测工程、度量讲得浅，所以只算勉强合格的证据，candidate_check 里原图建议前置 S.4.2（取证与事件响应）没有被列为先修，记 not_mentioned。资源侧：MITRE ATT&CK 是免费、官方、长期稳定的行业标准，威胁情报（CTI）、检测数据源/检测策略（Detection Strategies、Analytics、Data Components）和 mitigations 都能在站内系统读；不足是它不教 SIEM 日志关联的具体实现和运营度量方法，这部分建议配合 SANS SEC555 的公开大纲或 Sigma 规则库自学（未核实，不作推荐依据）。JWU 的 CYB 课程目录（catalog.jwu.edu/courses/cyb/cyb.pdf）里有 “Active Cyber Defense and Countermeasures” 等课，但 PDF 抓不到正文，未采用。"
+ "notes": "两次检索找到的“安全运营/SOC/检测工程”课程几乎全是厂商或付费培训（SANS SEC450/SEC555、TCM SOC101、CyberDefenders、Coursera Packt 课），没有可核实的大学课程页，只有 Texas A&M-San Antonio 的 CSEC 4326 Security & Operation Practicum 是正规大学课且有明确先修；但它的定位偏“网络/系统管理员与架构师的运维实务”，对日志关联、威胁情报、检测工程、度量讲得浅，所以只算勉强合格的证据，candidate_check 里原图建议前置 S.4.2（取证与事件响应）没有被列为先修，记 not_mentioned。资源侧：MITRE ATT&CK 是免费、官方、长期稳定的行业标准，威胁情报（CTI）、检测数据源/检测策略（Detection Strategies、Analytics、Data Components）和 mitigations 都能在站内系统读；不足是它不教 SIEM 日志关联的具体实现和运营度量方法，这部分建议配合 SANS SEC555 的公开大纲或 Sigma 规则库自学（未核实，不作推荐依据）。JWU 的 CYB 课程目录（catalog.jwu.edu/courses/cyb/cyb.pdf）里有 “Active Cyber Defense and Countermeasures” 等课，但 PDF 抓不到正文，未采用。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "课程层补证（parent 找到）：Ensign College IT324 SOC Operations，3 学分，目录页 https://catalog.ensign.edu/courses/0042631/overview-aoYks ——课程描述含 SOC 基础设施与设计、安装 IDS 代理并把日志转发到 SIEM、安全分析师角色、每周在 SIEM 里追一个攻击并交事件报告、找真实事件、建 playbook、建告警、模拟攻击测试检测能力。覆盖“日志关联/检测/事件报告/演练”，但仍没有威胁情报方法论与度量；且课程本身要付费注册（目录页免费）。因此主资源仍用 ATT&CK（免费）+ Sentinel 中文文档，缺口用下列免费可点补充：(1) 检测规则工程化 Sigma https://sigmahq.io/ ；(2) 攻击模拟/演练 Atomic Red Team https://atomicredteam.io/ ；(3) 安全度量 NIST SP 800-55r1 https://csrc.nist.gov/pubs/sp/800/55/r1/final ；(4) 事件响应流程/playbook NIST SP 800-61r3 https://csrc.nist.gov/pubs/sp/800/61/r3/final 。ATT&CK 的 CTI 部分可当威胁情报的索引，但 STIX/TAXII 的数据交换规范需另读 OASIS 文档。"
+ }
 }

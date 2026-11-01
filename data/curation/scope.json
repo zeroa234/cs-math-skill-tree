@@ -145,22 +145,24 @@
   },
   "M.1.9": {
    "matched": {
-    "傅里叶级数/变换": [
+    "傅里叶变换": [
      [
       "GIT-Image",
       "KA Core",
       "Fourier transforms"
      ]
     ],
-    "小波": [
+    "离散傅里叶变换与频域表示": [
      [
       "GIT-Image",
       "KA Core",
-      "wavelet transform"
+      "Fourier transforms"
      ]
     ]
    },
-   "note": "CS2023 把傅里叶变换和小波作为图像编码工具列在图像处理单元。"
+   "meta": [],
+   "hosts": null,
+   "note": "CS2023 图像处理列 Fourier transforms；严格收敛理论与一般正交展开不属于其核心深度。"
   },
   "M.2.1": {
    "matched": {
@@ -340,28 +342,16 @@
    "note": "CS2023 没有拓扑学。"
   },
   "M.4.4": {
-   "matched": {
-    "网格": [
-     [
-      "GIT-Modeling",
-      "KA Core",
-      "Mesh representation, mesh fairing, and mesh generation"
-     ]
-    ],
-    "曲面处理与几何算法": [
-     [
-      "GIT-Modeling",
-      "KA Core",
-      "intersection calculation and proximity tests"
-     ]
-    ]
-   }
+   "matched": {},
+   "meta": [],
+   "hosts": null,
+   "note": "本技能聚焦离散计算几何算法；CS2023 核心中的图形曲面表示不能代替凸包、范围搜索与空间分解课程，故列选修。"
   },
   "M.4.5": {
-   "meta": [
-    "与AI共享应用"
-   ],
-   "note": "CS2023 没有拓扑数据分析。"
+   "matched": {},
+   "meta": [],
+   "hosts": null,
+   "note": "CS2023 没有拓扑数据分析的核心主题。"
   },
   "M.5.1": {
    "matched": {
@@ -748,16 +738,10 @@
    }
   },
   "M.7.6": {
-   "matched": {
-    "效用": [
-     [
-      "AI-KRR",
-      "KA Core",
-      "Utility and decision making"
-     ]
-    ]
-   },
-   "note": "博弈论在 CS2023 里是 AI 的 Non-core。"
+   "matched": {},
+   "meta": [],
+   "hosts": null,
+   "note": "CS2023 博弈论与机制设计不是核心主题；不把强化学习中的决策概览当作整门博弈论。"
   },
   "M.8.1": {
    "matched": {
@@ -2169,7 +2153,8 @@
       "Network Virtualization (e.g., SDN"
      ]
     ]
-   }
+   },
+   "note": "网络管理限定为 SDN 的配置和自动化。"
   },
   "C.4.1": {
    "matched": {
@@ -2812,7 +2797,7 @@
    "note": "MDP、时序差分、策略梯度在 CS2023 里是 AI-ML 的 Non-core，核心只有概览。"
   },
   "A.2.5": {
-   "note": "CS2023 没有迁移学习与联邦学习。"
+   "note": "CS2023 没有联邦学习的核心主题。"
   },
   "A.3.1": {
    "matched": {
@@ -3111,21 +3096,22 @@
   },
   "S.2.3": {
    "matched": {
-    "移动平台": [
+    "移动平台与沙箱": [
      [
       "SPD-Mobile",
       "KA Core",
       "Mobile platform constraints"
      ]
     ],
-    "移动应用和无线威胁模型": [
+    "移动应用威胁建模与测试": [
      [
       "SEC-Foundations",
       "KA Core",
       "web, cloud, and mobile devices"
      ]
     ]
-   }
+   },
+   "note": "移动平台安全属于核心；这里的设备身份和应用测试按移动上下文学习，不延伸到无线协议安全课程。"
   },
   "S.2.4": {
    "matched": {
@@ -3503,23 +3489,7 @@
    }
   },
   "H.2.2": {
-   "matched": {
-    "设计自动化": [
-     [
-      "AR-Logic",
-      "KA Core",
-      "Computer-aided design tools that process hardware"
-     ]
-    ],
-    "综合": [
-     [
-      "AR-Logic",
-      "KA Core",
-      "High-level synthesis"
-     ]
-    ]
-   },
-   "note": "形式验证、布局布线不在 CS2023 里。"
+   "note": "硬件验证的专门仿真、UVM 与形式方法超出 CS2023 硬件描述与设计工具的概览，列选修。"
   },
   "H.2.3": {
    "note": "CS2023 没有 PCB 设计。"
@@ -3534,7 +3504,7 @@
      ]
     ]
    },
-   "note": "CMOS 与物理设计不在 CS2023 里。"
+   "note": "CMOS 标准单元与芯片物理设计的深入课程超出 CS2023 核心硬件概览。"
   },
   "H.2.5": {
    "note": "CS2023 没有半导体器件。"
@@ -4107,14 +4077,14 @@
       "Technical communication materials"
      ]
     ],
-    "审查": [
+    "读者分析": [
      [
-      "SE-Teamwork",
+      "SEP-Communication",
       "CS Core",
-      "Code review"
+      "Communicating with different stakeholders"
      ]
     ],
-    "研究问题与团队沟通": [
+    "团队沟通": [
      [
       "SEP-Communication",
       "CS Core",
@@ -4203,9 +4173,9 @@
   },
   "X.2.2": {
    "meta": [
-    "外部前置为金融经济知识"
+    "金融经济知识为树外背景"
    ],
-   "note": "CS2023 没有金融科技。"
+   "note": "CS2023 没有计算金融的核心主题。"
   },
   "X.2.3": {
    "meta": [

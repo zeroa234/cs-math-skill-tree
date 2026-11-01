@@ -1,0 +1,265 @@
+{
+ "date": "2026-11-01",
+ "edges": [
+  {
+   "skill": "M.1.8",
+   "prereq": "M.1.5",
+   "decision": "keep",
+   "evidence": "MIT 课程目录先修链：[1] 18.04 Complex Variables 的 Prereq 是 Calculus II (GIR) 与 (18.03 或 18.032)；[2] Calculus II 即 18.02，其 Prereq: Calculus I (GIR)；[3] Calculus I 即 18.01，官方描述含「Infinite series: geometric, p-harmonic, simple comparison tests, power series for some elementary functions」。复分析入门层的 Taylor/Laurent 展开直接建立在幂级数与收敛判别上（18.04 自己的课程描述就写着 singularities, Taylor and Laurent series）。18.03 不参与本链：它的目录原文是「Prereq: None. Coreq: Calculus II (GIR)」。",
+   "url": "https://catalog.mit.edu/subjects/18/",
+   "quote": "[1] 18.04 Complex Variables with Applications — Prereq: Calculus II (GIR) and (18.03 or 18.032) ／ [2] 18.02 Calculus — Prereq: Calculus I (GIR) ／ [3] 18.01 Calculus — … Definite integral; fundamental theorem of calculus. … Infinite series: geometric, p-harmonic, simple comparison tests, power series for some elementary functions.",
+   "basis": "chain",
+   "note": "两跳链，每环都是 MIT 课程目录写明的必修先修。链只支撑 M.1.5 的入门层（数项级数、幂级数、收敛判别）；M.1.5 里的一致收敛/逐项运算属 M.1.6 实分析，不在本链证据内。原 extra_prereqs 写「MIT 18.04 先修 18.02 与 18.03，二者以含无穷级数的一元微积分 18.01 为先修」，对 18.03 不成立（18.03 无先修、只有 Coreq），本条目已改掉。"
+  },
+  {
+   "skill": "M.1.9",
+   "prereq": "M.1.3",
+   "decision": "keep",
+   "evidence": "[1] MIT 18.103 Fourier Analysis 官方 syllabus 先修 18.100 Analysis I（另需 18.06/18.700/18.701）；[2] 18.100A/B Real Analysis 的 Prereq: Calculus II (GIR)，即 18.02；[3] 18.02 的 Prereq: Calculus I (GIR)，即 18.01，其描述含定积分、微积分基本定理、积分技巧、反常积分。18.103 自述「the systematic study of Fourier series requires the Lebesgue integral」，傅里叶级数本身就建在积分理论上。",
+   "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/ | https://catalog.mit.edu/subjects/18/",
+   "quote": "[1] Prerequisites: 18.100 Analysis I; 18.06 Linear Algebra, 18.700 Linear Algebra, or 18.701 Algebra I ／ [2] 18.100A/B Real Analysis — Prereq: Calculus II (GIR) ／ [3] 18.02 Calculus — Prereq: Calculus I (GIR)；18.01 — Definite integral; fundamental theorem of calculus. … Techniques of integration. … Improper integrals.",
+   "basis": "chain",
+   "note": "三跳链；[1] 出自 18.103 的 OCW syllabus，[2][3] 出自 MIT 课程目录（同一页）。没有用「18.103 课内先教积分」这种说法——该课是把积分理论当先修。UCSD MATH 144（同节点另一门课）只要实分析 MATH 140B/142B，同样不直接到一元积分，故不作依据。"
+  },
+  {
+   "skill": "M.7.2",
+   "prereq": "M.1.4.1",
+   "decision": "keep",
+   "evidence": "UCSD MATH 173A 是一门凸优化课（凸集/凸函数、支撑超平面、线性与二次规划的最优性条件、对偶、内点法），官方先修写 MATH 20C（或 31BH）与 MATH 18/31AH；而 MATH 20C 的官方描述正是偏微分、极值与二重积分。凸性判定、梯度/Hessian、二阶条件用到的就是 M.1.4.1 的内容。",
+   "url": "https://catalog.ucsd.edu/courses/MATH.html",
+   "quote": "MATH 173A. Optimization Methods for Data Science I … Introduction to convexity: convex sets, convex functions; geometry of hyperplanes … Linear and quadratic programming: optimality conditions; duality … Prerequisites: MATH 20C or MATH 31BH and MATH 18 or 31AH. ／ MATH 20C. … Vector geometry, vector functions and their derivatives. Partial differentiation. Maxima and minima. Double integration. Prerequisites: … MATH 20B",
+   "basis": "course",
+   "note": "节点收录的 Stanford EE364a 先修原文只写「Good knowledge of linear algebra (as in EE263) and probability」，不要求微积分；Berkeley EE 227BT 的原文只要 Mathematics 54 与 Statistics 2。所以这条边的课程证据只有 MATH 173A。映射只取 MATH 20C 的偏微分部分（M.1.4.1），不扩成 M.1.4.4（多元积分）或整门微积分。"
+  },
+  {
+   "skill": "M.7.5",
+   "prereq": "M.7.1",
+   "decision": "keep",
+   "evidence": "本节点资源 MIT 15.053 的官方 syllabus 写明课程结构：先 7 讲 Linear Programming Theory and Applications，再 5 讲 Integer Programming Theory、3 讲 Network Flows and Heuristics、2 讲 Decision Trees，并明说「integer programming concepts do build on linear programming」；同一 syllabus 的课次表里 L10 才是 Introduction to integer programming。UCSD MATH 171A 也是先讲线性规划（单纯形、对偶），再把整数规划/网络流列为后续选题。",
+   "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/pages/syllabus/ | https://catalog.ucsd.edu/courses/MATH.html",
+   "quote": "15.053 is structured as two longer modules followed by three short modules. Linear Programming Theory and Applications (7 Lectures) ／ Integer Programming Theory (5 Lectures) ／ Network Flows and Heuristics (3 Lectures) … The second midterm is not “comprehensive,” but integer programming concepts do build on linear programming. ／ MATH 171A … Linear programming, the simplex method, duality. Selected topics from integer programming, network flows, transportation problems …",
+   "basis": "same_course",
+   "note": "同课顺序证据来自模块讲数（LP 7 讲 → IP 5 讲）加一句明写的 build on，另可用 MATH 171A 的目录描述顺序互证。15.053 官方写「This subject has no formal prerequisites」，所以这条边不可能是 course 型。OCW 15.053 的 calendar 页取回 301 死循环，故未用分周日历，而用 syllabus 的模块讲数。"
+  },
+  {
+   "skill": "F.2.2",
+   "prereq": "F.2.1",
+   "decision": "keep",
+   "evidence": "MIT 18.404J 官方 Readings 表按课次给出教学顺序：LEC 1 Introduction, Finite Automata, Regular Expressions（Sipser §1.1）→ LEC 5 The CF Pumping Lemma, Turing Machines（§2.3, 3.1）→ LEC 6 TM Variants, the Church-Turing Thesis（§3.2, 3.3）→ LEC 8 Undecidability（§4.2）。同一门课先讲有限自动机/正则/上下文无关语言，再讲图灵机、不可判定与归约。",
+   "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/readings/",
+   "quote": "1 Introduction, Finite Automata, Regular Expressions — Section 1.1 ／ 5 The CF Pumping Lemma, Turing Machines — Sections 2.3 and 3.1 ／ 6 TM Variants, the Church-Turing Thesis — Sections 3.2 and 3.3 ／ 8 Undecidability — Section 4.2",
+   "basis": "same_course",
+   "note": "原 extra_prereqs 说「MIT 18.404J 与 Berkeley CS 172 在同一门课里先讲自动机再讲可计算性」但没给任何出处；这里补上 18.404J 的课次/章节表，并删去无法验证的 Berkeley CS 172 那半句（CS 172 官方先修只写 COMPSCI 170，没有自动机先修）。"
+  },
+  {
+   "skill": "F.2.4",
+   "prereq": "M.5.2",
+   "decision": "keep",
+   "evidence": "Iowa CS:4980 Introduction to Automated Reasoning 的官方 syllabus 自述教学顺序：先从命题逻辑与 SAT 开始，再进入一阶逻辑/SMT 的理论，最后是任意一阶公式的可满足性；同一页还把 CS:2210（Discrete Structures，含逻辑）与 CS:2230 写成必修先修（最低 C-）。SAT、归结、CNF 直接作用在命题/谓词逻辑公式上，属本节点入门层核心。",
+   "url": "https://homepage.cs.uiowa.edu/~tinelli/classes/4980/Spring24/syllabus.shtml",
+   "quote": "We will start with propositional logic and the propositional satisfiability (SAT) problem, which are a basic form of SMT. We will then move to first-order logic reasoning expressible as constraint solving in specific logical theories … Finally, we will consider the general problem of checking the satisfiability of arbitrary first-order formulas … ／ Prerequisites: CS:2210 with a minimum grade of C- and CS:2230 with a minimum grade of C-.",
+   "basis": "same_course",
+   "note": "双证据：同课顺序 + 必修先修课。节点收录的 Edinburgh INFR10087 先修原文写的是「Prior familiarity with propositional and predicate logic is recommended」（其 prereq_kind 因此是 recommended），属推荐措辞，不单独作必须依据；也不能拿「expected background」替代这里的同课顺序证据。"
+  },
+  {
+   "skill": "F.3.1",
+   "prereq": "P.1.1",
+   "decision": "keep",
+   "evidence": "[1] UT Austin CS 345H 官方 syllabus：先修 CS 429 或 429H，C- 以上；[2] UT CS 429 课程页：必需先修 C S 311（离散数学）与 C S 314（Data Structures）；[3] UT 官方课程目录：C S 314 的先修是 Computer Science 312 or 312H（C- 以上），C S 312 是「First part of a two-part sequence in programming. Fundamental concepts of structured programming; procedures and data structures …」，即 P.1.1 的内容。",
+   "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/syllabus/ | https://www.cs.utexas.edu/~sidchat/2026fall/429.html | https://catalog.utexas.edu/archive/2025-26/general-information/coursesatoz/c-s/c-s.pdf",
+   "quote": "[1] Prerequisites CS 345H: CS 429 or CS 429H, with a grade of C- or better. ／ [2] The following coursework is required, with a grade of at least C- in each. Discrete Math for Computer Science: C S 311 or C S 311H. Data Structures: C S 314 or C S 314H. ／ [3] C S 314. Data Structures. … Prerequisite: Computer Science 312 or 312H with a grade of at least C-. ；C S 312. Introduction to Programming. First part of a two-part sequence in programming. Fundamental concepts of structured programming; procedures and data structures …",
+   "basis": "chain",
+   "note": "三跳链，每环都有官方页可核。Berkeley CS 61A 在节点里只是 recommended（它的先修段写的是「Programming experience equivalent to AP CS」），不能单独当必须依据，所以没用它。λ 演算要用程序/求值器来体会，P.1.1 属入门层必需。"
+  },
+  {
+   "skill": "F.3.3",
+   "prereq": "P.1.1",
+   "decision": "keep",
+   "evidence": "CMU 17-355 Program Analysis（本节点课程）先修 15-251 与（15-150 或 15-214）；15-150 官方页先修（15-151/21-127/21-128）与（15-112 或 15-122）；15-122 官方 syllabus 先修「5 on the AP Computer Science A exam or passed 15-112 (Fundamentals of Programming) or equivalent」。即 17-355 → 15-150 → 15-112 = P.1.1。",
+   "url": "https://www.cs.cmu.edu/~aldrich/courses/17-355/syllabus.html | https://www.cs.cmu.edu/~15150/ | https://www.cs.cmu.edu/~15122/syllabus.shtml",
+   "quote": "[1] Prerequisites 15-251 and (15-150 or 15-214) ／ [2] Prerequisite courses are (15-151 or 21-127 or 21-128) and (15-112 or 15-122). ／ [3] You must have gotten a 5 on the AP Computer Science A exam or passed 15-112 (Fundamentals of Programming) or equivalent.",
+   "basis": "chain",
+   "note": "两跳链（15-150 → 15-112 这一环是必修先修）；走 15-214 那条分支同样落到 15-122 → 15-112。写 Hoare 逻辑、不变式、契约都要读程序、写小程序，入门层绕不开 P.1.1。"
+  },
+  {
+   "skill": "C.2.1",
+   "prereq": "P.2.2",
+   "decision": "keep",
+   "evidence": "Berkeley CS 162 官方课程页先修写 COMPSCI 61B/61C/70。61C（Machine Structures）的 Fall 2026 课表前几讲就是 C、指针/数组/字符串、内存管理（L3 C Intro - Basics、L4 C Intro - Pointers, Arrays, Strings、L5 C Memory Management）。OS 的进程/内存/文件系统作业要用 C 写，P.2.2 属入门层必需。",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS162/ | https://cs61c.org/fa26/",
+   "quote": "CS 162. Operating Systems and System Programming … Prerequisites: COMPSCI 61B, COMPSCI 61C, and COMPSCI 70. ／ CS61C Fall 2026: Lecture 3: C Intro - Basics ／ Lecture 4: C Intro - Pointers, Arrays, Strings ／ Lecture 5: C Memory Management",
+   "basis": "course",
+   "note": "这是「先修课内容覆盖 Q」的 course 型映射，与项目既有做法一致（CMU 15-213、15-122 也被节点映射到 P.2.2）。注意 Berkeley 目录对 61C 的官方描述没有逐字写 C，C 语言部分取自 61C 课程站课表。CMU 15-410 只把 15-213 写成建议准备（Preparatory coursework），不作必须依据。"
+  },
+  {
+   "skill": "C.2.3",
+   "prereq": "C.2.1",
+   "decision": "keep",
+   "evidence": "MIT 6.033（Spring 2022 官方日历）在同一门课里先讲系统抽象与 OS 机制：LEC 1 Modularity, Abstraction, and the Impact of Systems、LEC 3 Virtual memory、LEC 4 Bounded buffers and locks、LEC 5 Threads，LEC 6 才讲 OS structure, Virtual Machines。容器（namespaces/cgroups）本身就是 OS 级隔离，OS 基础属入门层必需。",
+   "url": "https://web.mit.edu/6.033/www/",
+   "quote": "LEC 1: Modularity, Abstraction, and the Impact of Systems ／ LEC 3: Virtual memory ／ LEC 4: Bounded buffers and locks ／ LEC 5: Threads ／ LEC 6: OS structure, Virtual Machines",
+   "basis": "same_course",
+   "note": "6.033 的虚拟化讲次只覆盖虚拟机，不含容器运行时（namespaces/cgroups）——容器做法由 C.2.3 的资源补，所以这条边支撑的是「OS 先于虚拟化」，不是「课程教了容器」。2018 版 6.033 的 OCW 日历只按周写 Operating Systems I-IV / Networking / Distributed Systems / Security，逐讲题目只给『Lecture N Outline』链接，取不到可引用的讲题；因此用 2022 版系站（web.mit.edu/6.033/www/）的逐讲题目。原 extra_prereqs 引的正是 6.033 但没写版本与出处。"
+  },
+  {
+   "skill": "D.1.2",
+   "prereq": "D.1.1",
+   "decision": "keep",
+   "evidence": "CMU 15-445 课表：#01 Relational Model & Algebra、#02 Modern SQL 在最前，存储从 #03 Database Storage I 起，查询执行在 #14 Query Execution I；Berkeley CS 186（Fall 2026）课表：Lecture 0-1 Introduction and SQL I、2 SQL II … 4 Cost Models and Index、6 Index Files … 11 Iterators and Relational Algebra、12-13 Query Optimization。两门课都在同一门课内先讲关系模型/关系代数与 SQL，再讲存储、索引、执行与查询优化。",
+   "url": "https://15445.courses.cs.cmu.edu/fall2026/schedule.html | https://cs186berkeley.net/",
+   "quote": "#01: Relational Model & Algebra ／ #02: Modern SQL ／ #03: Database Storage I … #14: Query Execution I ；CS 186：0. Introduction and 1. SQL I ／ 2. SQL II … 4. Cost Models and Index ／ 6. Index Files and their Costs ／ 11. Iterators and Relational Algebra ／ 12. Query Optimization: Plan Space ／ 13. Query Optimization: Costs and Search",
+   "basis": "same_course",
+   "note": "原证据写「先讲 SQL 和关系代数，再讲存储、索引、执行和优化」，但 CS 186 2026 秋把关系代数放在第 11 讲（索引之后）。实际成立的顺序是：SQL/关系模型（0-3）→ 存储/索引（4-6）→ 关系代数/迭代器（11）→ 查询优化（12-13），而查询优化确实建在关系代数之上。用 CMU 15-445 的课表则是最干净的「关系模型 + SQL 最先」。"
+  },
+  {
+   "skill": "D.3.2",
+   "prereq": "M.6.1",
+   "decision": "keep",
+   "evidence": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。",
+   "url": "https://web.stanford.edu/class/cs246/",
+   "quote": "Familiarity with basic probability theory (CS109 or Stat116 or equivalent is sufficient but not necessary).",
+   "basis": "course",
+   "note": "课程代码 CS109 或 Stat116（或等价）；要求的基础知识 = 基本概率论（条件概率、分布、期望），用于 MinHash/LSH 碰撞分析、采样与聚类评估。节点数据把 CS 246 记成 recommended kind，与 A.3.4 里同一门课记 required 不一致；这里按原文标题 Prerequisites + expected background 判为必须，只到入门层。"
+  },
+  {
+   "skill": "D.3.2",
+   "prereq": "M.3.1",
+   "decision": "keep",
+   "evidence": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。",
+   "url": "https://web.stanford.edu/class/cs246/",
+   "quote": "Familiarity with basic linear algebra (e.g., any of Math 51, Math 103, Math 113, CS 205, or EE 263 would be much more than necessary).",
+   "basis": "course",
+   "note": "课程代码 Math 51/103/113、CS 205、EE 263 任一（原文说这些 would be much more than necessary）；要求的基础知识 = 矩阵/向量运算与特征分解，用于 SVD 降维、PageRank、矩阵分解。据此不要把「整门线性代数」当成硬门槛的全部内容：入门层只需 M.3.1 的矩阵与特征值部分。"
+  },
+  {
+   "skill": "D.3.2",
+   "prereq": "F.1.2",
+   "decision": "keep",
+   "evidence": "Stanford CS 246 官方页在标题 Prerequisites 下写「Students are expected to have the following background」，逐项列出编程、概率论、证明、线性代数、算法分析。这是课程自己列的先修（expected background），不是「建议选修」；但措辞同时放宽（equivalent、sufficient but not necessary、much more than necessary），所以只应要求各技能的入门层，不能据此索要整门课的全部内容。",
+   "url": "https://web.stanford.edu/class/cs246/",
+   "quote": "Familiarity with algorithmic analysis (e.g., CS 161 would be much more than necessary).",
+   "basis": "course",
+   "note": "课程代码 CS 161（原文说 would be much more than necessary）；要求的基础知识 = 会读写渐近复杂度，用于频繁项集挖掘、LSH、聚类算法的代价分析。同理只要求 F.1.2 的渐近分析入门层，不等同整门算法设计。"
+  },
+  {
+   "skill": "D.4.2",
+   "prereq": "D.4.1",
+   "decision": "keep",
+   "evidence": "Stanford CS 520 Knowledge Graphs 的官方日程：Week 1 What is a Knowledge Graph?、Week 2 What are some Knowledge Graph data models?、Week 3 How to design the schema of a Knowledge Graph?、Week 4-5 建图（从结构化/非结构化数据），Week 6 才 What are some inference algorithms for Knowledge Graphs?。数据模型与本体/schema 先讲，推理算法后讲。",
+   "url": "https://web.stanford.edu/class/cs520/",
+   "quote": "Week 1 What is a Knowledge Graph? ／ Week 2 What are some Knowledge Graph data models? ／ Week 3 How to design the schema of a Knowledge Graph? … Week 6 What are some inference algorithms for Knowledge Graphs?",
+   "basis": "same_course",
+   "note": "openHPI 2020 版 6 周大纲是 Web of Data → 基本语义技术 → SPARQL → 本体 → 图谱应用 → 进阶应用，没有演绎/归纳推理周，不能作 same_course 依据；kgbook（Hogan et al.）第 2-3 章数据模型/本体 → 第 4 章演绎推理只是教材顺序，按规则不算。描述逻辑与规则推理以本体（TBox/ABox）为输入，入门层绕不开 D.4.1。"
+  },
+  {
+   "skill": "A.2.3.1",
+   "prereq": "A.2.3",
+   "decision": "keep",
+   "evidence": "Stanford cs231n（Spring 2026）课表：Lecture 3 Regularization and Optimization、Lecture 4 Neural Networks and Backpropagation 在前；Lecture 5 Image Classification with CNNs、Lecture 7 Recurrent Neural Networks、Lecture 8 Attention and Transformers 在后。同一门课先讲优化/正则、MLP 与反向传播（A.2.3），再讲各类架构（A.2.3.1）。",
+   "url": "https://cs231n.stanford.edu/schedule.html",
+   "quote": "Lecture 3: Regularization and Optimization … Lecture 4: Neural Networks and Backpropagation … Lecture 5: Image Classification with CNNs … Lecture 7: Recurrent Neural Networks … Lecture 8: Attention and Transformers",
+   "basis": "same_course",
+   "note": "CS224N / CS231n 的先修段都没有把「深度学习」写成必修先修（CS224N 只说已有 ML/DL 基础会更轻松，但可以不带），所以只能靠同课顺序；原 candidate_check 给的建议是 recommended，与本判定方向一致。节点资源 d2l 也是按「先训练/反向传播、再架构」组织章节，但那属教材顺序，不作依据。"
+  },
+  {
+   "skill": "A.3.2",
+   "prereq": "P.1.1",
+   "decision": "keep",
+   "evidence": "CMU 16-385 官方 Prerequisites 把 15-122 Principles of Imperative Computation 列为必修先修（两套课程组合里都含 15-122）；15-122 官方 syllabus 先修「5 on the AP Computer Science A exam or passed 15-112 (Fundamentals of Programming) or equivalent」。即 16-385 → 15-122 → 15-112 = P.1.1。",
+   "url": "https://www.cs.cmu.edu/~16385/ | https://www.cs.cmu.edu/~15122/syllabus.shtml",
+   "quote": "[1] the following courses serve as prerequisite: “Mathematical Foundations of Electrical Engineering” (18-202) and “Principles of Imperative Computation” (15-122) (OR) … ／ [2] You must have gotten a 5 on the AP Computer Science A exam or passed 15-112 (Fundamentals of Programming) or equivalent.",
+   "basis": "chain",
+   "note": "16-385 里 15-122 更直接对应 P.2.2（节点已这样映射）；P.1.1 这一环靠 15-122 自己的先修（15-112/AP CS A）成立，是两跳链。视觉课作业要写代码，P.1.1 属入门层必需。"
+  },
+  {
+   "skill": "A.3.5",
+   "prereq": "A.2.3",
+   "decision": "keep",
+   "evidence": "Stanford cs231n（Spring 2026）课表：Lecture 4 Neural Networks and Backpropagation 讲 MLP/反向传播（A.2.3），到 Lecture 13 Generative Models 1（VAE、GAN、自回归）与 Lecture 14 Generative Models 2（diffusion）才讲生成式模型（A.3.5 入门层）。VAE/GAN/扩散都是深度网络的训练方法，反向传播与正则化属入门层必需。",
+   "url": "https://cs231n.stanford.edu/schedule.html",
+   "quote": "Lecture 4: Neural Networks and Backpropagation … Lecture 13: Generative Models 1 — Variational Autoencoders, Generative Adversarial Network, Autoregressive Models ／ Lecture 14: Generative Models 2 — Diffusion models",
+   "basis": "same_course",
+   "note": "Stanford CS236（节点资源课程）没有 Prerequisites 段落，只在 Sections 栏复习 PyTorch 与 CNNs/RNNs/Transformers（属假定已学的 expected background，而且更像 A.2.3.1）；MIT 6.S191 只要求微积分与线性代数。所以课程证据取 cs231n 的同课顺序，而不是 CS236 的复习栏。"
+  },
+  {
+   "skill": "C.3.1",
+   "prereq": "M.1.3",
+   "decision": "keep",
+   "evidence": "UCSD ECE 45（Fourier 级数/变换、卷积、瞬态、Laplace、滤波——即 C.3.1 的信号与链路基础）必修先修 ECE 35；ECE 35 官方先修是 MATH 18、MATH 20A–B、PHYS 2A；MATH 20B 官方描述就是「Integral calculus of one variable and its applications … Infinite series」。",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html | https://catalog.ucsd.edu/courses/MATH.html",
+   "quote": "ECE 45. Circuits and Systems … Fourier Series and Transforms, time domain analysis, convolution, transient response, Laplace Transform, and filter design. Prerequisites: ECE 35. ／ ECE 35 … Prerequisites: MATH 18, 20A–B, and PHYS 2A. ／ MATH 20B … Integral calculus of one variable and its applications … Infinite series.",
+   "basis": "chain",
+   "note": "MIT 6.02 的先修 18.03 在 MIT 目录里写「Prereq: None. Coreq: Calculus II (GIR)」，不构成到 18.01 的先修链，所以原 extra_prereqs 的链不成立；这里改用 UCSD ECE 45 → ECE 35 → MATH 20B（两跳，均为官方目录原文）。ECE 45 不在节点现有课程里，是按同一内容（信号与通信基础）引入的真实课程。"
+  },
+  {
+   "skill": "H.1.3",
+   "prereq": "M.1.3",
+   "decision": "keep",
+   "evidence": "节点里已引的 UCSD ECE 45（Signals and Systems，其先修 ECE 35 已被映射为 H.1.1）官方先修 ECE 35；ECE 35 官方先修 MATH 18、MATH 20A–B（MATH 20B = 一元积分）。卷积积分、傅里叶/拉普拉斯变换、滤波都直接做积分。",
+   "url": "https://catalog.ucsd.edu/courses/ECE.html | https://catalog.ucsd.edu/courses/MATH.html",
+   "quote": "ECE 45 … Prerequisites: ECE 35. ／ ECE 35 … Prerequisites: MATH 18, 20A–B, and PHYS 2A. ／ MATH 20B … Integral calculus of one variable and its applications …",
+   "basis": "chain",
+   "note": "两跳链，起点是本节点已引的 ECE 45（节点把它映射成 H.1.1）。节点收录的 Stanford EE 102A 先修原文写的是『Recommended Prerequisite — Complete ANY of the following Courses: CME102 / MATH53』，属推荐措辞，不能作必须依据。"
+  },
+  {
+   "skill": "H.4.1",
+   "prereq": "M.2.1",
+   "decision": "keep",
+   "evidence": "UCSD MAE 143B（Linear Control，本节点课程）官方先修 MAE 143A；MAE 143A（Signals and Systems）官方先修 MATH 20D 或 21D、MATH 20E、MATH 18/20F/31AH；MATH 20D 就是「Introduction to Differential Equations」。控制课的传递函数、Routh-Hurwitz、根轨迹都以二阶/高阶微分方程为基础。",
+   "url": "https://catalog.ucsd.edu/courses/MAE.html | https://catalog.ucsd.edu/courses/MATH.html",
+   "quote": "MAE 143B. Linear Control … Prerequisites: MAE 143A or consent of instructor. ／ MAE 143A. Signals and Systems … Prerequisites: MATH 20D or 21D, MATH 20E, MATH 18 or 20F or 31AH ／ MATH 20D. Introduction to Differential Equations …",
+   "basis": "chain",
+   "note": "MIT 6.3100（本节点另一门课）只写 Physics II 与 18.06，不含微分方程，所以依据取 UCSD 链。原 extra_prereqs 只写「MAE 143B 的先修 MAE 143A 目录原文要求 MATH 20D」但没有 URL，这里补齐整条链（143B → 143A → MATH 20D）并换成可核的目录页。"
+  },
+  {
+   "skill": "V.1.3",
+   "prereq": "M.1.4.1",
+   "decision": "keep",
+   "evidence": "CMU 15-468 Physics-based rendering 官方 Prerequisites 明确要求多元微积分，并给出课程粒度（21-256/21-268/21-259/21-269/21-254）。渲染方程是多维积分，BRDF、Jacobian、二阶导数在入门层就要用。",
+   "url": "https://imaging.cs.cmu.edu/15-468/",
+   "quote": "Prerequisites — This course requires familiarity with: programming (at the level of 15-112, 15-122, 15-110, or 02-201), … multivariable calculus (at the level of 21-256, 21-268, 21-259, 21-269, or 21-254).",
+   "basis": "course",
+   "note": "同一句里的多元微积分也覆盖 M.1.4.4（多重积分），那条边不在本次审计范围；这里只判 M.1.4.1（偏导/雅可比/二阶导）。节点已把该句映射到 P.1.1/M.3.1/M.4.1，漏了 M.1.4.1。"
+  },
+  {
+   "skill": "X.3.3",
+   "prereq": "M.1.3",
+   "decision": "demote",
+   "evidence": "[1] MIT 18.337J 目录 Prereq: 18.06, 18.700, or 18.701；[2] 18.06 目录 Prereq: Calculus II (GIR)（即 18.02）；[3] 18.02 目录 Prereq: Calculus I (GIR)（即 18.01），18.01 含定积分、微积分基本定理、积分技巧、反常积分。课程书页另写「Understanding of calculus, linear algebra, and programming is essential」。",
+   "url": "https://catalog.mit.edu/subjects/18/ | https://book.sciml.ai/course/",
+   "quote": "[1] 18.337[J] Parallel Computing and Scientific Machine Learning — Prereq: 18.06, 18.700, or 18.701 ／ [2] 18.06 Linear Algebra — Prereq: Calculus II (GIR) ／ [3] 18.02 Calculus — Prereq: Calculus I (GIR) ／ 书页：Understanding of calculus, linear algebra, and programming is essential.",
+   "basis": "chain",
+   "note": "三跳行政先修链不足以说明积分是 SciML 入门不可绕过的概念。把官方明确要求的 calculus 映射到求导基础 M.1.2；积分用于深入求解器和模型分析，推荐。"
+  },
+  {
+   "skill": "S.2.5",
+   "prereq": "H.2.1",
+   "decision": "demote",
+   "evidence": "University of Idaho ECE 4040/5040 把这段放在「Recommended Background and Tools」标题下：要求学生应修过数字逻辑（如 ECE 2400），并能读写基础 Verilog/SystemVerilog；ECE 4450 或同等 RTL 经验是 recommended；密码学背景不作要求。即数字逻辑（H.1.2）与基础 RTL 读写是课程期望的背景，不是官方列出的必修先修；而 H.2.1 覆盖的是综合、约束、时序收敛与可编程逻辑，课程只要求「能读写基础 RTL」，并不要求 FPGA 工具链。",
+   "url": "https://hsc-research.org/hwsec.html",
+   "quote": "Recommended Background and Tools — Students should have completed a digital-logic course such as ECE 2400 and should be able to read and write basic Verilog or SystemVerilog. ECE 4450 or equivalent RTL experience is recommended. Prior coursework in cryptography is not required.",
+   "basis": "course",
+   "note": "建议降为推荐前置（虚线）。精确区分：课程建议先学的课程代码 = ECE 2400（数字逻辑 = H.1.2）；要求的基础知识 = 基础 Verilog/SystemVerilog RTL 读写（对应 H.2.1 的 RTL/仿真入门层，不含综合/时序收敛）。若要保留必须，需另找一门把 HDL/FPGA 明确列进 Prerequisites 的安全课；本次没找到，故不为清零而保留无据的必须边。另注：节点把同一段的 H.1.2 记成 required，口径上与本条不一致。"
+  },
+  {
+   "skill": "C.4.2",
+   "prereq": "C.2.2",
+   "decision": "keep",
+   "evidence": "Cornell CS5412 的 FAQ 在「What background is required?」里写课程「assumes that you have a solid background doing systems programming」；同一页「Who should take this class?」又说背景可以来自 OS、分布式、网络、数据库等多种课程（CS4414 最理想，但不是唯一）。属 expected background，没有把任何一门系统编程/并发课列为必修先修。节点收录的 Tufts CS 118 原文虽把 CS 40 列为必修，但 OS/网络/分布式只写「Though not required, having taken … will help significantly」。",
+   "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/FAQ.html",
+   "quote": "What background is required? CS5412 assumes that you have a solid background doing systems programming and are comfortable writing small amounts of code in C# or Python or a similar language … ／ Who should take this class? … We welcome undergraduates who are far enough into their studies to have a solid “systems” background, but require that all students will be strong programmers with plenty of experience writing systems software. CS4414 is an ideal background, but some people would have taken operating systems, distributed systems, networking, database systems. So background can come from many kinds of courses — but every student must have a strong background.",
+   "basis": "course",
+   "note": "课程代码可替代，但 FAQ 明确 every student must have a strong background、require ... experience writing systems software。必须的是系统编程能力，不能因没有唯一课程代码而降级。"
+  },
+  {
+   "skill": "A.3.4",
+   "prereq": "M.1.4.1",
+   "decision": "demote",
+   "evidence": "UCSD CSE 258/158 官方课程页原文只要求「comfortable with programming … and with basic optimization and linear algebra」，没有要求微积分；同节点的 Stanford CS 246 也只列编程、概率、证明、线性代数、算法分析。矩阵分解用梯度下降，只需对目标函数求偏导这一层，属本节点资源与前置 M.7.1/M.3.1 覆盖的范围，不需要整门多元微积分。",
+   "url": "https://cseweb.ucsd.edu/classes/fa26/cse258-001/",
+   "quote": "No previous background in machine learning is required, but all participants should be comfortable with programming (all example code will be in Python), and with basic optimization and linear algebra.",
+   "basis": "course",
+   "note": "建议降为推荐前置（或删除）。「basic optimization」在这门课的 mapped_ids 里已经映射到 M.7.1（优化建模与运筹基础），把同一句再映射成 M.1.4.1 等于重复计算，并把「应懂 basic optimization」放大成「整门多元微积分必修」。若要保留必须，需要一门明确把微积分写进先修的推荐系统课；本次没找到。"
+  }
+ ]
+}
