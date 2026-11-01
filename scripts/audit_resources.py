@@ -28,6 +28,7 @@ def main():
                     help='all also checks outline sources/TOCs and prerequisite evidence URLs')
     ap.add_argument('--evidence-dir', type=pathlib.Path,
                     help='temporary directory for fetched HTML text, for human content review')
+    ap.add_argument('--only-url', action='append', default=[], help='check only these inventory URLs (repeatable)')
     args = ap.parse_args()
     data = json.loads((ROOT / 'output/skilltree.json').read_text(encoding='utf-8'))
     uses = {}
@@ -46,7 +47,13 @@ def main():
                 for url in dict.fromkeys([source['url'], *source.get('toc_urls', [])]):
                     uses.setdefault(url, []).append({'id': outline['id'], 'role': 'outline', 'source': source['key']})
     if args.evidence_dir:
+        args.evidence_dir = args.evidence_dir.resolve()
         args.evidence_dir.mkdir(parents=True, exist_ok=True)
+    if args.only_url:
+        unknown = set(args.only_url) - uses.keys()
+        if unknown:
+            ap.error('URLs are outside the selected inventory: ' + ', '.join(sorted(unknown)))
+        uses = {url: uses[url] for url in args.only_url}
     gates = {urllib.parse.urlsplit(url).netloc: threading.Semaphore(2) for url in uses}
 
     def check(url):

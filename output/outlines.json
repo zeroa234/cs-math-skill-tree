@@ -16068,6 +16068,17 @@
      "https://data101.org/notes/data-prep/"
     ],
     "why": "就是节点“现有英文学习资源”里的这份公开课程讲义：第 10 章 Data Operations and Pipelines 从“数据怎么到达（push/pull）→到达后做什么→如何自动化→如何维持质量与处理异常”讲管线，并用 dbt 演示转换与测试；第 5 章 Data Preparation 讲清洗（结构、粒度、异常值、填补）。本科课程，符合 D2 入门层。"
+   },
+   {
+    "key": "B",
+    "kind": "docs",
+    "title": "Apache Airflow Best Practices",
+    "by": "Apache Airflow / Apache Software Foundation",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html#creating-a-task",
+    "toc_urls": [
+     "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html"
+    ],
+    "why": "补主教材没有直接说明的幂等重试；Creating a task明确要求重跑结果保持一致，并给出UPSERT与固定分区的具体实践。"
    }
   ],
   "outline": [
@@ -16146,6 +16157,14 @@
       "zh": "模型的关键特性（source 与 ref）"
      }
     ]
+   },
+   {
+    "src": "B",
+    "ref": "creating-a-task",
+    "title": "Creating a task",
+    "zh": "创建任务：幂等重试与结果一致性",
+    "fill": "幂等",
+    "items": []
    }
   ],
   "coverage": [
@@ -16179,8 +16198,10 @@
    },
    {
     "topic": "幂等",
-    "refs": [],
-    "note": "这份讲义的管线一章没有出现 idempotent 一词（全文检索为 0 命中），只有 incremental 模型“首次全量、之后只处理新增或变更的行”这种间接做法；我另外试过 Airflow 官方 Best Practices 与 dbt incremental models 文档，也都没有讲幂等的专节，故 refs 留空。"
+    "refs": [
+     "B:creating-a-task"
+    ],
+    "note": "Airflow官方Best Practices的Creating a task直接说明任务重跑应产生相同结果，并提出UPSERT、固定分区和避免用当前时间做关键计算。它有实际对应内容，即使标题未使用idempotent一词。"
    },
    {
     "topic": "数据验证",
