@@ -1,0 +1,1090 @@
+{
+ "M.1.4.3": {
+  "sources": [
+   {
+    "key": "A",
+    "kind": "book",
+    "title": "Calculus Volume 3",
+    "by": "Gilbert Strang, Edwin “Jed” Herman",
+    "year": 2016,
+    "url": "https://openstax.org/books/calculus-volume-3/pages/1-introduction",
+    "toc_urls": [
+     "https://openstax.org/books/calculus-volume-3/pages/4-introduction",
+     "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives",
+     "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
+     "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems"
+    ],
+    "why": "节点“现有英文学习资源”就是这本书的 4.7 节，OpenStax 官方开放本科教材；海森矩阵本身没有独立小节，所以把它所在的 4.3 二阶偏导、4.4 线性近似、4.7 二阶导数判别、4.8 条件极值逐节抄下来，页内二级标题抄到小节。"
+   },
+   {
+    "key": "B",
+    "kind": "book",
+    "title": "Mathematics for Machine Learning",
+    "by": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
+    "year": 2020,
+    "url": "https://mml-book.github.io/",
+    "toc_urls": [
+     "https://mml-book.github.io/book/mml-book.pdf"
+    ],
+    "why": "补“二阶偏导矩阵（海森矩阵）”与“二阶近似”：5.7 高阶导数一节给出 Hessian，5.8 讲多元泰勒展开（二阶近似）。"
+   },
+   {
+    "key": "C",
+    "kind": "book",
+    "title": "Convex Optimization",
+    "by": "Stephen Boyd, Lieven Vandenberghe",
+    "year": 2004,
+    "url": "https://web.stanford.edu/~boyd/cvxbook/",
+    "toc_urls": [
+     "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf"
+    ],
+    "why": "补“连接二阶优化”：3.1 用海森矩阵的半正定性表述二阶条件，9.1/9.5 是无约束极小化与牛顿法（二阶模型）。"
+   }
+  ],
+  "outline": [
+   {
+    "src": "A",
+    "ref": "4.3",
+    "title": "Partial Derivatives",
+    "zh": "偏导数",
+    "items": [
+     {
+      "ref": "",
+      "title": "Higher-Order Partial Derivatives",
+      "zh": "高阶偏导数"
+     },
+     {
+      "ref": "",
+      "title": "Equality of Mixed Partial Derivatives (Clairaut’s Theorem)",
+      "zh": "混合偏导数相等（Clairaut 定理）"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "4.4",
+    "title": "Tangent Planes and Linear Approximations",
+    "zh": "切平面与线性近似",
+    "items": [
+     {
+      "ref": "",
+      "title": "Tangent Planes",
+      "zh": "切平面"
+     },
+     {
+      "ref": "",
+      "title": "Differentiability",
+      "zh": "可微性"
+     },
+     {
+      "ref": "",
+      "title": "Differentials",
+      "zh": "全微分"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "4.7",
+    "title": "Maxima/Minima Problems",
+    "zh": "极值问题",
+    "items": [
+     {
+      "ref": "",
+      "title": "Critical Points",
+      "zh": "临界点"
+     },
+     {
+      "ref": "",
+      "title": "Second Derivative Test",
+      "zh": "二阶导数判别法"
+     },
+     {
+      "ref": "",
+      "title": "Absolute Maxima and Minima",
+      "zh": "全局最大值与最小值"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "4.8",
+    "title": "Lagrange Multipliers",
+    "zh": "拉格朗日乘数法",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "5.7",
+    "title": "Higher-Order Derivatives",
+    "zh": "高阶导数",
+    "fill": "二阶偏导矩阵（海森矩阵）的矩阵写法",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "5.8",
+    "title": "Linearization and Multivariate Taylor Series",
+    "zh": "线性化与多元泰勒级数",
+    "fill": "二阶近似（二次型逼近）",
+    "items": []
+   },
+   {
+    "src": "C",
+    "ref": "3.1",
+    "title": "Basic properties and examples",
+    "zh": "基本性质与例子",
+    "fill": "连接二阶优化：用海森矩阵半正定/正定给出二阶条件（极值判别的一般化）",
+    "items": []
+   },
+   {
+    "src": "C",
+    "ref": "9.1",
+    "title": "Unconstrained minimization problems",
+    "zh": "无约束极小化问题",
+    "fill": "连接二阶优化：把海森矩阵放进极小化问题的框架",
+    "items": []
+   },
+   {
+    "src": "C",
+    "ref": "9.5",
+    "title": "Newton’s method",
+    "zh": "牛顿法",
+    "fill": "连接二阶优化：牛顿法用二阶（海森）模型产生下降步",
+    "items": []
+   }
+  ],
+  "coverage": [
+   {
+    "topic": "二阶偏导矩阵",
+    "refs": [
+     "A:4.3",
+     "B:5.7",
+     "A:4.7"
+    ],
+    "note": "OpenStax 只把四个二阶偏导 fxx、fxy、fyx、fyy 写出来并用 D=fxxfyy−fxy² 组织，海森矩阵的矩阵形式在 B:5.7。"
+   },
+   {
+    "topic": "二阶近似",
+    "refs": [
+     "B:5.8",
+     "A:4.4"
+    ],
+    "note": "A:4.4 只到一阶（切平面/线性近似），二阶泰勒近似在 B:5.8。"
+   },
+   {
+    "topic": "极值判别",
+    "refs": [
+     "A:4.7",
+     "A:4.8",
+     "C:3.1"
+    ],
+    "note": "A:4.7 的 Second Derivative Test 用判别式 D 给出极值/鞍点判据；A:4.8 处理约束极值；C:3.1 把它推广成海森矩阵的半正定条件。"
+   },
+   {
+    "topic": "连接二阶优化",
+    "refs": [
+     "C:9.1",
+     "C:9.5"
+    ],
+    "note": "牛顿法一步就是最小化二阶近似，海森矩阵在这里直接进入算法。"
+   }
+  ],
+  "omitted": "A 的第 4 章其余节（4.1 多元函数、4.2 极限与连续、4.5 链式法则、4.6 方向导数与梯度）以及第 1–3、5–7 章（参数方程与极坐标、空间向量、向量值函数、重积分、幂级数）与本节点关系较远，未收；各节的习题、Key Equations、Key Concepts、Glossary 也未收。B 只收第 5 章的 5.7、5.8，其余章（线性代数、解析几何、矩阵分解、概率、优化）未收。C 只收第 3 章 3.1 与第 9 章 9.1、9.5，其余章与附录未收。"
+ },
+ "M.3.1": {
+  "sources": [
+   {
+    "key": "A",
+    "kind": "book",
+    "title": "Introduction to Linear Algebra, 5th Edition",
+    "by": "Gilbert Strang",
+    "year": 2016,
+    "url": "https://math.mit.edu/~gs/linearalgebra/ila5/indexila5.html",
+    "toc_urls": [
+     "https://math.mit.edu/~gs/linearalgebra/ila5/linearalgebra5_TOC.pdf"
+    ],
+    "why": "MIT 18.06（节点现有英文资源）的指定教材，作者本人主页给出的完整目录；章节结构比 OCW 的逐讲清单更细，六个知识点全覆盖。"
+   }
+  ],
+  "outline": [
+   {
+    "src": "A",
+    "ref": "1",
+    "title": "Introduction to Vectors",
+    "zh": "向量导论",
+    "items": [
+     {
+      "ref": "1.1",
+      "title": "Vectors and Linear Combinations",
+      "zh": "向量与线性组合"
+     },
+     {
+      "ref": "1.2",
+      "title": "Lengths and Dot Products",
+      "zh": "长度与点积"
+     },
+     {
+      "ref": "1.3",
+      "title": "Matrices",
+      "zh": "矩阵"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "2",
+    "title": "Solving Linear Equations",
+    "zh": "求解线性方程组",
+    "items": [
+     {
+      "ref": "2.1",
+      "title": "Vectors and Linear Equations",
+      "zh": "向量与线性方程组"
+     },
+     {
+      "ref": "2.2",
+      "title": "The Idea of Elimination",
+      "zh": "消元法的思想"
+     },
+     {
+      "ref": "2.3",
+      "title": "Elimination Using Matrices",
+      "zh": "用矩阵做消元"
+     },
+     {
+      "ref": "2.4",
+      "title": "Rules for Matrix Operations",
+      "zh": "矩阵运算规则"
+     },
+     {
+      "ref": "2.5",
+      "title": "Inverse Matrices",
+      "zh": "逆矩阵"
+     },
+     {
+      "ref": "2.6",
+      "title": "Elimination = Factorization: A = LU",
+      "zh": "消元即分解：A = LU"
+     },
+     {
+      "ref": "2.7",
+      "title": "Transposes and Permutations",
+      "zh": "转置与置换"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "3",
+    "title": "Vector Spaces and Subspaces",
+    "zh": "向量空间与子空间",
+    "items": [
+     {
+      "ref": "3.1",
+      "title": "Spaces of Vectors",
+      "zh": "向量空间"
+     },
+     {
+      "ref": "3.2",
+      "title": "The Nullspace of A: Solving Ax = 0 and Rx = 0",
+      "zh": "A 的零空间：解 Ax = 0 与 Rx = 0"
+     },
+     {
+      "ref": "3.3",
+      "title": "The Complete Solution to Ax = b",
+      "zh": "Ax = b 的完全解"
+     },
+     {
+      "ref": "3.4",
+      "title": "Independence, Basis and Dimension",
+      "zh": "线性无关、基与维数"
+     },
+     {
+      "ref": "3.5",
+      "title": "Dimensions of the Four Subspaces",
+      "zh": "四个基本子空间的维数"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "4",
+    "title": "Orthogonality",
+    "zh": "正交性",
+    "items": [
+     {
+      "ref": "4.1",
+      "title": "Orthogonality of the Four Subspaces",
+      "zh": "四个基本子空间的正交性"
+     },
+     {
+      "ref": "4.2",
+      "title": "Projections",
+      "zh": "投影"
+     },
+     {
+      "ref": "4.3",
+      "title": "Least Squares Approximations",
+      "zh": "最小二乘逼近"
+     },
+     {
+      "ref": "4.4",
+      "title": "Orthonormal Bases and Gram-Schmidt",
+      "zh": "标准正交基与 Gram-Schmidt 正交化"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "5",
+    "title": "Determinants",
+    "zh": "行列式",
+    "items": [
+     {
+      "ref": "5.1",
+      "title": "The Properties of Determinants",
+      "zh": "行列式的性质"
+     },
+     {
+      "ref": "5.2",
+      "title": "Permutations and Cofactors",
+      "zh": "排列与余子式"
+     },
+     {
+      "ref": "5.3",
+      "title": "Cramer’s Rule, Inverses, and Volumes",
+      "zh": "Cramer 法则、逆矩阵与体积"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "6",
+    "title": "Eigenvalues and Eigenvectors",
+    "zh": "特征值与特征向量",
+    "items": [
+     {
+      "ref": "6.1",
+      "title": "Introduction to Eigenvalues",
+      "zh": "特征值导论"
+     },
+     {
+      "ref": "6.2",
+      "title": "Diagonalizing a Matrix",
+      "zh": "矩阵对角化"
+     },
+     {
+      "ref": "6.3",
+      "title": "Systems of Differential Equations",
+      "zh": "微分方程组"
+     },
+     {
+      "ref": "6.4",
+      "title": "Symmetric Matrices",
+      "zh": "对称矩阵"
+     },
+     {
+      "ref": "6.5",
+      "title": "Positive Definite Matrices",
+      "zh": "正定矩阵"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "7",
+    "title": "The Singular Value Decomposition (SVD)",
+    "zh": "奇异值分解（SVD）",
+    "items": [
+     {
+      "ref": "7.1",
+      "title": "Image Processing by Linear Algebra",
+      "zh": "用线性代数做图像处理"
+     },
+     {
+      "ref": "7.2",
+      "title": "Bases and Matrices in the SVD",
+      "zh": "SVD 中的基与矩阵"
+     },
+     {
+      "ref": "7.3",
+      "title": "Principal Component Analysis (PCA by the SVD)",
+      "zh": "主成分分析（基于 SVD 的 PCA）"
+     },
+     {
+      "ref": "7.4",
+      "title": "The Geometry of the SVD",
+      "zh": "SVD 的几何意义"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "8",
+    "title": "Linear Transformations",
+    "zh": "线性变换",
+    "items": [
+     {
+      "ref": "8.1",
+      "title": "The Idea of a Linear Transformation",
+      "zh": "线性变换的思想"
+     },
+     {
+      "ref": "8.2",
+      "title": "The Matrix of a Linear Transformation",
+      "zh": "线性变换的矩阵"
+     },
+     {
+      "ref": "8.3",
+      "title": "The Search for a Good Basis",
+      "zh": "寻找好的基"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "11",
+    "title": "Numerical Linear Algebra",
+    "zh": "数值线性代数",
+    "items": [
+     {
+      "ref": "11.1",
+      "title": "Gaussian Elimination in Practice",
+      "zh": "实际计算中的高斯消元"
+     },
+     {
+      "ref": "11.2",
+      "title": "Norms and Condition Numbers",
+      "zh": "范数与条件数"
+     },
+     {
+      "ref": "11.3",
+      "title": "Iterative Methods and Preconditioners",
+      "zh": "迭代法与预条件"
+     }
+    ]
+   }
+  ],
+  "coverage": [
+   {
+    "topic": "向量空间",
+    "refs": [
+     "A:3",
+     "A:3.1",
+     "A:3.4"
+    ]
+   },
+   {
+    "topic": "线性映射",
+    "refs": [
+     "A:8",
+     "A:8.1",
+     "A:8.2"
+    ]
+   },
+   {
+    "topic": "线性方程组",
+    "refs": [
+     "A:2",
+     "A:2.2",
+     "A:3.2",
+     "A:3.3"
+    ]
+   },
+   {
+    "topic": "矩阵",
+    "refs": [
+     "A:1.3",
+     "A:2.4",
+     "A:2.5",
+     "A:2.6"
+    ]
+   },
+   {
+    "topic": "特征值",
+    "refs": [
+     "A:6",
+     "A:6.1",
+     "A:6.2"
+    ]
+   },
+   {
+    "topic": "内积与正交分解",
+    "refs": [
+     "A:4",
+     "A:4.1",
+     "A:4.2",
+     "A:4.4",
+     "A:6.4",
+     "A:7.2"
+    ]
+   },
+   {
+    "topic": "D2 验收：用分解实现最小二乘、降维或线性系统求解并验证结果",
+    "refs": [
+     "A:2.6",
+     "A:4.3",
+     "A:7.3",
+     "A:11.2"
+    ],
+    "note": "LU/QR/SVD 三种分解加最小二乘与 PCA；验证结果看 11.2 范数与条件数。"
+   },
+   {
+    "topic": "D3 验收：从线性映射推导分解、谱结构与解的唯一性条件",
+    "refs": [
+     "A:8.2",
+     "A:6.4",
+     "A:6.5",
+     "A:3.4",
+     "A:3.5"
+    ]
+   }
+  ],
+  "omitted": "第 9 章（复数向量与矩阵）、第 10 章（图与网络、工程、马尔可夫、线性规划、傅里叶级数、图形学、密码学等应用）、第 12 章（概率统计；其中 12.3 的加权最小二乘也已由 4.3 覆盖）、书末 Matrix Factorizations、Index、Six Great Theorems（附录与索引性质）与简介的六个知识点关系较远，未收。"
+ },
+ "P.5.4": {
+  "sources": [
+   {
+    "key": "A",
+    "kind": "docs",
+    "title": "SLSA specification v1.2",
+    "by": "SLSA project / OpenSSF (Linux Foundation)",
+    "year": 2026,
+    "url": "https://slsa.dev/spec/v1.2/",
+    "toc_urls": [
+     "https://slsa.dev/spec/v1.2/"
+    ],
+    "why": "节点现有英文资源就是这份规范；供应链安全领域的行业共识规范，按 Build/Source 两条轨道加跨轨道信息组织，覆盖制品、构建溯源与供应链完整性。"
+   },
+   {
+    "key": "B",
+    "kind": "docs",
+    "title": "reproducible-builds.org Documentation",
+    "by": "Reproducible Builds project",
+    "year": 2026,
+    "url": "https://reproducible-builds.org/docs/",
+    "toc_urls": [
+     "https://reproducible-builds.org/docs/"
+    ],
+    "why": "补“可复现构建”与“依赖锁定”：SLSA 只要求可溯源，不解释什么算可复现，这个项目官方文档给出定义、不可复现的成因与固定/记录构建环境的做法。"
+   },
+   {
+    "key": "C",
+    "kind": "docs",
+    "title": "OWASP CycloneDX Authoritative Guide to SBOM",
+    "by": "OWASP Foundation / CycloneDX project",
+    "year": 2026,
+    "url": "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf",
+    "toc_urls": [
+     "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf"
+    ],
+    "why": "补“软件物料”：SLSA 规范里没有 SBOM 专门的章节，这份 OWASP 项目的权威指南讲清了 SBOM 的对象模型、覆盖度/成熟度（NTIA 最低要素）与使用场景。"
+   }
+  ],
+  "outline": [
+   {
+    "src": "A",
+    "ref": "",
+    "title": "About SLSA",
+    "zh": "关于 SLSA",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Basics",
+    "zh": "基础",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Terminology",
+    "zh": "术语",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Producing artifacts",
+    "zh": "产出制品",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Verifying artifacts",
+    "zh": "校验制品",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Provenance",
+    "zh": "溯源",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Build Provenance",
+    "zh": "构建溯源",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Threats & mitigations",
+    "zh": "威胁与缓解措施",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "Which problems do Reproducible Builds Solve?",
+    "zh": "可复现构建解决了哪些问题？",
+    "fill": "供应链完整性：为什么“能自己重建出同样的制品”才能证明没被篡改",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "Definitions",
+    "zh": "定义",
+    "fill": "可复现构建的定义与判定标准",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "Variations in the build environment",
+    "zh": "构建环境中的差异",
+    "fill": "依赖锁定：版本漂移、工具链差异等导致构建结果不同的来源",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "Deterministic build systems",
+    "zh": "确定性构建系统",
+    "fill": "可复现构建",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "Recording the build environment",
+    "zh": "记录构建环境",
+    "fill": "依赖锁定：把依赖与工具链版本固定并记录下来",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "Definition strategies",
+    "zh": "构建环境的定义策略",
+    "fill": "依赖锁定：lockfile / 容器镜像 / 声明式依赖 各自的固定方式",
+    "items": []
+   },
+   {
+    "src": "C",
+    "ref": "",
+    "title": "CYCLONEDX OBJECT MODEL",
+    "zh": "CycloneDX 对象模型",
+    "fill": "软件物料：SBOM 的内容模型",
+    "items": [
+     {
+      "ref": "",
+      "title": "BOM Identity",
+      "zh": "BOM 标识"
+     },
+     {
+      "ref": "",
+      "title": "The Anatomy of a CycloneDX BOM",
+      "zh": "CycloneDX BOM 的结构"
+     },
+     {
+      "ref": "",
+      "title": "Serialization Formats",
+      "zh": "序列化格式"
+     }
+    ]
+   },
+   {
+    "src": "C",
+    "ref": "",
+    "title": "BOM COVERAGE, MATURITY, AND QUALITY",
+    "zh": "BOM 覆盖度、成熟度与质量",
+    "fill": "软件物料：一份 SBOM 至少该有什么（NTIA 最低要素）以及怎么评估质量",
+    "items": [
+     {
+      "ref": "",
+      "title": "NTIA Minimum Elements",
+      "zh": "NTIA 最低要素"
+     },
+     {
+      "ref": "",
+      "title": "SCVS BOM Maturity Model",
+      "zh": "SCVS BOM 成熟度模型"
+     },
+     {
+      "ref": "",
+      "title": "SBOM Quality",
+      "zh": "SBOM 质量"
+     }
+    ]
+   },
+   {
+    "src": "C",
+    "ref": "",
+    "title": "USE CASES",
+    "zh": "使用场景",
+    "fill": "构建溯源与供应链完整性：SBOM 拿来做什么",
+    "items": [
+     {
+      "ref": "",
+      "title": "Inventory",
+      "zh": "组件清点"
+     },
+     {
+      "ref": "",
+      "title": "Integrity Verification",
+      "zh": "完整性校验"
+     },
+     {
+      "ref": "",
+      "title": "Provenance",
+      "zh": "溯源"
+     }
+    ]
+   }
+  ],
+  "coverage": [
+   {
+    "topic": "制品",
+    "refs": [
+     "A:#4",
+     "A:#2"
+    ],
+    "note": "A:#4 是“产出制品”的技术要求（隔离构建、不可篡改产出等），A:#2 讲构建轨道的等级如何对应制品可信度。"
+   },
+   {
+    "topic": "依赖锁定",
+    "refs": [
+     "B:#5",
+     "B:#6",
+     "B:#3"
+    ],
+    "note": "A 里没有“依赖锁定”专门章节；B 把它表述为“记录并定义构建环境”，B:#5 是记录构建环境，B:#6 是定义策略（lockfile、容器、声明式依赖），B:#3 列不可复现的成因。具体某个包管理器怎么锁版本要看该包管理器的官方文档，两个来源都没写。"
+   },
+   {
+    "topic": "构建溯源",
+    "refs": [
+     "A:#6",
+     "A:#7",
+     "C:#3"
+    ],
+    "note": "A:#6 讲溯源概念，A:#7 给推荐的构建溯源 attestation 格式；C:#3 的 Provenance 小节从 SBOM 使用者视角讲溯源。"
+   },
+   {
+    "topic": "软件物料",
+    "refs": [
+     "C:#1",
+     "C:#2"
+    ],
+    "note": "A 规范没有 SBOM 专门章节，这一块完全由 C 补：C:#1 是 BOM 对象模型与序列化格式，C:#2 是覆盖度与质量（NTIA 最低要素）。"
+   },
+   {
+    "topic": "供应链完整性",
+    "refs": [
+     "A:#1",
+     "A:#8",
+     "A:#5",
+     "B:#1"
+    ],
+    "note": "A:#1 给整体模型，A:#8 是具体攻击与对应缓解，A:#5 讲消费者如何校验；B:#1 从“能不能自己重建”角度说明完整性的意义。"
+   },
+   {
+    "topic": "可复现构建（节点标题里的一项）",
+    "refs": [
+     "B:#2",
+     "B:#4"
+    ],
+    "note": "B:#2 给定义，B:#4 讲确定性构建系统的实现要点；SLSA 规范本身不定义可复现性。"
+   }
+  ],
+  "omitted": "A 里没收的页面：What's new、Use cases、Guiding principles、FAQ、Future directions（版本与问答性质）、Distributing provenance、Assessing build platforms、Producing source、Verifying source、Assessing source control systems、Example controls、Verified Properties、General model、Verification Summary（Build/Source 轨道里更细的平台实现要求与其他 attestation 格式，与节点简介的五个知识点关系较远）。B 里没收的页面：History、Making plans、Academic publications、Commandments of reproducible builds、Reproducibility Quickstart Guide、SOURCE_DATE_EPOCH、Deterministic build systems 之下的二十余个具体差异页（时间戳、时区、locale、归档元数据、随机数、构建路径、Rust/JVM/Helm 等）、Volatile inputs can disappear、Stable order for inputs/outputs、Stripping of unreproducible information、Value initialization、Version information、Archive metadata、Build path、System images、What's in a build environment?、Proprietary operating systems、Distribute the environment、Building from source、Virtual machine drivers、Formal definition、Verification（Cryptographic checksums / Embedded signatures / Sharing certifications）、Specifications（SOURCE_DATE_EPOCH、BUILD_PATH_PREFIX_MAP）：都是可复现构建的工程细节页，留作 D3/D4 深入时再展开。C 里没收的章：PREFACE、THE INNOVATIVE HISTORY OF OWASP CYCLONEDX、INTRODUCTION 的其余小节（Design Philosophy、The Role of SBOM in Software Transparency、High-Level SBOM Use Cases、xBOM Capabilities）、LIFECYCLE PHASES、USE CASES 里的其余场景（Vulnerability Management、CMDB、License Compliance、Outdated Component Analysis、Pedigree、FOCI、Export Compliance、Procurement、Vendor Risk Management、Supply Chain Management、Composition Completeness、“Known Unknowns”、Version Ranges、Formulation Assurance、密码学资产相关的几节）、GENERATING CYCLONEDX BOMS 及其后的实践章节。"
+ },
+ "S.1.2": {
+  "sources": [
+   {
+    "key": "A",
+    "kind": "course",
+    "title": "CS255: Introduction to Cryptography",
+    "by": "Dan Boneh (Stanford University)",
+    "year": 2025,
+    "url": "https://crypto.stanford.edu/~dabo/cs255/",
+    "toc_urls": [
+     "https://crypto.stanford.edu/~dabo/cs255/syllabus.html"
+    ],
+    "why": "节点现有英文资源就是这个课程；作者本人维护的 syllabus 按单元（对称加密、消息完整性、公钥、签名、协议）列出每讲主题，正好覆盖简介里的全部知识点，从一次性密码本到零知识证明逐讲递进到 D4。"
+   },
+   {
+    "key": "B",
+    "kind": "docs",
+    "title": "NIST SP 800-57 Part 1 Rev. 5, Recommendation for Key Management: Part 1 – General",
+    "by": "Elaine Barker (NIST)",
+    "year": 2020,
+    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf",
+    "toc_urls": [
+     "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf"
+    ],
+    "why": "补“密钥管理”：CS255 没有密钥管理单元，只在识别协议与 TLS 会话里顺带讲口令和会话密钥；NIST 这份推荐做法按密钥类型、用途、密码周期、状态转移、生命周期阶段组织，是这一块的标准参考。"
+   }
+  ],
+  "outline": [
+   {
+    "src": "A",
+    "ref": "Lecture 1",
+    "title": "Overview of cryptography. What is a cipher?",
+    "zh": "密码学概览：什么是密码",
+    "items": []
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Basic symmetric-key encryption",
+    "zh": "对称密钥加密基础",
+    "items": [
+     {
+      "ref": "Lecture 2",
+      "title": "One time pad and stream ciphers",
+      "zh": "一次性密码本与流密码"
+     },
+     {
+      "ref": "Lecture 3",
+      "title": "Block ciphers",
+      "zh": "分组密码"
+     },
+     {
+      "ref": "Lecture 4",
+      "title": "How to use a block cipher",
+      "zh": "如何使用分组密码"
+     },
+     {
+      "ref": "Lecture 5",
+      "title": "CPA Security plus attacks on block ciphers",
+      "zh": "CPA 安全性与分组密码的攻击"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Message integrity",
+    "zh": "消息完整性",
+    "items": [
+     {
+      "ref": "Lecture 6",
+      "title": "Message integrity: definition and applications",
+      "zh": "消息完整性：定义与应用"
+     },
+     {
+      "ref": "Lecture 7",
+      "title": "Collision resistant hashing",
+      "zh": "抗碰撞哈希"
+     },
+     {
+      "ref": "Lecture 8",
+      "title": "Authenticated encryption: security against active attacks",
+      "zh": "认证加密：抗主动攻击的安全性"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Public key cryptography",
+    "zh": "公钥密码",
+    "items": [
+     {
+      "ref": "Lecture 9",
+      "title": "Arithmetic modulo primes and finite cyclic groups",
+      "zh": "模素数运算与有限循环群"
+     },
+     {
+      "ref": "Lecture 10",
+      "title": "Cryptography using finite cyclic groups",
+      "zh": "基于有限循环群的密码学"
+     },
+     {
+      "ref": "Lecture 11",
+      "title": "ElGamal public key encryption",
+      "zh": "ElGamal 公钥加密"
+     },
+     {
+      "ref": "Lecture 12",
+      "title": "Public key encryption using a trapdoor function",
+      "zh": "基于陷门函数的公钥加密"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Digital signatures",
+    "zh": "数字签名",
+    "items": [
+     {
+      "ref": "Lecture 13",
+      "title": "Digital signatures: definitions and applications",
+      "zh": "数字签名：定义与应用"
+     },
+     {
+      "ref": "Lecture 14",
+      "title": "More signature schemes and applications",
+      "zh": "更多签名方案与应用"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Protocols",
+    "zh": "协议",
+    "items": [
+     {
+      "ref": "Lecture 15",
+      "title": "Identification protocols",
+      "zh": "身份识别协议"
+     },
+     {
+      "ref": "Lecture 16",
+      "title": "Authenticated key exchange and SSL/TLS session setup",
+      "zh": "认证密钥交换与 SSL/TLS 会话建立"
+     },
+     {
+      "ref": "Lecture 17",
+      "title": "Post-quantum Cryptography",
+      "zh": "后量子密码"
+     },
+     {
+      "ref": "Lecture 18",
+      "title": "Intro to zero-knowledge proofs and their applications",
+      "zh": "零知识证明入门及其应用"
+     }
+    ]
+   },
+   {
+    "src": "B",
+    "ref": "5",
+    "title": "General Key-Management Guidance",
+    "zh": "密钥管理通用指南",
+    "fill": "密钥管理：密钥类型、用途与密码周期",
+    "items": [
+     {
+      "ref": "5.1",
+      "title": "Key Types and Other Information",
+      "zh": "密钥及相关信息的类型"
+     },
+     {
+      "ref": "5.2",
+      "title": "Key Usage",
+      "zh": "密钥用途"
+     },
+     {
+      "ref": "5.3",
+      "title": "Cryptoperiods",
+      "zh": "密码周期"
+     }
+    ]
+   },
+   {
+    "src": "B",
+    "ref": "7",
+    "title": "Key States and Transitions",
+    "zh": "密钥状态与状态转移",
+    "fill": "密钥管理：一个密钥从产生到销毁的状态机",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "8",
+    "title": "Key-Management Phases and Functions",
+    "zh": "密钥管理的阶段与功能",
+    "fill": "密钥管理：生成、分发、存储、使用、销毁各阶段的职责",
+    "items": [
+     {
+      "ref": "8.1",
+      "title": "Pre-operational Phase",
+      "zh": "运行前阶段"
+     },
+     {
+      "ref": "8.4",
+      "title": "Destroyed Phase",
+      "zh": "销毁阶段"
+     }
+    ]
+   }
+  ],
+  "coverage": [
+   {
+    "topic": "对称",
+    "refs": [
+     "A:#2"
+    ],
+    "note": "单元 Basic symmetric-key encryption 从一次性密码本、分组密码到 CPA 安全性与攻击。"
+   },
+   {
+    "topic": "公钥",
+    "refs": [
+     "A:#4"
+    ],
+    "note": "单元 Public key cryptography：有限循环群、Diffie-Hellman、ElGamal、RSA 陷门置换。"
+   },
+   {
+    "topic": "哈希",
+    "refs": [
+     "A:#3"
+    ],
+    "note": "Lecture 7 Collision resistant hashing（Merkle-Damgard、Davies-Meyer、SHA、HMAC）。"
+   },
+   {
+    "topic": "MAC",
+    "refs": [
+     "A:#3"
+    ],
+    "note": "Lecture 6 消息完整性里的 CBC-MAC/PMAC，Lecture 7 由抗碰撞哈希构造 MAC。"
+   },
+   {
+    "topic": "签名",
+    "refs": [
+     "A:#5"
+    ],
+    "note": "单元 Digital signatures：RSA 签名、基于哈希的签名、证书与证书透明度。"
+   },
+   {
+    "topic": "密钥管理",
+    "refs": [
+     "B:#1",
+     "B:#2",
+     "B:#3",
+     "A:#6"
+    ],
+    "note": "CS255 没有密钥管理单元，只有 Lecture 15 的口令/salt 与 Lecture 16 的会话密钥；密钥类型/用途/密码周期、状态机与生命周期阶段由 B 补。"
+   },
+   {
+    "topic": "协议与安全定义",
+    "refs": [
+     "A:#1",
+     "A:#6",
+     "A:#2",
+     "A:#3"
+    ],
+    "note": "A:#6 是协议单元（识别协议、认证密钥交换、TLS、后量子、零知识）；安全定义分布在 Lecture 2（完美保密/语义安全）、5（CPA）、8（认证加密）、11（CCA）。"
+   }
+  ],
+  "omitted": "syllabus 里的作业（Homework #1-4、Project #1-2 密码管理器与聊天客户端）、往年期末试卷、讲义 pdf/pptx 链接、参考教材章节号（AC/KL）与假期安排属于课程行政与练习，不是知识主题，未收。B 只收第 5、7、8 章，第 1 章引言、第 2 章术语表与缩略语、第 3 章安全服务、第 4 章算法、第 6 章密钥信息的保护要求、第 9 章其他考虑（访问控制、清单管理、密钥恢复等）与附录未收，因为它们要么已在 A 里讲得更系统，要么偏政策合规。"
+ }
+}

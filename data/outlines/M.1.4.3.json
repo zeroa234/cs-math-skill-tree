@@ -1,0 +1,201 @@
+{
+ "id": "M.1.4.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Calculus Volume 3",
+   "by": "Gilbert Strang, Edwin “Jed” Herman",
+   "year": 2016,
+   "url": "https://openstax.org/books/calculus-volume-3/pages/1-introduction",
+   "toc_urls": [
+    "https://openstax.org/books/calculus-volume-3/pages/4-introduction",
+    "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives",
+    "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
+    "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems"
+   ],
+   "why": "节点“现有英文学习资源”就是这本书的 4.7 节，OpenStax 官方开放本科教材；海森矩阵本身没有独立小节，所以把它所在的 4.3 二阶偏导、4.4 线性近似、4.7 二阶导数判别、4.8 条件极值逐节抄下来，页内二级标题抄到小节。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Mathematics for Machine Learning",
+   "by": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
+   "year": 2020,
+   "url": "https://mml-book.github.io/",
+   "toc_urls": [
+    "https://mml-book.github.io/book/mml-book.pdf"
+   ],
+   "why": "补“二阶偏导矩阵（海森矩阵）”与“二阶近似”：5.7 高阶导数一节给出 Hessian，5.8 讲多元泰勒展开（二阶近似）。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "Convex Optimization",
+   "by": "Stephen Boyd, Lieven Vandenberghe",
+   "year": 2004,
+   "url": "https://web.stanford.edu/~boyd/cvxbook/",
+   "toc_urls": [
+    "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf"
+   ],
+   "why": "补“连接二阶优化”：3.1 用海森矩阵的半正定性表述二阶条件，9.1/9.5 是无约束极小化与牛顿法（二阶模型）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4.3",
+   "title": "Partial Derivatives",
+   "zh": "偏导数",
+   "items": [
+    {
+     "ref": "",
+     "title": "Higher-Order Partial Derivatives",
+     "zh": "高阶偏导数"
+    },
+    {
+     "ref": "",
+     "title": "Equality of Mixed Partial Derivatives (Clairaut’s Theorem)",
+     "zh": "混合偏导数相等（Clairaut 定理）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4.4",
+   "title": "Tangent Planes and Linear Approximations",
+   "zh": "切平面与线性近似",
+   "items": [
+    {
+     "ref": "",
+     "title": "Tangent Planes",
+     "zh": "切平面"
+    },
+    {
+     "ref": "",
+     "title": "Differentiability",
+     "zh": "可微性"
+    },
+    {
+     "ref": "",
+     "title": "Differentials",
+     "zh": "全微分"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4.7",
+   "title": "Maxima/Minima Problems",
+   "zh": "极值问题",
+   "items": [
+    {
+     "ref": "",
+     "title": "Critical Points",
+     "zh": "临界点"
+    },
+    {
+     "ref": "",
+     "title": "Second Derivative Test",
+     "zh": "二阶导数判别法"
+    },
+    {
+     "ref": "",
+     "title": "Absolute Maxima and Minima",
+     "zh": "全局最大值与最小值"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4.8",
+   "title": "Lagrange Multipliers",
+   "zh": "拉格朗日乘数法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "5.7",
+   "title": "Higher-Order Derivatives",
+   "zh": "高阶导数",
+   "fill": "二阶偏导矩阵（海森矩阵）的矩阵写法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "5.8",
+   "title": "Linearization and Multivariate Taylor Series",
+   "zh": "线性化与多元泰勒级数",
+   "fill": "二阶近似（二次型逼近）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "3.1",
+   "title": "Basic properties and examples",
+   "zh": "基本性质与例子",
+   "fill": "连接二阶优化：用海森矩阵半正定/正定给出二阶条件（极值判别的一般化）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "9.1",
+   "title": "Unconstrained minimization problems",
+   "zh": "无约束极小化问题",
+   "fill": "连接二阶优化：把海森矩阵放进极小化问题的框架",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "9.5",
+   "title": "Newton’s method",
+   "zh": "牛顿法",
+   "fill": "连接二阶优化：牛顿法用二阶（海森）模型产生下降步",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "二阶偏导矩阵",
+   "refs": [
+    "A:4.3",
+    "B:5.7",
+    "A:4.7"
+   ],
+   "note": "OpenStax 只把四个二阶偏导 fxx、fxy、fyx、fyy 写出来并用 D=fxxfyy−fxy² 组织，海森矩阵的矩阵形式在 B:5.7。"
+  },
+  {
+   "topic": "二阶近似",
+   "refs": [
+    "B:5.8",
+    "A:4.4"
+   ],
+   "note": "A:4.4 只到一阶（切平面/线性近似），二阶泰勒近似在 B:5.8。"
+  },
+  {
+   "topic": "极值判别",
+   "refs": [
+    "A:4.7",
+    "A:4.8",
+    "C:3.1"
+   ],
+   "note": "A:4.7 的 Second Derivative Test 用判别式 D 给出极值/鞍点判据；A:4.8 处理约束极值；C:3.1 把它推广成海森矩阵的半正定条件。"
+  },
+  {
+   "topic": "连接二阶优化",
+   "refs": [
+    "C:9.1",
+    "C:9.5"
+   ],
+   "note": "牛顿法一步就是最小化二阶近似，海森矩阵在这里直接进入算法。"
+  }
+ ],
+ "omitted": "A 的第 4 章其余节（4.1 多元函数、4.2 极限与连续、4.5 链式法则、4.6 方向导数与梯度）以及第 1–3、5–7 章（参数方程与极坐标、空间向量、向量值函数、重积分、幂级数）与本节点关系较远，未收；各节的习题、Key Equations、Key Concepts、Glossary 也未收。B 只收第 5 章的 5.7、5.8，其余章（线性代数、解析几何、矩阵分解、概率、优化）未收。C 只收第 3 章 3.1 与第 9 章 9.1、9.5，其余章与附录未收。",
+ "notes": "OpenStax 的节没有编号小节（页内二级标题只有文字标题），所以第三层条目的 ref 留空，coverage 只引到节一级。4.7 页内的 “Problem-Solving Strategy” 是重复出现的排版标题（下面还有副标题），为免歧义未收。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 17,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

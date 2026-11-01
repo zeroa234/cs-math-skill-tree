@@ -1,0 +1,279 @@
+{
+ "id": "S.1.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS255: Introduction to Cryptography",
+   "by": "Dan Boneh (Stanford University)",
+   "year": 2025,
+   "url": "https://crypto.stanford.edu/~dabo/cs255/",
+   "toc_urls": [
+    "https://crypto.stanford.edu/~dabo/cs255/syllabus.html"
+   ],
+   "why": "节点现有英文资源就是这个课程；作者本人维护的 syllabus 按单元（对称加密、消息完整性、公钥、签名、协议）列出每讲主题，正好覆盖简介里的全部知识点，从一次性密码本到零知识证明逐讲递进到 D4。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "NIST SP 800-57 Part 1 Rev. 5, Recommendation for Key Management: Part 1 – General",
+   "by": "Elaine Barker (NIST)",
+   "year": 2020,
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-57pt1r5.pdf"
+   ],
+   "why": "补“密钥管理”：CS255 没有密钥管理单元，只在识别协议与 TLS 会话里顺带讲口令和会话密钥；NIST 这份推荐做法按密钥类型、用途、密码周期、状态转移、生命周期阶段组织，是这一块的标准参考。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture 1",
+   "title": "Overview of cryptography. What is a cipher?",
+   "zh": "密码学概览：什么是密码",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Basic symmetric-key encryption",
+   "zh": "对称密钥加密基础",
+   "items": [
+    {
+     "ref": "Lecture 2",
+     "title": "One time pad and stream ciphers",
+     "zh": "一次性密码本与流密码"
+    },
+    {
+     "ref": "Lecture 3",
+     "title": "Block ciphers",
+     "zh": "分组密码"
+    },
+    {
+     "ref": "Lecture 4",
+     "title": "How to use a block cipher",
+     "zh": "如何使用分组密码"
+    },
+    {
+     "ref": "Lecture 5",
+     "title": "CPA Security plus attacks on block ciphers",
+     "zh": "CPA 安全性与分组密码的攻击"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Message integrity",
+   "zh": "消息完整性",
+   "items": [
+    {
+     "ref": "Lecture 6",
+     "title": "Message integrity: definition and applications",
+     "zh": "消息完整性：定义与应用"
+    },
+    {
+     "ref": "Lecture 7",
+     "title": "Collision resistant hashing",
+     "zh": "抗碰撞哈希"
+    },
+    {
+     "ref": "Lecture 8",
+     "title": "Authenticated encryption: security against active attacks",
+     "zh": "认证加密：抗主动攻击的安全性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Public key cryptography",
+   "zh": "公钥密码",
+   "items": [
+    {
+     "ref": "Lecture 9",
+     "title": "Arithmetic modulo primes and finite cyclic groups",
+     "zh": "模素数运算与有限循环群"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "Cryptography using finite cyclic groups",
+     "zh": "基于有限循环群的密码学"
+    },
+    {
+     "ref": "Lecture 11",
+     "title": "ElGamal public key encryption",
+     "zh": "ElGamal 公钥加密"
+    },
+    {
+     "ref": "Lecture 12",
+     "title": "Public key encryption using a trapdoor function",
+     "zh": "基于陷门函数的公钥加密"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Digital signatures",
+   "zh": "数字签名",
+   "items": [
+    {
+     "ref": "Lecture 13",
+     "title": "Digital signatures: definitions and applications",
+     "zh": "数字签名：定义与应用"
+    },
+    {
+     "ref": "Lecture 14",
+     "title": "More signature schemes and applications",
+     "zh": "更多签名方案与应用"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Protocols",
+   "zh": "协议",
+   "items": [
+    {
+     "ref": "Lecture 15",
+     "title": "Identification protocols",
+     "zh": "身份识别协议"
+    },
+    {
+     "ref": "Lecture 16",
+     "title": "Authenticated key exchange and SSL/TLS session setup",
+     "zh": "认证密钥交换与 SSL/TLS 会话建立"
+    },
+    {
+     "ref": "Lecture 17",
+     "title": "Post-quantum Cryptography",
+     "zh": "后量子密码"
+    },
+    {
+     "ref": "Lecture 18",
+     "title": "Intro to zero-knowledge proofs and their applications",
+     "zh": "零知识证明入门及其应用"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "General Key-Management Guidance",
+   "zh": "密钥管理通用指南",
+   "fill": "密钥管理：密钥类型、用途与密码周期",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Key Types and Other Information",
+     "zh": "密钥及相关信息的类型"
+    },
+    {
+     "ref": "5.2",
+     "title": "Key Usage",
+     "zh": "密钥用途"
+    },
+    {
+     "ref": "5.3",
+     "title": "Cryptoperiods",
+     "zh": "密码周期"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Key States and Transitions",
+   "zh": "密钥状态与状态转移",
+   "fill": "密钥管理：一个密钥从产生到销毁的状态机",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "8",
+   "title": "Key-Management Phases and Functions",
+   "zh": "密钥管理的阶段与功能",
+   "fill": "密钥管理：生成、分发、存储、使用、销毁各阶段的职责",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Pre-operational Phase",
+     "zh": "运行前阶段"
+    },
+    {
+     "ref": "8.4",
+     "title": "Destroyed Phase",
+     "zh": "销毁阶段"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "对称",
+   "refs": [
+    "A:#2"
+   ],
+   "note": "单元 Basic symmetric-key encryption 从一次性密码本、分组密码到 CPA 安全性与攻击。"
+  },
+  {
+   "topic": "公钥",
+   "refs": [
+    "A:#4"
+   ],
+   "note": "单元 Public key cryptography：有限循环群、Diffie-Hellman、ElGamal、RSA 陷门置换。"
+  },
+  {
+   "topic": "哈希",
+   "refs": [
+    "A:#3"
+   ],
+   "note": "Lecture 7 Collision resistant hashing（Merkle-Damgard、Davies-Meyer、SHA、HMAC）。"
+  },
+  {
+   "topic": "MAC",
+   "refs": [
+    "A:#3"
+   ],
+   "note": "Lecture 6 消息完整性里的 CBC-MAC/PMAC，Lecture 7 由抗碰撞哈希构造 MAC。"
+  },
+  {
+   "topic": "签名",
+   "refs": [
+    "A:#5"
+   ],
+   "note": "单元 Digital signatures：RSA 签名、基于哈希的签名、证书与证书透明度。"
+  },
+  {
+   "topic": "密钥管理",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#3",
+    "A:#6"
+   ],
+   "note": "CS255 没有密钥管理单元，只有 Lecture 15 的口令/salt 与 Lecture 16 的会话密钥；密钥类型/用途/密码周期、状态机与生命周期阶段由 B 补。"
+  },
+  {
+   "topic": "协议与安全定义",
+   "refs": [
+    "A:#1",
+    "A:#6",
+    "A:#2",
+    "A:#3"
+   ],
+   "note": "A:#6 是协议单元（识别协议、认证密钥交换、TLS、后量子、零知识）；安全定义分布在 Lecture 2（完美保密/语义安全）、5（CPA）、8（认证加密）、11（CCA）。"
+  }
+ ],
+ "omitted": "syllabus 里的作业（Homework #1-4、Project #1-2 密码管理器与聊天客户端）、往年期末试卷、讲义 pdf/pptx 链接、参考教材章节号（AC/KL）与假期安排属于课程行政与练习，不是知识主题，未收。B 只收第 5、7、8 章，第 1 章引言、第 2 章术语表与缩略语、第 3 章安全服务、第 4 章算法、第 6 章密钥信息的保护要求、第 9 章其他考虑（访问控制、清单管理、密钥恢复等）与附录未收，因为它们要么已在 A 里讲得更系统，要么偏政策合规。",
+ "notes": "CS255 的单元标题（Basic symmetric-key encryption、Message integrity、Public key cryptography、Digital signatures、Protocols）在 syllabus 页里没有编号，所以分支 ref 留空、讲次用 Lecture N 作 ref；coverage 里 A:#1..#6 指本 outline 里 A 的第 1..6 个分支。B 的 8.2、8.3（运营阶段、运行后阶段）在两个提取窗口里没出现确切标题，故 8 章只列 8.1、8.4 两个小节。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 31,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -483,6 +483,7 @@
       el("h3", {}, "学什么"),
       el("p", {}, s.desc),
       ms.length ? el("ul", { class: "milestones" }, ms.map(([lv, g]) => el("li", {}, el("b", {}, `D${lv}：`), g))) : null));
+    kids.push(Guide.section(s));
 
     // Learning resources share the same presentation so Chinese materials are easy to find.
     kids.push(el("section", { class: "p-sec learning-resources" },
@@ -592,7 +593,7 @@
   }
 
   // ── views: overview ⇄ map, mirrored in the URL hash so Back / links work ──
-  // #overview · #map · #map/<lane> · #skill/<id>
+  // #overview · #map · #map/<lane> · #skill/<id> · #skill/<id>/guide (knowledge map open)
   const layoutEl = $("#layout");
   const ovWrap = $("#ov-wrap");
   let view = "";
@@ -610,11 +611,12 @@
     if (!mapFitted) { mapFitted = true; fit(false); }
   }
   function route() {
-    const [v, arg] = decodeURIComponent(location.hash.slice(1)).split("/");
+    const [v, arg, sub] = decodeURIComponent(location.hash.slice(1)).split("/");
     if (v === "skill" && SK.has(arg)) {
       showView("map");
       if (state.collapsed.has(SK.get(arg).lane)) toggleLane(SK.get(arg).lane);
       select(arg);
+      if (sub === "guide") Guide.open(arg);
     } else if (v === "map") {
       showView("map");
       if (LANE.has(arg)) { mapFitted = true; focusLaneInMap(arg); }
@@ -626,6 +628,7 @@
   $("#tab-overview").addEventListener("click", () => go("#overview"));
   $("#tab-map").addEventListener("click", () => go(selected ? `#skill/${selected}` : "#map"));
   const Overview = window.SkillTreeOverview;
+  const Guide = window.SkillTreeGuide;
   $("#skip-link").addEventListener("click", () => {
     const target = view === "overview"
       ? document.querySelector(".region .rg-main")
@@ -795,6 +798,12 @@
     },
     enterLane: (laneId) => go(`#map/${laneId}`),
     pickSkill: (id) => go(`#skill/${id}`),
+  });
+  Guide.init({
+    skill: (id) => SK.get(id),
+    color: (id) => LANE.get(SK.get(id).lane).color,
+    onOpen: (id) => history.replaceState(null, "", `#skill/${id}/guide`),
+    onClose: (id) => { if (view === "map" && selected === id) history.replaceState(null, "", `#skill/${id}`); },
   });
   layout();
   refresh();

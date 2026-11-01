@@ -1,13 +1,17 @@
 """Shared lookup helper for the pi research sub-agents.
 
-  python scripts/research_tool.py fetch <url> [--grep REGEX] [--chars N]
-      Open a page with plain HTTP (free), print its title and text.
+  python scripts/research_tool.py fetch <url> [--grep REGEX] [--chars N] [--start N]
+      Open a page with plain HTTP (free), print its title and text (PDFs: text extracted with pypdf).
       With --grep, print only lines matching REGEX (case-insensitive) plus context.
+      --start skips the first N characters, for reading a long table of contents in pieces.
+  python scripts/research_tool.py extract <url> [--grep REGEX] [--chars N] [--start N]
+      Tavily extract (1 credit, same budget) for pages plain fetch cannot read (JS-rendered, blocked).
   python scripts/research_tool.py search "<query>" [--n 5]
       Tavily search (1 credit). Shared budget in temp/research/tavily-budget.json;
       refuses once the budget is spent.
 
-Pages and search results are cached under temp/research/cache/ so agents share them.
+Pages, extracts and search results are cached under temp/research/cache/ so agents share them,
+and so scripts/check_outlines.py can check copied tables of contents against the exact text an agent read.
 The Tavily key comes from TAVILY_API_KEY, else the Windows user environment.
 """
 import argparse
@@ -65,14 +69,37 @@ def _cache_path(kind, key):
     return CACHE / f"{kind}-{hashlib.md5(key.encode()).hexdigest()}.json"
 
 
+def _clean(text):
+    text = re.sub(r"[ \t\r\f\v]+", " ", text)
+    return re.sub(r"\n\s*\n+", "\n", text).strip()
+
+
+def _pdf_text(raw):
+    # pypdf lives in temp/pylib (pip install --target); -I mode ignores PYTHONPATH, so add it here.
+    sys.path.insert(0, str(ROOT / "temp/pylib"))
+    import io
+    import logging
+    from pypdf import PdfReader
+    logging.getLogger("pypdf").setLevel(logging.ERROR)  # font-encoding warnings would flood the agent's output
+    try:
+        reader = PdfReader(io.BytesIO(raw))
+        pages = [page.extract_text() or "" for page in reader.pages[:60]]
+    except Exception as e:
+        return f"[PDF, {len(raw)} bytes; text extraction failed: {e!r}]"
+    return _clean("\n".join(f"[page {i + 1}]\n{t}" for i, t in enumerate(pages)))
+
+
 def fetch(url):
     cp = _cache_path("page", url)
     if cp.exists():
-        return json.loads(cp.read_text(encoding="utf-8"))
+        cached = json.loads(cp.read_text(encoding="utf-8"))
+        # entries cached before PDF extraction existed hold only a placeholder
+        if not cached.get("text", "").startswith("[PDF,"):
+            return cached
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en,zh;q=0.8"})
     try:
         with urllib.request.urlopen(req, timeout=40) as r:
-            raw = r.read(4_000_000)
+            raw = r.read(20_000_000)
             charset = r.headers.get_content_charset() or "utf-8"
             result = {"url": url, "final_url": r.geturl(), "status": r.status,
                       "type": r.headers.get_content_type()}
@@ -82,14 +109,12 @@ def fetch(url):
         return result
     except Exception as e:  # network errors are not cached, so a retry can succeed
         return {"url": url, "status": None, "error": repr(e)}
-    if result["type"] == "application/pdf":
-        result.update(title="(PDF)", text=f"[PDF, {len(raw)} bytes; text not extracted]")
+    if result["type"] == "application/pdf" or raw[:5] == b"%PDF-":
+        result.update(type="application/pdf", title="(PDF)", text=_pdf_text(raw))
     else:
         p = _Text()
         p.feed(raw.decode(charset, errors="replace"))
-        text = re.sub(r"[ \t\r\f\v]+", " ", "".join(p.parts))
-        text = re.sub(r"\n\s*\n+", "\n", text).strip()
-        result.update(title=html.unescape(p.title.strip()), text=text)
+        result.update(title=html.unescape(p.title.strip()), text=_clean("".join(p.parts)))
     cp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
     return result
 
@@ -103,57 +128,101 @@ def _tavily_key():
     return key
 
 
+def _spend():
+    used = json.loads(BUDGET_FILE.read_text())["used"] if BUDGET_FILE.exists() else 0
+    if used >= BUDGET_LIMIT:
+        sys.exit(f"Tavily budget spent ({used}/{BUDGET_LIMIT}). Use fetch on known official pages instead.")
+    BUDGET_FILE.parent.mkdir(parents=True, exist_ok=True)
+    BUDGET_FILE.write_text(json.dumps({"used": used + 1}))
+
+
+def _tavily(endpoint, payload, timeout):
+    req = urllib.request.Request(f"https://api.tavily.com/{endpoint}", data=json.dumps(payload).encode(), headers={
+        "Authorization": "Bearer " + _tavily_key(), "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode())
+
+
 def search(query, n):
     cp = _cache_path("search", f"{query}|{n}")
     if cp.exists():
         return json.loads(cp.read_text(encoding="utf-8"))
-    used = json.loads(BUDGET_FILE.read_text())["used"] if BUDGET_FILE.exists() else 0
-    if used >= BUDGET_LIMIT:
-        sys.exit(f"Tavily budget spent ({used}/{BUDGET_LIMIT}). Use fetch on known official pages instead.")
-    body = json.dumps({"query": query, "max_results": n, "search_depth": "basic"}).encode()
-    req = urllib.request.Request("https://api.tavily.com/search", data=body, headers={
-        "Authorization": "Bearer " + _tavily_key(), "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        result = json.loads(r.read().decode())
-    BUDGET_FILE.parent.mkdir(parents=True, exist_ok=True)
-    BUDGET_FILE.write_text(json.dumps({"used": used + 1}))
+    _spend()
+    result = _tavily("search", {"query": query, "max_results": n, "search_depth": "basic"}, 60)
     cp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
     return result
+
+
+def extract(url):
+    cp = _cache_path("extract", url)
+    if cp.exists():
+        return json.loads(cp.read_text(encoding="utf-8"))
+    _spend()
+    res = _tavily("extract", {"urls": [url], "extract_depth": "basic", "format": "text"}, 90)
+    hit = (res.get("results") or [None])[0]
+    if not hit:
+        return {"url": url, "status": None, "error": json.dumps(res.get("failed_results"), ensure_ascii=False)}
+    result = {"url": url, "final_url": hit.get("url", url), "status": 200, "type": "tavily-extract",
+              "title": "", "text": _clean(hit.get("raw_content") or "")}
+    cp.write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
+    return result
+
+
+def cached_text(url):
+    """Text an agent has already read for url (plain fetch first, then Tavily extract), or None."""
+    for kind in ("page", "extract"):
+        cp = _cache_path(kind, url)
+        if cp.exists():
+            r = json.loads(cp.read_text(encoding="utf-8"))
+            if r.get("text") and not r["text"].startswith("[PDF,"):
+                return r["text"]
+    return None
+
+
+def _show(r, a):
+    print(f"STATUS {r.get('status')}  FINAL {r.get('final_url', '-')}\nTITLE {r.get('title', '')}")
+    if "error" in r:
+        print("ERROR", r["error"])
+        return
+    text = r["text"]
+    print(f"[{len(text)} chars]")
+    if a.grep:
+        lines = text.splitlines()
+        rx = re.compile(a.grep, re.I)
+        hits = [i for i, line in enumerate(lines) if rx.search(line)]
+        shown = set()
+        for i in hits[:40]:
+            for j in range(max(0, i - 1), min(len(lines), i + 3)):
+                if j not in shown:
+                    shown.add(j)
+                    print(lines[j][:400])
+            print("--")
+        print(f"[{len(hits)} matching lines]")
+    else:
+        print(text[a.start: a.start + a.chars])
+        if a.start + a.chars < len(text):
+            print(f"[... more: --start {a.start + a.chars}]")
 
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
-    f = sub.add_parser("fetch")
-    f.add_argument("url")
-    f.add_argument("--grep")
-    f.add_argument("--chars", type=int, default=3000)
+    for name in ("fetch", "extract"):
+        f = sub.add_parser(name)
+        f.add_argument("url")
+        f.add_argument("--grep")
+        f.add_argument("--chars", type=int, default=3000)
+        f.add_argument("--start", type=int, default=0)
     s = sub.add_parser("search")
     s.add_argument("query")
     s.add_argument("--n", type=int, default=5)
     a = ap.parse_args()
 
     if a.cmd == "fetch":
-        r = fetch(a.url)
-        print(f"STATUS {r.get('status')}  FINAL {r.get('final_url', '-')}\nTITLE {r.get('title', '')}")
-        if "error" in r:
-            print("ERROR", r["error"])
-            return
-        lines = r["text"].splitlines()
-        if a.grep:
-            rx = re.compile(a.grep, re.I)
-            hits = [i for i, line in enumerate(lines) if rx.search(line)]
-            shown = set()
-            for i in hits[:20]:
-                for j in range(max(0, i - 1), min(len(lines), i + 3)):
-                    if j not in shown:
-                        shown.add(j)
-                        print(lines[j][:400])
-                print("--")
-            print(f"[{len(hits)} matching lines]")
-        else:
-            print(r["text"][: a.chars])
+        _show(fetch(a.url), a)
+    elif a.cmd == "extract":
+        _show(extract(a.url), a)
     else:
         r = search(a.query, a.n)
         for i, item in enumerate(r.get("results", []), 1):

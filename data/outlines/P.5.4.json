@@ -1,0 +1,281 @@
+{
+ "id": "P.5.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "SLSA specification v1.2",
+   "by": "SLSA project / OpenSSF (Linux Foundation)",
+   "year": 2026,
+   "url": "https://slsa.dev/spec/v1.2/",
+   "toc_urls": [
+    "https://slsa.dev/spec/v1.2/"
+   ],
+   "why": "节点现有英文资源就是这份规范；供应链安全领域的行业共识规范，按 Build/Source 两条轨道加跨轨道信息组织，覆盖制品、构建溯源与供应链完整性。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "reproducible-builds.org Documentation",
+   "by": "Reproducible Builds project",
+   "year": 2026,
+   "url": "https://reproducible-builds.org/docs/",
+   "toc_urls": [
+    "https://reproducible-builds.org/docs/"
+   ],
+   "why": "补“可复现构建”与“依赖锁定”：SLSA 只要求可溯源，不解释什么算可复现，这个项目官方文档给出定义、不可复现的成因与固定/记录构建环境的做法。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "OWASP CycloneDX Authoritative Guide to SBOM",
+   "by": "OWASP Foundation / CycloneDX project",
+   "year": 2026,
+   "url": "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf",
+   "toc_urls": [
+    "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf"
+   ],
+   "why": "补“软件物料”：SLSA 规范里没有 SBOM 专门的章节，这份 OWASP 项目的权威指南讲清了 SBOM 的对象模型、覆盖度/成熟度（NTIA 最低要素）与使用场景。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "About SLSA",
+   "zh": "关于 SLSA",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Basics",
+   "zh": "基础",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Terminology",
+   "zh": "术语",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Producing artifacts",
+   "zh": "产出制品",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Verifying artifacts",
+   "zh": "校验制品",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Provenance",
+   "zh": "溯源",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Build Provenance",
+   "zh": "构建溯源",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Threats & mitigations",
+   "zh": "威胁与缓解措施",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Which problems do Reproducible Builds Solve?",
+   "zh": "可复现构建解决了哪些问题？",
+   "fill": "供应链完整性：为什么“能自己重建出同样的制品”才能证明没被篡改",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Definitions",
+   "zh": "定义",
+   "fill": "可复现构建的定义与判定标准",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Variations in the build environment",
+   "zh": "构建环境中的差异",
+   "fill": "依赖锁定：版本漂移、工具链差异等导致构建结果不同的来源",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Deterministic build systems",
+   "zh": "确定性构建系统",
+   "fill": "可复现构建",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Recording the build environment",
+   "zh": "记录构建环境",
+   "fill": "依赖锁定：把依赖与工具链版本固定并记录下来",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Definition strategies",
+   "zh": "构建环境的定义策略",
+   "fill": "依赖锁定：lockfile / 容器镜像 / 声明式依赖 各自的固定方式",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "CYCLONEDX OBJECT MODEL",
+   "zh": "CycloneDX 对象模型",
+   "fill": "软件物料：SBOM 的内容模型",
+   "items": [
+    {
+     "ref": "",
+     "title": "BOM Identity",
+     "zh": "BOM 标识"
+    },
+    {
+     "ref": "",
+     "title": "The Anatomy of a CycloneDX BOM",
+     "zh": "CycloneDX BOM 的结构"
+    },
+    {
+     "ref": "",
+     "title": "Serialization Formats",
+     "zh": "序列化格式"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "BOM COVERAGE, MATURITY, AND QUALITY",
+   "zh": "BOM 覆盖度、成熟度与质量",
+   "fill": "软件物料：一份 SBOM 至少该有什么（NTIA 最低要素）以及怎么评估质量",
+   "items": [
+    {
+     "ref": "",
+     "title": "NTIA Minimum Elements",
+     "zh": "NTIA 最低要素"
+    },
+    {
+     "ref": "",
+     "title": "SCVS BOM Maturity Model",
+     "zh": "SCVS BOM 成熟度模型"
+    },
+    {
+     "ref": "",
+     "title": "SBOM Quality",
+     "zh": "SBOM 质量"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "USE CASES",
+   "zh": "使用场景",
+   "fill": "构建溯源与供应链完整性：SBOM 拿来做什么",
+   "items": [
+    {
+     "ref": "",
+     "title": "Inventory",
+     "zh": "组件清点"
+    },
+    {
+     "ref": "",
+     "title": "Integrity Verification",
+     "zh": "完整性校验"
+    },
+    {
+     "ref": "",
+     "title": "Provenance",
+     "zh": "溯源"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "制品",
+   "refs": [
+    "A:#4",
+    "A:#2"
+   ],
+   "note": "A:#4 是“产出制品”的技术要求（隔离构建、不可篡改产出等），A:#2 讲构建轨道的等级如何对应制品可信度。"
+  },
+  {
+   "topic": "依赖锁定",
+   "refs": [
+    "B:#5",
+    "B:#6",
+    "B:#3"
+   ],
+   "note": "A 里没有“依赖锁定”专门章节；B 把它表述为“记录并定义构建环境”，B:#5 是记录构建环境，B:#6 是定义策略（lockfile、容器、声明式依赖），B:#3 列不可复现的成因。具体某个包管理器怎么锁版本要看该包管理器的官方文档，两个来源都没写。"
+  },
+  {
+   "topic": "构建溯源",
+   "refs": [
+    "A:#6",
+    "A:#7",
+    "C:#3"
+   ],
+   "note": "A:#6 讲溯源概念，A:#7 给推荐的构建溯源 attestation 格式；C:#3 的 Provenance 小节从 SBOM 使用者视角讲溯源。"
+  },
+  {
+   "topic": "软件物料",
+   "refs": [
+    "C:#1",
+    "C:#2"
+   ],
+   "note": "A 规范没有 SBOM 专门章节，这一块完全由 C 补：C:#1 是 BOM 对象模型与序列化格式，C:#2 是覆盖度与质量（NTIA 最低要素）。"
+  },
+  {
+   "topic": "供应链完整性",
+   "refs": [
+    "A:#1",
+    "A:#8",
+    "A:#5",
+    "B:#1"
+   ],
+   "note": "A:#1 给整体模型，A:#8 是具体攻击与对应缓解，A:#5 讲消费者如何校验；B:#1 从“能不能自己重建”角度说明完整性的意义。"
+  },
+  {
+   "topic": "可复现构建（节点标题里的一项）",
+   "refs": [
+    "B:#2",
+    "B:#4"
+   ],
+   "note": "B:#2 给定义，B:#4 讲确定性构建系统的实现要点；SLSA 规范本身不定义可复现性。"
+  }
+ ],
+ "omitted": "A 里没收的页面：What's new、Use cases、Guiding principles、FAQ、Future directions（版本与问答性质）、Distributing provenance、Assessing build platforms、Producing source、Verifying source、Assessing source control systems、Example controls、Verified Properties、General model、Verification Summary（Build/Source 轨道里更细的平台实现要求与其他 attestation 格式，与节点简介的五个知识点关系较远）。B 里没收的页面：History、Making plans、Academic publications、Commandments of reproducible builds、Reproducibility Quickstart Guide、SOURCE_DATE_EPOCH、Deterministic build systems 之下的二十余个具体差异页（时间戳、时区、locale、归档元数据、随机数、构建路径、Rust/JVM/Helm 等）、Volatile inputs can disappear、Stable order for inputs/outputs、Stripping of unreproducible information、Value initialization、Version information、Archive metadata、Build path、System images、What's in a build environment?、Proprietary operating systems、Distribute the environment、Building from source、Virtual machine drivers、Formal definition、Verification（Cryptographic checksums / Embedded signatures / Sharing certifications）、Specifications（SOURCE_DATE_EPOCH、BUILD_PATH_PREFIX_MAP）：都是可复现构建的工程细节页，留作 D3/D4 深入时再展开。C 里没收的章：PREFACE、THE INNOVATIVE HISTORY OF OWASP CYCLONEDX、INTRODUCTION 的其余小节（Design Philosophy、The Role of SBOM in Software Transparency、High-Level SBOM Use Cases、xBOM Capabilities）、LIFECYCLE PHASES、USE CASES 里的其余场景（Vulnerability Management、CMDB、License Compliance、Outdated Component Analysis、Pedigree、FOCI、Export Compliance、Procurement、Vendor Risk Management、Supply Chain Management、Composition Completeness、“Known Unknowns”、Version Ranges、Formulation Assurance、密码学资产相关的几节）、GENERATING CYCLONEDX BOMS 及其后的实践章节。",
+ "notes": "三个来源都是官方/项目站点上持续更新的文档，没有印刷年份，year 按访问时（2026-11）的版本记。A、B、C 的页面都没有编号（SLSA 的页面、reproducible-builds 的文档页、CycloneDX 指南的章标题都不带编号），所以 outline 的 ref 一律留空，coverage 用 #序号 表示第几个分支。分支较多（17 个）是因为 A 是分页规范、一页一个主题，无法再合并成“章”。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 26,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}
