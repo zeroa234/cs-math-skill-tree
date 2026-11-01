@@ -343,8 +343,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/S.4.4.json。"
     },
     "H.4.4": {
-      "review": "2016边缘计算综述适合定义与挑战，不足以独立学习调度算法、离线容错和系统实现。",
-      "note": "单篇综述可建立边缘计算概念，不是完整系统课程。"
+      "title": "Edge Computing: Vision and Challenges（Shi et al., IEEE IoT Journal 2016）",
+      "url": "https://cse.buffalo.edu/faculty/tkosar/cse710_spring20/shi-iot16.pdf",
+      "tier": "material",
+      "lang": "en",
+      "free": true,
+      "covers": "边缘计算定义（把计算放到网络边缘、靠近数据源）、cloud offloading、智能家居/城市、边缘协作案例；响应时间、电池/功耗、带宽成本、数据安全与隐私；挑战（可编程性、命名、数据抽象、服务管理、优化指标）。",
+      "access": "课程阅读页免费 PDF；英文综述，不是完整课程。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/H.4.4.json。"
     },
     "V.1.3": {
       "review": "PBRT4是物理渲染主教材，物理仿真、逆向与可微渲染需配导览CMU课程。",
@@ -1677,7 +1684,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/H.3.3.json。"
     },
     "H.3.4": {
-      "review": "Lee–Seshia适合嵌入式建模调度与验证，安全关键流程和危害分析需系统安全补充课。"
+      "title": "Lee & Seshia, Introduction to Embedded Systems: A Cyber-Physical Systems Approach（第 2 版，MIT Press，免费 PDF）",
+      "url": "https://ptolemy.berkeley.edu/books/leeseshia/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "第 12 章 Scheduling（RM、EDF、调度与互斥、多处理器调度）、第 16 章 Factors Determining Execution Time / Basics of Execution Time Analysis（WCET）、安全关键系统作为应用背景；全书按建模—设计—分析组织。",
+      "access": "作者站点免费 PDF（v2.3），无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/H.3.4.json。"
     },
     "H.4.1": {
       "title": "Feedback Systems (MIT 6.302, MIT OpenCourseWare)",
@@ -4762,6 +4777,26 @@
       "covers": "24 课按入门/农场/运输/制造/零售/消费项目推进：IoT 组成、微控制器 vs 单板机、传感器/执行器、连接互联网与 MQTT、云平台与云端应用逻辑、密钥/证书安全、GPS/数据存储/地图/地理围栏、边缘推理、语音交互。",
       "access": "GitHub 免费中文译本（简体），与原英文课程同步；每课含课前/课后测验、书面指导、作业与解答；需要硬件或仿真环境。",
       "role": "primary"
+    },
+    "path-h-3-4": {
+      "title": "王永吉、陈秋萍《单调速率及其扩展算法的可调度性判定》（软件学报，2004）",
+      "url": "https://www.jos.org.cn/1000-9825/15/799.pdf",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "实时调度中的 RM 算法、利用率界与精确可调度性判定、调度开销与优先级反转；手算例题。",
+      "access": "期刊原站公开中文全文与算例；经典单核 RM 模型，不含 WCET 测量、多核与认证。",
+      "role": "primary"
+    },
+    "path-h-4-4": {
+      "title": "KubeEdge 官方中文文档：云边协同、边缘自治与设备管理",
+      "url": "https://kubeedge.io/zh/docs/",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "KubeEdge 架构（cloud/core/edge）、把容器化业务与设备管理扩展到边缘节点、边缘自治、MQTT 设备通信、云边元数据同步；解释在边缘处理数据可降低带宽、提高响应、保护隐私。",
+      "access": "官方中文文档免费；动手需要 Kubernetes/Linux 环境，旧版命令需对照当前发行版。",
+      "role": "primary"
     }
   },
   "chinese": {
@@ -5350,8 +5385,8 @@
       "covers": "MLOps 级别 0/1/2、CT（持续训练）、数据与模型验证（架构偏差、在线验证/Canary）、元数据管理、CI/CD 与监控；并有独立的「特征存储区」小节：集中存储特征定义与访问、批量与低延时实时服务 API、复用特征集、保留特征元数据，并用 Feature Store 同时服务训练与在线推断以避免训练-应用偏差。"
     },
     "H.4.4": {
-      "source": "zh-edge-platform",
-      "covers": "从架构和快速开始部署云端与边缘节点，再学边缘自治、设备管理与消息同步；资源调度算法和定量时延权衡仍读英文。"
+      "source": "path-h-4-4",
+      "covers": "KubeEdge 架构（cloud/core/edge）、把容器化业务与设备管理扩展到边缘节点、边缘自治、MQTT 设备通信、云边元数据同步；解释在边缘处理数据可降低带宽、提高响应、保护隐私。"
     },
     "D.4.1": {
       "source": "zh-knowledge-graphs",
@@ -5486,8 +5521,8 @@
       "covers": "半导体能带论、载流子统计与输运、非平衡载流子、pn 结、金属-半导体接触、MIS 结构；BJT 的直流/频率/开关特性；MOSFET 阈值电压、直流/频率/开关特性、小尺寸效应与非理想效应。"
     },
     "H.3.4": {
-      "source": "zh-realtime",
-      "covers": "从理想RM调度的利用率界和充分必要条件，读到调度开销与优先级反转，手算文中例题；WCET测量、EDF/多核、失效安全和认证另学。"
+      "source": "path-h-3-4",
+      "covers": "实时调度中的 RM 算法、利用率界与精确可调度性判定、调度开销与优先级反转；手算例题。"
     },
     "V.1.2": {
       "source": "zh-multimedia",
@@ -6255,13 +6290,14 @@
     ],
     "H.3.4": [
       {
-        "title": "MIT16.863J：System Safety（可选应用延伸）",
-        "url": "https://ocw.mit.edu/courses/16-863j-system-safety-spring-2016/",
-        "tier": "material",
-        "lang": "en",
+        "title": "野火《FreeRTOS 内核实现与应用开发实战指南》（中文在线书）",
+        "url": "https://doc.embedfire.com/rtos/freertos/zh/latest/index.html",
+        "tier": "book",
+        "lang": "zh",
         "free": true,
-        "covers": "公开讲义和作业；危害分析、设计安全与安全管理，不能用实时调度正确替代这些论证。",
-        "access": "官方免费公开文字材料；不依赖视频字幕。"
+        "covers": "任务状态/优先级/时间片、临界段、阻塞延时、调度器实现；可把 RM/EDF 理论对照到真实 RTOS 调度。",
+        "access": "免费在线；中文；需 STM32 板卡实验。",
+        "role": "supplement"
       }
     ],
     "F.3.4": [
@@ -10959,6 +10995,58 @@
         "free": true,
         "covers": "Device-side power management: dynamic frequency scaling, automatic light-sleep with time compensation, sleep modes, power management locks, the ESP32 power management algorithm, debugging/profiling and examples.",
         "access": "Free official docs, English.",
+        "role": "supplement"
+      }
+    ],
+    "H.4.4": [
+      {
+        "title": "复旦大学《机器视觉与边缘计算应用》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/FUDAN-1456632162",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "OpenVINO/头歌平台在边缘设备上部署目标检测/语义分割模型的案例（智能交通灯、儿童睡姿、智能冰箱）。",
+        "access": "视频需注册选课，按学期开放，认证证书收费；需深度学习基础。",
+        "role": "supplement"
+      },
+      {
+        "title": "《边缘计算迁移研究综述》（电信科学，2019）",
+        "url": "https://www.telecomsci.com/zh/article/doi/10.11959/j.issn.1000-0801.2019059",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "计算迁移作为边缘计算的关键问题：边缘节点能力/资源/带宽/能源受限、从分布式计算到边缘计算的演进与各阶段迁移特点、经典模型评述、基于能耗优化管理的移动边缘计算模型对比，以及面向多用户终端的计算迁移策略。",
+        "access": "电信科学官网免费摘要与参考文献，PDF 可下载；中文。",
+        "role": "supplement"
+      },
+      {
+        "title": "《边缘计算中面向缓存的迁移决策和资源分配》（电子与信息学报）",
+        "url": "https://jeit.ac.cn/cn/article/doi/10.11999/JEIT240427?viewType=HTML",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "把时延与能耗作为目标函数的边缘资源分配与迁移决策：构建基于预缓存的迁移计算模型，联合优化资源分配、服务缓存与迁移决策，把混合整数非线性规划分解求解，最终使“系统能耗和时延加权和最小”。",
+        "access": "电子与信息学报官网 HTML 全文免费；中文。",
+        "role": "supplement"
+      },
+      {
+        "title": "Resource Scheduling in Edge Computing: A Survey（Luo, Hu, Li, Li, Shi；IEEE Communications Surveys & Tutorials, 2021）",
+        "url": "https://quyuanluo.github.io/papers/luo21-SchedulingSurvey.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "边缘资源调度系统综述：边缘计算架构与协作方式、统一模型；按 computation offloading、resource allocation、resource provisioning 三类研究问题梳理；集中式/分布式两种运行模式；以降低传输/执行时延、节省能耗与资源为目标的各种调度方案对比。",
+        "access": "作者主页公开的论文 PDF（IEEE COMST 23(4): 2131 起），免费；英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "Operate Azure IoT Edge devices offline（Microsoft Learn，英文）",
+        "url": "https://learn.microsoft.com/en-us/azure/iot-edge/offline-capabilities",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "离线性：设备与下游设备在断网/间歇连接下长时间运行；离线模式下 IoT Edge hub 承担消息缓存（重连后补发）、代替 IoT Hub 认证模块与下游设备、维持本地处理三个角色。",
+        "access": "Microsoft Learn 免费英文文档。",
         "role": "supplement"
       }
     ]

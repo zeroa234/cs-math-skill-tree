@@ -1,0 +1,284 @@
+{
+ "id": "H.3.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "王永吉、陈秋萍《单调速率及其扩展算法的可调度性判定》（软件学报，2004）",
+   "url": "https://www.jos.org.cn/1000-9825/15/799.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "实时调度中的 RM 算法、利用率界与精确可调度性判定、调度开销与优先级反转；手算例题。",
+   "access": "期刊原站公开中文全文与算例；经典单核 RM 模型，不含 WCET 测量、多核与认证。",
+   "publisher": "中国科学院软件研究所（王永吉、陈秋萍）",
+   "evidence": {
+    "url": "https://www.jos.org.cn/1000-9825/15/799.pdf",
+    "location": "标题/摘要与正文：RM 可调度性判定综述；优先级反转与调度开销",
+    "finding": "PDF 正文从理想 RM 利用率界讲到精确判定，并讨论调度开销/优先级反转；没有 WCET 分析工具或安全关键认证内容。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "野火《FreeRTOS 内核实现与应用开发实战指南》（中文在线书）",
+   "url": "https://doc.embedfire.com/rtos/freertos/zh/latest/index.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "任务状态/优先级/时间片、临界段、阻塞延时、调度器实现；可把 RM/EDF 理论对照到真实 RTOS 调度。",
+   "access": "免费在线；中文；需 STM32 板卡实验。",
+   "publisher": "野火（EmbedFire）",
+   "evidence": {
+    "url": "https://doc.embedfire.com/rtos/freertos/zh/latest/index.html",
+    "location": "目录：任务定义与切换、临界段保护、支持多优先级、支持时间片",
+    "finding": "目录列任务切换、临界段、优先级与时间片，可作调度理论的实现对照；不含可调度性判定或 WCET。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Lee & Seshia, Introduction to Embedded Systems: A Cyber-Physical Systems Approach（第 2 版，MIT Press，免费 PDF）",
+   "url": "https://ptolemy.berkeley.edu/books/leeseshia/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第 12 章 Scheduling（RM、EDF、调度与互斥、多处理器调度）、第 16 章 Factors Determining Execution Time / Basics of Execution Time Analysis（WCET）、安全关键系统作为应用背景；全书按建模—设计—分析组织。",
+   "access": "作者站点免费 PDF（v2.3），无需注册；英文。",
+   "publisher": "Edward A. Lee & Sanjit A. Seshia（UC Berkeley），MIT Press",
+   "evidence": {
+    "url": "https://ptolemy.berkeley.edu/books/leeseshia/releases/LeeSeshia_DigitalV2_3.pdf",
+    "location": "目录：12 Scheduling（12.1–12.6）、16.3 Factors Determining Execution Time、16.4 Basics of Execution Time Analysis；正文提到 safety-critical",
+    "finding": "PDF 目录明确列 RM/EDF/互斥/多处理器调度与执行时间分析章节，正文讨论安全关键系统的认证需求。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "时限",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "RM 模型中的周期/执行时间/时限与利用率",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "RTOS 任务优先级/时间片与截止时间实现",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.12 Basics of Scheduling（period、deadline、execution time）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都建立任务时限模型。"
+  },
+  {
+   "topic": "调度可分析性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "RM 利用率界与精确可调度性判定",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.12 RM/EDF、scheduling and mutual exclusion、multiprocessor scheduling",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文论文聚焦单核 RM；英文书含 EDF/多核。"
+  },
+  {
+   "topic": "最坏执行时间",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未涉及 WCET 分析",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.16.3–16.4 Factors Determining Execution Time / Basics of Execution Time Analysis",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有 WCET 测量/分析材料。"
+  },
+  {
+   "topic": "资源共享与时间正确性分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "调度开销与优先级反转；无阻塞时间分析",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "临界段保护/互斥实现",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.12.4 Scheduling and Mutual Exclusion；时间正确性分析",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有优先级反转现象与临界段实现，缺阻塞时间/响应时间分析。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读 RM 利用率界与精确判定，手算论文例题，理解优先级反转。"
+    },
+    {
+     "source": "zh2",
+     "read": "对照 FreeRTOS 的任务优先级/时间片/临界段实现。"
+    }
+   ],
+   "gaps": [
+    "最坏执行时间",
+    "资源共享与时间正确性分析"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "读第 12 章调度（RM/EDF/互斥/多核）与第 16 章执行时间分析，做书后习题。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "实时系统 课程 中国大学MOOC 调度 RM EDF 实时操作系统",
+   "result": "未找到专门中文实时系统课；保留王永吉 RM 论文并补野火 RTOS 实现。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "Lee Seshia Introduction to Embedded Systems PDF schedule WCET",
+   "result": "核对 PDF 目录，确认第 12 章调度与第 16 章执行时间分析。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "最坏执行时间 WCET 分析 中文 实时系统 优先级反转 可调度性 课程 论文",
+   "result": "只有百度百科 WCET 词条、公司技术文章、专利、AbsInt 工具中文页与若干不相关论文；无可用的中文 WCET 教学材料。",
+   "by": "review/pi-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "实时系统 最坏执行时间分析 综述 软件学报 计算机学报 WCET 静态分析",
+   "result": "仍只有百科/专利/工具页，以及《基于WCET分析的实时系统轨迹获取技术》《面向维护的实时软件时间变化敏感点检测》等使用 WCET 的研究论文（不是讲 WCET 怎么分析），未采纳。",
+   "by": "review/pi-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch bili 实时系统 最坏执行时间 WCET 分析 / 优先级反转 优先级继承 实时调度",
+   "result": "返回操作系统期末复习、办公软件、手机优化等无关视频；没有中文 WCET 或阻塞分析的课程。",
+   "by": "review/pi-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "优先级继承协议 优先级天花板 阻塞时间 响应时间分析 中文 教材 实时系统 章节",
+   "result": "只有百度百科“优先级继承”、CSDN 博客、RFRTOS 实现论文与 FreeRTOS 中文文档索引页（页面 JS 渲染，正文取不到），没有讲阻塞时间分析的中文教学。",
+   "by": "review/pi-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://freertos.org/zh-cn-cmn-s/Documentation/01-FreeRTOS-quick-start/01-Beginners-guide/01-RTOS-fundamentals",
+   "result": "标题可读（RTOS 基础知识 - FreeRTOS™）但正文 0 字符（JS 渲染），无法核对是否讲优先级反转/继承，不登记。",
+   "by": "review/pi-additions/H.3.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "read",
+   "query_or_url": "record 中 en1（Lee & Seshia）第 12 章 Scheduling、第 16 章 Basics of Execution Time Analysis",
+   "result": "英文侧已有覆盖（WCET 在第 16 章，调度与互斥在第 12 章），本轮不新增英文来源，只把中文缺口标为跨语言补充。",
+   "by": "review/pi-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "实时系统 Jane W.S. Liu 中译本 出版社 目录 优先级天花板 资源访问控制",
+   "result": "没有找到 Liu《实时系统》中译本或其他中文实时系统教材的出版社可核目录；结果只有英文讲义、CSDN 博客对优先级天花板的介绍和研究论文。付费渠道没有可用的中文教学，跨语言补充维持。",
+   "by": "review/main-additions/H.3.4.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有一篇 RM 论文，覆盖单核可调度性，但缺 WCET 与安全背景；补野火 RTOS 实现对照。",
+  "旧英文 Lee & Seshia 保留：第 12/16 章正好覆盖调度与执行时间分析。",
+  "中文仍缺 WCET/阻塞分析/安全背景，故为 partial。",
+  "简介中的说明条目不作为知识点：安全关键系统只作应用背景",
+  "[review/pi-additions/H.3.4.json] 未解决 zh「最坏执行时间」：本轮已查文字、视频与付费/官方渠道，中文没有讲 WCET 分析方法的系统教学；需主代理决定是否接受长期借用英文，或另找中文实时系统教材（本轮未能核到可公开验证的目录页）。",
+  "[review/pi-additions/H.3.4.json] 未解决 zh「资源共享与时间正确性分析」：同上：中文缺阻塞时间/响应时间分析的教学，现有 zh1/zh2 只能算实现层 partial。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "最坏执行时间",
+   "source": "en1",
+   "reason": "中文三个渠道都查过：文字（两轮 Tavily，只有百科/专利/工具页与“用到 WCET”的研究论文）、视频（B 站两组关键词无相关课程）、付费/官方（无讲 WCET 分析的中文教材章节可核，FreeRTOS 中文文档正文取不到）。因此中文侧保持 partial，WCET 的方法（执行时间的影响因素、静态/测量分析思路）先借用英文 Lee & Seshia 第 16 章。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/H.3.4.json"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "资源共享与时间正确性分析",
+   "source": "en1",
+   "reason": "中文只有 RM 论文里对优先级反转的一句提及和 FreeRTOS 书里的临界段/互斥实现（旧记录 partial），没有阻塞时间/响应时间分析的中文教学；B 站与文字搜索均未找到。阻塞与互斥下的可调度性分析先借用 en1 第 12 章（scheduling + mutex/priority inversion）。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/H.3.4.json"
+  }
+ ],
+ "name": "实时系统",
+ "description": "时限、调度可分析性、最坏执行时间、资源共享与时间正确性分析；安全关键系统只作应用背景。",
+ "applied_additions": [
+  "review/pi-additions/H.3.4.json@5dc10f9577",
+  "review/main-additions/H.3.4.json@49d5fa51e8"
+ ]
+}
