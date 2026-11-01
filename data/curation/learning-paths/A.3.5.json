@@ -1,0 +1,296 @@
+{
+ "id": "A.3.5",
+ "name": "生成式AI",
+ "description": "自回归、潜变量、对抗与扩散模型，多模态生成、对齐与可靠评估。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Stanford CS236: Deep Generative Models — syllabus and public slides",
+   "url": "https://deepgenerativemodels.github.io/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Introduction/background → autoregressive models → maximum likelihood + VAE → VAE + normalizing flows → GANs → energy-based models → score-based models → evaluation of generative models → score-based diffusion → discrete latent variable models → diffusion for discrete data.",
+   "access": "Public syllabus and per-week slides; lecture videos are not public on the site (Canvas). Notes site (deepgenerativemodels.github.io/notes/) is free.",
+   "publisher": "Stanford University",
+   "evidence": {
+    "url": "https://deepgenerativemodels.github.io/",
+    "location": "Syllabus page, weekly topics",
+    "finding": "The syllabus lists autoregressive models, VAE, flows, GANs, energy-based and score-based models, evaluation of generative models and diffusion."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "李宏毅《生成式人工智能导论》2024 Spring（台大，中文授课）",
+   "url": "https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "中文视频：Transformer（上/下）、生成式 AI 基本原理、VAE/Flow、GAN、Diffusion 综述与 fine-tuning、第8讲 RLHF、评估生成式AI 与道德议题（两讲）、可解释性，以及第17–18讲「有关影像的生成式AI（上/下）」——快速导读 VAE/Flow/Diffusion/GAN 等影像生成方法、与生成视频互动，并附 An Introduction to Vision-Language Modeling 等阅读。",
+   "access": "课程网页与 YouTube 视频免费；slides 为英文、授课中文；未核对字幕。",
+   "publisher": "National Taiwan University, Hung-yi Lee",
+   "evidence": {
+    "url": "https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php",
+    "location": "课程页面主题列表",
+    "finding": "页面列出 Transformer、VAE/Flow/Diffusion/GAN、Diffusion fine-tuning、RLHF、Evaluations?、可解释性等主题与 slides 链接。"
+   },
+   "updated_by": [
+    "review/pi-additions/A.3.5.json"
+   ]
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Hugging Face Diffusion Models Course (official, free) — Unit 2 Conditioning, Unit 3 Stable Diffusion, Unit 4 Diffusion for Audio",
+   "url": "https://huggingface.co/learn/diffusion-course/unit3/1",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "多模态生成：Unit 2 Fine-Tuning, Guidance and Conditioning（含 Making a Class-Conditioned Diffusion Model）、Unit 3 Stable Diffusion（文本条件文生图：文本编码器、prompt、img2img）、Unit 4 Going Further（DDIM Inversion、Diffusion for Audio，即条件音频生成）。",
+   "access": "免费在线课程，无需注册即可阅读单元正文与 notebook；英文；配套 Colab 练习。",
+   "publisher": "Hugging Face（官方课程）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://huggingface.co/learn/diffusion-course/unit3/1",
+    "location": "课程侧栏单元结构：2. Fine-Tuning, Guidance and Conditioning（Overview / Fine-Tuning and Guidance / Making a Class-Conditioned Diffusion Model）、3. Stable Diffusion（Overview / Stable Diffusion Introduction）、4. Going Further with Diffusion Models（DDIM Inversion / Diffusion for Audio）",
+    "finding": "单元页确认第 3 单元就是 Stable Diffusion（文本条件生成）且第 4 单元含音频生成，属于对“多模态生成”的课程层教学，而不只是课程介绍。"
+   },
+   "added_by": "review/pi-additions/A.3.5.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "The RLHF Book + Post-Training Course (Nathan Lambert, free web version and lecture series)",
+   "url": "https://rlhfbook.com/course",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "对齐与可靠评估：Lecture 1 Overview（Ch1–3 RLHF 与后训练基础）、Lecture 2 IFT, Reward Models & Rejection Sampling（Ch4/5/9）、Lecture 3–4 RL 动机与实现（Ch6）、Lecture 5 推理模型（Ch7）、Lecture 6 DPO 逐步推导（Ch8）、Lecture 7 合成数据与 Constitutional AI/rubrics（Ch12）；书内含第 16 章评估（含 agentic evaluation）。",
+   "access": "网页版书与课程页免费（PDF/slides/录播链接），英文；纸质书另售（Manning）。",
+   "publisher": "Nathan Lambert（Allen Institute for AI）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://rlhfbook.com/course",
+    "location": "Course 页 Primary Material：Lecture 1 Overview（Chapters 1-3）、Lecture 2 IFT, Reward Models, & Rejection Sampling（Chapters 4, 5, 9）、Lecture 6 Direct Preference Optimization（Chapter 8）、Lecture 7 Synthetic Data（Chapter 12）；书站勘误页提到 Chapter 16 的 agentic evaluation",
+    "finding": "课程页逐讲标注对应章节、录播与 slides，说明对齐方法（奖励模型、RL、DPO、rubrics）是成体系的课程内容；据此补 CS236 缺失的“对齐”部分。"
+   },
+   "added_by": "review/pi-additions/A.3.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "自回归",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Transformer 与生成式 AI 基本原理中的自回归生成",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Autoregressive Models",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "潜变量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "VAE / Flow 讲次",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "VAE; Normalizing Flows; Discrete Latent Variable Models",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "对抗与扩散模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "GAN、Diffusion Models 综述与 fine-tuning",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "GANs; Score Based Models; Diffusion",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "多模态生成",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "生成式 AI 应用/多模态只在示例中带过",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "第17–18讲「有关影像的生成式AI（上/下）」：影像生成方法导读（VAE/Flow/Diffusion/GAN）、与生成视频交互；延伸阅读 An Introduction to Vision-Language Modeling、Video Diffusion Models: A Survey",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "不在 CS236 周次内（文生图/音频只在项目/扩展阅读）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Unit 2 conditioning（class-conditioned diffusion）+ Unit 3 Stable Diffusion（text-to-image）+ Unit 4 Diffusion for Audio",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有多模态生成（文生图/文生音频）的系统章节。；原先只在示例里带过，实际课程后段有两讲专讲影像生成（文本/条件生成图像与视频），并给出视觉-语言建模的延伸阅读；因此中文侧可以用这门课覆盖“多模态生成”的图像/视频生成部分。；CS236 只在项目/扩展阅读里涉及文生图与音频，r7-en1 用三个单元把条件生成讲透：条件注入（class/text conditioning）、Stable Diffusion 的文本编码与 prompt、以及音频扩散，覆盖“多模态生成”的图像与音频两条线。"
+  },
+  {
+   "topic": "对齐与可靠评估",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "RLHF；Evaluations? 讲次",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Evaluation of Generative Models 专讲；对齐（RLHF）不在周次内",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Course Lectures 1–7（RLHF 基础、奖励模型、RL、DPO、合成数据/Constitutional AI）+ 书第16章评估",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：评估中英都有，RLHF 对齐只有中文讲次；英文侧 partial。；CS236 有生成模型评估的专讲但没有对齐；r7-en2 从 RLHF 基础、奖励模型与拒绝采样讲到 DPO 推导与 rubrics，并单列评估章，补齐“对齐与可靠评估”的英文教学。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 Transformer→生成式基本原理→VAE/Flow→GAN→Diffusion→RLHF→评估的顺序看视频并做 diffusion fine-tuning 练习。"
+    },
+    {
+     "source": "zh1",
+     "read": "在看完全课主干后，接着看第17–18讲影像生成：先用 diffusion 从零生成图像，再做一次条件生成（以文本/类别为条件），最后对照 Video Diffusion 综述理解视频生成与视觉-语言模型的关系。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the syllabus week by week from autoregressive models through VAE/flows/GANs/score-based/diffusion, and read the evaluation lecture."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Do Unit 2's class-conditioned diffusion exercise, then Unit 3 (Stable Diffusion: text encoder, prompt, img2img) and Unit 4's audio diffusion notebook; for each, write down what plays the role of the conditioning signal."
+    },
+    {
+     "source": "r7-en2",
+     "read": "Follow Lectures 1–7 with the book chapters: implement a reward model and DPO on a small preference dataset, then read the book's evaluation chapter and design an evaluation plan (win-rate, held-out judging, rubric-based checks) for the aligned model."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "打开李宏毅 GenAI 2024 课程页",
+   "result": "采纳 zh1；确认覆盖 Transformer/VAE/GAN/Diffusion/RLHF/评估。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "CS236 syllabus",
+   "result": "采纳 en1；确认四类生成模型与评估有专讲，无多模态/RLHF。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "中文视频已覆盖主干，缺口属多模态，未核到教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://deepgenerativemodels.github.io/",
+   "result": "采纳 en1；slides 公开、视频不公开。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://speech.ee.ntu.edu.tw/~hylee/genai/2024-spring.php",
+   "result": "课程页确认有第8讲 RLHF、两讲“评估生成式AI & 道德议题”、第17–18讲“有关影像的生成式AI（上/下）”，据此把中文“多模态生成”记到这门课名下。",
+   "by": "review/pi-additions/A.3.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://cmu-mmml.github.io/ 与 /fall2024/",
+   "result": "CMU 11-777 把 generation 列为多模态六大挑战之一，fall2024 项目含条件图像生成与语音生成；但未找到公开的逐讲 schedule，故只作背景，不登记为来源。",
+   "by": "review/pi-additions/A.3.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://huggingface.co/learn/diffusion-course/unit3/1",
+   "result": "单元结构确认 Unit 2 条件生成、Unit 3 Stable Diffusion（文生图）、Unit 4 音频扩散，采纳为英文多模态生成来源。",
+   "by": "review/pi-additions/A.3.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://rlhfbook.com/ 与 https://rlhfbook.com/course",
+   "result": "确认有配套课程（逐讲对应章节、录播/slides）与第16章评估，采纳为英文对齐与评估来源。",
+   "by": "review/pi-additions/A.3.5.json"
+  }
+ ],
+ "findings": [
+  "原英文 CS236 覆盖四类生成模型与评估专讲，保留；多模态与 RLHF 不在周次内。",
+  "原中文李宏毅 2025 ML 课其实是 2025 春季的生成式 AI/Agent 课，本次核对 2024 GenAI 课程页，主题更贴合本节点（VAE/GAN/Diffusion/RLHF/评估）。",
+  "两边都缺多模态生成，英文还缺 RLHF，故都标 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.3.5.json@9620f40cf7"
+ ]
+}

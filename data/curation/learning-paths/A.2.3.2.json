@@ -1,0 +1,378 @@
+{
+ "id": "A.2.3.2",
+ "name": "深度模型训练与推理系统",
+ "description": "优化器、混合精度、分布式训练、压缩、量化、蒸馏和推理服务。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMU 10-414/714 Deep Learning Systems: Algorithms and Implementation (dlsyscourse.org)",
+   "url": "https://dlsyscourse.org/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Lectures and notebooks: forward/backward and automatic differentiation (3–5), optimization incl. SGD/momentum/Adam (6), normalization and dropout (8), hardware acceleration and GPU kernels (10–13), convolution implementations (14), sequence models and Transformers (15–18), training large models with parallelism and memory (19), model deployment and inference (23).",
+   "access": "Free slides/notebooks and the 2022 YouTube lecture recordings; the site states slides and implementation notebooks are the primary resource and there is no required textbook. Quantization/distillation are only mentioned in deployment lectures.",
+   "publisher": "Carnegie Mellon University (Tianqi Chen et al.)",
+   "evidence": {
+    "url": "https://dlsyscourse.org/",
+    "location": "Lectures page and course description",
+    "finding": "The site describes an implementation-first course with public slides/notebooks and recorded lectures, listing optimization, hardware acceleration, Transformers, training large models and deployment."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "MIT 6.5940 TinyML and Efficient Deep Learning Computing — pruning, quantization, distillation, NAS",
+   "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Pruning and sparsity, quantization, knowledge distillation, neural architecture search, on-device training and deployment labs. Supplies the compression/quantization/distillation topics that dlsyscourse only mentions.",
+   "access": "Free schedule, slides and labs; lecture videos are on the MIT HAN Lab YouTube channel with YouTube automatic captions only (no human captions verified).",
+   "publisher": "MIT (Song Han)",
+   "evidence": {
+    "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+    "location": "Course schedule: pruning, quantization, distillation, NAS, deployment labs",
+    "finding": "The course page lists lectures on pruning/sparsity, quantization, knowledge distillation and NAS plus five labs; it links the recorded lectures on YouTube."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《动手学深度学习》中文版 第12章 计算性能（异步计算、自动并行、多 GPU）",
+   "url": "https://zh-v2.d2l.ai/chapter_computational-performance/index.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "12.1 编译器和解释器、12.2 异步计算、12.3 自动并行、12.4 多 GPU 训练、12.5 多 GPU 的简洁实现、12.6 参数服务器。覆盖分布式/并行训练的基础实现；不含混合精度、量化、蒸馏与推理服务。",
+   "access": "免费中文正文与 notebook。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）",
+   "publisher": "d2l.ai 中文版",
+   "evidence": {
+    "url": "https://zh-v2.d2l.ai/chapter_computational-performance/index.html",
+    "location": "第12章目录",
+    "finding": "目录列出异步计算、自动并行、多 GPU 训练与参数服务器等节。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "AI System（中文开源课程，ZOMI/Infrasys-AI）第四篇 推理系统与引擎：模型轻量化、低比特量化原理、QAT、训练后量化与部署、模型剪枝、知识蒸馏原理、推理系统架构",
+   "url": "https://infrasys-ai.github.io/aisystem-docs/04Inference03Slim/02Quant.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文成体系的推理侧系统课：推理系统介绍/推理流程全景/推理系统架构/推理引擎架构/MindIE 与 AscendCL 示例；模型轻量化总览（模型压缩四件套）、低比特量化原理（饱和/非饱和、线性/非线性、对称/非对称）、感知量化训练 QAT、训练后量化与部署（校准与部署流程）、模型剪枝、知识蒸馏原理（response/feature/relation-based、offline/online/self-distillation）。",
+   "access": "免费在线阅读（GitHub Pages），无注册；中文，配套 PPT 与 B 站「ZOMI酱」视频（视频是否逐节覆盖未核对）。",
+   "publisher": "Infrasys-AI / ZOMI（华为 AI 系统方向架构师）开源课程",
+   "reupload": false,
+   "evidence": {
+    "url": "https://infrasys-ai.github.io/aisystem-docs/04Inference03Slim/02Quant.html",
+    "location": "页面侧栏「四. 推理系统&引擎」：推理系统、推理流程全景、推理系统架构、推理引擎架构、昇腾推理引擎 MindIE、模型轻量化、低比特量化原理、感知量化训练 QAT、训练后量化与部署、模型剪枝、知识蒸馏原理；02Quant 正文含量化方法对比、饱和/非饱和、线性/非线性、对称/非对称量化各节",
+    "finding": "正文逐节讲量化原理而不是只列目录；同课程 06Distillation 正文讲 Hinton 蒸馏、response/relation-based 知识与 offline/online 蒸馏，04PTQ 讲训练后量化与部署。"
+   },
+   "added_by": "review/pi-additions/A.2.3.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "MindSpore 官方教程（中文）· 自动混合精度",
+   "url": "https://mindspore.cn/tutorials/zh-CN/r2.6.0rc1/beginner/mixed_precision.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "混合精度：FP64/FP32/FP16 表示与位宽代价、TensorCore/Cube 为何对低精度有加速、典型混合精度流程（参数 FP32、FP16 算子 cast、Loss 用 FP32、Loss Scale 防下溢、梯度溢出判断跳过更新）、mindspore.amp 接口与手写数字识别实例演示。",
+   "access": "免费在线教程，无需注册；中文；含可运行代码示例。",
+   "publisher": "昇思 MindSpore 社区（华为）官方教程",
+   "reupload": false,
+   "evidence": {
+    "url": "https://mindspore.cn/tutorials/zh-CN/r2.6.0rc1/beginner/mixed_precision.html",
+    "location": "「混合精度计算原理」及「混合精度计算流程」七步说明、mindspore.amp 用法与手写数字识别示例",
+    "finding": "正文先讲 IEEE754 三种精度的位宽与取值范围，再给 7 步混合精度训练流程和代码演示，属于完整教学而非 API 索引。"
+   },
+   "added_by": "review/pi-additions/A.2.3.2.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "PyTorch Tutorials — Automatic Mixed Precision recipe",
+   "url": "https://docs.pytorch.org/tutorials/recipes/recipes/amp_recipe.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Mixed precision: which ops run in float16/bfloat16 vs need float32 range, torch.autocast regions, GradScaler for gradient underflow, a measured before/after timing script, and the standalone runnable script.",
+   "access": "Free, no registration; English; runnable code included.",
+   "publisher": "PyTorch (Linux Foundation) official tutorials",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.pytorch.org/tutorials/recipes/recipes/amp_recipe.html",
+    "location": "Intro paragraph on matching each op to a dtype; 'Adding torch.autocast'; GradScaler section; timing comparison of default vs mixed precision",
+    "finding": "The recipe explains why reductions need float32 and how GradScaler avoids underflow, then measures the speed/memory change on a real network."
+   },
+   "added_by": "review/pi-additions/A.2.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "优化器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第11章 优化算法（SGD/动量/Adam 等）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 6 Optimization",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "混合精度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "「混合精度计算原理」+ 七步混合精度计算流程 + mindspore.amp 实例",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "训练大模型讲次涉及内存/并行，未单列混合精度",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Automatic Mixed Precision recipe — autocast regions, GradScaler, timing comparison",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有混合精度（FP16/BF16、loss scaling）的专门讲次。；r7-zh2 讲清 FP16 为什么快（位宽与 TensorCore/Cube）、为什么会下溢、Loss Scale 如何按链式法则放大再还原、以及参数保持 FP32 的分工，并给出可运行示例；覆盖了“混合精度”这一知识点，不需要英文补。；dlsyscourse 只在训练大模型讲次顺带提内存与并行，r7-en1 用一份可运行 recipe 讲清哪些算子在 fp16/bf16、哪些必须 fp32、梯度下溢如何用 GradScaler 处理，并实测速度与显存变化，补上英文的混合精度教学。"
+  },
+  {
+   "topic": "分布式训练",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "12.3 自动并行、12.4 多 GPU 训练、12.6 参数服务器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 19 Training Large Models (parallelism and memory)",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "压缩",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "模型轻量化总览（模型压缩四件套：量化、蒸馏、剪枝、二值化）+ 模型剪枝",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Pruning and sparsity；NAS",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有剪枝/压缩章节。；r7-zh1 先给出压缩的整体框架与取舍（为什么要压、压哪一层、精度/速度/体积的权衡），再分别展开量化、剪枝、蒸馏三章，构成中文的“压缩”主线。"
+  },
+  {
+   "topic": "量化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "低比特量化原理（饱和/非饱和、线性/非线性、对称/非对称）+ 感知量化训练 QAT + 训练后量化与部署",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Quantization lecture + lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "三节连起来覆盖量化的原理（映射与截断误差）、训练时量化（QAT 的伪量化与梯度）和部署时量化（校准、PTQ 流程），是完整的中文量化教学。"
+  },
+  {
+   "topic": "蒸馏和推理服务",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖蒸馏/服务化",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "知识蒸馏原理（response/feature/relation-based、offline/online/self）+ 推理系统架构与推理引擎架构（含 MindIE/AscendCL 示例）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 23 Model Deployment；en2 Knowledge Distillation",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：蒸馏由 en2 覆盖，推理服务由 en1 的部署讲次覆盖；中文两边都缺。；蒸馏部分讲 Hinton 经典算法与知识类型、蒸馏方式；推理服务部分讲推理流程全景、推理系统与引擎架构、批处理与参数配置，两半合起来覆盖这个合并知识点。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读第11章优化算法与第12章计算性能，跑一次多 GPU 数据并行训练。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按「模型轻量化 → 低比特量化原理 → QAT → 训练后量化与部署 → 模型剪枝 → 知识蒸馏原理」顺序读，每节用自己的小网络复现一次：先做对称/非对称量化并手算一组映射，再跑一次 QAT 与 PTQ 对比精度，最后按 Hinton 的软标签损失蒸馏一次小模型；随后读推理系统架构与推理引擎架构两节，画出一次请求从 batch 组装到算子执行再到返回的流程。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读「混合精度计算原理」与七步流程，然后用 mindspore.amp 把一个小网络从 FP32 改成自动混合精度，记录显存与每步耗时，并故意把 Loss Scale 调小观察梯度下溢。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow lectures 3–6 (autodiff/optimization), 10–13 (GPU kernels), 19 (large-model training) and 23 (deployment), doing the notebooks."
+    },
+    {
+     "source": "en2",
+     "read": "Read the pruning, quantization and distillation lectures and do the pruning/quantization labs."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Run the AMP recipe script as-is, then remove GradScaler and compare loss curves; read the autocast op reference to see which ops are forced to float32."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "d2l 中文第12章计算性能目录",
+   "result": "采纳为中文唯一系统材料；确认只有并行/多 GPU，没有量化/蒸馏/服务化。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「模型压缩 量化 蒸馏 课程」「推理部署 课程」",
+   "result": "结果多为单篇论文精读或框架教程，无系统中文课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核实到覆盖压缩/量化的中文教材，暂不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "dlsyscourse.org；MIT 6.5940",
+   "result": "采纳 en1 为主、en2 补压缩/量化/蒸馏。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "模型压缩 量化 蒸馏 剪枝 / 混合精度训练 AMP（站内页搜）",
+   "result": "站内页搜结果多为模型部署实测、蒸馏化学实验与音箱功放（AMP）等无关内容，不能据此断言 B 站没有中文教学；改用 site:bilibili.com 检索后另记。",
+   "by": "review/pi-additions/A.2.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 模型压缩 量化 蒸馏 课程",
+   "result": "命中清华 OpenBMB/刘知远团队《AI 大模型》公开课转载合集（BV13YsteHERd，分 P 含“5-7 BMTrain 混合精度训练”“5-13 知识蒸馏”“5-14 模型剪枝”“5-15 模型量化”“5-16/17 其它模型压缩”），以及 TVM 量化、知识蒸馏等单集；确认 B 站有中文的压缩/量化/蒸馏/混合精度章节，但该合集是第三方转载、且 AISystem 已是成体系文本课程，故不另列为来源，仅记录更正。",
+   "by": "review/pi-additions/A.2.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "AI系统 原理与架构 中文 开源 教程 模型压缩 量化 蒸馏 推理部署 混合精度",
+   "result": "找到 ZOMI/Infrasys-AI 的 AISystem 与 AIInfra 两个中文开源课程仓库及博客园章节；AISystem 仓库大纲列出「模型压缩：量化、蒸馏、剪枝和二值化」，采纳。",
+   "by": "review/pi-additions/A.2.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://infrasys-ai.github.io/aisystem-docs/04Inference03Slim/02Quant.html / 06Distillation.html / 04PTQ.html / 04Inference01Inference/01Introduction.html",
+   "result": "四页正文分别确认量化原理各节、Hinton 蒸馏与知识类型、训练后量化与部署、推理系统与引擎架构，采纳为中文压缩/量化/蒸馏/推理服务主线。",
+   "by": "review/pi-additions/A.2.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "混合精度训练 原理 损失缩放 FP16 中文 教程（限 paddlepaddle/mindspore/hiascend/复旦 LLM 书）",
+   "result": "候选 MindSpore 自动混合精度教程、Paddle AMP 文档、复旦《大规模语言模型》4.x；选 MindSpore 教程（原理+七步流程+代码），并用 fetch 打开正文核实。",
+   "by": "review/pi-additions/A.2.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://docs.pytorch.org/tutorials/recipes/recipes/amp_recipe.html",
+   "result": "确认 PyTorch 官方 AMP recipe 讲 autocast/GradScaler 并有实测脚本，采纳为英文混合精度材料。",
+   "by": "review/pi-additions/A.2.3.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 dlsyscourse 覆盖优化器、GPU、分布式与大模型训练、部署，保留；量化/蒸馏只是提及，补 MIT 6.5940。",
+  "原中文只写「计算性能：异步/自动并行/多 GPU，推理服务和编译器仍需英文」，核对后成立：中文缺混合精度、压缩、量化、蒸馏、推理服务，故标 partial。",
+  "没有用英文课程掩盖中文的五项缺口。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.2.3.2.json@4a1c20e4a3"
+ ]
+}

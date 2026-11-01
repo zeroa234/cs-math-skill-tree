@@ -77,6 +77,25 @@ node tests/resources.mjs
 
 发布前 `--require-all` 必须通过：覆盖全树，每个语言的必学缺口要么补齐，要么有查过三类渠道的跨语言回退。页面顶部显示实际覆盖数，不用“有中文入口的技能数”代替完整路线数。
 
+#### 规则补充（2026-11-02 第七轮）
+
+- **必学知识点 = 简介条目 − 说明条目**。简介按 `、，,；;。` 拆分；`scope.json` 的 `meta` 列出不是知识点的条目（树外前置、范围边界、与其他领域的关系），构建把它们写进输出的 `descNotes`，校验器不要求为它们找材料。简介的括号里不能出现上述分隔符，否则一个知识点会被拆成两半，构建会报错（写成“SETH/3SUM/APSP”）。
+- **官方版优先**（用户定的规则）：同一门课有学校、作者或 MOOC 平台的免费官方版，就链官方版；查不到才用第三方转载，此时来源写 `reupload: true`、`official_search`（查了哪些官方渠道、结果），`access` 开头带“第三方转载，授权未核”。校验器会拦下文字里像转载却没分类的来源。B 站视频页的“自制/转载”标记可作上传者身份的佐证。
+- **跨语言补充要经带搜索的一轮确认**：每条 `cross_language_fallbacks` 要有 `confirmed_by`（是哪个补充文件确认的）。没有网页搜索时得出的“没有”一律不算。B 站搜索页不带 cookie 时常返回无关推荐，只能用来“找到”，要证明“没有”必须用 `site:bilibili.com` / `site:icourse163.org` 的站内搜索。
+- **判定“没有”之前读正文**：目录里没有专节不等于没讲（例：廖雪峰 Java 教程“继承”一页有“区分继承和组合”）。
+
+#### 研究结果怎么并进来
+
+研究代理不直接改记录，只写补充文件 `temp/research/bilingual-coverage/review/<来源>-additions/<id>.json`（`pi-additions` 是 pi 写的，`main-additions` 是主代理复核时写的）。字段：`sources`（新来源）、`source_updates`（改已有来源的 official_search/reupload/role/access 等）、`remove_sources`（删失效来源）、`topic_updates`（某语言某知识点对到哪份材料的哪一章）、`route_steps`、`searches`、`fallback_confirm`、`unresolved`。然后：
+
+```bash
+python -X utf8 scripts/learning_path_merge.py --all --report temp/research/bilingual-coverage/review/merge-report.json
+node scripts/archive-learning-paths.mjs --reviewed <ids>            # 只校验
+node scripts/archive-learning-paths.mjs --archive --reviewed <ids>  # 写入 data/curation/learning-paths 与 learning-resources.json
+```
+
+`learning_path_merge.py`（需要 Windows，用系统的 `LCMapStringEx` 把中文转成简体）从已归档记录（没有就用原始研究记录）出发，按文件名顺序叠加补充文件，按章节引用重新计算每种语言的覆盖和缺口，删掉已不是缺口的跨语言补充，每种语言只留覆盖知识点最多的一个主资源。已并入归档记录的补充文件按内容哈希记录，文件之后再被改写会报错，不会悄悄漏掉；所以复核修正要另写新文件，不要改已并入的文件。
+
 视频字幕写进 `access`，核不了就写“未核对”和原因，不要猜：
 
 - YouTube：`yt-dlp --list-subs --skip-download <视频地址>`。输出里有 “Available subtitles” 的是人工字幕；只有 “Available automatic captions” 的是自动生成字幕。

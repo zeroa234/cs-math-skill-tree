@@ -1,0 +1,333 @@
+{
+ "id": "A.3.1",
+ "name": "自然语言处理",
+ "description": "文本表示、语言建模、结构预测、信息抽取、检索与语言评测。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Speech and Language Processing (3rd ed. draft) — Jurafsky & Martin, free online chapters",
+   "url": "https://web.stanford.edu/~jurafsky/slp3/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch2 words/tokens, Ch3 n-gram language models, Ch4 logistic regression and text classification, Ch5 embeddings, Ch6–7 neural networks/Transformers/pretraining, Ch8 post-training, Ch9 masked language models, Ch11 information retrieval and RAG, Ch13 machine translation, Ch14 RNNs, Ch18 sequence labeling (POS/NER), Ch19–20 CFG and dependency parsing, Ch21 information extraction, Ch22 semantic roles, Ch24 coreference/entity linking.",
+   "access": "Free per-chapter PDFs and slides from the authors' site; no registration.",
+   "publisher": "Stanford University (Dan Jurafsky, James Martin)",
+   "evidence": {
+    "url": "https://web.stanford.edu/~jurafsky/slp3/",
+    "location": "Chapter list on the book site",
+    "finding": "The site lists the 3rd-edition draft chapters by number and title, including tokenization, n-grams, embeddings, Transformers, retrieval/RAG, sequence labeling, parsing, information extraction and coreference."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Hugging Face 大语言模型课程（官方中文版）",
+   "url": "https://huggingface.co/learn/llm-course/zh-CN/chapter1/1",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文正文：Transformer 模型、分词、数据集处理、微调与共享模型；偏现代 NLP/LLM 实践，覆盖文本表示（tokenization/embeddings）与预训练语言模型的使用，但不含 n-gram 语言建模、序列标注、句法分析、信息抽取与检索评估。",
+   "access": "免费阅读，可在线跑示例；部分章节需 Hugging Face 账号。",
+   "publisher": "Hugging Face",
+   "evidence": {
+    "url": "https://huggingface.co/learn/llm-course/zh-CN/chapter1/1",
+    "location": "第1章目录与正文",
+    "finding": "中文课程从 Transformer/分词/数据集开始，侧栏列出后续微调与共享章节；没有传统 NLP 管线章节。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "西湖大学公开课《自然语言处理》（张岳，15 讲，中文授课；官方课程页含 slides/notes/作业，B 站「WestlakeNLP」同步）",
+   "url": "https://www.bilibili.com/video/BV1wCPmzPEpE/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "语言建模与结构预测的中文系统课：Counting relative frequencies（概率模型、语言模型、朴素贝叶斯文本分类）、Using Information Theory（信息论、最大熵、交叉熵与困惑度）、Hidden Variables/EM、Generative Sequence Labeling（序列标注、HMM）、Discriminative Sequence Labeling（MEMM、标签偏置、CRF）、Sequence Segmentation（半马尔可夫 CRF）、Predicting Tree Structures 与 Transition-based structure prediction（句法树结构预测）、Neural structured prediction（Ch15：序列标注、依存句法、成分句法）、Representation learning、Working with two texts（seq2seq：机器翻译/摘要/对话）。",
+   "access": "B 站免费播放（西湖大学公开课，官方账号）；配套 slides/notes/作业在课程页 https://westlakenlp.github.io/nlpml/ 免费下载；课程页写明 “The course is taught in Chinese”。未核对是否有字幕。",
+   "publisher": "西湖大学文本智能实验室 / 张岳（工学院副院长）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://westlakenlp.github.io/nlpml/lectures/",
+    "location": "Lectures 页逐讲正文摘要：Counting relative frequencies（“概率模型，语言模型，朴素贝叶斯文本分类”）、Using Information Theory（“交叉熵与困惑度”）、Generative/Discriminative Sequence Labeling（HMM、标签偏置、CRF）、Sequence Segmentation、Predicting Tree Structures、Transition-based method for structure prediction、Neural structured prediction（slide16 第 15 章：15.1.1 Sequence labelling / 15.1.2 Dependency Parsing / 15.1.3 Constituent Parsing）",
+    "finding": "课程页与 slide16 PDF 正文都确认这些讲次真的按主题展开；B 站 BV1wCPmzPEpE 页面显示“【西湖大学公开课】自然语言处理（NLP）第一讲”“张岳教授主讲”“共十五讲”，确认中文公开课与官方身份。"
+   },
+   "added_by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《自然语言处理》（刘挺、秦兵、赵军、黄萱菁、车万翔，高等教育出版社，2021，定价 54.00 元）",
+   "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=60b122b1adb85dae6a2f4027",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "中文教材：第6章 语言模型（6.1 n 元语言模型、6.1.3 语言模型性能评价、6.1.4 平滑、6.2 神经网络语言模型）、第7章 词法分析、第8章 句法分析（8.2.4/8.3.3 评价指标）、第9章 语义分析、第10章 信息抽取（10.1 命名实体识别：规则/统计/深度学习，10.2 实体关系抽取）、第14–16 章 问答/对话/机器翻译。",
+   "access": "需购买（高教社官方页标价 54.00 元，ISBN 978-7-04-056177-7，432 页）；无免费全文，未购买。",
+   "publisher": "高等教育出版社（作者含哈工大 SCIR 刘挺、车万翔等）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=60b122b1adb85dae6a2f4027",
+    "location": "出版社页面“目录”：第6章 语言模型（6.1.3 语言模型性能评价）、第8章 句法分析（8.2.4、8.3.3 评价指标）、第10章 信息抽取（10.1 命名实体识别四个小节、10.2 实体关系抽取）",
+    "finding": "出版社官方页面给出完整章节目录与定价，能确认信息抽取与语言模型评价有专门章节；据此登记为付费教材（覆盖证据来自目录，未读正文）。"
+   },
+   "added_by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "中国科学技术大学《信息检索与数据挖掘》课程课件（中文，含第6章 检索的评价、第8章 概率模型、第9章 基于语言建模的检索模型）",
+   "url": "http://staff.ustc.edu.cn/~network/ir/ir_index.htm",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "检索与检索评测的中文课件：第2章 布尔检索及倒排索引、第5章 向量空间模型与评分、第6章 检索的评价（查全率/查准率、效果与效率评价、评测语料与评测会议）、第7章 相关反馈与查询扩展、第8章 概率模型（概率排序原理、BIM 与 BM25）、第9章 基于语言建模的检索模型、第12章 web 搜索。",
+   "access": "大学课程主页公开 PDF 课件，免费；中文；课程主页为 2016 年开课、课件标注 2019/4/7，教材为 Manning《信息检索导论》（中文译本，人民邮电）。",
+   "publisher": "中国科学技术大学（课程主页 staff.ustc.edu.cn/~network/ir/）",
+   "reupload": false,
+   "evidence": {
+    "url": "http://staff.ustc.edu.cn/~network/ir/IR-9_LM.pdf",
+    "location": "IR-9_LM.pdf 第 1–2 页：“信息检索与数据挖掘 第9章 基于语言建模的检索模型”，随后列出第1–12章课程内容；课程主页“内容摘要”栏给出第6章“检索的评价：查全率和查准率、其他效果评价方法、相关评测语料和评测会议”",
+    "finding": "PDF 正文确认是中文讲授的检索模型课件（不是目录页），课程主页说明第6章专门讲检索评价；据此补中文的“检索”与检索侧评测。"
+   },
+   "added_by": "review/pi-additions/A.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "文本表示",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "分词（tokenization）与 Transformer 输入表示",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch2 Words and Tokens；Ch5 Embeddings",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到子词/嵌入表示，不含 one-hot/tf-idf 等传统表示。"
+  },
+  {
+   "topic": "语言建模",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "只讲预训练语言模型的使用，不讲 n-gram/困惑度",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第二讲 数据与模型；在线课程第二章 1 节最大似然估算与词概率模型、3 节语言模型、5.2 节 Good-Turing 平滑；第六章 熵、困惑度和词表示（B 站可按章检索到单节视频）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch3 N-gram Language Models；Ch7–9 pretraining/MLM",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺 n-gram、平滑、困惑度与语言模型评测。；现有 HF 中文课只把语言模型当背景，r7-zh1 用两讲从相对频率估计讲到 n 元语言模型、再用交叉熵与困惑度给出评价口径，中文侧因此有真正的语言建模教学；r7-zh2 第6章（n 元语言模型、平滑、神经网络语言模型）可作配套书面材料。"
+  },
+  {
+   "topic": "结构预测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖（无序列标注/句法分析）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Generative Sequence Labeling（HMM）、Discriminative Sequence Labeling（MEMM/CRF）、Sequence Segmentation（半马尔可夫 CRF）、Predicting Tree Structures 与 Transition-based structure prediction、Neural structured prediction（Ch15 序列标注/依存/成分句法）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch18 Sequence Labeling；Ch19–20 CFG and Dependency Parsing；Ch22 Semantic Roles",
+     "extent": "covered"
+    }
+   ],
+   "note": "从序列标注的生成式与判别式模型，到序列切分、树结构预测与转移式句法分析，再到神经结构预测，r7-zh1 把“结构预测”作为一条主线讲完，并配套作业；这是现有中文来源里唯一成体系覆盖的部分，故记在它名下。"
+  },
+  {
+   "topic": "信息抽取",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第10章 信息抽取：10.1 命名实体识别（规则/统计/深度学习）、10.2 实体关系抽取",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch21 Information Extraction；Ch24 Coreference和entity linking",
+     "extent": "covered"
+    }
+   ],
+   "note": "r7-zh2 第10章把信息抽取拆成命名实体识别与实体关系抽取两条主线，并给三类 NER 方法；模型基础由 r7-zh1 的序列标注（HMM/CRF）提供，两者合起来构成中文的信息抽取教学。"
+  },
+  {
+   "topic": "检索与语言评测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖检索与评测指标",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "第9章 基于语言建模的检索模型、第8章 概率模型（BIM/BM25）、第6章 检索的评价（查全率/查准率、评测语料与评测会议）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch11 Information Retrieval and RAG；各章附评测指标与基准讨论",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：检索与（分散在各章的）语言评测都由 SLP3 覆盖；中文两块都缺。；r7-zh3 提供检索侧的中文课件：向量空间与概率检索模型、查询似然检索，以及第6章专门讲查全率/查准率与评测语料；语言评测部分由 r7-zh1 的交叉熵/困惑度与 r7-zh2 第6章 6.1.3 语言模型性能评价、第8章 8.2.4/8.3.3 评价指标补上，两者合起来覆盖“检索与语言评测”。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读 Transformer、分词、数据集与微调章节，跑一次中文文本分类或生成任务。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按讲次看：先看 Counting relative frequencies 与 Using Information Theory，手写 n 元语言模型并计算困惑度；再依次看生成式/判别式序列标注、序列切分与树结构预测，各实现一次 HMM 与线性链 CRF 的分词/词性标注；最后看 Neural structured prediction 与 Working with two texts。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "买书后读第10章：先按 10.1 的规则/统计/深度学习三条路线各实现一个 NER，再读 10.2 做一次实体关系抽取，并把第6章 6.1.3 的语言模型评价与第8章的评价指标当评测参考。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读第5、8、9 章课件，实现向量空间模型、BM25 与查询似然检索三种排序并对比；再读第6章，用查全率/查准率和一组标注查询评价自己的检索系统。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Ch2–5 for representation and language modeling, Ch6–9 for neural/pretrained models, Ch18–24 for structure, IE and coreference, and Ch11 for retrieval/RAG; do the end-of-chapter exercises."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 Hugging Face 中文 LLM 课程第1章",
+   "result": "采纳 zh1；确认只覆盖现代 LLM 实践，无传统 NLP 管线。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「哈工大 自然语言处理 车万翔 课程」「自然语言处理 课程 完整」",
+   "result": "只有单次讲座与来源不明的 55/200 集搬运合集，未核到官方完整中文 NLP 课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "《统计自然语言处理》宗成庆",
+   "result": "未核到可读目录/价格页，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://web.stanford.edu/~jurafsky/slp3/",
+   "result": "采纳 en1；章节覆盖本节点全部主题。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "自然语言处理 信息抽取 句法分析 课程 / 自然语言处理 哈工大 车万翔（站内页搜）",
+   "result": "站内页搜只得到零散合集与无关内容，不能据此断言无课；后来用 site:bilibili.com 检索并打开【西湖大学公开课】自然语言处理（NLP），确认官方中文课程，采纳。",
+   "by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "自然语言处理 慕课 课程 语言模型 序列标注 信息抽取 信息检索 评测 中文 大学 视频",
+   "result": "找到中国大学MOOC 西湖大学《自然语言处理》（张岳）与高教社《自然语言处理》教材页；继续追到张岳主页的官方课程页。",
+   "by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://frcchang.github.io/ → https://westlakenlp.github.io/nlpml/ → /lectures/ → slide16.pdf",
+   "result": "作者主页列出 B 站/知乎/YouTube 课程与教学材料；课程页确认中文授课、逐讲摘要；slide16 正文确认第15章神经结构预测；据此判定语言建模与结构预测有覆盖。",
+   "by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=60b122b1adb85dae6a2f4027",
+   "result": "高教社官方页给出定价 54 元与完整目录，第10章 信息抽取、第6章 语言模型（含性能评价）明确；登记为付费教材，用于补信息抽取。",
+   "by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息检索 课程 课件 大学 中文 概率检索模型 排序学习 评价 MAP nDCG 讲义",
+   "result": "找到中国科学技术大学《信息检索与数据挖掘》课程主页（含第6章 检索的评价、第8章 概率模型 BM25、第9章 语言建模检索），并用 fetch 打开 IR-9_LM.pdf 正文核实，采纳为检索侧中文材料。",
+   "by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 西湖大学 自然语言处理 公开课 张岳",
+   "result": "确认 B 站有西湖大学张岳 15 讲公开课（BV1wCPmzPEpE 第一讲、BV1yzPSzCEU4 第二讲），另有按章分节的“自然语言处理在线课程”（第二章 最大似然估算/词概率模型/语言模型/Good-Turing 平滑、第六章 熵、困惑度和词表示、第十章 PCFG、第十二章 贝叶斯网络、第十四章 LSTM），可补强语言建模与句法/结构预测的中文讲次证据。",
+   "by": "review/pi-additions/A.3.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 SLP3 逐章覆盖文本表示、语言建模、结构预测、信息抽取、检索与评测，英文完整。",
+  "原中文 Hugging Face LLM 课程是官方中文，但只讲 Transformer/分词/微调，传统 NLP 的 n-gram、序列标注、句法、IE、检索评估都没有，中文只能 partial。",
+  "没有把 SLP3 直接当作中文已覆盖，也没有用来源不明的搬运合集充当中文课程。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.3.1.json@c021f4b0a1"
+ ]
+}

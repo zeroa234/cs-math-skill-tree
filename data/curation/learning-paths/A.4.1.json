@@ -1,0 +1,323 @@
+{
+ "id": "A.4.1",
+ "name": "机器学习工程与MLOps",
+ "description": "数据/模型版本、特征服务、训练管线、部署、监测与漂移。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MLOps Course — Made With ML (Goku Mohandas), free course site",
+   "url": "https://madewithml.com/courses/mlops/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Design (setup/product/systems), Data (preparation, exploration, preprocessing, distributed), Model (training, tracking, tuning, evaluation, serving), Develop (scripting, pre-commit, testing), Reproducibility (versioning), Production (jobs & services, CI/CD workflows, monitoring, data engineering).",
+   "access": "Free lessons and code; running the stack requires local/cloud resources. Feature-store concepts are only lightly covered and tool-oriented.",
+   "publisher": "Goku Mohandas / Made With ML",
+   "evidence": {
+    "url": "https://madewithml.com/courses/mlops/",
+    "location": "Course navigation: Design / Data / Model / Develop / Reproducibility / Production",
+    "finding": "The navigation lists versioning, training, tracking, tuning, serving, testing, jobs/services, CI/CD and monitoring lessons."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Google Cloud 官方中文：MLOps——机器学习中的持续交付和自动化流水线",
+   "url": "https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "MLOps 级别 0/1/2、CT（持续训练）、数据与模型验证（架构偏差、在线验证/Canary）、元数据管理、CI/CD 与监控；并有独立的「特征存储区」小节：集中存储特征定义与访问、批量与低延时实时服务 API、复用特征集、保留特征元数据，并用 Feature Store 同时服务训练与在线推断以避免训练-应用偏差。",
+   "access": "Google Cloud 架构中心官方中文文档，免费；中文（官方翻译）；无需注册。",
+   "publisher": "Google Cloud Architecture Center",
+   "evidence": {
+    "url": "https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning?hl=zh-cn",
+    "location": "文档目录与 MLOps 级别小节",
+    "finding": "页面标题为中文 MLOps 指南，正文按 MLOps 级别、CT、数据/模型验证、元数据和 CI/CD 组织。"
+   },
+   "updated_by": [
+    "review/pi-additions/A.4.1.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文学习路径《机器学习操作 (MLOps) 简介》（4 模块）",
+   "url": "https://learn.microsoft.com/zh-cn/training/paths/introduction-machine-learn-operations",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文 MLOps 学习路径：模块 1 适用于机器学习的 DevOps 原则简介、模块 2 机器学习项目的源代码管理（理解源代码管理是 MLOps 的重要组成）、模块 3 自动化机器学习工作流（Azure 机器学习管道、Azure Pipelines、GitHub Actions）、模块 4 机器学习的持续部署（用环境持续部署模型）。",
+   "access": "免费在线学习路径，需 Microsoft Learn 账号记录进度；中文；英文界面可切换。",
+   "publisher": "Microsoft Learn（微软官方）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/training/paths/introduction-machine-learn-operations",
+    "location": "页面“本学习路径中的模块”列出四个模块及各自说明（DevOps 原则、源代码管理、自动化机器学习工作流、持续部署）",
+    "finding": "正文确认这是四模块的成体系路径而不是单篇文档，且明确把源代码管理（版本控制）列为独立模块。"
+   },
+   "added_by": "review/pi-additions/A.4.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "Azure 机器学习官方中文文档《MLOps 机器学习模型管理》（模型注册、版本与世系）",
+   "url": "https://learn.microsoft.com/zh-cn/azure/machine-learning/concept-model-management-and-deployment?view=azureml-api-2",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "数据/模型版本：模型注册表如何存储模型并更新模型版本、按名称和版本标识已注册模型（同名重复注册时版本号递增）、注册时打元数据标签并用于检索、记录生命周期世系数据（谁发布、为何更改、何时部署）。",
+   "access": "免费在线文档，无需注册；中文。",
+   "publisher": "Microsoft Learn（Azure Machine Learning 文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/machine-learning/concept-model-management-and-deployment?view=azureml-api-2",
+    "location": "“注册和跟踪模型”小节：“模型注册在…存储模型并更新模型版本”“可以按名称和版本标识已注册的模型。每次注册…版本号递增”“可以在注册期间提供元数据标签”",
+    "finding": "正文给出模型注册表与版本号机制的具体说明，属于可直接照着做的官方文档，能补“模型版本”这一知识点。"
+   },
+   "added_by": "review/pi-additions/A.4.1.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Hopsworks Academy — Feature Store tutorial series (feature groups, external feature groups, feature views, FTI pipelines)",
+   "url": "https://www.hopsworks.ai/academy",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Feature serving（特征服务）：以 Feature/Training/Inference (FTI) 管线框架讲批式与实时 ML 系统；Feature Groups 与 DataFrame API、External Feature Groups（复用外部数据并支持实时）、Feature Views（point-in-time correct join，训练与推理共用同一视图以消除不一致）、生产中的特征管线（代码、部署、监控）。",
+   "access": "教程与录播免费在线观看（部分需注册 Hopsworks 账号跟做）；英文。",
+   "publisher": "Hopsworks（feature store 厂商）官方 Academy",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.hopsworks.ai/academy",
+    "location": "Tutorials 列表：“Batch & Real-Time Machine Learning Systems; A better framework with Hopsworks Feature Store (FTI)”“Feature Groups in Hopsworks: Working with Dataframes”“Feature Views in Hopsworks: How to Join Feature Groups（point in time correct…same view for training and inference）”“Feature Pipelines in Production”",
+    "finding": "教程列表逐条给出特征存储的核心概念与操作（特征组、外部特征组、特征视图、生产管线），是围绕特征服务成系列的免费教程，可补英文的 feature serving。"
+   },
+   "added_by": "review/pi-additions/A.4.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "数据/模型版本",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "元数据管理与数据/模型验证；未讲具体版本工具",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "模型注册表与版本号（同名注册版本递增、按名称+版本标识、元数据标签检索、生命周期世系）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Reproducibility — Versioning",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到元数据/验证概念，没有数据与模型版本的落地方法。；Google 中文文档只讲到元数据管理与数据/模型验证，没有版本机制；r7-zh2 用官方文档把模型注册表、版本号递增与世系记录讲清，配合 r7-zh1 的“机器学习项目的源代码管理”模块（代码/配置的版本控制），中文侧可以完整讲“数据/模型版本”。"
+  },
+  {
+   "topic": "特征服务",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "「特征存储区」小节（集中定义/存储/访问特征、批量与实时服务 API、训练-应用偏差）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data preprocessing/feature engineering；无独立 feature store 章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "FTI 框架 + Feature Groups / External Feature Groups / Feature Views / Feature Pipelines",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有特征商店（feature store）的系统教学；原 granularity 也注明原理讲得浅。；原记录写“未覆盖”，但 Google Cloud 官方中文 MLOps 文档正文有独立的特征存储区小节，讲清 feature store 的职责与训练-应用偏差的动机，因此中文侧的特征服务可以记为 covered（深度仍偏概念，工具操作由 r7-en1 补）。；Made With ML 只讲数据预处理与特征工程，没有独立 feature store 内容；r7-en1 用一套教程讲特征组、外部特征组、point-in-time correct 的特征视图与生产管线，覆盖特征定义、离线/在线服务与训练-推断一致性。"
+  },
+  {
+   "topic": "训练管线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "持续训练与自动化流水线（CT）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Model training；Production jobs & services",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "部署",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "自动化流水线与 CI/CD 中的部署环节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Model serving；CI/CD workflows",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "监测与漂移",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "生产环境监控；数据/模型验证",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Production — monitoring",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 MLOps 级别→CT→数据/模型验证→元数据→CI/CD→监控的顺序读，画出一条自己的训练管线。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按四模块走：先理解 MLOps 与 DevOps 原则，再把一个训练项目放进 Git 做源代码管理（代码、配置、数据指针分别版本化），然后用 Azure Pipelines/GitHub Actions 把训练与评估自动化，最后用环境做一次持续部署。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读“注册和跟踪模型”：把同一模型注册两次观察版本号递增，用元数据标签检索历史版本，并沿世系数据回溯一次“谁在何时用什么数据发布了哪个版本”。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Work through Design, Data, Model, Develop, Versioning and Production in order; deploy the serving API and add CI/CD plus monitoring."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Follow the FTI tutorial: create a feature group from a DataFrame, build a point-in-time correct feature view for training, reuse the same view for online inference, then deploy and monitor a feature pipeline."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 Google Cloud 中文 MLOps 指南",
+   "result": "采纳 zh1；覆盖管线/部署/监测，但无版本工具与特征服务。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「MLOps 课程 完整」",
+   "result": "多为平台产品演示与单工具教程，无系统中文 MLOps 课，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核到覆盖版本/特征服务的中文教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://madewithml.com/courses/mlops/",
+   "result": "采纳 en1；覆盖版本、训练、服务、CI/CD、监控，特征服务偏浅。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning?hl=zh-cn",
+   "result": "正文确认有「特征存储区」小节（集中存储、批量/实时服务 API、训练-应用偏差），据此把中文特征服务改记为覆盖。",
+   "by": "review/pi-additions/A.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "MLOps 中文 教程 特征平台 特征存储 数据版本 模型版本 课程 实践",
+   "result": "找到中国信通院 MLOps 实践指南、Databricks 中文课程、Google 中文文档与若干博客；信通院为行业白皮书、Databricks 需付费账号，均未采纳，转而查 Microsoft Learn 中文路径。",
+   "by": "review/pi-additions/A.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:learn.microsoft.com 中文 MLOps 模型版本 模型注册表 数据版本 学习路径",
+   "result": "命中 Microsoft Learn 中文《MLOps 简介》学习路径、Azure 机器学习模型管理文档与 MLOps 成熟度模型；前者为四模块路径，后者的“注册和跟踪模型”讲版本号机制，均采纳。",
+   "by": "review/pi-additions/A.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/training/paths/introduction-machine-learn-operations 与 https://learn.microsoft.com/zh-cn/azure/machine-learning/concept-model-management-and-deployment",
+   "result": "两页正文确认四模块列表与模型注册表/版本号说明，采纳为中文版本管理材料。",
+   "by": "review/pi-additions/A.4.1.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://madewithml.com/courses/mlops/ 与 https://www.hopsworks.ai/academy",
+   "result": "Made With ML 课程目录只有 Data engineering/Feature engineering，没有独立 feature store；Hopsworks Academy 的教程列表围绕 feature groups/views/FTI 成系列，采纳为英文特征服务来源。",
+   "by": "review/pi-additions/A.4.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 Made With ML 覆盖工程全阶段，保留；特征服务只有浅层工具内容。",
+  "原中文 Google Cloud 文档确实有中文正文（MLOps 级别、CT、验证、元数据、CI/CD、监控），但不是课程，且没有版本工具与特征服务，中文 partial。",
+  "没有用英文课程替代中文缺的两项而不说明。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.4.1.json@26a0abc428"
+ ]
+}

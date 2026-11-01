@@ -1,0 +1,343 @@
+{
+ "id": "A.1.1",
+ "name": "搜索、规划与约束求解",
+ "description": "启发式搜索、局部搜索、规划表示、约束传播和求解。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Artificial Intelligence: Foundations of Computational Agents (Poole & Mackworth, 3rd ed.) — free HTML",
+   "url": "https://artint.info/3e/html/ArtInt3e.html",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch3 Searching for Solutions (state spaces, graph search, uninformed search, heuristic search, pruning), Ch4 Reasoning with Constraints (constraint networks, solving CSPs by search, consistency algorithms/propagation, domain splitting, variable elimination, local search and population methods), Ch6 Deterministic Planning (state/action/goal representation, forward and regression planning, planning as CSP, partial-order planning).",
+   "access": "Full HTML textbook free online (CC BY-NC-ND), with exercises and code; no registration.",
+   "publisher": "Cambridge University Press / artint.info",
+   "evidence": {
+    "url": "https://artint.info/3e/html/ArtInt3e.html",
+    "location": "Table of contents: Ch3 Searching for Solutions, Ch4 Reasoning with Constraints, Ch6 Deterministic Planning",
+    "finding": "The TOC lists chapters 3, 4 and 6 with the search, constraint and planning sections; the site presents the whole book as HTML."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "青岛大学《人工智能基础》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/QDU-1206502801",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程概述写明七部分：绪论、盲目搜索、知情搜索、博弈中的搜索、经典逻辑推理、不确定性推理、专家系统；掌握盲目/知情/博弈搜索的原理与算法。覆盖启发式搜索，不含约束满足与规划表示。",
+   "access": "中国大学MOOC 免费注册学习，视频按开课学期；课程页只有概述与参考书，未登录核对逐讲；认证证书另计。",
+   "publisher": "青岛大学 / 中国大学MOOC",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/QDU-1206502801",
+    "location": "课程概述第二段（七部分内容）",
+    "finding": "正文列出绪论、盲目搜索、知情搜索、博弈中的搜索、经典逻辑推理、不确定性推理、专家系统七部分，没有约束满足或规划章节。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "B站中文课：人工智能——搜索算法（约束满足问题）（约 105 分钟）",
+   "url": "https://www.bilibili.com/video/BV1cz4y197yD/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "约束满足问题的建模、回溯搜索与约束传播的入门讲解；补中文 CSP 单元，但不含局部搜索与规划表示。",
+   "access": "第三方转载，授权未核。B站免费播放；个人账号，未核对字幕。",
+   "publisher": "B站 UP 主「渭城潇潇」",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1cz4y197yD/",
+    "location": "标题与时长",
+    "finding": "B站接口返回标题「人工智能--搜索算法（约束满足问题）」，时长约 105 分钟。"
+   },
+   "reupload": true,
+   "official_search": "（本轮更正）先用 B 站站内页搜“约束满足问题/约束满足 CSP 回溯”得到的是无关内容，改用 site:bilibili.com 检索后发现北京交通大学《AI 问题求解》研讨课合集（含课 8 约束满足优化问题、课 9 回溯搜索、课 10 改进回溯搜索）、北大公开课 CSP 专栏与斯坦福 CS221 转载，说明中文 CSP 课堂录像在 B 站是存在的；其中北交大课的视频简介给出课程主页 https://yishuai.github.io/ai，但该地址本轮打开 404，未找到学校官方账号或官方课程页，故 zh2 仍保留转载标记，并新增 r7-zh1 记录北交大合集。另查了中国大学MOOC/学堂在线的《人工智能原理》（北京大学，中文讲授，12讲）课程页与学堂在线镜像：两处正文只有课程概述与“本课程共有12讲”的表述，未公开列出含约束满足（CSP）的讲次；查了北京大学该课 icourse163 课程页（正文仅概述+参考书）与南京大学郭兰哲《人工智能导论》2025 官方课程主页（14 讲列表：1 绪论/2 盲目搜索/3 知情搜索/4 博弈搜索/5-6 强化学习/7-9 机器学习/10 神经网络/11 CV&NLP/12 逻辑推理/13 推理与规划/14 神经符号，无 CSP 讲次）；B 站按“约束满足问题”“约束满足 CSP 回溯”检索，未见学校或平台官方号发布同一 CSP 讲次。未能确认该视频对应的官方免费版，保留转载标记。",
+   "updated_by": [
+    "review/pi-additions/A.1.1.json"
+   ]
+  },
+  {
+   "key": "fix-zh-local",
+   "lang": "zh",
+   "title": "南京大学郭兰哲《人工智能导论》2025：第3讲启发式搜索",
+   "url": "https://www.lamda.nju.edu.cn/guolz/IntroAI/fall2025/slides/lec3.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "后半部分局部搜索：爬山、局部最优与随机重启、模拟退火；前半为贪婪/A*及启发式。",
+   "access": "大学授课者公开中文PDF，88页，无需注册。",
+   "publisher": "南京大学智能科学与技术学院 / 郭兰哲",
+   "evidence": {
+    "url": "https://www.lamda.nju.edu.cn/guolz/IntroAI/fall2025/slides/lec3.pdf",
+    "location": "PDF pp.68–79 局部搜索、爬山、随机重启、模拟退火；pp.80–87演化算法",
+    "finding": "全文检索命中爬山法和模拟退火讲解，比较随机游走和降温后接受较差解；不是用贪婪搜索代替局部搜索。"
+   },
+   "added_by": "review/ai-additions/A.1.1.json"
+  },
+  {
+   "key": "fix-zh-planning",
+   "lang": "zh",
+   "title": "南京大学郭兰哲《人工智能导论》2025：第13讲推理与规划",
+   "url": "https://www.lamda.nju.edu.cn/guolz/IntroAI/fall2025/slides/lec13.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "规划状态/动作/目标、STRIPS、PDDL领域与问题文件、积木世界例子与规划求解，另有HTN。",
+   "access": "作者大学课程站公开中文PDF，124页；web解析器因文件大小失败，已以HTTP在内存打开并提取正文核验。",
+   "publisher": "南京大学智能科学与技术学院 / 郭兰哲",
+   "evidence": {
+    "url": "https://www.lamda.nju.edu.cn/guolz/IntroAI/fall2025/slides/lec13.pdf",
+    "location": "PDF pp.94–100，尤94 STRIPS，96 PDDL，97 Blocks World，100 HTN",
+    "finding": "中文正文逐项定义状态、动作、Domain/Problem文件及其谓词和初始/目标状态，包含实例，补足规划表示。"
+   },
+   "added_by": "review/ai-additions/A.1.1.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "北京交通大学《AI 问题求解》研讨课（B 站合集，27 讲；课 8 约束满足优化问题、课 9 回溯搜索求解约束满足问题、课 10 改进回溯搜索）",
+   "url": "https://www.bilibili.com/video/BV1844y137jd/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "约束传播和求解的中文课堂录像：课 8 约束满足优化问题、课 9 回溯搜索求解约束满足问题、课 10 改进回溯搜索求解约束满足问题，另有粒子群优化等搜索/优化专题。",
+   "access": "B 站免费播放，合集共 27 讲；中文讲授；合集由个人/课程账号上传，视频简介给出课程主页 https://yishuai.github.io/ai（本轮打开为 404，可能已迁移），授权与官方账号身份未核实。",
+   "publisher": "北京交通大学陈一帅老师本人 B 站账号 yishuaichen（视频页标注“自制”；简介写明“北京交通大学《AI 问题求解》研讨课”，课程主页 yishuai.github.io/ai 与账号同名）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1844y137jd/",
+    "location": "页面简介“北京交通大学《AI 问题求解》研讨课…掌握人工智能搜索、优化、约束满足等问题的求解方法”与合集分 P 列表“课 8：约束满足优化问题 / 课 9：回溯搜索，求解约束满足问题 / 课 10：改进回溯搜索，求解约束满足问题”",
+    "finding": "打开视频页确认分 P 标题与课程自述，说明 B 站确有中文的约束满足（含回溯搜索与改进）课堂教学，此前“B 站未见”的判断需要更正。"
+   },
+   "added_by": "review/pi-additions/A.1.1.json",
+   "updated_by": [
+    "review/main-additions/A.1.1.json"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "topic": "启发式搜索",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "知情搜索（A* 等）与博弈中的搜索",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch3 Searching for Solutions — heuristic search, pruning",
+     "extent": "covered"
+    }
+   ],
+   "note": "局部搜索与群体方法不在 zh1，属下一项。"
+  },
+  {
+   "topic": "局部搜索",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "未覆盖（只讲 CSP 回溯/传播）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-local",
+     "section": "第3讲 pp.68–87",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch4 — local search and population methods",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有局部搜索（爬山/模拟退火/遗传）的系统讲次。；现有zh1负责系统搜索；新增中文课件补状态优化、局部最优与随机化跳出方法，结合现有CSP材料比较完整路径搜索和仅保留当前状态的局部搜索。"
+  },
+  {
+   "topic": "规划表示",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖（课程无规划章节）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-planning",
+     "section": "第13讲规划部分，pp.94–100",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch6 Deterministic Planning — state/action/goal, STRIPS-like representation, forward/regression planning",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺 STRIPS/PDDL 式规划表示与前向/回归规划。；现有启发式/CSP学习之后，用中文课件定义积木世界的状态、前提和效果，再写成Domain/Problem PDDL；由表示到动作序列检验形成独立中文路线。"
+  },
+  {
+   "topic": "约束传播和求解",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "约束满足问题：建模、回溯、约束传播",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch4 — consistency algorithms, domain splitting, variable elimination",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到入门，变量消去/约束优化未覆盖，但核心约束传播已讲。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "看盲目搜索、知情搜索与博弈搜索，手写 BFS/DFS/A* 并比较启发式的一致性。"
+    },
+    {
+     "source": "zh2",
+     "read": "看约束满足问题，动手实现回溯 + 前向检查，观察约束传播的剪枝效果。"
+    },
+    {
+     "source": "fix-zh-local",
+     "read": "学完现有搜索主课后读局部搜索部分，比较爬山、随机重启、模拟退火在八皇后上的失败与改进。"
+    },
+    {
+     "source": "fix-zh-planning",
+     "read": "读规划单元，手写积木世界的状态和动作，转写一对PDDL领域/问题文件并逐步验证所得计划。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Ch3, then Ch4 (through consistency algorithms and variable elimination), then Ch6; do the chapter exercises and run the accompanying search code."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开青岛大学《人工智能基础》课程页",
+   "result": "采纳为中文主线，但课程概述确认没有 CSP/规划章节，原 zhAlt 的「约束满足搜索」描述与页面不符。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「人工智能 搜索 约束满足 A* 课程」",
+   "result": "采纳 BV1cz4y197yD 补 CSP；未找到中文规划表示课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "王万良《人工智能导论》等参考书",
+   "result": "课程页列为参考书，未购买、未核价，不作为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://artint.info/3e/html/ArtInt3e.html 目录",
+   "result": "采纳 en1，确认 Ch3/4/6 覆盖搜索、约束与规划。"
+  },
+  {
+   "lang": "zh",
+   "result": "从南大教师课程站进入并打开第3/13讲中文正文，采用免费讲义；北大检索结果只有课纲/英文幻灯不作中文正文。",
+   "query_or_url": "人工智能 规划 STRIPS 局部搜索 pdf 课件 大学；site:lamda.nju.edu.cn/guolz/IntroAI",
+   "by": "review/ai-additions/A.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "中国大学MOOC 人工智能 课程 约束满足问题 规划 STRIPS 讲授",
+   "result": "得到北京大学《人工智能原理》（icourse163 PKU-1002188003，中文讲授、12讲）与武汉大学《人工智能》课程页；只看到课程概述，未见 CSP/规划讲次，不能作为官方版证据。",
+   "by": "review/pi-additions/A.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/PKU-1002188003",
+   "result": "正文确认“共12讲、双语教学、中文讲授”，课程大纲区块为空（前端加载），无法核对约束满足讲次。",
+   "by": "review/pi-additions/A.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.lamda.nju.edu.cn/guolz/IntroAI/fall2025/",
+   "result": "官方课程主页读到完整 14 讲列表，搜索/博弈/规划都有，但没有 CSP 讲次；说明中文 CSP 仍需现有 B 站来源。",
+   "by": "review/pi-additions/A.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "人工智能 约束满足 搜索 规划 课程大纲 讲 (include_domains: icourse163.org, xuetangx.com)",
+   "result": "只返回北京大学《人工智能原理》的 icourse163 与学堂在线页面，两处正文均无逐讲大纲；学堂在线与 cmgemooc 镜像为前端渲染，fetch 取到 0 字符，未能核对。",
+   "by": "review/pi-additions/A.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "约束满足问题 / 人工智能 约束满足 CSP 回溯 AI（站内页搜）",
+   "result": "站内搜索被“约束”商品与考研内容淹没，不可据此下结论；随后改用 tavily 的 site:bilibili.com 检索（见下一条）才找到真正的中文 CSP 课程。",
+   "by": "review/pi-additions/A.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 约束满足问题 人工智能 搜索 课程",
+   "result": "命中北京交通大学《AI 问题求解》研讨课合集（课 8–10 讲约束满足与回溯搜索）、北大公开课 CSP 专栏、斯坦福 CS221 中英字幕转载；打开 BV1844y137jd 核对分 P 后采纳为 r7-zh1（转载，官方页 404），并更正此前“B 站未见”的说法。",
+   "by": "review/pi-additions/A.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV1844y137jd/",
+   "result": "上传者 yishuaichen、平台标注自制、简介为北交大研讨课介绍，判为教师本人上传，不是转载。",
+   "by": "review/main-additions/A.1.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 artint 教材确实有搜索、约束传播与确定性规划三章，英文完整。",
+  "原中文青岛大学课程的七部分里只有搜索（盲目/知情/博弈），没有约束满足，也没有规划；原 zhAlt 声称的「约束满足搜索单元」在课程页找不到，属于过度描述。",
+  "补了中文 CSP 视频后，中文仍缺规划表示与局部搜索，如实标 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/ai-additions/A.1.1.json@555c074135",
+  "review/pi-additions/A.1.1.json@316f416a58",
+  "review/main-additions/A.1.1.json@ab14e13e02"
+ ]
+}

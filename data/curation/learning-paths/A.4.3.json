@@ -1,0 +1,330 @@
+{
+ "id": "A.4.3",
+ "name": "AI安全与模型系统安全",
+ "description": "攻击面、对抗样本、数据/模型投毒、滥用评估与模型应用防护；与网络空间安全交叉。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS 4727/5727 Adversarial Machine Learning (Alex Vakanski, Boise State) — all lecture slides public",
+   "url": "https://www.idahofallshighered.org/vakanski/Courses/Adversarial_Machine_Learning.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Introduction to Adversarial ML; deep learning overview; white-box and black-box evasion attacks; adversarial attacks on LLMs; defenses against evasion attacks; poisoning attacks and defenses; adversarial ML in cybersecurity (network intrusion detection, malware classification, spam/URL detection, cyber-physical systems); privacy attacks and defenses; explainability; bias and fairness.",
+   "access": "Slides (ppt/pdf) and past-semester archives are public; no account needed. No videos.",
+   "publisher": "Boise State University (Alex Vakanski)",
+   "evidence": {
+    "url": "https://www.idahofallshighered.org/vakanski/Courses/Adversarial_Machine_Learning.html",
+    "location": "Lecture list and 2023/2024/2025 archives",
+    "finding": "The course page lists lectures on evasion/poisoning attacks and defenses, LLM attacks, privacy attacks and adversarial ML in cybersecurity."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "MindSpore Armour 官方中文文档",
+   "url": "https://www.mindspore.cn/mindarmour/docs/zh-CN/master/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "MindSpore Armour 官方中文文档：对抗样本（FGSM/PGD 等攻击与对抗训练防御）、模型安全测试与模糊测试、差分隐私训练、模型水印等工具与示例；作为攻防知识的工程落地参考。",
+   "access": "免费阅读；运行示例需安装 MindSpore。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为API/标准参考，原记 primary。）",
+   "publisher": "昇思 MindSpore 社区",
+   "evidence": {
+    "url": "https://www.mindspore.cn/mindarmour/docs/zh-CN/master/index.html",
+    "location": "文档首页目录",
+    "finding": "首页目录列出对抗样本、模型安全、隐私保护等模块，说明是 Armour 工具库文档。"
+   },
+   "updated_by": [
+    "review/pi-additions/A.4.3.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "北京航空航天大学《人工智能安全与伦理》（学堂在线，韦星星、黄龙涛；国家高等教育智慧教育平台收录）",
+   "url": "https://higher.smartedu.cn/course/66f9dec84220cd272a6fbbc2",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文成课内容（课程大纲）：第一章 AI 安全与伦理概述（概念、重要性、基本范式）、第二章 对抗攻击方法（数字攻击、物理攻击）、第三章 对抗防御方法（预处理/处理中/后处理防御）、第四章 后门攻击与防御（后门攻防概述、数据投毒、训练过程的后门、后门防御）、第五章 AI 伦理技术（算法偏见与歧视、隐私和数据安全、透明和可解释性）、第六章 攻击在 AI 伦理中的良性应用。",
+   "access": "学堂在线开课、国家高等教育智慧教育平台收录；免费注册学习，认证证书另计；页面未标注讲授语言，按开课高校与教师判断为中文，未登录核对视频。",
+   "publisher": "北京航空航天大学 / 学堂在线（韦星星、黄龙涛）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/66f9dec84220cd272a6fbbc2",
+    "location": "“课程大纲”栏：第一章 1.1 概念 / 1.2 重要性 / 1.3 基本范式；第二章 2.1 绪论 / 2.2 数字攻击 / 2.3 物理攻击；第三章 3.1&2 绪论&预处理防御 / 3.3 处理中防御 / 3.4 后处理防御；第四章 4.1 后门攻防概述 / 4.2 数据投毒 / 4.3 训练过程的后门 / 4.4 后门防御",
+    "finding": "官方平台页面给出逐章逐节大纲，确认安全侧（攻击面/对抗攻防/投毒与后门）与伦理侧（偏见、隐私、可解释）都在课程内，可作为中文成体系主资源。"
+   },
+   "added_by": "review/pi-additions/A.4.3.json"
+  },
+  {
+   "key": "main-zh-redteam",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文：规划大型语言模型及其应用程序的红队测试",
+   "url": "https://learn.microsoft.com/zh-cn/azure/ai-services/openai/concepts/red-teaming",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "在 LLM 产品生命周期内规划负责任 AI 风险的红队测试：确定要测的危害、组织红队成员、设计测试轮次、记录与报告结果。",
+   "access": "微软官方中文文档，免费阅读。",
+   "publisher": "Microsoft",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/ai-services/openai/concepts/red-teaming",
+    "location": "全文",
+    "finding": "正文给出红队测试的规划步骤与要测试的风险类型，是方法指南而非 API 参考。"
+   },
+   "added_by": "review/main-additions/A.4.3.json"
+  },
+  {
+   "key": "main-zh-redteam-agent",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文：红队测试智能体（自动化红队扫描、攻击成功率与风险分数卡）",
+   "url": "https://learn.microsoft.com/zh-cn/azure/ai-foundry/concepts/ai-red-teaming-agent",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "自动化对抗探测扫描、按风险类别与攻击策略评分、攻击成功率（ASR）指标、分数卡与上线前评估。",
+   "access": "微软官方中文文档，免费阅读；实际运行扫描需要 Azure 账号，学习概念不需要。",
+   "publisher": "Microsoft",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/ai-foundry/concepts/ai-red-teaming-agent",
+    "location": "扫描、评估、报告三部分",
+    "finding": "正文讲自动扫描内容风险、评估攻击响应对并计算 ASR、生成风险分数卡。"
+   },
+   "added_by": "review/main-additions/A.4.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "攻击面",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖威胁建模/攻击面",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第一章 1.3 基本范式（AI 安全威胁的基本范式/攻击面）+ 1.1 概念、1.2 重要性",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Introduction to Adversarial ML（威胁模型与攻击分类）",
+     "extent": "covered"
+    }
+   ],
+   "note": "课程用“基本范式”一节把训练期/推断期、数字/物理、数据/模型等威胁面先框起来，再进入具体攻击，这正是“攻击面”的课程层教学；此前中文只有 MindSpore 文档的工具条目。"
+  },
+  {
+   "topic": "对抗样本",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "对抗样本模块（FGSM/PGD 等攻击与防御 API）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第二章 对抗攻击方法（数字攻击/物理攻击）+ 第三章 对抗防御方法（预处理/处理中/后处理防御）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "White-box Evasion Attacks；Black-box Evasion Attacks；Defenses",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有攻击/防御示例，但没有白盒/黑盒的理论与评测方法。；两章连起来覆盖对抗样本的生成（数字与物理场景）与三类防御，形成中文的攻防闭环；MindSpore Armour 文档可作动手工具。"
+  },
+  {
+   "topic": "数据/模型投毒",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第四章 后门攻击与防御：4.2 数据投毒、4.3 训练过程的后门、4.4 后门防御",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Poisoning Attacks and Defenses",
+     "extent": "covered"
+    }
+   ],
+   "note": "课程把数据投毒与训练过程后门分节讲，并给出后门防御，覆盖“数据/模型投毒”的两种路径与检测防御，而不是只提一句。"
+  },
+  {
+   "topic": "滥用评估与模型应用防护",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模型安全评估 API（只到工具层）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第三章/第四章的防御方法（应用侧防护）+ 第六章 攻击在 AI 伦理中的良性应用",
+     "extent": "partial"
+    },
+    {
+     "source": "main-zh-redteam",
+     "section": "红队测试的规划：危害清单、测试轮次、结果记录",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-redteam-agent",
+     "section": "自动化红队扫描、攻击成功率（ASR）、风险分数卡",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Adversarial Attacks on LLMs；Defenses Against Evasion Attacks；Privacy Attacks and Defenses",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：LLM 越狱/防护与防御方法由 en1 覆盖；滥用评估只到威胁建模案例。；“模型应用防护”由三、四章的防御方法覆盖，但“滥用评估”（misuse risk assessment、能力滥用红队与分级）在课程里只有“良性应用”一章与伦理讨论，没有专门的滥用评估单元；因此这一项只能是部分覆盖。；滥用评估由微软两篇中文文档讲（红队测试规划与自动化红队、攻击成功率），模型应用防护（对抗、后门、隐私防御）由北航《人工智能安全与伦理》对应章节讲。；评估指标部分。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读对抗样本与模型安全评估模块，跑一次 FGSM/PGD 攻击与防御示例。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按章学：先用第一章基本范式画出一张 AI 系统攻击面图（训练期/推断期、数字/物理、数据/模型），再学第二、三章做一次数字攻击与物理攻击并加防御，然后学第四章复现一次数据投毒后门并用后门防御检测，最后用 MindSpore Armour 的文档把攻防跑通。"
+    },
+    {
+     "source": "main-zh-redteam",
+     "read": "读红队测试规划指南，为一个对话应用列出要测的危害类别和一轮测试计划。"
+    },
+    {
+     "source": "main-zh-redteam-agent",
+     "read": "读红队测试智能体一文，理解攻击策略、风险类别和攻击成功率如何组成上线前的评估报告。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the course slides in order: intro/threat models → white-box → black-box → defenses → poisoning → LLM attacks → cybersecurity cases → privacy."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 MindSpore Armour 中文文档首页",
+   "result": "采纳 zh1；确认只有对抗样本/模型安全/隐私工具模块。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「AI安全 对抗样本 课程 完整」",
+   "result": "有对抗攻击单集系列与论文复现，但无覆盖投毒/威胁建模/安全交叉的系统课，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核到中文 AI 安全教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.idahofallshighered.org/vakanski/Courses/Adversarial_Machine_Learning.html",
+   "result": "采纳 en1；讲义覆盖攻击面/对抗/投毒/防护/安全交叉。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "人工智能安全 课程 中文 攻击面 对抗样本 数据投毒 后门 深度伪造 慕课 大学",
+   "result": "命中浙江大学《人工智能伦理与安全》、北京航空航天大学《人工智能安全与伦理》（国家智慧教育平台/学堂在线）与《人工智能：数据与模型安全》课程站；北航课程大纲最贴合“攻击面/对抗/投毒/防护”，采纳为主资源。",
+   "by": "review/pi-additions/A.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/66f9dec84220cd272a6fbbc2",
+   "result": "官方平台页正文给出六章逐节大纲（基本范式、数字/物理攻击、三类防御、数据投毒、训练过程后门、后门防御、伦理技术、良性应用），据此判定攻击面/对抗样本/投毒/应用防护有课程层覆盖。",
+   "by": "review/pi-additions/A.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 人工智能安全 对抗样本 数据投毒 课程 讲解",
+   "result": "只返回安全运营课程宣传、通识课与无关内容，没有成体系的 AI 安全课程视频；按新规则记录该站内检索结果，但不再据此下“没有”的结论，改以官方平台课程大纲为证据。",
+   "by": "review/pi-additions/A.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ai-data-model-safety.github.io（备选课程站）",
+   "result": "该站列出 11 周主题（对抗样本、检测、防御、数据投毒、后门、模型窃取、隐私、深度伪造），但页面注明“如需配套课件，请直接联系我们”，正文课件未公开，故不登记为来源。",
+   "by": "review/pi-additions/A.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/azure/ai-services/openai/concepts/red-teaming",
+   "result": "官方中文方法指南，采纳。",
+   "by": "review/main-additions/A.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "大模型 红队测试 滥用评估 安全评测 课程 中文 site:bilibili.com",
+   "result": "只有培训机构营销视频，未采用。",
+   "by": "review/main-additions/A.4.3.json"
+  }
+ ],
+ "findings": [
+  "原英文 CS4727 讲义完整覆盖攻击面、白盒/黑盒对抗、投毒、防御、LLM 与网络安全交叉，保留。",
+  "原中文只有 MindSpore Armour 工具文档，属库 API，不能覆盖威胁建模、投毒、滥用评估与安全交叉，中文只能 partial；原条目已如实写「LLM 提示注入不由此完整覆盖」。",
+  "没有把工具文档当成完整中文课程。",
+  "简介中的说明条目不作为知识点：与网络空间安全交叉",
+  "[review/pi-additions/A.4.3.json] 未解决 zh「滥用评估与模型应用防护」：中文课程（北航《人工智能安全与伦理》）把模型应用防护讲得较全（对抗防御三类、后门防御），但“滥用评估”只有“攻击在 AI 伦理中的良性应用”一章与伦理讨论，没有滥用能力分级/红队评估的专门单元；《人工智能：数据与模型安全》虽有深度伪造检测一周，但课件需联系作者获取、无法核实正文。故这一项按 partial 记入未解决。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.4.3.json@c77ca1a678",
+  "review/main-additions/A.4.3.json@ce9fbbe574"
+ ]
+}

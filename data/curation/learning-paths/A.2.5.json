@@ -1,0 +1,267 @@
+{
+ "id": "A.2.5",
+ "name": "联邦学习",
+ "description": "多客户端协同训练与模型聚合、非独立同分布数据、通信效率与隐私约束。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Aalto CS-E4740 Federated Learning — course site and open textbook",
+   "url": "https://federatedlearningaalto.github.io/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "A full course deriving FL from generalized total variation minimization on empirical graphs: FedGD/FedAvg/FedProx and clustered FL, fixed points and asynchronous iterations, communication rounds vs accuracy, grouping devices with heterogeneous data (empirical graphs and clustering), robustness to malicious participants, differential privacy utility cost, and when exchanged model parameters still count as personal data (GDPR/EU AI Act).",
+   "access": "Free syllabus and slides; the 2027 recordings are not released yet, the 2025 recordings are available; the textbook is an open arXiv draft. Videos' captions not checked.",
+   "publisher": "Aalto University (Alexander Jung)",
+   "evidence": {
+    "url": "https://federatedlearningaalto.github.io/",
+    "location": "Course/syllabus page and textbook links",
+    "finding": "The site publishes the 12-lecture schedule with slides, links the open textbook and states the 2025 lecture recordings; the 2027 edition is still planned."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "隐语 SecretFlow 官方中文文档 · 联邦学习教程",
+   "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "联邦学习教程组：水平联邦（图像分类、PyTorch 后端、水平 XGBoost）、垂直联邦 XGB（SecureBoost）、拆分学习（银行营销、GNN）、混合联邦逻辑回归、预训练模型微调，以及拆分学习的通信压缩、流水线并行与 FeatureInferenceAttack/LabelInferenceAttack 隐私攻击示例；另有 PSI、SPU、TEEU 组件教程。",
+   "access": "免费在线阅读；运行例子需安装 SecretFlow 并准备多参与方环境。工具文档，不含非 IID 收敛分析。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+   "publisher": "蚂蚁集团 / 隐语社区",
+   "evidence": {
+    "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+    "location": "教程目录「联邦学习」分组",
+    "finding": "教程目录列出水平/垂直/拆分/混合联邦的可运行例子，以及通信压缩和隐私攻击示例。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "华为云开发者学堂「联邦学习课程学习路径」（4 个阶段 / 7 门课程，中文）",
+   "url": "https://edu.huaweicloud.com/roadmap/federatedlearning.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文成体系的学习路径：第一阶段「联邦学习系统基础及进阶」——联邦学习基础理论（系统介绍、业界发展、分布式训练初步实现）与系统进阶（更严苛的隐私保护方法、FedOpt 与 FedMDGA）；第二阶段「联邦学习分类」——算法异构的松耦合联邦学习（LCFL）、模型异构联邦学习、联邦元学习（横向联邦个性化）；第三阶段「纵向联邦学习」——纵向联邦原理与最简单的纵向联邦实现；第四阶段「联邦学习应用」——业界应用与上手一个自己的联邦学习应用。",
+   "access": "免费，华为云账号登录后学习；中文；每门课标 1 课时，全路径合计 7 课时，属短课路径，深度不如教材。",
+   "publisher": "华为云开发者学堂（华为云官方）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://edu.huaweicloud.com/roadmap/federatedlearning.html",
+    "location": "页面正文：课程数量“4个阶段 | 7门课程 | 7个课时”，以及第一阶段至第四阶段各门课程的名称与介绍段（联邦学习基础理论、联邦学习系统进阶 FedOpt/FedMDGA、算法异构的松耦合联邦学习 LCFL、模型异构联邦学习、联邦元学习、纵向联邦学习、联邦学习应用）",
+    "finding": "正文逐门课给出介绍，确认是覆盖“基础理论→分类→纵向联邦→应用”的中文系统路径，而不是单篇文章；同时也确认总量只有 7 课时。"
+   },
+   "added_by": "review/pi-additions/A.2.5.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "北京理工大学信息系统及安全对抗实验中心 组会报告《联邦学习的参数更新方法》（崔成钢，2021）",
+   "url": "https://www.isclab.org.cn/wp-content/uploads/2021/10/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8F%82%E6%95%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95-%E5%B4%94%E6%88%90%E9%92%A2.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "非独立同分布数据：Non-IID 的四类表现（特征分布倾斜、标签分布倾斜、标签相同特征不同即概念飘移、特征相同标签不同、客户端数据量不平衡）、FedAvg 的 IID 与等量假设、以及针对 Non-IID 的 FedProx（邻近项约束本地更新）做法；并给出横向/纵向联邦与跨设备/跨孤岛的分类。",
+   "access": "实验室官网公开 PDF（免费）；中文；报告为北京理工大学实验室研究生组会材料，非正式课程。",
+   "publisher": "北京理工大学信息系统及安全对抗实验中心（ISCLab）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.isclab.org.cn/wp-content/uploads/2021/10/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8F%82%E6%95%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95-%E5%B4%94%E6%88%90%E9%92%A2.pdf",
+    "location": "PDF 第 6–8 页联邦学习分类与「非独立同分布（Non-IID）」四类特征+数量不平衡；第 9–11 页 FedAvg 的假设与聚合步骤；其后 FedProx 部分",
+    "finding": "正文把 Non-IID 的四类数据分布差异逐一举例（笔迹、企鹅/北极熊、概念飘移、点头含义），并说明 FedAvg 在客户端数据非 IID 且不平衡时的假设失效与 FedProx 的修正项，是实际讲解而非目录。"
+   },
+   "added_by": "review/pi-additions/A.2.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "多客户端协同训练与模型聚合",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "水平联邦（FedAvg 类框架）、垂直联邦 SecureBoost、拆分学习",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第一阶段 联邦学习基础理论 + 联邦学习系统进阶（FedOpt/FedMDGA）；第三阶段 纵向联邦学习",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "FedGD/FedAvg/FedProx derivation; fixed points and asynchronous iterations",
+     "extent": "covered"
+    }
+   ],
+   "note": "need_primary 要求的中文成体系主资源由 r7-zh1 承担：它从联邦学习系统与分布式训练讲起，接着讲聚合算法进阶（FedOpt、FedMDGA）与纵向联邦，把 SecretFlow 教程里分散的聚合知识串成一条有先后次序的课程路径。"
+  },
+  {
+   "topic": "非独立同分布数据",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未讲非 IID 的收敛与分组",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 7–11 页：Non-IID 四类特征与数量不平衡；FedAvg 的 IID 假设；FedProx 的邻近项修正",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Empirical graphs and clustered FL for heterogeneous devices",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有不同数据分布的案例（水平/垂直），没有非 IID 的理论分析。；现有 SecretFlow 教程只讲聚合与攻击面，不讲非 IID；r7-zh2 补上了 Non-IID 的表现形式（特征倾斜、标签倾斜、概念飘移、同特征异标签、数量不平衡）、为什么 FedAvg 的等权平均在非 IID 下退化，以及 FedProx 用邻近项限制本地漂移的对策，中文侧因此能讲清这个知识点（收敛率理论仍需英文教材，但不影响本知识点成立）。"
+  },
+  {
+   "topic": "通信效率与隐私约束",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "拆分学习中的通信压缩与流水线并行；FeatureInferenceAttack/LabelInferenceAttack",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第一阶段 联邦学习系统进阶（更严苛的隐私保护方法）；第三阶段 纵向联邦学习",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Communication rounds vs accuracy; differential privacy utility cost; GDPR/EU AI Act discussion",
+     "extent": "covered"
+    }
+   ],
+   "note": "r7-zh1 的系统进阶课专门讲更强的隐私保护方法，纵向联邦课又给出两方 ID 对齐下的特征分区训练流程，与现有 SecretFlow 教程的通信压缩、流水线并行与隐私攻击两节互补，中文侧覆盖通信与隐私两个约束。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按水平联邦→垂直联邦→拆分学习跑教程，读通信压缩与隐私攻击两节，理解聚合与泄露面。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按路径顺序学：先看「联邦学习基础理论」弄清跨设备/跨孤岛两种场景与一次联邦训练回合，再看「联邦学习系统进阶」的 FedOpt/FedMDGA 与更强隐私保护方法，然后进「联邦学习分类」的松耦合、模型异构与联邦元学习，最后用「纵向联邦学习」和「联邦学习应用」各上手一次最小实现。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读第 6–11 页，先按四类 Non-IID 特征给自己的数据集分类，再复现 FedAvg 在标签倾斜切分下的精度下降，并加上 FedProx 的邻近项对比恢复情况。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the 12-lecture slides in order (GTVMin → FedGD/FedAvg/FedProx → clustering → robustness → DP), watch the 2025 recordings and do the assignments."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 SecretFlow 教程目录",
+   "result": "采纳 zh1；确认覆盖聚合、通信压缩与隐私攻击，但没有非 IID 理论。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「联邦学习 课程 完整 微众」",
+   "result": "多为吴恩达课程的中英字幕搬运（英文授课）与单次讲座，未采纳为中文授课来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "杨强《联邦学习》等中文书检索",
+   "result": "未核到可读目录/价格页，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://federatedlearningaalto.github.io/",
+   "result": "采纳 en1；课程与开放教材覆盖聚合、非 IID、通信与隐私。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "联邦学习 / 联邦学习 课程 非独立同分布 / 联邦学习 FATE 微众 教程 隐私计算 / 联邦学习 杨强 讲座 / 联邦学习 教程 全集（站内页搜）",
+   "result": "站内页搜返回大量考研、软件与硬件无关内容，不可据此下“B 站没有”的结论；改用 site:bilibili.com 检索后另记。",
+   "by": "review/pi-additions/A.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 联邦学习 非独立同分布 课程 讲解",
+   "result": "命中吴恩达《联邦学习》中英字幕课、王树森机器学习系列中的联邦学习单元、异步联邦学习原理与代码、FedAvg 前置知识、Flower 上手等单集或系列中的单章；确实存在中文讲解甚至成系列的机器学习课，但没有像样的一门“联邦学习专门课”，因此仍以华为云课程路径 + 北理工 Non-IID 课件为主。",
+   "by": "review/pi-additions/A.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "联邦学习 中文 教材 课程 非独立同分布 Non-IID 聚合 慕课 讲义",
+   "result": "找到北理工 ISCLab 的《联邦学习的参数更新方法》PDF（含 Non-IID 四类特征与 FedProx）与 Federated-Learning-FAQ 等零散材料；前者打开正文核对后采纳。",
+   "by": "review/pi-additions/A.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "联邦学习 课程 中国大学MOOC 学堂在线 隐私计算（限 icourse163/xuetangx/bilibili/zhihu）",
+   "result": "中国大学MOOC 与学堂在线检索没有返回联邦学习课程页（只返回平台首页与无关课程），说明这两个平台暂无可用中文联邦学习慕课。",
+   "by": "review/pi-additions/A.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "联邦学习 系统 中文 教程 横向联邦 纵向联邦 非独立同分布 收敛 教材 讲义 pdf 大学课程",
+   "result": "找到华为云开发者学堂「联邦学习课程学习路径」（4 阶段 7 门课），并再次命中北理工 PDF；前者采纳为中文 primary。",
+   "by": "review/pi-additions/A.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://edu.huaweicloud.com/roadmap/federatedlearning.html",
+   "result": "正文确认 4 个阶段、7 门课程、7 课时的课程清单与每门课介绍，采纳为中文成体系主资源（同时记下其体量偏小）。",
+   "by": "review/pi-additions/A.2.5.json"
+  }
+ ],
+ "findings": [
+  "原英文 Aalto 课程是一整门联邦学习课，聚合并发、通信、隐私与非 IID 都有，保留。",
+  "原中文 SecretFlow 教程是工具教程，覆盖聚合/通信压缩/隐私攻击实践，但没有非 IID 收敛与聚类联邦，中文只能 partial。",
+  "没有把吴恩达的英文字幕课当作中文授课来源。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.2.5.json@c27fc0e75c"
+ ]
+}

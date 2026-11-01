@@ -1,0 +1,241 @@
+{
+ "id": "A.2.4",
+ "name": "强化学习",
+ "description": "MDP、价值/策略、时序差分、策略梯度、探索与离线学习；与控制和运筹交叉。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "UCL Course on Reinforcement Learning (David Silver) — 10 lectures, slides, videos, Easy21 assignment",
+   "url": "https://davidstarsilver.wordpress.com/teaching/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "Lecture 1–2: RL problem and MDPs (returns, value functions, Bellman equations, optimal policies); 3: planning by dynamic programming; 4–5: model-free prediction and control (TD(0), TD(λ), SARSA, Q-learning, importance sampling); 6: value function approximation incl. DQN; 7: policy gradient (REINFORCE, actor-critic); 8: integrating learning and planning (Dyna, MCTS); 9: exploration vs exploitation (ε-greedy, UCB, Thompson sampling); 10: case study.",
+   "access": "Slides and lecture videos public under CC BY-NC 4.0; the Easy21 assignment is described on the site. Offline/batch RL and OR/control intersections are only mentioned in passing.",
+   "publisher": "University College London / David Silver",
+   "evidence": {
+    "url": "https://davidstarsilver.wordpress.com/teaching/",
+    "location": "Course page: lecture list 1–10 and materials",
+    "finding": "The teaching page lists the ten lectures with slides/videos and the Easy21 assignment, covering MDPs, DP, model-free control, approximation, policy gradient, planning and exploration."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《动手学强化学习》（张伟楠、沈键等，上海交大）— 免费中文教材 + notebook + 视频",
+   "url": "https://hrl.boyuai.com/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "中文正文按基础篇（多臂老虎机、MDP、动态规划、时序差分、Dyna-Q）、进阶篇（价值函数近似、DQN、策略梯度、Actor-Critic、DDPG、PPO、SAC）、前沿篇（模仿学习、离线强化学习、多智能体强化学习等）组织，每章配可在线运行的 Jupyter Notebook；官网写明配套视频课在伯禹平台免费开放。",
+   "access": "在线正文、notebook 与视频课免费；纸书在京东/当当另售（不作为必需）。",
+   "publisher": "上海交通大学 张伟楠等 / 伯禹学习平台",
+   "evidence": {
+    "url": "https://hrl.boyuai.com/",
+    "location": "首页三段式介绍与「视频课程」入口",
+    "finding": "首页写明全书分基础篇、进阶篇、前沿篇，每章配 Jupyter Notebook，并称张伟楠老师的强化学习网课视频已在伯禹学习平台完全免费开放。"
+   }
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Berkeley CS 185/285 Deep Reinforcement Learning (Sergey Levine, Spring 2026) — Lectures 17–19 & 23 (Offline RL, Exploration) + Homework 5",
+   "url": "https://rail.eecs.berkeley.edu/deeprlcourse/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "探索与离线学习：Lecture 17/18 Offline RL Part 1–2（离线 RL 的定义、on-policy/off-policy/offline 的区别、分布偏移与保守价值估计）、Lecture 19 Exploration（exploration-exploitation 的两种定义、如何发现需要长序列才得奖励的策略）、Lecture 23 Advanced Exploration；配套 Discussion Section 9 (Offline RL) 与 Homework 5: Offline RL。",
+   "access": "课程站点公开全部 slides 与作业（免费）；2026 春季课程录像需按站点链接（Fall 2023 recordings 公开）。仅核对 slides，视频是否公开可播未逐条核对。",
+   "publisher": "UC Berkeley RAIL Lab / Sergey Levine",
+   "reupload": false,
+   "evidence": {
+    "url": "https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-17.pdf",
+    "location": "lec-17.pdf 封面 “Offline Reinforcement Learning / CS 185/285 / Instructor: Sergey Levine”，第 3 页对比 on-policy / off-policy / offline RL；lec-19.pdf 封面 “Exploration”，第 7 页讲 exploration-exploitation 与长序列奖励发现",
+    "finding": "两份 slides 正文确实按主题展开（离线 RL 的设定与原因、探索问题的两种定义），课程页同时列出 Homework 5 与 Section 9，能支撑“探索与离线学习”。"
+   },
+   "added_by": "review/pi-additions/A.2.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "MDP",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "基础篇：马尔可夫决策过程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 2: MDP",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "价值/策略",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "动态规划、价值函数近似、DQN",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lectures 3, 6 (value iteration, value function approximation, DQN)",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "时序差分",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "基础篇：时序差分、Dyna-Q",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lectures 4–5: model-free prediction and control (TD, SARSA, Q-learning)",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "策略梯度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "进阶篇：策略梯度、Actor-Critic、PPO",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 7: policy gradient (REINFORCE, actor-critic)",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "探索与离线学习",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "多臂老虎机/探索；前沿篇：离线强化学习",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 9: exploration vs exploitation；offline RL 只零星提及",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Lec 17–18 Offline RL Part 1–2 + Homework 5；Lec 19 Exploration + Lec 23 Advanced Exploration",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：探索英文完整，离线 RL 只有中文教材的前沿篇成章；英文侧 partial。；Silver 课程只在 Lec 9 讲 ε-greedy/乐观初始化这类探索，没有离线 RL；r7-en1 用两讲离线 RL（分布偏移、保守价值估计、为什么不能直接离线 Q-learning）加作业，再用两讲探索（定义、乐观/后验采样类方法、长序列探索）补齐，所以这个合并知识点在英文侧完整。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "基础篇：MDP→动态规划→时序差分→Dyna-Q，逐章跑 notebook；进阶篇：价值近似→DQN→策略梯度→Actor-Critic→PPO；前沿篇读离线强化学习。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Watch lectures 1–9 in order and do Easy21; implement TD(0), SARSA/Q-learning, DQN and REINFORCE."
+    },
+    {
+     "source": "r7-en1",
+     "read": "After Silver's course, watch/read CS285 Lectures 17–18 on offline RL and do Homework 5 (train an offline agent and compare with a naive off-policy baseline to see distribution shift), then Lectures 19 and 23 on exploration and implement an optimistic or count-based bonus."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 hrl.boyuai.com 与 GitHub README",
+   "result": "采纳 zh1；确认三篇结构与免费视频/notebook。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「强化学习 课程 完整」",
+   "result": "有搬运的伯禹课程与零散算法讲解；采用官方伯禹视频入口，不另登记搬运。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "《动手学强化学习》纸书",
+   "result": "可选纸书，未核价、未购买，不作为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "query_or_url": "https://davidstarsilver.wordpress.com/teaching/",
+   "result": "采纳 en1；10 讲覆盖 MDP/TD/策略梯度/探索，离线 RL 仅带过。"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://rail.eecs.berkeley.edu/deeprlcourse/",
+   "result": "课程页读到 Week 9 Offline Reinforcement Learning、Lecture 17/18 Offline RL、Lecture 19 Exploration、Lecture 23 Advanced Exploration、Homework 5: Offline RL、Section 9: Offline RL，采纳为英文补缺口材料。",
+   "by": "review/pi-additions/A.2.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://rail.eecs.berkeley.edu/deeprlcourse/static/slides/lec-17.pdf 与 lec-19.pdf",
+   "result": "打开 slides 正文确认离线 RL 与探索两讲的实际内容（不是只有标题），据此判定 covered。",
+   "by": "review/pi-additions/A.2.4.json"
+  }
+ ],
+ "findings": [
+  "原英文 Silver 课程 10 讲覆盖 MDP、价值/策略、TD、策略梯度与探索，保留；离线 RL 与运筹交叉确实没有成章。",
+  "原中文《动手学强化学习》只被描述为「MDP 到算法，多智能体属扩展」，核对后它三篇结构完整，且离线 RL 在前沿篇有章，比旧描述更完整。",
+  "两边在运筹/控制交叉上都 partial，未用另一语言补齐。",
+  "简介中的说明条目不作为知识点：与控制和运筹交叉"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.2.4.json@df652a6231"
+ ]
+}

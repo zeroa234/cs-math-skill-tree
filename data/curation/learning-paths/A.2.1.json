@@ -1,0 +1,382 @@
+{
+ "id": "A.2.1",
+ "name": "监督、无监督与半监督学习",
+ "description": "回归/分类、聚类、降维、表示、特征工程与学习设置。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "An Introduction to Statistical Learning with Applications in R/Python (James, Witten, Hastie, Tibshirani)",
+   "url": "https://www.statlearning.com/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch2 bias-variance and generalization intuition; Ch3 linear regression; Ch4 classification (logistic, LDA/QDA, KNN); Ch5–6 resampling, model selection and regularization; Ch7 nonlinearity/splines/GAM; Ch8 trees and ensembles; Ch9 SVM; Ch10 neural networks; Ch12 unsupervised learning (PCA, k-means, hierarchical clustering); each chapter has R and Python labs.",
+   "access": "Authors' official site provides free PDFs of both the R and Python editions (ISLR2/ISLP); no registration.",
+   "publisher": "Springer / statlearning.com authors",
+   "evidence": {
+    "url": "https://www.statlearning.com/",
+    "location": "Download ISL with R / Download ISL with Python links",
+    "finding": "The site offers free PDF downloads of both editions and lists the chapters and labs."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "李宏毅《机器学习》2023 Spring（台大，中文授课，课程网页含视频与 slides）",
+   "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2023-spring.php",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "中文视频：机器学习基本概念、回归（Pokemon CP）、分类（Pokemon classification）、logistic regression、梯度下降、反向传播、CNN、self-attention，以及后续的无监督学习/自编码器等单元；作业含 Kaggle 竞赛。覆盖回归/分类、聚类与降维、表示学习的主要入口。",
+   "access": "课程网页与 YouTube 视频免费；slides 为英文，授课语言中文；未核对字幕。",
+   "publisher": "National Taiwan University, Hung-yi Lee",
+   "evidence": {
+    "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2023-spring.php",
+    "location": "Content 表（2/24–3/10 起）：机器学习基本概念、Predicting Pokémon CP、Pokemon classification、Logistic Regression、Gradient Descent、Backpropagation、CNN、Self-attention",
+    "finding": "课程页按日期列出中文授课主题与 slides 链接，并给出作业与 Kaggle 平台。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "Datawhale《南瓜书》：聚类、降维与特征选择的公式推导",
+   "url": "https://github.com/datawhalechina/pumpkin-book",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "聚类（原型/密度/层次）、降维与度量学习（PCA）、特征选择与稀疏学习的推导；需配合周志华《机器学习》原书使用。",
+   "access": "开源免费；README 明确必须以西瓜书为主线，不能单独作为教材。",
+   "publisher": "Datawhale 社区",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/datawhalechina/pumpkin-book/master/README.md",
+    "location": "使用说明",
+    "finding": "README 写明全书以西瓜书为前置知识，最佳用法是遇到推导问题时查阅。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Google 机器学习速成课程（官方简体中文版）· 数据模块：处理数值数据 / 处理分类数据",
+   "url": "https://developers.google.com/machine-learning/crash-course/numerical-data?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "特征工程的中文系统单元：数值特征的标准化、分箱、良好数值特征的品质、多项式转换；分类数据的独热编码、特征哈希、均值编码、特征组合（feature cross）；每个单元配 10–20 分钟讲解、编程练习与测验，另有“数据集、泛化和过拟合”模块讲训练/验证/测试划分。",
+   "access": "免费，无需注册即可阅读全部单元正文与练习说明；页面为 Google 官方简体中文版（机器翻译），动画/视频是否中文配音未核对。",
+   "publisher": "Google for Developers（官方中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developers.google.com/machine-learning/crash-course/categorical-data?hl=zh-cn",
+    "location": "“处理分类数据”模块目录：独热编码、特征哈希、均值编码、特征组合（5 分钟）+ 特征组合练习（15 分钟）+ 测试您的知识；同页侧栏含“标准化（20 分钟）”“分箱（15 分钟）”",
+    "finding": "打开正文确认该模块逐节讲数值/分类特征的变换方法与练习，不是只有模块介绍的目录页。"
+   },
+   "added_by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《动手学深度学习》中文版 4.9 环境和分布偏移 · 4.9.4 学习问题的分类法",
+   "url": "https://zh-v2.d2l.ai/chapter_multilayer-perceptrons/environment.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "学习设置的分类：4.9.4.1 批量学习、4.9.4.2 在线学习、4.9.4.3 老虎机、4.9.4.4 控制、4.9.4.5 强化学习、4.9.4.6 考虑到环境；前面 4.9.1–4.9.3 讲协变量偏移、标签偏移、概念偏移及纠正。",
+   "access": "免费在线阅读（CC BY-SA），无注册；中文教材。",
+   "publisher": "阿斯顿·张、李沐等 / 人民邮电出版社（在线版 d2l.ai）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://zh-v2.d2l.ai/chapter_multilayer-perceptrons/environment.html",
+    "location": "4.9.4 学习问题的分类法及其 4.9.4.1–4.9.4.6 小节标题与正文（在线学习、老虎机、控制、强化学习）",
+    "finding": "正文逐节解释每种学习设置“数据如何到达、参数如何更新”，4.9.4.5 说明强化学习与监督学习的差别，可支撑“学习设置”这一知识点。"
+   },
+   "added_by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Google Machine Learning Crash Course — Data modules: Numerical data / Categorical data",
+   "url": "https://developers.google.com/machine-learning/crash-course/numerical-data",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Feature engineering units with exercises: normalization, binning, qualities of good numerical features, polynomial transforms; one-hot encoding, feature hashing, mean encoding, feature crosses; plus the 'Datasets, generalization and overfitting' module on train/validation/test splits.",
+   "access": "Free, no registration for the reading units and exercise instructions; interactive exercises use Colab.",
+   "publisher": "Google for Developers",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developers.google.com/machine-learning/crash-course/categorical-data",
+    "location": "Categorical data module listing: one-hot encoding, feature hashing, mean encoding and feature crosses, with the 15-minute feature-cross exercise",
+    "finding": "The unit pages carry the actual explanations plus exercises, so they teach feature transformation rather than only announcing a syllabus."
+   },
+   "added_by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Deep Learning (Goodfellow, Bengio, Courville) — Chapter 15 Representation Learning (free HTML)",
+   "url": "https://www.deeplearningbook.org/contents/representation.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "表示：什么算好的表示、监督式前馈网络作为表示学习、贪心逐层预训练、自编码器（欠完备/正则化/稀疏/去噪）、流形解释、分布式表示与深度表示的理论优势。",
+   "access": "Free HTML chapter, no registration (MIT Press book posted by the authors).",
+   "publisher": "Ian Goodfellow, Yoshua Bengio, Aaron Courville / MIT Press (deeplearningbook.org)",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.deeplearningbook.org/contents/representation.html",
+    "location": "Chapter 15 opening pages and section list (what makes a good representation; autoencoders; manifold interpretation; distributed representations)",
+    "finding": "The chapter body defines representation learning with worked argument about which representations make later tasks easier, not just a TOC."
+   },
+   "added_by": "review/pi-additions/A.2.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "回归/分类",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Predicting Pokémon CP；Pokemon classification；Logistic Regression",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch3 Linear Regression；Ch4 Classification；Ch8–9 trees/SVM",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "聚类",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "无监督学习单元（聚类）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "聚类章节推导",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch12 Unsupervised Learning — k-means, hierarchical clustering",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "降维",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "无监督学习单元（PCA/自编码器）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "降维与度量学习（PCA）推导",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch12 — PCA",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "表示",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "self-attention 与自编码器单元",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch10 Neural Networks；Ch12 PCA",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Ch15 Representation Learning — good representations, autoencoders, manifold interpretation, distributed representations",
+     "extent": "covered"
+    }
+   ],
+   "note": "ISL 只到神经网络入门与 PCA，表示学习不是它的重点；中文由李宏毅的 self-attention/自编码器补。；ISL 只在 PCA 处零散提到表示，r7-en2 用一整章讲表示学习：为什么某种表示让后续任务更容易、自编码器如何无监督地学表示、流形假设与分布式表示，补上“表示”这一知识点的英文教学。"
+  },
+  {
+   "topic": "特征工程与学习设置",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "作业中的数据预处理；无独立特征工程/半监督章节",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "数据模块：处理数值数据（标准化/分箱/多项式转换）、处理分类数据（独热、特征哈希、均值编码、特征组合）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "零散提及特征工程与半监督",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Numerical data / Categorical data units (normalization, binning, one-hot, hashing, mean encoding, feature crosses) + Datasets, generalization and overfitting",
+     "extent": "covered"
+    }
+   ],
+   "note": "两种语言都缺系统章节；原 granularity 也注明这两项应降为延伸。；r7-zh1 补特征工程：数值特征怎么变换、分类特征怎么编码、特征交叉怎样让线性模型表达交互，每节带练习；学习设置部分由 r7-zh2 的 4.9.4 学习问题分类法与 4.9.1–4.9.3 分布偏移负责（批量/在线/老虎机/控制/强化学习各自的设定），两者合起来覆盖这个合并知识点。；r7-en1 负责特征工程的英文系统单元（含练习）；学习设置由现有 en1 ISL 第 2 章（2.1 统计学习、2.2 模型精度评估）与新加的 r7-en1“数据集、泛化和过拟合”模块共同覆盖训练/验证/测试划分与泛化误差估计。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "看基本概念、回归、分类、梯度下降与反向传播，完成 Pokemon 回归/分类作业。"
+    },
+    {
+     "source": "zh2",
+     "read": "配合西瓜书读聚类与降维的公式推导，手推 k-means 与 PCA。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先做“处理数值数据”单元：对同一份数值特征分别做标准化与分箱，比较模型收敛速度，并做完多项式转换的测验；再做“处理分类数据”：对高基数类别分别用独热、特征哈希和均值编码，最后手工构造一个特征交叉并观察线性模型的效果，完成 15 分钟练习。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读 4.9 全节：先分清协变量偏移/标签偏移/概念偏移，再读 4.9.4 学习问题的分类法，为“批量/在线/老虎机/控制/强化学习”各举一个数据到达方式的例子，说明各自的假设。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Ch2–Ch4, Ch5–Ch6, Ch8–Ch9, then Ch12; do the Python labs for regression, classification, regularization and clustering."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Work through the Numerical data and Categorical data units and their exercises (normalization vs binning, one-hot vs hashing vs mean encoding, feature crosses), then the Datasets/generalization module for train/validation/test protocol."
+    },
+    {
+     "source": "r7-en2",
+     "read": "Read Ch15 up to the autoencoder and manifold sections; explain why a distributed representation helps, and reproduce a small undercomplete autoencoder as a representation learner."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "打开李宏毅 2023 Spring 课程页",
+   "result": "采纳为中文主线；页面列出回归/分类/CNN/self-attention 等主题与作业。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "南瓜书 README 与目录",
+   "result": "采纳为聚类/降维推导补充；确认其依赖西瓜书。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "周志华《机器学习》/李航《统计学习方法》",
+   "result": "作为南瓜书的前置原书存在，但未核价、未购买，不登记为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.statlearning.com/",
+   "result": "采纳 en1；站点提供 R/Python 两版免费 PDF。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "特征工程 机器学习 教程 / 半监督学习 李宏毅（站内页搜）",
+   "result": "站内页搜得到零散单集（特征选择、数据集划分、量化金融特征工程）与同名人物视频，不能据此断言 B 站没有中文特征工程教学；改用 site:bilibili.com 检索后另记。",
+   "by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "中文 机器学习 课程 特征工程 半监督学习 学习设置 讲义 开源教材",
+   "result": "搜到 Google 机器学习速成课程中文版（官方翻译，含处理数值/分类数据模块）与《动手学深度学习》PDF 目录（4.9.4 学习问题的分类法），两者都打开正文核对后采纳。",
+   "by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://zh-v2.d2l.ai/chapter_multilayer-perceptrons/environment.html",
+   "result": "正文确认 4.9.4.1 批量学习、4.9.4.2 在线学习、4.9.4.3 老虎机、4.9.4.4 控制、4.9.4.5 强化学习、4.9.4.6 考虑到环境；据此采纳为“学习设置”的中文材料。",
+   "by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://developers.google.com/machine-learning/crash-course/numerical-data?hl=zh-cn 与 /categorical-data?hl=zh-cn",
+   "result": "两页正文列出标准化、分箱、良好数值特征的品质、多项式转换、独热编码、特征哈希、均值编码、特征组合及对应练习时长，确认是完整单元而非介绍页。",
+   "by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.deeplearningbook.org/contents/representation.html",
+   "result": "确认第 15 章正文（表示学习定义、自编码器、流形解释、分布式表示），采纳补英文“表示”。",
+   "by": "review/pi-additions/A.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 特征工程 机器学习 课程 系统",
+   "result": "命中唐宇迪《机器学习-特征工程-常用特征提取方法》7 集/32 集版本、黑马程序员机器学习课里的“特征工程_整体介绍/低方差过滤法/相关系数法/PCA降维”等分集，说明 B 站确有中文特征工程系统讲解；这些是商业培训机构内容、非学校官方课，故仍以 Google 机器学习速成课程中文版（官方翻译）作为中文特征工程来源。",
+   "by": "review/pi-additions/A.2.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 ISL 的免费 PDF 与章目已核，回归/分类/聚类/降维都有，但特征工程与半监督确实不成章。",
+  "原中文只有南瓜书，而它明确依赖西瓜书，不能单独当主资源；改用李宏毅中文课为主线，南瓜书补推导。",
+  "两边都在特征工程/半监督上 partial，未假报 complete。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.2.1.json@1af2c29a19"
+ ]
+}

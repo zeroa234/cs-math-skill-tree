@@ -196,7 +196,9 @@ def build(id_, skills):
         if s.get("tier") == "course":
             s["tier"] = "website"
     applied = rec.setdefault("applied_additions", [])
-    for p in sorted(glob.glob(os.path.join(REVIEW, "*-additions", id_ + ".json"))):
+    # Research additions first, the main agent's review corrections (main-additions) last.
+    found = glob.glob(os.path.join(REVIEW, "*-additions", id_ + ".json"))
+    for p in sorted(found, key=lambda q: (os.path.basename(os.path.dirname(q)) == "main-additions", q)):
         tag = os.path.relpath(p, RAW).replace("\\", "/")
         digest = hashlib.sha1(open(p, "rb").read()).hexdigest()[:10]
         done = [a for a in applied if a.split("@")[0] == tag]

@@ -1,0 +1,247 @@
+{
+ "id": "A.4.4",
+ "name": "多智能体强化学习",
+ "description": "多智能体交互的博弈模型、解概念（纳什均衡等）、多智能体强化学习的基础算法与挑战、多智能体深度强化学习。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Multi-Agent Reinforcement Learning: Foundations and Modern Approaches (Albrecht, Christianos, Schäfer; MIT Press 2024) — free PDF, slides, code",
+   "url": "https://marl-book.com/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch1 Introduction; Part 1: Ch2 RL, Ch3 Games: Models of Multi-Agent Interaction, Ch4 Solution Concepts for Games, Ch5 MARL in Games, Ch6 Foundational MARL Algorithms; Part 2: Ch7 Deep Learning, Ch8 Deep RL, Ch9 Multi-Agent Deep RL, Ch10 Multi-Agent Deep RL in Practice, Ch11 Multi-Agent Environments.",
+   "access": "Free PDF, lecture slides (PDF + LaTeX) and Python code; the print edition is sold by MIT Press.",
+   "publisher": "MIT Press (authors' site)",
+   "evidence": {
+    "url": "https://marl-book.com/",
+    "location": "Book contents and resources",
+    "finding": "The site offers the PDF and chapter slides; the TOC includes games/solution concepts, foundational MARL algorithms, deep MARL and practice."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《动手学强化学习》中文版 — 第20章 多智能体强化学习入门、第21章 进阶",
+   "url": "https://hrl.boyuai.com/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第20章：多智能体强化学习的问题建模、基本范式与 IPPO（含代码）；第21章：中心化训练分散执行（CTDE）、MADDPG（含代码）。前19章为单智能体强化学习基础。书中没有系统讲博弈论解概念（纳什均衡等），也没有 QMIX 类值分解。",
+   "access": "免费中文正文、notebook 与视频课；纸书另售。",
+   "publisher": "上海交通大学 张伟楠等 / 伯禹学习平台",
+   "evidence": {
+    "url": "https://hrl.boyuai.com/",
+    "location": "全书三篇结构与多智能体章节",
+    "finding": "首页写明基础/进阶/前沿三篇；前沿篇包含多智能体强化学习章节，正文与 notebook 免费。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "上海交通大学 张伟楠《强化学习》2024 课程：第14讲 多智能体强化学习 I（含课件 12-13-marl.pdf）",
+   "url": "https://www.bilibili.com/video/BV1Qopze2E1M",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "多智能体强化学习的中文课堂：MARL 背景、博弈论基础（Normal-form Game 正则形式/策略式博弈、Zero-sum Game 零和博弈、策略剖面与 best response、Nash Equilibrium 的严格/弱定义）、Independent Learning、Centralized Training & Decentralized Execution（COMA、MADDPG、QMIX 等）、对手建模、Multi-Agent 到 Many-Agent 的扩展；讲次说明对应《动手学强化学习》第20章。",
+   "access": "课程页 https://wnzhang.net/teaching/sjtu-rl-2024/index.html 与课件 PDF 免费；B 站有课堂录像；课件为中英混排（术语中英对照），视频讲解语言未逐条核对。",
+   "publisher": "上海交通大学 张伟楠（课程页 wnzhang.net）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://wnzhang.net/teaching/sjtu-rl-2024/slides/12-13-marl.pdf",
+    "location": "slides 第 19 页 Normal-form Game（正则形式博弈）、第 23 页 Zero-sum Game、第 32 页 Nash Equilibrium（“no agent would want to change his strategy…best response…strict/weak Nash equilibrium”）、第 46 页 Independent Learning in SG 与 CTDE（“COMA, MADDPG, QMIX etc.”）、对手建模与 Training Paradigms of MARL",
+    "finding": "课件正文确认同一份材料里既有博弈模型与纳什均衡的定义，也有 Independent Learning/CTDE/COMA/MADDPG/QMIX 与对手建模，能覆盖中文的三个缺口；B 站页面标注“内容对应《动手学强化学习》第20章”并给出课程页与课件地址。"
+   },
+   "added_by": "review/pi-additions/A.4.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "多智能体交互的博弈模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第20章 问题建模（只到 MARL 场景建模，无博弈模型）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "博弈论基础：Normal-form Game（正则/策略式博弈）、Zero-sum Game、策略剖面与收益",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch3 Games: Models of Multi-Agent Interaction",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有把交互建模成博弈（策略式/扩展式）的章节。；《动手学强化学习》第20章只做 MARL 场景建模，不讲博弈模型；r7-zh1 的讲次先用正则形式/零和博弈把多智能体交互写成博弈（参与者、策略、收益），补上中文的“博弈模型”。"
+  },
+  {
+   "topic": "解概念（纳什均衡等）",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Nash Equilibrium：best response、严格/弱纳什均衡的定义",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch4 Solution Concepts for Games（Nash equilibrium 等）",
+     "extent": "covered"
+    }
+   ],
+   "note": "同一份课件第 32 页给出纳什均衡的定义（无人愿意单方面改变策略）与 best response、strict/weak 的区分，正是“解概念”的核心；中文侧原本完全没有这部分。"
+  },
+  {
+   "topic": "多智能体强化学习的基础算法与挑战",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第20章 IPPO 与多智能体挑战（非平稳性等）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch5 MARL in Games: First Steps and Challenges；Ch6 Foundational MARL Algorithms",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "多智能体深度强化学习",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第21章 CTDE、MADDPG（含代码）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Independent Learning、CTDE（COMA/MADDPG/QMIX）、对手建模、Many-Agent 扩展",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch9 Multi-Agent Deep RL；Ch10 in Practice",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只讲 IPPO/MADDPG，缺 QMIX/VDN 等值分解与更完整的深度 MARL 谱系。；原来只有《动手学强化学习》第21章的 CTDE 与 MADDPG，r7-zh1 把 Independent Learning、CTDE 下的多种深度 MARL 算法（COMA/MADDPG/QMIX）与对手建模串成课堂主线，再回到书里的代码，中文侧可完整覆盖“多智能体深度强化学习”。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先补前19章的单智能体基础，再读第20章 IPPO、第21章 CTDE/MADDPG 并跑代码。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "看第14讲并对照课件：先用正则形式把一个小型多智能体场景写成博弈并手算纳什均衡，再比较 Independent Learning 与 CTDE 的差别，最后按 COMA/MADDPG/QMIX 的思路改一遍《动手学强化学习》第21章代码。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Ch3–Ch6 for games, solution concepts and foundational algorithms, then Ch9–Ch10 for deep MARL; run the code for one cooperative and one competitive environment."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 hrl.boyuai.com 与全书结构",
+   "result": "采纳 zh1 第20–21章；确认有 MARL 入门/进阶，但无博弈解概念。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「多智能体强化学习 课程」",
+   "result": "有单次讲座与论文精读，无系统中文 MARL 课，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核到覆盖博弈解概念的中文 MARL 书，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://marl-book.com/",
+   "result": "采纳 en1；目录覆盖博弈模型、解概念、基础算法与深度 MARL。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "博弈论 纳什均衡 中国大学MOOC 课程 大纲 慕课 大学",
+   "result": "找到北京大学《博弈论》（国家级一流本科课程）、浙江大学《博弈论基础》等中文慕课；两门课页的课程大纲都在前端加载，未能读到纳什均衡的具体讲次，故未直接作为覆盖证据。",
+   "by": "review/pi-additions/A.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/PKU-1470430188 与 https://www.icourse163.org/course/zju-20001",
+   "result": "两页只渲染出课程概述与参考书（大纲区块为空），确认是中文博弈论慕课但无法核到讲次，仅作背景。",
+   "by": "review/pi-additions/A.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 多智能体强化学习 课程 MAPPO MADDPG 纳什均衡",
+   "result": "命中上海交大张伟楠强化学习课程第14讲（多智能体强化学习 I）、UCL 汪军《Multi-agent AI》中文字幕课、张海峰“从博弈论到多智能体强化学习”等；选张伟楠讲次（中文授课、附官方课件）作为主证据。",
+   "by": "review/pi-additions/A.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://wnzhang.net/teaching/sjtu-rl-2024/slides/12-13-marl.pdf",
+   "result": "课件正文确认 Normal-form Game、Zero-sum Game、Nash Equilibrium（strict/weak、best response）、Independent Learning、CTDE/COMA/MADDPG/QMIX、对手建模，据此判定三个中文缺口均可覆盖。",
+   "by": "review/pi-additions/A.4.4.json"
+  }
+ ],
+ "findings": [
+  "原英文 marl-book 是完整教材，博弈模型/解概念/基础算法/深度 MARL 都有，保留。",
+  "原中文《动手学强化学习》只被描述为第20–21章，核对后确实只有 IPPO/MADDPG，没有博弈模型与纳什均衡，中文 partial。",
+  "没有把英文教材的博弈论部分当作中文已覆盖。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.4.4.json@efd028b619"
+ ]
+}

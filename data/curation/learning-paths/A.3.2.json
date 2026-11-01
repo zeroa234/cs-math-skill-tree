@@ -1,0 +1,441 @@
+{
+ "id": "A.3.2",
+ "name": "图像处理与计算机视觉",
+ "description": "滤波、变换、重建、识别、检测、分割、三维理解与视觉评估。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "First Principles of Computer Vision (Shree Nayar, Columbia) — free lecture series and monographs",
+   "url": "https://fpcv.cs.columbia.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Imaging (pinhole/lens/DOF, sensors, color/HDR), binary images, image processing I–II (convolution, Fourier and convolution theorem, frequency filtering, deconvolution, sampling/aliasing), features (gradients/Laplacian/Canny, corners, active contours, Hough, SIFT), image stitching (homography, RANSAC, warping/blending), face detection, reconstruction I (radiometry, BRDF, photometric stereo, shape from shading, depth from defocus, structured light/ToF), reconstruction II (calibration, epipolar geometry, stereo), optical flow, SfM, tracking, segmentation (k-means, mean-shift, graph cuts), appearance matching/PCA, neural networks.",
+   "access": "Free topic videos and monographs on the course site; the site states it is designed for students with no prior CV knowledge.",
+   "publisher": "Columbia University (Shree Nayar)",
+   "evidence": {
+    "url": "https://fpcv.cs.columbia.edu/",
+    "location": "Topic list and lecture pages",
+    "finding": "The site organizes free lectures by topic (imaging, image processing I–II, features, stitching, reconstruction I–II, motion, segmentation) and links monographs."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《数字图像处理》（DIP）中文课程视频，63 讲",
+   "url": "https://www.bilibili.com/video/BV1tx41147Tx/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文讲授数字图像处理：图像存储格式、几何变换、图像增强、频域变换与滤波、复原等；覆盖滤波、变换与部分复原，不含识别/检测/分割/三维理解。",
+   "access": "第三方转载，授权未核。B站免费播放，63 个分P；上传者「深度大脑」为个人账号，课程来源与主讲人未在页面标明，未核对字幕。",
+   "publisher": "B站 UP 主「深度大脑」",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1tx41147Tx/",
+    "location": "分P列表：第1章概述/存储格式/MATLAB基础，第3章几何变换",
+    "finding": "视频接口返回 63 个分P，标题显示数字图像处理概述、图像存储格式、几何变换、图像增强与频域处理等。"
+   },
+   "reupload": true,
+   "official_search": "B 站 63 讲页面显示主讲人为温显斌、杨淑莹，二人为天津理工大学《数字图像处理》国家级一流本科课程团队（杨淑莹负责、温显斌与张桦授课）；在中国大学MOOC 检索“数字图像处理”只找到北京工业大学、武汉大学、郑州大学、北京交通大学、上海交大（医学影像）等版本，没有天津理工大学该课的免费课程页；天津理工大学课程资源平台未见公开录像。未能确认官方免费版，保留转载标记。",
+   "updated_by": [
+    "review/pi-additions/A.3.2.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "东北大学《计算机视觉》（中国大学MOOC，中文授课）",
+   "url": "https://www.icourse163.org/course/0807NEU047-1465996192",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "识别、检测、分割的中文系统课：图像预处理与特征提取（HOG、SIFT）、卷积神经网络基础（损失函数、正则化、梯度下降）、图像分类、目标检测、语义分割、场景理解与图像生成；授课目标明确写“掌握图像分类、目标检测、语义分割、场景理解和图像生成等的原理和经典算法”。",
+   "access": "中国大学MOOC 免费注册学习（认证证书另计）；中文；逐讲大纲在前端加载，未登录未核对到讲次标题。",
+   "publisher": "东北大学 / 中国大学MOOC",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/0807NEU047-1465996192",
+    "location": "“授课目标”第 3 条与“课程概述”正文：图像分类、目标检测、语义分割、场景理解和图像生成",
+    "finding": "正文把课程要讲的算法范围逐项列出（分类/检测/语义分割/场景理解/图像生成），可以据此把识别、检测、分割三项记到这门课名下。"
+   },
+   "added_by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "中国科学院大学《计算机视觉》课程讲义 第4章 基于图像的三维重建（胡占义，国科大春季研究生课）",
+   "url": "http://vision.ia.ac.cn/zh/teaching/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E8%AE%B2%E4%B9%89%E7%AC%AC%E5%9B%9B%E7%AB%A0.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "重建：三维重建原理与分层三维重建、5 点算法、稀疏三维重建（增量式与全局式 SfM、三角化、捆绑调整 BA）、稠密三维重建（多视图立体），以及从二维图像恢复三维场景的主体方法比较。",
+   "access": "中科院自动化所机器视觉课题组官网免费 PDF；中文；配套第1–4章与射影几何/摄像机模型附录。",
+   "publisher": "中国科学院大学 / 中科院自动化所模式识别国家重点实验室（胡占义）",
+   "reupload": false,
+   "evidence": {
+    "url": "http://vision.ia.ac.cn/zh/teaching/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E8%AE%B2%E4%B9%89%E7%AC%AC%E5%9B%9B%E7%AB%A0.pdf",
+    "location": "PDF 第 2 页摘要（分层三维重建、5 点算法、稀疏/稠密重建四部分）与 4.3.2 增量式稀疏重建正文（初始重建→三角化→捆绑调整 BA）",
+    "finding": "正文确实按摘要展开讲三角化、SfM 流程与 BA，并比较增量式/全局式方法，属于完整教学而非目录。"
+   },
+   "added_by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "key": "main-zh-games203",
+   "lang": "zh",
+   "title": "GAMES203：三维重建和理解（黄其兴，GAMES 官方 B 站，14 讲）",
+   "url": "https://www.bilibili.com/video/BV1pw411d7aS",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "L3 曲面重建、L4 运动恢复结构、L5 多视图立体；L7 点云处理、L9 三维深度学习、L10–12 几何深度学习（三维分类、分割、检测）、L13 混合三维表示。",
+   "access": "GAMES-Webinar 官方账号免费观看（平台标注自制），幻灯片英文；GAMES 是面向国内学生的中文在线平台，授课语言按平台课程判定为中文，本轮未逐讲听核；字幕未核对。",
+   "publisher": "GAMES 计算机图形学与混合现实在线平台；主讲黄其兴（UT Austin）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://tc.ccf.org.cn/tccad/tbtj/2022-02-22/755196.shtml",
+    "location": "CCF CAD&CG 专委“特别推荐-GAMES203”；B 站合集 14 个分 P 标题",
+    "finding": "推荐页写明课程讲三维重建（扫描、注册、曲面重建、SfM、多视图匹配）和三维理解（分类、分割、检测等任务）及各种三维表示；B 站分 P 标题 L1–L14 与此一致。"
+   },
+   "added_by": "review/main-additions/A.3.2.json"
+  },
+  {
+   "key": "main-zh-metrics",
+   "lang": "zh",
+   "title": "Ultralytics 中文文档：YOLO 性能指标（IoU、AP、mAP、精确率、召回率、F1）",
+   "url": "https://docs.ultralytics.com/zh/guides/yolo-performance-metrics/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "目标检测评估指标：交并比 IoU、平均精度 AP（精确率-召回率曲线下面积）、mAP、F1，以及如何解读这些指标、如何据此改进模型。",
+   "access": "厂商官方中文文档，免费，无需注册。",
+   "publisher": "Ultralytics",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.ultralytics.com/zh/guides/yolo-performance-metrics/",
+    "location": "“目标检测指标”一节",
+    "finding": "正文逐个定义 IoU、AP、mAP 并说明用途，有配套讲解视频。"
+   },
+   "added_by": "review/main-additions/A.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "滤波",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "图像增强/平滑与锐化（空域与频域滤波）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Image Processing I–II（卷积、线性/非线性滤波、频域滤波）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "变换",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "几何变换、频域变换（傅里叶）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Image Processing II：傅里叶变换/卷积定理/采样与混叠",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "重建",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "图像复原（去卷积）；无相机标定/双目/SfM",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第4章：分层三维重建、5 点算法、稀疏三维重建（SfM/三角化/BA）、稠密三维重建（MVS）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Reconstruction I（光度立体、离焦深度、结构光）；Reconstruction II（标定、极线、双目）；SfM",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到图像复原，三维重建不在课程内。；这是中文里少见的成体系重建讲义：从分层重建原理、本质矩阵/5 点算法，到稀疏与稠密重建的完整流程都有推导和比较，直接覆盖“重建”。；r7-zh3 提供与讲义配套的中文视频路径，从相机模型到极几何、双目、SfM 与 SLAM 逐集推进，适合作为 r7-zh2 讲义的看图辅助；两者合起来构成“重建”的中文学习材料（视频为转载，仅作备选）。"
+  },
+  {
+   "topic": "识别",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖（课程以图像处理为主）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "特征提取（HOG/SIFT）+ 卷积神经网络基础 + 图像分类",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Face detection；appearance matching and PCA；neural networks",
+     "extent": "covered"
+    }
+   ],
+   "note": "r7-zh1 从手工特征与浅层模型讲到 CNN，再落到图像分类的原理与经典算法，构成中文的“识别”教学主线；现有 DIP 课只讲图像处理，不涉及识别。"
+  },
+  {
+   "topic": "检测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "目标检测（原理与经典算法）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Features（Canny/Hough/SIFT）与 face detection；深度学习检测属 CS231n 交界",
+     "extent": "covered"
+    }
+   ],
+   "note": "课程授课目标明确包含目标检测，并把检测放在 CNN 基础之后讲，中文侧第一次有成课级的检测教学内容。"
+  },
+  {
+   "topic": "分割",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "语义分割（原理与经典算法）；另由现有 zh1 第七章阈值分割/轮廓提取补传统方法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Segmentation（k-means、mean-shift、图割）",
+     "extent": "covered"
+    }
+   ],
+   "note": "r7-zh1 讲语义分割的深度学习算法，现有 DIP 课讲阈值分割与轮廓提取的传统方法，两者互补，覆盖“分割”这一知识点。"
+  },
+  {
+   "topic": "三维理解与视觉评估",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第4章 基于图像的三维重建（相机位姿、分层重建、SfM/MVS）；评估指标部分仅有零散内容",
+     "extent": "partial"
+    },
+    {
+     "source": "main-zh-games203",
+     "section": "L7 点云处理、L9 三维深度学习、L10–12 几何深度学习（三维分类/分割/检测）",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-metrics",
+     "section": "目标检测指标：IoU、AP、mAP、精确率、召回率、F1",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Reconstruction I–II、SfM、optical flow；评估分散在检测/分割讲次",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：三维理解与视觉评估都由 FPCV 的几何/重建与检测分割讲次覆盖；中文都没有。；三维几何理解（从多视图恢复相机位姿与三维结构）由第4章覆盖，但“视觉评估”（mAP/IoU/PSNR-SSIM 等任务评估）在中文课程与讲义里都没有成体系讲次，故整项只能记 partial，见 unresolved。；三维理解由 GAMES203 的点云与三维深度学习讲次承担；视觉评估由 Ultralytics 中文文档讲 IoU/AP/mAP 承担，国科大讲义第 4 章补三维重建的几何基础。；评估指标部分。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按存储格式→几何变换→图像增强→频域滤波→复原的顺序学习，用 MATLAB/Python 实现均值/高斯滤波与傅里叶变换。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先看图像预处理与 HOG/SIFT 特征，再学 CNN 基础；随后按图像分类→目标检测→语义分割→场景理解顺序学，每个任务用一个小数据集复现一次经典模型并记录精度。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读第4章：先理解分层重建与射影/仿射/欧氏重建的区别，再按 4.3.2 的流程用两幅种子图像做三角化、逐步增量加图并做 BA，最后对比稠密重建（MVS）得到的点云与稀疏点云。"
+    },
+    {
+     "source": "main-zh-games203",
+     "read": "看 GAMES203 第 7、9–12 讲（点云处理与三维深度学习），对照第 3–5 讲理解重建结果如何成为三维理解的输入。"
+    },
+    {
+     "source": "main-zh-metrics",
+     "read": "读 Ultralytics 性能指标一章，用一个检测模型的输出亲手算一次 IoU 和 AP。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the site's topic order: imaging → image processing I–II → features → stitching → reconstruction I–II → motion → segmentation; implement Canny, SIFT matching, homography/RANSAC and a stereo depth map."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 FPCV 课程页",
+   "result": "采纳 en1；主题覆盖滤波/变换/重建/检测/分割/三维。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「计算机视觉 课程 完整 图像处理」「数字图像处理」",
+   "result": "采纳 63 讲 DIP 中文课；结果为图像处理/机器视觉实战，未有覆盖三维重建与视觉评估的中文课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "免费中文只到图像处理，三维/检测/分割缺口未找到可核价中文教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://fpcv.cs.columbia.edu/",
+   "result": "采纳 en1；页面列出成像、图像处理、特征、拼接、重建、光流、分割等主题。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "计算机视觉 课程 中文 慕课 图像分类 目标检测 图像分割 三维重建 视觉评估 讲义",
+   "result": "找到东北大学《计算机视觉》中国大学MOOC（分类/检测/语义分割/场景理解/图像生成）与国科大《计算机视觉》讲义（含第4章 三维重建），两者均打开正文核对后采纳。",
+   "by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "http://vision.ia.ac.cn/zh/teaching/ 与 第4章 PDF",
+   "result": "课题组页面说明讲义由胡占义撰写、面向国科大研究生；第4章 PDF 正文确认分层重建、5 点算法、SfM/BA、MVS，采纳为中文“重建”材料。",
+   "by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "三维重建 多视图几何 课程（站内页搜）",
+   "result": "站内页搜只出现 COLMAP 实操、双目点云演示与零散单集，不能据此断言无课；改用 site:bilibili.com 检索后找到北邮鲁鹏的 11 集课，已记为 r7-zh3。",
+   "by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 三维重建 课程 多视图几何 视觉 SLAM",
+   "result": "命中北邮鲁鹏《计算机视觉之三维重建》全 11 集（多个转载）与视觉 SLAM 教程等；打开 BV1gg4y1P7hN 核对分 P 后采纳为备选来源 r7-zh3。",
+   "by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV1tx41147Tx/（现有 zh1 的 63 讲 DIP）",
+   "result": "分P 标题显示主讲为温显斌、杨淑莹，第七章阈值分割与轮廓提取、第八章形态学、第十三章压缩编码，覆盖分割与传统图像处理；确认是天津理工大学课程团队的录像。",
+   "by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "数字图像处理 天津理工大学 中国大学MOOC 杨淑莹；数字图像处理 慕课 冈萨雷斯 63讲",
+   "result": "只找到百度百科“国家级一流本科课程（杨淑莹负责、温显斌/张桦授课）”与北京工业大学、武汉大学、郑州大学、北京交通大学、上海交大的同类慕课，没有天津理工大学免费课程页；据此给现有 zh1 写 official_search 并保留 reupload。",
+   "by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/learn/NEU-1465996192（东北大学《计算机视觉》学习页）",
+   "result": "页面只渲染出课程概述与授课目标，课程大纲前端加载；因此识别/检测/分割按授课目标的明确表述登记，未核对逐讲标题。",
+   "by": "review/pi-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com GAMES203 三维重建和理解",
+   "result": "找到 GAMES 官方合集，采纳。",
+   "by": "review/main-additions/A.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "目标检测 评价指标 mAP IoU 教程 中文",
+   "result": "Ultralytics 中文文档讲 IoU/AP/mAP，采纳；个人博客未采用。",
+   "by": "review/main-additions/A.3.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 FPCV 是完整的经典 CV 课程，滤波/变换/重建/检测/分割/三维都有，英文完整。",
+  "原中文只写《动手学深度学习》，那是深度学习，不是图像处理/经典 CV；本次换成 63 讲数字图像处理中文课，覆盖滤波与变换，但重建/识别/检测/分割/三维全缺，中文只能 partial。",
+  "没有把 FPCV 直接算作中文已覆盖。",
+  "[review/pi-additions/A.3.2.json] 未解决 zh「三维理解与视觉评估」：中文侧已找到成体系的三维重建讲义（国科大第4章，覆盖相机位姿、稀疏/稠密重建）与北邮鲁鹏 11 集三维重建视频（SfM/SLAM），但“三维理解”（深度估计/点云/三维场景）与视觉任务评估指标（mAP、IoU、PSNR/SSIM）仍无成体系中文讲次：东北大学 MOOC 的逐讲大纲前端加载、国科大讲义正文都没有评估章节，site:bilibili.com 检索也只得到单集与博客。按“只讲到一部分写 partial”的规则，这一项保留为部分覆盖。",
+  "[review/main-additions/A.3.2.json] 删除来源 r7-zh3：北邮鲁鹏《三维重建》B 站合集的上传账号已注销，标题是“B站强推…精品教程”式搬运，疑为付费课程盗传，不作为学习来源；“重建”仍由国科大讲义第 4 章覆盖。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.3.2.json@736f774f90",
+  "review/main-additions/A.3.2.json@a8b8c9d822"
+ ]
+}

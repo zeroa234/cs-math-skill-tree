@@ -1,0 +1,399 @@
+{
+ "id": "A.4.2",
+ "name": "可信AI、可解释性与公平性",
+ "description": "鲁棒性、校准、解释、公平、隐私和社会影响的测量与分析。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CIS 4270/5270 Trustworthy Machine Learning (UPenn, Spring 2026) — public schedule and slides",
+   "url": "https://cis5270.engineering.upenn.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Adversarial robustness, jailbreaking LLMs, robust training, formal robustness verification, label shift, covariate shift, conformal prediction, calibrated prediction, uncertainty quantification for LLMs, explainability (SHAP, counterfactual/concept-based, data attribution), RLHF/DPO, neurosymbolic learning.",
+   "access": "Public course site and per-lecture slides; the 2026 schedule has no separate fairness or privacy lecture.",
+   "publisher": "University of Pennsylvania",
+   "evidence": {
+    "url": "https://cis5270.engineering.upenn.edu/",
+    "location": "Course schedule",
+    "finding": "The schedule lists adversarial robustness, robust training, label/covariate shift, conformal prediction, calibrated prediction, explainability, RLHF/DPO and neurosymbolic lectures."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Stanford CS335 Fair, Accountable, and Transparent (FAT) Deep Learning — schedule",
+   "url": "http://web.stanford.edu/class/cs335/schedule.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Lectures 2–6 biases and fairness I–V (statistical/demographic parity, equal opportunity, counterfactual fairness, pre/in/post-processing, fair representation), Lectures 7–8 explainability I–II (LIME/SHAP/ICE), robustness I (adversarial attacks and defenses), privacy (differential privacy, federated learning). Supplies fairness, privacy and social-impact measurement missing from en1.",
+   "access": "Public schedule and slides; no videos.",
+   "publisher": "Stanford University",
+   "evidence": {
+    "url": "http://web.stanford.edu/class/cs335/schedule.html",
+    "location": "Schedule lectures 2–8 and privacy lecture",
+    "finding": "The schedule lists five fairness lectures, two explainability lectures, a robustness lecture and a privacy lecture."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "VALSE 2025 Tutorial 4：可信机器学习（B站，姚江超等）",
+   "url": "https://www.bilibili.com/video/BV12E4mzfEpb/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文讲座：从不均衡数据进入可信学习，并含同专题的噪声数据与对抗场景讲次；覆盖鲁棒性的一部分，不含校准、公平、隐私与社会影响的测量。",
+   "access": "VALSE_Webinar 官方账号发布，免费；讲座而非学期课，未核对字幕。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）",
+   "publisher": "VALSE（中国计算机学会计算机视觉专委会）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV12E4mzfEpb/",
+    "location": "标题与视频简介",
+    "finding": "B站页面标题为「【VALSE2025】0608 姚江超《Tutorial 4：可信机器学习》」，为官方账号发布的 tutorial 录像。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "浙江大学《人工智能伦理与安全》（中国大学MOOC，中文授课）",
+   "url": "https://www.icourse163.org/course/ZJU-1472843185",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文成课内容：人工智能伦理与安全概述、伦理原则、价值观、隐私保护、公平性、伦理道德、安全问题概述、对抗样本攻击与防御、数据投毒和后门攻击与防御、模型窃取攻击与防御；课程概述写明“全面且系统地呈现了人工智能伦理与安全的多维度问题”，并结合行业案例。",
+   "access": "中国大学MOOC 免费注册学习（认证证书另计）；中文；逐讲大纲前端加载，未登录未核对讲次标题。",
+   "publisher": "浙江大学 / 中国大学MOOC",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/ZJU-1472843185",
+    "location": "“课程概述”段落逐项列出讲授内容：伦理原则、价值观、隐私保护、公平性、伦理道德、安全问题概述、对抗样本攻击与防御、数据投毒和后门攻击与防御、模型窃取攻击与防御",
+    "finding": "正文把公平、隐私、对抗样本（鲁棒性）等列为主要讲授内容，不是只给课程名；据此把中文的公平、隐私与社会影响、鲁棒性补上。"
+   },
+   "added_by": "review/pi-additions/A.4.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《可解释机器学习公开课》（同济子豪兄，B 站 9 集，含课程主页与代码）",
+   "url": "https://www.bilibili.com/video/BV1Se4y1T7dG",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "解释：人工智能可解释性与显着性分析的导论、算法综述（CAM 等）、经典论文精读（LIME/SHAP 一类方法）、代码实战与前沿讲座；合集共 9 集，第一讲讲什么是可解释机器学习、为什么学、应用场景与研究思路。",
+   "access": "B 站免费播放（9 集合集）；中文；课程主页与代码在 GitHub（TommyZihao/zihao_course/XAI），UP 主本人账号发布。",
+   "publisher": "同济子豪兄（张子豪，同济大学）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1Se4y1T7dG",
+    "location": "页面简介与合集分 P：“可解释机器学习公开课，包含…导论、算法综述、经典论文精读、代码实战、前沿讲座”“第一讲：什么是可解释机器学习…”“CAM可解释性分析-算法讲解（01:01:06）”",
+    "finding": "分 P 与简介显示这是作者本人发布的成系列中文可解释性课程（含算法讲解与代码），可以补“解释”这一知识点。"
+   },
+   "added_by": "review/pi-additions/A.4.2.json"
+  },
+  {
+   "key": "main-zh-calib",
+   "lang": "zh",
+   "title": "scikit-learn 文档中文版：1.16 概率校准",
+   "url": "https://sklearn123.com/ThirdSection/1.16.Probability%20calibration/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "校准曲线（可靠性图）、各类分类器的典型偏差、Platt sigmoid 校准与保序回归、CalibratedClassifierCV 的交叉验证用法与注意事项，配示例图。",
+   "access": "社区翻译的 scikit-learn 0.22.1 官方文档中文版，免费；版本较旧，接口以英文官方文档为准。",
+   "publisher": "scikit-learn 官方文档的中文社区译本",
+   "reupload": false,
+   "evidence": {
+    "url": "https://sklearn123.com/ThirdSection/1.16.Probability%20calibration/",
+    "location": "1.16 概率校准全文",
+    "finding": "正文讲校准曲线与两种校准方法，并说明校准必须用训练集以外的数据。"
+   },
+   "added_by": "review/main-additions/A.4.2.json"
+  },
+  {
+   "key": "main-zh-calib-dnn",
+   "lang": "zh",
+   "title": "网易伏羲：深度神经网络的分类校准和回归校准",
+   "url": "https://fuxi.163.com/database/885",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "深度网络输出概率的过度自信问题、温度缩放与其他分类校准方法、回归校准。",
+   "access": "厂商技术文章，免费。",
+   "publisher": "网易伏羲",
+   "reupload": false,
+   "evidence": {
+    "url": "https://fuxi.163.com/database/885",
+    "location": "一、分类校准；二、回归校准",
+    "finding": "正文给出温度缩放公式与原理，并区分分类与回归校准。"
+   },
+   "added_by": "review/main-additions/A.4.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "鲁棒性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "不均衡数据、噪声数据、对抗场景三个讲次",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "人工智能对抗样本攻击与防御 + 安全问题概述",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Adversarial Robustness；Robust Training；Formal Verification；Label/Covariate Shift",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到不均衡/噪声/对抗的讲座级介绍，没有鲁棒训练与形式化验证。；VALSE 教程只覆盖不均衡/噪声/对抗三个方向且偏综述，r7-zh1 用“安全问题概述→对抗样本攻击与防御”的课程单元把对抗鲁棒性的攻防讲成一条线，中文侧的“鲁棒性”因此可以记为覆盖。"
+  },
+  {
+   "topic": "校准",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "未覆盖（VALSE 教程只讲不均衡/噪声/对抗；浙大伦理安全课无校准讲次）",
+     "extent": "partial"
+    },
+    {
+     "source": "main-zh-calib",
+     "section": "1.16 概率校准：校准曲线、Platt 缩放、保序回归",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-calib-dnn",
+     "section": "分类校准（温度缩放）与回归校准",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Calibrated Prediction；Conformal Prediction；UQ for LLMs",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只有零散博客讲温度缩放与可靠性图，没有成体系的课程单元；故这一项按 partial 记，见 unresolved。；经典分类器的校准由 scikit-learn 中文文档讲，深度网络的温度缩放由伏羲文章补充。；深度网络部分。"
+  },
+  {
+   "topic": "解释",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖 SHAP/LIME/反事实",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "可解释机器学习公开课：导论、显着性与 CAM 算法讲解、LIME/SHAP 一类方法论文精读与代码实战（9 集）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Explainability（SHAP、counterfactual/concept-based、data attribution）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Explainability I–II（LIME/SHAP/ICE）",
+     "extent": "covered"
+    }
+   ],
+   "note": "现有 VALSE 教程没有 SHAP/LIME/反事实，r7-zh2 是中文里少见的成系列可解释性课程，从概念、经典方法到代码实战都有分集，覆盖“解释”。"
+  },
+  {
+   "topic": "公平",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "人工智能公平性 + 伦理原则/价值观",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Biases and Fairness I–V（parity、equal opportunity、counterfactual fairness、预处理/后处理）",
+     "extent": "covered"
+    }
+   ],
+   "note": "r7-zh1 把公平性作为独立讲授内容，并与伦理原则、价值观放在一起讨论，补上中文侧原本缺失的公平性教学。"
+  },
+  {
+   "topic": "隐私和社会影响的测量与分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "人工智能隐私保护 + 伦理原则/伦理道德 + 行业案例讨论",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Privacy（差分隐私、联邦学习）；社会影响在公平讲次讨论",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：隐私与社会影响的测量以 CS335 的隐私/公平讲次为主，英文完整。；课程把隐私保护单列，并用伦理原则、伦理道德与案例讨论社会影响，覆盖“隐私和社会影响的测量与分析”的中文教学；测量细节（如差分隐私预算）需配合英文材料，但知识点本身有课可依。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "看 Tutorial 4 的不均衡/噪声/对抗三部分，建立可信学习的三种失效场景。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按“伦理与安全概述→伦理原则/价值观→隐私保护→公平性→对抗样本攻击与防御”顺序学，每个主题配一个案例：为一份带敏感属性的数据做一次公平性检查，对一个图像分类器做一次 FGSM 攻击与对抗训练防御。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "看导论与 CAM 算法讲解，再跟 LIME/SHAP 的论文精读与代码实战，对同一个模型分别做显着性图、局部代理解释与特征归因，比较三种解释是否一致。"
+    },
+    {
+     "source": "main-zh-calib",
+     "read": "读概率校准一章，用一个分类器画校准曲线，再分别用 sigmoid 与保序回归校准并比较。"
+    },
+    {
+     "source": "main-zh-calib-dnn",
+     "read": "读温度缩放部分，在验证集上拟合温度参数，比较校准前后的置信度分布。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the CIS 4270 schedule for robustness, distribution shift, conformal/calibration, explainability and RLHF."
+    },
+    {
+     "source": "en2",
+     "read": "Read the CS335 fairness I–V, explainability I–II, robustness and privacy lectures to cover the fairness/privacy/social-impact half."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「可信人工智能 公平性 可解释 课程」，并打开 VALSE 2025 Tutorial 4",
+   "result": "采纳 VALSE tutorial 为中文补充；其余为 10 分钟科普或伦理讨论，无系统课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "CIS 4270 / CS335 课表",
+   "result": "英文两门课合起来覆盖鲁棒/校准/解释/公平/隐私。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核到覆盖公平/隐私测量的中文教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cis5270.engineering.upenn.edu/；CS335 schedule",
+   "result": "采纳 en1 为主、en2 补公平/隐私/解释。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可信人工智能 课程 中文 鲁棒性 校准 可解释 公平 隐私 慕课 讲义 大学",
+   "result": "没有直接命中可信 AI 慕课；但命中浙江大学《人工智能伦理与安全》课程页线索与知乎《可信人工智能》长文（非课程，未采纳）。",
+   "by": "review/pi-additions/A.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/ZJU-1472843185",
+   "result": "正文确认课程讲授伦理原则、隐私保护、公平性、对抗样本攻防、数据投毒与模型窃取，采纳为中文主线（公平/隐私/鲁棒性）。",
+   "by": "review/pi-additions/A.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 可信机器学习 校准 可解释 公平 课程",
+   "result": "命中《可解释机器学习公开课》（同济子豪兄，9 集）、李宏毅 Explainable ML 中文合辑与 LIME 论文精读；没有命中中文的“校准”课程。",
+   "by": "review/pi-additions/A.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV1Se4y1T7dG",
+   "result": "页面与分 P 确认是作者本人发布的 9 集可解释性课程（导论、CAM 算法、论文精读、代码实战），采纳为“解释”的中文材料。",
+   "by": "review/pi-additions/A.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可解释人工智能 课程 中文 SHAP LIME 反事实 归因 慕课 讲义",
+   "result": "返回的多是 CSDN/博客园/ShowMeAI 单篇文章与 DataCamp 教程，均不是课程；另确认 B 站有李宏毅 Explainable ML 合辑，作为备选。",
+   "by": "review/pi-additions/A.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "模型校准 calibration 温度缩放 可靠性图 ECE 课程 讲义 中文",
+   "result": "scikit-learn 中译文档与伏羲文章有实际讲解，采纳；个人博客未用。",
+   "by": "review/main-additions/A.4.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 CIS 4270 覆盖鲁棒/校准/解释/对齐，但 2026 春课表确实没有公平与隐私专讲；必须用 CS335 补，英文才完整。",
+  "原中文 VALSE tutorial 只是讲座，覆盖不均衡/噪声/对抗，校准、解释、公平、隐私、社会影响全缺，中文 partial。",
+  "没有把英文两门课算作中文已覆盖。",
+  "[review/pi-additions/A.4.2.json] 未解决 zh「校准」：本轮查了中文慕课（中国大学MOOC 检索只得到浙大伦理安全课，不含校准）、site:bilibili.com 的“可信机器学习 校准 可解释 公平”检索（只有可解释性与公平内容，没有校准讲次）、以及“可解释人工智能 课程”检索（只有单篇博客）；中文成体系的校准（温度缩放、可靠性图、conformal prediction）教学没有找到，按 partial 记入未解决。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.4.2.json@c5e4b93ce1",
+  "review/main-additions/A.4.2.json@90266ef291"
+ ]
+}

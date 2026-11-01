@@ -1,0 +1,413 @@
+{
+ "id": "A.3.4",
+ "name": "推荐系统",
+ "description": "召回/排序、协同过滤、上下文、反馈偏差、多目标与在线实验。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CSE 158/258 Web Mining and Recommender Systems (Julian McAuley, UC San Diego)",
+   "url": "https://cseweb.ucsd.edu/classes/fa26/cse258-001/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Course schedule: supervised learning (regression, classification) → recommender systems (collaborative filtering, matrix factorization, PML ch.4–5) → temporal/sequence models (ch.7) → text mining (ch.8) → content and structure in recommender systems (ch.6); assignments/projects require ranking and evaluation. Slides, notebooks, datasets public; the PML draft is free.",
+   "access": "Public slides, notebooks, datasets and released YouTube recordings; Fall 2026 is in progress. Feedback bias, multi-objective ranking and online A/B testing are not course units.",
+   "publisher": "UC San Diego (Julian McAuley)",
+   "evidence": {
+    "url": "https://cseweb.ucsd.edu/classes/fa26/cse258-001/",
+    "location": "Course schedule and materials list",
+    "finding": "The schedule lists matrix factorization/collaborative filtering, content-based recommendation, sequence models and text mining, with linked slides and notebooks."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《动手学深度学习》中文版 — 推荐系统章",
+   "url": "https://zh-v2.d2l.ai/chapter_recommender-systems/index.html",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "中文推荐系统章：召回率/命中率等排序评估、矩阵分解、AutoRec、NeuralCF、序列感知推荐、因子分解机、深度因子分解机、神经协同过滤与特征丰富模型；以 MovieLens 数据实操。",
+   "access": "免费在线阅读与 notebook。",
+   "publisher": "d2l.ai 中文版",
+   "evidence": {
+    "url": "https://zh-v2.d2l.ai/chapter_recommender-systems/index.html",
+    "location": "第16章目录",
+    "finding": "章目录列出推荐系统概述、矩阵分解、AutoRec、NeuralCF、序列感知推荐、FM/DeepFM、神经协同过滤等节。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "Datawhale《fun-rec》推荐系统入门教程（开源中文）",
+   "url": "https://github.com/datawhalechina/fun-rec",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "开源中文教程（在线阅读版）：协同过滤、向量召回、序列召回、特征交叉、多目标建模（3.4.1 基础结构演进、3.4.2 任务依赖建模含 ESMM/ESM2 与样本选择偏差、3.4.3 多目标损失融合）、多场景建模、重排多样性、生成式推荐与生产级系统（10.3 离线流水线、10.4 在线流程）。",
+   "access": "免费在线阅读（datawhalechina.github.io/fun-rec）与 GitHub 源码，无注册；中文。",
+   "publisher": "Datawhale 社区",
+   "evidence": {
+    "url": "https://github.com/datawhalechina/fun-rec",
+    "location": "README 目录与在线阅读地址",
+    "finding": "README 写明这是推荐系统入门教程，在线阅读在 datawhalechina.github.io/fun-rec，目录含召回、排序、特征工程与实战。"
+   },
+   "updated_by": [
+    "review/pi-additions/A.3.4.json"
+   ]
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Recommender Systems: Evaluation and Metrics (University of Minnesota, Michael Ekstrand; Coursera)",
+   "url": "https://www.coursera.org/learn/recommender-metrics",
+   "tier": "website",
+   "free": false,
+   "role": "supplement",
+   "covers": "Online experiments and evaluation design: Module 2 Basic Prediction and Recommendation Metrics; Module 3 Beyond Basic Evaluation（Additional Item and List-Based Metrics、Experimental Protocols、Unary Data Evaluation、Temporal Evaluation）; Module 4 Online Evaluation（Introduction to Online Evaluation and User Studies、Usage Logs and Analysis、A/B Studies (Field Experiments)、User-Centered Evaluation）; Module 5 Evaluation Design.",
+   "access": "Coursera 需注册；可旁听（audit）部分材料，证书与作业需付费，具体价格未核对（页面显示 Join for Free）。英文授课。",
+   "publisher": "University of Minnesota / Coursera（instructor: Michael D. Ekstrand）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.coursera.org/learn/recommender-metrics",
+    "location": "课程页 Modules 列表：Module 3 的 Experimental Protocols（13 分钟）、Module 4 Online Evaluation 的 Introduction to Online Evaluation and User Studies（18 分钟）、Usage Logs and Analysis（11 分钟）、A/B Studies (Field Experiments)（11 分钟）、Module 5 Evaluation Design",
+    "finding": "页面逐模块列出视频标题与时长，确认在线实验（A/B 现场实验、日志分析）与评估设计是正式课程单元，不是课程介绍页的一句概述。"
+   },
+   "added_by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Stanford CS 330: Deep Multi-Task and Meta Learning (Fall 2023) — lectures and assignments",
+   "url": "https://cs330.stanford.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "多目标的建模基础（多任务学习）：多个任务共享结构、任务间关系与迁移、多任务模型的设计与训练；课程说明写明讲 multiple tasks 的设定、如何利用任务结构更高效地学习，并配四次作业与课程项目。",
+   "access": "课程站点公开 syllabus 与讲义/作业（免费）；讲座在 Canvas/Panopto 录制，是否公开可播未逐条核对；英文。",
+   "publisher": "Stanford University（Chelsea Finn）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://cs330.stanford.edu/",
+    "location": "Description 段落：“This course will cover the setting where there are multiple tasks to be solved, and study how the structure arising from multiple tasks can be leveraged to learn more efficiently”；Format 段落列出录制讲座与作业",
+    "finding": "课程描述明确以多任务学习为主线（共享结构、知识迁移），这正是推荐系统“多目标建模”所用的建模范式；据此补英文的多目标侧教学。"
+   },
+   "added_by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "key": "r7-en3",
+   "lang": "en",
+   "title": "Personalized Machine Learning (Julian McAuley) — free draft PDF, Ch5.2 Implicit Feedback and Ranking Models / 5.2.1 Instance Re-weighting, Ch10 The Consequences of Personalized Machine Learning",
+   "url": "https://cseweb.ucsd.edu/~jmcauley/pml/pml_book.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "反馈偏差：5.2 隐式反馈与排序模型、5.2.1 实例重加权（处理只观测到正反馈造成的样本偏差）、5.4 推荐系统评估；第10章 个性化的后果：10.1 多样性度量、10.2 信息茧房/多样性与极端化（反馈回路的后果）、10.6.3 校准、10.7 公平性、10.8 推荐中的性别偏差案例。",
+   "access": "作者在课程网站免费提供 draft PDF（与 CSE258 教材配套）；英文；无需注册。",
+   "publisher": "Julian McAuley / UC San Diego（Cambridge University Press 出版，draft 免费）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://cseweb.ucsd.edu/~jmcauley/pml/pml_book.pdf",
+    "location": "目录：5.2 Implicit Feedback and Ranking Models、5.2.1 Instance Re-weighting Schemes；10 The Consequences of Personalized Machine Learning、10.1 Measuring Diversity、10.2 Filter Bubbles, Diversity, and Extremification、10.6.3 Calibration、10.7 Fairness、10.8 Case Studies on Gender Bias in Recommendation",
+    "finding": "目录与正文确认教材把“隐式反馈带来的样本偏差如何处理”和“反馈回路/信息茧房/公平性”分别成节，能支撑“反馈偏差”这一知识点。"
+   },
+   "added_by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "key": "main-zh-wss",
+   "lang": "zh",
+   "title": "王树森《工业界的推荐系统》公开课（作者本人 B 站/YouTube，配讲义与幻灯片）",
+   "url": "https://github.com/wangshusen/RecommenderSystem",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "概要 03 AB 测试（分层实验、同层互斥不同层正交、Holdout、推全与反转实验）；排序 01 多目标排序模型、02 MMoE、03 预估分数融合；另有召回、交叉结构、用户行为序列、多样性、冷启动各讲。",
+   "access": "作者课程仓库免费提供讲义 PDF、幻灯片和每讲的 B 站与 YouTube 链接；B 站账号 ShusenWang 标注自制；中文授课，字幕未核对。",
+   "publisher": "王树森（作者本人账号与 GitHub 仓库）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1J44y1o7gf",
+    "location": "仓库 README“概要/AB测试”“排序/多目标排序模型、MMoE、预估分数融合”；B 站《概要03：推荐系统的AB测试》",
+    "finding": "README 每讲列出 slides、YouTube、B站链接；AB 测试一讲简介写明分层实验、Holdout、推全、反转实验，上传者 ShusenWang 标注自制。"
+   },
+   "added_by": "review/main-additions/A.3.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "召回/排序",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "推荐系统概述中的召回率/命中率；矩阵分解与 NeuralCF 排序模型",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "召回与排序章节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Collaborative filtering/matrix factorization；ranking evaluation in assignments",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "协同过滤",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "矩阵分解、NeuralCF、神经协同过滤",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Recommender systems — collaborative filtering and matrix factorization",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "上下文",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "序列感知推荐、特征丰富模型",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Content and structure in recommender systems；sequence-aware models",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "反馈偏差",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "未系统覆盖（只提冷启动/数据稀疏）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "3.4.2 任务依赖建模：样本选择偏差（CVR 模型在点击样本上训练却在全量样本上预测）+ ESMM/ESM2 全空间建模",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "不在课程讲次内",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en3",
+     "section": "Ch5.2 Implicit Feedback and Ranking Models、5.2.1 Instance Re-weighting Schemes；Ch10.2 Filter Bubbles, Diversity, and Extremification；10.6.3 Calibration",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有曝光/位置偏差、倾向得分等反馈偏差专题。；fun-rec 3.4.2 明确把“曝光→点击→转化”链路带来的样本选择偏差作为问题提出，并给出 ESMM/ESM2 用全空间建模消除偏差的做法，属于推荐系统语境下对反馈偏差的教学；原先记的“未系统覆盖”可以更新。；PML 用 5.2.1 讲“只观测到正反馈”如何造成偏差以及实例重加权的处理，用第10章讲反馈回路造成的信息茧房、多样性与校准问题；CSE258 原课不讲这些，故由同一作者的免费教材补齐。"
+  },
+  {
+   "topic": "多目标与在线实验",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "未覆盖多目标排序与 A/B 实验",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "3.4.1 基础结构演进（Shared-Bottom、多任务共享表示）、3.4.3 多目标损失融合",
+     "extent": "partial"
+    },
+    {
+     "source": "main-zh-wss",
+     "section": "排序 01 多目标排序模型、02 MMoE、03 预估分数融合；概要 03 AB 测试",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "未覆盖多目标与在线 A/B",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Module 4 Online Evaluation（A/B Studies: Field Experiments、Usage Logs and Analysis、User Studies）+ Module 3 Experimental Protocols + Module 5 Evaluation Design",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en2",
+     "section": "CS330 multi-task learning：多任务共享结构、任务关系与知识迁移",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都只有离线评估；多目标与在线实验缺课。；多目标侧已有系统章节（共享底层到多任务塔、任务依赖、损失融合），但在线实验（A/B 分流、实验设计、显着性）在 fun-rec 里只有 10.4 在线推理流程，没有实验方法；中文侧只找到 Udacity A/B 课程的中文字幕转载，故这一项只能记 partial。；Coursera 这门评估课把在线实验作为独立模块：实验设计、日志分析、A/B 现场实验与以用户为中心的评估各有视频单元，补上 CSE258 没有的在线实验部分。；推荐系统的多目标排序本质上是多任务学习（MMoE/PLE 一类共享底层结构），CS330 系统讲多任务学习的建模与训练，作为“多目标”的英文算法基础与 Coursera 的在线实验合起来覆盖这个合并知识点（CS330 本身不是推荐系统课，见 explanation 的限定）。；多目标由三讲排序课讲模型结构与分数融合，在线实验由 AB 测试一讲讲分层实验与 Holdout；fun-rec 3.4 作文字补充。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读推荐系统章并跑 MovieLens 的矩阵分解/NeuralCF notebook，理解召回率/命中率。"
+    },
+    {
+     "source": "zh2",
+     "read": "按 fun-rec 的召回→排序→特征工程顺序做新闻推荐项目。"
+    },
+    {
+     "source": "main-zh-wss",
+     "read": "看排序 01–03 讲（多目标、MMoE、分数融合）和概要 03（AB 测试），对照讲义写出一个多目标排序的打分公式和一次分层实验的设计。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the CSE158/258 schedule through matrix factorization and content-based recommendation, and do a ranking evaluation assignment."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Take Modules 3–5: design an offline protocol (Experimental Protocols), then run a small A/B field experiment with usage logs and write up the evaluation design; compare offline metric choices with the online outcome."
+    },
+    {
+     "source": "r7-en2",
+     "read": "Read the multi-task learning lectures and implement a shared-trunk multi-task model on two related prediction tasks, then explain how task relationships map onto conflicting recommendation objectives."
+    },
+    {
+     "source": "r7-en3",
+     "read": "Read Ch5.2/5.2.1 on implicit feedback and instance re-weighting, then Ch10.1–10.2 and 10.6.3 on diversity, filter bubbles and calibration; write down how a deployed recommender's own feedback creates the bias you then have to correct."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "d2l 中文推荐系统章；Datawhale fun-rec README",
+   "result": "采纳 zh1/zh2；覆盖召回/排序/协同过滤/上下文，缺反馈偏差与在线实验。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「推荐系统 课程 完整」",
+   "result": "多为框架实战与单算法讲解，未找到覆盖偏差/多目标的中文课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "中文开源教程已覆盖主干，偏差/多目标未核到教材章节，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cseweb.ucsd.edu/classes/fa26/cse258-001/",
+   "result": "采纳 en1；课表覆盖 CF/矩阵分解/内容与序列，无偏差与在线实验。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://datawhalechina.github.io/fun-rec/ 与 chapter_2_ranking/4.multi_objective/1.arch.html、2.dependency_modeling.html",
+   "result": "正文确认 3.4 多目标建模（Shared-Bottom/多任务塔、ESMM/ESM2 与样本选择偏差、损失融合），据此把“反馈偏差”“多目标”记到 zh2 名下。",
+   "by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://datawhalechina.github.io/fun-rec/chapter_10_projects/4.online_pipeline.html",
+   "result": "10.4 在线流程讲的是冷启动检测、多路召回、排序与重排的在线推理，没有 A/B 实验内容，故“在线实验”在中文侧仍缺。",
+   "by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "推荐系统 课程 中文 多目标排序 在线 A/B 实验 偏差 工业界 讲义 大学",
+   "result": "返回知乎/博客/快手实践等单篇材料与中国大学MOOC 平台首页；单篇博客不能充当课程层证据，未采纳。",
+   "by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "推荐系统 慕课 课程 协同过滤 评估 在线实验 中国大学MOOC 学堂在线 大学",
+   "result": "只返回中国大学MOOC/学堂在线平台介绍页与国家智慧教育平台入口，没有推荐系统课程页，说明这两个平台暂无可用中文推荐系统 MOOC。",
+   "by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 推荐系统 A/B测试 在线实验 课程",
+   "result": "命中 BV1Wr4y1j7gz「2022年ab-test最强学习课程」，打开页面发现是 Udacity A/B Testing（ud257）的中文字幕转载，非中文授课、也非推荐系统课程；另有零散推荐系统章节视频，均不足以作为中文在线实验教学，故不登记为来源。",
+   "by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.coursera.org/learn/recommender-metrics",
+   "result": "页面模块列表确认 Module 4 Online Evaluation 含 A/B Studies (Field Experiments)、Module 3 Experimental Protocols、Module 5 Evaluation Design，采纳为英文在线实验来源。",
+   "by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://cs330.stanford.edu/ 与 https://cseweb.ucsd.edu/~jmcauley/pml/pml_book.pdf",
+   "result": "CS330 课程说明确认以多任务学习为主线；PML 目录确认 5.2.1 实例重加权与第10章信息茧房/校准/公平性，据此补英文的多目标与反馈偏差。",
+   "by": "review/pi-additions/A.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "王树森 推荐系统 AB测试 多目标排序模型 公开课",
+   "result": "找到作者本人课程与仓库，采纳；B 站“强推”搬运版不采用。",
+   "by": "review/main-additions/A.3.4.json"
+  }
+ ],
+ "findings": [
+  "原英文 CSE258 覆盖召回/排序、协同过滤与上下文，保留；反馈偏差、多目标、在线实验确实没有课程单元。",
+  "原中文只写《动手学深度学习》，推荐系统只是其中一章；核对后该章覆盖召回/排序/CF/上下文，但仍缺反馈偏差与在线实验，补 Datawhale fun-rec 后仍 partial。",
+  "两边都在反馈偏差与在线实验上缺，未互相冒充。",
+  "[review/pi-additions/A.3.4.json] 未解决 zh「多目标与在线实验」：多目标部分已由 fun-rec 3.4 覆盖，但在线实验（A/B 分流、实验设计、显着性）没有中文课程：中国大学MOOC/学堂在线无推荐系统课；site:bilibili.com 只找到 Udacity A/B Testing 的中文字幕转载（英文授课）与零散章节视频；fun-rec 的“在线流程”是推理服务而非实验方法。故保留 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/A.3.4.json@c8dade1d65",
+  "review/main-additions/A.3.4.json@12fe5b3ced"
+ ]
+}

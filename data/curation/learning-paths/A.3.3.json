@@ -1,0 +1,287 @@
+{
+ "id": "A.3.3",
+ "name": "语音与音频智能",
+ "description": "语音识别、合成、声学建模、音频表征与语音交互。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Hugging Face Audio Course (official, 8 units)",
+   "url": "https://huggingface.co/learn/audio-course/chapter0/introduction",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Unit 1 audio data and representations (sampling, waveforms, spectrograms, data preparation/splitting), Unit 2 audio tasks overview (classification, ASR, TTS, translation), Unit 3 Transformer architectures for audio (Wav2Vec2, Whisper, CTC), Unit 4 music genre classification, Unit 5 ASR (transcription, WER, Whisper fine-tuning), Unit 6 TTS (SpeechT5, vocoders), Unit 7 speech-to-speech translation project, Unit 8 conclusion.",
+   "access": "Free official course with runnable notebooks; Hugging Face account may be needed for model upload but not for reading.",
+   "publisher": "Hugging Face",
+   "evidence": {
+    "url": "https://huggingface.co/learn/audio-course/chapter0/introduction",
+    "location": "Course table of contents, units 1–8",
+    "finding": "The course index lists units on audio data, audio tasks, Transformers for audio, music classification, ASR, TTS and speech-to-speech translation."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Hugging Face 音频课程（官方中文版）",
+   "url": "https://huggingface.co/learn/audio-course/zh-CN/chapter0/introduction",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "与英文版同构的中文正文：音频数据与表征、音频分类、ASR（含 WER 与 Whisper 微调）、TTS、语音翻译项目；使用开源模型完成实践。",
+   "access": "免费在线阅读；需要时可注册 Hugging Face 账号上传/下载模型。",
+   "publisher": "Hugging Face",
+   "evidence": {
+    "url": "https://huggingface.co/learn/audio-course/zh-CN/chapter0/introduction",
+    "location": "中文课程导言与章节目录",
+    "finding": "中文页与英文版单元一一对应，列出音频数据、音频任务、音频 Transformer、ASR、TTS 与语音翻译。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "李宏毅《深度学习与人类语言处理》2020（语音识别、语音合成、语音分离）",
+   "url": "https://www.bilibili.com/video/BV1hZ4y1w7j1/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "中文授课 16 讲：Speech Recognition 1–7（Overview、LAS、CTC/RNN-T、HMM 可选、对齐、语言模型）、Voice Conversion（特征解耦）、Speech Synthesis、Speech Separation。补声学建模（CTC/RNN-T/HMM）与合成的理论讲次。",
+   "access": "第三方转载，授权未核。B站搬运自李宏毅 YouTube 课程（简介给出原链接），免费；上传者非作者本人，未核对字幕。",
+   "publisher": "李宏毅（台大）主讲；B站 UP 主「ai_ai360」搬运",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1hZ4y1w7j1/",
+    "location": "分P列表 1–16",
+    "finding": "视频接口返回 16 个分P，包括 Speech Recognition 1–7、Voice Conversion、Speech Synthesis 等，简介注明转自李宏毅 2020 春课程。"
+   },
+   "reupload": true,
+   "official_search": "查到作者官方课程页 https://speech.ee.ntu.edu.tw/~hylee/dlhlp/2020-spring.php（DLHLP 2020 Spring），逐讲附 slide 与 video（YouTube）链接，且 slides 托管在 speech.ee.ntu.edu.tw 官方域名；B 站 BV1hZ4y1w7j1 为第三方转载。官方版已作为新来源 r7-zh1 登记并把覆盖改记在它名下，zh2 保留 reupload:true 作备选。",
+   "updated_by": [
+    "review/pi-additions/A.3.3.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "李宏毅《Deep Learning for Human Language Processing》2020 Spring（台湾大学官方课程页，中文授课，slide + video 全公开）",
+   "url": "https://speech.ee.ntu.edu.tw/~hylee/dlhlp/2020-spring.php",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文语音与语言处理成课内容：Speech Recognition 1–6（ASR/ASR2/ASR3 slides：LAS/CTC/RNA/RNN-T 等 seq2seq 声学模型与对齐问题、语言模型融合）、Speech Separation 1–2、Speech Synthesis 1–2（TTS slide）、Speaker Verification、Voice Conversion、NLP tasks/BERT、Chatbot 与 DSTQA 等对话相关讲次，并配 HW1–HW4。",
+   "access": "台大课程页免费公开每讲 slide 与 video 链接；中文授课（李宏毅）；无注册要求。",
+   "publisher": "台湾大学 / 李宏毅（Hung-yi Lee）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://speech.ee.ntu.edu.tw/~tlkagk/courses/DLHLP20/ASR2%20(v6).pdf",
+    "location": "ASR2 slide 第 2 页正文：“LAS：就是 seq2seq”“CTC：decoder 是 linear classifier 的 seq2seq”“RNA…”“RNN-T：输入一个东西可以输出多个东西的 seq2seq”；课程页目录列出 Speech Recognition 1–6、Speech Separation、Speech Synthesis、Speaker Verification、Voice Conversion",
+    "finding": "slide 正文用中文逐项对比 LAS/CTC/RNA/RNN-T 的结构，确认声学建模在官方版里真的讲；课程页本身给出 slide/video 链接与作业，说明这是官方免费版而非转载。"
+   },
+   "added_by": "review/pi-additions/A.3.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "语音识别",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "ASR 单元（转写、WER、Whisper 微调）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "Speech Recognition 1–7",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Speech Recognition 1–6（ASR / ASR2 / ASR3 slides）+ HW1 Speech Recognition",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Unit 5 Automatic Speech Recognition",
+     "extent": "covered"
+    }
+   ],
+   "note": "官方课程页的 Speech Recognition 单元用六讲从 seq2seq 角度讲语音识别，并配 HW1；把原来记在 B 站转载下的覆盖改记到官方版，避免用转载充当证据。"
+  },
+  {
+   "topic": "合成",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "TTS 单元（SpeechT5、声码器）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "Speech Synthesis 讲次",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Speech Synthesis 1–2（TTS slide）+ Voice Conversion",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Unit 6 Text-to-Speech",
+     "extent": "covered"
+    }
+   ],
+   "note": "官方版有专门的语音合成两讲（TTS）与语音转换讲次，覆盖声码器/端到端 TTS 的思路；中文合成教学因此记在官方课程名下。"
+  },
+  {
+   "topic": "声学建模",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "CTC/RNN-T/LAS、HMM 与对齐、语言模型",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "ASR2 slide：LAS / CTC / RNA / RNN-T 的结构对比与对齐问题",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Unit 3 Transformer architectures（Wav2Vec2、Whisper、CTC）",
+     "extent": "covered"
+    }
+   ],
+   "note": "ASR2 slide 正文用中文逐个说明 LAS 是 seq2seq、CTC 的 decoder 是线性分类器、RNN-T 输入一个可输出多个，正好是声学建模的核心模型族与对齐机制；覆盖改记官方版。"
+  },
+  {
+   "topic": "音频表征与语音交互",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "音频数据与表征、语音翻译项目",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Speech Separation 1–2、Speaker Verification、Chatbot 与 DSTQA 讲次",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Unit 1 audio representations；Unit 7 speech-to-speech translation",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：表征由 Unit 1 覆盖，语音交互只在 Unit 7 项目中体现，按原 granularity 不单列课时。；语音分离与说话人确认两讲处理音频表征与说话人信息，Chatbot/DSTQA 讲次处理对话式交互；与现有 HF 中文课的音频表征单元互补，覆盖记在官方版名下。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "从音频数据与频谱图开始，依次做音频分类、Whisper 转写与微调、TTS，最后完成语音到语音翻译项目。"
+    },
+    {
+     "source": "zh2",
+     "read": "看 Speech Recognition 1–7 与 Speech Synthesis，补 CTC/RNN-T/HMM 的声学建模推导。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按课程页顺序看：先看 Speech Recognition 1–6（对照 ASR2 slide 手推 LAS/CTC/RNN-T 的损失与对齐），做 HW1；再看 Speech Separation、Speech Synthesis、Speaker Verification、Voice Conversion 各讲，最后看 Chatbot/DSTQA 理解语音交互的下游任务。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Do Units 1–8 in order, running the notebooks for audio classification, Whisper fine-tuning and TTS; use Unit 7 as the end-to-end project."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 Hugging Face 音频课程中文版",
+   "result": "采纳 zh1；确认与英文版同构，覆盖 ASR/TTS/表征。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「语音识别 课程 完整」",
+   "result": "采纳李宏毅 DLHLP 2020（16 讲）补声学建模；其余为短课或工具演示。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "中文课程 + 官方教程已完整覆盖，不需要付费。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://huggingface.co/learn/audio-course/chapter0/introduction",
+   "result": "采纳 en1；8 个单元覆盖音频表征、ASR、TTS 与语音翻译。"
+  },
+  {
+   "lang": "zh/en",
+   "result": "原审核两条语言路线均无真实缺口；本轮不重复添加来源、不修改合理主课。",
+   "query_or_url": "核对原节点及 bilingual-coverage/A.3.3.json 的 expected_topics、topics 和 routes",
+   "by": "review/ai-additions/A.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://speech.ee.ntu.edu.tw/~hylee/index.php（找课程链接）→ /~hylee/dlhlp/2020-spring.php",
+   "result": "作者主页列出 DLHLP 2020 课程页；课程页确认逐讲 slide/video、Speech Recognition 1–6、Speech Separation、Speech Synthesis、Speaker Verification 等，采纳为官方中文版。",
+   "by": "review/pi-additions/A.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://speech.ee.ntu.edu.tw/~tlkagk/courses/DLHLP20/ASR2 (v6).pdf",
+   "result": "打开 slide 正文确认 LAS/CTC/RNA/RNN-T 的中文讲解，据此把“声学建模”的覆盖从转载改记到官方版。",
+   "by": "review/pi-additions/A.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV1hZ4y1w7j1/（现有 zh2）",
+   "result": "仅用于核对转载身份；官方页已找到，故 zh2 降为 alternative 并写 official_search。",
+   "by": "review/pi-additions/A.3.3.json"
+  }
+ ],
+ "findings": [
+  "原英文 HF Audio Course 8 单元完整，保留。",
+  "原中文条目只有 HF 音频课程中文版，本次核对确认它是官方同构翻译，覆盖 ASR/TTS/表征；再补李宏毅中文语音课，声学建模（CTC/RNN-T/HMM）也有中文讲授，因此中文可 complete。",
+  "「语音交互」只在 Unit 7 项目，按原 granularity 不当作独立课时。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/ai-additions/A.3.3.json@b22de3e744",
+  "review/pi-additions/A.3.3.json@e0f10c9120"
+ ]
+}
