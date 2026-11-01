@@ -25,6 +25,7 @@ def read(path):
 
 def main():
     data = read('output/skilltree.json')
+    curation = read('data/curation/learning-resources.json')
     notes = read('data/curation/source-review-notes.json')
     snapshot = read(f'data/research/source-audit-{DATE}.json')
     http = {x['url']: x for x in snapshot['results']}
@@ -121,21 +122,25 @@ def main():
     en = collections.Counter(x['enVerdict'] for x in rows)
     zh = collections.Counter(x['zhVerdict'] for x in rows)
     unresolved = [x for x in snapshot['results'] if x.get('status') != 200]
-    unconfirmed = [x for x in unresolved if web.get(x['url'], {}).get('result') != 'readable']
+    unconfirmed = [x for x in unresolved if web.get(x['url'], {}).get('result') != 'readable'
+                   and browser.get(x['url'], {}).get('status') != 200]
+    zh_count = sum(bool(x.get('zhAlt')) for x in skills.values())
+    zh_sources = len({x['zhAlt']['url'] for x in skills.values() if x.get('zhAlt')})
     http200 = sum(x.get('status') == 200 for x in snapshot['results'])
     report = [
         '# 技能节点资源来源与适用性复核（2026-11-01）', '',
-        f"范围：全部201个技能，201个英文入口、166个中文映射（94个来源）、201份导览（{len(source_catalog)}个独立主/补来源）。",
+        f"范围：全部201个技能，201个英文入口、{zh_count}个中文映射（{zh_sources}个不同URL；目录保留{len(curation['chineseCatalog'])}个新旧条目）、201份导览（{len(source_catalog)}个独立主/补来源）。",
         f"基线：`{notes['baseline']}`；日期时区：Asia/Kuala_Lumpur。", '',
         '## 结论', '',
         '来源大多能核对到大学课程、作者/出版社、官方项目或原作者社区资料；主要问题是覆盖范围、起点难度、材料形态和年代。适用性按节点当前简介和入门层判断，不把返回200、名校名称或目录标题命中当作完整适用证明。', '',
         '| 适用性 | 英文节点 | 中文节点 |', '|---|---:|---:|',
         *[f"| {label} | {en[k]} | {zh[k]} |" for k, label in LABELS.items()], '',
-        f"全清单共{len(http)}个不同URL（包括导览目录、锚点入口和先修证据），最新直接HTTP检查{http200}个200、{len(unresolved)}个未成功；后者中2个可通过网页读取服务核实正文，另{len(unconfirmed)}个当前访问仍未确认。没有观察到404/410。可访问性仅代表此次检查环境。", '',
+        f"全清单共{len(http)}个不同URL（包括导览目录、锚点入口和先修证据），各URL最近一次直接HTTP检查{http200}个200、{len(unresolved)}个未成功；后者中{len(unresolved)-len(unconfirmed)}个可通过浏览器或网页读取核实正文，另{len(unconfirmed)}个当前访问仍未确认。没有观察到404/410。可访问性仅代表此次检查环境；本轮增补只重测变化的学习入口，其余保留同日全量检查的时间戳。", '',
         f"导览标题按项目已有正文缓存重核：{total['exact']}条精确、{total['fuzzy']}条近似、0条缺失，结构校验无问题。仍有{sum(len(x['guide']['gaps']) for x in records)}个知识点没有单独对应章节，其中也含交叉领域定位和树外先修。这是历史文本与当前结构的核对，不是所有当前PDF正文的重新抽取。", '',
         '重点：M.1.4.2不能用Jacobian行列式代替一般矩阵；M.6.4需另学排队论；F.1.2的6.046入口偏难；P.2.1官方停止维护；H.2.2断言仿真不等于形式证明；H.4.4和S.4.4不能仅靠综述或知识库完成整个技能。', '',
         '## 本次实际修正', '',
         *['- ' + x for x in notes['changes']], '',
+        '中文增补逐项范围、视频发布者和付费候选取舍见[chinese-resources-expansion-2026-11-01.md](chinese-resources-expansion-2026-11-01.md)。资源选用顺序为免费正文、免费权威视频、付费课程或书籍；视频中文优先B站、英文优先YouTube。', '',
         '没有因局部DNS、限流或超时删除真实来源。原始研究记录、原图及先修依赖均保留。', '',
         '## 尚需处理的访问问题', '',
         '| 来源 | 本机结果 | 对节点的影响与复核 |', '|---|---|---|',
