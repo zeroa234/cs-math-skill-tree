@@ -233,8 +233,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/C.1.2.json。"
     },
     "C.1.3": {
-      "review": "Dive into Systems有ARM与x86汇编及调用约定，ARM异常级EL0–EL3没有专章。",
-      "note": "多体系结构入门教材；学习 ARM 时选择对应章节，不把 x86 示例直接当作 ARM。"
+      "title": "Dive into Systems（Matthews, Newhall, Webb；免费在线教材）",
+      "url": "https://diveintosystems.org/book/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "第 5 章指令集与处理器执行；第 7–9 章分别用 64 位 x86、32 位 x86、ARMv8 (AArch64) 讲汇编、条件/循环、函数调用与栈帧（sp/x29、参数传递）、递归、数组/结构体与缓冲区溢出；第 10 章比较多种汇编与 CISC/RISC。",
+      "access": "免费在线教材，无需注册；英文正文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.1.3.json。"
     },
     "C.2.4": {
       "title": "Operating Systems: Three Easy Pieces（OSTEP，免费在线教材）",
@@ -248,8 +255,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/C.2.4.json。"
     },
     "C.4.2": {
-      "review": "Cornell5412涵盖云平台、弹性、虚拟化和函数服务，需已有系统与网络基础。",
-      "note": "固定 2022 版课程适合概念与系统设计；云服务操作按当前官方文档执行。"
+      "title": "Cornell CS5412 Topics in Cloud Computing（Fall 2022，逐讲 syllabus + 录像）",
+      "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "云经济性与规模成本、数据中心硬件与容错、分片与数据放置、hypervisor 虚拟化（Xen）与容器、托管微服务与弹性池、函数服务器（serverless）、云上复制与一致性、IoT/边缘接入。",
+      "access": "课程主页免费公开逐讲 syllabus、阅读与课堂录像链接；英文，字幕未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.4.2.json。"
     },
     "D.1.3": {
       "title": "CS186 Database Systems — online notes: NoSQL, Distributed Transactions, Consensus, Parallel Query (UC Berkeley)",
@@ -1031,7 +1045,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/C.1.1.json。"
     },
     "C.1.4": {
-      "review": "Stanford149的GPU、并行模型和专用硬件单元适合主干，需C/C++及体系结构。"
+      "title": "Stanford CS149 Parallel Computing (Fall 2025, Fatahalian & Olukotun)",
+      "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "多核/SIMD/多线程并行形式、latency 与 bandwidth、GPU 架构与 CUDA、数据并行与调度、DNN 在 GPU 上的执行、硬件专用化与 DNN 加速器设计、面向专用硬件的编程系统、数据中心级 AI 服务、cache 与内存一致性。",
+      "access": "课程主页与讲义免费公开；英文授课，录像/字幕状态未逐一核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.1.4.json。"
     },
     "C.2.1": {
       "title": "Operating Systems: Three Easy Pieces（Arpaci-Dusseau，免费在线教材）",
@@ -1045,37 +1067,125 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/C.2.1.json。"
     },
     "C.2.2": {
-      "review": "UW333适合C/C++系统编程，原子内存序、语言内存模型和竞态检测需专门材料。"
+      "title": "CSE 333 Systems Programming（University of Washington, Autumn 2025）",
+      "url": "https://courses.cs.washington.edu/courses/cse333/25au/schedule.html",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "C 内存与指针、动态内存、链接与 OS 服务、shell/进程、socket 客户端/服务器、并发入门、线程（pthreads/C++ threads）、进程、OS 组件、性能剖析；作业实现 shell、HTTP 服务器等。",
+      "access": "课程日程、讲义 PDF 与代码免费公开；英文授课，视频/字幕未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.2.2.json。"
     },
     "C.2.3": {
-      "review": "iximiuz是作者实践路线，容器隔离资源控制清晰；虚拟机原理须配系统课程，部分实验可能另收费。"
+      "title": "Learning Containers From The Bottom Up（Ivan Velichko）",
+      "url": "https://iximiuz.com/en/posts/container-learning-path/",
+      "tier": "material",
+      "lang": "en",
+      "free": true,
+      "covers": "容器是被 namespace 隔离、被 cgroups/capabilities/seccomp 限制的进程；fork/exec 与 namespace/cgroup 配置、runc 与 OCI bundle、镜像构建与分发、containerd、Kubernetes Pod、Kata 等用真虚拟机实现的容器。",
+      "access": "博客长文免费；配套文章/实验分散在站点，部分实验需自备 Linux。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.2.3.json。"
     },
     "C.3.1": {
-      "review": "6.02按bits/signals/packets组织，适合数字通信主干，需基础微积分和信号知识。"
+      "title": "MIT 6.02 Introduction to EECS II: Digital Communication Systems（MIT OpenCourseWare, Fall 2012）",
+      "url": "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "按 bits / signals / packets 三层：信源编码与压缩、信道编码与差错控制、采样与频域、调制与噪声、链路共享与可靠传输；含讲义、视频、开放教材与习题。",
+      "access": "MIT OCW 免费公开，无需注册；英文授课，字幕未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.3.1.json。"
     },
     "C.3.2": {
-      "review": "Stanford144公开讲义和TCP实验对应协议传输，DNS与应用层需选读网络教材。"
+      "title": "Computer Networks: A Systems Approach（Peterson & Davie，第 6 版，免费在线书）",
+      "url": "https://book.systemsapproach.org/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "第 2 章直连链路、第 3 章网络互联（IP/路由）、第 5 章端到端协议（TCP/UDP）、第 6 章拥塞控制、第 7 章端到端数据、第 9 章应用（DNS/HTTP 等）。",
+      "access": "免费在线全文，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.3.2.json。"
     },
     "C.3.3": {
-      "review": "CMU无线课程覆盖物理/MAC、蜂窝、Wi-Fi与移动性，研究生阅读部分按能力选读。"
+      "title": "CMU 18-452 / 18-750 Wireless Networks and Applications（Spring 2024）",
+      "url": "https://www.cs.cmu.edu/~prs/wirelessS24/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "无线网络挑战、无线通信/物理层概览、无线 MAC（CSMA/TDMA/FDMA/CDMA）、蜂窝与 LTE/5G、WiFi 与蓝牙、TCP over wireless 与移动性、传感网/RFID/定位/频谱共享。",
+      "access": "课程主页公开描述、handouts 与阅读清单；英文，视频/字幕未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.3.3.json。"
     },
     "C.3.4": {
-      "review": "Systems Approach开放书直接讲控制/数据平面、交换机和网络虚拟化，适合作SDN主线。"
+      "title": "Software-Defined Networks: A Systems Approach（Peterson, Cascone, O'Connor, Vachuska, Davie；免费在线书）",
+      "url": "https://sdn.systemsapproach.org/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "Introduction、Use Cases、Basic Architecture（控制/数据平面与控制器接口）、Bare-Metal Switches 与 Switch OS（可编程解析/匹配动作）、Network OS 与 Leaf-Spine Fabric（配置与自动化）、Network Virtualization、Access Networks、Future of SDN，附 Hands-on Programming。",
+      "access": "免费在线全文，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.3.4.json。"
     },
     "C.4.1": {
-      "review": "MIT6.5840是研究生论文与实验课，D2入门需配概念教材，不能把实验排错等同系统讲授分布式调试。"
+      "title": "MIT 6.5840 (6.824) Distributed Systems（课程主页、讲义、论文清单、lab）",
+      "url": "http://nil.csail.mit.edu/6.5840/2025/schedule.html",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "以 fault tolerance、replication、consistency 为主线：一致性/线性化、主备复制、Raft 共识、分布式事务、分片 KV；5 个 lab 与往年试题。",
+      "access": "课程主页免费公开日程、论文清单与 lab；英文，视频/字幕未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.4.1.json。"
     },
     "C.4.3": {
-      "review": "6.852的形式模型、共识与下界符合D3；线性化与可用性要配6.5840相应阅读。"
+      "title": "MIT 6.852J / 18.437J Distributed Algorithms（MIT OpenCourseWare, Nancy Lynch）",
+      "url": "https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "同步/异步网络与共享内存模型、故障模型、互斥与资源分配、leader election、生成树、consensus 与 Byzantine agreement、原子广播与事务、下界与通信复杂度证明；完整讲义、阅读、习题与考试。",
+      "access": "MIT OCW 免费公开完整讲义、作业与考试；英文，视频/字幕未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.4.3.json。"
     },
     "C.5.1": {
-      "review": "CMU418课程覆盖线程、GPU和并行优化，MPI等分布式内存细节配导览教材。"
+      "title": "CMU 15-418/618 Parallel Computer Architecture and Programming（Fall 2026）",
+      "url": "https://www.cs.cmu.edu/~418/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "并行编程模型与基础、GPU 架构与 CUDA、性能优化、互连、cache 一致性、同步实现、细粒度同步/lock-free、异构并行、内存一致性；4 次作业与期末项目。",
+      "access": "课程主页与 schedule/讲义链接免费公开；英文，视频未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.5.1.json。"
     },
     "C.5.2": {
-      "review": "CS149的CUDA和局部性单元匹配GPU优化，算子融合与工具使用需补当前CUDA文档。"
+      "title": "Stanford CS149 Parallel Computing（Fall 2025）",
+      "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "GPU 架构与 CUDA 编程、访存与局部性、细粒度同步、DNN 在 GPU 上的执行、roofline/带宽分析；作业 3 CUDA 渲染器、作业 4 fused Conv+MaxPool、作业 5 最快 CUDA kernel。",
+      "access": "课程主页与讲义/作业免费公开；英文，视频/字幕未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.5.2.json。"
     },
     "C.5.3": {
-      "review": "UW公开讲义适合Python/Fortran、OpenMP/MPI数值实践，年代较早，能耗与现代性能工具需补充。"
+      "title": "High Performance Scientific Computing（Randall J. LeVeque, UW AMath 483/583，免费讲义）",
+      "url": "https://faculty.washington.edu/rjl/uwhpsc-coursera/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Python/numpy、Fortran 90/95、编译与调试、性能与计时、OpenMP 与 MPI 并行、BLAS/线性代数软件、Poisson 问题的数值方法与迭代求解、随机数；含代码与作业。",
+      "access": "Sphinx 讲义与代码免费公开；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/C.5.3.json。"
     },
     "D.1.1": {
       "review": "BCcampus教材覆盖ER、规范化与SQL；关系代数的形式运算宜配导览CMU讲义。"
@@ -4287,6 +4397,146 @@
       "covers": "泊松／马尔可夫过程、Kendall 记号、M/M/1、多服务台与损失系统、Little 定律、电话网性能与 Python 仿真。",
       "access": "B 站免费观看，中文授课；字幕未核对。UP 主 yishuaichen 自述为该课程录像；北交大官网可核对同名教师陈一帅及其讲授这门课，但尚未取得学校官网到该 B 站账号的直接连结。连结从 M/M/1 一讲进入，按合集顺序学习。",
       "role": "primary"
+    },
+    "path-c-1-3": {
+      "title": "电子科技大学《嵌入式系统及应用》（中国大学MOOC，国家级一流课程）",
+      "url": "https://www.icourse163.org/course/UESTC-1206862805",
+      "tier": "website",
+      "lang": "zh",
+      "free": null,
+      "covers": "以 ARM 处理器编程模型为主线（寄存器、工作模式、指令与 Keil4 实验），再讲 uC/OS-II 的任务管理、同步通信、中断、时间与内存管理；可建立 ARM 指令集、异常/中断与底层汇编的实践基础。",
+      "access": "课程页公开概述与参考书；视频需注册中国大学MOOC并选课，按学期开放，认证证书收费。课程页未列逐章大纲，异常级细节未核实。",
+      "role": "primary"
+    },
+    "path-c-1-4": {
+      "title": "《智能计算系统》（陈云霁等，中科院计算所智能处理器研究中心；国科大课程大纲 + B 站官方公开课）",
+      "url": "https://jwba.ucas.ac.cn/sc/course/courseplan/197496",
+      "tier": "video",
+      "lang": "zh",
+      "free": true,
+      "covers": "第一章概述（驱动范例）→ 第二章神经网络基础 → 第三章深度学习 → 第四/五章编程框架（计算图机制、本地单设备/本地多设备/分布式执行、计算图分配与优化含算子融合）→ 第六章深度学习处理器原理（6.1 概述、6.2 目标算法分析：数据局部性、数据与计算的关系即带宽需求、6.3 DLP 结构：指令集/流水线/运算部件/访存部件/算法映射、6.4 优化设计：标量 MAC 运算部件/稀疏化/低位宽、6.5 性能评价：TOPS 与访存带宽、6.6 加速器对比：DLP/FPGA/GPU）→ 第七章深度学习处理器架构（7.1 单核 DLP 控制/运算/存储模块、7.2 多核 DLP：外部存储控制器、外设通信、片上互联、GBC 全局栅障同步与四个 DLP-C、7.3 并行内积运算器/矩阵运算子单元实验）→ 第八章智能编程语言 → 第九章综合实验。",
+      "access": "国科大教务系统公开课程大纲（课程编码 B0912022Y，含逐章学时与章节实验）；视频在 B 站「智能计算系统AICS」账号（mid 494117284，大纲页“其它说明”里给出的在线公开课网站即该 B 站空间），免费播放、中文讲授；配套教材《智能计算系统》（机械工业出版社，需购买）。第 2 版另有《智能计算系统——从深度学习到大模型》第六章视频 BV17T421S73V。",
+      "role": "primary"
+    },
+    "path-c-2-2": {
+      "title": "《Linux 系统编程》（邢文鹏，传智播客讲义公开 PDF）",
+      "url": "http://home.ustc.edu.cn/~kd2512674094/tutorial/linux-sys.zh.pdf",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "文件 I/O 与系统调用、ext2 文件系统、进程（fork/exec）、进程间通信（pipe/FIFO/mmap/Unix domain socket）、信号、线程、socket 网络编程、select/poll/epoll、线程池并发服务器；共 20 章并有习题。",
+      "access": "USTC 学生主页公开 PDF，免费；2014 年讲义，示例以 Linux/x86 为主。",
+      "role": "primary"
+    },
+    "path-c-2-3": {
+      "title": "《Docker 从入门到实践》（yeasy，中文开源书）",
+      "url": "https://yeasy.gitbook.io/docker_practice",
+      "tier": "book",
+      "lang": "zh",
+      "free": true,
+      "covers": "入门（镜像/容器/仓库）、进阶（Dockerfile、数据管理、网络、Buildx、Compose）、深入（底层实现：namespace/cgroups 等；容器编排基础、部署 Kubernetes、Etcd、容器与云计算）、实战（安全、监控日志、DevOps）。",
+      "access": "GitBook 免费在线阅读，无需注册；示例命令需本地 Docker 环境。",
+      "role": "primary"
+    },
+    "path-c-3-1": {
+      "title": "西安电子科技大学《通信原理》（中国大学MOOC，国家级线上一流课程）",
+      "url": "https://www.icourse163.org/course/XDU-1449262162",
+      "tier": "website",
+      "lang": "zh",
+      "free": null,
+      "covers": "绪论、信道与噪声、模拟调制、数字基带传输、数字带通传输（数字调制）、数字信号最佳接收、信源编码（A/D 转换、PCM）、同步原理；另提供全书各章电子课件，差错控制编码在课件中自学。",
+      "access": "课程页公开概述、视频章节与教材对照表；视频需注册中国大学MOOC并选课，认证证书收费。差错控制编码与部分新型调制不在视频内，需看电子课件。",
+      "role": "primary"
+    },
+    "path-c-3-2": {
+      "title": "哈尔滨工业大学《计算机网络》（中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/HIT-154005",
+      "tier": "website",
+      "lang": "zh",
+      "free": null,
+      "covers": "三单元：网络体系结构/应用层协议与 Socket；可靠传输、停等与滑动窗口、UDP/TCP、虚电路与数据报、路由与转发、IP/CIDR/子网/路由聚集、ICMP/DHCP/NAT/IPv6、路由算法与路由协议、差错编码、MAC/ARP/以太网/VLAN/PPP/无线局域网；网络安全。",
+      "access": "课程页公开三单元内容与参考书；视频需注册中国大学MOOC并选课，按学期开放，认证证书收费。页面未明确列 DNS 与拥塞控制讲次。",
+      "role": "primary"
+    },
+    "path-c-3-3": {
+      "title": "武汉理工大学《无线传感网技术》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/WHUT-1207190801",
+      "tier": "website",
+      "lang": "zh",
+      "free": null,
+      "covers": "无线传感器硬件节点架构、无线传感网底层协议、能量管理与时间同步、定位、安全、编程；对应低功耗通信与设备网络。",
+      "access": "课程页公开概述与参考书；视频需注册选课，按学期开放，认证证书收费。",
+      "role": "primary"
+    },
+    "path-c-3-4": {
+      "title": "温州大学《软件定义网络技术 SDN》（中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/WZU-1205809832",
+      "tier": "website",
+      "lang": "zh",
+      "free": null,
+      "covers": "SDN 概述与基本原理、南向接口协议（OpenFlow）、数据平面、控制平面、北向接口、SDN 应用开发；实验含 Mininet、OpenFlow 协议分析、Open vSwitch、OpenFlow 交换机、数据平面编程、POX/RYU 控制器编程。",
+      "access": "课程页公开视频内容与实验清单；视频需注册中国大学MOOC并选课，按学期开放，认证证书收费。",
+      "role": "primary"
+    },
+    "path-c-4-1": {
+      "title": "《图解分布式系统原理》（codedump，中文在线书：第 2 章 系统模型、第 3 章 时间与顺序、第 4 章 复制、第 5 章 共识算法、第 7 章 事务）",
+      "url": "https://www.codedump.info/dist-system-cn/",
+      "tier": "book",
+      "lang": "zh",
+      "free": true,
+      "covers": "第 2 章 分布式系统模型：两将军问题、拜占庭将军问题、通信模型、故障模型、时间模型；第 3 章 分布式系统中的时间和顺序：状态/事件/快照、物理时钟（墙上时钟与单调时钟、物理时间同步、物理时钟的缺陷）、因果关系与事件先后顺序、全序与偏序、因果性与 happen-before、逻辑时钟（Lamport 时钟）；第 4 章 复制：节点失效、一致性模型（什么是一致性模型、一致性模型图例、顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）；第 5 章 共识算法；第 6 章 分区；第 7 章 事务：事务基础、多版本并发控制、分布式事务（两阶段提交、三阶段提交、Google Spanner、TCC 事务）。",
+      "access": "作者站点免费在线阅读（站点写明“免费阅读”），简体中文，逐章带图；无注册要求。",
+      "role": "primary"
+    },
+    "path-c-4-2": {
+      "title": "河海大学《云计算技术与应用》（中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/HHU-1001755117",
+      "tier": "website",
+      "lang": "zh",
+      "free": null,
+      "covers": "云计算概述、关键技术（虚拟化）、云服务体系（IaaS/PaaS/SaaS）、Google/Amazon/阿里云方案、OpenStack/Docker/Hadoop 开源平台及实验。",
+      "access": "课程页公开概述与授课目标；视频需注册选课，按学期开放，认证证书收费。",
+      "role": "primary"
+    },
+    "path-c-4-3": {
+      "title": "《图解分布式系统原理》（codedump，中文在线书：第 2 章 系统模型、第 4 章 复制与一致性模型、第 5 章 共识算法含 FLP 不可能定理）",
+      "url": "https://www.codedump.info/dist-system-cn/",
+      "tier": "book",
+      "lang": "zh",
+      "free": true,
+      "covers": "第 2 章 分布式系统模型：两将军问题、拜占庭将军问题、通信模型、故障模型（崩溃/遗漏/时序/拜占庭等故障类型与同步/异步时间模型）；第 4 章 复制：节点失效、一致性模型（顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）；第 5 章 共识算法：5.1 共识算法简介（共识与一致性的关系、脑裂、状态机复制、原子广播、配置变更）、5.2 FLP 不可能定理、5.3 Paxos（诞生、Basic Paxos 两轮 RPC、Multi Paxos 的“一次 Prepare 多次 Accept”降低消息量、活锁问题）。",
+      "access": "作者站点免费在线阅读（写明“免费阅读”），简体中文，逐章带图；无注册要求。",
+      "role": "primary"
+    },
+    "path-c-5-1": {
+      "title": "北京理工大学《并行编程原理与实践》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/BIT-1470418179",
+      "tier": "website",
+      "lang": "zh",
+      "free": null,
+      "covers": "并行计算机系统结构、并行程序设计关键问题、Pthreads 多线程、OpenMP、MPI 消息传递、CUDA 异构编程，以及共享/分布式/异构平台上的并行化与优化。",
+      "access": "课程页公开概述与参考书；视频需注册选课，按学期开放，认证证书收费。",
+      "role": "primary"
+    },
+    "path-c-5-2": {
+      "title": "【哈工大-苏统华】CUDA 并行程序设计（B 站 47 分 P 课程录像：Lec1 Hello CUDA、Lec2 GPU 硬件架构、Lec3 CUDA 软件抽象机制、Lec4 GPU 存储与优化、Lec5 CUDA 调试与分析、Lec6 规约与扫描算法）",
+      "url": "https://www.bilibili.com/video/BV15E411x7yT/",
+      "tier": "video",
+      "lang": "zh",
+      "free": true,
+      "covers": "中文 CUDA 成课录像：专题 1（什么是 GPU、GPU 硬件架构一瞥、Hello CUDA、阿姆达尔定律）、专题 2（GPU 硬件连接模型、Kepler/Fermi 架构）、专题 3（GPU 多线程原理；CUDA 抽象机制之并发线程模型、内存模型、同步机制及 Quiz；CUDA 函数/内核线程索引/设备占用率；线程束调度机制；开发工具与生态圈）、专题 4 GPU 存储与优化（含 CPU/GPU 存储结构）、专题 5 CUDA 调试与分析（Nsight 简介、vecadd/occupancy/branch/stride 样例工程、CUDA 调试实例）、规约与扫描算法。",
+      "access": "第三方转载，授权未核。B 站免费播放，中文讲授，共 47 个分 P（原为哈工大创新实验课，由苏统华老师主讲，视频 720p）；上传者为个人账号「候补生ELY」并自述“本人也在学习”，属搬运；简介另给百度云（视频+PPT）链接。是否有字幕未核对。",
+      "role": "primary"
+    },
+    "path-c-5-3": {
+      "title": "中国科学技术大学《并行计算》（陈国良，国家级精品资源共享课；B 站 29 分 P 课程录像）",
+      "url": "https://www.bilibili.com/video/BV1U7411N78e/",
+      "tier": "video",
+      "lang": "zh",
+      "free": true,
+      "covers": "29 讲完整课程：1–2 并行计算概述、3–4 并行计算机系统及结构模型、5–6 当代并行计算机系统介绍、7–8 并行计算性能评测、9–10 并行算法的设计基础、11 并行算法的一般设计策略、12–13 并行算法的基本设计技术、14 基本通信操作、15 并行算法的一般设计过程、16–18 稠密矩阵运算、19 线性方程组的求解、20 快速傅里叶变换、21–23 并行程序设计基础、24–26 共享存储系统并行编程、27–29 分布存储系统并行编程。主教材为陈国良《并行计算——结构·算法·编程》（高等教育出版社，ISBN 7-04-013307-5）。",
+      "access": "第三方转载，授权未核。B 站免费播放，中文讲授（国家级精品课录像）；上传者为个人账号「五味666」，标注“转载”，视频简介给出官方课程页并列出主教材；是否有字幕未核对。",
+      "role": "primary"
     }
   },
   "chinese": {
@@ -4475,8 +4725,8 @@
       "covers": "64 学时整门课：冯·诺依曼整机与各功能部件、定点/浮点数据表示、算术逻辑运算部件、存储器层次、指令系统与寻址方式、单周期/多周期/流水线数据通路及其控制（硬布线与微程序）、Logisim 虚拟仿真实验。"
     },
     "C.1.3": {
-      "source": "nju-pa",
-      "covers": "用 C 实现模拟器、理解指令执行、内存与输入输出；RISC-V 为主要实践方向，不代替完整 ARM 手册。"
+      "source": "path-c-1-3",
+      "covers": "以 ARM 处理器编程模型为主线（寄存器、工作模式、指令与 Keil4 实验），再讲 uC/OS-II 的任务管理、同步通信、中断、时间与内存管理；可建立 ARM 指令集、异常/中断与底层汇编的实践基础。"
     },
     "P.2.4": {
       "source": "path-p-2-4",
@@ -4515,8 +4765,8 @@
       "covers": "站点导航：体系结构样式（架构样式）、设计原则与最佳做法、云设计模式、参考架构与工作负载；体系结构样式页列出 N 层、Web-队列-工作角色、微服务、事件驱动、大数据、大计算等样式及各自适用场景与权衡。以 Azure 为案例，质量属性体现在 Well-Architected 框架的可靠性/安全性/成本/性能/运营等支柱；没有专门的 ADR/系统演化章节。"
     },
     "C.4.2": {
-      "source": "architecture",
-      "covers": "学习架构风格、设计模式、可靠性与云系统实例；以 Azure 为案例，不是完整的厂商无关教材。"
+      "source": "path-c-4-2",
+      "covers": "云计算概述、关键技术（虚拟化）、云服务体系（IaaS/PaaS/SaaS）、Google/Amazon/阿里云方案、OpenStack/Docker/Hadoop 开源平台及实验。"
     },
     "P.5.1": {
       "source": "path-p-5-1",
@@ -4535,28 +4785,28 @@
       "covers": "全书中文译本按虚拟化/并发/持久化三部分：进程与地址空间、CPU 调度、虚拟内存与分页/TLB/置换、线程与锁/条件变量/信号量、并发 bug、I/O 设备与磁盘、RAID、文件系统实现与日志/崩溃一致性。"
     },
     "C.2.2": {
-      "source": "os",
-      "covers": "按课程目录选择虚拟化、并发、进程、内存和持久化相关内容；有中文讲课录像与实验。"
+      "source": "path-c-2-2",
+      "covers": "文件 I/O 与系统调用、ext2 文件系统、进程（fork/exec）、进程间通信（pipe/FIFO/mmap/Unix domain socket）、信号、线程、socket 网络编程、select/poll/epoll、线程池并发服务器；共 20 章并有习题。"
     },
     "C.2.4": {
       "source": "path-c-2-4",
       "covers": "第 36–45、48–49 章：I/O 设备与驱动、硬盘/块设备、RAID、文件系统实现、缓存与缓冲、FSCK 与日志、LFS、Flash SSD、数据完整性、NFS/AFS 分布式文件系统接口与可靠性。"
     },
     "C.2.3": {
-      "source": "k8s",
-      "covers": "容器化应用的部署、扩缩容和资源管理；虚拟机原理仍需英文课程。"
+      "source": "path-c-2-3",
+      "covers": "入门（镜像/容器/仓库）、进阶（Dockerfile、数据管理、网络、Buildx、Compose）、深入（底层实现：namespace/cgroups 等；容器编排基础、部署 Kubernetes、Etcd、容器与云计算）、实战（安全、监控日志、DevOps）。"
     },
     "C.3.2": {
-      "source": "network",
-      "covers": "应用层、传输、路由与网络安全单元；无线与移动网络不由该课完整覆盖。"
+      "source": "path-c-3-2",
+      "covers": "三单元：网络体系结构/应用层协议与 Socket；可靠传输、停等与滑动窗口、UDP/TCP、虚电路与数据报、路由与转发、IP/CIDR/子网/路由聚集、ICMP/DHCP/NAT/IPv6、路由算法与路由协议、差错编码、MAC/ARP/以太网/VLAN/PPP/无线局域网；网络安全。"
     },
     "S.2.2": {
       "source": "path-s-2-2",
       "covers": "第二单元：子网划分与路由聚集、CIDR、VLAN、ARP、路由协议；第三单元：网络安全基本概念、安全威胁、密码学基础、完整性与数字签名、身份认证、安全电子邮件、SSL、IPsec 与 VPN、无线局域网安全、防火墙、入侵检测。"
     },
     "C.3.3": {
-      "source": "esp",
-      "covers": "按目录选择 FreeRTOS、外设驱动、GPIO/I2C/SPI、Wi-Fi/Bluetooth 与联网示例；以 ESP32 为实践平台。"
+      "source": "path-c-3-3",
+      "covers": "无线传感器硬件节点架构、无线传感网底层协议、能量管理与时间同步、定位、安全、编程；对应低功耗通信与设备网络。"
     },
     "H.3.1": {
       "source": "esp",
@@ -4575,12 +4825,12 @@
       "covers": "按目录选择 FreeRTOS、外设驱动、GPIO/I2C/SPI、Wi-Fi/Bluetooth 与联网示例；以 ESP32 为实践平台。"
     },
     "C.4.1": {
-      "source": "tidb",
-      "covers": "分布式 SQL、存储、事务与 Raft 的工程实例；一致性理论证明和通用数据库内核仍配合英文课程。"
+      "source": "path-c-4-1",
+      "covers": "第 2 章 分布式系统模型：两将军问题、拜占庭将军问题、通信模型、故障模型、时间模型；第 3 章 分布式系统中的时间和顺序：状态/事件/快照、物理时钟（墙上时钟与单调时钟、物理时间同步、物理时钟的缺陷）、因果关系与事件先后顺序、全序与偏序、因果性与 happen-before、逻辑时钟（Lamport 时钟）；第 4 章 复制：节点失效、一致性模型（什么是一致性模型、一致性模型图例、顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）；第 5 章 共识算法；第 6 章 分区；第 7 章 事务：事务基础、多版本并发控制、分布式事务（两阶段提交、三阶段提交、Google Spanner、TCC 事务）。"
     },
     "C.4.3": {
-      "source": "tidb",
-      "covers": "分布式 SQL、存储、事务与 Raft 的工程实例；一致性理论证明和通用数据库内核仍配合英文课程。"
+      "source": "path-c-4-3",
+      "covers": "第 2 章 分布式系统模型：两将军问题、拜占庭将军问题、通信模型、故障模型（崩溃/遗漏/时序/拜占庭等故障类型与同步/异步时间模型）；第 4 章 复制：节点失效、一致性模型（顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）；第 5 章 共识算法：5.1 共识算法简介（共识与一致性的关系、脑裂、状态机复制、原子广播、配置变更）、5.2 FLP 不可能定理、5.3 Paxos（诞生、Basic Paxos 两轮 RPC、Multi Paxos 的“一次 Prepare 多次 Accept”降低消息量、活锁问题）。"
     },
     "D.1.2": {
       "source": "tidb",
@@ -4595,20 +4845,20 @@
       "covers": "第3章 HDFS（3.5 冗余存储与数据读写）、第4章 HBase（4.3 数据模型、4.4 表与 Region、4.5 运行机制与 HLog）、第5章 NoSQL、第7章 MapReduce（工作流程与 Shuffle）、第9章 Hive 数据仓库、第10章 Spark、第11章 流计算与 Storm、第12章 Flink、第13章 图计算。覆盖采集后的分布式存储、批处理与仓库转换、流处理框架。"
     },
     "C.1.4": {
-      "source": "hpc",
-      "covers": "按课程目录选择计算机体系、并行计算、GPU 和性能分析；讲义为中文，工具文档可能为英文。"
+      "source": "path-c-1-4",
+      "covers": "第一章概述（驱动范例）→ 第二章神经网络基础 → 第三章深度学习 → 第四/五章编程框架（计算图机制、本地单设备/本地多设备/分布式执行、计算图分配与优化含算子融合）→ 第六章深度学习处理器原理（6.1 概述、6.2 目标算法分析：数据局部性、数据与计算的关系即带宽需求、6.3 DLP 结构：指令集/流水线/运算部件/访存部件/算法映射、6.4 优化设计：标量 MAC 运算部件/稀疏化/低位宽、6.5 性能评价：TOPS 与访存带宽、6.6 加速器对比：DLP/FPGA/GPU）→ 第七章深度学习处理器架构（7.1 单核 DLP 控制/运算/存储模块、7.2 多核 DLP：外部存储控制器、外设通信、片上互联、GBC 全局栅障同步与四个 DLP-C、7.3 并行内积运算器/矩阵运算子单元实验）→ 第八章智能编程语言 → 第九章综合实验。"
     },
     "C.5.1": {
-      "source": "hpc",
-      "covers": "按课程目录选择计算机体系、并行计算、GPU 和性能分析；讲义为中文，工具文档可能为英文。"
+      "source": "path-c-5-1",
+      "covers": "并行计算机系统结构、并行程序设计关键问题、Pthreads 多线程、OpenMP、MPI 消息传递、CUDA 异构编程，以及共享/分布式/异构平台上的并行化与优化。"
     },
     "C.5.2": {
-      "source": "hpc",
-      "covers": "按课程目录选择计算机体系、并行计算、GPU 和性能分析；讲义为中文，工具文档可能为英文。"
+      "source": "path-c-5-2",
+      "covers": "中文 CUDA 成课录像：专题 1（什么是 GPU、GPU 硬件架构一瞥、Hello CUDA、阿姆达尔定律）、专题 2（GPU 硬件连接模型、Kepler/Fermi 架构）、专题 3（GPU 多线程原理；CUDA 抽象机制之并发线程模型、内存模型、同步机制及 Quiz；CUDA 函数/内核线程索引/设备占用率；线程束调度机制；开发工具与生态圈）、专题 4 GPU 存储与优化（含 CPU/GPU 存储结构）、专题 5 CUDA 调试与分析（Nsight 简介、vecadd/occupancy/branch/stride 样例工程、CUDA 调试实例）、规约与扫描算法。"
     },
     "C.5.3": {
-      "source": "hpc",
-      "covers": "按课程目录选择计算机体系、并行计算、GPU 和性能分析；讲义为中文，工具文档可能为英文。"
+      "source": "path-c-5-3",
+      "covers": "29 讲完整课程：1–2 并行计算概述、3–4 并行计算机系统及结构模型、5–6 当代并行计算机系统介绍、7–8 并行计算性能评测、9–10 并行算法的设计基础、11 并行算法的一般设计策略、12–13 并行算法的基本设计技术、14 基本通信操作、15 并行算法的一般设计过程、16–18 稠密矩阵运算、19 线性方程组的求解、20 快速傅里叶变换、21–23 并行程序设计基础、24–26 共享存储系统并行编程、27–29 分布存储系统并行编程。主教材为陈国良《并行计算——结构·算法·编程》（高等教育出版社，ISBN 7-04-013307-5）。"
     },
     "D.1.1": {
       "source": "sql",
@@ -4795,8 +5045,8 @@
       "covers": "连续/离散信号与系统、时域/频域/复频域分析、傅里叶与拉普拉斯变换、频谱/频率响应、因果性与稳定性；按 16 周课程组织。"
     },
     "C.3.1": {
-      "source": "signals",
-      "covers": "连续/离散信号、频域变换与滤波；通信编码和严格调和分析理论需英文补充。"
+      "source": "path-c-3-1",
+      "covers": "绪论、信道与噪声、模拟调制、数字基带传输、数字带通传输（数字调制）、数字信号最佳接收、信源编码（A/D 转换、PCM）、同步原理；另提供全书各章电子课件，差错控制编码在课件中自学。"
     },
     "M.1.9": {
       "source": "path-m-1-9",
@@ -4971,8 +5221,8 @@
       "covers": "第 4 章 认识所有权（栈与堆的存储、所有权与生命周期、借用）与第 15 章 智能指针（Box/Rc/RefCell、Drop 与释放时机）。只覆盖“栈/堆与内存生命周期”的语言级机制，不含解释执行、字节码 VM、GC 算法、JIT 与 FFI。"
     },
     "C.3.4": {
-      "source": "zh-sdn",
-      "covers": "按SDN原理、数据平面、OpenFlow南向接口、控制平面、北向接口和应用开发学习；配Mininet、OVS、POX/RYU实验。"
+      "source": "path-c-3-4",
+      "covers": "SDN 概述与基本原理、南向接口协议（OpenFlow）、数据平面、控制平面、北向接口、SDN 应用开发；实验含 Mininet、OpenFlow 协议分析、Open vSwitch、OpenFlow 交换机、数据平面编程、POX/RYU 控制器编程。"
     },
     "D.2.3": {
       "source": "path-d-2-3",
@@ -9378,6 +9628,574 @@
         "free": true,
         "covers": "1.12 梯度的数值逼近（双边差分）、1.13 梯度检验（把参数拉平成向量、比较数值梯度与反向传播梯度的相对误差）、1.14 梯度检验应用的注意事项（只在调试时用、正则项、dropout 关闭等）。",
         "access": "GitHub 公开的中文课程笔记（PDF/Markdown），免费；由黄海广组织志愿者依吴恩达 deeplearning.ai 课程整理，非 Coursera 官方出品。",
+        "role": "supplement"
+      }
+    ],
+    "C.1.3": [
+      {
+        "title": "南京大学《计算机系统基础》PA 实验讲义（RISC-V 方向）",
+        "url": "https://nju-projectn.github.io/ics-pa-gitbook/ics2025/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "用 C 实现指令模拟器、运行时环境与简单 OS，沿 RISC-V 指令执行理解 ISA、寄存器、函数调用与栈帧；提供 RISC 思想的动手对照。",
+        "access": "GitBook 免费公开；实验需自备 Linux 工具链。",
+        "role": "supplement"
+      },
+      {
+        "title": "Arm《学习 Arm 架构 - A 系列》中文指南入口（AArch64 ISA、例外模型、记忆体模型）",
+        "url": "https://www.arm.com/zh-TW/architecture/learn-the-architecture/a-profile",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "官方中文指南列表与每条指南的内容说明（AArch64 ISA、AArch64 异常模型含 EL0–EL3、虚拟化、内存管理与内存模型、通用定时器）；正文在 developer.arm.com，本轮仍 403 未读到。",
+        "access": "Arm 官网免费阅读；指南正文在 developer.arm.com（本次直接打开返回 403，未读到正文），只能确认入口与指南说明。",
+        "role": "reference"
+      },
+      {
+        "title": "胡伟武《计算机体系结构基础》（第三版）在线全文：第 2 章 指令系统、第 3 章 特权指令系统、第 4 章 软硬件协同",
+        "url": "https://foxsen.github.io/archbase/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "第 2 章：指令系统设计原则、CISC/RISC/VLIW 演变、2.3.3 运行级别的演变（x86 Ring0–Ring3、MIPS user/supervisor/kernel、LoongArch PLV0–PLV3、ARM AArch64 硬件虚拟化引入新运行级别）、2.4 指令系统组成（地址空间/操作数/编码）、2.5 RISC 指令集比较（指令格式、寻址方式、寄存器数量表含 ARMv8/PowerPC/MIPS/x86）、2.6 C 语言的机器表示（过程调用、栈帧）；第 3 章 特权指令系统（3.2 异常与中断：异常分类、异常处理、中断；3.3 存储管理与 TLB 相关异常）；第 4 章 ABI（寄存器约定、函数调用约定、栈帧布局）。",
+        "access": "GitBook 在线免费全文，无需注册；简体中文；有各章习题。正文以 LoongArch 为主线，ARM 作为比较对象出现。",
+        "role": "supplement"
+      },
+      {
+        "title": "《Armv8/armv9 架构入门指南 v1.0》（Arm 官方 Learn the Architecture 指南的中文译本，readthedocs 在线全文）",
+        "url": "https://armv8-doc.readthedocs.io/en/latest/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "第 2 章 ARMv8-A 架构和处理器、第 4 章 ARMv8 寄存器（PSTATE/系统寄存器）、第 5 章 ARMv8 指令集简介、第 6 章 A64 指令集、第 9 章 ARM 64 位架构的 ABI、第 10 章 AArch64 异常处理（10.2 异常类型与系统响应、10.2.4 系统响应到 EL2/EL3、10.2.6 异常状态寄存器 SPSR_ELn、10.3 异常导致的执行状态和异常级别变化、10.4 AArch64 异常向量表、10.5 中断处理、10.6 通用中断处理）、第 13 章内存排序、第 17 章安全（TrustZone）。",
+        "access": "第三方转载，授权未核。readthedocs 免费全文，简体中文翻译；页面顶部夹带“Arm 体系结构付费课”招生广告与微信群链接，正文为指南译文，译文质量个别处有译注。",
+        "role": "supplement"
+      },
+      {
+        "title": "Learning operating system development using Linux kernel and Raspberry Pi（s-matyukevich, RPi OS）Lesson 3: Interrupt handling / 3.2 Low level exception handling",
+        "url": "https://s-matyukevich.github.io/raspberry-pi-os/docs/lesson03/rpi-os.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "AArch64 异常级别与异常向量表的动手教学：四种执行状态（EL1t/EL1h/EL0_64/EL0_32）、16 个向量项、SPSel 与独立/共享栈指针、IRQ 从 EL0 陷入 EL1 的 entry.S 实现，并逐段对照 Linux 内核同类代码。",
+        "access": "GitHub Pages 免费阅读；英文；每课附源码快照与习题。",
+        "role": "supplement"
+      },
+      {
+        "title": "AArch64 Exception Levels（Mike Krinkin，写作 ARM hypervisor 系列中的一篇）",
+        "url": "https://krinkinmu.github.io/2021/01/04/aarch64-exception-levels.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "EL0–EL3 四个异常级别的用途与实现取舍：EL0 用户态、EL1 内核、EL2 hypervisor（含在 EL2 上搭建 guest 的寄存器配置）、EL3 Secure Monitor/PSCI/可信启动；以及“芯片不必须实现全部四级”的现实约束。",
+        "access": "个人博客免费阅读；英文；同系列前后文有在 QEMU/树莓派上落地的 hypervisor 代码。",
+        "role": "supplement"
+      }
+    ],
+    "C.1.4": [
+      {
+        "title": "北京理工大学《并行编程原理与实践》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/BIT-1470418179",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "并行计算机系统结构、并行程序设计关键问题、Pthreads/OpenMP/MPI/CUDA，共享内存、分布式内存与 CPU+GPU 异构平台上的并行编程与优化；含国产处理器与超算系统案例。",
+        "access": "课程页公开概述与参考书；视频需注册中国大学MOOC并选课，认证证书收费。",
+        "role": "supplement"
+      },
+      {
+        "title": "浙江大学超算队 HPC 101 超算短学期（实验站）",
+        "url": "https://hpc101.zjusct.io/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "Lab 2 MoE 向量化、Lab 3 GDN prefill 前向优化、Lab 3.5 昇腾算子开发与优化、Lab 4.5 INT8 张量核模拟 FP64 GEMM、Lab 5 端到端推理优化；以国产加速器与张量核实践补专用加速器。",
+        "access": "免费公开实验文档与集群使用说明；需要 Linux 与算力环境，部分实验依赖课程集群账号。",
+        "role": "supplement"
+      },
+      {
+        "title": "胡伟武《计算机体系结构基础》（第三版）在线全文：第 10 章 并行编程基础、第 11 章 多核处理结构",
+        "url": "https://foxsen.github.io/archbase/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "第 10 章：10.1.1 指令级并行、10.1.2 数据级并行性、10.1.3 任务级并行性；10.2 并行编程模型（单任务数据并行、多任务共享存储、消息传递）；10.3.1 数据并行 SIMD 编程（SISD 与 SIMD 执行控制流对照图、向量化写法）。第 11 章：11.1 多核/众核与同构/异构分类、11.2 多核处理器访存结构、11.2.1 通用多核片上 Cache 结构、11.2.2 存储一致性模型、11.3 互连结构、11.4 同步机制、11.5.4 NVIDIA GPU（Fermi：SM、Warp 32 线程一组执行、L1/共享存储/L2/全局存储四级、单精度峰值 1.536 TFLOPS、访存带宽 177.4 GB/s，配套习题要求比较各层带宽/延迟/是否共享），11.5.3 IBM Cell（异构协处理器）。",
+        "access": "GitBook 在线免费全文，无需注册；简体中文；含习题。",
+        "role": "supplement"
+      }
+    ],
+    "C.2.2": [
+      {
+        "title": "《操作系统导论》中文版：并发部分（OSTEP 中文 PDF）",
+        "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/28.pdf",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "第 26–34 章：线程、锁、硬件原子指令（test-and-set/compare-and-swap/fetch-and-add）、条件变量、信号量、并发 bug；讲清锁的实现与原子操作语义。",
+        "access": "作者站点免费 PDF；中文译文对应较早期版本。",
+        "role": "supplement"
+      },
+      {
+        "title": "Operating Systems: Three Easy Pieces（OSTEP，免费在线教材）",
+        "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+        "tier": "book",
+        "lang": "en",
+        "free": true,
+        "covers": "第 26–34 章线程与并发：锁、硬件原子指令、条件变量、信号量、并发 bug；可补 CSE333 未展开的锁实现与原子操作。",
+        "access": "免费 PDF；英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "Memory Models for C/C++ Programmers（Pöter & Träff, arXiv:1803.04432）",
+        "url": "https://arxiv.org/abs/1803.04432",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "从顺序一致性讲到 x86、ARM/POWER 的弱内存模型，第 4 节专讲 C++11 内存模型与 relaxed/acquire-release 用法。",
+        "access": "arXiv 免费 PDF/HTML；教学性综述，不是完整课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "胡伟武《计算机体系结构基础》（第三版）第 11 章 11.2.2 存储一致性模型与 11.6 多核结构分析维度",
+        "url": "https://foxsen.github.io/archbase/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "11.2.2 存储一致性模型：先给出三处理器共享变量（表 11.2）的读写次序反例，说明为什么需要一致性模型；再逐个定义顺序一致性（SC）、处理器一致性（PC）、弱一致性（WC）、释放一致性（RC）四种模型对访存次序的约束，并说明“限制越弱性能越好但编程越难”、龙芯 3 号采用处理器一致性；11.2.3 Cache 一致性协议；11.6 小结把“存储一致性模型”与 Cache 协议、片上互连、同步机制（互斥锁 lock、路障 barrier）并列为分析多核结构的五个维度；11.7 习题要求列出两个线程在顺序一致性与弱一致性下各有几种正确执行顺序。",
+        "access": "GitBook 在线免费全文，无需注册；简体中文；含表 11.2 例子与习题。",
+        "role": "supplement"
+      },
+      {
+        "title": "《现代 C++ 教程：高速上手 C++11 到 C++26》第 7 章 并行与并发 → 7.5 原子操作与内存模型（欧长坤）",
+        "url": "https://changkun.de/modern-cpp/zh-cn/07-thread/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "7.5 原子操作与内存模型：用“a=5 / flag=1 被编译器或 CPU 重排导致读到 0”的例子引出内存模型；讲 std::atomic、compare_exchange_strong/weak；逐个给出 memory_order_relaxed（宽松）、memory_order_acquire/memory_order_release（获取/释放，含 flag.store(release)/flag.load(acquire) 的完整例子）、memory_order_seq_cst（顺序一致）三种内存顺序模型的语义与性能取舍；并用原子操作手写自旋锁、说明互斥锁的两条基本原理（原子性 + 内存序）。",
+        "access": "在线免费阅读（作者自建站点，另有 PDF/EPUB 免费下载）；简体中文；示例代码可直接编译。",
+        "role": "supplement"
+      }
+    ],
+    "C.2.3": [
+      {
+        "title": "河海大学《云计算技术与应用》（中国大学MOOC，国家精品在线开放课程）",
+        "url": "https://www.icourse163.org/course/HHU-1001755117",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "云计算概述、关键技术（重点是虚拟化原理与应用）、云服务体系、Google/Amazon/阿里云方案、OpenStack/Docker/Hadoop；覆盖 hypervisor/虚拟机与 IaaS 资源管理。",
+        "access": "课程页公开概述与大纲；视频需注册选课，按学期开放，认证证书收费。",
+        "role": "supplement"
+      },
+      {
+        "title": "Kubernetes 官方中文文档：调度、抢占和驱逐（调度器、将 Pod 指派给节点、污点与容忍度）与镜像",
+        "url": "https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/kube-scheduler/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "调度器：kube-scheduler 如何为一个 Pod 找出“可调度节点”，调度选择分“过滤（过滤掉不满足调度需求的节点，如 PodFitsResources 检查资源请求）+ 打分（用打分规则给候选节点排名，取最高者，同分随机）”两步，最后绑定给 kube-apiserver；Scheduling Policies（Predicates/Priorities）与 Scheduling Profiles（QueueSort/Filter/Score/Bind/Reserve/Permit 插件）；相邻章节含将 Pod 指派给节点（nodeSelector、节点亲和、Pod 亲和/反亲和、拓扑分布约束）与污点/容忍度。镜像：容器镜像、默认镜像拉取策略与 imagePullPolicy、私有仓库与 imagePullSecrets、镜像垃圾回收。",
+        "access": "kubernetes.io 官方中文文档免费阅读，无需注册；简体中文（由社区翻译并随版本更新）；每页有可执行的 YAML 示例与“接下来”延伸阅读。",
+        "role": "supplement"
+      },
+      {
+        "title": "CS 161 Lecture 23: Virtual machines（Harvard CS 161, 2019，课程讲义）",
+        "url": "https://read.seas.harvard.edu/cs161/2019/lectures/lecture23/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "虚拟机与 hypervisor 的系统讲授：虚拟机的用途与隔离；Popek–Goldberg 三条要求（等价性/效率/资源控制）与敏感指令/特权指令/innocuous 指令的分类，Theorem 1（敏感指令皆特权才可构造 VMM）；经典 trap-and-emulate；x86 不能经典 trap-and-emulate 的原因与二进制翻译（VMware）方案；Intel VT-x / AMD-V 硬件辅助虚拟化；混合型 VMM 与 guest 内核对硬件的可见性差异。",
+        "access": "哈佛 CS 161 课程网站免费公开讲义（HTML 正文）；英文；属本科操作系统课的一讲，前后讲分别是进程与文件系统。",
+        "role": "supplement"
+      },
+      {
+        "title": "Kubernetes Documentation: kube-scheduler（调度、抢占和驱逐）与 Images",
+        "url": "https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "调度：kube-scheduler 的 filtering（含 PodFitsResources 等谓词）与 scoring（打分规则、同分随机）两阶段、binding、Scheduling Policies 与 Scheduling Profiles 插件（QueueSort/Filter/Score/Bind/Reserve/Permit、调度框架）。镜像：imagePullPolicy（Always/IfNotPresent/Never）、私有仓库与 imagePullSecrets、镜像垃圾回收。",
+        "access": "kubernetes.io 官方英文文档免费；英文；每页带 YAML 示例。",
+        "role": "supplement"
+      }
+    ],
+    "C.3.1": [
+      {
+        "title": "中国地质大学（武汉）《信息论与编码》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/CUG-1205977806",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "信息度量、信源熵、信道容量、率失真；信源编码（Huffman、字典、算术编码）；信道编码（线性分组码、循环码、卷积码的编解码）。",
+        "access": "课程页公开概述与教材；视频需注册选课，认证证书收费。",
+        "role": "supplement"
+      },
+      {
+        "title": "计算机网络课程视频：3.5.1 信道划分·上（时分复用、频分复用、波分复用）与 3.5.2 信道划分·下（码分复用）",
+        "url": "https://www.bilibili.com/video/BV1xgNDzjEZ4/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "复用（信道划分）的中文课堂讲解：时分复用 TDM（等长 TDM 帧再分 m 个时隙）、统计时分复用 STDM（按需动态分配时隙）、频分复用 FDM（总频带划分为多个子频带）、波分复用 WDM（即光的频分复用）、码分复用 CDM（码片序列：发 m 个与码片序列相同/相反的信号值表示比特 1/0，收端用叠加信号与发送方码片序列作规格化内积，得 1 判为比特 1、得 -1 判为比特 0）。",
+        "access": "B 站免费播放，中文讲解，两段分 P（3.5.1 / 3.5.2）；视频简介给出本讲要点（复用原理与码分复用的解复用算法）。上传者为个人账号“向小园_”（自制），其所属学校/教师身份未核实，是否有字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "湖南大学《数字通信原理》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/HNU-1002331003",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程把通信理论分成三大块，其中“复用解复用理论（含频分复用、时分复用、码分复用等）”是与调制解调、编码译码并列的一块；授课内容含 OFDM 技术（正交频分复用，多载波复用）、信道模型、数字调制解调与 AWGN/衰落信道性能。",
+        "access": "中国大学MOOC 免费注册学习（认证证书另计）；中文；课程标为双语教学、采用外文经典教材；逐讲大纲与是否单列复用讲次未核对（页面只给概述与授课目标）。",
+        "role": "reference"
+      }
+    ],
+    "C.3.2": [
+      {
+        "title": "Stanford CS144 Introduction to Computer Networking（讲义与 8 个 lab）",
+        "url": "https://cs144.github.io/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "讲义：可靠性、TCP、分组交换、拥塞控制 why/what/how、路由入门；lab 用 C++ 实现字节流、TCP receiver/sender 与拥塞窗口。",
+        "access": "课程主页、handouts 与 lab handout 免费公开；英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "《图解网络》（小林coding，中文在线系统教程）",
+        "url": "https://xiaolincoding.com/network/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "04 传输层篇 4.2「TCP 重传、滑动窗口、流量控制、拥塞控制」：重传机制（超时重传、快速重传）、滑动窗口、流量控制与糊涂窗口综合症、拥塞控制（慢启动、拥塞避免、拥塞发生——超时与快重传两种触发、快恢复，含 cwnd 与 ssthresh 的变化规则，并引 RFC2581 逐条说明）；03 应用层篇：HTTP 常见面试题、HTTP/1.1 优化、HTTPS RSA/ECDHE 握手、HTTP/2、HTTP/3、HTTP 与 RPC、WebSocket；02 基础篇 2.2「键入网址到网页显示，期间发生了什么」的 DNS 部分：域名用句点分层、越靠右层级越高、末尾点代表根域（根 DNS 服务器 → 顶级域 DNS 服务器 → 权威 DNS 服务器）、域名解析工作流程（客户端 → 本地 DNS 服务器 → 根域名服务器 → 顶级域服务器 → 权威服务器，本地缓存命中则直接返回）；05 网络层篇：IP 基础知识、ping 原理、127.0.0.1。",
+        "access": "作者站点免费在线阅读（另有打包 PDF 下载页），简体中文，配大量手绘图与抓包例子；站点同时挂其付费训练营广告，但教程正文免费。",
+        "role": "supplement"
+      }
+    ],
+    "C.3.3": [
+      {
+        "title": "南京信息职业技术学院《5G通信技术》（中国大学MOOC，国家精品在线开放课程）",
+        "url": "https://www.icourse163.org/course/NJCIT-1468830185",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "5G 网络架构、5G 空口、基站部署与调测、基站运维、应用场景；以华为 5G RAN HCIA 内容为参照。",
+        "access": "课程页公开五大模块；视频需注册选课，按学期开放，认证证书收费。高职课程，偏工程运维而非无线理论。",
+        "role": "supplement"
+      },
+      {
+        "title": "哈尔滨工业大学《计算机网络》第二单元（无线局域网部分）",
+        "url": "https://www.icourse163.org/course/HIT-154005",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "第二单元链路层含 MAC 协议、以太网、VLAN、PPP 与无线局域网；可补 802.11 局域网络基础。",
+        "access": "视频需注册选课；页面只列主题，未列 802.11 细节讲次。",
+        "role": "supplement"
+      },
+      {
+        "title": "南京理工大学《通信系统》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/NJUST-1462229161",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "移动通信部分的完整教学：蜂窝移动通信系统发展概况及典型代表、大区制/蜂窝小区制/区群、同频道干扰、数字蜂窝网络结构（移动台、基站、网络子系统功能）；无线介质：移动信道快衰落与慢衰落的特点、时延扩展、相关带宽、任意地形地区移动信道衰减估计与接收信号功率计算、分集接收、MIMO 技术、数字频率/相位/正交振幅/OFDM 调制；移动性：信令概念（接入信令、网络信令、信令应用）、移动通信系统区域划分、号码、切换技术、用户位置管理。另有光纤与卫星通信系统（多址 FDMA/TDMA/CDMA、多普勒频移、星地链路功率计算）作对照。",
+        "access": "中国大学MOOC 免费注册学习（认证证书另计）；中文；课程大纲区块未渲染，但课程概述/授课目标已逐条列出上述知识点。",
+        "role": "supplement"
+      },
+      {
+        "title": "南京邮电大学《移动通信网络规划部署与优化》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/NJUPT-1469059164",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "移动性管理的工程视角：SA/NSA 组网架构、无线接入网/承载网/核心网部署、定点优化（语音/高清视频/直播 QoS）、移动性管理（双向重选、切换、漫游功能）、网络切片编排、无线资源管理、波束管理。",
+        "access": "中国大学MOOC 免费注册学习；中文；以网络规划部署与优化实训为主，物理层信道理论不在此课。",
+        "role": "reference"
+      }
+    ],
+    "C.3.4": [
+      {
+        "title": "B 站「NetDevOps加油站」NETCONF 与 YANG 系列：02 如何根据 yang-model 编写 netconf 的 data 报文",
+        "url": "https://www.bilibili.com/video/BV1ot4y1e78C/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "网络配置的中文实操教学：以 YANG 模型为数据模型，按模型层级手工构造 NETCONF 的 <data> 报文，说明“先看 YANG 树 → 定位叶子节点 → 拼 XML 报文 → 用 NETCONF 下发”的配置流程（该账号为 NetDevOps 方向系列，本讲是系列第 02 讲）。",
+        "access": "B 站免费播放；中文；单 P 讲解；视频简介只有一句“如何根据 yang-model 编写 netconf 的 data 报文”，是否有配套讲义/字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "华为《什么是 NETCONF？为什么需要 NETCONF？》（IP 知识百科，官方中文）",
+        "url": "https://info.support.huawei.com/info-finder/encyclopedia/zh/NETCONF.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "NETCONF 的结构化说明：NETCONF 是为网管与网络设备之间通信提供的配置协议（对远端设备的配置下发、修改、删除），基于 XML 与 RPC 机制，客户端/服务器角色；为什么需要 NETCONF（CLI 脚本无法模型化/回滚/校验）；NETCONF 是如何工作的、协议框架、能力集（capabilities）、支持的操作与数据集（运行/候选/启动配置数据集）。",
+        "access": "华为官网免费阅读（可导出 PDF），简体中文；属厂商知识库条目，不含实验步骤。",
+        "role": "reference"
+      }
+    ],
+    "C.4.1": [
+      {
+        "title": "eraft 开发组《MIT 6.824 分布式系统系列》（中文项目式讲义）",
+        "url": "https://eraft.cn",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "项目概览与构建、C++ 并发基础、Raft 论文解读、构建 Raft 库（Leader 选举/日志复制/持久化/快照）、基于 Raft 的 KV、Multi-Raft、分布式事务初探；对应 6.824 Lab 2/3/4。",
+        "access": "网站免费阅读；以 C++ 实现为主线，需要自备代码环境。中文。",
+        "role": "supplement"
+      },
+      {
+        "title": "河海大学《云计算技术与应用》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/HHU-1001755117",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "云计算关键技术、云服务体系、开源云平台；授课目标含分布式文件系统、并行处理框架、分布式锁服务与分布式数据库，OpenStack/Hadoop 实验。",
+        "access": "视频需注册选课，按学期开放，认证证书收费。",
+        "role": "supplement"
+      },
+      {
+        "title": "TiDB 官方中文：整体架构",
+        "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "TiDB/TiKV/PD 分层、Raft 多副本、分布式事务、TiFlash；作为复制、共识与事务的工业实例。",
+        "access": "官方文档免费；参考文档，不是课程。",
+        "role": "reference"
+      },
+      {
+        "title": "Time, Clocks, and the Ordering of Events in a Distributed System（Lamport, 1978）",
+        "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "分布式系统中的 happened-before 偏序、逻辑时钟同步算法、全序与物理时钟同步误差界。",
+        "access": "作者站点免费 PDF；经典论文，不是课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "OpenTelemetry 中文文档《可观测性入门》与《上下文传播》（分布式链路用于调试分布式系统）",
+        "url": "https://opentelemetry.io/zh/docs/concepts/observability-primer/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "可观测性三支柱：日志、指标（SLI/SLO）、链路（Trace）；“理解分布式链路”一节讲分布式链路让开发者观察请求如何在复杂分布式系统中传播、提高系统健康度可见性，并能调试那些难以在本地重现的行为；Spans 与上下文传播（跨服务传递追踪上下文）的机制与手动 Span 属性。",
+        "access": "opentelemetry.io 官方文档中文版，免费阅读；简体中文；含概念说明与后续“快速开始”示例页面。",
+        "role": "supplement"
+      }
+    ],
+    "C.4.2": [
+      {
+        "title": "Kubernetes 官方中文文档：多租户、Pod 水平自动扩缩（HPA）",
+        "url": "https://kubernetes.io/zh-cn/docs/concepts/security/multi-tenancy/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "多租户：集群内用 Namespace 隔离 API 资源（同名对象可在不同命名空间共存、RBAC 角色与 NetworkPolicy 等安全策略按命名空间作用域生效）、不同隔离技术的适用范围与强度取舍，以及“共享集群 vs 每租户专用集群/专用硬件”的成本与隔离权衡（专用集群的管理开销 vs 更强隔离）；Pod 水平自动扩缩：按资源利用率（如平均 CPU 利用率 60%）或自定义/外部指标扩缩副本数，利用率的定义（当前用量 ÷ 请求值）、平均值算法与扩缩行为。",
+        "access": "kubernetes.io 官方中文文档免费阅读，简体中文；带 YAML 示例与“接下来”延伸阅读。",
+        "role": "supplement"
+      },
+      {
+        "title": "阿里云函数计算（Function Compute）中文文档：什么是函数计算、FC 计费概述",
+        "url": "https://help.aliyun.com/zh/functioncompute/what-is-function-compute",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "无服务器：函数计算是事件驱动的全托管计算服务，开发者无需管理服务器，只上传代码即自动准备计算资源并以弹性、可靠方式运行；Serverless 与 Serverful 的差别（不关注服务器、只为实际使用付费）；与传统“客户端-服务器”模型的对比（传统模型不管有无请求服务器常开）。成本模型：计费概述讲按量付费（默认最小实例数为 0，无调用不计费）、资源包、常驻资源池（包年包月）、CU 使用量作为统一计费项及 vCPU/内存/调用次数等的换算系数与阶梯单价、公网出流量另计。",
+        "access": "阿里云帮助中心免费阅读，简体中文；带计费项表格、换算系数与单价，可配合价格计算器估算。",
+        "role": "supplement"
+      },
+      {
+        "title": "Kubernetes Documentation: Multi-tenancy（English）",
+        "url": "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "多租户的定义与实现手段：Namespace 作为单集群内 API 资源隔离机制（对象名可重叠、让各租户不必关心他人命名）、RBAC Roles 与 NetworkPolicy 等按命名空间作用域的安全策略；不同隔离技术的强度比较；共享集群与每租户专用集群/专用硬件的成本-隔离权衡（专用集群管理开销与成本 vs 更强隔离，Multi-Cluster SIG 负责此类用例）。",
+        "access": "kubernetes.io 官方英文文档免费；英文；含示例清单。",
+        "role": "supplement"
+      }
+    ],
+    "C.4.3": [
+      {
+        "title": "eraft 开发组《MIT 6.824 分布式系统系列》（中文 Raft 项目讲义）",
+        "url": "https://eraft.cn",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "Raft 论文解读与实现、Leader 选举、日志复制、持久化、快照、Multi-Raft；涉及崩溃故障下的共识，但不讲故障模型分类、线性化形式定义与下界证明。",
+        "access": "免费中文网站；项目式，需要自备 C++ 环境。",
+        "role": "supplement"
+      },
+      {
+        "title": "TiDB 官方中文：整体架构（Raft 多副本与分布式事务）",
+        "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "TiKV 多副本 Raft、PD 调度、分布式事务；工程实例，不含理论证明。",
+        "access": "免费官方文档；不是教学课程。",
+        "role": "reference"
+      },
+      {
+        "title": "南希·林奇《分布式算法（典藏版）》中译本（机械工业出版社，2023）",
+        "url": "http://www.cmpedu.com/books/book/5610331.htm",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "同步、异步与部分同步模型下的选举、一致性、互斥与通信问题；多种算法与不可能性结果，并给出精确的复杂度衡量（消息复杂度、时间复杂度与下界）。",
+        "access": "正版付费教材，定价 119 元，需购买或借阅；出版社页面无样章与详细目录，本条范围依据出版社内容简介，并与英文原书（MIT 6.852J 所用教材）对应。",
+        "role": "supplement"
+      }
+    ],
+    "C.5.1": [
+      {
+        "title": "浙江大学超算队 HPC 101：Lab 2 MoE 的向量化计算",
+        "url": "https://hpc101.zjusct.io/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "Lab 2「MoE 的向量化计算」不只是动手优化：页面含“知识讲解：x86-64 SIMD 优化”“AVX 向量指令扩展”“AVX-512”等教学小节，先讲清 SIMD 是什么（一条指令一次处理一堆相似数据、通过指令级并行加速），再介绍实验机器的 SSE/AVX 指令、编译器在高优化等级下的自动向量化能力与保守性（为何 HPC 常需手写 SIMD），然后才要求对 MoE 计算做向量化改造与性能测试；另有 GEMM/张量核与推理优化实验。",
+        "access": "实验文档免费公开；需要课程集群或自备算力环境。",
+        "role": "supplement"
+      },
+      {
+        "title": "MPI Tutorial 中文版（Wes Kendall 等）",
+        "url": "https://mpitutorial.com/tutorials/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "MPI 安装与运行、阻塞/非阻塞点对点通信、集合通信、组与通信子、派生数据类型、性能与并行文件；每课带示例代码，部分课有中文版。",
+        "access": "免费网页；中文版为部分章节翻译，非全部课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "MPI Tutorial（Wes Kendall 等）",
+        "url": "https://mpitutorial.com/tutorials/",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "MPI 点对点/集合通信、通信子、派生数据类型、性能与并行文件；带完整示例。",
+        "access": "免费网页；英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "上海交通大学 HPC 入门指南：向量化（xflops，SJTU HPC 文档站）",
+        "url": "https://xflops.sjtu.edu.cn/hpc-start-guide/parallel-computing/SIMD",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "向量化简介（向量化是实现 SIMD 的方法：用特殊 CPU 指令集一次处理一组数据）、向量化使用方法、内联汇编等章节；并以第一届 PKU HPCGame 的 logistic 映射迭代为例，用 base.cpp / opt.cpp / conf.data / Makefile 对照演示如何引导编译器自动向量化：先说明“单个数的迭代必须串行会让编译器无法自动向量化”，再通过交换循环次序让内层变成可并行、内存连续的向量化循环，最后讨论交换后的访存问题（寄存器/缓存放不下时反复读写内存）。",
+        "access": "上海交大 HPC 文档站免费阅读，简体中文，带完整示例代码；无注册要求。",
+        "role": "supplement"
+      },
+      {
+        "title": "Stanford CS149 Parallel Computing（Fall 2025）：Forms of parallelism: multi-core, SIMD, and multi-threading；Modern Multi-Core Architecture (Part II) + ISPC Programming Abstractions",
+        "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+        "tier": "video",
+        "lang": "en",
+        "free": true,
+        "covers": "以 SIMD 作为并行形式之一来讲：多核/SIMD/多线程三种并行形式的对比，现代多核架构（含 SIMD 单元与内存层次），以及 ISPC 编程抽象（把标量循环写成可被编译器向量化的 SPMD 代码，讲 vector width、mask、gather/scatter 等向量化要素）；课程有讲义与录播，作业含向量化性能实验。",
+        "access": "课程主页免费公开讲义/日程/作业；录播链接在课程页（部分年份公开）；英文。",
+        "role": "supplement"
+      }
+    ],
+    "C.5.2": [
+      {
+        "title": "北京理工大学《并行编程原理与实践》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/BIT-1470418179",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "CUDA 异构编程、核函数与线程组织、共享内存/访存、同步与性能优化；配合 CPU+GPU 异构平台实验。",
+        "access": "视频需注册选课，按学期开放，认证证书收费；课程页未列逐讲 CUDA 细节。",
+        "role": "supplement"
+      },
+      {
+        "title": "浙江大学超算队 HPC 101：Lab 3 GDNN Prefill、Lab 5 端到端推理优化",
+        "url": "https://hpc101.zjusct.io/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "GDN prefill 前向优化、昇腾算子开发、INT8 张量核、Gemma4 端到端推理优化；涉及算子实现与带宽/延迟优化。",
+        "access": "实验文档免费；需要算力环境。",
+        "role": "supplement"
+      },
+      {
+        "title": "《AI System》中文课程（infrasys-ai）：算子融合、算子手工优化（Roofline）、算子循环优化、CUDA 编程模式",
+        "url": "https://infrasys-ai.github.io/aisystem-docs/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "「AI 编程与计算架构」部分：图算 IR、算子融合（算子融合方式、以 BN 计算流程为例的融合案例、布局转换原理与算法、内存分配算法）、计算与调度、算子手工优化（计算分析指标：计算量 Flops、访存量 Byte、计算强度、理论性能；Roofline 模型；优化策略；DSL 开发算子）、算子循环优化；另有 CUDA 编程模式（Warp/线程束、Warp Scheduler、访存延迟隐藏）与“SIMD & SIMT 与 CUDA 关系”。",
+        "access": "GitHub Pages 免费在线阅读，简体中文，配图与公式；作者社区另在 B 站有配套视频（未核对逐节对应）。",
+        "role": "supplement"
+      }
+    ],
+    "C.5.3": [
+      {
+        "title": "北京理工大学《并行编程原理与实践》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/BIT-1470418179",
+        "tier": "website",
+        "lang": "zh",
+        "free": null,
+        "covers": "并行计算机系统结构、OpenMP/MPI/CUDA 编程与优化、共享/分布式/异构平台上的性能优化；可作为数值程序并行的编程基础。",
+        "access": "视频需注册选课，按学期开放，认证证书收费。课程不是数值分析课。",
+        "role": "supplement"
+      },
+      {
+        "title": "浙江大学超算队 HPC 101：Lab 4 AMSS-NCKU 数值相对论程序优化、Lab 4.5 INT8 张量核、Lab 5 推理优化",
+        "url": "https://hpc101.zjusct.io/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "Lab 4「AMSS-NCKU 数值相对论程序优化」是完整优化流程：流程简介 → 性能分析（从 Profiling 开始、CPU Profile、Kunpeng 920B 上用 perf 分析 CPU 优化路径）→ ABE 计算 kernel 优化 → 通信优化 → 正确性验证 → 性能评分；另有 Lab 4.5 INT8 张量核、Lab 5 端到端推理优化。",
+        "access": "实验文档免费；需课程集群或自备算力。",
+        "role": "supplement"
+      },
+      {
+        "title": "Understanding Package Performance（EPCC, University of Edinburgh；第 4 节 Analysing performance）",
+        "url": "https://epcced.github.io/understanding-package-performance/04-analysis/index.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "并行性能分析整节：性能指标与基准数据采集、speedup 与 parallel efficiency 的定义与用法、强扩展（strong scaling，固定问题规模，受 Amdahl 定律限制）与弱扩展（weak scaling，问题规模随核数增长，受 Gustafson 定律限制）的区别与如何解读实测扩展曲线，以及标度实验的实践建议。",
+        "access": "GitHub Pages 免费阅读，英文；EPCC（爱丁堡大学）面向 HPC 用户的课程材料，含示例与练习。",
+        "role": "supplement"
+      },
+      {
+        "title": "UC Berkeley CS267 Applications of Parallel Computers（Demmel, Spring 2016；讲义 PDF/PPT 全公开）",
+        "url": "https://people.eecs.berkeley.edu/~demmel/cs267_Spr16/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "并行数值求解器与通信优化：Lecture 4–5 Sources of Parallelism and Locality in Simulation（数值工作负载）、Lecture 12–13 Dense Linear Algebra、Lecture 14 Graph Partitioning、Lecture 15 Automatic Performance Tuning and Sparse-Matrix-Vector-Multiplication、Lecture 20 FFT、Lecture 22 Scientific Software Ecosystems（PETSc/Trilinos 一类求解器生态）、Lecture 25 N-Body 层次方法，以及“Communication Lower Bounds and Optimal Algorithms”讲次（通信下界与通信避免算法）。",
+        "access": "课程主页免费公开全部讲义（ppt/pdf）与作业；英文；另有录播/远程听课安排（未逐条核对录像）。",
+        "role": "supplement"
+      },
+      {
+        "title": "胡伟武等《计算机体系结构基础》（第3版，作者开源全文）：1.2.3 计算机的功耗；第 12 章 并行系统的性能评价",
+        "url": "https://foxsen.github.io/archbase/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "1.2.3 计算机的功耗（开关、短路、漏电功耗，性能功耗比，高性能计算机兆瓦级功耗，动态与静态功耗优化）；第 12 章并行系统性能评价指标（可扩展性定义、加速比、Amdahl 定律作为固定负载加速模型）。",
+        "access": "作者与出版社同意开放的在线全文，免费。",
+        "role": "supplement"
+      },
+      {
+        "title": "NVIDIA Technical Blog: Energy Efficiency in High-Performance Computing — Balancing Speed and Sustainability",
+        "url": "https://developer.nvidia.com/blog/energy-efficiency-in-high-performance-computing-balancing-speed-and-sustainability",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Dennard scaling and why power now limits HPC; energy-to-solution versus time-to-solution; measuring runtime×energy across GPU counts for FUN3D, GROMACS and MILC; multi-objective tuning of node configurations.",
+        "access": "Free vendor technical article; English.",
         "role": "supplement"
       }
     ]

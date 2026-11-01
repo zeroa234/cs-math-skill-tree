@@ -1,0 +1,303 @@
+{
+ "id": "C.4.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "河海大学《云计算技术与应用》（中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/HHU-1001755117",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "云计算概述、关键技术（虚拟化）、云服务体系（IaaS/PaaS/SaaS）、Google/Amazon/阿里云方案、OpenStack/Docker/Hadoop 开源平台及实验。",
+   "access": "课程页公开概述与授课目标；视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "河海大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HHU-1001755117",
+    "location": "课程概述“课程主要内容”；授课目标 1–3 条",
+    "finding": "页面列出云计算关键技术、云服务体系、主流云方案与 OpenStack/Docker/Hadoop 实验；未提无服务器、成本模型与多租户隔离。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Cornell CS5412 Topics in Cloud Computing（Fall 2022，逐讲 syllabus + 录像）",
+   "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "云经济性与规模成本、数据中心硬件与容错、分片与数据放置、hypervisor 虚拟化（Xen）与容器、托管微服务与弹性池、函数服务器（serverless）、云上复制与一致性、IoT/边缘接入。",
+   "access": "课程主页免费公开逐讲 syllabus、阅读与课堂录像链接；英文，字幕未核对。",
+   "publisher": "Cornell University（Kenyon Levitt 等）",
+   "evidence": {
+    "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/Syllabus.html",
+    "location": "Syllabus 逐讲：key-value sharding、Xen vs containers、elastic pools/function server、cost",
+    "finding": "Syllabus 正文讲云规模成本、key-value 分片、Xen/容器虚拟化、托管微服务与弹性池、function server/serverless，并链接论文与录像。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Kubernetes 官方中文文档：多租户、Pod 水平自动扩缩（HPA）",
+   "url": "https://kubernetes.io/zh-cn/docs/concepts/security/multi-tenancy/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "多租户：集群内用 Namespace 隔离 API 资源（同名对象可在不同命名空间共存、RBAC 角色与 NetworkPolicy 等安全策略按命名空间作用域生效）、不同隔离技术的适用范围与强度取舍，以及“共享集群 vs 每租户专用集群/专用硬件”的成本与隔离权衡（专用集群的管理开销 vs 更强隔离）；Pod 水平自动扩缩：按资源利用率（如平均 CPU 利用率 60%）或自定义/外部指标扩缩副本数，利用率的定义（当前用量 ÷ 请求值）、平均值算法与扩缩行为。",
+   "access": "kubernetes.io 官方中文文档免费阅读，简体中文；带 YAML 示例与“接下来”延伸阅读。",
+   "publisher": "Kubernetes（CNCF）官方文档，中文本地化版本",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://kubernetes.io/zh-cn/docs/concepts/security/multi-tenancy/",
+    "location": "正文：“根据你的需求，可以使用许多不同的技术在集群中维护不同类型的隔离。在更极端的情况下，彻底放弃所有集群级别的共享并为每个租户分配其专用集群可能更容易或有必要……必须根据管理多个集群的成本和复杂性来评估更强的租户隔离的好处”；另打开 https://kubernetes.io/zh-cn/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/ 读到 “averageUtilization: 60 …… HPA 控制器会维持扩缩目标中的 Pod 的平均资源利用率在 60%。利用率是 Pod 的当前资源用量与其请求值之间的比值”",
+    "finding": "确认中文文档把多租户讲成“隔离维度 + 共享/专用集群的成本权衡”，把弹性讲成按利用率自动扩缩副本的控制器行为与算法，两者都不是词条级表述。"
+   },
+   "added_by": "review/pi-additions/C.4.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "阿里云函数计算（Function Compute）中文文档：什么是函数计算、FC 计费概述",
+   "url": "https://help.aliyun.com/zh/functioncompute/what-is-function-compute",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "无服务器：函数计算是事件驱动的全托管计算服务，开发者无需管理服务器，只上传代码即自动准备计算资源并以弹性、可靠方式运行；Serverless 与 Serverful 的差别（不关注服务器、只为实际使用付费）；与传统“客户端-服务器”模型的对比（传统模型不管有无请求服务器常开）。成本模型：计费概述讲按量付费（默认最小实例数为 0，无调用不计费）、资源包、常驻资源池（包年包月）、CU 使用量作为统一计费项及 vCPU/内存/调用次数等的换算系数与阶梯单价、公网出流量另计。",
+   "access": "阿里云帮助中心免费阅读，简体中文；带计费项表格、换算系数与单价，可配合价格计算器估算。",
+   "publisher": "阿里云（Alibaba Cloud）官方产品文档",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://help.aliyun.com/zh/functioncompute/what-is-function-compute",
+    "location": "正文：“函数计算（Function Compute，简称FC）是一种事件驱动的全托管计算服务……以弹性、可靠的方式运行代码”“函数计算默认按照资源使用量计费，根据函数配置的规格与使用时长的乘积计算资源使用量，仅在需要时分配资源并能及时释放”“什么是Serverless……支持按实际使用付费”“与传统计算资源的区别……不论是否有请求，服务器都始终开启并运行服务”；另打开 https://www.alibabacloud.com/help/zh/functioncompute/billing-overview-of-fc 读到计费方式（按量付费/资源包/常驻资源池）与 CU 使用量计费项",
+    "finding": "确认无服务器与按使用量计费（成本模型）都有官方中文的分步说明与计价口径，而不是只有一句“支持 Serverless”。"
+   },
+   "added_by": "review/pi-additions/C.4.2.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Kubernetes Documentation: Multi-tenancy（English）",
+   "url": "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "多租户的定义与实现手段：Namespace 作为单集群内 API 资源隔离机制（对象名可重叠、让各租户不必关心他人命名）、RBAC Roles 与 NetworkPolicy 等按命名空间作用域的安全策略；不同隔离技术的强度比较；共享集群与每租户专用集群/专用硬件的成本-隔离权衡（专用集群管理开销与成本 vs 更强隔离，Multi-Cluster SIG 负责此类用例）。",
+   "access": "kubernetes.io 官方英文文档免费；英文；含示例清单。",
+   "publisher": "Kubernetes (CNCF) Documentation",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+    "location": "“In Kubernetes, a Namespace provides a mechanism for isolating groups of API resources within a single cluster… This allows tenants to name their resources without having to consider what other tenants are doing”；“Many Kubernetes security policies are scoped to namespaces. For example, RBAC Roles and Network…”",
+    "finding": "确认英文官方文档同样成段讲多租户的隔离维度（Namespace/RBAC/NetworkPolicy）与共享 vs 专用集群的取舍，可补 en1 Cornell 课程只提到“多租户”而未展开的缺口。"
+   },
+   "added_by": "review/pi-additions/C.4.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "IaaS/PaaS",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "云服务体系（IaaS/PaaS/SaaS）与 OpenStack/Hadoop 实验",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Datacenter hardware、Xen/containers、managed microservices/elastic pools",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文按服务模型讲，英文按平台实现讲。"
+  },
+  {
+   "topic": "弹性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "云计算关键技术/云服务体系；弹性伸缩未单列",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Pod 水平自动扩缩（HPA）：按资源利用率（averageUtilization 60%）扩缩副本、利用率=当前用量/请求值、平均值算法与扩缩行为",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "managed microservices 与 elastic pools 讲次",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程页未明确讲弹性伸缩策略；英文有弹性池专讲。；原记录中文只把“弹性”挂在云计算课的概述上。这份官方文档正面讲了弹性伸缩的机制：控制器如何按指标计算出期望副本数、利用率口径怎么定义、扩缩容有哪些行为约束，属于可操作的弹性教学；配合已有 zh1 的 IaaS/PaaS 资源管理与编排概念即可闭环。"
+  },
+  {
+   "topic": "多租户",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "云服务体系与虚拟化，未单列多租户隔离",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "多租户页：Namespace 隔离维度、RBAC/NetworkPolicy 作用域、隔离技术强弱比较、共享集群与专用集群的成本/隔离权衡",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "按租户隔离与计价处提及，未单列多租户架构",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Multi-tenancy：Namespace 隔离、RBAC/NetworkPolicy 作用域、隔离强度比较、共享 vs 专用集群权衡",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都只到隔离/计价层，没有系统的多租户资源隔离与配额设计。；中文侧原来只有“按租户隔离”一句。该页把多租户拆成“隔离什么（API 资源/网络/权限）”与“用共享还是专用集群换隔离”两个决策，并给出成本与复杂性的权衡，正是多租户的核心内容。；英文侧 Cornell CS5412 只把多租户当作云的一个属性提到，没有讲实现。这份官方英文文档补上隔离机制（Namespace/RBAC/NetworkPolicy）与“共享集群换成本、专用集群换隔离”的工程权衡，使英文侧的多租户也有可学的正文。"
+  },
+  {
+   "topic": "编排",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "OpenStack/Docker/Hadoop 平台与实验",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Xen/containers、托管的微服务与弹性池、数据中心调度",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用 OpenStack 编排 VM/资源；英文讲容器与托管服务编排。"
+  },
+  {
+   "topic": "无服务器与成本模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未讲 serverless 与云成本模型",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "什么是函数计算（事件驱动全托管、弹性、Serverless vs Serverful、与传统常开服务器对比）+ FC 计费概述（按量付费/资源包/常驻资源池、CU 使用量、单价与换算系数、流量另计）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Function servers/serverless 讲次；cloud economics and cost 讲次",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺 serverless 与成本模型；英文两项都有专讲。；原记录中文只有 OpenStack/Docker 实验。这两页官方文档补上两半：无服务器一侧讲清“不管理服务器、按事件触发、自动准备与释放资源”的模型，以及与传统常开服务器在成本结构上的差别；成本模型一侧给出按量付费/预付费资源包/常驻资源池三种计价方式、统一计费项 CU 的换算与阶梯单价，能据此算一次函数与常驻实例的成本对比，属可核算的成本模型教学。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按云计算概述→虚拟化→服务模型→OpenStack/Docker/Hadoop 实验学习，建立 IaaS/PaaS 与编排基础。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读多租户页，列出三种隔离强度（同命名空间+RBAC/NetworkPolicy、独立命名空间+资源配额、独立集群/独立硬件）各自的成本与适用场景；再读 HPA 页，按 averageUtilization 与请求值手算一次期望副本数，并在 minikube 上用 CPU 压测观察扩缩。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读“什么是函数计算”与 FC 计费概述，用 CU 单价与换算系数估算“每天 100 万次、每次 200ms、512MB”的函数成本，再与一台常驻 2 vCPU 云主机按月费用对比，说清什么时候 serverless 更省。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按日程学云经济性→数据中心→分片→虚拟化/容器→弹性池→serverless→复制一致性，配合阅读论文与录像。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "读 Multi-tenancy 页，写一份“把一个共享集群改成每租户一集群”的成本/隔离对比清单，说明 Namespace 隔离在哪些攻击面下不够。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "云计算 中国大学MOOC 虚拟化 容器 弹性 无服务器 课程",
+   "result": "采纳河海大学云计算；未找到覆盖 serverless/成本模型的中文课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://kubernetes.io/zh-cn/docs/concepts/security/multi-tenancy/、/concepts/workloads/autoscaling/horizontal-pod-autoscale/",
+   "result": "采纳为 r7-zh1：正文讲多租户隔离维度与共享/专用集群权衡、HPA 按利用率扩缩副本与算法。",
+   "by": "review/pi-additions/C.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "阿里云 函数计算 Serverless 产品简介 计费概述 按量付费 弹性伸缩 中文文档",
+   "result": "命中阿里云官方“什么是函数计算”（Serverless vs Serverful、与传统常开服务器对比）与“FC 计费概述/按量付费”（计费方式、CU 使用量与阶梯单价）。采纳为 r7-zh2。",
+   "by": "review/pi-additions/C.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://help.aliyun.com/zh/functioncompute/what-is-function-compute 与 https://www.alibabacloud.com/help/zh/functioncompute/billing-overview-of-fc",
+   "result": "两页均打开核对：一页讲无服务器模型与按使用量计费，一页给计费方式与计费项，覆盖“无服务器与成本模型”。",
+   "by": "review/pi-additions/C.4.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://kubernetes.io/docs/concepts/security/multi-tenancy/",
+   "result": "打开确认英文正文讲 Namespace/RBAC/NetworkPolicy 隔离与专用集群权衡，采纳为 r7-en1。",
+   "by": "review/pi-additions/C.4.2.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有 Azure 架构中心，是厂商架构参考而非课程；已换河海大学云计算课。",
+  "旧英文 Cornell CS5412 保留：成本模型、弹性池与 serverless 都有明确讲次。",
+  "中文缺弹性/多租户/无服务器/成本模型，故为 partial。",
+  "Cornell CS5412 对多租户只在隔离/计价处提及，故英文路线也降为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "云计算",
+ "description": "IaaS/PaaS、弹性、多租户、编排、无服务器与成本模型。",
+ "applied_additions": [
+  "review/pi-additions/C.4.2.json@d454ba04e4"
+ ]
+}

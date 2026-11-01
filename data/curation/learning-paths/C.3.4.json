@@ -1,0 +1,238 @@
+{
+ "id": "C.3.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "温州大学《软件定义网络技术 SDN》（中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/WZU-1205809832",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "SDN 概述与基本原理、南向接口协议（OpenFlow）、数据平面、控制平面、北向接口、SDN 应用开发；实验含 Mininet、OpenFlow 协议分析、Open vSwitch、OpenFlow 交换机、数据平面编程、POX/RYU 控制器编程。",
+   "access": "课程页公开视频内容与实验清单；视频需注册中国大学MOOC并选课，按学期开放，认证证书收费。",
+   "publisher": "温州大学（黄辉、施晓秋等）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/WZU-1205809832",
+    "location": "课程概述“本课程视频主要内容”与实验清单",
+    "finding": "页面逐项列出 SDN 概述、南向/北向接口、数据/控制平面、应用开发，以及 Mininet/OVS/OpenFlow/POX/RYU 实验；未提网络配置自动化工具。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Software-Defined Networks: A Systems Approach（Peterson, Cascone, O'Connor, Vachuska, Davie；免费在线书）",
+   "url": "https://sdn.systemsapproach.org/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Introduction、Use Cases、Basic Architecture（控制/数据平面与控制器接口）、Bare-Metal Switches 与 Switch OS（可编程解析/匹配动作）、Network OS 与 Leaf-Spine Fabric（配置与自动化）、Network Virtualization、Access Networks、Future of SDN，附 Hands-on Programming。",
+   "access": "免费在线全文，无需注册；英文。",
+   "publisher": "Larry Peterson, Carmelo Cascone, Brian O'Connor, Thomas Vachuska, Bruce Davie",
+   "evidence": {
+    "url": "https://sdn.systemsapproach.org/",
+    "location": "Table of Contents：Basic Architecture、Bare-Metal Switches、Network OS、Leaf-Spine Fabric、Hands-on Programming",
+    "finding": "目录逐章列出控制/数据平面架构、裸金属交换机与交换机 OS、网络 OS 与 fabric 配置、网络虚拟化及动手编程。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "B 站「NetDevOps加油站」NETCONF 与 YANG 系列：02 如何根据 yang-model 编写 netconf 的 data 报文",
+   "url": "https://www.bilibili.com/video/BV1ot4y1e78C/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "网络配置的中文实操教学：以 YANG 模型为数据模型，按模型层级手工构造 NETCONF 的 <data> 报文，说明“先看 YANG 树 → 定位叶子节点 → 拼 XML 报文 → 用 NETCONF 下发”的配置流程（该账号为 NetDevOps 方向系列，本讲是系列第 02 讲）。",
+   "access": "B 站免费播放；中文；单 P 讲解；视频简介只有一句“如何根据 yang-model 编写 netconf 的 data 报文”，是否有配套讲义/字幕未核对。",
+   "publisher": "B 站 UP 主「NetDevOps加油站」（自制，账号方向为网络自动化/NetDevOps）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1ot4y1e78C/",
+    "location": "视频标题「【netconf与yangmodel系列】02-如何根据yang-model编写netconf的data报文」，bvinfo 读出 owner=NetDevOps加油站、copyright=1（自制）、单 P",
+    "finding": "确认存在中文的 NETCONF/YANG 报文构建教学视频（系列编号 02 说明前面有引入讲），对应“网络配置”里模型驱动配置这一半。"
+   },
+   "added_by": "review/pi-additions/C.3.4.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "华为《什么是 NETCONF？为什么需要 NETCONF？》（IP 知识百科，官方中文）",
+   "url": "https://info.support.huawei.com/info-finder/encyclopedia/zh/NETCONF.html",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "NETCONF 的结构化说明：NETCONF 是为网管与网络设备之间通信提供的配置协议（对远端设备的配置下发、修改、删除），基于 XML 与 RPC 机制，客户端/服务器角色；为什么需要 NETCONF（CLI 脚本无法模型化/回滚/校验）；NETCONF 是如何工作的、协议框架、能力集（capabilities）、支持的操作与数据集（运行/候选/启动配置数据集）。",
+   "access": "华为官网免费阅读（可导出 PDF），简体中文；属厂商知识库条目，不含实验步骤。",
+   "publisher": "华为技术有限公司（info.support.huawei.com IP 知识百科）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://info.support.huawei.com/info-finder/encyclopedia/zh/NETCONF.html",
+    "location": "正文：“网络配置协议 NETCONF……为网管和网络设备之间通信提供了一套协议，网管通过 NETCONF 协议对远端设备的配置进行下发、修改和删除等操作”“NETCONF 是基于 XML 的网络配置和管理协议，使用简单的基于 RPC 机制实现客户端和服务器之间通信”；目录含“为什么需要 NETCONF? / NETCONF 是如何工作的？/ NETCONF 的协议框架 / 什么是 NETCONF 的能力集？/ NETCONF 支持哪些操作和能力？”",
+    "finding": "确认官方中文条目把 NETCONF 的动机、RPC 框架、能力集与操作讲成小节，可作为中文的配置协议参考；但它不是课程/实验材料，故只作 reference。"
+   },
+   "added_by": "review/pi-additions/C.3.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "控制/数据平面",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "控制平面、数据平面、南向接口（OpenFlow）章节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Basic Architecture；Control Plane/Data Plane 接口",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从控制/数据平面分离讲起。"
+  },
+  {
+   "topic": "网络配置",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "北向接口与应用开发；未讲 NETCONF/YANG/Ansible 配置自动化",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "NETCONF 与 YANG 系列第 02 讲：按 yang-model 编写 NETCONF data 报文并下发",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "华为 IP 知识百科 NETCONF 条目：为什么需要 NETCONF、RPC 工作机制、协议框架、能力集、支持的操作与三类配置数据集",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Network OS 与 Leaf-Spine Fabric：fabric 配置、自动化",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程偏 OpenFlow/控制器编程，网络配置自动化只到北向 API；英文书有 fabric 配置与自动化章节。；原记录里中文 SDN 课只到北向接口/控制器编程，没有设备侧配置自动化。这段中文视频正面讲了模型驱动配置的落地动作：读 YANG 模型 → 构造 XML data 报文 → 通过 NETCONF 下发，正是“网络配置”里 NETCONF/YANG 这条主线的教学内容。；补协议层概念：为什么用 NETCONF 取代 CLI 脚本（模型化、可校验、可回滚）、客户端/服务器与 RPC 框架、能力集如何协商、运行/候选/启动数据集的区别。与 r7-zh1 的报文实操合起来构成“协议 + 实操”的中文网络配置教学；控制器侧的配置下发仍由已有 zh1（温州大学 SDN 的北向接口与控制器编程）承担。"
+  },
+  {
+   "topic": "可编程转发与自动化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据平面编程实践、OpenFlow 交换机、POX/RYU 控制器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Bare-Metal Switches/Switch OS（P4 式解析/匹配动作）；Hands-on Programming",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用 OpenFlow/OVS 做可编程转发；英文另讲 P4 式可编程流水线。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 SDN 概述→OpenFlow/南向→数据平面→控制平面→北向/应用开发学习，完成 Mininet+OVS+POX/RYU 实验。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "先读 NETCONF 条目，弄清为什么需要 NETCONF、RPC 框架与能力集协商，以及运行/候选/启动三种配置数据集分别什么时候用。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "跟第 02 讲动手：拿一份设备 YANG 模型，按其树结构写出配置 data 报文，用 NETCONF 会话（如 netconf-console 或 Python ncclient）下发并读回，验证 commit/rollback 行为。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Introduction→Use Cases→Basic Architecture→Bare-Metal Switches→Network OS/Fabric→Network Virtualization 读，并做 Hands-on Programming。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/WZU-1205809832 课程概述与实验",
+   "result": "采纳为中文主课；确认有 OpenFlow/OVS/POX/RYU 实验，无配置自动化。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "NETCONF YANG 网络配置自动化 中文 教程 课程 华为 SDN 控制器 配置下发",
+   "result": "命中华为 IP 知识百科 NETCONF 条目（官方中文，结构化讲解）、华为《超融合数据中心网络》eBook、锐捷 NETCONF 技术文、CSDN 源码贴。采纳华为条目为 r7-zh2。",
+   "by": "review/pi-additions/C.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "网络自动化运维 课程 网络配置 自动化 数据中心 SDN 控制器 编排（限 icourse163/xuetangx/华为云）",
+   "result": "没有找到国内 MOOC 层面的“网络自动化/网络配置”课程（返回的是华为云博客、认证培训售卖页）；说明该知识点中文没有 MOOC 级课程。",
+   "by": "review/pi-additions/C.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 网络自动化 NETCONF YANG netmiko 网络配置 系列教程",
+   "result": "找到 Netmiko 实操、网络工程师 Python 自动化等内容，以及「【netconf与yangmodel系列】02-如何根据yang-model编写netconf的data报文」。",
+   "by": "review/pi-additions/C.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "bilibili netconf与yangmodel系列 报文 教程",
+   "result": "定位到 BV1ot4y1e78C（uploader=NetDevOps加油站，自制），打开核对后采纳为 r7-zh1。",
+   "by": "review/pi-additions/C.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://developer.huaweicloud.com/techfield/network/aoc.html",
+   "result": "华为“数通网络开放可编程”页只有概述与应用场景（YANG 模型驱动、驱动包/业务包），属产品介绍，未采纳为教学来源。",
+   "by": "review/pi-additions/C.3.4.json"
+  }
+ ],
+ "findings": [
+  "旧中文课程保留：控制/数据平面与可编程转发有明确视频和实验。",
+  "旧英文书保留：配置与自动化由 Network OS/Leaf-Spine Fabric 章承担。",
+  "中文缺网络配置自动化，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "SDN与可编程网络",
+ "description": "控制/数据平面、网络配置、可编程转发与自动化。",
+ "applied_additions": [
+  "review/pi-additions/C.3.4.json@78986d0965"
+ ]
+}

@@ -1,0 +1,317 @@
+{
+ "id": "C.5.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京理工大学《并行编程原理与实践》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/BIT-1470418179",
+   "tier": "website",
+   "free": null,
+   "role": "supplement",
+   "covers": "CUDA 异构编程、核函数与线程组织、共享内存/访存、同步与性能优化；配合 CPU+GPU 异构平台实验。",
+   "access": "视频需注册选课，按学期开放，认证证书收费；课程页未列逐讲 CUDA 细节。",
+   "publisher": "北京理工大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1470418179",
+    "location": "课程概述：CPU+GPU 异构系统下的 CUDA 编程与优化；参考书含 Kirk & Hwu",
+    "finding": "页面明确讲 CUDA 编程与异构平台优化，参考书为《Programming Massively Parallel Processors》，可覆盖核函数/访存/同步/性能；未提算子融合。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "浙江大学超算队 HPC 101：Lab 3 GDNN Prefill、Lab 5 端到端推理优化",
+   "url": "https://hpc101.zjusct.io/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "GDN prefill 前向优化、昇腾算子开发、INT8 张量核、Gemma4 端到端推理优化；涉及算子实现与带宽/延迟优化。",
+   "access": "实验文档免费；需要算力环境。",
+   "publisher": "浙江大学超算队",
+   "evidence": {
+    "url": "https://hpc101.zjusct.io/",
+    "location": "课程实验目录：Lab 3 GDN Prefill 前向优化、Lab 5 Gemma4 端到端推理优化",
+    "finding": "实验以真实模型前向/推理优化为目标，包含算子实现与性能测量，可作为算子融合/带宽优化的动手补充。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Stanford CS149 Parallel Computing（Fall 2025）",
+   "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "GPU 架构与 CUDA 编程、访存与局部性、细粒度同步、DNN 在 GPU 上的执行、roofline/带宽分析；作业 3 CUDA 渲染器、作业 4 fused Conv+MaxPool、作业 5 最快 CUDA kernel。",
+   "access": "课程主页与讲义/作业免费公开；英文，视频/字幕未核对。",
+   "publisher": "Stanford University",
+   "evidence": {
+    "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+    "location": "Schedule 与 Assignments：GPU/CUDA、Program Optimization 2 (locality)、作业 4 fused Conv+MaxPool、作业 5 CUDA kernels",
+    "finding": "日程含 GPU/CUDA、局部性与带宽优化，作业明确要求 fused Conv+MaxPool 与 CUDA kernel 性能竞赛，覆盖算子融合与剖析。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "【哈工大-苏统华】CUDA 并行程序设计（B 站 47 分 P 课程录像：Lec1 Hello CUDA、Lec2 GPU 硬件架构、Lec3 CUDA 软件抽象机制、Lec4 GPU 存储与优化、Lec5 CUDA 调试与分析、Lec6 规约与扫描算法）",
+   "url": "https://www.bilibili.com/video/BV15E411x7yT/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "中文 CUDA 成课录像：专题 1（什么是 GPU、GPU 硬件架构一瞥、Hello CUDA、阿姆达尔定律）、专题 2（GPU 硬件连接模型、Kepler/Fermi 架构）、专题 3（GPU 多线程原理；CUDA 抽象机制之并发线程模型、内存模型、同步机制及 Quiz；CUDA 函数/内核线程索引/设备占用率；线程束调度机制；开发工具与生态圈）、专题 4 GPU 存储与优化（含 CPU/GPU 存储结构）、专题 5 CUDA 调试与分析（Nsight 简介、vecadd/occupancy/branch/stride 样例工程、CUDA 调试实例）、规约与扫描算法。",
+   "access": "第三方转载，授权未核。B 站免费播放，中文讲授，共 47 个分 P（原为哈工大创新实验课，由苏统华老师主讲，视频 720p）；上传者为个人账号「候补生ELY」并自述“本人也在学习”，属搬运；简介另给百度云（视频+PPT）链接。是否有字幕未核对。",
+   "publisher": "哈尔滨工业大学 苏统华（课程主讲）；B 站上传者「候补生ELY」",
+   "reupload": true,
+   "official_search": "查了中国大学MOOC：以“苏统华”“CUDA 并行程序设计”“哈工大 CUDA”检索与站内浏览，只返回哈工大的《程序设计基础》《计算机网络》《计算机组成原理》《编译原理》等课程，没有这门 CUDA 创新实验课的免费官方版；哈工大课程平台未公开该课录像。官方版找不到，按规则保留转载并标注 reupload。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV15E411x7yT/",
+    "location": "分 P 列表：“3-2 CUDA抽象机制之2内存模型720p”“3-2 CUDA抽象机制之3同步机制及Quiz720p”“4-1 CPU存储结构720p”“5-1 Nsight简介720p”“5-2 样例工程介绍之2vecadd工程详解”“5-3 CUDA调试实例720p”；简介写“哈工大的创新实验课-由苏统华老师主讲 Lec0 课程介绍 / Lec1 Hello CUDA / Lec2 GPU硬件架构 / Lec3 CUDA软件抽象机制 / Lec4 GPU存储与优化 / Lec5 CUDA调试与分析 / Lec6 规约与扫描算法”",
+    "finding": "确认中文视频里确有“内存模型”“同步机制”“GPU 存储与优化”“Nsight 调试与分析”这四个讲次，正好对应访存、同步、性能剖析三个缺口；同时核对 uploader=候补生ELY、简介自述搬运。"
+   },
+   "added_by": "review/pi-additions/C.5.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《AI System》中文课程（infrasys-ai）：算子融合、算子手工优化（Roofline）、算子循环优化、CUDA 编程模式",
+   "url": "https://infrasys-ai.github.io/aisystem-docs/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "「AI 编程与计算架构」部分：图算 IR、算子融合（算子融合方式、以 BN 计算流程为例的融合案例、布局转换原理与算法、内存分配算法）、计算与调度、算子手工优化（计算分析指标：计算量 Flops、访存量 Byte、计算强度、理论性能；Roofline 模型；优化策略；DSL 开发算子）、算子循环优化；另有 CUDA 编程模式（Warp/线程束、Warp Scheduler、访存延迟隐藏）与“SIMD & SIMT 与 CUDA 关系”。",
+   "access": "GitHub Pages 免费在线阅读，简体中文，配图与公式；作者社区另在 B 站有配套视频（未核对逐节对应）。",
+   "publisher": "Infrasys-AI 组织（AI 系统方向开源课程文档）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://infrasys-ai.github.io/aisystem-docs/03Compiler03Frontend/03OPFusion.html",
+    "location": "「算子融合」页目录：算子融合方式 / 算子融合案例（BN 计算流程）；另打开 03Compiler04Backend/03Optimization.html 读到“在优化算子前，首先需要知道当前程序的瓶颈在哪里，是计算瓶颈还是访存瓶颈。对于这两者，往往是通过 RoofLine 模型进行分析”“计算强度：计算量除以访存量就是算子的计算强度……计算强度越大，其内存使用效率越高”与“Roofline 模型”小节；02Hardware07Thought/04NVSIMT.html 读 CUDA 编程模式（Warp、FGMT、访存延迟隐藏）",
+    "finding": "确认中文课程文档有独立的算子融合页（含融合方式与 BN 案例）与 Roofline 性能分析页（计算强度/访存量/理论性能），可补“算子融合”“带宽与性能剖析”。"
+   },
+   "added_by": "review/pi-additions/C.5.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "核函数",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CUDA 异构编程与核函数/线程组织",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "GPU Architecture and CUDA Programming；作业 3/5",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程页概括 CUDA 编程；英文有明确 CUDA 讲次与 kernel 作业。"
+  },
+  {
+   "topic": "访存",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CUDA 优化中的共享内存/访存（课程概述概括）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Lec4 GPU 存储与优化 + 3-2 CUDA 抽象机制之内存模型（含 CPU/GPU 存储结构）、3-3 设备占用率",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Program Optimization 2: Locality and Communication；GPU 存储层次",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程页未列访存专章，需靠参考书/实验；英文有局部性与通信优化讲次。；原记录中文只有课程概述里的“共享内存/访存”一句。这套录像有专门的 GPU 存储与优化专题，并在抽象机制里单列内存模型讲次，把寄存器/共享内存/全局内存的层次与如何据此优化访存讲成课，属可核实的访存教学；HPC101 的昇腾实验仍作动手补充。"
+  },
+  {
+   "topic": "同步",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CUDA 同步与异构并行（课程概述概括）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "3-2 CUDA 抽象机制之 3「同步机制及 Quiz」+ 3-4 线程束调度机制 + Lec6 规约与扫描算法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Fine-grained synchronization、memory consistency；CUDA 同步",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到课程概述层；英文有细粒度同步与内存一致性讲次。；CUDA 的块内同步（__syncthreads 语义、为何共享内存读写之间必须同步）在“同步机制”讲次里专门讲并配 Quiz，规约与扫描专题则是同步的经典应用，能检验是否真懂 barrier 的代价。"
+  },
+  {
+   "topic": "算子融合",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "Lab 3 GDN prefill / Lab 5 推理优化（模型级融合，未单列算子融合）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "「算子融合」页：算子融合方式、算子融合案例（BN 计算流程）、内存分配与布局转换",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "作业 4：fused Conv+MaxPool",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有模型前向优化实验，没有算子融合的专门教学；英文作业明确要求融合卷积与池化。；原记录中文只有模型级推理优化实验，没有算子融合的教学。这份中文课程文档把算子融合单独成页，讲融合的几种方式并用 BatchNorm 的计算流程做案例，说明融合后省掉了哪些中间结果的访存，正对应“算子融合”这个知识点的核心。"
+  },
+  {
+   "topic": "带宽与性能剖析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CUDA 性能优化（课程概述）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "Lab 5 端到端推理优化的性能测量",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "算子手工优化：计算量/访存量/计算强度、Roofline 模型、优化策略；算子循环优化",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Lec5 CUDA 调试与分析：Nsight 简介、vecadd/occupancy/branch/stride 样例工程、CUDA 调试实例",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "roofline/带宽分析、作业 5 性能竞赛",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺 roofline/带宽模型的系统讲解与 profiler 教学。；用 Roofline 把算子判定为 compute-bound 还是 memory-bound，再据此选择优化方向（减少访存还是减少 FLOPs），是把“带宽”与“性能上限”讲成可计算的方法；与 r7-zh1 的 Nsight 实测互相印证。；剖析工具一半：用 Nsight 对 vecadd、occupancy、branch、stride 四个样例做性能分析并演示调试实例，说明如何测量带宽利用率、占用率与分支/跨步访存的影响，属工具级性能剖析教学。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "学 CUDA 核函数、线程组织与共享内存，完成矩阵乘/归约等基础 kernel。"
+    },
+    {
+     "source": "zh2",
+     "read": "做 GDN prefill 与推理优化实验，记录带宽/延迟与算子实现。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按专题顺序看：先 Lec1–Lec2 建立 GPU 硬件与 CUDA 编程模型，再重点看 3-2 的内存模型与同步机制（每个共享内存用法都补上 __syncthreads）、Lec4 GPU 存储与优化，最后跟 Lec5 用 Nsight 对 vecadd/occupancy/stride 样例做剖析并解释瓶颈。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读“算子融合”页与“算子手工优化”页：先按 Roofline 算一遍某算子的计算强度并判断 bound 类型，再照着 BN 融合案例写出融合前后各需多少次全局内存读写，量化融合收益。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 GPU/CUDA→局部性与通信→细粒度同步→DNN 执行学习，完成作业 3/4/5，并用 roofline/带宽分析指导优化。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "CUDA 并行计算 中文 课程 讲义 GPU 编程 中国大学MOOC",
+   "result": "采纳北京理工大学并行编程课；未找到讲算子融合的中文课程，补浙大 HPC101 实验。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "CUDA 编程 中文 教程 共享内存 bank 冲突 __syncthreads 性能分析 nsight 系列",
+   "result": "只得到 NVIDIA 2007 年 CUDA 1.1 中文指南 PDF、个人博客与知乎专栏，没有成体系的课程；转去查视频与 AI 编译器方向。",
+   "by": "review/pi-additions/C.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "算子融合 计算图优化 AI编译器 中文 教程 roofline 带宽 性能分析 GPU 推理优化",
+   "result": "命中 ZOMI/AI System 中文课程（算子手工优化 Roofline 页）、MindSpore 官方“使能图算融合”教程、apxml 商业课程页、南大算子性能分析新闻。采纳 AI System 课程（r7-zh2），其文档自带算子融合与算子手工优化两页。",
+   "by": "review/pi-additions/C.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com CUDA 编程 教程 共享内存 线程同步 性能优化 系列",
+   "result": "命中【哈工大-苏统华】CUDA 并行程序设计（BV15E411x7yT）、【CUDA】Reduce 规约求和系列、贝鲁特美国大学 GPU 计算课程等。采纳哈工大这套（r7-zh1），并用 bvinfo 核对了 47 个分 P 中确有内存模型/同步机制/Nsight 讲次。",
+   "by": "review/pi-additions/C.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "苏统华 CUDA并行程序设计 哈尔滨工业大学 中国大学MOOC 课程 官方 视频",
+   "result": "中国大学MOOC 上没有这门课（只有哈工大其它课程），确认无官方免费版，B 站版本按转载登记并写 official_search。",
+   "by": "review/pi-additions/C.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://infrasys-ai.github.io/aisystem-docs/03Compiler03Frontend/03OPFusion.html 与 /03Compiler04Backend/03Optimization.html",
+   "result": "打开核对：算子融合页有融合方式与 BN 案例，算子手工优化页有计算强度与 Roofline 模型小节，采纳。",
+   "by": "review/pi-additions/C.5.2.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有浙大 HPC101 实验站，不能证明核函数/访存/同步教学；已换北理工课程为主。",
+  "旧英文 CS149 保留：作业 4 正好是 fused Conv+MaxPool，作业 5 做 kernel 性能优化。",
+  "中文缺算子融合与 roofline，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "GPU计算与性能优化",
+ "description": "核函数、访存、同步、算子融合、带宽与性能剖析。",
+ "applied_additions": [
+  "review/pi-additions/C.5.2.json@2985f4db2b"
+ ]
+}

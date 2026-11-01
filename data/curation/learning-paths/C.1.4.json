@@ -1,0 +1,323 @@
+{
+ "id": "C.1.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Stanford CS149 Parallel Computing (Fall 2025, Fatahalian & Olukotun)",
+   "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "多核/SIMD/多线程并行形式、latency 与 bandwidth、GPU 架构与 CUDA、数据并行与调度、DNN 在 GPU 上的执行、硬件专用化与 DNN 加速器设计、面向专用硬件的编程系统、数据中心级 AI 服务、cache 与内存一致性。",
+   "access": "课程主页与讲义免费公开；英文授课，录像/字幕状态未逐一核对。",
+   "publisher": "Stanford University（Kayvon Fatahalian, Kunle Olukotun）",
+   "evidence": {
+    "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+    "location": "Schedule：Parallelism basics、GPU architecture/CUDA、latency/bandwidth、DNN accelerators、specialized hardware、memory consistency",
+    "finding": "日程逐讲列出 SIMD/多线程、GPU 架构与 CUDA、带宽/延迟、DNN 加速器与专用硬件编程、cache 一致性，覆盖本节点四项。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京理工大学《并行编程原理与实践》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/BIT-1470418179",
+   "tier": "website",
+   "free": null,
+   "role": "supplement",
+   "covers": "并行计算机系统结构、并行程序设计关键问题、Pthreads/OpenMP/MPI/CUDA，共享内存、分布式内存与 CPU+GPU 异构平台上的并行编程与优化；含国产处理器与超算系统案例。",
+   "access": "课程页公开概述与参考书；视频需注册中国大学MOOC并选课，认证证书收费。",
+   "publisher": "北京理工大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1470418179",
+    "location": "课程概述：并行计算机系统结构、共享/分布式/异构平台、CUDA；预备知识与参考书",
+    "finding": "页面写明从并行计算机系统结构讲到 Pthreads/OpenMP/MPI/CUDA，并在 CPU+GPU 异构系统上做编程与优化；未提 DNN 专用加速器设计。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "浙江大学超算队 HPC 101 超算短学期（实验站）",
+   "url": "https://hpc101.zjusct.io/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Lab 2 MoE 向量化、Lab 3 GDN prefill 前向优化、Lab 3.5 昇腾算子开发与优化、Lab 4.5 INT8 张量核模拟 FP64 GEMM、Lab 5 端到端推理优化；以国产加速器与张量核实践补专用加速器。",
+   "access": "免费公开实验文档与集群使用说明；需要 Linux 与算力环境，部分实验依赖课程集群账号。",
+   "publisher": "浙江大学超算队（ZJUSCT）",
+   "evidence": {
+    "url": "https://hpc101.zjusct.io/",
+    "location": "课程实验目录：Lab 2/3/3.5/4.5/5",
+    "finding": "站点列出向量化、昇腾算子开发、INT8 张量核与端到端推理优化实验，是专用加速器与吞吐优化的动手材料，但不是体系结构理论课。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《智能计算系统》（陈云霁等，中科院计算所智能处理器研究中心；国科大课程大纲 + B 站官方公开课）",
+   "url": "https://jwba.ucas.ac.cn/sc/course/courseplan/197496",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "第一章概述（驱动范例）→ 第二章神经网络基础 → 第三章深度学习 → 第四/五章编程框架（计算图机制、本地单设备/本地多设备/分布式执行、计算图分配与优化含算子融合）→ 第六章深度学习处理器原理（6.1 概述、6.2 目标算法分析：数据局部性、数据与计算的关系即带宽需求、6.3 DLP 结构：指令集/流水线/运算部件/访存部件/算法映射、6.4 优化设计：标量 MAC 运算部件/稀疏化/低位宽、6.5 性能评价：TOPS 与访存带宽、6.6 加速器对比：DLP/FPGA/GPU）→ 第七章深度学习处理器架构（7.1 单核 DLP 控制/运算/存储模块、7.2 多核 DLP：外部存储控制器、外设通信、片上互联、GBC 全局栅障同步与四个 DLP-C、7.3 并行内积运算器/矩阵运算子单元实验）→ 第八章智能编程语言 → 第九章综合实验。",
+   "access": "国科大教务系统公开课程大纲（课程编码 B0912022Y，含逐章学时与章节实验）；视频在 B 站「智能计算系统AICS」账号（mid 494117284，大纲页“其它说明”里给出的在线公开课网站即该 B 站空间），免费播放、中文讲授；配套教材《智能计算系统》（机械工业出版社，需购买）。第 2 版另有《智能计算系统——从深度学习到大模型》第六章视频 BV17T421S73V。",
+   "publisher": "中国科学院计算技术研究所智能处理器研究中心 / 陈云霁、李威等（国科大岗位教授课）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://jwba.ucas.ac.cn/sc/course/courseplan/197496",
+    "location": "课程大纲正文：第六章 6.1–6.6（6.3 深度学习处理器DLP结构、6.4 优化设计、6.5 性能评价 TOPS/访存带宽、6.6 其他加速器）、第七章 7.1 单核/7.2 多核深度学习处理器、第八章智能编程语言；末尾“其它说明：在线公开课网站 https://space.bilibili.com/494117284”；课程教师信息写明陈云霁团队研制寒武纪 1 号",
+    "finding": "官方大纲逐条列出“深度学习处理器原理—结构—性能评价—加速器对比—多核 DLP 同步”这条线，正好覆盖专用加速器设计；同时确认 B 站账号是课程组自己的公开课渠道。另打开 https://www.bilibili.com/video/BV1WE411A7tv（uploader=智能计算系统AICS，自制，分 P 为第一讲 1.1–1.6）与 https://www.bilibili.com/video/BV17T421S73V（第 2 版第六章“面向深度学习的处理器原理”，简介写“回顾深度学习处理器结构从通用逐步走向专用的过程……掌握智能计算系统的设计准则”）确认视频存在且为中文。"
+   },
+   "added_by": "review/pi-additions/C.1.4.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "胡伟武《计算机体系结构基础》（第三版）在线全文：第 10 章 并行编程基础、第 11 章 多核处理结构",
+   "url": "https://foxsen.github.io/archbase/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 10 章：10.1.1 指令级并行、10.1.2 数据级并行性、10.1.3 任务级并行性；10.2 并行编程模型（单任务数据并行、多任务共享存储、消息传递）；10.3.1 数据并行 SIMD 编程（SISD 与 SIMD 执行控制流对照图、向量化写法）。第 11 章：11.1 多核/众核与同构/异构分类、11.2 多核处理器访存结构、11.2.1 通用多核片上 Cache 结构、11.2.2 存储一致性模型、11.3 互连结构、11.4 同步机制、11.5.4 NVIDIA GPU（Fermi：SM、Warp 32 线程一组执行、L1/共享存储/L2/全局存储四级、单精度峰值 1.536 TFLOPS、访存带宽 177.4 GB/s，配套习题要求比较各层带宽/延迟/是否共享），11.5.3 IBM Cell（异构协处理器）。",
+   "access": "GitBook 在线免费全文，无需注册；简体中文；含习题。",
+   "publisher": "胡伟武（中国科学院计算技术研究所/龙芯）等，机械工业出版社原书，作者授权在线版",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://foxsen.github.io/archbase/%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E7%BB%93%E6%9E%84.html",
+    "location": "11.5.4 NVIDIA GPU 正文：“3）L2 Cache。768KB 统一的二级 Cache 在 16 个 SM 间共享……4）全局存储。所有线程共享的片外存储”，以及“这些线程被组织成线程块，以 32 个为一组（Warp）来执行……单精度浮点峰值性能为 1.536TFLOPS，访存带宽为 177.4GB/s”，图 11.23 Fermi 的存储层次图；章末习题“分析 Fermi GPU 的存储结构，指出不同层次存储结构的带宽、延迟、是否共享”",
+    "finding": "确认中文正文成段讲了 GPU 的 warp 执行模型、四级存储层次与带宽/峰值指标，并有直接对应的习题；另在 https://foxsen.github.io/archbase/%E5%B9%B6%E8%A1%8C%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80.html 读到 10.1.2 数据级并行性与 10.3.1 数据并行 SIMD 编程（图 10.4 SISD 与 SIMD 执行控制流）。"
+   },
+   "added_by": "review/pi-additions/C.1.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "SIMD/SIMT",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "课程概述：并行计算机系统结构 + CUDA 异构编程（SIMT 未单列）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 10 章 10.1.2 数据级并行性 + 10.3.1 数据并行 SIMD 编程（图 10.4 SISD/SIMD 执行控制流）；第 11 章 11.1 同构/异构与众核分类、11.5.4 NVIDIA GPU（线程块与 Warp，32 个线程一组执行）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Parallelism basics（SIMD/多线程）＋ GPU Architecture and CUDA Programming",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课在 CUDA 部分实践 SIMT，但没有明确的 SIMD/SIMT 架构讲次；英文课有专讲。；中文侧先讲清 SIMD 的数据级并行与向量化写法（SISD 与 SIMD 控制流对照），再用 Fermi 讲 GPU 把上千个 CUDA 线程按 32 个一组（Warp）组织成 SIMD 式执行——这正是 SIMT 的机制（教材没用 SIMT 这个词，但把 warp 执行模型讲清了）。再配 r7-zh1 第六章 6.3 的 DLP 运算部件（并行内积运算器、矩阵运算子单元）与已有 zh1 的 CUDA 编程实践，SIMD 与 GPU 式并行两条线都有中文教学。"
+  },
+  {
+   "topic": "存储层次",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "并行计算机系统结构、共享/分布式存储与 CUDA 访存优化",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 11 章 11.2 多核处理器访存结构、11.2.1 通用多核片上 Cache 结构、11.5.4 Fermi 存储层次图（L1/共享存储/L2/全局存储）与章末习题",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第六章 6.2 目标算法分析（数据局部性、数据与计算的关系即带宽需求）、6.3 DLP 访存部件、7.1 单核 DLP 存储模块、7.2 外部存储控制器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "latency/bandwidth、GPU memory hierarchy、cache 与一致性相关讲次",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程页只泛称系统结构，未核到 GPU 存储层次专章；英文课明确讲带宽/延迟与 GPU 存储。；教材逐层讲多核/GPU 的访存结构：片上私有与共享 Cache、L1/共享存储/L2/全局存储的容量、共享范围与带宽差异，并布置“比较各层带宽、延迟、是否共享”的习题，属于成体系的存储层次教学，不再是课程页里的泛称。；从加速器设计角度补一层：为什么专用处理器要靠数据复用和片上缓冲降低带宽需求，以及 DLP 里访存部件/存储模块/外部存储控制器各承担什么，和 r7-zh2 的通用多核 Cache 层次互为对照。"
+  },
+  {
+   "topic": "吞吐计算",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "并行程序性能与 CUDA 优化实践",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "Lab 2 向量化、Lab 5 端到端推理优化",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第六章 6.5 性能评价（TOPS、访存带宽）+ 6.2 算法对带宽的需求 + 第七章多核 DLP 提升算力 + 6.6 加速器对比",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 11 章 11.1（众核处理器具有很高的浮点峰值性能）、11.5.4（Fermi 480 核、1.536 TFLOPS、177.4 GB/s）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Program optimization、roofline/带宽分析、GPU 执行效率",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文以实验中的吞吐优化为主，缺少系统的 roofline/吞吐模型讲授。；以 TOPS 与访存带宽两个指标评价加速器吞吐，并要求分析算法计算量/访存量与带宽的关系，正是吞吐计算（面向吞吐而非单指令延迟）的中文讲授；配合已有 zh1 的 CPU+GPU 异构优化与 zh2 的推理端到端优化实验，吞吐模型与实践都有。；补通用体系结构侧的吞吐视角：用峰值算力与访存带宽两个数字说明众核/GPU 靠并行堆吞吐，与加速器的 TOPS 评价口径一致。"
+  },
+  {
+   "topic": "专用加速器和异构调度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "Lab 3.5 昇腾算子开发、Lab 4.5 INT8 张量核、Lab 5 推理优化",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第六章 6.3 DLP 结构（指令集/流水线/运算部件/访存部件/算法映射）、6.4 优化设计（稀疏化、低位宽）、6.6 加速器对比（DLP/FPGA/GPU）、第七章 7.2 多核 DLP（片上互联、GBC 全局栅障同步、四个 DLP-C）、第五章计算图分配与本地多设备/分布式执行",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Hardware specialization、DNN accelerator design、programming systems for specialized hardware、datacenter AI serving",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有国产加速器算子实验，没有加速器架构设计与异构调度算法的课程层材料。；这是中文里唯一成体系的“专用加速器架构 + 异构调度”课程：先讲深度学习处理器为什么要专用（目标算法分析）、内部结构如何组织（DLP 指令集、运算/访存部件、算法映射）、怎么优化（稀疏化、低位宽），再讲多核 DLP 的片上互联与 GBC 同步，最后落到编程框架侧的计算图分配与多设备/分布式执行（即异构设备上的任务划分与调度）。原有 zh2 的昇腾算子实验仍作动手补充。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先学并行系统结构与 Pthreads/OpenMP/MPI，再进入 CUDA 与 CPU+GPU 异构编程，完成向量化与访存优化练习。"
+    },
+    {
+     "source": "zh2",
+     "read": "选做昇腾算子、INT8 张量核与推理优化实验，建立专用加速器的动手认识。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读《计算机体系结构基础》第 10 章 10.1.2–10.3.1 建立 SIMD/数据级并行与向量化概念，再读第 11 章 11.2（片上 Cache、访存结构）与 11.5.4（Fermi 的 SM、Warp、四级存储、峰值与带宽），做章末“比较各层带宽/延迟/是否共享”的习题。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按 B 站公开课顺序看第五→六→七章：先计算图与多设备执行，再第六章（目标算法分析→DLP 结构→优化设计→TOPS/带宽评价→DLP/FPGA/GPU 对比），最后第七章多核 DLP 与 GBC 同步，并选做 7.3 并行内积运算器/矩阵运算子单元实验。"
+    },
+    {
+     "source": "zh2",
+     "read": "在 HPC101 里选做 Lab 3.5 昇腾算子开发与 Lab 5 端到端推理优化，把“专用加速器 + 异构调度”落到国产加速器的动手实现。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按日程学并行形式→GPU/CUDA→带宽与延迟→专用硬件/DNN 加速器→数据中心 AI 服务，配合作业做性能分析。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "CUDA 并行计算 中文 课程 讲义 GPU 编程 中国大学MOOC",
+   "result": "采纳北京理工大学并行编程课；另用浙大 HPC101 实验补国产加速器实践。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://foxsen.github.io/archbase/并行编程基础.html、多核处理结构.html",
+   "result": "采纳 r7-zh2：第 10 章有数据级并行与 SIMD 编程，第 11 章有片上 Cache 结构、Fermi GPU 的 Warp/四级存储/带宽与对应习题，直接补 SIMD、存储层次、吞吐三项。",
+   "by": "review/pi-additions/C.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "智能计算系统 陈云霁 中国大学MOOC 深度学习处理器 课程 大纲 章节",
+   "result": "找到国科大教务系统课程大纲（含第六章 6.1–6.6、第七章、第八章）、课程.educg.net 一流课程页、B 站官方公开课空间 494117284。icourse163 上没有这门课。",
+   "by": "review/pi-additions/C.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 智能计算系统",
+   "result": "确认中国大学MOOC 没有《智能计算系统》课程（返回的都是人工智能通识/计算思维类课程），官方版只能走国科大大纲 + B 站课程组账号。",
+   "by": "review/pi-additions/C.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://jwba.ucas.ac.cn/sc/course/courseplan/197496",
+   "result": "采纳为 r7-zh1 的主证据：逐章大纲 + 章节实验 + 教师信息 + “在线公开课网站”B 站空间。",
+   "by": "review/pi-additions/C.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://course.educg.net/pages/page.jsp?pageID=VWytB7DL-vM&doVisit=true",
+   "result": "读到大纲说明“由中科院计算所智能处理器研究中心陈云霁团队推出……章节 14 实验 74”；页面为前端渲染，章节明细读不到，作旁证。",
+   "by": "review/pi-additions/C.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "CUDA 并行编程 中文 课程 SIMT 线程束 warp 共享内存 存储层次 中国大学MOOC",
+   "result": "只命中北理工《并行编程原理与实践》（已有 zh1）、NVIDIA 2007 年 CUDA 1.1 中文编程指南 PDF 与个人博客；没有新的中文 CUDA/SIMT 系统课，故 SIMT 改由 r7-zh2 的 warp 执行模型 + 智能计算系统的运算部件承担。",
+   "by": "review/pi-additions/C.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 智能计算系统 深度学习处理器原理 中科院计算所 第六章",
+   "result": "命中 BV17T421S73V（第 2 版第六章）与第六章上/下两讲等视频，均属「智能计算系统AICS」；打开 BV17T421S73V 与 BV1WE411A7tv 核对上传者与分 P/简介后采纳。",
+   "by": "review/pi-additions/C.1.4.json"
+  }
+ ],
+ "findings": [
+  "旧中文来源只有浙大 HPC101，是短学期实验站而非体系结构课，不能单独覆盖 SIMD/SIMT 与存储层次。",
+  "新增北京理工大学并行编程课补系统结构、CUDA、异构编程；专用加速器仍只能到实验层。",
+  "英文 CS149 保留，四项均有明确的架构讲次。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "GPU、加速器与异构系统",
+ "description": "SIMD/SIMT、存储层次、吞吐计算、专用加速器和异构调度。",
+ "applied_additions": [
+  "review/pi-additions/C.1.4.json@a109e8aa18"
+ ]
+}

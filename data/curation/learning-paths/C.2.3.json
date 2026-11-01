@@ -1,0 +1,310 @@
+{
+ "id": "C.2.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《Docker 从入门到实践》（yeasy，中文开源书）",
+   "url": "https://yeasy.gitbook.io/docker_practice",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "入门（镜像/容器/仓库）、进阶（Dockerfile、数据管理、网络、Buildx、Compose）、深入（底层实现：namespace/cgroups 等；容器编排基础、部署 Kubernetes、Etcd、容器与云计算）、实战（安全、监控日志、DevOps）。",
+   "access": "GitBook 免费在线阅读，无需注册；示例命令需本地 Docker 环境。",
+   "publisher": "yeasy（开源项目作者群）",
+   "evidence": {
+    "url": "https://yeasy.gitbook.io/docker_practice",
+    "location": "目录：第十二章 底层实现、第十三章 容器编排基础、第十四章 部署 Kubernetes、第十八章 安全",
+    "finding": "目录明确列出 namespace/cgroups 底层实现、镜像/容器/网络、Compose、Kubernetes 部署与安全，是完整中文正文而非只有首页。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "河海大学《云计算技术与应用》（中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/HHU-1001755117",
+   "tier": "website",
+   "free": null,
+   "role": "supplement",
+   "covers": "云计算概述、关键技术（重点是虚拟化原理与应用）、云服务体系、Google/Amazon/阿里云方案、OpenStack/Docker/Hadoop；覆盖 hypervisor/虚拟机与 IaaS 资源管理。",
+   "access": "课程页公开概述与大纲；视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "河海大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HHU-1001755117",
+    "location": "课程概述“课程主要内容”；授课目标第 1–3 条",
+    "finding": "页面写明重点讲虚拟化技术原理和应用，并通过 OpenStack/Hadoop 实验理解云服务体系；可补中文虚拟机侧，但不讲 cgroup 调度算法。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Learning Containers From The Bottom Up（Ivan Velichko）",
+   "url": "https://iximiuz.com/en/posts/container-learning-path/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "容器是被 namespace 隔离、被 cgroups/capabilities/seccomp 限制的进程；fork/exec 与 namespace/cgroup 配置、runc 与 OCI bundle、镜像构建与分发、containerd、Kubernetes Pod、Kata 等用真虚拟机实现的容器。",
+   "access": "博客长文免费；配套文章/实验分散在站点，部分实验需自备 Linux。英文。",
+   "publisher": "Ivan Velichko",
+   "evidence": {
+    "url": "https://iximiuz.com/en/posts/container-learning-path/",
+    "location": "正文学习路径：containers are isolated processes、namespaces/cgroups、runc/OCI、containerd、Kubernetes、Kata",
+    "finding": "文章按“先底层后上层”列出每一步的阅读与动手顺序，并明确区分容器与 VM、说明 Kata 用轻量 VM 实现容器。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Kubernetes 官方中文文档：调度、抢占和驱逐（调度器、将 Pod 指派给节点、污点与容忍度）与镜像",
+   "url": "https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/kube-scheduler/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "调度器：kube-scheduler 如何为一个 Pod 找出“可调度节点”，调度选择分“过滤（过滤掉不满足调度需求的节点，如 PodFitsResources 检查资源请求）+ 打分（用打分规则给候选节点排名，取最高者，同分随机）”两步，最后绑定给 kube-apiserver；Scheduling Policies（Predicates/Priorities）与 Scheduling Profiles（QueueSort/Filter/Score/Bind/Reserve/Permit 插件）；相邻章节含将 Pod 指派给节点（nodeSelector、节点亲和、Pod 亲和/反亲和、拓扑分布约束）与污点/容忍度。镜像：容器镜像、默认镜像拉取策略与 imagePullPolicy、私有仓库与 imagePullSecrets、镜像垃圾回收。",
+   "access": "kubernetes.io 官方中文文档免费阅读，无需注册；简体中文（由社区翻译并随版本更新）；每页有可执行的 YAML 示例与“接下来”延伸阅读。",
+   "publisher": "Kubernetes（CNCF）官方文档，中文本地化版本",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/kube-scheduler/",
+    "location": "正文“Kube-scheduler 选择一个最佳节点来运行新创建的或尚未调度（unscheduled）的 Pod……调度器先在集群中找到一个 Pod 的所有可调度节点，然后根据一系列函数对这些可调度节点打分，选出其中得分最高的节点……这个过程叫做绑定”“过滤阶段会将所有满足 Pod 调度需求的节点选出来……PodFitsResources 过滤函数会检查候选节点的可用资源能否满足 Pod 的资源请求”",
+    "finding": "确认中文文档真讲了调度算法结构（过滤+打分+绑定、资源请求检查、插件化调度框架），不只是“Pod 是调度单元”一句话；另打开 https://kubernetes.io/zh-cn/docs/concepts/containers/images/ 读到镜像拉取策略、私有仓库与 imagePullSecrets、镜像垃圾回收等正文。"
+   },
+   "added_by": "review/pi-additions/C.2.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "CS 161 Lecture 23: Virtual machines（Harvard CS 161, 2019，课程讲义）",
+   "url": "https://read.seas.harvard.edu/cs161/2019/lectures/lecture23/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "虚拟机与 hypervisor 的系统讲授：虚拟机的用途与隔离；Popek–Goldberg 三条要求（等价性/效率/资源控制）与敏感指令/特权指令/innocuous 指令的分类，Theorem 1（敏感指令皆特权才可构造 VMM）；经典 trap-and-emulate；x86 不能经典 trap-and-emulate 的原因与二进制翻译（VMware）方案；Intel VT-x / AMD-V 硬件辅助虚拟化；混合型 VMM 与 guest 内核对硬件的可见性差异。",
+   "access": "哈佛 CS 161 课程网站免费公开讲义（HTML 正文）；英文；属本科操作系统课的一讲，前后讲分别是进程与文件系统。",
+   "publisher": "Harvard University CS 161 (Operating Systems)，讲师课程讲义",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://read.seas.harvard.edu/cs161/2019/lectures/lecture23/",
+    "location": "正文 “A virtual machine monitor is a control program that can control the execution of a guest program satisfying three requirements: The efficiency property…”；“Theorem 1. A virtual machine monitor may be constructed for an architecture in which every sensitive instruction is privileged”；以及 Popek-Goldberg 1974 论文引用与“A hybrid virtual machine monitor is like a VMM, except…”",
+    "finding": "确认为完整的一讲正文（定义、定理、x86 二进制翻译与 VT-x/AMD-V 的演进史），可直接讲清 hypervisor 与 VM 的原理，不是词条或课程介绍页。"
+   },
+   "added_by": "review/pi-additions/C.2.3.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Kubernetes Documentation: kube-scheduler（调度、抢占和驱逐）与 Images",
+   "url": "https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "调度：kube-scheduler 的 filtering（含 PodFitsResources 等谓词）与 scoring（打分规则、同分随机）两阶段、binding、Scheduling Policies 与 Scheduling Profiles 插件（QueueSort/Filter/Score/Bind/Reserve/Permit、调度框架）。镜像：imagePullPolicy（Always/IfNotPresent/Never）、私有仓库与 imagePullSecrets、镜像垃圾回收。",
+   "access": "kubernetes.io 官方英文文档免费；英文；每页带 YAML 示例。",
+   "publisher": "Kubernetes (CNCF) Documentation",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/",
+    "location": "“In the scoring step, the scheduler ranks the remaining nodes…”, “There are two supported ways to configure the filtering and scoring behavior of the scheduler: Scheduling Policies… Scheduling Profiles… including: QueueSort, Filter, Score, Bind, Reserve, Permit”；Images 页 “Using a private registry… imagePullSecrets”",
+    "finding": "确认英文官方文档同样给出两阶段调度算法与插件化调度框架，以及镜像拉取/私有仓库运行细节，可补 en1（Velichko 容器路径）只讲 Pod 不讲调度算法与镜像运行策略的缺口。"
+   },
+   "added_by": "review/pi-additions/C.2.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "虚拟机",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "云计算关键技术：虚拟化原理与应用、OpenStack",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Kata containers：用轻量 VM 实现容器隔离；容器 vs VM",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Lecture 23 全文：VMM 定义与三条要求、Popek–Goldberg 指令分类与 Theorem 1、trap-and-emulate、x86 二进制翻译、VT-x/AMD-V、混合型 VMM",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有云计算课讲 hypervisor/虚拟机；英文路径只把 VM 作为 Kata 的隔离实现，不讲 hypervisor 架构。；原记录英文侧只把 VM 当作 Kata 的隔离实现，没有 hypervisor 原理。这一讲系统讲了 VMM 的可虚拟化条件、经典 trap-and-emulate 与硬件辅助虚拟化的由来，属课程正文教学，补上了英文的“虚拟机”知识点。"
+  },
+  {
+   "topic": "容器隔离",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第十二章 底层实现（namespace/cgroups）；第十八章 安全",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "namespaces、cgroups、capabilities、seccomp；runc/OCI",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都把容器解释为受内核机制约束的进程。"
+  },
+  {
+   "topic": "资源控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第十二章底层实现中的 cgroups；Kubernetes 资源管理章节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "cgroups 限制 CPU/内存；OCI runtime 配置",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文书对 cgroups 的具体子系统讲得较简，需结合内核文档做实验。"
+  },
+  {
+   "topic": "调度和镜像运行",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第四至六章镜像/容器/仓库；第十三章容器编排基础、第十四章部署 Kubernetes",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "调度、抢占和驱逐 → 调度器（过滤/打分/绑定、PodFitsResources、Scheduling Policies/Profiles）；镜像（imagePullPolicy、私有仓库 imagePullSecrets、镜像垃圾回收）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "入门（镜像/容器/仓库）、进阶（Dockerfile、数据管理、网络、Buildx、Compose）、深入（容器编排基础、部署 Kubernetes）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "镜像构建/分发、containerd、Kubernetes Pod（调度单元）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "kube-scheduler（filtering/scoring/binding、Scheduling Policies 与 Profiles 插件）与 Images（imagePullPolicy、私有仓库）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都讲镜像与运行时，以及 Pod 作为调度单元；但都不讲 Kubernetes 调度器算法/资源分配策略。；原记录只有 yeasy 书讲“Pod 是调度单元”，缺调度器算法与镜像运行策略。这份官方中文文档正面讲了调度两阶段（过滤掉资源不足/亲和不满足的节点，再按打分规则排序并绑定）与可插拔调度框架，镜像章节则讲了镜像拉取策略与私有仓库运行方式，正好覆盖“调度和镜像运行”两个半边；镜像的构建与本地运行仍由已有的 zh1 承担。；镜像的构建、打标签、分发与 docker run 运行由 yeasy 书成章讲授，与 r7-zh1 的调度/拉取策略合起来构成完整的“调度和镜像运行”。；英文侧原来只有 Velichko 的容器学习路径讲到 Pod，不讲调度器算法与镜像运行策略；官方文档补上过滤/打分两阶段、调度框架插件与镜像拉取策略、私有仓库认证，镜像构建/分发部分仍由 en1 提供。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按入门→Dockerfile/网络/数据→底层实现→Kubernetes 部署顺序读，动手做镜像、容器和 cgroup 限制实验。"
+    },
+    {
+     "source": "zh2",
+     "read": "看虚拟化与 OpenStack 部分，理解 hypervisor 与 IaaS 资源管理，和容器隔离对照。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读“调度、抢占和驱逐”下的调度器与将 Pod 指派给节点两页，画出“过滤→打分→绑定”的流程图并说明 PodFitsResources 与节点亲和分别在哪个阶段起作用；再读镜像页，配置一次 imagePullPolicy 与私有仓库 imagePullSecrets，观察拉取行为变化。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按学习路径从 namespace/cgroup 实验开始，经 runc/OCI、镜像、containerd 到 Kubernetes Pod 和 Kata。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "读 Harvard CS 161 第 23 讲，自己复述 Popek–Goldberg 三条要求与 Theorem 1，并解释为什么 1990 年代的 x86 不能经典 trap-and-emulate、VT-x/AMD-V 又解决了什么。"
+    },
+    {
+     "source": "r7-en2",
+     "read": "读 kube-scheduler 与 Images 两页，用 minikube/kind 起一个集群，观察不同 imagePullPolicy 与节点亲和/污点设置下 Pod 的调度与拉取结果。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "虚拟化技术 中国大学MOOC 虚拟机 容器 课程 KVM Docker",
+   "result": "未找到专门中文虚拟化课程；改用河海大学云计算课补虚拟机侧。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://iximiuz.com/en/posts/container-learning-path/",
+   "result": "采纳为英文主路径，覆盖 namespace/cgroup/runc/OCI/Kata。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/kube-scheduler/、/containers/images/",
+   "result": "采纳 r7-zh1：中文官方文档正文讲过滤/打分/绑定与镜像拉取策略，补“调度和镜像运行”。",
+   "by": "review/pi-additions/C.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://kubernetes.io/zh-cn/docs/concepts/scheduling-eviction/assign-pod-node/",
+   "result": "可读，正文含 nodeSelector/节点亲和/拓扑分布约束等指派方式，作为调度章节的配套。",
+   "by": "review/pi-additions/C.2.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "hypervisor virtual machine monitor lecture notes course free textbook x86 VT-x EPT trap and emulate",
+   "result": "命中 Harvard CS 161 Lecture 23（VMM/Popek-Goldberg/trap-and-emulate）、UCSD CSE 220 Lecture 16、UChicago CS 4118 虚拟化讲义、Cornell CS 6410 虚拟化 slides。采纳哈佛这一讲为 r7-en1（唯一读全正文且非 PDF）。",
+   "by": "review/pi-additions/C.2.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/、/concepts/containers/images/",
+   "result": "采纳 r7-en2：英文官方文档的 filtering/scoring/binding 与镜像拉取/私有仓库正文已核对。",
+   "by": "review/pi-additions/C.2.3.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有 Kubernetes 官方教程，只讲容器编排，不证明虚拟机与隔离机制；已补 Docker 开源书与云计算课。",
+  "旧英文 iximiuz 路径保留，但它不是调度算法课程，调度与镜像运行只能算 partial。",
+  "中英文都缺 Kubernetes 调度器算法，未假报完成。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "虚拟化、容器与资源管理",
+ "description": "虚拟机、容器隔离、资源控制、调度和镜像运行。",
+ "applied_additions": [
+  "review/pi-additions/C.2.3.json@f950459894"
+ ]
+}

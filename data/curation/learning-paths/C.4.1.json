@@ -1,0 +1,399 @@
+{
+ "id": "C.4.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "eraft 开发组《MIT 6.824 分布式系统系列》（中文项目式讲义）",
+   "url": "https://eraft.cn",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "项目概览与构建、C++ 并发基础、Raft 论文解读、构建 Raft 库（Leader 选举/日志复制/持久化/快照）、基于 Raft 的 KV、Multi-Raft、分布式事务初探；对应 6.824 Lab 2/3/4。",
+   "access": "网站免费阅读；以 C++ 实现为主线，需要自备代码环境。中文。",
+   "publisher": "eraft 开发组",
+   "evidence": {
+    "url": "https://eraft.cn",
+    "location": "首页系列目录（一）–（七）与 Raft 核心/KVRaft/ShardCtrler/ShardKV 模块说明",
+    "finding": "页面列出中文系列七篇，逐篇讲 Raft 论文、Raft 库、KV、Multi-Raft 与分布式事务，并说明对应 6.824 Lab；偏实现，不系统讲时钟与一致性理论。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "河海大学《云计算技术与应用》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/HHU-1001755117",
+   "tier": "website",
+   "free": null,
+   "role": "supplement",
+   "covers": "云计算关键技术、云服务体系、开源云平台；授课目标含分布式文件系统、并行处理框架、分布式锁服务与分布式数据库，OpenStack/Hadoop 实验。",
+   "access": "视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "河海大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HHU-1001755117",
+    "location": "授课目标第 3 条：分布式文件系统、并行处理框架、分布式锁服务、分布式数据库",
+    "finding": "页面明确把分布式文件系统、分布式锁与分布式数据库列为目标，可补复制/锁/事务的工程背景；不涉及共识算法推导。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "TiDB 官方中文：整体架构",
+   "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "TiDB/TiKV/PD 分层、Raft 多副本、分布式事务、TiFlash；作为复制、共识与事务的工业实例。",
+   "access": "官方文档免费；参考文档，不是课程。",
+   "publisher": "PingCAP",
+   "evidence": {
+    "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+    "location": "整体架构：TiKV 多副本与 Raft、PD 调度、分布式事务",
+    "finding": "文档说明 TiKV 用 Raft 做多副本强一致、PD 负责调度、TiDB 提供分布式事务；只能作工程对照。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.5840 (6.824) Distributed Systems（课程主页、讲义、论文清单、lab）",
+   "url": "http://nil.csail.mit.edu/6.5840/2025/schedule.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "以 fault tolerance、replication、consistency 为主线：一致性/线性化、主备复制、Raft 共识、分布式事务、分片 KV；5 个 lab 与往年试题。",
+   "access": "课程主页免费公开日程、论文清单与 lab；英文，视频/字幕未核对。",
+   "publisher": "MIT PDOS（Robert Morris 等）",
+   "evidence": {
+    "url": "http://nil.csail.mit.edu/6.5840/2025/schedule.html",
+    "location": "Schedule：LEC 3 Primary-Backup Replication、LEC 4 Consistency and Linearizability、LEC 5/7 Raft、LEC 10 Distributed Transactions",
+    "finding": "2025 日程逐讲列出复制、线性化、Raft 与分布式事务，并链接论文/录像；没有物理时钟/顺序的独立讲次。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Time, Clocks, and the Ordering of Events in a Distributed System（Lamport, 1978）",
+   "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "分布式系统中的 happened-before 偏序、逻辑时钟同步算法、全序与物理时钟同步误差界。",
+   "access": "作者站点免费 PDF；经典论文，不是课程。",
+   "publisher": "Leslie Lamport",
+   "evidence": {
+    "url": "https://lamport.azurewebsites.net/pubs/time-clocks.pdf",
+    "location": "摘要与第 1–3 节：partial ordering、logical clocks、physical clock synchronization",
+    "finding": "PDF 摘要说明用逻辑时钟给事件全序，并特化到物理时钟同步、给出失同步界。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《图解分布式系统原理》（codedump，中文在线书：第 2 章 系统模型、第 3 章 时间与顺序、第 4 章 复制、第 5 章 共识算法、第 7 章 事务）",
+   "url": "https://www.codedump.info/dist-system-cn/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章 分布式系统模型：两将军问题、拜占庭将军问题、通信模型、故障模型、时间模型；第 3 章 分布式系统中的时间和顺序：状态/事件/快照、物理时钟（墙上时钟与单调时钟、物理时间同步、物理时钟的缺陷）、因果关系与事件先后顺序、全序与偏序、因果性与 happen-before、逻辑时钟（Lamport 时钟）；第 4 章 复制：节点失效、一致性模型（什么是一致性模型、一致性模型图例、顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）；第 5 章 共识算法；第 6 章 分区；第 7 章 事务：事务基础、多版本并发控制、分布式事务（两阶段提交、三阶段提交、Google Spanner、TCC 事务）。",
+   "access": "作者站点免费在线阅读（站点写明“免费阅读”），简体中文，逐章带图；无注册要求。",
+   "publisher": "codedump（个人作者，中文原创在线书《图解分布式系统原理》）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.codedump.info/dist-system-cn/time/",
+    "location": "第 3 章目录与正文：物理时钟 / 物理时间源和表示法 / 墙上时钟和单调时钟 / 物理时间同步 / 物理时钟的缺陷 / 因果关系和事件先后顺序 / 全序和偏序 / 因果性与 Happen Before 的关系 / 逻辑时钟 / Lamport 时钟；另打开 /replication/ 读到一致性模型小节（顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理）与“节点失效”；/transaction/ 读到 7.3 分布式事务（7.3.1 两阶段提交、7.3.2 三阶段提交、7.3.3 Google Spanner、7.3.4 TCC 事务）；/systemmodel/ 读到“通信模型/故障模型/时间模型”三个小节",
+    "finding": "四个缺口的正文都亲自读到：第 3 章讲清物理时钟缺陷与 Lamport 逻辑时钟（时钟），第 4 章把线性一致性/顺序一致性/因果/最终一致与 CAP 逐个定义（一致性），第 7 章讲 2PC/3PC/Spanner/TCC（事务），第 2 章给故障模型、第 4 章给节点失效与复制、第 5 章给共识（容错）。"
+   },
+   "added_by": "review/pi-additions/C.4.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "OpenTelemetry 中文文档《可观测性入门》与《上下文传播》（分布式链路用于调试分布式系统）",
+   "url": "https://opentelemetry.io/zh/docs/concepts/observability-primer/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "可观测性三支柱：日志、指标（SLI/SLO）、链路（Trace）；“理解分布式链路”一节讲分布式链路让开发者观察请求如何在复杂分布式系统中传播、提高系统健康度可见性，并能调试那些难以在本地重现的行为；Spans 与上下文传播（跨服务传递追踪上下文）的机制与手动 Span 属性。",
+   "access": "opentelemetry.io 官方文档中文版，免费阅读；简体中文；含概念说明与后续“快速开始”示例页面。",
+   "publisher": "OpenTelemetry（CNCF 项目）官方文档，中文本地化",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://opentelemetry.io/zh/docs/concepts/observability-primer/",
+    "location": "页面目录：什么是可观测性？/ 可靠性和指标 / 理解分布式链路 / 日志 / Spans；正文“分布式链路让你能够观察请求如何在复杂的分布式系统中传播……并让你能够调试那些难以在本地重现的行为”（同一段落在 tavily 摘要中亦可见）",
+    "finding": "确认中文文档把“调试分布式系统”落到分布式链路/日志/指标三支柱与上下文传播上，可作“分布式调试”的中文材料；属官方文档而非课程，故为 supplement。"
+   },
+   "added_by": "review/pi-additions/C.4.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "时钟",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Raft 任期/日志顺序，未讲物理时钟与全局顺序",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 3 章 分布式系统中的时间和顺序：物理时钟（墙上时钟/单调时钟、时间同步、物理时钟的缺陷）、全序与偏序、因果性与 happen-before、Lamport 逻辑时钟",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "happened-before、逻辑时钟、全序与物理时钟同步",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文由 Lamport 经典论文补逻辑/物理时钟；中文仍只有 Raft 任期。；原记录中文只有 eraft 的 Raft 论文解读，没讲时钟。这一章先讲物理时钟为什么不可靠（漂移、同步误差、墙上时钟可能跳变），再引出因果顺序与 happened-before，最后给 Lamport 逻辑时钟的更新规则与全序扩展，正是“时钟”这个知识点的完整中文教学。"
+  },
+  {
+   "topic": "复制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Raft 日志复制、持久化、快照；Multi-Raft",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "HDFS 副本与分布式文件系统",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Raft 论文与 lab 2；复制相关论文",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文从 Raft 实现与 HDFS 工程两侧覆盖复制。"
+  },
+  {
+   "topic": "一致性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "基于 Raft 的强一致 KV（线性化读写）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "TiKV Raft 多副本强一致",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 4 章 复制 → 一致性模型（顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "linearizability/consistency 讲义与 kvraft lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有线性化 KV 的工程实现，但缺一致性模型的形式化讲解与验证。；把线性一致性作为最强的一致性模型与顺序/因果/最终一致并列比较，并给出图例与 CAP 的关系，补上原记录里只有 TiDB 架构图（partial）缺的理论定义；与已有 zh1 的 Raft 实现对照，可理解线性化的实现代价。"
+  },
+  {
+   "topic": "共识",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Raft 论文解读、Leader 选举、日志复制、持久化",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Raft 论文与 lab 2（2A–2D）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都以 Raft 为主线。"
+  },
+  {
+   "topic": "事务",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "分布式事务初探",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "TiDB 分布式事务",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 7 章 事务：事务基础、MVCC、7.3 分布式事务（两阶段提交、三阶段提交、Google Spanner、TCC 事务）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "distributed transactions 讲义/论文",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有初探与产品文档，缺 2PC/并发控制/隔离级别的系统推导。；原记录只有 eraft 的“分布式事务初探”和 TiDB 架构文档。这一章系统讲单机事务到分布式事务：2PC 的两个阶段与阻塞/单点问题、3PC 的改进、Spanner 用全局时钟做外部一致性、TCC 的补偿模型，属成章教学。"
+  },
+  {
+   "topic": "容错与分布式调试",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Raft 持久化、快照、测试与故障注入（项目式）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "分布式系统可靠性/副本",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 2 章 故障模型与时间模型 + 第 4 章 节点失效与复制 + 第 5 章 共识算法",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "OpenTelemetry 中文《可观测性入门》理解分布式链路 + 《上下文传播》",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lab 的故障注入、race/断点式排错与往年试题",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文项目会写测试，但没有系统讲分布式调试方法与工具。；容错一半：先建立故障模型（崩溃/遗漏/时序/拜占庭）与同步/异步时间模型，再用复制与共识说明系统如何在节点失效下继续提供一致的服务，是成体系的中文容错教学。；调试一半：分布式系统的 bug 常在本地无法复现，官方中文文档讲清用日志/指标/分布式链路三支柱与跨服务上下文传播来观察请求路径、定位问题，属“分布式调试”的方法教学；与 r7-zh1 的容错理论合起来覆盖该知识点。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按系列读 Raft 论文解读并实现 Raft 库，再做 KV/Multi-Raft/事务初探。"
+    },
+    {
+     "source": "zh2",
+     "read": "补分布式文件系统、分布式锁与分布式数据库的工程背景。"
+    },
+    {
+     "source": "zh3",
+     "read": "用 TiDB 架构对照 Raft 多副本、PD 调度与分布式事务。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按第 1→2→3→4→5→7 章读：先建立系统模型与故障模型，再学时序与逻辑时钟（自己推一遍 Lamport 时钟在三个进程间的更新），然后读复制与一致性模型（用两个并发写写出一组满足线性化/不满足线性化的执行），最后读共识与分布式事务（画出 2PC 的阻塞场景与 3PC 的补救）。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读《可观测性入门》的“理解分布式链路”与《上下文传播》，在一个两服务的小 demo 上加 trace 与日志关联，复现一次“本地无法重现”的跨服务延迟问题。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按日程读复制→线性化→Raft→分布式事务论文并完成 lab 1–4。"
+    },
+    {
+     "source": "en2",
+     "read": "读 Lamport 时钟论文，理解 happened-before、逻辑时钟与全序。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "分布式系统 课程 讲义 复制 一致性 共识 中文 大学 公开",
+   "result": "未找到完整中文课程；从既有搜索缓存采纳 eraft 中文系列与北理工课程大纲（大纲无正文，未采纳）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://eraft.cn",
+   "result": "采纳为中文项目式主材料；确认有 Raft/KV/Multi-Raft/事务，但无时钟理论。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "分布式系统 课程 大纲 逻辑时钟 一致性 分布式事务 容错 副本（限 icourse163/xuetangx）",
+   "result": "MOOC 侧没命中分布式系统理论课，只得到清华《大数据系统基础》大纲（GFS 一致性要求、MapReduce 容错）与无关结果；说明国内 MOOC 缺这门课的系统理论课。",
+   "by": "review/pi-additions/C.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "分布式系统 中文 讲义 线性化 逻辑时钟 向量时钟 两阶段提交 容错 课程 大学",
+   "result": "命中 codedump 《图解分布式系统原理》（第 2/3/4/5/7 章）、Datawhale easy-vibe 分布式系统原理（单页摘要）、若干博客。采纳 codedump 为 r7-zh1（有独立章节、免费在线阅读）。",
+   "by": "review/pi-additions/C.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "分布式系统 调试 排障 分布式追踪 日志 教程 中文 可观测性 原理",
+   "result": "命中《凤凰架构》可观测性章、OpenTelemetry 中文《可观测性入门》、IBM/Elastic 厂商科普。凤凰架构站点在本机 DNS 解析失败（gaierror），改用 OpenTelemetry 中文文档为 r7-zh2。",
+   "by": "review/pi-additions/C.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://opentelemetry.io/zh/docs/concepts/observability-primer/",
+   "result": "打开确认目录含“理解分布式链路”“Spans”，正文写“让你能够调试那些难以在本地重现的行为”，采纳。",
+   "by": "review/pi-additions/C.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.codedump.info/dist-system-cn/time/、/replication/、/transaction/、/systemmodel/",
+   "result": "逐章打开核对：时钟（物理/逻辑）、一致性模型（线性化等）、分布式事务（2PC/3PC/Spanner/TCC）、故障模型均在正文。",
+   "by": "review/pi-additions/C.4.1.json"
+  }
+ ],
+ "findings": [
+  "旧中文 TiDB 架构只是产品文档，不能单独充课程；保留为 reference。",
+  "新增 eraft 中文系列补 Raft 实现与事务初探，河海云计算补分布式锁/数据库背景。",
+  "中文仍缺时钟、一致性模型与调试方法，故为 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "分布式系统",
+ "description": "时钟、复制、一致性、共识、事务、容错与分布式调试。",
+ "applied_additions": [
+  "review/pi-additions/C.4.1.json@6c375f7764"
+ ]
+}

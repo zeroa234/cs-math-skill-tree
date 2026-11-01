@@ -1,0 +1,331 @@
+{
+ "id": "C.2.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《Linux 系统编程》（邢文鹏，传智播客讲义公开 PDF）",
+   "url": "http://home.ustc.edu.cn/~kd2512674094/tutorial/linux-sys.zh.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "文件 I/O 与系统调用、ext2 文件系统、进程（fork/exec）、进程间通信（pipe/FIFO/mmap/Unix domain socket）、信号、线程、socket 网络编程、select/poll/epoll、线程池并发服务器；共 20 章并有习题。",
+   "access": "USTC 学生主页公开 PDF，免费；2014 年讲义，示例以 Linux/x86 为主。",
+   "publisher": "邢文鹏（传智播客）",
+   "evidence": {
+    "url": "http://home.ustc.edu.cn/~kd2512674094/tutorial/linux-sys.zh.pdf",
+    "location": "目录：第 1 章文件 I/O、第 3 章进程、第 4 章进程间通信、第 5 章信号、第 8 章线程、第 12 章 socket/epoll",
+    "finding": "PDF 目录逐章列出系统调用、进程、pipe/FIFO/mmap/Unix socket、信号、线程、socket 与 epoll，正文含可运行示例和习题。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《操作系统导论》中文版：并发部分（OSTEP 中文 PDF）",
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/28.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 26–34 章：线程、锁、硬件原子指令（test-and-set/compare-and-swap/fetch-and-add）、条件变量、信号量、并发 bug；讲清锁的实现与原子操作语义。",
+   "access": "作者站点免费 PDF；中文译文对应较早期版本。",
+   "publisher": "Arpaci-Dusseau（威斯康星大学）；中文译本",
+   "evidence": {
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/28.pdf",
+    "location": "第 28 章“锁”正文（test-and-set、compare-and-swap、fetch-and-add）",
+    "finding": "中文正文从锁的基本思想讲到硬件原子指令与自旋锁，并讨论两阶段锁等；可直接用于原子操作与锁的学习。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CSE 333 Systems Programming（University of Washington, Autumn 2025）",
+   "url": "https://courses.cs.washington.edu/courses/cse333/25au/schedule.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "C 内存与指针、动态内存、链接与 OS 服务、shell/进程、socket 客户端/服务器、并发入门、线程（pthreads/C++ threads）、进程、OS 组件、性能剖析；作业实现 shell、HTTP 服务器等。",
+   "access": "课程日程、讲义 PDF 与代码免费公开；英文授课，视频/字幕未核对。",
+   "publisher": "University of Washington Paul G. Allen School",
+   "evidence": {
+    "url": "https://courses.cs.washington.edu/courses/cse333/25au/schedule.html",
+    "location": "Schedule：LEC 24 Concurrency (intro)、LEC 25 Threads、LEC 26 Processes、LEC 27 OS Components、LEC 22–23 sockets/HTTP",
+    "finding": "日程逐讲链接讲义与代码，线程讲次含 cthreads.c/pthreads.cc、searchserver_threads，进程讲次含 fork latency 与 searchserver_processes；没有单独的 memory model 或 race detector 讲次。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Operating Systems: Three Easy Pieces（OSTEP，免费在线教材）",
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 26–34 章线程与并发：锁、硬件原子指令、条件变量、信号量、并发 bug；可补 CSE333 未展开的锁实现与原子操作。",
+   "access": "免费 PDF；英文。",
+   "publisher": "Remzi H. Arpaci-Dusseau & Andrea C. Arpaci-Dusseau",
+   "evidence": {
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "location": "Concurrency 部分第 28 章 Locks、第 32 章 Common Concurrency Problems",
+    "finding": "站点目录列出并发各章 PDF；第 28 章专门讲锁与原子指令，第 32 章讲并发 bug 类型。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "Memory Models for C/C++ Programmers（Pöter & Träff, arXiv:1803.04432）",
+   "url": "https://arxiv.org/abs/1803.04432",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "从顺序一致性讲到 x86、ARM/POWER 的弱内存模型，第 4 节专讲 C++11 内存模型与 relaxed/acquire-release 用法。",
+   "access": "arXiv 免费 PDF/HTML；教学性综述，不是完整课程。",
+   "publisher": "Manuel Pöter, Jesper Larsson Träff",
+   "evidence": {
+    "url": "https://arxiv.org/abs/1803.04432",
+    "location": "Abstract 与 Section 4（C++11 memory model）",
+    "finding": "摘要说明从 sequential consistency 讲到 x86/ARM/POWER 模型，并专节解释 C++11 内存模型如何写正确可移植的并发代码。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "胡伟武《计算机体系结构基础》（第三版）第 11 章 11.2.2 存储一致性模型与 11.6 多核结构分析维度",
+   "url": "https://foxsen.github.io/archbase/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "11.2.2 存储一致性模型：先给出三处理器共享变量（表 11.2）的读写次序反例，说明为什么需要一致性模型；再逐个定义顺序一致性（SC）、处理器一致性（PC）、弱一致性（WC）、释放一致性（RC）四种模型对访存次序的约束，并说明“限制越弱性能越好但编程越难”、龙芯 3 号采用处理器一致性；11.2.3 Cache 一致性协议；11.6 小结把“存储一致性模型”与 Cache 协议、片上互连、同步机制（互斥锁 lock、路障 barrier）并列为分析多核结构的五个维度；11.7 习题要求列出两个线程在顺序一致性与弱一致性下各有几种正确执行顺序。",
+   "access": "GitBook 在线免费全文，无需注册；简体中文；含表 11.2 例子与习题。",
+   "publisher": "胡伟武（中国科学院计算技术研究所/龙芯）等，机械工业出版社原书，作者授权在线版",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://foxsen.github.io/archbase/%E5%A4%9A%E6%A0%B8%E5%A4%84%E7%90%86%E7%BB%93%E6%9E%84.html",
+    "location": "11.2.2 存储一致性模型正文（顺序一致性/处理器一致性/弱一致性/释放一致性四小节，含 acquire/release 的定义）与 11.6 本章小结、11.7 习题第 2 题",
+    "finding": "正文不是词条式罗列：先用表 11.2 的并发读写例子引出问题，再逐模型写出对 load/store 与同步操作的次序约束，并给出实现动机（如 PC 允许 store 后的 load 越过 store 以简化流水线）与真实处理器取舍（龙芯 3 号用 PC）。属正式内存一致性模型教学。"
+   },
+   "added_by": "review/pi-additions/C.2.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《现代 C++ 教程：高速上手 C++11 到 C++26》第 7 章 并行与并发 → 7.5 原子操作与内存模型（欧长坤）",
+   "url": "https://changkun.de/modern-cpp/zh-cn/07-thread/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "7.5 原子操作与内存模型：用“a=5 / flag=1 被编译器或 CPU 重排导致读到 0”的例子引出内存模型；讲 std::atomic、compare_exchange_strong/weak；逐个给出 memory_order_relaxed（宽松）、memory_order_acquire/memory_order_release（获取/释放，含 flag.store(release)/flag.load(acquire) 的完整例子）、memory_order_seq_cst（顺序一致）三种内存顺序模型的语义与性能取舍；并用原子操作手写自旋锁、说明互斥锁的两条基本原理（原子性 + 内存序）。",
+   "access": "在线免费阅读（作者自建站点，另有 PDF/EPUB 免费下载）；简体中文；示例代码可直接编译。",
+   "publisher": "欧长坤（Changkun Ou），开源在线书，GitHub 仓库 changkun/modern-cpp-tutorial",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://changkun.de/modern-cpp/zh-cn/07-thread/",
+    "location": "7.5 原子操作与内存模型：正文中的重排例子、“顺序一致模型：在此模型下，原子操作满足顺序一致性……可显式的通过 std::memory_order_seq_cst 进行指定”、以及 memory_order_release/memory_order_acquire 的生产者-消费者例子与自旋锁实现",
+    "finding": "打开正文确认它讲的是 C++11 语言层内存模型（不是只讲锁）：给出 relaxed/acquire/release/seq_cst 四类语义、同步关系与可见性保证，并配可运行代码与性能提示。"
+   },
+   "added_by": "review/pi-additions/C.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "系统调用",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 1 章文件 I/O（C 标准函数与系统函数）、第 3 章进程原语",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "LEC 26 Processes、LEC 27 OS Components；作业实现 shell",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧以 read/write/open/fork/exec 等具体系统调用为主线。"
+  },
+  {
+   "topic": "锁",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 28 章锁（自旋锁、两阶段锁）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Ch.28 Locks（自旋锁/两阶段锁与原子指令）",
+     "extent": "covered"
+    }
+   ],
+   "note": "CSE333 讲义标题未列“锁”，但线程课件与 total_locking.cc 示例覆盖互斥；OSTEP 提供系统讲解。"
+  },
+  {
+   "topic": "原子操作",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 28 章硬件原子指令 test-and-set/compare-and-swap/fetch-and-add",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Ch.28 Locks：atomic instructions",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从硬件原子指令讲到用其构造锁。"
+  },
+  {
+   "topic": "内存模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 28 章只讲锁与原子指令，未讲 C++/Java 内存模型",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 7 章 7.5 原子操作与内存模型（relaxed / acquire / release / seq_cst、std::atomic、compare_exchange、自旋锁实现）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 11 章 11.2.2 存储一致性模型（SC/PC/WC/RC 四种模型）+ 11.2.3 Cache 一致性协议 + 11.6 小结",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en3",
+     "section": "Section 4 C++11 memory model；x86/ARM/POWER 模型",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺正式内存模型教学；英文有专门教学综述，但不是课程。；补上原记录缺的“语言层内存模型”：为什么需要内存模型（重排导致可见性问题）、C++11 的 std::atomic 与四种 memory_order 语义、acquire/release 同步对（配完整生产者-消费者代码），以及用原子操作实现互斥锁时内存序起什么作用。这正对应英文 en3《Memory Models for C/C++ Programmers》第 4 节讲的内容。；补体系结构侧的内存一致性模型：为什么弱一致性能换性能、四种模型各放松了哪条次序约束、release/acquire 在硬件层的含义，以及一致性模型与 Cache 一致性协议的区别（前者约束访存次序，后者传播新值）。与 r7-zh2 的语言层语义（memory_order 落在哪一种一致性模型上）正好互补，并用章末习题检验是否真懂。"
+  },
+  {
+   "topic": "IPC与竞态检测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 4 章 pipe/FIFO/mmap/Unix socket；第 5.8 节时序竞态；第 8 章线程",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第 32 章并发 bug 分类",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "LEC 22–23 sockets/HTTP、LEC 26 Processes；并发 bug 在 LEC 24–25",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.32 Common Concurrency Problems",
+     "extent": "partial"
+    }
+   ],
+   "note": "IPC 两侧都有；竞态检测工具（ThreadSanitizer/helgrind）两边都没有专门教学，只讲竞态成因与调试。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按第 1→3→4→5→8→12 章写系统调用、进程、IPC、信号、线程与 socket 程序，做到能独立实现多线程服务器。"
+    },
+    {
+     "source": "zh2",
+     "read": "读第 26–32 章补锁、原子指令、条件变量与并发 bug 的理论。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读《计算机体系结构基础》11.2.2：先用表 11.2 的读写次序例子自己推一遍“为什么顺序一致才符合直觉”，再逐个掌握 SC/PC/WC/RC 的次序约束，最后做 11.7 第 2 题（两线程在 SC 与 WC 下各有几种正确执行顺序）。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读《现代 C++ 教程》7.5，把 relaxed/acquire/release/seq_cst 四种语义与上一节的 SC/WC/RC 对上；编译运行 flag.store(release)/flag.load(acquire) 的例子与自旋锁代码，再用 ThreadSanitizer 观察去掉内存序后的报错。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按课程日程做 C/系统调用→shell→socket 服务器→线程/进程并发，配合作业。"
+    },
+    {
+     "source": "en2",
+     "read": "读第 28、32 章补锁实现、原子指令与并发 bug。"
+    },
+    {
+     "source": "en3",
+     "read": "读第 1–4 节建立内存模型与 C++11 acquire/release 语义。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "Linux 系统编程 中文 课程 系统调用 进程 线程 并发 讲义",
+   "result": "采纳邢文鹏公开 PDF；其目录覆盖系统调用、进程、IPC、线程与 socket，但无内存模型。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "Memory Models for C/C++ Programmers arXiv",
+   "result": "采纳 arXiv:1803.04432 作为内存模型教学综述，补英文缺口。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://foxsen.github.io/archbase/多核处理结构.html（11.2.2 存储一致性模型）",
+   "result": "采纳 r7-zh1：正文完整讲 SC/PC/WC/RC 四种存储一致性模型并配例子与习题，推翻“中文只有锁/原子指令章节、没有内存模型教材”的旧结论。",
+   "by": "review/pi-additions/C.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://changkun.de/modern-cpp/zh-cn/07-thread/",
+   "result": "采纳 r7-zh2：7.5 节讲 C++11 内存模型（memory_order_relaxed/acquire/release/seq_cst、原子操作、自旋锁），补语言层教材缺口。",
+   "by": "review/pi-additions/C.2.2.json"
+  }
+ ],
+ "findings": [
+  "旧英文 CSE333 保留：系统调用、socket、线程/进程与作业链完整，但并发只到线程与锁的使用层。",
+  "旧中文只有南京大学 OS 首页，不能证明系统调用与 IPC；已补邢文鹏完整讲义 + OSTEP 中文并发章。",
+  "内存模型与竞态检测工具两侧都不完整，故本节点不报 complete。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "系统编程与并发同步",
+ "description": "系统调用、锁、原子操作、内存模型、IPC与竞态检测。",
+ "applied_additions": [
+  "review/pi-additions/C.2.2.json@14fcb5df3e"
+ ]
+}

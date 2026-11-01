@@ -1,0 +1,327 @@
+{
+ "id": "C.5.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京理工大学《并行编程原理与实践》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/BIT-1470418179",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "并行计算机系统结构、并行程序设计关键问题、Pthreads 多线程、OpenMP、MPI 消息传递、CUDA 异构编程，以及共享/分布式/异构平台上的并行化与优化。",
+   "access": "课程页公开概述与参考书；视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "北京理工大学",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1470418179",
+    "location": "课程概述：Pthreads、OpenMP、MPI、CUDA；并行程序设计的关键问题",
+    "finding": "页面明确列出共享内存多线程、OpenMP、分布式内存 MPI 与 CPU+GPU CUDA 四类编程技术，并讲并行程序设计关键问题。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "浙江大学超算队 HPC 101：Lab 2 MoE 的向量化计算",
+   "url": "https://hpc101.zjusct.io/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Lab 2「MoE 的向量化计算」不只是动手优化：页面含“知识讲解：x86-64 SIMD 优化”“AVX 向量指令扩展”“AVX-512”等教学小节，先讲清 SIMD 是什么（一条指令一次处理一堆相似数据、通过指令级并行加速），再介绍实验机器的 SSE/AVX 指令、编译器在高优化等级下的自动向量化能力与保守性（为何 HPC 常需手写 SIMD），然后才要求对 MoE 计算做向量化改造与性能测试；另有 GEMM/张量核与推理优化实验。",
+   "access": "实验文档免费公开；需要课程集群或自备算力环境。",
+   "publisher": "浙江大学超算队",
+   "evidence": {
+    "url": "https://hpc101.zjusct.io/lab/Lab2-Vectorization/",
+    "location": "页面目录：实验目的 / 量化推理：W8A8 / 知识讲解：x86-64 SIMD 优化 / AVX 向量指令扩展 / AVX-512；正文“如果需要快速复习 SIMD，可以查看课程 PPT……SIMD 就是让原本一条只能干一个事情的指令变成一次可以干一堆相似的事情”“现代编译器在高优化等级下，具有自动向量化的功能……然而，编译器的优化始终是保守的……高性能计算领域经常需要手写 SIMD 代码”",
+    "finding": "确认 Lab 2 除了实验还有 SIMD/AVX/AVX-512 的知识讲解与自动向量化 vs 手写 SIMD 的取舍说明，因此可以承担“向量化”的部分覆盖而不只是实践补充。"
+   },
+   "updated_by": [
+    "review/pi-additions/C.5.1.json"
+   ]
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "MPI Tutorial 中文版（Wes Kendall 等）",
+   "url": "https://mpitutorial.com/tutorials/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "MPI 安装与运行、阻塞/非阻塞点对点通信、集合通信、组与通信子、派生数据类型、性能与并行文件；每课带示例代码，部分课有中文版。",
+   "access": "免费网页；中文版为部分章节翻译，非全部课程。",
+   "publisher": "Wes Kendall et al.",
+   "evidence": {
+    "url": "https://mpitutorial.com/tutorials/",
+    "location": "Tutorials 目录；各课旁的“中文版”链接",
+    "finding": "目录列出 MPI 点对点/集合通信/通信子等课程，并标注部分章节有中文版，可补消息传递的动手细节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMU 15-418/618 Parallel Computer Architecture and Programming（Fall 2026）",
+   "url": "https://www.cs.cmu.edu/~418/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "并行编程模型与基础、GPU 架构与 CUDA、性能优化、互连、cache 一致性、同步实现、细粒度同步/lock-free、异构并行、内存一致性；4 次作业与期末项目。",
+   "access": "课程主页与 schedule/讲义链接免费公开；英文，视频未核对。",
+   "publisher": "Carnegie Mellon University",
+   "evidence": {
+    "url": "https://www.cs.cmu.edu/~418/schedule.html",
+    "location": "Schedule：Parallel Programming Models、GPU Architecture and CUDA、Implementing Synchronization、Fine-Grained Synchronization/Lock-Free",
+    "finding": "日程逐讲列并行编程模型、CUDA、同步实现与 lock-free；作业要求学生并行化并调优代码。未在日程看到 MPI 或 SIMD 向量化专讲。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "MPI Tutorial（Wes Kendall 等）",
+   "url": "https://mpitutorial.com/tutorials/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "MPI 点对点/集合通信、通信子、派生数据类型、性能与并行文件；带完整示例。",
+   "access": "免费网页；英文。",
+   "publisher": "Wes Kendall et al.",
+   "evidence": {
+    "url": "https://mpitutorial.com/tutorials/",
+    "location": "Tutorials 目录：MPI_Send/Recv、collective communication、communicators、derived datatypes",
+    "finding": "目录逐课列出 MPI 通信原语与集合通信，可补 CMU 课程未覆盖的消息传递。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "上海交通大学 HPC 入门指南：向量化（xflops，SJTU HPC 文档站）",
+   "url": "https://xflops.sjtu.edu.cn/hpc-start-guide/parallel-computing/SIMD",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "向量化简介（向量化是实现 SIMD 的方法：用特殊 CPU 指令集一次处理一组数据）、向量化使用方法、内联汇编等章节；并以第一届 PKU HPCGame 的 logistic 映射迭代为例，用 base.cpp / opt.cpp / conf.data / Makefile 对照演示如何引导编译器自动向量化：先说明“单个数的迭代必须串行会让编译器无法自动向量化”，再通过交换循环次序让内层变成可并行、内存连续的向量化循环，最后讨论交换后的访存问题（寄存器/缓存放不下时反复读写内存）。",
+   "access": "上海交大 HPC 文档站免费阅读，简体中文，带完整示例代码；无注册要求。",
+   "publisher": "上海交通大学高性能计算中心（xflops.sjtu.edu.cn）HPC 入门指南文档",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xflops.sjtu.edu.cn/hpc-start-guide/parallel-computing/SIMD",
+    "location": "页面目录：向量化简介 / 向量化使用方法 / 内联汇编；正文“下面的例子改编自第一届 PKU HPCGame，该例子很好的向我们展示了如何引导编译器自动向量化优化代码——在 base.cpp 中实现了对输入的 double 类型的数组中的每个数进行 logistic 映射迭代 itn 轮的功能，opt.cpp 是优化过后的版本”“从而可以交换循环次序，让编译器进行自动向量化”“在交换循环次序后……寄存器与高速缓存无法存放所有的内存数据，这将导致频繁的从内存中读写数据”",
+    "finding": "确认不是词条：从 SIMD 概念到“怎么让编译器真的向量化”的完整示例（含失败原因与循环交换、访存副作用），并给了调用方式与内联汇编入口。"
+   },
+   "added_by": "review/pi-additions/C.5.1.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Stanford CS149 Parallel Computing（Fall 2025）：Forms of parallelism: multi-core, SIMD, and multi-threading；Modern Multi-Core Architecture (Part II) + ISPC Programming Abstractions",
+   "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "以 SIMD 作为并行形式之一来讲：多核/SIMD/多线程三种并行形式的对比，现代多核架构（含 SIMD 单元与内存层次），以及 ISPC 编程抽象（把标量循环写成可被编译器向量化的 SPMD 代码，讲 vector width、mask、gather/scatter 等向量化要素）；课程有讲义与录播，作业含向量化性能实验。",
+   "access": "课程主页免费公开讲义/日程/作业；录播链接在课程页（部分年份公开）；英文。",
+   "publisher": "Stanford University CS149（Kayvon Fatahalian & Kunle Olukotun）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+    "location": "日程表条目：“Forms of parallelism: multi-core, SIMD, and multi-threading”“Modern Multi-Core Architecture (Part II) + ISPC Programming Abstractions”",
+    "finding": "确认课程把 SIMD 与 ISPC 向量化编程作为独立讲次讲授（不是只在 GPU 讲次里顺带提），可补 CMU 15-418 日程里未单列 SIMD/向量化的缺口。"
+   },
+   "added_by": "review/pi-additions/C.5.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "线程任务",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Pthreads 多线程与 OpenMP 章节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Parallel Programming Models/Basics；作业中的线程并行",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从线程/任务并行讲到同步。"
+  },
+  {
+   "topic": "向量化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "Lab 2 MoE 的向量化计算（动手优化，无 SIMD 理论章）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "向量化简介 + 向量化使用方法 + 内联汇编；自动向量化实例（logistic 映射的 base/opt 对照、循环交换、访存副作用）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "HPC101 Lab 2：知识讲解 x86-64 SIMD 优化、AVX 向量指令扩展、AVX-512，以及 MoE 向量化改造实验",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "性能优化讲次可能含 SIMD，日程未单列，未核实",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "CS149 讲次：Forms of parallelism: multi-core, SIMD, and multi-threading；Modern Multi-Core Architecture (Part II) + ISPC Programming Abstractions",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都缺系统的 SIMD/向量化理论讲次；只有动手实验或性能优化章。；原记录中文只有 HPC101 的动手实验。这份中文指南补上方法与原理：向量化与 SIMD 的关系、如何写/调编译器使其自动向量化（用具体代码演示“为什么这段循环向量化失败、交换循环次序后为什么成功”）、向量化后访存成为新瓶颈、以及内联汇编/内在函数入口，属可操作的向量化教学。；补 x86 侧具体指令（SSE/AVX/AVX-512）与手写 SIMD 的必要性，并给出从标量到向量的改造与性能测试流程；与 r7-zh1 的“让编译器自动向量化”形成“编译器 vs 手写”两条路线。；英文侧原来只有 CMU 15-418（日程未单列 SIMD/向量化，只能算 partial）。CS149 把 SIMD 作为独立并行形式来讲，并用 ISPC 讲清向量化编程抽象（vector width、mask、gather/scatter），配讲义与作业，属正面的向量化教学。"
+  },
+  {
+   "topic": "消息传递",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "MPI 分布式存储编程",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "MPI 点对点/集合通信中文教程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "MPI Tutorial：点对点、集合通信、通信子",
+     "extent": "covered"
+    }
+   ],
+   "note": "CMU 15-418 日程未列 MPI，由 MPI Tutorial 补；中文有课程 + 教程。"
+  },
+  {
+   "topic": "负载均衡与数据划分",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "并行程序设计的关键问题（任务/数据划分、负载均衡）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Parallel Programming Basics、性能优化与作业中的划分/调度",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都通过划分与性能作业训练负载均衡。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 Pthreads→OpenMP→MPI→CUDA 顺序学，完成共享内存与分布式内存的并行化作业。"
+    },
+    {
+     "source": "zh3",
+     "read": "用中文 MPI 教程补点对点/集合通信的代码细节。"
+    },
+    {
+     "source": "zh2",
+     "read": "做 Lab 2 向量化实验，记录优化前后性能。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读向量化简介与使用方法，然后把 logist 例子的 base.cpp 与 opt.cpp 都编译跑一遍（-O2 与 -O3 -march=native 各一次），用 -fopt-info-vec 或编译器报告确认哪段循环真的被向量化，再解释循环交换前后的差异。"
+    },
+    {
+     "source": "zh2",
+     "read": "做 HPC101 Lab 2：先看 SIMD/AVX/AVX-512 知识讲解，再用 AVX 内在函数手写 MoE 的关键循环，与编译器自动向量化版本比性能。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 schedule 学并行模型→CUDA→同步→性能优化，完成 4 次作业与项目。"
+    },
+    {
+     "source": "en2",
+     "read": "补 MPI 点对点/集合通信，完成一个多进程分布式内存程序。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "看 CS149 的 SIMD 与 ISPC 两讲，把一个标量循环改写成 ISPC 的 foreach，调 vector width 与 mask，并对比不同 width 的吞吐。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "并行编程 中国大学MOOC Pthreads OpenMP MPI CUDA",
+   "result": "采纳北京理工大学并行编程课；其明确覆盖四类编程技术。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.cmu.edu/~418/schedule.html",
+   "result": "核对日程，确认并行模型/CUDA/同步，未见 MPI/SIMD 专讲，故补 MPI Tutorial。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "向量化 SIMD AVX 编程 中文 教程 编译器自动向量化 OpenMP simd 课程 讲义",
+   "result": "命中 HPC101 Lab 2 向量化页（含 SIMD/AVX/AVX-512 知识讲解）、上海交大 HPC 入门指南「向量化」（含自动向量化实例）、一篇个人博客与华为鲲鹏 GCC 自动向量化文档、apxml 编译器课程中文页。采纳 SJTU 指南为 r7-zh1，并据 Lab 2 页面扩充 zh2 的 covers。",
+   "by": "review/pi-additions/C.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://xflops.sjtu.edu.cn/hpc-start-guide/parallel-computing/SIMD 与 https://hpc101.zjusct.io/lab/Lab2-Vectorization/",
+   "result": "两页均打开核对正文：SJTU 有 logistic 自动向量化实例与访存讨论；HPC101 Lab 2 有 x86-64 SIMD/AVX/AVX-512 知识讲解与“编译器自动向量化是保守的”说明。",
+   "by": "review/pi-additions/C.5.1.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.cs.cmu.edu/~418/schedule.html 与 https://gfxcourses.stanford.edu/cs149/fall25",
+   "result": "15-418 日程页正文没有 SIMD/ISPC/vector 字样（无法证明讲次）；CS149 日程有“Forms of parallelism: multi-core, SIMD, and multi-threading”与“ISPC Programming Abstractions”，采纳 CS149 为 r7-en1。",
+   "by": "review/pi-additions/C.5.1.json"
+  }
+ ],
+ "findings": [
+  "旧中文只有浙大 HPC101，是实验站而非课程；已换北京理工大学并行编程课为主。",
+  "旧英文 CMU 15-418 保留，但 MPI 不在日程，补 MPI Tutorial。",
+  "向量化两侧都不成体系，故本节点 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "共享/分布式内存并行编程",
+ "description": "线程任务、向量化、消息传递、负载均衡与数据划分。",
+ "applied_additions": [
+  "review/pi-additions/C.5.1.json@2e02eaab05"
+ ]
+}

@@ -1,0 +1,304 @@
+{
+ "id": "C.4.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "eraft 开发组《MIT 6.824 分布式系统系列》（中文 Raft 项目讲义）",
+   "url": "https://eraft.cn",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Raft 论文解读与实现、Leader 选举、日志复制、持久化、快照、Multi-Raft；涉及崩溃故障下的共识，但不讲故障模型分类、线性化形式定义与下界证明。",
+   "access": "免费中文网站；项目式，需要自备 C++ 环境。",
+   "publisher": "eraft 开发组",
+   "evidence": {
+    "url": "https://eraft.cn",
+    "location": "系列目录（三）Raft 论文解读、（四）构建 Raft 库、（六）Multi-Raft",
+    "finding": "页面列出 Raft 论文与实现系列，围绕 Leader 选举/日志复制/持久化；没有故障模型、线性化定义或通信复杂度章节。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "TiDB 官方中文：整体架构（Raft 多副本与分布式事务）",
+   "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "TiKV 多副本 Raft、PD 调度、分布式事务；工程实例，不含理论证明。",
+   "access": "免费官方文档；不是教学课程。",
+   "publisher": "PingCAP",
+   "evidence": {
+    "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+    "location": "整体架构：TiKV 多副本与 Raft、PD、分布式事务",
+    "finding": "文档说明 TiKV 用 Raft 保证多副本强一致、PD 调度、TiDB 事务；只能作为工程对照。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.852J / 18.437J Distributed Algorithms（MIT OpenCourseWare, Nancy Lynch）",
+   "url": "https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "同步/异步网络与共享内存模型、故障模型、互斥与资源分配、leader election、生成树、consensus 与 Byzantine agreement、原子广播与事务、下界与通信复杂度证明；完整讲义、阅读、习题与考试。",
+   "access": "MIT OCW 免费公开完整讲义、作业与考试；英文，视频/字幕未核对。",
+   "publisher": "MIT（Nancy Lynch）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/",
+    "location": "Course Material：Syllabus、Calendar、Readings、Lecture Notes、Assignments",
+    "finding": "OCW 目录列出完整讲义与阅读清单，课程为研究生分布式算法理论，含故障模型、共识、Byzantine agreement 与下界证明。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《图解分布式系统原理》（codedump，中文在线书：第 2 章 系统模型、第 4 章 复制与一致性模型、第 5 章 共识算法含 FLP 不可能定理）",
+   "url": "https://www.codedump.info/dist-system-cn/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章 分布式系统模型：两将军问题、拜占庭将军问题、通信模型、故障模型（崩溃/遗漏/时序/拜占庭等故障类型与同步/异步时间模型）；第 4 章 复制：节点失效、一致性模型（顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）；第 5 章 共识算法：5.1 共识算法简介（共识与一致性的关系、脑裂、状态机复制、原子广播、配置变更）、5.2 FLP 不可能定理、5.3 Paxos（诞生、Basic Paxos 两轮 RPC、Multi Paxos 的“一次 Prepare 多次 Accept”降低消息量、活锁问题）。",
+   "access": "作者站点免费在线阅读（写明“免费阅读”），简体中文，逐章带图；无注册要求。",
+   "publisher": "codedump（个人作者，中文原创在线书《图解分布式系统原理》）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.codedump.info/dist-system-cn/consensus/",
+    "location": "第 5 章目录：“5.1.3 共识和一致性 / 5.2 FLP不可能定理 / 5.3 Paxos算法（5.3.1 诞生）…”；正文写“性能低下：达成一个共识需要两轮 RPC（Prepare 和 Accept）。在高并发场景下，消息量会成倍增加……Multi Paxos……一次 Prepare，多次 Accept”；另打开 /systemmodel/ 见“通信模型/故障模型/时间模型”，/replication/ 见“节点失效”与一致性模型小节（顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理）",
+    "finding": "确认故障模型、线性一致性、FLP 不可能定理三块都有正文（不是目录），并顺带读到 Paxos/Multi-Paxos 的消息轮次与通信开销讨论。"
+   },
+   "added_by": "review/pi-additions/C.4.3.json"
+  },
+  {
+   "key": "main-zh-lynch",
+   "lang": "zh",
+   "title": "南希·林奇《分布式算法（典藏版）》中译本（机械工业出版社，2023）",
+   "url": "http://www.cmpedu.com/books/book/5610331.htm",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "同步、异步与部分同步模型下的选举、一致性、互斥与通信问题；多种算法与不可能性结果，并给出精确的复杂度衡量（消息复杂度、时间复杂度与下界）。",
+   "access": "正版付费教材，定价 119 元，需购买或借阅；出版社页面无样章与详细目录，本条范围依据出版社内容简介，并与英文原书（MIT 6.852J 所用教材）对应。",
+   "publisher": "机械工业出版社",
+   "reupload": false,
+   "evidence": {
+    "url": "http://www.cmpedu.com/books/book/5610331.htm",
+    "location": "出版社商品页：内容简介，ISBN 978-7-111-72424-7",
+    "finding": "简介写明本书讨论同步、异步和部分同步模型下的互斥性、一致性和通信问题，给出多种算法或不可能性结果，并有精确的复杂度衡量。"
+   },
+   "added_by": "review/main-additions/C.4.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "故障模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Raft 的崩溃/重启与持久化（只涉及 crash fault）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 2 章 分布式系统模型 → 通信模型、故障模型、时间模型（两将军/拜占庭将军问题引入）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture Notes：failure models（crash/Byzantine、同步/异步）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有 Raft 的崩溃恢复实例，没有故障模型分类与形式化。；原记录中文只有 Raft 实现系列，没有故障模型。这一章先以两将军/拜占庭将军问题说明不可靠信道与恶意节点的区别，再正式给故障模型与时间模型（同步/异步），是分布式算法理论课的第一块基础，正好补上。"
+  },
+  {
+   "topic": "线性化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "基于 Raft 的强一致 KV（工程上的线性化读写）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 4 章 复制 → 一致性模型：线性一致性（与顺序一致性、因果一致性、最终一致性并列比较）、CAP 定理、客户端一致性模型",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "原子/顺序一致性、线性化相关讲义",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文是工程实现，没有线性化的形式定义与判定。；线性化作为最强一致性模型被单独定义，并与顺序一致性区分（前者要求实时顺序、后者只要求所有进程看到同一顺序），再讨论它与 CAP 中可用性的冲突，属理论层面的正式讲授。"
+  },
+  {
+   "topic": "共识可解性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Raft 共识（Leader 选举/日志复制），未讲可解性与不可能结果",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 5 章 5.2 FLP 不可能定理 + 5.1 共识与一致性的关系（脑裂、状态机复制、原子广播、配置变更）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "consensus、Byzantine agreement、FLP 类不可能结果",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文会实现 Raft，但不讨论在何种故障模型下共识可解。；共识可解性在中文里最缺的就是 FLP 这一条：该书 5.2 节专讲 FLP 不可能定理（异步系统中即使只有一个崩溃故障也无法保证确定性地达成共识），并用 5.1 节的共识场景说明为什么可解性讨论重要；与已有 zh1 的 Raft 实现对照，可理解工程上如何用超时/随机化绕开不可能性。"
+  },
+  {
+   "topic": "可用性与通信复杂度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖可用性下界与通信复杂度",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 4 章 CAP 定理与一致性模型（可用性与一致性的取舍）+ 第 5 章 Paxos/Multi-Paxos 的消息轮次与通信开销",
+     "extent": "partial"
+    },
+    {
+     "source": "main-zh-lynch",
+     "section": "各章算法的消息复杂度与下界（如环上领导者选举）、不可能性结果",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lower bounds 与 communication complexity 证明讲义",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文完全没有下界/通信复杂度内容。；可用性一半已覆盖：CAP 定理与一致性模型逐节讲清分区时必须在可用性与一致性之间取舍。通信复杂度只到工程层（Basic Paxos 需两轮 RPC、消息量成倍增加，Multi-Paxos 用“一次 Prepare 多次 Accept”把每轮消息摊薄），没有通信复杂度理论（协议/判定树、下界证明）的中文教学，故整体只能算 partial。；可用性一半由《图解分布式系统原理》第 4 章 CAP 讲分区时可用性与一致性的取舍；通信复杂度一半由林奇《分布式算法》中译本讲各算法的消息复杂度与下界，它就是英文路线 MIT 6.852J 所用教材的中译本。中文侧只能靠这本付费教材承担通信复杂度。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "用 Raft 实现系列建立共识与复制的工程直觉；把每次选举/日志复制对应到崩溃故障模型。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第 2 章建立故障模型与时间模型（区分崩溃故障/拜占庭故障、同步/异步系统），再读第 4 章的一致性模型把线性化与顺序一致性、因果一致性、最终一致性排成强弱序列，最后读第 5 章 5.2 FLP 与 5.3 Paxos/Multi-Paxos，用 FLP 解释为什么工程共识要靠超时与随机化。"
+    },
+    {
+     "source": "main-zh-lynch",
+     "read": "读林奇《分布式算法》同步环上领导者选举一章，比较 LCR 与 HS 算法的消息复杂度，并理解基于比较的选举算法的消息下界。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Calendar 读讲义：模型与故障→互斥/选举→共识与 Byzantine→原子广播/事务→下界与通信复杂度，完成习题。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "分布式算法 共识 拜占庭 容错 中文 课程 讲义 大学",
+   "result": "只找到博客/知乎讲义（403 未读）与区块链 BFT 章节，未采纳为课程；保留 eraft 作实现补充。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "分布式算法 中文 讲义 pdf 共识 下界 通信复杂度 课程",
+   "result": "未找到可核实的中文理论课；该项记缺口。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "分布式系统 中文 讲义 线性化 逻辑时钟 向量时钟 两阶段提交 容错 课程 大学（同一轮检索，C.4.1 亦用）",
+   "result": "命中 codedump《图解分布式系统原理》，其第 2/4/5 章正好覆盖故障模型、线性化、FLP 与共识，采纳为 r7-zh1。",
+   "by": "review/pi-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.codedump.info/dist-system-cn/consensus/",
+   "result": "确认目录含“5.2 FLP不可能定理”，正文含 Paxos 两轮 RPC 与 Multi-Paxos 的消息量优化；采纳。",
+   "by": "review/pi-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "通信复杂度 分布式算法 中文 讲义 课程 消息复杂度 下界 教学",
+   "result": "只返回国科大组合数学课程大纲（教师研究方向含通信复杂性，但课程内容无此章）、知乎大 O 复杂度科普、维基计算复杂性条目，没有中文通信复杂度教学。",
+   "by": "review/pi-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "通信复杂度 communication complexity 中文 入门 教程 判定树 协议 下界 讲义",
+   "result": "只得到百度百科“通讯复杂性”词条、matrix67 的一篇中位数问题博客、以及多伦多大学/Tim Roughgarden 的英文讲义；中文侧确认没有可用的系统教学。",
+   "by": "review/pi-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "site:cmpedu.com 分布式算法 典藏版 林奇",
+   "result": "找到机械工业出版社官方商品页，采纳为付费来源。",
+   "by": "review/main-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "分布式算法 课程 消息复杂度 通信复杂度 南京大学 黄宇 讲义",
+   "result": "只找到教师主页与实验室页面，没有公开讲义。",
+   "by": "review/main-additions/C.4.3.json"
+  }
+ ],
+ "findings": [
+  "旧中文 TiDB 架构是产品文档，不能证明理论覆盖；保留为 reference。",
+  "eraft 只能补 Raft 实现，不能补故障模型/线性化/下界。",
+  "英文 MIT 6.852 完整覆盖四项，作为中文缺口的回退来源。",
+  "[review/pi-additions/C.4.3.json] 未解决 zh「可用性与通信复杂度」：“通信复杂度”这一半中文只有百度百科词条、matrix67 单篇博客与英文讲义（多伦多大学/Tim Roughgarden），没有中文课程或教材成章讲授通信复杂度的协议模型与下界；codedump 书里只有 Paxos 两轮 RPC/消息量的工程讨论。可用性一半由 CAP 章节覆盖。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "分布式算法与一致性理论",
+ "description": "故障模型、线性化、共识可解性、可用性与通信复杂度。",
+ "applied_additions": [
+  "review/pi-additions/C.4.3.json@feca2d9cd2",
+  "review/main-additions/C.4.3.json@3fe933ecf6"
+ ]
+}

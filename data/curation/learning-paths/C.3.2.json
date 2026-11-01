@@ -1,0 +1,255 @@
+{
+ "id": "C.3.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "哈尔滨工业大学《计算机网络》（中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/HIT-154005",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "三单元：网络体系结构/应用层协议与 Socket；可靠传输、停等与滑动窗口、UDP/TCP、虚电路与数据报、路由与转发、IP/CIDR/子网/路由聚集、ICMP/DHCP/NAT/IPv6、路由算法与路由协议、差错编码、MAC/ARP/以太网/VLAN/PPP/无线局域网；网络安全。",
+   "access": "课程页公开三单元内容与参考书；视频需注册中国大学MOOC并选课，按学期开放，认证证书收费。页面未明确列 DNS 与拥塞控制讲次。",
+   "publisher": "哈尔滨工业大学（李全龙等）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HIT-154005",
+    "location": "课程概述：三个单元逐项列出应用层协议、TCP/UDP、路由/IP、链路层协议",
+    "finding": "页面明确列应用层协议与 Socket、可靠传输、UDP/TCP、路由转发、IP/CIDR、路由算法、MAC/ARP/以太网/VLAN；未出现 DNS 或拥塞控制的字样。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Computer Networks: A Systems Approach（Peterson & Davie，第 6 版，免费在线书）",
+   "url": "https://book.systemsapproach.org/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章直连链路、第 3 章网络互联（IP/路由）、第 5 章端到端协议（TCP/UDP）、第 6 章拥塞控制、第 7 章端到端数据、第 9 章应用（DNS/HTTP 等）。",
+   "access": "免费在线全文，无需注册；英文。",
+   "publisher": "Larry Peterson & Bruce Davie",
+   "evidence": {
+    "url": "https://book.systemsapproach.org/",
+    "location": "Table of Contents：Chapter 2 Direct Links、Chapter 3 Internetworking、Chapter 5 End-to-End Protocols、Chapter 6 Congestion Control、Chapter 9 Applications",
+    "finding": "目录逐章列出直连链路、网络互联、端到端协议、拥塞控制与应用层，覆盖链路/IP/TCP/UDP、路由、拥塞控制、DNS/应用协议。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Stanford CS144 Introduction to Computer Networking（讲义与 8 个 lab）",
+   "url": "https://cs144.github.io/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲义：可靠性、TCP、分组交换、拥塞控制 why/what/how、路由入门；lab 用 C++ 实现字节流、TCP receiver/sender 与拥塞窗口。",
+   "access": "课程主页、handouts 与 lab handout 免费公开；英文。",
+   "publisher": "Stanford University（Keith Winstein）",
+   "evidence": {
+    "url": "https://cs144.github.io/",
+    "location": "Handouts：week-1-reliability、week-2-tcp、week-3-packet-switching、week-4 congestion control、routing-intro；assignments check0–7",
+    "finding": "handouts 目录明确有可靠性、TCP、分组交换、拥塞控制三讲与 routing-intro；lab check0–7 公开，可动手实现 TCP。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《图解网络》（小林coding，中文在线系统教程）",
+   "url": "https://xiaolincoding.com/network/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "04 传输层篇 4.2「TCP 重传、滑动窗口、流量控制、拥塞控制」：重传机制（超时重传、快速重传）、滑动窗口、流量控制与糊涂窗口综合症、拥塞控制（慢启动、拥塞避免、拥塞发生——超时与快重传两种触发、快恢复，含 cwnd 与 ssthresh 的变化规则，并引 RFC2581 逐条说明）；03 应用层篇：HTTP 常见面试题、HTTP/1.1 优化、HTTPS RSA/ECDHE 握手、HTTP/2、HTTP/3、HTTP 与 RPC、WebSocket；02 基础篇 2.2「键入网址到网页显示，期间发生了什么」的 DNS 部分：域名用句点分层、越靠右层级越高、末尾点代表根域（根 DNS 服务器 → 顶级域 DNS 服务器 → 权威 DNS 服务器）、域名解析工作流程（客户端 → 本地 DNS 服务器 → 根域名服务器 → 顶级域服务器 → 权威服务器，本地缓存命中则直接返回）；05 网络层篇：IP 基础知识、ping 原理、127.0.0.1。",
+   "access": "作者站点免费在线阅读（另有打包 PDF 下载页），简体中文，配大量手绘图与抓包例子；站点同时挂其付费训练营广告，但教程正文免费。",
+   "publisher": "小林coding（个人作者，站点自述所有配图与正文为其本人所画所写）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xiaolincoding.com/network/3_tcp/tcp_feature.html",
+    "location": "4.2 正文目录与内容：“拥塞控制 / 慢启动 / 拥塞避免算法 / 拥塞发生”，正文写“ssthresh 就是慢启动门限……你可以在 RFC2581 第 3 页找到答案”，并讨论 cwnd 增长与快重传触发；另打开 https://xiaolincoding.com/network/1_base/what_happen_url.html 读到「真实地址查询 —— DNS」整节：域名层级关系（根域/顶级域/权威域三级树）、域名解析的工作流程（客户端→本地 DNS→根域名服务器→……，缓存命中直接返回）",
+    "finding": "确认拥塞控制是独立成节的教学（慢启动→拥塞避免→拥塞发生→快恢复，cwnd/ssthresh 规则，引 RFC），不是一句带过；DNS 部分把域名层级与解析流程讲到了根/顶级/权威三级与本地缓存，可补“名称系统”。"
+   },
+   "added_by": "review/pi-additions/C.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "链路/IP/TCP/UDP",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二单元：UDP/TCP、IP 协议与地址、CIDR/子网、MAC/ARP/以太网/VLAN/PPP",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.2 Direct Links、Ch.3 Internetworking、Ch.5 End-to-End Protocols",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "week-2 TCP、week-3 packet switching、lab check1–5",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文覆盖链路层到传输层，英文书加 CS144 实验。"
+  },
+  {
+   "topic": "路由",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二单元：路由与转发、路由算法、路由协议、CIDR/路由聚集",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.3 Internetworking（routing algorithms/protocols）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "routing-intro handout",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文有路由算法与协议；英文书是主，CS144 只作入门。"
+  },
+  {
+   "topic": "拥塞控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "TCP 章可能含拥塞控制，课程页未明确列出",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "04 传输层篇 4.2 TCP 重传、滑动窗口、流量控制、拥塞控制 → 拥塞控制（慢启动、拥塞避免、拥塞发生、快重传/快恢复）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.6 Congestion Control",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "week-4 why/what/how congestion control",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文页只写 TCP，未核到拥塞控制讲次，不能假定 covered。；原记录里哈工大课程页只写“UDP/TCP”，没点名拥塞控制，所以只能算 partial。这份中文教程把拥塞控制完整讲了一节：慢启动的指数增长与 ssthresh 门限、拥塞避免的线性增长、超时与快重传两种拥塞信号分别怎么反应、快恢复如何回到拥塞避免，并给出 cwnd 变化规则与 RFC2581 出处，属可核实的成段教学。"
+  },
+  {
+   "topic": "名称系统与应用协议",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一单元：网络应用类型、应用层协议、Socket 编程（DNS 未点名）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "02 基础篇 2.2 的 DNS 部分（域名层级、根/顶级/权威服务器、解析流程与本地缓存）+ 03 应用层篇（HTTP、HTTPS RSA/ECDHE 握手、HTTP/2、HTTP/3、RPC、WebSocket）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.9 Applications（DNS、HTTP 等）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有应用层与 Socket，但 DNS/HTTP 等名称系统未在页面核实；英文书第 9 章明确覆盖。；名称系统一侧：讲清域名树（根域 → 顶级域 → 权威域）与一次解析要经过本地 DNS、根、顶级、权威服务器的顺序，以及本地缓存命中时直接返回；应用协议一侧：HTTP 各版本、HTTPS 两类握手、RPC 与 WebSocket 都有专文，配抓包与手绘图。与已有 zh1（哈工大课程的应用层协议与 Socket）合起来覆盖“名称系统与应用协议”。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按三单元顺序学：应用层/Socket→可靠传输与 TCP/UDP→IP/路由→链路层，完成课后习题与 Socket 编程。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读 4.2：画出 cwnd 随时间变化的曲线，标出慢启动（指数）、拥塞避免（+1/cwnd 线性）、超时（ssthresh 减半、cwnd 归 1）、快重传/快恢复（ssthresh 减半、cwnd 设为新 ssthresh）四个阶段的转折点；再用 tcpdump 抓一次丢包重传验证。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读 2.2 的 DNS 一节，手写一遍“访问 www.server.com”的解析顺序（本地 DNS 缓存 → 根 → .com 顶级 → server.com 权威），再读 03 应用层篇的 HTTP/HTTPS/HTTP2/HTTP3 与 RPC、WebSocket 各篇，建立应用协议的演进脉络。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按第 2→3→5→6→9 章读链路、网络互联、端到端协议、拥塞控制与应用层。"
+    },
+    {
+     "source": "en2",
+     "read": "配合 CS144 的 TCP/拥塞控制 handouts 与 check1–7 lab，实现字节流、TCP 与拥塞窗口。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/HIT-154005 内检索 DNS/拥塞",
+   "result": "未命中 DNS/拥塞，故两项记 partial。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://book.systemsapproach.org/ 目录",
+   "result": "采纳为英文主书；CS144 作为实验补充。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://xiaolincoding.com/network/（目录）与 /network/3_tcp/tcp_feature.html、/network/1_base/what_happen_url.html",
+   "result": "采纳 r7-zh1：《图解网络》4.2 讲慢启动/拥塞避免/快重传/快恢复与 cwnd/ssthresh，2.2 讲 DNS 域名层级与解析流程，03 篇讲 HTTP/HTTPS/HTTP2/3/RPC/WebSocket。",
+   "by": "review/pi-additions/C.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/HIT-154005 与 /learn/HIT-154005",
+   "result": "哈工大《计算机网络》页面正文仍只有概述与安全单元介绍，课程大纲区块不渲染，无法核到拥塞控制/DNS 讲次；保留 zh1 为 primary 但不据它宣称覆盖。",
+   "by": "review/pi-additions/C.3.2.json"
+  }
+ ],
+ "findings": [
+  "旧英文 CS144 保留为实验补充，但其讲义没有应用层/名称系统，不能单独覆盖本节点。",
+  "旧中文哈工大课程保留，链路/IP/TCP/UDP 与路由覆盖明确；拥塞控制与 DNS 未核实。",
+  "新增 Peterson & Davie 免费书补 EN 拥塞控制与应用层。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "网络协议、路由与传输",
+ "description": "链路/IP/TCP/UDP、路由、拥塞控制、名称系统与应用协议。",
+ "applied_additions": [
+  "review/pi-additions/C.3.2.json@aca4fa4b50"
+ ]
+}

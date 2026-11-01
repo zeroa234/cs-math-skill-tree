@@ -1,0 +1,405 @@
+{
+ "id": "C.1.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "电子科技大学《嵌入式系统及应用》（中国大学MOOC，国家级一流课程）",
+   "url": "https://www.icourse163.org/course/UESTC-1206862805",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "以 ARM 处理器编程模型为主线（寄存器、工作模式、指令与 Keil4 实验），再讲 uC/OS-II 的任务管理、同步通信、中断、时间与内存管理；可建立 ARM 指令集、异常/中断与底层汇编的实践基础。",
+   "access": "课程页公开概述与参考书；视频需注册中国大学MOOC并选课，按学期开放，认证证书收费。课程页未列逐章大纲，异常级细节未核实。",
+   "publisher": "电子科技大学（罗蕾等）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/UESTC-1206862805",
+    "location": "课程概述第 2 段：ARM 处理器编程模型与 Keil4 实验；uC/OS-II 中断/任务管理",
+    "finding": "页面明确“详细解读 ARM 处理器的编程模型并配合基于 Keil4 的相关实验”，并以 uC/OS-II 讲任务、同步通信、中断、时间、内存；参考资料列 ARM Architecture Reference Manual。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "南京大学《计算机系统基础》PA 实验讲义（RISC-V 方向）",
+   "url": "https://nju-projectn.github.io/ics-pa-gitbook/ics2025/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "用 C 实现指令模拟器、运行时环境与简单 OS，沿 RISC-V 指令执行理解 ISA、寄存器、函数调用与栈帧；提供 RISC 思想的动手对照。",
+   "access": "GitBook 免费公开；实验需自备 Linux 工具链。",
+   "publisher": "南京大学计算机科学与技术系（蒋炎岩等）",
+   "evidence": {
+    "url": "https://nju-projectn.github.io/ics-pa-gitbook/ics2025/",
+    "location": "讲义目录：指令集模拟器、运行时环境、系统调用与进程管理各阶段",
+    "finding": "讲义以 RISC-V 为目标，让学生实现模拟器并理解指令执行、ABI/栈与系统调用，可作为 ARM 之外的第二 ISA 对照。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "Arm《学习 Arm 架构 - A 系列》中文指南入口（AArch64 ISA、例外模型、记忆体模型）",
+   "url": "https://www.arm.com/zh-TW/architecture/learn-the-architecture/a-profile",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "官方中文指南列表与每条指南的内容说明（AArch64 ISA、AArch64 异常模型含 EL0–EL3、虚拟化、内存管理与内存模型、通用定时器）；正文在 developer.arm.com，本轮仍 403 未读到。",
+   "access": "Arm 官网免费阅读；指南正文在 developer.arm.com（本次直接打开返回 403，未读到正文），只能确认入口与指南说明。",
+   "publisher": "Arm Limited",
+   "evidence": {
+    "url": "https://www.arm.com/zh-cn/architecture/learn-the-architecture/a-profile",
+    "location": "“AArch64 异常模型”条目说明段；页面底部指南链接列表（含 developer.arm.com/documentation/102412/latest）",
+    "finding": "打开 zh-cn 页面确认官方中文条目存在且明确写 EL0–EL3、Serror/IRQ/FIQ 与虚拟异常，但所有指南正文链接都指向 developer.arm.com（本轮 403）。"
+   },
+   "official_search": "本轮复查 Arm 官方中文入口 www.arm.com/zh-cn/architecture/learn-the-architecture/a-profile（原 zh-TW 链接会重定向到 zh-cn）：页面写明“AArch64 异常模型：本指南介绍了 AArch64 中的异常模型和特权模型，涵盖异常级别（EL0、EL1、EL2、EL3）以及同步和异步异常（包括 Serror、IRQ、FIQ 中断）与虚拟异常”，并列出 AArch64 ISA、虚拟化、通用定时器等中文指南条目。但指南正文 developer.arm.com/documentation/102412/latest 用 fetch 与 tavily_extract 都被拒绝（403/Failed to fetch），因此官方中文正文不可读；可读的中文全译本登记为新增来源 r7-zh2。",
+   "updated_by": [
+    "review/pi-additions/C.1.3.json"
+   ]
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Dive into Systems（Matthews, Newhall, Webb；免费在线教材）",
+   "url": "https://diveintosystems.org/book/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "第 5 章指令集与处理器执行；第 7–9 章分别用 64 位 x86、32 位 x86、ARMv8 (AArch64) 讲汇编、条件/循环、函数调用与栈帧（sp/x29、参数传递）、递归、数组/结构体与缓冲区溢出；第 10 章比较多种汇编与 CISC/RISC。",
+   "access": "免费在线教材，无需注册；英文正文。",
+   "publisher": "Suzanne J. Matthews, Tia Newhall, Kevin C. Webb",
+   "evidence": {
+    "url": "https://diveintosystems.org/book/C9-ARM64/index.html",
+    "location": "C9 ARM64 章目录；全书目录含 C5 ISA、C7 x86-64、C8 IA32、C9 ARMv8、C10 汇编比较",
+    "finding": "C9 目录逐节列出 ARMv8 汇编、指令、函数调用与栈；全书目录显示三种 ISA 的汇编章节与第 10 章比较，可直接对照 RISC/CISC。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "胡伟武《计算机体系结构基础》（第三版）在线全文：第 2 章 指令系统、第 3 章 特权指令系统、第 4 章 软硬件协同",
+   "url": "https://foxsen.github.io/archbase/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 2 章：指令系统设计原则、CISC/RISC/VLIW 演变、2.3.3 运行级别的演变（x86 Ring0–Ring3、MIPS user/supervisor/kernel、LoongArch PLV0–PLV3、ARM AArch64 硬件虚拟化引入新运行级别）、2.4 指令系统组成（地址空间/操作数/编码）、2.5 RISC 指令集比较（指令格式、寻址方式、寄存器数量表含 ARMv8/PowerPC/MIPS/x86）、2.6 C 语言的机器表示（过程调用、栈帧）；第 3 章 特权指令系统（3.2 异常与中断：异常分类、异常处理、中断；3.3 存储管理与 TLB 相关异常）；第 4 章 ABI（寄存器约定、函数调用约定、栈帧布局）。",
+   "access": "GitBook 在线免费全文，无需注册；简体中文；有各章习题。正文以 LoongArch 为主线，ARM 作为比较对象出现。",
+   "publisher": "胡伟武（中国科学院计算技术研究所/龙芯）等，机械工业出版社原书，作者授权在线版",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://foxsen.github.io/archbase/sec-ISA.html",
+    "location": "2.3.3 运行级别的演变；2.5 RISC 指令集比较（正文含 ARMv8、PowerPC 寄存器数量表）；2.4.2.3 寻址方式、转移指令条件判断“X86 和 ARM 采用专用标志位方式，RISC-V 采用直接比较寄存器方式”",
+    "finding": "打开第 2 章正文确认：运行级别一节逐个讲无管理/保护模式/调试模式/虚拟化支持，点名 x86 Ring0–Ring3、MIPS 三级、LoongArch PLV0–PLV3 与“ARM 的 AArch64 架构也定义了硬件虚拟化支持方面的内容”；2.5 节用表格横向比较 ARMv8、PowerPC、MIPS16、ARMv7、X86 的寄存器数量与指令编码。这构成中文的“多种 ISA 横向比较”教学。"
+   },
+   "added_by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《Armv8/armv9 架构入门指南 v1.0》（Arm 官方 Learn the Architecture 指南的中文译本，readthedocs 在线全文）",
+   "url": "https://armv8-doc.readthedocs.io/en/latest/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 2 章 ARMv8-A 架构和处理器、第 4 章 ARMv8 寄存器（PSTATE/系统寄存器）、第 5 章 ARMv8 指令集简介、第 6 章 A64 指令集、第 9 章 ARM 64 位架构的 ABI、第 10 章 AArch64 异常处理（10.2 异常类型与系统响应、10.2.4 系统响应到 EL2/EL3、10.2.6 异常状态寄存器 SPSR_ELn、10.3 异常导致的执行状态和异常级别变化、10.4 AArch64 异常向量表、10.5 中断处理、10.6 通用中断处理）、第 13 章内存排序、第 17 章安全（TrustZone）。",
+   "access": "第三方转载，授权未核。readthedocs 免费全文，简体中文翻译；页面顶部夹带“Arm 体系结构付费课”招生广告与微信群链接，正文为指南译文，译文质量个别处有译注。",
+   "publisher": "社区中文译本（站点自述系翻译 Arm《Learn the Architecture》A 系列指南）；原文版权属 Arm Limited，译本授权状态未核实",
+   "reupload": true,
+   "official_search": "查了 Arm 官方中文页 www.arm.com/zh-cn/architecture/learn-the-architecture/a-profile：官方确有“AArch64 异常模型”中文指南条目并写明涵盖 EL0、EL1、EL2、EL3 与同步/异步异常；但正文页 developer.arm.com/documentation/102412/latest 在 fetch 与 tavily_extract 两种方式下均返回 403/抓取失败，无法核对官方中文正文，故保留这份可读的中文译本并标注转载/翻译。",
+   "evidence": {
+    "url": "https://armv8-doc.readthedocs.io/en/latest/10.html",
+    "location": "第 10 章 AArch64 异常处理：10.2.3 系统响应、10.2.4 系统响应到 EL2/EL3、10.2.6 异常状态寄存器、10.3 异常导致的执行状态和异常级别的变化、10.4 AArch64 异常向量表",
+    "finding": "打开第 10 章正文确认逐节讲解：ARMv8-A 四个异常级别、SMC 指令与安全监控、异常发生时 PSTATE 存入 SPSR_ELn、DAIF 屏蔽位、SPSel 选择 SP_EL0/当前级别栈指针、EL2/EL3 如何响应异常并切级别。即中文正文确实讲了 EL0–EL3 而不是只列目录。"
+   },
+   "added_by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Learning operating system development using Linux kernel and Raspberry Pi（s-matyukevich, RPi OS）Lesson 3: Interrupt handling / 3.2 Low level exception handling",
+   "url": "https://s-matyukevich.github.io/raspberry-pi-os/docs/lesson03/rpi-os.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "AArch64 异常级别与异常向量表的动手教学：四种执行状态（EL1t/EL1h/EL0_64/EL0_32）、16 个向量项、SPSel 与独立/共享栈指针、IRQ 从 EL0 陷入 EL1 的 entry.S 实现，并逐段对照 Linux 内核同类代码。",
+   "access": "GitHub Pages 免费阅读；英文；每课附源码快照与习题。",
+   "publisher": "Sergey Matyukevich（RPi OS 项目作者，课程站点自述按 Linux 内核实现改写）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://s-matyukevich.github.io/raspberry-pi-os/docs/lesson03/rpi-os.html",
+    "location": "3.1 Interrupts → “Exception vectors” 小节（EL1t / EL1h / EL0_64 / EL0_32 四种执行状态、16 个 handler、ventry 宏、.align 7）",
+    "finding": "确认正文以代码分步讲 AArch64 异常向量与异常级别切换（EL0→EL1），并说明 SPSel 决定用 SP_EL1 还是 SP_EL0。"
+   },
+   "added_by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "AArch64 Exception Levels（Mike Krinkin，写作 ARM hypervisor 系列中的一篇）",
+   "url": "https://krinkinmu.github.io/2021/01/04/aarch64-exception-levels.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "EL0–EL3 四个异常级别的用途与实现取舍：EL0 用户态、EL1 内核、EL2 hypervisor（含在 EL2 上搭建 guest 的寄存器配置）、EL3 Secure Monitor/PSCI/可信启动；以及“芯片不必须实现全部四级”的现实约束。",
+   "access": "个人博客免费阅读；英文；同系列前后文有在 QEMU/树莓派上落地的 hypervisor 代码。",
+   "publisher": "Mike Krinkin（个人技术博客，hypervisor 系列作者）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://krinkinmu.github.io/2021/01/04/aarch64-exception-levels.html",
+    "location": "正文开头 “Exception Levels ... numbered from 0 to 3, where EL0 is the lowest ... EL3 is the highest”；随后逐段 “EL3 ... Secure Monitor / PSCI / trusted boot”“EL2 ... hypervisor”",
+    "finding": "确认正文逐级解释四级异常级别的职责与 EL2 上运行 guest 的需要，可补 RPi OS 只涉及 EL0/EL1 的部分。"
+   },
+   "added_by": "review/pi-additions/C.1.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "ARM指令集/异常级",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "课程概述：ARM 处理器编程模型与 Keil4 实验（指令/寄存器/中断）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "AArch64 例外模型指南条目（EL0–EL3、同步/异步异常）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 6 章 A64 指令集 + 第 9 章 ARM 64 位架构的 ABI + 第 10 章 AArch64 异常处理（10.2 异常类型与系统响应、10.2.4 系统响应到 EL2/EL3、10.2.6 异常状态寄存器、10.3 执行状态与异常级别变化、10.4 异常向量表）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 2 章 2.3.3 运行级别的演变 + 第 3 章 3.2 异常与中断（异常分类、异常处理、中断）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "C9 ARMv8：AArch64 指令、寄存器与汇编；未含 EL0–EL3 特权级模型",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Lesson 3 Interrupt handling → 3.1/3.2 Exception vectors 与 low level exception handling（EL1t/EL1h/EL0_64/EL0_32、16 个向量项、SPSel、entry.S）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en2",
+     "section": "AArch64 Exception Levels 全文（EL0/EL1/EL2/EL3 各自用途、EL2 上跑 guest 的配置、EL3 与 Secure Monitor/PSCI/可信启动）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有课程级 ARM 编程模型和官方指南入口，但指南正文未读到；英文教材讲 AArch64 用户态指令与汇编，不讲异常级。两侧都只能算 partial。；这份中文全译本按 Arm 官方指南顺序讲：A64 指令与寄存器→ABI→异常模型，第 10 章正文逐节交代 EL0–EL3 的职责、异常如何从 EL0 陷入 EL1/EL2/EL3、SPSR_ELn/DAIF/SPSel 等寄存器、异常向量表结构与中断处理，正好补上原记录里“只有 Arm 架构手册、没有教学”的缺口。配合 r7-zh1（第 2 章 2.3.3 运行级别演变与第 3 章 异常与中断机制，给出 x86/MIPS/LoongArch/ARM 的运行级别对照）与已有 zh1（电子科技大学 ARM 编程模型与 Keil 实验，给指令/寄存器/中断的实践）形成中文完整链条。；补充“异常级”在体系结构层面的原理：为什么需要运行级别、保护模式/调试模式/虚拟化三级演进、异常分类与处理流程、TLB 相关异常，并明确点出 ARM AArch64 用新增运行级别支持硬件虚拟化。与 r7-zh2 的 ARM 专有 EL0–EL3 细节互补。；英文侧原来只有 Dive into Systems 的 AArch64 用户态指令与汇编，缺异常级。RPi OS 第 3 课用可运行代码讲异常向量表与 EL0→EL1 的陷入/返回，配 r7-en2 讲 EL2/EL3 的职责（hypervisor、Secure Monitor/PSCI），两侧合起来覆盖 EL0–EL3。；补齐 RPi OS 未涉及的 EL2/EL3：说明各级别典型的软件归属、芯片可以不实现全部级别、EL2 上运行虚拟机的寄存器与异常路径，属于带前后文代码系列的讲解而非词条。"
+  },
+  {
+   "topic": "RISC思想",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "RISC-V 指令模拟器与运行时环境各阶段",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "C5 ISA 与处理器执行；C10 多 ISA/汇编比较",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用 RISC-V 实现体会 load/store、定长指令与寄存器约定；英文从 ISA 设计原则讲到 x86/ARM 对比。"
+  },
+  {
+   "topic": "ABI与汇编",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "ARM 编程模型与 Keil4 汇编实验",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "函数调用、栈帧与运行时环境阶段",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "C9 ARM64 Functions：栈帧 sp/x29、参数传递、递归；C10 调用约定比较",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文的 ARM 调用约定未在课程页核实，RISC-V 调用约定由 PA 补；英文 ARMv8 栈帧与参数传递有明确小节。"
+  },
+  {
+   "topic": "其他ISA可作比较",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "仅 RISC-V 一个 ISA 的实现，无 x86/ARM 对照章节",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 2 章 2.3.1 指令内容的演变 + 2.4 指令系统组成 + 2.5 RISC 指令集比较（指令格式比较、寻址方式比较、不同指令系统的特色）+ 2.6 C 语言的机器表示",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "C7 x86-64、C8 IA32、C9 ARMv8、C10 汇编与 ISA 比较",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只有 ARM 课程 + RISC-V 实验，缺第三种 ISA 的系统对照；英文侧正好补上。；中文里唯一成体系的多 ISA 横向对照：CISC/RISC/VLIW 三种编码、寄存器数量表（ARMv8、PowerPC、MIPS16、ARMv7、X86）、寻址方式与条件转移实现差异（X86/ARM 用标志位，RISC-V 用比较寄存器）、大小尾端与对齐访问策略差异、调用约定与栈帧。正好覆盖“其他 ISA 可作比较”这一知识点，不再只靠英文 Dive into Systems 第 10 章。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先跟 ARM 编程模型与 Keil4 实验，写汇编/中断程序，理解寄存器、寻址与异常入口。"
+    },
+    {
+     "source": "zh2",
+     "read": "再用 RISC-V 模拟器实现指令执行与函数调用，对照 RISC 设计与 ABI。"
+    },
+    {
+     "source": "zh3",
+     "read": "查 AArch64 例外模型中文指南，补 EL0–EL3 与同步/异步异常概念。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读《计算机体系结构基础》第 2 章（重点 2.3.1、2.3.3、2.4、2.5、2.6）建立指令系统设计与多 ISA 对照的框架，再读第 3 章 3.2 弄懂异常/中断的分类与处理流程、3.3 的 TLB 相关异常。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "按第 5→6→9→10 章顺序读中文指南：先 A64 指令集与寄存器，再 AArch64 ABI，最后第 10 章异常处理（异常类型、系统响应到 EL2/EL3、SPSR/DAIF/SPSel、异常向量表、中断处理），把 EL0–EL3 与向量表结构落实到寄存器级。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 C5→C7/C8/C9→C10 学：先 ISA 与处理器执行，再 x86 与 ARMv8 汇编/栈帧，最后做三套汇编对照。"
+    },
+    {
+     "source": "r7-en1",
+     "read": "跟 RPi OS 第 3 课写异常向量表（16 项）与 IRQ handler，做到能从 EL0 陷入 EL1 并正确用 SP_EL1，再对照它引用的 Linux entry.S。"
+    },
+    {
+     "source": "r7-en2",
+     "read": "读 AArch64 Exception Levels 弄清 EL2/EL3 的软件归属（hypervisor、Secure Monitor/PSCI），并顺着系列在 EL2 上搭一个最小 guest。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "ARM 体系结构 汇编 异常 中断 中国大学MOOC 嵌入式系统 课程",
+   "result": "采纳电子科技大学嵌入式系统课程；课程页只给概述，未列异常级细节。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.arm.com/zh-TW/architecture/learn-the-architecture/a-profile",
+   "result": "采纳为官方中文指南入口；developer.arm.com 正文 403，未读到正文。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://foxsen.github.io/archbase/ 与 sec-ISA.html、sec-privileged-ISA.html",
+   "result": "采纳胡伟武《计算机体系结构基础》在线全文（r7-zh1）：第 2 章有运行级别演变与多 ISA 比较表，第 3 章有异常与中断，正好补中文的两个缺口。",
+   "by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.arm.com/zh-cn/architecture/learn-the-architecture/a-profile",
+   "result": "官方中文页确认存在“AArch64 异常模型（EL0–EL3）”中文指南条目；正文链接全部指向 developer.arm.com，fetch 403。",
+   "by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "tavily_extract https://developer.arm.com/documentation/102412/latest/",
+   "result": "抓取失败（站点拒绝抓取），官方中文正文仍未读到；改用中文译本。",
+   "by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "ARM64 异常处理 异常等级 EL0 EL1 EL2 EL3 中文 教程 系列 异常向量表",
+   "result": "命中《Armv8/armv9 架构入门指南》（readthedocs 中文译本，第 10 章 AArch64 异常处理）、蜗窝/内核工匠等技术博客、知乎专栏。采纳 readthedocs 全译本为 r7-zh2（有目录、逐节正文、译注），博客与知乎单篇只作线索未登记。",
+   "by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch.py bili “ARM 异常等级 EL0 EL1 EL2 EL3”",
+   "result": "返回 LSPosed、Roblox、手机 root 等无关结果（与 brief 提示一致），不能据此判断有没有。",
+   "by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com ARMv8 异常等级 EL0 EL1 EL2 EL3 异常模型 课程",
+   "result": "找到 B 站“Arm精选”账号的 141 分 P 合集 BV1Qo8KzYEnR（标题《真正的ARM架构 | Armv8/Armv9架构技术》，分 P 多为“为什么学 ARM 架构/MMU/Cache/Trustzone”营销向标题，简介留微信号招生）与几篇 B 站专栏译文。合集是商业课宣传，分 P 标题里没有明确的“异常等级/异常模型”讲次，未采纳为覆盖来源；B 站确有中文 ARM 架构内容这一事实记在此处。",
+   "by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "AArch64 exception levels EL0 EL1 EL2 EL3 explained lecture notes tutorial hypervisor guest OS",
+   "result": "命中内核文档 Booting AArch64 Linux（EL0–EL3、EL2 hypervisor、EL3 仅安全态）、申文博 AArch64 Exception Handling、Mike Krinkin 的 AArch64 Exception Levels、openEuler 虚拟化概览等。采纳 Krinkin（r7-en2，属带代码的 hypervisor 系列）。",
+   "by": "review/pi-additions/C.1.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://s-matyukevich.github.io/raspberry-pi-os/docs/lesson03/rpi-os.html",
+   "result": "采纳 RPi OS 第 3 课（r7-en1）：EL1t/EL1h/EL0_64/EL0_32 与 16 项异常向量表、entry.S 实现。",
+   "by": "review/pi-additions/C.1.3.json"
+  }
+ ],
+ "findings": [
+  "旧中文来源南京大学 PA 保留为 RISC-V 补充，但它不能单独证明 ARM 指令集/异常级。",
+  "新增电子科技大学 ARM 编程模型课程补 ARM 侧；异常级仍缺可读正文，故不报 complete。",
+  "英文 Dive into Systems 保留：ARMv8 函数调用/栈帧与多 ISA 对照明确，但确实不含异常级。",
+  "[review/pi-additions/C.1.3.json] 未解决 zh「Arm 官方中文指南正文」：www.arm.com/zh-cn 的中文条目可读，但正文 developer.arm.com 对本轮 fetch 与 tavily_extract 均返回 403，官方中文正文未亲自打开，只能登记社区中文译本（r7-zh2）并在 zh3 的 official_search 里说明；若主代理能拿到官方正文，可把 r7-zh2 降为 alternative。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "ARM与其他指令集体系",
+ "description": "ARM指令集/异常级、RISC思想、ABI与汇编；其他ISA可作比较。",
+ "applied_additions": [
+  "review/pi-additions/C.1.3.json@0a67265c1c"
+ ]
+}
