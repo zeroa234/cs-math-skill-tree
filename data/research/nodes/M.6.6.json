@@ -1,0 +1,72 @@
+{
+ "id": "M.6.6",
+ "resource": {
+  "tier": "website",
+  "title": "Introduction to Queueing Theory for Computer Scientists — A Mini Course（Prof. Raj Jain, Washington University in St. Louis；含讲义幻灯片与讲座录音）",
+  "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
+  "lang": "en",
+  "free": true,
+  "access": "免费公开：课程主页列出每次课的主题，点标题即可下载幻灯片、听讲座录音；另有 Homework、Quiz、教材勘误链接。无需注册，也无视频托管平台依赖。",
+  "covers": "Kendall 记号、到达/服务分布、随机过程与生灭过程、M/M/1、M/M/m、M/M/m/B、开放/闭合排队网络与乘积形式解、操作定律（利用率、流量、Little、响应时间、瓶颈）、Mean Value Analysis 的步骤与假设，目录均有对应条目。为计算机系统性能估算入门小课，不覆盖一般 G/G/1、重尾与高级调度理论。"
+ },
+ "zh_alt": {
+  "tier": "video",
+  "title": "北京交通大学《通信网理论基础》：排队论课程录像（从第 21 讲进入合集）",
+  "url": "https://www.bilibili.com/video/BV1u94y1f76x/",
+  "lang": "zh",
+  "free": true,
+  "access": "B 站免费课程录像，中文授课；字幕未核对。UP 主 yishuaichen 自述为该课程录像；北交大官网可核对同名教师陈一帅及其讲授这门课，尚未取得学校官网到该 B 站账号的直接链接，发布者身份据此保留限定。链接从 M/M/1 一讲进入，按合集顺序学习。",
+  "covers": "合集包含泊松/马尔可夫过程、Kendall 记号、M/M/1、多服务台与损失系统、Little 定律、电话网性能与 Python 仿真。中文目录未见 Jackson 网络和闭合网络 MVA，不把单队列平均值计算等同于 MVA；这两部分读英文小课。"
+ },
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-857 Analytical Performance Modeling & Design of Computer Systems（Fall 2025，Mor Harchol-Balter）",
+   "url": "https://www.csd.cmu.edu/course/15857/f25",
+   "prereq_text": "Required Background Knowledge: We assume a reasonable background in probability, such as that covered in an Undergraduate Probability class. Specifically, we assume a knowledge of continuous and discrete distributions, conditional probability, conditional expectation, and higher moments.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1"
+   ]
+  },
+  {
+   "school": "Washington University in St. Louis",
+   "course": "CSE 567M Computer Systems Analysis（Fall 2017，Raj Jain）",
+   "url": "https://www.cse.wustl.edu/~jain/cse567-17/index.html",
+   "prereq_text": "Prerequisites: CSE 131 or CSE 126 or their respective equivalents. CSE 280 is not required. ... Some knowledge of probability theory is helpful.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley（课程主页注明上课地点 465H Soda Hall，页面托管在 Raj Jain 的 WUSTL 个人主页）",
+   "course": "Introduction to Queueing Theory for Computer Scientists（周三 5:30-7:00PM 的 mini course，授课人 Prof. Raj Jain）",
+   "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
+   "prereq_text": "As a prerequisite, a basic understanding of probability and statistics is helpful. Some of it will be reviewed as needed.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.6.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "M.6.1": "supported",
+  "M.6.3": "not_mentioned",
+  "M.6.3.1": "not_mentioned",
+  "C.2.1": "not_mentioned",
+  "C.3.2": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "WUSTL CSE 567M 原文 'Prerequisites: CSE 131 or CSE 126 or their respective equivalents.'；WashU 现课程目录里 CSE 1301 Introduction to Computer Science 即原 CSE 131（bulletin.wustl.edu 原文：'Students receiving a 4 or 5 on the AP Computer Science A exam are awarded credit for CSE 1301 Introduction to Computer Science'），是入门编程课，对应 P.1.1。"
+  }
+ ],
+ "notes": "2026-11-01 从 M.6.4“时间序列与排队论”拆出（粒度检查：时间序列与排队论各是一门完整的课）。share 判断：本技能与一门真实课程基本重合——CMU 15-857 的 Key Topics 就是 Operational Laws / Markov Chain Theory / Poisson Process / Queueing Theory（open, closed, M/M/1, M/M/k, M/M/k/k, M/G/1, M/G/k, G/G/1, 变换分析）/ Networks of Queues（Jackson）/ 以及应用到数据中心与调度，课程页写明 '12 Units'、'Classes: M,W,F 2:00-3:20'，一学期讲完，所以 M.6.6 相当于一门研究生课的主体（share 归入『整门课』一类；本节点只到 D2–D4，删掉了 CMU 课里的 G/G/1、重尾、SRPT 等研究型内容，收窄后仍是半门课以上）。WUSTL CSE 567M 是性能分析全课，排队论只占其中 Chapter 30–32 与 MVA 几讲（大纲里 10 月下旬起 'Introduction to Queueing Theory (Part 1/2)'、'Queueing Networks (Part 1/2)'、'Operational Laws'），所以那门课里排队论不足一半，但作为『有人把它教成一门课』的证据成立。中文侧诚实说明：三次 Tavily 检索（第一次找 CMU 15-857 先修原文，第二次 '排队论 大学 课程 讲义 pdf 开放'，第三次 '排队论 课程 学堂在线 开放式课程 讲义 大学 随机服务系统'）只找到：中科大学生个人笔记 GitHub（非官方，不采用）、中文维基『等候理论』条目（非课程）、华为技术支持站《排队论基础》图书宣传页（付费书，非正文）、以及北京交通大学这一章讲义；没有找到公开可访问、讲授完整的大学中文排队论课程（中国大学MOOC《管理运筹学》虽把排队论列为分支之一，但页面只写 '本课程的主要分支包括线性规划、整数规划、存储论、网络计划、图论、排队论等'，未公开该部分讲次，无法核对覆盖，故只作备选记在这里：https://www.icourse163.org/course/SDU-1207235802 ）。候选前置 M.6.3 随机过程 / M.6.3.1 马尔可夫链：CMU 把 Markov Chain Theory（离散与连续时间、更新理论、时间可逆）当作课内内容教而不是先修，WUSTL 与 mini course 也没写，故都记 not_mentioned——意思是『课内会讲，不必事先学』，不是否定它们的帮助。C.2.1 / C.3.2 同样没有任何一门课列为先修；CMU 只把排队论『应用』到数据中心、路由器等系统上。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "本轮只重找中文。原中文资源是北京交通大学课程平台上一章《排队论》讲义（19 页，只到多服务台），覆盖不到 Little 定律的多种应用、电话网/缓存的性能模型与仿真，故换掉；新资源其实是同一门北交大课程的全套录像（排队论 26 讲 + Python 仿真），比一章讲义完整得多，缺的排队网络正好由英文 Raj Jain 小课的 Queueing Networks 一章补上。核实过程：视频页 https://www.bilibili.com/video/BV1u94y1f76x/ 用 plain fetch 打开（标题『排队论 21：M/M/1排队模型的应用』，简介与标签可读），合集标题、简介与第 4–58 讲的分集标题取自该页 HTML 内嵌的合集数据（season id 288781）；单集合集页 https://www.bilibili.com/list/88039759?sid=288781 返回 49 字节空白，B 站 API 也被反爬拦截，故合集目录没能通过第二个来源复核，分集标题只依据视频页这一处。字幕情况：B 站字幕需登录才显示，未核对（需登录）。搜过 1 次中文资料，其余候选都不合适：知乎《排队论学习笔记》、博客园《排队论——排队系统数学模型和绩效指标精解》是个人博客；华为 info.support.huawei.com 的《排队论》页只是 Shortle 等中译本的作者/推荐语介绍，不含正文；中文维基「等候理論」是条目而非课程；尚硅谷等培训机构视频非大学或官方出品。中国大学 MOOC 上的排队论/运筹学课程需登录，无法核实内容，未采用。"
+ }
+}

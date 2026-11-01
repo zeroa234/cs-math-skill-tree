@@ -37,13 +37,27 @@
   const TIER_TEXT = { website: "学习网站", material: "讲义 / 资料", book: "教材", course: "课程", video: "视频课程" };
 
   // ── persisted state ───────────────────────────────────────────────
-  const state = { learned: new Set(), collapsed: new Set(["X"]), goal: [], goalLabel: "", introSeen: false };
+  const state = { learned: new Set(), collapsed: new Set(["X"]), goal: [], goalLabel: "", introSeen: false, legacyProgress: null };
+  let progressRevised = false;
+  function readProgress(data) {
+    const old = new Set(data.learned || []);
+    const learned = new Set([...old].filter(id => SK.has(id)));
+    if ((data.version || 1) < 2) {
+      for (const [from, to] of Object.entries(D.progressMerges || {})) {
+        // One completed component does not establish completion of the expanded skill.
+        if (learned.has(to) && !old.has(from)) learned.delete(to);
+      }
+    }
+    return learned;
+  }
   try {
     const saved = JSON.parse(localStorage.getItem(STORE) || "null");
     if (saved) {
-      state.learned = new Set((saved.learned || []).filter((id) => SK.has(id)));
+      state.learned = readProgress(saved);
+      progressRevised = (saved.learned || []).some(id => !state.learned.has(id));
+      state.legacyProgress = saved.legacyProgress || (progressRevised ? { learned: saved.learned || [], goal: saved.goal || [] } : null);
       if (saved.collapsed) state.collapsed = new Set(saved.collapsed);
-      state.goal = (saved.goal || []).filter((id) => SK.has(id));
+      state.goal = [...new Set((saved.goal || []).map(id => D.progressMerges?.[id] || id).filter(id => SK.has(id)))];
       state.goalLabel = saved.goalLabel || "";
       state.introSeen = !!saved.introSeen;
     }
@@ -51,7 +65,7 @@
   function save() {
     try {
       localStorage.setItem(STORE, JSON.stringify({
-        learned: [...state.learned], collapsed: [...state.collapsed], goal: state.goal,
+        version: 2, legacyProgress: state.legacyProgress, learned: [...state.learned], collapsed: [...state.collapsed], goal: state.goal,
         goalLabel: state.goalLabel, introSeen: state.introSeen,
       }));
     } catch { /* ignore */ }
@@ -493,6 +507,9 @@
       el("div", { class: "res-list" },
         resourceCard(s.resource, s.resource?.lang === "zh" ? "中文资源" : "英文资源"),
         resourceCard(s.zhAlt, "中文资源")),
+      s.extraResources?.length ? el("details", { class: "extra-resources" },
+        el("summary", {}, "补充材料（填补主资源的覆盖缺口）"),
+        el("div", { class: "res-list" }, s.extraResources.map(r => resourceCard(r, r.lang === "zh" ? "中文补充" : "英文补充")))) : null,
       !s.resource && !s.zhAlt ? el("p", { class: "pending" }, "暂无核实过的学习资源。") : null,
       !s.zhAlt && s.resource?.lang !== "zh" ? el("p", { class: "pending" }, s.zhResourceNote || "暂未找到并核实适合本节点的中文资源。") : null));
 
@@ -708,7 +725,7 @@
   });
   document.addEventListener("click", (e) => { if (!menuPop.contains(e.target)) menuPop.hidden = true; });
   $("#btn-export").addEventListener("click", () => {
-    const blob = new Blob([JSON.stringify({ app: "cs-math-skilltree", version: 1, learned: [...state.learned], goal: state.goal, goalLabel: state.goalLabel }, null, 1)], { type: "application/json" });
+    const blob = new Blob([JSON.stringify({ app: "cs-math-skilltree", version: 2, legacyProgress: state.legacyProgress, learned: [...state.learned], goal: state.goal, goalLabel: state.goalLabel }, null, 1)], { type: "application/json" });
     const a = el("a", { href: URL.createObjectURL(blob), download: `skilltree-progress-${new Date().toISOString().slice(0, 10)}.json` });
     document.body.append(a);
     a.click();
@@ -721,7 +738,8 @@
     try {
       const data = JSON.parse(await f.text());
       const before = new Set(state.learned);
-      for (const id of data.learned || []) if (SK.has(id)) state.learned.add(id);
+      for (const id of readProgress(data)) state.learned.add(id);
+      if (!state.legacyProgress && (data.version || 1) < 2) state.legacyProgress = { learned: data.learned || [], goal: data.goal || [] };
       normalizeLearned();
       save();
       refresh();
@@ -816,5 +834,11 @@
   }
   // Panzoom's constructor queues setTimeout(() => pan(startX, startY)); timers run in order, so routing from a
   // later timer keeps a deep link (#map/<lane>, #skill/<id>) from being reset to the origin.
-  setTimeout(route);
+  setTimeout(() => {
+    route();
+    if (progressRevised) {
+      save();
+      toast("部分技能已合并，扩展后的内容需重新确认。旧进度随导出保留。 ");
+    }
+  });
 })();

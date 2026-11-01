@@ -28,6 +28,50 @@
     "https://learn.microsoft.com/en-us/devops/"
    ],
    "why": "补 A 完全缺失的 CI/CD 流水线：A 只在第 1 章讲 SRE 与 DevOps 的分工，没有持续集成/持续交付的章节；这个资源中心的 Develop / Deliver / Operate 三节给出 CI、持续交付、IaC、feature flag、无停机版本切换的条目（节点 zhAlt 引的中文版就是同一套内容的译本）。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "SLSA specification v1.2",
+   "by": "SLSA project / OpenSSF (Linux Foundation)",
+   "year": 2026,
+   "url": "https://slsa.dev/spec/v1.2/",
+   "toc_urls": [
+    "https://slsa.dev/spec/v1.2/",
+    "https://slsa.dev/spec/v1.2/about",
+    "https://slsa.dev/spec/v1.2/build-track-basics",
+    "https://slsa.dev/spec/v1.2/terminology",
+    "https://slsa.dev/spec/v1.2/build-requirements",
+    "https://slsa.dev/spec/v1.2/verifying-artifacts",
+    "https://slsa.dev/spec/v1.2/provenance",
+    "https://slsa.dev/spec/v1.2/build-provenance",
+    "https://slsa.dev/spec/v1.2/threats"
+   ],
+   "why": "补主资源未讲的发布制品与构建溯源；仅选入门页与生产要求。"
+  },
+  {
+   "key": "D",
+   "kind": "docs",
+   "title": "reproducible-builds.org Documentation",
+   "by": "Reproducible Builds project",
+   "year": 2026,
+   "url": "https://reproducible-builds.org/docs/",
+   "toc_urls": [
+    "https://reproducible-builds.org/docs/"
+   ],
+   "why": "补“可复现构建”与“依赖锁定”：SLSA 只要求可溯源，不解释什么算可复现，这个项目官方文档按 Introduction / Achieve deterministic builds / Managing variance / Define a build environment / Distribute the environment / Verification 六组组织页面，给出定义、不可复现的成因与固定/记录构建环境的做法。"
+  },
+  {
+   "key": "E",
+   "kind": "docs",
+   "title": "OWASP CycloneDX Authoritative Guide to SBOM",
+   "by": "OWASP Foundation / CycloneDX project",
+   "year": 2026,
+   "url": "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf",
+   "toc_urls": [
+    "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf"
+   ],
+   "why": "补“软件物料”：SLSA 规范里没有 SBOM 专门的章节，这份 OWASP 项目的权威指南讲清了 SBOM 的对象模型、覆盖度/成熟度（NTIA 最低要素）与使用场景。"
   }
  ],
  "outline": [
@@ -441,6 +485,274 @@
      "zh": "微软如何用 DevOps 运维可靠系统"
     }
    ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "About SLSA",
+   "zh": "关于 SLSA",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is SLSA?",
+     "zh": "SLSA 是什么"
+    },
+    {
+     "ref": "",
+     "title": "Why SLSA is needed",
+     "zh": "为什么需要 SLSA"
+    },
+    {
+     "ref": "",
+     "title": "SLSA in layperson’s terms",
+     "zh": "用普通人能懂的话讲 SLSA"
+    },
+    {
+     "ref": "",
+     "title": "Who is SLSA for?",
+     "zh": "SLSA 面向谁"
+    },
+    {
+     "ref": "",
+     "title": "How SLSA works",
+     "zh": "SLSA 怎么起作用"
+    },
+    {
+     "ref": "",
+     "title": "What SLSA doesn’t cover",
+     "zh": "SLSA 不覆盖什么"
+    }
+   ],
+   "fill": "补制品完整性与构建溯源的入门概念；详细规范选读。"
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Producing artifacts",
+   "zh": "产出制品",
+   "items": [
+    {
+     "ref": "",
+     "title": "Build levels",
+     "zh": "构建等级"
+    },
+    {
+     "ref": "",
+     "title": "Security Best Practices",
+     "zh": "安全最佳实践"
+    },
+    {
+     "ref": "",
+     "title": "Producer",
+     "zh": "生产者"
+    },
+    {
+     "ref": "",
+     "title": "Choose an appropriate build platform",
+     "zh": "选择合适的构建平台"
+    },
+    {
+     "ref": "",
+     "title": "Follow a consistent build process",
+     "zh": "遵循一致的构建过程"
+    },
+    {
+     "ref": "",
+     "title": "Distribute provenance",
+     "zh": "分发溯源"
+    },
+    {
+     "ref": "",
+     "title": "Build Platform",
+     "zh": "构建平台"
+    },
+    {
+     "ref": "",
+     "title": "Provenance generation",
+     "zh": "溯源生成"
+    },
+    {
+     "ref": "",
+     "title": "Isolation strength",
+     "zh": "隔离强度"
+    }
+   ],
+   "fill": "补制品完整性与构建溯源的入门概念；详细规范选读。"
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Provenance",
+   "zh": "溯源",
+   "items": [
+    {
+     "ref": "",
+     "title": "Build provenance",
+     "zh": "构建溯源"
+    },
+    {
+     "ref": "",
+     "title": "Source provenance",
+     "zh": "源码溯源"
+    }
+   ],
+   "fill": "补制品完整性与构建溯源的入门概念；详细规范选读。"
+  },
+  {
+   "src": "D",
+   "ref": "",
+   "title": "Managing variance",
+   "zh": "管理构建差异",
+   "fill": "补固定构建环境与依赖版本、识别构建差异。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Variations in the build environment",
+     "zh": "构建环境中的差异"
+    },
+    {
+     "ref": "",
+     "title": "SOURCE_DATE_EPOCH",
+     "zh": "SOURCE_DATE_EPOCH"
+    },
+    {
+     "ref": "",
+     "title": "Volatile inputs can disappear",
+     "zh": "易变输入可能消失"
+    },
+    {
+     "ref": "",
+     "title": "Stable order for inputs",
+     "zh": "输入的稳定顺序"
+    },
+    {
+     "ref": "",
+     "title": "Stripping of unreproducible information",
+     "zh": "剥离不可复现的信息"
+    },
+    {
+     "ref": "",
+     "title": "Version information",
+     "zh": "版本信息"
+    },
+    {
+     "ref": "",
+     "title": "Timestamps",
+     "zh": "时间戳"
+    },
+    {
+     "ref": "",
+     "title": "Timezones",
+     "zh": "时区"
+    },
+    {
+     "ref": "",
+     "title": "Locales",
+     "zh": "区域设置"
+    },
+    {
+     "ref": "",
+     "title": "Archive metadata",
+     "zh": "归档元数据"
+    },
+    {
+     "ref": "",
+     "title": "Stable order for outputs",
+     "zh": "输出的稳定顺序"
+    },
+    {
+     "ref": "",
+     "title": "Randomness",
+     "zh": "随机性"
+    },
+    {
+     "ref": "",
+     "title": "Build path",
+     "zh": "构建路径"
+    },
+    {
+     "ref": "",
+     "title": "System images",
+     "zh": "系统镜像"
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "",
+   "title": "Define a build environment",
+   "zh": "定义构建环境",
+   "fill": "补固定构建环境与依赖版本、识别构建差异。",
+   "items": [
+    {
+     "ref": "",
+     "title": "What's in a build environment?",
+     "zh": "构建环境里有什么？"
+    },
+    {
+     "ref": "",
+     "title": "Recording the build environment",
+     "zh": "记录构建环境"
+    },
+    {
+     "ref": "",
+     "title": "Definition strategies",
+     "zh": "定义策略"
+    },
+    {
+     "ref": "",
+     "title": "Proprietary operating systems",
+     "zh": "专有操作系统"
+    }
+   ]
+  },
+  {
+   "src": "E",
+   "ref": "",
+   "title": "CYCLONEDX OBJECT MODEL",
+   "zh": "CycloneDX 对象模型",
+   "fill": "补 SBOM 内容模型及最低信息要求。",
+   "items": [
+    {
+     "ref": "",
+     "title": "BOM Identity",
+     "zh": "BOM 标识"
+    },
+    {
+     "ref": "",
+     "title": "The Anatomy of a CycloneDX BOM",
+     "zh": "CycloneDX BOM 的结构"
+    },
+    {
+     "ref": "",
+     "title": "Serialization Formats",
+     "zh": "序列化格式"
+    }
+   ]
+  },
+  {
+   "src": "E",
+   "ref": "",
+   "title": "BOM COVERAGE, MATURITY, AND QUALITY",
+   "zh": "BOM 覆盖度、成熟度与质量",
+   "fill": "补 SBOM 内容模型及最低信息要求。",
+   "items": [
+    {
+     "ref": "",
+     "title": "NTIA Minimum Elements",
+     "zh": "NTIA 最低要素"
+    },
+    {
+     "ref": "",
+     "title": "SCVS BOM Maturity Model",
+     "zh": "SCVS BOM 成熟度模型"
+    },
+    {
+     "ref": "",
+     "title": "SBOM Quality",
+     "zh": "SBOM 质量"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -501,13 +813,45 @@
     "A:#11"
    ],
    "note": "A:#8 第 11 章 Managing Load（负载均衡、自动扩缩容、有状态系统、保守配置），A:#11 第 17 章讲容量被打穿后的过载识别与恢复；第 12 章 NALSD 讲容量设计的系统方法，未收。"
+  },
+  {
+   "topic": "制品",
+   "refs": [
+    "C:#2",
+    "C:#1"
+   ],
+   "note": "介绍制品与可信构建。"
+  },
+  {
+   "topic": "依赖锁定",
+   "refs": [
+    "D:#2",
+    "D:#1"
+   ],
+   "note": "通过固定版本与构建环境说明原则，具体锁文件语法查包管理器文档。"
+  },
+  {
+   "topic": "构建溯源",
+   "refs": [
+    "C:#3",
+    "C:#2"
+   ],
+   "note": "构建来源的记录、生成与分发；字段规范作为选读。"
+  },
+  {
+   "topic": "软件物料清单",
+   "refs": [
+    "E:#1",
+    "E:#2"
+   ],
+   "note": "介绍 SBOM 应记录的信息与质量要求，不要求掌握整份规范。"
   }
  ],
- "omitted": "A 未收的章：3 SLO Engineering Case Studies、6 Eliminating Toil、7 Simplicity、12 Introducing Non-Abstract Large System Design、13 Data Processing Pipelines、15 Configuration Specifics、18 SRE Engagement Model、19 SRE: Reaching Beyond Your Walls、20 SRE Team Lifecycles、21 Organizational Change Management in SRE，以及 Conclusion、Appendix A/B/C、Index、About the Editors；第 2/4/5/16 章内的图表标题、示例小节与每章末尾的 Conclusion 小节也未收。B 未收 Concept 与 Plan 两节（What is DevOps?、SecDevOps、Agile/scrum/Kanban 等，属于别的节点）以及 “Governance in Azure when using CI/CD”。",
- "notes": "A 的目录页只到章一级（21 章，分 Part I–III），所以我只对第 2、4、5、16 四章补了节级 items：这些小标题是从各章正文里读出来的独立小标题（原文没有可抄的节级目录页），照原文大小写抄录，编号只在第 5 章 “Ways to Alert on Significant Events” 下的 1–6 本来就有，其余留空。其余章只抄章名。B 的条目来自 learn.microsoft.com/en-us/devops/ 资源中心的目录树（Concept / Plan with DevOps / Develop with DevOps / Deliver with DevOps / Operate with DevOps 五节）。两个来源都只到概念层：具体流水线工具（GitHub Actions 语法、Prometheus 规则、Kubernetes 配置）不在本导览图范围内。",
+ "omitted": "A 未收的章：3 SLO Engineering Case Studies、6 Eliminating Toil、7 Simplicity、12 Introducing Non-Abstract Large System Design、13 Data Processing Pipelines、15 Configuration Specifics、18 SRE Engagement Model、19 SRE: Reaching Beyond Your Walls、20 SRE Team Lifecycles、21 Organizational Change Management in SRE，以及 Conclusion、Appendix A/B/C、Index、About the Editors；第 2/4/5/16 章内的图表标题、示例小节与每章末尾的 Conclusion 小节也未收。B 未收 Concept 与 Plan 两节（What is DevOps?、SecDevOps、Agile/scrum/Kanban 等，属于别的节点）以及 “Governance in Azure when using CI/CD”。；A 里没收的页面：What's new、Use cases、Guiding principles、FAQ、Future directions（版本与问答性质）、Supply chain threats（面向新手的概览）、Tracks、Distributing provenance、Assessing build platforms、Producing source、Verifying source、Assessing source control systems、Example controls、Verified Properties、General model、Verification Summary（Source 轨道与其余 attestation 格式，与本节点的五个知识点关系较远）；Build Provenance 页里的 Index of build types、Migrating from 0.2、Change history（各构建类型的索引与版本迁移）以及 Threats 页里每条威胁下的具体子项（(A) Producer 到 (I) Usage 等）留作 D3/D4 深入时再展开。B 里没收的组与页：History、Why reproducible builds?、Making plans、Academic publications（项目史与计划）、Value initialization 与 Rust/JVM/Helm（具体语言生态的差异页）、Specifications 组（SOURCE_DATE_EPOCH 标准与 BUILD_PATH_PREFIX_MAP 仍在 WIP）；这些是可复现构建的工程细节，与本节点五个知识点关系较远。C 里没收的章：PREFACE、THE INNOVATIVE HISTORY OF OWASP CYCLONEDX、INTRODUCTION 的其余小节（Design Philosophy、The Role of SBOM in Software Transparency、High-Level SBOM Use Cases、xBOM Capabilities）、LIFECYCLE PHASES、USE CASES 里的其余场景（Vulnerability Management、CMDB、License Compliance、Outdated Component Analysis、Pedigree、FOCI、Export Compliance、Procurement、Vendor Risk Management、Supply Chain Management、Composition Completeness、“Known Unknowns”、Version Ranges、Formulation Assurance、密码学资产相关的几节）、GENERATING CYCLONEDX BOMS 及其后的实践章节。",
+ "notes": "DevOps/SRE 为共同主线。供应链只要求发布流程中的依赖、制品、溯源和 SBOM 入门；深入攻击模型与字段级规范不作为本技能点亮门槛。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 73,
+  "exact": 121,
   "fuzzy": 0,
   "dropped": []
  }

@@ -2,14 +2,22 @@
  "id": "D.3.1",
  "resource": {
   "tier": "website",
-  "title": "Python Data Science Handbook（Jake VanderPlas，全书 HTML 免费在线阅读）",
-  "url": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+  "title": "UC Berkeley Data 100: Principles and Techniques of Data Science — Course Notes（Fall 2025 版，伯克利 Data Science 教学团队）",
+  "url": "https://ds100.org/course-notes/",
   "lang": "en",
   "free": true,
-  "covers": "站点自述含全书正文，目录为五章：1 IPython/Jupyter（交互式环境与 notebook 工作流）、2 NumPy（数组、索引、广播、聚合、向量化）、3 Pandas（Series/DataFrame、缺失值、合并、分组、时间序列、字符串/分类数据）、4 Matplotlib（绘图 API 与常见图表）、5 机器学习（scikit-learn：模型验证、特征工程、朴素贝叶斯、回归、SVM、决策树、聚类、降维）。对应节点的 Notebook 工作流、NumPy/Pandas/统计包、数据获取与清洗、探索性分析；『问题定义』与工程化工作流只有零星涉及。",
-  "verified": true
+  "access": "免费公开的 MyST 站点，全部笔记在线可读、无需注册；配套课程站 https://ds100.org/fa25/ 另有讲义日历（Lecture 1–29）、Note 链接、Jupyter 形式的 lab/作业与讨论课、习题解答，页面注明该学期内容已归档备查。",
+  "covers": "覆盖简介的绝大部分：Introduction（数据科学生命周期与问题定义、选择的伦理后果）、EDA I–V（读入数据、清洗与缺失值、探索分析、分组聚合）、Regular Expressions、Visualization I–II、Sampling（抽样方法与抽样偏差）、Modeling & SLR / Loss & Transformations / OLS / sklearn 与梯度下降（统计包与建模工具箱）、Feature Engineering、Case Study in Human Contexts and Ethics、Cross Validation and Regularization（训练/验证/测试集、用交叉验证选超参、按组切分可避免数据泄漏 data leakage）、Random Variables、Estimators, Bias, and Variance（偏差-方差）、Parameter Inference and Bootstrapping（不确定性/自助法）、Logistic Regression、Clustering、PCA。未覆盖：Notebook 与实验环境本身怎么搭、实验记录、随机种子与依赖固定等可复现流程（只在示例里用 random_state / np.random.seed 保证结果可复现）；也没有系统讲数据获取渠道（爬虫/API/数据库）。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "tier": "material",
+  "title": "Datawhale《动手学数据分析》（以项目为主线的开源数据分析教程，Jupyter notebook 版）",
+  "url": "https://github.com/datawhalechina/hands-on-data-analysis",
+  "lang": "zh",
+  "free": true,
+  "access": "GitHub 开源仓库，免费阅读/下载；每个部分都同时给『课程』和『答案』两版 .ipynb（例如 第三章/第三章模型建立和评估---建模-课程.ipynb、第三章模型建立和评估---评价-课程.ipynb）。README 另称课程上线于智海平台（aiplusx.momodel.cn），该页为 JS 渲染，我未核对其中内容。",
+  "covers": "覆盖简介的流程与工具部分：第一单元 数据载入及初步观察、pandas 基础、探索性数据分析；第二单元 数据清洗及特征处理、数据重构（1/2）、数据可视化；第三单元 数据建模（sklearn）与模型评估（评价）。全程用 Jupyter notebook，正好对应 Notebook 工作流。未覆盖：抽样偏差、数据泄漏、交叉验证的系统讲解、不确定性/自助法、实验记录与可复现流程（环境固定、随机种子、依赖锁定）。"
+ },
  "courses": [
   {
    "school": "University of California, Berkeley",
@@ -26,6 +34,19 @@
    "prereq_text": "While we are working to make this class widely accessible, we currently require the following (or equivalent) prerequisites. Prerequisites will be enforced in Data 100. ... Foundations of Data Science: Data 8 ... Computing: The Structure and Interpretation of Computer Programs (CS 61A) or Computational Structures in Data Science (Data 88C). These courses provide additional background in python programming ... Math: Linear Algebra (Math 54, EECS 16A, Math 56, Math 110, or Stat 89A).",
    "prereq_kind": "required",
    "mapped_ids": [
+    "P.1.1",
+    "P.2.3",
+    "M.3.1"
+   ]
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "Data 100 Principles and Techniques of Data Science",
+   "url": "https://ds100.org/fa26/syllabus/",
+   "prereq_text": "While we are working to make this class widely accessible, we currently require the following (or equivalent) prerequisites. Prerequisites will be enforced in Data 100. ... Foundations of Data Science: Data 8 ... Computing: The Structure and Interpretation of Computer Programs (CS 61A) or Computational Structures in Data Science (Data 88C) ... Math: Linear Algebra (Math 54, EECS 16A, Math 56, Math 110, or Stat 89A).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "D.3.1",
     "P.1.1",
     "P.2.3",
     "M.3.1"
@@ -47,5 +68,9 @@
    "evidence": "Berkeley Data 100 要求线性代数（Math 54 / EECS 16A 等）"
   }
  ],
- "notes": "P.2.3 判 supported 的依据是 Data 100：它把 CS 61A 列为强制执行先修，并在原文说明这门课提供 python programming 背景，作业也在 Python 里做；同时 Data 8 的 syllabus 明说本课『为没学过统计或计算机课程的学生设计』，所以 P.2.3 在 Data 8 层面不成立。两门课都教本节点内容（Data 8 教完整数据科学入门，Data 100 教生命周期与工具箱），因此按要求都记为讲授本节点的课程；Data 8 对 Data 100 而言也是本节点的先修，属自指，未写进 mapped_ids。"
+ "notes": "P.2.3 判 supported 的依据是 Data 100：它把 CS 61A 列为强制执行先修，并在原文说明这门课提供 python programming 背景，作业也在 Python 里做；同时 Data 8 的 syllabus 明说本课『为没学过统计或计算机课程的学生设计』，所以 P.2.3 在 Data 8 层面不成立。两门课都教本节点内容（Data 8 教完整数据科学入门，Data 100 教生命周期与工具箱），因此按要求都记为讲授本节点的课程；Data 8 对 Data 100 而言也是本节点的先修，属自指，未写进 mapped_ids。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "英文换掉了原来的 Python Data Science Handbook：PDH 仍是极好的 NumPy/Pandas/Matplotlib/scikit-learn 教程（站点已打开确认全书 HTML 免费、CC-BY-NC-ND），但它的第五章只讲到模型验证与超参数，完全没有抽样偏差、数据泄漏、实验记录与不确定性，覆盖不了本节点合并进来的『评估、实验与可复现分析』；Data 100 笔记的 Sampling / Cross Validation / Estimators, Bias, and Variance / Parameter Inference and Bootstrap 四讲正好对上，且它是本科课程（入门层 D1 可用）。代价是 Data 100 笔记假定会 Python 与 pandas、不教 Notebook 环境搭建，PDH（https://jakevdp.github.io/PythonDataScienceHandbook/）可作工具书并读。中文换掉了原来的《Joyful Pandas》：那是 10 章 pandas 专题教程（索引/分组/变形/连接/缺失/文本/分类/时序，站点已打开确认），完全不涉及建模与评估；换成 Datawhale《动手学数据分析》后至少覆盖『载入—清洗/重构—可视化—建模—评估』整条流程，但中英文两条资源合起来仍未覆盖『实验记录与可复现流程』这一项，只能算部分覆盖，需要再补 The Turing Way 一类可复现实践手册才完整。搜索额度：为找中文替代资源搜过 1 次（返回结果与主题无关，未采用）。"
+ }
 }

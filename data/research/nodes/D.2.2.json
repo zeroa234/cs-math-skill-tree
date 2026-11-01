@@ -2,14 +2,22 @@
  "id": "D.2.2",
  "resource": {
   "tier": "website",
-  "title": "Data Engineering Zoomcamp（DataTalks.Club 免费 9 周课程，逐模块视频 + 作业 + 最终项目）",
+  "title": "Data Engineering Zoomcamp（DataTalks.Club 免费课程：逐模块视频 + 代码 + 作业 + 期末项目）",
   "url": "https://datatalksclub.github.io/docs/courses/data-engineering-zoomcamp/curriculum/",
   "lang": "en",
   "free": true,
-  "covers": "课程页逐条核对六个模块：M1 Containerization & Infrastructure as Code（Docker + Postgres、Terraform、本地与 GCP 环境）；M2 Workflow Orchestration（Kestra，调度/重试/backfill 的管线、数据落 GCS 与 BigQuery）；dlt 采集 workshop；M3 Data Warehouse（BigQuery，partitioning / clustering 做性能与 cost optimization＝存储布局与资源权衡）；M4 Analytics Engineering（dbt staging/intermediate/mart 分层建模、测试与文档）；M5 Batch Processing（Spark + PySpark，跑在 Dataproc 上＝分布式批处理）；M6 Streaming（Kafka + Flink 流处理、schema registry 与数据序列化＝批流两套栈）。数据湖侧靠 GCS/dlt，湖仓一体与资源权衡直接落在 M3 的 partitioning/clustering 与成本优化上。",
-  "verified": true
+  "access": "免费：课程文档、各模块视频（YouTube 播放列表，课程站链接）、GitHub 代码与作业、期末项目说明全部公开；按周自学，官方给的节奏约每周 10–15 小时。证书按课程站 Certification 页的条件（做项目 + 互评）申请，页面未写收费，故 free 记 true。注意：个别模块的工具随年度更换（2023 用 Mage，2025 起用 Kestra），旧视频里的工具可能与当前代码不一致，cohorts/2026 目录是当前版本。",
+  "covers": "按模块逐个对上简介：M1 Containerization & IaC（本地/GCP 环境，Docker + Postgres + Terraform）＝管线运行环境；M2 Workflow Orchestration（Kestra 编排「schedule, retry, backfill」的管线，数据落到 GCS 与 BigQuery）＋ dlt 摄取 workshop＝采集、转换与调度；M3 Data Warehouse（BigQuery，partitioning / clustering 做性能与成本优化）＝存储布局与仓；M4 Analytics Engineering（dbt staging/intermediate/mart 分层、测试与文档）＝转换建模与数据验证；M5 Batch Processing（Spark/PySpark + Dataproc）＝分布式批处理；M6 Streaming（Kafka、Kafka + Flink 流处理、schema registry 与序列化）＝消息队列与流处理；期末项目要求自建端到端管线。未覆盖：湖仓表格式（Iceberg/Delta/Hudi/Paimon）与开放数据湖表管理完全不涉及；事件时间/水位线/状态与端到端 exactly-once 语义只在 M6 的 Flink 部分带过，没有背压（backpressure）专题；课程页没有把『幂等』写入与重跑去重单列成一个主题（只在 orchestration 的 schedule/retry/backfill 语境里出现）。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "tier": "material",
+  "title": "林子雨《大数据技术原理与应用（第 3 版）》教材官网（厦门大学数据库实验室，配套讲义 PPT / 学习指南 / 上机习题 / 授课视频免费在线）",
+  "url": "https://dblab.xmu.edu.cn/post/bigdata3/",
+  "lang": "zh",
+  "free": true,
+  "access": "教材官网写明「免费提供了全部配套资源的在线浏览和下载」，并提供讲义 PPT、学习指南、备课指南、上机习题、技术资料与授课视频（另见其『大数据课程公共服务平台』页）；纸质教材本身需购买，但配套讲义与实验资源免费。页面 2026-11-01 打开核对过（第 3 版，2020 年）。",
+  "covers": "按章覆盖简介的两块半：第 3 章 HDFS、第 4 章 HBase、第 5 章 NoSQL、第 6 章云数据库＝分布式存储与存储布局；第 7 章 MapReduce、第 8 章 Hadoop 再探讨、第 10 章 Spark（并配 Spark 入门教程）＝分布式批处理；第 9 章 Hive 数据仓库＝仓与 SQL 转换；第 11 章流计算与 Storm、第 12 章 Flink＝流处理框架；第 13 章图计算、第 14 章数据可视化。未覆盖：数据管线的编排与调度（幂等、重跑、回填）、消息队列（Kafka）及其语义、事件时间/水位线/状态/背压/端到端保证这些流处理语义细节、湖仓一体与表格式（Iceberg/Delta/Paimon），以及分区/文件格式层面的存储布局取舍。"
+ },
  "courses": [
   {
    "school": "Stanford University",
@@ -33,6 +41,40 @@
    "mapped_ids": [
     "F.1.1",
     "D.3.1"
+   ]
+  },
+  {
+   "school": "KTH Royal Institute of Technology",
+   "course": "ID2221 Data Intensive Computing Platforms",
+   "url": "https://id2221kth.github.io/schedule/",
+   "prereq_text": "（课程主页与 schedule 页均未列出先修要求；KTH 官方课程目录 kth.se/student/kurser/kurs/ID2221 拉取时 TLS 证书校验失败，未能核实是否存在先修说明）",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
+   "school": "KTH Royal Institute of Technology",
+   "course": "ID2221 Data Intensive Computing Platforms",
+   "url": "https://www.kth.se/student/kurser/kurs/ID2221?l=en",
+   "prereq_text": "Specific prerequisites: No information inserted",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
+   "school": "University of Wisconsin-Madison",
+   "course": "COMP SCI 744 Big Data Systems",
+   "url": "https://guide.wisc.edu/courses/comp_sci/",
+   "prereq_text": "Requisites: Graduate/professional standing",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
+   "school": "Northeastern University",
+   "course": "CS 7240 Principles of Scalable Data Management: Theory, Algorithms, and Database Systems",
+   "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+   "prereq_text": "Requires standard CS knowledge of algorithms and hardness (e.g., a typical undergraduate class based on a standard algorithms textbook such as Ericson; Cormen, Leiserson, Rivest,and Stein; or Dasgupta, Papadimitriou, and Vazirani).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.2"
    ]
   }
  ],
@@ -72,5 +114,9 @@
    "evidence": "Stanford CS 246 期望 algorithmic analysis（CS 161 水平）"
   }
  ],
- "notes": "C.4.1（分布式系统）判 not_mentioned：两门课的先修清单里都没有分布式系统课——Data 101 只要求数据科学高年级课 + 程序设计，且明确『will not assume deep experience with databases or big data solutions』；CS 246 只要求概率/证明/线代/算法。D.2.1（ETL/ELT 与数据管线）判 not_mentioned：没有课程把管线课写成大数据课的先修（Data 101 自己是数据工程课，不要求先修管线）。资源说明：Zoomcamp 是 DataTalks.Club 的免费社区课程（不是大学学分课），但模块、视频、作业、项目齐全且长期更新，比公开的大学大数据课更贴本节点『湖/仓 + 批 + 流 + 成本权衡』的组合；课程证据另用两门真实大学课（Stanford CS 246、Berkeley Data 101）。"
+ "notes": "C.4.1（分布式系统）判 not_mentioned：两门课的先修清单里都没有分布式系统课——Data 101 只要求数据科学高年级课 + 程序设计，且明确『will not assume deep experience with databases or big data solutions』；CS 246 只要求概率/证明/线代/算法。D.2.1（ETL/ELT 与数据管线）判 not_mentioned：没有课程把管线课写成大数据课的先修（Data 101 自己是数据工程课，不要求先修管线）。资源说明：Zoomcamp 是 DataTalks.Club 的免费社区课程（不是大学学分课），但模块、视频、作业、项目齐全且长期更新，比公开的大学大数据课更贴本节点『湖/仓 + 批 + 流 + 成本权衡』的组合；课程证据另用两门真实大学课（Stanford CS 246、Berkeley Data 101）。 （并入的 C.4.4 消息与流处理，第四轮证据）本轮没有只重复上次的 KTH ID2221：另外补了 UW-Madison 与 Northeastern 两门。KTH ID2221 这次终于打开成功（kth.se 的 TLS 问题消失），课程 syllabus 明写内容含 'Scalable messaging systems' 与 'Stream processing'，但 'Specific prerequisites' 一栏是 'No information inserted'。UW-Madison COMP SCI 744 Big Data Systems 的课程描述把 'stream processing' 列为应用之一，先修栏只有 'Graduate/professional standing'（无课程先修）。Northeastern CS 7240 的内容里明确有 'data stream processing'，并在描述里写了 'Requires standard CS knowledge of algorithms and hardness'，故记 required 并映射 F.1.2。另外查过同一目录下 UW-Madison COMP SCI 784 Foundations of Data Management（内容含 'data streams'），它写明 'There are no specific course prerequisites. It is strongly encouraged that the students are familiar with databases and relational algebra (COMP SCI 564 or equivalent)'，即数据库 D.1.1 只是 recommended——因为每技能限 3 门，这条没进 courses，但值得作为 C.4.4 的先修弱信号。检索层面：一次 tavily 搜索（stream processing / event streaming + prerequisites）只回到 Class Central、Udacity、Confluent 博客等商业/厂商页；另想核对 University of Waterloo 计算机系课程表里数据密集/流处理类课程的先修（ucalendar.uwaterloo.ca 的 TLS 证书校验失败，tavily_extract 也抓不到），以及 Columbia 一个大数据分析课程的页面（403），两处都没拿到先修原文。结论：没有找到任何把“分布式系统”列为必修先修的流处理课程，C.4.1 只能记 not_mentioned。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "英文保留 Data Engineering Zoomcamp（模块清单已逐条核对：M1 Docker/Postgres/Terraform、M2 Kestra 编排 + dlt、M3 BigQuery partitioning/clustering 与成本优化、M4 dbt 分层与测试、M5 Spark/Dataproc、M6 Kafka + Flink + schema registry、期末端到端项目）。中文换掉原来的 Apache Flink 官方中文「概览」：那一页只是 Flink 概念入口，覆盖不到管线、批处理与存储，作为整个技能的唯一条中文资源太单薄；换成厦门大学林子雨的教材官网，是因为它是中文里少见的同时铺开 HDFS/HBase 存储、MapReduce/Spark 批处理、Hive 数仓、Storm/Flink 流计算的系统讲义，且配套资源免费、站点长期更新。代价是它偏「框架原理」，几乎没有数据工程实务（编排、幂等、Kafka、湖仓表格式），这块中文可以继续用原来的 Flink 中文文档：概念透析（事件时间、状态、容错）https://nightlies.apache.org/flink/flink-docs-stable/zh/docs/concepts/overview/ 与「实践练习」https://nightlies.apache.org/flink/flink-docs-stable/zh/docs/learn-flink/overview （两者 2026-11-01 均可打开，后者明确讲状态管理与时间、流式 ETL 管线）；Kafka 侧可看 Apache Kafka 官方文档。为找更好的中文整门课搜过 1 次（结果多为云厂商博客与知乎文章、尚硅谷培训视频，均非大学/官方出品的系统课程，未采用）。"
+ }
 }

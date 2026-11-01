@@ -1,9 +1,13 @@
+import fs from "node:fs";
 // Screenshot the detail panel of one skill, scrolled through its sections. usage: node tests/screenshot-panel.mjs <id> [out-dir]
 import { chromium } from "playwright-core";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const browserTemp = path.join(ROOT, "temp/browser-qa");
+fs.mkdirSync(browserTemp, { recursive: true });
+process.env.TEMP = process.env.TMP = browserTemp;
 const id = process.argv[2] || "C.2.1";
 const out = path.resolve(process.argv[3] || path.join(ROOT, "temp/shots"));
 const browser = await chromium.launch({ executablePath: "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", headless: true });

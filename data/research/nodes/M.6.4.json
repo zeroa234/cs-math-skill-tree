@@ -2,14 +2,22 @@
  "id": "M.6.4",
  "resource": {
   "tier": "website",
-  "title": "Forecasting: Principles and Practice, 3rd Edition — Rob J Hyndman & George Athanasopoulos（OTexts，全文免费在线）",
+  "title": "Forecasting: Principles and Practice, 3rd Edition — Rob J Hyndman & George Athanasopoulos（Monash University，OTexts，全文免费在线阅读）",
   "url": "https://otexts.com/fpp3/",
   "lang": "en",
   "free": true,
-  "covers": "整本书免费在线（Quarto 站点，可逐章阅读，每章配 R 代码）。站点目录：1 入门、2 时间序列图形、3 分解、4 时间序列特征（自相关等）、5 预测工具箱、6 判断性预测、7 时间序列回归、8 指数平滑（含 ETS 状态空间模型）、9 ARIMA 模型（含状态空间表示）、10 动态回归、11 分层/分组预测、12 进阶预测方法、13 实务问题。对应节点的自相关、预测与状态空间模型三条；「排队论」那一半（到达/服务过程、系统性能）本书完全不涉及，需另找资料。",
-  "verified": true
+  "access": "免费在线阅读全文（Quarto 站点，逐章 HTML，每章配 R 代码与真实数据；站点注明 2026-10-30 仍在更新）；纸质版需购买，非必需。作者是预测领域教科书作者与 forecast 包的维护者。",
+  "covers": "覆盖简介的全部五项：第 2 章 时间序列图形（2.8 自相关图 ACF、滞后图、白噪声）、第 4 章 时间序列特征（自相关/偏自相关作为特征、单位根检验等）、第 8 章 指数平滑（8.4 方法分类、8.5 创新的指数平滑状态空间模型 ETS、选型与预测区间）、第 9 章 ARIMA 模型（9.1 平稳性与差分、模型识别与估计、9.7 ARIMA 与 ETS 的关系）、第 10 章 动态回归；预测方法与评价在 5 章（点预测精度指标、时间序列交叉验证、预测区间与残差诊断、Ljung-Box 自相关检验）；状态空间形式主要在 ETS（8.5）与 ARIMA 的等价形式里讲。另含 3 章分解、6 章判断预测、11 章分层/分组预测、12 章高级方法、13 章实务问题。未覆盖：一般的状态空间/Kalman 滤波建模框架（本书只到 ETS 的创新状态空间形式，不教卡尔曼滤波与结构化状态空间模型）、谱分析（频域方法）、深度学习预测只作概述。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "tier": "website",
+  "title": "《预测：方法与实践》（第二版中译本，Rob J Hyndman & George Athanasopoulos 著，OTEbook 官方中文站）",
+  "url": "https://otexts.com/fppcn/",
+  "lang": "zh",
+  "free": true,
+  "access": "免费在线阅读全文（作者授权的中文译本，与英文站同一 OTexts 平台，2026-10-30 更新）；纸质版需购买。界面与正文均为中文，示例代码为 R。",
+  "covers": "覆盖：第 2 章 时间序列图形（2.7 滞后图、2.8 自相关图 ACF）、第 3 章 预测者的工具集（精度指标、训练/测试集、时间序列交叉验证、预测区间、残差检验）、第 6 章 时间序列分解、第 7 章 指数平滑（7.4 方法分类、7.5 创新的指数平滑状态空间模型）、第 8 章 ARIMA（8.1 平稳性和差分、模型识别与估计）、第 9 章 动态回归、第 10 章 分层/分组预测、第 11 章 高级预测方法、第 12 章 实际预测问题。注意这是第二版译本：没有英文第三版新增的第 4 章「时间序列特征（feasts 特征提取）」与部分新内容，章节编号也与第三版不同（指数平滑在中文第 7 章、ARIMA 在第 8 章）。未覆盖：同英文版——一般状态空间/卡尔曼滤波框架、频域/谱分析。"
+ },
  "courses": [
   {
    "school": "University of Toronto",
@@ -20,16 +28,6 @@
    "mapped_ids": [
     "M.6.2.2",
     "M.1.4.1"
-   ]
-  },
-  {
-   "school": "Washington University in St. Louis（课程主页同时挂在 UC Berkeley 授课版）",
-   "course": "Introduction to Queueing Theory for Computer Scientists — A Mini Course (Prof. Raj Jain)",
-   "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
-   "prereq_text": "As a prerequisite, a basic understanding of probability and statistics is helpful. Some of it will be reviewed as needed.",
-   "prereq_kind": "recommended",
-   "mapped_ids": [
-    "M.6.1"
    ]
   }
  ],
@@ -44,12 +42,11 @@
    "id": "M.1.4.1",
    "kind": "required",
    "evidence": "多伦多 STA457H1 还要求 MAT235H1+MAT236H1 或 MAT237Y1/MAT257Y1 等多元微积分课。"
-  },
-  {
-   "id": "M.6.1",
-   "kind": "recommended",
-   "evidence": "Raj Jain 的排队论小课原文：'As a prerequisite, a basic understanding of probability and statistics is helpful.'"
   }
  ],
- "notes": "节点原图未给任何建议前置，故 candidate_check 为空对象。这个节点实际是两块内容：时间序列（资源 FPP3 全覆盖）与排队论（FPP3 不涉及）。排队那一半的补充免费资源是 Raj Jain 的 Introduction to Queueing Theory for Computer Scientists 小课（同上 URL，含讲义幻灯片与录音、Little 定律、Kendall 记号、M/M/1 等），已打开确认；WUSTL 页面里还标注了在 Berkeley Soda Hall 授课的时间地点。课程证据也按两块分开给：时间序列用多伦多 STA457H1（注意它要求的是回归课 M.6.2.2 与多元微积分，而不是随机过程），排队论用 Raj Jain 那门（概率统计只算 helpful）。"
+ "notes": "2026-11-01 排队论部分拆到 M.6.6，这里只留时间序列的证据（多伦多 STA457H1）。节点原图未给任何建议前置，故 candidate_check 为空对象。这个节点实际是两块内容：时间序列（资源 FPP3 全覆盖）与排队论（FPP3 不涉及）。排队那一半的补充免费资源是 Raj Jain 的 Introduction to Queueing Theory for Computer Scientists 小课（同上 URL，含讲义幻灯片与录音、Little 定律、Kendall 记号、M/M/1 等），已打开确认；WUSTL 页面里还标注了在 Berkeley Soda Hall 授课的时间地点。课程证据也按两块分开给：时间序列用多伦多 STA457H1（注意它要求的是回归课 M.6.2.2 与多元微积分，而不是随机过程），排队论用 Raj Jain 那门（概率统计只算 helpful）。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "两个链接 2026-11-01 均打开核对：英文站目录为 1 Getting started … 4 Time series features、8 Exponential smoothing、9 ARIMA models、13 Some practical forecasting issues；中文站目录为 1 入门 … 7 指数平滑、8 ARIMA 模型、12 实际预测问题，页脚标『第二版 · 免费在线阅读』。逐条抽查过子页：英文 8.5『Innovations state space models for exponential smoothing』、9.1『Stationarity and differencing』、第 4 章讲 autocorrelations；中文 7.5『创新的指数平滑状态空间模型』、8.1『平稳性和差分』。节点已把排队论拆到 M.6.6，故中英文 covers 都不再涉及排队论；本节点只评估资源，未找先修证据（courses / candidate_check / extra_prereqs 按本批要求留空）。"
+ }
 }

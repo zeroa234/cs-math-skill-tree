@@ -66,12 +66,6 @@
       "review": "Anderson适合系统设计案例与安全经济学，安全测量实验和研究复现须配论文与MIT实验。",
       "url": "https://www.cl.cam.ac.uk/archive/rja14/book.html"
     },
-    "P.5.4": {
-      "review": "SLSA讲供应链保证和证明，不等于可复现构建，也不完整教授SBOM与依赖锁定。",
-      "url": "https://slsa.dev/spec/v1.2/",
-      "covers": "SLSA v1.2 介绍软件供应链保证等级、来源证明及威胁模型；可复现构建的具体实践需另配 Reproducible Builds 文档。",
-      "title": "SLSA（Supply-chain Levels for Software Artifacts）规范 v1.2 与配套指南"
-    },
     "D.1.5": {
       "review": "OpenMetadata覆盖目录血缘质量等工程操作，治理组织、责任和生命周期政策仍需治理教材。",
       "tier": "website",
@@ -104,8 +98,14 @@
       "note": "从作者 notes 中选择 Elementary Applied Topology；不是完整的几何深度学习课程。"
     },
     "M.6.4": {
-      "review": "FPP3是预测教材，不覆盖到达服务过程和排队性能；排队论须另读导览补充讲义。",
-      "note": "主要覆盖时间序列与预测，不覆盖完整排队论。"
+      "tier": "website",
+      "title": "Forecasting: Principles and Practice, 3rd Edition — Rob J Hyndman & George Athanasopoulos（Monash University，OTexts，全文免费在线阅读）",
+      "url": "https://otexts.com/fpp3/",
+      "lang": "en",
+      "free": true,
+      "access": "免费在线阅读全文（Quarto 站点，逐章 HTML，每章配 R 代码与真实数据；站点注明 2026-10-30 仍在更新）；纸质版需购买，非必需。作者是预测领域教科书作者与 forecast 包的维护者。",
+      "covers": "覆盖简介的全部五项：第 2 章 时间序列图形（2.8 自相关图 ACF、滞后图、白噪声）、第 4 章 时间序列特征（自相关/偏自相关作为特征、单位根检验等）、第 8 章 指数平滑（8.4 方法分类、8.5 创新的指数平滑状态空间模型 ETS、选型与预测区间）、第 9 章 ARIMA 模型（9.1 平稳性与差分、模型识别与估计、9.7 ARIMA 与 ETS 的关系）、第 10 章 动态回归；预测方法与评价在 5 章（点预测精度指标、时间序列交叉验证、预测区间与残差诊断、Ljung-Box 自相关检验）；状态空间形式主要在 ETS（8.5）与 ARIMA 的等价形式里讲。另含 3 章分解、6 章判断预测、11 章分层/分组预测、12 章高级方法、13 章实务问题。未覆盖：一般的状态空间/Kalman 滤波建模框架（本书只到 ETS 的创新状态空间形式，不教卡尔曼滤波与结构化状态空间模型）、谱分析（频域方法）、深度学习预测只作概述。",
+      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。原资源保留：新简介的五项（自相关与平稳性、预测方法与评价、指数平滑、ARIMA、状态空间形式的预测）在第 2/4/5/8/9 章都有对应正文，站点免费、长期维护、作者即领域标准教材作者；排队论拆出去不影响本书适用性，covers 已按新简介重写、不再提排队论。"
     },
     "F.1.6": {
       "review": "6.890 有参数化复杂度两讲（W 层级；ETH 与平面 FPT）和 3SUM/APSP 细粒度归约一讲，加上 NP 难归约工具箱；核化和 FPT 算法设计没有单列。",
@@ -311,11 +311,14 @@
       "review": "Berkeley CS61B有链表、哈希、树堆、图与项目，适合学过基础编程后的主课。"
     },
     "F.1.2": {
-      "review": "6.046J以6.006为先修；原选课适合进阶，D1应先学6.006再补摊还与高级设计。",
-      "access": "公开视频、讲义与习题；官方先修为6.006，D1学习者应先完成入门算法课，再读本课的摊还分析与高级设计。"
-    },
-    "F.1.3": {
-      "review": "Princeton配套网站有图、字符串和最大流实现；匹配宜配6.046补充。"
+      "tier": "website",
+      "title": "Algorithms by Jeff Erickson（UIUC 教授自编教材，全书 PDF 免费在线；含 Amortized Analysis、String Matching 等附加讲义）",
+      "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
+      "lang": "en",
+      "free": true,
+      "access": "作者自出版，全彩电子版与各章 PDF 在站点永久免费下载（CC BY 4.0，可打印分发）；黑白纸质版在 Amazon 售价 $27.50，非必需。该页同时是 UIUC CS 374 / CS 473 两门课的主要教材页，另有作业与考试存档页。",
+      "covers": "覆盖简介的绝大部分：Introduction + Recursion（递归与递归式求解，另见附录 II Solving Recurrences）、Backtracking、Dynamic Programming（含 Advanced DP 附加讲义）、Greedy Algorithms、Basic Graph Algorithms 与 Depth-First Search（BFS/DFS、拓扑、连通分量）、Minimum Spanning Trees、Shortest Paths（Dijkstra/Bellman-Ford/DAG）、All-Pairs Shortest Paths、Maximum Flows & Minimum Cuts 与 Applications of Flows and Cuts（含二分图匹配）、NP-Hardness；另外站在『Director's Cut』讲义里补了 Amortized Analysis（14 页）、String Matching（14 页，已核到 Rabin–Karp 指纹法部分）、Hashing、Disjoint Sets（并查集与摊还）。未覆盖：字符串索引结构（后缀数组/后缀自动机/Trie 的索引与压缩索引）没有专门章节；摊还分析不在书内而在附加讲义里；书自述『不是数据结构与算法的第一门课』，假定读过 CS 173（离散数学）与 CS 225（数据结构），也不讲栈/队列/堆/平衡树/哈希表等基础数据结构本身。",
+      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。"
     },
     "F.1.4": {
       "review": "研究生算法讲义分讲近似、在线与随机算法，符合D3，需先有算法分析。"
@@ -398,7 +401,14 @@
       "review": "MDN学习路线覆盖前端基础；服务端、HTTP认证和可访问性须跨官方专题学习。"
     },
     "P.5.3": {
-      "review": "SRE Workbook适合SLO、告警、容量与事故处理，CI/CD流水线搭建需另外教程。"
+      "tier": "website",
+      "title": "The Site Reliability Workbook（Google 官方，全文免费在线；Betsy Beyer 等编）",
+      "url": "https://sre.google/workbook/table-of-contents/",
+      "lang": "en",
+      "free": true,
+      "access": "Google 官方站点免费在线全文（可逐章阅读，也可下 PDF）；纸质版需购买，非必需。目录页 2026-11-01 打开核对过。",
+      "covers": "覆盖 DevOps/SRE 与持续交付这一半：第 1 章 SRE 与 DevOps 的关系、第 2–3 章 SLO 与错误预算实施及案例、第 4–5 章监控与基于 SLO 的告警、第 6–7 章消除 toil 与简化、第 8–10 章 on-call、事件响应与复盘文化、第 11 章 Managing Load（容量与负载）、第 13 章数据处理管线、第 14–15 章配置设计与实践、第 16 章金丝雀发布、第 17 章过载的识别与恢复。未覆盖：CI/CD 流水线本身（构建、测试、制品晋级只在发布侧有金丝雀一节提到）；软件供应链整块（制品库与依赖锁定、可复现构建与构建溯源、SBOM）本书完全没有——这部分由 Software Engineering at Google 第 18 章 Build Systems、第 21 章 Dependency Management（免费 HTML）与 SLSA 规范、GitHub『保护供应链』文档覆盖，链接见 notes。",
+      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。原资源保留：新简介里的可观测性、SLO、发布策略、故障恢复与容量这几项它都成体系地覆盖（而且是 Google 官方、免费、长期在线），合并进来的『软件供应链与可复现构建』不在书里，改用配套免费资源补齐（见 covers/notes），比换掉整本更划算。"
     },
     "C.1.1": {
       "review": "6.004从表示逻辑到处理器、缓存和I/O，适合组成原理主课，硬件实验应配套完成。"
@@ -433,9 +443,6 @@
     "C.4.3": {
       "review": "6.852的形式模型、共识与下界符合D3；线性化与可用性要配6.5840相应阅读。"
     },
-    "C.4.4": {
-      "review": "Flink官方概念及容错文档对应事件时间、有状态流和保证，需进一步运行示例，不只读概览。"
-    },
     "C.5.1": {
       "review": "CMU418课程覆盖线程、GPU和并行优化，MPI等分布式内存细节配导览教材。"
     },
@@ -456,24 +463,31 @@
     "D.1.4": {
       "review": "PostgreSQL管理手册直接覆盖备份、认证、配置与监控，适合指定版本动手；审计扩展与静态加密需另查。"
     },
-    "D.2.1": {
-      "review": "Data101覆盖清洗建模和管线；幂等重试应补Airflow官方Creating a task实践，不能因目录未出现幂等一词就判定无材料。",
-      "covers": "Data101第5章学清洗与准备，第10章学数据到达、转换、调度和质量。幂等重试另读导览补充的Airflow官方Best Practices中Creating a task：重跑保持同样结果、UPSERT及固定数据分区。"
-    },
     "D.2.2": {
-      "review": "Zoomcamp提供仓库、dbt、Spark和流处理实践；免费教材不表示云平台资源免费。"
+      "tier": "website",
+      "title": "Data Engineering Zoomcamp（DataTalks.Club 免费课程：逐模块视频 + 代码 + 作业 + 期末项目）",
+      "url": "https://datatalksclub.github.io/docs/courses/data-engineering-zoomcamp/curriculum/",
+      "lang": "en",
+      "free": true,
+      "access": "免费：课程文档、各模块视频（YouTube 播放列表，课程站链接）、GitHub 代码与作业、期末项目说明全部公开；按周自学，官方给的节奏约每周 10–15 小时。证书按课程站 Certification 页的条件（做项目 + 互评）申请，页面未写收费，故 free 记 true。注意：个别模块的工具随年度更换（2023 用 Mage，2025 起用 Kestra），旧视频里的工具可能与当前代码不一致，cohorts/2026 目录是当前版本。",
+      "covers": "按模块逐个对上简介：M1 Containerization & IaC（本地/GCP 环境，Docker + Postgres + Terraform）＝管线运行环境；M2 Workflow Orchestration（Kestra 编排「schedule, retry, backfill」的管线，数据落到 GCS 与 BigQuery）＋ dlt 摄取 workshop＝采集、转换与调度；M3 Data Warehouse（BigQuery，partitioning / clustering 做性能与成本优化）＝存储布局与仓；M4 Analytics Engineering（dbt staging/intermediate/mart 分层、测试与文档）＝转换建模与数据验证；M5 Batch Processing（Spark/PySpark + Dataproc）＝分布式批处理；M6 Streaming（Kafka、Kafka + Flink 流处理、schema registry 与序列化）＝消息队列与流处理；期末项目要求自建端到端管线。未覆盖：湖仓表格式（Iceberg/Delta/Hudi/Paimon）与开放数据湖表管理完全不涉及；事件时间/水位线/状态与端到端 exactly-once 语义只在 M6 的 Flink 部分带过，没有背压（backpressure）专题；课程页没有把『幂等』写入与重跑去重单列成一个主题（只在 orchestration 的 schedule/retry/backfill 语境里出现）。",
+      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。原资源保留：新简介的三块（管线与调度 / 分布式批处理与存储布局 / 消息队列与流处理）在它的 M1–M6 里各有着落，且模块划分、作业与项目都是免费公开的，比任何一门公开大学「大数据」课的覆盖面更贴这条合并后的技能；覆盖边界见 covers。"
     },
     "D.2.3": {
       "review": "CS276适合传统倒排、排序与IR评测，现代向量检索和推荐在线服务需补当代系统资料。"
     },
     "D.3.1": {
-      "review": "PythonDataScienceHandbook适合工具与探索，问题定义和数据来源设计配Learning Data Science。"
+      "tier": "website",
+      "title": "UC Berkeley Data 100: Principles and Techniques of Data Science — Course Notes（Fall 2025 版，伯克利 Data Science 教学团队）",
+      "url": "https://ds100.org/course-notes/",
+      "lang": "en",
+      "free": true,
+      "access": "免费公开的 MyST 站点，全部笔记在线可读、无需注册；配套课程站 https://ds100.org/fa25/ 另有讲义日历（Lecture 1–29）、Note 链接、Jupyter 形式的 lab/作业与讨论课、习题解答，页面注明该学期内容已归档备查。",
+      "covers": "覆盖简介的绝大部分：Introduction（数据科学生命周期与问题定义、选择的伦理后果）、EDA I–V（读入数据、清洗与缺失值、探索分析、分组聚合）、Regular Expressions、Visualization I–II、Sampling（抽样方法与抽样偏差）、Modeling & SLR / Loss & Transformations / OLS / sklearn 与梯度下降（统计包与建模工具箱）、Feature Engineering、Case Study in Human Contexts and Ethics、Cross Validation and Regularization（训练/验证/测试集、用交叉验证选超参、按组切分可避免数据泄漏 data leakage）、Random Variables、Estimators, Bias, and Variance（偏差-方差）、Parameter Inference and Bootstrapping（不确定性/自助法）、Logistic Regression、Clustering、PCA。未覆盖：Notebook 与实验环境本身怎么搭、实验记录、随机种子与依赖固定等可复现流程（只在示例里用 random_state / np.random.seed 保证结果可复现）；也没有系统讲数据获取渠道（爬虫/API/数据库）。",
+      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。"
     },
     "D.3.2": {
       "review": "MMDS适合关联、聚类和大规模挖掘，异常检测须读scikit-learn专章。"
-    },
-    "D.3.3": {
-      "review": "Learning Data Science覆盖抽样、验证与不确定性，实验记录配DVC文档。"
     },
     "D.4.1": {
       "review": "Hogan等开放教材覆盖图表示、本体、融合和查询，适合完整知识图谱主线。"
@@ -672,6 +686,16 @@
     "P.5.5": {
       "review": "CMU 15-466 课程站按次课公开 lesson 材料与作业：主循环与计时、资源管线、场景图、ECS、碰撞、材质光照与帧缓冲、骨骼蒙皮动画、网络与试玩；物理引擎的数值方法、输入与相机没有单列。",
       "access": "免费公开课程站（无需注册）；材料按次课分散在日程里。"
+    },
+    "M.6.6": {
+      "tier": "website",
+      "title": "Introduction to Queueing Theory for Computer Scientists — A Mini Course（Prof. Raj Jain, Washington University in St. Louis；含讲义幻灯片与讲座录音）",
+      "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
+      "lang": "en",
+      "free": true,
+      "access": "免费公开：课程主页列出每次课的主题，点标题即可下载幻灯片、听讲座录音；另有 Homework、Quiz、教材勘误链接。无需注册，也无视频托管平台依赖。",
+      "covers": "Kendall 记号、到达/服务分布、随机过程与生灭过程、M/M/1、M/M/m、M/M/m/B、开放/闭合排队网络与乘积形式解、操作定律（利用率、流量、Little、响应时间、瓶颈）、Mean Value Analysis 的步骤与假设，目录均有对应条目。为计算机系统性能估算入门小课，不覆盖一般 G/G/1、重尾与高级调度理论。",
+      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。沿用上一轮已选的英文资源（本轮只要求重找中文）：它是面向计算机系统性能分析的排队论小课，Kendall 记号、Little 定律、M/M/1、M/M/m、排队网络一条线走完，免费且带讲义与录音，正好补上 M.6.4（时间序列书）完全不讲的那一半。"
     }
   },
   "chineseCatalog": {
@@ -1916,6 +1940,63 @@
       "lang": "zh",
       "free": null,
       "checkedAt": "2026-11-01"
+    },
+    "zh-queueing-bjtu": {
+      "tier": "material",
+      "title": "北京交通大学课程平台上的《排队论》讲义（第九章，PDF）",
+      "url": "http://cc.bjtu.edu.cn:81/meol/analytics/resPdfShow.do?resId=488534&lid=36997",
+      "access": "PDF 直接在线打开或下载，无需注册；讲义只标章名，没有标课程名。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-gran-d-3-1": {
+      "tier": "material",
+      "title": "Datawhale《动手学数据分析》（以项目为主线的开源数据分析教程，Jupyter notebook 版）",
+      "url": "https://github.com/datawhalechina/hands-on-data-analysis",
+      "lang": "zh",
+      "free": true,
+      "access": "GitHub 开源仓库，免费阅读/下载；每个部分都同时给『课程』和『答案』两版 .ipynb（例如 第三章/第三章模型建立和评估---建模-课程.ipynb、第三章模型建立和评估---评价-课程.ipynb）。README 另称课程上线于智海平台（aiplusx.momodel.cn），该页为 JS 渲染，我未核对其中内容。"
+    },
+    "zh-gran-f-1-2": {
+      "tier": "website",
+      "title": "《Hello 算法》（krahets 著，中文开源免费在线教程，动画图解 + 多语言代码）",
+      "url": "https://www.hello-algo.com/",
+      "lang": "zh",
+      "free": true,
+      "access": "免费在线阅读（另有 PDF 版与 GitHub 仓库 github.com/krahets/hello-algo，代码可一键运行，附 14 种语言实现与社区问答）。注：2026-11-01 用 plain fetch 打开该站点时被 Vercel 安全校验拦成 429，改用 Tavily 提取才拿到正文，链接本身有效。"
+    },
+    "zh-gran-d-2-2": {
+      "tier": "material",
+      "title": "林子雨《大数据技术原理与应用（第 3 版）》教材官网（厦门大学数据库实验室，配套讲义 PPT / 学习指南 / 上机习题 / 授课视频免费在线）",
+      "url": "https://dblab.xmu.edu.cn/post/bigdata3/",
+      "lang": "zh",
+      "free": true,
+      "access": "教材官网写明「免费提供了全部配套资源的在线浏览和下载」，并提供讲义 PPT、学习指南、备课指南、上机习题、技术资料与授课视频（另见其『大数据课程公共服务平台』页）；纸质教材本身需购买，但配套讲义与实验资源免费。页面 2026-11-01 打开核对过（第 3 版，2020 年）。"
+    },
+    "zh-gran-p-5-3": {
+      "tier": "website",
+      "title": "Microsoft Learn 中文：DevOps 资源中心（Azure DevOps 文档站的概念与实践入口）",
+      "url": "https://learn.microsoft.com/zh-cn/devops/",
+      "lang": "zh",
+      "free": true,
+      "access": "免费阅读，无需注册（个别交互式学习模块需登录微软账号，未核实具体条件）。页面为中文界面、中文正文，2026-11-01 打开核对过。"
+    },
+    "zh-gran-m-6-4": {
+      "tier": "website",
+      "title": "《预测：方法与实践》（第二版中译本，Rob J Hyndman & George Athanasopoulos 著，OTEbook 官方中文站）",
+      "url": "https://otexts.com/fppcn/",
+      "lang": "zh",
+      "free": true,
+      "access": "免费在线阅读全文（作者授权的中文译本，与英文站同一 OTexts 平台，2026-10-30 更新）；纸质版需购买。界面与正文均为中文，示例代码为 R。"
+    },
+    "zh-gran-m-6-6": {
+      "tier": "video",
+      "title": "北京交通大学《通信网理论基础》：排队论课程录像（从第 21 讲进入合集）",
+      "url": "https://www.bilibili.com/video/BV1u94y1f76x/",
+      "lang": "zh",
+      "free": true,
+      "access": "B 站免费课程录像，中文授课；字幕未核对。UP 主 yishuaichen 自述为该课程录像；北交大官网可核对同名教师陈一帅及其讲授这门课，尚未取得学校官网到该 B 站账号的直接链接，发布者身份据此保留限定。链接从 M/M/1 一讲进入，按合集顺序学习。"
     }
   },
   "chinese": {
@@ -2040,16 +2121,12 @@
       "covers": "从数据结构、复杂度、搜索排序到分治、动态规划和贪心；配动画、代码与练习。"
     },
     "F.1.2": {
-      "source": "algo",
-      "covers": "从数据结构、复杂度、搜索排序到分治、动态规划和贪心；配动画、代码与练习。"
+      "source": "zh-gran-f-1-2",
+      "covers": "覆盖简介里的算法范式与图遍历部分：复杂度分析（含时间/空间复杂度与递推式）、数组与链表/栈与队列/哈希表/树/堆（基础数据结构，英文那本书不讲的这部分这里补齐）、图的表示与遍历（BFS/DFS）、搜索（二分等）、排序、分治、回溯、动态规划、贪心。未覆盖：最短路的算法（Dijkstra/Bellman-Ford/Floyd）、网络流与二分图匹配、字符串匹配（KMP/Z 等）与字符串索引（Trie 之外的后缀数组/自动机），也没有摊还分析。"
     },
     "M.5.5": {
       "source": "oi-graph",
       "covers": "从图的概念、遍历、最短路到生成树与匹配；偏算法应用。"
-    },
-    "F.1.3": {
-      "source": "oi-string",
-      "covers": "KMP、字典树、后缀结构等字符串算法；图算法另从站点的“图论”目录读起。"
     },
     "F.2.1": {
       "source": "theory",
@@ -2160,8 +2237,8 @@
       "covers": "Kotlin 与 Android UI、应用架构和数据存储；仅覆盖移动开发分支，部分视频为英文。"
     },
     "P.5.3": {
-      "source": "devops",
-      "covers": "版本控制、持续集成、持续交付与运维实践；SRE 的错误预算和事故复盘仍配合英文教材。"
+      "source": "zh-gran-p-5-3",
+      "covers": "覆盖简介的 DevOps 与持续交付部分：什么是 DevOps、什么是 IaC、DevOps 中的安全性（DevSecOps）、Git 与版本控制、使用持续集成、把单元测试左移、什么是持续交付、用 GitHub Actions 部署到基础设施、向右转移到生产环境测试、什么是监视、用功能标志做渐进式试验、通过版本控制的服务更新消除停机、CI/CD 时的治理，以及平台工程等入口。未覆盖：SLO/错误预算、on-call、事件响应与复盘的实操（只有『Microsoft 如何使用 DevOps 运行可靠系统』这类概述）；供应链只有 DevSecOps 概念页带到，没有制品与依赖锁定、构建溯源、SBOM 的专门内容；配置管理也只到概念层。"
     },
     "C.2.1": {
       "source": "os",
@@ -2223,17 +2300,9 @@
       "source": "tidb",
       "covers": "分布式 SQL、存储、事务与 Raft 的工程实例；一致性理论证明和通用数据库内核仍配合英文课程。"
     },
-    "C.4.4": {
-      "source": "flink",
-      "covers": "有状态流处理、事件时间、状态与容错，接着读教程和数据源连接器；批处理和数据仓库需英文补充。"
-    },
-    "D.2.1": {
-      "source": "flink",
-      "covers": "有状态流处理、事件时间、状态与容错，接着读教程和数据源连接器；批处理和数据仓库需英文补充。"
-    },
     "D.2.2": {
-      "source": "flink",
-      "covers": "有状态流处理、事件时间、状态与容错，接着读教程和数据源连接器；批处理和数据仓库需英文补充。"
+      "source": "zh-gran-d-2-2",
+      "covers": "按章覆盖简介的两块半：第 3 章 HDFS、第 4 章 HBase、第 5 章 NoSQL、第 6 章云数据库＝分布式存储与存储布局；第 7 章 MapReduce、第 8 章 Hadoop 再探讨、第 10 章 Spark（并配 Spark 入门教程）＝分布式批处理；第 9 章 Hive 数据仓库＝仓与 SQL 转换；第 11 章流计算与 Storm、第 12 章 Flink＝流处理框架；第 13 章图计算、第 14 章数据可视化。未覆盖：数据管线的编排与调度（幂等、重跑、回填）、消息队列（Kafka）及其语义、事件时间/水位线/状态/背压/端到端保证这些流处理语义细节、湖仓一体与表格式（Iceberg/Delta/Paimon），以及分区/文件格式层面的存储布局取舍。"
     },
     "C.1.4": {
       "source": "hpc",
@@ -2260,12 +2329,8 @@
       "covers": "从对应版本的管理员指南学习账户权限、备份恢复和数据库运维；以 openGauss 为实践案例。"
     },
     "D.3.1": {
-      "source": "pandas",
-      "covers": "索引、分组、变形、连接与缺失数据，配练习；实验设计与可复现研究方法仍配合英文教材。"
-    },
-    "D.3.3": {
-      "source": "pandas",
-      "covers": "索引、分组、变形、连接与缺失数据，配练习；实验设计与可复现研究方法仍配合英文教材。"
+      "source": "zh-gran-d-3-1",
+      "covers": "覆盖简介的流程与工具部分：第一单元 数据载入及初步观察、pandas 基础、探索性数据分析；第二单元 数据清洗及特征处理、数据重构（1/2）、数据可视化；第三单元 数据建模（sklearn）与模型评估（评价）。全程用 Jupyter notebook，正好对应 Notebook 工作流。未覆盖：抽样偏差、数据泄漏、交叉验证的系统讲解、不确定性/自助法、实验记录与可复现流程（环境固定、随机种子、依赖锁定）。"
     },
     "M.6.2.4": {
       "source": "pumpkin",
@@ -2528,8 +2593,8 @@
       "covers": "按表示、存储、获取、融合、本体、推理和查询/问答单元建立图谱，配课程项目。"
     },
     "M.6.4": {
-      "source": "forecast",
-      "covers": "时间序列图形、回归、分解、指数平滑与 ARIMA；这是旧版 R 实践教材，排队论需单独学习。"
+      "source": "zh-gran-m-6-4",
+      "covers": "覆盖：第 2 章 时间序列图形（2.7 滞后图、2.8 自相关图 ACF）、第 3 章 预测者的工具集（精度指标、训练/测试集、时间序列交叉验证、预测区间、残差检验）、第 6 章 时间序列分解、第 7 章 指数平滑（7.4 方法分类、7.5 创新的指数平滑状态空间模型）、第 8 章 ARIMA（8.1 平稳性和差分、模型识别与估计）、第 9 章 动态回归、第 10 章 分层/分组预测、第 11 章 高级预测方法、第 12 章 实际预测问题。注意这是第二版译本：没有英文第三版新增的第 4 章「时间序列特征（feasts 特征提取）」与部分新内容，章节编号也与第三版不同（指数平滑在中文第 7 章、ARIMA 在第 8 章）。未覆盖：同英文版——一般状态空间/卡尔曼滤波框架、频域/谱分析。"
     },
     "M.7.6": {
       "source": "game-theory",
@@ -2615,10 +2680,6 @@
       "source": "zh-vm",
       "covers": "依专题路线读运行时数据区、栈堆、类加载、垃圾回收、JVM参数及排查；解释器实现、JIT原理和FFI仍配英文主书。"
     },
-    "P.5.4": {
-      "source": "zh-supply-chain",
-      "covers": "从依赖关系图、依赖审查、SBOM、依赖固定和制品来源证明进入实践；逐字节可复现构建仍读Reproducible Builds。"
-    },
     "C.3.4": {
       "source": "zh-sdn",
       "covers": "按SDN原理、数据平面、OpenFlow南向接口、控制平面、北向接口和应用开发学习；配Mininet、OVS、POX/RYU实验。"
@@ -2702,7 +2763,149 @@
     "P.5.5": {
       "source": "zh-games104",
       "covers": "引擎架构分层、游戏世界构建、渲染、动画、物理、粒子与声音、工具链、玩法系统与基础 AI；配套开源小引擎 Piccolo 可动手。偏引擎原理，不讲 Unity/Unreal 的具体用法。"
+    },
+    "M.6.6": {
+      "source": "zh-gran-m-6-6",
+      "covers": "合集包含泊松/马尔可夫过程、Kendall 记号、M/M/1、多服务台与损失系统、Little 定律、电话网性能与 Python 仿真。中文目录未见 Jackson 网络和闭合网络 MVA，不把单队列平均值计算等同于 MVA；这两部分读英文小课。"
     }
   },
-  "chineseGaps": {}
+  "chineseGaps": {},
+  "supplementary": {
+    "D.3.1": [
+      {
+        "title": "Python Data Science Handbook",
+        "url": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+        "lang": "en",
+        "covers": "补 Jupyter/IPython、NumPy、pandas、Matplotlib 工具操作，适合并读。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "DVC：实验管理",
+        "url": "https://dvc.org/doc/user-guide/experiment-management",
+        "lang": "en",
+        "covers": "补实验参数、指标、模型与数据版本记录；是工具实例，不代表必须使用 DVC。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "scikit-learn：常见陷阱与推荐做法",
+        "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+        "lang": "en",
+        "covers": "补数据泄漏、预处理划分与随机性控制。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      }
+    ],
+    "F.1.2": [
+      {
+        "title": "OI Wiki：字符串",
+        "url": "https://oi-wiki.org/string/",
+        "lang": "zh",
+        "covers": "补字符串匹配、Trie、后缀数组/自动机等索引。社区维护的算法参考书，非大学课程。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "OI Wiki：图论",
+        "url": "https://oi-wiki.org/graph/",
+        "lang": "zh",
+        "covers": "补最短路、网络流和匹配。先完成基础数据结构与算法范式。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "Algorithms, 4th Edition：Strings",
+        "url": "https://algs4.cs.princeton.edu/50strings/",
+        "lang": "en",
+        "covers": "作者配套网站：Trie、子串查找、正则表达式；后缀数组另见该站 Context 章。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      }
+    ],
+    "D.2.2": [
+      {
+        "title": "Apache Flink 中文实践练习",
+        "url": "https://nightlies.apache.org/flink/flink-docs-stable/zh/docs/learn-flink/overview/",
+        "lang": "zh",
+        "covers": "补流式 ETL、事件时间、状态与容错；文档部分页面仍可能是英文。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "Data 101：Data Engineering Course Notes",
+        "url": "https://data101.org/notes/",
+        "lang": "en",
+        "covers": "补数据准备、数据运维、管线、质量验证与数据生命周期。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "Apache Airflow：Best Practices",
+        "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+        "lang": "en",
+        "covers": "补任务重试幂等、固定分区与管线工程实践。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      }
+    ],
+    "P.5.3": [
+      {
+        "title": "SLSA 规范",
+        "url": "https://slsa.dev/spec/v1.2/",
+        "lang": "en",
+        "covers": "补制品、构建溯源与校验，先读 About SLSA 与 Provenance。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "Software Engineering at Google：Dependency Management",
+        "url": "https://abseil.io/resources/swe-book/html/ch21.html",
+        "lang": "en",
+        "covers": "补依赖管理、版本与传递依赖；构建系统另见同书第 18 章。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "GitHub 文档：保护供应链",
+        "url": "https://docs.github.com/zh/code-security/how-tos/secure-your-supply-chain",
+        "lang": "zh",
+        "covers": "补依赖关系、依赖项审查、SBOM 导出和制品证明；部分入口标题仍为英文，实际启用功能的套餐条件各异。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      },
+      {
+        "title": "Reproducible Builds 文档",
+        "url": "https://reproducible-builds.org/docs/",
+        "lang": "en",
+        "covers": "选读环境定义与差异管理，了解固定依赖和构建环境。",
+        "tier": "material",
+        "access": "免费在线正文，无需注册。",
+        "free": true
+      }
+    ],
+    "M.6.6": [
+      {
+        "title": "北京交通大学课程平台：排队论章节讲义",
+        "url": "http://cc.bjtu.edu.cn:81/meol/analytics/resPdfShow.do?resId=488534&lid=36997",
+        "lang": "zh",
+        "covers": "19 页中文讲义，仅覆盖排队基础与单队列，不覆盖排队网络/MVA。",
+        "tier": "material",
+        "access": "课程平台公开 PDF 预览；HTTP 非标准端口，部分网络可能无法打开。",
+        "free": true
+      }
+    ]
+  }
 }

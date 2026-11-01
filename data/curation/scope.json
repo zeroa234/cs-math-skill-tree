@@ -645,16 +645,26 @@
    "note": "CS2023 没有随机微积分。"
   },
   "M.6.4": {
+   "note": "CS2023 没有时间序列分析。"
+  },
+  "M.6.6": {
    "matched": {
-    "到达/服务过程与系统性能": [
+    "到达与服务过程": [
      [
       "NC-Fundamentals",
       "CS Core",
       "Basic queueing concepts"
      ]
+    ],
+    "用排队模型预测系统性能": [
+     [
+      "PDC-Communication",
+      "KA Core",
+      "Applications of queuing theory to model and predict performance"
+     ]
     ]
    },
-   "note": "排队基本概念由网络技能讲；时间序列不在 CS2023 里。"
+   "note": "CS2023 只要求排队的基本概念，以及在并行与分布式计算里用排队论预测性能；Kendall 记号、排队网络、均值分析不在其中。"
   },
   "M.6.5": {
    "matched": {
@@ -903,12 +913,8 @@
       "KA Core",
       "Amortized analysis"
      ]
-    ]
-   }
-  },
-  "F.1.3": {
-   "matched": {
-    "遍历": [
+    ],
+    "图的遍历": [
      [
       "SDF-Algorithms",
       "CS Core",
@@ -922,25 +928,18 @@
       "Shortest path"
      ]
     ],
-    "流": [
+    "网络流与匹配": [
      [
       "AL-Strategies",
       "KA Core",
       "Ford-Fulkerson"
      ]
     ],
-    "字符串匹配": [
+    "字符串匹配与索引": [
      [
       "AL-Foundational",
       "KA Core",
       "Efficient string matching"
-     ]
-    ],
-    "索引与自动机方法": [
-     [
-      "AL-Models",
-      "CS Core",
-      "Formal automata"
      ]
     ]
    }
@@ -1719,23 +1718,19 @@
       "KA Core",
       "Release management."
      ]
-    ]
-   }
-  },
-  "P.5.4": {
-   "matched": {
-    "构建溯源": [
+    ],
+    "制品与依赖锁定": [
+     [
+      "SE-Tools",
+      "KA Core",
+      "Dependency management"
+     ]
+    ],
+    "构建溯源与软件物料清单": [
      [
       "SE-Tools",
       "KA Core",
       "Build systems"
-     ]
-    ],
-    "软件物料与供应链完整性": [
-     [
-      "SEC-Coding",
-      "KA Core",
-      "Secure use of third-party components"
      ],
      [
       "SEC-Engineering",
@@ -2259,18 +2254,6 @@
     ]
    }
   },
-  "C.4.4": {
-   "matched": {
-    "消息语义": [
-     [
-      "PDC-Communication",
-      "CS Core",
-      "party-to-party communication media"
-     ]
-    ]
-   },
-   "note": "事件时间、重放、背压等流处理内容不在 CS2023 里。"
-  },
   "C.5.1": {
    "matched": {
     "线程任务": [
@@ -2516,9 +2499,9 @@
     ]
    }
   },
-  "D.2.1": {
+  "D.2.2": {
    "matched": {
-    "采集": [
+    "数据管线的采集": [
      [
       "DM-Analytics",
       "KA Core",
@@ -2538,12 +2521,8 @@
       "KA Core",
       "data preparation"
      ]
-    ]
-   }
-  },
-  "D.2.2": {
-   "matched": {
-    "分布式数据处理": [
+    ],
+    "分布式批处理": [
      [
       "DM-Core",
       "CS Core",
@@ -2557,14 +2536,22 @@
       "Page structures"
      ]
     ],
-    "批流一体与资源权衡": [
+    "消息队列": [
+     [
+      "PDC-Coordination",
+      "CS Core",
+      "Data-enabled: Queues, producer-consumer designs"
+     ]
+    ],
+    "流处理的事件时间与状态": [
      [
       "DM-Core",
       "KA Core",
       "Systems supporting structured and/or stream content"
      ]
     ]
-   }
+   },
+   "note": "数据湖/仓、调度与数据验证、背压等工程内容不在 CS2023 的核心主题里。"
   },
   "D.2.3": {
    "note": "信息检索在 CS2023 里是 AI-NLP 和 DM 的 Non-core。"
@@ -2598,6 +2585,27 @@
       "KA Core",
       "Exploratory data techniques"
      ]
+    ],
+    "抽样偏差": [
+     [
+      "MSF-Statistics",
+      "KA Core",
+      "Sampling, bias, adequacy of samples"
+     ]
+    ],
+    "评估指标": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Performance metrics for classifiers"
+     ]
+    ],
+    "交叉验证": [
+     [
+      "AI-ML",
+      "KA Core",
+      "Cross-validation"
+     ]
     ]
    }
   },
@@ -2622,31 +2630,6 @@
       "DM-Analytics",
       "KA Core",
       "Data science lifecycle"
-     ]
-    ]
-   }
-  },
-  "D.3.3": {
-   "matched": {
-    "抽样偏差": [
-     [
-      "MSF-Statistics",
-      "KA Core",
-      "Sampling, bias, adequacy of samples"
-     ]
-    ],
-    "指标": [
-     [
-      "AI-ML",
-      "CS Core",
-      "Performance metrics for classifiers"
-     ]
-    ],
-    "交叉验证": [
-     [
-      "AI-ML",
-      "KA Core",
-      "Cross-validation"
      ]
     ]
    }

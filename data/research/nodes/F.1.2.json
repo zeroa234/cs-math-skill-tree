@@ -2,14 +2,22 @@
  "id": "F.1.2",
  "resource": {
   "tier": "website",
-  "title": "MIT 6.046J Design and Analysis of Algorithms (Spring 2015, MIT OpenCourseWare)",
-  "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
+  "title": "Algorithms by Jeff Erickson（UIUC 教授自编教材，全书 PDF 免费在线；含 Amortized Analysis、String Matching 等附加讲义）",
+  "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
   "lang": "en",
   "free": true,
-  "covers": "第 1-4 讲（含习题课）分治与主定理（凸包、中位数、FFT、van Emde Boas 树），第 5 讲摊还分析（聚合/记账/势能，含 union-find），第 6-8 讲随机化（矩阵乘、快排、跳表、通用与完美哈希），第 10-11 讲动态规划（高级 DP、全点对最短路），第 12 讲贪心与 MST，第 13-14 讲最大流/最小割与匹配，第 15 讲线性规划，第 16-18 讲 P/NP/归约/近似/固定参数，另含分布式算法、密码学与 cache-oblivious 算法；有全套讲课视频、讲义、习题与解答。",
-  "verified": true
+  "access": "作者自出版，全彩电子版与各章 PDF 在站点永久免费下载（CC BY 4.0，可打印分发）；黑白纸质版在 Amazon 售价 $27.50，非必需。该页同时是 UIUC CS 374 / CS 473 两门课的主要教材页，另有作业与考试存档页。",
+  "covers": "覆盖简介的绝大部分：Introduction + Recursion（递归与递归式求解，另见附录 II Solving Recurrences）、Backtracking、Dynamic Programming（含 Advanced DP 附加讲义）、Greedy Algorithms、Basic Graph Algorithms 与 Depth-First Search（BFS/DFS、拓扑、连通分量）、Minimum Spanning Trees、Shortest Paths（Dijkstra/Bellman-Ford/DAG）、All-Pairs Shortest Paths、Maximum Flows & Minimum Cuts 与 Applications of Flows and Cuts（含二分图匹配）、NP-Hardness；另外站在『Director's Cut』讲义里补了 Amortized Analysis（14 页）、String Matching（14 页，已核到 Rabin–Karp 指纹法部分）、Hashing、Disjoint Sets（并查集与摊还）。未覆盖：字符串索引结构（后缀数组/后缀自动机/Trie 的索引与压缩索引）没有专门章节；摊还分析不在书内而在附加讲义里；书自述『不是数据结构与算法的第一门课』，假定读过 CS 173（离散数学）与 CS 225（数据结构），也不讲栈/队列/堆/平衡树/哈希表等基础数据结构本身。"
  },
- "zh_alt": null,
+ "zh_alt": {
+  "tier": "website",
+  "title": "《Hello 算法》（krahets 著，中文开源免费在线教程，动画图解 + 多语言代码）",
+  "url": "https://www.hello-algo.com/",
+  "lang": "zh",
+  "free": true,
+  "access": "免费在线阅读（另有 PDF 版与 GitHub 仓库 github.com/krahets/hello-algo，代码可一键运行，附 14 种语言实现与社区问答）。注：2026-11-01 用 plain fetch 打开该站点时被 Vercel 安全校验拦成 429，改用 Tavily 提取才拿到正文，链接本身有效。",
+  "covers": "覆盖简介里的算法范式与图遍历部分：复杂度分析（含时间/空间复杂度与递推式）、数组与链表/栈与队列/哈希表/树/堆（基础数据结构，英文那本书不讲的这部分这里补齐）、图的表示与遍历（BFS/DFS）、搜索（二分等）、排序、分治、回溯、动态规划、贪心。未覆盖：最短路的算法（Dijkstra/Bellman-Ford/Floyd）、网络流与二分图匹配、字符串匹配（KMP/Z 等）与字符串索引（Trie 之外的后缀数组/自动机），也没有摊还分析。"
+ },
  "courses": [
   {
    "school": "University of California, Berkeley",
@@ -32,6 +40,27 @@
     "P.1.1",
     "M.5.3"
    ]
+  },
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.046J Design and Analysis of Algorithms",
+   "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/syllabus/",
+   "prereq_text": "You are expected, and strongly encouraged, to have taken: 6.006 Introduction to Algorithms, 6.042J / 18.062J Mathematics for Computer Science. Petitions for waivers will be considered by the course staff.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "F.1.2",
+    "M.5.3"
+   ]
+  },
+  {
+   "school": "Princeton University",
+   "course": "COS 226 Algorithms and Data Structures",
+   "url": "https://www.cs.princeton.edu/courses/archive/spring22/cos226/",
+   "prereq_text": "Prerequisites. COS 126 or approval by the COS placement officer.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
   }
  ],
  "candidate_check": {
@@ -50,5 +79,9 @@
    "evidence": "Berkeley CS 70（CS 170 的必修前置）同时覆盖离散数学与概率论，故概率基础是隐含需要的；课程目录只写 'COMPSCI 70'，未单列概率课。"
   }
  ],
- "notes": "原图两个建议前置都有明确课程证据：Berkeley CS 170 必修 61B（数据结构 F.1.1）与 CS 70（离散数学 M.5.3）；MIT 6.006 明确要求 6.042J（M.5.3）。资源选了 MIT 6.046J（本科课程，非研究生）因为它同时覆盖分治、摊还、贪心、DP、流/匹配，而 6.006 (2011) 的课表里没有贪心算法（有摊还/table doubling，见 6.006 calendar，已打开核对）。代价是 6.046 假定学生已上过 6.006，真正的零起点可以先看 6.006（https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/ ，同样免费有视频）。"
+ "notes": "原图两个建议前置都有明确课程证据：Berkeley CS 170 必修 61B（数据结构 F.1.1）与 CS 70（离散数学 M.5.3）；MIT 6.006 明确要求 6.042J（M.5.3）。资源选了 MIT 6.046J（本科课程，非研究生）因为它同时覆盖分治、摊还、贪心、DP、流/匹配，而 6.006 (2011) 的课表里没有贪心算法（有摊还/table doubling，见 6.006 calendar，已打开核对）。代价是 6.046 假定学生已上过 6.006，真正的零起点可以先看 6.006（https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/ ，同样免费有视频）。",
+ "resource_recheck": {
+  "date": "2026-11-01",
+  "reason": "英文从 MIT 6.046J（https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/ ，2026-11-01 仍可打开）换成 Jeff Erickson 的免费教材：6.046J 讲分治/摊还/贪心/DP/流与匹配很好，但合并进来的 F.1.3 部分（图的遍历、最短路、字符串匹配与索引）它基本不涉及——它的课表里没有 BFS/DFS、Dijkstra、字符串。Erickson 的站点一本书覆盖递归、DP、贪心、BFS/DFS、MST、最短路、全源最短路、最大流最小割与匹配，附加讲义再补 Amortized Analysis 与 String Matching，唯一缺口是字符串索引结构。仍缺的部分可补：OI Wiki 字符串章（https://oi-wiki.org/string/ ，含字符串匹配、Trie、KMP、AC 自动机、后缀数组/后缀自动机/后缀树，已打开站点确认有这些条目）与图论章（最短路/网络流/二分图）；零基础想先补数据结构可看 6.006（https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/ ）或 Hello 算法。中文这条沿用原资源 Hello 算法（保留原因见 keep_reason），它同样缺最短路/网络流/字符串，中文要一次覆盖这部分的免费资料我查到的是 OI Wiki（社区维护、非大学出品，故未选作主资源，但可作为配套）；系统性完整但需付费的是《算法导论》中文版（机械工业出版社，第 17 章摊还分析、第 22–26 章图与流、第 32 章字符串匹配）。"
+ }
 }

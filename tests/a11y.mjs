@@ -6,6 +6,9 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const browserTemp = path.join(ROOT, "temp/browser-qa");
+fs.mkdirSync(browserTemp, { recursive: true });
+process.env.TEMP = process.env.TMP = browserTemp;
 const url = pathToFileURL(path.join(ROOT, "src/web/index.html")).href;
 const AXE = path.join(ROOT, "node_modules/axe-core/axe.min.js");
 const TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"];

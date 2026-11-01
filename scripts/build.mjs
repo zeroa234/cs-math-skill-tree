@@ -189,6 +189,9 @@ for (const [id, entry] of Object.entries(resourceReview.chinese)) {
   if (!skillIds.has(id)) fail(`unknown Chinese resource skill ${id}`);
   if (!resourceReview.chineseCatalog[entry.source]) fail(`unknown resource source ${entry.source} for ${id}`);
 }
+for (const id of Object.keys(resourceReview.supplementary || {})) {
+  if (!skillIds.has(id)) fail(`unknown supplementary resource skill ${id}`);
+}
 for (const id of Object.keys(resourceReview.english)) {
   if (!skillIds.has(id)) fail(`unknown resource review skill ${id}`);
 }
@@ -213,6 +216,7 @@ function learningResources(id, research) {
     resource: resourceOf({ ...research?.resource, ...changes }),
     zhAlt: resourceOf(zh ? { tier: "website", lang: "zh", free: null, ...zh } : null),
     zhResourceNote: resourceReview.chineseGaps[id] || "",
+    extraResources: (resourceReview.supplementary?.[id] || []).map(resourceOf),
   };
 }
 
@@ -477,6 +481,7 @@ const data = {
     withGuide: outlines.size,
     card: { w: CARD_W, h: CARD_H, colW: COL_W },
   },
+  progressMerges: partition.merged,
   depths: src.depths,
   routes: src.routes.map((r) => ({
     name: r.name,

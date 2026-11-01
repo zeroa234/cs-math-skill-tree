@@ -17,7 +17,7 @@ for (const [id, entry] of Object.entries(review.chinese)) {
   assert(review.chineseCatalog[entry.source], `Missing source ${id}`);
   assert(!review.chineseGaps[id], `Contradictory gap ${id}`);
 }
-for (const s of data.skills) for (const r of [s.resource, s.zhAlt].filter(Boolean)) {
+for (const s of data.skills) for (const r of [s.resource, s.zhAlt, ...(s.extraResources || [])].filter(Boolean)) {
   assert(["http:", "https:"].includes(new URL(r.url).protocol));
   assert(r.title && r.covers, `Missing learning guidance for ${s.id}`);
   assert([true, false, null].includes(r.free), `Missing access classification for ${s.id}`);
@@ -43,11 +43,17 @@ try {
     await page.evaluate(id => { location.hash = `skill/${id}`; }, s.id);
     await page.waitForFunction(name => document.querySelector(".p-title")?.textContent === name, s.name);
     const links = await page.locator(".learning-resources .res a").evaluateAll(els => els.map(a => ({ href: a.href, target: a.target, rel: a.rel })));
-    assert.deepEqual(links.map(l => l.href), [s.resource, s.zhAlt].filter(Boolean).map(r => new URL(r.url).href), `Wrong links for ${s.id}`);
+    assert.deepEqual(links.map(l => l.href), [s.resource, s.zhAlt, ...(s.extraResources || [])].filter(Boolean).map(r => new URL(r.url).href), `Wrong links for ${s.id}`);
     assert(links.every(l => l.target === "_blank" && l.rel.includes("noopener") && l.rel.includes("noreferrer")));
     assert.equal(await page.locator(".res-heading", { hasText: "中文资源" }).count(), s.zhAlt ? 1 : 0, s.id);
     if (!s.zhAlt) assert.match(await page.locator(".learning-resources .pending").innerText(), /暂未找到/);
   }
+  await page.evaluate(() => { location.hash = "skill/P.5.3"; });
+  await page.waitForFunction(() => document.querySelector(".extra-resources"));
+  await page.locator(".extra-resources > summary").click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  assert(await page.locator(".extra-resources").getAttribute("open") !== null);
+  assert(!(await page.locator(".learning-resources").evaluate(e => e.scrollWidth > e.clientWidth + 1)));
   for (const [id, width, height, file] of [["M.1.1",1600,960,"desktop"],["P.4.1",390,844,"mobile-registration"],["M.4.2",390,844,"mobile-course"],["A.4.2",390,844,"mobile-bilibili"],["X.1.3",390,844,"mobile-youtube"]]) {
     await page.setViewportSize({ width, height });
     await page.evaluate(id => { location.hash = `skill/${id}`; }, id);

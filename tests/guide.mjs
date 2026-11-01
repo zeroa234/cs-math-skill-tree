@@ -6,6 +6,9 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const browserTemp = path.join(ROOT, "temp/browser-qa");
+fs.mkdirSync(browserTemp, { recursive: true });
+process.env.TEMP = process.env.TMP = browserTemp;
 const args = process.argv.slice(2);
 const shotsAt = args.indexOf("--shots");
 const out = path.resolve(shotsAt >= 0 ? args[shotsAt + 1] : path.join(ROOT, "temp/shots"));

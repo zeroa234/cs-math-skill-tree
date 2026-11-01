@@ -12907,240 +12907,6 @@
   ],
   "omitted": "A 里没收：第 3、9 讲（生成树与最小生成树）、第 8 讲（异步网络上的非容错算法，与第 2 讲重复）、第 10 讲（同步器）、第 12 讲（稳定性质检测、全局快照、死锁检测）、第 13–15 讲（互斥与资源分配、共享内存多处理器与实用互斥）、第 18–22 讲（原子快照、链表算法、事务内存、无等待可计算性），这些是共享内存同步与数据结构专题，与节点简介的五项（故障模型、线性化、共识可解性、可用性、通信复杂度）关系较远；第 24 讲自稳定算法同样未收。B 里只取四讲，未收 MapReduce、GFS、Spanner、Ray、Bitcoin 等系统专题。"
  },
- "C.4.4": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "docs",
-    "title": "Apache Flink Documentation (stable, v2.3) — Learn Flink & Concepts",
-    "by": "The Apache Software Foundation",
-    "year": 2026,
-    "url": "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/overview/",
-    "toc_urls": [
-     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/overview/",
-     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/stateful-stream-processing/",
-     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/",
-     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/flink-architecture/",
-     "https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/fault_tolerance/",
-     "https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/savepoints/",
-     "https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/monitoring/back_pressure/"
-    ],
-    "why": "节点现有英文学习资源。Flink 官方文档的 Concepts、Learn Flink 与 Operations 三处小节标题正好按“有状态流处理 / 时间语义 / 集群架构 / 快照容错 / 保存点 / 背压”组织，和节点的消息语义、事件时间、状态、重放、背压、端到端保证一一对应。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "1",
-    "title": "Stateful Stream Processing",
-    "zh": "有状态流处理",
-    "items": [
-     {
-      "title": "What is State?",
-      "zh": "什么是状态"
-     },
-     {
-      "title": "Keyed State",
-      "zh": "键控状态"
-     },
-     {
-      "title": "State Persistence",
-      "zh": "状态持久化"
-     },
-     {
-      "title": "Checkpointing",
-      "zh": "检查点"
-     },
-     {
-      "title": "Barriers",
-      "zh": "栅栏"
-     },
-     {
-      "title": "Recovery",
-      "zh": "恢复"
-     },
-     {
-      "title": "State Backends",
-      "zh": "状态后端"
-     },
-     {
-      "title": "Savepoints",
-      "zh": "保存点"
-     },
-     {
-      "title": "Exactly Once vs. At Least Once",
-      "zh": "精确一次与至少一次"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "2",
-    "title": "Timely Stream Processing",
-    "zh": "及时流处理",
-    "items": [
-     {
-      "title": "Notions of Time: Event Time and Processing Time",
-      "zh": "时间概念：事件时间与处理时间"
-     },
-     {
-      "title": "Event Time and Watermarks",
-      "zh": "事件时间与水位线"
-     },
-     {
-      "title": "Watermarks in Parallel Streams",
-      "zh": "并行流中的水位线"
-     },
-     {
-      "title": "Lateness",
-      "zh": "迟到数据"
-     },
-     {
-      "title": "Windowing",
-      "zh": "窗口"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "3",
-    "title": "Flink Architecture",
-    "zh": "Flink 架构",
-    "items": [
-     {
-      "title": "Anatomy of a Flink Cluster",
-      "zh": "Flink 集群剖析"
-     },
-     {
-      "title": "JobManager",
-      "zh": "JobManager"
-     },
-     {
-      "title": "TaskManagers",
-      "zh": "TaskManager"
-     },
-     {
-      "title": "Tasks and Operator Chains",
-      "zh": "任务与算子链"
-     },
-     {
-      "title": "Task Slots and Resources",
-      "zh": "任务槽与资源"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "4",
-    "title": "Fault Tolerance via State Snapshots",
-    "zh": "基于状态快照的容错",
-    "items": [
-     {
-      "title": "State Snapshots",
-      "zh": "状态快照"
-     },
-     {
-      "title": "How does State Snapshotting Work?",
-      "zh": "状态快照如何工作"
-     },
-     {
-      "title": "Exactly Once Guarantees",
-      "zh": "精确一次保证"
-     },
-     {
-      "title": "Exactly Once End-to-end",
-      "zh": "端到端精确一次"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "5",
-    "title": "Savepoints",
-    "zh": "保存点",
-    "items": [
-     {
-      "title": "What is a Savepoint?",
-      "zh": "什么是保存点"
-     },
-     {
-      "title": "Triggering Savepoints",
-      "zh": "触发保存点"
-     },
-     {
-      "title": "Resuming from Savepoints",
-      "zh": "从保存点恢复"
-     },
-     {
-      "title": "Disposing Savepoints",
-      "zh": "释放保存点"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "6",
-    "title": "Monitoring Back Pressure",
-    "zh": "监控背压",
-    "items": [
-     {
-      "title": "Back Pressure",
-      "zh": "背压"
-     },
-     {
-      "title": "Task performance metrics",
-      "zh": "任务性能指标"
-     },
-     {
-      "title": "Back Pressure Status",
-      "zh": "背压状态"
-     }
-    ]
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "消息语义",
-    "refs": [
-     "A:1",
-     "A:4"
-    ]
-   },
-   {
-    "topic": "事件时间",
-    "refs": [
-     "A:2"
-    ]
-   },
-   {
-    "topic": "状态",
-    "refs": [
-     "A:1",
-     "A:3"
-    ]
-   },
-   {
-    "topic": "重放",
-    "refs": [
-     "A:5",
-     "A:1"
-    ]
-   },
-   {
-    "topic": "背压",
-    "refs": [
-     "A:6"
-    ]
-   },
-   {
-    "topic": "端到端保证",
-    "refs": [
-     "A:4"
-    ]
-   }
-  ],
-  "omitted": "A 只收了 Concepts 下的“有状态流处理 / 及时流处理 / 集群架构”，Learn Flink 的“Fault Tolerance”，以及 Savepoints 与 Monitoring Back Pressure 两个运维页；未收 Concepts 里的 Streaming SQL & Table Concepts 分支（Dynamic Tables、Time Attributes、Versioned Tables、Temporal Table Function、Determinism in Continuous Queries）、Getting Started 下的教程、Flink SQL / Table API / Connectors / Deployment / Internals 等目录，这些是 SQL 语义、连接器配置和部署话题，与节点的六个知识点关系较远。"
- },
  "C.5.1": {
   "sources": [
    {
@@ -15845,173 +15611,6 @@
   ],
   "omitted": "A（OpenMetadata v2.0.x 文档）未收：Quickstart、Deployment、Connectors（369 页连接器）、MCP、Admin Guide、SDK & APIs 等部署与开发部分；How-to Guides 里与治理无关的 Data Collaboration、Context Center、Data Insights、Data Discovery（资产发现与检索属“目录”的 UI 侧，本节点已用 Glossary/Classification/Marketplace 表达目录含义）也未收；Data Quality 一节里的告警渠道配置（Email/Slack/Teams/Google Chat/Webhook）与 Profiler 的外部工作流只保留代表性子页。各页面的说明句（冒号后的描述）不是标题，未收。"
  },
- "D.2.1": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "notes",
-    "title": "Data 101 Course Notes",
-    "by": "UC Berkeley Data 101 / CS 187 (Data Engineering)",
-    "year": 2024,
-    "url": "https://data101.org/notes/",
-    "toc_urls": [
-     "https://data101.org/notes/",
-     "https://data101.org/notes/data-pipelines/data-pipelines/",
-     "https://data101.org/notes/data-prep/"
-    ],
-    "why": "就是节点“现有英文学习资源”里的这份公开课程讲义：第 10 章 Data Operations and Pipelines 从“数据怎么到达（push/pull）→到达后做什么→如何自动化→如何维持质量与处理异常”讲管线，并用 dbt 演示转换与测试；第 5 章 Data Preparation 讲清洗（结构、粒度、异常值、填补）。本科课程，符合 D2 入门层。"
-   },
-   {
-    "key": "B",
-    "kind": "docs",
-    "title": "Apache Airflow Best Practices",
-    "by": "Apache Airflow / Apache Software Foundation",
-    "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html#creating-a-task",
-    "toc_urls": [
-     "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html"
-    ],
-    "why": "补主教材没有直接说明的幂等重试；Creating a task明确要求重跑结果保持一致，并给出UPSERT与固定分区的具体实践。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "5",
-    "title": "Data Preparation",
-    "zh": "数据准备",
-    "items": [
-     {
-      "ref": "",
-      "title": "Structural",
-      "zh": "结构问题"
-     },
-     {
-      "ref": "",
-      "title": "Granularity",
-      "zh": "粒度问题"
-     },
-     {
-      "ref": "",
-      "title": "Outliers",
-      "zh": "异常值"
-     },
-     {
-      "ref": "",
-      "title": "Imputation and Entity Resolution",
-      "zh": "缺失值填补与实体消解"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "10",
-    "title": "Data Operations and Pipelines",
-    "zh": "数据运维与数据管线",
-    "items": [
-     {
-      "ref": "",
-      "title": "Data Arrival",
-      "zh": "数据到达（push / pull）"
-     },
-     {
-      "ref": "",
-      "title": "Actions Upon Data Arrival",
-      "zh": "数据到达后要做的处理"
-     },
-     {
-      "ref": "",
-      "title": "Automating the Work",
-      "zh": "自动化执行"
-     },
-     {
-      "ref": "",
-      "title": "Maintaining Quality and Handling Exceptions",
-      "zh": "维持质量与处理异常"
-     },
-     {
-      "ref": "",
-      "title": "dbt",
-      "zh": "dbt"
-     },
-     {
-      "ref": "",
-      "title": "Models in dbt",
-      "zh": "dbt 中的模型"
-     },
-     {
-      "ref": "",
-      "title": "Types of Model Materilizations",
-      "zh": "模型的物化方式"
-     },
-     {
-      "ref": "",
-      "title": "Key Features of Models",
-      "zh": "模型的关键特性（source 与 ref）"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "creating-a-task",
-    "title": "Creating a task",
-    "zh": "创建任务：幂等重试与结果一致性",
-    "fill": "幂等",
-    "items": []
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "采集",
-    "refs": [
-     "A:10"
-    ],
-    "note": "第 10 章 Data Arrival 一节把数据到达分成 push（文件落到 staging 目录、数仓表被填充、API/pub-sub 推送）与 pull（调度软件拉取、事件触发）两类，并列出到达后要做的动作（跑 DQ 测试、装载、转换、记元数据/血缘、必要时通知人）。"
-   },
-   {
-    "topic": "清洗",
-    "refs": [
-     "A:5"
-    ],
-    "note": "第 5 章 Data Preparation：结构问题（unboxing、记录/字典/union/自然语言等形态）、粒度问题、异常值处理、缺失值填补与实体消解。"
-   },
-   {
-    "topic": "转换",
-    "refs": [
-     "A:10"
-    ],
-    "note": "第 10 章用 dbt 演示 ELT 里的 T：Models in dbt（SQL 模型）、模型的物化方式（view / table / incremental）、source 与 ref 组成依赖链。"
-   },
-   {
-    "topic": "调度",
-    "refs": [
-     "A:10"
-    ],
-    "note": "第 10 章 Automating the Work 一节：用 workflow 系统管流程、dataflow 系统管数据流动、消息/队列/事件系统在系统之间可靠传递，并说明实践中常常组合使用；Data Arrival 的 pull 也提到“via scheduling software”。本节点没有更细的调度器（cron/DAG/依赖管理）专章。"
-   },
-   {
-    "topic": "幂等",
-    "refs": [
-     "B:creating-a-task"
-    ],
-    "note": "Airflow官方Best Practices的Creating a task直接说明任务重跑应产生相同结果，并提出UPSERT、固定分区和避免用当前时间做关键计算。它有实际对应内容，即使标题未使用idempotent一词。"
-   },
-   {
-    "topic": "数据验证",
-    "refs": [
-     "A:10"
-    ],
-    "note": "第 10 章 Maintaining Quality and Handling Exceptions：数据中心的“测试”分逻辑类（模式、约束）与统计类（异常值、分布漂移），并用 dbt 的内置测试（唯一性、空值、可接受取值、关系）与返回 0 行即通过的自定义 SQL 测试落地。"
-   },
-   {
-    "topic": "管线可靠性",
-    "refs": [
-     "A:10"
-    ],
-    "note": "同一章里：workflow/dataflow/messaging 三类系统组合来保证可靠传递，数据到达后要记血缘、出错要能转人工审批（beeper message），再用 DQ 测试和 DevOps 式的 test-driven 做法守住质量。"
-   }
-  ],
-  "omitted": "A（Data 101 讲义）只收第 5 章 Data Preparation 与第 10 章 Data Operations and Pipelines 两章；其余章（1 SQL、2 Relational Algebra、3 Query Performance、4 Data Modeling、6 Semistructured Data、7 Sampling、8 Transactions、9 Parallel/Distributed Computing、11 Business Intelligence、12 Graph Databases、Spreadsheets、Appendix）属 SQL/模型/并行/BI/图数据库等其它节点主题，未收。第 10 章内部的“dbt in a High Level”、物化类型与 source/ref 的逐条代码示例属实现细节，未拆成独立条目；第 5 章导航里 “Numerical, Granularity” 是同一导航项里并列的两个主题，我只收了 Granularity（Numerical 一项在讲义里没有独立页面标题）。"
- },
  "D.2.2": {
   "sources": [
    {
@@ -16037,6 +15636,49 @@
      "https://15445.courses.cs.cmu.edu/fall2026/schedule.html"
     ],
     "why": "补“存储布局”：A 只讲数仓里的分区/聚簇，不讲行存/列存与压缩编码这类物理布局，CMU 15-445 的第 5、6 讲正好讲 Database Storage II 与 Storage Models & Compression。"
+   },
+   {
+    "key": "C",
+    "kind": "notes",
+    "title": "Data 101 Course Notes",
+    "by": "UC Berkeley Data 101 / CS 187 (Data Engineering)",
+    "year": 2024,
+    "url": "https://data101.org/notes/",
+    "toc_urls": [
+     "https://data101.org/notes/",
+     "https://data101.org/notes/data-pipelines/data-pipelines/",
+     "https://data101.org/notes/data-prep/"
+    ],
+    "why": "就是节点“现有英文学习资源”里的这份公开课程讲义：第 10 章 Data Operations and Pipelines 从“数据怎么到达（push/pull）→到达后做什么→如何自动化→如何维持质量与处理异常”讲管线，并用 dbt 演示转换与测试；第 5 章 Data Preparation 讲清洗（结构、粒度、异常值、填补）。本科课程，符合 D2 入门层。"
+   },
+   {
+    "key": "D",
+    "kind": "docs",
+    "title": "Apache Airflow Best Practices",
+    "by": "Apache Airflow / Apache Software Foundation",
+    "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html#creating-a-task",
+    "toc_urls": [
+     "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html"
+    ],
+    "why": "补主教材没有直接说明的幂等重试；Creating a task明确要求重跑结果保持一致，并给出UPSERT与固定分区的具体实践。"
+   },
+   {
+    "key": "E",
+    "kind": "docs",
+    "title": "Apache Flink Documentation (stable, v2.3) — Learn Flink & Concepts",
+    "by": "The Apache Software Foundation",
+    "year": 2026,
+    "url": "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/overview/",
+    "toc_urls": [
+     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/overview/",
+     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/stateful-stream-processing/",
+     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/",
+     "https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/flink-architecture/",
+     "https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/fault_tolerance/",
+     "https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/savepoints/",
+     "https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/monitoring/back_pressure/"
+    ],
+    "why": "节点现有英文学习资源。Flink 官方文档的 Concepts、Learn Flink 与 Operations 三处小节标题正好按“有状态流处理 / 时间语义 / 集群架构 / 快照容错 / 保存点 / 背压”组织，和节点的消息语义、事件时间、状态、重放、背压、端到端保证一一对应。"
    }
   ],
   "outline": [
@@ -16159,6 +15801,266 @@
     "zh": "存储模型与压缩",
     "fill": "补“存储布局”的另一半：N-ary/分解存储模型（行存与列存）与各类压缩编码",
     "items": []
+   },
+   {
+    "src": "C",
+    "ref": "5",
+    "title": "Data Preparation",
+    "zh": "数据准备",
+    "items": [
+     {
+      "ref": "",
+      "title": "Structural",
+      "zh": "结构问题"
+     },
+     {
+      "ref": "",
+      "title": "Granularity",
+      "zh": "粒度问题"
+     },
+     {
+      "ref": "",
+      "title": "Outliers",
+      "zh": "异常值"
+     },
+     {
+      "ref": "",
+      "title": "Imputation and Entity Resolution",
+      "zh": "缺失值填补与实体消解"
+     }
+    ],
+    "fill": "来自 D.2.1 的导览图"
+   },
+   {
+    "src": "C",
+    "ref": "10",
+    "title": "Data Operations and Pipelines",
+    "zh": "数据运维与数据管线",
+    "items": [
+     {
+      "ref": "",
+      "title": "Data Arrival",
+      "zh": "数据到达（push / pull）"
+     },
+     {
+      "ref": "",
+      "title": "Actions Upon Data Arrival",
+      "zh": "数据到达后要做的处理"
+     },
+     {
+      "ref": "",
+      "title": "Automating the Work",
+      "zh": "自动化执行"
+     },
+     {
+      "ref": "",
+      "title": "Maintaining Quality and Handling Exceptions",
+      "zh": "维持质量与处理异常"
+     },
+     {
+      "ref": "",
+      "title": "dbt",
+      "zh": "dbt"
+     },
+     {
+      "ref": "",
+      "title": "Models in dbt",
+      "zh": "dbt 中的模型"
+     },
+     {
+      "ref": "",
+      "title": "Types of Model Materilizations",
+      "zh": "模型的物化方式"
+     },
+     {
+      "ref": "",
+      "title": "Key Features of Models",
+      "zh": "模型的关键特性（source 与 ref）"
+     }
+    ],
+    "fill": "来自 D.2.1 的导览图"
+   },
+   {
+    "src": "D",
+    "ref": "creating-a-task",
+    "title": "Creating a task",
+    "zh": "创建任务：幂等重试与结果一致性",
+    "fill": "幂等",
+    "items": []
+   },
+   {
+    "src": "E",
+    "ref": "1",
+    "title": "Stateful Stream Processing",
+    "zh": "有状态流处理",
+    "items": [
+     {
+      "title": "What is State?",
+      "zh": "什么是状态"
+     },
+     {
+      "title": "Keyed State",
+      "zh": "键控状态"
+     },
+     {
+      "title": "State Persistence",
+      "zh": "状态持久化"
+     },
+     {
+      "title": "Checkpointing",
+      "zh": "检查点"
+     },
+     {
+      "title": "Barriers",
+      "zh": "栅栏"
+     },
+     {
+      "title": "Recovery",
+      "zh": "恢复"
+     },
+     {
+      "title": "State Backends",
+      "zh": "状态后端"
+     },
+     {
+      "title": "Savepoints",
+      "zh": "保存点"
+     },
+     {
+      "title": "Exactly Once vs. At Least Once",
+      "zh": "精确一次与至少一次"
+     }
+    ],
+    "fill": "来自 C.4.4 的导览图"
+   },
+   {
+    "src": "E",
+    "ref": "2",
+    "title": "Timely Stream Processing",
+    "zh": "及时流处理",
+    "items": [
+     {
+      "title": "Notions of Time: Event Time and Processing Time",
+      "zh": "时间概念：事件时间与处理时间"
+     },
+     {
+      "title": "Event Time and Watermarks",
+      "zh": "事件时间与水位线"
+     },
+     {
+      "title": "Watermarks in Parallel Streams",
+      "zh": "并行流中的水位线"
+     },
+     {
+      "title": "Lateness",
+      "zh": "迟到数据"
+     },
+     {
+      "title": "Windowing",
+      "zh": "窗口"
+     }
+    ],
+    "fill": "来自 C.4.4 的导览图"
+   },
+   {
+    "src": "E",
+    "ref": "3",
+    "title": "Flink Architecture",
+    "zh": "Flink 架构",
+    "items": [
+     {
+      "title": "Anatomy of a Flink Cluster",
+      "zh": "Flink 集群剖析"
+     },
+     {
+      "title": "JobManager",
+      "zh": "JobManager"
+     },
+     {
+      "title": "TaskManagers",
+      "zh": "TaskManager"
+     },
+     {
+      "title": "Tasks and Operator Chains",
+      "zh": "任务与算子链"
+     },
+     {
+      "title": "Task Slots and Resources",
+      "zh": "任务槽与资源"
+     }
+    ],
+    "fill": "来自 C.4.4 的导览图"
+   },
+   {
+    "src": "E",
+    "ref": "4",
+    "title": "Fault Tolerance via State Snapshots",
+    "zh": "基于状态快照的容错",
+    "items": [
+     {
+      "title": "State Snapshots",
+      "zh": "状态快照"
+     },
+     {
+      "title": "How does State Snapshotting Work?",
+      "zh": "状态快照如何工作"
+     },
+     {
+      "title": "Exactly Once Guarantees",
+      "zh": "精确一次保证"
+     },
+     {
+      "title": "Exactly Once End-to-end",
+      "zh": "端到端精确一次"
+     }
+    ],
+    "fill": "来自 C.4.4 的导览图"
+   },
+   {
+    "src": "E",
+    "ref": "5",
+    "title": "Savepoints",
+    "zh": "保存点",
+    "items": [
+     {
+      "title": "What is a Savepoint?",
+      "zh": "什么是保存点"
+     },
+     {
+      "title": "Triggering Savepoints",
+      "zh": "触发保存点"
+     },
+     {
+      "title": "Resuming from Savepoints",
+      "zh": "从保存点恢复"
+     },
+     {
+      "title": "Disposing Savepoints",
+      "zh": "释放保存点"
+     }
+    ],
+    "fill": "来自 C.4.4 的导览图"
+   },
+   {
+    "src": "E",
+    "ref": "6",
+    "title": "Monitoring Back Pressure",
+    "zh": "监控背压",
+    "items": [
+     {
+      "title": "Back Pressure",
+      "zh": "背压"
+     },
+     {
+      "title": "Task performance metrics",
+      "zh": "任务性能指标"
+     },
+     {
+      "title": "Back Pressure Status",
+      "zh": "背压状态"
+     }
+    ],
+    "fill": "来自 C.4.4 的导览图"
    }
   ],
   "coverage": [
@@ -16199,9 +16101,97 @@
      "A:#1"
     ],
     "note": "模块 3 的 Partitioning and clustering for performance 与 Cost optimization 讲数仓里“性能 vs 扫描量/费用”的权衡；模块 5 把 Spark 跑在 Dataproc 上也涉及集群资源，但课程表没有逐条列资源调度参数。"
+   },
+   {
+    "topic": "采集",
+    "refs": [
+     "C:10"
+    ],
+    "note": "第 10 章 Data Arrival 一节把数据到达分成 push（文件落到 staging 目录、数仓表被填充、API/pub-sub 推送）与 pull（调度软件拉取、事件触发）两类，并列出到达后要做的动作（跑 DQ 测试、装载、转换、记元数据/血缘、必要时通知人）。"
+   },
+   {
+    "topic": "清洗",
+    "refs": [
+     "C:5"
+    ],
+    "note": "第 5 章 Data Preparation：结构问题（unboxing、记录/字典/union/自然语言等形态）、粒度问题、异常值处理、缺失值填补与实体消解。"
+   },
+   {
+    "topic": "转换",
+    "refs": [
+     "C:10"
+    ],
+    "note": "第 10 章用 dbt 演示 ELT 里的 T：Models in dbt（SQL 模型）、模型的物化方式（view / table / incremental）、source 与 ref 组成依赖链。"
+   },
+   {
+    "topic": "调度",
+    "refs": [
+     "C:10"
+    ],
+    "note": "第 10 章 Automating the Work 一节：用 workflow 系统管流程、dataflow 系统管数据流动、消息/队列/事件系统在系统之间可靠传递，并说明实践中常常组合使用；Data Arrival 的 pull 也提到“via scheduling software”。本节点没有更细的调度器（cron/DAG/依赖管理）专章。"
+   },
+   {
+    "topic": "幂等",
+    "refs": [
+     "D:creating-a-task"
+    ],
+    "note": "Airflow官方Best Practices的Creating a task直接说明任务重跑应产生相同结果，并提出UPSERT、固定分区和避免用当前时间做关键计算。它有实际对应内容，即使标题未使用idempotent一词。"
+   },
+   {
+    "topic": "数据验证",
+    "refs": [
+     "C:10"
+    ],
+    "note": "第 10 章 Maintaining Quality and Handling Exceptions：数据中心的“测试”分逻辑类（模式、约束）与统计类（异常值、分布漂移），并用 dbt 的内置测试（唯一性、空值、可接受取值、关系）与返回 0 行即通过的自定义 SQL 测试落地。"
+   },
+   {
+    "topic": "管线可靠性",
+    "refs": [
+     "C:10"
+    ],
+    "note": "同一章里：workflow/dataflow/messaging 三类系统组合来保证可靠传递，数据到达后要记血缘、出错要能转人工审批（beeper message），再用 DQ 测试和 DevOps 式的 test-driven 做法守住质量。"
+   },
+   {
+    "topic": "消息语义",
+    "refs": [
+     "E:1",
+     "E:4"
+    ]
+   },
+   {
+    "topic": "事件时间",
+    "refs": [
+     "E:2"
+    ]
+   },
+   {
+    "topic": "状态",
+    "refs": [
+     "E:1",
+     "E:3"
+    ]
+   },
+   {
+    "topic": "重放",
+    "refs": [
+     "E:5",
+     "E:1"
+    ]
+   },
+   {
+    "topic": "背压",
+    "refs": [
+     "E:6"
+    ]
+   },
+   {
+    "topic": "端到端保证",
+    "refs": [
+     "E:4"
+    ]
    }
   ],
-  "omitted": "A（Zoomcamp）未收：模块 1（Docker/Postgres/Terraform 环境搭建）、模块 2（Kestra 编排、schedule/retry/backfill，属 D.2.1 管线调度）、dlt 摄取工作坊（属采集环节）；Final Project 只作为收尾分支保留，没有子条目。B（CMU 15-445 schedule）只取第 5、6 两讲，其余讲次（索引、查询执行、并发控制、恢复等）属 D.1.2 数据库内核节点。"
+  "omitted": "A（Zoomcamp）未收：模块 1（Docker/Postgres/Terraform 环境搭建）、模块 2（Kestra 编排、schedule/retry/backfill，属 D.2.1 管线调度）、dlt 摄取工作坊（属采集环节）；Final Project 只作为收尾分支保留，没有子条目。B（CMU 15-445 schedule）只取第 5、6 两讲，其余讲次（索引、查询执行、并发控制、恢复等）属 D.1.2 数据库内核节点。；A（Data 101 讲义）只收第 5 章 Data Preparation 与第 10 章 Data Operations and Pipelines 两章；其余章（1 SQL、2 Relational Algebra、3 Query Performance、4 Data Modeling、6 Semistructured Data、7 Sampling、8 Transactions、9 Parallel/Distributed Computing、11 Business Intelligence、12 Graph Databases、Spreadsheets、Appendix）属 SQL/模型/并行/BI/图数据库等其它节点主题，未收。第 10 章内部的“dbt in a High Level”、物化类型与 source/ref 的逐条代码示例属实现细节，未拆成独立条目；第 5 章导航里 “Numerical, Granularity” 是同一导航项里并列的两个主题，我只收了 Granularity（Numerical 一项在讲义里没有独立页面标题）。；A 只收了 Concepts 下的“有状态流处理 / 及时流处理 / 集群架构”，Learn Flink 的“Fault Tolerance”，以及 Savepoints 与 Monitoring Back Pressure 两个运维页；未收 Concepts 里的 Streaming SQL & Table Concepts 分支（Dynamic Tables、Time Attributes、Versioned Tables、Temporal Table Function、Determinism in Continuous Queries）、Getting Started 下的教程、Flink SQL / Table API / Connectors / Deployment / Internals 等目录，这些是 SQL 语义、连接器配置和部署话题，与节点的六个知识点关系较远。"
  },
  "D.2.3": {
   "sources": [
@@ -16688,6 +16678,31 @@
      "https://learningds.org/intro.html"
     ],
     "why": "补 PDSH 缺的两头：①“问题定义”与“工作流”——第 1 章数据科学生命周期、第 2 章 Questions and Data Scope（目标总体/访问框/样本、测量与精度）；②“数据获取”——第 8 章 Wrangling Files（数据源、文件格式、编码）、第 9 章 Quality Checks 与缺失值处理、第 14 章 Data Exchange（JSON/HTTP/REST 取数）。这是 Berkeley Data 100 的官方在线教材，面向刚入门的数据科学课程。"
+   },
+   {
+    "key": "C",
+    "kind": "docs",
+    "title": "scikit-learn user guide: 3.4 Metrics and scoring + 12 Common pitfalls and recommended practices",
+    "by": "scikit-learn developers",
+    "year": 2025,
+    "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+    "toc_urls": [
+     "https://scikit-learn.org/stable/modules/model_evaluation.html",
+     "https://scikit-learn.org/stable/common_pitfalls.html"
+    ],
+    "why": "补两处 A 缺的：①“指标”——A 全书没有 accuracy/precision/recall/F1/ROC、回归误差这类评估指标的专门章节，scikit-learn 3.4 节按分类/回归/排序分组给出指标定义与选用建议；②“泄漏”——12.2 节专讲 data leakage（含预处理阶段的泄漏）与如何避免，12.3 节讲随机性控制与可复现的交叉验证结果。"
+   },
+   {
+    "key": "D",
+    "kind": "docs",
+    "title": "Experiment Management — Data Version Control (DVC) user guide",
+    "by": "Iterative / DVC project",
+    "year": 2025,
+    "url": "https://dvc.org/doc/user-guide/experiment-management",
+    "toc_urls": [
+     "https://dvc.org/doc/user-guide/experiment-management"
+    ],
+    "why": "补“实验记录”：A 与 B 都是方法侧材料，没有讲怎么把每次实验的参数、指标、产物和版本记下来；实验记录是工程实践，按“工程实践类用权威官方文档”的规则，用数据/实验版本管理的事实标准 DVC 的官方用户指南（实验对象、保存实验、指标/曲线/参数、模型与数据集的记录方式）。"
    }
   ],
   "outline": [
@@ -16976,6 +16991,11 @@
       "ref": "2.5",
       "title": "Accuracy",
       "zh": "准确度"
+     },
+     {
+      "ref": "2.4",
+      "title": "Measuring Natural Phenomena",
+      "zh": "测量自然现象"
      }
     ]
    },
@@ -17065,6 +17085,264 @@
       "zh": "REST"
      }
     ]
+   },
+   {
+    "src": "B",
+    "ref": "3",
+    "title": "Simulation and Data Design",
+    "zh": "模拟与数据设计",
+    "items": [
+     {
+      "ref": "3.1",
+      "title": "The Urn Model",
+      "zh": "罐子模型"
+     },
+     {
+      "ref": "3.2",
+      "title": "Example: Simulating Election Poll Bias and Variance",
+      "zh": "实例：模拟民调偏差与方差"
+     },
+     {
+      "ref": "3.3",
+      "title": "Example: Simulating a Randomized Trial for a Vaccine",
+      "zh": "实例：模拟疫苗随机试验"
+     },
+     {
+      "ref": "3.4",
+      "title": "Example: Measuring Air Quality",
+      "zh": "实例：测量空气质量"
+     }
+    ],
+    "fill": "来自 D.3.3 的导览图"
+   },
+   {
+    "src": "B",
+    "ref": "16",
+    "title": "Model Selection",
+    "zh": "模型选择",
+    "items": [
+     {
+      "ref": "16.1",
+      "title": "Overfitting",
+      "zh": "过拟合"
+     },
+     {
+      "ref": "16.2",
+      "title": "Train-Test Split",
+      "zh": "训练集-测试集划分"
+     },
+     {
+      "ref": "16.3",
+      "title": "Cross-Validation",
+      "zh": "交叉验证"
+     },
+     {
+      "ref": "16.4",
+      "title": "Regularization",
+      "zh": "正则化"
+     },
+     {
+      "ref": "16.6",
+      "title": "Model Bias and Variance",
+      "zh": "模型的偏差与方差"
+     }
+    ],
+    "fill": "来自 D.3.3 的导览图"
+   },
+   {
+    "src": "B",
+    "ref": "17",
+    "title": "Theory for Inference and Prediction",
+    "zh": "推断与预测的理论",
+    "items": [
+     {
+      "ref": "17.1",
+      "title": "Distributions: Population, Empirical, Sampling",
+      "zh": "分布：总体分布、经验分布与抽样分布"
+     },
+     {
+      "ref": "17.2",
+      "title": "Basics of Hypothesis Testing",
+      "zh": "假设检验基础"
+     },
+     {
+      "ref": "17.3",
+      "title": "Bootstrapping for Inference",
+      "zh": "用自助法做推断"
+     },
+     {
+      "ref": "17.4",
+      "title": "Basics of Confidence Intervals",
+      "zh": "置信区间基础"
+     },
+     {
+      "ref": "17.5",
+      "title": "Basics of Prediction Intervals",
+      "zh": "预测区间基础"
+     }
+    ],
+    "fill": "来自 D.3.3 的导览图"
+   },
+   {
+    "src": "B",
+    "ref": "19",
+    "title": "Classification",
+    "zh": "分类",
+    "items": [
+     {
+      "ref": "19.2",
+      "title": "Modeling and Classification",
+      "zh": "建模与分类"
+     },
+     {
+      "ref": "19.3",
+      "title": "Modeling Proportions (and Probabilities)",
+      "zh": "对比例（与概率）建模"
+     },
+     {
+      "ref": "19.5",
+      "title": "From Probabilities to Classification",
+      "zh": "从概率到分类判定"
+     }
+    ],
+    "fill": "来自 D.3.3 的导览图"
+   },
+   {
+    "src": "C",
+    "ref": "3.4",
+    "title": "Metrics and scoring: quantifying the quality of predictions",
+    "zh": "指标与评分：量化预测质量",
+    "fill": "补“指标”：A 没有评估指标的专门章节，这里补指标选用、分类指标（准确率、混淆矩阵、精确率/召回率/F 值、ROC）与回归指标（R²、MAE、MSE）",
+    "items": [
+     {
+      "ref": "3.4.1",
+      "title": "Which scoring function should I use?",
+      "zh": "该用哪种评分函数"
+     },
+     {
+      "ref": "3.4.4",
+      "title": "Classification metrics",
+      "zh": "分类指标"
+     },
+     {
+      "ref": "3.4.4.2",
+      "title": "Accuracy score",
+      "zh": "准确率"
+     },
+     {
+      "ref": "3.4.4.6",
+      "title": "Confusion matrix",
+      "zh": "混淆矩阵"
+     },
+     {
+      "ref": "3.4.4.9",
+      "title": "Precision, recall and F-measures",
+      "zh": "精确率、召回率与 F 值"
+     },
+     {
+      "ref": "3.4.4.15",
+      "title": "Receiver operating characteristic (ROC)",
+      "zh": "受试者工作特征曲线（ROC）"
+     },
+     {
+      "ref": "3.4.6",
+      "title": "Regression metrics",
+      "zh": "回归指标"
+     },
+     {
+      "ref": "3.4.6.1",
+      "title": "R² score, the coefficient of determination",
+      "zh": "R² 决定系数"
+     },
+     {
+      "ref": "3.4.6.2",
+      "title": "Mean absolute error",
+      "zh": "平均绝对误差"
+     },
+     {
+      "ref": "3.4.6.3",
+      "title": "Mean squared error",
+      "zh": "均方误差"
+     }
+    ]
+   },
+   {
+    "src": "C",
+    "ref": "12",
+    "title": "Common pitfalls and recommended practices",
+    "zh": "常见陷阱与推荐做法",
+    "fill": "补“泄漏”与可复现的随机性控制：A 只讲训练集/测试集划分与交叉验证的正确用法，没有讲数据泄漏（预处理在划分前做、目标泄漏）这一常见错误",
+    "items": [
+     {
+      "ref": "12.1",
+      "title": "Inconsistent preprocessing",
+      "zh": "预处理不一致"
+     },
+     {
+      "ref": "12.2",
+      "title": "Data leakage",
+      "zh": "数据泄漏"
+     },
+     {
+      "ref": "12.2.1",
+      "title": "How to avoid data leakage",
+      "zh": "如何避免数据泄漏"
+     },
+     {
+      "ref": "12.2.2",
+      "title": "Data leakage during pre-processing",
+      "zh": "预处理阶段的数据泄漏"
+     },
+     {
+      "ref": "12.3",
+      "title": "Controlling randomness",
+      "zh": "控制随机性"
+     },
+     {
+      "ref": "12.3.3.1",
+      "title": "Getting reproducible results across multiple executions",
+      "zh": "多次运行得到可复现的结果"
+     },
+     {
+      "ref": "12.3.3.2",
+      "title": "Robustness of cross-validation results",
+      "zh": "交叉验证结果的稳健性"
+     }
+    ]
+   },
+   {
+    "src": "D",
+    "ref": "",
+    "title": "Experiment Management",
+    "zh": "实验管理",
+    "fill": "补“实验记录”：怎么把一次实验的参数、指标、曲线、模型与数据版本记录下来并可回放（DVC 的实验对象、保存实验、指标/曲线/参数、模型与数据集）",
+    "items": [
+     {
+      "ref": "",
+      "title": "DVC Experiments Overview",
+      "zh": "DVC 实验概览"
+     },
+     {
+      "ref": "",
+      "title": "How does DVC track experiments?",
+      "zh": "DVC 如何记录实验"
+     },
+     {
+      "ref": "",
+      "title": "Save experiments",
+      "zh": "保存实验"
+     },
+     {
+      "ref": "",
+      "title": "Metrics, plots, parameters",
+      "zh": "指标、曲线与参数"
+     },
+     {
+      "ref": "",
+      "title": "Models and datasets",
+      "zh": "模型与数据集"
+     }
+    ]
    }
   ],
   "coverage": [
@@ -17113,7 +17391,7 @@
      "A:#2",
      "A:#5"
     ],
-    "note": "A 的 NumPy 章（数据类型、数组基础、通用函数、聚合、广播、布尔掩码、花式索引、排序、结构化数组）是统计计算的底座，scikit-learn 章讲模型验证、特征工程、PCA、k-means 这类统计/机器学习包用法；scipy.stats、statsmodels 这两类纯统计包 PDSH 没有专章，推断统计部分放在节点 D.3.3。"
+    "note": "A 覆盖 NumPy 与 scikit-learn 的用法；推断与评估读 B 的相关章，非一个统计包的完整 API 课。"
    },
    {
     "topic": "工作流",
@@ -17122,9 +17400,73 @@
      "B:#1"
     ],
     "note": "A 第 1 章的魔术命令、输入输出历史、性能分析与计时是 notebook 内的操作流；项目级工作流（生命周期、每个阶段产出什么）只有 B 第 1 章讲；工程化的管道/调度/环境复现两本书都没有专章。"
+   },
+   {
+    "topic": "抽样偏差",
+    "refs": [
+     "B:2.2",
+     "B:2.5",
+     "B:3.1",
+     "B:3.2"
+    ],
+    "note": "B 第 2 章讨论总体、访问框、样本和精度，第 3 章用模拟说明偏差与方差。"
+   },
+   {
+    "topic": "泄漏",
+    "refs": [
+     "C:12.2",
+     "C:12.2.1",
+     "C:12.2.2",
+     "B:16.1"
+    ],
+    "note": "C 第 12.2 节专讲数据泄漏，B 第 16 章讲训练与测试划分。"
+   },
+   {
+    "topic": "指标",
+    "refs": [
+     "C:3.4.1",
+     "C:3.4.4",
+     "C:3.4.4.2",
+     "C:3.4.4.6",
+     "C:3.4.4.9",
+     "C:3.4.4.15",
+     "C:3.4.6",
+     "C:3.4.6.1",
+     "C:3.4.6.2",
+     "C:3.4.6.3"
+    ],
+    "note": "C 第 3.4 节给分类、回归指标与选用原则。"
+   },
+   {
+    "topic": "交叉验证",
+    "refs": [
+     "B:16.2",
+     "B:16.3",
+     "B:16.6",
+     "C:12.3.3.2"
+    ],
+    "note": "B 第 16 章讲交叉验证和偏差方差，C 补随机性及结果稳健性。"
+   },
+   {
+    "topic": "实验记录",
+    "refs": [
+     "D:#1"
+    ],
+    "note": "D 用实验对象与参数、指标、模型和数据版本介绍可追溯的实验记录。"
+   },
+   {
+    "topic": "不确定性",
+    "refs": [
+     "B:17.1",
+     "B:17.2",
+     "B:17.3",
+     "B:17.4",
+     "B:17.5"
+    ],
+    "note": "B 第 17 章覆盖抽样分布、自助法、置信区间与预测区间。"
    }
   ],
-  "omitted": "A（PDSH）第 1 章未收 Keyboard Shortcuts in the IPython Shell、IPython and Shell Commands、More IPython Resources；第 2 章整章收；第 3 章未收 Further Resources；第 4 章只收与探索分析直接相关的 8 节，未收 Text and Annotation、Customizing Ticks、Customizing Colorbars、Customizing Matplotlib: Configurations and Stylesheets、Three-Dimensional Plotting in Matplotlib、Geographic Data with Basemap、Further Resources；第 5 章只收与“统计包/模型验证”相关的 6 节，未收朴素贝叶斯、线性回归、SVM、决策树、流形学习、高斯混合、核密度估计、人脸检测流水线、Further Machine Learning Resources（这些属于机器学习节点的内容）。另有 Preface、Appendix: Figure Code 未收。B（Learning Data Science）未收第 3–7、10–13、15–21 章（模拟与实验设计、汇总统计建模、pandas/SQL、探索分析与可视化、线性模型、模型选择、推断理论、分类、案例研究），因为它们分别属于节点的其它兄弟（D.3.3 评估与实验、M.6.x 统计、A.x 机器学习），与“导论与工具箱”这条线关系较远。"
+  "omitted": "A（PDSH）第 1 章未收 Keyboard Shortcuts in the IPython Shell、IPython and Shell Commands、More IPython Resources；第 2 章整章收；第 3 章未收 Further Resources；第 4 章只收与探索分析直接相关的 8 节，未收 Text and Annotation、Customizing Ticks、Customizing Colorbars、Customizing Matplotlib: Configurations and Stylesheets、Three-Dimensional Plotting in Matplotlib、Geographic Data with Basemap、Further Resources；第 5 章只收与“统计包/模型验证”相关的 6 节，未收朴素贝叶斯、线性回归、SVM、决策树、流形学习、高斯混合、核密度估计、人脸检测流水线、Further Machine Learning Resources（这些属于机器学习节点的内容）。另有 Preface、Appendix: Figure Code 未收。B（Learning Data Science）未收第 3–7、10–13、15–21 章（模拟与实验设计、汇总统计建模、pandas/SQL、探索分析与可视化、线性模型、模型选择、推断理论、分类、案例研究），因为它们分别属于节点的其它兄弟（D.3.3 评估与实验、M.6.x 统计、A.x 机器学习），与“导论与工具箱”这条线关系较远。；A（Learning Data Science）未收：第 1 章 The Data Science Lifecycle（已在 D.3.1 收录）、第 4–8 章（常量模型与损失、公交车案例、pandas、SQL、文件整理）、第 10–12 章（探索性分析、可视化、空气质量案例）、第 13–15 章（文本、数据交换、线性模型）、第 18 章驴子案例、第 20 章数值优化、第 21 章假新闻案例，以及概率与向量空间附录——它们要么属于兄弟节点（D.3.1 工具箱、M.6.x 统计、A.x 机器学习），要么是案例章节；9.1 的案例引导与 9.5–9.7 也未收。B 只收 3.4 与 12 两节，3.4 内部的 3.4.2/3.4.3（scoring API 与 make_scorer 用法）、3.4.5 多标签排序指标、3.4.7 聚类指标、3.4.8 dummy 估计器与 12.3.1/.2 的 RandomState 细节未收（属实现细节）。C 只收实验管理页的正文小节，页面上下的大量 CLI 命令清单（dvc exp run/save/list…）与站点导航不算目录条目。"
  },
  "D.3.2": {
   "sources": [
@@ -17509,426 +17851,6 @@
    }
   ],
   "omitted": "A（MMDS）未收：第 2 章 MapReduce 与新型软件栈（分布式计算平台，属 D.2.x 数据工程）、第 5 章 Link Analysis（PageRank/HITS，属检索排序）、第 8 章 Advertising on the Web（计算广告）、第 9 章 Recommendation Systems（推荐，已在 D.2.3 收录）、第 12 章 Large-Scale Machine Learning（SVM/梯度下降/在线学习，属机器学习），第 13 章 Neural Nets and Deep Learning 不在所抄的目录 PDF（第 2 版）里，且属深度学习；第 3 章的 3.2/3.6/3.7/3.9 未收（shingling 细节与其它 LSH 族，已在 D.2.3 收录）；第 10 章的 10.8 邻域性质（可达性与传递闭包）与 10.9/10.10 未收；第 11 章的 11.1 只作背景，未逐节展开；各章 Summary/References/Exercises 与 Preface 不算目录条目。B（scikit-learn 2.7）只收该节本身，页面上下的官方教程导航栏（1.x/2.x 其它节）不是目录条目。"
- },
- "D.3.3": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "book",
-    "title": "Learning Data Science",
-    "by": "Sam Lau, Joey Gonzalez, Deb Nolan (O'Reilly / Berkeley Data 100)",
-    "year": 2023,
-    "url": "https://learningds.org/intro.html",
-    "toc_urls": [
-     "https://learningds.org/intro.html"
-    ],
-    "why": "节点现有英文资源本身：Berkeley Data 100 的官方在线教材，目录里抽样偏差（Questions and Data Scope、Simulation and Data Design 的民调偏差模拟）、交叉验证与过拟合（Model Selection）、不确定性（置信区间/预测区间/自助法）都有独立小节，正好是评估与实验这条主线。"
-   },
-   {
-    "key": "B",
-    "kind": "docs",
-    "title": "scikit-learn user guide: 3.4 Metrics and scoring + 12 Common pitfalls and recommended practices",
-    "by": "scikit-learn developers",
-    "year": 2025,
-    "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
-    "toc_urls": [
-     "https://scikit-learn.org/stable/modules/model_evaluation.html",
-     "https://scikit-learn.org/stable/common_pitfalls.html"
-    ],
-    "why": "补两处 A 缺的：①“指标”——A 全书没有 accuracy/precision/recall/F1/ROC、回归误差这类评估指标的专门章节，scikit-learn 3.4 节按分类/回归/排序分组给出指标定义与选用建议；②“泄漏”——12.2 节专讲 data leakage（含预处理阶段的泄漏）与如何避免，12.3 节讲随机性控制与可复现的交叉验证结果。"
-   },
-   {
-    "key": "C",
-    "kind": "docs",
-    "title": "Experiment Management — Data Version Control (DVC) user guide",
-    "by": "Iterative / DVC project",
-    "year": 2025,
-    "url": "https://dvc.org/doc/user-guide/experiment-management",
-    "toc_urls": [
-     "https://dvc.org/doc/user-guide/experiment-management"
-    ],
-    "why": "补“实验记录”：A 与 B 都是方法侧材料，没有讲怎么把每次实验的参数、指标、产物和版本记下来；实验记录是工程实践，按“工程实践类用权威官方文档”的规则，用数据/实验版本管理的事实标准 DVC 的官方用户指南（实验对象、保存实验、指标/曲线/参数、模型与数据集的记录方式）。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "2",
-    "title": "Questions and Data Scope",
-    "zh": "问题与数据范围",
-    "items": [
-     {
-      "ref": "2.1",
-      "title": "Big Data and New Opportunities",
-      "zh": "大数据与新机会"
-     },
-     {
-      "ref": "2.2",
-      "title": "Target Population, Access Frame, and Sample",
-      "zh": "目标总体、访问框与样本"
-     },
-     {
-      "ref": "2.3",
-      "title": "Instruments and Protocols",
-      "zh": "测量工具与协议"
-     },
-     {
-      "ref": "2.4",
-      "title": "Measuring Natural Phenomena",
-      "zh": "测量自然现象"
-     },
-     {
-      "ref": "2.5",
-      "title": "Accuracy",
-      "zh": "准确度"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "3",
-    "title": "Simulation and Data Design",
-    "zh": "模拟与数据设计",
-    "items": [
-     {
-      "ref": "3.1",
-      "title": "The Urn Model",
-      "zh": "罐子模型"
-     },
-     {
-      "ref": "3.2",
-      "title": "Example: Simulating Election Poll Bias and Variance",
-      "zh": "实例：模拟民调偏差与方差"
-     },
-     {
-      "ref": "3.3",
-      "title": "Example: Simulating a Randomized Trial for a Vaccine",
-      "zh": "实例：模拟疫苗随机试验"
-     },
-     {
-      "ref": "3.4",
-      "title": "Example: Measuring Air Quality",
-      "zh": "实例：测量空气质量"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "9",
-    "title": "Wrangling Dataframes",
-    "zh": "数据框层面的数据整理",
-    "items": [
-     {
-      "ref": "9.2",
-      "title": "Quality Checks",
-      "zh": "质量检查"
-     },
-     {
-      "ref": "9.3",
-      "title": "Missing Values and Records",
-      "zh": "缺失值与缺失记录"
-     },
-     {
-      "ref": "9.4",
-      "title": "Transformations and Timestamps",
-      "zh": "变换与时间戳"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "16",
-    "title": "Model Selection",
-    "zh": "模型选择",
-    "items": [
-     {
-      "ref": "16.1",
-      "title": "Overfitting",
-      "zh": "过拟合"
-     },
-     {
-      "ref": "16.2",
-      "title": "Train-Test Split",
-      "zh": "训练集-测试集划分"
-     },
-     {
-      "ref": "16.3",
-      "title": "Cross-Validation",
-      "zh": "交叉验证"
-     },
-     {
-      "ref": "16.4",
-      "title": "Regularization",
-      "zh": "正则化"
-     },
-     {
-      "ref": "16.6",
-      "title": "Model Bias and Variance",
-      "zh": "模型的偏差与方差"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "17",
-    "title": "Theory for Inference and Prediction",
-    "zh": "推断与预测的理论",
-    "items": [
-     {
-      "ref": "17.1",
-      "title": "Distributions: Population, Empirical, Sampling",
-      "zh": "分布：总体分布、经验分布与抽样分布"
-     },
-     {
-      "ref": "17.2",
-      "title": "Basics of Hypothesis Testing",
-      "zh": "假设检验基础"
-     },
-     {
-      "ref": "17.3",
-      "title": "Bootstrapping for Inference",
-      "zh": "用自助法做推断"
-     },
-     {
-      "ref": "17.4",
-      "title": "Basics of Confidence Intervals",
-      "zh": "置信区间基础"
-     },
-     {
-      "ref": "17.5",
-      "title": "Basics of Prediction Intervals",
-      "zh": "预测区间基础"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "19",
-    "title": "Classification",
-    "zh": "分类",
-    "items": [
-     {
-      "ref": "19.2",
-      "title": "Modeling and Classification",
-      "zh": "建模与分类"
-     },
-     {
-      "ref": "19.3",
-      "title": "Modeling Proportions (and Probabilities)",
-      "zh": "对比例（与概率）建模"
-     },
-     {
-      "ref": "19.5",
-      "title": "From Probabilities to Classification",
-      "zh": "从概率到分类判定"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "3.4",
-    "title": "Metrics and scoring: quantifying the quality of predictions",
-    "zh": "指标与评分：量化预测质量",
-    "fill": "补“指标”：A 没有评估指标的专门章节，这里补指标选用、分类指标（准确率、混淆矩阵、精确率/召回率/F 值、ROC）与回归指标（R²、MAE、MSE）",
-    "items": [
-     {
-      "ref": "3.4.1",
-      "title": "Which scoring function should I use?",
-      "zh": "该用哪种评分函数"
-     },
-     {
-      "ref": "3.4.4",
-      "title": "Classification metrics",
-      "zh": "分类指标"
-     },
-     {
-      "ref": "3.4.4.2",
-      "title": "Accuracy score",
-      "zh": "准确率"
-     },
-     {
-      "ref": "3.4.4.6",
-      "title": "Confusion matrix",
-      "zh": "混淆矩阵"
-     },
-     {
-      "ref": "3.4.4.9",
-      "title": "Precision, recall and F-measures",
-      "zh": "精确率、召回率与 F 值"
-     },
-     {
-      "ref": "3.4.4.15",
-      "title": "Receiver operating characteristic (ROC)",
-      "zh": "受试者工作特征曲线（ROC）"
-     },
-     {
-      "ref": "3.4.6",
-      "title": "Regression metrics",
-      "zh": "回归指标"
-     },
-     {
-      "ref": "3.4.6.1",
-      "title": "R² score, the coefficient of determination",
-      "zh": "R² 决定系数"
-     },
-     {
-      "ref": "3.4.6.2",
-      "title": "Mean absolute error",
-      "zh": "平均绝对误差"
-     },
-     {
-      "ref": "3.4.6.3",
-      "title": "Mean squared error",
-      "zh": "均方误差"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "12",
-    "title": "Common pitfalls and recommended practices",
-    "zh": "常见陷阱与推荐做法",
-    "fill": "补“泄漏”与可复现的随机性控制：A 只讲训练集/测试集划分与交叉验证的正确用法，没有讲数据泄漏（预处理在划分前做、目标泄漏）这一常见错误",
-    "items": [
-     {
-      "ref": "12.1",
-      "title": "Inconsistent preprocessing",
-      "zh": "预处理不一致"
-     },
-     {
-      "ref": "12.2",
-      "title": "Data leakage",
-      "zh": "数据泄漏"
-     },
-     {
-      "ref": "12.2.1",
-      "title": "How to avoid data leakage",
-      "zh": "如何避免数据泄漏"
-     },
-     {
-      "ref": "12.2.2",
-      "title": "Data leakage during pre-processing",
-      "zh": "预处理阶段的数据泄漏"
-     },
-     {
-      "ref": "12.3",
-      "title": "Controlling randomness",
-      "zh": "控制随机性"
-     },
-     {
-      "ref": "12.3.3.1",
-      "title": "Getting reproducible results across multiple executions",
-      "zh": "多次运行得到可复现的结果"
-     },
-     {
-      "ref": "12.3.3.2",
-      "title": "Robustness of cross-validation results",
-      "zh": "交叉验证结果的稳健性"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "",
-    "title": "Experiment Management",
-    "zh": "实验管理",
-    "fill": "补“实验记录”：怎么把一次实验的参数、指标、曲线、模型与数据版本记录下来并可回放（DVC 的实验对象、保存实验、指标/曲线/参数、模型与数据集）",
-    "items": [
-     {
-      "ref": "",
-      "title": "DVC Experiments Overview",
-      "zh": "DVC 实验概览"
-     },
-     {
-      "ref": "",
-      "title": "How does DVC track experiments?",
-      "zh": "DVC 如何记录实验"
-     },
-     {
-      "ref": "",
-      "title": "Save experiments",
-      "zh": "保存实验"
-     },
-     {
-      "ref": "",
-      "title": "Metrics, plots, parameters",
-      "zh": "指标、曲线与参数"
-     },
-     {
-      "ref": "",
-      "title": "Models and datasets",
-      "zh": "模型与数据集"
-     }
-    ]
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "抽样偏差",
-    "refs": [
-     "A:2.2",
-     "A:2.5",
-     "A:3.1",
-     "A:3.2"
-    ],
-    "note": "A 的 2.2 把总体拆成目标总体/访问框/样本（选择偏差的来源），2.5 讲准确度；3.1 罐子模型与 3.2 用模拟展示民调偏差与方差，是抽样偏差最直观的演示。"
-   },
-   {
-    "topic": "泄漏",
-    "refs": [
-     "B:12.2",
-     "B:12.2.1",
-     "B:12.2.2",
-     "A:16.1"
-    ],
-    "note": "B 的 12.2 专讲 data leakage（12.2.1 如何避免、12.2.2 预处理阶段的泄漏）；A 只有 16.1 过拟合与 16.2 训练/测试划分作为背景，没有直接的泄漏小节。"
-   },
-   {
-    "topic": "指标",
-    "refs": [
-     "B:3.4.1",
-     "B:3.4.4",
-     "B:3.4.4.2",
-     "B:3.4.4.6",
-     "B:3.4.4.9",
-     "B:3.4.4.15",
-     "B:3.4.6",
-     "B:3.4.6.1",
-     "B:3.4.6.2",
-     "B:3.4.6.3"
-    ],
-    "note": "B 的 3.4 节：3.4.1 选指标的原则，3.4.4 分类指标族（准确率、混淆矩阵、精确率/召回率/F 值、ROC），3.4.6 回归指标族（R²、MAE、MSE）。A 只在 19.5 从概率到分类判定的地方提到阈值，没有指标专章。"
-   },
-   {
-    "topic": "交叉验证",
-    "refs": [
-     "A:16.2",
-     "A:16.3",
-     "A:16.6",
-     "B:12.3.3.2"
-    ],
-    "note": "A 的 16.2 训练/测试划分、16.3 交叉验证、16.6 偏差方差权衡讲方法本身；B 的 12.3.3.2 讲交叉验证结果的稳健性（重复随机划分带来的方差）。"
-   },
-   {
-    "topic": "实验记录",
-    "refs": [
-     "C:#1"
-    ],
-    "note": "A、B 都没有讲实验记录/实验管理（learningds 全书无实验跟踪小节，sklearn 文档只管模型评估）。C（DVC 官方用户指南的实验管理页）给出记录方式：实验作为 Git 引用、保存实验、用 YAML/JSON/CSV 记指标与参数、把模型与数据集纳入版本管理。"
-   },
-   {
-    "topic": "不确定性",
-    "refs": [
-     "A:17.1",
-     "A:17.2",
-     "A:17.3",
-     "A:17.4",
-     "A:17.5"
-    ],
-    "note": "A 第 17 章整章：总体/经验/抽样分布（17.1）、假设检验基础（17.2）、自助法（17.3）、置信区间（17.4）、预测区间（17.5）——分别是估计不确定性、显著性判断与预测不确定性的三种表达。"
-   }
-  ],
-  "omitted": "A（Learning Data Science）未收：第 1 章 The Data Science Lifecycle（已在 D.3.1 收录）、第 4–8 章（常量模型与损失、公交车案例、pandas、SQL、文件整理）、第 10–12 章（探索性分析、可视化、空气质量案例）、第 13–15 章（文本、数据交换、线性模型）、第 18 章驴子案例、第 20 章数值优化、第 21 章假新闻案例，以及概率与向量空间附录——它们要么属于兄弟节点（D.3.1 工具箱、M.6.x 统计、A.x 机器学习），要么是案例章节；9.1 的案例引导与 9.5–9.7 也未收。B 只收 3.4 与 12 两节，3.4 内部的 3.4.2/3.4.3（scoring API 与 make_scorer 用法）、3.4.5 多标签排序指标、3.4.7 聚类指标、3.4.8 dummy 估计器与 12.3.1/.2 的 RandomState 细节未收（属实现细节）。C 只收实验管理页的正文小节，页面上下的大量 CLI 命令清单（dvc exp run/save/list…）与站点导航不算目录条目。"
  },
  "D.4.1": {
   "sources": [
@@ -19060,9 +18982,24 @@
     "year": 2011,
     "url": "https://algs4.cs.princeton.edu/home/",
     "toc_urls": [
-     "https://algs4.cs.princeton.edu/14analysis/"
+     "https://algs4.cs.princeton.edu/14analysis/",
+     "https://algs4.cs.princeton.edu/40graphs/",
+     "https://algs4.cs.princeton.edu/44sp/",
+     "https://algs4.cs.princeton.edu/64maxflow/"
     ],
     "why": "补“渐近分析”与“摊还分析”：第 1.4 节按“数学模型—波浪号近似—增长阶分类—最坏情况保证—摊还分析—内存使用”分小节，DPV 没有摊还分析的专门小节。"
+   },
+   {
+    "key": "C",
+    "kind": "course",
+    "title": "Design and Analysis of Algorithms (6.046J, Spring 2015)",
+    "by": "Erik Demaine, Srini Devadas",
+    "year": 2015,
+    "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
+    "toc_urls": [
+     "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/calendar/"
+    ],
+    "why": "补“匹配”：Sedgewick 只在 6.4 最大流里把二部图匹配当作应用提一句，没有专门一节；6.046J 的 L14 整讲匹配（含稳定匹配与匈牙利式增广）。"
    }
   ],
   "outline": [
@@ -19231,6 +19168,86 @@
       "zh": "内存使用"
      }
     ]
+   },
+   {
+    "src": "B",
+    "ref": "4",
+    "title": "Graphs",
+    "zh": "图",
+    "items": [
+     {
+      "ref": "4.1",
+      "title": "Undirected Graphs",
+      "zh": "无向图"
+     },
+     {
+      "ref": "4.2",
+      "title": "Directed Graphs",
+      "zh": "有向图"
+     },
+     {
+      "ref": "4.3",
+      "title": "Minimum Spanning Trees",
+      "zh": "最小生成树"
+     },
+     {
+      "ref": "4.4",
+      "title": "Shortest Paths",
+      "zh": "最短路径"
+     }
+    ],
+    "fill": "来自 F.1.3 的导览图"
+   },
+   {
+    "src": "B",
+    "ref": "5",
+    "title": "Strings",
+    "zh": "字符串",
+    "items": [
+     {
+      "ref": "5.2",
+      "title": "Tries",
+      "zh": "字典树"
+     },
+     {
+      "ref": "5.3",
+      "title": "Substring Search",
+      "zh": "子串查找"
+     },
+     {
+      "ref": "5.4",
+      "title": "Regular Expressions",
+      "zh": "正则表达式"
+     }
+    ],
+    "fill": "来自 F.1.3 的导览图"
+   },
+   {
+    "src": "B",
+    "ref": "6",
+    "title": "Context",
+    "zh": "上下文",
+    "items": [
+     {
+      "ref": "6.3",
+      "title": "Suffix Arrays",
+      "zh": "后缀数组"
+     },
+     {
+      "ref": "6.4",
+      "title": "Maxflow",
+      "zh": "最大流"
+     }
+    ],
+    "fill": "来自 F.1.3 的导览图"
+   },
+   {
+    "src": "C",
+    "ref": "L14",
+    "title": "Incremental Improvement: Matching",
+    "zh": "增量改进：匹配",
+    "fill": "匹配",
+    "items": []
    }
   ],
   "coverage": [
@@ -19304,172 +19321,60 @@
      "B:1.4"
     ],
     "note": "本科范围内可完整写出的下界证明是摊还界（势能法/记账法），在 B 的 1.4 节；更强的条件性下界在 F.1.6。"
-   }
-  ],
-  "omitted": "DPV 未收：第 1 章（数论算法）、第 3–4 章（图的分解与最短路径，属其他节点）、第 7 章（线性规划与归约）、第 8–9 章（NP 完全性与应对，属 F.1.5/F.1.6）、第 10 章（量子算法），以及各章末尾的 Exercises 与随机算法虚拟章。B 只取第 1.4 节。"
- },
- "F.1.3": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "book",
-    "title": "Algorithms, 4th Edition",
-    "by": "Robert Sedgewick, Kevin Wayne",
-    "year": 2011,
-    "url": "https://algs4.cs.princeton.edu/home/",
-    "toc_urls": [
-     "https://algs4.cs.princeton.edu/40graphs/",
-     "https://algs4.cs.princeton.edu/44sp/",
-     "https://algs4.cs.princeton.edu/64maxflow/"
-    ],
-    "why": "节点现有英文资源就是这本书的官方配套站点；第 4 章（图：无向/有向/最小生成树/最短路径）、第 5 章（字符串：字典树、子串查找、正则表达式）、第 6 章的 6.3 后缀数组与 6.4 最大流，逐条对上遍历、最短路、流、字符串匹配、索引与自动机方法。"
    },
-   {
-    "key": "B",
-    "kind": "course",
-    "title": "Design and Analysis of Algorithms (6.046J, Spring 2015)",
-    "by": "Erik Demaine, Srini Devadas",
-    "year": 2015,
-    "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
-    "toc_urls": [
-     "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/calendar/"
-    ],
-    "why": "补“匹配”：Sedgewick 只在 6.4 最大流里把二部图匹配当作应用提一句，没有专门一节；6.046J 的 L14 整讲匹配（含稳定匹配与匈牙利式增广）。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "4",
-    "title": "Graphs",
-    "zh": "图",
-    "items": [
-     {
-      "ref": "4.1",
-      "title": "Undirected Graphs",
-      "zh": "无向图"
-     },
-     {
-      "ref": "4.2",
-      "title": "Directed Graphs",
-      "zh": "有向图"
-     },
-     {
-      "ref": "4.3",
-      "title": "Minimum Spanning Trees",
-      "zh": "最小生成树"
-     },
-     {
-      "ref": "4.4",
-      "title": "Shortest Paths",
-      "zh": "最短路径"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "5",
-    "title": "Strings",
-    "zh": "字符串",
-    "items": [
-     {
-      "ref": "5.2",
-      "title": "Tries",
-      "zh": "字典树"
-     },
-     {
-      "ref": "5.3",
-      "title": "Substring Search",
-      "zh": "子串查找"
-     },
-     {
-      "ref": "5.4",
-      "title": "Regular Expressions",
-      "zh": "正则表达式"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "6",
-    "title": "Context",
-    "zh": "上下文",
-    "items": [
-     {
-      "ref": "6.3",
-      "title": "Suffix Arrays",
-      "zh": "后缀数组"
-     },
-     {
-      "ref": "6.4",
-      "title": "Maxflow",
-      "zh": "最大流"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "L14",
-    "title": "Incremental Improvement: Matching",
-    "zh": "增量改进：匹配",
-    "fill": "匹配",
-    "items": []
-   }
-  ],
-  "coverage": [
    {
     "topic": "遍历",
     "refs": [
-     "A:4.1",
-     "A:4.2"
+     "B:4.1",
+     "B:4.2"
     ],
     "note": "4.1 讲深度优先与广度优先搜索、连通分量；4.2 讲有向图的拓扑排序与强连通分量。"
    },
    {
     "topic": "最短路",
     "refs": [
-     "A:4.4",
-     "A:4.3"
+     "B:4.4",
+     "B:4.3"
     ]
    },
    {
     "topic": "流",
     "refs": [
-     "A:6.4"
+     "B:6.4"
     ]
    },
    {
     "topic": "匹配",
     "refs": [
-     "B:L14",
-     "A:6.4"
+     "C:L14",
+     "B:6.4"
     ],
     "note": "algs4 的 6.4 把二部图匹配当作最大流的应用，没有独立小节；6.046J 的 L14 是专门一讲。"
    },
    {
     "topic": "字符串匹配",
     "refs": [
-     "A:5.3"
+     "B:5.3"
     ]
    },
    {
     "topic": "索引",
     "refs": [
-     "A:5.2",
-     "A:6.3"
+     "B:5.2",
+     "B:6.3"
     ],
     "note": "字典树（5.2）与后缀数组（6.3）是文本索引的两条主线。"
    },
    {
     "topic": "自动机方法",
     "refs": [
-     "A:5.3",
-     "A:5.4"
+     "B:5.3",
+     "B:5.4"
     ],
     "note": "5.3 的 KMP 用确定有限自动机做匹配，5.4 用非确定自动机模拟跑正则表达式。"
    }
   ],
-  "omitted": "algs4 第 1–3 章（基础、排序、查找）与第 6 章的 6.1 事件驱动模拟、6.2 B 树、6.5 归约、6.6 难解性，以及第 5 章的 5.1 字符串排序与 5.5 数据压缩，都和本节点“遍历/最短路/流/匹配/字符串匹配/索引/自动机”七个知识点不对应，未收。"
+  "omitted": "DPV 未收：第 1 章（数论算法）、第 3–4 章（图的分解与最短路径，属其他节点）、第 7 章（线性规划与归约）、第 8–9 章（NP 完全性与应对，属 F.1.5/F.1.6）、第 10 章（量子算法），以及各章末尾的 Exercises 与随机算法虚拟章。B 只取第 1.4 节。；algs4 第 1–3 章（基础、排序、查找）与第 6 章的 6.1 事件驱动模拟、6.2 B 树、6.5 归约、6.6 难解性，以及第 5 章的 5.1 字符串排序与 5.5 数据压缩，都和本节点“遍历/最短路/流/匹配/字符串匹配/索引/自动机”七个知识点不对应，未收。"
  },
  "F.1.4": {
   "sources": [
@@ -46184,17 +46089,6 @@
      "https://otexts.com/fpp3/arima.html"
     ],
     "why": "节点“现有英文学习资源”本身：OTexts 免费在线的预测学标准教材，自相关、预测流程与评价、指数平滑的 innovations 状态空间、ARIMA 四块合起来正好是节点的时间序列半边。"
-   },
-   {
-    "key": "B",
-    "kind": "course",
-    "title": "Introduction to Queueing Theory for Computer Scientists - A Mini Course",
-    "by": "Raj Jain, Washington University in St. Louis",
-    "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
-    "toc_urls": [
-     "https://www.cse.wustl.edu/~jain/queue/index.html"
-    ],
-    "why": "补排队论半边：A 是预测教材，完全没有排队论；这门课是节点“先修证据”里的课，页面上按讲列出 Kendall 记号、Poisson/生灭过程、M/M/* 指标、运算律与排队网络，正好对应“到达/服务过程与系统性能”。"
    }
   ],
   "outline": [
@@ -46409,280 +46303,48 @@
       "zh": "ARIMA 与 ETS 的比较"
      }
     ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Introduction to Queueing Theory",
-    "zh": "排队论引论",
-    "fill": "补排队系统的基本构件与到达/服务刻画：Kendall 记号、指数类分布、Little 定律",
-    "items": [
-     {
-      "ref": "",
-      "title": "Basic Components of a Queue",
-      "zh": "队列的基本组成部分"
-     },
-     {
-      "ref": "",
-      "title": "Kendall Notation A/S/m/B/K/SD",
-      "zh": "Kendall 记号 A/S/m/B/K/SD"
-     },
-     {
-      "ref": "",
-      "title": "Exponential/Erlang/Hyper-Exponential Distribution",
-      "zh": "指数、Erlang 与超指数分布"
-     },
-     {
-      "ref": "",
-      "title": "Group Arrivals/Service",
-      "zh": "成批到达与成批服务"
-     },
-     {
-      "ref": "",
-      "title": "Rules for All Queues",
-      "zh": "所有队列共有的规律"
-     },
-     {
-      "ref": "",
-      "title": "Little's Law",
-      "zh": "Little 定律"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Stochastic Processes",
-    "zh": "随机过程",
-    "fill": "补到达/服务过程的模型：离散与连续状态过程、Markov 过程、生灭过程、Poisson 过程与 PASTA",
-    "items": [
-     {
-      "ref": "",
-      "title": "Discrete/Continuous State Processes",
-      "zh": "离散状态与连续状态过程"
-     },
-     {
-      "ref": "",
-      "title": "Markov Processes",
-      "zh": "马尔可夫过程"
-     },
-     {
-      "ref": "",
-      "title": "Birth-Death Processes",
-      "zh": "生灭过程"
-     },
-     {
-      "ref": "",
-      "title": "Poisson Distribution",
-      "zh": "Poisson 分布"
-     },
-     {
-      "ref": "",
-      "title": "Poisson Processes",
-      "zh": "Poisson 过程"
-     },
-     {
-      "ref": "",
-      "title": "PASTA Property",
-      "zh": "PASTA 性质"
-     },
-     {
-      "ref": "",
-      "title": "Relationship Among Stochastic Processes",
-      "zh": "各类随机过程之间的关系"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Analysis of A Single Queue",
-    "zh": "单队列分析",
-    "fill": "补系统性能指标：M/M/1、M/M/m、M/M/m/B 的队长与等待时间公式",
-    "items": [
-     {
-      "ref": "",
-      "title": "M/M/1 Queue",
-      "zh": "M/M/1 队列"
-     },
-     {
-      "ref": "",
-      "title": "M/M/m Queue",
-      "zh": "M/M/m 队列"
-     },
-     {
-      "ref": "",
-      "title": "M/M/m/B Queue",
-      "zh": "M/M/m/B 队列"
-     },
-     {
-      "ref": "",
-      "title": "Other Queues",
-      "zh": "其他队列"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Queueing Networks",
-    "zh": "排队网络",
-    "fill": "补多资源系统的性能：开放/闭合排队网络、乘积形式解、机器维修与中心服务器模型",
-    "items": [
-     {
-      "ref": "",
-      "title": "Open Queueing Networks",
-      "zh": "开放排队网络"
-     },
-     {
-      "ref": "",
-      "title": "Closed Queueing Networks",
-      "zh": "闭合排队网络"
-     },
-     {
-      "ref": "",
-      "title": "Mixed Queueing Networks",
-      "zh": "混合排队网络"
-     },
-     {
-      "ref": "",
-      "title": "Product-Form Network",
-      "zh": "乘积形式网络"
-     },
-     {
-      "ref": "",
-      "title": "Machine Repairman Model",
-      "zh": "机器维修模型"
-     },
-     {
-      "ref": "",
-      "title": "Central Server Model",
-      "zh": "中心服务器模型"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Operational Laws",
-    "zh": "运算律",
-    "fill": "补不依赖分布假设的性能度量：利用率律、强制流律、瓶颈分析、响应时间律与渐近界",
-    "items": [
-     {
-      "ref": "",
-      "title": "Utilization Law",
-      "zh": "利用率律"
-     },
-     {
-      "ref": "",
-      "title": "Forced Flow Law",
-      "zh": "强制流律"
-     },
-     {
-      "ref": "",
-      "title": "Bottleneck Device",
-      "zh": "瓶颈设备"
-     },
-     {
-      "ref": "",
-      "title": "Transition Probabilities",
-      "zh": "转移概率"
-     },
-     {
-      "ref": "",
-      "title": "General Response Time Law",
-      "zh": "一般响应时间律"
-     },
-     {
-      "ref": "",
-      "title": "Interactive Response Time Law",
-      "zh": "交互式响应时间律"
-     },
-     {
-      "ref": "",
-      "title": "Bottleneck Analysis",
-      "zh": "瓶颈分析"
-     },
-     {
-      "ref": "",
-      "title": "Asymptotic Bounds",
-      "zh": "渐近界"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Mean Value Analysis and Related Techniques",
-    "zh": "均值分析及相关技术",
-    "fill": "补排队网络的均值分析方法与全课程要点复习",
-    "items": [
-     {
-      "ref": "",
-      "title": "MVA Steps",
-      "zh": "均值分析的步骤"
-     },
-     {
-      "ref": "",
-      "title": "MVA Assumptions",
-      "zh": "均值分析的假设"
-     },
-     {
-      "ref": "",
-      "title": "Review of key queueing theory concepts",
-      "zh": "排队论核心概念复习"
-     }
-    ]
    }
   ],
   "coverage": [
    {
-    "topic": "自相关",
+    "topic": "自相关与平稳性",
     "refs": [
      "A:2.8",
      "A:2.7",
-     "A:5.4"
+     "A:9.1"
     ]
    },
    {
-    "topic": "预测",
+    "topic": "预测方法与评价",
     "refs": [
      "A:5",
      "A:5.2",
-     "A:5.8",
-     "A:8",
+     "A:5.8"
+    ]
+   },
+   {
+    "topic": "指数平滑",
+    "refs": [
+     "A:8"
+    ]
+   },
+   {
+    "topic": "ARIMA 模型",
+    "refs": [
      "A:9"
     ]
    },
    {
-    "topic": "状态空间",
+    "topic": "状态空间形式的预测",
     "refs": [
      "A:8.5",
      "A:8.6",
      "A:9.10"
     ],
-    "note": "A 讲的是指数平滑的 innovations 状态空间形式（把 ETS 写成状态空间并给似然、预测分布），没有 Kalman 滤波/动态线性模型那一套一般状态空间方法；这个深度已足够 D2，若要做 D4 的一般状态空间需另找专著。"
-   },
-   {
-    "topic": "到达/服务过程",
-    "refs": [
-     "B:#2"
-    ],
-    "note": "A 完全不讲排队，这一项全靠 B；B 的生灭过程、Poisson 过程、PASTA 是到达与服务的标准刻画。"
-   },
-   {
-    "topic": "系统性能",
-    "refs": [
-     "B:#1",
-     "B:#3",
-     "B:#4",
-     "B:#5",
-     "B:#6"
-    ],
-    "note": "M/M/* 的队长与等待时间公式、运算律（利用率律、强制流律、瓶颈分析）与排队网络的乘积形式解。"
+    "note": "A 讲的是指数平滑的 innovations 状态空间形式，没有 Kalman 滤波/动态线性模型那一套一般状态空间方法。"
    }
   ],
-  "omitted": "A 只收了与节点四个知识点直接对应的第 2、5、8、9 章。A 的第 1 章（入门）、第 3 章（时序分解）、第 4 章（时序特征）、第 6 章（判断预测）、第 7 章（时序回归）、第 10 章（动态回归）、第 11 章（分层预测）、第 12 章（复杂季节性、Prophet、VAR、神经网络）、第 13 章（实践问题）与各附录未收；各章末尾的 Exercises 与 Further reading 小节也未收。B 的课程介绍（Goals、Prerequisite、Tentative Schedule、Homeworks、Quiz 0）与重复出现的 Little's Law、Birth-Death Processes 条目未重复收录。"
+  "omitted": "A 只收了第 2、5、8、9 章。第 1 章（入门）、第 3 章（时序分解）、第 4 章（时序特征）、第 6 章（判断预测）、第 7 章（时序回归）、第 10 章（动态回归）、第 11 章（分层预测）、第 12 章（复杂季节性、Prophet、VAR、神经网络）、第 13 章（实践问题）与各附录未收；各章末尾的 Exercises 与 Further reading 小节也未收。"
  },
  "M.6.5": {
   "sources": [
@@ -47222,6 +46884,286 @@
    }
   ],
   "omitted": "A（Cover & Thomas）未收第 1 章（Introduction and Preview）、第 4 章（Entropy Rates of a Stochastic Process）、第 6 章（Gambling and Data Compression）、第 11 章（Information Theory and Statistics）、第 12 章（Maximum Entropy）、第 13 章（Universal Simulation）、第 14 章（Kolmogorov Complexity）、第 15 章（Network Information Theory）、第 16 章（Portfolio Theory）、第 17 章（Inequalities in Information Theory），以及各章 Summary/Problems/Historical Notes 与 7.1.1–7.1.5、10.3.1–10.3.3 这类小节；未收章与节点简介的六项知识点关系较远或是专题延伸。B（MacKay）只收第 1、11、13 章（其余章属推断/机器学习或与 A 重复），章末 Summary、Further reading、Exercises、Solutions 未收。"
+ },
+ "M.6.6": {
+  "sources": [
+   {
+    "key": "A",
+    "kind": "course",
+    "title": "Introduction to Queueing Theory for Computer Scientists - A Mini Course",
+    "by": "Raj Jain, Washington University in St. Louis",
+    "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
+    "toc_urls": [
+     "https://www.cse.wustl.edu/~jain/queue/index.html"
+    ],
+    "why": "一门完整的排队论小课（Raj Jain，华盛顿大学圣路易斯分校），按讲列出排队系统构件与 Kendall 记号、Poisson 与生灭过程、M/M/* 单队列指标、排队网络、操作定律与均值分析，正好对应节点简介；也是节点的英文学习资源。"
+   }
+  ],
+  "outline": [
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Introduction to Queueing Theory",
+    "zh": "排队论引论",
+    "items": [
+     {
+      "ref": "",
+      "title": "Basic Components of a Queue",
+      "zh": "队列的基本组成部分"
+     },
+     {
+      "ref": "",
+      "title": "Kendall Notation A/S/m/B/K/SD",
+      "zh": "Kendall 记号 A/S/m/B/K/SD"
+     },
+     {
+      "ref": "",
+      "title": "Exponential/Erlang/Hyper-Exponential Distribution",
+      "zh": "指数、Erlang 与超指数分布"
+     },
+     {
+      "ref": "",
+      "title": "Group Arrivals/Service",
+      "zh": "成批到达与成批服务"
+     },
+     {
+      "ref": "",
+      "title": "Rules for All Queues",
+      "zh": "所有队列共有的规律"
+     },
+     {
+      "ref": "",
+      "title": "Little's Law",
+      "zh": "Little 定律"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Stochastic Processes",
+    "zh": "随机过程",
+    "items": [
+     {
+      "ref": "",
+      "title": "Discrete/Continuous State Processes",
+      "zh": "离散状态与连续状态过程"
+     },
+     {
+      "ref": "",
+      "title": "Markov Processes",
+      "zh": "马尔可夫过程"
+     },
+     {
+      "ref": "",
+      "title": "Birth-Death Processes",
+      "zh": "生灭过程"
+     },
+     {
+      "ref": "",
+      "title": "Poisson Distribution",
+      "zh": "Poisson 分布"
+     },
+     {
+      "ref": "",
+      "title": "Poisson Processes",
+      "zh": "Poisson 过程"
+     },
+     {
+      "ref": "",
+      "title": "PASTA Property",
+      "zh": "PASTA 性质"
+     },
+     {
+      "ref": "",
+      "title": "Relationship Among Stochastic Processes",
+      "zh": "各类随机过程之间的关系"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Analysis of A Single Queue",
+    "zh": "单队列分析",
+    "items": [
+     {
+      "ref": "",
+      "title": "M/M/1 Queue",
+      "zh": "M/M/1 队列"
+     },
+     {
+      "ref": "",
+      "title": "M/M/m Queue",
+      "zh": "M/M/m 队列"
+     },
+     {
+      "ref": "",
+      "title": "M/M/m/B Queue",
+      "zh": "M/M/m/B 队列"
+     },
+     {
+      "ref": "",
+      "title": "Other Queues",
+      "zh": "其他队列"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Queueing Networks",
+    "zh": "排队网络",
+    "items": [
+     {
+      "ref": "",
+      "title": "Open Queueing Networks",
+      "zh": "开放排队网络"
+     },
+     {
+      "ref": "",
+      "title": "Closed Queueing Networks",
+      "zh": "闭合排队网络"
+     },
+     {
+      "ref": "",
+      "title": "Mixed Queueing Networks",
+      "zh": "混合排队网络"
+     },
+     {
+      "ref": "",
+      "title": "Product-Form Network",
+      "zh": "乘积形式网络"
+     },
+     {
+      "ref": "",
+      "title": "Machine Repairman Model",
+      "zh": "机器维修模型"
+     },
+     {
+      "ref": "",
+      "title": "Central Server Model",
+      "zh": "中心服务器模型"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Operational Laws",
+    "zh": "运算律",
+    "items": [
+     {
+      "ref": "",
+      "title": "Utilization Law",
+      "zh": "利用率律"
+     },
+     {
+      "ref": "",
+      "title": "Forced Flow Law",
+      "zh": "强制流律"
+     },
+     {
+      "ref": "",
+      "title": "Bottleneck Device",
+      "zh": "瓶颈设备"
+     },
+     {
+      "ref": "",
+      "title": "Transition Probabilities",
+      "zh": "转移概率"
+     },
+     {
+      "ref": "",
+      "title": "General Response Time Law",
+      "zh": "一般响应时间律"
+     },
+     {
+      "ref": "",
+      "title": "Interactive Response Time Law",
+      "zh": "交互式响应时间律"
+     },
+     {
+      "ref": "",
+      "title": "Bottleneck Analysis",
+      "zh": "瓶颈分析"
+     },
+     {
+      "ref": "",
+      "title": "Asymptotic Bounds",
+      "zh": "渐近界"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Mean Value Analysis and Related Techniques",
+    "zh": "均值分析及相关技术",
+    "items": [
+     {
+      "ref": "",
+      "title": "MVA Steps",
+      "zh": "均值分析的步骤"
+     },
+     {
+      "ref": "",
+      "title": "MVA Assumptions",
+      "zh": "均值分析的假设"
+     },
+     {
+      "ref": "",
+      "title": "Review of key queueing theory concepts",
+      "zh": "排队论核心概念复习"
+     }
+    ]
+   }
+  ],
+  "coverage": [
+   {
+    "topic": "到达与服务过程",
+    "refs": [
+     "A:#1",
+     "A:#2"
+    ],
+    "note": "指数、Erlang 与超指数分布刻画服务时间，Poisson 与生灭过程刻画到达，PASTA 性质连接两者。"
+   },
+   {
+    "topic": "Kendall 记号",
+    "refs": [
+     "A:#1"
+    ]
+   },
+   {
+    "topic": "M/M/1 等单队列模型",
+    "refs": [
+     "A:#3"
+    ],
+    "note": "M/M/1、M/M/m、M/M/m/B 的队长与等待时间公式；M/G/1、G/G/1 不在这门小课里。"
+   },
+   {
+    "topic": "排队网络",
+    "refs": [
+     "A:#4"
+    ]
+   },
+   {
+    "topic": "操作定律与均值分析",
+    "refs": [
+     "A:#5",
+     "A:#6"
+    ]
+   },
+   {
+    "topic": "用排队模型预测系统性能",
+    "refs": [
+     "A:#4",
+     "A:#6"
+    ],
+    "note": "中心服务器模型、机器修理工模型与均值分析把排队模型用到计算机系统的响应时间与吞吐量预测上。"
+   }
+  ],
+  "omitted": "课程介绍（Goals、Prerequisite、Tentative Schedule、Homeworks、Quiz 0）与重复出现的 Little's Law、Birth-Death Processes 条目未重复收录。"
  },
  "M.7.1": {
   "sources": [
@@ -59641,6 +59583,50 @@
      "https://learn.microsoft.com/en-us/devops/"
     ],
     "why": "补 A 完全缺失的 CI/CD 流水线：A 只在第 1 章讲 SRE 与 DevOps 的分工，没有持续集成/持续交付的章节；这个资源中心的 Develop / Deliver / Operate 三节给出 CI、持续交付、IaC、feature flag、无停机版本切换的条目（节点 zhAlt 引的中文版就是同一套内容的译本）。"
+   },
+   {
+    "key": "C",
+    "kind": "docs",
+    "title": "SLSA specification v1.2",
+    "by": "SLSA project / OpenSSF (Linux Foundation)",
+    "year": 2026,
+    "url": "https://slsa.dev/spec/v1.2/",
+    "toc_urls": [
+     "https://slsa.dev/spec/v1.2/",
+     "https://slsa.dev/spec/v1.2/about",
+     "https://slsa.dev/spec/v1.2/build-track-basics",
+     "https://slsa.dev/spec/v1.2/terminology",
+     "https://slsa.dev/spec/v1.2/build-requirements",
+     "https://slsa.dev/spec/v1.2/verifying-artifacts",
+     "https://slsa.dev/spec/v1.2/provenance",
+     "https://slsa.dev/spec/v1.2/build-provenance",
+     "https://slsa.dev/spec/v1.2/threats"
+    ],
+    "why": "补主资源未讲的发布制品与构建溯源；仅选入门页与生产要求。"
+   },
+   {
+    "key": "D",
+    "kind": "docs",
+    "title": "reproducible-builds.org Documentation",
+    "by": "Reproducible Builds project",
+    "year": 2026,
+    "url": "https://reproducible-builds.org/docs/",
+    "toc_urls": [
+     "https://reproducible-builds.org/docs/"
+    ],
+    "why": "补“可复现构建”与“依赖锁定”：SLSA 只要求可溯源，不解释什么算可复现，这个项目官方文档按 Introduction / Achieve deterministic builds / Managing variance / Define a build environment / Distribute the environment / Verification 六组组织页面，给出定义、不可复现的成因与固定/记录构建环境的做法。"
+   },
+   {
+    "key": "E",
+    "kind": "docs",
+    "title": "OWASP CycloneDX Authoritative Guide to SBOM",
+    "by": "OWASP Foundation / CycloneDX project",
+    "year": 2026,
+    "url": "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf",
+    "toc_urls": [
+     "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf"
+    ],
+    "why": "补“软件物料”：SLSA 规范里没有 SBOM 专门的章节，这份 OWASP 项目的权威指南讲清了 SBOM 的对象模型、覆盖度/成熟度（NTIA 最低要素）与使用场景。"
    }
   ],
   "outline": [
@@ -60054,120 +60040,9 @@
       "zh": "微软如何用 DevOps 运维可靠系统"
      }
     ]
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "CI/CD",
-    "refs": [
-     "B:#1",
-     "B:#2"
-    ],
-    "note": "A 全书没有持续集成/持续交付的章节（第 1 章只讲 SRE 与 DevOps 的分工，第 16 章讲发布工程与金丝雀）；B 的 Develop/Deliver 两节给 CI、持续交付、部署流水线与左移/右移测试的概念。"
    },
    {
-    "topic": "配置",
-    "refs": [
-     "A:#9",
-     "B:#2"
-    ],
-    "note": "A:#9 是第 14 章 Configuration Design and Best Practices（同书第 15 章 Configuration Specifics 未收）；B:#2 的 IaC 一节补基础设施即代码。具体的配置语言/模板语法两源都没有到小节的粒度。"
-   },
-   {
-    "topic": "可观测性",
-    "refs": [
-     "A:#3",
-     "A:#4",
-     "B:#3"
-    ],
-    "note": "A:#3 第 4 章 Monitoring（监控数据来源、有目的的指标：预期变更/依赖/饱和度/流量状态），A:#4 第 5 章把 SLO 变成告警；A 没有“日志、指标、链路追踪三支柱”这种命名法，B:#3 的 What is monitoring? 给入门概念。"
-   },
-   {
-    "topic": "SLO",
-    "refs": [
-     "A:#2",
-     "A:#4"
-    ],
-    "note": "A:#2 第 2 章从 SLI 定义、计算到错误预算政策，A:#4 第 5 章讲告警的精确率/召回率与燃烧速率多窗口告警。"
-   },
-   {
-    "topic": "发布策略",
-    "refs": [
-     "A:#10",
-     "B:#3"
-    ],
-    "note": "A:#10 第 16 章金丝雀发布（含 Blue/Green Deployment、Traffic Teeing、Artificial Load Generation 三个相关概念）；B:#3 补功能开关渐进实验与带版本的服务更新。"
-   },
-   {
-    "topic": "故障恢复",
-    "refs": [
-     "A:#6",
-     "A:#7",
-     "A:#11"
-    ],
-    "note": "A:#6 第 9 章 Incident Response、A:#7 第 10 章复盘文化、A:#11 第 17 章过载的识别与恢复；无责复盘的具体模板见附录 B/附录 C（未收）。"
-   },
-   {
-    "topic": "容量",
-    "refs": [
-     "A:#8",
-     "A:#11"
-    ],
-    "note": "A:#8 第 11 章 Managing Load（负载均衡、自动扩缩容、有状态系统、保守配置），A:#11 第 17 章讲容量被打穿后的过载识别与恢复；第 12 章 NALSD 讲容量设计的系统方法，未收。"
-   }
-  ],
-  "omitted": "A 未收的章：3 SLO Engineering Case Studies、6 Eliminating Toil、7 Simplicity、12 Introducing Non-Abstract Large System Design、13 Data Processing Pipelines、15 Configuration Specifics、18 SRE Engagement Model、19 SRE: Reaching Beyond Your Walls、20 SRE Team Lifecycles、21 Organizational Change Management in SRE，以及 Conclusion、Appendix A/B/C、Index、About the Editors；第 2/4/5/16 章内的图表标题、示例小节与每章末尾的 Conclusion 小节也未收。B 未收 Concept 与 Plan 两节（What is DevOps?、SecDevOps、Agile/scrum/Kanban 等，属于别的节点）以及 “Governance in Azure when using CI/CD”。"
- },
- "P.5.4": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "docs",
-    "title": "SLSA specification v1.2",
-    "by": "SLSA project / OpenSSF (Linux Foundation)",
-    "year": 2026,
-    "url": "https://slsa.dev/spec/v1.2/",
-    "toc_urls": [
-     "https://slsa.dev/spec/v1.2/",
-     "https://slsa.dev/spec/v1.2/about",
-     "https://slsa.dev/spec/v1.2/build-track-basics",
-     "https://slsa.dev/spec/v1.2/terminology",
-     "https://slsa.dev/spec/v1.2/build-requirements",
-     "https://slsa.dev/spec/v1.2/verifying-artifacts",
-     "https://slsa.dev/spec/v1.2/provenance",
-     "https://slsa.dev/spec/v1.2/build-provenance",
-     "https://slsa.dev/spec/v1.2/threats"
-    ],
-    "why": "节点现有英文资源就是这份规范；供应链安全领域的行业共识规范，按 Build/Source 两条轨道加跨轨道信息组织，覆盖制品、构建溯源与供应链完整性。每页都有自己的小节（该页的 On this page 列表），本轮据此把每个分支补到节一级。"
-   },
-   {
-    "key": "B",
-    "kind": "docs",
-    "title": "reproducible-builds.org Documentation",
-    "by": "Reproducible Builds project",
-    "year": 2026,
-    "url": "https://reproducible-builds.org/docs/",
-    "toc_urls": [
-     "https://reproducible-builds.org/docs/"
-    ],
-    "why": "补“可复现构建”与“依赖锁定”：SLSA 只要求可溯源，不解释什么算可复现，这个项目官方文档按 Introduction / Achieve deterministic builds / Managing variance / Define a build environment / Distribute the environment / Verification 六组组织页面，给出定义、不可复现的成因与固定/记录构建环境的做法。"
-   },
-   {
-    "key": "C",
-    "kind": "docs",
-    "title": "OWASP CycloneDX Authoritative Guide to SBOM",
-    "by": "OWASP Foundation / CycloneDX project",
-    "year": 2026,
-    "url": "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf",
-    "toc_urls": [
-     "https://cyclonedx.org/guides/OWASP_CycloneDX-Authoritative-Guide-to-SBOM-en.pdf"
-    ],
-    "why": "补“软件物料”：SLSA 规范里没有 SBOM 专门的章节，这份 OWASP 项目的权威指南讲清了 SBOM 的对象模型、覆盖度/成熟度（NTIA 最低要素）与使用场景。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
+    "src": "C",
     "ref": "",
     "title": "About SLSA",
     "zh": "关于 SLSA",
@@ -60202,76 +60077,11 @@
       "title": "What SLSA doesn’t cover",
       "zh": "SLSA 不覆盖什么"
      }
-    ]
+    ],
+    "fill": "补制品完整性与构建溯源的入门概念；详细规范选读。"
    },
    {
-    "src": "A",
-    "ref": "",
-    "title": "Basics",
-    "zh": "基础",
-    "items": [
-     {
-      "ref": "",
-      "title": "Build L0: No guarantees",
-      "zh": "Build L0：无保证"
-     },
-     {
-      "ref": "",
-      "title": "Build L1: Provenance exists",
-      "zh": "Build L1：存在溯源"
-     },
-     {
-      "ref": "",
-      "title": "Build L2: Hosted build platform",
-      "zh": "Build L2：托管构建平台"
-     },
-     {
-      "ref": "",
-      "title": "Build L3: Hardened builds",
-      "zh": "Build L3：加固的构建"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Terminology",
-    "zh": "术语",
-    "items": [
-     {
-      "ref": "",
-      "title": "Software supply chain",
-      "zh": "软件供应链"
-     },
-     {
-      "ref": "",
-      "title": "Roles",
-      "zh": "角色"
-     },
-     {
-      "ref": "",
-      "title": "Build model",
-      "zh": "构建模型"
-     },
-     {
-      "ref": "",
-      "title": "Distribution model",
-      "zh": "分发模型"
-     },
-     {
-      "ref": "",
-      "title": "Mapping to real-world ecosystems",
-      "zh": "与现实生态的对应"
-     },
-     {
-      "ref": "",
-      "title": "Verification model",
-      "zh": "校验模型"
-     }
-    ]
-   },
-   {
-    "src": "A",
+    "src": "C",
     "ref": "",
     "title": "Producing artifacts",
     "zh": "产出制品",
@@ -60321,63 +60131,11 @@
       "title": "Isolation strength",
       "zh": "隔离强度"
      }
-    ]
+    ],
+    "fill": "补制品完整性与构建溯源的入门概念；详细规范选读。"
    },
    {
-    "src": "A",
-    "ref": "",
-    "title": "Verifying artifacts",
-    "zh": "校验制品",
-    "items": [
-     {
-      "ref": "",
-      "title": "How to verify",
-      "zh": "怎么校验"
-     },
-     {
-      "ref": "",
-      "title": "Step 1: Check SLSA Build level",
-      "zh": "第 1 步：检查 SLSA 构建等级"
-     },
-     {
-      "ref": "",
-      "title": "Step 2: Check expectations",
-      "zh": "第 2 步：核对期望"
-     },
-     {
-      "ref": "",
-      "title": "Step 3: (Optional) Check dependencies recursively",
-      "zh": "第 3 步（可选）：递归检查依赖"
-     },
-     {
-      "ref": "",
-      "title": "Forming Expectations",
-      "zh": "确定期望"
-     },
-     {
-      "ref": "",
-      "title": "Architecture options",
-      "zh": "架构选型"
-     },
-     {
-      "ref": "",
-      "title": "Package ecosystem",
-      "zh": "包生态"
-     },
-     {
-      "ref": "",
-      "title": "Consumer",
-      "zh": "消费者"
-     },
-     {
-      "ref": "",
-      "title": "Monitor",
-      "zh": "监控"
-     }
-    ]
-   },
-   {
-    "src": "A",
+    "src": "C",
     "ref": "",
     "title": "Provenance",
     "zh": "溯源",
@@ -60392,168 +60150,15 @@
       "title": "Source provenance",
       "zh": "源码溯源"
      }
-    ]
+    ],
+    "fill": "补制品完整性与构建溯源的入门概念；详细规范选读。"
    },
    {
-    "src": "A",
-    "ref": "",
-    "title": "Build Provenance",
-    "zh": "构建溯源",
-    "items": [
-     {
-      "ref": "",
-      "title": "Purpose",
-      "zh": "用途"
-     },
-     {
-      "ref": "",
-      "title": "Model",
-      "zh": "模型"
-     },
-     {
-      "ref": "",
-      "title": "Parsing rules",
-      "zh": "解析规则"
-     },
-     {
-      "ref": "",
-      "title": "Schema",
-      "zh": "模式"
-     },
-     {
-      "ref": "",
-      "title": "Provenance",
-      "zh": "溯源（顶层字段）"
-     },
-     {
-      "ref": "",
-      "title": "BuildDefinition",
-      "zh": "构建定义"
-     },
-     {
-      "ref": "",
-      "title": "RunDetails",
-      "zh": "运行详情"
-     },
-     {
-      "ref": "",
-      "title": "Builder",
-      "zh": "构建者"
-     },
-     {
-      "ref": "",
-      "title": "BuildMetadata",
-      "zh": "构建元数据"
-     },
-     {
-      "ref": "",
-      "title": "Extension fields",
-      "zh": "扩展字段"
-     },
-     {
-      "ref": "",
-      "title": "Verification",
-      "zh": "校验"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Threats & mitigations",
-    "zh": "威胁与缓解措施",
-    "items": [
-     {
-      "ref": "",
-      "title": "Overview",
-      "zh": "概览"
-     },
-     {
-      "ref": "",
-      "title": "Source threats",
-      "zh": "源码侧威胁"
-     },
-     {
-      "ref": "",
-      "title": "Build threats",
-      "zh": "构建侧威胁"
-     },
-     {
-      "ref": "",
-      "title": "Usage threats",
-      "zh": "使用侧威胁"
-     },
-     {
-      "ref": "",
-      "title": "Dependency threats",
-      "zh": "依赖侧威胁"
-     },
-     {
-      "ref": "",
-      "title": "Related threats",
-      "zh": "相关威胁"
-     },
-     {
-      "ref": "",
-      "title": "Availability threats",
-      "zh": "可用性威胁"
-     },
-     {
-      "ref": "",
-      "title": "Verification threats",
-      "zh": "校验环节威胁"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Introduction",
-    "zh": "导论",
-    "fill": "供应链完整性与可复现构建的动机：可复现构建能解决哪些问题、可复现构建的定义",
-    "items": [
-     {
-      "ref": "",
-      "title": "Which problems do Reproducible Builds Solve?",
-      "zh": "可复现构建解决了哪些问题？"
-     },
-     {
-      "ref": "",
-      "title": "Definitions",
-      "zh": "定义"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Achieve deterministic builds",
-    "zh": "做到确定性构建",
-    "fill": "可复现构建：从做法清单与快速上手清单入手",
-    "items": [
-     {
-      "ref": "",
-      "title": "Commandments of reproducible builds",
-      "zh": "可复现构建的戒律"
-     },
-     {
-      "ref": "",
-      "title": "Reproducibility Quickstart Guide",
-      "zh": "可复现性快速上手"
-     },
-     {
-      "ref": "",
-      "title": "Deterministic build systems",
-      "zh": "确定性构建系统"
-     }
-    ]
-   },
-   {
-    "src": "B",
+    "src": "D",
     "ref": "",
     "title": "Managing variance",
     "zh": "管理构建差异",
-    "fill": "依赖锁定与可复现构建：版本漂移、时间戳、时区、locale、归档元数据、随机数、构建路径等导致构建结果不同的来源，以及各自的固定办法",
+    "fill": "补固定构建环境与依赖版本、识别构建差异。",
     "items": [
      {
       "ref": "",
@@ -60628,11 +60233,11 @@
     ]
    },
    {
-    "src": "B",
+    "src": "D",
     "ref": "",
     "title": "Define a build environment",
     "zh": "定义构建环境",
-    "fill": "依赖锁定：构建环境的边界里有什么、怎么记录、用 lockfile / 容器 / 声明式依赖 等策略固定下来",
+    "fill": "补固定构建环境与依赖版本、识别构建差异。",
     "items": [
      {
       "ref": "",
@@ -60657,59 +60262,11 @@
     ]
    },
    {
-    "src": "B",
-    "ref": "",
-    "title": "Distribute the environment",
-    "zh": "分发构建环境",
-    "fill": "可复现构建：把环境连同源码一起交出去（从源码构建、虚拟机驱动、形式化定义）",
-    "items": [
-     {
-      "ref": "",
-      "title": "Building from source",
-      "zh": "从源码构建"
-     },
-     {
-      "ref": "",
-      "title": "Virtual machine drivers",
-      "zh": "虚拟机驱动"
-     },
-     {
-      "ref": "",
-      "title": "Formal definition",
-      "zh": "形式化定义"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Verification",
-    "zh": "校验",
-    "fill": "供应链完整性：拿到制品后怎么用校验和、内嵌签名与共享证明确认它没被篡改",
-    "items": [
-     {
-      "ref": "",
-      "title": "Cryptographic checksums",
-      "zh": "密码学校验和"
-     },
-     {
-      "ref": "",
-      "title": "Embedded signatures",
-      "zh": "内嵌签名"
-     },
-     {
-      "ref": "",
-      "title": "Sharing certifications",
-      "zh": "共享证明"
-     }
-    ]
-   },
-   {
-    "src": "C",
+    "src": "E",
     "ref": "",
     "title": "CYCLONEDX OBJECT MODEL",
     "zh": "CycloneDX 对象模型",
-    "fill": "软件物料：SBOM 的内容模型",
+    "fill": "补 SBOM 内容模型及最低信息要求。",
     "items": [
      {
       "ref": "",
@@ -60729,11 +60286,11 @@
     ]
    },
    {
-    "src": "C",
+    "src": "E",
     "ref": "",
     "title": "BOM COVERAGE, MATURITY, AND QUALITY",
     "zh": "BOM 覆盖度、成熟度与质量",
-    "fill": "软件物料：一份 SBOM 至少该有什么（NTIA 最低要素）以及怎么评估质量",
+    "fill": "补 SBOM 内容模型及最低信息要求。",
     "items": [
      {
       "ref": "",
@@ -60751,88 +60308,101 @@
       "zh": "SBOM 质量"
      }
     ]
-   },
-   {
-    "src": "C",
-    "ref": "",
-    "title": "USE CASES",
-    "zh": "使用场景",
-    "fill": "构建溯源与供应链完整性：SBOM 拿来做什么",
-    "items": [
-     {
-      "ref": "",
-      "title": "Inventory",
-      "zh": "组件清点"
-     },
-     {
-      "ref": "",
-      "title": "Integrity Verification",
-      "zh": "完整性校验"
-     },
-     {
-      "ref": "",
-      "title": "Provenance",
-      "zh": "溯源"
-     }
-    ]
    }
   ],
   "coverage": [
    {
+    "topic": "CI/CD",
+    "refs": [
+     "B:#1",
+     "B:#2"
+    ],
+    "note": "A 全书没有持续集成/持续交付的章节（第 1 章只讲 SRE 与 DevOps 的分工，第 16 章讲发布工程与金丝雀）；B 的 Develop/Deliver 两节给 CI、持续交付、部署流水线与左移/右移测试的概念。"
+   },
+   {
+    "topic": "配置",
+    "refs": [
+     "A:#9",
+     "B:#2"
+    ],
+    "note": "A:#9 是第 14 章 Configuration Design and Best Practices（同书第 15 章 Configuration Specifics 未收）；B:#2 的 IaC 一节补基础设施即代码。具体的配置语言/模板语法两源都没有到小节的粒度。"
+   },
+   {
+    "topic": "可观测性",
+    "refs": [
+     "A:#3",
+     "A:#4",
+     "B:#3"
+    ],
+    "note": "A:#3 第 4 章 Monitoring（监控数据来源、有目的的指标：预期变更/依赖/饱和度/流量状态），A:#4 第 5 章把 SLO 变成告警；A 没有“日志、指标、链路追踪三支柱”这种命名法，B:#3 的 What is monitoring? 给入门概念。"
+   },
+   {
+    "topic": "SLO",
+    "refs": [
+     "A:#2",
+     "A:#4"
+    ],
+    "note": "A:#2 第 2 章从 SLI 定义、计算到错误预算政策，A:#4 第 5 章讲告警的精确率/召回率与燃烧速率多窗口告警。"
+   },
+   {
+    "topic": "发布策略",
+    "refs": [
+     "A:#10",
+     "B:#3"
+    ],
+    "note": "A:#10 第 16 章金丝雀发布（含 Blue/Green Deployment、Traffic Teeing、Artificial Load Generation 三个相关概念）；B:#3 补功能开关渐进实验与带版本的服务更新。"
+   },
+   {
+    "topic": "故障恢复",
+    "refs": [
+     "A:#6",
+     "A:#7",
+     "A:#11"
+    ],
+    "note": "A:#6 第 9 章 Incident Response、A:#7 第 10 章复盘文化、A:#11 第 17 章过载的识别与恢复；无责复盘的具体模板见附录 B/附录 C（未收）。"
+   },
+   {
+    "topic": "容量",
+    "refs": [
+     "A:#8",
+     "A:#11"
+    ],
+    "note": "A:#8 第 11 章 Managing Load（负载均衡、自动扩缩容、有状态系统、保守配置），A:#11 第 17 章讲容量被打穿后的过载识别与恢复；第 12 章 NALSD 讲容量设计的系统方法，未收。"
+   },
+   {
     "topic": "制品",
     "refs": [
-     "A:#4",
-     "A:#2"
+     "C:#2",
+     "C:#1"
     ],
-    "note": "A:#4 是“产出制品”的技术要求（隔离强度、溯源生成、分发溯源等节），A:#2 讲构建轨道的 L0–L3 各等级对制品可信度意味着什么。"
+    "note": "介绍制品与可信构建。"
    },
    {
     "topic": "依赖锁定",
     "refs": [
-     "B:#4",
-     "B:#3"
+     "D:#2",
+     "D:#1"
     ],
-    "note": "A 里没有“依赖锁定”专门章节；B 把它表述为“记录并定义构建环境”（B:#4：构建环境的边界、怎么记录、定义策略、专有系统），B:#3 列不可复现的成因（版本信息、时间戳、locale、构建路径等）。具体某个包管理器怎么锁版本要看该包管理器的官方文档，两个来源都没写。"
+    "note": "通过固定版本与构建环境说明原则，具体锁文件语法查包管理器文档。"
    },
    {
     "topic": "构建溯源",
     "refs": [
-     "A:#6",
-     "A:#7",
-     "C:#3"
-    ],
-    "note": "A:#6 讲溯源概念（构建溯源与源码溯源），A:#7 给构建溯源 attestation 的字段级定义；C:#3 的 Provenance 小节从 SBOM 使用者视角讲溯源。"
-   },
-   {
-    "topic": "软件物料",
-    "refs": [
-     "C:#1",
+     "C:#3",
      "C:#2"
     ],
-    "note": "A 规范没有 SBOM 专门章节，这一块完全由 C 补：C:#1 是 BOM 对象模型与序列化格式，C:#2 是覆盖度与质量（NTIA 最低要素、成熟度模型）。"
+    "note": "构建来源的记录、生成与分发；字段规范作为选读。"
    },
    {
-    "topic": "供应链完整性",
+    "topic": "软件物料清单",
     "refs": [
-     "A:#1",
-     "A:#8",
-     "A:#5",
-     "B:#1",
-     "B:#6"
+     "E:#1",
+     "E:#2"
     ],
-    "note": "A:#1 给整体模型，A:#8 是具体攻击与对应缓解，A:#5 讲消费者如何校验，B:#1 从“能不能自己重建”角度说明完整性的意义，B:#6 讲校验和/内嵌签名/共享证明。"
-   },
-   {
-    "topic": "可复现构建",
-    "refs": [
-     "B:#2",
-     "B:#3",
-     "B:#5"
-    ],
-    "note": "B:#2 是做法清单与确定性构建系统，B:#3 把不可复现的成因逐项拆开，B:#5 讲把环境一起分发；SLSA 规范本身不定义可复现性。"
+    "note": "介绍 SBOM 应记录的信息与质量要求，不要求掌握整份规范。"
    }
   ],
-  "omitted": "A 里没收的页面：What's new、Use cases、Guiding principles、FAQ、Future directions（版本与问答性质）、Supply chain threats（面向新手的概览）、Tracks、Distributing provenance、Assessing build platforms、Producing source、Verifying source、Assessing source control systems、Example controls、Verified Properties、General model、Verification Summary（Source 轨道与其余 attestation 格式，与本节点的五个知识点关系较远）；Build Provenance 页里的 Index of build types、Migrating from 0.2、Change history（各构建类型的索引与版本迁移）以及 Threats 页里每条威胁下的具体子项（(A) Producer 到 (I) Usage 等）留作 D3/D4 深入时再展开。B 里没收的组与页：History、Why reproducible builds?、Making plans、Academic publications（项目史与计划）、Value initialization 与 Rust/JVM/Helm（具体语言生态的差异页）、Specifications 组（SOURCE_DATE_EPOCH 标准与 BUILD_PATH_PREFIX_MAP 仍在 WIP）；这些是可复现构建的工程细节，与本节点五个知识点关系较远。C 里没收的章：PREFACE、THE INNOVATIVE HISTORY OF OWASP CYCLONEDX、INTRODUCTION 的其余小节（Design Philosophy、The Role of SBOM in Software Transparency、High-Level SBOM Use Cases、xBOM Capabilities）、LIFECYCLE PHASES、USE CASES 里的其余场景（Vulnerability Management、CMDB、License Compliance、Outdated Component Analysis、Pedigree、FOCI、Export Compliance、Procurement、Vendor Risk Management、Supply Chain Management、Composition Completeness、“Known Unknowns”、Version Ranges、Formulation Assurance、密码学资产相关的几节）、GENERATING CYCLONEDX BOMS 及其后的实践章节。"
+  "omitted": "A 未收的章：3 SLO Engineering Case Studies、6 Eliminating Toil、7 Simplicity、12 Introducing Non-Abstract Large System Design、13 Data Processing Pipelines、15 Configuration Specifics、18 SRE Engagement Model、19 SRE: Reaching Beyond Your Walls、20 SRE Team Lifecycles、21 Organizational Change Management in SRE，以及 Conclusion、Appendix A/B/C、Index、About the Editors；第 2/4/5/16 章内的图表标题、示例小节与每章末尾的 Conclusion 小节也未收。B 未收 Concept 与 Plan 两节（What is DevOps?、SecDevOps、Agile/scrum/Kanban 等，属于别的节点）以及 “Governance in Azure when using CI/CD”。；A 里没收的页面：What's new、Use cases、Guiding principles、FAQ、Future directions（版本与问答性质）、Supply chain threats（面向新手的概览）、Tracks、Distributing provenance、Assessing build platforms、Producing source、Verifying source、Assessing source control systems、Example controls、Verified Properties、General model、Verification Summary（Source 轨道与其余 attestation 格式，与本节点的五个知识点关系较远）；Build Provenance 页里的 Index of build types、Migrating from 0.2、Change history（各构建类型的索引与版本迁移）以及 Threats 页里每条威胁下的具体子项（(A) Producer 到 (I) Usage 等）留作 D3/D4 深入时再展开。B 里没收的组与页：History、Why reproducible builds?、Making plans、Academic publications（项目史与计划）、Value initialization 与 Rust/JVM/Helm（具体语言生态的差异页）、Specifications 组（SOURCE_DATE_EPOCH 标准与 BUILD_PATH_PREFIX_MAP 仍在 WIP）；这些是可复现构建的工程细节，与本节点五个知识点关系较远。C 里没收的章：PREFACE、THE INNOVATIVE HISTORY OF OWASP CYCLONEDX、INTRODUCTION 的其余小节（Design Philosophy、The Role of SBOM in Software Transparency、High-Level SBOM Use Cases、xBOM Capabilities）、LIFECYCLE PHASES、USE CASES 里的其余场景（Vulnerability Management、CMDB、License Compliance、Outdated Component Analysis、Pedigree、FOCI、Export Compliance、Procurement、Vendor Risk Management、Supply Chain Management、Composition Completeness、“Known Unknowns”、Version Ranges、Formulation Assurance、密码学资产相关的几节）、GENERATING CYCLONEDX BOMS 及其后的实践章节。"
  },
  "P.5.5": {
   "sources": [

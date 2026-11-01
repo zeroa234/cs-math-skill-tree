@@ -24,6 +24,31 @@
     "https://learningds.org/intro.html"
    ],
    "why": "补 PDSH 缺的两头：①“问题定义”与“工作流”——第 1 章数据科学生命周期、第 2 章 Questions and Data Scope（目标总体/访问框/样本、测量与精度）；②“数据获取”——第 8 章 Wrangling Files（数据源、文件格式、编码）、第 9 章 Quality Checks 与缺失值处理、第 14 章 Data Exchange（JSON/HTTP/REST 取数）。这是 Berkeley Data 100 的官方在线教材，面向刚入门的数据科学课程。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "scikit-learn user guide: 3.4 Metrics and scoring + 12 Common pitfalls and recommended practices",
+   "by": "scikit-learn developers",
+   "year": 2025,
+   "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+   "toc_urls": [
+    "https://scikit-learn.org/stable/modules/model_evaluation.html",
+    "https://scikit-learn.org/stable/common_pitfalls.html"
+   ],
+   "why": "补两处 A 缺的：①“指标”——A 全书没有 accuracy/precision/recall/F1/ROC、回归误差这类评估指标的专门章节，scikit-learn 3.4 节按分类/回归/排序分组给出指标定义与选用建议；②“泄漏”——12.2 节专讲 data leakage（含预处理阶段的泄漏）与如何避免，12.3 节讲随机性控制与可复现的交叉验证结果。"
+  },
+  {
+   "key": "D",
+   "kind": "docs",
+   "title": "Experiment Management — Data Version Control (DVC) user guide",
+   "by": "Iterative / DVC project",
+   "year": 2025,
+   "url": "https://dvc.org/doc/user-guide/experiment-management",
+   "toc_urls": [
+    "https://dvc.org/doc/user-guide/experiment-management"
+   ],
+   "why": "补“实验记录”：A 与 B 都是方法侧材料，没有讲怎么把每次实验的参数、指标、产物和版本记下来；实验记录是工程实践，按“工程实践类用权威官方文档”的规则，用数据/实验版本管理的事实标准 DVC 的官方用户指南（实验对象、保存实验、指标/曲线/参数、模型与数据集的记录方式）。"
   }
  ],
  "outline": [
@@ -312,6 +337,11 @@
      "ref": "2.5",
      "title": "Accuracy",
      "zh": "准确度"
+    },
+    {
+     "ref": "2.4",
+     "title": "Measuring Natural Phenomena",
+     "zh": "测量自然现象"
     }
    ]
   },
@@ -401,6 +431,264 @@
      "zh": "REST"
     }
    ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Simulation and Data Design",
+   "zh": "模拟与数据设计",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "The Urn Model",
+     "zh": "罐子模型"
+    },
+    {
+     "ref": "3.2",
+     "title": "Example: Simulating Election Poll Bias and Variance",
+     "zh": "实例：模拟民调偏差与方差"
+    },
+    {
+     "ref": "3.3",
+     "title": "Example: Simulating a Randomized Trial for a Vaccine",
+     "zh": "实例：模拟疫苗随机试验"
+    },
+    {
+     "ref": "3.4",
+     "title": "Example: Measuring Air Quality",
+     "zh": "实例：测量空气质量"
+    }
+   ],
+   "fill": "来自 D.3.3 的导览图"
+  },
+  {
+   "src": "B",
+   "ref": "16",
+   "title": "Model Selection",
+   "zh": "模型选择",
+   "items": [
+    {
+     "ref": "16.1",
+     "title": "Overfitting",
+     "zh": "过拟合"
+    },
+    {
+     "ref": "16.2",
+     "title": "Train-Test Split",
+     "zh": "训练集-测试集划分"
+    },
+    {
+     "ref": "16.3",
+     "title": "Cross-Validation",
+     "zh": "交叉验证"
+    },
+    {
+     "ref": "16.4",
+     "title": "Regularization",
+     "zh": "正则化"
+    },
+    {
+     "ref": "16.6",
+     "title": "Model Bias and Variance",
+     "zh": "模型的偏差与方差"
+    }
+   ],
+   "fill": "来自 D.3.3 的导览图"
+  },
+  {
+   "src": "B",
+   "ref": "17",
+   "title": "Theory for Inference and Prediction",
+   "zh": "推断与预测的理论",
+   "items": [
+    {
+     "ref": "17.1",
+     "title": "Distributions: Population, Empirical, Sampling",
+     "zh": "分布：总体分布、经验分布与抽样分布"
+    },
+    {
+     "ref": "17.2",
+     "title": "Basics of Hypothesis Testing",
+     "zh": "假设检验基础"
+    },
+    {
+     "ref": "17.3",
+     "title": "Bootstrapping for Inference",
+     "zh": "用自助法做推断"
+    },
+    {
+     "ref": "17.4",
+     "title": "Basics of Confidence Intervals",
+     "zh": "置信区间基础"
+    },
+    {
+     "ref": "17.5",
+     "title": "Basics of Prediction Intervals",
+     "zh": "预测区间基础"
+    }
+   ],
+   "fill": "来自 D.3.3 的导览图"
+  },
+  {
+   "src": "B",
+   "ref": "19",
+   "title": "Classification",
+   "zh": "分类",
+   "items": [
+    {
+     "ref": "19.2",
+     "title": "Modeling and Classification",
+     "zh": "建模与分类"
+    },
+    {
+     "ref": "19.3",
+     "title": "Modeling Proportions (and Probabilities)",
+     "zh": "对比例（与概率）建模"
+    },
+    {
+     "ref": "19.5",
+     "title": "From Probabilities to Classification",
+     "zh": "从概率到分类判定"
+    }
+   ],
+   "fill": "来自 D.3.3 的导览图"
+  },
+  {
+   "src": "C",
+   "ref": "3.4",
+   "title": "Metrics and scoring: quantifying the quality of predictions",
+   "zh": "指标与评分：量化预测质量",
+   "fill": "补“指标”：A 没有评估指标的专门章节，这里补指标选用、分类指标（准确率、混淆矩阵、精确率/召回率/F 值、ROC）与回归指标（R²、MAE、MSE）",
+   "items": [
+    {
+     "ref": "3.4.1",
+     "title": "Which scoring function should I use?",
+     "zh": "该用哪种评分函数"
+    },
+    {
+     "ref": "3.4.4",
+     "title": "Classification metrics",
+     "zh": "分类指标"
+    },
+    {
+     "ref": "3.4.4.2",
+     "title": "Accuracy score",
+     "zh": "准确率"
+    },
+    {
+     "ref": "3.4.4.6",
+     "title": "Confusion matrix",
+     "zh": "混淆矩阵"
+    },
+    {
+     "ref": "3.4.4.9",
+     "title": "Precision, recall and F-measures",
+     "zh": "精确率、召回率与 F 值"
+    },
+    {
+     "ref": "3.4.4.15",
+     "title": "Receiver operating characteristic (ROC)",
+     "zh": "受试者工作特征曲线（ROC）"
+    },
+    {
+     "ref": "3.4.6",
+     "title": "Regression metrics",
+     "zh": "回归指标"
+    },
+    {
+     "ref": "3.4.6.1",
+     "title": "R² score, the coefficient of determination",
+     "zh": "R² 决定系数"
+    },
+    {
+     "ref": "3.4.6.2",
+     "title": "Mean absolute error",
+     "zh": "平均绝对误差"
+    },
+    {
+     "ref": "3.4.6.3",
+     "title": "Mean squared error",
+     "zh": "均方误差"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "12",
+   "title": "Common pitfalls and recommended practices",
+   "zh": "常见陷阱与推荐做法",
+   "fill": "补“泄漏”与可复现的随机性控制：A 只讲训练集/测试集划分与交叉验证的正确用法，没有讲数据泄漏（预处理在划分前做、目标泄漏）这一常见错误",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Inconsistent preprocessing",
+     "zh": "预处理不一致"
+    },
+    {
+     "ref": "12.2",
+     "title": "Data leakage",
+     "zh": "数据泄漏"
+    },
+    {
+     "ref": "12.2.1",
+     "title": "How to avoid data leakage",
+     "zh": "如何避免数据泄漏"
+    },
+    {
+     "ref": "12.2.2",
+     "title": "Data leakage during pre-processing",
+     "zh": "预处理阶段的数据泄漏"
+    },
+    {
+     "ref": "12.3",
+     "title": "Controlling randomness",
+     "zh": "控制随机性"
+    },
+    {
+     "ref": "12.3.3.1",
+     "title": "Getting reproducible results across multiple executions",
+     "zh": "多次运行得到可复现的结果"
+    },
+    {
+     "ref": "12.3.3.2",
+     "title": "Robustness of cross-validation results",
+     "zh": "交叉验证结果的稳健性"
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "",
+   "title": "Experiment Management",
+   "zh": "实验管理",
+   "fill": "补“实验记录”：怎么把一次实验的参数、指标、曲线、模型与数据版本记录下来并可回放（DVC 的实验对象、保存实验、指标/曲线/参数、模型与数据集）",
+   "items": [
+    {
+     "ref": "",
+     "title": "DVC Experiments Overview",
+     "zh": "DVC 实验概览"
+    },
+    {
+     "ref": "",
+     "title": "How does DVC track experiments?",
+     "zh": "DVC 如何记录实验"
+    },
+    {
+     "ref": "",
+     "title": "Save experiments",
+     "zh": "保存实验"
+    },
+    {
+     "ref": "",
+     "title": "Metrics, plots, parameters",
+     "zh": "指标、曲线与参数"
+    },
+    {
+     "ref": "",
+     "title": "Models and datasets",
+     "zh": "模型与数据集"
+    }
+   ]
   }
  ],
  "coverage": [
@@ -449,7 +737,7 @@
     "A:#2",
     "A:#5"
    ],
-   "note": "A 的 NumPy 章（数据类型、数组基础、通用函数、聚合、广播、布尔掩码、花式索引、排序、结构化数组）是统计计算的底座，scikit-learn 章讲模型验证、特征工程、PCA、k-means 这类统计/机器学习包用法；scipy.stats、statsmodels 这两类纯统计包 PDSH 没有专章，推断统计部分放在节点 D.3.3。"
+   "note": "A 覆盖 NumPy 与 scikit-learn 的用法；推断与评估读 B 的相关章，非一个统计包的完整 API 课。"
   },
   {
    "topic": "工作流",
@@ -458,13 +746,77 @@
     "B:#1"
    ],
    "note": "A 第 1 章的魔术命令、输入输出历史、性能分析与计时是 notebook 内的操作流；项目级工作流（生命周期、每个阶段产出什么）只有 B 第 1 章讲；工程化的管道/调度/环境复现两本书都没有专章。"
+  },
+  {
+   "topic": "抽样偏差",
+   "refs": [
+    "B:2.2",
+    "B:2.5",
+    "B:3.1",
+    "B:3.2"
+   ],
+   "note": "B 第 2 章讨论总体、访问框、样本和精度，第 3 章用模拟说明偏差与方差。"
+  },
+  {
+   "topic": "泄漏",
+   "refs": [
+    "C:12.2",
+    "C:12.2.1",
+    "C:12.2.2",
+    "B:16.1"
+   ],
+   "note": "C 第 12.2 节专讲数据泄漏，B 第 16 章讲训练与测试划分。"
+  },
+  {
+   "topic": "指标",
+   "refs": [
+    "C:3.4.1",
+    "C:3.4.4",
+    "C:3.4.4.2",
+    "C:3.4.4.6",
+    "C:3.4.4.9",
+    "C:3.4.4.15",
+    "C:3.4.6",
+    "C:3.4.6.1",
+    "C:3.4.6.2",
+    "C:3.4.6.3"
+   ],
+   "note": "C 第 3.4 节给分类、回归指标与选用原则。"
+  },
+  {
+   "topic": "交叉验证",
+   "refs": [
+    "B:16.2",
+    "B:16.3",
+    "B:16.6",
+    "C:12.3.3.2"
+   ],
+   "note": "B 第 16 章讲交叉验证和偏差方差，C 补随机性及结果稳健性。"
+  },
+  {
+   "topic": "实验记录",
+   "refs": [
+    "D:#1"
+   ],
+   "note": "D 用实验对象与参数、指标、模型和数据版本介绍可追溯的实验记录。"
+  },
+  {
+   "topic": "不确定性",
+   "refs": [
+    "B:17.1",
+    "B:17.2",
+    "B:17.3",
+    "B:17.4",
+    "B:17.5"
+   ],
+   "note": "B 第 17 章覆盖抽样分布、自助法、置信区间与预测区间。"
   }
  ],
- "omitted": "A（PDSH）第 1 章未收 Keyboard Shortcuts in the IPython Shell、IPython and Shell Commands、More IPython Resources；第 2 章整章收；第 3 章未收 Further Resources；第 4 章只收与探索分析直接相关的 8 节，未收 Text and Annotation、Customizing Ticks、Customizing Colorbars、Customizing Matplotlib: Configurations and Stylesheets、Three-Dimensional Plotting in Matplotlib、Geographic Data with Basemap、Further Resources；第 5 章只收与“统计包/模型验证”相关的 6 节，未收朴素贝叶斯、线性回归、SVM、决策树、流形学习、高斯混合、核密度估计、人脸检测流水线、Further Machine Learning Resources（这些属于机器学习节点的内容）。另有 Preface、Appendix: Figure Code 未收。B（Learning Data Science）未收第 3–7、10–13、15–21 章（模拟与实验设计、汇总统计建模、pandas/SQL、探索分析与可视化、线性模型、模型选择、推断理论、分类、案例研究），因为它们分别属于节点的其它兄弟（D.3.3 评估与实验、M.6.x 统计、A.x 机器学习），与“导论与工具箱”这条线关系较远。",
- "notes": "A 的目录页每章只印章节号（1.～5.），节标题不印编号；item 的 ref（1.1、3.4 这类章.节号）按站点自身的小节页地址补（目录页各节链接名形如 03.04-missing-values.html，编号与节一一对应），节标题全部按目录页原文抄录。coverage 里用 A:#编号 指章。B 的目录页每行是“1.1. 标题”形式，ref 抄编号、title 抄编号后的标题原文。PDSH 的年份取首版（2016，O'Reilly），站点上的 HTML 版是全文；B 是 O'Reilly 2023 版全文（CC BY-NC-ND）。",
+ "omitted": "A（PDSH）第 1 章未收 Keyboard Shortcuts in the IPython Shell、IPython and Shell Commands、More IPython Resources；第 2 章整章收；第 3 章未收 Further Resources；第 4 章只收与探索分析直接相关的 8 节，未收 Text and Annotation、Customizing Ticks、Customizing Colorbars、Customizing Matplotlib: Configurations and Stylesheets、Three-Dimensional Plotting in Matplotlib、Geographic Data with Basemap、Further Resources；第 5 章只收与“统计包/模型验证”相关的 6 节，未收朴素贝叶斯、线性回归、SVM、决策树、流形学习、高斯混合、核密度估计、人脸检测流水线、Further Machine Learning Resources（这些属于机器学习节点的内容）。另有 Preface、Appendix: Figure Code 未收。B（Learning Data Science）未收第 3–7、10–13、15–21 章（模拟与实验设计、汇总统计建模、pandas/SQL、探索分析与可视化、线性模型、模型选择、推断理论、分类、案例研究），因为它们分别属于节点的其它兄弟（D.3.3 评估与实验、M.6.x 统计、A.x 机器学习），与“导论与工具箱”这条线关系较远。；A（Learning Data Science）未收：第 1 章 The Data Science Lifecycle（已在 D.3.1 收录）、第 4–8 章（常量模型与损失、公交车案例、pandas、SQL、文件整理）、第 10–12 章（探索性分析、可视化、空气质量案例）、第 13–15 章（文本、数据交换、线性模型）、第 18 章驴子案例、第 20 章数值优化、第 21 章假新闻案例，以及概率与向量空间附录——它们要么属于兄弟节点（D.3.1 工具箱、M.6.x 统计、A.x 机器学习），要么是案例章节；9.1 的案例引导与 9.5–9.7 也未收。B 只收 3.4 与 12 两节，3.4 内部的 3.4.2/3.4.3（scoring API 与 make_scorer 用法）、3.4.5 多标签排序指标、3.4.7 聚类指标、3.4.8 dummy 估计器与 12.3.1/.2 的 RandomState 细节未收（属实现细节）。C 只收实验管理页的正文小节，页面上下的大量 CLI 命令清单（dvc exp run/save/list…）与站点导航不算目录条目。",
+ "notes": "A 的目录页每章只印章节号（1.～5.），节标题不印编号；item 的 ref（1.1、3.4 这类章.节号）按站点自身的小节页地址补（目录页各节链接名形如 03.04-missing-values.html，编号与节一一对应），节标题全部按目录页原文抄录。coverage 里用 A:#编号 指章。B 的目录页每行是“1.1. 标题”形式，ref 抄编号、title 抄编号后的标题原文。PDSH 的年份取首版（2016，O'Reilly），站点上的 HTML 版是全文；B 是 O'Reilly 2023 版全文（CC BY-NC-ND）。；并入 D.3.3 的导览图：两点说明：(1) A 的目录页每行是“16.3. Cross-Validation”形式，ref 抄编号、title 抄编号后的原文；第 16 章目录里从 16.4 直接跳到 16.6（原书没有 16.5），照抄未改。(2) 实验记录这一项本想用 MLflow Tracking 官方页（更标准），但该站是 JS 渲染，research_tool 的 fetch 拿到 0 字符、extract 返回 Failed to fetch url，读不到正文，故改用 DVC 官方用户指南（同为实验/数据版本管理的事实标准），并在 why 里写明；DVC 页面无章节编号，ref 留空，coverage 用 C:#1 指向该分支。B 的书目信息为 scikit-learn 用户指南（页面标题显示 scikit-learn 1.9.1 documentation）。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 68,
+  "exact": 115,
   "fuzzy": 0,
   "dropped": []
  }

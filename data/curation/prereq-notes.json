@@ -229,10 +229,6 @@
   "F.2.2": "MIT 6.852J：形式化计算模型的经验 desirable, but not essential。",
   "_summary": "MIT 6.852J/18.437J（Lynch）：数学成熟度 + 算法 + 系统背景；EPFL CS-451：算法、网络、操作系统。"
  },
- "C.4.4": {
-  "C.4.1": "分区、副本、恰好一次语义都是分布式系统概念。",
-  "_summary": "证据不足：KTH ID2221 课程页没写先修；按内容需要起草，待核实。"
- },
  "C.5.1": {
   "C.1.1": "CMU 15-418：15-213 is a strict prerequisite（存储层次、内存管理）。",
   "P.2.2": "CMU 15-418 要求 strong C/C++ programmer；OpenMP、MPI 都是 C/C++/Fortran 接口。",
@@ -289,35 +285,31 @@
   "I.1.1": "UT Dallas ITSS 4356 Data Governance 先修 ITSS 3300《商业信息技术》（业务流程与信息系统）；Duke LAW 475A 说不需要技术背景，所以不作为必须。",
   "_summary": "UT Dallas ITSS 4356 Data Governance：先修 ITSS 3300 Information Technology for Business；UT Dallas ITSS 4V95 大纲：建议有数据库知识但非必需；Duke LAW 475A Data Governance：不需要技术背景。"
  },
- "D.2.1": {
-  "D.3.1": "Berkeley Data 101（数据工程）要求先修 Data 100 等数据科学课。",
-  "F.1.1": "Berkeley Data 101 要求 CS 61B 或同等的编程课。",
+ "D.2.2": {
+  "D.3.1": "Berkeley Data 101 Data Engineering 要求先修高年级数据科学课（Data 100 等）。",
+  "F.1.1": "Berkeley Data 101 要求 CS 61B 或同等的编程与数据结构课。",
+  "C.4.1": "Spark、Kafka 的容错、分区与恰好一次语义是分布式系统概念；找到的课都没有把分布式系统列为先修。",
+  "F.1.2": "Stanford CS 246 期望 CS 161 水平的算法分析；Northeastern CS 7240 要求本科算法知识。",
+  "M.6.1": "Stanford CS 246 期望概率基础（采样、哈希类算法）。",
   "D.1.1": "Data 101 课内会复习 SQL；入库和转换常用 SQL 表达。",
   "P.2.3": "管线常用 Python 编写。",
-  "_summary": "Berkeley Data 101 / CS 187 Data Engineering：先修高年级数据科学课 + CS 61B。"
- },
- "D.2.2": {
-  "D.3.1": "Berkeley Data 101 要求先修数据科学课。",
-  "F.1.1": "Berkeley Data 101 要求 CS 61B。",
-  "D.2.1": "批处理作业通常嵌在数据管线里调度。",
-  "C.4.1": "Spark 等系统的容错、shuffle 以分布式系统为基础；两门课都没把它列为先修。",
-  "F.1.2": "Stanford CS 246 期望 CS 161 水平的算法分析。",
-  "M.6.1": "Stanford CS 246 期望概率基础（采样、哈希类算法）。",
-  "_summary": "Berkeley Data 101：先修数据科学课 + 61B；Stanford CS 246：期望概率、证明、线性代数、算法分析。"
+  "_summary": "Berkeley Data 101 / CS 187 Data Engineering：先修高年级数据科学课 + CS 61B；Stanford CS 246：期望概率、证明、线性代数、算法分析；Northeastern CS 7240：要求本科算法知识；UW-Madison CS 744、KTH ID2221：只限研究生身份或未写先修。"
  },
  "D.2.3": {
-  "F.1.2": "Stanford CS 276 要求 CS 161（算法设计与分析）；倒排索引压缩、求交、近似最近邻都是算法问题。",
+  "F.1.2": "Stanford CS 276 要求 CS 161（算法设计与分析）；倒排索引压缩、求交、近似最近邻都是算法问题。；CS 161 含图与字符串算法，PageRank、字符串匹配会用到。",
   "M.6.1": "Stanford CS 276 要求扎实的概率统计基础；语言模型检索、评估都要用。",
   "P.2.2": "CS 276 建议先修 CS 107（C 与机器级编程）。",
-  "F.1.3": "CS 161 含图与字符串算法，PageRank、字符串匹配会用到。",
   "M.3.1": "向量空间模型、向量检索用线性代数。",
   "P.2.3": "CS 276 作业全用 Python。",
   "_summary": "Stanford CS 276 Information Retrieval：CS 107 + CS 161 + 概率统计，作业用 Python。"
  },
  "D.3.1": {
+  "P.1.1": "Berkeley Data 100 强制先修 CS 61A；入门层对应的 Data 8 不要求编程，评估与可复现那部分（Data 100 的内容）才用得上。",
   "P.2.3": "Python 数据工具（pandas、NumPy）在课内会讲；先会 Python 上手更快。",
   "M.6.1": "Data 8 在课内讲基础统计推断，有概率基础会更轻松。",
-  "_summary": "Berkeley Data 8 Foundations of Data Science：专为没学过统计和计算机的学生设计，作为第 1 步的起点；后续的 Data 100 才要求 Data 8 + 编程 + 线性代数。"
+  "M.6.2": "置信区间、假设检验、偏差与方差属于数理统计；Data 100 只讲到够用。",
+  "M.3.1": "Data 100 要求线性代数，用在回归与降维上。",
+  "_summary": "Berkeley Data 8 Foundations of Data Science：专为没学过统计和计算机的学生设计；Berkeley Data 100：强制先修 Data 8 + CS 61A + 线性代数（评估、交叉验证、偏差方差等内容在这门课里）。"
  },
  "D.3.2": {
   "M.6.1": "Stanford CS 246 期望概率基础（CS 109 水平）；关联度量、采样、局部敏感哈希都是概率论证。",
@@ -327,13 +319,6 @@
   "A.2.1": "聚类、异常检测与机器学习方法重合。",
   "M.6.2": "评估发现的模式是否显著要用统计。",
   "_summary": "Stanford CS 246 Mining Massive Datasets：期望概率、严格证明、线性代数、算法分析背景。"
- },
- "D.3.3": {
-  "D.3.1": "Berkeley Data 100 强制先修 Data 8（数据科学导论）。",
-  "P.1.1": "Berkeley Data 100 强制先修 CS 61A。",
-  "M.6.2": "置信区间、假设检验、功效分析属于数理统计；Data 100 只讲到够用。",
-  "M.3.1": "Data 100 要求线性代数。",
-  "_summary": "Berkeley Data 100：强制先修 Data 8 + CS 61A + 线性代数。"
  },
  "D.4.1": {
   "M.5.2": "本体工程课程（Keet 的 Ontology Winter School）假定熟悉一阶逻辑；OWL/描述逻辑是一阶逻辑的片段。",
@@ -353,15 +338,11 @@
   "_summary": "Berkeley CS 61B：先修 COMPSCI 61A/88/ENGIN 7；MIT 6.006：要求 Python 与离散数学（6.01 + 6.042J）。"
  },
  "F.1.2": {
-  "F.1.1": "Berkeley CS 170 必修 61B（数据结构）。",
+  "F.1.1": "Berkeley CS 170 必修 61B（数据结构）；图算法要用邻接表、堆和并查集。",
   "M.5.3": "CS 170 必修 CS 70，MIT 6.006 要求 6.042J：正确性证明、递推都要用归纳。",
   "M.6.1": "CS 70 同时教概率，随机化算法和期望分析用得到。",
   "M.5.4": "计数与递推在复杂度分析里常用。",
-  "_summary": "Berkeley CS 170：先修 COMPSCI 61B + 70；MIT 6.006：Python + 6.042J。"
- },
- "F.1.3": {
-  "F.1.2": "MIT 6.046J 期望先修 6.006（算法入门）；最短路、流的正确性证明延续算法课的方法。",
-  "_summary": "MIT 6.046J：strongly encouraged 6.006 + 6.042J；Princeton COS 226：先修 COS 126。两门课都没要求图论课，图的概念课内讲。"
+  "_summary": "Berkeley CS 170：先修 COMPSCI 61B + 70；MIT 6.006：Python + 6.042J；MIT 6.046J：强烈建议 6.006 + 6.042J；Princeton COS 226：先修 COS 126。图论的概念在课内讲，都没有要求图论课。"
  },
  "F.1.4": {
   "F.1.2": "Cornell CS 6820 要求 CS 4820 或同等的高年级算法课。",
@@ -637,9 +618,9 @@
   "_summary": "MIT 18.353J：先修 18.03 + 8.02，并要求特征值知识；UCSD MATH 130：先修线性代数 + 20D。"
  },
  "M.2.4": {
-  "M.1.4.1": "Euler–Lagrange 方程由对 y、y′ 的偏导数构成。",
   "M.2.1": "MIT 16.323 assumes a good working knowledge of differential equations；E–L 方程本身是 ODE。",
   "M.3.1": "MIT 16.323 同样要求线性代数（LQR、状态空间）。",
+  "M.1.4.1": "Euler–Lagrange 方程由对 y、y′ 的偏导数构成；MIT 16.323 只写了线性代数与微分方程，没有单列多元微积分，所以列为推荐。",
   "H.4.1": "MIT 16.323：control design background is best ... but not essential。",
   "M.7.1": "最优性条件和有限维优化的一阶条件是同一套思路。",
   "_summary": "MIT 16.323 Principles of Optimal Control：要求线性代数和微分方程，控制背景有帮助但非必需。"
@@ -682,9 +663,8 @@
   "_summary": "MIT 18.901（Munkres 讲授）：先修 18.100B；集合论基础在课内前两周现教，不另列前置。"
  },
  "M.4.4": {
-  "F.1.2": "UMD CMSC 754 要求 CMSC451 Algorithms，Berkeley CS 274 要求 CS 170：分治、扫描线、摊还分析都是前置。",
+  "F.1.2": "UMD CMSC 754 要求 CMSC451 Algorithms，Berkeley CS 274 要求 CS 170：分治、扫描线、摊还分析都是前置。；Berkeley CS 274 点名要求会 Dijkstra、拓扑排序等图算法。",
   "M.4.1": "几何谓词就是向量的叉积和点积，课程默认会。",
-  "F.1.3": "Berkeley CS 274 点名要求会 Dijkstra、拓扑排序等图算法。",
   "_summary": "UMD CMSC 754：CMSC451 + CMSC420；Berkeley CS 274：CS 170 或同等。两门都没要求图论课。"
  },
  "M.4.5": {
@@ -771,14 +751,20 @@
  },
  "M.6.4": {
   "M.6.2.2": "多伦多 STA457（时间序列）要求 STA302 回归课；ARMA 模型的估计与诊断沿用回归方法。",
-  "M.6.3.1": "排队模型是连续时间马尔可夫链。",
-  "M.1.4.1": "多伦多 STA457 也要求多元微积分。",
-  "_summary": "多伦多 STA457H1：先修 STA302H1 + 多元微积分；Raj Jain 排队论短课：概率统计基础有帮助。"
+  "M.1.4.1": "多伦多 STA457 也要求多元微积分；入门的平滑与 ARIMA 预测用不到，似然估计的推导才用得上。",
+  "_summary": "多伦多 STA457H1 Time Series Analysis：先修 STA302H1 回归 + 多元微积分（MAT235/236 或 MAT237/257）。"
  },
  "M.6.5": {
   "M.6.1": "熵、互信息都是概率分布的函数；Stanford EE 376A 假定一门本科概率课。",
   "M.6.3": "UCSD ECE 159 先修 ECE 153（随机过程）；信源和信道常用随机过程建模。",
   "_summary": "Stanford EE 376A：假定本科概率基础；UCSD ECE 159：先修 ECE 153。"
+ },
+ "M.6.6": {
+  "M.6.1": "CMU 15-857 写明要有本科概率论基础（连续与离散分布、条件期望、高阶矩）；到达与服务时间都是随机变量。",
+  "M.6.3": "CMU 15-857 在课内讲马尔可夫链、Poisson 过程与更新理论，没有列为先修；M/G/1 等深入分析要用到。",
+  "M.6.3.1": "M/M/* 队列和生灭过程就是连续时间马尔可夫链，CMU 15-857 在课内讲。",
+  "P.1.1": "WUSTL CSE 567M 先修 CSE 131 计算机导论；做仿真与性能测量要编程，解析建模本身不需要。",
+  "_summary": "CMU 15-857 Analytical Performance Modeling & Design of Computer Systems：要求本科概率论基础；WUSTL CSE 567M Computer Systems Analysis：先修 CSE 131/126 入门编程，概率论有帮助；Raj Jain 排队论小课：概率统计基础有帮助。"
  },
  "M.7.1": {
   "M.3.1": "线性规划的单纯形法、对偶都是线性代数；UCSD MATH 171A 与 UW IND E 310 都要求线性代数。",
@@ -849,10 +835,10 @@
   "_summary": "CMU 21-387：概率 + 多元微积分 + 编程经验；UCSD MATH 114：建议先修编程课。"
  },
  "M.8.5": {
-  "P.1.1": "计算图、反向传播要写程序实现；CMU 10-414 的作业是手写 autodiff。",
+  "M.1.4.1": "自动微分实现的就是链式法则与雅可比乘积；MIT 18.S096 要求线性代数 + 多元微积分。",
+  "P.1.1": "计算图与反向传播的实现要写程序（CMU 10-414 的作业是手写 autodiff）；MIT 18.S096 只要求 18.06 与 18.02，没有要求编程，所以列为推荐。",
   "F.1.1": "反向模式要按拓扑序遍历计算图。",
-  "_summary": "MIT 18.S096 Matrix Calculus：先修 18.06 + 18.02；CMU 10-414（dlsyscourse）第 4–5 讲实现自动微分。",
-  "M.1.4.1": "自动微分实现的就是链式法则与雅可比乘积；MIT 18.S096 要求线性代数 + 多元微积分。"
+  "_summary": "MIT 18.S096 Matrix Calculus：先修 18.06 + 18.02；CMU 10-414（dlsyscourse）第 4–5 讲实现自动微分。"
  },
  "M.8.6": {
   "F.1.2": "SFU MACM 401 的先修是 CMPT 307 数据结构与算法：大整数、多项式算法的复杂度分析是课程主线。",
@@ -890,7 +876,7 @@
   "_summary": "UW CSE 163：先修入门编程课；UW CSE 160 面向零基础。"
  },
  "P.2.4": {
-  "P.1.1": "调试器、构建和版本控制的对象都是程序；CMU 15-131 和 MIT Missing Semester 都面向已经开始写程序的一年级学生。",
+  "P.1.1": "调试器、构建和版本控制的对象都是程序；MIT Missing Semester 与 CMU 15-131 都没有正式先修，适合与第一门编程课同时学，所以列为推荐。",
   "_summary": "MIT Missing Semester、CMU 15-131 都没有正式先修，与第一门编程课同时学最合适。"
  },
  "P.3.1": {
@@ -961,16 +947,13 @@
   "_summary": "Stanford CS 193A：先修 CS 106B，建议有 Java 经验；NTNU INFT2508：建议编程、OOP、Web 基础。"
  },
  "P.5.3": {
-  "P.2.4": "CI/CD 流水线由 Git 提交触发、调用构建和测试工具，这是内容上的直接依赖；UChicago MPCS 56550 与 Cornell CS 5150 只写了编程课先修，没有单列。",
+  "P.1.1": "UChicago MPCS 56550 Introduction to DevOps 要求修完核心编程课；Cornell CS 5150、CMU 17-313、Berkeley CS 169A 也都要求编程课；流水线脚本和配置都要写代码。",
+  "P.2.4": "CI/CD 由 Git 提交触发、调用构建和包管理工具；找到的课都在课内讲，没有单列为先修。",
+  "F.1.1": "Cornell CS 5150、CMU 17-313、Berkeley CS 169A 要求数据结构课；入门的流水线与发布不依赖它。",
   "C.2.1": "部署、容器、排障都要懂 Linux 进程与资源。",
   "C.3.2": "负载均衡、服务发现要懂网络。",
-  "_summary": "UChicago MPCS 56550 Introduction to DevOps：先修核心编程课；Cornell CS 5150 讲持续集成与发布管理，先修 CS 2110。"
- },
- "P.5.4": {
-  "P.2.4": "依赖管理、锁文件、构建工具是供应链安全的工作对象。",
-  "P.5.3": "签名、溯源证明都在 CI/CD 流水线里实施。",
   "S.1.1": "供应链攻击属于威胁建模的范畴。",
-  "_summary": "证据不足：找到的 CMU 17-313、Berkeley CS 169A 是通用软件工程课，并不专门讲供应链；按内容需要起草，待核实。"
+  "_summary": "UChicago MPCS 56550 Introduction to DevOps：先修核心编程课；Cornell CS 5150 Software Engineering（含持续集成、依赖管理、发布管理）：先修 CS 2110；CMU 17-313：先修 15-122/15-121；Berkeley CS 169A：先修 61A + 61B。没有找到以软件供应链为主题的大学课程。"
  },
  "P.5.5": {
   "F.1.1": "Kent State CS 38101（游戏编程入门）先修 CS 23001 数据结构与抽象；场景图是树结构，实体与组件的存储和查找都依赖基本数据结构。",
@@ -1189,9 +1172,8 @@
   "_summary": "Berkeley CS 287 Advanced Robotics：要求熟悉证明、概率、算法、线性代数并能写代码；U of T Self-Driving Cars Specialization：建议（recommended）具备线性代数、概率、统计、微积分、物理、控制理论和 Python 背景。"
  },
  "X.2.1": {
-  "F.1.2": "MIT 6.047 要求 6.006（算法导论）；Berkeley CS 176 要求 CS 170（算法设计与分析）。",
+  "F.1.2": "MIT 6.047 要求 6.006（算法导论）；Berkeley CS 176 要求 CS 170（算法设计与分析）。；图算法属于先修课内容；字符串算法（后缀树、模式匹配）是 CS 176 的课内内容。",
   "M.6.1": "MIT 6.047 要求 6.041（应用概率）；Berkeley CS 176 要求 CS 70（含概率）。",
-  "F.1.3": "图算法属于先修课内容；字符串算法（后缀树、模式匹配）是 CS 176 的课内内容。",
   "M.6.2": "多重检验、显著性等统计推断在课内用到，但两门课的先修只到概率论。",
   "_summary": "MIT 6.047 Computational Biology：先修 6.006、6.041 与 7.01（生物，树外）；Berkeley CS 176：先修 CS 70、CS 170 与编程经验，不要求生物先修。"
  },
