@@ -1,6 +1,6 @@
 # 宣传片：我把计算机专业做成了一棵技能树
 
-约 2 分 04 秒（124.1 s），1920×1080 / 30 fps，H.264 + AAC，响度 -16 LUFS。鲸鱼娘旁白 + 中文字幕 + CC0 背景音乐。成片 `output/promo/cs-math-promo.mp4`，封面 `output/promo/cover.jpg`（标题那一帧，10.6 s），混音前的画面 `cs-math-promo.raw.mp4`（只换 BGM 时从它重混，不用重渲）。都不入库，可按下面的步骤重新生成。
+约 2 分 04 秒（124.1 s），1920×1080 / 30 fps，H.264 + AAC，响度 -16 LUFS。鲸鱼娘旁白 + 中文字幕 + CC0 背景音乐。成片 `output/promo/cs-math-promo.mp4`，封面 `output/promo/cover-{16x9,4x3,3x4,9x16}.png` 和 `cover.jpg`（大标题 + 鲸鱼娘笑脸半身 + 3D 技能树，README 顶图 `docs/images/cover.webp` 也是它），混音前的画面 `cs-math-promo.raw.mp4`（只换 BGM 时从它重混，不用重渲）。都不入库，可按下面的步骤重新生成。
 
 ## 段落
 
@@ -38,13 +38,25 @@ bash scripts/promo/render-blender.sh        # → src/promo/public/blender/intro
 # 5. 先抽帧看版面，再出成片
 (cd src/promo && TEMP=D:/agent/projects/cs-math-skill-tree/temp/promo/tmp node stills.mjs --every 2.5)   # → temp/promo/stills/
 bash scripts/promo/render.sh                # Remotion 渲染 + 混 BGM + -16 LUFS → output/promo/cs-math-promo.mp4
-ffmpeg -ss 10.6 -i output/promo/cs-math-promo.mp4 -frames:v 1 -q:v 2 output/promo/cover.jpg   # 封面
-rm -rf temp/promo/blender                   # Blender 的 PNG 帧（约 1.4 GB），编成 mp4 后可删
+# 6. 封面：开场镜头标题那一刻（第 318 帧，10.6 s）的干净画面 + 鲸鱼娘半身 + 大字，四种尺寸
+D:/steam/steamapps/common/Blender/blender.exe -b --factory-startup -P scripts/promo/blender-tree.py -- --shot intro --out temp/promo/cover --frames 318 --samples 128
+D:/ComfyUI-aki-v3.2/python/python.exe scripts/promo/cover.py   # → output/promo/cover-*.png、cover.jpg、docs/images/cover.webp
+rm -rf temp/promo/blender                   # Blender 的 PNG 帧（约 1.4 GB），编成 mp4 后可删（temp/promo/cover/ 的封面背景帧留着，改字时重跑 cover.py 就行）
 ```
 
 文稿 `data/promo/script.json` 只有中文，数字写汉字（送 TTS 的就是原文）。改了文稿：重跑第 1 步（只重合成改过的拍）、`word-times.mjs`、Blender 两段和成片。只改画面代码：直接第 5 步。
 
-各步用时（RTX 3080，16 线程）：成片渲染 + 混音约 12 分钟（并发 6）；Breeze 13 拍 74 s；对齐 + ASR 质检约 1 分钟；截图约 1 分钟；Blender 开场 341 帧、片尾 333 帧各约 2 分钟（Eevee 48 采样，约 0.3 s / 帧）；抽帧 48 张约 50 s。
+各步用时（RTX 3080，16 线程）：成片渲染 + 混音约 12 分钟（并发 6）；Breeze 13 拍 74 s；对齐 + ASR 质检约 1 分钟；截图约 1 分钟；Blender 开场 341 帧、片尾 333 帧各约 2 分钟（Eevee 48 采样，约 0.3 s / 帧）；抽帧 48 张约 50 s；封面的 Blender 单帧（128 采样）约 5 s。
+
+## 依赖本仓库以外的东西
+
+宣传片是在作者本地的工作区里做的，下面这些放在同一工作区的其他项目里（路径按 `projects/<项目>/` 并排），不在本仓库：
+
+- `os-review-bilingual`：旁白管线（Breeze TTS 2 服务、对齐、质检、`timeline.py`、`mix-bgm.py`）、字体和合成音效、封面的 `hero()` / `glow_text()`（`scripts/cover.py`）。
+- `kurumi-fx-rogue/assets/bgm/`：BGM 文件（CC0，出处见下）。
+- `game-aesthetic-asset/output/deepseek-chan/src/E4_happy.png`：封面上鲸鱼娘（deepseek 娘）的笑脸立绘，透明底。
+
+所以在别的机器上，第 1 步（旁白）、第 4 步（字体、音效）和封面要换成自己的素材；截图、动画数据、Blender 场景和 Remotion 画面只依赖本仓库。
 
 ## 画面代码
 
@@ -60,7 +72,8 @@ rm -rf temp/promo/blender                   # Blender 的 PNG 帧（约 1.4 GB�
 - Remotion（画面合成，渲染时逐帧截图）、Blender 5.2 Eevee + 合成器 Bloom（3D 树）、d3-force（星图排版，固定随机种子）、playwright-core + 系统 Edge（页面截图）。
 - os-review-bilingual 的旁白管线（Breeze TTS 2、Qwen3 对齐器、SenseVoice 质检、`timeline.py`、`mix-bgm.py` / `loudnorm.py`）和合成音效。为了复用，给那边的 `narrate.py` 加了 `--out`、`timeline.py` 加了 `--nar` / `--out` 和只有一种语言的文稿（默认行为不变，u01 重出逐字节相同）。
 - BGM：Dizzy Crow《Piano & Drums, positive melancholy》，CC0（opengameart.org/node/87531），本地文件在 `kurumi-fx-rogue/assets/bgm/`（那边 `tracks.json` 已核对授权）。
-- 自己写的：`scripts/promo/` 的截图、布局、逐字时间、Blender 场景，和 `src/promo/` 的画面。
+- 封面：沿用 os-review-bilingual 的封面做法（立绘裁到腰 + 蓝色外发光、带光晕的大字），`scripts/promo/cover.py` 直接导入那边的函数，四种尺寸和竖版只用中间 3:4 的规矩也相同。
+- 自己写的：`scripts/promo/` 的截图、布局、逐字时间、Blender 场景、封面排版，和 `src/promo/` 的画面。
 
 ## 坑
 

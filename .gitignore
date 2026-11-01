@@ -1,2 +1,11 @@
+# 依赖、临时文件（截图、检索缓存、pip 包、渲染中间帧都在 temp/）
+node_modules/
+temp/
+__pycache__/
+*.pyc
+
+# 网页离线包（scripts/package_web.py 生成，发布在 GitHub Releases）
+output/*.zip
+
 # 宣传片的旁白、成片、封面（体积大，可由 scripts/promo/ 重新生成；做法见 docs/promo-video.md）
 output/promo/

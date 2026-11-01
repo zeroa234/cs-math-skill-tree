@@ -10,12 +10,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 WEB = ROOT / "src" / "web"
 FILES = ["index.html", "style.css", "app.js", "overview.js", "guide.js", "data.js", "outlines.js",
          "vendor/panzoom-4.6.2.min.js", "vendor/d3-7.9.0.min.js", "vendor/markmap-view-0.18.12.js"]
-NM = ROOT / "node_modules"
-LICENSES = {
-    "vendor/panzoom-MIT-License.txt": NM / "@panzoom" / "panzoom" / "MIT-License.txt",
-    "vendor/d3-LICENSE.txt": NM / "d3" / "LICENSE",
-    "vendor/markmap-view-LICENSE.txt": NM / "markmap-view" / "LICENSE",
-}
+# 第三方许可证：src/web/vendor/ 里和库文件放在一起的副本（从 node_modules 复制）
+LICENSES = ["vendor/panzoom-MIT-License.txt", "vendor/d3-LICENSE.txt", "vendor/markmap-view-LICENSE.txt"]
 README = """CS × 数学技能树
 
 打开：解压后双击 index.html，用 Chrome / Edge / Firefox / Safari 都可以。不用安装，也不用联网；
@@ -32,6 +28,7 @@ README = """CS × 数学技能树
 说明：必须前置都以真实大学课程的先修要求为依据；标“前置待核实”的 10 个技能还没找到课程证据。
 知识导览图的每个标题都和来源目录页逐条核对过。
 第三方组件：Panzoom 4.6.2（MIT）、d3 7.9.0（ISC）、markmap-view 0.18.12（MIT），许可证见 vendor/ 下的同名 txt。
+项目主页：https://github.com/zeroa234/cs-math-skill-tree （MIT 许可，见 LICENSE.txt；在线版 https://zeroa234.github.io/cs-math-skill-tree/）
 """
 
 
@@ -43,8 +40,9 @@ def main():
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         for f in FILES:
             z.write(WEB / f, f"{top}/{f}")
-        for name, src in LICENSES.items():
-            z.write(src, f"{top}/{name}")
+        for name in LICENSES:
+            z.write(WEB / name, f"{top}/{name}")
+        z.write(ROOT / "LICENSE", f"{top}/LICENSE.txt")
         # UTF-8 with BOM so Windows Notepad shows the Chinese text correctly
         z.writestr(f"{top}/README.txt", "﻿" + README.replace("\n", "\r\n"))
     print(out, f"{out.stat().st_size / 1024:.0f} KB")

@@ -1,0 +1,33 @@
+# 把 src/web/（纯静态页面，data.js、outlines.js 已由 scripts/build.mjs 生成并入库）原样发布到 GitHub Pages。
+# 不在 CI 里重新构建：页面用的就是仓库里那份数据。
+name: Deploy page
+
+on:
+  push:
+    branches: [main]
+    paths: ["src/web/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: src/web
+      - id: deployment
+        uses: actions/deploy-pages@v5
