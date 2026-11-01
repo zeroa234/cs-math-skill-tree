@@ -63,3 +63,52 @@ prompt 只写一句：“读 `docs/pi-research-brief.md`，按说明完成批次
 ```
 
 全部节点完成后，最终回复只写三点：完成了哪些 id；哪些没找到资源或课程证据；遇到了什么问题。不要在最终回复里重复 JSON。
+
+---
+
+## 第三轮：重新划分后的学习资源与先修证据（批次 `repart-N`，2026-11-01）
+
+技能划分调整后（合并、收窄、新增，原因见 `reports/skill-partition-review-2026-11-01.md`），改动过的技能要重新找学习资源，个别技能要重新找先修证据。本轮规则与上文不同的地方：
+
+- 任务清单：`temp/research/batches/repart-N.md`。每个节点给出新的名称、简介、深度，现有的中英文资源，以及本轮要做的事。
+- 输出：`temp/research/repartition/<节点id>.json`（新目录；已存在就跳过）。每完成一个节点立刻写文件。
+- 划分变化（映射先修时用新 id）：M.1.4.2、M.1.4.3 并入 M.1.4.1；M.1.4.5 并入 M.1.4.4；X.1.2 并入 X.1.1；P.2.1 并入 P.1.2；M.3.6 已删除；新增 P.5.5 游戏开发与游戏引擎。其余 id 见 `temp/research/batches/all-nodes.md`。
+
+### 学习资源：英文一条、中文一条，按优先级选
+
+1. **免费正文**：开放教材、官方教程、大学公开讲义或课程站（有成体系的正文或讲义）。
+2. **免费权威视频**：英文优先 YouTube，中文优先哔哩哔哩；发布者要是大学、教师本人、官方机构或原作者。找不到可靠的 B 站版本时，用大学课程原站的录像。
+3. **付费**：前两类都没有时，给付费课程或书籍，写清价格或访问条件（如“教材需购买”“注册后免费学、证书收费”）。
+
+要求：
+- **现有资源先评估**：仍然覆盖新简介的主要内容、链接能打开、访问条件写得对，就保留，并在 `keep_reason` 里说明；不合适才换，并在 `notes` 里写换掉的原因。
+- `covers` 写清这份资源覆盖简介里的哪些内容、哪些没覆盖（边界）。只覆盖一部分时必须写明。
+- **视频**要写 `publisher`（发布者是谁、凭什么认定是官方或本人，例如“学校官方账号”“课程主页直接链接此合集”）和 `subtitles`（`中字` / `英字` / `中英` / `无` / `未核对`，没逐集看过就写 `未核对`）。
+- 中文界面不等于正文或录像是中文，中文授课也不等于有中文字幕，要分开写。平台、播放量、名校标题都不能单独证明权威。
+- `free` 写 `true` / `false`；分不清（如 MOOC 免费学、证书收费）时写 `true` 并在 `access` 里说明，确实不知道写 `null`。
+- 实在找不到合适的中文资源，`zh` 写 null，在 `zh_gap` 里写清楚找过哪些、为什么不合适。
+
+### 先修证据（只对清单里标了“要找先修证据”的节点）
+
+同上文 B 节：找 1–2 门真实大学课程（教这个节点内容的课），抄官方先修原文，映射到新 id，对清单里的候选前置逐个给 `supported` / `recommended` / `not_mentioned` / `contradicted`。
+
+### JSON 格式
+
+```json
+{
+  "id": "P.5.5",
+  "en": {"tier": "website|material|book|video", "title": "", "url": "", "lang": "en", "free": true,
+         "access": "访问条件", "covers": "覆盖哪些、哪些没覆盖", "publisher": "（视频）发布者与依据",
+         "subtitles": "（视频）英字|中字|中英|无|未核对", "verified": true, "keep_reason": "（保留现有资源时）"},
+  "zh": {"tier": "", "title": "", "url": "", "lang": "zh", "free": true, "access": "", "covers": "",
+         "publisher": "", "subtitles": "", "verified": true, "keep_reason": ""},
+  "zh_gap": "",
+  "courses": [{"school": "", "course": "", "url": "", "prereq_text": "官方原文", "prereq_kind": "required|recommended|unspecified", "mapped_ids": []}],
+  "candidate_check": {"P.1.2": "supported|recommended|not_mentioned|contradicted"},
+  "extra_prereqs": [{"id": "", "kind": "required|recommended", "evidence": ""}],
+  "notes": ""
+}
+```
+
+不需要找先修证据的节点，`courses` / `candidate_check` / `extra_prereqs` 留空。硬性规则（不许编造、亲自打开、临时文件位置、工具额度）同上文。
+最终回复写：完成了哪些 id；每个节点的中英文资源是保留还是新换（一句话原因）；哪些没找到；遇到的问题。

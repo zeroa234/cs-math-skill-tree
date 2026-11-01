@@ -59,9 +59,34 @@ function fail(msg) {
 
 // ── load ─────────────────────────────────────────────────────────────
 const src = readJson(rel("data/source/chatgpt-outputs/knowledge-map-data.json"));
-const nodes = new Map(src.nodes.map((n) => [n.id, n]));
+// Partition changes on top of the read-only original (data/curation/partition.json): skills merged into another,
+// skills dropped, and node fields rewritten or new nodes added. The files under data/ already use the resulting ids
+// (scripts/merge_skills.py moves them); here the original's nodes, edges and routes are reshaped to match.
+const partition = readJson(rel("data/curation/partition.json"));
+const removed = new Set([...Object.keys(partition.merged), ...Object.keys(partition.dropped)]);
+const mapId = (id) => (id in partition.dropped ? null : partition.merged[id] || id);
+const srcIds = new Set(src.nodes.map((n) => n.id));
+for (const [a, k] of Object.entries(partition.merged)) if (removed.has(k) || !srcIds.has(k)) fail(`partition: ${a} merged into missing ${k}`);
+const added = Object.entries(partition.nodes).filter(([id]) => !srcIds.has(id));
+for (const [id, n] of added) {
+  for (const f of ["parent", "domain", "name", "desc", "levels"]) if (!n[f]) fail(`partition: new node ${id} lacks ${f}`);
+  if (!srcIds.has(n.parent)) fail(`partition: new node ${id} has unknown parent ${n.parent}`);
+}
+const srcNodes = [
+  ...src.nodes.filter((n) => !removed.has(n.id)).map((n) => ({ ...n, ...(partition.nodes[n.id] || {}) })),
+  ...added.map(([id, n]) => ({ id, kind: "主题", children: [], ...n })),
+];
+const srcEdges = [];
+const edgeSeen = new Set();
+for (const e of src.edges) {
+  const s = mapId(e.source), t = mapId(e.target);
+  if (!s || !t || s === t || edgeSeen.has(`${e.type}|${s}|${t}`)) continue;
+  edgeSeen.add(`${e.type}|${s}|${t}`);
+  srcEdges.push({ ...e, source: s, target: t });
+}
+const nodes = new Map(srcNodes.map((n) => [n.id, n]));
 const isSkill = (n) => n.kind === "主题" || COURSE_BRANCHES.has(n.id);
-const skills = src.nodes.filter(isSkill);
+const skills = srcNodes.filter(isSkill);
 const skillIds = new Set(skills.map((n) => n.id));
 
 const en = new Map();
@@ -139,12 +164,12 @@ const step = longestPath((id) => prereqs.get(id).required);
 
 // Original ChatGPT candidates that were dropped, for the change log.
 const originalPrereq = new Map();
-for (const e of src.edges) {
+for (const e of srcEdges) {
   if (e.type !== "prereq") continue;
   if (!originalPrereq.has(e.target)) originalPrereq.set(e.target, []);
   originalPrereq.get(e.target).push(e);
 }
-const reasonOf = new Map(src.edges.filter((e) => e.type === "prereq").map((e) => [`${e.source}>${e.target}`, e.reason]));
+const reasonOf = new Map(srcEdges.filter((e) => e.type === "prereq").map((e) => [`${e.source}>${e.target}`, e.reason]));
 
 // ── assemble skills ──────────────────────────────────────────────────
 function ancestry(n) {
@@ -267,7 +292,7 @@ const out = skills.map((n) => {
     prereqStatus: p.status,
     prereqSummary: notes[n.id]?._summary || "",
     unlocks: unlocks.get(n.id),
-    related: src.edges
+    related: srcEdges
       .filter((e) => e.type === "related" && (e.source === n.id || e.target === n.id))
       .map((e) => ({ id: e.source === n.id ? e.target : e.source, why: e.reason }))
       .filter((e) => skillIds.has(e.id)),
@@ -287,7 +312,7 @@ const suspicious = out.filter((s) => s.required.length === 0 && s.entry >= 2);
 if (suspicious.length) console.warn("WARN entry>=D2 but no required prerequisite:", suspicious.map((s) => s.id).join(" "));
 
 // ── layout ───────────────────────────────────────────────────────────
-const laneOrder = src.nodes.filter((n) => n.parent === "ROOT")
+const laneOrder = srcNodes.filter((n) => n.parent === "ROOT")
   .flatMap((n) => (LANES.some((l) => l.domain === n.id) ? LANES.filter((l) => l.domain === n.id).map((l) => l.id) : [n.id]));
 const elk = new ELK();
 const lanes = [];
@@ -428,7 +453,7 @@ const data = {
     name: r.name,
     note: r.note,
     // Routes in the original may name a branch; expand it to the skills inside.
-    ids: [...new Set(r.ids.flatMap((id) => (skillIds.has(id) ? [id] : out.filter((s) => s.id.startsWith(id + ".")).map((s) => s.id))))],
+    ids: [...new Set(r.ids.map(mapId).filter(Boolean).flatMap((id) => (skillIds.has(id) ? [id] : out.filter((s) => s.id.startsWith(id + ".")).map((s) => s.id))))],
   })),
   lanes,
   overview,
