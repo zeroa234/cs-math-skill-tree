@@ -1,0 +1,441 @@
+{
+ "id": "M.7.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "南京大学暑期班《随机近似方法》（2022 年 8 月，张立卫主讲，6 讲）",
+   "url": "https://www.bilibili.com/video/BV1Td4y1V7uE/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "随机近似（Stochastic Approximation）的 ODE 分析方法与收敛性概率基础；Robbins–Monro 算法与 Kiefer–Wolfowitz 算法的收敛性分析；Nemirovski–Juditsky–Lan–Shapiro 的随机凸优化稳健随机近似；约束随机凸优化的线性化邻近乘子随机近似。",
+   "access": "B 站免费观看，6 讲（约 17 小时），中文授课；由江苏省运筹学会官方账号上传，课程说明为主办单位联合举办、张立卫主讲；字幕未核对。",
+   "publisher": "江苏省运筹学会／中国运筹学会数学规划分会／南京大学工程管理学院；主讲：张立卫（大连理工大学）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1Td4y1V7uE/",
+    "location": "B 站分 P：随机近似方法 220825-1/2、220826-1/2、220827-1/2；课程说明列 Robbins–Monro、Kiefer–Wolfowitz、ODE 分析、随机凸优化",
+    "finding": "实际打开 B 站页，看到 6 个长讲与完整课程说明；随机逼近、收敛性 ODE 分析与随机凸优化都有，但没有随机梯度方差缩减（SVRG/SAGA）专题。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《动手学深度学习》第 11 章 优化算法（中文在线教材）",
+   "url": "https://zh-v2.d2l.ai/chapter_optimization/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "优化与深度学习、凸性、梯度下降、随机梯度下降、小批量随机梯度、动量法、AdaGrad、RMSProp、Adam 等训练优化器；补随机梯度的中文直观材料。",
+   "access": "免费在线阅读（中文），附可运行代码；偏深度学习训练，不是随机优化理论课。",
+   "publisher": "阿斯顿·张等（Dive into Deep Learning 中文版）",
+   "evidence": {
+    "url": "https://zh-v2.d2l.ai/chapter_optimization/index.html",
+    "location": "目录：11.1 优化与深度学习、11.3 梯度下降、11.4 随机梯度下降、11.5 小批量随机梯度、11.6–11.11 动量／AdaGrad／RMSProp／Adam",
+    "finding": "实际打开章节页，看到第 11 章完整目录与正文；随机梯度与小批量 SGD 有教学，但没有方差缩减或收敛率证明。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "《方差缩减法 Variance reduction methods》单讲（约 33 分钟，中文）",
+   "url": "https://www.bilibili.com/video/BV1iw411P7mz/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "方差缩减法的概念与例子；只作入门，没有 SVRG／SAGA 的完整收敛分析。",
+   "access": "第三方转载，授权未核。B 站免费观看，单讲约 33 分钟，中文授课；上传者「北美统计人费小雪」非官方；字幕未核对。",
+   "publisher": "北美统计人费小雪（B 站个人账号；讲者 Michel Bierlaire, EPFL）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1iw411P7mz/",
+    "location": "影片标题「【方差缩减法 Variance reduction methods】——米歇尔·比尔莱尔」",
+    "finding": "实际打开 B 站页，看到单讲标题与时长；只有入门介绍，没有 SVRG/SAGA 算法细节。"
+   },
+   "reupload": true,
+   "official_search": "原视频页（yt-dlp 读到）简介写明「YouTube /【方差缩减法 Variance reduction methods】——米歇尔·比尔莱尔（Michel Bierlaire，EPFL 教授）/ @徐芝兰」，即中文翻译/配音版搬运自 YouTube 上 Bierlaire 的英文讲座；未找到原作者或 EPFL 的官方中文版，也没有配套中文讲义。上传者「北美统计人费小雪」为个人账号。",
+   "updated_by": [
+    "review/pi-additions/M.7.4.json"
+   ]
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "ELE522: Large-Scale Optimization for Data Science (Yuxin Chen, Princeton University) — 公开讲义",
+   "url": "https://yuxinchen2020.github.io/ele522_optimization/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程主页与 Lectures 页公开全部讲义 PDF：'Stochastic gradient methods'（收敛率）、'Variance reduction for stochastic optimization'（SVRG/SAGA 分析）、subgradient/proximal/ADMM、saddle-escaping 等。",
+   "access": "Princeton 课程主页与 Lectures 页公开讲义 PDF；免费；英文。",
+   "publisher": "Yuxin Chen（Princeton University）",
+   "evidence": {
+    "url": "https://yuxinchen2020.github.io/ele522_optimization/",
+    "location": "Lectures：Stochastic gradient methods；Variance reduction for stochastic optimization；Syllabus 主题含 stochastic optimization、variance reduction、saddle-escaping",
+    "finding": "实际打开课程页，看到 Lectures 清单与 syllabus；随机梯度收敛率与 SVRG/SAGA 方差缩减都有讲义，但没有随机规划（scenario/SAA）与 Robbins–Monro 经典处理。"
+   }
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Statistical Machine Learning and Convex Optimization (Orsay 2016) — Lecture 3: Stochastic approximation / Robbins–Monro（Francis Bach）",
+   "url": "https://www.di.ens.fr/~fbach/orsay2016/lecture3.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "3.1 Motivation（用带噪观测求 h(θ)=0 的根）；3.2 Robbins–Monro algorithm（递推式、步长条件、二次均值收敛证明、与固定点迭代的关系）。",
+   "access": "作者主页免费 PDF（课程讲义，讲师 Francis Bach，笔记 Yichen Liu/Rui Li），英文；单一讲次，不是整门随机优化课。",
+   "publisher": "Francis Bach（INRIA / ENS），Orsay 硕士课程 Statistical machine learning and convex optimization",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.di.ens.fr/~fbach/orsay2016/lecture3.pdf",
+    "location": "Lecture 3 — March 17th：3.1 Motivation、3.2 Robbins-Monro algorithm；正文给出递推 θn = θn−1 − γn h(θn−1) 与收敛条件、二次均值收敛的证明",
+    "finding": "实际打开讲义 PDF，读到 Robbins–Monro 的动机、算法与收敛性推导，正是「随机逼近」的经典处理。"
+   },
+   "added_by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Topics in Stochastic Programming — Alexander Shapiro（Georgia Tech，作者主页免费 PDF）",
+   "url": "https://sites.gatech.edu/alexander-shapiro/files/2021/03/core.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 1 章 Introduction；第 2 章 Two Stage Problems（一般形式、min/expectation 可交换性、决策规则、SAA 方法、minimax 分析、一致风险度量与风险厌恶优化、期望约束、矩问题、模糊机会约束）；第 3 章 Multistage Problems（风险中性形式、多阶段线性规划）等。含收敛性与样本复杂度分析。",
+   "access": "作者 Georgia Tech 主页免费 PDF（约 100 页讲义式专着草稿），英文；无需注册。",
+   "publisher": "Alexander Shapiro（Georgia Institute of Technology, School of Industrial & Systems Engineering）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://sites.gatech.edu/alexander-shapiro/files/2021/03/core.pdf",
+    "location": "目录：2 Two Stage Problems（2.1 General Formulation、2.3 The SAA Method、2.4 Minimax Analysis、2.5 Coherent Risk Measures）、3 Multistage Problems（3.1 Risk Neutral Formulation）",
+    "finding": "实际打开 PDF，读到两阶段随机规划、SAA、minimax 分析与多阶段问题的完整章节，覆盖「随机规划」并含收敛/误差分析。"
+   },
+   "added_by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "key": "main-zh-wen-book",
+   "lang": "zh",
+   "title": "刘浩洋、户将、李勇锋、文再文《最优化：建模、算法与理论》（作者主页免费 PDF）",
+   "url": "https://faculty.bicmr.pku.edu.cn/~wenzw/optbook/opt2.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "1.5.3 与 4.4 随机优化问题（期望形式的目标、用足够多样本得到有限和形式的近似目标及应用举例）；8.7 随机优化算法：随机梯度下降、收敛性分析、8.7.4 方差减小技术。",
+   "access": "作者课程主页公开的教材 PDF，免费下载；纸质版由高等教育出版社出版。",
+   "publisher": "北京大学文再文课题组（作者主页）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://faculty.bicmr.pku.edu.cn/~wenzw/optbook.html",
+    "location": "教材 PDF 目录：4.4 随机优化问题、8.7 随机优化算法、8.7.4 方差减小技术；正文 1.5.3 随机和确定性优化问题",
+    "finding": "目录与正文可读：1.5.3 讲期望形式目标与用样本逼近得到有限和目标，8.7.4 为方差减小技术小节。"
+   },
+   "added_by": "review/main-additions/M.7.4.json"
+  },
+  {
+   "key": "main-zh-wen-slides",
+   "lang": "zh",
+   "title": "文再文《最优化》课件第 25 讲：随机优化算法（北京大学）",
+   "url": "https://faculty.bicmr.pku.edu.cn/~wenzw/optbook/lect/25-lect-sto-ch.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "随机梯度下降、一般凸与强凸情形的收敛性分析、方差减小技术（SAG、SAGA、SVRG）。",
+   "access": "作者主页免费课件 PDF，中文。",
+   "publisher": "北京大学文再文",
+   "reupload": false,
+   "evidence": {
+    "url": "https://faculty.bicmr.pku.edu.cn/~wenzw/optbook/lect/25-lect-sto-ch.pdf",
+    "location": "第 2–4 节：随机梯度下降、收敛性分析、方差减小技术（SAG/SAGA、SVRG）",
+    "finding": "73 页课件，提纲与正文含 SAG、SAGA、SVRG 各小节。"
+   },
+   "added_by": "review/main-additions/M.7.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "随机梯度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "11.4 随机梯度下降；11.5 小批量随机梯度",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Stochastic gradient methods（收敛率）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 D2L 给 SGD／小批量 SGD 的直观与代码；英文 ELE522 给收敛率分析。中文没有把 D2L 当成理论课。"
+  },
+  {
+   "topic": "随机逼近",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Robbins–Monro、Kiefer–Wolfowitz、ODE 收敛性分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "课程讲义没有 Robbins–Monro 随机逼近的经典处理",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Lecture 3：3.1 Motivation；3.2 Robbins-Monro algorithm（步长条件与二次均值收敛）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文南京大学暑期班由张立卫主讲，完整讲 Robbins–Monro／Kiefer–Wolfowitz 与 ODE 分析；英文 ELE522 的讲义列表没有这一主题，故英文 partial。；这一讲从「只能用带噪样本求根」出发导出 Robbins–Monro 递推，给出步长条件与收敛证明，正是简介里「随机逼近」的经典内容；虽然只是一讲，但有完整推导，符合「官方文档补一个具体知识点」。"
+  },
+  {
+   "topic": "方差缩减",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "方差缩减法单讲（入门）",
+     "extent": "partial"
+    },
+    {
+     "source": "main-zh-wen-slides",
+     "section": "第 4 节 方差减小技术：SAG、SAGA、SVRG",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-wen-book",
+     "section": "8.7.4 方差减小技术",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Variance reduction for stochastic optimization（SVRG/SAGA）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有 33 分钟入门单讲，没有 SVRG／SAGA 的算法与收敛分析；英文 ELE522 有完整讲义。；北大文再文的课件与免费教材 8.7.4 专讲方差减小技术；pi 判定中文没有成体系材料并改读英文，此条推翻其跨语言补充。；教材对应小节。"
+  },
+  {
+   "topic": "随机规划与收敛分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "随机凸优化的收敛性（ODE 分析、稳健随机近似）；没有 scenario/SAA 随机规划",
+     "extent": "partial"
+    },
+    {
+     "source": "main-zh-wen-book",
+     "section": "1.5.3、4.4 随机优化问题（期望形式与样本近似）；8.7 随机梯度法的收敛性分析",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "随机梯度／方差缩减的收敛分析；没有 scenario/SAA 随机规划",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Ch.2 Two Stage Problems：2.1 General Formulation、2.3 The SAA Method、2.4 Minimax Analysis；Ch.3 Multistage Problems：3.1 Risk Neutral Formulation",
+     "extent": "covered"
+    }
+   ],
+   "note": "此项组合「随机规划」与「收敛分析」：收敛分析中英文都有（zh1、en1），但 scenario／sample average approximation 的随机规划两边都没有；故两边都 partial，不假报 covered。；两阶段/多阶段随机规划的建模、SAA 近似及其收敛与 minimax 误差分析都在正文里，作者是该领域标准教材的作者，覆盖「随机规划与收敛分析」两半。；中文能学到期望形式的随机优化模型、用样本近似目标函数以及随机梯度法的收敛分析；两阶段补偿模型等经典随机规划内容中文仍没有找到，这一半保留英文 Shapiro 讲义的跨语言补充。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "看南京大学暑期班 6 讲：随机近似、Robbins–Monro／Kiefer–Wolfowitz、ODE 收敛性分析与随机凸优化。"
+    },
+    {
+     "source": "zh2",
+     "read": "看 D2L 第 11 章随机梯度与小批量 SGD，补训练优化的直观与代码。"
+    },
+    {
+     "source": "zh3",
+     "read": "看方差缩减入门单讲；SVRG/SAGA 完整算法仍无中文课程。"
+    },
+    {
+     "source": "main-zh-wen-book",
+     "read": "读教材 1.5.3 与 4.4 节理解期望形式的随机优化模型，再读 8.7 节随机梯度法与 8.7.4 方差减小技术。"
+    },
+    {
+     "source": "main-zh-wen-slides",
+     "read": "对照第 25 讲课件，推导 SVRG 一轮外循环的更新，并比较它与普通随机梯度法的方差。"
+    }
+   ],
+   "gaps": [
+    "随机规划与收敛分析"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the stochastic gradient methods lecture for convergence rates."
+    },
+    {
+     "source": "en1",
+     "read": "Read the variance reduction lecture for SVRG/SAGA analysis."
+    },
+    {
+     "source": "en1",
+     "read": "Read subgradient/proximal/ADMM and saddle-escaping lectures as supporting material."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Read Bach Lecture 3 §3.1–3.2: write the Robbins–Monro recursion, check the step-size conditions and reproduce the quadratic-mean convergence argument."
+    },
+    {
+     "source": "r7-en2",
+     "read": "Read Shapiro Ch.2 §2.1–2.4: formulate a two-stage problem, derive the SAA problem, and study the convergence/minimax bounds; then skim Ch.3 for multistage formulations."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「随机优化 课程 随机梯度」「随机逼近 Robbins-Monro 课程」；核對 BV1Td4y1V7uE",
+   "result": "采纳：南京大学暑期班随机近似方法 6 讲，官方账号、张立卫主讲；覆盖 Robbins–Monro 与 ODE 收敛分析。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://zh-v2.d2l.ai/chapter_optimization/index.html",
+   "result": "采纳为 SGD 直观补充；不含方差缩减与收敛率证明。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://yuxinchen2020.github.io/ele522_optimization/（既有主資源）",
+   "result": "采纳：ELE522 讲义含 SG 收敛率与 SVRG/SAGA；确认没有 Robbins–Monro 与随机规划。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "yt-dlp",
+   "query_or_url": "https://www.bilibili.com/video/BV1Td4y1V7uE/（南大暑期班随机近似）与 BV1iw411P7mz（方差缩减法）",
+   "result": "核实：zh1 六个分P 只有日期编号（220825-1 等）无讲题，无法据此核对是否讲随机规划；zh3 是 Michel Bierlaire（EPFL）英文讲座的中文翻译搬运，33 分钟。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "随机优化 方差缩减 SVRG SAGA 课程 讲义 中文 大学",
+   "result": "无中文课程：只有 CMU 讲义、NeurIPS/ICML 论文与个人博客（caoxiaoqing.github.io 的 SVRG 阅读笔记），没有成体系的中文教学。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "随机规划 课程 讲义 两阶段 样本平均近似 中文 大学",
+   "result": "无中文课程：只有 Bohrium 科普词条、CSDN 单篇 SAA 笔记、Cornell 的英文 SAA 指南；中文大学课程页没有命中。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "SVRG 方差缩减 随机梯度 中文 讲解 视频 bilibili",
+   "result": "无成体系视频：只有 SVRG 博客笔记、D2L 斯坦福课程的中文版「随机梯度下降」单集（不讲方差缩减）、3Blue1Brown 梯度下降；未见系统讲 SVRG/SAGA 收敛率的中文课。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "随机规划 随机优化 运筹学 中文 视频 课程 bilibili 两阶段",
+   "result": "无系统课程：B 站只有电力系统方向的「第199讲 场景法两阶段随机规划+CVaR」应用讲座和运筹学基础课（线性规划两阶段法，与随机规划无关）。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "Robbins-Monro stochastic approximation lecture notes course pdf convergence",
+   "result": "采纳：Francis Bach 课程 Lecture 3（已登记 r7-en1）；另有 UC Davis 讨论班 slides、Benjamin Moll 的 RL 讲义单节、哥伦比亚 Ward Whitt 课程页（403 打不开）、1951 年原始论文。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "stochastic programming course lecture notes two-stage sample average approximation pdf",
+   "result": "采纳：Alexander Shapiro《Topics in Stochastic Programming》作者主页免费 PDF（已登记 r7-en2）；另有 Cornell 的 SAA 指南（单主题）。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.di.ens.fr/~fbach/orsay2016/lecture3.pdf ；https://sites.gatech.edu/alexander-shapiro/files/2021/03/core.pdf",
+   "result": "采纳：两份 PDF 正文都读到（Bach 的 Robbins–Monro 推导；Shapiro 的两阶段/SAA/minimax/多阶段目录与正文）。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "随机规划 教材 目录 出版社 随机优化 随机逼近 书",
+   "result": "只找到百科条目《随机规划与模糊规划》（刘宝碇、赵瑞清，清华大学出版社 1998）与南开大学图书馆书目页；没有出版社官网目录页可核，未登记付费来源。",
+   "by": "review/pi-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "文再文 最优化 建模 算法与理论 随机优化 SVRG SAGA 方差缩减 课件",
+   "result": "找到作者主页的教材与课件，课件第 25 讲含 SAG/SAGA/SVRG，采纳。",
+   "by": "review/main-additions/M.7.4.json"
+  }
+ ],
+ "findings": [
+  "原中文 zhAlt 是《动手学深度学习》优化算法，只讲训练优化器，不能充随机优化课；本次改以南京大学随机近似暑期班为主，D2L 降为 SGD 直观补充。",
+  "南京大学暑期班是江苏省运筹学会官方账号、张立卫主讲，内容与 Robbins–Monro／Kiefer–Wolfowitz 对应；比第三方搬运可靠。",
+  "原英文 ELE522 的 covers 已如实承认没有随机规划与 Robbins–Monro；本次保留这个缺口，没有把 ELE522 说成三项都完整。",
+  "中文方差缩减只有 33 分钟入门单讲，没有 SVRG/SAGA 分析；此项中文 partial。",
+  "「随机规划与收敛分析」两边都只覆盖收敛分析，没有 scenario/SAA；故 zh/en 都 partial，并在 gaps 写明。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "随机规划与收敛分析",
+   "source": "r7-en2",
+   "reason": "中文查了课程/讲义/视频三个渠道：大学课程页与中文 MOOC 均无随机规划课；B 站只有电力系统应用讲座（场景法两阶段+CVaR）与运筹学基础课（两阶段法是线性规划单纯形法，不是随机规划）；zh1 南大暑期班分P 只有日期编号，无法核对是否讲到随机规划。故用 Shapiro 的英文讲义（r7-en2）补建模、SAA 与收敛分析。 正版付费——中文随机优化/随机规划教材只有百科与书目信息，没有出版社目录页可核，未购买。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/M.7.4.json"
+  }
+ ],
+ "name": "随机优化",
+ "description": "随机梯度、随机逼近、方差缩减、随机规划与收敛分析。",
+ "applied_additions": [
+  "review/pi-additions/M.7.4.json@d71e735a91",
+  "review/main-additions/M.7.4.json@cac521897d"
+ ]
+}

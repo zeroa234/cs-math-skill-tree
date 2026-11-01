@@ -1,0 +1,416 @@
+{
+ "id": "M.8.5",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《动手学深度学习》2.5 自动微分（中文在线教材）",
+   "url": "https://zh-v2.d2l.ai/chapter_preliminaries/autograd.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "跟踪计算、反向传播、分离计算、控制流与自动微分、向量求导（标量对向量／向量对向量）、PyTorch/TensorFlow 的 autograd 示例。",
+   "access": "免费在线阅读（中文），附可运行代码；只讲反向模式框架用法，不是完整自动微分课程。",
+   "publisher": "阿斯顿·张等（Dive into Deep Learning 中文版）",
+   "evidence": {
+    "url": "https://zh-v2.d2l.ai/chapter_preliminaries/autograd.html",
+    "location": "2.5 自动微分：2.5.1 一个简单的例子、2.5.2 非标量变量的反向传播、2.5.3 分离计算、2.5.4 控制流与自动微分",
+    "finding": "实际打开章节页，看到反向传播、计算图与向量求导的正文和代码；没有前向模式、VJP 的系统定义或梯度验证。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "ZOMI 酱《自动微分》系列短片（前向／反向、符号／数值／自动微分区别）",
+   "url": "https://www.bilibili.com/video/BV1FV4y1T7zp/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "自动微分内容介绍、符号微分／数值微分／自动微分区别、前向微分与反向传播的关系；补 D2L 只讲反向模式的缺口。",
+   "access": "B 站免费观看，系列短片（每支约 5–14 分钟），中文授课；上传者 ZOMI 酱为个人技术频道；字幕未核对。",
+   "publisher": "ZOMI 酱（B 站个人技术频道）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1FV4y1T7zp/",
+    "location": "系列标题：自动微分内容介绍、符号／数值／自动微分区别、前向微分和正向微分与反向传播",
+    "finding": "实际打开第一篇，看到系列标题与短时长；可补概念对比，但不是完整课程，没有 VJP 推导或 gradcheck。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "《从零手动实现自动微分框架：对偶法与计算图》单讲（约 5 分钟）",
+   "url": "https://www.bilibili.com/video/BV1mEnQ6CEPH/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "对偶法（前向模式）与计算图（反向模式）的最小实现；补「可微程序」的实作直观。",
+   "access": "第三方转载，授权未核。B 站免费观看，单讲约 5 分钟，中文授课；上传者「小锅饭Official」为个人账号；字幕未核对。",
+   "publisher": "小锅饭 Official（B 站个人账号）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1mEnQ6CEPH/",
+    "location": "影片标题「从零手动实现自动微分框架：对偶法与计算图」",
+    "finding": "实际打开 B 站页，看到单讲标题与短时长；只有最小实作示范，不足以覆盖 VJP 与梯度验证。"
+   },
+   "reupload": true,
+   "official_search": "原视频页（yt-dlp 读到）：标题「从零手动实现自动微分框架：对偶法与计算图」，上传者「小锅饭Official」，291 秒，无简介、无课程来源说明；无法确认是否转载自某课程，暂保留转载标记。",
+   "updated_by": [
+    "review/pi-additions/M.8.5.json"
+   ]
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT OpenCourseWare 18.S096 Matrix Calculus for Machine Learning and Beyond (January IAP 2023)",
+   "url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "多维链式法则、右到左（forward）与左到右（reverse）复合、计算图上的链式法则、前向与反向模式手动／自动微分、伴随方法（vJp/pullback rules）、自定义 vector–Jacobian products、二阶导数／Hessian／拟 Newton；完整 lecture notes、影片与 problem sets。",
+   "access": "OCW 免费，无须注册；Lecture Notes and Readings、Lecture Videos、Problem Sets。影片字幕未逐一核对。",
+   "publisher": "MIT OpenCourseWare（Alan Edelman & Steven G. Johnson）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/",
+    "location": "Topics：Chain rules on computational graphs；Forward- and reverse-mode manual and automatic differentiation；Adjoint methods (vJp/pullback rules)；Second derivatives/Hessian",
+    "finding": "实际打开课程页，看到官方 Topics 与完整讲义／影片／习题；前向／反向模式、VJP、计算图与二阶导数都有。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Stanford CS231n notes: Optimization-1（含 gradient check 段）",
+   "url": "https://cs231n.github.io/optimization-1/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "数值梯度（finite differences）、解析梯度、gradient check 的实作与用途；补 18.S096 没有单列梯度验证的缺口。",
+   "access": "Stanford CS231n 课程笔记网站免费公开；英文；无需注册。",
+   "publisher": "Stanford University CS231n（Fei-Fei Li 等课程团队）",
+   "evidence": {
+    "url": "https://cs231n.github.io/optimization-1/",
+    "location": "Optimization-1 笔记：'Numerically with finite differences'、'Analytically with calculus'、'gradient check' 段",
+    "finding": "实际打开笔记，看到数值梯度与解析梯度的比较，以及 gradient check 的定义与实作建议。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "使用函数变换计算雅可比矩阵和黑塞矩阵（MindSpore 官方中文教程，2.3.0）",
+   "url": "https://www.mindspore.cn/tutorials/experts/zh-CN/r2.3.0/func_programming/Jacobians_Hessians.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "雅可比矩阵的定义与计算（jvp/vjp 函数）；「反向模式计算雅可比矩阵 vs 前向模式计算雅可比矩阵」逐行对比；黑塞矩阵与黑塞-向量积；批量雅可比、Per-sample-gradients。全部配可运行代码。",
+   "access": "MindSpore 官方文档站，免费，无需注册；中文；为产品教程而非课程，讲清前向/反向模式与 JVP/VJP 的计算方法。",
+   "publisher": "昇思 MindSpore 社区（华为，官方中文文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.mindspore.cn/tutorials/experts/zh-CN/r2.3.0/func_programming/Jacobians_Hessians.html",
+    "location": "页面目录与正文：雅可比矩阵 → 计算雅可比矩阵 → 反向模式计算雅可比矩阵 vs 前向模式计算雅可比矩阵 → 黑塞矩阵 → 计算黑塞-向量积 → Per-sample-gradients",
+    "finding": "实际打开教程页，读到前向/反向两种模式计算雅可比的分节与 jvp/vjp 代码示例，确认可补「前向/反向模式」与「向量–雅可比乘积」。"
+   },
+   "added_by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "可微编程（Taichi 官方中文文档，v1.6.0）",
+   "url": "https://docs.taichi-lang.cn/docs/differentiable_programming",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "可微编程的概念与用途（可微仿真器 vs 无模型强化学习）；用 kernel 定义可微计算、对 kernel 求导、把物理仿真写成可微程序并反传梯度；配套代码示例。",
+   "access": "Taichi 官方文档站，免费；中文；讲的是 Taichi 语言里的可微程序（differentiable programming），不涉及 PyTorch 的 gradcheck。",
+   "publisher": "Taichi 官方文档（docs.taichi-lang.cn）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.taichi-lang.cn/docs/differentiable_programming",
+    "location": "「可微编程」页面：简介（可微仿真器收敛快 1~4 个数量级）、kernel 示例（ti.field、@ti.kernel）、对 kernel 求导与梯度反传",
+    "finding": "实际打开文档，读到可微编程的定义与 kernel 求导示例，可补「可微程序」这一半；页面没有梯度校验（gradcheck）内容。"
+   },
+   "added_by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "key": "main-zh-gradcheck",
+   "lang": "zh",
+   "title": "黄海广等：吴恩达《深度学习》课程中文笔记（第二门课 1.12–1.14 梯度的数值逼近与梯度检验）",
+   "url": "https://github.com/fengdu78/deeplearning_ai_books",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "1.12 梯度的数值逼近（双边差分）、1.13 梯度检验（把参数拉平成向量、比较数值梯度与反向传播梯度的相对误差）、1.14 梯度检验应用的注意事项（只在调试时用、正则项、dropout 关闭等）。",
+   "access": "GitHub 公开的中文课程笔记（PDF/Markdown），免费；由黄海广组织志愿者依吴恩达 deeplearning.ai 课程整理，非 Coursera 官方出品。",
+   "publisher": "黄海广等（fengdu78/deeplearning_ai_books）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://github.com/fengdu78/deeplearning_ai_books",
+    "location": "README 目录：第二门课第一周 1.13 梯度检验（Gradient checking）、1.14 梯度检验应用的注意事项",
+    "finding": "README 列出两节标题，并说明笔记由团队依课程整理、持续更新。"
+   },
+   "added_by": "review/main-additions/M.8.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "前向/反向模式",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.5.1–2.5.4 反向传播与计算图（只讲反向模式）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "前向微分与反向传播的关系；自动微分与符号／数值微分的区别",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "「反向模式计算雅可比矩阵 vs 前向模式计算雅可比矩阵」一节，配 jvp/vjp 代码；另见 zh1《动手学深度学习》2.5 自动微分（反向传播与计算图）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Forward- and reverse-mode manual and automatic differentiation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有反向模式的框架教学与短片概念对比，没有系统的前向模式推导；英文 18.S096 两种模式都讲。；MindSpore 官方中文教程专设一节对比前向模式（逐列、JVP）与反向模式（逐行、VJP），并给出两种模式的代码与计算量差异；D2L 2.5 补反向模式在计算图上的直观。两材料合起来覆盖「前向/反向模式」。"
+  },
+  {
+   "topic": "向量–雅可比乘积",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.5.2 非标量变量的反向传播（向量求导）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "对偶法与计算图最小实现（没有 VJP 一般定义）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "「雅可比矩阵 → 计算雅可比矩阵」中的 vjp/jvp 函数、批量雅可比与 Per-sample-gradients",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Adjoint methods (vJp/pullback rules)；custom vector–Jacobian products",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 D2L 有向量求导与反向传播，但没有把 VJP 作为伴随／pullback 的一般概念；英文 18.S096 明列 vJp/pullback rules。；教程直接用 vjp（向量-雅可比积）与 jvp（雅可比-向量积）函数计算雅可比，并说明反向模式逐行算 VJP、前向模式逐列算 JVP，正是该知识点的定义与用法。"
+  },
+  {
+   "topic": "可微程序与梯度验证",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "控制流与自动微分、分离计算（可微程序）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "从零手动实现自动微分框架（计算图）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "Taichi 可微编程：ti.ad.Tape、kernel 自动微分、可微物理仿真示例",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-gradcheck",
+     "section": "第二门课 1.12–1.14：梯度的数值逼近、梯度检验及注意事项",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chain rules on computational graphs；custom VJPs（可微程序）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "gradient check（数值梯度 vs 解析梯度）",
+     "extent": "covered"
+    }
+   ],
+   "note": "可微程序由英文 18.S096 的计算图／custom VJP 覆盖；梯度验证由 CS231n 的 gradient check 段补。中文 D2L 只讲控制流与分离计算，没有 gradcheck，故中文仍 partial。；可微程序一半由 Taichi 官方中文文档讲（在仿真程序上用自动微分求梯度），梯度验证一半由吴恩达课程中文笔记 1.12–1.14 讲数值梯度与反向传播梯度的比较方法。；梯度验证部分。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读 2.5 自动微分，掌握反向传播、计算图、分离计算与控制流。"
+    },
+    {
+     "source": "zh2",
+     "read": "看自动微分系列短片，区分符号／数值／自动微分与前向／反向模式。"
+    },
+    {
+     "source": "zh3",
+     "read": "看对偶法与计算图最小实现，建立可微程序的实作直观。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读 MindSpore 教程「使用函数变换计算雅可比矩阵和黑塞矩阵」：先用 jvp 算一列、再用 vjp 算一行，比较两种模式在 n 输入/m 输出时的计算量；再用黑塞-向量积练一次二阶导。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读 Taichi 官方文档「可微编程」：把一个小型物理 kernel 写成可微程序，对 kernel 求导并对照解析梯度，理解「可微程序」与普通 autograd 的区别。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读 Taichi 可微编程一章，跑通文档里的可微仿真示例，体会把整段程序当成可求导函数。"
+    },
+    {
+     "source": "main-zh-gradcheck",
+     "read": "读笔记 1.12–1.14，用双边差分为自己写的小网络做一次梯度检验，算出相对误差。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the chain rules on computational graphs and the forward vs reverse composition lectures."
+    },
+    {
+     "source": "en1",
+     "read": "Read the adjoint/vJp/pullback rules and custom VJP material; do the problem sets."
+    },
+    {
+     "source": "en1",
+     "read": "Read the second derivatives/Hessian lecture; add a finite-difference gradient check in code since gradcheck is not a separate section."
+    },
+    {
+     "source": "en2",
+     "read": "读 CS231n Optimization-1 的 numerical gradient 与 gradient check 段，实作一次有限差分检查。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「自动微分 课程 前向 反向」「自动微分 计算图」",
+   "result": "只有 ZOMI 酱系列短片与 5 分钟手写框架，没有完整中文自动微分课；zh 路线 partial。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://zh-v2.d2l.ai/chapter_preliminaries/autograd.html（既有主資源）",
+   "result": "保留：反向模式、计算图、控制流完整；确认没有前向模式与 VJP 一般定义。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ocw.mit.edu/courses/18-s096-matrix-calculus-for-machine-learning-and-beyond-january-iap-2023/（既有主資源）",
+   "result": "采纳：18.S096 Topics 含 forward/reverse、vJp、计算图；免费讲义与影片。gradcheck 只 partial。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cs231n.github.io/optimization-1/",
+   "result": "采纳为 gradient check 的补充；属於课程笔记，不是 API 文档。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "机器学习系统 设计与实现 OpenMLSys 自动微分 前向模式 反向模式 VJP 中文",
+   "result": "部分采纳：OpenMLSys 开源书有中文仓库，但在线第二版（openmlsys.github.io）已改为英文 9 章（第 2 章 Programming Interfaces and Computational Graphs），中文自动微分章节未定位到可读页面。",
+   "by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.mindspore.cn/tutorials/experts/zh-CN/r2.3.0/func_programming/Jacobians_Hessians.html",
+   "result": "采纳：官方中文教程含「反向模式 vs 前向模式」与 jvp/vjp 代码，已登记 r7-zh1。",
+   "by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 深度学习框架 自动微分 计算图",
+   "result": "无对应课程：中国大学 MOOC 只有复旦《深度学习及其应用》、北交大《计算智能基础》等，均不专门讲自动微分理论。",
+   "by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "自动微分 讲义 pdf 前向模式 反向模式 雅可比向量积 梯度检验",
+   "result": "部分采纳：北京工业大学学报论文《自动微分的基本思想与实现》有前向/反向表格式推导（期刊论文，不算课程）；博客园系列、知乎、CSDN 均为个人文章。",
+   "by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "梯度校验 gradcheck 自动微分 中文 教程 可微编程",
+   "result": "部分采纳：PyTorch gradcheck 机制只有中文镜像站（docs.pytorch.ac.cn、aidoczh.com，非官方）与博客；Taichi 官方中文文档有「可微编程」（已登记 r7-zh2），但不含 gradcheck。",
+   "by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.taichi-lang.cn/docs/differentiable_programming",
+   "result": "采纳：Taichi 官方中文文档的可微编程页有 kernel 求导示例，登记为 r7-zh2。",
+   "by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "yt-dlp",
+   "query_or_url": "https://www.bilibili.com/video/BV1mEnQ6CEPH/（从零手动实现自动微分框架）",
+   "result": "核实：上传者「小锅饭Official」，291 秒，无简介，无法确认官方来源。",
+   "by": "review/pi-additions/M.8.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "吴恩达 深度学习 梯度检验 Gradient checking 1.13 中文 网易云课堂 OR 笔记",
+   "result": "找到黄海广中文笔记仓库（目录有 1.13/1.14），采纳；知乎“智能单元”CS231n 笔记译文含梯度检查一节，但页面 403、Tavily 提取失败，未采用。",
+   "by": "review/main-additions/M.8.5.json"
+  }
+ ],
+ "findings": [
+  "原中文主资源 D2L 自动微分只讲反向模式框架，没有前向模式、VJP 或梯度验证；不能单独说本节中文完整。",
+  "中文补充只有 ZOMI 酱短片与 5 分钟手写框架，仍不是完整自动微分课；zh 路线 partial。",
+  "原英文 18.S096 的 Topics 已覆盖前向／反向、VJP、计算图；保留为英文主资源。",
+  "梯度验证（gradcheck）在英文也没有单列一节，故「可微程序与梯度验证」英文只 partial；没有假报完整。",
+  "三项中前两项中文 partial、第三项中英文 partial；zh 路线 partial。",
+  "英文 18.S096 没有单列 gradcheck；补 CS231n 笔记的 numerical gradient／gradient check 段，让『可微程序与梯度验证』英文有 covered 来源。",
+  "[review/pi-additions/M.8.5.json] 未解决 zh「可微程序与梯度验证」：「可微程序」有 Taichi 官方中文文档可学（r7-zh2），但「梯度验证（gradcheck）」只找到 PyTorch 文档的非官方中文镜像（docs.pytorch.ac.cn、aidoczh.com）与个人博客，不能登记为来源；本轮未找到官方中文的 gradcheck 教学（PyTorch 官方 gradcheck 说明是英文）。故该项只算 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "自动微分与计算图",
+ "description": "前向/反向模式、向量–雅可比乘积、可微程序与梯度验证。",
+ "applied_additions": [
+  "review/pi-additions/M.8.5.json@8aea9c2368",
+  "review/main-additions/M.8.5.json@6e2022df03"
+ ]
+}

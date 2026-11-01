@@ -5,19 +5,22 @@
   {
    "key": "zh1",
    "lang": "zh",
-   "title": "台大 OCW《Operations Research》系列（孔令杰，1–3）：模型与应用、最佳化演算法、理论",
+   "title": "台大 OCW《作业研究（一）：模型与应用》（孔令杰）",
    "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0052",
    "tier": "video",
    "free": true,
    "role": "primary",
-   "covers": "OR(1) Models and Applications：线性规划、整数规划、非线性规划、人员排班案例；OR(2) Optimization Algorithms：单纯形法、分支定界、梯度下降与牛顿法、启发式设计；OR(3) Theory：对偶、灵敏度分析与对偶单纯形、网络流、凸分析、Lagrangian 对偶与 KKT。",
+   "covers": "线性规划、整数规划、非线性规划的建模，人员排班案例；同系列（二）（三）另列为补充来源。",
    "access": "免费观看 6＋6＋8 讲影片；中文授课（部分教材英文）。Coursera 版自 2025 年 8 月起免费只能看第一模组，但 NTU OCW 课程页仍提供完整影片。字幕未核对。",
    "publisher": "国立台湾大学开放式课程（孔令杰 Ling-Chieh Kung）",
    "evidence": {
     "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0052",
     "location": "OR(1) 章节：Linear Programming、Integer Programming、Nonlinear programming、Case Study: Personnel Scheduling；OR(3)：Duality、Sensitivity Analysis and Dual Simplex Method、Network Flow",
     "finding": "实际打开三个课程页，看到各自分 P 标题；目标与约束建模、单纯形、对偶、灵敏度与网络流都有讲次。"
-   }
+   },
+   "updated_by": [
+    "review/main-additions/M.7.1.json"
+   ]
   },
   {
    "key": "en1",
@@ -35,6 +38,44 @@
     "location": "章节表：1 Overview、2 Solving Linear Programs、3 Sensitivity Analysis、4 Duality、5 Mathematical Programming in Practice、8 Network Models、14 A System for Bank Portfolio Planning",
     "finding": "实际打开书页，看到完整章节表与整本／分章下载连结；目标约束、LP、对偶、灵敏度、网络与资源配置都有章节。"
    }
+  },
+  {
+   "key": "main-zh-or2",
+   "lang": "zh",
+   "title": "台大 OCW《作业研究（二）：最佳化演算法》（孔令杰）",
+   "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0053",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "单纯形法、分支定界、梯度下降与牛顿法、启发式算法设计。",
+   "access": "免费观看；中文授课（部分教材英文），与（一）同一系列；字幕未核对。",
+   "publisher": "国立台湾大学开放式课程（资讯管理学系 孔令杰）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0053",
+    "location": "课程页：作业研究（二）：最佳化演算法，2021 年 2 月",
+    "finding": "课程页标题与讲者孔令杰、开课单位资讯管理学系可核。"
+   },
+   "added_by": "review/main-additions/M.7.1.json"
+  },
+  {
+   "key": "main-zh-or3",
+   "lang": "zh",
+   "title": "台大 OCW《作业研究（三）：理论》（孔令杰）",
+   "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0054",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "对偶、灵敏度分析与对偶单纯形、网络流、凸分析、Lagrangian 对偶与 KKT 条件、案例研究。",
+   "access": "免费观看；中文授课（部分教材英文），与（一）同一系列；字幕未核对。",
+   "publisher": "国立台湾大学开放式课程（资讯管理学系 孔令杰）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0054",
+    "location": "课程页讲次：Duality；Sensitivity Analysis and Dual Simplex Method；Network Flow；Convex Analysis；Lagrangian Duality and the KKT condition",
+    "finding": "2026-11-02 主代理打开课程页核对讲次标题。"
+   },
+   "added_by": "review/main-additions/M.7.1.json"
   }
  ],
  "topics": [
@@ -65,6 +106,11 @@
      "source": "zh1",
      "section": "OR(1) Linear Programming；OR(2) The Simplex Method",
      "extent": "covered"
+    },
+    {
+     "source": "main-zh-or2",
+     "section": "The Simplex Method",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -74,7 +120,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文 OR(1) 建模、OR(2) 单纯形；英文第 2 章 Solving Linear Programs。"
+   "note": "中文 OR(1) 建模、OR(2) 单纯形；英文第 2 章 Solving Linear Programs。；原记录把三门课合成一个来源、链接只指向（一），读者找不到单纯形与对偶讲次；现在拆开，引用指向实际讲授的那门。"
   },
   {
    "topic": "对偶",
@@ -83,6 +129,11 @@
     {
      "source": "zh1",
      "section": "OR(3) Duality",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-or3",
+     "section": "Duality；Lagrangian Duality and the KKT condition",
      "extent": "covered"
     }
    ],
@@ -93,7 +144,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文 OR(3) 与英文第 4 章都专讲线性规划对偶。"
+   "note": "中文 OR(3) 与英文第 4 章都专讲线性规划对偶。；对偶在（三）。"
   },
   {
    "topic": "灵敏度",
@@ -102,6 +153,11 @@
     {
      "source": "zh1",
      "section": "OR(3) Sensitivity Analysis and Dual Simplex Method",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-or3",
+     "section": "Sensitivity Analysis and Dual Simplex Method",
      "extent": "covered"
     }
    ],
@@ -112,7 +168,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文 OR(3) 与英文第 3 章都讲灵敏度分析。"
+   "note": "中文 OR(3) 与英文第 3 章都讲灵敏度分析。；灵敏度在（三）。"
   },
   {
    "topic": "网络优化与资源配置",
@@ -121,6 +177,11 @@
     {
      "source": "zh1",
      "section": "OR(3) Network Flow；OR(1) Case Study: Personnel Scheduling",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-or3",
+     "section": "Network Flow",
      "extent": "covered"
     }
    ],
@@ -131,7 +192,7 @@
      "extent": "covered"
     }
    ],
-   "note": "网络优化与资源配置合并映射：中文 OR(3) 网络流与 OR(1) 排班案例，英文第 8 章网络模型与第 14 章银行组合规划。"
+   "note": "网络优化与资源配置合并映射：中文 OR(3) 网络流与 OR(1) 排班案例，英文第 8 章网络模型与第 14 章银行组合规划。；网络流在（三），资源配置案例在（一）。"
   }
  ],
  "routes": {
@@ -149,6 +210,14 @@
     {
      "source": "zh1",
      "read": "看 OR(3) Duality、Sensitivity Analysis、Network Flow，完成对偶、灵敏度与网络优化。"
+    },
+    {
+     "source": "main-zh-or2",
+     "read": "接着看（二）的单纯形法讲次，手算一个两变量线性规划的单纯形迭代。"
+    },
+    {
+     "source": "main-zh-or3",
+     "read": "最后看（三）的对偶、灵敏度分析与网络流讲次，写出一个线性规划的对偶并解释影子价格。"
     }
    ],
    "gaps": []
@@ -184,6 +253,14 @@
    "channel": "text",
    "query_or_url": "https://web.mit.edu/15.053/www/AMP.htm（既有主資源）",
    "result": "采纳：MIT AMP 章节 1–5、8、14 覆盖五项；免费分章下载。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.aca.ntu.edu.tw/courses/mooc0053 ；https://ocw.aca.ntu.edu.tw/courses/mooc0054",
+   "result": "同一系列的（二）（三）课程页，讲次标题可核，单独登记。",
+   "by": "review/main-additions/M.7.1.json"
   }
  ],
  "findings": [
@@ -195,5 +272,7 @@
  "cross_language_fallbacks": [],
  "name": "优化建模与运筹基础",
  "description": "目标与约束、线性规划、对偶、灵敏度、网络优化与资源配置。",
- "applied_additions": []
+ "applied_additions": [
+  "review/main-additions/M.7.1.json@61ca74fbe3"
+ ]
 }

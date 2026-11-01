@@ -1,0 +1,343 @@
+{
+ "id": "M.6.6",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京交通大学《通信网理论基础》：排队论课程录像（从第 21 讲进入合集）",
+   "url": "https://www.bilibili.com/video/BV1u94y1f76x/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "泊松／马尔可夫过程、Kendall 记号、M/M/1、多服务台与损失系统、Little 定律、电话网性能与 Python 仿真。",
+   "access": "B 站免费观看，中文授课；字幕未核对。UP 主 yishuaichen 自述为该课程录像；北交大官网可核对同名教师陈一帅及其讲授这门课，但尚未取得学校官网到该 B 站账号的直接连结。连结从 M/M/1 一讲进入，按合集顺序学习。",
+   "publisher": "北京交通大学《通信网理论基础》（陈一帅）；B 站 UP 主：yishuaichen",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1u94y1f76x/",
+    "location": "影片标题「排队论 21：M/M/1排队模型的应用」；合集前後讲次含泊松／马尔可夫过程、Kendall 记号、多服务台、Little 定律",
+    "finding": "实际打开 B 站页，看到第 21 讲标题与合集；内容覆盖单队列与 Little 定律，但目录没有 Jackson 网络或闭合网络 MVA。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "北京交通大学课程平台：排队论章节讲义（19 页 PDF）",
+   "url": "http://cc.bjtu.edu.cn:81/meol/analytics/resPdfShow.do?resId=488534&lid=36997",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "排队基础与单队列模型；不覆盖排队网络／MVA。",
+   "access": "课程平台公开 PDF 预览；HTTP 非标准端口，部分网络可能无法打开。",
+   "publisher": "北京交通大学课程平台",
+   "evidence": {
+    "url": "http://cc.bjtu.edu.cn:81/meol/analytics/resPdfShow.do?resId=488534&lid=36997",
+    "location": "PDF 章节：排队论基础、单队列模型（19 页）",
+    "finding": "实际打开 PDF，看到排队基础与单队列内容；没有排队网络或 MVA 章节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Introduction to Queueing Theory for Computer Scientists — A Mini Course（Prof. Raj Jain, Washington University in St. Louis）",
+   "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Kendall 记号、到达／服务分布、随机过程与生灭过程、M/M/1、M/M/m、M/M/m/B、开放／闭合排队网络与乘积形式解、操作定律（利用率、流量、Little、响应时间、瓶颈）、Mean Value Analysis 的步骤与假设。",
+   "access": "免费公开：课程主页列出每次课主题，点标题即可下载幻灯片、听讲座录音；另有 Homework、Quiz、教材勘误连结。无需注册。",
+   "publisher": "Raj Jain（Washington University in St. Louis）",
+   "evidence": {
+    "url": "https://www.cse.wustl.edu/~jain/queue/index.html",
+    "location": "课程目录：Kendall Notation、Little's Law、M/M/1、M/M/m、Queueing Networks（open/closed/product-form）、Mean Value Analysis",
+    "finding": "实际打开课程主页，看到逐次课主题与下载／录音连结；排队网络、操作定律与 MVA 都有课次。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "到达与服务过程",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "泊松／马尔可夫过程、到达与服务分布",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Exponential/Erlang/Hyper-Exponential Distribution；Group Arrivals/Service；Poisson Processes",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文合集从泊松／马尔可夫过程讲起，英文 Jain 课有到达／服务分布与泊松过程课次。"
+  },
+  {
+   "topic": "Kendall 记号",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Kendall 记号（合集排队论基础讲次）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Kendall Notation A/S/m/B/K/SD",
+     "extent": "covered"
+    }
+   ],
+   "note": "中英文都明确讲 Kendall 记号；中文在合集前段排队论基础。"
+  },
+  {
+   "topic": "M/M/1 等单队列模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "M/M/1、多服务台与损失系统",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M/M/1；M/M/m；M/M/m/B",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第 21 讲从 M/M/1 应用进入合集，另有 M/M/m 与损失系统；英文 Jain 三个单队列模型都有课次。"
+  },
+  {
+   "topic": "排队网络",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "中文目录没有 Jackson 网络或排队网络章节",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Open/Closed/Mixed Queueing Networks；Product-Form Network",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有单队列，没有排队网络；此项中文 partial。英文 Jain 有开放／闭合／混合网络与乘积形式解。"
+  },
+  {
+   "topic": "操作定律与均值分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Little 定律（操作定律的一部分）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Rules for All Queues；Little's Law；Mean Value Analysis",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只覆盖 Little 定律，没有利用率／流量／响应时间／瓶颈的完整操作定律，也没有 MVA；故 partial。英文 Jain 有操作定律与 MVA 课次。"
+  },
+  {
+   "topic": "用排队模型预测系统性能",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "电话网性能与 Python 仿真",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Computer systems response time/buffering applications；MVA 性能预测",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用电话网性能与 Python 仿真展示预测，英文 Jain 以计算机系统响应时间与缓冲需求为应用。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "从合集前段看泊松／马尔可夫过程与 Kendall 记号，再看第 21 讲起的 M/M/1 应用。"
+    },
+    {
+     "source": "zh1",
+     "read": "看多服务台与损失系统、Little 定律，最後看电话网性能与 Python 仿真。"
+    },
+    {
+     "source": "zh2",
+     "read": "用 19 页讲义复习排队基础与单队列；排队网络与 MVA 需另读英文 Jain。"
+    }
+   ],
+   "gaps": [
+    "排队网络",
+    "操作定律与均值分析"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the queueing introduction, Kendall notation and distribution lectures."
+    },
+    {
+     "source": "en1",
+     "read": "Read M/M/1, M/M/m and M/M/m/B, then the operational laws and Little's law."
+    },
+    {
+     "source": "en1",
+     "read": "Read open/closed/mixed queueing networks, product-form solutions and Mean Value Analysis."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「排队论 排队网络 均值分析」「排队论 MVA 课程」",
+   "result": "没有找到可核的中文排队网络／MVA 课程；只有单队列与运筹学排队论章节，故中文 partial。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.bilibili.com/video/BV1u94y1f76x/；北交大 19 頁講義（既有主資源）",
+   "result": "保留：单队列、Kendall、Little、电话网性能完整；确认没有 Jackson 网络／MVA。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cse.wustl.edu/~jain/queue/index.html（既有主資源）",
+   "result": "采纳：Raj Jain 小课有排队网络、操作定律与 MVA；免费讲义与录音。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "yt-dlp",
+   "query_or_url": "https://www.bilibili.com/video/BV1u94y1f76x/（排队论 21：M/M/1 排队模型的应用）",
+   "result": "核实：该 BV 是单集（0 个分P），标题只到 M/M/1 应用，无法从分P 判断是否讲到排队网络或 MVA；zh1 的覆盖面仍只能按上一轮的 partial 处理。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "http://cc.bjtu.edu.cn:81/meol/analytics/resPdfShow.do?resId=488534&lid=36997（北交大排队论讲义）",
+   "result": "核实：讲义正文只抽到 Kendall 记号与 M/M/1、M/D/1、M/Ek/c 等单队列公式，没有排队网络/Jackson 或均值分析的内容。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 排队论 性能评价 排队网络",
+   "result": "有线但不可核：北京邮电大学《通信网理论基础》官方 MOOC（BUPT-1463114161，彭木根负责，排队论＋图论）只给课程概述，课程大纲需登录，无法确认是否讲排队网络；其余为排球、网络计量等无关课。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/BUPT-1463114161",
+   "result": "未解决：页面只有课程概述与授课目标（话务量/容量/时延、阻塞率），大纲区为空。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "排队网络 Jackson 均值分析 MVA 操作系统 性能评价 中文 讲义 课程",
+   "result": "部分采纳：找到一份中文《排队论》讲义（solour-lfq.github.io/papers/qt.pdf，学生撰写，4.5 节讲串联队列与乘积形式）与华为站的中译《排队论基础》介绍页；前者是学生笔记，后者目录折叠读不到，均未登记。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://solour-lfq.github.io/papers/qt.pdf ；https://info.support.huawei.com/network/ptmngsys/Web/books-ip/queuetheory.html",
+   "result": "核实：学生讲义只有串联两队列的 4.5 节（马尔可夫链与可逆性推导），不是课程；华为页只有推荐语与作者简介，目录未展开。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "计算机系统性能评价 均值分析 MVA 操作定律 排队网络 林闯 教材 目录",
+   "result": "无可用材料：只有百度百科词条、胡伟武《计算机体系结构基础》第 12 章（讲 SPEC 基准与性能测量，正文无排队/MVA）、中科大体系结构课件与论文，没有操作定律/MVA 的中文教材页。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://foxsen.github.io/archbase/计算机系统性能评价与性能分析.html",
+   "result": "核实：该章讲基准测试程序与 SPECratio，没有排队网络、Little 定律或 MVA。",
+   "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "排队论 教材 目录 排队网络 均值分析 MVA 出版社",
+   "result": "只找到华为站《排队论基础》中译本介绍页（目录折叠读不到）、百科条目《排队论及其在现代通信中的应用》（盛友招，人民邮电出版社 2007）与东南大学课程页；没有带目录的出版社页面，未登记付费来源。",
+   "by": "review/pi-additions/M.6.6.json"
+  }
+ ],
+ "findings": [
+  "原中文主资源北交大排队论录像覆盖单队列、Kendall、Little 与电话网性能，但没有排队网络／MVA；不能说本节中文已完成。zh 路线标 partial。",
+  "原英文 Raj Jain 小课有排队网络、操作定律与 MVA，保留为英文主资源；它不含 G/G/1／重尾／高级调度，但本节简介没有要求这些，故不列缺口。",
+  "中文 19 页讲义只覆盖排队基础与单队列，已在 covers 明说；没有拿它充排队网络。",
+  "六项中四项中文 covered，排队网络与 MVA 中文 partial；英文六项 covered（排队网络与 MVA 由 Jain 覆盖）。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "排队网络",
+   "source": "en1",
+   "reason": "本轮查了：文字——北交大排队论讲义只到单队列（M/M/1、M/D/1、M/Ek），华为站的中译《排队论基础》目录折叠读不到，只找到一份学生撰写的《排队论》讲义有 4.5 节串联队列（不算课程）；视频——北邮《通信网理论基础》MOOC 课程概述讲「排队论＋图论」，但大纲需登录，无法确认是否含排队网络，B 站 zh1 是单集 M/M/1 应用；正版付费——林闯《计算机系统性能评价》等中文教材与《排队论基础》中译本都没有可公开核对目录的页面。故用 en1（Raj Jain 小课，含排队网络与 MVA）补。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "操作定律与均值分析",
+   "source": "en1",
+   "reason": "中文课程里，北交大讲义与北邮 MOOC 都停在单队列指标（λ、μ、ρ、L、W），胡伟武《计算机体系结构基础》第 12 章只讲基准测试与性能测量，没有操作定律（利用率定律、强制流定律）与 MVA 的推导；B 站与中文网页检索也没出现系统讲 MVA 的课程或讲义。故用 en1 的 operational laws／mean value analysis 课次补。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/M.6.6.json"
+  }
+ ],
+ "name": "排队论与性能建模",
+ "description": "到达与服务过程、Kendall 记号、M/M/1 等单队列模型、排队网络、操作定律与均值分析、用排队模型预测系统性能。",
+ "applied_additions": [
+  "review/pi-additions/M.6.6.json@29fe042d3c"
+ ]
+}

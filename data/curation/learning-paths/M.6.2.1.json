@@ -1,0 +1,295 @@
+{
+ "id": "M.6.2.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "清华大学续本达《贝叶斯统计》公开中文讲义",
+   "url": "https://hep.tsinghua.edu.cn/~orv/teaching/statistics/po.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "从二项模型与 Beta 分布进入先验、似然、後验、点／区间估计与模型选择；层级模型、MCMC 推导及诊断只作简述。",
+   "access": "大学教师课程站公开中文 PDF，免费；对应录像可从统计课程主页进入；层级模型与 MCMC 这里只简述。",
+   "publisher": "续本达（清华大学工程物理系）",
+   "evidence": {
+    "url": "https://hep.tsinghua.edu.cn/~orv/teaching/statistics/po.pdf",
+    "location": "PDF 目录与正文：Bayes 公式、二项模型与 Beta 先验、後验推断、估计、模型选择",
+    "finding": "实际下载 PDF，看到先验／似然／後验、估计与模型选择的正文；层级模型与 MCMC 只占简短段落，不是完整章节。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "上海交通大学张驰豪 AI2613《随机过程》MCMC 与采样讲义（中文）",
+   "url": "https://chihaozhang.com/teaching/SP2025/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 2 讲 Metropolis–Hastings；第 3–5 讲 Markov 链与耦合；第 14 讲 Langevin 采样；可补贝叶斯後验的 MCMC 计算。",
+   "access": "教师课程站逐讲中文 PDF 公开，免费；无需注册；字幕不适用（PDF）。",
+   "publisher": "张驰豪（上海交通大学）",
+   "evidence": {
+    "url": "https://chihaozhang.com/teaching/SP2025/",
+    "location": "课程讲义列表：第 2 讲 Metropolis–Hastings、第 3–5 讲 Markov 链与耦合、第 14 讲 Langevin 采样",
+    "finding": "实际打开课程站，看到逐讲 PDF 列表与标题；MCMC、Markov 链收敛与 Langevin 采样都有讲次。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "山东大学威海校区《贝叶斯统计》课程录屏（19 讲）",
+   "url": "https://www.bilibili.com/video/BV1AW4y1B74t/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "chapter1–chapter6 共 19 讲的贝叶斯统计课录屏；章节标题只到 chapter，未能逐章核对具体主题。",
+   "access": "第三方转载，授权未核。B 站免费观看，19 讲（约 34 小时），中文授课。上传者梦寻_自述是山东大学威海校区课程录屏、非教师本人；转载授权未核。字幕未核对。",
+   "publisher": "山东大学威海校区贝叶斯统计课程；B 站上传者：梦寻_",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1AW4y1B74t/",
+    "location": "B 站分 P 目录：chapter1、chapter2-1 至 chapter2-3、chapter3-1 至 chapter3-3、chapter4-1 至 chapter4-7、chapter6-1 至 chapter6-6",
+    "finding": "实际打开 B 站页并读取 19 个分 P；只有 chapter 编号，没有小节标题，无法确认层级模型或 MCMC 的具体讲次，只能作完整课程的旁证。"
+   },
+   "reupload": true,
+   "official_search": "原视频页写明「山东大学威海校区贝叶斯统计课录屏」，上传者梦寻_ 自述「不是老师」「网课状态会一直录」「PPT 见 P10」；用 tavily 搜山东大学/威海校区与中国大学 MOOC 的贝叶斯统计课程，未出现该课的官方公开录像或课程站，判为修课学生自行录制的转载。已用 yt-dlp 读取全部 19 个分 P 标题：均为 chapter1–chapter6 的 chapterN-x 形式，没有讲题名，仍无法据此核对哪一讲讲层级模型。",
+   "updated_by": [
+    "review/pi-additions/M.6.2.1.json"
+   ]
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "An Introduction to Bayesian Thinking — Merlise Clyde et al., Duke University (StatsWithR, free online book)",
+   "url": "https://statswithr.github.io/book/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "1 贝叶斯基础（Bayes 法则、更新、频率派与贝叶斯派对比）；2 共轭先验（二项-贝塔、伽马-泊松、正态-正态）、可信区间与预测推断；3 损失函数与贝叶斯决策、Bayes 因子；4 多参数模型与 MCMC；5 Bayes 因子检验；6 贝叶斯回归；7 模型选择（BIC、BMA）；8 MCMC 随机搜索。",
+   "access": "免费在线书（bookdown），英文；无需注册。",
+   "publisher": "Merlise Clyde 等（Duke University，StatsWithR）",
+   "evidence": {
+    "url": "https://statswithr.github.io/book/",
+    "location": "目录：1 Bayesian Foundations；2 Conjugate Priors；3 Loss Functions/Bayes Factors；4 Multi-parameter Models/MCMC；5 Hypothesis Testing；6 Bayesian Regression；7 Model Selection；8 MCMC",
+    "finding": "实际打开书页，看到 1–8 章完整目录；先验／後验、共轭、MCMC、Bayes 因子与模型选择都有章节，层级模型只到多参数共轭与 BMA 程度。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Gelman et al., Bayesian Data Analysis (3rd ed.) — 作者免费 PDF",
+   "url": "https://www.stat.columbia.edu/~gelman/book/BDA3.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "贝叶斯基础、单参数／多参数模型、层级模型（hierarchical models）、MCMC、模型检查与比较；补 StatsWithR 没有完整层级模型章节的缺口。",
+   "access": "作者网站免费 PDF（非商业用途），英文；第三版 2025-02-20 修正。",
+   "publisher": "Andrew Gelman 等（Columbia University）",
+   "evidence": {
+    "url": "https://www.stat.columbia.edu/~gelman/book/BDA3.pdf",
+    "location": "PDF 目录与正文：Part III Hierarchical Models；hierarchical 出现 287 次、MCMC 12 次",
+    "finding": "实际下载 PDF，看到第三版全文与层级模型部分；可补层级模型与 MCMC 诊断的完整处理。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "先验/似然/后验",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Bayes 公式、二项模型与 Beta 先验、後验推断、估计",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "chapter1–chapter3（贝叶斯基础与推断；章节标题未细分）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "1 Bayesian Foundations；2 Conjugate Priors",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文续本达讲义明确讲先验／似然／後验与共轭更新；山东大学录屏章节太粗，只作 partial 旁证。英文 StatsWithR 第 1–2 章对应。"
+  },
+  {
+   "topic": "层级模型",
+   "stage": "extension",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "层级模型只作简述，没有完整章节",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "chapter4／chapter6 章节标题未细分，无法确认层级模型讲次",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Part III Hierarchical Models",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "多参数模型与 BMA（只到部分层级概念）",
+     "extent": "partial"
+    }
+   ],
+   "note": "依 boundary：「一般层级／多层模型属於进阶范围，当前主材料不完整覆盖，不作为入门点亮门槛」，故标 extension。中文只有简述／章节不明的录屏，英文 BDA3 有完整层级模型章。"
+  },
+  {
+   "topic": "后验计算与模型比较",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "後验估计、模型选择（Bayes 因子／BIC 等）；MCMC 只简述",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "Metropolis–Hastings、Markov 链收敛、Langevin 采样",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "4 Multi-parameter Models and MCMC；5 Bayes Factors；7 Model Selection（BIC/BMA）；8 MCMC",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文後验计算由续本达的模型选择＋张驰豪的 MCMC 讲义合起来覆盖；英文 StatsWithR 第 4–8 章有 MCMC 与 Bayes 因子／BIC／BMA。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读 Bayes 公式、二项模型与 Beta 先验，掌握先验／似然／後验与共轭更新。"
+    },
+    {
+     "source": "zh1",
+     "read": "读後验估计与模型选择（Bayes 因子等），建立模型比较的概念。"
+    },
+    {
+     "source": "zh2",
+     "read": "读第 2 讲 Metropolis–Hastings、第 3–5 讲 Markov 链收敛，补後验的 MCMC 计算。"
+    },
+    {
+     "source": "zh3",
+     "read": "可选：跟看山东大学威海贝叶斯统计录屏作完整课程旁证；层级模型仍无完整中文教材。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Chapters 1–3 for Bayesian foundations, conjugate priors, loss/Bayes factors."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapters 4–5 and 7–8 for multi-parameter models, MCMC, Bayes factors, BIC/BMA."
+    },
+    {
+     "source": "en2",
+     "read": "For the extension, read Part III Hierarchical Models and the MCMC/model-checking chapters."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://hep.tsinghua.edu.cn/~orv/teaching/statistics/po.pdf（既有主資源）",
+   "result": "保留：先验／後验／模型选择完整，层级模型与 MCMC 只简述。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「贝叶斯统计 层级模型 课程」「层次贝叶斯 课程」；核對 BV1AW4y1B74t",
+   "result": "找到山东大学威海贝叶斯统计 19 讲录屏，但章节标题只有 chapter，无法确认层级模型；另有单讲层级模型，不足以充完整课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://chihaozhang.com/teaching/SP2025/（MCMC 講義）",
+   "result": "采纳为後验计算补充：Metropolis–Hastings、Markov 链收敛、Langevin 采样。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://statswithr.github.io/book/；https://www.stat.columbia.edu/~gelman/book/BDA3.pdf",
+   "result": "采纳：StatsWithR 作入门主课，BDA3 补层级模型；皆免费。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "山东大学 威海 贝叶斯统计 课程 慕课 讲义 录屏",
+   "result": "未找到官方版：结果只有境外开放课程索引、两门其他高校的贝叶斯课程主页（见下）和山东大学高数慕课，没有山大威海贝叶斯统计的官方录像/课程站。",
+   "by": "review/pi-additions/M.6.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "yt-dlp",
+   "query_or_url": "https://www.bilibili.com/video/BV1AW4y1B74t/ 分P列表",
+   "result": "核实：19 讲，标题只有 chapter1、chapter2-1 … chapter6-6，无讲题；上传者为修课学生，非教师/学校账号。",
+   "by": "review/pi-additions/M.6.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://slzhang.com/BayesianStatistics.html（华东师大 张思亮《贝叶斯统计学》）",
+   "result": "仅作线索：课程章节表含 Chapter 10 Hierarchical Models and More on Convergence Assessment、Chapter 11 Regression and Hierarchical Regression Models，说明中文课程确有分层模型章节；但页面只列参考书（Springer/Elsevier/Manning），无公开讲义或视频，不能算教学，未登记为来源。",
+   "by": "review/pi-additions/M.6.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://xiaoningwang.github.io/teaching/2021-2-Bayesian（Xiaoning Wang《贝叶斯统计》教学大纲）",
+   "result": "仅作线索：大纲第二章含 2.6 分层先验（多阶段先验），正文只有教学要求/学时分配，无讲义或课件下载，不能算教学，未登记为来源。",
+   "by": "review/pi-additions/M.6.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://hep.tsinghua.edu.cn/~orv/teaching/statistics/po.pdf（续本达讲义，已在 zh1）",
+   "result": "维持原判：讲义是概率与统计基础，层级模型只在其中简述，未达到完整教学。",
+   "by": "review/pi-additions/M.6.2.1.json"
+  }
+ ],
+ "findings": [
+  "原中文主资源续本达讲义覆盖先验／後验与模型比较，但层级模型与 MCMC 只简述；不能单独说三项都完整。本次补张驰豪 MCMC 讲义作後验计算，层级模型标 extension 且中文 partial。",
+  "原英文 StatsWithR 也没有完整层级模型章节；本次补 Gelman BDA3 免费 PDF 的 Part III，英文层级模型才 covered。",
+  "山东大学威海贝叶斯统计录屏有 19 讲，但分 P 只有 chapter 编号，无法核对具体主题；只作旁证，没有拿它冒充已核对的层级模型课。",
+  "「层级模型」依 boundary 标 extension，没有把它升成入门必学；中文缺口已在 routes.gaps 写明。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "贝叶斯统计",
+ "description": "先验/似然/后验、层级模型、后验计算与模型比较。",
+ "applied_additions": [
+  "review/pi-additions/M.6.2.1.json@acd3ff2509"
+ ]
+}
