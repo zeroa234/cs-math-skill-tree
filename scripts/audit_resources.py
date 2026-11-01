@@ -15,7 +15,7 @@ import threading
 import urllib.error
 import urllib.parse
 import urllib.request
-from research_tool import _Text, UA
+from research_tool import _Text, UA, decode_body
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -63,7 +63,7 @@ def main():
                 request = urllib.request.Request(url, headers={'User-Agent': UA})
                 with urllib.request.urlopen(request, timeout=25) as response:
                     result.update(status=response.status, finalUrl=response.url, contentType=response.headers.get_content_type())
-                    raw = response.read(1_500_000)
+                    raw = decode_body(response.read(1_500_000), response.headers.get('Content-Encoding', ''))
                     if result['contentType'] == 'application/pdf':
                         result['needsReview'] = 'PDF contents require separate review'
                     else:

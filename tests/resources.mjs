@@ -48,7 +48,7 @@ try {
     assert.equal(await page.locator(".res-heading", { hasText: "中文资源" }).count(), s.zhAlt ? 1 : 0, s.id);
     if (!s.zhAlt) assert.match(await page.locator(".learning-resources .pending").innerText(), /暂未找到/);
   }
-  for (const [id, width, height, file] of [["M.1.1",1600,960,"desktop"],["P.4.1",390,844,"mobile-registration"],["M.4.2",390,844,"mobile-book"],["S.5.1",390,844,"mobile-gap"],["X.1.3",390,844,"mobile-paid"]]) {
+  for (const [id, width, height, file] of [["M.1.1",1600,960,"desktop"],["P.4.1",390,844,"mobile-registration"],["M.4.2",390,844,"mobile-course"],["A.4.2",390,844,"mobile-bilibili"],["X.1.3",390,844,"mobile-youtube"]]) {
     await page.setViewportSize({ width, height });
     await page.evaluate(id => { location.hash = `skill/${id}`; }, id);
     await page.waitForFunction(name => document.querySelector(".p-title")?.textContent === name, byId.get(id).name);
@@ -58,12 +58,23 @@ try {
     assert(!overflow, `Resource content overflows at ${width}px: ${id}`);
     await section.screenshot({ path: path.join(output, file + ".png") });
     if (id === "P.4.1") assert.match(await section.innerText(), /访问条件见说明/);
-    if (["M.4.2","X.1.3"].includes(id)) assert.match(await section.innerText(), /付费/);
+    if (id === "M.4.2") assert.match(await section.innerText(), /访问条件见说明/);
+    if (["A.4.2", "X.1.3"].includes(id)) assert.match(await section.innerText(), /视频课程 · 免费/);
     if (id === "M.1.1") {
       await section.locator("summary").last().click();
       assert(await section.locator("details").last().getAttribute("open") !== null);
     }
   }
+  // Keep paid and missing-Chinese behavior covered even when all current cards have free alternatives.
+  await page.evaluate(() => {
+    const s = window.SKILLTREE.skills.find(s => s.id === "S.5.1");
+    s.zhAlt = null;
+    s.resource.free = false;
+    location.hash = "skill/S.5.1";
+  });
+  await page.waitForFunction(() => document.querySelector(".p-title")?.textContent === "协议验证与信息流安全");
+  assert.match(await page.locator(".learning-resources .pending").innerText(), /暂未找到/);
+  assert.match(await page.locator(".learning-resources").innerText(), /付费/);
   // A Chinese resource must still render if the English entry is absent.
   await page.evaluate(() => {
     window.SKILLTREE.skills.find(s => s.id === "M.1.1").resource = null;

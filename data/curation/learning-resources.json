@@ -87,14 +87,22 @@
       "access": "文档免费；本地实践需 Docker 或相应运行环境"
     },
     "X.1.3": {
-      "review": "Toronto系列覆盖感知定位规划控制，实时系统、安全工程及最新部署需另外课程；完整学习费用需平台确认。",
-      "free": false,
-      "access": "课程介绍可公开查看；完整学习、作业和证书的费用以 Coursera 课程页为准"
+      "review": "高校官方汇总的YouTube公开课可替代付费课程入口；覆盖自动驾驶算法主线，安全关键与部署项目另补。",
+      "free": true,
+      "access": "大学实验室官方页面嵌入YouTube公开录像；免费播放依YouTube网络可用性，未逐段验证英文CC字幕；这不是付费学位或认证。",
+      "tier": "video",
+      "title": "University of Bonn — Techniques for Self-Driving Cars（StachnissLab官方YouTube课程）",
+      "url": "https://www.ipb.uni-bonn.de/sdc-2021/index.html",
+      "covers": "按官方课程页的YouTube录像学习定位、控制、MPC、规划、行为估计、感知和工程实践；共10段课程录像，需概率、线性代数、控制和ML基础。车辆实时系统、完整安全工程及独立项目仍需补充。"
     },
     "X.2.4": {
-      "review": "JHU系列主题对应医疗信息学，临床先修和决策支持技术须补，付费与账号限制应保留。",
-      "free": false,
-      "access": "课程介绍可公开查看；完整学习、作业和证书的费用以 Coursera 课程页为准"
+      "review": "医学信息学作者团队的开放教材可替代付费课程入口，系统架构/管理/评价适合作主线；临床与决策支持实践仍需补充。",
+      "free": true,
+      "access": "Springer出版社明确Open Access，可免费下载PDF/EPUB；纸质书另售，未把纸质价格当成电子全文费用。",
+      "tier": "book",
+      "title": "Health Information Systems: Technological and Management Perspectives（3rd ed., 2023，开放获取）",
+      "url": "https://link.springer.com/book/10.1007/978-3-031-12310-8",
+      "covers": "选读基础概念、医疗信息系统架构与集成标准、战略/战术/运营管理、质量评价及研究场景；临床决策支持算法与数据分析实践仍配导览中的MIT HST.951。"
     },
     "M.3.6": {
       "review": "18.725 是研究生代数几何，只覆盖节点一半；表示论须用中文讲义或导览补充课程。",
@@ -1524,6 +1532,393 @@
       "free": true,
       "access": "免费中文导读；完整学习配合英文课程",
       "checkedAt": "2026-11-01"
+    },
+    "zh-dynamics": {
+      "tier": "video",
+      "title": "林夕洋《非线性动力学和混沌》系列讲座（讨论班组织者链接的B站录像）",
+      "url": "https://www.bilibili.com/video/BV1t5RUYFEGT/",
+      "access": "免费中文讲座；戴伍圣科学网讨论班通知直接链接此合集。B站可能需要登录或触发访问校验；未逐段核对字幕。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-tda": {
+      "tier": "material",
+      "title": "齐天博《拓扑学与拓扑数据分析》（作者公开中文讲义）",
+      "url": "https://tianboqi.github.io/files/tda.pdf",
+      "access": "作者网站公开PDF，含中文正文与目录；需点集拓扑、线性代数和证明基础。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-bayes": {
+      "tier": "material",
+      "title": "清华大学续本达《贝叶斯统计》（公开中文讲义）",
+      "url": "https://hep.tsinghua.edu.cn/~orv/teaching/statistics/po.pdf",
+      "access": "大学教师课程站公开中文PDF；对应录像可从统计课程主页进入，层级模型与MCMC这里只简述。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-regression": {
+      "tier": "course",
+      "title": "上海立信会计金融学院《应用回归分析》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/LIXIN-1207403805",
+      "access": "中文课程介绍可读；视频、作业需注册并以开放学期为准，未登录验证全部单元；证书另计。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-causal": {
+      "tier": "material",
+      "title": "《因果推断：从概念到实践》中文译者项目（xieliaing）",
+      "url": "https://github.com/xieliaing/CausalInferenceIntro",
+      "access": "中文章节与Python Notebook公开；译者README说明获得原作者翻译同意并采用MIT许可；GitHub访问依网络条件。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-stochastic": {
+      "tier": "course",
+      "title": "张驰豪 AI2613《随机过程》（2025，作者课程站与中文讲义）",
+      "url": "https://chihaozhang.com/teaching/SP2025/",
+      "access": "英文课程标题，讲义正文为中文；逐讲PDF和习题公开，需概率、线性代数与证明基础。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-ito": {
+      "tier": "material",
+      "title": "张驰豪《扩散过程和伊藤积分》（AI2613第十三讲，中文PDF）",
+      "url": "https://chihaozhang.com/teaching/SP2025/lec13.pdf",
+      "access": "作者公开中文讲义；部分推导为启发式，不是完整严格随机分析教材。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-information": {
+      "tier": "course",
+      "title": "中国地质大学（武汉）《信息论与编码》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/CUG-1205977806",
+      "access": "中文课程介绍和大纲可读；完整视频与作业按注册和开放学期提供，证书条件以平台为准。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-monte-carlo": {
+      "tier": "course",
+      "title": "上海交通大学张驰豪 AI2613：MCMC与采样（公开中文讲义）",
+      "url": "https://chihaozhang.com/teaching/SP2025/",
+      "access": "教师课程站逐讲中文PDF公开；重点第2–5及14讲。无需注册，积分方差缩减与完整数值实验另配英文课。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-cas": {
+      "tier": "website",
+      "title": "SageMath官方《Sage教程》（中文）",
+      "url": "https://doc.sagemath.org/html/zh/tutorial/",
+      "access": "官方中文HTML与PDF免费；少量未翻译内容或函数名称可能为英文，需Python基础。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-random-algorithms": {
+      "tier": "course",
+      "title": "山东财经大学《算法分析与设计》（随机与近似算法单元）",
+      "url": "https://www.icourse163.org/course/SDCJDX-1206671828",
+      "access": "中文课程介绍和大纲公开；完整视频、作业需注册并按开放学期访问，证书另计。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-parallel-algorithms": {
+      "tier": "course",
+      "title": "南京大学《分布式与并行计算》（课程站、中文课件和作业）",
+      "url": "https://cs.nju.edu.cn/lxie/parallel.htm",
+      "access": "课程站标题和部分说明为英文，章级课件正文为中文；公开PDF和作业，部分数值算法章节没有课件链接。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-parameterized": {
+      "tier": "material",
+      "title": "白天《反馈集相关问题的参数与精确算法研究》（作者公开博士论文）",
+      "url": "https://tianbaics.github.io/Dissertation.pdf",
+      "access": "作者主页直接提供的中文学位论文；先读第1–2章基础，后续为研究级证明，非通用入门教材。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-vm": {
+      "tier": "website",
+      "title": "JavaGuide JVM专题：运行时内存、类加载、GC与排查",
+      "url": "https://javaguide.cn/java/jvm/",
+      "access": "社区作者公开中文专题；部分会员增值材料不在本学习范围内，具体JDK行为仍查当前官方规范。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-supply-chain": {
+      "tier": "website",
+      "title": "GitHub官方中文文档：供应链安全",
+      "url": "https://docs.github.com/zh/code-security/concepts/supply-chain-security/supply-chain-security",
+      "access": "官方中文文档免费；Actions额度、私有仓库与部分安全功能依账户计划，不表示所有服务免费。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-sdn": {
+      "tier": "course",
+      "title": "温州大学《软件定义网络技术》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/WZU-1205809832",
+      "access": "中文课程内容含Mininet、OpenFlow及控制器实践；完整单元需注册且取决于开放学期，证书另计。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-retrieval": {
+      "tier": "website",
+      "title": "Milvus官方中文教程：全文搜索与混合检索",
+      "url": "https://milvus.io/docs/zh/full-text-search.md",
+      "access": "官方中文教程与示例代码免费；文档重定向可能影响脚本访问，托管云或外部模型服务可能另收费。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-knowledge-graphs": {
+      "tier": "course",
+      "title": "浙江大学《知识图谱导论》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/ZJU-1464119172",
+      "access": "中文课程大纲公开，涵盖表示、存储、获取、推理、融合等；完整视频与作业按注册和开放学期访问。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-planning": {
+      "tier": "course",
+      "title": "青岛大学《人工智能基础》（搜索与约束满足单元）",
+      "url": "https://www.icourse163.org/course/QDU-1206502801",
+      "access": "大学公开MOOC，中文课程介绍和大纲可查；视频、作业依注册和当前开放学期，未登录验证全部单元，证书另计。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-device-security": {
+      "tier": "website",
+      "title": "乐鑫ESP-IDF官方中文：安全概述与设备安全指南",
+      "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/security/security.html",
+      "access": "官方中文文档免费；实践需要相应ESP32设备，芯片型号与安全功能支持须对应版本。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-soc": {
+      "tier": "website",
+      "title": "Microsoft Sentinel官方中文文档：检测、调查、响应与威胁搜寻",
+      "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/",
+      "access": "中文文档和教程免费；实际工作区、日志摄取、存储及自动化可能计费，运行前按Azure订阅确认。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-protocol-verification": {
+      "tier": "material",
+      "title": "卿斯汉《安全协议20年研究进展》（软件学报，2003）",
+      "url": "https://www.jos.org.cn/1000-9825/14/1740.pdf",
+      "access": "期刊原站公开中文全文；2003年经典方法综述，现代工具、协议与信息流理论仍需其它资料。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-security-engineering": {
+      "tier": "material",
+      "title": "戴冕、程光、周宇洋《软件定义网络的测量方法研究》（软件学报，2019）",
+      "url": "https://www.jos.org.cn/html/2019/6/5832.htm",
+      "access": "期刊原站公开中文全文；网络测量专题综述，需网络和统计基础，不是完整系统安全教材。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-analog": {
+      "tier": "course",
+      "title": "南京信息职业技术学院《模拟电子技术》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NJCIT-1001753062",
+      "access": "中文课程介绍、大纲及实验安排可查；完整视频与作业依注册和开放学期，证书另计。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-semiconductor": {
+      "tier": "course",
+      "title": "新竹交通大学《半导体元件物理》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NCTU-1001615018",
+      "access": "中文课程，含繁体用语和英文专业术语；完整单元按注册、开放学期和平台条件访问。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-realtime": {
+      "tier": "material",
+      "title": "王永吉、陈秋萍《单调速率及其扩展算法的可调度性判定》（软件学报，2004）",
+      "url": "https://www.jos.org.cn/1000-9825/15/799.pdf",
+      "access": "期刊原站公开中文全文与算例；经典单核RM模型，现代多核调度、WCET工具与认证需补充。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-multimedia": {
+      "tier": "video",
+      "title": "中国传媒大学严明、张岳《数字媒体技术概论》（学校官方B站，46讲）",
+      "url": "https://www.bilibili.com/video/BV1AE411B7KV/",
+      "access": "学校官方账号免费中文课程；重点选第2、4、7、9章。B站可能需登录或访问校验；未逐段核对字幕。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-hci": {
+      "tier": "course",
+      "title": "南京大学《人机交互与用户体验设计》（公开MOOC版本）",
+      "url": "https://www.icourse163.org/course/NJU-1466990164",
+      "access": "选用公开课程版本而非学校专有SPOC；中文介绍可读，完整教学单元依注册和开放学期。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-visualization": {
+      "tier": "course",
+      "title": "浙江大学《可视化导论》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/ZJU-1206452826",
+      "access": "中文课程介绍和大纲公开；完整视频、项目与测验按注册和开放学期访问。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-writing": {
+      "tier": "course",
+      "title": "南京理工大学《科技文献检索与论文写作》（张小兵，中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NJUST-1468779200",
+      "access": "中文课程介绍和大纲可查；完整单元依注册和当前开放学期；证书或教材费用以平台为准。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-research": {
+      "tier": "course",
+      "title": "复旦大学《科学研究方法与论文写作》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/FUDAN-1206362806",
+      "access": "公开中文大纲含假设、实验、学术诚信及论文发表；完整视频和作业依注册和开放学期。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-autonomous-driving": {
+      "tier": "course",
+      "title": "百度Apollo《自动驾驶入门与实践》（官方课程）",
+      "url": "https://apollo.baidu.com/community/online-course/218",
+      "access": "课程页标注免费，学习可能需Apollo账户；配套硬件、云服务和实车环境不包含在免费课程内。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-finance": {
+      "tier": "course",
+      "title": "常州工学院《金融数学》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/CZU-1465310161",
+      "access": "中文课程介绍和大纲可读；完整视频与作业按注册及开放学期提供，不构成投资建议。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-governance": {
+      "tier": "website",
+      "title": "华为云DataArts Studio官方中文：数据治理使用流程",
+      "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0007.html",
+      "access": "文档免费；数据治理云实例、存储与实际计算可能收费，未为本任务开通服务。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-trustworthy-ml": {
+      "tier": "video",
+      "title": "VALSE2025 Tutorial 4：可信机器学习（官方B站，姚江超讲及同专题）",
+      "url": "https://www.bilibili.com/video/BV12E4mzfEpb/",
+      "access": "VALSE_Webinar官方账号免费中文讲座；同专题还有韩波和张杰两讲，链接与身份依据见补充报告。已有机器学习基础后再学；未逐段核对字幕。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-threat-modeling": {
+      "tier": "website",
+      "title": "Microsoft官方中文：威胁建模工具、STRIDE威胁与缓解",
+      "url": "https://learn.microsoft.com/zh-cn/azure/security/develop/threat-modeling-tool-threats",
+      "access": "中文文档免费；工具面向Windows与Microsoft SDL，云场景服务费用另计。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-edge-platform": {
+      "tier": "website",
+      "title": "KubeEdge官方中文文档：云边协同、边缘自治与设备管理",
+      "url": "https://kubeedge.io/zh/docs/",
+      "access": "官方中文文档免费；实践需要Kubernetes及Linux环境，旧文档命令与当前发行版需对照。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-wcag": {
+      "tier": "website",
+      "title": "W3C《Web内容无障碍指南WCAG2.1》授权中文翻译",
+      "url": "https://www.w3.org/Translations/WCAG21-zh/",
+      "access": "W3C授权中文规范免费；这是2.1版，不包含2.2新增准则，实际要求和最新英文规范另行核验。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-bpm": {
+      "tier": "course",
+      "title": "SAP官方中文课程：使用SAP Signavio管理业务流程",
+      "url": "https://learning.sap.com/courses/managing-business-processes-with-sap-signavio-solutions-zh",
+      "access": "中文学习单元公开可读；课程首页及部分视频可能为英文；账户、练习系统和Signavio产品许可依SAP条件。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-computing-ethics": {
+      "tier": "course",
+      "title": "上海交通大学李超 CS3309《计算机伦理学》（公开中文课件）",
+      "url": "https://cs.sjtu.edu.cn/~lichao/courses/cs3309.html",
+      "access": "教师课程站的CE01–CE16中文PDF公开免费；已抽查绪论、职业责任和隐私课件正文。最新录像与校内作业在CANVAS，不能据此称全部录像公开。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-mlops": {
+      "tier": "website",
+      "title": "Google Cloud官方中文：MLOps持续交付与自动化流水线",
+      "url": "https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning?hl=zh-cn",
+      "access": "中文技术正文免费；实际云流水线、存储和计算可能收费，本任务只核实文档。",
+      "lang": "zh",
+      "free": true,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-differential": {
+      "tier": "course",
+      "title": "西北工业大学《微分几何》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NWPU-1463191166",
+      "access": "大学公开MOOC，中文大纲覆盖曲线曲面和内蕴几何；完整视频与作业需注册并依开放学期，未登录验证全部单元；证书另计。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
+    },
+    "zh-forensics": {
+      "title": "南京邮电大学《电子数据取证技术》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NJUPT-1462725169",
+      "tier": "course",
+      "access": "中文大学课程，介绍与大纲公开；视频、作业依注册及开放学期，未登录验证全部单元；法律证据规则须依适用地区核实。",
+      "lang": "zh",
+      "free": null,
+      "checkedAt": "2026-11-01"
     }
   },
   "chinese": {
@@ -2096,8 +2491,8 @@
       "covers": "XR 开发环境、输入与交互实践；感知、人因和协作理论需英文教材。"
     },
     "V.2.3": {
-      "source": "accessibility",
-      "covers": "认识无障碍目标、用户和设计原则；接着阅读英文 WAI 教程做实施与验证。"
+      "source": "zh-wcag",
+      "covers": "按可感知、可操作、可理解与鲁棒原则逐条实践成功准则和符合性评价；2.2新增准则继续查英文W3C。"
     },
     "X.2.5": {
       "source": "qgis",
@@ -2120,44 +2515,44 @@
       "covers": "通用项目管理的计划、进度与风险方法；IT 交付案例仍配合英文课程。"
     },
     "D.1.5": {
-      "source": "data-governance",
-      "covers": "中文导读：数据治理、角色、策略及实施背景；元数据和质量实践继续读英文 OpenMetadata 教程。"
+      "source": "zh-governance",
+      "covers": "依使用流程实践数据标准、数据建模、数据质量、目录采集与血缘，并读数据目录子指南；组织责任和通用治理理论另学。"
     },
     "I.1.3": {
-      "source": "bpm",
-      "covers": "中文导读：业务流程生命周期、建模和改进；BPMN 建模练习仍需英文教材。"
+      "source": "zh-bpm",
+      "covers": "读业务流程基础、BPM、BPMN流程建模、治理和DMN决策建模单元；定量排队分析与厂商无关实施另补。"
     },
     "I.2.1": {
-      "source": "ethics",
-      "covers": "中文导读：公平、透明、问责与社会影响；计算伦理的其它主题和技术评估仍需英文资源。"
+      "source": "zh-computing-ethics",
+      "covers": "按伦理理论、技术变革与专业责任、健康安全/自由/隐私/公平/真实/产权案例的CE01–CE16公开课件学习，并写案例分析；当前法规另查。"
     },
     "A.4.2": {
-      "source": "ethics",
-      "covers": "中文导读：公平、透明、问责与社会影响；计算伦理的其它主题和技术评估仍需英文资源。"
+      "source": "zh-trustworthy-ml",
+      "covers": "从姚江超讲的不均衡数据进入可信学习，再看同专题韩波的噪声数据与张杰的对抗场景；公平、隐私、解释性和治理仍配英文及官方材料。"
     },
     "S.1.1": {
-      "source": "cybersecurity",
-      "covers": "中文导读：常见威胁、风险、防护措施与安全管理；系统化威胁建模仍以英文教材为主。"
+      "source": "zh-threat-modeling",
+      "covers": "用STRIDE表识别欺骗、篡改、抵赖、信息泄露、拒绝服务与权限提升，配工具的设计/分析视图和缓解文档。"
     },
     "S.4.2": {
-      "source": "incident",
-      "covers": "中文导读：准备、检测、遏制和恢复流程；数字取证操作仍需英文实验课程。"
+      "source": "zh-forensics",
+      "covers": "按电子证据保全、存储/文件系统、Windows与网络取证等单元学习并用工具实践；事件恢复、复盘和地区证据规则另核。"
     },
     "A.4.1": {
-      "source": "mlops",
-      "covers": "中文导读：机器学习生命周期、部署和运维；动手项目仍以英文 MLOps 课程为主。"
+      "source": "zh-mlops",
+      "covers": "依文档学习MLOps成熟度、持续训练、数据/模型验证、元数据、自动化流水线及CI/CD；再配原英文动手项目。"
     },
     "H.4.4": {
-      "source": "edge",
-      "covers": "中文导读：边缘与云的分工、延迟和部署场景；模型压缩与硬件实践需英文课程。"
+      "source": "zh-edge-platform",
+      "covers": "从架构和快速开始部署云端与边缘节点，再学边缘自治、设备管理与消息同步；资源调度算法和定量时延权衡仍读英文。"
     },
     "X.1.2": {
-      "source": "edge",
-      "covers": "中文导读：边缘与云的分工、延迟和部署场景；模型压缩与硬件实践需英文课程。"
+      "source": "mindspore-lite",
+      "covers": "从中文模型转换、量化、端侧推理、性能优化与部署示例入手，分析延迟及内存；端边云协同和完整隐私权衡另补。"
     },
     "D.4.1": {
-      "source": "kg",
-      "covers": "中文导读：实体、关系、图谱与应用；RDF/OWL 和推理机制仍需英文教材。"
+      "source": "zh-knowledge-graphs",
+      "covers": "按表示、存储、获取、融合、本体、推理和查询/问答单元建立图谱，配课程项目。"
     },
     "M.6.4": {
       "source": "forecast",
@@ -2184,49 +2579,153 @@
       "covers": "医疗信息互操作与 FHIR 的工程实践补充，以 Azure 为实例；不替代医疗工作流和信息学完整课程。"
     },
     "M.4.2": {
-      "source": "differential-geometry",
-      "covers": "中文教材：空间曲线、曲率、挠率及曲面理论。链接提供书目信息、目录和样章入口；全文需购书或借阅。"
+      "source": "zh-differential",
+      "covers": "按空间曲线、曲面局部几何、基本形式、曲率、内蕴几何及测地线学习；高维流形和完整联络/黎曼几何另配英文。"
     },
     "M.2.2": {
       "source": "analysis-notes",
       "covers": "第 63–81 节从基本解、Fourier 变换与 Sobolev 空间进入波动、热及位势方程；偏分析理论，先修要求较高。"
+    },
+    "M.2.3": {
+      "source": "zh-dynamics",
+      "covers": "按概述、分岔、圆与二维流、相平面、极限环、Lorenz系统、一维映射、分形及奇怪吸引子学习；配原教材习题与数值实验。"
+    },
+    "M.4.5": {
+      "source": "zh-tda",
+      "covers": "先读点集拓扑和单纯同调基础，再读持续同调方法、点云构造复形与条形码；几何学习模型和统计稳定性证明仍需英文补充。"
+    },
+    "M.6.2.1": {
+      "source": "zh-bayes",
+      "covers": "从二项模型与Beta分布进入先验、似然、后验、点/区间估计和模型选择；层级模型、MCMC推导及诊断配原英文书和随机过程讲义。"
+    },
+    "M.6.2.2": {
+      "source": "zh-regression",
+      "covers": "一元/多元线性回归、模型诊断与矫正、定性变量、Logistic回归、变量选择及正则化，配Python案例；完整GLM族另补。"
+    },
+    "M.6.2.3": {
+      "source": "zh-causal",
+      "covers": "按随机实验、图因果模型、混杂、工具变量、匹配、倾向评分和双稳健估计学习并运行Notebook；区组和析因设计另学。"
+    },
+    "M.6.3": {
+      "source": "zh-stochastic",
+      "covers": "选读鞅、离散及连续时间Markov链、Poisson与更新过程、Brown运动和扩散；平稳过程谱理论需其它教材。"
+    },
+    "M.6.3.2": {
+      "source": "zh-ito",
+      "covers": "读扩散过程、二次变分、Itô积分与Itô公式，配课程的Brown运动和鞅讲义；完整滤过理论、强弱解与SDE定理仍读英文教材。"
+    },
+    "M.6.5": {
+      "source": "zh-information",
+      "covers": "学习熵与互信息、信源及信道编码、信道容量、限失真编码；按课程大纲选择对应单元。"
+    },
+    "M.8.4": {
+      "source": "zh-monte-carlo",
+      "covers": "重点读第2讲Metropolis–Hastings、第3–5讲Markov链与耦合、第14讲Langevin采样；蒙特卡洛积分、重要抽样、方差缩减和诊断配英文主课。"
+    },
+    "M.8.6": {
+      "source": "zh-cas",
+      "covers": "从导览选择精确数值、符号表达式、微积分、多项式和线性代数运算，并用Sage运行实例；多项式算法证明另配英文课。"
+    },
+    "F.1.4": {
+      "source": "zh-random-algorithms",
+      "covers": "重点读第11章随机算法、第12章P与NP、第13章近似算法；在线算法、竞争比与下界仍用英文讲义。"
+    },
+    "F.1.5": {
+      "source": "zh-parallel-algorithms",
+      "covers": "读并行性能评测、算法设计基础、一般方法、基本通信和MapReduce课件，并做相应作业；外存I/O和流草图另配英文。"
+    },
+    "F.1.6": {
+      "source": "zh-parameterized",
+      "covers": "先读第1–2章参数问题、FPT、核化与复杂性基础，再按研究需要读反馈集算法；性质测试和通用精细复杂度另用英文。"
+    },
+    "P.3.2": {
+      "source": "zh-vm",
+      "covers": "依专题路线读运行时数据区、栈堆、类加载、垃圾回收、JVM参数及排查；解释器实现、JIT原理和FFI仍配英文主书。"
+    },
+    "P.5.4": {
+      "source": "zh-supply-chain",
+      "covers": "从依赖关系图、依赖审查、SBOM、依赖固定和制品来源证明进入实践；逐字节可复现构建仍读Reproducible Builds。"
+    },
+    "C.3.4": {
+      "source": "zh-sdn",
+      "covers": "按SDN原理、数据平面、OpenFlow南向接口、控制平面、北向接口和应用开发学习；配Mininet、OVS、POX/RYU实验。"
+    },
+    "D.2.3": {
+      "source": "zh-retrieval",
+      "covers": "从BM25全文搜索、分析器、稀疏向量和代码示例入手，再读同站混合检索与索引；检索评测及在线推荐架构另学。"
+    },
+    "D.4.2": {
+      "source": "zh-knowledge-graphs",
+      "covers": "选知识表示、规则及本体推理、知识融合、语义约束和本体表示学习；严格描述逻辑与神经符号研究仍配英文。"
+    },
+    "A.1.1": {
+      "source": "zh-planning",
+      "covers": "选盲目搜索、知情搜索、A*、博弈搜索与约束满足搜索单元；经典及概率规划继续读英文主教材。"
+    },
+    "S.2.5": {
+      "source": "zh-device-security",
+      "covers": "按ESP32安全启动、Flash加密、JTAG/调试接口、安全下载和固件更新学习；设备供应链、侧信道和故障攻击仍读英文课。"
+    },
+    "S.4.4": {
+      "source": "zh-soc",
+      "covers": "依文档完成日志接入与规范化、分析规则、威胁情报、事件调查、KQL搜寻和自动化响应；通用演练与度量方法另补。"
+    },
+    "S.5.1": {
+      "source": "zh-protocol-verification",
+      "covers": "读第1节协议基本概念、第2节模态逻辑/定理证明/Spi演算等分析方法和第3节设计原则；非干扰与当前ProVerif/Tamarin仍读英文。"
+    },
+    "S.5.2": {
+      "source": "zh-security-engineering",
+      "covers": "按测量架构、测量对象、流量与资源开销分析研究方法和评价指标；漏洞成因、缓解、可复现实验和安全经济学继续用原英文作者教材。"
+    },
+    "H.1.1": {
+      "source": "zh-analog",
+      "covers": "从器件特性、放大电路、运放、反馈及实验仿真入门；KCL/KVL、RC/RL电路分析与系统噪声预算需另配基础电路课。"
+    },
+    "H.2.5": {
+      "source": "zh-semiconductor",
+      "covers": "按半导体基础、PN结、MOS电容、MOSFET与非挥发存储器学习；BJT、完整制造工艺和PDK模型仍配英文。"
+    },
+    "H.3.4": {
+      "source": "zh-realtime",
+      "covers": "从理想RM调度的利用率界和充分必要条件，读到调度开销与优先级反转，手算文中例题；WCET测量、EDF/多核、失效安全和认证另学。"
+    },
+    "V.1.2": {
+      "source": "zh-multimedia",
+      "covers": "选第2章图像视频、第4章数字语音、第7章音频/图像/视频压缩、第9章存储与网络传输；容器、同步和现代媒体流水线配英文。"
+    },
+    "V.2.1": {
+      "source": "zh-hci",
+      "covers": "选认知心理、人因、交互模型、任务分析与可用性原理；先理解用户能力与错误，再做界面分析。"
+    },
+    "V.2.2": {
+      "source": "zh-hci",
+      "covers": "选交互需求获取、用户研究、设计过程、原型及交互产品评估，完成一个迭代设计项目。"
+    },
+    "V.3.1": {
+      "source": "zh-visualization",
+      "covers": "按基础篇的人、数据与可视化流程学习视觉编码、图表和感知，再读应用篇并完成作品；交互评估配英文教材。"
+    },
+    "V.3.2": {
+      "source": "zh-visualization",
+      "covers": "从时空、地理、高维、层次和网络数据可视化及可视分析入门；场/体数据算法和完整用户评估仍配英文。"
+    },
+    "I.2.2": {
+      "source": "zh-writing",
+      "covers": "选文献获取与阅读、管理软件、选题开题、论文结构及写作、投稿和实验报告单元；团队协作、代码审查和可复现工具另配英文。"
+    },
+    "I.2.3": {
+      "source": "zh-research",
+      "covers": "选学术诚信、科学问题与假设、验证假设、实验共性及方法报告；代码/数据版本、复现与实验效度仍配Turing Way。"
+    },
+    "X.1.3": {
+      "source": "zh-autonomous-driving",
+      "covers": "按官方课程部署Apollo并学习感知、定位、预测、规划、控制与仿真实践；实时安全评估和实车工程仍需专门训练。"
+    },
+    "X.2.2": {
+      "source": "zh-finance",
+      "covers": "读投资组合、CAPM、套利、二叉树、Black–Scholes、期权数值定价与风险管理；支付系统、隐私和金融系统工程另补。"
     }
   },
-  "chineseGaps": {
-    "M.2.3": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.4.5": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.6.2.1": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.6.2.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.6.2.3": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.6.3": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.6.3.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.6.5": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.8.4": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "M.8.6": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "F.1.4": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "F.1.5": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "F.1.6": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "P.3.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "P.5.4": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "C.3.4": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "D.2.3": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "D.4.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "A.1.1": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "S.2.5": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "S.4.4": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "S.5.1": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "S.5.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "H.1.1": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "H.2.5": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "H.3.4": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "V.1.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "V.2.1": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "V.2.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "V.3.1": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "V.3.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "I.2.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "I.2.3": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "X.1.3": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。",
-    "X.2.2": "暂未找到并核实适合本节点的中文课程或讲义，先使用英文资源。"
-  }
+  "chineseGaps": {}
 }

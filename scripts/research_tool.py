@@ -15,6 +15,7 @@ and so scripts/check_outlines.py can check copied tables of contents against the
 The Tavily key comes from TAVILY_API_KEY, else the Windows user environment.
 """
 import argparse
+import gzip
 import hashlib
 import html
 import json
@@ -31,6 +32,11 @@ CACHE = ROOT / "temp/research/cache"
 BUDGET_FILE = ROOT / "temp/research/tavily-budget.json"
 BUDGET_LIMIT = 600
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"
+
+
+def decode_body(raw, encoding=''):
+    """urllib does not decompress gzip responses; some hosts send it unsolicited."""
+    return gzip.decompress(raw) if encoding.lower() == 'gzip' or raw.startswith(b'\x1f\x8b') else raw
 
 
 class _Text(HTMLParser):
@@ -107,13 +113,15 @@ def _pdf_text(raw):
 def fetch(url):
     cp = _cache_path("page", url)
     cached = _load(cp) if cp.exists() else None
+    if cached and cached.get('text', '').startswith('\ufffd\x08'):
+        cached = None  # Older Bilibili cache entries contain decoded gzip bytes, not page text.
     # entries cached before PDF extraction existed hold only a placeholder
     if cached and not cached.get("text", "").startswith("[PDF,"):
         return cached
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en,zh;q=0.8"})
     try:
         with urllib.request.urlopen(req, timeout=40) as r:
-            raw = r.read(60_000_000)  # whole-book PDFs (e.g. Sutton & Barto) run past 20 MB
+            raw = decode_body(r.read(60_000_000), r.headers.get('Content-Encoding', ''))
             charset = r.headers.get_content_charset() or "utf-8"
             result = {"url": url, "final_url": r.geturl(), "status": r.status,
                       "type": r.headers.get_content_type()}

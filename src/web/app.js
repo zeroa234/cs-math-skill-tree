@@ -34,7 +34,7 @@
     locked: '<svg viewBox="0 0 16 16"><rect x="3.5" y="7" width="9" height="6.5" rx="1"/><path d="M5.5 7V5.2a2.5 2.5 0 015 0V7"/></svg>',
   };
   const STATE_TEXT = { lit: "已点亮", avail: "现在能学", locked: "未解锁" };
-  const TIER_TEXT = { website: "学习网站", material: "讲义 / 资料", book: "教材" };
+  const TIER_TEXT = { website: "学习网站", material: "讲义 / 资料", book: "教材", course: "课程", video: "视频课程" };
 
   // ── persisted state ───────────────────────────────────────────────
   const state = { learned: new Set(), collapsed: new Set(["X"]), goal: [], goalLabel: "", introSeen: false };

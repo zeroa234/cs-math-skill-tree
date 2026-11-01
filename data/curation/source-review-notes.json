@@ -3,21 +3,89 @@
   "timezone": "Asia/Kuala_Lumpur",
   "baseline": "5963aa5ef1eb89ea2c83a57dfb72f784e54bc92b",
   "webChecks": [
-    {"url": "https://liaoxuefeng.com/books/java/introduction/index.html", "result": "readable", "title": "简介 - Java教程 - 廖雪峰的官方网站", "note": "网页读取服务能读到Java、面向对象、泛型与多线程目录；本机HTTP和Edge仍为DNS失败。"},
-    {"url": "https://www.hello-algo.com/", "result": "readable", "title": "Hello 算法", "note": "网页读取服务可见作者、数据结构与算法目录；本机HTTP仍限流429，不判定死链。"},
-    {"url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cee34aba9eb884cf81f54a", "result": "readable", "title": "微分几何讲义（修订版）", "note": "出版社页可核实吴大任、ISBN9787040409529和曲线曲面目录，全文需购借；初轮超时，扩大检查轮返回200。"},
-    {"url": "https://java-programming.mooc.fi/", "result": "readable", "title": "About the course - Java Programming", "note": "官方明确标记legacy、不再更新维护且不再提供ECTS学分；基础教材仍可读。"},
-    {"url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/syllabus/", "result": "readable", "title": "Syllabus | Design and Analysis of Algorithms", "note": "官方先修6.006，支持本次对D1入口偏难的判定。"},
-    {"url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/", "result": "readable", "title": "Introduction to Algorithms", "note": "可作为F.1.2较温和的前段入门；高级贪心、摊还与设计仍配原6.046，未擅自替换原选课。"},
-    {"url": "https://dev.java/learn/", "result": "readable", "title": "General Tutorials - Dev.java", "note": "当代Java官方补充入口，含语言、对象、泛型、集合、虚拟线程和工具。"},
-    {"url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html", "result": "readable", "title": "Best Practices — Airflow 3.3.2 Documentation", "note": "Creating a task有重跑结果一致、UPSERT和固定分区建议，已补D.2.1。"},
-    {"url": "https://nlp.stanford.edu/IR-book/", "result": "timeout", "note": "本机两轮与网页读取均超时，保留历史目录证据，不声称当前访问已确认。"},
-    {"url": "https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html", "result": "timeout", "note": "同站目录页超时。"},
-    {"url": "https://nlp.stanford.edu/IR-book/information-retrieval-book.html", "result": "timeout", "note": "同站书页超时。"},
-    {"url": "https://nlp.stanford.edu/IR-book/pdf/irbookprint.pdf", "result": "timeout", "note": "同站PDF超时。"},
-    {"url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/fbs-public_24Jul2020.pdf", "result": "failed", "note": "本机证书校验失败，网页读取失败；未关闭TLS校验。"},
-    {"url": "https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf", "result": "timeout", "note": "两轮本机检查与网页读取超时，目录核对仅基于历史缓存。"},
-    {"url": "http://infolab.stanford.edu/~ullman/mmds/preface.pdf", "result": "timeout", "note": "历史前言PDF超时；MMDS主站返回200，不能据此前言失败认定整书失效。"}
+    {
+      "url": "https://liaoxuefeng.com/books/java/introduction/index.html",
+      "result": "readable",
+      "title": "简介 - Java教程 - 廖雪峰的官方网站",
+      "note": "网页读取服务能读到Java、面向对象、泛型与多线程目录；本机HTTP和Edge仍为DNS失败。"
+    },
+    {
+      "url": "https://www.hello-algo.com/",
+      "result": "readable",
+      "title": "Hello 算法",
+      "note": "网页读取服务可见作者、数据结构与算法目录；本机HTTP仍限流429，不判定死链。"
+    },
+    {
+      "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cee34aba9eb884cf81f54a",
+      "result": "readable",
+      "title": "微分几何讲义（修订版）",
+      "note": "出版社页可核实吴大任、ISBN9787040409529和曲线曲面目录，全文需购借；初轮超时，扩大检查轮返回200。"
+    },
+    {
+      "url": "https://java-programming.mooc.fi/",
+      "result": "readable",
+      "title": "About the course - Java Programming",
+      "note": "官方明确标记legacy、不再更新维护且不再提供ECTS学分；基础教材仍可读。"
+    },
+    {
+      "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/syllabus/",
+      "result": "readable",
+      "title": "Syllabus | Design and Analysis of Algorithms",
+      "note": "官方先修6.006，支持本次对D1入口偏难的判定。"
+    },
+    {
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+      "result": "readable",
+      "title": "Introduction to Algorithms",
+      "note": "可作为F.1.2较温和的前段入门；高级贪心、摊还与设计仍配原6.046，未擅自替换原选课。"
+    },
+    {
+      "url": "https://dev.java/learn/",
+      "result": "readable",
+      "title": "General Tutorials - Dev.java",
+      "note": "当代Java官方补充入口，含语言、对象、泛型、集合、虚拟线程和工具。"
+    },
+    {
+      "url": "https://airflow.apache.org/docs/apache-airflow/stable/best-practices.html",
+      "result": "readable",
+      "title": "Best Practices — Airflow 3.3.2 Documentation",
+      "note": "Creating a task有重跑结果一致、UPSERT和固定分区建议，已补D.2.1。"
+    },
+    {
+      "url": "https://nlp.stanford.edu/IR-book/",
+      "result": "timeout",
+      "note": "本机两轮与网页读取均超时，保留历史目录证据，不声称当前访问已确认。"
+    },
+    {
+      "url": "https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html",
+      "result": "timeout",
+      "note": "同站目录页超时。"
+    },
+    {
+      "url": "https://nlp.stanford.edu/IR-book/information-retrieval-book.html",
+      "result": "timeout",
+      "note": "同站书页超时。"
+    },
+    {
+      "url": "https://nlp.stanford.edu/IR-book/pdf/irbookprint.pdf",
+      "result": "timeout",
+      "note": "同站PDF超时。"
+    },
+    {
+      "url": "https://www.cds.caltech.edu/~murray/books/AM08/pdf/fbs-public_24Jul2020.pdf",
+      "result": "failed",
+      "note": "本机证书校验失败，网页读取失败；未关闭TLS校验。"
+    },
+    {
+      "url": "https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf",
+      "result": "timeout",
+      "note": "两轮本机检查与网页读取超时，目录核对仅基于历史缓存。"
+    },
+    {
+      "url": "http://infolab.stanford.edu/~ullman/mmds/preface.pdf",
+      "result": "timeout",
+      "note": "历史前言PDF超时；MMDS主站返回200，不能据此前言失败认定整书失效。"
+    }
   ],
   "guideNotes": {
     "M.1.4.1": "隐函数/逆函数的证明型补充高于D1计算入门，建议分两轮阅读。",
@@ -58,7 +126,7 @@
     "V.1.3": "CMU课表确有Physics simulation与Inverse and differentiable rendering，但单讲不等于完整物理仿真训练。",
     "V.2.4": "AR与协作使用独立补书，不是VR主书已覆盖全部XR研究。",
     "I.2.1": "伦理案例、偏见与绿色软件分别有来源；法规仍应按地区和日期另查。",
-    "X.1.3": "Coursera公开目录可核实课程结构，未登录验证完整材料，实时系统仍缺专门讲次。",
+    "X.1.3": "英文学习卡已替换为大学官方汇总的YouTube公开课；导览仍保留Toronto公开目录的历史结构证据，二者不是同一套课，实时/安全工程需补充。",
     "X.2.5": "气候和数字人文来源已分列，但领域知识仍是树外先修。"
   },
   "changes": [
@@ -66,6 +134,9 @@
     "修正12个英文条目的覆盖或访问说明：M.1.1、M.1.5、M.4.1、M.5.4、F.1.2、P.2.1、D.1.2、A.3.4、H.2.2、H.3.1、H.3.2、D.2.1。",
     "为6个中文条目补上先修或覆盖边界：M.1.4.1、M.1.5、M.3.3、M.7.1、M.6.3.1、H.3.1。",
     "D.2.1新增Airflow官方幂等重试补充分支；未凭关键词缺失推断内容不存在。",
-    "检查器扩展到学习、导览目录和先修证据；保留当前HTTP响应、历史目录证据与浏览器/网页读取的区别。"
+    "检查器扩展到学习、导览目录和先修证据；保留当前HTTP响应、历史目录证据与浏览器/网页读取的区别。",
+    "补齐35个中文空缺，升级11个仅作导读的节点，并用中文大学课程替换M.4.2的付费教材入口；共47个中文学习卡变更。",
+    "按免费文字→免费权威视频→付费课程/书籍的顺序补充；中文视频优先B站，英文优先YouTube，核对发布者与原课程的对应关系。",
+    "X.1.3改为波恩大学官方汇总的YouTube课程；X.2.4改为Springer开放获取教材。付费候选保留在补充报告，未购买任何内容。"
   ]
 }
