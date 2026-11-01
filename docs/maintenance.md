@@ -63,7 +63,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 
 ## 发布到 GitHub
 
-- 仓库 <https://github.com/zeroa234/cs-math-skill-tree>。本项目平时在作者工作区的大仓库里提交，`bash scripts/publish-github.sh` 用 `git subtree split` 拆出本目录的历史、去掉提交说明里的 AI 署名行，再推到 `main`。重建结果是确定的，每次都是快进推送；先加 `--dry-run` 只生成本地分支 `publish/cs-math-skill-tree` 看一眼。
+- 仓库 <https://github.com/zeroa234/cs-math-skill-tree>。本项目平时在作者工作区的大仓库里提交，`bash scripts/publish-github.sh` 用 `git subtree split` 拆出本目录的历史、去掉提交说明里的 AI 署名行，并把本地 git 身份（ZCode Agent）换成作者的 GitHub 身份（zeroa234 的 noreply 邮箱），再推到 `main`。2026-11-01 加身份替换时强推过一次，此后重建结果是确定的，每次都是快进推送；先加 `--dry-run` 只生成本地分支 `publish/cs-math-skill-tree` 看一眼。
 - 在线版：GitHub Pages。`.github/workflows/pages.yml` 在 `src/web/` 有改动时把它原样部署到 <https://zeroa234.github.io/cs-math-skill-tree/>，不在 CI 里重新构建，所以推送前先本地跑 `node scripts/build.mjs`。
 - 离线包：先 build，再 `python -X utf8 scripts/package_web.py`，把 `output/cs-math-skill-tree-<日期>.zip` 传到新的 Release：`gh release create vX.Y.Z <zip> --notes-file <说明.md>`。
 - Windows 上 gh 的中文命令行参数会变成乱码：Release 标题、仓库简介这类中文字段用 UTF-8 的 JSON 走 `gh api ... --input -`，改完读回核对。
