@@ -1,0 +1,207 @@
+{
+ "id": "M.6.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《预测：方法与实践》第二版中译本（Hyndman & Athanasopoulos，OTEtexts 官方中文站）",
+   "url": "https://otexts.com/fppcn/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章时间序列图形（2.7 滞後图、2.8 自相关图 ACF）；第 3 章预测者的工具集（精度指标、训练／测试集、时间序列交叉验证、预测区间、残差检验）；第 6 章时间序列分解；第 7 章指数平滑（7.4 方法分类、7.5 创新的指数平滑状态空间模型）；第 8 章 ARIMA（8.1 平稳性和差分、模型识别与估计）；第 9 章动态回归；第 10 章分层／分组预测；第 11 章高级预测方法；第 12 章实际预测问题。",
+   "access": "免费在线阅读全文（作者授权中文译本，OTEtexts 平台）；界面与正文中文，示例代码为 R；纸质版另售。",
+   "publisher": "Rob J Hyndman & George Athanasopoulos（Monash University；中文译本 OTEtexts）",
+   "evidence": {
+    "url": "https://otexts.com/fppcn/",
+    "location": "目录：2 时间序列图形、3 预测者的工具集、6 时间序列分解、7 指数平滑、8 ARIMA、9 动态回归",
+    "finding": "实际打开中文站，看到逐章目录与正文；ACF、预测评价、指数平滑、ARIMA 与状态空间形式都有章节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Forecasting: Principles and Practice, 3rd Edition — Hyndman & Athanasopoulos（OTEtexts，全文免费）",
+   "url": "https://otexts.com/fpp3/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章时间序列图形（ACF、滞後图、白噪声）；第 3 章时间序列分解；第 4 章时间序列特徵（ACF/PACF、单位根检验）；第 5 章预测精度（点预测指标、时间序列交叉验证、预测区间、Ljung–Box）；第 8 章指数平滑（ETS 状态空间）；第 9 章 ARIMA（平稳性／差分／识别／估计／与 ETS 关系）；第 10 章动态回归。",
+   "access": "免费在线全文（Quarto 逐章 HTML，每章配 R 代码与真实数据）；英文；纸质版另售。",
+   "publisher": "Rob J Hyndman & George Athanasopoulos（Monash University）",
+   "evidence": {
+    "url": "https://otexts.com/fpp3/",
+    "location": "目录：2 Time series graphics、4 Time series features、5 The forecaster's toolkit、8 Exponential smoothing、9 ARIMA models、10 Dynamic regression",
+    "finding": "实际打开英文站，看到逐章目录与正文；ACF、预测评价、ETS、ARIMA 与动态回归都有章节。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "自相关与平稳性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 2 章 2.7 滞後图、2.8 自相关图 ACF；第 8 章 8.1 平稳性和差分",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 2 ACF/lag plots/white noise；Chapter 4 stationarity and unit root tests；Chapter 9.1 stationarity/differencing",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第二版没有英文第三版新增的第 4 章特徵提取，但 ACF、滞後图与 8.1 平稳性／差分仍在；英文第三版另有第 4 章单位根检验。"
+  },
+  {
+   "topic": "预测方法与评价",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 3 章预测者的工具集（精度指标、训练／测试集、时间序列交叉验证、预测区间、残差检验）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 5 The forecaster's toolkit（point forecast accuracy、time series cross-validation、prediction intervals、Ljung–Box）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第 3 章与英文第 5 章对应；英文章节编号不同，但内容相同（中文第二版、英文第三版）。"
+  },
+  {
+   "topic": "指数平滑",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7 章指数平滑（7.4 方法分类、7.5 创新的指数平滑状态空间模型）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 8 Exponential smoothing（8.4 方法分类、8.5 ETS 状态空间模型）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第 7 章与英文第 8 章对应；ETS 状态空间形式在两边都有。"
+  },
+  {
+   "topic": "ARIMA 模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 8 章 ARIMA（8.1 平稳性和差分、模型识别与估计）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 9 ARIMA models（9.1 stationarity/differencing、identification/estimation、9.7 ARIMA vs ETS）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第 8 章与英文第 9 章对应；ARIMA 与 ETS 的关系在英文 9.7，中文第二版没有同一节但仍有 ARIMA 主干。"
+  },
+  {
+   "topic": "状态空间形式的预测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7 章 7.5 创新的指数平滑状态空间模型（ETS）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 8.5 ETS state space models；Chapter 9 ARIMA 的等价状态空间形式",
+     "extent": "covered"
+    }
+   ],
+   "note": "此项按 ETS 的创新状态空间形式与 ARIMA 等价形式理解；不包含一般卡尔曼滤波／结构化状态空间模型，两本书都没有教完整 Kalman 框架，这是本节的深度限制。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读第 2 章时间序列图形，掌握 ACF、滞後图与白噪声。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第 3 章预测者的工具集，学会精度指标、时间序列交叉验证、预测区间与残差检验。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第 7 章指数平滑（含 ETS 状态空间）与第 8 章 ARIMA（平稳性、差分、识别与估计）。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第 9 章动态回归；第 10–12 章作分层预测与实务补充。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Chapter 2 for ACF/lag plots and Chapter 4 for time series features/unit roots."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 5 for forecast accuracy, time-series CV, prediction intervals and Ljung–Box."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 8 ETS (state space) and Chapter 9 ARIMA (stationarity, identification, estimation, ARIMA vs ETS)."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 10 dynamic regression for the modeling extension."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://otexts.com/fppcn/（既有主資源）",
+   "result": "采纳：官方中文译本覆盖 ACF、预测评价、ETS、ARIMA、动态回归；免费。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://otexts.com/fpp3/（既有主資源）",
+   "result": "采纳：第三版英文全文覆盖五项，另有第 4 章特徵／单位根；免费。"
+  }
+ ],
+ "findings": [
+  "原中文主资源是作者授权的官方中文译本，不是非授权搬运；已核对目录，五项都有章节。",
+  "中文是第二版、英文是第三版：中文没有英文第三版新增的第 4 章「时间序列特徵」，但 ACF／平稳性仍在第 2 章与 8.1；已在 note 说明版本差异。",
+  "「状态空间形式的预测」只到 ETS 的创新状态空间形式与 ARIMA 等价形式，不含一般卡尔曼滤波／结构化状态空间模型；这是两本书共同的深度限制，没有假称已含 Kalman。",
+  "五项均为必学，没有 extension。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "时间序列分析",
+ "description": "自相关与平稳性、预测方法与评价、指数平滑、ARIMA 模型、状态空间形式的预测。",
+ "applied_additions": []
+}

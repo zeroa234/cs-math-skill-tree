@@ -1,0 +1,325 @@
+{
+ "id": "D.1.4",
+ "name": "数据库管理与安全",
+ "description": "备份恢复、授权、审计、加密、监控与数据库运维；安全理论见安全领域。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "PostgreSQL 18 Documentation, Part III. Server Administration (official)",
+   "url": "https://www.postgresql.org/docs/current/admin.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch18 Server Setup (18.8 Encryption Options, 18.9 SSL, 18.10 GSSAPI, 18.11 SSH tunnels), Ch19 Server Configuration (19.3 Connections and Authentication, 19.8 Error Reporting and Logging, 19.9 Run-time Statistics, 19.10 Vacuuming), Ch20 Client Authentication, Ch21 Database Roles (attributes, membership, predefined roles, function security), Ch24 Routine Maintenance (vacuum, reindex, log-file maintenance), Ch25 Backup and Restore (SQL dump, file-system backup, continuous archiving/PITR), Ch26 HA/Replication, Ch27 Monitoring (cumulative statistics, locks, progress reporting, disk usage), Ch28 WAL/Reliability, Ch29 Logical Replication.",
+   "access": "Free official HTML documentation, no registration. It is a product manual: audit is only covered as logging/statistics, there is no dedicated audit chapter (pgAudit is an extension, see en2).",
+   "publisher": "PostgreSQL Global Development Group",
+   "evidence": {
+    "url": "https://www.postgresql.org/docs/current/admin.html",
+    "location": "Part III table of contents, Ch18–Ch29",
+    "finding": "Page title is 'Documentation: 18: Part III. Server Administration'; TOC lists server setup with encryption/SSL, client authentication, roles, routine maintenance, backup and restore, HA/replication, monitoring, WAL and logical replication."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "pgAudit — Open Source PostgreSQL Audit Logging (official extension README)",
+   "url": "https://github.com/pgaudit/pgaudit",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Explains why plain log_statement is not an audit trail, then documents session and object audit logging, audit roles/privileges and configuration. Supplies the dedicated 审计 topic that en1 lacks.",
+   "access": "Free open-source documentation on GitHub; installing the extension requires a PostgreSQL server build with pgAudit.",
+   "publisher": "pgAudit project (PostgreSQL Global Development Group-affiliated extension)",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/pgaudit/pgaudit/master/README.md",
+    "location": "Introduction, Why pgAudit?, audit logging sections",
+    "finding": "README states pgAudit 'provides detailed session and/or object audit logging via the standard PostgreSQL logging facility' and contrasts it with log_statement = all; the rest of the file documents settings and audit roles."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "PostgreSQL 18.3 中文手册（PostgreSQL 中文社区文档翻译组）第三部分 服务器管理",
+   "url": "http://www.postgres.cn/docs/18/admin.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "与英文官方手册同构的完整中文正文：18.8 加密选项、18.9 SSL、18.10 GSSAPI、18.11 SSH 隧道；19.3 连接与认证、19.8 错误报告和日志、19.9 运行时统计、19.10 清理；20 客户端认证；21 数据库角色；24 日常维护（清理、重建索引、日志文件维护）；25 备份和恢复（SQL Dump、文件系统级备份、连续归档与 PITR）；26 高可用与复制；27 监控数据库活动；28 可靠性和 WAL；29 逻辑复制。",
+   "access": "免费在线阅读；社区翻译，页面注明基于上一版增量翻译并全文校对，最后更新 2026-04-27。无审计专章，审计只到日志维护与日志配置。",
+   "publisher": "PostgreSQL 中文社区（彭煜玮等翻译）",
+   "evidence": {
+    "url": "http://www.postgres.cn/docs/18/admin.html",
+    "location": "目录第18–29章",
+    "finding": "页面标题为「部分 III. 服务器管理」，目录列出 18.8 加密选项、19.8 错误报告和日志、20 客户端认证、21 数据库角色、24 日常数据库维护任务、25 备份和恢复、26 高可用性、27 监控数据库活动。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "openGauss 数据库管理指南 · 审计概述（官方中文文档源）",
+   "url": "https://github.com/opengauss-mirror/docs/blob/master/docs/zh/database_administration_guide/audit_overview.md",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文审计专章：审计总开关 audit_enabled、各审计项（登录/注销、启停与恢复、锁定解锁、越权、授权与回收、全量审计用户、对象 CREATE/ALTER/DROP）、审计日志与结果查询；补齐 zh1 没有的审计主题。",
+   "access": "openGauss 官方文档仓库的 Markdown 源文免费可读；产品文档站为 JS 渲染，本次直接读官方仓库源文。示例需 openGauss 实例。",
+   "publisher": "openGauss 社区（官方文档镜像仓库）",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/opengauss-mirror/docs/master/docs/zh/database_administration_guide/audit_overview.md",
+    "location": "「审计概述」表1 配置审计项",
+    "finding": "正文写明 openGauss 将用户对数据库的所有操作写入审计日志，并逐项列出 audit_login_logout、audit_database_process、audit_grant_revoke、full_audit_users、audit_system_object 等审计开关。"
+   }
+  },
+  {
+   "key": "fix-zh-audit-lab",
+   "lang": "zh",
+   "title": "openGauss oGRAC日志管理：审计设置、记录解释及维护示例",
+   "url": "https://docs.opengauss.org/zh/docs/latest/ograc/database_administration_guide/data_object_management/log_management.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "审计类型选择、事件字段解读、大小/数量维护及参数查询实例；限oGRAC，不混作普通openGauss或PostgreSQL命令。",
+   "access": "免费中文教学正文；已打开。原zh2 GitHub路径本轮无法读取，改用可读官方实例。未安装数据库或运行SQL。",
+   "publisher": "openGauss社区",
+   "evidence": {
+    "url": "https://docs.opengauss.org/zh/docs/latest/ograc/database_administration_guide/data_object_management/log_management.html",
+    "location": "AUDIT_LEVEL、日志-审计、维护审计日志",
+    "finding": "用ALTER SYSTEM设置审计类型，解释事件中的会话、用户、操作与返回码，演示维护策略和参数检查。"
+   },
+   "added_by": "review/data-app-additions/D.1.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "备份恢复",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第25章 备份和恢复（SQL Dump、文件系统级备份、连续归档与 PITR）；第24章 日常维护",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch25 Backup and Restore; Ch24 Routine Maintenance",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "授权",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第20章 客户端认证；第21章 数据库角色（角色属性、成员资格、预定义角色、函数安全性）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch20 Client Authentication; Ch21 Database Roles",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "审计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "审计概述：审计总开关与各项审计开关、审计日志与结果查询",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "19.8 错误报告和日志；24.3 日志文件维护（仅日志层）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-audit-lab",
+     "section": "AUDIT_LEVEL→日志-审计→维护审计日志",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Introduction / Why pgAudit? / session and object audit logging",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "19.8 Error Reporting and Logging; 24.3 Log File Maintenance (logging only)",
+     "extent": "partial"
+    },
+    {
+     "source": "en2",
+     "section": "Why pgAudit?；Session/Object Audit Logging的Configuration与Example；Format",
+     "extent": "covered"
+    }
+   ],
+   "note": "两套 PostgreSQL 手册都只有日志，没有审计专章；中文审计由 openGauss 审计章补齐，英文由 pgAudit 文档补齐。；原zh1仅日志层为partial，原zh2概述路径本轮不可读；现用官方审计实例补上事件选择、身份及操作追踪和记录维护。与原zh1日志基础合起来完成数据库审计实践，不把普通日志等同审计。；原en1仅日志层为partial；原en2的实际示例已重新核实，按配置→SQL→预期日志→字段解读完成审计教学，与原PostgreSQL日志管理组合覆盖此项。保留原已覆盖其他主题。"
+  },
+  {
+   "topic": "加密",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "18.8 加密选项；18.9 用 SSL 进行安全的 TCP/IP 连接；18.10 GSSAPI；18.11 SSH 隧道",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "18.8 Encryption Options; 18.9 SSL; 18.10 GSSAPI; 18.11 SSH Tunnels",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "监控与数据库运维",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第27章 监控数据库活动（累计统计、锁、进度报告、磁盘用量）；第24章 日常维护；第19.9 运行时统计",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch27 Monitoring Database Activity; Ch24 Routine Maintenance; 19.9 Run-time Statistics",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "安全理论见安全领域",
+   "stage": "extension",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "不涉及：手册只讲认证、授权与加密配置",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "不涉及：手册只讲认证、授权与加密配置",
+     "extent": "partial"
+    }
+   ],
+   "note": "原简介明确写「安全理论见安全领域」，属树外背景：本节点只要求管理与配置层面的安全操作，密码学与安全模型理论在 S.3.3，不在此重复。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读第18.8–18.11 配置加密与 SSL/SSH 隧道，第20–21 章建角色、配 pg_hba.conf 与最小权限；在一台本地实例上实际创建角色并限制库/表权限。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第24 章做 vacuum/reindex/日志轮转，第25 章分别做一次 SQL dump、文件系统备份与 PITR 恢复演练，第27 章用累计统计、锁视图和进度视图观察一次慢查询。"
+    },
+    {
+     "source": "zh2",
+     "read": "读 openGauss 审计概述并对照自己的实例列出应开启的审计项；若只用 PostgreSQL，可把审计项映射到 log_statement/pgAudit 配置。"
+    },
+    {
+     "source": "fix-zh-audit-lab",
+     "read": "读原PostgreSQL中文手册日志基础后，以oGRAC独立案例学习审计类型、记录字段和维护策略；这些命令不直接用于PostgreSQL。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Work through Ch18.8–18.11, Ch20–21 for encryption/auth/roles, then Ch24–25 for maintenance and backup/PITR; do each operation on a local cluster."
+    },
+    {
+     "source": "en1",
+     "read": "Read Ch27 and 19.9, then use pg_stat_* and lock/progress views to diagnose one slow query and one bloat case."
+    },
+    {
+     "source": "en2",
+     "read": "Install pgAudit and configure session/object audit logging; read the README's audit-role and settings sections to see what plain log_statement misses."
+    },
+    {
+     "source": "en2",
+     "read": "原服务器管理路线后读Why pgAudit及两套Example；在匹配扩展版本的练习实例重现SQL与日志差异，识别哪些事件没有被记录。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 http://www.postgres.cn/docs/18/admin.html 与 http://www.postgres.cn/docs/18/index.html",
+   "result": "采纳为中文主材料：18.3 中文手册与英文官方手册同构，备份恢复/认证/角色/加密/监控/维护都有正文。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "openGauss 文档仓库 database_administration_guide/audit_overview.md",
+   "result": "采纳为中文审计补充；文档站为 JS 渲染且路径 404，改读官方仓库 Markdown 源文。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「数据库系统 运维 管理 课程」",
+   "result": "结果多为 MySQL DBA 商业培训或个人速成课，未采纳；本节点以官方手册的步骤式正文为主，不强行配视频。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "PostgreSQL 18 admin docs；pgAudit README",
+   "result": "采纳 en1 为主、en2 补审计；确认官方手册无审计专章。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.docs.opengauss.org 审计 示例 审计日志",
+   "result": "打开官方oGRAC日志管理完整正文与6.0.0-RC1审计概述；原GitHub路径打开失败。",
+   "by": "review/data-app-additions/D.1.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "site.pgaudit.org documentation example object audit logging",
+   "result": "打开pgAudit原项目README，实际核对会话和对象SQL及输出示例。",
+   "by": "review/data-app-additions/D.1.4.json"
+  }
+ ],
+ "findings": [
+  "原英文资源 PostgreSQL 18 Part III 已核对目录，备份恢复、授权、加密、监控与日常维护都有章；但「审计」只有日志与统计，没有审计专章，英文需补 pgAudit 文档才算覆盖。",
+  "原中文条目 openGauss 文档首页只有产品入口，无法定位到具体章节；本次改用同构的 PostgreSQL 18.3 中文手册（完整正文、可逐章核对），并用 openGauss 审计章补中文审计，中文路线才覆盖六项。",
+  "「安全理论见安全领域」是原简介写明的树外边界，两语言都不在本节点教，标 extension 并注明依据。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/D.1.4.json"
+ ]
+}

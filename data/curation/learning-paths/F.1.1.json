@@ -1,0 +1,301 @@
+{
+ "id": "F.1.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "UC Berkeley CS 61B Data Structures (Spring 2021, Josh Hug) 课程网站",
+   "url": "https://sp21.datastructur.es/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "整门课 1–38 讲（逐讲页面标题已核对，缺 lec12/39）：1–2 Intro、3–6 Lists1–4（引用、数组、IntList/DLList/AList、扩容、不变量与断言）、13/15 Asymptotics、14 Disjoint Sets、16 ADTs and BST、17 B-Trees、18 Red Black Trees、19 Multi-Dimensional Data、20 Hashing、21 Heaps and Priority Queues、22 Tries、23–24 Trees/Graph Traversals 与 Graph Implementation、25–26 Shortest Paths、MST、29–36 排序，另配 lab/proj 与学习指南。节点简介的数组、链表、哈希、树、堆、图的存储与遍历全覆盖；栈与队列没有单列讲次（作为遍历与递归的工具出现）。",
+   "access": "免费公开，无需注册：每讲页面有 study guide、slides 与录播入口，lab/hw/proj 说明公开。视频在课程站内嵌（英文讲解），字幕状态未逐讲核对。",
+   "publisher": "UC Berkeley CS 61B（Josh Hug）",
+   "evidence": {
+    "url": "https://sp21.datastructur.es/materials/lectures/lec16/lec16",
+    "location": "materials/lectures/lec1 … lec38 的页面标题；如 lec3-6 Lists1-4、lec16 ADTs and BST、lec20 Hashing、lec21 Heaps and Priority Queues、lec24 Graphs Traversals and Implementation",
+    "finding": "逐个打开 lec1–lec38 的讲义页，标题与主题序列完整（lec12、lec39 为 404），lec24 标题即图的实现，lec3–6 的 study guide 讲 DLList/AList 的结构不变式与断言。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Algorithms, 4th Edition 配套站（Sedgewick & Wayne, Princeton）：§1.3 Bags, Queues, and Stacks、§4.1 Undirected Graphs",
+   "url": "https://algs4.cs.princeton.edu/13stacks/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "§1.3 用可运行代码讲 bag/queue/stack 的 API、链表与可变数组两种实现及其代价；§4.1 讲无向图的邻接表/邻接矩阵表示与 DFS/BFS。补 61B 没有单列讲次的栈队列，以及图存储的实现对比。",
+   "access": "免费在线正文与代码，无需注册；同站 §4.1 为 https://algs4.cs.princeton.edu/41graph/ 。",
+   "publisher": "Robert Sedgewick / Kevin Wayne，Princeton University",
+   "evidence": {
+    "url": "https://algs4.cs.princeton.edu/13stacks/",
+    "location": "§1.3 目录（APIs、Resizing arrays、Linked lists、Stack/Queue 应用）",
+    "finding": "章节页给出 1.3 的小节列表与全部代码/图，属完整正文而非目录页。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Hello 算法（krahets 着，中文开源在线教材）",
+   "url": "https://www.hello-algo.com/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第 3 章 数据结构、第 4 章 数组与链表、第 5 章 栈与队列、第 6 章 哈希表、第 7 章 树（二叉树、二叉搜索树、AVL、堆之外的红黑树仅有简介）、第 8 章 堆、第 9 章 图（图的表示：邻接矩阵/邻接表，图的操作与遍历）。覆盖数组、链表、栈队列、哈希、树、堆与图的存储与遍历；不把“不变量”作为独立概念讲，只在二叉搜索树/堆的性质处隐含。",
+   "access": "免费在线阅读（也可下载 PDF、跑 14 种语言代码）。2026-11-01 用 plain fetch 打开各章返回 429（Vercel 机器人校验），改用 Tavily extract 读到章标题与正文，链接本身有效。",
+   "publisher": "krahets（社区作者，清华大学邓俊辉、李沐作推荐语）",
+   "evidence": {
+    "url": "https://www.hello-algo.com/chapter_graph/",
+    "location": "第 9 章 图 章首（同法核对第 4 章数组与链表、第 8 章堆）",
+    "finding": "extract 返回“第 9 章 图 / 第 4 章 数组与链表 / 第 8 章 堆”章标题与本章导语，确认章号与主题；章内小节（图的表示、邻接矩阵、邻接表、遍历）在侧栏目录中，正文可读。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "浙江大学《数据结构》（陈越、何钦铭，中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/ZJU-93001",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "课程概述写明从实际应用问题导出每种经典数据结构的定义、实现（存储）方法与操作实现，并用综合案例与练习强化；参考教材为陈越等《数据结构》（第 2 版，高教社）。页面没有渲染出分讲大纲，因此只按概述认定为“数据结构实现与存储”的中文系统课，不据此声明具体讲次覆盖。",
+   "access": "中国大学MOOC 免费注册后可随开放学期学习，认证证书另计；页面显示“认证学习”。分讲视频与字幕需登录，未核对。",
+   "publisher": "浙江大学 / 中国大学MOOC（高等教育出版社）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/ZJU-93001",
+    "location": "课程概述第 2–4 段与“课程大纲/预备知识/参考资料”栏",
+    "finding": "页内“课程大纲”标题下只有预备知识与参考资料，没有章节列表；正文可读的是课程目标（数据组织、时空效率、实现与存储）与教材信息。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "北京大学裘宗燕：队列实现与数据不变式（中文课件）",
+   "url": "https://math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/DS4-stack-queue-2.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第10–13页讲环形队列的表示不变关系、数据不变式及操作保持不变式；配主课图存储章节学习。",
+   "access": "大学教师公开PDF，经典Python课件；旧语法细节以当前教程校正。",
+   "publisher": "原作者/机构公开教学材料，见来源",
+   "evidence": {
+    "url": "https://math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/DS4-stack-queue-2.pdf",
+    "location": "PDF第10–13页，幻灯片20–26",
+    "finding": "网页工具读到16页PDF，第12页明确介绍数据不变式与对象合法状态、创建/修改操作的关系。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "数组",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 4 章 数组与链表：数组、动态数组",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lec3–6 Lists1–4（AList、resizing）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都讲连续存储、随机访问代价与扩容。"
+  },
+  {
+   "topic": "链表",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 4 章 数组与链表：链表、链表 vs 数组",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lec3–6 Lists1–4（IntList/DLList、sentinel、不变量与断言）",
+     "extent": "covered"
+    }
+   ],
+   "note": "61B 用 DLList 讲哨兵结点与不变式，Hello 算法讲单/双链表与增删代价。"
+  },
+  {
+   "topic": "栈队列",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 5 章 栈与队列（含双端队列、应用）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lec23–24 以栈/队列实现 DFS 与 BFS；无单列讲次",
+     "extent": "partial"
+    },
+    {
+     "source": "en2",
+     "section": "§1.3 Bags, Queues, and Stacks（链表与可变数组两种实现）",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧 61B 把栈队列当遍历工具，补 algs4 §1.3 才有 API/实现/代价的系统讲解。"
+  },
+  {
+   "topic": "哈希",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 6 章 哈希表（哈希冲突、扩容、实现）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lec20 Hashing（哈希函数、冲突处理、负载因子与扩容）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "树",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7 章 树：二叉树、二叉搜索树、AVL 树",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lec16 ADTs and BST、17 B-Trees、18 Red Black Trees、19 Multi-Dimensional Data、22 Tries",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧多了 B 树/红黑树/空间索引，中文侧红黑树只在 Hello 算法里简要提及。"
+  },
+  {
+   "topic": "堆",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 8 章 堆（建堆、入堆出堆、Top-k 应用）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lec21 Heaps and Priority Queues",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "图存储与不变量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第9章图：邻接矩阵、邻接表与遍历",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "PDF第10–13页：环形队列表示关系、数据不变式与保持条件",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lec24 Graphs Traversals and Implementation（邻接表/矩阵与实现）、lec3–6/16/21 的结构不变式与断言",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合覆盖：图的存储表示由Hello算法讲解，实现应保持的结构条件由北大队列课件显式讲解。无需转读英文。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按第 3→4→5→6→7→8→9 章顺序读，每章把示例代码在本地跑一遍并自己实现一次数组/链表/哈希表/堆/邻接表"
+    },
+    {
+     "source": "zh2",
+     "read": "需要系统视频与配套练习时，注册中国大学MOOC 跟课，用拼题A 做题巩固实现与复杂度"
+    },
+    {
+     "source": "zh3",
+     "read": "读PDF第10–13页，给自己的队列实现写下head、rear或元素数应满足的条件，检查空队列、入队、出队是否保持这些条件。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 lec3–6（Lists/不变量）→13–16（渐近、ADT/BST）→17–22（B 树、红黑树、哈希、堆、trie）→23–24（树/图遍历与图实现）顺序学，做完 lab 与 proj1/proj2"
+    },
+    {
+     "source": "en2",
+     "read": "lec23 之前补 §1.3 栈队列与 §4.1 图表示，对照两种实现的代价"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.hello-algo.com/（原条目中文来源）逐章核对",
+   "result": "采纳：章标题与主题序列与节点的 7 个知识项基本对齐；plain fetch 被 429 拦，改用 Tavily extract 读到正文。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/ZJU-93001（原查到的中文课）",
+   "result": "采纳为补充：确为浙大数据结构课，但页面无分讲大纲、视频需登录，故不当作逐讲证据。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://sp21.datastructur.es/materials/lectures/lec1 … lec40 逐页标题",
+   "result": "采纳：1–38 讲标题核对完毕，栈队列无单列讲次 → 补 algs4 §1.3。"
+  }
+ ],
+ "findings": [
+  "旧条目英文 covers 写“39 讲”，实际可打开的讲义页是 1–38（lec12、lec39 为 404），已按实际讲次改写。",
+  "旧条目中文只写“从数据结构、复杂度、搜索排序到分治、动态规划和贪心”，没有落到本节点的 7 个知识项；现按章号逐项对应。",
+  "栈队列在原条目里被默认当成 61B 已覆盖，实际 61B 无该讲次；英文侧补 algs4 §1.3 后才完整。",
+  "“不变量”中文侧确实缺，保留为缺口而不是用英文顶替。",
+  "主代理复核：免费中文数据不变式教学确有来源，撤销原跨语言回退。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "数据结构",
+ "description": "数组、链表、栈队列、哈希、树、堆、图存储与不变量。",
+ "applied_additions": []
+}

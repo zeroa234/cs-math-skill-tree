@@ -1,0 +1,281 @@
+{
+ "id": "A.2.3.1",
+ "name": "网络架构与表示学习",
+ "description": "MLP、卷积、循环、注意力、Transformer、图网络与自监督表征。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Dive into Deep Learning (d2l.ai) — interactive online textbook organized by architecture",
+   "url": "https://d2l.ai/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch5 MLPs (forward/backward, dropout), Ch6 builders' guide, Ch7–8 CNNs and modern CNN designs (VGG/ResNet), Ch9–10 RNNs and modern RNNs (LSTM/GRU, seq2seq), Ch11 attention and Transformers (self-attention, positional encoding), Ch14 computer vision, Ch15–16 NLP pretraining (word2vec, BERT-style pretraining = self-supervised representation). GNNs are not covered.",
+   "access": "Free online book with PyTorch/MXNet notebooks per section; no registration.",
+   "publisher": "d2l.ai authors (Aston Zhang, Zachary Lipton, Mu Li, Alex Smola)",
+   "evidence": {
+    "url": "https://d2l.ai/",
+    "location": "TOC chapters 5–11, 14–16",
+    "finding": "The TOC lists MLP, CNN, modern CNN, RNN, modern RNN, attention/Transformers, computer vision and NLP pretraining chapters; no graph-neural-network chapter."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《动手学深度学习》中文版 — 第4–10、14–15章",
+   "url": "https://zh-v2.d2l.ai/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "中文目录：4 多层感知机、6 卷积神经网络、7 现代卷积神经网络、8 循环神经网络、9 现代循环神经网络、10 注意力机制与 Transformer（10.6 自注意力/位置编码、10.7 Transformer）、14 自然语言处理：预训练（word2vec、BERT）、15 NLP 应用。与英文版同构。",
+   "access": "免费在线阅读，附可运行 notebook 与中文视频课。",
+   "publisher": "d2l.ai 中文版（作者团队）",
+   "evidence": {
+    "url": "https://zh-v2.d2l.ai/",
+    "location": "目录第4–10、14–15章",
+    "finding": "中文目录列出多层感知机、CNN、现代 CNN、RNN、现代 RNN、注意力机制（含 10.6 自注意力、10.7 Transformer）、NLP 预训练（word2vec/BERT）。"
+   }
+  },
+  {
+   "key": "fix-zh-gnn",
+   "lang": "zh",
+   "title": "DGL 官方中文用户指南：消息传递、构建GNN、训练节点模型",
+   "url": "https://www.dgl.ai/dgl_docs/guide_cn/message.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "图网络的消息、聚合、更新及多层GraphSAGE训练；中文正文可独立学习。",
+   "access": "作者/机构公开正文，无需注册；只链接，不复制材料。",
+   "publisher": "DGL 开发者及中文指南译者",
+   "evidence": {
+    "url": "https://www.dgl.ai/dgl_docs/guide_cn/message.html",
+    "location": "第2章消息传递；第3章构建GNN；5.1节点分类/回归",
+    "finding": "已打开消息公式、SAGEConv构造/前向与节点训练中文正文及代码。"
+   },
+   "added_by": "review/ai-additions/A.2.3.1.json"
+  },
+  {
+   "key": "fix-en-gnn",
+   "lang": "en",
+   "title": "William Hamilton: Graph Representation Learning（作者公开版）",
+   "url": "https://www.cs.mcgill.ca/~wlh/grl_book/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Message passing GNN architecture, aggregation and graph-level pooling; graph learning objectives and training.",
+   "access": "作者/机构公开正文，无需注册；只链接，不复制材料。",
+   "publisher": "William L. Hamilton / McGill; Morgan & Claypool",
+   "evidence": {
+    "url": "https://www.cs.mcgill.ca/~wlh/grl_book/",
+    "location": "Ch5 The Graph Neural Network Model；Ch6 Graph Neural Networks in Practice",
+    "finding": "已打开Ch5 21页及Ch6 7页PDF，作者页明示出版社允许公开预出版草稿。"
+   },
+   "added_by": "review/ai-additions/A.2.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "MLP",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "4 多层感知机",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch5 Multilayer Perceptrons",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "卷积",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "6 卷积神经网络；7 现代卷积神经网络（AlexNet/VGG/ResNet）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch7–8 CNNs and modern CNN architectures",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "循环",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "8 循环神经网络；9 现代循环神经网络（LSTM/GRU/seq2seq）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch9–10 RNNs and modern RNNs",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "注意力",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "10.1–10.6 注意力提示/评分函数/多头注意力/自注意力",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch11 Attention mechanisms and Transformers",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "Transformer",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "10.7 Transformer",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch11 Transformer",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "图网络与自监督表征",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "14 预训练（word2vec/BERT）＝自监督表征；无图神经网络",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-gnn",
+     "section": "DGL 第2、3章及5.1；接原zh1 word2vec/BERT预训练",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch15–16 word2vec/BERT pretraining；no GNN chapter",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-gnn",
+     "section": "GRL Ch5–6 plus existing en1 D2L Ch15–16 pretraining",
+     "extent": "covered"
+    }
+   ],
+   "note": "自监督表征两边都有（word2vec/BERT），但图神经网络两边都没有章节，故组合项整体 partial。；原D2L负责自监督表征；补充中文DGL讲解图上消息传递、多层GraphSAGE和节点训练，二者组合覆盖图网络与自监督表征，不声称DGL单独覆盖全部自监督方法。；D2L already covers word embeddings and BERT self-supervision; Hamilton supplies GNN architecture and practice, closing the graph-network half."
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 4→6→7→8→9→10→14 章顺序读并跑 notebook，重点手写 self-attention 与一个 BERT 预训练小例子。"
+    },
+    {
+     "source": "fix-zh-gnn",
+     "read": "在D2L架构和预训练之后，依次读DGL第2章、第3章（含3.2 forward）、5.1；运行两层GraphSAGE节点分类，检查邻域聚合怎样改变表示。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read chapters 5–11 and 15–16, implementing MLP, a ResNet block, an LSTM and a Transformer block; do the pretraining chapter's word2vec/BERT exercises."
+    },
+    {
+     "source": "fix-en-gnn",
+     "read": "Read GRL Ch5–6 after D2L architectures and self-supervised pretraining; implement one aggregation layer and compare supervised and link-prediction objectives."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 d2l 中文目录",
+   "result": "采纳 zh1；确认注意力/Transformer/预训练有章，无 GNN。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「图神经网络 GNN 课程」",
+   "result": "只有零散讲座与论文精读，无完整中文 GNN 课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "d2l 中文已覆盖除 GNN 外全部主题，不为 GNN 单独找付费书。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://d2l.ai/ 目录",
+   "result": "采纳 en1；确认无 GNN 章。"
+  },
+  {
+   "lang": "zh",
+   "result": "葡萄书为候选；最终采用官方托管、正文已核的DGL中文教学，含公式和代码。",
+   "query_or_url": "图神经网络 教程 中文；DGL guide_cn message passing",
+   "by": "review/ai-additions/A.2.3.1.json"
+  },
+  {
+   "lang": "en",
+   "result": "由Stanford官方课程页追到Hamilton作者公开草稿；采用已完成教材章节。",
+   "query_or_url": "Stanford CS224W Graph Representation Learning Hamilton author book",
+   "by": "review/ai-additions/A.2.3.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 d2l 按架构分章，MLP/卷积/循环/注意力/Transformer/自监督预训练都有，唯一缺口是 GNN。",
+  "原中文就是同一本书的中文版，覆盖同样完整；此前只写「神经网络、卷积、序列、注意力」过于笼统，已按章核对。",
+  "GNN 两语言都没有，组合项 partial，未把自监督算作图网络覆盖。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/ai-additions/A.2.3.1.json"
+ ]
+}

@@ -1,0 +1,260 @@
+{
+ "id": "S.2.4",
+ "name": "云安全与容器安全",
+ "description": "多租户、身份权限、控制平面、镜像、编排、配置与云审计。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Kubernetes Documentation · Security（官方文档，含多租户、RBAC/ServiceAccount、Pod Security、加固指南、审计）",
+   "url": "https://kubernetes.io/docs/concepts/security/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Cloud Native Security（4C 分层）、Multi-tenancy、Pod Security Standards/Admission、Hardening Guide（Identity and Authorization、Scheduler、Dynamic Resource Allocation）、Kubernetes API Access Control、Service Accounts、Secrets good practices、Linux kernel security constraints；另配 Auditing 任务页（audit policy/backend）与 Images 页（拉取策略、digest、私有仓库）。",
+   "access": "官方文档免费在线阅读，无需注册；带可执行的任务步骤（kubectl 示例），但不是学期课程、无评分与习题。英文。",
+   "publisher": "Kubernetes SIG Security / CNCF",
+   "evidence": {
+    "url": "https://kubernetes.io/docs/concepts/security/",
+    "location": "Security 章节目录：Multi-tenancy、Pod Security Standards、Hardening Guide、Cloud Native Security、Service Accounts",
+    "finding": "打开英文 Security 页，目录列出 Multi-tenancy、Pod Security Standards、Pod Security Admission、Hardening Guide（含 Identity and Authorization、Scheduler、DRA）、Kubernetes API Access Control、Service Accounts 等条目。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Kubernetes Documentation · Auditing（审计任务页）",
+   "url": "https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Audit policy（规则、级别 None/Metadata/Request/RequestResponse）、audit backends（log/webhook）、event batching、log entry truncation；对应“配置与云审计”。",
+   "access": "官方文档免费；需要可运行的集群才能实际验证 audit policy。英文。",
+   "publisher": "Kubernetes SIG Security / CNCF",
+   "evidence": {
+    "url": "https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/",
+    "location": "Auditing 正文：Audit policy / Audit backends / Event batching / Parameter tuning",
+    "finding": "正文写“Kubernetes auditing provides a security-relevant, chronological set of records documenting the sequence of actions in a cluster”，并列出 audit policy 与 backend 小节。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Kubernetes 官方中文文档 · 安全（云原生安全、多租户、Pod 安全性、加固指南、审计）",
+   "url": "https://kubernetes.io/zh-cn/docs/concepts/security/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "与英文同源的官方中文版：云原生安全（4C）、Pod 安全性标准与准入、服务账号、Linux/Windows 节点安全性、Kubernetes API 访问控制、RBAC 良好实践、Secret 良好实践、多租户、API 服务器旁路风险、加固指南（调度器配置、身份认证机制）、安全检查清单、Pod/容器内核安全约束。",
+   "access": "官方中文文档免费在线阅读，无需注册；中文为官方本地化翻译，术语与命令保留英文；无课程评分/习题。",
+   "publisher": "Kubernetes SIG Security / CNCF（中文本地化）",
+   "evidence": {
+    "url": "https://kubernetes.io/zh-cn/docs/concepts/security/",
+    "location": "左侧“安全”分组：云原生安全、Pod 安全性标准/准入、服务账号、多租户、加固指南、安全检查清单",
+    "finding": "中文页导航逐条列出“云原生安全 / Pod 安全性标准 / Pod 安全性准入 / 服务账号 / Linux 节点的安全性 / Kubernetes API 访问控制 / 基于角色的访问控制良好实践 / 多租户 / Kubernetes API 服务器旁路风险 / 加固指南 / 安全检查清单”。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "Kubernetes 官方中文文档 · 镜像与审计",
+   "url": "https://kubernetes.io/zh-cn/docs/concepts/containers/images/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "镜像名与标签、imagePullPolicy、用 digest 固定镜像、私有仓库凭据（Secret）；配合中文审计任务页（audit policy/backend）。讲拉取与完整性，不含镜像签名/漏洞扫描。",
+   "access": "官方中文文档免费；镜像扫描/签名需另配 Trivy/cosign 等工具文档。",
+   "publisher": "Kubernetes SIG Security / CNCF（中文本地化）",
+   "evidence": {
+    "url": "https://kubernetes.io/zh-cn/docs/concepts/containers/images/",
+    "location": "镜像页：镜像名称、镜像拉取策略、使用摘要固定镜像、私有仓库",
+    "finding": "中文页正文含“镜像”“拉取”“摘要”等小节（全文 232 处“镜像”、19 处“摘要”），可核对 digest 与私有仓库凭据用法。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "多租户",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "多租户（Multi-tenancy）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Multi-tenancy",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "身份权限",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Kubernetes API 访问控制、RBAC 良好实践、服务账号",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Kubernetes API Access Control、RBAC Good Practices、Service Accounts",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "控制平面",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "加固指南 - 身份认证机制 / 调度器配置、API 服务器旁路风险、节点安全性",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Hardening Guide（Identity and Authorization / Scheduler / DRA）、Kubernetes API Server Bypass Risks",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "镜像",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "镜像页：imagePullPolicy、digest 固定、私有仓库凭据",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Images（pull policy、digest、credential provider）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都只到“拉取与完整性（digest/凭据）”，镜像签名（cosign）与漏洞扫描不在官方文档内，需要另配工具文档；本技能按“镜像拉取与供应链基础”理解该项。"
+  },
+  {
+   "topic": "编排",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Pod 安全性标准/准入、安全检查清单、应用安全检查清单",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Pod Security Standards / Pod Security Admission、Security Checklist、Application Security Checklist",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "配置与云审计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Secret 良好实践、安全检查清单",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "审计任务页（audit policy / backend）中文版",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Auditing：audit policy、backends、event batching",
+     "extent": "covered"
+    }
+   ],
+   "note": "审计内容以任务页为主，属于操作文档而非课程；中文为同一页的官方翻译。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按“云原生安全 → 多租户 → API 访问控制/RBAC/服务账号 → Pod 安全性标准与准入 → 加固指南 → 安全检查清单”顺序读，每节在测试集群跑一遍 kubectl 示例。"
+    },
+    {
+     "source": "zh2",
+     "read": "读镜像页用 digest 固定镜像并配私有仓库 Secret；再读审计任务页，写一份 audit policy 并观察 log backend 输出。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Cloud Native Security 的 4C 分层 → Multi-tenancy → RBAC/ServiceAccounts → Pod Security Standards/Admission → Hardening Guide。"
+    },
+    {
+     "source": "en2",
+     "read": "Auditing：从 audit policy 的级别选择开始，配 log/webhook backend，验证能回答 who/what/when/where。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://kubernetes.io/zh-cn/docs/concepts/security/（官方中文页直接核验）",
+   "result": "采纳：中文页与英文同源，覆盖多租户/权限/控制平面/编排/审计。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "GitHub 仓库检索“云原生安全”与中文课程页",
+   "result": "未找到可核对的中文视频课程；检索接口对中文查询多次报 422/限流，只能确认官方中文文档路线。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "CKS（Certified Kubernetes Security Specialist）中文培训与《云原生安全》教材",
+   "result": "CKS 为付费认证培训、教材付费；未购买，也未核实到中文开课页，故不作为免费路线。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://kubernetes.io/docs/concepts/security/ ; /docs/tasks/debug/debug-cluster/audit/",
+   "result": "采纳：英文 Security 章与 Auditing 任务页逐条核对。"
+  }
+ ],
+ "findings": [
+  "原英文/中文主资源都是 Kubernetes 官方文档，属“官方文档+任务步骤”而非学期课；本轮核对确认它确实把多租户、RBAC/SA、加固、Pod 安全、审计讲成可操作章节，因此保留，但在 access 里注明无评分/习题。",
+  "中文路线是官方本地化翻译，内容与英文同源；这不是“中文缺失”，但也不是独立的中文课程，需在导览里如实说明。",
+  "镜像一项两边都只覆盖拉取/摘要/凭据，签名与扫描不在文档内，已在 topic note 标出，避免把供应链安全写成已学完。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": []
+}

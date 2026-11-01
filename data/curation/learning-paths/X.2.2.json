@@ -1,0 +1,222 @@
+{
+ "id": "X.2.2",
+ "name": "计算金融",
+ "description": "金融建模与数值定价、投资组合、风险度量；金融经济知识为树外背景。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "18.S096 Topics in Mathematics with Applications in Finance (MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Price-yield relations and convexity, yield-curve bootstrapping, Value at Risk and its assumptions, option volatility estimation, risk-neutral derivation of Black-Scholes, PCA/matrix factorization for statistical views, limit theorems, Ito's lemma and Girsanov; mathematics lectures alternate with practitioner lectures, plus case studies and a final paper.",
+   "access": "Free OCW lecture videos, notes, assignments and case studies; no registration; the course states no economics/finance prerequisite.",
+   "publisher": "MIT OpenCourseWare",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/",
+    "location": "Syllabus/lecture list",
+    "finding": "The OCW page lists the lecture topics (VaR, Black-Scholes, PCA, Ito/Girsanov), the practitioner lectures, case studies and final paper."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "常州工学院《金融数学》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/CZU-1465310161",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程概述：金融数学基础、投资组合理论、CAPM、套利定价理论、二叉树模型、Black-Scholes 期权定价、希腊字母、隐含波动率、奇异期权、期权定价数值方法、债券与随机利率模型；授课目标包括给远期/期货/互换/期权定价、用衍生品管理金融风险。",
+   "access": "中国大学MOOC 免费注册学习，视频按开课学期、认证证书另计；课程页给出预备知识（概率统计、随机过程、微分方程、数值计算、金融市场学），未登录核对视频。",
+   "publisher": "常州工学院 / 中国大学MOOC",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/CZU-1465310161",
+    "location": "课程概述第二段与授课目标",
+    "finding": "正文列出投资组合、CAPM、二叉树、Black-Scholes、希腊字母、隐含波动率、数值方法与债券/随机利率模型，目标含衍生品定价与风险管理。"
+   }
+  },
+  {
+   "key": "fix-zh-var-worked",
+   "lang": "zh",
+   "title": "基于历史模拟的VaR及其实证检验",
+   "url": "https://www.cfrn.com.cn/uploads/fileupload/1033/paper/200411041033.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "历史模拟VaR计算步骤、观察窗与假设、Kupiec失效率事后检验、历史数据案例。",
+   "access": "CFRN中国金融研究网公开8页中文PDF，已打开正文；是方法及实证补充材料，不是独立整课。2004年实例与当时监管标准仅作历史教学，不据此描述现行规则。",
+   "publisher": "中国金融研究网（CFRN）公开研究材料",
+   "evidence": {
+    "url": "https://www.cfrn.com.cn/uploads/fileupload/1033/paper/200411041033.pdf",
+    "location": "第一节pp.1–2；第二节p.3；第三节pp.3–6",
+    "finding": "正文给出101天数据的计算流程、历史代表性假设、不同观察窗的比较以及Kupiec回测思想和检验表。"
+   },
+   "added_by": "review/data-app-additions/X.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "金融建模与数值定价",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "二叉树模型、Black-Scholes、希腊字母、隐含波动率、期权定价数值方法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Volatility estimation, risk-neutral Black-Scholes derivation, numerical methods in assignments",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "投资组合",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "投资组合理论、CAPM、套利定价理论",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Portfolio theory and PCA/matrix factorization lectures",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "风险度量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "用衍生品管理金融风险（未单列 VaR）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-var-worked",
+     "section": "一、历史模拟法；二、观察期长度；三、实证检验",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Value at Risk and its assumptions",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程有风险管理目标但没有 VaR 的单独讲次；英文有专讲。；原zh1讲组合、衍生品定价与风险对冲，新材料补VaR定义下的具体计算、样本窗假设和事后失败率检验；把原课程的定价与组合接到损失分布和风险模型验证，覆盖风险度量，不再只依赖风险管理目标。"
+  },
+  {
+   "topic": "金融经济知识为树外背景",
+   "stage": "extension",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "预备知识含金融市场学",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "OCW states no finance prerequisite",
+     "extent": "covered"
+    }
+   ],
+   "note": "原简介明确写金融经济知识为树外背景：中文把金融市场学列为预备知识，英文则不要求，本节点不另教。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按投资组合/CAPM→二叉树→Black-Scholes→希腊字母/隐含波动率→数值方法→债券与随机利率学习，完成每单元作业。"
+    },
+    {
+     "source": "fix-zh-var-worked",
+     "read": "原zh1组合与定价之后，按第一节模拟—定价—分位数流程手算小例；读第二节历史代表性和窗口取舍，再按第三节比较预测损失与实际损失、理解Kupiec失败率检验。仅作模型学习与历史案例复现。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the lecture sequence from price-yield and VaR through Black-Scholes, PCA and Ito/Girsanov; do the assignments and one case study."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开常州工学院《金融数学》课程页",
+   "result": "采纳 zh1；确认覆盖组合/定价/数值方法，但无 VaR 专讲。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 视频（注册后）",
+   "result": "按学期开放，未登录核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "王生喜《金融数学》等参考书",
+   "result": "课程页列为参考，未核价、未购买，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "MIT 18.S096 OCW 页面",
+   "result": "采纳 en1；确认 VaR、Black-Scholes、PCA、Ito 等讲次。"
+  },
+  {
+   "lang": "zh",
+   "result": "打开郑州、暨南及中央财经课程介绍，不把公开介绍当已获取全部课程；暨南目标明确VaR/ES及Python。",
+   "query_or_url": "金融风险管理 VaR 回测 中国大学MOOC",
+   "by": "review/data-app-additions/X.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "result": "检索进一步找到CFRN完整方法实例并打开；MathWorks官方演示描述有三种估算与回测，未核音轨不将中文网页当中文视频。",
+   "query_or_url": "site.icourse163.org 金融风险管理 VaR 回测 历史模拟",
+   "by": "review/data-app-additions/X.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "result": "web因13MB内容上限无法打开；本地内存读取又受网络权限限制，不采纳为已读来源。",
+   "query_or_url": "https://manual.resset.com/RESSETRFR.pdf",
+   "by": "review/data-app-additions/X.2.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 18.S096 是完整课程，建模/定价/组合/风险度量都有，保留。",
+  "原中文常州工学院课程覆盖投资组合、CAPM、二叉树、Black-Scholes、希腊字母、数值方法与债券，但风险度量只有「用衍生品管理风险」的目标，没有 VaR 讲次，中文 partial。",
+  "金融经济背景按原简介标 extension，中英文都把金融市场学列为预备或不要求。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/X.2.2.json"
+ ]
+}

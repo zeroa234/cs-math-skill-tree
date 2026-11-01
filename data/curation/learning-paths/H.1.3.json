@@ -1,0 +1,216 @@
+{
+ "id": "H.1.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "东南大学《信号与系统》（中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/SEU-204001",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "连续/离散信号与系统、时域/频域/复频域分析、傅里叶与拉普拉斯变换、频谱/频率响应、因果性与稳定性；按 16 周课程组织。",
+   "access": "视频需注册选课，按学期开放，认证证书收费；页面未列逐章大纲。",
+   "publisher": "东南大学（孟桥等）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/SEU-204001",
+    "location": "课程概述：时域、频域、复频域分析；频谱、频率响应、因果性、稳定性",
+    "finding": "页面说明课程从时域/频域/复频域推导信号与系统分析方法，并列出傅里叶、拉普拉斯与频率响应；未逐章列出卷积与采样。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "北京交通大学《数字信号处理》（中国大学MOOC，国家级一流课程）",
+   "url": "https://www.icourse163.org/course/NJTU-1001950001",
+   "tier": "website",
+   "free": null,
+   "role": "supplement",
+   "covers": "离散信号与系统、时域/频域抽样定理、DFT/FFT、IIR 与 FIR 数字滤波器设计、数字滤波器实现、多速率与小波简介。",
+   "access": "视频需注册选课，按学期开放，认证证书收费。",
+   "publisher": "北京交通大学（陈后金等）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/NJTU-1001950001",
+    "location": "课程概述：离散信号与系统、DFT/FFT、IIR/FIR 滤波器设计与实现；课程大纲预备知识",
+    "finding": "页面明确讲离散信号与系统、时域/频域抽样定理、DFT/FFT 与数字滤波器设计与实现，可补采样与数字滤波基本模型。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Signals and Systems（MIT 6.003, MIT OpenCourseWare, Fall 2011）",
+   "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "连续/离散信号表示、LTI 系统（微分/差分方程、框图、卷积、冲激/阶跃响应）、傅里叶级数与变换、Laplace/z 变换、系统函数与零极点、采样与重建、频率响应与滤波。",
+   "access": "MIT OCW 免费公开讲义、视频与习题；英文，字幕未核对。",
+   "publisher": "MIT EECS / MIT OpenCourseWare",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+    "location": "Course Description：representations of CT/DT signals、LTI systems、Fourier/Laplace/Z、sampling；Syllabus",
+    "finding": "OCW 描述逐项列出连续/离散信号、LTI、卷积、傅里叶/拉普拉斯/z、采样与频率响应，并公开讲义/视频/习题。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "连续与离散信号",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "连续/离散信号与系统的时域、频域、复频域分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Representations of continuous-time and discrete-time signals",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课覆盖连续与离散两类信号。"
+  },
+  {
+   "topic": "LTI",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "线性时不变系统的时域/频域响应与系统函数",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "LTI systems：difference/differential equations、block diagrams、system functions",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都以 LTI 为主线。"
+  },
+  {
+   "topic": "采样",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "时域/频域抽样定理",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Sampling and reconstruction",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文由数字信号处理课补抽样定理；信号与系统页未列采样。"
+  },
+  {
+   "topic": "卷积",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "时域分析中的系统响应（卷积）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Convolution、impulse/step responses",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程页未逐章写卷积，但时域响应分析即卷积；如需严格可对照教材。"
+  },
+  {
+   "topic": "频域",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "傅里叶变换、频谱与频率响应",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Fourier series/transform、frequency response",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都覆盖傅里叶表示与频率响应。"
+  },
+  {
+   "topic": "数字滤波基本模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "IIR/FIR 数字滤波器设计与实现（基本模型与差分方程）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Frequency response and filtering；系统函数/零极点",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 DSP 课从差分方程与滤波器结构讲；设计细节属本节点延伸。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按连续/离散信号→LTI 时域响应（卷积）→傅里叶/拉普拉斯→频率响应学习，完成习题。"
+    },
+    {
+     "source": "zh2",
+     "read": "读抽样定理、DFT 与 IIR/FIR 滤波器结构与实现，建立数字滤波基本模型。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按信号表示→LTI/卷积→傅里叶→Laplace/Z→采样→频率响应学习，配合习题与 MATLAB/Python 实验。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "信号与系统 中国大学MOOC 抽样 卷积 频域 课程",
+   "result": "采纳东南大学信号与系统 + 北京交通大学数字信号处理补抽样/滤波器。"
+  }
+ ],
+ "findings": [
+  "旧中文只有浙大信号分析与处理，无抽样/数字滤波；已换东南大学信号与系统 + 北交大 DSP。",
+  "旧英文 MIT 6.003 保留，采样、卷积、频域、滤波均有正文。",
+  "中文课程页未逐章列卷积/采样，已用同语言 DSP 课补采样，未跨语言。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "信号与系统",
+ "description": "连续与离散信号、LTI、采样、卷积、频域、数字滤波基本模型。",
+ "applied_additions": []
+}

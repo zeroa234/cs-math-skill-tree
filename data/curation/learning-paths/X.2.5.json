@@ -1,0 +1,319 @@
+{
+ "id": "X.2.5",
+ "name": "地理空间数据科学",
+ "description": "空间数据与地图投影、空间权重与空间自相关、点模式分析、空间回归、数据立方体与时空地统计。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Geographic Data Science with Python (Rey, Arribas-Bel, Wolf) — free online book",
+   "url": "https://geographicdata.science/book/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Spatial data models, spatial weights, choropleth mapping, global and local spatial autocorrelation (Moran/LISA), point pattern analysis, spatial inequality, clustering/regionalization, spatial regression and spatial feature engineering, with geopandas/PySAL and real datasets.",
+   "access": "Free online book with notebooks; no registration. Does not cover map projections in depth, data cubes or spatiotemporal geostatistics.",
+   "publisher": "Sergio Rey, Dani Arribas-Bel, Levi Wolf (book site)",
+   "evidence": {
+    "url": "https://geographicdata.science/book/",
+    "location": "Table of contents",
+    "finding": "The TOC lists spatial data, spatial weights, autocorrelation, point patterns, clustering, spatial regression and feature engineering chapters."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Spatial Data Science (Edzer Pebesma, Roger Bivand) — free online book with R",
+   "url": "https://r-spatial.org/book/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "Ch2 Coordinates (CRS/projection), Ch3–4 geometries and spherical geometries, Ch6 Data Cubes, Ch10 statistical modelling of spatial data, Ch11 point patterns, Ch12 spatial interpolation, Ch13 multivariate and spatiotemporal geostatistics, Ch14 proximity/areal data. Supplies projections, data cubes and kriging/spatiotemporal geostatistics missing from en1.",
+   "access": "Free online book with R code; no registration.",
+   "publisher": "Edzer Pebesma & Roger Bivand (r-spatial.org)",
+   "evidence": {
+    "url": "https://r-spatial.org/book/",
+    "location": "Table of contents chapters 2, 6, 12–14",
+    "finding": "The TOC lists Coordinates, Data Cubes, Spatial Interpolation, Multivariate and Spatiotemporal Geostatistics, and Proximity and Areal Data."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "武汉大学《空间数据分析》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/WHU-1463179165",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文课程：空间数据分析基础、栅格分析与图像挖掘、矢量分析与轨迹挖掘、空间社会网络、三维空间分析、探索性空间数据分析、空间相关性分析、空间点模式分析、地统计分析、地理加权回归、智能空间分析与决策支持、空间分析建模；教材为秦昆等《空间数据分析（第三版）》。",
+   "access": "课程介绍与大纲要公开；视频与测验需注册并按开放学期学习，认证证书另计。预备知识为 GIS 与概率统计基础；字幕未核对。",
+   "publisher": "武汉大学 / 中国大学MOOC",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/WHU-1463179165",
+    "location": "课程概述与课程大纲",
+    "finding": "正文列出空间相关性、点模式、地统计与地理加权回归等模块，并给出预备知识与配套教材。"
+   }
+  },
+  {
+   "key": "fix-zh-proj",
+   "lang": "zh",
+   "title": "选择正确的投影",
+   "url": "https://learn.arcgis.com/zh-cn/projects/choose-the-right-projection/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "投影畸变、等积与等距投影、范围选择与自定义坐标系。",
+   "access": "中文完整教程免费；操作需要ArcGIS Pro许可，软件费用另计。",
+   "publisher": "Esri Learn",
+   "evidence": {
+    "url": "https://learn.arcgis.com/zh-cn/projects/choose-the-right-projection/",
+    "location": "了解投影／全球分析结果／极地数据",
+    "finding": "有逐步操作与地图对比，非API参考。"
+   },
+   "added_by": "review/data-app-additions/X.2.5.json"
+  },
+  {
+   "key": "fix-zh-cube",
+   "lang": "zh",
+   "title": "探索时空立方体",
+   "url": "https://learn.arcgis.com/zh-cn/projects/explore-a-space-time-cube/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "时空格网、netCDF立方体图层、二维三维显示和趋势探索。",
+   "access": "中文完整教程免费；运行需要ArcGIS Pro许可。",
+   "publisher": "Esri／Martha Bass",
+   "evidence": {
+    "url": "https://learn.arcgis.com/zh-cn/projects/explore-a-space-time-cube/",
+    "location": "创建时空立方体图层、显示时空立方体图层",
+    "finding": "用住房拥有率数据教学立方体组织与分析，非仅产品概览。"
+   },
+   "added_by": "review/data-app-additions/X.2.5.json"
+  },
+  {
+   "key": "fix-zh-stkrig",
+   "lang": "zh",
+   "title": "时空Kriging插值在边坡变形监测中的应用",
+   "url": "https://www.mtxb.com.cn/cn/article/pdf/preview/027905ab-71fc-42c7-b745-eb01ec389230.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "1.1实验变异函数、1.2时空模型、1.3计算步骤及监测实例和空间插值对照。",
+   "access": "期刊原站6页中文全文免费；进阶方法案例，须先学原zh1地统计。",
+   "publisher": "煤炭学报／王建民等",
+   "evidence": {
+    "url": "https://www.mtxb.com.cn/cn/article/pdf/preview/027905ab-71fc-42c7-b745-eb01ec389230.pdf",
+    "location": "第1节基本原理1.1–1.3，第2节实例",
+    "finding": "明确给出时间空间滞后、积和模型、拟合与插值步骤和误差对比。"
+   },
+   "added_by": "review/data-app-additions/X.2.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "空间数据与地图投影",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "空间数据分析基础（投影只作背景，没有单独讲次）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-proj",
+     "section": "了解投影、等积、等距、自定义投影",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Ch2 Coordinates（CRS/投影）；Ch3–4 geometries",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程没有系统讲地图投影；英文由 Pebesma 书补。；原zh1空间数据分析基础与本教程投影原理和实操作组合，覆盖数据到坐标系选择。"
+  },
+  {
+   "topic": "空间权重与空间自相关",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "探索性空间数据分析、空间相关性分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Spatial weights；global and local spatial autocorrelation",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "点模式分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "空间点模式分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Point pattern analysis",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "空间回归",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "地理加权回归分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Spatial regression",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "数据立方体与时空地统计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "地统计分析（无数据立方体/时空变异函数）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-cube",
+     "section": "创建和显示时空立方体",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-stkrig",
+     "section": "1.1–1.3及实例",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Ch6 Data Cubes；Ch12 Spatial Interpolation；Ch13 Spatiotemporal Geostatistics",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有地统计入门，数据立方体与时空地统计没有；英文由 Pebesma 书覆盖。；本教程教立方体组织及探索；原zh1地统计基础再接fix-zh-stkrig时空变异函数和克里金，三者共同覆盖组合项，不将立方体可视化当成克里金。；原zh1教空间变异函数与克里金，本案例明确扩展到时空、拟合积和模型并作精度比较；与fix-zh-cube立方体教程组合完成整项。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按探索性空间数据分析→空间相关性→点模式→地统计→GWR 的顺序学习，用课程数据做一次 LISA 与 GWR。"
+    },
+    {
+     "source": "fix-zh-proj",
+     "read": "先读投影并完成等积与等距选择，再接原zh1空间权重、自相关、点模式、回归及地统计。"
+    },
+    {
+     "source": "fix-zh-cube",
+     "read": "完成立方体图层创建与二维三维趋势探索，记录空间维、时间步与属性维。"
+    },
+    {
+     "source": "fix-zh-stkrig",
+     "read": "在原zh1地统计基础上推导时空变异函数，跟1.3计算步骤及实例比较空间/时空预测误差。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read spatial data, weights, autocorrelation, point patterns and spatial regression chapters and run the PySAL notebooks."
+    },
+    {
+     "source": "en2",
+     "read": "Read Coordinates, Data Cubes, Spatial Interpolation and Spatiotemporal Geostatistics to cover projection, cubes and kriging."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开武大《空间数据分析》课程页",
+   "result": "采纳 zh1；确认覆盖自相关/点模式/地统计/GWR，地图投影与数据立方体缺。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 视频（注册后）",
+   "result": "按学期开放，未登录核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "秦昆等《空间数据分析（第三版）》",
+   "result": "课程页列为教材，未核价、未购买，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "geographicdata.science/book；r-spatial.org/book",
+   "result": "采纳 en1 为主、en2 补投影/数据立方体/时空地统计。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "地图投影 教程 site.learn.arcgis.com/zh-cn；时空 数据立方体 中文 ArcGIS 教程",
+   "result": "搜索并打开Esri两篇完整中文教程，有真实数据步骤；软件需许可。",
+   "by": "review/data-app-additions/X.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "时空变异函数 教材；时空克里金 教程 中文",
+   "result": "打开煤炭学报6页原文，核对1.1–1.3公式与步骤；另开自动化学报文章页。",
+   "by": "review/data-app-additions/X.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "https://www.cp.com.cn/book/a1505442-2.html",
+   "result": "打开商务印书馆时空统计教材目录，含时空回归但未见时空克里金，未据此宣称覆盖。",
+   "by": "review/data-app-additions/X.2.5.json"
+  }
+ ],
+ "findings": [
+  "原英文 GDS book 覆盖空间权重、自相关、点模式与空间回归，保留；投影/数据立方体/时空地统计缺。",
+  "原 granularity 已指出需 Pebesma 书补，本次核对 r-spatial.org/book 目录，确实有 Coordinates/Data Cubes/Spatial Interpolation/Spatiotemporal Geostatistics，英文补齐。",
+  "原中文武大课程有自相关/点模式/地统计/GWR，但地图投影与数据立方体没有，中文 partial，没有用英文顶替。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/X.2.5.json"
+ ]
+}

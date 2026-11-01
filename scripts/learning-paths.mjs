@@ -5,6 +5,8 @@ import path from 'node:path';
 export const topicItems = desc => desc.split(/[、，,；;。]/).map(x => x.trim()).filter(Boolean);
 const http = s => { try { return ['http:','https:'].includes(new URL(s).protocol); } catch { return false; } };
 const present = s => typeof s === 'string' && s.trim().length > 0;
+export const REUPLOAD_LABEL = '第三方转载，授权未核';
+const REUPLOAD_HINT = /第三方(转载|上传|搬运)|转载|搬运|非(学校|大学|官方)(官方)?(账号|发布)?|个人账号|学生(整理|上传)|非官方/;
 export function assessLearningPath(record, skill) {
   const problems = [];
   const bad = message => problems.push(message);
@@ -20,6 +22,11 @@ export function assessLearningPath(record, skill) {
     if (![true,false,null].includes(s.free)) bad(`${s.key}: access classification missing`);
     if (!['primary','supplement','reference','alternative'].includes(s.role)) bad(`${s.key}: unknown teaching role`);
     if (!http(s.evidence?.url) || !present(s.evidence?.location) || !present(s.evidence?.finding)) bad(`${s.key}: missing content evidence`);
+    // Official version first: a third-party re-upload counts only when the official channels were checked.
+    if (s.reupload === true) {
+      if (!String(s.access).includes(REUPLOAD_LABEL)) bad(`${s.key}: re-upload must be labelled for readers`);
+      if (!present(s.official_search)) bad(`${s.key}: re-upload lacks an official-version check`);
+    } else if (s.reupload !== false && REUPLOAD_HINT.test([s.publisher, s.access, s.title].join(' '))) bad(`${s.key}: possible third-party re-upload is not classified`);
   }
   const expected = topicItems(skill.desc);
   const topics = record.topics || [];
@@ -66,6 +73,7 @@ export function assessLearningPath(record, skill) {
     if (!topic?.[s?.lang]?.some(ref=>ref.source===f.source && ref.extent==='covered')) bad('fallback source does not teach that topic in its own language');
     for (const channel of ['text','video','paid']) if (!(record.searches||[]).some(q=>q.lang===lang && q.channel===channel && present(q.query_or_url) && present(q.result))) bad(`${lang}: fallback lacks ${channel} search record`);
     if (!present(f.reason)) bad('fallback lacks an explanation');
+    if (!present(f.confirmed_by)) bad('fallback was not confirmed by a round that had web search');
   }
   return {problems,routes};
 }

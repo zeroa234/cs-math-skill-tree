@@ -1,0 +1,339 @@
+{
+ "id": "D.2.3",
+ "name": "搜索与信息检索系统",
+ "description": "倒排索引、排序、向量检索、检索评估与在线服务。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS 276 / LING 286 Information Retrieval and Web Search (Stanford, Manning & Nayak)",
+   "url": "https://web.stanford.edu/class/cs276/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Course description and schedule: efficient text indexing, Boolean and vector-space retrieval models, evaluation and interface issues, web crawling/link-based algorithms, document clustering and classification, traditional and machine-learning-based ranking. Slides are public; the required textbook IIR chapters are free on the book site (linked from the course page).",
+   "access": "Free course page and slides; the 2019 edition does not have a dedicated dense-vector retrieval unit, and lecture videos were on Canvas behind Stanford credentials.",
+   "publisher": "Stanford University",
+   "evidence": {
+    "url": "https://web.stanford.edu/class/cs276/",
+    "location": "Course Description topic list; Required textbook paragraph",
+    "finding": "The page lists 'Efficient text indexing', 'Boolean and vector-space retrieval models', 'Evaluation', web crawling/link algorithms and ranking, and says IIR chapters can be downloaded free from the book website."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Introduction to Information Retrieval (Manning, Raghavan, Schütze) — free chapter downloads",
+   "url": "https://nlp.stanford.edu/IR-book/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "The textbook behind CS276: inverted indexes (Ch1–2), tolerant retrieval, scoring/vector space (Ch6), evaluation (Ch8), relevance feedback, probabilistic IR, link analysis (Ch21). Used as the readable text when slides are too terse.",
+   "access": "Publisher permits free download of the chapters from the book site; the site did not respond during this check (connection timeout), so the reading link is taken from CS276's own required-textbook paragraph rather than re-opened.",
+   "publisher": "Cambridge University Press / Stanford NLP group",
+   "evidence": {
+    "url": "https://web.stanford.edu/class/cs276/",
+    "location": "Required textbook paragraph",
+    "finding": "CS276 states the book is required and 'You can also download and print chapters for free at the book website'; the book site itself timed out on this check."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Elasticsearch: 权威指南（中文版，Elastic 官方站点）",
+   "url": "https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "中文正文：面向文档、索引与检索、全文搜索、分析器、相关性评分、集群内原理、分布式文档存储、分片与副本、搜索执行与近实时。覆盖倒排索引的使用、排序与在线检索服务；不含检索评估指标与稠密向量检索。",
+   "access": "免费在线阅读；页面明确标注基于 Elasticsearch 2.x，部分内容已过时，需对照新版文档。",
+   "publisher": "Elastic（O'Reilly 书的中文翻译）",
+   "evidence": {
+    "url": "https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html",
+    "location": "目录：基础入门、全文搜索、分析、集群内的原理",
+    "finding": "页面标题为「Elasticsearch: 权威指南」，开头提示本书基于 2.x、部分内容可能过时；目录含全文搜索、分析与集群原理。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "Milvus 官方中文文档：全文搜索与混合检索（向量检索实践）",
+   "url": "https://milvus.io/docs/zh/full-text-search.md",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "BM25 全文搜索、分析器、稀疏向量与稠密向量的混合检索、索引与代码示例。用于补中文的向量检索实践。",
+   "access": "官方中文教程与示例免费；本次直连该 .md 地址遇到 302 重定向循环，未能打开正文，只能根据项目既有条目记录其范围，未把细节当作已核证据。",
+   "publisher": "Zilliz / LF AI & Data（Milvus）",
+   "evidence": {
+    "url": "https://milvus.io/docs/zh/full-text-search.md",
+    "location": "URL 本身；正文未取得",
+    "finding": "请求返回 HTTP 302 重定向循环，未能读取正文；因此该条只作为待核的向量检索实践入口，不用于证明任何 topic 已覆盖。"
+   }
+  },
+  {
+   "key": "fix-zh-ir-eval",
+   "lang": "zh",
+   "title": "山东大学信息检索课程讲义：检索评价（72页）",
+   "url": "https://ir.sdu.edu.cn/~zhuminchen/ir2020/ir7.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "相同文档/查询集合与相关性标注的公平比较；P/R/F、Pooling、PR曲线、AP/MAP、GMAP、分级相关性DCG/NDCG、MRR；有逐例计算与练习，末段讲摘要呈现。",
+   "access": "大学原站中文讲义PDF完整公开，无需注册；文字材料，不宣称已核中文视频或字幕。",
+   "publisher": "山东大学计算机科学与技术学院，信息检索课程",
+   "evidence": {
+    "url": "https://ir.sdu.edu.cn/~zhuminchen/ir2020/ir7.pdf",
+    "location": "pp5–8评价设计；pp14–23 P/R与Pooling；pp54–65 GMAP/NDCG/MRR",
+    "finding": "已打开72页PDF，含公式、两个系统的对照结果、分级相关性与NDCG算例以及MRR习题答案。"
+   },
+   "added_by": "review/data-app-additions/D.2.3.json"
+  },
+  {
+   "key": "fix-zh-ann",
+   "lang": "zh",
+   "title": "Milvus官方中文教学：HNSW原理与建索引/查询实例",
+   "url": "https://milvus.io/docs/zh/hnsw.md",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "图层次、贪婪导航和逐层下降，M/efConstruction/ef的召回、内存与延迟权衡，建索引和搜索代码；配已打开的2.4内存索引说明对比FLAT、IVF与量化。",
+   "access": "中文讲解全文免费，代码/API名为英文；是ANN主题补充，不作为完整IR课程。2.4概念页https://milvus.io/docs/zh/v2.4.x/index.md与当前页版本不同，代码按当前文档使用。",
+   "publisher": "Milvus项目 / Zilliz",
+   "evidence": {
+    "url": "https://milvus.io/docs/zh/hnsw.md",
+    "location": "概述、构建索引、搜索、索引参数",
+    "finding": "实际正文讲解分层图搜索及参数影响，附创建HNSW索引和向量查询代码；不是只有参数表。"
+   },
+   "added_by": "review/data-app-additions/D.2.3.json"
+  },
+  {
+   "key": "fix-zh-dense-lab",
+   "lang": "zh",
+   "title": "Milvus官方中文教程：用Milvus创建RAG（取向量检索部分）",
+   "url": "https://milvus.io/docs/zh/build-rag-with-milvus.md",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "准备语料和切块、生成稠密文本嵌入、建collection、写入嵌入和文本、以查询嵌入执行top-k语义检索；生成答案部分不属于本节点要求。",
+   "access": "中文教学正文和代码免费；示例语料/提示含英文不改变讲解语言。调用示例OpenAI嵌入API需要账户且可能收费，本轮不调用、不读取key、不购买服务。",
+   "publisher": "Milvus项目 / Zilliz",
+   "evidence": {
+    "url": "https://milvus.io/docs/zh/build-rag-with-milvus.md",
+    "location": "准备数据、准备嵌入模型、创建Milvus客户端、加载数据、检索数据",
+    "finding": "已读实际中文步骤，含emb_text、collection、insert、query embedding与search连续实例。"
+   },
+   "added_by": "review/data-app-additions/D.2.3.json"
+  },
+  {
+   "key": "fix-en-faiss",
+   "lang": "en",
+   "title": "James Briggs: Faiss—The Missing Manual（免费在线教学书）",
+   "url": "https://www.pinecone.io/learn/series/faiss/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Ch1 sentence-BERT稠密嵌入、IndexFlatL2/IVF/PQ；Ch2 FLAT/LSH/HNSW/IVF与召回-速度-内存实验；Ch6 HNSW图机制和实现。",
+   "access": "英文全文和代码公开，不要求购买Pinecone；已打开Ch1、Ch2、Ch6，不把Pinecone API参考当主课。旧依赖示例按教材环境理解。",
+   "publisher": "Pinecone Learn，作者James Briggs",
+   "evidence": {
+    "url": "https://www.pinecone.io/learn/series/faiss/vector-indexes/",
+    "location": "Indexes in Search; Flat; LSH; HNSW; IVF Implementation；配Ch1和Ch6",
+    "finding": "实际教学有索引工作机制图示、Faiss训练/插入/查询代码，使用Sift1M实验比较召回率与查询时间；Ch1另有文本向量检索。"
+   },
+   "added_by": "review/data-app-additions/D.2.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "倒排索引",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "「索引员工文档」「分析」「集群内的原理」中倒排索引与分片",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Efficient text indexing 讲次；IIR Ch1–2",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "排序",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "全文搜索、相关性评分、排序与分页",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Vector-space retrieval models；traditional and ML-based ranking",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "向量检索",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "混合检索/稀疏与稠密向量（正文未取得，未计入覆盖）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-ann",
+     "section": "HNSW概述/搜索 + fix-zh-dense-lab嵌入到top-k检索；原zh1传统索引",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "无稠密向量检索讲次（2019 版只到 vector-space 模型）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-faiss",
+     "section": "Ch1–2和Ch6；原CS276/IIR词项检索课程",
+     "extent": "covered"
+    }
+   ],
+   "note": "两种语言都没有可核实的系统向量检索课程：中文 Milvus 页重定向失败，英文 CS276 只讲向量空间模型而非 embedding/ANN 检索。；现有Elastic文字课程负责词项/倒排与排序；新增中文实例解释文本如何转稠密向量并检索，HNSW教学补ANN机制、参数和效率取舍，联合覆盖现代向量检索，不再依赖原先未打开的zh2页面。；CS276/IIR继续讲传统检索和评估，新增作者免费教学书补稠密语义表示、精确kNN与ANN、IVF/HNSW/量化和召回-效率实验，覆盖初筛遗漏的现代向量索引。"
+  },
+  {
+   "topic": "检索评估与在线服务",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "只到相关性评分与集群/分片服务；无 precision/recall、NDCG 等评估",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-ir-eval",
+     "section": "评价设计、Pooling、PR/MAP/NDCG/MRR；原zh1执行分布式检索/集群/索引别名与零停机",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Evaluation and interface issues；web crawling/link analysis；在线检索架构",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺检索评估指标（precision/recall、MAP、NDCG）与离线评测方法。；新增完整评价讲义给出评测集合、相关性标注、指标与算例，补全原Elastic缺的评价方法；原免费中文书仍负责查询服务、分片与近实时/零停机运维，组合覆盖整个知识项。旧书基于ES2.x，服务架构教学可读，实际部署按对应版本。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按「基础入门→全文搜索→分析→集群原理」顺序跟做，建立倒排索引、分析器与相关性评分的直觉。"
+    },
+    {
+     "source": "zh2",
+     "read": "待页面可访问后，按 BM25/稀疏+稠密混合检索教程跑一遍向量检索；当前未核到正文。"
+    },
+    {
+     "source": "fix-zh-ir-eval",
+     "read": "原Elastic索引和排序之后，按评价讲义构建固定查询/相关性标注集，计算P/R、AP/MAP和NDCG算例，再用相同评测集比较两个检索配置；在线服务接回原zh1分布式查询与索引切换。"
+    },
+    {
+     "source": "fix-zh-dense-lab",
+     "read": "读嵌入模型→写入→检索，追踪语料/查询到稠密向量和top-k的过程；生成答案可跳过。API调用需自行承担费用，本轮只登记教程。"
+    },
+    {
+     "source": "fix-zh-ann",
+     "read": "理解HNSW逐层导航并读建索引/搜索代码；对比FLAT、IVF概念，改变ef分析召回与延迟，结合固定评测集判断取舍。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the CS276 schedule: indexing and Boolean retrieval, vector-space scoring, evaluation, then web crawling/link analysis and learning-to-rank; read the matching IIR chapters."
+    },
+    {
+     "source": "fix-en-faiss",
+     "read": "After IIR/CS276, work through Ch1–2 (dense text vectors, exact kNN, IVF/HNSW and recall/latency experiments), then Ch6 for HNSW mechanics; keep IR relevance evaluation separate from ANN recall."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "Elasticsearch 中文权威指南；Milvus 中文全文搜索页；图灵社区《信息检索导论》页",
+   "result": "采纳 ES 中文指南；Milvus 302 循环、图灵社区返回空正文，均未作为已核正文。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「信息检索 倒排索引 课程」",
+   "result": "结果多为 5 分钟倒排索引科普或 Elasticsearch 广告课，无系统 IR 课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "《信息检索导论》中文版（人民邮电）检索",
+   "result": "图灵社区页面为空、无法核到目录与价格，不登记为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "CS276 课程页；IIR 书站",
+   "result": "CS276 采纳为英文主线；IIR 书站连接超时，只能由课程页的免费章节说明间接证明。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "信息检索 评价 准确率 召回率 MAP NDCG 讲义 site.edu.cn",
+   "result": "找到并打开山东大学72页原站讲义，有完整评测方法及算例。",
+   "by": "review/data-app-additions/D.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.milvus.io/docs/zh 向量 索引 HNSW IVF_FLAT 教程；site.milvus.io/docs/zh 构建 RAG",
+   "result": "打开HNSW原理/例子、内存索引与稠密检索教程，排除只有英文正文的index_selection页。",
+   "by": "review/data-app-additions/D.2.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "site.pinecone.io/learn/series/faiss vector indexes",
+   "result": "打开作者整套目录及Ch1/2/6免费教学正文，补英文稠密/ANN。",
+   "by": "review/data-app-additions/D.2.3.json"
+  }
+ ],
+ "findings": [
+  "原英文 CS276 是真正的 IR 课程，倒排索引、排序、评估与在线检索都有讲次；但它没有稠密向量检索，英文仍缺一块。",
+  "原中文 Milvus 页只是向量数据库文档且本次 302 循环打不开；换成 Elasticsearch 中文权威指南作为中文主材料，能学倒排索引/分析/相关性/分片，但评估指标与向量检索仍缺。",
+  "两边都缺向量检索与中文评估指标，未假报 complete；也没有拿 CS276 直接顶替中文缺口。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/D.2.3.json"
+ ]
+}

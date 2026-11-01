@@ -1,0 +1,203 @@
+{
+ "id": "M.6.2.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《因果推断：从概念到实践》中文译本（xieliaing 译自 Causal Inference for the Brave and True）",
+   "url": "https://github.com/xieliaing/CausalInferenceIntro",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第一章因果关系入门；第二章随机实验；第三章统计学回顾；第四章图因果模型；第五章线性回归；第六章分组与虚拟变量；第七章混淆变量之外；第八章工具变量；第九章不遵从与 LATE；第十章匹配；第十一章倾向性打分；第十二章双稳健估计；第十三章面板数据与固定效应；第十四章双重差分；第十五章合成控制；第十六章断点回归；第十七至二十一章预测模型、异质效应、评估因果模型、即插即用估计量、元学习器。",
+   "access": "中文章节与 Python Notebook 公开（MIT License）；译者 README 说明获得原作者翻译同意；GitHub/Gitee 访问依网络条件。",
+   "publisher": "Matheus Facure（原作者）；xieliaing（中文译者）",
+   "evidence": {
+    "url": "https://github.com/xieliaing/CausalInferenceIntro",
+    "location": "README 章节表：第二章随机实验、第四章图因果模型、第七章混淆变量、第八章工具变量、第十章匹配、第十一章倾向性打分、第十二章双稳健估计",
+    "finding": "实际打开 GitHub 首页，看到 21 章完整章节表与中文章节／Notebook 目录；随机实验、DAG、混淆、匹配、IV、双稳健都有章节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Causal Inference: The Mixtape (2nd ed., retitled “The Remix”) — Scott Cunningham, Baylor University（免费在线）",
+   "url": "https://mixtape.scunning.com/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Foundational Ideas（潜在结果与随机化、该用哪种因果推断方法）；Causal Cross-Sectional Designs（DAG 与後门准则、无混淆假设下的匹配／回归／倾向得分、断点回归、工具变量）；Causal Panel Designs（面板方法、双重差分及其复杂变体、合成控制）。",
+   "access": "整本书以网页形式免费开放，附 Stata/R 代码；英文。",
+   "publisher": "Scott Cunningham（Baylor University）",
+   "evidence": {
+    "url": "https://mixtape.scunning.com/",
+    "location": "目录：Foundational Ideas；Causal Cross-Sectional Designs（DAG、matching/regression/propensity、RDD、IV）；Causal Panel Designs（panel、DID、synthetic control）",
+    "finding": "实际打开书页，看到完整目录与章节正文入口；随机实验、潜在结果、DAG、混淆、识别与估计都有章节。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "随机实验",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二章 随机实验；第三章 统计学回顾",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Foundational Ideas：potential outcomes and randomization",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第二章专讲随机实验，英文 Mixtape 的 potential outcomes/randomization 章节对应。"
+  },
+  {
+   "topic": "混杂",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第四章 图因果模型；第七章 混淆变量之外；第十一章 倾向性打分",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "DAG and backdoor criterion；unconfoundedness（matching/regression/propensity）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第四、七、十一章从 DAG、混淆到倾向得分；英文 Mixtape 的 DAG／unconfoundedness 章节对应。"
+  },
+  {
+   "topic": "潜在结果",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一章 因果关系入门；第二章 随机实验；第九章 不遵从与 LATE",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Foundational Ideas：potential outcomes；LATE/IV",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第一、二、九章讲潜在结果、随机化与 LATE；英文 Mixtape 的 potential outcomes／IV 章节对应。"
+  },
+  {
+   "topic": "因果图",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第四章 图因果模型（DAG、後门准则）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Directed Acyclic Graphs；backdoor criterion",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第四章与英文 Mixtape 的 DAG 章节都讲有向无环图与後门准则。"
+  },
+  {
+   "topic": "识别与估计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第八章 工具变量；第十章 匹配；第十一章 倾向性打分；第十二章 双稳健估计；第十四章 双重差分；第十六章 断点回归",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Matching/regression/propensity；RDD；IV；DID；synthetic control",
+     "extent": "covered"
+    }
+   ],
+   "note": "识别与估计按 IV、匹配、倾向得分、双稳健、DID、RDD 等方法理解；中英文两本书都有对应章节。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读第一章因果关系入门与第二章随机实验，建立潜在结果与随机化的框架。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第四章图因果模型与第七章混淆变量，掌握 DAG、後门准则与混淆。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第八至十二章工具变量、匹配、倾向得分、双稳健；再读第十四、十六章 DID 与 RDD。"
+    },
+    {
+     "source": "zh1",
+     "read": "跑 chapters/ 下的 Python Notebook，将识别策略与估计落到代码。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Foundational Ideas for potential outcomes and randomization, and the DAG/backdoor chapter."
+    },
+    {
+     "source": "en1",
+     "read": "Read the cross-sectional designs: matching/regression/propensity, RDD and IV."
+    },
+    {
+     "source": "en1",
+     "read": "Read the panel designs: DID and synthetic control; run the Stata/R examples."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://github.com/xieliaing/CausalInferenceIntro（既有主資源，核對 README 章節表）",
+   "result": "采纳：21 章中文译本，随机实验、DAG、混淆、IV、匹配、倾向得分、双稳健、DID、RDD 完整。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://mixtape.scunning.com/（既有主資源）",
+   "result": "采纳：Mixtape 目录覆盖潜在结果、DAG、匹配、IV、DID、合成控制；免费。"
+  }
+ ],
+ "findings": [
+  "原中文主资源是 GitHub 中文译本，已核对 README 的 21 章章节表；不是只有几篇笔记，五项都有章节。",
+  "原英文 Mixtape 的 covers 已完整；保留。",
+  "实验设计只到「随机实验＋潜在结果」这一层，没有把因子设计／区组／功效分析算作本节已覆盖；这符合 boundary 对 DOE 的收窄。",
+  "五项均为必学，没有 extension。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "实验设计与因果推断",
+ "description": "随机实验、混杂、潜在结果、因果图、识别与估计。",
+ "applied_additions": []
+}

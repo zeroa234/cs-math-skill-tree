@@ -1,0 +1,339 @@
+{
+ "id": "A.2.2",
+ "name": "学习理论与泛化",
+ "description": "经验风险、PAC/VC、稳定性、偏差方差与分布外泛化。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Learning From Data — Caltech online course (Yaser Abu-Mostafa), 18 lectures + homework",
+   "url": "https://work.caltech.edu/telecourse",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "Lecture topics: the learning problem, is learning feasible (Hoeffding/probability approximation), training versus testing, theory of generalization (growth function, VC bound), the VC dimension, bias-variance tradeoff, validation, regularization. Covers empirical risk, generalization bounds, VC dimension and bias-variance.",
+   "access": "Free recorded Caltech course with slides, homework and a per-topic video index; no registration. Stability and out-of-distribution generalization are not in the lecture list.",
+   "publisher": "Caltech (Yaser Abu-Mostafa)",
+   "evidence": {
+    "url": "https://work.caltech.edu/telecourse",
+    "location": "Highlights and lecture index",
+    "finding": "The page describes a real Caltech course with free recorded lectures and homework; the lecture list runs from 'The Learning Problem' through 'Theory of Generalization', 'The VC Dimension' and 'Bias-Variance Tradeoff'."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Datawhale《南瓜书》—《机器学习》第12章 计算学习理论 公式推导",
+   "url": "https://github.com/datawhalechina/pumpkin-book",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "对西瓜书第12章计算学习理论（PAC 学习、VC 维、泛化界、稳定性等）的公式推导补充；必须配合周志华《机器学习》原书。",
+   "access": "开源免费（CC BY-NC-SA 4.0）；README 明确以西瓜书为前置知识，不能独立成课。",
+   "publisher": "Datawhale 社区",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/datawhalechina/pumpkin-book/master/README.md",
+    "location": "使用说明",
+    "finding": "README 写明南瓜书所有内容以西瓜书为前置知识，最佳用法是查推导，而非从头学。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "周志华《机器学习》（西瓜书，清华大学出版社 2016）— 第12章 计算学习理论、第14章 概率图模型",
+   "url": "https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "作者官方书页：第12章 计算学习理论（PAC、VC 维、泛化界、稳定性）、第14章 概率图模型（HMM、MRF、CRF）；南瓜书是它的配套推导。",
+   "access": "付费纸书（ISBN 978-7-302-206853-6，425 页），作者页提供目录与样章，未标价、未购买、无免费全文。",
+   "publisher": "清华大学出版社 / 周志华",
+   "evidence": {
+    "url": "https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm",
+    "location": "书名、ISBN、目录与样章链接",
+    "finding": "作者页写明《机器学习》2016 年 1 月出版、ISBN 978-7-302-206853-6、425 页，并提供前言与目录、样章。"
+   }
+  },
+  {
+   "key": "fix-zh-stability",
+   "lang": "zh",
+   "title": "南京大学王魏：机器学习理论研究导引，第5章稳定性",
+   "url": "https://www.lamda.nju.edu.cn/mlt2023/Slides/chapter_5.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "算法稳定性及泛化界，替换/删除样本的定义和分析。",
+   "access": "作者/机构公开正文，无需注册；只链接，不复制材料。",
+   "publisher": "南京大学 LAMDA / 王魏",
+   "evidence": {
+    "url": "https://www.lamda.nju.edu.cn/mlt2023/Slides/chapter_5.pdf",
+    "location": "61页中文讲义：基本概念、泛化界、算法实例",
+    "finding": "已打开正文，定义删除/替换样本的稳定性，推导稳定性与泛化关系。"
+   },
+   "added_by": "review/ai-additions/A.2.2.json"
+  },
+  {
+   "key": "fix-en-stability",
+   "lang": "en",
+   "title": "MIT 9.520 Class 6: Generalization Bounds and Stability",
+   "url": "https://www.mit.edu/~9.520/spring10/Classes/class06_stability.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Algorithmic stability and generalization bounds.",
+   "access": "作者/机构公开正文，无需注册；只链接，不复制材料。",
+   "publisher": "MIT / Lorenzo Rosasco, Tomaso Poggio",
+   "evidence": {
+    "url": "https://www.mit.edu/~9.520/spring10/Classes/class06_stability.pdf",
+    "location": "27页课件：Generalization Bounds → Stability → Generalization Bounds Using Stability",
+    "finding": "已打开完整课件，包含风险定义、稳定性条件和泛化界推导。"
+   },
+   "added_by": "review/ai-additions/A.2.2.json"
+  },
+  {
+   "key": "fix-zh-shift",
+   "lang": "zh",
+   "title": "动手学深度学习：4.9 环境和分布偏移",
+   "url": "https://zh.d2l.ai/chapter_multilayer-perceptrons/environment.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "分布外泛化的假设、失效情况、偏移检测与纠正入门。",
+   "access": "作者/机构公开正文，无需注册；只链接，不复制材料。",
+   "publisher": "D2L 作者团队",
+   "evidence": {
+    "url": "https://zh.d2l.ai/chapter_multilayer-perceptrons/environment.html",
+    "location": "4.9.1 偏移类型；4.9.3 分布偏移纠正；4.9.7 练习",
+    "finding": "正文分别讨论协变量、标签、概念偏移、风险和重要性加权，明确无限制分布外泛化不可能。"
+   },
+   "added_by": "review/ai-additions/A.2.2.json"
+  },
+  {
+   "key": "fix-en-shift",
+   "lang": "en",
+   "title": "Dive into Deep Learning: 4.7 Environment and Distribution Shift",
+   "url": "https://d2l.ai/chapter_linear-classification/environment-and-distribution-shift.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Distribution-shift generalization assumptions, correction and limitations.",
+   "access": "作者/机构公开正文，无需注册；只链接，不复制材料。",
+   "publisher": "D2L authors",
+   "evidence": {
+    "url": "https://d2l.ai/chapter_linear-classification/environment-and-distribution-shift.html",
+    "location": "4.7: Types of Distribution Shift; Distribution Shift Correction; exercises",
+    "finding": "Opened English正文; discusses covariate/label/concept shift, assumptions, importance weights and deployment feedback."
+   },
+   "added_by": "review/ai-additions/A.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "经验风险",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第12章 经验误差与泛化误差的推导",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第12章 计算学习理论（经验误差与泛化误差）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Training versus testing；Theory of Generalization",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有公式推导，缺独立讲授。"
+  },
+  {
+   "topic": "PAC/VC",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第12章 PAC 学习与 VC 维推导",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第12章 计算学习理论（PAC 学习、VC 维）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Theory of Generalization（growth function、VC bound）；The VC Dimension",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "稳定性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "西瓜书第12章含稳定性讨论，南瓜书只给推导",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第12章 计算学习理论（稳定性讨论）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-stability",
+     "section": "第5章稳定性全文",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "不在课程讲次内",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-stability",
+     "section": "Class 6 full slides",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有算法稳定性（uniform stability 等）的课程级讲授。；接现有zh2第12章PAC/VC，转向依赖学习算法的稳定性分析，比较假设空间界和样本扰动界；公开中文讲义可独立补足该工具。；After existing Caltech generalization lectures, derive an algorithm-dependent stability bound from empirical and expected risk."
+  },
+  {
+   "topic": "偏差方差与分布外泛化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "偏差-方差分解推导；无分布外泛化",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-shift",
+     "section": "4.9 环境和分布偏移",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Bias-Variance Tradeoff；无 OOD 讲次",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-shift",
+     "section": "4.7 Environment and Distribution Shift",
+     "extent": "covered"
+    }
+   ],
+   "note": "偏差方差两边都有；分布外泛化两边都没有课程级材料。；现有zh2第2章偏差方差分解与第12章理论为基础，再读本章偏移类型、可识别假设和加权风险并做练习；不把同分布VC界直接用于任意新分布。；Combine the existing Caltech Bias-Variance lecture with D2L's explicit target/source distribution assumptions, shift correction and limitations; work the detector/correction exercises."
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh2",
+     "read": "以《机器学习》第12章为主线读 PAC 学习、VC 维与泛化界，再用南瓜书核对推导。"
+    },
+    {
+     "source": "zh1",
+     "read": "以西瓜书第12章为主线，逐节用南瓜书核对 PAC、VC 维与泛化界的推导。"
+    },
+    {
+     "source": "fix-zh-stability",
+     "read": "在PAC/VC之后逐页读稳定性，推导删除一个样本对岭回归预测和泛化界的影响。"
+    },
+    {
+     "source": "fix-zh-shift",
+     "read": "复习zh2第2章偏差方差，再读4.9并实现分布判别与重要性加权，记录所需假设。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Watch lectures 1–8 in order and do the homework; re-derive the VC bound and bias-variance decomposition."
+    },
+    {
+     "source": "fix-en-stability",
+     "read": "After the Caltech theory and bias-variance lectures, read Class 6 and rederive the stability bound."
+    },
+    {
+     "source": "fix-en-shift",
+     "read": "Read the shift chapter, distinguish covariate/label/concept shift, and complete the detection and correction exercises."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "南瓜书 README 与第12章",
+   "result": "确认只是西瓜书配套推导，不能作为独立中文主线。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「学习理论 VC维 PAC 课程」",
+   "result": "只有零散单讲，无完整中文学习理论课，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "周志华《机器学习》第12章",
+   "result": "纸书为南瓜书前置，未核价、未购买，不登记为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "query_or_url": "https://work.caltech.edu/telecourse",
+   "result": "采纳 en1；课程讲次覆盖 ERM、泛化界、VC 维与偏差方差，但不含稳定性/OOD。"
+  },
+  {
+   "lang": "zh",
+   "result": "找到可直接打开的王魏中文61页讲义；无需以需购书或仅教师开放PPT替代。",
+   "query_or_url": "机器学习 稳定性 分布外 泛化 讲义；site:lamda.nju.edu.cn 机器学习理论导引",
+   "by": "review/ai-additions/A.2.2.json"
+  },
+  {
+   "lang": "en",
+   "result": "采用MIT27页稳定性课件；作者HUJI书站超时，未以镜像替代。",
+   "query_or_url": "site:mit.edu stability generalization lecture notes 9.520 pdf",
+   "by": "review/ai-additions/A.2.2.json"
+  },
+  {
+   "lang": "zh/en",
+   "result": "两种语言正文均打开；以现有偏差方差材料加本章补复合知识项。",
+   "query_or_url": "D2L 环境和分布偏移 / Environment and Distribution Shift",
+   "by": "review/ai-additions/A.2.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 Caltech 课程确实覆盖经验风险、VC 维与偏差方差，但目录里没有稳定性与分布外泛化，英文只能 partial。",
+  "原中文南瓜书只是西瓜书第12章的推导，中文没有可独立学习的课程；稳定性和 OOD 更缺，中文 partial。",
+  "没有把 Caltech 课程算作中文已覆盖。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/ai-additions/A.2.2.json"
+ ]
+}

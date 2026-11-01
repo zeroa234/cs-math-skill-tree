@@ -1,0 +1,255 @@
+{
+ "id": "C.1.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "华中科技大学《计算机系统结构》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/HUST-1207109824",
+   "tier": "website",
+   "free": null,
+   "role": "alternative",
+   "covers": "整门系统结构课：Amdahl 定律与量化分析、典型指令系统设计、指令流水线结构与性能优化、指令级并行、存储层次与 Cache 设计/优化、I/O 性能与可靠性、多处理机与集群、多核/众核及 GPU 实例。",
+   "access": "课程页公开概述、授课目标与参考书；视频需注册中国大学MOOC并选课，按学期开放，认证证书收费。",
+   "publisher": "华中科技大学计算机学院",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HUST-1207109824",
+    "location": "课程概述；授课目标第 1–2 条；课程大纲/预备知识",
+    "finding": "页面写明以“总体结构、量化分析”研究计算机系统，目标列出 Amdahl 定律、指令系统设计、流水线与指令级并行、存储层次与 Cache 优化、多处理机/集群/多核 GPU；未出现分支预测的单独表述。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Digital Design and Computer Architecture (ETH Zürich, Spring 2024)",
+   "url": "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php?id=schedule",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "L14–L16 MIPS 汇编与微架构、L17 单周期、L18–L19 流水线、L20 乱序执行、L21–L22 SIMD/GPU、L24 存储层次与 cache、L25a 多核 cache 一致性、L25b 预取、L26 虚拟内存；讲义 PDF/PPT 与录像链接公开。",
+   "access": "课程站免费公开日程与讲义 PDF/PPT，YouTube 录像链接公开；英文授课，字幕未核对。",
+   "publisher": "ETH Zürich（Onur Mutlu 等）",
+   "evidence": {
+    "url": "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php?id=schedule",
+    "location": "Schedule：L14–L26 标题与 PDF/PPT 链接",
+    "finding": "日程逐讲列出 MIPS、单周期、流水线 I/II、乱序执行、SIMD/GPU、存储层次与 cache、多核 cache、预取和虚拟内存，并链接讲义；L18 讲义讲控制冒险但未出现分支预测内容。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "计算机体系结构基础（胡伟武等，第3版，作者开源全文）",
+   "url": "https://foxsen.github.io/archbase/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第2章指令集、第9章流水线/转移预测、第11章Cache一致性、第12章性能评价；完整中文文字路线并有例题习题。",
+   "access": "作者与出版社支持的开源在线全文，HTML/PDF免费；并非仅公开目录，纸质版自选。",
+   "publisher": "原作者/机构公开教学材料，见来源",
+   "evidence": {
+    "url": "https://foxsen.github.io/archbase/",
+    "location": "第9章9.5.3转移预测，第11章11.2.3一致性协议，第12章性能分析",
+    "finding": "已打开两章实际正文，包含预测结构图、缓存一致性协议及习题；在线版本说明明确出版社同意开放资源。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "MIT6.823：Branch Prediction and Speculative Execution",
+   "url": "https://ocw.mit.edu/courses/6-823-computer-system-architecture-fall-2005/resources/l13_brnchpred/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第13讲38页PDF，转移代价、预测方案、误预测恢复；配ETH的性能模型讲次。",
+   "access": "MIT官方免费讲义PDF；经典原理适用，不作为最新处理器产品规格。",
+   "publisher": "原作者/机构公开教学材料，见来源",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-823-computer-system-architecture-fall-2005/resources/l13_brnchpred/",
+    "location": "L13，38页完整PDF",
+    "finding": "实际PDF正文可读，专门讲分支预测与推测执行，补原英文主课日程未单列的部分。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "指令集",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 2 条：典型指令系统的设计方法与指令级并行",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第2章指令系统",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L14–L16：MIPS assembly、microarchitecture、programming",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文以已核到实际正文的开源教材为完整路线，MOOC可作为视频替代。"
+  },
+  {
+   "topic": "流水线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 2 条：CPU 流水线结构与定量/定性分析、指令级并行",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第9章9.1–9.5单周期、流水线及冒险",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L18–L19 Pipelined Processor Architecture I/II；L20 Out-of-Order Execution",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文以已核到实际正文的开源教材为完整路线，MOOC可作为视频替代。"
+  },
+  {
+   "topic": "缓存",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 2 条：存储层次结构与高速缓冲存储器优化调度、评估方法",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第9.5.4与11.2.1节缓存结构",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L24 Memory Hierarchy & Caches；L25b Prefetching",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文以已核到实际正文的开源教材为完整路线，MOOC可作为视频替代。"
+  },
+  {
+   "topic": "多核一致性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 2 条：多核/众核体系结构及多处理机（未单列 cache 一致性协议）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第11.2.2–11.2.3节存储模型与Cache一致性",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L25a Caches in Multi-Core Systems（一致性）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文以已核到实际正文的开源教材为完整路线，MOOC可作为视频替代。"
+  },
+  {
+   "topic": "分支预测和性能模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 1 条：Amdahl 定律与量化分析、性能评估；分支预测未在页面出现",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第9.5.3节转移预测＋第12章性能评价",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L7 Performance Measures（性能模型）；L18 控制冒险；未核到分支预测专讲",
+     "extent": "partial"
+    },
+    {
+     "source": "en2",
+     "section": "MIT L13预测与恢复；ETH L7性能模型组合学习",
+     "extent": "covered"
+    }
+   ],
+   "note": "两种语言都补到具体教学章节；分支预测与性能模型按各自教材/讲义组合学习。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh2",
+     "read": "按第2章→第9章→第11章→第12章学习。特别完成9.5.3的预测器分析、11.2.3的一致性协议及相应习题；免费正文可独立完成，无需先买纸书。"
+    },
+    {
+     "source": "zh1",
+     "read": "先学 Amdahl 与量化分析，再指令系统、流水线与 ILP、存储层次/Cache，最后多核/多处理机；每章用习题做定量估算。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 L7 性能→L14–L17 指令集/单周期→L18–L20 流水线与乱序→L24–L26 存储层次、cache、一致性、虚拟内存学习，配合讲义中的定量例题。"
+    },
+    {
+     "source": "en2",
+     "read": "Read MIT L13 on branch prediction and misprediction recovery; pair it with ETH L7 on performance measures and estimate the CPI penalty of a given misprediction rate."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "计算机体系结构 中国大学MOOC 指令系统 流水线 存储层次 课程",
+   "result": "采纳华中科技大学《计算机系统结构》；打开核对授课目标，确认量化分析、流水线、cache、多核。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php?id=schedule 与 L18 讲义 PDF",
+   "result": "核对日程和流水线讲义，确认无 branch prediction 专讲，故该项记 partial。"
+  }
+ ],
+ "findings": [
+  "旧英文主资源 ETH DDCA 保留：流水线、乱序、cache、多核一致性、预取都有明确讲次。",
+  "旧中文来源“一生一芯”是处理器实现课，不覆盖体系结构量化分析与多核一致性，已换为华中科大系统结构课。",
+  "两门课都没有把分支预测列为独立讲次，因此本节点不报 complete。",
+  "主代理找到作者开源的完整中文教材，原“中文缺多核一致性/分支预测”结论撤销。UESTC旧PPT下载403不作为免费正文依据。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "计算机体系结构",
+ "description": "指令集、流水线、缓存、多核一致性、分支预测和性能模型。",
+ "applied_additions": []
+}

@@ -1,0 +1,255 @@
+{
+ "id": "M.6.5",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "中国地质大学（武汉）《信息论与编码》（中国大学 MOOC）",
+   "url": "https://www.icourse163.org/course/CUG-1205977806",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "信息的定义与度量、信源熵、互信息、信道容量、信息率失真函数；信源编码（Huffman、字典编码、算术编码）；信道编码（线性分组码、循环码、卷积码的编译码）；按香农三大定理组织。",
+   "access": "中文课程介绍与大纲可读；完整视频与作业按注册和开放学期提供，证书条件以平台为准；字幕未核对。",
+   "publisher": "中国地质大学（武汉）／中国大学 MOOC",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/CUG-1205977806",
+    "location": "课程概述：信息度量、信源熵、信道容量、信息率失真函数；信源编码 Huffman／字典／算术；信道编码线性分组码／循环码／卷积码",
+    "finding": "实际打开课程页，看到上述完整课程概述与参考教材；确认熵、互信息、容量、率失真与信源／信道编码都在课程范围。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Information Theory, Inference, and Learning Algorithms — David J. C. MacKay（作者主页，全书免费下载 + 16 讲视频）",
+   "url": "https://www.inference.org.uk/itila/book.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "熵、互信息、KL 散度、信源编码、信道容量与香农定理；并延伸到 LDPC 等现代纠错码与机器学习。全书 640 页 PDF 免费，另有作者 16 讲视频。",
+   "access": "作者主页提供全书 PDF/PS/DJVU/EPUB 免费下载与逐章入口；英文；视频免费。",
+   "publisher": "David J. C. MacKay（Cambridge University Press 2003）",
+   "evidence": {
+    "url": "https://www.inference.org.uk/itila/book.html",
+    "location": "书页：全书 640 页免费下载（PDF/PS/DJVU/EPUB）与 16 讲视频；Caltech Bob McEliece 推荐语 'from Shannon's fundamental theorems to the postmodern theory of LDPC codes'",
+    "finding": "实际打开书页，看到全书下载连结与推荐语；熵、互信息、信源／信道编码与容量是书的主线，LDPC 在後段。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "MIT OpenCourseWare 6.441 Information Theory (Spring 2016)",
+   "url": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "信息熵、无损数据压缩、二元假设检验、信道编码、有损数据压缩（lossy data compression／rate-distortion）；补 MacKay 书率失真不是主线的缺口。",
+   "access": "OCW 免费，无须注册；Lecture Notes、Assignments、Exams。无影片；影片字幕不适用。",
+   "publisher": "MIT OpenCourseWare（Prof. Yury Polyanskiy）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/",
+    "location": "Course Description：information entropy, lossless data compression, binary hypothesis testing, channel coding, and lossy data compression",
+    "finding": "实际打开 6.441 课程页，看到官方描述明列 lossy data compression；讲义与习题入口存在。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《「交叉熵」如何做损失函数？信息量、比特、熵、KL 散度、交叉熵》单讲（约 30 分钟）",
+   "url": "https://www.bilibili.com/video/BV15V411W7VB/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "信息量、熵、交叉熵与 KL 散度（相对熵）的定义、直观与相互关系；补 CUG 课程大纲没有逐字列出 KL 的缺口。",
+   "access": "B 站免费观看，约 30 分钟，中文授课；上传者「王木头学科学」为个人科普频道，不是大学课程；字幕未核对。",
+   "publisher": "王木头学科学（B 站个人科普频道）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV15V411W7VB/",
+    "location": "影片标题与简介：信息量、比特、熵、KL 散度、交叉熵",
+    "finding": "实际打开 B 站页，看到单讲标题与时长；内容明确讲 KL 散度与交叉熵的定义和关系，但属科普短片，不是完整信息论课。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "熵",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "信源熵、信息度量",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Entropy（书中信息论主线）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程概述明列信源熵与信息度量；英文 MacKay 以 entropy 为全书起点。"
+  },
+  {
+   "topic": "互信息",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "互信息、信息度量",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Mutual information",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程概述列互信息，英文 MacKay 的互信息与 KL 散度章节对应。"
+  },
+  {
+   "topic": "KL散度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "信息度量／互信息（课程概述未逐项列 KL 名称）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "KL 散度／相对熵的定义与直观",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Relative entropy / KL divergence",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 CUG 课程概述只列「信息的度量、互信息」，没有逐字写 KL 散度；另补一支 30 分钟中文科普单讲明确讲 KL 散度，故中文由 zh2 补上定义层次。完整信息论教材仍以课程为主。"
+  },
+  {
+   "topic": "信源/信道编码",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "信源编码（Huffman、字典、算术）；信道编码（线性分组码、循环码、卷积码）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Source coding；channel coding；LDPC 等纠错码",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程概述明确列信源／信道编码与具体算法；英文 MacKay 从香农定理讲到 LDPC。"
+  },
+  {
+   "topic": "容量与率失真",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "信道容量；信息率失真函数",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Channel capacity（率失真非主线）",
+     "extent": "partial"
+    },
+    {
+     "source": "en2",
+     "section": "lossy data compression／rate-distortion",
+     "extent": "covered"
+    }
+   ],
+   "note": "容量与率失真合并映射：中文课程两者都列；英文 MacKay 容量完整但率失真不是主线，故补 MIT 6.441 的 lossy data compression。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "学信息的定义与度量、信源熵、互信息，建立熵与互信息。"
+    },
+    {
+     "source": "zh1",
+     "read": "学信道容量与信息率失真函数，理解香农三大定理。"
+    },
+    {
+     "source": "zh1",
+     "read": "学信源编码（Huffman／字典／算术）与信道编码（线性分组码／循环码／卷积码）。"
+    },
+    {
+     "source": "zh2",
+     "read": "看 KL 散度／交叉熵单讲，补相对熵的定义与直观；完整推导仍以课程与 MacKay 为准。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the entropy, mutual information and KL divergence chapters; do the exercises."
+    },
+    {
+     "source": "en1",
+     "read": "Read source coding, channel capacity and the Shannon theorems; continue to the LDPC chapters."
+    },
+    {
+     "source": "en2",
+     "read": "Read the lossy data compression/rate-distortion lecture notes for the rate-distortion part."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "course",
+   "query_or_url": "https://www.icourse163.org/course/CUG-1205977806（既有主資源）",
+   "result": "保留：课程概述列熵、互信息、容量、率失真与信源／信道编码；KL 未逐字列，标 partial。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.inference.org.uk/itila/book.html（既有主資源）；https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/",
+   "result": "采纳：MacKay 全书免费，6.441 补 lossy compression／rate-distortion；皆免费。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「KL散度 相对熵 信息论 课程」；核對 BV15V411W7VB",
+   "result": "采纳为 KL 定义的科普补充；不是完整课程，故只补这一个知识点。"
+  }
+ ],
+ "findings": [
+  "原中文主资源 CUG MOOC 的课程概述已覆盖大部分，但没有逐字列出 KL 散度；本次不把「互信息」自动当成 KL，中文 KL 标 partial。",
+  "原英文 MacKay 是资讯论与编码的完整免费书，但率失真不是主线；本次补 MIT 6.441 的 lossy data compression，英文率失真才有明确来源。",
+  "「容量与率失真」合并映射：容量由 MacKay／中文课覆盖，率失真由 6.441／中文课覆盖。",
+  "五项中四项中文 covered，KL 中文 partial；英文五项 covered（容量与率失真合起来）。",
+  "没有把科普简介或推荐语当成正文：MacKay 书页有全书下载，6.441 有讲义与习题。",
+  "中文 KL 散度原本只有课程概述的「信息度量」而无逐字条目；本次补一支明确讲 KL 的中文单讲，但仍属科普短片，已在 access 标明。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "信息论与编码理论",
+ "description": "熵、互信息、KL散度、信源/信道编码、容量与率失真。",
+ "applied_additions": []
+}

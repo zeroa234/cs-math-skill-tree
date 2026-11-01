@@ -207,9 +207,9 @@ for (const id of skillIds) {
 }
 function resourceOf(resource) {
   if (!resource?.url) return null;
-  const { tier, title, url, lang, free, covers, access, note } = resource;
+  const { tier, title, url, lang, free, covers, access, note, role } = resource;
   if (!["http:", "https:"].includes(new URL(url).protocol)) fail(`invalid learning URL ${url}`);
-  return { tier, title, url, lang, free, covers, access, note };
+  return { tier, title, url, lang, free, covers, access, note, role };
 }
 function learningResources(id, research) {
   const { review, ...changes } = resourceReview.english[id] || {};

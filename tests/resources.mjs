@@ -54,7 +54,13 @@ try {
   await page.setViewportSize({ width: 390, height: 844 });
   assert(await page.locator(".extra-resources").getAttribute("open") !== null);
   assert(!(await page.locator(".learning-resources").evaluate(e => e.scrollWidth > e.clientWidth + 1)));
-  for (const [id, width, height, file] of [["M.1.1",1600,960,"desktop"],["P.4.1",390,844,"mobile-registration"],["M.4.2",390,844,"mobile-course"],["A.4.2",390,844,"mobile-bilibili"],["X.1.3",390,844,"mobile-youtube"]]) {
+  // Pick examples from the data so the checks follow resource changes instead of hard-coded skills.
+  const cards = s => [s.resource, s.zhAlt].filter(Boolean);
+  const conditional = data.skills.filter(s => cards(s).some(r => r.free === null)).map(s => s.id);
+  const zhVideo = data.skills.find(s => s.zhAlt?.tier === "video" && s.zhAlt.free === true)?.id;
+  const enVideo = data.skills.find(s => s.resource?.tier === "video" && s.resource.free === true)?.id;
+  assert(conditional.length >= 2 && zhVideo && enVideo, "resource examples for the layout checks are missing");
+  for (const [id, width, height, file] of [["M.1.1",1600,960,"desktop"],[conditional[0],390,844,"mobile-registration"],[conditional[1],390,844,"mobile-course"],[zhVideo,390,844,"mobile-bilibili"],[enVideo,390,844,"mobile-youtube"]]) {
     await page.setViewportSize({ width, height });
     await page.evaluate(id => { location.hash = `skill/${id}`; }, id);
     await page.waitForFunction(name => document.querySelector(".p-title")?.textContent === name, byId.get(id).name);
@@ -63,12 +69,13 @@ try {
     const overflow = await section.evaluate(e => e.scrollWidth > e.clientWidth + 1);
     assert(!overflow, `Resource content overflows at ${width}px: ${id}`);
     await section.screenshot({ path: path.join(output, file + ".png") });
-    if (id === "P.4.1") assert.match(await section.innerText(), /访问条件见说明/);
-    if (id === "M.4.2") assert.match(await section.innerText(), /访问条件见说明/);
-    if (["A.4.2", "X.1.3"].includes(id)) assert.match(await section.innerText(), /视频课程 · 免费/);
+    if (file.startsWith("mobile-registration") || file === "mobile-course") assert.match(await section.innerText(), /访问条件见说明/);
+    if (["mobile-bilibili", "mobile-youtube"].includes(file)) assert.match(await section.innerText(), /视频课程 · 免费/);
     if (id === "M.1.1") {
-      await section.locator("summary").last().click();
-      assert(await section.locator("details").last().getAttribute("open") !== null);
+      // The primary card's own details; supplementary cards sit inside a collapsed <details>.
+      const primaryDetails = section.locator(".res-list").first().locator(".res-details").first();
+      await primaryDetails.locator("summary").click();
+      assert(await primaryDetails.getAttribute("open") !== null);
     }
   }
   // Keep paid and missing-Chinese behavior covered even when all current cards have free alternatives.
@@ -87,7 +94,7 @@ try {
     location.hash = "skill/M.1.1";
   });
   await page.waitForFunction(() => document.querySelector(".p-title")?.textContent === "极限与连续");
-  assert.equal(await page.locator(".learning-resources .res").count(), 1);
+  assert.equal(await page.locator(".learning-resources > .res-list > .res").count(), 1, "only the Chinese main card remains");
   assert.match(await page.locator(".learning-resources").innerText(), /中文资源/);
   assert.equal(errors.length, 0, errors.join("\n"));
   await ctx.close();

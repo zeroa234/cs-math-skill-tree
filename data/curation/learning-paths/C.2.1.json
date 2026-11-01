@@ -1,0 +1,241 @@
+{
+ "id": "C.2.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《操作系统导论》（Operating Systems: Three Easy Pieces 中文版，作者站点免费 PDF）",
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "全书中文译本按虚拟化/并发/持久化三部分：进程与地址空间、CPU 调度、虚拟内存与分页/TLB/置换、线程与锁/条件变量/信号量、并发 bug、I/O 设备与磁盘、RAID、文件系统实现与日志/崩溃一致性。",
+   "access": "作者站点免费提供逐章中文 PDF（01.pdf 起）；无需注册。译文对应较早期版本，章节编号与英文新版可能略有差异。",
+   "publisher": "Remzi H. Arpaci-Dusseau & Andrea C. Arpaci-Dusseau（威斯康星大学麦迪逊分校）；中文译者项目",
+   "evidence": {
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/",
+    "location": "目录页 01.pdf–49.pdf、toc.pdf；抽查 26.pdf“并发：介绍”、30.pdf“条件变量”、38.pdf“RAID”、48.pdf“NFS”",
+    "finding": "中文目录与逐章 PDF 可打开，26/30/38/48 章正文分别为并发介绍、条件变量、RAID、NFS，确认是完整译本而非仅目录。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "南京大学 蒋炎岩《操作系统原理》2025（中文讲义 + 录像）",
+   "url": "https://jyywiki.cn/OS/2025/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程讲义按绪论、虚拟化、并发、持久化组织：程序和进程、进程地址空间、访问操作系统对象、链接加载、多处理器编程、互斥与同步、并发 bug、设备驱动、文件系统 API/实现、持久数据可靠性、数据库、安全与嵌入式 OS；每次课有中文讲义与视频回看入口。",
+   "access": "讲义与视频入口公开；实验需自备 Linux 环境。中文授课，字幕状态未核对。",
+   "publisher": "南京大学（蒋炎岩）",
+   "evidence": {
+    "url": "https://jyywiki.cn/OS/2025/",
+    "location": "课程讲义目录：虚拟化（程序和进程/地址空间）、并发（多处理器编程/互斥/同步/并发 Bugs）、持久化（设备驱动/文件系统 API 与实现/可靠性）",
+    "finding": "页面逐次列出中文讲义标题与实验 M1–M9，覆盖进程、地址空间、并发控制、文件系统与设备；提供视频回看入口。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Operating Systems: Three Easy Pieces（Arpaci-Dusseau，免费在线教材）",
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "虚拟化（进程、调度、地址空间、分页/TLB/置换）、并发（线程、锁、条件变量、信号量、并发 bug）、持久化（I/O 设备、磁盘、RAID、文件系统、日志、崩溃一致性、NFS/AFS）。",
+   "access": "作者站点免费 PDF，无需注册；英文。",
+   "publisher": "Remzi H. Arpaci-Dusseau & Andrea C. Arpaci-Dusseau, University of Wisconsin–Madison",
+   "evidence": {
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "location": "全书目录与各章 PDF 链接（Virtualization / Concurrency / Persistence）",
+    "finding": "站点按三部分列出全部章节 PDF，包含进程、调度、虚拟内存、线程与锁、I/O 设备、RAID、文件系统与日志。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "进程/线程",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 4 章进程、第 26 章并发介绍",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "程序和进程、多处理器编程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.4 Processes；Ch.26 Concurrency: An Introduction",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文译本与英文原书章节对应。"
+  },
+  {
+   "topic": "调度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7–10 章 CPU 调度（MLFQ、多处理器调度）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.7–10 Scheduling（SJF/STCF/RR/MLFQ、multiprocessor scheduling）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程 jyy 2025 不单列调度章，由 OSTEP 中文译本承担。"
+  },
+  {
+   "topic": "虚拟内存",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 13–24 章地址空间、分页、TLB、置换策略",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "进程的地址空间",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.13–24 Address Spaces, Paging, TLB, Swapping",
+     "extent": "covered"
+    }
+   ],
+   "note": "两套中文材料都覆盖地址空间与分页。"
+  },
+  {
+   "topic": "文件系统",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 39–41 章文件与目录、文件系统实现",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "文件系统 API、文件系统实现",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.39–41 Files and Directories, File System Implementation",
+     "extent": "covered"
+    }
+   ],
+   "note": "日志与崩溃一致性在存储节点另作深入，本节点只要求文件系统组织。"
+  },
+  {
+   "topic": "I/O",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 36–37 章 I/O 设备、磁盘",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "设备和驱动程序",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.36–37 I/O Devices, Hard Disk Drives",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课把设备驱动放在持久化部分讲。"
+  },
+  {
+   "topic": "同步与隔离",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 26–34 章线程、锁、条件变量、信号量、并发 bug；第 4/13 章进程隔离",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "并发控制：互斥/同步、并发 Bugs；进程地址空间隔离",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.26–34 Threads, Locks, CVs, Semaphores, Common Concurrency Problems；进程地址空间隔离",
+     "extent": "covered"
+    }
+   ],
+   "note": "隔离既指进程地址空间隔离，也指并发中的临界区保护，两侧都有。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按中文译本三部分顺序读：进程与调度→地址空间/分页→线程与锁/条件变量→设备与磁盘→文件系统；每章做 homework。"
+    },
+    {
+     "source": "zh2",
+     "read": "配合 jyy 讲义与录像看进程地址空间、并发控制和文件系统实现，完成 M1–M9 中至少进程/并发/文件系统三组实验。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Virtualization→Concurrency→Persistence 顺序读，配合每章 homework 和 xv6/教学 OS 实验。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "操作系统 中文 课程 进程 虚拟内存 文件系统 并发（复用既有来源）",
+   "result": "直接核对 OSTEP 官方中文目录与南京大学 2025 课程页，未再搜索。"
+  }
+ ],
+ "findings": [
+  "旧中文来源只有南京大学课程首页，本轮补上 OSTEP 完整中文译本，中文侧不再依赖英文正文。",
+  "OSTEP 中文译本与英文原书同章号，便于双语对照；译文年份较早，个别章节需对照英文新版。",
+  "南京大学课程保留为中文授课视频与实验补充。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "操作系统",
+ "description": "进程/线程、调度、虚拟内存、文件系统、I/O、同步与隔离。",
+ "applied_additions": []
+}

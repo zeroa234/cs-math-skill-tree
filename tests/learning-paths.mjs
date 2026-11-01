@@ -20,5 +20,16 @@ test('omitting a hard topic or stale description is rejected',()=>{
 test('a cross-language fallback requires real text, video and paid search records',()=>{
  const record=audit();record.topics[1].zh=[];record.routes.zh={status:'partial',steps:[{source:'zh1',read:'读变量章节'}],gaps:['调试']};record.cross_language_fallbacks=[{lang_missing:'zh',topic:'调试',source:'en1',reason:'本轮未找到合适中文教学'}];
  assert.equal(assessLearningPath(record,skill).problems.filter(s=>s.includes('search record')).length,3);
- record.searches=['text','video','paid'].map(channel=>({lang:'zh',channel,query_or_url:'实际候选查询',result:'明确说明为何不覆盖调试'}));assert.deepEqual(assessLearningPath(record,skill).problems,[]);
+ record.searches=['text','video','paid'].map(channel=>({lang:'zh',channel,query_or_url:'实际候选查询',result:'明确说明为何不覆盖调试'}));
+ assert(assessLearningPath(record,skill).problems.some(s=>s.includes('confirmed')),'a fallback from a round without web search must not pass');
+ record.cross_language_fallbacks[0].confirmed_by='review/pi-additions/P.1.1.json';assert.deepEqual(assessLearningPath(record,skill).problems,[]);
+});
+test('a third-party re-upload counts only after the official version was checked',()=>{
+ const record=audit();record.sources[0].publisher='个人账号转载的大学课程录像';
+ assert(assessLearningPath(record,skill).problems.some(s=>s.includes('not classified')),'undeclared re-upload');
+ record.sources[0].reupload=true;let p=assessLearningPath(record,skill).problems;
+ assert(p.some(s=>s.includes('labelled')));assert(p.some(s=>s.includes('official-version')));
+ record.sources[0].access='第三方转载，授权未核。'+record.sources[0].access;record.sources[0].official_search='学校课程中心与中国大学MOOC均无该课免费录像';
+ assert.deepEqual(assessLearningPath(record,skill).problems,[]);
+ record.sources[0].reupload=false;record.sources[0].access='公开正文';assert.deepEqual(assessLearningPath(record,skill).problems,[],'explicitly official sources pass');
 });

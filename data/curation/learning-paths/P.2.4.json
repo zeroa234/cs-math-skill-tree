@@ -1,0 +1,262 @@
+{
+ "id": "P.2.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "The Missing Semester of Your CS Education（MIT，2026 版，视频＋讲义全公开）",
+   "url": "https://missing.csail.mit.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "2026 syllabus 逐讲：Course Overview + Introduction to the Shell、Command-line Environment（shell 脚本、环境变量、dotfiles）、Development Environment and Tools、Debugging and Profiling（gdb/valgrind/perf）、Version Control and Git、Packaging and Shipping Code、Agentic Coding、Beyond the Code、Code Quality。覆盖 Git、调试器、包管理与自动化工作流；没有单列“构建系统/Make”。",
+   "access": "免费公开（讲义＋视频），无需注册；往届还有 Data Wrangling 等专题。",
+   "publisher": "MIT（Missing Semester 课程组）",
+   "evidence": {
+    "url": "https://missing.csail.mit.edu/",
+    "location": "首页 syllabus 2026 各讲标题",
+    "finding": "首页按讲列出 Command-line Environment、Debugging and Profiling、Version Control and Git、Packaging and Shipping Code 等讲次与讲义/视频链接。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Software Engineering at Google：第 18 章 Build Systems and Build Philosophy（免费在线版）",
+   "url": "https://abseil.io/resources/swe-book/html/ch18.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 18 章讲构建系统的作用（Purpose of a Build System）、任务与产物的依赖图、可重现与增量构建、构建文件与规则抽象等，补 Missing Semester 没有的“构建”一节。",
+   "access": "免费在线 HTML（O'Reilly 授权公开版），无需注册；纸质版付费。",
+   "publisher": "Google（Erik Kuefler 撰，O'Reilly）",
+   "evidence": {
+    "url": "https://abseil.io/resources/swe-book/html/ch18.html",
+    "location": "第 18 章正文开头与小节 Purpose of a Build System",
+    "finding": "页面标题为 Build Systems and Build Philosophy，正文讲构建系统为何存在、Bazel 与依赖图，正文约 7 万字符。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《计算机教育中缺失的一课》中文版（MIT Missing Semester 中译，2026 课表）",
+   "url": "https://missing-semester-cn.github.io/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文课表与英文版对应：课程概览＋Shell 入门、命令行环境、开发环境与工具、Debugging and Profiling、Version Control and Git、Packaging and Shipping Code、代码质量等。覆盖 Git、调试与性能剖析、包管理与自动化脚本；同样没有单独的构建系统讲次。",
+   "access": "免费在线（中文正文＋视频），无需注册；个别讲次标题仍保留英文原名。",
+   "publisher": "MIT 课程，中文译者社区",
+   "evidence": {
+    "url": "https://missing-semester-cn.github.io/",
+    "location": "2026 年课程安排 1/12–1/23 各条",
+    "finding": "课程安排列出 1/15/26 Debugging and Profiling、1/16/26 Version Control and Git、1/20/26 Packaging and Shipping Code 等条目。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "Pro Git 中文版（git-scm.com 官方站点中文译本）",
+   "url": "https://git-scm.com/book/zh/v2",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Git 系统教材的中文全译本：起步、Git 基础、分支、服务器上的 Git、分布式工作流、GitHub、工具、自定义 Git、Git 内部原理。补 Git 的分支模型与工作流细节。",
+   "access": "免费在线阅读（官方站点提供的多语言版本之一），无需注册。",
+   "publisher": "Scott Chacon、Ben Straub（Apress），中文译者社区",
+   "evidence": {
+    "url": "https://git-scm.com/book/zh/v2",
+    "location": "书的封面页与语言/章节导航（Chapters 1–10）",
+    "finding": "页面为 Pro Git 中文版入口，标明本书可选语言并提供章节导航；正文可逐章阅读。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "廖雪峰 Makefile 教程（中文，9 节从零到自动生成依赖）",
+   "url": "https://liaoxuefeng.com/books/makefile/introduction/index.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "9 节目录：简介、安装 make、Makefile 基础、编译 C 程序、使用隐式规则、使用变量、使用模式规则、自动生成依赖、完善 Makefile。补中文侧“构建”与依赖自动化。",
+   "access": "免费在线阅读，无需注册。",
+   "publisher": "廖雪峰",
+   "evidence": {
+    "url": "https://liaoxuefeng.com/books/makefile/introduction/index.html",
+    "location": "目录第 3–9 节标题与简介正文",
+    "finding": "目录列出“3 Makefile 基础 … 8 自动生成依赖 9 完善 Makefile”，简介说明 make 用于自动化编译与链接、Makefile 相当于 pom.xml/package.json。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "Git",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Version Control and Git 一讲",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第 2–3 章 Git 基础与分支、第 5 章 分布式工作流",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Version Control and Git",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "调试器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Debugging and Profiling 一讲（gdb/valgrind/perf 与性能分析）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Debugging and Profiling",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "构建",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "第 3–9 节 Makefile（编译 C 程序、隐式/模式规则、自动生成依赖）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第 18 章 Build Systems and Build Philosophy",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都没有在 Missing Semester 里讲构建，靠补充材料：中文是 Makefile 实操教程，英文是构建系统原理章节。"
+  },
+  {
+   "topic": "包管理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Packaging and Shipping Code（依赖与打包发布）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Packaging and Shipping Code",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "依赖与自动化工作流",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "命令行环境（shell 脚本、环境变量、dotfiles）＋Packaging",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "第 8 节 自动生成依赖",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Command-line Environment、Packaging and Shipping Code",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "Shell 入门→命令行环境→开发环境与工具→Debugging and Profiling→Version Control and Git→Packaging，边看边在终端练"
+    },
+    {
+     "source": "zh2",
+     "read": "第 2–3 章 Git 基础与分支、第 5 章 分布式工作流"
+    },
+    {
+     "source": "zh3",
+     "read": "第 3–9 节，为一个多文件 C 项目写出会自增量编译、自动生成依赖的 Makefile"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Shell 入门→命令行环境→开发环境与工具→Debugging and Profiling→Version Control and Git→Packaging"
+    },
+    {
+     "source": "en2",
+     "read": "第 18 章 Build Systems，理解构建系统的依赖图与增量/可重现构建"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://missing.csail.mit.edu/ syllabus",
+   "result": "采纳：Git/调试/打包都有讲次；确认无构建系统一讲，补 SE at Google 第 18 章。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://abseil.io/resources/swe-book/html/ch18.html",
+   "result": "采纳：第 18 章 Build Systems and Build Philosophy 全文可读。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://missing-semester-cn.github.io/ 课表；https://git-scm.com/book/zh/v2；https://liaoxuefeng.com/books/makefile/introduction/index.html",
+   "result": "采纳三份中文材料：中译课表、Pro Git 中文、廖雪峰 Makefile 教程（9 节，含自动生成依赖）。"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写“Shell、编辑器、Git、调试、性能分析与构建工具”，但中译版实际没有构建工具讲次；真正的“构建”由廖雪峰 Makefile 教程补，已写清。",
+  "旧条目把中译版说成覆盖构建，属过度概括；本文件改为覆盖 Git/调试/包管理，构建另列来源。",
+  "旧条目英文同样没有构建来源，本次补 SE at Google 第 18 章（免费官方章节）。",
+  "旧条目说“两门都是短学期/迷你课”，仍成立；本节点是工具链模块而非整学期课，按独立先修模块登记。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "版本控制、调试与构建工具",
+ "description": "Git、调试器、构建、包管理、依赖与自动化工作流。",
+ "applied_additions": []
+}

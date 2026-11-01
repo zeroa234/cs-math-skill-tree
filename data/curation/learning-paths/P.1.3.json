@@ -1,0 +1,216 @@
+{
+ "id": "P.1.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "OCaml Programming: Correct + Efficient + Beautiful（Cornell CS 3110 官方开放教材）",
+   "url": "https://cs3110.github.io/textbook/cover.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "目录核对：第 2 章 The Basics of OCaml（表达式、函数、调试）、第 3 章 Data and Types（3.1 Lists、3.2 Variants、3.4 Records and Tuples、3.5 Advanced Pattern Matching、3.9 Algebraic Data Types）、第 4 章 Higher-Order Programming（4.1 Higher-Order Functions 起）、第 5 章 Module Systems（5.6 Functional Data Structures）、第 6 章 Mutability。覆盖不可变（持久）数据、高阶函数、模式匹配与抽象机制；不含逻辑式/规则查询（Prolog）。",
+   "access": "免费在线教材，无需注册；配套视频在 YouTube（书中链接），练习可本地做。",
+   "publisher": "Cornell University（CS 3110 教学团队）",
+   "evidence": {
+    "url": "https://cs3110.github.io/textbook/cover.html",
+    "location": "目录第 2–6 章小节（3.2 Variants、3.5 Advanced Pattern Matching、4 Higher-Order Programming、5.6 Functional Data Structures）",
+    "finding": "目录页逐节列出 3.5 Advanced Pattern Matching、3.9 Algebraic Data Types、4.1 Higher-Order Functions、5.6 Functional Data Structures 等，正文可点开。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Learn Prolog Now!（Blackburn, Bos, Striegnitz；作者站点免费在线版）",
+   "url": "http://www.learnprolognow.org/lpnpage.php?pageid=online",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "12 章目录核对：Chapter 1 Facts, Rules, and Queries、Chapter 2 Unification and Proof Search、Chapter 3 Recursion、Chapter 4 Lists、Chapter 5 Arithmetic、Chapter 10 Cuts and Negation、Chapter 11 Database Manipulation and Collecting Solutions 等。补英文侧“规则与查询式表达”。",
+   "access": "免费在线版（站点重定向到 let.rug.nl 的镜像页），无需注册；另有纸质版（付费）。",
+   "publisher": "Patrick Blackburn、Johan Bos、Kristina Striegnitz",
+   "evidence": {
+    "url": "http://www.learnprolognow.org/lpnpage.php?pageid=online",
+    "location": "在线版目录 Chapter 1–12 标题",
+    "finding": "页面列出 12 章标题，第 1 章即 Facts, Rules, and Queries，第 2 章 Unification and Proof Search。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Composing Programs 中文译本（CS Five 翻译项目）",
+   "url": "https://composingprograms.netlify.app/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "目录核对：1.6 高阶函数、1.7 递归函数、3.2 函数式编程、3.4 组合语言的解释器、3.5 抽象语言的解释器、4.2 隐式序列、4.3 声明式编程。覆盖高阶函数、递归、流（惰性序列）与声明式/逻辑式查询表达；不含 OCaml/Haskell 式的模式匹配，也不系统讲不可变数据结构。",
+   "access": "免费中文译文（网页），部分代码与术语保留英文；无视频。",
+   "publisher": "John DeNero 等（UC Berkeley CS 61A 教材），中文译者 CS Five",
+   "evidence": {
+    "url": "https://composingprograms.netlify.app/",
+    "location": "侧栏目录 1.6 高阶函数、3.2 函数式编程、4.2 隐式序列、4.3 声明式编程",
+    "finding": "首页侧栏列出全部章节标题，含 1.6 高阶函数、3.2 函数式编程、4.3 声明式编程。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《Rust 程序设计语言》简体中文版（Rust 中文社区译，官方书中文版）",
+   "url": "https://kaisery.github.io/trpl-zh-cn/title-page.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 3 章 变量与可变性（默认不可变）、第 4 章 认识所有权（所有权/借用/生命周期，即不可变数据的管理）、第 6 章 枚举和模式匹配（match、if let）、第 19 章 模式匹配（所有模式语法与可反驳性）。补中文侧的模式匹配与不可变数据。",
+   "access": "免费在线（官方书的社区中文译本），无需注册；练习需本地 Rust 工具链。",
+   "publisher": "Steve Klabnik、Carol Nichols、Chris Krycho（No Starch Press），中文译本由 Rust 中文社区维护",
+   "evidence": {
+    "url": "https://kaisery.github.io/trpl-zh-cn/ch06-00-enums.html",
+    "location": "ch04-00-understanding-ownership（认识所有权）、ch06-00-enums（枚举和模式匹配）、ch19-00-patterns（模式匹配）",
+    "finding": "三章页面标题分别为“认识所有权”“枚举和模式匹配”“模式匹配”（ch19 从 ch18 重定向而来），正文可读。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "不可变数据",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "4.2 隐式序列（惰性、不可变序列的构造）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第 3 章 变量与可变性、第 4 章 认识所有权",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "5.6 Functional Data Structures、第 6 章 Mutability 对照",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧用 Python 的流只讲到不可变序列的用法，真正“默认不可变＋共享结构”的讲解靠 Rust 书（所有权与借用）。"
+  },
+  {
+   "topic": "高阶函数",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "1.6 高阶函数、3.2 函数式编程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 4 章 Higher-Order Programming（含 map/filter/currying）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "模式匹配",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 6 章 枚举和模式匹配、第 19 章 模式匹配",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "3.2 Variants、3.5 Advanced Pattern Matching、3.9 Algebraic Data Types",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧用 Rust 的 match/枚举讲；英文侧用 OCaml 变体与代数数据类型讲。"
+  },
+  {
+   "topic": "规则与查询式表达",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "4.3 声明式编程（逻辑式查询与规则）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Chapter 1 Facts, Rules, and Queries、Chapter 2 Unification and Proof Search",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧 Prolog 教材更系统（合一与证明搜索）；中文侧是声明式编程入门一章。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "1.6 高阶函数→1.7 递归→3.2 函数式编程→4.2 隐式序列→4.3 声明式编程，写高阶函数与查询式程序"
+    },
+    {
+     "source": "zh2",
+     "read": "第 3–4 章（不可变与所有权）→第 6 章枚举与 match→第 19 章模式匹配全部语法，写带枚举与解构的小程序"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "第 2 章基础→3.2/3.5/3.9（变体、模式匹配、ADT）→第 4 章高阶函数→5.6 函数式数据结构→第 6 章可变性对照"
+    },
+    {
+     "source": "en2",
+     "read": "第 1–2 章事实/规则/查询与合一，再读第 3–4 章递归与列表，体会规则式表达"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cs3110.github.io/textbook/cover.html 目录",
+   "result": "采纳：模式匹配/高阶函数/函数式数据结构都有精确小节；确认书里没有逻辑式编程。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "http://www.learnprolognow.org/lpnpage.php?pageid=online",
+   "result": "采纳：12 章免费在线 Prolog 教材，第 1–2 章即规则/查询与合一；站点重定向到 let.rug.nl 镜像可用。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://composingprograms.netlify.app/ 与 https://kaisery.github.io/trpl-zh-cn/ 目录",
+   "result": "采纳：中译 CP 补高阶函数与声明式编程，Rust 中文书补不可变与模式匹配。"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写 Composing Programs 中译，且与 F.3.1 用同一段 covers；本次为 P.1.3 补 Rust 中文书覆盖“模式匹配/不可变”，并把 4.3 明确对应“规则与查询式表达”。",
+  "旧条目英文自认“逻辑式/规则查询不在本书范围”，属实；本次补 Learn Prolog Now! 作英文补充，使英文侧四个知识项都有正文。",
+  "旧条目中文 covers 说“形式化 λ 演算仍配合英文课程”，那是 F.3.1 的边界，不应出现在本节点；本节点不再提 λ 演算。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "函数式、逻辑式与声明式编程",
+ "description": "不可变数据、高阶函数、模式匹配、规则与查询式表达。",
+ "applied_additions": []
+}

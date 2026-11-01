@@ -1,0 +1,212 @@
+{
+ "id": "M.6.3.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "上海交通大学张驰豪 AI2613《随机过程》2025（作者课程站，逐讲中文讲义）",
+   "url": "https://chihaozhang.com/teaching/SP2025/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Lecture 2 离散马尔可夫链、Metropolis–Hastings；Lecture 3 马尔可夫链基本定理、耦合；Lecture 4 无限状态马尔可夫链、常返与正常返；Lecture 5 基本定理一般形式、2-CNF 随机游走；Lecture 8 连续时间离散空间马尔可夫过程；Lecture 14 马尔可夫过程、Langevin 与扩散模型。",
+   "access": "教师课程站逐讲中文 PDF 公开，免费；无需注册；无影片（PDF）。",
+   "publisher": "张驰豪（上海交通大学）",
+   "evidence": {
+    "url": "https://chihaozhang.com/teaching/SP2025/",
+    "location": "Lecture Notes in Chinese：Lecture 2–5 离散马尔可夫链、耦合、常返；Lecture 8 连续时间离散空间马尔可夫过程",
+    "finding": "实际打开课程站，看到 0–14 讲标题；离散／连续时间马尔可夫链、转移、平稳分布与耦合收敛都有讲次。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Markov Chains and Mixing Times, 2nd Edition — David A. Levin & Yuval Peres（作者主页提供全书免费 PDF）",
+   "url": "https://pages.uoregon.edu/dlevin/MARKOV/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "有限状态离散时间 Markov 链：转移矩阵、类结构与不可约性、首达时间与吸收概率、强 Markov 性、常返与瞬态、平稳分布与极限定理、可逆性、遍历定理、混合时间（coupling、谱隙、对数 Sobolev 等）、MCMC 与 Coupling from the Past。",
+   "access": "作者主页可直接下载第二版与第一版全书 PDF（另有勘误表）；免费；英文。连续时间链只在书末／附录提及。",
+   "publisher": "David A. Levin & Yuval Peres（AMS）",
+   "evidence": {
+    "url": "https://pages.uoregon.edu/dlevin/MARKOV/",
+    "location": "作者主页下载区：Markov Chains and Mixing Times 第二版／第一版全书 PDF；目录含 transition matrices、stationary distributions、mixing times、ergodic theorem",
+    "finding": "实际打开作者主页，看到全书 PDF 下载与勘误；书的目录涵盖转移、平稳分布、混合时间与遍历定理。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "STAT 150: Stochastic Processes — Prof. David Aldous, UC Berkeley（公开课程主页）",
+   "url": "https://www.stat.berkeley.edu/~aldous/150/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Markov 链入门与长期行为、Poisson 过程、连续时间 Markov 链、鞅、Brown 运动；补 Levin–Peres 只讲离散时间链的缺口。",
+   "access": "UC Berkeley 课程主页公开逐次课提要、阅读任务、作业与考试；免费；英文。",
+   "publisher": "David Aldous（UC Berkeley）",
+   "evidence": {
+    "url": "https://www.stat.berkeley.edu/~aldous/150/",
+    "location": "Topic outline：Markov chains and long-term behavior；Poisson process；continuous-time Markov chains",
+    "finding": "实际打开课程页，看到 topic outline 与作业；连续时间 Markov 链有明确主题。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "离散/连续时间链",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Lecture 2–5 离散马尔可夫链；Lecture 8 连续时间离散空间马尔可夫过程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "离散时间 Markov 链（全书主体）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "continuous-time Markov chains",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文张驰豪同时讲离散与连续时间链；英文 Levin–Peres 主讲离散时间，连续时间由 Aldous STAT 150 补。"
+  },
+  {
+   "topic": "转移",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Lecture 2 离散马尔可夫链（转移矩阵）；Lecture 8 连续时间转移",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "transition matrices；Chapman–Kolmogorov",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "continuous-time transition rates",
+     "extent": "covered"
+    }
+   ],
+   "note": "转移矩阵与 C-K 方程在中文第 2 讲与英文 Levin–Peres 的 transition matrices 章；连续时间转移率由 Aldous 补。"
+  },
+  {
+   "topic": "平稳分布",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Lecture 3–4 马尔可夫链基本定理、常返与正常返（平稳分布）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "stationary distributions and limit theorems",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "long-term behavior of Markov chains",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文第 3–4 讲讲平稳分布与极限定理；英文 Levin–Peres 有 stationary distributions 章，Aldous 的长期行为主题对应。"
+  },
+  {
+   "topic": "混合与遍历性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Lecture 3 耦合；Lecture 4 常返；Lecture 14 马尔可夫过程与采样",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "mixing times（coupling、spectral gap）、ergodic theorem",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用耦合与常返讲收敛；英文 Levin–Peres 的 mixing times／ergodic theorem 是主线，覆盖 coupling 与谱隙。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读 Lecture 2 离散马尔可夫链与转移矩阵，Lecture 3–5 基本定理、耦合、常返与平稳分布。"
+    },
+    {
+     "source": "zh1",
+     "read": "读 Lecture 8 连续时间离散空间马尔可夫过程，补连续时间链。"
+    },
+    {
+     "source": "zh1",
+     "read": "读 Lecture 14 马尔可夫过程与采样，将混合／遍历性连到 MCMC。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the transition matrix, class structure, recurrence and stationary distribution chapters."
+    },
+    {
+     "source": "en1",
+     "read": "Read the mixing time chapters: coupling, spectral gap, ergodic theorem, and the MCMC applications."
+    },
+    {
+     "source": "en2",
+     "read": "Read the continuous-time Markov chain material in STAT 150 to cover the continuous-time case."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://chihaozhang.com/teaching/SP2025/（既有主資源）",
+   "result": "采纳：离散／连续时间链、转移、平稳分布、耦合收敛都有讲次；免费中文 PDF。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://pages.uoregon.edu/dlevin/MARKOV/（既有主資源）；https://www.stat.berkeley.edu/~aldous/150/",
+   "result": "采纳：Levin–Peres 讲离散时间与混合时间，Aldous 补连续时间链；皆免费。"
+  }
+ ],
+ "findings": [
+  "原中文 zhAlt 是《动手学强化学习》，只讲 MDP，不能替代一般 Markov 链的常返、连续时间与混合理论；这是明显错配。本次改以张驰豪随机过程讲义为主。",
+  "原英文 Levin–Peres 全书是离散时间链，continuous time 只在书末／附录；本次补 Aldous STAT 150 的 continuous-time Markov chains，避免把附录当成完整教学。",
+  "「混合与遍历性」用 Levin–Peres 的 mixing times／ergodic theorem 与中文耦合／常返讲次对应；没有把平稳分布等同於混合时间。",
+  "四项均为必学，没有 extension。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "马尔可夫链",
+ "description": "离散/连续时间链、转移、平稳分布、混合与遍历性。",
+ "applied_additions": []
+}

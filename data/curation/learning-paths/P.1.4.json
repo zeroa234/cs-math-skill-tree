@@ -1,0 +1,243 @@
+{
+ "id": "P.1.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.102 Software Construction（Spring 2025 课程站，19 个 class readings 全公开）",
+   "url": "https://web.mit.edu/6.102/www/sp25/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "classes/ 目录逐条核对：01 static-checking、02 testing、03 code-review、04 specifications、05 designing-specs、06 abstract-data-types、07 abstraction-functions-rep-invariants、08 interfaces-subtyping、09 functional-programming、10 equality、11 recursive-data-types、12 grammars-parsing、13 debugging、14 concurrency、15 promises、16 mutual-exclusion、17 callbacks-guis、18 message-passing-networking、19 little-languages。覆盖异步/并发（14–18）、性能剖析（13 debugging）与工程化抽象（04–08 规格、ADT、表示不变量）；泛型靠 TypeScript 泛型贯穿；RAII/析构这类资源管理不系统讲。",
+   "access": "免费公开课程站与全部 readings，无需注册；有 PS0–PS4 与项目说明。视频未公开。",
+   "publisher": "MIT（6.102 教学团队）",
+   "evidence": {
+    "url": "https://web.mit.edu/6.102/www/sp25/",
+    "location": "classes/01-static-checking 至 classes/19-little-languages 的链接列表",
+    "finding": "首页列出 19 个 class 目录，含 13-debugging、14-concurrency、15-promises、16-mutual-exclusion、18-message-passing-networking、19-little-languages。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "The Rust Programming Language（官方书，doc.rust-lang.org）",
+   "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "ch4 Understanding Ownership（所有权、借用、生命周期——资源管理的语言机制）、ch10 Generic Types, Traits, and Lifetimes（泛型与 trait 约束）、ch20-05 Macros（声明式/过程宏，即泛型元编程）。补 6.102 不讲的 RAII/析构与宏。",
+   "access": "免费官方在线书（HTML），无需注册。",
+   "publisher": "Steve Klabnik、Carol Nichols、Chris Krycho（Rust 项目官方）",
+   "evidence": {
+    "url": "https://doc.rust-lang.org/book/ch20-05-macros.html",
+    "location": "ch04 Understanding Ownership、ch10 Generic Types, Traits, and Lifetimes、ch20-05 Macros 三页",
+    "finding": "三页均可打开：ch4 讲所有权/借用，ch10 讲泛型与 trait，ch20-05 正文讲声明式宏 macro_rules! 与过程宏。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "廖雪峰 Java 教程（泛型、反射、多线程章节）",
+   "url": "https://liaoxuefeng.com/books/java/introduction/index.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第 5 章 反射（Class、访问字段/方法、动态代理）、第 7 章 泛型（擦拭法、extends/super 通配符、泛型与反射）、第 14 章 多线程（同步、死锁、ReentrantLock/Condition/ReadWriteLock、并发集合、Atomic、线程池、Future/CompletableFuture、ForkJoin）。对应泛型元编程与异步/并发的语言实践。",
+   "access": "免费在线阅读，无需注册。",
+   "publisher": "廖雪峰",
+   "evidence": {
+    "url": "https://liaoxuefeng.com/books/java/introduction/index.html",
+    "location": "目录第 5 章 反射、第 7 章 泛型、第 14 章 多线程",
+    "finding": "目录列出 5.1 Class 类…5.6 动态代理、7.1 什么是泛型…7.7 泛型和反射、14.1 多线程基础…14.12 虚拟线程。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《Rust 程序设计语言》简体中文版：第 4 章 认识所有权、第 6 章 枚举和模式匹配",
+   "url": "https://kaisery.github.io/trpl-zh-cn/title-page.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 4 章 认识所有权（所有权、借用、切片，对应资源生命周期管理）、第 3 章 变量与可变性、第 6 章 枚举和模式匹配。补中文侧“资源管理”的语言级机制（与 Java 的 GC 型资源管理形成对照）。",
+   "access": "免费在线（官方书社区中译），无需注册。",
+   "publisher": "Steve Klabnik 等原着，Rust 中文社区译",
+   "evidence": {
+    "url": "https://kaisery.github.io/trpl-zh-cn/ch04-00-understanding-ownership.html",
+    "location": "ch04-00-understanding-ownership（认识所有权）",
+    "finding": "页面标题为“认识所有权”，正文讲所有权规则、借用与生命周期。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "《计算机教育中缺失的一课》中文版（MIT Missing Semester，2026）",
+   "url": "https://missing-semester-cn.github.io/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "2026 课程安排中的“Debugging and Profiling”一讲（调试与性能剖析）；另有 Version Control and Git、Packaging and Shipping Code、代码质量等。补中文侧“性能剖析”。",
+   "access": "免费在线（正文与视频），无需注册；该讲标题仍为英文，页面为中文。",
+   "publisher": "MIT（Anish Athalye 等），中文译者社区",
+   "evidence": {
+    "url": "https://missing-semester-cn.github.io/",
+    "location": "2026 年课程安排列表 1/15/26 条目",
+    "finding": "课程安排列出“1/15/26: Debugging and Profiling”，同页还有命令行环境、开发环境与工具、Packaging 等讲次。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "资源管理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 4 章 认识所有权（所有权/借用/生命周期）、第 3 章 变量与可变性",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "ch4 Understanding Ownership（所有权与借用）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都用 Rust 的所有权机制讲资源生命周期；6.102/廖雪峰 Java 侧都是 GC 语言，不讲析构/RAII。"
+  },
+  {
+   "topic": "泛型元编程",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7 章 泛型（擦拭法、通配符、泛型与反射）、第 5 章 反射（Class/动态代理）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "ch10 Generics, Traits, and Lifetimes、ch20-05 Macros（声明式与过程宏）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "TypeScript 泛型贯穿 19 个 reading（无宏/模板元编程）",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文侧是 Java 泛型＋反射（运行时元编程）；英文侧是 Rust 泛型＋宏（编译期元编程），另有 6.102 的 TS 泛型实践。"
+  },
+  {
+   "topic": "异步/并发",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 14 章 多线程（同步、锁、并发集合、线程池、CompletableFuture、ForkJoin）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "14 concurrency、15 promises、16 mutual-exclusion、17 callbacks-guis、18 message-passing-networking",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "性能剖析与工程化抽象",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "Debugging and Profiling 一讲（性能剖析/调试）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "13 debugging；工程化抽象见 04–08 specifications/ADT/abstraction functions/rep invariants",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧的“工程化抽象”没有对应正文（廖雪峰是语言教程，不讲规格与表示不变量），故中文这一半只到性能剖析；英文侧两块都齐。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh2",
+     "read": "第 3–4 章：用所有权/借用写资源生命周期清晰的小程序"
+    },
+    {
+     "source": "zh1",
+     "read": "第 5 章反射→第 7 章泛型→第 14 章多线程（做到线程池与 CompletableFuture）"
+    },
+    {
+     "source": "zh3",
+     "read": "Debugging and Profiling 一讲，学会用剖析器定位性能问题"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "01–02（静态检查与测试）→04–08（规格/ADT/抽象函数与表示不变量/接口）→13 debugging→14–18（并发、promises、互斥、回调、消息传递）"
+    },
+    {
+     "source": "en2",
+     "read": "ch4（所有权）→ch10（泛型/trait）→ch20-05（宏），补资源管理与元编程"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://web.mit.edu/6.102/www/sp25/ 的 19 个 classes 链接",
+   "result": "采纳：13-debugging、14–18 并发/异步与 04–08 工程化抽象都在；确认无 RAII/宏。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://doc.rust-lang.org/book/ ch04、ch10、ch20-05",
+   "result": "采纳：补资源管理（所有权）与泛型元编程（泛型/trait/宏）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "廖雪峰 Java 教程目录（反射/泛型/多线程）与《Rust 程序设计语言》中译 ch04",
+   "result": "采纳：中文侧用 Java 泛型+反射+多线程补元编程与并发，Rust 中译补资源管理。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://missing-semester-cn.github.io/ 2026 课表",
+   "result": "采纳：Debugging and Profiling 一讲补性能剖析；该页同时提供中文正文与视频。"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写廖雪峰 Java 教程的泛型/集合/异常/反射/多线程，且与 P.1.2 共用同一来源与近似 covers；本节点改为三源分工：Rust 中译（资源管理）、廖雪峰（泛型元编程/并发）、Missing Semester 中文（性能剖析）。",
+  "旧条目说“RAII/析构与泛型元编程不是本课主线（Rust 书可补）”，本次确实用 Rust 书补齐，并对 6.102 的 TS 泛型只记为 partial。",
+  "中文侧“工程化抽象”（规格/抽象函数/表示不变量）确实没有中文来源，保留为缺口。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "高级程序设计",
+ "description": "资源管理、泛型元编程、异步/并发、性能剖析与工程化抽象。",
+ "applied_additions": []
+}

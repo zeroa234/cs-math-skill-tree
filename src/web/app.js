@@ -408,7 +408,7 @@
     if (!res) return null;
     const cost = res.free === true ? "免费" : res.free === false ? "付费 / 部分免费" : "访问条件见说明";
     return el("div", { class: "res" },
-      el("h4", { class: "res-heading" }, label),
+      el("h4", { class: "res-heading" }, label + (res.role === "reference" ? " · 查阅参考" : res.role === "alternative" ? " · 可选替代" : "")),
       el("span", { class: "res-tier" }, `${TIER_TEXT[res.tier] || res.tier} · ${cost}`),
       el("a", { href: res.url, target: "_blank", rel: "noopener noreferrer" }, res.title),
       res.access ? el("span", { class: "res-access" }, res.access) : null,

@@ -1,0 +1,180 @@
+{
+ "id": "M.7.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "西南科技大学《最优化理论与算法》龙强（35 讲，2022 版，B 站）",
+   "url": "https://www.bilibili.com/video/BV1e64y1Y7Sr/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "最优化问题模型与分类、凸集与凸函数、线性规划与单纯形、对偶理论；无约束极值条件、约束极值问题的最优性条件、对偶及鞍点问题；一维搜索、最速下降、牛顿、共轭方向、拟牛顿、坐标轮换、Zoutendijk 可行方向、Rosen 投影梯度、Frank–Wolfe、外点／内点罚函数。",
+   "access": "B 站免费观看，35 讲（约 26.8 小时），中文授课；课程说明为西南科技大学理学院最优控制与数据智能团队录制，课件与代码在 GitHub；上传者「龙强老师」为教师本人账号。字幕未核对。",
+   "publisher": "西南科技大学理学院 龙强（B 站账号：龙强老师）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1e64y1Y7Sr/",
+    "location": "B 站分 P：7.1 无约束优化问题的极值条件；7.2 约束极值问题的最优性条件；7.3 对偶及鞍点问题；12 可行方向法／投影梯度／Frank–Wolfe；13 罚函数法",
+    "finding": "实际打开 B 站页并读取 35 个分 P 标题；局部／全局极值条件、约束最优性、鞍点与非凸约束算法都有讲次，但没有全局优化分支定界或复杂性章节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT OpenCourseWare 6.252J Nonlinear Programming (Spring 2003, Bertsekas)",
+   "url": "https://ocw.mit.edu/courses/6-252j-nonlinear-programming-spring-2003/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "无约束方法（梯度、共轭方向、Newton、拟 Newton）、约束方法（可行方向、投影、内点、Lagrange 乘子）、凸分析、Lagrangian 松弛、不可微优化、最优性条件（局部／全局）、Lagrange 乘子理论与对偶、在整数规划中的应用。",
+   "access": "OCW 免费，无须注册；Lecture Notes 可整包下载、Assignments。无影片；影片字幕不适用。",
+   "publisher": "MIT OpenCourseWare（Dimitri P. Bertsekas）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-252j-nonlinear-programming-spring-2003/",
+    "location": "Course Description：unconstrained methods、constrained methods、convex analysis、Lagrangian relaxation、nondifferentiable optimization、optimality conditions、multiplier theory and duality",
+    "finding": "实际打开课程页，看到官方描述与 Lecture Notes 整包下载；局部／全局最优性条件、约束方法、对偶都有，但没有鞍点逃逸或全局优化复杂性。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "局部与全局最优",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "7.1 无约束优化问题的极值条件；7.2 约束极值问题的最优性条件",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Optimality conditions（local/global）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 7.1–7.2 讲一阶／二阶必要与充分条件；英文 6.252J 的 optimality conditions 对应。"
+  },
+  {
+   "topic": "鞍点",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "7.3 对偶及鞍点问题（上／下）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lagrange multiplier theory and duality；saddle point interpretation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有两讲专讲对偶与鞍点；英文 6.252J 在 multiplier theory／duality 中处理鞍点。"
+  },
+  {
+   "topic": "非凸约束",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "7.2 约束极值问题的最优性条件；12.1 Zoutendijk 可行方向法；12.2 Rosen 投影梯度法；13 罚函数法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Constrained methods：feasible directions, projection, interior point, Lagrange multipliers；nondifferentiable optimization",
+     "extent": "covered"
+    }
+   ],
+   "note": "非凸约束按一般非线性约束（不假设凸性）理解；中文 7.2／12／13 与英文 constrained methods 都处理。"
+  },
+  {
+   "topic": "全局方法与复杂性",
+   "stage": "extension",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "课程没有全局优化分支定界／空间分支或复杂性下界章节",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Course Description 没有 global optimization 或 complexity 章节",
+     "extent": "partial"
+    }
+   ],
+   "note": "依 boundary：「鞍点逃逸与复杂性是後续专题，不能把课程简介未单列这些词当成已提供完整专题材料」，故标 extension。中英文主课都只到局部最优性与算法，没有连续全局优化（空间分支定界）与复杂度下界；此项为真实缺口。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "看 7.1 无约束极值条件与 7.2 约束极值最优性条件，掌握局部／全局最优的一阶二阶条件。"
+    },
+    {
+     "source": "zh1",
+     "read": "看 7.3 对偶及鞍点问题，理解 Lagrange 对偶与鞍点。"
+    },
+    {
+     "source": "zh1",
+     "read": "看 9–13 章算法：一维搜索、最速下降、牛顿、拟牛顿、可行方向、投影梯度、罚函数，处理非凸约束。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the unconstrained optimality conditions and the gradient/Newton/quasi-Newton methods."
+    },
+    {
+     "source": "en1",
+     "read": "Read the constrained optimality conditions, feasible direction/projection methods, and Lagrange multiplier/duality."
+    },
+    {
+     "source": "en1",
+     "read": "Read the Lagrangian relaxation and nondifferentiable optimization chapters; global optimization/complexity requires a separate course."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「非线性规划 大学 课程」「最优化方法 大学 课程 约束」；核對 BV1e64y1Y7Sr",
+   "result": "采纳：西南科技大学龙强最优化理论与算法 35 讲，极值条件、鞍点、约束算法、罚函数完整；教师本人账号。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ocw.mit.edu/courses/6-252j-nonlinear-programming-spring-2003/（既有主資源）",
+   "result": "采纳：6.252J 覆盖无约束／约束方法、最优性条件、乘子与对偶；确认没有全局优化／复杂性。"
+  }
+ ],
+ "findings": [
+  "原中文 zhAlt 是《动手学深度学习》优化算法，只讲训练优化器，不能替代非线性规划／约束优化；这是明显错配。本次改以龙强《最优化理论与算法》35 讲为主。",
+  "龙强课程是教师本人 B 站账号、西南科技大学团队录制，比第三方搬运可靠；已在 publisher 标明。",
+  "鞍点在中文 7.3 有两讲，英文 6.252J 在对偶／乘子理论中讲；没有把鞍点逃逸的近代分析算作已覆盖。",
+  "全局方法与复杂性依 boundary 标 extension；中英文主课都没有全局分支定界与复杂度下界，已在 gaps 写明。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "非凸优化",
+ "description": "局部与全局最优、鞍点、非凸约束、全局方法与复杂性。",
+ "applied_additions": []
+}

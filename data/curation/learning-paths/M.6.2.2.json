@@ -1,0 +1,161 @@
+{
+ "id": "M.6.2.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "上海立信会计金融学院《应用回归分析》（中国大学 MOOC）",
+   "url": "https://www.icourse163.org/course/LIXIN-1207403805",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "一元／多元线性回归、模型诊断与矫正、定性变量、Logistic 回归、变量选择及正则化，配 Python 案例；完整 GLM 族另补。",
+   "access": "中文课程介绍可读；视频、作业需注册并以开放学期为准，未登录验证全部单元；证书另计。字幕未核对。",
+   "publisher": "上海立信会计金融学院／中国大学 MOOC",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/LIXIN-1207403805",
+    "location": "课程概述与大纲：一元／多元线性回归、模型诊断与矫正、定性变量、Logistic 回归、变量选择及正则化、Python 案例",
+    "finding": "实际打开课程页，看到课程概述与上述主题；页面没有展开逐讲视频清单，完整 GLM 族未列。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "An Introduction to Statistical Learning with Applications in R / Python (ISLR / ISLP, 2nd Edition)",
+   "url": "https://www.statlearning.com/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "线性回归与推断；分类（logistic 回归、LDA 等广义线性分类）；重抽样（CV/bootstrap）；模型选择与正则化（子集选择、岭回归、lasso、降维）；超越线性（多项式、样条、GAM）；树、SVM、深度学习、生存分析、无监督、多重检验；每章附 R/Python lab。",
+   "access": "作者官网提供两版全文免费 PDF（R 版与 Python 版），无需注册；英文。",
+   "publisher": "Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani",
+   "evidence": {
+    "url": "https://www.statlearning.com/",
+    "location": "Chapters：Statistical Learning、Linear Regression、Classification、Resampling、Linear Model Selection and Regularization、Moving Beyond Linearity、Tree-Based Methods、SVM、Deep Learning、Survival、Unsupervised、Multiple Testing",
+    "finding": "实际打开官网，看到章节列表与免费 PDF 下载；线性回归、logistic/LDA、正则化、非线性与模型选择都有章节。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "线性/广义线性模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "一元／多元线性回归；定性变量；Logistic 回归",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 3 Linear Regression；Chapter 4 Classification（logistic regression、LDA）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都覆盖线性回归与 logistic／LDA 入门；完整指数族 GLM（Poisson、Gamma 等）不在这两门课，属需另补的深入内容，本节没有假称已含全部 GLM。"
+  },
+  {
+   "topic": "正则化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "变量选择及正则化",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 6 Linear Model Selection and Regularization（subset、ridge、lasso、PCR/PLS）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程有变量选择与正则化单元，英文 ISLR 第 6 章系统讲 ridge/lasso；中文大纲未列出逐个方法，故以主题对应。"
+  },
+  {
+   "topic": "残差诊断与不确定性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模型诊断与矫正；回归系数与预测的区间",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 3 的 inference（系数标准误、t 检定、置信区间）；各章 lab 的 residual/diagnostic 练习",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程有模型诊断与矫正单元；英文 ISLR 把残差诊断与不确定性散在线性回归推断段与 lab 中，没有独立诊断章，这是深度限制而非完全缺失。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "学一元／多元线性回归，掌握最小二乘、系数解释与预测。"
+    },
+    {
+     "source": "zh1",
+     "read": "学模型诊断与矫正、定性变量、Logistic 回归，处理残差与分类响应。"
+    },
+    {
+     "source": "zh1",
+     "read": "学变量选择及正则化，完成高维／共线性下的建模；完整 GLM 族另找教材。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Chapter 3 Linear Regression for fitting, inference and diagnostics."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 4 Classification for logistic regression/LDA, and Chapter 6 for subset selection, ridge and lasso."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 7 Moving Beyond Linearity for splines/GAM; do the R/Python labs for residual diagnostics."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "course",
+   "query_or_url": "https://www.icourse163.org/course/LIXIN-1207403805（既有主資源）",
+   "result": "保留：线性回归、诊断、Logistic、变量选择／正则化都有；完整 GLM 未列。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.statlearning.com/（既有主資源）",
+   "result": "保留：ISLR/ISLP 免费 PDF 覆盖线性回归、分类、正则化、非线性与模型选择。"
+  }
+ ],
+ "findings": [
+  "原中文主资源立信《应用回归分析》已覆盖三项；本次把「模型诊断与矫正」「变量选择及正则化」明确写进 section，不只用课程名概括。",
+  "原英文 ISLR 的 covers 已完整；保留。",
+  "「线性/广义线性模型」只把 logistic／LDA 算作 GLM 入门，没有宣称覆盖完整指数族 GLM；这是本节仍存的深度限制，未额外标 extension，因为入门目标已达成。",
+  "三项均为必学，没有 extension。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "回归与统计建模",
+ "description": "线性/广义线性模型、正则化、残差诊断与不确定性。",
+ "applied_additions": []
+}

@@ -1,0 +1,193 @@
+{
+ "id": "C.1.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "华中科技大学《计算机组成原理》（中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/HUST-1003159001",
+   "tier": "website",
+   "free": null,
+   "role": "primary",
+   "covers": "64 学时整门课：冯·诺依曼整机与各功能部件、定点/浮点数据表示、算术逻辑运算部件、存储器层次、指令系统与寻址方式、单周期/多周期/流水线数据通路及其控制（硬布线与微程序）、Logisim 虚拟仿真实验。",
+   "access": "课程页公开课程概述、授课目标与参考资料；视频和章节测验需注册中国大学MOOC并选课，按开课学期开放，认证证书收费。未验证当前学期是否可免费旁听全部视频。",
+   "publisher": "华中科技大学计算机学院课程团队（谭志虎等）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HUST-1003159001",
+    "location": "课程概述；授课目标第 1–7 条；课程大纲/预备知识",
+    "finding": "页面写明研究冯诺依曼计算机各功能部件的工作原理与设计方法，目标逐条列出定点浮点表示、算术逻辑部件、存储器层次、指令系统与寻址、单/多周期与流水线数据通路及硬布线/微程序控制器，并说明用 Logisim 从逻辑门设计到 MIPS 流水 CPU 的实验链。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.004 Computation Structures (Spring 2017, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "模块 1 信息表示；模块 4–6 组合逻辑、时序逻辑、有限状态机（控制器）；模块 9–13 指令集设计、汇编、过程与栈、Beta 处理器数据通路；模块 14–18 cache/存储层次、流水线、虚拟内存、设备与中断；每模块含讲义、主题视频与习题，另有 7 个 lab。",
+   "access": "MIT OCW 免费公开，无需注册；讲义 PDF、视频与习题可直接下载，视频为英文授课（字幕未核对）。",
+   "publisher": "MIT Department of Electrical Engineering and Computer Science / MIT OpenCourseWare",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+    "location": "课程材料目录：1 Basics of Information、4 Combinational Logic、5 Sequential Logic、6 Finite State Machines、9 Designing an Instruction Set、13 Building the Beta、14–18 Memory/Caches/Virtual Memory/Devices/Interrupts",
+    "finding": "OCW 目录逐模块列出 annotated slides、topic videos 与 worksheet；模块 9–13 是指令集与 Beta 数据通路，14–18 是存储层次、虚拟内存与设备/中断，覆盖本节点全部组成主题。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "电子科技大学《计算机组成原理》（中国大学MOOC，国家级线上一流课程）",
+   "url": "https://www.icourse163.org/course/UESTC-1001543002",
+   "tier": "website",
+   "free": null,
+   "role": "alternative",
+   "covers": "64 学时、18 周：总体框架、数据的表示和运算、运算器、存储器、指令系统、中央处理器（数据通路与控制器）、总线与输入输出；配套纪禄平《计算机组成原理》第 6 版与课件。",
+   "access": "页面公开课程性质、目标、教材与学时安排；完整视频需注册/选课，认证证书收费。",
+   "publisher": "电子科技大学（纪禄平课程团队）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/UESTC-1001543002",
+    "location": "课程概述“内容的组织”“学时安排与主要内容”；授课目标",
+    "finding": "课程按“总体框架→处理对象（数据表示与运算）→硬件子系统”组织，明确 64 学时 18 周，覆盖运算器、存储器、控制器、总线与 I/O，可作为华中科大路线的同语言替代。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "数据表示",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 2 条：定点数和浮点数表示及其对软硬件设计的影响",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 1 Basics of Information（二进制编码、信息表示）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两门课都把数据表示放在整机之前作为处理对象。"
+  },
+  {
+   "topic": "运算器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 3 条：基本算术、逻辑运算部件的工作原理与设计方法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 4 Combinational Logic（加法器等组合构件）＋ Module 9 Designing an Instruction Set（算术指令与数据通路）",
+     "extent": "covered"
+    }
+   ],
+   "note": "6.004 不单列“ALU”章，运算部件在组合逻辑与指令集/数据通路模块中实现。"
+  },
+  {
+   "topic": "数据通路",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 6 条：单周期、多周期和流水线数据通路的设计",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 13 Building the Beta（Beta 处理器数据通路）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课含多周期，6.004 以单周期 Beta 为主、流水线在模块 15–16。"
+  },
+  {
+   "topic": "控制器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 6 条：硬布线控制器和微程序控制器的实现方法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 6 Finite State Machines（控制器）＋ Module 13 Building the Beta（控制逻辑）",
+     "extent": "covered"
+    }
+   ],
+   "note": "6.004 用 FSM 讲控制，不涉及微程序；微程序由中文课补足。"
+  },
+  {
+   "topic": "存储和I/O组织",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标第 4 条存储器层次；课程概述中的输入/输出子系统与总线",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Modules 14–18：Caches、Memory Hierarchy、Virtual Memory、Devices and Interrupts",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课的 I/O 以总线与接口组织为主；中断/设备细节由 6.004 模块 18 补。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按课程章节顺序看视频：先整机与性能，再数据表示与运算、存储层次、指令系统，最后单周期/多周期/流水线数据通路与控制器；每章跟做 Logisim 实验，直到能在仿真中跑通一条指令。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按模块 1→4→5→6→9→10→13→14–18 学，配合每模块 worksheet 和 lab；模块 13 的 Beta 数据通路与模块 14–18 的 cache/设备是整机组成的主线。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "计算机组成原理 中国大学MOOC 数据表示 运算器 数据通路 存储器 IO 课程大纲",
+   "result": "采纳华中科技大学与电子科技大学两门完整课程；两页均打开核对授课目标与学时。"
+  }
+ ],
+ "findings": [
+  "旧中文来源只有南京大学 PA 实验讲义，覆盖模拟器/指令执行，不能证明数据表示、运算器设计和控制器设计有系统教学，已换成华中科大整门组成原理课。",
+  "MIT 6.004 保留：模块 1、4–6、9–13、14–18 逐条对应本节点，且讲义/视频/习题/lab 全公开。",
+  "华中科大与电子科大课程视频均需注册选课，页面未承诺永久免费；这是访问条件，不影响内容覆盖判断。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "计算机组成原理",
+ "description": "数据表示、运算器、数据通路、控制器、存储和I/O组织。",
+ "applied_additions": []
+}

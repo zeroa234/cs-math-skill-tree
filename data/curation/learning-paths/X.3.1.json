@@ -1,0 +1,272 @@
+{
+ "id": "X.3.1",
+ "name": "量子计算与量子信息",
+ "description": "量子态、门与测量、量子算法、纠错和量子信息；外部前置为量子力学基础。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Ph219/CS219 Quantum Computation (Caltech, John Preskill) — full lecture notes + 2020 recordings",
+   "url": "https://www.preskill.caltech.edu/ph219/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch1 introduction; Ch2 Foundations I (states and ensembles); Ch3 Foundations II (measurement and evolution/unitary gates); Ch4 entanglement; Ch5 classical and quantum circuits; Ch6 quantum algorithms (Shor/Grover family); Ch7 quantum error correction; Ch9 topological quantum computation; Ch10 quantum Shannon theory. Chapters 1–6 have videos.",
+   "access": "Free lecture notes PDFs and recordings on the course site; no registration.",
+   "publisher": "Caltech (John Preskill)",
+   "evidence": {
+    "url": "https://www.preskill.caltech.edu/ph219/",
+    "location": "Course information page and chapter list",
+    "finding": "The page lists the chapters (foundations, entanglement, circuits, algorithms, error correction, quantum Shannon theory) and states that chapters 1–6 have video recordings."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "山东大学《量子计算与量子信息》（王明强老师，B站官方账号，14 讲）",
+   "url": "https://www.bilibili.com/video/BV1Z24y1X7b9/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "中文授课：线性代数、量子力学假设、密度算子、施密特分解与纯化、量子电路、量子傅里叶变换、相位估计；参考书为 Nielsen & Chuang（孙晓明译本）。覆盖量子态、门与测量、部分算法基础；公开的 14 讲未到 Shor/Grover 与纠错。",
+   "access": "山东大学数据科学研究院官方 B 站账号发布，免费；14 个分P，未核对字幕。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）",
+   "publisher": "山东大学数据科学研究院（王明强）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1Z24y1X7b9/",
+    "location": "分P列表 1–14",
+    "finding": "视频接口返回 14 个分P，标题含线性代数、量子力学假设、密度算子、施密特分解、量子电路、量子傅里叶变换、相位估计。"
+   }
+  },
+  {
+   "key": "fix-zh-qalg",
+   "lang": "zh",
+   "title": "量子计算和量子信息（一）——量子计算部分（赵千川等译）",
+   "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_00786701.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "第2章量子力学引论，第4章量子线路，第5章Fourier变换及应用，第6章量子搜索。",
+   "access": "正版中文译本，官网仅简介及部分目录，非免费正文；需购买/图书馆借阅，未购买。不可混同英文影印版。",
+   "publisher": "清华大学出版社",
+   "evidence": {
+    "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_00786701.html",
+    "location": "内容简介、前言、目录",
+    "finding": "官网明确中文译本与Fourier应用、搜索算法章节，补原14讲之后内容。"
+   },
+   "added_by": "review/data-app-additions/X.3.1.json"
+  },
+  {
+   "key": "fix-zh-qinfo",
+   "lang": "zh",
+   "title": "量子计算和量子信息（二）——量子信息部分（郑大钟、赵千川译）",
+   "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_01765301.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "量子噪声、纠错、熵及量子信息论。",
+   "access": "官网书目范围证据，正文非免费；正版购买/借阅，未购买，未核库存。",
+   "publisher": "清华大学出版社",
+   "evidence": {
+    "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_01765301.html",
+    "location": "内容简介与前言",
+    "finding": "明确介绍量子噪声和纠错、熵与信息论，且为中文译本。"
+   },
+   "added_by": "review/data-app-additions/X.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "量子态",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "密度算子、施密特分解与纯化",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch2 Foundations I: states and ensembles",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "门与测量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "量子力学假设、量子电路",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch3 Foundations II: measurement and evolution；Ch5 circuits",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "量子算法",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "量子傅里叶变换、相位估计（公开 14 讲未到 Shor/Grover）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-qalg",
+     "section": "第5–6章：Fourier变换及应用、量子搜索",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch6 Quantum Algorithms（Shor/Grover）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到 QFT/相位估计，没有 Shor/Grover 的完整讲次。；原zh1已教QFT与相位估计，本书接Fourier算法应用和Grover搜索；完成从线路到算法和复杂度分析的中文主线。"
+  },
+  {
+   "topic": "纠错和量子信息",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖量子纠错与量子信息论",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-qinfo",
+     "section": "量子噪声与纠错、熵、量子信息论（原着第8–12章）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch7 Quantum Error Correction；Ch10 Quantum Shannon Theory",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：纠错与量子信息英文都有专章；中文 14 讲未到。；原zh1提供态、测量、电路前置；本卷接噪声与纠错再到熵和信息论，两部分共同覆盖组合项，未用英文讲义顶替。"
+  },
+  {
+   "topic": "外部前置为量子力学基础",
+   "stage": "extension",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第3–4讲讲量子力学假设，可作入门复习",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch2 assumes quantum mechanics background",
+     "extent": "partial"
+    }
+   ],
+   "note": "原简介明确写「外部前置为量子力学基础」，属树外前置；中文课用前几讲复习，英文默认已会。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按线性代数→量子力学假设→密度算子→量子电路→QFT→相位估计的顺序看 14 讲，并做相位估计的推导。"
+    },
+    {
+     "source": "fix-zh-qalg",
+     "read": "先按原zh1学习态、测量、电路及QFT；正版书第5–6章补因子分解等Fourier应用和量子搜索，复习第2章背景。"
+    },
+    {
+     "source": "fix-zh-qinfo",
+     "read": "正版书依次学噪声、纠错、熵与量子信息论，结合原zh1密度算子；英文en1继续保留独立主线。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Ch2–Ch7 in order (states, measurement/gates, entanglement, circuits, algorithms, error correction), watch the Ch1–6 recordings, then read Ch10 for quantum information."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「量子计算 课程 完整 清华」",
+   "result": "采纳山东大学王明强 14 讲（官方账号）；其余为科普、考研量子力学或中英字幕搬运。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 Preskill 课程页",
+   "result": "采纳 en1；章节覆盖态/测量/门/算法/纠错/量子信息。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "Nielsen & Chuang 孙晓明译本",
+   "result": "中文课列为参考书，未核价、未购买，不登记为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.preskill.caltech.edu/ph219/",
+   "result": "采纳 en1；Ch1–6 有录像，Ch7/Ch10 为讲义。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "量子纠错 中文 讲义 site.edu.cn pdf",
+   "result": "打开南航安宇森教学资源页及下载链接，但下载未得到可读PDF，不以未读讲义证明覆盖。",
+   "by": "review/data-app-additions/X.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "量子信息和量子计算介绍 下 BIMSA",
+   "result": "打开研究院课程页，虽明确中文且含纠错信息论，但视频和笔记均不公开，未采纳。",
+   "by": "review/data-app-additions/X.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "量子计算和量子信息（二） 清华出版社",
+   "result": "搜索并打开出版社两个中文译本书页；排除10周年英文影印本，不购买。",
+   "by": "review/data-app-additions/X.3.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 Preskill 是完整课程，量子态/门与测量/算法/纠错/量子信息都有章，英文完整。",
+  "原中文只给 MindSpore Quantum 工具文档，不能教量子态/门/算法/纠错；本次换成山东大学王明强中文课程，覆盖态/门/测量与 QFT/相位估计，但公开 14 讲没有 Shor/Grover 与纠错，中文 partial。",
+  "没有把工具文档或英文讲义算作中文已覆盖。",
+  "[review/data-app-additions/X.3.1.json] 未解决 en「外部前置为量子力学基础」：原路线将量子力学列为外部前置，本轮集中补中文核心算法、纠错和信息论，未把外部量子力学整课标为已补齐。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/X.3.1.json"
+ ]
+}

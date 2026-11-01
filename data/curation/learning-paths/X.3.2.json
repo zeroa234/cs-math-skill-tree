@@ -1,0 +1,276 @@
+{
+ "id": "X.3.2",
+ "name": "区块链与分布式账本",
+ "description": "密码承诺、共识、账本、智能合约和机制；是分布式/密码/经济机制交叉。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS 251: Blockchain Technologies (Stanford, Fall 2026) — syllabus, slides, homeworks and projects",
+   "url": "https://cs251.stanford.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Course description: technical aspects of blockchains, distributed consensus, smart contracts, economics, scalability and applications, using Bitcoin and Ethereum as case studies; homework and two projects (Merkle trees in Python, Solidity) are posted.",
+   "access": "Public syllabus, lecture slides (pdf/pptx) and assignments; no videos. Fall 2026 is in progress.",
+   "publisher": "Stanford University (Dan Boneh's group)",
+   "evidence": {
+    "url": "https://cs251.stanford.edu/",
+    "location": "Home page course description and assignments",
+    "finding": "The page states the course covers distributed consensus, smart contracts, economics, scalability and applications with Bitcoin/Ethereum, and lists Project #1 (Merkle trees in Python) and homework."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京大学肖臻《区块链技术与应用》公开课（26 讲，官方账号）",
+   "url": "https://www.bilibili.com/video/BV1Vt411X7JF/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "中文授课 26 讲：课程简介、BTC 密码学原理、数据结构、协议、实现、网络、挖矿与难度、脚本、分叉、ETH 与智能合约、共识等；覆盖密码承诺、共识、账本与智能合约，经济机制只作背景。",
+   "access": "北京大学计算机系肖臻老师官方 B 站账号，免费；26 个分P，未核对字幕。",
+   "publisher": "北京大学计算机系 肖臻",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1Vt411X7JF/",
+    "location": "分P列表 01–26",
+    "finding": "视频简介说明课程讲解区块链基本概念与实现原理；分P标题含密码学原理、数据结构、协议、挖矿、脚本、分叉等。"
+   }
+  },
+  {
+   "key": "fix-zh-incentive",
+   "lang": "zh",
+   "title": "权益证明的奖励与罚没",
+   "url": "https://ethereum.org/zh/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "带公式及例子的教学说明：奖励、处罚、罚没、相关性惩罚、怠工泄漏与最终性。",
+   "access": "中文完整教学文章免费；仅协议机制补充，非独立区块链课；无需实际质押。",
+   "publisher": "ethereum.org",
+   "evidence": {
+    "url": "https://ethereum.org/zh/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
+    "location": "奖励与罚没／罚没／怠工泄漏",
+    "finding": "从验证者任务推导基础奖励和投票权重，用怠工场景说明经济激励如何恢复共识。"
+   },
+   "added_by": "review/data-app-additions/X.3.2.json"
+  },
+  {
+   "key": "fix-en-incentive",
+   "lang": "en",
+   "title": "Proof-of-stake rewards and penalties",
+   "url": "https://ethereum.org/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Reward formula, validator actions, penalties, correlated slashing and inactivity leak.",
+   "access": "Free English teaching article; supplements original en1, not a whole course.",
+   "publisher": "ethereum.org",
+   "evidence": {
+    "url": "https://ethereum.org/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
+    "location": "Rewards and penalties / Slashing / Inactivity leak",
+    "finding": "Worked weighting examples and finality failure scenario connect incentives with distributed consensus."
+   },
+   "added_by": "review/data-app-additions/X.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "密码承诺",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "BTC 密码学原理、数据结构（哈希/Merkle 树/签名）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Cryptography lectures and Merkle-tree project",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "共识",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "BTC 协议、网络、挖矿与难度、共识相关讲次",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Distributed consensus lectures/readings",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "账本",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "BTC 数据结构、实现、分叉",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Bitcoin/Ethereum ledger and protocol lectures",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "智能合约和机制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "ETH 与智能合约讲次；代币经济/机制设计只作背景",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-incentive",
+     "section": "基础奖励计算、惩罚、罚没和怠工泄漏",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Smart contracts lectures；economics 在 syllabus 中",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有智能合约，但没有机制设计/代币经济学的系统讲次，组合项按 partial。；原zh1第22–25讲提供智能合约与DAO案例，本篇补经济机制的公式、诚实和作恶行为后果及共识恢复，组合覆盖合约与机制。"
+  },
+  {
+   "topic": "是分布式/密码/经济机制交叉",
+   "stage": "extension",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "课程以技术为主，经济学不展开",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-incentive",
+     "section": "验证者证明、双签罚没与最终性恢复",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Syllabus 明说含 economics",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-incentive",
+     "section": "Validator actions, slashing, inactivity leak",
+     "extent": "covered"
+    }
+   ],
+   "note": "原简介把交叉属性写在描述里而非独立知识点：经济机制只作背景，按 extension 记。；原zh1密码、账本和共识提供技术部分；本篇将签名行为、分布式最终性和经济处罚联系起来，补齐交叉视角，无需把机制设计完整学位课程额外塞进简介。；Original en1 supplies cryptography, contracts and distributed consensus; the worked incentive article ties signed votes and finality to rewards and penalties, giving concrete teaching beyond a syllabus economics label."
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按密码学原理→数据结构→协议→网络→挖矿→脚本→分叉→ETH/智能合约的顺序看 26 讲，并用 Python 实现一个 Merkle 树。"
+    },
+    {
+     "source": "fix-zh-incentive",
+     "read": "原zh1第21–25讲之后阅读奖励公式并手算权重例子；对比双签与离线处罚，解释怠工泄漏为何恢复最终性。原视频字幕未核对（未登录）。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the syllabus and slides on cryptography, consensus, Bitcoin, Ethereum, smart contracts and economics; do the Merkle-tree and Solidity projects."
+    },
+    {
+     "source": "fix-en-incentive",
+     "read": "After en1 consensus and contract lectures, work reward-weight examples and explain how signed votes, slashing and inactivity leak affect safety/liveness."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「区块链 技术 课程 完整 清华」",
+   "result": "采纳北大肖臻 26 讲（官方账号）；另有清华 14 讲与商业 Web3 课，未采用。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 CS251 课程页",
+   "result": "采纳 en1；课程描述与作业覆盖共识/合约/经济/可扩展性。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "中文官方公开课已覆盖技术主干，未另找付费教材。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cs251.stanford.edu/",
+   "result": "采纳 en1；slides 公开、无录像。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.ethereum.org/zh 激励 惩罚 质押",
+   "result": "搜索打开官方中文奖励罚没教学全文，有计算例子，非API条目。",
+   "by": "review/data-app-additions/X.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "site.pku.edu.cn 区块链 肖臻 挖矿 博弈",
+   "result": "搜索结果含原26讲，核对标题含权益证明、智能合约、TheDAO，字幕未核。",
+   "by": "review/data-app-additions/X.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "site.ethereum.org/en/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/",
+   "result": "搜索并打开英文原文，用具体机制教学补原en1只据syllabus判断交叉覆盖。",
+   "by": "review/data-app-additions/X.3.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 CS251 覆盖密码、共识、账本、智能合约与经济学，英文完整。",
+  "原中文只有以太坊开发文档，是 API 文档；本次换成北大肖臻官方公开课，覆盖密码承诺/共识/账本/智能合约，但机制设计只有背景，中文整体 partial。",
+  "没有把以太坊文档当作课程。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/X.3.2.json"
+ ]
+}

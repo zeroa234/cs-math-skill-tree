@@ -1,0 +1,495 @@
+{
+ "id": "D.2.2",
+ "name": "数据工程与大数据处理",
+ "description": "数据管线的采集、清洗、转换、调度与数据验证；分布式批处理、存储布局、数据湖/仓；消息队列、流处理的事件时间与状态、背压与端到端保证。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Data Engineering Zoomcamp (DataTalks.Club) — curriculum, videos, code, homeworks, final project",
+   "url": "https://datatalksclub.github.io/docs/courses/data-engineering-zoomcamp/curriculum/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "M1 Containerization & IaC (Docker/Postgres/Terraform), M2 Workflow Orchestration (Kestra: schedule, retry, backfill; dlt ingestion), M3 Data Warehouse (BigQuery partitioning/clustering), M4 Analytics Engineering (dbt staging/intermediate/mart, tests, docs), M5 Batch Processing (Spark/PySpark, Dataproc), M6 Streaming (Kafka, Kafka+Flink, schema registry), final project builds an end-to-end pipeline.",
+   "access": "Free course docs, module videos (YouTube playlists), GitHub code and homeworks; cloud services used in labs are billed by their own providers. Modules change tools by year (Mage → Kestra).",
+   "publisher": "DataTalks.Club",
+   "evidence": {
+    "url": "https://datatalksclub.github.io/docs/courses/data-engineering-zoomcamp/curriculum/",
+    "location": "Curriculum page module list M1–M6 and final project",
+    "finding": "The curriculum page lists the six modules with their tools and topics (orchestration, warehouse, dbt, Spark, Kafka/Flink) and the final project requirement."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Apache Flink 1.20 Documentation — Timely Stream Processing, Stateful Stream Processing, Checkpointing, Back Pressure",
+   "url": "https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/concepts/time/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Event time vs processing time, watermarks, state and keyed state, checkpointing and exactly-once recovery, and the back-pressure monitoring page. Supplies the streaming semantics that the Zoomcamp only touches in M6.",
+   "access": "Free official Apache documentation; versioned docs (1.20) remain online.",
+   "publisher": "Apache Software Foundation",
+   "evidence": {
+    "url": "https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/concepts/time/",
+    "location": "Concepts: Timely Stream Processing; Stateful Stream Processing; Checkpointing",
+    "finding": "Opened the English time and stateful-processing concept pages; the docs distinguish event/processing time and describe watermarks, state, checkpoints and exactly-once recovery."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "林子雨《大数据技术原理与应用（第3版）》教材官网与详细目录（厦门大学，配套讲义/实验免费）",
+   "url": "https://dblab.xmu.edu.cn/post/bigdata3/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第3章 HDFS（3.5 冗余存储与数据读写）、第4章 HBase（4.3 数据模型、4.4 表与 Region、4.5 运行机制与 HLog）、第5章 NoSQL、第7章 MapReduce（工作流程与 Shuffle）、第9章 Hive 数据仓库、第10章 Spark、第11章 流计算与 Storm、第12章 Flink、第13章 图计算。覆盖采集后的分布式存储、批处理与仓库转换、流处理框架。",
+   "access": "官网写明全部配套资源（讲义 PPT、学习指南、上机习题、授课视频）免费在线；纸质教材需购买。讲义不是整本书的排版全文，但按章覆盖同样内容。",
+   "publisher": "厦门大学数据库实验室 林子雨",
+   "evidence": {
+    "url": "https://dblab.xmu.edu.cn/post/2020112601/",
+    "location": "目录第3–13章",
+    "finding": "详细目录列出 HDFS 冗余存储与读写、HBase 表/Region/HLog、MapReduce 工作流程与 Shuffle、Hive、Spark、Storm、Flink 各章。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "Apache Flink 1.20 中文文档：及时流处理、有状态流处理、监控反压",
+   "url": "https://nightlies.apache.org/flink/flink-docs-release-1.20/zh/docs/concepts/time/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文正文：事件时间与处理时间、Watermark 生成、状态与键控状态、Checkpointing 与容错、反压监控（监控反压页）。补齐中文的事件时间/状态/背压/端到端一致性语义。",
+   "access": "Apache Flink 官方中文文档，免费；1.20 版本文档长期在线。",
+   "publisher": "Apache Software Foundation（中文翻译）",
+   "evidence": {
+    "url": "https://nightlies.apache.org/flink/flink-docs-release-1.20/zh/docs/concepts/time/",
+    "location": "概念透析：有状态流处理、及时流处理；运维：监控反压",
+    "finding": "中文页标题为「及时流处理」与「有状态流处理」，并链接 Checkpointing；另有「监控反压」中文页。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "华为云 DataArts Studio 使用流程：数据集成、数据开发与作业调度、数据质量",
+   "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0007.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "数据集成（同构/异构源批量迁移）、数据开发（脚本开发、作业开发、作业调度、运维监控）、数据质量（六维度规则与周期监控）。用于补中文的采集、转换、调度与数据验证。",
+   "access": "免费中文文档；真正运行需购买 DataArts Studio 实例与云资源，未开通。",
+   "publisher": "华为云",
+   "evidence": {
+    "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0007.html",
+    "location": "「数据集成」「数据开发」「数据质量」段",
+    "finding": "正文写明数据集成支持批量迁移、数据开发含作业开发与作业调度/运维监控、数据质量按六维度周期监控。"
+   }
+  },
+  {
+   "key": "fix-zh-collection",
+   "lang": "zh",
+   "title": "林子雨《数据采集与预处理》作者公开讲义（第4章Kafka、第8章pandas）",
+   "url": "https://dblab.xmu.edu.cn/post/data-collection/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第4章4.1消息传递模式、4.4 Topic/Partition/Consumer Group、4.5–4.7命令行/Python生产消费与MySQL整合；第8章8.3过滤映射、8.4唯一值与频数、8.5缺失值处理、8.6百度指数和电影评分数据案例。",
+   "access": "作者学校原站直链PDF免费；已实际读取第4章50页、第8章165页，未将纸质教材当免费全文。代码基于Kafka2.4与旧pandas，按该环境复现实验；APP行为预处理一例需另读教材。",
+   "publisher": "厦门大学数据库实验室，林子雨",
+   "evidence": {
+    "url": "https://dblab.xmu.edu.cn/post/data-collection/",
+    "location": "讲义PPT表第4/8章；Kafka PDF 4.4–4.7；pandas PDF pp111–118、136–143",
+    "finding": "下载并抽取作者PDF，核到分区/消费组定义、生产消费代码、fillna/isnull及百度指数日期转换和关键词规范化案例。"
+   },
+   "added_by": "review/data-app-additions/D.2.2.json"
+  },
+  {
+   "key": "fix-zh-iceberg-concepts",
+   "lang": "zh",
+   "title": "华为云：Iceberg原理、快照、模式与分区演进",
+   "url": "https://support.huaweicloud.com/productdesc-mrs/mrs_08_0186.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "开放数据湖表格式、HDFS/对象存储、ACID、快照/时间旅行、模式与分区演进、多引擎共享、布局和元数据；与后面的SQL实验配套。",
+   "access": "中文正文免费；MRS托管实验需购买集群，不开通、不购买。此页是概念补充，不作为独立课程。",
+   "publisher": "华为云",
+   "evidence": {
+    "url": "https://support.huaweicloud.com/productdesc-mrs/mrs_08_0186.html",
+    "location": "Iceberg原理介绍、关键技术和优势",
+    "finding": "正文解释表格式如何在文件存储上提供事务/快照及演进，包含对象存储和多计算引擎关系。"
+   },
+   "added_by": "review/data-app-additions/D.2.2.json"
+  },
+  {
+   "key": "fix-zh-iceberg-lab",
+   "lang": "zh",
+   "title": "华为云：从零开始使用Iceberg（Spark SQL完整操作实例）",
+   "url": "https://support.huaweicloud.com/cmpntguide-lts-mrs/mrs_01_300910.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "配置Catalog、创建Iceberg数据库与表、INSERT VALUES/SELECT、MERGE行更新、SELECT聚合和元数据查看的连续实例。",
+   "access": "中文教学步骤和代码免费；MRS集群运行收费。可先阅读与分析SQL结果，不声称免费云实验。",
+   "publisher": "华为云",
+   "evidence": {
+    "url": "https://support.huaweicloud.com/cmpntguide-lts-mrs/mrs_01_300910.html",
+    "location": "操作步骤6–9",
+    "finding": "已打开正文，实际含可连贯执行的Catalog配置、建表、写入、增量更新和查询代码，不只是产品说明或API列表。"
+   },
+   "added_by": "review/data-app-additions/D.2.2.json"
+  },
+  {
+   "key": "fix-en-iceberg",
+   "lang": "en",
+   "title": "Apache Iceberg: Spark Quickstart + Evolution + Reliability",
+   "url": "https://iceberg.apache.org/spark-quickstart/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Docker Compose本地湖存储/Catalog/Spark，建表、写入、查询；配套已打开的Evolution和Reliability正文解释schema/partition evolution及原子提交、乐观并发。",
+   "access": "英文教程与概念全文免费；本地Docker实验不需购买云服务。配套：https://iceberg.apache.org/docs/latest/evolution/ 与 https://iceberg.apache.org/docs/latest/reliability/。",
+   "publisher": "Apache Software Foundation / Apache Iceberg",
+   "evidence": {
+    "url": "https://iceberg.apache.org/spark-quickstart/",
+    "location": "Docker-Compose; Creating/Writing/Reading; linked Evolution and Reliability",
+    "finding": "实际给出本地对象存储、REST catalog与Spark配置和读写示例；另打开概念正文核到演进和冲突重试。"
+   },
+   "added_by": "review/data-app-additions/D.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "数据管线的采集",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "数据集成：创建 CDM 集群、新建表/文件迁移作业",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M2 Workflow Orchestration — dlt ingestion workshop；M1 环境准备",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "清洗",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "数据开发（脚本/作业）与数据质量规则（只到规则化清洗）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-collection",
+     "section": "第8章8.3–8.6，尤其8.5与8.6.3",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M4 Analytics Engineering（dbt staging/intermediate/mart、tests）；M2 dlt",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有独立的清洗方法章节，只有平台脚本与质量规则；按 partial 记。；现有zh3只介绍平台质量规则；新增讲义先教过滤、映射和缺失值处理，再以日期/文本规范化及聚合案例实际清洗，补齐方法与操作，和原管线编排材料组成中文路径。"
+  },
+  {
+   "topic": "转换",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第7章 MapReduce；第9章 Hive；第10章 Spark",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M4 dbt models；M5 Spark/PySpark",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "调度与数据验证",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "作业调度与运维监控；数据质量六维度与周期监控",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M2 Kestra（schedule/retry/backfill）；M4 dbt tests",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "分布式批处理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第7章 MapReduce 工作流程与 Shuffle；第8章 YARN；第10章 Spark",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M5 Batch Processing（Spark/PySpark、Dataproc）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "存储布局",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第3章 3.5 HDFS 冗余存储与数据存取；第4章 4.3 面向列的存储",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M3 Data Warehouse — partitioning / clustering",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "数据湖/仓",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第9章 Hive 数据仓库；第6章 云数据库（只到仓库层）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-iceberg-lab",
+     "section": "原zh1第9章Hive + fix-zh-iceberg-concepts概念 + 本教程步骤6–9",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M3 Data Warehouse（BigQuery）；未涉及 Iceberg/Delta/Hudi 表格式与湖仓",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-iceberg",
+     "section": "Spark Quickstart；Evolution；Reliability；原en1 M3–M5",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都只到数据仓库，没有湖仓表格式（Iceberg/Delta/Hudi/Paimon）的系统教学。；保留原Hive仓库课程；新增概念材料解释数据湖表格式的事务、快照、演进和多引擎关系，SQL实例完成在文件存储上建表、更新、查询，合起来补全湖与仓，不要求同时掌握所有湖表产品。；原Zoomcamp提供BigQuery仓库与Spark批处理；本地对象存储/Catalog/Iceberg实验补湖表管理，演进及并发正文说明表格式区别于普通文件目录，组成英文湖仓路线。"
+  },
+  {
+   "topic": "消息队列",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "连接器/Kafka 相关页面（只讲接入，不讲队列语义）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-collection",
+     "section": "第4章4.1、4.4–4.7",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "M6 Streaming — Kafka、schema registry 与序列化",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺 Kafka 的投递语义、分区与消费组正文；只有 Flink 连接器用法。；原zh2仅讲Flink接入；新增分布式发布订阅机制、分区和消费组及生产消费/MySQL实例提供队列基础和实践，原Flink中文材料继续负责状态、checkpoint与端到端语义；不把旧Kafka部署步骤当成最新版本部署。"
+  },
+  {
+   "topic": "流处理的事件时间与状态",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "及时流处理（事件时间/Watermark）；有状态流处理（状态与 Checkpointing）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Timely Stream Processing；Stateful Stream Processing；Checkpointing",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "M6 Kafka + Flink",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "背压与端到端保证",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "监控反压；Checkpointing 与 exactly-once 恢复",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Back Pressure monitoring；Checkpointing / exactly-once",
+     "extent": "covered"
+    }
+   ],
+   "note": "端到端 exactly-once 在 Flink 文档里按 source/sink 语义讨论，未覆盖跨系统幂等写入的工程做法。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读第3–4章建立 HDFS/HBase 存储布局，第7、9、10章做一遍 MapReduce→Hive→Spark 的批处理与仓库转换。"
+    },
+    {
+     "source": "zh2",
+     "read": "读「及时流处理」「有状态流处理」「监控反压」，用 Flink 本地集群跑一个带 Watermark 与 Checkpoint 的窗口作业。"
+    },
+    {
+     "source": "zh3",
+     "read": "按使用流程走数据集成、作业开发/调度、数据质量规则，理解管线编排与验证的平台形态。"
+    },
+    {
+     "source": "fix-zh-collection",
+     "read": "原课程存储/批处理后，读第4章并运行生产者、消费者与CSV→Kafka→MySQL示例，再按第8章做缺失值、日期、文本规范化案例；对照原zh3接回调度和验证。"
+    },
+    {
+     "source": "fix-zh-iceberg-concepts",
+     "read": "原Hive仓库章节后理解表格式、快照、演进、ACID和多引擎，说明湖表相对普通Parquet文件多了哪些能力。"
+    },
+    {
+     "source": "fix-zh-iceberg-lab",
+     "read": "跟步骤6–9梳理Catalog→建表→批量写入→MERGE→聚合/元数据；托管执行需自行准备付费集群，本轮仅登记。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Complete M1–M6 in order: containerize Postgres, orchestrate with Kestra + dlt, load BigQuery, model with dbt, run Spark, then Kafka/Flink; finish with the end-to-end project."
+    },
+    {
+     "source": "en2",
+     "read": "Read Timely Stream Processing, Stateful Stream Processing and Checkpointing, then the Back Pressure page, to understand the semantics that M6 demonstrates."
+    },
+    {
+     "source": "fix-en-iceberg",
+     "read": "After Zoomcamp M3–M5, run the local Spark/object-store/catalog quickstart, then read Evolution and Reliability; trace a table update through metadata and atomic commit."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "林子雨教材详细目录；Flink 1.20 中文文档（及时流处理/有状态/反压）；DataArts 使用流程",
+   "result": "采纳为中文主材料与两个补充；确认中文缺 Kafka 语义与湖仓表格式。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「分布式数据库 原理 课程」等中文课程（用于确认视频渠道）",
+   "result": "未找到覆盖管线编排与流处理语义的完整中文视频课，未采纳；本节点用教材讲义 + 官方中文文档。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "未另购中文数据工程教材",
+   "result": "免费讲义与官方文档已覆盖大部分主题，缺口属于湖仓与 Kafka 语义，付费书也未核实到对应章节，故不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "Zoomcamp curriculum；Flink 1.20 docs",
+   "result": "采纳 en1 主线、en2 补充；确认 Zoomcamp 缺湖仓表格式。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.dblab.xmu.edu.cn Kafka 教程 数据湖 数据清洗",
+   "result": "找到并读取作者第4/8章公开PDF，实补Kafka和清洗。",
+   "by": "review/data-app-additions/D.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.huaweicloud.com 湖仓一体 Iceberg 入门 实践 教程；site.support.huaweicloud.com Iceberg 创建 插入 查询 Spark SQL",
+   "result": "采纳概念解释和连续操作实例；托管费用单列。",
+   "by": "review/data-app-additions/D.2.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://iceberg.apache.org/docs/latest/spark-getting-started/",
+   "result": "从官方导航打开Spark Quickstart、Evolution、Reliability，补湖表教程。",
+   "by": "review/data-app-additions/D.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://cloud.ibm.com/docs/EventStreams-gen2?locale=zh-CN&topic=EventStreams-gen2-producing_messages",
+   "result": "浏览器未取到正文，不登记此候选，不据此推断不存在中文教学。",
+   "by": "review/data-app-additions/D.2.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 Zoomcamp 的课程页已核到 M1–M6 与期末项目，采集/转换/调度/批处理/仓库/流处理都有；但湖仓表格式与背压没有专门模块，本次补 Flink 文档覆盖事件时间、状态、checkpoint 与反压。",
+  "原中文林子雨教材覆盖 HDFS/HBase/MapReduce/Hive/Spark/Storm/Flink，是真正的中文系统材料，但缺管线编排、Kafka 语义与湖仓；本次补 Flink 中文文档与 DataArts 使用流程，仍有三项真实缺口。",
+  "没有把英文课程当作中文缺口的替代：中文的编排/调度/质量由 DataArts 补，流处理语义由 Flink 中文文档补，剩余缺口如实列出。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/D.2.2.json"
+ ]
+}

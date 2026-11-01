@@ -1,0 +1,202 @@
+{
+ "id": "C.2.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《操作系统导论》中文版：持久化部分（OSTEP 中文 PDF）",
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第 36–45、48–49 章：I/O 设备与驱动、硬盘/块设备、RAID、文件系统实现、缓存与缓冲、FSCK 与日志、LFS、Flash SSD、数据完整性、NFS/AFS 分布式文件系统接口与可靠性。",
+   "access": "作者站点免费逐章 PDF；中文译文对应较早期版本。",
+   "publisher": "Arpaci-Dusseau（威斯康星大学）；中文译本",
+   "evidence": {
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/Chinese/42.pdf",
+    "location": "第 42 章“崩溃一致性：FSCK 和日志”；第 40.7 节“缓存和缓冲”；第 48 章 NFS",
+    "finding": "42 章正文讲断电/崩溃后的 FSCK 与日志；40.7 节讲文件系统缓存与缓冲；48 章讲 NFS 客户端/服务器接口与服务器崩溃恢复。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "林子雨《大数据技术原理与应用（第3版）》教材官网（厦门大学数据库实验室）",
+   "url": "https://dblab.xmu.edu.cn/post/bigdata3/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 3 章分布式文件系统 HDFS：大规模廉价服务器集群上的分布式文件存储、副本放置与容错；配套 PPT、学习指南、上机习题与授课视频入口。",
+   "access": "教材官网免费提供配套讲义/视频/实验资源；教材本身为正式出版书。",
+   "publisher": "林子雨（厦门大学）",
+   "evidence": {
+    "url": "https://dblab.xmu.edu.cn/post/bigdata3/",
+    "location": "教材介绍与目录：第 3 章分布式文件系统 HDFS；第二篇大数据存储",
+    "finding": "页面明确第 3 章讲 HDFS，并在官网免费提供全部配套资源；可补分布式文件系统的副本与可靠性工程实例。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Operating Systems: Three Easy Pieces（OSTEP，免费在线教材）",
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Persistence：I/O devices、hard disks、RAID、file system implementation、caching/buffering、crash consistency (FSCK/journaling)、LFS、flash SSD、data integrity、NFS/AFS。",
+   "access": "免费 PDF；英文。",
+   "publisher": "Remzi H. Arpaci-Dusseau & Andrea C. Arpaci-Dusseau",
+   "evidence": {
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "location": "Persistence 部分章节目录：Ch.36–45、48–49",
+    "finding": "目录列出 I/O 设备、磁盘、RAID、文件系统实现、崩溃一致性、LFS、SSD、数据完整性、NFS/AFS 各章 PDF。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "块设备",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 36 章 I/O 设备、第 37 章硬盘",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.36 I/O Devices；Ch.37 Hard Disk Drives",
+     "extent": "covered"
+    }
+   ],
+   "note": "从设备寄存器/驱动到磁盘寻道、旋转与传输讲块设备。"
+  },
+  {
+   "topic": "日志",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 42 章：journaling（redo/undo 日志）、检查点",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.42 Crash Consistency: FSCK and Journaling",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧同一章，讲日志写入顺序、检查点与恢复。"
+  },
+  {
+   "topic": "崩溃一致性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 42 章：断电/崩溃后的 FSCK 与日志恢复",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.42 Crash Consistency: FSCK and Journaling",
+     "extent": "covered"
+    }
+   ],
+   "note": "含 fsck、日志、写屏障/顺序约束。"
+  },
+  {
+   "topic": "缓存",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 40.7 节缓存和缓冲（页缓存、写缓冲）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.40.7 Caching and Buffering",
+     "extent": "covered"
+    }
+   ],
+   "note": "讲文件系统如何用 DRAM 缓存降低磁盘 I/O，以及写缓冲与一致性的权衡。"
+  },
+  {
+   "topic": "分布式存储接口与可靠性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 48–49 章 NFS/AFS：远程文件接口、客户端缓存、服务器崩溃恢复",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第 3 章 HDFS：副本放置与容错",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.48–49 Sun's NFS / Andrew File System；RAID/副本可靠性",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文另有 HDFS 工程实例；英文以 NFS/AFS 为主。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 36→37→38 RAID→40 文件系统→42 崩溃一致性→48/49 NFS/AFS 读，完成每章 homework；重点手推日志提交顺序与 RAID 故障恢复。"
+    },
+    {
+     "source": "zh2",
+     "read": "读第 3 章 HDFS，把副本放置、NameNode/DataNode 与 NFS/AFS 的可靠性设计对照。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Persistence 章序读设备/磁盘/RAID→文件系统→崩溃一致性→分布式文件系统，配合 homework 和模拟器实验。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "存储系统 块设备 RAID 文件系统 日志 中文 课程 讲义 大学",
+   "result": "检索到 OSTEP 中文 RAID 章与中科大 Linux 201 运维页；采用 OSTEP 中文完整章节，运维页未采用。"
+  }
+ ],
+ "findings": [
+  "旧英文来源 MIT 6.033 只有少量存储讲次，不能覆盖块设备/RAID/日志；改用 OSTEP 持久化部分，章章对应。",
+  "旧中文只有南京大学 OS 首页，覆盖不足；补 OSTEP 中文完整译本 + 林子雨 HDFS 工程章。",
+  "OSTEP 第 40.7 节明确讲页缓存/写缓冲，所以“缓存”不另找资料即可 covered。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "存储系统与文件系统",
+ "description": "块设备、日志、崩溃一致性、缓存、分布式存储接口与可靠性。",
+ "applied_additions": []
+}

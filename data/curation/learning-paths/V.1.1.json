@@ -1,0 +1,211 @@
+{
+ "id": "V.1.1",
+ "name": "计算机图形学",
+ "description": "几何表示、变换、光栅化、光照、渲染、动画与物理仿真。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "UC Berkeley CS184/284A Computer Graphics and Imaging（课程主页，含讲义、录像、作业与项目）",
+   "url": "https://cs184.eecs.berkeley.edu/sp24",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "L1 Introduction、L2 Drawing Triangles、L3 Sampling & Aliasing、L4 Transforms、L5 Texture Mapping、L6 Rasterization Pipeline、L7 Bezier Curves & Surfaces、L8 Geometry Processing、L9–L10 Ray Tracing、L11 Radiometry、L12 Monte Carlo Integration、L13 Global Illumination & Path Tracing、L14 Material Modeling、L15–L16 Camera & Lenses、L17 Introduction to Physical Simulation、L18 Intro to Animation、L19–L22 Color/Image、L23–L24 VR；配 HW0–HW4 与最终项目（栅格器/路径追踪器）。",
+   "access": "课程主页与讲义、录像、作业说明免费公开；无需注册。英文。",
+   "publisher": "UC Berkeley / Ren Ng 等",
+   "evidence": {
+    "url": "https://cs184.eecs.berkeley.edu/sp24",
+    "location": "主页日程表 Lectures 1–28",
+    "finding": "日程表逐条列出 L4 Transforms、L6 Rasterization Pipeline、L8 Geometry Processing、L9–L10 Ray Tracing、L11 Radiometry、L13 Global Illumination & Path Tracing、L14 Material Modeling、L17 Introduction to Physical Simulation、L18 Intro to Animation；另有 HW1–HW4 与 Final Project。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "GAMES101: 现代计算机图形学入门（闫令琪，UC Santa Barbara；中文授课，22 讲 + 8 次作业 + 大作业）",
+   "url": "https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程介绍明确四大组成部分：光栅化成像、几何表示、光的传播理论、动画与模拟；22 讲覆盖变换、光栅化、采样与抗锯齿、着色与光照、几何（曲线/曲面/网格）、光线追踪与路径追踪、材质与 BRDF、相机、动画与模拟（关键帧、质点弹簧、粒子、流体模拟）；8 次编程作业 + 1 次大作业，提供代码框架。",
+   "access": "课程主页、录像与作业系统公开免费；中文授课、英文课件（页面明写“中文授课，英文课件”）；作业通过课程作业系统提交，不强制。",
+   "publisher": "闫令琪 / UC Santa Barbara（GAMES 平台）",
+   "evidence": {
+    "url": "https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html",
+    "location": "课程介绍、课时安排、课程需求",
+    "finding": "页面写“本课程将全面而系统地介绍现代计算机图形学的四大组成部分：（1）光栅化成像，（2）几何表示，（3）光的传播理论，以及（4）动画与模拟”，并说明“共安排 22 节课……8 次小作业，1 次大作业”“中文授课，英文课件”。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "几何表示",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "几何表示部分（曲线/曲面、网格处理）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L7 Bezier Curves & Surfaces；L8 Geometry Processing",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "变换",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "变换（2D/3D 变换、齐次坐标、MVP）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L4 Transforms",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "光栅化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "光栅化成像（三角形、采样与抗锯齿、深度测试）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L2 Drawing Triangles；L3 Sampling & Aliasing；L6 Rasterization Pipeline",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "光照",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "着色与光照（Blinn-Phong、BRDF、辐射度量）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L11 Radiometry and Photometry；L14 Material Modeling",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "渲染",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "光线追踪、路径追踪与全局光照",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L9–L10 Ray Tracing；L12 Monte Carlo Integration；L13 Global Illumination & Path Tracing",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "动画与物理仿真",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "动画与模拟（关键帧、质点弹簧、粒子、流体模拟）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L17 Introduction to Physical Simulation；L18 Intro to Animation",
+     "extent": "covered"
+    }
+   ],
+   "note": "两门课都只有 1–2 讲导论，不构成布料/流体/刚体仿真的专门课程；本技能按“入门覆盖”计。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 22 讲顺序学：变换 → 光栅化 → 采样/抗锯齿 → 着色 → 几何 → 光线追踪 → 材质 → 相机 → 动画与模拟，每讲后完成对应编程作业（含栅格器与路径追踪器大作业）。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按日程 L1–L8 学采样、变换、光栅化与几何，完成 HW0–HW1（栅格器）。"
+    },
+    {
+     "source": "en1",
+     "read": "L9–L14 学光线追踪、Monte Carlo、路径追踪与材质，完成 HW2–HW3；L17–L18 学动画与物理仿真导论；用 Final Project 做一次完整渲染。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://games-cn.org/intro-graphics/ → https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html",
+   "result": "采纳：GAMES101 课程主页逐条核对四大组成部分与 22 讲/作业安排。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "GAMES101 课程录像入口（页面“课程PPT和视频”）",
+   "result": "采纳：中文授课、英文课件的录像公开，未核对字幕。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cs184.eecs.berkeley.edu/sp24",
+   "result": "采纳：日程表逐讲核对。"
+  }
+ ],
+ "findings": [
+  "原中英文条目（CS184 + GAMES101）经核对与技能六个主题一一对应，保留，不需新增替代资源。",
+  "GAMES101 明确“中文授课、英文课件”，是真正的中文授课主线（不是中文网页冒充）；CS184 录像/讲义为英文。",
+  "两门课的物理仿真都只有 1–2 讲导论，已在 topic note 说明，避免把“动画与物理仿真”写成完整仿真课。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": []
+}
