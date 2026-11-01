@@ -7,11 +7,12 @@
 ```
 data/source/chatgpt-outputs/knowledge-map-data.json   ChatGPT 原图（只读）：节点、简介、相关关系、路线
 data/curation/partition.json                           在原图上合并、删除、新增技能，改名称和简介
+data/curation/granularity.json                         逐技能的单元规模、范围依据与相邻技能边界
 data/curation/scope.json                               对照 CS2023 的主干 / 选修判定依据（知识点 → 知识单元、层级、原文片段）
 data/curation/prereqs.txt                              必须 / 推荐前置（主代理维护）
 data/curation/prereq-notes.json                        每条前置的理由 + 证据摘要
 data/curation/names-en.tsv                             英文名
-data/curation/learning-resources.json                  学习资源审核、英文修正、中文来源目录与逐技能映射
+data/curation/learning-resources.json                  学习资源审核、英文修正、中文来源目录与逐技能映射、supplementary 补充/付费备选
 data/research/nodes/<id>.json                          审核过的检索结果：资源 + 课程先修证据
 data/exercises/*.json                                  每个技能一道练习题（答案已验算）
 data/outlines/<id>.json                                知识导览图：来源、目录（章→节）、查漏补缺、核对记录
@@ -106,7 +107,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 以下是作者本地的做法：pi 子代理和 Tavily 插件装在作者机器上的工作区根目录（`D:\agent`），别的机器上需要换成自己的检索工具，判定规则和核对脚本不变。
 
 - 资料检索交给 pi 子代理（走 Ollama，不占 Claude 额度）。先修与学习资源的说明书是 `docs/pi-research-brief.md`，知识导览图的说明书是 `docs/pi-outline-brief.md`（含第二轮“加深或换源”）。
-  **cwd 必须是 `D:\agent`**，否则 pi 发现不了 `D:\agent\.pi\extensions\` 下的 Tavily 插件；同时最多跑 2 个。导览图一批 4–8 个节点，pi 大约 5–10 分钟。
+  **cwd 必须是 `D:\agent`**，否则 pi 发现不了 `D:\agent\.pi\extensions\` 下的 Tavily 插件；并发上限以工具当前配置为准。导览图一批 4–8 个节点，pi 大约 5–10 分钟。
 - pi 只负责找资源、抄课程先修原文和目录；必须 / 推荐的最终判定、练习题、导览图的核对归档由主代理完成。
 - 不要用 Claude 子代理批量并行（2026-10-31 一次开了 20 个 Opus 子代理，一分钟烧完额度）。
 - `docs/research-brief.md` 是那次 Claude 子代理用的旧说明，已停用；其中“练习题要求”一节仍是出题标准。
@@ -117,3 +118,15 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 - 在线版：GitHub Pages。`.github/workflows/pages.yml` 在 `src/web/` 有改动时把它原样部署到 <https://zeroa234.github.io/cs-math-skill-tree/>，不在 CI 里重新构建，所以推送前先本地跑 `node scripts/build.mjs`。
 - 离线包：先 build，再 `python -X utf8 scripts/package_web.py vX.Y.Z`，把 `output/cs-math-skill-tree-vX.Y.Z.zip` 传到新的 Release：`gh release create vX.Y.Z <zip> --notes-file <说明.md>`。
 - Windows 上 gh 的中文命令行参数会变成乱码：Release 标题、仓库简介这类中文字段用 UTF-8 的 JSON 走 `gh api ... --input -`，改完读回核对。
+
+
+## 全树复核与证据
+
+- `granularity.json` 覆盖所有当前技能；名称或简介改动后必须同步重判，build 会拒绝缺失/过期条目。课程单元、基础模块、进阶模块、教材单元不表示相同学时。
+- `prereq-audit.json` 归档间接边的最终裁决。研究节点的 `required_evidence` 每项含 id、basis、sources（url+quote）、reason 和 limits；basis 为 course、same_course 或 chain。链条要保留每一环来源，不能拿推荐课或旁系课程顺序充数。
+- `python -X utf8 scripts/check_prereqs.py` 检查必须边有明确 required 映射或结构完整的证据、每条有入门理由、没有 draft。`python -X utf8 tests/prereqs.py` 用反例防误判。两者都不能代替原文阅读。
+- `learning-resources.json` 的 supplementary 列表会显示为折叠的“补充材料”；free 可为 true/false/null，不能把主页可访问等同于正文免费。视频的发布者、授课语言和字幕状态写入 access；未知就明确未知。
+- `resource-fallback-audit.json` 保存中文视频/付费候选的检索记录，最终采用字段以 learning-resources.json 为准。出版社目录公开不等于全文免费。
+- `tests/progress.mjs` 验证旧进度的保守合并、备份随导出保留、新版本不重复迁移、旧技能深链跳转。旧版未标数据版本时无法完全识别学过的范围，因此可能需要重新确认部分合并卡片。
+- 当前验收：build、check_prereqs、check_scope、check_outlines；再跑 resources.mjs、progress.mjs、guide.mjs、a11y.mjs。浏览器临时文件均放项目 temp。
+- `source-review.tsv`、source-review-notes.json、build_source_review.py 和最初 source-review 报告属于 201 技能的历史基线；当前变化以逐技能 granularity、learning-resources 与划分报告为准，不能直接拿旧 201 行审计表覆盖新数据。

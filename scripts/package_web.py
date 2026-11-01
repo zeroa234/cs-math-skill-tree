@@ -30,7 +30,7 @@ README = """CS × 数学技能树
 进度：只保存在你自己的浏览器里，换电脑或清缓存会丢。用右上角“进度 → 导出”备份。
 
 说明：共 {skills} 个学习单元、{required} 条必须前置；{prereq_status}。每条连线附课程先修、同课顺序或先修链证据与入门理由。
-技能分课程、基础模块与进阶模块，学习量不同；详情可查划分依据。补充材料含免费/注册/付费备选，字幕和覆盖缺口均按说明。
+技能分课程、基础模块、进阶模块与教材单元，学习量不同；详情可查划分依据。补充材料含免费/注册/付费备选，字幕和覆盖缺口均按说明。
 知识导览图的每个标题都和来源目录页逐条核对过。
 第三方组件：Panzoom 4.6.2（MIT）、d3 7.9.0（ISC）、markmap-view 0.18.12（MIT），许可证见 vendor/ 下的同名 txt。
 项目主页：https://github.com/zeroa234/cs-math-skill-tree （MIT 许可，见 LICENSE.txt；在线版 https://zeroa234.github.io/cs-math-skill-tree/）

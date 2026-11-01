@@ -1,113 +1,45 @@
 # 技能范围判定：主干与选修（对照 CS2023）
 
-2026-11-01。回答“这些技能里哪些属于计算机专业、哪些不是”。上一份[技能划分检查](skill-partition-review-2026-11-01.md)把这个问题留给了作者，作者的要求是按严谨的标准判，结论用“标成选修”的方式落地，不删技能。
+2026-11-01，v1.3.0。当前 192 个学习单元，**主干 121、选修 71**。这是项目对 CS2023 的主题映射与学习路线设计，不是 CS2023 对这些自定义技能的官方认证，也不是各学校共同的必修课表。
 
-## 结论
+## 依据与规则
 
-196 个技能中，**主干 126 个，选修 70 个**：
-- 地图上选修技能画虚线框；
-- 详情面板写明判定理由；
-- 不删任何技能，前置关系不变。
+依据 [CS2023 最终报告](https://csed.acm.org/final-report/) 的 Body of Knowledge，使用 CS Core 和 KA Core 两层主题。简称“主干”只表示本树选择的基础路线，不表示技能里每个高级主题都属于共同必修。
+
+1. 技能简介按顿号、逗号、分号和句号拆为知识项，剔除明确的定位说明；至少一半能对应 CS Core/KA Core 原文则为主干。
+2. 明确承载 CS Core 主题的基础模块也算主干。
+3. 这些单元的必须前置沿链补入主干。其余列选修，不删除。
+
+逐条原文与知识单元编号存在 `data/curation/scope.json`。`check_scope.py` 校验引用属于正确单元/层级、知识项来自当前简介。脚本命中只证明引用存在，不自动证明语义映射完整或学习深度相同。
+
+## 当前各领域
 
 | 领域 | 主干 | 选修 |
-|---|---|---|
-| 数学·分析 | 7 | 8 |
-| 数学·代数离散 | 9 | 6 |
-| 数学·概率优化 | 7 | 16 |
-| 理论 | 10 | 4 |
-| 程序设计 | 20 | 0 |
-| 系统与网络 | 16 | 3 |
-| 数据 | 10 | 3 |
-| 人工智能 | 8 | 10 |
-| 安全 | 15 | 2 |
-| 硬件与嵌入式 | 9 | 7 |
-| 图形与交互 | 8 | 1 |
-| 信息系统 | 5 | 2 |
-| 交叉前沿 | 2 | 8 |
+|---|---:|---:|
+| 数学 · 微积分、分析与微分方程 | 7 | 8 |
+| 数学 · 代数、几何与离散数学 | 8 | 7 |
+| 数学 · 概率统计、优化与数值计算 | 7 | 17 |
+| 理论计算机科学 | 9 | 4 |
+| 程序设计与软件工程 | 19 | 0 |
+| 计算机系统与网络 | 16 | 2 |
+| 数据管理与数据科学 | 8 | 3 |
+| 人工智能与机器学习 | 8 | 10 |
+| 网络空间安全 | 15 | 2 |
+| 电子硬件、嵌入式与控制 | 9 | 7 |
+| 图形、多媒体与人机交互 | 8 | 1 |
+| 信息系统、组织与专业实践 | 5 | 2 |
+| 交叉应用与前沿专题 | 2 | 8 |
 
-**上一份报告点名的三类：**
+## 敏感性与限制
 
-- **研究生层次的纯数学**全部是选修：实分析、测度论、泛函分析、复分析、偏微分方程、动力系统、变分法、微分几何、拓扑、拓扑数据分析、矩阵分析、张量代数、抽象代数。
-- **电子硬件**分成两半：
-  - 主干：数字逻辑、FPGA、单片机、嵌入式与 RTOS、实时系统、传感器与接口、机器人，以及信号与系统。前七个在 CS2023 的体系结构和“专门平台开发”两个领域里；信号与系统的采样、卷积、频域在图像处理单元里。
-  - 主干，但只因为是前置：电路与模拟电子。它是传感器与接口的必须前置。
-  - 选修：PCB、VLSI、半导体器件、EDA、控制理论、物联网、边缘计算。
-- **信息系统**：
-  - 主干：IT 项目管理。CS2023 软件工程的团队协作单元覆盖了进度、估算、风险和利益相关者。
-  - 主干，但只因为是前置：信息系统基础。它是 IT 项目管理的必须前置。
-  - 选修：信息系统战略、业务流程管理。
+若把“至少一半”改为“超过一半”，主干会从 121 变为 104；这说明边界受阈值与简介拆项影响。KA Core 中不少主题只要求概览，不能据此声称整个高级技能都要学完。条目写得更细也会改变分母；基础模块和依赖闭包是项目自己的补充规则。
 
-**和直觉不同、值得注意的几处：**
+本轮收窄后的计算几何与硬件验证不再因为曲面处理或综合工具的旧映射而被泛化。详细改动见[技能划分检查](skill-partition-review-2026-11-01.md)。旧版 126/70 的统计仅属于 v1.2.0。
 
-- **人工智能有 10 个是选修**。CS2023 只把机器学习基础和深度学习的直观理解列为核心，以下都在 Non-core：
-  - 强化学习的 MDP、时序差分、策略梯度（核心里只有“概览”）；
-  - 自然语言处理、计算机视觉、语音、推荐系统、学习理论。
-- **数学里的选修**：多元积分与向量分析、凸优化、随机过程、马尔可夫链、信息论、博弈论、贝叶斯统计、蒙特卡洛。CS2023 的数学要求只到多元微分、梯度下降和 ODE 欧拉法。
-- **系统里的选修**：云计算、GPU 计算、流处理系统。
-- **交叉前沿里的主干**：量子计算是体系结构（AR-Quantum）的 KA Core，区块链是密码学（SEC-Crypto）的 KA Core。这两个技能因此不是选修，这一列也不再整体标“选修”。
-- **编译原理算主干**，但理由比较窄：CS Core 里有“翻译流水线”的概览，覆盖了词法/语法分析、代码生成与优化。语法分析、语义分析、代码生成这几个单元本身都是 Non-core。
+## 逐技能判定
 
-## 依据：CS2023 怎么分核心与选修
+CS = CS Core，KA = KA Core；分数为匹配项数/计入项数。原文片段见源数据。
 
-CS2023 是 ACM、IEEE-CS 和 AAAI 联合发布的计算机科学课程标准。它的知识体系把每个主题分为三层（见终版报告 1.3 节“Introduction to the Knowledge Model”）：
-
-- **CS Core**：原文是 "topics that every computer science graduate must know"。每个计算机专业都应当覆盖。
-- **KA Core**：建议深入学习的主题，各专业可以选择重点。数学（MSF）的主题都定为 KA Core，理由是其他领域的 KA Core 要用到它们。
-- **Non-core**：选修（以前的版本叫 elective）。
-
-CS2023 自己把前两层合称“核心主题”，第三层称选修。本项目沿用这个划分：
-
-- 内容落在 CS Core 或 KA Core 的技能，算主干；
-- 只落在 Non-core 或 CS2023 没有涉及的，算选修。
-
-## 判定规则
-
-一个技能满足下面任意一条就算主干，否则是选修：
-
-1. **简介里至少一半的知识点**，能在 CS2023 某个知识单元的 CS Core 或 KA Core 主题里找到原文对应。
-2. 它是树里**讲授某个 CS Core 主题的技能**。只有组合数学和数理逻辑用到这一条，例如组合数学的“计数、鸽巢原理”。
-3. 它是满足 1 或 2 的技能的**必须前置**，沿必须前置链往上推。没学它就学不了主干技能，所以它也属于主干。
-
-**知识点的拆法**：把技能简介按顿号、逗号、分号拆开，和构建脚本的拆法一致。说明性的半句不计入分母，例如“合并两门高度重叠课程名称”“外部前置为分子生物学”。
-
-## 方法
-
-1. **拆原文**：从 CS2023 终版的 Body of Knowledge PDF 里拆出 160 个知识单元，每个主题标明 CS Core、KA Core 或 Non-core。
-2. **逐个比对**：对每个技能的每个知识点，在原文里找对应的主题。记下知识单元、层级和一段原文片段，写进 `data/curation/scope.json`。
-3. **脚本核对**：`scripts/check_scope.py` 逐条核对两件事：
-   - 每段片段确实出现在所引单元的所引层级里；
-   - 每个被引的知识点确实在技能简介里。
-   我还故意喂了几条错引文做反例测试，比如把 Non-core 的 MDP 写成 KA Core、编造微积分里的 Green 定理，都能被拦下。
-4. **构建计算**：`scripts/build.mjs` 按上面三条规则算出主干和选修，写入每个技能的 `optional` 和 `scope` 字段。简介改了而判定没跟着改，构建会直接报错。
-
-**CS Core 覆盖检查**：CS2023 里有 CS Core 主题的知识单元共 85 个。
-- 65 个被主干技能直接引用。
-- 另外 20 个没被引用，原因是每个知识点只引了一处原文，不是没人讲。这 20 个都由主干技能讲：
-  - AI 入门：搜索、规划与约束求解；
-  - 数据建模：数据建模、关系模型与 SQL；
-  - 事件驱动编程：Web 开发、移动与跨平台开发；
-  - HCI 伦理与问责：用户研究、可访问性、计算伦理；
-  - 并行算法：共享/分布式内存并行编程；
-  - 基础数据结构：数据结构、程序设计基础；
-  - 软件验证：软件测试；
-  - 安全工程：安全原理；
-  - SEP 系列：计算伦理；
-  - 系统基础（SF）系列：计算机组成原理、计算机体系结构、操作系统。
-
-## 敏感性与局限
-
-- **阈值敏感**：有 25 个技能正好一半命中。如果规则改成“超过一半”，主干从 126 降到 106，有 20 个会翻成选修，例如：
-  - 概率图模型、AI 安全、分布式数据库与 NoSQL、ETL 数据管线；
-  - 无穷级数、傅里叶分析、计算几何、离散与组合优化；
-  - 区块链、逆向工程、移动与跨平台开发。
-  逐个技能表里“简介知识点”一列可以看出哪些在临界线上。
-- **只看主题名，不看深度**：CS2023 的不少 KA Core 只要求概览或直观理解。例如深度学习写明“intuition only, no mathematics”，Transformer 只出现在“其他架构”一句里。所以“主干”的意思是“这个方向的入门内容属于 CS 核心”，不代表整个技能的深度都是必修。
-- **知识点粒度不均**：简介写得越细，分母越大，越难过半。这一点无法完全消除，所以规则 2 和规则 3 用来兜底。
-- **适用范围**：CS2023 是美国主导的国际标准，各国、各校的培养方案会不同。例如国内很多学校把编译原理、计算机网络、信号与系统列为必修。这里只按 CS2023 判，不代表某所学校的要求。
-
-## 逐个技能判定
-
-由 `python -X utf8 -I scripts/check_scope.py --markdown` 生成。“简介知识点”一列是命中数 / 计入的知识点数，“CS2023 依据”一列是引用的知识单元和层级（CS = CS Core，KA = KA Core）。原文片段见 `data/curation/scope.json`。
 
 | 技能 | 判定 | 简介知识点 | CS2023 依据 |
 |---|---|---|---|
@@ -121,7 +53,7 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | M.1.6.1 测度论与Lebesgue积分 | 选修 | 0/5 | —<br>CS2023 没有测度论。 |
 | M.1.7 泛函分析 | 选修 | 0/4 | —<br>CS2023 没有泛函分析。 |
 | M.1.8 复分析 | 选修 | 0/3 | —<br>CS2023 没有复分析。 |
-| M.1.9 傅里叶分析与调和分析 | 主干 | 2/4 | GIT-Image KA<br>CS2023 把傅里叶变换和小波作为图像编码工具列在图像处理单元。 |
+| M.1.9 傅里叶分析 | 主干 | 2/4 | GIT-Image KA<br>CS2023 图像处理列 Fourier transforms；严格收敛理论与一般正交展开不属于其核心深度。 |
 | M.2.1 常微分方程 | 主干 | 2/4 | MSF-Calculus KA<br>CS2023 只要求 ODE 的定义和欧拉法，不含存在唯一性与线性方程组理论。 |
 | M.2.2 偏微分方程 | 选修 | 0/3 | —<br>CS2023 没有偏微分方程理论。 |
 | M.2.3 动力系统与混沌 | 选修 | 0/4 | —<br>CS2023 没有动力系统与混沌。 |
@@ -134,8 +66,8 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | M.4.1 向量代数与解析几何 | 主干 | 2/4 | GIT-Fundamentals CS、MSF-Linear CS |
 | M.4.2 微分几何 | 选修 | 0/5 | —<br>CS2023 没有微分几何。 |
 | M.4.3 拓扑学 | 选修 | 0/5 | —<br>CS2023 没有拓扑学。 |
-| M.4.4 计算几何与几何处理 | 主干 | 2/4 | GIT-Modeling KA |
-| M.4.5 拓扑数据分析与几何学习数学 | 选修 | 0/3 | —<br>CS2023 没有拓扑数据分析。 |
+| M.4.4 计算几何 | 选修 | 0/5 | —<br>本技能聚焦离散计算几何算法；CS2023 核心中的图形曲面表示不能代替凸包、范围搜索与空间分解课程，故列选修。 |
+| M.4.5 拓扑数据分析 | 选修 | 0/4 | —<br>CS2023 没有拓扑数据分析的核心主题。 |
 | M.5.1 集合论 | 主干 | 4/5 | MSF-Discrete CS |
 | M.5.2 数理逻辑 | 主干 | 2/4 | MSF-Discrete CS；承载 CS Core：MSF-Discrete |
 | M.5.3 证明方法与离散结构 | 主干 | 4/6 | AL-Models CS、MSF-Discrete CS |
@@ -150,14 +82,14 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | M.6.3 随机过程 | 选修 | 0/4 | —<br>CS2023 没有随机过程。 |
 | M.6.3.1 马尔可夫链 | 选修 | 1/4 | AI-KRR KA<br>平稳分布、混合与遍历性不在 CS2023 里。 |
 | M.6.3.2 随机微积分与随机微分方程 | 选修 | 0/3 | —<br>CS2023 没有随机微积分。 |
-| M.6.4 时间序列与排队论 | 选修 | 1/4 | NC-Fundamentals CS<br>排队基本概念由网络技能讲；时间序列不在 CS2023 里。 |
+| M.6.4 时间序列分析 | 选修 | 0/5 | —<br>CS2023 没有时间序列分析。 |
 | M.6.5 信息论与编码理论 | 选修 | 1/5 | AR-Memory CS<br>熵、互信息、信道容量不在 CS2023 里。 |
 | M.7.1 优化建模与运筹基础 | 主干 | 3/5 | AL-Strategies KA、MSF-Calculus KA |
 | M.7.2 凸优化 | 选修 | 1/4 | MSF-Calculus KA<br>对偶、KKT、近端与内点法不在 CS2023 里。 |
 | M.7.3 非凸优化 | 选修 | 1/4 | MSF-Calculus KA |
 | M.7.4 随机优化 | 选修 | 0/4 | —<br>CS2023 有梯度下降，没有随机优化理论。 |
 | M.7.5 离散与组合优化 | 主干 | 2/4 | AL-Strategies CS、AL-Strategies KA |
-| M.7.6 博弈论与决策理论 | 选修 | 1/4 | AI-KRR KA<br>博弈论在 CS2023 里是 AI 的 Non-core。 |
+| M.7.6 博弈论 | 选修 | 0/4 | —<br>CS2023 博弈论与机制设计不是核心主题；不把强化学习中的决策概览当作整门博弈论。 |
 | M.8.1 误差、稳定性与数值线性代数 | 主干 | 2/4 | AR-Representation CS、PDC-Algorithms KA |
 | M.8.2 插值、逼近与数值积分 | 选修 | 0/3 | —<br>CS2023 没有插值与数值积分。 |
 | M.8.3 微分方程数值解与科学计算 | 主干 | 2/3 | PDC-Algorithms KA |
@@ -165,8 +97,7 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | M.8.5 自动微分与计算图 | 选修 | 0/3 | —<br>CS2023 没有自动微分。 |
 | M.8.6 符号计算与计算代数 | 选修 | 0/5 | —<br>CS2023 没有符号计算。 |
 | F.1.1 数据结构 | 主干 | 7/7 | AL-Foundational CS |
-| F.1.2 算法分析与设计 | 主干 | 5/5 | AL-Complexity CS、AL-Complexity KA、AL-Strategies CS |
-| F.1.3 图算法与字符串算法 | 主干 | 5/6 | AL-Foundational CS、AL-Foundational KA、AL-Models CS、AL-Strategies KA、SDF-Algorithms CS |
+| F.1.2 算法分析与设计 | 主干 | 9/9 | AL-Complexity CS、AL-Complexity KA、AL-Foundational CS、AL-Foundational KA、AL-Strategies CS、AL-Strategies KA、SDF-Algorithms CS |
 | F.1.4 随机、近似与在线算法 | 主干 | 2/3 | AL-Strategies KA |
 | F.1.5 并行、外存与流算法 | 选修 | 1/4 | PDC-Evaluation KA<br>I/O 复杂度、草图与流算法、性质测试不在 CS2023 里。 |
 | F.1.6 参数化与细粒度复杂度 | 选修 | 0/5 | —<br>CS2023 没有参数化复杂度和细粒度复杂度。 |
@@ -194,9 +125,8 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | P.4.5 软件测试、质量与可靠性 | 主干 | 3/4 | SE-Construction CS、SE-Construction KA、SE-Reliability KA、SE-Validation KA |
 | P.4.6 软件维护、演化与技术债 | 主干 | 3/5 | SE-Construction KA、SE-Design CS、SE-Refactoring KA |
 | P.5.1 互联网与Web开发 | 主干 | 6/6 | NC-Applications CS、SPD-Web KA |
-| P.5.2 移动、桌面与跨平台开发 | 主干 | 2/4 | SPD-Mobile KA |
-| P.5.3 DevOps、持续交付与SRE | 主干 | 4/6 | SE-Construction KA、SE-Reliability KA、SE-Tools CS、SE-Tools KA |
-| P.5.4 软件供应链与可复现构建 | 主干 | 2/4 | SE-Tools KA、SEC-Coding KA、SEC-Engineering KA |
+| P.5.2 移动应用开发 | 主干 | 2/4 | SPD-Mobile KA |
+| P.5.3 DevOps、持续交付与SRE | 主干 | 6/8 | SE-Construction KA、SE-Reliability KA、SE-Tools CS、SE-Tools KA、SEC-Engineering KA |
 | C.1.1 计算机组成原理 | 主干 | 4/5 | AR-Assembly CS、AR-IO CS、AR-Memory CS、AR-Organization KA、AR-Representation CS |
 | C.1.2 计算机体系结构 | 主干 | 5/5 | AR-Assembly KA、AR-Memory CS、AR-Organization KA、AR-Performance-Energy KA |
 | C.1.3 ARM与其他指令集体系 | 主干 | 4/4 | AR-Assembly KA |
@@ -208,11 +138,10 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | C.3.1 数据通信与信号基础 | 主干 | 5/5 | GIT-Fundamentals CS、NC-Reliability KA、NC-SingleHop KA |
 | C.3.2 网络协议、路由与传输 | 主干 | 4/4 | NC-Applications CS、NC-Fundamentals CS、NC-Reliability KA、NC-Routing KA |
 | C.3.3 无线、移动与物联网网络 | 主干 | 3/3 | NC-Mobility KA |
-| C.3.4 网络管理、SDN与可编程网络 | 主干 | 2/4 | NC-Emerging KA |
+| C.3.4 SDN与可编程网络 | 主干 | 2/3 | NC-Emerging KA<br>网络管理限定为 SDN 的配置和自动化。 |
 | C.4.1 分布式系统 | 主干 | 6/6 | DM-Internals KA、FPL-Parallel CS、PDC-Communication KA、PDC-Coordination CS、PDC-Coordination KA、PDC-Programs CS |
 | C.4.2 云计算 | 选修 | 2/5 | PDC-Programs KA、SPD-Web KA<br>多租户、编排、无服务器不在 CS2023 的核心主题里（无服务器在 SPD-Web 的 Non-core）。 |
 | C.4.3 分布式算法与一致性理论 | 主干 | 2/4 | PDC-Communication KA、PDC-Programs CS |
-| C.4.4 消息、事件与流处理系统 | 选修 | 1/5 | PDC-Communication CS<br>事件时间、重放、背压等流处理内容不在 CS2023 里。 |
 | C.5.1 共享/分布式内存并行编程 | 主干 | 4/4 | FPL-Parallel CS、PDC-Communication CS、PDC-Evaluation CS、PDC-Programs KA |
 | C.5.2 GPU计算与性能优化 | 选修 | 2/5 | PDC-Communication CS、PDC-Coordination CS<br>核函数编写、算子融合与性能剖析不在 CS2023 的核心主题里。 |
 | C.5.3 高性能科学计算 | 主干 | 3/4 | PDC-Algorithms KA、PDC-Evaluation CS |
@@ -221,12 +150,10 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | D.1.3 分布式数据库与NoSQL | 主干 | 2/4 | DM-Internals KA、DM-NoSQL KA<br>分片与复制在 CS2023 里是 DM 的 Non-core。 |
 | D.1.4 数据库管理与安全 | 主干 | 4/5 | DM-Internals KA、DM-Security CS、DM-Security KA |
 | D.1.5 数据治理、元数据与质量 | 主干 | 4/5 | DM-Data CS、DM-SEP CS、DM-SEP KA |
-| D.2.1 ETL/ELT与数据管线 | 主干 | 3/6 | AI-ML CS、DM-Analytics KA |
-| D.2.2 大数据管理与处理 | 主干 | 3/4 | DM-Core CS、DM-Core KA、DM-Processing KA |
-| D.2.3 搜索、信息检索与推荐基础设施 | 选修 | 0/4 | —<br>信息检索在 CS2023 里是 AI-NLP 和 DM 的 Non-core。 |
-| D.3.1 数据科学导论与工具箱 | 主干 | 4/6 | AI-ML CS、DM-Analytics KA |
+| D.2.2 数据工程与大数据处理 | 主干 | 7/10 | AI-ML CS、DM-Analytics KA、DM-Core CS、DM-Core KA、DM-Processing KA、PDC-Coordination CS<br>数据湖/仓、调度与数据验证、背压等工程内容不在 CS2023 的核心主题里。 |
+| D.2.3 搜索与信息检索系统 | 选修 | 0/4 | —<br>信息检索在 CS2023 里是 AI-NLP 和 DM 的 Non-core。 |
+| D.3.1 数据科学导论与工具箱 | 主干 | 7/11 | AI-ML CS、AI-ML KA、DM-Analytics KA、MSF-Statistics KA |
 | D.3.2 知识发现与数据挖掘 | 主干 | 3/5 | DM-Analytics KA |
-| D.3.3 评估、实验与可复现分析 | 主干 | 3/5 | AI-ML CS、AI-ML KA、MSF-Statistics KA |
 | D.4.1 知识表示、知识图谱与本体 | 选修 | 0/5 | —<br>本体在 CS2023 里是 AI-LRR 的 Non-core。 |
 | D.4.2 知识推理与语义计算 | 选修 | 0/3 | —<br>描述逻辑与规则推理在 CS2023 里是 AI-LRR 的 Non-core。 |
 | A.1.1 搜索、规划与约束求解 | 主干 | 3/4 | AI-Search CS、AI-Search KA |
@@ -237,7 +164,7 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | A.2.3.1 网络架构与表示学习 | 主干 | 4/6 | AI-ML KA<br>CS2023 的核心只要求直观理解，带数学的深度学习是 Non-core。 |
 | A.2.3.2 深度模型训练与推理系统 | 选修 | 0/6 | —<br>ML 硬件与训练系统在 CS2023 里是 AI-ML 的 Non-core。 |
 | A.2.4 强化学习 | 选修 | 1/5 | AI-ML KA<br>MDP、时序差分、策略梯度在 CS2023 里是 AI-ML 的 Non-core，核心只有概览。 |
-| A.2.5 迁移、多任务与联邦学习 | 选修 | 0/4 | —<br>CS2023 没有迁移学习与联邦学习。 |
+| A.2.5 联邦学习 | 选修 | 0/3 | —<br>CS2023 没有联邦学习的核心主题。 |
 | A.3.1 自然语言处理 | 选修 | 1/5 | AI-ML CS<br>自然语言处理整个单元在 CS2023 里是 Non-core。 |
 | A.3.2 图像处理与计算机视觉 | 选修 | 3/7 | GIT-Image KA<br>识别、检测、分割属于计算机视觉单元，在 CS2023 里是 Non-core。 |
 | A.3.3 语音与音频智能 | 选修 | 0/4 | —<br>语音识别在 CS2023 里是 AI-Vision 的 Non-core。 |
@@ -251,8 +178,8 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | S.1.2 密码学 | 主干 | 4/6 | SEC-Crypto CS、SEC-Crypto KA |
 | S.1.3 现代密码与隐私计算专题 | 主干 | 3/4 | SEC-Crypto KA |
 | S.2.1 计算机系统安全 | 主干 | 6/6 | OS-Protection CS、OS-Protection KA、OS-Purpose CS、OS-Virtualization KA、SEC-Coding CS、SEC-Engineering KA |
-| S.2.2 网络安全 | 主干 | 4/5 | NC-Security KA |
-| S.2.3 无线与移动安全 | 主干 | 2/4 | SEC-Foundations KA、SPD-Mobile KA |
+| S.2.2 网络安全 | 主干 | 4/6 | NC-Security KA |
+| S.2.3 移动应用与设备安全 | 主干 | 2/4 | SEC-Foundations KA、SPD-Mobile KA<br>移动平台安全属于核心；这里的设备身份和应用测试按移动上下文学习，不延伸到无线协议安全课程。 |
 | S.2.4 云安全与容器安全 | 选修 | 1/6 | SEC-Foundations KA<br>多租户、控制平面、镜像与编排安全不在 CS2023 里（容器逃逸在 OS 的 Non-core）。 |
 | S.2.5 硬件、嵌入式与物联网安全 | 主干 | 3/5 | OS-Purpose CS、SEC-Crypto KA、SEC-Engineering KA |
 | S.3.1 应用、Web与API安全 | 主干 | 4/4 | SEC-Coding CS、SEC-Foundations CS、SEC-Foundations KA |
@@ -266,23 +193,23 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | S.5.2 系统安全研究与安全测量 | 主干 | 2/4 | OS-Protection CS、SEC-Coding CS |
 | H.1.1 电路与模拟电子基础 | 主干（前置） | 0/6 | —<br>「传感器与接口」的必须前置。CS2023 没有电路与模拟电子（只在物理计算单元的学习成果里让学生接一个简单电路）。 |
 | H.1.2 数字电路与数字逻辑 | 主干 | 5/5 | AR-Logic KA、SF-Foundations CS |
-| H.1.3 信号与系统、数字信号处理 | 主干 | 4/5 | GIT-Fundamentals CS、GIT-Image KA |
+| H.1.3 信号与系统 | 主干 | 4/6 | GIT-Fundamentals CS、GIT-Image KA |
 | H.2.1 FPGA与Verilog/HDL | 主干 | 4/5 | AR-Logic KA |
-| H.2.2 EDA与硬件验证 | 选修 | 2/5 | AR-Logic KA<br>形式验证、布局布线不在 CS2023 里。 |
+| H.2.2 硬件设计验证 | 选修 | 0/5 | —<br>硬件验证的专门仿真、UVM 与形式方法超出 CS2023 硬件描述与设计工具的概览，列选修。 |
 | H.2.3 PCB设计与板级工程 | 选修 | 0/5 | —<br>CS2023 没有 PCB 设计。 |
-| H.2.4 VLSI与芯片设计 | 选修 | 1/4 | AR-Logic KA<br>CMOS 与物理设计不在 CS2023 里。 |
+| H.2.4 VLSI与芯片设计 | 选修 | 1/5 | AR-Logic KA<br>CMOS 标准单元与芯片物理设计的深入课程超出 CS2023 核心硬件概览。 |
 | H.2.5 半导体器件与微电子基础 | 选修 | 0/3 | —<br>CS2023 没有半导体器件。 |
 | H.3.1 单片机与微控制器 | 主干 | 5/6 | AR-IO CS、OS-Scheduling KA、SPD-Common CS、SPD-Embedded KA |
 | H.3.2 嵌入式系统、驱动与RTOS | 主干 | 4/6 | OS-Devices KA、OS-Real-time KA、SPD-Embedded KA |
 | H.3.3 传感器与接口 | 主干 | 3/6 | AR-IO CS、GIT-Physical KA、SPD-Embedded KA |
-| H.3.4 实时系统与安全关键系统 | 主干 | 3/4 | OS-Real-time KA、SPD-Embedded KA |
+| H.3.4 实时系统 | 主干 | 2/4 | OS-Real-time KA、SPD-Embedded KA |
 | H.4.1 控制理论与状态估计 | 选修 | 0/5 | —<br>CS2023 没有控制理论与状态估计。 |
 | H.4.2 机器人建模、规划与控制 | 主干 | 3/4 | SPD-Robot KA<br>定位建图在 CS2023 里是 AI-Robotics 的 Non-core。 |
 | H.4.3 物联网 | 选修 | 2/6 | GIT-Physical KA、NC-Mobility KA<br>物联网平台、设备管理与功耗不在 CS2023 的核心主题里。 |
 | H.4.4 边缘计算 | 选修 | 1/5 | NC-Applications CS<br>CS2023 只在网络应用范式里提到边缘计算。 |
 | V.1.1 计算机图形学 | 主干 | 6/6 | GIT-Animation KA、GIT-Rendering KA、GIT-Simulation KA、MSF-Linear KA |
 | V.1.2 多媒体技术 | 选修 | 2/5 | GIT-Fundamentals CS、GIT-Image KA<br>容器、同步与媒体传输不在 CS2023 里；图像格式与数字化的 CS Core 主题由图形学技能讲。 |
-| V.1.3 渲染、仿真与可微图形专题 | 主干 | 3/4 | GIT-Shading KA、GIT-Simulation KA |
+| V.1.3 物理与可微渲染 | 主干 | 2/3 | GIT-Shading KA |
 | V.2.1 交互基础与认知、人因 | 主干 | 3/5 | HCI-User KA |
 | V.2.2 用户研究、交互设计与UX评估 | 主干 | 5/5 | HCI-Design CS、HCI-Design KA、HCI-Evaluation CS、HCI-User CS |
 | V.2.3 可访问性与包容性设计 | 主干 | 3/3 | HCI-Accessibility CS、HCI-Accessibility KA |
@@ -294,12 +221,12 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | I.1.3 业务流程管理 | 选修 | 0/5 | —<br>CS2023 没有业务流程管理。 |
 | I.1.4 信息技术项目管理 | 主干 | 5/7 | SE-Requirements KA、SE-Teamwork CS、SE-Teamwork KA、SEP-Professional-Ethics KA<br>CS2023 在软件工程的团队协作单元里覆盖了进度、估算、风险和利益相关者。 |
 | I.2.1 计算伦理、社会影响与专业责任 | 主干 | 5/5 | AL-SEP CS、SEP-IP CS、SEP-Privacy CS、SEP-Professional-Ethics CS、SEP-Sustainability CS |
-| I.2.2 技术写作、协作与文献阅读 | 主干 | 3/5 | SE-Teamwork CS、SEP-Communication CS |
+| I.2.2 技术沟通与写作 | 主干 | 3/5 | SEP-Communication CS |
 | I.2.3 研究设计、可复现性与学术规范 | 主干 | 4/6 | HCI-Evaluation KA、SDF-SEP CS、SE-Validation KA |
 | X.1.1 嵌入式与边缘AI | 选修 | 2/6 | AR-Heterogeneity KA、NC-Applications CS |
 | X.1.3 自动驾驶与自主系统 | 选修 | 2/6 | OS-Real-time KA、SPD-Robot KA<br>感知与定位在 CS2023 里是 AI-Vision、AI-Robotics 的 Non-core。 |
 | X.2.1 生物信息与计算生物学 | 选修 | 0/3 | —<br>CS2023 没有生物信息学。 |
-| X.2.2 金融科技与计算金融 | 选修 | 0/4 | —<br>CS2023 没有金融科技。 |
+| X.2.2 计算金融 | 选修 | 0/3 | —<br>CS2023 没有计算金融的核心主题。 |
 | X.2.3 教育科技与学习科学计算 | 选修 | 0/4 | —<br>CS2023 没有教育科技。 |
 | X.2.4 医疗健康信息学 | 选修 | 0/3 | —<br>CS2023 只在 AI 应用里举医疗为例，没有医疗信息学。 |
 | X.2.5 地理空间数据科学 | 选修 | 0/5 | —<br>地理空间数据在 CS2023 里是 DM-Modeling 的 Non-core。 |
@@ -307,3 +234,4 @@ CS2023 自己把前两层合称“核心主题”，第三层称选修。本项�
 | X.3.2 区块链与分布式账本 | 主干 | 2/4 | SEC-Crypto KA<br>CS2023 把区块链列为密码学的 KA Core；共识算法本身是 Non-core。 |
 | X.3.3 科学机器学习与可微仿真 | 选修 | 0/4 | —<br>CS2023 没有科学机器学习。 |
 | P.5.5 游戏开发与游戏引擎 | 主干 | 5/7 | GIT-Animation KA、GIT-Simulation KA、SPD-Game KA |
+| M.6.6 排队论与性能建模 | 选修 | 2/6 | NC-Fundamentals CS、PDC-Communication KA<br>CS2023 只要求排队的基本概念，以及在并行与分布式计算里用排队论预测性能；Kendall 记号、排队网络、均值分析不在其中。 |
