@@ -60,3 +60,10 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 - pi 只负责找资源、抄课程先修原文和目录；必须 / 推荐的最终判定、练习题、导览图的核对归档由主代理完成。
 - 不要用 Claude 子代理批量并行（2026-10-31 一次开了 20 个 Opus 子代理，一分钟烧完额度）。
 - `docs/research-brief.md` 是那次 Claude 子代理用的旧说明，已停用；其中“练习题要求”一节仍是出题标准。
+
+## 发布到 GitHub
+
+- 仓库 <https://github.com/zeroa234/cs-math-skill-tree>。本项目平时在作者工作区的大仓库里提交，`bash scripts/publish-github.sh` 用 `git subtree split` 拆出本目录的历史、去掉提交说明里的 AI 署名行，再推到 `main`。重建结果是确定的，每次都是快进推送；先加 `--dry-run` 只生成本地分支 `publish/cs-math-skill-tree` 看一眼。
+- 在线版：GitHub Pages。`.github/workflows/pages.yml` 在 `src/web/` 有改动时把它原样部署到 <https://zeroa234.github.io/cs-math-skill-tree/>，不在 CI 里重新构建，所以推送前先本地跑 `node scripts/build.mjs`。
+- 离线包：先 build，再 `python -X utf8 scripts/package_web.py`，把 `output/cs-math-skill-tree-<日期>.zip` 传到新的 Release：`gh release create vX.Y.Z <zip> --notes-file <说明.md>`。
+- Windows 上 gh 的中文命令行参数会变成乱码：Release 标题、仓库简介这类中文字段用 UTF-8 的 JSON 走 `gh api ... --input -`，改完读回核对。
