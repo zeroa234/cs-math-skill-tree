@@ -451,6 +451,22 @@ a { color: var(--accent); }
 .pr-empty { font-size: 13px; color: var(--text-3); }
 .milestones { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: var(--text-2); }
 .res-list { display: grid; gap: 9px; }
+.learning-paths { display: grid; gap: 9px; margin-bottom: 10px; }
+.route-summary { font-size: 13px; color: var(--text-2); }
+.learning-route, .coverage-details { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+.learning-route > summary, .coverage-details > summary { cursor: pointer; color: var(--accent); min-height: 24px; font-size: 13px; }
+.learning-route ol { margin: 9px 0 0; padding-left: 21px; }
+.learning-route li { margin-bottom: 10px; font-size: 13px; overflow-wrap: anywhere; }
+.learning-route li p { margin-top: 4px; }
+.learning-route a, .coverage-table a { overflow-wrap: anywhere; }
+.route-cost { display: inline-block; margin-left: 6px; font-size: 11.5px; color: var(--text-2); }
+.route-access { display: block; color: var(--text-2); font-size: 12px; font-weight: normal; }
+.route-gap { font-size: 12.5px; color: var(--text-2); }
+.coverage-table { width: 100%; table-layout: fixed; border-collapse: collapse; margin-top: 9px; font-size: 12px; }
+.coverage-table th, .coverage-table td { padding: 7px 5px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.coverage-table th:first-child { width: 24%; }
+.coverage-table td div + div { margin-top: 5px; }
+
 .res-heading { margin: 0; font-size: 13px; color: var(--text); }
 .res {
   border: 1px solid var(--line); border-radius: var(--radius); padding: 11px 13px; display: flex; flex-direction: column; gap: 4px;

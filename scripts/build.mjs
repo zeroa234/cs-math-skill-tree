@@ -22,6 +22,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import ELK from "elkjs/lib/elk.bundled.js";
+import { readLearningPaths } from "./learning-paths.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rel = (...p) => path.join(ROOT, ...p);
@@ -183,6 +184,8 @@ function prereqEntry(id, q, kind) {
   return { id: q, why: note || reasonOf.get(`${q}>${id}`) || "", kind };
 }
 
+const learningPaths = readLearningPaths(rel("data/curation/learning-paths"), new Map(skills.map(s => [s.id, s])));
+
 // Curated learning resources override only learning links, never prerequisite evidence.
 const resourceReview = readJson(rel("data/curation/learning-resources.json"));
 for (const [id, entry] of Object.entries(resourceReview.chinese)) {
@@ -217,6 +220,7 @@ function learningResources(id, research) {
     zhAlt: resourceOf(zh ? { tier: "website", lang: "zh", free: null, ...zh } : null),
     zhResourceNote: resourceReview.chineseGaps[id] || "",
     extraResources: (resourceReview.supplementary?.[id] || []).map(resourceOf),
+    learningPath: learningPaths.get(id) || null,
   };
 }
 
@@ -486,6 +490,9 @@ const data = {
     mainSkills: out.filter((s) => !s.optional).length,
     withResource: out.filter((s) => s.resource).length,
     withChineseResource: out.filter((s) => s.zhAlt).length,
+    withBilingualPath: out.filter(s => s.learningPath).length,
+    completeChinesePaths: out.filter(s => s.learningPath?.routes.zh.status === "complete").length,
+    completeEnglishPaths: out.filter(s => s.learningPath?.routes.en.status === "complete").length,
     resourcesReviewed: resourceReview.checkedAt,
     withExercise: out.filter((s) => s.exercise).length,
     withGuide: outlines.size,

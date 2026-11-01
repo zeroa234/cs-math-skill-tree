@@ -1,0 +1,261 @@
+{
+ "id": "P.1.1",
+ "name": "程序设计基础",
+ "description": "变量、控制流、函数、模块、基本数据类型、输入输出与调试。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "廖雪峰《Python教程》（零基础文字教程）",
+   "url": "https://liaoxuefeng.com/books/python/first-program/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "按安装与第一个程序、Python基础、函数、模块、错误/调试/测试、IO编程顺序学习；覆盖本技能全部必学项。面向对象、网络和数据科学不是本项要求。",
+   "access": "作者官方网站的中文正文与示例免费公开。",
+   "publisher": "廖雪峰作者官方网站",
+   "evidence": {
+    "url": "https://liaoxuefeng.com/books/python/error-debug-test/debug/index.html",
+    "location": "第3–6、9、12、13章；12.2调试",
+    "finding": "已打开安装、第一个程序、模块及调试正文，侧栏有完整章目录；调试章实际演示print、断言、logging与pdb。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "鱼C－小甲鱼：零基础入门学习 Python（原作者 B站课程）",
+   "url": "https://www.bilibili.com/video/BV1c4411e77t/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "由安装与猜数字案例进入变量、数据类型、分支循环、列表/字典/集合、函数、永久存储、异常及模块和包；选相应分集即可，类/爬虫进阶不属于本项必学。调试的专门方法配中文文字路线。",
+   "access": "公开视频免费，作者配套课后资源/作业有单独入口，不能假定全部免费。页面列出中文与简体字幕制作者；未逐集核对字幕。",
+   "publisher": "鱼C-小甲鱼；原作者账号及鱼C官方课程合集",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1c4411e77t/",
+    "location": "合集：变量和字符串、了不起的分支和循环、函数、永久存储、异常、模块和包",
+    "finding": "本机实际获取200正文与分集目录、作者账号、中文字幕制作者，未采用搬运合集。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "Python 官方中文教程（学过编程后的查阅与巩固）",
+   "url": "https://docs.python.org/zh-cn/3/tutorial/",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "第3–8章可查语法、数据结构、模块、IO与异常；官方明确面向刚学Python的程序员，作为学习后的查阅材料。",
+   "access": "Python 软件基金会官方中文正文免费；新语法取决于所选Python版本。",
+   "publisher": "Python Software Foundation",
+   "evidence": {
+    "url": "https://docs.python.org/zh-cn/3/tutorial/",
+    "location": "开头适用对象说明；第3–8章",
+    "finding": "官方明确假定了解编程总体概念，因此从原中文唯一入口降为参考。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Harvard CS50P：Introduction to Programming with Python（零基础讲义、课程与练习）",
+   "url": "https://cs50.harvard.edu/python/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Week0函数/变量/基本类型与输入输出，Week1–2条件循环，Week3异常与纠错，Week4库/模块与包，Week5测试定位错误，Week6文件读写；讲义与练习形成完整入门路线。Week7–9可选。",
+   "access": "官方OpenCourseWare文字讲义、源代码、课件、视频与题目免费公开；自动提交需注册，认证证书另收费。官方逐讲页提供英文Transcript/Subtitles，未核实中文字幕。",
+   "publisher": "Harvard CS50 / David J. Malan",
+   "evidence": {
+    "url": "https://cs50.harvard.edu/python/notes/3/",
+    "location": "Weeks0–6；Notes0、3、4、5、6",
+    "finding": "打开实际讲义：语法/运行错误的修改、try/except、assert与pytest；0/4/6讲另有独立英文文字与源代码。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Harvard CS50x（可选：拓展计算思维与C语言）",
+   "url": "https://cs50.harvard.edu/x/",
+   "tier": "website",
+   "free": true,
+   "role": "alternative",
+   "covers": "原英文完整计算机导论入口保留；C内存、算法与数据结构等跨到后续技能，可在学会基础编程后选读。",
+   "access": "官方课程讲义、题目与录像公开；认证服务以官网说明为准。",
+   "publisher": "Harvard CS50",
+   "evidence": {
+    "url": "https://cs50.harvard.edu/python/",
+    "location": "Welcome：CS50P与CS50x区别",
+    "finding": "官方说明CS50P专注Python编程，CS50x是更广的计算机导论；原有入口因此保留为拓展。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "变量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第5.1节：数据类型和变量",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week0 / Notes0：Variables, int, str, float",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "控制流",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第5.4、5.5、5.6节：条件判断、模式匹配、循环",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Weeks1–2：Conditionals / Loops",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "函数",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第6章：调用、定义、参数；递归作为进一步练习",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week0 / Notes0：def、arguments、return",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "模块",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第9章：模块、使用模块与第三方模块",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week4 / Notes4：import、packages、自己的module",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "基本数据类型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第5章：数字/字符串、list/tuple、dict/set",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Weeks0–2与6：numbers、str、list、dict",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "输入输出与调试",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第4.2节输入输出；第12章调试/测试；第13章文件IO",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week0输入输出；Week3纠错；Week5测试定位；Week6文件IO",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "从“安装Python”和“第一个Python程序”开始，再完成第5章基础、第6章函数；每个例子实际运行并改动输入。 读第9章模块、第12章错误/调试/测试、第13章IO；完成文件统计小程序，主动制造并修复输入错误。"
+    },
+    {
+     "source": "zh2",
+     "read": "偏好视频时，用原作者合集对应分集替代同主题文字讲解；调试方法仍配中文第12章，无须转看英文。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按Weeks0–2学习变量、类型、函数、条件和循环；读Notes并完成对应problem sets。 完成Weeks3–6的异常纠错、模块、单元测试和文件IO。正则与OOP为选读，可在后续技能继续。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://liaoxuefeng.com/books/python/basic/index.html",
+   "result": "核对全目录和模块/调试等实际正文，足以组成中文必学路线。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.bilibili.com/video/BV1c4411e77t/",
+   "result": "原作者中文公开视频，作为文字路线的可选替代；不声称配套作业全部免费。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cs50.harvard.edu/python/",
+   "result": "零基础课程配实际英文讲义及习题，覆盖当前必学项。"
+  }
+ ],
+ "findings": [
+  "旧中文官方教程假定已有编程基础，不适合作为零前置技能的唯一教学入口。",
+  "旧covers中NumPy/SciPy不属于当前技能范围，已移除。",
+  "中英文分别以自己的文字/课程完成学习，不需要跨语言补读。"
+ ],
+ "cross_language_fallbacks": []
+}

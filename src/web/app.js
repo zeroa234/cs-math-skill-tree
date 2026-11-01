@@ -418,6 +418,43 @@
         res.note ? el("p", { class: "res-covers" }, res.note) : null) : null);
   }
 
+  function learningPathSection(s) {
+    const path = s.learningPath;
+    if (!path) return el("p", { class: "route-summary route-pending" }, "中英文独立学习路线尚待逐知识点核对；以下是现有学习入口。");
+    const sources = new Map(path.sources.map(r => [r.key, r]));
+    const title = { zh: "中文", en: "英文" };
+    const linked = (key, text) => {
+      const r = sources.get(key);
+      return el("a", { href: r.url, target: "_blank", rel: "noopener noreferrer", title: r.title }, text || r.title);
+    };
+    const box = el("div", { class: "learning-paths" },
+      el("p", { class: "route-summary" }, ["zh", "en"].map(lang => `${title[lang]} ${path.routes[lang].covered}/${path.routes[lang].total}`).join(" · ") + " 个必学知识点有对应教学内容"));
+    for (const lang of ["zh", "en"]) {
+      const route = path.routes[lang];
+      const text = route.status === "complete" ? `覆盖 ${route.total}/${route.total}` : `待补 ${route.gaps.length} 项`;
+      box.append(el("details", { class: "learning-route", open: lang === "zh" },
+        el("summary", {}, `${title[lang]}独立学习路线 · ${text}`),
+        el("ol", {}, route.steps.map(step => {
+          const r = sources.get(step.source);
+          const cost = r.free === true ? "免费" : r.free === false ? "付费 / 部分免费" : "访问条件见说明";
+          return el("li", {}, linked(step.source), el("span", { class: "route-cost" }, cost),
+            el("p", {}, step.read), el("p", { class: "route-access" }, r.access));
+        })),
+        route.gaps.length ? el("p", { class: "route-gap" }, `尚待补齐：${route.gaps.join("、")}`) : null));
+    }
+    const table = el("table", { class: "coverage-table" },
+      el("thead", {}, el("tr", {}, el("th", { scope: "col" }, "知识点"), el("th", { scope: "col" }, "中文章节"), el("th", { scope: "col" }, "英文章节"))),
+      el("tbody", {}, path.topics.map(topic => el("tr", {},
+        el("th", { scope: "row" }, topic.topic, topic.stage === "extension" ? el("span", { class: "route-access" }, "选读延伸") : null,
+          topic.note ? el("span", { class: "route-access" }, topic.note) : null),
+        ...["zh", "en"].map(lang => el("td", {},
+          topic[lang]?.length ? topic[lang].map(ref => el("div", {}, linked(ref.source, (ref.extent === "partial" ? "部分：" : "") + ref.section))) : "待补"))))));
+    box.append(el("details", { class: "coverage-details" }, el("summary", {}, "逐知识点查看对应章节"), table));
+    for (const f of path.crossLanguageFallbacks) box.append(el("p", { class: "route-gap" },
+      `${title[f.lang_missing]}「${f.topic}」的跨语言补充：`, linked(f.source), `。${f.reason}`));
+    return box;
+  }
+
   function renderPanel(id, opts = {}) {
     const s = SK.get(id);
     const st = status(id);
@@ -508,6 +545,7 @@
     // Learning resources share the same presentation so Chinese materials are easy to find.
     kids.push(el("section", { class: "p-sec learning-resources" },
       el("h3", {}, "去哪学"),
+      learningPathSection(s),
       el("div", { class: "res-list" },
         resourceCard(s.resource, s.resource?.lang === "zh" ? "中文资源" : "英文资源"),
         resourceCard(s.zhAlt, "中文资源")),
