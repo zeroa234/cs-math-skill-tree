@@ -1,5 +1,7 @@
 # 宣传片：我把计算机专业做成了一棵技能树
 
+已发布到哔哩哔哩：[大肥鱼把计算机专业内容做成了技能树](https://www.bilibili.com/video/BV1FTx46CEN8/)（2026-11-01）。
+
 约 2 分 04 秒（124.1 s），1920×1080 / 30 fps，H.264 + AAC，响度 -16 LUFS。鲸鱼娘旁白 + 中文字幕 + CC0 背景音乐。成片 `output/promo/cs-math-promo.mp4`，封面 `output/promo/cover-{16x9,4x3,3x4,9x16}.png` 和 `cover.jpg`（大标题 + 鲸鱼娘笑脸半身 + 3D 技能树，README 顶图 `docs/images/cover.webp` 也是它），混音前的画面 `cs-math-promo.raw.mp4`（只换 BGM 时从它重混，不用重渲）。都不入库，可按下面的步骤重新生成。
 
 ## 段落

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/cover.webp" alt="我把计算机专业做成了一棵技能树：201 个技能、13 个领域、7 步、278 条必须前置" width="100%">
+  <a href="https://www.bilibili.com/video/BV1FTx46CEN8/"><img src="docs/images/cover.webp" alt="宣传片封面：我把计算机专业做成了一棵技能树（点击在哔哩哔哩观看）" width="100%"></a>
 </p>
 
 <h1 align="center">CS × 数学技能树</h1>
@@ -12,6 +12,7 @@
 <p align="center">
   <a href="https://zeroa234.github.io/cs-math-skill-tree/"><b>在线打开</b></a> ·
   <a href="https://github.com/zeroa234/cs-math-skill-tree/releases/latest"><b>下载离线包</b></a> ·
+  <a href="https://www.bilibili.com/video/BV1FTx46CEN8/"><b>看宣传片（B 站）</b></a> ·
   <a href="#怎么读这张图">怎么读这张图</a> ·
   <a href="#数据从哪来">数据从哪来</a>
 </p>
@@ -109,7 +110,7 @@ python -X utf8 scripts/package_web.py   # 打包离线 zip
 
 ## 宣传片
 
-《我把计算机专业做成了一棵技能树》，约 2 分钟，用 Remotion 和 Blender 做成，画面里的数字和树的形状都从数据算出来。做法见 [docs/promo-video.md](docs/promo-video.md)。
+在哔哩哔哩观看：[大肥鱼把计算机专业内容做成了技能树](https://www.bilibili.com/video/BV1FTx46CEN8/)（约 2 分钟）。用 Remotion 和 Blender 做成，画面里的数字和树的形状都从数据算出来，做法见 [docs/promo-video.md](docs/promo-video.md)。
 
 ## 用到的开源组件
 
