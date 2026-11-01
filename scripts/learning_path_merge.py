@@ -123,6 +123,17 @@ def merge_addition(rec, add, tag):
         rec["sources"].append(s)
         keys.add(k)
         by_url[(s["lang"], s["url"])] = k
+    for r in add.get("remove_sources", []):
+        key = r["key"]
+        if not any(s["key"] == key for s in rec["sources"]):
+            raise SystemExit(f"{rec['id']}: addition {tag} removes unknown source {key}")
+        rec["sources"] = [s for s in rec["sources"] if s["key"] != key]
+        for t in rec["topics"]:
+            for lang in ("zh", "en"):
+                t[lang] = [x for x in t.get(lang, []) if x["source"] != key]
+        for lang in ("zh", "en"):
+            rec["routes"][lang]["steps"] = [x for x in rec["routes"][lang].get("steps", []) if x["source"] != key]
+        rec.setdefault("findings", []).append(f"[{tag}] 删除来源 {key}：{r['reason']}")
     by_key = {s["key"]: s for s in rec["sources"]}
     for u in add.get("source_updates", []):
         s = by_key.get(rename.get(u["key"], u["key"]))
@@ -166,12 +177,20 @@ def merge_addition(rec, add, tag):
         rec.setdefault("findings", []).append(f"[{tag}] 未解决 {u.get('lang')}「{u.get('topic')}」：{u.get('reason', '')}")
 
 
+DESC_NOTES = {k: v.get("meta", []) for k, v in load(os.path.join(ROOT, "data", "curation", "scope.json"))["skills"].items()}
+
+
 def build(id_, skills):
     skill = skills[id_]
     arch = os.path.join(ARCHIVE, id_ + ".json")
     base = arch if os.path.exists(arch) else os.path.join(RAW, id_ + ".json")
     rec = load(base)
     rec["name"], rec["description"] = skill["name"], skill["desc"]
+    notes = DESC_NOTES.get(id_, [])
+    dropped_notes = [t["topic"] for t in rec["topics"] if t["topic"] in notes]
+    if dropped_notes:  # description notes (scope.json "meta") are not topics to teach
+        rec["topics"] = [t for t in rec["topics"] if t["topic"] not in notes]
+        rec.setdefault("findings", []).append("简介中的说明条目不作为知识点：" + "、".join(dropped_notes))
     for s in rec["sources"]:
         if s.get("tier") == "course":
             s["tier"] = "website"

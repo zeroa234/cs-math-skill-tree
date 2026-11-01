@@ -1,0 +1,375 @@
+{
+ "id": "P.4.5",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Software Engineering at Google（免费在线版）：Part III Testing 第 11–14 章",
+   "url": "https://abseil.io/resources/swe-book/html/ch11.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第 11 章 Testing Overview（为何测试、测试与可变更性）、第 12 章 Unit Testing（单测价值、覆盖率的意义与误用、防止脆弱测试）、第 13 章 Test Doubles、第 14 章 Larger Testing（集成与端到端测试、单测覆盖不到的缺口）。覆盖单元/集成/系统测试与覆盖率评估；性质测试只有零散提及，故障注入与可靠性质量评估不在本部分。",
+   "access": "免费在线 HTML（O'Reilly 授权公开版），无需注册；纸质版付费。",
+   "publisher": "Google（O'Reilly）",
+   "evidence": {
+    "url": "https://abseil.io/resources/swe-book/html/ch14.html",
+    "location": "第 11 章 Testing Overview、第 14 章 Larger Testing 正文",
+    "finding": "ch11 标题为 Testing Overview（作者 Adam Bender），ch14 标题为 Larger Testing（作者 Joseph Graves），正文均可读，分别约 5.7 万与 6.4 万字符。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《软件工程：经典、现代和前沿》第 7 章 软件测试（北大 101 计划教材）",
+   "url": "https://www.icourse163.org/course/PKU-1003177002",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "课程页列出的教材目录中，第 7 章为“软件测试”（第 8 章 软件集成、交付与部署）。章节标题可核，正文未打开；单元/集成/系统测试、覆盖率等小节内容未逐项核对，性质测试与故障注入是否覆盖未知。",
+   "access": "教材需购买（北京大学出版社 2024，价格未核、未购买）；章节表引自北大 MOOC 课页。",
+   "publisher": "北京大学出版社",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/PKU-1003177002",
+    "location": "参考资料段“第7章软件测试”“第8章软件集成、交付与部署”",
+    "finding": "课程页列举主教材章节时写明第 7 章软件测试、第 8 章软件集成、交付与部署。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "北京大学《软件工程》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/PKU-1003177002",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "课程概述点名“软件测试”为课程内容之一，并含小型项目实践；无分讲大纲，测试部分的讲次与深度未核。",
+   "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；视频与字幕需登录，未核对。",
+   "publisher": "北京大学 / 中国大学MOOC",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/PKU-1003177002",
+    "location": "课程概述第一段（主题列举）",
+    "finding": "概述列出软件测试等主题并说明含课程实践；“课程大纲”栏没有章节表。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《Property-based Testing-01-基于属性的测试介绍》（Echo Blog，houbb）",
+   "url": "https://houbb.github.io/2016/04/26/test-property-based-01-overview",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲清基于属性的测试与传统“例子驱动测试”的区别，并逐项解释关键概念：属性（对任何输入都成立的断言，如“排序后数组升序”）、生成器（随机生成整数/字符串/对象等输入）、以及缩小（shrinking）；末尾列出可直接用的工具：JUnit-quickcheck、jqwik（JUnit 5）、JCheck、QuickCheck、ScalaCheck，并说明哪些支持缩小。",
+   "access": "免费阅读，无需注册；简体中文。个人技术博客文章（非课程）。",
+   "publisher": "Echo Blog（houbb 的个人技术博客）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://houbb.github.io/2016/04/26/test-property-based-01-overview",
+    "location": "正文“详细介绍一下 Property-based Testing”下的属性/生成器等条目，以及“拓展的开源工具”列表",
+    "finding": "页面确认以排序算法为例讲属性、讲生成器与随机输入，并列出 JUnit-quickcheck、jqwik、QuickCheck、ScalaCheck 等支持缩小的工具。"
+   },
+   "added_by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《白盒测试方法论》（霍格沃兹测试开发学社 教程站）",
+   "url": "https://test-method.tutorial.hogwarts.ceshiren.com/test_method/L2/tutorial/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95%E8%AE%BA/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "“白盒测试的度量”一节逐条给出代码覆盖率概念：语句覆盖、判定覆盖、判定/条件覆盖、条件组合覆盖、分支覆盖、路径覆盖、指令覆盖、方法覆盖、类覆盖；“覆盖率统计的工具”讲 emma/cobertura/JaCoCo，“插桩原理”讲对 JVM 字节码按 block 插桩并计算覆盖块，“JACOCO 覆盖率报告”给出读报告的实践，“流程覆盖”讲流程覆盖率＝测试经过路径/业务子集路径。",
+   "access": "免费阅读，无需注册；简体中文。培训机构公开教程站。",
+   "publisher": "霍格沃兹测试开发学社（ceshiren.com）教程站",
+   "reupload": false,
+   "evidence": {
+    "url": "https://test-method.tutorial.hogwarts.ceshiren.com/test_method/L2/tutorial/%E7%99%BD%E7%9B%92%E6%B5%8B%E8%AF%95%E6%96%B9%E6%B3%95%E8%AE%BA/",
+    "location": "页面小节目录“代码覆盖率常见概念／覆盖率统计的工具／插桩原理／JACOCO覆盖率报告／流程覆盖”与正文对应段落",
+    "finding": "页面目录与正文均出现语句覆盖、判定覆盖、判定/条件覆盖、条件组合覆盖、分支覆盖、路径覆盖等定义，以及 JaCoCo 插桩与报告的实际做法。"
+   },
+   "added_by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "《第 6 章：混沌工程与服务可靠性》（Jimmy Song《AI 原生软件交付》在线书）",
+   "url": "https://jimmysong.io/zh/book/ai-native-software-delivery/chaos-engineering-and-service-reliability/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "把混沌工程明确定义为“严谨的实验实施方法”（也称故障注入测试），讲其来历（Netflix Chaos Monkey）、服务可靠性与韧性的区别，并给出实验流程：先定义表征正常行为的“稳态”、把预期转成假设、用工具注入故障模拟真实事件、再按假设评估结果（指标是否在可接受范围、是否按预期恢复）；另讲错误预算如何为实验提供依据、把混沌实验接进 CI/CD、以及安全与治理。",
+   "access": "免费在线阅读（作者站点）；简体中文。",
+   "publisher": "Jimmy Song（jimmysong.io）《AI 原生软件交付》在线书",
+   "reupload": false,
+   "evidence": {
+    "url": "https://jimmysong.io/zh/book/ai-native-software-delivery/chaos-engineering-and-service-reliability/",
+    "location": "正文“服务可靠性与服务韧性”之后讲混沌实验四步（稳态、假设、注入故障、评估）的段落，以及章节目录里的“错误预算…”“将混沌工程和 SLOs 集成到 CI/CD 流水线中”",
+    "finding": "页面确认混沌工程＝故障注入测试的定义、Netflix Chaos Monkey 案例，以及“定义稳态→提出假设→注入故障→评估结果”的完整实验步骤。"
+   },
+   "added_by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Hypothesis 官方文档（Python 的 property-based testing 库，含 Tutorial 与 Strategies 参考）",
+   "url": "https://hypothesis.readthedocs.io/en/latest/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "官方文档首页定义什么是 property-based testing（“写出对你描述的任意范围内所有输入都成立的测试，由库随机挑输入，包括你没想到的边界情况”）并给出可运行例子（@given(st.lists(st.integers() | st.floats())))；目录含 Quickstart、Tutorial、Introduction to Hypothesis、Built-in strategies、Custom strategies、Configuring test settings、Replaying failed tests 等，覆盖属性、生成器（strategies）、失败复现。",
+   "access": "免费阅读，无需注册；英文。官方 API/教程文档。",
+   "publisher": "Hypothesis 项目（Read the Docs 官方文档站）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://hypothesis.readthedocs.io/en/latest/",
+    "location": "首页“Welcome to Hypothesis!”段与左侧 Tutorial / Built-in strategies / Replaying failed tests 目录",
+    "finding": "页面确认 property-based testing 的定义与示例代码（@given + strategies），并列出从 Quickstart 到自定义策略、复现失败用例的学习路径。"
+   },
+   "added_by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Principles of Chaos Engineering（principlesofchaos.org，混沌工程原则）",
+   "url": "https://principlesofchaos.org/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "给出混沌工程的定义（对系统做实验以建立其承受生产环境扰动能力的信心），列出分布式系统的典型系统性弱点（回退设置不当、超时设置引发重试风暴、下游被打爆、单点故障级联失败），并把实验方法拆成四步：定义可度量的稳态（steady state）、假设对照组与实验组稳态不变、引入真实世界变量（服务器崩溃、磁盘故障、断网等）、通过比较两组稳态来否证假设；另讲如何在生产中把实验做安全。",
+   "access": "免费阅读，无需注册；英文（页面提供多语言切换）。",
+   "publisher": "principlesofchaos.org（混沌工程原则站点）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://principlesofchaos.org/",
+    "location": "“CHAOS IN PRACTICE” 四步（define steady state / hypothesize / introduce variables / try to disprove the hypothesis）与 “ADVANCED PRINCIPLES”",
+    "finding": "页面确认故障注入的实验化做法：稳态指标、假设、注入真实故障变量、用对照组与实验组比较来否证假设；并说明这是建立系统韧性信心的手段。"
+   },
+   "added_by": "review/pi-additions/P.4.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "单元/集成/系统测试",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7 章 软件测试、第 8 章 软件集成/交付与部署",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "课程概述“软件测试”",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 12 章 Unit Testing、第 14 章 Larger Testing",
+     "extent": "covered"
+    }
+   ],
+   "note": "章节标题可核；正文小节未打开。"
+  },
+  {
+   "topic": "性质测试",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "“详细介绍一下 Property-based Testing”整节 + “拓展的开源工具”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 11/12 章只在示例中提到 property-based 测试，无专章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Welcome to Hypothesis（定义与示例）；Tutorial；Built-in/Custom strategies；Replaying failed tests",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都没有系统讲性质测试的来源：英文书只在测试总览里提及，中文侧没有。；中文侧此前完全没有这一条。这篇文章讲清了性质测试的三个要点（属性是对任意输入都成立的断言、输入由生成器随机产生、失败用例要缩小），并给了排序的例子和可上手的 Java 工具（jqwik/JUnit-quickcheck）。属于入门级材料，够覆盖“性质测试”这个必学点的概念与做法，深度不如英文侧 Hypothesis 文档。；旧记录英文侧只有 SE at Google 第 11/12 章示例里提到 property-based 测试。Hypothesis 官方文档把它做成可执行的教程：怎么把“排序后升序”这类属性写成测试、怎么用 strategies 生成输入、失败后怎么复现，补上这一条。"
+  },
+  {
+   "topic": "覆盖率",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 7 章（覆盖率应在其中，未核小节）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "白盒测试的度量 → 代码覆盖率常见概念；覆盖率统计的工具；插桩原理；JACOCO 覆盖率报告；流程覆盖",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 12 章 Unit Testing（覆盖率的含义与误用）",
+     "extent": "covered"
+    }
+   ],
+   "note": "旧记录里中文只有教材“第 7 章 软件测试”的章名。这份教程把语句/判定/判定-条件/条件组合/分支/路径/指令/方法/类覆盖逐条定义清楚，再讲覆盖率是怎么靠字节码插桩统计出来的、怎么看 JaCoCo 报告，覆盖了“覆盖率”这一条（定义 + 工具 + 读报告）。"
+  },
+  {
+   "topic": "故障注入与质量评估",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh3",
+     "section": "第 6 章：混沌工程与服务可靠性（定义、Chaos Monkey 来历、实验四步、错误预算与 CI/CD 集成、安全治理）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 14 章 Larger Testing（集成/端到端测试的质量评估）；无故障注入专章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "CHAOS IN PRACTICE（稳态、假设、引入故障变量、否证假设）与 ADVANCED PRINCIPLES",
+     "extent": "covered"
+    }
+   ],
+   "note": "故障注入两语言都缺；质量评估英文只有测试层面的讨论（缺陷逃逸、测试金字塔），中文未核。；“故障注入”这一半由本章的混沌实验四步给出（定义稳态→假设→注入故障→评估），其中“稳态指标是否保持在可接受范围、系统是否按预期恢复”正是“质量评估”这一半：评估的不是代码覆盖率而是系统在故障下的可靠性表现。；故障注入这一半由四步实验法给出（含具体注入哪些真实故障变量）；质量评估这一半靠“稳态＝可度量输出”与“对照组/实验组比较”，即用可测指标判断系统在故障下是否仍达到质量要求。与已有的 SE at Google 第 14 章 Larger Testing（端到端质量判断）互补。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第 7 章 软件测试整章（需自备教材）→第 8 章 软件集成、交付与部署"
+    },
+    {
+     "source": "zh2",
+     "read": "跟课的软件测试部分，用课程项目练测试用例设计"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读概念段并照着写两个属性测试：一个测排序（输出升序且元素多重集不变），一个测“编码再解码等于原文”，用 jqwik 或 JUnit-quickcheck 跑，故意让属性失败一次，观察缩小后的最小反例"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读完覆盖率概念清单后，对一个已有项目跑 JaCoCo，报告里分别找出语句覆盖与分支覆盖的差值，说明差在哪类判定上；再按“插桩原理”解释为什么行覆盖会虚高"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "按四步设计一个实验：先写稳态指标（如订单接口 QPS 与错误率区间），再写“杀掉一个实例后应自动摘除并恢复”的假设，然后在测试环境注入实例故障，最后对照假设评估并记录结论"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "第 11 章 Testing Overview→第 12 章 Unit Testing→第 13 章 Test Doubles→第 14 章 Larger Testing"
+    },
+    {
+     "source": "r7-en1",
+     "read": "跟 Quickstart→Tutorial 写 3 个属性测试，再用 Custom strategies 造一个业务对象生成器，并用 Replaying failed tests 的方法复现一次失败"
+    },
+    {
+     "source": "r7-en2",
+     "read": "读四步法与 Advanced Principles，用其中的“steady state + 对照组/实验组”框架改写中文路线里的那个故障实验，并列出三条让实验在生产中安全的约束"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://abseil.io/resources/swe-book/html/ch11.html 与 ch14.html",
+   "result": "采纳：Testing Overview 与 Larger Testing 正文可读；确认无性质测试/故障注入专章。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/PKU-1003177002（主教材第 7 章）",
+   "result": "部分采纳：确认有“软件测试”章，但正文与小节不可核。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「软件测试 大学 课程」（早前查过）",
+   "result": "不合适：命中软件测试培训/就业向合集与期末速成，无发布者可核的大学测试课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "基于属性的测试 property-based testing 中文 教程 例子 假设 收缩",
+   "result": "采纳：houbb 的《基于属性的测试介绍》（含属性/生成器/缩小与 Java 工具清单）；fast-check/Kotest 英文文档与 YouTube 视频未用",
+   "by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "软件测试 白盒测试 语句覆盖 判定覆盖 条件覆盖 MC/DC 覆盖率 教程",
+   "result": "采纳：霍格沃兹测试开发学社《白盒测试方法论》（覆盖率概念 + 插桩 + JaCoCo）；博客园逻辑覆盖习题与百度百科“逻辑覆盖”作对照未登记",
+   "by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "混沌工程 故障注入 中文 文档 实践 阿里云 混沌 实验 稳态",
+   "result": "采纳：Jimmy Song《AI 原生软件交付》第 6 章（混沌工程四步 + 错误预算 + CI/CD）；MSUP 转载文与 chaosblade.io 站点（DNS 解析失败）未用",
+   "by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://houbb.github.io/2016/04/26/test-property-based-01-overview、hogwarts 白盒测试页、https://jimmysong.io/zh/book/…/chaos-engineering-and-service-reliability/",
+   "result": "采纳：三页正文均打开核对到属性/生成器的定义、覆盖率各类定义与插桩、以及混沌实验四步",
+   "by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://hypothesis.readthedocs.io/en/latest/",
+   "result": "采纳：官方文档首页确认 property-based testing 定义、示例代码与 Tutorial/Strategies/Replaying 目录",
+   "by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://principlesofchaos.org/",
+   "result": "采纳：确认稳态/假设/引入故障变量/否证假设四步与系统性弱点清单",
+   "by": "review/pi-additions/P.4.5.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文与其它软件工程子技能共用同一段泛化 covers，且把“按目录选择测试章节”当成已覆盖；本文件只保留教材第 7/8 章的章节级证据并标 partial。",
+  "旧条目 note 写“性质测试由 CMU 17-313 的相关教学材料补充”，但本次在英文主资源（SE at Google）里只有零散提及，没有专章，故性质测试两侧都判 partial/缺。",
+  "故障注入确实没有来源（旧条目已说明不并入必学范围之外的混沌工程），保留为缺口。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "软件测试、质量与可靠性",
+ "description": "单元/集成/系统测试、性质测试、覆盖率、故障注入与质量评估。",
+ "applied_additions": [
+  "review/pi-additions/P.4.5.json"
+ ]
+}

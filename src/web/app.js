@@ -434,12 +434,15 @@
       const text = route.status === "complete" ? `覆盖 ${route.total}/${route.total}` : `待补 ${route.gaps.length} 项`;
       box.append(el("details", { class: "learning-route", open: lang === "zh" },
         el("summary", {}, `${title[lang]}独立学习路线 · ${text}`),
-        el("ol", {}, route.steps.map(step => {
+        el("ol", {}, (seen => route.steps.map(step => {
           const r = sources.get(step.source);
           const cost = r.free === true ? "免费" : r.free === false ? "付费 / 部分免费" : "访问条件见说明";
-          return el("li", {}, linked(step.source), el("span", { class: "route-cost" }, cost),
-            el("p", {}, step.read), el("p", { class: "route-access" }, r.access));
-        })),
+          // A material used in several steps shows its cost and access note once, at its first step.
+          const first = !seen.has(step.source);
+          seen.add(step.source);
+          return el("li", {}, linked(step.source), first ? el("span", { class: "route-cost" }, cost) : null,
+            el("p", {}, step.read), first ? el("p", { class: "route-access" }, r.access) : null);
+        }))(new Set())),
         route.gaps.length ? el("p", { class: "route-gap" }, `尚待补齐：${route.gaps.join("、")}`) : null));
     }
     const table = el("table", { class: "coverage-table" },

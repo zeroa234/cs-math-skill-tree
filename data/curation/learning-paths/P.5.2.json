@@ -1,0 +1,443 @@
+{
+ "id": "P.5.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Android Developers — Android Basics with Compose（Google 官方免费自学课程）",
+   "url": "https://developer.android.com/courses/android-basics-compose/course",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "官方课程页单元结构：第一个 App、Compose 界面、列表与 Material Design、导航与应用架构（生命周期/状态提升）、连接互联网、数据持久化、WorkManager 后台任务、Views 与 Compose；配 codelab 与项目。覆盖平台生命周期、界面状态与数据持久化/后台同步；设备能力（相机/传感器/权限）与发布（Play 上架）不在课程单元里。",
+   "access": "课程免费，codelab 与代码可在线学；部分视频托管在 YouTube（英文讲解），需自备 Android Studio。",
+   "publisher": "Google（Android Developers）",
+   "evidence": {
+    "url": "https://developer.android.com/courses/android-basics-compose/course",
+    "location": "课程页单元列表（Get started / Compose for UI / …）",
+    "finding": "页面列出课程单元与各单元的 codelab 入口（首个 App、Compose 界面、自适应应用等），正文可读。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "“Android 之 Compose 开发基础”课程（Android Developers 官方中文页）",
+   "url": "https://developer.android.com/courses/android-basics-compose/course?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "同一门官方课程的中文版页面与中文 codelab：单元覆盖首个 App、Compose 界面、自适应、导航与架构、联网、数据持久化与后台任务。中文页正文为中文；课程内嵌视频多为英文讲解（字幕未核）。设备能力与上架发布同样不在单元内。",
+   "access": "免费；页面正文为中文，视频语言与字幕未逐一核对；需自备 Android Studio。",
+   "publisher": "Google（Android Developers 中文版）",
+   "evidence": {
+    "url": "https://developer.android.com/courses/android-basics-compose/course?hl=zh-cn",
+    "location": "中文课程页标题与单元列表",
+    "finding": "页面标题为“‘Android 之 Compose 开发基础’课程”，单元说明为中文（“打造您的首个应用”“使用 Compose 构建界面”等）。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "Flutter 开发文档（中文，docs.flutter.cn）",
+   "url": "https://docs.flutter.cn/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文文档站：指南/学习/API 参考，含状态管理、网络与持久化、平台集成、构建与发布（Android/iOS/Web）等章节。补“界面状态”“离线数据”“发布”在跨平台框架下的做法；不是课程，需要按文档自学。",
+   "access": "免费阅读；中文站为官方文档翻译（部分页面可能滞后/回退英文）。",
+   "publisher": "Google（Flutter 官方文档中文站）",
+   "evidence": {
+    "url": "https://docs.flutter.cn/",
+    "location": "站点顶部导航（指南、学习、API 参考）与首页正文",
+    "finding": "页面为中文的 Flutter 开发文档站，导航含指南/学习/API 参考，正文为中文。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Android Developers 中文：请求运行时权限（Privacy · 权限）",
+   "url": "https://developer.android.com/training/permissions/requesting?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲清设备能力的准入机制：为什么要在运行时请求权限、用 checkSelfPermission 检查是否已授权、用 ActivityResultContracts.RequestPermission 发起请求并处理用户拒绝（含“不再询问”）、以及“尽量减少权限请求”的隐私清单思路。是调用相机/传感器/位置等设备能力前的必做步骤。",
+   "access": "免费阅读，无需注册；简体中文（Android 官方文档中文版）。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/training/permissions/requesting?hl=zh-cn",
+    "location": "页面标题“请求运行时权限”与正文权限请求流程、隐私权核查清单（尽量减少权限请求）各节",
+    "finding": "中文标题与正文确认这是讲运行时权限申请的实操页（含“隐私权核查清单：尽量减少权限请求”），不是课程介绍页。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "Android Developers 中文：传感器概览（Sensors and location）",
+   "url": "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "按类别介绍设备能力来源：移动传感器（加速度计、陀螺仪等）、位置传感器、环境传感器，以及原始 GNSS 测量值；并给出传感器框架的基本概念（SensorManager、传感器类型与坐标系、采样与功耗考虑）。",
+   "access": "免费阅读，无需注册；简体中文（Android 官方文档中文版）。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview?hl=zh-cn",
+    "location": "页面标题“传感器概览”与左侧“移动传感器／位置传感器／环境传感器／原始 GNSS 测量值”分节",
+    "finding": "确认该页按传感器类别组织，覆盖移动/位置/环境传感器与 GNSS 原始测量。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "Android Developers 中文：构建离线优先应用（App architecture）",
+   "url": "https://developer.android.com/topic/architecture/data-layer/offline-first?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "定义离线优先应用（无需联网即可执行全部或部分核心功能），并说明做法落在数据层：用本地数据库/DataStore 作为唯一可信来源、联网时从远端刷新、网络不可用时仍能读写；给出读/写路径与后台同步（WorkManager）的组织方式，让离线期间的操作在恢复网络后同步。",
+   "access": "免费阅读，无需注册；简体中文（Android 官方文档中文版）。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/topic/architecture/data-layer/offline-first?hl=zh-cn",
+    "location": "页面标题“构建离线优先应用”与正文“离线优先应用是无需访问互联网就能执行…”“为了确保应用可在离线状态下正常运行，它必须具备以下能力”各段",
+    "finding": "中文正文确认讲数据层设计、本地与远端数据的关系，以及网络不可靠时应用应具备的能力。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "Android Developers 中文：为发布应用做准备 / 将您的应用上传到 Play 管理中心",
+   "url": "https://developer.android.com/studio/publish/preparing?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "发布准备：关闭调试功能（debuggable/isDebuggable）、准备发布密钥与签名（Keytool/Jarsigner，Android Studio 可代生成）、构建已签名且优化的 APK/AAB、准备外部服务器与资源、测试应用以进行发布；配套的“将您的应用上传到 Play 管理中心”页讲用 App Bundle 上传、Play 生成的拆分 APK、内部/Alpha/Beta 轨道分发与内测、更新时扩增 versionCode 并重新上传、上架前需经审核。",
+   "access": "免费阅读，无需注册；简体中文（Android 官方文档中文版；两个页面正文均为中文）。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/studio/publish/preparing?hl=zh-cn",
+    "location": "正文“关闭调试功能”“构建应用以进行发布”“测试应用以进行发布”各节；另查 https://developer.android.com/studio/publish/upload-bundle?hl=zh-cn 的“更新 app bundle”“内部轨道/审核”各段",
+    "finding": "两页标题分别为“为发布应用做准备”“将您的应用上传到 Play 管理中心”，正文为中文，包含签名构建、AAB 上传、内部测试轨道、版本代码递增与审核流程。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Android Developers: Request runtime permissions",
+   "url": "https://developer.android.com/training/permissions/requesting",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "英文同页：declare permissions in the manifest → check with checkSelfPermission → request via ActivityResultContracts.RequestPermission → handle denial / “don't ask again” → explain why the permission is needed；附 privacy checklist（minimize permission requests）。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/training/permissions/requesting",
+    "location": "页面标题 “Request runtime permissions” 与 permissions/privacy checklist 各节",
+    "finding": "确认是运行时权限申请的实操文档（check/request/handle denial 的完整流程）。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Android Developers: Sensors overview",
+   "url": "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "英文同页：motion sensors、position sensors、environmental sensors、raw GNSS measurements 的分类，以及 SensorManager 与传感器框架的基本概念（类型、坐标系、采样与功耗）。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview",
+    "location": "页面标题 “Sensors overview” 与 Motion/Position/Environmental sensors 分节",
+    "finding": "确认按传感器类别组织，覆盖移动/位置/环境传感器与 raw GNSS。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "key": "r7-en3",
+   "lang": "en",
+   "title": "Android Developers: Build an offline-first app",
+   "url": "https://developer.android.com/topic/architecture/data-layer/offline-first",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "英文同页：offline-first 的定义（可离线执行全部或部分核心业务逻辑）、以数据层为中心的设计（local database/DataStore as source of truth、remote refresh、读写路径）、网络不可靠时的行为要求，以及用 WorkManager 做后台同步。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/topic/architecture/data-layer/offline-first",
+    "location": "页面标题 “Build an offline-first app” 与开篇定义段、DataStore/WorkManager 相关小节",
+    "finding": "确认讲离线优先的数据层设计与同步机制。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "key": "r7-en4",
+   "lang": "en",
+   "title": "Android Developers: Prepare your app for release / Upload your app to the Play Console",
+   "url": "https://developer.android.com/studio/publish/preparing",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "英文同页：disable debugging、configure signing（Keytool/Jarsigner，Android Studio 生成密钥）、build a signed & optimized APK/AAB、prepare external servers、test for release；配套 “Upload your app to the Play Console” 讲 AAB 上传、Play 生成的 split APKs、internal/alpha/beta tracks、更新时递增 versionCode、上架审核。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "Google / Android Developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/studio/publish/preparing",
+    "location": "页面标题 “Prepare your app for release”，正文 “Disable debugging”“Build your app for release”“Test your app for release” 各节",
+    "finding": "确认是发布前的配置与签名构建实操页；配套上传页讲 App Bundle 上传与内测轨道。"
+   },
+   "added_by": "review/pi-additions/P.5.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "平台生命周期",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "导航与应用架构单元（Activity/Compose 生命周期与状态提升）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Navigation and app architecture 单元（lifecycle、state hoisting）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "界面状态",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Compose 界面与状态单元",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Compose for UI 单元（state、recomposition）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "设备能力",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "联网与数据持久化单元涉及权限与系统服务；相机/传感器不在单元内",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "请求运行时权限（checkSelfPermission→RequestPermission 合约→处理拒绝→隐私清单）；传感器概览（移动/位置/环境传感器、SensorManager）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Connect to the internet 与 Data persistence 单元；相机/传感器/权限无专门单元",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Request runtime permissions（完整申请流程）；Sensors overview（传感器分类与框架）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都缺设备能力（相机、传感器、蓝牙、权限模型）的系统单元。；旧记录中文侧只有官方课程单元，课程里没有相机/传感器/权限专门单元。现在两条中文官方文档补上：设备能力的“准入”（运行时权限申请与拒绝处理）由 r7-zh1 覆盖；能力本身（传感器分类与框架）由 r7-zh2 覆盖。两者合起来就是“设备能力”的完整入门。；英文侧原记录同样缺这一条。r7-en1 给权限准入流程，r7-en2 给传感器能力本身，两者合起来覆盖“设备能力”。"
+  },
+  {
+   "topic": "离线同步与发布",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "WorkManager/数据持久化单元覆盖离线与后台同步；上架发布不在课程内",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "Flutter 文档的持久化/网络与构建发布章节",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "构建离线优先应用：离线优先定义、数据层作为唯一可信来源、网络恢复后同步（WorkManager）；另 r7-zh4 讲发布",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data persistence 与 WorkManager 单元；Play 上架流程不在课程内",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en3",
+     "section": "Build an offline-first app（本地唯一可信来源 + 远端刷新 + WorkManager 同步）；另 r7-en4 讲发布",
+     "extent": "covered"
+    }
+   ],
+   "note": "离线/后台同步有单元覆盖，但“发布”（签名、Play 上架、灰度）两语言都没有课程内容。；离线同步这一半由 r7-zh3 覆盖：本地库/DataStore 作为 source of truth，联网时刷新、断网时仍可读写，后台用 WorkManager 同步。发布这一半由 r7-zh4 覆盖：签名与发布构建、AAB 上传、内部/内测轨道、versionCode 递增、上架审核。旧记录中文侧只有 Flutter 文档的泛泛“构建与发布”章节，现在两半都有 Android 官方中文实操文档。；r7-en3 覆盖离线优先与同步设计，r7-en4 覆盖发布准备（签名、AAB、测试轨道、versionCode、审核），两半齐全。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按单元顺序做中文 codelab：首个 App→Compose 界面→导航与架构→联网→数据持久化/WorkManager"
+    },
+    {
+     "source": "zh2",
+     "read": "需要跨平台或发布细节时，按 Flutter 中文文档的状态管理/持久化/构建发布章节自学"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "照着中文页写一遍权限申请：清单声明→checkSelfPermission→RequestPermission 合约→处理拒绝与“不再询问”，再读“尽量减少权限请求”清单自查"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读传感器概览的类别划分，用 SensorManager 注册一个加速度计监听并把三轴数值画成滚动曲线，注意采样率与耗电"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "按离线优先指南改一个已有小应用：本地库为唯一数据源、网络恢复后用 WorkManager 把离线期间的新增记录推到服务端"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "读“为发布应用做准备”，把 debuggable 关掉、生成签名并构建 AAB；再读“上传到 Play 管理中心”，走一遍内部测试轨道（不必真的公开发布），记录 versionCode 递增规则"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Unit 1–7 按序做 codelab（首个 App→UI→列表→导航与架构→联网→持久化→WorkManager）"
+    },
+    {
+     "source": "r7-en1",
+     "read": "Same permission flow in English, 用同一份代码核对中英文文档是否有差异（尤其 Android 版本行为变更）"
+    },
+    {
+     "source": "r7-en2",
+     "read": "读 Sensors overview，比较 motion/position/environmental 三类传感器的典型用途与精度/功耗取舍"
+    },
+    {
+     "source": "r7-en3",
+     "read": "读 offline-first 指南的数据层结构，画出读路径（local DB → UI）与写路径（UI → local → queue → remote）两张图"
+    },
+    {
+     "source": "r7-en4",
+     "read": "读 Prepare your app for release 与 Upload your app to the Play Console，列出上架前 checklist 并在自己项目上逐项打勾"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://developer.android.com/courses/android-basics-compose/course",
+   "result": "采纳：官方课程单元结构可核。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://developer.android.com/courses/android-basics-compose/course?hl=zh-cn 与 https://docs.flutter.cn/",
+   "result": "采纳：官方中文课程页正文为中文（视频语言未核），Flutter 中文文档补状态/持久化/发布。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://developer.android.com/training/permissions/requesting?hl=zh-cn",
+   "result": "采纳：中文正文确认是运行时权限申请实操页（含隐私核查清单）",
+   "by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://developer.android.com/develop/sensors-and-location/sensors/sensors_overview?hl=zh-cn",
+   "result": "采纳：中文“传感器概览”，按移动/位置/环境传感器与 GNSS 分节",
+   "by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://developer.android.com/topic/architecture/data-layer/offline-first?hl=zh-cn",
+   "result": "采纳：中文“构建离线优先应用”，讲数据层本地为可信来源与后台同步",
+   "by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://developer.android.com/studio/publish/preparing?hl=zh-cn 与 .../studio/publish/upload-bundle?hl=zh-cn",
+   "result": "采纳：两页中文正文确认签名构建、AAB 上传、内部测试轨道、versionCode 递增与审核；注意 /studio/publish?hl=zh-cn 顶层页标题仍是英文，未采用",
+   "by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://developer.android.com/{training/permissions/requesting, develop/sensors-and-location/sensors/sensors_overview, topic/architecture/data-layer/offline-first, studio/publish/preparing}",
+   "result": "采纳：四个英文页均打开核对标题与对应小节",
+   "by": "review/pi-additions/P.5.2.json"
+  },
+  {
+   "lang": "zh/en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://developer.android.com/training/camerax（301 重定向）与 /topic/libraries/architecture/workmanager（301）",
+   "result": "未采用：两个 URL 已跳转，本轮不登记（相机与 WorkManager 的具体用法在本轮来源里以链接形式出现，未作为覆盖依据）",
+   "by": "review/pi-additions/P.5.2.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文就是同一门 Android 课程的中文页，covers 写“仅覆盖移动开发分支，部分视频为英文”——本次确认中文页正文为中文、视频未核，且中文与英文是同一课程的两种语言版本，不是独立中文教学材料。",
+  "为补“中文视频/独立材料”，本次加 Flutter 中文文档作为跨平台补充，但仍不是中文授课课程；设备能力与发布两语言都缺，保留为缺口。",
+  "旧条目 note 说“以 Android 为移动开发实例，未完整覆盖桌面与跨平台开发”，与现状一致。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "移动应用开发",
+ "description": "平台生命周期、界面状态、设备能力、离线同步与发布。",
+ "applied_additions": [
+  "review/pi-additions/P.5.2.json"
+ ]
+}

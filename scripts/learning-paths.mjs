@@ -28,7 +28,8 @@ export function assessLearningPath(record, skill) {
       if (!present(s.official_search)) bad(`${s.key}: re-upload lacks an official-version check`);
     } else if (s.reupload !== false && REUPLOAD_HINT.test([s.publisher, s.access, s.title].join(' '))) bad(`${s.key}: possible third-party re-upload is not classified`);
   }
-  const expected = topicItems(skill.desc);
+  // Notes in the description (out-of-tree prerequisites, scope boundaries, relations) are not topics to teach.
+  const expected = topicItems(skill.desc).filter(t => !(skill.descNotes || []).includes(t));
   const topics = record.topics || [];
   const seen = new Set();
   for (const t of topics) {

@@ -1,0 +1,456 @@
+{
+ "id": "P.4.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Refactoring.Guru — Design Patterns 与 Refactoring（22 个经典模式 + 重构目录）",
+   "url": "https://refactoring.guru/design-patterns",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "站点声明“List of 22 classic design patterns, grouped by their intent”，按创建型/结构型/行为型组织，每个模式含意图、问题、解决方案、类图与多语言示例；另有 Refactoring 板块（代码坏味与逐条重构手法）。覆盖设计模式、接口与职责划分、重构，并以类图表达结构；不系统讲 GRASP 式职责分配，也不讲 UML 全图型。",
+   "access": "在线教程免费，无需注册；电子书与付费课程另计。",
+   "publisher": "Alexander Shvets（Refactoring.Guru）",
+   "evidence": {
+    "url": "https://refactoring.guru/design-patterns",
+    "location": "页面“Catalog of patterns / List of 22 classic design patterns”段",
+    "finding": "页面写明 22 个经典模式按意图分组，并给出“Look inside the catalog”入口；正文解释模式是常见设计问题的蓝图。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Refactoring.Guru 中文站：设计模式（22 个经典模式与重构）",
+   "url": "https://refactoringguru.cn/design-patterns",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文译文：设计模式定义、按意图分组的 22 种经典模式目录，每个模式的意图/适用场景/类图/示例代码；同站另有重构（代码坏味与手法）板块。覆盖模式、接口设计与重构；职责分配（GRASP）只有隐含体现，UML 只到类图。",
+   "access": "在线教程免费，无需注册；中文电子书与课程另行收费。",
+   "publisher": "Alexander Shvets 原着，Refactoring.Guru 中文站翻译",
+   "evidence": {
+    "url": "https://refactoringguru.cn/design-patterns",
+    "location": "页面“常用设计模式目录 / 根据意图分组的 22 种经典设计模式”段",
+    "finding": "中文页写明“查看根据意图分组的 22 种经典设计模式列表”，并解释设计模式是常见设计问题的典型解决方案。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《软件工程：经典、现代和前沿》第 5 章 面向对象开发方法（北大 101 计划教材）",
+   "url": "https://www.icourse163.org/course/PKU-1003177002",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "课程页列出的教材目录中，第 5 章为“面向对象开发方法”（第 4 章为结构化开发方法）。章节标题可核，正文未打开，职责分配（GRASP）、UML 图型与设计原则在章内的具体覆盖面未核。",
+   "access": "教材需购买（北京大学出版社 2024，价格未核、未购买）；章节表引自北大 MOOC 课页。",
+   "publisher": "北京大学出版社",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/PKU-1003177002",
+    "location": "参考资料段“第5章面向对象开发方法”",
+    "finding": "课程页列举主教材章节时写明“第5章面向对象开发方法”，与第4章结构化开发方法并列。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《软件工程与UML（第2版）》（罗炜、刘洁，高等教育出版社，“十三五”职业教育国家规划教材）",
+   "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=6275543d938b7cc2960eea63",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "高教社官方目录：单元 2 系统的功能需求建模（2.1 用例图概述与主要组件、2.2 识别参与者、2.3 识别用例、2.4 用例间关系——泛化/包含、2.5 用例文档与活动图）；单元 3 系统的静态建模（3.1 类的表示、3.2 类图——类关系表示法、关联重数与代码映射、如何建模类图，3.3 对象图，3.4 包图）；单元 4 系统的动态建模（4.1 顺序图——消息、对象创建与销毁、主要用途，4.2 协作图及其与顺序图的区别，4.3 状态图的定义、建模过程与代码映射）。全书以任务驱动组织，每个单元有引例、任务实施与拓展训练。",
+   "access": "需购买，高教社玄书平台标价 52.00 元（未购买）；另有配套数字课程在智慧职教平台，需登录、未核对。简体中文。",
+   "publisher": "高等教育出版社（玄书为高教社官方产品信息检索系统）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=6275543d938b7cc2960eea63",
+    "location": "图书详情页目录区“单元2/单元3/单元4”各节",
+    "finding": "页面标题“软件工程与UML（第2版）”，作者罗炜 刘洁，定价 52.00 元；目录逐节列出 2.1–2.5 用例图与用例文档、3.1–3.4 类图/对象图/包图、4.1–4.3 顺序图/协作图/状态图。"
+   },
+   "added_by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《职责分配原则》（GRASP 九种模式中文讲解，设计模式随笔系列）",
+   "url": "https://carecraft.github.io/designpattern/2014/11/GRASP/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "逐条讲 GRASP 九种“通用职责分配软件模式”：1 信息专家（谁拥有完成职责所需信息就把职责给谁）、2 创造者（A 是 B 的聚合/容器/持有初始化信息/记录实例/频繁使用时由 A 创建 B）、3 控制器、4 低耦合、5 高内聚、6 多态、7 纯虚构、8 间接性、9 变化预防（含与迪米特法则的关系）。每条给出适用判断条件与对耦合内聚的影响。",
+   "access": "免费阅读，无需注册；简体中文。博客文章（2014 年），不是课程。",
+   "publisher": "个人技术博客“驻足云端 / Halt in Air”（carecraft.github.io），属设计模式随笔系列的一篇",
+   "reupload": false,
+   "evidence": {
+    "url": "https://carecraft.github.io/designpattern/2014/11/GRASP/",
+    "location": "正文 1–9 各节及“参考”段",
+    "finding": "页面标题“职责分配原则”，正文从“1. 信息专家（Information Expert）”一直到“9. 变化预防模式（Protected Variations）”，每条给出职责分配规则与理由，末尾链到同系列“设计原则”“工厂方法模式”。"
+   },
+   "added_by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "《敏捷软件开发（珍藏版）》（Robert C. Martin 着，鄢倩、徐进译，清华大学出版社）",
+   "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_08196801.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "清华社官方书目页的“简明目录”逐章列出：第 7 章 什么是敏捷设计、第 8 章 单一职责原则（SRP）、第 9 章 开放-关闭原则（OCP）、第 10 章 里氏替换原则（LSP）、第 11 章 依赖倒置原则（DIP）、第 12 章 接口隔离原则（ISP）、第 20 章 包的设计原则。即 SOLID 五原则各占一章，另加包内聚/耦合的设计原则。",
+   "access": "需购买，清华大学出版社标价 159 元（未购买，仅核对官方书目页与目录）；简体中文。",
+   "publisher": "清华大学出版社（作者为 SOLID 五原则提出者 Robert C. Martin）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_08196801.html",
+    "location": "图书详情页“简明目录”段",
+    "finding": "页面列出定价 159 元、ISBN 9787302558545，简明目录含“第7章 什么是敏捷设计 109”“第8章 单一职责原则（SRP）121”“第9章 开放-关闭原则（OCP）127”“第10章 里氏替换原则（LSP）141”“第11章 依赖倒置原则（DIP）161”“第12章 接口隔离原则（ISP）171”“第20章 包的设计原则 317”。"
+   },
+   "added_by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "GRASP Design Principles — CSCI 5448 Object-Oriented Analysis and Design 课程讲义（Danya Rao, University of Colorado Boulder）",
+   "url": "https://home.cs.colorado.edu/~kena/classes/5448/f12/presentation-materials/rao.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "30 页讲义：先定义 responsibility（由单个对象承担或由一组对象协作承担），再逐条讲 9 个 GRASP 模式——Creator、Information Expert、Low Coupling、Controller、High Cohesion、Indirection、Polymorphism、Protected Variations、Pure Fabrication，并强调“从问题域识别对象与职责，再定类与方法”的职责驱动设计路线。",
+   "access": "免费公开 PDF（CU Boulder 课程材料页），无需注册；英文。",
+   "publisher": "University of Colorado Boulder，CSCI 5448 课程讲义（讲义作者 Danya Rao）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://home.cs.colorado.edu/~kena/classes/5448/f12/presentation-materials/rao.pdf",
+    "location": "第 1–3 页 “GRASP / Responsibility” 段与 9 个模式清单",
+    "finding": "PDF 提取文本确认：标题“GRASP Design Principles By Danya Rao”，正文列“9 GRASP patterns: Creator, Information Expert, Low Coupling, Controller, High Cohesion, Indirection, Polymorphism, Protected Variations, Pure Fabrication”，并给出 responsibility 的定义与职责分配到类的说明。"
+   },
+   "added_by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "uml-diagrams.org — UML diagram tutorials and reference（各类 UML 图的教学页与示例）",
+   "url": "https://www.uml-diagrams.org/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "按图种组织的 UML 教学/参考站：Class Diagrams、Composite Structures、Packages、Components、Deployments、Use Case Diagrams、Activities、State Machines、Sequence Diagrams、Communications、Timing Diagrams、Interaction Overviews、Profiles，每类有概念说明、记法说明与示例图，并解释 UML 与过程无关（不是开发过程）。",
+   "access": "免费阅读，无需注册；英文。（站点证书链在命令行校验下报错，用 curl -k 打开，内容正常。）",
+   "publisher": "uml-diagrams.org（UML 教学/参考站）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.uml-diagrams.org/",
+    "location": "首页左侧导航“UML Diagrams”下的各类图清单与开篇“The Unified Modeling Language”段",
+    "finding": "页面确认按图种分栏（Class/Components/Deployments/Use Case/Activities/State Machines/Sequence/Communications 等），并说明 UML 是标准建模语言而非开发过程。"
+   },
+   "added_by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "key": "r7-en3",
+   "lang": "en",
+   "title": "A Solid Guide to SOLID Principles（Baeldung，含每条原则的独立教程与 Java 例子）",
+   "url": "https://www.baeldung.com/solid-principles",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "先说明为什么需要 SOLID，再逐条讲 Single Responsibility、Open/Closed、Liskov Substitution、Interface Segregation、Dependency Inversion，每条链到带 Java 代码的独立教程（如“Single Responsibility Principle in Java”“Liskov Substitution Principle in Java”）。",
+   "access": "免费阅读，无需注册；英文。教程站文章，不是课程。",
+   "publisher": "Baeldung（Java 技术教程站）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.baeldung.com/solid-principles",
+    "location": "正文“2. The Reason for SOLID Principles”及其下方五条原则的条目与延伸阅读链接",
+    "finding": "页面标题“A Solid Guide to SOLID Principles”，正文列出五个原则名称，并在每个原则下链接到 Baeldung 的单独教程文章（含 Java 代码）。"
+   },
+   "added_by": "review/pi-additions/P.4.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "职责分配",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 5 章 面向对象开发方法（是否有 GRASP 未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "正文 1–9 节（信息专家、创造者、控制器、低耦合、高内聚、多态、纯虚构、间接性、变化预防）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "各模式的“职责/协作对象”段与类图（无 GRASP 专门章节）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "GRASP 9 patterns（Creator / Information Expert / Low Coupling / Controller / High Cohesion / Indirection / Polymorphism / Protected Variations / Pure Fabrication）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都没有系统讲 GRASP（信息专家、创建者、低耦合高内聚）的正文：英文靠模式的职责描述，中文靠未核的教材章节。；旧记录里中文只有“面向对象开发方法”一章的泛称，没有职责分配。这篇中文长文把 GRASP 九条职责分配规则逐条讲清，并给出“什么时候把职责给 A 而不给 B”的判断条件（如创建者的五个条件），足以支撑职责分配这个点；B 站没有对应的中文课程，中文侧以它为准，另配 r7-zh3 第 20 章的包级职责/耦合原则做延伸。；旧记录英文侧只在“各模式的职责/协作对象”段里间接涉及职责，没有 GRASP。这份大学课程讲义先定义 responsibility，再逐条给出 9 个职责分配模式的判据，正好补上“职责分配”这一条。"
+  },
+  {
+   "topic": "UML",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "各模式的类图（UML 类图子集）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第 5 章 面向对象开发方法（图型未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "单元 2（2.1–2.5 用例图、活动图）、单元 3（3.1–3.4 类图、对象图、包图）、单元 4（4.1–4.3 顺序图、协作图、状态图）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "各模式的类图（UML 类图子集）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Class Diagrams / Use Case Diagrams / Sequence Diagrams / State Machines / Activities / Components / Deployments / Packages 各教学页",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都只有类图，没有用例图/顺序图/状态图/活动图的系统讲解（那部分在 P.4.2 的 Cornell CS 5150 Lecture 4）。；这条要求的是会用 UML 表达分析与设计，教材按“功能需求建模→静态建模→动态建模”三个单元把用例图、活动图、类图、对象图、包图、顺序图、协作图、状态图的记法与建模步骤分开讲，每个单元都有引例和任务实施，不是只讲类图。；旧记录英文侧只有设计模式里的类图子集。uml-diagrams.org 按图种逐页讲概念、记法和示例，把 UML 从“类图”扩到用例图、顺序图、状态机、活动图、组件图、部署图、包图，覆盖该知识点。"
+  },
+  {
+   "topic": "接口",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模式实现中普遍以接口/抽象类解耦（如策略、工厂、适配器）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "模式目录中的接口式实现（Strategy/Adapter/Factory 等）",
+     "extent": "covered"
+    }
+   ],
+   "note": "接口作为设计手段在两语言的模式示例里反复出现，但没有独立的“接口设计”章节。"
+  },
+  {
+   "topic": "设计原则",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模式动机中隐含的开闭/单一职责等原则，无 SOLID 专章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "第 7 章 什么是敏捷设计；第 8–12 章 SRP/OCP/LSP/DIP/ISP；第 20 章 包的设计原则",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "模式动机中隐含的设计原则，无 SOLID 专章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en3",
+     "section": "The Reason for SOLID Principles 及五条原则各自教程",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言的这个来源都不单列 SOLID/设计原则，只在模式动机里体现。；SOLID 五个原则在中文版里各占一章（第 8–12 章），前面第 7 章先讲“什么是坏设计（僵化、脆弱、牢固、粘滞）”引出这些原则，后面第 20 章把同样的原则推到包一级。旧记录里中文只有“模式动机中隐含的原则”，现在是逐章教学。；旧记录英文侧只有“模式动机中隐含的设计原则”。Baeldung 的 SOLID 指南逐条讲五个原则并配 Java 代码例子（如 SRP 的独立教程），补上成体系的设计原则教学。"
+  },
+  {
+   "topic": "模式与重构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "22 个模式目录与重构板块（代码坏味与手法）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "22 个模式目录与 Refactoring 板块",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读设计模式总述与分类，再按创建型→结构型→行为型各挑 2–3 个模式实现一遍，最后读重构板块的代码坏味"
+    },
+    {
+     "source": "zh2",
+     "read": "第 5 章 面向对象开发方法（需自备教材）补分析/设计过程"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "选一个熟悉的业务（图书借阅/外卖下单），按单元 2 画用例图并写用例文档，按单元 3 画类图（含关联重数与代码映射）与包图，按单元 4 画一张顺序图和一张状态图，做到同一案例全套图前后一致"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读九条职责分配规则，回头检查上一步的类图：哪些职责分错了（例如把“计算总价”放在界面类里），按信息专家/创建者/低耦合高内聚改一版"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读第 7 章建立“坏设计”的判据，再读第 8–12 章 SOLID 五原则，每读完一章就把上一步的代码改一处；最后读第 20 章包的设计原则，检查包之间的依赖方向"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "设计模式总述→按分类读 22 个模式（含类图与代码）→Refactoring 板块"
+    },
+    {
+     "source": "r7-en1",
+     "read": "按讲义顺序过 9 个 GRASP 模式，对每个模式在自己项目的类图上找一个该用没用的地方并改掉"
+    },
+    {
+     "source": "r7-en2",
+     "read": "按图种读概念与记法页，每个图种用同一案例画一张图并对照示例检查记法（尤其顺序图的消息与状态机的迁移）"
+    },
+    {
+     "source": "r7-en3",
+     "read": "读 SOLID 总述与五条原则的独立教程，把每条原则用一个 Java 反例→重构的例子写进笔记"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://refactoring.guru/design-patterns",
+   "result": "采纳为英文主材料：22 个模式＋重构，页面自述内容范围。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://refactoringguru.cn/design-patterns",
+   "result": "采纳为中文主材料：同站中译，22 模式＋重构。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/PKU-1003177002（主教材第 5 章）",
+   "result": "部分采纳：确认有“面向对象开发方法”一章，但正文与小节不可核。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "GRASP 职责分配 设计模式",
+   "result": "不合适：结果只有“UML类图20分钟速通”“图解设计模式”“软件工程期末速成”等片段，没有讲 GRASP/职责分配的中文课程",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "GRASP 职责分配 模式 中文 课件 讲义 信息专家 创建者 控制器",
+   "result": "采纳：carecraft.github.io 的《职责分配原则》逐条讲 9 个 GRASP 模式；CSDN/博客园同主题多为转载短文，CODING10 站点证书报错打不开，未采用",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "UML和模式应用 目录 GRASP 职责分配 设计原则（限 ebooks.cmpbook.com / cmpbook.com）",
+   "result": "不合适：机械工业社电子书平台检索不到该书书目页，返回无关图书；改走高教社《软件工程与UML（第2版）》与清华社《敏捷软件开发（珍藏版）》",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=6275543d938b7cc2960eea63",
+   "result": "采纳：高教社官方页确认《软件工程与UML（第2版）》52.00 元，目录含用例图/用例文档/活动图/类图/对象图/包图/顺序图/协作图/状态图",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "敏捷软件开发 原则 模式与实践 目录 单一职责原则 开闭原则（限 tup.tsinghua.edu.cn）",
+   "result": "采纳：清华社《敏捷软件开发（珍藏版）》书目页 159 元，简明目录列出第 8–12 章分别为 SRP/OCP/LSP/DIP/ISP，第 20 章包的设计原则",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "GRASP patterns information expert creator controller lecture slides responsibilities pdf",
+   "result": "采纳：CU Boulder CSCI 5448 讲义 rao.pdf（30 页，9 个 GRASP 模式）作英文主线；kamilgrzybek 的 GRASP 长文作备份（未登记）",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://home.cs.colorado.edu/~kena/classes/5448/f12/presentation-materials/rao.pdf",
+   "result": "采纳：PDF 可读，确认 9 个模式清单与 responsibility 定义（站点证书链在命令行校验失败，用 curl -k 取到）",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.uml-diagrams.org/ 与 https://www.baeldung.com/solid-principles",
+   "result": "采纳：uml-diagrams.org 按图种提供 UML 教学页与示例；Baeldung 的 SOLID 指南逐条讲五个原则并链到带 Java 代码的独立教程",
+   "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "（未用 Tavily 查 UML/SOLID，直接打开 uml-diagrams.org 与 baeldung.com 两个已知站点）",
+   "result": "省额度：这两个站点地址由上一轮记录与常识可得，直接 fetch 核验",
+   "by": "review/pi-additions/P.4.3.json"
+  }
+ ],
+ "findings": [
+  "旧条目英文主资源就是 refactoring.guru，中文是它的中译站——等于同一本书的两个语言版本，覆盖面相同；本次如实把 GRASP 职责分配、UML 全图型、SOLID 原则都标 partial。",
+  "旧条目 note 说“UML 全图型与 GRASP 在 17-214 里只到类图级别（refactoring.guru 也只讲类图）”，本次确认 refactoring.guru 只有类图，且没有 GRASP 章节。",
+  "中文侧不再与 P.4.1/P.4.2 共用同一段泛化 covers：本节点用设计模式中译站＋教材第 5 章。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "软件设计与面向对象分析设计",
+ "description": "职责分配、UML、接口、设计原则、模式与重构。",
+ "applied_additions": [
+  "review/pi-additions/P.4.3.json"
+ ]
+}

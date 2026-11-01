@@ -1,0 +1,347 @@
+{
+ "id": "P.3.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Crafting Interpreters（Robert Nystrom，作者站点免费全文）",
+   "url": "https://craftinginterpreters.com/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "目录核对：Part II A Tree-Walk Interpreter（4 Scanning、5 Representing Code、6 Parsing Expressions、7 Evaluating Expressions、10 Functions、11 Resolving and Binding、12 Classes、13 Inheritance）、Part III A Bytecode Virtual Machine（14 Chunks of Bytecode、15 A Virtual Machine、16 Scanning on Demand、18 Types of Values、19 Strings、20 Hash Tables、21 Global/Local Variables、24 Calls and Functions（调用栈与栈帧）、25 Closures（upvalue 与堆上环境）、26 Garbage Collection（标记-清除＋Generational Collectors 设计笔记）、30 Optimization）。覆盖解释执行、栈与堆、GC 与运行时性能；JIT 与 FFI 不在书内。",
+   "access": "免费在线阅读全文（作者站点），无需注册；部分章节有读者社区翻译。",
+   "publisher": "Robert Nystrom（craftinginterpreters.com，© 2015–2021）",
+   "evidence": {
+    "url": "https://craftinginterpreters.com/contents.html",
+    "location": "Table of Contents：Part II 与 Part III 章节列表（14–30）",
+    "finding": "目录页列出 Part III 各章（Chunks of Bytecode、A Virtual Machine、Calls and Functions、Closures、Garbage Collection、Optimization 等），正文可点开。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《Rust 程序设计语言》简体中文版：第 4 章 认识所有权、第 15 章 智能指针",
+   "url": "https://kaisery.github.io/trpl-zh-cn/title-page.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第 4 章 认识所有权（栈与堆的存储、所有权与生命周期、借用）与第 15 章 智能指针（Box/Rc/RefCell、Drop 与释放时机）。只覆盖“栈/堆与内存生命周期”的语言级机制，不含解释执行、字节码 VM、GC 算法、JIT 与 FFI。",
+   "access": "免费在线（官方书社区中译），无需注册。",
+   "publisher": "Steve Klabnik 等原着，Rust 中文社区译",
+   "evidence": {
+    "url": "https://kaisery.github.io/trpl-zh-cn/ch15-00-smart-pointers.html",
+    "location": "ch04-00-understanding-ownership（认识所有权）、ch15-00-smart-pointers（智能指针）",
+    "finding": "两页标题分别为“认识所有权”“智能指针”，正文讲栈/堆、所有权与 Drop/Rc/RefCell。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "尚硅谷 JVM 精讲与 GC 调优教程（B 站“尚硅谷”账号，75 个分 P，中文授课）",
+   "url": "https://www.bilibili.com/video/BV1Dz4y1A7FB/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "分 P 逐条核对：19 栈的理解、20 局部变量表的说明、21 操作数栈、22 动态链接、25 本地方法栈；26 堆空间大小设置、27 新生代与老年代参数、29 MinorGC/MajorGC/FullGC、30 方法区的设置与演进、32 对象的创建方式、33 创建的对象的内存分配过程、34 对象的内存布局、35 对象的访问定位；36 解释器与 JIT 编译器、37 JIT 针对何种代码进行提前编译、38 两种不同的编译器 C1 和 C2；39 GC 的基本概念、40 引用技术算法的理解（引用计数）、41 可达性分析算法、42 垃圾标记和清除环节的算法、43 System.gc() 与 finalize()、44 内存溢出和内存泄漏、45 安全点与安全区域并行与并发、46 五种引用、47 GC 评价指标、48 GC 的组合关系、49–53 SerialGC/ParNewGC/ParallelGC/CMSGC/G1GC；60 调优的基本问题、61 调优的步骤、63–72 优化案例（调整堆大小提升吞吐量、逃逸分析之栈上分配、标量替换与锁消除、合理配置堆内存、CPU 占用高排查、G1 并发 GC 线程数对性能的影响、调整垃圾回收器对吞吐量的影响）、73 多种命令行工具、74 Arthas。中文侧缺的解释执行、JIT、GC 与运行时性能都在其中。",
+   "access": "B 站免费观看（登录可看高清）；中文授课；无字幕信息（未核对）。",
+   "publisher": "尚硅谷教育（B 站账号“尚硅谷”，课程作者/机构官方账号，非转载）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1Dz4y1A7FB/",
+    "location": "视频选集分 P 标题：19–25（栈与局部变量表/操作数栈/动态链接/本地方法栈）、36 解释器与 JIT 编译器、37 JIT 提前编译、38 C1 和 C2、39–44（GC 概念与算法）、60–74（调优案例与工具）",
+    "finding": "分 P 列表实际列出“36.解释器与JIT编译器”“37.JIT针对何种代码进行提前编译”“38.两种不同的编译器C1和C2”“42.垃圾标记和清除环节的算法”“64.优化案例2：逃逸分析之栈上分配”等，确认解释执行、JIT、GC、运行时调优都有专门讲次。"
+   },
+   "added_by": "review/pi-additions/P.3.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "你的第一个 C API 扩展模块（Python 3 官方文档中文版，扩展和嵌入 Python 解释器）",
+   "url": "https://docs.python.org/zh-cn/3/extending/first-extension-module.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "按步骤讲 FFI 的一个方向（Python 调 C）：What we'll do、Start with the headers、Running your build tool、Module export hook、The slot table、Exposing a function、Method definitions、Returning an integer、Accepting a string、The result，附录还讲其他构建工具与直接编译；另有同章“使用 C API: 杂项主题”讲错误与异常、引用计数、在 C++ 中编写扩展、给扩展模块提供 C API。",
+   "access": "免费在线阅读，无注册；简体中文（CPython 官方文档中文翻译）；含可直接照抄的 C 代码与构建命令。",
+   "publisher": "Python 软件基金会（CPython 官方文档，简体中文翻译版）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://docs.python.org/zh-cn/3/extending/first-extension-module.html",
+    "location": "页内小节：What we'll do / Start with the headers / Running your build tool / Module export hook / The slot table / Exposing a function / Returning an integer / Accepting a string / The result",
+    "finding": "页面标题为“你的第一个 C API 扩展模块”，小节按“写头文件→跑构建工具→模块导出钩子→槽表→导出函数→返回整数→接收字符串→结果”逐步展开，属于分步讲解＋示例的 FFI 教学，不是 API 索引。"
+   },
+   "added_by": "review/pi-additions/P.3.2.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "LLVM Tutorial — Kaleidoscope Chapter 4: Adding JIT and Optimizer Support（官方教程）",
+   "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl04.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "正文自述“this chapter describes two new techniques: adding optimizer support to your language, and adding JIT compiler support”，并按步骤给出 FunctionPassManager 与优化 pass 的设置、KaleidoscopeJIT 的创建、DataLayout 与把 IR 交给 JIT 执行的代码；后续还有 “Building a JIT: Starting out with KaleidoscopeJIT / Adding Optimizations – An introduction to ORC Layers / Per-function Lazy Compilation” 系列。",
+   "access": "免费官方文档，无注册；英文；C++ 代码示例。",
+   "publisher": "The LLVM Project（LLVM 官方文档）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl04.html",
+    "location": "章首说明段与 “FunctionPassManager”“KaleidoscopeJIT”“setDataLayout” 代码段；侧栏 “Building a JIT” 系列",
+    "finding": "页面原文写 “adding optimizer support to your language, and adding JIT compiler support”，并出现 InitializeModuleAndManagers 里用 KaleidoscopeJIT 与 TheModule->setDataLayout(TheJIT->getDataLayout()) 的完整示例，属分步 JIT 教学。"
+   },
+   "added_by": "review/pi-additions/P.3.2.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "The Rustonomicon — Foreign Function Interface（Rust 官方“死灵书”FFI 章）",
+   "url": "https://doc.rust-lang.org/nomicon/ffi.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "以 snappy 压缩库为例讲怎么写外部代码绑定：Calling foreign functions（extern 块、#[link] 与 C ABI）、调用示例与 size_t 映射，以及后续的回调、由 Rust 导出给 C 调用、可变参数等小节。",
+   "access": "免费在线阅读，无注册；英文；含可编译代码片段与 Cargo 构建脚本说明。",
+   "publisher": "The Rust Project（官方 Rustonomicon 文档）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://doc.rust-lang.org/nomicon/ffi.html",
+    "location": "“This guide will use the snappy compression/decompression library as an introduction to writing bindings for foreign code”“Calling foreign functions”代码段",
+    "finding": "页面给出 extern \"C\" 块、#[link(name = \"snappy\")] 与 snappy_max_compressed_length 的完整最小示例，并解释 ABI 与符号解析，是带示例的 FFI 教学。"
+   },
+   "added_by": "review/pi-additions/P.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "解释执行",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "36 解释器与 JIT 编译器（解释器部分）；19–22 栈的理解、局部变量表、操作数栈、动态链接",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Part II Tree-Walk Interpreter（4–13 章）与 Part III 字节码 VM（14–16、18–21 章）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧没有讲解释器/字节码执行的正文。；第 36 讲直接对比“解释器”与“JIT 编译器”两种执行方式，19–22 讲则把字节码执行时栈帧里的局部变量表、操作数栈与动态链接拆开讲，合起来就是中文的解释执行教学；替代了上一轮不可达的 javaguide 中文来源。"
+  },
+  {
+   "topic": "JIT",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "36 解释器与 JIT 编译器、37 JIT 针对何种代码进行提前编译、38 两种不同的编译器 C1 和 C2",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "r7-en1",
+     "section": "Kaleidoscope Chapter 4: Adding JIT and Optimizer Support（FunctionPassManager、KaleidoscopeJIT、setDataLayout）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都缺：Crafting Interpreters 只到字节码 VM 与简单优化，不讲 JIT 编译（模板 JIT/方法内联/去优化）。；三讲连起来讲清 JIT 的触发条件（热点代码）、提前编译的对象，以及 C1/C2 两种编译器的分工，是中文的系统 JIT 入门。；英文侧补上“把 IR 交给 JIT 执行”的完整操作链：建 JIT、设 DataLayout、按函数跑优化 pass 再即时编译，是现有 Crafting Interpreters（无 JIT）之外缺的那块。"
+  },
+  {
+   "topic": "GC",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "39 GC 的基本概念、40 引用技术算法的理解（引用计数）、41 可达性分析算法、42 垃圾标记和清除环节的算法、43 System.gc() 与 finalize()、44 内存溢出和内存泄漏、45 安全点与安全区域、46 五种引用、47 GC 评价指标、49–53 各代收集器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "26 Garbage Collection（标记-清除、三色标记、分代设计笔记）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧无来源（原中文来源 javaguide.cn 在 2026-11-01 打开时 DNS 解析失败，站点不可达）。；从 GC 基本概念、引用计数、标记与清除算法讲到具体触发方式与常见故障（OOM/泄漏），覆盖中文侧 GC 的系统教学；栈与堆部分由现有 zh1（Rust 中文版第 4/15 章）承担。"
+  },
+  {
+   "topic": "栈与堆",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 4 章 认识所有权（栈与堆）、第 15 章 智能指针（堆分配的释放）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "24 Calls and Functions（调用栈/栈帧）、25 Closures（堆上环境）、26 GC 的堆管理",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "FFI和运行时性能",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh2",
+     "section": "你的第一个 C API 扩展模块（What we'll do 到 The result 全流程）＋同章“使用 C API: 杂项主题”的引用计数与在 C++ 中编写扩展",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "60 调优的基本问题、61 调优的步骤、63–72 优化案例（吞吐量、逃逸分析之栈上分配、标量替换与锁消除、G1 并发 GC 线程数、垃圾回收器与吞吐量）、73–74 命令行工具与 Arthas",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "30 Optimization（NaN boxing、superinstruction 等运行时性能手段）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Foreign Function Interface：Calling foreign functions（extern \"C\"、#[link]、C ABI、回调与导出）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "30 Optimization（NaN boxing、superinstruction 等字节码 VM 的运行时优化）",
+     "extent": "covered"
+    }
+   ],
+   "note": "运行时性能有书内一章；FFI（与 C/本地库互操作）书里没有，英文侧也缺。；FFI 这一半由官方文档中文版承担：从写头文件、配构建工具、模块导出钩子到导出函数、收发参数，是 Python↔C 的完整 FFI 流程。；运行时性能这一半由 JVM 调优部分承担：以吞吐量/延迟为目标，用逃逸分析、栈上分配、标量替换、GC 线程数与收集器选择等手段实测改进，并给出性能排查工具链。；FFI 这一半由 Rustonomicon 官方 FFI 章承担：以 snappy 为例写外部库绑定、声明 ABI、处理所有权与回调，步骤与代码齐全。；运行时性能这一半由 Crafting Interpreters 第 30 章承担（解释器的指令分发与值表示优化），加上 r7-en1 的 JIT 章，英文侧“运行时性能”从字节码层到即时编译层都有对应内容。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第 4 章与第 15 章：把栈/堆、所有权与释放时机搞清楚，作为阅读英文 VM 内容的准备"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先 19–25（栈、局部变量表、操作数栈、动态链接、本地方法栈）→26–35（堆、对象分配与布局、访问定位）→36–38（解释器 vs JIT、C1/C2）→39–44（GC 概念与算法）→60–74（调优步骤与案例，至少做一遍逃逸分析与 G1 线程数两个案例，并用 Arthas 看一次运行时数据）。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "跟《你的第一个 C API 扩展模块》从写头文件到导出函数走一遍，做出一个能被 Python import 的 C 扩展；再读同章“使用 C API: 杂项主题”的引用计数与在 C++ 中编写扩展两节。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Part II（4–13 章，树遍历解释器）→Part III（14–16 字节码与 VM）→18–21（值与变量）→24–25（调用栈与闭包）→26（GC）→30（优化）"
+    },
+    {
+     "source": "r7-en1",
+     "read": "读 Kaleidoscope Chapter 4 的 FunctionPassManager 与 KaleidoscopeJIT 部分，把第 3 章的 IR 生成接上优化 pass 与 JIT 执行，跑一遍 REPL 确认是即时编译执行。"
+    },
+    {
+     "source": "r7-en2",
+     "read": "跟 Rustonomicon FFI 章写一个 extern \"C\" 绑定（snappy 或任一本地 C 库），做到 Rust 调 C、C 调 Rust 各一次。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://craftinginterpreters.com/contents.html",
+   "result": "采纳：24/25/26/30 章与栈堆/GC/优化对应；确认无 JIT/FFI。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://javaguide.cn/java/jvm/（原中文来源）",
+   "result": "不可达：DNS 解析失败（getaddrinfo 11002），curl 也返回 000；无法核对正文，故不能继续当中文来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「JVM 虚拟机 内存 垃圾回收 课程」",
+   "result": "不合适：返回 JVM 面试速成合集、虚拟机软件教程（内存设置/磁盘扩容）等，无发布者可核的系统课。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "（该渠道本次未单独检索，按已有核验结果推断）",
+   "result": "本次未在该渠道取得可核条目，故不作为覆盖来源；缺口如实保留。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "JVM 垃圾回收 执行引擎 即时编译 课程 / 自己动手写Java虚拟机",
+   "result": "采纳前者：尚硅谷 JVM 精讲与 GC 调优（BV1Dz4y1A7FB，尚硅谷官方账号，75 分 P）分 P 标题含解释器与 JIT、C1/C2、GC 算法与调优案例；后者检索全是 VMware 虚拟机安装教程，与本技能无关。",
+   "by": "review/pi-additions/P.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://docs.python.org/zh-cn/3/extending/index.html → /extending/first-extension-module.html",
+   "result": "采纳：官方文档简体中文版的“你的第一个 C API 扩展模块”是分步 FFI 教程（写头文件→构建→导出函数→收发参数）。",
+   "by": "review/pi-additions/P.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/LangImpl04.html",
+   "result": "采纳：官方 Kaleidoscope 第 4 章明确讲“adding optimizer support”与“adding JIT compiler support”，有 FunctionPassManager 与 KaleidoscopeJIT 代码。",
+   "by": "review/pi-additions/P.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://doc.rust-lang.org/nomicon/ffi.html",
+   "result": "采纳：Rustonomicon FFI 章以 snappy 为例讲 extern \"C\"、#[link]、ABI 与回调，属带示例的 FFI 教学。",
+   "by": "review/pi-additions/P.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://craftinginterpreters.com/contents.html（复核现有 en1 的 26/30 章）",
+   "result": "确认：26 Garbage Collection、30 Optimization（含 Generational Collectors 设计笔记）已覆盖 GC 与解释器运行时优化，且全书目录无 JIT、无 FFI 章节，故这两项另找 LLVM 与 Rustonomicon。",
+   "by": "review/pi-additions/P.3.2.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文主来源 JavaGuide JVM 专题在本次检查中不可达（域名解析失败），按规则不能再作为已打开来源；中文侧因此降为 gap，仅保留 Rust 中译的“栈与堆”作为可用片段。",
+  "旧条目 note 已写“FFI 与 native 互操作不在 17-470 与 Crafting Interpreters 里”，本次确认英文侧同样缺 FFI，JIT 也只有讨论级别，故英文判 partial。",
+  "旧条目称 26 章含“标记-清除 + Generational Collectors 设计笔记”，目录页可核到 Garbage Collection 章，具体小节未逐页打开。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "运行时、虚拟机与内存管理",
+ "description": "解释执行、JIT、GC、栈与堆、FFI和运行时性能。",
+ "applied_additions": [
+  "review/pi-additions/P.3.2.json"
+ ]
+}

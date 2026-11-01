@@ -1,0 +1,590 @@
+{
+ "id": "P.5.5",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMU 15-466/666 Computer Game Programming（Fall 2025, Jim McCann）",
+   "url": "https://graphics.cs.cmu.edu/courses/15-466-f25/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程页的 lesson 链接逐条核对：timing、assets、hierarchy、collision、walkmesh、meshes、materials、lighting、shadows、framebuffers、sound、text、network（共 13 个 lesson 页）。课程目标写明“both runtime systems and the asset pipelines to fuel them”，从底层 C++/OpenGL 写小游戏。覆盖游戏循环与实时模拟（timing）、资源管线（assets）、场景层级（hierarchy）、碰撞（collision/walkmesh）、渲染与光照（meshes/materials/lighting/shadows/framebuffers）、声音与网络；没有输入/相机与玩法调试工具的专门 lesson，也未见 ECS 专页。",
+   "access": "免费公开课程页与 lesson 页，无需注册；作业为每周小游戏与期末小组游戏。",
+   "publisher": "Carnegie Mellon University（Jim McCann）",
+   "evidence": {
+    "url": "https://graphics.cs.cmu.edu/courses/15-466-f25/",
+    "location": "页面中指向 15466.courses.cs.cmu.edu/lesson/* 的 13 个链接（timing、assets、hierarchy、collision…network）与 Course Goals 段",
+    "finding": "页面列出 13 个 lesson 链接（assets、collision、framebuffers、hierarchy、lighting、materials、meshes、network、shadows、sound、text、timing、walkmesh）；Course Goals 段写明覆盖 runtime systems 与 asset pipelines。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "GAMES104《现代游戏引擎：从入门到实践》（王希，GAMES 官方 B 站合集）",
+   "url": "https://www.bilibili.com/video/BV1oU4y1R7Km/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "B 站合集页分 P 逐条核对（2026-11 打开 https://www.bilibili.com/video/BV1oU4y1R7Km/ 页内 part 列表）：01.游戏引擎导论、GAMES104_Lecture5–Lecture11（渲染/动画/物理等分集，分 P 标题只有讲次编号）、12.游戏引擎中的粒子和声效系统、13.引擎工具链基础、14.引擎工具链高级概念与应用、15.游戏引擎的 Gameplay 玩法系统基础、16–17 Gameplay 基础/高级 AI、18–19 网络游戏架构、20.现代游戏引擎架构：面向数据编程与任务系统（Part 1/2）、21.动态全局光照和 Lumen、22.GPU 驱动的几何管线 nanite；另有 Piccolo 自研引擎源码解读（反射系统/渲染系统）三集。",
+   "access": "B 站免费观看；发布账号为 GAMES 系列官方账号，字幕需登录后显示，未核对。",
+   "publisher": "GAMES（图形学与游戏开发者社区）/ 王希",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1oU4y1R7Km/",
+    "location": "页面内分 P（part）标题列表，第 24–30、34 项",
+    "finding": "分 P 标题可读出第 15 集为“游戏引擎的 Gameplay 玩法系统基础”、第 13/14 集为“引擎工具链基础/高级概念与应用”、第 20 集为“现代游戏引擎架构：面向数据编程与任务系统”；第 5–11 集分 P 标题只有 Lecture 编号，无法据标题判断具体主题。"
+   },
+   "updated_by": [
+    "review/pi-additions/P.5.5.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：时间 (Time) 项目设置",
+   "url": "https://docs.unity3d.com/cn/current/Manual/class-TimeManager.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲清实时模拟的时间基准：Fixed Timestep（独立于帧率的时间间隔，决定物理计算与 FixedUpdate() 的执行间隔）、Maximum Allowed Timestep 等属性，以及“渲染帧率与物理步长分开”的基本设定。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册 docs.unity3d.com 中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/class-TimeManager.html",
+    "location": "正文“时间 (Time)”与属性表 “Fixed Timestep” 一行",
+    "finding": "中文正文写明 Fixed Timestep 是“独立于帧率的时间间隔，确定了执行物理计算和 FixedUpdate() 事件的时间间隔”。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：游戏对象简介（GameObjects）",
+   "url": "https://docs.unity3d.com/cn/current/Manual/GameObjects.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲游戏世界的组织方式：游戏对象是场景中的基本实体，本身不实现功能，功能由挂在对象上的组件（Component）提供；由此形成“对象＝容器、组件＝行为”的组合式（而非继承式）对象模型。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/GameObjects.html",
+    "location": "“游戏对象简介”开篇段与“游戏对象基础”小节",
+    "finding": "中文正文确认“游戏对象是 Unity 编辑器中最重要的概念”，并说明对象通过组件获得功能。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：输入（Input）",
+   "url": "https://docs.unity3d.com/cn/current/Manual/Input.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲玩家输入如何进入游戏循环：键盘/鼠标/触摸/手柄等输入源、Input Manager 的轴（Axis）与按键映射、以及用脚本轮询输入的用法。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/Input.html",
+    "location": "页面标题“输入”与“输入”章节下的输入源/输入管理器小节",
+    "finding": "标题与正文为中文，内容为输入源与输入映射的说明。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：内置渲染管线的摄像机（Camera）参考",
+   "url": "https://docs.unity3d.com/cn/current/Manual/class-Camera.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲相机这一“看世界的组件”：投影方式（透视/正交）、视场角、裁剪面、视口与深度、Clear Flags、以及相机与渲染管线的关系（决定场景如何被绘制）。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/class-Camera.html",
+    "location": "页面标题“内置渲染管线的摄像机检视面板窗口参考”与属性表",
+    "finding": "中文标题与属性说明确认讲视角/投影/裁剪等相机参数及其对渲染的影响。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-zh5",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：碰撞简介（Colliders）与刚体（Rigidbody）",
+   "url": "https://docs.unity3d.com/cn/current/Manual/CollidersOverview.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲碰撞检测的基本模型：当两个配置为碰撞的游戏对象占用相同物理空间时发生碰撞；碰撞体类型（盒/球/胶囊/网格等）的取舍、碰撞体与刚体的配合（谁提供物理模拟、谁只做检测）、触发器（Trigger）与碰撞事件的区别。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/CollidersOverview.html",
+    "location": "“碰撞简介”正文与“碰撞体类型简介”小节；另查 class-Rigidbody.html 的刚体组件参考",
+    "finding": "中文正文写明碰撞发生条件（两个配置为碰撞的对象占用相同物理空间）并列出碰撞体类型；刚体页为“刚体 (Rigidbody) 组件参考”。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-zh6",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：Mecanim 动画系统（AnimationOverview）",
+   "url": "https://docs.unity3d.com/cn/current/Manual/AnimationOverview.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲动画系统如何接入运行时：动画剪辑（Clip）、动画控制器（Animator Controller）与状态机、骨骼与 Avatar、动画层与混合树，以及动画如何与游戏对象/脚本、渲染一起在每帧更新。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/AnimationOverview.html",
+    "location": "页面标题“Mecanim 动画系统”与子主题列表",
+    "finding": "中文标题与主题列表确认覆盖动画剪辑、控制器、Avatar、混合等动画系统组成。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-zh7",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：渲染管线简介（Render pipelines）",
+   "url": "https://docs.unity3d.com/cn/current/Manual/render-pipelines-overview.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲渲染管线是什么、内置渲染管线与可编程渲染管线（URP/HDRP）的差别、以及选择管线时对材质/着色器/平台的影响——即“渲染管线如何与场景、相机、材质集成”。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/render-pipelines-overview.html",
+    "location": "页面标题“渲染管线简介”与正文对内置管线/URP/HDRP 的比较段",
+    "finding": "中文标题与正文确认讲三类管线及选择依据。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-zh8",
+   "lang": "zh",
+   "title": "Unity 官方中文手册：Unity 性能分析器（Profiler）",
+   "url": "https://docs.unity3d.com/cn/current/Manual/Profiler.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲调试/分析工具：性能分析器可获取应用运行的性能信息（CPU/GPU/内存/渲染各模块耗时），可连到网络设备或目标发布平台实测，也可在编辑器中运行以概览资源分配，从而定位瓶颈。",
+   "access": "免费阅读，无需注册；简体中文（Unity 官方手册中文版）。",
+   "publisher": "Unity Technologies（官方手册中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/Profiler.html",
+    "location": "“Unity 性能分析器”开篇段与“主题”小节",
+    "finding": "中文正文确认性能分析器用于获取应用性能信息、可连设备或在编辑器内运行、用于了解资源分配。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Game Programming Patterns（Bob Nystrom，全文免费在线）",
+   "url": "https://gameprogrammingpatterns.com/contents.html",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "免费在线书，目录含 Sequencing Patterns（Double Buffer、Game Loop、Update Method）、Decoupling Patterns（Component、Event Queue、Service Locator）、Behavioral Patterns（Bytecode、Subclass Sandbox、Type Object）、Optimization Patterns（Data Locality、Dirty Flag、Object Pool）。其中 Component 与 Type Object 讲“用组合替代继承”的对象模型，Subclass Sandbox 与 Bytecode 讲玩法逻辑怎么组织成可扩展的行为。",
+   "access": "免费在线阅读（作者授权全文），无需注册；英文。",
+   "publisher": "Bob Nystrom（gameprogrammingpatterns.com，作者官方在线版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://gameprogrammingpatterns.com/contents.html",
+    "location": "目录页 “Sequencing Patterns / Decoupling Patterns / Behavioral Patterns / Optimization Patterns” 下的各章标题",
+    "finding": "目录确认含 Game Loop、Update Method、Component、Type Object、Subclass Sandbox、Bytecode 等章，可直接定位到“游戏循环/组件对象模型/玩法行为组织”。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Unity Manual: Input",
+   "url": "https://docs.unity3d.com/Manual/Input.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "英文原版“Input”章节：输入源（键盘/鼠标/触摸/手柄）、Input Manager 的轴与按键映射、用脚本读取输入的用法。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "Unity Technologies（官方手册）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/Manual/Input.html",
+    "location": "页面标题 “Input” 与输入源/输入管理器小节",
+    "finding": "标题与正文确认这是输入系统的说明章节（非索引页）。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-en3",
+   "lang": "en",
+   "title": "Unity Manual: Camera Inspector window reference (Built-In Render Pipeline)",
+   "url": "https://docs.unity3d.com/Manual/class-Camera.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "英文原版相机参考：投影方式（perspective/orthographic）、Field of View、Clipping Planes、Viewport Rect、Depth、Clear Flags 等参数及其对渲染结果的影响。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "Unity Technologies（官方手册）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/Manual/class-Camera.html",
+    "location": "页面标题 “Camera Inspector window reference for the Built-In Render Pipeline” 与属性表",
+    "finding": "确认该页逐项说明相机参数（投影、视场、裁剪、视口、深度、清除标志）。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "key": "r7-en4",
+   "lang": "en",
+   "title": "Unity Manual: Unity Profiler",
+   "url": "https://docs.unity3d.com/Manual/Profiler.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "英文原版性能分析器：采集 CPU/GPU/内存/渲染等模块的耗时数据，可连设备或目标平台实测，用于定位帧内瓶颈与资源分配问题。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "Unity Technologies（官方手册）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.unity3d.com/Manual/Profiler.html",
+    "location": "页面标题 “Unity Profiler” 与开篇说明段",
+    "finding": "确认该页讲用 Profiler 采集应用性能信息并定位问题。"
+   },
+   "added_by": "review/pi-additions/P.5.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "游戏循环与实时模拟",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "引擎导论与游戏循环相关分集（分集清单未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "时间 (Time) 项目设置：Fixed Timestep（物理计算与 FixedUpdate 的固定间隔）等",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lesson: timing（帧时间与主循环）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只知道课程覆盖引擎原理，分集与“游戏循环”对应关系未核。；旧记录中文只有 GAMES104 的分集猜测。这一页讲清实时模拟的时间骨架：渲染帧（可变步长）与物理步（固定步长 Fixed Timestep）分离，FixedUpdate 按固定间隔执行——这正是“游戏循环与实时模拟”要掌握的核心机制。"
+  },
+  {
+   "topic": "游戏对象与组件架构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "引擎架构/游戏世界构建相关分集（未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "游戏对象简介（对象为容器、组件提供功能）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lesson: hierarchy（场景图/层级变换）；无 ECS 专页",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Decoupling Patterns: Component；Behavioral Patterns: Type Object（另 Game Loop、Update Method 在 Sequencing Patterns）",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧只有场景层级，没有 ECS 组件架构 lesson；中文侧未核。；这一条要的是“对象不靠继承层级而靠组合组件”的架构观。中文手册明确写游戏对象本身是最重要的概念、功能由组件提供，配合 GAMES104 第 20 集“面向数据编程与任务系统”可延伸到 ECS 式组织。；旧记录英文侧只有 CMU 15-466 的 hierarchy（场景图）一节，没有组件化对象模型。GPP 的 Component 章讲“把对象拆成可插拔组件”的动机与实现、Type Object 章讲“用类型对象代替子类爆炸”，正好补上“游戏对象与组件架构”。"
+  },
+  {
+   "topic": "输入与相机",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未核到输入/相机分集",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "输入（输入源、Input Manager 轴与按键映射、脚本读取输入）；另 r7-zh4 讲相机参数",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "13 个 lesson 里没有输入/相机专页（并入主循环与场景图）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Input（输入源与映射）；另 r7-en3 讲 Camera 参数",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都没有专门的输入/相机教学单元。；输入这一半由 r7-zh3 覆盖（输入源与映射、脚本读取），相机这一半由 r7-zh4 覆盖（投影方式、视场角、裁剪面、视口与深度、Clear Flags 与其对渲染的影响）。旧记录中文侧写“未核到输入/相机分集”，现在两半都有官方中文材料。；英文侧原记录写“13 个 lesson 里没有输入/相机专页”。现在用官方手册两页补齐：r7-en2 讲输入如何进入更新循环，r7-en3 讲相机参数（投影/视场/裁剪/视口/深度）如何决定画面。"
+  },
+  {
+   "topic": "碰撞检测与物理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "物理相关分集（未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh5",
+     "section": "碰撞简介（碰撞发生条件、碰撞体类型、触发器）+ 刚体组件参考",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lesson: collision、walkmesh（碰撞与可行走网格）",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧是碰撞检测/可行走区域，没有刚体动力学；中文侧未核。；中文页讲清碰撞检测的基本模型（两个配置为碰撞的对象占用相同物理空间）、碰撞体类型选择、碰撞体与刚体分工、触发器与碰撞事件，覆盖该点；引擎无关的碰撞算法细节仍以英文 CMU 15-466 的 collision/walkmesh 课为主。"
+  },
+  {
+   "topic": "动画与渲染管线集成",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "渲染/动画相关分集（未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh6",
+     "section": "Mecanim 动画系统（动画剪辑/控制器与状态机/Avatar/混合）；另 r7-zh7 讲渲染管线",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lessons: meshes、materials、lighting、shadows、framebuffers",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧覆盖渲染管线集成的多个环节（网格/材质/光照/阴影/帧缓冲）；蒙皮动画只在仓库记录的历届主题中出现，本次未核到 lesson 页。；动画这一半由 r7-zh6 覆盖（剪辑、状态机、Avatar、混合树），渲染管线这一半由 r7-zh7 覆盖（内置管线与 URP/HDRP 的差别、材质与平台影响）。“集成”部分即这两套系统如何在同一帧里更新与绘制。"
+  },
+  {
+   "topic": "资源管线与引擎架构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 01 集 游戏引擎导论与引擎架构主线（分集清单未核）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "lesson: assets（资源管线）＋Course Goals 的 asset pipelines",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧以 GAMES104 的引擎架构主线为准；其余知识项的分集对应未核。"
+  },
+  {
+   "topic": "玩法编程与调试工具",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "玩法系统/工具链分集（未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh8",
+     "section": "Unity 性能分析器（Profiler）：采集 CPU/GPU/内存/渲染耗时、连设备实测、定位瓶颈；另 zh1（GAMES104）第 15 集 Gameplay 玩法系统基础与第 13–14 集引擎工具链",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "每周小游戏（small games）与期末游戏的编程实践；无调试工具专页",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Behavioral Patterns: Subclass Sandbox（玩法能力的沙箱基类）、Bytecode（用数据驱动的指令表达行为）；另 r7-en4 讲 Profiler",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都没有调试工具的系统教学（英文靠做游戏过程，中文未核）。；玩法编程这一半由 GAMES104 第 15 集“Gameplay 玩法系统基础”覆盖（分 P 标题已核），调试工具这一半由 r7-zh8（性能分析器：怎么采数据、怎么定位帧内瓶颈）覆盖；第 13–14 集工具链补引擎侧编辑器/工具的组织方式。；玩法编程这一半由 GPP 的 Subclass Sandbox 与 Bytecode 两章覆盖（怎么把玩法能力组织成可扩展、可数据驱动的形式）；调试工具这一半由 r7-en4（Unity Profiler：采集与定位帧内瓶颈）覆盖。CMU 15-466 的每周小游戏实践作为编程练习补充。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 GAMES104 分集顺序看引擎架构、渲染、动画、物理、工具链部分（需先自查分集清单）"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读时间设置，把 Fixed Timestep 改成 0.02 与 0.01 各跑一次物理，观察帧率波动时物理表现是否稳定，理解固定步长与可变帧率的分离"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "用“空对象 + 组件”的方式搭一个玩家角色（移动/碰撞/动画三个组件分开），对比“继承一个 Player 基类”的写法，说出组合的好处"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "配一套输入映射（前后左右 + 鼠标视角），用脚本读轴值驱动角色；再读 r7-zh4 把相机改成第三人称跟随，调视场角与裁剪面避免穿模"
+    },
+    {
+     "source": "r7-zh5",
+     "read": "按碰撞简介搭一个“地面 + 掉落球”：先只用碰撞体看检测，再加刚体看物理响应，最后用触发器做拾取判定"
+    },
+    {
+     "source": "r7-zh6",
+     "read": "给角色接一个两状态（待机/跑）的动画控制器，用参数切换，再读 r7-zh7 比较内置管线与 URP 下同一场景的渲染差别"
+    },
+    {
+     "source": "r7-zh8",
+     "read": "开 Profiler 抓 60 秒 gameplay，找出耗时最高的三个模块，各写一条优化假设并在改完后复测"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "timing→assets→hierarchy→collision/walkmesh→meshes/materials/lighting/shadows/framebuffers→sound/network，按周做小游戏"
+    },
+    {
+     "source": "r7-en1",
+     "read": "读 Game Loop、Update Method、Component、Type Object 四章，用其中一种方式重写自己的角色对象模型；再读 Subclass Sandbox 与 Bytecode，把两种技能实现成数据驱动的形式"
+    },
+    {
+     "source": "r7-en2",
+     "read": "读 Input 章，做一遍“同一套输入既支持键盘也支持手柄”的映射；再读 r7-en3 的相机参数表，逐项改一次并记录画面变化"
+    },
+    {
+     "source": "r7-en4",
+     "read": "用 Profiler 抓一次 gameplay，按 CPU/GPU/内存分别定位一个瓶颈并复测"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://graphics.cs.cmu.edu/courses/15-466-f25/ 的 lesson 链接",
+   "result": "采纳：13 个 lesson 页可核（timing/assets/collision/…），确认无输入相机、ECS 与调试工具专页。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.bilibili.com/video/BV1oU4y1R7Km/（GAMES104）",
+   "result": "采纳为中文主材料：extract 读到第 01 集标题与同系列推荐；分集清单与字幕未核。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV1oU4y1R7Km/（页内 part 列表）",
+   "result": "采纳：直接从页面 HTML 读出 34 个分 P 标题，确认第 12/13/14/15/16–17/18–19/20/21/22 集主题；第 5–11 集只有 Lecture 编号，无法据标题判主题（B 站 API 返回 412，改用页面解析）",
+   "by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "游戏引擎架构 第2版 目录 游戏循环 游戏对象 组件 输入 相机 碰撞 动画 渲染管线 调试",
+   "result": "部分采纳：确认《游戏引擎架构》中译本有“7.2 游戏循环”等章节，但只搜到 CSDN 转载与知乎译文（商业书内容转载），出版社官方目录页未找到，故不登记该书；改用 Unity 官方中文手册",
+   "by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.unity3d.com/cn/current/Manual/{class-TimeManager, GameObjects, Input, class-Camera, CollidersOverview, class-Rigidbody, AnimationOverview, render-pipelines-overview, Profiler}.html",
+   "result": "采纳：9 个中文页标题与正文均为中文，逐页核对到 Fixed Timestep、游戏对象/组件、输入映射、相机参数、碰撞条件与碰撞体类型、Mecanim 组成、三类渲染管线、Profiler 用途；ExecutionOrder/DebuggingAndDiagnostics 等中文页未翻译（回退英文站），未采用",
+   "by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://gameprogrammingpatterns.com/contents.html",
+   "result": "采纳：目录确认含 Game Loop/Update Method/Component/Type Object/Subclass Sandbox/Bytecode 等章，全书免费在线",
+   "by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.unity3d.com/Manual/{Input, class-Camera, Profiler}.html",
+   "result": "采纳：三页英文标题与正文确认讲输入、相机参数、Profiler",
+   "by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://handmadehero.org/（Casey Muratori 的手把手游戏编程视频站）",
+   "result": "不合适：站点已跳到 mollyrocket.com 首页，没有可核对的分集/教学列表，未登记",
+   "by": "review/pi-additions/P.5.5.json"
+  },
+  {
+   "lang": "zh/en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://games104.tech/、https://games104.github.io/",
+   "result": "不可用：前者连接失败（000），后者 404，无法用课程官网交叉核对 GAMES104 讲次标题",
+   "by": "review/pi-additions/P.5.5.json"
+  }
+ ],
+ "findings": [
+  "旧条目英文 covers 逐条列了 Timing+Main Loop、Asset Pipelines、Scene Graphs、ECS、Collision、Materials/Lighting/Framebuffers、Sound、Text、LBS、Networking、playtesting；本次只核到 13 个 lesson 链接（无 ECS、无 LBS 专页），因此把“游戏对象与组件架构”“动画”等改判 partial 并注明未核项。",
+  "旧条目中文 covers 写“引擎架构分层、游戏世界构建、渲染、动画、物理、粒子与声音、工具链、玩法系统与基础 AI”，本次只能核到第 01 集标题与系列推荐，分集主题未核；已如实降级。",
+  "两语言都缺输入/相机与调试工具，保留为共同缺口。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "游戏开发与游戏引擎",
+ "description": "游戏循环与实时模拟、游戏对象与组件架构、输入与相机、碰撞检测与物理、动画与渲染管线集成、资源管线与引擎架构、玩法编程与调试工具。",
+ "applied_additions": [
+  "review/pi-additions/P.5.5.json"
+ ]
+}

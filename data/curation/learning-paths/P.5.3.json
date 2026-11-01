@@ -1,0 +1,655 @@
+{
+ "id": "P.5.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "The Site Reliability Workbook（Google 官方，全文免费在线）",
+   "url": "https://sre.google/workbook/table-of-contents/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "目录核对：第 1 章 How SRE Relates to DevOps、第 2 章 Implementing SLOs、第 3 章 SLO Engineering Case Studies、第 4 章 Monitoring、第 5 章 Alerting on SLOs、第 6 章 Eliminating Toil、第 7 章 Simplicity、第 8 章 On-Call、第 9 章 Incident Response、第 10 章 Postmortem Culture、第 11 章 Managing Load 等。覆盖可观测性、SLO、故障恢复与容量；CI/CD 流水线、制品/依赖锁定、构建溯源与 SBOM 不在本书。",
+   "access": "Google 官方站点免费在线全文（可逐章阅读/下 PDF），无需注册；纸质版付费。",
+   "publisher": "Google（Betsy Beyer 等编，O'Reilly）",
+   "evidence": {
+    "url": "https://sre.google/workbook/table-of-contents/",
+    "location": "Table of Contents 第 1–11 章标题",
+    "finding": "目录页列出第 1 章 How SRE Relates to DevOps 到第 11 章 Managing Load 等章节，正文可逐章打开。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Software Engineering at Google 第 18 章 Build Systems and Build Philosophy、第 21 章 Dependency Management（免费在线）",
+   "url": "https://abseil.io/resources/swe-book/html/ch18.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 18 章讲构建系统的依赖图、增量与可重现构建；第 21 章讲依赖管理（版本、传递依赖、冲突）。配合 SLSA 规范（https://slsa.dev/spec/v1.2/）覆盖供应链的构建溯源与出处证明。",
+   "access": "免费在线 HTML，无需注册。",
+   "publisher": "Google（O'Reilly）",
+   "evidence": {
+    "url": "https://abseil.io/resources/swe-book/html/ch18.html",
+    "location": "第 18 章 Build Systems and Build Philosophy 正文",
+    "finding": "页面标题为 Build Systems and Build Philosophy，正文讲构建系统为何存在与依赖图/增量构建。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文：DevOps 资源中心（Azure DevOps 概念与实践）",
+   "url": "https://learn.microsoft.com/zh-cn/devops/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文概念页：什么是 DevOps、什么是基础结构即代码（IaC）、DevOps 中的安全性（DevSecOps）、Git 版本控制、持续集成/持续交付、单元测试左移、监视、功能标志渐进式试验、通过版本控制的服务更新消除停机、CI/CD 治理等。覆盖 CI/CD、配置（IaC）与部分可观测性；SLO/错误预算、on-call、事件响应与复盘没有实操内容，供应链只有 DevSecOps 概念页。",
+   "access": "免费阅读，无需注册；个别交互式学习模块需微软账号（未核实）。页面为中文正文。",
+   "publisher": "Microsoft（Azure DevOps 文档）",
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/devops/",
+    "location": "DevOps 资源中心概念列表（什么是 IaC、什么是 DevOps、DevSecOps 等）",
+    "finding": "zh-cn 页面为中文正文，逐条列出“什么是基础结构即代码（IaC）”“什么是 DevOps？”“DevOps 中的安全性（DevSecOps）”等概念入口。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "GitHub 文档（中文）：保护供应链",
+   "url": "https://docs.github.com/zh/code-security/how-tos/secure-your-supply-chain",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文操作文档：依赖关系图、依赖项审查、SBOM 导出、制品证明（attestation）等供应链安全主题。补“制品与依赖锁定、构建溯源与软件物料清单”的实操路径；部分入口标题仍为英文，功能可用性依赖套餐。",
+   "access": "免费阅读，无需注册；启用某些功能需仓库权限与套餐支持（未逐一核实）。",
+   "publisher": "GitHub（官方文档中文版）",
+   "evidence": {
+    "url": "https://docs.github.com/zh/code-security/how-tos/secure-your-supply-chain",
+    "location": "页面标题“保护供应链”与正文目录",
+    "finding": "zh 页面标题为“保护供应链”，正文列出依赖关系、依赖项审查、SBOM、制品证明等条目。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《可观测性入门》（OpenTelemetry 官方中文文档 · 概念）",
+   "url": "https://opentelemetry.io/zh/docs/concepts/observability-primer/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲什么是可观测性（从外部输出推断系统内部状态），以及三类信号的分工与做法：链路（Trace，含 Span 与上下文传播）、Metrics（指标）、日志（Logs）；并说明为什么单靠日志不够、如何用三者联合定位问题。",
+   "access": "免费阅读，无需注册；简体中文（OpenTelemetry 官方文档中文版）。",
+   "publisher": "OpenTelemetry（CNCF 项目）官方文档中文站",
+   "reupload": false,
+   "evidence": {
+    "url": "https://opentelemetry.io/zh/docs/concepts/observability-primer/",
+    "location": "页面标题“可观测性入门”与左侧目录“链路（Trace）／Metrics／日志”",
+    "finding": "中文正文与目录确认本页讲可观测性概念与三类信号的划分。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《服务监控中的概念》（Google Cloud Observability 中文文档）",
+   "url": "https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "定义服务监控的三个核心概念：服务等级指标 SLI（用于测量性能）、服务等级目标 SLO（说明预期性能）、错误预算（从 1 − SLO 起算，未达标就下降），并说明如何用 SLO 隐含的错误预算降低服务风险、设计 SLO 时需要考虑的窗口与指标选择，以及配套的“消耗率提醒（burn rate alert）”“基于 SLO 的提醒”做法。",
+   "access": "免费阅读，无需注册；简体中文（Google Cloud 官方文档中文版）。",
+   "publisher": "Google Cloud Documentation（Observability / Cloud Monitoring）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.cloud.google.com/stackdriver/docs/solutions/slo-monitoring?hl=zh-cn",
+    "location": "正文“术语”一段（SLI/SLO/错误预算）与左侧“创建 SLO／消耗率提醒／使用基于 SLO 的提醒”",
+    "finding": "页面标题“服务监控中的概念”，正文用中文给出 SLI/SLO/错误预算定义，并列出消耗率提醒的配置章节。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "《发布策略科普篇：蓝绿/红黑/灰度/滚动……》（Zadig 官方博客）",
+   "url": "https://www.koderover.com/blog/release-strategy-knowledge",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "逐种讲发布策略及适用条件：蓝绿发布（两套环境切换）、红黑发布（不可变基础设施，Netflix 做法）、灰度/金丝雀发布（先小比例流量验证再全量，含准备工件、从 LB 摘除、升级、自动化测试、放回 LB、验证通过再推全量的步骤）、滚动发布；并给出各自的资源占用、回滚速度与风险对比。",
+   "access": "免费阅读，无需注册；简体中文（厂商官方博客）。",
+   "publisher": "KodeRover / Zadig 官方博客（国内 CI/CD 工具厂商）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.koderover.com/blog/release-strategy-knowledge/",
+    "location": "目录“不同的发布策略及特点介绍：蓝绿发布／红黑发布／灰度发布／滚动发布”与正文各节",
+    "finding": "页面确认按策略分节讲概念与执行步骤，并有“结合 Zadig 实践”的配置与执行小节。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "《“谈故障色变”到有章可循：美图 SRE 故障应急与复盘实践》（InfoQ，QCon 演讲实录）",
+   "url": "https://www.infoq.cn/article/q758X6eDoHOcQ49TDoIH",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "按故障生命周期讲：故障前做稳定性建设、演练与 OnCall 准备；故障中做应急响应、止损与恢复业务（含流量恢复节奏、预扩容预热、逃生通道设计）；故障后做复盘改进并进入 PDCA；用 MTTR/MTTF 度量，并把 MTTR 拆成识别、定位、干预恢复、验证各阶段来压缩；另讲常见故障原因（单机故障、负载变化、配置变更、资源耗尽等）与灾备建设。",
+   "access": "免费阅读，无需注册；简体中文（InfoQ 中文站演讲实录）。",
+   "publisher": "InfoQ 中文站（QCon 全球软件开发大会演讲整理，演讲人为美图高级运维经理石鹏）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.infoq.cn/article/q758X6eDoHOcQ49TDoIH",
+    "location": "正文“故障生命周期包括故障发生前、中、后三个阶段…”“提升稳定性需要度量，常用指标是 MTTR 和 MTTF…”等段",
+    "finding": "页面确认讲应急响应、止损与业务恢复、复盘 PDCA、MTTR/MTTF 度量与故障原因分类；并提到恢复时的预扩容与流量节奏。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-zh5",
+   "lang": "zh",
+   "title": "《大促活动前团购系统流量预算和容量评估》（美团技术团队）",
+   "url": "https://tech.meituan.com/2016/09/28/stress-test-before-promotion.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲容量怎么做：由运营给出的入口峰值流量推算各层（Web/服务/缓存/持久层）每个节点的峰值流量，按“活动峰值流量×余量系数”得出所需集群容量，产出给运维的扩容计划表；再讲容量评估——用线上或线下压测评估单机容量，含压测策略制定、压测环境选择、压测工具与场景/数据设计。",
+   "access": "免费阅读，无需注册；简体中文（美团技术团队官方博客）。",
+   "publisher": "美团技术团队（tech.meituan.com）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://tech.meituan.com/2016/09/28/stress-test-before-promotion.html",
+    "location": "正文“流量预算”“系统容量评估”“压力测试的目的”各节",
+    "finding": "页面确认从流量模型推算节点峰值流量、乘余量系数得到集群容量并产出扩容计划表，再以压测评估单机容量。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-zh6",
+   "lang": "zh",
+   "title": "《使用项目证明确立生成的来源》（GitHub 文档中文版 · Actions 工件证明）",
+   "url": "https://docs.github.com/zh/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲构建溯源：用工件证明（artifact attestation）为构建产物签发可验证的来源信息（哪个仓库、哪次工作流、哪个提交构建的），如何在 Actions 里生成与查看证明、如何强制工件声明、如何脱机验证证明；同栏目另有“锁定工作流依赖项”，讲把 Actions 依赖固定到具体版本/摘要以防供应链替换。",
+   "access": "免费阅读，无需注册；简体中文（GitHub 官方文档中文版）。",
+   "publisher": "GitHub Docs（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.github.com/zh/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations",
+    "location": "页面标题“使用项目证明确立生成的来源”与左侧“锁定工作流依赖项／强制工件声明／脱机验证证明”",
+    "finding": "中文正文与目录确认本页讲工件证明的生成、强制与脱机验证，并同栏提供工作流依赖锁定。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-zh7",
+   "lang": "zh",
+   "title": "《导出存储库的软件物料清单》（GitHub 文档中文版 · SBOM）",
+   "url": "https://docs.github.com/zh/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/export-dependencies-as-sbom",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲如何把仓库的依赖项导出为 SBOM（软件物料清单）：依赖项关系图采集到的依赖、导出 SPDX 格式清单、在发布时附带 SBOM 以说明制品由哪些组件构成。",
+   "access": "免费阅读，无需注册；简体中文（GitHub 官方文档中文版）。",
+   "publisher": "GitHub Docs（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.github.com/zh/code-security/how-tos/secure-your-supply-chain/establish-provenance-and-integrity/export-dependencies-as-sbom",
+    "location": "页面标题“导出存储库的软件物料清单”与所属栏目“建立来源追溯和完整性”",
+    "finding": "页面确认讲导出 SBOM 的操作与 SPDX 格式，栏目名直接点出“来源追溯与完整性”。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-zh8",
+   "lang": "zh",
+   "title": "《不可变版本》（GitHub 文档中文版 · 供应链安全）",
+   "url": "https://docs.github.com/zh/code-security/concepts/supply-chain-security/immutable-releases",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲发布制品为什么要“不可变”：版本一旦发布，其标签与工件不可被替换或篡改，防止供应链攻击者用同名制品替换已发布内容；说明不可变发布的机制与启用后的行为变化。",
+   "access": "免费阅读，无需注册；简体中文（GitHub 官方文档中文版）。",
+   "publisher": "GitHub Docs（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.github.com/zh/code-security/concepts/supply-chain-security/immutable-releases",
+    "location": "页面标题“不可变版本”与“供应链安全”栏目",
+    "finding": "中文页确认讲发布制品的不可变性与防替换，属于“制品锁定”的概念页。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Continuous Integration（Martin Fowler 长文，含十条实践）",
+   "url": "https://martinfowler.com/articles/continuousIntegration.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "以“Practices of Continuous Integration”为主线逐条讲：把所有东西放进受版本控制的主干、自动化构建、让构建自测、每人每天向主干推提交、每次推送都触发构建、构建坏了立刻修、保持构建快、在与生产相同的克隆环境里测试、让所有人看得见构建状态、自动化部署；并讲集成风格与常见反模式。",
+   "access": "免费阅读，无需注册；英文。作者本人站点长文（非简介页）。",
+   "publisher": "martinfowler.com（Martin Fowler）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://martinfowler.com/articles/continuousIntegration.html",
+    "location": "目录与正文“Practices of Continuous Integration”十条实践标题",
+    "finding": "页面确认列出十条 CI 实践（含 Automate the Build、Make the Build Self-Testing、Everyone Pushes Commits To the Mainline Every Day 等），是完整长文而非介绍页。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Continuous Delivery（Martin Fowler bliki）",
+   "url": "https://martinfowler.com/bliki/ContinuousDelivery.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "给出持续交付的定义与判定标准：软件在整个生命周期内保持可部署、团队把“保持可部署”排在加新功能之前、任何人改动后都能快速得到关于“是否可上生产”的自动化反馈、任何版本都能按需一键部署到任何环境。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "martinfowler.com（Martin Fowler bliki）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://martinfowler.com/bliki/ContinuousDelivery.html",
+    "location": "开篇定义段与其后的四条判定要点",
+    "finding": "页面确认“Continuous Delivery is a software development discipline…can be released to production at any time”以及四条判定标准（deployable throughout lifecycle、automated feedback、push-button deployments 等）。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "key": "r7-en3",
+   "lang": "en",
+   "title": "The Twelve-Factor App — III. Config（Store config in the environment）",
+   "url": "https://12factor.net/config",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲配置管理的基本原则：配置是部署之间会变的东西（数据库句柄、外部服务凭据、每环境主机名等），必须与环境代码严格分离、存进环境变量；把配置写成代码里的常量是违反十二要素的；并给出判定标准（代码库随时可以开源而不泄露凭据）。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "12factor.net（The Twelve-Factor App 官方站）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://12factor.net/config",
+    "location": "III. Config 正文（“An app’s config is everything that is likely to vary between deploys…”“A litmus test…”）",
+    "finding": "页面确认讲配置与代码分离、环境变量存配置、以及“代码库能否随时开源”的判定标准。"
+   },
+   "added_by": "review/pi-additions/P.5.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "CI/CD",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "持续集成/持续交付与 CI/CD 治理概念页",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 1 章 SRE 与 DevOps 的关系（流水线本身不在本书）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Practices of Continuous Integration（十条实践）；另 r7-en2 给持续交付的判定标准",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧主书不讲流水线实现，需配合第 18 章构建系统与外部 CI 文档；中文侧有 CI/CD 概念与做法页。；上一轮曾判定“英文 SRE Workbook 不讲 CI/CD 流水线，故英文侧无覆盖”。本轮改用 Fowler 的两篇：CI 长文逐条给出流水线该有的十条实践（自动构建、构建自测、每次推送触发、构建要快、与生产同构环境测试、自动化部署等），bliki 的 CD 页给出“随时可发布”的判定标准——这正好补上 CI/CD 的实现与判据，而不只是“SRE 与 DevOps 的关系”。"
+  },
+  {
+   "topic": "配置",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "什么是基础结构即代码（IaC）、Git 与版本控制",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 11 章 Managing Load 与第 15 章配置相关章节（配置实践）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en3",
+     "section": "III. Config：配置与代码分离、存进环境变量、判定标准",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧配置管理只在 SRE 语境出现，没有 IaC 工具教学。；旧记录英文侧的“配置”只挂在 SRE Workbook 的零散章节上。十二要素的 Config 一节把配置管理的第一原则讲成可判定的规则（什么算配置、为什么不能写进代码、如何用环境变量、用什么标准自检），补上该点；IaC 工具层的实践则依赖已有的 en2（构建与依赖管理）。"
+  },
+  {
+   "topic": "可观测性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "监视（什么是监视）与告警概念页",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "可观测性入门：什么是可观测性、链路（Trace）/Metrics/日志三类信号",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 4 章 Monitoring、第 5 章 Alerting on SLOs",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有“什么是监视”概念页，没有指标/日志/追踪的系统实践。；旧记录中文侧只有 MS Learn 的“监视”概念页。OpenTelemetry 官方中文文档把可观测性拆成 trace/metrics/logs 三类信号并讲各自的用途与配合方式，是成体系的中文教学材料（官方文档），补上该点。"
+  },
+  {
+   "topic": "SLO",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh2",
+     "section": "术语（SLI/SLO/错误预算）与“基于 SLO 的提醒／消耗率提醒”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 2 章 Implementing SLOs、第 3 章 SLO Engineering Case Studies",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧没有 SLO/错误预算内容。；SLO 这一条中文侧此前完全空缺（原记录只有英文 SRE Workbook 第 2–3 章）。这份 Google Cloud 中文文档给出 SLI/SLO/错误预算的定义、SLO 设计考虑点与消耗率告警做法，覆盖该点。"
+  },
+  {
+   "topic": "发布策略",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "用功能标志做渐进式试验、通过版本控制的服务更新消除停机",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "蓝绿发布／红黑发布／灰度（金丝雀）发布／滚动发布各节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 16 章金丝雀发布（Canarying Releases）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有功能标志与零停机更新概念，没有金丝雀/灰度发布的系统方法。；旧记录中文侧只有“功能标志做渐进式试验”的概念句。这篇文章把四种发布策略的定义、执行步骤（灰度发布六步：准备工件→摘除 LB→升级→自动化测试→放回 LB→通过则全量）与资源/回滚代价对比讲清，补上该点。"
+  },
+  {
+   "topic": "故障恢复与容量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "DevOps 概念页只在概述中提及可靠性；无 on-call/事件响应材料",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh4",
+     "section": "故障生命周期（事前演练与 OnCall、事中应急止损与业务恢复、事后复盘 PDCA）、MTTR/MTTF 度量；另 r7-zh5 讲容量",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 8 章 On-Call、第 9 章 Incident Response、第 10 章 Postmortem Culture、第 11 章 Managing Load",
+     "extent": "covered"
+    }
+   ],
+   "note": "故障恢复这一半由 r7-zh4 覆盖（应急响应、止损、恢复节奏与预扩容、复盘改进、MTTR 拆解）；容量这一半由 r7-zh5 覆盖（由峰值流量推算节点容量、余量系数、扩容计划表、压测评估单机容量）。两半合起来覆盖该点。"
+  },
+  {
+   "topic": "制品与依赖锁定",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "依赖关系图、依赖项审查、SBOM 导出",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh8",
+     "section": "不可变版本（发布制品不可替换/防篡改）；另 r7-zh6 的“锁定工作流依赖项”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第 21 章 Dependency Management（版本与传递依赖）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧是平台操作文档（如何启用功能），不是版本锁定策略的教学。；旧记录中文侧只有 GitHub“依赖关系图/依赖项审查”这类入口链接。现在两半齐了：制品侧由“不可变版本”讲发布产物不可替换的机制与理由；依赖侧由 r7-zh6 同栏的“锁定工作流依赖项”讲把依赖固定到具体版本/摘要。"
+  },
+  {
+   "topic": "构建溯源与软件物料清单",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "SBOM 导出与制品证明（attestation）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh6",
+     "section": "工件证明（attestation）的生成、强制与脱机验证；另 r7-zh7 讲导出 SBOM",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第 18 章 Build Systems（可重现构建）＋SLSA 规范（Provenance）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只有 GitHub 功能文档，缺“构建溯源”原理与 SLSA 等级的中文正文。；溯源这一半由 r7-zh6 覆盖（证明某产物由哪个仓库/工作流/提交构建，可脱机验证）；物料清单这一半由 r7-zh7 覆盖（把依赖导出为 SPDX SBOM 并随发布附带）。旧记录中文侧只到“SBOM 导出、制品证明”的标题级。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "什么是 DevOps→IaC→DevSecOps→Git 与版本控制→持续集成/持续交付→监视与功能标志"
+    },
+    {
+     "source": "zh2",
+     "read": "保护供应链：依赖关系图→依赖项审查→SBOM 导出→制品证明"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读三类信号的分工，给自己的服务接上 trace + metrics + 结构化日志各一条，能用一个请求 ID 串起三者"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "为一条核心链路定义 SLI（如成功率、P99 延迟），定一个 SLO 与时间窗口，算出错误预算，再配一条消耗率告警"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读四种发布策略后选一种写发布方案：灰度比例、验证指标、回滚触发条件与回滚动作"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "按故障生命周期写一份应急手册：告警分级、OnCall 响应、止损手段（限流/降级/熔断/切流）、恢复节奏；再写一份复盘模板（时间线、根因、改进项、验收）"
+    },
+    {
+     "source": "r7-zh5",
+     "read": "用自己系统的峰值流量做一次容量推算：各层节点峰值→乘余量系数→需要机器数→扩容计划表，再用压测核单机容量"
+    },
+    {
+     "source": "r7-zh6",
+     "read": "给发布流水线加上工件证明并在下载端脱机验证一次；同时把 Actions 依赖锁到具体版本/摘要"
+    },
+    {
+     "source": "r7-zh7",
+     "read": "导出一次 SBOM（SPDX），看清里面列了哪些组件与版本，再读 r7-zh8 的“不可变版本”理解为什么发布后不许替换制品"
+    },
+    {
+     "source": "r7-zh8",
+     "read": "读《不可变版本》，说清为什么发布后的制品不允许被同名替换，以及这和 SBOM/工件证明如何共同防住“换包”攻击"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "第 1 章→2–3 章 SLO→4–5 章监控与告警→6–7 章 toil 与简化→8–10 章 on-call/事件/复盘→11 章容量→16 章金丝雀发布"
+    },
+    {
+     "source": "en2",
+     "read": "第 18 章构建系统与第 21 章依赖管理，配合 SLSA 规范读 Provenance"
+    },
+    {
+     "source": "r7-en1",
+     "read": "对着十条 CI 实践给自己仓库逐条打分（构建是否自测、是否每次推送触发、构建时长、是否在与生产同构环境测试、是否自动化部署），列出三条最该补的"
+    },
+    {
+     "source": "r7-en2",
+     "read": "用 CD 的四条判定标准检查自己的发布流程：是否随时可部署、是否一键部署到任意环境、是否有自动化“可上生产”反馈"
+    },
+    {
+     "source": "r7-en3",
+     "read": "按 III. Config 做一次配置审计：把写死在代码里的环境相关值与凭据移到环境变量，并用“代码库随时可开源”这条自检"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://sre.google/workbook/table-of-contents/",
+   "result": "采纳：SLO/监控/on-call/事件/容量/金丝雀都有章节；确认无 CI/CD 流水线与供应链。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/devops/ 与 https://docs.github.com/zh/code-security/how-tos/secure-your-supply-chain",
+   "result": "采纳：中文 DevOps 资源中心覆盖 CI/CD/IaC/监视概念；GitHub 中文文档覆盖依赖/SBOM/制品证明的实操。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "query_or_url": "英文付费教材/课程（O'Reilly、No Starch、CUP 等）",
+   "result": "本次未取到可核的英文付费条目（未购买），英文覆盖以已核的免费材料为准。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "query_or_url": "英文付费教材/课程（O'Reilly、No Starch、CUP 等）",
+   "result": "本次未取到可核的英文付费条目（未购买），英文覆盖以已核的免费材料为准。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://opentelemetry.io/zh/docs/concepts/observability-primer/",
+   "result": "采纳：中文“可观测性入门”，确认讲 trace/metrics/logs 三类信号",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "SLO 错误预算 中文 文档 服务水平目标 可观测性 实践指南",
+   "result": "采纳：Google Cloud 中文《服务监控中的概念》（SLI/SLO/错误预算/消耗率提醒）；AWS CloudWatch 中文与 Atlassian 中文页作对照未登记",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "灰度发布 蓝绿部署 金丝雀发布 滚动更新 中文 官方文档 部署策略",
+   "result": "采纳：Zadig 官方博客《发布策略科普篇》（四种策略 + 步骤 + 对比）；腾讯云/博客园同主题文章未登记",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "容量规划 事故响应 复盘 on-call 中文 指南 SRE 故障恢复",
+   "result": "采纳：InfoQ 美图 SRE 故障应急与复盘（故障生命周期/MTTR/复盘）；得物与 SRE 精英联盟材料作对照未登记",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "容量规划 容量评估 压测 扩容 中文 实践 指南 系统容量",
+   "result": "采纳：美团技术团队《大促活动前团购系统流量预算和容量评估》（流量预算→容量→压测）；火山引擎/博客园同题文章未登记",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://docs.github.com/zh/…/export-dependencies-as-sbom、…/use-artifact-attestations、…/immutable-releases",
+   "result": "采纳：三页中文正文确认 SBOM 导出、工件证明（含锁定工作流依赖项）、不可变版本；此前猜的 /how-tos/secure-your-supply-chain/establish-provenance-and-integrity/export-a-software-bill-of-materials 为 404，已从供应链安全页的链接表里改到正确路径",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://martinfowler.com/articles/continuousIntegration.html 与 /bliki/ContinuousDelivery.html",
+   "result": "采纳：确认 CI 长文的十条实践标题与 CD 的四条判定标准",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://cloud.google.com/architecture/devops/devops-tech-continuous-integration（及其余 capability 页）",
+   "result": "不合适：各 capability 页 301 到 devops 能力总览页（索引性质），不能单独算知识点教学，未登记；改用 Fowler 两篇",
+   "by": "review/pi-additions/P.5.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://12factor.net/config",
+   "result": "采纳：III. Config 正文确认配置与代码分离、环境变量与自检标准",
+   "by": "review/pi-additions/P.5.3.json"
+  }
+ ],
+ "findings": [
+  "旧条目英文 covers 已写明“未覆盖 CI/CD 流水线本身与供应链整块，由 SE at Google 第 18/21 章与 SLSA、GitHub 文档覆盖”，与本次核对一致，保留并补第 21 章来源。",
+  "旧条目中文 covers 已如实写“SLO/on-call/事件响应未覆盖、供应链只有 DevSecOps 概念”，本次确认并进一步指出中文缺构建溯源原理与 SLSA 正文。",
+  "本节点中英两侧都是 partial，缺口方向不同：中文缺 SRE 运维侧，英文缺 CI/CD 工具与 IaC 教学。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "DevOps、持续交付与SRE",
+ "description": "CI/CD、配置、可观测性、SLO、发布策略、故障恢复与容量；制品与依赖锁定、构建溯源与软件物料清单。",
+ "applied_additions": [
+  "review/pi-additions/P.5.3.json"
+ ]
+}

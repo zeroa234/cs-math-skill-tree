@@ -1,0 +1,323 @@
+{
+ "id": "P.2.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Stanford CS107: Computer Organization & Systems（课程站，lectures + assignments 公开）",
+   "url": "https://web.stanford.edu/class/cs107/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Lectures 逐讲核对：01 Welcome、02 Unix and C、03 Integers, Bits and Bytes、04–05 Bitwise Operators、06 Chars and C Strings、07 C Strings, Buffer Overflows and Security、08 Introduction to Pointers、09 Stack and Heap、10 Heap Wrap, Generics and void *、11–12 Generics, void *, and Function Pointers、13–17 Introduction to x86-64（ALU、条件码与控制流）。覆盖内存布局（栈/堆）、指针、变量生命周期与 Unix/系统接口；链接（linking）不在其中。",
+   "access": "免费公开课程站（Calendar/Handouts/Lectures 与 GDB、Valgrind、Callgrind 指南），无需注册；无公开录像。",
+   "publisher": "Stanford University（CS107 教学团队）",
+   "evidence": {
+    "url": "https://web.stanford.edu/class/cs107/",
+    "location": "首页 Lectures 列表 Week 1–6（01–17 讲）",
+    "finding": "首页直接列出 17 讲标题，含 08 Introduction to Pointers、09 Stack and Heap、10 Heap Wrap, Generics and void *、13–17 x86-64。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "CMU 15-213 Introduction to Computer Systems：Schedule（Linking 等讲次）",
+   "url": "https://www.cs.cmu.edu/~213/schedule.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Schedule 中的 “Sep 15 Linking (pdf, pptx)”“The Memory Hierarchy”“Virtual Memory: Concepts/Details”“Dynamic Memory Allocation: Basic/Advanced” 等讲次与 pdf 讲义。补 CS107 没有的链接（静态/动态链接、符号解析）与虚拟内存/分配器。",
+   "access": "免费公开 schedule 与讲义 pdf，无需注册；讲义按讲链接。",
+   "publisher": "Carnegie Mellon University（15-213 教学团队）",
+   "evidence": {
+    "url": "https://www.cs.cmu.edu/~213/schedule.html",
+    "location": "Schedule 表 Sep 15 Linking、Sep 29–Oct 08 虚拟内存与动态内存分配各行",
+    "finding": "表内 9/15 一行为“Linking (pdf, pptx)”，另有 Virtual Memory: Concepts/Details 与 Dynamic Memory Allocation 两讲。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "南京大学《计算机系统基础》PA 实验讲义（ics2025，NEMU/AM/OS 逐级实现）",
+   "url": "https://nju-projectn.github.io/ics-pa-gitbook/ics2025/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "目录核对：PA0 开发环境（GNU/Linux、工具链）、PA1 最简单的计算机（RTFSC、基础设施、表达式求值、监视点）、PA2 冯诺依曼计算机系统（不停计算的机器、程序/运行时环境与 AM、输入输出）、PA3 批处理系统（用户程序和系统调用、文件系统）、PA4 分时多任务（多道程序、虚实交错的魔法/虚存、超越容量的界限）。用 C 写模拟器与运行时，覆盖程序的内存布局、运行时环境与系统调用接口；没有系统讲 C 指针语法，也没有链接（linking）一节。",
+   "access": "免费在线阅读（GitBook），无需注册；实验需自备 Linux 环境与源码。",
+   "publisher": "南京大学（计算机系统基础课程组，PA 项目）",
+   "evidence": {
+    "url": "https://nju-projectn.github.io/ics-pa-gitbook/ics2025/",
+    "location": "侧栏 PA0–PA4 各章小节",
+    "finding": "侧栏列出 PA0–PA4 与各章小节（如 PA2“程序, 运行时环境与AM”“输入输出”，PA4“虚实交错的魔法”），正文可读。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "计算机系统基础（一）：程序的表示、转换与链接（南京大学，袁春风；中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/NJU-1001625001",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程概述原文把内容分成三个主题：（1）表示——不同数据类型在寄存器/存储器中的表示与存储、指令的格式编码与存储、存储地址（指针）的表示；（2）转换——过程（函数调用）、循环、选择等语句与机器级代码的对应关系；（3）链接——多个可重定位目标文件如何链接生成可执行目标文件并加载到系统中。正好补现有中文来源缺的“链接”，并给出指针的机器级表示视角。",
+   "access": "中国大学MOOC 免费注册后可学习视频（认证证书另收费）；中文授课；字幕未核对。参考资料页列出袁春风《计算机系统基础（第2版）》前 4 章与《深入理解计算机系统》第 3 版。",
+   "publisher": "南京大学（课程团队：袁春风），中国大学MOOC 平台",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/NJU-1001625001",
+    "location": "spContent、课程概述第 1–3 条、授课目标下的四个问题、参考资料",
+    "finding": "概述原文写明“（3）链接。多个可重定位目标文件如何链接生成可执行目标文件并加载到系统中”，并要求回答“多个程序模块是如何链接起来形成可执行目标文件的？”；同时写明“存储地址（指针）的表示”。课程大纲区域为 JS 渲染未取到逐讲标题。"
+   },
+   "added_by": "review/pi-additions/P.2.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "C语言程序设计（浙江大学，翁恺；中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/ZJU-9001",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "逐讲标题经 B 站同名镜像分 P 核对：第 9 章 指针（9.1.1 取地址运算：&运算符取得变量的地址、9.1.2 指针：指针变量就是记录地址的变量、9.1.3 指针的使用、9.1.4 指针与数组、9.1.5 指针与 const、9.2.1 指针运算）；第 12 章 程序结构（12.1.1 全局变量：定义在函数之外的变量，全局的生存期和作用域、12.1.2 静态本地变量：能在函数结束后继续保有原值的本地变量、12.1.3 返回指针的函数与使用全局变量的贴士）；第 14 章 可变数组与链表（14.1.1–14.1.3 可变数组及其数据访问与自动增长、14.2.1 可变数组的缺陷、14.2.2–14.2.6 链表及其函数/搜索/删除/清除）。补中文侧缺的指针系统讲解与对象生命周期。",
+   "access": "中国大学MOOC 免费注册后可学习视频（认证证书另收费）；中文授课；字幕未核对。",
+   "publisher": "浙江大学（课程团队：翁恺），中国大学MOOC 平台",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/ZJU-9001",
+    "location": "官方课程页标题与 spContent/课程概述；逐讲标题另见 B 站镜像 https://www.bilibili.com/video/BV1ALSyBREDu/ 的分 P 列表（9.1.1–9.2.1、12.1.1–12.1.3、14.1.1–14.2.6）",
+    "finding": "官方页确认为浙江大学《C语言程序设计》，概说“本课程是后续的操作系统、编译原理、体系结构等课程的基石”，课程大纲区域为 JS 渲染；镜像分 P 实际列出“9.1.2 指针：指针变量就是记录地址的变量”“12.1.1 全局变量：定义在函数之外的变量，全局的生存期和作用域”“12.1.2 静态本地变量：能在函数结束后继续保有原值的本地变量”“14.2.2 链表”，即指针与生命周期（生存期）都有专门讲次。"
+   },
+   "added_by": "review/pi-additions/P.2.2.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "【浙江大学】C语言入门与进阶 翁恺（全 129 讲）（B 站，UP 主“哔哩大学教学中心”转载）",
+   "url": "https://www.bilibili.com/video/BV1ALSyBREDu/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "129 个分 P，其中进阶部分可逐讲核对：7 函数、8 数组、9 指针（9.1.1–9.2.x）、10 字符串、11 结构类型、12 程序结构（12.1.1 全局变量与生存期、12.1.2 静态本地变量、12.2 宏、12.3 多源代码文件/头文件/声明）、13 文件与位运算、14 可变数组与链表。",
+   "access": "第三方转载，授权未核。B 站免费观看；中文授课；无字幕信息（未核对）。",
+   "publisher": "课程作者为浙江大学翁恺；B 站 UP 主“哔哩大学教学中心”（非浙大官方账号、非课程团队账号），第三方转载",
+   "reupload": true,
+   "official_search": "已打开中国大学MOOC 官方课程页 ZJU-9001《C语言程序设计》（浙江大学）确认官方版存在并登记为 r7-zh2，官方大纲为 JS 渲染取不到逐讲标题，故保留该转载版作分 P 证据；B 站检索“翁恺 C语言”“浙江大学 C语言入门与进阶”命中多个个人转载，未见浙大官方账号发布该课。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1ALSyBREDu/",
+    "location": "视频选集分 P：9.1.1 取地址运算、9.1.2 指针、9.1.5 指针与 const、12.1.1 全局变量、12.1.2 静态本地变量、14.2.2 链表",
+    "finding": "分 P 标题逐条可读，确认指针与生存期（全局生存期、静态本地变量）是成章讲解，不是目录占位。"
+   },
+   "added_by": "review/pi-additions/P.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "内存布局",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "PA2 程序/运行时环境与 AM、PA4 虚实交错的魔法（虚存）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "09 Stack and Heap、10 Heap Wrap, Generics and void *",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Virtual Memory: Concepts/Details、Dynamic Memory Allocation: Basic/Advanced",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧从运行时环境与虚存讲内存布局，没有 C 程序段布局的专门小节。"
+  },
+  {
+   "topic": "指针",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "PA1 表达式求值等用 C 写模拟器时涉及指针，但没有指针语法与陷阱的系统讲解",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 9 章 指针：9.1.1 取地址运算、9.1.2 指针变量就是记录地址的变量、9.1.3 指针的使用、9.1.4 指针与数组、9.1.5 指针与 const、9.2.1 指针运算",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "08 Introduction to Pointers、11–12 Generics, void *, and Function Pointers",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧指针是“用到了但没教”，属真实缺口。；指针语法（取地址、解引用）、指针与数组的关系、指针运算与 const 修饰在一条完整的章里逐节讲；r7-zh1 的“表示”主题再补指针在机器级如何存储与编址，两者合起来覆盖“指针”。"
+  },
+  {
+   "topic": "生命周期",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "PA2 运行时环境（函数调用与栈帧）、PA4 进程/虚存",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "12.1.1 全局变量：全局的生存期和作用域；12.1.2 静态本地变量：能在函数结束后继续保有原值的本地变量；14.1.1–14.1.3 可变数组与自动增长；14.2.1 可变数组的缺陷、14.2.2–14.2.6 链表",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "09 Stack and Heap（栈帧、堆分配与释放）、07 buffer overflow 讲越界与生命周期错误",
+     "extent": "covered"
+    }
+   ],
+   "note": "生存期与作用域、静态存储期（函数结束后仍保有原值）都单列讲次；可变数组与链表则讲 malloc/free 出来的堆对象何时创建、增长与释放，正是 C 里“生命周期”的三类情形（自动/静态/动态）。"
+  },
+  {
+   "topic": "链接与系统接口",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "PA3 用户程序和系统调用、文件系统（系统接口）；无链接内容",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "课程概述第（3）条“链接。多个可重定位目标文件如何链接生成可执行目标文件并加载到系统中”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Sep 15 Linking（静态/动态链接与符号解析）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "02 Unix and C（Unix 系统接口）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只有系统调用接口，没有链接；英文侧链接由 15-213 讲次覆盖。；链接部分由 r7-zh1 承担（静态/动态链接、可重定位目标文件到可执行目标文件并加载）；系统接口部分仍由现有 zh1（南大 ics-pa PA3 用户程序与系统调用、文件系统）承担，两者合起来覆盖这个知识点。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "PA0 搭环境→PA1 用 C 写表达式求值与监视点→PA2 程序/运行时环境与 IO→PA3 系统调用与文件系统→PA4 虚存与多任务"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "接 ics-pa 之前先补 C 本身：第 9 章 9.1.1–9.2.1（取地址、指针变量、指针与数组、const、指针运算）边看边写；第 12 章 12.1.1–12.1.3（全局生存期、静态本地变量、返回指针的函数）；第 14 章 14.1–14.2（可变数组到链表：malloc/free 的创建、增长、搜索、删除、清除）。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读“表示、转换、链接”三个主题：先看数据/指针的表示与存储、过程调用与语句到机器级代码的对应，再看“多个可重定位目标文件如何链接成可执行目标文件并加载”，配合参考资料里袁春风《计算机系统基础（第2版）》前 4 章的链接一章。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "01–02（Unix 与 C）→03–07（位、字符串、溢出）→08–12（指针、栈堆、void* 与函数指针）→13–17（x86-64）"
+    },
+    {
+     "source": "en2",
+     "read": "补 Linking 一讲与 Virtual Memory / Dynamic Memory Allocation 讲义"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://web.stanford.edu/class/cs107/ 的 Lectures 列表",
+   "result": "采纳：指针/栈堆/系统接口都有讲次；确认没有链接讲次。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.cmu.edu/~213/schedule.html 检索 Linking",
+   "result": "采纳：9/15 有 Linking 讲与 pdf 讲义，补上链接。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://nju-projectn.github.io/ics-pa-gitbook/ics2025/ 目录；另试 cs.nju.edu.cn/ics/ 与 learn.akae.cn",
+   "result": "采纳 PA 为中文主材料（运行时/系统调用/虚存）；cs.nju.edu.cn/ics/ 返回空页、learn.akae.cn 域名解析失败，未找到中文 C 语言/链接教材。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「翁恺 C语言程序设计」「计算机系统基础 袁春风 南京大学」",
+   "result": "不合适：返回培训号搬运的“翁恺 C 语言”合集与期末速成、考研内容，发布者与完整性不可核；没有可核的中文链接/指针系统课。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "https://www.bilibili.com/video/BV1ALSyBREDu/ 分 P 列表",
+   "result": "采纳（作讲次证据）：分 P 里 9.1.1–9.2.1 是指针章、12.1.1–12.1.3 是生存期/静态本地变量、14.1–14.2 是可变数组与链表。",
+   "by": "review/pi-additions/P.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "南京大学 计算机系统基础 程序的表示 转换与链接 中国大学MOOC 袁春风",
+   "result": "采纳：找到中国大学MOOC 官方课 NJU-1001625001，概述明确含“静态链接和动态链接”主题；已打开官方页核对。",
+   "by": "review/pi-additions/P.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "翁恺 C语言程序设计 浙江大学 中国大学MOOC 课程 icourse163",
+   "result": "采纳：官方课 ZJU-9001《C语言程序设计》（浙江大学）存在，已打开课程页核对标题与概述；大纲动态加载，讲次标题改用同名 B 站镜像核对。",
+   "by": "review/pi-additions/P.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://nju-projectn.github.io/ics-pa-gitbook/ics2025/（现有 zh1，复核是否已含链接）",
+   "result": "确认仍缺链接：PA0–PA4 覆盖运行时环境、系统调用与虚存，没有 linking 章节，故链接必须另找来源。",
+   "by": "review/pi-additions/P.2.2.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写“用 C 实现模拟器、理解指令执行、内存与输入输出；RISC-V 为主要实践方向”，与节点“指针/内存布局/生命周期/链接”并不对齐；本次确认 PA 不教指针语法与链接，中文侧因此是 partial 而非 covered。",
+  "旧条目 note 已指出“C++（模板/RAII/异常）与链接在 CS107 里弱（链接由 CMU 15-213 补）”，本次核到 15-213 schedule 确有 Linking 讲，英文侧补齐。",
+  "中文侧没有找到可核的免费 C 语言教材（候选站点失效、B 站只有搬运/速成），按规则不猜教材 ID。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "C/C++与底层编程",
+ "description": "内存布局、指针、生命周期、链接与系统接口。",
+ "applied_additions": [
+  "review/pi-additions/P.2.2.json"
+ ]
+}

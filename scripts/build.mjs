@@ -89,6 +89,11 @@ const nodes = new Map(srcNodes.map((n) => [n.id, n]));
 const isSkill = (n) => n.kind === "主题" || COURSE_BRANCHES.has(n.id);
 const skills = srcNodes.filter(isSkill);
 const skillIds = new Set(skills.map((n) => n.id));
+// Description items are split on 、，,；;。 everywhere (scope, learning paths); a separator inside
+// parentheses would cut one knowledge point in two, so descriptions must not contain one.
+for (const n of skills) if (/[（(][^）)]*[、，,；;][^）)]*[）)]/.test(n.desc)) fail(`${n.id}: separator inside parentheses in description: ${n.desc}`);
+// Description items that are notes rather than knowledge points (scope.json "meta"): excluded from learning-path topics.
+const descNotesOf = new Map(Object.entries(readJson(rel("data/curation/scope.json")).skills).map(([id, e]) => [id, e.meta || []]));
 
 const en = new Map();
 for (const line of fs.readFileSync(rel("data/curation/names-en.tsv"), "utf8").split(/\r?\n/)) {
@@ -184,7 +189,7 @@ function prereqEntry(id, q, kind) {
   return { id: q, why: note || reasonOf.get(`${q}>${id}`) || "", kind };
 }
 
-const learningPaths = readLearningPaths(rel("data/curation/learning-paths"), new Map(skills.map(s => [s.id, s])));
+const learningPaths = readLearningPaths(rel("data/curation/learning-paths"), new Map(skills.map(s => [s.id, { ...s, descNotes: descNotesOf.get(s.id) || [] }])));
 
 // Curated learning resources override only learning links, never prerequisite evidence.
 const resourceReview = readJson(rel("data/curation/learning-resources.json"));
@@ -328,6 +333,7 @@ const out = skills.map((n) => {
     levels: n.levels,
     entry: Math.min(...n.levels),
     desc: n.desc,
+    descNotes: descNotesOf.get(n.id) || [],
     milestones: n.milestones || null,
     optional: !mainWhy.has(n.id),
     scope: scopeOf(n.id),

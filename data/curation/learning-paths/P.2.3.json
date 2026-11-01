@@ -1,0 +1,285 @@
+{
+ "id": "P.2.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Scipy Lecture Notes — One document to learn numerics, science, and data with Python（EuroSciPy 社区维护，免费 HTML+PDF）",
+   "url": "https://scipy-lectures.org/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "目录核对：1.1 Python scientific computing ecosystem（1.1.3 Installing a working environment、1.1.4 交互环境与编辑器）、1.2 The Python language、1.4 NumPy、1.5 Matplotlib、1.6 SciPy、第 3 章 pandas 统计表。覆盖脚本、NumPy 数组与 pandas 数据框、SciPy 科学计算；环境管理只到“装一个可用环境”，不含 venv/依赖锁定与自动化脚本。",
+   "access": "免费在线 HTML 与 PDF（可下载代码），无需注册；每章约 1–2 小时。",
+   "publisher": "EuroSciPy / Scipy Lecture Notes 社区作者群",
+   "evidence": {
+    "url": "https://scipy-lectures.org/",
+    "location": "目录 1.1–1.6 与第 3 章小节标题",
+    "finding": "首页目录列出 1.1 Python scientific computing ecosystem（含 Installing a working environment）、1.2 The Python language、1.4 NumPy、1.5 Matplotlib、1.6 SciPy 与第 3 章 pandas 内容。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "The Missing Semester of Your CS Education（MIT，2026 版）：Command-line Environment / Packaging and Shipping Code",
+   "url": "https://missing.csail.mit.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "补环境管理与自动化：Command-line Environment（shell 脚本、环境变量、dotfiles）、Packaging and Shipping Code（虚拟环境、依赖与打包发布）、Debugging and Profiling。",
+   "access": "免费公开课程站（讲义＋视频），无需注册。",
+   "publisher": "MIT（Missing Semester 课程组）",
+   "evidence": {
+    "url": "https://missing.csail.mit.edu/",
+    "location": "Syllabus 列表 Command-line Environment、Packaging and Shipping Code 两条",
+    "finding": "首页 syllabus 按讲列出 Command-line Environment 与 Packaging and Shipping Code（含 Python 虚拟环境与依赖管理）。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "廖雪峰 Python 教程（中文在线教程，从安装到 venv/argparse/进程线程）",
+   "url": "https://liaoxuefeng.com/books/python/introduction/index.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "目录核对：Python 基础（数据类型、函数、高级特性、函数式编程、模块、面向对象、错误处理/调试/测试、IO、进程和线程、正则表达式）、常用内建模块（16.3 argparse、16.13 venv 等）、常用第三方模块（Pillow、requests 等）。覆盖脚本编写、命令行参数与虚拟环境、进程/线程自动化；不含 NumPy/pandas/SciPy。",
+   "access": "免费在线阅读（网页），无需注册；示例可直接运行。",
+   "publisher": "廖雪峰",
+   "evidence": {
+    "url": "https://liaoxuefeng.com/books/python/introduction/index.html",
+    "location": "目录第 14 章 进程和线程、16.3 argparse、16.13 venv",
+    "finding": "目录列出“14.4 进程 vs. 线程”“16.3 argparse”“16.13 venv”等条目，属完整章节而非目录页。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Python数据分析与展示（北京理工大学，嵩天；中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/BIT-1001870002",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程概述按周列出内容：（1）NumPy——“讲解 N 维数据的表达及科学计算的基本概念和运算方法”；（2）Matplotlib（坐标系、散点图、极坐标图）；（3）Pandas——“介绍并讲解 Series 和 DataFrame 数据类型的表示和基本使用”。补中文侧缺的数组与数据框，以及 Python 里数组式科学计算的基础运算。",
+   "access": "中国大学MOOC 免费注册后可学习视频（认证证书另收费）；中文授课；字幕未核对。参考资料列《Python语言程序设计基础（第3版）》与《利用Python进行数据分析》。",
+   "publisher": "北京理工大学（课程团队：嵩天），中国大学MOOC 平台",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1001870002",
+    "location": "spContent、课程概述“本课程共包括4周内容”三条、参考资料",
+    "finding": "页面原文写明“（1）Python第三方库NumPy，讲解N维数据的表达及科学计算的基本概念和运算方法”“（3）Python第三方库Pandas……介绍并讲解Series和DataFrame数据类型的表示和基本使用”，并标注“国家精品在线开放课程”。课程大纲区域为 JS 渲染，逐单元标题未取到（网易公开课另有该 MOOC 的分集页面，可作观看入口）。"
+   },
+   "added_by": "review/pi-additions/P.2.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "脚本",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Python 基础（数据类型、函数、模块、错误处理与调试、IO）、命令行参数 argparse",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "1.2 The Python language（容器、控制流、函数、脚本）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "数组与数据框",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "第 1 周 NumPy：N 维数据的表达及科学计算的基本概念和运算方法；第 3 周 Pandas：Series 和 DataFrame 数据类型的表示和基本使用",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "1.4 NumPy（数组、dtype、索引切片、broadcasting）、第 3 章 pandas 数据框与统计",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧没有可核的 NumPy/pandas 教学正文：中文材料只有官方文档类 reference 与培训机构视频（尚硅谷等），按规则不充教学来源。；NumPy 周讲 N 维数组的表达与运算，Pandas 周明确讲 Series/DataFrame 两种数据框结构，正好是“数组与数据框”这一项；廖雪峰教程（zh1）只到脚本与标准库，此课补上第三方科学栈。"
+  },
+  {
+   "topic": "科学计算",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "第 1 周 NumPy：N 维数据的表达及科学计算的基本概念和运算方法",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "1.6 SciPy（插值、优化与拟合等）与 1.5 Matplotlib 可视化",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧同样缺 SciPy 教学材料。；这一周覆盖 Python 里数组式科学计算的基础：N 维数组、向量化运算、随机数、CSV 与多维数据存取，够用但不含 SciPy 的插值、优化与拟合、数值积分、信号处理等模块级内容，所以中文侧只算部分覆盖。"
+  },
+  {
+   "topic": "环境管理与自动化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "16.13 venv（虚拟环境）、16.3 argparse、第 14 章进程和线程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "1.1.3 Installing a working environment（只到装环境）",
+     "extent": "partial"
+    },
+    {
+     "source": "en2",
+     "section": "Command-line Environment、Packaging and Shipping Code",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧靠 Missing Semester 补依赖/虚拟环境与自动化；中文侧廖雪峰已有 venv/argparse/进程线程。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "基础语法→函数与模块→错误处理与调试→IO→进程和线程→argparse/venv，写出一个带命令行参数、能把结果写到文件的脚本"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "接廖雪峰教程之后：第 1 周 NumPy（N 维数组、索引切片、广播式运算、随机数与 CSV/多维数据存取），做一遍把表格数据读进数组并做统计的小练习；第 2 周 Matplotlib 出图；第 3 周 Pandas（Series 与 DataFrame 的建立、索引、筛选、分组统计）。"
+    }
+   ],
+   "gaps": [
+    "科学计算"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "1.1（装环境）→1.2（语言基础）→1.4（NumPy）→1.5（Matplotlib）→1.6（SciPy）→第 3 章（pandas 数据框）"
+    },
+    {
+     "source": "en2",
+     "read": "Command-line Environment 与 Packaging and Shipping Code 两讲，学虚拟环境、依赖与自动化脚本"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://scipy-lectures.org/ 目录",
+   "result": "采纳：NumPy/pandas/SciPy 都有正文；环境管理只到安装一节，故补 Missing Semester。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://liaoxuefeng.com/books/python/introduction/index.html 目录",
+   "result": "采纳为中文主材料：脚本、argparse、venv、进程线程齐全；确认没有 NumPy/pandas/SciPy。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「NumPy pandas 科学计算 教程」",
+   "result": "不合适：命中尚硅谷等培训机构的速成合集与个人搬运，发布者/版权/完整性不可核；未采用。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "Python数据分析与展示 嵩天 北京理工大学 中国大学MOOC numpy pandas",
+   "result": "采纳：找到中国大学MOOC 官方课 BIT-1001870002，已打开官方页核对“4 周内容：NumPy/Matplotlib/Pandas”。",
+   "by": "review/pi-additions/P.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "Python科学计算 课程 SciPy 插值 优化 数值计算 中国大学MOOC（限定 icourse163.org）",
+   "result": "不合适：命中的是长安大学/国防科大/华北理工/大连理工/浙大的《数值分析·计算方法》课，属数值数学理论课；打开大连理工《计算方法》课程页正文核对，全篇讲算法与误差分析，正文里没有 MATLAB 或 Python 的编程实现要求（未出现这两种语言的字样），不能当作 SciPy 工具教学。",
+   "by": "review/pi-additions/P.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "Python SciPy 科学计算 教程 / Python 数值计算 numpy scipy 插值 优化 / Python科学计算",
+   "result": "不合适：三组关键词下命中的是《计算方法》国家精品课录像、数据分析（numpy+pandas+matplotlib）课程、MathTalent 英文课的中字搬运，没有中文授课的 SciPy 系统课；未采纳。",
+   "by": "review/pi-additions/P.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://mofanpy.com/（中文教程站“莫烦Python”）",
+   "result": "部分相关但不足：站点“数据处理”只有 Numpy 数据怪兽、Pandas 数据伙伴、画图 Matplotlib 三块，首页与栏目内均无 SciPy，故没有补上“科学计算”的 SciPy 部分。",
+   "by": "review/pi-additions/P.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://scipy-lectures.org/（查是否有中文版）",
+   "result": "不合适：页面语言菜单中没有中文条目，SciPy 讲义只有英文原版（即现有 en1）。",
+   "by": "review/pi-additions/P.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "Python科学计算 第2版 张若愚 清华大学出版社 目录 SciPy",
+   "result": "未采纳：命中百度百科、Scribd 上传件（盗版镜像，按规则不用）、淘宝/京东商品页，没有能核对目录的出版社官方页；付费来源登记不了。",
+   "by": "review/pi-additions/P.2.3.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文写“Python 官方中文教程”（Python 文档），正是用户点名的问题——用语言文档代替入门课；本次换成廖雪峰的完整 Python 教程（含 venv/argparse/进程线程）。",
+  "旧条目中文 covers 自认“NumPy/SciPy 部分需另配英文资料”，本次确认中文侧没有可核的教学材料，保留为缺口而不是用文档充数。",
+  "旧条目英文写 pandas 在“3.1 Statistics in Python”，与目录一致；环境管理/自动化按旧条目 note 的提示补 Missing Semester。",
+  "[review/pi-additions/P.2.3.json] 未解决 zh「科学计算」：中文只有部分覆盖：NumPy 的数组式科学计算基础已由北理工 MOOC 覆盖，但 SciPy 的插值、优化与拟合、数值积分、信号处理没有可核的中文系统教学（本轮文字/视频/官方课/付费四路都查过），故标 partial 并走英文补。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "科学计算",
+   "source": "en1",
+   "reason": "本轮中文侧查了四个渠道仍无 SciPy 的工具教学：文字（莫烦Python 数据处理只有 Numpy/Pandas/Matplotlib，无 SciPy；scipy-lectures 无中文版）、视频（B 站三组关键词都没有中文授课的 SciPy 系列课，数学建模/计算方法课是数值数学理论，不是 SciPy 用法）、官方课程（中国大学MOOC 只有《数值分析/计算方法》类理论课与《Python数据分析与展示》，后者 NumPy 周只到“科学计算的基本概念和运算方法”）、付费（张若愚《Python科学计算》只有百科与电商页，出版社目录页未取到）。所以中文路线里 SciPy 的插值/优化/积分部分仍看英文 SciPy Lecture Notes（en1）第 1.6 节。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/P.2.3.json"
+  }
+ ],
+ "name": "Python与科学计算工具",
+ "description": "脚本、数组与数据框、科学计算、环境管理与自动化。",
+ "applied_additions": [
+  "review/pi-additions/P.2.3.json"
+ ]
+}

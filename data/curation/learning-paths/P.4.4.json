@@ -1,0 +1,356 @@
+{
+ "id": "P.4.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "The University of Queensland — CSSE6400 Software Architecture（课程站，按周主题 + handout）",
+   "url": "https://csse6400.uqcloud.net/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Schedule 逐周核对：Week 1 Software Architecture / Layered Architecture、Week 2 Security Principles / Architectural Views / Architecture Decision Records / Pipeline Architecture、Week 3 起继续（微内核与容器等）。覆盖组件与边界、架构风格（分层/管道/微内核/容器）、架构视图、架构建档决策（ADR）与安全原则；系统演化只在 ADR 的演进语境中出现。",
+   "access": "免费公开课程站（schedule 与每周 handout 链接），无需注册；无公开录像。",
+   "publisher": "The University of Queensland（CSSE6400 教学团队）",
+   "evidence": {
+    "url": "https://csse6400.uqcloud.net/",
+    "location": "首页 Schedule 表 Week 1–3 的 Topics 列",
+    "finding": "表内第 1 周列 Software Architecture / Layered Architecture，第 2 周列 Security Principles / Architectural Views / Architecture Decision Records / Pipeline Architecture，每行有 Content 链接。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文：Azure 体系结构中心（体系结构样式、设计原则、云设计模式、Well-Architected 支柱）",
+   "url": "https://learn.microsoft.com/zh-cn/azure/architecture/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "站点导航：体系结构样式（架构样式）、设计原则与最佳做法、云设计模式、参考架构与工作负载；体系结构样式页列出 N 层、Web-队列-工作角色、微服务、事件驱动、大数据、大计算等样式及各自适用场景与权衡。以 Azure 为案例，质量属性体现在 Well-Architected 框架的可靠性/安全性/成本/性能/运营等支柱；没有专门的 ADR/系统演化章节。",
+   "access": "免费阅读，无需注册；个别交互模块需微软账号（未核实具体条件）。页面为中文正文（zh-cn）。",
+   "publisher": "Microsoft（Azure Architecture Center 官方文档）",
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/architecture/guide/architecture-styles/",
+    "location": "“架构样式”页正文与样式列表",
+    "finding": "zh-cn 页面标题为“体系结构样式”，正文从“架构样式”开始讲各类样式与选择标准；架构中心首页另有“了解基础知识（架构样式、设计原则）”“应用设计模式”入口。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《Awesome Architecture · 架构图谱》开源中文教程（study8677，含 C4 建模、架构模式、质量属性与取舍、ADR 与演进式架构）",
+   "url": "https://github.com/study8677/awesome-architecture",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "按章组织的开源中文教程（每章一个 Markdown，带例子与反例）：第 3 章“读懂与画好架构图：C4 模型”——讲架构图必须有的“边界”、C4 的系统上下文/容器/组件/代码四个缩放级别、边界与抽象层次混乱的问题；第 4 章“十大核心架构模式”——分层、微服务、事件驱动、CQRS 各自如何划分与组织组件；第 6 章“质量属性与取舍”；第 8 章“架构决策记录与演进”——ADR 的定义、模板（状态/上下文/决策/后果）、追加不修改的写法，以及演进式架构（Evolutionary Architecture）与“接缝（seam）＝清晰的模块边界和接口”。",
+   "access": "免费阅读（GitHub），无需注册；简体中文。另有社区整理的 EPUB 版。",
+   "publisher": "study8677/awesome-architecture（开源中文架构知识库，README 标注章节表与作者复核说明）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/study8677/awesome-architecture/main/tutorial/08-%E6%9E%B6%E6%9E%84%E5%86%B3%E7%AD%96%E8%AE%B0%E5%BD%95%E4%B8%8E%E6%BC%94%E8%BF%9B.md",
+    "location": "第 8 章正文“一、ADR：给架构决策建一本为什么的账”“三、演进式架构：别想一次设计到位，要留好接缝”，及 README 的 tutorial 章节表",
+    "finding": "正文可读出 ADR 定义、可直接抄用的 ADR 模板（状态：草稿/已采纳/已废弃/被取代）、追加不修改的原则，以及演进式架构的定义与“接缝＝清晰模块边界与接口”；README 章节表列出 03 C4 模型、04 十大核心架构模式、06 质量属性与取舍、08 ADR 与演进。第 3 章正文确认在讲“没有边界”“C4 四个缩放级别”。"
+   },
+   "added_by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《实践篇（一）：ADR——轻量级的架构决策记录机制》（京东云开发者社区）",
+   "url": "https://developer.jdcloud.com/article/2646",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "从团队实际遇到的问题讲起（后人只知其然不知其所以然、决策演进过程无人能答），给出 ADR 的基本结构：标题、状态、上下文、决策（必选，用肯定式描述）、影响（必选，含好坏影响）、一致性（可选，如何度量与治理）、备注（元数据：作者、审核日期、替代关系）。",
+   "access": "免费阅读，无需注册；简体中文。企业开发者社区文章。",
+   "publisher": "京东云开发者社区（developer.jdcloud.com）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.jdcloud.com/article/2646",
+    "location": "正文“1 团队研发面临的问题”与 ADR 各字段（决策【必选】/影响【必选】/一致性【可选】/备注【必选】）说明段",
+    "finding": "页面确认 ADR 各组成部分及“关注 Why 而非 How”的要求，并说明决策演进过程无人能答是引入 ADR 的动机之一。"
+   },
+   "added_by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Quality Attribute Scenarios and Tactics — SWEN-440 Software Engineering 课程讲义（RIT，Lecture 17）",
+   "url": "https://www.se.rit.edu/~swen-440/slides/instructor-specific/Kuehl/Lecture%2017%20Quality%20Attributes%20and%20Tactics%20LV.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "以 Bass/Clements/Kazman《Software Architecture in Practice》第 3 版为底：质量属性总表（运行期：可用性、互操作性、可靠性；开发期：可修改性、可变性、可支持性、可构建性）、质量属性场景（stimulus/response/measure）、以及“tactic 是达成某质量属性的设计决策、是架构模式的基本构件”的战术讲解（含可用性探测与修复、控制资源等战术分类）。",
+   "access": "免费公开 PDF（RIT 课程站），无需注册；英文。",
+   "publisher": "Rochester Institute of Technology，SWEN-440 课程讲义（J. Scott Hawker / R. Kuehl）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.se.rit.edu/~swen-440/slides/instructor-specific/Kuehl/Lecture%2017%20Quality%20Attributes%20and%20Tactics%20LV.pdf",
+    "location": "第 2–4 页 “Quality Attributes – Master List”“Achieving Quality Attributes – Design Tactics”“Tactics to Control …” 各页",
+    "finding": "PDF 文本确认标题为“Quality Attribute Scenarios and Tactics”，列出运行期/开发期质量属性分类，并给出“A tactic is a design decision to achieve a QA response … building block of architecture patterns”的定义。"
+   },
+   "added_by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "Architectural Decision Records (ADRs) — adr.github.io（ADR GitHub 组织官方站点）",
+   "url": "https://adr.github.io/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "给出架构决策（AD）与架构决策记录（ADR）的定义（AD 是对架构有显着影响、有理由的设计选择；ASR 是对架构与质量有可度量影响的需求），并分栏提供 AD Practices、ADR Templates（含 Nygard 模板等）、Decision Capturing Tools 与文献/媒体列表，是记录与回溯架构决策的体系化入口。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "adr.github.io（ADR GitHub organization 的主页）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://adr.github.io/",
+    "location": "首页 “Motivation and Definitions” 段与顶部导航 AD PRACTICES / ADR TEMPLATES / DECISION CAPTURING TOOLS",
+    "finding": "页面确认 AD/ASR/ADR 的定义，并提供模板与实践两栏入口（不是只有一段百科式介绍）。"
+   },
+   "added_by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "key": "r7-en3",
+   "lang": "en",
+   "title": "Patterns of Legacy Displacement（Martin Fowler 站，Rob Horn / James Lewis 等，Thoughtworks）",
+   "url": "https://martinfowler.com/articles/patterns-legacy-displacement/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "长文系列：为什么遗留系统替换总是半途而废（legacy replacement treadmill），如何拆成“可交付的片段”增量替换、用第二个接缝（second seam）切到生产，以及组织层面如何持续做下去；文中给出 Extract Event / Legacy Mimic / Transitional Architecture 等模式与案例。讲的是系统随时间的演化与迁移，不是“重写一遍”。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "martinfowler.com（Thoughtworks 团队文章，作者 Rob Horn、James Lewis 等）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://martinfowler.com/articles/patterns-legacy-displacement/",
+    "location": "目录与开篇 “The Legacy Replacement Treadmill”“Breaking the cycle”“transitioning into live service - using a second seam”",
+    "finding": "页面目录确认结构：先讲替换失败的循环与期望结果，再讲拆片交付、用第二个接缝上线、组织变革；正文说明这是一套增量替换遗留系统的模式。"
+   },
+   "added_by": "review/pi-additions/P.4.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "组件与边界",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "体系结构样式：微服务/事件驱动样式的服务边界与拆分准则",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 3 章 C4 模型（系统上下文/容器/组件/代码四级，含“没有边界”的烂图反例与边界画法）；第 4 章 十大核心架构模式（分层/微服务/事件驱动/CQRS 如何划分组件）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week 1 Software Architecture（组件与边界）与 Week 2 架构视图",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧从云样式角度讲边界，没有“组件/连接件/边界”的一般化定义。；旧记录中文只有 MS Learn 的“架构样式”清单，没有讲“组件”是什么、边界画在哪。第 3 章直接以“没有边界”作为坏架构图的首要毛病，再用 C4 的容器级/组件级把边界画出来；第 4 章讲不同架构模式如何切分组件。两者合起来覆盖“组件与边界”。"
+  },
+  {
+   "topic": "架构风格",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "架构样式：N 层、Web-队列-工作角色、微服务、事件驱动、大数据、大计算",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Layered Architecture、Pipeline Architecture、微内核与容器",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧有分层/管道/微内核/容器；中文侧是云场景的样式目录，两者互补。"
+  },
+  {
+   "topic": "质量属性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Well-Architected 支柱（可靠性/安全性/成本/性能/运营）与架构样式权衡表",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week 2 Security Principles、Architectural Views（用视图表达质量属性）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Quality Attributes – Master List；Quality Attribute Scenarios；Achieving Quality Attributes – Design Tactics",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文课程把质量属性放在架构视图与安全原则里，未系统列质量属性场景；中文侧用 WAF 支柱覆盖。；旧记录英文侧只有“Week 2 安全原则、架构视图”间接涉及质量属性。这份讲义把质量属性分类（运行期/开发期）、场景写法和达成质量属性的战术（tactics）分开讲，并明确 tactical 与架构模式的关系，正好补上这一条。"
+  },
+  {
+   "topic": "架构决策和系统演化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "参考架构与设计原则（无 ADR 与演化专章）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 8 章 架构决策记录与演进：一、ADR（定义、模板、状态、追加不修改）；三、演进式架构（接缝 seam＝清晰模块边界与接口）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week 2 Architecture Decision Records（ADR）；系统演化只在 ADR 语境提到",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "Motivation and Definitions（AD/ASR/ADR 定义）；ADR Templates 与 AD Practices",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧有明确 ADR 讲次但演化只有提及；中文侧两者都弱。；这条要两半：决策怎么记录、系统怎么随时间演化。第 8 章前半讲 ADR 的目的与模板并给出可抄用的实例，后半讲演进式架构的核心（既然一次设计不对，就把架构设计成容易改对的样子）与“接缝”的构造方法；r7-zh2 再补 ADR 字段（决策/影响/一致性/备注）的工业写法。；决策这一半由 adr.github.io 提供：架构决策的定义、什么是“架构上重要的需求（ASR）”、ADR 模板与实践入口；演化这一半由 r7-en3（Fowler 站的遗留系统增量替换模式）提供——两者合起来覆盖“架构决策和系统演化”。单看 ADR 只等于决策，故两份材料搭配使用。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读“架构样式”全部样式与权衡表→设计原则与最佳做法→按需读云设计模式与参考架构"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读第 3 章，用 C4 给自己的系统画上下文图与容器图，再画一张组件图并在图上标出进程/信任域边界；接着读第 4 章，说出所选模式把组件切在哪、为什么；最后读第 8 章，为上面两个决策各写一份 ADR，并写一段“这套架构将来最容易改的是哪一块（接缝在哪）”"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "对照 ADR 字段清单（标题/状态/上下文/决策/影响/一致性/备注）检查自己写的 ADR 缺哪几项，补上“影响”里被放弃的方案"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Week 1（架构定义、分层）→Week 2（安全原则、架构视图、ADR、管道）→后续周的微内核/容器与安全实践"
+    },
+    {
+     "source": "r7-en1",
+     "read": "把 7 个运行期/开发期质量属性各写一条带度量指标的场景（stimulus→response→measure），再给“可用性”和“可修改性”各列 3 条 tactics，说明它们各自牺牲了什么"
+    },
+    {
+     "source": "r7-en2",
+     "read": "读 AD/ASR/ADR 定义与模板栏，用 Nygard 模板把中文路线里写的那份 ADR 再写一版英文，比较两边字段差异"
+    },
+    {
+     "source": "r7-en3",
+     "read": "读“Legacy Replacement Treadmill”“Breaking the cycle”“second seam”三节，把一个假设的遗留系统拆成三个可独立交付的片段，并说明每个片段的接缝放在哪"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://csse6400.uqcloud.net/ Schedule",
+   "result": "采纳：分层/管道/ADR/架构视图/安全原则可核；无质量属性与演化专章。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/azure/architecture/ 与 /guide/architecture-styles/",
+   "result": "采纳：zh-cn 架构样式页为中文正文，覆盖风格与权衡；确认无 ADR/演化章节。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/learn/SDU-1207223804（北京交通大学《软件体系结构》中国大学MOOC）",
+   "result": "部分采纳：课程概述点名含“软件体系结构的风格、设计原则、设计模式、软件产品线、质量属性”，但“课程大纲”栏为空，逐讲内容无法核对，未单独用作覆盖证据",
+   "by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "软件体系结构 教材 目录 质量属性 组件与连接件 体系结构风格 高等教育出版社",
+   "result": "部分采纳：查到《软件设计与体系结构（第2版）》目录（2.2.2 组件与连接件、2.2.4 风格、第 3–5 章风格、第 6 章设计目标、第 7 章设计原则），但全书 10 章无“演化/架构决策”，不能覆盖本轮两个中文缺口，未登记",
+   "by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "架构决策记录 ADR 软件体系结构 演化 教材 章节 中文 组件 边界",
+   "result": "采纳：开源中文教程 awesome-architecture 第 8 章“架构决策记录与演进”；另得京东云 ADR 文章作补充；Google Cloud 中文 ADR 文档与 MS Learn 中文 ADR 页留作对照（后者链接 404）",
+   "by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://raw.githubusercontent.com/study8677/awesome-architecture/main/tutorial/08-…md 与 03-…md、README.md",
+   "result": "采纳：打开正文确认第 8 章含 ADR 模板与“演进式架构/接缝”，第 3 章含“没有边界”的四宗罪与 C4 四级",
+   "by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "quality attributes software architecture tactics lecture notes pdf modifiability availability course",
+   "result": "采纳：RIT SWEN-440 Lecture 17 质量属性与战术讲义（直接打开 PDF 核对）；Scribd/ResearchGate 上的 Modifiability Tactics 镜像未采用",
+   "by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "software architecture evolution lecture slides free course university pdf",
+   "result": "部分采纳：多伦多大学 CSC340 幻灯片只讲架构风格；Breivold 的系统综述是研究论文；改用 Martin Fowler 站的《Patterns of Legacy Displacement》（已打开核对）",
+   "by": "review/pi-additions/P.4.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://adr.github.io/ 与 https://martinfowler.com/articles/patterns-legacy-displacement/",
+   "result": "采纳：两页均可读，前者给 AD/ASR/ADR 定义与模板栏，后者给遗留系统增量替换的模式目录",
+   "by": "review/pi-additions/P.4.4.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写“学习架构风格、设计模式、可靠性与云系统实例；以 Azure 为案例”，较泛；本次补到具体页（体系结构样式/设计原则/WAF 支柱）并说明缺 ADR 与演化。",
+  "旧条目 note 说“系统演化在课程里只在 ADR/演进处提及”，与本次核对一致。",
+  "英文侧旧条目列的微内核与容器在 Week 3 之后，本次只核到 Week 1–3 的标题，未逐周展开。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "软件架构",
+ "description": "组件与边界、架构风格、质量属性、架构决策和系统演化。",
+ "applied_additions": [
+  "review/pi-additions/P.4.4.json"
+ ]
+}

@@ -1,0 +1,263 @@
+{
+ "id": "P.3.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Cornell CS 4120/5120 Introduction to Compilers（Spring 2026 课程站）",
+   "url": "https://www.cs.cornell.edu/courses/cs4120/2026sp/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程概览写明主题：lexical scanning、parsing、type checking、code generation and translation、introduction to optimization、compile-time and run-time support；作业与编程作业逐项核对：HW1 Lexical Analysis、HW2 Syntactic Analysis、HW3 Semantic Analysis、HW4 Program Analysis；PA1 实现词法、PA2 语法、PA3 语义、PA4 中间代码生成、PA5 汇编代码生成、PA6 优化与扩展。词法/语法分析、语义分析、中间表示、代码生成与编译优化五块齐全。",
+   "access": "免费公开课程站（overview、assignments、resources；有 Eta/Rho 语言规范与测试 harness），无需注册；讲义/录像链接在站内（部分年份完整公开）。",
+   "publisher": "Cornell University（CS 4120/5120 教学团队）",
+   "evidence": {
+    "url": "https://www.cs.cornell.edu/courses/cs4120/2026sp/",
+    "location": "Overview 段与 Assignments 段（Homework 1–4、Programming Assignment 1–6 标题）",
+    "finding": "页面 Overview 列出 lexical scanning/parsing/type checking/code generation/introduction to optimization；Assignments 段逐个列出 HW1 Lexical Analysis…HW4 Program Analysis 与 PA1–PA6（含 Optimization and Extension）。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京大学《编译实践》在线文档（SysY → RISC-V 编译器实践）",
+   "url": "https://pku-minic.github.io/online-doc/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "文档首页（README）说明课程目标：实现把 SysY 语言（精简版 C）编译到 RISC-V 汇编的编译器，并给出示例源码与生成的汇编。正文按实践阶段组织（站点为 docsify 单页应用，章节以 #/ 路由加载，单章正文无法直接抓取），可核到的是“从表达式、词法/语法分析到中间表示与目标代码生成逐步实现一个编译器”这条主线；没有独立的语义分析理论与编译优化章节。",
+   "access": "免费在线阅读，无需注册；实践需自备 RISC-V 工具链与实验框架。",
+   "publisher": "北京大学（编译原理课程实践项目，pku-minic）",
+   "evidence": {
+    "url": "https://pku-minic.github.io/online-doc/",
+    "location": "首页 README 正文（SysY 示例与 RISC-V 汇编输出、Link start 入口）",
+    "finding": "首页返回 0 字符（docsify 单页应用），读取 /online-doc/README.md 得到正文：说明用 SysY 写编译器、目标为 RISC-V，并给出示例；子章节（#/preface/ 等）不能直接抓取。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "【编译原理】哈尔滨工业大学 | 陈鄞（B 站“哈尔滨工业大学”官方账号，4 个分 P 的课堂录像）",
+   "url": "https://www.bilibili.com/video/BV1KYrZB3EKo/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "该合集只有 4 个分 P：p01 编译原理01（7:21:23）、p02 编译原理02（9:54:14）、p03 编译原理03（8:30:37）、p04 编译原理04（8:38:50），页面与元数据里都没有分节标题或简介，故只能确认是整门课的课堂录像，无法逐讲核对语义分析/代码优化在哪个时间段。",
+   "access": "B 站免费；中文授课；无分节标题，字幕未核对。",
+   "publisher": "哈尔滨工业大学（B 站账号“哈尔滨工业大学”，简介“规格严格，功夫到家”，页面标注“未经作者授权，禁止转载”，属学校官方账号）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1KYrZB3EKo/",
+    "location": "视频选集 p01–p04（编译原理01–04）与 UP 主信息",
+    "finding": "本次页面可正常打开：UP 主为“哈尔滨工业大学”（69.8 万粉丝），合集标题《【编译原理】哈尔滨工业大学 | 陈鄞》，分 P 仅 01–04，每集 7–10 小时；页面简介为空，yt-dlp 元数据也无 description，因此旧记录的“讲次未核”改述为“只有 4 个整段录像、无分节”。"
+   },
+   "reupload": false,
+   "updated_by": [
+    "review/pi-additions/P.3.1.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "编译原理（哈尔滨工业大学；中国大学MOOC，国家精品在线开放课程，20 讲）",
+   "url": "https://www.icourse163.org/course/HIT-1002123007",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "spContent 原文：“内容包括词法分析、语法分析、语义分析、中间代码生成、代码优化、目标代码生成等”；课程概述给出逐讲清单：第 1 讲 绪论、第 2 讲 程序设计语言及其文法、第 3 讲 词法分析、第 4–7 讲 语法分析_1–_4、第 8–10 讲 语法制导翻译_1–_3、第 11–14 讲 中间代码生成_1–_4、第 15 讲 运行存储分配、第 16–18 讲 代码优化_1–_3。中文侧缺的“语义分析”正是第 8–10 讲。",
+   "access": "中国大学MOOC 免费注册后可学习视频（认证证书另收费）；中文授课；字幕未核对。",
+   "publisher": "哈尔滨工业大学，中国大学MOOC 平台",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HIT-1002123007",
+    "location": "spContent 一行；课程概述“本课程共计20讲”后的第 1–18 讲标题清单",
+    "finding": "页面实际列出“第8讲 语法制导翻译_1、第9讲 语法制导翻译_2、第10讲 语法制导翻译_3、第11–14讲 中间代码生成、第15讲 运行存储分配、第16–18讲 代码优化”，并在 spContent 里明确写“语义分析”。"
+   },
+   "added_by": "review/pi-additions/P.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "词法/语法分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "实践主线：为 SysY 语言写词法/语法分析（README 的编译管线目标）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Homework 1 Lexical Analysis、Homework 2 Syntactic Analysis、PA1/PA2",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧以实践任务体现（文档为 docsify 单页，章节正文不可抓取），理论讲解深度未核。"
+  },
+  {
+   "topic": "语义分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "课程预期含语义分析，但讲次未核",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 8–10 讲 语法制导翻译_1–_3（spContent 明确列为“语义分析”）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Homework 3 Semantic Analysis、PA3 实现语义分析（含 Eta 类型系统规范）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧没有可核的语义分析正文/讲次证据。；中文编译课程把语义分析放在“语法制导翻译”三讲里讲（属性文法、语法制导定义与翻译方案、类型检查与符号表相关处理），课程介绍也直接写明包含语义分析；这三讲就是该知识点的中文系统教学。"
+  },
+  {
+   "topic": "中间表示",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "实践主线：从 AST/IR 到目标代码的实现路径",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "PA4 Intermediate Code Generation",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "代码生成与编译优化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "实践主线：生成 RISC-V 汇编（README 给出生成的汇编示例）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "课程预期含代码生成，讲次未核",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "Lv2.2 目标代码生成；Lv9+.2 寄存器分配；Lv9+.3 优化（机器无关/机器相关优化分类、死代码消除等例子）；Lv9+.4 SSA 形式",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "PA5 Assembly Code Generation、PA6 Optimization and Extension、HW4 Program Analysis",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧代码生成只到实践层面，编译优化（数据流分析等）没有可核材料。；北大《编译实践》在线文档正文已核：Lv2.2 讲“把 Koopa IR 编译成 RISC-V 汇编”的目标代码生成；Lv9+ 系列讲优化的两类划分（机器无关/机器相关）、死代码消除实例、SSA 形式与寄存器分配，代码生成与优化两头都在，故这一项由 partial 升为 covered。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "跟着在线文档从表达式与词法/语法分析做起，一路实现 IR 与 RISC-V 目标代码"
+    },
+    {
+     "source": "zh2",
+     "read": "需要系统讲授时跟哈工大《编译原理》视频（讲次与字幕未核，建议先看目录再决定）"
+    },
+    {
+     "source": "zh1",
+     "read": "做完 Lv1–Lv8 之后接着做 Lv2.2 目标代码生成（遍历内存形式 IR 生成 RISC-V 汇编），再进 Lv9+：Lv9+.2 寄存器分配、Lv9+.3 优化（先做死代码消除这类机器无关优化）、Lv9+.4 把 IR 改成 SSA 形式。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "需要系统讲授时跟哈工大《编译原理》MOOC：第 8–10 讲 语法制导翻译（语义分析）→ 第 11–14 讲 中间代码生成 → 第 15 讲 运行存储分配 → 第 16–18 讲 代码优化，配合北大实践文档动手实现。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 HW1→HW2→HW3 学词法/语法/语义，再做 PA1–PA3；随后 PA4（IR）→PA5（汇编）→PA6（优化与扩展），HW4 补程序分析"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.cornell.edu/courses/cs4120/2026sp/ Overview 与 Assignments",
+   "result": "采纳：Overview 的主题清单与 HW1–4、PA1–6 正好覆盖五个知识块。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://pku-minic.github.io/online-doc/ 与其 README.md",
+   "result": "采纳为中文实践主材料；确认站点是 docsify 单页应用，子章节无法直接抓取，只能核到 README 的课程目标。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「编译原理 哈工大」「编译原理 国防科技大学」",
+   "result": "部分采纳：找到“哈尔滨工业大学”官方账号发布的《编译原理》（陈鄞），但视频页与分P打不开（平台拦截/提取失败），内容未核。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://api.github.com/repos/pku-minic/online-doc/git/trees/master?recursive=1 与 https://pku-minic.github.io/online-doc/lv2-code-gen/code-gen.md、/lv9p-reincarnation/opt.md、/ssa-form.md、/reg-alloc.md 正文",
+   "result": "采纳：确认 zh1 现有来源正文里有 Lv2.2 目标代码生成、Lv9+.3 优化（含机器无关/机器相关分类与死代码消除）、Lv9+.4 SSA、Lv9+.2 寄存器分配，补足“代码生成与编译优化”。",
+   "by": "review/pi-additions/P.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili+yt-dlp",
+   "query_or_url": "https://www.bilibili.com/video/BV1KYrZB3EKo/（现有 zh2）",
+   "result": "部分可用：页面可打开，UP 主是哈工大官方账号，但合集只有 p01–p04 四段整课录像（每段 7–10 小时），无分节标题、简介为空，yt-dlp 也取不到 description，因此不能用来逐讲核对“语义分析”。",
+   "by": "review/pi-additions/P.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "编译原理 中国大学MOOC 课程 语法制导翻译 语义分析 中间代码生成 代码优化",
+   "result": "采纳：命中哈工大《编译原理》官方 MOOC（HIT-1002123007），已打开课程页核对 spContent 与 20 讲清单，第 8–10 讲即语法制导翻译（语义分析）。",
+   "by": "review/pi-additions/P.3.1.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文写“从表达式与词法语法分析到中间表示和目标代码，逐步实现一个编译器”，与 README 一致；但旧条目把它当作覆盖全部五个知识块，实际缺语义分析与优化，已改 partial。",
+  "旧条目英文 covers 已逐讲列到数据流分析/寄存器分配/循环优化，与 2026 版作业清单方向一致；本文件改用可核的 HW/PA 编号作证据。",
+  "中文侧没有可核的章节化讲义，新增的哈工大视频只能算“可能的视频补充”，字幕与讲次未核。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "编译原理",
+ "description": "词法/语法分析、语义分析、中间表示、代码生成与编译优化。",
+ "applied_additions": [
+  "review/pi-additions/P.3.1.json"
+ ]
+}

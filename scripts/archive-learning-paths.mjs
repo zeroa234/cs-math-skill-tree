@@ -7,7 +7,10 @@ const ids=args.filter(a=>!a.startsWith('--'));
 const inputDirectory=args.includes('--reviewed')?'temp/research/bilingual-coverage/review':'temp/research/bilingual-coverage';
 if(!ids.length)throw Error('Specify reviewed skill IDs; add --archive after reading the evidence.');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8').replace(/^\uFEFF/,''));
-const data=read(path.join(root,'output/skilltree.json'));const byId=new Map(data.skills.map(s=>[s.id,s]));
+const data=read(path.join(root,'output/skilltree.json'));
+// Description notes come from scope.json (same source as the build), not from a possibly stale output.
+const descNotes=read(path.join(root,'data/curation/scope.json')).skills;
+const byId=new Map(data.skills.map(s=>[s.id,{...s,descNotes:descNotes[s.id]?.meta||[]}]));
 const reviewPath=path.join(root,'data/curation/learning-resources.json'),review=read(reviewPath);
 const destination=path.join(root,'data/curation/learning-paths');
 const prepared=[];

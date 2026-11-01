@@ -69,23 +69,6 @@
     "location": "课程概述第 2–4 段与“课程大纲/预备知识/参考资料”栏",
     "finding": "页内“课程大纲”标题下只有预备知识与参考资料，没有章节列表；正文可读的是课程目标（数据组织、时空效率、实现与存储）与教材信息。"
    }
-  },
-  {
-   "key": "zh3",
-   "lang": "zh",
-   "title": "北京大学裘宗燕：队列实现与数据不变式（中文课件）",
-   "url": "https://math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/DS4-stack-queue-2.pdf",
-   "tier": "material",
-   "free": true,
-   "role": "supplement",
-   "covers": "第10–13页讲环形队列的表示不变关系、数据不变式及操作保持不变式；配主课图存储章节学习。",
-   "access": "大学教师公开PDF，经典Python课件；旧语法细节以当前教程校正。",
-   "publisher": "原作者/机构公开教学材料，见来源",
-   "evidence": {
-    "url": "https://math.pku.edu.cn/teachers/qiuzy/ds_python/courseware/DS4-stack-queue-2.pdf",
-    "location": "PDF第10–13页，幻灯片20–26",
-    "finding": "网页工具读到16页PDF，第12页明确介绍数据不变式与对象合法状态、创建/修改操作的关系。"
-   }
   }
  ],
  "topics": [
@@ -218,8 +201,8 @@
      "extent": "covered"
     },
     {
-     "source": "zh3",
-     "section": "PDF第10–13页：环形队列表示关系、数据不变式与保持条件",
+     "source": "zh1",
+     "section": "第 7.4 节 二叉搜索树（插入/删除时保持“左子树 < 根节点 < 右子树”的性质）；第 8.1 节 堆（入堆、出堆破坏堆的成立条件后用堆化修复）",
      "extent": "covered"
     }
    ],
@@ -230,7 +213,7 @@
      "extent": "covered"
     }
    ],
-   "note": "组合覆盖：图的存储表示由Hello算法讲解，实现应保持的结构条件由北大队列课件显式讲解。无需转读英文。"
+   "note": "组合覆盖：图的存储表示由Hello算法讲解，实现应保持的结构条件由北大队列课件显式讲解。无需转读英文。；不变量部分改由主资源 Hello 算法自己的章节承担：二叉搜索树一节逐个讲插入、删除（0/1/2 个子节点三种情况）如何保持有序性质，堆一节讲成立条件被破坏后从底至顶、从顶至底堆化修复，都是“结构应满足的条件 + 操作如何维持它”的教学，与英文 CS 61B 的结构不变式对应。图的存储仍是第 9 章。"
   }
  ],
  "routes": {
@@ -244,10 +227,6 @@
     {
      "source": "zh2",
      "read": "需要系统视频与配套练习时，注册中国大学MOOC 跟课，用拼题A 做题巩固实现与复杂度"
-    },
-    {
-     "source": "zh3",
-     "read": "读PDF第10–13页，给自己的队列实现写下head、rear或元素数应满足的条件，检查空队列、入队、出队是否保持这些条件。"
     }
    ],
    "gaps": []
@@ -285,6 +264,14 @@
    "channel": "text",
    "query_or_url": "https://sp21.datastructur.es/materials/lectures/lec1 … lec40 逐页标题",
    "result": "采纳：1–38 讲标题核对完毕，栈队列无单列讲次 → 补 algs4 §1.3。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://raw.githubusercontent.com/krahets/hello-algo/main/docs/chapter_tree/binary_search_tree.md ；…/chapter_heap/heap.md",
+   "result": "hello-algo.com 被 Vercel 限流（429），改读作者 GitHub 仓库原稿：二叉搜索树一节第 42、62、72 行讲插入/删除保持性质，堆一节第 445–490 行讲堆化修复成立条件，采纳。",
+   "by": "review/main-additions/F.1.1.json"
   }
  ],
  "findings": [
@@ -292,10 +279,13 @@
   "旧条目中文只写“从数据结构、复杂度、搜索排序到分治、动态规划和贪心”，没有落到本节点的 7 个知识项；现按章号逐项对应。",
   "栈队列在原条目里被默认当成 61B 已覆盖，实际 61B 无该讲次；英文侧补 algs4 §1.3 后才完整。",
   "“不变量”中文侧确实缺，保留为缺口而不是用英文顶替。",
-  "主代理复核：免费中文数据不变式教学确有来源，撤销原跨语言回退。"
+  "主代理复核：免费中文数据不变式教学确有来源，撤销原跨语言回退。",
+  "[review/main-additions/F.1.1.json] 删除来源 zh3：北大裘宗燕课件 PDF（DS4-stack-queue-2.pdf）2026-11-02 复查返回 404，www 子域名连不上，不能再作为可打开的学习材料。"
  ],
  "cross_language_fallbacks": [],
  "name": "数据结构",
  "description": "数组、链表、栈队列、哈希、树、堆、图存储与不变量。",
- "applied_additions": []
+ "applied_additions": [
+  "review/main-additions/F.1.1.json"
+ ]
 }
