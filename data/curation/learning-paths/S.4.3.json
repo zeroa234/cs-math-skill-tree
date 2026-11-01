@@ -1,0 +1,301 @@
+{
+ "id": "S.4.3",
+ "name": "逆向工程与恶意软件分析",
+ "description": "二进制结构、行为分析、反汇编、动态观测与检测特征。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Malware Analysis — CSCI 4976（Rensselaer Polytechnic Institute，RPISEC；12 讲讲义 + 实验，GitHub 公开）",
+   "url": "https://github.com/RPISEC/Malware",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "01 Introduction（Basic Static/Dynamic Analysis）、02 Advanced Static Analysis（x86、IDA、code constructs）、03 Analyzing Windows Programs（WinAPI、handles、Windows internals、networking、COM）、04 Advanced Dynamic Analysis（调试）、05 Malware Behavior、06 Data Encoding & Countermeasures、07 Covert Launching、08 Anti-Analysis（anti-disassembly/anti-VM/anti-debugging/anti-AV）、09 Packing and Unpacking、10 Intro to Windows Kernel、11 Rootkit Techniques、12 Rootkit Anti-Forensics；配套 lab 用真实样本（口令 infected）。",
+   "access": "免费公开 GitHub（讲义 PDF + lab）；样本为加密压缩的恶意软件，必须在隔离环境分析。英文。",
+   "publisher": "RPISEC / Rensselaer Polytechnic Institute（学生社团课程，基于《Practical Malware Analysis》）",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/RPISEC/Malware/master/README.md",
+    "location": "README：课程说明与仓库目录（lectures 01–12）",
+    "finding": "README 写明这是 RPISEC 在 RPI 2015 秋开设的 Malware Analysis 课程材料，按《Practical Malware Analysis》组织，覆盖 reverse engineering、malicious behaviour、anti-analysis techniques。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "软件安全之恶意代码机理与防护（武汉大学，中国大学MOOC，国家级一流本科课程）",
+   "url": "https://www.icourse163.org/course/WHU-1460833161",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "软件安全基础（磁盘结构与系统启动、内存管理机制、PE 文件结构）；典型恶意软件（PE 病毒、宏病毒、脚本病毒、网络蠕虫、网络木马）的功能与实现机制；防护手段、分析技术与恶意代码检测机理。",
+   "access": "中国大学MOOC 免费注册学习；2018 国家精品在线开放课程、2020 国家级一流本科课程；视频按学期开放，字幕未核对。",
+   "publisher": "武汉大学（课程团队）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/WHU-1460833161",
+    "location": "课程概述与授课目标",
+    "finding": "课程概述原文写“在软件安全基础知识（如磁盘结构与系统启动、内存管理机制、PE 文件结构等）讲解的基础上，解析当前典型恶意软件（如PE病毒、宏病毒、脚本病毒、网络蠕虫、网络木马等）的功能、实现机制，以及对应的防护手段和分析技术”；授课目标含“掌握恶意代码检测机理”。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《信息安全导论》第11–12章 恶意代码（中国科学技术大学 曾凡平）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "恶意代码概述、分类、传播机制、12.7 恶意代码检测与分析技术、恶意活动代码的防御；补“行为分析”的中文正文，但不含 IDA 反汇编与调试的系统训练。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec12.pdf",
+    "location": "第12章 12.1 恶意代码概述、12.7 恶意代码检测与分析技术",
+    "finding": "infoSec12 目录含 12.1 恶意代码概述、12.7 恶意代码检测与分析技术；infoSec13 为 12.7 恶意活动代码的防御与第13章 内容安全。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“11 恶意代码”“12 内容安全”与实验，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：恶意代码两章只有学生上传 PDF，无官方版本，保留 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.4.3.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "IDA Pro（CTF Wiki 中文静态分析条目）",
+   "url": "https://ctf-wiki.org/reverse/tools/static-analyze/ida/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "反汇编工具与工作流：IDA Pro 是 Hex-Rays 的交互式反汇编器（interactive Disassembler Professional），是逆向最常用的静态分析工具；界面各视图的含义（Function Windows 函数列表、IDA-View 以汇编形式呈现单个函数的反汇编结果并可切换为按基本块构成的控制流图或原始汇编、Hex View 原始数据、Structures/Enums、Imports/Exports）；函数反编译（F5）、函数范围识别出错时用 alt+p/u/p 修复、代码混淆导致无法建函数时的处理；IDAPython（idc.get_db_byte 等 API）与插件扩展。",
+   "access": "免费网页，无需注册；简体中文（另有英文/繁中版）；示例截图齐全；文中提示 IDA Pro 本体与反编译引擎为付费（2024-04 时价 1975/2765 USD），IDA Free 仅支持 x86。",
+   "publisher": "CTF Wiki（中文 CTF 知识库，社区维护）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ctf-wiki.org/reverse/tools/static-analyze/ida/",
+    "location": "正文“简介”“基本用法”“函数反编译”“IDAPython”“IDA 插件”各节",
+    "finding": "打开确认正文：“IDA Pro（interactive Disassembler Professional）是由 Hex-Rays 公司出品的一款交互式反汇编工具，也是软件逆向工程当中最流行的一个静态分析工具”；“IDA-View：以汇编形式呈现的由 IDA 进行反编译所得的单个函数结果，默认是以由基本块构成的控制流图的形式进行展示，也可以通过空格键切换到内存布局中的原始汇编代码”；并给出 Function Windows/Hex View/Structures/Enums/Imports/Exports 各视图说明、F5 反编译、函数识别修复与 IDAPython 示例。"
+   },
+   "added_by": "review/pi-additions/S.4.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "软件安全与测试 · 第6章 恶意代码（中国科学技术大学 程绍银，课程官方 slides PDF）",
+   "url": "http://staff.ustc.edu.cn/~sycheng/sst/lectures/ch06_Malicious_Code.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "把反汇编放进恶意代码分析流程：反病毒技术人员/病毒分析师的工作方法，静态分析阶段用“反汇编器”查看病毒由哪些模块组成、调用了哪些系统调用、用了哪些技巧、如何把感染过程变成清除病毒与修复文件的过程；与同一课程的缓冲区溢出（ch03）与恶意代码实验（Writing Win32 Virus、Virus.pdf）配套。",
+   "access": "免费 PDF（教师课程主页直接下载），无需注册；简体中文；2014 春季版，内容偏旧。",
+   "publisher": "中国科学技术大学 程绍银（教师个人课程主页 staff.ustc.edu.cn/~sycheng/sst）",
+   "reupload": false,
+   "evidence": {
+    "url": "http://staff.ustc.edu.cn/~sycheng/sst/lectures/ch06_Malicious_Code.pdf",
+    "location": "第6章 PDF 中“静态分析：反汇编器……查看病毒分为哪些模块，使用了哪些系统调用，采用了哪些技巧”一段",
+    "finding": "打开 PDF 确认正文：“反病毒技术人员：专业病毒分析师”“静态分析：反汇编器。查看病毒分为哪些模块，使用了哪些系统调用，采用了哪些技巧，如何将……”“病毒感染过程变成清除病毒、修复文件的过程”。"
+   },
+   "added_by": "review/pi-additions/S.4.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "二进制结构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "软件安全基础：磁盘结构与系统启动、内存管理机制、PE 文件结构",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "01 Basic Static Analysis；02 x86 与 code constructs；03 Analyzing Windows Programs（PE/Windows internals）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "行为分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "典型恶意软件功能与实现机制（PE 病毒/宏病毒/脚本病毒/蠕虫/木马）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第12章 恶意代码概述与传播机制",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "05 Malware Behavior；06 Data Encoding & Countermeasures；07 Covert Launching",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "反汇编",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "“分析技术”部分提到静态分析，但课程概述未单列反汇编/IDA",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "IDA Pro 条目：简介、基本用法（IDA-View 汇编视图与流程图切换、Function/Hex/Imports 视图）、函数反编译、函数识别修复、IDAPython",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第6章 恶意代码：静态分析阶段使用反汇编器（看模块划分、系统调用、技巧、感染与清除过程）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "02 Advanced Static Analysis（x86、IDA、code constructs）；08 Anti-Analysis 中的 anti-disassembly",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程有恶意代码分析技术，但没有可核对的反汇编器使用（IDA/x86 汇编阅读）教学章节；英文第 2 讲专门讲 IDA 与代码构造。；旧结论说中文课程没有单列反汇编/IDA 的教学。这条目把反汇编做成可操作的工作流：先明确反汇编器是什么（把二进制还原为汇编视图），再讲怎么看（函数列表 → 汇编视图/控制流图 → 交叉引用与导入导出表），怎么修（函数范围识别错误、混淆导致建不出函数时的处理），最后用 IDAPython 与插件扩展——这是从“打开工具”到“读懂一个函数”的完整路径。；负责“反汇编在分析流程中的位置与目的”：不是为读汇编而读汇编，而是用反汇编器回答四个具体问题（有哪些模块、调了哪些系统调用、用了什么技巧、如何把感染过程反推成清除与修复步骤）。与 r7-zh1 的工具操作合起来，构成“目的—工具—产出”的闭环。注意：指令级 x86 汇编阅读的中文系统材料本轮只找到付费译本（《恶意代码分析实战》第4章“x86 反汇编速成班”，电子工业出版社 2014，ISBN 9787121224683），出版社目录页未核到，未登记。"
+  },
+  {
+   "topic": "动态观测与检测特征",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "防护手段、分析技术与恶意代码检测机理（授课目标 2/3）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "12.7 恶意代码检测与分析技术",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "01/04 Basic & Advanced Dynamic Analysis；08 Anti-Analysis；09 Packing/Unpacking",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文讲检测机理（特征/行为），英文讲具体动态观测工具与反分析对抗；两边互补。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先学软件安全基础（PE 结构、内存管理），再按 PE 病毒→宏病毒→脚本病毒→蠕虫→木马 逐类分析实现机制与检测思路，最后做防护/检测练习。"
+    },
+    {
+     "source": "zh2",
+     "read": "用第12章补恶意代码分类与传播机制，用 12.7 对照检测与分析方法。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按 CTF Wiki 条目走一遍：先熟悉 Function Windows / IDA-View（空格切流程图与原始汇编）/ Hex View / Imports 各视图，再对一个小程序（自己编译的 hello world 加一个分支）用 F5 反编译并对照汇编，最后用 alt+p/u/p 修一次函数边界、写一个 IDAPython 脚本打印某函数前 16 字节。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读第6章恶意代码的静态分析部分，选一个样本（或课程 Virus 实验文件）回答四问：模块划分、系统调用、使用的技巧、清除与修复步骤；把每问对应到反汇编视图里的具体证据（导入表项、调用点、字符串引用）。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "01–02：基础静态分析 → x86/IDA 反汇编与代码构造，能在 IDA 里标注一个样本的关键函数。"
+    },
+    {
+     "source": "en1",
+     "read": "03–07：Windows 程序分析、动态调试、恶意行为、编码与隐蔽启动；每个 lab 写行为报告。"
+    },
+    {
+     "source": "en1",
+     "read": "08–12：反分析对抗、加壳脱壳、内核与 rootkit 技术，最后给出检测特征（字符串/行为/YARA 思路）。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/WHU-1460833161 ; USTC 第11–12章课件",
+   "result": "采纳：武大课程覆盖 PE/机制/检测，USTC 补检测与分析技术；反汇编未单列。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 武大恶意代码课程",
+   "result": "采纳为主资源：视频按学期开放。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《恶意代码分析实战》译本等教材",
+   "result": "译本为付费书，未核实到可核对目录的公开页，未购买；不作为免费路线。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://github.com/RPISEC/Malware（README）",
+   "result": "采纳：README 与 12 讲结构核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "反汇编 IDA Pro 中文 教程 教材 目录 逆向工程核心原理 中译 汇编 阅读",
+   "result": "部分采纳：定位到 ghidra-book 中译本目录与《IDA Pro 权威指南》线索；图灵社区（ituring.com.cn/book/791）与学堂在线课程页抓取返回 0 字符，无法核对；最终以 CTF Wiki《IDA Pro》条目承担工具教学。",
+   "by": "review/pi-additions/S.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "恶意代码分析实战 电子工业出版社 目录 x86反汇编速成班 IDA Pro 中译 定价 ISBN",
+   "result": "只找到百科与第三方读书笔记：《恶意代码分析实战》（电子工业出版社 2014，ISBN 9787121224683，￥128）第4章 x86 反汇编速成班、第5章 IDA Pro；出版社官方目录页未命中，按规则不登记为来源，只在本条 explanation 中说明。",
+   "by": "review/pi-additions/S.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "material",
+   "tool": "fetch",
+   "query_or_url": "http://staff.ustc.edu.cn/~sycheng/sst/lectures/ch06_Malicious_Code.pdf；https://ctf-wiki.org/sitemap.xml 后逐页核对 /assembly/x86-x64/readme/ 与 /reverse/tools/static-analyze/ida/",
+   "result": "采纳 ch06 与 CTF Wiki IDA 条目；CTF Wiki 的 x86-x64 汇编页正文只有一句“x86_x64 汇编相关基础内容”（存根页），不能作为来源。",
+   "by": "review/pi-additions/S.4.3.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 CTF Wiki·软件逆向只有逆向技术条目，缺恶意软件机理与检测；改用武汉大学《软件安全之恶意代码机理与防护》为主资源，CTF Wiki 不再作为本技能主来源。",
+  "武大课程的中文正文覆盖 PE 结构、恶意代码机理与检测，正好对上四个主题中的三个；反汇编工具训练缺，判 partial。",
+  "英文 RPISEC 课程以《Practical Malware Analysis》为骨架，12 讲从静态到 rootkit 完整覆盖。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.4.3.json@b287b4477b"
+ ]
+}

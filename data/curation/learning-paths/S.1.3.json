@@ -1,0 +1,574 @@
+{
+ "id": "S.1.3",
+ "name": "现代密码与隐私计算专题",
+ "description": "可证明安全、零知识、安全多方计算、同态加密和后量子密码。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS 355: Topics in Cryptography（Stanford，Spring 2026；schedule + problem sets）",
+   "url": "https://cs355.stanford.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "L1–L4 Foundations（OWF、PRG、hardcore bits、PRF、PRP、commitment）；L5–L8 cryptanalysis 与椭圆曲线/配对；L9–L13 Zero Knowledge（交互式证明、Sigma 协议、Fiat-Shamir、多项式承诺、IOP）；L14–L16 MPC（OT 与混淆电路、秘密分享、PIR）；L17–L18 Lattice（LWE、Regev、全同态加密）。",
+   "access": "课程主页、schedule 与 problem sets 免费公开，无需注册；英文授课，讲义在站上（视频/字幕未核对）。",
+   "publisher": "Stanford University",
+   "evidence": {
+    "url": "https://cs355.stanford.edu/",
+    "location": "Schedule 分节：Foundations of Cryptography L1–L4；Zero Knowledge Proofs L9–L13；Multi-Party MPC L14–L16；Lattice-based L17–L18",
+    "finding": "schedule 逐讲列出 L1 OWFs/PRGs、L4 Commitment、L9 Interactive Proofs and ZK、L11 Fiat-Shamir、L13 IOPs、L14 OT & Garbled Circuits、L15 Secret Sharing、L16 PIR、L17 LWE & Regev encryption、L18 FHE，另有 Problem Sets 页。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "现代密码学（电子科技大学，中国大学MOOC，国家精品在线开放课程）第8–9章",
+   "url": "https://www.icourse163.org/course/UESTC-1003046001",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "第8章 可证明安全理论的初步知识；第9章 研究前沿：属性基加密、全同态加密、后量子密码学。只有概览，没有零知识证明与安全多方计算的单元。",
+   "access": "中国大学MOOC 免费注册学习；“认证学习”证书收费；视频按开课学期提供，字幕未核对。",
+   "publisher": "电子科技大学（课程团队）；教材 杨波《现代密码学》第5版",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/UESTC-1003046001",
+    "location": "课程概述：第8章、第9章",
+    "finding": "页面原文写“第8章将介绍可证明安全理论的初步知识。第9章将介绍一些密码学研究的前沿方向，比如属性基加密、全同态加密、后量子密码学等”；课程 9 章中没有零知识证明与安全多方计算章。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "ZK 残酷共学（LXDAO 社区，2024；中文共学大纲与每周任务）",
+   "url": "https://github.com/IntensiveCoLearning/ZK",
+   "tier": "material",
+   "free": true,
+   "role": "alternative",
+   "covers": "三周共学：ZKP 历史与基本概念、Circom 电路入门、ZK 应用（zkRollup）与简单实现；定位写的是“初步了解 ZK 是什么……能够成功完成一些产品的开发”，属入门共学，不含多项式承诺/IOP/归约证明。",
+   "access": "免费公开 GitHub 仓库（中文 README 与每周任务）；共学时间 2024-07-29 至 08-18，报名已结束，材料仍可自学。",
+   "publisher": "LXDAO 社区（发起人 Coooder）",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/IntensiveCoLearning/ZK/main/README.md",
+    "location": "介绍、面向人群、共学时间、每周任务",
+    "finding": "README 中文写明目标是“初步了解 ZK 是什么、ZK 技术在具体项目中的应用、ZKP 的发展和简单实现”，并给出 2024-07-29 至 08-18 的三周安排。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "隐语 SecretFlow 官方中文文档 · 教程（含“实际场景 MPC 算法开发实践”培训资料）",
+   "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "教程目录含 SPU 基础、拆分学习、隐私求交与“隐语SecretFlow实际场景MPC算法开发实践”培训资料；讲的是 MPC/隐私计算的工程落地与 API 用法，不讲 OT/混淆电路/秘密分享协议本身与安全性证明。",
+   "access": "文档免费在线阅读；跑通示例需安装隐语并准备计算节点，生产使用另有部署成本。",
+   "publisher": "蚂蚁集团 / SecretFlow 开源项目",
+   "evidence": {
+    "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+    "location": "教程目录：SPU 基础、拆分学习、培训资料“实际场景MPC算法开发实践”",
+    "finding": "打开教程页看到按 IO/DataFrame/SPU/拆分学习/场景方案/培训资料分组的示例目录，标题指向 API 与场景实践，无协议安全性章节。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "密码学复习笔记（哈工大 2020 年密码学课程笔记，基于《现代密码学：原理与协议》）",
+   "url": "https://www.ruanx.net/crypto-notes",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "以形式化方法定义安全性：Kerckhoffs 原则与攻击场景（COA/KPA/CPA/CCA）→ 完善保密与完美不可区分性 → 语义安全与窃听不可区分实验 PrivK^eav → 计算安全与“原则三：严格的安全证明”（规约方法：假设敌手攻破方案则构造 PPT 算法解困难问题）→ 伪随机性、伪随机发生器 PRG 的定义（扩展性 + PPT 不可区分）→ 用 PRG 构造定长加密方案并给出归约证明（含完整概率推导）。",
+   "access": "免费网页，无需注册；简体中文（含 LaTeX 公式）；作者为哈工大课程学习者整理的个人笔记，非学校官方发布。",
+   "publisher": "Ruan Xingzhi（个人博客 ruanx.net，笔记内容对应哈工大 2020 年密码学课程）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.ruanx.net/crypto-notes",
+    "location": "开篇说明 + “原则三：严格的安全证明” + “伪随机性/伪随机发生器(PRG)/用 PRG 构造定长加密方案” 各节",
+    "finding": "打开确认：开篇写“这是哈工大2020年密码学课程的笔记。课程以形式化的方法定义了密码学的安全性……本文基于教材《现代密码学：原理与协议》”；正文给出规约证明的完整套路（“构造一个 PPT 算法 A′，这个算法调用 A，试图解决难题 X……若 ε(n) 是不可忽略的，则 A′ 解决 X 的概率也是不可忽略的，这与原假设矛盾”）、PRG 的两条定义条件与用 PRG 构造加密方案的 Enc/Gen/Dec 三步及归约证明。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "密码学补完计划（B 站中文系列视频：单向函数&陷门函数、伪随机生成器 PRG、CSPRNG、伪随机函数 PRF 等）",
+   "url": "https://www.bilibili.com/video/BV1A82XBiEwF",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "第三期 单向函数&陷门函数（BV1A82XBiEwF）→ 第七期 伪随机生成器 PRG（BV1dimuBiEgp）→ 第八期 密码学安全伪随机数生成器 CSPRNG（BV1gcmEBHEbQ）→ 第九期 伪随机函数 PRF（BV11fmRB7EqP）：补齐 OWF→PRG→PRF 这条可证明安全最常用的构造链。",
+   "access": "B 站免费观看，UP 主 EithanSolace（个人账号，非学校/平台官方课）；每期 5–8 分钟；口播语言与字幕未核对（视频页未显示字幕轨）。",
+   "publisher": "B 站 UP 主 EithanSolace（个人科普系列，2025-12 起更新）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1A82XBiEwF",
+    "location": "第三期标题“密码学补完计划[第三期] 单向函数&陷门函数”（472 秒）；第七期“伪随机生成器PRG”（325 秒）",
+    "finding": "用 B 站视频接口核对：第三、七、八、九期同属 UP 主 EithanSolace（mid 1539967072）的《密码学补完计划》，标题分别对应单向函数与陷门函数、PRG、CSPRNG、PRF，各为单 P 5–8 分钟。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "密码学06｜零知识证明（DoraHacks Hacker Dōjo 分享，清华大学密码学博士生 Sputnik 主讲）",
+   "url": "https://www.bilibili.com/video/BV1Gb411R7dr",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "52 分钟中文讲授，页面列出大纲：1 证明与知识（交互式证明与“知识的证明”的区别）、2 阿里巴巴的洞穴（零知识的直观模型）、3 什么是零知识性（完备性/可靠性/零知识性）、4 如何构造零知识证明；配社区文字稿。",
+   "access": "B 站免费观看；讲解为中文（清华博士生中文分享），字幕未核对；另附 bounty 页与社区文字稿链接。",
+   "publisher": "DoraHacks（华语开发者社区）Hacker Dōjo，主讲 Sputnik（清华大学密码学博士）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1Gb411R7dr",
+    "location": "视频简介（大纲四条 + 文字稿链接）与单 P 时长 3106 秒",
+    "finding": "打开视频接口确认简介原文：“本次分享由 Hacker Dōjo 资助……Dōjō Hacker: Sputnik，清华大学密码学博士；大纲：1.证明与知识 2.阿里巴巴的洞穴 3.什么是零知识性 4.如何构造零知识证明”，单 P 时长 3106 秒。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "亚瑟王的「随机」挑战：从交互到非交互式零知识证明（SECBIT 安比实验室 ZK 系列文章）",
+   "url": "https://secbit.io/blog/2019/11/01/from-interactive-zkp-to-non-interactive-zkp",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "系列中的非交互化一篇：回顾 Schnorr 协议（Sigma 类协议的承诺—挑战—响应三步）、从零知识性到 NIZK、随机预言机（Random Oracle）“重建信任”、Fiat-Shamir 变换（从 Public-Coin 到 NIZK）与其安全隐患、公共参考串 CRS 作为另一种信任根基；前序篇讲交互式证明与地图三染色。",
+   "access": "免费网页，无需注册；简体中文；文中含公式与协议步骤。",
+   "publisher": "SECBIT（安比实验室，区块链安全研究团队）官方博客",
+   "reupload": false,
+   "evidence": {
+    "url": "https://secbit.io/blog/2019/11/01/from-interactive-zkp-to-non-interactive-zkp",
+    "location": "文章小节标题：“回顾 Schnorr 协议”“从 NIZK 角度看数字签名”“重建信任 —— 随机预言精灵”“Fiat-Shamir 变换 —— 从 Public-Coin 到 NIZK”“公共参考串 —— 另一种「信任根基」”",
+    "finding": "打开确认正文：先说明“我们之前介绍的零知识证明系统都是「交互式」的……比如「地图三染色问题」（参看『系列二』）”，再逐节讲 Schnorr 协议、Fiat-Shamir 变换（Hash 充当挑战）、随机预言机证明的边界与反例（Goldwasser–Tauman 2003），以及 CRS 方案。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh5",
+   "lang": "zh",
+   "title": "PrivacyIN Week2｜张宇鹏：经典零知识证明协议设计原理（Groth16 / Plonk / Stark）课堂精讲全文",
+   "url": "https://hub.baai.ac.cn/view/21004",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "90 分钟 ZK 训练营课程的全文精讲：多项式承诺（定义、Correctness/Soundness/Zero-knowledge 三性质、KZG 承诺的 setup—commit—验证三步与双线性配对验证）、数论基础（素数、模运算）、PLONK 协议、SNARK 类协议（non-universal）、STARK 协议。",
+   "access": "免费网页，无需注册；简体中文；由 LatticeX 在智源社区发布课程精讲全文（原课为英文授课的 90 分钟小班课，中文稿件为课堂精讲整理）。",
+   "publisher": "PrivacyIN（隐私研究院 ZK 训练营）/ LatticeX，发布平台：智源社区（北京智源人工智能研究院）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://hub.baai.ac.cn/view/21004",
+    "location": "“前言”“课程精讲全文”“多项式承诺”各节",
+    "finding": "打开确认：页面写明“隐私研究院【PrivacyIN】第一期 ZK 训练营课程精讲内容上线……邀请到德州农工大学张宇鹏助理教授……主题《Basic Principles of the Classic ZK Protocols (Groth16 Plonk Stark)》”；正文按“多项式承诺 → 密码学数论简介 → PLONK 协议 → SNARK 类协议 → STARK 协议”展开，并给出 KZG 的 setup/commit/verify 三步与“多项式承诺可以使用 Fiat–Shamir-heuristic 转换为非交互方式”。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh6",
+   "lang": "zh",
+   "title": "【隐私计算笔谈】MPC 系列专题（LatticeX，智源社区，至少 11 期）",
+   "url": "https://hub.baai.ac.cn/view/21547",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "（一）安全多方计算应用场景（百万富翁、电子投票 FOO、隐私数据挖掘、PSI 等）；（二）攻击者模型与 Shamir(t,n) 秘密共享（半诚实/恶意、t<n/2 与 t<n/3 门限结构、计算意义 vs 信息论意义安全、拉格朗日插值恢复）；（三）不经意传输与混淆电路（OT 的 RSA 式构造与逐步算例、混淆电路逐门加密真值表与打乱）；（十一）共享随机数与比特分享、多方比较。",
+   "access": "免费网页，无需注册；简体中文；系列文章由 LatticeX 在智源社区连载，含数字算例。",
+   "publisher": "LatticeX（PlatON 基金会技术团队），发布平台：智源社区（北京智源人工智能研究院）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://hub.baai.ac.cn/view/21755",
+    "location": "（二）“模型”“攻击者模型”“门限机制和Shamir秘密共享”各节",
+    "finding": "打开确认：正文先定义攻击者可以收买/控制参与者，再分“半诚实攻击者模型/恶意攻击者模型”与“计算意义/信息论意义”两类能力，给出 (t,n) 门限攻击者结构与 t<n/2、t<n/3 两种常见结构，随后讲 Shamir 秘密共享与拉格朗日插值；同系列（三）打开可见 OT 的分步构造与数值算例（C=20、a=11、k=10、x0=9、x1=5）以及混淆电路的逐门替换真值表步骤。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh7",
+   "lang": "zh",
+   "title": "全同态加密理论：格密码的数学基础（DappLearning 公开课录像）",
+   "url": "https://www.bilibili.com/video/BV1RsFAeWEbF",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "48 分钟中文讲座，讲全同态加密所需的格密码数学基础（格、格上困难问题与 LWE 类假设的数学准备）。",
+   "access": "B 站免费观看（DappLearning 账号，华语开发者教育社区）；口播语言与字幕未核对。",
+   "publisher": "DappLearning（华语开发者学习社区）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1RsFAeWEbF",
+    "location": "单 P 标题“全同态加密理论: 格密码的数学基础”，时长 2894 秒",
+    "finding": "用 B 站视频接口确认标题、UP 主 DappLearning、单 P 时长 2894 秒、发布 2025-01；页面无更细的分节信息，故只能确认讲座主题为 FHE 的格密码数学基础。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh8",
+   "lang": "zh",
+   "title": "后量子密码学与格基加密（新星云网络 / 夸父量子计算云平台相关讲座录像）",
+   "url": "https://www.bilibili.com/video/BV1tXXRY6ETA",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "80 分钟中文讲座：后量子密码学的必要性（Shor 算法威胁）与格基加密方案。",
+   "access": "B 站免费观看；简介只给出“夸父量子计算云平台 https://quafu.baqis.ac.cn”链接，主讲人与单位未在页面写明；口播语言与字幕未核对。",
+   "publisher": "B 站账号“新星云网络”（简介链接指向北京量子信息科学研究院夸父量子计算云平台）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1tXXRY6ETA",
+    "location": "单 P 标题“后量子密码学与格基加密”，时长 4841 秒，简介含夸父平台链接",
+    "finding": "用 B 站视频接口确认：标题“后量子密码学与格基加密”、UP 主“新星云网络”、单 P 4841 秒（约 80 分钟）、简介为“夸父量子计算云平台 | https://quafu.baqis.ac.cn/#/welcome”。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "key": "r7-zh9",
+   "lang": "zh",
+   "title": "BGV 自举算法选讲（中文讲座录像，3 小时）",
+   "url": "https://www.bilibili.com/video/BV1bBnZeRE94",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "180 分钟专题讲授 BGV 方案的自举（bootstrapping）算法，即全同态加密中最关键的重加密/噪声刷新步骤。",
+   "access": "B 站免费观看（UP 主 Fuxk-Hack，个人账号）；页面无简介，口播语言与字幕未核对。",
+   "publisher": "B 站 UP 主 Fuxk-Hack（个人账号）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1bBnZeRE94",
+    "location": "单 P 标题“BGV自举算法选讲”，时长 10794 秒",
+    "finding": "用 B 站视频接口确认：标题“BGV自举算法选讲”、UP 主 Fuxk-Hack、单 P 10794 秒（约 3 小时）、简介为空。"
+   },
+   "added_by": "review/pi-additions/S.1.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "可证明安全",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第8章 可证明安全理论的初步知识",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "“原则三：严格的安全证明”“语义安全/窃听不可区分实验”“伪随机性—PRG—用 PRG 构造定长加密方案（含归约证明）”",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "《密码学补完计划》第三期 单向函数&陷门函数、第七期 PRG、第八期 CSPRNG、第九期 PRF",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L1–L4 Foundations（OWF/PRG/PRF、commitment 与安全定义）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有一章“初步知识”的概览，没有 OWF→PRG→PRF 的构造链与归约练习；英文 L1–L4 是研究生起点。；这份课程笔记把可证明安全讲成可跟着推的链条：先用 PrivK 实验把“安全”写成可判定的游戏（完美不可区分 → 语义安全 → 计算不可区分），再给出规约证明的标准套路（假设敌手攻破方案则构造 PPT 算法解困难问题，用不可忽略概率推出矛盾），最后用 PRG 构造加密方案并完整走一遍归约证明。旧结论说中文缺“安全定义与归约练习”，此材料正好补上这一层。；负责补构造链的“OWF→PRG→PRF”一段：单向函数与陷门函数的定义与用途、PRG 的扩展性与不可区分性、CSPRNG、PRF 与 PRP 的区别与用途。与 r7-zh1 的形式化定义和归约练习合起来，中文可以完整走完“定义—假设—构造—归约”的入门闭环。"
+  },
+  {
+   "topic": "零知识",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第一周 ZKP 历史与基本概念、Circom 入门",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "视频大纲 1 证明与知识 / 2 阿里巴巴的洞穴 / 3 什么是零知识性 / 4 如何构造零知识证明",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh4",
+     "section": "回顾 Schnorr 协议 / Fiat-Shamir 变换（Public-Coin → NIZK）/ 随机预言机 / 公共参考串",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh5",
+     "section": "多项式承诺（KZG setup/commit/verify 三步与配对验证）/ 数论基础 / PLONK / SNARK 类协议 / STARK",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L9–L13 交互式证明与 ZK、Sigma、Fiat-Shamir、多项式承诺、IOP",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有社区共学的入门周（讲“ZK 是什么”和电路），没有完备性/可靠性/零知识性的形式定义与证明。；负责“零知识是什么”的直觉与三性质：交互式证明与知识的证明的区别、洞穴模型、完备性/可靠性/零知识性，以及构造 ZKP 的基本思路。；负责“Sigma 类协议与交互→非交互”这一段：Schnorr 协议给出承诺—挑战—响应的 Sigma 结构，Fiat-Shamir 变换把公开掷币协议变成 NIZK，并讲清随机预言机假设的边界（含反例）与 CRS 这条替代信任根基。；负责“多项式承诺与 zkSNARK/STARK 构造”这一段：多项式承诺的定义与三性质、KZG 的具体构造与验证式、PLONK 与 STARK 的设计原理；配合 r7-zh4 的 Fiat-Shamir，中文可以覆盖旧结论所说缺的“多项式承诺与 IOP 类构造”的入门层次（IOP 只在 PLONK/STARK 语境出现，未单独讲 IOP 抽象模型）。"
+  },
+  {
+   "topic": "安全多方计算",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "教程·培训资料“实际场景 MPC 算法开发实践”、SPU 基础",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh6",
+     "section": "（一）应用场景 /（二）攻击者模型与 Shamir 秘密共享 /（三）不经意传输与混淆电路 /（十一）共享随机数与比特分享、多方比较",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L14 OT 与混淆电路；L15 秘密分享；L16 PIR",
+     "extent": "covered"
+    }
+   ],
+   "note": "本轮未找到免费中文 MPC 课程；中文材料多为联邦学习/隐私计算产品文档（SecretFlow 等），讲系统用法而非 MPC 协议与安全性证明，故不映射为已覆盖。；这套连载把 MPC 讲成完整的技术体系：安全目标与应用场景 → 攻击者模型（半诚实/恶意、计算意义/信息论意义、(t,n) 门限结构）→ 两个主构造（Shamir 秘密共享 + 拉格朗日恢复；OT 的具体构造与算例 + 混淆电路逐门加密真值表）→ 比较等基础模块。旧结论说中文只有产品用法与联邦学习，这里补上了协议与模型层面的教学。"
+  },
+  {
+   "topic": "同态加密和后量子密码",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第9章 研究前沿：全同态加密、后量子密码学（概览）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh7",
+     "section": "《全同态加密理论：格密码的数学基础》（48 分钟讲座）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh7",
+     "section": "全同态加密理论：格密码的数学基础（约 48 分钟）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh8",
+     "section": "后量子密码学与格基加密（约 80 分钟）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh9",
+     "section": "BGV 自举算法选讲（约 3 小时）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L17 LWE 与 Regev 加密；L18 全同态加密",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文是“前沿方向”一节的概览，没有 LWE 困难性、Regev 构造与 FHE bootstrapping；后量子部分也只点名方向。；只覆盖 FHE 的格密码数学准备（格、格上困难问题与 LWE 类假设的直观与定义），既没有 Regev 构造的逐步推导，也没有自举与 PQC 标准化；r7-zh8（后量子密码学与格基加密，80 分钟）与 r7-zh9（BGV 自举算法选讲，3 小时）分别覆盖 PQC/格基加密与自举，但三者是零散讲座、无体系，故该知识点整体记 partial 并列入 unresolved。；三场中文专题讲座分别讲全同态加密依赖的格密码数学、格基后量子加密、BGV 方案与自举；它们是讲座而不是学期课，但都专讲这一知识点，入门范围足够。电子科大《现代密码学》第 8–9 章作背景。；后量子密码部分。；同态加密方案与自举部分。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读第8章拿到“可证明安全”的词汇（归约、困难问题假设），再读第9章知道 FHE/PQC 属于哪类构造；把这两章当术语准备，不当作专题课主体。"
+    },
+    {
+     "source": "zh2",
+     "read": "按共学大纲第一周补齐 ZKP 的直观认识并跑通一个 Circom 小电路，用于判断自己是否要继续深入。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按“完善保密 → 语义安全 → 计算安全”的顺序读笔记，每个定义都自己重写一遍 PrivK 实验；然后把“原则三”的规约套路抄成一页模板，用 PRG 构造加密方案那一节当例题，独立把归约证明推一遍（写出敌手 A 与区分器 A′ 的调用关系与成功率不等式）。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "看第三、七、八、九期，把 OWF→PRG→CSPRNG→PRF 四个定义连成一条依赖链，各写一句“它比前一个多了什么能力”，并说明 PRF 与 PRP 的区别以及各自在加密/认证里的用处。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "看《密码学06｜零知识证明》并对照大纲做笔记：用洞穴故事讲清“零知识性”与“可靠性”的区别，再自己写出一个交互式证明的三性质检查表。"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "读 SECBIT 这篇，先手推 Schnorr 协议三步并说明它为什么是 Sigma 协议，再把 Fiat-Shamir 变换写成伪代码，最后记下随机预言机假设的两个反例结论与 CRS 的作用。"
+    },
+    {
+     "source": "r7-zh5",
+     "read": "读 PrivacyIN 课堂精讲：把 KZG 多项式承诺的 setup/commit/verify 三步与配对验证式抄下来并用小例子验算，再对比 PLONK 与 STARK 在可信初始化、证明大小、验证复杂度上的差别。"
+    },
+    {
+     "source": "r7-zh6",
+     "read": "按（一）（二）（三）（十一）顺序读，先写清半诚实与恶意模型下“安全”的定义差别，再用文章里的数字例子手算一次 OT，最后用混淆电路一节的两输入门把真值表加密与打乱过程走一遍。"
+    },
+    {
+     "source": "r7-zh7",
+     "read": "（同态/PQC 的补充，尚不足以覆盖该知识点）看格密码数学基础讲座，记下格、SIS/LWE 类问题的定义与参数关系，为读 Regev 构造与自举做准备。"
+    },
+    {
+     "source": "r7-zh7",
+     "read": "先看格密码数学基础一讲，弄清 LWE 与噪声增长。"
+    },
+    {
+     "source": "r7-zh8",
+     "read": "再看后量子密码与格基加密一讲，对照 NIST 后量子标准的方案类别。"
+    },
+    {
+     "source": "r7-zh9",
+     "read": "最后看 BGV 自举选讲，理解同态运算为什么需要自举来控制噪声。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "L1–L4：从 OWF 构造 PRG/PRF/PRP，写一次归约证明；L4 承诺方案要能说明 hiding/binding。"
+    },
+    {
+     "source": "en1",
+     "read": "L9–L13：交互式证明 → Sigma → Fiat-Shamir → 多项式承诺 → IOP，每步手推一个协议并指出可靠性来源。"
+    },
+    {
+     "source": "en1",
+     "read": "L14–L16：OT/混淆电路、秘密分享、PIR 各实现一个玩具版本；L17–L18：用 LWE 参数算一次噪声增长，理解 Regev 与 FHE 的瓶颈。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://github.com/search?q=零知识证明 / 安全多方计算 / 格密码（GitHub 仓库检索）",
+   "result": "只找到社区学习仓库与代码库（如 LXDAO ZK 共学、Dapp-Learning），没有免费中文系统课程；中文查询在 GitHub 检索接口多次返回 422，改用英文关键词与已知课程页核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/UESTC-1003046001（现代密码学 9 章）",
+   "result": "采纳为概览：第8–9章只覆盖可证明安全/FHE/PQC 的初步知识，无 ZK/MPC 章。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "极客时间《零知识证明》专栏、中文《安全多方计算》教材",
+   "result": "未核实：没有可公开核对的专栏/教材页面，本轮不登记为来源；也未购买任何中文付费课程。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cs355.stanford.edu/",
+   "result": "采纳：schedule 的 L1–L4/L9–L13/L14–L16/L17–L18 逐条对上四个主题。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "中国大学MOOC 密码学 课程 可证明安全 零知识证明 安全多方计算 章节",
+   "result": "部分采纳：找到华中科技大学《密码学原理》等课（概述含“计算安全性、高级密码算法”），但中国大学MOOC 课程大纲页需登录且脚本渲染，无法核到讲次，故未作为覆盖依据。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "密码学 研究生课程 讲义 可证明安全 零知识证明 安全多方计算 全同态加密 后量子密码 课程主页",
+   "result": "采纳为线索：北京大学《应用密码学》研究生课程仓库（已打开，第 12 讲密态计算、第 13 讲隐私方案含零知识证明，但 slides 目录只有 1 个导论 PDF，无讲义可学，故未登记为覆盖来源）；另发现 PrivacyIN 与智源系列。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可证明安全 归约 讲义 pdf 密码学 安全模型 不可区分 伪随机 课程",
+   "result": "采纳 ruanx.net《密码学复习笔记》（哈工大课程笔记，含规约方法与 PRG 归约证明，已打开核对正文）；博客园/CSDN 科普文与 fjnu 研究生课程指南未采纳。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "安全多方计算 讲义 课程 不经意传输 混淆电路 秘密共享 半诚实 恶意 安全性证明 中文",
+   "result": "不采纳知乎/腾讯云/博客园综述（单篇科普）；采纳同为检索所得的智源《隐私计算笔谈》MPC 系列（改为下一条 site 检索确认其连载规模）。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "site:hub.baai.ac.cn 隐私计算笔谈 同态加密 零知识证明 秘密共享 系列",
+   "result": "采纳：确认 MPC 系列至少 11 期（一/二/三/十一已逐篇打开），另有 PrivacyIN 张宇鹏 ZK 课堂精讲全文；未找到智源侧成体系的同态加密连载。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "零知识证明 中文 教程 讲义 Sigma协议 Fiat-Shamir 多项式承诺 zkSNARK 入门 系统",
+   "result": "采纳 SECBIT 博客（Schnorr/Fiat-Shamir/NIZK/CRS，已打开）与 PrivacyIN 精讲（多项式承诺/PLONK，已打开）；CatCoding、blockchainGuide 仓库与厂商“学习指南”未采纳。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "B 站搜索 API：\"可证明安全\" \"密码学证明 规约 随机谕言机\" \"零知识证明 原理 讲义\" \"安全多方计算 秘密共享 混淆电路\" \"全同态加密 格密码\" \"同态加密 bootstrapping 自举\" \"现代密码学入门 PRF\"",
+   "result": "部分采纳：《密码学补完计划》（OWF/PRG/CSPRNG/PRF）、《密码学06｜零知识证明》（DoraHacks）、《全同态加密理论：格密码的数学基础》（DappLearning）、《BGV自举算法选讲》、《后量子密码学与格基加密》；UP 主“大大monkey”的《密码学证明》系列标题为英文（Proofs in Cryptography – Lecture 3…），疑为英文讲座转载且无中文讲解证据，未采纳。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "全同态加密 中文 讲义 教程 LWE Regev bootstrapping 后量子密码 格基 课程",
+   "result": "不合适：返回博客园/CSDN 单篇与维基百科，无成体系中文 FHE/PQC 课程；只有西浦公开讲座页与 XJTLU 讲座简介（单次讲座）。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "现代密码学 原理与协议 Katz Lindell 中文版 出版社 目录 ISBN 伪随机函数",
+   "result": "只查到百科与知乎书单，未找到可核对的出版社目录页（国防工业出版社站内检索未命中），故未登记为正版付费来源；教材线索保留给主代理。",
+   "by": "review/pi-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 同态加密 OR 后量子密码 OR 格密码 课程",
+   "result": "只有电子科大、西安邮电的现代密码学/密码学基础总课，没有专门课程；采用 pi 找到的三场专题讲座。",
+   "by": "review/main-additions/S.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 后量子密码 课程 格密码 同态加密 系列",
+   "result": "另有新火科技《基础密码学系列课程3：RSA、环签名、同态加密》可作补充，结论不变。",
+   "by": "review/main-additions/S.1.3.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 SecretFlow 官方文档是隐私计算产品文档，讲联邦学习用法，不是密码学专题教学；本轮不再把它当作本技能的中文主资源。",
+  "中文只有《现代密码学》第8–9章的概览级内容与社区 ZK 共学，四门专题都没有对应深度的免费中文课，故中文路线判 gap（有概览材料，但没有可学完的专题课），不假报完成。",
+  "英文 CS355 的 2026 schedule 覆盖可证明安全基础、ZK、MPC、LWE/FHE；后量子部分以格假设为主，NIST PQC 标准与哈希签名未单列，已在 topic note 说明。",
+  "[review/pi-additions/S.1.3.json] 未解决 zh「同态加密和后量子密码」：只找到三次单次中文讲座（格密码数学基础 48 分钟、后量子密码学与格基加密 80 分钟、BGV 自举 3 小时），三者能分别对上 LWE/格基础、PQC 与格基加密、bootstrapping，但没有一门免费中文课程把“LWE 困难性 → Regev 构造 → 自举 → NIST PQC 标准”讲成体系；中国大学MOOC/学堂在线的密码学课大纲无法核对（需登录、脚本渲染），北大《应用密码学》只有 1 份导论 slides。故该知识点记 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.1.3.json@cb1a58fa53",
+  "review/main-additions/S.1.3.json@88a4f050eb"
+ ]
+}

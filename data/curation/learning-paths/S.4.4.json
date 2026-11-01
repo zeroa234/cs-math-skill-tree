@@ -1,0 +1,388 @@
+{
+ "id": "S.4.4",
+ "name": "安全运营、检测与攻防评估",
+ "description": "日志关联、威胁情报、检测工程、演练、度量与持续改进。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MITRE ATT&CK®（官方知识库：Matrices / Tactics / Techniques / Mitigations / Detections / CTI）",
+   "url": "https://attack.mitre.org/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "对手行为与威胁情报建模（Groups/Software/Campaigns 的 CTI）、按 Tactics-Techniques 组织的攻击目录（Enterprise/Mobile/ICS）、检测侧（Detection Strategies、Analytics、Data Components，说明每个技术要看哪些日志与数据源）、Mitigations；可用于把红队演练与蓝队检测覆盖对齐。",
+   "access": "MITRE 官方免费在线，无需注册；是知识库而非课程，无作业与评分。英文。",
+   "publisher": "MITRE",
+   "evidence": {
+    "url": "https://attack.mitre.org/",
+    "location": "主导航 Enterprises/Mobile/ICS Matrices、Tactics、Techniques、Detections、CTI",
+    "finding": "首页给出 Matrices、Tactics、Techniques、Mitigations、Detection Strategies 等入口，并说明 ATT&CK 是对手战术与技术的知识库。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Sigma — SIEM Detection Format（官方文档与规则库）",
+   "url": "https://sigmahq.io/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "把日志检测写成可维护、可交换的规则（Sigma Specification、Rules、Rule Packs），用于检测工程：从日志字段→检测逻辑→跨 SIEM 转换。",
+   "access": "文档与规则库免费开源；规则需自行部署到 SIEM。英文。",
+   "publisher": "SigmaHQ 社区",
+   "evidence": {
+    "url": "https://sigmahq.io/",
+    "location": "首页：Sigma Specification / Rules / Documentation 导航与规则示例",
+    "finding": "首页写 'The shareable detection format for security professionals'，并提供 Get Started、Download Sigma Rule Packages、Sigma Specification 与 Rules 入口。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "NIST SP 800-55 Vol. 1 Measurement Guide for Information Security: Identifying and Selecting Measures（2024）",
+   "url": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "安全度量的识别、选择与评估流程（度量目的、对象、数据源、分析与报告），用于“度量与持续改进”。",
+   "access": "NIST 官方 PDF 免费；英文指南（非课程）。",
+   "publisher": "NIST",
+   "evidence": {
+    "url": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+    "location": "标题与摘要：Measurement Guide for Information Security, Volume 1 — Identifying and Selecting Measures",
+    "finding": "CSRC 页面标题即 “SP 800-55 Vol. 1, Measurement Guide for Information Security: Volume 1 — Identifying and Selecting Measures”，并提供官方 PDF 下载。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Microsoft Sentinel 官方中文文档（数据连接器、分析规则、KQL、威胁情报、事件与自动化）",
+   "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "按 SOC 工作流组织：数据连接器与规范化、分析规则与告警、KQL 查询、威胁情报、事件调查、自动化规则/playbook、工作簿；是“日志关联→检测→调查→响应”的中文操作文档。",
+   "access": "文档免费；实际工作区、日志摄取与自动化按 Azure 订阅计费。中文（机器/人工本地化未标注），术语保留英文。",
+   "publisher": "Microsoft",
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/",
+    "location": "目录：分析规则、KQL；威胁情报；自动化；事件；数据连接器；搜寻",
+    "finding": "中文文档首页写“Microsoft Sentinel提供攻击检测、威胁可见性、主动搜寻和威胁响应”，目录列出分析规则、KQL、威胁情报、自动化、事件、数据连接器、搜寻等条目。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《信息安全导论》第8章 安全防护与应急响应（中国科学技术大学 曾凡平）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "8.1 防火墙、8.2 入侵检测、8.3 蜜罐、8.4 应急响应；讲检测与响应的基本机制，不含 SIEM 日志关联、检测规则工程与度量。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec09.pdf",
+    "location": "第8章 8.2 入侵检测 / 8.3 蜜罐 / 8.4 应急响应",
+    "finding": "infoSec09 目录含 8.2 入侵检测（分类、分布式 IDS、发展趋势）、8.3 蜜罐、8.4 应急响应技术；全文“应急响应”出现 28 处、“安全审计”28 处。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“8 网络与系统安全防护技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：安全防护与应急响应相关课件只有学生上传 PDF，保留 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.4.4.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "查看 Microsoft Sentinel 中的 MITRE ATT&CK 覆盖（Microsoft Learn 中文官方文档）",
+   "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/mitre-coverage",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "检测覆盖率工程：用 MITRE ATT&CK 覆盖率矩阵按威胁方案查看组织的当前覆盖、用图例看某技术上的“活动检测数量”、用搜索按技术名/ID 定位、在详情面板看到“建议的覆盖比例（活动检测与安全服务占全部建议检测与服务的比例）”；并区分“当前覆盖”与“模拟覆盖”（工作区可用但尚未配置的检测），说明配置分析规则时应绑定具体 MITRE 技术、并按技术筛选规则。",
+   "access": "免费中文文档，无需注册；简体中文；页面部分交互依赖门户，正文可读。",
+   "publisher": "Microsoft（Microsoft Learn 官方中文文档，Microsoft Sentinel）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/mitre-coverage",
+    "location": "正文“若要查看组织的当前 MITRE 覆盖范围”“使用可用检测模拟可能的覆盖范围”“在分析规则和事件中使用 MITRE ATT&CK 框架”各节",
+    "finding": "打开确认正文：“使用图例，了解工作区中当前针对特定技术的活动检测数量”“使用搜索栏在矩阵中使用技术名称或 ID 搜索特定技术”“详细信息窗格还会显示建议的覆盖详细信息，包括对于所选技术，活动检测和安全服务（产品）在所有建议的检测和服务中所占的比例”“使用可用检测模拟可能的覆盖范围”；另有“配置分析规则时，请选择要应用于规则的特定 MITRE 技术”。"
+   },
+   "added_by": "review/pi-additions/S.4.4.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "ATT&CK 实践入门（MITRE 官方《ATT&CK Practitioner's Guide》中文译本 PDF，含“评估与工程”“对手模拟与红队”两章）",
+   "url": "https://wiki.y1ng.org/assets/ATT&CK%E5%AE%9E%E8%B7%B5%E5%85%A5%E9%97%A8.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "“评估与工程”一章（第 29 页起）给出检测覆盖评估与规则构建的流程：选定技术 → 检查现有告警/规则是否已覆盖该技术（例：把“3389 端口内部流量”“tscon.exe 进程”等告警映射到 T1076 远程桌面协议）→ 若未覆盖则回看该技术页列出的数据源、确认是否已采集正确数据 → 已采集则只是“构建分析”的问题 → 记录覆盖并继续下一技术；另有“对手模拟与红队”一章（第 20 页起）讲如何用 ATT&CK 组织红队评估。作者为 MITRE 的 Adam Pennington 等。",
+   "access": "第三方转载，授权未核。免费 PDF（个人 wiki 托管的社区中文译本），无需注册；简体中文；译文版式与页码保留原书（评估与工程 29 页、作者简介 39 页）。",
+   "publisher": "原着 MITRE（Adam Pennington 等）；中文译本托管于 wiki.y1ng.org",
+   "reupload": true,
+   "official_search": "原着为 MITRE 免费英文版《ATT&CK Practitioner's Guide》（medium.com/mitre-attack 与 attack.mitre.org 发布），官方只有英文、无官方中文版；本 PDF 为社区中文译本（托管在个人 wiki），故标 reupload:true。中文侧另查了微软/Google 中文文档作为官方对照（见 r7-zh1）。",
+   "evidence": {
+    "url": "https://wiki.y1ng.org/assets/ATT&CK%E5%AE%9E%E8%B7%B5%E5%85%A5%E9%97%A8.pdf",
+    "location": "PDF 目录“对手模拟与红队 20”“评估与工程 29”“作者简介 39”与“评估与工程”章正文（远程桌面协议 T1076 检索引例）",
+    "finding": "打开 PDF 确认目录与作者信息（Adam Pennington，首席网络安全工程师，MITRE，ATT&CK 博客主编）；正文给出一条完整评估链：“假设我们在查看远程桌面协议 T1076，且已经有了以下警报：1. 流经 22 端口的所有网络流量 2. AcroRd32.exe 生成的所有进程 3. 名为 tscon.exe 的任意进程 4. 流经 3389 端口的所有内部网络流量”，再对照 ATT&CK 技术页确定哪些规则命中该技术，“若您的分析已经覆盖此技术，记录下您对此技术的覆盖……如果您尚未覆盖此技术，看看其 ATT&CK 页面列出的数据源，确定自己是否已经拉取了正确的数据来构建新分析”。"
+   },
+   "added_by": "review/pi-additions/S.4.4.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "实战攻防演练：红蓝对抗 & 有效性检验（博客园《深入解析》系列第十二篇）",
+   "url": "https://www.cnblogs.com/ljbguanli/p/19302373",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "攻防演练的组织与度量：分准备阶段（确定演练目标、准备内容、向管理层报备且对红军保密）、实施阶段（蓝军发起攻击、红军感知/溯源/拦截/止血；停止条件=达到攻击目的或指定时间）、复盘阶段（蓝军讲攻击流程与暴露风险、红军审视并制定整改计划、完善防御体系）；并提出“数据驱动的度量与复盘”：汇聚演练数据、自动化检验数据、红军推演巡检数据与外部资料，交叉验证后计算感知率、拦截率、攻击覆盖度等指标来量化安全水位，同时点出效率（避免重复演练）、覆盖度（模拟多变攻击路径）、价值量化三个待解问题。",
+   "access": "免费网页，无需注册；简体中文；个人技术博客系列文，篇幅较短（约 4 千字）。",
+   "publisher": "博客园（cnblogs.com）用户 ljbguanli 的《深入解析》系列",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.cnblogs.com/ljbguanli/p/19302373",
+    "location": "“阶段—参与方—主要活动—关键点/目标”表格（准备/实施/复盘三阶段）与“数据驱动的度量与复盘”段",
+    "finding": "打开确认正文：表格逐阶段列出参与方与活动（准备阶段“确定演练目标、准备演练内容、演练报备……报备：向管理层报备，信息对红军保密”；实施阶段“停止条件：达到攻击目的或指定时间”；复盘阶段“蓝军：讲解整个攻击流程及暴露的风险；红军：审视问题并制定整改计划”）；度量段写“通过交叉验证，计算出感知率、拦截率、攻击覆盖度等关键指标，量化安全水位”，并列“效率问题/覆盖度问题/价值量化问题”三项挑战。"
+   },
+   "added_by": "review/pi-additions/S.4.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "日志关联",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据连接器、规范化、分析规则、KQL 查询",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Detection Strategies / Data Components（每个技术需要哪些日志源）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Sigma 规则中的 logsource 与字段映射",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "威胁情报",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "威胁情报（连接器、情报匹配、与事件联动）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "CTI：Groups / Software / Campaigns 与 ATT&CK 映射",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "检测工程",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "分析规则（计划/近实时/NRT、实体映射、告警）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "MITRE 覆盖率矩阵：当前覆盖 vs 模拟覆盖、按技术定位活动检测数、建议覆盖比例、分析规则绑定技术",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "《ATT&CK 实践入门》第三章“评估与工程”（覆盖评估流程与规则构建、数据源核对）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Sigma Specification、Rules、Rule Packs（检测规则的可维护写法）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Detection Strategies 与 Analytics",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有厂商平台内的分析规则配置，没有“检测即代码/规则版本化/覆盖率评估”的工程方法。；旧结论说中文只有平台内规则配置、没有覆盖率评估。这份官方文档把检测做成可度量的工程：以 ATT&CK 技术为索引，统计每条技术上的活动检测数量、给出“建议覆盖比例”，并用“模拟覆盖”回答“如果把我能开的检测都开上，覆盖率会到多少”；同时要求在分析规则里显式绑定技术，使规则与威胁模型可对上号。；负责“流程与判据”：给定一个技术，先用现有告警/规则做匹配（文章用 T1076 的四条告警演示），未命中就回到技术页核对“该技术需要哪些数据源、我有没有采集”，已采集则只是构建分析的问题，最后把结果记为覆盖并推进下一项。这把“检测工程”落成可重复的评估—构建—记录循环，补上旧结论缺的“检测即工程”的方法。"
+  },
+  {
+   "topic": "演练",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "8.2 入侵检测与 8.4 应急响应（无红蓝演练组织）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "准备/实施/复盘三阶段的参与方、活动与关键点（含报备保密、停止条件、复盘整改）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "用 ATT&CK 规划 adversary emulation 与检测覆盖对照（红蓝演练）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺演练设计（场景、规则、评分、复盘）与红蓝对抗组织。；旧结论说中文缺红蓝演练设计与复盘方法。此文按阶段给出可执行要素：准备阶段定目标与演练内容并向管理层报备（对红军保密以检验真实应对）、实施阶段明确红蓝职责与停止条件、复盘阶段蓝军讲攻击链与暴露风险、红军出整改计划。这就是一套可直接照做的演练设计骨架。"
+  },
+  {
+   "topic": "度量与持续改进",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "工作簿与监控（可做报表，但无度量方法）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "“数据驱动的度量与复盘”：汇聚演练/自动化检验/红军巡检/外部数据并交叉验证，计算感知率、拦截率、攻击覆盖度",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en3",
+     "section": "SP 800-55 Vol.1：度量的识别、选择与评估流程",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有平台报表能力，没有安全度量指标设计与改进闭环。；旧结论说中文只有平台报表能力、没有度量指标设计与改进闭环。这里给出三个可算的指标（感知率=是否发现、拦截率=是否挡住、攻击覆盖度=演练覆盖了多少攻击路径）及其数据来源与交叉验证方式，并明确度量结果用于指导下一轮安全建设方向，形成“演练—度量—改进”的闭环；同时点出效率、覆盖度、价值量化三个未解问题，便于继续深入。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按数据连接器 → 分析规则 → KQL → 威胁情报 → 事件/自动化 的顺序，在一个测试工作区把一条告警从日志跑到事件关闭。"
+    },
+    {
+     "source": "zh2",
+     "read": "用第8章补 IDS/蜜罐/应急响应的基本机制，理解告警背后的检测原理。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "按“评估与工程”流程对 5 个 ATT&CK 技术做一次覆盖盘点：每个技术写出已有告警/规则、命中的具体规则、缺失的数据源、需要新建的分析，最后产出一张“技术—覆盖状态—缺口—下一步”的表。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "在 Sentinel（或等价平台）里看一次 MITRE 覆盖率矩阵：记录当前覆盖与模拟覆盖的差值、某技术的“建议覆盖比例”，并解释为什么“规则数量多”不等于“覆盖好”。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "设计一次小型红蓝演练：写清准备（目标、内容、报备与保密）、实施（红蓝职责、停止条件）、复盘（攻击链讲解 + 整改计划），再用感知率/拦截率/攻击覆盖度三个指标出一页“安全水位”报告，并列出下一轮改进项。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Enterprise 矩阵读 tactics/techniques，用 Detection Strategies 与 Data Components 为 5 个技术列日志源与检测点。"
+    },
+    {
+     "source": "en2",
+     "read": "把这些检测点写成 Sigma 规则（logsource + selection + condition），并跑一遍转换到目标 SIEM。"
+    },
+    {
+     "source": "en3",
+     "read": "按 800-55 的度量流程为检测覆盖、MTTD/MTTR 设计指标，形成季度改进清单。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/azure/sentinel/ ; USTC 第8章课件",
+   "result": "采纳：中文有 SIEM 操作与 IDS/响应机制，无检测工程/演练/度量。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 安全运营/SOC 类课程页检索",
+   "result": "未找到可核对的中文 SOC 运营课程；平台视频多需注册且无公开页面可证。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《安全运营》《威胁情报》教材与厂商认证",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://attack.mitre.org/ ; https://sigmahq.io/ ; https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+   "result": "采纳：ATT&CK 框架、Sigma 规则规范、NIST 度量指南三者互补。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "检测工程 detection engineering 中文 检测规则 版本化 覆盖率 安全运营 实践 教程",
+   "result": "部分采纳：Google Cloud 智能体 SOC 与 Splunk 中文页为产品页未登记；VMRay 为英文。改由下一条专门检索中文检测工程材料。",
+   "by": "review/pi-additions/S.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "\"检测工程\" 安全运营 检测规则 管理 版本 覆盖 ATT&CK 中文 实践 文章",
+   "result": "采纳：微软 Learn 中文《查看 MITRE ATT&CK 覆盖》（已打开核对正文）与《ATT&CK 实践入门》中译 PDF（已打开核对目录与“评估与工程”章）；腾讯 TSRC《小步快跑，快速迭代：安全运营的器术法道》作旁证未登记。",
+   "by": "review/pi-additions/S.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "红蓝对抗 攻防演练 中文 组织 流程 复盘 安全运营 度量 指标 MTTD MTTR",
+   "result": "采纳博客园《实战攻防演练：红蓝对抗 & 有效性检验》（已打开，含三阶段与感知率/拦截率/攻击覆盖度）；深信服知识中心、青藤与安全KER 文章为厂商内容，未登记。",
+   "by": "review/pi-additions/S.4.4.json"
+  }
+ ],
+ "findings": [
+  "原英文条目只有 ATT&CK 知识库；本轮补 Sigma（检测规则工程）与 NIST 800-55（度量），使“检测工程/度量”有可学材料。",
+  "原中文条目 Sentinel 文档是厂商产品文档，能覆盖日志关联/情报/告警，但没有检测工程方法、演练与度量，判 partial。",
+  "ATT&CK 与 Sigma 都不是课程，已在 access/role 写明；本技能的“课程层”证据仍弱，需主代理复核是否接受以知识库+规范为主的路线。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.4.4.json@f25605f47b"
+ ]
+}

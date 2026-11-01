@@ -1,0 +1,420 @@
+{
+ "id": "S.2.1",
+ "name": "计算机系统安全",
+ "description": "操作系统防护、内存安全、权限、隔离、可信执行、固件与系统加固。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "6.858 Computer Systems Security（MIT OpenCourseWare，Fall 2014，Nickolai Zeldovich；讲义、录像、labs、日程）",
+   "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Lec 1 Introduction/Threat Models；Lec 2 Control Hijacking Attacks；Lec 3 Buffer Overflow Exploits and Defenses；Lec 4 Privilege Separation；Lec 6 Capabilities；Lec 7 Sandboxing Native Code；Lec 8–9 Web Security Model/Securing Web Applications；Lec 16 Side-Channel Attacks；Lec 17 User Authentication。",
+   "access": "OCW 免费公开讲义、录像、lab 与日程，无需注册；英文授课，讲义可替代字幕。",
+   "publisher": "MIT / Prof. Nickolai Zeldovich",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/pages/calendar/",
+    "location": "Calendar：Lec 1–4、6–9、16–17 标题",
+    "finding": "日程表逐行确认 Lec 3 “Buffer Overflow Exploits and Defenses”、Lec 4 “Privilege Separation”、Lec 6 “Capabilities”、Lec 7 “Sandboxing Native Code”、Lec 16 “Side-Channel Attacks”；页面另有 Lecture Notes / Lecture Videos / Labs 导航。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "ECE 4040/5040 Introduction to Hardware Security（University of Idaho，Fall 2026，Zain Ul Abideen；课程日程与作业公开）",
+   "url": "https://hsc-research.org/hwsec.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Session 12 “Secure boot, measured boot, and remote attestation”：固件认证、度量与事件日志、认证更新、回滚保护、attestation 协议与验证方假设；Session 28 安全测试/调试接口。补 6.858 未讲的固件与可信执行根。",
+   "access": "课程站点免费公开日程、阅读与作业；无视频。需要数字逻辑与 Verilog 基础。",
+   "publisher": "University of Idaho / Prof. Zain Ul Abideen",
+   "evidence": {
+    "url": "https://hsc-research.org/hwsec.html",
+    "location": "Session 12（Thursday, October 1）Secure boot, measured boot, and remote attestation",
+    "finding": "页面日程原文列出 Session 12 讲 firmware authentication、measurements and event logs、authenticated updates、rollback protection、attestation protocols 与 hardware/software boundary。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《信息安全导论》第4、6、7章课件（中国科学技术大学 曾凡平，学生整理上传的 PDF）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第4章 授权与访问控制（DAC/MAC/RBAC/ABAC）；第6章 主机系统安全技术：6.1 操作系统安全（基本概念、TCSEC、安全原理、安全机制、Linux 安全）、6.3 可信计算技术（TCG 可信计算系统/TPM）；第7章 网络攻击 7.3 缓冲区溢出攻击与防范、7.6 缓冲区溢出漏洞分析与利用。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF。学生整理上传的授课课件，非学校官方发布页，版权归授课教师；课程 40 学时+40 学时实验。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec06.pdf",
+    "location": "第6章 目录页：6.1.1–6.1.5 操作系统安全、6.2 数据库安全、6.3 可信计算技术；infoSec08.pdf 7.3/7.6 缓冲区溢出",
+    "finding": "PDF 目录写明“6.1 操作系统安全技术 6.1.1 基本概念 6.1.2 可信计算机评价标准(TCSEC) 6.1.3 操作系统安全的基本原理 6.1.4 操作系统安全机制 6.1.5 Linux 的安全 …… 6.3 可信计算技术 6.3.1 概念和基本思想 6.3.2 TCG可信计算系统”；infoSec08 目录含 7.3 缓冲区溢出攻击与防范、7.6 缓冲区溢出漏洞的分析与利用。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：有课程编号 011184、第1–16周、章节表列出“6 主机系统安全技术”“7 网络与系统攻击技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016，无课件下载）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：第4/6/7 章只有学生上传 PDF，无官方课件或录像，保留 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.2.1.json"
+   ]
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "CTF Wiki：Linux 用户态基础（环境与利用实践）",
+   "url": "https://ctf-wiki.org/pwn/linux/user-mode/environment/",
+   "tier": "website",
+   "free": true,
+   "role": "alternative",
+   "covers": "内存布局、程序运行环境、栈溢出利用与工具链的中文实操条目；补内存安全的动手部分，不承担操作系统防护与可信执行的理论。",
+   "access": "免费在线阅读，社区维护；页面为简体中文，随站点更新。",
+   "publisher": "CTF Wiki 社区",
+   "evidence": {
+    "url": "https://ctf-wiki.org/pwn/linux/user-mode/environment/",
+    "location": "Pwn → Linux 用户态 → Environment 页与左侧目录",
+    "finding": "打开为中文 Pwn/Linux 用户态环境页，目录含栈溢出、ROP 等条目，属题目与工具导向。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "网络空间安全导论（清华大学本科核心课程，课程团队官方 GitHub 仓库：教学课件 + 18 个课程实验）",
+   "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "16 章配套 PPT（团队自行标注为“大幅精简”版）：第3章 网络空间安全基本机制（第1节 访问控制、第2节 沙箱、第3节 入侵容忍、第4节 可信计算、第5–7节 类免疫/移动目标防御/拟态防御/零信任），其中第2节沙箱给“沙箱的核心思想——隔离”“沙箱的内部工作机理”“安全规则控制程序可用的资源集（内存、文件系统、网络）”；第7章 操作系统安全（攻击对象=内存管理/进程管理/I/O 管理；第二节 基础防御方案 W^X、NX/DEP、ASLR；第四节 高级系统保护方案：控制流完整性、指针完整性）。",
+   "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；完整版 PPT 需向课程团队邮箱申请（README 写明）。配套教材《网络空间安全原理与实践（第二版）》徐恪、李琦、沈蒙、朱敏，清华大学出版社（付费）。",
+   "publisher": "清华大学“网络空间安全导论”课程团队（GitHub 组织 Cybersecurity-THU）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/Cybersecurity-THU/Cybersecurity-Fundamentals/main/%E6%95%99%E5%AD%A6%E8%AF%BE%E4%BB%B6/%E7%AC%AC3%E7%AB%A0%20%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E6%9C%BA%E5%88%B6.pdf",
+    "location": "第3章 PDF 第 10–14 页“第2节 沙箱”、第 22–23 页“第4节 可信计算”；第7章 PDF 目录“第二节 基础防御方案 / 第四节 高级系统保护方案”",
+    "finding": "下载并打开 PDF 确认：第 13 页标题“沙箱的核心思想——隔离”，正文“通过隔离程序的运行环境、限制程序执行不安全的操作，防止恶意程序对系统可能造成的破坏”；第 14 页“沙箱的内部工作机理”写沙箱是“某种受限的、与外部隔离的操作系统”，可配置安全规则限制内存/文件系统/网络；第7章目录列出 W^X(NX,DEP)、ASLR、控制流完整性、指针完整性；README 章节表写第3章含“沙箱、入侵容忍、可信计算、类免疫防御、移动目标防御、拟态防御、零信任网络”七大机制。"
+   },
+   "added_by": "review/pi-additions/S.2.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "操作系统与虚拟化安全（北京大学 沈晴霓，Coursera 13 模块中文课程）",
+   "url": "https://www.coursera.org/learn/os-virtsecurity",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "13 个模块的中文讲授：M1 计算机系统安全的重要性与评测标准（1.1 课程简介…1.7 欧盟 ITSEC 与 CC 标准）、M2 基本安全概念和设计思想、M3 访问控制机制、M4 可追究机制、M5–M6 连续保护机制（I）（II）、M7 安全模型、M8 安全体系结构、M9 可信计算技术、M10 安全操作系统的设计与实现技术案例、M11 基于安全操作系统的应用-数据库安全、M12 系统虚拟化安全与虚拟可信平台技术（含 12.1 虚拟化技术概述与分类）、M13 收尾模块。",
+   "access": "Coursera 免费注册后可旁听（页面 “Join for Free”，旁听不含证书；证书/评分作业为付费项）；中文授课，字幕未核对；总时长按页面估算 3 周 ×10 小时。",
+   "publisher": "北京大学 沈晴霓（Prof. Shen Qingni）／Coursera",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.coursera.org/learn/os-virtsecurity",
+    "location": "About 与 Modules 列表（M1–M12 标题及 1.1–1.7 讲次）、12.1 虚拟化技术概述与分类",
+    "finding": "打开确认：页面写“13 modules”，课程简介为“介绍操作系统(Linux)与系统虚拟化(Xen)安全相关理论、技术和方法，包括：安全概念、安全机制、安全模型、安全体系结构、安全开发方法、安全标准与评测方法”；模块列表逐条可读，M9 为“可信计算技术”（4 小时）、M12 为“系统虚拟化安全与虚拟可信平台技术”（3 小时），M1 展开可见 1.1–1.7 讲次标题。"
+   },
+   "added_by": "review/pi-additions/S.2.1.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "安全启动（Microsoft Learn 中文官方文档，Windows 硬件开发指南）",
+   "url": "https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/oem-secure-boot",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "UEFI 安全启动的定义与机制：电脑启动时固件验证每个启动软件的签名（UEFI 固件驱动/选项 ROM、EFI 应用程序、操作系统），签名有效才交出控制权；OEM 如何生成安全启动密钥并写入固件、UEFI 驱动必须签名并加入安全启动数据库；安全启动证书 2026-06 到期的迁移指引。",
+   "access": "免费中文文档，无需注册；简体中文；无视频。",
+   "publisher": "Microsoft（Microsoft Learn 官方中文文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/oem-secure-boot",
+    "location": "正文前两段与“重要”提示",
+    "finding": "打开确认正文：“安全启动是由电脑行业成员开发的安全标准，可帮助确保仅使用原始设备制造商（OEM）信任的软件启动设备。电脑启动时，固件会验证每个启动软件的签名，包括 UEFI 固件驱动程序（也称为选项 ROM）、EFI 应用程序和操作系统。如果签名有效，电脑会启动，固件会将控制权交给操作系统。”并写明 OEM 创建安全启动密钥存入固件、UEFI 驱动需签名进安全启动数据库。"
+   },
+   "added_by": "review/pi-additions/S.2.1.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "启动时验证（Android Open Source Project 中文文档 · 安全特性）",
+   "url": "https://source.android.com/docs/security/features/verifiedboot?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "启动链完整性：建立“从受硬件保护的信任根到引导加载程序”的验证链、逐级验证已执行代码来自可信来源；回滚保护（rollback protection）保证设备只会更新到更高的 Android 版本；把完整性状态传达给用户；Android 8.0+ 的 AVB 参考实现与分区验证。",
+   "access": "免费中文文档（AOSP 官方站点简体中文版），无需注册；无视频。",
+   "publisher": "Google / Android Open Source Project（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://source.android.com/docs/security/features/verifiedboot?hl=zh-cn",
+    "location": "页面摘要与“背景”节",
+    "finding": "打开确认正文：“启动时验证会尽力确保所有已执行代码均来自可信来源（通常是设备的 OEM）……它可建立一条从受硬件保护的信任根到引导加载程序的验证链”；“启动时验证还会检查 Android 版本是否为具有回滚保护的正确版本。回滚保护可确保设备只会更新到更高的 Android 版本”；另写“允许 Android 设备将其完整性状态传达给用户”，并说明 Android 8.0+ 含 AVB 参考实现。"
+   },
+   "added_by": "review/pi-additions/S.2.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "操作系统防护",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第6章 6.1 操作系统安全技术（6.1.1–6.1.5）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 3 Buffer Overflow Exploits and Defenses；Lec 4 Privilege Separation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文按 TCSEC/安全机制/Linux 安全组织；英文以攻击-防御与特权分离组织。"
+  },
+  {
+   "topic": "内存安全",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第7章 7.3 缓冲区溢出攻击（原理与防范）、7.6 缓冲区溢出漏洞的分析与利用",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "Pwn/Linux 用户态 Environment 与栈溢出条目",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 2 Control Hijacking Attacks；Lec 3 Buffer Overflow Exploits and Defenses",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文讲原理与利用，缓解机制（ASLR/DEP/CFI）只在“防范”里点到，深度不如英文 Lec 3。"
+  },
+  {
+   "topic": "权限",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第4章 授权与访问控制（DAC/MAC/RBAC/ABAC）；第6章 6.1.4 操作系统安全机制",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 4 Privilege Separation；Lec 6 Capabilities",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "隔离",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第6章 6.1.4 操作系统安全机制中提及虚拟化/隔离，未独立成节",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第3章 第2节 沙箱（发展概况 / 安全目标 / 基本思想和原理，含“沙箱的核心思想——隔离”“沙箱的内部工作机理”）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "M12 系统虚拟化安全与虚拟可信平台技术（含 12.1 虚拟化技术概述与分类）；M2 基本安全概念和设计思想；M3 访问控制机制",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 4 Privilege Separation；Lec 7 Sandboxing Native Code",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有机制列表里的隔离/虚拟化提法，没有沙箱、SFI、虚拟机隔离的专门章节与实验。；把“隔离”讲成有目标—机制—边界的一条线：安全目标（限制不可信程序的破坏能力）→ 核心思想（隔离运行环境、限制不安全操作）→ 内部机理（沙箱是受限且与外部隔离的操作系统环境，程序只能访问沙箱内资源，外部资源按安全规则受限访问）→ 可配置的隔离粒度（内存空间、文件系统、网络）。这正是旧结论缺的“隔离作为独立机制”的教学，而不是只在操作系统安全章里带一句。；负责把隔离从“沙箱”扩到“虚拟化隔离”这一层：虚拟化技术分类与虚拟机监控器带来的强隔离边界、虚拟可信平台（vTPM）如何为每个虚拟机提供独立可信根，以及访问控制/连续保护机制如何配合隔离使用。旧结论说中文只在操作系统安全机制里提到隔离、没有虚拟机隔离的教学，这一模块正好补上。"
+  },
+  {
+   "topic": "可信执行",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第6章 6.3 可信计算技术（TCG 可信计算系统、TPM）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Session 12 Secure boot, measured boot, and remote attestation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文讲 TCG/TPM 可信计算体系（可信根、度量），英文讲 measured boot 与 attestation 协议及验证方假设；TEE（SGX/TrustZone）两边都只到概念层。"
+  },
+  {
+   "topic": "固件与系统加固",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第6章 开头把固件(Firmware/BIOS)列为宿主安全的一部分，无专节",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "全文（安全启动的定义、固件逐级验签、密钥与数据库、证书更新）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh4",
+     "section": "启动时验证：信任根与验证链、回滚保护、完整性状态、AVB",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第7章 操作系统安全：第二节 基础防御方案（W^X、NX/DEP、ASLR）、第四节 高级系统保护方案（控制流完整性、指针完整性）；第3章 第4节 可信计算",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Session 12 firmware authentication、authenticated updates、rollback protection",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只在主机安全定义里提到固件，没有固件认证、更新与回滚保护的内容。；负责“固件认证”这一半：固件在把控制权交给下一级之前验证 UEFI 驱动、EFI 应用与操作系统镜像的签名，密钥由 OEM 生成并写入固件、可信签名存于安全启动数据库；同时给出证书到期与更新迁移的工程指引，属于典型的固件信任链与认证更新教学。；负责“度量启动 / 回滚保护”这一半：从硬件保护的信任根到 bootloader 的逐级验证链、用版本号实现回滚保护（只能升到更高版本，防止降级到有漏洞的旧镜像）、把完整性状态报告给用户，以及 AVB 的分区验证实现。与 r7-zh3 合起来覆盖固件认证、度量/验证链、认证更新与回滚保护四项。；负责“系统加固”这一半：把加固落到具体机制——不可执行内存与 W^X、地址随机化、控制流完整性与指针完整性，以及可信计算（TCG/TPM）作为系统可信基的定位。系统加固的“配置基线/补丁管理”层面中文材料仍偏产品文档，此处以机制层教学为准。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读第4章建立权限模型（DAC→MAC→RBAC→ABAC），再读第6章 6.1 操作系统安全与 6.3 可信计算，最后读第7章 7.3/7.6 做一次栈溢出利用与防范分析。"
+    },
+    {
+     "source": "zh2",
+     "read": "用 CTF Wiki 的 Linux 用户态条目把栈溢出、shellcode、ROP 实际跑一遍，输出一份“漏洞成因→利用→缓解”记录。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读第3章第2节，画出沙箱的三要素（隔离的运行环境、受限资源集、安全规则）并各举一个真实例子（浏览器标签页、移动端应用沙箱、在线判题）；再读第7章，把 W^X/ASLR/CFI/指针完整性四条防御各自对应的攻击（栈溢出、ROP、UAF）配对成一张表。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "看 M12 系统虚拟化安全与虚拟可信平台技术：能说清虚拟化分类（全虚拟化/半虚拟化/硬件辅助）与 VMM 提供的隔离边界，比较“共享内核的容器”与“独立内核的虚拟机”在逃逸风险上的差别；顺带用 M2/M3 复习安全机制与访问控制在隔离中的角色。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读《安全启动》全文，写出 UEFI 安全启动的验证顺序（固件 → UEFI 驱动/EFI 应用 → OS 加载器 → OS）与每个环节的签名数据库（db/dbx），并说明 OEM 密钥如何进入固件、证书轮换时为什么需要更新固件与 db。"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "读《启动时验证》，把信任根→bootloader→系统分区的验证链画出来，解释回滚保护为什么用单调版本号实现、以及“完整性状态报告给用户”在工程上对应什么（bootloader 状态、黄色/红色警告）。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Lec 1–3：威胁模型 → 控制流劫持 → 缓冲区溢出利用与缓解（自己写一个栈溢出并开 ASLR/NX 对比）。"
+    },
+    {
+     "source": "en1",
+     "read": "Lec 4、6、7：特权分离、capabilities、sandboxing native code，画出 user/kernel 边界与 TCB。"
+    },
+    {
+     "source": "en2",
+     "read": "Session 12：secure boot/measured boot/remote attestation，写清固件认证链、度量日志与回滚保护各防什么。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "USTC《信息安全导论》13 讲课件（GitHub 仓库）+ CTF Wiki Linux 用户态",
+   "result": "采纳：第4/6/7 章分别覆盖权限、操作系统防护与可信计算、缓冲区溢出；CTF Wiki 补动手。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/BIT-1206619844（缓冲区溢出/Windows 安全实践单元）",
+   "result": "部分合适：有缓冲区溢出与逆向实践单元，但操作系统防护与可信执行不在其中，未采纳为覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《可信计算》《操作系统安全》教材与 MOOC 认证证书",
+   "result": "未核实到可核对页面的免费/付费中文可信执行课程；未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/pages/calendar/ ; https://hsc-research.org/hwsec.html",
+   "result": "采纳：6.858 覆盖 OS/内存/权限/隔离，ECE 4040/5040 Session 12 补固件与 measured boot/attestation。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "沙箱 隔离 机制 虚拟机 容器 系统安全 中文 教学 课件 实验 课程 沙箱逃逸",
+   "result": "部分采纳：阿里云 ACK《什么是安全沙箱》（runC 共享内核 vs 轻量虚拟机隔离，已打开）、华为沙箱百科、tianpan 博客（隔离级别与逃逸向量）；知乎长文 403 打不开。最终隔离以清华导论第3章 + 北大 Coursera M12 为主。",
+   "by": "review/pi-additions/S.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "UEFI 安全启动 Secure Boot 度量启动 固件 更新 回滚保护 中文 教程 系统加固 指南",
+   "result": "采纳微软 Learn 中文《安全启动》与 AOSP 中文《启动时验证》；EA 帮助页、微软故障排除页、Cloudflare 中文博客与 cyber8200 训练营博客作为旁证未采纳（后者为培训机构博客，证据力弱）。",
+   "by": "review/pi-additions/S.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "系统安全 课程 中文 隔离 沙箱 虚拟化 访问控制 内存安全 课件 讲义 大学",
+   "result": "采纳两处：①北京大学沈晴霓 Coursera《操作系统与虚拟化安全》（13 模块，M9 可信计算、M12 虚拟化安全，已打开核对模块列表）；②清华大学《网络空间安全导论》官方仓库 Cybersecurity-THU/Cybersecurity-Fundamentals（16 章 PPT，已下载核对第3、7章）。",
+   "by": "review/pi-additions/S.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 沙箱 隔离 容器逃逸 虚拟化 系统安全 讲解 课程",
+   "result": "不合适：返回 B 站站内搜索页与“AI Agent 沙箱/手机多开沙箱”类短视频，无讲授隔离机制与虚拟化隔离的课程；故不用 B 站视频覆盖这两个知识点。",
+   "by": "review/pi-additions/S.2.1.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 CTF Wiki·Linux 用户态只有利用实践，缺操作系统防护、权限模型、可信执行与固件，不能作为本技能中文主资源；降为 alternative。",
+  "改用 USTC《信息安全导论》第4/6/7 章作中文主资源：它是同一门课里权限、主机系统安全（含可信计算）、缓冲区溢出三块的中文正文。",
+  "中文仍缺“隔离”（沙箱/SFI/虚拟机）与“固件与系统加固”的专门内容，判 partial 并回退英文。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.2.1.json@2da7cd2dfd"
+ ]
+}

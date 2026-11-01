@@ -138,14 +138,15 @@
       "url": "https://gi1242.codeberg.page/cmu-math-cs-mcm/"
     },
     "S.5.2": {
-      "title": "Security Engineering: A Guide to Building Dependable Distributed Systems（Ross Anderson，第 3 版；作者主页全书各章免费）",
+      "title": "Security Engineering: A Guide to Building Dependable Distributed Systems, 3rd ed.（Ross Anderson；作者主页按章免费 PDF）",
       "url": "https://www.cl.cam.ac.uk/archive/rja14/book.html",
       "tier": "book",
       "lang": "en",
       "free": true,
-      "covers": "漏洞成因与真实系统剖析（银行与账务、核指挥控制、打印与封印、电话/移动网络等成章的攻击与失效分析）、缓解设计（Ch 27 Secure Systems Development、Ch 28 Assurance and Sustainability、Ch 21 Network Attack and Defence）、测量与监测（Ch 14 Monitoring and Metering、Ch 17 生物识别的错误率度量、Ch 19 Side Channels）、安全经济学（Ch 8）与策略边界（Ch 9–11）。它是教材不是课程：没有实验/复现流程、没有网络测量的数据与方法课，这两块见 notes 的补充。",
-      "access": "免费：作者主页按章提供 PDF（第 3 版），无需注册；另有配套 slides。",
-      "review": "2026-11-01 按收窄后的学习目标复核。课程层补证（parent 找到）：RIT CSCI-531 Introduction to Security Measurement，3 学分（Fall），syllabus https://www.cs.rit.edu/~lr/courses/531/CSCI-531-IntroSecurityMeasure-syll.html ——目录描述为“security evaluation 的算法基础与现代方法”，结合安全评估方法/模型的理论梳理与“用户实践”调查，考核含作业、课堂报告与团队项目；必读书为 Bishop《Computer Security: Art and Science》与 IATAC《Measuring Cyber Security and Information Assurance: State of the Art Report》；课程目录页 https://www.cs.rit.edu/~lr/courses/531/ 还挂着 lecture 页与 introductory.pdf（2012 年版）。它补上了“安全测量/评估”的课程建制，但偏“评估与测试方法”，不是网络测量；IATAC 报告原链接（buildsecurityin.us-cert.gov）已不可用。免费可点补充：(1) 安全度量指标 NIST SP 800-55r1 https://csrc.nist.gov/pubs/sp/800/55/r1/final ；(2) 可复现实验与 artifact 规范 ACM Artifact Review and Badging https://www.acm.org/publications/policies/artifact-review-and-badging-current ；(3) RIT 531 课程目录/讲义索引 https://www.cs.rit.edu/~lr/courses/531/ 。另：树里 zhAlt 把这篇综述写成“周宇洋”“测量方法”，原刊是“周余阳”、标题带“研究”二字（2019, 30(6): 1853–1874），重写资源时一并改正。网络测量若要英文系统材料，目前没有找到免费课程（只能靠 IMC/CAIDA 的论文与数据），这一点仍未补齐。"
+      "covers": "Ch.1 What is Security Engineering、Ch.2 Who is the Opponent、Ch.4 Protocols、Ch.6 Access Control、Ch.8 Economics（安全经济学）、Ch.10 Boundaries、Ch.12 Banking and Bookkeeping、Ch.14 Monitoring and Metering（测量与监测）、Ch.15 Nuclear Command and Control、Ch.17 Biometrics（错误率度量）、Ch.18 Physical Tamper Resistance，以及后段 Secure Systems Development/Assurance、Network Attack and Defence 等章。",
+      "access": "作者主页按章免费下载 PDF（第 3 版），无需注册；印刷版在 Wiley/Amazon 出售。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.5.2.json。"
     },
     "D.1.5": {
       "review": "OpenMetadata覆盖目录血缘质量等工程操作，治理组织、责任和生命周期政策仍需治理教材。",
@@ -288,18 +289,26 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/A.4.4.json。"
     },
     "S.2.3": {
-      "title": "OWASP Mobile Application Security（MASVS / MASTG / MASWE，免费在线）",
+      "title": "OWASP Mobile Application Security（MASVS / MASTG / MASWE，官方免费在线）",
       "url": "https://mas.owasp.org/",
       "tier": "website",
       "lang": "en",
       "free": true,
-      "covers": "按 MASVS 的 8 个域组织（STORAGE、CRYPTO、AUTH、NETWORK、PLATFORM、CODE、RESILIENCE、PRIVACY），配 MASTG 的 Android/iOS 两条平台测试线与 MASWE 弱点分类：移动平台与运行时（沙箱、权限模型、Root/Jailbreak 检测）、设备身份与凭据（Keystore/Keychain、生物识别、硬件支持的密钥与 attestation）、移动应用安全（存储、加密、网络通信与 TLS/证书固定、平台交互、代码质量、防篡改）、隐私与测试方法。按收窄后的范围使用：只覆盖移动平台/设备身份/移动应用；802.11、蓝牙、蜂窝等无线协议明确不在本资源内（已移到 S.2.2）。",
-      "access": "免费在线（CC BY-SA）；MASVS/MASTG 全文与 GitHub 仓库可读；部分测试需自备 Android/iOS 设备、模拟器与 Frida/objection 一类工具。",
-      "review": "2026-11-01 按收窄后的学习目标复核。英文主资源维持 OWASP MAS（parent 已同意收窄）：它是标准+测试指南，不是学期课；课程层证据仍薄弱（CSE571S 只有 2 讲无线，没有移动安全课），但收窄后至少与 MASVS 的域一一对齐，可以按域出题。中文一侧没有找到免费的移动安全课程或教材：中国大学MOOC 的移动相关课是《移动终端应用开发》（开发不是安全），北理工《信息系统安全与对抗实践》只有“Android 安全实践”一个模块；所以保留 CTF Wiki，但必须明确它只覆盖应用结构与签名，MASVS/MASTG 的测试清单仍是英文。可点开的补充：MASTG 仓库 https://github.com/OWASP/mastg 、MASVS https://mas.owasp.org/MASVS/ 。"
+      "covers": "MASVS 按 MASVS-STORAGE、MASVS-CRYPTO、MASVS-AUTH、MASVS-NETWORK、MASVS-PLATFORM、MASVS-CODE、MASVS-RESILIENCE、MASVS-PRIVACY 组织；MASTG 给 Android/iOS 两条测试线（平台交互、Keystore/Keychain、生物识别、attestation、TLS 与证书固定、存储加密、Root/Jailbreak 检测）；MASWE 给弱点分类，MAS Profiles 给 L1/L2/R 的测试范围。",
+      "access": "免费在线（CC BY-SA），无需注册；动手需要 Android/iOS 设备或模拟器与 Frida/objection 等工具。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.2.3.json。"
     },
     "S.4.1": {
-      "review": "WSTG是Web测试方法指南，可练框架报告复测，但不是网络主机全范围渗透测试教材。",
-      "note": "主要覆盖 Web 安全测试，不能替代完整的授权渗透测试流程。"
+      "title": "OWASP Web Security Testing Guide (WSTG) v4.2（官方旗舰项目，在线全文）",
+      "url": "https://wstg.owasp.org/v4.2/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "2.2 Principles of Testing、2.3 Testing Techniques、2.5 Threat Modeling、2.6 Source Code Review、2.7 Penetration Testing、2.9 Deriving Security Test Requirements、2.11 Security Test Data Analysis and Reporting；3.x 测试框架（含 3.6 Phase 5 Maintenance and Operations、3.8 Penetration Testing Methodologies）；4.x 技术清单从 4.1 Information Gathering 到 4.11 Client-side。",
+      "access": "免费在线全文，无需注册；官方旗舰项目，v4.2 为当前稳定版。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.4.1.json。"
     },
     "S.4.4": {
       "title": "MITRE ATT&CK®（官方知识库：Matrices / Tactics / Techniques / Mitigations / Detections / CTI）",
@@ -307,9 +316,10 @@
       "tier": "website",
       "lang": "en",
       "free": true,
-      "covers": "对手行为与威胁情报建模（Groups、Software、Campaigns 的 CTI 部分）、按战术-技术组织的攻击行为目录（Enterprise/Mobile/ICS 三套矩阵）、检测工程侧（Defenses 下的 Detection Strategies、Analytics、Data Components，说明每个技术该看哪些数据源与日志组件）、缓解（Mitigations）；可用来把红队模拟与蓝队覆盖对齐、给检测覆盖率定口径。它是知识库不是课程：没有练习、没有日志/SIEM 实操、没有度量方法，这三块见 notes 的补充。",
-      "access": "免费在线（MITRE 官方）；矩阵可按平台筛选，技术与缓解页可深链；无注册。",
-      "review": "2026-11-01 按收窄后的学习目标复核。课程层补证（parent 找到）：Ensign College IT324 SOC Operations，3 学分，目录页 https://catalog.ensign.edu/courses/0042631/overview-aoYks ——课程描述含 SOC 基础设施与设计、安装 IDS 代理并把日志转发到 SIEM、安全分析师角色、每周在 SIEM 里追一个攻击并交事件报告、找真实事件、建 playbook、建告警、模拟攻击测试检测能力。覆盖“日志关联/检测/事件报告/演练”，但仍没有威胁情报方法论与度量；且课程本身要付费注册（目录页免费）。因此主资源仍用 ATT&CK（免费）+ Sentinel 中文文档，缺口用下列免费可点补充：(1) 检测规则工程化 Sigma https://sigmahq.io/ ；(2) 攻击模拟/演练 Atomic Red Team https://atomicredteam.io/ ；(3) 安全度量 NIST SP 800-55r1 https://csrc.nist.gov/pubs/sp/800/55/r1/final ；(4) 事件响应流程/playbook NIST SP 800-61r3 https://csrc.nist.gov/pubs/sp/800/61/r3/final 。ATT&CK 的 CTI 部分可当威胁情报的索引，但 STIX/TAXII 的数据交换规范需另读 OASIS 文档。"
+      "covers": "对手行为与威胁情报建模（Groups/Software/Campaigns 的 CTI）、按 Tactics-Techniques 组织的攻击目录（Enterprise/Mobile/ICS）、检测侧（Detection Strategies、Analytics、Data Components，说明每个技术要看哪些日志与数据源）、Mitigations；可用于把红队演练与蓝队检测覆盖对齐。",
+      "access": "MITRE 官方免费在线，无需注册；是知识库而非课程，无作业与评分。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.4.4.json。"
     },
     "H.4.4": {
       "review": "2016边缘计算综述适合定义与挑战，不足以独立学习调度算法、离线容错和系统实现。",
@@ -1197,13 +1207,37 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/S.1.2.json。"
     },
     "S.1.3": {
-      "review": "Stanford355高级密码课主题匹配，需先完成255层级基础，工程系统实践另配文档。"
+      "title": "CS 355: Topics in Cryptography（Stanford，Spring 2026；schedule + problem sets）",
+      "url": "https://cs355.stanford.edu/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "L1–L4 Foundations（OWF、PRG、hardcore bits、PRF、PRP、commitment）；L5–L8 cryptanalysis 与椭圆曲线/配对；L9–L13 Zero Knowledge（交互式证明、Sigma 协议、Fiat-Shamir、多项式承诺、IOP）；L14–L16 MPC（OT 与混淆电路、秘密分享、PIR）；L17–L18 Lattice（LWE、Regev、全同态加密）。",
+      "access": "课程主页、schedule 与 problem sets 免费公开，无需注册；英文授课，讲义在站上（视频/字幕未核对）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.1.3.json。"
     },
     "S.2.1": {
-      "review": "MIT6.858经典系统安全课适合原理与实验，2014材料不能代表当前硬件/固件缓解全貌。"
+      "title": "6.858 Computer Systems Security（MIT OpenCourseWare，Fall 2014，Nickolai Zeldovich；讲义、录像、labs、日程）",
+      "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Lec 1 Introduction/Threat Models；Lec 2 Control Hijacking Attacks；Lec 3 Buffer Overflow Exploits and Defenses；Lec 4 Privilege Separation；Lec 6 Capabilities；Lec 7 Sandboxing Native Code；Lec 8–9 Web Security Model/Securing Web Applications；Lec 16 Side-Channel Attacks；Lec 17 User Authentication。",
+      "access": "OCW 免费公开讲义、录像、lab 与日程，无需注册；英文授课，讲义可替代字幕。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.2.1.json。"
     },
     "S.2.2": {
-      "review": "Stanford155覆盖协议与传输安全，分段、防火墙和IDS部署仍需工程补充。"
+      "title": "CS155 Computer and Network Security（Stanford，Spring 2026；syllabus 逐讲 slides 与 reading）",
+      "url": "https://cs155.stanford.edu/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Part 3 Network Security and Privacy：L14 Internet Protocols、L15 BGP 安全/DNS 缓存投毒/DNSSEC-NSEC3 评测/distributed firewalls/Bro 实时入侵检测、L16 DoS 与 DDoS 放大攻击、IP traceback、L17 隐私与匿名；Part 2 L12 HTTPS 目标与陷阱、L11 密码学概览。",
+      "access": "课程主页、syllabus 与逐讲 slides 免费公开，无需注册；英文，视频不公开（讲义可替代）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.2.2.json。"
     },
     "S.2.4": {
       "title": "Kubernetes Documentation · Security（官方文档，含多租户、RBAC/ServiceAccount、Pod Security、加固指南、审计）",
@@ -1217,25 +1251,81 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/S.2.4.json。"
     },
     "S.2.5": {
-      "review": "硬件安全课对应供应链、侧信道、PUF和故障攻击，具体设备实验需课程配套。"
+      "title": "ECE 4040/5040 Introduction to Hardware Security（University of Idaho，Fall 2026，Zain Ul Abideen；日程、阅读与作业公开）",
+      "url": "https://hsc-research.org/hwsec.html",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "跨 design/fabrication/test/deployment/end-of-life 的硬件威胁与 IC 供应链（仿冒、逆向、硬件木马、logic locking 与 SAT 攻击、reconfigurable obfuscation）；PUF/TRNG/DRBG；时序/功耗侧信道分析与对策；故障注入建模、RTL/门级 fault campaign；Session 12 secure boot / measured boot / remote attestation（固件认证、度量日志、认证更新、回滚保护）；Session 28 secure test/debug（scan 链可观测性与密钥恢复、调试暴露）。",
+      "access": "课程站点免费公开日程、阅读与作业，无需注册；无视频。需要数字逻辑与 Verilog 基础（ECE 2400 或同等）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.2.5.json。"
     },
     "S.3.1": {
-      "review": "PortSwigger官方学院有主题与交互实验，适合Web/API实践；部分专业工具另收费。"
+      "title": "Web Security Academy（PortSwigger，免费在线：All topics + 分级 labs + learning paths）",
+      "url": "https://portswigger.net/web-security",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "All topics 按 server-side / client-side / advanced 组织：SQL injection（18 labs）、Authentication（14 labs）、Path traversal、Access control、Business logic、Command injection、SSTI、XXE、File upload、Insecure deserialization、API testing、JWT、OAuth、XSS/CSRF/CORS/clickjacking、request smuggling、web cache poisoning 等，每个主题有讲解 + Apprentice/Practitioner/Expert 实验。",
+      "access": "免费在线，注册可保存进度与实验记录；labs 在官方托管实例上运行，无需自建靶场。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.3.1.json。"
     },
     "S.3.2": {
-      "review": "UW-Madison软件安全模块对应设计、编码和漏洞评估，模糊测试与工具配置须按具体模块实践。"
+      "title": "Introduction to Software Security（UW-Madison，Barton P. Miller & Elisa R. Heymann；开放教材 + 课程模块）",
+      "url": "https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Module 2 Thinking Like a Designer：Secure Design Principles、Overview of Threat Modeling、Microsoft SDL 与 Threat Modeling、DREAD、PASTA；Module 3 Secure Programming（指针/字符串、整数/浮点错误、目录穿越、异常、序列化、注入、XSS/CSRF/会话/CORS/SSRF）；Module 4 防御（ASLR、内存安全检查、CFI）；Module 5 FPVA 第一原理漏洞评估（架构/资源/信任/组件分析 = 代码审查方法）；Module 6 自动化评估工具（静态分析）；Module 7 动态技术（fuzz testing、AFL++）；Chapter 35 漏洞响应。",
+      "access": "免费开放教材与章节，个人学习可直接读；instructor 的练习与测验需向作者申请权限。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.3.2.json。"
     },
     "S.3.3": {
-      "review": "Purdue访问控制与隐私课程匹配技术主干，组织隐私治理配NIST框架。"
+      "title": "CS 59000-DSP / CS 55600 Data Security and Privacy（Purdue，Ninghui Li；每周 slides 与作业公开）",
+      "url": "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/lectures.html",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Week 1 UNIX 访问控制；Week 2 confused deputy 与 DAC 弱点；Week 3 Bell-LaPadula、Biba/Clark-Wilson（含审计/账本完整性）；Week 4 non-interference/non-deducability、RBAC；Week 5 k-anonymity/l-diversity/t-closeness、重建攻击；其后 ε-差分隐私与机制、直方图/边际查询发布、SVT、本地差分隐私、同态加密等。",
+      "access": "课程页面免费公开每周 slides PDF 与作业（部分周需 Brightspace 教材章）；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.3.3.json。"
     },
     "S.4.2": {
-      "review": "TexasTech教师原仓库身份和四类取证材料可核实；事件恢复复盘需NIST等补充，旧工具版本须验证。"
+      "title": "A Course on Digital Forensics（Texas Tech University，Dr. Akbar Siami Namin；讲义、实验与工具教程公开在 GitHub）",
+      "url": "https://github.com/asiamina/A-Course-on-Digital-Forensics",
+      "tier": "material",
+      "lang": "en",
+      "free": true,
+      "covers": "隔离实验环境；live collection and acquisition；磁盘与介质分析（磁盘结构、NTFS/HFS、SleuthKit/Autopsy/foremost/scalpel、FTK/WinHex 镜像）；内存取证（Volatility、Rekall、WinDBG）；网络取证（Wireshark、NetworkMiner、Snort 日志用 SQL 查）；Windows/Linux/macOS 取证；移动设备取证（恶意 APK/PDF 样本）；事件响应基础与 malware analysis、Cuckoo 沙箱。",
+      "access": "免费公开 GitHub 仓库（模块、讲义、工具教程、样本说明）；样本为恶意文件、需隔离环境。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.4.2.json。"
     },
     "S.4.3": {
-      "review": "RPISEC原课程有完整讲义实验，偏旧Windows与恶意软件生态，现代系统和工具需补充。"
+      "title": "Malware Analysis — CSCI 4976（Rensselaer Polytechnic Institute，RPISEC；12 讲讲义 + 实验，GitHub 公开）",
+      "url": "https://github.com/RPISEC/Malware",
+      "tier": "material",
+      "lang": "en",
+      "free": true,
+      "covers": "01 Introduction（Basic Static/Dynamic Analysis）、02 Advanced Static Analysis（x86、IDA、code constructs）、03 Analyzing Windows Programs（WinAPI、handles、Windows internals、networking、COM）、04 Advanced Dynamic Analysis（调试）、05 Malware Behavior、06 Data Encoding & Countermeasures、07 Covert Launching、08 Anti-Analysis（anti-disassembly/anti-VM/anti-debugging/anti-AV）、09 Packing and Unpacking、10 Intro to Windows Kernel、11 Rootkit Techniques、12 Rootkit Anti-Forensics；配套 lab 用真实样本（口令 infected）。",
+      "access": "免费公开 GitHub（讲义 PDF + lab）；样本为加密压缩的恶意软件，必须在隔离环境分析。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.4.3.json。"
     },
     "S.5.1": {
-      "review": "CMU316对应信息流与程序安全，密码协议验证应配ProVerif教程，不能混为完整协议课。"
+      "title": "15-316 Software Foundations of Security & Privacy（CMU，Matt Fredrikson，Spring 2026；课程主页 + 日程 + 作业）",
+      "url": "https://15316-cmu.github.io/2026/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Policy models（safety & liveness、information flow、capabilities）、Reference monitors、Security type systems（用类型系统保证非干扰）、隔离与可信基（SFI、CFI、hardware protection）、Trusted computing（authorization logic、PKI、硬件/软件支持）、侧信道；逻辑与语言基础：formal proof、soundness/completeness、program semantics、specification and verification of program behavior、software model checking。",
+      "access": "课程主页、schedule、assignments、syllabus 免费公开；英文，视频未公开（讲义可替代）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/S.5.1.json。"
     },
     "H.1.1": {
       "review": "6.002适合电路与运放主干，噪声和ADC/DAC工程细节需额外教材及实验。"
@@ -3778,6 +3868,146 @@
       "covers": "第20章：多智能体强化学习的问题建模、基本范式与 IPPO（含代码）；第21章：中心化训练分散执行（CTDE）、MADDPG（含代码）。前19章为单智能体强化学习基础。书中没有系统讲博弈论解概念（纳什均衡等），也没有 QMIX 类值分解。",
       "access": "免费中文正文、notebook 与视频课；纸书另售。",
       "role": "primary"
+    },
+    "path-s-1-3": {
+      "title": "现代密码学（电子科技大学，中国大学MOOC，国家精品在线开放课程）第8–9章",
+      "url": "https://www.icourse163.org/course/UESTC-1003046001",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "第8章 可证明安全理论的初步知识；第9章 研究前沿：属性基加密、全同态加密、后量子密码学。只有概览，没有零知识证明与安全多方计算的单元。",
+      "access": "中国大学MOOC 免费注册学习；“认证学习”证书收费；视频按开课学期提供，字幕未核对。",
+      "role": "primary"
+    },
+    "path-s-2-1": {
+      "title": "《信息安全导论》第4、6、7章课件（中国科学技术大学 曾凡平，学生整理上传的 PDF）",
+      "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第4章 授权与访问控制（DAC/MAC/RBAC/ABAC）；第6章 主机系统安全技术：6.1 操作系统安全（基本概念、TCSEC、安全原理、安全机制、Linux 安全）、6.3 可信计算技术（TCG 可信计算系统/TPM）；第7章 网络攻击 7.3 缓冲区溢出攻击与防范、7.6 缓冲区溢出漏洞分析与利用。",
+      "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF。学生整理上传的授课课件，非学校官方发布页，版权归授课教师；课程 40 学时+40 学时实验。",
+      "role": "primary"
+    },
+    "path-s-2-2": {
+      "title": "计算机网络（哈尔滨工业大学，中国大学MOOC，国家精品在线开放课程）第三单元“危机四伏”+ 第二单元网络技术",
+      "url": "https://www.icourse163.org/course/HIT-154005",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "第二单元：子网划分与路由聚集、CIDR、VLAN、ARP、路由协议；第三单元：网络安全基本概念、安全威胁、密码学基础、完整性与数字签名、身份认证、安全电子邮件、SSL、IPsec 与 VPN、无线局域网安全、防火墙、入侵检测。",
+      "access": "中国大学MOOC 免费注册学习，页面标注“认证学习”（证书收费）；视频按开课学期提供，字幕未核对。",
+      "role": "primary"
+    },
+    "path-s-2-3": {
+      "title": "《Android 软件安全权威指南》（丰生强，电子工业出版社 2019，ISBN 9787121355202）",
+      "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=53531",
+      "tier": "book",
+      "lang": "zh",
+      "free": false,
+      "covers": "12 章：分析环境与逆向工具、Dalvik 字节码、APK/DEX/ARSC/META-INF 格式、静态与动态分析、Hook 与注入（含绕过 SSL Pinning）、软件保护（混淆/完整性校验/反调试/Root 检测）、软件壳。偏逆向与加固，不含设备身份（Keystore/生物识别/attestation）与测试标准。",
+      "access": "出版社商品页与完整目录可核，全文需购买；核实时页面显示无库存。未购买。",
+      "role": "primary"
+    },
+    "path-s-2-5": {
+      "title": "ESP-IDF 编程指南 · 安全指南（乐鑫官方中文，ESP32）",
+      "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/security/security.html",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "安全概述、平台安全、安全启动（Secure Boot v1/v2、密钥生成与烧录、启用流程）、flash 加密、调试接口（JTAG/调试端口禁用）、安全 OTA 更新、安全存储、安全配网、安全设备控制、安全策略；是设备侧安全启动/固件更新/调试接口的中文操作指南。",
+      "access": "官方中文文档免费；实践需要对应 ESP32 芯片与开发板，安全功能随芯片型号/版本不同（文档要求先选 target 与 version）。",
+      "role": "primary"
+    },
+    "path-s-3-1": {
+      "title": "CTF Wiki · Web 安全（中文，含 SQL 注入、XSS、CSRF、SSRF、文件上传等条目）",
+      "url": "https://ctf-wiki.org/web/introduction/",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "Web 简介与子条目：SQL 注入、XSS、CSRF、SSRF、文件上传等输入/输出边界类漏洞的原理与利用；有练习环境要求，但不含认证/会话体系章、访问控制模型、API/GraphQL 测试。",
+      "access": "免费在线阅读（社区维护）；中文页面，随站点更新；练习需自备靶场。",
+      "role": "primary"
+    },
+    "path-s-3-2": {
+      "title": "静态程序分析（南京大学 李樾、谭添；课程主页 + 中文讲义 PDF + bamboo 实验框架）",
+      "url": "https://pascal-group.bitbucket.io/courses/program-analysis-2020f/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "中文讲义：中间表示、数据流分析（applications、reaching definitions、live variables、available expressions）、指针分析（CHA 调用图、上下文敏感/不敏感）、安全分析（security analysis）与 soundiness；配套 bamboo 框架作业（常量传播、死代码检测、调用图、指针分析）。",
+      "access": "课程主页与讲义 PDF 免费公开；作业框架在 GitHub。讲义为中文（首页为“南京大学 李樾 谭添 计算机科学与技术系”），页面说明为南京大学 2020 春季新开课。",
+      "role": "primary"
+    },
+    "path-s-3-3": {
+      "title": "《信息安全导论》第2、4、9、13章课件（中国科学技术大学 曾凡平）",
+      "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第2章 密码技术（对称/公钥，用于数据加密）；第4章 授权与访问控制（DAC/MAC/RBAC/ABAC、访问控制策略）；第9章 安全审计与责任认定；第13章 内容安全中的分级/过滤。数据脱敏与差分隐私只在个别页出现提法。",
+      "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+      "role": "primary"
+    },
+    "path-s-4-1": {
+      "title": "CTF Wiki · Web 安全（中文漏洞原理与利用条目）",
+      "url": "https://ctf-wiki.org/web/introduction/",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "SQL 注入、XSS、CSRF、SSRF、文件上传等漏洞的原理与利用；只讲“如何验证漏洞存在”，不讲授权范围、资产清单方法、报告与复测流程。",
+      "access": "免费在线阅读（社区维护）；练习需自备靶场，页面无授权/法律约束说明。",
+      "role": "primary"
+    },
+    "path-s-4-2": {
+      "title": "电子数据取证技术（南京邮电大学，中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NJUPT-1462725169",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "电子证据及其形成过程、取证技术/流程/工具；法律基础概述；主机取证、手机取证、网络取证等专题；以实战方式练习取证工具。",
+      "access": "中国大学MOOC 免费注册学习；视频按学期开放，字幕未核对；先修要求为密码学、操作系统结构分析、网络信息安全。",
+      "role": "primary"
+    },
+    "path-s-4-3": {
+      "title": "软件安全之恶意代码机理与防护（武汉大学，中国大学MOOC，国家级一流本科课程）",
+      "url": "https://www.icourse163.org/course/WHU-1460833161",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "软件安全基础（磁盘结构与系统启动、内存管理机制、PE 文件结构）；典型恶意软件（PE 病毒、宏病毒、脚本病毒、网络蠕虫、网络木马）的功能与实现机制；防护手段、分析技术与恶意代码检测机理。",
+      "access": "中国大学MOOC 免费注册学习；2018 国家精品在线开放课程、2020 国家级一流本科课程；视频按学期开放，字幕未核对。",
+      "role": "primary"
+    },
+    "path-s-4-4": {
+      "title": "Microsoft Sentinel 官方中文文档（数据连接器、分析规则、KQL、威胁情报、事件与自动化）",
+      "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "按 SOC 工作流组织：数据连接器与规范化、分析规则与告警、KQL 查询、威胁情报、事件调查、自动化规则/playbook、工作簿；是“日志关联→检测→调查→响应”的中文操作文档。",
+      "access": "文档免费；实际工作区、日志摄取与自动化按 Azure 订阅计费。中文（机器/人工本地化未标注），术语保留英文。",
+      "role": "primary"
+    },
+    "path-s-5-1": {
+      "title": "《信息安全导论》第10章 协议安全与第6章 可信计算（中国科学技术大学 曾凡平）",
+      "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第10章 10.2 IPSec 体系结构与工作模式、10.3 SSL/TLS 记录/握手协议、10.4 SET；第6章 6.3 可信计算技术（TCG 可信计算系统/TPM）。补协议结构与可信基的中文描述，但不含形式化建模与非干扰。",
+      "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+      "role": "primary"
+    },
+    "path-s-5-2": {
+      "title": "《信息安全导论》第7、8章 网络与系统攻击及防护（中国科学技术大学 曾凡平）",
+      "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第7章 网络攻击（踩点/扫描/缓冲区溢出/DoS/僵尸网络）与第8章 防护（防火墙/IDS/蜜罐/应急响应）：给出漏洞成因与缓解手段的中文描述，但没有研究级的可复现实验与度量设计。",
+      "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+      "role": "primary"
     }
   },
   "chinese": {
@@ -4042,8 +4272,8 @@
       "covers": "应用层、传输、路由与网络安全单元；无线与移动网络不由该课完整覆盖。"
     },
     "S.2.2": {
-      "source": "network",
-      "covers": "应用层、传输、路由与网络安全单元；无线与移动网络不由该课完整覆盖。"
+      "source": "path-s-2-2",
+      "covers": "第二单元：子网划分与路由聚集、CIDR、VLAN、ARP、路由协议；第三单元：网络安全基本概念、安全威胁、密码学基础、完整性与数字签名、身份认证、安全电子邮件、SSL、IPsec 与 VPN、无线局域网安全、防火墙、入侵检测。"
     },
     "C.3.3": {
       "source": "esp",
@@ -4202,12 +4432,12 @@
       "covers": "中文成体系的学习路径：第一阶段「联邦学习系统基础及进阶」——联邦学习基础理论（系统介绍、业界发展、分布式训练初步实现）与系统进阶（更严苛的隐私保护方法、FedOpt 与 FedMDGA）；第二阶段「联邦学习分类」——算法异构的松耦合联邦学习（LCFL）、模型异构联邦学习、联邦元学习（横向联邦个性化）；第三阶段「纵向联邦学习」——纵向联邦原理与最简单的纵向联邦实现；第四阶段「联邦学习应用」——业界应用与上手一个自己的联邦学习应用。"
     },
     "S.1.3": {
-      "source": "secretflow",
-      "covers": "从教程学习联邦学习和隐私计算；多任务/元学习、现代密码证明及完整隐私治理另配英文资料。"
+      "source": "path-s-1-3",
+      "covers": "第8章 可证明安全理论的初步知识；第9章 研究前沿：属性基加密、全同态加密、后量子密码学。只有概览，没有零知识证明与安全多方计算的单元。"
     },
     "S.3.3": {
-      "source": "secretflow",
-      "covers": "从教程学习联邦学习和隐私计算；多任务/元学习、现代密码证明及完整隐私治理另配英文资料。"
+      "source": "path-s-3-3",
+      "covers": "第2章 密码技术（对称/公钥，用于数据加密）；第4章 授权与访问控制（DAC/MAC/RBAC/ABAC、访问控制策略）；第9章 安全审计与责任认定；第13章 内容安全中的分级/过滤。数据脱敏与差分隐私只在个别页出现提法。"
     },
     "A.4.3": {
       "source": "path-a-4-3",
@@ -4222,36 +4452,36 @@
       "covers": "中文授课：线性代数、量子力学假设、密度算子、施密特分解与纯化、量子电路、量子傅里叶变换、相位估计；参考书为 Nielsen & Chuang（孙晓明译本）。覆盖量子态、门与测量、部分算法基础；公开的 14 讲未到 Shor/Grover 与纠错。"
     },
     "S.2.1": {
-      "source": "sys-security",
-      "covers": "内存、程序运行环境及漏洞利用相关实践；系统安全设计与防护原则仍以英文课程为主。"
+      "source": "path-s-2-1",
+      "covers": "第4章 授权与访问控制（DAC/MAC/RBAC/ABAC）；第6章 主机系统安全技术：6.1 操作系统安全（基本概念、TCSEC、安全原理、安全机制、Linux 安全）、6.3 可信计算技术（TCG 可信计算系统/TPM）；第7章 网络攻击 7.3 缓冲区溢出攻击与防范、7.6 缓冲区溢出漏洞分析与利用。"
     },
     "S.1.2": {
       "source": "path-s-1-2",
       "covers": "infoSec02(1).pdf：2.x 对称密码（DES/AES 思路）、公钥密码（RSA/ElGamal）、2.4 散列函数和消息认证码（单向性、抗碰撞性、MAC）、2.5 数字签名、2.6 密钥管理与公钥分配；infoSec03.pdf：数字签名算法与密钥管理续；infoSec11.pdf：IPSec/SSL-TLS/SET 协议。"
     },
     "S.2.3": {
-      "source": "zh-gran-s-2-3",
-      "covers": "中文的 Android 应用基础：APK 构建/打包/签名流程（aapt、AIDL、javac、dx、apkbuilder、debug/release keystore），以及 APK 文件结构（AndroidManifest 的组件与权限声明、classes.dex、resources.arsc、lib/、res/、META-INF 签名）——对应“移动应用”里的应用结构、签名与篡改基础。只覆盖应用静态结构这一层：不含 iOS、Keystore/生物识别/attestation 等设备身份内容，也不含 MASVS 域化测试清单与自动化测试流程，这些用英文主资源补。"
+      "source": "path-s-2-3",
+      "covers": "12 章：分析环境与逆向工具、Dalvik 字节码、APK/DEX/ARSC/META-INF 格式、静态与动态分析、Hook 与注入（含绕过 SSL Pinning）、软件保护（混淆/完整性校验/反调试/Root 检测）、软件壳。偏逆向与加固，不含设备身份（Keystore/生物识别/attestation）与测试标准。"
     },
     "S.2.4": {
       "source": "path-s-2-4",
       "covers": "与英文同源的官方中文版：云原生安全（4C）、Pod 安全性标准与准入、服务账号、Linux/Windows 节点安全性、Kubernetes API 访问控制、RBAC 良好实践、Secret 良好实践、多租户、API 服务器旁路风险、加固指南（调度器配置、身份认证机制）、安全检查清单、Pod/容器内核安全约束。"
     },
     "S.3.1": {
-      "source": "web-security",
-      "covers": "Web 漏洞类型与配套技术章节；仅在获授权的练习环境实践，不涵盖完整渗透测试流程。"
+      "source": "path-s-3-1",
+      "covers": "Web 简介与子条目：SQL 注入、XSS、CSRF、SSRF、文件上传等输入/输出边界类漏洞的原理与利用；有练习环境要求，但不含认证/会话体系章、访问控制模型、API/GraphQL 测试。"
     },
     "S.4.1": {
-      "source": "web-security",
-      "covers": "Web 漏洞类型与配套技术章节；仅在获授权的练习环境实践，不涵盖完整渗透测试流程。"
+      "source": "path-s-4-1",
+      "covers": "SQL 注入、XSS、CSRF、SSRF、文件上传等漏洞的原理与利用；只讲“如何验证漏洞存在”，不讲授权范围、资产清单方法、报告与复测流程。"
     },
     "S.4.3": {
-      "source": "reverse",
-      "covers": "静态分析、调试、可执行文件与逆向技术；恶意软件处置和事件响应仍需英文课程。"
+      "source": "path-s-4-3",
+      "covers": "软件安全基础（磁盘结构与系统启动、内存管理机制、PE 文件结构）；典型恶意软件（PE 病毒、宏病毒、脚本病毒、网络蠕虫、网络木马）的功能与实现机制；防护手段、分析技术与恶意代码检测机理。"
     },
     "S.3.2": {
-      "source": "z3",
-      "covers": "用约束求解辅助程序分析；安全开发流程、静态分析和污点分析仍需英文课程。"
+      "source": "path-s-3-2",
+      "covers": "中文讲义：中间表示、数据流分析（applications、reaching definitions、live variables、available expressions）、指针分析（CHA 调用图、上下文敏感/不敏感）、安全分析（security analysis）与 soundiness；配套 bamboo 框架作业（常量传播、死代码检测、调用图、指针分析）。"
     },
     "C.1.2": {
       "source": "path-c-1-2",
@@ -4358,8 +4588,8 @@
       "covers": "第1章 绪论（信息安全三要素机密性/完整性/可用性、威胁模型、风险管理、纵深防御、安全技术体系）；第2章 密码技术；第3章 身份认证（Kerberos v4/v5、PKI/X.509）；第4章 授权与访问控制（DAC、MAC、RBAC、ABAC/ABE、PMI）；第5–13章 信息隐藏、OS/数据库安全、网络与系统攻击、入侵检测与应急响应、数字取证、IPSec/TLS/SET、恶意代码、内容安全。"
     },
     "S.4.2": {
-      "source": "zh-forensics",
-      "covers": "按电子证据保全、存储/文件系统、Windows与网络取证等单元学习并用工具实践；事件恢复、复盘和地区证据规则另核。"
+      "source": "path-s-4-2",
+      "covers": "电子证据及其形成过程、取证技术/流程/工具；法律基础概述；主机取证、手机取证、网络取证等专题；以实战方式练习取证工具。"
     },
     "A.4.1": {
       "source": "path-a-4-1",
@@ -4478,20 +4708,20 @@
       "covers": "课程概述写明七部分：绪论、盲目搜索、知情搜索、博弈中的搜索、经典逻辑推理、不确定性推理、专家系统；掌握盲目/知情/博弈搜索的原理与算法。覆盖启发式搜索，不含约束满足与规划表示。"
     },
     "S.2.5": {
-      "source": "zh-device-security",
-      "covers": "按ESP32安全启动、Flash加密、JTAG/调试接口、安全下载和固件更新学习；设备供应链、侧信道和故障攻击仍读英文课。"
+      "source": "path-s-2-5",
+      "covers": "安全概述、平台安全、安全启动（Secure Boot v1/v2、密钥生成与烧录、启用流程）、flash 加密、调试接口（JTAG/调试端口禁用）、安全 OTA 更新、安全存储、安全配网、安全设备控制、安全策略；是设备侧安全启动/固件更新/调试接口的中文操作指南。"
     },
     "S.4.4": {
-      "source": "zh-gran-s-4-4",
-      "covers": "中文文档按 SOC 工作流组织：日志接入与规范化（数据连接器、规范化和分析数据）、分析规则与告警、威胁情报与 ATT&CK 框架、UEBA、事件调查与案例管理、KQL 搜寻、自动化规则与攻略（playbook）、工作簿与监控。适合把“日志关联→检测→调查→响应”走一遍；通用演练方法、检测覆盖率度量与厂商无关的检测工程不在其中。"
+      "source": "path-s-4-4",
+      "covers": "按 SOC 工作流组织：数据连接器与规范化、分析规则与告警、KQL 查询、威胁情报、事件调查、自动化规则/playbook、工作簿；是“日志关联→检测→调查→响应”的中文操作文档。"
     },
     "S.5.1": {
-      "source": "zh-protocol-verification",
-      "covers": "读第1节协议基本概念、第2节模态逻辑/定理证明/Spi演算等分析方法和第3节设计原则；非干扰与当前ProVerif/Tamarin仍读英文。"
+      "source": "path-s-5-1",
+      "covers": "第10章 10.2 IPSec 体系结构与工作模式、10.3 SSL/TLS 记录/握手协议、10.4 SET；第6章 6.3 可信计算技术（TCG 可信计算系统/TPM）。补协议结构与可信基的中文描述，但不含形式化建模与非干扰。"
     },
     "S.5.2": {
-      "source": "zh-gran-s-5-2",
-      "covers": "中文综述，按测量架构、测量对象、流量与资源开销分析 SDN 的测量方法与评价指标，带参考文献列表；对应本技能的“网络测量”这一支。它不是系统安全教材：漏洞成因、缓解设计、可复现实验与安全经济学继续用英文主资源。"
+      "source": "path-s-5-2",
+      "covers": "第7章 网络攻击（踩点/扫描/缓冲区溢出/DoS/僵尸网络）与第8章 防护（防火墙/IDS/蜜罐/应急响应）：给出漏洞成因与缓解手段的中文描述，但没有研究级的可复现实验与度量设计。"
     },
     "H.1.1": {
       "source": "zh-analog",
@@ -5032,60 +5262,96 @@
     ],
     "S.4.4": [
       {
-        "title": "NIST SP 800-92：日志管理",
-        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf",
-        "lang": "en",
-        "covers": "厂商无关的日志管理基础；2006 年历史指南，现代技术实现需配 Sentinel 等当前文档。",
-        "access": "免费公开正文，无需注册。",
-        "free": true,
-        "tier": "material"
-      },
-      {
-        "title": "NIST SP 800-55 Vol. 1：信息安全度量",
-        "url": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
-        "lang": "en",
-        "covers": "2024 年版本：识别、选择与评估安全度量；替代已过时的 Rev.1。",
-        "access": "免费公开正文，无需注册。",
-        "free": true,
-        "tier": "material"
-      },
-      {
-        "title": "Sigma：检测规则文档",
+        "title": "Sigma — SIEM Detection Format（官方文档与规则库）",
         "url": "https://sigmahq.io/",
+        "tier": "website",
         "lang": "en",
-        "covers": "把日志检测写成可维护、可交换的规则；按官方文档从规则示例入手。",
-        "access": "免费公开正文，无需注册。",
         "free": true,
-        "tier": "material"
+        "covers": "把日志检测写成可维护、可交换的规则（Sigma Specification、Rules、Rule Packs），用于检测工程：从日志字段→检测逻辑→跨 SIEM 转换。",
+        "access": "文档与规则库免费开源；规则需自行部署到 SIEM。英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "NIST SP 800-55 Vol. 1 Measurement Guide for Information Security: Identifying and Selecting Measures（2024）",
+        "url": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "安全度量的识别、选择与评估流程（度量目的、对象、数据源、分析与报告），用于“度量与持续改进”。",
+        "access": "NIST 官方 PDF 免费；英文指南（非课程）。",
+        "role": "supplement"
+      },
+      {
+        "title": "《信息安全导论》第8章 安全防护与应急响应（中国科学技术大学 曾凡平）",
+        "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "8.1 防火墙、8.2 入侵检测、8.3 蜜罐、8.4 应急响应；讲检测与响应的基本机制，不含 SIEM 日志关联、检测规则工程与度量。",
+        "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+        "role": "supplement"
+      },
+      {
+        "title": "查看 Microsoft Sentinel 中的 MITRE ATT&CK 覆盖（Microsoft Learn 中文官方文档）",
+        "url": "https://learn.microsoft.com/zh-cn/azure/sentinel/mitre-coverage",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "检测覆盖率工程：用 MITRE ATT&CK 覆盖率矩阵按威胁方案查看组织的当前覆盖、用图例看某技术上的“活动检测数量”、用搜索按技术名/ID 定位、在详情面板看到“建议的覆盖比例（活动检测与安全服务占全部建议检测与服务的比例）”；并区分“当前覆盖”与“模拟覆盖”（工作区可用但尚未配置的检测），说明配置分析规则时应绑定具体 MITRE 技术、并按技术筛选规则。",
+        "access": "免费中文文档，无需注册；简体中文；页面部分交互依赖门户，正文可读。",
+        "role": "supplement"
+      },
+      {
+        "title": "ATT&CK 实践入门（MITRE 官方《ATT&CK Practitioner's Guide》中文译本 PDF，含“评估与工程”“对手模拟与红队”两章）",
+        "url": "https://wiki.y1ng.org/assets/ATT&CK%E5%AE%9E%E8%B7%B5%E5%85%A5%E9%97%A8.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "“评估与工程”一章（第 29 页起）给出检测覆盖评估与规则构建的流程：选定技术 → 检查现有告警/规则是否已覆盖该技术（例：把“3389 端口内部流量”“tscon.exe 进程”等告警映射到 T1076 远程桌面协议）→ 若未覆盖则回看该技术页列出的数据源、确认是否已采集正确数据 → 已采集则只是“构建分析”的问题 → 记录覆盖并继续下一技术；另有“对手模拟与红队”一章（第 20 页起）讲如何用 ATT&CK 组织红队评估。作者为 MITRE 的 Adam Pennington 等。",
+        "access": "第三方转载，授权未核。免费 PDF（个人 wiki 托管的社区中文译本），无需注册；简体中文；译文版式与页码保留原书（评估与工程 29 页、作者简介 39 页）。",
+        "role": "supplement"
+      },
+      {
+        "title": "实战攻防演练：红蓝对抗 & 有效性检验（博客园《深入解析》系列第十二篇）",
+        "url": "https://www.cnblogs.com/ljbguanli/p/19302373",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "攻防演练的组织与度量：分准备阶段（确定演练目标、准备内容、向管理层报备且对红军保密）、实施阶段（蓝军发起攻击、红军感知/溯源/拦截/止血；停止条件=达到攻击目的或指定时间）、复盘阶段（蓝军讲攻击流程与暴露风险、红军审视并制定整改计划、完善防御体系）；并提出“数据驱动的度量与复盘”：汇聚演练数据、自动化检验数据、红军推演巡检数据与外部资料，交叉验证后计算感知率、拦截率、攻击覆盖度等指标来量化安全水位，同时点出效率（避免重复演练）、覆盖度（模拟多变攻击路径）、价值量化三个待解问题。",
+        "access": "免费网页，无需注册；简体中文；个人技术博客系列文，篇幅较短（约 4 千字）。",
+        "role": "supplement"
       }
     ],
     "S.5.2": [
       {
-        "title": "MIT 6.858：论文阅读与安全实验",
-        "url": "https://css.csail.mit.edu/6.858/2022/",
+        "title": "MIT 6.858 Computer Systems Security（OCW）· labs 与论文阅读",
+        "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+        "tier": "website",
         "lang": "en",
-        "covers": "补真实系统安全的论文与缓冲区溢出、隔离、符号执行实验。",
-        "access": "免费公开正文，无需注册。",
         "free": true,
-        "tier": "material"
+        "covers": "7 个 lab（缓冲区溢出、符号执行、Web 安全、网络等）与论文阅读清单，提供“可复现实验”的具体做法：环境隔离、实验步骤、结果对比。",
+        "access": "OCW 免费公开 lab 说明与讲义；无自动评分。英文。",
+        "role": "supplement"
       },
       {
-        "title": "NIST SP 800-55 Vol. 1：信息安全度量",
-        "url": "https://csrc.nist.gov/pubs/sp/800/55/v1/final",
-        "lang": "en",
-        "covers": "2024 年版本：识别、选择与评估安全度量；替代已过时的 Rev.1。",
-        "access": "免费公开正文，无需注册。",
+        "title": "软件定义网络的测量方法研究（戴冕、程光、周余阳，《软件学报》2019, 30(6)）",
+        "url": "https://www.jos.org.cn/html/2019/6/5832.htm",
+        "tier": "material",
+        "lang": "zh",
         "free": true,
-        "tier": "material"
+        "covers": "按测量架构、测量对象、流量与资源开销分析 SDN 的测量方法与评价指标，带参考文献；是中文“网络测量”综述，不含实验流程与安全经济学。",
+        "access": "期刊原站公开中文全文（HTML/PDF）免费；需网络与统计基础。",
+        "role": "reference"
       },
       {
-        "title": "ACM Artifact Review and Badging",
-        "url": "https://www.acm.org/publications/policies/artifact-review-and-badging-current",
-        "lang": "en",
-        "covers": "补实验 artifact 的可用性、可复用性和结果验证要求。",
-        "access": "免费公开正文，无需注册。",
+        "title": "网络空间安全导论 第7章 操作系统安全 + 第3章 网络空间安全基本机制（清华大学课程团队官方 PPT，GitHub 公开）",
+        "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+        "tier": "material",
+        "lang": "zh",
         "free": true,
-        "tier": "material"
+        "covers": "第7章 操作系统安全：攻击对象为内存管理/进程管理/I-O 管理，第二节基础防御方案（W^X、NX/DEP、ASLR），第四节高级系统保护方案（控制流完整性、指针完整性），并把“未考虑不合法输入、随机化程度不够”总结为设计缺陷；第3章 基本机制：移动目标防御（“动态＋异构”，本质是“通过增加系统的随机性和不可预测性来防范网络攻击”“增加攻击者的攻击成本”，分动态网络/平台/环境/软件/数据五个层次）、拟态防御（“动态＋异构＋冗余”，扰乱攻击链、使攻击代价倍增），以及沙箱/入侵容忍/可信计算/零信任等机制的取舍。",
+        "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；团队自述为“大幅精简”版 PPT。",
+        "role": "supplement"
       }
     ],
     "M.1.9": [
@@ -5146,22 +5412,74 @@
     ],
     "S.2.3": [
       {
-        "title": "信息系统安全与对抗实践（北京理工大学，罗森林团队；国家级精品课程，中国大学MOOC）",
+        "title": "CTF Wiki · Android（开发基础、静态/动态分析、加固与逆向条目）",
+        "url": "https://ctf-wiki.org/android/basic_develop/basic_develop/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "APK 构建/打包/签名流程与 APK 文件结构（AndroidManifest 组件与权限声明、classes.dex、resources.arsc、META-INF 签名），以及 Android 逆向/调试条目；讲应用结构与分析，不讲 MASVS 的域化测试、Keystore/attestation。",
+        "access": "免费在线阅读（社区维护）；中文页面，随站点更新。",
+        "role": "supplement"
+      },
+      {
+        "title": "信息系统安全与对抗实践（北京理工大学 罗森林团队，中国大学MOOC）· Android 安全实践单元",
         "url": "https://www.icourse163.org/course/BIT-1206619844",
         "tier": "video",
         "lang": "zh",
         "free": null,
-        "access": "中国大学MOOC 免费注册学习；课程采用“必修2单元 + 选修2单元 + 自选1单元”的单元制，认证证书可能收费；配套 CTF 平台 isclab.org.cn 需自行注册。 字幕未核对。 公开介绍可读，当前旁听与视频条件未登录核验。",
-        "covers": "课程 7 个单元：工程系统与信息安全对抗基础、WEB 安全实践、密码安全实践、Android 安全实践、Windows 安全实践、缓冲区溢出安全实践、软件逆向安全实践。与本技能相关的是“Android 安全实践”和“软件逆向安全实践”两个单元，能覆盖移动应用分析与攻防的入门操作；其余单元与移动无关。不含 MASVS 域化测试清单、Keystore/生物识别/attestation 等设备身份内容，也不含 iOS。"
+        "covers": "课程 7 个单元中的“Android 安全实践”和“软件逆向安全实践”两个单元；覆盖移动应用分析与攻防的入门操作，不含 MASVS 域化清单、Keystore/生物识别/attestation 与 iOS。",
+        "access": "中国大学MOOC 免费注册学习；单元制考核（必修2+选修2+自选1），认证证书可能收费；视频按学期开放，字幕未核对。",
+        "role": "supplement"
       },
       {
-        "title": "Android软件安全权威指南（丰生强，电子工业出版社，2019，ISBN 9787121355202，468 页）",
-        "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=53531",
-        "tier": "book",
+        "title": "应用沙盒（Android Open Source Project 官方中文文档 · 安全）",
+        "url": "https://source.android.com/docs/security/app-sandbox?hl=zh-cn",
+        "tier": "website",
         "lang": "zh",
-        "free": false,
-        "access": "出版社正式商品页和目录可核，全文需购买；未购买。 核实时出版社显示无库存。",
-        "covers": "出版社目录共 12 章：第1章 Windows/macOS/Ubuntu 分析环境与逆向工具、第2章 分析/破解第一个 Android 程序、第3章 Dalvik 可执行格式与字节码、第4章 APK/DEX/ARSC/META-INF/ODEX/OAT 等文件格式、第5章 静态分析（smali/Java）、其后为动态调试、Hook 与注入、软件保护与软件壳等。对应“移动应用”的静态/动态分析与加固，能补 CTF Wiki 只讲 APK 结构的不足。边界：只讲 Android（无 iOS）；偏逆向与攻防，不覆盖 MASVS 测试清单、设备身份（Keystore/attestation）与平台安全基线；书中工具与系统版本为 2019 年前后，需按当前 Android 版本校正。"
+        "free": true,
+        "covers": "移动平台沙箱的内核实现：每个应用分配唯一 UID 并在自己进程中运行，内核用 Linux UID/GID 实现内核级应用沙盒，默认应用之间不能互相交互；保护机制的演进（Android 5.0 SELinux 提供 MAC 隔离系统与应用；6.0 跨用户边界隔离并把应用家目录默认权限由 751 改 700；8.0 全部应用跑 seccomp-bpf 系统调用过滤；9.0 targetSdk≥28 的非特权应用各自独立 SELinux 沙盒；10.0 过滤外部存储视图）；共享文件的正确做法（ContentProvider、MediaStore）与“把应用数据设为所有人可读”为何危险。",
+        "access": "免费中文文档（AOSP 官方站点简体中文），无需注册；无视频；面向平台开发者/ROM 维护者，术语偏底层。",
+        "role": "supplement"
+      },
+      {
+        "title": "由硬件支持的密钥库（Android Open Source Project 官方中文文档 · 安全）",
+        "url": "https://source.android.com/docs/security/features/keystore?hl=zh-cn",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "设备身份与密钥保护：由硬件支持的密钥库（TEE/StrongBox 中生成与保存密钥）、密钥认证与 ID 认证（attestation）、版本绑定（version binding，绑定到系统版本/补丁级别）、授权标记（auth-bound，如用户认证后才能使用密钥）；文档页还并列给出生物识别（指纹/人脸 HIDL 与“衡量生物识别安全性”）与 DICE 等相邻机制。",
+        "access": "免费中文文档（AOSP 官方站点简体中文），无需注册；无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "文件级加密（Android Open Source Project 官方中文文档 · 加密）",
+        "url": "https://source.android.com/docs/security/features/encryption/file-based?hl=zh-cn",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "应用数据落盘保护：文件级加密（FBE）的目录与密钥划分、加密数据单元、算法与参数选择（默认 fileencryption=aes-256-xts；有内嵌加密硬件时 inlinecrypt_optimized；文件名加密 aes-256-hctr2）、硬件封装密钥（wrappedkey_v0）与内联加密硬件、OTA 不能改加密格式等工程约束；同页导航并列全盘加密。",
+        "access": "免费中文文档（AOSP 官方站点简体中文），无需注册；无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "网络安全配置（Android Developers 官方中文文档）",
+        "url": "https://developer.android.com/privacy-and-security/security-config?hl=zh-cn",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "应用通信保护：用声明式配置文件（network_security_config）而非改代码来定制网络安全设置，主要特性包括自定义信任锚（指定信任哪些 CA、限制信任的公共 CA 集合、信任特定自签名证书）、仅调试替换（debug-overrides 安全调试）、停用明文流量（cleartextTrafficPermitted=false）、按域名/按应用的粒度。",
+        "access": "免费中文文档（Android Developers 官方站点简体中文），无需注册；无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "Microsoft Learn 中文：威胁建模安全基础知识（分步培训路径）",
+        "url": "https://learn.microsoft.com/zh-cn/training/paths/tm-threat-modeling-fundamentals/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "画数据流图与信任边界、用框架（STRIDE）识别威胁、按风险排序、选择安全控制；方法与平台无关，可直接用于移动应用。",
+        "access": "微软官方中文培训正文免费阅读；成就记录需登录，学习内容不需要。",
+        "role": "supplement"
       }
     ],
     "H.1.3": [
@@ -7677,6 +7995,538 @@
         "free": true,
         "covers": "多智能体强化学习的中文课堂：MARL 背景、博弈论基础（Normal-form Game 正则形式/策略式博弈、Zero-sum Game 零和博弈、策略剖面与 best response、Nash Equilibrium 的严格/弱定义）、Independent Learning、Centralized Training & Decentralized Execution（COMA、MADDPG、QMIX 等）、对手建模、Multi-Agent 到 Many-Agent 的扩展；讲次说明对应《动手学强化学习》第20章。",
         "access": "课程页 https://wnzhang.net/teaching/sjtu-rl-2024/index.html 与课件 PDF 免费；B 站有课堂录像；课件为中英混排（术语中英对照），视频讲解语言未逐条核对。",
+        "role": "supplement"
+      }
+    ],
+    "S.1.3": [
+      {
+        "title": "ZK 残酷共学（LXDAO 社区，2024；中文共学大纲与每周任务）",
+        "url": "https://github.com/IntensiveCoLearning/ZK",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "三周共学：ZKP 历史与基本概念、Circom 电路入门、ZK 应用（zkRollup）与简单实现；定位写的是“初步了解 ZK 是什么……能够成功完成一些产品的开发”，属入门共学，不含多项式承诺/IOP/归约证明。",
+        "access": "免费公开 GitHub 仓库（中文 README 与每周任务）；共学时间 2024-07-29 至 08-18，报名已结束，材料仍可自学。",
+        "role": "alternative"
+      },
+      {
+        "title": "隐语 SecretFlow 官方中文文档 · 教程（含“实际场景 MPC 算法开发实践”培训资料）",
+        "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "教程目录含 SPU 基础、拆分学习、隐私求交与“隐语SecretFlow实际场景MPC算法开发实践”培训资料；讲的是 MPC/隐私计算的工程落地与 API 用法，不讲 OT/混淆电路/秘密分享协议本身与安全性证明。",
+        "access": "文档免费在线阅读；跑通示例需安装隐语并准备计算节点，生产使用另有部署成本。",
+        "role": "supplement"
+      },
+      {
+        "title": "密码学复习笔记（哈工大 2020 年密码学课程笔记，基于《现代密码学：原理与协议》）",
+        "url": "https://www.ruanx.net/crypto-notes",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "以形式化方法定义安全性：Kerckhoffs 原则与攻击场景（COA/KPA/CPA/CCA）→ 完善保密与完美不可区分性 → 语义安全与窃听不可区分实验 PrivK^eav → 计算安全与“原则三：严格的安全证明”（规约方法：假设敌手攻破方案则构造 PPT 算法解困难问题）→ 伪随机性、伪随机发生器 PRG 的定义（扩展性 + PPT 不可区分）→ 用 PRG 构造定长加密方案并给出归约证明（含完整概率推导）。",
+        "access": "免费网页，无需注册；简体中文（含 LaTeX 公式）；作者为哈工大课程学习者整理的个人笔记，非学校官方发布。",
+        "role": "supplement"
+      },
+      {
+        "title": "密码学补完计划（B 站中文系列视频：单向函数&陷门函数、伪随机生成器 PRG、CSPRNG、伪随机函数 PRF 等）",
+        "url": "https://www.bilibili.com/video/BV1A82XBiEwF",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "第三期 单向函数&陷门函数（BV1A82XBiEwF）→ 第七期 伪随机生成器 PRG（BV1dimuBiEgp）→ 第八期 密码学安全伪随机数生成器 CSPRNG（BV1gcmEBHEbQ）→ 第九期 伪随机函数 PRF（BV11fmRB7EqP）：补齐 OWF→PRG→PRF 这条可证明安全最常用的构造链。",
+        "access": "B 站免费观看，UP 主 EithanSolace（个人账号，非学校/平台官方课）；每期 5–8 分钟；口播语言与字幕未核对（视频页未显示字幕轨）。",
+        "role": "supplement"
+      },
+      {
+        "title": "密码学06｜零知识证明（DoraHacks Hacker Dōjo 分享，清华大学密码学博士生 Sputnik 主讲）",
+        "url": "https://www.bilibili.com/video/BV1Gb411R7dr",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "52 分钟中文讲授，页面列出大纲：1 证明与知识（交互式证明与“知识的证明”的区别）、2 阿里巴巴的洞穴（零知识的直观模型）、3 什么是零知识性（完备性/可靠性/零知识性）、4 如何构造零知识证明；配社区文字稿。",
+        "access": "B 站免费观看；讲解为中文（清华博士生中文分享），字幕未核对；另附 bounty 页与社区文字稿链接。",
+        "role": "supplement"
+      },
+      {
+        "title": "亚瑟王的「随机」挑战：从交互到非交互式零知识证明（SECBIT 安比实验室 ZK 系列文章）",
+        "url": "https://secbit.io/blog/2019/11/01/from-interactive-zkp-to-non-interactive-zkp",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "系列中的非交互化一篇：回顾 Schnorr 协议（Sigma 类协议的承诺—挑战—响应三步）、从零知识性到 NIZK、随机预言机（Random Oracle）“重建信任”、Fiat-Shamir 变换（从 Public-Coin 到 NIZK）与其安全隐患、公共参考串 CRS 作为另一种信任根基；前序篇讲交互式证明与地图三染色。",
+        "access": "免费网页，无需注册；简体中文；文中含公式与协议步骤。",
+        "role": "supplement"
+      },
+      {
+        "title": "PrivacyIN Week2｜张宇鹏：经典零知识证明协议设计原理（Groth16 / Plonk / Stark）课堂精讲全文",
+        "url": "https://hub.baai.ac.cn/view/21004",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "90 分钟 ZK 训练营课程的全文精讲：多项式承诺（定义、Correctness/Soundness/Zero-knowledge 三性质、KZG 承诺的 setup—commit—验证三步与双线性配对验证）、数论基础（素数、模运算）、PLONK 协议、SNARK 类协议（non-universal）、STARK 协议。",
+        "access": "免费网页，无需注册；简体中文；由 LatticeX 在智源社区发布课程精讲全文（原课为英文授课的 90 分钟小班课，中文稿件为课堂精讲整理）。",
+        "role": "supplement"
+      },
+      {
+        "title": "【隐私计算笔谈】MPC 系列专题（LatticeX，智源社区，至少 11 期）",
+        "url": "https://hub.baai.ac.cn/view/21547",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "（一）安全多方计算应用场景（百万富翁、电子投票 FOO、隐私数据挖掘、PSI 等）；（二）攻击者模型与 Shamir(t,n) 秘密共享（半诚实/恶意、t<n/2 与 t<n/3 门限结构、计算意义 vs 信息论意义安全、拉格朗日插值恢复）；（三）不经意传输与混淆电路（OT 的 RSA 式构造与逐步算例、混淆电路逐门加密真值表与打乱）；（十一）共享随机数与比特分享、多方比较。",
+        "access": "免费网页，无需注册；简体中文；系列文章由 LatticeX 在智源社区连载，含数字算例。",
+        "role": "supplement"
+      },
+      {
+        "title": "全同态加密理论：格密码的数学基础（DappLearning 公开课录像）",
+        "url": "https://www.bilibili.com/video/BV1RsFAeWEbF",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "48 分钟中文讲座，讲全同态加密所需的格密码数学基础（格、格上困难问题与 LWE 类假设的数学准备）。",
+        "access": "B 站免费观看（DappLearning 账号，华语开发者教育社区）；口播语言与字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "后量子密码学与格基加密（新星云网络 / 夸父量子计算云平台相关讲座录像）",
+        "url": "https://www.bilibili.com/video/BV1tXXRY6ETA",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "80 分钟中文讲座：后量子密码学的必要性（Shor 算法威胁）与格基加密方案。",
+        "access": "B 站免费观看；简介只给出“夸父量子计算云平台 https://quafu.baqis.ac.cn”链接，主讲人与单位未在页面写明；口播语言与字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "BGV 自举算法选讲（中文讲座录像，3 小时）",
+        "url": "https://www.bilibili.com/video/BV1bBnZeRE94",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "180 分钟专题讲授 BGV 方案的自举（bootstrapping）算法，即全同态加密中最关键的重加密/噪声刷新步骤。",
+        "access": "B 站免费观看（UP 主 Fuxk-Hack，个人账号）；页面无简介，口播语言与字幕未核对。",
+        "role": "supplement"
+      }
+    ],
+    "S.2.1": [
+      {
+        "title": "ECE 4040/5040 Introduction to Hardware Security（University of Idaho，Fall 2026，Zain Ul Abideen；课程日程与作业公开）",
+        "url": "https://hsc-research.org/hwsec.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Session 12 “Secure boot, measured boot, and remote attestation”：固件认证、度量与事件日志、认证更新、回滚保护、attestation 协议与验证方假设；Session 28 安全测试/调试接口。补 6.858 未讲的固件与可信执行根。",
+        "access": "课程站点免费公开日程、阅读与作业；无视频。需要数字逻辑与 Verilog 基础。",
+        "role": "supplement"
+      },
+      {
+        "title": "CTF Wiki：Linux 用户态基础（环境与利用实践）",
+        "url": "https://ctf-wiki.org/pwn/linux/user-mode/environment/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "内存布局、程序运行环境、栈溢出利用与工具链的中文实操条目；补内存安全的动手部分，不承担操作系统防护与可信执行的理论。",
+        "access": "免费在线阅读，社区维护；页面为简体中文，随站点更新。",
+        "role": "alternative"
+      },
+      {
+        "title": "网络空间安全导论（清华大学本科核心课程，课程团队官方 GitHub 仓库：教学课件 + 18 个课程实验）",
+        "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "16 章配套 PPT（团队自行标注为“大幅精简”版）：第3章 网络空间安全基本机制（第1节 访问控制、第2节 沙箱、第3节 入侵容忍、第4节 可信计算、第5–7节 类免疫/移动目标防御/拟态防御/零信任），其中第2节沙箱给“沙箱的核心思想——隔离”“沙箱的内部工作机理”“安全规则控制程序可用的资源集（内存、文件系统、网络）”；第7章 操作系统安全（攻击对象=内存管理/进程管理/I/O 管理；第二节 基础防御方案 W^X、NX/DEP、ASLR；第四节 高级系统保护方案：控制流完整性、指针完整性）。",
+        "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；完整版 PPT 需向课程团队邮箱申请（README 写明）。配套教材《网络空间安全原理与实践（第二版）》徐恪、李琦、沈蒙、朱敏，清华大学出版社（付费）。",
+        "role": "supplement"
+      },
+      {
+        "title": "操作系统与虚拟化安全（北京大学 沈晴霓，Coursera 13 模块中文课程）",
+        "url": "https://www.coursera.org/learn/os-virtsecurity",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "13 个模块的中文讲授：M1 计算机系统安全的重要性与评测标准（1.1 课程简介…1.7 欧盟 ITSEC 与 CC 标准）、M2 基本安全概念和设计思想、M3 访问控制机制、M4 可追究机制、M5–M6 连续保护机制（I）（II）、M7 安全模型、M8 安全体系结构、M9 可信计算技术、M10 安全操作系统的设计与实现技术案例、M11 基于安全操作系统的应用-数据库安全、M12 系统虚拟化安全与虚拟可信平台技术（含 12.1 虚拟化技术概述与分类）、M13 收尾模块。",
+        "access": "Coursera 免费注册后可旁听（页面 “Join for Free”，旁听不含证书；证书/评分作业为付费项）；中文授课，字幕未核对；总时长按页面估算 3 周 ×10 小时。",
+        "role": "supplement"
+      },
+      {
+        "title": "安全启动（Microsoft Learn 中文官方文档，Windows 硬件开发指南）",
+        "url": "https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/oem-secure-boot",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "UEFI 安全启动的定义与机制：电脑启动时固件验证每个启动软件的签名（UEFI 固件驱动/选项 ROM、EFI 应用程序、操作系统），签名有效才交出控制权；OEM 如何生成安全启动密钥并写入固件、UEFI 驱动必须签名并加入安全启动数据库；安全启动证书 2026-06 到期的迁移指引。",
+        "access": "免费中文文档，无需注册；简体中文；无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "启动时验证（Android Open Source Project 中文文档 · 安全特性）",
+        "url": "https://source.android.com/docs/security/features/verifiedboot?hl=zh-cn",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "启动链完整性：建立“从受硬件保护的信任根到引导加载程序”的验证链、逐级验证已执行代码来自可信来源；回滚保护（rollback protection）保证设备只会更新到更高的 Android 版本；把完整性状态传达给用户；Android 8.0+ 的 AVB 参考实现与分区验证。",
+        "access": "免费中文文档（AOSP 官方站点简体中文版），无需注册；无视频。",
+        "role": "supplement"
+      }
+    ],
+    "S.2.2": [
+      {
+        "title": "Computer Security 教材 · Network Security 部分（UC Berkeley CS161，Wagner 等）",
+        "url": "https://textbook.cs161.org/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "第 26 章 ARP、27 DHCP、28 WPA（无线链路安全）、29 BGP、30 TCP/UDP、31 TLS、32 DNS、33 DNSSEC、34 DoS、35 Firewalls（网络分段与边界）、36 Intrusion Detection、37 Abusing Intrusion Detection。",
+        "access": "免费网页全文（CC BY-SA），无需注册；英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "《信息安全导论》第7、8、10章课件（中国科学技术大学 曾凡平）",
+        "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "第7章 网络攻击（踩点、扫描、缓冲区溢出、DoS、僵尸网络）；第8章 网络与系统安全防护（8.1 防火墙、8.2 入侵检测、8.3 蜜罐、8.4 应急响应）；第10章 IPSec/SSL-TLS/SET 与无线网络安全（WEP/802.11i/WPA）。",
+        "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+        "role": "supplement"
+      },
+      {
+        "title": "网络空间安全导论（清华大学本科核心课程，课程团队官方 GitHub 仓库：16 章教学 PPT + 18 个课程实验）",
+        "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "第8章 TCP/IP 协议栈安全（第二节 链路层安全、第三节 网络层安全、第四节 传输层/应用层安全：按层给威胁与原理、本质原因与基本防御）；第9章 互联网路由安全（域内/域间路由如何工作、路由源劫持 route origin hijacking 等安全问题、防御 MANRS/BGPsec/FCBGP）；第10章 DNS 安全（缓存中毒攻击、基于 IPID 的远程缓存中毒、恶意 DNS 服务器回复伪造、拒绝服务；防御：查询源端口随机化、域名大小写随机化、DNSSEC 的签名与验证过程原理）；第11章 真实源地址验证 SAVA（体系结构、三大层次、五大关键技术）；课程实验含“DNS 缓存投毒的基础性实验”。",
+        "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；PPT 为团队自述“大幅精简”版，完整版需向课程团队申请；配套教材《网络空间安全原理与实践（第二版）》清华大学出版社（付费）。",
+        "role": "supplement"
+      }
+    ],
+    "S.2.5": [
+      {
+        "title": "集成电路测试与验证（东北大学，中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/NEU-1206704818",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "集成电路测试背景、可测试性分析、故障模拟与仿真、自动测试生成（ATPG）、扫描设计（scan design）与内建自测试（BIST）、测试经济学；从测试/DFT 角度解释 scan 链的可观测性与可控性，是“调试/测试接口暴露”的技术底座，但不讲攻击与防护。",
+        "access": "中国大学MOOC 免费注册学习，页面标注“认证学习”（证书收费）；视频按学期开放，字幕未核对。需要数字电路与 Verilog 基础。",
+        "role": "supplement"
+      },
+      {
+        "title": "网络空间安全导论 第6章 系统硬件安全（清华大学课程团队官方 PPT，GitHub 公开）",
+        "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "第6章 系统硬件安全：四类硬件攻击——漏洞攻击、硬件木马、硬件故障、侧信道攻击（以 Spectre 等典型漏洞为例讲具体实现）；四类防御基本策略——木马检测技术、隔离技术、密码技术、侧信道防护。",
+        "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；团队自述为“大幅精简”版 PPT（完整版需向课程团队申请）。",
+        "role": "supplement"
+      },
+      {
+        "title": "集成电路硬件安全（电子工业出版社，出版社官网可查完整目录与内容简介）",
+        "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=69432",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "按硬件全生命周期（设计、制造、测试、分发与使用）系统讲：硬件安全原语（第2章 物理不可克隆函数 PUF 的原理与属性）、硬件木马（第3章 特性/结构/分类/植入锚点与攻击模型/设计方法，含内部设计人员攻击）、IP 保护（第4章 基于数字水印的 VLSI IP 保护）、硬件过量生产与防御（第5章），以及内容简介明确列出的芯片盗版、逆向工程、侧信道攻击、故障攻击与其防御技术；第1章为集成电路硬件安全概述（网络空间安全与硬件安全的关系）。",
+        "access": "付费教材，需购买（电子工业出版社网上书店该页可看内容简介与目录，未标价/未购买）；简体中文；无配套免费视频。",
+        "role": "supplement"
+      }
+    ],
+    "S.3.1": [
+      {
+        "title": "CS253 Web Security（Stanford，课程主页与讲义）",
+        "url": "https://web.stanford.edu/class/cs253/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "以浏览器与 Web 平台为中心的安全课：同源策略、Cookie/会话、CSRF/XSS、点击劫持、CSP、TLS 与证书，配作业与 CTF 式练习；给 Web Security Academy 的主题提供学期课框架。",
+        "access": "课程主页与讲义免费公开；视频/字幕未核对。英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "信息系统安全与对抗实践（北京理工大学，中国大学MOOC）· WEB 安全实践单元",
+        "url": "https://www.icourse163.org/course/BIT-1206619844",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "WEB 安全实践单元（注入、XSS 等常见 Web 漏洞的动手实践）；是操作单元，不含认证/会话/访问控制/API 的系统讲解。",
+        "access": "中国大学MOOC 免费注册学习；单元制考核，认证证书可能收费；视频按学期开放，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "白帽子讲Web安全（第2版）（吴翰清、叶敏，电子工业出版社 2023-07，ISBN 9787121459672）",
+        "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=63034",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "第4章 Cookie和会话安全（4.1 Cookie 与会话简介、4.2 第一方/第三方 Cookie、4.3 Cookie 属性、4.4.3 保密性和完整性、4.5 会话安全：4.5.1 会话管理、4.5.2 固定会话攻击）；第13章 身份认证（13.1 概述、13.2 密码的安全性、13.3 身份认证的方式：HTTP 认证/表单登录/客户端证书/一次性密码/多因素认证）；第14章 访问控制（14.2.3 基于属性的访问控制、14.3 越权访问漏洞：14.3.1 垂直越权、14.3.2 水平越权、14.4 零信任模型）；第16章 API 安全（16.1 概述、16.2 常见 API 架构：SOAP/REST/GraphQL、16.3 OpenAPI 规范、16.4 常见的 API 漏洞、16.5 API 安全实践）；第2章含 HTTP/2、HTTP/3、WebSocket 与 Web 服务器基础，第5章含同源策略与 WebSocket 跨域访问。",
+        "access": "付费教材，需购买（出版社页标价 ￥108.0，页内可看内容简介、目录、前言，未购买）；简体中文；无配套免费视频。",
+        "role": "supplement"
+      }
+    ],
+    "S.3.2": [
+      {
+        "title": "软件工程（北京大学，中国大学MOOC，国家精品在线开放课程）",
+        "url": "https://www.icourse163.org/course/PKU-1003177002",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "软件过程、软件需求、结构化与面向对象分析与设计、敏捷开发、软件测试、项目管理、开发工具与环境；提供“需求→设计→测试”的通用工程框架，但不含安全需求、威胁建模与代码审查的安全方法。",
+        "access": "中国大学MOOC 免费注册学习，页面标注“认证学习”（证书收费）；视频按学期开放，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "信息系统安全与对抗实践（北京理工大学，中国大学MOOC）· 软件逆向安全实践单元",
+        "url": "https://www.icourse163.org/course/BIT-1206619844",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "软件逆向安全实践与缓冲区溢出安全实践单元：二进制层面的动态观测与调试操作，属“动态分析”的动手部分，不含模糊测试工程与漏洞修复流程。",
+        "access": "中国大学MOOC 免费注册学习；单元制考核，证书可能收费；视频按学期开放，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "驱动程序的威胁建模（Microsoft Learn 中文官方文档，Windows 驱动开发 · 驱动程序安全）",
+        "url": "https://learn.microsoft.com/zh-cn/windows-hardware/drivers/driversecurity/threat-modeling-for-drivers",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "把安全需求落成可执行流程：威胁建模是“对这些重要设计任务的结构化方法”，威胁模型回答四个问题（哪些资产需要保护／资产易受哪些威胁／每个威胁多重要或多可能／如何缓解）；并说明应把威胁建模纳入更广的安全开发生命周期（SDL），给出 SDL 各阶段（培训与组织能力、要求和设计、实现、验证、发布）的关键输出，其中“要求和设计”阶段的关键输出是设定具体安全目标（例如要求所有代码通过某级别的静态分析且无警告）。",
+        "access": "免费中文文档，无需注册；简体中文；无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "代码安全指南（腾讯 Tencent/secguide，GitHub 开源，CC BY 4.0）",
+        "url": "https://github.com/Tencent/secguide",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "分语言的代码安全审查检查表：C/C++、JavaScript、Node、Go、Java、Python 六份指南，按“API 层面的风险点 + 安全编码方案”组织，条目分级为【必须】/【建议】并配正反代码示例；README 明确四个使用场景——开发人员日常参考、编写安全系统扫描策略、安全组件开发、漏洞修复指引。例如 Java 指南目录含“异常捕获处理、数据泄露、webview 组件安全、传输安全、AndroidManifest 配置、数据持久化、文件操作、XML 读写、响应输出、OS 命令执行、会话管理、加解密、查询业务、操作业务”。",
+        "access": "免费开源仓库（CC BY 4.0），无需注册；简体中文；无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "模糊测试的艺术、科学和工程综述（安全内参中文解读，原论文 Manes 等 The Art, Science, and Engineering of Fuzzing: A Survey）",
+        "url": "https://www.secrss.com/articles/64032",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "模糊测试全流程的中文讲解：分类与工作流程、预处理与调度算法、测试用例生成策略（种子与变异）、测试与评估、测试过程中的分流（triage）策略与反馈迭代机制；其中“测试用例去重”给出三种工业做法（基于栈回溯哈希去重、基于覆盖率去重、语义感知去重如 RETracer），并讨论优先级设置与漏洞可利用性分析、程序插桩的静态/动态两类。",
+        "access": "免费网页，无需注册；简体中文（对英文综述的中文解读）；无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "软件安全与测试（中国科学技术大学 程绍银，课程官方主页 + 逐讲 slides + 实验说明）",
+        "url": "http://staff.ustc.edu.cn/~sycheng/sst/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程分两部分：Part 1 软件安全（信息安全与软件安全导论、缓冲区溢出、恶意软件、Web 漏洞、安全编程）；Part 2 软件测试（软件测试导论、软件安全测试 slides，配套资源“Fuzzing based on FileFuzz”“Application security testing”、安全测试实验：基于 Purify 的安全测试、基于 Quantify 的性能测试、基于 PureCoverage 的代码覆盖率测试；“软件测试：需求与设计”一讲含 Requirement and design review、测试用例设计、自动化测试；“单元 VS. 功能”一讲含单元测试与功能测试）。",
+        "access": "免费课程主页，slides 与实验说明可直接下载（PDF/PPT），无需注册；简体中文课程（页面标题注明 Chinese，个别资源为英文）；2014 春季版，内容偏旧。",
+        "role": "supplement"
+      }
+    ],
+    "S.3.3": [
+      {
+        "title": "网络空间安全导论 第5章 隐私保护（清华大学课程团队官方 PPT，GitHub 公开）",
+        "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "第5章 隐私保护：第二节 匿名化隐私保护模型（准标识符、等价类、k-anonymity 的定义与“任意一条记录与其他至少 k−1 条不可区分”的要求、用马萨诸塞州选民登记表＋医疗记录讲链接攻击、k-匿名只保证“被准确标识的概率≤1/k”却挡不住同质攻击等局限）；第三节 差分隐私（DP 基础、数值型 DP）；第四节 同态加密；第五节 安全多方计算。",
+        "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；团队自述为“大幅精简”版 PPT。",
+        "role": "supplement"
+      },
+      {
+        "title": "华为数据安全治理实践（华为官方白皮书/实践文档 PDF）",
+        "url": "https://www-file.huawei.com/dam/asset/view/48a4c7c7e89b43d697d8c12c285296ad.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "企业级数据安全治理的全流程：数据清单（2.1.1 数据安全分类分级、2.1.2 数据处理情况记录与数据资产）、标签生命周期管理、敏感数据识别与分类分级的技术手段（数据库/结构化/非结构化/API 资产识别、数据分级分类）、数据加密与脱敏水印、数据共享与出口管控、稽查（1.4.2）与审计（1.4.3）、以及“实践二：数据安全分类分级”“实践三：华为云数据安全实践”等落地案例。",
+        "access": "免费 PDF，无需注册；简体中文；企业与云场景导向，偏实践与管理流程而非算法推导。",
+        "role": "supplement"
+      },
+      {
+        "title": "隐私设计难在哪里？（安全内参，2024-11-25）",
+        "url": "https://www.secrss.com/articles/72707",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "隐私设计（Privacy by Design）的来龙去脉与工程落地：PbD 由 Ann Cavoukian 于 1990 年代提出、核心是“把隐私保护融入系统与服务的设计与开发阶段，而不是事后补救”，强调在技术、组织和流程里从设计起点就考虑隐私；并讨论数据最小化与目的绑定（目的限定）要求、第三方集成中的隐私、技术落地难点与未来趋势。",
+        "access": "免费网页，无需注册；简体中文；文章为行业分析，非教材章节。",
+        "role": "supplement"
+      }
+    ],
+    "S.4.1": [
+      {
+        "title": "信息系统安全与对抗实践（北京理工大学 罗森林团队，中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/BIT-1206619844",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "WEB/密码/Android/Windows/缓冲区溢出/逆向 等实践单元与“工程系统理论”单元；授课目标提到了解标准规范与法律法规，但无授权测试范围、报告模板与复测流程的专门单元。",
+        "access": "中国大学MOOC 免费注册学习；单元制考核，认证证书可能收费；视频按学期开放，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "信息系统渗透测试技术规范（辽宁省工业和信息化厅网站发布的 DB21/T 地方标准文本 PDF）",
+        "url": "https://gxt.ln.gov.cn/eportal/fileDir/data/lnsgxw/W020220422292597525770.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "5.3 测试方法、5.4 测试流程、6 管理要求（6.1 渗透测试授权、6.2 管理基本要求）、附录 A（规范性）渗透测试授权委托书模板、附录 B 渗透测试原理和特点、附录 C（资料性）渗透测试报告样例、附录 D（资料性）漏洞报告样例；规范性引用含 GB/T 20984 信息安全风险评估规范、GB/T 31509 风险评估实施指南、GB/T 22239 等级保护基本要求、GB/T 28448 等级保护测评要求。",
+        "access": "免费 PDF（省政府部门网站公开发布），无需注册；简体中文；文本为地方标准草案（页眉 DB21/T XXXX—XXXX），2022 年挂网。",
+        "role": "supplement"
+      },
+      {
+        "title": "渗透测试工作流程（华为云云商店服务文档 PDF，含授权书、报告模板与复测环节）",
+        "url": "https://mkp-res.hc-cdn.com/marketplace/public/app/attachment/20220822/af060649-875c-4691-afd0-6ccdb737a125/2208221021521875.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "工作流程图“对接 → 首测授权 → 修复 → 复测 → 输出成果”，逐步说明：1.1 对接（预约测试起止时间、加急处理）、1.2 授权（在标准版《安全测试授权书》填写测试系统/系统信息/授权时间，PDF 发给对接人；除使用测试数据的测试环境可由项目组签字外，针对正式数据与正式环境的测试授权均须客户（系统所有者）签字；授权时间建议覆盖复测期）、1.3 测试（参考《OWASP 安全测试指南》，报告模板《应用渗透测试报告（模板）》，工具含漏扫、信息收集、Kali 工具集，并要求向对接人索要不同权限组账户）。",
+        "access": "免费 PDF（华为云云商店附件），无需注册；简体中文；文档较短（约千字），是服务流程说明而非教材。",
+        "role": "supplement"
+      },
+      {
+        "title": "渗透测试流程及信息收集（国家信息安全水平考试 NISP 管理中心网站，来源标注“国家网络空间安全人才培养基地”）",
+        "url": "https://www.nisp.org.cn/NewsDetail/2397569.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "先把“渗透测试 vs 入侵”讲清（渗透测试出于保护目的、要给出解决方案，入侵可不择手段）；再给常规渗透测试完整流程“明确目标 → 信息收集 → 漏洞探测 → 漏洞验证 → 信息分析 → 获取所需 → 信息整理 → 形成报告”；“明确目标”一节要求确认范围（IP、域名、内外网）、确认规则（能渗透到什么程度、时间、能否提权）、确认需求（Web 应用/业务逻辑/人员权限管理漏洞）；信息收集一节给真实 IP、网段、域名、端口等基础信息与主动扫描/开放搜索两类方式；并给出渗透测试报告编写的结构（封皮、重点与结论等）。",
+        "access": "免费网页，无需注册；简体中文；文章为培训机构科普长文（1.7 万字符），非课程。",
+        "role": "supplement"
+      }
+    ],
+    "S.4.2": [
+      {
+        "title": "NIST SP 800-86 Guide to Integrating Forensic Techniques into Incident Response",
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "取证流程（收集/检验/分析/报告）与数据完整性；用文件 MAC 时间、系统时间与工具重建事件时间线的具体做法；补课程里没有单列的时间线分析。",
+        "access": "NIST 官方 PDF 免费下载，无需注册；英文指南（非课程）。",
+        "role": "supplement"
+      },
+      {
+        "title": "NIST SP 800-61 Rev.2 Computer Security Incident Handling Guide",
+        "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "事件响应生命周期（准备、检测与分析、遏制/根除/恢复、事后活动）；3.4 Post-Incident Activity 含 3.4.1 Lessons Learned、3.4.2 Using Collected Incident Data、3.4.3 Evidence Retention；补“恢复与复盘”。",
+        "access": "NIST 官方 PDF 免费；英文指南（非课程）。",
+        "role": "supplement"
+      },
+      {
+        "title": "《信息安全导论》第9章 安全审计与责任认定、第10章 数字取证（中国科学技术大学 曾凡平）",
+        "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "9.2 数字取证概述、9.2.2 电子证据特点与取证基本原则、9.2.3 数字取证过程、9.3 关键技术与工具（文件/操作系统/网络数据取证）；第9章另有安全审计与责任认定、8.4 应急响应技术。",
+        "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+        "role": "supplement"
+      },
+      {
+        "title": "2025 年网络安全事件响应全流程实践指南（安全内参，安全牛，2025-07-23）",
+        "url": "https://www.secrss.com/articles/81198",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "把事件响应拆成 7 个阶段并逐段给做法：阶段一 响应计划与准备（EDR 覆盖与行为基线、桌面推演并要求每次演练后输出总结与完善建议）、阶段二 攻击事件识别、…、阶段五 业务恢复（系统恢复运行后做渗透测试/红队验证边界与权限控制，恢复后 72 小时内提升告警级别、复核异常日志、用 EDR/XDR 持续监控）、阶段六 经验总结（事件结束后 14 天内完成复盘：按分钟级精度重建时间线并标注延迟节点与原因、评估响应计划执行偏差与量化指标如平均检测时间）。",
+        "access": "免费网页，无需注册；简体中文；行业实践指南（非标准、非课程）。",
+        "role": "supplement"
+      },
+      {
+        "title": "电子数据取证 · 知识库与研究（didctf.com 中文取证知识库，2026 修订）",
+        "url": "https://www.didctf.com",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "取证方法论骨架：定义与范畴（主机/移动/网络/云）、核心阶段（识别、固定、提取、检验分析——“在副本上恢复数据、检索关键词、构建时间线”、关联重建）、完整性（哈希校验、可追溯、可质证）；知识体系按“数据与格式（文件签名与元数据、浏览器与即时通讯痕迹、超级时间线分析、图像与视频取证、密码与加密分析）”“对抗与前沿（反取证识别、云与虚拟化取证、物联网与车载取证）”组织，并含“用户行为时间线”“注册表与系统痕迹”等条目。",
+        "access": "免费网页，无需注册；简体中文；站点为知识库/索引式内容，单页深度有限。",
+        "role": "supplement"
+      }
+    ],
+    "S.4.3": [
+      {
+        "title": "《信息安全导论》第11–12章 恶意代码（中国科学技术大学 曾凡平）",
+        "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "恶意代码概述、分类、传播机制、12.7 恶意代码检测与分析技术、恶意活动代码的防御；补“行为分析”的中文正文，但不含 IDA 反汇编与调试的系统训练。",
+        "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+        "role": "supplement"
+      },
+      {
+        "title": "IDA Pro（CTF Wiki 中文静态分析条目）",
+        "url": "https://ctf-wiki.org/reverse/tools/static-analyze/ida/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "反汇编工具与工作流：IDA Pro 是 Hex-Rays 的交互式反汇编器（interactive Disassembler Professional），是逆向最常用的静态分析工具；界面各视图的含义（Function Windows 函数列表、IDA-View 以汇编形式呈现单个函数的反汇编结果并可切换为按基本块构成的控制流图或原始汇编、Hex View 原始数据、Structures/Enums、Imports/Exports）；函数反编译（F5）、函数范围识别出错时用 alt+p/u/p 修复、代码混淆导致无法建函数时的处理；IDAPython（idc.get_db_byte 等 API）与插件扩展。",
+        "access": "免费网页，无需注册；简体中文（另有英文/繁中版）；示例截图齐全；文中提示 IDA Pro 本体与反编译引擎为付费（2024-04 时价 1975/2765 USD），IDA Free 仅支持 x86。",
+        "role": "supplement"
+      },
+      {
+        "title": "软件安全与测试 · 第6章 恶意代码（中国科学技术大学 程绍银，课程官方 slides PDF）",
+        "url": "http://staff.ustc.edu.cn/~sycheng/sst/lectures/ch06_Malicious_Code.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "把反汇编放进恶意代码分析流程：反病毒技术人员/病毒分析师的工作方法，静态分析阶段用“反汇编器”查看病毒由哪些模块组成、调用了哪些系统调用、用了哪些技巧、如何把感染过程变成清除病毒与修复文件的过程；与同一课程的缓冲区溢出（ch03）与恶意代码实验（Writing Win32 Virus、Virus.pdf）配套。",
+        "access": "免费 PDF（教师课程主页直接下载），无需注册；简体中文；2014 春季版，内容偏旧。",
+        "role": "supplement"
+      }
+    ],
+    "S.5.1": [
+      {
+        "title": "ProVerif 2.05 User Manual and Tutorial（Inria，Blanchet 等）",
+        "url": "https://bblanche.gitlabpages.inria.fr/proverif/manual.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "协议建模语言（进程、事件、方程）、 secrecy/authentication 等安全性质的形式化、攻击者模型与自动验证流程；补 15-316 未覆盖的协议层形式验证与认证性质。",
+        "access": "PDF 免费下载；需要安装 ProVerif 才能跑例子。英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "卿斯汉《安全协议20年研究进展》（《软件学报》2003, 14(10)）",
+        "url": "https://www.jos.org.cn/1000-9825/14/1740.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "安全协议基本概念与分类、模态逻辑/定理证明/Spi 演算等分析方法、协议设计原则；是综述，不含可跟做的建模练习与工具教程，且停留在 2003 年的方法。",
+        "access": "期刊原站公开中文全文 PDF；2003 年文献。",
+        "role": "reference"
+      },
+      {
+        "title": "协议安全性分析：形式化验证与符号模型（《密码学百科》系列第 53/65 篇，quant67.com）",
+        "url": "https://quant67.com/post/cryptography/53-protocol-analysis/protocol-analysis.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "一、为什么需要形式化协议分析（以 Needham-Schroeder 公钥认证协议为例给出消息流）；二、Dolev-Yao 符号模型（把“给定协议规范与安全性目标（保密性、认证性），是否存在 Dolev-Yao 攻击者能违反目标的攻击策略”作为可判定问题）；三、BAN 逻辑（Burrows/Abadi/Needham 1989 的信念逻辑，“通过推理协议参与者在执行协议过程中形成的信念来分析协议的认证性质”，并列出 P |≡ X、P ◁ X 等谓词）；四、ProVerif（Horn 子句，全自动）、Tamarin（多集重写，精确验证，文中给出含 event beginA/endA 的 spthy 模型）、Spin（模型检测/有限状态）三工具建模范式与能力边界对比；五、用形式化工具发现 TLS 1.2 三重握手漏洞（攻击原理 → ProVerif 建模 → 修复与验证）；六、TLS 1.3 与 Signal 的验证实践。",
+        "access": "免费网页，无需注册；简体中文；单篇长文（约 1.8 万字符），属“密码学百科”65 篇连载中的一篇，非大学课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "清华大学出版社样章：第 5 章 操作系统安全（可信软件、安全周界、参照监视器、安全内核）",
+        "url": "https://www.tup.com.cn/upload/books/yz/107490-01.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "可信软件与良性软件、安全周界、参照监视器与引用验证机制、安全内核的设计原则（精简以便验证正确性），即可信计算基的核心概念。",
+        "access": "出版社官网免费公开的教材样章 PDF；全书需购买。",
         "role": "supplement"
       }
     ]

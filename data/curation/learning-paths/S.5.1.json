@@ -1,0 +1,397 @@
+{
+ "id": "S.5.1",
+ "name": "协议验证与信息流安全",
+ "description": "协议模型、认证性质、非干扰、形式验证和可信基。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "15-316 Software Foundations of Security & Privacy（CMU，Matt Fredrikson，Spring 2026；课程主页 + 日程 + 作业）",
+   "url": "https://15316-cmu.github.io/2026/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Policy models（safety & liveness、information flow、capabilities）、Reference monitors、Security type systems（用类型系统保证非干扰）、隔离与可信基（SFI、CFI、hardware protection）、Trusted computing（authorization logic、PKI、硬件/软件支持）、侧信道；逻辑与语言基础：formal proof、soundness/completeness、program semantics、specification and verification of program behavior、software model checking。",
+   "access": "课程主页、schedule、assignments、syllabus 免费公开；英文，视频未公开（讲义可替代）。",
+   "publisher": "Carnegie Mellon University / Matt Fredrikson",
+   "evidence": {
+    "url": "https://15316-cmu.github.io/2026/",
+    "location": "Course Overview 的 Topics 与 key ideas 列表",
+    "finding": "页面原文列 Topics: Policy models（safety & liveness, information flow, capabilities）、Reference monitors、Security type systems、Isolation principles & techniques、Trusted computing（authorization logic, PKI）、Side channel；并列出 Formal proof、Soundness and completeness、Program semantics、Specification and verification、Software model checking。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "ProVerif 2.05 User Manual and Tutorial（Inria，Blanchet 等）",
+   "url": "https://bblanche.gitlabpages.inria.fr/proverif/manual.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "协议建模语言（进程、事件、方程）、 secrecy/authentication 等安全性质的形式化、攻击者模型与自动验证流程；补 15-316 未覆盖的协议层形式验证与认证性质。",
+   "access": "PDF 免费下载；需要安装 ProVerif 才能跑例子。英文。",
+   "publisher": "Inria / Bruno Blanchet 等",
+   "evidence": {
+    "url": "https://bblanche.gitlabpages.inria.fr/proverif/manual.pdf",
+    "location": "封面与目录（User Manual and Tutorial, October 17 2023）",
+    "finding": "PDF 封面写 'ProVerif 2.05: Automatic Cryptographic Protocol Verifier, User Manual and Tutorial'，正文含协议建模、secrecy/authentication 性质与示例。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "卿斯汉《安全协议20年研究进展》（《软件学报》2003, 14(10)）",
+   "url": "https://www.jos.org.cn/1000-9825/14/1740.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "reference",
+   "covers": "安全协议基本概念与分类、模态逻辑/定理证明/Spi 演算等分析方法、协议设计原则；是综述，不含可跟做的建模练习与工具教程，且停留在 2003 年的方法。",
+   "access": "期刊原站公开中文全文 PDF；2003 年文献。",
+   "publisher": "《软件学报》/ 卿斯汉",
+   "evidence": {
+    "url": "https://www.jos.org.cn/1000-9825/14/1740.pdf",
+    "location": "第1–3 节（协议基本概念、分析方法、设计原则）",
+    "finding": "PDF 为中文综述，按“安全协议基本概念—分析方法（模态逻辑、定理证明、Spi 演算等）—设计原则”组织，参考文献截至 2003 年。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《信息安全导论》第10章 协议安全与第6章 可信计算（中国科学技术大学 曾凡平）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第10章 10.2 IPSec 体系结构与工作模式、10.3 SSL/TLS 记录/握手协议、10.4 SET；第6章 6.3 可信计算技术（TCG 可信计算系统/TPM）。补协议结构与可信基的中文描述，但不含形式化建模与非干扰。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec11.pdf",
+    "location": "第10章 10.2 IPSec / 10.3 SSL-TLS / 10.4 SET",
+    "finding": "infoSec11 目录列出 10.2 IPSec 体系结构/工作模式/AH 协议、10.3 SSL 体系结构/记录协议/修改密码规范/报警/握手与 TLS、10.4 SET；infoSec06 含 6.3 可信计算技术。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“10 Internet安全”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：协议安全与可信计算相关课件只有学生上传 PDF，保留 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.5.1.json",
+    "review/main-additions/S.5.1.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "协议安全性分析：形式化验证与符号模型（《密码学百科》系列第 53/65 篇，quant67.com）",
+   "url": "https://quant67.com/post/cryptography/53-protocol-analysis/protocol-analysis.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "一、为什么需要形式化协议分析（以 Needham-Schroeder 公钥认证协议为例给出消息流）；二、Dolev-Yao 符号模型（把“给定协议规范与安全性目标（保密性、认证性），是否存在 Dolev-Yao 攻击者能违反目标的攻击策略”作为可判定问题）；三、BAN 逻辑（Burrows/Abadi/Needham 1989 的信念逻辑，“通过推理协议参与者在执行协议过程中形成的信念来分析协议的认证性质”，并列出 P |≡ X、P ◁ X 等谓词）；四、ProVerif（Horn 子句，全自动）、Tamarin（多集重写，精确验证，文中给出含 event beginA/endA 的 spthy 模型）、Spin（模型检测/有限状态）三工具建模范式与能力边界对比；五、用形式化工具发现 TLS 1.2 三重握手漏洞（攻击原理 → ProVerif 建模 → 修复与验证）；六、TLS 1.3 与 Signal 的验证实践。",
+   "access": "免费网页，无需注册；简体中文；单篇长文（约 1.8 万字符），属“密码学百科”65 篇连载中的一篇，非大学课程。",
+   "publisher": "quant67.com（个人技术博客《土法炼钢 · 系统与基础设施》的《密码学百科》系列）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://quant67.com/post/cryptography/53-protocol-analysis/protocol-analysis.html",
+    "location": "目次（二、Dolev-Yao 符号模型；三、BAN 逻辑；四、ProVerif/Tamarin/Spin；五、TLS 1.2 案例）与正文相关段落、Tamarin 代码块",
+    "finding": "打开确认正文：目次为“一、为什么需要形式化协议分析 / 二、Dolev-Yao 符号模型 / 三、BAN 逻辑 / 四、自动化验证工具：ProVerif、Tamarin 与 Spin / 五、案例解剖：用形式化工具发现 TLS 1.2 三重握手漏洞 / 六、验证实践：TLS 1.3 与 Signal 协议”；正文写“在这个框架下，协议安全性分析的问题可以精确表述为：给定协议规范和安全性目标(如保密性、认证性)，是否存在一个 Dolev-Yao 攻击者能够违反安全性目标的攻击策略？”；“BAN 逻辑……是一种信念逻辑，通过推理协议参与者在执行协议过程中形成的信念来分析协议的认证性质”，并给 Tamarin 模型片段“(* 安全性目标：认证事件 *) event beginA(nonce). event endA(nonce).”。"
+   },
+   "added_by": "review/pi-additions/S.5.1.json"
+  },
+  {
+   "key": "main-zh-tcb",
+   "lang": "zh",
+   "title": "清华大学出版社样章：第 5 章 操作系统安全（可信软件、安全周界、参照监视器、安全内核）",
+   "url": "https://www.tup.com.cn/upload/books/yz/107490-01.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "可信软件与良性软件、安全周界、参照监视器与引用验证机制、安全内核的设计原则（精简以便验证正确性），即可信计算基的核心概念。",
+   "access": "出版社官网免费公开的教材样章 PDF；全书需购买。",
+   "publisher": "清华大学出版社",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.tup.com.cn/upload/books/yz/107490-01.pdf",
+    "location": "第 5 章：可信软件、参照监视器、安全内核各小节",
+    "finding": "正文解释安全内核是参照监视器的实现，应尽可能精简以便正确性验证，并区分安全周界内外的软件。"
+   },
+   "added_by": "review/main-additions/S.5.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "协议模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第10章 IPSec/SSL-TLS 协议结构与消息序列",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "第1节 安全协议基本概念与分类（综述）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "二、Dolev-Yao 符号模型（攻击者能力、符号化假设、安全性目标形式化）+ 一、Needham-Schroeder 消息流",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "ProVerif 手册：协议建模语言与示例（进程/事件/方程）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文能读出 TLS/IPSec 的消息结构，但没有“把协议写成形式模型（进程代数/多集重写）”的训练。；旧结论说中文只有协议消息结构描述、没有形式建模。该文先把协议写成消息流（以 Needham-Schroeder 为例），再用 Dolev-Yao 符号模型规定攻击者能做什么（可截获、可构造、不可破加密），并把“协议是否安全”化成“是否存在违反保密性/认证性目标的攻击策略”——这正是协议模型这一知识点要的建模语言与判定框架。"
+  },
+  {
+   "topic": "认证性质",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第2节 认证性与协议分析目标（综述）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "三、BAN 逻辑（信念逻辑与认证性推理）+ 四、Tamarin 模型中的 event beginA/endA（认证事件对应）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "ProVerif 的 authentication（correspondence assertions）与 secrecy 性质",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只给认证性的概念与历史方法，没有 correspondence/agreement 的可验证表述。；旧结论说中文只给认证性的概念与历史方法、没有可验证的表述。该文给出两条互补路径：BAN 逻辑用信念谓词（P believes X、P saw X 等）推理“协议结束后各方相信什么”，从而判断认证性；工程上则把认证性写成事件对应（beginA/endA 成对出现），交给 Tamarin/ProVerif 去验证。这就把“认证性质”从口头描述变成了可验证的目标。"
+  },
+  {
+   "topic": "非干扰",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "信息流相关段落仅作背景提及",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Policy models（information flow）与 Security type systems（noninterference）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有非干扰（noninterference）的定义、类型系统与证明，属实质缺口。"
+  },
+  {
+   "topic": "形式验证和可信基",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第2节 模态逻辑/定理证明/Spi 演算等方法综述",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "第6章 6.3 可信计算（TCG/TPM）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "协议安全性分析：形式化验证与符号模型",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-tcb",
+     "section": "第 5 章：可信软件、安全周界、参照监视器、安全内核",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Reference monitors、TCB、authorization logic、software model checking",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "自动验证流程（ProVerif 证明/反例）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有方法与可信计算的名词，但没有模型检测/引用监控器/授权逻辑的可操作训练。；形式验证一半由《密码学百科》协议形式化验证一篇讲（符号模型、自动化工具），可信基一半由清华社样章讲参照监视器与安全内核；中科大课件第 6 章可信计算作补充。；可信基部分。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh2",
+     "read": "先读第10章把 TLS/IPSec 的消息序列与密钥交换画出来，作为后续形式化的对象。"
+    },
+    {
+     "source": "zh1",
+     "read": "读综述的第1–3 节，建立“协议→安全性质→分析方法”的术语表，并注意它是 2003 年综述，工具与理论需更新。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读 Needham-Schroeder 那节，把协议消息流与攻击者的 Dolev-Yao 能力分别写成两栏；再读 BAN 逻辑，用信念谓词推一遍“Alice 是否相信 Kab 是 Alice 与 Bob 的共享密钥”；最后读 ProVerif/Tamarin/Spin 对比表，选一个工具把同一协议的“保密性 + 认证事件对应”写成模型并跑通（Tamarin 可直接照文中 event beginA/endA 片段改）。"
+    },
+    {
+     "source": "zh2",
+     "read": "以中科大《信息安全导论》第 10 章协议安全和第 6 章可信计算为主线，先建立协议攻击与可信计算的整体框架。"
+    },
+    {
+     "source": "main-zh-tcb",
+     "read": "读清华社样章中参照监视器与安全内核两节，说明为什么可信计算基要小到能被验证。"
+    }
+   ],
+   "gaps": [
+    "非干扰"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 schedule 读 policy models → reference monitors → security type systems，完成用类型系统证明非干扰的作业。"
+    },
+    {
+     "source": "en1",
+     "read": "读 trusted computing 与 model checking 部分，能写出授权逻辑的证明并说明 TCB 边界。"
+    },
+    {
+     "source": "en2",
+     "read": "用 ProVerif 手册把 TLS 握手片段写成进程，查询 secrecy 与 authentication，读反例轨迹。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.jos.org.cn/1000-9825/14/1740.pdf ; USTC 第10章课件",
+   "result": "采纳为参考/补充：中文只有 2003 综述与协议结构描述，无形式化训练。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 形式化方法/协议验证类课程页检索",
+   "result": "未找到可核对的中文协议验证课程；MOOC 检索被限流，无法确认具体课程页。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《安全协议形式化分析》教材",
+   "result": "未核实到可核对目录的公开页面，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://15316-cmu.github.io/2026/ ; https://bblanche.gitlabpages.inria.fr/proverif/manual.pdf",
+   "result": "采纳：15-316 覆盖策略/类型系统/可信基，ProVerif 手册覆盖协议建模与认证性质。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "安全协议 形式化验证 中文 教材 目录 协议模型 认证性 非干扰 课程 讲义",
+   "result": "采纳 quant67《协议安全性分析：形式化验证与符号模型》（已打开核对目次与正文）；HackMD 繁体长文、百科词条、中科大形式化方法教研论文、北信科课程大纲作线索未登记。",
+   "by": "review/pi-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "非干扰 noninterference 信息流安全 中文 讲义 类型系统 可信基 形式化 教学",
+   "result": "不合适：只返回英文讲义（UT Austin CS361 Lecture 17、Verona AVAS 讲义）与中科大教研论文，无中文 noninterference 教学。",
+   "by": "review/pi-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息流安全 无干扰 非干扰 noninterference 中文 讲义 课程 格 安全级别 形式化 教材",
+   "result": "不合适：返回英文讲义、复旦信息安全慕课（概述未提信息流）、高教社《信息安全基础》书目与一篇通信论文，无可用的中文 noninterference 教学。",
+   "by": "review/pi-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "无干扰模型 Goguen Meseguer 信息流安全 非干扰性 讲义 课件",
+   "result": "只有英文讲义与原论文。",
+   "by": "review/main-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息流控制 非干扰 noninterference 类型系统 中文 课程 程序分析 安全",
+   "result": "一篇中文学报论文（研究型）、CCF 术语页（脚本加载、读不到正文）、英文讲义。",
+   "by": "review/main-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 信息流安全 无干扰 noninterference 安全类型系统",
+   "result": "只有渗透测试与毕设选题视频，没有相关课程。",
+   "by": "review/main-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "操作系统安全 教材 目录 安全模型 无干扰模型 BLP Biba 卿斯汉",
+   "result": "只有百科条目，没有出版社可核目录。",
+   "by": "review/main-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.tup.com.cn/upload/books/yz/107490-01.pdf",
+   "result": "清华社样章讲参照监视器与安全内核，采纳为可信基材料。",
+   "by": "review/main-additions/S.5.1.json"
+  }
+ ],
+ "findings": [
+  "原中文条目是 2003 年中文综述，属 reference，不能单独支撑四个必学主题；保留为术语与历史方法参考。",
+  "中文没有可跟做的形式化建模/非干扰教学，故中文路线判 gap（有综述与协议结构，但没有能学完的训练）。",
+  "英文 15-316 覆盖策略模型、类型系统非干扰、可信基与模型检测；协议层由 ProVerif 手册补，两者合起来完整。",
+  "[review/pi-additions/S.5.1.json] 未解决 zh「非干扰」：两轮中文检索（“非干扰/无干扰/信息流安全/noninterference”组合）只得到英文讲义与一篇中科大形式化方法教研论文，未找到用中文讲 noninterference 定义、格/安全级别、类型系统与证明的材料；本轮不据此断言“中文完全没有”，仅说明未检索到可登记来源（Tavily 余量已用于其他技能）。",
+  "[review/pi-additions/S.5.1.json] 未解决 zh「形式验证和可信基」：只解决一半：形式验证部分已由 r7-zh1 覆盖（Dolev-Yao + BAN + ProVerif/Tamarin/Spin + TLS 1.2 案例），但“可信基/引用监控器”的可操作中文教学仍缺——既有 zh2（中科大课件）只有 TCG/TPM 与可信计算概述，zh1（卿斯汉综述）是 2003 年综述；北大 Coursera《操作系统与虚拟化安全》有 M7 安全模型、M8 安全体系结构，但模块内部讲次无法核对（Coursera 只公开模块标题）。故记 partial。",
+  "[review/pi-additions/S.5.1.json] 未解决 zh「主资源」：need_primary 未解决：中文没有一门以“协议验证与信息流安全”为主线的免费课程或教材可核对到章节目录。已试：中国大学MOOC/学堂在线检索（无该主题课程）、quant67 系列（单篇长文，非课程）、中科大形式化方法教研论文（教研讨论，不是教材）、北大 Coursera（OS 与虚拟化安全，非协议验证）。可用替代是英文 CMU 15-316 + ProVerif 手册（既有 en1/en2）。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "非干扰",
+   "source": "en1",
+   "reason": "非干扰（Goguen–Meseguer 无干扰、基于类型系统的信息流控制）在中文侧三个渠道都没找到教学：文字检索只有英文讲义（UT CS361 Lecture 17）、一篇华南师大学报论文和一个读不出正文的 CCF 术语页；B 站站内检索只有渗透测试与毕设选题视频；付费教材检索只找到《操作系统安全》百科条目，没有可核目录。因此这一知识点改读英文主资源。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/main-additions/S.5.1.json"
+  }
+ ],
+ "applied_additions": [
+  "review/pi-additions/S.5.1.json@ea1de88ef4",
+  "review/main-additions/S.5.1.json@8c5a0807f0"
+ ]
+}

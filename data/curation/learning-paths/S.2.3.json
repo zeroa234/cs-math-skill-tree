@@ -1,0 +1,436 @@
+{
+ "id": "S.2.3",
+ "name": "移动应用与设备安全",
+ "description": "移动平台与沙箱、权限与设备身份、应用数据与通信保护、移动应用威胁建模与测试。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "OWASP Mobile Application Security（MASVS / MASTG / MASWE，官方免费在线）",
+   "url": "https://mas.owasp.org/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "MASVS 按 MASVS-STORAGE、MASVS-CRYPTO、MASVS-AUTH、MASVS-NETWORK、MASVS-PLATFORM、MASVS-CODE、MASVS-RESILIENCE、MASVS-PRIVACY 组织；MASTG 给 Android/iOS 两条测试线（平台交互、Keystore/Keychain、生物识别、attestation、TLS 与证书固定、存储加密、Root/Jailbreak 检测）；MASWE 给弱点分类，MAS Profiles 给 L1/L2/R 的测试范围。",
+   "access": "免费在线（CC BY-SA），无需注册；动手需要 Android/iOS 设备或模拟器与 Frida/objection 等工具。英文。",
+   "publisher": "OWASP Mobile Application Security 项目",
+   "evidence": {
+    "url": "https://mas.owasp.org/",
+    "location": "首页目录：MASVS 下 STORAGE / CRYPTO / AUTH / NETWORK / PLATFORM / CODE / RESILIENCE / PRIVACY 各域",
+    "finding": "打开首页看到 MASVS/MASWE/MASTG/MAS Profiles/MAS Crackmes 五个入口与 MASVS 各域条目（MASVS-STORAGE、MASVS-AUTH 等），并非只有标准条文，另有测试与 crackme 实践。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "CTF Wiki · Android（开发基础、静态/动态分析、加固与逆向条目）",
+   "url": "https://ctf-wiki.org/android/basic_develop/basic_develop/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "APK 构建/打包/签名流程与 APK 文件结构（AndroidManifest 组件与权限声明、classes.dex、resources.arsc、META-INF 签名），以及 Android 逆向/调试条目；讲应用结构与分析，不讲 MASVS 的域化测试、Keystore/attestation。",
+   "access": "免费在线阅读（社区维护）；中文页面，随站点更新。",
+   "publisher": "CTF Wiki 社区",
+   "evidence": {
+    "url": "https://ctf-wiki.org/android/basic_develop/basic_develop/",
+    "location": "Android → 开发基础、APK 结构、逆向条目",
+    "finding": "页面为中文，正文讲 APK 构建与签名、AndroidManifest/classes.dex/resources.arsc/META-INF 结构。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "信息系统安全与对抗实践（北京理工大学 罗森林团队，中国大学MOOC）· Android 安全实践单元",
+   "url": "https://www.icourse163.org/course/BIT-1206619844",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "课程 7 个单元中的“Android 安全实践”和“软件逆向安全实践”两个单元；覆盖移动应用分析与攻防的入门操作，不含 MASVS 域化清单、Keystore/生物识别/attestation 与 iOS。",
+   "access": "中国大学MOOC 免费注册学习；单元制考核（必修2+选修2+自选1），认证证书可能收费；视频按学期开放，字幕未核对。",
+   "publisher": "北京理工大学 罗森林团队",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1206619844",
+    "location": "课程概述：单元列表",
+    "finding": "课程概述原文列“WEB安全实践、密码安全实践、Android安全实践、Window安全实践、缓冲区溢出安全实践、软件逆向安全实践”；常见问题说明单元制考核。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "《Android 软件安全权威指南》（丰生强，电子工业出版社 2019，ISBN 9787121355202）",
+   "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=53531",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "12 章：分析环境与逆向工具、Dalvik 字节码、APK/DEX/ARSC/META-INF 格式、静态与动态分析、Hook 与注入（含绕过 SSL Pinning）、软件保护（混淆/完整性校验/反调试/Root 检测）、软件壳。偏逆向与加固，不含设备身份（Keystore/生物识别/attestation）与测试标准。",
+   "access": "出版社商品页与完整目录可核，全文需购买；核实时页面显示无库存。未购买。",
+   "publisher": "电子工业出版社 / 丰生强",
+   "evidence": {
+    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=53531",
+    "location": "目录：第3–12 章（Dalvik、文件格式、Hook 与注入 10.3.3 绕过 SSL Pinning、软件保护 11.5–11.6、软件壳 12）",
+    "finding": "出版社页面列出逐节目录，含 10.3.3 绕过 SSL Pinning、11.6.2 Root 检测、11.6.3 Hook 检测、第12章 软件壳；未含 Keystore/attestation 章节。"
+   },
+   "updated_by": [
+    "review/main-additions/S.2.3.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "应用沙盒（Android Open Source Project 官方中文文档 · 安全）",
+   "url": "https://source.android.com/docs/security/app-sandbox?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "移动平台沙箱的内核实现：每个应用分配唯一 UID 并在自己进程中运行，内核用 Linux UID/GID 实现内核级应用沙盒，默认应用之间不能互相交互；保护机制的演进（Android 5.0 SELinux 提供 MAC 隔离系统与应用；6.0 跨用户边界隔离并把应用家目录默认权限由 751 改 700；8.0 全部应用跑 seccomp-bpf 系统调用过滤；9.0 targetSdk≥28 的非特权应用各自独立 SELinux 沙盒；10.0 过滤外部存储视图）；共享文件的正确做法（ContentProvider、MediaStore）与“把应用数据设为所有人可读”为何危险。",
+   "access": "免费中文文档（AOSP 官方站点简体中文），无需注册；无视频；面向平台开发者/ROM 维护者，术语偏底层。",
+   "publisher": "Google / Android Open Source Project（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://source.android.com/docs/security/app-sandbox?hl=zh-cn",
+    "location": "正文第 1–3 段与“保护机制”“共享文件指南”小节",
+    "finding": "打开确认正文：“Android 会为每个 Android 应用分配一个唯一的用户 ID (UID)，并在自己的进程中运行……使用该 UID 设置一个内核级应用沙盒。内核会在进程级别利用标准的 Linux 机制（例如，分配给应用的用户 ID 和组 ID）实现应用和系统之间的安全防护”；随后逐版本列出 SELinux MAC、seccomp-bpf、per-app SELinux 沙盒等演进，并在共享文件一节禁止把应用数据设为所有人可访问。"
+   },
+   "added_by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "由硬件支持的密钥库（Android Open Source Project 官方中文文档 · 安全）",
+   "url": "https://source.android.com/docs/security/features/keystore?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "设备身份与密钥保护：由硬件支持的密钥库（TEE/StrongBox 中生成与保存密钥）、密钥认证与 ID 认证（attestation）、版本绑定（version binding，绑定到系统版本/补丁级别）、授权标记（auth-bound，如用户认证后才能使用密钥）；文档页还并列给出生物识别（指纹/人脸 HIDL 与“衡量生物识别安全性”）与 DICE 等相邻机制。",
+   "access": "免费中文文档（AOSP 官方站点简体中文），无需注册；无视频。",
+   "publisher": "Google / Android Open Source Project（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://source.android.com/docs/security/features/keystore?hl=zh-cn",
+    "location": "页面标题“由硬件支持的密钥库”与正文小节“密钥认证和 ID 认证”“版本绑定”“授权标记”；同页导航含“衡量生物识别安全性”“DICE”",
+    "finding": "打开确认该页为 AOSP 安全章节的“由硬件支持的密钥库”，正文小节标题包括“密钥认证和 ID 认证”“版本绑定”“授权标记”，页内导航列出生物识别（指纹/人脸身份验证 HIDL）、Android Protected Confirmation、DICE、文件级加密等相邻机制。"
+   },
+   "added_by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "文件级加密（Android Open Source Project 官方中文文档 · 加密）",
+   "url": "https://source.android.com/docs/security/features/encryption/file-based?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "应用数据落盘保护：文件级加密（FBE）的目录与密钥划分、加密数据单元、算法与参数选择（默认 fileencryption=aes-256-xts；有内嵌加密硬件时 inlinecrypt_optimized；文件名加密 aes-256-hctr2）、硬件封装密钥（wrappedkey_v0）与内联加密硬件、OTA 不能改加密格式等工程约束；同页导航并列全盘加密。",
+   "access": "免费中文文档（AOSP 官方站点简体中文），无需注册；无视频。",
+   "publisher": "Google / Android Open Source Project（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://source.android.com/docs/security/features/encryption/file-based?hl=zh-cn",
+    "location": "正文关于 fileencryption 参数、wrappedkey_v0、AES-HCTR2 文件名的段落",
+    "finding": "打开确认正文：“在支持硬件封装密钥的设备上，wrappedkey_v0 标记允许为 FBE 使用硬件封装的密钥”；建议值“fileencryption=aes-256-xts”“fileencryption=aes-256-xts:aes-256-cts:inlinecrypt_optimized”；“从 Android 14 开始，AES-HCTR2 是采用加速加密指令的设备的首选文件名加密模式”；并说明“由于 fileencryption 选项指定了磁盘格式，因此无法通过 OTA 进行更改”。"
+   },
+   "added_by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "网络安全配置（Android Developers 官方中文文档）",
+   "url": "https://developer.android.com/privacy-and-security/security-config?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "应用通信保护：用声明式配置文件（network_security_config）而非改代码来定制网络安全设置，主要特性包括自定义信任锚（指定信任哪些 CA、限制信任的公共 CA 集合、信任特定自签名证书）、仅调试替换（debug-overrides 安全调试）、停用明文流量（cleartextTrafficPermitted=false）、按域名/按应用的粒度。",
+   "access": "免费中文文档（Android Developers 官方站点简体中文），无需注册；无视频。",
+   "publisher": "Google / Android Developers（官方文档中文版）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.android.com/privacy-and-security/security-config?hl=zh-cn",
+    "location": "正文“此功能的主要特性包括”列表",
+    "finding": "打开确认正文：“借助网络安全配置功能，您可以在一个安全的声明性配置文件中自定义应用的网络安全设置，而无需修改应用代码……主要特性包括：自定义信任锚：针对应用的安全连接自定义哪些证书授权机构 (CA) 值得信赖。例如，信任特定的自签名证书或限制应用信任的公共 CA 集。仅调试替换……选择停用明文流量：防止应用意外使用明文流量。”"
+   },
+   "added_by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "key": "main-zh-tm",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文：威胁建模安全基础知识（分步培训路径）",
+   "url": "https://learn.microsoft.com/zh-cn/training/paths/tm-threat-modeling-fundamentals/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "画数据流图与信任边界、用框架（STRIDE）识别威胁、按风险排序、选择安全控制；方法与平台无关，可直接用于移动应用。",
+   "access": "微软官方中文培训正文免费阅读；成就记录需登录，学习内容不需要。",
+   "publisher": "Microsoft",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/training/modules/tm-prioritize-your-issues-and-apply-security-controls/1b-priorities-types-and-functions",
+    "location": "7 个模块；问题优先级、安全控制措施类型和功能",
+    "finding": "学习单元正文有风险严重度、控制成本及物理/技术/管理控制的例子（S.1.1 复核时已打开）。"
+   },
+   "added_by": "review/main-additions/S.2.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "移动平台与沙箱",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Android 开发基础：APK 结构、组件与权限声明",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "第3–4章 Dalvik/APK/DEX/Manifest 结构；第7章 原生程序分析",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "“应用沙盒”全文（UID 内核沙盒、SELinux MAC、seccomp-bpf、per-app SELinux 沙盒、共享存储视图）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "MASVS-PLATFORM（平台交互、沙箱边界、WebView/IPC）与 MASTG 平台测试线",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文能讲清 APK/Manifest/组件这些平台结构，但不系统讲应用沙箱（UID 隔离、SELinux、IPC 边界）与越权路径。；旧结论说中文只讲 APK/Manifest/组件结构，没有应用沙箱与平台交互边界的教学；此官方中文文档把“沙箱”讲成内核机制：UID/GID 的 DAC 沙盒是基线，SELinux 提供 MAC 并把每个应用放进独立沙盒，seccomp-bpf 收紧系统调用，再叠加外部存储视图隔离，并给出跨应用共享数据的正确边界（ContentProvider/MediaStore）。这正好补上平台-应用交互边界这一层。"
+  },
+  {
+   "topic": "权限与设备身份",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Android 开发基础：AndroidManifest 组件与权限声明",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "“由硬件支持的密钥库”全文：硬件密钥库、密钥认证和 ID 认证、版本绑定、授权标记；相邻的生物识别与 DICE",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "MASVS-AUTH（生物识别、Keystore/Keychain、硬件支持的密钥与 attestation）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到 Manifest 里的权限声明（声明了什么权限），没有运行时权限授予、Keystore/Keychain、生物识别与 attestation 的教学。；旧结论说中文停在 Manifest 权限声明；此文档从设备身份一侧补齐：密钥在 TEE/StrongBox 内生成与使用、密钥认证（attestation）可以把“这把密钥确实在受支持的硬件里、系统版本是多少”证明给远端、版本绑定把密钥与系统/补丁级别绑定、授权标记要求用户认证后才能用密钥；配合生物识别与 DICE 就是移动设备身份的完整链条。权限模型本身由 Android 权限文档与 r7-zh1 的沙箱边界共同界定。"
+  },
+  {
+   "topic": "应用数据与通信保护",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "10.3.3 绕过 SSL Pinning；11.4 完整性校验",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "文件级加密（FBE）：密钥与目录划分、算法参数、硬件封装密钥",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh4",
+     "section": "网络安全配置：自定义信任锚、仅调试替换、停用明文流量",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "MASVS-STORAGE、MASVS-CRYPTO、MASVS-NETWORK（存储加密、密钥使用、TLS 与证书固定）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有“如何绕过证书固定/校验”的攻击视角，没有存储加密、密钥管理与安全通信配置的防守教学。；负责“数据存储保护”这一半：应用数据落盘由 FBE 按文件加密，密钥受硬件保护（wrappedkey_v0/TEE），算法与文件名加密模式有明确默认值与硬件约束，且加密格式不能靠 OTA 偷改——这是防守侧“存储加密与密钥使用”的教学，而不是只讲怎么绕过 SSL Pinning。；负责“通信保护”这一半：用 network security config 明确信任哪些 CA（含自签名与公共 CA 收敛）、禁止明文流量、把调试期放宽限制限定在 debug 构建，正是旧结论所缺的“TLS 配置与密钥使用”的防守教学。"
+  },
+  {
+   "topic": "移动应用威胁建模与测试",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "Android 安全实践单元、软件逆向安全实践单元",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "Android 逆向/调试条目",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "静态分析、动态调试、Hook 与注入、软件保护与壳（出版社目录）",
+     "extent": "covered"
+    },
+    {
+     "source": "main-zh-tm",
+     "section": "数据流图与信任边界、STRIDE 识别威胁、风险排序与控制",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "MASVS 域化清单 + MASTG 测试用例 + MASWE 弱点 + MAS Profiles（L1/L2/R）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文是零散的攻击/逆向操作，没有“按域定测试范围→列测试用例→记录证据→评级”的威胁建模与测试流程。；测试一半由丰生强《Android 软件安全权威指南》讲应用的静态分析、动态调试和 Hook 注入；威胁建模一半由微软中文威胁建模培训讲 DFD、STRIDE 与风险排序，套用到移动应用。iOS 与 MASTG 的系统化测试清单中文仍缺，已在说明里写明。该书为付费正版教材，范围依据出版社目录。；威胁建模部分。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读 Android 开发基础与 APK 结构，能在 Manifest 里指出组件与权限声明，再用逆向条目做一次静态分析。"
+    },
+    {
+     "source": "zh2",
+     "read": "跟 Android 安全实践单元做一遍环境搭建、抓包与简单 Hook，记录每一步的观察点。"
+    },
+    {
+     "source": "zh3",
+     "read": "需要系统化时按第3–4章补文件格式，第10–12章补 Hook/加固/脱壳；设备身份与测试标准仍缺。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读《应用沙盒》，画一条从 UID/DAC 基线到 SELinux MAC、再加 seccomp-bpf 的隔离叠加图，并回答：为什么“共享同一内核”的沙箱一旦内核有漏洞就可能整体失守？再写出跨应用共享数据的两种正确做法与一种错误做法。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读《由硬件支持的密钥库》，说清密钥生成/使用在 TEE 与 StrongBox 的差别、attestation 证书链里能读到哪些字段、版本绑定与授权标记各防什么攻击（降级、离线破解、未认证使用）。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读《文件级加密》，写出 CE/DE 两类存储与密钥的关系、默认 fileencryption 参数的含义，并解释为什么加密格式一经发布不能靠 OTA 改。"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "读《网络安全配置》，为一个真实 App 写一份 network_security_config：生产环境只信任指定 CA、关闭明文流量、debug 构建用 debug-overrides 加载用户证书，然后说明这样配置能挡住哪类中间人攻击、挡不住哪类（如应用层证书固定被绕过）。"
+    },
+    {
+     "source": "zh3",
+     "read": "以《Android 软件安全权威指南》为主线，按 APK 结构 → 静态分析 → 动态调试 → Hook 注入 → 加固与对抗的顺序学，配合 AOSP 中文安全文档理解沙盒、密钥库与文件级加密。"
+    },
+    {
+     "source": "main-zh-tm",
+     "read": "学完威胁建模培训后，为一个移动应用画数据流图，按 STRIDE 列威胁并排序，再决定要做哪些测试。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "先读 MASVS 八个域，按 MAS Profiles 选 L1/L2，建立“域→控制项”的表。"
+    },
+    {
+     "source": "en1",
+     "read": "按 MASTG 的 Android 测试线逐条做：存储、加密、认证（Keystore/生物识别/attestation）、网络（TLS/证书固定）、平台交互、代码质量、防篡改、隐私，并用 MASWE 给发现归类。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://github.com/search?q=移动应用安全 / Android 安全 课程；icourse163 课程页（北理工）",
+   "result": "只找到 CTF Wiki 的 Android 结构与逆向条目和北理工实践单元；没有找到按 MASVS 组织的免费中文测试课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/BIT-1206619844（Android 安全实践单元）",
+   "result": "采纳为补充：有 Android 攻防操作，但不含设备身份与测试流程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=53531（《Android 软件安全权威指南》目录）",
+   "result": "已核实目录：偏逆向/加固，无 Keystore/attestation 与测试标准；未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://mas.owasp.org/",
+   "result": "采纳：MASVS/MASWE/MASTG/MAS Profiles 四个入口与各域条目核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "OWASP MASVS 中文版 移动应用安全验证标准 翻译 MAS 中文",
+   "result": "不合适：mas.owasp.org 与 github.com/OWASP/masvs 只有英文（另用 GitHub trees API 核对 master 分支 91 个文件，无 zh/中文译本目录）。",
+   "by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 移动安全 课程 Android 应用安全",
+   "result": "不合适：只有《移动终端应用开发》《移动开发技术》等开发课与《移动互联网时代的信息安全防护》（南京师范大学，概述为设备/数据/身份/主机/网络/应用软件/内容七大方面，非移动应用安全本体，已打开其授课大纲核对）。",
+   "by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "OWASP MASTG 中文 移动应用安全测试指南 翻译 测试用例 中文版",
+   "result": "部分合适但无法登记：确有《OWASP 移动应用安全测试指南（MASTG）中文版 V1.6.0》（安信与诚翻译），但获取方式是微信公众号后台回复/网盘，打开博客园与搜狐页面只看到“关注公众号获取”，无稳定可打开的正文页，故不作为来源。",
+   "by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "移动安全 教材 出版社 目录 Android iOS 应用安全 测试 威胁建模 移动互联网安全 课程；site:tup.tsinghua.edu.cn 移动安全 逆向攻防实践 叶绍琛 目录",
+   "result": "只找到线索，未登记：清华社《移动安全：逆向攻防实践》（叶绍琛等，ISBN 978-7-302-69051-1，¥79）与《Android 移动安全攻防实战》，出版社详情页未命中，仅第三方书评站转述目录；已登记的丰生强《Android 软件安全权威指南》出版社页（phei.com.cn）确有 12 章目录，但主题是逆向/加固而非 MASVS 测试体系。",
+   "by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "source.android.com（应用沙盒 / 由硬件支持的密钥库 / 文件级加密）与 developer.android.com（网络安全配置）中文页",
+   "result": "采纳：四页均为官方简体中文，逐页打开确认正文关键词（UID 内核沙盒与 SELinux/seccomp-bpf；“密钥认证和 ID 认证/版本绑定/授权标记”；wrappedkey_v0 与 aes-256-xts；自定义信任锚/停用明文流量/仅调试替换）。",
+   "by": "review/pi-additions/S.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=53531",
+   "result": "电子工业出版社官方商品页，目录可核，作为付费主资源；没有找到更成体系的免费中文移动安全课。",
+   "by": "review/main-additions/S.2.3.json"
+  }
+ ],
+ "findings": [
+  "原中文只有 CTF Wiki Android 开发基础，覆盖 APK 结构一层；北理工 MOOC 与丰生强书的 Android 单元补攻防操作，但都不讲设备身份与 MASVS 式测试。",
+  "OWASP MAS 在英文侧同时提供标准（MASVS）、测试（MASTG）、弱点（MASWE）与分级（Profiles），四个主题都能落到具体测试项。",
+  "中文移动安全缺口是结构性的：平台沙箱、Keystore/attestation、通信保护与测试流程都缺，不能用一个 APK 结构页冒充完成。",
+  "[review/pi-additions/S.2.3.json] 未解决 zh「主资源」：need_primary 未解决：中文没有一门能核对到章节目录、且以移动应用安全为主线的免费课程或教材。中国大学MOOC 上只有移动开发课与泛信息安全课（《移动互联网时代的信息安全防护》七大方面是设备/数据/身份/主机/网络/应用软件/内容，非本技能本体）；OWASP MAS 系列无中文官方版；清华社《移动安全：逆向攻防实践》与《Android 移动安全攻防实战》为付费教材且出版社页未核到目录；已登记的丰生强书出版社页有 12 章目录但偏逆向与加固。本轮只能用 AOSP 官方中文安全文档分点覆盖，不把它升格为 primary。",
+  "[review/pi-additions/S.2.3.json] 未解决 zh「移动应用威胁建模与测试」：只解决了一部分：MASTG 的中文版（V1.6.0，安信与诚译）只能通过微信公众号/网盘获取，无稳定可打开的正文页，无法逐节核对，故不登记；中文侧仍未找到讲 MASVS 控制域化清单、测试用例与证据评级（pass/fail）流程的课程或文档。AOSP 文档只讲平台机制，不讲测试流程，不能替代。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.2.3.json@77493fd60c",
+  "review/main-additions/S.2.3.json@c6d81f195f"
+ ]
+}

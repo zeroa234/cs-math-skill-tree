@@ -1,0 +1,311 @@
+{
+ "id": "S.3.1",
+ "name": "应用、Web与API安全",
+ "description": "输入输出边界、认证会话、访问控制、服务端/客户端与接口安全。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Web Security Academy（PortSwigger，免费在线：All topics + 分级 labs + learning paths）",
+   "url": "https://portswigger.net/web-security",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "All topics 按 server-side / client-side / advanced 组织：SQL injection（18 labs）、Authentication（14 labs）、Path traversal、Access control、Business logic、Command injection、SSTI、XXE、File upload、Insecure deserialization、API testing、JWT、OAuth、XSS/CSRF/CORS/clickjacking、request smuggling、web cache poisoning 等，每个主题有讲解 + Apprentice/Practitioner/Expert 实验。",
+   "access": "免费在线，注册可保存进度与实验记录；labs 在官方托管实例上运行，无需自建靶场。英文。",
+   "publisher": "PortSwigger",
+   "evidence": {
+    "url": "https://portswigger.net/web-security/all-topics",
+    "location": "All topics 页：Server-side topics 起，逐条列 SQL injection 18 Labs、Authentication 14 Labs、Path traversal 等",
+    "finding": "页面正文写“If you're new to web security… We recommend working through the topics… completing the labs as you go”，并按 Server-side / Client-side / Advanced 列出主题与对应 lab 数量。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "CS253 Web Security（Stanford，课程主页与讲义）",
+   "url": "https://web.stanford.edu/class/cs253/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "以浏览器与 Web 平台为中心的安全课：同源策略、Cookie/会话、CSRF/XSS、点击劫持、CSP、TLS 与证书，配作业与 CTF 式练习；给 Web Security Academy 的主题提供学期课框架。",
+   "access": "课程主页与讲义免费公开；视频/字幕未核对。英文。",
+   "publisher": "Stanford University（Feross Aboukhadijeh）",
+   "evidence": {
+    "url": "https://web.stanford.edu/class/cs253/",
+    "location": "课程主页 lecture/schedule 列表",
+    "finding": "打开课程主页可见按周组织的讲义与作业入口（同源策略、Cookie、CSRF、XSS、CSP、TLS 等）。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "CTF Wiki · Web 安全（中文，含 SQL 注入、XSS、CSRF、SSRF、文件上传等条目）",
+   "url": "https://ctf-wiki.org/web/introduction/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Web 简介与子条目：SQL 注入、XSS、CSRF、SSRF、文件上传等输入/输出边界类漏洞的原理与利用；有练习环境要求，但不含认证/会话体系章、访问控制模型、API/GraphQL 测试。",
+   "access": "免费在线阅读（社区维护）；中文页面，随站点更新；练习需自备靶场。",
+   "publisher": "CTF Wiki 社区",
+   "evidence": {
+    "url": "https://ctf-wiki.org/web/introduction/",
+    "location": "Web 简介页与侧栏 Web 子目录；正文关键词分布（SQL 11、XSS 8、CSRF 12、SSRF 9、文件上传 5）",
+    "finding": "页面为中文 Web 简介与漏洞条目导航，正文围绕注入/XSS/CSRF/SSRF/文件上传展开；未出现“认证”“访问控制”“API/GraphQL”条目。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "信息系统安全与对抗实践（北京理工大学，中国大学MOOC）· WEB 安全实践单元",
+   "url": "https://www.icourse163.org/course/BIT-1206619844",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "WEB 安全实践单元（注入、XSS 等常见 Web 漏洞的动手实践）；是操作单元，不含认证/会话/访问控制/API 的系统讲解。",
+   "access": "中国大学MOOC 免费注册学习；单元制考核，认证证书可能收费；视频按学期开放，字幕未核对。",
+   "publisher": "北京理工大学 罗森林团队",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1206619844",
+    "location": "课程概述：单元列表中的“WEB 安全实践”",
+    "finding": "课程概述原文列“WEB安全实践、密码安全实践、Android安全实践……”等单元；课程定位写“重点是……工程与创新实践”。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "白帽子讲Web安全（第2版）（吴翰清、叶敏，电子工业出版社 2023-07，ISBN 9787121459672）",
+   "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=63034",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "第4章 Cookie和会话安全（4.1 Cookie 与会话简介、4.2 第一方/第三方 Cookie、4.3 Cookie 属性、4.4.3 保密性和完整性、4.5 会话安全：4.5.1 会话管理、4.5.2 固定会话攻击）；第13章 身份认证（13.1 概述、13.2 密码的安全性、13.3 身份认证的方式：HTTP 认证/表单登录/客户端证书/一次性密码/多因素认证）；第14章 访问控制（14.2.3 基于属性的访问控制、14.3 越权访问漏洞：14.3.1 垂直越权、14.3.2 水平越权、14.4 零信任模型）；第16章 API 安全（16.1 概述、16.2 常见 API 架构：SOAP/REST/GraphQL、16.3 OpenAPI 规范、16.4 常见的 API 漏洞、16.5 API 安全实践）；第2章含 HTTP/2、HTTP/3、WebSocket 与 Web 服务器基础，第5章含同源策略与 WebSocket 跨域访问。",
+   "access": "付费教材，需购买（出版社页标价 ￥108.0，页内可看内容简介、目录、前言，未购买）；简体中文；无配套免费视频。",
+   "publisher": "电子工业出版社（phei.com.cn 官方网店）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=63034",
+    "location": "目录第4章、第13章、第14章、第16章各小节",
+    "finding": "打开确认目录原文：“4 Cookie和会话安全…4.5 会话安全 4.5.1 会话管理 4.5.2 固定会话攻击”“13 身份认证 13.1 概述 13.2 密码的安全性 13.3 身份认证的方式 13.3.1 HTTP认证 13.3.2 表单登录 13.3.3 客户端证书 13.3.4 一次性密码 13.3.5 多因素认证”“14.2.3 基于属性的访问控制 14.3 越权访问漏洞 14.3.1 垂直越权访问 14.3.2 水平越权访问 14.4 零信任模型”“16 API安全 16.1 API安全概述 16.2 常见API架构 16.2.1 SOAP 16.2.2 REST 16.2.3 GraphQL 16.3 OpenAPI规范 16.4 常见的API漏洞 16.5 API安全实践”；版权区显示作者吴翰清、叶敏，2023-07，ISBN 9787121459672，定价 ￥108.0。"
+   },
+   "added_by": "review/pi-additions/S.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "输入输出边界",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "SQL 注入、XSS、CSRF、SSRF、文件上传条目",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "WEB 安全实践单元",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "SQL injection / Path traversal / File upload / SSTI / XXE 等 server-side 主题",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文覆盖注入与跨站类，输入验证/编码/上下文转义这条“边界”方法链不如英文按主题+lab 组织得完整。"
+  },
+  {
+   "topic": "认证会话",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "仅散见会话相关内容，无认证/会话专章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第4章 Cookie 和会话安全（含 4.5 会话管理、4.5.2 固定会话攻击）+ 第13章 身份认证（密码安全性、HTTP 认证/表单/客户端证书/OTP/MFA）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Authentication（14 labs）、OAuth、JWT、session/cookie 相关主题",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Cookie/会话与同源策略讲义",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有口令/多因素/会话固定/OAuth/JWT 的系统章与实验。；旧结论说中文只有零散会话内容与操作演示，没有口令/多因素/会话固定/的系统讲解。这本教材把“认证”和“会话”分成两章：认证章从密码存储与强度讲到 HTTP 认证、表单登录、客户端证书、一次性密码、多因素认证五种方式；会话章从 Cookie 属性（Secure/HttpOnly/SameSite 等）讲到会话管理生命周期与固定会话攻击。两者合起来覆盖了口令、多因素、会话固定这一整条链，且都是设计侧的防守视角。"
+  },
+  {
+   "topic": "访问控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "无访问控制条目（仅有零散越权提法）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第14章 访问控制（14.2.3 基于属性的访问控制、14.3 越权访问漏洞：垂直/水平越权、14.4 零信任模型）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Access control（IDOR、提权、多步流程绕过）、Business logic vulnerabilities",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺 IDOR/水平越权/垂直越权/业务逻辑绕过的系统内容与实验。；旧结论说中文缺 IDOR/越权/业务逻辑绕过的系统内容。第14章把访问控制拆成模型（含 ABAC）与失效形态（垂直越权=功能级越权、水平越权=对象级越权，即 IDOR），并给出零信任下的授权原则，正好对上 OWASP A01 的“功能级授权失效/对象级授权失效”两类。业务逻辑绕过在 CTF Wiki 的逻辑漏洞条目里另有覆盖，可与本章互补。"
+  },
+  {
+   "topic": "服务端/客户端与接口安全",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "服务端注入与客户端 XSS/CSRF 条目",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第16章 API 安全（API 架构 SOAP/REST/GraphQL、OpenAPI 规范、常见 API 漏洞、API 安全实践）+ 第2章 HTTP/2、HTTP/3、WebSocket + 第5章 同源策略/WebSocket 跨域",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "API testing、GraphQL、WebSockets、request smuggling、cache poisoning",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有服务端与客户端两侧的漏洞条目，但没有 API/GraphQL/WebSocket 与请求走私这类接口层内容。；负责接口层这一半：先讲 REST/GraphQL/SOAP 三类 API 架构与 OpenAPI 描述规范，再给常见 API 漏洞（对象级/属性级授权、批量赋值、过度数据暴露等）与防护实践；配合第2/5章的 HTTP 版本与 WebSocket 跨域，能说明“接口安全”与浏览器同源策略、服务端授权之间的关系。服务端注入与客户端 XSS/CSRF 仍由既有 zh1（CTF Wiki）承担，两者合起来覆盖本知识点。注意：HTTP 请求走私（request smuggling）在该书目录中未单列，属本知识点内仍偏薄的一小块。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 Web 简介 → SQL 注入 → XSS → CSRF → SSRF → 文件上传 的顺序读原理，每个漏洞在本地靶场复现一次。"
+    },
+    {
+     "source": "zh2",
+     "read": "跟 WEB 安全实践单元做一遍环境与工具（Burp/浏览器开发者工具）操作，形成“发现-验证-利用”的记录。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第13章，为“口令登录→多因素→会话建立”画一条时序图，标出每一步的攻击面（撞库、会话固定、Cookie 窃取）；再读第4章，用 Cookie 属性（Secure/HttpOnly/SameSite/作用域）逐条说明它们各自挡住哪类攻击，并复现“固定会话攻击”的成因。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第14章，用一张表区分垂直越权与水平越权（谁能访问谁的对象/功能），并为每种越权写一条服务端校验规则（不要在前端做权限），最后说明零信任模型相对边界防护改变了什么。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第16章，先比较 REST 与 GraphQL 的攻击面差异（字段级暴露、批量查询、introspection），再按 16.4 的漏洞清单给自己熟悉的一个接口做一次评审，写出“对象级授权 + 属性级授权 + 速率限制 + 日志”四条整改项。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 learning path 从 server-side 开始：SQLi → Authentication → Access control → Business logic，每个主题做到 Practitioner 级 lab。"
+    },
+    {
+     "source": "en1",
+     "read": "再进 client-side（XSS/CSRF/CORS/clickjacking）与 advanced（request smuggling、cache poisoning、API/GraphQL），保留每关的请求/响应证据。"
+    },
+    {
+     "source": "en2",
+     "read": "用 CS253 的讲义把同源策略、Cookie 作用域、CSP 串成浏览器安全模型。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://ctf-wiki.org/web/introduction/ ; https://www.icourse163.org/course/BIT-1206619844",
+   "result": "采纳：CTF Wiki 覆盖注入/跨站类，北理工 WEB 单元补动手；两者都无认证/访问控制章。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC WEB 安全实践单元",
+   "result": "采纳为补充：只有操作演示，无系统课。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "《白帽子讲Web安全》《Web安全深度剖析》等中文教材",
+   "result": "未核实到可公开核对的全文或课程页，未购买；不作为免费路线。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://portswigger.net/web-security/all-topics ; https://web.stanford.edu/class/cs253/",
+   "result": "采纳：All topics 列出主题与 lab 数量；CS253 提供学期课框架。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "白帽子讲Web安全 目录 认证与会话管理 访问控制 电子工业出版社",
+   "result": "采纳：电子工业出版社官方页 bookid=63034（第2版，吴翰清/叶敏，2023-07，￥108），已打开核对第4/13/14/16 章目录；未购买，仅登记目录。",
+   "by": "review/pi-additions/S.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "OWASP Top 10 2021 中文版 访问控制失效 身份认证 失效 官方 翻译",
+   "result": "部分合适：owasp.org/Top10/2025/zh-Hant 有繁体中文版但页面注明“翻译会在可用时逐步加入”，2021 版中文页未命中；第三方中文解读（plexicus、xigeni、heminfosec）不是教学材料，未采纳。",
+   "by": "review/pi-additions/S.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "OWASP API Security Top 10 中文版 2023 接口安全 API 安全 文档 翻译",
+   "result": "部分合适：安全内参与安全KER 有中文版条目摘要（API5 功能级授权失效等），HCL AppScan 中文文档有对照表；均为条目摘要而非教学，未登记；已由《白帽子讲Web安全》第16章承担接口安全教学。",
+   "by": "review/pi-additions/S.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "Web安全 课程 中国大学MOOC 认证 会话 越权 访问控制 API 接口安全 教材 目录",
+   "result": "不合适：命中 MOOC 平台帮助文档与既有北理工课程页，未见以“认证会话/访问控制/接口安全”为主线的中文慕课；本轮不据此下“没有”结论，仅说明未采纳。",
+   "by": "review/pi-additions/S.3.1.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 CTF Wiki·Web 介绍只覆盖注入/跨站/文件上传，缺认证会话与访问控制两块必学内容，不能算完整中文路线。",
+  "英文 PortSwigger 每条主题都有讲解与分级 lab，覆盖四个主题；CS253 补浏览器安全模型，避免只学“打点”不学机制。",
+  "中文 Web 安全的系统课在公开可核对渠道本轮没找到（MOOC 需具体课程页，检索被限流），按实际覆盖判 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.3.1.json@96a8ec9d90"
+ ]
+}

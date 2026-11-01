@@ -1,0 +1,311 @@
+{
+ "id": "S.2.5",
+ "name": "硬件、嵌入式与物联网安全",
+ "description": "安全启动、调试接口、固件、设备供应链、侧信道与故障攻击。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "ECE 4040/5040 Introduction to Hardware Security（University of Idaho，Fall 2026，Zain Ul Abideen；日程、阅读与作业公开）",
+   "url": "https://hsc-research.org/hwsec.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "跨 design/fabrication/test/deployment/end-of-life 的硬件威胁与 IC 供应链（仿冒、逆向、硬件木马、logic locking 与 SAT 攻击、reconfigurable obfuscation）；PUF/TRNG/DRBG；时序/功耗侧信道分析与对策；故障注入建模、RTL/门级 fault campaign；Session 12 secure boot / measured boot / remote attestation（固件认证、度量日志、认证更新、回滚保护）；Session 28 secure test/debug（scan 链可观测性与密钥恢复、调试暴露）。",
+   "access": "课程站点免费公开日程、阅读与作业，无需注册；无视频。需要数字逻辑与 Verilog 基础（ECE 2400 或同等）。",
+   "publisher": "University of Idaho / Prof. Zain Ul Abideen",
+   "evidence": {
+    "url": "https://hsc-research.org/hwsec.html",
+    "location": "Session 12 Secure boot, measured boot, and remote attestation；Session 28 Secure test, debug, and security verification；课程目标段",
+    "finding": "站点正文写明课程目标含 analyze hardware Trojans、reverse engineering、counterfeiting、scan and debug exposure、logic locking；Session 12 列 firmware authentication、authenticated updates、rollback protection；Session 28 列 scan-chain observability and controllability、scan-based key recovery。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "ESP-IDF 编程指南 · 安全指南（乐鑫官方中文，ESP32）",
+   "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/security/security.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "安全概述、平台安全、安全启动（Secure Boot v1/v2、密钥生成与烧录、启用流程）、flash 加密、调试接口（JTAG/调试端口禁用）、安全 OTA 更新、安全存储、安全配网、安全设备控制、安全策略；是设备侧安全启动/固件更新/调试接口的中文操作指南。",
+   "access": "官方中文文档免费；实践需要对应 ESP32 芯片与开发板，安全功能随芯片型号/版本不同（文档要求先选 target 与 version）。",
+   "publisher": "Espressif（乐鑫）/ ESP-IDF 文档",
+   "evidence": {
+    "url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/security/security.html",
+    "location": "安全指南目录：安全启动、flash 加密、调试接口、安全 OTA 更新、安全存储",
+    "finding": "页面目录逐条列出“安全概述 / 平台安全 / 安全启动 / flash 加密 / 调试接口 / 网络安全 / 产品安全 / 安全配网 / 安全 OTA 更新 / 安全存储 / 安全设备控制 / 安全策略”。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "集成电路测试与验证（东北大学，中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/NEU-1206704818",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "集成电路测试背景、可测试性分析、故障模拟与仿真、自动测试生成（ATPG）、扫描设计（scan design）与内建自测试（BIST）、测试经济学；从测试/DFT 角度解释 scan 链的可观测性与可控性，是“调试/测试接口暴露”的技术底座，但不讲攻击与防护。",
+   "access": "中国大学MOOC 免费注册学习，页面标注“认证学习”（证书收费）；视频按学期开放，字幕未核对。需要数字电路与 Verilog 基础。",
+   "publisher": "东北大学（课程团队）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/NEU-1206704818",
+    "location": "课程概述与授课目标",
+    "finding": "课程概述原文列“可测试性分析；故障模拟与仿真；自动测试生成；基于现代仿真工具的数字电路测试方法实践”，授课目标写“掌握可测试性设计的基础知识，特别是扫描设计和内部自检测试”。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "网络空间安全导论 第6章 系统硬件安全（清华大学课程团队官方 PPT，GitHub 公开）",
+   "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第6章 系统硬件安全：四类硬件攻击——漏洞攻击、硬件木马、硬件故障、侧信道攻击（以 Spectre 等典型漏洞为例讲具体实现）；四类防御基本策略——木马检测技术、隔离技术、密码技术、侧信道防护。",
+   "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；团队自述为“大幅精简”版 PPT（完整版需向课程团队申请）。",
+   "publisher": "清华大学“网络空间安全导论”课程团队（GitHub 组织 Cybersecurity-THU）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/Cybersecurity-THU/Cybersecurity-Fundamentals/main/%E6%95%99%E5%AD%A6%E8%AF%BE%E4%BB%B6/%E7%AC%AC6%E7%AB%A0%20%E7%B3%BB%E7%BB%9F%E7%A1%AC%E4%BB%B6%E5%AE%89%E5%85%A8.pdf",
+    "location": "第6章 PDF 开头“本章的内容组织”与“系统硬件防御的基本策略”两页",
+    "finding": "下载并打开 PDF 确认：正文列“• 漏洞攻击 • 硬件木马 • 硬件故障 • 侧信道攻击”四类攻击，防御侧列“• 木马检测技术 • 隔离技术 • 密码技术 • 侧信道防护”；学习目标页写“熟悉硬件防护技术，理解系统硬件防御的基本策略”“结合典型漏洞，深入分析硬件攻击技术的具体实现”。README 章节表对该章的描述含“通过 Spectre 等典型漏洞案例深入分析硬件攻击技术”。"
+   },
+   "added_by": "review/pi-additions/S.2.5.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "集成电路硬件安全（电子工业出版社，出版社官网可查完整目录与内容简介）",
+   "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=69432",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "按硬件全生命周期（设计、制造、测试、分发与使用）系统讲：硬件安全原语（第2章 物理不可克隆函数 PUF 的原理与属性）、硬件木马（第3章 特性/结构/分类/植入锚点与攻击模型/设计方法，含内部设计人员攻击）、IP 保护（第4章 基于数字水印的 VLSI IP 保护）、硬件过量生产与防御（第5章），以及内容简介明确列出的芯片盗版、逆向工程、侧信道攻击、故障攻击与其防御技术；第1章为集成电路硬件安全概述（网络空间安全与硬件安全的关系）。",
+   "access": "付费教材，需购买（电子工业出版社网上书店该页可看内容简介与目录，未标价/未购买）；简体中文；无配套免费视频。",
+   "publisher": "电子工业出版社（phei.com.cn 官方网店）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=69432",
+    "location": "内容简介与“目 录”前五章",
+    "finding": "打开确认：内容简介写“全面系统地介绍了硬件安全原语、硬件木马、芯片盗版、过量生产、逆向工程、侧信道攻击、故障攻击等攻击方法，以及抵抗这些攻击的防御技术……可以作为网络空间安全、集成电路科学与工程、计算机科学与技术等相关专业的教材或教学参考书”；目录可见“第1章 集成电路硬件安全概述”“第2章 硬件安全原语 2.1 物理不可克隆函数”“第3章 硬件木马设计与检测（3.1 特性与结构、3.2 分类方式、3.3 植入锚点及其攻击模型、3.4 设计方法 3.4.1 内部设计人员攻击）”“第4章 基于数字水印的VLSI IP保护”“第5章 硬件过量生产与防御技术”。"
+   },
+   "added_by": "review/pi-additions/S.2.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "安全启动",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "安全启动（Secure Boot v1/v2、密钥生成与烧录、启用流程）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 12 Secure boot, measured boot, and remote attestation",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "调试接口",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "调试接口（JTAG/调试端口禁用与 eFuse 配置）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "扫描设计与内建自测试（scan 的可观测性/可控性）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 28 Secure test, debug, and security verification（scan-based key recovery、调试暴露）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有设备侧的调试端口关闭操作与 DFT 的 scan 原理，但没有“scan 链密钥恢复/调试接口攻击”的安全分析。"
+  },
+  {
+   "topic": "固件",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "安全 OTA 更新、安全存储、flash 加密",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 12 firmware authentication、authenticated updates、rollback protection",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "设备供应链",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "安全启动的密钥生成与烧录、生产配置（只到流程，不讲供应链攻击）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第2–5章（PUF 等硬件安全原语、硬件木马、VLSI IP 数字水印保护、硬件过量生产与防御）+ 内容简介所列芯片盗版/逆向工程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "IC 供应链威胁：仿冒、逆向、硬件木马、logic locking 与 SAT 攻击、reconfigurable obfuscation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文设备文档只讲密钥烧录与生产流程，不讲仿冒/木马/logic locking 这类供应链攻击与对策。；这正是旧结论缺的“供应链视角”：教材按“设计—制造—测试—分发—使用”的生命周期组织，讲清供应链各环节的攻击（第三方 IP 植入木马、代工厂过量生产、盗版与逆向、伪造芯片）与对策（PUF 做设备唯一指纹与密钥根、数字水印做 IP 归属证明、分裂制造/掩码/伪装等防过量生产手段）。旧结论说中文只有密钥烧录与生产配置，这里补上了仿冒、逆向与 IP 保护的方法链。"
+  },
+  {
+   "topic": "侧信道与故障攻击",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "故障模拟与仿真（制造缺陷故障模型，不是故障注入攻击）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第6章 系统硬件安全：硬件故障、侧信道攻击两类攻击 + 侧信道防护、隔离技术等防御策略",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "内容简介所列“侧信道攻击、故障攻击等攻击方法，以及抵抗这些攻击的防御技术”对应章节（目录页仅显示前 5 章，后续章节题名未在页面展示）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "时序/功耗侧信道分析与对策；故障注入建模、RTL/门级 fault campaign、容错",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文材料（ESP-IDF、集成电路测试）不涉及侧信道与故障注入攻击；测试课的 fault model 是制造缺陷模型，不是故障注入攻击。；免费中文教学部分：把侧信道与故障攻击作为硬件攻击的两大类，与漏洞攻击、硬件木马并列，并在防御侧给出侧信道防护、隔离、密码技术、木马检测四条策略，配合 Spectre 案例说明真实的实现路径。旧结论说中文侧信道/故障材料只有 ESP-IDF 指南与制造缺陷模型，此处给出的是攻击—防御对称的安全教学。；负责深度部分：教材自述覆盖侧信道与故障攻击及其防御，且前置章节已给出 PUF、木马、IP 保护等硬件安全基础，可与 r7-zh1 的分类框架对接。注意：该章具体小节标题未在出版社页面显示（页面只列到第 5 章），本轮只能依据内容简介与章序判断其覆盖面。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按安全概述 → 安全启动 → flash 加密 → 调试接口 → 安全 OTA → 安全存储 的顺序，在一块 ESP32 上实际开启 Secure Boot v2 与 flash 加密，并记录 eFuse 不可逆点。"
+    },
+    {
+     "source": "zh2",
+     "read": "读扫描设计与 BIST 部分，理解 scan 链为什么既能测试也能读出密钥，为调试接口的安全分析打底。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第6章，先按“漏洞攻击/硬件木马/硬件故障/侧信道攻击”四类列出各自的入口与前置条件，再为每类配一条防御（木马检测、隔离、密码技术、侧信道防护），并用 Spectre 说明“微架构侧信道”为什么绕过传统访问控制。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "按生命周期读：设计阶段看第三方 IP 与木马植入（第3章的分类与植入锚点），制造阶段看过量生产与分裂制造（第5章），分发阶段看盗版与逆向，最后用第2章 PUF 说明如何给每颗芯片一个不可克隆的身份与密钥根；把每一步的“攻击—对策—残留风险”写成三列表。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "先读课程目标与威胁建模部分，建立 design/fabrication/test/deployment/end-of-life 五阶段威胁表。"
+    },
+    {
+     "source": "en1",
+     "read": "Session 12 做 secure/measured boot 与 attestation 流程；Session 28 做 scan 攻击与安全测试；再按作业做 PUF、功耗侧信道与 fault campaign 实验。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/security/security.html ; https://www.icourse163.org/course/NEU-1206704818",
+   "result": "采纳：ESP-IDF 安全指南覆盖启动/调试/固件；东北大学集成电路测试课补 scan/DFT。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/NEU-1206704818（集成电路测试与验证）",
+   "result": "采纳为补充：讲测试与 DFT，不讲硬件攻击。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《硬件安全》教材/侧信道专著（如《侧信道分析》）",
+   "result": "未核实到可核对页面的中文侧信道/故障攻击教材或课程；未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://hsc-research.org/hwsec.html",
+   "result": "采纳：日程逐条对上 secure boot、debug/scan、供应链、侧信道与 fault campaign。"
+  },
+  {
+   "lang": "zh",
+   "channel": "material",
+   "tool": "fetch",
+   "query_or_url": "清华大学《网络空间安全导论》第6章 PPT（raw.githubusercontent.com 直链）",
+   "result": "采纳：PDF 可下载，正文命中“漏洞攻击/硬件木马/硬件故障/侧信道攻击”与“木马检测技术/隔离技术/密码技术/侧信道防护”。",
+   "by": "review/pi-additions/S.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "硬件木马 逻辑锁定 SAT攻击 集成电路 供应链安全 中文 课程 讲义 综述",
+   "result": "不合适：返回百度百科、软件供应链综述、半导体产业分析等非教学材料；未找到讲 logic locking/SAT 攻击的中文课。",
+   "by": "review/pi-additions/S.2.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "集成电路安全 硬件木马 逻辑锁定 PUF 侧信道 故障注入 中文 教材 课程 目录 芯片安全",
+   "result": "采纳：电子工业出版社《集成电路硬件安全》（bookid=69432，已打开核对内容简介与前 5 章目录，付费）；另见多个高校图书馆书目页对同书的目录摘录，可互相印证；纽创信安“硬件安全系列课程”仅见于其官网课程列表，未核到可播放页面，未登记。",
+   "by": "review/pi-additions/S.2.5.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 ESP-IDF 安全指南是设备文档，能覆盖安全启动/调试接口/固件，但完全没有供应链攻击与侧信道/故障攻击，不能单独充当本技能中文路线。",
+  "补东北大学《集成电路测试与验证》解释 scan/DFT 原理，使“调试接口”有中文技术底座，但仍不构成攻击面教学。",
+  "供应链与侧信道/故障攻击在中文侧是实打实的缺口（不是“没搜到链接”，而是现有中文材料主题不覆盖），回退英文 ECE 4040/5040。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.2.5.json@96def8e76b"
+ ]
+}

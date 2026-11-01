@@ -1,0 +1,350 @@
+{
+ "id": "S.3.3",
+ "name": "数据安全、隐私工程与访问控制",
+ "description": "数据分类、授权、加密、脱敏、差分隐私、审计与隐私设计。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS 59000-DSP / CS 55600 Data Security and Privacy（Purdue，Ninghui Li；每周 slides 与作业公开）",
+   "url": "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/lectures.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Week 1 UNIX 访问控制；Week 2 confused deputy 与 DAC 弱点；Week 3 Bell-LaPadula、Biba/Clark-Wilson（含审计/账本完整性）；Week 4 non-interference/non-deducability、RBAC；Week 5 k-anonymity/l-diversity/t-closeness、重建攻击；其后 ε-差分隐私与机制、直方图/边际查询发布、SVT、本地差分隐私、同态加密等。",
+   "access": "课程页面免费公开每周 slides PDF 与作业（部分周需 Brightspace 教材章）；英文。",
+   "publisher": "Purdue University / Ninghui Li",
+   "evidence": {
+    "url": "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/lectures.html",
+    "location": "Week 1–5 的 Slides 与主题列",
+    "finding": "页面按周列出主题：Week 1 UNIX Access Control、Week 2 Confused Deputy 与 DAC Weaknesses、Week 3 Bell LaPadula 与 Biba/Clark-Wilson、Week 4 Non-interference 与 RBAC、Week 5 k-anonymity/l-diversity/t-closeness 与 Reconstruction attacks，并给 HW1/HW2 的 PDF。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《信息安全导论》第2、4、9、13章课件（中国科学技术大学 曾凡平）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第2章 密码技术（对称/公钥，用于数据加密）；第4章 授权与访问控制（DAC/MAC/RBAC/ABAC、访问控制策略）；第9章 安全审计与责任认定；第13章 内容安全中的分级/过滤。数据脱敏与差分隐私只在个别页出现提法。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec05.pdf",
+    "location": "第4章 4.1 授权和访问控制策略 4.2 DAC 4.3 MAC 4.4 RBAC 4.5 ABAC/ABE",
+    "finding": "infoSec05 目录逐节列出授权与访问控制策略、DAC/MAC/RBAC/ABAC 与 PMI；infoSec09 含“安全审计与责任认定”（审计 28 处）；全 13 讲中“差分隐私”仅 2 处提及、“脱敏/匿名”少量提及。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：章节表列出“2 密码技术”“4 授权与访问控制技术”“9 安全审计与责任认定技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：相关四章只有学生上传 PDF，无官方课件或录像，保留 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.3.3.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "网络空间安全导论 第5章 隐私保护（清华大学课程团队官方 PPT，GitHub 公开）",
+   "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第5章 隐私保护：第二节 匿名化隐私保护模型（准标识符、等价类、k-anonymity 的定义与“任意一条记录与其他至少 k−1 条不可区分”的要求、用马萨诸塞州选民登记表＋医疗记录讲链接攻击、k-匿名只保证“被准确标识的概率≤1/k”却挡不住同质攻击等局限）；第三节 差分隐私（DP 基础、数值型 DP）；第四节 同态加密；第五节 安全多方计算。",
+   "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；团队自述为“大幅精简”版 PPT。",
+   "publisher": "清华大学“网络空间安全导论”课程团队（GitHub 组织 Cybersecurity-THU）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/Cybersecurity-THU/Cybersecurity-Fundamentals/main/%E6%95%99%E5%AD%A6%E8%AF%BE%E4%BB%B6/%E7%AC%AC5%E7%AB%A0%20%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4.pdf",
+    "location": "第5章 PDF：目次页“第三节 差分隐私(DP)”“第四节 同态加密”“第五节 安全多方计算”与正文“等价类/k-anonymity”页",
+    "finding": "下载并打开确认正文：“等价类：匿名化后的数据表中具有相同准标识符的若干记录称为一个等价类”“k-anonymity：将k个记录放入一个等价类中，要求任意一条记录与其他至少…”“k-anonymity保证了单独个体被准确标识的概率最大为1/k，但却无法保证隐私不被泄露”；目次列“差分隐私(DP)”一节含“差分隐私基础”“数值型DP”。"
+   },
+   "added_by": "review/pi-additions/S.3.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "华为数据安全治理实践（华为官方白皮书/实践文档 PDF）",
+   "url": "https://www-file.huawei.com/dam/asset/view/48a4c7c7e89b43d697d8c12c285296ad.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "企业级数据安全治理的全流程：数据清单（2.1.1 数据安全分类分级、2.1.2 数据处理情况记录与数据资产）、标签生命周期管理、敏感数据识别与分类分级的技术手段（数据库/结构化/非结构化/API 资产识别、数据分级分类）、数据加密与脱敏水印、数据共享与出口管控、稽查（1.4.2）与审计（1.4.3）、以及“实践二：数据安全分类分级”“实践三：华为云数据安全实践”等落地案例。",
+   "access": "免费 PDF，无需注册；简体中文；企业与云场景导向，偏实践与管理流程而非算法推导。",
+   "publisher": "华为（huawei.com 官方文件服务器发布的《华为数据安全治理实践》）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www-file.huawei.com/dam/asset/view/48a4c7c7e89b43d697d8c12c285296ad.pdf",
+    "location": "目录：1.4.2 稽查 / 1.4.3 审计 / 2.1 数据清单（2.1.1 数据安全分类分级、2.1.2 数据处理情况记录与数据资产）/ 3.2 实践二：数据安全分类分级 / 3.3 实践三：华为云数据安全实践",
+    "finding": "打开 PDF 目录确认上述章节标题；正文出现“敏感数据识别和分类分级”“数据加密脱敏水印”“标签生命周期”“数据库审计”等条目，并把分类分级放在“1+4+N 数据安全保障体系”的采集/存储/交换/传输/使用/销毁全流程中。"
+   },
+   "added_by": "review/pi-additions/S.3.3.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "隐私设计难在哪里？（安全内参，2024-11-25）",
+   "url": "https://www.secrss.com/articles/72707",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "隐私设计（Privacy by Design）的来龙去脉与工程落地：PbD 由 Ann Cavoukian 于 1990 年代提出、核心是“把隐私保护融入系统与服务的设计与开发阶段，而不是事后补救”，强调在技术、组织和流程里从设计起点就考虑隐私；并讨论数据最小化与目的绑定（目的限定）要求、第三方集成中的隐私、技术落地难点与未来趋势。",
+   "access": "免费网页，无需注册；简体中文；文章为行业分析，非教材章节。",
+   "publisher": "安全内参（secrss.com）· 个人隐私 / 数据合规与治理栏目",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.secrss.com/articles/72707",
+    "location": "开篇两段与“数据最小化和目的绑定”相关段落",
+    "finding": "打开确认正文：“隐私设计（Privacy by Design）的概念最早由……安妮·卡瓦基安博士（Dr. Ann Cavoukian）于 1990 年代提出。该概念的核心是将隐私保护融入系统和服务的设计与开发阶段，而不是事后补救……从一开始就以隐私保护为出发点”；文中并讨论“数据最小化和目的绑定：隐私设计要求数据收集和处理遵循数据最小化和目的限制原则”。"
+   },
+   "added_by": "review/pi-additions/S.3.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "数据分类",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第9章 安全审计与责任认定（信息分级/等级保护背景）；第13章 内容分级",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "2.1 数据清单（2.1.1 数据安全分类分级、2.1.2 数据处理情况记录与数据资产）+ 3.2 实践二：数据安全分类分级 + 标签生命周期",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week 3 Bell-LaPadula 的密级/标签体系；Week 5 数据发布中的准标识符",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有等级保护/内容分级背景，没有“按敏感度分类→定标签→定控制措施”的数据分类方法。；旧结论说中文只有等级保护/内容分级背景，没有数据分类分级方法与标签体系。这份官方实践文档把“分类分级”落成工程流程：先做数据清单与资产记录（含数据库/字段级、非结构化、API 资产识别），再按分类分级规则打标，之后用标签生命周期管理标签的产生、变更与回收，并把结果接到加密脱敏水印、共享出口管控与审计上。国家标准 GB/T 43697-2024《数据安全技术 数据分类分级规则》规定了统一规则（本轮只核到标准信息页，正文需专用浏览器预览，未登记为标准来源），此文档可作为规则落地的中文教学。"
+  },
+  {
+   "topic": "授权",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第4章 授权与访问控制（DAC/MAC/RBAC/ABAC、PMI）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week 1 UNIX 访问控制；Week 2 confused deputy/DAC 弱点；Week 3 BLP/Biba/Clark-Wilson；Week 4 non-interference、RBAC",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "加密",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第2章 密码技术（对称/公钥密码）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "课程后段的对称/非对称加密与同态加密讲义",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "脱敏",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第4/5章“匿名”相关段落（零散）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第5章 第二节 匿名化隐私保护模型（准标识符、等价类、k-anonymity、链接攻击与 k-匿名局限）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week 5 k-anonymity / l-diversity / t-closeness、重建攻击",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有匿名化模型（k-匿名族）与重建攻击的系统讲解，只有零星“匿名”提法。；旧结论说中文只有零星“匿名”提法，没有 k-匿名族与重建攻击的教学。这一节把脱敏讲成可计算的性质：先区分标识符/准标识符/敏感属性，用等价类定义 k-匿名，用真实链接攻击（选民登记表 + 医疗记录）说明为什么“删掉姓名”不够，并明确指出 k-匿名只把“被准确标识概率”压到 1/k，仍挡不住同质/背景知识攻击——这正是旧结论缺的“脱敏方法 + 攻击面”两面。"
+  },
+  {
+   "topic": "差分隐私",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "全 13 讲仅 2 处提及“差分隐私”，无定义与机制",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第5章 第三节 差分隐私(DP)：差分隐私基础 + 数值型 DP",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "ε-差分隐私定义与机制、近似 DP/高斯机制、直方图与边际查询、SVT、本地差分隐私",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有 ε-DP 的定义、敏感度/隐私预算、机制与组合定理的教学，属实质缺口。；旧结论说中文课件仅两处提及差分隐私、无定义与机制。此章把 DP 作为独立一节：从“相邻数据集只差一条记录、输出分布几乎相同”的直观定义讲到数值型查询的加噪机制，为后续敏感度、组合定理留出接口；配合 k-匿名那节还能解释 DP 为什么比“删标识符”更强。"
+  },
+  {
+   "topic": "审计与隐私设计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第9章 安全审计与责任认定（审计日志、责任认定）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "1.4.2 稽查 / 1.4.3 审计 + 数据全生命周期（采集—存储—交换—传输—使用—销毁）管控",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "隐私设计（PbD）的提出、核心主张与数据最小化/目的限定要求、落地难点",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Week 3 Clark-Wilson 的审计/账本完整性；课程中的隐私政策与数据发布约束",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有安全审计与责任认定，但没有 privacy by design（数据最小化、目的限定、生命周期）的工程方法。；负责“审计”这一半：把审计与稽查写成组织级流程，并与数据清单、标签、加密脱敏、共享出口管控串成闭环，说明审计对象（谁在什么环节对哪类数据做了什么）与审计结果如何回流到治理动作。既有 zh1（中科大第9章 安全审计与责任认定）提供概念与责任认定，这份文档补上企业落地的审计/稽查机制。；负责“隐私设计”这一半：讲清 PbD 是把隐私前移到设计阶段而非事后补救，给出数据最小化与目的绑定两条可执行要求，并讨论第三方集成与工程落地难点。旧结论说中文有安全审计但无 privacy by design 的工程方法；此文与 r7-zh2 的生命周期管控合起来，构成“设计期原则 + 运行期审计”的闭环。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读第4章建立授权模型（DAC→MAC→RBAC→ABAC），再读第9章安全审计与责任认定，最后读第2章把加密手段与数据保护目标对齐。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "按 2.1→3.2 顺序读：先给自己熟悉的一套系统做数据清单（表级/字段级 + 非结构化 + API 资产），再套一个分类分级规则打标，写出标签的产生/变更/回收规则，最后说明分类分级结果如何驱动加密、脱敏与共享管控。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第5章第二节：用一张小表手算等价类与 k 值，复现“删掉姓名仍被链接攻击识别”的例子，并写出 k-匿名挡不住的两类攻击（同质攻击、背景知识攻击）；再读第三节，写出 ε-差分隐私的直观定义与一次数值型查询的加噪过程，说明它相对 k-匿名的优势。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读《隐私设计难在哪里？》，把 PbD 的主张转成 5 条可验收的设计要求（数据最小化、目的绑定、默认保护、全生命周期、用户可控），并各写一条在本项目的落地检查项。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Week 1–4：UNIX 访问控制 → confused deputy/DAC 弱点 → BLP/Biba/Clark-Wilson → non-interference/RBAC，完成 HW1/HW2。"
+    },
+    {
+     "source": "en1",
+     "read": "Week 5 起：k-匿名族与重建攻击 → ε-DP 与机制 → 查询发布/LDP，按讲义手算一次敏感度与隐私预算。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "USTC《信息安全导论》第2/4/9/13章课件（GitHub 仓库）",
+   "result": "采纳：授权与加密覆盖扎实，审计有专章；数据分类/脱敏/差分隐私只有零星提法。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 数据安全/隐私计算类课程页检索",
+   "result": "未找到可核对的中文数据安全系统课（隐私计算类多为产品/联邦学习）；未采纳 SecretFlow 文档作教学。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "《数据安全技术》《差分隐私》中文教材",
+   "result": "未核实到可核对目录的公开页面，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/lectures.html",
+   "result": "采纳：Week 1–5 主题与作业逐条核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "material",
+   "tool": "fetch",
+   "query_or_url": "清华大学《网络空间安全导论》第5章 隐私保护 PPT（raw.githubusercontent.com 直链）",
+   "result": "采纳：正文命中 k-匿名/等价类/链接攻击/1/k 局限，目次含“第三节 差分隐私(DP)”与“数值型DP”。",
+   "by": "review/pi-additions/S.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "数据分类分级 GB/T 43697-2024 数据安全技术 数据分类分级规则 解读 教程 中文",
+   "result": "部分采纳：openstd 标准信息页确认 GB/T 43697-2024 存在（发布 2024-03-15、实施 2024-10-01），但全文预览需特定浏览器、无法读正文；中山市政务“一图读懂”与律所文章为解读材料；最终以华为《数据安全治理实践》承担分类分级的落地教学。",
+   "by": "review/pi-additions/S.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "数据安全治理 数据分类分级 方法 白皮书 信通院 教程 分级 标签 体系 落地",
+   "result": "采纳华为《数据安全治理实践》PDF（已打开，含 2.1.1 分类分级、标签生命周期、1.4.2/1.4.3 稽查与审计）；厂商解决方案页与知乎产品文未采纳；cac.gov.cn 专家解读作旁证未登记。",
+   "by": "review/pi-additions/S.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "隐私设计 privacy by design 七原则 中文 最小化 目的限定 生命周期 教程 数据安全",
+   "result": "采纳安全内参《隐私设计难在哪里？》（已打开，含 PbD 起源、最小化/目的绑定、落地难点）；华为云 PbD 页正文过短（多为导航），CIO Taiwan 为繁体，君合律所为律所评论，均未登记。",
+   "by": "review/pi-additions/S.3.3.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 SecretFlow 官方文档是联邦学习产品文档，与本技能的访问控制/脱敏/差分隐私主题不对应，已移除。",
+  "改用 USTC 课件第2/4/9章：授权模型与加密有系统内容，审计有专章；但数据分类、脱敏、差分隐私、privacy by design 都缺。",
+  "英文 Purdue 课程每周 slides 覆盖全部六个主题，且带作业，判 complete。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.3.3.json@90db28cf6c"
+ ]
+}

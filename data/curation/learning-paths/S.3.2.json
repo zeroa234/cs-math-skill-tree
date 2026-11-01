@@ -1,0 +1,389 @@
+{
+ "id": "S.3.2",
+ "name": "安全软件开发与程序分析",
+ "description": "安全需求、代码审查、静态/动态分析、模糊测试与漏洞修复。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Introduction to Software Security（UW-Madison，Barton P. Miller & Elisa R. Heymann；开放教材 + 课程模块）",
+   "url": "https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Module 2 Thinking Like a Designer：Secure Design Principles、Overview of Threat Modeling、Microsoft SDL 与 Threat Modeling、DREAD、PASTA；Module 3 Secure Programming（指针/字符串、整数/浮点错误、目录穿越、异常、序列化、注入、XSS/CSRF/会话/CORS/SSRF）；Module 4 防御（ASLR、内存安全检查、CFI）；Module 5 FPVA 第一原理漏洞评估（架构/资源/信任/组件分析 = 代码审查方法）；Module 6 自动化评估工具（静态分析）；Module 7 动态技术（fuzz testing、AFL++）；Chapter 35 漏洞响应。",
+   "access": "免费开放教材与章节，个人学习可直接读；instructor 的练习与测验需向作者申请权限。英文。",
+   "publisher": "University of Wisconsin–Madison / Barton P. Miller, Elisa R. Heymann",
+   "evidence": {
+    "url": "https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/",
+    "location": "目录：Module 1–7 与章号（Ch.4 Secure Design Principles、Ch.6 SDL、Ch.7 DREAD、Ch.8 PASTA、Ch.29 FPVA、Ch.35）",
+    "finding": "页面正文列出 Module 2“Thinking Like a Designer”含 4 Secure Design Principles、5 Overview of Threat Modeling、6 Microsoft SDL、7 DREAD、8 PASTA；Module 3 为 Secure Programming；Module 5 为 FPVA；并写明“The book is now in print… we are committed to keeping the individual chapters freely available”。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "静态程序分析（南京大学 李樾、谭添；课程主页 + 中文讲义 PDF + bamboo 实验框架）",
+   "url": "https://pascal-group.bitbucket.io/courses/program-analysis-2020f/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "中文讲义：中间表示、数据流分析（applications、reaching definitions、live variables、available expressions）、指针分析（CHA 调用图、上下文敏感/不敏感）、安全分析（security analysis）与 soundiness；配套 bamboo 框架作业（常量传播、死代码检测、调用图、指针分析）。",
+   "access": "课程主页与讲义 PDF 免费公开；作业框架在 GitHub。讲义为中文（首页为“南京大学 李樾 谭添 计算机科学与技术系”），页面说明为南京大学 2020 春季新开课。",
+   "publisher": "南京大学 PASCAL 研究组 / 李樾、谭添",
+   "evidence": {
+    "url": "https://pascal-group.bitbucket.io/courses/program-analysis-2020f/lectures/2020f-static-program-analysis-1.pdf",
+    "location": "第 1 讲讲义首页与课程主页 Lectures 表",
+    "finding": "讲义 PDF 首页为“南京大学 李樾 谭添 计算机科学与技术系”；课程主页 Lectures 表逐周列 Course Introduction、Intermediate Representation、Data Flow Analysis、Pointer Analysis 等讲次与 PDF 链接，并说明作业基于 bamboo 框架。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "软件工程（北京大学，中国大学MOOC，国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/PKU-1003177002",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "软件过程、软件需求、结构化与面向对象分析与设计、敏捷开发、软件测试、项目管理、开发工具与环境；提供“需求→设计→测试”的通用工程框架，但不含安全需求、威胁建模与代码审查的安全方法。",
+   "access": "中国大学MOOC 免费注册学习，页面标注“认证学习”（证书收费）；视频按学期开放，字幕未核对。",
+   "publisher": "北京大学（课程团队）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/PKU-1003177002",
+    "location": "课程概述与授课目标",
+    "finding": "课程概述原文列“软件过程、软件需求、结构化分析和设计方法、面向对象分析和设计方法、敏捷开发方法、软件测试、软件项目管理、软件开发工具和环境”，并说明含一个小型软件项目实践。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "信息系统安全与对抗实践（北京理工大学，中国大学MOOC）· 软件逆向安全实践单元",
+   "url": "https://www.icourse163.org/course/BIT-1206619844",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "软件逆向安全实践与缓冲区溢出安全实践单元：二进制层面的动态观测与调试操作，属“动态分析”的动手部分，不含模糊测试工程与漏洞修复流程。",
+   "access": "中国大学MOOC 免费注册学习；单元制考核，证书可能收费；视频按学期开放，字幕未核对。",
+   "publisher": "北京理工大学 罗森林团队",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1206619844",
+    "location": "课程概述：单元列表",
+    "finding": "课程概述列“缓冲区溢出安全实践、软件逆向安全实践”等单元，课程定位强调工程与创新实践。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "驱动程序的威胁建模（Microsoft Learn 中文官方文档，Windows 驱动开发 · 驱动程序安全）",
+   "url": "https://learn.microsoft.com/zh-cn/windows-hardware/drivers/driversecurity/threat-modeling-for-drivers",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "把安全需求落成可执行流程：威胁建模是“对这些重要设计任务的结构化方法”，威胁模型回答四个问题（哪些资产需要保护／资产易受哪些威胁／每个威胁多重要或多可能／如何缓解）；并说明应把威胁建模纳入更广的安全开发生命周期（SDL），给出 SDL 各阶段（培训与组织能力、要求和设计、实现、验证、发布）的关键输出，其中“要求和设计”阶段的关键输出是设定具体安全目标（例如要求所有代码通过某级别的静态分析且无警告）。",
+   "access": "免费中文文档，无需注册；简体中文；无视频。",
+   "publisher": "Microsoft（Microsoft Learn 官方中文文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows-hardware/drivers/driversecurity/threat-modeling-for-drivers",
+    "location": "正文“威胁模型回答以下问题”列表与“要求和设计”一段",
+    "finding": "打开确认正文：“威胁建模是对这些重要设计任务的结构化方法。威胁模型是对资产的威胁进行分类和分析的方法……威胁模型回答以下问题：哪些资产需要保护？资产易受到哪些威胁？每个威胁有多重要或可能？…”；另写“请考虑在更广泛的安全开发生命周期中包含威胁建模过程 - SDL……此阶段的关键输出是设置特定的安全目标”。"
+   },
+   "added_by": "review/pi-additions/S.3.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "代码安全指南（腾讯 Tencent/secguide，GitHub 开源，CC BY 4.0）",
+   "url": "https://github.com/Tencent/secguide",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "分语言的代码安全审查检查表：C/C++、JavaScript、Node、Go、Java、Python 六份指南，按“API 层面的风险点 + 安全编码方案”组织，条目分级为【必须】/【建议】并配正反代码示例；README 明确四个使用场景——开发人员日常参考、编写安全系统扫描策略、安全组件开发、漏洞修复指引。例如 Java 指南目录含“异常捕获处理、数据泄露、webview 组件安全、传输安全、AndroidManifest 配置、数据持久化、文件操作、XML 读写、响应输出、OS 命令执行、会话管理、加解密、查询业务、操作业务”。",
+   "access": "免费开源仓库（CC BY 4.0），无需注册；简体中文；无视频。",
+   "publisher": "腾讯（Tencent）安全团队，GitHub 组织 Tencent",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/Tencent/secguide/main/Java%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md",
+    "location": "Java 安全指南“目录”与“1.1.1 【必须】序列化异常捕获”等条目",
+    "finding": "打开确认：Java 指南目录按“安卓类（代码实现/配置&环境）”“后台类（数据持久化、文件操作、XML读写、响应输出、OS命令执行、会话管理、加解密、查询业务、操作业务）”组织，条目标题带【必须】/【建议】分级并附代码示例；README 写明指南用途含“编写安全系统扫描策略”“漏洞修复指引”，许可为 CC BY 4.0。"
+   },
+   "added_by": "review/pi-additions/S.3.2.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "模糊测试的艺术、科学和工程综述（安全内参中文解读，原论文 Manes 等 The Art, Science, and Engineering of Fuzzing: A Survey）",
+   "url": "https://www.secrss.com/articles/64032",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "模糊测试全流程的中文讲解：分类与工作流程、预处理与调度算法、测试用例生成策略（种子与变异）、测试与评估、测试过程中的分流（triage）策略与反馈迭代机制；其中“测试用例去重”给出三种工业做法（基于栈回溯哈希去重、基于覆盖率去重、语义感知去重如 RETracer），并讨论优先级设置与漏洞可利用性分析、程序插桩的静态/动态两类。",
+   "access": "免费网页，无需注册；简体中文（对英文综述的中文解读）；无视频。",
+   "publisher": "安全内参（secrss.com）· 安全极客栏目，2024-02-29",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.secrss.com/articles/64032",
+    "location": "摘要段与“测试用例去重”“优先级设置与漏洞可利用性分析”“程序插桩”各节",
+    "finding": "打开确认：页面摘要写“探讨了模糊测试的分类及其工作流程中的预处理和调度算法，介绍了关于模糊测试测试用例生成策略、测试与评估、测试过程中的分流策略和反馈迭代机制”，并注明本次分享论文为 Manes 等《The Art, Science, and Engineering of Fuzzing: A Survey》；正文“测试用例去重”列出栈回溯哈希/覆盖率/语义感知三种去重方式，另有一节讲优先级与可利用性分析。"
+   },
+   "added_by": "review/pi-additions/S.3.2.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "软件安全与测试（中国科学技术大学 程绍银，课程官方主页 + 逐讲 slides + 实验说明）",
+   "url": "http://staff.ustc.edu.cn/~sycheng/sst/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程分两部分：Part 1 软件安全（信息安全与软件安全导论、缓冲区溢出、恶意软件、Web 漏洞、安全编程）；Part 2 软件测试（软件测试导论、软件安全测试 slides，配套资源“Fuzzing based on FileFuzz”“Application security testing”、安全测试实验：基于 Purify 的安全测试、基于 Quantify 的性能测试、基于 PureCoverage 的代码覆盖率测试；“软件测试：需求与设计”一讲含 Requirement and design review、测试用例设计、自动化测试；“单元 VS. 功能”一讲含单元测试与功能测试）。",
+   "access": "免费课程主页，slides 与实验说明可直接下载（PDF/PPT），无需注册；简体中文课程（页面标题注明 Chinese，个别资源为英文）；2014 春季版，内容偏旧。",
+   "publisher": "中国科学技术大学 程绍银（教师个人课程主页 staff.ustc.edu.cn）",
+   "reupload": false,
+   "evidence": {
+    "url": "http://staff.ustc.edu.cn/~sycheng/sst/",
+    "location": "Syllabus 的 Part 1 与 Part 2 列表（含 “Software security testing ( slides )”“Fuzzing based on FileFuzz”“Software testing: Requirement & Design ( Requirement and design review, Testcase designment, Automatic testing )”）",
+    "finding": "打开确认页面结构：Part 2 列出“Software security testing ( slides )”，资源为“Fuzzing based on FileFuzz”“Application security testing”；实验部分列出“Experiment 1: Security testing based on Purify”“Experiment 3: Code coverage testing based on PureCoverage”及待测源码与工具；“Software testing: Requirement & Design”条目下写明含需求与设计评审、测试用例设计与自动化测试。"
+   },
+   "added_by": "review/pi-additions/S.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "安全需求",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "软件需求（通用需求工程，不含安全需求/威胁建模）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "威胁模型四问 + “要求和设计”阶段的关键输出（设定具体安全目标）+ SDL 阶段划分",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 2：Secure Design Principles（Ch.4）、Threat Modeling（Ch.5）、SDL（Ch.6）、DREAD（Ch.7）、PASTA（Ch.8）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有通用软件工程的需求分析，没有把安全需求写成滥用用例/威胁模型/安全目标的内容。；旧结论说中文只有通用需求工程，没有安全需求/滥用用例/威胁建模。这份官方中文文档把安全需求讲成流程：先划资产，再枚举威胁并排优先级，最后落成可验证的安全目标（例如“所有代码通过某级别分析且无警告”），并把它放进 SDL 的“要求和设计”阶段。配合 r7-zh4 课程里“需求与设计评审/测试用例设计”一讲（把需求转成可测的检查项），中文可以走完“需求来源 → 威胁建模 → 可验证安全目标”的链条。"
+  },
+  {
+   "topic": "代码审查",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "软件测试章节（测试视角，非代码审查方法）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "六份分语言《代码安全指南》：API 层风险点 + 安全编码方案 + 【必须】/【建议】分级 + 正反示例；用途含编写扫描策略与漏洞修复指引",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 5 FPVA：架构分析、资源识别、信任与权限分析、组件分析",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有 FPVA 式的“第一原理”审查流程与检查表，只有通用测试。；旧结论说中文没有可用的代码审查检查表。腾讯这套指南正是按语言、按 API 落点的审查清单：每条给出风险点、必须/建议等级和正反代码，能直接当 review checklist 用，也能转成静态扫描规则；Java 指南还按“安卓类/后台类”覆盖会话管理、加解密、SQL/命令执行等审查重点。与 r7-zh4 课程的“需求与设计评审 + 测试用例设计”一讲合起来，既有一张张检查表，也有评审流程的位置。"
+  },
+  {
+   "topic": "静态/动态分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据流分析与指针分析全讲、security analysis、soundiness；bamboo 作业",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "软件逆向/缓冲区溢出单元（动态调试）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 6 自动化评估工具（静态分析）；Module 7 动态技术",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文的静态分析课很扎实（含实现），动态分析只有逆向调试的动手单元，缺系统化的动态分析（插桩/沙箱/污点）教学。"
+  },
+  {
+   "topic": "模糊测试与漏洞修复",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "安全分析一讲涉及未定义行为与 soundiness，但不讲 fuzzing",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "模糊测试分类与工作流程、用例生成（种子/变异）、去重三法、优先级与可利用性分析、插桩",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh4",
+     "section": "Part 2：软件安全测试 slides（含 Fuzzing based on FileFuzz、Application security testing）+ 基于 PureCoverage 的代码覆盖率实验 + 安全测试实验",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "《代码安全指南》用途之一“漏洞修复指引”，各语言条目给出安全编码方案（修复写法）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Module 7 fuzz testing（AFL++）；Chapter 35 漏洞响应（修复与管理视角）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有模糊测试的种子/变异/覆盖率引导/崩溃去重教学，也没有漏洞修复与响应流程。；负责“模糊测试”的方法层：从种子与变异、覆盖率反馈到崩溃三元组的分流，再到三种去重策略与优先级排序，正好补上旧结论说的“种子/变异/覆盖率/崩溃去重”缺口；这部分是中文解读，但逐节对应原综述的框架，可作为方法地图。；负责“动手做一次”的部分：课程给出模糊测试入门讲稿与 FileFuzz 实操资源，并用 Purify/Quantify/PureCoverage 三个实验把“安全测试—性能—覆盖率”连起来，学生能实际跑出覆盖率数字并解释它为什么能指导变异。；负责“漏洞修复”这一半：每个风险点都给出正确写法（安全编码方案），可作为修复阶段的整改依据；配合 r7-zh3 的优先级/可利用性分析，能形成“先修哪些、怎么修”的基本闭环。注意：中文仍缺系统讲“修复验证与回归复测流程”的教材章节，本知识点这一小块偏薄。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按讲义顺序学中间表示 → 数据流分析 → 指针分析，并完成 bamboo 的常量传播/死代码/调用图/指针分析作业，做到能读出一个真实程序的分析结果。"
+    },
+    {
+     "source": "zh2",
+     "read": "用软件工程课补需求→设计→测试的工程流程，作为安全需求的上下文。"
+    },
+    {
+     "source": "zh3",
+     "read": "用逆向单元练一次动态调试，记录断点、调用栈与内存观察方法。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读《驱动程序的威胁建模》，为自己手上的一个模块填完威胁模型四问（资产/威胁/可能性与影响/缓解），再把结论写成 3–5 条可验证的安全需求（每条都要能被测试或静态分析判定），最后对照 SDL 阶段说明这些需求应该在什么时点产出。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "挑自己常用的一门语言（Java 或 Python）通读指南，把【必须】条目摘成一份 review checklist；再任选三条，按“风险点—错误示例—修复写法”做一次真实代码走查，并说明如何把这条规则写成扫描规则。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读综述解读，画出 fuzzer 的循环图（种子 → 变异 → 执行 → 覆盖率反馈 → 入队/丢弃），并解释三种崩溃去重各自适用什么场景；再针对一个具体程序写出“种子怎么选、变异怎么设计、崩溃怎么 triage”的方案。"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "看 Part 2 的软件安全测试讲稿并用 FileFuzz 对一个真实程序跑一轮，然后用代码覆盖率实验（PureCoverage）记录覆盖率变化，最后写出“覆盖率提升 → 新崩溃 → 去重 → 优先级 → 修复 → 复测”的实验报告。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Module 1–2：从威胁到安全设计原则，再用 SDL/PASTA 给一个真实系统写威胁模型与安全需求。"
+    },
+    {
+     "source": "en1",
+     "read": "Module 3–4：按章读安全编码与防御（指针/整数/注入/ASLR/CFI），每章配一个 CVE 复盘。"
+    },
+    {
+     "source": "en1",
+     "read": "Module 5–7 + Ch.35：用 FPVA 做一次代码审查，跑静态分析工具与 AFL++，最后写漏洞响应与修复建议。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://pascal-group.bitbucket.io/courses/program-analysis-2020f/（南大软件分析课程页，由谭添主页链接发现）",
+   "result": "采纳：中文讲义 + bamboo 作业，覆盖静态分析。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/PKU-1003177002（北大软件工程）；https://www.icourse163.org/course/BIT-1206619844（逆向单元）",
+   "result": "采纳为补充：通用需求/测试与逆向调试，均无 fuzzing 与代码审查方法。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《代码审计》《模糊测试》类教材",
+   "result": "未核实到可核对目录的公开页面，未购买；不作为免费路线。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/",
+   "result": "采纳：Module 1–7 与章号逐条核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "模糊测试 fuzzing 中文 教程 教材 AFL 覆盖率 崩溃 去重 漏洞挖掘 课程 目录",
+   "result": "采纳安全内参《模糊测试的艺术、科学和工程综述》中文解读（已打开，含去重/优先级/插桩）；中文期刊综述（网络协议模糊测试）与博客单篇作线索未登记。",
+   "by": "review/pi-additions/S.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "安全需求 威胁建模 滥用用例 中文 教材 代码审计 目录 软件安全开发 SDL",
+   "result": "采纳微软 Learn 中文《驱动程序的威胁建模》（SDL 需求与设计阶段 + 威胁模型四问，已打开）；另发现中国科大《软件安全与测试》课程主页（后单独核对）与《Web安全学习笔记》8.3 安全开发（SDL 六阶段，内容较薄，未登记）。",
+   "by": "review/pi-additions/S.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "软件安全 课程 中国大学MOOC 安全需求 代码审计 模糊测试 静态分析 教学大纲",
+   "result": "采纳中国科大《软件安全与测试》（程绍银，官方课程主页 staff.ustc.edu.cn，含 Part 1/Part 2 讲次与实验，已打开）；中国大学MOOC 侧只命中恶意代码课与复旦信息安全课，非本技能主线。",
+   "by": "review/pi-additions/S.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "安全编码规范 代码审计 指南 中文 官方 文档 华为 腾讯 漏洞修复 流程 复测",
+   "result": "采纳腾讯 Tencent/secguide（GitHub，CC BY 4.0，已打开 README 与 Java 指南目录）；GB/T 39412-2020《代码安全审计规范》只找到 CSDN 解读文（未见到可读的标准正文页），未登记；厂商代码审计服务介绍 PDF 为服务材料，未登记。",
+   "by": "review/pi-additions/S.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "代码审计 教材 目录 机械工业出版社 企业级Web代码安全架构 李华峰 安全需求",
+   "result": "不合适：《代码审计：企业级Web代码安全架构》（尹毅，机械工业出版社 2016，ISBN 978-7-111-52006-1，￥59）只查到图书馆书目与盗版站目录页，出版社官方目录页未命中，故未登记为付费来源。",
+   "by": "review/pi-additions/S.3.2.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 CTF Wiki·Z3 约束求解与本技能的四个主题（安全需求/代码审查/静态动态分析/模糊测试修复）基本不对应，属错配，必须替换。",
+  "新增南京大学《静态程序分析》中文讲义作中文主资源：它真正讲数据流/指针分析与安全分析，并有可实现的 bamboo 作业。",
+  "中文仍缺安全需求、代码审查方法与模糊测试/漏洞修复三块；北大软件工程与北理工逆向只能提供通用或局部内容，判 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.3.2.json@584a81dc1f"
+ ]
+}

@@ -1,0 +1,370 @@
+{
+ "id": "S.2.2",
+ "name": "网络安全",
+ "description": "协议攻击面、分段、防火墙、入侵检测、传输保护与网络监测；无线链路安全。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS155 Computer and Network Security（Stanford，Spring 2026；syllabus 逐讲 slides 与 reading）",
+   "url": "https://cs155.stanford.edu/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Part 3 Network Security and Privacy：L14 Internet Protocols、L15 BGP 安全/DNS 缓存投毒/DNSSEC-NSEC3 评测/distributed firewalls/Bro 实时入侵检测、L16 DoS 与 DDoS 放大攻击、IP traceback、L17 隐私与匿名；Part 2 L12 HTTPS 目标与陷阱、L11 密码学概览。",
+   "access": "课程主页、syllabus 与逐讲 slides 免费公开，无需注册；英文，视频不公开（讲义可替代）。",
+   "publisher": "Stanford University",
+   "evidence": {
+    "url": "https://cs155.stanford.edu/syllabus.html",
+    "location": "Part 3: Network Security and Privacy, Lecture 14–17；Part 2 Lecture 11–12",
+    "finding": "syllabus 逐讲列出 Lecture 14 Internet Protocols、Lecture 15 的 reading 含 “Security Evaluation of DNSSEC with NSEC3”“Distributed Firewalls”“Bro: A System for Detecting Network Intruders in Real-Time”、Lecture 16 DoS Attacks and Network Defenses + IP Traceback、Lecture 12 HTTPS: Goals and Pitfalls。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Computer Security 教材 · Network Security 部分（UC Berkeley CS161，Wagner 等）",
+   "url": "https://textbook.cs161.org/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 26 章 ARP、27 DHCP、28 WPA（无线链路安全）、29 BGP、30 TCP/UDP、31 TLS、32 DNS、33 DNSSEC、34 DoS、35 Firewalls（网络分段与边界）、36 Intrusion Detection、37 Abusing Intrusion Detection。",
+   "access": "免费网页全文（CC BY-SA），无需注册；英文。",
+   "publisher": "UC Berkeley CS 161",
+   "evidence": {
+    "url": "https://textbook.cs161.org/",
+    "location": "左侧目录 Network Security：25–39 章",
+    "finding": "目录列出 28. WPA、29. BGP、31. TLS、32. DNS、33. DNSSEC、34. Denial-of-Service、35. Firewalls、36. Intrusion Detection、37. Abusing Intrusion Detection。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "计算机网络（哈尔滨工业大学，中国大学MOOC，国家精品在线开放课程）第三单元“危机四伏”+ 第二单元网络技术",
+   "url": "https://www.icourse163.org/course/HIT-154005",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "第二单元：子网划分与路由聚集、CIDR、VLAN、ARP、路由协议；第三单元：网络安全基本概念、安全威胁、密码学基础、完整性与数字签名、身份认证、安全电子邮件、SSL、IPsec 与 VPN、无线局域网安全、防火墙、入侵检测。",
+   "access": "中国大学MOOC 免费注册学习，页面标注“认证学习”（证书收费）；视频按开课学期提供，字幕未核对。",
+   "publisher": "哈尔滨工业大学（课程团队）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HIT-154005",
+    "location": "课程概述：三个单元的分单元内容说明",
+    "finding": "页面课程概述原文列第三单元讲授“网络安全基本概念；网络安全威胁；密码学基础；信息完整性与数字签名；身份认证；安全电子邮件；SSL；IPsec与VPN；无线网局域网安全；防火墙；入侵检测”，第二单元列“CIDR、子网划分与路由聚集、VLAN、ARP”。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《信息安全导论》第7、8、10章课件（中国科学技术大学 曾凡平）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第7章 网络攻击（踩点、扫描、缓冲区溢出、DoS、僵尸网络）；第8章 网络与系统安全防护（8.1 防火墙、8.2 入侵检测、8.3 蜜罐、8.4 应急响应）；第10章 IPSec/SSL-TLS/SET 与无线网络安全（WEP/802.11i/WPA）。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec08.pdf",
+    "location": "第7章 7.1–7.6；第8章 8.1 防火墙 / 8.2 入侵检测 / 8.3 蜜罐 / 8.4 应急响应",
+    "finding": "PDF 目录逐节列出 7.3 缓冲区溢出攻击、7.4 拒绝服务、7.5 僵尸网络、8.1 防火墙技术、8.2 入侵检测技术、8.3 蜜罐、8.4 应急响应；infoSec11 另含 WEP/802.11/WPA 章节。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：章节表列出“7 网络与系统攻击技术”“8 网络与系统安全防护技术”“10 Internet安全”与实验03/实验04，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：网络与系统攻击/防护三章只有学生上传 PDF，无官方课件或录像，保留 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.2.2.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "网络空间安全导论（清华大学本科核心课程，课程团队官方 GitHub 仓库：16 章教学 PPT + 18 个课程实验）",
+   "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第8章 TCP/IP 协议栈安全（第二节 链路层安全、第三节 网络层安全、第四节 传输层/应用层安全：按层给威胁与原理、本质原因与基本防御）；第9章 互联网路由安全（域内/域间路由如何工作、路由源劫持 route origin hijacking 等安全问题、防御 MANRS/BGPsec/FCBGP）；第10章 DNS 安全（缓存中毒攻击、基于 IPID 的远程缓存中毒、恶意 DNS 服务器回复伪造、拒绝服务；防御：查询源端口随机化、域名大小写随机化、DNSSEC 的签名与验证过程原理）；第11章 真实源地址验证 SAVA（体系结构、三大层次、五大关键技术）；课程实验含“DNS 缓存投毒的基础性实验”。",
+   "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；PPT 为团队自述“大幅精简”版，完整版需向课程团队申请；配套教材《网络空间安全原理与实践（第二版）》清华大学出版社（付费）。",
+   "publisher": "清华大学“网络空间安全导论”课程团队（GitHub 组织 Cybersecurity-THU）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/Cybersecurity-THU/Cybersecurity-Fundamentals/main/%E6%95%99%E5%AD%A6%E8%AF%BE%E4%BB%B6/%E7%AC%AC10%E7%AB%A0%20DNS%E5%AE%89%E5%85%A8.pdf",
+    "location": "第10章 PDF“缓存中毒攻击/恶意DNS服务器回复伪造/拒绝服务攻击”“查询源端口随机化，域名大小写增加攻击者猜测难度”“远程缓存中毒攻击—基于IPID的攻击”“通过非对称加密验证身份--DNSSEC（签名过程原理/验证过程原理）”；第9章 PDF“路由源劫持”“MANRS/BGPsec/FCBGP”；第8章 PDF“第二节 链路层安全、第三节 网络层安全、第四节 …”",
+    "finding": "逐份下载并打开确认：第10章正文出现“缓存中毒攻击”“远程缓存中毒攻击—基于IPID的攻击”“域名服务器用散列函数计算回复 DNS报文内容”（DNSSEC 签名）与“本地DNS服务器收到 DNSSEC报文，计算报文…”（验证），并给出源端口随机化等防御；第9章出现“截止2024年2月底，全球路由系统共包括 1196846 条路由前缀…82470 个自治系统”，并列出“路由源劫持”“如何防御：MANRS、BGPsec、FCBGP”；第8章目录为链路层/网络层/传输层/应用层四节。README 的实验清单写有“DNS缓存投毒的基础性实验”。"
+   },
+   "added_by": "review/pi-additions/S.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "协议攻击面",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第7章 7.1 网络踩点、7.2 网络扫描、7.4 DoS、7.5 僵尸网络",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "第三单元 网络安全威胁（概览）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第10章 DNS 安全（缓存中毒/基于 IPID 的远程缓存中毒/伪造回复/DoS + 源端口与大小写随机化 + DNSSEC 签名与验证）与课程实验“DNS 缓存投毒”",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第9章 互联网路由安全（路由源劫持/路由泄露 + MANRS、BGPsec、FCBGP）；第8章 TCP/IP 协议栈安全（链路层/网络层/传输层/应用层）；第11章 真实源地址验证 SAVA",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L14 Internet Protocols；L15 BGP 安全、DNS 缓存投毒、DNSSEC/NSEC3",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "第26–33 章 ARP/DHCP/BGP/DNS/DNSSEC",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文讲扫描/DoS/僵尸网络这类主机与流量攻击，没有 BGP 前缀劫持、DNS 缓存投毒、DNSSEC 这类路由与名字协议的攻击面。；旧结论说中文只讲扫描/DoS 与通用威胁、没有 DNS 缓存投毒与 DNSSEC 评测；第10章正好把 DNS 协议的攻击面拆成三类（缓存中毒、伪造回复、拒绝服务），给出攻击成立条件（事务 ID/端口可猜、附加区注入等），再给出防御链（源端口随机化、域名大小写随机化 → DNSSEC 的签名/验证），并有配套投毒实验。这一条补的就是“协议层攻击面 + 对应防御”的完整链条。；负责“前缀劫持”这一半并给出分层视角：先讲域内/域间路由如何工作（前缀与 AS 的真实规模数据），再讲路由源劫持的成因与危害，最后给出 MANRS/BGPsec/FCBGP 三种防御路线；第8章按协议栈四层铺开威胁面，第11章用 SAVA 说明源地址伪造这一跨层攻击面如何被体系化治理。旧结论所指缺的“BGP 前缀劫持”在这里有独立成章的教学。"
+  },
+  {
+   "topic": "分段",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二单元 子网划分与路由聚集、CIDR、VLAN",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第8章 8.1 防火墙（以边界/子网划分讲隔离）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第35章 Firewalls（边界与分段）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "L15 Distributed Firewalls",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文的 VLAN/子网划分来自计算机网络课，是分段的技术基础；安全侧的“按信任等级分段”策略在防火墙一节里。"
+  },
+  {
+   "topic": "防火墙",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第8章 8.1 防火墙技术（概念、体系结构、应用与发展）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "第三单元 防火墙",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第35章 Firewalls",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "L15 Distributed Firewalls",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "入侵检测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第8章 8.2 入侵检测技术（分类、分布式 IDS、发展趋势）、8.3 蜜罐",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "第三单元 入侵检测",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第36–37 章 Intrusion Detection / Abusing Intrusion Detection",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "L15 Bro 实时入侵检测",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "传输保护与网络监测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第三单元 SSL、IPsec 与 VPN",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第10章 10.2 IPSec、10.3 SSL/TLS；第8章 监测/审计相关内容",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第31章 TLS；第36章 Intrusion Detection（监测）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "L12 HTTPS: Goals and Pitfalls；L15 Bro",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "无线链路安全",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第三单元 无线局域网安全",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第10章 无线网络安全（WEP/802.11i/WPA）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "第28章 WPA",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文两处都覆盖 802.11 与 WEP/WPA 的演进；英文 CS161 只有 WPA 一章，CS155 不含无线。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先看第二单元的 CIDR/子网划分/VLAN/ARP，建立“分段”的技术底座；再看第三单元，按 威胁→密码学→认证→SSL/IPsec→无线→防火墙→IDS 的顺序走完。"
+    },
+    {
+     "source": "zh2",
+     "read": "用第7章补扫描/DoS/僵尸网络的具体攻击流程，用第8章补防火墙体系结构、IDS 分类与蜜罐部署，第10章补 IPSec/TLS 与 WEP/WPA 细节。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第10章，先复述 DNS 解析路径与缓存机制，再写出三类攻击各自成立的前提（可猜的事务 ID/端口、可注入的附加记录、放大流量），最后把源端口随机化→0x20 编码→DNSSEC 的防御演进讲成一条线，并说清 DNSSEC 只保真实性不保机密性。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第9章，用前缀与 AS 的关系解释“路由源劫持”为什么能影响大片地址空间，比较 MANRS（运营规范）、BGPsec（路径签名）、FCBGP（过滤/协同）三种防御的成本与部署难点；再读第8章按链路层→网络层→传输层→应用层各写一个攻击与一条防御，最后读第11章说明 SAVA 如何治理源地址伪造。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en2",
+     "read": "先读第25–33 章把 ARP/DHCP/BGP/DNS/DNSSEC/TCP/TLS 的协议行为与攻击面对齐，再读 34–37 章 DoS、Firewalls、IDS。"
+    },
+    {
+     "source": "en1",
+     "read": "按 syllabus Part 3 的 L14–L16 读 slides 与论文（DNSSEC/NSEC3、Distributed Firewalls、Bro、IP traceback），把协议攻击面与监测/防御串起来。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/HIT-154005（哈工大计算机网络课程页直接核验）",
+   "result": "采纳：第三单元逐项列出 SSL/IPsec/VPN/无线局域网安全/防火墙/入侵检测。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "同上课程“播放/认证学习”入口 + USTC 第7/8/10章课件",
+   "result": "采纳：MOOC 视频需注册按学期开放；课件 PDF 可直接读并核对章节。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中国大学MOOC“认证学习”证书与中文网络安全教材",
+   "result": "证书为付费项、教材全文付费，均未购买；无付费中文材料能补 BGP/DNS 攻击面这一块。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://cs155.stanford.edu/syllabus.html ; https://textbook.cs161.org/",
+   "result": "采纳：CS155 Part 3 的 L14–L17 与 CS161 网络部分的章节逐一核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "系统安全 课程 中文 隔离 沙箱 虚拟化 访问控制 内存安全 课件 讲义 大学（上一技能检索时命中清华大学《网络空间安全导论》官方仓库）",
+   "result": "采纳：Cybersecurity-THU/Cybersecurity-Fundamentals，含第8章协议栈安全、第9章互联网路由安全、第10章DNS安全、第11章 SAVA 与 DNS 缓存投毒实验，正好对上本技能缺口“协议攻击面”。",
+   "by": "review/pi-additions/S.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "material",
+   "tool": "fetch",
+   "query_or_url": "第8/9/10章 PPT（raw.githubusercontent.com 直链）逐份打开核对",
+   "result": "采纳：三份 PDF 均可下载且在正文命中“缓存中毒攻击/基于IPID的攻击/DNSSEC 签名与验证”“路由源劫持/MANRS/BGPsec/FCBGP”“链路层/网络层/传输层/应用层安全”等关键词。",
+   "by": "review/pi-additions/S.2.2.json"
+  }
+ ],
+ "findings": [
+  "原中文条目只有哈工大《计算机网络》，其第三单元确实覆盖 SSL/IPsec/无线/防火墙/IDS，但完全不讲 BGP/DNS 这类协议攻击面；保留为主资源并补 USTC 第7/8/10章。",
+  "英文用 CS155 Part 3 为主、CS161 网络章为系统教材：两者合起来覆盖协议攻击面（BGP/DNS/DNSSEC）、分段（distributed firewalls）、防火墙、IDS、TLS 与监测。",
+  "无线链路安全中文反而更完整（802.11/WEP/WPA 演进），英文只有 CS161 的 WPA 一章。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.2.2.json@739158eabb"
+ ]
+}

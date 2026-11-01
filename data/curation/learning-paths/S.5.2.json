@@ -1,0 +1,368 @@
+{
+ "id": "S.5.2",
+ "name": "系统安全研究与安全测量",
+ "description": "漏洞成因、缓解设计、可复现实验、网络测量与安全经济学。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Security Engineering: A Guide to Building Dependable Distributed Systems, 3rd ed.（Ross Anderson；作者主页按章免费 PDF）",
+   "url": "https://www.cl.cam.ac.uk/archive/rja14/book.html",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch.1 What is Security Engineering、Ch.2 Who is the Opponent、Ch.4 Protocols、Ch.6 Access Control、Ch.8 Economics（安全经济学）、Ch.10 Boundaries、Ch.12 Banking and Bookkeeping、Ch.14 Monitoring and Metering（测量与监测）、Ch.15 Nuclear Command and Control、Ch.17 Biometrics（错误率度量）、Ch.18 Physical Tamper Resistance，以及后段 Secure Systems Development/Assurance、Network Attack and Defence 等章。",
+   "access": "作者主页按章免费下载 PDF（第 3 版），无需注册；印刷版在 Wiley/Amazon 出售。英文。",
+   "publisher": "Ross Anderson / Cambridge University Press（第 3 版）",
+   "evidence": {
+    "url": "https://www.cl.cam.ac.uk/archive/rja14/book.html",
+    "location": "章节目录：Chapter 8 Economics、Chapter 14 Monitoring and Metering、Chapter 17 Biometrics；正文说明可免费下载各章",
+    "finding": "页面写“You can also download the chapters for free here”，并逐章列出 Ch.8 Economics、Ch.14 Monitoring and Metering、Ch.17 Biometrics、Ch.18 Physical Tamper Resistance 等。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "MIT 6.858 Computer Systems Security（OCW）· labs 与论文阅读",
+   "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "7 个 lab（缓冲区溢出、符号执行、Web 安全、网络等）与论文阅读清单，提供“可复现实验”的具体做法：环境隔离、实验步骤、结果对比。",
+   "access": "OCW 免费公开 lab 说明与讲义；无自动评分。英文。",
+   "publisher": "MIT / Prof. Nickolai Zeldovich",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/pages/calendar/",
+    "location": "Calendar 中的 Lab 1–7 与 due 日期",
+    "finding": "日程表逐周标出 Lab 1 out/parts、Lab 2、Lab 3、Lab 4、Lab 5、Lab 6、Lab 7（Final Project）及其截止日，可据此复现实作。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "软件定义网络的测量方法研究（戴冕、程光、周余阳，《软件学报》2019, 30(6)）",
+   "url": "https://www.jos.org.cn/html/2019/6/5832.htm",
+   "tier": "material",
+   "free": true,
+   "role": "reference",
+   "covers": "按测量架构、测量对象、流量与资源开销分析 SDN 的测量方法与评价指标，带参考文献；是中文“网络测量”综述，不含实验流程与安全经济学。",
+   "access": "期刊原站公开中文全文（HTML/PDF）免费；需网络与统计基础。",
+   "publisher": "《软件学报》/ 戴冕、程光、周余阳",
+   "evidence": {
+    "url": "https://www.jos.org.cn/html/2019/6/5832.htm",
+    "location": "摘要与章节（测量架构、测量对象、开销分析）",
+    "finding": "页面为中文综述，摘要按测量架构/对象/开销组织 SDN 测量方法，并给出评价指标与参考文献。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《信息安全导论》第7、8章 网络与系统攻击及防护（中国科学技术大学 曾凡平）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第7章 网络攻击（踩点/扫描/缓冲区溢出/DoS/僵尸网络）与第8章 防护（防火墙/IDS/蜜罐/应急响应）：给出漏洞成因与缓解手段的中文描述，但没有研究级的可复现实验与度量设计。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF（学生整理上传，非学校官方发布页，版权归授课教师）。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec08.pdf",
+    "location": "第7章 7.3/7.6 缓冲区溢出；第8章 8.1 防火墙、8.2 入侵检测、8.3 蜜罐",
+    "finding": "infoSec08 目录列 7.3 缓冲区溢出攻击与防范、7.4 拒绝服务、7.5 僵尸网络、8.1 防火墙技术、8.2 入侵检测技术、8.3 蜜罐技术、8.4 应急响应技术。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“7 网络与系统攻击技术”“8 网络与系统安全防护技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：相关课件只有学生上传 PDF，保留 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.5.2.json",
+    "review/main-additions/S.5.2.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "网络空间安全导论 第7章 操作系统安全 + 第3章 网络空间安全基本机制（清华大学课程团队官方 PPT，GitHub 公开）",
+   "url": "https://github.com/Cybersecurity-THU/Cybersecurity-Fundamentals",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第7章 操作系统安全：攻击对象为内存管理/进程管理/I-O 管理，第二节基础防御方案（W^X、NX/DEP、ASLR），第四节高级系统保护方案（控制流完整性、指针完整性），并把“未考虑不合法输入、随机化程度不够”总结为设计缺陷；第3章 基本机制：移动目标防御（“动态＋异构”，本质是“通过增加系统的随机性和不可预测性来防范网络攻击”“增加攻击者的攻击成本”，分动态网络/平台/环境/软件/数据五个层次）、拟态防御（“动态＋异构＋冗余”，扰乱攻击链、使攻击代价倍增），以及沙箱/入侵容忍/可信计算/零信任等机制的取舍。",
+   "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；团队自述为“大幅精简”版 PPT。",
+   "publisher": "清华大学“网络空间安全导论”课程团队（GitHub 组织 Cybersecurity-THU）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/Cybersecurity-THU/Cybersecurity-Fundamentals/main/%E6%95%99%E5%AD%A6%E8%AF%BE%E4%BB%B6/%E7%AC%AC3%E7%AB%A0%20%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E6%9C%BA%E5%88%B6.pdf",
+    "location": "第3章 PDF “移动目标防御的基本思想”“移动目标防御的五个层次”“拟态防御的基本思想”各页；第7章 PDF 目录“第二节 基础防御方案（W^X、NX、DEP、ASLR）”“第四节 高级系统保护方案（控制流完整性、指针完整性）”",
+    "finding": "打开确认：第3章正文写“移动目标防御的基本思想 ‘动态’＋‘异构’……增加攻击者的攻击成本”“本质:通过增加系统的随机性和不可预测性来防范网络攻击”“移动目标防御的五个层次：通过在网络、平台、环境、软件和数据等多个层次增加随机性和不确定性，增加攻击难度”；拟态防御一节写“‘动态’＋‘异构’＋‘冗余’……使攻击的代价倍增、难以生效”；第7章目录列 W^X(NX,DEP)、ASLR 与 CFI、指针完整性。"
+   },
+   "added_by": "review/pi-additions/S.5.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "漏洞成因",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第7章 缓冲区溢出、DoS、僵尸网络的成因分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.2 Who is the Opponent、Ch.12 Banking and Bookkeeping 等真实系统失效剖析",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Lec 2–3 控制流劫持与缓冲区溢出",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "缓解设计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第7章“缓冲区溢出的防范”、第8章 防护技术",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第7章 第二节 基础防御方案（W^X/NX/DEP/ASLR）与第四节 高级系统保护方案（CFI/指针完整性）；第3章 移动目标防御与拟态防御的“增加攻击成本”设计思路",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.10 Boundaries、Ch.18 Tamper Resistance 及 Secure Systems Development/Assurance 章",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Lec 3 Buffer Overflow Exploits and Defenses；Lec 7 Sandboxing",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到“有哪些防范手段”，没有按攻击面/成本/可用性做缓解方案取舍的设计训练。；旧结论说中文只列防范手段、没有按攻击面/成本做取舍的设计训练。这两章正好给出“取舍”的两端：一端是具体缓解机制及其对应攻击面（W^X 挡代码注入、ASLR 挡固定地址跳转、CFI/指针完整性挡控制流劫持与任意写），另一端是把“提高攻击者成本/降低自身收益”作为设计目标（移动目标防御靠动态异构增加成本、拟态防御靠冗余与异构使攻击代价倍增），可以据此做“同一攻击面上多种缓解的成本—收益”比较。"
+  },
+  {
+   "topic": "可复现实验",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "无实验流程内容",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Lab 1–7（隔离环境、步骤说明、结果对比）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有“环境固定→步骤脚本化→结果可复现→artifact 共享”的实验教学。"
+  },
+  {
+   "topic": "网络测量与安全经济学",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "SDN 测量架构、对象与开销分析（综述）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第12章 流量分析三要素/分类法、检测算法（规则 vs 机器学习）、隐私窃取型流量分析与检测；配套测量实验（路由异常检测、流量交互图、网站指纹）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.8 Economics；Ch.14 Monitoring and Metering",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有网络测量综述（且限于 SDN），没有安全经济学（攻击成本/防御投入/激励）的内容。；只覆盖“网络测量”这一半：把面向安全的测量拆成“流量特征—分析算法—分析目标”三要素，说明特征选择决定系统能力上限，并比较专家规则与机器学习两类检测算法在覆盖面与误报上的差别；配套实验（含原论文与开源代码）给出可复现的测量流程（采集→特征→检测/指纹→评估）。“安全经济学”一半中文无可登记材料，故本知识点整体记 partial。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh2",
+     "read": "读第7章的攻击成因与第8章的防护机制，整理“漏洞类型→成因→现有缓解”的对照表。"
+    },
+    {
+     "source": "zh1",
+     "read": "读 SDN 测量综述，理解测量架构/对象/开销与评价指标，作为网络测量的入门。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第7章，做一张“攻击—缓解—残留风险—代价”表（栈溢出→W^X+ASLR→信息泄露仍可绕过→性能/兼容性代价；控制流劫持→CFI/指针完整性→覆盖率与开销）；再读第3章，用移动目标防御/拟态防御说明“增加攻击成本”如何作为一种设计取舍，而不是单纯堆控件。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第12章，按“流量特征—分析算法—分析目标”为一次具体测量（例如识别某类恶意流量或做网站指纹）写出实验设计：数据从哪来、特征怎么选、算法用规则还是学习、如何评估误报漏报；再对照课程实验仓库把其中一项跑通并记录可复现步骤。"
+    },
+    {
+     "source": "zh2",
+     "read": "以中科大《信息安全导论》第 7–8 章（网络与系统攻击及防护）为主线学漏洞成因与防护，再读清华《网络空间安全导论》第 7 章与第 3 章的缓解机制。"
+    }
+   ],
+   "gaps": [
+    "可复现实验",
+    "网络测量与安全经济学"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Ch.1–2 建立威胁与对手模型，Ch.12/Ch.15 读真实系统失效案例，提炼漏洞成因。"
+    },
+    {
+     "source": "en1",
+     "read": "读 Ch.8 Economics 与 Ch.14 Monitoring and Metering，做一次“防御投入 vs 攻击成本”的量化估算。"
+    },
+    {
+     "source": "en2",
+     "read": "按 Lab 1–7 复现缓冲区溢出/沙箱等实验，固定环境与脚本，输出可复现的 artifact 说明。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.jos.org.cn/html/2019/6/5832.htm ; USTC 第7/8章课件",
+   "result": "采纳：中文有攻击成因与测量综述，无实验方法与经济学。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 网络安全/测量类课程页检索",
+   "result": "未找到可核对的中文安全测量课程；平台检索被限流。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《安全经济学》《网络测量》教材",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cl.cam.ac.uk/archive/rja14/book.html ; https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+   "result": "采纳：Anderson 第3版章目录与 6.858 lab 日程核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可复现研究 实验 复现 artifact 中文 计算机系统 安全 论文 复现 规范 教程",
+   "result": "不合适：命中通用“论文复现指南”（CV 方向）、实证研究 skill 文档、FORRT 术语表与雷峰网文章，均非系统安全实验的可复现规范（无环境固定/脚本化/artifact 共享的安全实验流程）。",
+   "by": "review/pi-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息安全经济学 中文 教材 课程 网络测量 安全测量 方法 教材 目录 安德森",
+   "result": "不合适：返回《网络经济学》教材、计量经济学讲义与北理工培养方案，没有中文“安全经济学”教学材料；Anderson《Security Engineering》只有英文免费版（既有 en1）。",
+   "by": "review/pi-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "material",
+   "tool": "fetch",
+   "query_or_url": "清华大学《网络空间安全导论》第2/3/7/12 章 PPT（raw.githubusercontent.com 直链）",
+   "result": "采纳第3、7、12 章：第7章含 W^X/ASLR/CFI/指针完整性，第3章含移动目标防御“增加攻击成本”与拟态防御，第12章含流量分析三要素与规则/学习两类检测算法；第2章理论工具（图论/控制论/博弈论/最优化/概率论）仅作旁证，未用于覆盖声明。",
+   "by": "review/pi-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "网络安全经济学 外部性 激励 信息不对称 课程 讲义",
+   "result": "只有复旦《信息与激励经济学》讲义、台大经济学原理等一般经济学材料，不讲安全应用。",
+   "by": "review/main-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "安全研究 可复现 实验 artifact evaluation 中文 指南 复现性",
+   "result": "只有 CSDN 博客与英文会议 AE 页面。",
+   "by": "review/main-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 网络安全经济学 安全经济学 激励 外部性 讲座",
+   "result": "只有微观经济学网络外部性带学视频，不讲安全。",
+   "by": "review/main-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "网络安全经济学 教材 出版社 目录 安全投资 外部性；Ross Anderson 安全工程 中译本 安全经济学",
+   "result": "找到 Anderson《信息安全工程（第2版）》中译本线索，但目录页无法打开核实；高教社《网络经济学》不讲安全。",
+   "by": "review/main-additions/S.5.2.json"
+  }
+ ],
+ "findings": [
+  "原英文主资源 Anderson 第3版确实按章覆盖漏洞成因、缓解、测量（Ch.14）与经济学（Ch.8），保留。",
+  "原中文条目只是一篇 SDN 测量综述，不能覆盖四个主题；本轮补 USTC 第7/8章讲成因与防护，但缓解设计、可复现实验、网络测量与经济学仍不足。",
+  "中文缺“研究级”的训练（实验复现、度量设计、经济学分析），判 partial。",
+  "[review/pi-additions/S.5.2.json] 未解决 zh「网络测量与安全经济学」：只覆盖了“网络测量”这一半（r7-zh2 第12章 + 配套实验）；“安全经济学”一半未解决：中文检索只得到《网络经济学》教材与计量经济学讲义，没有讲攻击者激励、成本转移、外部性、责任分配等安全经济学内容的中文课程或教材；清华导论第2章的博弈论/最优化只是通用理论工具，不足以充当安全经济学教学。故该知识点整体记 partial（测量已覆盖、经济学未覆盖）。",
+  "[review/pi-additions/S.5.2.json] 未解决 zh「可复现实验」：中文只找到通用“论文复现指南”（机器学习方向，讲环境锁定 requirements.txt、一键复现、复现包），没有针对系统安全实验的可复现规范教学（实验环境固定/镜像、攻击脚本与流量回放、artifact 打包与评审流程）。清华导论的实验虽给出论文与代码链接，但未教“如何让别人复现你的实验”，不能算覆盖。",
+  "[review/pi-additions/S.5.2.json] 未解决 zh「主资源」：need_primary 未解决：中文没有以“系统安全研究方法/安全测量”为主线的免费课程或教材可核对到章节目录。已试：清华《网络空间安全导论》（通识课，非研究方法课）、中文期刊综述（既有 zh1 为 SDN 测量综述）、以及两轮 Tavily 检索（可复现/安全经济学）均无结果。可用替代仍是英文 Anderson《Security Engineering》+ MIT 6.858（既有 en1/en2）。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "可复现实验",
+   "source": "en2",
+   "reason": "安全研究的可复现实验（实验设计、环境与数据公开、artifact evaluation）在中文侧只找到 CSDN 博客对 artifact evaluation 的介绍，没有课程或教材；B 站站内与付费教材检索均无相关内容。改读英文 MIT 6.858 的实验与论文复现材料。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/main-additions/S.5.2.json"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "网络测量与安全经济学",
+   "source": "en1",
+   "reason": "网络测量一半中文只有《软件学报》综述（研究型）；安全经济学一半中文只有一般微观经济学课程讲外部性与信息不对称，没有讲它们如何解释安全投入与攻防激励的教学；Anderson《信息安全工程（第2版）》中译本的目录页是脚本渲染，Tavily 提取也失败，无法核实章节。改读英文 Security Engineering 的经济学与测量相关章节。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/main-additions/S.5.2.json"
+  }
+ ],
+ "applied_additions": [
+  "review/pi-additions/S.5.2.json@08adf8719b",
+  "review/main-additions/S.5.2.json@53be108d56"
+ ]
+}

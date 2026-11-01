@@ -1,0 +1,415 @@
+{
+ "id": "S.1.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Computer Security（UC Berkeley CS 161 在线教材，Wagner / Weaver / Kao 等，CC BY-SA）",
+   "url": "https://textbook.cs161.org/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "第 1 章 Security Principles 全节：1.1 Know your threat model、1.2 Human Factors、1.3 Security is economics、1.4 Detect if you can't prevent、1.5 Defense in depth、1.6 Least privilege、1.7 Separation of responsibility、1.8 Complete mediation、1.10 Fail-safe defaults、1.12 TCB、1.13 TOCTTOU；第 5 章 5.6 给机密性/完整性/真实性定义；第 14 章 Passwords 与第 19–20 章 Session/Cookie 讲认证与会话级授权。",
+   "access": "免费网页全文（CC BY-SA），无需注册；另有全书 PDF 版。英文，无字幕需求。",
+   "publisher": "UC Berkeley CS 161（David Wagner, Nicholas Weaver, Peyrin Kao 等）",
+   "evidence": {
+    "url": "https://textbook.cs161.org/principles/principles.html",
+    "location": "第 1 章小节标题 1.1–1.13",
+    "finding": "打开确认正文：1.1 定义 threat model（攻击者与资源），1.6 Least privilege、1.5 Defense in depth、1.7 Separation of responsibility、1.8 Complete mediation 均独立成节并给例子；页面总目录另列 5. Introduction to Cryptography（含 5.6 安全属性）与 14. Passwords、20. Cookies and Session Management。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "6.858 Computer Systems Security（MIT OpenCourseWare，Fall 2014，含讲义、录像、lab 与日程）",
+   "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Lec 1 Introduction/Threat Models、Lec 2–3 控制流劫持与缓冲区溢出（攻击面如何形成）、Lec 6 Capabilities（授权机制）、Lec 17 User Authentication（认证）、Lec 23 Security Economics（风险与成本）；用来把 CS161 的原则放到真实系统与实验里。",
+   "access": "OCW 免费公开讲义 PDF、录像与作业，无需注册；英文授课，官方讲义可替代字幕。",
+   "publisher": "MIT / Prof. Nickolai Zeldovich",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-858-computer-systems-security-fall-2014/pages/calendar/",
+    "location": "Calendar 表：Lec 1 Introduction, Threat Models；Lec 6 Capabilities；Lec 17 User Authentication；Lec 23 Security Economics",
+    "finding": "打开日程表逐行确认以上讲次与主题；另有 Lecture Notes、Lecture Videos、Labs 导航项。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《信息安全导论》课程课件 13 讲（中国科学技术大学 曾凡平，学生整理上传的课程 PDF）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第1章 绪论（信息安全三要素机密性/完整性/可用性、威胁模型、风险管理、纵深防御、安全技术体系）；第2章 密码技术；第3章 身份认证（Kerberos v4/v5、PKI/X.509）；第4章 授权与访问控制（DAC、MAC、RBAC、ABAC/ABE、PMI）；第5–13章 信息隐藏、OS/数据库安全、网络与系统攻击、入侵检测与应急响应、数字取证、IPSec/TLS/SET、恶意代码、内容安全。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内 13 个中文 PDF（infoSec01–13）。这是学生整理上传的授课课件，不是学校官方发布页，版权归授课教师；课程本身为 USTC 3 学分 40 学时+40 学时实验（课件第1页写明）。教师主页 http://staff.ustc.edu.cn/~billzeng/ 可核对授课与教材。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec01.pdf",
+    "location": "第1章 绪论，第 11、26、27 页；第3–4章见 infoSec04(1).pdf / infoSec05.pdf 目录页",
+    "finding": "PDF 正文第1页写明“第1章 绪论 中国科学技术大学 曾凡平”，正文写“机密性、完整性、可用性也称为信息安全的三要素”，并列 threat model、风险管理、纵深防御、安全技术体系；infoSec05.pdf 目录为 4.1 授权和访问控制策略 4.2 自主访问控制 4.3 强制访问控制 4.4 RBAC 4.5 ABAC/ABE；infoSec04(1).pdf 为 Kerberos 与 PKI/X.509。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（有课程编号 011184、第1–16周与 12 章章节表 + 实验安排，但“资源地址”列无任何课件/录像链接，只有返回主页）；②教师主页教学栏（写明主讲“信息安全导论”，仅列教材《网络信息安全》机械工业出版社 2016，无课件下载）；③中国大学MOOC：检索中国科学技术大学课程与“信息安全导论 中国科学技术大学 曾凡平”均未出现该课（只有青岛大学同名课 https://www.icourse163.org/learn/QDU-1454026183 与信息工程大学《信息安全技术》等别校课）；④学堂在线：Tavily 检索无该课结果；⑤中国科学技术大学教务处“国家级精品课程/精品在线开放课程”页 https://www.teach.ustc.edu.cn/category/education/edu-course 列表只有 Linux操作系统分析、文献管理与信息分析、基础微积分I、化学实验安全知识、工程化编程实战，无信息安全导论。结论：官方只公开章节表、无官方课件或录像，学生上传的 13 讲 PDF 属第三方转载，保留并标 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.1.1.json"
+   ]
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "信息系统安全与对抗实践（北京理工大学 罗森林团队，国家级精品课程，中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/BIT-1206619844",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "单元1 工程系统理论及系统工程基础、单元2 信息安全与对抗知识基础（这两单元为必修），其余为 WEB/密码/Android/Windows/缓冲区溢出/逆向 实践单元。补“从对抗与系统工程角度看攻击面”的视角，不替代原理教材。",
+   "access": "中国大学MOOC 免费注册学习；单元制考核“必修2单元+选修2单元+自选1单元”，认证证书可能收费；视频需登录并按开课学期提供。字幕未核对（B站/MOOC 字幕需登录才显示）。",
+   "publisher": "北京理工大学 罗森林团队",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BIT-1206619844",
+    "location": "课程概述 / 常见问题（单元考核说明）",
+    "finding": "页面课程概述写明内容包括“工程系统理论及系统工程基础、信息安全与对抗知识基础、WEB安全实践、密码安全实践……”并说明第1、2单元为必修；常见问题说明单元制考核方式。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文：威胁建模工具与 STRIDE 威胁类别",
+   "url": "https://learn.microsoft.com/zh-cn/azure/security/develop/threat-modeling-tool-threats",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "STRIDE 六类威胁（欺骗、篡改、抵赖、信息泄露、拒绝服务、权限提升）与缓解措施表；只作威胁建模的检索表，不是原理课程。",
+   "access": "免费中文文档，无需注册；工具面向 Windows 与 Microsoft SDL。",
+   "publisher": "Microsoft",
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/security/develop/threat-modeling-tool-threats",
+    "location": "STRIDE 威胁表与缓解措施",
+    "finding": "中文页面按 S/T/R/I/D/E 六类列出威胁定义与对应缓解措施，属工具文档式目录，不含教学讲解与练习。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "最小特权原则：最小化访问如何保护系统（中文教程，含实施步骤与示例）",
+   "url": "https://www.datacamp.com/zh/tutorial/principle-of-least-privilege",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "全文七节：什么是最小特权原则（定义、PoLP/PoMP/PoLA 别名、适用于用户/服务/应用/API/后台进程）、最小特权原则如何运作（基于角色的访问、限时或即时 JIT 访问、特权括起 privilege bracketing、零信任）、为什么重要（缩小攻击面、限制横向移动）、最小特权原则的实践示例、如何实施（分步骤）、挑战与局限、相近原则与相关概念。",
+   "access": "免费网页，无需注册；简体中文（DataCamp 官方中文版教程，原文为英文教程的本地化版本）；无视频、无字幕。",
+   "publisher": "DataCamp（在线数据/技术教程平台官方站点）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.datacamp.com/zh/tutorial/principle-of-least-privilege",
+    "location": "目录 + 正文“最小特权原则如何运作”“如何实施最小特权原则”",
+    "finding": "打开确认：页面目录为“什么是最小特权原则？/最小特权原则如何运作/为什么最小特权原则很重要/最小特权原则的实践示例/如何实施最小特权原则/挑战与局限/相近原则与相关概念/要点回顾/常见问题”；正文用“钥匙只给需要浇花的人”的例子讲原理，把 RBAC、JIT、特权括起、零信任四种落地机制逐条说明，实施节按步骤给出（移除不必要权限、权限审计、JIT 临时提权、移除硬编码凭据）。"
+   },
+   "added_by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "高校攻击面管理思考与实践（《中国教育网络》，中国教育和科研计算机网 CERNET）",
+   "url": "https://www.edu.cn/xxh/xy/xytp/202406/t20240606_2614579.shtml",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "攻击面的分类（Gartner 的 EASM 外部攻击面管理、CAASM 网络资产攻击面管理、DRPS 数字风险保护服务）与做法链：资产梳理（含被动数据获取：全流量检测、应用交付平台日志；主动获取：Shodan/Censys/ZoomEye 等测绘引擎与 API）→ 高频脆弱性扫描与 VPT 漏洞优先级 → 暴露面收缩（网站群、应用交付平台白名单、服务器端口按管理/业务分类限制、API 资产与 API 网关、终端类系统单独安全域、分区分域 ACL）→ 攻击面混淆（蜜罐）。",
+   "access": "免费网页全文，无需注册；简体中文；作者为高校网络安全从业者（文章署名“中国教育网络”，2024-06-06 发布）。",
+   "publisher": "中国教育和科研计算机网 CERNET / 《中国教育网络》",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.edu.cn/xxh/xy/xytp/202406/t20240606_2614579.shtml",
+    "location": "正文“外部攻击面管理”整节及“攻击面管理主要是做好暴露面收缩”以下各小节",
+    "finding": "打开确认正文：先给 Gartner 三类攻击面管理定义，再写“攻击面管理中除了做好资产梳理外，也要进行高频度的脆弱性扫描和安全检查……通过漏洞优先级技术（VPT）处理漏洞来减少攻击面”，随后按门户网站/信息系统/API/服务器/终端类系统逐类给出收缩暴露面的具体做法，并写到用蜜罐做“攻击面混淆”。"
+   },
+   "added_by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "信息技术安全风险管理实务指南（第 1.1 版，2024 年 7 月，简体中文版）",
+   "url": "https://www.govcert.gov.hk/doc/PG%20for%20IT%20Security%20Risk%20Management_SC.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "风险管理方法链：风险背景（4.2 了解风险背景）、风险准则（4.3 风险偏好声明及风险承受能力标准制定）、风险评估（识别风险/分析风险/评价风险，按资产—威胁—漏洞—可能性—影响展开）、风险汇总与关联（6.2 执行风险关联、汇总和正规化）、风险处理（降低/转移/接受等处置选项与残余风险）、风险监察与报告（7.1–7.3 监察已识别风险和风险处理活动、监察风险环境、定期风险报告），附件给风险类别与 KPIs/KRIs 示例。",
+   "access": "免费 PDF 全文（香港特区政府数字政策办公室政府计算机保安事故协调中心 GOVCERT.HK 发布，简体中文版），无需注册；无视频。",
+   "publisher": "中华人民共和国香港特别行政区政府 数字政策办公室（GOVCERT.HK）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.govcert.gov.hk/doc/PG%20for%20IT%20Security%20Risk%20Management_SC.pdf",
+    "location": "目录 4.2/4.3/4.4/6.2/7.1–7.3、附件 B、附件 C；正文“1. 简介”",
+    "finding": "打开 PDF 正文核对：目录列“4.2 了解风险背景”“4.3 风险偏好声明及风险承受能力标准制定”“6.2 执行风险关联、汇总和正规化”“7. 风险监察与报告”“附件 B：风险汇总的风险类别示例”“附件 C：相关风险偏好、风险承受能力、控制措施、关键绩效指标和关键风险指标示例”；正文写风险管理是“识别、评估和缓解组织的信息系统、数据和技术基础设施的风险”，监察节给出“通过资产管理流程追踪新的和现有的资产”“定期审查用户访问权限”等做法。"
+   },
+   "added_by": "review/pi-additions/S.1.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "机密性/完整性/可用性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "infoSec01.pdf 第1章 绪论（信息安全三要素）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "单元2 信息安全与对抗知识基础",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第5章 5.6 机密性/完整性/真实性定义",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课件把 CIA 作为“信息安全三要素”并扩展到不可抵赖性与可控性；英文教材给形式化定义（5.6）。zh2 只在知识基础单元提及，未逐字核对讲次。"
+  },
+  {
+   "topic": "认证授权",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "infoSec04(1).pdf 第3章 身份认证（Kerberos、PKI）；infoSec05.pdf 第4章 授权与访问控制（DAC/MAC/RBAC/ABAC）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第14章 Passwords；第19–20章 Same-Origin Policy、Cookies and Session Management",
+     "extent": "partial"
+    },
+    {
+     "source": "en2",
+     "section": "Lec 6 Capabilities；Lec 17 User Authentication",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课有独立的身份认证章与授权/访问控制章（含访问控制模型），覆盖更系统；英文教材的“授权”落在 Web 会话与同源策略，没有 DAC/MAC/RBAC 模型章，故记 partial。"
+  },
+  {
+   "topic": "最小权限",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "infoSec01.pdf 第1章原则性提及；infoSec04(1).pdf、infoSec06.pdf、infoSec08.pdf 各出现 1–7 次",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "什么是最小特权原则 / 最小特权原则如何运作 / 最小特权原则的实践示例 / 如何实施最小特权原则 / 挑战与局限",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第1章 1.6 Least privilege（含例子与设计含义）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课件在多章零散提到最小权限/最小特权，但没有独立小节系统讲“为什么、如何落地、与 TCB 的关系”；英文 1.6 是独立小节。；该教程把最小权限讲成一条可操作的链：定义（只授予完成工作所必需的最少权限，适用于用户、服务、应用、API、后台进程）→ 为什么（缩小攻击面、限制横向移动、便于审计）→ 落地机制（RBAC 角色化授予、JIT 限时提权、特权括起、零信任）→ 实施步骤（清理不必要权限、权限审计、临时提权到期回收、移除硬编码凭据）→ 局限（权限漂移、运维成本）。这正是旧结论说中文缺的“为什么、如何落地”，配合 zh1 课件在多章对最小权限/最小特权的提及，中文路线可以覆盖该知识点。"
+  },
+  {
+   "topic": "攻击面与风险管理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "infoSec01.pdf 第1章（威胁模型、风险管理、纵深防御、安全技术体系）；infoSec08/09 网络攻击与应急响应",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "单元1 工程系统理论、单元2 信息安全与对抗知识基础",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "外部攻击面管理整节（EASM/CAASM/DRPS 定义、资产梳理的主被动手段、VPT、暴露面收缩各小节、攻击面混淆）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "4.2 了解风险背景 / 4.3 风险偏好与风险承受能力 / 5 风险评估（资产—威胁—漏洞—可能性—影响）/ 6 风险汇总 / 7 风险监察与报告 / 附件 B、C",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第1章 1.1 Know your threat model、1.3 Security is economics、1.4 Detect if you can't prevent",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Lec 1 Introduction, Threat Models；Lec 2–3 控制流劫持/缓冲区溢出；Lec 23 Security Economics",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有威胁模型/风险管理的概念与攻击技术章，但没有把“攻击面度量 + 风险处置（接受/转移/降低）”做成一条方法链；英文 1.1+1.3 直接把威胁建模与成本/风险权衡讲成可操作原则。；负责“攻击面”这一半：给出攻击面的分层定义（外部可见资产与脆弱性 / 内外部资产台账 / 数字痕迹），并把它做成方法链——先梳理资产（测绘引擎与 API、全流量、应用交付日志），再做高频脆弱性扫描并用 VPT 排优先级，最后按门户网站、信息系统、API、服务器、终端类系统逐类收缩暴露面，并用蜜罐做攻击面混淆。旧结论说中文只有扫描/DoS 与通用威胁，此材料补上了攻击面度量与收敛这一层。；负责“风险管理”这一半：官方指南把风险管理写成可执行流程——定风险背景与风险偏好/承受能力 → 识别、分析、评价风险（按资产、威胁、漏洞、可能性、影响五个要素）→ 风险关联汇总与正规化 → 风险处理与残余风险 → 监察与定期风险报告，并给风险类别、KPI/KRI 示例。与 r7-zh2 的攻击面部分合起来，构成旧结论所缺的“攻击面度量 + 风险处置决策”方法链。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读 infoSec01.pdf 第1章，能复述 CIA 三要素、威胁模型四问（谁、动机、资源、持久性）与纵深防御；再读 infoSec04(1).pdf 第3章与 infoSec05.pdf 第4章，能区分认证与授权并画出 DAC→MAC→RBAC→ABAC 的演进。"
+    },
+    {
+     "source": "zh2",
+     "read": "用单元1、2 的视频把“系统工程/对抗”视角补齐，并挑一个实践单元（如 WEB 或缓冲区溢出）做一次攻击面梳理，产出资产-入口-威胁-缓解四列表。"
+    },
+    {
+     "source": "zh3",
+     "read": "做威胁建模时用 STRIDE 表当检查清单，逐条写缓解措施。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读 DataCamp 中文教程《最小特权原则》，先用自己的一个系统举例说明“只给必需的钥匙”，再把 RBAC、JIT、特权括起、零信任四种机制各写一条在本系统里的落地做法，最后按“如何实施”一节的步骤列出清理权限、权限审计、临时提权回收三张清单。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读《高校攻击面管理思考与实践》，画出 EASM/CAASM/DRPS 三类攻击面的边界，然后挑一个自己熟悉的单位/实验室网络，按文章顺序产出：资产台账（含用测绘引擎和全流量两种来源）、漏洞优先级表（VPT）、暴露面收缩清单（门户/信息系统/API/服务器端口/终端类系统）、以及一条攻击面混淆措施。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读《信息技术安全风险管理实务指南》第 4、5、6、7 章与附件 B/C，按它给的流程为上面那份攻击面清单做一次风险评估：写风险偏好与承受能力、按资产—威胁—漏洞—可能性—影响填风险表、给出降低/转移/接受的处置选择与残余风险，最后写出监察指标（KRI/KPI）与报告节奏。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "通读第1章 1.1–1.13，每个原则写一句“违反它的真实案例”；用 1.1 的四个假设给自己熟悉的系统写威胁模型。"
+    },
+    {
+     "source": "en1",
+     "read": "读第5章 5.6 拿到 CIA 的形式定义，再读第14章与第19–20章，把认证（口令/会话）与授权（同源策略、Cookie 作用域）分开表述。"
+    },
+    {
+     "source": "en2",
+     "read": "按日程先看 Lec 1 的威胁模型，再跟 Lec 2–3 理解攻击面如何由实现缺陷形成，Lec 6 学 capabilities 形式的授权，Lec 17 学认证，Lec 23 把风险换算成成本。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://github.com/search?q=信息安全导论（GitHub 仓库检索 API）",
+   "result": "采纳：找到 USTC 曾凡平《信息安全导论》13 讲课件仓库，逐份 PDF 打开核对章节。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/BIT-1206619844（已有条目复核）",
+   "result": "采纳为补充：确认单元1/2 必修、其余为实践单元。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://textbook.cs161.org/principles/principles.html",
+   "result": "采纳：1.1–1.13 小节标题与正文逐条核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "DuckDuckGo / Bing / 百度 / 搜狗 网页检索（多引擎）",
+   "result": "不合适：本轮这些引擎分别返回人机验证、与查询无关的缓存结果或空结果，未能用于发现中文课程；改用 GitHub 检索与已知课程页直接核验。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "https://www.icourse163.org/course/BIT-1206619844（“认证学习”入口）；另核朱节中《信息安全概论》科学出版社教材线索（课件第4页引用）",
+   "result": "认证证书/认证学习为付费项，课程视频需注册且按学期开放，未购买；教材全文付费、未购，故不能作为免费中文主资源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "学堂在线 信息安全导论 中国科学技术大学 曾凡平 课程",
+   "result": "不采纳为课程来源：无学堂在线结果，但发现教师官方课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（已打开，只有章节表无资源链接）与中国大学MOOC 青岛大学同名课。",
+   "by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "网络信息安全 曾凡平 机械工业出版社 2016 目录 ISBN",
+   "result": "找到作者着作页 http://staff.ustc.edu.cn/~billzeng/books/books.htm 与百科条目（ISBN 9787111520085），属付费教材，本轮未作为免费中文来源登记，仅用于确认官方教材线索。",
+   "by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "最小权限原则 least privilege 安全设计原则 中文 教材 章节",
+   "result": "不采纳百科/厂商科普（百度百科、维基、MDN 词条、SailPoint）；采纳 DataCamp 中文教程作分步教学（已打开核对正文）。",
+   "by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "\"攻击面\" 攻击面分析 减少攻击面 信息收集 教学 课程 网络安全 edu.cn",
+   "result": "采纳 CERNET《高校攻击面管理思考与实践》（已打开，含 EASM/CAASM/DRPS 与暴露面收缩方法）；IBM/趋势/Palo Alto 中文页与 secrss 文章作线索未采纳。",
+   "by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息安全风险管理 课程 资产识别 威胁识别 脆弱性 风险处置 中国大学MOOC",
+   "result": "部分不合适：中国大学MOOC 检索被金融风险管理课程稀释；采纳香港 GOVCERT《信息技术安全风险管理实务指南》简体版 PDF（已打开核对目录与正文），阿里云卓越架构风险评估页作旁证未登记。",
+   "by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "B 站搜索 API（search/type，带 buvid cookie）：\"最小权限原则\" \"攻击面管理\" \"网络安全 纵深防御 最小权限\" \"可证明安全 密码学\"",
+   "result": "不合适：命中的是手机 root/权限授予、企业管理培训、CTF 速成等无关视频；仅有厂商解读类短片，无讲授最小权限原则或攻击面管理方法的课程系列。此通道只用于“找到”，不作为“没有”的唯一依据，见下条 site: 检索。",
+   "by": "review/pi-additions/S.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 最小权限原则 访问控制；site:bilibili.com 攻击面管理 攻击面 收缩",
+   "result": "不合适：只返回 B 站专栏/图文（cv53505901 等保2.0 最小权限的 PAM 厂商文案、SELinux 说明文）与厂商营销文，视频侧没有讲授这两个主题的课程；故本轮中文这两点不靠视频覆盖。",
+   "by": "review/pi-additions/S.1.1.json"
+  }
+ ],
+ "findings": [
+  "原中文条目只有 Microsoft STRIDE 工具文档，属于参考表而非教学材料，不能支撑 CIA/认证授权/最小权限/风险管理四个必学主题；保留为 reference。",
+  "新增 USTC 曾凡平《信息安全导论》13 讲中文课件作为中文主资源：它是完整学期课的课件（40 学时+40 学时实验），第1/3/4 章正好对应 CIA、认证、授权与访问控制。",
+  "中文仍缺“最小权限”独立讲解与“攻击面/风险处置”方法链，故 zh 路线判 partial，不假报 complete。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "安全原理、威胁建模与风险",
+ "description": "机密性/完整性/可用性、认证授权、最小权限、攻击面与风险管理。",
+ "applied_additions": [
+  "review/pi-additions/S.1.1.json@f09b3ad3d1"
+ ]
+}

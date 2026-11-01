@@ -1,0 +1,298 @@
+{
+ "id": "S.1.2",
+ "name": "密码学",
+ "description": "对称/公钥、哈希、MAC、签名、密钥管理、协议与安全定义。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS255 Introduction to Cryptography（Stanford，Dan Boneh；syllabus + 逐讲 reading + cs255 online 录像）",
+   "url": "https://crypto.stanford.edu/~dabo/cs255/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Lec 2–4 一次一密/流密码、语义安全、分组密码与 PRP/PRF 模式；Lec 6 消息完整性（CBC-MAC、PMAC）；Lec 7 抗碰撞哈希（Merkle-Damgård、Davies-Meyer、SHA/HMAC）；Lec 8 AEAD；Lec 9–12 有限循环群、Diffie-Hellman、ElGamal、RSA trapdoor；Lec 13–15 数字签名、证书/CT/吊销、密钥交换与 TLS；其后为后量子签名与零知识入门。",
+   "access": "课程主页、syllabus、讲义 PDF 与 cs255 online 录像入口免费公开，无需注册；英文授课，讲义可替代字幕（视频字幕未核对）。",
+   "publisher": "Stanford University / Dan Boneh",
+   "evidence": {
+    "url": "https://crypto.stanford.edu/~dabo/cs255/syllabus.html",
+    "location": "Syllabus：Lecture 1–8 Basic symmetric-key encryption / Message integrity / Public key cryptography 各讲标题与 reading",
+    "finding": "打开 syllabus 逐讲读到 Lecture 6 “Message integrity: definition and applications, CBC-MAC and PMAC”、Lecture 7 “Collision resistant hashing … SHA and HMAC”、Lecture 11 ElGamal、Lecture 13–14 数字签名与证书；主页另列 syllabus、course overview、cs255 online 录像与历年期末题。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《信息安全导论》第2–3章 密码技术课件（中国科学技术大学 曾凡平，学生整理上传的 PDF）",
+   "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "infoSec02(1).pdf：2.x 对称密码（DES/AES 思路）、公钥密码（RSA/ElGamal）、2.4 散列函数和消息认证码（单向性、抗碰撞性、MAC）、2.5 数字签名、2.6 密钥管理与公钥分配；infoSec03.pdf：数字签名算法与密钥管理续；infoSec11.pdf：IPSec/SSL-TLS/SET 协议。",
+   "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF。学生整理上传的授课课件，不是学校官方发布页，版权归授课教师；课程为 USTC 3 学分（40 学时+实验）。第2章 2.6 密钥管理在课件里标注“自学，不考核”。",
+   "publisher": "中国科学技术大学 曾凡平（课件），仓库由学生整理",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/HoshiGaOChiru/USTC-Information-Security/main/%E8%AF%BE%E4%BB%B6/infoSec02%281%29.pdf",
+    "location": "第47–48 页 2.4 散列函数和消息认证码；2.5 数字签名；2.6 密钥管理",
+    "finding": "PDF 正文写“2.4 散列函数和消息认证码 2.4.1 散列函数……消息摘要相当于是消息的指纹”，并给单向性/强抗碰撞性/弱抗碰撞性；目录含 2.5 数字签名与 2.6 密钥管理（公钥分配）。"
+   },
+   "reupload": true,
+   "official_search": "查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：课程编号 011184、第1–16周，章节表列出“2 密码技术”“3 身份认证”，但“资源地址”列没有任何课件/录像链接）；②教师主页教学栏（写明主讲“信息安全导论”，只列教材《网络信息安全》机械工业出版社 2016，无课件下载）；③中国大学MOOC：检索未出现中国科大该课（只有青岛大学同名《信息安全导论》 https://www.icourse163.org/learn/QDU-1454026183 等别校课）；④学堂在线：检索无该课；⑤中国科学技术大学教务处“国家级精品课程/精品在线开放课程”页 https://www.teach.ustc.edu.cn/category/education/edu-course 无信息安全导论。结论：密码技术两章只有学生上传的 PDF，无官方课件或录像，保留并标 reupload:true。",
+   "updated_by": [
+    "review/pi-additions/S.1.2.json"
+   ]
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "现代密码学（电子科技大学，中国大学MOOC，国家精品在线开放课程；杨波《现代密码学》第5版配套）",
+   "url": "https://www.icourse163.org/course/UESTC-1003046001",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "第1章 概述与古典密码；第2–6章 流密码、分组密码、公钥密码、杂凑函数、数字签名；第7章 密码协议（Diffie-Hellman 密钥交换、Shamir 秘密分享）；第8章 可证明安全初步；第9章 属性基加密、全同态加密、后量子密码学。",
+   "access": "中国大学MOOC 免费注册学习；页面标注“认证学习”，认证证书收费；视频按开课学期提供。字幕未核对（MOOC 字幕需登录才显示）。",
+   "publisher": "电子科技大学（课程团队）；教材 杨波《现代密码学》第5版，清华大学出版社 2022",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/UESTC-1003046001",
+    "location": "课程概述（9 章结构）与授课目标、参考资料",
+    "finding": "页面课程概述逐章写明“第2章到第6章……流密码、分组密码、公钥密码、杂凑函数、数字签名，第7章密码协议……Diffie-Hellman密钥交换和Shamir秘密分享，第8章可证明安全理论，第9章……属性基加密、全同态加密、后量子密码学”，并列出杨波教材为参考书。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "CTF Wiki：密码学（中文练习向导览）",
+   "url": "https://ctf-wiki.org/crypto/introduction/",
+   "tier": "website",
+   "free": true,
+   "role": "alternative",
+   "covers": "古典密码、对称/公钥、哈希与签名的题目式练习入口；用于动手验证，不承担安全定义与可证明安全的讲解。",
+   "access": "免费在线阅读，社区维护；随站点更新。",
+   "publisher": "CTF Wiki 社区",
+   "evidence": {
+    "url": "https://ctf-wiki.org/crypto/introduction/",
+    "location": "密码学导言与子目录（古典密码、现代密码、哈希、签名）",
+    "finding": "页面为题目与工具导向的导览，正文给出攻击/解题思路而非课程式定义与证明。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "对称/公钥",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "infoSec02(1).pdf 第2章 对称密码与公钥密码（RSA/ElGamal）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第2–4章 流密码、分组密码、公钥密码",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 2–4 流/分组密码；Lec 9–12 群运算、DH、ElGamal、RSA",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "哈希",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.4.1 散列函数（单向性、强/弱抗碰撞性）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第5章 杂凑函数",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 7 Collision resistant hashing（Merkle-Damgård、Davies-Meyer、SHA/HMAC）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "MAC",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.4 散列函数和消息认证码（消息认证码小节）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第5章 杂凑函数（MAC 作为附带的认证用法）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 6 Message integrity: CBC-MAC and PMAC；Lec 8 AEAD",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文以“消息认证码”讲定义与用途，构造（CBC-MAC/PMAC、AEAD）由英文 Lec 6/8 补。"
+  },
+  {
+   "topic": "签名",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.5 数字签名；infoSec03.pdf 数字签名算法",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第6章 数字签名",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 13–14 签名定义、RSA 签名、hash-based 签名、证书/CT/吊销",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "密钥管理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.6 密钥管理与公钥分配（课件标注自学、不考核）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第7章 密码协议（DH 密钥交换）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 10 DH key exchange；Lec 14 证书与信任链；Lec 15 密钥交换/TLS",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文的密钥管理在课件中列为自学内容，PKI/证书链的工程细节靠英文 Lec 14–15 补。"
+  },
+  {
+   "topic": "协议与安全定义",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第7章 密码协议；第8章 可证明安全初步",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "infoSec11.pdf 第10章 IPSec/SSL-TLS/SET 协议结构",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 1–2 语义安全定义；Lec 8 AEAD/主动攻击；Lec 15 TLS 会话",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文把“安全定义”放在可证明安全一章讲，协议结构在 IPSec/TLS 一章；英文把定义（IND-CPA/CCA）贯穿在各构造讲次。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读 infoSec02(1).pdf 第2章：对称与公钥密码 → 2.4 散列函数与消息认证码 → 2.5 数字签名 → 2.6 密钥管理；每节手算一次 RSA 小例子与一次哈希校验。"
+    },
+    {
+     "source": "zh2",
+     "read": "按 MOOC 第2–6章补全流/分组/公钥/杂凑/签名的系统讲解，第7章做 DH 密钥交换与秘密分享练习，第8章读可证明安全的定义与归约思路，第9章了解 ABE/FHE/PQC 方向。"
+    },
+    {
+     "source": "zh3",
+     "read": "用 CTF Wiki 的题目验证古典密码与哈希/签名的实际攻击面，只作练习不替代定义。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 syllabus 从 Lec 1–4 建立 cipher/语义安全，Lec 6–8 学 MAC、抗碰撞哈希、AEAD，Lec 9–12 学群、DH、ElGamal、RSA，Lec 13–15 学签名、证书与 TLS。"
+    },
+    {
+     "source": "en1",
+     "read": "每讲做完 reading（AC/KL 对应章）后，用历年 final 题检查是否能写出安全定义与归约。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/UESTC-1003046001（直接核验电子科大《现代密码学》课程页）",
+   "result": "采纳：课程概述逐章列出流/分组/公钥/杂凑/签名/协议/可证明安全/前沿，正好对上六个必学主题。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "同上课程页的“播放/认证学习”入口 + USTC 课件仓库",
+   "result": "采纳：MOOC 视频需注册按学期开放；课件 PDF 可直接读，用于核对具体小节。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://crypto.stanford.edu/~dabo/cs255/syllabus.html",
+   "result": "采纳：逐讲标题与 reading 确认覆盖 MAC/哈希/签名/密钥交换。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm",
+   "result": "官方课程页只有章节表与实验安排，无课件资源链接，故密码学两章仍只能依赖第三方转载的 PDF。",
+   "by": "review/pi-additions/S.1.2.json"
+  }
+ ],
+ "findings": [
+  "原中文条目只有 CTF Wiki 密码学，属题目导览，缺安全定义、密钥管理与协议，无法支撑本技能的六个必学主题；降为 alternative 练习入口。",
+  "新增电子科大《现代密码学》MOOC + USTC 第2–3章课件作为中文主/辅：前者给 9 章系统结构与可证明安全，后者给对称/公钥/散列/MAC/签名/密钥管理的中文正文。",
+  "密钥管理在中文课件里标为自学、PKI 证书链细节弱，已在 topic note 标明由英文 Lec 14–15 补；不因此把 zh 判为缺口，因为中文仍有可读正文。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/S.1.2.json@6b80d636b7"
+ ]
+}
