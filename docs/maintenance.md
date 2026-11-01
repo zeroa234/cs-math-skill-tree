@@ -42,7 +42,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 | `scripts/archive_research.py` | 把审核过的检索结果从 `temp/research/nodes/` 归档到 `data/research/nodes/` |
 | `node tests/screenshot.mjs`、`node tests/screenshot-panel.mjs <id>` | 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器），含深链回归检查 |
 | `node scripts/readme-images.mjs` | 按当前构建重截 README 的四张预览图 `docs/images/{overview,skill-map,goal,guide}.webp`（1920×1080 深色，转 WebP 要 Python + Pillow）；数据变了就重跑。封面 `cover.webp` 另由 `scripts/promo/cover.py` 生成 |
-| `python -X utf8 scripts/package_web.py` | 把网页打成 `output/cs-math-skill-tree-<日期>.zip` 分享给别人（解压后双击 index.html；含 README.txt 和第三方许可证）。先跑 build |
+| `python -X utf8 scripts/package_web.py [标签]` | 把网页打成 `output/cs-math-skill-tree-<标签>.zip` 分享给别人（标签默认是当天日期，发 Release 时用版本号；解压后双击 index.html；含 README.txt 和第三方许可证，README.txt 里“前置待核实”的个数从数据里数）。先跑 build |
 | `node tests/a11y.mjs [report.json]` | axe-core 按 WCAG 2.2 AA 审计 15 个界面状态（含知识导览图），并跑一遍纯键盘的主流程；结论见 `docs/hci-ux-review.md` |
 | `scripts/promo/`（`capture-app.mjs`、`build-graph.mjs`、`word-times.mjs`、`blender-tree.py`、`render-blender.sh`、`render.sh`） | 宣传片：页面截图、动画数据、Blender 3D 技能树、成片。画面代码在 `src/promo/`（Remotion），文稿 `data/promo/script.json`，步骤和坑见 `docs/promo-video.md` |
 
@@ -96,5 +96,5 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 
 - 仓库 <https://github.com/zeroa234/cs-math-skill-tree>。本项目平时在作者工作区的大仓库里提交，`bash scripts/publish-github.sh` 用 `git subtree split` 拆出本目录的历史、去掉提交说明里的 AI 署名行，并把本地 git 身份（ZCode Agent）换成作者的 GitHub 身份（zeroa234 的 noreply 邮箱），再推到 `main`。2026-11-01 加身份替换时强推过一次，此后重建结果是确定的，每次都是快进推送；先加 `--dry-run` 只生成本地分支 `publish/cs-math-skill-tree` 看一眼。
 - 在线版：GitHub Pages。`.github/workflows/pages.yml` 在 `src/web/` 有改动时把它原样部署到 <https://zeroa234.github.io/cs-math-skill-tree/>，不在 CI 里重新构建，所以推送前先本地跑 `node scripts/build.mjs`。
-- 离线包：先 build，再 `python -X utf8 scripts/package_web.py`，把 `output/cs-math-skill-tree-<日期>.zip` 传到新的 Release：`gh release create vX.Y.Z <zip> --notes-file <说明.md>`。
+- 离线包：先 build，再 `python -X utf8 scripts/package_web.py vX.Y.Z`，把 `output/cs-math-skill-tree-vX.Y.Z.zip` 传到新的 Release：`gh release create vX.Y.Z <zip> --notes-file <说明.md>`。
 - Windows 上 gh 的中文命令行参数会变成乱码：Release 标题、仓库简介这类中文字段用 UTF-8 的 JSON 走 `gh api ... --input -`，改完读回核对。
