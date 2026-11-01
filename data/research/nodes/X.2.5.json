@@ -12,6 +12,16 @@
  "zh_alt": null,
  "courses": [
   {
+   "school": "武汉大学",
+   "course": "空间数据分析（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/WHU-1463179165",
+   "prereq_text": "预备知识：具备地理信息系统的基础知识、概率统计的基础知识。",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.2"
+   ]
+  },
+  {
    "school": "Pennsylvania State University",
    "course": "GEOG 485: GIS Programming and Software Development（在线公开课站，含全部 Lesson）",
    "url": "https://courses.ems.psu.edu/geog485/",
@@ -36,5 +46,5 @@
    "evidence": "GEOG 485 的课程目标就是'用编程自动化 GIS 软件'（ModelBuilder + Python 脚本），先修的 GEOG 484 'or equivalent experience' 与课程作业都要求能写脚本。"
   }
  ],
- "notes": "原图建议前置是'无'，所以 candidate_check 为空对象；但从真实课程看，地理空间计算方向至少隐含 D.1.1（数据建模/数据库）与 P.2.3（Python 科学计算）两条前置——证据见 extra_prereqs，建议主代理考虑补上。资源覆盖缺口：本节点是三个领域合并（时空/地球系统/文献与文化数据），geographicdata.science 只覆盖时空与空间统计这条；(1) 气候/地球系统方向需要另配（PSU 的 GEOG 487 Environmental Challenges in Spatial Data Science 教这门内容，但它的先修写的是项目注册限制 'Prerequisite: Enrollment in Post-baccalaureate Certificate in GIS ... program'，不是技能前置，故未计入）；(2) 数字人文方向的免费站是 Programming Historian（https://programminghistorian.org/ ，已打开确认存在，同行评审的人文计算教程集），可作为 zh_alt 之外的第二资源候选。另一个可用替代是 Pebesma & Bivand 的《Spatial Data Science》（https://r-spatial.org/book/ ，已确认存在，R 版），若学生更熟 R 可换。GEOG 484 自己的课程站需要登录（courses.ems.psu.edu/geog484/ 返回 401），所以它的信息我只用了公开的 PSU 课程目录，没有打开课程内页。"
+ "notes": "本节点收窄为地理空间数据科学（原来还挂着气候与数字人文）。先修证据：武汉大学《空间数据分析》课程页的预备知识写明要有地理信息系统和概率统计基础（地理信息系统不在本树内）；Penn State GEOG 485 的先修 GEOG 484 是 GIS 数据库开发，PSU 课程目录官方描述为 'GIS Database Development: Database design, creation, maintenance, and data integration using desktop GIS software'（bulletins.psu.edu），对应数据建模与数据库。GEOG 484 自己的课程站需要登录（返回 401），只用了公开课程目录。英文资源 Geographic Data Science with Python 目录里没有地图投影、数据立方体和时空地统计，这几项由导览图的补充来源 Pebesma & Bivand《Spatial Data Science》（https://r-spatial.org/book/ ，R 版）补上。"
 }

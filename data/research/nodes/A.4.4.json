@@ -12,40 +12,61 @@
  "zh_alt": null,
  "courses": [
   {
-   "school": "Carnegie Mellon University",
-   "course": "10-747 Neuro-Symbolic AI (Fall 2025)",
-   "url": "https://www.cs.cmu.edu/~pradeepr/747/",
-   "prereq_text": "Prerequisites: Basics of probability and statistical inference, and basics of machine learning (such as regression, classification, clustering). This course is for students who have already taken introductory courses in machine learning and statistics.",
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.7980 Topics in Multiagent Learning (Fall 2026)",
+   "url": "https://www.mit.edu/~6.7980",
+   "prereq_text": "Prerequisites: Discrete Mathematics and Algorithms at the advanced undergraduate level; mathematical maturity.",
    "prereq_kind": "required",
    "mapped_ids": [
-    "M.6.2",
-    "A.2.1"
+    "M.5.3",
+    "F.1.2"
    ]
   },
   {
-   "school": "Carnegie Mellon University",
-   "course": "80-516/80-816 Causality and Machine Learning (Spring 2025)",
-   "url": "https://www.andrew.cmu.edu/course/80-516/",
-   "prereq_text": "Prerequisites are not required, but introductory statistics or machine learning would be helpful.",
-   "prereq_kind": "recommended",
+   "school": "National Institute of Technology Raipur (Department of Computer Science & Engineering)",
+   "course": "CS31225CS Multi-Agent Reinforcement Learning（M.Tech CSE 课程大纲，Semester II）",
+   "url": "https://www.nitrr.ac.in/downloads/mtech_cse2026/about/Semester_II/Multi-Agent_Reinforcement_Learning.pdf",
+   "prereq_text": "Pre-Requisites: Reinforcement Learning, Probability and Statistics, Linear Algebra, Optimization, Python Programming, and basic Deep Learning.",
+   "prereq_kind": "required",
    "mapped_ids": [
-    "M.6.2",
-    "A.2.1"
+    "A.2.4",
+    "M.6.1",
+    "M.3.1",
+    "M.7.1",
+    "P.2.3",
+    "A.2.3"
    ]
   }
  ],
- "candidate_check": {},
+ "candidate_check": {
+  "A.2.4": "supported",
+  "M.7.6": "not_mentioned",
+  "A.2.1": "not_mentioned",
+  "A.2.3": "supported",
+  "M.6.1": "supported",
+  "M.3.1": "supported"
+ },
  "extra_prereqs": [
   {
-   "id": "A.2.1",
+   "id": "P.2.3",
    "kind": "required",
-   "evidence": "CMU 10-747 'This course is for students who have already taken introductory courses in machine learning and statistics'。"
+   "evidence": "NIT Raipur CS31225CS：Pre-Requisites 里明列 'Python Programming'。"
   },
   {
-   "id": "M.6.2",
+   "id": "M.7.1",
    "kind": "required",
-   "evidence": "CMU 10-747 'Basics of probability and statistical inference'；CMU 80-516 说 'introductory statistics or machine learning would be helpful'。"
+   "evidence": "NIT Raipur CS31225CS：Pre-Requisites 里明列 'Optimization'（课程没有细分凸/非凸，按优化基础 M.7.1 记）。"
+  },
+  {
+   "id": "F.1.2",
+   "kind": "required",
+   "evidence": "MIT 6.7980：'Discrete Mathematics and Algorithms at the advanced undergraduate level'——算法部分对应 F.1.2。"
+  },
+  {
+   "id": "M.5.3",
+   "kind": "required",
+   "evidence": "MIT 6.7980：同上那句里的 'Discrete Mathematics'，对应证明方法与离散结构 M.5.3。"
   }
  ],
- "notes": "原图对本节点没给建议前置（candidate_check 为空）。证据显示两个子方向的门槛都在机器学习/统计：CMU 10-747 明说要上过 ML 与统计导论；CMU 80-516 说统计或机器学习「有帮助」但不是必需。资源只覆盖三分之一的主题，这点必须说清楚：marl-book 解决「协作与博弈」，但「因果表征」和「神经符号」它不讲。补充（均已打开核实）：因果方向用 Brady Neal 的免费在线课程 Introduction to Causal Inference（https://www.bradyneal.com/causal-inference-course ，原文 'There is one main prerequisite: basic probability'，含免费书稿与 slides）或 CMU 80-516；神经符号方向用 CMU 10-747（半天讲课 + 半天学生读 paper 的研讨课，讲稿/课表公开）。若只能给一个资源，marl-book 是三者中唯一成体系、免费、带代码与 slides 的完整教材，且节点首个关键词就是多智能体协作与博弈。另：marl-book 第 2 章自带 RL 基础，所以不要求 A.2.4（强化学习）作先修——它把 RL 讲在书里。 另：marl-book 前言自述读者前提 'Readers are assumed to have an undergraduate background in basic mathematics and a basic familiarity with programming to use the codebase.'（这是书的前言，不是课程先修声明，所以没写进 extra_prereqs）。"
+ "notes": "本节点收窄为多智能体强化学习后，先修证据换成两门讲多智能体的课：MIT 6.7980 Topics in Multiagent Learning（博弈论、优化与学习理论视角：纳什均衡、遗憾最小化、学习动态、多智能体深度强化学习）和 NIT Raipur CS31225CS Multi-Agent Reinforcement Learning（MDP 复习、矩阵与随机博弈、Dec-POMDP、非平稳与信用分配、独立学习者、CTDE、MADDPG、QMIX、自我对弈）。判定：强化学习在 NIT 课里是明文先修，且入门算法都建立在单智能体 RL 上，定为必须；博弈论两门课都在课内讲、没有列为先修，定为推荐；基础深度学习只在 NIT 课列为先修、只在深度 MARL 部分用到，定为推荐；MIT 6.7980 要求高年级本科水平的离散数学与算法，偏理论，定为推荐。概率、线性代数、优化、Python 由强化学习的前置间接覆盖。marl-book 前言自述读者需要本科数学基础和基本编程能力，这是书的前言，不是课程先修声明。"
 }
