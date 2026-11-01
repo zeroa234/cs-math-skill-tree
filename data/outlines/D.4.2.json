@@ -1,0 +1,364 @@
+{
+ "id": "D.4.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Knowledge Graphs",
+   "by": "Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d'Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (Springer)",
+   "year": 2021,
+   "url": "https://kgbook.org/",
+   "toc_urls": [
+    "https://kgbook.org/"
+   ],
+   "why": "节点现有英文资源本身：Springer 开放获取全书，第 4 章 Deductive Knowledge 从模型论讲本体语义、蕴涵，再讲规则与描述逻辑两类推理；第 5 章 Inductive Knowledge 讲图分析与图嵌入、GNN、符号学习（规则/公理挖掘），正是“神经符号结合”；第 7/8 章讲推理结果的一致性校验与修复。入门层 D3，用这本研究生层次的导论合适。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "Introduction to Ontology Engineering, with emphasis on Semantic Web Technologies",
+   "by": "Maria Keet (Free University of Bozen-Bolzano), Masters Ontology Winter School 2010, CSIR Meraka Institute",
+   "year": 2010,
+   "url": "http://www.meteck.org/teaching/SA/MOWS10OntoEngCouse.html",
+   "toc_urls": [
+    "http://www.meteck.org/teaching/SA/MOWS10OntoEngCouse.html"
+   ],
+   "why": "补“语义互操作”：kgbook 讲单个图谱内部怎么推理，没有一门课专门讲“用统一的本体语言做交换、把遗留关系库/自然语言/叙词表这类异构来源映射进本体”。这门课（也是本节点先修证据里的课程）的官方大纲有 OWL/OWL 2 语言与自下而上的本体开发两章，正好补这一块。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Deductive Knowledge",
+   "zh": "演绎知识",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Ontologies",
+     "zh": "本体",
+     "items": [
+      {
+       "ref": "4.1.1",
+       "title": "Interpretations and models",
+       "zh": "解释与模型"
+      },
+      {
+       "ref": "4.1.2",
+       "title": "Ontology features",
+       "zh": "本体特性"
+      },
+      {
+       "ref": "4.1.3",
+       "title": "Entailment",
+       "zh": "蕴涵"
+      },
+      {
+       "ref": "4.1.4",
+       "title": "If–then vs. if-and-only-if semantics",
+       "zh": "if–then 与 if-and-only-if 语义"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "Reasoning",
+     "zh": "推理",
+     "items": [
+      {
+       "ref": "4.2.1",
+       "title": "Rules",
+       "zh": "规则"
+      },
+      {
+       "ref": "4.2.2",
+       "title": "Description Logics",
+       "zh": "描述逻辑"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Inductive Knowledge",
+   "zh": "归纳知识",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Graph Analytics",
+     "zh": "图分析",
+     "items": [
+      {
+       "ref": "5.1.1",
+       "title": "Techniques",
+       "zh": "分析技术"
+      },
+      {
+       "ref": "5.1.2",
+       "title": "Frameworks",
+       "zh": "分析框架"
+      },
+      {
+       "ref": "5.1.3",
+       "title": "Analytics on data graphs",
+       "zh": "数据图上的分析"
+      },
+      {
+       "ref": "5.1.4",
+       "title": "Analytics with queries",
+       "zh": "基于查询的分析"
+      },
+      {
+       "ref": "5.1.5",
+       "title": "Analytics with entailment",
+       "zh": "带蕴涵的分析"
+      }
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "Knowledge Graph Embeddings",
+     "zh": "知识图谱嵌入",
+     "items": [
+      {
+       "ref": "5.2.1",
+       "title": "Tensor-based models",
+       "zh": "张量分解模型"
+      },
+      {
+       "ref": "5.2.2",
+       "title": "Language models",
+       "zh": "语言模型"
+      },
+      {
+       "ref": "5.2.3",
+       "title": "Entailment-aware models",
+       "zh": "考虑蕴涵的嵌入模型"
+      }
+     ]
+    },
+    {
+     "ref": "5.3",
+     "title": "Graph Neural Networks",
+     "zh": "图神经网络",
+     "items": [
+      {
+       "ref": "5.3.1",
+       "title": "Recursive graph neural networks",
+       "zh": "递归图神经网络"
+      },
+      {
+       "ref": "5.3.2",
+       "title": "Non-recursive graph neural networks",
+       "zh": "非递归图神经网络"
+      }
+     ]
+    },
+    {
+     "ref": "5.4",
+     "title": "Symbolic Learning",
+     "zh": "符号学习",
+     "items": [
+      {
+       "ref": "5.4.1",
+       "title": "Rule mining",
+       "zh": "规则挖掘"
+      },
+      {
+       "ref": "5.4.2",
+       "title": "Axiom mining",
+       "zh": "公理挖掘"
+      },
+      {
+       "ref": "5.4.3",
+       "title": "Hypothesis mining",
+       "zh": "假设挖掘"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Quality Assessment",
+   "zh": "质量评估",
+   "items": [
+    {
+     "ref": "7.3",
+     "title": "Coherency",
+     "zh": "协调性",
+     "items": [
+      {
+       "ref": "7.3.1",
+       "title": "Consistency",
+       "zh": "逻辑一致性"
+      },
+      {
+       "ref": "7.3.2",
+       "title": "Validity",
+       "zh": "有效性"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Refinement",
+   "zh": "知识精化",
+   "items": [
+    {
+     "ref": "8.2",
+     "title": "Correction",
+     "zh": "纠错",
+     "items": [
+      {
+       "ref": "8.2.1",
+       "title": "Fact validation",
+       "zh": "事实校验"
+      },
+      {
+       "ref": "8.2.2",
+       "title": "Inconsistency repairs",
+       "zh": "不一致性修复"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Ontology languages",
+   "zh": "本体语言",
+   "fill": "补“语义互操作”的语言标准一侧：OWL 与 OWL 2 作为跨系统交换语义的标准本体语言（kgbook 只把 OWL 当作已有背景提，没有语言特性与版本演进的章节）",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "OWL",
+     "zh": "OWL"
+    },
+    {
+     "ref": "2.3",
+     "title": "OWL 2",
+     "zh": "OWL 2"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Bottom-up ontology development",
+   "zh": "自下而上的本体开发",
+   "fill": "补“语义互操作”的来源映射一侧：把关系数据库等遗留知识表示、自然语言处理结果、生物模型与叙词表映射成共享本体，是异构系统之间语义互通的实际做法",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Relational databases and related 'legacy' KR",
+     "zh": "关系数据库与相关的“遗留”知识表示"
+    },
+    {
+     "ref": "4.2",
+     "title": "Natural language processing and ontologies",
+     "zh": "自然语言处理与本体"
+    },
+    {
+     "ref": "4.3",
+     "title": "Biological models and thesauri",
+     "zh": "生物模型与叙词表"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Methods and methodologies",
+   "zh": "方法与方法论",
+   "fill": "补“语义约束”的工程侧：设计参数如何互相牵制、如何用 OntoClean 与调试找出本体的不一致（kgbook 第 7 章只给质量维度，不给方法论）",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Design parameters and their dependencies",
+     "zh": "设计参数及其依赖"
+    },
+    {
+     "ref": "5.2",
+     "title": "Methods: OntoClean and Debugging",
+     "zh": "方法：OntoClean 与调试"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "描述逻辑",
+   "refs": [
+    "A:4.2.2",
+    "A:4.1.1",
+    "A:4.1.3",
+    "A:4.1.4"
+   ],
+   "note": "4.2.2 Description Logics 一节直接讲 DL 的语法与推理；4.1.1 解释与模型、4.1.3 蕴涵、4.1.4 if–then 与 iff 语义是 DL 语义与推理的模型论基础。"
+  },
+  {
+   "topic": "规则推理",
+   "refs": [
+    "A:4.2.1",
+    "A:5.1.5",
+    "A:5.4.1"
+   ],
+   "note": "4.2.1 Rules 讲规则（Datalog 式）推理；5.1.5 讲带蕴涵的图分析（在推理闭包上做分析）；5.4.1 规则挖掘是从数据里学出规则，属规则的另一侧。"
+  },
+  {
+   "topic": "语义互操作",
+   "refs": [
+    "B:2.1",
+    "B:2.3",
+    "B:4.1",
+    "B:4.2",
+    "B:4.3",
+    "A:4.1.1"
+   ],
+   "note": "互操作需要“共同语言 + 来源映射”：B 的 2.1/2.3 给 OWL 与 OWL 2 这套标准交换语言，4.1–4.3 给把关系数据库、自然语言处理结果、叙词表等异构来源映射进本体的做法；A 的 4.1.1（解释与模型）是“同一套语义下不同系统才有共同含义”的理论根据。"
+  },
+  {
+   "topic": "神经符号结合",
+   "refs": [
+    "A:5.2",
+    "A:5.2.3",
+    "A:5.3",
+    "A:5.3.1",
+    "A:5.3.2",
+    "A:5.4",
+    "A:5.4.1",
+    "A:5.4.2",
+    "A:5.4.3"
+   ],
+   "note": "第 5 章整章就是神经符号谱系：5.2 知识图谱嵌入（张量分解、语言模型、5.2.3 考虑蕴涵的嵌入——把逻辑约束注入表示学习）、5.3 图神经网络（递归/非递归）、5.4 符号学习（规则挖掘、公理挖掘、假设挖掘，即从数据学出符号知识）。"
+  },
+  {
+   "topic": "语义约束（推理结果的校验）",
+   "refs": [
+    "A:7.3.1",
+    "A:7.3.2",
+    "A:8.2.1",
+    "A:8.2.2",
+    "B:5.1",
+    "B:5.2"
+   ],
+   "note": "节点简介没单列，但推理必须可校验：A 的 7.3.1 逻辑一致性、7.3.2 有效性是判断推理产物是否自洽的维度，8.2.1 事实校验与 8.2.2 不一致性修复是修的手段；B 的 5.1/5.2 从本体设计参数与调试角度讲约束怎么设计、不一致怎么查。"
+  }
+ ],
+ "omitted": "A（Knowledge Graphs）未收：第 1 章 Introduction、第 2 章 Data Graphs 与第 3 章 Schema/Identity/Context（数据模型与本体表示，已在节点 D.4.1 收录）、第 6 章 Creation and Enrichment（知识抽取，属 D.4.1 的融合一侧）、第 9 章 Publication、第 10 章 Knowledge Graphs in Practice、第 11 章 Summary；第 5 章的 5.1 只收 5.1.1–5.1.5 的节名（不再展开子节），第 7 章的 7.1 Accuracy/7.2 Coverage/7.4 Succinctness/7.5 与第 8 章的 8.1 Completion/8.3 未收（属数据质量与补全，不是推理主线）；附录 A Background 与 Bibliography 不算目录条目。B（Keet 课程）未收 1. Introduction（什么是本体、成功案例，属 D.4.1）、3. Foundational and Top-down aspects（基础本体、部分-整体关系、本体设计模式）、6. Extra topics（不确定性、时间本体、社会性挑战）与 Bibliography/A-B 参考书目；该页大纲本身缺 2.2 一节（原文直接从 2.1 OWL 跳到 2.3 OWL 2），照原文抄录未补编号。",
+ "notes": "两点说明：(1) A 的 ref 抄 kgbook.org 目录页上的编号，title 抄编号后的原文，节点要求细到描述逻辑/规则/嵌入这些小节，所以用第三层。(2) B 的课程大纲页有 HTML 排版造成的粘连（原文写作 “related'legacy' KR”“andontologies”），按简报要求写成正确拼写 “related 'legacy' KR”“and ontologies”，核对脚本忽略标点与空格，仍能对上原文；该页无年份编号，year 取课程举办年份 2010（页面写明 26-30 July 2010）。B 的课程页是本节点先修证据里列出的同一门课，选它同时保持了“去哪学”与导览图一致。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 45,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

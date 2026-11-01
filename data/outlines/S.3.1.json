@@ -1,0 +1,618 @@
+{
+ "id": "S.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Web Security Academy",
+   "by": "PortSwigger (Dafydd Stuttard et al.)",
+   "url": "https://portswigger.net/web-security",
+   "toc_urls": [
+    "https://portswigger.net/web-security/all-topics",
+    "https://portswigger.net/web-security/sql-injection",
+    "https://portswigger.net/web-security/cross-site-scripting",
+    "https://portswigger.net/web-security/authentication",
+    "https://portswigger.net/web-security/access-control",
+    "https://portswigger.net/web-security/api-testing"
+   ],
+   "why": "节点现有英文资源就是它；免费在线，每个主题页自带一条分节目录（导航栏按“主题 → 子主题”逐条列出），覆盖注入、XSS、认证、访问控制、API 测试，正是 D2 层要掌握的四类边界问题。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "CS 253 Web Security",
+   "by": "Feross Aboukhadijeh (Stanford University)",
+   "year": 2021,
+   "url": "https://web.stanford.edu/class/cs253/",
+   "toc_urls": [
+    "https://web.stanford.edu/class/cs253/"
+   ],
+   "why": "补“会话”这一块：A 全书没有独立的会话管理主题，只在认证与访问控制两章顺带提到会话标识；CS 253 用一整讲 Cookies and Sessions 加一讲 Session attacks / CSRF，按“状态怎么保持、怎么被劫持”讲清楚。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "SQL injection",
+   "zh": "SQL 注入",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is SQL injection?",
+     "zh": "什么是 SQL 注入"
+    },
+    {
+     "ref": "",
+     "title": "What is the impact of SQL injection?",
+     "zh": "SQL 注入的影响"
+    },
+    {
+     "ref": "",
+     "title": "Detecting SQL injection vulnerabilities",
+     "zh": "检测 SQL 注入漏洞",
+     "items": [
+      {
+       "ref": "",
+       "title": "In different parts of the query",
+       "zh": "查询语句的不同位置"
+      },
+      {
+       "ref": "",
+       "title": "In different contexts",
+       "zh": "不同上下文中的注入"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Examples of SQL injection",
+     "zh": "SQL 注入示例",
+     "items": [
+      {
+       "ref": "",
+       "title": "Retrieving hidden data",
+       "zh": "获取隐藏数据"
+      },
+      {
+       "ref": "",
+       "title": "Subverting application logic",
+       "zh": "颠覆应用逻辑"
+      },
+      {
+       "ref": "",
+       "title": "Retrieving data from other tables",
+       "zh": "读取其他表的数据"
+      },
+      {
+       "ref": "",
+       "title": "Examining the database",
+       "zh": "探查数据库"
+      },
+      {
+       "ref": "",
+       "title": "Second-order SQL injection",
+       "zh": "二次注入"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "UNION attacks",
+     "zh": "UNION 联合查询注入",
+     "items": [
+      {
+       "ref": "",
+       "title": "Determining the number of columns",
+       "zh": "确定查询列数"
+      },
+      {
+       "ref": "",
+       "title": "Retrieving interesting data",
+       "zh": "提取目标数据"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Blind SQL injection",
+     "zh": "盲注",
+     "items": [
+      {
+       "ref": "",
+       "title": "What is blind SQL injection?",
+       "zh": "什么是盲 SQL 注入"
+      },
+      {
+       "ref": "",
+       "title": "Triggering conditional responses",
+       "zh": "触发条件响应"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Error-based SQL injection",
+     "zh": "基于报错的 SQL 注入",
+     "items": [
+      {
+       "ref": "",
+       "title": "Extracting data via verbose error messages",
+       "zh": "利用详细报错提取数据"
+      },
+      {
+       "ref": "",
+       "title": "Triggering time delays",
+       "zh": "触发时间延迟"
+      },
+      {
+       "ref": "",
+       "title": "Out-of-band (OAST) techniques",
+       "zh": "带外（OAST）技术"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "How to prevent SQL injection",
+     "zh": "如何防御 SQL 注入"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Cross-site scripting",
+   "zh": "跨站脚本",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is XSS?",
+     "zh": "什么是 XSS"
+    },
+    {
+     "ref": "",
+     "title": "How does XSS work?",
+     "zh": "XSS 的工作原理"
+    },
+    {
+     "ref": "",
+     "title": "Reflected XSS",
+     "zh": "反射型 XSS"
+    },
+    {
+     "ref": "",
+     "title": "Stored XSS",
+     "zh": "存储型 XSS"
+    },
+    {
+     "ref": "",
+     "title": "DOM-based XSS",
+     "zh": "基于 DOM 的 XSS",
+     "items": [
+      {
+       "ref": "",
+       "title": "HTML sinks",
+       "zh": "HTML 汇聚点"
+      },
+      {
+       "ref": "",
+       "title": "JavaScript execution sinks",
+       "zh": "JavaScript 执行汇聚点"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "XSS contexts",
+     "zh": "XSS 的注入上下文",
+     "items": [
+      {
+       "ref": "",
+       "title": "Between HTML tags",
+       "zh": "HTML 标签之间"
+      },
+      {
+       "ref": "",
+       "title": "In HTML tag attributes",
+       "zh": "HTML 标签属性内"
+      },
+      {
+       "ref": "",
+       "title": "JavaScript",
+       "zh": "JavaScript 代码内"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Content security policy (CSP)",
+     "zh": "内容安全策略（CSP）"
+    },
+    {
+     "ref": "",
+     "title": "Preventing XSS attacks",
+     "zh": "防御 XSS 攻击",
+     "items": [
+      {
+       "ref": "",
+       "title": "Encode data on output",
+       "zh": "输出时编码数据"
+      },
+      {
+       "ref": "",
+       "title": "Validate input on arrival",
+       "zh": "入口处校验输入"
+      },
+      {
+       "ref": "",
+       "title": "Whitelisting vs blacklisting",
+       "zh": "白名单与黑名单"
+      },
+      {
+       "ref": "",
+       "title": "Using a template engine",
+       "zh": "使用模板引擎"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Authentication vulnerabilities",
+   "zh": "认证漏洞",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is authentication?",
+     "zh": "什么是认证"
+    },
+    {
+     "ref": "",
+     "title": "Authentication vs authorization",
+     "zh": "认证与授权的区别"
+    },
+    {
+     "ref": "",
+     "title": "How vulnerabilities arise",
+     "zh": "认证漏洞从何而来"
+    },
+    {
+     "ref": "",
+     "title": "Vulnerabilities in password-based authentication",
+     "zh": "基于口令的认证漏洞",
+     "items": [
+      {
+       "ref": "",
+       "title": "Brute-force attacks",
+       "zh": "暴力破解攻击"
+      },
+      {
+       "ref": "",
+       "title": "Flaws in brute-force protection",
+       "zh": "防暴力破解机制的缺陷"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Vulnerabilities in multi-factor authentication",
+     "zh": "多因素认证漏洞",
+     "items": [
+      {
+       "ref": "",
+       "title": "Two-factor authentication tokens",
+       "zh": "双因素认证令牌"
+      },
+      {
+       "ref": "",
+       "title": "Bypassing two-factor authentication",
+       "zh": "绕过双因素认证"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Vulnerabilities in other authentication mechanisms",
+     "zh": "其他认证机制的漏洞",
+     "items": [
+      {
+       "ref": "",
+       "title": "Keeping users logged in",
+       "zh": "保持用户登录状态"
+      },
+      {
+       "ref": "",
+       "title": "Resetting user passwords",
+       "zh": "重置用户口令"
+      },
+      {
+       "ref": "",
+       "title": "Changing user passwords",
+       "zh": "修改用户口令"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Vulnerabilities in OAuth authentication",
+     "zh": "OAuth 认证漏洞"
+    },
+    {
+     "ref": "",
+     "title": "Securing your authentication mechanisms",
+     "zh": "加固认证机制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Access control",
+   "zh": "访问控制",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is access control?",
+     "zh": "什么是访问控制",
+     "items": [
+      {
+       "ref": "",
+       "title": "Vertical access controls",
+       "zh": "纵向访问控制"
+      },
+      {
+       "ref": "",
+       "title": "Horizontal access controls",
+       "zh": "横向访问控制"
+      },
+      {
+       "ref": "",
+       "title": "Context-dependent access controls",
+       "zh": "依赖上下文的访问控制"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Vertical privilege escalation",
+     "zh": "纵向权限提升",
+     "items": [
+      {
+       "ref": "",
+       "title": "Unprotected functionality",
+       "zh": "未受保护的功能"
+      },
+      {
+       "ref": "",
+       "title": "Parameter-based access control",
+       "zh": "基于参数的访问控制"
+      },
+      {
+       "ref": "",
+       "title": "Platform misconfiguration",
+       "zh": "平台配置错误"
+      },
+      {
+       "ref": "",
+       "title": "URL-matching discrepancies",
+       "zh": "URL 匹配不一致"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Horizontal privilege escalation",
+     "zh": "横向权限提升"
+    },
+    {
+     "ref": "",
+     "title": "Horizontal to vertical privilege escalation",
+     "zh": "横向到纵向的权限提升"
+    },
+    {
+     "ref": "",
+     "title": "Insecure direct object references (IDOR)",
+     "zh": "不安全的直接对象引用（IDOR）",
+     "items": [
+      {
+       "ref": "",
+       "title": "Direct references to database objects",
+       "zh": "直接引用数据库对象"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Vulnerabilities in multi-step processes",
+     "zh": "多步流程中的漏洞"
+    },
+    {
+     "ref": "",
+     "title": "Vulnerabilities in Referer-based controls",
+     "zh": "基于 Referer 的控制漏洞"
+    },
+    {
+     "ref": "",
+     "title": "Preventing",
+     "zh": "防御措施"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "API testing",
+   "zh": "API 测试",
+   "items": [
+    {
+     "ref": "",
+     "title": "API recon",
+     "zh": "API 侦察"
+    },
+    {
+     "ref": "",
+     "title": "API documentation",
+     "zh": "API 文档",
+     "items": [
+      {
+       "ref": "",
+       "title": "Discovering API documentation",
+       "zh": "发现 API 文档"
+      },
+      {
+       "ref": "",
+       "title": "Using machine-readable API documentation",
+       "zh": "使用机器可读的 API 文档"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Identifying API endpoints",
+     "zh": "识别 API 端点"
+    },
+    {
+     "ref": "",
+     "title": "Interacting with API endpoints",
+     "zh": "与 API 端点交互",
+     "items": [
+      {
+       "ref": "",
+       "title": "Identifying supported HTTP methods",
+       "zh": "识别支持的 HTTP 方法"
+      },
+      {
+       "ref": "",
+       "title": "Identifying supported content types",
+       "zh": "识别支持的内容类型"
+      },
+      {
+       "ref": "",
+       "title": "Finding hidden parameters",
+       "zh": "发现隐藏参数"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Mass assignment vulnerabilities",
+     "zh": "批量赋值漏洞",
+     "items": [
+      {
+       "ref": "",
+       "title": "Testing mass assignment vulnerabilities",
+       "zh": "测试批量赋值漏洞"
+      },
+      {
+       "ref": "",
+       "title": "Preventing vulnerabilities in APIs",
+       "zh": "防御 API 漏洞"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Server-side parameter pollution",
+     "zh": "服务端参数污染",
+     "items": [
+      {
+       "ref": "",
+       "title": "Testing the query string",
+       "zh": "测试查询字符串"
+      },
+      {
+       "ref": "",
+       "title": "Overriding existing parameters",
+       "zh": "覆盖既有参数"
+      },
+      {
+       "ref": "",
+       "title": "Testing structured data formats",
+       "zh": "测试结构化数据格式"
+      },
+      {
+       "ref": "",
+       "title": "Preventing server-side parameter pollution",
+       "zh": "防御服务端参数污染"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Alignment with the OWASP Top 10 API vulnerabilities",
+     "zh": "与 OWASP API 安全十大风险的对应"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Sep 28",
+   "title": "Same Origin Policy",
+   "zh": "同源策略",
+   "fill": "服务端/客户端与接口安全：浏览器同源策略是客户端把不同来源的内容隔开的边界，A 只在 XSS 章顺带提到",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Sep 30",
+   "title": "Cookies and Sessions",
+   "zh": "Cookie 与会话",
+   "fill": "认证会话：HTTP 无状态之上如何用 Cookie 维持会话状态",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Oct 05",
+   "title": "Session attacks, Cross-Site Request Forgery",
+   "zh": "会话攻击与跨站请求伪造",
+   "fill": "认证会话：会话标识被窃取、固定、滥用（含 CSRF）的路径与防御",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "输入输出边界",
+   "refs": [
+    "A:#1",
+    "A:#2"
+   ],
+   "note": "A 的 SQL 注入章从输入端讲：Detecting SQL injection vulnerabilities 下面分 In different parts of the query 与 In different contexts，说明同一段不可信输入落在不同语法位置就要不同的处理，How to prevent SQL injection 给参数化查询；XSS 章的 Preventing XSS attacks 直接给出输出编码（Encode data on output）与入口校验（Validate input on arrival）这对边界原则，并用 XSS contexts（HTML 标签之间、HTML 标签属性内、JavaScript）说明输出上下文决定编码方式。"
+  },
+  {
+   "topic": "认证会话",
+   "refs": [
+    "A:#3",
+    "B:Sep 30",
+    "B:Oct 05"
+   ],
+   "note": "认证看 A 的 Authentication vulnerabilities 章（口令、多因素、其他认证机制、OAuth、加固措施）；会话状态本身 A 没有独立主题，只在 Keeping users logged in、Access control 章开头“Session management identifies which subsequent HTTP requests are being made by that same user”里点到，所以会话机制与会话攻击用 B 的两讲补齐。"
+  },
+  {
+   "topic": "访问控制",
+   "refs": [
+    "A:#4"
+   ],
+   "note": "A 的 Access control 章先给 What is access control?（纵向、横向、依赖上下文三类控制），再讲纵向/横向权限提升、IDOR、多步流程与基于 Referer 的控制缺陷，末节 Preventing 给防御。"
+  },
+  {
+   "topic": "服务端/客户端与接口安全",
+   "refs": [
+    "A:#2",
+    "A:#5",
+    "B:Sep 28"
+   ],
+   "note": "客户端一侧看 A 的 XSS 章（DOM-based XSS 与其 HTML/JavaScript 执行汇聚点、CSP）以及 B 的同源策略一讲；接口一侧看 A 的 API testing 章（API recon、API documentation、识别端点与隐藏参数、mass assignment、server-side parameter pollution，并对应 OWASP API 安全十大风险）；服务端一侧由 A 的 SQL 注入章（注入落在服务端查询）与 Access control 章承担。"
+  }
+ ],
+ "omitted": "A 只收 5 个主题（SQL injection、Cross-site scripting、Authentication、Access control、API testing），并各只抄其分节目录：其余主题（Path traversal、Command injection、Business logic vulnerabilities、Information disclosure、File upload vulnerabilities、Race conditions、SSRF、XXE injection、NoSQL injection、Web cache deception、CSRF、CORS、Clickjacking、DOM-based vulnerabilities、WebSockets、Insecure deserialization、Web LLM attacks、GraphQL API vulnerabilities、Server-side template injection、Web cache poisoning、HTTP Host header attacks、HTTP request smuggling、OAuth authentication、JWT attacks、Prototype pollution、Essential skills）属于同一目录下的其他分支，多数与 S.4.1、S.2.x 相邻节点重叠，未收；各主题页里的 labs 列表、cheat sheet 页也不收。B 只收与会话、同源策略相关的 3 讲，CS 253 其余各讲（Web 安全概览、DNS/HTTP、XSS 与防御、拒绝服务与钓鱼、在线追踪、HTTPS、WebAuthn、DNS rebinding、浏览器架构等）与 S.2.x 网络/浏览器安全节点重叠，未收。",
+ "notes": "A 是在线课程/文档型资源，站点持续更新、页面上没有出版年，所以 year 留空。A 的每个主题页没有章节编号，分支的 ref 只能留空，coverage 里用 A:#1–A:#5 指第几个分支（顺序：SQL injection、Cross-site scripting、Authentication、Access control、API testing）。子条目全部取自各主题页导航栏的分节标题（“Back to all topics”后面那一串），三级条目只用到主题页里真正的下层小节（如 Examples of SQL injection 下的 Retrieving hidden data），未自行编造层级；主题页正文里的 lab 名与 cheat sheet 没收。B 的 ref 用课程表上的日期（如 Sep 30），因为 CS 253 的课表按日期逐讲列出，没有讲次编号。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 96,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

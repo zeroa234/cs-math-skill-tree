@@ -1,0 +1,300 @@
+{
+ "id": "F.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS 345H: Programming Languages (Honors), Spring 2024",
+   "by": "James Bornholt",
+   "year": 2024,
+   "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/",
+   "toc_urls": [
+    "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/schedule/"
+   ],
+   "why": "节点现有英文资源；Schedule 页逐讲列出主题：Semantics via Interpreters、Transition Systems、IMP 的操作语义、公理语义与 Hoare 逻辑、STLC 与类型安全、System F，与“操作/公理语义 + 类型安全”直接对应。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Semantics with Applications: An Appetizer",
+   "by": "Hanne Riis Nielson and Flemming Nielson",
+   "year": 2007,
+   "url": "https://faculty.sist.shanghaitech.edu.cn/faculty/songfu/course/fall2018/CS131/sa.pdf",
+   "toc_urls": [
+    "https://faculty.sist.shanghaitech.edu.cn/faculty/songfu/course/fall2018/CS131/sa.pdf"
+   ],
+   "why": "补指称语义：A 没有指称语义一讲。这是程序语义学的标准本科教材（Springer UTiCS），第 5 章把指称语义从直接风格语义、不动点理论到存在性证明讲完。"
+  },
+  {
+   "key": "C",
+   "kind": "notes",
+   "title": "Programming Language Principles and Paradigms (EECS 390, course notes)",
+   "by": "University of Michigan EECS 390",
+   "year": 2024,
+   "url": "https://eecs390.github.io/notes/",
+   "toc_urls": [
+    "https://eecs390.github.io/notes/"
+   ],
+   "why": "补子类型：A 讲到 System F 就停了，没有子类型。EECS 390 的 Formal Type Systems 一节有 Subtyping、Top 类型、函数子类型（协变/逆变）与完整类型规则，层次正合适。"
+  },
+  {
+   "key": "D",
+   "kind": "book",
+   "title": "Certified Programming with Dependent Types",
+   "by": "Adam Chlipala",
+   "year": 2019,
+   "url": "http://adam.chlipala.net/cpdt/",
+   "toc_urls": [
+    "http://adam.chlipala.net/cpdt/cpdt.pdf"
+   ],
+   "why": "补依赖类型：A、C 都不涉及依赖类型。MIT Press 授权作者长期免费发布的教材，第 6、8 章从子集类型讲到长度索引列表、依赖模式匹配与依赖类型红黑树。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Semantics via Interpreters",
+   "zh": "用解释器定义语义",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Transition Systems",
+   "zh": "迁移系统",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "IMP and Operational Semantics",
+   "zh": "IMP 语言与操作语义",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Axiomatic Semantics; Hoare Logic",
+   "zh": "公理语义与 Hoare 逻辑",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Simply-Typed Lambda Calculus; Type Safety",
+   "zh": "简单类型 λ 演算与类型安全",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Polymorphism and System F",
+   "zh": "多态与 System F",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Types Potpourri: Products and Sums",
+   "zh": "类型杂谈：积与和",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Denotational Semantics",
+   "zh": "指称语义",
+   "fill": "指称语义（直接风格语义、不动点理论、语义的存在性）",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Direct Style Semantics: Specification",
+     "zh": "直接风格语义：规范"
+    },
+    {
+     "ref": "5.2",
+     "title": "Fixed Point Theory",
+     "zh": "不动点理论"
+    },
+    {
+     "ref": "5.3",
+     "title": "Direct Style Semantics: Existence",
+     "zh": "直接风格语义：存在性"
+    },
+    {
+     "ref": "5.4",
+     "title": "An Equivalence Result",
+     "zh": "一个等价性结果"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Formal Type Systems",
+   "zh": "形式类型系统",
+   "fill": "子类型（子类型关系、顶类型、函数子类型的协变与逆变）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Variables",
+     "zh": "变量"
+    },
+    {
+     "ref": "",
+     "title": "Functions",
+     "zh": "函数"
+    },
+    {
+     "ref": "",
+     "title": "Subtyping",
+     "zh": "子类型",
+     "items": [
+      {
+       "ref": "",
+       "title": "Subtyping and Arithmetic Operators",
+       "zh": "子类型与算术运算符"
+      },
+      {
+       "ref": "",
+       "title": "The Top Type",
+       "zh": "顶类型"
+      },
+      {
+       "ref": "",
+       "title": "Subtyping and Functions",
+       "zh": "子类型与函数"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Full Typing Rules",
+     "zh": "完整类型规则"
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "6",
+   "title": "Subset Types and Variations",
+   "zh": "子集类型及其变体",
+   "fill": "依赖类型的入门形态：用子集类型把规范写进类型",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Introducing Subset Types",
+     "zh": "子集类型入门"
+    },
+    {
+     "ref": "6.2",
+     "title": "Decidable Proposition Types",
+     "zh": "可判定命题类型"
+    },
+    {
+     "ref": "6.3",
+     "title": "Partial Subset Types",
+     "zh": "偏子集类型"
+    },
+    {
+     "ref": "6.4",
+     "title": "Monadic Notations",
+     "zh": "单子记号"
+    },
+    {
+     "ref": "6.5",
+     "title": "A Type-Checking Example",
+     "zh": "类型检查实例"
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "8",
+   "title": "More Dependent Types",
+   "zh": "更多依赖类型",
+   "fill": "依赖类型在数据结构上的用法（长度索引列表、依赖模式匹配）",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Length-Indexed Lists",
+     "zh": "长度索引列表"
+    },
+    {
+     "ref": "8.2",
+     "title": "The One Rule of Dependent Pattern Matching in Coq",
+     "zh": "Coq 中依赖模式匹配的唯一规则"
+    },
+    {
+     "ref": "8.3",
+     "title": "A Tagless Interpreter",
+     "zh": "无标记解释器"
+    },
+    {
+     "ref": "8.4",
+     "title": "Dependently Typed Red-Black Trees",
+     "zh": "依赖类型红黑树"
+    },
+    {
+     "ref": "8.5",
+     "title": "A Certified Regular Expression Matcher",
+     "zh": "带证明的正则表达式匹配器"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "操作语义",
+   "refs": [
+    "A:#2",
+    "A:#3"
+   ]
+  },
+  {
+   "topic": "指称语义",
+   "refs": [
+    "B:5",
+    "B:5.1",
+    "B:5.3"
+   ]
+  },
+  {
+   "topic": "公理语义",
+   "refs": [
+    "A:#4"
+   ]
+  },
+  {
+   "topic": "类型安全",
+   "refs": [
+    "A:#5",
+    "A:#6"
+   ]
+  },
+  {
+   "topic": "子类型",
+   "refs": [
+    "C:#1"
+   ]
+  },
+  {
+   "topic": "依赖类型",
+   "refs": [
+    "D:6",
+    "D:8",
+    "D:8.1",
+    "D:8.2"
+   ]
+  }
+ ],
+ "omitted": "主来源 CS 345H 共 24 次课，只收了 7 讲：Functional Programming/ADTs、Rosette、Dafny、线性类型与 Rust 属实现工具与 F.3.1 范围，CompCert 与“Trusting trust”是阅读讨论（形式化验证与可信计算基，属 F.3.4），项目与习题课未收。补充来源 B 只取第 5 章；第 2 章操作语义、第 9 章公理语义与 A 重复，第 4、6、7、8、10 章是编译器正确性、符号检测与安全分析等应用，不在本节点。补充来源 D 只取第 6、8 章。",
+ "notes": "CS 345H 的 schedule 页只有日期与主题、无讲次号，A 的分支 ref 留空；B 用教材原编号（5、5.1…）；C 是 Sphinx 讲义、无编号，coverage 用 C:#1；D 用 CPDT 原章号。EECS 390 讲义里 “Subtyping” 一节下还有协变/逆变等小节，此处取到第二层。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 32,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

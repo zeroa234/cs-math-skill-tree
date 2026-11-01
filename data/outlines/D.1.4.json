@@ -1,0 +1,313 @@
+{
+ "id": "D.1.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "PostgreSQL 18 Documentation, Part III. Server Administration",
+   "by": "PostgreSQL Global Development Group",
+   "year": 2026,
+   "url": "https://www.postgresql.org/docs/current/admin.html",
+   "toc_urls": [
+    "https://www.postgresql.org/docs/current/admin.html"
+   ],
+   "why": "就是节点“现有英文学习资源”里的官方文档 Part III（服务器管理），全文免费、目录逐节编号；备份恢复（第 25 章）、授权（第 20、21 章）、加密（第 18 章）、监控与运维（第 19、24、27、28 章）都对上节点简介，属于“工程实践类节点用权威官方文档目录”的情形。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "18",
+   "title": "Server Setup and Operation",
+   "zh": "服务器安装与运行",
+   "items": [
+    {
+     "ref": "18.8",
+     "title": "Encryption Options",
+     "zh": "加密选项"
+    },
+    {
+     "ref": "18.9",
+     "title": "Secure TCP/IP Connections with SSL",
+     "zh": "用 SSL 建立安全的 TCP/IP 连接"
+    },
+    {
+     "ref": "18.10",
+     "title": "Secure TCP/IP Connections with GSSAPI Encryption",
+     "zh": "用 GSSAPI 加密建立安全的 TCP/IP 连接"
+    },
+    {
+     "ref": "18.11",
+     "title": "Secure TCP/IP Connections with SSH Tunnels",
+     "zh": "通过 SSH 隧道建立安全的 TCP/IP 连接"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "19",
+   "title": "Server Configuration",
+   "zh": "服务器配置",
+   "items": [
+    {
+     "ref": "19.8",
+     "title": "Error Reporting and Logging",
+     "zh": "错误报告与日志"
+    },
+    {
+     "ref": "19.9",
+     "title": "Run-time Statistics",
+     "zh": "运行时统计"
+    },
+    {
+     "ref": "19.10",
+     "title": "Vacuuming",
+     "zh": "清理（VACUUM）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "20",
+   "title": "Client Authentication",
+   "zh": "客户端认证",
+   "items": [
+    {
+     "ref": "20.1",
+     "title": "The pg_hba.conf File",
+     "zh": "pg_hba.conf 文件"
+    },
+    {
+     "ref": "20.3",
+     "title": "Authentication Methods",
+     "zh": "认证方法"
+    },
+    {
+     "ref": "20.5",
+     "title": "Password Authentication",
+     "zh": "口令认证"
+    },
+    {
+     "ref": "20.12",
+     "title": "Certificate Authentication",
+     "zh": "证书认证"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "21",
+   "title": "Database Roles",
+   "zh": "数据库角色",
+   "items": [
+    {
+     "ref": "21.2",
+     "title": "Role Attributes",
+     "zh": "角色属性"
+    },
+    {
+     "ref": "21.3",
+     "title": "Role Membership",
+     "zh": "角色成员资格"
+    },
+    {
+     "ref": "21.5",
+     "title": "Predefined Roles",
+     "zh": "预定义角色"
+    },
+    {
+     "ref": "21.6",
+     "title": "Function Security",
+     "zh": "函数安全性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "24",
+   "title": "Routine Database Maintenance Tasks",
+   "zh": "日常数据库维护任务",
+   "items": [
+    {
+     "ref": "24.1",
+     "title": "Routine Vacuuming",
+     "zh": "日常清理"
+    },
+    {
+     "ref": "24.2",
+     "title": "Routine Reindexing",
+     "zh": "日常重建索引"
+    },
+    {
+     "ref": "24.3",
+     "title": "Log File Maintenance",
+     "zh": "日志文件维护"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "25",
+   "title": "Backup and Restore",
+   "zh": "备份与恢复",
+   "items": [
+    {
+     "ref": "25.1",
+     "title": "SQL Dump",
+     "zh": "SQL 转储"
+    },
+    {
+     "ref": "25.2",
+     "title": "File System Level Backup",
+     "zh": "文件系统级备份"
+    },
+    {
+     "ref": "25.3",
+     "title": "Continuous Archiving and Point-in-Time Recovery (PITR)",
+     "zh": "持续归档与时间点恢复（PITR）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "26",
+   "title": "High Availability, Load Balancing, and Replication",
+   "zh": "高可用、负载均衡与复制",
+   "items": [
+    {
+     "ref": "26.1",
+     "title": "Comparison of Different Solutions",
+     "zh": "不同方案的比较"
+    },
+    {
+     "ref": "26.2",
+     "title": "Log-Shipping Standby Servers",
+     "zh": "日志传送的备用服务器"
+    },
+    {
+     "ref": "26.3",
+     "title": "Failover",
+     "zh": "故障切换"
+    },
+    {
+     "ref": "26.4",
+     "title": "Hot Standby",
+     "zh": "热备"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "27",
+   "title": "Monitoring Database Activity",
+   "zh": "监控数据库活动",
+   "items": [
+    {
+     "ref": "27.1",
+     "title": "Standard Unix Tools",
+     "zh": "标准 Unix 工具"
+    },
+    {
+     "ref": "27.2",
+     "title": "The Cumulative Statistics System",
+     "zh": "累积统计系统"
+    },
+    {
+     "ref": "27.3",
+     "title": "Viewing Locks",
+     "zh": "查看锁"
+    },
+    {
+     "ref": "27.4",
+     "title": "Progress Reporting",
+     "zh": "进度报告"
+    },
+    {
+     "ref": "27.6",
+     "title": "Monitoring Disk Usage",
+     "zh": "监控磁盘使用"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "28",
+   "title": "Reliability and the Write-Ahead Log",
+   "zh": "可靠性与预写日志",
+   "items": [
+    {
+     "ref": "28.1",
+     "title": "Reliability",
+     "zh": "可靠性"
+    },
+    {
+     "ref": "28.3",
+     "title": "Write-Ahead Logging (WAL)",
+     "zh": "预写日志（WAL）"
+    },
+    {
+     "ref": "28.4",
+     "title": "Asynchronous Commit",
+     "zh": "异步提交"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "备份恢复",
+   "refs": [
+    "A:25",
+    "A:25.3",
+    "A:28",
+    "A:28.3"
+   ],
+   "note": "第 25 章 Backup and Restore 讲逻辑备份（SQL Dump）、文件系统级备份与基于持续归档的 PITR；第 28 章 Reliability and the Write-Ahead Log 讲 WAL 与异步提交，是崩溃恢复的基础。第 26 章（日志传送、热备、故障切换）是恢复能力的延伸。"
+  },
+  {
+   "topic": "授权",
+   "refs": [
+    "A:20",
+    "A:21",
+    "A:21.3",
+    "A:21.5"
+   ],
+   "note": "第 20 章讲客户端认证（pg_hba.conf、口令/证书等认证方法），第 21 章讲数据库角色的属性、成员资格（角色即权限组）、预定义角色与函数安全性；具体的 GRANT/REVOKE 语法在 Part VI 参考手册里，本节点只收 Part III。"
+  },
+  {
+   "topic": "审计",
+   "refs": [
+    "A:19.8"
+   ],
+   "note": "PostgreSQL 官方文档 Part III 没有独立的“审计”章：审计的做法是打开 19.8 Error Reporting and Logging 里的语句日志（log_statement 等）再配合 24.3 Log File Maintenance 的日志轮转；行级审计需要社区的 pgaudit 扩展，官方文档未收录，因此这里只指到日志这一层。"
+  },
+  {
+   "topic": "加密",
+   "refs": [
+    "A:18",
+    "A:18.8",
+    "A:18.9",
+    "A:20.12"
+   ],
+   "note": "第 18 章 18.8 Encryption Options 概览传输与存储加密选项，18.9/18.10/18.11 分别讲 SSL、GSSAPI、SSH 隧道三种传输加密；20.12 Certificate Authentication 讲用客户端证书做认证。"
+  },
+  {
+   "topic": "监控与数据库运维",
+   "refs": [
+    "A:27",
+    "A:27.2",
+    "A:24",
+    "A:19"
+   ],
+   "note": "第 27 章 Monitoring Database Activity 讲统计视图、锁查看、进度报告、磁盘占用；第 24 章讲日常维护（VACUUM、重建索引、日志文件维护）；第 19 章服务器配置是运维调参的入口。"
+  }
+ ],
+ "omitted": "A（PostgreSQL 18 Part III）未收：第 17 章 Installation from Source Code（编译安装细节）、第 22 章 Managing Databases（建库/模板库/表空间，属 D.1.1 的建模与库管理）、第 23 章 Localization（区域与字符集）、第 29 章 Logical Replication（逻辑复制细节，节点简介未涉及复制形态）、第 30 章 Just-in-Time Compilation、第 31 章 Regression Tests（开发者测试）；第 18–21、24–28 章中与本节点无关的小节也未收，例如 18.1–18.7 的安装与启停、18.12 Windows 事件日志、19 章的多数参数分类、20.4–20.16 的逐种认证方式、21.1/21.4、25 章以外的备份工具、26 章的运维细节只保留到方案比较与故障切换、27.5 Dynamic Tracing、28.5/28.6 WAL 配置与内部结构。",
+ "notes": "目录来自官方文档 Part III 的 Table of Contents 页（admin.html 本身就是这一部分的目录页，逐节带编号），标题与节号照抄。整份 Part III 共 15 章（17–31），这里只取与节点简介相关的 9 章。审计一项在 PostgreSQL 官方文档里确实没有专门章节，已在 coverage 里注明只到日志层；如果需要行级审计，主代理可能要另找 pgaudit 文档或安全领域的节点。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 42,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

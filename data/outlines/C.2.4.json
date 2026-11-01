@@ -1,0 +1,252 @@
+{
+ "id": "C.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "6.033 Computer System Engineering, Spring 2022",
+   "by": "MIT",
+   "year": 2022,
+   "url": "https://web.mit.edu/6.033/www/general.shtml",
+   "toc_urls": [
+    "https://web.mit.edu/6.033/www/"
+   ],
+   "why": "节点现有英文资源。课程日历把存储这条线讲得很完整：LEC 7 OS Performance (Storage)、LEC 15 Reliability、LEC 16 Transactions、LEC 17 Logging、LEC 18 Isolation、LEC 19 Distributed Transactions、LEC 20 Replication，配套讨论课 GFS/ZFS/Raft，正好落在日志、崩溃一致性、分布式存储接口与可靠性这几个知识点上。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Operating Systems: Three Easy Pieces",
+   "by": "Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau",
+   "year": 2023,
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+   "toc_urls": [
+    "https://pages.cs.wisc.edu/~remzi/OSTEP/toc.pdf"
+   ],
+   "why": "补块设备与文件系统层的细节：6.033 从系统/分布式角度讲存储，没有磁盘几何、I/O 时间计算与磁盘调度；OSTEP 第 37 章、第 40 章（含 40.7 Caching and Buffering）、第 42 章（FSCK 与日志）把块设备、缓存与崩溃一致性的实现补到节级。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "LEC 7",
+   "title": "OS Performance (Storage)",
+   "zh": "操作系统性能（存储）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "LEC 15",
+   "title": "Reliability",
+   "zh": "可靠性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "LEC 16",
+   "title": "Transactions",
+   "zh": "事务",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "LEC 17",
+   "title": "Logging",
+   "zh": "日志",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "LEC 18",
+   "title": "Isolation",
+   "zh": "隔离",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "LEC 19",
+   "title": "Distributed Transactions",
+   "zh": "分布式事务",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "LEC 20",
+   "title": "Replication",
+   "zh": "复制",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "REC 14",
+   "title": "GFS",
+   "zh": "GFS 案例",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "REC 17",
+   "title": "ZFS",
+   "zh": "ZFS 案例",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "REC 20",
+   "title": "Raft",
+   "zh": "Raft 案例",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "37",
+   "title": "Hard Disk Drives",
+   "zh": "硬盘驱动器",
+   "fill": "块设备",
+   "items": [
+    {
+     "ref": "37.1",
+     "title": "The Interface",
+     "zh": "接口"
+    },
+    {
+     "ref": "37.2",
+     "title": "Basic Geometry",
+     "zh": "基本几何结构"
+    },
+    {
+     "ref": "37.3",
+     "title": "A Simple Disk Drive",
+     "zh": "一个简单的磁盘驱动器"
+    },
+    {
+     "ref": "37.4",
+     "title": "I/O Time: Doing The Math",
+     "zh": "I/O 时间：算一算"
+    },
+    {
+     "ref": "37.5",
+     "title": "Disk Scheduling",
+     "zh": "磁盘调度"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "40",
+   "title": "File System Implementation",
+   "zh": "文件系统实现",
+   "fill": "缓存",
+   "items": [
+    {
+     "ref": "40.2",
+     "title": "Overall Organization",
+     "zh": "整体组织"
+    },
+    {
+     "ref": "40.3",
+     "title": "File Organization: The Inode",
+     "zh": "文件组织：inode"
+    },
+    {
+     "ref": "40.6",
+     "title": "Access Paths: Reading and Writing",
+     "zh": "访问路径：读与写"
+    },
+    {
+     "ref": "40.7",
+     "title": "Caching and Buffering",
+     "zh": "缓存与缓冲"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "42",
+   "title": "Crash Consistency: FSCK and Journaling",
+   "zh": "崩溃一致性：FSCK 与日志",
+   "fill": "日志与崩溃一致性",
+   "items": [
+    {
+     "ref": "42.1",
+     "title": "A Detailed Example",
+     "zh": "一个详细的例子"
+    },
+    {
+     "ref": "42.2",
+     "title": "Solution #1: The File System Checker",
+     "zh": "方案一：文件系统检查器"
+    },
+    {
+     "ref": "42.3",
+     "title": "Solution #2: Journaling (or Write-Ahead Logging)",
+     "zh": "方案二：日志（预写日志）"
+    },
+    {
+     "ref": "42.4",
+     "title": "Solution #3: Other Approaches",
+     "zh": "方案三：其他方法"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "块设备",
+   "refs": [
+    "B:37",
+    "B:37.1",
+    "B:37.2",
+    "B:37.3",
+    "B:37.4",
+    "A:LEC 7"
+   ]
+  },
+  {
+   "topic": "日志",
+   "refs": [
+    "A:LEC 17",
+    "B:42.3",
+    "B:42.2"
+   ]
+  },
+  {
+   "topic": "崩溃一致性",
+   "refs": [
+    "A:LEC 16",
+    "A:LEC 17",
+    "B:42",
+    "B:42.1",
+    "B:42.4"
+   ]
+  },
+  {
+   "topic": "缓存",
+   "refs": [
+    "B:40.7",
+    "A:LEC 7"
+   ],
+   "note": "6.033 把存储缓存放在 LEC 7 的存储性能里，没有单独一节；B 的 40.7 Caching and Buffering 讲文件系统层的缓冲与缓存（含写缓冲对一致性的影响）。"
+  },
+  {
+   "topic": "分布式存储接口与可靠性",
+   "refs": [
+    "A:LEC 19",
+    "A:LEC 20",
+    "A:REC 14",
+    "A:REC 17",
+    "A:REC 20",
+    "A:LEC 15",
+    "A:LEC 18"
+   ]
+  }
+ ],
+ "omitted": "6.033 的 LEC 1–6（模块化与抽象、命名、虚拟内存、有界缓冲与锁、线程、OS 结构与虚拟机）、LEC 8–14（网络分层、路由、BGP、TCP、应用层、数据中心）、LEC 21–26（安全）与各 TUT 讨论课与本节点无关，未收；OSTEP 只收第 37/40/42 章里的相关节（37.6、40.8、42.5 是各章小结，其余章节见 C.2.1 导览图）。",
+ "notes": "A 是讲级日程（ref 用“LEC 7”“REC 14”这样的原编号），所以 A 侧没有子项；B 侧的块设备/缓存/日志补到了节级。6.033 每讲还配有 hands-on（如 Hands-on logging）与 GFS/ZFS/Raft 讨论课读物，D3/D4 的“复现与评价”可以按这些作业和读物走。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 26,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

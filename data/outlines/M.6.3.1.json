@@ -1,0 +1,297 @@
+{
+ "id": "M.6.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Markov Chains and Mixing Times, 2nd ed.",
+   "by": "David A. Levin, Yuval Peres",
+   "year": 2017,
+   "url": "https://pages.uoregon.edu/dlevin/MARKOV/",
+   "toc_urls": [
+    "https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf"
+   ],
+   "why": "节点“现有英文学习资源”本身：作者主页提供 AMS 出版的全书 PDF，前 12 章正好是把马尔可夫链从转移矩阵、平稳分布讲到混合时间与特征值方法的完整链条，附录 C 给遍历定理。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "STAT 150: Stochastic Processes",
+   "by": "David Aldous, UC Berkeley",
+   "year": 2015,
+   "url": "https://www.stat.berkeley.edu/~aldous/150/",
+   "toc_urls": [
+    "https://www.stat.berkeley.edu/~aldous/150/"
+   ],
+   "why": "补连续时间马尔可夫链：A 只讲有限状态离散时间链，没有连续时间链（生成矩阵、嵌入链、爆炸）的章节，B 的连续时间链三次课是标准本科讲法。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction to Finite Markov Chains",
+   "zh": "有限马尔可夫链引论",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Markov Chains",
+     "zh": "马尔可夫链"
+    },
+    {
+     "ref": "1.2",
+     "title": "Random Mapping Representation",
+     "zh": "随机映射表示"
+    },
+    {
+     "ref": "1.3",
+     "title": "Irreducibility and Aperiodicity",
+     "zh": "不可约性与非周期性"
+    },
+    {
+     "ref": "1.4",
+     "title": "Random Walks on Graphs",
+     "zh": "图上的随机游走"
+    },
+    {
+     "ref": "1.5",
+     "title": "Stationary Distributions",
+     "zh": "平稳分布"
+    },
+    {
+     "ref": "1.6",
+     "title": "Reversibility and Time Reversals",
+     "zh": "可逆性与时间反转"
+    },
+    {
+     "ref": "1.7",
+     "title": "Classifying the States of a Markov Chain*",
+     "zh": "状态分类"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Introduction to Markov Chain Mixing",
+   "zh": "马尔可夫链混合引论",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Total Variation Distance",
+     "zh": "全变差距离"
+    },
+    {
+     "ref": "4.2",
+     "title": "Coupling and Total Variation Distance",
+     "zh": "耦合与全变差距离"
+    },
+    {
+     "ref": "4.3",
+     "title": "The Convergence Theorem",
+     "zh": "收敛定理"
+    },
+    {
+     "ref": "4.4",
+     "title": "Standardizing Distance from Stationarity",
+     "zh": "到平稳分布距离的标准化"
+    },
+    {
+     "ref": "4.5",
+     "title": "Mixing Time",
+     "zh": "混合时间"
+    },
+    {
+     "ref": "4.6",
+     "title": "Mixing and Time Reversal",
+     "zh": "混合与时间反转"
+    },
+    {
+     "ref": "4.7",
+     "title": "lp Distance and Mixing",
+     "zh": "lp 距离与混合"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Coupling",
+   "zh": "耦合",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Definition",
+     "zh": "定义"
+    },
+    {
+     "ref": "5.2",
+     "title": "Bounding Total Variation Distance",
+     "zh": "全变差距离的界"
+    },
+    {
+     "ref": "5.3",
+     "title": "Examples",
+     "zh": "例子"
+    },
+    {
+     "ref": "5.4",
+     "title": "Grand Couplings",
+     "zh": "大耦合"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Lower Bounds on Mixing Times",
+   "zh": "混合时间的下界",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Counting and Diameter Bounds",
+     "zh": "计数界与直径界"
+    },
+    {
+     "ref": "7.2",
+     "title": "Bottleneck Ratio",
+     "zh": "瓶颈比"
+    },
+    {
+     "ref": "7.3",
+     "title": "Distinguishing Statistics",
+     "zh": "区分统计量"
+    },
+    {
+     "ref": "7.4",
+     "title": "Examples",
+     "zh": "例子"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Eigenvalues",
+   "zh": "特征值",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "The Spectral Representation of a Reversible Transition Matrix",
+     "zh": "可逆转移矩阵的谱表示"
+    },
+    {
+     "ref": "12.2",
+     "title": "The Relaxation Time",
+     "zh": "弛豫时间"
+    },
+    {
+     "ref": "12.3",
+     "title": "Eigenvalues and Eigenfunctions of Some Simple Random Walks",
+     "zh": "几个简单随机游走的特征值与特征函数"
+    },
+    {
+     "ref": "12.7",
+     "title": "Time Averages",
+     "zh": "时间平均"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "C",
+   "title": "Ergodic Theorem",
+   "zh": "遍历定理",
+   "items": [
+    {
+     "ref": "C.1",
+     "title": "Ergodic Theorem*",
+     "zh": "遍历定理"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Weeks 8-9",
+   "title": "Continuous-Time Markov Chains",
+   "zh": "连续时间马尔可夫链",
+   "fill": "补连续时间链：生成矩阵、嵌入跳跃链、Poisson 化与极限行为",
+   "items": [
+    {
+     "ref": "",
+     "title": "Continuous-time Markov chains I",
+     "zh": "连续时间马尔可夫链（一）"
+    },
+    {
+     "ref": "",
+     "title": "Continuous-time Markov chains II",
+     "zh": "连续时间马尔可夫链（二）"
+    },
+    {
+     "ref": "",
+     "title": "Continuous-time Markov chains III",
+     "zh": "连续时间马尔可夫链（三）"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "离散时间链",
+   "refs": [
+    "A:1",
+    "A:1.1",
+    "A:1.3"
+   ]
+  },
+  {
+   "topic": "连续时间链",
+   "refs": [
+    "B:Weeks 8-9"
+   ],
+   "note": "A 全书只处理有限状态离散时间链，连续时间链完全靠 B 补。"
+  },
+  {
+   "topic": "转移（转移矩阵、t 步转移）",
+   "refs": [
+    "A:1.1",
+    "A:1.2",
+    "A:12.1"
+   ]
+  },
+  {
+   "topic": "平稳分布",
+   "refs": [
+    "A:1.5",
+    "A:4.4",
+    "A:4.6"
+   ]
+  },
+  {
+   "topic": "混合",
+   "refs": [
+    "A:4.1",
+    "A:4.5",
+    "A:5",
+    "A:7"
+   ]
+  },
+  {
+   "topic": "遍历性",
+   "refs": [
+    "A:C.1",
+    "A:4.3",
+    "A:12.7"
+   ],
+   "note": "A 把遍历定理放在附录 C；正文的收敛定理（4.3）与时间平均（12.7）是它的具体化。"
+  }
+ ],
+ "omitted": "A 只收了讲一般理论的第 1、4、5、7、12 章与附录 C。第 2 章（赌徒破产、优惠券收集、Ehrenfest 瓮、Pólya 瓮等具体链）、第 3 章（MCMC）、第 6 章（强平稳时间）、第 10 章（命中时间）、第 8、9、11 章（洗牌、网络上的随机游走、覆盖时间）是例子与专门技巧；第 13–26 章（Ising 模型、切割现象、lamplighter、排除过程、CFTP 等）是研究生专题，与节点简介的四个知识点不是同一条主线，均未收；各章的 Exercises 与 Notes 也未收。",
+ "notes": "A 的章节号在 PDF 里带尾点（“1.1.”），这里去掉尾点按 “1.1” 录。A 的 4.7 一节原题是 l_p 距离（PDF 里是花体 l 的下标 p，提取成 “lp”），这里按 “lp Distance and Mixing” 录，核对会是 fuzzy。B 只用来补连续时间链，其余课次（Poisson、鞅、布朗运动）属 M.6.3 节点。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 37,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

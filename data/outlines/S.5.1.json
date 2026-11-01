@@ -1,0 +1,301 @@
+{
+ "id": "S.5.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "15-316 Software Foundations of Security & Privacy (CMU, Spring 2026; lecture schedule of Fall 2024)",
+   "by": "Matt Fredrikson (CMU)",
+   "year": 2024,
+   "url": "https://15316-cmu.github.io/2026/",
+   "toc_urls": [
+    "https://15316-cmu.github.io/2024/schedule.js"
+   ],
+   "why": "节点现有英文资源就是这门课；2026 版课表还没有排讲，但同一门课 2024 版的 schedule.js 是完整的逐讲主题表（30 次课，每次一个具体题目），信息流、去分类、终止敏感非干扰、时序攻击、授权逻辑、信任引导都在里面，正好覆盖非干扰与可信基这一段。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "ProVerif 2.05: Automatic Cryptographic Protocol Verifier, User Manual and Tutorial",
+   "by": "Bruno Blanchet, Ben Smyth, Vincent Cheval, Marc Sylvestre (Inria)",
+   "year": 2023,
+   "url": "https://bblanche.gitlabpages.inria.fr/proverif/",
+   "toc_urls": [
+    "https://bblanche.gitlabpages.inria.fr/proverif/manual.pdf"
+   ],
+   "why": "补 15-316 完全不讲的协议验证：协议怎么建成形式模型（建模、进程、握手例子）、认证性质怎么写（通信断言与事件）、观察等价（非干扰的形式对应物）、Needham-Schroeder 案例，以及工具结论的局限（不完备性来源）。工具作者写的官方手册，分节细，适合当这一段的目录。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "title": "Propositional Logic and Proof",
+   "zh": "命题逻辑与证明",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Dynamic Logic",
+   "zh": "动态逻辑",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Semantics of Programs",
+   "zh": "程序语义",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Proving Safety",
+   "zh": "安全性证明",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Generating Verification Conditions",
+   "zh": "生成验证条件",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Symbolic Evaluation",
+   "zh": "符号求值",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Beyond Safety Properties",
+   "zh": "安全性之外的性质",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Information Flow",
+   "zh": "信息流",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Declassification",
+   "zh": "去分类",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Termination-Sensitive Noninterference",
+   "zh": "终止敏感的非干扰",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Timing Attacks",
+   "zh": "时序攻击",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Authorization Logic",
+   "zh": "授权逻辑",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Bootstrapping Trust",
+   "zh": "信任引导",
+   "items": []
+  },
+  {
+   "src": "A",
+   "title": "Functional and Higher-Order Information Flow",
+   "zh": "函数式与高阶信息流",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Using ProVerif",
+   "zh": "使用 ProVerif",
+   "fill": "协议模型：把协议写成形式化的进程模型（15-316 只讲程序的信息流，不讲协议）",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Modeling protocols",
+     "zh": "协议建模",
+     "items": [
+      {
+       "ref": "3.1.1",
+       "title": "Declarations",
+       "zh": "声明"
+      },
+      {
+       "ref": "3.1.4",
+       "title": "Processes",
+       "zh": "进程"
+      },
+      {
+       "ref": "3.1.5",
+       "title": "Example: handshake protocol",
+       "zh": "例：握手协议"
+      }
+     ]
+    },
+    {
+     "ref": "3.2",
+     "title": "Security properties",
+     "zh": "安全性质",
+     "items": [
+      {
+       "ref": "3.2.1",
+       "title": "Reachability and secrecy",
+       "zh": "可达性与保密性"
+      },
+      {
+       "ref": "3.2.2",
+       "title": "Correspondence assertions, events, and authentication",
+       "zh": "通信断言、事件与认证性"
+      }
+     ]
+    },
+    {
+     "ref": "3.3",
+     "title": "Understanding ProVerif output",
+     "zh": "读懂 ProVerif 的输出"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Language features",
+   "zh": "语言特性",
+   "fill": "非干扰：观察等价是与非干扰对应的形式性质，也是信息流安全里做等价性证明的工具",
+   "items": [
+    {
+     "ref": "4.3",
+     "title": "Further security properties",
+     "zh": "更多安全性质",
+     "items": [
+      {
+       "ref": "4.3.2",
+       "title": "Observational equivalence",
+       "zh": "观察等价"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Needham-Schroeder: Case study",
+   "zh": "Needham-Schroeder：案例研究",
+   "fill": "认证性质：用具体协议演示认证性质怎么写、攻击怎样被找出来、修好之后为什么够用",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Simplified Needham-Schroeder protocol",
+     "zh": "简化版 Needham-Schroeder 协议"
+    },
+    {
+     "ref": "5.2",
+     "title": "Full Needham-Schroeder protocol",
+     "zh": "完整版 Needham-Schroeder 协议"
+    },
+    {
+     "ref": "5.4",
+     "title": "Variants of these security properties",
+     "zh": "这些安全性质的变体",
+     "items": [
+      {
+       "ref": "5.4.2",
+       "title": "Authenticated key exchange",
+       "zh": "认证密钥交换"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Advanced reference",
+   "zh": "高级参考",
+   "fill": "形式验证的边界：工具给出结论时隐含哪些假设、什么时候结论不可信",
+   "items": [
+    {
+     "ref": "6.7",
+     "title": "Theory and tricks",
+     "zh": "理论与技巧",
+     "items": [
+      {
+       "ref": "6.7.4",
+       "title": "Applied pi calculus encodings",
+       "zh": "应用 pi 演算编码"
+      },
+      {
+       "ref": "6.7.5",
+       "title": "Sources of incompleteness",
+       "zh": "不完备性的来源"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "协议模型",
+   "refs": [
+    "B:3.1",
+    "B:3.1.4",
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "认证性质",
+   "refs": [
+    "B:3.2.2",
+    "B:5.1",
+    "B:5.2",
+    "B:5.4.2"
+   ]
+  },
+  {
+   "topic": "非干扰",
+   "refs": [
+    "A:#10",
+    "A:#14",
+    "A:#8",
+    "B:4.3.2"
+   ]
+  },
+  {
+   "topic": "形式验证",
+   "refs": [
+    "B:3",
+    "B:3.3",
+    "B:6.7.5",
+    "A:#4",
+    "A:#5",
+    "A:#6"
+   ]
+  },
+  {
+   "topic": "可信基",
+   "refs": [
+    "A:#13",
+    "A:#12"
+   ],
+   "note": "可信基在 15-316 里散在“信任引导”（Bootstrapping Trust）与“授权逻辑”两讲，课程大纲把 reference monitors 列为主题之一，但没有单独一讲题目就叫可信基；ProVerif 侧不涉及可信基。"
+  }
+ ],
+ "omitted": "A（15-316 2024 秋课表）只收了与节点相关的讲次，导论、期中复习/考试、秋假、项目日、感恩节、民主日、Lab 3 Preview、Intermittent Computing、Differential Privacy 等与“协议验证 + 信息流 + 可信基”关系较远的课没有收（差分隐私只涉及隐私度量，不涉及信息流验证）；B（ProVerif 手册）只收建模、安全性质、观察等价、NS 案例与不完备性几节，安装、交互式模拟器、命令行选项、与 CryptoVerif 的兼容、附录语法不作为知识导览。",
+ "notes": "1) 资源的 2026 版课程主页 https://15316-cmu.github.io/2026/ 的课表为空（“Lecture notes will be posted within a few days after each class meeting”），2025 版不存在，2024 版的 schedule.js 是同一门课最近一份完整逐讲表，因此目录取自 2024 版；2024 课表里的主题列没有讲次编号，ref 留空，coverage 用 A:#N 指第 N 个分支。2) B 的协议验证部分与 15-316 互补：CMU 这门课不覆盖安全协议验证（Needham-Schroeder、Dolev-Yao、ProVerif/Tamarin 一类），所以协议验证整段用 ProVerif 官方手册补。3) 若之后要换成理论教材，Cremers & Mauw《Operational Semantics and Verification of Security Protocols》（Springer 2012，8 章：Operational Semantics / Security Properties / Verification / Multi-protocol Attacks）在出版社页面有完整章目，可作为下一轮替换候选。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 35,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

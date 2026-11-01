@@ -1,0 +1,481 @@
+{
+ "id": "P.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "The Missing Semester of Your CS Education (2026)",
+   "by": "MIT (Anish Athalye, Jon Gjengset, Jose Javier Gonzalez Ortiz)",
+   "year": 2026,
+   "url": "https://missing.csail.mit.edu/",
+   "toc_urls": [
+    "https://missing.csail.mit.edu/",
+    "https://missing.csail.mit.edu/2026/course-shell/",
+    "https://missing.csail.mit.edu/2026/command-line-environment/",
+    "https://missing.csail.mit.edu/2026/development-environment/",
+    "https://missing.csail.mit.edu/2026/debugging-profiling/",
+    "https://missing.csail.mit.edu/2026/version-control/",
+    "https://missing.csail.mit.edu/2026/shipping-code/",
+    "https://missing.csail.mit.edu/2026/code-quality/"
+   ],
+   "why": "节点现有英文资源就是这门课；2026 版九讲里“Version Control and Git”“Debugging and Profiling”“Packaging and Shipping Code”“Code Quality”四讲的节标题，正好对应 Git、调试器、包管理/依赖、自动化工作流（提交前钩子、CI/CD），是 MIT 的正式课程，不是网课广告。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-131 Great Practical Ideas in CS (Fall 2017 schedule)",
+   "by": "Carnegie Mellon University",
+   "year": 2017,
+   "url": "https://www.cs.cmu.edu/~15131/f17/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~15131/f17/"
+   ],
+   "why": "补“构建”：Missing Semester 只在 Packaging 一讲里顺带提到 Bazel/Nix 和容器构建，没有讲最基础的 Makefile；CMU 15-131 的 Makefiles 主题有两讲（Makefile 入门、用 Makefile 编译代码），是本科工具课的标准讲法。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1/12/26",
+   "title": "Course Overview + Introduction to the Shell",
+   "zh": "课程概览 + Shell 入门",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is the shell?",
+     "zh": "什么是 Shell"
+    },
+    {
+     "ref": "",
+     "title": "Navigating in the shell",
+     "zh": "在 Shell 中浏览"
+    },
+    {
+     "ref": "",
+     "title": "What is available in the shell?",
+     "zh": "Shell 里有什么可用"
+    },
+    {
+     "ref": "",
+     "title": "The shell language (bash)",
+     "zh": "Shell 语言（bash）"
+    },
+    {
+     "ref": "",
+     "title": "Next steps",
+     "zh": "下一步"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1/13/26",
+   "title": "Command-line Environment",
+   "zh": "命令行环境",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Command Line Interface",
+     "zh": "命令行界面"
+    },
+    {
+     "ref": "",
+     "title": "Arguments",
+     "zh": "参数"
+    },
+    {
+     "ref": "",
+     "title": "Streams",
+     "zh": "流"
+    },
+    {
+     "ref": "",
+     "title": "Environment variables",
+     "zh": "环境变量"
+    },
+    {
+     "ref": "",
+     "title": "Return codes",
+     "zh": "返回码"
+    },
+    {
+     "ref": "",
+     "title": "Signals",
+     "zh": "信号"
+    },
+    {
+     "ref": "",
+     "title": "Remote Machines",
+     "zh": "远程机器"
+    },
+    {
+     "ref": "",
+     "title": "Terminal Multiplexers",
+     "zh": "终端复用器"
+    },
+    {
+     "ref": "",
+     "title": "Customizing the Shell",
+     "zh": "定制 Shell"
+    },
+    {
+     "ref": "",
+     "title": "AI in the Shell",
+     "zh": "Shell 中的 AI"
+    },
+    {
+     "ref": "",
+     "title": "Terminal Emulators",
+     "zh": "终端模拟器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1/14/26",
+   "title": "Development Environment and Tools",
+   "zh": "开发环境与工具",
+   "items": [
+    {
+     "ref": "",
+     "title": "Text editing and Vim",
+     "zh": "文本编辑与 Vim"
+    },
+    {
+     "ref": "",
+     "title": "Modal editing",
+     "zh": "模态编辑"
+    },
+    {
+     "ref": "",
+     "title": "Vim's interface is a programming language",
+     "zh": "Vim 的界面是一门编程语言"
+    },
+    {
+     "ref": "",
+     "title": "Learning Vim",
+     "zh": "学习 Vim"
+    },
+    {
+     "ref": "",
+     "title": "Code intelligence and language servers",
+     "zh": "代码智能与语言服务器"
+    },
+    {
+     "ref": "",
+     "title": "AI-powered development",
+     "zh": "AI 辅助开发"
+    },
+    {
+     "ref": "",
+     "title": "Coding agents",
+     "zh": "编码智能体"
+    },
+    {
+     "ref": "",
+     "title": "Extensions and other IDE functionality",
+     "zh": "扩展与其他 IDE 功能"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1/15/26",
+   "title": "Debugging and Profiling",
+   "zh": "调试与性能分析",
+   "items": [
+    {
+     "ref": "",
+     "title": "Debugging",
+     "zh": "调试"
+    },
+    {
+     "ref": "",
+     "title": "Printf Debugging and Logging",
+     "zh": "printf 调试与日志"
+    },
+    {
+     "ref": "",
+     "title": "Debuggers",
+     "zh": "调试器"
+    },
+    {
+     "ref": "",
+     "title": "System Call Tracing",
+     "zh": "系统调用跟踪"
+    },
+    {
+     "ref": "",
+     "title": "Memory Debugging",
+     "zh": "内存调试"
+    },
+    {
+     "ref": "",
+     "title": "Profiling",
+     "zh": "性能分析"
+    },
+    {
+     "ref": "",
+     "title": "Timing",
+     "zh": "计时"
+    },
+    {
+     "ref": "",
+     "title": "Resource Monitoring",
+     "zh": "资源监控"
+    },
+    {
+     "ref": "",
+     "title": "CPU Profilers",
+     "zh": "CPU 性能分析器"
+    },
+    {
+     "ref": "",
+     "title": "Memory Profilers",
+     "zh": "内存分析器"
+    },
+    {
+     "ref": "",
+     "title": "Benchmarking",
+     "zh": "基准测试"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1/16/26",
+   "title": "Version Control and Git",
+   "zh": "版本控制与 Git",
+   "items": [
+    {
+     "ref": "",
+     "title": "Git's data model",
+     "zh": "Git 的数据模型"
+    },
+    {
+     "ref": "",
+     "title": "Snapshots",
+     "zh": "快照"
+    },
+    {
+     "ref": "",
+     "title": "Modeling history: relating snapshots",
+     "zh": "建模历史：快照之间的关系"
+    },
+    {
+     "ref": "",
+     "title": "Objects and content-addressing",
+     "zh": "对象与内容寻址"
+    },
+    {
+     "ref": "",
+     "title": "References",
+     "zh": "引用"
+    },
+    {
+     "ref": "",
+     "title": "Repositories",
+     "zh": "仓库"
+    },
+    {
+     "ref": "",
+     "title": "Staging area",
+     "zh": "暂存区"
+    },
+    {
+     "ref": "",
+     "title": "Git command-line interface",
+     "zh": "Git 命令行界面"
+    },
+    {
+     "ref": "",
+     "title": "Basics",
+     "zh": "基础操作"
+    },
+    {
+     "ref": "",
+     "title": "Branching and merging",
+     "zh": "分支与合并"
+    },
+    {
+     "ref": "",
+     "title": "Remotes",
+     "zh": "远程仓库"
+    },
+    {
+     "ref": "",
+     "title": "Undo",
+     "zh": "撤销"
+    },
+    {
+     "ref": "",
+     "title": "Advanced Git",
+     "zh": "进阶 Git"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1/20/26",
+   "title": "Packaging and Shipping Code",
+   "zh": "打包与交付代码",
+   "items": [
+    {
+     "ref": "",
+     "title": "Dependencies & Environments",
+     "zh": "依赖与环境"
+    },
+    {
+     "ref": "",
+     "title": "Artifacts & Packaging",
+     "zh": "构建产物与打包"
+    },
+    {
+     "ref": "",
+     "title": "Releases & Versioning",
+     "zh": "发布与版本号"
+    },
+    {
+     "ref": "",
+     "title": "Reproducibility",
+     "zh": "可复现性"
+    },
+    {
+     "ref": "",
+     "title": "VMs & Containers",
+     "zh": "虚拟机与容器"
+    },
+    {
+     "ref": "",
+     "title": "Configuration",
+     "zh": "配置"
+    },
+    {
+     "ref": "",
+     "title": "Services & Orchestration",
+     "zh": "服务与编排"
+    },
+    {
+     "ref": "",
+     "title": "Publishing",
+     "zh": "发布"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1/23/26",
+   "title": "Code Quality",
+   "zh": "代码质量",
+   "items": [
+    {
+     "ref": "",
+     "title": "Formatting",
+     "zh": "格式化"
+    },
+    {
+     "ref": "",
+     "title": "Linting",
+     "zh": "静态检查"
+    },
+    {
+     "ref": "",
+     "title": "Testing",
+     "zh": "测试"
+    },
+    {
+     "ref": "",
+     "title": "Code coverage",
+     "zh": "代码覆盖率"
+    },
+    {
+     "ref": "",
+     "title": "Pre-commit hooks",
+     "zh": "提交前钩子"
+    },
+    {
+     "ref": "",
+     "title": "Continuous integration",
+     "zh": "持续集成"
+    },
+    {
+     "ref": "",
+     "title": "Continuous deployment",
+     "zh": "持续部署"
+    },
+    {
+     "ref": "",
+     "title": "Command runners",
+     "zh": "命令运行器"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Makefiles",
+   "zh": "Makefile",
+   "fill": "构建（用 Makefile 描述编译规则并驱动编译）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Getting Started with Makefiles",
+     "zh": "Makefile 入门"
+    },
+    {
+     "ref": "",
+     "title": "Using Makefiles to Compile Code",
+     "zh": "用 Makefile 编译代码"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "Git",
+   "refs": [
+    "A:1/16/26"
+   ]
+  },
+  {
+   "topic": "调试器",
+   "refs": [
+    "A:1/15/26"
+   ]
+  },
+  {
+   "topic": "构建",
+   "refs": [
+    "A:1/20/26",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "包管理",
+   "refs": [
+    "A:1/20/26"
+   ]
+  },
+  {
+   "topic": "依赖",
+   "refs": [
+    "A:1/20/26"
+   ]
+  },
+  {
+   "topic": "自动化工作流",
+   "refs": [
+    "A:1/23/26",
+    "A:1/13/26"
+   ]
+  }
+ ],
+ "omitted": "2026 版其余两讲（1/21 Agentic Coding、1/22 Beyond the Code）讲 AI 辅助编程与职业伦理，不在本节点知识点内；往年的选修专题（Data Wrangling、Security、Potpourri 等）同样未收。CMU 15-131 的 Terminal Usage、Vim、Bash、LaTeX、Terminal Configuration 等主题与 Git/构建无关，未收。",
+ "notes": "2026 版把课程拆成九讲，主页面只给讲名，讲内的节标题在各自页面，所以 toc_urls 列了 8 个页面（1/21、1/22 两讲未收）。这些节标题原文没有编号，故 items 的 ref 都为空、coverage 只能指到讲这一层。中文译文另有官方社区译本《计算机教育中缺失的一课》，已作为节点的中文资源。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 74,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

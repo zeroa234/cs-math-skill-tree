@@ -1,0 +1,468 @@
+{
+ "id": "A.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "First Principles of Computer Vision",
+   "by": "Shree Nayar",
+   "url": "https://fpcv.cs.columbia.edu/",
+   "toc_urls": [
+    "https://fpcv.cs.columbia.edu/"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课（哥伦比亚大学 Shree Nayar 的免费公开讲座系列，站点自述面向零基础），它的“讲座清单”本身按模块→讲座组织、标题就是具体主题，正好当导览图：成像、图像处理 I/II（滤波与傅里叶变换）、特征（边缘/角点/Hough/SIFT/拼接/人脸检测）、重建 I/II（辐射度、光度立体、离焦深度、标定、双目、光流、SfM）、感知（跟踪、分割）、外观匹配与 PCA、神经网络。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Computer Vision: Algorithms and Applications, 2nd ed.",
+   "by": "Richard Szeliski",
+   "year": 2022,
+   "url": "https://szeliski.org/Book/",
+   "toc_urls": [
+    "https://link.springer.com/content/pdf/bfm:978-3-030-34372-9/1"
+   ],
+   "why": "补现代“识别/检测/分割”：主来源 A 的识别部分只有人脸检测、外观匹配与入门神经网络，没有图像分类、通用目标检测、语义/实例/全景分割的体系。这里抄出版社公开的前置页（Springer front matter）里第 6 章 Recognition 的完整目录（章到小节）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Imaging",
+   "zh": "成像",
+   "items": [
+    {
+     "ref": "",
+     "title": "Image Formation",
+     "zh": "图像形成"
+    },
+    {
+     "ref": "",
+     "title": "Image Sensing",
+     "zh": "图像传感"
+    },
+    {
+     "ref": "",
+     "title": "Binary Images",
+     "zh": "二值图像"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Image Processing I",
+   "zh": "图像处理 I",
+   "items": [
+    {
+     "ref": "",
+     "title": "Pixel Processing",
+     "zh": "像素处理"
+    },
+    {
+     "ref": "",
+     "title": "LSIS and Convolution",
+     "zh": "线性移不变系统与卷积"
+    },
+    {
+     "ref": "",
+     "title": "Linear Image Filters",
+     "zh": "线性图像滤波"
+    },
+    {
+     "ref": "",
+     "title": "Non-Linear Image Filters",
+     "zh": "非线性图像滤波"
+    },
+    {
+     "ref": "",
+     "title": "Template Matching",
+     "zh": "模板匹配"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Image Processing II",
+   "zh": "图像处理 II",
+   "items": [
+    {
+     "ref": "",
+     "title": "Fourier Transform",
+     "zh": "傅里叶变换"
+    },
+    {
+     "ref": "",
+     "title": "Convolution Theorem",
+     "zh": "卷积定理"
+    },
+    {
+     "ref": "",
+     "title": "Filtering in Frequency Domain",
+     "zh": "频域滤波"
+    },
+    {
+     "ref": "",
+     "title": "Deconvolution",
+     "zh": "去卷积"
+    },
+    {
+     "ref": "",
+     "title": "Sampling Theory and Aliasing",
+     "zh": "采样理论与混叠"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Features",
+   "zh": "特征",
+   "items": [
+    {
+     "ref": "",
+     "title": "Edge Detection",
+     "zh": "边缘检测"
+    },
+    {
+     "ref": "",
+     "title": "Corner Detection",
+     "zh": "角点检测"
+    },
+    {
+     "ref": "",
+     "title": "Boundary Detection",
+     "zh": "边界检测"
+    },
+    {
+     "ref": "",
+     "title": "SIFT Detector",
+     "zh": "SIFT 检测器"
+    },
+    {
+     "ref": "",
+     "title": "Image Stitching",
+     "zh": "图像拼接"
+    },
+    {
+     "ref": "",
+     "title": "Face Detection",
+     "zh": "人脸检测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Reconstruction I",
+   "zh": "重建 I",
+   "items": [
+    {
+     "ref": "",
+     "title": "Radiometry and Reflectance",
+     "zh": "辐射度与反射"
+    },
+    {
+     "ref": "",
+     "title": "Photometric Stereo",
+     "zh": "光度立体"
+    },
+    {
+     "ref": "",
+     "title": "Shape from Shading",
+     "zh": "由明暗恢复形状"
+    },
+    {
+     "ref": "",
+     "title": "Depth from Defocus",
+     "zh": "由离焦恢复深度"
+    },
+    {
+     "ref": "",
+     "title": "Active Illumination Methods",
+     "zh": "主动照明方法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Reconstruction II",
+   "zh": "重建 II",
+   "items": [
+    {
+     "ref": "",
+     "title": "Camera Calibration",
+     "zh": "相机标定"
+    },
+    {
+     "ref": "",
+     "title": "Uncalibrated Stereo",
+     "zh": "未标定双目"
+    },
+    {
+     "ref": "",
+     "title": "Optical Flow",
+     "zh": "光流"
+    },
+    {
+     "ref": "",
+     "title": "Structure from Motion",
+     "zh": "运动恢复结构"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Perception",
+   "zh": "感知",
+   "items": [
+    {
+     "ref": "",
+     "title": "Object Tracking",
+     "zh": "目标跟踪"
+    },
+    {
+     "ref": "",
+     "title": "Image Segmentation",
+     "zh": "图像分割"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Appearance",
+   "zh": "外观",
+   "items": [
+    {
+     "ref": "",
+     "title": "Appearance Matching",
+     "zh": "外观匹配"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Neural Networks",
+   "zh": "神经网络",
+   "items": [
+    {
+     "ref": "",
+     "title": "Perceptron",
+     "zh": "感知机"
+    },
+    {
+     "ref": "",
+     "title": "Perceptron Network",
+     "zh": "感知机网络"
+    },
+    {
+     "ref": "",
+     "title": "Activation Function",
+     "zh": "激活函数"
+    },
+    {
+     "ref": "",
+     "title": "Neural Network",
+     "zh": "神经网络"
+    },
+    {
+     "ref": "",
+     "title": "Gradient Descent",
+     "zh": "梯度下降"
+    },
+    {
+     "ref": "",
+     "title": "Backpropagation Algorithm",
+     "zh": "反向传播算法"
+    },
+    {
+     "ref": "",
+     "title": "Example Applications",
+     "zh": "应用示例"
+    },
+    {
+     "ref": "",
+     "title": "When to Use Machine Learning?",
+     "zh": "何时该用机器学习"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Recognition",
+   "zh": "识别",
+   "fill": "识别、检测与分割（现代深度模型下的图像分类、目标检测、语义/实例/全景分割）",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Instance recognition",
+     "zh": "实例识别"
+    },
+    {
+     "ref": "6.2",
+     "title": "Image classification",
+     "zh": "图像分类",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Feature-based methods",
+       "zh": "基于特征的方法"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "Deep networks",
+       "zh": "深度网络"
+      },
+      {
+       "ref": "6.2.3",
+       "title": "Application: Visual similarity search",
+       "zh": "应用：视觉相似检索"
+      },
+      {
+       "ref": "6.2.4",
+       "title": "Face recognition",
+       "zh": "人脸识别"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Object detection",
+     "zh": "目标检测",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "Face detection",
+       "zh": "人脸检测"
+      },
+      {
+       "ref": "6.3.2",
+       "title": "Pedestrian detection",
+       "zh": "行人检测"
+      },
+      {
+       "ref": "6.3.3",
+       "title": "General object detection",
+       "zh": "通用目标检测"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Semantic segmentation",
+     "zh": "语义分割",
+     "items": [
+      {
+       "ref": "6.4.1",
+       "title": "Application: Medical image segmentation",
+       "zh": "应用：医学图像分割"
+      },
+      {
+       "ref": "6.4.2",
+       "title": "Instance segmentation",
+       "zh": "实例分割"
+      },
+      {
+       "ref": "6.4.3",
+       "title": "Panoptic segmentation",
+       "zh": "全景分割"
+      },
+      {
+       "ref": "6.4.4",
+       "title": "Application: Intelligent photo editing",
+       "zh": "应用：智能修图"
+      },
+      {
+       "ref": "6.4.5",
+       "title": "Pose estimation",
+       "zh": "姿态估计"
+      }
+     ]
+    },
+    {
+     "ref": "6.5",
+     "title": "Video understanding",
+     "zh": "视频理解"
+    },
+    {
+     "ref": "6.6",
+     "title": "Vision and language",
+     "zh": "视觉与语言"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "滤波",
+   "refs": [
+    "A:#2",
+    "A:#3"
+   ]
+  },
+  {
+   "topic": "变换",
+   "refs": [
+    "A:#3",
+    "A:#4"
+   ]
+  },
+  {
+   "topic": "重建",
+   "refs": [
+    "A:#5",
+    "A:#6"
+   ]
+  },
+  {
+   "topic": "识别",
+   "refs": [
+    "A:#8",
+    "A:#9",
+    "B:6",
+    "B:6.2"
+   ]
+  },
+  {
+   "topic": "检测",
+   "refs": [
+    "A:#4",
+    "B:6.3"
+   ]
+  },
+  {
+   "topic": "分割",
+   "refs": [
+    "A:#7",
+    "B:6.4"
+   ]
+  },
+  {
+   "topic": "三维理解",
+   "refs": [
+    "A:#6",
+    "A:#5"
+   ]
+  },
+  {
+   "topic": "视觉评估",
+   "refs": [],
+   "note": "两个来源都没有独立的“评估”章：A（First Principles of Computer Vision）只在 Neural Networks 模块末尾的“When to Use Machine Learning?”谈选型；B（Szeliski）把 IoU、mAP、PR 曲线这类指标写在 6.3.3 General object detection 与 6.4 Semantic segmentation 的正文里，目录上没有单独的评估章，故不挂 ref，避免硬凑。"
+  }
+ ],
+ "omitted": "主来源 A 的 Introduction 模块（What is Computer Vision? / What is Vision Used For? / How Do Humans Do it? / Topics Covered / About the Lecture Series / References and Credits）属于课程引言与致谢，未收；A 各模块下每讲内部的“Overview”小节，以及 Features / Reconstruction 模块中各子主题（Edge Detection、Boundary Detection、SIFT Detector、Image Stitching、Face Detection、Radiometry and Reflectance、Photometric Stereo、Shape from Shading、Depth from Defocus、Active Illumination Methods、Camera Calibration、Uncalibrated Stereo、Optical Flow、Structure from Motion、Object Tracking、Image Segmentation、Appearance Matching）的逐条讲题，为了控制篇幅只保留到子主题一层，未再往下抄。补充分支 B 只取第 6 章 Recognition，Szeliski 其余各章（图像形成、图像处理、模型拟合、深度学习、特征检测与匹配、对齐与拼接、运动估计、计算摄影、SfM 与 SLAM、三维重建、基于图像的渲染等）与 A 重复或超出本节点简介，未收。",
+ "notes": "A 站没有标注出版年份，source 里省略 year。B 的目录抄自 Springer 为该书公开的前置页 PDF（Contents 详细目录，含小节）；作者主页 https://szeliski.org/Book/ 也提供全书电子版。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 67,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,627 @@
+{
+ "id": "A.2.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "An Introduction to Statistical Learning with Applications in Python",
+   "by": "Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, Jonathan Taylor",
+   "year": 2023,
+   "url": "https://www.statlearning.com/",
+   "toc_urls": [
+    "https://link.springer.com/content/pdf/bfm:978-3-031-38747-0/1",
+    "https://link.springer.com/book/10.1007/978-3-031-38747-0"
+   ],
+   "why": "节点“现有英文学习资源”就是这本书（作者官方站点 www.statlearning.com 免费提供 R 版与 Python 版全书 PDF）。这里抄的是出版社公开的 Python 版（2023）前置页里的完整目录，章到小节齐全，正好覆盖本节点：第 2 章学习设置与偏差-方差、第 3–4 章回归与分类、第 5–6 章模型评估/选择与正则化、第 7–9 章非线性、树与集成、SVM、第 12 章无监督学习（PCA、矩阵补全、k-means 与层次聚类）。"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "Semi-Supervised Learning Literature Survey",
+   "by": "Xiaojin Zhu",
+   "year": 2008,
+   "url": "https://pages.cs.wisc.edu/~jerryzhu/pub/ssl_survey.pdf",
+   "toc_urls": [
+    "https://pages.cs.wisc.edu/~jerryzhu/pub/ssl_survey.pdf"
+   ],
+   "why": "补半监督学习：主来源 A（ISLR）只有监督与无监督两分（见 A:2.1.4），完全没有半监督内容。这是半监督领域最常被引用的免费综述（威斯康星大学技术报告 TR 1530，作者本人页面发布的 2008 更新版），开头是概念问答（什么算半监督、什么时候无标注数据才有用），后面按方法家族分类，可作为这个知识点的导览。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Statistical Learning",
+   "zh": "统计学习",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "What Is Statistical Learning?",
+     "zh": "什么是统计学习",
+     "items": [
+      {
+       "ref": "2.1.1",
+       "title": "Why Estimate f?",
+       "zh": "为什么要估计 f"
+      },
+      {
+       "ref": "2.1.2",
+       "title": "How Do We Estimate f?",
+       "zh": "怎样估计 f"
+      },
+      {
+       "ref": "2.1.3",
+       "title": "The Trade-Off Between Prediction Accuracy and Model Interpretability",
+       "zh": "预测精度与模型可解释性的权衡"
+      },
+      {
+       "ref": "2.1.4",
+       "title": "Supervised Versus Unsupervised Learning",
+       "zh": "监督学习与无监督学习"
+      },
+      {
+       "ref": "2.1.5",
+       "title": "Regression Versus Classification Problems",
+       "zh": "回归问题与分类问题"
+      }
+     ]
+    },
+    {
+     "ref": "2.2",
+     "title": "Assessing Model Accuracy",
+     "zh": "评估模型精度",
+     "items": [
+      {
+       "ref": "2.2.1",
+       "title": "Measuring the Quality of Fit",
+       "zh": "衡量拟合质量"
+      },
+      {
+       "ref": "2.2.2",
+       "title": "The Bias-Variance Trade-Off",
+       "zh": "偏差-方差权衡"
+      },
+      {
+       "ref": "2.2.3",
+       "title": "The Classification Setting",
+       "zh": "分类情形"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Linear Regression",
+   "zh": "线性回归",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Simple Linear Regression",
+     "zh": "简单线性回归"
+    },
+    {
+     "ref": "3.2",
+     "title": "Multiple Linear Regression",
+     "zh": "多元线性回归"
+    },
+    {
+     "ref": "3.3",
+     "title": "Other Considerations in the Regression Model",
+     "zh": "回归模型的其他考虑"
+    },
+    {
+     "ref": "3.4",
+     "title": "The Marketing Plan",
+     "zh": "营销案例"
+    },
+    {
+     "ref": "3.5",
+     "title": "Comparison of Linear Regression with K-Nearest Neighbors",
+     "zh": "线性回归与 K 近邻的比较"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Classification",
+   "zh": "分类",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "An Overview of Classification",
+     "zh": "分类概述"
+    },
+    {
+     "ref": "4.2",
+     "title": "Why Not Linear Regression?",
+     "zh": "为什么不用线性回归"
+    },
+    {
+     "ref": "4.3",
+     "title": "Logistic Regression",
+     "zh": "逻辑回归"
+    },
+    {
+     "ref": "4.4",
+     "title": "Generative Models for Classification",
+     "zh": "分类的生成模型"
+    },
+    {
+     "ref": "4.5",
+     "title": "A Comparison of Classification Methods",
+     "zh": "分类方法比较"
+    },
+    {
+     "ref": "4.6",
+     "title": "Generalized Linear Models",
+     "zh": "广义线性模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Resampling Methods",
+   "zh": "重采样方法",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Cross-Validation",
+     "zh": "交叉验证",
+     "items": [
+      {
+       "ref": "5.1.1",
+       "title": "The Validation Set Approach",
+       "zh": "验证集方法"
+      },
+      {
+       "ref": "5.1.2",
+       "title": "Leave-One-Out Cross-Validation",
+       "zh": "留一交叉验证"
+      },
+      {
+       "ref": "5.1.3",
+       "title": "k-Fold Cross-Validation",
+       "zh": "k 折交叉验证"
+      },
+      {
+       "ref": "5.1.4",
+       "title": "Bias-Variance Trade-Off for k-Fold Cross-Validation",
+       "zh": "k 折交叉验证的偏差-方差权衡"
+      },
+      {
+       "ref": "5.1.5",
+       "title": "Cross-Validation on Classification Problems",
+       "zh": "分类问题上的交叉验证"
+      }
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "The Bootstrap",
+     "zh": "自助法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Linear Model Selection and Regularization",
+   "zh": "线性模型选择与正则化",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Subset Selection",
+     "zh": "子集选择",
+     "items": [
+      {
+       "ref": "6.1.1",
+       "title": "Best Subset Selection",
+       "zh": "最优子集选择"
+      },
+      {
+       "ref": "6.1.2",
+       "title": "Stepwise Selection",
+       "zh": "逐步选择"
+      },
+      {
+       "ref": "6.1.3",
+       "title": "Choosing the Optimal Model",
+       "zh": "选择最优模型"
+      }
+     ]
+    },
+    {
+     "ref": "6.2",
+     "title": "Shrinkage Methods",
+     "zh": "收缩方法",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Ridge Regression",
+       "zh": "岭回归"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "The Lasso",
+       "zh": "Lasso"
+      },
+      {
+       "ref": "6.2.3",
+       "title": "Selecting the Tuning Parameter",
+       "zh": "选择调节参数"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Dimension Reduction Methods",
+     "zh": "降维方法",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "Principal Components Regression",
+       "zh": "主成分回归"
+      },
+      {
+       "ref": "6.3.2",
+       "title": "Partial Least Squares",
+       "zh": "偏最小二乘"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Considerations in High Dimensions",
+     "zh": "高维情形下的考虑",
+     "items": [
+      {
+       "ref": "6.4.1",
+       "title": "High-Dimensional Data",
+       "zh": "高维数据"
+      },
+      {
+       "ref": "6.4.2",
+       "title": "What Goes Wrong in High Dimensions?",
+       "zh": "高维下会出什么问题"
+      },
+      {
+       "ref": "6.4.3",
+       "title": "Regression in High Dimensions",
+       "zh": "高维中的回归"
+      },
+      {
+       "ref": "6.4.4",
+       "title": "Interpreting Results in High Dimensions",
+       "zh": "高维结果的解释"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Moving Beyond Linearity",
+   "zh": "超越线性",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Polynomial Regression",
+     "zh": "多项式回归"
+    },
+    {
+     "ref": "7.2",
+     "title": "Step Functions",
+     "zh": "阶梯函数"
+    },
+    {
+     "ref": "7.3",
+     "title": "Basis Functions",
+     "zh": "基函数"
+    },
+    {
+     "ref": "7.4",
+     "title": "Regression Splines",
+     "zh": "回归样条"
+    },
+    {
+     "ref": "7.5",
+     "title": "Smoothing Splines",
+     "zh": "平滑样条"
+    },
+    {
+     "ref": "7.6",
+     "title": "Local Regression",
+     "zh": "局部回归"
+    },
+    {
+     "ref": "7.7",
+     "title": "Generalized Additive Models",
+     "zh": "广义可加模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Tree-Based Methods",
+   "zh": "基于树的方法",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "The Basics of Decision Trees",
+     "zh": "决策树基础"
+    },
+    {
+     "ref": "8.2",
+     "title": "Bagging, Random Forests, Boosting, and Bayesian Additive Regression Trees",
+     "zh": "Bagging、随机森林、提升与贝叶斯可加回归树"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Support Vector Machines",
+   "zh": "支持向量机",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Maximal Margin Classifier",
+     "zh": "最大间隔分类器"
+    },
+    {
+     "ref": "9.2",
+     "title": "Support Vector Classifiers",
+     "zh": "支持向量分类器"
+    },
+    {
+     "ref": "9.3",
+     "title": "Support Vector Machines",
+     "zh": "支持向量机"
+    },
+    {
+     "ref": "9.4",
+     "title": "SVMs with More than Two Classes",
+     "zh": "多类支持向量机"
+    },
+    {
+     "ref": "9.5",
+     "title": "Relationship to Logistic Regression",
+     "zh": "与逻辑回归的关系"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Unsupervised Learning",
+   "zh": "无监督学习",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "The Challenge of Unsupervised Learning",
+     "zh": "无监督学习的难点"
+    },
+    {
+     "ref": "12.2",
+     "title": "Principal Components Analysis",
+     "zh": "主成分分析",
+     "items": [
+      {
+       "ref": "12.2.1",
+       "title": "What Are Principal Components?",
+       "zh": "什么是主成分"
+      },
+      {
+       "ref": "12.2.2",
+       "title": "Another Interpretation of Principal Components",
+       "zh": "主成分的另一种解释"
+      },
+      {
+       "ref": "12.2.3",
+       "title": "The Proportion of Variance Explained",
+       "zh": "解释的方差比例"
+      },
+      {
+       "ref": "12.2.4",
+       "title": "More on PCA",
+       "zh": "主成分分析的进一步讨论"
+      },
+      {
+       "ref": "12.2.5",
+       "title": "Other Uses for Principal Components",
+       "zh": "主成分的其他用途"
+      }
+     ]
+    },
+    {
+     "ref": "12.3",
+     "title": "Missing Values and Matrix Completion",
+     "zh": "缺失值与矩阵补全"
+    },
+    {
+     "ref": "12.4",
+     "title": "Clustering Methods",
+     "zh": "聚类方法",
+     "items": [
+      {
+       "ref": "12.4.1",
+       "title": "K-Means Clustering",
+       "zh": "K 均值聚类"
+      },
+      {
+       "ref": "12.4.2",
+       "title": "Hierarchical Clustering",
+       "zh": "层次聚类"
+      },
+      {
+       "ref": "12.4.3",
+       "title": "Practical Issues in Clustering",
+       "zh": "聚类中的实际问题"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "FAQ",
+   "zh": "常见问题（什么算半监督、何时无标注数据有用）",
+   "fill": "半监督学习的概念与适用前提：ISLR 完全没有半监督内容，用作者综述开头的问答补",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Generative Models",
+   "zh": "生成式模型",
+   "fill": "半监督学习的第一类方法（把无标注数据当作隐变量、用 EM 训练）",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Identifiability",
+     "zh": "可辨识性"
+    },
+    {
+     "ref": "2.2",
+     "title": "Model Correctness",
+     "zh": "模型正确性"
+    },
+    {
+     "ref": "2.3",
+     "title": "EM Local Maxima",
+     "zh": "EM 的局部极大"
+    },
+    {
+     "ref": "2.4",
+     "title": "Cluster-and-Label",
+     "zh": "先聚类再标注"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Self-Training",
+   "zh": "自训练",
+   "fill": "半监督学习最朴素的一类方法（用模型自己的预测给无标注数据打伪标签）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Co-Training and Multiview Learning",
+   "zh": "协同训练与多视图学习",
+   "fill": "半监督学习的多视图方法",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Co-Training",
+     "zh": "协同训练"
+    },
+    {
+     "ref": "4.2",
+     "title": "Multiview Learning",
+     "zh": "多视图学习"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "回归",
+   "refs": [
+    "A:3",
+    "A:7",
+    "A:6"
+   ],
+   "note": "A:3 线性回归（简单/多元、系数估计与显著性、交互项与非线性变换、与 KNN 对比）；A:7 超越线性（多项式、阶梯函数、基函数、样条、局部回归、GAM）；A:6 是回归的模型选择与正则化（子集选择、岭回归/Lasso）。"
+  },
+  {
+   "topic": "分类",
+   "refs": [
+    "A:4",
+    "A:8",
+    "A:9"
+   ],
+   "note": "A:4 逻辑回归、LDA/QDA、朴素贝叶斯、GLM 与分类方法比较；A:8 树与集成（决策树、bagging、随机森林、提升）；A:9 SVM（最大间隔、软间隔、核）。"
+  },
+  {
+   "topic": "聚类",
+   "refs": [
+    "A:12.4",
+    "A:12.4.1",
+    "A:12.4.2",
+    "A:12.4.3"
+   ],
+   "note": "K 均值、层次聚类与聚类中的实际问题。"
+  },
+  {
+   "topic": "降维",
+   "refs": [
+    "A:12.2",
+    "A:12.2.1",
+    "A:12.2.2",
+    "A:12.2.3",
+    "A:12.2.4",
+    "A:6.3"
+   ],
+   "note": "A:12.2 主成分分析（主成分是什么、解释、方差解释比例、其它用途）；A:6.3 把降维当作有监督学习的预处理（主成分回归、偏最小二乘）。"
+  },
+  {
+   "topic": "表示",
+   "refs": [
+    "A:12.2",
+    "A:6.3",
+    "A:12.3"
+   ],
+   "note": "ISLR 讲的“表示”是线性的低维表示：主成分（A:12.2）、主成分回归/偏最小二乘（A:6.3）、矩阵补全得到的隐因子表示（A:12.3）。非线性表示学习（学到的特征、深度表示）不在 ISLR 范围，属节点 A.2.3 的深度学习资源（该书第 10 章也未收，见 omitted）。"
+  },
+  {
+   "topic": "特征工程",
+   "refs": [
+    "A:3.3",
+    "A:6.1",
+    "A:6.2",
+    "A:7.3",
+    "A:7.4"
+   ],
+   "note": "ISLR 没有单独讲“特征工程”的章；与特征构造/筛选直接相关的是：A:3.3 类别变量编码（哑变量）、交互项与非线性变换，A:6.1 子集选择与 A:6.2 收缩（变量筛选与正则），A:7.3 基函数与 A:7.4 回归样条（手工构造特征的系统做法）。"
+  },
+  {
+   "topic": "学习设置",
+   "refs": [
+    "A:2.1.4",
+    "A:2.1.5",
+    "A:2.2",
+    "A:2.2.2",
+    "A:5.1"
+   ],
+   "note": "A:2.1.4 监督与无监督之分，A:2.1.5 回归与分类问题之分，A:2.2 模型精度的评估（拟合质量、偏差-方差权衡、分类情形），A:5.1 交叉验证作为评估/选择流程。"
+  },
+  {
+   "topic": "半监督学习",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#3",
+    "B:#4"
+   ],
+   "note": "节点标题含“半监督”，但简介的知识点清单里没有它，主来源 A 也完全不涉及（A:2.1.4 只有二分）。补充分支 B 给出半监督的概念问答（B:#1）、生成式模型（B:#2）、自训练（B:#3）、协同训练/多视图（B:#4）。B 是研究生层次的文献综述，只用于这一块，入门层若要更轻的读法可先只读 B:#1。"
+  }
+ ],
+ "omitted": "A（ISLP 2nd ed.）未收：第 1 章 Introduction（统计学习领域综述，不含方法）、第 10 章 Deep Learning（讲神经网络、CNN、RNN —— 属节点 A.2.3）、第 11 章 Survival Analysis and Censored Data（生存分析，不在本节点简介内）、第 13 章 Multiple Testing（多重检验，属统计推断节点）；以及各章的 Lab 小节（2.3、3.6、4.7、5.3、6.5、7.8、8.3、9.6、10.9、11.8、12.5）与 Exercises、Index。第 3、4、7、8、9 章的小节没有展开到第三层（第三层只用在 2.1、2.2、5.1、6.1–6.4、12.2、12.4），否则叶子会超过 80。B 只收前四章（FAQ、生成式模型、自训练、协同训练/多视图），其后的避免稠密区域改动、图方法、类别比例、计算学习理论、结构化输出、相关领域等章节都是研究性内容，超出 D1 入门层。",
+ "notes": "两个实现细节：(1) 出版社的 R 版前置页 PDF（bfm:978-1-0716-1418-1）目录里 fi/ff/ffi 连字被抽成空字符或 \\x0e（“Classi cation”“Estimating the Coe cients”），核对必然对不上，因此改用同一套书的 Python 版（2023）前置页 PDF，它抽取得干净；两版目录结构一致。(2) 即便如此，第 8、9 章的章标题在 PDF 里抽成 “T ree-Based Methods”“Support V ector Machines”，所以同时把出版社的书目页（book/10.1007/978-3-031-38747-0）放进 toc_urls，章标题以书目页为准。节点原资源写的是 R/Python 两版，这里选 Python 版（2023）作为主来源。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 89,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

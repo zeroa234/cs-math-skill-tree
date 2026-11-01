@@ -1,0 +1,351 @@
+{
+ "id": "S.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Introduction to Software Security",
+   "by": "Barton P. Miller, Elisa R. Heymann (University of Wisconsin–Madison)",
+   "year": 2026,
+   "url": "https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/",
+   "toc_urls": [
+    "https://research.cs.wisc.edu/mist/SoftwareSecurityCourse/"
+   ],
+   "why": "节点现有英文资源就是这本开放教材（UW-Madison，作者把各章免费放在课程站上）；它按 8 个模块、43 章列出目录，正好把“设计—编码—人工审查（FPVA）—自动化静态工具—动态/模糊测试—加固”这条链走完，是这一节点最贴合的体系。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities (NIST SP 800-218)",
+   "by": "Murugiah Souppaya, Karen Scarfone, Donna Dodson (NIST)",
+   "year": 2022,
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf"
+   ],
+   "why": "补“安全需求”和“漏洞修复与根因分析”：A 从代码和工具讲起，没有讲组织层面的安全需求怎么定义、怎么下发给第三方，也没有讲收到漏洞后如何评估、排序、修复与找根因；SSDF 的 PO.1、PW.1、PW.2、RV.1–RV.3 正是这四件事的权威实践清单。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Module 2",
+   "title": "Thinking Like a Designer",
+   "zh": "像设计者一样思考",
+   "items": [
+    {
+     "ref": "4",
+     "title": "Secure Design Principles",
+     "zh": "安全设计原则"
+    },
+    {
+     "ref": "5",
+     "title": "Overview of Threat Modeling",
+     "zh": "威胁建模概述"
+    },
+    {
+     "ref": "6",
+     "title": "Microsoft Security Design Lifecycle and Threat Modeling Methodology",
+     "zh": "微软安全开发生命周期与威胁建模方法"
+    },
+    {
+     "ref": "7",
+     "title": "Microsoft DREAD Threat Categories",
+     "zh": "微软 DREAD 威胁分类"
+    },
+    {
+     "ref": "8",
+     "title": "PASTA Threat Modeling Methodology",
+     "zh": "PASTA 威胁建模方法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Module 4",
+   "title": "Defensive Techniques",
+   "zh": "防御技术",
+   "items": [
+    {
+     "ref": "26",
+     "title": "Address Space Layout Randomization (ASLR)",
+     "zh": "地址空间布局随机化（ASLR）"
+    },
+    {
+     "ref": "27",
+     "title": "Memory Safety Checks",
+     "zh": "内存安全检查"
+    },
+    {
+     "ref": "28",
+     "title": "Control Flow Integrity Checks",
+     "zh": "控制流完整性检查"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Module 5",
+   "title": "Thinking Like an Analyst: In-Depth Vulnerability Assessment",
+   "zh": "像分析师一样思考：深入漏洞评估",
+   "items": [
+    {
+     "ref": "29",
+     "title": "Introduction to FPVA, First Principles Vulnerability Assessment",
+     "zh": "FPVA（第一性原理漏洞评估）导论"
+    },
+    {
+     "ref": "30",
+     "title": "FPVA Step 1: Architectural Analysis (part 1)",
+     "zh": "FPVA 第 1 步：体系结构分析（上）"
+    },
+    {
+     "ref": "31",
+     "title": "FPVA Step 2: Resource Identification",
+     "zh": "FPVA 第 2 步：资源识别"
+    },
+    {
+     "ref": "32",
+     "title": "FPVA Step 3: Trust and Privilege Analysis",
+     "zh": "FPVA 第 3 步：信任与权限分析"
+    },
+    {
+     "ref": "33",
+     "title": "FPVA Step 4: Component Analysis (part 1)",
+     "zh": "FPVA 第 4 步：组件分析（上）"
+    },
+    {
+     "ref": "34",
+     "title": "FPVA Step 5: Dissemination of Results",
+     "zh": "FPVA 第 5 步：结果发布"
+    },
+    {
+     "ref": "35",
+     "title": "The Manager's Point of View: Responding to a Vulnerability",
+     "zh": "管理者视角：如何响应一个漏洞"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Module 6",
+   "title": "Thinking Like an Analyst: Automated Assessment Tools",
+   "zh": "像分析师一样思考：自动化评估工具",
+   "items": [
+    {
+     "ref": "36",
+     "title": "Static Analysis Tools Concepts",
+     "zh": "静态分析工具的基本概念"
+    },
+    {
+     "ref": "37",
+     "title": "Dependency Analysis Tools: Conceptual Background",
+     "zh": "依赖分析工具：概念背景"
+    },
+    {
+     "ref": "",
+     "title": "Dependency Tools: How to Use the Tools",
+     "zh": "依赖分析工具的使用"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Module 7",
+   "title": "Dynamic Techniques (Fuzz Testing and Other Checkers)",
+   "zh": "动态技术（模糊测试与其他检查工具）",
+   "items": [
+    {
+     "ref": "38",
+     "title": "Introduction to Fuzz Testing",
+     "zh": "模糊测试导论"
+    },
+    {
+     "ref": "",
+     "title": "Classic Fuzz Testing: Background",
+     "zh": "经典模糊测试：背景"
+    },
+    {
+     "ref": "39",
+     "title": "Classic Fuzz Testing: The Command Line Studies",
+     "zh": "经典模糊测试：命令行程序研究"
+    },
+    {
+     "ref": "40",
+     "title": "Classic Fuzz Testing: The GUI-Based Studies",
+     "zh": "经典模糊测试：图形界面程序研究"
+    },
+    {
+     "ref": "41",
+     "title": "Classic Fuzz Testing: Other Studies",
+     "zh": "经典模糊测试：其他研究"
+    },
+    {
+     "ref": "42",
+     "title": "Fuzz Testing with AFL++",
+     "zh": "用 AFL++ 做模糊测试"
+    },
+    {
+     "ref": "43",
+     "title": "Memory Error Checking Tools",
+     "zh": "内存错误检查工具"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "PO",
+   "title": "Prepare the Organization (PO)",
+   "zh": "组织准备（PO）",
+   "fill": "安全需求：把安全需求从组织层定义清楚、写进开发流程并下发给第三方组件供应商",
+   "items": [
+    {
+     "ref": "PO.1",
+     "title": "Define Security Requirements for Software Development (PO.1)",
+     "zh": "定义软件开发的安全需求（PO.1）"
+    },
+    {
+     "ref": "PO.4",
+     "title": "Define and Use Criteria for Software Security Checks (PO.4)",
+     "zh": "定义并使用软件安全检查准则（PO.4）"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "PW",
+   "title": "Produce Well-Secured Software (PW)",
+   "zh": "产出安全可靠的软件（PW）",
+   "fill": "安全需求与代码审查/静态分析/动态分析在开发流程中的落点：设计满足需求、按安全编码规范写码、审读人可读代码、测试可执行代码",
+   "items": [
+    {
+     "ref": "PW.1",
+     "title": "Design Software to Meet Security Requirements and Mitigate Security Risks (PW.1)",
+     "zh": "按安全需求设计软件并缓解安全风险（PW.1）"
+    },
+    {
+     "ref": "PW.2",
+     "title": "Review the Software Design to Verify Compliance with Security Requirements and Risk Information (PW.2)",
+     "zh": "评审软件设计以验证符合安全需求与风险信息（PW.2）"
+    },
+    {
+     "ref": "PW.5",
+     "title": "Create Source Code by Adhering to Secure Coding Practices (PW.5)",
+     "zh": "遵循安全编码实践编写源代码（PW.5）"
+    },
+    {
+     "ref": "PW.7",
+     "title": "Review and/or Analyze Human-Readable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements (PW.7)",
+     "zh": "审读/分析人可读代码以发现漏洞并验证符合安全需求（PW.7）"
+    },
+    {
+     "ref": "PW.8",
+     "title": "Test Executable Code to Identify Vulnerabilities and Verify Compliance with Security Requirements (PW.8)",
+     "zh": "测试可执行代码以发现漏洞并验证符合安全需求（PW.8）"
+    },
+    {
+     "ref": "PW.9",
+     "title": "Configure Software to Have Secure Settings by Default (PW.9)",
+     "zh": "把软件默认配置设为安全值（PW.9）"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "RV",
+   "title": "Respond to Vulnerabilities (RV)",
+   "zh": "响应漏洞（RV）",
+   "fill": "漏洞修复：从持续发现、评估排序与修复，到根因分析与防止同类漏洞复发",
+   "items": [
+    {
+     "ref": "RV.1",
+     "title": "Identify and Confirm Vulnerabilities on an Ongoing Basis (RV.1)",
+     "zh": "持续发现并确认漏洞（RV.1）"
+    },
+    {
+     "ref": "RV.2",
+     "title": "Assess, Prioritize, and Remediate Vulnerabilities (RV.2)",
+     "zh": "评估、排序与修复漏洞（RV.2）"
+    },
+    {
+     "ref": "RV.3",
+     "title": "Analyze Vulnerabilities to Identify Their Root Causes (RV.3)",
+     "zh": "分析漏洞以找出根因（RV.3）"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "安全需求",
+   "refs": [
+    "A:Module 2",
+    "A:5",
+    "B:PO.1",
+    "B:PW.1",
+    "B:PW.2"
+   ],
+   "note": "A 只能给到“需求的前一步”：Module 2 的 Overview of Threat Modeling、Microsoft Security Design Lifecycle and Threat Modeling Methodology、DREAD、PASTA 把“系统要保护什么、对手是谁、先修哪个”讲清楚，安全设计原则一章讲怎么用这些结论约束设计。真正“定义、记录、下发安全需求，并把需求拿来做设计评审与验收判据”的是 B 的 PO.1、PW.1、PW.2。"
+  },
+  {
+   "topic": "代码审查",
+   "refs": [
+    "A:Module 5",
+    "A:29",
+    "A:30",
+    "A:32",
+    "A:34",
+    "B:PW.7"
+   ],
+   "note": "A 的人工审查方法论是 FPVA：29 讲第一性原理漏洞评估的思路，30 做体系结构分析，31 识别资源，32 做信任与权限分析，33 逐组件分析，34 把结果发布出去。B 的 PW.7 从流程上规定“必须审读/分析人可读代码并验证符合安全需求”。"
+  },
+  {
+   "topic": "静态分析",
+   "refs": [
+    "A:Module 6",
+    "A:36",
+    "A:37",
+    "B:PW.7"
+   ],
+   "note": "A 的 Module 6 是自动化评估工具：36 讲静态分析工具的数据流/污点分析等概念，37 讲依赖分析（第三方组件、SBOM 类）的概念与工具用法。B 的 PW.7 允许用工具辅助完成代码分析。"
+  },
+  {
+   "topic": "动态分析",
+   "refs": [
+    "A:Module 7",
+    "A:43",
+    "B:PW.8"
+   ],
+   "note": "A 的动态技术模块把“用输入去撞运行中的程序”作为主线，43 Memory Error Checking Tools 给运行期错误检测工具；B 的 PW.8 要求对可执行代码做测试。"
+  },
+  {
+   "topic": "模糊测试",
+   "refs": [
+    "A:38",
+    "A:39",
+    "A:42",
+    "A:41"
+   ],
+   "note": "A 从 38 模糊测试导论、Classic Fuzz Testing: Background 讲起，39/40/41 是经典模糊测试的命令行、图形界面与其他研究案例，42 讲用 AFL++ 做现代覆盖率引导模糊测试。"
+  },
+  {
+   "topic": "漏洞修复",
+   "refs": [
+    "A:35",
+    "A:Module 4",
+    "B:RV.1",
+    "B:RV.2",
+    "B:RV.3"
+   ],
+   "note": "A 的 Module 5 末章 35 从管理者视角讲收到漏洞报告后怎么决策与响应，Module 4 则是修复时可直接加的缓解手段（ASLR、内存安全检查、控制流完整性）。B 的 RV.1–RV.3 给完整闭环：持续发现与确认、评估排序与修复、根因分析防止同类问题复发。"
+  }
+ ],
+ "omitted": "A 只收 Module 2、4、5、6、7 共 25 章。未收：Module 1 Introduction（术语、威胁、风险概念，属 S.1.1 安全基础）、Module 3 Thinking Like a Programmer: Secure Programming 全 17 章（指针与字符串、整数/浮点错误、目录穿越、异常、序列化、SQL/命令/代码/XML 注入、XSS、CSRF、会话管理、CORS、SSRF，属 S.2.x 与 S.3.1）、Module 8 Secure Use of Cryptography（属密码学节点）；Module 5 的 FPVA Step 1/Step 4 各只收了 (part 1)，后续分片是同一步的续讲；Module 7 的 Classic Fuzz Web Resources 与 Supplementary Sections 的 Glossary of Terms 也不收。B 只收 PO、PW、RV 三组里与需求、审查、测试、修复直接相关的 11 条实践，PS 组（保护代码与发布件的完整性与归档）与 PO.2/PO.3/PO.5、PW.4/PW.6 属构建与供应链安全，未收。",
+ "notes": "A 是开放教材，站点页脚写 © 2023-2026、最后修改时间为 2026 年，year 取 2026。A 的模块与章节编号在页面上是分开的两行（如“Module 5: …”下一行“29 Introduction to FPVA…”），分支 ref 用“Module N”，条目 ref 用章号；Module 7 的 Classic Fuzz Testing 系列在页面上没有章号（只有 38–43 有），所以这些条目的 ref 留空。B 是 NIST SP 800-218 v1.1 的 PDF，分支与条目都取“Table 1”里的实践组名与实践名（括号里的编号即原始编号），PS 组的原始写法是“Protect Software (PS)”，此处未收该组。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 44,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

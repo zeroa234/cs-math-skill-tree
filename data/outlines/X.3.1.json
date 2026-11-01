@@ -1,0 +1,525 @@
+{
+ "id": "X.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "notes",
+   "title": "Lecture Notes for Ph219/CS219: Quantum Information",
+   "by": "John Preskill (Caltech)",
+   "year": 2026,
+   "url": "https://www.preskill.caltech.edu/ph219/",
+   "toc_urls": [
+    "http://www.preskill.caltech.edu/ph219/chap2_15.pdf",
+    "http://www.preskill.caltech.edu/ph219/chap3_15.pdf",
+    "http://www.preskill.caltech.edu/ph219/chap5_15.pdf",
+    "http://www.preskill.caltech.edu/ph219/chap6_20_6A_2022.pdf",
+    "http://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf",
+    "http://www.preskill.caltech.edu/ph219/chap10_6A_2025.pdf"
+   ],
+   "why": "节点现有英文资源（Caltech Ph219/CS219 课程站）的核心讲义，作者本人公开；六章正好对应量子态、测量与信道、电路与通用门、算法、纠错、量子信息五个知识点，且每章自带分节目录。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Foundations I: States and Ensembles",
+   "zh": "基础（一）：态与系综",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Axioms of quantum mechanics",
+     "zh": "量子力学公理"
+    },
+    {
+     "ref": "2.3",
+     "title": "The density operator",
+     "zh": "密度算符",
+     "items": [
+      {
+       "ref": "2.3.1",
+       "title": "The bipartite quantum system",
+       "zh": "双分量子系统"
+      },
+      {
+       "ref": "2.3.2",
+       "title": "Bloch sphere",
+       "zh": "Bloch 球"
+      }
+     ]
+    },
+    {
+     "ref": "2.4",
+     "title": "Schmidt decomposition",
+     "zh": "Schmidt 分解",
+     "items": [
+      {
+       "ref": "2.4.1",
+       "title": "Entanglement",
+       "zh": "纠缠"
+      }
+     ]
+    },
+    {
+     "ref": "2.6",
+     "title": "How far apart are two quantum states?",
+     "zh": "两个量子态相距多远",
+     "items": [
+      {
+       "ref": "2.6.1",
+       "title": "Fidelity and Uhlmann’s theorem",
+       "zh": "保真度与 Uhlmann 定理"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Foundations II: Measurement and Evolution",
+   "zh": "基础（二）：测量与演化",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Orthogonal measurement and beyond",
+     "zh": "正交测量及其推广",
+     "items": [
+      {
+       "ref": "3.1.1",
+       "title": "Orthogonal Measurements",
+       "zh": "正交测量"
+      },
+      {
+       "ref": "3.1.2",
+       "title": "Generalized measurements",
+       "zh": "广义测量"
+      }
+     ]
+    },
+    {
+     "ref": "3.2",
+     "title": "Quantum channels",
+     "zh": "量子信道",
+     "items": [
+      {
+       "ref": "3.2.1",
+       "title": "The operator-sum representation",
+       "zh": "算符和表示"
+      },
+      {
+       "ref": "3.2.6",
+       "title": "Complete positivity",
+       "zh": "完全正性"
+      }
+     ]
+    },
+    {
+     "ref": "3.3",
+     "title": "Channel-state duality and the dilation of a channel",
+     "zh": "信道—态对偶与信道的膨胀"
+    },
+    {
+     "ref": "3.4",
+     "title": "Three quantum channels",
+     "zh": "三种量子信道",
+     "items": [
+      {
+       "ref": "3.4.1",
+       "title": "Depolarizing channel",
+       "zh": "去极化信道"
+      },
+      {
+       "ref": "3.4.2",
+       "title": "Dephasing channel",
+       "zh": "退相位信道"
+      },
+      {
+       "ref": "3.4.3",
+       "title": "Amplitude-damping channel",
+       "zh": "振幅阻尼信道"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Classical and quantum circuits",
+   "zh": "经典电路与量子电路",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Reversible computation",
+     "zh": "可逆计算",
+     "items": [
+      {
+       "ref": "5.2.2",
+       "title": "Reversible gates",
+       "zh": "可逆门"
+      }
+     ]
+    },
+    {
+     "ref": "5.3",
+     "title": "Quantum Circuits",
+     "zh": "量子电路",
+     "items": [
+      {
+       "ref": "5.3.1",
+       "title": "Accuracy",
+       "zh": "精度"
+      }
+     ]
+    },
+    {
+     "ref": "5.4",
+     "title": "Universal quantum gates",
+     "zh": "通用量子门",
+     "items": [
+      {
+       "ref": "5.4.1",
+       "title": "Notions of universality",
+       "zh": "通用性的几种含义"
+      },
+      {
+       "ref": "5.4.2",
+       "title": "Two-qubit gates are exactly universal",
+       "zh": "两比特门是严格通用的"
+      },
+      {
+       "ref": "5.4.3",
+       "title": "Finite universal gate sets",
+       "zh": "有限通用门集"
+      },
+      {
+       "ref": "5.4.4",
+       "title": "The Solovay-Kitaev approximation",
+       "zh": "Solovay-Kitaev 逼近"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Quantum Algorithms",
+   "zh": "量子算法",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Some Quantum Algorithms",
+     "zh": "若干量子算法"
+    },
+    {
+     "ref": "6.2",
+     "title": "Periodicity",
+     "zh": "周期性",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Finding the period",
+       "zh": "求周期"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "From FFT to QFT",
+       "zh": "从 FFT 到 QFT"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Factoring",
+     "zh": "因式分解",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "Factoring as period finding",
+       "zh": "把分解化归为求周期"
+      },
+      {
+       "ref": "6.3.2",
+       "title": "RSA",
+       "zh": "RSA"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Phase Estimation",
+     "zh": "相位估计"
+    },
+    {
+     "ref": "6.5",
+     "title": "Hidden Subgroup Problem",
+     "zh": "隐藏子群问题",
+     "items": [
+      {
+       "ref": "6.5.1",
+       "title": "Discrete Log Problem",
+       "zh": "离散对数问题"
+      }
+     ]
+    },
+    {
+     "ref": "6.6",
+     "title": "Quantum Searching",
+     "zh": "量子搜索",
+     "items": [
+      {
+       "ref": "6.6.1",
+       "title": "Generalized Search",
+       "zh": "广义搜索"
+      }
+     ]
+    },
+    {
+     "ref": "6.7",
+     "title": "The Grover Algorithm Is Optimal",
+     "zh": "Grover 算法是最优的"
+    },
+    {
+     "ref": "6.8",
+     "title": "Using quantum computers to simulate quantum physics",
+     "zh": "用量子计算机模拟量子物理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Quantum Error Correction",
+   "zh": "量子纠错",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "A Quantum error-correcting code",
+     "zh": "一个量子纠错码"
+    },
+    {
+     "ref": "7.2",
+     "title": "Conditions for quantum error correction",
+     "zh": "量子纠错的条件"
+    },
+    {
+     "ref": "7.6",
+     "title": "Classical Linear Codes",
+     "zh": "经典线性码"
+    },
+    {
+     "ref": "7.7",
+     "title": "CSS Codes",
+     "zh": "CSS 码"
+    },
+    {
+     "ref": "7.8",
+     "title": "The 7-Qubit Code",
+     "zh": "7 比特码"
+    },
+    {
+     "ref": "7.10",
+     "title": "Stabilizer Codes",
+     "zh": "稳定子码",
+     "items": [
+      {
+       "ref": "7.10.1",
+       "title": "General formulation",
+       "zh": "一般表述"
+      }
+     ]
+    },
+    {
+     "ref": "7.17",
+     "title": "Concatenated codes",
+     "zh": "级联码"
+    },
+    {
+     "ref": "7.18",
+     "title": "Toric code",
+     "zh": "环面码",
+     "items": [
+      {
+       "ref": "7.18.4",
+       "title": "Planar surface codes",
+       "zh": "平面表面码"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Quantum Shannon Theory",
+   "zh": "量子香农理论",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Shannon for Dummies",
+     "zh": "香农理论入门",
+     "items": [
+      {
+       "ref": "10.1.1",
+       "title": "Shannon entropy and data compression",
+       "zh": "香农熵与数据压缩"
+      },
+      {
+       "ref": "10.1.2",
+       "title": "Joint typicality, conditional entropy, and mutual information",
+       "zh": "联合典型性、条件熵与互信息"
+      },
+      {
+       "ref": "10.1.5",
+       "title": "The noisy channel coding theorem",
+       "zh": "有噪信道编码定理"
+      }
+     ]
+    },
+    {
+     "ref": "10.2",
+     "title": "Von Neumann Entropy",
+     "zh": "冯·诺依曼熵",
+     "items": [
+      {
+       "ref": "10.2.3",
+       "title": "Strong subadditivity",
+       "zh": "强次可加性"
+      }
+     ]
+    },
+    {
+     "ref": "10.3",
+     "title": "Quantum Source Coding",
+     "zh": "量子信源编码",
+     "items": [
+      {
+       "ref": "10.3.2",
+       "title": "Schumacher compression in general",
+       "zh": "一般的 Schumacher 压缩"
+      }
+     ]
+    },
+    {
+     "ref": "10.4",
+     "title": "Entanglement Concentration and Dilution",
+     "zh": "纠缠浓缩与稀释"
+    },
+    {
+     "ref": "10.6",
+     "title": "Accessible Information",
+     "zh": "可及信息",
+     "items": [
+      {
+       "ref": "10.6.2",
+       "title": "Holevo bound",
+       "zh": "Holevo 界"
+      }
+     ]
+    },
+    {
+     "ref": "10.7",
+     "title": "Quantum Channel Capacities and Decoupling",
+     "zh": "量子信道容量与解耦",
+     "items": [
+      {
+       "ref": "10.7.1",
+       "title": "Coherent information and the quantum channel capacity",
+       "zh": "相干信息与量子信道容量"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "量子态",
+   "refs": [
+    "A:2",
+    "A:2.1",
+    "A:2.3",
+    "A:2.3.1",
+    "A:2.4",
+    "A:2.4.1",
+    "A:2.6"
+   ],
+   "note": "公理化的态、密度算符（含复合系统与 Bloch 球）、Schmidt 分解与纠缠、态之间的距离。"
+  },
+  {
+   "topic": "门与测量",
+   "refs": [
+    "A:3.1",
+    "A:3.1.1",
+    "A:3.1.2",
+    "A:3",
+    "A:5",
+    "A:5.2.2",
+    "A:5.4",
+    "A:5.4.2",
+    "A:5.4.3",
+    "A:5.4.4"
+   ],
+   "note": "测量侧（投影测量、POVM 式广义测量）、演化侧（量子信道、三种典型噪声信道），以及电路模型、可逆门与通用门集。"
+  },
+  {
+   "topic": "量子算法",
+   "refs": [
+    "A:6",
+    "A:6.1",
+    "A:6.2",
+    "A:6.3",
+    "A:6.4",
+    "A:6.6",
+    "A:6.7",
+    "A:6.8"
+   ],
+   "note": "QFT 与周期查找、Shor 分解、相位估计、Grover 搜索及其最优性、量子模拟。"
+  },
+  {
+   "topic": "纠错",
+   "refs": [
+    "A:7",
+    "A:7.1",
+    "A:7.2",
+    "A:7.6",
+    "A:7.7",
+    "A:7.8",
+    "A:7.10",
+    "A:7.17",
+    "A:7.18"
+   ],
+   "note": "纠错条件、经典线性码与 CSS 码、7 比特码、稳定子码形式、级联码与表面码。"
+  },
+  {
+   "topic": "量子信息",
+   "refs": [
+    "A:10",
+    "A:10.1",
+    "A:10.2",
+    "A:10.3",
+    "A:10.4",
+    "A:10.6",
+    "A:10.7"
+   ],
+   "note": "从经典香农理论过渡到冯·诺依曼熵、Schumacher 压缩、纠缠浓缩/稀释、Holevo 界与信道容量。"
+  },
+  {
+   "topic": "量子力学基础",
+   "refs": [
+    "A:2.1"
+   ],
+   "note": "节点声明这是外部前置。讲义第 2 章开头的公理小节只是复习级别的重述（态、可观测量、测量、演化、复合系统），不能替代一门量子力学课。"
+  }
+ ],
+ "omitted": "讲义本身有第 4、8、9 章（纠缠、容错量子计算、拓扑量子计算），其中第 8 章尚无排版稿、第 9 章属专题，与五个知识点关系较远，未收；各章的 Summary、Exercises、References、Preface 属辅助内容也未收。第 2 章未收 2.2（比特与自旋、光子偏振入门）、2.5（系综解释的歧义）、2.7；第 3 章未收 3.5、3.6（主方程与非马尔可夫噪声）、3.7；第 5 章未收 5.1（经典电路与复杂度）；第 6 章未收 6.9、6.10（经典可模拟性与 QMA 完全性）；第 7 章未收 7.3—7.5、7.9、7.11—7.16、7.19—7.23（细节构造与界）；第 10 章未收 10.5、10.8、10.9（纠缠度量细节、量子协议与解耦不等式证明）。",
+ "notes": "目录逐条抄自每章 PDF 首页的 Contents。讲义章节更新日期不一（第 2、3、5 章 2015，第 6 章 2020，第 7 章 2026，第 10 章 2025），来源年填 2026。课程站另有 2020 年秋录播视频清单（Lecture 1—18，覆盖第 1—6 章），可配合本导览图使用。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 71,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

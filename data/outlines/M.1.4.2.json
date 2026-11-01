@@ -1,0 +1,187 @@
+{
+ "id": "M.1.4.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Calculus Volume 3",
+   "by": "Gilbert Strang, Edwin “Jed” Herman",
+   "year": 2016,
+   "url": "https://openstax.org/books/calculus-volume-3/pages/1-introduction",
+   "toc_urls": [
+    "https://openstax.org/books/calculus-volume-3/pages/4-introduction",
+    "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
+    "https://openstax.org/books/calculus-volume-3/pages/4-5-the-chain-rule",
+    "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+    "https://openstax.org/books/calculus-volume-3/pages/5-7-change-of-variables-in-multiple-integrals"
+   ],
+   "why": "节点“现有英文学习资源”就是这本书 4.6 的方向导数与梯度；同一本教材的 4.4（线性近似/全微分）、4.5（链式法则）、5.7（换元与雅可比行列式）正好拼出“标量场梯度 → 映射导数 → 链式法则 → 坐标变换”这条线。"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "数学分析（讲义）",
+   "by": "于品，清华大学",
+   "year": 2018,
+   "url": "https://www.bananaspace.org/books/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/",
+   "toc_urls": [
+    "https://www.bananaspace.org/books/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"
+   ],
+   "why": "补“向量映射导数”：OpenStax 的雅可比只作为重积分换元的行列式出现，没有把 F:Rⁿ→Rᵐ 的导数讲成线性映射（雅可比矩阵）；这份讲义（也是节点现有中文学习资源）第 30、31 讲正是高维函数的微分与映射的微分。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4.6",
+   "title": "Directional Derivatives and the Gradient",
+   "zh": "方向导数与梯度",
+   "items": [
+    {
+     "ref": "",
+     "title": "Directional Derivatives",
+     "zh": "方向导数"
+    },
+    {
+     "ref": "",
+     "title": "Gradient",
+     "zh": "梯度"
+    },
+    {
+     "ref": "",
+     "title": "Gradients and Level Curves",
+     "zh": "梯度与等值线"
+    },
+    {
+     "ref": "",
+     "title": "Three-Dimensional Gradients and Directional Derivatives",
+     "zh": "三维梯度与方向导数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4.4",
+   "title": "Tangent Planes and Linear Approximations",
+   "zh": "切平面与线性近似",
+   "items": [
+    {
+     "ref": "",
+     "title": "Linear Approximations",
+     "zh": "线性近似"
+    },
+    {
+     "ref": "",
+     "title": "Differentiability",
+     "zh": "可微性"
+    },
+    {
+     "ref": "",
+     "title": "Differentials",
+     "zh": "全微分"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4.5",
+   "title": "The Chain Rule",
+   "zh": "链式法则",
+   "items": [
+    {
+     "ref": "",
+     "title": "Chain Rules for One or Two Independent Variables",
+     "zh": "一个或两个自变量情形的链式法则"
+    },
+    {
+     "ref": "",
+     "title": "The Generalized Chain Rule",
+     "zh": "一般形式的链式法则"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5.7",
+   "title": "Change of Variables in Multiple Integrals",
+   "zh": "重积分的换元",
+   "items": [
+    {
+     "ref": "",
+     "title": "Planar Transformations",
+     "zh": "平面变换"
+    },
+    {
+     "ref": "",
+     "title": "Jacobians",
+     "zh": "雅可比"
+    },
+    {
+     "ref": "",
+     "title": "Change of Variables for Double Integrals",
+     "zh": "二重积分的换元"
+    },
+    {
+     "ref": "",
+     "title": "Change of Variables for Triple Integrals",
+     "zh": "三重积分的换元"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "30",
+   "title": "高维的微分学：高维函数的微分",
+   "fill": "补“标量场梯度”的严格版本：把 f:Rⁿ→R 的微分讲成线性映射，梯度是它的矩阵表示",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "31",
+   "title": "映射的微分",
+   "fill": "补“向量映射导数”：F:Rⁿ→Rᵐ 的导数是线性映射（雅可比矩阵），并由此给出映射情形的链式法则",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "标量场梯度",
+   "refs": [
+    "A:4.6",
+    "B:30"
+   ],
+   "note": "A:4.6 给出 ∇f、方向导数 D_uf=∇f·u、梯度垂直于等值线、最速上升方向；B:30 把它写成微分的矩阵表示（严格版）。"
+  },
+  {
+   "topic": "向量映射导数",
+   "refs": [
+    "B:31",
+    "A:5.7"
+   ],
+   "note": "A:5.7 的 Jacobians 小节只把雅可比当作换元时的行列式（∂(x,y)/∂(u,v)），没有讲向量值映射的导数；B:31 的“映射的微分”才是 F:Rⁿ→Rᵐ 的导数=雅可比矩阵。"
+  },
+  {
+   "topic": "链式法则",
+   "refs": [
+    "A:4.5",
+    "B:31"
+   ],
+   "note": "A:4.5 的 Chain Rule for One/Two Independent Variables 与 Generalized Chain Rule 是标量情形的树状图公式；映射情形的链式法则（雅可比矩阵相乘）在 B:31。"
+  },
+  {
+   "topic": "坐标变换",
+   "refs": [
+    "A:5.7"
+   ],
+   "note": "Planar Transformations → Jacobians → 二重/三重积分换元，正是雅可比行列式在坐标变换里的用处。"
+  }
+ ],
+ "omitted": "A（Calculus Volume 3）未收 4.3（偏导数，见 M.1.4.1）、4.7（极值，见 M.1.4.3）、4.8（拉格朗日乘子法）、5.1–5.6（重积分的定义与各种坐标系，其中极坐标/柱坐标/球坐标部分见 M.1.4.4）；第 1–3 章与第 6–7 章未收；各节习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 30、31 讲，第 32 讲之后（微分同胚、子流形、反函数与隐函数定理）未收，因为它们属于 M.1.4.1 的知识点。",
+ "notes": "A 的节内没有编号小节，第三层条目的 ref 留空。B 的目录页只有一个总目录，中文标题照抄，不写 zh。雅可比矩阵的严格定义不在 OpenStax 里，故 B 是必要补充；B 属研究生/英才班水平，仅作这两个知识点的补充。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 19,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

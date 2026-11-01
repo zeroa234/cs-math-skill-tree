@@ -1,0 +1,396 @@
+{
+ "id": "C.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Computer Networks: A Systems Approach (6th Edition)",
+   "by": "Larry Peterson and Bruce Davie",
+   "year": 2021,
+   "url": "https://book.systemsapproach.org/",
+   "toc_urls": [
+    "https://book.systemsapproach.org/",
+    "https://book.systemsapproach.org/foundation.html",
+    "https://book.systemsapproach.org/direct.html",
+    "https://book.systemsapproach.org/internetworking.html",
+    "https://book.systemsapproach.org/scaling.html",
+    "https://book.systemsapproach.org/e2e.html",
+    "https://book.systemsapproach.org/congestion.html",
+    "https://book.systemsapproach.org/applications.html"
+   ],
+   "why": "节点现有资源 CS144 的官网讲次表只到第 5 周（Fall 2026 页面尚未讲完），不足以照抄整门课；CS144 自己把 Peterson & Davie 的这本书列为可选教材，作者官网提供免费在线版并有章/节/小节三级目录，链路、IP、TCP/UDP、路由、拥塞控制、DNS 与应用协议一条线齐全。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Foundation",
+   "zh": "基础",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Applications",
+     "zh": "应用"
+    },
+    {
+     "ref": "1.2",
+     "title": "Requirements",
+     "zh": "需求"
+    },
+    {
+     "ref": "1.3",
+     "title": "Architecture",
+     "zh": "体系结构"
+    },
+    {
+     "ref": "1.4",
+     "title": "Software",
+     "zh": "软件"
+    },
+    {
+     "ref": "1.5",
+     "title": "Performance",
+     "zh": "性能"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Direct Links",
+   "zh": "直接链路",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Technology Landscape",
+     "zh": "技术全景"
+    },
+    {
+     "ref": "2.2",
+     "title": "Encoding",
+     "zh": "编码"
+    },
+    {
+     "ref": "2.3",
+     "title": "Framing",
+     "zh": "成帧"
+    },
+    {
+     "ref": "2.4",
+     "title": "Error Detection",
+     "zh": "差错检测"
+    },
+    {
+     "ref": "2.5",
+     "title": "Reliable Transmission",
+     "zh": "可靠传输"
+    },
+    {
+     "ref": "2.6",
+     "title": "Multi-Access Networks",
+     "zh": "多路访问网络"
+    },
+    {
+     "ref": "2.7",
+     "title": "Wireless Networks",
+     "zh": "无线网络"
+    },
+    {
+     "ref": "2.8",
+     "title": "Access Networks",
+     "zh": "接入网"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Internetworking",
+   "zh": "网络互连",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Switching Basics",
+     "zh": "交换基础"
+    },
+    {
+     "ref": "3.2",
+     "title": "Switched Ethernet",
+     "zh": "交换式以太网"
+    },
+    {
+     "ref": "3.3",
+     "title": "Internet (IP)",
+     "zh": "网际协议（IP）"
+    },
+    {
+     "ref": "3.4",
+     "title": "Routing",
+     "zh": "路由",
+     "items": [
+      {
+       "ref": "3.4.1",
+       "title": "Network as a Graph",
+       "zh": "网络即图"
+      },
+      {
+       "ref": "3.4.2",
+       "title": "Distance-Vector (RIP)",
+       "zh": "距离向量路由（RIP）"
+      },
+      {
+       "ref": "3.4.3",
+       "title": "Link State (OSPF)",
+       "zh": "链路状态路由（OSPF）"
+      },
+      {
+       "ref": "3.4.4",
+       "title": "Metrics",
+       "zh": "路由度量"
+      }
+     ]
+    },
+    {
+     "ref": "3.5",
+     "title": "Implementation",
+     "zh": "实现"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Advanced Internetworking",
+   "zh": "高级网络互连",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Global Internet",
+     "zh": "全球互联网",
+     "items": [
+      {
+       "ref": "4.1.1",
+       "title": "Routing Areas",
+       "zh": "路由区域"
+      },
+      {
+       "ref": "4.1.2",
+       "title": "Interdomain Routing (BGP)",
+       "zh": "域间路由（BGP）"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "IP Version 6",
+     "zh": "IP 第 6 版"
+    },
+    {
+     "ref": "4.3",
+     "title": "Multicast",
+     "zh": "组播"
+    },
+    {
+     "ref": "4.4",
+     "title": "Multiprotocol Label Switching",
+     "zh": "多协议标签交换"
+    },
+    {
+     "ref": "4.5",
+     "title": "Routing Among Mobile Devices",
+     "zh": "移动设备间的路由"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "End-to-End Protocols",
+   "zh": "端到端协议",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Simple Demultiplexor (UDP)",
+     "zh": "简单解复用器（UDP）"
+    },
+    {
+     "ref": "5.2",
+     "title": "Reliable Byte Stream (TCP)",
+     "zh": "可靠字节流（TCP）"
+    },
+    {
+     "ref": "5.3",
+     "title": "Remote Procedure Call",
+     "zh": "远程过程调用"
+    },
+    {
+     "ref": "5.4",
+     "title": "Transport for Real-Time (RTP)",
+     "zh": "实时传输（RTP）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Congestion Control",
+   "zh": "拥塞控制",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Issues in Resource Allocation",
+     "zh": "资源分配问题"
+    },
+    {
+     "ref": "6.2",
+     "title": "Queuing Disciplines",
+     "zh": "排队规则"
+    },
+    {
+     "ref": "6.3",
+     "title": "TCP Congestion Control",
+     "zh": "TCP 拥塞控制"
+    },
+    {
+     "ref": "6.4",
+     "title": "Advanced Congestion Control",
+     "zh": "高级拥塞控制"
+    },
+    {
+     "ref": "6.5",
+     "title": "Quality of Service",
+     "zh": "服务质量"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Applications",
+   "zh": "应用",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Traditional Applications",
+     "zh": "传统应用",
+     "items": [
+      {
+       "ref": "9.1.1",
+       "title": "Electronic Mail (SMTP, MIME, IMAP)",
+       "zh": "电子邮件（SMTP、MIME、IMAP）"
+      },
+      {
+       "ref": "9.1.2",
+       "title": "World Wide Web (HTTP)",
+       "zh": "万维网（HTTP）"
+      },
+      {
+       "ref": "9.1.3",
+       "title": "Web Services",
+       "zh": "Web 服务"
+      }
+     ]
+    },
+    {
+     "ref": "9.2",
+     "title": "Multimedia Applications",
+     "zh": "多媒体应用"
+    },
+    {
+     "ref": "9.3",
+     "title": "Infrastructure Applications",
+     "zh": "基础设施应用",
+     "items": [
+      {
+       "ref": "9.3.1",
+       "title": "Name Service (DNS)",
+       "zh": "名称服务（DNS）"
+      },
+      {
+       "ref": "9.3.2",
+       "title": "Network Management (SNMP, OpenConfig)",
+       "zh": "网络管理（SNMP、OpenConfig）"
+      }
+     ]
+    },
+    {
+     "ref": "9.4",
+     "title": "Overlay Networks",
+     "zh": "覆盖网络"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "链路",
+   "refs": [
+    "A:2",
+    "A:2.2",
+    "A:2.4",
+    "A:2.5"
+   ]
+  },
+  {
+   "topic": "IP",
+   "refs": [
+    "A:3.3",
+    "A:4.2"
+   ]
+  },
+  {
+   "topic": "TCP",
+   "refs": [
+    "A:5.2",
+    "A:6.3"
+   ]
+  },
+  {
+   "topic": "UDP",
+   "refs": [
+    "A:5.1"
+   ]
+  },
+  {
+   "topic": "路由",
+   "refs": [
+    "A:3.4",
+    "A:3.4.2",
+    "A:3.4.3",
+    "A:4.1.2"
+   ]
+  },
+  {
+   "topic": "拥塞控制",
+   "refs": [
+    "A:6.2",
+    "A:6.3",
+    "A:6.4"
+   ]
+  },
+  {
+   "topic": "名称系统",
+   "refs": [
+    "A:9.3.1"
+   ]
+  },
+  {
+   "topic": "应用协议",
+   "refs": [
+    "A:9.1.1",
+    "A:9.1.2",
+    "A:9.3",
+    "A:9.4"
+   ]
+  }
+ ],
+ "omitted": "第 7 章 End-to-End Data（表示格式与多媒体压缩）与第 8 章 Network Security 与节点简介无关；第 9.2 节 Multimedia Applications 只保留章级条目，未展开其小节。",
+ "notes": "A 的 6.2 版在线目录里，第 4 章的路由小节在 scaling.html，第 3 章的路由小节在 internetworking.html，两章合起来才是完整的路由（域内 DV/LS + 域间 BGP），coverage 里分开引用。CS144 官网（Fall 2026）只贴出前 5 周的讲次，无法作为逐讲目录，故按“课程标准教材”取 Peterson & Davie（CS144 页面上列的可选教材之一）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 54,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

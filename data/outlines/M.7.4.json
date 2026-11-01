@@ -1,0 +1,239 @@
+{
+ "id": "M.7.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "ELE522: Large-Scale Optimization for Data Science",
+   "by": "Yuxin Chen, Princeton University",
+   "year": 2019,
+   "url": "https://yuxinchen2020.github.io/ele522_optimization/",
+   "toc_urls": [
+    "https://yuxinchen2020.github.io/ele522_optimization/lectures.html",
+    "https://yuxinchen2020.github.io/ele522_optimization/syllabus.html"
+   ],
+   "why": "节点现有英文资源：Princeton 研究生课，讲义页逐讲讲随机梯度法、随机优化的方差缩减，并给出收敛分析；是“随机优化”最直接的系统材料。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Introduction to Stochastic Programming, 2nd Edition",
+   "by": "John R. Birge, François Louveaux",
+   "year": 2011,
+   "url": "https://link.springer.com/book/10.1007/978-1-4614-0237-4",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-1-4614-0237-4"
+   ],
+   "why": "补“随机规划”：ELE522 是数据科学侧的随机算法课，不讲随机规划建模（两阶段/多阶段补偿、样本平均近似），这本 Springer 教材是该主题的标准教科书。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Gradient methods (unconstrained problems)",
+   "zh": "梯度法（无约束问题）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Gradient methods (constrained problems)",
+   "zh": "梯度法（约束问题）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Subgradient methods",
+   "zh": "次梯度法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Mirror descent",
+   "zh": "镜像下降",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Proximal gradient methods",
+   "zh": "近端梯度法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Accelerated gradient methods",
+   "zh": "加速梯度法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Smoothing for nonsmooth optimization",
+   "zh": "非光滑优化的光滑化",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Dual and primal-dual methods",
+   "zh": "对偶与原-对偶方法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Alternating direction method of multipliers (ADMM)",
+   "zh": "交替方向乘子法（ADMM）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Stochastic gradient methods",
+   "zh": "随机梯度法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Variance reduction for stochastic optimization",
+   "zh": "随机优化的方差缩减",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Quasi-Newton methods",
+   "zh": "拟 Newton 法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Models",
+   "title": "Models",
+   "zh": "模型",
+   "fill": "随机规划（不确定下的建模、信息价值）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction and Examples",
+     "zh": "导论与示例"
+    },
+    {
+     "ref": "",
+     "title": "Basic Properties and Theory",
+     "zh": "基本性质与理论"
+    },
+    {
+     "ref": "",
+     "title": "The Value of Information and the Stochastic Solution",
+     "zh": "信息价值与随机解的价值"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Solution Methods",
+   "title": "Solution Methods",
+   "zh": "求解方法",
+   "fill": "随机规划（两阶段与多阶段补偿问题、随机整数规划）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Two-Stage Recourse Problems",
+     "zh": "两阶段补偿问题"
+    },
+    {
+     "ref": "",
+     "title": "Multistage Stochastic Programs",
+     "zh": "多阶段随机规划"
+    },
+    {
+     "ref": "",
+     "title": "Stochastic Integer Programs",
+     "zh": "随机整数规划"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Approximation and Sampling Methods",
+   "title": "Approximation and Sampling Methods",
+   "zh": "近似与抽样方法",
+   "fill": "随机规划（蒙特卡洛、样本平均与多阶段近似，也是随机规划算法的收敛性分析基础）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Evaluating and Approximating Expectations",
+     "zh": "期望的计算与近似"
+    },
+    {
+     "ref": "",
+     "title": "Monte Carlo Methods",
+     "zh": "蒙特卡洛方法"
+    },
+    {
+     "ref": "",
+     "title": "Multistage Approximations",
+     "zh": "多阶段近似"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "随机梯度",
+   "refs": [
+    "A:#10",
+    "A:#1",
+    "A:#11"
+   ],
+   "note": "第 10 讲 Stochastic gradient methods 是主章；第 1 讲给梯度法的一般框架，第 11 讲讲随机梯度的方差缩减。"
+  },
+  {
+   "topic": "随机逼近",
+   "refs": [
+    "A:#10"
+   ],
+   "note": "ELE522 用“随机优化/随机梯度”的现代叫法，没有单列 Robbins-Monro 随机逼近；其讲义第 10 讲即随机逼近型算法的收敛分析。B 书第 3 部分（蒙特卡洛、样本平均）是随机逼近的另一条路线。"
+  },
+  {
+   "topic": "方差缩减",
+   "refs": [
+    "A:#11",
+    "A:#10"
+   ]
+  },
+  {
+   "topic": "随机规划",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "收敛分析",
+   "refs": [
+    "A:#10",
+    "A:#1",
+    "A:#6",
+    "B:#3"
+   ],
+   "note": "A 的梯度法、加速梯度法与随机梯度讲义都给出收敛速率；随机规划侧的收敛性（样本平均近似的收敛）在 B 第 3 部分。"
+  }
+ ],
+ "omitted": "ELE522 的作业、项目页与其余不相关讲次已略；B 书 Front Matter、Back Matter（前言、索引、参考文献）以及与本节点无关的“随机整数规划”以外的建模讨论保留在同一部分内未再细分。",
+ "notes": "ELE522 的讲义页是 12 条平铺的讲次标题（没有编号、没有单元分组），所以 A 的导览图按讲次排列，ref 留空，coverage 用 A:#序号 指向；课程 syllabus 页另有主题清单（含 Stochastic optimization、Variance reduction in stochastic optimization、Saddle-escaping algorithms），可对照。B 书只有章级目录（Springer 页面给出 Models / Solution Methods / Approximation and Sampling Methods 三个部分与 9 章），没有节级标题，因此补充分支是“部分 → 章”两层。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 24,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

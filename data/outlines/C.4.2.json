@@ -1,0 +1,390 @@
+{
+ "id": "C.4.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS5412: Topics in Cloud Computing — Fall 2022 Syllabus",
+   "by": "Ken Birman, Cornell University",
+   "year": 2022,
+   "url": "https://www.cs.cornell.edu/courses/cs5412/2022fa/",
+   "toc_urls": [
+    "https://www.cs.cornell.edu/courses/cs5412/2022fa/Syllabus.html"
+   ],
+   "why": "节点现有英文资源，Cornell 官方 syllabus 逐讲列出主题与阅读（云概述、键值分片、无状态编程/弹性池与微服务、可定制平台服务、跨地域强一致、隐私、容错、云的商业模型），覆盖弹性、无服务器、平台服务与成本直觉。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "NIST Special Publication 800-146: Cloud Computing Synopsis and Recommendations",
+   "by": "Fang Liu, Jin Tong, Jian Mao, Robert Bohn, John Messina, Lee Badger, Dawn Leaf (NIST)",
+   "year": 2012,
+   "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-146.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-146.pdf"
+   ],
+   "why": "补“IaaS/PaaS、多租户、成本模型”：CS5412 的讲次表没有按服务模型分章，也没有多租户隔离与成本的专章；NIST 这份官方报告按 SaaS/PaaS/IaaS 各给一章（含运营视图与建议），Open Issues 里有 Economic Goals 与 Multi-tenancy 小节。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "Kubernetes Documentation — Concepts",
+   "by": "The Kubernetes Authors",
+   "year": 2026,
+   "url": "https://kubernetes.io/docs/concepts/",
+   "toc_urls": [
+    "https://kubernetes.io/docs/concepts/"
+   ],
+   "why": "补“编排”：CS5412 不讲容器编排，NIST 800-146 成文于 2012 年也没有编排章节；Kubernetes 官方文档的 Concepts 目录（集群架构、工作负载与控制器、调度与自动伸缩）是编排的权威定义来源。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1.",
+   "title": "Cloud Overview. Internet of Things and the Cloud IoT Edge",
+   "zh": "云概述、物联网与云 IoT 边缘",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "2.",
+   "title": "Scalability and Key-Value Sharding",
+   "zh": "可伸缩性与键值分片",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "3.",
+   "title": "Stateless Programming",
+   "zh": "无状态编程",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "4.",
+   "title": "Customizable platform services.",
+   "zh": "可定制的平台服务",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "11.",
+   "title": "Strongly Consistent Geoscale Computing",
+   "zh": "强一致的跨地域计算",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "13.",
+   "title": "Case studies in disaster: How datacenter gossip can go wrong!",
+   "zh": "灾难案例：数据中心的 gossip 如何出错",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "17.",
+   "title": "Privacy in Cloud Computing",
+   "zh": "云计算中的隐私",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "24.",
+   "title": "Fault tolerance in practice",
+   "zh": "实践中的容错",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "28.",
+   "title": "Wrapup: How the Business of Cloud Computing Shapes the Future of Cloud Computing",
+   "zh": "收尾：云计算的商业如何塑造云计算的未来",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "6.",
+   "title": "Platform-as-a-Service Cloud Environments",
+   "zh": "平台即服务（PaaS）云环境",
+   "fill": "补“PaaS”服务模型",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Abstract Interaction Dynamics",
+     "zh": "抽象交互流程"
+    },
+    {
+     "ref": "6.2",
+     "title": "Software Stack and Provider/Consumer Scope of Control",
+     "zh": "软件栈与提供方/使用方的控制范围"
+    },
+    {
+     "ref": "6.3",
+     "title": "Benefits",
+     "zh": "收益"
+    },
+    {
+     "ref": "6.4",
+     "title": "Issues and Concerns",
+     "zh": "问题与关注点"
+    },
+    {
+     "ref": "6.5",
+     "title": "Candidate Application Classes",
+     "zh": "适用的应用类别"
+    },
+    {
+     "ref": "6.6",
+     "title": "Recommendations for Platform as a Service",
+     "zh": "PaaS 的建议"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7.",
+   "title": "Infrastructure-as-a-Service Cloud Environments",
+   "zh": "基础设施即服务（IaaS）云环境",
+   "fill": "补“IaaS”服务模型",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Abstract Interaction Dynamics",
+     "zh": "抽象交互流程"
+    },
+    {
+     "ref": "7.2",
+     "title": "Software Stack and Provider/Consumer Scope of Control",
+     "zh": "软件栈与提供方/使用方的控制范围"
+    },
+    {
+     "ref": "7.3",
+     "title": "Operational View",
+     "zh": "运营视图"
+    },
+    {
+     "ref": "7.4",
+     "title": "Benefits",
+     "zh": "收益"
+    },
+    {
+     "ref": "7.5",
+     "title": "Issues and Concerns",
+     "zh": "问题与关注点"
+    },
+    {
+     "ref": "7.6",
+     "title": "Recommendations for Infrastructure as a Service",
+     "zh": "IaaS 的建议"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "8.",
+   "title": "Open Issues",
+   "zh": "未决问题",
+   "fill": "补“多租户”与“成本模型”",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Computing Performance",
+     "zh": "计算性能"
+    },
+    {
+     "ref": "8.2",
+     "title": "Cloud Reliability",
+     "zh": "云的可靠性"
+    },
+    {
+     "ref": "8.3",
+     "title": "Economic Goals",
+     "zh": "经济目标（成本）"
+    },
+    {
+     "ref": "8.4",
+     "title": "Compliance",
+     "zh": "合规"
+    },
+    {
+     "ref": "8.5",
+     "title": "Information Security",
+     "zh": "信息安全",
+     "items": [
+      {
+       "ref": "8.5.4",
+       "title": "Multi-tenancy",
+       "zh": "多租户"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Cluster Architecture",
+   "zh": "集群架构",
+   "fill": "补“编排”：控制平面与节点的职责划分",
+   "items": [
+    {
+     "ref": "",
+     "title": "Nodes",
+     "zh": "节点"
+    },
+    {
+     "ref": "",
+     "title": "Communication between Nodes and the Control Plane",
+     "zh": "节点与控制平面之间的通信"
+    },
+    {
+     "ref": "",
+     "title": "Controllers",
+     "zh": "控制器"
+    },
+    {
+     "ref": "",
+     "title": "Cloud Controller Manager",
+     "zh": "云控制器管理器"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Workloads",
+   "zh": "工作负载",
+   "fill": "补“编排”：声明式工作负载与弹性伸缩",
+   "items": [
+    {
+     "ref": "",
+     "title": "Pods",
+     "zh": "Pod"
+    },
+    {
+     "ref": "",
+     "title": "Workload Management",
+     "zh": "工作负载管理",
+     "items": [
+      {
+       "ref": "",
+       "title": "Deployments",
+       "zh": "Deployment（部署）"
+      },
+      {
+       "ref": "",
+       "title": "ReplicaSet",
+       "zh": "ReplicaSet"
+      },
+      {
+       "ref": "",
+       "title": "StatefulSets",
+       "zh": "StatefulSet"
+      },
+      {
+       "ref": "",
+       "title": "DaemonSet",
+       "zh": "DaemonSet"
+      },
+      {
+       "ref": "",
+       "title": "Jobs",
+       "zh": "Job"
+      },
+      {
+       "ref": "",
+       "title": "CronJob",
+       "zh": "CronJob"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Autoscaling Workloads",
+     "zh": "工作负载自动伸缩",
+     "items": [
+      {
+       "ref": "",
+       "title": "Horizontal Pod Autoscaling",
+       "zh": "Pod 水平自动伸缩"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Scheduling, Preemption and Eviction",
+   "zh": "调度、抢占与驱逐",
+   "fill": "补“编排”：调度器与容量回收",
+   "items": [
+    {
+     "ref": "",
+     "title": "Kubernetes Scheduler",
+     "zh": "Kubernetes 调度器"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "IaaS/PaaS",
+   "refs": [
+    "B:6.",
+    "B:6.1",
+    "B:7.",
+    "B:7.1",
+    "A:4."
+   ]
+  },
+  {
+   "topic": "弹性",
+   "refs": [
+    "A:3.",
+    "A:2.",
+    "B:7.4",
+    "C:#3"
+   ]
+  },
+  {
+   "topic": "多租户",
+   "refs": [
+    "B:8.5.4",
+    "B:7.5",
+    "A:17."
+   ]
+  },
+  {
+   "topic": "编排",
+   "refs": [
+    "C:#1",
+    "C:#2",
+    "C:#3"
+   ]
+  },
+  {
+   "topic": "无服务器",
+   "refs": [
+    "A:3."
+   ],
+   "note": "CS5412 第 3 讲把函数服务器/微服务的弹性池当作无状态编程讲，但没有单独以 serverless 为题的一讲；NIST 800-146（2012）早于 FaaS 普及，也没有 serverless 章节。"
+  },
+  {
+   "topic": "成本模型",
+   "refs": [
+    "B:8.3",
+    "A:28."
+   ]
+  }
+ ],
+ "omitted": "A 里没收：第 5 讲 More on DHTs、第 6 讲 The State Machine Replication Model、第 7 讲 Paxos and Derecho、第 8–10 讲（IoT 传感器注册、时钟与因果序、带时间戳的 IoT 数据）、第 12 讲 Tracking state in big data-center systems、第 14–16 讲（区块链三讲）、第 18–19 讲（SQL 与集合访问）、第 20 讲（面向对象计算）、第 21–23 讲（MapReduce/Spark、Apache 大数据工具、FLP）、第 25–27 讲（社交图数据、硬件加速器、新硬件上线），这些是云上数据系统与容错理论专题，与节点简介的六个知识点关系较远；B 里没收第 1–5 章（引言、云定义、服务条款、通用云环境、SaaS）与第 9 章（通用建议）；C 里只取 Concepts 下的三节，未收 Services/Storage/Configuration/Security 等其它目录。",
+ "notes": "A 是逐讲清单，每讲一个分支叶子，ref 用 syllabus 里的讲次编号（原文写作“1.”“28.”）。B 的 6./7./8. 三章是补充分支，标题按 PDF 目录原样抄（去掉页码与点线）。C 的分支没有编号，coverage 里用 C:#1/#2/#3 指分支序号。课程讲次表里没有专门的“多租户隔离”与“成本核算”讲，所以这两项主要落在 B。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 48,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

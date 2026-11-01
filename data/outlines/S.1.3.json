@@ -1,0 +1,201 @@
+{
+ "id": "S.1.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS 355: Topics in Cryptography (Spring 2026)",
+   "by": "Stanford University",
+   "year": 2026,
+   "url": "https://cs355.stanford.edu/",
+   "toc_urls": [
+    "https://cs355.stanford.edu/"
+   ],
+   "why": "节点现有英文资源就是这门课；课程页按 6 个专题段列出 L1–L18 每一讲的具体主题，正好覆盖简介里的可证明安全（OWF/PRG/PRF/承诺）、零知识、安全多方计算、同态加密，并给出格基这一后量子主线，粒度到研究生层。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "CS255: Introduction to Cryptography",
+   "by": "Dan Boneh (Stanford University)",
+   "year": 2025,
+   "url": "https://crypto.stanford.edu/~dabo/cs255/",
+   "toc_urls": [
+    "https://crypto.stanford.edu/~dabo/cs255/syllabus.html"
+   ],
+   "why": "补“后量子密码”：CS355 把后量子只体现在格基两讲（L17 LWE、L18 FHE）里，没有单独讲量子威胁与后量子迁移；CS255 第 17 讲以 Post-quantum Cryptography 为题专门讲这一块。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Foundations of Cryptography",
+   "zh": "密码学基础",
+   "items": [
+    {
+     "ref": "L1",
+     "title": "Overview, OWFs, PRGs, Hardcore bits",
+     "zh": "概览：单向函数、伪随机生成器、硬核谓词"
+    },
+    {
+     "ref": "L2",
+     "title": "PRGs continued, PRFs",
+     "zh": "伪随机生成器续、伪随机函数"
+    },
+    {
+     "ref": "L3",
+     "title": "PRPs from PRFs",
+     "zh": "由伪随机函数构造伪随机置换"
+    },
+    {
+     "ref": "L4",
+     "title": "Commitment Schemes",
+     "zh": "承诺方案"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Zero Knowledge Proofs",
+   "zh": "零知识证明",
+   "items": [
+    {
+     "ref": "L9",
+     "title": "Interactive Proofs and Zero Knowledge",
+     "zh": "交互式证明与零知识"
+    },
+    {
+     "ref": "L10",
+     "title": "Sigma protocols",
+     "zh": "Sigma 协议"
+    },
+    {
+     "ref": "L11",
+     "title": "Non-interactivity & Fiat-Shamir",
+     "zh": "非交互化与 Fiat-Shamir 变换"
+    },
+    {
+     "ref": "L12",
+     "title": "Polynomial Commitments",
+     "zh": "多项式承诺"
+    },
+    {
+     "ref": "L13",
+     "title": "(Polynomial) IOPs",
+     "zh": "（多项式）交互式预言证明"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Multi-Party Computation",
+   "zh": "安全多方计算",
+   "items": [
+    {
+     "ref": "L14",
+     "title": "OT & Garbled Circuits",
+     "zh": "不经意传输与混淆电路"
+    },
+    {
+     "ref": "L15",
+     "title": "Secret Sharing",
+     "zh": "秘密共享"
+    },
+    {
+     "ref": "L16",
+     "title": "Private Information Retrieval",
+     "zh": "私有信息检索"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Lattice-based",
+   "zh": "格基密码",
+   "items": [
+    {
+     "ref": "L17",
+     "title": "LWE & Regev encryption",
+     "zh": "LWE 问题与 Regev 加密"
+    },
+    {
+     "ref": "L18",
+     "title": "Fully Homomorphic Encryption (FHE)",
+     "zh": "全同态加密"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 17",
+   "title": "Post-quantum Cryptography",
+   "zh": "后量子密码",
+   "fill": "后量子密码：量子威胁、后量子签名与迁移，CS355 只在格基两讲里隐含涉及后量子安全的构造",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "可证明安全",
+   "refs": [
+    "A:#1",
+    "A:L1",
+    "A:L2",
+    "A:L3",
+    "A:L4"
+   ],
+   "note": "CS355 开篇 Foundations of Cryptography 用四讲把可证明安全的地基铺开：L1 由单向函数造伪随机生成器与硬核谓词，L2 到伪随机函数，L3 用 PRF 造 PRP，L4 承诺方案；每一讲都是以归约到计算困难假设为骨架。"
+  },
+  {
+   "topic": "零知识",
+   "refs": [
+    "A:#2",
+    "A:L9",
+    "A:L10",
+    "A:L11",
+    "A:L12",
+    "A:L13"
+   ],
+   "note": "Zero Knowledge Proofs 段：L9 交互式证明与零知识定义，L10 Sigma 协议，L11 Fiat-Shamir 去交互，L12 多项式承诺，L13（多项式）IOP，直达 zk-SNARK 式构造。"
+  },
+  {
+   "topic": "安全多方计算",
+   "refs": [
+    "A:#3",
+    "A:L14",
+    "A:L15",
+    "A:L16"
+   ],
+   "note": "Multi-Party Computation 段：L14 不经意传输与混淆电路（两方安全计算的经典路线），L15 秘密共享，L16 私有信息检索。"
+  },
+  {
+   "topic": "同态加密",
+   "refs": [
+    "A:L18",
+    "A:#4"
+   ],
+   "note": "L18 Fully Homomorphic Encryption (FHE) 放在 Lattice-based 段里，紧接 L17 的 LWE；课程页面没有单独的 FHE 段。"
+  },
+  {
+   "topic": "后量子密码",
+   "refs": [
+    "A:L17",
+    "A:#4",
+    "B:Lecture 17"
+   ],
+   "note": "A 侧只有格基这条线（L17 LWE 与 Regev 加密，本身即后量子假设）；量子威胁、后量子签名与迁移由 B 的 Post-quantum Cryptography 一讲补齐。"
+  }
+ ],
+ "omitted": "CS355 页面上的 Cryptanalysis 段（L5 Infineon attack、L6 Attacks on Groups）与 Elliptic curve-based 段（L7 Introduction to Elliptic Curves、L8 Pairings）未收：节点简介只列可证明安全、零知识、安全多方计算、同态加密和后量子，不含密码分析与椭圆曲线/配对专题。Last class 的 Amit Behera 客座讲座、Problem Sets、课程行政信息也未收。",
+ "notes": "CS355 是单页站点，日程分 6 个没有编号的小标题（Foundations of Cryptography、Cryptanalysis、Elliptic curve-based、Zero Knowledge Proofs、Multi-Party Computing、Lattice-based），讲次写作 L1–L18，所以分支 ref 留空、小节 ref 用 L1…L18；coverage 里的 A:#1..#4 指本 outline 里 A 的第 1..4 个分支。课程页未写授课教师，故 by 只写 Stanford University。B 只用 CS255 syllabus 的一讲（Lecture 17 Post-quantum Cryptography），同一个 syllabus 在 S.1.2 里是主来源，可共用缓存。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 19,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

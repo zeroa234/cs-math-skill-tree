@@ -1,0 +1,243 @@
+{
+ "id": "M.5.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Combinatorics and Graph Theory",
+   "by": "David Guichard (Whitman College)",
+   "url": "https://www.whitman.edu/mathematics/cgt_online/book/",
+   "toc_urls": [
+    "https://www.whitman.edu/mathematics/cgt_online/book/"
+   ],
+   "why": "节点现有英文资源：作者放在 Whitman College 的开放教材，第 4、5 章正好是匹配（相异代表系、SDR）与图论主干（基本概念、Euler/Hamilton、二部图、树、生成树、连通性、着色、平面图、有向图）。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Graph Theory, 6th edition (GTM 173)",
+   "by": "Reinhard Diestel",
+   "year": 2025,
+   "url": "https://diestel-graph-theory.com/",
+   "toc_urls": [
+    "https://diestel-graph-theory.com/Contents.pdf"
+   ],
+   "why": "补“网络流”：A 没有流与割的内容，B 第 6 章 Flows 的 6.1 Circulations、6.2 Flows in networks 给出网络流与最大流-最小割的图论处理。"
+  },
+  {
+   "key": "C",
+   "kind": "notes",
+   "title": "Spectral and Algebraic Graph Theory",
+   "by": "Daniel A. Spielman (Yale University)",
+   "year": 2025,
+   "url": "https://www.cs.yale.edu/homes/spielman/sagt/sagt.pdf",
+   "toc_urls": [
+    "https://www.cs.yale.edu/homes/spielman/sagt/sagt.pdf"
+   ],
+   "why": "补“谱图理论”：A、B 都不讲图谱，C 第 I 部分给出 Laplacian、邻接矩阵、Rayleigh 商（Courant-Fischer）与特征值交错这些入门必备内容。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Systems of Distinct Representatives",
+   "zh": "相异代表系",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Existence of SDRs",
+     "zh": "相异代表系的存在性"
+    },
+    {
+     "ref": "4.2",
+     "title": "Partial SDRs",
+     "zh": "部分相异代表系"
+    },
+    {
+     "ref": "4.5",
+     "title": "Matchings",
+     "zh": "匹配"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Graph Theory",
+   "zh": "图论",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "The Basics",
+     "zh": "基本概念"
+    },
+    {
+     "ref": "5.2",
+     "title": "Euler Circuits and Walks",
+     "zh": "Euler 回路与 Euler 迹"
+    },
+    {
+     "ref": "5.3",
+     "title": "Hamilton Cycles and Paths",
+     "zh": "Hamilton 圈与 Hamilton 路"
+    },
+    {
+     "ref": "5.4",
+     "title": "Bipartite Graphs",
+     "zh": "二部图"
+    },
+    {
+     "ref": "5.5",
+     "title": "Trees",
+     "zh": "树"
+    },
+    {
+     "ref": "5.6",
+     "title": "Optimal Spanning Trees",
+     "zh": "最优生成树"
+    },
+    {
+     "ref": "5.7",
+     "title": "Connectivity",
+     "zh": "连通性"
+    },
+    {
+     "ref": "5.8",
+     "title": "Graph Coloring",
+     "zh": "图的着色"
+    },
+    {
+     "ref": "5.9",
+     "title": "The Chromatic Polynomial",
+     "zh": "色多项式"
+    },
+    {
+     "ref": "5.10",
+     "title": "Coloring Planar Graphs",
+     "zh": "平面图的着色"
+    },
+    {
+     "ref": "5.11",
+     "title": "Directed Graphs",
+     "zh": "有向图"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Flows",
+   "zh": "流",
+   "fill": "网络流：环流、网络中的流与割（最大流-最小割）",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Circulations",
+     "zh": "环流"
+    },
+    {
+     "ref": "6.2",
+     "title": "Flows in networks",
+     "zh": "网络中的流"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "I",
+   "title": "Introduction and Background",
+   "zh": "导引与预备",
+   "fill": "谱图理论：Laplacian、邻接矩阵的谱、Rayleigh 商与特征值交错",
+   "items": [
+    {
+     "ref": "1",
+     "title": "Introduction",
+     "zh": "导引"
+    },
+    {
+     "ref": "2",
+     "title": "Eigenvalues and Optimization: The Courant-Fischer Theorem",
+     "zh": "特征值与优化：Courant–Fischer 定理"
+    },
+    {
+     "ref": "3",
+     "title": "The Laplacian and Graph Drawing",
+     "zh": "Laplacian 与图的绘制"
+    },
+    {
+     "ref": "4",
+     "title": "Adjacency matrices, Eigenvalue Interlacing, and the Perron-Frobenius Theorem",
+     "zh": "邻接矩阵、特征值交错与 Perron–Frobenius 定理"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "图",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:5.11"
+   ]
+  },
+  {
+   "topic": "树",
+   "refs": [
+    "A:5.5",
+    "A:5.6"
+   ]
+  },
+  {
+   "topic": "连通性",
+   "refs": [
+    "A:5.7"
+   ]
+  },
+  {
+   "topic": "匹配",
+   "refs": [
+    "A:4",
+    "A:4.1",
+    "A:4.2",
+    "A:4.5"
+   ]
+  },
+  {
+   "topic": "着色",
+   "refs": [
+    "A:5.8",
+    "A:5.9",
+    "A:5.10"
+   ]
+  },
+  {
+   "topic": "网络流",
+   "refs": [
+    "B:6",
+    "B:6.1",
+    "B:6.2"
+   ],
+   "note": "B 第 6 章剩下的 6.3–6.6（群值流、k-流、流-着色对偶、Tutte 流猜想）讲的是无处为零流，与算法意义上的网络流不是同一套东西，未收。"
+  },
+  {
+   "topic": "谱图理论",
+   "refs": [
+    "C:#1",
+    "C:2",
+    "C:3",
+    "C:4"
+   ],
+   "note": "C 只收第 I 部分：再往后的随机游走、电阻网络、扩张图、谱划分与谱算法虽属谱图理论，但超出入门所需。"
+  }
+ ],
+ "omitted": "A 里未收的章：1 Fundamentals、2 Inclusion-Exclusion、3 Generating Functions（属 M.5.4）、6 Pólya–Redfield Counting（对称下的计数，属 M.5.4）；第 4 章的 4.3 Latin Squares（拉丁方）与 4.4 Introduction to Graph Theory（与第 5 章重复）也未收。B 只收第 6 章，其余章（Matching、Connectivity、Planar Graphs、Colouring、Extremal Graph Theory、Infinite Graphs 等）与 A 重复或超出节点。C 只收第 I 部分。",
+ "notes": "A 的网页目录里章节编号是“章号 + 每章从 1 重新编号的小节”，所以 ref 写成 5.1 这种“章.节”形式以便区分（原文只在章标题旁印章号，节标题旁印“1.”“2.”）。B 是 Diestel《Graph Theory》第 6 版（GTM 173, 2025），目录抄自作者站的 Contents.pdf。C 是 Spielman 的在写讲稿（2025-04-02 版），只有“部分 → 章”两级。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 24,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

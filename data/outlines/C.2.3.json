@@ -1,0 +1,304 @@
+{
+ "id": "C.2.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "Kubernetes Documentation — Concepts",
+   "by": "The Kubernetes Authors",
+   "year": 2026,
+   "url": "https://kubernetes.io/docs/concepts/",
+   "toc_urls": [
+    "https://kubernetes.io/docs/concepts/",
+    "https://kubernetes.io/docs/concepts/containers/",
+    "https://kubernetes.io/docs/concepts/scheduling-eviction/",
+    "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+   ],
+   "why": "节点现有英文资源里 iximiuz 的容器学习路径是个人博客，按规范不能作为权威来源；容器、镜像与运行时、调度与驱逐、资源请求/限制这四块以项目官方文档的 Concepts 目录最权威，且每节都有明确主题。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "6.033 Computer System Engineering, Spring 2022",
+   "by": "MIT",
+   "year": 2022,
+   "url": "https://web.mit.edu/6.033/www/general.shtml",
+   "toc_urls": [
+    "https://web.mit.edu/6.033/www/"
+   ],
+   "why": "补虚拟机：Kubernetes 文档默认容器跑在节点上，不讲 hypervisor 这一层；6.033 的 LEC 6 把 OS 结构与 virtual machine 放在同一讲，是节点“虚拟机”知识点的权威入口。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "Control Group v2 — The Linux Kernel documentation",
+   "by": "Tejun Heo, The Linux kernel community",
+   "year": 2025,
+   "url": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+   "toc_urls": [
+    "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+   ],
+   "why": "补容器隔离与资源控制的机制层：cgroup v2 是内核官方权威文档，给出权重/上限/保护三种资源分配模型、CPU/内存/IO/PID 控制器和 cgroup 命名空间，正好补上 K8s 文档只讲“声明什么”而不讲“内核怎么限”的缺口。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "title": "Containers",
+   "zh": "容器",
+   "items": [
+    {
+     "title": "Container images",
+     "zh": "容器镜像"
+    },
+    {
+     "title": "Container runtimes",
+     "zh": "容器运行时"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "title": "Scheduling, Preemption and Eviction",
+   "zh": "调度、抢占与驱逐",
+   "items": [
+    {
+     "title": "Kubernetes Scheduler",
+     "zh": "Kubernetes 调度器"
+    },
+    {
+     "title": "Running Multiple Schedulers",
+     "zh": "运行多个调度器"
+    },
+    {
+     "title": "Assigning Pods to Nodes",
+     "zh": "把 Pod 分配到节点"
+    },
+    {
+     "title": "Pod Overhead",
+     "zh": "Pod 开销"
+    },
+    {
+     "title": "Pod Topology Spread Constraints",
+     "zh": "Pod 拓扑分布约束"
+    },
+    {
+     "title": "Taints and Tolerations",
+     "zh": "污点与容忍"
+    },
+    {
+     "title": "Scheduling Framework",
+     "zh": "调度框架"
+    },
+    {
+     "title": "Pod Scheduling Readiness",
+     "zh": "Pod 调度就绪"
+    },
+    {
+     "title": "Pod Priority and Preemption",
+     "zh": "Pod 优先级与抢占"
+    },
+    {
+     "title": "Node-pressure Eviction",
+     "zh": "节点压力驱逐"
+    },
+    {
+     "title": "API-initiated Eviction",
+     "zh": "API 发起的驱逐"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "title": "Resource Management for Pods and Containers",
+   "zh": "Pod 与容器的资源管理",
+   "items": [
+    {
+     "title": "Requests and limits",
+     "zh": "请求与限制"
+    },
+    {
+     "title": "Resource types",
+     "zh": "资源类型"
+    },
+    {
+     "title": "Huge pages",
+     "zh": "大页"
+    },
+    {
+     "title": "Resource requests and limits of Pod and container",
+     "zh": "Pod 与容器的资源请求和限制"
+    },
+    {
+     "title": "Pod-level resource specification",
+     "zh": "Pod 级资源配置"
+    },
+    {
+     "title": "Resource units in Kubernetes",
+     "zh": "Kubernetes 中的资源单位"
+    },
+    {
+     "title": "How Pods with resource requests are scheduled",
+     "zh": "带资源请求的 Pod 如何被调度"
+    },
+    {
+     "title": "How Kubernetes applies resource requests and limits",
+     "zh": "Kubernetes 如何施加资源请求与限制"
+    },
+    {
+     "title": "Resizing container resources",
+     "zh": "调整容器资源"
+    },
+    {
+     "title": "Local ephemeral storage",
+     "zh": "本地临时存储"
+    },
+    {
+     "title": "Extended resources",
+     "zh": "扩展资源"
+    },
+    {
+     "title": "PID limiting",
+     "zh": "PID 限制"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "LEC 6",
+   "title": "OS structure, Virtual Machines",
+   "zh": "操作系统结构与虚拟机",
+   "fill": "虚拟机",
+   "items": []
+  },
+  {
+   "src": "C",
+   "title": "Introduction",
+   "zh": "引言",
+   "fill": "容器隔离",
+   "items": [
+    {
+     "title": "What is cgroup?",
+     "zh": "什么是 cgroup？"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "title": "Resource Distribution Models",
+   "zh": "资源分配模型",
+   "fill": "资源控制",
+   "items": [
+    {
+     "title": "Weights",
+     "zh": "权重"
+    },
+    {
+     "title": "Limits",
+     "zh": "上限"
+    },
+    {
+     "title": "Protections",
+     "zh": "保护值"
+    },
+    {
+     "title": "Allocations",
+     "zh": "分配"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "title": "Controllers",
+   "zh": "控制器",
+   "fill": "资源控制",
+   "items": [
+    {
+     "title": "CPU",
+     "zh": "CPU 控制器"
+    },
+    {
+     "title": "Memory",
+     "zh": "内存控制器"
+    },
+    {
+     "title": "IO",
+     "zh": "I/O 控制器"
+    },
+    {
+     "title": "PID",
+     "zh": "PID 控制器"
+    },
+    {
+     "title": "Cpuset",
+     "zh": "CPU 集合控制器"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "title": "Namespace",
+   "zh": "命名空间",
+   "fill": "容器隔离",
+   "items": [
+    {
+     "title": "The Root and Views",
+     "zh": "根与视图"
+    },
+    {
+     "title": "Migration and setns(2)",
+     "zh": "迁移与 setns(2)"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "虚拟机",
+   "refs": [
+    "B:LEC 6"
+   ],
+   "note": "K8s 文档与 cgroup 文档都不讲 hypervisor；虚拟机这一层由 6.033 的 LEC 6（OS structure, Virtual Machines）承担，想再深入可接 C.2.1 的 OSTEP 导览图（虚拟化那一部分）。"
+  },
+  {
+   "topic": "容器隔离",
+   "refs": [
+    "A:#1",
+    "C:#1",
+    "C:#4"
+   ],
+   "note": "A 讲容器是“打包应用+运行时依赖”的单元（镜像、运行时），机制层的隔离由 C 的 cgroup 视图（cgroup namespace）承担；Linux 的 pid/mount/net/user 等 namespace 在本图没有专门来源，需要时读 man 7 namespaces。"
+  },
+  {
+   "topic": "资源控制",
+   "refs": [
+    "A:#3",
+    "C:#2",
+    "C:#3"
+   ],
+   "note": "A 给声明式的一面（requests/limits、QoS、驱逐阈值），C 给内核实现的一面（权重/上限/保护、CPU/内存/IO/PID 控制器）。"
+  },
+  {
+   "topic": "调度",
+   "refs": [
+    "A:#2",
+    "A:#3"
+   ],
+   "note": "A 的调度章节含调度器、污点与容忍、优先级与抢占、驱逐；A 的资源管理章里的“How Pods with resource requests are scheduled”是调度与资源控制的交叉点。"
+  },
+  {
+   "topic": "镜像运行",
+   "refs": [
+    "A:#1"
+   ]
+  }
+ ],
+ "omitted": "K8s Concepts 下的 Cluster Architecture、Workloads、Services/Load Balancing/Networking、Storage、Configuration、Security、Policies、Cluster Administration、Windows、Extending Kubernetes 与本节点的五个知识点关系较远，未收；cgroup v2 的 Interface Files、各控制器的具体接口文件、Kernel Programming、Deprecated v1 Core Features 等实现细节未收。",
+ "notes": "A 的章节页没有编号，故分支/条目的 ref 留空，coverage 用“A:#序号”指向第几个分支。cgroup v2 文档的标题带 ¶ 锚点，抄录时已去掉。三份来源分别对应“用起来（K8s）—机制（cgroup）—虚拟机这一层（6.033）”三个层次，读的时候建议按这个顺序。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 45,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

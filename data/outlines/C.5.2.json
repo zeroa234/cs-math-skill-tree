@@ -1,0 +1,196 @@
+{
+ "id": "C.5.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS149 Parallel Computing, Fall 2025 — Schedule",
+   "by": "Kayvon Fatahalian, Kunle Olukotun (Stanford University)",
+   "year": 2025,
+   "url": "https://gfxcourses.stanford.edu/cs149/fall25",
+   "toc_urls": [
+    "https://gfxcourses.stanford.edu/cs149/fall25"
+   ],
+   "why": "节点现有英文学习资源。课程主页的日程逐讲给出题目与一行要点（GPU 架构与 CUDA 编程、DNN 在 GPU 上的高效评测与层融合、局部性与通信、缓存一致性、同步与内存一致性、细粒度加锁与无锁），并列出 5 次编程作业，其中 CUDA 渲染器、fused Conv+MaxPool、最快 CUDA kernel 三次直接对应核函数、算子融合与性能剖析。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-418/15-618 Parallel Computer Architecture and Programming, Fall 2026 — Schedule",
+   "by": "Carnegie Mellon University",
+   "year": 2026,
+   "url": "https://www.cs.cmu.edu/~418/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~418/schedule.html"
+   ],
+   "why": "补“访存”与“带宽与性能剖析”：CS149 的日程里 GPU 只占一讲、性能剖析只出现在作业说明里；15-418 的日程给了 GPU 两讲（含续讲）、性能优化两讲和独立的一讲 Performance Analysis / Profiling。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Why Parallelism? Why Efficiency?",
+   "zh": "为什么并行、为什么讲效率",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "GPU Architecture and CUDA Programming",
+   "zh": "GPU 架构与 CUDA 编程",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Efficiently Evaluating DNNs on GPUs: Transformers and ConvNets",
+   "zh": "在 GPU 上高效评测 DNN：Transformer 与卷积网络",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Program Optimization 2: Locality and Communication",
+   "zh": "程序优化 2：局部性与通信",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Cache Coherence",
+   "zh": "缓存一致性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Implementing Synchronization + Memory Consistency",
+   "zh": "实现同步与内存一致性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Fine-Grained Locking and Lock-Free Programming",
+   "zh": "细粒度加锁与无锁编程",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Programming Assignments",
+   "zh": "编程作业",
+   "items": [
+    {
+     "title": "Assignment 1: Analyzing Parallel Program Performance on a Quad-Core CPU",
+     "zh": "作业 1：分析四核 CPU 上的并行程序性能"
+    },
+    {
+     "title": "Assignment 2: Scheduling Task Graphs on a Multi-Core CPU",
+     "zh": "作业 2：在多核 CPU 上调度任务图"
+    },
+    {
+     "title": "Assignment 3: A Circle Renderer in CUDA",
+     "zh": "作业 3：用 CUDA 写圆渲染器"
+    },
+    {
+     "title": "Assignment 4: Fused Conv+MaxPool on the Trainium2 Accelerator",
+     "zh": "作业 4：在 Trainium2 加速器上融合 Conv+MaxPool"
+    },
+    {
+     "title": "Assignment 5: Make the World's Fastest CUDA Kernels",
+     "zh": "作业 5：写出世界上最快的 CUDA kernel"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "GPU Architecture and CUDA Programming",
+   "zh": "GPU 架构与 CUDA 编程",
+   "fill": "补“访存”：GPU 存储层次与共享内存分块，CS149 只有一讲概览",
+   "items": [
+    {
+     "ref": "6",
+     "title": "GPU Architecture and CUDA Programming (continued)",
+     "zh": "GPU 架构与 CUDA 编程（续）"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "8",
+   "title": "Performance Optimization I",
+   "zh": "性能优化 I",
+   "fill": "补“带宽与性能剖析”：访存模式、算术强度与带宽瓶颈",
+   "items": [
+    {
+     "ref": "9",
+     "title": "Performance Optimization II",
+     "zh": "性能优化 II"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "14",
+   "title": "Performance Analysis / Profiling",
+   "zh": "性能分析与剖析",
+   "fill": "补“性能剖析”：剖析工具、指标与 roofline 式分析",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "核函数",
+   "refs": [
+    "A:#2",
+    "A:#8",
+    "B:5"
+   ]
+  },
+  {
+   "topic": "访存",
+   "refs": [
+    "A:#4",
+    "A:#5",
+    "B:5",
+    "B:6"
+   ]
+  },
+  {
+   "topic": "同步",
+   "refs": [
+    "A:#6",
+    "A:#7",
+    "B:6"
+   ]
+  },
+  {
+   "topic": "算子融合",
+   "refs": [
+    "A:#3",
+    "A:#8"
+   ]
+  },
+  {
+   "topic": "带宽与性能剖析",
+   "refs": [
+    "A:#1",
+    "A:#8",
+    "B:8",
+    "B:9",
+    "B:14"
+   ]
+  }
+ ],
+ "omitted": "A 里只收了与 GPU 和性能直接相关的讲次，未收 ISPC 与多核架构、数据并行思维、硬件专用化、专用硬件的编程系统、数据中心级 AI 应用、事务内存、缓存一致性之外的体系结构讲次，以及 Written Assignment；B 里只收了 GPU 两讲、性能优化两讲与剖析一讲，未收乱序流水线、互连网络、缓存一致性协议、事务内存、并行深度学习等讲次。",
+ "notes": "A 的日程没有讲次编号，所以分支 ref 留空，coverage 用 A:#1–#8 指分支序号；“Programming Assignments”是主页上真实存在的栏目名，其下 5 条作业标题照抄页面。B 的 ref 用 15-418 schedule 上的讲次编号，其中第 6 讲是第 5 讲的续讲，放在第 5 讲下面作为子条。CS149 主页的讲次标题里没有“核函数（kernel）”字样，但 GPU Architecture and CUDA Programming 一讲的要点写明“CUDA programming abstractions”，三次 CUDA 作业直接要求写 kernel；核函数、共享内存分块与合并访存的具体技术细节主要靠 B 的两讲 GPU 内容与 A 的作业 3/5。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 18,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

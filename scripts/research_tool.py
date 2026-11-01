@@ -99,7 +99,7 @@ def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "en,zh;q=0.8"})
     try:
         with urllib.request.urlopen(req, timeout=40) as r:
-            raw = r.read(20_000_000)
+            raw = r.read(60_000_000)  # whole-book PDFs (e.g. Sutton & Barto) run past 20 MB
             charset = r.headers.get_content_charset() or "utf-8"
             result = {"url": url, "final_url": r.geturl(), "status": r.status,
                       "type": r.headers.get_content_type()}

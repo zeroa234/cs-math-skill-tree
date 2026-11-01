@@ -1,0 +1,228 @@
+{
+ "id": "M.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Linear Algebra and Learning from Data",
+   "by": "Gilbert Strang",
+   "year": 2019,
+   "url": "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/",
+   "toc_urls": [
+    "http://math.mit.edu/~gs/learningfromdata/dsla_toc.pdf",
+    "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/pages/readings/"
+   ],
+   "why": "节点现有英文资源 MIT 18.065 的指定教材，作者主页给出的完整目录（Part I–III 覆盖范数、谱与 SVD、正定性、低秩扰动与降维），OCW 的 readings 页把每讲对到具体小节。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "I",
+   "title": "Highlights of Linear Algebra",
+   "zh": "线性代数要点",
+   "items": [
+    {
+     "ref": "I.1",
+     "title": "Multiplication Ax Using Columns of A",
+     "zh": "用 A 的列做乘法 Ax"
+    },
+    {
+     "ref": "I.2",
+     "title": "Matrix-Matrix Multiplication AB",
+     "zh": "矩阵乘矩阵 AB"
+    },
+    {
+     "ref": "I.6",
+     "title": "Eigenvalues and Eigenvectors",
+     "zh": "特征值与特征向量"
+    },
+    {
+     "ref": "I.7",
+     "title": "Symmetric Positive Definite Matrices",
+     "zh": "对称正定矩阵"
+    },
+    {
+     "ref": "I.8",
+     "title": "Singular Values and Singular Vectors in the SVD",
+     "zh": "SVD 中的奇异值与奇异向量"
+    },
+    {
+     "ref": "I.9",
+     "title": "Principal Components and the Best Low Rank Matrix",
+     "zh": "主成分与最佳低秩矩阵"
+    },
+    {
+     "ref": "I.10",
+     "title": "Rayleigh Quotients and Generalized Eigenvalues",
+     "zh": "Rayleigh 商与广义特征值"
+    },
+    {
+     "ref": "I.11",
+     "title": "Norms of Vectors and Functions and Matrices",
+     "zh": "向量、函数与矩阵的范数"
+    },
+    {
+     "ref": "I.12",
+     "title": "Factoring Matrices and Tensors: Positive and Sparse",
+     "zh": "矩阵与张量的分解：非负与稀疏"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "II",
+   "title": "Computations with Large Matrices",
+   "zh": "大矩阵的计算",
+   "items": [
+    {
+     "ref": "II.1",
+     "title": "Numerical Linear Algebra",
+     "zh": "数值线性代数"
+    },
+    {
+     "ref": "II.2",
+     "title": "Least Squares: Four Ways",
+     "zh": "最小二乘的四种解法"
+    },
+    {
+     "ref": "II.3",
+     "title": "Three Bases for the Column Space",
+     "zh": "列空间的三种基"
+    },
+    {
+     "ref": "II.4",
+     "title": "Randomized Linear Algebra",
+     "zh": "随机线性代数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "III",
+   "title": "Low Rank and Compressed Sensing",
+   "zh": "低秩与压缩感知",
+   "items": [
+    {
+     "ref": "III.1",
+     "title": "Changes in A-1 from Changes in A",
+     "zh": "A 变化引起的 A 的逆的变化"
+    },
+    {
+     "ref": "III.2",
+     "title": "Interlacing Eigenvalues and Low Rank Signals",
+     "zh": "交错特征值与低秩信号"
+    },
+    {
+     "ref": "III.3",
+     "title": "Rapidly Decaying Singular Values",
+     "zh": "快速衰减的奇异值"
+    },
+    {
+     "ref": "III.5",
+     "title": "Compressed Sensing and Matrix Completion",
+     "zh": "压缩感知与矩阵补全"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "IV",
+   "title": "Special Matrices",
+   "zh": "特殊矩阵",
+   "items": [
+    {
+     "ref": "IV.1",
+     "title": "Fourier Transforms: Discrete and Continuous",
+     "zh": "离散与连续 Fourier 变换"
+    },
+    {
+     "ref": "IV.2",
+     "title": "Shift Matrices and Circulant Matrices",
+     "zh": "移位矩阵与循环矩阵"
+    },
+    {
+     "ref": "IV.3",
+     "title": "The Kronecker Product A⊗B",
+     "zh": "Kronecker 积 A⊗B"
+    },
+    {
+     "ref": "IV.4",
+     "title": "Sine and Cosine Transforms from Kronecker Sums",
+     "zh": "由 Kronecker 和得到正弦与余弦变换"
+    },
+    {
+     "ref": "IV.5",
+     "title": "Toeplitz Matrices and Shift Invariant Filters",
+     "zh": "Toeplitz 矩阵与平移不变滤波器"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "矩阵范数",
+   "refs": [
+    "A:I.11"
+   ]
+  },
+  {
+   "topic": "谱与奇异值分解",
+   "refs": [
+    "A:I.6",
+    "A:I.8",
+    "A:I.9",
+    "A:I.10",
+    "A:II.1"
+   ]
+  },
+  {
+   "topic": "正定性",
+   "refs": [
+    "A:I.7",
+    "A:I.12"
+   ]
+  },
+  {
+   "topic": "扰动",
+   "refs": [
+    "A:III.1",
+    "A:III.2",
+    "A:III.3"
+   ],
+   "note": "III.1 讲 A 的逆对 A 的变化有多敏感，III.2 讲秩一/低秩修改下特征值的交错，III.3 讲奇异值谱的快速衰减；条件数与敏感性的数值侧在 II.1。"
+  },
+  {
+   "topic": "矩阵函数",
+   "refs": [],
+   "note": "主来源（18.065 的教材 Strang《Linear Algebra and Learning from Data》）没有矩阵函数（exp(A)、log(A)、A 的 p 次根）的专门章节，只有 I.6/I.8 的谱分解可作入口；Higham《Functions of Matrices: Theory and Computation》(SIAM, 2008) 的目录页（nhigham.com / siam epubs）打不开，故不硬凑。"
+  },
+  {
+   "topic": "不等式",
+   "refs": [
+    "A:I.10",
+    "A:III.2"
+   ],
+   "note": "教材只有 Rayleigh 商的极值刻画和交错特征值不等式这类谱不等式，没有 Weyl 不等式、Hadamard 不等式、优超（majorization）的系统章节。"
+  },
+  {
+   "topic": "特殊结构矩阵（Fourier、循环、Toeplitz、Kronecker 积）",
+   "refs": [
+    "A:IV.1",
+    "A:IV.2",
+    "A:IV.3",
+    "A:IV.4",
+    "A:IV.5"
+   ],
+   "note": "矩阵分析里常把结构（平移不变、卷积、Kronecker 积）和谱一起用；IV.4 的 Kronecker 和给出对角化的显式形式，是矩阵函数（如 exp、sin、cos）在结构矩阵上的入口。"
+  }
+ ],
+ "omitted": "I.3 The Four Fundamental Subspaces、I.4 Elimination and A = LU、I.5 Orthogonal Matrices and Subspaces 属线性代数基础，与节点简介不直接相关；III.4 Split Algorithms for ℓ2 + ℓ1 属 ℓ1 优化算法；IV.6–IV.10（图与 Laplacian、谱聚类、秩一矩阵补全、Procrustes 问题、距离矩阵）属图与几何应用；Part V–VII（概率统计、优化、深度学习）不是矩阵分析内容。",
+ "notes": "本节点深度到 D4，主来源是本科高年级偏应用的教材：III.1–III.3 的扰动与交错特征值可作为 D3 谱结构部分的入口，D4 的扰动分析/矩阵不等式专题需要另行补充更专业的研究生材料（Horn & Johnson《Matrix Analysis》等，其目录页在 Cambridge 站点上无法访问，未收录）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 26,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

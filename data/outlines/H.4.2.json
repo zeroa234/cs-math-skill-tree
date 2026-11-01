@@ -1,0 +1,386 @@
+{
+ "id": "H.4.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS223A - Introduction to Robotics",
+   "by": "Oussama Khatib, Stanford University (Stanford Engineering Everywhere)",
+   "year": 2008,
+   "url": "https://see.stanford.edu/Course/CS223A",
+   "toc_urls": [
+    "https://see.stanford.edu/Course/CS223A"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课（免费视频 + 讲义 + 作业）。课程页把 16 讲按讲列出 Topics，并按讲义分成 Kinematics-1/2、Jacobian、Robots and Vision、Trajectory Planning、Dynamics、Control 几个单元，覆盖本节点的运动学、动力学、轨迹规划、机器人控制与视觉感知。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "Robot Mapping (WS 2022/23)",
+   "by": "Tim Welschehold, Daniel Büscher, Lukas Luft, University of Freiburg",
+   "year": 2022,
+   "url": "http://ais.informatik.uni-freiburg.de/teaching/ws22/mapping",
+   "toc_urls": [
+    "http://ais.informatik.uni-freiburg.de/teaching/ws22/mapping"
+   ],
+   "why": "补“定位建图”和“感知融合”的概率部分（CS223A 只讲到立体视觉与跟踪，没有 SLAM）：这是弗赖堡大学 Robot Mapping 课的官方课表，逐讲列出 Bayes 滤波、EKF/UKF/EIF、EKF SLAM、粒子滤波定位、占据栅格、最小二乘与图优化 SLAM、前端配准，是 SLAM 最经典的一套教学顺序（沿 Stachniss 的课程）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lectures 1-3",
+   "title": "Kinematics-1",
+   "zh": "运动学（一）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Spatial Descriptions",
+     "zh": "空间描述"
+    },
+    {
+     "ref": "",
+     "title": "Rotation Matrix",
+     "zh": "旋转矩阵"
+    },
+    {
+     "ref": "",
+     "title": "Homogeneous Transform",
+     "zh": "齐次变换"
+    },
+    {
+     "ref": "",
+     "title": "Euler Angles",
+     "zh": "欧拉角"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Lectures 4-5",
+   "title": "Kinematics-2",
+   "zh": "运动学（二）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Manipulator Kinematics",
+     "zh": "机械臂运动学"
+    },
+    {
+     "ref": "",
+     "title": "Link Description",
+     "zh": "连杆描述"
+    },
+    {
+     "ref": "",
+     "title": "Forward Kinematics",
+     "zh": "正运动学"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Lectures 6-8",
+   "title": "Jacobian",
+   "zh": "雅可比",
+   "items": [
+    {
+     "ref": "",
+     "title": "Instantaneous Kinematics",
+     "zh": "瞬时运动学"
+    },
+    {
+     "ref": "",
+     "title": "Velocity Propagation",
+     "zh": "速度传递"
+    },
+    {
+     "ref": "",
+     "title": "Kinematic Singularity",
+     "zh": "运动学奇异"
+    },
+    {
+     "ref": "",
+     "title": "Resolved Rate Motion Control",
+     "zh": "分解速率运动控制"
+    },
+    {
+     "ref": "",
+     "title": "Virtual Work",
+     "zh": "虚功原理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 9",
+   "title": "Robots and Vision",
+   "zh": "机器人与视觉",
+   "items": [
+    {
+     "ref": "",
+     "title": "Computer Vision",
+     "zh": "计算机视觉"
+    },
+    {
+     "ref": "",
+     "title": "Computational Stereo",
+     "zh": "计算立体视觉"
+    },
+    {
+     "ref": "",
+     "title": "Disparity Maps",
+     "zh": "视差图"
+    },
+    {
+     "ref": "",
+     "title": "SIFT Feature Selection",
+     "zh": "SIFT 特征选取"
+    },
+    {
+     "ref": "",
+     "title": "Tracking Cycle",
+     "zh": "跟踪回路"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 10",
+   "title": "Trajectory Planning",
+   "zh": "轨迹规划",
+   "items": [
+    {
+     "ref": "",
+     "title": "Trajectory Generation - Basic Problem",
+     "zh": "轨迹生成的基本问题"
+    },
+    {
+     "ref": "",
+     "title": "Cartesian Planning",
+     "zh": "笛卡尔空间规划"
+    },
+    {
+     "ref": "",
+     "title": "Cubic Polynomial",
+     "zh": "三次多项式"
+    },
+    {
+     "ref": "",
+     "title": "Linear Interpolation",
+     "zh": "线性插值"
+    },
+    {
+     "ref": "",
+     "title": "Trajectory Planning with Obstacles",
+     "zh": "含障碍的轨迹规划"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Lectures 11-12",
+   "title": "Dynamics",
+   "zh": "动力学",
+   "items": [
+    {
+     "ref": "",
+     "title": "Joint Space Dynamics",
+     "zh": "关节空间动力学"
+    },
+    {
+     "ref": "",
+     "title": "Newton-Euler Algorithm",
+     "zh": "牛顿-欧拉递推算法"
+    },
+    {
+     "ref": "",
+     "title": "Inertia Tensor",
+     "zh": "惯性张量"
+    },
+    {
+     "ref": "",
+     "title": "Lagrange Equations",
+     "zh": "拉格朗日方程"
+    },
+    {
+     "ref": "",
+     "title": "Equations of Motion",
+     "zh": "运动方程"
+    },
+    {
+     "ref": "",
+     "title": "Centrifugal and Coriolis Forces",
+     "zh": "离心力与科氏力"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Lectures 13-15",
+   "title": "Control",
+   "zh": "控制",
+   "items": [
+    {
+     "ref": "",
+     "title": "Joint Space Control",
+     "zh": "关节空间控制"
+    },
+    {
+     "ref": "",
+     "title": "Resolved Motion Rate Control",
+     "zh": "分解运动速率控制"
+    },
+    {
+     "ref": "",
+     "title": "Passive System Stability",
+     "zh": "无源系统稳定性"
+    },
+    {
+     "ref": "",
+     "title": "PD Control",
+     "zh": "PD 控制"
+    },
+    {
+     "ref": "",
+     "title": "Disturbance Rejection",
+     "zh": "扰动抑制"
+    },
+    {
+     "ref": "",
+     "title": "Task Oriented Control",
+     "zh": "面向任务的控制"
+    },
+    {
+     "ref": "",
+     "title": "Operational Space Dynamics",
+     "zh": "操作空间动力学"
+    },
+    {
+     "ref": "",
+     "title": "Trajectory Tracking",
+     "zh": "轨迹跟踪"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Introduction to Robot Mapping",
+   "zh": "机器人建图导论",
+   "fill": "定位建图：SLAM 问题的定义、被动/主动、拓扑/度量、特征/稠密等分法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Bayes Filter and Related Models (Summary of Introduction to Mobile Robotics)",
+   "zh": "贝叶斯滤波与相关模型（移动机器人导论摘要）",
+   "fill": "感知融合：递推贝叶斯滤波框架、运动模型与观测模型",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Kalman Filter and Extended Kalman Filter (EKF)",
+   "zh": "Kalman 滤波与扩展 Kalman 滤波（EKF）",
+   "fill": "感知融合：高斯滤波、线性化与多变量高斯运算",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "EKF SLAM",
+   "zh": "EKF SLAM",
+   "fill": "定位建图：用 EKF 同时估计机器人位姿与路标地图",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Short Introduction to the Particle Filter and PF Localization",
+   "zh": "粒子滤波与粒子滤波定位简介",
+   "fill": "定位建图：非参数滤波与蒙特卡洛定位",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Grid Maps",
+   "zh": "栅格地图",
+   "fill": "定位建图：占据栅格建图与逆传感器模型",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Least-Squares Approach to SLAM",
+   "zh": "最小二乘 SLAM",
+   "fill": "定位建图：图优化形式的 SLAM（位姿图/因子图与非线性最小二乘）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Front-Ends for Graph-Based SLAM",
+   "zh": "图优化 SLAM 的前端",
+   "fill": "感知融合：扫描配准与前端的特征匹配（ICP、相关匹配、FLIRT 等）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "运动学",
+   "refs": [
+    "A:Lectures 1-3",
+    "A:Lectures 4-5",
+    "A:Lectures 6-8"
+   ]
+  },
+  {
+   "topic": "动力学",
+   "refs": [
+    "A:Lectures 11-12"
+   ]
+  },
+  {
+   "topic": "定位建图",
+   "refs": [
+    "B:#1",
+    "B:#4",
+    "B:#5",
+    "B:#6",
+    "B:#7"
+   ]
+  },
+  {
+   "topic": "轨迹规划",
+   "refs": [
+    "A:Lecture 10"
+   ]
+  },
+  {
+   "topic": "感知融合",
+   "refs": [
+    "B:#2",
+    "B:#3",
+    "B:#8",
+    "A:Lecture 9"
+   ]
+  },
+  {
+   "topic": "机器人控制",
+   "refs": [
+    "A:Lectures 13-15"
+   ]
+  }
+ ],
+ "omitted": "A 只收了 Handouts 里分好单元的 7 个单元（Kinematics-1/2、Jacobian、Robots and Vision、Trajectory Planning、Dynamics、Control）；讲义里“Course Introduction”（Lecture 1，课程概览与历史视频）以及不在这些单元里的 Lecture 16（柔顺与力控制、任务姿态与全身控制）没收录，作业与试卷也不收。B 的课表 21 讲里只收了与定位建图/感知融合直接相关的 8 讲，Homogenous Coordinates、Unscented Kalman Filter、Extended Information Filter、Sparse EIF SLAM、Summary on the Kalman Filter and its Friends for SLAM、Grid-Based SLAM with Rao-Blackwellized Particle Filters、Least-Squares、Hierarchical Pose-Graphs for Online Mapping、Graph-Based SLAM with Landmarks、Max-Mixture and Robust Least Squares for SLAM、Stochastic Gradient Descent for SLAM、Short Summary 等属具体算法变体或总结，未收。",
+ "notes": "A 的分支用讲义（Handouts）里的单元名，ref 抄该单元对应的讲次（如 Lectures 1-3）；items 是该单元内各讲 Topics 里的关键词，已逐条核对页面原文。B 的课表只有讲次标题没有编号，ref 留空。CS223A 在 Stanford 由 Oussama Khatib 讲授，SEE 上是 2008 年录制的版本。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 51,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

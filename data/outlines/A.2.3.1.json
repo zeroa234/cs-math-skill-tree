@@ -1,0 +1,546 @@
+{
+ "id": "A.2.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Dive into Deep Learning",
+   "by": "Aston Zhang, Zachary C. Lipton, Mu Li, Alexander J. Smola",
+   "year": 2023,
+   "url": "https://d2l.ai/",
+   "toc_urls": [
+    "https://d2l.ai/"
+   ],
+   "why": "就是节点“现有英文学习资源”（d2l.ai 交互式在线教材，另有中文版 zh-v2.d2l.ai），整书目录按架构分章：MLP（第 5 章）、卷积（第 7–8 章）、循环（第 9–10 章）、注意力与 Transformer（第 11 章）、自监督预训练（第 15 章），正好是这个节点的主干；唯一空缺是图网络，用补充分支 B 补。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Graph Representation Learning",
+   "by": "William L. Hamilton",
+   "year": 2020,
+   "url": "https://www.cs.mcgill.ca/~wlh/grl_book/",
+   "toc_urls": [
+    "https://www.cs.mcgill.ca/~wlh/grl_book/files/GRL_Book.pdf"
+   ],
+   "why": "补图网络：主来源 A 没有图神经网络章。这是该领域最常用的入门书（McGill 作者主页按出版社许可公开的预印本），第 3 章讲浅层嵌入（自监督式的邻域重构），第 5–7 章讲消息传递 GNN、工程实践与理论（图卷积、同构）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Multilayer Perceptrons",
+   "zh": "多层感知机",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Multilayer Perceptrons",
+     "zh": "多层感知机"
+    },
+    {
+     "ref": "5.2",
+     "title": "Implementation of Multilayer Perceptrons",
+     "zh": "多层感知机的实现"
+    },
+    {
+     "ref": "5.3",
+     "title": "Forward Propagation, Backward Propagation, and Computational Graphs",
+     "zh": "前向传播、反向传播与计算图"
+    },
+    {
+     "ref": "5.4",
+     "title": "Numerical Stability and Initialization",
+     "zh": "数值稳定性与初始化"
+    },
+    {
+     "ref": "5.5",
+     "title": "Generalization in Deep Learning",
+     "zh": "深度学习中的泛化"
+    },
+    {
+     "ref": "5.6",
+     "title": "Dropout",
+     "zh": "暂退法（Dropout）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Convolutional Neural Networks",
+   "zh": "卷积神经网络",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "From Fully Connected Layers to Convolutions",
+     "zh": "从全连接层到卷积"
+    },
+    {
+     "ref": "7.2",
+     "title": "Convolutions for Images",
+     "zh": "图像卷积"
+    },
+    {
+     "ref": "7.3",
+     "title": "Padding and Stride",
+     "zh": "填充与步幅"
+    },
+    {
+     "ref": "7.4",
+     "title": "Multiple Input and Multiple Output Channels",
+     "zh": "多输入多输出通道"
+    },
+    {
+     "ref": "7.5",
+     "title": "Pooling",
+     "zh": "汇聚层"
+    },
+    {
+     "ref": "7.6",
+     "title": "Convolutional Neural Networks (LeNet)",
+     "zh": "卷积神经网络（LeNet）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Modern Convolutional Neural Networks",
+   "zh": "现代卷积神经网络",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Deep Convolutional Neural Networks (AlexNet)",
+     "zh": "深度卷积神经网络（AlexNet）"
+    },
+    {
+     "ref": "8.2",
+     "title": "Networks Using Blocks (VGG)",
+     "zh": "使用块的网络（VGG）"
+    },
+    {
+     "ref": "8.3",
+     "title": "Network in Network (NiN)",
+     "zh": "网络中的网络（NiN）"
+    },
+    {
+     "ref": "8.4",
+     "title": "Multi-Branch Networks (GoogLeNet)",
+     "zh": "多分支网络（GoogLeNet）"
+    },
+    {
+     "ref": "8.5",
+     "title": "Batch Normalization",
+     "zh": "批量规范化"
+    },
+    {
+     "ref": "8.6",
+     "title": "Residual Networks (ResNet) and ResNeXt",
+     "zh": "残差网络（ResNet）与 ResNeXt"
+    },
+    {
+     "ref": "8.7",
+     "title": "Densely Connected Networks (DenseNet)",
+     "zh": "稠密连接网络（DenseNet）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Recurrent Neural Networks",
+   "zh": "循环神经网络",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Working with Sequences",
+     "zh": "处理序列数据"
+    },
+    {
+     "ref": "9.3",
+     "title": "Language Models",
+     "zh": "语言模型"
+    },
+    {
+     "ref": "9.4",
+     "title": "Recurrent Neural Networks",
+     "zh": "循环神经网络"
+    },
+    {
+     "ref": "9.7",
+     "title": "Backpropagation Through Time",
+     "zh": "通过时间反向传播"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Modern Recurrent Neural Networks",
+   "zh": "现代循环神经网络",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Long Short-Term Memory (LSTM)",
+     "zh": "长短期记忆网络（LSTM）"
+    },
+    {
+     "ref": "10.2",
+     "title": "Gated Recurrent Units (GRU)",
+     "zh": "门控循环单元（GRU）"
+    },
+    {
+     "ref": "10.3",
+     "title": "Deep Recurrent Neural Networks",
+     "zh": "深度循环神经网络"
+    },
+    {
+     "ref": "10.4",
+     "title": "Bidirectional Recurrent Neural Networks",
+     "zh": "双向循环神经网络"
+    },
+    {
+     "ref": "10.6",
+     "title": "The Encoder-Decoder Architecture",
+     "zh": "编码器-解码器架构"
+    },
+    {
+     "ref": "10.7",
+     "title": "Sequence-to-Sequence Learning for Machine Translation",
+     "zh": "机器翻译中的序列到序列学习"
+    },
+    {
+     "ref": "10.8",
+     "title": "Beam Search",
+     "zh": "束搜索"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Attention Mechanisms and Transformers",
+   "zh": "注意力机制与 Transformer",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Queries, Keys, and Values",
+     "zh": "查询、键与值"
+    },
+    {
+     "ref": "11.3",
+     "title": "Attention Scoring Functions",
+     "zh": "注意力评分函数"
+    },
+    {
+     "ref": "11.4",
+     "title": "The Bahdanau Attention Mechanism",
+     "zh": "Bahdanau 注意力机制"
+    },
+    {
+     "ref": "11.5",
+     "title": "Multi-Head Attention",
+     "zh": "多头注意力"
+    },
+    {
+     "ref": "11.6",
+     "title": "Self-Attention and Positional Encoding",
+     "zh": "自注意力与位置编码"
+    },
+    {
+     "ref": "11.7",
+     "title": "The Transformer Architecture",
+     "zh": "Transformer 架构"
+    },
+    {
+     "ref": "11.8",
+     "title": "Transformers for Vision",
+     "zh": "视觉 Transformer"
+    },
+    {
+     "ref": "11.9",
+     "title": "Large-Scale Pretraining with Transformers",
+     "zh": "Transformer 的大规模预训练"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "Natural Language Processing: Pretraining",
+   "zh": "自然语言处理：预训练",
+   "items": [
+    {
+     "ref": "15.1",
+     "title": "Word Embedding (word2vec)",
+     "zh": "词嵌入（word2vec）"
+    },
+    {
+     "ref": "15.2",
+     "title": "Approximate Training",
+     "zh": "近似训练"
+    },
+    {
+     "ref": "15.4",
+     "title": "Pretraining word2vec",
+     "zh": "预训练 word2vec"
+    },
+    {
+     "ref": "15.5",
+     "title": "Word Embedding with Global Vectors (GloVe)",
+     "zh": "全局向量的词嵌入（GloVe）"
+    },
+    {
+     "ref": "15.6",
+     "title": "Subword Embedding",
+     "zh": "子词嵌入"
+    },
+    {
+     "ref": "15.8",
+     "title": "Bidirectional Encoder Representations from Transformers (BERT)",
+     "zh": "来自 Transformer 的双向编码器表示（BERT）"
+    },
+    {
+     "ref": "15.10",
+     "title": "Pretraining BERT",
+     "zh": "预训练 BERT"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Neighborhood Reconstruction Methods",
+   "zh": "邻域重构方法",
+   "fill": "补“表示学习”的浅层做法：把嵌入学成能从邻域重构出图结构的自监督目标（DeepWalk/node2vec 一类）",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "An Encoder-Decoder Perspective",
+     "zh": "编码器-解码器视角"
+    },
+    {
+     "ref": "3.2",
+     "title": "Factorization-based approaches",
+     "zh": "基于矩阵分解的方法"
+    },
+    {
+     "ref": "3.3",
+     "title": "Random walk embeddings",
+     "zh": "随机游走嵌入"
+    },
+    {
+     "ref": "3.4",
+     "title": "Limitations of Shallow Embeddings",
+     "zh": "浅层嵌入的局限"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "The Graph Neural Network Model",
+   "zh": "图神经网络模型",
+   "fill": "补“图网络”：主来源 A 没有图神经网络章，这里给消息传递框架及其各类聚合/更新变体",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Neural Message Passing",
+     "zh": "神经消息传递"
+    },
+    {
+     "ref": "5.2",
+     "title": "Generalized Neighborhood Aggregation",
+     "zh": "广义邻域聚合"
+    },
+    {
+     "ref": "5.3",
+     "title": "Generalized Update Methods",
+     "zh": "广义更新方法"
+    },
+    {
+     "ref": "5.4",
+     "title": "Edge Features and Multi-relational GNNs",
+     "zh": "边特征与多关系图神经网络"
+    },
+    {
+     "ref": "5.5",
+     "title": "Graph Pooling",
+     "zh": "图池化"
+    },
+    {
+     "ref": "5.6",
+     "title": "Generalized Message Passing",
+     "zh": "广义消息传递"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Graph Neural Networks in Practice",
+   "zh": "图神经网络的实践",
+   "fill": "补“图网络”的训练侧：任务与损失、采样与小批量、参数共享与正则，以及 GNN 的预训练（自监督）",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Applications and Loss Functions",
+     "zh": "应用与损失函数"
+    },
+    {
+     "ref": "6.2",
+     "title": "Efficiency Concerns and Node Sampling",
+     "zh": "效率问题与节点采样"
+    },
+    {
+     "ref": "6.3",
+     "title": "Parameter Sharing and Regularization",
+     "zh": "参数共享与正则化"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Theoretical Motivations",
+   "zh": "理论动因",
+   "fill": "补“图网络”为什么能表达图结构：图卷积（谱方法）、概率图模型视角、与图同构/Weisfeiler-Lehman 的表达能力",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "GNNs and Graph Convolutions",
+     "zh": "图神经网络与图卷积"
+    },
+    {
+     "ref": "7.2",
+     "title": "GNNs and Probabilistic Graphical Models",
+     "zh": "图神经网络与概率图模型"
+    },
+    {
+     "ref": "7.3",
+     "title": "GNNs and Graph Isomorphism",
+     "zh": "图神经网络与图同构"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "MLP",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:5.2",
+    "A:5.3",
+    "A:5.4",
+    "A:5.5",
+    "A:5.6"
+   ],
+   "note": "A:5.1 感知机结构与激活函数；A:5.3 前向/反向传播与计算图；A:5.4 数值稳定性与初始化；A:5.6 正则化（Dropout）；A:5.5 泛化。"
+  },
+  {
+   "topic": "卷积",
+   "refs": [
+    "A:7",
+    "A:7.1",
+    "A:7.2",
+    "A:7.3",
+    "A:7.4",
+    "A:7.5",
+    "A:7.6",
+    "A:8",
+    "A:8.6"
+   ],
+   "note": "A:7 是卷积算子本身（从全连接到卷积、填充步幅、多通道、汇聚、LeNet）；A:8 是卷积架构演进（AlexNet、VGG、NiN、GoogLeNet、批量规范化、ResNet/ResNeXt、DenseNet）。"
+  },
+  {
+   "topic": "循环",
+   "refs": [
+    "A:9",
+    "A:9.3",
+    "A:9.4",
+    "A:9.7",
+    "A:10",
+    "A:10.1",
+    "A:10.2",
+    "A:10.3",
+    "A:10.4"
+   ],
+   "note": "A:9 序列建模与朴素 RNN（含通过时间反向传播 BPTT）；A:10 门控 RNN（LSTM、GRU）、深层与双向 RNN，以及编码器-解码器/seq2seq（A:10.6、A:10.7）。"
+  },
+  {
+   "topic": "注意力",
+   "refs": [
+    "A:11",
+    "A:11.1",
+    "A:11.3",
+    "A:11.4",
+    "A:11.5",
+    "A:11.6"
+   ],
+   "note": "A:11 全章；核心是 A:11.1 查询-键-值、A:11.3 评分函数、A:11.4 Bahdanau 加性注意力、A:11.5 多头注意力、A:11.6 自注意力与位置编码。"
+  },
+  {
+   "topic": "Transformer",
+   "refs": [
+    "A:11.7",
+    "A:11.8",
+    "A:11.9",
+    "A:15.8"
+   ],
+   "note": "A:11.7 架构本身；A:11.8 视觉 Transformer；A:11.9 大规模预训练；A:15.8 BERT（Transformer 编码器的自监督预训练用法）。"
+  },
+  {
+   "topic": "图网络",
+   "refs": [
+    "B:5",
+    "B:5.1",
+    "B:5.2",
+    "B:5.3",
+    "B:5.4",
+    "B:5.5",
+    "B:5.6",
+    "B:6",
+    "B:6.1",
+    "B:6.2",
+    "B:7",
+    "B:7.1",
+    "B:7.3"
+   ],
+   "note": "主来源 A 完全没有图章，全部由补充分支 B 承担：B:5 消息传递 GNN 及其聚合/更新/多关系/池化变体，B:6 实践（任务与损失、节点采样、正则与 GNN 预训练），B:7 理论（图卷积、概率图模型视角、WL 同构与表达能力）。"
+  },
+  {
+   "topic": "自监督表征",
+   "refs": [
+    "A:15",
+    "A:15.1",
+    "A:15.5",
+    "A:15.8",
+    "A:15.10",
+    "B:3",
+    "B:3.3",
+    "B:6.1"
+   ],
+   "note": "A 里“自监督”是以预训练任务出现：A:15.1 word2vec（上下文预测）、A:15.5 GloVe、A:15.8/A:15.10 BERT 掩码语言模型；B:3 邻域重构（随机游走嵌入等把图结构当监督信号）与 B:6.1 的图预训练是图上的自监督。对照学习（contrastive，SimCLR/MoCo 一类）与 VAE/GAN 式表征学习在两份来源里都没有专章，见 note。"
+  },
+  {
+   "topic": "表示学习（一般意义）",
+   "refs": [
+    "A:15",
+    "B:3",
+    "B:3.1",
+    "B:3.4"
+   ],
+   "note": "A:15 学词/句子表示；B:3 用编码器-解码器框架统一讲嵌入学习（B:3.1），并说明浅层嵌入的局限（B:3.4）——这正是转向深层架构（第 5 章 GNN、A 的各章网络）的动机。"
+  }
+ ],
+ "omitted": "A（Dive into Deep Learning 1.0.3）未收：Preface / Installation / Notation，第 1 章 Introduction、第 2 章 Preliminaries（线性代数、微积分、自动微分等，属本节点前置）、第 3–4 章线性回归与 softmax 分类（属基础模型节点）、第 6 章 Builders' Guide（工程实现细节）、第 12 章 Optimization Algorithms 与第 13 章 Computational Performance（属训练与推理系统节点 A.2.3.2）、第 14 章 Computer Vision（检测/分割/风格迁移等应用）、第 16 章 NLP 应用（情感分析、NLI 微调）、第 17 章 Reinforcement Learning（属 A.2.4）、第 18 章 Gaussian Processes、第 19 章及以后（超参数优化、推荐系统、生成对抗网络等）。各章内的数据集/实现小节（如 5.7 Kaggle 房价、9.2 文本序列化数据、9.5–9.6 RNN 的从零与简洁实现、10.5 机器翻译数据集、11.2 注意力池化、15.3/15.9 预训练数据集、15.7 词相似度与类比）也没有单列，避免与相邻小节重复。B（Graph Representation Learning）未收：Preface/Acknowledgments、第 1 章 Introduction 与第 2 章 Background and Traditional Approaches（图论与传统方法，属前置）、第 4 章 Multi-relational Data and Knowledge Graphs（知识图谱嵌入，只作为 B:5.4 的背景）、第 8–9 章图生成模型（Traditional Graph Generation Approaches、Deep Generative Models，属生成模型方向而非本节点的架构主线）。",
+ "notes": "d2l 的章标题在网页目录里带编号前缀（“5. Multilayer Perceptrons”“8.5. Batch Normalization”），题名按不带编号的原文抄；正文里出现的撇号是 U+2019（Builders’ Guide），本节点未收该章。d2l 目录随版本略有变动（1.0.3 共 19+ 章），这里按 2025 年抓到的当前目录。B 的书名页信息：Synthesis Lectures on Artificial Intelligence and Machine Learning, Vol. 14, No. 3，Morgan & Claypool 出版，作者主页公开预印本可直接打开。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 72,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

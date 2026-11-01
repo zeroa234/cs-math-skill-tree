@@ -1,0 +1,354 @@
+{
+ "id": "M.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "18.303 Linear Partial Differential Equations: Analysis and Numerics (Fall 2014)",
+   "by": "Steven G. Johnson — MIT OpenCourseWare",
+   "year": 2014,
+   "url": "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-analysis-and-numerics-fall-2014/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-analysis-and-numerics-fall-2014/pages/syllabus/",
+    "https://ocw.mit.edu/courses/18-303-linear-partial-differential-equations-analysis-and-numerics-fall-2014/pages/lecture-summaries/"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课：MIT 本科偏微分方程课，syllabus 的 Calendar 按 L1–L38 逐讲列出主题，Poisson/热/波方程、Dirichlet 与 Neumann 边界条件、变分与 Galerkin（弱形式）、时间推进的稳定性都有对应讲次。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Introduction to Partial Differential Equations",
+   "by": "Peter J. Olver",
+   "year": 2020,
+   "url": "https://www-users.cse.umn.edu/~olver/pde.html",
+   "toc_urls": [
+    "https://www-users.cse.umn.edu/~olver/book_/pdetc.pdf"
+   ],
+   "why": "补 18.303 只在一句讲义标题里带过、没有专门讲次的内容：线性二阶方程的分类（§4.4，椭圆/抛物/双曲）、初值与边界条件的系统讨论（第 1 章）、弱解（§10.4）。Springer UTM 本科教材，作者主页放目录 PDF，18.303 自己就把这本书列为推荐读物。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "Partial Differential Equations",
+   "by": "Victor Ivrii",
+   "year": 2026,
+   "url": "https://www.math.utoronto.ca/ivrii/PDE-textbook/PDE-textbook.pdf",
+   "toc_urls": [
+    "https://www.math.utoronto.ca/ivrii/PDE-textbook/PDE-textbook.pdf"
+   ],
+   "why": "补“适定性”：18.303 与 Olver 的目录里都没有以 well-posedness 命名的章或节；多伦多大学 Ivrii 的免费教材 §1.2.2 “Notion of well-posedness” 正面讲 Hadamard 意义下的适定性。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Calendar",
+   "title": "Calendar",
+   "zh": "课程日历（L1–L38 中的相关讲次）",
+   "items": [
+    {
+     "ref": "L1",
+     "title": "Overview of linear PDEs and analogies with matrix algebra",
+     "zh": "线性偏微分方程概览及其与矩阵代数的类比"
+    },
+    {
+     "ref": "L2",
+     "title": "Poisson’s equation and eigenfunctions in 1d: Fourier sine series",
+     "zh": "Poisson 方程与一维特征函数：傅里叶正弦级数"
+    },
+    {
+     "ref": "L8",
+     "title": "Music and wave equations, Separation of variables, in time and space",
+     "zh": "音乐与波方程：时间与空间上的分离变量"
+    },
+    {
+     "ref": "L10",
+     "title": "General Dirichlet and Neumann boundary conditions",
+     "zh": "一般的 Dirichlet 与 Neumann 边界条件"
+    },
+    {
+     "ref": "L13",
+     "title": "The min-max theorem",
+     "zh": "极小极大定理"
+    },
+    {
+     "ref": "L14",
+     "title": "Green’s functions with Dirichlet boundaries",
+     "zh": "Dirichlet 边界下的格林函数"
+    },
+    {
+     "ref": "L16",
+     "title": "Delta functions and distributions",
+     "zh": "δ 函数与广义函数"
+    },
+    {
+     "ref": "L20",
+     "title": "Dipole sources and approximations, Overview of time-dependent problems",
+     "zh": "偶极子源及其近似、含时问题概览"
+    },
+    {
+     "ref": "L21",
+     "title": "Time-stepping and stability: Definitions, Lax equivalence",
+     "zh": "时间推进与稳定性：定义与 Lax 等价定理"
+    },
+    {
+     "ref": "L22",
+     "title": "Von Neumann analysis and the heat equation",
+     "zh": "von Neumann 分析与热方程"
+    },
+    {
+     "ref": "L23",
+     "title": "Algebraic properties of wave equations and unitary time evolution, Conservation of energy in a stretched string",
+     "zh": "波方程的代数性质与酉时间演化、张紧弦上的能量守恒"
+    },
+    {
+     "ref": "L25",
+     "title": "Traveling waves: D’Alembert’s solution",
+     "zh": "行波：d’Alembert 解"
+    },
+    {
+     "ref": "L34",
+     "title": "Finite element methods: Introduction",
+     "zh": "有限元方法导论"
+    },
+    {
+     "ref": "L35",
+     "title": "Galerkin discretization",
+     "zh": "Galerkin 离散"
+    },
+    {
+     "ref": "L36",
+     "title": "Convergence proof for the finite-element method, Boundary conditions and the finite-element method",
+     "zh": "有限元收敛性证明、边界条件与有限元方法"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "What Are Partial Differential Equations?",
+   "zh": "什么是偏微分方程",
+   "fill": "补“边界条件”的系统定义：18.303 只在 L10、L36 讲具体的 Dirichlet/Neumann 与有限元边界处理，没有先把初始条件、边界条件与古典解放在一起讲清楚。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Classical Solutions",
+     "zh": "古典解"
+    },
+    {
+     "ref": "",
+     "title": "Initial Conditions and Boundary Conditions",
+     "zh": "初始条件与边界条件"
+    },
+    {
+     "ref": "",
+     "title": "Linear and Nonlinear Equations",
+     "zh": "线性方程与非线性方程"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Separation of Variables",
+   "zh": "分离变量法",
+   "fill": "补三类方程的分类与各自的经典解法：18.303 按方程零散讲，这里 4.1 热方程（抛物型）、4.2 波方程（双曲型）、4.3 Laplace/Poisson（椭圆型）成体系，4.4 直接讲二阶线性方程的分类。",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "The Diffusion and Heat Equations",
+     "zh": "扩散方程与热方程",
+     "items": [
+      {
+       "ref": "",
+       "title": "The Heat Equation",
+       "zh": "热方程"
+      },
+      {
+       "ref": "",
+       "title": "Smoothing and Long Time Behavior",
+       "zh": "光滑化与长时间行为"
+      },
+      {
+       "ref": "",
+       "title": "Inhomogeneous Boundary Conditions",
+       "zh": "非齐次边界条件"
+      },
+      {
+       "ref": "",
+       "title": "Robin Boundary Conditions",
+       "zh": "Robin 边界条件"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "The Wave Equation",
+     "zh": "波方程",
+     "items": [
+      {
+       "ref": "",
+       "title": "Separation of Variables and Fourier Series Solutions",
+       "zh": "分离变量与傅里叶级数解"
+      },
+      {
+       "ref": "",
+       "title": "The d’Alembert Formula for Bounded Intervals",
+       "zh": "有界区间上的 d’Alembert 公式"
+      }
+     ]
+    },
+    {
+     "ref": "4.3",
+     "title": "The Planar Laplace and Poisson Equations",
+     "zh": "平面 Laplace 方程与 Poisson 方程",
+     "items": [
+      {
+       "ref": "",
+       "title": "Separation of Variables",
+       "zh": "分离变量"
+      },
+      {
+       "ref": "",
+       "title": "Polar Coordinates",
+       "zh": "极坐标"
+      },
+      {
+       "ref": "",
+       "title": "Averaging, the Maximum Principle, and Analyticity",
+       "zh": "平均值性质、最大值原理与解析性"
+      }
+     ]
+    },
+    {
+     "ref": "4.4",
+     "title": "Classification of Linear Partial Differential Equations",
+     "zh": "线性偏微分方程的分类",
+     "fill": "补“椭圆/抛物/双曲型方程”的分类本身：18.303 按方程（Poisson、热、波）分别讲，没有一节做统一分类。",
+     "items": [
+      {
+       "ref": "",
+       "title": "Characteristics and the Cauchy Problem",
+       "zh": "特征线与 Cauchy 问题"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "10",
+   "title": "Finite Elements and Weak Solutions",
+   "zh": "有限元与弱解",
+   "fill": "补“弱解”：18.303 的 Galerkin/有限元讲次只讲离散化，没有系统定义弱解与弱形式。",
+   "items": [
+    {
+     "ref": "10.4",
+     "title": "Weak Solutions",
+     "zh": "弱解",
+     "items": [
+      {
+       "ref": "",
+       "title": "Weak Formulations of Linear Systems",
+       "zh": "线性系统的弱形式"
+      },
+      {
+       "ref": "",
+       "title": "Finite Elements Based on Weak Solutions",
+       "zh": "基于弱解的有限元"
+      },
+      {
+       "ref": "",
+       "title": "Shock Waves as Weak Solutions",
+       "zh": "作为弱解的激波"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "1.2",
+   "title": "Initial and boundary value problems",
+   "zh": "初值与边值问题",
+   "fill": "补“适定性”：18.303 与 Olver 的目录都没有以适定性命名的章/节。",
+   "items": [
+    {
+     "ref": "1.2.2",
+     "title": "Notion of “well-posedness”",
+     "zh": "适定性的概念"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "椭圆型方程",
+   "refs": [
+    "A:L2",
+    "A:L14",
+    "B:4.3"
+   ],
+   "note": "A:L2 Poisson 方程与一维特征函数（傅里叶正弦级数）；A:L14 Dirichlet 边界下的格林函数；B:4.3 平面 Laplace/Poisson 方程（分离变量、极坐标、平均值性质与最大值原理）。"
+  },
+  {
+   "topic": "抛物型方程",
+   "refs": [
+    "A:L22",
+    "B:4.1"
+   ],
+   "note": "A:L22 von Neumann 分析与热方程（含稳定性）；B:4.1 扩散方程与热方程：热方程、光滑性与长时间行为、非齐次边界条件、Robin 边界条件。"
+  },
+  {
+   "topic": "双曲型方程",
+   "refs": [
+    "A:L8",
+    "A:L23",
+    "A:L25",
+    "B:4.2"
+   ],
+   "note": "A:L8 音乐与波方程（时、空两个方向的分离变量），A:L23 波方程的代数性质与酉时间演化、弦的能量守恒，A:L25 行波与 d’Alembert 解；B:4.2 波方程的分离变量与傅里叶级数解、有界区间上的 d’Alembert 公式。"
+  },
+  {
+   "topic": "椭圆/抛物/双曲型方程的分类",
+   "refs": [
+    "B:4.4"
+   ],
+   "note": "由 B §4.4 Classification of Linear Partial Differential Equations（含 Characteristics and the Cauchy Problem）补：这是三个类型（椭圆/抛物/双曲）的统一分类，A 里没有对应的专门讲次。"
+  },
+  {
+   "topic": "边界条件",
+   "refs": [
+    "A:L10",
+    "A:L36",
+    "B:1",
+    "B:4.1"
+   ],
+   "note": "A:L10 一般 Dirichlet 与 Neumann 边界条件，A:L36 有限元中的边界条件；B 第 1 章的 Initial Conditions and Boundary Conditions 给出初始/边界条件的系统讨论，B:4.1 补非齐次与 Robin 边界条件。"
+  },
+  {
+   "topic": "弱解",
+   "refs": [
+    "B:10.4",
+    "A:L35",
+    "A:L36"
+   ],
+   "note": "B §10.4 Weak Solutions 正面讲弱形式（Weak Formulations of Linear Systems、基于弱解的有限元、激波作为弱解）；A:L35 Galerkin 离散、A:L36 有限元收敛性证明给出弱形式的离散与收敛一侧。"
+  },
+  {
+   "topic": "适定性",
+   "refs": [
+    "C:1.2"
+   ],
+   "note": "C §1.2（Initial and boundary value problems）下的 1.2.2 Notion of “well-posedness” 讲 Hadamard 意义下的适定性（存在、唯一、连续依赖）。A 侧只有 L21 的 “Time-stepping and stability … Lax equivalence” 与 L23 的能量守恒，属于数值稳定与能量方法，不等于适定性定义，故未作为主要出处。"
+  }
+ ],
+ "omitted": "A（18.303）只收与节点知识点相关的 15 讲：未收 L3–L6（有限差分与离散 Laplacian、有限维近似）、L9（柱坐标与 Bessel 函数）、L11–L12（多维有限差分、Kronecker 积）、L15（格林函数的互易性与正性）、L17–L19（三维格林函数、镜像法、非均匀介质）、L24（波方程的交错离散）、L26–L33（色散、波导、PML、微扰）、L37–L38（有限元软件、对称性），这些是数值方法与具体解析技巧，超出本节点的四个知识点。B（Olver）只收第 1、4、10 章的相关小节：第 2 章（线性与非线性波、激波）、第 3 章（傅里叶级数）、第 5 章（有限差分）、第 6 章（广义函数与格林函数）、第 7 章（傅里叶变换）、第 8 章（线性与非线性发展方程）、第 9 章（线性 PDE 的一般框架）、第 11–12 章（平面与空间中的介质、球谐函数、Huygens 原理）以及附录未收，因为节点只要求方程类型、边界条件、弱解与适定性；各章习题与小节内的例题也未收。C（Ivrii）只收 §1.2 的 1.2.2，其余章节未收。",
+ "notes": "18.303 没有单元划分，syllabus 的 Calendar 是一张 L1–L38 的逐讲表，所以 A 只有一个分支（分支标题就是页面上的 “Calendar”），讲次编号 L1…L36 就是原文编号，coverage 可以精确到讲次。A 的讲次标题照 Calendar 抄（与 Lecture Summaries 页个别措辞不同，例如 L26、L27 两页写法不一致，本节点用到的那几讲两页一致或只差标点）。B 的第 1 章在目录里没有节号，只有三行无编号小节名，所以那三条 ref 留空。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 42,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

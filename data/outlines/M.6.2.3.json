@@ -1,0 +1,293 @@
+{
+ "id": "M.6.2.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Causal Inference: The Remix",
+   "by": "Scott Cunningham",
+   "url": "https://mixtape.scunning.com/",
+   "toc_urls": [
+    "https://mixtape.scunning.com/",
+    "https://mixtape.scunning.com/03-Directed_Acyclical_Graphs.html",
+    "https://mixtape.scunning.com/04-Potential_Outcomes_and_Randomization.html",
+    "https://mixtape.scunning.com/05-Causal_Cross_Sectional_Designs.html"
+   ],
+   "why": "节点“现有英文学习资源”本身，作者自建的第二版在线全文（Yale University Press 出版），每章有带编号的分节目录：因果图、潜在结果与随机化、无混杂假定下的识别与匹配/倾向得分估计，正对节点的五个知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "STAT 503: Design of Experiments",
+   "by": "Penn State Department of Statistics (online course notes, OER)",
+   "year": 2026,
+   "url": "https://online.stat.psu.edu/stat503/",
+   "toc_urls": [
+    "https://online.stat.psu.edu/stat503/",
+    "https://online.stat.psu.edu/stat503/Lesson01.html",
+    "https://online.stat.psu.edu/stat503/Lesson04.html",
+    "https://online.stat.psu.edu/stat503/Lesson05.html"
+   ],
+   "why": "补实验设计：A 讲的是潜在结果框架下的随机化推断，没有区组、重复、因子设计这些设计原则，B 的第 1、4、5 课正好是 DOE 的基本原则、区组与因子设计。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Directed Acyclic Graphs",
+   "zh": "有向无环图",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Introduction to DAG Notation",
+     "zh": "DAG 记号入门"
+    },
+    {
+     "ref": "3.2",
+     "title": "Backdoor Criterion",
+     "zh": "后门准则"
+    },
+    {
+     "ref": "3.3",
+     "title": "Collider Bias",
+     "zh": "对撞偏差"
+    },
+    {
+     "ref": "3.4",
+     "title": "Concluding Remarks",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Potential Outcomes and Randomization",
+   "zh": "潜在结果与随机化",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Common and Uncommon Fallacies",
+     "zh": "常见的因果谬误"
+    },
+    {
+     "ref": "4.2",
+     "title": "Potential Outcomes",
+     "zh": "潜在结果"
+    },
+    {
+     "ref": "4.3",
+     "title": "Perfect vs Bad Doctor Treatment Assignment",
+     "zh": "好医生与坏医生的处置分配"
+    },
+    {
+     "ref": "4.4",
+     "title": "Randomization",
+     "zh": "随机化"
+    },
+    {
+     "ref": "4.5",
+     "title": "Stable Unit Treatment Value Assumption",
+     "zh": "稳定单位处置值假定（SUTVA）"
+    },
+    {
+     "ref": "4.6",
+     "title": "Three Randomized Experiments",
+     "zh": "三个随机实验案例"
+    },
+    {
+     "ref": "4.7",
+     "title": "Randomization Inference",
+     "zh": "随机化推断"
+    },
+    {
+     "ref": "4.8",
+     "title": "Concluding Remarks",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Unconfoundedness",
+   "zh": "无混杂性",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "5.2",
+     "title": "Confounders, Covariates, and Colliders",
+     "zh": "混杂变量、协变量与对撞变量"
+    },
+    {
+     "ref": "5.3",
+     "title": "Identification Assumptions",
+     "zh": "识别假定"
+    },
+    {
+     "ref": "5.4",
+     "title": "Subclassification",
+     "zh": "分层法"
+    },
+    {
+     "ref": "5.5",
+     "title": "Exact Matching",
+     "zh": "精确匹配"
+    },
+    {
+     "ref": "5.6",
+     "title": "Minimizing Matching Discrepancies with Nearest Neighbors",
+     "zh": "用最近邻最小化匹配差异"
+    },
+    {
+     "ref": "5.7",
+     "title": "Nearest Neighbor Matching with Bias Correction",
+     "zh": "带偏差校正的最近邻匹配"
+    },
+    {
+     "ref": "5.8",
+     "title": "Propensity Scores",
+     "zh": "倾向得分"
+    },
+    {
+     "ref": "5.9",
+     "title": "Regression",
+     "zh": "回归"
+    },
+    {
+     "ref": "5.11",
+     "title": "Concluding Remarks",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "Introduction to Design of Experiments",
+   "zh": "实验设计导论",
+   "fill": "补实验设计的基本原则（随机化、重复、区组）与一次实验从计划到分析的步骤",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "A Quick History of the Design of Experiments (DOE)",
+     "zh": "实验设计简史"
+    },
+    {
+     "ref": "1.2",
+     "title": "The Basic Principles of DOE",
+     "zh": "实验设计的基本原则"
+    },
+    {
+     "ref": "1.3",
+     "title": "Steps for Planning, Conducting and Analyzing an Experiment",
+     "zh": "计划、实施与分析实验的步骤"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Blocking",
+   "zh": "区组设计",
+   "fill": "补区组化的实验设计（区组化场景、随机完全区组、拉丁方），这是“混杂”在设计层面的对应物",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Blocking Scenarios",
+     "zh": "区组化的场景"
+    },
+    {
+     "ref": "4.2",
+     "title": "RCBD and RCBD’s with Missing Data",
+     "zh": "随机完全区组设计与缺失数据"
+    },
+    {
+     "ref": "4.3",
+     "title": "The Latin Square Design",
+     "zh": "拉丁方设计"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Introduction to Factorial Designs",
+   "zh": "因子设计导论",
+   "fill": "补同时考察多个处理因子的实验设计（因子设计），扩展“随机实验”的设计空间",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Factorial Designs with Two Treatment Factors",
+     "zh": "两处理因子的因子设计"
+    },
+    {
+     "ref": "5.2",
+     "title": "Another Factorial Design Example - Cloth Dyes",
+     "zh": "另一个因子设计例子：织物染料"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "随机实验",
+   "refs": [
+    "A:4",
+    "A:4.4",
+    "A:4.6",
+    "A:4.7",
+    "B:1.2"
+   ],
+   "note": "A 讲随机化为什么能去掉偏差、随机化推断怎么做；B 的 1.2 给的是实验设计三原则（随机化、重复、区组）的教科书版本。"
+  },
+  {
+   "topic": "混杂",
+   "refs": [
+    "A:3.2",
+    "A:5.2",
+    "A:5.3",
+    "B:4.1"
+   ]
+  },
+  {
+   "topic": "潜在结果",
+   "refs": [
+    "A:4.2",
+    "A:4.3",
+    "A:4.5"
+   ]
+  },
+  {
+   "topic": "因果图",
+   "refs": [
+    "A:3",
+    "A:3.1",
+    "A:3.3"
+   ]
+  },
+  {
+   "topic": "识别与估计",
+   "refs": [
+    "A:5.3",
+    "A:5.5",
+    "A:5.6",
+    "A:5.8",
+    "A:5.9"
+   ]
+  }
+ ],
+ "omitted": "A 的第 1、2 章（导论、方法选择）、第 6–11 章（断点回归、工具变量、面板与双重差分、合成控制）属于具体的准实验设计，与节点“随机实验+因果图+潜在结果+识别估计”的核心关系较远，未收；第 5.10 节是国家支持性工作示范数据（NSW）的练习，未收。B 只取第 1、4、5 课，其余（单因子方差分析、2^k 与部分因子、响应曲面、稳健参数、随机因子、裂区）未收。",
+ "notes": "A 的在线第二版仍在编写，站上没标出版年份，故未填 year。A 的节标题抄自各章“Table of contents”块（章节号 + 标题），第三级的小标题（如 4.7 下的 Step 1…Step 6）没有收。B 与 A 的 4/5 章在“随机化”上有重叠，但一个是设计原则、一个是识别框架，互补而非重复。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 36,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

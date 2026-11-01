@@ -1,0 +1,459 @@
+{
+ "id": "H.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CMPE 691 Reconfigurable System Design — Physical Design Flow and Timing Analysis",
+   "by": "Ryan Robucci, University of Maryland Baltimore County",
+   "year": 2025,
+   "url": "https://eclipse.umbc.edu/robucci/cmpeRSD/",
+   "toc_urls": [
+    "https://eclipse.umbc.edu/robucci/cmpeRSD/lectures/Physical_Design_Flow_and_Timing_Analysis/Physical_Design_Flow_and_Timing_Analysis.html"
+   ],
+   "why": "节点简介里的“设计自动化、综合、布局布线、等价性/时序验证”在这份大学讲义的编号小节里逐条拆开：EDA 工具分工、自动化物理设计、综合与映射、打包、布局布线、静态/动态时序分析、时序验证与逻辑验证的分工。节点现有的 CMPE 691 HDV（见 B）只覆盖验证一侧，且目录只到讲次和教材章号，所以把这一讲作为主来源。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "CMPE 691 Hardware Design Verification",
+   "by": "Ryan Robucci, University of Maryland Baltimore County",
+   "year": 2023,
+   "url": "https://eclipse.umbc.edu/robucci/cmpeHDV/",
+   "toc_urls": [
+    "https://eclipse.umbc.edu/robucci/cmpeHDV/"
+   ],
+   "why": "节点“现有英文学习资源”，补仿真（仿真器架构与运行、测试平台组织）、断言/SVA/覆盖率、约束随机、UVM 与形式验证这些验证侧主题。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "ECE 519 Formal Verification of Hardware (Spring 2021)",
+   "by": "University of Illinois Urbana-Champaign (Grainger College of Engineering)",
+   "year": 2021,
+   "url": "https://courses.grainger.illinois.edu/ECE519/sp2021/syllabus.html",
+   "toc_urls": [
+    "https://courses.grainger.illinois.edu/ECE519/sp2021/syllabus.html"
+   ],
+   "why": "补“等价性”：课程表把等价性检查单独拆成组合等价性、基于 BDD、基于 SAT、基于 FSM 的时序等价性四讲，另有属性检查、时序逻辑与模型检查，正好补上 A、B 都没有的等价性检查一条。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Physical Design Flow and Timing Analysis",
+   "zh": "物理设计流程与时序分析",
+   "items": [
+    {
+     "ref": "3",
+     "title": "Electronic Design Tools",
+     "zh": "电子设计工具"
+    },
+    {
+     "ref": "5",
+     "title": "Automated Physical Design",
+     "zh": "自动化物理设计"
+    },
+    {
+     "ref": "6",
+     "title": "Synthesis and Mapping",
+     "zh": "综合与映射"
+    },
+    {
+     "ref": "7",
+     "title": "Packing",
+     "zh": "打包"
+    },
+    {
+     "ref": "8",
+     "title": "Place and Route",
+     "zh": "布局布线"
+    },
+    {
+     "ref": "9",
+     "title": "Timing Verification vs Logical Verification",
+     "zh": "时序验证与逻辑验证的区别"
+    },
+    {
+     "ref": "10",
+     "title": "Timing Analysis and Post-Place-and-Route simulation",
+     "zh": "时序分析与布局布线后仿真"
+    },
+    {
+     "ref": "12",
+     "title": "Static Timing Analysis",
+     "zh": "静态时序分析"
+    },
+    {
+     "ref": "13",
+     "title": "Clock Period Constraint",
+     "zh": "时钟周期约束"
+    },
+    {
+     "ref": "18",
+     "title": "Setup and Hold Times",
+     "zh": "建立时间与保持时间"
+    },
+    {
+     "ref": "19",
+     "title": "Clock Skew",
+     "zh": "时钟偏斜"
+    },
+    {
+     "ref": "23",
+     "title": "Setup Timing Slack in Critical Path",
+     "zh": "关键路径的建立时间裕量"
+    },
+    {
+     "ref": "25",
+     "title": "Hold Time Analysis and Slack",
+     "zh": "保持时间分析与裕量"
+    },
+    {
+     "ref": "27",
+     "title": "Unconstrained Paths and CDC Clock Domain Crossing",
+     "zh": "未约束路径与跨时钟域"
+    },
+    {
+     "ref": "28",
+     "title": "Clock Domain Crossing (CDC) Signals",
+     "zh": "跨时钟域（CDC）信号"
+    },
+    {
+     "ref": "31",
+     "title": "Multicycle Paths",
+     "zh": "多周期路径"
+    },
+    {
+     "ref": "32",
+     "title": "False Paths",
+     "zh": "伪路径"
+    },
+    {
+     "ref": "34",
+     "title": "Dynamic Timing Analysis",
+     "zh": "动态时序分析"
+    },
+    {
+     "ref": "35",
+     "title": "Dynamic Timing Analysis using Event-Driven Simulation",
+     "zh": "基于事件驱动仿真的动态时序分析"
+    },
+    {
+     "ref": "37",
+     "title": "Dynamic vs Static Timing Analysis; Functional vs Timing Verification",
+     "zh": "动态与静态时序分析；功能验证与时序验证"
+    },
+    {
+     "ref": "39",
+     "title": "FPGA vendors role in EDA",
+     "zh": "FPGA 厂商在 EDA 中的角色"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 0",
+   "title": "Ch1 Course introduction",
+   "zh": "第 1 章 课程介绍",
+   "items": [],
+   "fill": "验证流程总览"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 1",
+   "title": "CH2",
+   "zh": "第 2 章（验证编码）",
+   "items": [],
+   "fill": "验证编码"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 2",
+   "title": "CH3",
+   "zh": "第 3 章（仿真器架构与运行）",
+   "items": [],
+   "fill": "仿真（仿真器架构与运行）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 3",
+   "title": "CH4",
+   "zh": "第 4 章（测试平台组织与设计）",
+   "items": [],
+   "fill": "仿真（测试平台组织与设计）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 4",
+   "title": "SV Intro",
+   "zh": "SystemVerilog 入门",
+   "items": [],
+   "fill": "验证语言（SystemVerilog 面向对象）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 5",
+   "title": "CH5 Tests",
+   "zh": "第 5 章 测试",
+   "items": [],
+   "fill": "验证测试"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 6",
+   "title": "CH5 Assertions",
+   "zh": "第 5 章 断言",
+   "items": [],
+   "fill": "形式验证（断言）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 7",
+   "title": "CH5 SVA",
+   "zh": "第 5 章 SVA",
+   "items": [],
+   "fill": "形式验证（SVA）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 8",
+   "title": "CH5 Coverage",
+   "zh": "第 5 章 覆盖率",
+   "items": [],
+   "fill": "验证覆盖率"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 9",
+   "title": "Constrained Random Values",
+   "zh": "约束随机值生成",
+   "items": [],
+   "fill": "约束随机激励"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 10",
+   "title": "Cover Groups",
+   "zh": "覆盖组",
+   "items": [],
+   "fill": "覆盖率收集"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 11",
+   "title": "Timing Analysis",
+   "zh": "时序分析",
+   "items": [],
+   "fill": "时序验证"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 12",
+   "title": "UVM I",
+   "zh": "UVM（一）",
+   "items": [],
+   "fill": "验证方法学（UVM）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 13",
+   "title": "UVM II",
+   "zh": "UVM（二）",
+   "items": [],
+   "fill": "验证方法学（UVM）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 14",
+   "title": "UVM III",
+   "zh": "UVM（三）",
+   "items": [],
+   "fill": "验证方法学（UVM）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 15",
+   "title": "UVM TLM",
+   "zh": "UVM 事务级建模",
+   "items": [],
+   "fill": "验证平台通信（TLM）"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 16",
+   "title": "UVM RAL and RM",
+   "zh": "UVM 寄存器抽象层与寄存器模型",
+   "items": [],
+   "fill": "寄存器验证"
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 17",
+   "title": "Formal",
+   "zh": "形式验证",
+   "items": [],
+   "fill": "形式验证"
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 1",
+   "title": "Introduction to Hardware Verification",
+   "zh": "硬件验证导论",
+   "fill": "形式验证",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 2",
+   "title": "Equivalence Checking",
+   "zh": "等价性检查",
+   "fill": "等价性",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 3",
+   "title": "Combinational Equivalence Checking",
+   "zh": "组合等价性检查",
+   "fill": "等价性",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 4",
+   "title": "Binary Decision Diagrams (BDDs)",
+   "zh": "二元决策图（BDD）",
+   "fill": "等价性（判定数据结构）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 5",
+   "title": "Equivalence Checking Using BDDs",
+   "zh": "基于 BDD 的等价性检查",
+   "fill": "等价性",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 6",
+   "title": "SATisfiability solving",
+   "zh": "可满足性（SAT）求解",
+   "fill": "等价性（判定引擎）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 7",
+   "title": "Equivalence Checking Using SAT",
+   "zh": "基于 SAT 的等价性检查",
+   "fill": "等价性",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 8",
+   "title": "Sequential Equivalence Using FSMs",
+   "zh": "基于 FSM 的时序等价性",
+   "fill": "等价性",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 12",
+   "title": "Sequential Equivalence",
+   "zh": "时序等价性",
+   "fill": "等价性",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 13",
+   "title": "Introduction to property/assertion checking",
+   "zh": "属性与断言检查导论",
+   "fill": "形式验证（属性检查）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 14",
+   "title": "Temporal Logics, Specification and Properties",
+   "zh": "时序逻辑、规约与属性",
+   "fill": "形式验证（时序逻辑）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Lecture 17",
+   "title": "Model checking",
+   "zh": "模型检查",
+   "fill": "形式验证（模型检查）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "设计自动化",
+   "refs": [
+    "A:3",
+    "A:5",
+    "A:39"
+   ]
+  },
+  {
+   "topic": "仿真",
+   "refs": [
+    "A:10",
+    "A:34",
+    "A:35",
+    "B:Lecture 2",
+    "B:Lecture 3"
+   ]
+  },
+  {
+   "topic": "形式验证",
+   "refs": [
+    "B:Lecture 17",
+    "B:Lecture 6",
+    "B:Lecture 7",
+    "C:Lecture 13",
+    "C:Lecture 14",
+    "C:Lecture 17"
+   ]
+  },
+  {
+   "topic": "综合",
+   "refs": [
+    "A:6"
+   ]
+  },
+  {
+   "topic": "布局布线",
+   "refs": [
+    "A:7",
+    "A:8"
+   ]
+  },
+  {
+   "topic": "等价性",
+   "refs": [
+    "C:Lecture 2",
+    "C:Lecture 3",
+    "C:Lecture 5",
+    "C:Lecture 7",
+    "C:Lecture 8",
+    "C:Lecture 12"
+   ]
+  }
+ ],
+ "omitted": "A 那一讲里 1. References、2. Objectives、22. Interactive、40. Additional Materials 是导航与材料索引，未收；4. ASIC vs FGPA Design 是选型对比、11/14-17/20-22/24/26/29-33/36/38 是时钟树与 skew 的细分支，与节点“设计自动化+验证”主线重复度高，未收。B 只收验证方法学讲次，作业与阅读材料列表未收。",
+ "notes": "B 的目录只有讲次（Lecture 0–17）加教材章号（CH2、CH3、CH4、CH5 …），页面正文没有更细的小节，也没有章标题，所以 CH2/CH3/CH4 只能照抄章号并在 zh 里注明对应的主题（这些主题写在同一行链接地址的路径名里，不是正文标题）；讲 0–17 的逐讲页面另有课程口令保护，无法读到小节。C 是伊利诺伊 ECE 519 的课程表，讲次标题取 LECTURE/TOPIC 两列原文，同一主题在 L8/L9 与 L12 重复出现（原文如此）时只保留首次与独立的 L12；Post silicon validation、Analog verification、Project proposal discussion 等未收。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 52,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

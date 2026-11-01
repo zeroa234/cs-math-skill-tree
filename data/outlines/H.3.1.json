@@ -1,0 +1,418 @@
+{
+ "id": "H.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Embedded Systems - Shape The World",
+   "by": "Jonathan Valvano and Ramesh Yerraballi, University of Texas at Austin",
+   "year": 2015,
+   "url": "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+   "toc_urls": [
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C2_FundamentalConcepts.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C5_IntroductionToC.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C6_MicrocontrollerPorts.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C7_DesignDevelopment.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C8_SwitchLED.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C9_ArrayFunctionalDebugging.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C10_FiniteStateMachines.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C11_SerialInterface.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C12_Interrupts.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C13_DACSound.htm",
+    "https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C14_ADCdataAcquisition.htm"
+   ],
+   "why": "节点“现有英文学习资源”就是这本书（UT Austin 作者主页上的免费在线教材，CC BY-NC-ND）。它从裸机 C 编程讲到 GPIO、SysTick 定时器、中断、串口/ADC/DAC 等片上外设，并把调试（LED 监视、逻辑分析仪、功能调试）作为贯穿全书的工程技能，正好覆盖本节点的 GPIO、定时器、中断、外设、裸机程序、调试；目录页给到章，各章页面给到小节。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Fundamental Concepts",
+   "zh": "基本概念",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Binary number systems",
+     "zh": "二进制数制"
+    },
+    {
+     "ref": "2.2",
+     "title": "Embedded Systems",
+     "zh": "嵌入式系统"
+    },
+    {
+     "ref": "2.3",
+     "title": "Introduction to Computers",
+     "zh": "计算机组成导论"
+    },
+    {
+     "ref": "2.4",
+     "title": "I/O Ports",
+     "zh": "I/O 端口"
+    },
+    {
+     "ref": "2.5",
+     "title": "CPU Registers",
+     "zh": "CPU 寄存器"
+    },
+    {
+     "ref": "2.7",
+     "title": "Address Space",
+     "zh": "地址空间"
+    },
+    {
+     "ref": "2.8",
+     "title": "Software Development Process",
+     "zh": "软件开发流程"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Introduction to C",
+   "zh": "C 语言入门",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Structure and Organization of C",
+     "zh": "C 程序的结构与组织"
+    },
+    {
+     "ref": "5.3",
+     "title": "Variables and Expressions",
+     "zh": "变量与表达式"
+    },
+    {
+     "ref": "5.4",
+     "title": "Functions",
+     "zh": "函数"
+    },
+    {
+     "ref": "5.5",
+     "title": "Conditional branching and loops",
+     "zh": "条件分支与循环"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Microcontroller Ports",
+   "zh": "微控制器端口（GPIO）",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Stellaris LM4F120 and Tiva TM4C123 LaunchPad I/O pins",
+     "zh": "LaunchPad 的 I/O 引脚"
+    },
+    {
+     "ref": "6.2",
+     "title": "Basic Concepts of Input and Output Ports",
+     "zh": "输入输出端口的基本概念"
+    },
+    {
+     "ref": "6.3",
+     "title": "I/O Programming and the Direction Register",
+     "zh": "I/O 编程与方向寄存器"
+    },
+    {
+     "ref": "6.4",
+     "title": "Debugging monitor using an LED",
+     "zh": "用 LED 做调试监视"
+    },
+    {
+     "ref": "6.5",
+     "title": "Hardware debugging tools",
+     "zh": "硬件调试工具"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Design and Development Process",
+   "zh": "设计与开发流程",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Product Life Cycle",
+     "zh": "产品生命周期"
+    },
+    {
+     "ref": "7.2",
+     "title": "Successive Refinement",
+     "zh": "逐步细化"
+    },
+    {
+     "ref": "7.3",
+     "title": "Quality Design",
+     "zh": "高质量设计"
+    },
+    {
+     "ref": "7.6",
+     "title": "Functional debugging",
+     "zh": "功能调试"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Switches and LEDs",
+   "zh": "开关与 LED",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Breadboard",
+     "zh": "面包板"
+    },
+    {
+     "ref": "8.2",
+     "title": "Switch Interfaces",
+     "zh": "开关接口"
+    },
+    {
+     "ref": "8.3",
+     "title": "LED Interfaces",
+     "zh": "LED 接口"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Arrays and Functional Debugging",
+   "zh": "数组与功能调试",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Debugging Theory",
+     "zh": "调试理论"
+    },
+    {
+     "ref": "9.2",
+     "title": "SysTick Timer",
+     "zh": "SysTick 定时器"
+    },
+    {
+     "ref": "9.5",
+     "title": "Functional debugging",
+     "zh": "功能调试方法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Finite State Machines",
+   "zh": "有限状态机",
+   "items": [
+    {
+     "ref": "10.2",
+     "title": "Accurate Time Delays using SysTick",
+     "zh": "用 SysTick 实现精确定时"
+    },
+    {
+     "ref": "10.4",
+     "title": "Finite State Machines with Indexed Structures",
+     "zh": "用索引结构实现有限状态机"
+    },
+    {
+     "ref": "10.5",
+     "title": "Stepper motors",
+     "zh": "步进电机"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "UART - The Serial Interface",
+   "zh": "串行接口 UART",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "I/O Synchronization",
+     "zh": "I/O 同步"
+    },
+    {
+     "ref": "11.2",
+     "title": "Universal Asynchronous Receiver Transmitter (UART)",
+     "zh": "通用异步收发器（UART）"
+    },
+    {
+     "ref": "11.4",
+     "title": "Distributed Systems",
+     "zh": "分布式系统"
+    },
+    {
+     "ref": "11.5",
+     "title": "Interfacing the Nokia 5110 Using a Synchronous Serial Port",
+     "zh": "用同步串口驱动 Nokia 5110 液晶"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Interrupts",
+   "zh": "中断",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Interrupt Concepts",
+     "zh": "中断的基本概念"
+    },
+    {
+     "ref": "12.2",
+     "title": "Interthread Communication and Synchronization",
+     "zh": "线程间通信与同步"
+    },
+    {
+     "ref": "12.3",
+     "title": "NVIC on the ARM Cortex-M Processor",
+     "zh": "Cortex-M 的嵌套向量中断控制器（NVIC）"
+    },
+    {
+     "ref": "12.4",
+     "title": "Edge-triggered Interrupts",
+     "zh": "边沿触发中断"
+    },
+    {
+     "ref": "12.5",
+     "title": "SysTick Periodic Interrupts",
+     "zh": "SysTick 周期中断"
+    },
+    {
+     "ref": "12.6",
+     "title": "DC Motor Interface with PWM",
+     "zh": "直流电机的 PWM 接口"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "DAC and Sound",
+   "zh": "数模转换与声音",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Approximating continuous signals in the digital domain",
+     "zh": "在数字域中逼近连续信号"
+    },
+    {
+     "ref": "13.2",
+     "title": "Digital to Analog Conversion",
+     "zh": "数模转换"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "ADC and Data Acquisition",
+   "zh": "模数转换与数据采集",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "Data Acquisition and Control Systems",
+     "zh": "数据采集与控制系统"
+    },
+    {
+     "ref": "14.2",
+     "title": "The Analog to Digital Converter",
+     "zh": "模数转换器"
+    },
+    {
+     "ref": "14.3",
+     "title": "Details of the ADC on the TM4C123",
+     "zh": "TM4C123 上 ADC 的具体细节"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "GPIO",
+   "refs": [
+    "A:6",
+    "A:6.2",
+    "A:6.3",
+    "A:2.4",
+    "A:8.2",
+    "A:8.3"
+   ]
+  },
+  {
+   "topic": "定时器",
+   "refs": [
+    "A:9.2",
+    "A:12.5",
+    "A:10.2"
+   ]
+  },
+  {
+   "topic": "中断",
+   "refs": [
+    "A:12",
+    "A:12.1",
+    "A:12.3",
+    "A:12.4",
+    "A:12.5"
+   ]
+  },
+  {
+   "topic": "外设",
+   "refs": [
+    "A:11.2",
+    "A:11.5",
+    "A:13.2",
+    "A:14.2",
+    "A:14.3",
+    "A:12.6"
+   ]
+  },
+  {
+   "topic": "裸机程序",
+   "refs": [
+    "A:2.3",
+    "A:2.5",
+    "A:2.7",
+    "A:2.8",
+    "A:5.2",
+    "A:5.4"
+   ]
+  },
+  {
+   "topic": "调试",
+   "refs": [
+    "A:9.1",
+    "A:9.5",
+    "A:7.6",
+    "A:6.4",
+    "A:6.5"
+   ]
+  },
+  {
+   "topic": "资源限制",
+   "refs": [
+    "A:2.2",
+    "A:7.1",
+    "A:7.3"
+   ],
+   "note": "这本书没有专门一章讲资源限制（RAM/Flash 容量、功耗预算、成本），只在 2.2 嵌入式系统与 7.1/7.3 的需求与约束、质量设计里正面提到；若要看完整的资源受限设计方法，需另找《Making Embedded Systems》一类的书。"
+  }
+ ],
+ "omitted": "第 1 章（Introduction，课程介绍与学习目标）、第 3 章（Electronics）、第 4 章（Digital Logic）、第 15 章（Systems Approach to Game Design）、第 16 章（The Internet of Things）与各章小测、附录、索引都未收：前四章是前置电路/数字逻辑与课程说明，第 15 章是综合游戏项目，第 16 章属物联网节点（H.4.3），小测与附录不是知识目录。各章内的汇编语法（2.6）、scanf 键盘输入（5.6）、C++（14.6）等与节点无关的小节也没收。",
+ "notes": "目录来自书的目录页（章级）+ 各相关章的章内小节标题（h2 级），已逐条核对页面正文。第 11 章标题按目录页写作“UART - The Serial Interface”（章内标题为“Chapter 11: Serial Interfacing”）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 55,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,357 @@
+{
+ "id": "M.6.2.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "An Introduction to Bayesian Thinking",
+   "by": "Merlise Clyde, Mine Çetinkaya-Rundel, Colin Rundel, David Banks, Christine Chai, Lizzy Huang",
+   "year": 2022,
+   "url": "https://statswithr.github.io/book/",
+   "toc_urls": [
+    "https://statswithr.github.io/book/"
+   ],
+   "why": "节点“现有英文学习资源”本身：杜克大学 Statistics with R 专项的配套开放教材，目录从先验/似然/后验讲起，经共轭族、蒙特卡洛与 MCMC、贝叶斯回归，到 BIC、模型不确定性与 BMA，正对节点的四个知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Bayes Rules! An Introduction to Applied Bayesian Modeling",
+   "by": "Alicia A. Johnson, Miles Q. Ott, Mine Dogucu",
+   "year": 2022,
+   "url": "https://www.bayesrulesbook.com/",
+   "toc_urls": [
+    "https://www.bayesrulesbook.com/"
+   ],
+   "why": "补层级模型：A 只讲多参数的共轭模型，没有分层/多水平模型的章节，B 的第四部分专讲 complete pooling、no pooling、partial pooling 与收缩。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "The Basics of Bayesian Statistics",
+   "zh": "贝叶斯统计基础",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Bayes’ Rule",
+     "zh": "贝叶斯法则"
+    },
+    {
+     "ref": "1.2",
+     "title": "Inference for a Proportion",
+     "zh": "比例的推断"
+    },
+    {
+     "ref": "1.3",
+     "title": "Frequentist vs. Bayesian Inference",
+     "zh": "频率派与贝叶斯推断"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Bayesian Inference",
+   "zh": "贝叶斯推断",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Continuous Variables and Eliciting Probability Distributions",
+     "zh": "连续变量与先验分布的启发式设定"
+    },
+    {
+     "ref": "2.2",
+     "title": "Three Conjugate Families",
+     "zh": "三类共轭族"
+    },
+    {
+     "ref": "2.3",
+     "title": "Credible Intervals and Predictive Inference",
+     "zh": "可信区间与预测推断"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Losses and Decision Making",
+   "zh": "损失与决策",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Bayesian Decision Making",
+     "zh": "贝叶斯决策"
+    },
+    {
+     "ref": "3.2",
+     "title": "Loss Functions",
+     "zh": "损失函数"
+    },
+    {
+     "ref": "3.3",
+     "title": "Working with Loss Functions",
+     "zh": "损失函数的用法"
+    },
+    {
+     "ref": "3.4",
+     "title": "Minimizing Expected Loss for Hypothesis Testing",
+     "zh": "假设检验中的期望损失最小化"
+    },
+    {
+     "ref": "3.5",
+     "title": "Posterior Probabilities of Hypotheses and Bayes Factors",
+     "zh": "假设的后验概率与贝叶斯因子"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Inference and Decision-Making with Multiple Parameters",
+   "zh": "多参数推断与决策",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "The Normal-Gamma Conjugate Family",
+     "zh": "正态-伽马共轭族"
+    },
+    {
+     "ref": "4.2",
+     "title": "Monte Carlo Inference",
+     "zh": "蒙特卡洛推断"
+    },
+    {
+     "ref": "4.3",
+     "title": "Predictive Distributions",
+     "zh": "预测分布"
+    },
+    {
+     "ref": "4.4",
+     "title": "Reference Priors",
+     "zh": "参考先验"
+    },
+    {
+     "ref": "4.5",
+     "title": "Mixtures of Conjugate Priors",
+     "zh": "共轭先验的混合"
+    },
+    {
+     "ref": "4.6",
+     "title": "Markov Chain Monte Carlo (MCMC)",
+     "zh": "马尔可夫链蒙特卡洛（MCMC）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Hypothesis Testing with Normal Populations",
+   "zh": "正态总体的假设检验",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Bayes Factors for Testing a Normal Mean: variance known",
+     "zh": "正态均值的贝叶斯因子：方差已知"
+    },
+    {
+     "ref": "5.2",
+     "title": "Comparing Two Paired Means using Bayes Factors",
+     "zh": "用贝叶斯因子比较配对均值"
+    },
+    {
+     "ref": "5.3",
+     "title": "Comparing Independent Means: Hypothesis Testing",
+     "zh": "独立均值的比较：假设检验"
+    },
+    {
+     "ref": "5.4",
+     "title": "Inference after Testing",
+     "zh": "检验之后的推断"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Introduction to Bayesian Regression",
+   "zh": "贝叶斯回归导论",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Bayesian Simple Linear Regression",
+     "zh": "贝叶斯简单线性回归"
+    },
+    {
+     "ref": "6.2",
+     "title": "Checking Outliers",
+     "zh": "离群点检查"
+    },
+    {
+     "ref": "6.3",
+     "title": "Bayesian Multiple Linear Regression",
+     "zh": "贝叶斯多元线性回归"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Bayesian Model Choice",
+   "zh": "贝叶斯模型选择",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Bayesian Information Criterion (BIC)",
+     "zh": "贝叶斯信息准则（BIC）"
+    },
+    {
+     "ref": "7.2",
+     "title": "Bayesian Model Uncertainty",
+     "zh": "贝叶斯模型不确定性"
+    },
+    {
+     "ref": "7.3",
+     "title": "Bayesian Model Averaging",
+     "zh": "贝叶斯模型平均"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Stochastic Explorations Using MCMC",
+   "zh": "用 MCMC 做随机探索",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Stochastic Exploration",
+     "zh": "随机探索"
+    },
+    {
+     "ref": "8.2",
+     "title": "Other Priors for Bayesian Model Uncertainty",
+     "zh": "模型不确定性的其他先验"
+    },
+    {
+     "ref": "8.3",
+     "title": "R Demo on BAS Package",
+     "zh": "BAS 包的 R 演示"
+    },
+    {
+     "ref": "8.4",
+     "title": "Decision Making Under Model Uncertainty",
+     "zh": "模型不确定性下的决策"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "15",
+   "title": "Hierarchical Models are Exciting",
+   "zh": "层级模型",
+   "fill": "补层级（分层/多水平）模型：完全合并、完全不合并与部分合并",
+   "items": [
+    {
+     "ref": "15.1",
+     "title": "Complete pooling",
+     "zh": "完全合并"
+    },
+    {
+     "ref": "15.2",
+     "title": "No pooling",
+     "zh": "完全不合并"
+    },
+    {
+     "ref": "15.3",
+     "title": "Hierarchical data",
+     "zh": "层级数据"
+    },
+    {
+     "ref": "15.4",
+     "title": "Partial pooling with hierarchical models",
+     "zh": "层级模型中的部分合并"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "16",
+   "title": "(Normal) Hierarchical Models without Predictors",
+   "zh": "无预测变量的（正态）层级模型",
+   "fill": "补层级模型的后验计算与收缩效应（先验如何把组内估计拉向总体）",
+   "items": [
+    {
+     "ref": "16.3",
+     "title": "Building the hierarchical model",
+     "zh": "建立层级模型"
+    },
+    {
+     "ref": "16.3.3",
+     "title": "Within- vs between-group variability",
+     "zh": "组内与组间变异"
+    },
+    {
+     "ref": "16.4",
+     "title": "Posterior analysis",
+     "zh": "后验分析"
+    },
+    {
+     "ref": "16.6",
+     "title": "Shrinkage & the bias-variance trade-off",
+     "zh": "收缩与偏差-方差权衡"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "先验/似然/后验",
+   "refs": [
+    "A:1",
+    "A:1.1",
+    "A:2.1",
+    "A:2.2",
+    "A:2.3"
+   ]
+  },
+  {
+   "topic": "层级模型",
+   "refs": [
+    "B:15",
+    "B:15.4",
+    "B:16.3",
+    "B:16.6"
+   ],
+   "note": "A 没有分层模型章节，这一项完全靠补充分支。"
+  },
+  {
+   "topic": "后验计算",
+   "refs": [
+    "A:4.2",
+    "A:4.6",
+    "A:8.1",
+    "A:8.3"
+   ]
+  },
+  {
+   "topic": "模型比较",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:7.1",
+    "A:7.2",
+    "A:7.3"
+   ]
+  }
+ ],
+ "omitted": "A 各章的 Exercises 与 Summary 小节（1.4、6.4、7.4、8.5 等）是习题与小结，未收；A 的 6–8 章已整章收，其中的贝叶斯回归与 M.6.2.2 有重叠但角度是贝叶斯。B 只收第 15、16 章的层级模型部分，B 的回归、分类、朴素贝叶斯等章（9–14、17–19）与节点无关，未收。",
+ "notes": "A 的目录页把全书章节和三级小节都列在一页上；为了不让叶子数超过上限，本导览图只抄到“节”（章 → 节），三级小节（如 4.1.3 Marginal Distribution for μ: Student t、6.1.5 Marginal Posterior Distribution of β）留在原书里按需展开。节点简介里的“层级模型”是 A 的缺口，用 B 的第四部分补。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 49,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

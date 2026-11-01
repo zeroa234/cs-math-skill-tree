@@ -1,0 +1,207 @@
+{
+ "id": "X.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Biomedical Informatics: Computer Applications in Health Care and Biomedicine",
+   "by": "Edward H. Shortliffe, James J. Cimino (eds.)",
+   "year": 2021,
+   "url": "https://link.springer.com/book/10.1007/978-3-030-58721-5",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-030-58721-5",
+    "https://link.springer.com/book/10.1007/978-3-030-58721-5?page=2"
+   ],
+   "why": "生物医学信息学的标准教科书（第 5 版，Springer 出版），章目正好分成临床数据、医疗信息系统、临床决策支持、评价四块，与节点简介一一对应。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "HST.951J Medical Decision Support",
+   "by": "MIT OpenCourseWare (Isaac Kohane, Lucila Ohno-Machado, Peter Szolovits, Staal Vinterbo)",
+   "year": 2003,
+   "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/pages/syllabus/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/pages/calendar/"
+   ],
+   "why": "补决策支持与模型评价的细粒度（主来源只有章级）：贝叶斯网络、分类树、预测模型评价两讲，正是节点里“决策支持和评价”要落到的具体方法。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Biomedical Informatics: The Science and the Pragmatics",
+   "zh": "生物医学信息学：科学与实践",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Biomedical Data: Their Acquisition, Storage, and Use",
+   "zh": "生物医学数据：获取、存储与使用",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Biomedical Decision Making: Probabilistic Clinical Reasoning",
+   "zh": "生物医学决策：概率临床推理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Standards in Biomedical Informatics",
+   "zh": "生物医学信息学中的标准",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Human-Computer Interaction, Usability, and Workflow",
+   "zh": "人机交互、可用性与工作流",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Evaluation of Biomedical and Health Information Resources",
+   "zh": "生物医学与健康信息资源的评价",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Electronic Health Records",
+   "zh": "电子健康记录",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Health Information Infrastructure",
+   "zh": "健康信息基础设施",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Management of Information in Health Care Organizations",
+   "zh": "医疗机构中的信息管理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Clinical Decision-Support Systems",
+   "zh": "临床决策支持系统",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Medical Decision Support",
+   "zh": "医疗决策支持",
+   "fill": "补“决策支持和评价”的方法层：主来源只有章名，这里给出推理（贝叶斯网络）、分类建模与预测模型评价的逐讲主题。",
+   "items": [
+    {
+     "ref": "Lecture 1",
+     "title": "Introduction to Medical Decision Support",
+     "zh": "医疗决策支持导论"
+    },
+    {
+     "ref": "Lecture 2",
+     "title": "Simple Probabilistic Reasoning",
+     "zh": "简单概率推理"
+    },
+    {
+     "ref": "Lecture 5",
+     "title": "Bayesian Networks - Part 1: Representation & Reasoning",
+     "zh": "贝叶斯网络（一）：表示与推理"
+    },
+    {
+     "ref": "Lecture 6",
+     "title": "Bayesian Networks - Part 2: Learning From Data",
+     "zh": "贝叶斯网络（二）：从数据学习"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "Classification Trees & CART",
+     "zh": "分类树与 CART"
+    },
+    {
+     "ref": "Lecture 13",
+     "title": "Evaluation of Predictive Models - Part 1",
+     "zh": "预测模型的评价（一）"
+    },
+    {
+     "ref": "Lecture 14",
+     "title": "Evaluation of Predictive Models - Part 2",
+     "zh": "预测模型的评价（二）"
+    },
+    {
+     "ref": "Lecture 19",
+     "title": "Applied Informatics in Cardiology",
+     "zh": "心脏病学中的应用信息学"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "临床数据",
+   "refs": [
+    "A:#2",
+    "A:#7",
+    "A:#3"
+   ],
+   "note": "数据的获取/存储/使用、EHR 里的临床数据、以及从数据到概率临床推理。"
+  },
+  {
+   "topic": "医疗信息系统",
+   "refs": [
+    "A:#6",
+    "A:#7",
+    "A:#8",
+    "A:#9",
+    "A:#4",
+    "A:#5"
+   ],
+   "note": "EHR、健康信息基础设施、机构信息管理三章讲系统本身，标准一章讲互操作，HCI 一章讲系统落地时的可用性与工作流。"
+  },
+  {
+   "topic": "决策支持",
+   "refs": [
+    "A:#10",
+    "A:#3",
+    "B:Lecture 5",
+    "B:Lecture 6",
+    "B:Lecture 10"
+   ],
+   "note": "CDSS 一章给系统与知识表示，概率临床推理一章给决策分析（决策树、效用、敏感性分析），B 补贝叶斯网络与分类树的具体建模。"
+  },
+  {
+   "topic": "评价",
+   "refs": [
+    "A:#6",
+    "B:Lecture 13",
+    "B:Lecture 14"
+   ],
+   "note": "A 的 Evaluation 章给研究设计与评价框架，B 的两讲给预测模型的判别度、校准与验证方法。"
+  },
+  {
+   "topic": "医学与临床流程",
+   "refs": [],
+   "note": "节点声明这是外部前置（医学与临床流程），主来源只把它当作背景，没有专门章节介绍临床流程本身；A 的 HCI/工作流章和 B 的心脏病学应用讲只在系统侧涉及流程。"
+  }
+ ],
+ "omitted": "收的是与临床数据、信息系统、决策支持、评价对应的章。未收：Cognitive Informatics、Software Engineering for Health Care and Biomedicine、Natural Language Processing for Health-Related Texts、Bioinformatics、Biomedical Imaging Informatics、Personal Health Informatics、Ethics（偏专项与伦理）、Information Retrieval（检索与 CDSS 的知识来源重合）、Population and Public Health Informatics、mHealth and Applications、Telemedicine and Telehealth、Patient Monitoring Systems、Imaging Systems in Radiology、Digital Technology in Health Science Education、Translational Bioinformatics、Clinical Research Informatics、Precision Medicine and Informatics、Health Information Technology Policy、The Future of Informatics in Biomedicine 以及两处 Front/Back Matter（各为其他应用方向、政策展望或索引附录）。B 里未收第 3、4、7、8、9、11、15、16、17、18、20 讲（模糊集、logistic 回归、无监督学习、神经网络、优化复杂度、复习课与课堂报告），与四个知识点关系较弱。",
+ "notes": "Springer 目录页不印章号，故 ref 一律留空，coverage 用 A:#n 指分支序号（#1 起，按本文件 outline 里 A 分支的顺序）。A 的目录分两页（第 1、2 页），两条 toc_url 都读过。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 19,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

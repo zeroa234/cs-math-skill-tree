@@ -1,0 +1,476 @@
+{
+ "id": "A.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models, 3rd edition",
+   "by": "Daniel Jurafsky, James H. Martin",
+   "year": 2026,
+   "url": "https://web.stanford.edu/~jurafsky/slp3/",
+   "toc_urls": [
+    "https://web.stanford.edu/~jurafsky/slp3/",
+    "https://web.stanford.edu/~jurafsky/slp3/2.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/3.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/5.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/7.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/11.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/18.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/19.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/20.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/21.pdf"
+   ],
+   "why": "节点“现有英文学习资源”就是这本教材（作者在斯坦福主页免费公开第三版草稿，2026-08-19 版）；这里按节点简介挑出文本表示（2、5 章）、语言建模（3、7 章）、结构预测（18 章序列标注、19 章短语结构句法、20 章依存句法）、信息抽取（21 章）、检索与评测（11 章，及 3.2/3.3、18.6、19.8、20.4 各类评测小节）相关章节，逐节抄录。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Words and Tokens",
+   "zh": "词与词元",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Words",
+     "zh": "词"
+    },
+    {
+     "ref": "2.2",
+     "title": "Morphemes: Parts of Words",
+     "zh": "语素：词的组成部分"
+    },
+    {
+     "ref": "2.3",
+     "title": "Unicode",
+     "zh": "Unicode 编码"
+    },
+    {
+     "ref": "2.4",
+     "title": "Subword Tokenization: Byte-Pair Encoding",
+     "zh": "子词切分：字节对编码"
+    },
+    {
+     "ref": "2.5",
+     "title": "Corpora",
+     "zh": "语料库"
+    },
+    {
+     "ref": "2.6",
+     "title": "Regular Expressions",
+     "zh": "正则表达式"
+    },
+    {
+     "ref": "2.7",
+     "title": "Simple Unix Tools for Word Tokenization",
+     "zh": "简易 Unix 分词工具"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "N-gram Language Models",
+   "zh": "N 元语言模型",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "N-Grams",
+     "zh": "N 元语法"
+    },
+    {
+     "ref": "3.2",
+     "title": "Evaluating Language Models: Training and Test Sets",
+     "zh": "语言模型评测：训练集与测试集"
+    },
+    {
+     "ref": "3.3",
+     "title": "Evaluating Language Models: Perplexity",
+     "zh": "语言模型评测：困惑度"
+    },
+    {
+     "ref": "3.4",
+     "title": "Sampling sentences from a language model",
+     "zh": "从语言模型中采样句子"
+    },
+    {
+     "ref": "3.5",
+     "title": "Generalizing vs. overfitting the training set",
+     "zh": "泛化与过拟合训练集"
+    },
+    {
+     "ref": "3.6",
+     "title": "Smoothing, Interpolation, and Backoff",
+     "zh": "平滑、插值与回退"
+    },
+    {
+     "ref": "3.7",
+     "title": "Advanced: Perplexity's Relation to Entropy",
+     "zh": "进阶：困惑度与熵的关系"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Embeddings",
+   "zh": "词嵌入",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Lexical Semantics",
+     "zh": "词汇语义学"
+    },
+    {
+     "ref": "5.2",
+     "title": "Vector Semantics: The Intuition",
+     "zh": "向量语义：直觉"
+    },
+    {
+     "ref": "5.3",
+     "title": "Simple count-based embeddings",
+     "zh": "简单的计数式嵌入"
+    },
+    {
+     "ref": "5.4",
+     "title": "Cosine for Measuring Similarity",
+     "zh": "用余弦度量相似度"
+    },
+    {
+     "ref": "5.5",
+     "title": "Word2vec",
+     "zh": "Word2vec"
+    },
+    {
+     "ref": "5.6",
+     "title": "Visualizing Embeddings",
+     "zh": "嵌入的可视化"
+    },
+    {
+     "ref": "5.7",
+     "title": "Semantic properties of embeddings",
+     "zh": "嵌入的语义性质"
+    },
+    {
+     "ref": "5.8",
+     "title": "Bias and Embeddings",
+     "zh": "偏差与嵌入"
+    },
+    {
+     "ref": "5.9",
+     "title": "Evaluating Vector Models",
+     "zh": "向量模型的评测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Transformers and Pretraining",
+   "zh": "Transformer 与预训练",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Attention",
+     "zh": "注意力"
+    },
+    {
+     "ref": "7.2",
+     "title": "Transformer Blocks",
+     "zh": "Transformer 块"
+    },
+    {
+     "ref": "7.3",
+     "title": "Parallelizing computation using a single matrix X",
+     "zh": "用单个矩阵 X 并行计算"
+    },
+    {
+     "ref": "7.4",
+     "title": "The input: embeddings for token and position",
+     "zh": "输入：词元嵌入与位置嵌入"
+    },
+    {
+     "ref": "7.5",
+     "title": "The Language Modeling Head",
+     "zh": "语言建模头"
+    },
+    {
+     "ref": "7.6",
+     "title": "Decoding",
+     "zh": "解码"
+    },
+    {
+     "ref": "7.7",
+     "title": "Pretraining Transformer LLMs",
+     "zh": "预训练 Transformer 大模型"
+    },
+    {
+     "ref": "7.8",
+     "title": "Current models and some numbers",
+     "zh": "现有模型及其规模数据"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Information Retrieval and RAG",
+   "zh": "信息检索与检索增强生成",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Information Retrieval",
+     "zh": "信息检索"
+    },
+    {
+     "ref": "11.2",
+     "title": "Evaluation of Information-Retrieval Systems",
+     "zh": "信息检索系统的评测"
+    },
+    {
+     "ref": "11.3",
+     "title": "Information Retrieval with Dense Vectors",
+     "zh": "基于稠密向量的信息检索"
+    },
+    {
+     "ref": "11.4",
+     "title": "Retrieval-Augmented Generation (RAG)",
+     "zh": "检索增强生成（RAG）"
+    },
+    {
+     "ref": "11.5",
+     "title": "Datasets",
+     "zh": "数据集"
+    },
+    {
+     "ref": "11.6",
+     "title": "Evaluating Question Answering",
+     "zh": "问答系统的评测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "18",
+   "title": "Sequence Labeling for Parts of Speech and Named Entities",
+   "zh": "词性标注与命名实体的序列标注",
+   "items": [
+    {
+     "ref": "18.1",
+     "title": "(Mostly) English Word Classes",
+     "zh": "英语词类"
+    },
+    {
+     "ref": "18.2",
+     "title": "Part-of-Speech Tagging",
+     "zh": "词性标注"
+    },
+    {
+     "ref": "18.3",
+     "title": "Named Entities and Named Entity Tagging",
+     "zh": "命名实体与命名实体标注"
+    },
+    {
+     "ref": "18.4",
+     "title": "HMM Part-of-Speech Tagging",
+     "zh": "基于 HMM 的词性标注"
+    },
+    {
+     "ref": "18.5",
+     "title": "Conditional Random Fields (CRFs)",
+     "zh": "条件随机场（CRF）"
+    },
+    {
+     "ref": "18.6",
+     "title": "Evaluation of Named Entity Recognition",
+     "zh": "命名实体识别的评测"
+    },
+    {
+     "ref": "18.7",
+     "title": "Further Details",
+     "zh": "补充细节"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "19",
+   "title": "Context-Free Grammars and Constituency Parsing",
+   "zh": "上下文无关文法与短语结构句法分析",
+   "items": [
+    {
+     "ref": "19.1",
+     "title": "Constituency",
+     "zh": "短语结构"
+    },
+    {
+     "ref": "19.2",
+     "title": "Context-Free Grammars",
+     "zh": "上下文无关文法"
+    },
+    {
+     "ref": "19.3",
+     "title": "Treebanks",
+     "zh": "树库"
+    },
+    {
+     "ref": "19.4",
+     "title": "Grammar Equivalence and Normal Form",
+     "zh": "文法等价与范式"
+    },
+    {
+     "ref": "19.5",
+     "title": "Ambiguity",
+     "zh": "歧义"
+    },
+    {
+     "ref": "19.6",
+     "title": "CKY Parsing: A Dynamic Programming Approach",
+     "zh": "CKY 分析：动态规划方法"
+    },
+    {
+     "ref": "19.7",
+     "title": "Span-Based Neural Constituency Parsing",
+     "zh": "基于跨度的神经短语结构分析"
+    },
+    {
+     "ref": "19.8",
+     "title": "Evaluating Parsers",
+     "zh": "句法分析器的评测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "20",
+   "title": "Dependency Parsing",
+   "zh": "依存句法分析",
+   "items": [
+    {
+     "ref": "20.1",
+     "title": "Dependency Relations",
+     "zh": "依存关系"
+    },
+    {
+     "ref": "20.2",
+     "title": "Transition-Based Dependency Parsing",
+     "zh": "基于转移的依存分析"
+    },
+    {
+     "ref": "20.3",
+     "title": "Graph-Based Dependency Parsing",
+     "zh": "基于图的依存分析"
+    },
+    {
+     "ref": "20.4",
+     "title": "Evaluation",
+     "zh": "评测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "21",
+   "title": "Information Extraction: Relations, Events, and Time",
+   "zh": "信息抽取：关系、事件与时间",
+   "items": [
+    {
+     "ref": "21.1",
+     "title": "Relation Extraction",
+     "zh": "关系抽取"
+    },
+    {
+     "ref": "21.2",
+     "title": "Relation Extraction Algorithms",
+     "zh": "关系抽取算法"
+    },
+    {
+     "ref": "21.3",
+     "title": "Extracting Events",
+     "zh": "事件抽取"
+    },
+    {
+     "ref": "21.8",
+     "title": "Template Filling",
+     "zh": "模板填充"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "文本表示",
+   "refs": [
+    "A:2",
+    "A:2.1",
+    "A:2.4",
+    "A:2.6",
+    "A:5",
+    "A:5.3",
+    "A:5.5"
+   ]
+  },
+  {
+   "topic": "语言建模",
+   "refs": [
+    "A:3",
+    "A:3.1",
+    "A:3.6",
+    "A:7",
+    "A:7.7",
+    "A:7.6"
+   ]
+  },
+  {
+   "topic": "结构预测",
+   "refs": [
+    "A:18",
+    "A:18.4",
+    "A:18.5",
+    "A:19.6",
+    "A:20.2",
+    "A:20.3"
+   ]
+  },
+  {
+   "topic": "信息抽取",
+   "refs": [
+    "A:21",
+    "A:21.1",
+    "A:21.2",
+    "A:21.3",
+    "A:21.8"
+   ]
+  },
+  {
+   "topic": "检索",
+   "refs": [
+    "A:11",
+    "A:11.1",
+    "A:11.3",
+    "A:11.4"
+   ]
+  },
+  {
+   "topic": "语言评测",
+   "refs": [
+    "A:3.2",
+    "A:3.3",
+    "A:11.2",
+    "A:11.6",
+    "A:18.6",
+    "A:19.8",
+    "A:20.4",
+    "A:5.9"
+   ]
+  }
+ ],
+ "omitted": "主来源全书还有第 1 章（导论）、第 4 章（逻辑回归与文本分类）、第 6 章（神经网络）、第 8 章（后训练）、第 9 章（掩码语言模型）、第 10 章（可解释性）、第 12 章（智能体）、第 13 章（机器翻译）、第 14 章（RNN 与 LSTM）、第 15–17 章（语音）、第 22–26 章（语义角色标注、情感词典、指代消解、篇章、会话）与附录，与本节点简介的知识点关系较远或属于相邻节点（语音、机器翻译、大模型训练）的内容，未收；第 2、3、5、7、18、19、20、21、11 章内的 Summary 小节也未收。",
+ "notes": "SLP3 是连载草稿，章号逐年变动（本版第 1 章为新写，原第 7 章已拆分为第 7 章 Transformers and Pretraining 与第 8 章 Post-training）。章节标题抄自 https://web.stanford.edu/~jurafsky/slp3/ 的章节目录页与各章 PDF 正文标题（每章 PDF 只在正文里列小节标题，没有单独的目录页）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 69,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

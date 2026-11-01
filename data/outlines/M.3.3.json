@@ -1,0 +1,262 @@
+{
+ "id": "M.3.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "notes",
+   "title": "Euclidean Tensor Analysis",
+   "by": "Amuthan A. Ramabathiran (IIT Bombay)",
+   "url": "https://amuthan.github.io/tensors-intro/",
+   "toc_urls": [
+    "https://amuthan.github.io/tensors-intro/tensor_algebra/",
+    "https://amuthan.github.io/tensors-intro/inner_product_spaces/",
+    "https://amuthan.github.io/tensors-intro/curvilinear_coordinates/"
+   ],
+   "why": "节点现有英文资源（IIT Bombay 课程讲义），有完整分节目录：内积空间 → 张量代数（多重线性函数、张量积、基表示、坐标变换、缩并）→ 曲线坐标，正好对上张量积、缩并、坐标变换三个知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "Tensor Decompositions and Applications",
+   "by": "Tamara G. Kolda, Brett W. Bader (SIAM Review 51(3), 2009)",
+   "year": 2009,
+   "url": "https://www.kolda.net/publication/TensorReview.pdf",
+   "toc_urls": [
+    "https://www.kolda.net/publication/TensorReview.pdf"
+   ],
+   "why": "补“张量分解”与“多维数组视角”：作者主页上的 SIAM Review 综述，CP/Tucker 分解的标准入门文献，分节完整；主来源是连续介质力学的欧氏张量分析，不讲分解。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "title": "Inner Product Spaces",
+   "zh": "内积空间",
+   "items": [
+    {
+     "title": "Basis of a vector space",
+     "zh": "向量空间的基"
+    },
+    {
+     "title": "Inner products and norms",
+     "zh": "内积与范数"
+    },
+    {
+     "title": "Gram-Schmidt orthogonalization",
+     "zh": "Gram-Schmidt 正交化"
+    },
+    {
+     "title": "Change of basis rules for vectors",
+     "zh": "向量的坐标变换规则"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "title": "Tensor Algebra",
+   "zh": "张量代数",
+   "items": [
+    {
+     "title": "Multilinear functions and tensors",
+     "zh": "多重线性函数与张量"
+    },
+    {
+     "title": "Tensor products",
+     "zh": "张量积"
+    },
+    {
+     "title": "Basis representation",
+     "zh": "张量的基表示"
+    },
+    {
+     "title": "Change of basis",
+     "zh": "坐标变换"
+    },
+    {
+     "title": "Contraction",
+     "zh": "缩并"
+    },
+    {
+     "title": "Generalized dot product of tensors",
+     "zh": "张量的广义点积"
+    },
+    {
+     "title": "Volume forms",
+     "zh": "体积形式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "title": "Curvilinear Coordinates",
+   "zh": "曲线坐标",
+   "items": [
+    {
+     "title": "Coordinate basis",
+     "zh": "坐标基"
+    },
+    {
+     "title": "Reciprocal coordinate basis",
+     "zh": "互反坐标基"
+    },
+    {
+     "title": "Metric tensor",
+     "zh": "度量张量"
+    },
+    {
+     "title": "Christoffel symbols",
+     "zh": "Christoffel 符号"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Notation and Preliminaries",
+   "zh": "记号与预备知识",
+   "fill": "补“多维数组视角”：把张量看成 N 维数组（纤维、切片、矩阵化展开、n-模积），这是主来源（欧氏张量分析）没有的第二个视角。",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Rank-One Tensors",
+     "zh": "秩一张量"
+    },
+    {
+     "ref": "2.2",
+     "title": "Symmetry and Tensors",
+     "zh": "对称性与张量"
+    },
+    {
+     "ref": "2.3",
+     "title": "Diagonal Tensors",
+     "zh": "对角张量"
+    },
+    {
+     "ref": "2.4",
+     "title": "Matricization: Transforming a Tensor into a Matrix",
+     "zh": "矩阵化：把张量展开成矩阵"
+    },
+    {
+     "ref": "2.5",
+     "title": "Tensor Multiplication: The n-Mode Product",
+     "zh": "张量乘法：n-模积"
+    },
+    {
+     "ref": "2.6",
+     "title": "Matrix Kronecker, Khatri–Rao, and Hadamard Products",
+     "zh": "矩阵的 Kronecker、Khatri–Rao 与 Hadamard 积"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Tensor Rank and the CANDECOMP/PARAFAC Decomposition",
+   "zh": "张量的秩与 CANDECOMP/PARAFAC 分解",
+   "fill": "补“张量分解”中的 CP 分解：秩一张量之和、秩的定义、唯一性与低秩逼近（对应 SVD 的高阶类比）。",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Tensor Rank",
+     "zh": "张量的秩"
+    },
+    {
+     "ref": "3.2",
+     "title": "Uniqueness",
+     "zh": "唯一性"
+    },
+    {
+     "ref": "3.3",
+     "title": "Low-Rank Approximations and the Border Rank",
+     "zh": "低秩逼近与边界秩"
+    },
+    {
+     "ref": "3.4",
+     "title": "Computing the CP Decomposition",
+     "zh": "CP 分解的计算"
+    },
+    {
+     "ref": "3.5",
+     "title": "Applications of CP",
+     "zh": "CP 分解的应用"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Compression and the Tucker Decomposition",
+   "zh": "压缩与 Tucker 分解",
+   "fill": "补“张量分解”中的 Tucker 分解：n-秩、核张量与因子矩阵，即高阶主成分分析（HOSVD）。",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "The n-Rank",
+     "zh": "n-秩"
+    },
+    {
+     "ref": "4.2",
+     "title": "Computing the Tucker Decomposition",
+     "zh": "Tucker 分解的计算"
+    },
+    {
+     "ref": "4.3",
+     "title": "Lack of Uniqueness and Methods to Overcome It",
+     "zh": "不唯一性及其克服方法"
+    },
+    {
+     "ref": "4.4",
+     "title": "Applications of Tucker",
+     "zh": "Tucker 分解的应用"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "张量积",
+   "refs": [
+    "A:#2"
+   ]
+  },
+  {
+   "topic": "缩并",
+   "refs": [
+    "A:#2"
+   ]
+  },
+  {
+   "topic": "坐标变换",
+   "refs": [
+    "A:#1",
+    "A:#2",
+    "A:#3"
+   ],
+   "note": "A:#1 给向量的坐标变换规则，A:#2 的第 4 节把规则推广到高阶张量，A:#3 把它放到一般曲线坐标（坐标基、互反基）里。"
+  },
+  {
+   "topic": "张量分解",
+   "refs": [
+    "B:3",
+    "B:4"
+   ],
+   "note": "B 的第 2 章（记号与预备：纤维、矩阵化、n-模积）是理解两章分解的前提。"
+  },
+  {
+   "topic": "AI 中的多维数组不等同于全部张量理论",
+   "refs": [
+    "B:2",
+    "A:#2"
+   ],
+   "note": "B 第 1 章开头明确区分“N 维数组”与物理/工程里的张量场；A 的欧氏张量分析给的是带坐标系变换律的张量，两者对照才能看清“深度学习里的 tensor 只是数组”。"
+  }
+ ],
+ "omitted": "A 中 Linear Maps - I、Linear Maps - II、Linearization of Nonlinear Maps、Euclidean Tensor Analysis 讲线性映射与非线性映射的线性化，属先修或后续连续介质内容；Appendix - Set Theory、Appendix - Matrices 为附录。B 中 1 Introduction 为综述引言，5 Other Decompositions（INDSCAL、PARAFAC2 等）、6 Software for Tensors、7 Discussion 与基础理论关系不大。",
+ "notes": "A 是 MkDocs 站点，没有章节编号（ref 留空），所以 coverage 对它只能引到分支级（A:#1 等）。若需要更细的代数侧讲法（张量代数作为商模、universal property），节点现有中文资源李文威《代数学方法》卷一（作者开放 PDF）里对应章可以补，本批未展开。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 36,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,645 @@
+{
+ "id": "S.4.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "MITRE ATT&CK® (Enterprise knowledge base, v20)",
+   "by": "The MITRE Corporation",
+   "year": 2026,
+   "url": "https://attack.mitre.org/",
+   "toc_urls": [
+    "https://attack.mitre.org/tactics/enterprise/",
+    "https://attack.mitre.org/resources/"
+   ],
+   "why": "节点现有英文资源就是它。两页合起来正好是本节点的骨架：Enterprise tactics 页给出 15 个战术（TA0043–TA0040）的编号与定义，是威胁行为目录的“章”；Get Started 页把 ATT&CK 的四种主流用法分成 Detections and Analytics、Threat Intelligence、Adversary Emulation and Red Teaming、Assessment and Engineering，对应检测工程、情报、攻防演练、评估度量四块，还专门讲了“不要拿覆盖率当 100% 目标”的度量误区。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Guide to Computer Security Log Management (NIST SP 800-92)",
+   "by": "Karen Kent, Murugiah Souppaya (NIST)",
+   "year": 2006,
+   "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf"
+   ],
+   "why": "补“日志关联”：ATT&CK 只说某个技术该看哪些数据源，不讲日志怎么采、怎么集中、怎么归一化和关联分析。SP 800-92 第 3 章讲集中式日志架构与 SIEM，第 5 章讲日志源配置、日志分析（先理解日志、再排优先级、系统级与基础设施级分析的差别）、事件响应与测试验证，正是日志关联的工程面。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "Guide to Test, Training, and Exercise Programs for IT Plans and Capabilities (NIST SP 800-84)",
+   "by": "Tim Grance, Tamara Nolan, Kristin Burke, Rich Dudley, Gregory White, Travis Good (NIST)",
+   "year": 2006,
+   "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-84.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-84.pdf"
+   ],
+   "why": "补“演练”：ATT&CK 的 Adversary Emulation 讲红队照着哪些技术打，但没有讲演练怎么立项、怎么定范围与目标、怎么组织与评估。SP 800-84 给出 TT&E 计划的四件事（政策、角色、日程、方法），以及桌面推演、功能性演练、测试三类活动的设计—实施—评估流程，可直接拿来设计紫队演练并转成检测改进。"
+  },
+  {
+   "key": "D",
+   "kind": "docs",
+   "title": "Measurement Guide for Information Security, Volume 1 — Identifying and Selecting Measures (NIST SP 800-55v1)",
+   "by": "Katherine Schroeder, Hung Trinh, Victoria Yan Pillitteri (NIST)",
+   "year": 2024,
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-55v1.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-55v1.pdf"
+   ],
+   "why": "补“度量与持续改进”：ATT&CK 的 Assessment and Engineering 只给评估思路，不讲度量怎么定义、怎么保证数据质量和不确定性、怎么按实现/有效性/效率/影响分类挑选指标。SP 800-55v1 的“测量考量”（文档化、报告、数据管理、数据质量、不确定性）与“选择并排序度量”（识别定义、开发验证、比较、排序）正是 MTTD/MTTR 一类运营指标要守的规矩。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "TA0043–TA0040",
+   "title": "Enterprise tactics",
+   "zh": "企业战术",
+   "items": [
+    {
+     "ref": "TA0043",
+     "title": "Reconnaissance",
+     "zh": "侦察"
+    },
+    {
+     "ref": "TA0042",
+     "title": "Resource Development",
+     "zh": "资源开发"
+    },
+    {
+     "ref": "TA0001",
+     "title": "Initial Access",
+     "zh": "初始访问"
+    },
+    {
+     "ref": "TA0002",
+     "title": "Execution",
+     "zh": "执行"
+    },
+    {
+     "ref": "TA0003",
+     "title": "Persistence",
+     "zh": "持久化"
+    },
+    {
+     "ref": "TA0004",
+     "title": "Privilege Escalation",
+     "zh": "权限提升"
+    },
+    {
+     "ref": "TA0005",
+     "title": "Stealth",
+     "zh": "隐蔽"
+    },
+    {
+     "ref": "TA0112",
+     "title": "Defense Impairment",
+     "zh": "防御削弱"
+    },
+    {
+     "ref": "TA0006",
+     "title": "Credential Access",
+     "zh": "凭据访问"
+    },
+    {
+     "ref": "TA0007",
+     "title": "Discovery",
+     "zh": "发现"
+    },
+    {
+     "ref": "TA0008",
+     "title": "Lateral Movement",
+     "zh": "横向移动"
+    },
+    {
+     "ref": "TA0009",
+     "title": "Collection",
+     "zh": "收集"
+    },
+    {
+     "ref": "TA0011",
+     "title": "Command and Control",
+     "zh": "命令与控制"
+    },
+    {
+     "ref": "TA0010",
+     "title": "Exfiltration",
+     "zh": "数据外流"
+    },
+    {
+     "ref": "TA0040",
+     "title": "Impact",
+     "zh": "影响"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Detections and Analytics",
+   "zh": "检测与分析",
+   "items": [
+    {
+     "title": "Getting Started with ATT&CK: Detection and Analytics Blog Post",
+     "zh": "ATT&CK 入门：检测与分析"
+    },
+    {
+     "title": "Finding Cyber Threats with ATT&CK-Based Analytics",
+     "zh": "用基于 ATT&CK 的分析方法发现网络威胁"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Threat Intelligence",
+   "zh": "威胁情报",
+   "items": [
+    {
+     "title": "Getting Started with ATT&CK: Threat Intelligence Blog Post",
+     "zh": "ATT&CK 入门：威胁情报"
+    },
+    {
+     "title": "ATT&CKing Your Adversaries Presentation",
+     "zh": "ATT&CK 你的对手"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Adversary Emulation and Red Teaming",
+   "zh": "对手模拟与红队",
+   "items": [
+    {
+     "title": "Getting Started with ATT&CK: Adversary Emulation and Red Teaming Blog Post",
+     "zh": "ATT&CK 入门：对手模拟与红队"
+    },
+    {
+     "title": "ATT&CK - Threat-based Purple Teaming with ATT&CK Continued Presentation",
+     "zh": "基于威胁的紫队演练"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Assessment and Engineering",
+   "zh": "评估与工程",
+   "items": [
+    {
+     "title": "Getting Started with ATT&CK: Assessments and Engineering Blog Post",
+     "zh": "ATT&CK 入门：评估与工程"
+    },
+    {
+     "title": "Lessons Learned Applying ATT&CK-Based SOC Assessments",
+     "zh": "基于 ATT&CK 做 SOC 评估的经验"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "How should I not use ATT&CK?",
+   "zh": "不该怎样使用 ATT&CK",
+   "items": [
+    {
+     "title": "Don’t try to achieve 100% coverage",
+     "zh": "不要追求 100% 覆盖"
+    },
+    {
+     "title": "Don’t shout “Bingo” when you have one technique",
+     "zh": "命中一个技术不等于通关"
+    },
+    {
+     "title": "Don’t limit yourself to the matrix",
+     "zh": "不要把自己限制在矩阵里"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Log Management Infrastructure",
+   "zh": "日志管理基础设施",
+   "fill": "日志关联：集中采集、归一化与关联分析的载体，ATT&CK 只列数据源，不讲日志基础设施",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Architecture",
+     "zh": "体系结构"
+    },
+    {
+     "ref": "3.2",
+     "title": "Functions",
+     "zh": "功能"
+    },
+    {
+     "ref": "3.3",
+     "title": "Syslog-Based Centralized Logging Software",
+     "zh": "基于 Syslog 的集中日志软件",
+     "items": [
+      {
+       "ref": "3.3.1",
+       "title": "Syslog Format",
+       "zh": "Syslog 格式"
+      },
+      {
+       "ref": "3.3.2",
+       "title": "Syslog Security",
+       "zh": "Syslog 安全"
+      }
+     ]
+    },
+    {
+     "ref": "3.4",
+     "title": "Security Information and Event Management Software",
+     "zh": "安全信息与事件管理（SIEM）软件"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Log Management Operational Processes",
+   "zh": "日志管理运行流程",
+   "fill": "日志关联：日志源怎么配、日志怎么分析排序、关联出事件后怎么响应与验证",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Configure Log Sources",
+     "zh": "配置日志源",
+     "items": [
+      {
+       "ref": "5.1.1",
+       "title": "Log Generation",
+       "zh": "日志生成"
+      },
+      {
+       "ref": "5.1.2",
+       "title": "Log Storage and Disposal",
+       "zh": "日志存储与处置"
+      },
+      {
+       "ref": "5.1.3",
+       "title": "Log Security",
+       "zh": "日志安全"
+      }
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "Analyze Log Data",
+     "zh": "分析日志数据",
+     "items": [
+      {
+       "ref": "5.2.1",
+       "title": "Gaining an Understanding of Logs",
+       "zh": "理解日志"
+      },
+      {
+       "ref": "5.2.2",
+       "title": "Prioritizing Log Entries",
+       "zh": "给日志条目排优先级"
+      },
+      {
+       "ref": "5.2.3",
+       "title": "Comparing System-Level and Infrastructure-Level Analysis",
+       "zh": "系统级分析与基础设施级分析的比较"
+      }
+     ]
+    },
+    {
+     "ref": "5.3",
+     "title": "Respond to Identified Events",
+     "zh": "响应已识别的事件"
+    },
+    {
+     "ref": "5.6",
+     "title": "Perform Testing and Validation",
+     "zh": "测试与验证"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "2",
+   "title": "Establishing a Test, Training, and Exercise Program",
+   "zh": "建立测试、培训与演练计划",
+   "fill": "演练：ATT&CK 只讲红队该怎么打，这里讲演练项目的政策、角色、日程与方法",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Develop Comprehensive TT&E Policy",
+     "zh": "制定完整的 TT&E 政策"
+    },
+    {
+     "ref": "2.2",
+     "title": "Identify TT&E Roles and Responsibilities",
+     "zh": "确定 TT&E 角色与职责"
+    },
+    {
+     "ref": "2.3",
+     "title": "Establish Overall TT&E Schedule",
+     "zh": "确定总体 TT&E 日程"
+    },
+    {
+     "ref": "2.4",
+     "title": "Document TT&E Event Methodology",
+     "zh": "记录 TT&E 活动方法"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "4",
+   "title": "Tabletop Exercises",
+   "zh": "桌面推演",
+   "fill": "演练：从议题、范围、目标、参与者到实施与评估的全流程",
+   "items": [
+    {
+     "ref": "4.2",
+     "title": "Design the Tabletop Exercise Event",
+     "zh": "设计桌面推演活动",
+     "items": [
+      {
+       "ref": "4.2.1",
+       "title": "Determine the Topics",
+       "zh": "确定议题"
+      },
+      {
+       "ref": "4.2.2",
+       "title": "Determine the Scope",
+       "zh": "确定范围"
+      },
+      {
+       "ref": "4.2.3",
+       "title": "Identify the Objectives",
+       "zh": "确定目标"
+      },
+      {
+       "ref": "4.2.4",
+       "title": "Identify the Participants",
+       "zh": "确定参与者"
+      }
+     ]
+    },
+    {
+     "ref": "4.4",
+     "title": "Conduct the Tabletop Exercise",
+     "zh": "实施桌面推演"
+    },
+    {
+     "ref": "4.5",
+     "title": "Evaluate the Tabletop Exercise",
+     "zh": "评估桌面推演"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "5",
+   "title": "Functional Exercises",
+   "zh": "功能性演练",
+   "fill": "演练：把推演升级成带真实系统与响应的演练，并用评估结果驱动改进",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Design the Functional Exercise Event",
+     "zh": "设计功能性演练活动",
+     "items": [
+      {
+       "ref": "5.2.1",
+       "title": "Determine the Topic",
+       "zh": "确定主题"
+      },
+      {
+       "ref": "5.2.2",
+       "title": "Determine the Scope",
+       "zh": "确定范围"
+      },
+      {
+       "ref": "5.2.3",
+       "title": "Identify the Objectives",
+       "zh": "确定目标"
+      },
+      {
+       "ref": "5.2.4",
+       "title": "Identify the Participants",
+       "zh": "确定参与者"
+      }
+     ]
+    },
+    {
+     "ref": "5.4",
+     "title": "Conduct the Functional Exercise",
+     "zh": "实施功能性演练"
+    },
+    {
+     "ref": "5.5",
+     "title": "Evaluate the Functional Exercise",
+     "zh": "评估功能性演练"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "6",
+   "title": "Tests",
+   "zh": "测试",
+   "fill": "演练：把技术检验（如检测规则能否触发）作为独立一类活动设计与评估",
+   "items": [
+    {
+     "ref": "6.2",
+     "title": "Design the Test Event",
+     "zh": "设计测试活动"
+    },
+    {
+     "ref": "6.4",
+     "title": "Conduct the Test",
+     "zh": "实施测试"
+    },
+    {
+     "ref": "6.5",
+     "title": "Evaluate the Test",
+     "zh": "评估测试"
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "3",
+   "title": "Measurement Considerations",
+   "zh": "度量考量",
+   "fill": "度量与持续改进：指标怎么记录、报告、管数据、控质量、算不确定性",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Organizational Measures Considerations",
+     "zh": "组织度量的考量",
+     "items": [
+      {
+       "ref": "3.1.1",
+       "title": "Measures Documentation",
+       "zh": "度量文档化"
+      },
+      {
+       "ref": "3.1.2",
+       "title": "Measurement Reporting",
+       "zh": "度量报告"
+      },
+      {
+       "ref": "3.1.3",
+       "title": "Data Management",
+       "zh": "数据管理"
+      },
+      {
+       "ref": "3.1.4",
+       "title": "Data Quality",
+       "zh": "数据质量"
+      },
+      {
+       "ref": "3.1.5",
+       "title": "Uncertainty and Errors",
+       "zh": "不确定性与误差"
+      }
+     ]
+    },
+    {
+     "ref": "3.2",
+     "title": "Characteristics of Measures",
+     "zh": "度量的特性"
+    },
+    {
+     "ref": "3.3",
+     "title": "Types of Measures",
+     "zh": "度量的类型",
+     "items": [
+      {
+       "ref": "3.3.1",
+       "title": "Implementation Measures",
+       "zh": "实施类度量"
+      },
+      {
+       "ref": "3.3.2",
+       "title": "Effectiveness Measures",
+       "zh": "有效性度量"
+      },
+      {
+       "ref": "3.3.3",
+       "title": "Efficiency Measures",
+       "zh": "效率度量"
+      },
+      {
+       "ref": "3.3.4",
+       "title": "Impact Measures",
+       "zh": "影响度量"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "4",
+   "title": "Selecting and Prioritizing Measures",
+   "zh": "选择与排序度量",
+   "fill": "度量与持续改进：从一堆候选 KPI 里识别、定义、验证、比较并排序",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Identification and Definition",
+     "zh": "识别与定义"
+    },
+    {
+     "ref": "4.2",
+     "title": "Developing, Testing, and Validating Measures",
+     "zh": "度量的开发、测试与验证",
+     "items": [
+      {
+       "ref": "4.2.1",
+       "title": "Comparing Measures and Assessment Results",
+       "zh": "比较度量与评估结果"
+      }
+     ]
+    },
+    {
+     "ref": "4.3",
+     "title": "Prioritizing Measures",
+     "zh": "度量的优先级排序",
+     "items": [
+      {
+       "ref": "4.3.1",
+       "title": "Likelihood and Impact Modeling",
+       "zh": "可能性与影响建模"
+      },
+      {
+       "ref": "4.3.2",
+       "title": "Weighing Scale",
+       "zh": "权重刻度"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "日志关联",
+   "refs": [
+    "B:5.2",
+    "B:5.2.1",
+    "B:5.2.3",
+    "B:3.4",
+    "B:5.1"
+   ]
+  },
+  {
+   "topic": "威胁情报",
+   "refs": [
+    "A:#3",
+    "A:#1"
+   ]
+  },
+  {
+   "topic": "检测工程",
+   "refs": [
+    "A:#2",
+    "A:#1",
+    "B:5.2.2",
+    "B:3.4"
+   ]
+  },
+  {
+   "topic": "演练",
+   "refs": [
+    "A:#4",
+    "C:2",
+    "C:4",
+    "C:5",
+    "C:6"
+   ]
+  },
+  {
+   "topic": "度量与持续改进",
+   "refs": [
+    "D:3",
+    "D:3.1",
+    "D:3.3",
+    "D:4",
+    "A:#5",
+    "A:#6"
+   ]
+  }
+ ],
+ "omitted": "A（ATT&CK）只收了战术目录、四种用法、以及“不要怎么用”三条；Matrices/Techniques/Mitigations/Detections/CTI 里成百上千条具体条目没有逐条抄（那是查表，不是导览）。B（SP 800-92）只收第 3 章基础设施与第 5 章运行流程，第 2 章日志基础与第 4 章规划偏管理，略过。C（SP 800-84）只收 TT&E 计划、桌面推演、功能性演练、测试四块，第 3 章培训偏员工培训。D（SP 800-55v1）只收第 3、4 章，第 1 章引言与第 2 章基础概念略过。",
+ "notes": "1) ATT&CK 的 tactics 页与 resources 页都是静态 HTML，fetch 可读；tactics 页 15 个战术的编号照抄（含 TA0005 Stealth 与 TA0112 Defense Impairment）。2) A 的四条用法分支（Detections and Analytics、Threat Intelligence、Adversary Emulation and Red Teaming、Assessment and Engineering）在页面上是 h3 小标题，没有编号，ref 留空，coverage 用 A:#N 指分支；它们下面的 blog/presentation 链接作为条目照抄，方便按图索骥。3) B/C/D 都是 NIST 官方 PDF，三份的目录页都能直接读到章→节。4) 节点入门层是 D2，ATT&CK 本身不是从零开始的 SOC 课程（资源页也这么说），导览图按“知识地图”用，配套阅读顺序建议先 B 再 A。5) 若以后要补“检测规则怎么写”的实操（Sigma/YARA 规则语法），可在下一轮加 Sigma 官方文档作为补充来源。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 95,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

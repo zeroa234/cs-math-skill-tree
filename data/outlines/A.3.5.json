@@ -1,0 +1,269 @@
+{
+ "id": "A.3.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS236: Deep Generative Models",
+   "by": "Stefano Ermon et al., Stanford University",
+   "year": 2023,
+   "url": "https://deepgenerativemodels.github.io/",
+   "toc_urls": [
+    "https://deepgenerativemodels.github.io/syllabus.html"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课，详细 syllabus 按周列出每讲的题目（不是只写 Week 1、Week 2）：autoregressive、maximum likelihood、VAE、normalizing flow、GAN、energy-based、score-based、generative-model evaluation、discrete latent variable、diffusion。正好覆盖本节点的自回归、潜变量、对抗、扩散与可靠评估。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "11-777 Multimodal Machine Learning",
+   "by": "Louis-Philippe Morency et al., Carnegie Mellon University",
+   "year": 2023,
+   "url": "https://multicomp.cs.cmu.edu/mmml-course/fall2023/schedule/",
+   "toc_urls": [
+    "https://multicomp.cs.cmu.edu/mmml-course/fall2023/schedule/"
+   ],
+   "why": "补“多模态生成”：A 只讲单模态（图像/文本）生成模型，没有跨模态生成。这是 CMU 多模态课的官方课表，9.1 Multimodal Generation 与 9.2 New Generation Models 两讲专门讲跨模态生成（翻译、摘要、创作，自回归语言模型，VAE/扩散），下面还列了每讲的小标题。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "Hugging Face LLM Course — Build Reasoning Models",
+   "by": "Hugging Face",
+   "year": 2025,
+   "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+   "toc_urls": [
+    "https://huggingface.co/learn/llm-course/chapter12/1"
+   ],
+   "why": "补“对齐”：A、B 都没有 RLHF/RL 后训练内容。这里取 Hugging Face 官方 LLM 课程第 12 单元（Build Reasoning Models）的目录：Reinforcement Learning on LLMs、DeepSeek R1 论文、DeepSeekMath 里的 GRPO、用 TRL 实现 GRPO 等，是当前公开课里对“用强化学习做后训练/对齐”讲得最具体的逐节目录。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Introduction",
+   "zh": "导论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Background",
+   "zh": "背景知识",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Autoregressive Models",
+   "zh": "自回归模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Maximum Likelihood Learning",
+   "zh": "最大似然学习",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "VAEs",
+   "zh": "变分自编码器（VAE）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Normalizing Flows",
+   "zh": "归一化流",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "GANs",
+   "zh": "生成对抗网络（GAN）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Energy Based Models",
+   "zh": "能量模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Score Based Models",
+   "zh": "得分模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Evaluation of Generative Models",
+   "zh": "生成模型的评估",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Score Based Diffusion Models",
+   "zh": "得分式扩散模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Discrete Latent Variable Models",
+   "zh": "离散潜变量模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Diffusion Models for Discrete Data",
+   "zh": "面向离散数据的扩散模型",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "9.1",
+   "title": "Multimodal Generation",
+   "zh": "多模态生成",
+   "fill": "多模态生成：跨模态的翻译、摘要与创作，以及生成模型与自回归语言模型在这类任务里的用法",
+   "items": [
+    {
+     "ref": "",
+     "title": "Translation, summarization, creation",
+     "zh": "翻译、摘要与创作"
+    },
+    {
+     "ref": "",
+     "title": "Generative models",
+     "zh": "生成模型"
+    },
+    {
+     "ref": "",
+     "title": "Auto-regressive language models",
+     "zh": "自回归语言模型"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "9.2",
+   "title": "New Generation Models",
+   "zh": "新一代生成模型",
+   "fill": "多模态生成的建模手段（VAE、扩散模型）与开放挑战",
+   "items": [
+    {
+     "ref": "",
+     "title": "Open generation challenges",
+     "zh": "开放生成问题的挑战"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "12",
+   "title": "Build Reasoning Models",
+   "zh": "构建推理模型",
+   "fill": "对齐：用强化学习（GRPO/RL 后训练）对齐语言模型的具体流程",
+   "items": [
+    {
+     "ref": "",
+     "title": "Reinforcement Learning on LLMs",
+     "zh": "在大型语言模型上做强化学习"
+    },
+    {
+     "ref": "",
+     "title": "The Aha Moment in the DeepSeek R1 Paper",
+     "zh": "DeepSeek R1 论文中的“顿悟时刻”"
+    },
+    {
+     "ref": "",
+     "title": "Advanced Understanding of GRPO in DeepSeekMath",
+     "zh": "深入理解 DeepSeekMath 中的 GRPO"
+    },
+    {
+     "ref": "",
+     "title": "Implementing GRPO in TRL",
+     "zh": "在 TRL 中实现 GRPO"
+    },
+    {
+     "ref": "",
+     "title": "Practical Exercise to Fine-tune a model with GRPO",
+     "zh": "用 GRPO 微调模型的实战练习"
+    },
+    {
+     "ref": "",
+     "title": "Practical Exercise with Unsloth",
+     "zh": "用 Unsloth 的实战练习"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "自回归",
+   "refs": [
+    "A:#3"
+   ]
+  },
+  {
+   "topic": "潜变量",
+   "refs": [
+    "A:#5",
+    "A:#6",
+    "A:#12"
+   ]
+  },
+  {
+   "topic": "对抗模型",
+   "refs": [
+    "A:#7"
+   ]
+  },
+  {
+   "topic": "扩散模型",
+   "refs": [
+    "A:#9",
+    "A:#11",
+    "A:#13"
+   ]
+  },
+  {
+   "topic": "多模态生成",
+   "refs": [
+    "B:9.1",
+    "B:9.2"
+   ]
+  },
+  {
+   "topic": "对齐",
+   "refs": [
+    "C:12"
+   ],
+   "note": "三份来源里只有 C（Hugging Face LLM 课程第 12 单元）讲后训练对齐，且目录层面只有“在 LLM 上做强化学习 / GRPO”这些条目；RLHF 三步（SFT→奖励模型→PPO）与 DPO 的具体小节，两份课程目录里都没有单独列出，需要另找资料。"
+  },
+  {
+   "topic": "可靠评估",
+   "refs": [
+    "A:#10"
+   ]
+  }
+ ],
+ "omitted": "A（CS236）只收了 syllabus 上与生成模型直接相关的 13 讲；同一页的课程作业（HW 1–3）、期中期末、项目提案与最终报告、Additional Reading 的综述列表未收。B（CMU 11-777）只取 9.1、9.2 两讲，其余讲（单模态/多模态表示、对齐与 grounding、多模态 transformer、交互、转导、协同学习、量化、客座讲）不属于本节点的生成式 AI 主题；两讲里 “Xixture of Guassians, VAE, diffusion models” 这条原页面有拼写错误，未抄。C（Hugging Face LLM 课程第 12 单元）的 Introduction、Coming soon... 与练习说明未收。",
+ "notes": "A 的 syllabus 是 2023 秋季版，课程主页同时挂着 notes 站（https://deepgenerativemodels.github.io/notes/）与往年版本；syllabus 页按周列每讲题目（有的周一次列两讲，如 “VAEs + Normalizing Flows”“Score Based Diffusion Models + Discrete Latent Variable Models”），这里按题目拆成 13 个分支，原文没有讲次编号，ref 留空。B 的课表页标题里写 “Lecture 9.1: Multimodal Generation”，分支配的 ref 即 9.1。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 26,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

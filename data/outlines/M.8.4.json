@@ -1,0 +1,268 @@
+{
+ "id": "M.8.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Monte Carlo Methods and Applications (CMU 21-387 / 15-327 / 15-627 / 15-860, Fall 2024)",
+   "by": "Keenan Crane, Gautam Iyer — Carnegie Mellon University",
+   "year": 2024,
+   "url": "https://gi1242.codeberg.page/cmu-math-cs-mcm/",
+   "toc_urls": [
+    "https://gi1242.codeberg.page/cmu-math-cs-mcm/",
+    "https://www.math.cmu.edu/~gautam/c/2024-387/notes/index.html"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课；课程页 Schedule 逐次（带日期、讲题与要点）列出抽样算法、蒙特卡洛积分与收敛、方差缩减 I/II（控制变量、分层、重要性抽样、拟蒙特卡洛）、马尔可夫链、MCMC/Metropolis-Hastings、模拟退火、Langevin 蒙特卡洛，配套讲义目录（Brief lecture notes）给出章节名，正好覆盖节点的抽样、方差缩减、重要性抽样、MCMC 与误差评估。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Bayesian Data Analysis, 3rd edition",
+   "by": "Andrew Gelman, John B. Carlin, Hal S. Stern, David B. Dunson, Aki Vehtari, Donald B. Rubin",
+   "year": 2013,
+   "url": "https://sites.stat.columbia.edu/gelman/book/",
+   "toc_urls": [
+    "https://sites.stat.columbia.edu/gelman/book/contents3.pdf"
+   ],
+   "why": "补“与贝叶斯统计交叉”：CMU 这门课不设贝叶斯推断的章节，BDA3 第 10–11 章（Advanced Computation 部分）把蒙特卡洛积分、拒绝抽样、重要性抽样、Gibbs 与 Metropolis-Hastings 放在贝叶斯后验推断的语境里讲，并有“需要多少抽样次数”“收敛诊断与有效样本量”两节，正对节点的误差评估与 D2 验收里的链混合监测。目录取自作者主页公开的 contents3.pdf。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Basic Sampling Algorithms",
+   "zh": "基本抽样算法",
+   "items": [
+    {
+     "ref": "",
+     "title": "Inversion and Rejection Sampling",
+     "zh": "逆变换抽样与拒绝抽样"
+    },
+    {
+     "ref": "",
+     "title": "Sample Generation",
+     "zh": "样本生成"
+    },
+    {
+     "ref": "",
+     "title": "Sample Generation II",
+     "zh": "样本生成（续）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Monte Carlo Integration",
+   "zh": "蒙特卡洛积分",
+   "items": [
+    {
+     "ref": "",
+     "title": "Basic Monte Carlo Integration",
+     "zh": "基本蒙特卡洛积分"
+    },
+    {
+     "ref": "",
+     "title": "Convergence of Monte Carlo Integration",
+     "zh": "蒙特卡洛积分的收敛性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Variance Reduction I",
+   "zh": "方差缩减（一）",
+   "items": [
+    {
+     "ref": "",
+     "title": "definition of efficiency, control variates, stratified sampling",
+     "zh": "效率的定义、控制变量法与分层抽样"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Variance Reduction II",
+   "zh": "方差缩减（二）",
+   "items": [
+    {
+     "ref": "",
+     "title": "importance sampling, quasi-Monte Carlo",
+     "zh": "重要性抽样与拟蒙特卡洛"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Markov Chain Monte Carlo (MCMC)",
+   "zh": "马尔可夫链蒙特卡洛（MCMC）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Markov Chains: Irreducibility, and Stationary Distributions",
+     "zh": "马尔可夫链：不可约性与平稳分布"
+    },
+    {
+     "ref": "",
+     "title": "Markov Chains: Aperiodicity, and TV convergence",
+     "zh": "马尔可夫链：非周期性与全变差收敛"
+    },
+    {
+     "ref": "",
+     "title": "Markov Chains: Convergence to the Stationary Distribution",
+     "zh": "马尔可夫链：收敛到平稳分布"
+    },
+    {
+     "ref": "",
+     "title": "Metropolis-Hastings",
+     "zh": "Metropolis-Hastings 算法"
+    },
+    {
+     "ref": "",
+     "title": "Metropolis-Hastings on continuous state space, convergence, burn-in",
+     "zh": "连续状态空间上的 Metropolis-Hastings：收敛与预热期"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Ergodicity and Mixing",
+   "zh": "遍历性与混合",
+   "items": [
+    {
+     "ref": "",
+     "title": "Markov Chains: Page Rank, Ergodicity and Mixing",
+     "zh": "马尔可夫链：PageRank、遍历性与混合"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Simulated Annealing and Tempering",
+   "zh": "模拟退火与回火",
+   "items": [
+    {
+     "ref": "",
+     "title": "Traps near local minima",
+     "zh": "局部极小附近的陷阱"
+    },
+    {
+     "ref": "",
+     "title": "Detailed Balance",
+     "zh": "细致平衡"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "10",
+   "title": "Introduction to Bayesian computation",
+   "zh": "贝叶斯计算导论",
+   "fill": "补“与贝叶斯统计交叉”：把蒙特卡洛积分、拒绝抽样与重要性抽样放回贝叶斯后验推断的语境，并给出“需要多少次模拟抽样”的误差估计。",
+   "items": [
+    {
+     "ref": "10.3",
+     "title": "Direct simulation and rejection sampling",
+     "zh": "直接模拟与拒绝抽样"
+    },
+    {
+     "ref": "10.4",
+     "title": "Importance sampling",
+     "zh": "重要性抽样"
+    },
+    {
+     "ref": "10.5",
+     "title": "How many simulation draws are needed?",
+     "zh": "需要多少次模拟抽样"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "11",
+   "title": "Basics of Markov chain simulation",
+   "zh": "马尔可夫链模拟基础",
+   "fill": "补“MCMC 在贝叶斯推断中的用法与诊断”：Gibbs 抽样、Metropolis-Hastings、收敛评估与有效样本量，对应 D2 验收的“监测链的混合”与 D4 的混合/效率问题。",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Gibbs sampler",
+     "zh": "Gibbs 抽样"
+    },
+    {
+     "ref": "11.2",
+     "title": "Metropolis and Metropolis-Hastings algorithms",
+     "zh": "Metropolis 与 Metropolis-Hastings 算法"
+    },
+    {
+     "ref": "11.4",
+     "title": "Inference and assessing convergence",
+     "zh": "推断与收敛评估"
+    },
+    {
+     "ref": "11.5",
+     "title": "Eﬀective number of simulation draws",
+     "zh": "有效模拟抽样次数"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "随机抽样",
+   "refs": [
+    "A:#1",
+    "B:10.3"
+   ],
+   "note": "A 第一组（Basic Sampling Algorithms）连讲逆变换、拒绝抽样与样本生成两讲；B 10.3 在贝叶斯计算语境里重讲直接模拟与拒绝抽样。"
+  },
+  {
+   "topic": "方差缩减",
+   "refs": [
+    "A:#3"
+   ],
+   "note": "A 的 Variance Reduction I：效率的定义、控制变量法、分层抽样；Variance Reduction II 接着讲重要性抽样与拟蒙特卡洛（见下一条）。"
+  },
+  {
+   "topic": "重要性抽样",
+   "refs": [
+    "A:#4",
+    "B:10.4"
+   ],
+   "note": "A 的 Variance Reduction II 与 B 的 10.4 Importance sampling 都专讲。"
+  },
+  {
+   "topic": "MCMC与误差评估",
+   "refs": [
+    "A:#2",
+    "A:#5",
+    "A:#6",
+    "B:11.4",
+    "B:11.5"
+   ],
+   "note": "A 第二组（基本蒙特卡洛积分 + 收敛性：样本方差、收敛速率、尾界）给误差估计的语言；A 第五组（马尔可夫链、Metropolis-Hastings、预热期）与第六组（遍历性、混合）给链的诊断；B 11.4–11.5 给贝叶斯语境下的收敛评估与有效样本量。"
+  },
+  {
+   "topic": "与贝叶斯统计交叉",
+   "refs": [
+    "B:10",
+    "B:11"
+   ],
+   "note": "CMU 这门课（A）目录里没有贝叶斯推断章节，故用 BDA3 第 10–11 章补：贝叶斯后验的模拟计算、Gibbs/MH、收敛诊断。B 的目录页第 10 章标题在 PDF 里字母间被拆开（1P r o b…），第 10、11 章及其节标题是正常可读的，所以补充分支取自这两章。"
+  }
+ ],
+ "omitted": "A 未收：Introduction / Introduction to Numerical Python / Numerics and Random Numbers（浮点、并行、随机数生成器的质量——与 M.8.1 重复）、Diffusion Models（生成模型应用）、Ordinary Differential Equations 与 Stochastic Differential Equations（SDE 数值积分，属 M.8.3）、Langevin Monte Carlo（MCMC 的高级变体，节点只要求 MCMC 与误差评估）、Adding lists of floating point numbers in Python（附注）。B 未收：第 1–9 章（贝叶斯模型、层次模型、模型检验、决策分析）与第 12 章之后（更高效的 MCMC 变体），只取与“计算/抽样”直接相关的两章。",
+ "notes": "A 的课程页是逐次课的讲题表而不是章节表，所以分支标题取自作者配套讲义目录（Brief lecture notes）里的章节名，子条目取自课程页的讲题/要点行；两页都在 toc_urls 里。A 的目录没有编号，故 ref 全部留空，coverage 用 A:#n 指分支序号。B 的 chapter 11 里 “Eﬀective” 原样含 ff 连字，已按正确拼写写成 Effective。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 31,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

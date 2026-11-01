@@ -1,0 +1,450 @@
+{
+ "id": "M.7.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Convex Optimization",
+   "by": "Stephen Boyd, Lieven Vandenberghe",
+   "year": 2004,
+   "url": "https://web.stanford.edu/~boyd/cvxbook/",
+   "toc_urls": [
+    "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf"
+   ],
+   "why": "节点现有英文资源 EE364a 的指定教材，作者主页按出版社授权整本开放；凸集、凸函数、对偶与 KKT、无约束最小化与内点法正是它的第 2、3、5、9、11 章。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Proximal Algorithms",
+   "by": "Neal Parikh, Stephen Boyd",
+   "year": 2014,
+   "url": "https://web.stanford.edu/~boyd/papers/prox_algs.html",
+   "toc_urls": [
+    "https://web.stanford.edu/~boyd/papers/pdf/prox_algs.pdf"
+   ],
+   "why": "补“近端方法”：Boyd 的凸优化教材正文没有近端算子与近端梯度法，这本作者主页公开的 Foundations and Trends 专著就是该主题的标准综述。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Convex sets",
+   "zh": "凸集",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Affine and convex sets",
+     "zh": "仿射集与凸集"
+    },
+    {
+     "ref": "2.2",
+     "title": "Some important examples",
+     "zh": "若干重要例子"
+    },
+    {
+     "ref": "2.3",
+     "title": "Operations that preserve convexity",
+     "zh": "保凸运算"
+    },
+    {
+     "ref": "2.4",
+     "title": "Generalized inequalities",
+     "zh": "广义不等式"
+    },
+    {
+     "ref": "2.5",
+     "title": "Separating and supporting hyperplanes",
+     "zh": "分离与支撑超平面"
+    },
+    {
+     "ref": "2.6",
+     "title": "Dual cones and generalized inequalities",
+     "zh": "对偶锥与广义不等式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Convex functions",
+   "zh": "凸函数",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Basic properties and examples",
+     "zh": "基本性质与例子"
+    },
+    {
+     "ref": "3.2",
+     "title": "Operations that preserve convexity",
+     "zh": "保凸运算"
+    },
+    {
+     "ref": "3.3",
+     "title": "The conjugate function",
+     "zh": "共轭函数"
+    },
+    {
+     "ref": "3.4",
+     "title": "Quasiconvex functions",
+     "zh": "拟凸函数"
+    },
+    {
+     "ref": "3.5",
+     "title": "Log-concave and log-convex functions",
+     "zh": "对数凹与对数凸函数"
+    },
+    {
+     "ref": "3.6",
+     "title": "Convexity with respect to generalized inequalities",
+     "zh": "关于广义不等式的凸性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Convex optimization problems",
+   "zh": "凸优化问题",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Optimization problems",
+     "zh": "优化问题"
+    },
+    {
+     "ref": "4.2",
+     "title": "Convex optimization",
+     "zh": "凸优化"
+    },
+    {
+     "ref": "4.3",
+     "title": "Linear optimization problems",
+     "zh": "线性优化问题"
+    },
+    {
+     "ref": "4.4",
+     "title": "Quadratic optimization problems",
+     "zh": "二次优化问题"
+    },
+    {
+     "ref": "4.5",
+     "title": "Geometric programming",
+     "zh": "几何规划"
+    },
+    {
+     "ref": "4.6",
+     "title": "Generalized inequality constraints",
+     "zh": "广义不等式约束"
+    },
+    {
+     "ref": "4.7",
+     "title": "Vector optimization",
+     "zh": "向量优化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Duality",
+   "zh": "对偶",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "The Lagrange dual function",
+     "zh": "Lagrange 对偶函数"
+    },
+    {
+     "ref": "5.2",
+     "title": "The Lagrange dual problem",
+     "zh": "Lagrange 对偶问题"
+    },
+    {
+     "ref": "5.3",
+     "title": "Geometric interpretation",
+     "zh": "几何解释"
+    },
+    {
+     "ref": "5.4",
+     "title": "Saddle-point interpretation",
+     "zh": "鞍点解释"
+    },
+    {
+     "ref": "5.5",
+     "title": "Optimality conditions",
+     "zh": "最优性条件"
+    },
+    {
+     "ref": "5.6",
+     "title": "Perturbation and sensitivity analysis",
+     "zh": "扰动与灵敏度分析"
+    },
+    {
+     "ref": "5.7",
+     "title": "Examples",
+     "zh": "例子"
+    },
+    {
+     "ref": "5.8",
+     "title": "Theorems of alternatives",
+     "zh": "择一定理"
+    },
+    {
+     "ref": "5.9",
+     "title": "Generalized inequalities",
+     "zh": "广义不等式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Unconstrained minimization",
+   "zh": "无约束最小化",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Unconstrained minimization problems",
+     "zh": "无约束最小化问题"
+    },
+    {
+     "ref": "9.2",
+     "title": "Descent methods",
+     "zh": "下降方法"
+    },
+    {
+     "ref": "9.3",
+     "title": "Gradient descent method",
+     "zh": "梯度下降法"
+    },
+    {
+     "ref": "9.4",
+     "title": "Steepest descent method",
+     "zh": "最速下降法"
+    },
+    {
+     "ref": "9.5",
+     "title": "Newton's method",
+     "zh": "Newton 法"
+    },
+    {
+     "ref": "9.6",
+     "title": "Self-concordance",
+     "zh": "自和谐性"
+    },
+    {
+     "ref": "9.7",
+     "title": "Implementation",
+     "zh": "实现"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Interior-point methods",
+   "zh": "内点法",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Inequality constrained minimization problems",
+     "zh": "不等式约束最小化问题"
+    },
+    {
+     "ref": "11.2",
+     "title": "Logarithmic barrier function and central path",
+     "zh": "对数障碍函数与中心路径"
+    },
+    {
+     "ref": "11.3",
+     "title": "The barrier method",
+     "zh": "障碍法"
+    },
+    {
+     "ref": "11.4",
+     "title": "Feasibility and phase I methods",
+     "zh": "可行性与第一阶段方法"
+    },
+    {
+     "ref": "11.5",
+     "title": "Complexity analysis via self-concordance",
+     "zh": "基于自和谐性的复杂度分析"
+    },
+    {
+     "ref": "11.6",
+     "title": "Problems with generalized inequalities",
+     "zh": "含广义不等式的问题"
+    },
+    {
+     "ref": "11.7",
+     "title": "Primal-dual interior-point methods",
+     "zh": "原-对偶内点法"
+    },
+    {
+     "ref": "11.8",
+     "title": "Implementation",
+     "zh": "实现"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "导论",
+   "fill": "近端方法（近端算子的定义与解释）",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Definition",
+     "zh": "定义"
+    },
+    {
+     "ref": "1.2",
+     "title": "Interpretations",
+     "zh": "解释"
+    },
+    {
+     "ref": "1.3",
+     "title": "Proximal algorithms",
+     "zh": "近端算法"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Proximal Algorithms",
+   "zh": "近端算法",
+   "fill": "近端方法（近端最小化、近端梯度、加速与 ADMM）",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Proximal minimization",
+     "zh": "近端最小化"
+    },
+    {
+     "ref": "4.2",
+     "title": "Proximal gradient method",
+     "zh": "近端梯度法"
+    },
+    {
+     "ref": "4.3",
+     "title": "Accelerated proximal gradient method",
+     "zh": "加速近端梯度法"
+    },
+    {
+     "ref": "4.4",
+     "title": "Alternating direction method of multipliers",
+     "zh": "交替方向乘子法（ADMM）"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "凸集",
+   "refs": [
+    "A:2",
+    "A:2.1",
+    "A:2.2",
+    "A:2.3"
+   ]
+  },
+  {
+   "topic": "凸函数",
+   "refs": [
+    "A:3",
+    "A:3.1",
+    "A:3.2"
+   ]
+  },
+  {
+   "topic": "对偶",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:5.2",
+    "A:5.3",
+    "A:5.4"
+   ]
+  },
+  {
+   "topic": "KKT条件",
+   "refs": [
+    "A:5.5",
+    "A:5.6",
+    "A:5.7"
+   ],
+   "note": "第 5.5 节 Optimality conditions 里给出 KKT 条件与互补松弛，5.6 讲扰动与灵敏度。"
+  },
+  {
+   "topic": "近端方法",
+   "refs": [
+    "B:1",
+    "B:1.1",
+    "B:4",
+    "B:4.1",
+    "B:4.2",
+    "B:4.3",
+    "B:4.4"
+   ]
+  },
+  {
+   "topic": "内点方法",
+   "refs": [
+    "A:11",
+    "A:11.2",
+    "A:11.3",
+    "A:11.7",
+    "A:11.8"
+   ]
+  },
+  {
+   "topic": "D2 验收：建立凸模型，选择求解器并检查约束残差",
+   "refs": [
+    "A:4.2",
+    "A:4.3",
+    "A:4.4",
+    "A:5.5",
+    "A:11.8"
+   ],
+   "note": "建模看 4.2–4.4（LP/QP 标准形），残差与可行性看 5.5 最优性条件与 11.4 可行性方法；求解器用法在 EE364a 网站的 CVXPY 教程。"
+  },
+  {
+   "topic": "D3 验收：推导对偶、KKT与收敛条件，解释失效假设",
+   "refs": [
+    "A:5.1",
+    "A:5.2",
+    "A:5.5",
+    "A:5.6",
+    "A:9.2",
+    "A:9.3",
+    "A:9.6"
+   ],
+   "note": "对偶与 KKT 在 5 章；收敛率在 9.2–9.3（与 9.6 自和谐性）；失效假设（Slater 条件、强对偶不成立）在 5.2 与 5.6。"
+  },
+  {
+   "topic": "D4 验收：分析新算法的复杂度、下界或更一般问题类",
+   "refs": [
+    "A:11.5",
+    "A:11.7",
+    "A:9.6",
+    "A:4.6",
+    "A:4.7"
+   ],
+   "note": "书里有内点法的复杂度上界（11.5、11.7）与更一般问题类（4.6 广义不等式约束、4.7 向量优化），但没有算法下界理论。"
+  }
+ ],
+ "omitted": "第 1 章 Introduction（优化问题分类，已由第 4 章覆盖概念）、第 6 章 Approximation and fitting、第 7 章 Statistical estimation、第 8 章 Geometric problems（都是应用，与节点的六个知识点无关）、第 10 章 Equality constrained minimization（等式约束 Newton 法属 9 章特例）、附录 A/B/C（数学背景、二次函数问题、数值线性代数背景）与各章习题、参考文献、索引未收。",
+ "notes": "EE364a 课程页没有逐讲主题表，所以按优先级改用其指定教材（作者主页整本开放）；EE364a 的讲义 PDF 就是这本书的章节讲义，可直接配合本导览图。“近端方法”由 B 补：A 书正文无近端算法。D4 的“下界”两个来源都未涉及。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 58,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

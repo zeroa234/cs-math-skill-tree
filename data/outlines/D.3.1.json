@@ -1,0 +1,471 @@
+{
+ "id": "D.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Python Data Science Handbook",
+   "by": "Jake VanderPlas",
+   "year": 2016,
+   "url": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+   "toc_urls": [
+    "https://jakevdp.github.io/PythonDataScienceHandbook/"
+   ],
+   "why": "节点现有英文资源本身：作者站点提供全书 HTML，五章目录（IPython、NumPy、Pandas、Matplotlib、scikit-learn）逐节列出，正好覆盖 Notebook 工作流、NumPy/Pandas 数据操作与清洗、探索性可视化和统计/机器学习包；CC-BY-NC-ND 合法公开。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Learning Data Science",
+   "by": "Sam Lau, Joey Gonzalez, Deb Nolan (O'Reilly / Berkeley Data 100)",
+   "year": 2023,
+   "url": "https://learningds.org/intro.html",
+   "toc_urls": [
+    "https://learningds.org/intro.html"
+   ],
+   "why": "补 PDSH 缺的两头：①“问题定义”与“工作流”——第 1 章数据科学生命周期、第 2 章 Questions and Data Scope（目标总体/访问框/样本、测量与精度）；②“数据获取”——第 8 章 Wrangling Files（数据源、文件格式、编码）、第 9 章 Quality Checks 与缺失值处理、第 14 章 Data Exchange（JSON/HTTP/REST 取数）。这是 Berkeley Data 100 的官方在线教材，面向刚入门的数据科学课程。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "IPython: Beyond Normal Python",
+   "zh": "IPython：超越普通 Python",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Help and Documentation in IPython",
+     "zh": "IPython 中的帮助与文档"
+    },
+    {
+     "ref": "1.3",
+     "title": "IPython Magic Commands",
+     "zh": "IPython 魔术命令"
+    },
+    {
+     "ref": "1.4",
+     "title": "Input and Output History",
+     "zh": "输入输出历史"
+    },
+    {
+     "ref": "1.6",
+     "title": "Errors and Debugging",
+     "zh": "错误与调试"
+    },
+    {
+     "ref": "1.7",
+     "title": "Profiling and Timing Code",
+     "zh": "代码性能分析与计时"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Introduction to NumPy",
+   "zh": "NumPy 导论",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Understanding Data Types in Python",
+     "zh": "理解 Python 中的数据类型"
+    },
+    {
+     "ref": "2.2",
+     "title": "The Basics of NumPy Arrays",
+     "zh": "NumPy 数组基础"
+    },
+    {
+     "ref": "2.3",
+     "title": "Computation on NumPy Arrays: Universal Functions",
+     "zh": "NumPy 数组计算：通用函数"
+    },
+    {
+     "ref": "2.4",
+     "title": "Aggregations: Min, Max, and Everything In Between",
+     "zh": "聚合：最小值、最大值及介于两者之间"
+    },
+    {
+     "ref": "2.5",
+     "title": "Computation on Arrays: Broadcasting",
+     "zh": "数组计算：广播"
+    },
+    {
+     "ref": "2.6",
+     "title": "Comparisons, Masks, and Boolean Logic",
+     "zh": "比较、掩码与布尔逻辑"
+    },
+    {
+     "ref": "2.7",
+     "title": "Fancy Indexing",
+     "zh": "花式索引"
+    },
+    {
+     "ref": "2.8",
+     "title": "Sorting Arrays",
+     "zh": "数组排序"
+    },
+    {
+     "ref": "2.9",
+     "title": "Structured Data: NumPy's Structured Arrays",
+     "zh": "结构化数据：NumPy 结构化数组"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Data Manipulation with Pandas",
+   "zh": "用 Pandas 做数据处理",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Introducing Pandas Objects",
+     "zh": "Pandas 对象介绍"
+    },
+    {
+     "ref": "3.2",
+     "title": "Data Indexing and Selection",
+     "zh": "数据索引与选取"
+    },
+    {
+     "ref": "3.3",
+     "title": "Operating on Data in Pandas",
+     "zh": "Pandas 中的数据运算"
+    },
+    {
+     "ref": "3.4",
+     "title": "Handling Missing Data",
+     "zh": "处理缺失数据"
+    },
+    {
+     "ref": "3.5",
+     "title": "Hierarchical Indexing",
+     "zh": "层次化索引"
+    },
+    {
+     "ref": "3.6",
+     "title": "Combining Datasets: Concat and Append",
+     "zh": "数据集合并：concat 与 append"
+    },
+    {
+     "ref": "3.7",
+     "title": "Combining Datasets: Merge and Join",
+     "zh": "数据集连接：merge 与 join"
+    },
+    {
+     "ref": "3.8",
+     "title": "Aggregation and Grouping",
+     "zh": "聚合与分组"
+    },
+    {
+     "ref": "3.9",
+     "title": "Pivot Tables",
+     "zh": "透视表"
+    },
+    {
+     "ref": "3.10",
+     "title": "Vectorized String Operations",
+     "zh": "向量化字符串操作"
+    },
+    {
+     "ref": "3.11",
+     "title": "Working with Time Series",
+     "zh": "时间序列处理"
+    },
+    {
+     "ref": "3.12",
+     "title": "High-Performance Pandas: eval() and query()",
+     "zh": "高性能 Pandas：eval() 与 query()"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Visualization with Matplotlib",
+   "zh": "用 Matplotlib 做可视化",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Simple Line Plots",
+     "zh": "简单折线图"
+    },
+    {
+     "ref": "4.2",
+     "title": "Simple Scatter Plots",
+     "zh": "简单散点图"
+    },
+    {
+     "ref": "4.3",
+     "title": "Visualizing Errors",
+     "zh": "误差可视化"
+    },
+    {
+     "ref": "4.4",
+     "title": "Density and Contour Plots",
+     "zh": "密度图与等高线图"
+    },
+    {
+     "ref": "4.5",
+     "title": "Histograms, Binnings, and Density",
+     "zh": "直方图、分箱与密度"
+    },
+    {
+     "ref": "4.6",
+     "title": "Customizing Plot Legends",
+     "zh": "自定义图例"
+    },
+    {
+     "ref": "4.8",
+     "title": "Multiple Subplots",
+     "zh": "多子图"
+    },
+    {
+     "ref": "4.14",
+     "title": "Visualization with Seaborn",
+     "zh": "用 Seaborn 可视化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Machine Learning",
+   "zh": "机器学习",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "What Is Machine Learning?",
+     "zh": "什么是机器学习"
+    },
+    {
+     "ref": "5.2",
+     "title": "Introducing Scikit-Learn",
+     "zh": "scikit-learn 介绍"
+    },
+    {
+     "ref": "5.3",
+     "title": "Hyperparameters and Model Validation",
+     "zh": "超参数与模型验证"
+    },
+    {
+     "ref": "5.4",
+     "title": "Feature Engineering",
+     "zh": "特征工程"
+    },
+    {
+     "ref": "5.9",
+     "title": "In Depth: Principal Component Analysis",
+     "zh": "深入：主成分分析"
+    },
+    {
+     "ref": "5.11",
+     "title": "In Depth: k-Means Clustering",
+     "zh": "深入：k 均值聚类"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "The Data Science Lifecycle",
+   "zh": "数据科学生命周期",
+   "fill": "补“问题定义”与“工作流”：PDSH 是工具箱式手册，没有一节讲一个数据科学项目从提问到交付的阶段划分",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "The Stages of the Lifecycle",
+     "zh": "生命周期的各个阶段"
+    },
+    {
+     "ref": "1.2",
+     "title": "Examples of the Lifecycle",
+     "zh": "生命周期实例"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Questions and Data Scope",
+   "zh": "问题与数据范围",
+   "fill": "补“问题定义”的可操作部分：把问题落成目标总体、访问框、样本，以及测量工具与精度",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Big Data and New Opportunities",
+     "zh": "大数据与新机会"
+    },
+    {
+     "ref": "2.2",
+     "title": "Target Population, Access Frame, and Sample",
+     "zh": "目标总体、访问框与样本"
+    },
+    {
+     "ref": "2.3",
+     "title": "Instruments and Protocols",
+     "zh": "测量工具与协议"
+    },
+    {
+     "ref": "2.5",
+     "title": "Accuracy",
+     "zh": "准确度"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "8",
+   "title": "Wrangling Files",
+   "zh": "文件层面的数据整理",
+   "fill": "补“数据获取”：PDSH 只在 Pandas 章末尾提了少量 I/O，这里讲数据源类型、文件格式、编码、文件大小与表的形状/粒度",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Data Source Examples",
+     "zh": "数据源示例"
+    },
+    {
+     "ref": "8.2",
+     "title": "File Formats",
+     "zh": "文件格式"
+    },
+    {
+     "ref": "8.3",
+     "title": "File Encoding",
+     "zh": "文件编码"
+    },
+    {
+     "ref": "8.4",
+     "title": "File Size",
+     "zh": "文件大小"
+    },
+    {
+     "ref": "8.6",
+     "title": "Table Shape and Granularity",
+     "zh": "表的形状与粒度"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "9",
+   "title": "Wrangling Dataframes",
+   "zh": "数据框层面的数据整理",
+   "fill": "补“清洗”：质量检查、缺失值与记录处理、时间戳变换、结构修改，PDSH 只讲了缺失值填充",
+   "items": [
+    {
+     "ref": "9.2",
+     "title": "Quality Checks",
+     "zh": "质量检查"
+    },
+    {
+     "ref": "9.3",
+     "title": "Missing Values and Records",
+     "zh": "缺失值与缺失记录"
+    },
+    {
+     "ref": "9.4",
+     "title": "Transformations and Timestamps",
+     "zh": "变换与时间戳"
+    },
+    {
+     "ref": "9.5",
+     "title": "Modifying Structure",
+     "zh": "修改数据结构"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "14",
+   "title": "Data Exchange",
+   "zh": "数据交换",
+   "fill": "补“数据获取”中的接口取数：JSON 数据、HTTP 请求、REST 接口（PDSH 完全没讲）",
+   "items": [
+    {
+     "ref": "14.2",
+     "title": "JSON Data",
+     "zh": "JSON 数据"
+    },
+    {
+     "ref": "14.3",
+     "title": "HTTP",
+     "zh": "HTTP"
+    },
+    {
+     "ref": "14.4",
+     "title": "REST",
+     "zh": "REST"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "问题定义",
+   "refs": [
+    "B:#1",
+    "B:#2"
+   ],
+   "note": "A 里没有；B 第 1 章讲生命周期的各阶段（提问→数据获取→探索→建模→结论），第 2 章把问题落成目标总体、访问框、样本、测量工具与精度。"
+  },
+  {
+   "topic": "数据获取",
+   "refs": [
+    "B:#3",
+    "B:#5"
+   ],
+   "note": "B 第 8 章（数据源示例、文件格式、编码、文件大小、表形状与粒度）与第 14 章（JSON、HTTP、REST）负责取数与读入；A 的 Pandas 章只有 concat/merge 这类拼接，不含取数。"
+  },
+  {
+   "topic": "清洗",
+   "refs": [
+    "A:#3",
+    "B:#4"
+   ],
+   "note": "A 第 3 章 Handling Missing Data（缺失值）、Data Indexing and Selection、Vectorized String Operations、Time Series 承担日常清洗操作；B 第 9 章补质量检查、缺失记录、时间戳变换与结构修改这类系统性检查。"
+  },
+  {
+   "topic": "探索分析",
+   "refs": [
+    "A:#3",
+    "A:#4"
+   ],
+   "note": "A 的聚合与分组、透视表、层次化索引用于分组统计；Matplotlib 章（折线、散点、误差、密度与等高线、直方图分箱、图例、多子图、Seaborn）用于看分布与关系。"
+  },
+  {
+   "topic": "Notebook",
+   "refs": [
+    "A:#1"
+   ],
+   "note": "A 第 1 章整章是 IPython/Jupyter：帮助与文档、魔术命令、输入输出历史、错误与调试、性能分析与计时。"
+  },
+  {
+   "topic": "统计包",
+   "refs": [
+    "A:#2",
+    "A:#5"
+   ],
+   "note": "A 的 NumPy 章（数据类型、数组基础、通用函数、聚合、广播、布尔掩码、花式索引、排序、结构化数组）是统计计算的底座，scikit-learn 章讲模型验证、特征工程、PCA、k-means 这类统计/机器学习包用法；scipy.stats、statsmodels 这两类纯统计包 PDSH 没有专章，推断统计部分放在节点 D.3.3。"
+  },
+  {
+   "topic": "工作流",
+   "refs": [
+    "A:#1",
+    "B:#1"
+   ],
+   "note": "A 第 1 章的魔术命令、输入输出历史、性能分析与计时是 notebook 内的操作流；项目级工作流（生命周期、每个阶段产出什么）只有 B 第 1 章讲；工程化的管道/调度/环境复现两本书都没有专章。"
+  }
+ ],
+ "omitted": "A（PDSH）第 1 章未收 Keyboard Shortcuts in the IPython Shell、IPython and Shell Commands、More IPython Resources；第 2 章整章收；第 3 章未收 Further Resources；第 4 章只收与探索分析直接相关的 8 节，未收 Text and Annotation、Customizing Ticks、Customizing Colorbars、Customizing Matplotlib: Configurations and Stylesheets、Three-Dimensional Plotting in Matplotlib、Geographic Data with Basemap、Further Resources；第 5 章只收与“统计包/模型验证”相关的 6 节，未收朴素贝叶斯、线性回归、SVM、决策树、流形学习、高斯混合、核密度估计、人脸检测流水线、Further Machine Learning Resources（这些属于机器学习节点的内容）。另有 Preface、Appendix: Figure Code 未收。B（Learning Data Science）未收第 3–7、10–13、15–21 章（模拟与实验设计、汇总统计建模、pandas/SQL、探索分析与可视化、线性模型、模型选择、推断理论、分类、案例研究），因为它们分别属于节点的其它兄弟（D.3.3 评估与实验、M.6.x 统计、A.x 机器学习），与“导论与工具箱”这条线关系较远。",
+ "notes": "A 的目录页每章只印章节号（1.～5.），节标题不印编号；item 的 ref（1.1、3.4 这类章.节号）按站点自身的小节页地址补（目录页各节链接名形如 03.04-missing-values.html，编号与节一一对应），节标题全部按目录页原文抄录。coverage 里用 A:#编号 指章。B 的目录页每行是“1.1. 标题”形式，ref 抄编号、title 抄编号后的标题原文。PDSH 的年份取首版（2016，O'Reilly），站点上的 HTML 版是全文；B 是 O'Reilly 2023 版全文（CC BY-NC-ND）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 68,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

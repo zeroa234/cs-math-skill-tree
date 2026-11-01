@@ -1,0 +1,644 @@
+{
+ "id": "X.2.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Geographic Data Science with Python",
+   "by": "Sergio J. Rey, Dani Arribas-Bel, Levi J. Wolf",
+   "year": 2023,
+   "url": "https://geographicdata.science/book/",
+   "toc_urls": [
+    "https://geographicdata.science/book/notebooks/03_spatial_data.html",
+    "https://geographicdata.science/book/notebooks/04_spatial_weights.html",
+    "https://geographicdata.science/book/notebooks/06_spatial_autocorrelation.html",
+    "https://geographicdata.science/book/notebooks/08_point_pattern_analysis.html",
+    "https://geographicdata.science/book/notebooks/11_regression.html"
+   ],
+   "why": "节点现有的免费开放教材（CRC 出版、作者公开全文），是地理数据科学的标准课程式教材；数据表示、空间权重、空间自相关、点模式、空间回归正好构成“地理空间计算”的主干。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Introduction to Climate Science",
+   "by": "Andreas Schmittner",
+   "year": 2019,
+   "url": "https://open.oregonstate.education/climatescience/",
+   "toc_urls": [
+    "https://open.oregonstate.education/climatescience/"
+   ],
+   "why": "补“地球系统”：俄勒冈州立大学开放教材，按气候系统—辐射与能量收支—碳循环—环流过程—模式组织的章节，正是气候计算所需的物理框架。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "Spatial Data Science",
+   "by": "Edzer Pebesma, Roger Bivand",
+   "year": 2025,
+   "url": "https://r-spatial.org/book/",
+   "toc_urls": [
+    "https://r-spatial.org/book/"
+   ],
+   "why": "补“时空”：主来源只讲空间，Pebesma & Bivand 的书用 data cube 组织时空数组，并有一章多变量与时空地统计。"
+  },
+  {
+   "key": "D",
+   "kind": "book",
+   "title": "Contemporary Digital Humanities",
+   "by": "Mark P. Wachowiak",
+   "year": 2021,
+   "url": "https://ecampusontario.pressbooks.pub/nudh1/",
+   "toc_urls": [
+    "https://ecampusontario.pressbooks.pub/nudh1/"
+   ],
+   "why": "补“文献与文化数据计算”：eCampusOntario 开放教材，单独一章列数字人文的计算技术（TEI 编码、数据挖掘、机器学习、数据库、OCR），并有远读一章。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Spatial Data",
+   "zh": "空间数据",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Fundamentals of geographic data structures",
+     "zh": "地理数据结构基础",
+     "items": [
+      {
+       "ref": "5.1.1",
+       "title": "Geographic tables",
+       "zh": "地理数据表"
+      },
+      {
+       "ref": "5.1.2",
+       "title": "Surfaces",
+       "zh": "曲面（栅格）"
+      },
+      {
+       "ref": "5.1.3",
+       "title": "Spatial graphs",
+       "zh": "空间图"
+      }
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "Hybrids",
+     "zh": "混合结构",
+     "items": [
+      {
+       "ref": "5.2.1",
+       "title": "Surfaces as tables",
+       "zh": "以表表示曲面"
+      },
+      {
+       "ref": "5.2.2",
+       "title": "Tables as surfaces",
+       "zh": "以曲面表示表"
+      },
+      {
+       "ref": "5.2.3",
+       "title": "Networks as graphs and tables",
+       "zh": "以图与表表示网络"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Spatial Weights",
+   "zh": "空间权重",
+   "items": [
+    {
+     "ref": "6.2",
+     "title": "Contiguity weights",
+     "zh": "邻接权重",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Spatial weights from real-world geographic tables",
+       "zh": "由真实地理数据表构造空间权重"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "Spatial weights from surfaces",
+       "zh": "由曲面构造空间权重"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Distance based weights",
+     "zh": "基于距离的权重",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "K-nearest neighbor weights",
+       "zh": "K 近邻权重"
+      },
+      {
+       "ref": "6.3.2",
+       "title": "Kernel weights",
+       "zh": "核权重"
+      },
+      {
+       "ref": "6.3.3",
+       "title": "Distance bands and hybrid Weights",
+       "zh": "距离带与混合权重"
+      },
+      {
+       "ref": "6.3.4",
+       "title": "Great circle distances",
+       "zh": "大圆距离"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Block weights",
+     "zh": "分块权重"
+    },
+    {
+     "ref": "6.5",
+     "title": "Set operations on weights",
+     "zh": "权重的集合运算",
+     "items": [
+      {
+       "ref": "6.5.1",
+       "title": "Editing/connecting disconnected observations",
+       "zh": "编辑或连接不连通的观测"
+      },
+      {
+       "ref": "6.5.2",
+       "title": "Using the union of matrices",
+       "zh": "使用矩阵的并"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Global Spatial Autocorrelation",
+   "zh": "全局空间自相关",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Understanding spatial autocorrelation",
+     "zh": "理解空间自相关"
+    },
+    {
+     "ref": "8.2",
+     "title": "An empirical illustration: the EU Referendum",
+     "zh": "实证示例：英国脱欧公投"
+    },
+    {
+     "ref": "8.3",
+     "title": "Global spatial autocorrelation",
+     "zh": "全局空间自相关",
+     "items": [
+      {
+       "ref": "8.3.1",
+       "title": "Spatial lag",
+       "zh": "空间滞后"
+      },
+      {
+       "ref": "8.3.2",
+       "title": "Binary case: join counts",
+       "zh": "二值情形：连接计数"
+      },
+      {
+       "ref": "8.3.3",
+       "title": "Continuous case: Moran Plot and Moran’s I",
+       "zh": "连续情形：Moran 散点图与 Moran's I"
+      },
+      {
+       "ref": "8.3.4",
+       "title": "Other global indices",
+       "zh": "其他全局指标"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Point Pattern Analysis",
+   "zh": "点模式分析",
+   "items": [
+    {
+     "ref": "10.3",
+     "title": "Visualizing point patterns",
+     "zh": "点模式可视化",
+     "items": [
+      {
+       "ref": "10.3.1",
+       "title": "Showing patterns as dots on a map",
+       "zh": "在地图上以点显示模式"
+      },
+      {
+       "ref": "10.3.2",
+       "title": "Showing density with hexbinning",
+       "zh": "用六边形分箱显示密度"
+      },
+      {
+       "ref": "10.3.3",
+       "title": "Another kind of density: kernel density estimation",
+       "zh": "另一种密度：核密度估计"
+      }
+     ]
+    },
+    {
+     "ref": "10.4",
+     "title": "Centrography",
+     "zh": "中心统计（质心分析）",
+     "items": [
+      {
+       "ref": "10.4.1",
+       "title": "Tendency",
+       "zh": "集中趋势"
+      },
+      {
+       "ref": "10.4.2",
+       "title": "Dispersion",
+       "zh": "离散程度"
+      },
+      {
+       "ref": "10.4.3",
+       "title": "Extent",
+       "zh": "范围"
+      }
+     ]
+    },
+    {
+     "ref": "10.5",
+     "title": "Randomness and clustering",
+     "zh": "随机性与聚集",
+     "items": [
+      {
+       "ref": "10.5.1",
+       "title": "Quadrat statistics",
+       "zh": "样方统计"
+      },
+      {
+       "ref": "10.5.2",
+       "title": "Ripley’s alphabet of functions",
+       "zh": "Ripley 函数族"
+      }
+     ]
+    },
+    {
+     "ref": "10.6",
+     "title": "Identifying clusters",
+     "zh": "识别聚集"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Spatial Regression",
+   "zh": "空间回归",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "What is spatial regression and why should I care?",
+     "zh": "什么是空间回归，为什么要关心"
+    },
+    {
+     "ref": "13.3",
+     "title": "Non-spatial regression, a (very) quick refresh",
+     "zh": "非空间回归速览"
+    },
+    {
+     "ref": "13.3.1",
+     "title": "Hidden structures",
+     "zh": "隐含结构"
+    },
+    {
+     "ref": "13.4",
+     "title": "Bringing space into the regression framework",
+     "zh": "把空间引入回归框架",
+     "items": [
+      {
+       "ref": "13.4.1",
+       "title": "Spatial feature engineering: proximity variables",
+       "zh": "空间特征工程：邻近变量"
+      },
+      {
+       "ref": "13.4.2",
+       "title": "Spatial heterogeneity",
+       "zh": "空间异质性"
+      },
+      {
+       "ref": "13.4.3",
+       "title": "Spatial dependence",
+       "zh": "空间依赖"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "Weather and Climate",
+   "zh": "天气与气候",
+   "fill": "补“地球系统”的框架：气候系统由哪些圈层构成、有哪些过程、随时间怎样变化。",
+   "items": [
+    {
+     "ref": "1b",
+     "title": "The Climate System",
+     "zh": "气候系统"
+    },
+    {
+     "ref": "1c",
+     "title": "Processes",
+     "zh": "过程"
+    },
+    {
+     "ref": "1d",
+     "title": "Temporal Variations",
+     "zh": "时间变化"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Theory",
+   "zh": "理论",
+   "fill": "补地球系统的能量与辐射基础：辐射、温室效应、能量收支、辐射强迫与反馈。",
+   "items": [
+    {
+     "ref": "4a",
+     "title": "Electromagnetic Radiation",
+     "zh": "电磁辐射"
+    },
+    {
+     "ref": "4b",
+     "title": "The Greenhouse Effect",
+     "zh": "温室效应"
+    },
+    {
+     "ref": "4c",
+     "title": "Earth’s Energy Budget",
+     "zh": "地球能量收支"
+    },
+    {
+     "ref": "4d",
+     "title": "Radiative Forcings, Feedback Processes, and Climate Sensitivity",
+     "zh": "辐射强迫、反馈过程与气候敏感度"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Carbon",
+   "zh": "碳",
+   "fill": "补地球系统的碳循环（气候模式的关键状态量）。",
+   "items": [
+    {
+     "ref": "5a",
+     "title": "The Natural Carbon Cycle",
+     "zh": "自然碳循环"
+    },
+    {
+     "ref": "5b",
+     "title": "Anthropogenic Carbon",
+     "zh": "人为碳"
+    },
+    {
+     "ref": "5c",
+     "title": "Carbonate Chemistry and Ocean Acidification",
+     "zh": "碳酸盐化学与海洋酸化"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Processes",
+   "zh": "过程",
+   "fill": "补地球系统内部的环流与水文过程，是气候模式要离散求解的对象。",
+   "items": [
+    {
+     "ref": "6a",
+     "title": "Atmospheric Circulation",
+     "zh": "大气环流"
+    },
+    {
+     "ref": "6b",
+     "title": "The Hydrologic Cycle",
+     "zh": "水文循环"
+    },
+    {
+     "ref": "6c",
+     "title": "Ocean Circulation",
+     "zh": "海洋环流"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Models",
+   "zh": "模式",
+   "fill": "补气候模式的构建、评估与应用，对应“用计算研究地球系统”的方法侧。",
+   "items": [
+    {
+     "ref": "7a",
+     "title": "Construction",
+     "zh": "构建"
+    },
+    {
+     "ref": "7b",
+     "title": "Evaluation",
+     "zh": "评估"
+    },
+    {
+     "ref": "7c",
+     "title": "Applications",
+     "zh": "应用"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "6",
+   "title": "Data Cubes",
+   "zh": "数据立方体",
+   "fill": "补“时空”：把时间与空间维度组织成数组式数据立方，是时空数据计算的基本表示。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "13",
+   "title": "Multivariate and Spatiotemporal Geostatistics",
+   "zh": "多变量与时空地统计",
+   "fill": "补“时空”的统计一侧：时空相关结构下的插值与建模。",
+   "items": []
+  },
+  {
+   "src": "D",
+   "ref": "IV",
+   "title": "Digital Humanities Areas",
+   "zh": "数字人文的领域",
+   "fill": "补“文献与文化数据”：把文本分析、文化分析、博物馆与遗产等作为可计算的数据对象来划分。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Data and Big Data",
+     "zh": "数据与大数据"
+    },
+    {
+     "ref": "",
+     "title": "Text Analysis and Literature Studies",
+     "zh": "文本分析与文学研究"
+    },
+    {
+     "ref": "",
+     "title": "Cultural Analytics",
+     "zh": "文化分析"
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "IX",
+   "title": "Computational Techniques in The Digital Humanities",
+   "zh": "数字人文中的计算技术",
+   "fill": "补文化/文献数据的计算技术栈：编码标准、数据挖掘、机器学习、数据库、OCR、统计。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Mathematical Models",
+     "zh": "数学模型"
+    },
+    {
+     "ref": "",
+     "title": "Computing And Programming",
+     "zh": "计算与编程"
+    },
+    {
+     "ref": "",
+     "title": "XML AND TEI",
+     "zh": "XML 与 TEI 文本编码"
+    },
+    {
+     "ref": "",
+     "title": "Data Visualization and Information Visualization",
+     "zh": "数据可视化与信息可视化"
+    },
+    {
+     "ref": "",
+     "title": "Imaging, Image Processing, and Optical Character Recognition",
+     "zh": "成像、图像处理与光学字符识别"
+    },
+    {
+     "ref": "",
+     "title": "Data Mining",
+     "zh": "数据挖掘"
+    },
+    {
+     "ref": "",
+     "title": "Machine Learning",
+     "zh": "机器学习"
+    },
+    {
+     "ref": "",
+     "title": "Database Management Systems",
+     "zh": "数据库管理系统"
+    },
+    {
+     "ref": "",
+     "title": "Quantitative Analysis: Probability and Statistics",
+     "zh": "定量分析：概率与统计"
+    },
+    {
+     "ref": "",
+     "title": "Data Science and Big Data",
+     "zh": "数据科学与大数据"
+    }
+   ]
+  },
+  {
+   "src": "D",
+   "ref": "XI",
+   "title": "Close And Distant Reading In The Digital Humanities",
+   "zh": "数字人文中的细读与远读",
+   "fill": "补文献类文化数据的分析方法：细读与远读的差别，以及远读的可视化。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Techniques in Close Reading and Distant Reading",
+     "zh": "细读与远读的技术"
+    },
+    {
+     "ref": "",
+     "title": "Distant Reading and Information Visualization",
+     "zh": "远读与信息可视化"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "时空",
+   "refs": [
+    "A:5",
+    "A:6",
+    "A:8",
+    "C:6",
+    "C:13",
+    "B:1d"
+   ],
+   "note": "A 给空间侧的数据结构、空间权重与空间统计，C 给时空数组组织（数据立方）与时空地统计，B 的时间变化一节给时间维的物理含义。"
+  },
+  {
+   "topic": "地球系统",
+   "refs": [
+    "B:1b",
+    "B:4",
+    "B:5",
+    "B:6",
+    "B:7"
+   ],
+   "note": "气候系统构成、辐射与能量收支、碳循环、三大环流过程、模式构建与评估。"
+  },
+  {
+   "topic": "文献与文化数据计算",
+   "refs": [
+    "D:IV",
+    "D:IX",
+    "D:XI"
+   ],
+   "note": "D 的领域划分、计算技术栈（TEI 编码、数据挖掘、机器学习、数据库、OCR）与远读方法。"
+  },
+  {
+   "topic": "地学知识",
+   "refs": [],
+   "note": "节点声明这是外部前置（地学或人文学科知识）。B 的第 1、4、5、6 章可当作地学入门，但不是系统地质/大气课程；主来源与补充来源都没有专门讲地学基础的章节。"
+  },
+  {
+   "topic": "人文学科知识",
+   "refs": [],
+   "note": "同样是外部前置。D 在“数字人文的领域”里点到文学研究、古典学、历史学、博物馆研究，但只是概述，不构成人文学科训练。"
+  }
+ ],
+ "omitted": "A 全 14 章只收与“地理空间计算”直接相关的 5 章；未收 Geographic Thinking for Data Scientists、Computational Tools for Geographic Data Science（地理思维与工具环境，属入门铺垫）、Choropleth Mapping（制图）、Local Spatial Autocorrelation（局部指标）、Spatial Inequality Dynamics、Clustering and Regionalization、Spatial Feature Engineering（专题扩展），以及 References 与 Datasets 附录。B 只收气候系统的物理与模式部分；未收 Observations、Paleoclimate（观测与古气候记录，偏长期重建）、Impacts、Economics、Ethics、Solutions（影响、经济、伦理、对策），它们不是计算对象。C 只收 Data Cubes 与 Multivariate and Spatiotemporal Geostatistics；未收空间数据模型、可视化、插值、面数据与空间计量等其他章。D 只收数字人文领域、计算技术与远读三块；未收历史、二进制与布尔逻辑、Web、项目案例、档案、批评与未来等章。",
+ "notes": "A 的章节页码按各章网页顶部的目录抄录（书内统一编号是 5、6、8、10、13，网页侧栏的编号与之相差 2，例如 03_spatial_data.html 是第 5 章）。B 的小节在原书里标 a)/b)/c)/d)，ref 用“章号+字母”。C 的两章只到章级。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 92,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

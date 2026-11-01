@@ -1,0 +1,389 @@
+{
+ "id": "A.4.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CIS 4270/5270: Trustworthy Machine Learning",
+   "by": "Osbert Bastani, Rajeev Alur (University of Pennsylvania)",
+   "year": 2026,
+   "url": "https://cis5270.engineering.upenn.edu/",
+   "toc_urls": [
+    "https://cis5270.engineering.upenn.edu/",
+    "https://cis5270.engineering.upenn.edu/schedule.html"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课（宾大 Spring 2026，slides 全公开）。课程 syllabus 把内容分成四个主题 (i) adversarial and distributional robustness、(ii) uncertainty quantification、(iii) interpretability and explainability、(iv) AI alignment，公开的 schedule 又逐讲写明主题（Lecture 1–27），正好对上简介里的鲁棒性、校准、解释三块，并且覆盖到 D4 的形式化验证、共形预测、数据归因、RLHF/DPO。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Machine Learning in Production: From Models to Products",
+   "by": "Christian Kästner (Carnegie Mellon University), MIT Press",
+   "year": 2025,
+   "url": "https://mlip-cmu.github.io/book/",
+   "toc_urls": [
+    "https://mlip-cmu.github.io/book/",
+    "https://mlip-cmu.github.io/book/26-fairness.html",
+    "https://mlip-cmu.github.io/book/28-security-and-privacy.html",
+    "https://mlip-cmu.github.io/book/29-transparency-and-accountability.html"
+   ],
+   "why": "补主来源完全没有的两块：公平性（ch. 26，从危害、偏见来源、法律到群体公平/均衡几率等度量与系统级缓解）和隐私（ch. 28 的数据隐私、机器学习带来的隐私威胁、隐私政策与控制），以及社会影响与问责（ch. 26 的 Fairness Beyond Model Predictions、ch. 29 的透明性与问责）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Adversarial and distributional robustness",
+   "zh": "对抗鲁棒性与分布鲁棒性",
+   "items": [
+    {
+     "ref": "Lecture 3",
+     "title": "Adversarial Robustness",
+     "zh": "对抗鲁棒性"
+    },
+    {
+     "ref": "Lecture 4",
+     "title": "Jailbreaking LLMs",
+     "zh": "大语言模型越狱"
+    },
+    {
+     "ref": "Lecture 5",
+     "title": "Robust Training",
+     "zh": "鲁棒训练"
+    },
+    {
+     "ref": "Lecture 6",
+     "title": "Formal Methods for Robustness Verification",
+     "zh": "鲁棒性验证的形式化方法"
+    },
+    {
+     "ref": "Lecture 7",
+     "title": "Label Shift",
+     "zh": "标签漂移"
+    },
+    {
+     "ref": "Lecture 8",
+     "title": "Covariate Shift",
+     "zh": "协变量漂移"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Uncertainty quantification",
+   "zh": "不确定性量化",
+   "items": [
+    {
+     "ref": "Lecture 9",
+     "title": "Conformal Prediction",
+     "zh": "共形预测"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "Calibrated Prediction",
+     "zh": "校准预测"
+    },
+    {
+     "ref": "Lecture 11",
+     "title": "Uncertainty Quantification for LLMs",
+     "zh": "大语言模型的不确定性量化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Interpretability and explainability",
+   "zh": "可解释性",
+   "items": [
+    {
+     "ref": "Lecture 14",
+     "title": "Explainability",
+     "zh": "可解释性"
+    },
+    {
+     "ref": "Lecture 15",
+     "title": "Explainability: SHAP",
+     "zh": "可解释性：SHAP"
+    },
+    {
+     "ref": "Lecture 16",
+     "title": "Counterfactual and Concept-Based Explanations",
+     "zh": "反事实解释与概念解释"
+    },
+    {
+     "ref": "Lecture 17",
+     "title": "Data Attribution Methods",
+     "zh": "数据归因方法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "AI alignment",
+   "zh": "AI 对齐",
+   "items": [
+    {
+     "ref": "Lecture 18",
+     "title": "Background on Reinforcement Learning",
+     "zh": "强化学习背景"
+    },
+    {
+     "ref": "Lecture 19",
+     "title": "Reinforcement Learning from Human Feedback",
+     "zh": "基于人类反馈的强化学习"
+    },
+    {
+     "ref": "Lecture 20",
+     "title": "Direct Policy Optimization",
+     "zh": "直接策略优化"
+    },
+    {
+     "ref": "Lecture 21",
+     "title": "Explainability and Alignment Case Study: ECG Classification",
+     "zh": "可解释性与对齐案例：心电图分类"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "26",
+   "title": "Fairness",
+   "zh": "公平性",
+   "fill": "补“公平”：主来源只在选题里提了鲁棒、不确定性、解释、对齐，没有任何公平性内容；这一章给危害分类、偏见来源、法律背景、群体公平与均衡几率等度量，以及系统级缓解。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Fairness Concepts",
+     "zh": "公平性概念"
+    },
+    {
+     "ref": "",
+     "title": "Notions of Fairness and Unequal Starting Positions",
+     "zh": "公平观念与不平等的起点"
+    },
+    {
+     "ref": "",
+     "title": "What is fair?",
+     "zh": "什么算公平"
+    },
+    {
+     "ref": "",
+     "title": "Harms from Discriminatory Decisions",
+     "zh": "歧视性决策的危害"
+    },
+    {
+     "ref": "",
+     "title": "Sources of Bias",
+     "zh": "偏见的来源"
+    },
+    {
+     "ref": "",
+     "title": "Legal Considerations",
+     "zh": "法律考量"
+    },
+    {
+     "ref": "",
+     "title": "Measuring and Improving Fairness at the Model Level",
+     "zh": "模型层面的公平性度量与改进"
+    },
+    {
+     "ref": "",
+     "title": "Anti-Classification",
+     "zh": "反分类（不使用敏感属性）"
+    },
+    {
+     "ref": "",
+     "title": "Group Fairness",
+     "zh": "群体公平"
+    },
+    {
+     "ref": "",
+     "title": "Equalized Odds",
+     "zh": "均衡几率"
+    },
+    {
+     "ref": "",
+     "title": "Improving Fairness & Fairness Tooling",
+     "zh": "公平性改进与工具"
+    },
+    {
+     "ref": "",
+     "title": "Fairness is a System-Wide Concern",
+     "zh": "公平性是系统级问题"
+    },
+    {
+     "ref": "",
+     "title": "Identifying and Negotiating Fairness Requirements",
+     "zh": "识别并协商公平性需求"
+    },
+    {
+     "ref": "",
+     "title": "Fairness, accuracy, and profits",
+     "zh": "公平、准确率与利润"
+    },
+    {
+     "ref": "",
+     "title": "Fairness Beyond Model Predictions",
+     "zh": "超越模型预测的公平"
+    },
+    {
+     "ref": "",
+     "title": "Process Integration",
+     "zh": "流程整合"
+    },
+    {
+     "ref": "",
+     "title": "Documenting Fairness at the Interface",
+     "zh": "在接口处记录公平性"
+    },
+    {
+     "ref": "",
+     "title": "Monitoring",
+     "zh": "监控"
+    },
+    {
+     "ref": "",
+     "title": "Best Practices",
+     "zh": "最佳实践"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "28",
+   "title": "Security and Privacy",
+   "zh": "安全与隐私",
+   "fill": "补“隐私”：主来源没有隐私内容；这里取该章的数据隐私部分（隐私威胁、数据的价值、隐私政策与控制、面向隐私的设计）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Data Privacy",
+     "zh": "数据隐私"
+    },
+    {
+     "ref": "",
+     "title": "Privacy Threats from Machine Learning",
+     "zh": "机器学习带来的隐私威胁"
+    },
+    {
+     "ref": "",
+     "title": "The Value of Data",
+     "zh": "数据的价值"
+    },
+    {
+     "ref": "",
+     "title": "Privacy Policies, Privacy Controls, and Consent",
+     "zh": "隐私政策、隐私控制与知情同意"
+    },
+    {
+     "ref": "",
+     "title": "Designing for Privacy",
+     "zh": "面向隐私的设计"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "29",
+   "title": "Transparency and Accountability",
+   "zh": "透明性与问责",
+   "fill": "补“社会影响的测量与分析”中的问责与透明部分：主来源没有任何关于模型透明性、人工监督、申诉与责任归属的内容。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Transparency of the Model's Existence",
+     "zh": "模型存在的透明性"
+    },
+    {
+     "ref": "",
+     "title": "Transparency of How the Model Works",
+     "zh": "模型工作原理的透明性"
+    },
+    {
+     "ref": "",
+     "title": "Driving Behavior and Gaming Models with Transparency",
+     "zh": "借透明性引导行为与规避模型"
+    },
+    {
+     "ref": "",
+     "title": "Designing User Interfaces with Explanations",
+     "zh": "带解释的用户界面设计"
+    },
+    {
+     "ref": "",
+     "title": "Human Oversight and Appeals",
+     "zh": "人工监督与申诉"
+    },
+    {
+     "ref": "",
+     "title": "Accountability and Culpability",
+     "zh": "问责与过失认定"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "鲁棒性",
+   "refs": [
+    "A:Lecture 3",
+    "A:Lecture 4",
+    "A:Lecture 5",
+    "A:Lecture 6",
+    "A:Lecture 7",
+    "A:Lecture 8"
+   ]
+  },
+  {
+   "topic": "校准",
+   "refs": [
+    "A:Lecture 9",
+    "A:Lecture 10",
+    "A:Lecture 11"
+   ],
+   "note": "校准在 Lecture 10，前后两讲分别是共形预测与大模型不确定性量化"
+  },
+  {
+   "topic": "解释",
+   "refs": [
+    "A:Lecture 14",
+    "A:Lecture 15",
+    "A:Lecture 16",
+    "A:Lecture 17",
+    "A:Lecture 21"
+   ]
+  },
+  {
+   "topic": "公平",
+   "refs": [
+    "B:26"
+   ]
+  },
+  {
+   "topic": "隐私",
+   "refs": [
+    "B:28"
+   ]
+  },
+  {
+   "topic": "社会影响的测量与分析",
+   "refs": [
+    "B:26",
+    "B:29"
+   ],
+   "note": "ch. 26 的 Fairness Beyond Model Predictions 之下有 Societal implications 小节，讲公平之外的系统与社会后果；ch. 29 讲透明、监督、申诉与问责这类社会影响的可操作测量。"
+  }
+ ],
+ "omitted": "主来源 A 里未收：Lecture 1 Course Overview、Lecture 2 Review of ML Models、Lecture 12/22 Review、Lecture 13/23 Midterm、Lecture 24/25 Neurosymbolic Learning（属于多智能体/神经符号节点 A.4.4）、Lecture 26/27 Project Presentations。B 的 ch. 28 只收了数据隐私部分，攻击与防御章节留给 A.4.3；ch. 25 Explainability、ch. 27 Safety 未收（解释已由 A 的 4 讲覆盖）。",
+ "notes": "A 的四个分支标题逐字取自 syllabus 的 topics 列表（(i)-(iv)），每讲归入哪个分支是按讲题内容做的归类，不是原文自带的分组。B 的章节在书里没有小节编号，所以 items 的 ref 留空，覆盖关系用 B:26 / B:28 / B:29（章号）指代。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 54,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

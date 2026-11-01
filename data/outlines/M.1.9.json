@@ -1,0 +1,296 @@
+{
+ "id": "M.1.9",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Fourier Analysis (18.103)",
+   "by": "David Jerison, MIT OpenCourseWare",
+   "year": 2013,
+   "url": "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-103-fourier-analysis-fall-2013/pages/syllabus/"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课：MIT 官方开放课程，syllabus 里的 Calendar 是逐讲清单（第 6 讲起是 Lebesgue 空间、Hilbert 空间、傅里叶级数及其收敛、应用、傅里叶积分、测度的傅里叶积分与中心极限定理），函数空间 + 傅里叶级数/变换一条线排下来，导览图和“去哪学”是同一份材料。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "Wavelets, Filter Banks and Applications (18.327)",
+   "by": "Gilbert Strang, Kevin Amaratunga, MIT OpenCourseWare",
+   "year": 2003,
+   "url": "https://ocw.mit.edu/courses/18-327-wavelets-filter-banks-and-applications-spring-2003/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-327-wavelets-filter-banks-and-applications-spring-2003/pages/calendar/"
+   ],
+   "why": "补“小波”：18.103 不讲小波，MIT 18.327 的 Calendar 按每讲给出多分辨率分析、细化方程、正交/双正交小波基、Mallat 金字塔算法、消失矩与光滑性的具体主题。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "A Course in Abstract Harmonic Analysis, 2nd Edition",
+   "by": "Gerald B. Folland",
+   "year": 2015,
+   "url": "https://www.routledge.com/A-Course-in-Abstract-Harmonic-Analysis/Folland/p/book/9781498727136",
+   "toc_urls": [
+    "https://www.routledge.com/A-Course-in-Abstract-Harmonic-Analysis/Folland/p/book/9781498727136"
+   ],
+   "why": "补“调和分析专题”：18.103 只到欧氏空间上的傅里叶积分，Folland 这本书的目录给出抽象调和分析的骨架（局部紧群与 Haar 测度、局部紧阿贝尔群上的对偶与傅里叶变换、紧群上的 Peter-Weyl 理论）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture 6",
+   "title": "Lebesgue Spaces, Inner Products",
+   "zh": "Lebesgue 空间与内积",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 7",
+   "title": "Hilbert Space, Midterm Review",
+   "zh": "Hilbert 空间（含期中复习）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 8",
+   "title": "Fourier Series and their Convergence",
+   "zh": "傅里叶级数及其收敛性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 9",
+   "title": "Applications of Fourier Series",
+   "zh": "傅里叶级数的应用",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 10",
+   "title": "Fourier Integrals",
+   "zh": "傅里叶积分",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 11",
+   "title": "Fourier Integrals of Measures, Central Limit Theorem",
+   "zh": "测度的傅里叶积分与中心极限定理",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Session 9",
+   "title": "Multiresolution Analysis (MRA): Requirements for MRA; Nested Spaces and Complementary Spaces; Scaling Functions and Wavelets",
+   "zh": "多分辨率分析（MRA）：MRA 的要求；嵌套空间与互补空间；尺度函数与小波",
+   "fill": "小波（多分辨率分析）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Session 10",
+   "title": "Refinement Equation: Interative and Recursive Solution Techniques; Infinite Product Formula; Filter Bank Approach for Computing Scaling Functions and Wavelets",
+   "zh": "细化方程：迭代与递推求解技巧；无穷乘积公式；用滤波器组计算尺度函数与小波",
+   "fill": "小波（尺度函数与细化方程）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Session 12",
+   "title": "Orthogonal Wavelet Bases: Connection to Orthogonal Filters; Orthogonality in the Frequency Domain. Biorthogonal Wavelet Bases",
+   "zh": "正交小波基：与正交滤波器的联系；频域中的正交性；双正交小波基",
+   "fill": "小波（正交与双正交小波基）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Session 13",
+   "title": "Mallat Pyramid Algorithm",
+   "zh": "Mallat 金字塔算法",
+   "fill": "小波（快速算法）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Session 14",
+   "title": "Accuracy of Wavelet Approximations (Condition A); Vanishing Moments; Polynomial Cancellation in Filter Banks",
+   "zh": "小波逼近的精度（条件 A）；消失矩；滤波器组中的多项式消去",
+   "fill": "小波（逼近性质）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Session 15",
+   "title": "Smoothness of Wavelet Bases: Convergence of the Cascade Algorithm (Condition E); Splines. Bases vs. Frames",
+   "zh": "小波基的光滑性：级联算法的收敛性（条件 E）；样条；基与框架",
+   "fill": "小波（光滑性与框架）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Locally Compact Groups",
+   "zh": "局部紧群",
+   "fill": "调和分析专题（抽象框架与 Haar 测度）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Topological Groups",
+     "zh": "拓扑群"
+    },
+    {
+     "ref": "",
+     "title": "Haar Measure",
+     "zh": "Haar 测度"
+    },
+    {
+     "ref": "",
+     "title": "Interlude: Some Technicalities",
+     "zh": "插曲：若干技术细节"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Analysis on Locally Compact Abelian Groups",
+   "zh": "局部紧阿贝尔群上的分析",
+   "fill": "调和分析专题（对偶群与傅里叶变换的抽象形式）",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Dual Group",
+     "zh": "对偶群"
+    },
+    {
+     "ref": "",
+     "title": "The Fourier Transform",
+     "zh": "傅里叶变换"
+    },
+    {
+     "ref": "",
+     "title": "The Pontrjagin Duality Theorem",
+     "zh": "庞特里亚金对偶定理"
+    },
+    {
+     "ref": "",
+     "title": "Representations of Locally Compact Abelian Groups",
+     "zh": "局部紧阿贝尔群的表示"
+    },
+    {
+     "ref": "",
+     "title": "Closed Ideals in L1(G)",
+     "zh": "L1(G) 中的闭理想"
+    },
+    {
+     "ref": "",
+     "title": "Spectral Synthesis",
+     "zh": "谱合成"
+    },
+    {
+     "ref": "",
+     "title": "The Bohr Compactification",
+     "zh": "Bohr 紧化"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Analysis on Compact Groups",
+   "zh": "紧群上的分析",
+   "fill": "调和分析专题（紧群上的傅里叶分析、Peter-Weyl 定理）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Representations of Compact Groups",
+     "zh": "紧群的表示"
+    },
+    {
+     "ref": "",
+     "title": "The Peter-Weyl Theorem",
+     "zh": "Peter-Weyl 定理"
+    },
+    {
+     "ref": "",
+     "title": "Fourier Analysis on Compact Groups",
+     "zh": "紧群上的傅里叶分析"
+    },
+    {
+     "ref": "",
+     "title": "Examples",
+     "zh": "例子"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "傅里叶级数",
+   "refs": [
+    "A:Lecture 8",
+    "A:Lecture 9"
+   ],
+   "note": "Lecture 8 讲傅里叶级数及其收敛（含 Fejér/平方平均收敛的背景），Lecture 9 讲级数的应用。"
+  },
+  {
+   "topic": "傅里叶变换",
+   "refs": [
+    "A:Lecture 10",
+    "A:Lecture 11",
+    "C:#2"
+   ],
+   "note": "Lecture 10 在 R 上定义傅里叶积分，Lecture 11 把它推广到测度并用于中心极限定理；C:#2 是它在局部紧阿贝尔群上的抽象形式（对偶群 + 傅里叶变换 + Pontrjagin 对偶）。"
+  },
+  {
+   "topic": "小波",
+   "refs": [
+    "B:Session 9",
+    "B:Session 10",
+    "B:Session 12",
+    "B:Session 13",
+    "B:Session 14",
+    "B:Session 15"
+   ],
+   "note": "B 的 Session 9–15 从多分辨率分析、细化方程讲到正交/双正交小波基、Mallat 算法、消失矩与光滑性。"
+  },
+  {
+   "topic": "频域表示",
+   "refs": [
+    "A:Lecture 10",
+    "B:Session 12",
+    "B:Session 13"
+   ],
+   "note": "A:Lecture 10 是频域表示（傅里叶积分）本身；B:Session 12 讨论小波在频域的正交性，B:Session 13 的 Mallat 金字塔算法是时频/多分辨表示的计算方式。"
+  },
+  {
+   "topic": "函数空间",
+   "refs": [
+    "A:Lecture 6",
+    "A:Lecture 7",
+    "C:#1"
+   ],
+   "note": "A:Lecture 6 是 Lebesgue 空间与内积，A:Lecture 7 是 Hilbert 空间（傅里叶级数收敛的框架）；C:#1 给出局部紧群上的函数空间框架（Haar 测度）。"
+  },
+  {
+   "topic": "调和分析专题",
+   "refs": [
+    "C:#1",
+    "C:#2",
+    "C:#3"
+   ],
+   "note": "C:#1 局部紧群与 Haar 测度，C:#2 局部紧阿贝尔群上的对偶与傅里叶变换，C:#3 紧群上的 Peter-Weyl 理论；更专门的内容（诱导表示、Mackey 机、Plancherel 定理）在 C 的第 6–7 章，本节点未收。"
+  }
+ ],
+ "omitted": "A（18.103）的 Lecture 1–5（掷硬币与大数定律、测度论、可测函数与 Lebesgue 积分、收敛定理、Fubini 定理）属于测度论基础（见 M.1.6.1），未收；Lecture 12–13（布朗运动）超出节点简介，未收。B（18.327）的 Session 1–8（离散时间滤波器、采样率变换、滤波器组、多相表示、正交滤波器组、Daubechies/Meyer 公式）是滤波器组工程基础，未收；Session 11（Project Brief）、17（Guest Lecture，物理小波）、21（余弦调制滤波器组与多小波）及 22–25（项目汇报）未收。C（Folland）的 Banach 代数与谱理论、Basic Representation Theory、Induced Representations、Further Topics in Representation Theory 与 Appendices 未收；各章 Notes and References 未收。",
+ "notes": "三个来源分工：A = 节点现有英文资源（MIT 18.103），负责傅里叶级数/变换与函数空间；B = MIT 18.327，补小波；C = Folland 的抽象调和分析教材，补“调和分析专题”。C 的目录来自 Routledge 的官方图书页（Table of Contents 展开后列出章与节，章没有编号，所以 C 分支的 ref 留空，coverage 用 C:#n）。18.103 的 Calendar 里第 7 讲标题含 “Midterm Review”，照抄未改。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 29,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

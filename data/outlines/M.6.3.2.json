@@ -1,0 +1,203 @@
+{
+ "id": "M.6.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "notes",
+   "title": "Stochastic Calculus (lecture notes based on the book by J.-F. Le Gall)",
+   "by": "Russell Lyons, Indiana University",
+   "year": 2026,
+   "url": "https://rdlyons.pages.iu.edu/pdf/StochCalc.pdf",
+   "toc_urls": [
+    "https://rdlyons.pages.iu.edu/pdf/StochCalc.pdf"
+   ],
+   "why": "节点“现有英文学习资源”本身，也是 Le Gall《Brownian Motion, Martingales, and Stochastic Calculus》的一学期课程讲义：自带带小节的详细目录，第 3 章讲滤过与鞅，第 5 章从零构造 Itô 积分并给 Itô 公式，第 8 章讲随机微分方程，正对节点三个知识点。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Filtrations and Martingales",
+   "zh": "滤过与鞅",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Filtrations and Processes",
+     "zh": "滤过与过程"
+    },
+    {
+     "ref": "3.2",
+     "title": "Stopping Times and Associated σ-Fields",
+     "zh": "停时与相应的 σ 域"
+    },
+    {
+     "ref": "3.3",
+     "title": "Continuous-Time Martingales and Supermartingales",
+     "zh": "连续时间鞅与上鞅"
+    },
+    {
+     "ref": "3.4",
+     "title": "Optional Stopping Theorems",
+     "zh": "可选停时定理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Stochastic Integration",
+   "zh": "随机积分",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "The Construction of Stochastic Integrals",
+     "zh": "随机积分的构造",
+     "items": [
+      {
+       "ref": "5.1.1",
+       "title": "Stochastic Integrals for Martingales Bounded in L2",
+       "zh": "对 L2 有界鞅的随机积分"
+      },
+      {
+       "ref": "5.1.2",
+       "title": "Stochastic Integrals for Local Martingales",
+       "zh": "对局部鞅的随机积分"
+      },
+      {
+       "ref": "5.1.3",
+       "title": "Stochastic Integrals for Semimartingales",
+       "zh": "对半鞅的随机积分"
+      },
+      {
+       "ref": "5.1.4",
+       "title": "Convergence of Stochastic Integrals",
+       "zh": "随机积分的收敛性"
+      }
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "Itô’s Formula",
+     "zh": "Itô 公式"
+    },
+    {
+     "ref": "5.3",
+     "title": "A Few Consequences of Itô’s Formula",
+     "zh": "Itô 公式的几个推论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Stochastic Differential Equations",
+   "zh": "随机微分方程",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Motivation and General Definitions",
+     "zh": "动机与一般定义"
+    },
+    {
+     "ref": "8.2",
+     "title": "The Lipschitz Case",
+     "zh": "Lipschitz 情形（强解的存在唯一性）"
+    },
+    {
+     "ref": "8.3",
+     "title": "Solutions of Stochastic Differential Equations as Markov Processes",
+     "zh": "随机微分方程解作为马尔可夫过程"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Continuous Semimartingales",
+   "zh": "连续半鞅",
+   "items": [
+    {
+     "ref": "4.3",
+     "title": "The Quadratic Variation of a Continuous Local Martingale",
+     "zh": "连续局部鞅的二次变差"
+    },
+    {
+     "ref": "4.5",
+     "title": "Continuous Semimartingales",
+     "zh": "连续半鞅"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Brownian Motion",
+   "zh": "布朗运动",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Pre-Brownian Motion",
+     "zh": "预布朗运动"
+    },
+    {
+     "ref": "2.2",
+     "title": "The Continuity of Sample Paths",
+     "zh": "样本轨道的连续性"
+    },
+    {
+     "ref": "2.3",
+     "title": "Properties of Brownian Sample Paths",
+     "zh": "布朗样本轨道的性质"
+    },
+    {
+     "ref": "2.4",
+     "title": "The Strong Markov Property of Brownian Motion",
+     "zh": "布朗运动的强马尔可夫性"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "滤过",
+   "refs": [
+    "A:3",
+    "A:3.1",
+    "A:3.2"
+   ]
+  },
+  {
+   "topic": "Itô积分",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:5.2",
+    "A:4.3"
+   ],
+   "note": "Itô 积分要先有二次变差与连续半鞅（第 4 章）作准备，所以 4.3、4.5 一并收进来。"
+  },
+  {
+   "topic": "随机微分方程",
+   "refs": [
+    "A:8",
+    "A:8.1",
+    "A:8.2",
+    "A:8.3"
+   ]
+  },
+  {
+   "topic": "适用于部分金融与科学建模路线",
+   "refs": [],
+   "note": "这是节点的适用性说明而不是一个知识点：A 里没有 Black–Scholes、风险中性定价等金融建模章节，只有第 7 章“布朗运动与偏微分方程”从 PDE 角度触及科学建模；金融方向要另找教材（如 Le Gall 原书同系列之外的期权定价教材）。"
+  }
+ ],
+ "omitted": "A 的第 1 章（高斯变量、高斯过程、高斯白噪声）是预备知识，第 6 章（一般马尔可夫过程理论、Feller 半群）、第 7 章（布朗运动与热方程、调和函数、平面布朗运动）是专门方向，与节点“滤过、Itô 积分、随机微分方程”三件事不是同一条主线，均未收；各章末尾的 Appendix（Cameron–Martin、Girsanov 等）和习题也未收。",
+ "notes": "A 的目录里第 8 章排在第七章之前（PDF 排版如此），本导览图按内容顺序排（3→5→8→4→2）。PDF 里的连字和数学字体（Diﬀerential、𝜎、𝐿2）已按正常拼写录入。原讲义正文按 Le Gall 教材的定理编号组织，习题未收录。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 25,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

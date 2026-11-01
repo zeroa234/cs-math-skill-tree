@@ -1,0 +1,382 @@
+{
+ "id": "V.1.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Physically Based Rendering: From Theory to Implementation, 4th Edition",
+   "by": "Matt Pharr, Wenzel Jakob, Greg Humphreys",
+   "year": 2023,
+   "url": "https://pbr-book.org/",
+   "toc_urls": [
+    "https://pbr-book.org/4ed/contents"
+   ],
+   "why": "节点现有的英文学习资源，也是物理渲染的行业标准教材（第 4 版全文作者免费在线）；目录从蒙特卡洛积分、采样重建、反射模型、体散射一直排到光传输方程与体渲染，正对节点的光传输与蒙特卡洛渲染两块。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-468 / 15-668 / 15-868 Physics-based rendering (Spring 2026)",
+   "by": "Ioannis Gkioulekas (Carnegie Mellon University)",
+   "year": 2026,
+   "url": "https://imaging.cs.cmu.edu/15-468",
+   "toc_urls": [
+    "https://imaging.cs.cmu.edu/15-468"
+   ],
+   "why": "补 PBRT 第 4 版没有专章的三点：光传输的路径积分表述、逆向/可微渲染、物理仿真；这是 CMU 该课官网页上的逐讲提纲。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Monte Carlo Integration",
+   "zh": "蒙特卡洛积分",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Monte Carlo: Basics",
+     "zh": "蒙特卡洛基础"
+    },
+    {
+     "ref": "2.2",
+     "title": "Improving Efficiency",
+     "zh": "提高效率"
+    },
+    {
+     "ref": "2.3",
+     "title": "Sampling Using the Inversion Method",
+     "zh": "逆变换法采样"
+    },
+    {
+     "ref": "2.4",
+     "title": "Transforming between Distributions",
+     "zh": "分布之间的变换"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Radiometry, Spectra, and Color",
+   "zh": "辐射度量、光谱与颜色",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Radiometry",
+     "zh": "辐射度量"
+    },
+    {
+     "ref": "4.2",
+     "title": "Working with Radiometric Integrals",
+     "zh": "辐射度积分的处理"
+    },
+    {
+     "ref": "4.3",
+     "title": "Surface Reflection",
+     "zh": "表面反射"
+    },
+    {
+     "ref": "4.4",
+     "title": "Light Emission",
+     "zh": "光的发射"
+    },
+    {
+     "ref": "4.5",
+     "title": "Representing Spectral Distributions",
+     "zh": "光谱分布的表示"
+    },
+    {
+     "ref": "4.6",
+     "title": "Color",
+     "zh": "颜色"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Sampling and Reconstruction",
+   "zh": "采样与重建",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Sampling Theory",
+     "zh": "采样理论"
+    },
+    {
+     "ref": "8.2",
+     "title": "Sampling and Integration",
+     "zh": "采样与积分"
+    },
+    {
+     "ref": "8.3",
+     "title": "Sampling Interface",
+     "zh": "采样接口"
+    },
+    {
+     "ref": "8.4",
+     "title": "Independent Sampler",
+     "zh": "独立采样器"
+    },
+    {
+     "ref": "8.5",
+     "title": "Stratified Sampler",
+     "zh": "分层采样器"
+    },
+    {
+     "ref": "8.6",
+     "title": "Halton Sampler",
+     "zh": "Halton 采样器"
+    },
+    {
+     "ref": "8.7",
+     "title": "Sobol’ Samplers",
+     "zh": "Sobol 采样器"
+    },
+    {
+     "ref": "8.8",
+     "title": "Image Reconstruction",
+     "zh": "图像重建"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Reflection Models",
+   "zh": "反射模型",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "BSDF Representation",
+     "zh": "BSDF 表示"
+    },
+    {
+     "ref": "9.2",
+     "title": "Diffuse Reflection",
+     "zh": "漫反射"
+    },
+    {
+     "ref": "9.3",
+     "title": "Specular Reflection and Transmission",
+     "zh": "镜面反射与透射"
+    },
+    {
+     "ref": "9.4",
+     "title": "Conductor BRDF",
+     "zh": "导体 BRDF"
+    },
+    {
+     "ref": "9.5",
+     "title": "Dielectric BSDF",
+     "zh": "电介质 BSDF"
+    },
+    {
+     "ref": "9.6",
+     "title": "Roughness Using Microfacet Theory",
+     "zh": "微表面理论中的粗糙度"
+    },
+    {
+     "ref": "9.7",
+     "title": "Rough Dielectric BSDF",
+     "zh": "粗糙电介质 BSDF"
+    },
+    {
+     "ref": "9.8",
+     "title": "Measured BSDFs",
+     "zh": "实测 BSDF"
+    },
+    {
+     "ref": "9.9",
+     "title": "Scattering from Hair",
+     "zh": "头发散射"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Volume Scattering",
+   "zh": "体积散射",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Volume Scattering Processes",
+     "zh": "体积散射过程"
+    },
+    {
+     "ref": "11.2",
+     "title": "Transmittance",
+     "zh": "透射率"
+    },
+    {
+     "ref": "11.3",
+     "title": "Phase Functions",
+     "zh": "相位函数"
+    },
+    {
+     "ref": "11.4",
+     "title": "Media",
+     "zh": "介质"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Light Sources",
+   "zh": "光源",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Light Interface",
+     "zh": "光源接口"
+    },
+    {
+     "ref": "12.2",
+     "title": "Point Lights",
+     "zh": "点光源"
+    },
+    {
+     "ref": "12.3",
+     "title": "Distant Lights",
+     "zh": "远距光源"
+    },
+    {
+     "ref": "12.4",
+     "title": "Area Lights",
+     "zh": "面光源"
+    },
+    {
+     "ref": "12.5",
+     "title": "Infinite Area Lights",
+     "zh": "无限远面光源"
+    },
+    {
+     "ref": "12.6",
+     "title": "Light Sampling",
+     "zh": "光源采样"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Light Transport I: Surface Reflection",
+   "zh": "光传输 I：表面反射",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "The Light Transport Equation",
+     "zh": "光传输方程"
+    },
+    {
+     "ref": "13.2",
+     "title": "Path Tracing",
+     "zh": "路径追踪"
+    },
+    {
+     "ref": "13.3",
+     "title": "A Simple Path Tracer",
+     "zh": "简易路径追踪器"
+    },
+    {
+     "ref": "13.4",
+     "title": "A Better Path Tracer",
+     "zh": "改进的路径追踪器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Light Transport II: Volume Rendering",
+   "zh": "光传输 II：体渲染",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "The Equation of Transfer",
+     "zh": "传输方程"
+    },
+    {
+     "ref": "14.2",
+     "title": "Volume Scattering Integrators",
+     "zh": "体积散射积分器"
+    },
+    {
+     "ref": "14.3",
+     "title": "Scattering from Layered Materials",
+     "zh": "分层材料的散射"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Path integral formulation",
+   "zh": "路径积分表述",
+   "fill": "补“光传输”的理论表述：把光传输方程写成路径积分",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Inverse and differentiable rendering",
+   "zh": "逆向与可微渲染",
+   "fill": "补“逆向图形与可微渲染”",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Physics simulation",
+   "zh": "物理仿真",
+   "fill": "补“物理模拟”：仿真与渲染的耦合、可微仿真",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "光传输",
+   "refs": [
+    "A:4",
+    "A:11",
+    "A:13",
+    "A:14",
+    "A:13.1",
+    "A:14.1",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "蒙特卡洛渲染",
+   "refs": [
+    "A:2",
+    "A:8",
+    "A:13.2",
+    "A:9"
+   ]
+  },
+  {
+   "topic": "物理模拟",
+   "refs": [
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "逆向图形与可微渲染",
+   "refs": [
+    "B:#2"
+   ]
+  }
+ ],
+ "omitted": "PBRT 第 4 版里未收的章：1（导论）、3（几何与变换的实现）、5（相机与胶片）、6（形状）、7（图元与求交加速）、10（纹理与材质）、15（GPU 波前式渲染实现）、16（回顾与展望），以及附录 A（采样算法）、B（工具代码）、C（场景描述解析）——它们要么是实现细节、要么不属于光传输/蒙特卡洛/仿真/可微这条线。CMU 15-468 提纲只取了与节点简介对应的三讲，其余讲次（纹理、BRDF、直接光照、参与介质、双向光传输、光子映射、MCMC 渲染等）已在 PBRT 目录里有对应章，未重复收。",
+ "notes": "A 的分支按章到节两层抄（8 章 44 节）；B 是讲义级提纲，只能到讲标题。节点的“物理模拟”与“逆向/可微渲染”在 PBRT 里没有专章（PBRT 只讲正向渲染），所以用 CMU 15-468 的逐讲提纲补了三条；若以后要更深，可再补 Veach 的 Robust Monte Carlo Methods for Light Transport Simulation。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 55,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

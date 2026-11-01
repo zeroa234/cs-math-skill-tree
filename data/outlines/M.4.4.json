@@ -1,0 +1,265 @@
+{
+ "id": "M.4.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CMSC 754 Computational Geometry (Fall 2023)",
+   "by": "Dave Mount, University of Maryland",
+   "year": 2023,
+   "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
+   "toc_urls": [
+    "https://www.cs.umd.edu/class/fall2023/cmsc754/lectures.html"
+   ],
+   "why": "节点现有英文资源，讲义按讲列出题目（01–20 讲），凸包、空间划分（梯形图、点定位、kd 树、范围树、WSPD）与几何算法主线完整。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Polygon Mesh Processing",
+   "by": "Mario Botsch, Leif Kobbelt, Mark Pauly, Pierre Alliez, Bruno Levy",
+   "year": 2010,
+   "url": "https://www.pmp-book.org/",
+   "toc_urls": [
+    "https://www.pmp-book.org/"
+   ],
+   "why": "补的是“网格、曲面处理”：CMSC 754 只讲离散几何算法，不讲网格数据结构与曲面处理；这本是该方向的标准教材，官网按章列出内容。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Lectures",
+   "zh": "课程讲义",
+   "items": [
+    {
+     "ref": "01",
+     "title": "Introduction",
+     "zh": "课程导论"
+    },
+    {
+     "ref": "02",
+     "title": "Convex Hulls",
+     "zh": "凸包"
+    },
+    {
+     "ref": "03",
+     "title": "Convex Hulls - Chan's Algorithm and Lower Bounds",
+     "zh": "凸包：Chan 算法与下界"
+    },
+    {
+     "ref": "04",
+     "title": "Line Segment Intersection",
+     "zh": "线段求交"
+    },
+    {
+     "ref": "05",
+     "title": "Polygon Triangulation",
+     "zh": "多边形三角剖分"
+    },
+    {
+     "ref": "06",
+     "title": "Halfplane Intersection and Point-Line Duality",
+     "zh": "半平面求交与点-线对偶"
+    },
+    {
+     "ref": "07",
+     "title": "Linear Programming",
+     "zh": "线性规划"
+    },
+    {
+     "ref": "08",
+     "title": "Trapezoidal Maps",
+     "zh": "梯形图"
+    },
+    {
+     "ref": "09",
+     "title": "Planar Point Location",
+     "zh": "平面点定位"
+    },
+    {
+     "ref": "10",
+     "title": "Voronoi Diagrams",
+     "zh": "Voronoi 图"
+    },
+    {
+     "ref": "11",
+     "title": "Delaunay Triangulations - Properties",
+     "zh": "Delaunay 三角剖分：性质"
+    },
+    {
+     "ref": "12",
+     "title": "Delaunay Triangulations - Construction",
+     "zh": "Delaunay 三角剖分：构造"
+    },
+    {
+     "ref": "13",
+     "title": "Line Arrangements",
+     "zh": "直线排列"
+    },
+    {
+     "ref": "14",
+     "title": "Range Searching and kd-Trees",
+     "zh": "范围搜索与 kd 树"
+    },
+    {
+     "ref": "15",
+     "title": "Orthogonal Range Trees",
+     "zh": "正交范围树"
+    },
+    {
+     "ref": "16",
+     "title": "Well-Separated Pair Decompositions - Definitions",
+     "zh": "良分离点对分解：定义"
+    },
+    {
+     "ref": "17",
+     "title": "Well-Separated Pair Decompositions - Applications",
+     "zh": "良分离点对分解：应用"
+    },
+    {
+     "ref": "18",
+     "title": "Coresets and Kernels",
+     "zh": "核心集与核"
+    },
+    {
+     "ref": "19",
+     "title": "Sampling and VC-Dimension",
+     "zh": "采样与 VC 维"
+    },
+    {
+     "ref": "20",
+     "title": "Motion Planning",
+     "zh": "运动规划"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Surface Representations & Mesh Data Structures",
+   "zh": "曲面表示与网格数据结构",
+   "fill": "补的是“网格”：网格的数据结构与曲面表示方式",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Differential Geometry",
+   "zh": "微分几何",
+   "fill": "补的是“曲面处理”的数学基础：曲面上的曲率、梯度、散度等离散量",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Smoothing",
+   "zh": "光滑化",
+   "fill": "补的是“曲面处理”：网格去噪与光滑化算法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Parametrization",
+   "zh": "参数化",
+   "fill": "补的是“曲面处理”：网格参数化与纹理映射",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Remeshing",
+   "zh": "重网格化",
+   "fill": "补的是“网格”：网格重建与各向同性/各向异性重网格化",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Simplification & Approximation",
+   "zh": "简化与逼近",
+   "fill": "补的是“网格”：网格简化与逼近误差",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Model Repair",
+   "zh": "模型修复",
+   "fill": "补的是“网格”：破损网格的修复",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Deformation",
+   "zh": "形变",
+   "fill": "补的是“曲面处理”：网格形变与编辑",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "凸包",
+   "refs": [
+    "A:02",
+    "A:03"
+   ]
+  },
+  {
+   "topic": "空间划分",
+   "refs": [
+    "A:08",
+    "A:09",
+    "A:13",
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:17"
+   ]
+  },
+  {
+   "topic": "网格",
+   "refs": [
+    "A:05",
+    "A:10",
+    "A:11",
+    "A:12",
+    "B:#1",
+    "B:#5",
+    "B:#6",
+    "B:#7"
+   ]
+  },
+  {
+   "topic": "曲面处理",
+   "refs": [
+    "B:#2",
+    "B:#3",
+    "B:#4",
+    "B:#8"
+   ]
+  },
+  {
+   "topic": "几何算法",
+   "refs": [
+    "A:04",
+    "A:06",
+    "A:07",
+    "A:18",
+    "A:19",
+    "A:20"
+   ]
+  }
+ ],
+ "omitted": "CMSC 754 日历里的“Review and Midterm Exam”“Thanksgiving break”没有讲号与主题，未收；Polygon Mesh Processing 的 Numerics 一章讲线性求解器等数值基础，不直接对应节点的“网格/曲面处理”，未收。",
+ "notes": "CMSC 754 的目录在 Lectures\n页（原文每讲写作“02 Convex Hulls”这样的编号+题目），所以分支 ref 留空、条目 ref 用原文的两位讲号。补充来源 Polygon Mesh Processing 官网只列出章名（原文无章号，故 ref 留空）、不给小节，因此 B 各分支没有 items，按章收录；该站页面里的章名带有“- ”前缀和行内换行（如“Surface Representations”/“& Mesh Data Structures”），已按原样拼成一行。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 29,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,215 @@
+{
+ "id": "M.4.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Elementary Applied Topology",
+   "by": "Robert Ghrist",
+   "year": 2014,
+   "url": "https://www2.math.upenn.edu/~ghrist/notes.html",
+   "toc_urls": [
+    "https://www2.math.upenn.edu/~ghrist/notes.html"
+   ],
+   "why": "节点现有英文资源，作者主页逐章给出全书章节表；从流形、复形、同调到序列（条形码/持续同调）正是 TDA 的主干。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Algebraic Foundations for Applied Topology and Data Analysis",
+   "by": "Hal Schenck (Auburn University)",
+   "url": "http://webhome.auburn.edu/~hks0015/AuburnTDA.html",
+   "toc_urls": [
+    "http://webhome.auburn.edu/~hks0015/data2.pdf"
+   ],
+   "why": "补“持续同调”的代数基础与细节：单纯复形/Čech-Rips 复形、PID 上的模与结构定理、单参数持续同调（条形码、稳定性）、多参数持续同调；EAT 的章级目录给不到这个颗粒度。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Manifolds",
+   "zh": "流形",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Complexes",
+   "zh": "复形",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Euler Characteristic",
+   "zh": "Euler 示性数",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Homology",
+   "zh": "同调",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Sequences",
+   "zh": "序列",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Morse Theory",
+   "zh": "Morse 理论",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Homology I: Simplicial Complexes to Sensor Networks",
+   "zh": "同调 I：从单纯复形到传感器网络",
+   "fill": "补的是“几何结构与数据表征”：把点云/覆盖变成单纯复形（神经、Čech 与 Rips 复形）再算同调",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Simplicial Complexes, Nerve of a Cover",
+     "zh": "单纯复形与覆盖的神经"
+    },
+    {
+     "ref": "4.2",
+     "title": "Simplicial and Singular Homology",
+     "zh": "单纯同调与奇异同调"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Persistent Algebra: Modules over a PID",
+   "zh": "持续同调的代数：主理想整环上的模",
+   "fill": "补的是“持续同调”的代数基础：PID 上模的结构定理如何给出持续同调的分类",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Principal Ideal Domains and Euclidean Domains",
+     "zh": "主理想整环与欧几里得整环"
+    },
+    {
+     "ref": "6.2",
+     "title": "Rational Canonical Form of a Matrix",
+     "zh": "矩阵的有理标准形"
+    },
+    {
+     "ref": "6.4",
+     "title": "Structure of Abelian Groups and Persistent Homology",
+     "zh": "Abel 群的结构定理与持续同调"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Persistent Homology",
+   "zh": "持续同调",
+   "fill": "补的是“持续同调”的主体内容：条形码与持续图、Morse 理论、稳定性定理",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Barcodes, Persistence Diagrams, Bottleneck Distance",
+     "zh": "条形码、持续图与瓶颈距离"
+    },
+    {
+     "ref": "7.2",
+     "title": "Morse Theory",
+     "zh": "Morse 理论"
+    },
+    {
+     "ref": "7.3",
+     "title": "The Stability Theorem",
+     "zh": "稳定性定理"
+    },
+    {
+     "ref": "7.4",
+     "title": "Interleaving and Categories",
+     "zh": "交错与范畴"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "8",
+   "title": "Multiparameter Persistent Homology",
+   "zh": "多参数持续同调",
+   "fill": "补的是“持续同调”的进阶方向：多参数滤过下的持续同调与分次模",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Definition and Examples",
+     "zh": "定义与例子"
+    },
+    {
+     "ref": "8.2",
+     "title": "Graded algebra, Hilbert function, series, polynomial",
+     "zh": "分次代数、Hilbert 函数、Hilbert 级数与多项式"
+    },
+    {
+     "ref": "8.3",
+     "title": "Associated Primes and Zn-graded modules",
+     "zh": "伴随素理想与 Z^n-分次模"
+    },
+    {
+     "ref": "8.4",
+     "title": "Filtrations and Ext",
+     "zh": "滤过与 Ext"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "持续同调",
+   "refs": [
+    "A:5",
+    "B:7",
+    "B:7.1",
+    "B:7.3",
+    "B:8"
+   ],
+   "note": "EAT 只有章级目录，persistent homology 与 barcodes 属于第 5 章 Sequences；小节级细节见 B 第 7、8 章。"
+  },
+  {
+   "topic": "流形方法",
+   "refs": [
+    "A:1"
+   ],
+   "note": "EAT 第 1 章 Manifolds 讲流形作为数据分析的对象；流形本身的严格理论属于 M.4.2 微分几何节点，这里不重复。"
+  },
+  {
+   "topic": "几何结构与数据表征",
+   "refs": [
+    "A:2",
+    "A:4",
+    "B:4",
+    "B:4.1"
+   ]
+  },
+  {
+   "topic": "与AI共享应用",
+   "refs": [],
+   "note": "这是节点定位（TDA 与机器学习/AI 共享应用场景）的说明，不是独立知识点，两份来源都没有对应章节。"
+  }
+ ],
+ "omitted": "EAT 只收了 1、2、3、4、5、7 章：第 6 章 Cohomology、第 8 章 Homotopy 属于同调之后的进阶工具，第 9 章 Sheaves、第 10 章 Categorification 更偏范畴化，均未直接对应节点简介的知识点；B 只收了 4、6、7、8 章，第 1–3 章（线性代数、环与模、拓扑与层）是背景，第 5 章（上同调与排序问题）、第 9 章（导出函子与谱序列）与附录（软件包）超出节点范围。",
+ "notes": "EAT 的章目来自作者主页 notes.html 的章表（原文写作“Chapter 1: Manifolds”这种形式）；书的 PDF（EATcontents.pdf、EATchapter5.pdf）用 CID 编码字体，pypdf 只能提取出 /BX/D0 之类的字形码，所以 A 没有小节级条目，只能收章级。B 的章节目录摘自 Auburn 课程页链接的书稿 PDF（data2.pdf）的 Contents 页，§6.3 未出现在目录页（目录里跳号），故只收 6.1、6.2、6.4。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 23,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

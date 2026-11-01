@@ -1,0 +1,297 @@
+{
+ "id": "C.4.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "6.852J / 18.437J Distributed Algorithms, Fall 2009 — Lecture Notes",
+   "by": "Nancy Lynch (MIT OpenCourseWare)",
+   "year": 2009,
+   "url": "https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/pages/lecture-notes/"
+   ],
+   "why": "节点现有英文学习资源。OCW 官方的 Lecture Notes 页按 SES# 逐讲列出主题（同步/异步网络与共享内存模型、故障模型、共识与拜占庭协议、不可能性、原子对象、时序系统），正是“故障模型、共识可解性、不可能性结果”这一套理论。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "6.5840 / 6.824 Distributed Systems, Spring 2026 — Schedule",
+   "by": "Robert Morris, Frans Kaashoek (MIT)",
+   "year": 2026,
+   "url": "https://pdos.csail.mit.edu/6.824/",
+   "toc_urls": [
+    "https://pdos.csail.mit.edu/6.824/schedule.html"
+   ],
+   "why": "补“线性化”与“可用性”：6.852J 的讲次表里线性化只体现在 Atomic objects 一讲的标题上，也没有以可用性为题的讲次；MIT 6.5840 的日程里有一讲专门叫 Consistency and Linearizability，另有 Raft 两讲与 Chain Replication 一讲讲可用的复制协议。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Synchronous networks",
+   "zh": "同步网络",
+   "items": [
+    {
+     "title": "Leader election in synchronous ring networks",
+     "zh": "同步环网上的领导者选举"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Leader election in rings",
+   "zh": "环上的领导者选举",
+   "items": [
+    {
+     "title": "Basic computational tasks in general synchronous networks: leader election",
+     "zh": "一般同步网络中的基本计算任务：领导者选举"
+    },
+    {
+     "title": "Breadth-first search",
+     "zh": "广度优先搜索"
+    },
+    {
+     "title": "Broadcast and convergecast",
+     "zh": "广播与汇集"
+    },
+    {
+     "title": "Shortest paths",
+     "zh": "最短路径"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Fault-tolerant consensus",
+   "zh": "容错共识",
+   "items": [
+    {
+     "title": "Link failures: the two generals problem",
+     "zh": "链路故障：两将军问题"
+    },
+    {
+     "title": "Process failures (stopping, Byzantine)",
+     "zh": "进程故障（停止型、拜占庭型）"
+    },
+    {
+     "title": "Algorithms for agreement with stopping and Byzantine failures",
+     "zh": "停止型与拜占庭型故障下的共识算法"
+    },
+    {
+     "title": "Exponential information gathering",
+     "zh": "指数信息收集"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Number-of-processor bounds for Byzantine agreement",
+   "zh": "拜占庭协议的处理器数量下界",
+   "items": [
+    {
+     "title": "Weak Byzantine agreement",
+     "zh": "弱拜占庭协议"
+    },
+    {
+     "title": "Time bounds for consensus problems",
+     "zh": "共识问题的时间下界"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "k-set-agreement",
+   "zh": "k 集一致",
+   "items": [
+    {
+     "title": "Approximate agreement",
+     "zh": "近似一致"
+    },
+    {
+     "title": "Distributed commit",
+     "zh": "分布式提交"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Asynchronous distributed computing",
+   "zh": "异步分布式计算",
+   "items": [
+    {
+     "title": "Formal modeling of asynchronous systems using interacting state machines (I/O automata)",
+     "zh": "用交互状态机（I/O 自动机）对异步系统建模"
+    },
+    {
+     "title": "Proving correctness of distributed algorithms",
+     "zh": "分布式算法的正确性证明"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Time, clocks, and the ordering of events",
+   "zh": "时间、时钟与事件的排序",
+   "items": [
+    {
+     "title": "State-machine simulation",
+     "zh": "状态机模拟"
+    },
+    {
+     "title": "Vector timestamps",
+     "zh": "向量时间戳"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Impossibility of consensus in asynchronous, fault-prone, shared-memory systems",
+   "zh": "异步易故障共享内存系统中的共识不可能性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Atomic objects",
+   "zh": "原子对象",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "23",
+   "title": "Asynchronous network model vs. asynchronous shared-memory model",
+   "zh": "异步网络模型与异步共享内存模型",
+   "items": [
+    {
+     "title": "Impossibility of consensus in asynchronous networks",
+     "zh": "异步网络中的共识不可能性"
+    },
+    {
+     "title": "Failure detectors and consensus",
+     "zh": "故障检测器与共识"
+    },
+    {
+     "title": "Paxos consensus algorithm",
+     "zh": "Paxos 共识算法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "25",
+   "title": "Timing-based systems",
+   "zh": "基于时序的系统",
+   "items": [
+    {
+     "title": "Modeling and verification",
+     "zh": "建模与验证"
+    },
+    {
+     "title": "Timing-based algorithms for mutual exclusion and consensus",
+     "zh": "基于时序的互斥与共识算法"
+    },
+    {
+     "title": "Clock synchronization",
+     "zh": "时钟同步"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "LEC 8",
+   "title": "Consistency and Linearizability",
+   "zh": "一致性与线性化",
+   "fill": "补“线性化”：6.852J 只有 Atomic objects 一讲的标题，没有把线性化作为独立的正确性条件来讲",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 6",
+   "title": "Fault Tolerance: Raft (1)",
+   "zh": "容错：Raft（上）",
+   "fill": "补“可用性”：工程共识协议怎样在崩溃、分区下保持可服务",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 7",
+   "title": "Fault Tolerance: Raft (2)",
+   "zh": "容错：Raft（下）",
+   "fill": "补“可用性”：日志复制、领导者选举与恢复",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 13",
+   "title": "Chain Replication",
+   "zh": "链式复制",
+   "fill": "补“可用性”：另一种复制协议的可用性与恢复",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "故障模型",
+   "refs": [
+    "A:4",
+    "A:5",
+    "A:7",
+    "A:16",
+    "A:25"
+   ]
+  },
+  {
+   "topic": "线性化",
+   "refs": [
+    "B:LEC 8",
+    "A:17",
+    "A:11"
+   ]
+  },
+  {
+   "topic": "共识可解性",
+   "refs": [
+    "A:4",
+    "A:5",
+    "A:6",
+    "A:16",
+    "A:23"
+   ]
+  },
+  {
+   "topic": "可用性",
+   "refs": [
+    "B:LEC 6",
+    "B:LEC 7",
+    "B:LEC 13",
+    "A:23",
+    "A:25"
+   ]
+  },
+  {
+   "topic": "通信复杂度",
+   "refs": [
+    "A:2",
+    "A:5"
+   ],
+   "note": "6.852J 的讲次表里没有以“通信复杂度”或“消息条数下界”为题的一讲：复杂度分析散在环上选举（第 2 讲）与共识的时间下界（第 5 讲）两讲的标题里，具体到 O(n²) 与 O(n log n) 的消息条数推导无法从讲次标题确认，需要看对应讲义 PDF。B 讲的是系统实现，不涉及下界证明。"
+  }
+ ],
+ "omitted": "A 里没收：第 3、9 讲（生成树与最小生成树）、第 8 讲（异步网络上的非容错算法，与第 2 讲重复）、第 10 讲（同步器）、第 12 讲（稳定性质检测、全局快照、死锁检测）、第 13–15 讲（互斥与资源分配、共享内存多处理器与实用互斥）、第 18–22 讲（原子快照、链表算法、事务内存、无等待可计算性），这些是共享内存同步与数据结构专题，与节点简介的五项（故障模型、线性化、共识可解性、可用性、通信复杂度）关系较远；第 24 讲自稳定算法同样未收。B 里只取四讲，未收 MapReduce、GFS、Spanner、Ray、Bitcoin 等系统专题。",
+ "notes": "A 是逐讲清单，分支 ref 用原页面的 SES# 编号；每讲的多个主题句按句拆成子条，句子内容一字未改。B 的 ref 用页面上的讲次记号（原页面写作“LEC 8”“LEC 6”等，括号里的教师缩写已省略）。线性化在 A 里只有“Atomic objects”（第 17 讲）与“State-machine simulation”（第 11 讲）两个相关标题，正式定义与“线性化 vs 顺序一致性”的对比放在 B 的 LEC 8。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 38,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

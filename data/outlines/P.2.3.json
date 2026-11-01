@@ -1,0 +1,330 @@
+{
+ "id": "P.2.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "notes",
+   "title": "Scipy Lecture Notes — One document to learn numerics, science, and data with Python",
+   "by": "EuroSciPy community (scipy-lectures.org)",
+   "year": 2022,
+   "url": "https://scipy-lectures.org/",
+   "toc_urls": [
+    "https://scipy-lectures.org/"
+   ],
+   "why": "节点现有英文资源就是这份讲义；它的目录按“生态与环境 → Python 语言（含脚本/模块/标准库） → NumPy → Scipy → pandas 统计”组织，正好覆盖脚本、数组与数据框、科学计算三块，且是 EuroSciPy 长期维护的免费教材。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Python Packaging User Guide",
+   "by": "Python Packaging Authority (PyPA)",
+   "year": 2026,
+   "url": "https://packaging.python.org/en/latest/",
+   "toc_urls": [
+    "https://packaging.python.org/en/latest/"
+   ],
+   "why": "补“环境管理”：讲义只在 1.1.3 一节里说“装一个 Anaconda 就行”，不讲虚拟环境与依赖声明；PyPA 官方指南的 Tutorials/Guides 讲 venv、pip、requirements 与依赖解析，是本主题的权威文档。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1.1",
+   "title": "Python scientific computing ecosystem",
+   "zh": "Python 科学计算生态",
+   "items": [
+    {
+     "ref": "1.1.1",
+     "title": "Why Python?",
+     "zh": "为什么用 Python"
+    },
+    {
+     "ref": "1.1.2",
+     "title": "The Scientific Python ecosystem",
+     "zh": "科学 Python 生态"
+    },
+    {
+     "ref": "1.1.3",
+     "title": "Before starting: Installing a working environment",
+     "zh": "动手之前：安装一套可用的环境"
+    },
+    {
+     "ref": "1.1.4",
+     "title": "The workflow: interactive environments and text editors",
+     "zh": "工作流：交互式环境与文本编辑器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1.2",
+   "title": "The Python language",
+   "zh": "Python 语言",
+   "items": [
+    {
+     "ref": "1.2.1",
+     "title": "First steps",
+     "zh": "第一步"
+    },
+    {
+     "ref": "1.2.2",
+     "title": "Basic types",
+     "zh": "基本类型"
+    },
+    {
+     "ref": "1.2.3",
+     "title": "Control Flow",
+     "zh": "控制流"
+    },
+    {
+     "ref": "1.2.4",
+     "title": "Defining functions",
+     "zh": "定义函数"
+    },
+    {
+     "ref": "1.2.5",
+     "title": "Reusing code: scripts and modules",
+     "zh": "复用代码：脚本与模块"
+    },
+    {
+     "ref": "1.2.6",
+     "title": "Input and Output",
+     "zh": "输入与输出"
+    },
+    {
+     "ref": "1.2.7",
+     "title": "Standard Library",
+     "zh": "标准库"
+    },
+    {
+     "ref": "1.2.8",
+     "title": "Exception handling in Python",
+     "zh": "Python 的异常处理"
+    },
+    {
+     "ref": "1.2.9",
+     "title": "Object-oriented programming (OOP)",
+     "zh": "面向对象编程（OOP）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1.4",
+   "title": "NumPy: creating and manipulating numerical data",
+   "zh": "NumPy：数值数据的创建与操作",
+   "items": [
+    {
+     "ref": "1.4.1",
+     "title": "The NumPy array object",
+     "zh": "NumPy 数组对象"
+    },
+    {
+     "ref": "1.4.2",
+     "title": "Numerical operations on arrays",
+     "zh": "数组上的数值运算"
+    },
+    {
+     "ref": "1.4.3",
+     "title": "More elaborate arrays",
+     "zh": "更复杂的数组"
+    },
+    {
+     "ref": "1.4.4",
+     "title": "Advanced operations",
+     "zh": "进阶操作"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "1.6",
+   "title": "Scipy : high-level scientific computing",
+   "zh": "Scipy：高层科学计算",
+   "items": [
+    {
+     "ref": "1.6.1",
+     "title": "File input/output: scipy.io",
+     "zh": "文件输入输出：scipy.io"
+    },
+    {
+     "ref": "1.6.2",
+     "title": "Special functions: scipy.special",
+     "zh": "特殊函数：scipy.special"
+    },
+    {
+     "ref": "1.6.3",
+     "title": "Linear algebra operations: scipy.linalg",
+     "zh": "线性代数运算：scipy.linalg"
+    },
+    {
+     "ref": "1.6.4",
+     "title": "Interpolation: scipy.interpolate",
+     "zh": "插值：scipy.interpolate"
+    },
+    {
+     "ref": "1.6.5",
+     "title": "Optimization and fit: scipy.optimize",
+     "zh": "优化与拟合：scipy.optimize"
+    },
+    {
+     "ref": "1.6.6",
+     "title": "Statistics and random numbers: scipy.stats",
+     "zh": "统计与随机数：scipy.stats"
+    },
+    {
+     "ref": "1.6.7",
+     "title": "Numerical integration: scipy.integrate",
+     "zh": "数值积分：scipy.integrate"
+    },
+    {
+     "ref": "1.6.8",
+     "title": "Fast Fourier transforms: scipy.fftpack",
+     "zh": "快速傅里叶变换：scipy.fftpack"
+    },
+    {
+     "ref": "1.6.9",
+     "title": "Signal processing: scipy.signal",
+     "zh": "信号处理：scipy.signal"
+    },
+    {
+     "ref": "1.6.10",
+     "title": "Image manipulation: scipy.ndimage",
+     "zh": "图像处理：scipy.ndimage"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3.1",
+   "title": "Statistics in Python",
+   "zh": "Python 中的统计",
+   "items": [
+    {
+     "ref": "3.1.1",
+     "title": "Data representation and interaction",
+     "zh": "数据的表示与交互",
+     "items": [
+      {
+       "ref": "3.1.1.1",
+       "title": "Data as a table",
+       "zh": "以表格形式组织数据"
+      },
+      {
+       "ref": "3.1.1.2",
+       "title": "The pandas data-frame",
+       "zh": "pandas 数据框"
+      }
+     ]
+    },
+    {
+     "ref": "3.1.2",
+     "title": "Hypothesis testing: comparing two groups",
+     "zh": "假设检验：两组比较"
+    },
+    {
+     "ref": "3.1.3",
+     "title": "Linear models, multiple factors, and analysis of variance",
+     "zh": "线性模型、多因素与方差分析"
+    },
+    {
+     "ref": "3.1.4",
+     "title": "More visualization: seaborn for statistical exploration",
+     "zh": "更多可视化：用 seaborn 做统计探索"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Tutorials",
+   "zh": "教程",
+   "fill": "环境管理（用虚拟环境隔离并安装依赖）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Installing Packages",
+     "zh": "安装软件包"
+    },
+    {
+     "ref": "",
+     "title": "Managing Application Dependencies",
+     "zh": "管理应用依赖"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Guides",
+   "zh": "指南",
+   "fill": "环境管理（venv/pip 的具体做法与科学计算包的安装）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Install packages in a virtual environment using pip and venv",
+     "zh": "用 pip 和 venv 在虚拟环境中安装软件包"
+    },
+    {
+     "ref": "",
+     "title": "Installing packages using virtualenv",
+     "zh": "用 virtualenv 安装软件包"
+    },
+    {
+     "ref": "",
+     "title": "Installing scientific packages",
+     "zh": "安装科学计算软件包"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "脚本",
+   "refs": [
+    "A:1.2.1",
+    "A:1.2.5"
+   ]
+  },
+  {
+   "topic": "数组与数据框",
+   "refs": [
+    "A:1.4.1",
+    "A:1.4.2",
+    "A:3.1.1.2"
+   ]
+  },
+  {
+   "topic": "科学计算",
+   "refs": [
+    "A:1.6",
+    "A:1.6.3",
+    "A:1.6.5",
+    "A:1.6.7"
+   ]
+  },
+  {
+   "topic": "环境管理",
+   "refs": [
+    "A:1.1.3",
+    "B:#1",
+    "B:#2"
+   ]
+  },
+  {
+   "topic": "自动化",
+   "refs": [
+    "A:1.2.5",
+    "A:1.2.7"
+   ]
+  }
+ ],
+ "omitted": "讲义中没收录的部分：1.3（Python 2 与 Python 3 迁移）、1.5（Matplotlib 绘图）、1.7（查找文档）、2.x 全部进阶主题（生成器与装饰器、进阶 NumPy、调试、优化、稀疏矩阵、图像处理、优化算法、C 接口）、3.2–3.6 各专题包（SymPy、scikit-image、Traits、Mayavi、scikit-learn），以及各章练习与“Full code examples”小节——都不在“脚本、数组与数据框、科学计算、环境管理、自动化”这五个知识点内。",
+ "notes": "目录页 scipy-lectures.org 把全书标题都列在一页（含小节），因此只用一个 toc_url。节点简介的“自动化”在讲义里对应 1.2.5（把代码写成脚本/模块）和 1.2.7（os/shutil/glob：调用外部命令、遍历目录、环境变量），没有专门的“工作流引擎”章节，未另找来源硬凑。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 45,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

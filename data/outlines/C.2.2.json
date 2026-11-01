@@ -1,0 +1,346 @@
+{
+ "id": "C.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Computer Systems: A Programmer's Perspective, 3rd Edition",
+   "by": "Randal E. Bryant and David R. O'Hallaron",
+   "year": 2016,
+   "url": "https://csapp.cs.cmu.edu/",
+   "toc_urls": [
+    "https://csapp.cs.cmu.edu/3e/pieces/preface3e.pdf"
+   ],
+   "why": "CSE333 的 syllabus 只给“Approximate Topic List”级别的粗目录，而 CSAPP 是其 syllabus 里点名的配套读物，作者官网公布带节号的目录/前言 PDF。第 8 章异常控制流（系统调用、进程、信号）、10 章系统级 I/O、11 章网络编程（socket 即 IPC）、12 章并发编程，正好覆盖系统调用、锁、内存模型、IPC 与竞态。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Operating Systems: Three Easy Pieces",
+   "by": "Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau",
+   "year": 2023,
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+   "toc_urls": [
+    "https://pages.cs.wisc.edu/~remzi/OSTEP/toc.pdf"
+   ],
+   "why": "补原子操作：CSAPP 只讲到信号量，第 28 章的 28.7–28.11 给出 test-and-set、compare-and-swap、load-linked/store-conditional、fetch-and-add 这些原子指令及其锁实现。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "6.033 Computer System Engineering, Spring 2022",
+   "by": "MIT",
+   "year": 2022,
+   "url": "https://web.mit.edu/6.033/www/general.shtml",
+   "toc_urls": [
+    "https://web.mit.edu/6.033/www/"
+   ],
+   "why": "补竞态检测：6.033 的 REC 5 以 Eraser（动态竞争检测器）为讨论课主题，是“竞态检测”这一知识点的直接入口。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Exceptional Control Flow",
+   "zh": "异常控制流",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Exceptions",
+     "zh": "异常"
+    },
+    {
+     "ref": "8.2",
+     "title": "Processes",
+     "zh": "进程"
+    },
+    {
+     "ref": "8.3",
+     "title": "System Call Error Handling",
+     "zh": "系统调用错误处理"
+    },
+    {
+     "ref": "8.4",
+     "title": "Process Control",
+     "zh": "进程控制"
+    },
+    {
+     "ref": "8.5",
+     "title": "Signals",
+     "zh": "信号"
+    },
+    {
+     "ref": "8.6",
+     "title": "Nonlocal Jumps",
+     "zh": "非局部跳转"
+    },
+    {
+     "ref": "8.7",
+     "title": "Tools for Manipulating Processes",
+     "zh": "进程操作工具"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "System-Level I/O",
+   "zh": "系统级 I/O",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Unix I/O",
+     "zh": "Unix I/O"
+    },
+    {
+     "ref": "10.2",
+     "title": "Files",
+     "zh": "文件"
+    },
+    {
+     "ref": "10.3",
+     "title": "Opening and Closing Files",
+     "zh": "打开与关闭文件"
+    },
+    {
+     "ref": "10.4",
+     "title": "Reading and Writing Files",
+     "zh": "读写文件"
+    },
+    {
+     "ref": "10.5",
+     "title": "Robust Reading and Writing with the Rio Package",
+     "zh": "用 Rio 包做健壮的读写"
+    },
+    {
+     "ref": "10.6",
+     "title": "Reading File Metadata",
+     "zh": "读取文件元数据"
+    },
+    {
+     "ref": "10.7",
+     "title": "Reading Directory Contents",
+     "zh": "读取目录内容"
+    },
+    {
+     "ref": "10.8",
+     "title": "Sharing Files",
+     "zh": "文件共享"
+    },
+    {
+     "ref": "10.9",
+     "title": "I/O Redirection",
+     "zh": "I/O 重定向"
+    },
+    {
+     "ref": "10.10",
+     "title": "Standard I/O",
+     "zh": "标准 I/O"
+    },
+    {
+     "ref": "10.11",
+     "title": "Putting It Together: Which I/O Functions Should I Use?",
+     "zh": "综合：该用哪些 I/O 函数？"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Network Programming",
+   "zh": "网络编程",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "The Client-Server Programming Model",
+     "zh": "客户端-服务器编程模型"
+    },
+    {
+     "ref": "11.2",
+     "title": "Networks",
+     "zh": "网络"
+    },
+    {
+     "ref": "11.3",
+     "title": "The Global IP Internet",
+     "zh": "全球 IP 互联网"
+    },
+    {
+     "ref": "11.4",
+     "title": "The Sockets Interface",
+     "zh": "套接字接口"
+    },
+    {
+     "ref": "11.5",
+     "title": "Web Servers",
+     "zh": "Web 服务器"
+    },
+    {
+     "ref": "11.6",
+     "title": "Putting It Together: The Tiny Web Server",
+     "zh": "综合：Tiny Web 服务器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Concurrent Programming",
+   "zh": "并发编程",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Concurrent Programming with Processes",
+     "zh": "基于进程的并发编程"
+    },
+    {
+     "ref": "12.2",
+     "title": "Concurrent Programming with I/O Multiplexing",
+     "zh": "基于 I/O 多路复用的并发编程"
+    },
+    {
+     "ref": "12.3",
+     "title": "Concurrent Programming with Threads",
+     "zh": "基于线程的并发编程"
+    },
+    {
+     "ref": "12.4",
+     "title": "Shared Variables in Threaded Programs",
+     "zh": "多线程程序中的共享变量"
+    },
+    {
+     "ref": "12.5",
+     "title": "Synchronizing Threads with Semaphores",
+     "zh": "用信号量同步线程"
+    },
+    {
+     "ref": "12.6",
+     "title": "Using Threads for Parallelism",
+     "zh": "用线程实现并行"
+    },
+    {
+     "ref": "12.7",
+     "title": "Other Concurrency Issues",
+     "zh": "其他并发问题",
+     "items": [
+      {
+       "ref": "12.7.1",
+       "title": "Thread Safety",
+       "zh": "线程安全"
+      },
+      {
+       "ref": "12.7.2",
+       "title": "Reentrancy",
+       "zh": "可重入性"
+      },
+      {
+       "ref": "12.7.4",
+       "title": "Races",
+       "zh": "竞态"
+      },
+      {
+       "ref": "12.7.5",
+       "title": "Deadlocks",
+       "zh": "死锁"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "28",
+   "title": "Locks",
+   "zh": "锁",
+   "fill": "原子操作",
+   "items": [
+    {
+     "ref": "28.7",
+     "title": "Building Working Spin Locks with Test-And-Set",
+     "zh": "用 Test-And-Set 实现可用的自旋锁"
+    },
+    {
+     "ref": "28.9",
+     "title": "Compare-And-Swap",
+     "zh": "比较并交换"
+    },
+    {
+     "ref": "28.10",
+     "title": "Load-Linked and Store-Conditional",
+     "zh": "加载链接与条件存储"
+    },
+    {
+     "ref": "28.11",
+     "title": "Fetch-And-Add",
+     "zh": "取并加"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "REC 5",
+   "title": "Eraser",
+   "zh": "Eraser 竞争检测器",
+   "fill": "竞态检测",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "系统调用",
+   "refs": [
+    "A:8.2",
+    "A:8.3",
+    "A:8.4",
+    "A:10.1",
+    "A:10.3"
+   ]
+  },
+  {
+   "topic": "锁",
+   "refs": [
+    "A:12.5",
+    "B:28.7",
+    "B:28.9"
+   ]
+  },
+  {
+   "topic": "原子操作",
+   "refs": [
+    "B:28.7",
+    "B:28.9",
+    "B:28.10",
+    "B:28.11"
+   ],
+   "note": "CSAPP 没有原子指令专节，B 组给到硬件原子原语；C11/C++11 的原子类型与内存序不在两本书里。"
+  },
+  {
+   "topic": "内存模型",
+   "refs": [
+    "A:12.4"
+   ],
+   "note": "这里只到“线程内存模型/共享变量”这一层；正式的内存一致性模型（TSO、放松序）见 C.1.2 导览图 B 组的 CS152 Memory Consistency。"
+  },
+  {
+   "topic": "IPC与竞态检测",
+   "refs": [
+    "A:12.1",
+    "A:12.2",
+    "A:8.5",
+    "A:11.4",
+    "A:12.7.4",
+    "C:REC 5"
+   ],
+   "note": "IPC 侧 CSAPP 给进程并发、I/O 多路复用、信号与 socket；竞态检测由 C 组的 Eraser 讨论课承担，A 侧 12.7.4 只讲竞态本身。"
+  }
+ ],
+ "omitted": "CSAPP 第 1–7 章（数据表示、机器级编程、处理器、优化、存储层次、链接）、第 9 章（虚拟内存：属 C.2.1）、附录 A（错误处理）与各章习题/参考文献未收；OSTEP 只收第 28 章中与原子指令相关的 4 节，28.1/28.3 已被 CSAPP 12.5 覆盖，28.13/28.15/28.16/28.17 为让出 CPU、平台差异、两阶段锁与小结；6.033 只收 REC 5。",
+ "notes": "A 的目录来自作者官网的 TOC/前言 PDF（含节号），修正了 PDF 的拆字（如“Deﬁnition”→“Definition”）。CSE333（节点现有英文资源）的 syllabus 只列“Approximate Topic List”，到不了节级，故以它推荐的 CSAPP 为主来源；CSE333 自己的网络与并发周可与 A:11/A:12 对照。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 45,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

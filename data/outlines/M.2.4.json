@@ -1,0 +1,234 @@
+{
+ "id": "M.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "16.323 Principles of Optimal Control (Spring 2008)",
+   "by": "Jonathan P. How — MIT OpenCourseWare",
+   "year": 2008,
+   "url": "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/16-323-principles-of-optimal-control-spring-2008/pages/lecture-notes/"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课：MIT 研究生最优控制课，Lecture Notes 页按 Lec 1–Lec 16 逐讲列出主题，其中 Lec 1–2 有限维最优性条件（含 Lagrange 乘子）、Lec 3–4 动态规划与 HJB、Lec 5–6 变分法及其在最优控制中的应用、Lec 8–9 最优控制解的性质与约束最优控制，正对节点的“泛函极值/变分原理/最优性条件”。"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "The Calculus of Variations",
+   "by": "Peter J. Olver",
+   "year": 2021,
+   "url": "https://www-users.cse.umn.edu/~olver/ln_/cv.pdf",
+   "toc_urls": [
+    "https://www-users.cse.umn.edu/~olver/ln_/cv.pdf"
+   ],
+   "why": "补“Euler–Lagrange 方程”与“泛函极值”的正面推导：16.323 只有一讲叫 Calculus of variations，标题里没有 Euler–Lagrange，也没有第二变分与自然边界条件；Olver 这篇明尼苏达大学讲义（作者主页免费 PDF）用 §3 第一变分导出 Euler–Lagrange 方程、§4 自然边界条件、§5 第二变分，结构正好补上。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture Notes",
+   "title": "Lecture Notes",
+   "zh": "课程讲义（Lec 1–Lec 16 中的相关讲次）",
+   "items": [
+    {
+     "ref": "Lec 1",
+     "title": "Nonlinear optimization: unconstrained nonlinear optimization, line search methods",
+     "zh": "非线性优化：无约束非线性优化与线搜索方法"
+    },
+    {
+     "ref": "Lec 2",
+     "title": "Nonlinear optimization: constrained nonlinear optimization, Lagrange multipliers",
+     "zh": "非线性优化：约束非线性优化与 Lagrange 乘子"
+    },
+    {
+     "ref": "Lec 3",
+     "title": "Dynamic programming: principle of optimality, dynamic programming, discrete LQR",
+     "zh": "动态规划：最优性原理、动态规划与离散 LQR"
+    },
+    {
+     "ref": "Lec 4",
+     "title": "HJB equation: differential pressure in continuous time, HJB equation, continuous LQR",
+     "zh": "HJB 方程：连续时间情形、HJB 方程与连续 LQR"
+    },
+    {
+     "ref": "Lec 5",
+     "title": "Calculus of variations",
+     "zh": "变分法"
+    },
+    {
+     "ref": "Lec 6",
+     "title": "Calculus of variations applied to optimal control",
+     "zh": "变分法在最优控制中的应用"
+    },
+    {
+     "ref": "Lec 8",
+     "title": "Properties of optimal control solution",
+     "zh": "最优控制解的性质"
+    },
+    {
+     "ref": "Lec 9",
+     "title": "Constrained optimal control",
+     "zh": "约束最优控制"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Examples of Variational Problems",
+   "zh": "变分问题的例子",
+   "fill": "补“变分原理”：16.323 直接进算法，没有讲如何把几何/物理问题写成泛函极值问题。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Minimal Curves, Optics, and Geodesics",
+     "zh": "最短曲线、光学与测地线"
+    },
+    {
+     "ref": "",
+     "title": "Minimal Surfaces",
+     "zh": "极小曲面"
+    },
+    {
+     "ref": "",
+     "title": "Isoperimetric Problems and Constraints",
+     "zh": "等周问题与约束"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "The Euler–Lagrange Equation",
+   "zh": "Euler–Lagrange 方程",
+   "fill": "补“Euler–Lagrange 方程”：A 的 Lec 5 标题只写 Calculus of variations，这一章把它作为第一变分的直接结果逐条推出。",
+   "items": [
+    {
+     "ref": "",
+     "title": "The First Variation",
+     "zh": "第一变分"
+    },
+    {
+     "ref": "",
+     "title": "Curves of Shortest Length — Planar Geodesics",
+     "zh": "最短长度曲线：平面测地线"
+    },
+    {
+     "ref": "",
+     "title": "Minimal Surface of Revolution",
+     "zh": "旋转极小曲面"
+    },
+    {
+     "ref": "",
+     "title": "The Brachistochrone Problem",
+     "zh": "最速降线问题"
+    },
+    {
+     "ref": "",
+     "title": "The Fundamental Lemma",
+     "zh": "变分法基本引理"
+    },
+    {
+     "ref": "",
+     "title": "A Cautionary Example",
+     "zh": "一个反例（警示）"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Boundary Conditions",
+   "zh": "边界条件",
+   "fill": "补“变分原理”里由极值条件产生的边界条件：16.323 只在最优控制的横截条件里带过。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Natural Boundary Conditions",
+     "zh": "自然边界条件"
+    },
+    {
+     "ref": "",
+     "title": "Null Lagrangians",
+     "zh": "零拉格朗日量"
+    },
+    {
+     "ref": "",
+     "title": "General Boundary Conditions",
+     "zh": "一般边界条件"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "The Second Variation",
+   "zh": "第二变分",
+   "fill": "补“泛函极值”的充分条件（极小的二阶判定），A 只讲必要条件的推导。",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Multi-dimensional Variational Problems",
+   "zh": "多维变分问题",
+   "fill": "补“Euler–Lagrange 方程”的多维形式（多元函数的变分问题与相应的偏微分方程）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "The First Variation and the Euler–Lagrange Equations",
+     "zh": "第一变分与 Euler–Lagrange 方程组"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "泛函极值",
+   "refs": [
+    "B:3",
+    "B:5",
+    "A:Lec 1"
+   ],
+   "note": "B §3 由第一变分给出泛函取极值的必要条件，§5 The Second Variation 给出二阶（充分）条件；有限维的极值问题（无约束最优化与线搜索）在 A:Lec 1。"
+  },
+  {
+   "topic": "Euler–Lagrange方程",
+   "refs": [
+    "B:3",
+    "B:6"
+   ],
+   "note": "B §3 The Euler–Lagrange Equation（The First Variation、The Fundamental Lemma、最速降线等例子）；多维形式在 §6 的 The First Variation and the Euler–Lagrange Equations。A 侧对应 Lec 5 Calculus of variations 与 Lec 6，但课程页的讲次标题没有写出 Euler–Lagrange。"
+  },
+  {
+   "topic": "变分原理",
+   "refs": [
+    "B:2",
+    "B:4",
+    "A:Lec 6"
+   ],
+   "note": "B §2 给出把几何/物理问题写成泛函极值问题的例子（最短曲线与测地线、极小曲面、等周问题与约束），§4 讲由变分原理自然产生的边界条件；A:Lec 6 是变分法在最优控制问题上的应用（把最优控制化为变分问题）。"
+  },
+  {
+   "topic": "最优性条件",
+   "refs": [
+    "A:Lec 2",
+    "A:Lec 4",
+    "A:Lec 8",
+    "A:Lec 9"
+   ],
+   "note": "A:Lec 2 约束非线性优化与 Lagrange 乘子（有限维 KKT 条件），A:Lec 4 HJB 方程（连续时间最优性的充分条件），A:Lec 8 最优控制解的性质（Pontryagin 最小值原理一类的一阶必要条件，讲义按 Bryson & Ho §3.5 / Kirk §4.4 讲），A:Lec 9 约束最优控制的处理。B 侧的一阶必要条件就是 Euler–Lagrange 方程（B:3）。"
+  }
+ ],
+ "omitted": "A（16.323）只收 Lec 1–6、8–9 共 8 讲：未收 Lec 7（Numerical solution in MATLAB，属数值实现）、Lec 10（Singular arcs，奇异弧这一专门情形）、Lec 11–13（估计器/观测器、随机最优控制、LQG 鲁棒性）与 Lec 14–16（MIMO 与奇异值分解、H∞ 综合、模型预测控制），这些是控制工程与估计理论，超出本节点的四个知识点。B（Olver）未收 §1 Introduction（导言）；§2–§6 内部没有编号小节，故第三层条目的 ref 留空。节点“现有英文学习资源”本身（16.323）没有按章节组织，只有逐讲表，所以 A 只有 “Lecture Notes” 一个分支。",
+ "notes": "A 的课程页把讲次标为 “Lec #”，原文标题照抄（含 Lec 4 的 “differential pressure in continuous time”，这句在原文里像是 “dynamic programming” 的笔误，中文按上下文译为“连续时间情形”，未改动英文原文）。A 只用了 Lecture Notes 页做目录（syllabus 只有“每个主题约几讲”的粗表，没有逐讲标题）。B 是 author homepage 上的免费讲义 PDF，日期取首页的 “3/21/21 © 2021”。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 27,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

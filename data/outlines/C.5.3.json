@@ -1,0 +1,298 @@
+{
+ "id": "C.5.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS267 Applications of Parallel Computers, Spring 2016 — Lecture Notes and Schedule",
+   "by": "James Demmel (UC Berkeley)",
+   "year": 2016,
+   "url": "https://people.eecs.berkeley.edu/~demmel/cs267_Spr16/",
+   "toc_urls": [
+    "https://people.eecs.berkeley.edu/~demmel/cs267_Spr16/"
+   ],
+   "why": "先修证据里的课程，也是这门课的标准课程表：逐讲列出题目并附讲义（模拟中的并行性与局部性、共享内存与分布式内存编程、稠密线性代数、图划分、自动性能调优与 SpMV、结构网格、动态负载均衡、N 体问题的层次方法、通信下界与最优算法），正对“数值工作负载、并行求解器、通信优化”。"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "Contents of class notes for UW HPSC – Coursera Edition",
+   "by": "Randall J. LeVeque (University of Washington)",
+   "year": 2013,
+   "url": "https://faculty.washington.edu/rjl/uwhpsc-coursera/",
+   "toc_urls": [
+    "https://faculty.washington.edu/rjl/uwhpsc-coursera/"
+   ],
+   "why": "节点现有英文学习资源（UW AMath 483/583 的公开讲义）。它的目录把 OpenMP、MPI、计时、BLAS/LAPACK 与三个应用（Poisson 问题的数值方法与迭代法、Jacobi 的 OpenMP/MPI 版本、蒙特卡洛）逐节列出，正好补 CS267 只给讲次标题、没有具体数值实现步骤的缺口。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Single Processor Machines: Memory Hierarchies and Processor Features",
+   "zh": "单处理器机器：存储层次与处理器特性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Parallel Machines and Programming Models",
+   "zh": "并行机器与编程模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Sources of Parallelism and Locality in Simulation (Part 1)",
+   "zh": "模拟中的并行性与局部性来源（上）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Sources of Parallelism and Locality in Simulation (Part 2)",
+   "zh": "模拟中的并行性与局部性来源（下）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Shared Memory Programming: Threads and OpenMP",
+   "zh": "共享内存编程：线程与 OpenMP",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Distributed Memory Machines and Programming",
+   "zh": "分布式内存机器与编程",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Dense Linear Algebra (Part 1)",
+   "zh": "稠密线性代数（上）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Dense Linear Algebra (Part 2)",
+   "zh": "稠密线性代数（下）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Graph Partitioning",
+   "zh": "图划分",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "Automatic Performance Tuning and Sparse-Matrix-Vector-Multiplication",
+   "zh": "自动性能调优与稀疏矩阵向量乘",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Structured Grids",
+   "zh": "结构网格",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "23",
+   "title": "Dynamic Load Balancing",
+   "zh": "动态负载均衡",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "25",
+   "title": "Hierarchical Methods for the N-Body Problem",
+   "zh": "N 体问题的层次方法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Communication Lower Bounds and Optimal Algorithms",
+   "zh": "通信下界与最优算法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Parallel computing",
+   "zh": "并行计算",
+   "fill": "补“并行求解器”的具体接口与例子：CS267 只给讲次标题，这一节把 OpenMP 与 MPI 的代码骨架和归约、收发、主从模式逐条列出",
+   "items": [
+    {
+     "ref": "",
+     "title": "OpenMP",
+     "zh": "OpenMP",
+     "items": [
+      {
+       "ref": "",
+       "title": "Fine-grain vs. coarse-grain paralellism",
+       "zh": "细粒度与粗粒度并行"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "MPI",
+     "zh": "MPI",
+     "items": [
+      {
+       "ref": "",
+       "title": "Reduction example",
+       "zh": "归约例子"
+      },
+      {
+       "ref": "",
+       "title": "Send-Receive example",
+       "zh": "发送-接收例子"
+      },
+      {
+       "ref": "",
+       "title": "Master-worker examples",
+       "zh": "主从模式例子"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Miscellaneous",
+   "zh": "杂项",
+   "fill": "补“带宽极限”的实测手段：计时、BLAS/LAPACK 为什么比自己写的三重循环快",
+   "items": [
+    {
+     "ref": "",
+     "title": "Timing code",
+     "zh": "给代码计时"
+    },
+    {
+     "ref": "",
+     "title": "Timing OpenMP code",
+     "zh": "给 OpenMP 代码计时"
+    },
+    {
+     "ref": "",
+     "title": "Linear Algebra software",
+     "zh": "线性代数软件"
+    },
+    {
+     "ref": "",
+     "title": "The BLAS",
+     "zh": "BLAS"
+    },
+    {
+     "ref": "",
+     "title": "LAPACK",
+     "zh": "LAPACK"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Applications",
+   "zh": "应用",
+   "fill": "补“数值工作负载”：把区域分解、晕圈交换、迭代求解落到 Poisson 问题、Jacobi 与蒙特卡洛上",
+   "items": [
+    {
+     "ref": "",
+     "title": "Numerical methods for the Poisson problem",
+     "zh": "Poisson 问题的数值方法"
+    },
+    {
+     "ref": "",
+     "title": "Iterative methods for the Poisson problem",
+     "zh": "Poisson 问题的迭代法"
+    },
+    {
+     "ref": "",
+     "title": "Monte Carlo methods for the steady state diffusion equation",
+     "zh": "稳态扩散方程的蒙特卡洛方法"
+    },
+    {
+     "ref": "",
+     "title": "Jacobi iteration using OpenMP with parallel do constructs",
+     "zh": "用 OpenMP parallel do 的 Jacobi 迭代"
+    },
+    {
+     "ref": "",
+     "title": "Jacobi iteration using OpenMP with coarse-grain parallel block",
+     "zh": "用 OpenMP 粗粒度分块的 Jacobi 迭代"
+    },
+    {
+     "ref": "",
+     "title": "Jacobi iteration using MPI",
+     "zh": "用 MPI 的 Jacobi 迭代"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "数值工作负载",
+   "refs": [
+    "A:4",
+    "A:5",
+    "A:12",
+    "A:17",
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "并行求解器",
+   "refs": [
+    "A:6",
+    "A:7",
+    "A:12",
+    "A:13",
+    "B:#1",
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "可扩展性",
+   "refs": [
+    "A:23",
+    "A:15"
+   ],
+   "note": "CS267（2016）的讲次表里没有以强扩展/弱扩展或加速比命名的讲次，最接近的是第 23 讲 Dynamic Load Balancing（负载与并行效率）与第 15 讲 Automatic Performance Tuning；LeVeque 讲义只有“给代码计时”一节。强弱扩展的定义与加速比计算要靠第 3 讲 Parallel Machines and Programming Models 的讲义内容，标题里看不出来。"
+  },
+  {
+   "topic": "通信优化",
+   "refs": [
+    "A:#14",
+    "A:7",
+    "B:#1"
+   ],
+   "note": "通信下界与最优算法这一讲在 CS267 的讲次表里紧跟第 25 讲列出、没有自己的讲次编号，所以用分支序号引用。"
+  },
+  {
+   "topic": "能耗",
+   "refs": [],
+   "note": "两个来源都没有讲能耗的章：CS267（2016）的讲次表里没有功耗或能效相关的题目，LeVeque 的讲义目录只到计时、BLAS/LAPACK 与并行 Jacobi，也没有功耗章节；这一项需要另找教材（例如专门的能效/HPC 功耗资料），不在本次两个来源的目录里。"
+  }
+ ],
+ "omitted": "A 里没收：第 1 讲 Introduction、第 8 讲 UPC（分区全局地址空间语言）、第 9–11 讲（云计算与大数据、NERSC 与 Knights Landing、CUDA/OpenCL 入门）、第 18–22 讲（并行图算法、用模式架构并行软件、FFT、气候建模、科学软件生态）、第 24、27、28 讲（材料设计的数据挖掘、宇宙微波背景数据分析、大数据与百亿亿次），这些是体系结构、GPU、图算法与具体应用领域专题，与节点简介的五项关系较远；B 里只取了“并行计算 / 杂项 / 应用”三节，未收 Python、Fortran、Shell、版本控制、VM 与调试等语言与工具章节。",
+ "notes": "A 是逐讲清单，分支 ref 用页面上的讲次编号；最后一讲（通信下界与最优算法）在页面上写作“then Communication Lower Bounds and Optimal Algorithms”，没有讲次编号，因此 ref 留空，coverage 里用 A:#14 指分支序号。B 是 Sphinx 生成的整书目录，分支标题是页面上的三个小节名（Parallel computing、Miscellaneous、Applications），其下条目按原目录的层次照抄，最内层没有编号，ref 留空；原目录里的拼写错误 paralellism 按原文保留。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 34,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

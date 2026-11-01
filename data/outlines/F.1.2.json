@@ -1,0 +1,231 @@
+{
+ "id": "F.1.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Design and Analysis of Algorithms (6.046J, Spring 2015)",
+   "by": "Erik Demaine, Srini Devadas",
+   "year": 2015,
+   "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/pages/calendar/"
+   ],
+   "why": "节点现有的英文资源就是这门课；OCW 的 calendar 逐讲列出 L1–L24 与复习课 R1–R11 的具体主题，分治、贪心、动态规划、摊还四项都能直接对上，课程同时声明以 CLRS 为教材。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Algorithms, 4th Edition",
+   "by": "Robert Sedgewick, Kevin Wayne",
+   "year": 2011,
+   "url": "https://algs4.cs.princeton.edu/home/",
+   "toc_urls": [
+    "https://algs4.cs.princeton.edu/14analysis/"
+   ],
+   "why": "补“渐近分析”：6.046J 把渐近记号当作默认先修，课表里没有单列一节，第 1.4 节讲增长阶、代价模型、最坏情况保证与摊还分析，正好补这一段。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "L1",
+   "title": "Overview, Interval Scheduling",
+   "zh": "概览、区间调度",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L2",
+   "title": "Divide & Conquer: Convex Hull, Median Finding",
+   "zh": "分治：凸包、中位数查找",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "R1",
+   "title": "Divide & Conquer: Smarter Interval Scheduling, Master Theorem, Strassen’s Algorithm",
+   "zh": "分治：更聪明的区间调度、主定理、Strassen 算法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L3",
+   "title": "Divide & Conquer: FFT",
+   "zh": "分治：快速傅里叶变换",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L4",
+   "title": "Divide & Conquer: Van Emde Boas Trees",
+   "zh": "分治：van Emde Boas 树",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L5",
+   "title": "Amortization: Amortized Analysis",
+   "zh": "摊还：摊还分析",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "R3",
+   "title": "Amortization: Union-find",
+   "zh": "摊还：并查集",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "R5",
+   "title": "Dynamic Programming: More Examples",
+   "zh": "动态规划：更多例子",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L10",
+   "title": "Dynamic Programming: Advanced DP",
+   "zh": "动态规划：进阶动态规划",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L11",
+   "title": "Dynamic Programming: All-pairs Shortest Paths",
+   "zh": "动态规划：全源最短路径",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L12",
+   "title": "Greedy Algorithms: Minimum Spanning Tree",
+   "zh": "贪心算法：最小生成树",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "R6",
+   "title": "Greedy Algorithms: More Examples",
+   "zh": "贪心算法：更多例子",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "1.4",
+   "title": "Analysis of Algorithms",
+   "zh": "算法分析",
+   "fill": "渐近分析",
+   "items": [
+    {
+     "ref": "",
+     "title": "Mathematical models",
+     "zh": "数学模型"
+    },
+    {
+     "ref": "",
+     "title": "Tilde approximations",
+     "zh": "波浪号近似"
+    },
+    {
+     "ref": "",
+     "title": "Order-of-growth classifications",
+     "zh": "增长阶分类"
+    },
+    {
+     "ref": "",
+     "title": "Worst-case performance guarantees",
+     "zh": "最坏情况性能保证"
+    },
+    {
+     "ref": "",
+     "title": "Amortized analysis",
+     "zh": "摊还分析"
+    },
+    {
+     "ref": "",
+     "title": "Memory usage",
+     "zh": "内存使用"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "渐近分析",
+   "refs": [
+    "B:1.4",
+    "A:L1"
+   ],
+   "note": "6.046J 假定已会渐近记号，课表只在 L1 的概览里带过；增长阶、代价模型、最坏情况保证的正式定义在补充来源 B 的 1.4 节。"
+  },
+  {
+   "topic": "递归",
+   "refs": [
+    "A:R1",
+    "A:L2"
+   ],
+   "note": "递归式的求解集中在 R1 的主定理（Master Theorem）与 L2、L3 的分治递归分析里，课程没有单独的“递归”一讲。"
+  },
+  {
+   "topic": "分治",
+   "refs": [
+    "A:L2",
+    "A:R1",
+    "A:L3",
+    "A:L4"
+   ]
+  },
+  {
+   "topic": "贪心",
+   "refs": [
+    "A:L1",
+    "A:L12",
+    "A:R6"
+   ]
+  },
+  {
+   "topic": "动态规划",
+   "refs": [
+    "A:R5",
+    "A:L10",
+    "A:L11"
+   ]
+  },
+  {
+   "topic": "摊还分析",
+   "refs": [
+    "A:L5",
+    "A:R3",
+    "B:1.4"
+   ],
+   "note": "L5 讲摊还分析的三种方法，R3 用并查集做例子；补充来源 B 的 1.4 节也有一小节 Amortized analysis。"
+  },
+  {
+   "topic": "D2 验收：为给定问题选出正确范式并证明界",
+   "refs": [
+    "A:R1",
+    "A:L10",
+    "A:L12"
+   ],
+   "note": "主定理证分治界、进阶 DP 与 MST 贪心的正确性证明。"
+  },
+  {
+   "topic": "D3 验收：独立完成归约、下界或最优性证明",
+   "refs": [
+    "A:L5",
+    "A:R3"
+   ],
+   "note": "摊还界（势能法、并查集反 Ackermann 界）是本科阶段能写完整下界证明的部分；更强的下界证明在 F.1.6 的课程里。"
+  }
+ ],
+ "omitted": "6.046J 课表里与本节点无关的部分未收：随机化 L6–L8（属 F.1.4）、数据结构增强 L9、网络流与匹配 L13–L14 及 R7（属 F.1.3）、线性规划 L15、复杂度与近似 L16–L18 及 R8–R9、分布式算法 L19–L20 及 R10、密码学 L21–L22 及 R11、缓存无关算法 L23–L24、复习课 R2（B 树）与 R4（随机中位数）。补充来源只取了第 1.4 节，其余章节与节点简介无关。",
+ "notes": "6.046J 的 calendar 页同时给出教材：Cormen, Leiserson, Rivest, Stein《Introduction to Algorithms》3rd ed.，若主代理想换成教材视角，可把 CLRS 第 3、4、15、16、17 章按本导览图的六个知识点对应替换。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 19,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

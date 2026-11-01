@@ -1,0 +1,292 @@
+{
+ "id": "M.3.6",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Algebraic Geometry (18.725)",
+   "by": "Roman Bezrukavnikov — MIT OpenCourseWare",
+   "year": 2015,
+   "url": "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/lecture-notes/",
+    "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/calendar/"
+   ],
+   "why": "节点现有英文资源：MIT 18.725 研究生代数几何，讲义页逐讲列出主题（Zariski 拓扑、仿射/射影簇、有限态射、分离性、爆破、Bezout 定理），适合 D4 的代数簇一线。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "Introduction to Representation Theory (18.712)",
+   "by": "Pavel Etingof — MIT OpenCourseWare",
+   "year": 2010,
+   "url": "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/pages/lecture-notes/"
+   ],
+   "why": "节点先修证据里的 18.712，讲义页给出 Etingof 教材完整章-节目录；补“群表示与结构方法”这一半（A 是代数几何，完全不讲表示论）。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "Ideals, Varieties, and Algorithms: An Introduction to Computational Algebraic Geometry and Commutative Algebra",
+   "by": "David A. Cox, John Little, Donal O’Shea (Springer, Undergraduate Texts in Mathematics)",
+   "year": 2015,
+   "url": "https://www.idealsvarietiesalgorithms.org/",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-319-16721-3"
+   ],
+   "why": "补“多项式理想”：18.725 直接进簇与态射，理想只在簇的定义里出现；这本书的 1–4 章把理想、Gröbner 基、消元与“代数-几何词典”（Hilbert 基定理、Nullstellensatz）作为主线，是多项式理想的标准入口。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Course Introduction, Zariski Topology",
+   "zh": "课程引言、Zariski 拓扑",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Affine Varieties",
+   "zh": "仿射簇",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Projective Varieties, Noether Normalization",
+   "zh": "射影簇、Noether 正规化",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Grassmannians, Finite and Affine Morphisms",
+   "zh": "Grassmann 簇、有限态射与仿射态射",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "More on Finite Morphisms and Irreducible Varieties",
+   "zh": "有限态射续、不可约簇",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Function Field, Dominant Maps",
+   "zh": "函数域、支配态射",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Product of Varieties, Separatedness",
+   "zh": "簇的乘积、分离性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Product Topology, Complete Varieties",
+   "zh": "乘积拓扑、完备簇",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Chow’s Lemma, Blowups",
+   "zh": "Chow 引理、爆破",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Sheaves, Invertible Sheaves on P1",
+   "zh": "层、P1 上的可逆层",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Bezout’s Theorem",
+   "zh": "Bezout 定理",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "1",
+   "title": "Geometry, Algebra, and Algorithms",
+   "zh": "几何、代数与算法",
+   "fill": "补“多项式理想”的入门：用多项式方程组引出理想与簇，给出 Hilbert 基定理与 Gröbner 基的问题框架。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "2",
+   "title": "Gröbner Bases",
+   "zh": "Gröbner 基",
+   "fill": "补“多项式理想”：理想的生成与单项序、Buchberger 算法、理想成员判定，即多项式理想的算法侧。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "3",
+   "title": "Elimination Theory",
+   "zh": "消元理论",
+   "fill": "补“多项式理想”：消元定理与扩展定理，是解多项式方程组、从理想读出簇的标准工具。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "4",
+   "title": "The Algebra–Geometry Dictionary",
+   "zh": "代数-几何词典",
+   "fill": "补“多项式理想 ↔ 代数簇”的对应：Hilbert 零点定理（Nullstellensatz）、坐标环、簇的范畴与理想的对应。",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Chapter 1",
+   "title": "Basic Notions of Representation Theory",
+   "zh": "表示论的基本概念",
+   "fill": "补“群表示”：表示的定义、代数与理想、商代数、由生成元与关系定义的代数，把“结构方法”落到表示上。",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "What is representation theory?",
+     "zh": "什么是表示论"
+    },
+    {
+     "ref": "1.2",
+     "title": "Algebras",
+     "zh": "代数"
+    },
+    {
+     "ref": "1.3",
+     "title": "Representations",
+     "zh": "表示"
+    },
+    {
+     "ref": "1.4",
+     "title": "Ideals",
+     "zh": "理想"
+    },
+    {
+     "ref": "1.5",
+     "title": "Quotients",
+     "zh": "商代数"
+    },
+    {
+     "ref": "1.6",
+     "title": "Algebras defined by generators and relations",
+     "zh": "由生成元与关系定义的代数"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Chapter 4",
+   "title": "Representations of Finite Groups: Further Results",
+   "zh": "有限群表示的进一步结果",
+   "fill": "补“结构方法”：诱导表示、Mackey 公式、Frobenius 互反律与 Schur-Weyl 对偶，是把群的结构（子群、直积、对称群）翻成表示论结论的标准技术。",
+   "items": [
+    {
+     "ref": "4.8",
+     "title": "Induced representations",
+     "zh": "诱导表示"
+    },
+    {
+     "ref": "4.9",
+     "title": "The Mackey formula",
+     "zh": "Mackey 公式"
+    },
+    {
+     "ref": "4.10",
+     "title": "Frobenius reciprocity",
+     "zh": "Frobenius 互反律"
+    },
+    {
+     "ref": "4.18",
+     "title": "Schur-Weyl duality",
+     "zh": "Schur-Weyl 对偶"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "Chapter 5",
+   "title": "Quiver Representations",
+   "zh": "箭图表示",
+   "fill": "补“结构方法”的代数侧：用箭图把有限维代数与表示分类化，Gabriel 定理用根系的组合数据刻画不可分解表示。",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "Indecomposable representations of the quivers A1,A2,A3",
+     "zh": "箭图 A1、A2、A3 的不可分解表示"
+    },
+    {
+     "ref": "5.4",
+     "title": "Roots",
+     "zh": "根系"
+    },
+    {
+     "ref": "5.5",
+     "title": "Gabriel’s theorem",
+     "zh": "Gabriel 定理"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "多项式理想",
+   "refs": [
+    "C:1",
+    "C:2",
+    "C:3",
+    "C:4"
+   ],
+   "note": "A（18.725）从簇出发，理想只作为簇的坐标环隐含出现，没有以“理想”为标题的讲次，所以这一条主要靠 C 的 1–4 章。"
+  },
+  {
+   "topic": "代数簇",
+   "refs": [
+    "A:2",
+    "A:3",
+    "A:5",
+    "A:8",
+    "C:1"
+   ]
+  },
+  {
+   "topic": "群表示",
+   "refs": [
+    "B:Chapter 1",
+    "B:Chapter 4"
+   ],
+   "note": "Chapter 1 给表示/代数/理想的框架，Chapter 4 给诱导表示、Frobenius 互反律、Schur-Weyl 对偶这些有限群表示的核心结果。"
+  },
+  {
+   "topic": "结构方法",
+   "refs": [
+    "A:4",
+    "B:Chapter 4",
+    "B:Chapter 5"
+   ],
+   "note": "A:4 的有限/仿射态射是簇的结构性定理（Noether 正规化、Zariski 主定理一线），B 的两章是用代数结构（子群、箭图、根系）分类表示的路径。"
+  }
+ ],
+ "omitted": "A 中 11–15（层函子、拟凝聚/凝聚层、可逆层、射影空间上的凝聚层、除子与 Picard 群）与 17–23（Abel-Jacobi 映射与椭圆曲线、Kähler 微分、光滑性与典范丛、Grassmann 簇的（余）切丛、Riemann-Hurwitz、Bertini 与曲线上的凝聚层、导出函子与层上同调）属上同调与曲线专题，与节点简介（多项式理想、代数簇、群表示与结构方法）不直接对应。C 中 5–10 章（簇上的多项式与有理函数、机器人学与几何定理证明、有限群不变量理论、射影代数几何、簇的维数、更多 Gröbner 基算法）属进一步专题。B 中 Chapter 2（一般结果）、Chapter 3（有限群表示基础，已由 M.3.4 覆盖）、Chapter 6（范畴）、Chapter 7（有限维代数结构）未收。",
+ "notes": "本节点是 D4 专题，按简介里的两条线各取一个主来源：代数几何走 A（18.725 研究生课程，逐讲清单），表示论走 B（18.712，章-节完整）；多项式理想这一条 A 覆盖不足，用 C（Springer UTM 教材）的 1–4 章补到章一级（Springer 页面只列章标题，未列小节，所以 C 的分支没有 items）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 31,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

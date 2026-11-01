@@ -1,0 +1,341 @@
+{
+ "id": "P.4.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CSSE6400 Software Architecture (2026)",
+   "by": "The University of Queensland",
+   "year": 2026,
+   "url": "https://csse6400.uqcloud.net/",
+   "toc_urls": [
+    "https://csse6400.uqcloud.net/schedule/",
+    "https://csse6400.uqcloud.net/handouts/architecture.pdf"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课。它的 schedule 把每讲拆成具体主题（架构定义与质量属性、架构视图与 C4、ADR、分层/管道/微内核/服务式/事件驱动/微服务/无服务器等风格、部署策略、拆解单体），配套讲义 PDF 第 2 章按小节讲质量属性与文档化，正好覆盖组件与边界、架构风格、质量属性与架构决策。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Software Engineering, 9th Edition",
+   "by": "Ian Sommerville",
+   "year": 2010,
+   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "toc_urls": [
+    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+   ],
+   "why": "补“系统演化”：A 只有 Decomposing Monoliths、Deployment Strategies 两讲讲怎么改架构，没有演化过程、程序演化规律、维护与遗留系统的节级内容，用这本标准教材第 9 章补齐。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Software Architecture",
+   "zh": "软件架构",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is Software Architecture?",
+     "zh": "什么是软件架构？"
+    },
+    {
+     "ref": "",
+     "title": "High Quality Software",
+     "zh": "高质量软件"
+    },
+    {
+     "ref": "",
+     "title": "Quality Attributes",
+     "zh": "质量属性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "High Quality Software",
+   "zh": "高质量软件（讲义第 2 章）",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Functional Requirements",
+     "zh": "功能性需求"
+    },
+    {
+     "ref": "2.2",
+     "title": "Constraints",
+     "zh": "约束"
+    },
+    {
+     "ref": "2.3",
+     "title": "Principles",
+     "zh": "原则"
+    },
+    {
+     "ref": "2.4",
+     "title": "Quality Attributes",
+     "zh": "质量属性"
+    },
+    {
+     "ref": "2.5",
+     "title": "Documentation",
+     "zh": "架构文档化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Architectural Views",
+   "zh": "架构视图",
+   "items": [
+    {
+     "ref": "",
+     "title": "C4 Model",
+     "zh": "C4 模型"
+    },
+    {
+     "ref": "",
+     "title": "Sahara C4 Model",
+     "zh": "Sahara 案例的 C4 模型"
+    },
+    {
+     "ref": "",
+     "title": "Software Architecture in Practice Views",
+     "zh": "《软件架构实践》的视图划分"
+    },
+    {
+     "ref": "",
+     "title": "4+1 Views",
+     "zh": "4+1 视图"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Architecture Decision Records",
+   "zh": "架构决策记录",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Layered Architecture",
+   "zh": "分层架构",
+   "items": [
+    {
+     "ref": "",
+     "title": "Monolith Architecture",
+     "zh": "单体架构"
+    },
+    {
+     "ref": "",
+     "title": "Layered Architecture",
+     "zh": "分层架构"
+    },
+    {
+     "ref": "",
+     "title": "Layered Design Principles",
+     "zh": "分层设计原则"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Pipeline Architecture",
+   "zh": "管道架构",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Microkernel Architecture",
+   "zh": "微内核架构",
+   "items": [
+    {
+     "ref": "",
+     "title": "Media Server Example",
+     "zh": "媒体服务器示例"
+    },
+    {
+     "ref": "",
+     "title": "C4 Model",
+     "zh": "C4 模型"
+    },
+    {
+     "ref": "",
+     "title": "Technical vs Domain Partitioning",
+     "zh": "按技术划分与按领域划分"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Service-Based Architecture",
+   "zh": "基于服务的架构",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Event-driven Architecture",
+   "zh": "事件驱动架构",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Microservices Architecture",
+   "zh": "微服务架构",
+   "items": [
+    {
+     "ref": "",
+     "title": "Message Queues",
+     "zh": "消息队列"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Serverless Architecture",
+   "zh": "无服务器架构",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Deployment Strategies",
+   "zh": "部署策略",
+   "items": [
+    {
+     "ref": "",
+     "title": "Release Branching",
+     "zh": "发布分支"
+    },
+    {
+     "ref": "",
+     "title": "Recreate Deployment",
+     "zh": "重建式部署"
+    },
+    {
+     "ref": "",
+     "title": "Rolling Deployment",
+     "zh": "滚动部署"
+    },
+    {
+     "ref": "",
+     "title": "Blue/green Deployment",
+     "zh": "蓝绿部署"
+    },
+    {
+     "ref": "",
+     "title": "Canary Deployment",
+     "zh": "金丝雀部署"
+    },
+    {
+     "ref": "",
+     "title": "A/B Deployment",
+     "zh": "A/B 部署"
+    },
+    {
+     "ref": "",
+     "title": "Shadow Deployment",
+     "zh": "影子部署"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Decomposing Monoliths",
+   "zh": "拆解单体",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "9",
+   "title": "Software evolution",
+   "zh": "软件演化",
+   "fill": "补系统演化：演化过程、程序演化动力学、软件维护与遗留系统管理",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Evolution processes",
+     "zh": "演化过程"
+    },
+    {
+     "ref": "9.2",
+     "title": "Program evolution dynamics",
+     "zh": "程序演化动力学"
+    },
+    {
+     "ref": "9.3",
+     "title": "Software maintenance",
+     "zh": "软件维护"
+    },
+    {
+     "ref": "9.4",
+     "title": "Legacy system management",
+     "zh": "遗留系统管理"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "组件与边界",
+   "refs": [
+    "A:#3",
+    "A:#7",
+    "A:#13"
+   ]
+  },
+  {
+   "topic": "架构风格",
+   "refs": [
+    "A:#5",
+    "A:#6",
+    "A:#8",
+    "A:#9",
+    "A:#10",
+    "A:#11"
+   ]
+  },
+  {
+   "topic": "质量属性",
+   "refs": [
+    "A:#1",
+    "A:#2",
+    "A:2.4"
+   ]
+  },
+  {
+   "topic": "架构决策",
+   "refs": [
+    "A:#4",
+    "A:#1"
+   ]
+  },
+  {
+   "topic": "系统演化",
+   "refs": [
+    "A:#12",
+    "A:#13",
+    "B:9"
+   ]
+  }
+ ],
+ "omitted": "A 的 schedule 还列了 Security Principles、Containers、Infrastructure as Code、Distributed Systems I/II/III、Monitoring & Logging、Soft Skills for Architects、Software Engineering Research、Technical Documentation 等讲，属安全、云基础设施、分布式系统（C.4.1）、运维与研究方法等其他节点；AWS 课程材料、案例研讨与 Practical 工作表也没收。B 只收第 9 章，其余章属需求、设计、测试等节点。",
+ "notes": "A 的 schedule 每讲有 2–4 个主题要点，但页面本身没有编号（只有“Week One/two…”），所以分支与叶子的 ref 多留空；讲义 PDF 里有 2.1–2.5 的节号。coverage 里 A:#1–A:#13 指 A 的 13 个分支。“High Quality Software”同时是第 1 讲的要点和第 2 章标题，因此出现两次：分支 1 收讲内顺序，分支 2 收讲义的分节。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 44,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

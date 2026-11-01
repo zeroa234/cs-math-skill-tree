@@ -1,0 +1,272 @@
+{
+ "id": "H.4.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "16.30 Feedback Control Systems",
+   "by": "Jonathan P. How, Emilio Frazzoli, MIT OpenCourseWare",
+   "year": 2010,
+   "url": "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/16-30-feedback-control-systems-fall-2010/pages/calendar/"
+   ],
+   "why": "本科层次（OCW 标注 Undergraduate）的反馈控制课，逐讲列出具体主题，正好铺开本节点从经典到现代的整条线：根轨迹与 Bode 设计（反馈与稳定性）、状态空间模型与模型特性、可控性、开环/闭环估计器、LQR 与 LQG（Kalman 滤波在这里）。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Model Predictive Control: Theory, Computation, and Design (2nd ed.)",
+   "by": "James B. Rawlings and David Q. Mayne, University of California, Santa Barbara / Imperial College London",
+   "year": 2020,
+   "url": "https://sites.engineering.ucsb.edu/~jbraw/mpc/",
+   "toc_urls": [
+    "https://sites.engineering.ucsb.edu/~jbraw/mpc/MPC-book-2nd-edition-6th-printing.pdf"
+   ],
+   "why": "补“Kalman 滤波与模型预测控制”：A 只有 LQG 里顺带用到 Kalman 滤波，也没有 MPC。这本由作者主页免费公开整书的 MPC 标准教材，第 1 章从 LQ 问题讲到状态估计（线性最优估计、滚动时域估计、可观性），第 2 章讲 MPC 的调节问题与稳定性，正好补上这两块。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "6.302 Feedback Systems",
+   "by": "James Roberge, Joel Dawson, Kent Lundberg, MIT OpenCourseWare",
+   "year": 2007,
+   "url": "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-302-feedback-systems-spring-2007/pages/calendar/"
+   ],
+   "why": "这就是节点给的现有资源，但它是研究生课且只讲单回路经典频域设计（根轨迹、Nyquist、Bode、校正、描述函数），没有状态空间、Kalman 和 MPC，所以只作为“稳定性判据与稳定裕度”的补充：Nyquist 判据、Bode 图与增益/相位裕度、开环性能指标与 Bode 障碍赛道。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "L2",
+   "title": "Basic root locus: analysis and examples",
+   "zh": "根轨迹基础：分析与实例",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L4",
+   "title": "Control design using Bode plots",
+   "zh": "用 Bode 图设计控制器",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L5",
+   "title": "Introduction to state-space models",
+   "zh": "状态空间模型导论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L7",
+   "title": "State-space models: basic properties",
+   "zh": "状态空间模型的基本性质",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L9",
+   "title": "State-space model features",
+   "zh": "状态空间模型的特征",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L10",
+   "title": "Controllability",
+   "zh": "可控性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L14",
+   "title": "Open-loop and closed-loop estimators",
+   "zh": "开环与闭环估计器",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L18",
+   "title": "Deterministic linear quadratic regulator (LQR)",
+   "zh": "确定性线性二次调节器（LQR）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L19",
+   "title": "Linear quadratic Gaussian (LQG)",
+   "zh": "线性二次高斯（LQG）控制",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "Getting Started with Model Predictive Control",
+   "zh": "模型预测控制入门",
+   "fill": "状态估计与可控/可观：把 Kalman 滤波（线性最优状态估计）、滚动时域估计与可观性讲成正式内容",
+   "items": [
+    {
+     "ref": "1.2",
+     "title": "Models and Modeling",
+     "zh": "模型与建模"
+    },
+    {
+     "ref": "1.3",
+     "title": "Introductory MPC Regulator",
+     "zh": "MPC 调节器入门",
+     "items": [
+      {
+       "ref": "1.3.1",
+       "title": "Linear Quadratic Problem",
+       "zh": "线性二次问题"
+      },
+      {
+       "ref": "1.3.3",
+       "title": "Dynamic Programming Solution",
+       "zh": "动态规划求解"
+      },
+      {
+       "ref": "1.3.5",
+       "title": "Controllability",
+       "zh": "可控性"
+      }
+     ]
+    },
+    {
+     "ref": "1.4",
+     "title": "Introductory State Estimation",
+     "zh": "状态估计入门",
+     "items": [
+      {
+       "ref": "1.4.2",
+       "title": "Linear Optimal State Estimation",
+       "zh": "线性最优状态估计（Kalman 滤波）"
+      },
+      {
+       "ref": "1.4.4",
+       "title": "Moving Horizon Estimation",
+       "zh": "滚动时域估计"
+      },
+      {
+       "ref": "1.4.5",
+       "title": "Observability",
+       "zh": "可观性"
+      }
+     ]
+    },
+    {
+     "ref": "1.5",
+     "title": "Tracking, Disturbances, and Zero Offset",
+     "zh": "跟踪、扰动与零稳态偏差"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Model Predictive Control—Regulation",
+   "zh": "模型预测控制——调节问题",
+   "fill": "模型预测控制：MPC 的在线优化、稳定性条件与终端约束",
+   "items": [
+    {
+     "ref": "2.2",
+     "title": "Model Predictive Control",
+     "zh": "模型预测控制"
+    },
+    {
+     "ref": "2.4",
+     "title": "Stability",
+     "zh": "稳定性"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "L9",
+   "title": "Introduction to the Nyquist criterion",
+   "zh": "Nyquist 判据导论",
+   "fill": "稳定性：用 Nyquist 判据判断闭环稳定性（A 的对应内容较简）",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "L12",
+   "title": "Bode diagrams, gain margin and phase margin",
+   "zh": "Bode 图、增益裕度与相位裕度",
+   "fill": "稳定性：稳定裕度的读图与判据",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "L13",
+   "title": "Open-loop performance specifications and the Bode Obstacle Course",
+   "zh": "开环性能指标与 Bode 障碍赛道",
+   "fill": "反馈：把性能指标翻译成开环频域约束的设计方法",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "反馈",
+   "refs": [
+    "A:L2",
+    "A:L4",
+    "C:L13"
+   ]
+  },
+  {
+   "topic": "稳定性",
+   "refs": [
+    "A:L2",
+    "C:L9",
+    "C:L12"
+   ]
+  },
+  {
+   "topic": "状态空间",
+   "refs": [
+    "A:L5",
+    "A:L7",
+    "A:L9",
+    "B:1.2"
+   ]
+  },
+  {
+   "topic": "可控/可观",
+   "refs": [
+    "A:L10",
+    "A:L7",
+    "B:1.3.5",
+    "B:1.4.5"
+   ]
+  },
+  {
+   "topic": "Kalman滤波",
+   "refs": [
+    "A:L19",
+    "A:L14",
+    "B:1.4.2"
+   ]
+  },
+  {
+   "topic": "模型预测控制",
+   "refs": [
+    "B:2.2",
+    "B:1.3",
+    "B:2.4"
+   ]
+  }
+ ],
+ "omitted": "A（16.30）24 讲里只收了 9 讲：Introduction、Developing state-space models based on transfer functions、Pole placement approach、LQ servo 系列、Adding reference inputs、Digital control basics、非线性系统两讲、Anti-windup、Closed-loop system analysis 等与节点六个知识点重叠较少或属实现细节的讲没收录；作业、期中期末、Recitations 全不收。B 只收了第 1 章的模型/MPC 调节器/状态估计/跟踪和 2.2、2.4 两节，第 2 章其余小节（经济 MPC、离散执行器、时变系统等）和第 3 章以后的输出反馈、移动地平线、分布式 MPC、显式 MPC 等属进阶内容，未收。C（6.302）只收了 3 讲，其余 L/R 讲是运放补偿、描述函数、振荡器等纯经典电路内容。",
+ "notes": "节点给的现有英文资源是 MIT 6.302，但它是研究生课、只讲单回路经典频域方法，没有状态空间/可观性/Kalman/MPC，目录与节点简介对不上，因此主来源换成同为 MIT OCW 但本科层次的 16.30，6.302 仅作稳定性判据的补充。“可观”在 A 里没有单独一讲（并在 L9 State-space model features 与 L14 估计器里），所以补了 B 的 1.4.5 Observability。A 的 ref 用课表里的 LEC 编号（L2、L4…）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 26,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

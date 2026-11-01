@@ -1,0 +1,209 @@
+{
+ "id": "X.1.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "6.5940 TinyML and Efficient Deep Learning Computing (Fall 2023)",
+   "by": "Song Han, MIT",
+   "year": 2023,
+   "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+   "toc_urls": [
+    "https://hanlab.mit.edu/courses/2023-fall-65940"
+   ],
+   "why": "节点“现有英文学习资源”本身就是 MIT 这门研究生课的官方课表：逐讲列出 Lecture 1–26 的具体主题，并按 Chapter I 高效推理 / Chapter II 领域专用优化 / Chapter III 高效训练 / Chapter IV 进阶专题 分组；压缩四件套（剪枝、量化、NAS、蒸馏）、微控制器上的推理（MCUNet、TinyEngine 并行）与端侧训练正好对上节点的“资源受限设备上的推理、压缩和硬件协同”。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Introduction",
+   "zh": "导论",
+   "items": [
+    {
+     "ref": "Lecture 1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "Lecture 2",
+     "title": "Basics of Deep Learning",
+     "zh": "深度学习基础"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Chapter I",
+   "title": "Chapter I: Efficient Inference",
+   "zh": "第一章：高效推理",
+   "items": [
+    {
+     "ref": "Lecture 3",
+     "title": "Pruning and Sparsity (Part I)",
+     "zh": "剪枝与稀疏化（上）"
+    },
+    {
+     "ref": "Lecture 4",
+     "title": "Pruning and Sparsity (Part II)",
+     "zh": "剪枝与稀疏化（下）"
+    },
+    {
+     "ref": "Lecture 5",
+     "title": "Quantization (Part I)",
+     "zh": "量化（上）"
+    },
+    {
+     "ref": "Lecture 6",
+     "title": "Quantization (Part II)",
+     "zh": "量化（下）"
+    },
+    {
+     "ref": "Lecture 7",
+     "title": "Neural Architecture Search (Part I)",
+     "zh": "神经架构搜索（上）"
+    },
+    {
+     "ref": "Lecture 8",
+     "title": "Neural Architecture Search (Part II)",
+     "zh": "神经架构搜索（下）"
+    },
+    {
+     "ref": "Lecture 9",
+     "title": "Knowledge Distillation",
+     "zh": "知识蒸馏"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "MCUNet: TinyML on Microcontrollers",
+     "zh": "MCUNet：微控制器上的 TinyML"
+    },
+    {
+     "ref": "Lecture 11",
+     "title": "TinyEngine and Parallel Processing",
+     "zh": "TinyEngine 与并行处理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Chapter II",
+   "title": "Chapter II: Domain-Specific Optimization",
+   "zh": "第二章：领域专用优化",
+   "items": [
+    {
+     "ref": "Lecture 12",
+     "title": "Transformer and LLM (Part I)",
+     "zh": "Transformer 与大语言模型（上）"
+    },
+    {
+     "ref": "Lecture 13",
+     "title": "Transformer and LLM (Part II)",
+     "zh": "Transformer 与大语言模型（下）"
+    },
+    {
+     "ref": "Lecture 14",
+     "title": "Vision Transformer",
+     "zh": "视觉 Transformer"
+    },
+    {
+     "ref": "Lecture 15",
+     "title": "GAN, Video, and Point Cloud",
+     "zh": "GAN、视频与点云"
+    },
+    {
+     "ref": "Lecture 16",
+     "title": "Diffusion Model",
+     "zh": "扩散模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Chapter III",
+   "title": "Chapter III: Efficient Training",
+   "zh": "第三章：高效训练",
+   "items": [
+    {
+     "ref": "Lecture 17",
+     "title": "Distributed Training (Part I)",
+     "zh": "分布式训练（上）"
+    },
+    {
+     "ref": "Lecture 18",
+     "title": "Distributed Training (Part II)",
+     "zh": "分布式训练（下）"
+    },
+    {
+     "ref": "Lecture 19",
+     "title": "On-Device Training and Transfer Learning",
+     "zh": "端侧训练与迁移学习"
+    },
+    {
+     "ref": "Lecture 20",
+     "title": "Efficient Fine-tuning and Prompt Engineering",
+     "zh": "高效微调与提示工程"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "资源受限设备上的推理",
+   "refs": [
+    "A:Lecture 10",
+    "A:Lecture 11",
+    "A:Lecture 19"
+   ],
+   "note": "Lecture 10 讲微控制器级别的推理（MCUNet 的 TinyNAS + TinyEngine 协同设计），Lecture 11 讲推理引擎的算子实现与并行处理，Lecture 19 讲在设备上训练/迁移学习。课程 5 个 Lab 也是这条线：剪枝、量化、NAS、LLM 压缩、在笔记本上部署 LLM。"
+  },
+  {
+   "topic": "感知",
+   "refs": [
+    "A:Lecture 14",
+    "A:Lecture 15"
+   ],
+   "note": "感知模型的专用优化：Lecture 14 视觉 Transformer，Lecture 15 GAN、视频与点云等感知/生成模型的效率优化；Lecture 16 扩散模型同属生成模型侧。"
+  },
+  {
+   "topic": "压缩",
+   "refs": [
+    "A:Chapter I",
+    "A:Lecture 3",
+    "A:Lecture 4",
+    "A:Lecture 5",
+    "A:Lecture 6",
+    "A:Lecture 7",
+    "A:Lecture 8",
+    "A:Lecture 9",
+    "A:Lecture 12",
+    "A:Lecture 13"
+   ],
+   "note": "第一章整章是压缩：剪枝与稀疏化两讲、量化两讲、神经架构搜索两讲、知识蒸馏一讲；第二章的 Lecture 12–13 是 LLM 的压缩与加速。"
+  },
+  {
+   "topic": "硬件协同",
+   "refs": [
+    "A:Lecture 10",
+    "A:Lecture 11"
+   ],
+   "note": "Lecture 10 MCUNet 是模型-系统协同设计（TinyNAS 与 TinyEngine 联合搜），Lecture 11 TinyEngine 讲内存调度、算子实现与并行处理，即算法与硬件/运行时的协同。"
+  },
+  {
+   "topic": "与边缘AI相交",
+   "refs": [
+    "A:Lecture 19"
+   ],
+   "note": "本课以端上推理/端上训练为主，端边云协同、时延-功耗-隐私的系统权衡只是背景；这些是节点 X.1.2 的主题，本节点不重复设章。"
+  }
+ ],
+ "omitted": "A 未收：Chapter IV: Advanced Topics 下的 Lecture 21 Basics of Quantum Computing、Lecture 22 Quantum Machine Learning、Lecture 23 Noise Robust Quantum ML（量子计算与节点无关）；Sep 13 / Oct 18 / Nov 6 / Nov 27 四行只是各章的小标题行（页面里也带 Lecture 编号，故编号有重复），已作为分支标题使用；Oct 10 Student Holiday、Nov 23 Thanksgiving 两行无课，与 Lecture 24–26 Final Project Presentation 一并未收；课程事务（评分、Labs 说明、迟到政策）不是目录内容。",
+ "notes": "课程页面没有节一级的编号，故只到“章 → 讲（Lecture N）”两层，ref 照抄页面的 Lecture 编号。页面里 Lecture 2、9、12、16、20、21 各出现两次（一次是章标题行，一次是正式讲座），本导览图只保留正式讲座那一条。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 24,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

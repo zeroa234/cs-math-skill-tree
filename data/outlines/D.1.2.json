@@ -1,0 +1,188 @@
+{
+ "id": "D.1.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "15-445/645 Intro to Database Systems (Fall 2026)",
+   "by": "Carnegie Mellon University",
+   "year": 2026,
+   "url": "https://15445.courses.cs.cmu.edu/fall2026/",
+   "toc_urls": [
+    "https://15445.courses.cs.cmu.edu/fall2026/schedule.html",
+    "https://15445.courses.cs.cmu.edu/fall2026/syllabus.html"
+   ],
+   "why": "就是节点“现有英文学习资源”里的这门课：全部 slides / notes / 视频公开，schedule 逐讲列到具体主题（索引、连接与查询执行、查询规划与代价模型、并发控制、日志与恢复），正好是节点简介的五个知识点，且入门层 D2 用本科高年级课程合适。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "#07",
+   "title": "Hash Tables",
+   "zh": "哈希表",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#08",
+   "title": "Indexes & Filters I",
+   "zh": "索引与过滤器 I",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#09",
+   "title": "Indexes & Filters II",
+   "zh": "索引与过滤器 II",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#10",
+   "title": "Index Concurrency Control",
+   "zh": "索引并发控制",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#11",
+   "title": "Sorting & Aggregations Algorithms",
+   "zh": "排序与聚合算法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#13",
+   "title": "Joins Algorithms",
+   "zh": "连接算法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#14",
+   "title": "Query Execution I",
+   "zh": "查询执行 I",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#15",
+   "title": "Query Execution II",
+   "zh": "查询执行 II",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#16",
+   "title": "Query Planning & Optimization I",
+   "zh": "查询规划与优化 I",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#17",
+   "title": "Query Planning & Optimization II",
+   "zh": "查询规划与优化 II",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#18",
+   "title": "Concurrency Control Theory",
+   "zh": "并发控制理论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#19",
+   "title": "Two-Phase Locking Concurrency Control",
+   "zh": "两阶段锁并发控制",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#20",
+   "title": "Timestamp Ordering Concurrency Control",
+   "zh": "时间戳排序并发控制",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#21",
+   "title": "Multi-Version Concurrency Control",
+   "zh": "多版本并发控制（MVCC）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#22",
+   "title": "Database Logging",
+   "zh": "数据库日志",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "#23",
+   "title": "Database Recovery",
+   "zh": "数据库恢复",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "索引",
+   "refs": [
+    "A:#07",
+    "A:#08",
+    "A:#09",
+    "A:#10"
+   ],
+   "note": "第 7 讲 Hash Tables 讲哈希索引结构，第 8、9 讲 Indexes & Filters 讲 B+ 树索引与 Bloom 过滤器等，第 10 讲 Index Concurrency Control 讲索引结构上的并发控制（latch 与 crabbing）。"
+  },
+  {
+   "topic": "执行计划",
+   "refs": [
+    "A:#13",
+    "A:#14",
+    "A:#15",
+    "A:#11"
+   ],
+   "note": "第 13 讲 Joins Algorithms 讲连接算子（nested loop / sort-merge / hash join），第 14、15 讲 Query Execution 讲火山模型、向量化与物化等执行模型与算子实现，第 11 讲 Sorting & Aggregations Algorithms 讲排序与聚合算子。"
+  },
+  {
+   "topic": "代价模型",
+   "refs": [
+    "A:#16",
+    "A:#17"
+   ],
+   "note": "第 16、17 讲 Query Planning & Optimization：基于规则的重写、基于代价的规划、基数估计与统计信息（代价模型的组成部分在这两讲里讲）。"
+  },
+  {
+   "topic": "并发控制",
+   "refs": [
+    "A:#18",
+    "A:#19",
+    "A:#20",
+    "A:#21"
+   ],
+   "note": "第 18 讲 Concurrency Control Theory 讲 ACID、可串行化与冲突可串行化，第 19 讲 2PL、第 20 讲时间戳排序、第 21 讲 MVCC。"
+  },
+  {
+   "topic": "日志与恢复",
+   "refs": [
+    "A:#22",
+    "A:#23"
+   ],
+   "note": "第 22 讲 Database Logging 讲 WAL 与日志记录格式，第 23 讲 Database Recovery 讲 ARIES 式恢复（分析/重做/撤销、检查点）。"
+  }
+ ],
+ "omitted": "A（CMU 15-445 Fall 2026 schedule）未收：第 1 讲 Relational Model & Algebra、第 2 讲 Modern SQL（属 D.1.1 数据建模/关系模型与 SQL）、第 3–6 讲 Database Storage / Memory Management / Storage Models & Compression（存储引擎与存储布局，属大数据与存储布局相关节点）、第 12 讲与第 25 讲 DRC（论文研讨课，无固定主题）、第 24 讲 Distributed Databases（属 D.1.3 分布式数据库）；Mid-Term Exam、Fall Break、Thanksgiving 等无课日期也不算目录条目。",
+ "notes": "选源说明：节点“现有英文学习资源”就是这门课，它的目录形态是逐讲 lecture 列表（schedule.html 的 Topic 列），没有章级分组，所以每个分支直接对应一讲，ref 用课表上的编号（#07、#08…）。课程用的教材是 DB System Concepts (7th Ed.)，每讲后面列出对应章节，但没有公开的逐节目录页可抄，故未展开到小节课名。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 16,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,514 @@
+{
+ "id": "P.5.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "The Site Reliability Workbook: Practical Ways to Implement SRE",
+   "by": "Betsy Beyer, Niall Richard Murphy, David K. Rensin, Kent Kawahara, Stephen Thorne (eds.)",
+   "year": 2018,
+   "url": "https://sre.google/workbook/table-of-contents/",
+   "toc_urls": [
+    "https://sre.google/workbook/table-of-contents/",
+    "https://sre.google/workbook/implementing-slos/",
+    "https://sre.google/workbook/monitoring/",
+    "https://sre.google/workbook/alerting-on-slos/",
+    "https://sre.google/workbook/canarying-releases/"
+   ],
+   "why": "节点“现有英文学习资源”就是这本 Google 官方免费在线版；21 章按 Foundations/Practices/Processes 编排，SLO、监控与告警、值班、事件响应与复盘、负载管理、配置设计、金丝雀发布各有专著式章节，正好对上可观测性、SLO、发布策略、故障恢复与容量。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "DevOps resource center",
+   "by": "Microsoft Learn",
+   "year": 2026,
+   "url": "https://learn.microsoft.com/en-us/devops/",
+   "toc_urls": [
+    "https://learn.microsoft.com/en-us/devops/"
+   ],
+   "why": "补 A 完全缺失的 CI/CD 流水线：A 只在第 1 章讲 SRE 与 DevOps 的分工，没有持续集成/持续交付的章节；这个资源中心的 Develop / Deliver / Operate 三节给出 CI、持续交付、IaC、feature flag、无停机版本切换的条目（节点 zhAlt 引的中文版就是同一套内容的译本）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "How SRE Relates to DevOps",
+   "zh": "SRE 与 DevOps 的关系",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Implementing SLOs",
+   "zh": "落地 SLO",
+   "items": [
+    {
+     "ref": "",
+     "title": "Why SREs Need SLOs",
+     "zh": "为什么 SRE 需要 SLO"
+    },
+    {
+     "ref": "",
+     "title": "What to Measure: Using SLIs",
+     "zh": "度量什么：使用 SLI"
+    },
+    {
+     "ref": "",
+     "title": "Measuring the SLIs",
+     "zh": "度量 SLI"
+    },
+    {
+     "ref": "",
+     "title": "Calculating the SLIs",
+     "zh": "计算 SLI"
+    },
+    {
+     "ref": "",
+     "title": "Using the SLIs to Calculate Starter SLOs",
+     "zh": "用 SLI 算出初始 SLO"
+    },
+    {
+     "ref": "",
+     "title": "Choosing an Appropriate Time Window",
+     "zh": "选择合适的时间窗口"
+    },
+    {
+     "ref": "",
+     "title": "Establishing an Error Budget Policy",
+     "zh": "制定错误预算政策"
+    },
+    {
+     "ref": "",
+     "title": "Documenting the SLO and Error Budget Policy",
+     "zh": "记录 SLO 与错误预算政策"
+    },
+    {
+     "ref": "",
+     "title": "Dashboards and Reports",
+     "zh": "仪表盘与报表"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Monitoring",
+   "zh": "监控",
+   "items": [
+    {
+     "ref": "",
+     "title": "Desirable Features of a Monitoring Strategy",
+     "zh": "监控策略应有的特性"
+    },
+    {
+     "ref": "",
+     "title": "Sources of Monitoring Data",
+     "zh": "监控数据的来源"
+    },
+    {
+     "ref": "",
+     "title": "Managing Your Monitoring System",
+     "zh": "管理监控系统"
+    },
+    {
+     "ref": "",
+     "title": "Metrics with Purpose",
+     "zh": "有目的的指标",
+     "items": [
+      {
+       "ref": "",
+       "title": "Intended Changes",
+       "zh": "预期内的变更"
+      },
+      {
+       "ref": "",
+       "title": "Dependencies",
+       "zh": "依赖"
+      },
+      {
+       "ref": "",
+       "title": "Saturation",
+       "zh": "饱和度"
+      },
+      {
+       "ref": "",
+       "title": "Status of Served Traffic",
+       "zh": "服务流量的状态"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Implementing Purposeful Metrics",
+     "zh": "落实有目的的指标"
+    },
+    {
+     "ref": "",
+     "title": "Testing Alerting Logic",
+     "zh": "测试告警逻辑"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Alerting on SLOs",
+   "zh": "基于 SLO 的告警",
+   "items": [
+    {
+     "ref": "",
+     "title": "Alerting Considerations",
+     "zh": "告警的考量",
+     "items": [
+      {
+       "ref": "",
+       "title": "Precision",
+       "zh": "精确率"
+      },
+      {
+       "ref": "",
+       "title": "Recall",
+       "zh": "召回率"
+      },
+      {
+       "ref": "",
+       "title": "Detection time",
+       "zh": "检测时间"
+      },
+      {
+       "ref": "",
+       "title": "Reset time",
+       "zh": "恢复时间"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Ways to Alert on Significant Events",
+     "zh": "对重大事件告警的几种做法",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Target Error Rate ≥ SLO Threshold",
+       "zh": "目标错误率达到 SLO 阈值"
+      },
+      {
+       "ref": "2",
+       "title": "Increased Alert Window",
+       "zh": "加长告警窗口"
+      },
+      {
+       "ref": "3",
+       "title": "Incrementing Alert Duration",
+       "zh": "递增告警持续时间"
+      },
+      {
+       "ref": "4",
+       "title": "Alert on Burn Rate",
+       "zh": "按燃烧速率告警"
+      },
+      {
+       "ref": "5",
+       "title": "Multiple Burn Rate Alerts",
+       "zh": "多燃烧速率告警"
+      },
+      {
+       "ref": "6",
+       "title": "Multiwindow, Multi-Burn-Rate Alerts",
+       "zh": "多窗口多燃烧速率告警"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Low-Traffic Services and Error Budget Alerting",
+     "zh": "低流量服务与错误预算告警"
+    },
+    {
+     "ref": "",
+     "title": "Alerting at Scale",
+     "zh": "大规模告警"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "On-Call",
+   "zh": "值班",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Incident Response",
+   "zh": "事件响应",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Postmortem Culture: Learning from Failure",
+   "zh": "复盘文化：从失败中学习",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Managing Load",
+   "zh": "负载管理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Configuration Design and Best Practices",
+   "zh": "配置设计与最佳实践",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Canarying Releases",
+   "zh": "金丝雀发布",
+   "items": [
+    {
+     "ref": "",
+     "title": "Balancing Release Velocity and Reliability",
+     "zh": "在发布速度与可靠性之间权衡"
+    },
+    {
+     "ref": "",
+     "title": "Separating Components That Change at Different Rates",
+     "zh": "拆分变化速率不同的组件"
+    },
+    {
+     "ref": "",
+     "title": "Release Engineering and Canarying",
+     "zh": "发布工程与金丝雀"
+    },
+    {
+     "ref": "",
+     "title": "Our Example Setup",
+     "zh": "示例环境"
+    },
+    {
+     "ref": "",
+     "title": "A Roll Forward Deployment Versus a Simple Canary Deployment",
+     "zh": "滚动前进式部署与简单金丝雀部署的对比"
+    },
+    {
+     "ref": "",
+     "title": "Canary Implementation",
+     "zh": "金丝雀的实现"
+    },
+    {
+     "ref": "",
+     "title": "Minimizing Risk to SLOs and the Error Budget",
+     "zh": "把对 SLO 与错误预算的风险降到最低"
+    },
+    {
+     "ref": "",
+     "title": "Choosing a Canary Population and Duration",
+     "zh": "选择金丝雀的流量比例与时长"
+    },
+    {
+     "ref": "",
+     "title": "Selecting and Evaluating Metrics",
+     "zh": "选择与评估指标"
+    },
+    {
+     "ref": "",
+     "title": "Dependencies and Isolation",
+     "zh": "依赖与隔离"
+    },
+    {
+     "ref": "",
+     "title": "Canarying in Noninteractive Systems",
+     "zh": "非交互系统中的金丝雀"
+    },
+    {
+     "ref": "",
+     "title": "Requirements on Monitoring Data",
+     "zh": "对监控数据的要求"
+    },
+    {
+     "ref": "",
+     "title": "Related Concepts",
+     "zh": "相关概念",
+     "items": [
+      {
+       "ref": "",
+       "title": "Blue/Green Deployment",
+       "zh": "蓝绿部署"
+      },
+      {
+       "ref": "",
+       "title": "Artificial Load Generation",
+       "zh": "人工造压"
+      },
+      {
+       "ref": "",
+       "title": "Traffic Teeing",
+       "zh": "流量复制"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Identifying and Recovering from Overload",
+   "zh": "过载的识别与恢复",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Develop with DevOps",
+   "zh": "用 DevOps 开发",
+   "fill": "补“CI/CD”的持续集成一半：A 没有 CI 章节，这里给出持续集成与左移测试两条目。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Use continuous integration",
+     "zh": "使用持续集成"
+    },
+    {
+     "ref": "",
+     "title": "Shift testing left with unit tests",
+     "zh": "用单元测试把测试左移"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Deliver with DevOps",
+   "zh": "用 DevOps 交付",
+   "fill": "补“CI/CD”的持续交付一半，以及“配置”里的基础设施即代码：A 只在第 14 章讲配置设计原则，没有交付流水线与 IaC。",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is continuous delivery?",
+     "zh": "什么是持续交付"
+    },
+    {
+     "ref": "",
+     "title": "What is infrastructure as code (IaC)?",
+     "zh": "什么是基础设施即代码"
+    },
+    {
+     "ref": "",
+     "title": "Deploy to Azure infrastructure with GitHub Actions",
+     "zh": "用 GitHub Actions 部署到 Azure 基础设施"
+    },
+    {
+     "ref": "",
+     "title": "Shift right to test in production",
+     "zh": "把测试右移到生产环境"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Operate with DevOps",
+   "zh": "用 DevOps 运维",
+   "fill": "补“可观测性”的入门概念与两种发布策略：功能开关渐进实验、按版本无停机更新（A 的第 16 章只讲金丝雀，第 4 章只讲监控数据本身）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is monitoring?",
+     "zh": "什么是监控"
+    },
+    {
+     "ref": "",
+     "title": "Progressive experimentation with feature flags",
+     "zh": "用功能开关做渐进实验"
+    },
+    {
+     "ref": "",
+     "title": "Eliminate downtime through versioned service updates",
+     "zh": "用带版本的服务更新消除停机"
+    },
+    {
+     "ref": "",
+     "title": "How Microsoft operates reliable systems with DevOps",
+     "zh": "微软如何用 DevOps 运维可靠系统"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "CI/CD",
+   "refs": [
+    "B:#1",
+    "B:#2"
+   ],
+   "note": "A 全书没有持续集成/持续交付的章节（第 1 章只讲 SRE 与 DevOps 的分工，第 16 章讲发布工程与金丝雀）；B 的 Develop/Deliver 两节给 CI、持续交付、部署流水线与左移/右移测试的概念。"
+  },
+  {
+   "topic": "配置",
+   "refs": [
+    "A:#9",
+    "B:#2"
+   ],
+   "note": "A:#9 是第 14 章 Configuration Design and Best Practices（同书第 15 章 Configuration Specifics 未收）；B:#2 的 IaC 一节补基础设施即代码。具体的配置语言/模板语法两源都没有到小节的粒度。"
+  },
+  {
+   "topic": "可观测性",
+   "refs": [
+    "A:#3",
+    "A:#4",
+    "B:#3"
+   ],
+   "note": "A:#3 第 4 章 Monitoring（监控数据来源、有目的的指标：预期变更/依赖/饱和度/流量状态），A:#4 第 5 章把 SLO 变成告警；A 没有“日志、指标、链路追踪三支柱”这种命名法，B:#3 的 What is monitoring? 给入门概念。"
+  },
+  {
+   "topic": "SLO",
+   "refs": [
+    "A:#2",
+    "A:#4"
+   ],
+   "note": "A:#2 第 2 章从 SLI 定义、计算到错误预算政策，A:#4 第 5 章讲告警的精确率/召回率与燃烧速率多窗口告警。"
+  },
+  {
+   "topic": "发布策略",
+   "refs": [
+    "A:#10",
+    "B:#3"
+   ],
+   "note": "A:#10 第 16 章金丝雀发布（含 Blue/Green Deployment、Traffic Teeing、Artificial Load Generation 三个相关概念）；B:#3 补功能开关渐进实验与带版本的服务更新。"
+  },
+  {
+   "topic": "故障恢复",
+   "refs": [
+    "A:#6",
+    "A:#7",
+    "A:#11"
+   ],
+   "note": "A:#6 第 9 章 Incident Response、A:#7 第 10 章复盘文化、A:#11 第 17 章过载的识别与恢复；无责复盘的具体模板见附录 B/附录 C（未收）。"
+  },
+  {
+   "topic": "容量",
+   "refs": [
+    "A:#8",
+    "A:#11"
+   ],
+   "note": "A:#8 第 11 章 Managing Load（负载均衡、自动扩缩容、有状态系统、保守配置），A:#11 第 17 章讲容量被打穿后的过载识别与恢复；第 12 章 NALSD 讲容量设计的系统方法，未收。"
+  }
+ ],
+ "omitted": "A 未收的章：3 SLO Engineering Case Studies、6 Eliminating Toil、7 Simplicity、12 Introducing Non-Abstract Large System Design、13 Data Processing Pipelines、15 Configuration Specifics、18 SRE Engagement Model、19 SRE: Reaching Beyond Your Walls、20 SRE Team Lifecycles、21 Organizational Change Management in SRE，以及 Conclusion、Appendix A/B/C、Index、About the Editors；第 2/4/5/16 章内的图表标题、示例小节与每章末尾的 Conclusion 小节也未收。B 未收 Concept 与 Plan 两节（What is DevOps?、SecDevOps、Agile/scrum/Kanban 等，属于别的节点）以及 “Governance in Azure when using CI/CD”。",
+ "notes": "A 的目录页只到章一级（21 章，分 Part I–III），所以我只对第 2、4、5、16 四章补了节级 items：这些小标题是从各章正文里读出来的独立小标题（原文没有可抄的节级目录页），照原文大小写抄录，编号只在第 5 章 “Ways to Alert on Significant Events” 下的 1–6 本来就有，其余留空。其余章只抄章名。B 的条目来自 learn.microsoft.com/en-us/devops/ 资源中心的目录树（Concept / Plan with DevOps / Develop with DevOps / Deliver with DevOps / Operate with DevOps 五节）。两个来源都只到概念层：具体流水线工具（GitHub Actions 语法、Prometheus 规则、Kubernetes 配置）不在本导览图范围内。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 73,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

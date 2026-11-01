@@ -1,0 +1,434 @@
+{
+ "id": "P.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Crafting Interpreters",
+   "by": "Robert Nystrom",
+   "year": 2021,
+   "url": "https://craftinginterpreters.com/",
+   "toc_urls": [
+    "https://craftinginterpreters.com/contents.html",
+    "https://craftinginterpreters.com/a-map-of-the-territory.html",
+    "https://craftinginterpreters.com/evaluating-expressions.html",
+    "https://craftinginterpreters.com/chunks-of-bytecode.html",
+    "https://craftinginterpreters.com/a-virtual-machine.html",
+    "https://craftinginterpreters.com/local-variables.html",
+    "https://craftinginterpreters.com/calls-and-functions.html",
+    "https://craftinginterpreters.com/closures.html",
+    "https://craftinginterpreters.com/garbage-collection.html",
+    "https://craftinginterpreters.com/optimization.html"
+   ],
+   "why": "节点现有英文资源就是这本书；全书分“树遍历解释器”和“字节码虚拟机”两套实现，章节正好覆盖解释执行、值栈与调用帧、堆上的上值、标记-清除 GC、原生函数与运行时性能，是作者主页免费公开的完整教材。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Truffle Language Implementation Framework (GraalVM documentation)",
+   "by": "Oracle Labs / GraalVM project",
+   "year": 2026,
+   "url": "https://www.graalvm.org/latest/graalvm-as-a-platform/language-implementation-framework/",
+   "toc_urls": [
+    "https://www.graalvm.org/latest/graalvm-as-a-platform/language-implementation-framework/"
+   ],
+   "why": "补“JIT”：Crafting Interpreters 只做解释器和字节码 VM，没有动态编译；GraalVM 官方文档这一组页面讲 Truffle 解释器如何被动态编译（编译队列、栈上替换、函数内联、剖析）、AOT 对照，以及本地函数接口，正是 JIT 与 FFI 的现代实现说明。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "A Map of the Territory",
+   "zh": "领域地图",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "The Parts of a Language",
+     "zh": "语言的各个部分"
+    },
+    {
+     "ref": "2.2",
+     "title": "Shortcuts and Alternate Routes",
+     "zh": "捷径与其他路线"
+    },
+    {
+     "ref": "2.3",
+     "title": "Compilers and Interpreters",
+     "zh": "编译器与解释器"
+    },
+    {
+     "ref": "2.4",
+     "title": "Our Journey",
+     "zh": "我们的旅程"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Evaluating Expressions",
+   "zh": "表达式求值",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Representing Values",
+     "zh": "值的表示"
+    },
+    {
+     "ref": "7.2",
+     "title": "Evaluating Expressions",
+     "zh": "求值表达式"
+    },
+    {
+     "ref": "7.3",
+     "title": "Runtime Errors",
+     "zh": "运行时错误"
+    },
+    {
+     "ref": "7.4",
+     "title": "Hooking Up the Interpreter",
+     "zh": "把解释器接起来"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Chunks of Bytecode",
+   "zh": "字节码块",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "Bytecode?",
+     "zh": "什么是字节码"
+    },
+    {
+     "ref": "14.2",
+     "title": "Getting Started",
+     "zh": "起步"
+    },
+    {
+     "ref": "14.3",
+     "title": "Chunks of Instructions",
+     "zh": "指令块"
+    },
+    {
+     "ref": "14.4",
+     "title": "Disassembling Chunks",
+     "zh": "反汇编字节码块"
+    },
+    {
+     "ref": "14.5",
+     "title": "Constants",
+     "zh": "常量"
+    },
+    {
+     "ref": "14.6",
+     "title": "Line Information",
+     "zh": "行号信息"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "A Virtual Machine",
+   "zh": "虚拟机",
+   "items": [
+    {
+     "ref": "15.1",
+     "title": "An Instruction Execution Machine",
+     "zh": "指令执行机"
+    },
+    {
+     "ref": "15.2",
+     "title": "A Value Stack Manipulator",
+     "zh": "值栈操作器"
+    },
+    {
+     "ref": "15.3",
+     "title": "An Arithmetic Calculator",
+     "zh": "算术计算器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "22",
+   "title": "Local Variables",
+   "zh": "局部变量",
+   "items": [
+    {
+     "ref": "22.1",
+     "title": "Representing Local Variables",
+     "zh": "局部变量的表示"
+    },
+    {
+     "ref": "22.2",
+     "title": "Block Statements",
+     "zh": "块语句"
+    },
+    {
+     "ref": "22.3",
+     "title": "Declaring Local Variables",
+     "zh": "声明局部变量"
+    },
+    {
+     "ref": "22.4",
+     "title": "Using Locals",
+     "zh": "使用局部变量"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "24",
+   "title": "Calls and Functions",
+   "zh": "调用与函数",
+   "items": [
+    {
+     "ref": "24.1",
+     "title": "Function Objects",
+     "zh": "函数对象"
+    },
+    {
+     "ref": "24.2",
+     "title": "Compiling to Function Objects",
+     "zh": "编译为函数对象"
+    },
+    {
+     "ref": "24.3",
+     "title": "Call Frames",
+     "zh": "调用帧"
+    },
+    {
+     "ref": "24.4",
+     "title": "Function Declarations",
+     "zh": "函数声明"
+    },
+    {
+     "ref": "24.5",
+     "title": "Function Calls",
+     "zh": "函数调用"
+    },
+    {
+     "ref": "24.6",
+     "title": "Return Statements",
+     "zh": "返回语句"
+    },
+    {
+     "ref": "24.7",
+     "title": "Native Functions",
+     "zh": "原生函数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "25",
+   "title": "Closures",
+   "zh": "闭包",
+   "items": [
+    {
+     "ref": "25.1",
+     "title": "Closure Objects",
+     "zh": "闭包对象"
+    },
+    {
+     "ref": "25.2",
+     "title": "Upvalues",
+     "zh": "上值"
+    },
+    {
+     "ref": "25.3",
+     "title": "Upvalue Objects",
+     "zh": "上值对象"
+    },
+    {
+     "ref": "25.4",
+     "title": "Closed Upvalues",
+     "zh": "已关闭的上值"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "26",
+   "title": "Garbage Collection",
+   "zh": "垃圾回收",
+   "items": [
+    {
+     "ref": "26.1",
+     "title": "Reachability",
+     "zh": "可达性"
+    },
+    {
+     "ref": "26.2",
+     "title": "Mark-Sweep Garbage Collection",
+     "zh": "标记-清除垃圾回收"
+    },
+    {
+     "ref": "26.3",
+     "title": "Marking the Roots",
+     "zh": "标记根"
+    },
+    {
+     "ref": "26.4",
+     "title": "Tracing Object References",
+     "zh": "追踪对象引用"
+    },
+    {
+     "ref": "26.5",
+     "title": "Sweeping Unused Objects",
+     "zh": "清扫未使用的对象"
+    },
+    {
+     "ref": "26.6",
+     "title": "When to Collect",
+     "zh": "何时回收"
+    },
+    {
+     "ref": "26.7",
+     "title": "Garbage Collection Bugs",
+     "zh": "垃圾回收的常见错误"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "30",
+   "title": "Optimization",
+   "zh": "优化",
+   "items": [
+    {
+     "ref": "30.1",
+     "title": "Measuring Performance",
+     "zh": "测量性能"
+    },
+    {
+     "ref": "30.2",
+     "title": "Faster Hash Table Probing",
+     "zh": "更快的哈希表探查"
+    },
+    {
+     "ref": "30.3",
+     "title": "NaN Boxing",
+     "zh": "NaN 装箱"
+    },
+    {
+     "ref": "30.4",
+     "title": "Where to Next",
+     "zh": "接下来往哪走"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Optimizing Truffle Interpreters",
+   "zh": "优化 Truffle 解释器",
+   "fill": "JIT（动态编译、编译队列、栈上替换、内联）与 FFI（本地函数接口）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Host Optimization for Interpreter Code",
+     "zh": "解释器代码的宿主机优化"
+    },
+    {
+     "ref": "",
+     "title": "Truffle Approach to Function Inlining",
+     "zh": "Truffle 的函数内联做法"
+    },
+    {
+     "ref": "",
+     "title": "Profiling Truffle Interpreters",
+     "zh": "剖析 Truffle 解释器"
+    },
+    {
+     "ref": "",
+     "title": "On-Stack Replacement",
+     "zh": "栈上替换"
+    },
+    {
+     "ref": "",
+     "title": "Truffle Approach to the Compilation Queue",
+     "zh": "Truffle 的编译队列机制"
+    },
+    {
+     "ref": "",
+     "title": "Truffle AOT Overview",
+     "zh": "Truffle 提前编译概览"
+    },
+    {
+     "ref": "",
+     "title": "Truffle AOT Compilation",
+     "zh": "Truffle 提前编译"
+    },
+    {
+     "ref": "",
+     "title": "Truffle Native Function Interface",
+     "zh": "Truffle 本地函数接口"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "解释执行",
+   "refs": [
+    "A:2.3",
+    "A:7",
+    "A:7.2"
+   ]
+  },
+  {
+   "topic": "JIT",
+   "refs": [
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "GC",
+   "refs": [
+    "A:26",
+    "A:26.1",
+    "A:26.2",
+    "A:26.6"
+   ]
+  },
+  {
+   "topic": "栈与堆",
+   "refs": [
+    "A:15.1",
+    "A:15.2",
+    "A:22.1",
+    "A:24.3",
+    "A:25.2"
+   ]
+  },
+  {
+   "topic": "FFI",
+   "refs": [
+    "A:24.7",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "运行时性能",
+   "refs": [
+    "A:30",
+    "A:30.1",
+    "A:30.3"
+   ]
+  }
+ ],
+ "omitted": "书中与本节点无关的章节未收：1（引言）、3（Lox 语言）、4–6（扫描、语法树表示、表达式解析）、8–13（语句与状态、控制流、函数、解析与绑定、类与继承，属树遍历解释器的语言特性实现）、16–21（按需扫描、编译表达式、值的类型、字符串、哈希表、全局变量）、23（跳转）、27–29（类、方法与初始化器、超类），以及三个附录；这些偏语言前端与对象模型，不是运行时/虚拟机/内存管理的核心。",
+ "notes": "Crafting Interpreters 的目录页 contents.html 只列到章（并带 Design Note 边栏），各章的小节标题在章页上，所以 toc_urls 列了实际抄录的 9 个章页。节点简介里“FFI”对应 A 的第 24.7 节 Native Functions（字节码 VM 调用 C 函数）；“JIT”这本书没有，用 B 的 GraalVM/Truffle 文档补。第 30 章的“Where to Next”里也提到 JIT，但不构成独立章节。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 61,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

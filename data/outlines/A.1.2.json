@@ -1,0 +1,393 @@
+{
+ "id": "A.1.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "notes",
+   "title": "Stanford CS228 Probabilistic Graphical Models — course notes (Kuleshov & Ermon)",
+   "by": "Volodymyr Kuleshov, Stefano Ermon",
+   "year": 2025,
+   "url": "https://ermongroup.github.io/cs228-notes/",
+   "toc_urls": [
+    "https://ermongroup.github.io/cs228-notes/",
+    "https://ermongroup.github.io/cs228-notes/representation/directed/",
+    "https://ermongroup.github.io/cs228-notes/representation/undirected/",
+    "https://ermongroup.github.io/cs228-notes/inference/ve/",
+    "https://ermongroup.github.io/cs228-notes/inference/jt/",
+    "https://ermongroup.github.io/cs228-notes/inference/map/",
+    "https://ermongroup.github.io/cs228-notes/inference/sampling/",
+    "https://ermongroup.github.io/cs228-notes/inference/variational/",
+    "https://ermongroup.github.io/cs228-notes/learning/directed/",
+    "https://ermongroup.github.io/cs228-notes/learning/undirected/",
+    "https://ermongroup.github.io/cs228-notes/learning/latent/",
+    "https://ermongroup.github.io/cs228-notes/learning/bayesian/",
+    "https://ermongroup.github.io/cs228-notes/learning/structure/"
+   ],
+   "why": "节点“现有英文学习资源”本身就是斯坦福 CS228 的公开讲义网站，按 Representation（有向/无向模型与独立性）/ Inference（变量消去、置信传播、MAP、采样、变分）/ Learning（极大似然、隐变量与 EM、贝叶斯学习、结构学习）三部分组织，每一章都是独立网页，章内二级标题可直接抄；Bayes 网络、Markov 网络、推断、学习与结构建模四块全在范围内。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Bayesian networks",
+   "zh": "贝叶斯网络",
+   "items": [
+    {
+     "ref": "",
+     "title": "Probabilistic modeling with Bayesian networks",
+     "zh": "用贝叶斯网络做概率建模"
+    },
+    {
+     "ref": "",
+     "title": "The dependencies of a Bayes net",
+     "zh": "贝叶斯网络的依赖关系"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Markov random fields",
+   "zh": "马尔可夫随机场",
+   "items": [
+    {
+     "ref": "",
+     "title": "Markov Random Fields",
+     "zh": "马尔可夫随机场"
+    },
+    {
+     "ref": "",
+     "title": "Independencies in Markov Random Fields",
+     "zh": "马尔可夫随机场中的独立性"
+    },
+    {
+     "ref": "",
+     "title": "Conditional Random Fields",
+     "zh": "条件随机场"
+    },
+    {
+     "ref": "",
+     "title": "Factor Graphs",
+     "zh": "因子图"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Variable elimination",
+   "zh": "变量消去",
+   "items": [
+    {
+     "ref": "",
+     "title": "An illustrative example",
+     "zh": "一个示例"
+    },
+    {
+     "ref": "",
+     "title": "Eliminating Variables",
+     "zh": "消去变量"
+    },
+    {
+     "ref": "",
+     "title": "Introducing evidence",
+     "zh": "引入证据"
+    },
+    {
+     "ref": "",
+     "title": "Running Time of Variable Elimination",
+     "zh": "变量消去的运行时间"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Belief propagation",
+   "zh": "置信传播",
+   "items": [
+    {
+     "ref": "",
+     "title": "Belief propagation",
+     "zh": "置信传播"
+    },
+    {
+     "ref": "",
+     "title": "Junction tree algorithm",
+     "zh": "联结树算法"
+    },
+    {
+     "ref": "",
+     "title": "Loopy belief propagation",
+     "zh": "有环置信传播"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "MAP inference",
+   "zh": "MAP 推断",
+   "items": [
+    {
+     "ref": "",
+     "title": "The challenges of MAP inference",
+     "zh": "MAP 推断的难点"
+    },
+    {
+     "ref": "",
+     "title": "Graph cuts",
+     "zh": "图割"
+    },
+    {
+     "ref": "",
+     "title": "Linear programming-based approaches",
+     "zh": "基于线性规划的方法"
+    },
+    {
+     "ref": "",
+     "title": "Dual decomposition",
+     "zh": "对偶分解"
+    },
+    {
+     "ref": "",
+     "title": "Other methods",
+     "zh": "其他方法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Sampling-based inference",
+   "zh": "采样推断",
+   "items": [
+    {
+     "ref": "",
+     "title": "Sampling from a probability distribution",
+     "zh": "从概率分布中采样"
+    },
+    {
+     "ref": "",
+     "title": "Monte Carlo estimation",
+     "zh": "蒙特卡洛估计"
+    },
+    {
+     "ref": "",
+     "title": "Markov chain Monte Carlo",
+     "zh": "马尔可夫链蒙特卡洛"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Variational inference",
+   "zh": "变分推断",
+   "items": [
+    {
+     "ref": "",
+     "title": "Inference as optimization",
+     "zh": "把推断看作优化"
+    },
+    {
+     "ref": "",
+     "title": "The Kullback-Leibler divergence",
+     "zh": "KL 散度"
+    },
+    {
+     "ref": "",
+     "title": "The variational lower bound",
+     "zh": "变分下界"
+    },
+    {
+     "ref": "",
+     "title": "On the choice of KL divergence",
+     "zh": "KL 散度的选择"
+    },
+    {
+     "ref": "",
+     "title": "Mean-field inference",
+     "zh": "平均场推断"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Learning in directed models",
+   "zh": "有向模型中的学习",
+   "items": [
+    {
+     "ref": "",
+     "title": "The learning task",
+     "zh": "学习任务"
+    },
+    {
+     "ref": "",
+     "title": "Maximum likelihood",
+     "zh": "极大似然"
+    },
+    {
+     "ref": "",
+     "title": "Likelihood, Loss and Risk",
+     "zh": "似然、损失与风险"
+    },
+    {
+     "ref": "",
+     "title": "Empirical Risk and Overfitting",
+     "zh": "经验风险与过拟合"
+    },
+    {
+     "ref": "",
+     "title": "Maximum likelihood learning in Bayesian networks",
+     "zh": "贝叶斯网络中的极大似然学习"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Learning in undirected models",
+   "zh": "无向模型中的学习",
+   "items": [
+    {
+     "ref": "",
+     "title": "Learning Markov random fields",
+     "zh": "学习马尔可夫随机场"
+    },
+    {
+     "ref": "",
+     "title": "Maximum likelihood learning of MRFs",
+     "zh": "马尔可夫随机场的极大似然学习"
+    },
+    {
+     "ref": "",
+     "title": "Learning in conditional random fields",
+     "zh": "条件随机场中的学习"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Learning in latent variable models",
+   "zh": "隐变量模型中的学习",
+   "items": [
+    {
+     "ref": "",
+     "title": "Latent variable models",
+     "zh": "隐变量模型"
+    },
+    {
+     "ref": "",
+     "title": "Learning latent variable models",
+     "zh": "学习隐变量模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Bayesian learning",
+   "zh": "贝叶斯学习",
+   "items": [
+    {
+     "ref": "",
+     "title": "Setup",
+     "zh": "设定"
+    },
+    {
+     "ref": "",
+     "title": "Conjugate Priors",
+     "zh": "共轭先验"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Structure learning",
+   "zh": "结构学习",
+   "items": [
+    {
+     "ref": "",
+     "title": "Score-based approach",
+     "zh": "基于评分的方法"
+    },
+    {
+     "ref": "",
+     "title": "Score metrics",
+     "zh": "评分准则"
+    },
+    {
+     "ref": "",
+     "title": "Chow-Liu Algorithm",
+     "zh": "Chow-Liu 算法"
+    },
+    {
+     "ref": "",
+     "title": "Search algorithms",
+     "zh": "搜索算法"
+    },
+    {
+     "ref": "",
+     "title": "Constraint-based approach",
+     "zh": "基于约束的方法"
+    },
+    {
+     "ref": "",
+     "title": "Recent Advances",
+     "zh": "近期进展"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "Bayes网络",
+   "refs": [
+    "A:#1"
+   ],
+   "note": "Bayesian networks 一章：概率建模的紧凑参数化、有向图表示与形式定义、DAG 结构蕴含的（条件）独立性、有向图的表示能力。"
+  },
+  {
+   "topic": "Markov网络",
+   "refs": [
+    "A:#2"
+   ],
+   "note": "Markov random fields 一章：无向模型的形式定义、与贝叶斯网络的对比、无向模型中的独立性、条件随机场与因子图。"
+  },
+  {
+   "topic": "推断",
+   "refs": [
+    "A:#3",
+    "A:#4",
+    "A:#5",
+    "A:#6",
+    "A:#7"
+   ],
+   "note": "五章分别对应精确推断（变量消去及其复杂度）、置信传播与联结树（含 loopy BP）、MAP 推断（图割、LP 松弛、对偶分解）、采样推断（前向/拒绝/重要性采样、MCMC）、变分推断（KL、变分下界、平均场）。"
+  },
+  {
+   "topic": "学习与结构建模",
+   "refs": [
+    "A:#8",
+    "A:#9",
+    "A:#10",
+    "A:#11",
+    "A:#12"
+   ],
+   "note": "有向模型的极大似然与经验风险、无向模型（含 CRF）的似然学习、隐变量模型与 EM、贝叶斯学习与共轭先验、结构学习（评分搜索与 Chow-Liu、约束方法）。"
+  }
+ ],
+ "omitted": "A（CS228 notes）未收：Preliminaries 三页（Introduction、Review of probability theory、Real-world applications —— 前者是课程导论，第二个是概率论复习，属先修 M.6.1，都不讲图模型本身）、Bringing it all together 的 The variational autoencoder 与 List of further readings（VAE 属于深度生成模型，节点简介不含），以及各章内部的例题小节（如 Bayesian learning 的 Example 1/Example 2、undirected 的 Example/Example (continued)、jt 的 An illustrative example 等只讲例子的小节未单列）。",
+ "notes": "这套讲义没有给章编号（目录是 Representation / Inference / Learning 三部分 + 章名，章内是二级标题），所以所有条目的 ref 留空，coverage 用 A:#序号 指到章（#1–#12 按 outline 顺序编号）。为了能精确指到章，outline 的分支直接用的是 12 个章，而不是三层（部分→章→节）。章节标题取目录页的写法（如 TOC 上的 “Belief propagation”“Structure learning”），个别章的内页标题更长（如 Structure learning for Bayesian networks），未采用。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 56,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

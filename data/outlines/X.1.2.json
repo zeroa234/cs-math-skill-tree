@@ -1,0 +1,432 @@
+{
+ "id": "X.1.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Introduction to Machine Learning Systems (Volume I)",
+   "by": "Vijay Janapa Reddi (Harvard University), MIT Press, open access",
+   "year": 2026,
+   "url": "https://mlsysbook.ai/vol1/",
+   "toc_urls": [
+    "https://mlsysbook.ai/vol1/",
+    "https://mlsysbook.ai/vol1/02_system_paradigms/02_system_paradigms.html",
+    "https://mlsysbook.ai/vol1/10_model_compression/10_model_compression.html",
+    "https://mlsysbook.ai/vol1/11_hw_acceleration/11_hw_acceleration.html",
+    "https://mlsysbook.ai/vol1/12_benchmarking/12_benchmarking.html",
+    "https://mlsysbook.ai/vol1/13_model_serving/13_model_serving.html"
+   ],
+   "why": "节点“现有英文学习资源”Edge AI learning path 自述尚无学期课表（the path has no semester syllabus yet），它指定的读物就是这本 CC-BY-NC-SA 开放教材 Volume I；第 2 章 System Paradigms 正好按 Cloud/Edge/Mobile/TinyML 四种部署范式讲边缘部署的延迟与隐私、混合分层协同，第 10–13 章补上边缘侧压缩、加速器、测量与延迟预算。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "2 System Paradigms",
+   "zh": "系统范式",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Four Deployment Regimes Across Nine Orders of Magnitude",
+     "zh": "跨越九个数量级的四种部署格局"
+    },
+    {
+     "ref": "2.2",
+     "title": "Physical Constraints on Deployment",
+     "zh": "部署的物理约束"
+    },
+    {
+     "ref": "2.3",
+     "title": "Analyzing Workloads",
+     "zh": "负载分析"
+    },
+    {
+     "ref": "2.5",
+     "title": "Cloud ML: Computational Power",
+     "zh": "云端机器学习：算力"
+    },
+    {
+     "ref": "2.6",
+     "title": "Edge ML: Latency and Privacy",
+     "zh": "边缘机器学习：延迟与隐私",
+     "items": [
+      {
+       "ref": "2.6.1",
+       "title": "The data locality invariant: When the network is too slow",
+       "zh": "数据本地性不变式：当网络太慢时"
+      },
+      {
+       "ref": "2.6.2",
+       "title": "Edge ML deployment challenges",
+       "zh": "边缘机器学习的部署挑战"
+      },
+      {
+       "ref": "2.6.3",
+       "title": "Real-time industrial and IoT systems",
+       "zh": "实时工业与物联网系统"
+      }
+     ]
+    },
+    {
+     "ref": "2.7",
+     "title": "Mobile ML: Offline Intelligence",
+     "zh": "移动端机器学习：离线智能"
+    },
+    {
+     "ref": "2.8",
+     "title": "TinyML: Ubiquitous Sensing",
+     "zh": "TinyML：泛在感知"
+    },
+    {
+     "ref": "2.9",
+     "title": "Choosing a Deployment Paradigm",
+     "zh": "选择部署范式"
+    },
+    {
+     "ref": "2.10",
+     "title": "Hybrid Architectures",
+     "zh": "混合架构",
+     "items": [
+      {
+       "ref": "2.10.1",
+       "title": "Splitting work across tiers: Three integration patterns",
+       "zh": "跨层分工：三种集成模式"
+      },
+      {
+       "ref": "2.10.2",
+       "title": "How hybrid tiers communicate in production",
+       "zh": "生产环境中混合各层如何通信"
+      }
+     ]
+    },
+    {
+     "ref": "2.11",
+     "title": "What Every Tier Shares",
+     "zh": "各层共有的东西"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "10 Model Compression",
+   "zh": "模型压缩",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Fitting the Deployment Budget",
+     "zh": "贴合部署预算"
+    },
+    {
+     "ref": "10.2",
+     "title": "Structural Optimization: Changing What the Model Computes",
+     "zh": "结构优化：改变模型算什么",
+     "items": [
+      {
+       "ref": "10.2.1",
+       "title": "Pruning",
+       "zh": "剪枝"
+      },
+      {
+       "ref": "10.2.3",
+       "title": "Knowledge distillation",
+       "zh": "知识蒸馏"
+      },
+      {
+       "ref": "10.2.4",
+       "title": "Efficient architecture design",
+       "zh": "高效架构设计"
+      },
+      {
+       "ref": "10.2.5",
+       "title": "Neural architecture search",
+       "zh": "神经架构搜索"
+      }
+     ]
+    },
+    {
+     "ref": "10.3",
+     "title": "Numerical Precision: Changing How Values Are Stored",
+     "zh": "数值精度：改变数值怎么存",
+     "items": [
+      {
+       "ref": "10.3.2",
+       "title": "Precision and energy",
+       "zh": "精度与能耗"
+      },
+      {
+       "ref": "10.3.3",
+       "title": "Quantization methods",
+       "zh": "量化方法"
+      },
+      {
+       "ref": "10.3.4",
+       "title": "Extreme quantization",
+       "zh": "极致量化"
+      }
+     ]
+    },
+    {
+     "ref": "10.4",
+     "title": "Hardware Implementation: Changing How the Model Executes",
+     "zh": "硬件实现：改变模型怎么执行",
+     "items": [
+      {
+       "ref": "10.4.2",
+       "title": "Sparsity exploitation",
+       "zh": "稀疏性利用"
+      }
+     ]
+    },
+    {
+     "ref": "10.5",
+     "title": "Choosing and Combining Techniques",
+     "zh": "技术的选择与组合"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "11 Hardware Acceleration",
+   "zh": "硬件加速",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Anatomy of an Accelerator",
+     "zh": "加速器的解剖"
+    },
+    {
+     "ref": "11.4",
+     "title": "Compute Units",
+     "zh": "计算单元",
+     "items": [
+      {
+       "ref": "11.4.3",
+       "title": "Processing elements",
+       "zh": "处理单元"
+      },
+      {
+       "ref": "11.4.4",
+       "title": "Systolic arrays",
+       "zh": "脉动阵列"
+      }
+     ]
+    },
+    {
+     "ref": "11.5",
+     "title": "Memory Systems",
+     "zh": "存储系统",
+     "items": [
+      {
+       "ref": "11.5.1",
+       "title": "The AI memory wall",
+       "zh": "AI 内存墙"
+      }
+     ]
+    },
+    {
+     "ref": "11.6",
+     "title": "Performance Bounds",
+     "zh": "性能上界",
+     "items": [
+      {
+       "ref": "11.6.1",
+       "title": "The roofline model",
+       "zh": "屋脊线模型"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "12 Benchmarking",
+   "zh": "基准测试",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "The Benchmark–Production Gap",
+     "zh": "基准测试与生产之间的鸿沟"
+    },
+    {
+     "ref": "12.3",
+     "title": "Benchmarking Granularity",
+     "zh": "基准测试的粒度",
+     "items": [
+      {
+       "ref": "12.3.1",
+       "title": "Micro benchmarks",
+       "zh": "微基准"
+      },
+      {
+       "ref": "12.3.2",
+       "title": "Macro benchmarks",
+       "zh": "宏基准"
+      },
+      {
+       "ref": "12.3.3",
+       "title": "End-to-end benchmarks",
+       "zh": "端到端基准"
+      }
+     ]
+    },
+    {
+     "ref": "12.6",
+     "title": "Inference Benchmarks",
+     "zh": "推理基准",
+     "items": [
+      {
+       "ref": "12.6.2",
+       "title": "Inference metrics",
+       "zh": "推理度量指标"
+      },
+      {
+       "ref": "12.6.4",
+       "title": "Mobile and edge benchmarks",
+       "zh": "移动端与边缘基准"
+      },
+      {
+       "ref": "12.6.5",
+       "title": "Building the edge-board benchmark",
+       "zh": "搭建边缘开发板基准"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "13 Model Serving",
+   "zh": "模型服务",
+   "items": [
+    {
+     "ref": "13.3",
+     "title": "Request Lifecycle",
+     "zh": "请求生命周期",
+     "items": [
+      {
+       "ref": "13.3.1",
+       "title": "The latency budget",
+       "zh": "延迟预算"
+      },
+      {
+       "ref": "13.3.2",
+       "title": "Stage-by-stage latency breakdown",
+       "zh": "逐阶段延迟拆解"
+      }
+     ]
+    },
+    {
+     "ref": "13.4",
+     "title": "Queuing Theory",
+     "zh": "排队论",
+     "items": [
+      {
+       "ref": "13.4.3",
+       "title": "Tail latency",
+       "zh": "尾延迟"
+      }
+     ]
+    },
+    {
+     "ref": "13.5",
+     "title": "Throughput Optimization",
+     "zh": "吞吐优化",
+     "items": [
+      {
+       "ref": "13.5.2",
+       "title": "Formation delay and the latency-throughput frontier",
+       "zh": "组批延迟与延迟-吞吐前沿"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "边缘部署的学习",
+   "refs": [
+    "A:2.8",
+    "A:2.10"
+   ],
+   "note": "书里没有单独一节的“端上学习”：2.8 TinyML 讲微控制器的两级存储划分与端上训练的内存约束（引 TinyTL），2.10 混合架构讲把个性化/更新放到哪一层。系统化的端上训练在节点 X.1.1 的课程 Lecture 19。"
+  },
+  {
+   "topic": "边缘部署的推理",
+   "refs": [
+    "A:2.6",
+    "A:2.6.1",
+    "A:2.6.2",
+    "A:10",
+    "A:10.1",
+    "A:13.3"
+   ],
+   "note": "2.6 整节讲把推理放到边缘时的延迟/容量约束，第 10 章讲把模型压进部署预算，13.3 讲线上推理的请求生命周期与延迟预算。"
+  },
+  {
+   "topic": "端边云协同",
+   "refs": [
+    "A:2.1",
+    "A:2.5",
+    "A:2.7",
+    "A:2.9",
+    "A:2.10",
+    "A:2.10.1",
+    "A:2.10.2",
+    "A:2.11"
+   ],
+   "note": "2.1 给出云/边/移动/TinyML 四种部署格局，2.9 讲如何在层间选型，2.10 整节是混合架构（跨层分工的三种集成模式与生产通信方式），2.11 收在各层共有的约束。"
+  },
+  {
+   "topic": "时延",
+   "refs": [
+    "A:2.6.1",
+    "A:2.6.3",
+    "A:12.6.2",
+    "A:12.6.4",
+    "A:13.3.1",
+    "A:13.3.2",
+    "A:13.4.3"
+   ],
+   "note": "2.6.1 的数据本地性论证说明为什么远传延迟无法靠更快的远端算力消除；12.6.2 给出延迟/尾延迟等推理度量，12.6.4 是移动与边缘基准；13.3.1–13.3.2 拆解延迟预算，13.4.3 是尾延迟。"
+  },
+  {
+   "topic": "功耗",
+   "refs": [
+    "A:2.2",
+    "A:2.8",
+    "A:10.3.2",
+    "A:11.6.1"
+   ],
+   "note": "2.2 的物理约束里有功率墙（power wall）与内存墙，2.8 讲 TinyML 的功耗-能力权衡，10.3.2 讲精度与能耗的关系，11.6.1 的屋脊线把算力/带宽约束画成上界。"
+  },
+  {
+   "topic": "隐私",
+   "refs": [
+    "A:2.6"
+   ],
+   "note": "只有 2.6 的标题与正文正面讨论（数据本地性即隐私动机）；本书这一卷没有差分隐私、联邦学习之类的专章，故只到 2.6 一节。"
+  },
+  {
+   "topic": "时延/功耗与隐私的权衡",
+   "refs": [
+    "A:2.9",
+    "A:2.11"
+   ],
+   "note": "2.9 讲跨层权衡后的选型（含按运营代价筛选部署层），2.11 归纳各层共有的约束；具体的量化权衡分散在 2.5–2.8 各层的 trade-off 小节里。"
+  }
+ ],
+ "omitted": "A 未收：第 1、16 章（导论与结论）、第 3–9 章（生命周期、数据工程、神经网络计算与架构、框架、训练、数据选择——系统本身而非边缘侧问题）、第 14 章 ML Operations（云端运维）、第 15 章 Responsible Engineering（公平性/环境影响，非本节点的隐私权衡）；第 2 章内 2.4 System Balance and Hardware（单机硬件配比，属通用系统基础）；第 10 章内 10.2.2 Low-rank factorization、10.2.6 Adaptive computation methods、10.3.1 Numerical formats、10.3.5 When fewer bits run faster、10.4.1、10.5.1–10.5.4、第 11 章内 11.2 Hardware Specialization、11.3 Compute Primitives、第 12 章内 12.2 Benchmark Carpentry、12.4 Benchmark Suites、12.5 Training Benchmarks、第 13 章内 13.1 The Serving Inversion、13.2 Serving System Architecture。",
+ "notes": "A 是整本书一个 HTML（首页 + 各章 HTML），章节目录取自各章页的编号小节标题；分支标题照抄章首页的“章号 + 章名”（如 2 System Paradigms）。书的首页把章节按 Part I Foundations / Part II Development / Part III Optimization / Part IV Deployment 分组，本节点用到 Part I 的第 2 章与 Part III–IV 的第 10–13 章。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 57,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

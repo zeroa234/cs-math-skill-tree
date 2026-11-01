@@ -1,0 +1,344 @@
+{
+ "id": "D.1.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Database Design – 2nd Edition",
+   "by": "Adrienne Watt, Nelson Eng",
+   "year": 2014,
+   "url": "https://opentextbc.ca/dbdesign01/",
+   "toc_urls": [
+    "https://opentextbc.ca/dbdesign01/",
+    "https://opentextbc.ca/dbdesign01/open/download?type=pdf",
+    "https://opentextbc.ca/dbdesign01/chapter/chapter-7-the-relational-data-model/",
+    "https://opentextbc.ca/dbdesign01/chapter/chapter-9-integrity-rules-and-constraints/",
+    "https://opentextbc.ca/dbdesign01/chapter/chapter-11-functional-dependencies/",
+    "https://opentextbc.ca/dbdesign01/chapter/chapter-12-normalization/"
+   ],
+   "why": "就是节点“现有英文学习资源”里的那本开放教材（BCcampus，CC BY 4.0），章目覆盖数据建模、关系模型、ER 模型、完整性约束、函数依赖、规范化与 SQL，正好对上节点简介；目录取官网书页与官方 PDF 的内嵌目录（章级），其中章内小节标题抄自各章网页正文里的标题。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-445/645 Intro to Database Systems (Fall 2026)",
+   "by": "Carnegie Mellon University",
+   "year": 2026,
+   "url": "https://15445.courses.cs.cmu.edu/fall2026/",
+   "toc_urls": [
+    "https://15445.courses.cs.cmu.edu/fall2026/schedule.html"
+   ],
+   "why": "补“关系代数”这一点：A 是设计导向的教材，全篇不讲关系代数；CMU 15-445 第 1 讲即 Relational Model & Algebra。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Data Modelling",
+   "zh": "数据建模",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "The Relational Data Model",
+   "zh": "关系数据模型",
+   "items": [
+    {
+     "ref": "",
+     "title": "Relation",
+     "zh": "关系"
+    },
+    {
+     "ref": "",
+     "title": "Table",
+     "zh": "表"
+    },
+    {
+     "ref": "",
+     "title": "Column",
+     "zh": "列"
+    },
+    {
+     "ref": "",
+     "title": "Domain",
+     "zh": "域"
+    },
+    {
+     "ref": "",
+     "title": "Records",
+     "zh": "记录"
+    },
+    {
+     "ref": "",
+     "title": "Degree",
+     "zh": "元数（属性个数）"
+    },
+    {
+     "ref": "",
+     "title": "Properties of a Table",
+     "zh": "表的性质"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "The Entity Relationship Data Model",
+   "zh": "实体-联系（ER）数据模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Integrity Rules and Constraints",
+   "zh": "完整性规则与约束",
+   "items": [
+    {
+     "ref": "",
+     "title": "Domain Integrity",
+     "zh": "域完整性"
+    },
+    {
+     "ref": "",
+     "title": "Entity integrity",
+     "zh": "实体完整性"
+    },
+    {
+     "ref": "",
+     "title": "Referential integrity",
+     "zh": "参照完整性"
+    },
+    {
+     "ref": "",
+     "title": "Referential integrity in Microsoft Access",
+     "zh": "在 Microsoft Access 中设置参照完整性"
+    },
+    {
+     "ref": "",
+     "title": "Referential integrity using Transact-SQL (MS SQL Server)",
+     "zh": "用 Transact-SQL 设置参照完整性"
+    },
+    {
+     "ref": "",
+     "title": "Foreign key rules",
+     "zh": "外键规则"
+    },
+    {
+     "ref": "",
+     "title": "Enterprise Constraints",
+     "zh": "企业级约束"
+    },
+    {
+     "ref": "",
+     "title": "Business Rules",
+     "zh": "业务规则"
+    },
+    {
+     "ref": "",
+     "title": "Cardinality and connectivity",
+     "zh": "基数与连接性"
+    },
+    {
+     "ref": "",
+     "title": "Relationship Types",
+     "zh": "关系类型"
+    },
+    {
+     "ref": "",
+     "title": "Optional relationships",
+     "zh": "可选关系"
+    },
+    {
+     "ref": "",
+     "title": "Mandatory relationships",
+     "zh": "强制关系"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "ER Modelling",
+   "zh": "ER 建模",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Functional Dependencies",
+   "zh": "函数依赖",
+   "items": [
+    {
+     "ref": "",
+     "title": "Rules of Functional Dependencies",
+     "zh": "函数依赖规则"
+    },
+    {
+     "ref": "",
+     "title": "Inference Rules",
+     "zh": "推理规则"
+    },
+    {
+     "ref": "",
+     "title": "Axiom of reflexivity",
+     "zh": "自反律"
+    },
+    {
+     "ref": "",
+     "title": "Axiom of augmentation",
+     "zh": "增广律"
+    },
+    {
+     "ref": "",
+     "title": "Axiom of transitivity",
+     "zh": "传递律"
+    },
+    {
+     "ref": "",
+     "title": "Union",
+     "zh": "合并规则"
+    },
+    {
+     "ref": "",
+     "title": "Decomposition",
+     "zh": "分解规则"
+    },
+    {
+     "ref": "",
+     "title": "Dependency Diagram",
+     "zh": "依赖图"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Normalization",
+   "zh": "规范化",
+   "items": [
+    {
+     "ref": "",
+     "title": "What Is Normalization?",
+     "zh": "什么是规范化"
+    },
+    {
+     "ref": "",
+     "title": "Normal Forms",
+     "zh": "范式"
+    },
+    {
+     "ref": "",
+     "title": "First Normal Form (1NF)",
+     "zh": "第一范式（1NF）"
+    },
+    {
+     "ref": "",
+     "title": "Second Normal Form (2NF)",
+     "zh": "第二范式（2NF）"
+    },
+    {
+     "ref": "",
+     "title": "Third Normal Form (3NF)",
+     "zh": "第三范式（3NF）"
+    },
+    {
+     "ref": "",
+     "title": "Boyce-Codd Normal Form (BCNF)",
+     "zh": "Boyce-Codd 范式（BCNF）"
+    },
+    {
+     "ref": "",
+     "title": "BCNF Example 1",
+     "zh": "BCNF 例 1"
+    },
+    {
+     "ref": "",
+     "title": "BCNF Example 2",
+     "zh": "BCNF 例 2"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "SQL Structured Query Language",
+   "zh": "SQL 结构化查询语言",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "SQL Data Manipulation Language",
+   "zh": "SQL 数据操纵语言",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "#01",
+   "title": "Relational Model & Algebra",
+   "zh": "关系模型与关系代数",
+   "fill": "补“关系代数”：选择、投影、连接、集合运算等关系运算，A 全篇未涉及",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "实体关系",
+   "refs": [
+    "A:8",
+    "A:10",
+    "A:9"
+   ],
+   "note": "第 8 章 The Entity Relationship Data Model 讲实体、属性、联系与 ERD 记法，第 10 章 ER Modelling 讲从需求到 ERD 的建模步骤；第 9 章里的 Cardinality and connectivity、Relationship Types、Optional/Mandatory relationships 讲 ERD 关系符号的基数与连接性。"
+  },
+  {
+   "topic": "关系代数",
+   "refs": [
+    "B:#1"
+   ],
+   "note": "主来源 A 是数据库设计向的开放教材，正文里没有 relational algebra 的内容（整书检索无此术语），因此用 CMU 15-445 第 1 讲 Relational Model & Algebra 作补充分支。"
+  },
+  {
+   "topic": "约束",
+   "refs": [
+    "A:9"
+   ],
+   "note": "第 9 章整章：域完整性、实体完整性（主键）、参照完整性（外键）、外键级联规则、企业级约束与业务规则；第 7 章 Properties of a Table 给出表的原子性等基本限制。"
+  },
+  {
+   "topic": "规范化",
+   "refs": [
+    "A:11",
+    "A:12"
+   ],
+   "note": "第 11 章讲函数依赖与 Armstrong 公理（自反、增广、传递、合并、分解）和依赖图，第 12 章接着讲 1NF、2NF、3NF、BCNF 及分解示例。"
+  },
+  {
+   "topic": "查询",
+   "refs": [
+    "A:15",
+    "A:16"
+   ],
+   "note": "第 15 章 SQL Structured Query Language 讲 DDL/CREATE TABLE 等，第 16 章 SQL Data Manipulation Language 讲 SELECT、DML 与多表查询。"
+  },
+  {
+   "topic": "数据建模",
+   "refs": [
+    "A:5",
+    "A:8",
+    "A:10"
+   ],
+   "note": "第 5 章 Data Modelling 讲数据建模的基本概念与模型层次，第 8、10 章讲 ER 建模的完整过程（概念模型→关系模式）。"
+  }
+ ],
+ "omitted": "A（Database Design – 2nd Edition）未收：第 1 章 Before the Advent of Database Systems（数据库发展史）、第 2 章 Fundamental Concepts（术语入门）、第 3 章 Characteristics and Benefits of a Database、第 6 章 Classification of Database Management Systems（DBMS 分类）、第 13 章 Database Development Process（开发流程/SDLC）、第 14 章 Database Users，均不在本节点简介的知识点内；附录 A/B/C（注册数据模型示例、ERD 练习、SQL 实验）与各章末的 Key Terms、Exercises 也不收。各章正文中“Figure x.y …”图注不算标题，未收。",
+ "notes": "选源说明：节点“现有英文学习资源”的这本开放教材目录本身只有章级（官网书页与官方 PDF 目录一致，16 章 + 附录），所以第 7、9、11、12 章的小节标题是逐章打开该章网页、照抄正文里的标题（原文无编号，故 ref 留空）；第 5、8、10、15、16 章只到章级，因为我只按需打开了这四章的页面。第 15、16 章（两章 SQL）与第 8 章（ER 模型）的网页 slug 与常规猜测不同，我只找到第 8 章为 /chapter/chapter-8-entity-relationship-model/，SQL 两章未定位到具体页面，故保持章级。补充分支 B 只取 CMU 15-445 的一讲，未展开其内部小节。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 45,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "id": "A.3.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Hugging Face Audio Course",
+   "by": "Sanchit Gandhi, Matthijs Hollemans, Maria Khalusova, Vaibhav Srivastav (Hugging Face)",
+   "year": 2023,
+   "url": "https://huggingface.co/learn/audio-course/chapter0/introduction",
+   "toc_urls": [
+    "https://huggingface.co/learn/audio-course/chapter0/introduction",
+    "https://huggingface.co/learn/audio-course/chapter1/audio_data",
+    "https://huggingface.co/learn/audio-course/en/chapter2/introduction",
+    "https://huggingface.co/learn/audio-course/en/chapter3/introduction",
+    "https://huggingface.co/learn/audio-course/en/chapter4/introduction",
+    "https://huggingface.co/learn/audio-course/en/chapter5/introduction",
+    "https://huggingface.co/learn/audio-course/en/chapter6/introduction",
+    "https://huggingface.co/learn/audio-course/en/chapter7/introduction"
+   ],
+   "why": "节点“现有英文学习资源”就是这门官方课（Hugging Face 免费公开课，2023 年 6–7 月分单元发布）；每个单元的侧栏就是逐节目录，按单元 1–7 抄下来正好覆盖音频表征（Unit 1）、音频应用总览（Unit 2）、声学建模的 CTC / Seq2Seq 架构（Unit 3）、音频分类实战（Unit 4）、语音识别与评测（Unit 5）、语音合成（Unit 6）、语音交互应用（Unit 7）。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Speech and Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition with Language Models, 3rd edition",
+   "by": "Daniel Jurafsky, James H. Martin",
+   "year": 2026,
+   "url": "https://web.stanford.edu/~jurafsky/slp3/",
+   "toc_urls": [
+    "https://web.stanford.edu/~jurafsky/slp3/",
+    "https://web.stanford.edu/~jurafsky/slp3/15.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/16.pdf",
+    "https://web.stanford.edu/~jurafsky/slp3/17.pdf"
+   ],
+   "why": "补声学与信号层面的基础：A（Hugging Face 课程）是“用预训练 Transformer 做音频任务”的实践课，声学建模只讲到 CTC/Seq2Seq 一层，没有语音的发音学、log Mel 频谱与 MFCC、CNN 声学模型、HuBERT、WER 定义，也没有 TTS 的音频编解码 token 与 MOS 评测。这里用 SLP3 第 15–17 章（语音学与特征提取、自动语音识别、文本转语音）补齐。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Working with audio data",
+   "zh": "处理音频数据",
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction to audio data",
+     "zh": "音频数据简介"
+    },
+    {
+     "ref": "",
+     "title": "Load and explore an audio dataset",
+     "zh": "加载与浏览音频数据集"
+    },
+    {
+     "ref": "",
+     "title": "Preprocessing audio data",
+     "zh": "音频数据预处理"
+    },
+    {
+     "ref": "",
+     "title": "Streaming audio data",
+     "zh": "流式音频数据"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "A gentle introduction to audio applications",
+   "zh": "音频应用入门",
+   "items": [
+    {
+     "ref": "",
+     "title": "Tour of audio applications",
+     "zh": "音频应用巡览"
+    },
+    {
+     "ref": "",
+     "title": "Audio classification with a pipeline",
+     "zh": "用 pipeline 做音频分类"
+    },
+    {
+     "ref": "",
+     "title": "Automatic speech recognition with a pipeline",
+     "zh": "用 pipeline 做自动语音识别"
+    },
+    {
+     "ref": "",
+     "title": "Audio generation with a pipeline",
+     "zh": "用 pipeline 做音频生成"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Transformer architectures for audio",
+   "zh": "面向音频的 Transformer 架构",
+   "items": [
+    {
+     "ref": "",
+     "title": "Refresher on transformer models",
+     "zh": "Transformer 模型回顾"
+    },
+    {
+     "ref": "",
+     "title": "CTC architectures",
+     "zh": "CTC 架构"
+    },
+    {
+     "ref": "",
+     "title": "Seq2Seq architectures",
+     "zh": "Seq2Seq 架构"
+    },
+    {
+     "ref": "",
+     "title": "Audio classification architectures",
+     "zh": "音频分类架构"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Build a music genre classifier",
+   "zh": "构建音乐流派分类器",
+   "items": [
+    {
+     "ref": "",
+     "title": "Pre-trained models for audio classification",
+     "zh": "音频分类的预训练模型"
+    },
+    {
+     "ref": "",
+     "title": "Fine-tuning a model for music classification",
+     "zh": "微调音乐分类模型"
+    },
+    {
+     "ref": "",
+     "title": "Build a demo with Gradio",
+     "zh": "用 Gradio 搭建演示"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Automatic Speech Recognition",
+   "zh": "自动语音识别",
+   "items": [
+    {
+     "ref": "",
+     "title": "Pre-trained models for speech recognition",
+     "zh": "语音识别的预训练模型"
+    },
+    {
+     "ref": "",
+     "title": "Choosing a dataset",
+     "zh": "选择数据集"
+    },
+    {
+     "ref": "",
+     "title": "Evaluation and metrics for speech recognition",
+     "zh": "语音识别的评测与指标"
+    },
+    {
+     "ref": "",
+     "title": "How to fine-tune an ASR system with the Trainer API",
+     "zh": "用 Trainer API 微调语音识别系统"
+    },
+    {
+     "ref": "",
+     "title": "Building a demo",
+     "zh": "搭建演示"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "From text to speech",
+   "zh": "从文本到语音",
+   "items": [
+    {
+     "ref": "",
+     "title": "Text-to-speech datasets",
+     "zh": "语音合成数据集"
+    },
+    {
+     "ref": "",
+     "title": "Pre-trained models for text-to-speech",
+     "zh": "语音合成的预训练模型"
+    },
+    {
+     "ref": "",
+     "title": "Fine-tuning SpeechT5",
+     "zh": "微调 SpeechT5"
+    },
+    {
+     "ref": "",
+     "title": "Evaluating text-to-speech models",
+     "zh": "语音合成模型的评测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Putting it all together",
+   "zh": "综合实战",
+   "items": [
+    {
+     "ref": "",
+     "title": "Speech-to-speech translation",
+     "zh": "语音到语音翻译"
+    },
+    {
+     "ref": "",
+     "title": "Creating a voice assistant",
+     "zh": "构建语音助手"
+    },
+    {
+     "ref": "",
+     "title": "Transcribe a meeting",
+     "zh": "会议转写"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "15",
+   "title": "Phonetics and Speech Feature Extraction",
+   "zh": "语音学与语音特征提取",
+   "fill": "音频表征：语音的发音学、韵律、声学信号、log Mel 频谱与 MFCC 特征",
+   "items": [
+    {
+     "ref": "15.1",
+     "title": "Speech Sounds and Phonetic Transcription",
+     "zh": "语音与音标转写"
+    },
+    {
+     "ref": "15.2",
+     "title": "Articulatory Phonetics",
+     "zh": "发音语音学"
+    },
+    {
+     "ref": "15.3",
+     "title": "Prosody",
+     "zh": "韵律"
+    },
+    {
+     "ref": "15.4",
+     "title": "Acoustic Phonetics and Signals",
+     "zh": "声学语音学与信号"
+    },
+    {
+     "ref": "15.5",
+     "title": "Feature Extraction for Speech Recognition: Log Mel Spectrum",
+     "zh": "语音识别的特征提取：对数梅尔频谱"
+    },
+    {
+     "ref": "15.6",
+     "title": "MFCC: Mel Frequency Cepstral Coefficients",
+     "zh": "MFCC：梅尔频率倒谱系数"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "16",
+   "title": "Automatic Speech Recognition",
+   "zh": "自动语音识别",
+   "fill": "声学建模与语音识别的经典方法：CNN 声学模型、编码器-解码器、自监督 HuBERT、CTC 与词错误率",
+   "items": [
+    {
+     "ref": "16.1",
+     "title": "The Automatic Speech Recognition Task",
+     "zh": "语音识别任务"
+    },
+    {
+     "ref": "16.2",
+     "title": "Convolutional Neural Networks",
+     "zh": "卷积神经网络"
+    },
+    {
+     "ref": "16.3",
+     "title": "The Encoder-Decoder Architecture for ASR",
+     "zh": "语音识别的编码器-解码器架构"
+    },
+    {
+     "ref": "16.4",
+     "title": "Self-supervised models: HuBERT",
+     "zh": "自监督模型：HuBERT"
+    },
+    {
+     "ref": "16.5",
+     "title": "CTC",
+     "zh": "CTC"
+    },
+    {
+     "ref": "16.6",
+     "title": "ASR Evaluation: Word Error Rate",
+     "zh": "语音识别评测：词错误率"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "17",
+   "title": "Text-to-Speech",
+   "zh": "文本转语音",
+   "fill": "语音合成：离散音频 token 与编解码器、VALL-E 两阶段语言模型、MOS 评测、说话人日志与口语语言模型",
+   "items": [
+    {
+     "ref": "17.1",
+     "title": "TTS overview",
+     "zh": "语音合成概述"
+    },
+    {
+     "ref": "17.2",
+     "title": "Using a codec to learn discrete audio tokens",
+     "zh": "用编解码器学习离散音频词元"
+    },
+    {
+     "ref": "17.3",
+     "title": "VALL-E: Generating audio with 2-stage LM",
+     "zh": "VALL-E：用两阶段语言模型生成音频"
+    },
+    {
+     "ref": "17.4",
+     "title": "TTS Evaluation",
+     "zh": "语音合成评测"
+    },
+    {
+     "ref": "17.5",
+     "title": "Other speech tasks",
+     "zh": "其他语音任务"
+    },
+    {
+     "ref": "17.6",
+     "title": "Spoken Language Models",
+     "zh": "口语语言模型"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "语音识别",
+   "refs": [
+    "A:5",
+    "A:2",
+    "B:16",
+    "B:16.1",
+    "B:16.6"
+   ]
+  },
+  {
+   "topic": "语音合成",
+   "refs": [
+    "A:6",
+    "A:2",
+    "B:17",
+    "B:17.3",
+    "B:17.4"
+   ]
+  },
+  {
+   "topic": "声学建模",
+   "refs": [
+    "A:3",
+    "B:16.2",
+    "B:16.3",
+    "B:16.5"
+   ]
+  },
+  {
+   "topic": "音频表征",
+   "refs": [
+    "A:1",
+    "B:15",
+    "B:15.5",
+    "B:15.6"
+   ]
+  },
+  {
+   "topic": "语音交互",
+   "refs": [
+    "A:7",
+    "A:2",
+    "A:4"
+   ]
+  }
+ ],
+ "omitted": "主来源 A 的 Unit 0（欢迎与课程说明）、Unit 8（结课与证书）以及各单元里的 Quiz、Hands-on exercise、Supplemental reading and resources、“What you'll learn”小节（属练习、参考与导语）未收。补充来源 B（SLP3）只取第 15–17 章，其余章（分词、语言模型、句法、信息抽取、机器翻译、大模型等）属 A.3.1 及其它节点；第 15.7/16.7/17.7 的 Summary 小节也未收。",
+ "notes": "A 的单元页面侧栏是逐节目录（英文版路径为 /en/chapterN/…，Unit 1 的页面为 /chapter1/audio_data，两种路径都读到了）；“What you'll learn and what you'll build”“Tour of audio applications”等标题在侧栏里是连排文本，脚本核对按去空格标点后比对即可。B 的 17.6 Spoken Language Models 在原书里标为 TBD（尚未写完）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 55,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,509 @@
+{
+ "id": "V.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Virtual Reality",
+   "by": "Steven M. LaValle",
+   "year": 2023,
+   "url": "https://lavalle.pl/vr/",
+   "toc_urls": [
+    "https://lavalle.pl/vr/vrbook.pdf"
+   ],
+   "why": "节点现有英文资源就是作者主页上的这本开放获取教材（Cambridge University Press 2023，作者免费提供全文与配套 NPTEL 讲座）；目录页只有章级概览，整书 PDF 的 Contents 给出到节，追踪（第 9 章）、交互与社交交互（第 10 章）、VR 评估与实验（第 12 章）正对节点知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Augmented Reality: Principles and Practice",
+   "by": "Dieter Schmalstieg, Tobias Höllerer",
+   "year": 2016,
+   "url": "https://www.informit.com/store/augmented-reality-principles-and-practice-9780321883575",
+   "toc_urls": [
+    "https://ptgmedia.pearsoncmg.com/images/9780321883575/samplepages/9780321883575.pdf"
+   ],
+   "why": "补“虚实融合、协作”：LaValle 的 VR 教材只在 1.2、7.5 点到虚实融合、只在 10.4 一节讲社会性交互；本书是 AR 的标准教材，第 1 章把 VR/AR/MR 放在混合现实连续体上讨论，第 6 章讲配准、遮挡与光照一致性（虚实融合的核心技术），第 12 章整章讲共处与远程协作，正好补齐这两点。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "引言",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "What Is Virtual Reality?",
+     "zh": "什么是虚拟现实"
+    },
+    {
+     "ref": "1.2",
+     "title": "Modern VR Experiences",
+     "zh": "现代虚拟现实体验"
+    },
+    {
+     "ref": "1.3",
+     "title": "History Repeats",
+     "zh": "历史的重演"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Bird's-Eye View",
+   "zh": "全景概览",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Hardware",
+     "zh": "硬件"
+    },
+    {
+     "ref": "2.2",
+     "title": "Software",
+     "zh": "软件"
+    },
+    {
+     "ref": "2.3",
+     "title": "Human Physiology and Perception",
+     "zh": "人体生理与感知"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Visual Perception",
+   "zh": "视觉感知",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Perception of Depth",
+     "zh": "深度感知"
+    },
+    {
+     "ref": "6.2",
+     "title": "Perception of Motion",
+     "zh": "运动感知"
+    },
+    {
+     "ref": "6.3",
+     "title": "Perception of Color",
+     "zh": "颜色感知"
+    },
+    {
+     "ref": "6.4",
+     "title": "Combining Sources of Information",
+     "zh": "多源信息的整合"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Visual Rendering",
+   "zh": "视觉渲染",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Ray Tracing and Shading Models",
+     "zh": "光线追踪与着色模型"
+    },
+    {
+     "ref": "7.2",
+     "title": "Rasterization",
+     "zh": "光栅化"
+    },
+    {
+     "ref": "7.3",
+     "title": "Correcting Optical Distortions",
+     "zh": "光学畸变的校正"
+    },
+    {
+     "ref": "7.4",
+     "title": "Improving Latency and Frame Rates",
+     "zh": "降低延迟与提升帧率"
+    },
+    {
+     "ref": "7.5",
+     "title": "Immersive Photos and Videos",
+     "zh": "沉浸式照片与视频"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Motion in Real and Virtual Worlds",
+   "zh": "现实与虚拟世界中的运动",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Velocities and Accelerations",
+     "zh": "速度与加速度"
+    },
+    {
+     "ref": "8.2",
+     "title": "The Vestibular System",
+     "zh": "前庭系统"
+    },
+    {
+     "ref": "8.3",
+     "title": "Physics in the Virtual World",
+     "zh": "虚拟世界中的物理"
+    },
+    {
+     "ref": "8.4",
+     "title": "Mismatched Motion and Vection",
+     "zh": "运动失配与自运动错觉"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Tracking",
+   "zh": "追踪",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Tracking 2D Orientation",
+     "zh": "二维朝向追踪"
+    },
+    {
+     "ref": "9.2",
+     "title": "Tracking 3D Orientation",
+     "zh": "三维朝向追踪"
+    },
+    {
+     "ref": "9.3",
+     "title": "Tracking Position and Orientation",
+     "zh": "位置与朝向追踪"
+    },
+    {
+     "ref": "9.4",
+     "title": "Tracking Attached Bodies",
+     "zh": "附着刚体的追踪"
+    },
+    {
+     "ref": "9.5",
+     "title": "3D Scanning of Environments",
+     "zh": "环境的三维扫描"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Interaction",
+   "zh": "交互",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Motor Programs and Remapping",
+     "zh": "运动程序与重映射"
+    },
+    {
+     "ref": "10.2",
+     "title": "Locomotion",
+     "zh": "移动"
+    },
+    {
+     "ref": "10.3",
+     "title": "Manipulation",
+     "zh": "操作"
+    },
+    {
+     "ref": "10.4",
+     "title": "Social Interaction",
+     "zh": "社会性交互"
+    },
+    {
+     "ref": "10.5",
+     "title": "Additional Interaction Mechanisms",
+     "zh": "其他交互机制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Evaluating VR Systems and Experiences",
+   "zh": "VR 系统与体验的评估",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Perceptual Training",
+     "zh": "感知训练"
+    },
+    {
+     "ref": "12.2",
+     "title": "Recommendations for Developers",
+     "zh": "给开发者的建议"
+    },
+    {
+     "ref": "12.3",
+     "title": "Comfort and VR Sickness",
+     "zh": "舒适度与 VR 眩晕"
+    },
+    {
+     "ref": "12.4",
+     "title": "Experiments on Human Subjects",
+     "zh": "以人为被试的实验"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Frontiers",
+   "zh": "前沿",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Touch and Proprioception",
+     "zh": "触觉与本体感觉"
+    },
+    {
+     "ref": "13.2",
+     "title": "Smell and Taste",
+     "zh": "嗅觉与味觉"
+    },
+    {
+     "ref": "13.3",
+     "title": "Robotic Interfaces",
+     "zh": "机器人接口"
+    },
+    {
+     "ref": "13.4",
+     "title": "Brain-Machine Interfaces",
+     "zh": "脑机接口"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Introduction to Augmented Reality",
+   "zh": "增强现实导论",
+   "fill": "虚实融合",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition and Scope",
+     "zh": "定义与范围"
+    },
+    {
+     "ref": "",
+     "title": "A Brief History of Augmented Reality",
+     "zh": "增强现实简史"
+    },
+    {
+     "ref": "",
+     "title": "Examples",
+     "zh": "应用实例",
+     "items": [
+      {
+       "ref": "",
+       "title": "Industry and Construction",
+       "zh": "工业与建筑"
+      },
+      {
+       "ref": "",
+       "title": "Medical",
+       "zh": "医疗"
+      },
+      {
+       "ref": "",
+       "title": "Personal Information Display",
+       "zh": "个人信息显示"
+      },
+      {
+       "ref": "",
+       "title": "Navigation",
+       "zh": "导航"
+      },
+      {
+       "ref": "",
+       "title": "Games",
+       "zh": "游戏"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Related Fields",
+     "zh": "相关领域",
+     "items": [
+      {
+       "ref": "",
+       "title": "Mixed Reality Continuum",
+       "zh": "混合现实连续体"
+      },
+      {
+       "ref": "",
+       "title": "Virtual Reality",
+       "zh": "虚拟现实"
+      },
+      {
+       "ref": "",
+       "title": "Ubiquitous Computing",
+       "zh": "普适计算"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Visual Coherence",
+   "zh": "视觉一致性",
+   "fill": "虚实融合",
+   "items": [
+    {
+     "ref": "",
+     "title": "Registration",
+     "zh": "配准"
+    },
+    {
+     "ref": "",
+     "title": "Occlusion",
+     "zh": "遮挡"
+    },
+    {
+     "ref": "",
+     "title": "Photometric Registration",
+     "zh": "光度配准"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Collaboration",
+   "zh": "协作",
+   "fill": "协作",
+   "items": [
+    {
+     "ref": "",
+     "title": "Properties of Collaboration Systems",
+     "zh": "协作系统的特性"
+    },
+    {
+     "ref": "",
+     "title": "Co-located Collaboration",
+     "zh": "同地协作",
+     "items": [
+      {
+       "ref": "",
+       "title": "Individual Displays and Views",
+       "zh": "个体显示与视角"
+      },
+      {
+       "ref": "",
+       "title": "Gaze Awareness",
+       "zh": "视线感知"
+      },
+      {
+       "ref": "",
+       "title": "Agile Collaboration in Shared Space",
+       "zh": "共享空间中的敏捷协作"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Remote Collaboration",
+     "zh": "远程协作",
+     "items": [
+      {
+       "ref": "",
+       "title": "Video Sharing",
+       "zh": "视频共享"
+      },
+      {
+       "ref": "",
+       "title": "Video Sharing with Virtual Objects",
+       "zh": "带虚拟对象的视频共享"
+      },
+      {
+       "ref": "",
+       "title": "Pointing and Gestures",
+       "zh": "指点与手势"
+      },
+      {
+       "ref": "",
+       "title": "Remote Collaboration with Agile Users",
+       "zh": "面向移动用户的远程协作"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "虚实融合",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "A:1.2",
+    "A:7.5"
+   ],
+   "note": "B:#1 用混合现实连续体把 VR/AR/MR 放在一条轴上；B:#2 讲配准、遮挡与光度配准，即把虚拟物体“贴”进真实画面而不穿帮的关键技术；A:1.2 与 A:7.5 是 VR 教材里顺带提到的 AR/视频透视式显示内容。"
+  },
+  {
+   "topic": "追踪",
+   "refs": [
+    "A:9",
+    "A:9.1",
+    "A:9.2",
+    "A:9.3",
+    "A:9.4",
+    "A:9.5"
+   ]
+  },
+  {
+   "topic": "空间界面",
+   "refs": [
+    "A:10",
+    "A:10.1",
+    "A:10.2",
+    "A:10.3",
+    "A:10.5",
+    "A:2.1"
+   ]
+  },
+  {
+   "topic": "协作",
+   "refs": [
+    "B:#3",
+    "A:10.4"
+   ],
+   "note": "B:#3 整章讲协作：协作系统特性、同地协作（个体显示与视角、视线感知、共享空间中的敏捷协作）与远程协作（视频共享、指点与手势）；A:10.4 是 VR 教材里的一节 Social Interaction，可作对照。"
+  },
+  {
+   "topic": "沉浸与交互研究",
+   "refs": [
+    "A:12",
+    "A:12.1",
+    "A:12.3",
+    "A:12.4",
+    "A:8.4",
+    "A:6.4"
+   ]
+  }
+ ],
+ "omitted": "A 里未收的章：3（虚拟世界的几何：模型、旋转表示、观察变换）、4（光与光学：透镜、像差、人眼、相机、显示）、5（人视觉生理：感光细胞、眼动、分辨率）、11（音频：声传播、听觉定位、HRTF 渲染）——它们是为渲染与追踪服务的底层数学/光学/生理/声学铺垫，不在节点简介的“虚实融合、追踪、空间界面、协作、沉浸与交互研究”这条线上。B 里只取了第 1、6、12 章；第 2 章（显示）、第 3 章（追踪）、第 4 章（面向 AR 的计算机视觉）、第 5 章（标定与配准）、第 7 章（情境化可视化）、第 8 章（交互）、第 9 章（建模与标注）、第 10 章（创作工具）、第 11 章（导航）、第 13 章（软件架构）与第 14 章（研究议程）未收——追踪与交互已由 A 的第 9、10 章覆盖，其余偏 AR 系统实现。两本书的 Bibliography / Index / Preface 也不收。",
+ "notes": "主来源是节点列出的那本书，但目录抄自作者免费公开的整书 PDF（lavalle.pl/vr/vrbook.pdf，2020 年草稿版）的 Contents 页：作者主页 https://lavalle.pl/vr/ 只有章级概览（每章一句话主题），没有到节的目录，PDF 里才有 1.1–13.4 的完整分节。草稿版与 CUP 2023 版章节一致（13 章、编号相同）。补充来源 B 的目录抄自 Pearson 官方 sample pages PDF（前十六页含完整 Contents），原文用缩进表示层级、没有章号节号，所以 B 的 ref 一律留空，coverage 用 B:#1..#3 指到分支。另：CMU 05-332 与 UCSC CSE 168 的课程页只有课程简介，没有逐讲主题，不能当目录用；节点要求的“空间界面”主要由 A:10（交互：重映射、移动、操作、其他交互机制）与 A:2.1（硬件/显示）承担。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 74,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

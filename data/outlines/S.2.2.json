@@ -1,0 +1,523 @@
+{
+ "id": "S.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Computer Security (CS 161 online textbook)",
+   "by": "David Wagner, Nicholas Weaver, Peyrin Kao, Fuzail Shakir, Andrew Law, Nicholas Ngai (UC Berkeley)",
+   "year": 2024,
+   "url": "https://textbook.cs161.org/",
+   "toc_urls": [
+    "https://textbook.cs161.org/network/intro.html",
+    "https://textbook.cs161.org/network/arp.html",
+    "https://textbook.cs161.org/network/dhcp.html",
+    "https://textbook.cs161.org/network/bgp.html",
+    "https://textbook.cs161.org/network/transport.html",
+    "https://textbook.cs161.org/network/tls.html",
+    "https://textbook.cs161.org/network/dns.html",
+    "https://textbook.cs161.org/network/dnssec.html",
+    "https://textbook.cs161.org/network/dos.html",
+    "https://textbook.cs161.org/network/firewalls.html",
+    "https://textbook.cs161.org/network/intrusion-detection.html",
+    "https://textbook.cs161.org/network/abusing-intrusion-detection.html"
+   ],
+   "why": "这本书的网络部分按协议逐章组织，每章固定“背景—协议—攻击—防护”四段（如 ARP、DHCP、BGP、TCP/UDP、DNS、DNSSEC 均有 Attack/Defenses 小节），正好对上节点要的协议攻击面、防火墙、入侵检测与传输保护，且是节点先修证据里的 UC Berkeley CS 161 官方教材。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "25",
+   "title": "Introduction to Networking",
+   "zh": "网络导论",
+   "items": [
+    {
+     "ref": "25.1",
+     "title": "Local Area Networks",
+     "zh": "局域网"
+    },
+    {
+     "ref": "25.2",
+     "title": "Internet layering",
+     "zh": "互联网分层"
+    },
+    {
+     "ref": "25.3",
+     "title": "Protocols and Headers",
+     "zh": "协议与报文头"
+    },
+    {
+     "ref": "25.4",
+     "title": "Addressing: MAC, IP, Ports",
+     "zh": "寻址：MAC、IP、端口"
+    },
+    {
+     "ref": "25.5",
+     "title": "Packets vs. Connections",
+     "zh": "分组与连接"
+    },
+    {
+     "ref": "25.6",
+     "title": "Network Adversaries",
+     "zh": "网络对手"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "26",
+   "title": "ARP",
+   "zh": "ARP 协议",
+   "items": [
+    {
+     "ref": "26.1",
+     "title": "Cheat sheet",
+     "zh": "速查表"
+    },
+    {
+     "ref": "26.2",
+     "title": "Networking background: Ethernet",
+     "zh": "网络背景：以太网"
+    },
+    {
+     "ref": "26.3",
+     "title": "Protocol: ARP",
+     "zh": "协议：ARP"
+    },
+    {
+     "ref": "26.4",
+     "title": "Attack: ARP Spoofing",
+     "zh": "攻击：ARP 欺骗"
+    },
+    {
+     "ref": "26.5",
+     "title": "Defenses: Switches",
+     "zh": "防护：交换机"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "27",
+   "title": "DHCP",
+   "zh": "DHCP 协议",
+   "items": [
+    {
+     "ref": "27.1",
+     "title": "Cheat sheet",
+     "zh": "速查表"
+    },
+    {
+     "ref": "27.2",
+     "title": "Protocol: DHCP",
+     "zh": "协议：DHCP"
+    },
+    {
+     "ref": "27.3",
+     "title": "Networking background: NAT",
+     "zh": "网络背景：NAT"
+    },
+    {
+     "ref": "27.4",
+     "title": "Attack",
+     "zh": "攻击"
+    },
+    {
+     "ref": "27.5",
+     "title": "Defenses",
+     "zh": "防护"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "29",
+   "title": "BGP",
+   "zh": "BGP 协议",
+   "items": [
+    {
+     "ref": "29.1",
+     "title": "Cheat sheet",
+     "zh": "速查表"
+    },
+    {
+     "ref": "29.2",
+     "title": "Networking background: Subnets",
+     "zh": "网络背景：子网"
+    },
+    {
+     "ref": "29.3",
+     "title": "Protocol: BGP",
+     "zh": "协议：BGP"
+    },
+    {
+     "ref": "29.4",
+     "title": "Attack: Malicious ASs",
+     "zh": "攻击：恶意自治系统"
+    },
+    {
+     "ref": "29.5",
+     "title": "Defenses",
+     "zh": "防护"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "30",
+   "title": "TCP and UDP",
+   "zh": "TCP 与 UDP",
+   "items": [
+    {
+     "ref": "30.1",
+     "title": "Cheat sheet",
+     "zh": "速查表"
+    },
+    {
+     "ref": "30.2",
+     "title": "Networking background: Ports",
+     "zh": "网络背景：端口"
+    },
+    {
+     "ref": "30.3",
+     "title": "Protocol: UDP",
+     "zh": "协议：UDP"
+    },
+    {
+     "ref": "30.4",
+     "title": "Protocol: TCP",
+     "zh": "协议：TCP"
+    },
+    {
+     "ref": "30.5",
+     "title": "Tradeoffs between TCP and UDP",
+     "zh": "TCP 与 UDP 的取舍"
+    },
+    {
+     "ref": "30.6",
+     "title": "Attack: TCP Packet Injection",
+     "zh": "攻击：TCP 报文注入"
+    },
+    {
+     "ref": "30.7",
+     "title": "Defenses: TLS, random initial sequence numbers",
+     "zh": "防护：TLS 与随机初始序列号"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "31",
+   "title": "TLS",
+   "zh": "TLS 协议",
+   "items": [
+    {
+     "ref": "31.1",
+     "title": "TLS Handshake",
+     "zh": "TLS 握手"
+    },
+    {
+     "ref": "31.2",
+     "title": "Replay attacks",
+     "zh": "重放攻击"
+    },
+    {
+     "ref": "31.3",
+     "title": "TLS in practice",
+     "zh": "TLS 的实际部署"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "32",
+   "title": "DNS",
+   "zh": "DNS 协议",
+   "items": [
+    {
+     "ref": "32.1",
+     "title": "Name servers",
+     "zh": "名称服务器"
+    },
+    {
+     "ref": "32.2",
+     "title": "Name server hierarchy",
+     "zh": "名称服务器层级"
+    },
+    {
+     "ref": "32.3",
+     "title": "DNS Message Format",
+     "zh": "DNS 报文格式"
+    },
+    {
+     "ref": "32.4",
+     "title": "DNS Lookup",
+     "zh": "DNS 查询过程"
+    },
+    {
+     "ref": "32.5",
+     "title": "DNS Security: Bailiwick",
+     "zh": "DNS 安全：归属域检查"
+    },
+    {
+     "ref": "32.6",
+     "title": "DNS Security: On-path attackers and off-path attackers",
+     "zh": "DNS 安全：在途与非在途攻击者"
+    },
+    {
+     "ref": "32.7",
+     "title": "DNS Security: Kaminsky attack",
+     "zh": "DNS 安全：Kaminsky 攻击"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "33",
+   "title": "DNSSEC",
+   "zh": "DNSSEC",
+   "items": [
+    {
+     "ref": "33.1",
+     "title": "Signing records",
+     "zh": "签名记录"
+    },
+    {
+     "ref": "33.2",
+     "title": "Delegating trust",
+     "zh": "信任委托"
+    },
+    {
+     "ref": "33.3",
+     "title": "DNSSEC Intuition",
+     "zh": "DNSSEC 的直觉"
+    },
+    {
+     "ref": "33.4",
+     "title": "New DNSSEC record types",
+     "zh": "新增的 DNSSEC 记录类型"
+    },
+    {
+     "ref": "33.5",
+     "title": "Key Signing Keys and Zone Signing Keys",
+     "zh": "密钥签名密钥与区域签名密钥"
+    },
+    {
+     "ref": "33.6",
+     "title": "DNSSEC query walkthrough",
+     "zh": "DNSSEC 查询演练"
+    },
+    {
+     "ref": "33.7",
+     "title": "Nonexistent domains",
+     "zh": "不存在的域名"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "34",
+   "title": "Denial-of-Service (DoS)",
+   "zh": "拒绝服务攻击",
+   "items": [
+    {
+     "ref": "34.1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "34.2",
+     "title": "Application Level DoS",
+     "zh": "应用层拒绝服务"
+    },
+    {
+     "ref": "34.3",
+     "title": "SYN Flood Attacks",
+     "zh": "SYN 洪泛攻击"
+    },
+    {
+     "ref": "34.4",
+     "title": "Distributed Denial of Service (DDoS)",
+     "zh": "分布式拒绝服务"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "35",
+   "title": "Firewalls",
+   "zh": "防火墙",
+   "items": [
+    {
+     "ref": "35.1",
+     "title": "Introduction to Controlling Network Access",
+     "zh": "网络访问控制导论"
+    },
+    {
+     "ref": "35.2",
+     "title": "Security Policy",
+     "zh": "安全策略"
+    },
+    {
+     "ref": "35.3",
+     "title": "Enforcement: Stateful Packet Filters",
+     "zh": "实施：状态化包过滤"
+    },
+    {
+     "ref": "35.4",
+     "title": "Enforcement: Other Firewalls",
+     "zh": "实施：其他类型防火墙"
+    },
+    {
+     "ref": "35.5",
+     "title": "Firewall Principles",
+     "zh": "防火墙原则"
+    },
+    {
+     "ref": "35.6",
+     "title": "Firewall Advantages",
+     "zh": "防火墙的优点"
+    },
+    {
+     "ref": "35.7",
+     "title": "Firewall Disadvantages",
+     "zh": "防火墙的缺点"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "36",
+   "title": "Intrusion Detection",
+   "zh": "入侵检测",
+   "items": [
+    {
+     "ref": "36.1",
+     "title": "Types of detectors",
+     "zh": "检测器类型"
+    },
+    {
+     "ref": "36.2",
+     "title": "Types of detectors: Network Intrusion Detection System (NIDS)",
+     "zh": "检测器类型：网络入侵检测系统"
+    },
+    {
+     "ref": "36.3",
+     "title": "Types of detectors: Host-based Intrusion Detection System (HIDS)",
+     "zh": "检测器类型：主机入侵检测系统"
+    },
+    {
+     "ref": "36.4",
+     "title": "Types of detectors: Logging",
+     "zh": "检测器类型：日志"
+    },
+    {
+     "ref": "36.5",
+     "title": "False Positives and False Negatives",
+     "zh": "误报与漏报"
+    },
+    {
+     "ref": "36.6",
+     "title": "Detection strategies",
+     "zh": "检测策略"
+    },
+    {
+     "ref": "36.7",
+     "title": "Detection strategies: Signature-based detection",
+     "zh": "检测策略：基于特征"
+    },
+    {
+     "ref": "36.8",
+     "title": "Detection strategies: Anomaly-based detection",
+     "zh": "检测策略：基于异常"
+    },
+    {
+     "ref": "36.9",
+     "title": "Detection strategies: Specification-based detection",
+     "zh": "检测策略：基于规约"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "37",
+   "title": "Abusing Intrusion Detection",
+   "zh": "入侵检测的滥用",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "协议攻击面",
+   "refs": [
+    "A:25.6",
+    "A:26.4",
+    "A:27.4",
+    "A:29.4",
+    "A:30.6",
+    "A:32.7"
+   ],
+   "note": "教材每章把“协议—攻击—防护”拆开：25.6 先给出网络对手模型，随后 ARP 欺骗（26.4）、DHCP 攻击（27.4）、恶意自治系统（29.4）、TCP 报文注入（30.6）、DNS 的 Kaminsky 攻击（32.7）逐个协议列攻击面。"
+  },
+  {
+   "topic": "分段",
+   "refs": [
+    "A:29.2",
+    "A:27.3",
+    "A:35.1"
+   ],
+   "note": "教材没有以“网络分段”为题的章；相关材料是 29.2 Subnets（子网划分）、27.3 NAT（内外网地址转换）与 35.1 Introduction to Controlling Network Access（按边界控制访问）。"
+  },
+  {
+   "topic": "防火墙",
+   "refs": [
+    "A:35",
+    "A:35.2",
+    "A:35.3",
+    "A:35.4",
+    "A:35.5"
+   ],
+   "note": "第 35 章整章讲防火墙：安全策略、状态化包过滤与其它类型防火墙、防火墙原则与优缺点。"
+  },
+  {
+   "topic": "入侵检测",
+   "refs": [
+    "A:36",
+    "A:36.2",
+    "A:36.3",
+    "A:36.7",
+    "A:36.8",
+    "A:36.9"
+   ],
+   "note": "第 36 章讲检测器分类（NIDS/HIDS/日志）、误报漏报与三类检测策略；第 37 章从监听者视角讨论入侵检测被滥用的问题。"
+  },
+  {
+   "topic": "传输保护",
+   "refs": [
+    "A:31",
+    "A:31.1",
+    "A:31.3",
+    "A:30.7"
+   ],
+   "note": "第 31 章讲 TLS 握手、重放与部署要点；30.7 把 TLS 作为 TCP 报文注入的防护之一。"
+  },
+  {
+   "topic": "网络监测",
+   "refs": [
+    "A:36.4",
+    "A:36.2",
+    "A:37"
+   ],
+   "note": "网络监测在教材里落在 36.2 NIDS（线上流量检测）与 36.4 Logging（日志），第 37 章讲大规模监听（NSA 式的 NIDS＋数据库）及其法律边界。"
+  }
+ ],
+ "omitted": "只收 CS161 网络部分的第 25–27、29–37 章。未收：28 WPA（属无线安全 S.2.3）、38 Malware（恶意软件不在节点简介的知识点内）、39 Anonymity and Tor（匿名通信属隐私专题）；书的内存安全、密码学、Web 安全各章属其它节点。节点“现有英文学习资源”Stanford CS155 的 syllabus 只到讲级（L12 HTTPS、L14 Internet Protocols、L15 Internet Security、L16 DoS Attacks and Network Defenses），没有节级目录，故未作为主来源。",
+ "notes": "节点现有英文资源是 Stanford CS155，但它的 syllabus 每讲只有一行主题，做不出“章→节”的导览图；因此主来源换成同一节点先修证据里的 UC Berkeley CS161 教材网络部分（12 章、65 节，粒度到节）。CS155 的对应关系：L12 HTTPS ↔ 第 31 章 TLS，L14 Internet Protocols ↔ 第 25/26/29/30/32 章，L15 Internet Security ↔ 第 33 章 DNSSEC 与第 35 章 Firewalls，L16 DoS Attacks and Network Defenses ↔ 第 34 章 DoS 与第 35 章。第 37 章没有小节标题，故只有一个分支、没有叶子。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 77,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,468 @@
+{
+ "id": "D.2.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Introduction to Information Retrieval",
+   "by": "Christopher D. Manning, Prabhakar Raghavan, Hinrich Schütze (Cambridge University Press)",
+   "year": 2008,
+   "url": "https://nlp.stanford.edu/IR-book/",
+   "toc_urls": [
+    "https://nlp.stanford.edu/IR-book/pdf/irbookprint.pdf",
+    "https://nlp.stanford.edu/IR-book/html/htmledition/irbook.html",
+    "https://nlp.stanford.edu/IR-book/information-retrieval-book.html"
+   ],
+   "why": "节点现有英文资源（Stanford CS276）在主页上把这本书列为 Required textbook，并逐讲标注读哪几章（IIR chapter 1/2/4/5/6/7/8/11/20/21），所以这本书的目录就是这门课的详细教学大纲；书是作者与出版社公开的官方在线版（PDF + HTML 全书），章节最细、最权威。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Mining of Massive Datasets",
+   "by": "Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman",
+   "year": 2020,
+   "url": "http://www.mmds.org/",
+   "toc_urls": [
+    "http://infolab.stanford.edu/~ullman/mmds/preface.pdf",
+    "http://www.mmds.org/"
+   ],
+   "why": "补两块 IIR（2008）没有的内容：①近似最近邻/局部敏感哈希（Ch4 Finding Similar Items 的第 3 章），即现代稠密向量检索的索引算法；②推荐系统（Ch9 Recommendation Systems），节点标题里的“推荐基础设施”。MMDS 是 Stanford CS246 的官方教材，作者站点按出版社授权免费提供全书 PDF。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Boolean retrieval",
+   "zh": "布尔检索",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "An example information retrieval problem",
+     "zh": "一个信息检索问题实例"
+    },
+    {
+     "ref": "1.2",
+     "title": "A first take at building an inverted index",
+     "zh": "倒排索引的初步构建"
+    },
+    {
+     "ref": "1.3",
+     "title": "Processing Boolean queries",
+     "zh": "布尔查询的处理"
+    },
+    {
+     "ref": "1.4",
+     "title": "The extended Boolean model versus ranked retrieval",
+     "zh": "扩展布尔模型与排序检索"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "The term vocabulary and postings lists",
+   "zh": "词项词表与倒排记录表",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Document delineation and character sequence decoding",
+     "zh": "文档界定与字符序列解码"
+    },
+    {
+     "ref": "2.2",
+     "title": "Determining the vocabulary of terms",
+     "zh": "确定词项词表"
+    },
+    {
+     "ref": "2.3",
+     "title": "Faster postings list intersection via skip pointers",
+     "zh": "用跳表指针加速倒排记录表求交"
+    },
+    {
+     "ref": "2.4",
+     "title": "Positional postings and phrase queries",
+     "zh": "位置倒排记录与短语查询"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Dictionaries and tolerant retrieval",
+   "zh": "词典与容错检索",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Search structures for dictionaries",
+     "zh": "词典的查找结构"
+    },
+    {
+     "ref": "3.2",
+     "title": "Wildcard queries",
+     "zh": "通配符查询"
+    },
+    {
+     "ref": "3.3",
+     "title": "Spelling correction",
+     "zh": "拼写纠错"
+    },
+    {
+     "ref": "3.4",
+     "title": "Phonetic correction",
+     "zh": "语音纠错"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Index construction",
+   "zh": "索引构建",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Hardware basics",
+     "zh": "硬件基础"
+    },
+    {
+     "ref": "4.2",
+     "title": "Blocked sort-based indexing",
+     "zh": "基于块的排序索引"
+    },
+    {
+     "ref": "4.3",
+     "title": "Single-pass in-memory indexing",
+     "zh": "单遍内存索引"
+    },
+    {
+     "ref": "4.4",
+     "title": "Distributed indexing",
+     "zh": "分布式索引构建"
+    },
+    {
+     "ref": "4.5",
+     "title": "Dynamic indexing",
+     "zh": "动态索引"
+    },
+    {
+     "ref": "4.6",
+     "title": "Other types of indexes",
+     "zh": "其他类型的索引"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Index compression",
+   "zh": "索引压缩",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Statistical properties of terms in information retrieval",
+     "zh": "信息检索中词项的统计特性"
+    },
+    {
+     "ref": "5.2",
+     "title": "Dictionary compression",
+     "zh": "词典压缩"
+    },
+    {
+     "ref": "5.3",
+     "title": "Postings file compression",
+     "zh": "倒排记录文件压缩"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Scoring, term weighting and the vector space model",
+   "zh": "打分、词项加权与向量空间模型",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Parametric and zone indexes",
+     "zh": "参数化索引与域索引"
+    },
+    {
+     "ref": "6.2",
+     "title": "Term frequency and weighting",
+     "zh": "词项频率与加权"
+    },
+    {
+     "ref": "6.3",
+     "title": "The vector space model for scoring",
+     "zh": "用于打分的向量空间模型"
+    },
+    {
+     "ref": "6.4",
+     "title": "Variant tf-idf functions",
+     "zh": "tf-idf 的变体"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Computing scores in a complete search system",
+   "zh": "完整搜索系统中的打分计算",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Efficient scoring and ranking",
+     "zh": "高效打分与排序"
+    },
+    {
+     "ref": "7.2",
+     "title": "Components of an information retrieval system",
+     "zh": "检索系统的组成部分"
+    },
+    {
+     "ref": "7.3",
+     "title": "Vector space scoring and query operator interaction",
+     "zh": "向量空间打分与查询算子的交互"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Evaluation in information retrieval",
+   "zh": "信息检索评价",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Information retrieval system evaluation",
+     "zh": "检索系统评价"
+    },
+    {
+     "ref": "8.2",
+     "title": "Standard test collections",
+     "zh": "标准测试集"
+    },
+    {
+     "ref": "8.3",
+     "title": "Evaluation of unranked retrieval sets",
+     "zh": "无序结果集的评价"
+    },
+    {
+     "ref": "8.4",
+     "title": "Evaluation of ranked retrieval results",
+     "zh": "排序结果的评价"
+    },
+    {
+     "ref": "8.5",
+     "title": "Assessing relevance",
+     "zh": "相关性判定"
+    },
+    {
+     "ref": "8.6",
+     "title": "A broader perspective: System quality and user utility",
+     "zh": "更宽的视角：系统质量与用户效用"
+    },
+    {
+     "ref": "8.7",
+     "title": "Results snippets",
+     "zh": "结果摘要"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Probabilistic information retrieval",
+   "zh": "概率信息检索",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Review of basic probability theory",
+     "zh": "基本概率论回顾"
+    },
+    {
+     "ref": "11.2",
+     "title": "The Probability Ranking Principle",
+     "zh": "概率排序原理"
+    },
+    {
+     "ref": "11.3",
+     "title": "The Binary Independence Model",
+     "zh": "二值独立模型"
+    },
+    {
+     "ref": "11.4",
+     "title": "An appraisal and some extensions",
+     "zh": "评述与若干扩展"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "20",
+   "title": "Web crawling and indexes",
+   "zh": "Web 抓取与索引",
+   "items": [
+    {
+     "ref": "20.3",
+     "title": "Distributing indexes",
+     "zh": "索引的分发部署"
+    },
+    {
+     "ref": "20.4",
+     "title": "Connectivity servers",
+     "zh": "连通性服务器"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Finding Similar Items",
+   "zh": "寻找相似项",
+   "fill": "补“向量检索”的近似最近邻索引：shingling 与 minhash 生成集合摘要，局部敏感哈希（LSH）把高维向量检索降成若干次哈希桶查找，是稠密向量检索基础设施的算法内核",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Applications of Near-Neighbor Search",
+     "zh": "近邻搜索的应用"
+    },
+    {
+     "ref": "3.2",
+     "title": "Shingling of Documents",
+     "zh": "文档的 shingling（词片）"
+    },
+    {
+     "ref": "3.3",
+     "title": "Similarity-Preserving Summaries of Sets",
+     "zh": "保持相似性的集合摘要"
+    },
+    {
+     "ref": "3.4",
+     "title": "Locality-Sensitive Hashing for Documents",
+     "zh": "文档的局部敏感哈希"
+    },
+    {
+     "ref": "3.5",
+     "title": "Distance Measures",
+     "zh": "距离度量"
+    },
+    {
+     "ref": "3.6",
+     "title": "The Theory of Locality-Sensitive Functions",
+     "zh": "局部敏感函数理论"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "9",
+   "title": "Recommendation Systems",
+   "zh": "推荐系统",
+   "fill": "补“推荐基础设施”：IIR 全书写的是检索，没有推荐系统；这里补效用矩阵、基于内容的推荐、协同过滤（相似度、对偶性）、降维与 Netflix 评测，正好对应节点标题里的推荐召回与排序基础设施",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "A Model for Recommendation Systems",
+     "zh": "推荐系统模型"
+    },
+    {
+     "ref": "9.2",
+     "title": "Content-Based Recommendations",
+     "zh": "基于内容的推荐"
+    },
+    {
+     "ref": "9.3",
+     "title": "Collaborative Filtering",
+     "zh": "协同过滤"
+    },
+    {
+     "ref": "9.4",
+     "title": "Dimensionality Reduction",
+     "zh": "降维"
+    },
+    {
+     "ref": "9.5",
+     "title": "The Netflix Challenge",
+     "zh": "Netflix 大奖赛"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "倒排索引",
+   "refs": [
+    "A:1.2",
+    "A:2.2",
+    "A:2.3",
+    "A:2.4",
+    "A:3.1",
+    "A:4",
+    "A:5"
+   ],
+   "note": "IIR 第 1–5 章就是倒排索引的完整链路：1.2 建索引、2.2 词项规范化/词干化后的词表、2.3 跳表指针加速求交、2.4 位置索引与短语查询、3.1 词典查找结构、第 4 章各种索引构建算法（含分布式）、第 5 章词典与倒排记录压缩。"
+  },
+  {
+   "topic": "排序",
+   "refs": [
+    "A:6.2",
+    "A:6.3",
+    "A:6.4",
+    "A:11.2",
+    "A:11.3",
+    "A:11.4",
+    "A:7.1"
+   ],
+   "note": "tf-idf 与向量空间打分（6.2–6.4）、概率排序原理与二值独立模型、Okapi BM25（11.2–11.4）、以及在线打分时的高效 top-K（7.1 非精确 top K、索引消除、冠军列表、静态质量分、影响因子排序、聚类剪枝）。"
+  },
+  {
+   "topic": "向量检索",
+   "refs": [
+    "A:6.3",
+    "A:6.4",
+    "B:3.4",
+    "B:3.6"
+   ],
+   "note": "词项向量空间的检索打分在 A 的 6.3（向量空间模型、点积、查询向量、计算向量得分）与 6.4（各种 tf-idf 变体与长度归一化）；词嵌入/稠密向量的近似最近邻索引 IIR（2008）没有，用 B 的局部敏感哈希（3.4 分带技术、3.6 局部敏感函数理论）补。"
+  },
+  {
+   "topic": "检索评估",
+   "refs": [
+    "A:8.1",
+    "A:8.2",
+    "A:8.3",
+    "A:8.4",
+    "A:8.5",
+    "A:8.6",
+    "A:8.7"
+   ],
+   "note": "第 8 章整章：评价指标与 Cranfield 范式（8.1）、标准测试集（8.2）、无序结果的 precision/recall（8.3）、排序结果的 MAP/NDCG（8.4）、相关性判定与 kappa（8.5）、系统质量与用户效用（8.6）、结果摘要（8.7）。"
+  },
+  {
+   "topic": "在线服务",
+   "refs": [
+    "A:7.1",
+    "A:7.2",
+    "A:20.3",
+    "A:20.4"
+   ],
+   "note": "7.1 讲在线查询时怎么把打分算得足够快，7.2 讲一个完整检索系统的组件（分层索引、查询词邻近度、解析与打分函数、集成）；20.3 索引的分发部署与 20.4 连通性服务器补大规模部署侧。"
+  },
+  {
+   "topic": "推荐基础设施",
+   "refs": [
+    "B:9"
+   ],
+   "note": "节点标题含“推荐”，简介里没单列。IIR 无推荐系统内容，用 B 第 9 章补（效用矩阵、基于内容、协同过滤、UV 分解、Netflix 评测）；推荐系统的在线服务/召回漏斗是工程话题，两本书都没有专门章节。"
+  }
+ ],
+ "omitted": "A（IIR）未收：第 9 章相关反馈与查询扩展、第 10 章 XML 检索、第 12 章语言模型检索（属检索模型细节，排序主线已由 6/11 章覆盖）、第 13–17 章文本分类与聚类（属机器学习，另有节点）、第 18 章矩阵分解与 LSI、第 19 章 Web 搜索概况、第 21 章链接分析（PageRank/HITS，属网页排序与图算法）——这些超出“倒排索引—排序—评估—在线服务”这条基础设施主线；第 20 章只收了 20.3/20.4 两节，抓取器与 URL 前沿（20.1–20.2）未收；每章末尾的 References and further reading、Exercises 也不算目录条目。B（MMDS）只收第 3 章（缺 3.7–3.10 的 LSH 其他距离族、应用与高度相似项方法）与第 9 章，其中 9.x 的 Exercises 条目未收。",
+ "notes": "两点说明：(1) 选 IIR 作为主来源，是因为 CS276 主页把 IIR 写成 Required textbook 并逐讲标注章节（“IIR chapter 1/2/4/5/6/7/8/11/20/21”），课程 schedule 与书目录是同一份材料；章节号、节号与标题全部照官方在线版 PDF（irbookprint.pdf，2009-04-01 版）的 Contents 抄录。(2) B 的目录取自作者站点 mmds.org 第 3 版表格里链接的 preface.pdf，该 PDF 正文的版权年份是 2014（第 2 版），第 1–12 章章节名与站上第 3 版表列章节名一致（第 3 版只新增第 13 章神经网络），故本节目录按该 PDF 抄录；mmds.org 首页文本用于核对章名。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 64,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,276 @@
+{
+ "id": "A.2.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Deep Learning Systems: Algorithms and Implementation (CMU 10-414/714)",
+   "by": "Tianqi Chen, J. Zico Kolter, Tim Dettmers (CMU)",
+   "year": 2026,
+   "url": "https://dlsyscourse.org/",
+   "toc_urls": [
+    "https://dlsyscourse.org/lectures/"
+   ],
+   "why": "就是节点“现有英文学习资源”（dlsyscourse.org 公开讲义与视频），逐讲 lecture 列表里正好有 Optimization、Hardware Acceleration + GPUs、Training Large Models、Model Deployment 四讲，是训练/部署系统的骨架；但混合精度、压缩、量化、蒸馏在课程里没有专讲，用 B、C 补。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "TinyML and Efficient Deep Learning Computing (MIT 6.5940, Fall 2024)",
+   "by": "Song Han (MIT)",
+   "year": 2024,
+   "url": "https://hanlab.mit.edu/courses/2024-fall-65940",
+   "toc_urls": [
+    "https://hanlab.mit.edu/courses/2024-fall-65940"
+   ],
+   "why": "补主来源 A 缺失的四块：压缩（剪枝与稀疏化）、量化、蒸馏、分布式训练，以及推理侧的 LLM 高效部署；课程主页的逐讲列表（Efficient Inference / Efficient Training 两个 chapter 加各讲主题）是最细的一份公开目录。注意这是研究生课，只用于这几个专门主题。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "Train With Mixed Precision",
+   "by": "NVIDIA (NVIDIA Deep Learning Performance guide)",
+   "year": 2024,
+   "url": "https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html",
+   "toc_urls": [
+    "https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html"
+   ],
+   "why": "补“混合精度”：A、B 都把它当成量化/低精度训练的一小节，没有单独章节；这份厂商官方指南按节讲半精度格式、Tensor Core 运算、何时该用混合精度、损失缩放与缩放因子、自动混合精度，是这一主题的标准参考文档。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture 6",
+   "title": "Optimization",
+   "zh": "优化",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 12",
+   "title": "Hardware Acceleration + GPUs",
+   "zh": "硬件加速与 GPU",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 19",
+   "title": "Training Large Models",
+   "zh": "大规模模型训练",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 23",
+   "title": "Model Deployment",
+   "zh": "模型部署",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Chapter I: Efficient Inference",
+   "zh": "第一部分：高效推理",
+   "fill": "补“推理”这一侧的总览（推理为什么比训练更受内存带宽/时延约束），A 的课程结构里没有推理专章",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 3",
+   "title": "Pruning and Sparsity (Part I)",
+   "zh": "剪枝与稀疏化（上）",
+   "fill": "补“压缩”：结构化/非结构化剪枝、稀疏化的动机与分类",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 4",
+   "title": "Pruning and Sparsity (Part II)",
+   "zh": "剪枝与稀疏化（下）",
+   "fill": "补“压缩”：稀疏训练、硬件对稀疏的支持与实际加速比",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 5",
+   "title": "Quantization (Part I)",
+   "zh": "量化（上）",
+   "fill": "补“量化”：数值格式、量化粒度与量化感知训练",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 6",
+   "title": "Quantization (Part II)",
+   "zh": "量化（下）",
+   "fill": "补“量化”：训练后量化、低比特与混合精度的工程取舍",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 9",
+   "title": "Knowledge Distillation",
+   "zh": "知识蒸馏",
+   "fill": "补“蒸馏”：用教师模型监督学生模型压缩模型规模",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 13",
+   "title": "Efficient LLM Deployment",
+   "zh": "大模型高效部署",
+   "fill": "补“推理服务”：把压缩后的模型真正部署上线（显存、吞吐、批处理与服务化）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 19",
+   "title": "Distributed Training (Part I)",
+   "zh": "分布式训练（上）",
+   "fill": "补“分布式训练”：数据并行、模型并行、流水线并行的切分方式",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 20",
+   "title": "Distributed Training (Part II)",
+   "zh": "分布式训练（下）",
+   "fill": "补“分布式训练”：通信开销、梯度压缩与大规模训练的系统权衡",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "引言",
+   "fill": "补“混合精度”：为什么低精度能同时省内存、省带宽、提吞吐",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "2",
+   "title": "Mixed Precision Training",
+   "zh": "混合精度训练",
+   "fill": "补“混合精度”：混合精度训练的两步做法（FP16 计算 + 损失缩放）",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Half Precision Format",
+     "zh": "半精度格式"
+    },
+    {
+     "ref": "2.2",
+     "title": "Tensor Core Math",
+     "zh": "Tensor Core 运算"
+    },
+    {
+     "ref": "2.3",
+     "title": "Considering When Training With Mixed Precision",
+     "zh": "何时采用混合精度训练"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "3",
+   "title": "Automatic Mixed Precision",
+   "zh": "自动混合精度",
+   "fill": "补“混合精度”的工程化：框架自动做类型转换与损失缩放",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "4",
+   "title": "Optimizing For Tensor Cores",
+   "zh": "针对 Tensor Core 优化",
+   "fill": "补“混合精度”落到硬件的那一步：让算子维度与精度对齐 Tensor Core",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "5",
+   "title": "Multi-GPU Training",
+   "zh": "多 GPU 训练",
+   "fill": "补“分布式训练”与“混合精度”的交叉：多卡梯度聚合时用什么精度",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "优化器",
+   "refs": [
+    "A:Lecture 6"
+   ],
+   "note": "A 第 6 讲 Optimize：SGD 及其变体、动量、自适应步长等优化算法在系统里的实现；A:Lecture 19 Training Large Models 讲大模型训练时的显存/吞吐约束（批量、梯度累积）。更细的优化器算法谱系（Adagrad/RMSProp/Adam、学习率调度）在教材 d2l 第 12 章，属节点 A.2.3.1 的资源，没有在这里重复展开。"
+  },
+  {
+   "topic": "混合精度",
+   "refs": [
+    "C:1",
+    "C:2",
+    "C:2.1",
+    "C:2.2",
+    "C:2.3",
+    "C:3",
+    "C:4",
+    "B:Lecture 5",
+    "B:Lecture 6"
+   ],
+   "note": "C:2.1 半精度格式（位宽、指数范围、动态范围）；C:2.2 Tensor Core 运算；C:2.3 何时该用混合精度；C:3 自动混合精度（AMP）；C:4 针对 Tensor Core 的算子/维度对齐；B 的两讲量化从低比特训练侧再讲一遍（训练后量化与量化感知训练），其中也涉及混合精度训练。"
+  },
+  {
+   "topic": "分布式训练",
+   "refs": [
+    "B:Lecture 19",
+    "B:Lecture 20",
+    "A:Lecture 19",
+    "C:5"
+   ],
+   "note": "B:Lecture 19/20 是分布式训练上下两讲（数据/模型/流水线并行、通信与梯度压缩）；A:Lecture 19 从训练大模型的系统角度讲显存与并行；C:5 讲多 GPU 下梯度聚合的精度选择。"
+  },
+  {
+   "topic": "压缩",
+   "refs": [
+    "B:#1",
+    "B:Lecture 3",
+    "B:Lecture 4",
+    "B:Lecture 13"
+   ],
+   "note": "B:#1 是高效推理chapter的总览（为什么推理侧要压模型）；B:Lecture 3/4 剪枝与稀疏化（含稀疏训练与硬件支持）；B:Lecture 13 讲大模型压缩后在部署时的取舍（含低秩分解/权重量化等组合手段）。"
+  },
+  {
+   "topic": "量化",
+   "refs": [
+    "B:Lecture 5",
+    "B:Lecture 6",
+    "C:2.1"
+   ],
+   "note": "B:Lecture 5 量化基础（数值格式、粒度、量化感知训练）；B:Lecture 6 训练后量化与低比特工程问题；C:2.1 给半精度/低精度数值格式本身的位级说明。"
+  },
+  {
+   "topic": "蒸馏",
+   "refs": [
+    "B:Lecture 9"
+   ],
+   "note": "知识蒸馏单独一讲：教师-学生框架、软标签与温度、特征/关系蒸馏等。"
+  },
+  {
+   "topic": "推理服务",
+   "refs": [
+    "A:Lecture 23",
+    "B:#1",
+    "B:Lecture 13"
+   ],
+   "note": "A:Lecture 23 Model Deployment 讲把训练好的模型部署出去要处理的系统问题；B:#1 是高效推理的总览；B:Lecture 13 落到大模型的线上部署（显存驻留、批处理、吞吐/时延权衡）。真正的服务框架（如 Triton、vLLM 的调度与 KV cache 管理）在这两份目录里没有专章，见 note。"
+  }
+ ],
+ "omitted": "A（dlsyscourse 10-414/714）只收与“训练/推理系统”直接相关的四讲：未收第 1–5 讲（导论、softmax 回归、手写神经网络与反向传播、自动微分及其实现）、第 7、9 讲（神经网络库抽象与实现）、第 8 讲（归一化、Dropout）、第 11、14、16、18 讲（卷积网络及其实现、序列建模与 RNN、Transformer 及其实现，属节点 A.2.3.1 的架构内容）、第 20、21 讲（生成模型）、第 22 讲 Customize Pretrained Models（微调，接近节点 A.2.5 的迁移学习）、第 25 讲（未来方向与答疑）以及作业页面。B（6.5940）未收：Lecture 1 Introduction、Lecture 2 Basics of Deep Learning（导论）、Lecture 7/8 Neural Architecture Search（网络结构搜索，属架构设计而非训练/推理系统）、Lecture 10 MCUNet: TinyML on Microcontrollers 与 Lecture 11 TinyEngine and Parallel Processing（端侧推理引擎，偏嵌入式实现）、Lecture 12 Chapter II/Transformer and LLM、Lecture 14 LLM Post Training、Lecture 15 Long Context LLM、Lecture 16 Vision Transformer、Lecture 17 GAN, Video, and Point Cloud、Lecture 18 Diffusion Model（大模型与生成模型的专题应用）、Lecture 21 On-Device Training and Transfer Learning（端侧训练，与 A.2.5 迁移学习重叠）、Lecture 22/23 量子机器学习与课程总结，以及各次 Lab 与 Final Project。C（NVIDIA 混合精度指南）未收第 6 节 Prerequisites（软硬件环境要求）、第 7 节 Frameworks（各框架改写示例）、第 8 节 Deploying DNNs（只是指向 TensorRT 的链接）、第 9 节 FAQs。",
+ "notes": "三点说明：(1) 主来源 A 是课程逐讲列表，每讲在页面上只有标题、没有小节，所以 A 的分支没有子项，本节点的“密度”主要靠 B、C 的分支撑起来。(2) dlsyscourse.org 主页当前标注的是 “Course information, Fall 2026”，讲义与录像多为 2022 版，因此 year 按页面标注写 2026。(3) B 是 MIT 研究生课（PhD level，页面原文），按节点说明“入门层 D2 用本科教材/课程”的要求，它只用于压缩、量化、蒸馏、分布式训练这几个本科教材一般不单列的专门主题；若读者是入门层，可先只读 B:#1 与 B:Lecture 9。B 的课程表里有重复的讲次编号（两讲都写 Lecture 2、Lecture 18、Lecture 21），所以 Chapter I: Efficient Inference 这条分支的 ref 留空（coverage 里写作 B:#1）。推理服务这一块缺少服务框架层面的权威目录（Triton / vLLM / TensorRT-LLM 的调度与批处理机制），A:Lecture 23 与 B:Lecture 13 只到部署取舍的层面。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 21,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

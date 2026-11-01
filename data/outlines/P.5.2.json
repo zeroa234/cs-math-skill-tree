@@ -1,0 +1,458 @@
+{
+ "id": "P.5.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Android Basics with Compose",
+   "by": "Google (Android Developers)",
+   "year": 2026,
+   "url": "https://developer.android.com/courses/android-basics-compose/course",
+   "toc_urls": [
+    "https://developer.android.com/courses/android-basics-compose/course"
+   ],
+   "why": "节点“现有英文学习资源”就是这门官方免费课程；页面按 Unit 1–8 逐条列出 pathway 与学习目标，活动生命周期、ViewModel/UI State、自适应布局、联网、Room/DataStore、WorkManager（离线后台任务）都有对应单元，正好覆盖平台生命周期、界面状态、设备能力与离线同步。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Flutter documentation",
+   "by": "Google (Flutter team)",
+   "year": 2026,
+   "url": "https://docs.flutter.dev/",
+   "toc_urls": [
+    "https://docs.flutter.dev/"
+   ],
+   "why": "补 A 的两个大缺口：A 只讲 Android 原生，没有桌面/跨平台，也完全没有发布环节；Flutter 官方文档有 Platform integration（支持的平台、构建桌面应用、平台特定代码、原生绑定）和 Deployment（各平台发布构建、渠道 flavor、混淆、持续部署）两节，另有自适应设计与联网/持久化的跨平台对照。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Unit 1",
+   "title": "Your first Android app",
+   "zh": "你的第一个 Android 应用",
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction to Kotlin",
+     "zh": "Kotlin 入门"
+    },
+    {
+     "ref": "",
+     "title": "Setup Android Studio",
+     "zh": "搭建 Android Studio"
+    },
+    {
+     "ref": "",
+     "title": "Build a basic layout",
+     "zh": "构建基本布局"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Unit 2",
+   "title": "Building app UI",
+   "zh": "构建应用界面",
+   "items": [
+    {
+     "ref": "",
+     "title": "Kotlin fundamentals",
+     "zh": "Kotlin 基础"
+    },
+    {
+     "ref": "",
+     "title": "Add a button to an app",
+     "zh": "给应用加一个按钮"
+    },
+    {
+     "ref": "",
+     "title": "Interacting with UI and state",
+     "zh": "界面交互与状态"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Unit 3",
+   "title": "Display lists and use Material Design",
+   "zh": "显示列表并使用 Material Design",
+   "items": [
+    {
+     "ref": "",
+     "title": "More Kotlin fundamentals",
+     "zh": "更多 Kotlin 基础"
+    },
+    {
+     "ref": "",
+     "title": "Build a scrollable list",
+     "zh": "构建可滚动列表"
+    },
+    {
+     "ref": "",
+     "title": "Build beautiful apps",
+     "zh": "构建美观的应用"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Unit 4",
+   "title": "Navigation and app architecture",
+   "zh": "导航与应用架构",
+   "items": [
+    {
+     "ref": "",
+     "title": "Architecture Components",
+     "zh": "架构组件"
+    },
+    {
+     "ref": "",
+     "title": "Navigation in Jetpack Compose",
+     "zh": "Jetpack Compose 中的导航"
+    },
+    {
+     "ref": "",
+     "title": "Adapt for different screen sizes",
+     "zh": "适配不同屏幕尺寸"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Unit 5",
+   "title": "Connect to the internet",
+   "zh": "连接互联网",
+   "items": [
+    {
+     "ref": "",
+     "title": "Get data from the internet",
+     "zh": "从互联网获取数据"
+    },
+    {
+     "ref": "",
+     "title": "Load and display images from the internet",
+     "zh": "加载并显示网络图片"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Unit 6",
+   "title": "Data persistence",
+   "zh": "数据持久化",
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction to SQL",
+     "zh": "SQL 入门"
+    },
+    {
+     "ref": "",
+     "title": "Use Room for data persistence",
+     "zh": "用 Room 做数据持久化"
+    },
+    {
+     "ref": "",
+     "title": "Store and access data using keys with DataStore",
+     "zh": "用 DataStore 按键存取数据"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Unit 7",
+   "title": "WorkManager",
+   "zh": "WorkManager",
+   "items": [
+    {
+     "ref": "",
+     "title": "Schedule tasks with WorkManager",
+     "zh": "用 WorkManager 调度任务"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Unit 8",
+   "title": "Views and Compose",
+   "zh": "Views 与 Compose",
+   "items": [
+    {
+     "ref": "",
+     "title": "Android Views and Compose in Views",
+     "zh": "Android View 体系与在 Views 中使用 Compose"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Adaptive & responsive design",
+   "zh": "自适应与响应式设计",
+   "fill": "补“设备能力”：A 只在 Unit 4 有一条 Adapt for different screen sizes，没有系统讲大屏/可折叠、输入方式、平台能力与自动适配。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Overview",
+     "zh": "概览"
+    },
+    {
+     "ref": "",
+     "title": "General approach",
+     "zh": "总体方法"
+    },
+    {
+     "ref": "",
+     "title": "SafeArea & MediaQuery",
+     "zh": "SafeArea 与 MediaQuery"
+    },
+    {
+     "ref": "",
+     "title": "Large screens & foldables",
+     "zh": "大屏与可折叠设备"
+    },
+    {
+     "ref": "",
+     "title": "User input & accessibility",
+     "zh": "用户输入与可访问性"
+    },
+    {
+     "ref": "",
+     "title": "Capabilities & policies",
+     "zh": "平台能力与政策"
+    },
+    {
+     "ref": "",
+     "title": "Automatic platform adaptations",
+     "zh": "平台自动适配"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Networking & http",
+   "zh": "网络与 HTTP",
+   "fill": "补“离线同步”的联网侧：请求、带认证的请求、增删改查与 WebSocket 长连接（A 的 Unit 5 只演示用 Retrofit 拉数据）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Overview",
+     "zh": "概览"
+    },
+    {
+     "ref": "",
+     "title": "Fetch data from the internet",
+     "zh": "从互联网获取数据"
+    },
+    {
+     "ref": "",
+     "title": "Make authenticated requests",
+     "zh": "发起带认证的请求"
+    },
+    {
+     "ref": "",
+     "title": "Send data to the internet",
+     "zh": "向互联网发送数据"
+    },
+    {
+     "ref": "",
+     "title": "Update data over the internet",
+     "zh": "通过互联网更新数据"
+    },
+    {
+     "ref": "",
+     "title": "Delete data on the internet",
+     "zh": "通过互联网删除数据"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Persistence",
+   "zh": "数据持久化",
+   "fill": "补“离线同步”的本地存储侧：选库、键值存储、文件、SQLite（A 的 Unit 6 只讲 Room 与 DataStore）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Choose a database",
+     "zh": "选择数据库"
+    },
+    {
+     "ref": "",
+     "title": "Store key-value data on disk",
+     "zh": "在磁盘上存储键值数据"
+    },
+    {
+     "ref": "",
+     "title": "Read and write files",
+     "zh": "读写文件"
+    },
+    {
+     "ref": "",
+     "title": "Persist data with SQLite",
+     "zh": "用 SQLite 持久化数据"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Platform integration",
+   "zh": "平台集成",
+   "fill": "补节点名里的“桌面与跨平台”：一套代码的受支持平台范围、桌面应用构建、平台特定代码与原生绑定（A 只讲 Android 原生）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Supported platforms",
+     "zh": "支持的平台"
+    },
+    {
+     "ref": "",
+     "title": "Build desktop apps with Flutter",
+     "zh": "用 Flutter 构建桌面应用"
+    },
+    {
+     "ref": "",
+     "title": "Write platform-specific code",
+     "zh": "编写平台特定代码"
+    },
+    {
+     "ref": "",
+     "title": "Bind to native code",
+     "zh": "绑定原生代码"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Deployment",
+   "zh": "发布",
+   "fill": "补“发布”：A 的 Android Basics 课程完全没有发布环节；这里给出混淆、渠道 flavor、各平台发布构建与持续部署。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Obfuscate Dart code",
+     "zh": "混淆 Dart 代码"
+    },
+    {
+     "ref": "",
+     "title": "Create app flavors for Android",
+     "zh": "为 Android 创建应用渠道"
+    },
+    {
+     "ref": "",
+     "title": "Create app flavors for iOS and macOS",
+     "zh": "为 iOS 与 macOS 创建应用渠道"
+    },
+    {
+     "ref": "",
+     "title": "Create app flavors for Linux",
+     "zh": "为 Linux 创建应用渠道"
+    },
+    {
+     "ref": "",
+     "title": "Create app flavors for Windows",
+     "zh": "为 Windows 创建应用渠道"
+    },
+    {
+     "ref": "",
+     "title": "Build and release an Android app",
+     "zh": "构建并发布 Android 应用"
+    },
+    {
+     "ref": "",
+     "title": "Build and release an iOS app",
+     "zh": "构建并发布 iOS 应用"
+    },
+    {
+     "ref": "",
+     "title": "Build and release a macOS app",
+     "zh": "构建并发布 macOS 应用"
+    },
+    {
+     "ref": "",
+     "title": "Build and release a Linux app",
+     "zh": "构建并发布 Linux 应用"
+    },
+    {
+     "ref": "",
+     "title": "Build and release a Windows app",
+     "zh": "构建并发布 Windows 应用"
+    },
+    {
+     "ref": "",
+     "title": "Build and release a web app",
+     "zh": "构建并发布 Web 应用"
+    },
+    {
+     "ref": "",
+     "title": "Set up continuous deployment",
+     "zh": "配置持续部署"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "平台生命周期",
+   "refs": [
+    "A:#4"
+   ],
+   "note": "A:#4 Unit 4 的学习目标写明 “Explain activities and their lifecycles”，并由 Architecture Components 讲 ViewModel 与 UI State；A 的其他单元、B 的 Flutter 文档都没有单列应用/窗口生命周期一节（B 只有 “Restore state on Android / on iOS” 这类页面，未收）。"
+  },
+  {
+   "topic": "界面状态",
+   "refs": [
+    "A:#2",
+    "A:#4"
+   ],
+   "note": "A:#2 的 Interacting with UI and state 讲输入驱动界面状态，A:#4 的 Architecture Components 讲 ViewModel/UI State/StateFlow 的状态持有。"
+  },
+  {
+   "topic": "设备能力",
+   "refs": [
+    "A:#5",
+    "A:#3",
+    "B:#1"
+   ],
+   "note": "A:#5 联网与图片加载、A:#3 的 Material Design/动画/可访问性实践；B:#1 是跨平台视角下的屏幕形态、输入方式与平台能力/政策。"
+  },
+  {
+   "topic": "离线同步",
+   "refs": [
+    "A:#6",
+    "A:#7",
+    "B:#2",
+    "B:#3"
+   ],
+   "note": "A:#6 单元导语明确 “keep your apps working through any network disruptions”（Room + DataStore），A:#7 WorkManager 做后台同步任务；B:#2/B:#3 是同样的联网与本地持久化能力的跨平台版本。真正的同步冲突消解（offline-first、冲突合并策略）两源都没有专门章节。"
+  },
+  {
+   "topic": "发布",
+   "refs": [
+    "B:#5"
+   ],
+   "note": "A 的课程到 Unit 8 为止没有任何发布内容；B:#5 Deployment 有各平台发布构建、渠道 flavor、混淆与持续部署。Google Play 上架、签名密钥管理等细节两源都未单列（开发者站点另有 Publish your app 页面）。"
+  },
+  {
+   "topic": "跨平台与桌面（节点名里的“桌面与跨平台”）",
+   "refs": [
+    "B:#4"
+   ],
+   "note": "A 只讲 Android 原生开发；B:#4 Platform integration 讲受支持平台、用 Flutter 构建桌面应用、平台特定代码与原生绑定。"
+  }
+ ],
+ "omitted": "A 只收 8 个 Unit 与其下的 pathway（课程页上每个 pathway 里还有若干 Video/Codelab/Quiz，原始列表里以 video_library、code 前缀混排、没有独立课名，未收）；A 也没收页面顶部的 “(Optional) Android device” 之类环境说明。B 未收 Flutter 文档的 User interface、Layout、Interactivity、Assets & media、App architecture、Testing & debugging、Performance & optimization、Packages & plugins、Tools & editors、Flutter concepts、Add to an existing app、Firebase/AI 等大块，以及 Networking 下的 Serialization/Firebase、Adaptive 下的 Additional resources。",
+ "notes": "A 的页面把课程组织成 Unit → Pathway → (Video/Codelab/Quiz)，我只抄到 Pathway 一层，Unit 的编号写进 ref（Unit 1…Unit 8），Pathway 的 “Pathway n” 编号是每个 Unit 内部从 1 重数，避免混淆没有写进 ref。A 的 Unit 8 在页面上只有 1 个 pathway，与节点 resource 里写的 “Unit 8 Views 与 Compose” 一致。B 的目录取自 docs.flutter.dev 首页左侧整套文档树，条目按原层级抄（分支=文档大节，items=其下页面），原文没有编号，ref 留空。节点 resource 自己也注明这门 Android 课“未完整覆盖桌面与跨平台开发”，B 就是补这一块的；两个来源都没有覆盖 iOS 原生开发（A 是 Android 课，B 只有 iOS 的构建发布页）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 65,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

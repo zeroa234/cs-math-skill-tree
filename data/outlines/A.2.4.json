@@ -1,0 +1,220 @@
+{
+ "id": "A.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Reinforcement Learning (UCL Course on Reinforcement Learning)",
+   "by": "David Silver",
+   "year": 2015,
+   "url": "https://davidstarsilver.wordpress.com/teaching/",
+   "toc_urls": [
+    "https://davidstarsilver.wordpress.com/teaching/"
+   ],
+   "why": "就是节点“现有英文学习资源”（UCL 课程，10 讲 slides + 录像 + Easy21 作业）。页面把十讲的主题逐条列出，正好是这个节点的经典骨架：MDP、动态规划、无模型预测/控制（即价值与时序差分）、价值函数近似（策略评估与改进）、策略梯度、探索与利用，内容和节点对得上，不需要换书。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "CS 185/285 Deep Reinforcement Learning",
+   "by": "Sergey Levine (UC Berkeley)",
+   "year": 2026,
+   "url": "https://rail.eecs.berkeley.edu/deeprlcourse/",
+   "toc_urls": [
+    "https://rail.eecs.berkeley.edu/deeprlcourse/"
+   ],
+   "why": "补主来源 A 缺的两块：离线学习（Offline RL 上下两讲）与更细的探索（Exploration / Advanced Exploration）；同时用 Control as Inference 与 Model-Based RL 补“与控制的交叉”。Berkeley 官方课程页按周列出每讲主题，属于逐讲 lecture 列表。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture 1",
+   "title": "Introduction to Reinforcement Learning",
+   "zh": "强化学习导论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 2",
+   "title": "Markov Decision Processes",
+   "zh": "马尔可夫决策过程",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 3",
+   "title": "Planning by Dynamic Programming",
+   "zh": "用动态规划做规划",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 4",
+   "title": "Model-Free Prediction",
+   "zh": "无模型预测",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 5",
+   "title": "Model-Free Control",
+   "zh": "无模型控制",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 6",
+   "title": "Value Function Approximation",
+   "zh": "价值函数近似",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 7",
+   "title": "Policy Gradient Methods",
+   "zh": "策略梯度方法",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 8",
+   "title": "Integrating Learning and Planning",
+   "zh": "学习与规划的结合",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 9",
+   "title": "Exploration and Exploitation",
+   "zh": "探索与利用",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 10",
+   "title": "Case Study: RL in Classic Games",
+   "zh": "案例：经典游戏中的强化学习",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 17",
+   "title": "Offline RL Part 1",
+   "zh": "离线强化学习（上）",
+   "fill": "补“离线学习”：只能用固定的历史数据训练、不能在线交互时的基本困难（分布偏移、策略评估）与基础做法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 18",
+   "title": "Offline RL Part 2",
+   "zh": "离线强化学习（下）",
+   "fill": "补“离线学习”：离线策略改进、模型/不确定性约束与离线到在线的迁移",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 19",
+   "title": "Exploration",
+   "zh": "探索",
+   "fill": "补“探索”：A 只有一讲探索与利用，这里给出基于乐观/不确定性、计数与内在奖励的系统化探索方法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 23",
+   "title": "Advanced Exploration",
+   "zh": "高级探索方法",
+   "fill": "补“探索”的研究前沿（在稀疏奖励与分布式/多任务设定下的探索）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 13",
+   "title": "Control as Inference",
+   "zh": "把控制视为推断",
+   "fill": "补“与控制的交叉”：把最优控制写成概率推断，得到软最优、最大熵 RL 一类方法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lecture 15",
+   "title": "Model-Based RL Part 1",
+   "zh": "基于模型的强化学习（上）",
+   "fill": "补“与控制和运筹的交叉”：用模型做规划（模型学习 + 轨迹优化/MPC 式前瞻），这是经典控制与运筹里的决策方法在 RL 里的对应物",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "MDP",
+   "refs": [
+    "A:Lecture 2",
+    "A:Lecture 1"
+   ],
+   "note": "A 第 2 讲是 MDP 的形式化（状态、动作、转移、奖励、折扣、值函数与贝尔曼期望/最优方程）；第 1 讲给智能体-环境交互的框架与 MDP 的动机。"
+  },
+  {
+   "topic": "价值/策略",
+   "refs": [
+    "A:Lecture 3",
+    "A:Lecture 4",
+    "A:Lecture 5",
+    "A:Lecture 6"
+   ],
+   "note": "价值：第 3 讲策略评估与策略迭代/值迭代（有模型），第 4 讲无模型下的价值预测（MC、TD(λ)），第 6 讲用函数逼近表示价值；策略：第 5 讲无模型控制（SARSA、Q-learning 等策略改进），第 6 讲把策略评估与改进都放到近似价值函数下，第 7 讲直接对策略参数做梯度。"
+  },
+  {
+   "topic": "时序差分",
+   "refs": [
+    "A:Lecture 4",
+    "A:Lecture 5"
+   ],
+   "note": "TD 预测与 TD(λ)/资格迹在第 4 讲，TD 控制（SARSA、Q-learning、期望 SARSA）在第 5 讲；第 8 讲 Dyna 与第 10 讲的游戏案例里也再用到 TD。"
+  },
+  {
+   "topic": "策略梯度",
+   "refs": [
+    "A:Lecture 7",
+    "A:Lecture 6"
+   ],
+   "note": "A 第 7 讲：策略梯度定理、REINFORCE、带基线/actor-critic、策略梯度与 Q 值的关系；第 6 讲的近似价值函数是 critic 的基础。CS285 另有 Lecture 5/6/9/10 专门讲 policy gradient 与 actor-critic、高级策略梯度，本节点没有单列（见 omitted）。"
+  },
+  {
+   "topic": "探索",
+   "refs": [
+    "A:Lecture 9",
+    "B:Lecture 19",
+    "B:Lecture 23"
+   ],
+   "note": "A 第 9 讲：ε-greedy、softmax、UCB、乐观初始化等经典探索策略与多臂赌博机视角；B:Lecture 19 系统讲基于不确定性/计数/内在奖励的探索，B:Lecture 23 讲到稀疏奖励与分布式设定下的探索。"
+  },
+  {
+   "topic": "离线学习",
+   "refs": [
+    "B:Lecture 17",
+    "B:Lecture 18"
+   ],
+   "note": "主来源 A（2015 年 UCL 课程）完全没有离线 RL：它假设能在线与环境交互做无模型控制。B 的 Offline RL 上下两讲专讲只用固定数据集训练的设定（分布偏移、离线策略评估、约束/不确定性方法、离线到在线）。"
+  },
+  {
+   "topic": "与控制和运筹的交叉",
+   "refs": [
+    "A:Lecture 2",
+    "A:Lecture 3",
+    "B:Lecture 13",
+    "B:Lecture 15"
+   ],
+   "note": "与控制：A:2 的 MDP 与 A:3 的动态规划就是最优控制/运筹里动态规划那一套（贝尔曼方程、值迭代、策略迭代），B:Lecture 13 把控制写成推断，B:Lecture 15 讲基于模型的规划（等价于 MPC 式的前瞻）。与运筹：赌博机式的探索（A:Lecture 9）与 MDP 决策模型是运筹里的资源分配/库存/定价模型的同一形式化。两份来源都没有以“运筹”为题的专门章节，这一条是用共用的形式化对应出来的，不另找第二份研究生专著展开。"
+  }
+ ],
+ "omitted": "A（David Silver UCL 课程）只收了页面列出的 10 讲，没有收页面上的 Advanced Topics 2015 课程、Easy21 作业、往年考题等其余条目。B（CS285）未收：Lecture 1–4（导论、行为克隆、RL 基础）、Lecture 5–10（Policy Gradients、Actor Critic、Value-Based RL、Q-learning in Practice、Advanced Policy Gradients 上下 —— 策略梯度本节点已由 A:Lecture 7 承担）、Lecture 11–12（变分推断及其在 RL 中的用法）、Lecture 14（LLM RL）、Lecture 16（Model-Based RL Part 2）、Lecture 20（RL Theory）、Lecture 21–22（期中复习）、Lecture 24（Multi-task RL，属节点 A.2.5 的多任务学习）、Lecture 25（开放问题）。Sutton & Barto《Reinforcement Learning: An Introduction》是这个主题的经典教材，也很想用它做细到节的主来源，但作者主页的整书 PDF（RLbook2020.pdf，20 MB）超出 research_tool 单次读取上限、正文抽不出来，故未采用（详见 notes）。",
+ "notes": "两点说明：(1) 两份来源都是课程逐讲列表，每讲在页面上只有标题、没有小节，所以导览图是 16 个讲级分支、没有第三层；策略梯度/价值近似的细节需要打开对应讲义的 slides。(2) 曾尝试用 Sutton & Barto 第 2 版整书目录做主来源（作者主页 incompleteideas.net 免费 PDF），但 research_tool 单次最多读 20 MB，RLbook2020.pdf 恰好 20 MB 被截断，PDF 解析报 PdfStreamError，目录读不出来；作者主页的 1998 年第 1 版 HTML 全文章节可读，但那一版没有策略梯度章，故未用它替代。若主代理想补一份更细的书目目录，可考虑第 2 版纸质书出版社（MIT Press）目录页，但该页对本机返回 403。B 的课程页是 Spring 2026 版本，年份按此写。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 16,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,333 @@
+{
+ "id": "D.1.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "OpenMetadata Documentation",
+   "by": "OpenMetadata (Collate)",
+   "year": 2026,
+   "url": "https://docs.open-metadata.org/latest",
+   "toc_urls": [
+    "https://docs.open-metadata.org/latest",
+    "https://docs.open-metadata.org/llms.txt",
+    "https://docs.open-metadata.org/_llms/v2-0-x.txt"
+   ],
+   "why": "就是节点“现有英文学习资源”里的官方文档：它有机器可读的完整文档索引（llms.txt 指向 _llms/v2-0-x.txt，逐节列出全部 1044 页），Data Governance（术语表/分类/本体）、Data Quality and Observability（质量规则与剖析）、Data Lineage（血缘）、Data Marketplace（域与数据产品，对应责任）都对上节点简介，属于“工程实践类节点用项目官方文档目录”的情形。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Data Contracts | OpenMetadata Data Contracts",
+   "by": "OpenMetadata (Collate)",
+   "year": 2026,
+   "url": "https://docs.open-metadata.org/latest",
+   "toc_urls": [
+    "https://docs.open-metadata.org/_llms/v2-0-x.txt"
+   ],
+   "why": "补“模式演化”：数据契约（ODCS）把表的模式与质量规则写成契约，模式变更时以契约校验/告警，这是官方文档里唯一正面讲模式变更约束的地方。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Data Governance",
+   "zh": "数据治理",
+   "items": [
+    {
+     "ref": "",
+     "title": "Glossary",
+     "zh": "术语表（业务词汇表）",
+     "items": [
+      {
+       "ref": "",
+       "title": "What is a Glossary Term",
+       "zh": "什么是术语表条目"
+      },
+      {
+       "ref": "",
+       "title": "How to Setup a Glossary",
+       "zh": "如何建立术语表"
+      },
+      {
+       "ref": "",
+       "title": "How to Create Glossary Terms",
+       "zh": "如何创建术语"
+      },
+      {
+       "ref": "",
+       "title": "Glossary Approval Workflow",
+       "zh": "术语审批流程"
+      },
+      {
+       "ref": "",
+       "title": "How to Add Assets to Glossary Terms",
+       "zh": "如何把数据资产挂到术语上"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Classification",
+     "zh": "分类分级",
+     "items": [
+      {
+       "ref": "",
+       "title": "Overview of Classification",
+       "zh": "分类概览"
+      },
+      {
+       "ref": "",
+       "title": "Manage Classification",
+       "zh": "管理分类"
+      },
+      {
+       "ref": "",
+       "title": "What are Tiers",
+       "zh": "什么是分级（Tier）"
+      },
+      {
+       "ref": "",
+       "title": "Auto-Classification in OpenMetadata",
+       "zh": "自动分类"
+      },
+      {
+       "ref": "",
+       "title": "Sample Data Handling Using PII Tags",
+       "zh": "用 PII 标签处理样本数据"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Ontology",
+     "zh": "本体",
+     "items": [
+      {
+       "ref": "",
+       "title": "Ontology Explorer",
+       "zh": "本体浏览器"
+      },
+      {
+       "ref": "",
+       "title": "Manage Relation Types",
+       "zh": "管理关系类型"
+      },
+      {
+       "ref": "",
+       "title": "Import an OWL/SKOS Ontology",
+       "zh": "导入 OWL/SKOS 本体"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Data Quality and Observability",
+   "zh": "数据质量与可观测性",
+   "items": [
+    {
+     "ref": "",
+     "title": "Data Quality Observability Guide",
+     "zh": "数据质量可观测性指南"
+    },
+    {
+     "ref": "",
+     "title": "Bulk Export Test Cases",
+     "zh": "批量导出测试用例"
+    },
+    {
+     "ref": "",
+     "title": "Bulk Edit Test Cases",
+     "zh": "批量编辑测试用例"
+    },
+    {
+     "ref": "",
+     "title": "Data Profiler",
+     "zh": "数据剖析",
+     "items": [
+      {
+       "ref": "",
+       "title": "Profiler Tab",
+       "zh": "剖析页签"
+      },
+      {
+       "ref": "",
+       "title": "Profiler Workflow",
+       "zh": "剖析工作流"
+      },
+      {
+       "ref": "",
+       "title": "Metrics",
+       "zh": "剖析指标"
+      },
+      {
+       "ref": "",
+       "title": "Custom Metrics",
+       "zh": "自定义指标"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Incident Manager",
+     "zh": "事故管理",
+     "items": [
+      {
+       "ref": "",
+       "title": "How to work with the Incident Manager",
+       "zh": "事故管理的使用流程"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Alerts & Notifications",
+     "zh": "告警与通知",
+     "items": [
+      {
+       "ref": "",
+       "title": "Data Observability Alerts",
+       "zh": "数据可观测性告警"
+      },
+      {
+       "ref": "",
+       "title": "System & Governance Notifications",
+       "zh": "系统与治理通知"
+      },
+      {
+       "ref": "",
+       "title": "Alert Behavior Reference",
+       "zh": "告警行为参考"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Data Lineage",
+   "zh": "数据血缘",
+   "items": [
+    {
+     "ref": "",
+     "title": "How to Deploy a Lineage Workflow",
+     "zh": "如何部署血缘工作流"
+    },
+    {
+     "ref": "",
+     "title": "Cross Database Lineage",
+     "zh": "跨数据库血缘"
+    },
+    {
+     "ref": "",
+     "title": "OpenLineage Compatibility",
+     "zh": "OpenLineage 兼容性"
+    },
+    {
+     "ref": "",
+     "title": "Explore the Lineage View",
+     "zh": "查看血缘视图"
+    },
+    {
+     "ref": "",
+     "title": "How Column-Level Lineage Works",
+     "zh": "列级血缘如何工作"
+    },
+    {
+     "ref": "",
+     "title": "How to Manually Add or Edit Lineage",
+     "zh": "如何手工添加或编辑血缘"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Data Marketplace",
+   "zh": "数据市场（域与数据产品）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Domains",
+     "zh": "数据域"
+    },
+    {
+     "ref": "",
+     "title": "Data Products",
+     "zh": "数据产品"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Data Contracts",
+   "zh": "数据契约",
+   "fill": "补“模式演化”：用契约约束表的模式与质量规则，模式变更时校验/告警",
+   "items": [
+    {
+     "ref": "",
+     "title": "ODCS Import and Export",
+     "zh": "ODCS 契约的导入与导出"
+    },
+    {
+     "ref": "",
+     "title": "Data Observability Alerts",
+     "zh": "数据可观测性告警（含模式变更告警）"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "血缘",
+   "refs": [
+    "A:#3"
+   ],
+   "note": "Data Lineage 一节：血缘工作流、跨库血缘、OpenLineage 兼容、血缘视图、列级血缘、手工编辑血缘。"
+  },
+  {
+   "topic": "目录",
+   "refs": [
+    "A:#1",
+    "A:#4"
+   ],
+   "note": "“目录”在 OpenMetadata 里由两部分承担：Data Governance 的 Glossary（业务术语表）与 Classification（分类分级）给资产挂上可检索的语义标签；Data Marketplace 的 Domains / Data Products 把资产组织成可浏览的数据产品目录。"
+  },
+  {
+   "topic": "模式演化",
+   "refs": [
+    "B:#1"
+   ],
+   "note": "官方文档没有单独讲 schema evolution 的章节；最接近的是数据契约（Data Contracts，ODCS）这一块：把表的模式与质量规则写成契约，模式变更时按契约校验并通过可观测性告警通知下游。refs 指补充分支 B。"
+  },
+  {
+   "topic": "质量规则",
+   "refs": [
+    "A:#2"
+   ],
+   "note": "Data Quality and Observability 一节：测试用例（批量导出/批量编辑）、Data Profiler（剖析页签、工作流、指标、自定义指标）、事故管理与告警通知。具体测试定义类型（列值、行数、自定义 SQL 等）在 Test Cases 子页里，本节只收到子页级。"
+  },
+  {
+   "topic": "责任与数据生命周期",
+   "refs": [
+    "A:#4",
+    "A:#1"
+   ],
+   "note": "“责任”指到 Data Marketplace 的 Domains（分配责任人、支持分布式数据所有权）与 Glossary 术语的 owner/reviewer；“数据生命周期”在 OpenMetadata 文档里没有专门章节（保留期/归档属部署与运维侧），未硬凑，主代理如需可另找数据管理知识体系（如 DAMA-DMBOK）的对应章。"
+  }
+ ],
+ "omitted": "A（OpenMetadata v2.0.x 文档）未收：Quickstart、Deployment、Connectors（369 页连接器）、MCP、Admin Guide、SDK & APIs 等部署与开发部分；How-to Guides 里与治理无关的 Data Collaboration、Context Center、Data Insights、Data Discovery（资产发现与检索属“目录”的 UI 侧，本节点已用 Glossary/Classification/Marketplace 表达目录含义）也未收；Data Quality 一节里的告警渠道配置（Email/Slack/Teams/Google Chat/Webhook）与 Profiler 的外部工作流只保留代表性子页。各页面的说明句（冒号后的描述）不是标题，未收。",
+ "notes": "目录取自 OpenMetadata 官方给 LLM 用的完整文档索引 _llms/v2-0-x.txt（25 个一级节、逐页列出 1044 个页面标题），它本身就是文档的目录结构，标题照抄、无编号故 ref 留空。因为文档是 v2.0.x，个别页名在不同版本会变，主代理核对时以 _llms/v2-0-x.txt 的文本为准。B 与 A 是同一个站点的不同节（数据契约），单独列 B 只是为了让“模式演化”这个知识点有明确出处；若主代理觉得重复，可把 B 的分支并回 A。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 45,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

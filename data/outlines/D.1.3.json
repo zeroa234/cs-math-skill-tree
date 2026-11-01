@@ -1,0 +1,223 @@
+{
+ "id": "D.1.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "notes",
+   "title": "Database Systems — Online textbook for CS186, Berkeley's Database Systems course",
+   "by": "UC Berkeley CS186",
+   "year": 2025,
+   "url": "https://cs186berkeley.net/notes/",
+   "toc_urls": [
+    "https://cs186berkeley.net/notes/",
+    "https://cs186berkeley.net/notes/note17",
+    "https://cs186berkeley.net/notes/note16"
+   ],
+   "why": "就是节点“现有英文学习资源”里的这份公开讲义：NoSQL 一篇按“分区(分片)→复制→CAP→NoSQL 数据模型（键值/宽列/文档）”展开，Distributed Transactions 一篇讲分布式锁与两阶段提交，正好对上节点简介；CS186 是本科课程，符合 D2 入门层。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Graph database concepts — Neo4j Getting Started",
+   "by": "Neo4j",
+   "year": 2025,
+   "url": "https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/",
+   "toc_urls": [
+    "https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/"
+   ],
+   "why": "补“图数据模型”：CS186 讲义通篇没有 graph 相关内容（全文检索 graph 为 0 命中），这里用图数据库官方文档的属性图模型（节点、标签、关系、属性、遍历）补上。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "NoSQL",
+   "zh": "NoSQL",
+   "items": [
+    {
+     "ref": "",
+     "title": "Motivation and History",
+     "zh": "动机与历史"
+    },
+    {
+     "ref": "",
+     "title": "OLTP and OLAP",
+     "zh": "OLTP 与 OLAP"
+    },
+    {
+     "ref": "",
+     "title": "NoSQL: Scaling Databases for Web 2.0",
+     "zh": "NoSQL：为 Web 2.0 扩展数据库"
+    },
+    {
+     "ref": "",
+     "title": "Methods for Scaling Databases",
+     "zh": "扩展数据库的方法"
+    },
+    {
+     "ref": "",
+     "title": "Partitioning",
+     "zh": "分区（分片）"
+    },
+    {
+     "ref": "",
+     "title": "Replication",
+     "zh": "复制"
+    },
+    {
+     "ref": "",
+     "title": "CAP Theorem",
+     "zh": "CAP 定理"
+    },
+    {
+     "ref": "",
+     "title": "NoSQL Data Models",
+     "zh": "NoSQL 数据模型"
+    },
+    {
+     "ref": "",
+     "title": "Key-Value Stores",
+     "zh": "键值存储"
+    },
+    {
+     "ref": "",
+     "title": "Wide-Column Stores",
+     "zh": "宽列存储"
+    },
+    {
+     "ref": "",
+     "title": "Document Stores",
+     "zh": "文档存储"
+    },
+    {
+     "ref": "",
+     "title": "Document vs Relational Data Models",
+     "zh": "文档模型与关系模型的对比"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Distributed Transactions",
+   "zh": "分布式事务",
+   "items": [
+    {
+     "ref": "",
+     "title": "Distributed Locking",
+     "zh": "分布式加锁"
+    },
+    {
+     "ref": "",
+     "title": "Two Phase Commit (2 PC)",
+     "zh": "两阶段提交（2PC）"
+    },
+    {
+     "ref": "",
+     "title": "Distributed Recovery (2PC)",
+     "zh": "分布式恢复（2PC）"
+    },
+    {
+     "ref": "",
+     "title": "Distributed Recovery (2PC with Presumed Abort)",
+     "zh": "分布式恢复（带假定中止优化的 2PC）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Parallel Query Processing",
+   "zh": "并行查询处理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Consensus",
+   "zh": "共识",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Graph database concepts",
+   "zh": "图数据库概念",
+   "fill": "补“图数据模型”：属性图的节点、标签、关系、关系类型、属性与遍历",
+   "items": [
+    {
+     "ref": "",
+     "title": "Node",
+     "zh": "节点"
+    },
+    {
+     "ref": "",
+     "title": "Node labels",
+     "zh": "节点标签"
+    },
+    {
+     "ref": "",
+     "title": "Relationship",
+     "zh": "关系"
+    },
+    {
+     "ref": "",
+     "title": "Relationship type",
+     "zh": "关系类型"
+    },
+    {
+     "ref": "",
+     "title": "Properties",
+     "zh": "属性"
+    },
+    {
+     "ref": "",
+     "title": "Traversals and paths",
+     "zh": "遍历与路径"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "分片",
+   "refs": [
+    "A:#1",
+    "A:#3"
+   ],
+   "note": "NoSQL 讲义里 Methods for Scaling Databases 一节的 Partitioning（讲义正文注明 partitioning 也叫 sharding）讲按范围/哈希把数据切分到多台机器；Parallel Query Processing 一篇是分片在并行查询里的用法。"
+  },
+  {
+   "topic": "复制",
+   "refs": [
+    "A:#1",
+    "A:#4"
+   ],
+   "note": "NoSQL 讲义 Replication 一节讲多副本扩缩容与容错，CAP Theorem 一节讲一致性与可用性的权衡；Consensus 一篇（Paxos/共识）对应多副本之间达成一致的机制。"
+  },
+  {
+   "topic": "分布式事务",
+   "refs": [
+    "A:#2"
+   ],
+   "note": "Distributed Transactions 一篇：分布式加锁与 waits-for 图死锁检测、两阶段提交 2PC、2PC 的分布式恢复与 presumed abort 优化。"
+  },
+  {
+   "topic": "键值/文档/列族/图数据模型",
+   "refs": [
+    "A:#1",
+    "B:#1"
+   ],
+   "note": "键值存储、宽列存储（列族）、文档存储在 NoSQL 讲义的 NoSQL Data Models 一节逐个讲，并对比文档模型与关系模型；图数据模型 A 没有，用 Neo4j 官方文档的属性图模型（节点/标签/关系/属性/遍历）补。"
+  }
+ ],
+ "omitted": "A（CS186 在线讲义）只收了与节点相关的三篇（NoSQL、Distributed Transactions）与两篇相邻主题（Parallel Query Processing、Consensus）；其余篇目（SQL Part 1/2、Disks and Files、B+Trees、Buffer Management、Relational Algebra、Hashing、Sorting、Iterators and Joins、Query Optimization、Transactions & Concurrency I/II、DB Design、Recovery、MapReduce and Spark、Spatial and Vector Indexes）属于单机内核、SQL 或其它节点主题，未收；NoSQL 讲义末尾的 MongoDB 实操示例、Problems/Solutions 习题也不算目录条目。B（Neo4j 文档）只收 Graph database concepts 这一页，页面里的 Example graph、Cypher 语法示例与“Is this page helpful”等导航不算标题。",
+ "notes": "两点需要注意：(1) CS186 讲义首页自己声明 “As of Spring 2025, our notes are under construction and are not comprehensive”，所以这份目录是课程级而非教材级；章节标题里的编号在讲义中不统一（有的篇有二级标题、有的只是页面），故 ref 全部留空。(2) 讲义页面地址是 /notes/note16（Distributed Transactions）、/notes/note17（NoSQL），编号与首页侧栏顺序（note15=Parallel Query Processing、note18=MapReduce and Spark、note20=Consensus）一致，其余未逐页打开，故只用首页列出的篇名。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 27,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

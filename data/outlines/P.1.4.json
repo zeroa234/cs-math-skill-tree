@@ -1,0 +1,573 @@
+{
+ "id": "P.1.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "6.102: Software Construction (Spring 2025)",
+   "by": "MIT EECS",
+   "year": 2025,
+   "url": "https://web.mit.edu/6.102/www/sp25/",
+   "toc_urls": [
+    "https://web.mit.edu/6.102/www/sp25/",
+    "https://web.mit.edu/6.102/www/sp25/classes/01-static-checking/",
+    "https://web.mit.edu/6.102/www/sp25/classes/02-testing/",
+    "https://web.mit.edu/6.102/www/sp25/classes/04-specifications/",
+    "https://web.mit.edu/6.102/www/sp25/classes/06-abstract-data-types/",
+    "https://web.mit.edu/6.102/www/sp25/classes/07-abstraction-functions-rep-invariants/",
+    "https://web.mit.edu/6.102/www/sp25/classes/08-interfaces-subtyping/",
+    "https://web.mit.edu/6.102/www/sp25/classes/11-recursive-data-types/",
+    "https://web.mit.edu/6.102/www/sp25/classes/13-debugging/",
+    "https://web.mit.edu/6.102/www/sp25/classes/14-concurrency/",
+    "https://web.mit.edu/6.102/www/sp25/classes/15-promises/",
+    "https://web.mit.edu/6.102/www/sp25/classes/16-mutual-exclusion/",
+    "https://web.mit.edu/6.102/www/sp25/classes/18-message-passing-networking/"
+   ],
+   "why": "节点现有英文资源就是这门课的公开网站；19 篇 readings 每篇自带小节目录，前 8 篇讲规格、抽象数据类型、不变式、接口与泛型（工程化抽象），后 5 篇讲并发、promise、互斥与消息传递（异步/并发），与节点简介逐条对应。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "The Rust Programming Language",
+   "by": "Steve Klabnik, Carol Nichols, Chris Krycho (Rust Project)",
+   "year": 2026,
+   "url": "https://doc.rust-lang.org/book/",
+   "toc_urls": [
+    "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+    "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+    "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+    "https://doc.rust-lang.org/book/ch04-03-slices.html"
+   ],
+   "why": "补“资源管理”：6.102 讲抽象与并发，但不讲资源（内存、句柄）归谁所有、何时释放；Rust 官方书第 4 章把所有权、借用、切片作为类型系统的一部分讲透，是资源管理最系统的入门材料。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "GNU gprof Manual",
+   "by": "GNU Binutils project (Free Software Foundation)",
+   "year": 2025,
+   "url": "https://sourceware.org/binutils/docs/gprof/",
+   "toc_urls": [
+    "https://sourceware.org/binutils/docs/gprof/"
+   ],
+   "why": "补“性能剖析”：6.102 没有性能分析的内容；gprof 官方手册按“采样/插桩 → 平坦剖面 → 调用图 → 逐行 → 误差来源”组织，正好是性能剖析的概念目录。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Static Checking",
+   "zh": "静态检查",
+   "items": [
+    {
+     "ref": "",
+     "title": "Static typing",
+     "zh": "静态类型"
+    },
+    {
+     "ref": "",
+     "title": "Static checking, dynamic checking, no checking",
+     "zh": "静态检查、动态检查与不检查"
+    },
+    {
+     "ref": "",
+     "title": "Mutating values vs. reassigning variables",
+     "zh": "修改值 vs 重新赋值变量"
+    },
+    {
+     "ref": "",
+     "title": "Hacking vs. engineering",
+     "zh": "随意拼凑 vs 工程化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Testing",
+   "zh": "测试",
+   "items": [
+    {
+     "ref": "",
+     "title": "Test-first programming",
+     "zh": "测试先行编程"
+    },
+    {
+     "ref": "",
+     "title": "Systematic testing",
+     "zh": "系统化测试"
+    },
+    {
+     "ref": "",
+     "title": "Choosing test cases by partitioning",
+     "zh": "用划分法选取测试用例"
+    },
+    {
+     "ref": "",
+     "title": "Automated unit testing",
+     "zh": "自动化单元测试"
+    },
+    {
+     "ref": "",
+     "title": "Black box and glass box testing",
+     "zh": "黑盒测试与白盒测试"
+    },
+    {
+     "ref": "",
+     "title": "Automated regression testing",
+     "zh": "自动化回归测试"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Specifications",
+   "zh": "规格说明",
+   "items": [
+    {
+     "ref": "",
+     "title": "Behavioral equivalence",
+     "zh": "行为等价"
+    },
+    {
+     "ref": "",
+     "title": "Specification structure",
+     "zh": "规格说明的结构"
+    },
+    {
+     "ref": "",
+     "title": "Specifications in TypeScript",
+     "zh": "TypeScript 中的规格说明"
+    },
+    {
+     "ref": "",
+     "title": "Specifications for mutating functions",
+     "zh": "可变函数的规格说明"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Abstract Data Types",
+   "zh": "抽象数据类型",
+   "items": [
+    {
+     "ref": "",
+     "title": "What abstraction means",
+     "zh": "抽象的含义"
+    },
+    {
+     "ref": "",
+     "title": "Classifying types and operations",
+     "zh": "类型与操作的分类"
+    },
+    {
+     "ref": "",
+     "title": "An abstract type is defined by its operations",
+     "zh": "抽象类型由操作定义"
+    },
+    {
+     "ref": "",
+     "title": "Designing an abstract type",
+     "zh": "设计抽象类型"
+    },
+    {
+     "ref": "",
+     "title": "Representation independence",
+     "zh": "表示独立性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Abstraction Functions & Rep Invariants",
+   "zh": "抽象函数与表示不变式",
+   "items": [
+    {
+     "ref": "",
+     "title": "Invariants",
+     "zh": "不变式"
+    },
+    {
+     "ref": "",
+     "title": "Rep invariant and abstraction function",
+     "zh": "表示不变式与抽象函数"
+    },
+    {
+     "ref": "",
+     "title": "Benevolent side-effects",
+     "zh": "无害的副作用"
+    },
+    {
+     "ref": "",
+     "title": "Documenting the AF, RI, and safety from rep exposure",
+     "zh": "记录抽象函数、表示不变式与表示暴露安全"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Defining ADTs with Interfaces, Generics, Enums, and Functions",
+   "zh": "用接口、泛型、枚举与函数定义抽象数据类型",
+   "items": [
+    {
+     "ref": "",
+     "title": "Interfaces",
+     "zh": "接口"
+    },
+    {
+     "ref": "",
+     "title": "Subtypes",
+     "zh": "子类型"
+    },
+    {
+     "ref": "",
+     "title": "Generic types",
+     "zh": "泛型类型"
+    },
+    {
+     "ref": "",
+     "title": "Enumerations",
+     "zh": "枚举"
+    },
+    {
+     "ref": "",
+     "title": "ADTs in non-OOP languages",
+     "zh": "非面向对象语言里的抽象数据类型"
+    },
+    {
+     "ref": "",
+     "title": "ADTs in TypeScript",
+     "zh": "TypeScript 里的抽象数据类型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Recursive Data Types",
+   "zh": "递归数据类型",
+   "items": [
+    {
+     "ref": "",
+     "title": "Recursive data type definitions",
+     "zh": "递归数据类型定义"
+    },
+    {
+     "ref": "",
+     "title": "Functions over recursive data types",
+     "zh": "递归数据类型上的函数"
+    },
+    {
+     "ref": "",
+     "title": "Dynamic type inspection",
+     "zh": "动态类型检查"
+    },
+    {
+     "ref": "",
+     "title": "Immutability and performance",
+     "zh": "不可变性与性能"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "(Avoiding) Debugging",
+   "zh": "调试（以及如何避免调试）",
+   "items": [
+    {
+     "ref": "",
+     "title": "A rogue’s gallery of bugs",
+     "zh": "典型缺陷图鉴"
+    },
+    {
+     "ref": "",
+     "title": "First defense: make bugs impossible",
+     "zh": "第一道防线：让缺陷无法出现"
+    },
+    {
+     "ref": "",
+     "title": "Second defense: make bugs easy to find",
+     "zh": "第二道防线：让缺陷容易暴露"
+    },
+    {
+     "ref": "",
+     "title": "Reproduce the bug",
+     "zh": "复现缺陷"
+    },
+    {
+     "ref": "",
+     "title": "Find the bug using the scientific method",
+     "zh": "用科学方法定位缺陷"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Concurrency",
+   "zh": "并发",
+   "items": [
+    {
+     "ref": "",
+     "title": "Two models for concurrent programming",
+     "zh": "并发编程的两种模型"
+    },
+    {
+     "ref": "",
+     "title": "Processes, threads, time-slicing",
+     "zh": "进程、线程与时间分片"
+    },
+    {
+     "ref": "",
+     "title": "Interleaving",
+     "zh": "交错执行"
+    },
+    {
+     "ref": "",
+     "title": "Race condition",
+     "zh": "竞态条件"
+    },
+    {
+     "ref": "",
+     "title": "Message passing example",
+     "zh": "消息传递示例"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "Promises",
+   "zh": "Promise",
+   "items": [
+    {
+     "ref": "",
+     "title": "Await",
+     "zh": "await"
+    },
+    {
+     "ref": "",
+     "title": "Asynchronous functions",
+     "zh": "异步函数"
+    },
+    {
+     "ref": "",
+     "title": "Aggregating promises",
+     "zh": "聚合多个 promise"
+    },
+    {
+     "ref": "",
+     "title": "Never busy-wait",
+     "zh": "不要忙等待"
+    },
+    {
+     "ref": "",
+     "title": "Promises and exception handling",
+     "zh": "promise 与异常处理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Mutual Exclusion",
+   "zh": "互斥",
+   "items": [
+    {
+     "ref": "",
+     "title": "Asynchronous methods",
+     "zh": "异步方法"
+    },
+    {
+     "ref": "",
+     "title": "Race conditions",
+     "zh": "竞态条件"
+    },
+    {
+     "ref": "",
+     "title": "Deadlock",
+     "zh": "死锁"
+    },
+    {
+     "ref": "",
+     "title": "Interleaving and mutual exclusion",
+     "zh": "交错与互斥"
+    },
+    {
+     "ref": "",
+     "title": "Other techniques for mutual exclusion",
+     "zh": "其他互斥技术"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "18",
+   "title": "Message-Passing and Networking",
+   "zh": "消息传递与网络",
+   "items": [
+    {
+     "ref": "",
+     "title": "Message passing between workers",
+     "zh": "工作线程之间的消息传递"
+    },
+    {
+     "ref": "",
+     "title": "Client/server design pattern",
+     "zh": "客户端/服务器设计模式"
+    },
+    {
+     "ref": "",
+     "title": "Networking basics",
+     "zh": "网络基础"
+    },
+    {
+     "ref": "",
+     "title": "Web APIs",
+     "zh": "Web API"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Understanding Ownership",
+   "zh": "理解所有权",
+   "fill": "资源管理：资源归谁所有、何时释放，借用以代替共享，用切片划出借用范围",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "What is Ownership?",
+     "zh": "什么是所有权"
+    },
+    {
+     "ref": "4.2",
+     "title": "References and Borrowing",
+     "zh": "引用与借用"
+    },
+    {
+     "ref": "4.3",
+     "title": "The Slice Type",
+     "zh": "切片类型"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Profiling a Program: Where Does It Spend Its Time?",
+   "zh": "剖析程序：时间花在哪里",
+   "fill": "性能剖析：采样/插桩、平坦剖面与调用图、误差来源，把“慢在哪”量化",
+   "items": [
+    {
+     "ref": "1",
+     "title": "Introduction to Profiling",
+     "zh": "剖析导论"
+    },
+    {
+     "ref": "2",
+     "title": "Compiling a Program for Profiling",
+     "zh": "为剖析而编译程序"
+    },
+    {
+     "ref": "3",
+     "title": "Executing the Program",
+     "zh": "运行程序"
+    },
+    {
+     "ref": "5",
+     "title": "Interpreting gprof’s Output",
+     "zh": "解读 gprof 输出"
+    },
+    {
+     "ref": "5.1",
+     "title": "The Flat Profile",
+     "zh": "平坦剖面"
+    },
+    {
+     "ref": "5.2",
+     "title": "The Call Graph",
+     "zh": "调用图"
+    },
+    {
+     "ref": "5.3",
+     "title": "Line-by-line Profiling",
+     "zh": "逐行剖析"
+    },
+    {
+     "ref": "6.1",
+     "title": "Statistical Sampling Error",
+     "zh": "统计采样误差"
+    },
+    {
+     "ref": "9.1",
+     "title": "Implementation of Profiling",
+     "zh": "剖析的实现"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "资源管理",
+   "refs": [
+    "B:4",
+    "B:4.1",
+    "B:4.2"
+   ]
+  },
+  {
+   "topic": "泛型元编程",
+   "refs": [
+    "A:8",
+    "A:11"
+   ],
+   "note": "“泛型”由 A:8 的 Generic types 覆盖，“元编程”只到 A:11 的动态类型检查；宏/反射式的元编程两家都没有专门章节"
+  },
+  {
+   "topic": "异步/并发",
+   "refs": [
+    "A:14",
+    "A:15",
+    "A:16",
+    "A:18"
+   ]
+  },
+  {
+   "topic": "性能剖析",
+   "refs": [
+    "C:#1",
+    "C:5",
+    "C:5.1",
+    "C:5.2",
+    "C:6.1"
+   ]
+  },
+  {
+   "topic": "工程化抽象",
+   "refs": [
+    "A:1",
+    "A:2",
+    "A:4",
+    "A:6",
+    "A:7",
+    "A:8"
+   ]
+  }
+ ],
+ "omitted": "6.102 未收的 materials：03 Code Review、05 Designing Specifications、09 Functional Programming（函数式属节点 P.1.3）、10 Equality、12 Grammars & Parsing、17 Callbacks & Graphical User Interfaces、19 Little Languages，以及 tools（Git、TypeScript 基础）、problem sets 与期末项目；reading 的 Praxis 练习也没收。Rust 书只取第 4 章（其余章节属语言入门/进阶细节）；gprof 手册未收命令行选项章（第 4 章）、FAQ 与附录。",
+ "notes": "6.102 用 TypeScript 讲，readings 里“泛型”“可变性”等术语是语言无关的通用概念，不影响导览图；它的每篇 reading 小节没有编号，故 items 的 ref 留空、只能按分支引用。“资源管理”只覆盖了内存所有权这一面（文件、连接、锁等资源在 A:18 的网络与 A:16 的互斥里顺带出现，没有专门章节）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 83,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

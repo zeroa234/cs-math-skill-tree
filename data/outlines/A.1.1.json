@@ -1,0 +1,374 @@
+{
+ "id": "A.1.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Artificial Intelligence: Foundations of Computational Agents, 3rd Edition",
+   "by": "David L. Poole, Alan K. Mackworth",
+   "year": 2023,
+   "url": "https://artint.info/3e/html/ArtInt3e.html",
+   "toc_urls": [
+    "https://artint.info/3e/html/ArtInt3e.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch3.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch3.S3.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch3.S5.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch3.S6.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch3.S7.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch3.S8.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch4.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch4.S1.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch4.S6.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch4.S8.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch6.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch6.S1.html",
+    "https://artint.info/3e/html/ArtInt3e.Ch6.S4.html"
+   ],
+   "why": "节点“现有英文学习资源”就是这本剑桥大学出版社授权、CC BY-NC-ND 全文在线的本科 AI 教材：第 3 章整章是搜索（状态空间 → 图搜索 → 无信息搜索 → 启发式搜索 → 剪枝），第 4 章整章是约束（变量与约束、搜索求解 CSP、相容性算法、局部搜索、优化），第 6 章整章是确定性规划（状态/动作/目标表示、前向与回归规划、规划转 CSP）。三章正好对上节点的“启发式搜索、局部搜索、规划表示、约束传播和求解”。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Searching for Solutions",
+   "zh": "搜索求解",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Problem Solving as Search",
+     "zh": "把问题求解看作搜索"
+    },
+    {
+     "ref": "3.2",
+     "title": "State Spaces",
+     "zh": "状态空间"
+    },
+    {
+     "ref": "3.3",
+     "title": "Graph Searching",
+     "zh": "图搜索",
+     "items": [
+      {
+       "ref": "3.3.1",
+       "title": "Formalizing Graph Searching",
+       "zh": "图搜索的形式化"
+      }
+     ]
+    },
+    {
+     "ref": "3.4",
+     "title": "A Generic Searching Algorithm",
+     "zh": "通用搜索算法"
+    },
+    {
+     "ref": "3.5",
+     "title": "Uninformed Search Strategies",
+     "zh": "无信息搜索策略",
+     "items": [
+      {
+       "ref": "3.5.1",
+       "title": "Breadth-First Search",
+       "zh": "广度优先搜索"
+      },
+      {
+       "ref": "3.5.2",
+       "title": "Depth-First Search",
+       "zh": "深度优先搜索"
+      },
+      {
+       "ref": "3.5.3",
+       "title": "Iterative Deepening",
+       "zh": "迭代加深"
+      },
+      {
+       "ref": "3.5.4",
+       "title": "Lowest-Cost-First Search",
+       "zh": "最低代价优先搜索"
+      }
+     ]
+    },
+    {
+     "ref": "3.6",
+     "title": "Informed (Heuristic) Search",
+     "zh": "启发式搜索",
+     "items": [
+      {
+       "ref": "3.6.1",
+       "title": "A∗ Search",
+       "zh": "A* 搜索"
+      },
+      {
+       "ref": "3.6.2",
+       "title": "Branch and Bound",
+       "zh": "分支限界"
+      },
+      {
+       "ref": "3.6.3",
+       "title": "Designing a Heuristic Function",
+       "zh": "启发函数的设计"
+      }
+     ]
+    },
+    {
+     "ref": "3.7",
+     "title": "Pruning the Search Space",
+     "zh": "搜索空间剪枝",
+     "items": [
+      {
+       "ref": "3.7.1",
+       "title": "Cycle Pruning",
+       "zh": "环路剪枝"
+      },
+      {
+       "ref": "3.7.2",
+       "title": "Multiple-Path Pruning",
+       "zh": "多路径剪枝"
+      },
+      {
+       "ref": "3.7.3",
+       "title": "Summary of Search Strategies",
+       "zh": "搜索策略小结"
+      }
+     ]
+    },
+    {
+     "ref": "3.8",
+     "title": "Search Refinements",
+     "zh": "搜索的改进",
+     "items": [
+      {
+       "ref": "3.8.1",
+       "title": "Direction of Search",
+       "zh": "搜索方向"
+      },
+      {
+       "ref": "3.8.2",
+       "title": "Dynamic Programming",
+       "zh": "动态规划"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Reasoning with Constraints",
+   "zh": "约束推理",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Variables and Constraints",
+     "zh": "变量与约束",
+     "items": [
+      {
+       "ref": "4.1.1",
+       "title": "Variables and Assignments",
+       "zh": "变量与赋值"
+      },
+      {
+       "ref": "4.1.2",
+       "title": "Constraints",
+       "zh": "约束"
+      },
+      {
+       "ref": "4.1.3",
+       "title": "Constraint Satisfaction Problems",
+       "zh": "约束满足问题"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "Solving CSPs by Searching",
+     "zh": "用搜索求解约束满足问题"
+    },
+    {
+     "ref": "4.3",
+     "title": "Consistency Algorithms",
+     "zh": "相容性算法"
+    },
+    {
+     "ref": "4.4",
+     "title": "Domain Splitting",
+     "zh": "论域分裂"
+    },
+    {
+     "ref": "4.5",
+     "title": "Variable Elimination",
+     "zh": "变量消去"
+    },
+    {
+     "ref": "4.6",
+     "title": "Local Search",
+     "zh": "局部搜索",
+     "items": [
+      {
+       "ref": "4.6.1",
+       "title": "Iterative Best Improvement",
+       "zh": "迭代最优改进"
+      },
+      {
+       "ref": "4.6.2",
+       "title": "Randomized Algorithms",
+       "zh": "随机化算法"
+      },
+      {
+       "ref": "4.6.3",
+       "title": "Local Search Variants",
+       "zh": "局部搜索的变体"
+      },
+      {
+       "ref": "4.6.4",
+       "title": "Evaluating Randomized Algorithms",
+       "zh": "随机化算法的评估"
+      }
+     ]
+    },
+    {
+     "ref": "4.7",
+     "title": "Population-Based Methods",
+     "zh": "群体方法"
+    },
+    {
+     "ref": "4.8",
+     "title": "Optimization",
+     "zh": "优化",
+     "items": [
+      {
+       "ref": "4.8.1",
+       "title": "Systematic Methods for Discrete Optimization",
+       "zh": "离散优化的系统化方法"
+      },
+      {
+       "ref": "4.8.2",
+       "title": "Local Search for Optimization",
+       "zh": "用于优化的局部搜索"
+      },
+      {
+       "ref": "4.8.3",
+       "title": "Gradient Descent for Continuous Functions",
+       "zh": "连续函数的梯度下降"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Deterministic Planning",
+   "zh": "确定性规划",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Representing States, Actions, and Goals",
+     "zh": "状态、动作与目标的表示",
+     "items": [
+      {
+       "ref": "6.1.1",
+       "title": "Explicit State-Space Representation",
+       "zh": "显式状态空间表示"
+      },
+      {
+       "ref": "6.1.2",
+       "title": "The STRIPS Representation",
+       "zh": "STRIPS 表示"
+      },
+      {
+       "ref": "6.1.3",
+       "title": "Feature-Based Representation of Actions",
+       "zh": "基于特征的动作表示"
+      },
+      {
+       "ref": "6.1.4",
+       "title": "Initial States and Goals",
+       "zh": "初始状态与目标"
+      }
+     ]
+    },
+    {
+     "ref": "6.2",
+     "title": "Forward Planning",
+     "zh": "前向规划"
+    },
+    {
+     "ref": "6.3",
+     "title": "Regression Planning",
+     "zh": "回归规划"
+    },
+    {
+     "ref": "6.4",
+     "title": "Planning as a CSP",
+     "zh": "把规划转化为约束满足问题",
+     "items": [
+      {
+       "ref": "6.4.1",
+       "title": "Action Features",
+       "zh": "动作特征"
+      }
+     ]
+    },
+    {
+     "ref": "6.5",
+     "title": "Partial-Order Planning",
+     "zh": "偏序规划"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "启发式搜索",
+   "refs": [
+    "A:3.6",
+    "A:3.6.1",
+    "A:3.6.3",
+    "A:3.8"
+   ],
+   "note": "3.6 整节讲启发函数、可采纳性、贪心最佳优先与启发式深度优先；3.6.1 是 A*，3.6.3 讲如何设计可采纳的启发函数；3.8 的搜索方向与动态规划是搜索效率的进一步改进。"
+  },
+  {
+   "topic": "局部搜索",
+   "refs": [
+    "A:4.6",
+    "A:4.6.1",
+    "A:4.6.2",
+    "A:4.8.2"
+   ],
+   "note": "4.6 讲局部搜索解 CSP（迭代最优改进、模拟退火等随机化变体），4.8.2 讲把局部搜索用于一般优化。"
+  },
+  {
+   "topic": "规划表示",
+   "refs": [
+    "A:6.1",
+    "A:6.1.1",
+    "A:6.1.2",
+    "A:6.1.3",
+    "A:6.1.4"
+   ],
+   "note": "6.1 从显式状态空间讲到 STRIPS 与基于特征的动作表示，以及初始状态与目标的表示；随后 6.2–6.5 是规划算法。"
+  },
+  {
+   "topic": "约束传播和求解",
+   "refs": [
+    "A:4.1",
+    "A:4.2",
+    "A:4.3",
+    "A:4.4",
+    "A:4.5",
+    "A:6.4"
+   ],
+   "note": "4.1 定义约束满足问题，4.2 用（回溯）搜索求解，4.3 相容性算法即约束传播（弧相容等），4.4 论域分裂与 4.5 变量消去是求解/传播的其它手段，6.4 把规划转成 CSP 再求解。"
+  }
+ ],
+ "omitted": "A 未收：第 3 章的 3.9 Social Impact、3.10 Review、3.11 References and Further Reading、3.12 Exercises；第 4 章的 4.9 Social Impact、4.10 Review、4.11 References and Further Reading、4.12 Exercises；第 6 章的 6.6–6.9 同上。全书其它章未收：第 1–2 章（智能体与架构，属节点 A.1 的其它分支）、第 5 章（命题与推理）、第 7 章（监督学习）、第 8 章（神经网络）、第 9–10 章（不确定性推理与学习，属节点 A.1.2）、第 11 章（因果）、第 12–13 章（不确定条件下的规划与强化学习，属节点 A.1.3/A.2.4）、第 14–19 章（多智能体、个体与关系、知识图谱、社会影响）以及附录。",
+ "notes": "第 3、4、6 章各有一节 Review 与 References/Exercises，未收。4.2、4.4、4.5、4.7、6.2、6.3、6.5 这些节在本版里没有编号小节，故只到节一级；其余收了编号小节（第三层）。3.6.1 的标题原文用 U+2217（A∗ Search），照抄。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 52,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

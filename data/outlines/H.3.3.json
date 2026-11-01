@@ -1,0 +1,414 @@
+{
+ "id": "H.3.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Embedded Systems: Real-Time Interfacing to ARM Cortex-M Microcontrollers (Volume 2, 4th ed.)",
+   "by": "Jonathan W. Valvano, University of Texas at Austin",
+   "year": 2014,
+   "url": "http://users.ece.utexas.edu/~valvano/arm/outline.htm",
+   "toc_urls": [
+    "http://users.ece.utexas.edu/~valvano/arm/TOC.pdf"
+   ],
+   "why": "节点“现有英文学习资源”是 MIT 6.071J（电子学与测量），主体是线性电路（KVL/KCL、戴维南、BJT），没有总线、执行器与软硬件接口的章节，目录和节点对不上，所以换成这本书：作者主页公开的目录 PDF 细到小节，覆盖硬件软件同步（时序、边沿触发、盲周期、握手）、定时接口（输入捕获、PWM、执行器、电机控制）、串行总线（RS232/RS485、SSI、I2C、USB）、模拟接口（运放、滤波、DAC/ADC）、系统级设计（功耗、容差、可测性）和数据采集（转导器、噪声分析）。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "6.071J Introduction to Electronics, Signals, and Measurement",
+   "by": "David Cory, Ian Hutchinson, Manos Chaniotakis, MIT OpenCourseWare",
+   "year": 2006,
+   "url": "https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-071j-introduction-to-electronics-signals-and-measurement-spring-2006/pages/calendar/"
+   ],
+   "why": "补“测量”“采集”“校准”：这就是节点给的现有资源，只用它和测量有关的部分（转导器、采样与混叠、滤波与运放、控制基础），以及唯一涉及标定的那次实验（测电阻温度系数）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Hardware-Software Synchronization",
+   "zh": "硬件-软件同步",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "4.2",
+     "title": "Timing",
+     "zh": "时序"
+    },
+    {
+     "ref": "4.5",
+     "title": "Edge-triggered Interfacing",
+     "zh": "边沿触发的接口"
+    },
+    {
+     "ref": "4.6",
+     "title": "Configuring Digital Output Pins",
+     "zh": "数字输出引脚的配置"
+    },
+    {
+     "ref": "4.7",
+     "title": "Blind-cycle Interfacing",
+     "zh": "盲周期接口"
+    },
+    {
+     "ref": "4.8",
+     "title": "Busy-Wait Synchronization",
+     "zh": "忙等待同步"
+    },
+    {
+     "ref": "4.9",
+     "title": "UART Interface",
+     "zh": "UART 接口"
+    },
+    {
+     "ref": "4.10",
+     "title": "Keyboard Interface",
+     "zh": "键盘接口"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Interrupt Synchronization",
+   "zh": "中断同步",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Multithreading",
+     "zh": "多线程"
+    },
+    {
+     "ref": "5.2",
+     "title": "Interthread Communication and Synchronization",
+     "zh": "线程间通信与同步"
+    },
+    {
+     "ref": "5.3",
+     "title": "Critical Sections",
+     "zh": "临界区"
+    },
+    {
+     "ref": "5.4",
+     "title": "NVIC on the ARM Cortex-M Processor",
+     "zh": "Cortex-M 的嵌套向量中断控制器（NVIC）"
+    },
+    {
+     "ref": "5.5",
+     "title": "Edge-triggered Interrupts",
+     "zh": "边沿触发中断"
+    },
+    {
+     "ref": "5.6",
+     "title": "Interrupt-Driven UART",
+     "zh": "中断驱动的 UART"
+    },
+    {
+     "ref": "5.7",
+     "title": "Periodic Interrupts using SysTick",
+     "zh": "用 SysTick 实现周期中断"
+    },
+    {
+     "ref": "5.8",
+     "title": "Low-Power Design",
+     "zh": "低功耗设计"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Time Interfacing",
+   "zh": "时间量接口",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Input Capture or Input Edge Time Mode",
+     "zh": "输入捕获（输入边沿计时）模式"
+    },
+    {
+     "ref": "6.2",
+     "title": "Output Compare or Periodic Timer",
+     "zh": "输出比较（周期定时器）"
+    },
+    {
+     "ref": "6.3",
+     "title": "Pulse Width Modulation",
+     "zh": "脉宽调制（PWM）"
+    },
+    {
+     "ref": "6.4",
+     "title": "Frequency Measurement",
+     "zh": "频率测量"
+    },
+    {
+     "ref": "6.5",
+     "title": "Binary Actuators",
+     "zh": "开关型执行器"
+    },
+    {
+     "ref": "6.6",
+     "title": "Integral Control of a DC Motor",
+     "zh": "直流电机的积分控制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Serial Interfacing",
+   "zh": "串行接口",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Introduction to Serial Communication",
+     "zh": "串行通信导论"
+    },
+    {
+     "ref": "7.2",
+     "title": "RS232 Interfacing",
+     "zh": "RS232 接口"
+    },
+    {
+     "ref": "7.3",
+     "title": "RS422/USB/RS423/RS485 Balanced Differential Lines",
+     "zh": "RS422/USB/RS423/RS485 平衡差分线路"
+    },
+    {
+     "ref": "7.4",
+     "title": "Logic Level Conversion",
+     "zh": "逻辑电平转换"
+    },
+    {
+     "ref": "7.5",
+     "title": "Synchronous Transmission and Receiving using the SSI",
+     "zh": "用 SSI 做同步收发"
+    },
+    {
+     "ref": "7.6",
+     "title": "Inter-Integrated Circuit (I2C) Interface",
+     "zh": "I2C 总线接口"
+    },
+    {
+     "ref": "7.7",
+     "title": "Introduction to Universal Serial Bus (USB)",
+     "zh": "USB 导论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Analog Interfacing",
+   "zh": "模拟接口",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Resistors and Capacitors",
+     "zh": "电阻与电容"
+    },
+    {
+     "ref": "8.2",
+     "title": "Op Amps",
+     "zh": "运算放大器"
+    },
+    {
+     "ref": "8.3",
+     "title": "Analog Filters",
+     "zh": "模拟滤波器"
+    },
+    {
+     "ref": "8.4",
+     "title": "Digital to Analog Converters",
+     "zh": "数模转换器"
+    },
+    {
+     "ref": "8.5",
+     "title": "Analog to Digital Converters",
+     "zh": "模数转换器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "System-Level Design",
+   "zh": "系统级设计",
+   "items": [
+    {
+     "ref": "9.2",
+     "title": "Power",
+     "zh": "功耗"
+    },
+    {
+     "ref": "9.3",
+     "title": "Tolerance",
+     "zh": "容差"
+    },
+    {
+     "ref": "9.4",
+     "title": "Design for Testability",
+     "zh": "可测试性设计"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Data Acquisition Systems",
+   "zh": "数据采集系统",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "10.2",
+     "title": "Transducers",
+     "zh": "传感器（转导器）"
+    },
+    {
+     "ref": "10.3",
+     "title": "Discrete Calculus",
+     "zh": "离散微积分"
+    },
+    {
+     "ref": "10.4",
+     "title": "Data Acquisition System Design",
+     "zh": "数据采集系统设计"
+    },
+    {
+     "ref": "10.5",
+     "title": "Analysis of Noise",
+     "zh": "噪声分析"
+    },
+    {
+     "ref": "10.6",
+     "title": "Data Acquisition Case Studies",
+     "zh": "数据采集案例"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "Introduction; Transducers",
+   "zh": "导论；传感器/转导器",
+   "fill": "测量：把物理量转成电信号的转导器原理与常见传感器",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Sampling and Aliasing; Numbering System",
+   "zh": "采样与混叠；数制",
+   "fill": "采集：采样率、混叠与量化相关的数据表示",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "16",
+   "title": "Frequency Response; Filters",
+   "zh": "频率响应与滤波",
+   "fill": "误差与信号调理：用滤波抑制噪声、频响对测量的影响",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "29",
+   "title": "Op Amp (cont.); Fundamental Amplifier Circuits; Input/Output Impedance",
+   "zh": "运算放大器（续）；基本放大电路；输入输出阻抗",
+   "fill": "软硬件接口：传感器信号调理电路（放大与阻抗匹配）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lab 7",
+   "title": "Measuring the Temperature Coefficient of Resistors",
+   "zh": "测量电阻的温度系数",
+   "fill": "校准：一次真正要标定传感器/器件、并用参考量算误差的实验课",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "测量",
+   "refs": [
+    "A:10.2",
+    "A:10.4",
+    "A:10.6",
+    "B:1"
+   ]
+  },
+  {
+   "topic": "校准",
+   "refs": [
+    "B:Lab 7"
+   ],
+   "note": "两个来源都没有专门讲“校准”的章节：A 只在 9.3 容差、10.2 传感器里讲器件特性，B 只有 Lab 7 一次标定电阻温度系数的实验（用参考量对比、算偏差），没有校准流程、量值溯源和校准周期的系统讲解。"
+  },
+  {
+   "topic": "误差",
+   "refs": [
+    "A:9.3",
+    "A:10.5",
+    "A:10.4"
+   ]
+  },
+  {
+   "topic": "总线",
+   "refs": [
+    "A:7",
+    "A:7.5",
+    "A:7.6",
+    "A:7.7",
+    "A:4.9"
+   ]
+  },
+  {
+   "topic": "采集",
+   "refs": [
+    "A:10",
+    "A:10.1",
+    "A:8.5",
+    "B:4"
+   ]
+  },
+  {
+   "topic": "执行器",
+   "refs": [
+    "A:6.5",
+    "A:6.6",
+    "A:6.3"
+   ]
+  },
+  {
+   "topic": "软硬件接口",
+   "refs": [
+    "A:4",
+    "A:4.2",
+    "A:4.5",
+    "A:5.5",
+    "A:8.2",
+    "B:29"
+   ]
+  }
+ ],
+ "omitted": "Vol 2 里没收的：第 1 章（嵌入式系统与设计流程）、第 2 章（Cortex-M 架构与汇编）、第 3 章（软件设计，含 FSM/线程/FIFO/调试）、第 11 章（通信系统与物联网，属 H.4.3 物联网）以及各章习题与实验、附录；节点讲的是传感器与接口，这些章属微控制器基础或通信/IoT 范围。章内也没收 4.3 Petri 网、4.4 Kahn 过程网络、5.9 Debugging Profile、9.1 Design for Manufacturability、9.5 PCB 与机壳。MIT 6.071J 只收了与测量/采集/信号调理有关的 4 讲和 1 个实验，其余 30 多讲是电路分析（KVL/KCL、戴维南、电容电感、BJT 等），与节点无关。",
+ "notes": "节点给的现有英文资源 MIT 6.071J 主体是电路课，目录对不上“总线/执行器/软硬件接口”，按说明改用 Valvano Volume 2 作主来源（作者主页公开的 Detailed Table of Contents PDF）。Volume 2 的目录是带页码点线的 PDF，标题已去掉点线与页码。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 55,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,480 @@
+{
+ "id": "D.4.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Knowledge Graphs",
+   "by": "Aidan Hogan, Eva Blomqvist, Michael Cochez, Claudia d'Amato, Gerard de Melo, Claudio Gutierrez, Sabrina Kirrane, José Emilio Labra Gayo, Roberto Navigli, Sebastian Neumaier, Axel-Cyrille Ngonga Ngomo, Axel Polleres, Sabbir M. Rashid, Anisa Rula, Lukas Schmelzeisen, Juan Sequeda, Steffen Staab, Antoine Zimmermann (Springer)",
+   "year": 2021,
+   "url": "https://kgbook.org/",
+   "toc_urls": [
+    "https://kgbook.org/"
+   ],
+   "why": "节点现有英文资源本身：Springer 开放获取的 Knowledge Graphs 全书 HTML 在 kgbook.org，作者在前言里说明这本书就是给“刚接触知识图谱”的读者写的导论；目录逐节覆盖节要求的知识点——数据图模型与查询（第 2 章）、模式/标识/语境即本体与语义约束（第 3 章）、本体与规则（第 4 章）、知识创建与融合（第 6 章）、发布与访问协议（第 9 章）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Data Graphs",
+   "zh": "数据图",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Models",
+     "zh": "图数据模型",
+     "items": [
+      {
+       "ref": "2.1.1",
+       "title": "Directed edge-labelled graphs",
+       "zh": "有向边标记图"
+      },
+      {
+       "ref": "2.1.2",
+       "title": "Heterogeneous graphs",
+       "zh": "异构图"
+      },
+      {
+       "ref": "2.1.3",
+       "title": "Property graphs",
+       "zh": "属性图"
+      },
+      {
+       "ref": "2.1.4",
+       "title": "Graph dataset",
+       "zh": "图数据集"
+      },
+      {
+       "ref": "2.1.5",
+       "title": "Other graph data models",
+       "zh": "其他图数据模型"
+      },
+      {
+       "ref": "2.1.6",
+       "title": "Graph stores",
+       "zh": "图存储"
+      }
+     ]
+    },
+    {
+     "ref": "2.2",
+     "title": "Querying",
+     "zh": "图查询",
+     "items": [
+      {
+       "ref": "2.2.1",
+       "title": "Basic graph patterns",
+       "zh": "基本图模式"
+      },
+      {
+       "ref": "2.2.2",
+       "title": "Complex graph patterns",
+       "zh": "复合图模式"
+      },
+      {
+       "ref": "2.2.3",
+       "title": "Navigational graph patterns",
+       "zh": "导航式图模式"
+      },
+      {
+       "ref": "2.2.4",
+       "title": "Other features",
+       "zh": "查询的其他特性"
+      },
+      {
+       "ref": "2.2.5",
+       "title": "Query Interfaces",
+       "zh": "查询接口"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Schema, Identity, Context",
+   "zh": "模式、标识与语境",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Schema",
+     "zh": "模式",
+     "items": [
+      {
+       "ref": "3.1.1",
+       "title": "Semantic schema",
+       "zh": "语义模式"
+      },
+      {
+       "ref": "3.1.2",
+       "title": "Validating schema",
+       "zh": "校验模式"
+      },
+      {
+       "ref": "3.1.3",
+       "title": "Emergent schema",
+       "zh": "涌现模式"
+      }
+     ]
+    },
+    {
+     "ref": "3.2",
+     "title": "Identity",
+     "zh": "标识",
+     "items": [
+      {
+       "ref": "3.2.1",
+       "title": "Persistent identifiers",
+       "zh": "持久标识符"
+      },
+      {
+       "ref": "3.2.2",
+       "title": "External identity links",
+       "zh": "外部标识链接"
+      },
+      {
+       "ref": "3.2.3",
+       "title": "Datatypes",
+       "zh": "数据类型"
+      },
+      {
+       "ref": "3.2.4",
+       "title": "Lexicalisation",
+       "zh": "词法化"
+      },
+      {
+       "ref": "3.2.5",
+       "title": "Existential nodes",
+       "zh": "存在节点"
+      }
+     ]
+    },
+    {
+     "ref": "3.3",
+     "title": "Context",
+     "zh": "语境",
+     "items": [
+      {
+       "ref": "3.3.1",
+       "title": "Direct representation",
+       "zh": "直接表示"
+      },
+      {
+       "ref": "3.3.2",
+       "title": "Reification",
+       "zh": "具体化（reification）"
+      },
+      {
+       "ref": "3.3.3",
+       "title": "Higher-arity representation",
+       "zh": "高阶元表示"
+      },
+      {
+       "ref": "3.3.4",
+       "title": "Annotations",
+       "zh": "注解"
+      },
+      {
+       "ref": "3.3.5",
+       "title": "Other contextual frameworks",
+       "zh": "其他语境框架"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Deductive Knowledge",
+   "zh": "演绎知识",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Ontologies",
+     "zh": "本体",
+     "items": [
+      {
+       "ref": "4.1.1",
+       "title": "Interpretations and models",
+       "zh": "解释与模型"
+      },
+      {
+       "ref": "4.1.2",
+       "title": "Ontology features",
+       "zh": "本体特性"
+      },
+      {
+       "ref": "4.1.3",
+       "title": "Entailment",
+       "zh": "蕴涵"
+      },
+      {
+       "ref": "4.1.4",
+       "title": "If–then vs. if-and-only-if semantics",
+       "zh": "if–then 与 if-and-only-if 语义"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "Reasoning",
+     "zh": "推理",
+     "items": [
+      {
+       "ref": "4.2.1",
+       "title": "Rules",
+       "zh": "规则"
+      },
+      {
+       "ref": "4.2.2",
+       "title": "Description Logics",
+       "zh": "描述逻辑"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Creation and Enrichment",
+   "zh": "知识创建与丰富",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Human Collaboration",
+     "zh": "人工协作"
+    },
+    {
+     "ref": "6.2",
+     "title": "Text Sources",
+     "zh": "文本来源",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Pre-processing",
+       "zh": "预处理"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "Named Entity Recognition (NER)",
+       "zh": "命名实体识别（NER）"
+      },
+      {
+       "ref": "6.2.3",
+       "title": "Entity Linking (EL)",
+       "zh": "实体链接（EL）"
+      },
+      {
+       "ref": "6.2.4",
+       "title": "Relation Extraction (RE)",
+       "zh": "关系抽取（RE）"
+      },
+      {
+       "ref": "6.2.5",
+       "title": "Joint tasks",
+       "zh": "联合任务"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Markup Sources",
+     "zh": "标记来源",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "Wrapper-based extraction",
+       "zh": "基于包装器的抽取"
+      },
+      {
+       "ref": "6.3.2",
+       "title": "Web table extraction",
+       "zh": "Web 表格抽取"
+      },
+      {
+       "ref": "6.3.3",
+       "title": "Deep Web crawling",
+       "zh": "深层 Web 抓取"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Structured Sources",
+     "zh": "结构化来源",
+     "items": [
+      {
+       "ref": "6.4.1",
+       "title": "Mapping from tables",
+       "zh": "从表格映射"
+      },
+      {
+       "ref": "6.4.2",
+       "title": "Mapping from trees",
+       "zh": "从树形数据映射"
+      },
+      {
+       "ref": "6.4.3",
+       "title": "Mapping from other knowledge graphs",
+       "zh": "从其他知识图谱映射"
+      }
+     ]
+    },
+    {
+     "ref": "6.5",
+     "title": "Schema/Ontology Creation",
+     "zh": "模式与本体构建",
+     "items": [
+      {
+       "ref": "6.5.1",
+       "title": "Ontology engineering",
+       "zh": "本体工程"
+      },
+      {
+       "ref": "6.5.2",
+       "title": "Ontology learning",
+       "zh": "本体学习"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Publication",
+   "zh": "知识图谱的发布",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Best Practices",
+     "zh": "最佳实践",
+     "items": [
+      {
+       "ref": "9.1.1",
+       "title": "FAIR Principles",
+       "zh": "FAIR 原则"
+      },
+      {
+       "ref": "9.1.2",
+       "title": "Linked Data Principles",
+       "zh": "关联数据原则"
+      }
+     ]
+    },
+    {
+     "ref": "9.2",
+     "title": "Access Protocols",
+     "zh": "访问协议",
+     "items": [
+      {
+       "ref": "9.2.1",
+       "title": "Dumps",
+       "zh": "数据转储"
+      },
+      {
+       "ref": "9.2.2",
+       "title": "Node lookups",
+       "zh": "节点查询"
+      },
+      {
+       "ref": "9.2.3",
+       "title": "Edge patterns",
+       "zh": "边模式查询"
+      },
+      {
+       "ref": "9.2.4",
+       "title": "(Complex) graph patterns",
+       "zh": "（复合）图模式查询"
+      },
+      {
+       "ref": "9.2.5",
+       "title": "Other protocols",
+       "zh": "其他协议"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "实体关系",
+   "refs": [
+    "A:2.1.1",
+    "A:2.1.2",
+    "A:2.1.3",
+    "A:2.1.4",
+    "A:2.1.6"
+   ],
+   "note": "第 2 章的 2.1 把“实体—关系”落到三种主流数据模型上：有向边标记图（RDF 式三元组）、异构图、属性图（节点/边带属性），以及图数据集与图存储；2.2 的图模式则说明实体与关系怎么被查询。"
+  },
+  {
+   "topic": "本体",
+   "refs": [
+    "A:3.1.1",
+    "A:3.1.3",
+    "A:4.1.1",
+    "A:4.1.2",
+    "A:6.5.1",
+    "A:6.5.2"
+   ],
+   "note": "3.1.1 语义模式即用 RDFS/OWL 这类词表声明类与属性（本体的轻量形态），3.1.3 涌现模式；4.1 从模型论角度给本体的语义（解释与模型、本体特性、蕴涵、if–then 与 iff 语义）；6.5 讲本体怎么建（本体工程）与怎么学（本体学习）。"
+  },
+  {
+   "topic": "规则",
+   "refs": [
+    "A:4.2.1"
+   ],
+   "note": "4.2.1 Rules 是全书唯一专门讲规则的一节（Datalog 式规则、规则与本体公理的关系）；规则的执行与推理后果属于节点 D.4.2 的演绎推理主线。"
+  },
+  {
+   "topic": "语义约束",
+   "refs": [
+    "A:3.1.2",
+    "A:4.1.3",
+    "A:4.1.4"
+   ],
+   "note": "3.1.2 校验模式（用 SHACL/OWL 约束检查数据是否合法）是“语义约束”最直接的一节；4.1.3 蕴涵与 4.1.4 if–then / iff 语义说明约束与公理在逻辑上如何起作用。"
+  },
+  {
+   "topic": "知识融合",
+   "refs": [
+    "A:3.2.1",
+    "A:3.2.2",
+    "A:6.2.3",
+    "A:6.4.3",
+    "A:6.1"
+   ],
+   "note": "融合的三条路径：实体层用 3.2.1 持久标识符与 3.2.2 外部标识链接（sameAs 一类）对齐不同源的同一实体，抽取阶段用 6.2.3 实体链接把文本提到已有实体，跨图谱用 6.4.3 从其他知识图谱映射；6.1 人工协作是众包对齐。"
+  },
+  {
+   "topic": "图谱查询",
+   "refs": [
+    "A:2.2.1",
+    "A:2.2.2",
+    "A:2.2.3",
+    "A:2.2.4",
+    "A:2.2.5",
+    "A:9.2.1",
+    "A:9.2.2",
+    "A:9.2.3",
+    "A:9.2.4"
+   ],
+   "note": "2.2 是查询语言的抽象层：基本图模式（三元组模式）、复合图模式（AND/OPTIONAL/UNION/FILTER 等）、导航式图模式（正则路径查询）、其他特性与查询接口；9.2 讲实际怎么把查询发出去（转储下载、节点查询、边模式、复合图模式等访问协议）。"
+  }
+ ],
+ "omitted": "A（Knowledge Graphs）未收：第 1 章 Introduction（章节下没有小节，且内容是对全书的总览）、第 5 章 Inductive Knowledge（图分析、嵌入、GNN、符号学习，属节点 D.4.2 的归纳一侧与机器学习）、第 7 章 Quality Assessment、第 8 章 Refinement（其 8.1.3 Identity-link prediction 与知识融合相关，但归入 D.4.2 的推理/精化主线）、第 10 章 Knowledge Graphs in Practice（DBpedia/Wikidata 与企业应用案例）、第 11 章 Summary and Conclusion、附录 A Background（知识图谱的历史沿革）；第 9 章的 9.3 Usage Control（许可、加密、匿名化）未收，那是数据治理话题；Preface、Acknowledgements、Bibliography、Authors' Biographies 不算目录条目。",
+ "notes": "kgbook.org 的目录页本身带章节编号（“2.1.1 Directed edge-labelled graphs”这种形式），所以 ref 直接抄原文编号，title 抄编号后的原文；节点较窄，所以细到小节（第三层）。本书是 Springer 开放获取（Synthesis Lectures on Data, Semantics, and Knowledge No. 22），HTML 全文免费，无补充来源需求：简介里的六个知识点在第 2、3、4、6、9 章都有专门小节。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 69,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

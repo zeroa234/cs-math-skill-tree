@@ -1,0 +1,190 @@
+{
+ "id": "F.3.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "15-414 Bug Catching: Automated Program Verification and Testing, Fall 2026",
+   "by": "Matt Fredrikson",
+   "year": 2026,
+   "url": "https://www.cs.cmu.edu/~15414/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~15414/schedule.html"
+   ],
+   "why": "节点现有英文资源；Schedule 页逐讲讲契约（Contracts）、动态逻辑与循环不变量、谓词变换器，再一路到 LTL/CTL 模型检查与有界模型检查，正好覆盖契约、Hoare 逻辑、不变式、时序逻辑与状态空间几条线。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "17-355/17-665/17-819 Program Analysis, Spring 2019",
+   "by": "Jonathan Aldrich",
+   "year": 2019,
+   "url": "https://www.cs.cmu.edu/~aldrich/courses/17-355/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~aldrich/courses/17-355/"
+   ],
+   "why": "补抽象解释：A 只到谓词变换器，没有抽象解释。CMU 的程序分析课把抽象解释当作整门课的理论主线（dataflow analysis 与 abstract interpretation、collecting semantics、widening），讲义与习题齐全。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Contracts",
+   "zh": "契约",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Semantics",
+   "zh": "语义",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Dynamic Logic",
+   "zh": "动态逻辑",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Loops",
+   "zh": "循环",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Induction",
+   "zh": "归纳",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Convergence",
+   "zh": "收敛性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Predicate Transformers",
+   "zh": "谓词变换器",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Linear Temporal Logic",
+   "zh": "线性时序逻辑",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "LTL Model Checking",
+   "zh": "LTL 模型检查",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Branching Time Properties",
+   "zh": "分支时间性质",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "CTL Model Checking",
+   "zh": "CTL 模型检查",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Software and Bounded Model Checking",
+   "zh": "软件模型检查与有界模型检查",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Dataflow Analysis and Abstract Interpretation",
+   "zh": "数据流分析与抽象解释",
+   "fill": "抽象解释（用抽象域把具体执行抽象化、证明分析可靠）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Collecting semantics and interval analysis",
+   "zh": "收集语义与区间分析",
+   "fill": "抽象解释的一个具体实例：收集语义与区间抽象域",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Live variables and widening",
+   "zh": "活跃变量与拓宽",
+   "fill": "抽象解释的终止性手段（widening / 加宽）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "契约",
+   "refs": [
+    "A:#1",
+    "A:#2"
+   ]
+  },
+  {
+   "topic": "Hoare逻辑",
+   "refs": [
+    "A:#3",
+    "A:#4",
+    "A:#7"
+   ]
+  },
+  {
+   "topic": "不变式",
+   "refs": [
+    "A:#4",
+    "A:#5",
+    "A:#6"
+   ]
+  },
+  {
+   "topic": "抽象解释",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "时序逻辑与状态空间",
+   "refs": [
+    "A:#8",
+    "A:#9",
+    "A:#10",
+    "A:#11",
+    "A:#12"
+   ]
+  }
+ ],
+ "omitted": "主来源 Fall 2026 共 22 个主题，只收了 12 讲：Introduction、Data Structures、Arrays and Ghosts、Arrays、Sequent Calculus、Certificates、Resolution、Equality and Uninterpreted Functions、Theory Combination 属 F.2.4（自动定理证明）或习题课；“Semantics in Why3”“Real World Verification”“Final Review”是工具与复习课。补充来源 17-355 只取抽象解释相关的三次课，其余（别名分析、过程间分析、符号执行、动态分析、Soot 工具课）超出本节点。",
+ "notes": "A 的 Schedule 页只有日期无讲次号、B 的页面只有日期，故分支 ref 留空，coverage 用 A:#n / B:#n。A 里没有独立的“Hoare 逻辑”一讲，Hoare 三元组与最弱前置条件分别落在 Dynamic Logic、Loops、Predicate Transformers 三讲，故 Hoare 逻辑的 refs 取这三处。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 15,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,415 @@
+{
+ "id": "S.5.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Security Engineering: A Guide to Building Dependable Distributed Systems, Third Edition",
+   "by": "Ross Anderson",
+   "year": 2020,
+   "url": "https://www.cl.cam.ac.uk/archive/rja14/book.html",
+   "toc_urls": [
+    "https://www.cl.cam.ac.uk/~rja14/Papers/SEv3.pdf"
+   ],
+   "why": "节点现有英文资源就是这本；作者主页公开了全书 PDF（含完整章节目录，到小节），第 8 章安全经济学、第 21 章网络攻击与防御（含拓扑测量）、第 27 章安全系统开发（漏洞生命周期、CVE、协调披露）、第 28 章保障与可持续性（评价、可靠性度量）正好对应节点的成因—缓解—度量—经济学链条。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "6.858 Computer Systems Security (MIT, Spring 2022)",
+   "by": "MIT CSAIL",
+   "year": 2022,
+   "url": "https://css.csail.mit.edu/6.858/2022/general.html",
+   "toc_urls": [
+    "https://css.csail.mit.edu/6.858/2022/schedule.html"
+   ],
+   "why": "补“漏洞成因 / 缓解设计 / 可复现实验”这三块的具体技术：课表逐讲列出 buffer overflows、buffer overflow defenses、privilege separation、software fault isolation、symbolic execution，并配套 Lab 1–3（溢出、权限分离、符号执行），是把缓解措施放到真实代码上复现实验的材料；Anderson 的书只讲设计原则，不带你动手做实验。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Economics",
+   "zh": "经济学",
+   "items": [
+    {
+     "ref": "8.2",
+     "title": "Classical economics",
+     "zh": "古典经济学"
+    },
+    {
+     "ref": "8.3",
+     "title": "Information economics",
+     "zh": "信息经济学",
+     "items": [
+      {
+       "ref": "8.3.1",
+       "title": "Why information markets are different",
+       "zh": "信息市场为何不同"
+      },
+      {
+       "ref": "8.3.2",
+       "title": "The value of lock-in",
+       "zh": "锁定的价值"
+      },
+      {
+       "ref": "8.3.4",
+       "title": "Public goods",
+       "zh": "公共品"
+      }
+     ]
+    },
+    {
+     "ref": "8.4",
+     "title": "Game theory",
+     "zh": "博弈论",
+     "items": [
+      {
+       "ref": "8.4.1",
+       "title": "The prisoners’ dilemma",
+       "zh": "囚徒困境"
+      },
+      {
+       "ref": "8.4.2",
+       "title": "Repeated and evolutionary games",
+       "zh": "重复博弈与演化博弈"
+      }
+     ]
+    },
+    {
+     "ref": "8.6",
+     "title": "The economics of security and dependability",
+     "zh": "安全与可信性的经济学",
+     "items": [
+      {
+       "ref": "8.6.1",
+       "title": "Why is Windows so insecure?",
+       "zh": "Windows 为什么这么不安全？"
+      },
+      {
+       "ref": "8.6.2",
+       "title": "Managing the patching cycle",
+       "zh": "补丁周期的管理"
+      },
+      {
+       "ref": "8.6.3",
+       "title": "Structural models of attack and defence",
+       "zh": "攻防的结构模型"
+      },
+      {
+       "ref": "8.6.9",
+       "title": "Economics of cybercrime",
+       "zh": "网络犯罪经济学"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "21",
+   "title": "Network Attack and Defence",
+   "zh": "网络攻击与防御",
+   "items": [
+    {
+     "ref": "21.2",
+     "title": "Network protocols and service denial",
+     "zh": "网络协议与服务拒绝",
+     "items": [
+      {
+       "ref": "21.2.2",
+       "title": "DNS security",
+       "zh": "DNS 安全"
+      },
+      {
+       "ref": "21.2.3",
+       "title": "UDP, TCP, SYN floods and SYN reflection",
+       "zh": "UDP、TCP、SYN 洪泛与 SYN 反射"
+      }
+     ]
+    },
+    {
+     "ref": "21.3",
+     "title": "The malware menagerie – Trojans, worms and RATs",
+     "zh": "恶意软件动物园：木马、蠕虫与 RAT",
+     "items": [
+      {
+       "ref": "21.3.4",
+       "title": "How malware works",
+       "zh": "恶意软件如何工作"
+      },
+      {
+       "ref": "21.3.5",
+       "title": "Countermeasures",
+       "zh": "对抗措施"
+      }
+     ]
+    },
+    {
+     "ref": "21.4",
+     "title": "Defense against network attack",
+     "zh": "网络攻击防御",
+     "items": [
+      {
+       "ref": "21.4.1",
+       "title": "Filtering: firewalls, censorware and wiretaps",
+       "zh": "过滤：防火墙、审查软件与线路监听"
+      },
+      {
+       "ref": "21.4.2",
+       "title": "Intrusion detection",
+       "zh": "入侵检测"
+      }
+     ]
+    },
+    {
+     "ref": "21.7",
+     "title": "Topology",
+     "zh": "拓扑"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "27",
+   "title": "Secure Systems Development",
+   "zh": "安全系统开发",
+   "items": [
+    {
+     "ref": "27.2",
+     "title": "Risk management",
+     "zh": "风险管理"
+    },
+    {
+     "ref": "27.3",
+     "title": "Lessons from safety-critical systems",
+     "zh": "来自安全关键系统的经验",
+     "items": [
+      {
+       "ref": "27.3.2",
+       "title": "Hazard analysis",
+       "zh": "危险分析"
+      },
+      {
+       "ref": "27.3.3",
+       "title": "Fault trees and threat trees",
+       "zh": "故障树与威胁树"
+      },
+      {
+       "ref": "27.3.5",
+       "title": "Threat modelling",
+       "zh": "威胁建模"
+      },
+      {
+       "ref": "27.3.6",
+       "title": "Quantifying risks",
+       "zh": "风险的量化"
+      }
+     ]
+    },
+    {
+     "ref": "27.5",
+     "title": "Methodology",
+     "zh": "方法论",
+     "items": [
+      {
+       "ref": "27.5.3",
+       "title": "The secure development lifecycle",
+       "zh": "安全开发生命周期"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "27.5.7",
+   "title": "The vulnerability cycle",
+   "zh": "漏洞生命周期",
+   "items": [
+    {
+     "ref": "27.5.7.1",
+     "title": "The CVE system",
+     "zh": "CVE 体系"
+    },
+    {
+     "ref": "27.5.7.2",
+     "title": "Coordinated disclosure",
+     "zh": "协调披露"
+    },
+    {
+     "ref": "27.5.7.3",
+     "title": "Security incident and event management",
+     "zh": "安全事件与事件管理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "28",
+   "title": "Assurance and Sustainability",
+   "zh": "保障与可持续性",
+   "items": [
+    {
+     "ref": "28.2",
+     "title": "Evaluation",
+     "zh": "评估"
+    },
+    {
+     "ref": "28.3",
+     "title": "Metrics and dynamics of dependability",
+     "zh": "可信性的度量与动力学",
+     "items": [
+      {
+       "ref": "28.3.1",
+       "title": "Reliability growth models",
+       "zh": "可靠性增长模型"
+      },
+      {
+       "ref": "28.3.2",
+       "title": "Hostile review",
+       "zh": "对抗性评审"
+      },
+      {
+       "ref": "28.3.3",
+       "title": "Free and open-source software",
+       "zh": "自由与开源软件"
+      },
+      {
+       "ref": "28.3.4",
+       "title": "Process assurance",
+       "zh": "过程保障"
+      }
+     ]
+    },
+    {
+     "ref": "28.4",
+     "title": "The entanglement of safety and security",
+     "zh": "安全（safety）与安全（security）的纠缠"
+    },
+    {
+     "ref": "28.5",
+     "title": "Sustainability",
+     "zh": "可持续性"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "LEC 1",
+   "title": "Introduction, threat models",
+   "zh": "导论、威胁模型",
+   "fill": "漏洞成因：从系统安全的角度先立威胁模型（攻击者能力、目标、信任边界），再判断什么算漏洞；Anderson 的 27.3.5 只是开发方法论里的一节",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 4",
+   "title": "Buffer overflow defenses",
+   "zh": "缓冲区溢出防御",
+   "fill": "缓解设计：栈保护、不可执行栈、地址随机化这类缓解措施的原理与失效条件",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 5",
+   "title": "Privilege separation",
+   "zh": "权限分离",
+   "fill": "缓解设计：用权限分离把漏洞的影响限制在最小权限内（架构级缓解）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "LEC 7",
+   "title": "Software fault isolation",
+   "zh": "软件故障隔离",
+   "fill": "缓解设计：在语言/编译层做隔离与沙箱，是内存安全缓解的另一条路线",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lab 1",
+   "title": "Buffer overflows",
+   "zh": "实验 1：缓冲区溢出",
+   "fill": "可复现实验：在给定代码上构造溢出并观察缓解是否生效，实验可重复、结果可核对",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lab 2",
+   "title": "Privilege separation",
+   "zh": "实验 2：权限分离",
+   "fill": "可复现实验：把单进程服务拆成权限分离结构并验证攻击面变化",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Lab 3",
+   "title": "Symbolic execution",
+   "zh": "实验 3：符号执行",
+   "fill": "可复现实验：用符号执行自动找漏洞，衡量工具在真实代码上的效果（漏报、误报、开销）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "漏洞成因",
+   "refs": [
+    "A:27.5.7",
+    "A:27.5.7.1",
+    "B:LEC 1",
+    "B:Lab 1"
+   ]
+  },
+  {
+   "topic": "缓解设计",
+   "refs": [
+    "A:21.4",
+    "A:27.5",
+    "B:LEC 4",
+    "B:LEC 5",
+    "B:LEC 7",
+    "B:Lab 1",
+    "B:Lab 2"
+   ]
+  },
+  {
+   "topic": "可复现实验",
+   "refs": [
+    "B:Lab 1",
+    "B:Lab 2",
+    "B:Lab 3",
+    "A:28.2",
+    "A:28.3.2"
+   ]
+  },
+  {
+   "topic": "网络测量",
+   "refs": [
+    "A:21.7",
+    "A:28.3"
+   ],
+   "note": "两个来源都没有专门讲网络测量方法（抽样、探针、流量统计、测量伦理）的章节：Anderson 只有 21.7 拓扑（拓扑发现与推断）和 28.3 可信性度量（可靠性增长、指标），6.858 没有测量课。只能算沾边，未硬凑。"
+  },
+  {
+   "topic": "安全经济学",
+   "refs": [
+    "A:8",
+    "A:8.6",
+    "A:8.6.2",
+    "A:8.6.3",
+    "A:8.6.9",
+    "A:8.4.1"
+   ]
+  }
+ ],
+ "omitted": "A（Anderson 第 3 版）只收与节点直接相关的第 8、21、27、28 章；其余章（1–7 的策略/心理学/协议/密码/访问控制/分布式系统，9–20 的多级安全、边界、推断控制、银行、物理防护、生物识别、侧信道，22–26 的电话、信息战、DRM、监控）属于别的节点（如协议、密码、取证、隐私），不在本节点展开。B（6.858）只收与成因/缓解/实验相关的 5 讲与 3 个 lab，其余讲次（用户认证、OS 与 VM 隔离、Android、Web 安全模型、网络与信道安全、证书、Tor 等）留给相邻节点。",
+ "notes": "1) 6.858 课表里的讲次标签原文是“LEC 1 (nz): …”“Lab 1: …”，ref 取“LEC 1”“Lab 1”。2) 节点简介里的“网络测量”确实没有专门章节，coverage 已写 note；若要做成完整导览，下一轮可以补一门测量课（如 Internet measurement 类课程）或 CAIDA/IMC 的测量方法材料。3) Anderson 全书 PDF 是作者本人在 cl.cam.ac.uk 上公开的版本，不是课程网站或镜像。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 54,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

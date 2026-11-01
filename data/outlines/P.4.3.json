@@ -1,0 +1,393 @@
+{
+ "id": "P.4.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "Refactoring.Guru: Design Patterns and Refactoring",
+   "by": "Alexander Shvets",
+   "year": 2026,
+   "url": "https://refactoring.guru/design-patterns",
+   "toc_urls": [
+    "https://refactoring.guru/design-patterns/catalog"
+   ],
+   "why": "节点“现有英文学习资源”就是它：目录把 22 个经典模式按创建型/结构型/行为型分组，代码坏味按 6 类分组，重构手法按 6 类分组，正好覆盖模式、重构与（坏味反映出的）设计原则，是这门课的常用参考站。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Software Engineering, 9th Edition",
+   "by": "Ian Sommerville",
+   "year": 2010,
+   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "toc_urls": [
+    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+   ],
+   "why": "补 A 缺的部分：7.1 讲面向对象设计与 UML（识别对象、设计模型、定义接口），7.2 讲设计模式在开发过程中的位置；A 只讲模式本身，没有设计过程和 UML 的章节。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "CS 5150: Software Engineering (Spring 2026)",
+   "by": "Cornell University",
+   "year": 2026,
+   "url": "https://www.cs.cornell.edu/courses/cs5150/2026sp/",
+   "toc_urls": [
+    "https://www.cs.cornell.edu/courses/cs5150/2026sp/lecture/lec08-slides-program_design.pdf",
+    "https://www.cs.cornell.edu/courses/cs5150/2026sp/lecture/lec09-slides-program_design-2.pdf"
+   ],
+   "why": "补职责分配与类设计的课堂切分：讲义的 Program Design 一节按“设计步骤 → UML 模型选择 → 类图与关系 → 类设计（名词识别、应用类与解决方案类）→ 走向最终设计”组织，是 A 和 B 都没有的细化。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Creational patterns",
+   "zh": "创建型模式",
+   "items": [
+    {
+     "ref": "",
+     "title": "Factory Method",
+     "zh": "工厂方法"
+    },
+    {
+     "ref": "",
+     "title": "Abstract Factory",
+     "zh": "抽象工厂"
+    },
+    {
+     "ref": "",
+     "title": "Builder",
+     "zh": "生成器"
+    },
+    {
+     "ref": "",
+     "title": "Prototype",
+     "zh": "原型"
+    },
+    {
+     "ref": "",
+     "title": "Singleton",
+     "zh": "单例"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Structural patterns",
+   "zh": "结构型模式",
+   "items": [
+    {
+     "ref": "",
+     "title": "Adapter",
+     "zh": "适配器"
+    },
+    {
+     "ref": "",
+     "title": "Bridge",
+     "zh": "桥接"
+    },
+    {
+     "ref": "",
+     "title": "Composite",
+     "zh": "组合"
+    },
+    {
+     "ref": "",
+     "title": "Decorator",
+     "zh": "装饰器"
+    },
+    {
+     "ref": "",
+     "title": "Facade",
+     "zh": "外观"
+    },
+    {
+     "ref": "",
+     "title": "Flyweight",
+     "zh": "享元"
+    },
+    {
+     "ref": "",
+     "title": "Proxy",
+     "zh": "代理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Behavioral patterns",
+   "zh": "行为型模式",
+   "items": [
+    {
+     "ref": "",
+     "title": "Chain of Responsibility",
+     "zh": "责任链"
+    },
+    {
+     "ref": "",
+     "title": "Command",
+     "zh": "命令"
+    },
+    {
+     "ref": "",
+     "title": "Iterator",
+     "zh": "迭代器"
+    },
+    {
+     "ref": "",
+     "title": "Mediator",
+     "zh": "中介者"
+    },
+    {
+     "ref": "",
+     "title": "Memento",
+     "zh": "备忘录"
+    },
+    {
+     "ref": "",
+     "title": "Observer",
+     "zh": "观察者"
+    },
+    {
+     "ref": "",
+     "title": "State",
+     "zh": "状态"
+    },
+    {
+     "ref": "",
+     "title": "Strategy",
+     "zh": "策略"
+    },
+    {
+     "ref": "",
+     "title": "Template Method",
+     "zh": "模板方法"
+    },
+    {
+     "ref": "",
+     "title": "Visitor",
+     "zh": "访问者"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Code Smells",
+   "zh": "代码坏味",
+   "items": [
+    {
+     "ref": "",
+     "title": "Bloaters",
+     "zh": "膨胀类坏味"
+    },
+    {
+     "ref": "",
+     "title": "Object-Orientation Abusers",
+     "zh": "面向对象误用"
+    },
+    {
+     "ref": "",
+     "title": "Change Preventers",
+     "zh": "变更阻碍类坏味"
+    },
+    {
+     "ref": "",
+     "title": "Dispensables",
+     "zh": "冗余类坏味"
+    },
+    {
+     "ref": "",
+     "title": "Couplers",
+     "zh": "耦合类坏味"
+    },
+    {
+     "ref": "",
+     "title": "Other Smells",
+     "zh": "其他坏味"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Refactorings",
+   "zh": "重构手法",
+   "items": [
+    {
+     "ref": "",
+     "title": "Composing Methods",
+     "zh": "重新组织函数"
+    },
+    {
+     "ref": "",
+     "title": "Moving Features between Objects",
+     "zh": "在对象之间搬移特性"
+    },
+    {
+     "ref": "",
+     "title": "Organizing Data",
+     "zh": "重新组织数据"
+    },
+    {
+     "ref": "",
+     "title": "Simplifying Conditional Expressions",
+     "zh": "简化条件表达式"
+    },
+    {
+     "ref": "",
+     "title": "Simplifying Method Calls",
+     "zh": "简化函数调用"
+    },
+    {
+     "ref": "",
+     "title": "Dealing with Generalization",
+     "zh": "处理继承关系"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Design and implementation",
+   "zh": "设计与实现",
+   "fill": "补 UML 与面向对象设计过程：如何从需求识别对象与类、设计模型、定义接口，以及设计模式在过程中的位置",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Object-oriented design using the UML",
+     "zh": "使用 UML 的面向对象设计"
+    },
+    {
+     "ref": "7.2",
+     "title": "Design patterns",
+     "zh": "设计模式"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Program Design",
+   "zh": "程序设计",
+   "fill": "补职责分配与类设计的展开：设计步骤、重量级/轻量级设计、UML 模型选择、类图与关系、类设计（名词识别、应用类与解决方案类）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Design steps",
+     "zh": "设计步骤"
+    },
+    {
+     "ref": "",
+     "title": "Program design models",
+     "zh": "程序设计模型"
+    },
+    {
+     "ref": "",
+     "title": "Heavyweight vs. Lightweight design",
+     "zh": "重量级与轻量级设计"
+    },
+    {
+     "ref": "",
+     "title": "Program design",
+     "zh": "程序设计"
+    },
+    {
+     "ref": "",
+     "title": "UML models for design",
+     "zh": "设计用 UML 模型"
+    },
+    {
+     "ref": "",
+     "title": "UML model choices",
+     "zh": "UML 模型的选择"
+    },
+    {
+     "ref": "",
+     "title": "Class diagram",
+     "zh": "类图"
+    },
+    {
+     "ref": "",
+     "title": "Relationships",
+     "zh": "关系"
+    },
+    {
+     "ref": "",
+     "title": "Class design",
+     "zh": "类设计"
+    },
+    {
+     "ref": "",
+     "title": "Application and solution classes",
+     "zh": "应用类与解决方案类"
+    },
+    {
+     "ref": "",
+     "title": "Moving towards final design",
+     "zh": "走向最终设计"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "职责分配",
+   "refs": [
+    "C:#1",
+    "B:7.1"
+   ],
+   "note": "两份来源都没有专讲 GRASP 的章；职责落在“类设计／名词识别／应用类与解决方案类”这节，A 的行为型模式分组也以对象之间的职责分配为分类依据。"
+  },
+  {
+   "topic": "UML",
+   "refs": [
+    "B:7.1",
+    "C:#1"
+   ]
+  },
+  {
+   "topic": "接口",
+   "refs": [
+    "B:7.1",
+    "A:#2"
+   ]
+  },
+  {
+   "topic": "设计原则",
+   "refs": [
+    "A:#4",
+    "C:#1"
+   ],
+   "note": "没有单列 SOLID/GRASP 的章：A 讲的是违反原则后的症状（代码坏味）与修法，Cornell 讲义讲的是类设计的经验规则（如“类应易用对、难用错”）。"
+  },
+  {
+   "topic": "模式",
+   "refs": [
+    "A:#1",
+    "A:#2",
+    "A:#3",
+    "B:7.2"
+   ]
+  },
+  {
+   "topic": "重构",
+   "refs": [
+    "A:#4",
+    "A:#5"
+   ]
+  }
+ ],
+ "omitted": "A 未收站点上的入门栏目（What's a design pattern、History of patterns、Classification、Criticism）与代码示例的语言分支；B 只收第 7 章的 7.1、7.2，7.3 Implementation issues（复用、配置管理、宿主机-目标机开发）与第 6 章架构设计分别属于实现细节与架构节点；C 只收程序设计讲义，其第 9 讲后半的模式实例（Observer/Builder/Factory/Singleton/Composite/Visitor）与 A 重复，未重复收录。",
+ "notes": "A 的目录页是 https://refactoring.guru/design-patterns/catalog（22 个模式的分类目录），代码坏味与重构手法列在同一页的侧栏里，所以只用一个 toc_url。三份来源都没有编号，coverage 里用 A:#1–A:#5、C:#1 指分支。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 54,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

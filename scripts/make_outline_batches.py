@@ -51,14 +51,51 @@ def write(name, members):
     print(f"{name}: {len(members)}  {' '.join(s['id'] for s in members)}")
 
 
+def flat_outlines():
+    """Outlines from the first pass that are (almost) one level deep: lecture lists without sections."""
+    found = {}
+    for p in sorted((ROOT / "temp/outlines/nodes").glob("*.json")):
+        o = json.loads(p.read_text(encoding="utf-8-sig"))
+        branches = o.get("outline") or []
+        flat = sum(1 for b in branches if not b.get("items"))
+        if branches and flat / len(branches) >= 0.7:
+            found[o["id"]] = f"{len(branches)} 个分支里 {flat} 个没有小节"
+    return found
+
+
+def write_deepen(by_id, todo, size):
+    ids = list(todo)
+    parts = math.ceil(len(ids) / size)
+    per = math.ceil(len(ids) / parts)
+    for k in range(parts):
+        part = ids[k * per:(k + 1) * per]
+        lines = [f"# deepen-{k + 1}（{len(part)} 个节点，第二轮：加深或换源）", ""]
+        for i in part:
+            lines += describe(by_id[i])
+            lines.append(f"  本轮要做的：{todo[i]}")
+        (OUT / f"deepen-{k + 1}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"deepen-{k + 1}: {len(part)}  {' '.join(part)}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--size", type=int, default=8)
     ap.add_argument("--pilot", default="M.3.1,M.1.4.3,P.5.4,S.1.2")
+    ap.add_argument("--deepen", action="store_true",
+                    help="second pass: batches of first-pass outlines that are mostly one level deep")
+    ap.add_argument("--fix", action="append", default=[], metavar="ID=REASON",
+                    help="add an outline to the second pass with a reason (e.g. a source that must be replaced)")
     a = ap.parse_args()
     skills = json.loads((ROOT / "output/skilltree.json").read_text(encoding="utf-8"))["skills"]
     by_id = {s["id"]: s for s in skills}
     OUT.mkdir(parents=True, exist_ok=True)
+    if a.deepen:
+        todo = {i: f"目录太平：{why}，给每个分支补上小节" for i, why in flat_outlines().items()}
+        for f in a.fix:
+            i, why = f.split("=", 1)
+            todo[i] = f"{todo[i]}；另外：{why}" if i in todo else why
+        write_deepen(by_id, dict(sorted(todo.items(), key=lambda kv: [s["id"] for s in skills].index(kv[0]))), a.size)
+        return
     seen = set()
     for g in GROUPS:
         members = [s for s in skills if any(in_prefix(s["id"], p) for p in g)]

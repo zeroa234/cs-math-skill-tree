@@ -1,0 +1,223 @@
+{
+ "id": "P.1.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS 2110: Object-Oriented Programming and Data Structures (Fall 2023)",
+   "by": "Cornell University, Curran Muhlberger",
+   "year": 2023,
+   "url": "https://www.cs.cornell.edu/courses/cs2110/2023fa/",
+   "toc_urls": [
+    "https://www.cs.cornell.edu/courses/cs2110/2023fa/schedule.html",
+    "https://www.cs.cornell.edu/courses/cs2110/2023fa/lectures.html"
+   ],
+   "why": "节点现有英文资源就是这门课的公开网站；课表按讲给出主题（对象、抽象与封装、接口与子类型、继承与动态分派、泛型），且每讲列出配套阅读的具体章节，与节点简介逐条对得上。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Lesson: Object-Oriented Programming Concepts (The Java Tutorials)",
+   "by": "Oracle",
+   "year": 2024,
+   "url": "https://docs.oracle.com/javase/tutorial/java/concepts/",
+   "toc_urls": [
+    "https://docs.oracle.com/javase/tutorial/java/concepts/",
+    "https://docs.oracle.com/javase/tutorial/java/concepts/object.html"
+   ],
+   "why": "补“对象协作”：Java 官方教程把对象定义为通过方法（消息）互相通信的单元，这一课正好给出对象—类—继承—接口的入门级定义。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "Java Programming MOOC, Part 6",
+   "by": "University of Helsinki (Agile Education Research)",
+   "year": 2024,
+   "url": "https://java-programming.mooc.fi/part-6/",
+   "toc_urls": [
+    "https://java-programming.mooc.fi/part-6/"
+   ],
+   "why": "补“组合”：CS 2110 与 Java 教程都只讲继承这条关系，这个部分专门讲“对象内部持有其他对象”，即 has-a 的对象组合。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Lecture 2: Objects",
+   "zh": "第 2 讲：对象",
+   "items": [
+    {
+     "ref": "",
+     "title": "Java Interlude 6—Mutable and Immutable Objects",
+     "zh": "Java 插曲 6：可变对象与不可变对象"
+    },
+    {
+     "ref": "",
+     "title": "Object Diagram Rules",
+     "zh": "对象图规则"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Lecture 3: Abstraction, encapsulation",
+   "zh": "第 3 讲：抽象与封装",
+   "items": [
+    {
+     "ref": "",
+     "title": "Prelude—Designing Classes",
+     "zh": "序章：设计类"
+    },
+    {
+     "ref": "",
+     "title": "Appendix B—Java Classes",
+     "zh": "附录 B：Java 类"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Lecture 5: Interfaces, subtyping",
+   "zh": "第 5 讲：接口与子类型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Lecture 6: Inheritance, dynamic dispatch, equality",
+   "zh": "第 6 讲：继承、动态分派与相等性",
+   "items": [
+    {
+     "ref": "",
+     "title": "Appendix C—Creating Classes from Other Classes",
+     "zh": "附录 C：由其他类创建类"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Lecture 8: Bags, Generics",
+   "zh": "第 8 讲：包（Bag）与泛型",
+   "items": [
+    {
+     "ref": "",
+     "title": "Java Interlude 1—Generics",
+     "zh": "Java 插曲 1：泛型"
+    },
+    {
+     "ref": "",
+     "title": "Chapter 1—Bags",
+     "zh": "第 1 章：包（Bag）"
+    },
+    {
+     "ref": "",
+     "title": "Chapter 2—Bag Implementations That Use Arrays",
+     "zh": "第 2 章：用数组实现的包"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Object-Oriented Programming Concepts",
+   "zh": "面向对象编程概念",
+   "fill": "对象与对象协作：对象=状态+行为，方法/消息是对外协作的唯一入口；同时给出类、继承、接口、包的入门定义",
+   "items": [
+    {
+     "ref": "",
+     "title": "What Is an Object?",
+     "zh": "什么是对象"
+    },
+    {
+     "ref": "",
+     "title": "What Is a Class?",
+     "zh": "什么是类"
+    },
+    {
+     "ref": "",
+     "title": "What Is Inheritance?",
+     "zh": "什么是继承"
+    },
+    {
+     "ref": "",
+     "title": "What Is an Interface?",
+     "zh": "什么是接口"
+    },
+    {
+     "ref": "",
+     "title": "What Is a Package?",
+     "zh": "什么是包"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "1",
+   "title": "Objects on a list and a list as part of an object",
+   "zh": "列表中的对象与作为对象组成部分的列表",
+   "fill": "组合：一个对象内部持有其他对象（has-a），与继承的 is-a 关系对照",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "对象",
+   "refs": [
+    "A:2",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "封装",
+   "refs": [
+    "A:3",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "继承",
+   "refs": [
+    "A:6",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "接口",
+   "refs": [
+    "A:5",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "组合",
+   "refs": [
+    "C:1"
+   ]
+  },
+  {
+   "topic": "泛型",
+   "refs": [
+    "A:8"
+   ]
+  },
+  {
+   "topic": "对象协作",
+   "refs": [
+    "B:#1",
+    "A:2"
+   ]
+  }
+ ],
+ "omitted": "CS 2110 课表里与面向对象无关的讲次没收：第 1 讲（课程概览）、第 4 讲（规格说明与测试）、第 7 讲（异常与 I/O，属节点 P.2.1 的 Java 内容）、第 9 讲起的数据结构与算法（链表、集合、树、排序、哈希、图、并发、GUI）。Java 教程只取了“面向对象编程概念”一课，同一 trail 里的 Language Basics、Numbers and Strings 等未收。",
+ "notes": "CS 2110 的讲次是课程层面的“章”，配套阅读（Prelude、Appendix B/C、Java Interlude 1/6）来自其指定教材 Data Structures and Abstractions with Java 第 5 版，我没有打开该教材的官方目录页，只按课表原文抄了阅读名。Java 教程页面注明面向 JDK 8，属概念入门，不影响术语。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 20,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

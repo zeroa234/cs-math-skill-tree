@@ -1,0 +1,188 @@
+{
+ "id": "C.1.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Digital Design and Computer Architecture, Spring 2024",
+   "by": "ETH Zürich (SAFARI group)",
+   "year": 2024,
+   "url": "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php",
+   "toc_urls": [
+    "https://safari.ethz.ch/digitaltechnik/spring2024/doku.php?id=schedule"
+   ],
+   "why": "节点现有英文资源。课程日程逐讲给出主题（L12 MIPS Assembly、L16 Single-Cycle Microarchitecture、L18 Pipelined Processor Architecture、L24 Memory Hierarchy & Caches、L25a Caches in Multi-Core Systems、L26 Virtual Memory），覆盖指令集、流水线、缓存与多核缓存四块，是节点最直接的学习材料。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "CS 152/252A Computer Architecture and Engineering, Fall 2026",
+   "by": "Chris Fletcher, UC Berkeley",
+   "year": 2026,
+   "url": "https://cs152.org/",
+   "toc_urls": [
+    "https://cs152.org/"
+   ],
+   "why": "补分支预测（12、13 讲）、内存一致性模型（17 讲）和乱序执行下的性能工程（18 讲）：这三块在 A 的日程里没有专门讲次，而 CS152 的逐讲主题正好落在节级。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "L12",
+   "title": "MIPS Assembly",
+   "zh": "MIPS 汇编",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L13a",
+   "title": "MIPS Assembly II",
+   "zh": "MIPS 汇编（续）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L16",
+   "title": "Single-Cycle Microarchitecture",
+   "zh": "单周期微体系结构",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L17",
+   "title": "Single-Cycle Microarchitecture II",
+   "zh": "单周期微体系结构（续）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L18",
+   "title": "Pipelined Processor Architecture",
+   "zh": "流水线处理器结构",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L19",
+   "title": "Pipelined Processor Architecture II",
+   "zh": "流水线处理器结构（续）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L20",
+   "title": "Out-of-Order Execution",
+   "zh": "乱序执行",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L24",
+   "title": "Memory Hierarchy & Caches",
+   "zh": "存储层次与缓存",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L25a",
+   "title": "Caches in Multi-Core Systems",
+   "zh": "多核系统中的缓存",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "L26",
+   "title": "Virtual Memory",
+   "zh": "虚拟内存",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "12",
+   "title": "Branch Prediction 1",
+   "zh": "分支预测（一）",
+   "fill": "分支预测",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "13",
+   "title": "Branch Prediction 2 (Apple Guest Lecture)",
+   "zh": "分支预测（二）（Apple 客座讲座）",
+   "fill": "分支预测",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "17",
+   "title": "Memory Consistency",
+   "zh": "内存一致性",
+   "fill": "多核一致性",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "18",
+   "title": "OoO Performance Engineering",
+   "zh": "乱序执行性能工程",
+   "fill": "性能模型",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "指令集",
+   "refs": [
+    "A:L12",
+    "A:L13a",
+    "A:L16"
+   ]
+  },
+  {
+   "topic": "流水线",
+   "refs": [
+    "A:L18",
+    "A:L19",
+    "A:L20"
+   ]
+  },
+  {
+   "topic": "缓存",
+   "refs": [
+    "A:L24",
+    "A:L25a"
+   ]
+  },
+  {
+   "topic": "多核一致性",
+   "refs": [
+    "A:L25a",
+    "B:17"
+   ]
+  },
+  {
+   "topic": "分支预测",
+   "refs": [
+    "B:12",
+    "B:13"
+   ]
+  },
+  {
+   "topic": "性能模型",
+   "refs": [
+    "A:L20",
+    "B:18"
+   ],
+   "note": "乱序执行的性能工程（CPI、流水线停顿、性能建模）由 B:18 承担；A 侧只有 L20 一讲涉及乱序带来的性能问题。能耗/面积等设计权衡见 C.1.1 导览图第 8 章。"
+  }
+ ],
+ "omitted": "第 1–11 讲（数字电路、组合/时序电路、Verilog、数字系统设计）和第 23a/23b 讲（存储器件技术与鲁棒性）属 C.1.1 或更底层电路内容；第 21/22 讲（SIMD/GPU 架构）属 C.1.4；第 25b 讲（预取）未收；第 27 讲为习题课。",
+ "notes": "A 的日程只有讲级主题、没有更细的分节，所以本图在 A 上是讲级分支；分支预测、内存一致性、乱序性能三块由 B（Berkeley CS152）的对应讲次补充分支。若只想跟一门课，按 A 的 L12→L26 顺序即可；要补研究性深度（分支预测器设计、内存序模型）再看 B 的 12/13/17/18 讲。此外 6.004（C.1.1 的主来源）第 15 章 Basic 5-Stage Pipeline、Data Hazards、Control Hazards 可作为 A:L18/L19 的配套细讲。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 14,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

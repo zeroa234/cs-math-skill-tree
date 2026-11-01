@@ -1,0 +1,384 @@
+{
+ "id": "V.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Interactive Data Visualization: Foundations, Techniques, and Applications, Second Edition",
+   "by": "Matthew O. Ward, Georges Grinstein, Daniel Keim",
+   "year": 2015,
+   "url": "https://www.routledge.com/Interactive-Data-Visualization-Foundations-Techniques-and-Applications-Second-Edition/Ward-Grinstein-Keim/p/book/9780367783488",
+   "toc_urls": [
+    "https://www.idvbook.com/index.html%3Fp=61.html"
+   ],
+   "why": "这本书是节点所列 Stony Brook CSE 332 的指定教材（课程主页 Texts 一节 Required），作者官网给出完整的分章分节目录（到节），第 5 章讲三维场数据与动态数据、第 7 章讲时间型数据、第 9 章讲树/图/网络、第 11–12 章讲交互、第 14 章讲可视化评估，四类知识点一一对得上；CSE 332 的 schedule 只是按日期排的讲题清单（且后半学期若干日期没有 topic），不适合当章节目录。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Visualization Analysis and Design",
+   "by": "Tamara Munzner",
+   "year": 2015,
+   "url": "https://www.cs.ubc.ca/~tmm/vadbook/",
+   "toc_urls": [
+    "https://www.routledge.com/Visualization-Analysis-and-Design/Munzner/p/book/9781466508910"
+   ],
+   "why": "补“多视图”知识点：Ward 等只把协调视图放在交互技巧里泛泛带过，没有专门章节；Munzner 第 12 章 Facet into Multiple Views 专门讲并列/协调、划分与叠加多视图。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Visualization Techniques for Spatial Data",
+   "zh": "空间数据可视化技术",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "One-Dimensional Data",
+     "zh": "一维数据"
+    },
+    {
+     "ref": "5.2",
+     "title": "Two-Dimensional Data",
+     "zh": "二维数据"
+    },
+    {
+     "ref": "5.3",
+     "title": "Three-Dimensional Data",
+     "zh": "三维数据"
+    },
+    {
+     "ref": "5.4",
+     "title": "Dynamic Data",
+     "zh": "动态数据"
+    },
+    {
+     "ref": "5.5",
+     "title": "Combining Techniques",
+     "zh": "技术组合"
+    },
+    {
+     "ref": "5.6",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Visualization Techniques for Geospatial Data",
+   "zh": "地理空间数据可视化技术",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Visualizing Spatial Data",
+     "zh": "空间数据可视化"
+    },
+    {
+     "ref": "6.2",
+     "title": "Visualization of Point Data",
+     "zh": "点数据可视化"
+    },
+    {
+     "ref": "6.3",
+     "title": "Visualization of Line Data",
+     "zh": "线数据可视化"
+    },
+    {
+     "ref": "6.4",
+     "title": "Visualization of Area Data",
+     "zh": "面数据可视化"
+    },
+    {
+     "ref": "6.5",
+     "title": "Other Issues in Geospatial Data Visualization",
+     "zh": "地理空间可视化的其他问题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Visualization Techniques for Time-Oriented Data",
+   "zh": "时间型数据可视化技术",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "7.2",
+     "title": "Definitions: Characterizing Time-Oriented Data",
+     "zh": "定义：时间型数据的刻画"
+    },
+    {
+     "ref": "7.3",
+     "title": "Visualizing Time-Oriented Data",
+     "zh": "时间型数据的可视化"
+    },
+    {
+     "ref": "7.4",
+     "title": "TimeBench: A Data Model and Software Library for Visual Analytics of Time-Oriented Data",
+     "zh": "TimeBench：面向时间型数据可视分析的数据模型与软件库"
+    },
+    {
+     "ref": "7.5",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Visualization Techniques for Trees, Graphs, and Networks",
+   "zh": "树、图与网络的可视化技术",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Displaying Hierarchical Structures",
+     "zh": "层次结构的展示"
+    },
+    {
+     "ref": "9.2",
+     "title": "Displaying Arbitrary Graphs/Networks",
+     "zh": "一般图与网络的展示"
+    },
+    {
+     "ref": "9.3",
+     "title": "Other Issues",
+     "zh": "其他问题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Interaction Concepts",
+   "zh": "交互概念",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Interaction Operators",
+     "zh": "交互操作子"
+    },
+    {
+     "ref": "11.2",
+     "title": "Interaction Operands and Spaces",
+     "zh": "交互操作对象与空间"
+    },
+    {
+     "ref": "11.3",
+     "title": "A Unified Framework",
+     "zh": "统一框架"
+    },
+    {
+     "ref": "11.4",
+     "title": "Conclusions",
+     "zh": "结论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Interaction Techniques",
+   "zh": "交互技术",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Screen Space",
+     "zh": "屏幕空间"
+    },
+    {
+     "ref": "12.2",
+     "title": "Object-Space (3D Surfaces)",
+     "zh": "对象空间（三维曲面）"
+    },
+    {
+     "ref": "12.3",
+     "title": "Data Space (Multivariate Data Values)",
+     "zh": "数据空间（多变量数据值）"
+    },
+    {
+     "ref": "12.4",
+     "title": "Attribute Space (Properties of Graphical Entities)",
+     "zh": "属性空间（图形实体的属性）"
+    },
+    {
+     "ref": "12.5",
+     "title": "Data Structure Space (Components of Data Organization)",
+     "zh": "数据结构空间（数据组织的组成部分）"
+    },
+    {
+     "ref": "12.6",
+     "title": "Visualization Structure Space (Components of the Data Visualization)",
+     "zh": "可视化结构空间（数据可视化的组成部分）"
+    },
+    {
+     "ref": "12.7",
+     "title": "Animating Transformations",
+     "zh": "变换动画"
+    },
+    {
+     "ref": "12.8",
+     "title": "Interaction Control",
+     "zh": "交互控制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Designing Effective Visualizations",
+   "zh": "设计有效的可视化",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Steps in Designing Visualizations",
+     "zh": "可视化设计的步骤"
+    },
+    {
+     "ref": "13.2",
+     "title": "Problems in Designing Effective Visualizations",
+     "zh": "设计有效可视化时的问题"
+    },
+    {
+     "ref": "13.3",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Comparing and Evaluating Visualization Techniques",
+   "zh": "可视化技术的比较与评估",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "User Tasks",
+     "zh": "用户任务"
+    },
+    {
+     "ref": "14.2",
+     "title": "User Characteristics",
+     "zh": "用户特征"
+    },
+    {
+     "ref": "14.3",
+     "title": "Data Characteristics",
+     "zh": "数据特征"
+    },
+    {
+     "ref": "14.4",
+     "title": "Visualization Characteristics",
+     "zh": "可视化特征"
+    },
+    {
+     "ref": "14.5",
+     "title": "Structures for Evaluating Visualizations",
+     "zh": "可视化评估的框架"
+    },
+    {
+     "ref": "14.6",
+     "title": "Benchmarking Procedures",
+     "zh": "基准测评流程"
+    },
+    {
+     "ref": "14.7",
+     "title": "An Example of Visualization Benchmarking",
+     "zh": "可视化基准测评实例"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Facet into Multiple Views",
+   "zh": "切分为多视图",
+   "fill": "多视图",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Big Picture",
+     "zh": "总览"
+    },
+    {
+     "ref": "",
+     "title": "Why Facet?",
+     "zh": "为何要切分"
+    },
+    {
+     "ref": "",
+     "title": "Juxtapose and Coordinate Views",
+     "zh": "并列与协调视图"
+    },
+    {
+     "ref": "",
+     "title": "Partition into Views",
+     "zh": "划分为多个视图"
+    },
+    {
+     "ref": "",
+     "title": "Superimpose Layers",
+     "zh": "叠加图层"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "场/体数据",
+   "refs": [
+    "A:5",
+    "A:5.3",
+    "A:5.4",
+    "A:5.5"
+   ]
+  },
+  {
+   "topic": "时空与图可视化",
+   "refs": [
+    "A:7",
+    "A:7.2",
+    "A:7.3",
+    "A:6.2",
+    "A:6.3",
+    "A:9",
+    "A:9.1",
+    "A:9.2"
+   ]
+  },
+  {
+   "topic": "多视图",
+   "refs": [
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "人在回路分析与评估",
+   "refs": [
+    "A:11",
+    "A:11.3",
+    "A:14",
+    "A:14.1",
+    "A:14.5",
+    "A:14.6",
+    "A:13.1"
+   ]
+  }
+ ],
+ "omitted": "同一份目录里未收的章：1（可视化导论：定义、历史、可视化过程、散点图的作用）、2（数据基础：数据类型、记录结构、预处理）、3（人的感知与信息加工：生理、感知处理、度量）、4（可视化基础：符号学、八个视觉变量、分类体系）、8（多变量数据：点/线/区域型技术）、10（文本与文档可视化）、15（可视化系统：按数据类型/分析类型的系统、工具包）、16（研究方向），以及各章末尾的 Related Readings / Exercises / Projects 与书末附录 A–C、Bibliography——它们或是其他节点的内容（感知、设计基础），或与“场/体数据、时空与图、多视图、人在回路评估”这条线无关。B 来源只取了第 12 章，Munzner 其余 14 章未收。",
+ "notes": "为什么不直接抄 CSE 332 的 schedule：该页是 Date/Topic 的扁平表，且 11/3–11/24 若干日期只列日期没有 topic，抄下来既不成章节目录也漏内容；它指定的必读书正好是 Ward/Grinstein/Keim（“Required: Interactive Data Visualization ... Second Edition”），用书的目录既与课程一致，又能给出章→节的层次，故以书为主来源。CSE 332 的讲题顺序（视觉设计与美学→高维→交互→可视分析→VA 设计与评估→层次数据→地图与地理参照）可作为学习路线参考，写在 notes 里给主代理。另：Ward 书官方网站在 Routledge 页的“Web Resource”一栏给出（https://www.idvbook.com/），目录页为其 Contents 页。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 55,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

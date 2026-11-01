@@ -1,0 +1,621 @@
+{
+ "id": "P.4.6",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Software Engineering at Google: Lessons Learned from Programming Over Time",
+   "by": "Titus Winters, Tom Manshreck, Hyrum Wright",
+   "year": 2020,
+   "url": "https://abseil.io/resources/swe-book",
+   "toc_urls": [
+    "https://abseil.io/resources/swe-book/html/toc.html",
+    "https://abseil.io/resources/swe-book/html/ch01.html"
+   ],
+   "why": "节点“现有英文学习资源”就是这个免费在线版；它把“软件工程 = 编程对时间积分”、弃用与兼容、代码搜索式代码理解、大规模变更迁移写成独立章节，正好对上可维护性/兼容性/迁移/代码理解四条主线。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Managing Technical Debt: Reducing Friction in Software Development",
+   "by": "Philippe Kruchten, Robert Nord, Ipek Ozkaya (SEI Series in Software Engineering)",
+   "year": 2019,
+   "url": "https://www.sei.cmu.edu/library/managing-technical-debt-reducing-friction-in-software-development",
+   "toc_urls": [
+    "https://ptgmedia.pearsoncmg.com/images/9780135645932/samplepages/9780135645932_Sample.pdf"
+   ],
+   "why": "A 全书没有技术债的专门章节（只在第 1 章 Trade-offs and Costs 里提权衡成本）；技术债的定义、本金/利息、成因、偿还路径用 CMU SEI 这本书的目录补齐，目录取自 Pearson 出版社公开的试读 PDF（含完整 Contents）。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "Software Maintenance and Evolution (HS21)",
+   "by": "University of Zurich, s.e.a.l. group — Dr. Sebastiano Panichella",
+   "year": 2021,
+   "url": "https://www.ifi.uzh.ch/en/seal/teaching/courses/archive/HS21/sme.html",
+   "toc_urls": [
+    "https://www.ifi.uzh.ch/en/seal/teaching/courses/archive/HS21/sme.html"
+   ],
+   "why": "A 和 B 都不讲 Lehman 演化定律、再工程流程，也不讲维护领域的经验研究方法（用户评论分类、变更类型分析、缺陷预测）；这门课是节点先修证据里的课，Timetable 每讲有具体题目，正好补“演化规律”和“经验研究”。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "What Is Software Engineering?",
+   "zh": "什么是软件工程",
+   "items": [
+    {
+     "ref": "",
+     "title": "Time and Change",
+     "zh": "时间与变更"
+    },
+    {
+     "ref": "",
+     "title": "Hyrum’s Law",
+     "zh": "海勒姆定律"
+    },
+    {
+     "ref": "",
+     "title": "Why Not Just Aim for “Nothing Changes”?",
+     "zh": "为什么不干脆追求“什么都不变”"
+    },
+    {
+     "ref": "",
+     "title": "Policies That Don’t Scale",
+     "zh": "无法规模化的政策"
+    },
+    {
+     "ref": "",
+     "title": "Policies That Scale Well",
+     "zh": "可规模化的政策"
+    },
+    {
+     "ref": "",
+     "title": "Example: Compiler Upgrade",
+     "zh": "示例：编译器升级"
+    },
+    {
+     "ref": "",
+     "title": "Shifting Left",
+     "zh": "左移"
+    },
+    {
+     "ref": "",
+     "title": "Trade-offs and Costs",
+     "zh": "权衡与成本"
+    },
+    {
+     "ref": "",
+     "title": "Revisiting Decisions, Making Mistakes",
+     "zh": "重新审视决策、允许犯错"
+    },
+    {
+     "ref": "",
+     "title": "Software Engineering Versus Programming",
+     "zh": "软件工程与编程之别"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Deprecation",
+   "zh": "弃用",
+   "items": [
+    {
+     "ref": "",
+     "title": "Why Deprecate?",
+     "zh": "为什么要弃用"
+    },
+    {
+     "ref": "",
+     "title": "Why Is Deprecation So Hard?",
+     "zh": "弃用为什么这么难"
+    },
+    {
+     "ref": "",
+     "title": "Deprecation During Design",
+     "zh": "设计阶段就要考虑弃用"
+    },
+    {
+     "ref": "",
+     "title": "Types of Deprecation",
+     "zh": "弃用的类型"
+    },
+    {
+     "ref": "",
+     "title": "Advisory Deprecation",
+     "zh": "建议性弃用"
+    },
+    {
+     "ref": "",
+     "title": "Compulsory Deprecation",
+     "zh": "强制性弃用"
+    },
+    {
+     "ref": "",
+     "title": "Deprecation Warnings",
+     "zh": "弃用警告"
+    },
+    {
+     "ref": "",
+     "title": "Managing the Deprecation Process",
+     "zh": "管理弃用过程"
+    },
+    {
+     "ref": "",
+     "title": "Process Owners",
+     "zh": "流程负责人"
+    },
+    {
+     "ref": "",
+     "title": "Milestones",
+     "zh": "里程碑"
+    },
+    {
+     "ref": "",
+     "title": "Deprecation Tooling",
+     "zh": "弃用工具"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Code Search",
+   "zh": "代码搜索",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Code Search UI",
+     "zh": "代码搜索界面"
+    },
+    {
+     "ref": "",
+     "title": "How Do Googlers Use Code Search?",
+     "zh": "谷歌工程师如何使用代码搜索",
+     "items": [
+      {
+       "ref": "",
+       "title": "Where?",
+       "zh": "在哪儿用"
+      },
+      {
+       "ref": "",
+       "title": "What?",
+       "zh": "搜什么"
+      },
+      {
+       "ref": "",
+       "title": "How?",
+       "zh": "怎么用"
+      },
+      {
+       "ref": "",
+       "title": "Why?",
+       "zh": "为什么用"
+      },
+      {
+       "ref": "",
+       "title": "Who and When?",
+       "zh": "谁在什么时候用"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "Why a Separate Web Tool?",
+     "zh": "为什么需要一个独立的网页工具",
+     "items": [
+      {
+       "ref": "",
+       "title": "Scale",
+       "zh": "规模"
+      },
+      {
+       "ref": "",
+       "title": "Zero Setup Global Code View",
+       "zh": "零配置的全局代码视图"
+      },
+      {
+       "ref": "",
+       "title": "Specialization",
+       "zh": "专门化"
+      },
+      {
+       "ref": "",
+       "title": "Integration with Other Developer Tools",
+       "zh": "与其他开发工具的集成"
+      },
+      {
+       "ref": "",
+       "title": "API Exposure",
+       "zh": "API 开放"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Large-Scale Changes",
+   "zh": "大规模变更",
+   "items": [
+    {
+     "ref": "",
+     "title": "What Is a Large-Scale Change?",
+     "zh": "什么是大规模变更"
+    },
+    {
+     "ref": "",
+     "title": "Who Deals with LSCs?",
+     "zh": "谁负责大规模变更"
+    },
+    {
+     "ref": "",
+     "title": "Barriers to Atomic Changes",
+     "zh": "原子化变更的障碍",
+     "items": [
+      {
+       "ref": "",
+       "title": "Technical Limitations",
+       "zh": "技术限制"
+      },
+      {
+       "ref": "",
+       "title": "Merge Conflicts",
+       "zh": "合并冲突"
+      },
+      {
+       "ref": "",
+       "title": "No Haunted Graveyards",
+       "zh": "不留鬼魂墓地"
+      },
+      {
+       "ref": "",
+       "title": "Heterogeneity",
+       "zh": "异构性"
+      },
+      {
+       "ref": "",
+       "title": "Testing",
+       "zh": "测试"
+      },
+      {
+       "ref": "",
+       "title": "Code Review",
+       "zh": "代码评审"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "LSC Infrastructure",
+     "zh": "大规模变更的基础设施",
+     "items": [
+      {
+       "ref": "",
+       "title": "Policies and Culture",
+       "zh": "政策与文化"
+      },
+      {
+       "ref": "",
+       "title": "Codebase Insight",
+       "zh": "代码库洞察"
+      },
+      {
+       "ref": "",
+       "title": "Change Management",
+       "zh": "变更管理"
+      },
+      {
+       "ref": "",
+       "title": "Testing",
+       "zh": "测试"
+      },
+      {
+       "ref": "",
+       "title": "Language Support",
+       "zh": "语言支持"
+      }
+     ]
+    },
+    {
+     "ref": "",
+     "title": "The LSC Process",
+     "zh": "大规模变更流程",
+     "items": [
+      {
+       "ref": "",
+       "title": "Authorization",
+       "zh": "授权"
+      },
+      {
+       "ref": "",
+       "title": "Change Creation",
+       "zh": "变更创建"
+      },
+      {
+       "ref": "",
+       "title": "Sharding and Submitting",
+       "zh": "分片与提交"
+      },
+      {
+       "ref": "",
+       "title": "Cleanup",
+       "zh": "清理"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "What Is Technical Debt?",
+   "zh": "什么是技术债",
+   "fill": "补“技术债”这一知识点：定义、本金与利息、潜在债与实际债、技术债时间线（A 只在第 1 章谈权衡成本，没有技术债章节）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Mapping the Territory",
+     "zh": "勾勒领域版图"
+    },
+    {
+     "ref": "",
+     "title": "The Technical Debt Landscape",
+     "zh": "技术债全景"
+    },
+    {
+     "ref": "",
+     "title": "Technical Debt Items: Artifacts, Causes, and Consequences",
+     "zh": "技术债项：制品、成因与后果"
+    },
+    {
+     "ref": "",
+     "title": "Principal and Interest",
+     "zh": "本金与利息"
+    },
+    {
+     "ref": "",
+     "title": "Cost and Value",
+     "zh": "成本与价值"
+    },
+    {
+     "ref": "",
+     "title": "Potential Debt versus Actual Debt",
+     "zh": "潜在债与实际债"
+    },
+    {
+     "ref": "",
+     "title": "The Technical Debt Timeline",
+     "zh": "技术债时间线"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Recognizing Technical Debt",
+   "zh": "识别技术债",
+   "fill": "补“技术债”的识别与描述：债务症状、可见后果、技术债描述的写法（A 无对应内容）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Where Does It Hurt?",
+     "zh": "哪里在痛"
+    },
+    {
+     "ref": "",
+     "title": "What Are the Visible Consequences of Technical Debt?",
+     "zh": "技术债有哪些可见后果"
+    },
+    {
+     "ref": "",
+     "title": "Writing a Technical Debt Description",
+     "zh": "撰写技术债描述"
+    },
+    {
+     "ref": "",
+     "title": "Understanding the Business Context for Assessing Technical Debt",
+     "zh": "理解评估技术债的业务背景"
+    },
+    {
+     "ref": "",
+     "title": "Assessing Artifacts Across the Technical Debt Landscape",
+     "zh": "沿技术债全景评估各类制品"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Servicing the Technical Debt",
+   "zh": "偿还技术债",
+   "fill": "补“技术债的偿还”：成本收益权衡、偿还路径、发布流水线（对应节点练习里的“可执行的偿还计划”）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Weighing the Costs and Benefits",
+     "zh": "权衡成本与收益"
+    },
+    {
+     "ref": "",
+     "title": "Paths for Servicing Technical Debt",
+     "zh": "偿还技术债的路径"
+    },
+    {
+     "ref": "",
+     "title": "The Release Pipeline",
+     "zh": "发布流水线"
+    },
+    {
+     "ref": "",
+     "title": "The Business Case for Technical Debt as an Investment",
+     "zh": "把技术债当作投资来论证"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "What Causes Technical Debt?",
+   "zh": "技术债的成因",
+   "fill": "补“技术债”的成因分类：业务、环境变化、开发过程、人与团队（对应节点练习里的鲁莽/谨慎×故意/无意四象限）。",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Perplexing Art of Identifying What Causes Debt",
+     "zh": "找出债务成因的难解之术"
+    },
+    {
+     "ref": "",
+     "title": "The Roots of Technical Debt",
+     "zh": "技术债的根源"
+    },
+    {
+     "ref": "",
+     "title": "What Causes Technical Debt?",
+     "zh": "技术债由什么引起"
+    },
+    {
+     "ref": "",
+     "title": "Causes Rooted in the Business",
+     "zh": "源于业务的成因"
+    },
+    {
+     "ref": "",
+     "title": "Causes Arising from Change in Context",
+     "zh": "源于环境变化的成因"
+    },
+    {
+     "ref": "",
+     "title": "Causes Associated with the Development Process",
+     "zh": "与开发过程相关的成因"
+    },
+    {
+     "ref": "",
+     "title": "Causes Arising from People and Team",
+     "zh": "源于人与团队的成因"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Avoiding Unintentional Debt",
+   "zh": "避免无意欠下的技术债",
+   "fill": "补“技术债”里“无意”那一半：代码质量、架构与生产层面的无意技术债如何预防。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Software Engineering in a Nutshell",
+     "zh": "软件工程要义"
+    },
+    {
+     "ref": "",
+     "title": "Code Quality and Unintentional Technical Debt",
+     "zh": "代码质量与无意技术债"
+    },
+    {
+     "ref": "",
+     "title": "Architecture, Production, and Unintentional Technical Debt",
+     "zh": "架构、生产与无意技术债"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Foundations of Software Evolution (Leman Laws + Reengineering I)",
+   "zh": "软件演化的基础（Lehman 定律与再工程 I）",
+   "fill": "补“演化规律与遗留系统再工程”：Lehman 演化定律、逆向工程与再工程（节点名里的“演化”，A/B 都没有专门章节）。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Empirical Software Engineering",
+   "zh": "经验软件工程",
+   "fill": "补“经验研究”：研究者怎样在真实项目上做实证调查（以 App 用户评论的分类、汇总为例）来支持维护与演化。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Change Type Analysis and Defect Prediction",
+   "zh": "变更类型分析与缺陷预测",
+   "fill": "补“经验研究”里用变更历史与缺陷数据做度量、预测的部分。",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "可维护性",
+   "refs": [
+    "A:#1"
+   ],
+   "note": "A:#1 的 Time and Change、Hyrum’s Law、Trade-offs and Costs 讲“软件工程是编程对时间积分”、长期变更成本与可持续性，是维护成本的根源论述；维护活动本身的分类（纠错性/适应性/完善性/预防性）A 与 B 都没有单列小节。"
+  },
+  {
+   "topic": "兼容性",
+   "refs": [
+    "A:#2"
+   ],
+   "note": "A:#2 Deprecation 的 Why Is Deprecation So Hard?、Types of Deprecation、Deprecation Warnings 讲向后兼容、兼容期与弃用警告；B 讲技术债，不涉及兼容性。"
+  },
+  {
+   "topic": "迁移",
+   "refs": [
+    "A:#2",
+    "A:#4",
+    "A:#1"
+   ],
+   "note": "A:#2 的 Managing the Deprecation Process / Milestones 讲把调用方迁到新接口；A:#4 的 The LSC Process 讲一次改动波及全库时的迁移流程；A:#1 的 Example: Compiler Upgrade 是一个迁移案例。"
+  },
+  {
+   "topic": "代码理解",
+   "refs": [
+    "A:#3"
+   ]
+  },
+  {
+   "topic": "技术债",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#4",
+    "B:#5",
+    "B:#3"
+   ],
+   "note": "B:#1 定义（本金/利息、潜在债与实际债、时间线），B:#2 识别与描述，B:#4 成因分类，B:#5 无意技术债的预防，B:#3 偿还路径与发布流水线。A:#1 的 Trade-offs and Costs 只有一段权衡成本。"
+  },
+  {
+   "topic": "经验研究",
+   "refs": [
+    "C:#2",
+    "C:#3"
+   ],
+   "note": "只有 C 讲维护/演化领域的经验研究方法；A 是工程实践书，B 是技术债管理书，都没有实证研究方法的章节。"
+  },
+  {
+   "topic": "软件演化与遗留系统",
+   "refs": [
+    "C:#1",
+    "A:#4"
+   ],
+   "note": "C:#1 是 Lehman 演化定律 + 逆向工程/再工程；A:#4 的 No Haunted Graveyards 讲遗留代码里不敢动的部分。"
+  }
+ ],
+ "omitted": "A 只收了 4 章：What Is Software Engineering?（去掉 Conclusion/TL;DRs 与 Hash Ordering、Distributed Builds 等示例小节）、Deprecation、Code Search（只收到“为什么需要独立工具”这一层，未收实现细节：Search Query Latency、Index Latency、Search Index、Ranking、Selected Trade-Offs）、Large-Scale Changes（去掉 Conclusion/TL;DRs）；Culture/Processes 下的团队、知识共享、代码评审、文档、测试等章与本节点无关，未收。B 未收 Ch1 Friction in Software Development（引论与书的结构说明）、Ch3 Moons of Saturn（案例）、Ch5/6/7（源码、架构、生产层面的技术债识别细则）、Ch8 Costing the Technical Debt（成本核算）、Ch11 Technical Debt Credit Check、Ch13 Living with Your Technical Debt（工具汇总与收尾），以及各章的 What Can You Do Today? 与 For Further Reading。C 只收了演化基础、经验软件工程、变更类型分析三讲，未收 Mining (un)Structured Data (1)/(2)、Summarization Techniques、Peer Code Review、Search-based Software Testing 及练习课。",
+ "notes": "A 的 toc.html 没有章号也没有缩进层级，章名与节名混成一条流；分支与条目的层级是按原书章序（Ch1、Ch15、Ch17、Ch22）重建的，所以 A 的所有 ref 都留空，coverage 用 A:#n 指第 n 个分支。B 的目录来自 Pearson 出版社公开的试读 PDF（ptgmedia.pearsoncmg.com，含完整 Contents），不是整书盗版；PDF 提取把词拆开的（“Y our”、“T oday”）已按正确拼写写回。B 是实践者向的 SEI 书而非研究生专著，只用它补 A 完全缺失的“技术债”概念，节点主来源仍是 A。C 的讲题按课程页 Timetable 的原文抄（原文写作 “Lecture of/on “…””），其中 “Leman Laws” 是课程页的拼写，照抄未改。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 92,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

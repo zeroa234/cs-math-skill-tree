@@ -1,0 +1,250 @@
+{
+ "id": "H.4.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CE-395: Internet of Things & Edge Computing",
+   "by": "James Moawad, Northwestern University (McCormick School of Engineering)",
+   "year": 2021,
+   "url": "https://www.mccormick.northwestern.edu/electrical-computer/documents/courses/syllabi/ce-395-edge-computing-syllabus.pdf",
+   "toc_urls": [
+    "https://www.mccormick.northwestern.edu/electrical-computer/documents/courses/syllabi/ce-395-edge-computing-syllabus.pdf"
+   ],
+   "why": "节点“现有英文学习资源”是 Shi 等人的 8 页 vision 论文，没有可分章的目录，按说明改用权威课程：这是西北大学这门课的官方 syllabus（节点先修证据里也列了它），Class Schedule 逐讲给出具体主题——Connected Devices; Edge vs. Cloud、物理计算与数据生成、power/bandwidth/latency/costs 权衡、精度与量化、CPU/GPU/FPGA 计算架构、定点/浮点、边缘深度学习，正是“把计算放到数据源附近”的选型与权衡问题。"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "Resource Scheduling in Edge Computing: A Survey",
+   "by": "Quyuan Luo, Shihong Hu, Changle Li, Guanghui Li, Weisong Shi, IEEE Communications Surveys & Tutorials 23(4)",
+   "year": 2021,
+   "url": "https://quyuanluo.github.io/papers/luo21-SchedulingSurvey.pdf",
+   "toc_urls": [
+    "https://quyuanluo.github.io/papers/luo21-SchedulingSurvey.pdf"
+   ],
+   "why": "补“调度与资源权衡”：A 是项目课，讲清在哪儿算、用什么算，但不讲调度算法。这篇 IEEE COMST 综述按章给出边缘计算架构（物-边、物-边-云、边-边、边-云四种协同）、统一模型与三大研究问题（计算卸载、资源分配、资源供给）、集中式/分布式调度方法与六项性能指标（时延、能耗、成本、效用、利润、资源利用率），正好补上调度这块。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture 1",
+   "title": "Connected Devices; Edge vs. Cloud; software vs. hardware",
+   "zh": "联网设备；边缘与云的取舍；软件与硬件",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 2",
+   "title": "Physical computing: Sensors, actuators, data generation",
+   "zh": "物理计算：传感器、执行器与数据生成",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 3",
+   "title": "Tradeoffs: power, bandwidth, latency, costs, etc.",
+   "zh": "权衡：功耗、带宽、时延、成本等",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 4",
+   "title": "Computational Complexity: Precision vs. Accuracy, Quantization",
+   "zh": "计算复杂度：精度与准确度、量化",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 5",
+   "title": "Computing architectures: CPU, GPU, custom HW engines (FPGA)",
+   "zh": "计算架构：CPU、GPU 与定制硬件（FPGA）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 6",
+   "title": "Quantization, Floating-Point, Fixed-Point Architectures",
+   "zh": "量化、浮点与定点架构",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 7",
+   "title": "Deep Learning",
+   "zh": "深度学习",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "II",
+   "title": "Architecture",
+   "zh": "边缘计算架构",
+   "fill": "资源权衡：三层（物/边/云）架构与四种协同方式，决定算力放在哪里",
+   "items": [
+    {
+     "ref": "",
+     "title": "Overview of the Architecture for Resource Scheduling in Edge Computing",
+     "zh": "边缘计算资源调度架构概览"
+    },
+    {
+     "ref": "",
+     "title": "Things-Edge Collaboration",
+     "zh": "物-边协同"
+    },
+    {
+     "ref": "",
+     "title": "Things-Edge-Cloud Collaboration",
+     "zh": "物-边-云协同"
+    },
+    {
+     "ref": "",
+     "title": "Edge-Edge Collaboration",
+     "zh": "边-边协同"
+    },
+    {
+     "ref": "",
+     "title": "Edge-Cloud Collaboration",
+     "zh": "边-云协同"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "III",
+   "title": "Basic Model and Research Issues",
+   "zh": "基本模型与研究问题",
+   "fill": "调度：统一模型与计算卸载、资源分配、资源供给三大研究问题",
+   "items": [
+    {
+     "ref": "",
+     "title": "Basic Model",
+     "zh": "基本模型"
+    },
+    {
+     "ref": "",
+     "title": "Computation Offloading",
+     "zh": "计算卸载"
+    },
+    {
+     "ref": "",
+     "title": "Resource Allocation",
+     "zh": "资源分配"
+    },
+    {
+     "ref": "",
+     "title": "Resource Provisioning",
+     "zh": "资源供给"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "IV",
+   "title": "Key Techniques and Performance Indicators",
+   "zh": "关键技术与性能指标",
+   "fill": "调度与时延：集中式/分布式调度方法，以及时延、能耗、成本、效用、利润、资源利用率六项指标",
+   "items": [
+    {
+     "ref": "",
+     "title": "Centralized Methods",
+     "zh": "集中式方法"
+    },
+    {
+     "ref": "",
+     "title": "Distributed Methods",
+     "zh": "分布式方法"
+    },
+    {
+     "ref": "",
+     "title": "Performance Indicators",
+     "zh": "性能指标"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "VI",
+   "title": "Challenges and Research Directions",
+   "zh": "挑战与研究方向",
+   "fill": "资源权衡与动态性：模型/架构可行性、安全性、动态环境，以及通信-计算-存储的联合调度",
+   "items": [
+    {
+     "ref": "",
+     "title": "Model and Architecture",
+     "zh": "模型与架构"
+    },
+    {
+     "ref": "",
+     "title": "Feasibility",
+     "zh": "可行性"
+    },
+    {
+     "ref": "",
+     "title": "Security and Privacy",
+     "zh": "安全与隐私"
+    },
+    {
+     "ref": "",
+     "title": "Dynamics",
+     "zh": "动态性"
+    },
+    {
+     "ref": "",
+     "title": "Joint Scheduling of Communication, Computing, Storage",
+     "zh": "通信、计算、存储的联合调度"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "时延",
+   "refs": [
+    "A:Lecture 3",
+    "B:IV"
+   ]
+  },
+  {
+   "topic": "带宽",
+   "refs": [
+    "A:Lecture 3",
+    "B:II"
+   ]
+  },
+  {
+   "topic": "离线性",
+   "refs": [],
+   "note": "两个来源都没有专门讲“断网/离线时边缘节点自主运行”的章：A 只在 Lecture 1 讨论计算放在 edge 还是 cloud，B 只在 V 的应用场景里间接涉及连通性问题而没有单列一节。"
+  },
+  {
+   "topic": "调度",
+   "refs": [
+    "B:III",
+    "B:IV",
+    "B:VI",
+    "A:Lecture 5"
+   ]
+  },
+  {
+   "topic": "资源权衡",
+   "refs": [
+    "A:Lecture 3",
+    "A:Lecture 4",
+    "A:Lecture 5",
+    "A:Lecture 6",
+    "B:III",
+    "B:VI"
+   ]
+  }
+ ],
+ "omitted": "A 的 syllabus 里 Lab 1–5（ARM Cortex-A9 开发、Linux 编程与 Wi-Fi/BLE、Azure 与本地图像边缘检测对比、传感器数据汇总上云）与 Week 8–10 的期末项目没收录，只收 Lecture；课程目标、评分、学术诚信等行政条目也不收。B 只收了 II、III、IV、VI 四章的相关小节，I（引言，含云到边的演进与相关工作）、V（视频、智慧城市、智慧医疗、智能家居等应用场景，只与具体行业有关）、VII（结论）没收录，IV 章里各方法的细分类（凸优化、近似算法、启发式、机器学习、博弈论、匹配、拍卖、联邦学习、区块链）也没展开成条目。",
+ "notes": "节点给的主来源 Edge Computing: Vision and Challenges 是一篇 vision 论文，没有可分章抄的目录，所以主来源换成西北大学 CE-395 的官方 syllabus（课表逐讲有具体主题），再用 IEEE COMST 的调度综述补调度与资源权衡这两块。综述的分节号是罗马数字（II. Architecture 等），PDF 提取会出现 “A RCHITECTURE” 这种字间空格与 Ofﬂoading 这类连字，标题按正确拼写写。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 28,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

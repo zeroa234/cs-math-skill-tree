@@ -1,0 +1,173 @@
+{
+ "id": "S.2.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "ECE 4040/5040 Introduction to Hardware Security (Fall 2026)",
+   "by": "Zain Ul Abideen (University of Idaho)",
+   "year": 2026,
+   "url": "https://hsc-research.org/hwsec.html",
+   "toc_urls": [
+    "https://hsc-research.org/hwsec.html"
+   ],
+   "why": "节点现有英文资源就是这门课；课程页按 7 个模块列出 30 次课的具体主题，其中集成电路生命周期与威胁建模、信任根与安全启动、侧信道、故障注入、硬件木马、逆向/逻辑锁定、安全测试与调试，逐条对上安全启动、调试接口、固件、设备供应链、侧信道与故障攻击。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Hardware Security and Cryptographic Foundations",
+   "zh": "硬件安全与密码学基础",
+   "items": [
+    {
+     "ref": "Session 2",
+     "title": "The integrated circuit lifecycle and threat modeling",
+     "zh": "集成电路生命周期与威胁建模"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Post-Quantum Hardware, Entropy, Identity, and Roots of Trust",
+   "zh": "后量子硬件、熵、身份与信任根",
+   "items": [
+    {
+     "ref": "Session 11",
+     "title": "Roots of trust and the key lifecycle",
+     "zh": "信任根与密钥生命周期"
+    },
+    {
+     "ref": "Session 12",
+     "title": "Secure boot, measured boot, and remote attestation",
+     "zh": "安全启动、度量启动与远程证明"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Side-Channel Analysis and Countermeasures",
+   "zh": "侧信道分析与对策",
+   "items": [
+    {
+     "ref": "Session 17",
+     "title": "Physical side channels",
+     "zh": "物理侧信道"
+    },
+    {
+     "ref": "Session 18",
+     "title": "Differential and correlation power analysis",
+     "zh": "差分与相关功耗分析"
+    },
+    {
+     "ref": "Session 19",
+     "title": "Side-channel countermeasures and leakage assessment",
+     "zh": "侧信道对策与泄漏评估"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Fault Injection and Malicious Hardware",
+   "zh": "故障注入与恶意硬件",
+   "items": [
+    {
+     "ref": "Session 21",
+     "title": "Fault attacks and fault models",
+     "zh": "故障攻击与故障模型"
+    },
+    {
+     "ref": "Session 22",
+     "title": "Fault countermeasures and verification",
+     "zh": "故障对策与验证"
+    },
+    {
+     "ref": "Session 23",
+     "title": "Hardware Trojan horses",
+     "zh": "硬件木马"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Reverse Engineering, Logic Locking, and Design Assurance",
+   "zh": "逆向工程、逻辑锁定与设计保障",
+   "items": [
+    {
+     "ref": "Session 25",
+     "title": "Physical and logical reverse engineering, intellectual-property threats, and logic-locking foundations",
+     "zh": "物理与逻辑逆向、知识产权威胁与逻辑锁定基础"
+    },
+    {
+     "ref": "Session 28",
+     "title": "Secure test, debug, and security verification",
+     "zh": "安全测试、调试与安全验证"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "安全启动",
+   "refs": [
+    "A:Session 12",
+    "A:Session 11"
+   ],
+   "note": "Session 12 讲固件认证、度量与事件日志、认证更新、防回滚、证明协议与验证方的假设；Session 11 是它的前提——硬件信任锚、不可变的初始代码与密钥生命周期。"
+  },
+  {
+   "topic": "调试接口",
+   "refs": [
+    "A:Session 28"
+   ],
+   "note": "Session 28 讲扫描链的可观测/可控制性如何被用来恢复密钥、secure-scan 架构、边界扫描与 JTAG、按生命周期限制调试（lifecycle-controlled debug）。"
+  },
+  {
+   "topic": "固件",
+   "refs": [
+    "A:Session 12",
+    "A:Session 11"
+   ],
+   "note": "固件在课程里不是单独一讲，而是落在 Session 12 的 firmware authentication、authenticated updates 与 Session 11 的密钥供给/派生/零化上；芯片级固件韧性（NIST SP 800-193 式）没有专门讲次。"
+  },
+  {
+   "topic": "设备供应链",
+   "refs": [
+    "A:Session 2",
+    "A:Session 25",
+    "A:Session 23"
+   ],
+   "note": "Session 2 沿设计—制造—测试—部署—报废各阶段列资产、信任边界、第三方 IP、超额生产与仿冒；Session 25 讲逆向与知识产权威胁、逻辑锁定；Session 23 讲设计期/制造期插入的硬件木马。"
+  },
+  {
+   "topic": "侧信道",
+   "refs": [
+    "A:Session 17",
+    "A:Session 18",
+    "A:Session 19"
+   ],
+   "note": "三讲递进：Session 17 讲时序/功耗/电磁泄漏与 Hamming 重量-距离泄漏模型，Session 18 讲差分与相关功耗分析（CPA、关键字节假设、轨迹对齐、密钥排名），Session 19 讲掩码、隐藏、TVLA 与泄漏评估的局限。"
+  },
+  {
+   "topic": "故障攻击",
+   "refs": [
+    "A:Session 21",
+    "A:Session 22"
+   ],
+   "note": "Session 21 讲故障/错误/失效之分、瞬态与永久故障、电压与时钟毛刺、电磁/光注入与差分故障分析；Session 22 讲 DMR/TMR、时间冗余、纠错码、防护覆盖率与共模失效。"
+  }
+ ],
+ "omitted": "这门课 30 次课里只收与节点简介对应的 11 次（Session 2、11、12、17–19、21–23、25、28）；未收 Session 1（课程导论）、3（密码学速览）、4–5（AES 算法与架构）、6（复习与作业启动）、7（后量子密码硬件）、8（随机数与熵）、9（PUF）、10（复习与作业）、13–16（期中项目提案、展示与设计评审）、20/24/26（复习与作业启动）、27（SAT 攻击与可重构混淆，属逻辑锁定细节）、29–30（项目指导与总结），以及全部作业/评分/考核信息。节点名里的“嵌入式与物联网”在本课程里没有专门讲次，相关内容分散在信任根、安全启动与侧信道几讲（面向可更新固件的平台，含 IoT/嵌入式设备），因此没有单独的补充分支。",
+ "notes": "A 的课程页把课按 Module 1–7 组织，每次课写作“Session N 星期, 日期: 主题”。分支 ref 留空（模块没有编号可引用），title 用模块名去掉“Module N: ”前缀；小节 ref 用 Session 编号，title 用主题原文（去掉星期与日期）。coverage 里引用分支用 A:#1..#5，引用讲次用 A:Session N。课程是 Fall 2026（未来学期）页面，日程里写明“Topic order may be adjusted slightly”，抄的是页面当前列出的版本。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 16,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

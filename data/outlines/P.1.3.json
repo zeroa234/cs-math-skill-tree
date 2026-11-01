@@ -1,0 +1,262 @@
+{
+ "id": "P.1.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "OCaml Programming: Correct + Efficient + Beautiful",
+   "by": "Michael R. Clarkson et al. (Cornell University, CS 3110)",
+   "year": 2026,
+   "url": "https://cs3110.github.io/textbook/cover.html",
+   "toc_urls": [
+    "https://cs3110.github.io/textbook/cover.html"
+   ],
+   "why": "节点现有英文资源就是这本课程官方开放教材；目录按“数据与类型（变体、模式匹配）→ 高阶编程（map/filter/fold/柯里化）→ 可变性（与不可变数据对照）”组织，正好覆盖函数式部分的知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Programming Language Pragmatics, Fourth Edition",
+   "by": "Michael L. Scott (Morgan Kaufmann)",
+   "year": 2015,
+   "url": "https://www.cs.rochester.edu/u/scott/pragmatics/",
+   "toc_urls": [
+    "https://www.cs.rochester.edu/u/scott/pragmatics/4e/toc.shtml"
+   ],
+   "why": "补“规则与查询式表达”：OCaml 教材只讲函数式，这本作者主页公开的经典教材第 12 章专讲逻辑语言，含逻辑编程概念、Prolog、合一与归结、搜索/执行顺序、数据库操作（查询）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "The Basics of OCaml",
+   "zh": "OCaml 基础",
+   "items": [
+    {
+     "ref": "2.3",
+     "title": "Expressions",
+     "zh": "表达式"
+    },
+    {
+     "ref": "2.4",
+     "title": "Functions",
+     "zh": "函数"
+    },
+    {
+     "ref": "2.7",
+     "title": "Debugging",
+     "zh": "调试"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Data and Types",
+   "zh": "数据与类型",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Lists",
+     "zh": "列表"
+    },
+    {
+     "ref": "3.2",
+     "title": "Variants",
+     "zh": "变体类型"
+    },
+    {
+     "ref": "3.4",
+     "title": "Records and Tuples",
+     "zh": "记录与元组"
+    },
+    {
+     "ref": "3.5",
+     "title": "Advanced Pattern Matching",
+     "zh": "进阶模式匹配"
+    },
+    {
+     "ref": "3.7",
+     "title": "Options",
+     "zh": "option 类型"
+    },
+    {
+     "ref": "3.9",
+     "title": "Algebraic Data Types",
+     "zh": "代数数据类型"
+    },
+    {
+     "ref": "3.12",
+     "title": "Example: Natural Numbers",
+     "zh": "示例：自然数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Higher-Order Programming",
+   "zh": "高阶编程",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Higher-Order Functions",
+     "zh": "高阶函数"
+    },
+    {
+     "ref": "4.2",
+     "title": "Map",
+     "zh": "map"
+    },
+    {
+     "ref": "4.3",
+     "title": "Filter",
+     "zh": "filter"
+    },
+    {
+     "ref": "4.4",
+     "title": "Fold",
+     "zh": "fold"
+    },
+    {
+     "ref": "4.5",
+     "title": "Beyond Lists",
+     "zh": "列表之外"
+    },
+    {
+     "ref": "4.6",
+     "title": "Pipelining",
+     "zh": "管道式组合"
+    },
+    {
+     "ref": "4.7",
+     "title": "Currying",
+     "zh": "柯里化"
+    },
+    {
+     "ref": "4.8",
+     "title": "Algebraic Laws for Higher-Order Functions",
+     "zh": "高阶函数的代数定律"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Mutability",
+   "zh": "可变性",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Refs",
+     "zh": "引用单元"
+    },
+    {
+     "ref": "6.2",
+     "title": "Mutable Fields",
+     "zh": "可变字段"
+    },
+    {
+     "ref": "6.3",
+     "title": "Arrays and Loops",
+     "zh": "数组与循环"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "12",
+   "title": "Logic Languages",
+   "zh": "逻辑语言",
+   "fill": "规则与查询式表达：逻辑式/声明式编程用事实+规则描述问题，用查询求解，与函数式的求值式表达形成对照",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Logic Programming Concepts",
+     "zh": "逻辑编程概念"
+    },
+    {
+     "ref": "12.2",
+     "title": "Prolog",
+     "zh": "Prolog"
+    },
+    {
+     "ref": "12.2.1",
+     "title": "Resolution and Unification",
+     "zh": "归结与合一"
+    },
+    {
+     "ref": "12.2.2",
+     "title": "Lists",
+     "zh": "列表"
+    },
+    {
+     "ref": "12.2.4",
+     "title": "Search/Execution Order",
+     "zh": "搜索与执行顺序"
+    },
+    {
+     "ref": "12.2.7",
+     "title": "Database Manipulation",
+     "zh": "数据库操作"
+    },
+    {
+     "ref": "12.4",
+     "title": "Logic Programming in Perspective",
+     "zh": "逻辑编程综观"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "不可变数据",
+   "refs": [
+    "A:3",
+    "A:3.1",
+    "A:3.2",
+    "A:6"
+   ]
+  },
+  {
+   "topic": "高阶函数",
+   "refs": [
+    "A:4",
+    "A:4.1",
+    "A:4.2",
+    "A:4.3",
+    "A:4.4",
+    "A:4.7"
+   ]
+  },
+  {
+   "topic": "模式匹配",
+   "refs": [
+    "A:3.2",
+    "A:3.5",
+    "A:3.7",
+    "A:3.9"
+   ]
+  },
+  {
+   "topic": "规则与查询式表达",
+   "refs": [
+    "B:12",
+    "B:12.1",
+    "B:12.2",
+    "B:12.2.1",
+    "B:12.2.4",
+    "B:12.2.7"
+   ]
+  }
+ ],
+ "omitted": "OCaml 教材里没收的章：1. Better Programming Through OCaml（历史与简介）、5. Modular Programming（模块与函子，属工程化抽象）、7. Concurrency、8. Correctness、9. Data Structures、10. Interpreters（语言实现），以及各章 Summary/Exercises。Scott 书只取了第 12 章；第 11 章 Functional Languages 未收，因为函数式已由 OCaml 教材覆盖。",
+ "notes": "OCaml 教材的可变性与不可变数据是一对（第 3 章全是不可变数据，第 6 章才引入 ref/可变字段/数组），所以“不可变数据”同时引了 A:3 与 A:6。逻辑式部分只有 Scott 书的结构够细（合一、归结、搜索顺序、数据库操作），Learn Prolog Now 官网证书链异常打不开，故未用。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 33,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

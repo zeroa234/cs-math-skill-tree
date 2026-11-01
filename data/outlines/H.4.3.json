@@ -1,0 +1,326 @@
+{
+ "id": "H.4.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "IoT for Beginners",
+   "by": "Microsoft (Azure Cloud Advocates)",
+   "year": 2021,
+   "url": "https://microsoft.github.io/IoT-For-Beginners/",
+   "toc_urls": [
+    "https://raw.githubusercontent.com/microsoft/IoT-For-Beginners/main/README.md"
+   ],
+   "why": "节点“现有英文学习资源”就是这套微软官方 12 周 24 课的开源课程（CC BY 4.0，带 quiz/作业/答案）。README 的 Lessons 表逐课给出项目名、主题与课名，按 6 个项目（Getting started / Farm / Transport / Manufacturing / Retail / Consumer）组织，正好覆盖设备、连接、消息、平台与端到端集成。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "ESP-IDF Programming Guide (ESP32, v6.1)",
+   "by": "Espressif Systems",
+   "year": 2026,
+   "url": "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/",
+   "toc_urls": [
+    "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/index.html",
+    "https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/index.html"
+   ],
+   "why": "补“设备管理”和“功耗”（A 这两块几乎没有）：这是乐鑫 ESP-IDF 官方英文编程指南的 API Guides / API Reference 目录（与节点给的中文指南同一份文档）。Low Power Modes、Current Consumption Measurement of Modules 讲低功耗与实测，Provisioning API、Unified Provisioning 讲设备配网与认领，Wi-Fi Driver、Bluetooth Low Energy、lwIP 是设备侧连接与协议栈的实现参考。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Getting started",
+   "zh": "入门",
+   "items": [
+    {
+     "ref": "01",
+     "title": "Introduction to IoT",
+     "zh": "物联网导论"
+    },
+    {
+     "ref": "02",
+     "title": "A deeper dive into IoT",
+     "zh": "物联网深入一步"
+    },
+    {
+     "ref": "03",
+     "title": "Interact with the physical world with sensors and actuators",
+     "zh": "用传感器与执行器与物理世界交互"
+    },
+    {
+     "ref": "04",
+     "title": "Connect your device to the Internet",
+     "zh": "把设备连上互联网"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Farm",
+   "zh": "农场项目",
+   "items": [
+    {
+     "ref": "05",
+     "title": "Predict plant growth",
+     "zh": "预测植物生长"
+    },
+    {
+     "ref": "06",
+     "title": "Detect soil moisture",
+     "zh": "检测土壤湿度"
+    },
+    {
+     "ref": "07",
+     "title": "Automated plant watering",
+     "zh": "自动浇水"
+    },
+    {
+     "ref": "08",
+     "title": "Migrate your plant to the cloud",
+     "zh": "把植物迁移到云端"
+    },
+    {
+     "ref": "09",
+     "title": "Migrate your application logic to the cloud",
+     "zh": "把应用逻辑迁移到云端"
+    },
+    {
+     "ref": "10",
+     "title": "Keep your plant secure",
+     "zh": "保障植物设备的安全"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Transport",
+   "zh": "运输项目",
+   "items": [
+    {
+     "ref": "11",
+     "title": "Location tracking",
+     "zh": "位置跟踪"
+    },
+    {
+     "ref": "12",
+     "title": "Store location data",
+     "zh": "存储位置数据"
+    },
+    {
+     "ref": "13",
+     "title": "Visualize location data",
+     "zh": "位置数据可视化"
+    },
+    {
+     "ref": "14",
+     "title": "Geofences",
+     "zh": "地理围栏"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Manufacturing",
+   "zh": "制造项目",
+   "items": [
+    {
+     "ref": "15",
+     "title": "Train a fruit quality detector",
+     "zh": "训练水果质量检测模型"
+    },
+    {
+     "ref": "16",
+     "title": "Check fruit quality from an IoT device",
+     "zh": "用物联网设备检查水果质量"
+    },
+    {
+     "ref": "17",
+     "title": "Run your fruit detector on the edge",
+     "zh": "在边缘端运行水果检测模型"
+    },
+    {
+     "ref": "18",
+     "title": "Trigger fruit quality detection from a sensor",
+     "zh": "由传感器触发水果质量检测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Retail",
+   "zh": "零售项目",
+   "items": [
+    {
+     "ref": "19",
+     "title": "Train a stock detector",
+     "zh": "训练库存检测模型"
+    },
+    {
+     "ref": "20",
+     "title": "Check stock from an IoT device",
+     "zh": "用物联网设备检查库存"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Consumer",
+   "zh": "消费项目",
+   "items": [
+    {
+     "ref": "21",
+     "title": "Recognize speech with an IoT device",
+     "zh": "用物联网设备做语音识别"
+    },
+    {
+     "ref": "22",
+     "title": "Understand language",
+     "zh": "理解自然语言"
+    },
+    {
+     "ref": "23",
+     "title": "Set a timer and provide spoken feedback",
+     "zh": "设定定时器并语音反馈"
+    },
+    {
+     "ref": "24",
+     "title": "Support multiple languages",
+     "zh": "支持多语言"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Low Power Modes",
+   "zh": "低功耗模式",
+   "fill": "功耗：ESP32 的睡眠/低功耗模式与唤醒源配置",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Current Consumption Measurement of Modules",
+   "zh": "模组电流消耗测量",
+   "fill": "功耗：量产/实测层面的电流与功耗测量方法",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Wi-Fi Driver",
+   "zh": "Wi-Fi 驱动",
+   "fill": "连接：设备侧 Wi-Fi 连接的实现与配置",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Bluetooth Low Energy",
+   "zh": "低功耗蓝牙（BLE）",
+   "fill": "连接：低功耗短距无线连接的实现",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "lwIP",
+   "zh": "lwIP 协议栈",
+   "fill": "连接与消息：设备上的 TCP/IP 协议栈",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Provisioning API",
+   "zh": "配网 API",
+   "fill": "设备管理：新设备入网（Wi-Fi 凭据下发）的接口",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Unified Provisioning",
+   "zh": "统一配网",
+   "fill": "设备管理：统一的设备配网/认领流程（含云端认领）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "设备",
+   "refs": [
+    "A:01",
+    "A:02",
+    "A:03"
+   ]
+  },
+  {
+   "topic": "连接",
+   "refs": [
+    "A:04",
+    "A:11",
+    "B:#3",
+    "B:#4",
+    "B:#5"
+   ]
+  },
+  {
+   "topic": "消息",
+   "refs": [
+    "A:04",
+    "A:07",
+    "A:09"
+   ]
+  },
+  {
+   "topic": "平台",
+   "refs": [
+    "A:08",
+    "A:09"
+   ]
+  },
+  {
+   "topic": "设备管理",
+   "refs": [
+    "B:#6",
+    "B:#7",
+    "A:10"
+   ],
+   "note": "A 没有专门讲设备注册、生命周期管理、固件空中升级（OTA）的课，只有第 10 课讲密钥与证书；B 的 Provisioning API / Unified Provisioning 只覆盖配网与认领这一段，OTA 与批量设备管理没有找到专门章节。"
+  },
+  {
+   "topic": "功耗",
+   "refs": [
+    "B:#1",
+    "B:#2"
+   ],
+   "note": "A 的课程以虚拟硬件为主，完全没有功耗预算与低功耗设计的内容，只能靠 B 的 Low Power Modes 与电流测量两节。"
+  },
+  {
+   "topic": "端到端集成",
+   "refs": [
+    "A:#2",
+    "A:08",
+    "A:09",
+    "A:12",
+    "A:13"
+   ]
+  }
+ ],
+ "omitted": "A 的 24 课全部收录（按 6 个项目分组），只略去了表里的 Learning Objectives 长描述、quiz、sketchnote 与 slides 等辅助材料。B 只取了与“连接/配网/功耗”相关的 7 个指南，API Guides 里其余几十项（Build System、Partition Tables、Core Dump、JTAG Debugging、lwIP 之外的协议、ESP-BLE-MESH、OpenThread、存储 API 等）属芯片级实现细节，没收。",
+ "notes": "A 的课表来自仓库 README 的 Lessons 表格（GitHub Pages 版本是 JS 渲染，抓不到正文，所以用官方仓库 README 这一份同样的内容），分支用表里的 Project Name，ref 用表里的行号 01–24。B 的官方文档目录是 Sphinx 生成，逐项列出 API Guides / API Reference 下的条目，没有编号，ref 留空。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 37,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

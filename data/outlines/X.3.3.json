@@ -1,0 +1,457 @@
+{
+ "id": "X.3.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Parallel Computing and Scientific Machine Learning (SciML): Methods and Applications",
+   "by": "Chris Rackauckas (MIT 18.337J/6.338J)",
+   "year": 2020,
+   "url": "https://book.sciml.ai/",
+   "toc_urls": [
+    "https://book.sciml.ai/notes/03-Introduction_to_Scientific_Machine_Learning_through_Physics-Informed_Neural_Networks/",
+    "https://book.sciml.ai/notes/07-Ordinary_Differential_Equations-Applications_and_Discretizations/",
+    "https://book.sciml.ai/notes/10-Basic_Parameter_Estimation-Reverse-Mode_AD-and_Inverse_Problems/",
+    "https://book.sciml.ai/notes/11-Differentiable_Programming_and_Neural_Differential_Equations/",
+    "https://book.sciml.ai/notes/14-PDEs_Convolutions_and_the_Mathematics_of_Locality/",
+    "https://book.sciml.ai/notes/15-Mixing_Differential_Equations_and_Neural_Networks_for_Physics-Informed_Learning/",
+    "https://book.sciml.ai/notes/16-From_Optimization_to_Probabilistic_Programming/",
+    "https://book.sciml.ai/notes/17-Global_Sensitivity_Analysis/",
+    "https://book.sciml.ai/notes/19-Uncertainty_Programming-Generalized_Uncertainty_Quantification/"
+   ],
+   "why": "节点现有英文资源（MIT 18.337J 的在线教材），作者本人公开的整书；讲次结构直接对应物理信息学习、反问题、可微求解与不确定性量化，每讲带小节标题。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Neural Operators in PyTorch — Theory Guide",
+   "by": "Jean Kossaifi, David Pitt, Nikola Kovachki, Zongyi Li, Anima Anandkumar",
+   "year": 2026,
+   "url": "https://neuraloperator.github.io/dev/index.html",
+   "toc_urls": [
+    "https://neuraloperator.github.io/dev/theory_guide/index.html"
+   ],
+   "why": "补“神经算子”：主来源没有算子学习（FNO/DeepONet）的专门讲次；这份官方理论指南给出算子学习的数学基础、傅里叶神经算子与离散无关性。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "03",
+   "title": "Introduction to Scientific Machine Learning through Physics-Informed Neural Networks",
+   "zh": "通过物理信息神经网络入门科学机器学习",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is a Neural Network?",
+     "zh": "什么是神经网络"
+    },
+    {
+     "ref": "",
+     "title": "From Machine Learning to Scientific Machine Learning: Structure and Science",
+     "zh": "从机器学习到科学机器学习：结构与科学"
+    },
+    {
+     "ref": "",
+     "title": "Solving ODEs with Neural Networks: The Physics-Informed Neural Network",
+     "zh": "用神经网络解常微分方程：物理信息神经网络"
+    },
+    {
+     "ref": "",
+     "title": "Background: A Method for Solving Ordinary Differential Equations with Neural Networks",
+     "zh": "背景：用神经网络解常微分方程的一种方法"
+    },
+    {
+     "ref": "",
+     "title": "Example: Harmonic Oscillator Informed Training",
+     "zh": "示例：谐振子的知情训练"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "07",
+   "title": "Ordinary Differential Equations, Applications and Discretizations",
+   "zh": "常微分方程：应用与离散化",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is an Ordinary Differential Equation?",
+     "zh": "什么是常微分方程"
+    },
+    {
+     "ref": "",
+     "title": "Differential Equations from Scientific Contexts",
+     "zh": "来自科学情境的微分方程"
+    },
+    {
+     "ref": "",
+     "title": "Numerically Solving Ordinary Differential Equations",
+     "zh": "常微分方程的数值求解"
+    },
+    {
+     "ref": "",
+     "title": "Stability of a Method",
+     "zh": "方法的稳定性"
+    },
+    {
+     "ref": "",
+     "title": "Stiffness and Timescale Separation",
+     "zh": "刚性与时间尺度分离"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Basic Parameter Estimation, Reverse-Mode AD, and Inverse Problems",
+   "zh": "基本参数估计、反向模式自动微分与反问题",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Shooting Method for Parameter Fitting",
+     "zh": "打靶法做参数拟合"
+    },
+    {
+     "ref": "",
+     "title": "Computing Gradients",
+     "zh": "计算梯度"
+    },
+    {
+     "ref": "",
+     "title": "The Adjoint Technique and Reverse Accumulation",
+     "zh": "伴随技术与反向累积"
+    },
+    {
+     "ref": "",
+     "title": "Reverse-Mode Automatic Differentiation and vjps",
+     "zh": "反向模式自动微分与 vjp"
+    },
+    {
+     "ref": "",
+     "title": "Forward Mode vs Reverse Mode",
+     "zh": "前向模式与反向模式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Differentiable Programming and Neural Differential Equations",
+   "zh": "可微编程与神经微分方程",
+   "items": [
+    {
+     "ref": "",
+     "title": "Implementation of Reverse-Mode AD",
+     "zh": "反向模式自动微分的实现"
+    },
+    {
+     "ref": "",
+     "title": "Derivation of Reverse Mode Rules: Adjoints and Implicit Function Theorem",
+     "zh": "反向模式规则的推导：伴随与隐函数定理"
+    },
+    {
+     "ref": "",
+     "title": "Adjoint of Linear Solve",
+     "zh": "线性求解的伴随"
+    },
+    {
+     "ref": "",
+     "title": "Adjoint of Ordinary Differential Equations",
+     "zh": "常微分方程的伴随"
+    },
+    {
+     "ref": "",
+     "title": "The vjp and Neural Ordinary Differential Equations",
+     "zh": "vjp 与神经微分方程"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "PDEs, Convolutions, and the Mathematics of Locality",
+   "zh": "偏微分方程、卷积与局部性数学",
+   "items": [
+    {
+     "ref": "",
+     "title": "Convolutional Neural Networks",
+     "zh": "卷积神经网络"
+    },
+    {
+     "ref": "",
+     "title": "Discretizations of Partial Differential Equations",
+     "zh": "偏微分方程的离散化"
+    },
+    {
+     "ref": "",
+     "title": "Finite Difference Discretizations",
+     "zh": "有限差分离散"
+    },
+    {
+     "ref": "",
+     "title": "Stencil Operations as Sparse Matrices",
+     "zh": "把模板运算写成稀疏矩阵"
+    },
+    {
+     "ref": "",
+     "title": "What ML can learning from SciComp: Stability of Convolutional RNNs",
+     "zh": "机器学习能从科学计算学到什么：卷积循环网络的稳定性"
+    },
+    {
+     "ref": "",
+     "title": "What SciComp can learn from ML: Moderate Generalizations to Partial Differential Equation Models",
+     "zh": "科学计算能从机器学习学到什么：对偏微分方程模型的适度推广"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "Mixing Differential Equations and Neural Networks for Physics-Informed Learning",
+   "zh": "把微分方程与神经网络结合做物理信息学习",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Augmented Neural Ordinary Differential Equation",
+     "zh": "增广神经常微分方程"
+    },
+    {
+     "ref": "",
+     "title": "Extensions to other Differential Equations",
+     "zh": "推广到其他类型的微分方程"
+    },
+    {
+     "ref": "",
+     "title": "The Universal Ordinary Differential Equation",
+     "zh": "通用常微分方程"
+    },
+    {
+     "ref": "",
+     "title": "Deep BSDE Methods for High Dimensional Partial Differential Equations",
+     "zh": "高维偏微分方程的深度 BSDE 方法"
+    },
+    {
+     "ref": "",
+     "title": "The Deep BSDE Method",
+     "zh": "深度 BSDE 方法"
+    },
+    {
+     "ref": "",
+     "title": "Surrogate Acceleration Methods",
+     "zh": "代理模型加速方法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "From Optimization to Probabilistic Programming",
+   "zh": "从优化到概率编程",
+   "items": [
+    {
+     "ref": "",
+     "title": "Bayesian Modeling in a Nutshell",
+     "zh": "贝叶斯建模概要"
+    },
+    {
+     "ref": "",
+     "title": "Bayesian Estimation with Point Estimates: Bayes' Rule, Maximum Likelihood, and MAP",
+     "zh": "点估计下的贝叶斯估计：贝叶斯公式、最大似然与 MAP"
+    },
+    {
+     "ref": "",
+     "title": "Bayesian Estimation of Posterior Distributions with Monte Carlo",
+     "zh": "用蒙特卡洛估计后验分布"
+    },
+    {
+     "ref": "",
+     "title": "Hamiltonian Monte Carlo",
+     "zh": "哈密顿蒙特卡洛"
+    },
+    {
+     "ref": "",
+     "title": "Application: Bayesian Estimation of Differential Equation Parameters",
+     "zh": "应用：微分方程参数的贝叶斯估计"
+    },
+    {
+     "ref": "",
+     "title": "Bayesian Estimation of Posterior Distributions with Variational Inference",
+     "zh": "用变分推断估计后验分布"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Global Sensitivity Analysis",
+   "zh": "全局敏感性分析",
+   "items": [
+    {
+     "ref": "",
+     "title": "Setup for Global Sensitivity",
+     "zh": "全局敏感性的设定"
+    },
+    {
+     "ref": "",
+     "title": "Reasons for Global Sensitivity Analysis",
+     "zh": "做全局敏感性分析的理由"
+    },
+    {
+     "ref": "",
+     "title": "Global Sensitivity Analysis Measures",
+     "zh": "全局敏感性分析指标"
+    },
+    {
+     "ref": "",
+     "title": "Derivative-based Global Sensitivity Measures (DGSM)",
+     "zh": "基于导数的全局敏感性指标（DGSM）"
+    },
+    {
+     "ref": "",
+     "title": "The Morris One-At-A-Time (OAT) Method",
+     "zh": "Morris 逐次单因素（OAT）方法"
+    },
+    {
+     "ref": "",
+     "title": "Sobol's Method (ANOVA)",
+     "zh": "Sobol 方法（方差分解）"
+    },
+    {
+     "ref": "",
+     "title": "Fourier Amplitude Sensitivity Sampling (FAST) and eFAST",
+     "zh": "傅里叶振幅敏感性抽样（FAST）与 eFAST"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "19",
+   "title": "Uncertainty Programming, Generalized Uncertainty Quantification",
+   "zh": "不确定性编程与广义不确定性量化",
+   "items": [
+    {
+     "ref": "",
+     "title": "What is Uncertainty Quantification?",
+     "zh": "什么是不确定性量化"
+    },
+    {
+     "ref": "",
+     "title": "Some High Level UQ Techniques",
+     "zh": "几种高层不确定性量化技术"
+    },
+    {
+     "ref": "",
+     "title": "Pushforward Methods for Uncertainties",
+     "zh": "不确定性的前推方法"
+    },
+    {
+     "ref": "",
+     "title": "Quantifying Numerical Uncertainty with Intervals",
+     "zh": "用区间量化数值不确定性"
+    },
+    {
+     "ref": "",
+     "title": "Problems with Interval Arithmetic",
+     "zh": "区间算术的问题"
+    },
+    {
+     "ref": "",
+     "title": "Contextual Uncertainty Quantification",
+     "zh": "情境化不确定性量化"
+    },
+    {
+     "ref": "",
+     "title": "Quantifying Uncertainty in ODE Solves for Adaptivity",
+     "zh": "量化常微分方程求解中影响自适应的不确定性"
+    },
+    {
+     "ref": "",
+     "title": "Adjoints of Uncertainty and the Koopman Operator",
+     "zh": "不确定性的伴随与 Koopman 算符"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Theory Guide",
+   "zh": "理论指南",
+   "fill": "补“神经算子”：算子学习（函数空间之间的映射）、傅里叶神经算子、离散无关性与通用逼近，主来源没有对应讲次。",
+   "items": [
+    {
+     "ref": "",
+     "title": "Neural Operators: an Introduction",
+     "zh": "神经算子导论"
+    },
+    {
+     "ref": "",
+     "title": "Fourier Neural Operators",
+     "zh": "傅里叶神经算子"
+    },
+    {
+     "ref": "",
+     "title": "Advantages of Neural Operators",
+     "zh": "神经算子的优势"
+    },
+    {
+     "ref": "",
+     "title": "Neural Operator Applications",
+     "zh": "神经算子的应用"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "物理约束学习",
+   "refs": [
+    "A:03",
+    "A:15"
+   ],
+   "note": "第 3 讲从 PINN 切入（损失里加入方程残差与初边值条件），第 15 讲给增广神经 ODE、通用 ODE 与深度 BSDE 等把物理结构写进模型的变形。"
+  },
+  {
+   "topic": "神经算子",
+   "refs": [
+    "B:#1"
+   ],
+   "note": "主来源没有算子学习的讲次，故单列补充来源：算子学习的基本设定、FNO、离散无关与通用逼近。"
+  },
+  {
+   "topic": "反问题",
+   "refs": [
+    "A:10",
+    "A:16"
+   ],
+   "note": "第 10 讲把参数估计写成打靶法/优化并用伴随或反向模式求梯度；第 16 讲给贝叶斯反问题（MCMC、HMC、变分推断）。"
+  },
+  {
+   "topic": "可微求解",
+   "refs": [
+    "A:07",
+    "A:10",
+    "A:11",
+    "A:14"
+   ],
+   "note": "第 7 讲给微分方程的离散与稳定性，第 10、11 讲给反向模式 AD 与伴随（线性求解、非线性求解、ODE 的伴随），第 14 讲把 PDE 的模板离散与卷积对应起来。"
+  },
+  {
+   "topic": "科学验证",
+   "refs": [
+    "A:14",
+    "A:17",
+    "A:19"
+   ],
+   "note": "第 17 讲的全局敏感性分析与第 19 讲的不确定性量化构成验证手段（参数影响、数值误差、可信区间），第 14 讲从数值分析的稳定性角度审视学习模型。"
+  }
+ ],
+ "omitted": "A 只收与“科学机器学习”直接相关的讲次；未收 02（串行代码优化）、04（循环与离散动力学）、05、06（并行计算基础与类型）、08（前向模式 AD 的高维代数实现）、09（刚性 ODE）、12（MPI）、13（GPU）、18（性能剖析与优化）这些以高性能计算工程为主的讲次，以及各讲的 YouTube 链接与参考文献。B 只收 Theory Guide 的四节，未收 Install、User Guide、API、Examples、Developer's Guide。",
+ "notes": "A 的分支标题取自各讲网页的一级标题，ref 用课程站侧栏的讲次编号（03、07、10…）；各讲在侧栏的短名是 SciML Intro、ODEs、Reverse AD、δP、PDEs、Physics Informed Learning、Probabilistic Programming、Global Sensitivity Analysis、Uncertainty Programming。第 14 讲有个标题原文就是“What ML can learning from SciComp…”，照原文抄录。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 67,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "id": "F.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Automata, Computability, and Complexity (6.045J, Spring 2011)",
+   "by": "Scott Aaronson",
+   "year": 2011,
+   "url": "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/pages/calendar/",
+    "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/pages/lecture-notes/"
+   ],
+   "why": "节点现有英文资源；OCW 的 Calendar / Lecture Notes 页逐讲列出主题，第 6–10 讲正好是图灵机、可判定性、不可判定与 PCP、映射归约与 Rice 定理、自指与递归定理，与节点简介四条知识点一一对应。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "Theory of Computation (18.404J, Fall 2020)",
+   "by": "Michael Sipser",
+   "year": 2020,
+   "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/readings/"
+   ],
+   "why": "补递归理论中“逻辑理论的可判定性”这一块：A 只讲到自指与递归定理，Sipser 本人的课在第 11 讲把递归定理与逻辑（Sipser §6.1–6.2）放在一起讲。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Turing machines",
+   "zh": "图灵机",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Decidability",
+   "zh": "可判定性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Undecidable problems and Post correspondence problem (PCP)",
+   "zh": "不可判定问题与波斯特对应问题（PCP）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Mapping reducibility and Rice’s theorem",
+   "zh": "映射归约与莱斯定理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Self-reference and the recursion theorem",
+   "zh": "自指与递归定理",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "11",
+   "title": "The Recursion Theorem and Logic",
+   "zh": "递归定理与逻辑",
+   "fill": "递归理论里的逻辑理论可判定性（Sipser §6.2），A 第 10 讲只讲自指与递归定理本身",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "Turing机",
+   "refs": [
+    "A:6"
+   ]
+  },
+  {
+   "topic": "可判定与不可判定问题",
+   "refs": [
+    "A:7",
+    "A:8"
+   ]
+  },
+  {
+   "topic": "归约",
+   "refs": [
+    "A:9"
+   ]
+  },
+  {
+   "topic": "递归理论",
+   "refs": [
+    "A:10",
+    "B:11"
+   ]
+  },
+  {
+   "topic": "图灵归约与算术层级（Sipser §6.3–6.4）",
+   "refs": [],
+   "note": "A 第 10 讲停在递归定理，B 只补到逻辑理论的可判定性，两页都没有图灵归约、相对可计算性与算术层级的专门一讲，需要另找研究生教材（如 Soare）才讲得到"
+  }
+ ],
+ "omitted": "主来源 6.045J 一共 23 讲：第 1–5 讲（逻辑门、DFA/NFA、正则表达式、泵引理）属 F.2.1 自动机部分；第 11–14 讲与第 18 讲是密码学；第 15–17 讲是复杂度（归 F.2.3）；第 19–20 讲 PAC 学习、第 21–23 讲量子计算，都与本节点无关。补充来源 18.404J 只取了第 11 讲，其余讲次与本节点或 F.2.1/F.2.3 重复。",
+ "notes": "6.045J 的 Calendar 与 Lecture Notes 两页主题列表完全一致，逐讲只有一两个词，没有更细的小节；节点窄到“递归理论”时靠 B 的第 11 讲补了 §6.1–6.2。Sipser 原书（Introduction to the Theory of Computation, 3rd ed.）的章节目录没能找到可引用的权威在线目录页（出版社页面是 JS 渲染、读不到正文），所以没拿教材本身当来源。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 6,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

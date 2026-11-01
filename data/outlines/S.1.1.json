@@ -1,0 +1,265 @@
+{
+ "id": "S.1.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Computer Security (CS 161 online textbook)",
+   "by": "David Wagner, Nicholas Weaver, Peyrin Kao, Fuzail Shakir, Andrew Law, Nicholas Ngai (UC Berkeley)",
+   "year": 2024,
+   "url": "https://textbook.cs161.org/",
+   "toc_urls": [
+    "https://textbook.cs161.org/principles/principles.html"
+   ],
+   "why": "节点现有英文资源就是这本教材；第 1 章 Security Principles 按 1.1–1.13 逐条列出安全设计原则，从威胁模型、安全经济学一路到最小权限、完全中介与 TCB，正是 D1 层要背下来的“安全原理”清单。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Security Engineering: A Guide to Building Dependable Distributed Systems, 3rd ed.",
+   "by": "Ross Anderson (Cambridge University Press)",
+   "year": 2020,
+   "url": "https://www.cl.cam.ac.uk/~rja14/book.html",
+   "toc_urls": [
+    "https://www.cl.cam.ac.uk/~rja14/Papers/SE-01.pdf",
+    "https://www.cl.cam.ac.uk/~rja14/Papers/SE-03.pdf",
+    "https://www.cl.cam.ac.uk/~rja14/Papers/SE-04.pdf"
+   ],
+   "why": "补 CS161 第 1 章没有的语义基础：1.5 Definitions 给出机密性/完整性/可用性等术语的定义，第 3 章 Passwords 讲认证，第 4 章 Access Controls 讲授权与访问控制模型。作者把整书免费公开在剑桥主页，是这门课公认的教科书。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Security Principles",
+   "zh": "安全原则",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Know your threat model",
+     "zh": "了解你的威胁模型"
+    },
+    {
+     "ref": "1.2",
+     "title": "Consider Human Factors",
+     "zh": "考虑人的因素"
+    },
+    {
+     "ref": "1.3",
+     "title": "Security is economics",
+     "zh": "安全是一门经济学"
+    },
+    {
+     "ref": "1.4",
+     "title": "Detect if you can't prevent",
+     "zh": "无法预防就检测"
+    },
+    {
+     "ref": "1.5",
+     "title": "Defense in depth",
+     "zh": "纵深防御"
+    },
+    {
+     "ref": "1.6",
+     "title": "Least privilege",
+     "zh": "最小权限"
+    },
+    {
+     "ref": "1.7",
+     "title": "Separation of responsibility",
+     "zh": "职责分离"
+    },
+    {
+     "ref": "1.8",
+     "title": "Ensure complete mediation",
+     "zh": "确保完全中介"
+    },
+    {
+     "ref": "1.9",
+     "title": "Shannon's Maxim",
+     "zh": "香农准则"
+    },
+    {
+     "ref": "1.10",
+     "title": "Use fail-safe defaults",
+     "zh": "采用失效安全的默认值"
+    },
+    {
+     "ref": "1.11",
+     "title": "Design security in from the start",
+     "zh": "在系统设计之初就考虑安全"
+    },
+    {
+     "ref": "1.12",
+     "title": "The Trusted Computing Base (TCB)",
+     "zh": "可信计算基"
+    },
+    {
+     "ref": "1.13",
+     "title": "TOCTTOU Vulnerabilities",
+     "zh": "TOCTTOU 漏洞"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1.5",
+   "title": "Definitions",
+   "zh": "术语定义",
+   "fill": "机密性/完整性/可用性：CS161 第 1 章通篇讲原则，没有给出 CIA 三要素的正式定义",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Passwords",
+   "zh": "口令",
+   "fill": "认证：用户如何向系统证明身份（口令的心理学、系统与存储保护问题）",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Basics",
+     "zh": "基础"
+    },
+    {
+     "ref": "3.2",
+     "title": "Applied Psychology Issues",
+     "zh": "应用心理学问题"
+    },
+    {
+     "ref": "3.3",
+     "title": "System Issues",
+     "zh": "系统层面问题"
+    },
+    {
+     "ref": "3.4",
+     "title": "Technical Protection of Passwords",
+     "zh": "口令的技术保护"
+    },
+    {
+     "ref": "3.5",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Access Controls",
+   "zh": "访问控制",
+   "fill": "授权：认证之后谁可以读/写哪些数据、执行哪些事务（访问控制矩阵、ACL、角色、能力、硬件保护）",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "4.2",
+     "title": "Operating System Access Controls",
+     "zh": "操作系统访问控制"
+    },
+    {
+     "ref": "4.2.1",
+     "title": "Groups and Roles",
+     "zh": "组与角色"
+    },
+    {
+     "ref": "4.2.2",
+     "title": "Access Control Lists",
+     "zh": "访问控制列表"
+    },
+    {
+     "ref": "4.2.5",
+     "title": "Capabilities",
+     "zh": "能力"
+    },
+    {
+     "ref": "4.2.7",
+     "title": "Granularity",
+     "zh": "粒度"
+    },
+    {
+     "ref": "4.2.8",
+     "title": "Sandboxing and Proof-Carrying Code",
+     "zh": "沙箱与携带证明的代码"
+    },
+    {
+     "ref": "4.3",
+     "title": "Hardware Protection",
+     "zh": "硬件保护"
+    },
+    {
+     "ref": "4.4",
+     "title": "What Goes Wrong",
+     "zh": "哪里会出错"
+    },
+    {
+     "ref": "4.5",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "机密性/完整性/可用性",
+   "refs": [
+    "B:1.5"
+   ],
+   "note": "B 第 1.5 节 Definitions 逐一定义机密性、完整性、可用性等术语；CS161 全书的 CIA 讨论散在密码学与网络各章，第 1 章没有定义。"
+  },
+  {
+   "topic": "认证授权",
+   "refs": [
+    "B:3",
+    "B:3.1",
+    "B:4",
+    "B:4.1",
+    "B:4.2"
+   ],
+   "note": "认证看 B 第 3 章 Passwords（3.1 Basics 讲客户机/服务器如何互相认证）；授权看 B 第 4 章 Access Controls（4.1 说访问控制是整个计算机安全的重心，4.2 讲操作系统如何认证主体再中介访问）。"
+  },
+  {
+   "topic": "最小权限",
+   "refs": [
+    "A:1.6"
+   ],
+   "note": "CS161 1.6 Least privilege：只给程序完成本职工件所需的最小权限，可降低失败后的期望损失。"
+  },
+  {
+   "topic": "攻击面",
+   "refs": [
+    "A:1.1",
+    "A:1.3"
+   ],
+   "note": "两个来源都没有以“攻击面”为题的章节；CS161 1.1 Know your threat model 讲攻击者是谁、拥有什么资源、系统哪些部分可被接触，1.3 讲攻击者走最薄弱环节，这就是攻击面思想的落点。"
+  },
+  {
+   "topic": "风险管理",
+   "refs": [
+    "A:1.3",
+    "A:1.4"
+   ],
+   "note": "CS161 用“安全是经济学”给风险定价（投入与期望损失成比例、按最可信的最坏失败做保守设计），再用 1.4 的预防—检测—响应做风险处置；没有 NIST 那样的正式风险评估流程。"
+  },
+  {
+   "topic": "威胁建模",
+   "refs": [
+    "A:1.1"
+   ],
+   "note": "CS161 1.1 Know your threat model 给出威胁模型的定义与一组攻击者假设（可静默接触系统、有系统常识、有耐心且愿意投入、能跨系统组合攻击、任何系统都可能是目标）。"
+  }
+ ],
+ "omitted": "A 只收第 1 章 Security Principles；同书其余 38 章（x86 与内存安全、密码学、Web 安全、网络安全）分属 S.1.2、S.2.1、S.2.2 等节点，未收。B 只收 1.5 Definitions、第 3 章 Passwords、第 4 章 Access Controls；同书第 1 章其余小节（1.1–1.4 的银行/空军基地/医院/家庭案例、1.6 Summary）、第 2 章 Protocols、第 5 章 Cryptography 及后面的分布式系统、经济学、多级安全、物理安全等章节未收，因为它们分别属于密码学、协议与其他专题节点。",
+ "notes": "A 是 Berkeley CS 161 的在线教材，第 1 章在站内是 principles/principles.html，站点目录页（textbook.cs161.org）只列章名，所以分支与节号都取自 principles.html 里的页内标题。B 是 Anderson《Security Engineering》第 3 版，剑桥主页按章放单个 PDF，我实际打开的是 SE-01.pdf（第 1 章）、SE-03.pdf（第 3 章 Passwords）、SE-04.pdf（第 4 章 Access Controls），所以 toc_urls 是三个 PDF；B 的分支 ref 用原书章号（1.5、3、4）。B 第 3、4 章各只抄了到二级/部分三级小节（4.2.3、4.2.4、4.2.6、4.2.9 等平台细节与 4.3.1–4.3.4、4.4.1–4.4.6 更细的三级条目未列，避免与 S.2.1 系统安全节点重复）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 32,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

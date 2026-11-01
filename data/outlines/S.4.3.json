@@ -1,0 +1,541 @@
+{
+ "id": "S.4.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Malware Analysis - CSCI 4976 (RPISEC, Rensselaer Polytechnic Institute, Fall 2015)",
+   "by": "RPISEC (RPI Security) student group",
+   "year": 2015,
+   "url": "https://github.com/RPISEC/Malware",
+   "toc_urls": [
+    "https://github.com/RPISEC/Malware"
+   ],
+   "why": "节点现有英文资源本身就是这门课；README 里有成体系的 Lecture Breakdown（12 讲讲义标题 + 每讲主题）、Lab Breakdown 与 Project Breakdown，讲次正好覆盖静态/动态分析、x86 反汇编与 IDA、恶意行为、反分析、加壳与内核，属于课程逐讲目录。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software",
+   "by": "Michael Sikorski, Andrew Honig",
+   "year": 2012,
+   "url": "https://nostarch.com/malware",
+   "toc_urls": [
+    "https://nostarch.com/download/samples/practical-malware-analysis_toc.pdf"
+   ],
+   "why": "补两处课程只带过的地方：PE 文件结构（第 1 章 Portable Executable File Format / The PE File Headers and Sections，逐节讲 DOS 头、NT 头、节表、导入表、资源节）与检测特征（第 14 章 Malware-Focused Network Signatures，讲 Snort 规则与如何从样本里提炼签名）。这门课本来就是围绕这本书组织的，两者章节一一对得上。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "01",
+   "title": "Introduction",
+   "zh": "导论",
+   "items": [
+    {
+     "title": "Syllabus",
+     "zh": "课程大纲"
+    },
+    {
+     "title": "Basic Static Analysis",
+     "zh": "基础静态分析"
+    },
+    {
+     "title": "Basic Dynamic Analysis",
+     "zh": "基础动态分析"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "02",
+   "title": "Advanced Static Analysis",
+   "zh": "高级静态分析",
+   "items": [
+    {
+     "title": "x86",
+     "zh": "x86 体系结构"
+    },
+    {
+     "title": "IDA",
+     "zh": "IDA 反汇编器"
+    },
+    {
+     "title": "Code Constructs",
+     "zh": "C 代码结构的汇编识别"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "03",
+   "title": "Analyzing Windows Programs",
+   "zh": "分析 Windows 程序",
+   "items": [
+    {
+     "title": "WinAPI",
+     "zh": "Win32 API"
+    },
+    {
+     "title": "Handles",
+     "zh": "句柄"
+    },
+    {
+     "title": "Windows Internals",
+     "zh": "Windows 内部机制"
+    },
+    {
+     "title": "Networking",
+     "zh": "网络"
+    },
+    {
+     "title": "COM",
+     "zh": "组件对象模型 COM"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "04",
+   "title": "Advanced Dynamic Analysis",
+   "zh": "高级动态分析",
+   "items": [
+    {
+     "title": "Debugging Concepts and Tools",
+     "zh": "调试概念与工具"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "05",
+   "title": "Malware Behavior",
+   "zh": "恶意软件行为",
+   "items": [
+    {
+     "title": "Malicious Activities and Techniques",
+     "zh": "恶意活动与技术"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "06",
+   "title": "Data Encoding and Malware Countermeasures",
+   "zh": "数据编码与恶意软件对抗手段",
+   "items": [
+    {
+     "title": "Hiding Data",
+     "zh": "隐藏数据"
+    },
+    {
+     "title": "Malware Countermeasures",
+     "zh": "恶意软件的对抗措施"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "07",
+   "title": "Covert Malware Launching",
+   "zh": "隐蔽启动",
+   "items": [
+    {
+     "title": "Covert Launching and Execution",
+     "zh": "隐蔽启动与执行"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "08",
+   "title": "Anti-Analysis",
+   "zh": "反分析",
+   "items": [
+    {
+     "title": "Anti-Disassembly",
+     "zh": "反反汇编"
+    },
+    {
+     "title": "Anti-VM",
+     "zh": "反虚拟机"
+    },
+    {
+     "title": "Anti-Debugging",
+     "zh": "反调试"
+    },
+    {
+     "title": "Anti-AV",
+     "zh": "反杀毒软件"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "09",
+   "title": "Packing and Unpacking",
+   "zh": "加壳与脱壳",
+   "items": [
+    {
+     "title": "Packers",
+     "zh": "壳"
+    },
+    {
+     "title": "Packing",
+     "zh": "加壳"
+    },
+    {
+     "title": "Unpacking",
+     "zh": "脱壳"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Intro to Windows Kernel",
+   "zh": "Windows 内核入门",
+   "items": [
+    {
+     "title": "Kernel Basics",
+     "zh": "内核基础"
+    },
+    {
+     "title": "Windows Kernel API",
+     "zh": "Windows 内核 API"
+    },
+    {
+     "title": "Windows Drivers",
+     "zh": "Windows 驱动"
+    },
+    {
+     "title": "Kernel Debugging",
+     "zh": "内核调试"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Rootkit Techniques",
+   "zh": "Rootkit 技术",
+   "items": [
+    {
+     "title": "Hooking",
+     "zh": "钩子"
+    },
+    {
+     "title": "Patching",
+     "zh": "打补丁"
+    },
+    {
+     "title": "Direct Kernel Object Manipulation",
+     "zh": "直接内核对象操作"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Rootkit Anti-Forensics and Covert Channels",
+   "zh": "Rootkit 反取证与隐蔽信道",
+   "items": [
+    {
+     "title": "Anti-forensics",
+     "zh": "反取证"
+    },
+    {
+     "title": "Covert Channels",
+     "zh": "隐蔽信道"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Lab",
+   "title": "Lab Breakdown",
+   "zh": "实验清单",
+   "items": [
+    {
+     "title": "Basic Analysis",
+     "zh": "基础分析"
+    },
+    {
+     "title": "Advanced Static Analysis",
+     "zh": "高级静态分析"
+    },
+    {
+     "title": "Analyzing Windows Programs",
+     "zh": "分析 Windows 程序"
+    },
+    {
+     "title": "Advanced Dynamic Analysis",
+     "zh": "高级动态分析"
+    },
+    {
+     "title": "Malware Behavior",
+     "zh": "恶意软件行为"
+    },
+    {
+     "title": "Data Encoding and Malware Countermeasures",
+     "zh": "数据编码与恶意软件对抗手段"
+    },
+    {
+     "title": "Covert Malware Launching",
+     "zh": "隐蔽启动"
+    },
+    {
+     "title": "Anti Analysis",
+     "zh": "反分析"
+    },
+    {
+     "title": "Packing and Unpacking",
+     "zh": "加壳与脱壳"
+    },
+    {
+     "title": "Windows Kernel",
+     "zh": "Windows 内核"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "BASIC STATIC TECHNIQUES",
+   "zh": "基础静态分析技术",
+   "fill": "二进制结构：PE 文件格式、PE 头与节表，课程只在 01 讲里带过，这里按书里的节补齐",
+   "items": [
+    {
+     "title": "Antivirus Scanning: A Useful First Step",
+     "zh": "杀毒扫描：有用的第一步"
+    },
+    {
+     "title": "Hashing: A Fingerprint for Malware",
+     "zh": "哈希：恶意软件指纹"
+    },
+    {
+     "title": "Finding Strings",
+     "zh": "查找字符串"
+    },
+    {
+     "title": "Packed and Obfuscated Malware",
+     "zh": "加壳与混淆的恶意软件",
+     "items": [
+      {
+       "title": "Packing Files",
+       "zh": "给文件加壳"
+      },
+      {
+       "title": "Detecting Packers with PEiD",
+       "zh": "用 PEiD 识别壳"
+      }
+     ]
+    },
+    {
+     "title": "Portable Executable File Format",
+     "zh": "PE 可执行文件格式"
+    },
+    {
+     "title": "Linked Libraries and Functions",
+     "zh": "链接的库与函数",
+     "items": [
+      {
+       "title": "Static, Runtime, and Dynamic Linking",
+       "zh": "静态链接、运行时链接与动态链接"
+      },
+      {
+       "title": "Exploring Dynamically Linked Functions with Dependency Walker",
+       "zh": "用 Dependency Walker 查看动态链接函数"
+      },
+      {
+       "title": "Imported Functions",
+       "zh": "导入函数"
+      },
+      {
+       "title": "Exported Functions",
+       "zh": "导出函数"
+      }
+     ]
+    },
+    {
+     "title": "Static Analysis in Practice",
+     "zh": "静态分析实战",
+     "items": [
+      {
+       "title": "PotentialKeylogger.exe: An Unpacked Executable",
+       "zh": "PotentialKeylogger.exe：一个未加壳的可执行文件"
+      },
+      {
+       "title": "PackedProgram.exe: A Dead End",
+       "zh": "PackedProgram.exe：一条死路"
+      }
+     ]
+    },
+    {
+     "title": "The PE File Headers and Sections",
+     "zh": "PE 文件头与节",
+     "items": [
+      {
+       "title": "Examining PE Files with PEview",
+       "zh": "用 PEview 查看 PE 文件"
+      },
+      {
+       "title": "Viewing the Resource Section with Resource Hacker",
+       "zh": "用 Resource Hacker 查看资源节"
+      },
+      {
+       "title": "Using Other PE File Tools",
+       "zh": "使用其他 PE 文件工具"
+      },
+      {
+       "title": "PE Header Summary",
+       "zh": "PE 头速查"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "14",
+   "title": "MALWARE-FOCUSED NETWORK SIGNATURES",
+   "zh": "面向恶意软件的网络签名",
+   "fill": "检测特征：课程 08 讲只讲怎么躲检测（Anti-AV），这里补怎么写网络侧签名（Snort 规则、从样本提炼特征）",
+   "items": [
+    {
+     "title": "Network Countermeasures",
+     "zh": "网络侧对抗措施",
+     "items": [
+      {
+       "title": "Observing the Malware in Its Natural Habitat",
+       "zh": "在自然环境中观测恶意软件"
+      },
+      {
+       "title": "Indications of Malicious Activity",
+       "zh": "恶意活动的迹象"
+      },
+      {
+       "title": "OPSEC = Operations Security",
+       "zh": "OPSEC：作战安全"
+      }
+     ]
+    },
+    {
+     "title": "Safely Investigate an Attacker Online",
+     "zh": "安全地在线调查攻击者",
+     "items": [
+      {
+       "title": "Indirection Tactics",
+       "zh": "间接化策略"
+      },
+      {
+       "title": "Getting IP Address and Domain Information",
+       "zh": "获取 IP 地址与域名信息"
+      }
+     ]
+    },
+    {
+     "title": "Content-Based Network Countermeasures",
+     "zh": "基于内容的网络对抗措施",
+     "items": [
+      {
+       "title": "Intrusion Detection with Snort",
+       "zh": "用 Snort 做入侵检测"
+      },
+      {
+       "title": "Taking a Deeper Look",
+       "zh": "更进一步"
+      }
+     ]
+    },
+    {
+     "title": "Combining Dynamic and Static Analysis Techniques",
+     "zh": "结合动态与静态分析",
+     "items": [
+      {
+       "title": "Hiding in Plain Sight",
+       "zh": "藏在明处"
+      },
+      {
+       "title": "Understanding Surrounding Code",
+       "zh": "理解周边代码"
+      },
+      {
+       "title": "Finding the Networking Code",
+       "zh": "定位网络相关代码"
+      },
+      {
+       "title": "Knowing the Sources of Network Content",
+       "zh": "弄清网络内容的来源"
+      },
+      {
+       "title": "Hard-Coded Data vs. Ephemeral Data",
+       "zh": "硬编码数据与瞬态数据"
+      },
+      {
+       "title": "Identifying and Leveraging the Encoding Steps",
+       "zh": "识别并利用编码步骤"
+      },
+      {
+       "title": "Creating a Signature",
+       "zh": "编写签名"
+      },
+      {
+       "title": "Analyze the Parsing Routines",
+       "zh": "分析解析例程"
+      },
+      {
+       "title": "Targeting Multiple Elements",
+       "zh": "同时针对多个要素"
+      }
+     ]
+    },
+    {
+     "title": "Understanding the Attacker's Perspective",
+     "zh": "理解攻击者视角"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "二进制结构",
+   "refs": [
+    "B:1",
+    "A:01"
+   ]
+  },
+  {
+   "topic": "行为分析",
+   "refs": [
+    "A:05",
+    "A:03",
+    "A:#13"
+   ]
+  },
+  {
+   "topic": "反汇编",
+   "refs": [
+    "A:02",
+    "A:08"
+   ]
+  },
+  {
+   "topic": "动态观测与检测特征",
+   "refs": [
+    "A:04",
+    "A:01",
+    "B:14"
+   ]
+  }
+ ],
+ "omitted": "A（课程）的 12 讲、10 个实验全部收录；B（Practical Malware Analysis）只收第 1 章（PE 格式与静态分析）和第 14 章（网络签名），其余章（第 2–13 章虚拟机与基础动态分析、x86 速成与 IDA、调试与 OllyDbg/WinDbg、恶意行为、隐蔽启动、数据编码、第 15–21 章反汇编/反调试/反虚拟机/加壳/shellcode/C++/64 位）与课程讲次重复，避免同一主题抄两遍。",
+ "notes": "课程 README 的讲次表只有“讲次 | 标题 | 主题”三列，主题是一行逗号分隔的关键词，我按逗号拆成 items；讲次编号（01–12）取自原表第一列。补充来源 B 的章标题在 PDF 里是大写，照抄未改。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 98,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

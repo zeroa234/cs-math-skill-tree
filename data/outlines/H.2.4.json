@@ -1,0 +1,195 @@
+{
+ "id": "H.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "6.374 Analysis and Design of Digital Integrated Circuits",
+   "by": "MIT OpenCourseWare (Prof. Anantha Chandrakasan)",
+   "year": 2003,
+   "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/"
+   ],
+   "why": "节点“现有英文学习资源”里的那门课，讲义逐讲列表正好铺开 CMOS 数字设计的层次：MOS 器件与反相器（VTC、传播延迟、功耗）→ 组合逻辑族（静态/比率/传输门/动态，logical effort 尺寸优化）→ 时序电路与时钟 → 互连与时钟分布 → 测试；研究层级，适配 D2–D4。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture 1",
+   "title": "Challenges in Digital IC Design",
+   "zh": "数字 IC 设计的挑战",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 2",
+   "title": "CMOS Inverter I",
+   "zh": "CMOS 反相器（一）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 3",
+   "title": "CMOS Inverter II",
+   "zh": "CMOS 反相器（二）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 4",
+   "title": "CMOS Inverter III",
+   "zh": "CMOS 反相器（三）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 5",
+   "title": "Combinational Logic I",
+   "zh": "组合逻辑（一）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 6",
+   "title": "Combinational Logic II",
+   "zh": "组合逻辑（二）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 7",
+   "title": "Combinational Logic III",
+   "zh": "组合逻辑（三）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 8",
+   "title": "Combinational Logic IV",
+   "zh": "组合逻辑（四）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 9",
+   "title": "Arithmetic Structures / Bit Slice Design",
+   "zh": "算术结构与位片设计",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 12",
+   "title": "Sequential Circuits I",
+   "zh": "时序电路（一）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 13",
+   "title": "Sequential Circuits II",
+   "zh": "时序电路（二）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 14",
+   "title": "Sequential Circuits: III",
+   "zh": "时序电路（三）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 15",
+   "title": "Interconnect",
+   "zh": "互连",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 16",
+   "title": "Interconnect (cont.)",
+   "zh": "互连（续）",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 17",
+   "title": "Clock Distribution",
+   "zh": "时钟分布",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 22",
+   "title": "Testing in VLSI",
+   "zh": "VLSI 测试",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "CMOS数字设计",
+   "refs": [
+    "A:Lecture 2",
+    "A:Lecture 5",
+    "A:Lecture 6",
+    "A:Lecture 7"
+   ]
+  },
+  {
+   "topic": "标准单元",
+   "refs": [
+    "A:Lecture 8"
+   ],
+   "note": "6.374 没有专门的“标准单元库”章，最接近的是第 8 讲的 Logical Effort Sizing（门尺寸优化，以标准单元为基本单位）；标准单元的版图与表征需另找物理设计资料。"
+  },
+  {
+   "topic": "时序",
+   "refs": [
+    "A:Lecture 3",
+    "A:Lecture 4",
+    "A:Lecture 13",
+    "A:Lecture 14",
+    "A:Lecture 16"
+   ]
+  },
+  {
+   "topic": "功耗",
+   "refs": [
+    "A:Lecture 7",
+    "A:Lecture 8"
+   ]
+  },
+  {
+   "topic": "面积",
+   "refs": [
+    "A:Lecture 8",
+    "A:Lecture 9"
+   ]
+  },
+  {
+   "topic": "物理设计",
+   "refs": [
+    "A:Lecture 9",
+    "A:Lecture 15",
+    "A:Lecture 17"
+   ]
+  },
+  {
+   "topic": "测试",
+   "refs": [
+    "A:Lecture 22"
+   ]
+  }
+ ],
+ "omitted": "6.374 的 L10（晚间项目选题）、L11（集成 CMOS 工艺客座讲，本批放在 H.2.5）、L18–L20（ROM/EPROM/PLA、SRAM、DRAM 存储器设计）、L21（电压缩放与 DC-DC）与节点简介的“CMOS 数字设计—标准单元—时序/功耗/面积—物理设计与测试”主线关系较远，未收；各讲的章号、习题与项目说明也未收。",
+ "notes": "目录抄自 OCW Lecture Notes 的 LEC/TOPICS 表：一个单元里有几行子主题时，取每讲的首行主题作为标题（如第 22 讲的 Testing in VLSI），其余子主题（Defects, Fault Models, Path Sensitization, Scan, Built-in-self Test, IDDQ）留在原页未逐条收。6.374 是研究生课，正合 D2–D4 的深度。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 16,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,299 @@
+{
+ "id": "S.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "Kubernetes Documentation · Security",
+   "by": "Kubernetes Authors (CNCF)",
+   "year": 2026,
+   "url": "https://kubernetes.io/docs/concepts/security/",
+   "toc_urls": [
+    "https://kubernetes.io/docs/concepts/security/",
+    "https://kubernetes.io/docs/concepts/security/cloud-native-security/"
+   ],
+   "why": "节点现有英文资源就是这一节；官方 Security 目录按“云原生安全总览—Pod 安全标准与准入—服务账号与 API 访问控制—Secrets 实践—多租户—API Server 绕过风险—审计”组织，恰好覆盖多租户、身份权限、控制平面、编排、配置与云审计，是这一块的一手权威文档。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "NIST SP 800-190, Application Container Security Guide",
+   "by": "Murugiah Souppaya, John Morello, Karen Scarfone (NIST)",
+   "year": 2017,
+   "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-190.pdf"
+   ],
+   "why": "补容器镜像这一层：K8s 文档只在“分发阶段”一段里提到镜像扫描与私有仓库，NIST 这份指南用专门章节把镜像、注册表、编排器、容器、宿主机的风险与对策逐类列开，是镜像与编排安全的权威基线。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Cloud Native Security",
+   "zh": "云原生安全总览",
+   "items": [
+    {
+     "ref": "",
+     "title": "Cloud native information security",
+     "zh": "云原生信息安全"
+    },
+    {
+     "ref": "",
+     "title": "Develop lifecycle phase",
+     "zh": "开发生命周期阶段"
+    },
+    {
+     "ref": "",
+     "title": "Distribute lifecycle phase",
+     "zh": "分发生命周期阶段"
+    },
+    {
+     "ref": "",
+     "title": "Deploy lifecycle phase",
+     "zh": "部署生命周期阶段"
+    },
+    {
+     "ref": "",
+     "title": "Runtime lifecycle phase",
+     "zh": "运行生命周期阶段"
+    },
+    {
+     "ref": "",
+     "title": "Runtime protection: access",
+     "zh": "运行保护：访问"
+    },
+    {
+     "ref": "",
+     "title": "Runtime protection: compute",
+     "zh": "运行保护：计算"
+    },
+    {
+     "ref": "",
+     "title": "Runtime protection: storage",
+     "zh": "运行保护：存储"
+    },
+    {
+     "ref": "",
+     "title": "Networking and security",
+     "zh": "网络与安全"
+    },
+    {
+     "ref": "",
+     "title": "Observability and runtime security",
+     "zh": "可观测性与运行时安全"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Pod Security Standards",
+   "zh": "Pod 安全标准",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Pod Security Admission",
+   "zh": "Pod 安全准入",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Service Accounts",
+   "zh": "服务账号",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Controlling Access to the Kubernetes API",
+   "zh": "Kubernetes API 的访问控制",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Role Based Access Control Good Practices",
+   "zh": "基于角色的访问控制实践",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Good practices for Kubernetes Secrets",
+   "zh": "Kubernetes Secret 的实践建议",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Multi-tenancy",
+   "zh": "多租户",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Kubernetes API Server Bypass Risks",
+   "zh": "Kubernetes API Server 绕过风险",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Auditing",
+   "zh": "审计",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Major Risks for Core Components of Container Technologies",
+   "zh": "容器技术核心组件的主要风险",
+   "fill": "镜像与镜像仓库：镜像来源、签名与私仓拉取的风险面（K8s 文档只在分发阶段一段里提及）",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Image Risks",
+     "zh": "镜像风险"
+    },
+    {
+     "ref": "3.2",
+     "title": "Registry Risks",
+     "zh": "镜像仓库风险"
+    },
+    {
+     "ref": "3.3",
+     "title": "Orchestrator Risks",
+     "zh": "编排器风险"
+    },
+    {
+     "ref": "3.4",
+     "title": "Container Risks",
+     "zh": "容器风险"
+    },
+    {
+     "ref": "3.5",
+     "title": "Host OS Risks",
+     "zh": "宿主机操作系统风险"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Countermeasures for Major Risks",
+   "zh": "主要风险的应对措施",
+   "fill": "镜像与编排的对策：镜像扫描/签名、私仓与访问控制、编排器配置与加固",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Image Countermeasures",
+     "zh": "镜像对策"
+    },
+    {
+     "ref": "4.2",
+     "title": "Registry Countermeasures",
+     "zh": "镜像仓库对策"
+    },
+    {
+     "ref": "4.3",
+     "title": "Orchestrator Countermeasures",
+     "zh": "编排器对策"
+    },
+    {
+     "ref": "4.4",
+     "title": "Container Countermeasures",
+     "zh": "容器对策"
+    },
+    {
+     "ref": "4.5",
+     "title": "Host OS Countermeasures",
+     "zh": "宿主机操作系统对策"
+    },
+    {
+     "ref": "4.6",
+     "title": "Hardware Countermeasures",
+     "zh": "硬件对策"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "多租户",
+   "refs": [
+    "A:#8",
+    "A:#1"
+   ],
+   "note": "A 有独立的 Multi-tenancy 页（按软/硬多租户列隔离手段与反模式）；A:#1 的“部署阶段”一段讲用 namespace 与容器做隔离。"
+  },
+  {
+   "topic": "身份权限",
+   "refs": [
+    "A:#4",
+    "A:#5",
+    "A:#6"
+   ],
+   "note": "A 用三项把身份与权限讲全：Service Accounts 给工作负载发身份，Controlling Access to the Kubernetes API 讲认证—授权—准入的链路，RBAC Good Practices 讲角色与绑定怎么最小化。"
+  },
+  {
+   "topic": "控制平面",
+   "refs": [
+    "A:#9",
+    "A:#1",
+    "A:#10"
+   ],
+   "note": "控制平面的风险在 A 的 Kubernetes API Server Bypass Risks 单列（绕过 API Server 直连 kubelet/etcd 等路径），A:#1 的“运行保护：访问”讲 API 必须走 TLS、密钥与 CSR 要收紧。"
+  },
+  {
+   "topic": "镜像",
+   "refs": [
+    "B:3.1",
+    "B:3.2",
+    "B:4.1",
+    "B:4.2",
+    "A:#1"
+   ],
+   "note": "镜像与镜像仓库的风险/对策由 B 的 3.1、3.2、4.1、4.2 完整覆盖；A 只在“分发阶段”一段提到镜像扫描、私有仓库与供应链签名。"
+  },
+  {
+   "topic": "编排",
+   "refs": [
+    "A:#2",
+    "A:#3",
+    "B:3.3",
+    "B:4.3"
+   ],
+   "note": "编排层在 A 侧是 Pod 安全标准与准入控制器（限制 Pod 能拿到的权限），在 B 侧是编排器风险与对策两节。"
+  },
+  {
+   "topic": "配置",
+   "refs": [
+    "A:#7",
+    "A:#1"
+   ],
+   "note": "配置安全以 Secrets 实践为主（A 单列一页讲 etcd 加密、Secret 的访问与轮换），A:#1 的“运行保护：计算/存储”讲 Pod 安全上下文与存储加密。"
+  },
+  {
+   "topic": "云审计",
+   "refs": [
+    "A:#10",
+    "A:#1"
+   ],
+   "note": "A 有独立的 Auditing 页（审计策略、审计级别、日志后端）；A:#1 的“可观测性与运行时安全”讲日志、指标与运行时检测的分工。"
+  }
+ ],
+ "omitted": "A 只收 Security 概念目录下与本节点知识点直接对应的 10 项（Cloud Native Security、Pod Security Standards、Pod Security Admission、Service Accounts、Controlling Access to the Kubernetes API、RBAC Good Practices、Secrets 实践、Multi-tenancy、API Server 绕过风险、Auditing）；未收 Pod Security Policies（已废弃）、Security For Linux Nodes/Windows Nodes、Hardening Guide 系列（认证机制、DRA、调度器）、Linux kernel security constraints、Security Checklist、Application Security Checklist，它们是把上述要求落到具体配置的清单或某一发行版细节。B 只收第 3、4 章（风险与对策），未收第 2 章容器技术导论、第 5 章威胁场景实例、第 6 章生命周期安全与第 7 章结论。",
+ "notes": "A 是官方文档而非教材，分支就是文档页面、item 是该页内的二级标题；K8s 站点导航在每页都有，所以 toc_urls 用 Security 索引页与 Cloud Native Security 页两个就够了（“Auditing”与“Controlling Access to the Kubernetes API”等页面标题都出现在这两页的导航里）。A 的各分支在原文里没有编号（都是文档页面），ref 全部留空，coverage 里一律用分支序号引用：A:#1 Cloud Native Security、#2 Pod Security Standards、#3 Pod Security Admission、#4 Service Accounts、#5 Controlling Access to the Kubernetes API、#6 RBAC Good Practices、#7 Secrets 实践、#8 Multi-tenancy、#9 API Server 绕过风险、#10 Auditing。B 的 3.3/4.3 编排器两节与 A 的 Pod 安全系列互补，故 3、4 两章整章收入而不是只收镜像小节。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 33,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

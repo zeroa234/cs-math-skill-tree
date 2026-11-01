@@ -1,0 +1,527 @@
+{
+ "id": "P.2.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Java Programming MOOC",
+   "by": "University of Helsinki (Agile Education Research)",
+   "url": "https://java-programming.mooc.fi/",
+   "toc_urls": [
+    "https://java-programming.mooc.fi/",
+    "https://java-programming.mooc.fi/part-1/",
+    "https://java-programming.mooc.fi/part-2/",
+    "https://java-programming.mooc.fi/part-3/",
+    "https://java-programming.mooc.fi/part-4/",
+    "https://java-programming.mooc.fi/part-5/",
+    "https://java-programming.mooc.fi/part-6/",
+    "https://java-programming.mooc.fi/part-8/",
+    "https://java-programming.mooc.fi/part-9/",
+    "https://java-programming.mooc.fi/part-10/",
+    "https://java-programming.mooc.fi/part-11/",
+    "https://java-programming.mooc.fi/part-12/"
+   ],
+   "why": "节点现有英文资源就是这门课；14 个 part 每个都列出本章主题（类型与变量、类与对象、集合、继承与接口、异常、文件、类型参数），与节点简介逐条对应，且与赫尔辛基大学 CS1/高级编程课的正式内容同源。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Lesson: Concurrency (The Java Tutorials)",
+   "by": "Oracle",
+   "year": 2024,
+   "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/",
+   "toc_urls": [
+    "https://docs.oracle.com/javase/tutorial/essential/concurrency/"
+   ],
+   "why": "补“并发基础”：MOOC 前 12 个 part 只到 GUI 与类型参数，不讲线程；Java 官方教程的并发一课按“进程与线程 → 同步 → 活跃性 → 高层并发对象”组织，是 Java 并发的最小完整目录。"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "Introduction to the Build Lifecycle",
+   "by": "Apache Maven project",
+   "year": 2026,
+   "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html",
+   "toc_urls": [
+    "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"
+   ],
+   "why": "补“构建工具”：MOOC 全程用 IDE 的 TMC 插件交作业，不讲构建工具；Maven 官方这份指南讲清生命周期、阶段、插件目标与绑定，正是 Maven/Gradle 这类工具的共同心智模型。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Java Programming I",
+   "zh": "Java 编程 I",
+   "items": [
+    {
+     "ref": "Part 1",
+     "title": "Part 1",
+     "zh": "第 1 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Getting started with programming",
+       "zh": "开始编程"
+      },
+      {
+       "ref": "2",
+       "title": "Printing",
+       "zh": "打印输出"
+      },
+      {
+       "ref": "3",
+       "title": "Reading input",
+       "zh": "读取输入"
+      },
+      {
+       "ref": "4",
+       "title": "Variables",
+       "zh": "变量"
+      },
+      {
+       "ref": "5",
+       "title": "Calculating with numbers",
+       "zh": "数值计算"
+      },
+      {
+       "ref": "6",
+       "title": "Conditional statements and conditional operation",
+       "zh": "条件语句与条件运算"
+      }
+     ]
+    },
+    {
+     "ref": "Part 2",
+     "title": "Part 2",
+     "zh": "第 2 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Recurring problems and patterns to solve them",
+       "zh": "重复出现的问题及其解法套路"
+      },
+      {
+       "ref": "2",
+       "title": "Repeating functionality",
+       "zh": "重复执行的功能"
+      },
+      {
+       "ref": "3",
+       "title": "More loops",
+       "zh": "更多循环"
+      },
+      {
+       "ref": "4",
+       "title": "Methods and dividing the program into smaller parts",
+       "zh": "方法与把程序拆成小块"
+      }
+     ]
+    },
+    {
+     "ref": "Part 3",
+     "title": "Part 3",
+     "zh": "第 3 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Discovering errors",
+       "zh": "发现错误"
+      },
+      {
+       "ref": "2",
+       "title": "Lists",
+       "zh": "列表"
+      },
+      {
+       "ref": "3",
+       "title": "Arrays",
+       "zh": "数组"
+      },
+      {
+       "ref": "4",
+       "title": "Using strings",
+       "zh": "使用字符串"
+      }
+     ]
+    },
+    {
+     "ref": "Part 4",
+     "title": "Part 4",
+     "zh": "第 4 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Introduction to object-oriented programming",
+       "zh": "面向对象编程入门"
+      },
+      {
+       "ref": "2",
+       "title": "Objects in a list",
+       "zh": "列表中的对象"
+      },
+      {
+       "ref": "3",
+       "title": "Files and reading data",
+       "zh": "文件与读取数据"
+      }
+     ]
+    },
+    {
+     "ref": "Part 5",
+     "title": "Part 5",
+     "zh": "第 5 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Learning object-oriented programming",
+       "zh": "学习面向对象编程"
+      },
+      {
+       "ref": "2",
+       "title": "Removing repetitive code (overloading methods and constructors)",
+       "zh": "消除重复代码（重载方法与构造器）"
+      },
+      {
+       "ref": "3",
+       "title": "Primitive and reference variables",
+       "zh": "基本类型变量与引用变量"
+      },
+      {
+       "ref": "4",
+       "title": "Objects and references",
+       "zh": "对象与引用"
+      }
+     ]
+    },
+    {
+     "ref": "Part 6",
+     "title": "Part 6",
+     "zh": "第 6 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Objects on a list and a list as part of an object",
+       "zh": "列表中的对象与作为对象组成部分的列表"
+      },
+      {
+       "ref": "2",
+       "title": "Separating the user interface from program logic",
+       "zh": "把用户界面与程序逻辑分开"
+      },
+      {
+       "ref": "3",
+       "title": "Introduction to testing",
+       "zh": "测试入门"
+      },
+      {
+       "ref": "4",
+       "title": "Complex programs",
+       "zh": "更复杂的程序"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Java Programming II",
+   "zh": "Java 编程 II",
+   "items": [
+    {
+     "ref": "Part 8",
+     "title": "Part 8",
+     "zh": "第 8 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Short recap",
+       "zh": "简要回顾"
+      },
+      {
+       "ref": "2",
+       "title": "Hash Map",
+       "zh": "哈希表"
+      },
+      {
+       "ref": "3",
+       "title": "Similarity of objects",
+       "zh": "对象的相似性"
+      },
+      {
+       "ref": "4",
+       "title": "Grouping data using hash maps",
+       "zh": "用哈希表对数据分组"
+      },
+      {
+       "ref": "5",
+       "title": "Fast data fetching and grouping information",
+       "zh": "快速取数与分组信息"
+      }
+     ]
+    },
+    {
+     "ref": "Part 9",
+     "title": "Part 9",
+     "zh": "第 9 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Class inheritance",
+       "zh": "类继承"
+      },
+      {
+       "ref": "2",
+       "title": "Interfaces",
+       "zh": "接口"
+      },
+      {
+       "ref": "3",
+       "title": "Object polymorphism",
+       "zh": "对象多态"
+      }
+     ]
+    },
+    {
+     "ref": "Part 10",
+     "title": "Part 10",
+     "zh": "第 10 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Handling collections as streams",
+       "zh": "以流的方式处理集合"
+      },
+      {
+       "ref": "2",
+       "title": "The Comparable Interface",
+       "zh": "Comparable 接口"
+      },
+      {
+       "ref": "3",
+       "title": "Other useful techniques",
+       "zh": "其他实用技巧"
+      }
+     ]
+    },
+    {
+     "ref": "Part 11",
+     "title": "Part 11",
+     "zh": "第 11 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Class diagrams",
+       "zh": "类图"
+      },
+      {
+       "ref": "2",
+       "title": "Packages",
+       "zh": "包"
+      },
+      {
+       "ref": "3",
+       "title": "Exceptions",
+       "zh": "异常"
+      },
+      {
+       "ref": "4",
+       "title": "Processing files",
+       "zh": "处理文件"
+      }
+     ]
+    },
+    {
+     "ref": "Part 12",
+     "title": "Part 12",
+     "zh": "第 12 部分",
+     "items": [
+      {
+       "ref": "1",
+       "title": "Type parameters",
+       "zh": "类型参数"
+      },
+      {
+       "ref": "2",
+       "title": "ArrayList and hash table",
+       "zh": "ArrayList 与哈希表"
+      },
+      {
+       "ref": "3",
+       "title": "Randomness",
+       "zh": "随机性"
+      },
+      {
+       "ref": "4",
+       "title": "Multidimensional data",
+       "zh": "多维数据"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Concurrency",
+   "zh": "并发",
+   "fill": "并发基础：进程与线程、线程的创建/睡眠/中断/汇合、同步与线程干扰、活跃性、线程池等高层并发对象",
+   "items": [
+    {
+     "ref": "",
+     "title": "Processes and Threads",
+     "zh": "进程与线程"
+    },
+    {
+     "ref": "",
+     "title": "Defining and Starting a Thread",
+     "zh": "定义并启动线程"
+    },
+    {
+     "ref": "",
+     "title": "Interrupts",
+     "zh": "中断"
+    },
+    {
+     "ref": "",
+     "title": "Joins",
+     "zh": "线程汇合"
+    },
+    {
+     "ref": "",
+     "title": "Synchronization",
+     "zh": "同步"
+    },
+    {
+     "ref": "",
+     "title": "Thread Interference",
+     "zh": "线程干扰"
+    },
+    {
+     "ref": "",
+     "title": "Synchronized Methods",
+     "zh": "同步方法"
+    },
+    {
+     "ref": "",
+     "title": "Liveness",
+     "zh": "活跃性"
+    },
+    {
+     "ref": "",
+     "title": "Deadlock",
+     "zh": "死锁"
+    },
+    {
+     "ref": "",
+     "title": "High Level Concurrency Objects",
+     "zh": "高层并发对象"
+    },
+    {
+     "ref": "",
+     "title": "Thread Pools",
+     "zh": "线程池"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Introduction to the Build Lifecycle",
+   "zh": "构建生命周期导论",
+   "fill": "构建工具：构建生命周期、阶段、插件目标与阶段绑定，理解 mvn/gradle 命令如何驱动编译、测试、打包、部署",
+   "items": [
+    {
+     "ref": "",
+     "title": "Build Lifecycle Basics",
+     "zh": "构建生命周期基础"
+    },
+    {
+     "ref": "",
+     "title": "A Build Lifecycle is Made Up of Phases",
+     "zh": "生命周期由阶段组成"
+    },
+    {
+     "ref": "",
+     "title": "Usual Command Line Calls",
+     "zh": "常见命令行调用"
+    },
+    {
+     "ref": "",
+     "title": "A Build Phase is Made Up of Plugin Goals",
+     "zh": "构建阶段由插件目标组成"
+    },
+    {
+     "ref": "",
+     "title": "Built-in Lifecycle Bindings",
+     "zh": "内置的生命周期绑定"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "类型",
+   "refs": [
+    "A:Part 1",
+    "A:Part 5",
+    "A:Part 12"
+   ]
+  },
+  {
+   "topic": "类与接口",
+   "refs": [
+    "A:Part 4",
+    "A:Part 5",
+    "A:Part 9",
+    "A:Part 11"
+   ]
+  },
+  {
+   "topic": "集合",
+   "refs": [
+    "A:Part 3",
+    "A:Part 8",
+    "A:Part 10",
+    "A:Part 12"
+   ]
+  },
+  {
+   "topic": "异常",
+   "refs": [
+    "A:Part 11",
+    "A:Part 3"
+   ]
+  },
+  {
+   "topic": "I/O",
+   "refs": [
+    "A:Part 1",
+    "A:Part 4",
+    "A:Part 11"
+   ]
+  },
+  {
+   "topic": "并发基础",
+   "refs": [
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "构建工具",
+   "refs": [
+    "C:#1"
+   ]
+  }
+ ],
+ "omitted": "MOOC 里没收：Part 7（Programming paradigms、Algorithms、Larger programming exercises，属算法与范式节点）、Part 13 与 Part 14（Swing/JavaFX 图形界面），以及各部分里的 End questionnaire / Summary / Conclusion 等行政性小节。Java 教程只取了并发一课，同一 trail 的 “The try-with-resources Statement”“Basic I/O” 等未收；Maven 只取了生命周期这一篇，POM、依赖机制、插件配置等未收。",
+ "notes": "MOOC 的 part 内小节编号在每个 part 内从 1 重新开始，所以 items 的 ref 直接抄原编号（会跨 part 重复），引用时请按 “Part N” 层级定位；“Java Programming I/II” 两级是 MOOC 自己的课程划分（Part 1–7 / Part 8–14）。构建工具只给了 Maven 的生命周期模型，没有 Gradle 的目录。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 75,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

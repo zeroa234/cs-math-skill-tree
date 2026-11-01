@@ -1,0 +1,430 @@
+{
+ "id": "V.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Fundamentals of Data Visualization",
+   "by": "Claus O. Wilke",
+   "year": 2019,
+   "url": "https://clauswilke.com/dataviz/",
+   "toc_urls": [
+    "https://clauswilke.com/dataviz/"
+   ],
+   "why": "节点现有英文资源就是作者主页上的开放全书（O'Reilly 2019，作者提供完整原稿），首页即分部分、分章、分节的完整目录；2 章讲数据到视觉通道的映射（数据类型），3–5 章讲坐标轴、色标与图表类型目录（编码与图表选择），17–19、26 章专讲常见错误（读图误差），21、23 章讲多面板与图文配比（布局），正好逐点对上节点简介。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Visualization Analysis and Design",
+   "by": "Tamara Munzner",
+   "year": 2015,
+   "url": "https://www.cs.ubc.ca/~tmm/vadbook/",
+   "toc_urls": [
+    "https://www.routledge.com/Visualization-Analysis-and-Design/Munzner/p/book/9781466508910"
+   ],
+   "why": "补“交互”知识点：Wilke 的书只讨论静态图表，没有交互章节；Munzner 第 11 章讲改变视图（改变时间、选择元素、导航）与第 12 章讲多视图协调。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Visualizing data: Mapping data onto aesthetics",
+   "zh": "数据可视化：把数据映射到视觉通道",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Aesthetics and types of data",
+     "zh": "视觉通道与数据类型"
+    },
+    {
+     "ref": "2.2",
+     "title": "Scales map data values onto aesthetics",
+     "zh": "标度把数据值映射到视觉通道"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Coordinate systems and axes",
+   "zh": "坐标系与坐标轴",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Cartesian coordinates",
+     "zh": "笛卡尔坐标"
+    },
+    {
+     "ref": "3.2",
+     "title": "Nonlinear axes",
+     "zh": "非线性坐标轴"
+    },
+    {
+     "ref": "3.3",
+     "title": "Coordinate systems with curved axes",
+     "zh": "坐标轴为曲线的坐标系"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Color scales",
+   "zh": "色标",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Color as a tool to distinguish",
+     "zh": "用颜色区分"
+    },
+    {
+     "ref": "4.2",
+     "title": "Color to represent data values",
+     "zh": "用颜色表示数据值"
+    },
+    {
+     "ref": "4.3",
+     "title": "Color as a tool to highlight",
+     "zh": "用颜色突出"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Directory of visualizations",
+   "zh": "可视化图表目录",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Amounts",
+     "zh": "数量"
+    },
+    {
+     "ref": "5.2",
+     "title": "Distributions",
+     "zh": "分布"
+    },
+    {
+     "ref": "5.3",
+     "title": "Proportions",
+     "zh": "占比"
+    },
+    {
+     "ref": "5.4",
+     "title": "x–y relationships",
+     "zh": "x–y 关系"
+    },
+    {
+     "ref": "5.5",
+     "title": "Geospatial data",
+     "zh": "地理空间数据"
+    },
+    {
+     "ref": "5.6",
+     "title": "Uncertainty",
+     "zh": "不确定性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Visualizing associations among two or more quantitative variables",
+   "zh": "两个及以上定量变量之间关联的可视化",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Scatter plots",
+     "zh": "散点图"
+    },
+    {
+     "ref": "12.2",
+     "title": "Correlograms",
+     "zh": "相关图矩阵"
+    },
+    {
+     "ref": "12.3",
+     "title": "Dimension reduction",
+     "zh": "降维"
+    },
+    {
+     "ref": "12.4",
+     "title": "Paired data",
+     "zh": "配对数据"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "The principle of proportional ink",
+   "zh": "比例着色原则",
+   "items": [
+    {
+     "ref": "17.1",
+     "title": "Visualizations along linear axes",
+     "zh": "线性坐标轴上的可视化"
+    },
+    {
+     "ref": "17.2",
+     "title": "Visualizations along logarithmic axes",
+     "zh": "对数坐标轴上的可视化"
+    },
+    {
+     "ref": "17.3",
+     "title": "Direct area visualizations",
+     "zh": "直接面积可视化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "18",
+   "title": "Handling overlapping points",
+   "zh": "处理重叠数据点",
+   "items": [
+    {
+     "ref": "18.1",
+     "title": "Partial transparency and jittering",
+     "zh": "半透明与抖动"
+    },
+    {
+     "ref": "18.2",
+     "title": "2D histograms",
+     "zh": "二维直方图"
+    },
+    {
+     "ref": "18.3",
+     "title": "Contour lines",
+     "zh": "等高线"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "19",
+   "title": "Common pitfalls of color use",
+   "zh": "用色的常见陷阱",
+   "items": [
+    {
+     "ref": "19.1",
+     "title": "Encoding too much or irrelevant information",
+     "zh": "编码了过多或无关的信息"
+    },
+    {
+     "ref": "19.2",
+     "title": "Using non-monotonic color scales to encode data values",
+     "zh": "用非单调色标表示数据值"
+    },
+    {
+     "ref": "19.3",
+     "title": "Not designing for color-vision deficiency",
+     "zh": "未针对色觉缺陷做设计"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "21",
+   "title": "Multi-panel",
+   "zh": "多面板图",
+   "items": [
+    {
+     "ref": "21.1",
+     "title": "Small multiples",
+     "zh": "小倍数图"
+    },
+    {
+     "ref": "21.2",
+     "title": "Compound figures",
+     "zh": "复合图"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "23",
+   "title": "Balance the data and the context",
+   "zh": "平衡数据与上下文",
+   "items": [
+    {
+     "ref": "23.1",
+     "title": "Providing the appropriate amount of context",
+     "zh": "提供恰当的上下文"
+    },
+    {
+     "ref": "23.2",
+     "title": "Background grids",
+     "zh": "背景网格"
+    },
+    {
+     "ref": "23.3",
+     "title": "Paired data",
+     "zh": "配对数据"
+    },
+    {
+     "ref": "23.4",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "26",
+   "title": "Don’t go 3D",
+   "zh": "不要滥用三维",
+   "items": [
+    {
+     "ref": "26.1",
+     "title": "Avoid gratuitous 3D",
+     "zh": "避免没有必要的三维"
+    },
+    {
+     "ref": "26.2",
+     "title": "Avoid 3D position scales",
+     "zh": "避免三维位置标度"
+    },
+    {
+     "ref": "26.3",
+     "title": "Appropriate use of 3D visualizations",
+     "zh": "三维可视化的恰当用法"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Manipulate View",
+   "zh": "操纵视图",
+   "fill": "交互",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Big Picture",
+     "zh": "总览"
+    },
+    {
+     "ref": "",
+     "title": "Why Change?",
+     "zh": "为什么要改变视图"
+    },
+    {
+     "ref": "",
+     "title": "Change View over Time",
+     "zh": "随时间改变视图"
+    },
+    {
+     "ref": "",
+     "title": "Select Elements",
+     "zh": "选择元素"
+    },
+    {
+     "ref": "",
+     "title": "Navigate: Changing Viewpoint",
+     "zh": "导航：改变视点"
+    },
+    {
+     "ref": "",
+     "title": "Navigate: Reducing Attributes",
+     "zh": "导航：减少属性"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Facet into Multiple Views",
+   "zh": "切分为多视图",
+   "fill": "交互",
+   "items": [
+    {
+     "ref": "",
+     "title": "Why Facet?",
+     "zh": "为何要切分"
+    },
+    {
+     "ref": "",
+     "title": "Juxtapose and Coordinate Views",
+     "zh": "并列与协调视图"
+    },
+    {
+     "ref": "",
+     "title": "Partition into Views",
+     "zh": "划分为多个视图"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "数据类型",
+   "refs": [
+    "A:2.1",
+    "A:5"
+   ]
+  },
+  {
+   "topic": "视觉编码",
+   "refs": [
+    "A:2.2",
+    "A:4.1",
+    "A:4.2",
+    "A:4.3"
+   ]
+  },
+  {
+   "topic": "图表选择",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:5.2",
+    "A:5.3",
+    "A:5.4",
+    "A:5.5",
+    "A:5.6",
+    "A:12.1",
+    "A:12.2"
+   ]
+  },
+  {
+   "topic": "布局",
+   "refs": [
+    "A:21",
+    "A:21.1",
+    "A:21.2",
+    "A:23",
+    "A:23.1",
+    "A:3"
+   ]
+  },
+  {
+   "topic": "交互",
+   "refs": [
+    "B:#1",
+    "B:#2"
+   ]
+  },
+  {
+   "topic": "读图误差",
+   "refs": [
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:26",
+    "A:26.1"
+   ]
+  }
+ ],
+ "omitted": "同一份目录里未收的章：1（导论：丑的、坏的与错的图）、6–11 与 13–16（各类图表的具体画法：数量、分布、占比、嵌套占比、关联、时间序列、趋势、地理、不确定性）、20（冗余编码）、22（标题、图注与表格）、24（放大坐标轴标签）、25（避免线描）、27（图像文件格式）、28（选用可视化软件）、29（讲故事与立论）、30（注释书目）以及技术说明与参考文献——它们要么是同一知识点的重复展开（图表画法），要么是制作与写作细节，不属于节点简介列出的六个知识点；节点要的“图表选择”由第 5 章的目录页承担，不必逐章抄画法。",
+ "notes": "Munzner 的目录抄自 Routledge 的 Table of Contents（作者主页只列到章号，不含节标题），原文没有编号，所以 B 的两章 ref 留空，coverage 用 B:#1、B:#2 指代。Wilke 的书没有交互内容（全书讲静态图），所以“交互”完全靠 B 覆盖；若主代理希望导览图与“去哪学”完全同一份材料，可提醒读者：交互部分不在 Wilke 的在线书里。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 58,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

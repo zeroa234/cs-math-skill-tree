@@ -1,0 +1,246 @@
+{
+ "id": "A.4.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS 4727/5727: Adversarial Machine Learning",
+   "by": "Alex Vakanski (Boise State University)",
+   "year": 2026,
+   "url": "https://www.idahofallshighered.org/vakanski/Courses/Adversarial_Machine_Learning.html",
+   "toc_urls": [
+    "https://www.idahofallshighered.org/vakanski/Courses/Adversarial_Machine_Learning.html"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课（Spring 2026，15 讲讲稿 ppt/pdf 全公开）。课程页的 Topics 就是逐讲清单：对抗机器学习导论、白盒/黑盒规避攻击、大模型对抗攻击、规避攻击防御、投毒攻击与防御、隐私攻击与防御，以及三讲“对抗机器学习在网络安全中的应用”，正好对上简介的攻击面、对抗样本、投毒、防护与网络安全交叉。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "NIST AI 100-2e2025, Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+   "by": "Apostol Vassilev, Alina Oprea, Alie Fordyce, Hyrum Anderson, Xander Davies, Maia Hamin (NIST)",
+   "year": 2025,
+   "url": "https://doi.org/10.6028/NIST.AI.100-2e2025",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf"
+   ],
+   "why": "补主来源没有的两块：一是系统化的攻击面/威胁建模维度（学习阶段、攻击者目标、能力、知识、数据模态），二是生成式 AI 的攻击分类与缓解（供应链、直接提示与越狱、间接提示注入、智能体安全、评测基准）与滥用（misuse 作为攻击者目标）、风险评估；这些是课程讲稿里没有成章处理的。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Topics",
+   "zh": "课程主题（逐讲）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction to Adversarial Machine Learning",
+     "zh": "对抗机器学习导论"
+    },
+    {
+     "ref": "",
+     "title": "White-box Evasion Attacks",
+     "zh": "白盒规避攻击"
+    },
+    {
+     "ref": "",
+     "title": "Black-box Evasion Attacks",
+     "zh": "黑盒规避攻击"
+    },
+    {
+     "ref": "",
+     "title": "Adversarial Attacks on Large Language Models",
+     "zh": "大语言模型对抗攻击"
+    },
+    {
+     "ref": "",
+     "title": "Defenses Against Evasion Attacks",
+     "zh": "规避攻击的防御"
+    },
+    {
+     "ref": "",
+     "title": "Poisoning Attacks and Defenses",
+     "zh": "投毒攻击与防御"
+    },
+    {
+     "ref": "",
+     "title": "Adversarial ML in Cybersecurity: Network Intrusion Detection",
+     "zh": "对抗机器学习在网络安全中的应用：网络入侵检测"
+    },
+    {
+     "ref": "",
+     "title": "Adversarial ML in Cybersecurity: Malware Detection and Classification",
+     "zh": "对抗机器学习在网络安全中的应用：恶意软件检测与分类"
+    },
+    {
+     "ref": "",
+     "title": "Adversarial ML in Cybersecurity: Spam Filtering, URL Detection, and Cyber-physical Systems",
+     "zh": "对抗机器学习在网络安全中的应用：垃圾邮件过滤、URL 检测与信息物理系统"
+    },
+    {
+     "ref": "",
+     "title": "Privacy Attacks and Defenses",
+     "zh": "隐私攻击与防御"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Predictive AI Taxonomy",
+   "zh": "预测式 AI 攻击分类学",
+   "fill": "补“攻击面”与“对抗样本/投毒/隐私”的系统化分类：课程只有单讲导论，这里给出学习阶段、攻击者目标（含 misuse 滥用目标）、能力、知识、数据模态等攻击面维度，以及规避、投毒、隐私三类攻击的细分与缓解措施。",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Attack Classification",
+     "zh": "攻击分类"
+    },
+    {
+     "ref": "2.2",
+     "title": "Evasion Attacks and Mitigations",
+     "zh": "规避攻击与缓解措施"
+    },
+    {
+     "ref": "2.3",
+     "title": "Poisoning Attacks and Mitigations",
+     "zh": "投毒攻击与缓解措施"
+    },
+    {
+     "ref": "2.4",
+     "title": "Privacy Attacks and Mitigations",
+     "zh": "隐私攻击与缓解措施"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Generative AI Taxonomy",
+   "zh": "生成式 AI 攻击分类学",
+   "fill": "补“滥用评估与模型应用防护”：课程里大模型攻击只有一讲，这里给出生成式 AI 供应链、直接提示（含越狱）、间接提示注入、智能体安全各自的技术与缓解措施，以及对抗漏洞评测基准。",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Attack Classification",
+     "zh": "攻击分类"
+    },
+    {
+     "ref": "3.2",
+     "title": "Supply Chain Attacks and Mitigations",
+     "zh": "供应链攻击与缓解措施"
+    },
+    {
+     "ref": "3.3",
+     "title": "Direct Prompting Attacks and Mitigations",
+     "zh": "直接提示攻击与缓解措施"
+    },
+    {
+     "ref": "3.4",
+     "title": "Indirect Prompt Injection Attacks and Mitigations",
+     "zh": "间接提示注入攻击与缓解措施"
+    },
+    {
+     "ref": "3.5",
+     "title": "Security of Agents",
+     "zh": "智能体安全"
+    },
+    {
+     "ref": "3.6",
+     "title": "Benchmarks for AML Vulnerabilities",
+     "zh": "对抗机器学习漏洞的评测基准"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Key Challenges and Discussion",
+   "zh": "关键挑战与讨论",
+   "fill": "补“滥用评估”里的评估与取舍视角：可信 AI 各属性之间的权衡、对抗鲁棒性的理论极限、评估方法，以及在 AML 视角下的风险管理。",
+   "items": [
+    {
+     "ref": "4.1.1",
+     "title": "Trade-Offs Between the Attributes of Trustworthy AI",
+     "zh": "可信 AI 各属性之间的权衡"
+    },
+    {
+     "ref": "4.1.2",
+     "title": "Theoretical Limitations on Adversarial Robustness",
+     "zh": "对抗鲁棒性的理论极限"
+    },
+    {
+     "ref": "4.1.3",
+     "title": "Evaluation",
+     "zh": "评估"
+    },
+    {
+     "ref": "4.2.5",
+     "title": "Risk Management in Light of AML",
+     "zh": "从对抗机器学习视角的风险管理"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "攻击面",
+   "refs": [
+    "A:#1",
+    "B:2.1"
+   ],
+   "note": "课程的 Intro to Adversarial Machine Learning 讲脆弱性，B 的 2.1/3.1 给出学习阶段、攻击者目标与能力、知识、数据模态等维度"
+  },
+  {
+   "topic": "对抗样本",
+   "refs": [
+    "A:#1",
+    "B:2.2"
+   ],
+   "note": "课程分白盒/黑盒两讲讲规避攻击，B 的 2.2 另有可迁移性与真实世界案例"
+  },
+  {
+   "topic": "数据/模型投毒",
+   "refs": [
+    "A:#1",
+    "B:2.3"
+   ],
+   "note": "课程只有一讲 Poisoning Attacks and Defenses；B 的 2.3.4 Model Poisoning 专门讲模型投毒，3.2 讲生成式 AI 的供应链投毒"
+  },
+  {
+   "topic": "滥用评估",
+   "refs": [
+    "B:2.1",
+    "B:3.6",
+    "B:4.1.3"
+   ],
+   "note": "NIST 把 misuse 作为攻击者目标之一（2.1.2），并有对抗漏洞评测基准（3.6）与评估章节（4.1.3）；课程本身没有专门的滥用评估内容"
+  },
+  {
+   "topic": "模型应用防护",
+   "refs": [
+    "A:#1",
+    "B:2.2",
+    "B:3.3",
+    "B:3.4"
+   ],
+   "note": "课程有 Defenses Against Evasion Attacks 与大模型攻击的缓解；B 的 2.2.5、3.3.3、3.4.4 分别是规避、直接提示、间接提示注入的缓解措施，3.5 覆盖智能体防护"
+  },
+  {
+   "topic": "与网络空间安全交叉",
+   "refs": [
+    "A:#1"
+   ],
+   "note": "课程用三讲讲网络入侵检测、恶意软件检测与分类、垃圾邮件过滤/URL 检测/信息物理系统；B 只在风险管理章节间接涉及"
+  }
+ ],
+ "omitted": "主来源 A 的 Topics 里未收 Deep Learning Overview、Mathematics for Machine Learning、Introduction to Large Language Models（属前置基础），以及 Explainability in Machine Learning、Bias and Fairness in Machine Learning（属可信 AI/公平性节点 A.4.2）。B 只收了 2、3、4 章的相关小节，1. Introduction、4.1/4.2 的其余小节、附录 Glossary 未收。",
+ "notes": "A 的 Topics 在原文里是一个平铺清单（没有分章），所以只有一个分支，条目顺序照原样；没有编号，ref 留空，覆盖关系用 A:#1 指整个分支。B 的章号/节号取自其 Table of Contents，标题去掉了前导编号（编号写在 ref 里）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 28,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

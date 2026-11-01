@@ -1,0 +1,268 @@
+{
+ "id": "P.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS 4120/4121/5120/5121 Introduction to Compilers (Spring 2026)",
+   "by": "Cornell University",
+   "year": 2026,
+   "url": "https://www.cs.cornell.edu/courses/cs4120/2026sp/",
+   "toc_urls": [
+    "https://www.cs.cornell.edu/courses/cs4120/2026sp/schedule.html"
+   ],
+   "why": "节点现有英文资源就是这门课；它的 schedule 把 38 讲按“Parsing / Semantic analysis / Code generation / Optimization and program analysis / language runtime systems”分组，每讲有具体主题（词法、LL/LR、符号表、IR、指令选择、数据流、寄存器分配、SSA），与节点简介逐条对应，且是编译原理的标准本科/研究生入门课。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Parsing",
+   "zh": "语法分析",
+   "items": [
+    {
+     "ref": "Lecture 1",
+     "title": "Course overview",
+     "zh": "课程概览"
+    },
+    {
+     "ref": "Lecture 2",
+     "title": "Lexical analysis and regular expressions",
+     "zh": "词法分析与正则表达式"
+    },
+    {
+     "ref": "Lecture 3",
+     "title": "Automating lexical analysis",
+     "zh": "自动生成词法分析器"
+    },
+    {
+     "ref": "Lecture 4",
+     "title": "Grammars and parsing",
+     "zh": "文法与语法分析"
+    },
+    {
+     "ref": "Lecture 5",
+     "title": "Top-down (LL) parsing",
+     "zh": "自顶向下（LL）分析"
+    },
+    {
+     "ref": "Lecture 6",
+     "title": "Bottom-up parsing",
+     "zh": "自底向上分析"
+    },
+    {
+     "ref": "Lecture 7",
+     "title": "LR parsing and parser generators",
+     "zh": "LR 分析与解析器生成器"
+    },
+    {
+     "ref": "Lecture 8",
+     "title": "ASTs and errors",
+     "zh": "抽象语法树与错误处理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Semantic analysis",
+   "zh": "语义分析",
+   "items": [
+    {
+     "ref": "Lecture 9",
+     "title": "Semantic analysis and symbol tables",
+     "zh": "语义分析与符号表"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "Type systems",
+     "zh": "类型系统"
+    },
+    {
+     "ref": "Lecture 11",
+     "title": "Eta type system",
+     "zh": "Eta 类型系统"
+    },
+    {
+     "ref": "Lecture 12",
+     "title": "Modules and visitors",
+     "zh": "模块与访问者模式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Code generation",
+   "zh": "代码生成",
+   "items": [
+    {
+     "ref": "Lecture 13",
+     "title": "Intermediate representations",
+     "zh": "中间表示"
+    },
+    {
+     "ref": "Lecture 14",
+     "title": "Syntax-directed translation",
+     "zh": "语法制导翻译"
+    },
+    {
+     "ref": "Lecture 15",
+     "title": "IR lowering",
+     "zh": "中间表示的下降"
+    },
+    {
+     "ref": "Lecture 16",
+     "title": "Control-flow graphs and traces",
+     "zh": "控制流图与轨迹"
+    },
+    {
+     "ref": "Lecture 17",
+     "title": "Instruction selection",
+     "zh": "指令选择"
+    },
+    {
+     "ref": "Lecture 18",
+     "title": "Calling conventions",
+     "zh": "调用约定"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Optimization and program analysis",
+   "zh": "优化与程序分析",
+   "items": [
+    {
+     "ref": "Lecture 19",
+     "title": "Overview of optimization",
+     "zh": "优化概览"
+    },
+    {
+     "ref": "Lecture 20",
+     "title": "Live variable analysis",
+     "zh": "活跃变量分析"
+    },
+    {
+     "ref": "Lecture 21",
+     "title": "Dataflow analysis",
+     "zh": "数据流分析"
+    },
+    {
+     "ref": "Lecture 22",
+     "title": "Iterative solving",
+     "zh": "迭代求解"
+    },
+    {
+     "ref": "Lecture 23",
+     "title": "MOP, conditional constant propagation",
+     "zh": "MOP 与条件常量传播"
+    },
+    {
+     "ref": "Lecture 24",
+     "title": "Redundancy elimination",
+     "zh": "冗余消除"
+    },
+    {
+     "ref": "Lecture 25",
+     "title": "Register allocation",
+     "zh": "寄存器分配"
+    },
+    {
+     "ref": "Lecture 26",
+     "title": "Reaching definitions, webs, SSA",
+     "zh": "到达定值、网与 SSA"
+    },
+    {
+     "ref": "Lecture 27",
+     "title": "Control-flow analysis",
+     "zh": "控制流分析"
+    },
+    {
+     "ref": "Lecture 28",
+     "title": "Induction variables",
+     "zh": "归纳变量"
+    },
+    {
+     "ref": "Lecture 29",
+     "title": "Loop optimizations, abstract interpretation",
+     "zh": "循环优化与抽象解释"
+    },
+    {
+     "ref": "Lecture 30",
+     "title": "Pointer analysis",
+     "zh": "指针分析"
+    },
+    {
+     "ref": "Lecture 31",
+     "title": "Interprocedural analysis",
+     "zh": "过程间分析"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "词法分析",
+   "refs": [
+    "A:#1",
+    "A:Lecture 2",
+    "A:Lecture 3"
+   ]
+  },
+  {
+   "topic": "语法分析",
+   "refs": [
+    "A:#1",
+    "A:Lecture 4",
+    "A:Lecture 5",
+    "A:Lecture 6",
+    "A:Lecture 7"
+   ]
+  },
+  {
+   "topic": "语义分析",
+   "refs": [
+    "A:#2",
+    "A:Lecture 9",
+    "A:Lecture 10"
+   ]
+  },
+  {
+   "topic": "中间表示",
+   "refs": [
+    "A:Lecture 13",
+    "A:Lecture 14",
+    "A:Lecture 15",
+    "A:Lecture 16"
+   ]
+  },
+  {
+   "topic": "代码生成",
+   "refs": [
+    "A:#3",
+    "A:Lecture 17",
+    "A:Lecture 18"
+   ]
+  },
+  {
+   "topic": "编译优化",
+   "refs": [
+    "A:#4",
+    "A:Lecture 20",
+    "A:Lecture 24",
+    "A:Lecture 25"
+   ]
+  }
+ ],
+ "omitted": "schedule 里第 32–38 讲（Memory management and garbage collection、Linking and shared libraries、Subtyping、Object layout and method dispatch、First-class functions、Type inference、More functional-language features）属于运行时系统与高级语言特性，是另一个节点（运行时与虚拟机）的内容；另有 Lab（Assembling and disassembling x86-64）、Prelim 复习、作业等非讲课条目，均未收。",
+ "notes": "schedule 页面用一行分组标题（Parsing、Semantic analysis、Code generation、Optimization and program analysis…）分隔讲课，分组标题原文没有编号，故分支 ref 留空；讲课号用页面第一列的 Lecture N，coverage 里 A:#1–A:#4 指这四个分组分支。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 35,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

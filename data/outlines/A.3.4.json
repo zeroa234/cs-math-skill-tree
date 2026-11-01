@@ -1,0 +1,390 @@
+{
+ "id": "A.3.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Personalized Machine Learning",
+   "by": "Julian McAuley",
+   "year": 2022,
+   "url": "https://cseweb.ucsd.edu/~jmcauley/pml/",
+   "toc_urls": [
+    "https://cseweb.ucsd.edu/~jmcauley/pml/",
+    "https://cseweb.ucsd.edu/~jmcauley/pml/pml_book.pdf"
+   ],
+   "why": "节点“现有英文学习资源”CSE 158/258 的指定教材就是这本（作者 Julian McAuley 在 UCSD 主页上公开整本草稿 PDF）；课程主页的课表把每个主题直接对到本书章节（ch.4–6 推荐系统、ch.7 时序）。这里抄作者公开 PDF 里的详细目录，取第 4 章（协同过滤与图方法）、第 5 章（矩阵分解、隐式反馈与排序、检索、离线评测）、第 6 章（因子分解机、冷启动、上下文特征）。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Recommender Systems: The Textbook",
+   "by": "Charu C. Aggarwal",
+   "year": 2016,
+   "url": "https://link.springer.com/book/10.1007/978-3-319-29659-3",
+   "toc_urls": [
+    "https://link.springer.com/content/pdf/bfm:978-3-319-29659-3/1"
+   ],
+   "why": "补“多目标与在线实验”：主来源 A 只在 5.4.4 提一句“准确率之外的指标”，没有在线评测（在线实验/A-B）与多目标评价体系的章。补充分支取出版社公开前置页里第 7 章 Evaluating Recommender Systems 的在线评测小节（7.2.2 Online Evaluation）与“评测设计目标”一节（覆盖、新颖性、多样性、鲁棒性等准确率之外的多个目标）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Introduction to Recommender Systems",
+   "zh": "推荐系统导论",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Basic Setup and Problem Definition",
+     "zh": "基本设定与问题定义"
+    },
+    {
+     "ref": "4.2",
+     "title": "Representations for Interaction Data",
+     "zh": "交互数据的表示"
+    },
+    {
+     "ref": "4.3",
+     "title": "Memory-based Approaches to Recommendation",
+     "zh": "基于记忆的推荐方法"
+    },
+    {
+     "ref": "4.3.1",
+     "title": "Defining a Similarity Function",
+     "zh": "相似度函数的定义"
+    },
+    {
+     "ref": "4.3.2",
+     "title": "Jaccard Similarity",
+     "zh": "Jaccard 相似度"
+    },
+    {
+     "ref": "4.4",
+     "title": "Random Walk Methods",
+     "zh": "随机游走方法"
+    },
+    {
+     "ref": "4.5",
+     "title": "Case Study: Amazon.com Recommendations",
+     "zh": "案例：Amazon.com 的推荐"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Model-based Approaches to Recommendation",
+   "zh": "基于模型的推荐方法",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Matrix Factorization",
+     "zh": "矩阵分解",
+     "items": [
+      {
+       "ref": "5.1.1",
+       "title": "Fitting the Latent Factor Model",
+       "zh": "拟合隐因子模型"
+      },
+      {
+       "ref": "5.1.2",
+       "title": "What Happened to User or Item Features?",
+       "zh": "用户与物品特征去哪了"
+      }
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "Implicit Feedback and Ranking Models",
+     "zh": "隐式反馈与排序模型",
+     "items": [
+      {
+       "ref": "5.2.1",
+       "title": "Instance Re-weighting Schemes",
+       "zh": "样本重加权方案"
+      },
+      {
+       "ref": "5.2.2",
+       "title": "Bayesian Personalized Ranking",
+       "zh": "贝叶斯个性化排序"
+      }
+     ]
+    },
+    {
+     "ref": "5.3",
+     "title": "‘User-free’ Model-based Approaches",
+     "zh": "无需用户隐向量的模型方法",
+     "items": [
+      {
+       "ref": "5.3.1",
+       "title": "Sparse Linear Methods (SLIM)",
+       "zh": "稀疏线性方法（SLIM）"
+      },
+      {
+       "ref": "5.3.2",
+       "title": "Factored Item Similarity Models (FISM)",
+       "zh": "因子化物品相似度模型（FISM）"
+      }
+     ]
+    },
+    {
+     "ref": "5.4",
+     "title": "Evaluating Recommender Systems",
+     "zh": "推荐系统的评测",
+     "items": [
+      {
+       "ref": "5.4.1",
+       "title": "Precision and Recall @ K",
+       "zh": "Precision@K 与 Recall@K"
+      },
+      {
+       "ref": "5.4.2",
+       "title": "Mean Reciprocal Rank",
+       "zh": "平均倒数排名（MRR）"
+      },
+      {
+       "ref": "5.4.4",
+       "title": "Evaluation Metrics Beyond Model Accuracy",
+       "zh": "准确率之外的评测指标"
+      }
+     ]
+    },
+    {
+     "ref": "5.5",
+     "title": "Deep Learning for Recommendation",
+     "zh": "推荐中的深度学习",
+     "items": [
+      {
+       "ref": "5.5.1",
+       "title": "Why the Inner Product?",
+       "zh": "为什么用内积"
+      },
+      {
+       "ref": "5.5.2",
+       "title": "Multilayer Perceptron-based Recommendation",
+       "zh": "基于多层感知机的推荐"
+      }
+     ]
+    },
+    {
+     "ref": "5.6",
+     "title": "Retrieval",
+     "zh": "候选召回"
+    },
+    {
+     "ref": "5.7",
+     "title": "Online Updates",
+     "zh": "在线更新"
+    },
+    {
+     "ref": "5.9",
+     "title": "Beyond a ‘Black-Box’ View of Recommendation",
+     "zh": "超越“黑箱”视角的推荐"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Content and Structure in Recommender Systems",
+   "zh": "推荐系统中的内容与结构信息",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "The Factorization Machine",
+     "zh": "因子分解机",
+     "items": [
+      {
+       "ref": "6.1.1",
+       "title": "Neural Factorization Machines",
+       "zh": "神经因子分解机"
+      }
+     ]
+    },
+    {
+     "ref": "6.2",
+     "title": "Cold-Start Recommendation",
+     "zh": "冷启动推荐",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Addressing Cold-Start Problems with Side Information",
+       "zh": "用辅助信息解决冷启动"
+      },
+      {
+       "ref": "6.2.2",
+       "title": "Addressing Cold-Start Problems with Surveys",
+       "zh": "用问卷解决冷启动"
+      }
+     ]
+    },
+    {
+     "ref": "6.6",
+     "title": "Other Contextual Features in Recommendation",
+     "zh": "推荐中的其他上下文特征",
+     "items": [
+      {
+       "ref": "6.6.1",
+       "title": "Music and Audio",
+       "zh": "音乐与音频"
+      },
+      {
+       "ref": "6.6.3",
+       "title": "Temporal, Textual, and Visual Features",
+       "zh": "时间、文本与视觉特征"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Evaluating Recommender Systems",
+   "zh": "推荐系统的评测",
+   "fill": "在线实验（A/B 测试）与多目标评测：A 只到离线指标，B 给出在线评测范式与准确率之外的多个设计目标（覆盖、信任、新颖性、惊喜度、多样性、鲁棒性、可扩展性）",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "7.2",
+     "title": "Evaluation Paradigms",
+     "zh": "评测范式",
+     "items": [
+      {
+       "ref": "7.2.1",
+       "title": "User Studies",
+       "zh": "用户研究"
+      },
+      {
+       "ref": "7.2.2",
+       "title": "Online Evaluation",
+       "zh": "在线评测"
+      },
+      {
+       "ref": "7.2.3",
+       "title": "Offline Evaluation with Historical Data Sets",
+       "zh": "基于历史数据集的离线评测"
+      }
+     ]
+    },
+    {
+     "ref": "7.3",
+     "title": "General Goals of Evaluation Design",
+     "zh": "评测设计的一般目标",
+     "items": [
+      {
+       "ref": "7.3.1",
+       "title": "Accuracy",
+       "zh": "准确度"
+      },
+      {
+       "ref": "7.3.2",
+       "title": "Coverage",
+       "zh": "覆盖度"
+      },
+      {
+       "ref": "7.3.3",
+       "title": "Confidence and Trust",
+       "zh": "置信与信任"
+      },
+      {
+       "ref": "7.3.4",
+       "title": "Novelty",
+       "zh": "新颖性"
+      },
+      {
+       "ref": "7.3.5",
+       "title": "Serendipity",
+       "zh": "惊喜度"
+      },
+      {
+       "ref": "7.3.6",
+       "title": "Diversity",
+       "zh": "多样性"
+      },
+      {
+       "ref": "7.3.7",
+       "title": "Robustness and Stability",
+       "zh": "鲁棒性与稳定性"
+      },
+      {
+       "ref": "7.3.8",
+       "title": "Scalability",
+       "zh": "可扩展性"
+      }
+     ]
+    },
+    {
+     "ref": "7.6",
+     "title": "Limitations of Evaluation Measures",
+     "zh": "评测指标的局限"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "召回/排序",
+   "refs": [
+    "A:5.6",
+    "A:5.2",
+    "A:5.2.2",
+    "A:5.5"
+   ]
+  },
+  {
+   "topic": "协同过滤",
+   "refs": [
+    "A:4.3",
+    "A:4.3.1",
+    "A:5",
+    "A:5.1",
+    "A:5.3"
+   ]
+  },
+  {
+   "topic": "上下文",
+   "refs": [
+    "A:6.1",
+    "A:6.6",
+    "A:6.6.3",
+    "A:6.2"
+   ]
+  },
+  {
+   "topic": "反馈偏差",
+   "refs": [],
+   "note": "两个来源都没有专门讲位置偏差/曝光偏差的小节：A 的 5.2 讲隐式反馈（点击日志）与排序模型、5.2.1 讲样本重加权，B 的 7.6 讲评测指标会被“做局”（evaluation gaming），都只是相关而非专门章节；纠偏方法（逆倾向加权、随机曝光）需另找资料，故不挂 ref。"
+  },
+  {
+   "topic": "多目标",
+   "refs": [
+    "B:7.3",
+    "B:7.3.2",
+    "B:7.3.6",
+    "B:7.3.4",
+    "A:5.4.4"
+   ]
+  },
+  {
+   "topic": "在线实验",
+   "refs": [
+    "B:7.2.2",
+    "B:7.2.1"
+   ]
+  }
+ ],
+ "omitted": "主来源 A（PML）只收第 4–6 章：第 1 章（导论与课程规划）、第 2–3 章（回归、分类与学习流水线，属机器学习基础）、第 7 章及以后（时序模型、文本、视觉、部署风险）与其它节点或本节点简介关系较远；第 5、6 章里偏工程/库操作的小节（5.8 Recommender Systems in Python with Surprise and Implicit 及其子节）、6.3 多边平台推荐、6.4 群体与社会化推荐、6.5 价格动态、6.7 在线广告，以及各章的 Exercises、Bibliographic Notes、Summary 未收。补充来源 B（Aggarwal）只取第 7 章，其余章（邻域/模型/内容/知识/集成/上下文/时序/网络/社交/抗攻击等推荐方法）与 A 重叠或超出本节点简介；7.4、7.5、7.7–7.9（离线评测设计与准确率指标、小结、文献注记、习题）未收。",
+ "notes": "A 的 PDF 是 Cambridge 出版前的作者公开草稿，目录里的“Deﬁnition”“Classiﬁcation”等连字已按正常拼写抄写；5.3.3 原文标题把 Approaches 拼成 Apporaches，为避免误抄已略去该条。B 是研究生层次教材，仅用作“在线实验/多目标评测”这一补充分支，主来源仍是课程指定的本科/研究生共用教材 PML。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 53,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

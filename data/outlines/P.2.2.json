@@ -1,0 +1,409 @@
+{
+ "id": "P.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS107 Computer Organization & Systems (Autumn 2026)",
+   "by": "Stanford University",
+   "year": 2026,
+   "url": "https://web.stanford.edu/class/cs107/",
+   "toc_urls": [
+    "https://web.stanford.edu/class/cs107/",
+    "https://web.stanford.edu/class/cs107/calendar.html"
+   ],
+   "why": "节点现有英文资源就是这门课；每周的 lecture 列表逐讲给出主题（Unix 与 C、整数与位、字符串、指针、栈与堆、泛型与 void *、x86-64 数据布局与运行时栈、malloc 实现），与“内存布局、指针、生命周期”一一对应，且是本科入门系统课。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Computer Systems: A Programmer's Perspective, 3rd ed.",
+   "by": "Randal E. Bryant and David R. O'Hallaron",
+   "year": 2016,
+   "url": "https://csapp.cs.cmu.edu/",
+   "toc_urls": [
+    "https://csapp.cs.cmu.edu/3e/pieces/preface3e.pdf"
+   ],
+   "why": "补“链接”和“系统接口”：CS107 的 lecture 列表里没有链接器，也没有系统调用层面的 Unix I/O；B&O 正是 CS107 指定的参考书（calendar 里 readings 标注 B&O），第 7 章讲链接、第 10 章讲系统级 I/O。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Week 1",
+   "title": "Week 1",
+   "zh": "第 1 周",
+   "items": [
+    {
+     "ref": "Lecture 1",
+     "title": "Welcome to CS107!",
+     "zh": "欢迎来到 CS107"
+    },
+    {
+     "ref": "Lecture 2",
+     "title": "Unix and C",
+     "zh": "Unix 与 C"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 2",
+   "title": "Week 2",
+   "zh": "第 2 周",
+   "items": [
+    {
+     "ref": "Lecture 3",
+     "title": "Integers, Bits and Bytes",
+     "zh": "整数、位与字节"
+    },
+    {
+     "ref": "Lecture 4",
+     "title": "Bitwise Operators",
+     "zh": "位运算"
+    },
+    {
+     "ref": "Lecture 5",
+     "title": "More Bitwise Operators",
+     "zh": "更多位运算"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 3",
+   "title": "Week 3",
+   "zh": "第 3 周",
+   "items": [
+    {
+     "ref": "Lecture 6",
+     "title": "Chars and C Strings",
+     "zh": "字符与 C 字符串"
+    },
+    {
+     "ref": "Lecture 7",
+     "title": "C Strings, Buffer Overflows and Security",
+     "zh": "C 字符串、缓冲区溢出与安全"
+    },
+    {
+     "ref": "Lecture 8",
+     "title": "Introduction to Pointers",
+     "zh": "指针入门"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 4",
+   "title": "Week 4",
+   "zh": "第 4 周",
+   "items": [
+    {
+     "ref": "Lecture 9",
+     "title": "Stack and Heap",
+     "zh": "栈与堆"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "Heap Wrap, Generics and void *",
+     "zh": "堆的收尾、泛型与 void *"
+    },
+    {
+     "ref": "Lecture 11",
+     "title": "Generics, void *, and Function Pointers",
+     "zh": "泛型、void * 与函数指针"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 5",
+   "title": "Week 5",
+   "zh": "第 5 周",
+   "items": [
+    {
+     "ref": "Lecture 12",
+     "title": "Function Pointers, Continued",
+     "zh": "函数指针（续）"
+    },
+    {
+     "ref": "Lecture 13",
+     "title": "Introduction to x86-64",
+     "zh": "x86-64 入门"
+    },
+    {
+     "ref": "Lecture 14",
+     "title": "Introduction to x86-64, Take II",
+     "zh": "x86-64 入门（二）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 6",
+   "title": "Week 6",
+   "zh": "第 6 周",
+   "items": [
+    {
+     "ref": "Lecture 15",
+     "title": "Introduction to x86-64, Take III",
+     "zh": "x86-64 入门（三）"
+    },
+    {
+     "ref": "Lecture 16",
+     "title": "Introduction to x86-64 ALU Operations",
+     "zh": "x86-64 的 ALU 运算"
+    },
+    {
+     "ref": "Lecture 17",
+     "title": "x86-64 Condition Codes and Control Flow",
+     "zh": "x86-64 条件码与控制流"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 7",
+   "title": "Week 7",
+   "zh": "第 7 周",
+   "items": [
+    {
+     "ref": "Lecture 18",
+     "title": "x86-64 Control Flow, Continued",
+     "zh": "x86-64 控制流（续）"
+    },
+    {
+     "ref": "Lecture 19",
+     "title": "x86-64 Runtime Stack",
+     "zh": "x86-64 运行时栈"
+    },
+    {
+     "ref": "Lecture 20",
+     "title": "Privacy, Trust and Managing the Heap",
+     "zh": "隐私、信任与堆管理"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 8",
+   "title": "Week 8",
+   "zh": "第 8 周",
+   "items": [
+    {
+     "ref": "Lecture 21",
+     "title": "Managing the Heap",
+     "zh": "堆管理"
+    },
+    {
+     "ref": "Lecture 22",
+     "title": "Managing the Heap, Continued",
+     "zh": "堆管理（续）"
+    },
+    {
+     "ref": "Lecture 23",
+     "title": "Explicit Free List Allocator",
+     "zh": "显式空闲链表分配器"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Linking",
+   "zh": "链接",
+   "fill": "链接（编译、汇编、链接、加载的过程与符号解析）",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Compiler Drivers",
+     "zh": "编译器驱动程序"
+    },
+    {
+     "ref": "7.2",
+     "title": "Static Linking",
+     "zh": "静态链接"
+    },
+    {
+     "ref": "7.3",
+     "title": "Object Files",
+     "zh": "目标文件"
+    },
+    {
+     "ref": "7.4",
+     "title": "Relocatable Object Files",
+     "zh": "可重定位目标文件"
+    },
+    {
+     "ref": "7.5",
+     "title": "Symbols and Symbol Tables",
+     "zh": "符号与符号表"
+    },
+    {
+     "ref": "7.6",
+     "title": "Symbol Resolution",
+     "zh": "符号解析"
+    },
+    {
+     "ref": "7.7",
+     "title": "Relocation",
+     "zh": "重定位"
+    },
+    {
+     "ref": "7.8",
+     "title": "Executable Object Files",
+     "zh": "可执行目标文件"
+    },
+    {
+     "ref": "7.9",
+     "title": "Loading Executable Object Files",
+     "zh": "加载可执行目标文件"
+    },
+    {
+     "ref": "7.10",
+     "title": "Dynamic Linking with Shared Libraries",
+     "zh": "共享库的动态链接"
+    },
+    {
+     "ref": "7.11",
+     "title": "Loading and Linking Shared Libraries from Applications",
+     "zh": "在应用程序中加载和链接共享库"
+    },
+    {
+     "ref": "7.12",
+     "title": "Position-Independent Code (PIC)",
+     "zh": "位置无关代码（PIC）"
+    },
+    {
+     "ref": "7.13",
+     "title": "Library Interpositioning",
+     "zh": "库打桩"
+    },
+    {
+     "ref": "7.14",
+     "title": "Tools for Manipulating Object Files",
+     "zh": "处理目标文件的工具"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "10",
+   "title": "System-Level I/O",
+   "zh": "系统级 I/O",
+   "fill": "系统接口（文件描述符与 Unix I/O 这类操作系统接口）",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Unix I/O",
+     "zh": "Unix I/O"
+    },
+    {
+     "ref": "10.2",
+     "title": "Files",
+     "zh": "文件"
+    },
+    {
+     "ref": "10.3",
+     "title": "Opening and Closing Files",
+     "zh": "打开与关闭文件"
+    },
+    {
+     "ref": "10.4",
+     "title": "Reading and Writing Files",
+     "zh": "读写文件"
+    },
+    {
+     "ref": "10.5",
+     "title": "Robust Reading and Writing with the Rio Package",
+     "zh": "用 Rio 包做健壮的读写"
+    },
+    {
+     "ref": "10.6",
+     "title": "Reading File Metadata",
+     "zh": "读取文件元数据"
+    },
+    {
+     "ref": "10.7",
+     "title": "Reading Directory Contents",
+     "zh": "读取目录内容"
+    },
+    {
+     "ref": "10.8",
+     "title": "Sharing Files",
+     "zh": "文件共享"
+    },
+    {
+     "ref": "10.9",
+     "title": "I/O Redirection",
+     "zh": "I/O 重定向"
+    },
+    {
+     "ref": "10.10",
+     "title": "Standard I/O",
+     "zh": "标准 I/O"
+    },
+    {
+     "ref": "10.11",
+     "title": "Putting It Together: Which I/O Functions Should I Use?",
+     "zh": "综合：该用哪些 I/O 函数"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "内存布局",
+   "refs": [
+    "A:Lecture 9",
+    "A:Lecture 13",
+    "A:Lecture 19",
+    "A:Lecture 21"
+   ]
+  },
+  {
+   "topic": "指针",
+   "refs": [
+    "A:Lecture 8",
+    "A:Lecture 9",
+    "A:Lecture 10",
+    "A:Lecture 11"
+   ]
+  },
+  {
+   "topic": "生命周期",
+   "refs": [
+    "A:Lecture 9",
+    "A:Lecture 10",
+    "A:Lecture 22",
+    "A:Lecture 23"
+   ]
+  },
+  {
+   "topic": "链接",
+   "refs": [
+    "B:7",
+    "B:7.5",
+    "B:7.6",
+    "B:7.10"
+   ]
+  },
+  {
+   "topic": "系统接口",
+   "refs": [
+    "B:10",
+    "B:10.1",
+    "B:10.3",
+    "B:10.4"
+   ]
+  }
+ ],
+ "omitted": "CS107 第 9–10 周的 Lecture 24–27（优化、缓存与内存层次、课程总结）属于性能优化与收尾，不在本节点的四个知识点内，未收。",
+ "notes": "CS107 的目录页面把 17 个 lecture 挂在 main 页、完整 27 个挂在 calendar 页，两边标题一致（calendar 带日期前缀）；本导览图按 calendar 的周次分组，只收 Week 1–8。CS107 本身不讲链接器与系统调用，故用同一门课指定的参考书 B&O 的第 7、10 章作补充分支。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 58,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

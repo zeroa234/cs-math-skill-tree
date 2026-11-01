@@ -1,0 +1,337 @@
+{
+ "id": "H.3.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Introduction to Embedded Systems: A Cyber-Physical Systems Approach (2nd ed.)",
+   "by": "Edward A. Lee and Sanjit A. Seshia, MIT Press",
+   "year": 2017,
+   "url": "https://ptolemy.berkeley.edu/books/leeseshia/",
+   "toc_urls": [
+    "https://ptolemy.berkeley.edu/books/leeseshia/releases/LeeSeshia_DigitalV2_3.pdf"
+   ],
+   "why": "节点“现有英文学习资源”就是这本书（MIT Press 第二版，作者主页免费公开 PDF，研究生/高年级本科教材）。它把实时系统的“时限—可分析性—验证”做成一条主线：多任务与线程（11）、调度与可调度性分析 RMS/EDF（12）、不变式与时序逻辑（13）、等价与精化（14）、可达性分析与模型检验（15）、执行时间与最坏执行时间的量化分析（16），正好覆盖本节点的调度可分析性、最坏执行时间与验证。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "16.863J System Safety",
+   "by": "Nancy Leveson, MIT OpenCourseWare",
+   "year": 2016,
+   "url": "https://ocw.mit.edu/courses/16-863j-system-safety-spring-2016/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/16-863j-system-safety-spring-2016/pages/calendar/"
+   ],
+   "why": "补“失效安全”：A 只讲调度分析与形式验证，没有危害分析与安全设计。这是 MIT 研究生课 System Safety 的官方课表，逐讲列出事故模型/CAST、传统危害分析与量化、STPA（含危害、约束、HCS 等基本成分）、怎么做 STPA、Design for Safety、运行与监管、SUBSAFE 管理，正是安全关键系统里“失效安全”那一套方法论。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Input and Output",
+   "zh": "输入与输出",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "I/O Hardware",
+     "zh": "I/O 硬件"
+    },
+    {
+     "ref": "10.2",
+     "title": "Sequential Software in a Concurrent World",
+     "zh": "并发世界中的顺序软件"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Multitasking",
+   "zh": "多任务",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Imperative Programs",
+     "zh": "命令式程序"
+    },
+    {
+     "ref": "11.2",
+     "title": "Threads",
+     "zh": "线程"
+    },
+    {
+     "ref": "11.3",
+     "title": "Processes and Message Passing",
+     "zh": "进程与消息传递"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Scheduling",
+   "zh": "调度",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Basics of Scheduling",
+     "zh": "调度基础"
+    },
+    {
+     "ref": "12.2",
+     "title": "Rate Monotonic Scheduling",
+     "zh": "单调速率调度（RMS）"
+    },
+    {
+     "ref": "12.3",
+     "title": "Earliest Deadline First",
+     "zh": "最早截止期优先（EDF）"
+    },
+    {
+     "ref": "12.4",
+     "title": "Scheduling and Mutual Exclusion",
+     "zh": "调度与互斥"
+    },
+    {
+     "ref": "12.5",
+     "title": "Multiprocessor Scheduling",
+     "zh": "多处理器调度"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Invariants and Temporal Logic",
+   "zh": "不变式与时序逻辑",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Invariants",
+     "zh": "不变式"
+    },
+    {
+     "ref": "13.2",
+     "title": "Linear Temporal Logic",
+     "zh": "线性时序逻辑（LTL）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Equivalence and Refinement",
+   "zh": "等价与精化",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "Models as Specifications",
+     "zh": "把模型当作规约"
+    },
+    {
+     "ref": "14.2",
+     "title": "Type Equivalence and Refinement",
+     "zh": "类型等价与精化"
+    },
+    {
+     "ref": "14.3",
+     "title": "Language Equivalence and Containment",
+     "zh": "语言等价与包含"
+    },
+    {
+     "ref": "14.4",
+     "title": "Simulation",
+     "zh": "模拟关系"
+    },
+    {
+     "ref": "14.5",
+     "title": "Bisimulation",
+     "zh": "互模拟"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "Reachability Analysis and Model Checking",
+   "zh": "可达性分析与模型检验",
+   "items": [
+    {
+     "ref": "15.1",
+     "title": "Open and Closed Systems",
+     "zh": "开放系统与封闭系统"
+    },
+    {
+     "ref": "15.2",
+     "title": "Reachability Analysis",
+     "zh": "可达性分析"
+    },
+    {
+     "ref": "15.3",
+     "title": "Abstraction in Model Checking",
+     "zh": "模型检验中的抽象"
+    },
+    {
+     "ref": "15.4",
+     "title": "Model Checking Liveness Properties",
+     "zh": "活性性质的模型检验"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Quantitative Analysis",
+   "zh": "量化分析",
+   "items": [
+    {
+     "ref": "16.1",
+     "title": "Problems of Interest",
+     "zh": "所关心的问题"
+    },
+    {
+     "ref": "16.2",
+     "title": "Programs as Graphs",
+     "zh": "把程序看成图"
+    },
+    {
+     "ref": "16.3",
+     "title": "Factors Determining Execution Time",
+     "zh": "决定执行时间的因素"
+    },
+    {
+     "ref": "16.4",
+     "title": "Basics of Execution Time Analysis",
+     "zh": "执行时间分析基础"
+    },
+    {
+     "ref": "16.5",
+     "title": "Other Quantitative Analysis Problems",
+     "zh": "其他量化分析问题"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "CAST and Accident Analysis",
+   "zh": "CAST 与事故分析",
+   "fill": "失效安全：从已发生的事故反推失效链与系统缺陷（因果分析与事故分析）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "4",
+   "title": "Traditional HA, Lecture on Quantification",
+   "zh": "传统危害分析与量化",
+   "fill": "失效安全：传统危害分析（HA）方法与风险定量化",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "5",
+   "title": "Systems Theoretic Process Analysis (STPA) Introduction, Basic Components (hazard, constraints, HCS)",
+   "zh": "系统理论过程分析（STPA）导论与基本成分（危害、约束、HCS）",
+   "fill": "失效安全：STPA 的危害、安全约束与分层控制结构（HCS）三个基本成分",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "STPA, How to Do It",
+   "zh": "STPA 怎么做",
+   "fill": "失效安全：STPA 的完整分析步骤",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Design for Safety",
+   "zh": "面向安全的设计",
+   "fill": "失效安全：安全驱动的设计与设计过程（含对设计的验证）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "10",
+   "title": "Operations, Regulation",
+   "zh": "运行与监管",
+   "fill": "失效安全：系统投入运行后的安全监管与合规",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "12",
+   "title": "Management, SUBSAFE",
+   "zh": "安全管理与 SUBSAFE",
+   "fill": "失效安全：安全管理制度（以美国海军 SUBSAFE 计划为例）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "时限",
+   "refs": [
+    "A:12.1",
+    "A:12.2",
+    "A:12.3",
+    "A:11.2"
+   ]
+  },
+  {
+   "topic": "调度可分析性",
+   "refs": [
+    "A:12",
+    "A:12.1",
+    "A:12.2",
+    "A:12.3",
+    "A:12.4",
+    "A:12.5"
+   ]
+  },
+  {
+   "topic": "最坏执行时间",
+   "refs": [
+    "A:16",
+    "A:16.3",
+    "A:16.4",
+    "A:16.5"
+   ]
+  },
+  {
+   "topic": "失效安全",
+   "refs": [
+    "B:3",
+    "B:4",
+    "B:5",
+    "B:6",
+    "B:7",
+    "B:10",
+    "B:12"
+   ],
+   "note": "两个来源都没有专门讲“失效安全”（fail-safe / fail-operational 的冗余与降级策略）的章节：A 只到调度与形式验证，B 给的是危害分析与安全设计方法论，冗余、看门狗、双通道比较等具体失效安全机制要靠工程资料补。"
+  },
+  {
+   "topic": "验证",
+   "refs": [
+    "A:13",
+    "A:13.2",
+    "A:14",
+    "A:15",
+    "A:15.2",
+    "A:15.4",
+    "B:7"
+   ]
+  }
+ ],
+ "omitted": "A 里没收的：第 1 章（导论与设计流程）、第 2–6 章（连续动态、离散动态、混合系统、状态机组合、并发计算模型）、第 7 章（传感器与执行器，属 H.3.3）、第 8 章（嵌入式处理器）、第 9 章（存储体系）、第 17 章（安全与隐私）、附录 A/B，以及各章习题与总结小节。前两部分是建模语言，与“时限/调度/验证”这个节点无关。B 里没收第 1、2、8、9、11、13 讲（课程导论、STAMP 理论问答与伦理讨论、人因、网络安全、客座讲座、课程项目汇报）。",
+ "notes": "A 的目录取自作者主页公开的整书 PDF（version 2.3）正文前的 Contents，标题已去掉 PDF 点线与页码；章号按原书（Part III Analysis and Verification 下的 13–15 章）。B 的课表以“SES # / CLASS TOPICS”给出，ref 用 SES 编号。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 40,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

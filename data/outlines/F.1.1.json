@@ -1,0 +1,287 @@
+{
+ "id": "F.1.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Open Data Structures (in Java)",
+   "by": "Pat Morin",
+   "year": 2013,
+   "url": "https://opendatastructures.org/",
+   "toc_urls": [
+    "https://opendatastructures.org/ods-java.pdf",
+    "https://opendatastructures.org/ods-java/"
+   ],
+   "why": "CS 61B 春季 2021 课程站的可抓取页面只有公告、资源与考卷清单，没有逐讲主题表，也没有指定教材的目录；改用 Pat Morin 的开放教材（AU Press 出版、官方站点免费全文、每章带不变量与运行时间分析），章节与节点简介的数组、链表、栈队列、哈希、树、堆、图存储逐项对应。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Array-Based Lists",
+   "zh": "基于数组的列表",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "ArrayStack: Fast Stack Operations Using an Array",
+     "zh": "ArrayStack：用数组实现快速栈操作"
+    },
+    {
+     "ref": "2.2",
+     "title": "FastArrayStack: An Optimized ArrayStack",
+     "zh": "FastArrayStack：优化过的 ArrayStack"
+    },
+    {
+     "ref": "2.3",
+     "title": "ArrayQueue: An Array-Based Queue",
+     "zh": "ArrayQueue：基于数组的队列"
+    },
+    {
+     "ref": "2.4",
+     "title": "ArrayDeque: Fast Deque Operations Using an Array",
+     "zh": "ArrayDeque：用数组实现快速双端队列操作"
+    },
+    {
+     "ref": "2.5",
+     "title": "DualArrayDeque: Building a Deque from Two Stacks",
+     "zh": "DualArrayDeque：用两个栈构建双端队列"
+    },
+    {
+     "ref": "2.6",
+     "title": "RootishArrayStack: A Space-Efficient Array Stack",
+     "zh": "RootishArrayStack：空间高效的数组栈"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Linked Lists",
+   "zh": "链表",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "SLList: A Singly-Linked List",
+     "zh": "SLList：单链表"
+    },
+    {
+     "ref": "3.2",
+     "title": "DLList: A Doubly-Linked List",
+     "zh": "DLList：双向链表"
+    },
+    {
+     "ref": "3.3",
+     "title": "SEList: A Space-Efficient Linked List",
+     "zh": "SEList：空间高效的链表"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Hash Tables",
+   "zh": "哈希表",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "ChainedHashTable: Hashing with Chaining",
+     "zh": "ChainedHashTable：拉链法哈希"
+    },
+    {
+     "ref": "5.2",
+     "title": "LinearHashTable: Linear Probing",
+     "zh": "LinearHashTable：线性探测哈希"
+    },
+    {
+     "ref": "5.3",
+     "title": "Hash Codes",
+     "zh": "散列码"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Binary Trees",
+   "zh": "二叉树",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "BinaryTree: A Basic Binary Tree",
+     "zh": "BinaryTree：基本二叉树"
+    },
+    {
+     "ref": "6.2",
+     "title": "BinarySearchTree: An Unbalanced Binary Search Tree",
+     "zh": "BinarySearchTree：不平衡的二叉搜索树"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Red-Black Trees",
+   "zh": "红黑树",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "2-4 Trees",
+     "zh": "2-4 树"
+    },
+    {
+     "ref": "9.2",
+     "title": "RedBlackTree: A Simulated 2-4 Tree",
+     "zh": "RedBlackTree：模拟 2-4 树的红黑树"
+    },
+    {
+     "ref": "9.3",
+     "title": "Summary",
+     "zh": "小结"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Heaps",
+   "zh": "堆",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "BinaryHeap: An Implicit Binary Tree",
+     "zh": "BinaryHeap：隐式二叉树实现的堆"
+    },
+    {
+     "ref": "10.2",
+     "title": "MeldableHeap: A Randomized Meldable Heap",
+     "zh": "MeldableHeap：随机可合并堆"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Graphs",
+   "zh": "图",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "AdjacencyMatrix: Representing a Graph by a Matrix",
+     "zh": "AdjacencyMatrix：用邻接矩阵表示图"
+    },
+    {
+     "ref": "12.2",
+     "title": "AdjacencyLists: A Graph as a Collection of Lists",
+     "zh": "AdjacencyLists：用邻接表集合表示图"
+    },
+    {
+     "ref": "12.3",
+     "title": "Graph Traversal",
+     "zh": "图遍历"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "数组",
+   "refs": [
+    "A:2",
+    "A:2.1",
+    "A:2.6"
+   ]
+  },
+  {
+   "topic": "链表",
+   "refs": [
+    "A:3",
+    "A:3.1",
+    "A:3.2",
+    "A:3.3"
+   ]
+  },
+  {
+   "topic": "栈队列",
+   "refs": [
+    "A:2.1",
+    "A:2.3",
+    "A:2.4",
+    "A:2.5"
+   ]
+  },
+  {
+   "topic": "哈希",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:5.2",
+    "A:5.3"
+   ]
+  },
+  {
+   "topic": "树",
+   "refs": [
+    "A:6",
+    "A:6.1",
+    "A:6.2",
+    "A:9",
+    "A:9.2"
+   ]
+  },
+  {
+   "topic": "堆",
+   "refs": [
+    "A:10",
+    "A:10.1",
+    "A:10.2"
+   ]
+  },
+  {
+   "topic": "图存储",
+   "refs": [
+    "A:12",
+    "A:12.1",
+    "A:12.2",
+    "A:12.3"
+   ]
+  },
+  {
+   "topic": "不变量",
+   "refs": [
+    "A:9.1",
+    "A:9.2",
+    "A:10.1",
+    "A:2.1"
+   ],
+   "note": "这本教材没有把“不变量”单列成章，而是每个结构都用不变量证明正确性：2.1 的 backing array 与元素位置约定、9.1 的 2-4 树性质、9.2 的红黑树性质（根的黑色、红节点不红红相连、黑高相等）、10.1 的堆序性质。"
+  },
+  {
+   "topic": "D2 验收：为一个容器选实现并给出摊还/期望运行时间论证",
+   "refs": [
+    "A:2.1",
+    "A:5.1",
+    "A:5.2",
+    "A:9.2"
+   ],
+   "note": "数组扩容、拉链法期望 O(1)、线性探测、红黑树 O(log n) 的证明都在这些小节。"
+  },
+  {
+   "topic": "D3 验收：从抽象接口与不变量推导实现、给出最坏情况界",
+   "refs": [
+    "A:6.2",
+    "A:3.3",
+    "A:2.6"
+   ],
+   "note": "不平衡 BST 的最坏情况退化、SEList 分块、RootishArrayStack 的空间界。"
+  }
+ ],
+ "omitted": "第 1 章（导论：效率、接口定义、数学预备、计算模型）是通用铺垫，与节点的八个知识点不直接对应；第 4 章 Skiplists、第 7 章随机 BST、第 8 章 Scapegoat 树、第 13 章整数数据结构、第 14 章外存 B 树属于进阶或特定场景，未收；各章末“Discussion and Exercises”为习题，按要求不收；参考文献与索引同样未收。",
+ "notes": "目录从官方 PDF（ods-java.pdf）前几页逐条抄录，并核对了 ods-java/ 的 HTML 目录（章名一致）。CS 61B 课程站本身没找到逐讲主题表，若主代理想要“课程视角”，可把本导览图与 CS 61B 的 lab/project 顺序对照使用。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 29,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

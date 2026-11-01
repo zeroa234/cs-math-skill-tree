@@ -1,0 +1,593 @@
+{
+ "id": "H.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Embedded Linux system development (Bootlin free training materials)",
+   "by": "Bootlin",
+   "year": 2025,
+   "url": "https://bootlin.com/docs/",
+   "toc_urls": [
+    "https://bootlin.com/docs/",
+    "https://bootlin.com/doc/training/embedded-linux/embedded-linux-agenda.pdf"
+   ],
+   "why": "节点“现有英文学习资源”就是这份 Bootlin 免费培训资料（CC BY-SA 3.0，嵌入式 Linux 内核与驱动工程界的权威厂商）。其中“Embedded Linux system development”课的 agenda 逐讲讲启动流程/固件/U-Boot、硬件访问（总线、Device Tree、内核模块、/dev 与 /sys），补上了启动链与硬件软件协同这两个知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "Linux kernel and driver development (Bootlin free training materials)",
+   "by": "Bootlin",
+   "year": 2025,
+   "url": "https://bootlin.com/training/kernel/",
+   "toc_urls": [
+    "https://bootlin.com/doc/training/linux-kernel/linux-kernel-agenda.pdf"
+   ],
+   "why": "补“驱动”“中断”“资源（内存/锁/功耗）”“可靠性（驱动调试）”：同一套 Bootlin 资料里的内核与驱动课 agenda，按讲列出内核模块、pinctrl、设备模型、驱动里的中断处理与延迟工作、锁原语、内存管理、驱动调试手段、电源管理。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "Real-time Linux with PREEMPT_RT (Bootlin free training materials)",
+   "by": "Bootlin",
+   "year": 2025,
+   "url": "https://bootlin.com/training/preempt-rt/",
+   "toc_urls": [
+    "https://bootlin.com/doc/training/preempt-rt/preempt-rt-agenda.pdf"
+   ],
+   "why": "补“实时调度”（本节点的 RTOS 部分）：A、B 只讲通用 Linux 驱动与调度，没有实时性分析。这是 Bootlin 的实时 Linux 课 agenda：实时与确定性定义、PREEMPT_RT 内部机制、硬件对实时性的限制、SCHED_FIFO/RR/DEADLINE 与 CPU/IRQ 亲和性、POSIX 实时 API 与优先级继承。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Boot process, firmware, bootloaders",
+   "zh": "启动流程、固件与引导程序",
+   "items": [
+    {
+     "ref": "",
+     "title": "Booting process of embedded platforms, focus on the x86 and ARM architectures",
+     "zh": "嵌入式平台的启动流程：以 x86 与 ARM 架构为主"
+    },
+    {
+     "ref": "",
+     "title": "Boot process and bootloaders on x86 platforms (legacy and UEFI)",
+     "zh": "x86 平台的启动流程与引导程序（传统 BIOS 与 UEFI）"
+    },
+    {
+     "ref": "",
+     "title": "Boot process on ARM platforms: ROM code, bootloaders, ARM Trusted Firmware",
+     "zh": "ARM 平台的启动流程：ROM code、引导程序、ARM Trusted Firmware"
+    },
+    {
+     "ref": "",
+     "title": "Focus on U-Boot: configuration, installation, and usage.",
+     "zh": "U-Boot 详解：配置、安装与使用"
+    },
+    {
+     "ref": "",
+     "title": "U-Boot commands, U-Boot environment, U-Boot scripts, U-Boot generic distro boot mechanism",
+     "zh": "U-Boot 命令、环境变量、脚本与通用发行版启动机制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Accessing hardware devices",
+   "zh": "访问硬件设备",
+   "items": [
+    {
+     "ref": "",
+     "title": "How to access hardware on popular busses: USB, SPI, I2C, PCI",
+     "zh": "常见总线（USB、SPI、I2C、PCI）上的硬件访问方式"
+    },
+    {
+     "ref": "",
+     "title": "Usage of kernel drivers and direct user-space access",
+     "zh": "内核驱动的使用与用户态直接访问"
+    },
+    {
+     "ref": "",
+     "title": "The Device Tree syntax, and how to use it to describe additional devices and pin-muxing",
+     "zh": "设备树语法：描述新增设备与引脚复用"
+    },
+    {
+     "ref": "",
+     "title": "Finding Linux kernel drivers for specific hardware devices",
+     "zh": "为特定硬件寻找 Linux 内核驱动"
+    },
+    {
+     "ref": "",
+     "title": "Using kernel modules",
+     "zh": "内核模块的使用"
+    },
+    {
+     "ref": "",
+     "title": "Hardware access using /dev and /sys",
+     "zh": "通过 /dev 与 /sys 访问硬件"
+    },
+    {
+     "ref": "",
+     "title": "User-space interfaces for the most common hardware devices: storage, network, GPIO, LEDs, audio, graphics, video",
+     "zh": "常见硬件设备的用户态接口：存储、网络、GPIO、LED、音频、图形、视频"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Linux kernel modules",
+   "zh": "Linux 内核模块",
+   "fill": "驱动：设备驱动模块的基本结构与编写约束",
+   "items": [
+    {
+     "ref": "",
+     "title": "Linux device drivers",
+     "zh": "Linux 设备驱动"
+    },
+    {
+     "ref": "",
+     "title": "A simple module",
+     "zh": "一个最简单的模块"
+    },
+    {
+     "ref": "",
+     "title": "Programming constraints",
+     "zh": "内核编程的约束"
+    },
+    {
+     "ref": "",
+     "title": "Loading, unloading modules",
+     "zh": "模块的加载与卸载"
+    },
+    {
+     "ref": "",
+     "title": "Module dependencies",
+     "zh": "模块依赖关系"
+    },
+    {
+     "ref": "",
+     "title": "Adding sources to the kernel tree",
+     "zh": "把源码加入内核树"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Pin muxing",
+   "zh": "引脚复用",
+   "fill": "硬件软件协同：引脚复用配置（pinctrl）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Understand the pinctrl framework of the kernel",
+     "zh": "理解内核的 pinctrl 框架"
+    },
+    {
+     "ref": "",
+     "title": "Understand how to configure the muxing of pins",
+     "zh": "配置引脚复用"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Linux device model",
+   "zh": "Linux 设备模型",
+   "fill": "驱动与硬件软件协同：设备模型与设备-驱动绑定",
+   "items": [
+    {
+     "ref": "",
+     "title": "Understand how the kernel is designed to support device drivers",
+     "zh": "内核为支持设备驱动所做的设计"
+    },
+    {
+     "ref": "",
+     "title": "The device model",
+     "zh": "设备模型"
+    },
+    {
+     "ref": "",
+     "title": "Binding devices and drivers",
+     "zh": "设备与驱动的绑定"
+    },
+    {
+     "ref": "",
+     "title": "Platform devices, Device Tree",
+     "zh": "平台设备与设备树"
+    },
+    {
+     "ref": "",
+     "title": "Interface in user space: /sys",
+     "zh": "用户态接口：/sys"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Processes, scheduling, sleeping and interrupts",
+   "zh": "进程、调度、睡眠与中断",
+   "fill": "中断与调度：驱动里的中断处理、延迟工作与进程睡眠",
+   "items": [
+    {
+     "ref": "",
+     "title": "Process management in the Linux kernel.",
+     "zh": "Linux 内核中的进程管理"
+    },
+    {
+     "ref": "",
+     "title": "The Linux kernel scheduler and how processes sleep.",
+     "zh": "Linux 内核调度器与进程睡眠"
+    },
+    {
+     "ref": "",
+     "title": "Interrupt handling in device drivers: interrupt handler registration and programming, scheduling deferred work",
+     "zh": "设备驱动中的中断处理：中断处理函数注册与编写、延迟工作的调度"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Locking",
+   "zh": "加锁与并发控制",
+   "fill": "资源与可靠性：共享资源、锁原语与典型加锁问题",
+   "items": [
+    {
+     "ref": "",
+     "title": "Issues with concurrent access to shared resources",
+     "zh": "共享资源并发访问的问题"
+    },
+    {
+     "ref": "",
+     "title": "Locking primitives: mutexes, semaphores, spinlocks.",
+     "zh": "锁原语：互斥量、信号量、自旋锁"
+    },
+    {
+     "ref": "",
+     "title": "Atomic operations.",
+     "zh": "原子操作"
+    },
+    {
+     "ref": "",
+     "title": "Typical locking issues.",
+     "zh": "典型的加锁问题"
+    },
+    {
+     "ref": "",
+     "title": "Using the lock validator to identify the sources of locking problems.",
+     "zh": "用锁校验器定位加锁问题"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Memory management",
+   "zh": "内存管理",
+   "fill": "资源：内核内存与地址空间、kmalloc/vmalloc/按页分配",
+   "items": [
+    {
+     "ref": "",
+     "title": "Linux: memory management - Physical and virtual (kernel and user) address spaces.",
+     "zh": "Linux 内存管理：物理与虚拟（内核态与用户态）地址空间"
+    },
+    {
+     "ref": "",
+     "title": "Linux memory management implementation.",
+     "zh": "Linux 内存管理的实现"
+    },
+    {
+     "ref": "",
+     "title": "Allocating with kmalloc().",
+     "zh": "用 kmalloc() 分配"
+    },
+    {
+     "ref": "",
+     "title": "Allocating by pages.",
+     "zh": "按页分配"
+    },
+    {
+     "ref": "",
+     "title": "Allocating with vmalloc().",
+     "zh": "用 vmalloc() 分配"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Driver debugging techniques",
+   "zh": "驱动调试技术",
+   "fill": "可靠性：驱动调试与内核崩溃分析",
+   "items": [
+    {
+     "ref": "",
+     "title": "Debugging with printing functions",
+     "zh": "用打印函数调试"
+    },
+    {
+     "ref": "",
+     "title": "Using Debugfs",
+     "zh": "使用 Debugfs"
+    },
+    {
+     "ref": "",
+     "title": "Analyzing a kernel oops",
+     "zh": "分析内核 oops"
+    },
+    {
+     "ref": "",
+     "title": "Using kgdb, a kernel debugger",
+     "zh": "使用内核调试器 kgdb"
+    },
+    {
+     "ref": "",
+     "title": "Using the Magic SysRq commands",
+     "zh": "使用 Magic SysRq 命令"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Power management",
+   "zh": "电源管理",
+   "fill": "资源：功耗预算与运行时电源管理",
+   "items": [
+    {
+     "ref": "",
+     "title": "Overview of the power management features of the kernel",
+     "zh": "内核电源管理特性概览"
+    },
+    {
+     "ref": "",
+     "title": "Topics covered: clocks, suspend and resume, dynamic frequency scaling, saving power during idle, runtime power management, regulators, etc.",
+     "zh": "覆盖内容：时钟、挂起与恢复、动态调频、空闲省电、运行时电源管理、稳压器等"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Introduction to Real-Time behaviour and determinism",
+   "zh": "实时行为与确定性导论",
+   "fill": "实时调度（RTOS 那一半）：时限与确定性的定义、多任务系统的特性、优先级与加锁模式",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition of a Real-Time Operating System",
+     "zh": "实时操作系统的定义"
+    },
+    {
+     "ref": "",
+     "title": "Specificities of multi-task systems",
+     "zh": "多任务系统的特性"
+    },
+    {
+     "ref": "",
+     "title": "Common locking and prioritizing patterns",
+     "zh": "常见的加锁与优先级模式"
+    },
+    {
+     "ref": "",
+     "title": "Overview of existing Real-Time Operating Systems",
+     "zh": "现有实时操作系统概览"
+    },
+    {
+     "ref": "",
+     "title": "Approaches to bring Real-Time capabilities to Linux",
+     "zh": "给 Linux 引入实时能力的几种途径"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "The PREEMPT_RT patch",
+   "zh": "PREEMPT_RT 补丁",
+   "fill": "实时调度与中断：抢占模型、线程化中断、实时相关的锁原语",
+   "items": [
+    {
+     "ref": "",
+     "title": "History and future of the PREEMPT_RT patch",
+     "zh": "PREEMPT_RT 补丁的历史与去向"
+    },
+    {
+     "ref": "",
+     "title": "Real-Time improvements from PREEMPT_RT in mainline Linux",
+     "zh": "主线内核中来自 PREEMPT_RT 的实时改进"
+    },
+    {
+     "ref": "",
+     "title": "The internals of PREEMPT_RT",
+     "zh": "PREEMPT_RT 的内部机制"
+    },
+    {
+     "ref": "",
+     "title": "Interrupt handling: threaded interrupts, softirqs",
+     "zh": "中断处理：线程化中断与软中断"
+    },
+    {
+     "ref": "",
+     "title": "Locking primitives: mutexes and spinlocks, sleeping spinlocks",
+     "zh": "锁原语：互斥量与自旋锁、可睡眠自旋锁"
+    },
+    {
+     "ref": "",
+     "title": "Preemption models",
+     "zh": "抢占模型"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Hardware configuration and limitations for Real-Time",
+   "zh": "实时性相关的硬件配置与限制",
+   "fill": "硬件软件协同与可靠性：固件/中断、电源管理、DMA 对实时性的影响",
+   "items": [
+    {
+     "ref": "",
+     "title": "Interrupts and deep firmware",
+     "zh": "中断与底层固件"
+    },
+    {
+     "ref": "",
+     "title": "Interaction with power management features: CPU frequency scaling and sleep states",
+     "zh": "与电源管理特性的相互作用：CPU 调频与睡眠状态"
+    },
+    {
+     "ref": "",
+     "title": "DMA",
+     "zh": "DMA"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Kernel infrastructures and configuration",
+   "zh": "内核基础设施与配置",
+   "fill": "实时调度：调度策略与优先级、CPU/IRQ 亲和性、CPU 隔离",
+   "items": [
+    {
+     "ref": "",
+     "title": "Good practices when writing Linux kernel drivers",
+     "zh": "编写 Linux 内核驱动的良好实践"
+    },
+    {
+     "ref": "",
+     "title": "Scheduling policies and priorities: SCHED_FIFO, SCHED_RR, SCHED_DEADLINE",
+     "zh": "调度策略与优先级：SCHED_FIFO、SCHED_RR、SCHED_DEADLINE"
+    },
+    {
+     "ref": "",
+     "title": "CPU and IRQ Affinity",
+     "zh": "CPU 与中断亲和性"
+    },
+    {
+     "ref": "",
+     "title": "Memory management",
+     "zh": "内存管理"
+    },
+    {
+     "ref": "",
+     "title": "CPU isolation with isolcpus",
+     "zh": "用 isolcpus 隔离 CPU"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Real-Time Applications programming patterns",
+   "zh": "实时应用的编程模式",
+   "fill": "实时调度在应用侧的落地：线程/内存/锁/通信的确定性写法",
+   "items": [
+    {
+     "ref": "",
+     "title": "POSIX real-time API",
+     "zh": "POSIX 实时 API"
+    },
+    {
+     "ref": "",
+     "title": "Thread management and configuration",
+     "zh": "线程管理与配置"
+    },
+    {
+     "ref": "",
+     "title": "Memory management: memory allocation and memory locking, stack",
+     "zh": "内存管理：内存分配、内存锁定与栈"
+    },
+    {
+     "ref": "",
+     "title": "Locking patterns: mutexes, priority inheritance",
+     "zh": "加锁模式：互斥量与优先级继承"
+    },
+    {
+     "ref": "",
+     "title": "Inter-Process Communication",
+     "zh": "进程间通信"
+    },
+    {
+     "ref": "",
+     "title": "Signaling",
+     "zh": "信号"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "启动链",
+   "refs": [
+    "A:#1"
+   ]
+  },
+  {
+   "topic": "驱动",
+   "refs": [
+    "A:#2",
+    "B:#1",
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "实时调度",
+   "refs": [
+    "C:#1",
+    "C:#4",
+    "C:#5",
+    "B:#4"
+   ]
+  },
+  {
+   "topic": "中断",
+   "refs": [
+    "B:#4",
+    "C:#2",
+    "C:#3"
+   ]
+  },
+  {
+   "topic": "资源",
+   "refs": [
+    "B:#7",
+    "B:#8",
+    "B:#5"
+   ]
+  },
+  {
+   "topic": "可靠性",
+   "refs": [
+    "B:#6",
+    "C:#1",
+    "C:#2"
+   ]
+  },
+  {
+   "topic": "硬件软件协同",
+   "refs": [
+    "A:#2",
+    "B:#2",
+    "B:#3",
+    "C:#3"
+   ]
+  }
+ ],
+ "omitted": "三个课程 agenda 里与节点无关的课时没收录：A 中的交叉编译工具链与 C 库、根文件系统与 BusyBox、块/闪存文件系统、交叉编译用户态库、Buildroot 构建系统、开源许可证、主流软件栈、常用资源；B 中的内核介绍与源码、配置编译与启动、I2C API、input 子系统、I/O 内存、misc 子系统、DMA、mmap；C 中的实验（Lab）课时。三个 agenda 里的 Lab 条目一律不收，只保留 Lecture。",
+ "notes": "Bootlin 的 agenda 用“Day 1 - Morning / Lecture 标题 + 要点”的形式，正文没有章号，所以 ref 留空、coverage 用 A:#n 编号引用。PDF 提取有换行连字符（bootload-ers、be-haviour、limi-tations、program-ming），标题按正确拼写写。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 85,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

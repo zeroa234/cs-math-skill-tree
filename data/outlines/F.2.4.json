@@ -1,0 +1,159 @@
+{
+ "id": "F.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "15-414 Bug Catching: Automated Program Verification and Testing, Spring 2021",
+   "by": "Ruben Martins and Frank Pfenning",
+   "year": 2021,
+   "url": "https://www.cs.cmu.edu/~15414/s21/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~15414/s21/schedule.html"
+   ],
+   "why": "节点现有英文资源；Schedule 页逐讲列出主题与讲义 PDF：SAT 求解与编码、SMT 求解/理论/编码/量词、相继式演算与归纳，正好是本节点的可满足性、SAT/SMT、证明搜索几条线。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-414 Bug Catching: Automated Program Verification and Testing, Fall 2026",
+   "by": "Matt Fredrikson",
+   "year": 2026,
+   "url": "https://www.cs.cmu.edu/~15414/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~15414/schedule.html"
+   ],
+   "why": "补 A 缺的两讲：归结（Resolution）与可检查证明（Certificates）。同一门课的较新一次开课，讲义 PDF 齐全。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "SAT Solving",
+   "zh": "SAT 求解",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "SAT Encodings",
+   "zh": "SAT 编码",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "SMT Solving",
+   "zh": "SMT 求解",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "SMT Theories",
+   "zh": "SMT 理论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "SMT Encodings",
+   "zh": "SMT 编码",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "SMT Quantifiers",
+   "zh": "SMT 中的量词",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Sequent Calculus",
+   "zh": "相继式演算",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Diamonds",
+   "zh": "菱形算子",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Induction",
+   "zh": "归纳",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Resolution",
+   "zh": "归结",
+   "fill": "归结原理与归结反驳（A 的 SAT 一讲只用 DPLL/CDCL 视角，没有把归结作为证明系统来讲）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Certificates",
+   "zh": "证明证书",
+   "fill": "可检查证明：把求解器的结论导出成可独立检查的证书（A 只讲求解与演算，没有讲证书与检查器）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "可满足性",
+   "refs": [
+    "A:#1",
+    "A:#2",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "SAT/SMT",
+   "refs": [
+    "A:#1",
+    "A:#2",
+    "A:#3",
+    "A:#4",
+    "A:#5",
+    "A:#6"
+   ]
+  },
+  {
+   "topic": "归结",
+   "refs": [
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "证明搜索",
+   "refs": [
+    "A:#7",
+    "A:#8",
+    "A:#9"
+   ]
+  },
+  {
+   "topic": "可检查证明",
+   "refs": [
+    "B:#2"
+   ]
+  }
+ ],
+ "omitted": "主来源 Spring 2021 共 24 次课，只收了 9 讲：Introduction、Logical Contracts、Data Structures、Ghosts、Semantics、Dynamic Logic、Loops、Arrays、Convergence、Bounded Model Checking、Linear Temporal Logic、LTL/CTL Model Checking 等属于 F.3.3（程序验证与模型检查），Program Synthesis 超出本节点。补充来源 Fall 2026 的 22 个主题只取了 Resolution 与 Certificates 两讲，其余（契约、动态逻辑、循环、谓词变换器、时序逻辑与模型检查）与 A 重复或属 F.3.3。",
+ "notes": "两次开课的 Schedule 页只有日期、没有讲次编号，所以分支的 ref 留空，coverage 用 A:#n / B:#n 指第几个分支。Spring 2021 页面把 SMT Quantifiers 那一讲的讲义链接放在 notes 列且没有 [pdf]，不过主题名在页面上是明确列出的。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 11,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

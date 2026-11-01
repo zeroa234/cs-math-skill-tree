@@ -1,0 +1,240 @@
+{
+ "id": "F.2.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "15-455 Undergraduate Complexity Theory, Spring 2017",
+   "by": "Ryan O'Donnell",
+   "year": 2017,
+   "url": "https://www.cs.cmu.edu/~odonnell/15455-s17/",
+   "toc_urls": [
+    "https://www.cs.cmu.edu/~odonnell/15455-s17/"
+   ],
+   "why": "节点现有英文资源；课程主页逐讲列出 28 讲的具体主题（不是 Week 1/Week 2 那种），P、NP、归约与完备性、空间复杂度、随机复杂度、层级定理与 P vs NP 难点全覆盖，讲义作者是复杂度理论一线研究者。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Computational Complexity: A Modern Approach",
+   "by": "Sanjeev Arora and Boaz Barak",
+   "year": 2009,
+   "url": "https://theory.cs.princeton.edu/complexity/",
+   "toc_urls": [
+    "https://theory.cs.princeton.edu/complexity/book.pdf"
+   ],
+   "why": "补线路复杂度：A 只在 Cook-Levin 证明里顺带用线路，没有专门的 P/poly、Karp-Lipton、电路下界内容。作者在普林斯顿的官方站放了免费全文 PDF，第 6 章 Circuits 正是这一块。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "05",
+   "title": "Time Hierarchy Theorem",
+   "zh": "时间层级定理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "06",
+   "title": "Problems in P",
+   "zh": "P 类中的问题",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "08",
+   "title": "NP",
+   "zh": "NP 类",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Reductions",
+   "zh": "归约",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "NP-completeness and the Cook-Levin Theorem",
+   "zh": "NP 完全性与 Cook-Levin 定理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "NP-completeness reductions",
+   "zh": "NP 完全性归约",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Space complexity",
+   "zh": "空间复杂度",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Savitch's Theorem and NL",
+   "zh": "Savitch 定理与 NL",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "18",
+   "title": "NL-completeness and log-space reductions",
+   "zh": "NL 完全性与对数空间归约",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "19",
+   "title": "From P-completeness to PSPACE-completeness",
+   "zh": "从 P 完全性到 PSPACE 完全性",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "20",
+   "title": "The Immerman--Szelepcsényi Theorem",
+   "zh": "Immerman-Szelepcsényi 定理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "21",
+   "title": "Randomized complexity: RP, coRP, and ZPP",
+   "zh": "随机复杂度：RP、coRP 与 ZPP",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "22",
+   "title": "BPP",
+   "zh": "BPP 类",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "28",
+   "title": "Why is P vs. NP difficult?",
+   "zh": "P 与 NP 问题为何困难",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Circuits",
+   "zh": "线路",
+   "fill": "线路复杂度与非一致计算的下界（P/poly、Karp-Lipton、电路下界、非一致层级定理）",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Boolean circuits",
+     "zh": "布尔线路"
+    },
+    {
+     "ref": "6.1.1",
+     "title": "Turing machines that take advice",
+     "zh": "带建议的图灵机"
+    },
+    {
+     "ref": "6.2",
+     "title": "Karp-Lipton Theorem",
+     "zh": "Karp-Lipton 定理"
+    },
+    {
+     "ref": "6.3",
+     "title": "Circuit lowerbounds",
+     "zh": "线路下界"
+    },
+    {
+     "ref": "6.4",
+     "title": "Non-uniform hierarchy theorem",
+     "zh": "非一致层级定理"
+    },
+    {
+     "ref": "6.5",
+     "title": "Finer gradations among circuit classes",
+     "zh": "线路类的更细分级"
+    },
+    {
+     "ref": "6.6",
+     "title": "Circuits of exponential size",
+     "zh": "指数规模线路"
+    },
+    {
+     "ref": "6.7",
+     "title": "Circuit Satisfiability and an alternative proof of the Cook-Levin Theorem",
+     "zh": "线路可满足性与 Cook-Levin 定理的另一证明"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "P/NP",
+   "refs": [
+    "A:06",
+    "A:08",
+    "A:10"
+   ]
+  },
+  {
+   "topic": "完备性",
+   "refs": [
+    "A:11",
+    "A:12",
+    "A:19",
+    "A:18"
+   ]
+  },
+  {
+   "topic": "空间复杂度",
+   "refs": [
+    "A:16",
+    "A:17",
+    "A:18",
+    "A:19",
+    "A:20"
+   ]
+  },
+  {
+   "topic": "随机复杂度",
+   "refs": [
+    "A:21",
+    "A:22"
+   ]
+  },
+  {
+   "topic": "线路复杂度",
+   "refs": [
+    "B:6",
+    "B:6.1",
+    "B:6.1.1",
+    "B:6.5"
+   ]
+  },
+  {
+   "topic": "下界",
+   "refs": [
+    "A:05",
+    "A:28",
+    "B:6.3",
+    "B:6.4"
+   ]
+  }
+ ],
+ "omitted": "主来源 15-455 共 28 讲，只收了对应本节点四条知识点的 14 讲：第 01–03 讲（计算模型定义、图灵机模拟）属 F.2.1/F.2.2，第 07 讲 SAT、第 09 讲非确定性已并入第 08 讲 NP；第 13–15 讲（search-to-decision、Ladner/Mahaney、coNP）、第 23–27 讲（多项式层级、oracle、IP=PSPACE、细粒度复杂度）不在节点简介的知识点内。补充来源只取第 6 章 Circuits，其余章（NP 完全性、对角化、随机计算等）与 A 重复。",
+ "notes": "A 的课程主页把每讲主题和 Sipser 章节对照写在一起，但页面本身没有小节级目录，所以分支只能到“讲”一层；线路复杂度这一块用 Arora-Barak 第 6 章的节标题补到 6.1.1 级。A 页面上写的是 “The Immerman--Szelepcsényi Theorem”（两个连字符），照抄未改。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 23,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

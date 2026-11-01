@@ -1,0 +1,199 @@
+{
+ "id": "D.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Data Engineering Zoomcamp — Curriculum",
+   "by": "DataTalks.Club",
+   "year": 2026,
+   "url": "https://datatalksclub.github.io/docs/courses/data-engineering-zoomcamp/curriculum/",
+   "toc_urls": [
+    "https://datatalksclub.github.io/docs/courses/data-engineering-zoomcamp/curriculum/"
+   ],
+   "why": "就是节点“现有英文学习资源”里的这门免费公开课：课程表逐模块列出主题（数仓与分区聚类、dbt 建模、Spark 批处理、Kafka/Flink 流处理），覆盖分布式数据处理、数仓、批与流两条处理路线以及成本权衡；免费公开、逐模块有视频与作业，符合 D2 入门层。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-445/645 Intro to Database Systems (Fall 2026)",
+   "by": "Carnegie Mellon University",
+   "year": 2026,
+   "url": "https://15445.courses.cs.cmu.edu/fall2026/",
+   "toc_urls": [
+    "https://15445.courses.cs.cmu.edu/fall2026/schedule.html"
+   ],
+   "why": "补“存储布局”：A 只讲数仓里的分区/聚簇，不讲行存/列存与压缩编码这类物理布局，CMU 15-445 的第 5、6 讲正好讲 Database Storage II 与 Storage Models & Compression。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Module 3",
+   "title": "Module 3: Data Warehouse",
+   "zh": "模块 3：数据仓库",
+   "items": [
+    {
+     "ref": "",
+     "title": "BigQuery as a data warehouse",
+     "zh": "用 BigQuery 作数据仓库"
+    },
+    {
+     "ref": "",
+     "title": "Partitioning and clustering for performance",
+     "zh": "用分区与聚簇提升性能"
+    },
+    {
+     "ref": "",
+     "title": "Cost optimization",
+     "zh": "成本优化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Module 4",
+   "title": "Module 4: Analytics Engineering",
+   "zh": "模块 4：分析工程",
+   "items": [
+    {
+     "ref": "",
+     "title": "dbt for analytics engineering",
+     "zh": "用 dbt 做分析工程"
+    },
+    {
+     "ref": "",
+     "title": "Building staging, intermediate, and mart models",
+     "zh": "搭建 staging / intermediate / mart 三层模型"
+    },
+    {
+     "ref": "",
+     "title": "Testing and documentation",
+     "zh": "测试与文档"
+    },
+    {
+     "ref": "",
+     "title": "Connecting BigQuery to a dashboard",
+     "zh": "把 BigQuery 接到仪表盘"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Module 5",
+   "title": "Module 5: Batch Processing",
+   "zh": "模块 5：批处理",
+   "items": [
+    {
+     "ref": "",
+     "title": "Apache Spark fundamentals",
+     "zh": "Apache Spark 基础"
+    },
+    {
+     "ref": "",
+     "title": "PySpark with the NYC taxi dataset",
+     "zh": "用纽约出租车数据集做 PySpark"
+    },
+    {
+     "ref": "",
+     "title": "Running on Google Dataproc",
+     "zh": "在 Google Dataproc 上运行"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Module 6",
+   "title": "Module 6: Streaming",
+   "zh": "模块 6：流处理",
+   "items": [
+    {
+     "ref": "",
+     "title": "Apache Kafka",
+     "zh": "Apache Kafka"
+    },
+    {
+     "ref": "",
+     "title": "Stream processing with Kafka and Flink",
+     "zh": "用 Kafka 与 Flink 做流处理"
+    },
+    {
+     "ref": "",
+     "title": "Schema registry and data serialization",
+     "zh": "模式注册表与数据序列化"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Final Project",
+   "title": "Final Project",
+   "zh": "结课项目",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "#05",
+   "title": "Database Storage II",
+   "zh": "数据库存储 II",
+   "fill": "补“存储布局”的一半：页式存储之上的日志结构存储、行存与列存等物理组织方式",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "#06",
+   "title": "Storage Models & Compression",
+   "zh": "存储模型与压缩",
+   "fill": "补“存储布局”的另一半：N-ary/分解存储模型（行存与列存）与各类压缩编码",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "分布式数据处理",
+   "refs": [
+    "A:#3"
+   ],
+   "note": "模块 5：Apache Spark 基础、用 PySpark 处理纽约出租车数据集、提交到 Google Dataproc 上跑（把作业分发到托管集群）。模块 6 的 Kafka/Flink 是分布式的流式数据处理路线。"
+  },
+  {
+   "topic": "存储布局",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "A:#1"
+   ],
+   "note": "A（Zoomcamp）只到“数仓里按分区/聚簇组织数据”这一层（模块 3 的 partitioning and clustering 是 BigQuery 的物理布局），不讲行存/列存与压缩；物理布局用 CMU 15-445 第 5 讲 Database Storage II 与第 6 讲 Storage Models & Compression 补。"
+  },
+  {
+   "topic": "数据湖/仓",
+   "refs": [
+    "A:#1"
+   ],
+   "note": "模块 3 Data Warehouse 用 BigQuery 讲数据仓库；湖（对象存储上的原始文件）只在模块 2 的 “Loading data to Google Cloud Storage and BigQuery” 里一笔带过，没有湖仓一体的专门模块，故这个知识点只到数仓这一半。"
+  },
+  {
+   "topic": "批流一体",
+   "refs": [
+    "A:#3",
+    "A:#4"
+   ],
+   "note": "模块 5 批处理（Spark）与模块 6 流处理（Kafka + Flink）分别给出批与流两条路线，并在模块 6 讲模式注册表与序列化，是“批流用同一套数据模型/接入层”的基础；课程没有直接命名为“批流一体”的统一引擎章节。"
+  },
+  {
+   "topic": "资源权衡",
+   "refs": [
+    "A:#1"
+   ],
+   "note": "模块 3 的 Partitioning and clustering for performance 与 Cost optimization 讲数仓里“性能 vs 扫描量/费用”的权衡；模块 5 把 Spark 跑在 Dataproc 上也涉及集群资源，但课程表没有逐条列资源调度参数。"
+  }
+ ],
+ "omitted": "A（Zoomcamp）未收：模块 1（Docker/Postgres/Terraform 环境搭建）、模块 2（Kestra 编排、schedule/retry/backfill，属 D.2.1 管线调度）、dlt 摄取工作坊（属采集环节）；Final Project 只作为收尾分支保留，没有子条目。B（CMU 15-445 schedule）只取第 5、6 两讲，其余讲次（索引、查询执行、并发控制、恢复等）属 D.1.2 数据库内核节点。",
+ "notes": "目录取自课程官网 Curriculum 页，页面是按模块列 bullet 主题，所以分支=模块、条目=bullet 主题，标题照抄（模块名带 “Module 3:” 这样的前缀，编号即 ref）。这门课每个模块还有视频、作业与仓库代码，但那些不是目录条目，未收。存储布局一项 A 确实没有，用 CMU 15-445 的两讲补，故 B 是补充来源。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 20,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

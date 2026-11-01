@@ -1,0 +1,444 @@
+{
+ "id": "S.3.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Data Security and Privacy (CS 59000-DSP / CS 55600), Lectures, Handouts & Homeworks, Spring 2022",
+   "by": "Ninghui Li (Purdue University)",
+   "year": 2022,
+   "url": "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/",
+   "toc_urls": [
+    "https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/lectures.html"
+   ],
+   "why": "节点现有英文资源就是这门课；课表按周逐讲讲出具体题目，前 4 周讲访问控制模型（UNIX/DAC、Bell-LaPadula、Biba/Clark-Wilson、非干扰、RBAC），第 5 周讲 k-匿名族与重构攻击，第 6–12 周从 ε-差分隐私一路讲到 LDP、直方图与边际查询，第 13–14 周讲隐私计算用的密码学，正好是这一节点技术侧的主干。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "NIST Privacy Framework: A Tool for Improving Privacy Through Enterprise Risk Management, Version 1.0",
+   "by": "National Institute of Standards and Technology",
+   "year": 2020,
+   "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf"
+   ],
+   "why": "补“数据分类、审计、隐私设计”这三块：A 只讲技术手段（控制模型、去标识、差分隐私、密码学），没有讲数据与其处理动作怎么盘点分类、审计日志怎么定、隐私怎么从政策与流程层面设计进去；NIST 隐私框架的 ID.IM-P / CT.DM-P / CT.DP-P / PR.AC-P / PR.DS-P / GV.PO-P 六个类别把这几件事写成可核查的子类目。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Week 1",
+   "title": "Week 1 (Jan 10 -- Jan 14)",
+   "zh": "第 1 周（1 月 10–14 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "UNIX Access Control",
+     "zh": "UNIX 访问控制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 2",
+   "title": "Week 2 (Jan 17 -- Jan 21)",
+   "zh": "第 2 周（1 月 17–21 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Why Access Control Fails with Malware. Confused Deputy Problem",
+     "zh": "恶意代码为何使访问控制失效：混淆代理问题"
+    },
+    {
+     "ref": "",
+     "title": "Analysis of DAC Weaknesses",
+     "zh": "自主访问控制（DAC）的弱点分析"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 3",
+   "title": "Week 3 (Jan 22 -- Jan 26)",
+   "zh": "第 3 周（1 月 22–26 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Bell LaPadula Model",
+     "zh": "Bell-LaPadula 模型"
+    },
+    {
+     "ref": "",
+     "title": "Integrity Protection: Biba and Clark-Wilson Model",
+     "zh": "完整性保护：Biba 与 Clark-Wilson 模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 4",
+   "title": "Week 4 (Jan 31 -- Feb 4)",
+   "zh": "第 4 周（1 月 31 日–2 月 4 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Non-interference and non-deducability",
+     "zh": "非干扰与不可推断性"
+    },
+    {
+     "ref": "",
+     "title": "Role-based Access Control",
+     "zh": "基于角色的访问控制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 5",
+   "title": "Week 5 (Feb 7 -- Feb 11)",
+   "zh": "第 5 周（2 月 7–11 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "k-anonymity, l-diversity, t-closeness",
+     "zh": "k-匿名、l-多样性与 t-接近性"
+    },
+    {
+     "ref": "",
+     "title": "Reconstruction attacks",
+     "zh": "重构攻击"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 6",
+   "title": "Week 6 (Feb 14 -- Feb 18)",
+   "zh": "第 6 周（2 月 14–18 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition of epsilon Differential Privacy",
+     "zh": "ε-差分隐私的定义"
+    },
+    {
+     "ref": "",
+     "title": "Continue Primer on DP",
+     "zh": "差分隐私入门（续）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 7",
+   "title": "Week 7 (Feb 21 -- Feb 25)",
+   "zh": "第 7 周（2 月 21–25 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition of LDP. Frequency oracle protocols.",
+     "zh": "本地差分隐私（LDP）的定义与频率预言机协议"
+    },
+    {
+     "ref": "",
+     "title": "Heavy hitter identification and FIM under LDP. LDP protocol for numerical attributes.",
+     "zh": "LDP 下的频繁项识别与频繁项挖掘，数值属性的 LDP 协议"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 8",
+   "title": "Week 8 (Feb 28 -- Mar 4)",
+   "zh": "第 8 周（2 月 28 日–3 月 4 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "What does Differential Privacy mean?",
+     "zh": "差分隐私意味着什么"
+    },
+    {
+     "ref": "",
+     "title": "Approximate DP and Gaussian Mechanism",
+     "zh": "近似差分隐私与高斯机制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 11",
+   "title": "Week 11 (Mar 21 -- Mar 25)",
+   "zh": "第 11 周（3 月 21–25 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Publishing histograms under DP",
+     "zh": "差分隐私下的直方图发布"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 12",
+   "title": "Week 12 (Mar 28 -- Apr 1)",
+   "zh": "第 12 周（3 月 28 日–4 月 1 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Answer marginal queries under DP",
+     "zh": "差分隐私下回答边际查询"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 13",
+   "title": "Week 13 (Apr 4 -- Apr 8)",
+   "zh": "第 13 周（4 月 4–8 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Slides on Symmetric Crypto",
+     "zh": "对称加密（讲义）"
+    },
+    {
+     "ref": "",
+     "title": "Slides on Asymmetric Crypto",
+     "zh": "非对称加密（讲义）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Week 14",
+   "title": "Week 14 (Apr 11 -- Apr 15)",
+   "zh": "第 14 周（4 月 11–15 日）",
+   "items": [
+    {
+     "ref": "",
+     "title": "Slides on Homomorphic Encryption",
+     "zh": "同态加密（讲义）"
+    },
+    {
+     "ref": "",
+     "title": "Slides on Secure Function Evaluation",
+     "zh": "安全函数求值（讲义）"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "ID.IM-P",
+   "title": "Inventory and Mapping",
+   "zh": "盘点与映射",
+   "fill": "数据分类：先把“哪些系统在处理哪些数据元素、处理动作有哪些、处理环境在哪”盘清楚，分类才有对象",
+   "items": [
+    {
+     "ref": "ID.IM-P1",
+     "title": "Systems/products/services that process data are inventoried.",
+     "zh": "对处理数据的系统、产品与服务进行盘点。"
+    },
+    {
+     "ref": "ID.IM-P6",
+     "title": "Data elements within the data actions are inventoried.",
+     "zh": "对数据动作涉及的数据元素进行盘点。"
+    },
+    {
+     "ref": "ID.IM-P8",
+     "title": "Data processing is mapped, illustrating the data actions and associated data elements for systems/products/services, including components; roles of the component owners/operators; and interactions of individuals or third parties with the systems/products/services.",
+     "zh": "绘制数据处理映射：标出各系统/产品/服务的数据动作与对应数据元素、组件及其负责方角色，以及个人或第三方与系统的交互。"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "GV.PO-P",
+   "title": "Governance Policies, Processes, and Procedures",
+   "zh": "治理政策、流程与规程",
+   "fill": "隐私设计：把隐私价值写成组织政策并注入系统/产品的开发与运维流程（隐私源于设计）",
+   "items": [
+    {
+     "ref": "GV.PO-P1",
+     "title": "Organizational privacy values and policies (e.g., conditions on data processing such as data uses or retention periods, individuals’ prerogatives with respect to data processing) are established and communicated.",
+     "zh": "确立并传达组织的隐私价值与政策（如数据处理的条件：数据用途、保留期限、个人在数据处理上的权利）。"
+    },
+    {
+     "ref": "GV.PO-P2",
+     "title": "Processes to instill organizational privacy values within system/product/service development and operations are established and in place.",
+     "zh": "建立把组织隐私价值注入系统/产品/服务开发与运维的流程。"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "CT.DM-P",
+   "title": "Data Processing Management",
+   "zh": "数据处理管理",
+   "fill": "审计与数据生命周期：数据元素的查询/删除/销毁受控，并明确审计与日志记录的确定、实现与复查",
+   "items": [
+    {
+     "ref": "CT.DM-P4",
+     "title": "Data elements can be accessed for deletion.",
+     "zh": "数据元素可被访问以执行删除。"
+    },
+    {
+     "ref": "CT.DM-P5",
+     "title": "Data are destroyed according to policy.",
+     "zh": "按政策销毁数据。"
+    },
+    {
+     "ref": "CT.DM-P8",
+     "title": "Audit/log records are determined, documented, implemented, and reviewed in accordance with policy and incorporating the principle of data minimization.",
+     "zh": "按政策确定、记录、实现并复查审计/日志记录，并遵循数据最小化原则。"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "CT.DP-P",
+   "title": "Disassociated Processing",
+   "zh": "可分离处理",
+   "fill": "脱敏：用限制可观察性/可关联性、去标识化、属性引用替代属性值等手段切断数据与个人的联系",
+   "items": [
+    {
+     "ref": "CT.DP-P1",
+     "title": "Data are processed to limit observability and linkability (e.g., data actions take place on local devices, privacy-preserving cryptography).",
+     "zh": "处理数据时限制可观察性与可关联性（如在本地设备上完成数据动作、使用隐私保护密码学）。"
+    },
+    {
+     "ref": "CT.DP-P2",
+     "title": "Data are processed to limit the identification of individuals (e.g., de-identification privacy techniques, tokenization).",
+     "zh": "处理数据时限制对个体的识别（如去标识化技术、令牌化）。"
+    },
+    {
+     "ref": "CT.DP-P5",
+     "title": "Attribute references are substituted for attribute values.",
+     "zh": "用属性引用替代属性取值。"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "PR.AC-P",
+   "title": "Identity Management, Authentication, and Access Control",
+   "zh": "身份管理、认证与访问控制",
+   "fill": "授权：把数据与设备的访问限制为已授权个体，并在权限授予中落实最小权限与职责分离",
+   "items": [
+    {
+     "ref": "PR.AC-P1",
+     "title": "Identities and credentials are issued, managed, verified, revoked, and audited for authorized individuals, processes, and devices.",
+     "zh": "对已授权的个人、进程与设备签发、管理、校验、吊销并审计身份与凭据。"
+    },
+    {
+     "ref": "PR.AC-P4",
+     "title": "Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties.",
+     "zh": "管理访问权限与授权，并落实最小权限与职责分离原则。"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "PR.DS-P",
+   "title": "Data Security",
+   "zh": "数据安全",
+   "fill": "加密：静态数据与传输中数据的保护，以及防数据泄露",
+   "items": [
+    {
+     "ref": "PR.DS-P1",
+     "title": "Data-at-rest are protected.",
+     "zh": "保护静态数据。"
+    },
+    {
+     "ref": "PR.DS-P2",
+     "title": "Data-in-transit are protected.",
+     "zh": "保护传输中的数据。"
+    },
+    {
+     "ref": "PR.DS-P5",
+     "title": "Protections against data leaks are implemented.",
+     "zh": "实施防数据泄露措施。"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "数据分类",
+   "refs": [
+    "B:ID.IM-P6",
+    "B:ID.IM-P8",
+    "B:ID.IM-P1"
+   ],
+   "note": "A 全课没有讲数据分类：它从访问控制模型讲起，默认数据本身已被组织分好级。B 的 Inventory and Mapping 类别要求盘点处理数据的系统、数据动作涉及的数据元素，并绘出数据处理映射（含敏感元素流向），这是分类的前置工作；B 的另一类别 Media Protection 讲按级别给介质做标记，属 S.4.2/S.2.x 相邻内容，此处未收。"
+  },
+  {
+   "topic": "授权",
+   "refs": [
+    "A:Week 1",
+    "A:Week 2",
+    "A:Week 3",
+    "A:Week 4",
+    "B:PR.AC-P1",
+    "B:PR.AC-P4"
+   ],
+   "note": "A 用四周铺开访问控制理论：UNIX Access Control（Week 1）、DAC 弱点与混淆代理（Week 2）、Bell-LaPadula 与 Biba/Clark-Wilson 完整性模型（Week 3）、非干扰/不可推断与 RBAC（Week 4）。B 从运营角度补身份与凭据的签发吊销审计，以及最小权限与职责分离。"
+  },
+  {
+   "topic": "加密",
+   "refs": [
+    "A:Week 13",
+    "A:Week 14",
+    "B:PR.DS-P1",
+    "B:PR.DS-P2"
+   ],
+   "note": "A 第 13–14 周的四份讲义分别是对称加密、非对称加密、同态加密与安全函数求值，偏密码学原语与隐私计算；B 补“静态数据/传输中数据要加密保护”这条工程要求，以及防数据泄露。"
+  },
+  {
+   "topic": "脱敏",
+   "refs": [
+    "A:Week 5",
+    "B:CT.DP-P2",
+    "B:CT.DP-P5"
+   ],
+   "note": "A 第 5 周讲 k-匿名、l-多样性、t-接近性与针对匿名化数据的重构攻击，是被引用最多的去标识化理论；B 的 Disassociated Processing 从工程手段补去标识化/令牌化与属性引用替代属性值。"
+  },
+  {
+   "topic": "差分隐私",
+   "refs": [
+    "A:Week 6",
+    "A:Week 7",
+    "A:Week 8",
+    "A:Week 11",
+    "A:Week 12"
+   ],
+   "note": "A 用五周讲差分隐私：ε-DP 定义与入门（Week 6）、本地差分隐私 LDP 的频率预言机与频繁项挖掘（Week 7）、近似 DP 与高斯机制（Week 8）、DP 下的直方图发布（Week 11）与边际查询回答（Week 12）。"
+  },
+  {
+   "topic": "审计",
+   "refs": [
+    "B:CT.DM-P8"
+   ],
+   "note": "A 只在访问控制模型里提到审计是控制的一部分，没有专门章节；B 的 CT.DM-P8 明确要求审计/日志记录的确定、文档化、实现与复查，并纳入数据最小化原则。日志技术与取证侧见 S.4.2。"
+  },
+  {
+   "topic": "隐私设计",
+   "refs": [
+    "B:GV.PO-P1",
+    "B:GV.PO-P2",
+    "B:CT.DP-P",
+    "B:CT.DP-P1"
+   ],
+   "note": "A 是技术课，不讲组织与流程侧的隐私设计；B 的 GV.PO-P1/P2 要求把隐私价值写成政策并注入系统/产品/服务的开发与运维流程，CT.DP-P 系列则给出“设计上限制可观察性与可关联性”的具体做法（默认本地处理、隐私保护密码学）。"
+  }
+ ],
+ "omitted": "A 只收 1–8、11–14 周共 12 个分支的讲课题目：第 1 周只收了 UNIX Access Control（Overview of the course 是课程介绍）；第 9 周（复习与期中）、第 10 周（春假无课）、第 15 周（客座讲座）、第 16 周（期末复习、停课）没有知识主题，未收；每周的 Readings、HW1–HW5、Mock Mid Term、Old HW 等作业与阅读材料条目也未收。B 只收 ID.IM-P、GV.PO-P、CT.DM-P、CT.DP-P、PR.AC-P、PR.DS-P 六个类别里与数据分类、隐私设计、审计、授权、加密直接相关的 16 条子类目；框架其余部分（Business Environment、Risk Assessment、Data Processing Ecosystem Risk Management、Risk Management Strategy、Awareness and Training、Monitoring and Review、Data Processing Policies/Processes/Procedures、Communicate-P 全组、Protection Policies/Maintenance/Protective Technology，以及 Detect/Respond/Recover 三个功能）偏组织治理与事件响应，未收。",
+ "notes": "A 的课表按“Week N (日期)”分行，每行下面才是讲题，页面没有讲次编号，所以分支 ref 用“Week N”、条目 ref 留空。第 13–14 周页面上只有“Slides on …”形式的讲义链接，没有单独的讲题标题，为忠实抄录保留原样（如 Slides on Symmetric Crypto），译名按讲题理解翻译并在中文后标注“（讲义）”。A 的 url 用课程主页（本批只打开了 lectures.html 作为目录页，toc_urls 记的是它）。B 是 NIST 隐私框架 1.0 版 PDF，分支取 Core 里的类别名（ID.IM-P、GV.PO-P、CT.DM-P、CT.DP-P、PR.AC-P、PR.DS-P），条目取子类目原句，ref 用原文编号（如 ID.IM-P6），子类目原句里的举例括注一并保留。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 55,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

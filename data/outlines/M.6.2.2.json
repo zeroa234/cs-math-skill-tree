@@ -1,0 +1,539 @@
+{
+ "id": "M.6.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "STAT 462: Applied Regression Analysis",
+   "by": "Penn State Department of Statistics (online course notes, OER; notes by Iain Pardoe after Laura Simon and Derek Young)",
+   "year": 2018,
+   "url": "https://online.stat.psu.edu/stat462/",
+   "toc_urls": [
+    "https://online.stat.psu.edu/stat462/",
+    "https://online.stat.psu.edu/stat462/node/79/",
+    "https://online.stat.psu.edu/stat462/node/80/",
+    "https://online.stat.psu.edu/stat462/node/81/",
+    "https://online.stat.psu.edu/stat462/node/83/",
+    "https://online.stat.psu.edu/stat462/node/84/",
+    "https://online.stat.psu.edu/stat462/node/85/",
+    "https://online.stat.psu.edu/stat462/node/86/",
+    "https://online.stat.psu.edu/stat462/node/87/",
+    "https://online.stat.psu.edu/stat462/node/88/",
+    "https://online.stat.psu.edu/stat462/node/89/",
+    "https://online.stat.psu.edu/stat462/node/90/"
+   ],
+   "why": "宾州州立统计系的回归分析开放课程讲义（CC BY-NC），一课一页、每页列出本课全部分节，线性模型、假设检查、残差诊断、影响点、多重共线性、模型选择到 logistic/泊松/GLM 全覆盖，比节点原有教材 ISLP 的章级目录细。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "An Introduction to Statistical Learning with Applications in Python",
+   "by": "Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani, Jonathan Taylor",
+   "year": 2023,
+   "url": "https://link.springer.com/book/10.1007/978-3-031-38747-0",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-031-38747-0"
+   ],
+   "why": "补正则化：STAT 462 只讲逐步回归、最优子集与信息准则，没有岭回归、lasso、降维；ISLP 第 6 章正是这一块，同时它也是节点原有的英文资源。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Simple Linear Regression (SLR) Model",
+   "zh": "简单线性回归模型",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "What is Simple Linear Regression?",
+     "zh": "什么是简单线性回归"
+    },
+    {
+     "ref": "2.2",
+     "title": "What is the \"Best Fitting Line\"?",
+     "zh": "什么是“最优拟合直线”"
+    },
+    {
+     "ref": "2.3",
+     "title": "The Simple Linear Regression Model",
+     "zh": "简单线性回归模型"
+    },
+    {
+     "ref": "2.4",
+     "title": "What is the Common Error Variance?",
+     "zh": "误差方差"
+    },
+    {
+     "ref": "2.5",
+     "title": "The Coefficient of Determination, r-squared",
+     "zh": "决定系数 r²"
+    },
+    {
+     "ref": "2.8",
+     "title": "R-squared Cautions",
+     "zh": "r² 的使用注意"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "SLR Evaluation",
+   "zh": "简单线性回归的评估",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Inference for the Population Intercept and Slope",
+     "zh": "截距与斜率的推断"
+    },
+    {
+     "ref": "3.3",
+     "title": "Sums of Squares",
+     "zh": "平方和分解"
+    },
+    {
+     "ref": "3.4",
+     "title": "Analysis of Variance: The Basic Idea",
+     "zh": "方差分析的基本思想"
+    },
+    {
+     "ref": "3.5",
+     "title": "The Analysis of Variance (ANOVA) table and the F-test",
+     "zh": "方差分析表与 F 检验"
+    },
+    {
+     "ref": "3.8",
+     "title": "The Lack of Fit F-test When There Are Replicates",
+     "zh": "有重复时的失拟 F 检验"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "SLR Assumptions, Estimation & Prediction",
+   "zh": "简单线性回归的假设、估计与预测",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Residuals",
+     "zh": "残差"
+    },
+    {
+     "ref": "4.2",
+     "title": "Residuals vs. Fits Plot",
+     "zh": "残差-拟合值图"
+    },
+    {
+     "ref": "4.3",
+     "title": "Residuals vs. Predictor Plot",
+     "zh": "残差-预测变量图"
+    },
+    {
+     "ref": "4.4",
+     "title": "Identifying Specific Problems Using Residual Plots",
+     "zh": "用残差图识别具体问题"
+    },
+    {
+     "ref": "4.5",
+     "title": "Residuals vs. Order Plot",
+     "zh": "残差-次序图"
+    },
+    {
+     "ref": "4.6",
+     "title": "Normal Probability Plot of Residuals",
+     "zh": "残差的正态概率图"
+    },
+    {
+     "ref": "4.9",
+     "title": "Estimation and Prediction Research Questions",
+     "zh": "估计与预测的研究问题"
+    },
+    {
+     "ref": "4.10",
+     "title": "Confidence Interval for the Mean Response",
+     "zh": "均值响应的置信区间"
+    },
+    {
+     "ref": "4.11",
+     "title": "Prediction Interval for a New Response",
+     "zh": "新响应的预测区间"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Multiple Linear Regression (MLR) Model & Evaluation",
+   "zh": "多元线性回归模型与评估",
+   "items": [
+    {
+     "ref": "5.3",
+     "title": "The Multiple Linear Regression Model",
+     "zh": "多元线性回归模型"
+    },
+    {
+     "ref": "5.4",
+     "title": "A Matrix Formulation of the Multiple Regression Model",
+     "zh": "多元回归模型的矩阵形式"
+    },
+    {
+     "ref": "5.5",
+     "title": "Three Types of MLR Parameter Tests",
+     "zh": "三类参数检验"
+    },
+    {
+     "ref": "5.6",
+     "title": "The General Linear F-Test",
+     "zh": "一般线性 F 检验"
+    },
+    {
+     "ref": "5.7",
+     "title": "MLR Parameter Tests",
+     "zh": "多元回归的参数检验"
+    },
+    {
+     "ref": "5.8",
+     "title": "Partial R-squared",
+     "zh": "偏决定系数"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "MLR Assumptions, Estimation & Prediction",
+   "zh": "多元线性回归的假设、估计与预测",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "MLR Model Assumptions",
+     "zh": "多元回归的模型假设"
+    },
+    {
+     "ref": "6.2",
+     "title": "Assessing the Model Assumptions",
+     "zh": "检查模型假设"
+    },
+    {
+     "ref": "6.3",
+     "title": "Tests for Error Normality",
+     "zh": "误差正态性检验"
+    },
+    {
+     "ref": "6.4",
+     "title": "Tests for Constant Error Variance",
+     "zh": "误差等方差检验"
+    },
+    {
+     "ref": "6.5",
+     "title": "Confidence Interval for the Mean Response",
+     "zh": "均值响应的置信区间"
+    },
+    {
+     "ref": "6.6",
+     "title": "Prediction Interval for a New Response",
+     "zh": "新响应的预测区间"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Transformations & Interactions",
+   "zh": "变换与交互作用",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Log-transforming Only the Predictor for SLR",
+     "zh": "简单回归中只对预测变量取对数"
+    },
+    {
+     "ref": "7.2",
+     "title": "Log-transforming Only the Response for SLR",
+     "zh": "简单回归中只对响应变量取对数"
+    },
+    {
+     "ref": "7.3",
+     "title": "Log-transforming Both the Predictor and Response for SLR",
+     "zh": "简单回归中对预测变量和响应变量都取对数"
+    },
+    {
+     "ref": "7.4",
+     "title": "Other Data Transformations",
+     "zh": "其他数据变换"
+    },
+    {
+     "ref": "7.5",
+     "title": "Further Transformation Advice and Box-Cox",
+     "zh": "变换的进一步建议与 Box-Cox"
+    },
+    {
+     "ref": "7.6",
+     "title": "Interactions Between Quantitative Predictors",
+     "zh": "定量预测变量之间的交互"
+    },
+    {
+     "ref": "7.7",
+     "title": "Polynomial Regression",
+     "zh": "多项式回归"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Categorical Predictors",
+   "zh": "定性预测变量",
+   "items": [
+    {
+     "ref": "8.2",
+     "title": "The Basics of Indicator Variables",
+     "zh": "示性变量基础"
+    },
+    {
+     "ref": "8.4",
+     "title": "Coding Qualitative Variables",
+     "zh": "定性变量的编码"
+    },
+    {
+     "ref": "8.5",
+     "title": "Additive Effects",
+     "zh": "可加效应"
+    },
+    {
+     "ref": "8.6",
+     "title": "Interaction Effects",
+     "zh": "交互效应"
+    },
+    {
+     "ref": "8.7",
+     "title": "Leaving an Important Interaction Out of a Model",
+     "zh": "遗漏重要交互项的后果"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Influential Points",
+   "zh": "影响点",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Distinction Between Outliers and High Leverage Observations",
+     "zh": "离群点与高杠杆点的区别"
+    },
+    {
+     "ref": "9.2",
+     "title": "Using Leverages to Help Identify Extreme X Values",
+     "zh": "用杠杆值识别极端 X"
+    },
+    {
+     "ref": "9.3",
+     "title": "Identifying Outliers (Unusual Y Values)",
+     "zh": "识别离群点（异常的 Y）"
+    },
+    {
+     "ref": "9.4",
+     "title": "Studentized Residuals",
+     "zh": "学生化残差"
+    },
+    {
+     "ref": "9.5",
+     "title": "Identifying Influential Data Points",
+     "zh": "识别影响点"
+    },
+    {
+     "ref": "9.7",
+     "title": "A Strategy for Dealing with Problematic Data Points",
+     "zh": "处理问题数据点的策略"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Regression Pitfalls",
+   "zh": "回归的常见陷阱",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Nonconstant Variance and Weighted Least Squares",
+     "zh": "异方差与加权最小二乘"
+    },
+    {
+     "ref": "10.2",
+     "title": "Autocorrelation and Time Series Methods",
+     "zh": "自相关与时间序列方法"
+    },
+    {
+     "ref": "10.4",
+     "title": "Multicollinearity",
+     "zh": "多重共线性"
+    },
+    {
+     "ref": "10.7",
+     "title": "Detecting Multicollinearity Using Variance Inflation Factors",
+     "zh": "用方差膨胀因子诊断共线性"
+    },
+    {
+     "ref": "10.8",
+     "title": "Reducing Data-based Multicollinearity",
+     "zh": "消减数据型共线性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Model Building",
+   "zh": "模型构建",
+   "items": [
+    {
+     "ref": "11.2",
+     "title": "Stepwise Regression",
+     "zh": "逐步回归"
+    },
+    {
+     "ref": "11.3",
+     "title": "Best Subsets Regression, Adjusted R-Sq, Mallows Cp",
+     "zh": "最优子集回归、调整 R²、Mallows Cp"
+    },
+    {
+     "ref": "11.5",
+     "title": "Information Criteria and PRESS",
+     "zh": "信息准则与 PRESS"
+    },
+    {
+     "ref": "11.7",
+     "title": "Cross-validation",
+     "zh": "交叉验证"
+    },
+    {
+     "ref": "11.8",
+     "title": "One Model Building Strategy",
+     "zh": "一种建模策略"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Logistic, Poisson & Nonlinear Regression",
+   "zh": "Logistic、泊松与非线性回归",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Logistic Regression",
+     "zh": "Logistic 回归"
+    },
+    {
+     "ref": "12.3",
+     "title": "Poisson Regression",
+     "zh": "泊松回归"
+    },
+    {
+     "ref": "12.4",
+     "title": "Generalized Linear Models",
+     "zh": "广义线性模型"
+    },
+    {
+     "ref": "12.5",
+     "title": "Nonlinear Regression",
+     "zh": "非线性回归"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Linear Model Selection and Regularization",
+   "zh": "线性模型选择与正则化",
+   "fill": "补正则化：岭回归、lasso、弹性网与降维方法（STAT 462 没有这一块）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "线性模型",
+   "refs": [
+    "A:2",
+    "A:2.3",
+    "A:5",
+    "A:5.3",
+    "A:5.4"
+   ]
+  },
+  {
+   "topic": "广义线性模型",
+   "refs": [
+    "A:12",
+    "A:12.1",
+    "A:12.3",
+    "A:12.4"
+   ]
+  },
+  {
+   "topic": "正则化",
+   "refs": [
+    "B:#1"
+   ],
+   "note": "A 的模型选择只到逐步回归/最优子集/信息准则，正则化由 ISLP 第 6 章补；该章在出版社目录页只有章级标题，没有再往下分节。"
+  },
+  {
+   "topic": "残差诊断",
+   "refs": [
+    "A:4",
+    "A:4.1",
+    "A:4.2",
+    "A:4.4",
+    "A:6.2",
+    "A:9.4",
+    "A:9.5"
+   ]
+  },
+  {
+   "topic": "不确定性",
+   "refs": [
+    "A:3.1",
+    "A:4.10",
+    "A:4.11",
+    "A:6.5",
+    "A:6.6",
+    "A:11.7"
+   ]
+  },
+  {
+   "topic": "D2 验收：拟合模型，检查假设，报告效应与不确定性",
+   "refs": [
+    "A:5.8",
+    "A:6.2",
+    "A:6.3",
+    "A:6.4",
+    "A:4.10",
+    "A:4.11"
+   ]
+  },
+  {
+   "topic": "D3 验收：模型选择与推断的理论依据",
+   "refs": [
+    "A:5.6",
+    "A:11.2",
+    "A:11.3",
+    "A:11.5",
+    "A:11.7"
+   ],
+   "note": "讲义给的是 F 检验、子集选择准则与交叉验证的操作与理由；更深的模型选择理论（如高维惩罚的相合性）不在本课范围内。"
+  }
+ ],
+ "omitted": "A 的第 1 课（统计推断复习：抽样、区间估计、假设检验）是先修内容，未收。为把叶子数控制在规模内，各课里纯例题与重复示例的小节没有收：2.6、2.7、2.9（相关系数例题）、3.2、3.6（斜率推断例题）、3.7（有重复时误差分解）、4.7、4.8、4.12（残差图与区间例题）、5.1、5.2、5.9（数据例题）、7.8（多项式例题）、8.1、8.3、8.8（示性变量例题）、9.6（影响点例题）、10.3、10.5、10.6、10.9（自回归与共线性例题）、11.1、11.4、11.6、11.9（“选错预测变量”与自动化选择例题）、12.2、12.6、12.7（logistic 与增长曲线例题）。B 只取第 6 章，ISLP 其余 12 章（分类、树、SVM、深度学习、生存分析、无监督、多重检验）不在本节点范围。",
+ "notes": "STAT 462 站点是旧版 Drupal，章级标题在课程首页，节标题在每课第一页（node/79–node/90）的侧栏里，本导览图逐课抄自该侧栏。ISLP 官方 PDF（statlearning.com 指向 Google Drive）超过抓取上限、读不出目录，所以 B 只能用到出版社（Springer）目录页的章级标题。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 76,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

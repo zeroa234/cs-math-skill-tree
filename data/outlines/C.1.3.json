@@ -1,0 +1,219 @@
+{
+ "id": "C.1.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Dive into Systems",
+   "by": "Suzanne J. Matthews, Tia Newhall, Kevin C. Webb",
+   "year": 2020,
+   "url": "https://diveintosystems.org/book/",
+   "toc_urls": [
+    "https://diveintosystems.org/book/"
+   ],
+   "why": "节点现有英文资源，免费在线教材。第 9 章 ARMv8 Assembly 逐节给出汇编基础、常用指令、算术指令、条件控制与循环、函数与递归、数组/矩阵/结构体，正好对应 ARM 指令集与 ABI/汇编；第 7 章 x86-64 汇编用作其他 ISA 的对照，第 5 章给出 von Neumann 结构下的指令执行模型。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "What von Neumann Knew: Computer Architecture",
+   "zh": "冯·诺依曼知道什么：计算机体系结构",
+   "items": [
+    {
+     "ref": "5.2",
+     "title": "The von Neumann Architecture",
+     "zh": "冯·诺依曼结构"
+    },
+    {
+     "ref": "5.6",
+     "title": "The Processor’s Execution of Program Instructions",
+     "zh": "处理器执行程序指令的过程"
+    },
+    {
+     "ref": "5.9",
+     "title": "Looking Ahead: CPUs Today",
+     "zh": "展望：今天的 CPU"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "64-bit x86 Assembly",
+   "zh": "64 位 x86 汇编",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Assembly Basics",
+     "zh": "汇编基础"
+    },
+    {
+     "ref": "7.2",
+     "title": "Common Instructions",
+     "zh": "常用指令"
+    },
+    {
+     "ref": "7.3",
+     "title": "Additional Arithmetic Instructions",
+     "zh": "其他算术指令"
+    },
+    {
+     "ref": "7.4",
+     "title": "Conditional Control and Loops",
+     "zh": "条件控制与循环"
+    },
+    {
+     "ref": "7.5",
+     "title": "Functions in Assembly",
+     "zh": "汇编中的函数"
+    },
+    {
+     "ref": "7.7",
+     "title": "Arrays in Assembly",
+     "zh": "汇编中的数组"
+    },
+    {
+     "ref": "7.9",
+     "title": "Structs in Assembly",
+     "zh": "汇编中的结构体"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "ARMv8 Assembly",
+   "zh": "ARMv8 汇编",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Assembly Basics",
+     "zh": "汇编基础"
+    },
+    {
+     "ref": "9.2",
+     "title": "Common Instructions",
+     "zh": "常用指令"
+    },
+    {
+     "ref": "9.3",
+     "title": "Arithmetic Instructions",
+     "zh": "算术指令"
+    },
+    {
+     "ref": "9.4",
+     "title": "Conditional Control and Loops",
+     "zh": "条件控制与循环"
+    },
+    {
+     "ref": "9.4.1",
+     "title": "Preliminaries",
+     "zh": "预备知识"
+    },
+    {
+     "ref": "9.4.2",
+     "title": "If Statements",
+     "zh": "if 语句"
+    },
+    {
+     "ref": "9.4.3",
+     "title": "Loops",
+     "zh": "循环"
+    },
+    {
+     "ref": "9.5",
+     "title": "Functions in Assembly",
+     "zh": "汇编中的函数"
+    },
+    {
+     "ref": "9.6",
+     "title": "Recursion",
+     "zh": "递归"
+    },
+    {
+     "ref": "9.7",
+     "title": "Arrays in Assembly",
+     "zh": "汇编中的数组"
+    },
+    {
+     "ref": "9.8",
+     "title": "Matrices in Assembly",
+     "zh": "汇编中的矩阵"
+    },
+    {
+     "ref": "9.9",
+     "title": "Structs in Assembly",
+     "zh": "汇编中的结构体"
+    },
+    {
+     "ref": "9.10",
+     "title": "Buffer Overflows",
+     "zh": "缓冲区溢出"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Key Assembly Takeaways",
+   "zh": "汇编要点总结",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "ARM指令集",
+   "refs": [
+    "A:9",
+    "A:9.1",
+    "A:9.2",
+    "A:9.3",
+    "A:9.4",
+    "A:10"
+   ]
+  },
+  {
+   "topic": "异常级",
+   "refs": [],
+   "note": "Dive into Systems 只在 13.1 Booting and Running 讲 trap/异常进入内核，没有 ARMv8 异常级（EL0–EL3）的专门章节；Arm 官方文档站（developer.arm.com）对本机抓取返回 403，research_tool fetch 与 Tavily extract 都取不到可核对的目录页，因此没有硬凑来源。要补这一块需直接读 Arm Architecture Reference Manual 的 Exception model 章。"
+  },
+  {
+   "topic": "RISC思想",
+   "refs": [
+    "A:9",
+    "A:10",
+    "A:7"
+   ],
+   "note": "ARMv8 章导言说明 ARM 是 RISC 处理器、并解释为何精简指令集利于流水线与功耗；书里没有“RISC vs CISC”专节，与 x86-64（A:7，CISC 风格）逐节对照即可。"
+  },
+  {
+   "topic": "ABI与汇编",
+   "refs": [
+    "A:9.5",
+    "A:9.6",
+    "A:9.7",
+    "A:9.9",
+    "A:7.5",
+    "A:7.9"
+   ]
+  },
+  {
+   "topic": "其他ISA可作比较",
+   "refs": [
+    "A:7",
+    "A:5.2",
+    "A:10"
+   ]
+  }
+ ],
+ "omitted": "第 1–4 章（C 语言、调试工具、二进制与数据表示）属程序设计与组成原理基础；第 8 章 32 位 x86 汇编与第 7 章内容重复（32 位已较少用），未收；第 11 章存储层次、12 章代码优化、13 章操作系统、14 章多核共享内存、15 章其他并行系统分别属于 C.1.2/C.2 节点；16–17 章为附录。",
+ "notes": "目录从图书官网首页的完整目录逐条抄录，标题保留原编号。第 10 章 Key Assembly Takeaways 在书里按“Common Features / Security”等小标题组织、不再编号到节，故作为无子项的分支。ARMv8 章只讲 AArch64 用户态汇编（含调用约定），特权级/异常级与系统寄存器不在书里。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 27,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

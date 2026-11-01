@@ -1,0 +1,322 @@
+{
+ "id": "S.2.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "OWASP Mobile Application Security (MASVS / MASTG / MASWE)",
+   "by": "OWASP Foundation",
+   "year": 2024,
+   "url": "https://mas.owasp.org/",
+   "toc_urls": [
+    "https://mas.owasp.org/"
+   ],
+   "why": "节点现有英文资源就是这套标准；站点目录把 MASVS 的 8 组控制要求、MASTG 的通用概念与 Android/iOS 两条平台测试线逐条列出，正好对上移动平台、移动应用与设备身份这几块，且是事实上的行业标准。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Computer Security (CS 161 online textbook)",
+   "by": "David Wagner, Nicholas Weaver, Peyrin Kao, Fuzail Shakir, Andrew Law, Nicholas Ngai (UC Berkeley)",
+   "year": 2024,
+   "url": "https://textbook.cs161.org/",
+   "toc_urls": [
+    "https://textbook.cs161.org/network/wpa.html"
+   ],
+   "why": "补无线这一半：OWASP MAS 只讲移动应用层，没有无线协议；CS161 第 28 章 WPA 按“WiFi 背景—协议—攻击—防护”讲无线链路的威胁模型与 WPA2-Enterprise 防护。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "MASVS",
+   "title": "The Mobile Application Security Verification Standard",
+   "zh": "移动应用安全验证标准",
+   "items": [
+    {
+     "ref": "MASVS-STORAGE",
+     "title": "Storage",
+     "zh": "存储"
+    },
+    {
+     "ref": "MASVS-CRYPTO",
+     "title": "Cryptography",
+     "zh": "密码学"
+    },
+    {
+     "ref": "MASVS-AUTH",
+     "title": "Authentication and Authorization",
+     "zh": "身份认证与授权"
+    },
+    {
+     "ref": "MASVS-NETWORK",
+     "title": "Network Communication",
+     "zh": "网络通信"
+    },
+    {
+     "ref": "MASVS-PLATFORM",
+     "title": "Platform Interaction",
+     "zh": "平台交互"
+    },
+    {
+     "ref": "MASVS-CODE",
+     "title": "Code Quality",
+     "zh": "代码质量"
+    },
+    {
+     "ref": "MASVS-RESILIENCE",
+     "title": "Resilience Against Reverse Engineering and Tampering",
+     "zh": "抗逆向与抗篡改"
+    },
+    {
+     "ref": "MASVS-PRIVACY",
+     "title": "Privacy",
+     "zh": "隐私"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "General Concepts",
+   "zh": "通用概念",
+   "items": [
+    {
+     "ref": "",
+     "title": "Mobile Application Taxonomy",
+     "zh": "移动应用分类"
+    },
+    {
+     "ref": "",
+     "title": "Mobile Application Security Testing",
+     "zh": "移动应用安全测试"
+    },
+    {
+     "ref": "",
+     "title": "Mobile App Tampering and Reverse Engineering",
+     "zh": "移动应用篡改与逆向工程"
+    },
+    {
+     "ref": "",
+     "title": "Mobile App Authentication Architectures",
+     "zh": "移动应用认证架构"
+    },
+    {
+     "ref": "",
+     "title": "Mobile App Network Communication",
+     "zh": "移动应用网络通信"
+    },
+    {
+     "ref": "",
+     "title": "Mobile App Cryptography",
+     "zh": "移动应用密码学"
+    },
+    {
+     "ref": "",
+     "title": "Mobile App Code Quality",
+     "zh": "移动应用代码质量"
+    },
+    {
+     "ref": "",
+     "title": "Mobile App User Privacy Protection",
+     "zh": "移动应用用户隐私保护"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Android Security Testing",
+   "zh": "Android 安全测试",
+   "items": [
+    {
+     "ref": "",
+     "title": "Android Platform Overview",
+     "zh": "Android 平台概览"
+    },
+    {
+     "ref": "",
+     "title": "Android Security Testing",
+     "zh": "Android 安全测试"
+    },
+    {
+     "ref": "",
+     "title": "Android Data Storage",
+     "zh": "Android 数据存储"
+    },
+    {
+     "ref": "",
+     "title": "Android Cryptographic APIs",
+     "zh": "Android 密码学 API"
+    },
+    {
+     "ref": "",
+     "title": "Android Local Authentication",
+     "zh": "Android 本地认证"
+    },
+    {
+     "ref": "",
+     "title": "Android Network Communication",
+     "zh": "Android 网络通信"
+    },
+    {
+     "ref": "",
+     "title": "Android Platform APIs",
+     "zh": "Android 平台 API"
+    },
+    {
+     "ref": "",
+     "title": "Android Code Quality and Build Settings",
+     "zh": "Android 代码质量与构建设置"
+    },
+    {
+     "ref": "",
+     "title": "Android Anti-Reversing Defenses",
+     "zh": "Android 反逆向防护"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "iOS Security Testing",
+   "zh": "iOS 安全测试",
+   "items": [
+    {
+     "ref": "",
+     "title": "iOS Platform Overview",
+     "zh": "iOS 平台概览"
+    },
+    {
+     "ref": "",
+     "title": "iOS Security Testing",
+     "zh": "iOS 安全测试"
+    },
+    {
+     "ref": "",
+     "title": "iOS Data Storage",
+     "zh": "iOS 数据存储"
+    },
+    {
+     "ref": "",
+     "title": "iOS Cryptographic APIs",
+     "zh": "iOS 密码学 API"
+    },
+    {
+     "ref": "",
+     "title": "iOS Local Authentication",
+     "zh": "iOS 本地认证"
+    },
+    {
+     "ref": "",
+     "title": "iOS Network Communication",
+     "zh": "iOS 网络通信"
+    },
+    {
+     "ref": "",
+     "title": "iOS Platform APIs",
+     "zh": "iOS 平台 API"
+    },
+    {
+     "ref": "",
+     "title": "iOS Code Quality and Build Settings",
+     "zh": "iOS 代码质量与构建设置"
+    },
+    {
+     "ref": "",
+     "title": "iOS Anti-Reversing Defenses",
+     "zh": "iOS 反逆向防护"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "28",
+   "title": "WPA",
+   "zh": "WPA 无线安全",
+   "fill": "无线协议与无线威胁模型：OWASP MAS 只覆盖移动应用与平台，没有无线链路这一层",
+   "items": [
+    {
+     "ref": "28.1",
+     "title": "Cheat sheet",
+     "zh": "速查表"
+    },
+    {
+     "ref": "28.2",
+     "title": "Networking background: WiFi",
+     "zh": "网络背景：WiFi"
+    },
+    {
+     "ref": "28.3",
+     "title": "Protocol",
+     "zh": "协议"
+    },
+    {
+     "ref": "28.4",
+     "title": "Attacks",
+     "zh": "攻击"
+    },
+    {
+     "ref": "28.5",
+     "title": "Defenses: WPA2-Enterprise",
+     "zh": "防护：WPA2-Enterprise"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "无线协议",
+   "refs": [
+    "B:28",
+    "B:28.2",
+    "B:28.3",
+    "B:28.5"
+   ],
+   "note": "B 第 28 章从 802.11 背景与 WPA/WPA2 握手讲到 WPA2-Enterprise（802.1X、EAP）；蜂窝网与蓝牙不在两个来源里。"
+  },
+  {
+   "topic": "移动平台",
+   "refs": [
+    "A:#3",
+    "A:#4",
+    "A:MASVS-PLATFORM"
+   ],
+   "note": "A 的 Android/iOS 两条测试线都以平台概览开篇（沙箱、权限模型、IPC），MASVS-PLATFORM 再给出平台交互的验证要求。"
+  },
+  {
+   "topic": "设备身份",
+   "refs": [
+    "A:MASVS-AUTH",
+    "A:MASVS-CRYPTO"
+   ],
+   "note": "移动端的设备身份落在平台密钥库中的设备绑定密钥与密钥证明上：MASVS-AUTH 管认证与授权（含生物识别与设备安全锁），MASVS-CRYPTO 管密钥生成、存储与使用；站点目录里 Key Attestation、Android KeyStore 只是 MASTG Knowledge 下的条目，未单列。"
+  },
+  {
+   "topic": "移动应用",
+   "refs": [
+    "A:MASVS",
+    "A:#2",
+    "A:#3",
+    "A:#4"
+   ],
+   "note": "A:MASVS 是 8 组控制要求（存储、密码、认证、网络、平台、代码、抗逆向、隐私），A:#2 是通用概念（应用分类、测试方法、篡改与逆向、认证架构），A:#3、A:#4 是 Android/iOS 两侧的测试领域。"
+  },
+  {
+   "topic": "无线威胁模型",
+   "refs": [
+    "B:28.4",
+    "B:28.1"
+   ],
+   "note": "B 的 28.4 Attacks 按对手能力列无线攻击（嗅探、伪造 AP、deauth、KRACK 一类握手攻击），28.1 速查表把威胁与防护压成一张表；A 侧没有无线内容。"
+  }
+ ],
+ "omitted": "A（mas.owasp.org）的目录很大，我只收了 4 组：MASVS 的 8 个控制族、MASTG 的 General Concepts、Android Security Testing、iOS Security Testing。未收 MASWE 的一百多条弱点条目（它们挂在 MASVS 各控制族下，属细目）、MASTG 的 Best Practices（MASTG-BEST-0001…0074）、Knowledge（MASTG-KNOW-…，按 Android/iOS 技术点罗列）、MAS Profiles、MAS Crackmes、Tools、News/Talks 等，避免导览图变成清单。B 只收第 28 章 WPA，CS161 的其它网络章属 S.2.2。",
+ "notes": "A 是单页站点（mas.owasp.org 首页即全站导航），所以 toc_urls 只有一个 URL，分支与小节的 title 都取自该页导航里的条目文字；MASVS 各控制族在导航里写作“MASVS-STORAGE: Storage”，我去掉编号只留“Storage”，ref 留编号。Android/iOS 与通用概念两组的条目在原文里没有编号，ref 留空，coverage 里用 A:#2（General Concepts）、A:#3（Android）、A:#4（iOS）指代这些分支。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 44,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

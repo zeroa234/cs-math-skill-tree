@@ -1,0 +1,412 @@
+{
+ "id": "P.4.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Software Engineering at Google: Lessons Learned from Programming Over Time",
+   "by": "Titus Winters, Tom Manshreck, Hyrum Wright",
+   "year": 2020,
+   "url": "https://abseil.io/resources/swe-book",
+   "toc_urls": [
+    "https://abseil.io/resources/swe-book/html/toc.html"
+   ],
+   "why": "节点“现有英文学习资源”就是这本书的 Part III: Testing（第 11–14 章，免费在线）。四个章各有分节：测试的作用与测试套件设计（test size/scope、覆盖率的意义、大型测试套件的陷阱）、单元测试的可维护性、测试替身、以及更大的集成/系统测试类型，正好覆盖单元/集成/系统测试、覆盖率与质量评估。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Software Engineering, 9th Edition",
+   "by": "Ian Sommerville",
+   "year": 2010,
+   "url": "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf",
+   "toc_urls": [
+    "https://web2.qatar.cmu.edu/cs/17313/Software-Engineering-9th-Edition-by-Ian-Sommerville.pdf"
+   ],
+   "why": "补测试层次的标准教材分节：A 按“单元/替身/更大的测试”组织，没有教材式的开发测试（单元→组件→系统）、发布测试、用户测试这条主线，也没有测试驱动开发。"
+  },
+  {
+   "key": "C",
+   "kind": "course",
+   "title": "CMU 17-313: Foundations of Software Engineering — Recitation 7: Property-Based Testing",
+   "by": "Carnegie Mellon University",
+   "year": 2026,
+   "url": "https://cmu-313.github.io/recitations/reci7-pbt/",
+   "toc_urls": [
+    "https://cmu-313.github.io/recitations/reci7-pbt/"
+   ],
+   "why": "补性质测试：A 与 B 都没有性质测试（property-based testing）的章节，这一讲讲怎么写性质、怎么用变异体判断性质写得好不好。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Testing Overview",
+   "zh": "测试概览",
+   "items": [
+    {
+     "ref": "",
+     "title": "Why Do We Write Tests?",
+     "zh": "为什么要写测试"
+    },
+    {
+     "ref": "",
+     "title": "Benefits of Testing Code",
+     "zh": "测试代码的收益"
+    },
+    {
+     "ref": "",
+     "title": "Designing a Test Suite",
+     "zh": "设计测试套件"
+    },
+    {
+     "ref": "",
+     "title": "Test Size",
+     "zh": "测试规模"
+    },
+    {
+     "ref": "",
+     "title": "Test Scope",
+     "zh": "测试范围"
+    },
+    {
+     "ref": "",
+     "title": "The Beyoncé Rule",
+     "zh": "Beyoncé 规则"
+    },
+    {
+     "ref": "",
+     "title": "A Note on Code Coverage",
+     "zh": "关于代码覆盖率"
+    },
+    {
+     "ref": "",
+     "title": "The Pitfalls of a Large Test Suite",
+     "zh": "大型测试套件的陷阱"
+    },
+    {
+     "ref": "",
+     "title": "The Limits of Automated Testing",
+     "zh": "自动化测试的局限"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Unit Testing",
+   "zh": "单元测试",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Importance of Maintainability",
+     "zh": "可维护性的重要性"
+    },
+    {
+     "ref": "",
+     "title": "Preventing Brittle Tests",
+     "zh": "避免脆弱测试"
+    },
+    {
+     "ref": "",
+     "title": "Strive for Unchanging Tests",
+     "zh": "追求不随实现变化的测试"
+    },
+    {
+     "ref": "",
+     "title": "Test via Public APIs",
+     "zh": "通过公开 API 测试"
+    },
+    {
+     "ref": "",
+     "title": "Test State, Not Interactions",
+     "zh": "测状态而非交互"
+    },
+    {
+     "ref": "",
+     "title": "Test Behaviors, Not Methods",
+     "zh": "测行为而非方法"
+    },
+    {
+     "ref": "",
+     "title": "Don't Put Logic in Tests",
+     "zh": "测试里不要写逻辑"
+    },
+    {
+     "ref": "",
+     "title": "Write Clear Failure Messages",
+     "zh": "写清楚的失败信息"
+    },
+    {
+     "ref": "",
+     "title": "Tests and Code Sharing: DAMP, Not DRY",
+     "zh": "测试与代码共享：DAMP 而非 DRY"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Test Doubles",
+   "zh": "测试替身",
+   "items": [
+    {
+     "ref": "",
+     "title": "The Impact of Test Doubles on Software Development",
+     "zh": "测试替身对软件开发的影响"
+    },
+    {
+     "ref": "",
+     "title": "Test Doubles at Google",
+     "zh": "Google 的测试替身"
+    },
+    {
+     "ref": "",
+     "title": "Basic Concepts",
+     "zh": "基本概念"
+    },
+    {
+     "ref": "",
+     "title": "Seams",
+     "zh": "接缝"
+    },
+    {
+     "ref": "",
+     "title": "Mocking Frameworks",
+     "zh": "mock 框架"
+    },
+    {
+     "ref": "",
+     "title": "Faking",
+     "zh": "伪造对象"
+    },
+    {
+     "ref": "",
+     "title": "Stubbing",
+     "zh": "打桩"
+    },
+    {
+     "ref": "",
+     "title": "Interaction Testing",
+     "zh": "交互测试"
+    },
+    {
+     "ref": "",
+     "title": "Prefer Realism Over Isolation",
+     "zh": "优先真实而非隔离"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Larger Testing",
+   "zh": "大型测试",
+   "items": [
+    {
+     "ref": "",
+     "title": "What Are Larger Tests?",
+     "zh": "什么是大型测试"
+    },
+    {
+     "ref": "",
+     "title": "Fidelity",
+     "zh": "保真度"
+    },
+    {
+     "ref": "",
+     "title": "Common Gaps in Unit Tests",
+     "zh": "单元测试常见的缺口"
+    },
+    {
+     "ref": "",
+     "title": "Why Not Have Larger Tests?",
+     "zh": "为什么不多做大型测试"
+    },
+    {
+     "ref": "",
+     "title": "Structure of a Large Test",
+     "zh": "大型测试的结构"
+    },
+    {
+     "ref": "",
+     "title": "The System Under Test",
+     "zh": "被测系统"
+    },
+    {
+     "ref": "",
+     "title": "Test Data",
+     "zh": "测试数据"
+    },
+    {
+     "ref": "",
+     "title": "Verification",
+     "zh": "验证"
+    },
+    {
+     "ref": "",
+     "title": "Types of Larger Tests",
+     "zh": "大型测试的类型"
+    },
+    {
+     "ref": "",
+     "title": "Functional Testing of One or More Interacting Binaries",
+     "zh": "多个交互二进制的功能测试"
+    },
+    {
+     "ref": "",
+     "title": "Browser and Device Testing",
+     "zh": "浏览器与设备测试"
+    },
+    {
+     "ref": "",
+     "title": "Performance, Load, and Stress testing",
+     "zh": "性能、负载与压力测试"
+    },
+    {
+     "ref": "",
+     "title": "Deployment Configuration Testing",
+     "zh": "部署配置测试"
+    },
+    {
+     "ref": "",
+     "title": "Exploratory Testing",
+     "zh": "探索性测试"
+    },
+    {
+     "ref": "",
+     "title": "A/B Diff Regression Testing",
+     "zh": "A/B 差分回归测试"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "8",
+   "title": "Software testing",
+   "zh": "软件测试",
+   "fill": "补测试层次主线与测试驱动开发：开发测试里的单元测试、组件测试（集成）、系统测试，以及发布测试与用户（验收）测试",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Development testing",
+     "zh": "开发测试"
+    },
+    {
+     "ref": "8.2",
+     "title": "Test-driven development",
+     "zh": "测试驱动开发"
+    },
+    {
+     "ref": "8.3",
+     "title": "Release testing",
+     "zh": "发布测试"
+    },
+    {
+     "ref": "8.4",
+     "title": "User testing",
+     "zh": "用户测试"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "",
+   "title": "Recitation 7: Property-Based Testing",
+   "zh": "第 7 次讨论课：性质测试",
+   "fill": "补性质测试：怎么写性质、怎么用变异体（mutants）检验性质是否真的有效",
+   "items": [
+    {
+     "ref": "",
+     "title": "Before recitation: setup (5 min)",
+     "zh": "课前准备（5 分钟）"
+    },
+    {
+     "ref": "",
+     "title": "Commands",
+     "zh": "常用命令"
+    },
+    {
+     "ref": "",
+     "title": "How you'll know your properties are any good",
+     "zh": "怎么判断性质写得好不好"
+    },
+    {
+     "ref": "",
+     "title": "Part 1: Wordle (follow along)",
+     "zh": "第 1 部分：Wordle（跟做）"
+    },
+    {
+     "ref": "",
+     "title": "Part 2: Merging intervals (groups of 2–3)",
+     "zh": "第 2 部分：合并区间（2–3 人一组）"
+    },
+    {
+     "ref": "",
+     "title": "fast-check cheat sheet",
+     "zh": "fast-check 速查表"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "单元测试",
+   "refs": [
+    "A:#2",
+    "A:#1",
+    "B:8.1"
+   ]
+  },
+  {
+   "topic": "集成测试",
+   "refs": [
+    "A:#4",
+    "B:8.1"
+   ]
+  },
+  {
+   "topic": "系统测试",
+   "refs": [
+    "A:#4",
+    "B:8.1",
+    "B:8.3"
+   ]
+  },
+  {
+   "topic": "性质测试",
+   "refs": [
+    "C:#1"
+   ],
+   "note": "A 的 Testing/Unit Testing/Larger Testing 与 B 的开发测试都没有性质测试；这一项只由 CMU 17-313 的性质测试讨论课覆盖。"
+  },
+  {
+   "topic": "覆盖率",
+   "refs": [
+    "A:#1"
+   ]
+  },
+  {
+   "topic": "故障注入",
+   "refs": [],
+   "note": "两份来源都没有故障注入（fault injection / chaos engineering）的章：A 的 Larger Testing 讲性能、负载、压力测试与部署配置测试，B 讲单元/组件/系统/发布测试，都不是故障注入；这一项要另找可靠性工程材料（如 Google SRE 系列）补。"
+  },
+  {
+   "topic": "质量评估",
+   "refs": [
+    "A:#1",
+    "A:#4",
+    "B:8.4"
+   ]
+  }
+ ],
+ "omitted": "A 只收 Part III 的四章：Part I（Thesis）、Part II（Culture）、Part IV/V（Processes、Code Review、Documentation、依赖管理、大型系统）属工程原则/协作/构建等其他节点；第 11 章里的“Test Certified”“Testing on the Toilet”“History of Testing at Google”等 Google 内部史与推广活动页未收。B 只收第 8 章，第 15 章（静态分析、可靠性测试、安全测试）属可靠性/安全节点。",
+ "notes": "A 的目录页（toc.html）只列章名与小节名、没有编号，所以 A 的分支与叶子 ref 都留空，coverage 里用 A:#1–A:#4 指四个章。C 的 toc_url 是讨论课页面，页内小节没有编号，coverage 用 C:#1。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 58,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,469 @@
+{
+ "id": "A.2.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "Learning From Data — Caltech online course (Yaser Abu-Mostafa), topic-by-topic video library",
+   "by": "Yaser S. Abu-Mostafa",
+   "year": 2012,
+   "url": "https://work.caltech.edu/telecourse",
+   "toc_urls": [
+    "https://work.caltech.edu/telecourse",
+    "https://work.caltech.edu/library/"
+   ],
+   "why": "节点“现有英文学习资源”就是这门 Caltech 公开课。课程主页给出 18 讲的讲题与每讲内容摘要，官方“Topic-by-topic video library”页把同一批视频按主题重排（Bin Model、VC Dimension、Bias-Variance Tradeoff、Learning Curves、Overfitting、Regularization、Validation、Data Snooping、Occam's Razor、Sampling Bias…），每个主题下列出具体视频片段标题，正好当章→节用；其中 Hoeffding/PAC、VC 维与增长函数、偏差-方差分解就是本节点的核心。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Understanding Machine Learning: From Theory to Algorithms",
+   "by": "Shai Shalev-Shwartz, Shai Ben-David",
+   "year": 2014,
+   "url": "https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf",
+   "toc_urls": [
+    "https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf"
+   ],
+   "why": "补两个知识点：经验风险最小化（第 2 章给 ERM 的正式定义与过拟合）与算法稳定性（第 13 章 Regularization and Stability 讲“稳定的学习规则不会过拟合”、Tikhonov 正则作为稳定器）。这本书是作者官方免费发布的教材（剑桥大学出版社授权），入门层 D3 用它合适。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "Probabilistic Machine Learning: Advanced Topics",
+   "by": "Kevin P. Murphy",
+   "year": 2023,
+   "url": "https://probml.github.io/pml-book/book2.html",
+   "toc_urls": [
+    "https://raw.githubusercontent.com/probml/pml2-book/main/toc2-long-2023-01-19.pdf"
+   ],
+   "why": "补分布外泛化：前两个来源都只讲 i.i.d. 情形。本书第 19 章 Beyond the iid assumption 系统讲分布漂移（四种类型）、漂移的检测、对漂移的鲁棒性（数据增广、分布鲁棒优化）、适应漂移（协变量漂移下的加权 ERM、无监督域适应、标签漂移）、多分布学习（域泛化、不变风险最小化）。作者官方站点提供长目录 PDF（MIT Press，CC BY-NC-ND），可核对。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Learning Diagram",
+   "zh": "学习问题的组成",
+   "items": [
+    {
+     "ref": "",
+     "title": "Components of learning (target function, hypothesis set, learning algorithm)",
+     "zh": "学习的组成（目标函数、假设集、学习算法）"
+    },
+    {
+     "ref": "",
+     "title": "Input probability distribution (unknown distribution, bin, Hoeffding)",
+     "zh": "输入的概率分布（未知分布、桶、Hoeffding）"
+    },
+    {
+     "ref": "",
+     "title": "Error measure (role in learning algorithm)",
+     "zh": "误差度量（在学习算法中的作用）"
+    },
+    {
+     "ref": "",
+     "title": "Noisy targets (target distribution)",
+     "zh": "带噪声的目标（目标分布）"
+    },
+    {
+     "ref": "",
+     "title": "Where the VC analysis fits (affected blocks in learning diagram)",
+     "zh": "VC 分析作用于学习图的哪些块"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Error Measures",
+   "zh": "误差度量",
+   "items": [
+    {
+     "ref": "",
+     "title": "User-specified error function (pointwise error, CIA, supermarket)",
+     "zh": "用户指定的误差函数（逐点误差、CIA、超市例）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Bin Model",
+   "zh": "桶模型",
+   "items": [
+    {
+     "ref": "",
+     "title": "Hoeffding Inequality (law of large numbers, sample, PAC)",
+     "zh": "Hoeffding 不等式（大数定律、样本、PAC）"
+    },
+    {
+     "ref": "",
+     "title": "Relation to learning (from bin to hypothesis, training data)",
+     "zh": "与学习的联系（从桶到假设、训练数据）"
+    },
+    {
+     "ref": "",
+     "title": "Multiple bins (finite hypothesis set, learning: search for green sample)",
+     "zh": "多个桶（有限假设集、学习的实质）"
+    },
+    {
+     "ref": "",
+     "title": "Union Bound (uniform inequality, M factor)",
+     "zh": "联合界（一致不等式、M 因子）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "VC Dimension",
+   "zh": "VC 维",
+   "items": [
+    {
+     "ref": "",
+     "title": "Growth function (dichotomies, Hoeffding Inequality)",
+     "zh": "增长函数（二分类划分、Hoeffding 不等式）"
+    },
+    {
+     "ref": "",
+     "title": "Examples (growth function for simple hypothesis sets)",
+     "zh": "例子（简单假设集的增长函数）"
+    },
+    {
+     "ref": "",
+     "title": "Break points (polynomial growth functions)",
+     "zh": "断点（多项式增长函数）"
+    },
+    {
+     "ref": "",
+     "title": "Bounding the growth function (mathematical induction, polynomial bound)",
+     "zh": "增长函数的上界（数学归纳、多项式界）"
+    },
+    {
+     "ref": "",
+     "title": "Definition of VC Dimension (shattering, distribution-free, Vapnik-Chervonenkis)",
+     "zh": "VC 维的定义（打散、与分布无关、Vapnik-Chervonenkis）"
+    },
+    {
+     "ref": "",
+     "title": "VC Dimension of Perceptrons (number of parameters, lower and upper bounds)",
+     "zh": "感知机的 VC 维（参数个数、上下界）"
+    },
+    {
+     "ref": "",
+     "title": "Interpreting the VC Dimension (degrees of freedom, Number of examples)",
+     "zh": "VC 维的解释（自由度、样本数）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Bias-Variance Tradeoff",
+   "zh": "偏差-方差权衡",
+   "items": [
+    {
+     "ref": "",
+     "title": "Basic derivation (overfit and underfit, approximation-generalization tradeoff)",
+     "zh": "基本推导（过拟合与欠拟合、近似-泛化权衡）"
+    },
+    {
+     "ref": "",
+     "title": "Example (sinusoidal target function)",
+     "zh": "例子（正弦目标函数）"
+    },
+    {
+     "ref": "",
+     "title": "Noisy case (Bias-variance-noise decomposition)",
+     "zh": "带噪声情形（偏差-方差-噪声分解）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Learning Curves",
+   "zh": "学习曲线",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition and illustration (complex models versus simple models)",
+     "zh": "定义与图示（复杂模型与简单模型）"
+    },
+    {
+     "ref": "",
+     "title": "Linear Regression example (learning curves for noisy linear target)",
+     "zh": "线性回归例子（带噪声线性目标的学习曲线）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Overfitting",
+   "zh": "过拟合",
+   "items": [
+    {
+     "ref": "",
+     "title": "The phenomenon (fitting the noise)",
+     "zh": "现象（拟合噪声）"
+    },
+    {
+     "ref": "",
+     "title": "A detailed experiment (Legendre polynomials, types of noise)",
+     "zh": "一个详细实验（Legendre 多项式、噪声类型）"
+    },
+    {
+     "ref": "",
+     "title": "Deterministic noise (target complexity, stochastic noise)",
+     "zh": "确定性噪声（目标复杂度、随机噪声）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Regularization",
+   "zh": "正则化",
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction (putting the brakes, function approximation)",
+     "zh": "导论（踩刹车、函数逼近）"
+    },
+    {
+     "ref": "",
+     "title": "Formal derivation (Legendre polynomials, soft-order constraint, augmented error)",
+     "zh": "形式化推导（Legendre 多项式、软阶约束、增广误差）"
+    },
+    {
+     "ref": "",
+     "title": "Weight decay (Tikhonov, smoothness, neural networks)",
+     "zh": "权重衰减（Tikhonov、光滑性、神经网络）"
+    },
+    {
+     "ref": "",
+     "title": "Augmented error (proxy for out-of-sample error, choosing a regularizer)",
+     "zh": "增广误差（样本外误差的替代、选择正则项）"
+    },
+    {
+     "ref": "",
+     "title": "Regularization parameter (deterministic noise, stochastic noise)",
+     "zh": "正则化参数（确定性噪声、随机噪声）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Validation",
+   "zh": "验证",
+   "items": [
+    {
+     "ref": "",
+     "title": "Introduction (validation versus regularization, optimistic bias)",
+     "zh": "导论（验证与正则化之别、乐观偏差）"
+    },
+    {
+     "ref": "",
+     "title": "Model selection (data contamination, validation set versus test set)",
+     "zh": "模型选择（数据污染、验证集与测试集）"
+    },
+    {
+     "ref": "",
+     "title": "Cross Validation (leave-one-out, 10-fold cross validation)",
+     "zh": "交叉验证（留一、10 折交叉验证）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Data Snooping",
+   "zh": "数据窥探",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition and analysis (data contamination, model selection)",
+     "zh": "定义与分析（数据污染、模型选择）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Occam's Razor",
+   "zh": "奥卡姆剃刀",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition and analysis (definition of complexity, why simpler is better)",
+     "zh": "定义与分析（复杂度的定义、为什么越简单越好）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Sampling Bias",
+   "zh": "采样偏差",
+   "items": [
+    {
+     "ref": "",
+     "title": "Definition and analysis (Truman versus Dewey, matching the distributions)",
+     "zh": "定义与分析（杜鲁门与杜威、分布的匹配）"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "A Gentle Start",
+   "zh": "从简入门",
+   "fill": "经验风险最小化的正式定义（含过拟合与归纳偏置下的 ERM）",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "A Formal Model – The Statistical Learning Framework",
+     "zh": "形式模型：统计学习框架"
+    },
+    {
+     "ref": "2.2",
+     "title": "Empirical Risk Minimization",
+     "zh": "经验风险最小化",
+     "items": [
+      {
+       "ref": "2.2.1",
+       "title": "Something May Go Wrong – Overfitting",
+       "zh": "可能出问题：过拟合"
+      }
+     ]
+    },
+    {
+     "ref": "2.3",
+     "title": "Empirical Risk Minimization with Inductive Bias",
+     "zh": "带归纳偏置的经验风险最小化"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "13",
+   "title": "Regularization and Stability",
+   "zh": "正则化与稳定性",
+   "fill": "算法稳定性：稳定的学习规则不会过拟合，正则化即稳定器",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Regularized Loss Minimization",
+     "zh": "正则化损失最小化"
+    },
+    {
+     "ref": "13.2",
+     "title": "Stable Rules Do Not Overfit",
+     "zh": "稳定的规则不会过拟合"
+    },
+    {
+     "ref": "13.3",
+     "title": "Tikhonov Regularization as a Stabilizer",
+     "zh": "Tikhonov 正则化作为稳定器"
+    },
+    {
+     "ref": "13.4",
+     "title": "Controlling the Fitting-Stability Tradeoff",
+     "zh": "控制拟合-稳定性的权衡"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "19",
+   "title": "Beyond the iid assumption",
+   "zh": "超出独立同分布假设",
+   "fill": "分布外泛化：分布漂移的类型、检测、鲁棒、适应与域泛化",
+   "items": [
+    {
+     "ref": "19.2",
+     "title": "Distribution shift",
+     "zh": "分布漂移"
+    },
+    {
+     "ref": "19.3",
+     "title": "Detecting distribution shifts",
+     "zh": "检测分布漂移"
+    },
+    {
+     "ref": "19.4",
+     "title": "Robustness to distribution shifts",
+     "zh": "对分布漂移的鲁棒性"
+    },
+    {
+     "ref": "19.5",
+     "title": "Adapting to distribution shifts",
+     "zh": "适应分布漂移"
+    },
+    {
+     "ref": "19.6",
+     "title": "Learning from multiple distributions",
+     "zh": "从多个分布中学习"
+    },
+    {
+     "ref": "19.7",
+     "title": "Continual learning",
+     "zh": "持续学习"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "经验风险",
+   "refs": [
+    "A:#1",
+    "A:#2",
+    "B:#1"
+   ],
+   "note": "A:#1 Learning Diagram 的 Error measure 片段讲误差度量在学习算法里的作用（样本内误差 Ein，即经验风险）；A:#2 Error Measures 讲误差函数由用户指定；B:#1 的 2.2 是经验风险最小化 ERM 的正式定义，2.1 给出统计学习框架（风险的定义），2.2.1 讲 ERM 为什么会过拟合。"
+  },
+  {
+   "topic": "PAC/VC",
+   "refs": [
+    "A:#3",
+    "A:#4"
+   ],
+   "note": "A:#3 桶模型：Hoeffding 不等式（含 PAC 的表述）、从桶到假设、有限假设集与联合界；A:#4 VC 维：增长函数、断点、增长函数的多项式上界、VC 维定义（打散、与分布无关）、感知机的 VC 维、以及“自由度/样本数”的解释。"
+  },
+  {
+   "topic": "稳定性",
+   "refs": [
+    "B:#2"
+   ],
+   "note": "A 这门课不讲算法稳定性。B（Understanding Machine Learning）第 13 章：正则化损失最小化、稳定的规则不会过拟合、Tikhonov 正则化作为稳定器、拟合与稳定性的权衡。"
+  },
+  {
+   "topic": "偏差方差",
+   "refs": [
+    "A:#5",
+    "A:#6",
+    "A:#7"
+   ],
+   "note": "A:#5 偏差-方差权衡（基本推导、正弦目标例子、偏差-方差-噪声分解）；A:#6 学习曲线把偏差与方差随样本数的变化画出来；A:#7 过拟合是方差一侧的极端情形（含确定性噪声与随机噪声的区分）。"
+  },
+  {
+   "topic": "分布外泛化",
+   "refs": [
+    "C:#1"
+   ],
+   "note": "A 与 B 都只处理 i.i.d. 假设下的泛化。C（PML2 Advanced Topics）第 19 章 Beyond the iid assumption：19.2 分布漂移的四种类型（含选择偏差）、19.3 检测（两样本检验、OOD 检测、选择性预测、开集识别）、19.4 鲁棒性（数据增广、分布鲁棒优化）、19.5 适应（迁移学习、协变量漂移下的加权 ERM、无监督域适应、标签漂移、测试时适应）、19.6 多分布学习（多任务、域泛化、不变风险最小化）、19.7 持续学习与漂移。第三层小节没展开，需要更细时看该章目录。"
+  }
+ ],
+ "omitted": "A（Caltech 课程）未收的主题：Aggregation、Bayesian Learning、Gradient Descent、Learning Paradigms、Linear Classification、Linear Regression、Logistic Regression、Netflix Competition、Neural Networks、Nonlinear Transformation、Radial Basis Functions、Support Vector Machines —— 这些是具体模型与优化算法（属节点 A.2.1/A.2.3），不是学习理论；课程主页另外 18 讲的讲题列表也没有单独成支（视频库已按主题覆盖同样的内容）。B（UML）只收第 2 章与第 13 章：第 3–8 章（PAC、一致收敛、偏差-复杂度权衡、VC 维、非一致可学性、学习的运行时）与 A 的桶模型/VC 维主题重叠，故不重复收；其余各章属于具体算法（线性预测器、boosting、凸学习、SGD、SVM、核方法、多类与结构化预测、在线学习、聚类、降维、生成模型、特征选择、Rademacher 复杂度、覆盖数、压缩界、PAC-Bayes 等）。C（PML2）只收第 19 章，其第 2–18、20–36 章（概率、统计、图模型、推断、生成模型、表示学习等）与本节点的泛化主题无关。",
+ "notes": "结构说明：A 的视频库把同一批视频按主题重排，主题与其下的片段标题都没有编号，因此 A 的所有 ref 留空，coverage 用 A:#序号（#1–#12 按 outline 顺序）。B、C 的章有编号，照抄。B 的书是整书 PDF（约 88 万字符），plain fetch 因网络到不了 huji.ac.il，用 research_tool extract 抓的（已缓存，可核对）。B 的目录里连字被抽成真连字（Overﬁtting、Tradeoﬀ），按正确拼写抄写，核对脚本按 NFKC 归一后能对上。层次上 B、C 都是研究生教材，本节点入门层是 D3，符合“D3/D4 可用研究生教材”。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 65,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

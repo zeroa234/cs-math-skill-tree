@@ -1,0 +1,213 @@
+{
+ "id": "F.3.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Software Foundations (Rocq/Coq edition)",
+   "by": "Benjamin C. Pierce et al., University of Pennsylvania",
+   "year": 2024,
+   "url": "https://softwarefoundations.cis.upenn.edu/",
+   "toc_urls": [
+    "https://softwarefoundations.cis.upenn.edu/",
+    "https://softwarefoundations.cis.upenn.edu/lf-current/toc.html",
+    "https://softwarefoundations.cis.upenn.edu/plf-current/toc.html"
+   ],
+   "why": "节点现有英文资源；全系列正文本身就是机器检查的证明脚本，Logical Foundations 的 The Curry-Howard Correspondence 一章有 “Logical Connectives as Inductive Types” 与 “Rocq's Trusted Computing Base”，正好对应命题即类型与可信计算基；每一章都靠 proof script 逐条检查，就是“机器检查证明”的实操。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Basics",
+   "title": "Functional Programming in Rocq",
+   "zh": "Rocq 中的函数式编程",
+   "items": [
+    {
+     "ref": "",
+     "title": "Data and Functions",
+     "zh": "数据与函数"
+    },
+    {
+     "ref": "",
+     "title": "Types",
+     "zh": "类型"
+    },
+    {
+     "ref": "",
+     "title": "New Types from Old",
+     "zh": "由旧类型构造新类型"
+    },
+    {
+     "ref": "",
+     "title": "Proof by Simplification",
+     "zh": "化简证明"
+    },
+    {
+     "ref": "",
+     "title": "Proof by Rewriting",
+     "zh": "重写证明"
+    },
+    {
+     "ref": "",
+     "title": "Proof by Case Analysis",
+     "zh": "分类讨论证明"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Induction",
+   "title": "Proof by Induction",
+   "zh": "归纳证明",
+   "items": [
+    {
+     "ref": "",
+     "title": "Proof by Induction",
+     "zh": "归纳证明"
+    },
+    {
+     "ref": "",
+     "title": "Proofs Within Proofs",
+     "zh": "证明之中的证明"
+    },
+    {
+     "ref": "",
+     "title": "Formal vs. Informal Proof",
+     "zh": "形式化证明与非形式化证明"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Logic",
+   "title": "Logic in Rocq",
+   "zh": "Rocq 中的逻辑",
+   "items": [
+    {
+     "ref": "",
+     "title": "Logical Connectives",
+     "zh": "逻辑联结词"
+    },
+    {
+     "ref": "",
+     "title": "Programming with Propositions",
+     "zh": "用命题编程"
+    },
+    {
+     "ref": "",
+     "title": "Applying Theorems to Arguments",
+     "zh": "把定理用到参数上"
+    },
+    {
+     "ref": "",
+     "title": "The Logic of Rocq",
+     "zh": "Rocq 的逻辑"
+    },
+    {
+     "ref": "",
+     "title": "Classical vs. Constructive Logic",
+     "zh": "经典逻辑与构造主义逻辑"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "ProofObjects",
+   "title": "The Curry-Howard Correspondence",
+   "zh": "Curry-Howard 对应",
+   "items": [
+    {
+     "ref": "",
+     "title": "Proof Scripts",
+     "zh": "证明脚本"
+    },
+    {
+     "ref": "",
+     "title": "Quantifiers, Implications, Functions",
+     "zh": "量词、蕴涵与函数"
+    },
+    {
+     "ref": "",
+     "title": "Programming with Tactics",
+     "zh": "用策略编程"
+    },
+    {
+     "ref": "",
+     "title": "Logical Connectives as Inductive Types",
+     "zh": "逻辑联结词作为归纳类型"
+    },
+    {
+     "ref": "",
+     "title": "Rocq's Trusted Computing Base",
+     "zh": "Rocq 的可信计算基"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Equiv",
+   "title": "Program Equivalence",
+   "zh": "程序等价",
+   "items": [
+    {
+     "ref": "",
+     "title": "Behavioral Equivalence",
+     "zh": "行为等价"
+    },
+    {
+     "ref": "",
+     "title": "Program Transformations",
+     "zh": "程序变换"
+    },
+    {
+     "ref": "",
+     "title": "The Constant-Folding Transformation",
+     "zh": "常量折叠变换"
+    },
+    {
+     "ref": "",
+     "title": "Soundness of Constant Folding",
+     "zh": "常量折叠的可靠性"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "命题即类型",
+   "refs": [
+    "A:ProofObjects",
+    "A:Logic"
+   ]
+  },
+  {
+   "topic": "机器检查证明",
+   "refs": [
+    "A:Basics",
+    "A:Induction",
+    "A:ProofObjects"
+   ]
+  },
+  {
+   "topic": "精化",
+   "refs": [
+    "A:Equiv"
+   ]
+  },
+  {
+   "topic": "可信计算基",
+   "refs": [
+    "A:ProofObjects"
+   ]
+  }
+ ],
+ "omitted": "Logical Foundations 里 Poly、Tactics、Maps、IndProp、IndPrinciples、Rel 等章是铺垫（多态、策略、映射、归纳定义的关系），Proof by Simplification/Rewriting/Case Analysis 已能代表“机器逐条检查”的方式；系列第 2 卷只取了 Program Equivalence 一章（最接近“精化/程序变换”），第 3–7 卷（Verified Functional Algorithms、QuickChick、Verifiable C、Separation Logic Foundations、Security Foundations）是数据结构验证、测试、C 程序验证与安全，超出本节点简介。",
+ "notes": "精化一项要说明：SF 全系列没有名为 refinement（精化）的一章，这里把第 2 卷 Program Equivalence 的 Program Transformations / Soundness of Constant Folding 当作“把程序按保持语义的方式逐步精化”的对应内容，属于最接近的映射而非原书的“精化”专章；若主代理要求严格对应，可把这一条改成 refs 留空并注明。分支的 ref 用的是 SF 每章的缩写名（Basics、Induction、Logic、ProofObjects、Equiv）；分支内的小节没有单独编号，coverage 只能指到章。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 28,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

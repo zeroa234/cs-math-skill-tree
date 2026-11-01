@@ -1,0 +1,318 @@
+{
+ "id": "M.7.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Applied Mathematical Programming",
+   "by": "Stephen P. Bradley, Arnoldo C. Hax, Thomas L. Magnanti",
+   "year": 1977,
+   "url": "https://web.mit.edu/15.053/www/AMP.htm",
+   "toc_urls": [
+    "https://web.mit.edu/15.053/www/AMP-Chapter-08.pdf",
+    "https://web.mit.edu/15.053/www/AMP-Chapter-09.pdf"
+   ],
+   "why": "节点现有英文资源 15.053 的官方参考书（OCW 逐讲 L10–L17 就对应这两章）：第 9 章整数规划给出建模、分支定界、隐枚举、割平面，第 8 章网络模型给出组合结构（网络流、运输、指派、关键路径）。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Handbook of Metaheuristics, Third Edition",
+   "by": "Michel Gendreau, Jean-Yves Potvin (eds.)",
+   "year": 2019,
+   "url": "https://link.springer.com/book/10.1007/978-3-319-91086-4",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-319-91086-4"
+   ],
+   "why": "补“启发式方法”：AMP 第 9 章只有精确的隐枚举与割平面，没有模拟退火、禁忌搜索、遗传算法、蚁群等元启发式；这本 Springer 手册是元启发式的标准参考。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "The Design of Approximation Algorithms",
+   "by": "David P. Williamson, David B. Shmoys",
+   "year": 2011,
+   "url": "https://www.designofapproxalgs.com/",
+   "toc_urls": [
+    "https://www.designofapproxalgs.com/book.pdf"
+   ],
+   "why": "补“近似”：AMP 与元启发式手册都不讲近似比与近似算法设计；这本教材由作者主页在剑桥大学出版社许可下免费公开，第 1–2 章正好是近似算法导论与贪心/局部搜索。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Network Models",
+   "zh": "网络模型",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "THE GENERAL NETWORK-FLOW PROBLEM",
+     "zh": "一般网络流问题"
+    },
+    {
+     "ref": "8.2",
+     "title": "SPECIAL NETWORK MODELS",
+     "zh": "特殊网络模型"
+    },
+    {
+     "ref": "8.3",
+     "title": "THE CRITICAL-PATH METHOD",
+     "zh": "关键路径法"
+    },
+    {
+     "ref": "8.4",
+     "title": "CAPACITATED PRODUCTION—A HIDDEN NETWORK",
+     "zh": "带产能约束的生产——隐藏的网络"
+    },
+    {
+     "ref": "8.5",
+     "title": "SOLVING THE TRANSPORTATION PROBLEM",
+     "zh": "求解运输问题"
+    },
+    {
+     "ref": "8.6",
+     "title": "ADDITIONAL TRANSPORTATION CONSIDERATIONS",
+     "zh": "运输问题的其他考虑"
+    },
+    {
+     "ref": "8.7",
+     "title": "THE SIMPLEX METHOD FOR NETWORKS",
+     "zh": "网络单纯形法"
+    },
+    {
+     "ref": "8.8",
+     "title": "SOLVING THE MINIMUM-COST FLOW PROBLEM",
+     "zh": "求解最小费用流问题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Integer Programming",
+   "zh": "整数规划",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "SOME INTEGER-PROGRAMMING MODELS",
+     "zh": "若干整数规划模型"
+    },
+    {
+     "ref": "9.2",
+     "title": "FORMULATING INTEGER PROGRAMS",
+     "zh": "整数规划的建模"
+    },
+    {
+     "ref": "9.3",
+     "title": "A SAMPLE FORMULATION",
+     "zh": "一个建模示例"
+    },
+    {
+     "ref": "9.4",
+     "title": "SOME CHARACTERISTICS OF INTEGER PROGRAMS—A SAMPLE PROBLEM",
+     "zh": "整数规划的特点——一个示例问题"
+    },
+    {
+     "ref": "9.5",
+     "title": "BRANCH-AND-BOUND",
+     "zh": "分支定界"
+    },
+    {
+     "ref": "9.6",
+     "title": "BRANCH-AND-BOUND FOR MIXED-INTEGER PROGRAMS",
+     "zh": "混合整数规划的分支定界"
+    },
+    {
+     "ref": "9.7",
+     "title": "IMPLICIT ENUMERATION",
+     "zh": "隐枚举"
+    },
+    {
+     "ref": "9.8",
+     "title": "CUTTING PLANES",
+     "zh": "割平面"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "1",
+   "title": "An introduction to approximation algorithms",
+   "zh": "近似算法导论",
+   "fill": "近似（近似比、舍入与贪心、原始-对偶）",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "The whats and whys of approximation algorithms",
+     "zh": "近似算法是什么、为什么需要"
+    },
+    {
+     "ref": "1.2",
+     "title": "An introduction to the techniques and to linear programming: the set cover problem",
+     "zh": "方法概览与线性规划：集合覆盖问题"
+    },
+    {
+     "ref": "1.3",
+     "title": "A deterministic rounding algorithm",
+     "zh": "确定性舍入算法"
+    },
+    {
+     "ref": "1.4",
+     "title": "Rounding a dual solution",
+     "zh": "对偶解的舍入"
+    },
+    {
+     "ref": "1.5",
+     "title": "Constructing a dual solution: the primal-dual method",
+     "zh": "构造对偶解：原始-对偶方法"
+    },
+    {
+     "ref": "1.6",
+     "title": "A greedy algorithm",
+     "zh": "贪心算法"
+    },
+    {
+     "ref": "1.7",
+     "title": "A randomized rounding algorithm",
+     "zh": "随机舍入算法"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "2",
+   "title": "Greedy algorithms and local search",
+   "zh": "贪心算法与局部搜索",
+   "fill": "近似与启发式（局部搜索、贪心 + 近似比证明）",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Scheduling jobs with deadlines on a single machine",
+     "zh": "单机带截止期的作业调度"
+    },
+    {
+     "ref": "2.2",
+     "title": "The k-center problem",
+     "zh": "k-中心问题"
+    },
+    {
+     "ref": "2.3",
+     "title": "Scheduling jobs on identical parallel machines",
+     "zh": "同型并行机上的作业调度"
+    },
+    {
+     "ref": "2.4",
+     "title": "The traveling salesman problem",
+     "zh": "旅行商问题"
+    },
+    {
+     "ref": "2.5",
+     "title": "Maximizing float in bank accounts",
+     "zh": "银行账户浮存最大化"
+    },
+    {
+     "ref": "2.6",
+     "title": "Finding minimum-degree spanning trees",
+     "zh": "求最小度生成树"
+    },
+    {
+     "ref": "2.7",
+     "title": "Edge coloring",
+     "zh": "边着色"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Simulated Annealing: From Basics to Applications",
+   "zh": "模拟退火：从基础到应用",
+   "fill": "启发式（模拟退火）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Tabu Search",
+   "zh": "禁忌搜索",
+   "fill": "启发式（禁忌搜索）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Next Generation Genetic Algorithms: A User's Guide and Tutorial",
+   "zh": "新一代遗传算法：使用指南与教程",
+   "fill": "启发式（遗传算法）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Ant Colony Optimization: Overview and Recent Advances",
+   "zh": "蚁群优化：综述与新进展",
+   "fill": "启发式（蚁群优化）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "整数规划",
+   "refs": [
+    "A:9",
+    "A:9.1",
+    "A:9.2",
+    "A:9.4"
+   ]
+  },
+  {
+   "topic": "分支定界",
+   "refs": [
+    "A:9.5",
+    "A:9.6",
+    "A:9.7",
+    "A:9.8"
+   ]
+  },
+  {
+   "topic": "组合结构",
+   "refs": [
+    "A:8",
+    "A:8.1",
+    "A:8.2",
+    "A:8.5",
+    "A:8.7"
+   ],
+   "note": "网络流、运输、指派、关键路径是 AMP 第 8 章的组合问题原型；C:2 的调度、k-中心、TSP、生成树、边着色再补一批经典组合结构。"
+  },
+  {
+   "topic": "近似",
+   "refs": [
+    "C:1",
+    "C:2"
+   ],
+   "note": "近似比、确定性/随机舍入、原始-对偶、贪心与局部搜索的近似保证。"
+  },
+  {
+   "topic": "启发式方法",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#3",
+    "B:#4",
+    "C:2"
+   ],
+   "note": "元启发式看 B（模拟退火、禁忌搜索、遗传算法、蚁群优化）；局部搜索的近似分析看 C 第 2 章。"
+  }
+ ],
+ "omitted": "AMP 第 1–5 章（线性规划基础，属 M.7.1）、第 11 章动态规划与第 12 章大规模系统（与离散优化的四个知识点关系较弱）、第 6/7/10/14 章行业案例、附录与习题未收；W&S 第 3 章以后的舍入/LP 对偶/网络设计/设施选址等章节（与节点简介超出范围，只取导论与贪心+局部搜索两章）；元启发式手册的其余 15 章（分散搜索、变邻域、大邻域、超启发式等）未收。",
+ "notes": "本节点的现有英文资源是 OCW 15.053 的逐讲清单，但 OCW 的讲义页只有 21 条平铺讲次、没有章-节结构，故按“同一批相邻节点共用一本书”的做法改用该课的官方参考书 AMP 的第 8、9 章（与讲次 L10–L17 一一对应），节标题逐字抄自分章 PDF；OCW 讲次清单可作进度对照。启发式与近似两个知识点 AMP 没有，分别用 B、C 补。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 38,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

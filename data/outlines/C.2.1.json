@@ -1,0 +1,611 @@
+{
+ "id": "C.2.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Operating Systems: Three Easy Pieces",
+   "by": "Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau",
+   "year": 2023,
+   "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+   "toc_urls": [
+    "https://pages.cs.wisc.edu/~remzi/OSTEP/toc.pdf"
+   ],
+   "why": "节点现有英文资源，作者官网免费在线教材（v1.10）。官方 toc.pdf 给到节级目录，进程与进程 API、受限直接执行、调度、地址空间与地址转换、分页、线程与锁、并发缺陷、I/O 设备、文件与文件系统实现，一条线覆盖节点的六个知识点。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Computer Systems: A Programmer's Perspective, 3rd Edition",
+   "by": "Randal E. Bryant and David R. O'Hallaron",
+   "year": 2016,
+   "url": "https://csapp.cs.cmu.edu/",
+   "toc_urls": [
+    "https://csapp.cs.cmu.edu/3e/pieces/preface3e.pdf"
+   ],
+   "why": "补“并发内存模型”：OSTEP 只讲共享数据带来的竞争，没有线程内存模型的正式描述，CSAPP 12.4 给出了线程内存模型、变量到内存的映射与共享变量的判定。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "The Abstraction: The Process",
+   "zh": "抽象：进程",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "The Abstraction: A Process",
+     "zh": "抽象：进程"
+    },
+    {
+     "ref": "4.2",
+     "title": "Process API",
+     "zh": "进程 API"
+    },
+    {
+     "ref": "4.3",
+     "title": "Process Creation: A Little More Detail",
+     "zh": "进程创建的更多细节"
+    },
+    {
+     "ref": "4.4",
+     "title": "Process States",
+     "zh": "进程状态"
+    },
+    {
+     "ref": "4.5",
+     "title": "Data Structures",
+     "zh": "数据结构"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Interlude: Process API",
+   "zh": "插曲：进程 API",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "The fork() System Call",
+     "zh": "fork() 系统调用"
+    },
+    {
+     "ref": "5.2",
+     "title": "The wait() System Call",
+     "zh": "wait() 系统调用"
+    },
+    {
+     "ref": "5.3",
+     "title": "Finally, The exec() System Call",
+     "zh": "最后是 exec() 系统调用"
+    },
+    {
+     "ref": "5.5",
+     "title": "Process Control And Users",
+     "zh": "进程控制与用户"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Mechanism: Limited Direct Execution",
+   "zh": "机制：受限直接执行",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Basic Technique: Limited Direct Execution",
+     "zh": "基本技术：受限直接执行"
+    },
+    {
+     "ref": "6.2",
+     "title": "Problem #1: Restricted Operations",
+     "zh": "问题一：受限操作"
+    },
+    {
+     "ref": "6.3",
+     "title": "Problem #2: Switching Between Processes",
+     "zh": "问题二：进程间切换"
+    },
+    {
+     "ref": "6.4",
+     "title": "Worried About Concurrency?",
+     "zh": "担心并发吗？"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Scheduling: Introduction",
+   "zh": "调度：导论",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Workload Assumptions",
+     "zh": "工作负载假设"
+    },
+    {
+     "ref": "7.2",
+     "title": "Scheduling Metrics",
+     "zh": "调度指标"
+    },
+    {
+     "ref": "7.4",
+     "title": "Shortest Job First (SJF)",
+     "zh": "最短作业优先（SJF）"
+    },
+    {
+     "ref": "7.5",
+     "title": "Shortest Time-to-Completion First (STCF)",
+     "zh": "最短完成时间优先（STCF）"
+    },
+    {
+     "ref": "7.7",
+     "title": "Round Robin",
+     "zh": "轮转调度"
+    },
+    {
+     "ref": "7.8",
+     "title": "Incorporating I/O",
+     "zh": "考虑 I/O"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "The Abstraction: Address Spaces",
+   "zh": "抽象：地址空间",
+   "items": [
+    {
+     "ref": "13.2",
+     "title": "Multiprogramming and Time Sharing",
+     "zh": "多道程序与分时"
+    },
+    {
+     "ref": "13.3",
+     "title": "The Address Space",
+     "zh": "地址空间"
+    },
+    {
+     "ref": "13.4",
+     "title": "Goals",
+     "zh": "目标"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "Mechanism: Address Translation",
+   "zh": "机制：地址转换",
+   "items": [
+    {
+     "ref": "15.1",
+     "title": "Assumptions",
+     "zh": "假设"
+    },
+    {
+     "ref": "15.3",
+     "title": "Dynamic (Hardware-based) Relocation",
+     "zh": "动态（基于硬件的）重定位"
+    },
+    {
+     "ref": "15.4",
+     "title": "Hardware Support: A Summary",
+     "zh": "硬件支持小结"
+    },
+    {
+     "ref": "15.5",
+     "title": "Operating System Issues",
+     "zh": "操作系统要处理的问题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "18",
+   "title": "Paging: Introduction",
+   "zh": "分页：导论",
+   "items": [
+    {
+     "ref": "18.1",
+     "title": "A Simple Example And Overview",
+     "zh": "一个简单例子与概览"
+    },
+    {
+     "ref": "18.2",
+     "title": "Where Are Page Tables Stored?",
+     "zh": "页表存在哪里？"
+    },
+    {
+     "ref": "18.3",
+     "title": "What’s Actually In The Page Table?",
+     "zh": "页表里到底有什么？"
+    },
+    {
+     "ref": "18.4",
+     "title": "Paging: Also Too Slow",
+     "zh": "分页：还是太慢"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "19",
+   "title": "Paging: Faster Translations (TLBs)",
+   "zh": "分页：更快的地址转换（TLB）",
+   "items": [
+    {
+     "ref": "19.1",
+     "title": "TLB Basic Algorithm",
+     "zh": "TLB 基本算法"
+    },
+    {
+     "ref": "19.3",
+     "title": "Who Handles The TLB Miss?",
+     "zh": "谁处理 TLB 缺失？"
+    },
+    {
+     "ref": "19.5",
+     "title": "TLB Issue: Context Switches",
+     "zh": "TLB 的问题：上下文切换"
+    },
+    {
+     "ref": "19.6",
+     "title": "Issue: Replacement Policy",
+     "zh": "问题：替换策略"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "26",
+   "title": "Concurrency: An Introduction",
+   "zh": "并发：导论",
+   "items": [
+    {
+     "ref": "26.1",
+     "title": "Why Use Threads?",
+     "zh": "为什么使用线程？"
+    },
+    {
+     "ref": "26.3",
+     "title": "Why It Gets Worse: Shared Data",
+     "zh": "为什么更糟：共享数据"
+    },
+    {
+     "ref": "26.4",
+     "title": "The Heart Of The Problem: Uncontrolled Scheduling",
+     "zh": "问题核心：不受控的调度"
+    },
+    {
+     "ref": "26.5",
+     "title": "The Wish For Atomicity",
+     "zh": "对原子性的期盼"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "28",
+   "title": "Locks",
+   "zh": "锁",
+   "items": [
+    {
+     "ref": "28.1",
+     "title": "Locks: The Basic Idea",
+     "zh": "锁：基本思想"
+    },
+    {
+     "ref": "28.3",
+     "title": "Building A Lock",
+     "zh": "自己实现一把锁"
+    },
+    {
+     "ref": "28.7",
+     "title": "Building Working Spin Locks with Test-And-Set",
+     "zh": "用 Test-And-Set 实现可用的自旋锁"
+    },
+    {
+     "ref": "28.9",
+     "title": "Compare-And-Swap",
+     "zh": "比较并交换"
+    },
+    {
+     "ref": "28.12",
+     "title": "Too Much Spinning: What Now?",
+     "zh": "自旋太多：怎么办？"
+    },
+    {
+     "ref": "28.14",
+     "title": "Using Queues: Sleeping Instead Of Spinning",
+     "zh": "用队列：睡眠而非自旋"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "32",
+   "title": "Common Concurrency Problems",
+   "zh": "常见的并发问题",
+   "items": [
+    {
+     "ref": "32.1",
+     "title": "What Types Of Bugs Exist?",
+     "zh": "存在哪些类型的缺陷？"
+    },
+    {
+     "ref": "32.2",
+     "title": "Non-Deadlock Bugs",
+     "zh": "非死锁缺陷"
+    },
+    {
+     "ref": "32.3",
+     "title": "Deadlock Bugs",
+     "zh": "死锁缺陷"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "36",
+   "title": "I/O Devices",
+   "zh": "I/O 设备",
+   "items": [
+    {
+     "ref": "36.1",
+     "title": "System Architecture",
+     "zh": "系统结构"
+    },
+    {
+     "ref": "36.2",
+     "title": "A Canonical Device",
+     "zh": "一个典型设备"
+    },
+    {
+     "ref": "36.3",
+     "title": "The Canonical Protocol",
+     "zh": "典型协议"
+    },
+    {
+     "ref": "36.4",
+     "title": "Lowering CPU Overhead With Interrupts",
+     "zh": "用中断降低 CPU 开销"
+    },
+    {
+     "ref": "36.5",
+     "title": "More Efficient Data Movement With DMA",
+     "zh": "用 DMA 更高效地搬运数据"
+    },
+    {
+     "ref": "36.7",
+     "title": "Fitting Into The OS: The Device Driver",
+     "zh": "融入操作系统：设备驱动程序"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "39",
+   "title": "Interlude: Files and Directories",
+   "zh": "插曲：文件与目录",
+   "items": [
+    {
+     "ref": "39.1",
+     "title": "Files And Directories",
+     "zh": "文件与目录"
+    },
+    {
+     "ref": "39.2",
+     "title": "The File System Interface",
+     "zh": "文件系统接口"
+    },
+    {
+     "ref": "39.4",
+     "title": "Reading And Writing Files",
+     "zh": "读写文件"
+    },
+    {
+     "ref": "39.6",
+     "title": "Shared File Table Entries: fork() And dup()",
+     "zh": "共享文件表项：fork() 与 dup()"
+    },
+    {
+     "ref": "39.14",
+     "title": "Hard Links",
+     "zh": "硬链接"
+    },
+    {
+     "ref": "39.15",
+     "title": "Symbolic Links",
+     "zh": "符号链接"
+    },
+    {
+     "ref": "39.16",
+     "title": "Permission Bits And Access Control Lists",
+     "zh": "权限位与访问控制列表"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "40",
+   "title": "File System Implementation",
+   "zh": "文件系统实现",
+   "items": [
+    {
+     "ref": "40.2",
+     "title": "Overall Organization",
+     "zh": "整体组织"
+    },
+    {
+     "ref": "40.3",
+     "title": "File Organization: The Inode",
+     "zh": "文件组织：inode"
+    },
+    {
+     "ref": "40.4",
+     "title": "Directory Organization",
+     "zh": "目录组织"
+    },
+    {
+     "ref": "40.6",
+     "title": "Access Paths: Reading and Writing",
+     "zh": "访问路径：读与写"
+    },
+    {
+     "ref": "40.7",
+     "title": "Caching and Buffering",
+     "zh": "缓存与缓冲"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "12.4",
+   "title": "Shared Variables in Threaded Programs",
+   "zh": "多线程程序中的共享变量",
+   "fill": "并发内存模型",
+   "items": [
+    {
+     "ref": "12.4.1",
+     "title": "Threads Memory Model",
+     "zh": "线程内存模型"
+    },
+    {
+     "ref": "12.4.2",
+     "title": "Mapping Variables to Memory",
+     "zh": "变量到内存的映射"
+    },
+    {
+     "ref": "12.4.3",
+     "title": "Shared Variables",
+     "zh": "共享变量"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "进程/线程",
+   "refs": [
+    "A:4",
+    "A:4.1",
+    "A:4.4",
+    "A:5",
+    "A:26",
+    "A:26.1"
+   ]
+  },
+  {
+   "topic": "调度",
+   "refs": [
+    "A:7",
+    "A:7.2",
+    "A:7.4",
+    "A:7.5",
+    "A:7.7",
+    "A:36.4"
+   ]
+  },
+  {
+   "topic": "虚拟内存",
+   "refs": [
+    "A:13",
+    "A:13.3",
+    "A:15",
+    "A:15.3",
+    "A:18",
+    "A:19",
+    "A:19.3"
+   ]
+  },
+  {
+   "topic": "文件系统",
+   "refs": [
+    "A:39",
+    "A:39.2",
+    "A:39.14",
+    "A:39.15",
+    "A:40",
+    "A:40.3",
+    "A:40.7"
+   ]
+  },
+  {
+   "topic": "I/O",
+   "refs": [
+    "A:36",
+    "A:36.3",
+    "A:36.4",
+    "A:36.5",
+    "A:36.7"
+   ]
+  },
+  {
+   "topic": "同步与隔离",
+   "refs": [
+    "A:6",
+    "A:6.2",
+    "A:26.3",
+    "A:28",
+    "A:28.7",
+    "A:28.14",
+    "A:32",
+    "B:12.4"
+   ]
+  },
+  {
+   "topic": "D1 验收：解释进程、线程、地址空间、文件与调度",
+   "refs": [
+    "A:4",
+    "A:5",
+    "A:13",
+    "A:26",
+    "A:39",
+    "A:7"
+   ]
+  },
+  {
+   "topic": "D2 验收：编写系统接口程序并复现同步、内存或I/O问题",
+   "refs": [
+    "A:5",
+    "A:26",
+    "A:28",
+    "A:32",
+    "A:36",
+    "A:40"
+   ],
+   "note": "OSTEP 每章末带 Homework (Simulation)/(Code)，D2 的复现实验直接照做即可。"
+  },
+  {
+   "topic": "D3 验收：分析实现、并发内存模型与资源权衡",
+   "refs": [
+    "A:15.5",
+    "A:18.4",
+    "A:19.3",
+    "A:28.12",
+    "A:32",
+    "B:12.4.1"
+   ],
+   "note": "内存模型只到线程模型这一层；C11/x86-TSO 的正式内存一致性模型见 C.1.2 导览图的 B 组（CS152 Memory Consistency）。"
+  },
+  {
+   "topic": "D4 验收：复现内核研究并评价新隔离、调度或存储机制",
+   "refs": [],
+   "note": "OSTEP 是教科书，没有对应“研究复现”的章：未收的第 10 章（Multiprocessor Scheduling (Advanced)）、第 23 章（Complete Virtual Memory Systems：VAX/VMS、Linux）、第 43 章（LFS）、第 44 章（Flash-based SSDs）是最近的入口，再往下要读各章 References 里的论文与 xv6/系统实验。"
+  }
+ ],
+ "omitted": "第 1–3、11、12、24、25、34、35、46、47、51 章为对话/小结性质；第 8 章（MLFQ）、第 9 章（彩票调度）、第 10 章（多处理器调度）是更深的调度进阶，第 14 章（Memory API）、16/17 章（分段与空闲空间管理）、21/22 章（换页机制与策略）、23 章（完整虚拟内存系统）属虚拟内存的进阶或 API 细节，第 27 章（Thread API）、29–31 章（锁的使用、条件变量、信号量）、33 章（事件驱动并发）、36 章外的 37/38/41–45 章（磁盘、RAID、FFS、日志、LFS、SSD、数据完整性）、48–50 章（分布式系统与 NFS/AFS）、52–57 章（安全）未收：分别属于 C.2.2（并发）、C.2.4（存储）或超出本节点范围。",
+ "notes": "目录从 OSTEP 作者官网的 toc.pdf 逐条抄录，修正了 PDF 提取的拆字与连字（如“V ariables”→“Variables”、“Deﬁnition”→“Definition”）。章节标题前保留原编号，分支的 ref 是章号。OSTEP 每章都有对应的免费章节 PDF 和 Simulation/Code 作业，D2 的“复现问题”可以直接用。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 83,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

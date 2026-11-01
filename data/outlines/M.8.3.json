@@ -1,0 +1,283 @@
+{
+ "id": "M.8.3",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "18.086 Mathematical Methods for Engineers II (Spring 2006)",
+   "by": "Gilbert Strang — MIT OpenCourseWare",
+   "year": 2006,
+   "url": "https://ocw.mit.edu/courses/18-086-mathematical-methods-for-engineers-ii-spring-2006/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-086-mathematical-methods-for-engineers-ii-spring-2006/pages/calendar/"
+   ],
+   "why": "节点“现有英文学习资源”就是这门课；Calendar 页把 13 周分成“Initial Value Problems”（时间步进的稳定性、精度与收敛、波动/热/Maxwell 方程、非线性流动、谱方法）与“Solving Large Linear Systems”两组，逐周有具体题目，正对节点的时间步进、有限差分与科学计算。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "18.336 Numerical Methods for Partial Differential Equations (Spring 2009)",
+   "by": "Benjamin Seibold — MIT OpenCourseWare",
+   "year": 2009,
+   "url": "https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/18-336-numerical-methods-for-partial-differential-equations-spring-2009/pages/calendar/"
+   ],
+   "why": "补 18.086 目录里没有的两块：收敛性理论（Lax 等价定理、误差与稳定性分析）与守恒律的数值方法（通量形式即有限体积法，含高分辨率格式），以及多物理耦合（算子分裂、Navier–Stokes、水平集、粒子法）。25 个 session 逐题列出。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "The Finite Element Method: Theory, Implementation, and Applications",
+   "by": "Mats G. Larson, Fredrik Bengzon — Springer (Texts in Computational Science and Engineering 10)",
+   "year": 2013,
+   "url": "https://link.springer.com/book/10.1007/978-3-642-33287-6",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-642-33287-6"
+   ],
+   "why": "补 18.086 与 18.336 都没有的“有限元”：出版社页面给出全书 14 章目录，前四章正好是 1D/2D 的分片多项式逼近与有限元方法，只依赖微积分与线性代数，适合作为本科层次的有限元入口。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Initial Value Problems",
+   "title": "Initial Value Problems",
+   "zh": "初值问题（时间步进）",
+   "items": [
+    {
+     "ref": "1",
+     "title": "Differential Equations and Stable Difference Methods",
+     "zh": "微分方程与稳定的差分方法"
+    },
+    {
+     "ref": "2",
+     "title": "Finite Differences: Accuracy, Stability, Convergence",
+     "zh": "有限差分：精度、稳定性与收敛性"
+    },
+    {
+     "ref": "3",
+     "title": "The Wave Equation and von Neumann Stability",
+     "zh": "波动方程与 von Neumann 稳定性"
+    },
+    {
+     "ref": "4",
+     "title": "The Heat Equation and Convection-Diffusion",
+     "zh": "热方程与对流–扩散方程"
+    },
+    {
+     "ref": "5",
+     "title": "Maxwell’s Equations and Staggered Leapfrog",
+     "zh": "Maxwell 方程与交错蛙跳格式"
+    },
+    {
+     "ref": "6",
+     "title": "Nonlinear Flow Equations",
+     "zh": "非线性流动方程"
+    },
+    {
+     "ref": "7",
+     "title": "Separation of Variables and Spectral Methods",
+     "zh": "分离变量与谱方法"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "Solving Large Linear Systems",
+   "title": "Solving Large Linear Systems",
+   "zh": "大型线性方程组求解（科学计算的线性代数内核）",
+   "items": [
+    {
+     "ref": "8",
+     "title": "Elimination with Reordering",
+     "zh": "重排序消元"
+    },
+    {
+     "ref": "9",
+     "title": "Iterative Methods",
+     "zh": "迭代方法"
+    },
+    {
+     "ref": "10",
+     "title": "Multigrid Methods",
+     "zh": "多重网格方法"
+    },
+    {
+     "ref": "11",
+     "title": "Krylov Methods",
+     "zh": "Krylov 方法"
+    },
+    {
+     "ref": "12",
+     "title": "Saddle Points and the Stokes Problem",
+     "zh": "鞍点问题与 Stokes 问题"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Elliptic equations and errors, stability, Lax equivalence theorem",
+   "zh": "椭圆方程：误差、稳定性与 Lax 等价定理",
+   "fill": "补“收敛”：18.086 只在第 2 周提 accuracy/stability/convergence 三个词，没有把相容性—稳定性—收敛的等价关系（Lax 等价定理）作为一条讲；18.336 第 6 个 session 专讲。",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "17",
+   "title": "Conservation laws: theory",
+   "zh": "守恒律：理论",
+   "fill": "补“有限体积”：18.086 的 13 个题目里没有守恒律/有限体积；18.336 用守恒律的通量形式（第 17 讲）加上数值方法与高分辨率格式（第 18–19 讲）讲有限体积的核心。",
+   "items": [
+    {
+     "ref": "18",
+     "title": "Conservation laws: numerical methods",
+     "zh": "守恒律：数值方法"
+    },
+    {
+     "ref": "19",
+     "title": "Conservation laws: high resolution methods",
+     "zh": "守恒律：高分辨率格式"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "20",
+   "title": "Operator splitting, fractional steps",
+   "zh": "算子分裂与分数步法",
+   "fill": "补“多物理仿真”：18.086 没有讲多过程耦合；18.336 用算子分裂/分数步法讲耦合求解，并用 Navier–Stokes、水平集与粒子法给出多物理算例。",
+   "items": [
+    {
+     "ref": "21",
+     "title": "Systems of IVP, wave equation, leapfrog, staggered grids",
+     "zh": "一阶方程组、波动方程、蛙跳格式与交错网格"
+    },
+    {
+     "ref": "22",
+     "title": "Level set method",
+     "zh": "水平集方法"
+    },
+    {
+     "ref": "23",
+     "title": "Navier-Stokes equation: finite difference methods",
+     "zh": "Navier–Stokes 方程：有限差分方法"
+    },
+    {
+     "ref": "24",
+     "title": "Navier-Stokes equation: pseudospectral methods",
+     "zh": "Navier–Stokes 方程：伪谱方法"
+    },
+    {
+     "ref": "25",
+     "title": "Particle methods",
+     "zh": "粒子方法"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "1",
+   "title": "Piecewise Polynomial Approximation in 1D",
+   "zh": "一维分片多项式逼近",
+   "fill": "补“有限元”的基础：分片多项式空间、插值误差与逼近阶（有限元的逼近论部分）。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "2",
+   "title": "The Finite Element Method in 1D",
+   "zh": "一维有限元方法",
+   "fill": "补“有限元”：变分形式、单元刚度矩阵与组装（一维）。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "3",
+   "title": "Piecewise Polynomial Approximation in 2D",
+   "zh": "二维分片多项式逼近",
+   "fill": "补“有限元”：三角形/四边形单元上的分片多项式与二维插值误差。",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "4",
+   "title": "The Finite Element Method in 2D",
+   "zh": "二维有限元方法",
+   "fill": "补“有限元”：二维变分形式、单元组装、边界条件与误差估计。",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "时间步进",
+   "refs": [
+    "A:1",
+    "A:3",
+    "A:4",
+    "A:5",
+    "B:21"
+   ],
+   "note": "A 第 1 周稳定的差分方法、第 3 周波动方程与 von Neumann 稳定性、第 4 周热方程（显/隐格式的稳定域）、第 5 周交错蛙跳；B:21 补一阶方程组的蛙跳与交错网格。"
+  },
+  {
+   "topic": "有限差分",
+   "refs": [
+    "A:2",
+    "A:4",
+    "A:6",
+    "A:7",
+    "B:23"
+   ],
+   "note": "A 第 2 周“有限差分：精度、稳定性、收敛性”，第 4 周对流–扩散，第 6 周非线性流动方程，第 7 周谱方法（与差分对照）；B:23 是 Navier–Stokes 的有限差分解法。"
+  },
+  {
+   "topic": "有限元",
+   "refs": [
+    "C:1",
+    "C:2",
+    "C:3",
+    "C:4"
+   ],
+   "note": "18.086（A）与 18.336（B）的目录里都没有有限元，故用 Larson & Bengzon 的前四章：1D/2D 分片多项式逼近 + 1D/2D 有限元方法。"
+  },
+  {
+   "topic": "有限体积",
+   "refs": [
+    "B:17",
+    "B:18",
+    "B:19"
+   ],
+   "note": "B 第 17–19 个 session：守恒律的通量形式（有限体积的出发点）、守恒律的数值方法、高分辨率格式。A 没有守恒律/有限体积的题目。"
+  },
+  {
+   "topic": "收敛",
+   "refs": [
+    "A:2",
+    "B:6"
+   ],
+   "note": "A 第 2 周把 accuracy/stability/convergence 放在一个题目里讲；B:6 的 Lax 等价定理把相容性 + 稳定性 ⇒ 收敛讲成定理。"
+  },
+  {
+   "topic": "多物理仿真",
+   "refs": [
+    "B:20",
+    "B:21",
+    "B:22",
+    "B:23",
+    "B:24",
+    "B:25"
+   ],
+   "note": "B:20 算子分裂/分数步法是多物理耦合的标准做法，其下再收一阶方程组与波动、水平集、Navier–Stokes（差分与伪谱两种）与粒子法。A 的“Solving Large Linear Systems”（鞍点与 Stokes 问题）也可看作耦合系统求解的一部分。"
+  }
+ ],
+ "omitted": "A 未收：第 13 周 Optimization（优化，属别的节点）。B 未收：第 1–5 讲（PDE 基础、模型方程、Poisson 及一般有限差分方法，A 已覆盖）、第 7–9 讲（谱方法与 FFT）、第 10–12 讲（稀疏线性系统与多重网格/Krylov，与 A 的“Solving Large Linear Systems”重复）、第 13–16 讲（ODE 稳定性与对流方程/ENO-WENO，与 A 和 B:19 的高分辨率格式重叠较多）。C 未收：第 5–14 章（含时问题、稀疏线性系统、抽象有限元分析、非线性问题、输运、固体/流体/电磁、间断 Galerkin），因为时步与稀疏求解已由 A/B 覆盖，其余超出节点范围。",
+ "notes": "三个来源的分工：A 是节点自带的课，给时间步进与科学计算的骨架；B 补收敛理论与守恒律/有限体积、多物理；C 补有限元。A/B 的条目标题就是 Calendar 的周次题目，ref 用同一页的 Week # （A）与 SES # （B）。C 的章标题来自出版社页面的 Table of contents，章号按顺序。注意 OCW 把 A 标为 Graduate，但 A 讲的是面向工科研究生的 PDE 数值方法入门，节点入门层是 D2，仍在可接受范围；有限元入口（C）刻意选了只要求微积分与线性代数的那本。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 28,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

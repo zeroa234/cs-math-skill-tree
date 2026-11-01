@@ -1,0 +1,230 @@
+{
+ "id": "C.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Bits, Signals, and Packets: An Introduction to Digital Communications & Networks (MIT 6.02 lecture notes)",
+   "by": "Hari Balakrishnan, Christopher J. Terman, George C. Verghese",
+   "year": 2012,
+   "url": "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/pages/readings/"
+   ],
+   "why": "节点现有英文资源（MIT 6.02）的官方开放教材，MIT OCW 公布的整书（作者授权），19 章一条线从信源编码、纠错码、噪声与信道模型、傅里叶分析、调制解调到 MAC 协议，正好是“采样/调制/编码/复用/链路与误码”的本科主线。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "6.003 Signals and Systems (MIT OpenCourseWare, Fall 2011) — Lecture Notes",
+   "by": "Dennis Freeman",
+   "year": 2011,
+   "url": "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-003-signals-and-systems-fall-2011/pages/lecture-notes/"
+   ],
+   "why": "补“采样”：6.02 全书没有取样定理、混叠与量化的专门章节（只在第 4 章讲采样率与每比特样本数），6.003 第 21–22 讲专讲采样、采样与量化，第 23–25 讲从信号侧讲模拟调制与音频 CD。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Information, Entropy, and the Motivation for Source Codes",
+   "zh": "信息、熵与信源编码的动机",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Compression Algorithms: Huffman and Lempel-Ziv-Welch (LZW)",
+   "zh": "压缩算法：Huffman 编码与 LZW",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Why Digital? Communication Abstractions and Digital Signaling",
+   "zh": "为何数字化？通信抽象与数字信号传输",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Coping with Bit Errors using Error Correction Codes",
+   "zh": "用纠错码应对比特错误",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Linear Block Codes: Encoding and Syndrome Decoding",
+   "zh": "线性分组码：编码与伴随式译码",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Convolutional Codes: Construction and Encoding",
+   "zh": "卷积码：构造与编码",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Viterbi Decoding of Convolutional Codes",
+   "zh": "卷积码的 Viterbi 译码",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Noise",
+   "zh": "噪声",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Models for Physical Communication Channels",
+   "zh": "物理信道的模型",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "LTI Models and Convolution",
+   "zh": "LTI 模型与卷积",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Frequency Response of LTI Systems",
+   "zh": "LTI 系统的频率响应",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Fourier Analysis and Spectral Representation of Signals",
+   "zh": "傅里叶分析与信号的频谱表示",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Modulation and Demodulation",
+   "zh": "调制与解调",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "15",
+   "title": "Sharing a Channel: Media Access (MAC) Protocols",
+   "zh": "共享信道：介质访问（MAC）协议",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "21",
+   "title": "Sampling",
+   "zh": "采样",
+   "fill": "补“采样”：取样定理、混叠与量化",
+   "items": [
+    {
+     "ref": "22",
+     "title": "Sampling and Quantization",
+     "zh": "采样与量化"
+    },
+    {
+     "ref": "23",
+     "title": "Modulation, Part 1",
+     "zh": "调制（上）"
+    },
+    {
+     "ref": "24",
+     "title": "Modulation, Part 2",
+     "zh": "调制（下）"
+    },
+    {
+     "ref": "25",
+     "title": "Audio CD",
+     "zh": "音频 CD 案例"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "采样",
+   "refs": [
+    "B:21",
+    "B:22"
+   ]
+  },
+  {
+   "topic": "调制",
+   "refs": [
+    "A:14",
+    "B:23",
+    "B:24"
+   ]
+  },
+  {
+   "topic": "编码",
+   "refs": [
+    "A:3",
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:8"
+   ]
+  },
+  {
+   "topic": "复用",
+   "refs": [
+    "A:14",
+    "A:15"
+   ]
+  },
+  {
+   "topic": "链路",
+   "refs": [
+    "A:4",
+    "A:10",
+    "A:11"
+   ]
+  },
+  {
+   "topic": "误码",
+   "refs": [
+    "A:5",
+    "A:9"
+   ]
+  },
+  {
+   "topic": "与电子相交（物理层与信号处理）",
+   "refs": [
+    "A:10",
+    "A:11",
+    "A:12",
+    "A:13"
+   ]
+  },
+  {
+   "topic": "与信息论相交（熵与信源编码）",
+   "refs": [
+    "A:2"
+   ]
+  }
+ ],
+ "omitted": "A 里没收：第 1 章 Introduction（课程导言与全书提纲）；第 16–19 章（Communication Networks: Sharing and Switches、Routing I/II、Reliable Data Transport Protocols）属网络层，归节点 C.3.2；B 里第 1–20 讲（傅里叶、拉普拉斯与 z 变换、反馈系统）是信号与系统的完整先修链，节点不需要。",
+ "notes": "A 的目录只到章级（OCW Readings 页给的是 19 章章节名，整书 PDF 没有目录页，正文小节标题在 PDF 里连字/断词严重，抄下来会和原文对不上），所以 A 的分支下没有节一级条目；节一级的细节由 B 的两个采样/调制讲补齐。第 14 章同时覆盖“频谱复用”和“调制解调”，第 15 章覆盖信道共享（MAC）。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 19,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

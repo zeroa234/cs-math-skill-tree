@@ -1,0 +1,231 @@
+{
+ "id": "M.6.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Information Theory, Inference, and Learning Algorithms",
+   "by": "David J. C. MacKay",
+   "year": 2003,
+   "url": "https://www.inference.org.uk/itila/book.html",
+   "toc_urls": [
+    "https://www.inference.org.uk/itprnn/book.pdf"
+   ],
+   "why": "节点“现有英文学习资源”本身：作者主页免费提供全书 PDF（剑桥大学出版社授权在线版），第 2 章定义熵、相关函数（含互信息）与相对熵，第 4、5 章是信源编码，第 9、10 章是信道容量与有噪信道编码定理，第 11、13 章是纠错码，正好覆盖节点的信息论半边。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "EE 376A: Information Theory",
+   "by": "Tsachy Weissman, Stanford University",
+   "year": 2019,
+   "url": "https://web.stanford.edu/class/ee376a/",
+   "toc_urls": [
+    "https://web.stanford.edu/class/ee376a/outline.html"
+   ],
+   "why": "补率失真：A 全书没有率失真（有损压缩）的章节，B 是节点“先修证据”里的课，逐讲目录里用两次课讲率失真函数的定义、例子与可达性/逆定理。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction to Information Theory",
+   "zh": "信息论引论",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "How can we achieve perfect communication over an imperfect, noisy communication channel?",
+     "zh": "如何在不完美、有噪声的信道上实现无差错通信"
+    },
+    {
+     "ref": "1.2",
+     "title": "Error-correcting codes for the binary symmetric channel",
+     "zh": "二元对称信道的纠错码"
+    },
+    {
+     "ref": "1.3",
+     "title": "What performance can the best codes achieve?",
+     "zh": "最好的码能达到什么性能"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Probability, Entropy, and Inference",
+   "zh": "概率、熵与推断",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Probabilities and ensembles",
+     "zh": "概率与系综"
+    },
+    {
+     "ref": "2.2",
+     "title": "The meaning of probability",
+     "zh": "概率的含义"
+    },
+    {
+     "ref": "2.3",
+     "title": "Forward probabilities and inverse probabilities",
+     "zh": "正向概率与逆向概率"
+    },
+    {
+     "ref": "2.4",
+     "title": "Definition of entropy and related functions",
+     "zh": "熵及相关函数的定义（联合熵、条件熵、互信息、相对熵）"
+    },
+    {
+     "ref": "2.5",
+     "title": "Decomposability of the entropy",
+     "zh": "熵的可分解性"
+    },
+    {
+     "ref": "2.6",
+     "title": "Gibbs’ inequality",
+     "zh": "Gibbs 不等式与相对熵"
+    },
+    {
+     "ref": "2.7",
+     "title": "Jensen’s inequality for convex functions",
+     "zh": "凸函数的 Jensen 不等式"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "The Source Coding Theorem",
+   "zh": "信源编码定理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Symbol Codes",
+   "zh": "符号码",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Dependent Random Variables",
+   "zh": "相依随机变量",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Communication over a Noisy Channel",
+   "zh": "有噪信道上的通信",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "The Noisy-Channel Coding Theorem",
+   "zh": "有噪信道编码定理",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Error-Correcting Codes and Real Channels",
+   "zh": "纠错码与实际信道",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Binary Codes",
+   "zh": "二元码",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Lossy Compression and Rate Distortion Theory",
+   "zh": "有损压缩与率失真理论",
+   "fill": "补率失真：率失真函数的定义与例子、可达性（直接部分）与逆定理",
+   "items": [
+    {
+     "ref": "",
+     "title": "Lossy compression I: rate-distortion function, examples",
+     "zh": "有损压缩（一）：率失真函数与例子"
+    },
+    {
+     "ref": "",
+     "title": "Lossy compression II: direct and converse parts of main result",
+     "zh": "有损压缩（二）：主要结果的直接部分与逆定理"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "熵",
+   "refs": [
+    "A:1",
+    "A:2.4",
+    "A:2.5",
+    "A:2.7"
+   ]
+  },
+  {
+   "topic": "互信息",
+   "refs": [
+    "A:2.4",
+    "A:8"
+   ],
+   "note": "A 把互信息与联合熵、条件熵、相对熵一起放在 2.4“熵及相关函数”里定义，第 8 章再用相依随机变量展开并给出数据处理等内容。"
+  },
+  {
+   "topic": "KL散度",
+   "refs": [
+    "A:2.6",
+    "A:2.4"
+   ],
+   "note": "A 称 relative entropy（相对熵），在 2.4 给出定义、2.6 用 Gibbs 不等式证明其非负性。"
+  },
+  {
+   "topic": "信源编码",
+   "refs": [
+    "A:4",
+    "A:5"
+   ]
+  },
+  {
+   "topic": "信道编码",
+   "refs": [
+    "A:9",
+    "A:10",
+    "A:11",
+    "A:13"
+   ]
+  },
+  {
+   "topic": "容量",
+   "refs": [
+    "A:1.3",
+    "A:9",
+    "A:10"
+   ]
+  },
+  {
+   "topic": "率失真",
+   "refs": [
+    "B:#1"
+   ],
+   "note": "A 全书没有有损压缩/率失真章节，这一项完全靠 B 补。"
+  }
+ ],
+ "omitted": "A 的目录只有章级标题，本导览图对第 1、2 章下到节（能从原书正文读到节标题），第 4、5、8、9、10、11、13 章只到章。A 未收的章：第 3 章（More about Inference）、第 6 章（流码）、第 7 章（整数编码）、第 12 章（散列码）、第 14 章（好线性码存在性）、第 15 章（信息论习题集）、第 16–19 章（消息传递、受限无噪信道、密码分析、进化）以及第四至第六部分（推断与学习算法、神经网络、稀疏图码），它们或属推断/机器学习，或属研究生层次的编码专题，与节点简介的六项知识点不是同一条主线。B 只取有损压缩与率失真两讲，其余讲次（信道编码可达性、联合信源信道编码、方法型、量子/区块链专题）与节点重复或无关，未收。",
+ "notes": "A 是节点“现有英文学习资源”指向的 MacKay 书；toc_urls 用的是作者主页上的官方整书 PDF（书内页 iii–iv 的 Contents 只到章级，节标题取自各章正文开头的节标题）。B 的课程目录页把 2019 年的课程与 2018 年的课次都列了出来，本导览图用的是 2018 年那份逐讲清单里的两讲，因为 2019 年的课表把有损压缩合并进了 Lecture 11/12。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 21,
+  "fuzzy": 1,
+  "dropped": []
+ }
+}

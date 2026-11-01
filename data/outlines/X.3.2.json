@@ -1,0 +1,221 @@
+{
+ "id": "X.3.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "course",
+   "title": "CS 251: Blockchain Technologies",
+   "by": "Stanford University (Dan Boneh 组)",
+   "year": 2026,
+   "url": "https://cs251.stanford.edu/",
+   "toc_urls": [
+    "https://cs251.stanford.edu/syllabus.html"
+   ],
+   "why": "节点现有英文资源。斯坦福 CS251 的课程主页公开逐讲大纲（每讲都有具体主题和阅读材料），从密码学承诺、共识、账本讲到智能合约、DeFi 机制、隐私与扩容，正好覆盖节点的五个知识点。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "Lecture 1",
+   "title": "Intro to cryptography & cryptocurrencies",
+   "zh": "密码学与加密货币导论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 2",
+   "title": "Bitcoin nuts and bolts",
+   "zh": "比特币的构成细节",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 3",
+   "title": "Wallets: managing and protecting crypto assets",
+   "zh": "钱包：管理并保护加密资产",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 4",
+   "title": "Classical consensus: network models and properties of secure state machine replication (SMR)",
+   "zh": "经典共识：网络模型与安全状态机复制（SMR）的性质",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 5",
+   "title": "Consensus in the internet setting: dynamic availability, Nakamoto consensus, and sybil resistance",
+   "zh": "互联网环境下的共识：动态可用性、Nakamoto 共识与女巫抵抗",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "Lecture 6",
+   "title": "Accountability and incentives in consensus: proof-of-stake",
+   "zh": "共识中的问责与激励：权益证明",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Ethereum and decentralized applications",
+   "zh": "以太坊与去中心化应用",
+   "items": [
+    {
+     "ref": "Lecture 7",
+     "title": "Ethereum: Decentralized Apps, EVM, and the Ethereum blockchain",
+     "zh": "以太坊：去中心化应用、EVM 与以太坊区块链"
+    },
+    {
+     "ref": "Lecture 8",
+     "title": "Programming in solidity",
+     "zh": "用 Solidity 编程"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Decentralized finance and economics",
+   "zh": "去中心化金融与经济",
+   "items": [
+    {
+     "ref": "Lecture 9",
+     "title": "Stablecoins and lending protocols",
+     "zh": "稳定币与借贷协议"
+    },
+    {
+     "ref": "Lecture 10",
+     "title": "Decentralized exchanges",
+     "zh": "去中心化交易所"
+    },
+    {
+     "ref": "Lecture 11",
+     "title": "Maximal Extractable Value (MEV)",
+     "zh": "最大可提取价值（MEV）"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Privacy on a public blockchain",
+   "zh": "公链上的隐私",
+   "items": [
+    {
+     "ref": "Lecture 12",
+     "title": "Privacy: de-anonymizing the blockchain and mixing",
+     "zh": "隐私：链上去匿名化与混币"
+    },
+    {
+     "ref": "Lecture 13",
+     "title": "zk-SNARKs: what they are and how they are used for privacy",
+     "zh": "zk-SNARK：它是什么、如何用于隐私"
+    },
+    {
+     "ref": "Lecture 14",
+     "title": "Constructing a preprocessing zk-SNARK",
+     "zh": "构造预处理型 zk-SNARK"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Scaling the blockchain",
+   "zh": "区块链扩容",
+   "items": [
+    {
+     "ref": "Lecture 16",
+     "title": "Scaling the blockchain: payment channels and state channels",
+     "zh": "扩容：支付通道与状态通道"
+    },
+    {
+     "ref": "Lecture 17",
+     "title": "Scaling the blockchain with Rollups: Optimistic, ZK, based, native",
+     "zh": "用 Rollup 扩容：乐观、ZK、based 与原生"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "",
+   "title": "Final topics",
+   "zh": "结课专题",
+   "items": [
+    {
+     "ref": "Lecture 18",
+     "title": "Account abstraction, bridging, post-quantum blockchains, and AI",
+     "zh": "账户抽象、跨链桥、后量子区块链与 AI"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "密码承诺",
+   "refs": [
+    "A:Lecture 1",
+    "A:Lecture 13",
+    "A:Lecture 14"
+   ],
+   "note": "第 1 讲从 Merkle 树与哈希承诺讲起；承诺方案的进阶用法在 zk-SNARK 两讲（第 14 讲的阅读材料即多项式承诺，第 13 讲讲它怎样用于隐私）。"
+  },
+  {
+   "topic": "共识",
+   "refs": [
+    "A:Lecture 4",
+    "A:Lecture 5",
+    "A:Lecture 6"
+   ],
+   "note": "经典 SMR/拜占庭共识（网络模型、同步性与下界）→ 互联网环境下的 Nakamoto 共识与女巫抵抗 → 权益证明的问责与激励。"
+  },
+  {
+   "topic": "账本",
+   "refs": [
+    "A:Lecture 1",
+    "A:Lecture 2",
+    "A:Lecture 3"
+   ],
+   "note": "第 2 讲拆比特币的区块、交易与 P2P 网络，第 3 讲钱包与密钥管理，第 1 讲给加密货币的整体图景。"
+  },
+  {
+   "topic": "智能合约",
+   "refs": [
+    "A:Lecture 7",
+    "A:Lecture 8"
+   ],
+   "note": "EVM 与以太坊账本模型，以及 Solidity 合约编程。"
+  },
+  {
+   "topic": "机制",
+   "refs": [
+    "A:Lecture 6",
+    "A:Lecture 9",
+    "A:Lecture 10",
+    "A:Lecture 11"
+   ],
+   "note": "权益证明的激励/惩罚，以及稳定币、借贷、DEX（恒定乘积公式）、MEV 这些经济机制设计。"
+  },
+  {
+   "topic": "分布式与密码、经济机制交叉",
+   "refs": [
+    "A:Lecture 4",
+    "A:Lecture 5",
+    "A:Lecture 12",
+    "A:Lecture 17"
+   ],
+   "note": "分布式系统侧是 SMR 与可用性、最终性；密码侧是零知识证明与去匿名化分析；经济侧是 PoS 与 DeFi 激励，三者在扩容（通道、Rollup）里汇合。"
+  }
+ ],
+ "omitted": "未收第 15 讲（Jason Rosenthal 的客座讲座“Blockchains for the age of machine-first networks”，主题偏产业展望）、第 19 讲（客座讲座“The future of blockchains”，原页只有讲者占位、没有给出主题），以及感恩节假期条目。课程主页上的作业与项目（Merkle 树、bitcoinlib 交易、以太坊支付应用、链上钱包）属练习，不入目录。",
+ "notes": "课程页按“模块小标题 + 逐讲”组织：模块小标题（Ethereum and decentralized applications、Decentralized finance and economics、Privacy on a public blockchain、Scaling the blockchain、Final topics）作分支，其下逐讲作子项；开头没有模块标题的六讲（1、2、3、4、5、6）各自成章。第 14 讲的阅读材料里列了“Polynomial commitments”，与承诺知识点互补。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 22,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

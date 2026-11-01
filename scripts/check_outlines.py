@@ -151,9 +151,22 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("ids", nargs="*")
     ap.add_argument("--archive", action="store_true")
+    ap.add_argument("--summary", action="store_true", help="one line per outline: size, depth, sources, gaps")
     a = ap.parse_args()
     skills = {s["id"]: s for s in json.loads(SKILLS.read_text(encoding="utf-8"))["skills"]}
     paths = pick(sorted(SRC_DIR.glob("*.json")), a.ids)
+    if a.summary:
+        print("id\tbranches\tleaves\tflat\tsources\tgaps\tpdf toc hosts")
+        for p in paths:
+            o = json.loads(p.read_text(encoding="utf-8-sig"))
+            br = o.get("outline") or []
+            flat = sum(1 for b in br if not b.get("items"))
+            leaves = sum(1 for b in br for it, _ in walk([b]) if not it.get("items"))
+            gaps = sum(1 for c in o.get("coverage") or [] if not c.get("refs"))
+            pdfs = sorted({re.sub(r"^https?://([^/]+).*", r"\1", u) for s in o.get("sources", [])
+                           for u in s.get("toc_urls") or [] if u.lower().split("?")[0].endswith(".pdf")})
+            print(f"{o['id']}\t{len(br)}\t{leaves}\t{flat}\t{len(o.get('sources', []))}\t{gaps}\t{' '.join(pdfs)}")
+        return
     total = {"exact": 0, "fuzzy": 0, "missing": 0}
     for p in paths:
         o = json.loads(p.read_text(encoding="utf-8-sig"))

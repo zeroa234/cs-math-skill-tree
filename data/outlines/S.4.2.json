@@ -1,0 +1,468 @@
+{
+ "id": "S.4.2",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "docs",
+   "title": "Guide to Integrating Forensic Techniques into Incident Response (NIST SP 800-86)",
+   "by": "Karen Kent, Suzanne Chevalier, Tim Grance, Hung Dang (NIST)",
+   "year": 2006,
+   "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf",
+   "toc_urls": [
+    "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf"
+   ],
+   "why": "节点现有英文资源（Texas Tech 的 Digital Forensics 课程仓库）只有 README 级的主题罗列，没有章→节的目录，所以按优先级换成这门学科的标准文献：NIST 800-86 用“取证流程（收集—检验—分析—报告）＋ 数据来源（文件/操作系统/网络/应用）”两级结构，把证据保全、磁盘、内存、网络取证全部按目录编好，是取证与事件响应衔接的公认指南。"
+  },
+  {
+   "key": "B",
+   "kind": "docs",
+   "title": "Cybersecurity Incident & Vulnerability Response Playbooks: Operational Procedures for Planning and Conducting Cybersecurity Incident and Vulnerability Response Activities in FCEB Information Systems",
+   "by": "Cybersecurity and Infrastructure Security Agency (CISA)",
+   "year": 2021,
+   "url": "https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf",
+   "toc_urls": [
+    "https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf"
+   ],
+   "why": "补“响应、恢复与复盘”：A 讲取证本身，只在 3.1.3 顺带提事件响应，全书没有“清除（eradication）”“经验教训”这类章节；CISA 的响应手册把处置流程按步骤编成号（1 宣布事件 … 10 事后活动，含 10i 经验教训分析），正好补上响应闭环与复盘。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Establishing and Organizing a Forensics Capability",
+   "zh": "建立并组织取证能力",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "The Need for Forensics",
+     "zh": "为什么需要取证"
+    },
+    {
+     "ref": "2.4",
+     "title": "Policies",
+     "zh": "制度",
+     "items": [
+      {
+       "ref": "2.4.1",
+       "title": "Defining Roles and Responsibilities",
+       "zh": "明确角色与职责"
+      },
+      {
+       "ref": "2.4.2",
+       "title": "Providing Guidance for Forensic Tool Use",
+       "zh": "为取证工具的使用提供指导"
+      }
+     ]
+    },
+    {
+     "ref": "2.5",
+     "title": "Guidelines and Procedures",
+     "zh": "准则与规程"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Performing the Forensic Process",
+   "zh": "执行取证流程",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Data Collection",
+     "zh": "数据收集",
+     "items": [
+      {
+       "ref": "3.1.1",
+       "title": "Identifying Possible Sources of Data",
+       "zh": "识别可能的数据来源"
+      },
+      {
+       "ref": "3.1.2",
+       "title": "Acquiring the Data",
+       "zh": "获取数据"
+      },
+      {
+       "ref": "3.1.3",
+       "title": "Incident Response Considerations",
+       "zh": "事件响应方面的考量"
+      }
+     ]
+    },
+    {
+     "ref": "3.2",
+     "title": "Examination",
+     "zh": "检验"
+    },
+    {
+     "ref": "3.3",
+     "title": "Analysis",
+     "zh": "分析"
+    },
+    {
+     "ref": "3.4",
+     "title": "Reporting",
+     "zh": "报告"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Using Data from Data Files",
+   "zh": "使用数据文件中的数据",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "File Basics",
+     "zh": "文件基础",
+     "items": [
+      {
+       "ref": "4.1.1",
+       "title": "File Storage Media",
+       "zh": "文件存储介质"
+      },
+      {
+       "ref": "4.1.2",
+       "title": "Filesystems",
+       "zh": "文件系统"
+      }
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "Collecting Files",
+     "zh": "收集文件",
+     "items": [
+      {
+       "ref": "4.2.1",
+       "title": "Copying Files from Media",
+       "zh": "从介质复制文件"
+      },
+      {
+       "ref": "4.2.2",
+       "title": "Data File Integrity",
+       "zh": "数据文件的完整性"
+      },
+      {
+       "ref": "4.2.3",
+       "title": "File Modification, Access, and Creation Times",
+       "zh": "文件的修改、访问与创建时间"
+      }
+     ]
+    },
+    {
+     "ref": "4.3",
+     "title": "Examining Data Files",
+     "zh": "检验数据文件",
+     "items": [
+      {
+       "ref": "4.3.1",
+       "title": "Locating the Files",
+       "zh": "定位文件"
+      },
+      {
+       "ref": "4.3.2",
+       "title": "Extracting the Data",
+       "zh": "提取数据"
+      },
+      {
+       "ref": "4.3.3",
+       "title": "Using a Forensic Toolkit",
+       "zh": "使用取证工具套件"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Using Data from Operating Systems",
+   "zh": "使用操作系统中的数据",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "OS Basics",
+     "zh": "操作系统基础",
+     "items": [
+      {
+       "ref": "5.1.1",
+       "title": "Non-Volatile Data",
+       "zh": "非易失数据"
+      },
+      {
+       "ref": "5.1.2",
+       "title": "Volatile Data",
+       "zh": "易失数据"
+      }
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "Collecting OS Data",
+     "zh": "收集操作系统数据",
+     "items": [
+      {
+       "ref": "5.2.1",
+       "title": "Collecting Volatile OS Data",
+       "zh": "收集易失性的操作系统数据"
+      },
+      {
+       "ref": "5.2.2",
+       "title": "Collecting Non-Volatile OS Data",
+       "zh": "收集非易失性的操作系统数据"
+      }
+     ]
+    },
+    {
+     "ref": "5.3",
+     "title": "Examining and Analyzing OS Data",
+     "zh": "检验与分析操作系统数据"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Using Data From Network Traffic",
+   "zh": "使用网络流量中的数据",
+   "items": [
+    {
+     "ref": "6.2",
+     "title": "Network Traffic Data Sources",
+     "zh": "网络流量数据来源"
+    },
+    {
+     "ref": "6.3",
+     "title": "Collecting Network Traffic Data",
+     "zh": "收集网络流量数据",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "Legal Considerations",
+       "zh": "法律考量"
+      },
+      {
+       "ref": "6.3.2",
+       "title": "Technical Issues",
+       "zh": "技术问题"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Examining and Analyzing Network Traffic Data",
+     "zh": "检验与分析网络流量数据",
+     "items": [
+      {
+       "ref": "6.4.1",
+       "title": "Identify an Event of Interest",
+       "zh": "找出感兴趣的事件"
+      },
+      {
+       "ref": "6.4.2",
+       "title": "Examine Data Sources",
+       "zh": "检验数据来源"
+      },
+      {
+       "ref": "6.4.3",
+       "title": "Draw Conclusions",
+       "zh": "得出结论"
+      },
+      {
+       "ref": "6.4.4",
+       "title": "Attacker Identification",
+       "zh": "攻击者识别"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Using Data from Multiple Sources",
+   "zh": "综合使用多来源数据",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Suspected Network Service Worm Infection",
+     "zh": "疑似网络服务蠕虫感染"
+    },
+    {
+     "ref": "8.2",
+     "title": "Threatening E-mail",
+     "zh": "恐吓邮件"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Preparation Phase",
+   "zh": "准备阶段",
+   "fill": "响应：事件发生前要备好的制度、监测手段与人员，A 只在 2.4/2.5 讲取证制度",
+   "items": [
+    {
+     "ref": "",
+     "title": "Policies and Procedures",
+     "zh": "政策与流程"
+    },
+    {
+     "ref": "",
+     "title": "Instrumentation",
+     "zh": "监测手段部署"
+    },
+    {
+     "ref": "",
+     "title": "Trained Response Personnel",
+     "zh": "受训的响应人员"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Incident Response Playbook",
+   "zh": "事件响应手册",
+   "fill": "响应、恢复与复盘：从宣布事件、定范围、保全证据，到遏制、清除、恢复、事后报告与经验教训分析的整条处置链",
+   "items": [
+    {
+     "ref": "1",
+     "title": "Declare Incident",
+     "zh": "宣布事件"
+    },
+    {
+     "ref": "2",
+     "title": "Determine Investigation Scope",
+     "zh": "确定调查范围"
+    },
+    {
+     "ref": "3",
+     "title": "Collect and Preserve Data",
+     "zh": "收集与保全数据",
+     "items": [
+      {
+       "ref": "3b",
+       "title": "Log all evidence and note how the evidence was acquired, when it was acquired, and who acquired the evidence.",
+       "zh": "登记全部证据，注明取证方式、取证时间与取证人员"
+      }
+     ]
+    },
+    {
+     "ref": "4",
+     "title": "Perform Technical Analysis",
+     "zh": "开展技术分析",
+     "items": [
+      {
+       "ref": "4f",
+       "title": "Establish an incident timeline that records events, description of events, date-time group (UTC) of occurrences, impacts, and data sources.",
+       "zh": "建立事件时间线：记录事件、事件描述、发生时间（UTC）、影响与数据来源"
+      }
+     ]
+    },
+    {
+     "ref": "7",
+     "title": "Contain Activity (Short-term Mitigations)",
+     "zh": "遏制活动（短期缓解措施）"
+    },
+    {
+     "ref": "8",
+     "title": "Execute Eradication Plan",
+     "zh": "执行清除计划"
+    },
+    {
+     "ref": "9",
+     "title": "Execute Eradication Plan",
+     "zh": "执行清除计划（恢复阶段，原文标题与第 8 步相同）"
+    },
+    {
+     "ref": "10",
+     "title": "Post-Incident Activities",
+     "zh": "事后活动",
+     "items": [
+      {
+       "ref": "10f",
+       "title": "Publish post-incident report. Provide a step-by-step review of the entire incident and answer the Who, What, Where, Why, and How questions.",
+       "zh": "发布事后报告：逐步回顾整个事件，回答“谁、什么、何时、何地、为何、如何”"
+      },
+      {
+       "ref": "10i",
+       "title": "Conduct lessons learned analysis with all involved parties to assess existing security measures and the incident handling process recently experienced.",
+       "zh": "与所有参与方开展经验教训分析，评估现有安全措施与本轮事件处置过程"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "证据保全",
+   "refs": [
+    "A:3.1.2",
+    "A:4.2.2",
+    "A:2.5",
+    "A:3.1.1",
+    "B:3b"
+   ],
+   "note": "A 把保全写进取证流程本身：3.1.1 先穷举可能的数据来源，3.1.2 讲获取数据的方法与顺序（易失优先、写保护、镜像），4.2.2 讲复制后如何校验数据文件完整性，2.5 要求组织有成文的证据准则与规程；B 的 3b 给出处置现场的登记要求（怎么取、何时取、谁取）。"
+  },
+  {
+   "topic": "磁盘/内存/网络取证",
+   "refs": [
+    "A:4",
+    "A:4.2.1",
+    "A:4.3.3",
+    "A:5",
+    "A:5.1.2",
+    "A:5.2.1",
+    "A:6",
+    "A:6.2",
+    "A:6.4.2"
+   ],
+   "note": "三类来源在 A 里各占一章：磁盘看第 4 章 Using Data from Data Files（介质与文件系统 4.1、复制 4.2.1、用取证工具套件检验 4.3.3）；内存看第 5 章 Using Data from Operating Systems（易失/非易失数据之分 5.1、易失数据必须先抓 5.2.1）；网络看第 6 章 Using Data From Network Traffic（流量数据来源 6.2、检验数据来源 6.4.2）。"
+  },
+  {
+   "topic": "时间线",
+   "refs": [
+    "A:4.2.3",
+    "A:3.3",
+    "A:8",
+    "B:4f"
+   ],
+   "note": "A 没有以“时间线”为题的章节，时间线是散在流程里的：4.2.3 讲文件 MAC 时间（修改/访问/创建）如何被采集方式破坏、怎么记录，3.3 分析阶段要求把各来源事件按时间对齐，第 8 章用两个案例演示多来源时间关联；B 的 4f 明确要求建立含 UTC 时间、事件描述、影响与数据来源的事件时间线并持续更新。"
+  },
+  {
+   "topic": "响应",
+   "refs": [
+    "A:3.1.3",
+    "B:#1",
+    "B:1",
+    "B:2",
+    "B:7"
+   ],
+   "note": "A 只有 3.1.3 Incident Response Considerations 讲取证如何嵌进响应流程；完整响应链看 B：准备阶段（政策、监测、人员）→ 1 宣布事件 → 2 确定调查范围 → 7 遏制活动。"
+  },
+  {
+   "topic": "恢复与复盘",
+   "refs": [
+    "B:8",
+    "B:9",
+    "B:10f",
+    "B:10i"
+   ],
+   "note": "A 全书没有“清除/恢复/经验教训”章节，这一块完全由 B 补：8 执行清除计划（清除持久化、重装、扫描），9 恢复（还原数据、重置口令、装补丁、收紧边界、验证），10f 发布事后报告，10i 与所有参与方做经验教训分析。注意 B 的第 9 步标题与第 8 步字面相同（原文如此），内容才是恢复。"
+  }
+ ],
+ "omitted": "A 只收第 2、3、4、5、6、8 章。未收：1 Introduction（目的与读者）、第 2 章其余小节（2.2 Forensic Staffing、2.3 Interactions with Other Teams、2.4.3 Supporting Forensics in the Information System Life Cycle）、第 3 章 3.5 Recommendations 与各章末的 Recommendations、第 4 章的 4.4 Analysis 与 4.1.3 Other Data on Media/4.2.4 Technical Issues、第 5 章 5.4、第 6 章 6.1 TCP/IP Basics（属网络基础）与 6.5、第 7 章 Using Data from Applications（应用日志、邮件、Web 使用等应用层数据，与本节点简介的磁盘/内存/网络三类不对应）。B 只收 Preparation Phase 的三项准备工作与响应手册第 1–4、7–10 步；未收漏洞响应手册（Vulnerability Response Playbook）全篇、第 5 步 Third-Party Analysis Support、第 6 步 Adjust Tools、第 11 步 Coordination with CISA（美国联邦机构专用报送流程），以及 7a–7n、8a–8m、9a–9l、10a–10r 等操作细则。",
+ "notes": "节点现有英文资源是 Texas Tech 的 A-Course-on-Digital-Forensics（GitHub）——我打开确认过，README 只列了 Reverse Engineering / Disk Forensics / Memory Forensics / Network Forensics / Malware Analysis / Mobile Forensics 六个方向和一串工具名，并给出各方向所用教材，没有章→节目录，所以没有把它当主来源（如需，可把它的六个方向作为该节点的补充阅读，但不符合“目录”要求）。A 是 NIST SP 800-86（2006）PDF，分支 ref 用原文章号，三级条目用 4.1.1 这类原编号。B 是 CISA 2021 年 11 月的联邦事件响应/漏洞响应手册 PDF，响应手册内部各步骤用原文编号（1、2、3、7、8、9、10 及其 3b/4f/10f/10i 子步），分支本身没有编号所以 ref 留空，coverage 里用 B:#1（准备阶段）、B:#2（事件响应手册）指代。B 的第 8、9 步在原文里标题都写作 Execute Eradication Plan，第九步实际是恢复，已按原样抄录并在中文里注明。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 64,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}
