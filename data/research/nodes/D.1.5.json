@@ -12,6 +12,34 @@
  "zh_alt": null,
  "courses": [
   {
+   "school": "University of Texas at Dallas",
+   "course": "ITSS 4356 Data Governance",
+   "url": "https://catalog.utdallas.edu/2024/undergraduate/courses/itss",
+   "prereq_text": "ITSS 4356 Data Governance (3 semester credit hours) Students will learn the principles, goals, and business drivers of data governance. Topics include metadata, data quality, master and reference data management, and appropriate uses of data and ethics. ... Prerequisite: ITSS 3300.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "I.1.1"
+   ]
+  },
+  {
+   "school": "University of Texas at Dallas",
+   "course": "ITSS 4V95.002 Data Governance (Fall 2020 syllabus)",
+   "url": "https://dox.utdallas.edu/syl100225",
+   "prereq_text": "Course Pre-requisites, Co-requisites, and/or Other Restrictions — Prior knowledge of database systems is recommended, but not required.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "D.1.1"
+   ]
+  },
+  {
+   "school": "Duke University School of Law",
+   "course": "LAW 475A Data Governance",
+   "url": "https://law.duke.edu/academics/course/475a",
+   "prereq_text": "No technical background is necessary to take this class. The first few weeks will include an introduction to data, databases, and governance best practices.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
    "school": "University of Illinois Urbana-Champaign (School of Information Sciences)",
    "course": "IS 524 Data Governance",
    "url": "https://ischool.illinois.edu/academics/courses",
@@ -20,7 +48,15 @@
    "mapped_ids": []
   }
  ],
- "candidate_check": {},
- "extra_prereqs": [],
- "notes": "原图建议前置为『无』，所以 candidate_check 为空对象；extra_prereqs 也为空。先修证据只有一条且是 unspecified：UIUC iSchool 课程目录里 IS 524 Data Governance 只给了课程描述，没有列任何先修要求（已用目录页正文核对）。资源选择说明：这一节点在免费资源里没有找到成体系的『网站』——搜到的 data governance 教学材料几乎全是 Coursera/Udemy/LinkedIn Learning 等商业课或厂商博客，不适合当长期稳定的学习站点；免费可选的是 Data Governance Institute 的框架页（https://datagovernance.com/the-dgi-data-governance-framework/ ，已打开核实，含 Mission/Controls/Accountabilities/Decision Rights/Policy and Rules 等 10 个组件，但只是框架说明不是课程），以及 W3C《Data on the Web Best Practices》（https://www.w3.org/TR/dwbp/ ，已打开核实，覆盖元数据、数据质量、版本与持久化）。因此按优先级退到『经典教材』，选 DMBOK 2nd ed；若主线更看重免费，可换用上面两个免费页面并在节点里注明覆盖面较窄。"
+ "candidate_check": {
+  "D.1.1": "recommended"
+ },
+ "extra_prereqs": [
+  {
+   "id": "I.1.1",
+   "kind": "required",
+   "evidence": "UT Dallas ITSS 4356 的 'Prerequisite: ITSS 3300'，而 ITSS 3300 在 UTD 官方 Catalog 里是 'Information Technology for Business'（信息系统如何支撑业务流程，含 relational database management systems 等工具），对应 I.1.1"
+  }
+ ],
+ "notes": "第四轮（2026-11-01）补课程证据：本轮没有重复上次的 UIUC IS 524。找到三门真教数据治理的课：UT Dallas 的 ITSS 4356 Data Governance 是标准的本科 catalog 条目（内容就是简介里的元数据、数据质量、主数据/参考数据、使用与伦理），先修栏写 'Prerequisite: ITSS 3300'（信息系统基础课，故映射 I.1.1 并写进 extra_prereqs）；同一所学校 2020 年秋季的 ITSS 4V95.002 Data Governance 讨论课 syllabus 在 'Course Pre-requisites' 一栏写 'Prior knowledge of database systems is recommended, but not required.'，这是候选 D.1.1 唯一的直接书面表述，故记 recommended；Duke Law 475A Data Governance 明写 'No technical background is necessary to take this class'，对 D.1.1 是反向证据（contradicted），因此 candidate_check 里 D.1.1 记 recommended 而不是 supported。三门课都不把 SQL/数据建模课列为必修，说明这个技能在美国课程体系里更靠信息治理/合规侧，而非数据库技术侧。没找到证据的检索：UIUC iSchool 课程目录（IS 524 Data Governance、IS 537 Theory and Practice of Data Cleaning 都没有先修栏）、Syracuse iSchool 的课程页只抓到导航（没有课程正文）、UBC iSchool 课程页里的 ARST 560 Records and Information Governance 只有排课信息、没有先修（vancouver.calendar.ubc.ca 的对应课程页 404）、UNC SILS 课程页返回 403、Rutgers 课程页返回 404、UW-Madison L I S 711 Data Management for Information Professionals（Requisites 只有 'Graduate Students Only'）、Iowa SLIS 目录（SLIS:6335 Metadata Theories and Applications 无先修）。 旧笔记：原图建议前置为『无』，所以 candidate_check 为空对象；extra_prereqs 也为空。先修证据只有一条且是 unspecified：UIUC iSchool 课程目录里 IS 524 Data Governance 只给了课程描述，没有列任何先修要求（已用目录页正文核对）。资源选择说明：这一节点在免费资源里没有找到成体系的『网站』——搜到的 data governance 教学材料几乎全是 Coursera/Udemy/LinkedIn Learning 等商业课或厂商博客，不适合当长期稳定的学习站点；免费可选的是 Data Governance Institute 的框架页（https://datagovernance.com/the-dgi-data-governance-framework/ ，已打开核实，含 Mission/Controls/Accountabilities/Decision Rights/Policy and Rules 等 10 个组件，但只是框架说明不是课程），以及 W3C《Data on the Web Best Practices》（https://www.w3.org/TR/dwbp/ ，已打开核实，覆盖元数据、数据质量、版本与持久化）。因此按优先级退到『经典教材』，选 DMBOK 2nd ed；若主线更看重免费，可换用上面两个免费页面并在节点里注明覆盖面较窄。"
 }

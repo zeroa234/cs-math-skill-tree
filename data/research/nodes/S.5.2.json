@@ -12,6 +12,41 @@
  "zh_alt": null,
  "courses": [
   {
+   "school": "University of Michigan",
+   "course": "EECS 588 Computer and Network Security (research-paper seminar: attack trees, OS security, PKI, Bayesian intrusion detection / spam filtering; 'to prepare for research in the area')",
+   "url": "https://web.eecs.umich.edu/~aprakash/eecs588/",
+   "prereq_text": "Prerequisites: EECS 482 or EECS 489 or grad standing.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.2.1",
+    "C.3.2"
+   ]
+  },
+  {
+   "school": "MIT",
+   "course": "6.5660 Computer Systems Security（MIT 官方目录条目；同一课程的旧站为 css.csail.mit.edu/6.858，2024 版首页标题 '6.566 / Spring 2024'）",
+   "url": "http://catalog.mit.edu/subjects/6/",
+   "prereq_text": "6.5660 Computer Systems Security / Prereq: 6.1020 and (6.1800 or 6.1810)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1",
+    "C.2.1",
+    "C.3.2",
+    "C.4.1"
+   ]
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "CS 261 Security in Computer Systems（研究生安全综述课：保护与访问控制、分布式访问安全、防火墙、安全编码、safe languages、mobile code、真实系统案例，另含密码协议/隐私匿名）",
+   "url": "https://www2.eecs.berkeley.edu/Courses/CS261/",
+   "prereq_text": "Prerequisites: COMPSCI 162",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.2.1",
+    "C.2.2"
+   ]
+  },
+  {
    "school": "MIT",
    "course": "6.858 Computer Systems Security",
    "url": "https://css.csail.mit.edu/6.858/2022/general.html",
@@ -25,24 +60,26 @@
   }
  ],
  "candidate_check": {
-  "S.2.1": "not_mentioned"
+  "S.2.1": "not_mentioned",
+  "I.2.3": "not_mentioned",
+  "M.6.2": "not_mentioned"
  },
  "extra_prereqs": [
   {
    "id": "C.2.1",
    "kind": "required",
-   "evidence": "MIT 6.858 先修 6.033（Computer System Engineering，操作系统部分）"
+   "evidence": "Michigan EECS 588 要求 EECS 482（Operating Systems）或 grad standing；MIT 6.5660 要求 6.1800/6.1810（系统与 OS 工程）；Berkeley CS 261 要求 COMPSCI 162（Operating Systems and System Programming）"
   },
   {
    "id": "C.3.2",
    "kind": "required",
-   "evidence": "同上，6.033 含网络部分"
+   "evidence": "Michigan EECS 588 的 EECS 489 是 Computer Networks，页面另写 'Understanding projects and papers well is likely to require some Operating Systems or networking background'；MIT 6.1800 含网络"
   },
   {
    "id": "C.4.1",
    "kind": "required",
-   "evidence": "同上，6.033 含分布式系统部分"
+   "evidence": "MIT 6.1800（Computer System Engineering）覆盖分布式系统，被 6.5660 列为二选一先修"
   }
  ],
- "notes": "两次检索都没找到“安全测量/系统安全研究”的大学课程页（结果全是 research security 合规培训、USENIX 论文页或别的话题），可核实的只有 MIT 6.858（系统安全，含大量论文阅读、5 个 lab 与最终项目，先修只写 6.033），所以 courses 只填一门，且它并不要求先修安全课——原图建议前置 S.2.1 记 not_mentioned。资源按优先级退到 book：Anderson 第 3 版整本各章可在作者主页免费下载，是唯一同时覆盖“漏洞成因＋缓解设计＋安全经济学＋监控/计量”的经典教材；但它不教“可复现实验”和网络测量的方法论，那部分需要另配 USENIX Security / IMC 的论文与 artifact evaluation 实践。查过 Cambridge 的 Security 课程页想升级成 website（https://www.cl.cam.ac.uk/teaching/2425/Security/ 与 /2324/Security/ 均 404），故未采用。"
+ "notes": "第四轮（2026-11-01）补课程证据：上一轮唯一证据是 MIT 6.858 的二手表述；本轮在 MIT 官方课程目录里找到同名条目 6.5660 Computer Systems Security，先修原文 'Prereq: 6.1020 and (6.1800 or 6.1810)'（旧站 css.csail.mit.edu/6.858 的 2024 版首页标题已是 '6.566 / Spring 2024'，两处是同一门课；旧先修 6.033 对应新号 6.1800）。另补两门新证据：Michigan EECS 588（论文研讨型安全课，明确写 'prepare for research in the area'，先修 OS 或网络）和 Berkeley CS 261（研究生安全综述，先修 COMPSCI 162＝OS）。三门课都没有把“系统安全/计算机安全”课（S.2.1）列为先修：Berkeley 的入门安全课 CS 161（先修 COMPSCI 61B、61C、70，已在 https://www2.eecs.berkeley.edu/Courses/CS161/ 核对）只是本科导论，研究生安全课反而只要求 OS；故 S.2.1 判 not_mentioned。研究设计/可复现（I.2.3）与数理统计（M.6.2）也没有出现在任何先修条款里；EECS 588 是在课内教 Bayesian 方法用于入侵检测与垃圾邮件过滤，不是先修要求。安全测量与安全经济学在这三门课里只有零散覆盖（EECS 588 的测量/检测、CS 261 的案例研究），本轮只找先修证据，未处理资源。 旧笔记：两次检索都没找到“安全测量/系统安全研究”的大学课程页（结果全是 research security 合规培训、USENIX 论文页或别的话题），可核实的只有 MIT 6.858（系统安全，含大量论文阅读、5 个 lab 与最终项目，先修只写 6.033），所以 courses 只填一门，且它并不要求先修安全课——原图建议前置 S.2.1 记 not_mentioned。资源按优先级退到 book：Anderson 第 3 版整本各章可在作者主页免费下载，是唯一同时覆盖“漏洞成因＋缓解设计＋安全经济学＋监控/计量”的经典教材；但它不教“可复现实验”和网络测量的方法论，那部分需要另配 USENIX Security / IMC 的论文与 artifact evaluation 实践。查过 Cambridge 的 Security 课程页想升级成 website（https://www.cl.cam.ac.uk/teaching/2425/Security/ 与 /2324/Security/ 均 404），故未采用。"
 }

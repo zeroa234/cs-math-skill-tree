@@ -12,6 +12,28 @@
  "zh_alt": null,
  "courses": [
   {
+   "school": "Boston University (Metropolitan College)",
+   "course": "MET CS 690 Network and Cloud Security",
+   "url": "https://www.bu.edu/met/degrees-certificates/ms-computer-information-systems-cybersecurity",
+   "prereq_text": "Prerequisites: (MET CS 535 or MET CS 625) and (MET CS 595 or MET CY 100) or consent of instructor.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.3.2",
+    "S.1.1"
+   ]
+  },
+  {
+   "school": "University of Texas at Dallas",
+   "course": "CS 6343 Cloud Computing",
+   "url": "https://catalog.utdallas.edu/2024/graduate/courses/cs",
+   "prereq_text": "CS 6343 Cloud Computing (3 semester credit hours) Different layers of cloud computing, infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS). ... Virtualization and emulation. Server virtualization, storage virtualization, and network virtualization. Cloud security. Prerequisites: CS 5343 and CS 5348.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1",
+    "C.2.1"
+   ]
+  },
+  {
    "school": "UC Berkeley",
    "course": "CYBER 212 Cloud Security",
    "url": "https://undergraduate.catalog.berkeley.edu/courses/1678111",
@@ -21,8 +43,27 @@
   }
  ],
  "candidate_check": {
-  "C.4.2": "not_mentioned"
+  "C.2.3": "not_mentioned",
+  "C.4.2": "not_mentioned",
+  "S.2.2": "not_mentioned",
+  "S.1.1": "supported"
  },
- "extra_prereqs": [],
- "notes": "诚实说明：本节点只找到一门可公开核实的“云安全”课程（Berkeley CYBER 212，目录里 Prerequisite 一栏没有课程型先修，只有 “MICS students only” 的选课限制，故记 unspecified、mapped_ids 为空）；两次 Tavily 搜索都没有命中带公开 syllabus 的云/容器安全课程主页，因此课程证据只有一条，candidate_check 里 C.4.2（云计算）判 not_mentioned 也只是“这门课没写”，证据力度有限。资源选择上，Kubernetes 官方文档覆盖节点 7 项中的大部分且完全免费、长期稳定；它不覆盖“云厂商侧”的多租户隔离、IAM 策略与云审计，可补充（均已打开核实存在）：CSA《Security Guidance for Cloud Computing v5》https://cloudsecurityalliance.org/artifacts/security-guidance-v5 、NIST SP 800-144《Guidelines on Security and Privacy in Public Cloud Computing》https://csrc.nist.gov/pubs/sp/800/144/final 、NIST SP 800-190《Application Container Security Guide》https://csrc.nist.gov/pubs/sp/800/190/final （镜像/registry/orchestrator/宿主机的威胁与对策）。"
+ "extra_prereqs": [
+  {
+   "id": "C.3.2",
+   "kind": "required",
+   "evidence": "BU MET CS 690 要求 'MET CS 535 or MET CS 625'，两者都是数据通信/计算机网络课（CS 625 官方描述：'presents the foundations of data communications ... concludes with an overview of basic network security'）"
+  },
+  {
+   "id": "F.1.1",
+   "kind": "required",
+   "evidence": "UT Dallas CS 6343 要求 CS 5343 'Algorithm Analysis and Data Structures'（树、图、排序搜索与算法分析）"
+  },
+  {
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "UT Dallas CS 6343 要求 CS 5348 'Operating Systems Concepts'（进程线程、并发、虚拟内存、调度、文件系统）"
+  }
+ ],
+ "notes": "第四轮（2026-11-01）补课程证据：本轮没有重复上次的 Berkeley CYBER 212（那条只有 'MICS students only' 的选课限制）。找到两门先修写得清楚的课：BU MET CS 690 Network and Cloud Security 是专门讲云安全的课（内容含 cloud architecture、cloud threats、architecture protection、data protection in Cloud、IAM），先修是网络课 + MET CS 595 Cybersecurity Fundamentals，后者对应安全原理 S.1.1，故 S.1.1 记 supported（这是本节点唯一被课程明确要求的候选前置）；UT Dallas CS 6343 Cloud Computing 内容含 'Virtualization and emulation'、'Cloud security'，先修是 CS 5343（算法与数据结构）与 CS 5348（操作系统），对应 F.1.1 与 C.2.1。候选 C.2.3（虚拟化、容器与资源管理）在两门课里都是被教的内容（CS 6343 教虚拟化）而不是被要求的先修，故记 not_mentioned；C.4.2（云计算）同样没被任何一门课列为先修。容器/编排/镜像安全这一侧没有找到有公开先修要求的大学课程：检索到 Harvard Extension School 的 CSCI E-49 云安全课（harvard.simplesyllabus.com 上的 syllabus 页是 JS 渲染，fetch 拿到 0 字符、tavily_extract 也抓不到，无法核实先修原文，故未采用）；一次 tavily 搜索的其它结果都是 SANS/BU 目录/ASU 证书页或 Coursera。另查过 Northeastern CS 6620 Fundamentals of Cloud Computing（内容含 virtualization and containers，但 catalog 里没有 Prerequisite 行）与 UT Dallas ITSS 4371 Cloud Computing with AWS（Prerequisite ITSS 3300，偏云基础架构而非安全）。 旧笔记：诚实说明：本节点只找到一门可公开核实的“云安全”课程（Berkeley CYBER 212，目录里 Prerequisite 一栏没有课程型先修，只有 “MICS students only” 的选课限制，故记 unspecified、mapped_ids 为空）；两次 Tavily 搜索都没有命中带公开 syllabus 的云/容器安全课程主页，因此课程证据只有一条，candidate_check 里 C.4.2（云计算）判 not_mentioned 也只是“这门课没写”，证据力度有限。资源选择上，Kubernetes 官方文档覆盖节点 7 项中的大部分且完全免费、长期稳定；它不覆盖“云厂商侧”的多租户隔离、IAM 策略与云审计，可补充（均已打开核实存在）：CSA《Security Guidance for Cloud Computing v5》https://cloudsecurityalliance.org/artifacts/security-guidance-v5 、NIST SP 800-144《Guidelines on Security and Privacy in Public Cloud Computing》https://csrc.nist.gov/pubs/sp/800/144/final 、NIST SP 800-190《Application Container Security Guide》https://csrc.nist.gov/pubs/sp/800/190/final （镜像/registry/orchestrator/宿主机的威胁与对策）。"
 }

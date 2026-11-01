@@ -12,6 +12,32 @@
  "zh_alt": null,
  "courses": [
   {
+   "school": "University of Maryland",
+   "course": "CMSC634 Empirical Research Methods for Computer Science（constructed/measurement、qualitative and quantitative design、quasi-experimental and non-experimental design 等）",
+   "url": "https://academiccatalog.umd.edu/graduate/courses/cmsc/",
+   "prereq_text": "Recommended: An introductory statistics class. / Restriction: Must be in Computer Science (Master's) program; or must be in Computer Science (Doctoral) program; or permission of instructor.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.6.2"
+   ]
+  },
+  {
+   "school": "Mälardalen University (MDU)",
+   "course": "Research methods in computer science（内容：定量/定性研究、研究问题与假设、效度威胁与伦理、科学文献、实验/案例/调查研究、数据分析）",
+   "url": "https://www.mdu.se/en/malardalen-university/education/course-syllabus?id=06a58222-3b14-11f0-b454-10049b20482b",
+   "prereq_text": "Specific requirements: At least 150 ECTS credits in the technical and/or natural sciences areas of which at least 30 credits are within computer engineering, computer science and/or electronics.",
+   "prereq_kind": "required",
+   "mapped_ids": []
+  },
+  {
+   "school": "International University of Sarajevo",
+   "course": "CS553 Research Methodologies in Computer Science（formulate research problem/questions、synthesise literature、select appropriate methods 等）",
+   "url": "https://ecampus.ius.edu.ba/syllabus/cs553-research-methodologies-computer-science",
+   "prereq_text": "Prerequisites: None",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
    "school": "Carnegie Mellon University",
    "course": "17-803 Empirical Methods（含研究设计、效度威胁、可复现实证研究）",
    "url": "https://bvasiles.github.io/empirical-methods/",
@@ -29,8 +55,16 @@
   }
  ],
  "candidate_check": {
-  "I.2.2": "not_mentioned"
+  "I.2.2": "not_mentioned",
+  "M.6.2": "recommended",
+  "M.6.2.3": "not_mentioned"
  },
- "extra_prereqs": [],
- "notes": "原图建议的前置 I.2.2（技术写作、协作与文献阅读）在两门研究类课程里都没有作为先修出现：Penn State IST 489 条目没有先修字段（同页其它课大多有 'Enforced Prerequisite at Enrollment:'，说明该校确实会写），CMU 17-803 主页只写面向 CS 博士生、没有任何先修课要求。故判 not_mentioned，extra_prereqs 为空。17-803 主页提到的先修只出现在第三方自学指南里（'solid foundations of computer science'），不是官方原文，未采用；其 syllabus 链接（/syllabus/）返回 404，因此没能核到更细的先修条款。资源侧：The Turing Way 是手册而非课程，'不是从头读到尾'（站点自己的 Top Tip），适合按需查；它覆盖可复现性、数据/代码共享与伦理，但实验设计与统计效度较弱。"
+ "extra_prereqs": [
+  {
+   "id": "M.6.2",
+   "kind": "recommended",
+   "evidence": "Maryland CMSC634 课程条目写 'Recommended: An introductory statistics class.'"
+  }
+ ],
+ "notes": "第四轮（2026-11-01）补课程证据：三门都是教“研究设计/效度/伦理”的课，且都不是上一轮那两门（CMU 17-803、Penn State IST 489）。Maryland CMSC634 是唯一给出具体课程级别先修表述的：只是 Recommended（入门统计课，映射 M.6.2），另外用 Restriction 把选课限制在 CS 硕博项目内；MDU 的 Specific requirements 是学分门槛（150 ECTS，其中 30 学分须在计算机/电子），没有点名任何课程，所以 mapped_ids 为空；IUS CS553 明写 'Prerequisites: None'。三门课都没有把“技术写作/文献阅读”（I.2.2）写成先修——MDU 反而把文献检索与批判性阅读、写作报告放在课程目标里教。M.6.2.3（实验设计与因果推断）也没有作为先修出现；CMSC634 是在课内讲 quasi-experimental design。查过但没采用：University of Arizona DATA498D Capstone（条目把先修压成 'Enrollment Requirements 019761' 这类代码，读不到原文，无法照抄）、University of Melbourne COMP90044 Research Methods（2025 handbook 页正文到 'Next: Eligibility and requirements' 就结束，先修段没渲染出来）、University of Houston COSC 6321（syllabus 明写 'The course does not have any formal prerequisites'，若需要“无先修”的对照可另引）。 旧笔记：原图建议的前置 I.2.2（技术写作、协作与文献阅读）在两门研究类课程里都没有作为先修出现：Penn State IST 489 条目没有先修字段（同页其它课大多有 'Enforced Prerequisite at Enrollment:'，说明该校确实会写），CMU 17-803 主页只写面向 CS 博士生、没有任何先修课要求。故判 not_mentioned，extra_prereqs 为空。17-803 主页提到的先修只出现在第三方自学指南里（'solid foundations of computer science'），不是官方原文，未采用；其 syllabus 链接（/syllabus/）返回 404，因此没能核到更细的先修条款。资源侧：The Turing Way 是手册而非课程，'不是从头读到尾'（站点自己的 Top Tip），适合按需查；它覆盖可复现性、数据/代码共享与伦理，但实验设计与统计效度较弱。"
 }

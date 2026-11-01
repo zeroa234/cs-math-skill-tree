@@ -285,8 +285,9 @@
   "_summary": "CUNY CST 4714 Database Administration：先修 CST3604。"
  },
  "D.1.5": {
-  "D.1.1": "质量规则、血缘、模式演化都以关系模型和 SQL 表达。",
-  "_summary": "证据不足：UIUC IS 524 Data Governance 课程页没写先修；资源是 DAMA-DMBOK（书）。按内容需要起草，待核实。"
+  "D.1.1": "UT Dallas ITSS 4V95 数据治理大纲写明“建议有数据库知识，但不是必需”；元数据和数据质量规则会落到表结构上。",
+  "I.1.1": "UT Dallas ITSS 4356 Data Governance 先修 ITSS 3300《商业信息技术》（业务流程与信息系统）；Duke LAW 475A 说不需要技术背景，所以不作为必须。",
+  "_summary": "UT Dallas ITSS 4356 Data Governance：先修 ITSS 3300 Information Technology for Business；UT Dallas ITSS 4V95 大纲：建议有数据库知识但非必需；Duke LAW 475A Data Governance：不需要技术背景。"
  },
  "D.2.1": {
   "D.3.1": "Berkeley Data 101（数据工程）要求先修 Data 100 等数据科学课。",
@@ -396,10 +397,10 @@
   "_summary": "MIT 18.405J：先修 18.404J；Berkeley CS 278：先修 CS 170。"
  },
  "F.2.4": {
-  "M.5.2": "归结、合一、SAT 编码的对象都是命题和谓词逻辑公式。",
-  "M.5.3": "可靠性、完备性要靠归纳证明。",
-  "F.2.1": "自动机方法在模型检查和判定过程里出现。",
-  "_summary": "证据不足：只找到 Cornell CS 4860（先修写的是数学课，属于成熟度门槛）；CMU 15-414、JKU SAT 课程页没写先修。暂按内容需要起草，待核实。"
+  "M.5.2": "Iowa CS:4980 自动推理的先修 CS:2210 离散结构包含逻辑；Edinburgh INFR10087 建议先熟悉命题与谓词逻辑。SAT、归结都直接在逻辑公式上操作。",
+  "M.5.3": "Iowa CS:4980 先修 CS:2210 离散结构（含证明方法与归纳）；可靠性、完备性证明都要用。",
+  "F.1.1": "Iowa CS:4980 还要求 CS:2230 数据结构；实现 DPLL/CDCL 求解器时用得上，入门理解不依赖它。",
+  "_summary": "Iowa CS:4980 Introduction to Automated Reasoning：先修 CS:2210 离散结构（逻辑、证明方法）和 CS:2230 数据结构；Edinburgh INFR10087 Automated Reasoning：本校无先修，建议熟悉命题与谓词逻辑。"
  },
  "F.3.1": {
   "P.1.1": "Berkeley CS 61A 的先修写了等同 AP CS 的编程经验；λ 演算要拿程序来类比理解。",
@@ -519,11 +520,12 @@
   "_summary": "University of Tartu IoT Introduction：no advanced prior knowledge is required，Git、Linux、Python/C++、网络知识有帮助；FITech IoT MOOC（已用 curl 核实）：网络、数据结构、编程有帮助但不要求。按证据没有必须前置。"
  },
  "H.4.4": {
-  "C.3.2": "边缘计算的核心是网络时延与带宽的权衡。",
-  "C.4.1": "端边云协同涉及分布式系统。",
-  "H.3.2": "Northwestern CE-395：嵌入式系统经验 helpful but not required。",
-  "C.2.3": "边缘节点上的应用常用容器部署。",
-  "_summary": "证据不足：Northwestern CE-395/495 IoT & Edge Computing 列出的都是 helpful but not required；资源是 Shi 等人的综述论文。按内容需要起草，待核实。"
+  "C.3.2": "Amrita Fog and Edge Computing 要求网络知识；Duke COMPSCI 564 先修网络课或操作系统课；时延、带宽权衡都是网络问题。",
+  "C.2.1": "Amrita Fog and Edge Computing 要求操作系统基础；边缘节点上的调度与资源管理依赖操作系统概念。",
+  "C.4.1": "Amrita 的课还要求分布式系统，Duke 不要求；入门层的卸载与调度不需要共识、复制等内容。",
+  "H.3.2": "Northwestern CE-395 写明嵌入式系统经验“有帮助但不是必需”。",
+  "C.2.3": "边缘部署常用容器与轻量虚拟化，课程没有列为先修。",
+  "_summary": "Amrita Fog and Edge Computing：先修分布式系统、操作系统基础、网络知识；Duke COMPSCI 564 Edge Computing：先修网络课或操作系统课之一，或研究生身份；Northwestern CE-395：嵌入式、信号与系统等有帮助但非必需。"
  },
  "I.1.1": {
   "_summary": "MIT 15.561 Information Technology Essentials 面向几乎没有技术背景的学生；Penn State MIS 390 的先修是入门 MIS 课。作为第 1 步的起点。"
@@ -548,10 +550,10 @@
   "_summary": "Penn State ENGL 202C Technical Writing 的先修是大一写作课（不在本技能树中）。作为第 1 步的起点。"
  },
  "I.2.3": {
-  "I.2.2": "研究设计要先会检索、阅读文献和写作。",
-  "M.6.2": "假设检验、功效分析要用数理统计。",
-  "M.6.2.3": "实验设计与因果推断是研究方法的核心工具。",
-  "_summary": "证据不足：CMU 17-803 Empirical Methods 与 Penn State IST 489 的课程页都没写先修。按内容需要起草，待核实。"
+  "M.6.2": "Maryland CMSC634 Empirical Research Methods 建议先修统计入门；实验设计和效度分析要用统计推断。",
+  "I.2.2": "文献检索与学术写作有助于研究设计；三门研究方法课都没有把它列为先修。",
+  "M.6.2.3": "随机实验与因果识别属于深入层。",
+  "_summary": "Maryland CMSC634 Empirical Research Methods for CS：建议先修统计入门（限 CS 硕博）；Mälardalen Research methods in CS：只要求 150 学分（其中 30 学分计算机或电子）；IUS CS553：无先修。"
  },
  "M.1.1": {
   "_summary": "MIT 18.01SC 只要求高中代数与三角，不需要技能树里的其他节点。"
@@ -1022,11 +1024,14 @@
   "_summary": "WUSTL CSE 571S Network Security：先修 CSE 473S；Berkeley CS 161 含 802.11/WPA2 章节。"
  },
  "S.2.4": {
-  "C.2.3": "容器隔离、镜像、编排的安全以虚拟化和容器机制为基础。",
-  "C.4.2": "云服务模型与 IAM。",
-  "S.2.2": "云网络的分段与防护。",
-  "S.1.1": "共享责任模型下的威胁建模。",
-  "_summary": "证据不足：Berkeley CYBER 212 Cloud Security 只写了 MICS 学生专用，没有课程先修；资源是 Kubernetes 官方安全文档。按内容需要起草，待核实。"
+  "S.1.1": "BU MET CS 690 Network and Cloud Security 先修 MET CS 595 / CY 100 网络安全基础；云安全的身份、权限与威胁建模都建立在安全原理上。",
+  "C.3.2": "BU MET CS 690 先修 MET CS 535 / 625 计算机网络；云网络隔离、控制平面暴露面都要懂网络。",
+  "C.2.1": "UT Dallas CS 6343 Cloud Computing 先修 CS 5348 操作系统；容器隔离和多租户依赖进程、内存与权限机制。",
+  "C.2.3": "容器与编排安全要先知道容器和虚拟化怎么工作；找到的课都在课内讲虚拟化，没有列为先修。",
+  "C.4.2": "云服务模型（IaaS/PaaS/SaaS）由云计算技能讲，UT Dallas CS 6343 在课内讲。",
+  "S.2.2": "云里的网络防护与网络安全技能重叠，BU MET CS 690 在同一门课里讲。",
+  "F.1.1": "UT Dallas CS 6343 还要求 CS 5343 算法与数据结构，入门的云安全不依赖它。",
+  "_summary": "BU MET CS 690 Network and Cloud Security：先修计算机网络（MET CS 535/625）和网络安全基础（MET CS 595/CY 100）；UT Dallas CS 6343 Cloud Computing：先修 CS 5343 算法与数据结构、CS 5348 操作系统。"
  },
  "S.2.5": {
   "H.2.1": "University of Idaho ECE 4040/5040 要求修过数字逻辑并能读写基础的 Verilog/SystemVerilog；课程以 RTL 实验为主。",
@@ -1096,10 +1101,12 @@
   "_summary": "CMU 15-316：先修 15-213 或 15-150；UNC COMP 590 Formal Methods for Security（已用 curl 核实）：离散结构、数据结构、系统基础、编程、计算模型，建议安全或密码学。"
  },
  "S.5.2": {
-  "S.2.1": "安全测量研究以系统安全为基础。",
-  "I.2.3": "研究设计与可复现。",
-  "M.6.2": "测量结果的统计推断。",
-  "_summary": "证据不足：找到的 MIT 6.858（先修 6.033）本身就是系统安全课，并不讲测量研究；资源是 Anderson《Security Engineering》。按内容需要起草，待核实。"
+  "C.2.1": "Berkeley CS 261 先修 CS 162 操作系统；MIT 6.5660 先修 6.1810 操作系统或 6.1800 计算机系统工程；漏洞成因与缓解设计都发生在系统层。",
+  "S.2.1": "研究型安全课建立在系统安全知识上；三门课都在课内讲，没有把安全课列为先修。",
+  "C.3.2": "Michigan EECS 588 先修 EECS 482 操作系统或 EECS 489 计算机网络二选一；网络测量要懂协议。",
+  "I.2.3": "可复现实验和测量研究要用研究设计方法，属于深入层。",
+  "M.6.2": "安全测量的统计推断，属于深入层。",
+  "_summary": "Berkeley CS 261 Security in Computer Systems：先修 CS 162 操作系统；MIT 6.5660 Computer Systems Security：先修 6.1020 及 6.1800 或 6.1810；Michigan EECS 588：先修 EECS 482 或 EECS 489 或研究生身份。"
  },
  "V.1.1": {
   "M.3.1": "Berkeley CS 184 与 Stanford CS 148 都要求线性代数（矩阵、变换）。",
@@ -1205,11 +1212,11 @@
   "_summary": "CMU 05-823 E-Learning Design Principles and Methods：心理学研究、质性方法、编程经验为“desirable”，部分阅读假定实验设计与统计背景；CMU 05-499/899 Learning Analytics：要求统计与数据分析基础，教育技术经验不要求。"
  },
  "X.2.4": {
-  "D.1.1": "临床数据存储与检索（EHR、FHIR 资源）是入门内容的主体；但没有课程把数据库课列为先修，故标为前置待核实。",
-  "M.6.2": "临床预测模型的评价（灵敏度、PPV、校准）要用统计，课程未列为先修。",
-  "M.6.2.3": "临床干预效果评价涉及实验设计与因果推断，课程未列为先修。",
-  "P.2.3": "MIT HST.951J 写熟悉 SAS 和 MATLAB 会有帮助。",
-  "_summary": "MIT HST.951J Medical Decision Support：只写熟悉 SAS/MATLAB 有帮助；JHU Health Informatics Specialization：标为入门级，未列具体先修。证据不足以确认必修前置。"
+  "D.1.1": "UNC CHIP 708 Foundations of Clinical Data Science 写明要会 SQL；临床数据都存在关系型的电子病历库里。",
+  "P.2.3": "UNC CHIP 708 要求会 Python；UIC BHIS 501 先修要求熟悉 Python。",
+  "M.6.2": "决策支持的评价要用统计推断，课程没有列为先修。",
+  "M.6.2.3": "临床干预效果评价用到因果推断，属于深入层。",
+  "_summary": "UNC CHIP 708 Foundations of Clinical Data Science：先修 CHIP 732 与 CHIP 705 或 INLS 523 与 INLS 560，并要求会 SQL 和 Python；UIC BHIS 501：要求熟悉 Python；UMB INFO 601：无先修。"
  },
  "X.2.5": {
   "M.6.2": "武汉大学《空间数据分析》预备知识写明要有概率统计基础；空间自相关检验、点模式的随机性检验和空间回归都建立在统计推断上。",

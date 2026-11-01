@@ -12,6 +12,29 @@
  "zh_alt": null,
  "courses": [
   {
+   "school": "Duke University",
+   "course": "COMPSCI 564 / ECE 654 Edge Computing（seminar：edge platforms、edge-adapted algorithms、edge in mobile & IoT systems，含 research-based project）",
+   "url": "https://cs.duke.edu/courses/edge-computing",
+   "prereq_text": "Prerequisite: ECE/COMPSCI 356 or ECE/COMPSCI 350L or ECE 353/COMPSCI 310 or Graduate Standing",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.3.2",
+    "C.2.1"
+   ]
+  },
+  {
+   "school": "Amrita Vishwa Vidyapeetham",
+   "course": "Fog and Edge Computing（M.Tech CSE 课程，Course Type: Lab；CO1 fog/edge 网络与参考架构、CO2 设计 edge 系统、CO3 边缘侧数据采集/分析/决策与学习）",
+   "url": "https://www.amrita.edu/course/fog-and-edge-computing/",
+   "prereq_text": "Pre-Requisite(s): Distributed Systems, Basic OS, Networks knowledge",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "C.4.1",
+    "C.2.1",
+    "C.3.2"
+   ]
+  },
+  {
    "school": "Northwestern University",
    "course": "CE-395 / CE-495 Internet of Things & Edge Computing",
    "url": "https://www.mccormick.northwestern.edu/electrical-computer/documents/courses/syllabi/ce-395-edge-computing-syllabus.pdf",
@@ -26,30 +49,17 @@
   }
  ],
  "candidate_check": {
-  "C.4.1": "not_mentioned",
-  "H.3.2": "recommended"
+  "C.3.2": "supported",
+  "C.4.1": "supported",
+  "H.3.2": "recommended",
+  "C.2.3": "not_mentioned"
  },
  "extra_prereqs": [
   {
-   "id": "H.3.2",
-   "kind": "recommended",
-   "evidence": "Northwestern CE-395 写 'Helpful but not required: experience with embedded systems and microprocessors (e.g. COMP_ENG 346, 347, 366, 355)'"
-  },
-  {
-   "id": "H.1.3",
-   "kind": "recommended",
-   "evidence": "同页写 'basic understanding of signals and systems (e.g. COMP_SCI 213, ELEC_ENG 222)' 为 helpful"
-  },
-  {
-   "id": "C.3.1",
-   "kind": "recommended",
-   "evidence": "同页写 'knowledge of communication systems (e.g. ELEC_ENG 307)' 为 helpful"
-  },
-  {
-   "id": "F.1.1",
-   "kind": "recommended",
-   "evidence": "同页写 'data structures (e.g. COMP_SCI 214)' 为 helpful"
+   "id": "C.2.1",
+   "kind": "required",
+   "evidence": "Duke COMPSCI 564 允许以 ECE 353/COMPSCI 310（操作系统）满足先修；Amrita 写 'Basic OS'"
   }
  ],
- "notes": "只找到 1 门明确教边缘计算、且公开写了先修原文的课：Northwestern CE-395 的 syllabus（PDF，用 tavily_extract 取正文，已核实）。它的先修全部是 'Helpful but not required'，所以 H.3.2 判 recommended 而不是 supported；C.4.1（分布式系统）完全没提，判 not_mentioned——尽管课程内容里反复讲 edge vs cloud 的权衡，但这不是先修要求。资源侧没找到免费且系统的边缘计算课程网站（FITech 那门 IoT MOOC 不含边缘计算专题；搜到的 Class Central 条目多为付费课或短视频），所以按优先级退到 material：Shi et al. 2016 综述，PDF 放在 University at Buffalo CSE 710（tkosar）课程阅读页，已下载并用 pdftotext 核对标题/摘要/正文。syllabus 里 'Tradeoffs: power, bandwidth, latency, costs' 与 'quantization / CPU-GPU-FPGA / DL at edge' 这两讲可作为该节点 D3-D4 层的延伸线索（讲义未公开）。"
+ "notes": "第四轮（2026-11-01）补课程证据：补到两门新的、写明了先修的边缘计算课：Duke COMPSCI 564（研究生 seminar，先修二选一：网络 356 / 350L / OS 310 / 研究生身份）与 Amrita 的 Fog and Edge Computing（Lab 课，写明 Distributed Systems + Basic OS + Networks）。C.4.1 由此从“没有课提到”变成 supported（Amrita 原文列出 Distributed Systems）；C.3.2 也得到两门课同时支持；H.3.2 仍只有 Northwestern CE-395 的 'Helpful but not required' 一句，记 recommended（该 syllabus 上一轮已核对，本轮沿用原文）。C.2.3（虚拟化/容器/资源管理）三门课都没写成先修；edge 与 cloud 的 offloading、latency/bandwidth 权衡是在课内讲。Duke 的 ECE/COMPSCI 350L 我没能核实具体内容（未在杜克课程目录里打开对应条目），故没有映射到任何节点，只按原文保留。查过但没采用的：Halmstad University 'Edge Computing and Internet of Things'（课程页被导航与 cookie 面板占满，取不到 syllabus 正文）、UT Dallas CS 6301 特殊专题（条目只写通用先修 CS 5343，与边缘计算无关），以及上一轮已排除的 FITech IoT MOOC。 旧笔记：只找到 1 门明确教边缘计算、且公开写了先修原文的课：Northwestern CE-395 的 syllabus（PDF，用 tavily_extract 取正文，已核实）。它的先修全部是 'Helpful but not required'，所以 H.3.2 判 recommended 而不是 supported；C.4.1（分布式系统）完全没提，判 not_mentioned——尽管课程内容里反复讲 edge vs cloud 的权衡，但这不是先修要求。资源侧没找到免费且系统的边缘计算课程网站（FITech 那门 IoT MOOC 不含边缘计算专题；搜到的 Class Central 条目多为付费课或短视频），所以按优先级退到 material：Shi et al. 2016 综述，PDF 放在 University at Buffalo CSE 710（tkosar）课程阅读页，已下载并用 pdftotext 核对标题/摘要/正文。syllabus 里 'Tradeoffs: power, bandwidth, latency, costs' 与 'quantization / CPU-GPU-FPGA / DL at edge' 这两讲可作为该节点 D3-D4 层的延伸线索（讲义未公开）。"
 }

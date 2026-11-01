@@ -12,6 +12,35 @@
  "zh_alt": null,
  "courses": [
   {
+   "school": "University of North Carolina at Chapel Hill (Carolina Health Informatics Program)",
+   "course": "CHIP 708 Foundations of Clinical Data Science（clinical data collection/models/context/caveats，用真实临床数据做分析并复现文献结果）",
+   "url": "https://catalog.unc.edu/courses/chip/",
+   "prereq_text": "Requisites: Prerequisites, CHIP 732 and CHIP 705 or INLS 523 and INLS 560 or equivalents (with instructor permission). / 课程描述另写：Knowledge of SQL and Python are required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "D.1.1",
+    "P.2.3"
+   ]
+  },
+  {
+   "school": "University of Illinois Chicago",
+   "course": "BHIS 501 Methods in Biomedical and Health Informatics I（生物医学与健康信息学研究的 methods、术语与技术基础，两门系列课的第一门）",
+   "url": "https://catalog.uic.edu/gcat/colleges-schools/applied-health-sciences/him/",
+   "prereq_text": "Prerequisite(s): Basic familiarity with Python programming language.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.2.3"
+   ]
+  },
+  {
+   "school": "University of Maryland, Baltimore",
+   "course": "INFO 601 Foundations in Clinical and Health Informatics（健康信息学基础、IT 在医疗与研究中的作用、临床信息系统与患者关系）",
+   "url": "https://www.graduate.umaryland.edu/clinicalinformatics/course-descriptions/",
+   "prereq_text": "Prerequisite: None.",
+   "prereq_kind": "unspecified",
+   "mapped_ids": []
+  },
+  {
    "school": "MIT",
    "course": "HST.951J Medical Decision Support",
    "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/pages/syllabus/",
@@ -31,15 +60,22 @@
   }
  ],
  "candidate_check": {
-  "D.1.1": "not_mentioned",
-  "M.6.2.3": "not_mentioned"
+  "D.1.1": "supported",
+  "M.6.2": "not_mentioned",
+  "M.6.2.3": "not_mentioned",
+  "P.2.3": "supported"
  },
  "extra_prereqs": [
   {
+   "id": "D.1.1",
+   "kind": "required",
+   "evidence": "UNC CHIP 708 要求 CHIP 732（Database Systems in Healthcare：SQL、CRUD、索引与规范化）或 INLS 523（Introduction to Database Concepts and Applications：关系模型、规范化、SQL）"
+  },
+  {
    "id": "P.2.3",
-   "kind": "recommended",
-   "evidence": "MIT HST.951J 写 'Familiarity with SAS and MATLAB® will be helpful'（决策支持课作业要写代码跑模型；对应科学计算工具能力）。"
+   "kind": "required",
+   "evidence": "UNC CHIP 708 描述写 'Knowledge of SQL and Python are required'，先修含 CHIP 705（Python）或 INLS 560（Intro to Programming）；UIC BHIS 501 写 'Prerequisite(s): Basic familiarity with Python programming language.'"
   }
  ],
- "notes": "两个候选都记 not_mentioned，证据偏薄，主代理要注意：(1) 医疗信息学的课几乎都不把'数据库课'写成先修——JHU 这套只在技能清单里写 Databases（课内讲），MIT HST.950J/HST.951J 的 syllabus 也没有数据库先修；所以 D.1.1 更像'并行/课内'而非硬前置。(2) M.6.2.3（实验设计与因果推断）：JHU 的 Course 3 讲 interventions/outcomes、Course 4 讲数据检索与分析，但页面没写统计或实验设计先修，MIT 两门课也没有——本节点真正涉及'评价'时统计/因果是必要的，只是没有课程把它写成 prerequisite。补充可用证据（未计入 courses，因为没抓到先修原文）：Georgia Tech OMSCS 的 CS 6440 Intro to Health Informatics（https://omscs.gatech.edu/cs-6440-intro-health-informatics）确实教这门课的内容、页面上有公开的 Sample Syllabus PDF，但页面本身没写先修要求；OHSU DMICE 的课程目录页（https://www.ohsu.edu/school-of-medicine/medical-informatics-and-clinical-epidemiology/course-catalog）是 JS 动态加载，抓不到每门课的 prerequisite 原文，故未采用。另外 MIT HST.950J Medical Computing（https://ocw.mit.edu/courses/hst-950j-medical-computing-spring-2003/）的 syllabus 只有 Topics and Format / Homework / Required Text / Projects，没有 Prerequisites 一节，可作为'临床数据、医疗信息系统、专家系统'的二手参考（2003 年，偏旧，且是 graduate 层）。"
+ "notes": "第四轮（2026-11-01）补课程证据：两门新证据都点名了具体课程级先修：UNC CHIP 708（临床数据科学，先修数据库＋编程，描述里直接写 SQL/Python required）与 UIC BHIS 501（健康信息学研究方法 I，先修 Python 基础）。因此候选里的 D.1.1（数据建模/关系模型/SQL）与 P.2.3（Python）都由原来的“按内容起草”变成 supported；数理统计 M.6.2 与实验设计 M.6.2.3 在三门课里都没写成先修（UNC 的统计课 CHIP 753 要求 CHIP 752 或入门统计，但那门是统计方法课、不是本节点的信息系统课，故未收入）。第三门选了 UMB 的 INFO 601 作对照：入门健康信息学可以明写 'Prerequisite: None.'。查过但没采用：Georgia Tech CS 6440 Introduction to Health Informatics（catalog.gatech.edu/coursesaz/cs/ 的条目只有描述，没有先修字段）、UIC BHIS 460 Introduction to Health Informatics（先修写的是 HIM 410 或 instructor consent，属项目内课程，映射不到候选节点）、UMB DATA 604 Data Management（教 ER/SQL，但先修只是 DATA 601，且它本身不是健康信息学课）。上一轮那两门（MIT HST.951J、JHU Coursera 专项）没有再重复引用。 旧笔记：两个候选都记 not_mentioned，证据偏薄，主代理要注意：(1) 医疗信息学的课几乎都不把'数据库课'写成先修——JHU 这套只在技能清单里写 Databases（课内讲），MIT HST.950J/HST.951J 的 syllabus 也没有数据库先修；所以 D.1.1 更像'并行/课内'而非硬前置。(2) M.6.2.3（实验设计与因果推断）：JHU 的 Course 3 讲 interventions/outcomes、Course 4 讲数据检索与分析，但页面没写统计或实验设计先修，MIT 两门课也没有——本节点真正涉及'评价'时统计/因果是必要的，只是没有课程把它写成 prerequisite。补充可用证据（未计入 courses，因为没抓到先修原文）：Georgia Tech OMSCS 的 CS 6440 Intro to Health Informatics（https://omscs.gatech.edu/cs-6440-intro-health-informatics）确实教这门课的内容、页面上有公开的 Sample Syllabus PDF，但页面本身没写先修要求；OHSU DMICE 的课程目录页（https://www.ohsu.edu/school-of-medicine/medical-informatics-and-clinical-epidemiology/course-catalog）是 JS 动态加载，抓不到每门课的 prerequisite 原文，故未采用。另外 MIT HST.950J Medical Computing（https://ocw.mit.edu/courses/hst-950j-medical-computing-spring-2003/）的 syllabus 只有 Topics and Format / Homework / Required Text / Projects，没有 Prerequisites 一节，可作为'临床数据、医疗信息系统、专家系统'的二手参考（2003 年，偏旧，且是 graduate 层）。"
 }

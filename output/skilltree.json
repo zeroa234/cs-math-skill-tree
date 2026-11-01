@@ -3,9 +3,9 @@
   "built": "2026-11-01",
   "skills": 196,
   "steps": 7,
-  "requiredEdges": 270,
-  "recommendedEdges": 389,
-  "verifiedPrereqs": 187,
+  "requiredEdges": 272,
+  "recommendedEdges": 394,
+  "verifiedPrereqs": 194,
   "mainSkills": 126,
   "withResource": 196,
   "withChineseResource": 196,
@@ -289,7 +289,7 @@
    "en": "Data Management & Data Science",
    "color": "#b8952a",
    "optional": false,
-   "height": 450,
+   "height": 378,
    "count": 13
   },
   {
@@ -311,7 +311,7 @@
    "en": "Cybersecurity",
    "color": "#d0463b",
    "optional": false,
-   "height": 468,
+   "height": 479,
    "count": 17
   },
   {
@@ -361,7 +361,7 @@
  ],
  "overview": {
   "width": 1200,
-  "height": 1000,
+  "height": 995,
   "tile": {
    "w": 232,
    "padX": 14,
@@ -382,15 +382,15 @@
    {
     "lane": "M2",
     "x": 8,
-    "y": 191,
+    "y": 185,
     "w": 232,
     "h": 191,
     "layer": 1
    },
    {
     "lane": "M3",
-    "x": 648,
-    "y": 298,
+    "x": 647,
+    "y": 292,
     "w": 232,
     "h": 190,
     "layer": 3
@@ -398,7 +398,7 @@
    {
     "lane": "F",
     "x": 335,
-    "y": 510,
+    "y": 504,
     "w": 232,
     "h": 178,
     "layer": 2
@@ -406,15 +406,15 @@
    {
     "lane": "P",
     "x": 8,
-    "y": 596,
+    "y": 590,
     "w": 232,
     "h": 203,
     "layer": 1
    },
    {
     "lane": "C",
-    "x": 648,
-    "y": 695,
+    "x": 647,
+    "y": 689,
     "w": 232,
     "h": 197,
     "layer": 3
@@ -424,7 +424,7 @@
     "x": 960,
     "y": 229,
     "w": 232,
-    "h": 178,
+    "h": 172,
     "layer": 4
    },
    {
@@ -438,23 +438,23 @@
    {
     "lane": "S",
     "x": 960,
-    "y": 622,
+    "y": 616,
     "w": 232,
-    "h": 180,
+    "h": 181,
     "layer": 4
    },
    {
     "lane": "H",
     "x": 960,
-    "y": 431,
+    "y": 425,
     "w": 232,
     "h": 167,
     "layer": 4
    },
    {
     "lane": "V",
-    "x": 648,
-    "y": 509,
+    "x": 647,
+    "y": 503,
     "w": 232,
     "h": 154,
     "layer": 3
@@ -462,7 +462,7 @@
    {
     "lane": "I",
     "x": 8,
-    "y": 406,
+    "y": 400,
     "w": 232,
     "h": 166,
     "layer": 1
@@ -470,7 +470,7 @@
    {
     "lane": "X",
     "x": 960,
-    "y": 826,
+    "y": 821,
     "w": 232,
     "h": 166,
     "layer": 4
@@ -654,7 +654,7 @@
    {
     "from": "C",
     "to": "S",
-    "count": 7,
+    "count": 9,
     "dominant": true
    },
    {
@@ -696,7 +696,7 @@
    {
     "from": "C",
     "to": "H",
-    "count": 2,
+    "count": 3,
     "dominant": true
    },
    {
@@ -774,7 +774,7 @@
    {
     "from": "P",
     "to": "X",
-    "count": 2,
+    "count": 3,
     "dominant": true
    },
    {
@@ -8918,24 +8918,24 @@
    "required": [
     {
      "id": "M.5.2",
-     "why": "归结、合一、SAT 编码的对象都是命题和谓词逻辑公式。",
+     "why": "Iowa CS:4980 自动推理的先修 CS:2210 离散结构包含逻辑；Edinburgh INFR10087 建议先熟悉命题与谓词逻辑。SAT、归结都直接在逻辑公式上操作。",
      "kind": "required"
     },
     {
      "id": "M.5.3",
-     "why": "可靠性、完备性要靠归纳证明。",
+     "why": "Iowa CS:4980 先修 CS:2210 离散结构（含证明方法与归纳）；可靠性、完备性证明都要用。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
-     "id": "F.2.1",
-     "why": "自动机方法在模型检查和判定过程里出现。",
+     "id": "F.1.1",
+     "why": "Iowa CS:4980 还要求 CS:2230 数据结构；实现 DPLL/CDCL 求解器时用得上，入门理解不依赖它。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "证据不足：只找到 Cornell CS 4860（先修写的是数学课，属于成熟度门槛）；CMU 15-414、JKU SAT 课程页没写先修。暂按内容需要起草，待核实。",
+   "prereqStatus": "verified",
+   "prereqSummary": "Iowa CS:4980 Introduction to Automated Reasoning：先修 CS:2210 离散结构（逻辑、证明方法）和 CS:2230 数据结构；Edinburgh INFR10087 Automated Reasoning：本校无先修，建议熟悉命题与谓词逻辑。",
    "unlocks": [],
    "related": [
     {
@@ -8964,6 +8964,20 @@
    },
    "zhResourceNote": "",
    "courses": [
+    {
+     "school": "University of Iowa",
+     "course": "CS:4980 / CS:4890 Introduction to Automated Reasoning (Tinelli, Spring 2024)",
+     "url": "https://homepage.cs.uiowa.edu/~tinelli/classes/4980/Spring24/syllabus.shtml",
+     "prereq_text": "Prerequisites: CS:2210 with a minimum grade of C- and CS:2230 with a minimum grade of C-.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Edinburgh",
+     "course": "INFR10087 Automated Reasoning (SCQF Level 10)",
+     "url": "https://www.drps.ed.ac.uk/24-25/dpt/cxinfr10087.htm",
+     "prereq_text": "Entry Requirements（本校生）Pre-requisites / Co-requisites / Prohibited Combinations / Other requirements: None；Information for Visiting Students — Pre-requisites: Prior familiarity with propositional and predicate logic is recommended.",
+     "prereq_kind": "recommended"
+    },
     {
      "school": "Cornell University",
      "course": "CS 4860 Applied Logic",
@@ -9618,7 +9632,7 @@
    ],
    "related": [],
    "step": 1,
-   "reach": 110,
+   "reach": 109,
    "resource": {
     "tier": "website",
     "title": "CS50x: CS50's Introduction to Computer Science (Harvard University, David J. Malan)",
@@ -10242,11 +10256,12 @@
    "prereqSummary": "UW CSE 163：先修入门编程课；UW CSE 160 面向零基础。",
    "unlocks": [
     "A.2.1",
-    "A.3.4"
+    "A.3.4",
+    "X.2.4"
    ],
    "related": [],
    "step": 2,
-   "reach": 15,
+   "reach": 16,
    "resource": {
     "tier": "website",
     "title": "Scipy Lecture Notes — One document to learn numerics, science, and data with Python（EuroSciPy 社区维护，免费 HTML + PDF）",
@@ -12114,7 +12129,7 @@
    ],
    "related": [],
    "step": 2,
-   "reach": 27,
+   "reach": 28,
    "resource": {
     "tier": "website",
     "title": "MIT 6.004 Computation Structures (Spring 2017, MIT OpenCourseWare)",
@@ -12657,11 +12672,14 @@
     "C.2.4",
     "C.4.3",
     "S.2.1",
-    "S.2.2"
+    "S.2.2",
+    "S.2.4",
+    "S.5.2",
+    "H.4.4"
    ],
    "related": [],
    "step": 3,
-   "reach": 8,
+   "reach": 9,
    "resource": {
     "tier": "website",
     "title": "Operating Systems: Three Easy Pieces（Remzi H. Arpaci-Dusseau & Andrea C. Arpaci-Dusseau, University of Wisconsin-Madison；免费在线教材）",
@@ -12914,12 +12932,10 @@
    "recommended": [],
    "prereqStatus": "verified",
    "prereqSummary": "MIT 6.033：先修 6.004 + 6.009，课内先讲操作系统基础再讲虚拟化；iximiuz 容器学习路径从 Linux 进程讲起。",
-   "unlocks": [
-    "S.2.4"
-   ],
+   "unlocks": [],
    "related": [],
    "step": 4,
-   "reach": 1,
+   "reach": 0,
    "resource": {
     "tier": "website",
     "title": "Learning Containers From The Bottom Up（Ivan Velichko 的容器学习路径）",
@@ -13324,6 +13340,7 @@
     "C.3.4",
     "S.2.2",
     "S.2.3",
+    "S.2.4",
     "S.4.1",
     "H.4.4"
    ],
@@ -13334,7 +13351,7 @@
     }
    ],
    "step": 3,
-   "reach": 6,
+   "reach": 7,
    "resource": {
     "tier": "website",
     "title": "Stanford CS 144: Introduction to Computer Networking（公开课程主页、讲义与 lab）",
@@ -14680,7 +14697,6 @@
    "unlocks": [
     "D.1.2",
     "D.1.4",
-    "D.1.5",
     "D.4.1",
     "X.2.4"
    ],
@@ -14691,7 +14707,7 @@
     }
    ],
    "step": 2,
-   "reach": 7,
+   "reach": 6,
    "resource": {
     "tier": "website",
     "title": "Database Design – 2nd Edition（Adrienne Watt, BCcampus Open Textbook，免费在线书）",
@@ -14769,7 +14785,7 @@
     "M.5.1"
    ],
    "x": 232,
-   "y": 171
+   "y": 135
   },
   {
    "id": "D.1.2",
@@ -15038,7 +15054,7 @@
    },
    "droppedOriginal": [],
    "x": 696,
-   "y": 160
+   "y": 124
   },
   {
    "id": "D.1.4",
@@ -15191,16 +15207,21 @@
    "milestones": null,
    "optional": false,
    "scope": "简介 5 个知识点中 4 个在 CS2023 的核心主题里",
-   "required": [
+   "required": [],
+   "recommended": [
     {
      "id": "D.1.1",
-     "why": "质量规则、血缘、模式演化都以关系模型和 SQL 表达。",
-     "kind": "required"
+     "why": "UT Dallas ITSS 4V95 数据治理大纲写明“建议有数据库知识，但不是必需”；元数据和数据质量规则会落到表结构上。",
+     "kind": "recommended"
+    },
+    {
+     "id": "I.1.1",
+     "why": "UT Dallas ITSS 4356 Data Governance 先修 ITSS 3300《商业信息技术》（业务流程与信息系统）；Duke LAW 475A 说不需要技术背景，所以不作为必须。",
+     "kind": "recommended"
     }
    ],
-   "recommended": [],
-   "prereqStatus": "draft",
-   "prereqSummary": "证据不足：UIUC IS 524 Data Governance 课程页没写先修；资源是 DAMA-DMBOK（书）。按内容需要起草，待核实。",
+   "prereqStatus": "verified",
+   "prereqSummary": "UT Dallas ITSS 4356 Data Governance：先修 ITSS 3300 Information Technology for Business；UT Dallas ITSS 4V95 大纲：建议有数据库知识但非必需；Duke LAW 475A Data Governance：不需要技术背景。",
    "unlocks": [],
    "related": [
     {
@@ -15208,7 +15229,7 @@
      "why": "数据治理把技术元数据与组织责任、流程连接起来。"
     }
    ],
-   "step": 3,
+   "step": 1,
    "reach": 0,
    "resource": {
     "tier": "website",
@@ -15230,6 +15251,27 @@
    },
    "zhResourceNote": "",
    "courses": [
+    {
+     "school": "University of Texas at Dallas",
+     "course": "ITSS 4356 Data Governance",
+     "url": "https://catalog.utdallas.edu/2024/undergraduate/courses/itss",
+     "prereq_text": "ITSS 4356 Data Governance (3 semester credit hours) Students will learn the principles, goals, and business drivers of data governance. Topics include metadata, data quality, master and reference data management, and appropriate uses of data and ethics. ... Prerequisite: ITSS 3300.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Texas at Dallas",
+     "course": "ITSS 4V95.002 Data Governance (Fall 2020 syllabus)",
+     "url": "https://dox.utdallas.edu/syl100225",
+     "prereq_text": "Course Pre-requisites, Co-requisites, and/or Other Restrictions — Prior knowledge of database systems is recommended, but not required.",
+     "prereq_kind": "recommended"
+    },
+    {
+     "school": "Duke University School of Law",
+     "course": "LAW 475A Data Governance",
+     "url": "https://law.duke.edu/academics/course/475a",
+     "prereq_text": "No technical background is necessary to take this class. The first few weeks will include an introduction to data, databases, and governance best practices.",
+     "prereq_kind": "unspecified"
+    },
     {
      "school": "University of Illinois Urbana-Champaign (School of Information Sciences)",
      "course": "IS 524 Data Governance",
@@ -15275,8 +15317,8 @@
     ]
    },
    "droppedOriginal": [],
-   "x": 464,
-   "y": 304
+   "x": 0,
+   "y": 124
   },
   {
    "id": "D.2.1",
@@ -15697,7 +15739,7 @@
    },
    "droppedOriginal": [],
    "x": 928,
-   "y": 160
+   "y": 124
   },
   {
    "id": "D.3.1",
@@ -15976,7 +16018,7 @@
    },
    "droppedOriginal": [],
    "x": 928,
-   "y": 232
+   "y": 196
   },
   {
    "id": "D.3.3",
@@ -16108,7 +16150,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 243
+   "y": 207
   },
   {
    "id": "D.4.1",
@@ -16240,7 +16282,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 376
+   "y": 304
   },
   {
    "id": "D.4.2",
@@ -16371,7 +16413,7 @@
    },
    "droppedOriginal": [],
    "x": 696,
-   "y": 232
+   "y": 196
   },
   {
    "id": "A.1.1",
@@ -18986,13 +19028,14 @@
    "prereqStatus": "verified",
    "prereqSummary": "Berkeley CS 161：先修 61B、61C、70；Stanford CS 155：要求懂操作系统、网络协议和编程语言。这两门是完整的安全课，本节点只取原则部分。",
    "unlocks": [
+    "S.2.4",
     "S.4.1",
     "S.4.2",
     "S.4.4"
    ],
    "related": [],
    "step": 2,
-   "reach": 3,
+   "reach": 4,
    "resource": {
     "tier": "website",
     "title": "Computer Security（UC Berkeley CS 161 在线教材；David Wagner, Nicholas Weaver, Peyrin Kao 等，免费、CC BY-SA）",
@@ -19064,7 +19107,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 205
+   "y": 211
   },
   {
    "id": "S.1.2",
@@ -19224,7 +19267,7 @@
    },
    "droppedOriginal": [],
    "x": 928,
-   "y": 61
+   "y": 139
   },
   {
    "id": "S.1.3",
@@ -19357,7 +19400,7 @@
    },
    "droppedOriginal": [],
    "x": 1160,
-   "y": 205
+   "y": 211
   },
   {
    "id": "S.2.1",
@@ -19406,12 +19449,10 @@
    ],
    "prereqStatus": "verified",
    "prereqSummary": "MIT 6.858 Computer Systems Security：先修 6.033；Berkeley CS 161：先修 61B、61C、70。",
-   "unlocks": [
-    "S.5.2"
-   ],
+   "unlocks": [],
    "related": [],
    "step": 4,
-   "reach": 1,
+   "reach": 0,
    "resource": {
     "tier": "website",
     "title": "6.858 Computer Systems Security（MIT OpenCourseWare，Fall 2014，Nickolai Zeldovich；含全套 lecture notes、视频、labs）",
@@ -19487,7 +19528,7 @@
    },
    "droppedOriginal": [],
    "x": 696,
-   "y": 92
+   "y": 27
   },
   {
    "id": "S.2.2",
@@ -19623,7 +19664,7 @@
    },
    "droppedOriginal": [],
    "x": 696,
-   "y": 164
+   "y": 99
   },
   {
    "id": "S.2.3",
@@ -19759,7 +19800,7 @@
    },
    "droppedOriginal": [],
    "x": 696,
-   "y": 236
+   "y": 171
   },
   {
    "id": "S.2.4",
@@ -19789,33 +19830,48 @@
    "scope": "选修：多租户、控制平面、镜像与编排安全不在 CS2023 里（容器逃逸在 OS 的 Non-core）。",
    "required": [
     {
-     "id": "C.2.3",
-     "why": "容器隔离、镜像、编排的安全以虚拟化和容器机制为基础。",
+     "id": "S.1.1",
+     "why": "BU MET CS 690 Network and Cloud Security 先修 MET CS 595 / CY 100 网络安全基础；云安全的身份、权限与威胁建模都建立在安全原理上。",
+     "kind": "required"
+    },
+    {
+     "id": "C.3.2",
+     "why": "BU MET CS 690 先修 MET CS 535 / 625 计算机网络；云网络隔离、控制平面暴露面都要懂网络。",
+     "kind": "required"
+    },
+    {
+     "id": "C.2.1",
+     "why": "UT Dallas CS 6343 Cloud Computing 先修 CS 5348 操作系统；容器隔离和多租户依赖进程、内存与权限机制。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "C.2.3",
+     "why": "容器与编排安全要先知道容器和虚拟化怎么工作；找到的课都在课内讲虚拟化，没有列为先修。",
+     "kind": "recommended"
+    },
+    {
      "id": "C.4.2",
-     "why": "云服务模型与 IAM。",
+     "why": "云服务模型（IaaS/PaaS/SaaS）由云计算技能讲，UT Dallas CS 6343 在课内讲。",
      "kind": "recommended"
     },
     {
      "id": "S.2.2",
-     "why": "云网络的分段与防护。",
+     "why": "云里的网络防护与网络安全技能重叠，BU MET CS 690 在同一门课里讲。",
      "kind": "recommended"
     },
     {
-     "id": "S.1.1",
-     "why": "共享责任模型下的威胁建模。",
+     "id": "F.1.1",
+     "why": "UT Dallas CS 6343 还要求 CS 5343 算法与数据结构，入门的云安全不依赖它。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "证据不足：Berkeley CYBER 212 Cloud Security 只写了 MICS 学生专用，没有课程先修；资源是 Kubernetes 官方安全文档。按内容需要起草，待核实。",
+   "prereqStatus": "verified",
+   "prereqSummary": "BU MET CS 690 Network and Cloud Security：先修计算机网络（MET CS 535/625）和网络安全基础（MET CS 595/CY 100）；UT Dallas CS 6343 Cloud Computing：先修 CS 5343 算法与数据结构、CS 5348 操作系统。",
    "unlocks": [],
    "related": [],
-   "step": 5,
+   "step": 4,
    "reach": 0,
    "resource": {
     "tier": "website",
@@ -19836,6 +19892,20 @@
    },
    "zhResourceNote": "",
    "courses": [
+    {
+     "school": "Boston University (Metropolitan College)",
+     "course": "MET CS 690 Network and Cloud Security",
+     "url": "https://www.bu.edu/met/degrees-certificates/ms-computer-information-systems-cybersecurity",
+     "prereq_text": "Prerequisites: (MET CS 535 or MET CS 625) and (MET CS 595 or MET CY 100) or consent of instructor.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Texas at Dallas",
+     "course": "CS 6343 Cloud Computing",
+     "url": "https://catalog.utdallas.edu/2024/graduate/courses/cs",
+     "prereq_text": "CS 6343 Cloud Computing (3 semester credit hours) Different layers of cloud computing, infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS). ... Virtualization and emulation. Server virtualization, storage virtualization, and network virtualization. Cloud security. Prerequisites: CS 5343 and CS 5348.",
+     "prereq_kind": "required"
+    },
     {
      "school": "UC Berkeley",
      "course": "CYBER 212 Cloud Security",
@@ -19884,8 +19954,8 @@
     ]
    },
    "droppedOriginal": [],
-   "x": 928,
-   "y": 205
+   "x": 696,
+   "y": 243
   },
   {
    "id": "S.2.5",
@@ -20007,7 +20077,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 27
+   "y": 38
   },
   {
    "id": "S.3.1",
@@ -20145,7 +20215,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 99
+   "y": 110
   },
   {
    "id": "S.3.2",
@@ -20294,7 +20364,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 171
+   "y": 182
   },
   {
    "id": "S.3.3",
@@ -20446,7 +20516,7 @@
    },
    "droppedOriginal": [],
    "x": 928,
-   "y": 277
+   "y": 211
   },
   {
    "id": "S.4.1",
@@ -20595,7 +20665,7 @@
    },
    "droppedOriginal": [],
    "x": 696,
-   "y": 308
+   "y": 315
   },
   {
    "id": "S.4.2",
@@ -20728,7 +20798,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 243
+   "y": 254
   },
   {
    "id": "S.4.3",
@@ -20854,7 +20924,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 322
+   "y": 333
   },
   {
    "id": "S.4.4",
@@ -20991,7 +21061,7 @@
    },
    "droppedOriginal": [],
    "x": 928,
-   "y": 349
+   "y": 283
   },
   {
    "id": "S.5.1",
@@ -21129,7 +21199,7 @@
    },
    "droppedOriginal": [],
    "x": 464,
-   "y": 394
+   "y": 405
   },
   {
    "id": "S.5.2",
@@ -21158,28 +21228,38 @@
    "scope": "简介 4 个知识点中 2 个在 CS2023 的核心主题里",
    "required": [
     {
-     "id": "S.2.1",
-     "why": "安全测量研究以系统安全为基础。",
+     "id": "C.2.1",
+     "why": "Berkeley CS 261 先修 CS 162 操作系统；MIT 6.5660 先修 6.1810 操作系统或 6.1800 计算机系统工程；漏洞成因与缓解设计都发生在系统层。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
+     "id": "S.2.1",
+     "why": "研究型安全课建立在系统安全知识上；三门课都在课内讲，没有把安全课列为先修。",
+     "kind": "recommended"
+    },
+    {
+     "id": "C.3.2",
+     "why": "Michigan EECS 588 先修 EECS 482 操作系统或 EECS 489 计算机网络二选一；网络测量要懂协议。",
+     "kind": "recommended"
+    },
+    {
      "id": "I.2.3",
-     "why": "研究设计与可复现。",
+     "why": "可复现实验和测量研究要用研究设计方法，属于深入层。",
      "kind": "recommended"
     },
     {
      "id": "M.6.2",
-     "why": "测量结果的统计推断。",
+     "why": "安全测量的统计推断，属于深入层。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "证据不足：找到的 MIT 6.858（先修 6.033）本身就是系统安全课，并不讲测量研究；资源是 Anderson《Security Engineering》。按内容需要起草，待核实。",
+   "prereqStatus": "verified",
+   "prereqSummary": "Berkeley CS 261 Security in Computer Systems：先修 CS 162 操作系统；MIT 6.5660 Computer Systems Security：先修 6.1020 及 6.1800 或 6.1810；Michigan EECS 588：先修 EECS 482 或 EECS 489 或研究生身份。",
    "unlocks": [],
    "related": [],
-   "step": 5,
+   "step": 4,
    "reach": 0,
    "resource": {
     "tier": "book",
@@ -21200,6 +21280,27 @@
    },
    "zhResourceNote": "",
    "courses": [
+    {
+     "school": "University of Michigan",
+     "course": "EECS 588 Computer and Network Security (research-paper seminar: attack trees, OS security, PKI, Bayesian intrusion detection / spam filtering; 'to prepare for research in the area')",
+     "url": "https://web.eecs.umich.edu/~aprakash/eecs588/",
+     "prereq_text": "Prerequisites: EECS 482 or EECS 489 or grad standing.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "MIT",
+     "course": "6.5660 Computer Systems Security（MIT 官方目录条目；同一课程的旧站为 css.csail.mit.edu/6.858，2024 版首页标题 '6.566 / Spring 2024'）",
+     "url": "http://catalog.mit.edu/subjects/6/",
+     "prereq_text": "6.5660 Computer Systems Security / Prereq: 6.1020 and (6.1800 or 6.1810)",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "UC Berkeley",
+     "course": "CS 261 Security in Computer Systems（研究生安全综述课：保护与访问控制、分布式访问安全、防火墙、安全编码、safe languages、mobile code、真实系统案例，另含密码协议/隐私匿名）",
+     "url": "https://www2.eecs.berkeley.edu/Courses/CS261/",
+     "prereq_text": "Prerequisites: COMPSCI 162",
+     "prereq_kind": "required"
+    },
     {
      "school": "MIT",
      "course": "6.858 Computer Systems Security",
@@ -21248,8 +21349,8 @@
     ]
    },
    "droppedOriginal": [],
-   "x": 928,
-   "y": 133
+   "x": 696,
+   "y": 394
   },
   {
    "id": "H.1.1",
@@ -23248,29 +23349,34 @@
    "required": [
     {
      "id": "C.3.2",
-     "why": "边缘计算的核心是网络时延与带宽的权衡。",
+     "why": "Amrita Fog and Edge Computing 要求网络知识；Duke COMPSCI 564 先修网络课或操作系统课；时延、带宽权衡都是网络问题。",
+     "kind": "required"
+    },
+    {
+     "id": "C.2.1",
+     "why": "Amrita Fog and Edge Computing 要求操作系统基础；边缘节点上的调度与资源管理依赖操作系统概念。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "C.4.1",
-     "why": "端边云协同涉及分布式系统。",
+     "why": "Amrita 的课还要求分布式系统，Duke 不要求；入门层的卸载与调度不需要共识、复制等内容。",
      "kind": "recommended"
     },
     {
      "id": "H.3.2",
-     "why": "Northwestern CE-395：嵌入式系统经验 helpful but not required。",
+     "why": "Northwestern CE-395 写明嵌入式系统经验“有帮助但不是必需”。",
      "kind": "recommended"
     },
     {
      "id": "C.2.3",
-     "why": "边缘节点上的应用常用容器部署。",
+     "why": "边缘部署常用容器与轻量虚拟化，课程没有列为先修。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "证据不足：Northwestern CE-395/495 IoT & Edge Computing 列出的都是 helpful but not required；资源是 Shi 等人的综述论文。按内容需要起草，待核实。",
+   "prereqStatus": "verified",
+   "prereqSummary": "Amrita Fog and Edge Computing：先修分布式系统、操作系统基础、网络知识；Duke COMPSCI 564 Edge Computing：先修网络课或操作系统课之一，或研究生身份；Northwestern CE-395：嵌入式、信号与系统等有帮助但非必需。",
    "unlocks": [],
    "related": [
     {
@@ -23300,6 +23406,20 @@
    },
    "zhResourceNote": "",
    "courses": [
+    {
+     "school": "Duke University",
+     "course": "COMPSCI 564 / ECE 654 Edge Computing（seminar：edge platforms、edge-adapted algorithms、edge in mobile & IoT systems，含 research-based project）",
+     "url": "https://cs.duke.edu/courses/edge-computing",
+     "prereq_text": "Prerequisite: ECE/COMPSCI 356 or ECE/COMPSCI 350L or ECE 353/COMPSCI 310 or Graduate Standing",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "Amrita Vishwa Vidyapeetham",
+     "course": "Fog and Edge Computing（M.Tech CSE 课程，Course Type: Lab；CO1 fog/edge 网络与参考架构、CO2 设计 edge 系统、CO3 边缘侧数据采集/分析/决策与学习）",
+     "url": "https://www.amrita.edu/course/fog-and-edge-computing/",
+     "prereq_text": "Pre-Requisite(s): Distributed Systems, Basic OS, Networks knowledge",
+     "prereq_kind": "required"
+    },
     {
      "school": "Northwestern University",
      "course": "CE-395 / CE-495 Internet of Things & Edge Computing",
@@ -24647,7 +24767,7 @@
    },
    "droppedOriginal": [],
    "x": 0,
-   "y": 52
+   "y": 16
   },
   {
    "id": "I.1.2",
@@ -24768,7 +24888,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 16
+   "y": 52
   },
   {
    "id": "I.1.3",
@@ -24889,7 +25009,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 88
+   "y": 124
   },
   {
    "id": "I.1.4",
@@ -25017,7 +25137,7 @@
    },
    "droppedOriginal": [],
    "x": 232,
-   "y": 160
+   "y": 196
   },
   {
    "id": "I.2.1",
@@ -25133,7 +25253,7 @@
    },
    "droppedOriginal": [],
    "x": 0,
-   "y": 124
+   "y": 88
   },
   {
    "id": "I.2.2",
@@ -25166,12 +25286,10 @@
    "recommended": [],
    "prereqStatus": "verified",
    "prereqSummary": "Penn State ENGL 202C Technical Writing 的先修是大一写作课（不在本技能树中）。作为第 1 步的起点。",
-   "unlocks": [
-    "I.2.3"
-   ],
+   "unlocks": [],
    "related": [],
    "step": 1,
-   "reach": 1,
+   "reach": 0,
    "resource": {
     "tier": "website",
     "title": "Purdue OWL: Professional, Technical Writing（普渡大学线上写作实验室，免费）",
@@ -25238,7 +25356,7 @@
    },
    "droppedOriginal": [],
    "x": 0,
-   "y": 196
+   "y": 160
   },
   {
    "id": "I.2.3",
@@ -25266,27 +25384,26 @@
    "milestones": null,
    "optional": false,
    "scope": "简介 6 个知识点中 4 个在 CS2023 的核心主题里",
-   "required": [
-    {
-     "id": "I.2.2",
-     "why": "研究设计要先会检索、阅读文献和写作。",
-     "kind": "required"
-    }
-   ],
+   "required": [],
    "recommended": [
     {
      "id": "M.6.2",
-     "why": "假设检验、功效分析要用数理统计。",
+     "why": "Maryland CMSC634 Empirical Research Methods 建议先修统计入门；实验设计和效度分析要用统计推断。",
+     "kind": "recommended"
+    },
+    {
+     "id": "I.2.2",
+     "why": "文献检索与学术写作有助于研究设计；三门研究方法课都没有把它列为先修。",
      "kind": "recommended"
     },
     {
      "id": "M.6.2.3",
-     "why": "实验设计与因果推断是研究方法的核心工具。",
+     "why": "随机实验与因果识别属于深入层。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "证据不足：CMU 17-803 Empirical Methods 与 Penn State IST 489 的课程页都没写先修。按内容需要起草，待核实。",
+   "prereqStatus": "verified",
+   "prereqSummary": "Maryland CMSC634 Empirical Research Methods for CS：建议先修统计入门（限 CS 硕博）；Mälardalen Research methods in CS：只要求 150 学分（其中 30 学分计算机或电子）；IUS CS553：无先修。",
    "unlocks": [],
    "related": [
     {
@@ -25298,7 +25415,7 @@
      "why": "实验设计提供科研效度和因果判断工具。"
     }
    ],
-   "step": 2,
+   "step": 1,
    "reach": 0,
    "resource": {
     "tier": "website",
@@ -25319,6 +25436,27 @@
    },
    "zhResourceNote": "",
    "courses": [
+    {
+     "school": "University of Maryland",
+     "course": "CMSC634 Empirical Research Methods for Computer Science（constructed/measurement、qualitative and quantitative design、quasi-experimental and non-experimental design 等）",
+     "url": "https://academiccatalog.umd.edu/graduate/courses/cmsc/",
+     "prereq_text": "Recommended: An introductory statistics class. / Restriction: Must be in Computer Science (Master's) program; or must be in Computer Science (Doctoral) program; or permission of instructor.",
+     "prereq_kind": "recommended"
+    },
+    {
+     "school": "Mälardalen University (MDU)",
+     "course": "Research methods in computer science（内容：定量/定性研究、研究问题与假设、效度威胁与伦理、科学文献、实验/案例/调查研究、数据分析）",
+     "url": "https://www.mdu.se/en/malardalen-university/education/course-syllabus?id=06a58222-3b14-11f0-b454-10049b20482b",
+     "prereq_text": "Specific requirements: At least 150 ECTS credits in the technical and/or natural sciences areas of which at least 30 credits are within computer engineering, computer science and/or electronics.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "International University of Sarajevo",
+     "course": "CS553 Research Methodologies in Computer Science（formulate research problem/questions、synthesise literature、select appropriate methods 等）",
+     "url": "https://ecampus.ius.edu.ba/syllabus/cs553-research-methodologies-computer-science",
+     "prereq_text": "Prerequisites: None",
+     "prereq_kind": "unspecified"
+    },
     {
      "school": "Carnegie Mellon University",
      "course": "17-803 Empirical Methods（含研究设计、效度威胁、可复现实证研究）",
@@ -25374,7 +25512,7 @@
     ]
    },
    "droppedOriginal": [],
-   "x": 232,
+   "x": 0,
    "y": 232
   },
   {
@@ -26145,29 +26283,29 @@
    "required": [
     {
      "id": "D.1.1",
-     "why": "临床数据存储与检索（EHR、FHIR 资源）是入门内容的主体；但没有课程把数据库课列为先修，故标为前置待核实。",
+     "why": "UNC CHIP 708 Foundations of Clinical Data Science 写明要会 SQL；临床数据都存在关系型的电子病历库里。",
+     "kind": "required"
+    },
+    {
+     "id": "P.2.3",
+     "why": "UNC CHIP 708 要求会 Python；UIC BHIS 501 先修要求熟悉 Python。",
      "kind": "required"
     }
    ],
    "recommended": [
     {
      "id": "M.6.2",
-     "why": "临床预测模型的评价（灵敏度、PPV、校准）要用统计，课程未列为先修。",
+     "why": "决策支持的评价要用统计推断，课程没有列为先修。",
      "kind": "recommended"
     },
     {
      "id": "M.6.2.3",
-     "why": "临床干预效果评价涉及实验设计与因果推断，课程未列为先修。",
-     "kind": "recommended"
-    },
-    {
-     "id": "P.2.3",
-     "why": "MIT HST.951J 写熟悉 SAS 和 MATLAB 会有帮助。",
+     "why": "临床干预效果评价用到因果推断，属于深入层。",
      "kind": "recommended"
     }
    ],
-   "prereqStatus": "draft",
-   "prereqSummary": "MIT HST.951J Medical Decision Support：只写熟悉 SAS/MATLAB 有帮助；JHU Health Informatics Specialization：标为入门级，未列具体先修。证据不足以确认必修前置。",
+   "prereqStatus": "verified",
+   "prereqSummary": "UNC CHIP 708 Foundations of Clinical Data Science：先修 CHIP 732 与 CHIP 705 或 INLS 523 与 INLS 560，并要求会 SQL 和 Python；UIC BHIS 501：要求熟悉 Python；UMB INFO 601：无先修。",
    "unlocks": [],
    "related": [
     {
@@ -26197,6 +26335,27 @@
    },
    "zhResourceNote": "",
    "courses": [
+    {
+     "school": "University of North Carolina at Chapel Hill (Carolina Health Informatics Program)",
+     "course": "CHIP 708 Foundations of Clinical Data Science（clinical data collection/models/context/caveats，用真实临床数据做分析并复现文献结果）",
+     "url": "https://catalog.unc.edu/courses/chip/",
+     "prereq_text": "Requisites: Prerequisites, CHIP 732 and CHIP 705 or INLS 523 and INLS 560 or equivalents (with instructor permission). / 课程描述另写：Knowledge of SQL and Python are required.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Illinois Chicago",
+     "course": "BHIS 501 Methods in Biomedical and Health Informatics I（生物医学与健康信息学研究的 methods、术语与技术基础，两门系列课的第一门）",
+     "url": "https://catalog.uic.edu/gcat/colleges-schools/applied-health-sciences/him/",
+     "prereq_text": "Prerequisite(s): Basic familiarity with Python programming language.",
+     "prereq_kind": "required"
+    },
+    {
+     "school": "University of Maryland, Baltimore",
+     "course": "INFO 601 Foundations in Clinical and Health Informatics（健康信息学基础、IT 在医疗与研究中的作用、临床信息系统与患者关系）",
+     "url": "https://www.graduate.umaryland.edu/clinicalinformatics/course-descriptions/",
+     "prereq_text": "Prerequisite: None.",
+     "prereq_kind": "unspecified"
+    },
     {
      "school": "MIT",
      "course": "HST.951J Medical Decision Support",
