@@ -7,6 +7,7 @@
 ```
 data/source/chatgpt-outputs/knowledge-map-data.json   ChatGPT 原图（只读）：节点、简介、相关关系、路线
 data/curation/partition.json                           在原图上合并、删除、新增技能，改名称和简介
+data/curation/scope.json                               对照 CS2023 的主干 / 选修判定依据（知识点 → 知识单元、层级、原文片段）
 data/curation/prereqs.txt                              必须 / 推荐前置（主代理维护）
 data/curation/prereq-notes.json                        每条前置的理由 + 证据摘要
 data/curation/names-en.tsv                             英文名
@@ -37,6 +38,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 | `node tests/guide.mjs [id…]` | 用深链打开每张知识导览图，核对画出的节点数、查漏补缺列表、Esc 关闭和地址，桌面和手机各截图一组 |
 | `scripts/research_tool.py fetch <url>` | 打开网页并缓存（免费，PDF 用 pypdf 抽文字）；`extract` 走 Tavily（花额度）读 JS 渲染页面，同样缓存 |
 | `scripts/research_digest.py <id前缀>` | 把 pi 的检索结果压成几行摘要，供主代理判定前置 |
+| `python -X utf8 -I scripts/check_scope.py [--markdown]` | 核对 `scope.json`：每段原文片段都在 CS2023 所引单元的所引层级里，每个被引的知识点都在技能简介里；`--markdown` 输出判定报告里的逐技能表（先 build） |
 | `scripts/set_prereqs.py <decisions.json>` | 把一批判定写回 `prereqs.txt` 和 `prereq-notes.json` |
 | `python -X utf8 scripts/merge_skills.py merge/drop/move-source/drop-source …` | 改技能划分时搬数据：前置、理由、课程证据、练习题、导览图来源、学习资源、英文名一起改，见下面“改技能划分” |
 | `scripts/archive_research.py` | 把审核过的检索结果从 `temp/research/nodes/` 归档到 `data/research/nodes/` |
@@ -60,6 +62,22 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 - MIT OCW：讲次页面里有 `…_<YouTube ID>.vtt` 链接和 “Download transcript” 就是有英文字幕；逐讲抓页面数一下，写“N 讲中 M 讲有”。
 - 哔哩哔哩：字幕要登录后才显示（yt-dlp 也会提示 “Subtitles are only available when logged in”），中国大学MOOC 同理；臺大 OCW 有人机验证，脚本读不到。
 
+## 主干与选修
+
+地图上的虚线框（`optional`）和详情里的理由（`scope`）由 `scripts/build.mjs` 按 `data/curation/scope.json` 计算，规则和依据见 `reports/skill-scope-2026-11-01.md`：
+
+- 简介里至少一半的知识点有 CS2023 CS Core / KA Core 原文对应，算主干；
+- `hosts` 标明的技能讲授某个 CS Core 主题，算主干；
+- 主干技能的必须前置也算主干。
+- 其余为选修。领域块只有在全部技能都是选修时才标“选修”。
+
+维护时注意：
+
+- 改了技能简介，`scope.json` 里引用的知识点对不上，构建会直接报错。按新简介重新比对后，跑 `check_scope.py`。
+- 新增技能要加一条判定；没有原文对应的，写 `note` 说明 CS2023 里没有或只在 Non-core。
+- 改了必须前置，主干集合会跟着变，build 输出的 `scope (CS2023)` 一行可以看到数量。
+- CS2023 原文 PDF 通过 `research_tool` 的缓存读取，第一次运行会自动抓取。
+
 ## 改技能划分
 
 原图只读，技能的合并、删除、新增和改名都记在 `data/curation/partition.json`，构建时套用：
@@ -78,7 +96,8 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
    - 学习资源：按新简介重新找、重新写 `covers`；
    - 导览图：改过的图在 `temp/outlines/nodes/<id>.json`，跑 `check_outlines.py --archive <id>` 逐条核对后归档，补充分支要写 `fill`；
    - 英文名：改 `names-en.tsv`。
-4. 跑 build 和测试，更新 README 里的数字。
+4. 在 `scope.json` 里补上或改掉相应的判定，跑 `check_scope.py`。
+5. 跑 build 和测试，更新 README 里的数字。
 
 2026-11-01 的改动和理由见 `reports/skill-partition-review-2026-11-01.md`。宣传片里的数字是改动前的，改不了，README 里已注明。
 

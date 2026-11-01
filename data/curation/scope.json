@@ -1,0 +1,4304 @@
+{
+ "_source": "ACM/IEEE-CS/AAAI CS2023 Body of Knowledge (https://csed.acm.org/final-report/, 3.1-Body-of-Knowledge); tier definitions from 1.3-Introduction-to-Knowledge-Model.",
+ "_rule": "主干 = (1) 简介里至少一半的知识点在 CS Core / KA Core 主题里有原文对应；或 (2) 它是树里讲某个 CS Core 主题的技能；或 (3) 它是 (1)(2) 技能的必须前置。其余为选修。",
+ "skills": {
+  "M.1.1": {
+   "matched": {
+    "数列与函数极限": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Sequences, series, limits"
+     ]
+    ]
+   },
+   "note": "CS2023 只写到数列、级数与极限，没有连续性和闭区间性质。"
+  },
+  "M.1.2": {
+   "matched": {
+    "导数": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Single-variable derivatives"
+     ]
+    ],
+    "微分": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "computation rules (chain rule etc.)"
+     ]
+    ],
+    "泰勒公式与局部近似": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Taylor series"
+     ]
+    ]
+   }
+  },
+  "M.1.3": {
+   "matched": {
+    "不定积分": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Single-variable integration"
+     ]
+    ],
+    "定积分": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "definite vs indefinite"
+     ]
+    ],
+    "微积分基本定理与反常积分": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "fundamental theorem of calculus"
+     ]
+    ]
+   }
+  },
+  "M.1.4.1": {
+   "matched": {
+    "偏导数": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Multivariate calculus: partial derivatives"
+     ]
+    ],
+    "标量场梯度": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "partial derivatives, gradient"
+     ]
+    ],
+    "向量映射导数（雅可比矩阵）": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "vector valued functions"
+     ]
+    ],
+    "链式法则与坐标变换": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "gradient, chain-rule"
+     ]
+    ],
+    "二阶近似与极值判别": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "global vs local minima"
+     ]
+    ]
+   },
+   "meta": [
+    "连接二阶优化"
+   ]
+  },
+  "M.1.4.4": {
+   "note": "CS2023 的微积分只到多元微分，没有重积分、曲线曲面积分和 Green/Gauss/Stokes 定理。"
+  },
+  "M.1.5": {
+   "matched": {
+    "数项级数": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Sequences, series, limits"
+     ]
+    ],
+    "幂级数": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Taylor series"
+     ]
+    ]
+   },
+   "note": "函数项级数与一致收敛不在 CS2023 里。"
+  },
+  "M.1.6": {
+   "meta": [
+    "为现代分析提供严谨基础"
+   ],
+   "note": "CS2023 没有实分析。"
+  },
+  "M.1.6.1": {
+   "note": "CS2023 没有测度论。"
+  },
+  "M.1.7": {
+   "note": "CS2023 没有泛函分析。"
+  },
+  "M.1.8": {
+   "note": "CS2023 没有复分析。"
+  },
+  "M.1.9": {
+   "matched": {
+    "傅里叶级数/变换": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Fourier transforms"
+     ]
+    ],
+    "小波": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "wavelet transform"
+     ]
+    ]
+   },
+   "note": "CS2023 把傅里叶变换和小波作为图像编码工具列在图像处理单元。"
+  },
+  "M.2.1": {
+   "matched": {
+    "一阶与高阶方程": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Ordinary Differential Equations (ODEs): definition"
+     ]
+    ],
+    "稳定性与数值求解": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Euler method"
+     ]
+    ]
+   },
+   "note": "CS2023 只要求 ODE 的定义和欧拉法，不含存在唯一性与线性方程组理论。"
+  },
+  "M.2.2": {
+   "note": "CS2023 没有偏微分方程理论。"
+  },
+  "M.2.3": {
+   "note": "CS2023 没有动力系统与混沌。"
+  },
+  "M.2.4": {
+   "note": "CS2023 没有变分法与最优控制。"
+  },
+  "M.3.1": {
+   "matched": {
+    "向量空间": [
+     [
+      "MSF-Linear",
+      "KA Core",
+      "Linear independence, span, basis"
+     ]
+    ],
+    "线性映射": [
+     [
+      "MSF-Linear",
+      "KA Core",
+      "geometric transformations with matrices"
+     ]
+    ],
+    "线性方程组": [
+     [
+      "MSF-Linear",
+      "KA Core",
+      "Solving equations, row-reduction"
+     ]
+    ],
+    "矩阵": [
+     [
+      "MSF-Linear",
+      "CS Core",
+      "Matrices: definition, matrix operations"
+     ]
+    ],
+    "特征值": [
+     [
+      "MSF-Linear",
+      "KA Core",
+      "Eigenvectors and eigenvalues"
+     ]
+    ],
+    "内积与正交分解": [
+     [
+      "MSF-Linear",
+      "KA Core",
+      "Orthogonality, projection, least-squares"
+     ]
+    ]
+   }
+  },
+  "M.3.2": {
+   "matched": {
+    "谱与奇异值分解": [
+     [
+      "MSF-Linear",
+      "KA Core",
+      "Singular Value Decomposition (SVD)"
+     ]
+    ]
+   },
+   "meta": [
+    "合并两门高度重叠课程名称"
+   ],
+   "note": "矩阵范数、扰动和矩阵不等式不在 CS2023 里。"
+  },
+  "M.3.3": {
+   "matched": {
+    "张量积": [
+     [
+      "AR-Quantum",
+      "KA Core",
+      "Two qubit gates and tensor products"
+     ]
+    ]
+   },
+   "meta": [
+    "AI中的多维数组不等同于全部张量理论"
+   ]
+  },
+  "M.3.4": {
+   "matched": {
+    "域": [
+     [
+      "SEC-Crypto",
+      "CS Core",
+      "finite fields"
+     ]
+    ],
+    "商结构与有限域": [
+     [
+      "SEC-Crypto",
+      "CS Core",
+      "finite fields"
+     ]
+    ]
+   },
+   "meta": [
+    "高阶可进入表示论"
+   ],
+   "note": "CS2023 只在密码学的数学预备里提到有限域，由密码学技能讲授；群、环、同态不在其中。"
+  },
+  "M.3.5": {
+   "matched": {
+    "整除与同余": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Modular arithmetic"
+     ]
+    ],
+    "素数": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "primality, factoring"
+     ]
+    ],
+    "数论算法": [
+     [
+      "SEC-Crypto",
+      "CS Core",
+      "modular arithmetic, Euclidean algorithm"
+     ]
+    ]
+   }
+  },
+  "M.4.1": {
+   "matched": {
+    "坐标": [
+     [
+      "GIT-Fundamentals",
+      "CS Core",
+      "Spatialization: coordinate systems"
+     ]
+    ],
+    "向量运算": [
+     [
+      "MSF-Linear",
+      "CS Core",
+      "Vectors: definitions, vector operations, geometric interpretation, angles"
+     ]
+    ]
+   },
+   "meta": [
+    "与线性代数共享向量工具"
+   ]
+  },
+  "M.4.2": {
+   "note": "CS2023 没有微分几何。"
+  },
+  "M.4.3": {
+   "note": "CS2023 没有拓扑学。"
+  },
+  "M.4.4": {
+   "matched": {
+    "网格": [
+     [
+      "GIT-Modeling",
+      "KA Core",
+      "Mesh representation, mesh fairing, and mesh generation"
+     ]
+    ],
+    "曲面处理与几何算法": [
+     [
+      "GIT-Modeling",
+      "KA Core",
+      "intersection calculation and proximity tests"
+     ]
+    ]
+   }
+  },
+  "M.4.5": {
+   "meta": [
+    "与AI共享应用"
+   ],
+   "note": "CS2023 没有拓扑数据分析。"
+  },
+  "M.5.1": {
+   "matched": {
+    "集合运算": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Sets, relations, functions, cardinality"
+     ]
+    ],
+    "关系": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Sets, relations, functions, cardinality"
+     ]
+    ],
+    "映射": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Sets, relations, functions, cardinality"
+     ]
+    ],
+    "基数": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Sets, relations, functions, cardinality"
+     ]
+    ]
+   }
+  },
+  "M.5.2": {
+   "matched": {
+    "命题与谓词逻辑": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "simple predicate logic"
+     ]
+    ],
+    "推理": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "inference rules"
+     ]
+    ]
+   },
+   "hosts": [
+    "MSF-Discrete",
+    "CS Core",
+    "Logic: truth tables, connectives (operators), inference rules"
+   ]
+  },
+  "M.5.3": {
+   "matched": {
+    "归纳": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Proof techniques (induction, proof by contradiction)"
+     ]
+    ],
+    "反证": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Proof techniques (induction, proof by contradiction)"
+     ]
+    ],
+    "不变式": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Algorithmic correctness a. Invariants"
+     ]
+    ],
+    "递推与结构化证明": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Recursive mathematical definitions"
+     ]
+    ]
+   }
+  },
+  "M.5.4": {
+   "matched": {
+    "计数": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Permutations, combinations, counting, pigeonhole principle"
+     ]
+    ],
+    "容斥": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "inclusion-exclusion principle"
+     ]
+    ]
+   },
+   "hosts": [
+    "MSF-Discrete",
+    "CS Core",
+    "Permutations, combinations, counting, pigeonhole principle"
+   ],
+   "note": "生成函数、组合设计不在 CS2023 里，但计数与鸽巢原理是 CS Core，树里由这个技能讲。"
+  },
+  "M.5.5": {
+   "matched": {
+    "图": [
+     [
+      "MSF-Discrete",
+      "CS Core",
+      "Graphs: basic definitions"
+     ]
+    ],
+    "树": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Trees (See also: MSF-Discrete)"
+     ]
+    ],
+    "连通性": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "[un]connected"
+     ]
+    ],
+    "网络流与谱图理论": [
+     [
+      "AL-Strategies",
+      "KA Core",
+      "Iterative improvement (e.g., Ford-Fulkerson"
+     ]
+    ]
+   }
+  },
+  "M.6.1": {
+   "matched": {
+    "概率空间": [
+     [
+      "MSF-Probability",
+      "CS Core",
+      "sample spaces, events, probability"
+     ]
+    ],
+    "随机变量": [
+     [
+      "MSF-Probability",
+      "CS Core",
+      "Discrete random variables and distributions"
+     ]
+    ],
+    "分布": [
+     [
+      "MSF-Probability",
+      "CS Core",
+      "Continuous random variables and distributions"
+     ]
+    ],
+    "条件概率": [
+     [
+      "MSF-Probability",
+      "CS Core",
+      "conditional probability, Bayes"
+     ]
+    ],
+    "期望与极限定理": [
+     [
+      "MSF-Probability",
+      "CS Core",
+      "Expectation, variance, law of large numbers, central limit theorem"
+     ]
+    ]
+   },
+   "meta": [
+    "测度化表述属于深入层"
+   ]
+  },
+  "M.6.2": {
+   "matched": {
+    "抽样分布": [
+     [
+      "MSF-Statistics",
+      "KA Core",
+      "Sampling, bias, adequacy of samples"
+     ]
+    ],
+    "估计": [
+     [
+      "MSF-Statistics",
+      "CS Core",
+      "Univariate data: point estimation, confidence intervals"
+     ]
+    ],
+    "检验": [
+     [
+      "MSF-Statistics",
+      "KA Core",
+      "Hypothesis testing"
+     ]
+    ],
+    "似然": [
+     [
+      "MSF-Statistics",
+      "CS Core",
+      "Calculate maximum likelihood estimates"
+     ]
+    ],
+    "置信区间": [
+     [
+      "MSF-Statistics",
+      "CS Core",
+      "Univariate data: point estimation, confidence intervals"
+     ]
+    ]
+   }
+  },
+  "M.6.2.1": {
+   "matched": {
+    "先验/似然/后验": [
+     [
+      "AI-KRR",
+      "CS Core",
+      "Bayesian reasoning a. Bayesian inference"
+     ]
+    ]
+   },
+   "note": "层级模型与后验计算不在 CS2023 里。"
+  },
+  "M.6.2.2": {
+   "matched": {
+    "线性/广义线性模型": [
+     [
+      "MSF-Statistics",
+      "KA Core",
+      "Multivariate data: estimation, correlation, regression"
+     ]
+    ],
+    "正则化": [
+     [
+      "AI-ML",
+      "KA Core",
+      "Regularization to avoid overfitting"
+     ]
+    ]
+   }
+  },
+  "M.6.2.3": {
+   "note": "CS2023 的统计单元有假设检验，但没有因果推断。"
+  },
+  "M.6.2.4": {
+   "note": "CS2023 把学习理论列为 AI-ML 的 Non-core。"
+  },
+  "M.6.3": {
+   "note": "CS2023 没有随机过程。"
+  },
+  "M.6.3.1": {
+   "matched": {
+    "离散/连续时间链": [
+     [
+      "AI-KRR",
+      "KA Core",
+      "Markov chains and Markov models"
+     ]
+    ]
+   },
+   "note": "平稳分布、混合与遍历性不在 CS2023 里。"
+  },
+  "M.6.3.2": {
+   "meta": [
+    "适用于部分金融与科学建模路线"
+   ],
+   "note": "CS2023 没有随机微积分。"
+  },
+  "M.6.4": {
+   "matched": {
+    "到达/服务过程与系统性能": [
+     [
+      "NC-Fundamentals",
+      "CS Core",
+      "Basic queueing concepts"
+     ]
+    ]
+   },
+   "note": "排队基本概念由网络技能讲；时间序列不在 CS2023 里。"
+  },
+  "M.6.5": {
+   "matched": {
+    "信源/信道编码": [
+     [
+      "AR-Memory",
+      "CS Core",
+      "Error coding b. Data compression"
+     ]
+    ]
+   },
+   "note": "熵、互信息、信道容量不在 CS2023 里。"
+  },
+  "M.7.1": {
+   "matched": {
+    "目标与约束": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "constrained optimization"
+     ]
+    ],
+    "线性规划": [
+     [
+      "AL-Strategies",
+      "KA Core",
+      "Iterative improvement (e.g., Ford-Fulkerson, simplex)"
+     ]
+    ],
+    "网络优化与资源配置": [
+     [
+      "AL-Strategies",
+      "KA Core",
+      "Iterative improvement (e.g., Ford-Fulkerson, simplex)"
+     ]
+    ]
+   }
+  },
+  "M.7.2": {
+   "matched": {
+    "凸集/凸函数": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Optimization: convexity"
+     ]
+    ]
+   },
+   "note": "对偶、KKT、近端与内点法不在 CS2023 里。"
+  },
+  "M.7.3": {
+   "matched": {
+    "局部与全局最优": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "global vs local minima"
+     ]
+    ]
+   }
+  },
+  "M.7.4": {
+   "note": "CS2023 有梯度下降，没有随机优化理论。"
+  },
+  "M.7.5": {
+   "matched": {
+    "分支定界": [
+     [
+      "AL-Strategies",
+      "CS Core",
+      "branch-and-bound"
+     ]
+    ],
+    "近似与启发式方法": [
+     [
+      "AL-Strategies",
+      "KA Core",
+      "Approximation algorithms"
+     ]
+    ]
+   }
+  },
+  "M.7.6": {
+   "matched": {
+    "效用": [
+     [
+      "AI-KRR",
+      "KA Core",
+      "Utility and decision making"
+     ]
+    ]
+   },
+   "note": "博弈论在 CS2023 里是 AI 的 Non-core。"
+  },
+  "M.8.1": {
+   "matched": {
+    "浮点数": [
+     [
+      "AR-Representation",
+      "CS Core",
+      "Floating-point"
+     ]
+    ],
+    "后向稳定性": [
+     [
+      "PDC-Algorithms",
+      "KA Core",
+      "numerical precision/stability"
+     ]
+    ]
+   }
+  },
+  "M.8.2": {
+   "note": "CS2023 没有插值与数值积分。"
+  },
+  "M.8.3": {
+   "matched": {
+    "时间步进": [
+     [
+      "PDC-Algorithms",
+      "KA Core",
+      "Modeling and simulation: differential equations"
+     ]
+    ],
+    "收敛与多物理仿真": [
+     [
+      "PDC-Algorithms",
+      "KA Core",
+      "Modeling and simulation: differential equations"
+     ]
+    ]
+   }
+  },
+  "M.8.4": {
+   "matched": {
+    "随机抽样": [
+     [
+      "MSF-Calculus",
+      "KA Core",
+      "Monte Carlo integration"
+     ]
+    ]
+   },
+   "meta": [
+    "与贝叶斯统计交叉"
+   ],
+   "note": "MCMC 在 CS2023 里是 Non-core。"
+  },
+  "M.8.5": {
+   "note": "CS2023 没有自动微分。"
+  },
+  "M.8.6": {
+   "note": "CS2023 没有符号计算。"
+  },
+  "F.1.1": {
+   "matched": {
+    "数组": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Arrays"
+     ]
+    ],
+    "链表": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Linked lists"
+     ]
+    ],
+    "栈队列": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Queues and deques"
+     ]
+    ],
+    "哈希": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Hash tables/maps"
+     ]
+    ],
+    "树": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Binary, n-ary, and search trees"
+     ]
+    ],
+    "堆": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Heap-based priority queue"
+     ]
+    ],
+    "图存储与不变量": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Graphs (e.g., [un]directed"
+     ]
+    ]
+   }
+  },
+  "F.1.2": {
+   "matched": {
+    "渐近分析": [
+     [
+      "AL-Complexity",
+      "CS Core",
+      "Asymptotic complexity analysis"
+     ]
+    ],
+    "递归": [
+     [
+      "AL-Strategies",
+      "CS Core",
+      "Iteration vs recursion"
+     ]
+    ],
+    "分治": [
+     [
+      "AL-Strategies",
+      "CS Core",
+      "Divide-and-Conquer"
+     ]
+    ],
+    "贪心": [
+     [
+      "AL-Strategies",
+      "CS Core",
+      "Greedy"
+     ]
+    ],
+    "动态规划与摊还分析": [
+     [
+      "AL-Strategies",
+      "CS Core",
+      "Dynamic programming"
+     ],
+     [
+      "AL-Complexity",
+      "KA Core",
+      "Amortized analysis"
+     ]
+    ]
+   }
+  },
+  "F.1.3": {
+   "matched": {
+    "遍历": [
+     [
+      "SDF-Algorithms",
+      "CS Core",
+      "graph traversal"
+     ]
+    ],
+    "最短路": [
+     [
+      "AL-Foundational",
+      "CS Core",
+      "Shortest path"
+     ]
+    ],
+    "流": [
+     [
+      "AL-Strategies",
+      "KA Core",
+      "Ford-Fulkerson"
+     ]
+    ],
+    "字符串匹配": [
+     [
+      "AL-Foundational",
+      "KA Core",
+      "Efficient string matching"
+     ]
+    ],
+    "索引与自动机方法": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Formal automata"
+     ]
+    ]
+   }
+  },
+  "F.1.4": {
+   "matched": {
+    "随机化保证": [
+     [
+      "AL-Strategies",
+      "KA Core",
+      "Randomized/Stochastic algorithms"
+     ]
+    ],
+    "近似比": [
+     [
+      "AL-Strategies",
+      "KA Core",
+      "Approximation algorithms"
+     ]
+    ]
+   }
+  },
+  "F.1.5": {
+   "matched": {
+    "工作量/跨度": [
+     [
+      "PDC-Evaluation",
+      "KA Core",
+      "work, span, critical paths"
+     ]
+    ]
+   },
+   "note": "I/O 复杂度、草图与流算法、性质测试不在 CS2023 里。"
+  },
+  "F.1.6": {
+   "note": "CS2023 没有参数化复杂度和细粒度复杂度。"
+  },
+  "F.2.1": {
+   "matched": {
+    "正则/上下文无关语言": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Formal languages, grammars and Chomsky Hierarchy"
+     ]
+    ],
+    "有限/下推自动机": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Formal automata a. Finite State b. Pushdown"
+     ]
+    ],
+    "文法与形式语言层级": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Formal languages, grammars and Chomsky Hierarchy"
+     ]
+    ]
+   }
+  },
+  "F.2.2": {
+   "matched": {
+    "Turing机": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Turing Machine"
+     ]
+    ],
+    "可判定与不可判定问题": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Decidability, (un)computability, and halting"
+     ]
+    ],
+    "归约与递归理论": [
+     [
+      "AL-Models",
+      "KA Core",
+      "Reducibility and reductions"
+     ]
+    ]
+   }
+  },
+  "F.2.3": {
+   "matched": {
+    "P/NP": [
+     [
+      "AL-Complexity",
+      "CS Core",
+      "P, NP, and NP-Complete Complexity Classes"
+     ]
+    ],
+    "完备性": [
+     [
+      "AL-Complexity",
+      "CS Core",
+      "NP-Complete Problems"
+     ]
+    ],
+    "空间/随机复杂度": [
+     [
+      "AL-Models",
+      "KA Core",
+      "Space complexity (e.g., Pspace"
+     ]
+    ]
+   }
+  },
+  "F.2.4": {
+   "matched": {
+    "可满足性": [
+     [
+      "AL-Complexity",
+      "CS Core",
+      "NP-Complete Problems (e.g., SAT"
+     ]
+    ],
+    "SAT/SMT": [
+     [
+      "PDC-Algorithms",
+      "KA Core",
+      "Computational logic: satisfiability (SAT)"
+     ]
+    ]
+   }
+  },
+  "F.3.1": {
+   "matched": {
+    "函数式/逻辑式计算": [
+     [
+      "FPL-Functional",
+      "CS Core",
+      "Effect-free programming"
+     ],
+     [
+      "FPL-Logic",
+      "KA Core",
+      "Horn clause"
+     ]
+    ],
+    "替换": [
+     [
+      "AL-Models",
+      "KA Core",
+      "Lambda Calculus"
+     ]
+    ],
+    "求值策略与计算模型": [
+     [
+      "FPL-Functional",
+      "CS Core",
+      "Lambda expressions and evaluation"
+     ],
+     [
+      "AL-Models",
+      "KA Core",
+      "Equivalent models of algorithmic computation"
+     ]
+    ]
+   }
+  },
+  "F.3.2": {
+   "matched": {
+    "类型安全": [
+     [
+      "FPL-Types",
+      "CS Core",
+      "Type safety as an aspect of program correctness"
+     ]
+    ],
+    "子类型与依赖类型": [
+     [
+      "FPL-OOP",
+      "CS Core",
+      "Subtyping"
+     ]
+    ]
+   }
+  },
+  "F.3.3": {
+   "matched": {
+    "不变式": [
+     [
+      "AL-Models",
+      "CS Core",
+      "Algorithmic correctness a. Invariants"
+     ]
+    ],
+    "时序逻辑与状态空间": [
+     [
+      "PDC-Evaluation",
+      "CS Core",
+      "Safety and liveness requirements in terms of temporal logic"
+     ]
+    ]
+   },
+   "note": "Hoare 逻辑、抽象解释、形式语义在 CS2023 里是 FPL 的 Non-core；时序逻辑的安全性/活性由并行与分布式技能讲。"
+  },
+  "F.3.4": {
+   "note": "CS2023 没有证明助手。"
+  },
+  "P.1.1": {
+   "matched": {
+    "变量": [
+     [
+      "SDF-Fundamentals",
+      "CS Core",
+      "variables, primitive data types"
+     ]
+    ],
+    "控制流": [
+     [
+      "SDF-Fundamentals",
+      "CS Core",
+      "conditional and iterative statements"
+     ]
+    ],
+    "函数": [
+     [
+      "SDF-Fundamentals",
+      "CS Core",
+      "Key modularity constructs such as functions"
+     ]
+    ],
+    "模块": [
+     [
+      "SDF-Fundamentals",
+      "CS Core",
+      "Key modularity constructs"
+     ]
+    ],
+    "基本数据类型": [
+     [
+      "SDF-Fundamentals",
+      "CS Core",
+      "primitive data types"
+     ]
+    ],
+    "输入输出与调试": [
+     [
+      "SDF-Fundamentals",
+      "CS Core",
+      "Input and output using files and APIs"
+     ]
+    ]
+   }
+  },
+  "P.1.2": {
+   "matched": {
+    "对象": [
+     [
+      "FPL-OOP",
+      "CS Core",
+      "Object-oriented design"
+     ]
+    ],
+    "封装": [
+     [
+      "FPL-OOP",
+      "CS Core",
+      "Object-oriented idioms for encapsulation"
+     ]
+    ],
+    "继承": [
+     [
+      "FPL-OOP",
+      "CS Core",
+      "Subclasses, inheritance"
+     ]
+    ],
+    "接口": [
+     [
+      "FPL-OOP",
+      "CS Core",
+      "Subtyping"
+     ]
+    ],
+    "组合": [
+     [
+      "FPL-OOP",
+      "CS Core",
+      "Composition vs inheritance"
+     ]
+    ],
+    "泛型与对象协作": [
+     [
+      "FPL-Types",
+      "CS Core",
+      "Generic types (parametric polymorphism)"
+     ]
+    ],
+    "集合": [
+     [
+      "FPL-OOP",
+      "KA Core",
+      "Collection classes, iterators"
+     ]
+    ],
+    "异常": [
+     [
+      "FPL-OOP",
+      "CS Core",
+      "Exception handling."
+     ]
+    ],
+    "I/O": [
+     [
+      "SDF-Fundamentals",
+      "CS Core",
+      "Input and output using files and APIs"
+     ]
+    ],
+    "并发基础与构建工具": [
+     [
+      "FPL-Parallel",
+      "CS Core",
+      "Threads"
+     ]
+    ]
+   }
+  },
+  "P.1.3": {
+   "matched": {
+    "不可变数据": [
+     [
+      "FPL-Functional",
+      "CS Core",
+      "Effect-free programming"
+     ]
+    ],
+    "高阶函数": [
+     [
+      "FPL-Functional",
+      "CS Core",
+      "Using higher-order functions"
+     ]
+    ],
+    "模式匹配": [
+     [
+      "FPL-Functional",
+      "CS Core",
+      "Processing structured data (e.g., trees) via functions"
+     ]
+    ],
+    "规则与查询式表达": [
+     [
+      "FPL-Logic",
+      "KA Core",
+      "Definitions of Horn clause, facts, goals and subgoals"
+     ]
+    ]
+   }
+  },
+  "P.1.4": {
+   "matched": {
+    "资源管理": [
+     [
+      "FPL-Systems",
+      "CS Core",
+      "Memory management"
+     ]
+    ],
+    "泛型元编程": [
+     [
+      "FPL-OOP",
+      "KA Core",
+      "Metaprogramming and reflection"
+     ]
+    ],
+    "异步/并发": [
+     [
+      "FPL-Parallel",
+      "CS Core",
+      "Async await"
+     ]
+    ]
+   }
+  },
+  "P.2.2": {
+   "matched": {
+    "内存布局": [
+     [
+      "AR-Assembly",
+      "KA Core",
+      "Heap, static, stack, and code segments"
+     ]
+    ],
+    "指针": [
+     [
+      "FPL-Systems",
+      "CS Core",
+      "Direct, indirect, and indexed access to memory location"
+     ]
+    ],
+    "生命周期": [
+     [
+      "FPL-Systems",
+      "CS Core",
+      "Memory management"
+     ]
+    ],
+    "链接与系统接口": [
+     [
+      "OS-Process",
+      "KA Core",
+      "shared libraries, and dynamic linking"
+     ]
+    ]
+   }
+  },
+  "P.2.3": {
+   "matched": {
+    "脚本": [
+     [
+      "FPL-Scripting",
+      "CS Core",
+      "System commands"
+     ]
+    ],
+    "环境管理与自动化": [
+     [
+      "FPL-Scripting",
+      "CS Core",
+      "Environment variables"
+     ]
+    ]
+   }
+  },
+  "P.2.4": {
+   "matched": {
+    "Git": [
+     [
+      "SE-Tools",
+      "CS Core",
+      "Software configuration management and version control"
+     ]
+    ],
+    "调试器": [
+     [
+      "SDF-Practices",
+      "CS Core",
+      "Use of a general-purpose IDE, including its debugger"
+     ]
+    ],
+    "构建": [
+     [
+      "SE-Tools",
+      "KA Core",
+      "Build systems"
+     ]
+    ],
+    "包管理": [
+     [
+      "SE-Tools",
+      "KA Core",
+      "Dependency management"
+     ]
+    ],
+    "依赖与自动化工作流": [
+     [
+      "SE-Tools",
+      "KA Core",
+      "Software process automation"
+     ]
+    ]
+   }
+  },
+  "P.3.1": {
+   "matched": {
+    "词法/语法分析": [
+     [
+      "FPL-Translation",
+      "CS Core",
+      "syntax analysis, parsing"
+     ]
+    ],
+    "语义分析": [
+     [
+      "FPL-Translation",
+      "CS Core",
+      "optional type-checking"
+     ]
+    ],
+    "代码生成与编译优化": [
+     [
+      "FPL-Translation",
+      "CS Core",
+      "translation/code generation and optimization"
+     ]
+    ]
+   },
+   "note": "CS2023 的 CS Core 只有翻译流水线概览，语法分析、语义分析、代码生成各单元是 Non-core。"
+  },
+  "P.3.2": {
+   "matched": {
+    "解释执行": [
+     [
+      "FPL-Translation",
+      "CS Core",
+      "Execution models for JIT (Just-In-Time), compiler, interpreter"
+     ]
+    ],
+    "JIT": [
+     [
+      "FPL-Translation",
+      "CS Core",
+      "Limitations and benefits of JIT"
+     ]
+    ],
+    "GC": [
+     [
+      "FPL-Systems",
+      "CS Core",
+      "garbage collection"
+     ]
+    ],
+    "栈与堆": [
+     [
+      "FPL-Systems",
+      "CS Core",
+      "Abstract low-level machine with simple instruction, stack, and heap"
+     ]
+    ]
+   }
+  },
+  "P.4.1": {
+   "matched": {
+    "工程原则": [
+     [
+      "SE-Design",
+      "CS Core",
+      "System design principles."
+     ]
+    ],
+    "协作与方法选择": [
+     [
+      "SE-Teamwork",
+      "CS Core",
+      "Cooperative programming"
+     ]
+    ]
+   },
+   "note": "CS2023 没有单列开发过程模型（敏捷、迭代）。"
+  },
+  "P.4.2": {
+   "matched": {
+    "需求获取": [
+     [
+      "SE-Requirements",
+      "KA Core",
+      "Requirements elicitation."
+     ]
+    ],
+    "约束": [
+     [
+      "SE-Requirements",
+      "KA Core",
+      "Non-functional requirements"
+     ]
+    ],
+    "领域模型与可追踪性": [
+     [
+      "SE-Design",
+      "KA Core",
+      "Requirement traceability"
+     ]
+    ]
+   }
+  },
+  "P.4.3": {
+   "matched": {
+    "UML": [
+     [
+      "DM-Modeling",
+      "KA Core",
+      "UML diagrams"
+     ]
+    ],
+    "接口": [
+     [
+      "SE-Design",
+      "KA Core",
+      "API design principles"
+     ]
+    ],
+    "设计原则": [
+     [
+      "SE-Design",
+      "CS Core",
+      "System design principles."
+     ]
+    ],
+    "模式与重构": [
+     [
+      "SE-Refactoring",
+      "KA Core",
+      "Standard refactoring patterns"
+     ]
+    ]
+   }
+  },
+  "P.4.4": {
+   "matched": {
+    "组件与边界": [
+     [
+      "SE-Design",
+      "CS Core",
+      "Software architecture."
+     ]
+    ],
+    "架构风格": [
+     [
+      "SE-Design",
+      "CS Core",
+      "Design paradigms"
+     ]
+    ],
+    "质量属性": [
+     [
+      "SE-Design",
+      "KA Core",
+      "Evaluating design tradeoffs"
+     ]
+    ]
+   }
+  },
+  "P.4.5": {
+   "matched": {
+    "单元/集成/系统测试": [
+     [
+      "SE-Construction",
+      "CS Core",
+      "Unit testing"
+     ],
+     [
+      "SE-Construction",
+      "KA Core",
+      "Larger-scale testing"
+     ]
+    ],
+    "覆盖率": [
+     [
+      "SE-Validation",
+      "KA Core",
+      "Verification and validation tooling and automation"
+     ]
+    ],
+    "故障注入与质量评估": [
+     [
+      "SE-Reliability",
+      "KA Core",
+      "Defect injection and removal cycle"
+     ]
+    ]
+   }
+  },
+  "P.4.6": {
+   "matched": {
+    "可维护性": [
+     [
+      "SE-Design",
+      "CS Core",
+      "Code smells and other indications of code quality"
+     ]
+    ],
+    "兼容性": [
+     [
+      "SE-Refactoring",
+      "KA Core",
+      "Backward compatibility"
+     ]
+    ],
+    "代码理解": [
+     [
+      "SE-Construction",
+      "KA Core",
+      "Change impact analysis"
+     ]
+    ]
+   }
+  },
+  "P.5.1": {
+   "matched": {
+    "HTTP应用": [
+     [
+      "NC-Applications",
+      "CS Core",
+      "application-layer protocols (e.g., HTTP)"
+     ]
+    ],
+    "前后端": [
+     [
+      "SPD-Web",
+      "KA Core",
+      "Web platforms, frameworks, or meta-frameworks"
+     ]
+    ],
+    "API": [
+     [
+      "SPD-Web",
+      "KA Core",
+      "API, Web Components"
+     ]
+    ],
+    "浏览器": [
+     [
+      "SPD-Web",
+      "KA Core",
+      "Web standards such as document object model"
+     ]
+    ],
+    "服务端": [
+     [
+      "SPD-Web",
+      "KA Core",
+      "Software as a Service (SaaS)"
+     ]
+    ],
+    "认证集成与可访问性": [
+     [
+      "SPD-Web",
+      "KA Core",
+      "Security and Privacy Considerations"
+     ]
+    ]
+   }
+  },
+  "P.5.2": {
+   "matched": {
+    "界面状态": [
+     [
+      "SPD-Mobile",
+      "KA Core",
+      "User interface design"
+     ]
+    ],
+    "设备能力": [
+     [
+      "SPD-Mobile",
+      "KA Core",
+      "Mobile platform constraints"
+     ]
+    ]
+   }
+  },
+  "P.5.3": {
+   "matched": {
+    "CI/CD": [
+     [
+      "SE-Construction",
+      "KA Core",
+      "DevOps practices"
+     ]
+    ],
+    "配置": [
+     [
+      "SE-Tools",
+      "CS Core",
+      "Software configuration management"
+     ]
+    ],
+    "可观测性": [
+     [
+      "SE-Reliability",
+      "KA Core",
+      "telemetry, monitoring and alerting"
+     ]
+    ],
+    "发布策略": [
+     [
+      "SE-Tools",
+      "KA Core",
+      "Release management."
+     ]
+    ]
+   }
+  },
+  "P.5.4": {
+   "matched": {
+    "构建溯源": [
+     [
+      "SE-Tools",
+      "KA Core",
+      "Build systems"
+     ]
+    ],
+    "软件物料与供应链完整性": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "Secure use of third-party components"
+     ],
+     [
+      "SEC-Engineering",
+      "KA Core",
+      "software signing and verification"
+     ]
+    ]
+   }
+  },
+  "P.5.5": {
+   "matched": {
+    "游戏循环与实时模拟": [
+     [
+      "SPD-Game",
+      "KA Core",
+      "Real-time Simulation and Rendering Systems"
+     ]
+    ],
+    "碰撞检测与物理": [
+     [
+      "GIT-Simulation",
+      "KA Core",
+      "Collision detection and response"
+     ]
+    ],
+    "动画与渲染管线集成": [
+     [
+      "GIT-Animation",
+      "KA Core",
+      "Key-frame animation"
+     ]
+    ],
+    "资源管线与引擎架构": [
+     [
+      "SPD-Game",
+      "KA Core",
+      "Game Engines"
+     ]
+    ],
+    "玩法编程与调试工具": [
+     [
+      "SPD-Game",
+      "KA Core",
+      "Game Development Tools and Techniques"
+     ]
+    ]
+   }
+  },
+  "C.1.1": {
+   "matched": {
+    "数据表示": [
+     [
+      "AR-Representation",
+      "CS Core",
+      "Numeric data representation and number bases"
+     ]
+    ],
+    "数据通路": [
+     [
+      "AR-Organization",
+      "KA Core",
+      "Implementation of simple datapaths"
+     ]
+    ],
+    "控制器": [
+     [
+      "AR-Assembly",
+      "CS Core",
+      "Control unit: instruction fetch, decode, and execution"
+     ]
+    ],
+    "存储和I/O组织": [
+     [
+      "AR-Memory",
+      "CS Core",
+      "Main memory organization and operations"
+     ],
+     [
+      "AR-IO",
+      "CS Core",
+      "I/O fundamentals"
+     ]
+    ]
+   }
+  },
+  "C.1.2": {
+   "matched": {
+    "指令集": [
+     [
+      "AR-Assembly",
+      "KA Core",
+      "Instruction set architecture (ISA)"
+     ]
+    ],
+    "流水线": [
+     [
+      "AR-Organization",
+      "KA Core",
+      "Instruction pipelining"
+     ]
+    ],
+    "缓存": [
+     [
+      "AR-Memory",
+      "CS Core",
+      "Cache memories"
+     ]
+    ],
+    "多核一致性": [
+     [
+      "AR-Memory",
+      "CS Core",
+      "Multiprocessor cache coherence"
+     ]
+    ],
+    "分支预测和性能模型": [
+     [
+      "AR-Performance-Energy",
+      "KA Core",
+      "Branch prediction"
+     ]
+    ]
+   }
+  },
+  "C.1.3": {
+   "matched": {
+    "ARM指令集/异常级": [
+     [
+      "AR-Assembly",
+      "KA Core",
+      "x86, ARM and RISC-V"
+     ]
+    ],
+    "RISC思想": [
+     [
+      "AR-Assembly",
+      "KA Core",
+      "x86, ARM and RISC-V"
+     ]
+    ],
+    "ABI与汇编": [
+     [
+      "AR-Assembly",
+      "KA Core",
+      "Subroutine call and return mechanisms"
+     ]
+    ],
+    "其他ISA可作比较": [
+     [
+      "AR-Assembly",
+      "KA Core",
+      "Instruction set architecture (ISA)"
+     ]
+    ]
+   }
+  },
+  "C.1.4": {
+   "matched": {
+    "SIMD/SIMT": [
+     [
+      "AR-Heterogeneity",
+      "KA Core",
+      "SIMD and MIMD architectures"
+     ]
+    ],
+    "存储层次": [
+     [
+      "AR-Heterogeneity",
+      "KA Core",
+      "Heterogeneous memory systems"
+     ]
+    ],
+    "专用加速器和异构调度": [
+     [
+      "AR-Heterogeneity",
+      "KA Core",
+      "Domain-Specific Architectures (DSAs)"
+     ]
+    ]
+   }
+  },
+  "C.2.1": {
+   "matched": {
+    "进程/线程": [
+     [
+      "OS-Concurrency",
+      "CS Core",
+      "Thread abstraction relative to concurrency"
+     ]
+    ],
+    "调度": [
+     [
+      "OS-Scheduling",
+      "KA Core",
+      "Preemptive and non-preemptive scheduling"
+     ]
+    ],
+    "虚拟内存": [
+     [
+      "OS-Memory",
+      "KA Core",
+      "Virtual memory"
+     ]
+    ],
+    "文件系统": [
+     [
+      "OS-Files",
+      "KA Core",
+      "Concept of a file"
+     ]
+    ],
+    "I/O": [
+     [
+      "OS-Devices",
+      "KA Core",
+      "Device driver purpose"
+     ]
+    ],
+    "同步与隔离": [
+     [
+      "OS-Concurrency",
+      "CS Core",
+      "Race conditions, critical regions"
+     ]
+    ]
+   }
+  },
+  "C.2.2": {
+   "matched": {
+    "系统调用": [
+     [
+      "OS-Principles",
+      "CS Core",
+      "Concept of system calls"
+     ]
+    ],
+    "锁": [
+     [
+      "OS-Concurrency",
+      "KA Core",
+      "semaphores, mutex locks, condition variables"
+     ]
+    ],
+    "原子操作": [
+     [
+      "PDC-Coordination",
+      "CS Core",
+      "Atomic instructions"
+     ]
+    ],
+    "内存模型": [
+     [
+      "FPL-Parallel",
+      "KA Core",
+      "memory-consistency models"
+     ]
+    ],
+    "IPC与竞态检测": [
+     [
+      "OS-Process",
+      "KA Core",
+      "Interprocess communication"
+     ]
+    ]
+   }
+  },
+  "C.2.3": {
+   "matched": {
+    "虚拟机": [
+     [
+      "OS-Virtualization",
+      "KA Core",
+      "Containers and their comparison to virtual machines."
+     ]
+    ],
+    "容器隔离": [
+     [
+      "OS-Virtualization",
+      "KA Core",
+      "Using virtualization and isolation"
+     ]
+    ],
+    "资源控制": [
+     [
+      "SF-Resource",
+      "CS Core",
+      "Common resource allocation/scheduling algorithms"
+     ]
+    ]
+   }
+  },
+  "C.2.4": {
+   "matched": {
+    "块设备": [
+     [
+      "OS-Devices",
+      "KA Core",
+      "Persistent storage device management"
+     ]
+    ],
+    "日志": [
+     [
+      "OS-Advanced-Files",
+      "KA Core",
+      "Journaling and log-structured file systems"
+     ]
+    ],
+    "崩溃一致性": [
+     [
+      "OS-Faults",
+      "KA Core",
+      "File system consistency check and recovery."
+     ]
+    ],
+    "缓存": [
+     [
+      "OS-Devices",
+      "KA Core",
+      "Buffering strategies"
+     ]
+    ]
+   }
+  },
+  "C.3.1": {
+   "matched": {
+    "采样": [
+     [
+      "GIT-Fundamentals",
+      "CS Core",
+      "Sampling and quantization"
+     ]
+    ],
+    "调制": [
+     [
+      "NC-SingleHop",
+      "KA Core",
+      "Introduction to modulation, bandwidth, and communication media"
+     ]
+    ],
+    "编码": [
+     [
+      "NC-SingleHop",
+      "KA Core",
+      "Encoding and Framing"
+     ]
+    ],
+    "复用": [
+     [
+      "NC-SingleHop",
+      "KA Core",
+      "Medium Access Control (MAC)"
+     ]
+    ],
+    "链路与误码": [
+     [
+      "NC-Reliability",
+      "KA Core",
+      "Error control"
+     ]
+    ]
+   },
+   "meta": [
+    "与电子和信息论相交"
+   ]
+  },
+  "C.3.2": {
+   "matched": {
+    "链路/IP/TCP/UDP": [
+     [
+      "NC-Fundamentals",
+      "CS Core",
+      "Layers and their roles"
+     ]
+    ],
+    "路由": [
+     [
+      "NC-Routing",
+      "KA Core",
+      "Routing paradigms and hierarchy"
+     ]
+    ],
+    "拥塞控制": [
+     [
+      "NC-Reliability",
+      "KA Core",
+      "Congestion control"
+     ]
+    ],
+    "名称系统与应用协议": [
+     [
+      "NC-Applications",
+      "CS Core",
+      "Naming and address schemes (e.g., DNS"
+     ]
+    ]
+   }
+  },
+  "C.3.3": {
+   "matched": {
+    "无线介质": [
+     [
+      "NC-Mobility",
+      "KA Core",
+      "Principles of Wireless LANs"
+     ]
+    ],
+    "移动性": [
+     [
+      "NC-Mobility",
+      "KA Core",
+      "Principles of cellular communication"
+     ]
+    ],
+    "蜂窝/局域/低功耗通信与设备网络": [
+     [
+      "NC-Mobility",
+      "KA Core",
+      "Device to device communication (e.g., IoT communication)"
+     ]
+    ]
+   }
+  },
+  "C.3.4": {
+   "matched": {
+    "控制/数据平面": [
+     [
+      "NC-Emerging",
+      "KA Core",
+      "Network Virtualization (e.g., SDN"
+     ]
+    ],
+    "可编程转发与自动化": [
+     [
+      "NC-Emerging",
+      "KA Core",
+      "Network Virtualization (e.g., SDN"
+     ]
+    ]
+   }
+  },
+  "C.4.1": {
+   "matched": {
+    "时钟": [
+     [
+      "PDC-Coordination",
+      "KA Core",
+      "virtual clocks"
+     ]
+    ],
+    "复制": [
+     [
+      "PDC-Coordination",
+      "CS Core",
+      "Avoiding locks: replication"
+     ]
+    ],
+    "一致性": [
+     [
+      "PDC-Communication",
+      "KA Core",
+      "linearizability"
+     ]
+    ],
+    "共识": [
+     [
+      "FPL-Parallel",
+      "CS Core",
+      "Consensus"
+     ]
+    ],
+    "事务": [
+     [
+      "DM-Internals",
+      "KA Core",
+      "Distributed Transactions"
+     ]
+    ],
+    "容错与分布式调试": [
+     [
+      "PDC-Programs",
+      "CS Core",
+      "Fault tolerance"
+     ]
+    ]
+   }
+  },
+  "C.4.2": {
+   "matched": {
+    "IaaS/PaaS": [
+     [
+      "SPD-Web",
+      "KA Core",
+      "Software as a Service (SaaS)"
+     ]
+    ],
+    "弹性": [
+     [
+      "PDC-Programs",
+      "KA Core",
+      "Clusters, clouds; elastic provisioning"
+     ]
+    ]
+   },
+   "note": "多租户、编排、无服务器不在 CS2023 的核心主题里（无服务器在 SPD-Web 的 Non-core）。"
+  },
+  "C.4.3": {
+   "matched": {
+    "故障模型": [
+     [
+      "PDC-Programs",
+      "CS Core",
+      "Fault tolerance"
+     ]
+    ],
+    "线性化": [
+     [
+      "PDC-Communication",
+      "KA Core",
+      "linearizability"
+     ]
+    ]
+   }
+  },
+  "C.4.4": {
+   "matched": {
+    "消息语义": [
+     [
+      "PDC-Communication",
+      "CS Core",
+      "party-to-party communication media"
+     ]
+    ]
+   },
+   "note": "事件时间、重放、背压等流处理内容不在 CS2023 里。"
+  },
+  "C.5.1": {
+   "matched": {
+    "线程任务": [
+     [
+      "FPL-Parallel",
+      "CS Core",
+      "Threads"
+     ]
+    ],
+    "向量化": [
+     [
+      "PDC-Programs",
+      "KA Core",
+      "SIMD and heterogeneous data parallelism"
+     ]
+    ],
+    "消息传递": [
+     [
+      "PDC-Communication",
+      "CS Core",
+      "channels (message passing or I/O)"
+     ]
+    ],
+    "负载均衡与数据划分": [
+     [
+      "PDC-Evaluation",
+      "CS Core",
+      "including granularity, overhead"
+     ]
+    ]
+   }
+  },
+  "C.5.2": {
+   "matched": {
+    "访存": [
+     [
+      "PDC-Communication",
+      "CS Core",
+      "GPU local and shared memory"
+     ]
+    ],
+    "同步": [
+     [
+      "PDC-Coordination",
+      "CS Core",
+      "Barriers, joins"
+     ]
+    ]
+   },
+   "note": "核函数编写、算子融合与性能剖析不在 CS2023 的核心主题里。"
+  },
+  "C.5.3": {
+   "matched": {
+    "并行求解器": [
+     [
+      "PDC-Algorithms",
+      "KA Core",
+      "Linear algebra: Vector and matrix operations"
+     ]
+    ],
+    "可扩展性": [
+     [
+      "PDC-Evaluation",
+      "CS Core",
+      "Estimating scalability limitations"
+     ]
+    ],
+    "通信优化与能耗": [
+     [
+      "PDC-Evaluation",
+      "CS Core",
+      "energy consumption"
+     ]
+    ]
+   }
+  },
+  "D.1.1": {
+   "matched": {
+    "实体关系": [
+     [
+      "DM-Modeling",
+      "KA Core",
+      "Conceptual models (e.g., entity-relationship"
+     ]
+    ],
+    "关系代数": [
+     [
+      "DM-Querying",
+      "KA Core",
+      "Relational Algebra"
+     ]
+    ],
+    "约束": [
+     [
+      "DM-Relational",
+      "CS Core",
+      "Entity and referential integrity"
+     ]
+    ],
+    "规范化": [
+     [
+      "DM-Core",
+      "CS Core",
+      "Normalization"
+     ]
+    ],
+    "查询与数据建模": [
+     [
+      "DM-Querying",
+      "CS Core",
+      "SQL Query Formation"
+     ]
+    ]
+   }
+  },
+  "D.1.2": {
+   "matched": {
+    "索引": [
+     [
+      "DM-Processing",
+      "KA Core",
+      "Index structures"
+     ]
+    ],
+    "执行计划": [
+     [
+      "DM-Processing",
+      "KA Core",
+      "Query plan construction"
+     ]
+    ],
+    "代价模型": [
+     [
+      "DM-Processing",
+      "KA Core",
+      "Selectivity estimation"
+     ]
+    ],
+    "并发控制": [
+     [
+      "DM-Internals",
+      "KA Core",
+      "Concurrency Control"
+     ]
+    ],
+    "日志与恢复": [
+     [
+      "DM-Internals",
+      "KA Core",
+      "Recovery Manager"
+     ]
+    ]
+   }
+  },
+  "D.1.3": {
+   "matched": {
+    "分布式事务": [
+     [
+      "DM-Internals",
+      "KA Core",
+      "Distributed Transactions"
+     ]
+    ],
+    "键值/文档/列族/图数据模型": [
+     [
+      "DM-NoSQL",
+      "KA Core",
+      "Key-Value and Document data model"
+     ]
+    ]
+   },
+   "note": "分片与复制在 CS2023 里是 DM 的 Non-core。"
+  },
+  "D.1.4": {
+   "matched": {
+    "备份恢复": [
+     [
+      "DM-Internals",
+      "KA Core",
+      "Recovery Manager"
+     ]
+    ],
+    "授权": [
+     [
+      "DM-Security",
+      "CS Core",
+      "Protecting data and database systems from attacks"
+     ]
+    ],
+    "审计": [
+     [
+      "DM-Security",
+      "KA Core",
+      "Database auditing"
+     ]
+    ],
+    "加密": [
+     [
+      "DM-Security",
+      "KA Core",
+      "securing data at rest, in transit"
+     ]
+    ]
+   },
+   "meta": [
+    "安全理论见安全领域"
+   ]
+  },
+  "D.1.5": {
+   "matched": {
+    "血缘": [
+     [
+      "DM-SEP",
+      "KA Core",
+      "Provenance, data lineage, and metadata management"
+     ]
+    ],
+    "目录": [
+     [
+      "DM-SEP",
+      "KA Core",
+      "metadata management"
+     ]
+    ],
+    "质量规则": [
+     [
+      "DM-SEP",
+      "KA Core",
+      "Reliability of data"
+     ]
+    ],
+    "责任与数据生命周期": [
+     [
+      "DM-Data",
+      "CS Core",
+      "The Data Life Cycle"
+     ],
+     [
+      "DM-SEP",
+      "CS Core",
+      "Data ownership/custodianship"
+     ]
+    ]
+   }
+  },
+  "D.2.1": {
+   "matched": {
+    "采集": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "Data acquisition and governance"
+     ]
+    ],
+    "清洗": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Working with Data a. Data preprocessing"
+     ]
+    ],
+    "转换": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "data preparation"
+     ]
+    ]
+   }
+  },
+  "D.2.2": {
+   "matched": {
+    "分布式数据处理": [
+     [
+      "DM-Core",
+      "CS Core",
+      "Approaches for managing large volumes of data"
+     ]
+    ],
+    "存储布局": [
+     [
+      "DM-Processing",
+      "KA Core",
+      "Page structures"
+     ]
+    ],
+    "批流一体与资源权衡": [
+     [
+      "DM-Core",
+      "KA Core",
+      "Systems supporting structured and/or stream content"
+     ]
+    ]
+   }
+  },
+  "D.2.3": {
+   "note": "信息检索在 CS2023 里是 AI-NLP 和 DM 的 Non-core。"
+  },
+  "D.3.1": {
+   "matched": {
+    "问题定义": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "business understanding"
+     ]
+    ],
+    "数据获取": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "Data acquisition and governance"
+     ]
+    ],
+    "清洗": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Data preprocessing"
+     ]
+    ],
+    "探索分析": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "Exploratory data techniques"
+     ]
+    ]
+   }
+  },
+  "D.3.2": {
+   "matched": {
+    "关联": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "classification, clustering, association, regression"
+     ]
+    ],
+    "聚类": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "classification, clustering, association, regression"
+     ]
+    ],
+    "数据选择与发现过程": [
+     [
+      "DM-Analytics",
+      "KA Core",
+      "Data science lifecycle"
+     ]
+    ]
+   }
+  },
+  "D.3.3": {
+   "matched": {
+    "抽样偏差": [
+     [
+      "MSF-Statistics",
+      "KA Core",
+      "Sampling, bias, adequacy of samples"
+     ]
+    ],
+    "指标": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Performance metrics for classifiers"
+     ]
+    ],
+    "交叉验证": [
+     [
+      "AI-ML",
+      "KA Core",
+      "Cross-validation"
+     ]
+    ]
+   }
+  },
+  "D.4.1": {
+   "note": "本体在 CS2023 里是 AI-LRR 的 Non-core。"
+  },
+  "D.4.2": {
+   "note": "描述逻辑与规则推理在 CS2023 里是 AI-LRR 的 Non-core。"
+  },
+  "A.1.1": {
+   "matched": {
+    "启发式搜索": [
+     [
+      "AI-Search",
+      "CS Core",
+      "Heuristic graph search for problem solving"
+     ]
+    ],
+    "局部搜索": [
+     [
+      "AI-Search",
+      "CS Core",
+      "Hill-climbing"
+     ]
+    ],
+    "约束传播和求解": [
+     [
+      "AI-Search",
+      "KA Core",
+      "Constraint satisfaction"
+     ]
+    ]
+   }
+  },
+  "A.1.2": {
+   "matched": {
+    "Bayes网络": [
+     [
+      "AI-KRR",
+      "CS Core",
+      "Graphical models (e.g., naive Bayes, Bayesian network)"
+     ]
+    ],
+    "推断": [
+     [
+      "AI-KRR",
+      "CS Core",
+      "Bayesian inference"
+     ]
+    ]
+   },
+   "note": "Markov 网络、结构学习在 CS2023 里是 Non-core。"
+  },
+  "A.2.1": {
+   "matched": {
+    "回归/分类": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Classification ii. Regression"
+     ]
+    ],
+    "聚类": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Unsupervised learning i. Clustering"
+     ]
+    ],
+    "降维": [
+     [
+      "MSF-Statistics",
+      "KA Core",
+      "Data transformation: dimension reduction"
+     ]
+    ],
+    "表示": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Representations a. Hypothesis spaces"
+     ]
+    ],
+    "特征工程与学习设置": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Simple basis feature expansion"
+     ]
+    ]
+   }
+  },
+  "A.2.2": {
+   "matched": {
+    "偏差方差与分布外泛化": [
+     [
+      "AI-ML",
+      "CS Core",
+      "variance (overfitting) tradeoff"
+     ]
+    ]
+   },
+   "note": "PAC/VC 与泛化界在 CS2023 里是 AI-ML 的 Non-core。"
+  },
+  "A.2.3": {
+   "matched": {
+    "神经网络": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Basic neural networks"
+     ]
+    ],
+    "训练": [
+     [
+      "AI-ML",
+      "CS Core",
+      "training process"
+     ]
+    ],
+    "正则化和深层表示": [
+     [
+      "AI-ML",
+      "KA Core",
+      "Visualization of learned feature representations from deep nets"
+     ]
+    ]
+   }
+  },
+  "A.2.3.1": {
+   "matched": {
+    "MLP": [
+     [
+      "AI-ML",
+      "KA Core",
+      "Deep feed-forward networks (intuition only, no mathematics)"
+     ]
+    ],
+    "卷积": [
+     [
+      "AI-ML",
+      "KA Core",
+      "Convolutional neural networks (intuition only, no mathematics)"
+     ]
+    ],
+    "循环": [
+     [
+      "AI-ML",
+      "KA Core",
+      "recurrent NN, transformers"
+     ]
+    ],
+    "Transformer": [
+     [
+      "AI-ML",
+      "KA Core",
+      "recurrent NN, transformers"
+     ]
+    ]
+   },
+   "note": "CS2023 的核心只要求直观理解，带数学的深度学习是 Non-core。"
+  },
+  "A.2.3.2": {
+   "note": "ML 硬件与训练系统在 CS2023 里是 AI-ML 的 Non-core。"
+  },
+  "A.2.4": {
+   "matched": {
+    "价值/策略": [
+     [
+      "AI-ML",
+      "KA Core",
+      "Overview of reinforcement learning methods"
+     ]
+    ]
+   },
+   "meta": [
+    "与控制和运筹交叉"
+   ],
+   "note": "MDP、时序差分、策略梯度在 CS2023 里是 AI-ML 的 Non-core，核心只有概览。"
+  },
+  "A.2.5": {
+   "note": "CS2023 没有迁移学习与联邦学习。"
+  },
+  "A.3.1": {
+   "matched": {
+    "语言建模": [
+     [
+      "AI-ML",
+      "CS Core",
+      "Basic introduction to generative neural networks (e.g., large language models)"
+     ]
+    ]
+   },
+   "note": "自然语言处理整个单元在 CS2023 里是 Non-core。"
+  },
+  "A.3.2": {
+   "matched": {
+    "滤波": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Image enhancement a. Convolution"
+     ]
+    ],
+    "变换": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Fourier transforms"
+     ]
+    ],
+    "重建": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Image restoration"
+     ]
+    ]
+   },
+   "note": "识别、检测、分割属于计算机视觉单元，在 CS2023 里是 Non-core。"
+  },
+  "A.3.3": {
+   "note": "语音识别在 CS2023 里是 AI-Vision 的 Non-core。"
+  },
+  "A.3.4": {
+   "note": "推荐系统在 CS2023 里是 AI-ML 的 Non-core。"
+  },
+  "A.3.5": {
+   "matched": {
+    "自回归": [
+     [
+      "AI-SEP",
+      "KA Core",
+      "Introduction to how large language models work"
+     ]
+    ],
+    "对抗与扩散模型": [
+     [
+      "AI-SEP",
+      "KA Core",
+      "Stable Diffusion"
+     ]
+    ],
+    "多模态生成": [
+     [
+      "AI-SEP",
+      "KA Core",
+      "Introduction to how deep image generative models work"
+     ]
+    ],
+    "对齐与可靠评估": [
+     [
+      "AI-SEP",
+      "CS Core",
+      "their uses, and their shortcomings/pitfalls"
+     ]
+    ]
+   }
+  },
+  "A.4.1": {
+   "note": "CS2023 没有 MLOps。"
+  },
+  "A.4.2": {
+   "matched": {
+    "解释": [
+     [
+      "AI-SEP",
+      "CS Core",
+      "Trust/explainability"
+     ]
+    ],
+    "公平": [
+     [
+      "AI-SEP",
+      "CS Core",
+      "Fairness"
+     ]
+    ],
+    "隐私和社会影响的测量与分析": [
+     [
+      "AI-SEP",
+      "CS Core",
+      "Overview of societal impact of AI"
+     ]
+    ]
+   }
+  },
+  "A.4.3": {
+   "matched": {
+    "攻击面": [
+     [
+      "SEC-Foundations",
+      "KA Core",
+      "Security risks in building and operating AI/machine learning systems"
+     ]
+    ],
+    "滥用评估与模型应用防护": [
+     [
+      "SEC-SEP",
+      "CS Core",
+      "Security and privacy implications of malicious AI/machine learning actors"
+     ]
+    ]
+   },
+   "meta": [
+    "与网络空间安全交叉"
+   ]
+  },
+  "A.4.4": {
+   "note": "多智能体与博弈在 CS2023 里是 AI-Agents 的 Non-core。"
+  },
+  "S.1.1": {
+   "matched": {
+    "机密性/完整性/可用性": [
+     [
+      "SEC-Foundations",
+      "CS Core",
+      "confidentiality, integrity, availability"
+     ]
+    ],
+    "认证授权": [
+     [
+      "SEC-Foundations",
+      "CS Core",
+      "Basic concepts of authentication and authorization/access control"
+     ]
+    ],
+    "最小权限": [
+     [
+      "SEC-Foundations",
+      "CS Core",
+      "least privilege"
+     ]
+    ],
+    "攻击面与风险管理": [
+     [
+      "SEC-Foundations",
+      "CS Core",
+      "Vulnerabilities, threats, attack surfaces"
+     ]
+    ]
+   }
+  },
+  "S.1.2": {
+   "matched": {
+    "对称/公钥": [
+     [
+      "SEC-Crypto",
+      "CS Core",
+      "symmetric key and public key cryptography"
+     ]
+    ],
+    "哈希": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "hashing, and digital signatures"
+     ]
+    ],
+    "签名": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "hashing, and digital signatures"
+     ]
+    ],
+    "协议与安全定义": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "Cryptographic protocols"
+     ]
+    ]
+   }
+  },
+  "S.1.3": {
+   "matched": {
+    "零知识": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "zero-knowledge protocols"
+     ]
+    ],
+    "安全多方计算": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "secure two- or multi-party computation"
+     ]
+    ],
+    "同态加密和后量子密码": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "Post Quantum/Quantum resistant cryptography"
+     ]
+    ]
+   }
+  },
+  "S.2.1": {
+   "matched": {
+    "操作系统防护": [
+     [
+      "OS-Protection",
+      "CS Core",
+      "Overview of operating system security mechanisms"
+     ]
+    ],
+    "内存安全": [
+     [
+      "SEC-Coding",
+      "CS Core",
+      "Buffer overflows, stack smashing"
+     ]
+    ],
+    "权限": [
+     [
+      "OS-Protection",
+      "KA Core",
+      "Protection, access control, and authentication"
+     ]
+    ],
+    "隔离": [
+     [
+      "OS-Virtualization",
+      "KA Core",
+      "Using virtualization and isolation"
+     ]
+    ],
+    "可信执行": [
+     [
+      "SEC-Engineering",
+      "KA Core",
+      "trusted boot, trusted kernel"
+     ]
+    ],
+    "固件与系统加固": [
+     [
+      "OS-Purpose",
+      "CS Core",
+      "Vulnerabilities in system firmware"
+     ]
+    ]
+   }
+  },
+  "S.2.2": {
+   "matched": {
+    "协议攻击面": [
+     [
+      "NC-Security",
+      "KA Core",
+      "Network specific threats and attack types"
+     ]
+    ],
+    "防火墙": [
+     [
+      "NC-Security",
+      "KA Core",
+      "intrusion detection, firewall"
+     ]
+    ],
+    "入侵检测": [
+     [
+      "NC-Security",
+      "KA Core",
+      "intrusion detection, firewall"
+     ]
+    ],
+    "传输保护与网络监测": [
+     [
+      "NC-Security",
+      "KA Core",
+      "Network monitoring"
+     ]
+    ]
+   }
+  },
+  "S.2.3": {
+   "matched": {
+    "移动平台": [
+     [
+      "SPD-Mobile",
+      "KA Core",
+      "Mobile platform constraints"
+     ]
+    ],
+    "移动应用和无线威胁模型": [
+     [
+      "SEC-Foundations",
+      "KA Core",
+      "web, cloud, and mobile devices"
+     ]
+    ]
+   }
+  },
+  "S.2.4": {
+   "matched": {
+    "身份权限": [
+     [
+      "SEC-Foundations",
+      "KA Core",
+      "Access control models"
+     ]
+    ]
+   },
+   "note": "多租户、控制平面、镜像与编排安全不在 CS2023 里（容器逃逸在 OS 的 Non-core）。"
+  },
+  "S.2.5": {
+   "matched": {
+    "安全启动": [
+     [
+      "SEC-Engineering",
+      "KA Core",
+      "trusted boot"
+     ]
+    ],
+    "固件": [
+     [
+      "OS-Purpose",
+      "CS Core",
+      "Vulnerabilities in system firmware"
+     ]
+    ],
+    "侧信道与故障攻击": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "side channel attack"
+     ]
+    ]
+   }
+  },
+  "S.3.1": {
+   "matched": {
+    "输入输出边界": [
+     [
+      "SEC-Coding",
+      "CS Core",
+      "Input validation and data sanitization"
+     ]
+    ],
+    "认证会话": [
+     [
+      "SEC-Foundations",
+      "CS Core",
+      "Basic concepts of authentication and authorization/access control"
+     ]
+    ],
+    "访问控制": [
+     [
+      "SEC-Foundations",
+      "KA Core",
+      "Access control models"
+     ]
+    ],
+    "服务端/客户端与接口安全": [
+     [
+      "SEC-Coding",
+      "CS Core",
+      "Cross-site scripting techniques and mitigations"
+     ]
+    ]
+   }
+  },
+  "S.3.2": {
+   "matched": {
+    "安全需求": [
+     [
+      "SEC-Engineering",
+      "KA Core",
+      "security requirements analysis"
+     ]
+    ],
+    "代码审查": [
+     [
+      "SE-Validation",
+      "KA Core",
+      "Code reviews"
+     ]
+    ],
+    "静态/动态分析": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "Static and dynamic analyses"
+     ]
+    ],
+    "模糊测试与漏洞修复": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "fuzzing and penetration testing"
+     ]
+    ]
+   }
+  },
+  "S.3.3": {
+   "matched": {
+    "授权": [
+     [
+      "SEC-Foundations",
+      "CS Core",
+      "authorization/access control"
+     ]
+    ],
+    "加密": [
+     [
+      "DM-Security",
+      "KA Core",
+      "securing data at rest, in transit"
+     ]
+    ],
+    "脱敏": [
+     [
+      "DM-SEP",
+      "CS Core",
+      "Data anonymity"
+     ]
+    ],
+    "差分隐私": [
+     [
+      "AL-SEP",
+      "CS Core",
+      "Anonymity (e.g., Differential Privacy)"
+     ]
+    ],
+    "审计与隐私设计": [
+     [
+      "SEC-SEP",
+      "CS Core",
+      "Privacy by design and privacy engineering"
+     ]
+    ]
+   }
+  },
+  "S.4.1": {
+   "matched": {
+    "授权测试": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "fuzzing and penetration testing"
+     ]
+    ],
+    "资产/威胁识别": [
+     [
+      "SEC-Governance",
+      "KA Core",
+      "Protecting critical assets from threats"
+     ]
+    ],
+    "验证": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "Assurance: testing"
+     ]
+    ]
+   },
+   "meta": [
+    "合并重复课程标签"
+   ]
+  },
+  "S.4.2": {
+   "matched": {
+    "证据保全": [
+     [
+      "SEC-Forensics",
+      "KA Core",
+      "chains of custody"
+     ]
+    ],
+    "磁盘/内存/网络取证": [
+     [
+      "SEC-Forensics",
+      "KA Core",
+      "Forensics in different situations: operating systems, file systems"
+     ]
+    ],
+    "响应": [
+     [
+      "SEC-Forensics",
+      "KA Core",
+      "Incident handling processes"
+     ]
+    ]
+   }
+  },
+  "S.4.3": {
+   "matched": {
+    "反汇编": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "reverse engineering"
+     ]
+    ],
+    "动态观测与检测特征": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "AI-assisted malware detection techniques"
+     ]
+    ]
+   }
+  },
+  "S.4.4": {
+   "matched": {
+    "检测工程": [
+     [
+      "NC-Security",
+      "KA Core",
+      "intrusion detection"
+     ]
+    ],
+    "度量与持续改进": [
+     [
+      "SEC-Governance",
+      "KA Core",
+      "Security management"
+     ]
+    ]
+   },
+   "note": "日志关联、威胁情报、攻防演练不在 CS2023 里。"
+  },
+  "S.5.1": {
+   "matched": {
+    "认证性质": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "challenge-response authentication"
+     ]
+    ],
+    "非干扰": [
+     [
+      "SEC-Coding",
+      "KA Core",
+      "Principles of noninterference and nondeducibility"
+     ]
+    ]
+   }
+  },
+  "S.5.2": {
+   "matched": {
+    "漏洞成因": [
+     [
+      "SEC-Coding",
+      "CS Core",
+      "Common vulnerabilities and weaknesses"
+     ]
+    ],
+    "缓解设计": [
+     [
+      "OS-Protection",
+      "CS Core",
+      "Operating systems mitigation strategies"
+     ]
+    ]
+   }
+  },
+  "H.1.1": {
+   "note": "CS2023 没有电路与模拟电子（只在物理计算单元的学习成果里让学生接一个简单电路）。"
+  },
+  "H.1.2": {
+   "matched": {
+    "布尔代数": [
+     [
+      "SF-Foundations",
+      "CS Core",
+      "Boolean logic simplification"
+     ]
+    ],
+    "组合/时序逻辑": [
+     [
+      "SF-Foundations",
+      "CS Core",
+      "Combinational Logic, Sequential Logic"
+     ]
+    ],
+    "状态机": [
+     [
+      "SF-Foundations",
+      "CS Core",
+      "Finite state machines"
+     ]
+    ],
+    "时钟": [
+     [
+      "SF-Foundations",
+      "CS Core",
+      "Clocks, State, Sequencing"
+     ]
+    ],
+    "时序与逻辑实现": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "Gate delays"
+     ]
+    ]
+   }
+  },
+  "H.1.3": {
+   "matched": {
+    "采样": [
+     [
+      "GIT-Fundamentals",
+      "CS Core",
+      "Sampling and quantization"
+     ]
+    ],
+    "卷积": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Image enhancement a. Convolution"
+     ]
+    ],
+    "频域": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Fourier transforms"
+     ]
+    ],
+    "数字滤波与实现": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Blur (e.g., Gaussian)"
+     ]
+    ]
+   },
+   "meta": [
+    "语音/图像的传统方法共享这些基础"
+   ]
+  },
+  "H.2.1": {
+   "matched": {
+    "RTL": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "Register transfer notation"
+     ]
+    ],
+    "综合": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "High-level synthesis"
+     ]
+    ],
+    "约束": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "Physical constraints"
+     ]
+    ],
+    "时序收敛与可编程逻辑": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "field programmable gate arrays (FPGAs)"
+     ]
+    ]
+   }
+  },
+  "H.2.2": {
+   "matched": {
+    "设计自动化": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "Computer-aided design tools that process hardware"
+     ]
+    ],
+    "综合": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "High-level synthesis"
+     ]
+    ]
+   },
+   "note": "形式验证、布局布线不在 CS2023 里。"
+  },
+  "H.2.3": {
+   "note": "CS2023 没有 PCB 设计。"
+  },
+  "H.2.4": {
+   "matched": {
+    "时序/功耗/面积": [
+     [
+      "AR-Logic",
+      "KA Core",
+      "Energy/power"
+     ]
+    ]
+   },
+   "note": "CMOS 与物理设计不在 CS2023 里。"
+  },
+  "H.2.5": {
+   "note": "CS2023 没有半导体器件。"
+  },
+  "H.3.1": {
+   "matched": {
+    "定时器": [
+     [
+      "OS-Scheduling",
+      "KA Core",
+      "Timers"
+     ]
+    ],
+    "中断": [
+     [
+      "SPD-Embedded",
+      "KA Core",
+      "Interrupt handlers"
+     ]
+    ],
+    "外设": [
+     [
+      "AR-IO",
+      "CS Core",
+      "I/O devices"
+     ]
+    ],
+    "裸机程序": [
+     [
+      "SPD-Embedded",
+      "KA Core",
+      "Embedded programming"
+     ]
+    ],
+    "调试与资源限制": [
+     [
+      "SPD-Common",
+      "CS Core",
+      "Programming under platform constraints"
+     ]
+    ]
+   }
+  },
+  "H.3.2": {
+   "matched": {
+    "驱动": [
+     [
+      "OS-Devices",
+      "KA Core",
+      "Device driver purpose"
+     ]
+    ],
+    "实时调度": [
+     [
+      "OS-Real-time",
+      "KA Core",
+      "Process and task scheduling."
+     ]
+    ],
+    "中断": [
+     [
+      "SPD-Embedded",
+      "KA Core",
+      "Interrupt handlers"
+     ]
+    ],
+    "资源": [
+     [
+      "SPD-Embedded",
+      "KA Core",
+      "Real-time resource management"
+     ]
+    ]
+   }
+  },
+  "H.3.3": {
+   "matched": {
+    "总线": [
+     [
+      "AR-IO",
+      "CS Core",
+      "Buses fundamentals"
+     ]
+    ],
+    "采集": [
+     [
+      "GIT-Physical",
+      "KA Core",
+      "Acquisition of data from sensors"
+     ]
+    ],
+    "执行器和软硬件接口": [
+     [
+      "SPD-Embedded",
+      "KA Core",
+      "Sensors and actuators"
+     ]
+    ]
+   }
+  },
+  "H.3.4": {
+   "matched": {
+    "时限": [
+     [
+      "OS-Real-time",
+      "KA Core",
+      "Deadlines and real-time issues."
+     ]
+    ],
+    "调度可分析性": [
+     [
+      "SPD-Embedded",
+      "KA Core",
+      "Hard real-time systems vs soft real-time systems"
+     ]
+    ],
+    "失效安全与验证": [
+     [
+      "SPD-Embedded",
+      "KA Core",
+      "Safety considerations and safety analysis"
+     ]
+    ]
+   }
+  },
+  "H.4.1": {
+   "note": "CS2023 没有控制理论与状态估计。"
+  },
+  "H.4.2": {
+   "matched": {
+    "运动学/动力学": [
+     [
+      "SPD-Robot",
+      "KA Core",
+      "Forward kinematics"
+     ]
+    ],
+    "轨迹规划": [
+     [
+      "SPD-Robot",
+      "KA Core",
+      "Navigation and path planning"
+     ]
+    ],
+    "感知融合与机器人控制": [
+     [
+      "SPD-Robot",
+      "KA Core",
+      "Sensors, embedded computation, and effectors"
+     ]
+    ]
+   },
+   "note": "定位建图在 CS2023 里是 AI-Robotics 的 Non-core。"
+  },
+  "H.4.3": {
+   "matched": {
+    "设备": [
+     [
+      "NC-Mobility",
+      "KA Core",
+      "Device to device communication (e.g., IoT communication)"
+     ]
+    ],
+    "连接": [
+     [
+      "GIT-Physical",
+      "KA Core",
+      "Network connectivity"
+     ]
+    ]
+   },
+   "note": "物联网平台、设备管理与功耗不在 CS2023 的核心主题里。"
+  },
+  "H.4.4": {
+   "matched": {
+    "把计算部署到数据源附近": [
+     [
+      "NC-Applications",
+      "CS Core",
+      "cloud, edge, and fog"
+     ]
+    ]
+   },
+   "note": "CS2023 只在网络应用范式里提到边缘计算。"
+  },
+  "V.1.1": {
+   "matched": {
+    "几何表示": [
+     [
+      "GIT-Rendering",
+      "KA Core",
+      "Object representations"
+     ]
+    ],
+    "变换": [
+     [
+      "MSF-Linear",
+      "KA Core",
+      "geometric transformations with matrices"
+     ]
+    ],
+    "光栅化": [
+     [
+      "GIT-Rendering",
+      "KA Core",
+      "Simple triangle rasterization"
+     ]
+    ],
+    "光照": [
+     [
+      "GIT-Rendering",
+      "KA Core",
+      "Radiometry and light models"
+     ]
+    ],
+    "渲染": [
+     [
+      "GIT-Rendering",
+      "KA Core",
+      "Rendering with a shader-based API"
+     ]
+    ],
+    "动画与物理仿真": [
+     [
+      "GIT-Animation",
+      "KA Core",
+      "Key-frame animation"
+     ],
+     [
+      "GIT-Simulation",
+      "KA Core",
+      "Particle systems"
+     ]
+    ]
+   }
+  },
+  "V.1.2": {
+   "matched": {
+    "图像/音频/视频表示": [
+     [
+      "GIT-Fundamentals",
+      "CS Core",
+      "Standard image formats"
+     ]
+    ],
+    "编码压缩": [
+     [
+      "GIT-Image",
+      "KA Core",
+      "Compression (e.g., Huffman coding)"
+     ]
+    ]
+   },
+   "note": "容器、同步与媒体传输不在 CS2023 里；图像格式与数字化的 CS Core 主题由图形学技能讲。"
+  },
+  "V.1.3": {
+   "matched": {
+    "光传输": [
+     [
+      "GIT-Shading",
+      "KA Core",
+      "Solutions and approximations to the rendering equation"
+     ]
+    ],
+    "蒙特卡洛渲染": [
+     [
+      "GIT-Shading",
+      "KA Core",
+      "path tracing"
+     ]
+    ],
+    "物理模拟": [
+     [
+      "GIT-Simulation",
+      "KA Core",
+      "Particle systems"
+     ]
+    ]
+   }
+  },
+  "V.2.1": {
+   "matched": {
+    "感知": [
+     [
+      "HCI-User",
+      "KA Core",
+      "Cognitive models that inform interaction design (e.g., attention, perception"
+     ]
+    ],
+    "注意": [
+     [
+      "HCI-User",
+      "KA Core",
+      "Cognitive models that inform interaction design (e.g., attention, perception"
+     ]
+    ],
+    "人因与可用性原理": [
+     [
+      "HCI-User",
+      "KA Core",
+      "color perception, ergonomics"
+     ]
+    ]
+   }
+  },
+  "V.2.2": {
+   "matched": {
+    "访谈": [
+     [
+      "HCI-User",
+      "CS Core",
+      "Interviews"
+     ]
+    ],
+    "原型": [
+     [
+      "HCI-Design",
+      "CS Core",
+      "Prototyping techniques and tools"
+     ]
+    ],
+    "交互流程": [
+     [
+      "HCI-Design",
+      "KA Core",
+      "Interaction techniques"
+     ]
+    ],
+    "可用性实验": [
+     [
+      "HCI-User",
+      "CS Core",
+      "Usability tests"
+     ]
+    ],
+    "体验评估与迭代": [
+     [
+      "HCI-Evaluation",
+      "CS Core",
+      "Methods for evaluation with users"
+     ]
+    ]
+   }
+  },
+  "V.2.3": {
+   "matched": {
+    "多种能力和设备条件": [
+     [
+      "HCI-Accessibility",
+      "KA Core",
+      "permanent, temporary, and situational dis"
+     ]
+    ],
+    "辅助技术": [
+     [
+      "HCI-Accessibility",
+      "CS Core",
+      "Features and products that enable accessibility"
+     ]
+    ],
+    "可感知/可操作与设计评估": [
+     [
+      "HCI-Accessibility",
+      "CS Core",
+      "Accessibility standards (e.g., Web Content Accessibility Guidelines)"
+     ]
+    ]
+   }
+  },
+  "V.2.4": {
+   "matched": {
+    "虚实融合": [
+     [
+      "GIT-Immersion",
+      "KA Core",
+      "Immersion levels (i.e., Virtual Reality (VR), Augmented Reality (AR)"
+     ]
+    ],
+    "追踪": [
+     [
+      "GIT-Immersion",
+      "KA Core",
+      "Viewer tracking"
+     ]
+    ],
+    "空间界面": [
+     [
+      "GIT-Immersion",
+      "KA Core",
+      "3D interaction"
+     ]
+    ],
+    "协作": [
+     [
+      "GIT-Immersion",
+      "KA Core",
+      "Distributed VR, collaboration over computer network"
+     ]
+    ],
+    "沉浸与交互研究": [
+     [
+      "GIT-Immersion",
+      "KA Core",
+      "Presence and factors that impact level of immersion"
+     ]
+    ]
+   }
+  },
+  "V.3.1": {
+   "matched": {
+    "数据类型": [
+     [
+      "GIT-Visualization",
+      "KA Core",
+      "Structuring data"
+     ]
+    ],
+    "视觉编码": [
+     [
+      "GIT-Visualization",
+      "KA Core",
+      "Mapping data to visual representations"
+     ]
+    ],
+    "图表选择": [
+     [
+      "GIT-Visualization",
+      "KA Core",
+      "Statistical visualization (e.g., scatterplots"
+     ]
+    ],
+    "布局": [
+     [
+      "HCI-Design",
+      "KA Core",
+      "Visual UI design"
+     ]
+    ],
+    "交互与读图误差": [
+     [
+      "GIT-Visualization",
+      "KA Core",
+      "Design and evaluation of visualizations"
+     ]
+    ]
+   }
+  },
+  "V.3.2": {
+   "matched": {
+    "场/体数据": [
+     [
+      "GIT-Visualization",
+      "KA Core",
+      "2D/3D scalar fields"
+     ]
+    ],
+    "时空与图可视化": [
+     [
+      "GIT-Visualization",
+      "KA Core",
+      "Geospatial visualization"
+     ]
+    ],
+    "多视图": [
+     [
+      "GIT-Visualization",
+      "KA Core",
+      "parallel coordinates, trellis plots"
+     ]
+    ]
+   }
+  },
+  "I.1.1": {
+   "note": "CS2023 没有信息系统（它属于 IS 学科的课程标准）。"
+  },
+  "I.1.2": {
+   "note": "CS2023 没有 IT 战略与治理。"
+  },
+  "I.1.3": {
+   "note": "CS2023 没有业务流程管理。"
+  },
+  "I.1.4": {
+   "matched": {
+    "进度": [
+     [
+      "SE-Teamwork",
+      "CS Core",
+      "effort estimation, meeting structure, work schedule"
+     ]
+    ],
+    "成本": [
+     [
+      "SEP-Professional-Ethics",
+      "KA Core",
+      "Time-to-market and cost considerations"
+     ]
+    ],
+    "风险": [
+     [
+      "SE-Requirements",
+      "KA Core",
+      "Risk identification and management"
+     ]
+    ],
+    "沟通": [
+     [
+      "SE-Teamwork",
+      "CS Core",
+      "Effective communication, including oral and written"
+     ]
+    ],
+    "质量和利益相关者": [
+     [
+      "SE-Teamwork",
+      "KA Core",
+      "Interfacing with stakeholders"
+     ]
+    ]
+   },
+   "note": "CS2023 在软件工程的团队协作单元里覆盖了进度、估算、风险和利益相关者。"
+  },
+  "I.2.1": {
+   "matched": {
+    "隐私": [
+     [
+      "SEP-Privacy",
+      "CS Core",
+      "Privacy implications of widespread data collection"
+     ]
+    ],
+    "知识产权": [
+     [
+      "SEP-IP",
+      "CS Core",
+      "Intellectual property rights"
+     ]
+    ],
+    "偏见": [
+     [
+      "AL-SEP",
+      "CS Core",
+      "Algorithmic fairness"
+     ]
+    ],
+    "可持续性": [
+     [
+      "SEP-Sustainability",
+      "CS Core",
+      "Guidelines for sustainable design standards."
+     ]
+    ],
+    "责任与公共利益": [
+     [
+      "SEP-Professional-Ethics",
+      "CS Core",
+      "Accountability, responsibility, and liability"
+     ]
+    ]
+   },
+   "meta": [
+    "具体法规依地区和时间核验"
+   ]
+  },
+  "I.2.2": {
+   "matched": {
+    "技术表达": [
+     [
+      "SEP-Communication",
+      "CS Core",
+      "Technical communication materials"
+     ]
+    ],
+    "审查": [
+     [
+      "SE-Teamwork",
+      "CS Core",
+      "Code review"
+     ]
+    ],
+    "研究问题与团队沟通": [
+     [
+      "SEP-Communication",
+      "CS Core",
+      "Oral, written, and electronic team and group communication"
+     ]
+    ]
+   }
+  },
+  "I.2.3": {
+   "matched": {
+    "假设": [
+     [
+      "HCI-Evaluation",
+      "KA Core",
+      "Hypothesis design"
+     ]
+    ],
+    "实验设计": [
+     [
+      "HCI-Evaluation",
+      "KA Core",
+      "Study planning"
+     ]
+    ],
+    "误差与效度": [
+     [
+      "SE-Validation",
+      "KA Core",
+      "Estimation of uncertainty"
+     ]
+    ],
+    "数据/代码和学术诚信": [
+     [
+      "SDF-SEP",
+      "CS Core",
+      "Plagiarism and academic integrity"
+     ]
+    ]
+   }
+  },
+  "X.1.1": {
+   "matched": {
+    "压缩和硬件协同": [
+     [
+      "AR-Heterogeneity",
+      "KA Core",
+      "Machine Learning Accelerator"
+     ]
+    ],
+    "端边云协同": [
+     [
+      "NC-Applications",
+      "CS Core",
+      "cloud, edge, and fog"
+     ]
+    ]
+   }
+  },
+  "X.1.3": {
+   "matched": {
+    "规划": [
+     [
+      "SPD-Robot",
+      "KA Core",
+      "Navigation and path planning"
+     ]
+    ],
+    "实时与安全评估": [
+     [
+      "OS-Real-time",
+      "KA Core",
+      "Special concerns in real-time systems (safety)."
+     ]
+    ]
+   },
+   "meta": [
+    "同时需要领域工程基础"
+   ],
+   "note": "感知与定位在 CS2023 里是 AI-Vision、AI-Robotics 的 Non-core。"
+  },
+  "X.2.1": {
+   "meta": [
+    "外部前置为分子生物学"
+   ],
+   "note": "CS2023 没有生物信息学。"
+  },
+  "X.2.2": {
+   "meta": [
+    "外部前置为金融经济知识"
+   ],
+   "note": "CS2023 没有金融科技。"
+  },
+  "X.2.3": {
+   "meta": [
+    "外部前置为教育/心理/测量"
+   ],
+   "note": "CS2023 没有教育科技。"
+  },
+  "X.2.4": {
+   "meta": [
+    "外部前置为医学与临床流程"
+   ],
+   "note": "CS2023 只在 AI 应用里举医疗为例，没有医疗信息学。"
+  },
+  "X.2.5": {
+   "note": "地理空间数据在 CS2023 里是 DM-Modeling 的 Non-core。"
+  },
+  "X.3.1": {
+   "matched": {
+    "量子态": [
+     [
+      "AR-Quantum",
+      "KA Core",
+      "superposition principle, measurement axiom, unitary evolution"
+     ]
+    ],
+    "门与测量": [
+     [
+      "AR-Quantum",
+      "KA Core",
+      "Single qubit gates"
+     ]
+    ],
+    "量子算法": [
+     [
+      "AR-Quantum",
+      "KA Core",
+      "Simple quantum algorithms"
+     ]
+    ],
+    "纠错和量子信息": [
+     [
+      "AR-Quantum",
+      "KA Core",
+      "The No-Cloning Theorem. The Quantum Teleportation protocol"
+     ]
+    ]
+   },
+   "meta": [
+    "外部前置为量子力学基础"
+   ],
+   "note": "CS2023 把量子体系结构列为 AR 的 KA Core。"
+  },
+  "X.3.2": {
+   "matched": {
+    "密码承诺": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "commitment"
+     ]
+    ],
+    "账本": [
+     [
+      "SEC-Crypto",
+      "KA Core",
+      "Blockchain and cryptocurrencies"
+     ]
+    ]
+   },
+   "meta": [
+    "是分布式/密码/经济机制交叉"
+   ],
+   "note": "CS2023 把区块链列为密码学的 KA Core；共识算法本身是 Non-core。"
+  },
+  "X.3.3": {
+   "note": "CS2023 没有科学机器学习。"
+  }
+ }
+}

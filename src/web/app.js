@@ -302,7 +302,7 @@
       extra);
   }
   function renderNext() {
-    const list = D.skills.filter((s) => status(s.id) === "avail" && (!s.optional || !state.collapsed.has("X")))
+    const list = D.skills.filter((s) => status(s.id) === "avail" && !(s.optional && state.collapsed.has(s.lane)))
       .sort((a, b) => b.reach - a.reach || a.step - b.step);
     $("#next-count").textContent = `(${list.length})`;
     const shown = showAllNext ? list : list.slice(0, 8);
@@ -420,10 +420,11 @@
         el("span", { class: "chip", title: "前面至少有这么多层必须前置" }, `第 ${s.step} 步`),
         el("span", { class: "chip", title: D.depths[s.entry]?.goal }, `入门层 D${s.entry} ${D.depths[s.entry]?.name || ""}`),
         el("span", { class: "chip" }, `深度 ${s.levels.map((l) => "D" + l).join(" ")}`),
-        s.optional ? el("span", { class: "chip" }, "选修方向") : null,
+        s.optional ? el("span", { class: "chip", title: s.scope }, "选修") : null,
         s.prereqStatus === "verified"
           ? el("span", { class: "chip ok", title: "必须/推荐前置已用真实课程的先修要求核实" }, "前置已核实")
-          : el("span", { class: "chip warn", title: "按常见课程体系起草，还在找真实课程证据" }, "前置待核实"))));
+          : el("span", { class: "chip warn", title: "按常见课程体系起草，还在找真实课程证据" }, "前置待核实")),
+      s.optional ? el("p", { class: "p-scope" }, s.scope) : null));
 
     // status + primary action
     const box = el("div", { class: `status-box ${st}` });
