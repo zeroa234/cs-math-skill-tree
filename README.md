@@ -17,7 +17,7 @@
   <a href="#数据从哪来">数据从哪来</a>
 </p>
 
-> An interactive skill tree for a computer-science degree and the math behind it: 201 skills in 13 areas, gated by prerequisites quoted from real university course pages. Every skill comes with free learning resources (English and Chinese), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
+> An interactive skill tree for a computer-science degree and the math behind it: 196 skills in 13 areas, gated by prerequisites quoted from real university course pages. Every skill comes with free learning resources (English and Chinese), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
 
 ## 预览
 
@@ -36,12 +36,12 @@
 
 | | |
 |---|---|
-| 技能 | **201** 个，分 13 个领域（数学拆成三条泳道），按最长的必须前置链排成 **7** 步 |
-| 前置关系 | **278** 条必须前置（没点亮就不能点亮下一个），**388** 条推荐前置（只提示，不挡路） |
-| 前置依据 | 191 个技能已用课程证据核实，共引用 **363** 条官方先修原文（300 多门课），每条附原始链接；其余 10 个标“前置待核实” |
+| 技能 | **196** 个，分 13 个领域（数学拆成三条泳道），按最长的必须前置链排成 **7** 步 |
+| 前置关系 | **270** 条必须前置（没点亮就不能点亮下一个），**389** 条推荐前置（只提示，不挡路） |
+| 前置依据 | 187 个技能已用课程证据核实，共引用 **362** 条官方先修原文（300 多门课），每条附原始链接；其余 9 个标“前置待核实” |
 | 学习资源 | 每个技能都有英文和中文资源，标明免费 / 注册 / 付费、学习范围，以及中文资源是否只覆盖部分内容 |
 | 练习题 | 每个技能 1 道，答案折叠，答案已验算 |
-| 知识导览图 | 每个技能 1 张：**1,890** 个分支、**8,643** 个知识点；**10,574** 条章节标题都和来源目录页逐条核对过 |
+| 知识导览图 | 每个技能 1 张：**1,879** 个分支、**8,593** 个知识点；**10,509** 条章节标题都和来源目录页逐条核对过 |
 
 其他：
 
@@ -68,20 +68,20 @@
 
 ## 数据从哪来
 
-起点是一张 ChatGPT 生成的“计算机科学与数学知识星图”（原文件只读保存在 `data/source/chatgpt-outputs/`）：259 个节点、317 条关系（228 条前置、89 条相关），但前置不分必须和推荐，也没有给出依据。这里保留它的技能划分和简介（201 个技能），前置关系按真实课程的先修要求重新判定，学习资源、练习题和导览图都是重新找证据做的。检索和整理借助了 AI 代理，结论都附可以打开核对的原始链接。
+起点是一张 ChatGPT 生成的“计算机科学与数学知识星图”（原文件只读保存在 `data/source/chatgpt-outputs/`）：259 个节点、317 条关系（228 条前置、89 条相关），但前置不分必须和推荐，也没有给出依据。这里沿用它的技能划分和简介（201 个技能），再对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023 检查划分：拆得过细的合并、几个不相干领域拼成的收窄或删除、缺的游戏开发补上，现为 196 个（改了什么、为什么改见 [技能划分检查](reports/skill-partition-review-2026-11-01.md)）。前置关系按真实课程的先修要求重新判定，学习资源、练习题和导览图都是重新找证据做的。检索和整理借助了 AI 代理，结论都附可以打开核对的原始链接。
 
 **必须 / 推荐前置怎么判定**
 
 - **必须前置**：至少一门真实大学课程把它列为先修（或在同一门课里先讲它），并且不会它就学不懂本技能入门层的内容。
 - **推荐前置**：课程写成“建议 / 有帮助”、只有部分课程要求、只是数学成熟度门槛，或者只在深入层才用到。
-- 找不到可用课程先修说明的 10 个技能按内容需要起草，页面上标“前置待核实”：F.2.4、P.5.4、C.4.4、D.1.5、S.2.4、S.5.2、H.4.4、I.2.3、X.2.4、X.2.5。
+- 找不到可用课程先修说明的 9 个技能按内容需要起草，页面上标“前置待核实”：F.2.4、P.5.4、C.4.4、D.1.5、S.2.4、S.5.2、H.4.4、I.2.3、X.2.4。
 
 **知识导览图怎么来**
 
 - 每个技能 1 个主来源：优先用“去哪学”里那份材料本身（它有成体系的目录时），否则用标准教材（作者主页、出版社或开放教材官网上的目录），或一流大学课程官方的逐讲课表。
 - 只用作者或出版社官方公开的整书 PDF，课程网站、网盘、镜像站上的商业教材 PDF 不用。
-- 标题照原文抄，再配中文译名。`scripts/check_outlines.py` 把每条标题和实际抓到的来源页面文字逐条比对：10,563 条逐字命中，11 条因 PDF 抽字差异（如 σ 被抽成 s）判为近似，没有缺失。
-- 已知缺口：A.2.3.2、C.3.3、S.2.1 的来源只有讲次一层；技能简介里有 15 个知识点在所有来源里都没有专门章节，导览图右栏标“—”并写明原因。
+- 标题照原文抄，再配中文译名。`scripts/check_outlines.py` 把每条标题和实际抓到的来源页面文字逐条比对：10,498 条逐字命中，11 条因 PDF 抽字差异（如 σ 被抽成 s）判为近似，没有缺失。
+- 已知缺口：A.2.3.2、C.3.3、S.2.1 的来源只有讲次一层；技能简介里有 13 个知识点在所有来源里都没有专门章节，导览图右栏标“—”并写明原因。
 
 逐个技能的来源和适用性见 [来源审核报告](reports/source-review-2026-11-01.md)，中文资源的增补依据见 [中文资源报告](reports/chinese-resources-expansion-2026-11-01.md)。
 
@@ -110,7 +110,7 @@ python -X utf8 scripts/package_web.py   # 打包离线 zip
 
 ## 宣传片
 
-在哔哩哔哩观看：[大肥鱼把计算机专业内容做成了技能树](https://www.bilibili.com/video/BV1FTx46CEN8/)（约 2 分钟）。用 Remotion 和 Blender 做成，画面里的数字和树的形状都从数据算出来，做法见 [docs/promo-video.md](docs/promo-video.md)。
+在哔哩哔哩观看：[大肥鱼把计算机专业内容做成了技能树](https://www.bilibili.com/video/BV1FTx46CEN8/)（约 2 分钟）。用 Remotion 和 Blender 做成，画面里的数字和树的形状都从数据算出来，做法见 [docs/promo-video.md](docs/promo-video.md)。片中的数字（201 个技能、278 条必须前置）是重新划分技能之前的版本，以上面“有什么”里的数字为准。
 
 ## 用到的开源组件
 

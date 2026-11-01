@@ -196,11 +196,11 @@ def merge(absorbed, kept):
         if q != "_summary" and q not in rows[kept]["req"] + rows[kept]["rec"]:
             nk.pop(q)
     save(CUR / "prereq-notes.json", notes)
-    # course evidence
+    # course evidence; the same quote from the same page is one piece of evidence even if the course label differs
     rd = ROOT / "data/research/nodes"
     ra, rk = load(rd / f"{absorbed}.json"), load(rd / f"{kept}.json")
-    seen = {(c.get("course"), c.get("url")) for c in rk.get("courses", [])}
-    rk.setdefault("courses", []).extend(c for c in ra.get("courses", []) if (c.get("course"), c.get("url")) not in seen)
+    seen = {(c.get("url"), c.get("prereq_text")) for c in rk.get("courses", [])}
+    rk.setdefault("courses", []).extend(c for c in ra.get("courses", []) if (c.get("url"), c.get("prereq_text")) not in seen)
     save(rd / f"{kept}.json", rk)
     (rd / f"{absorbed}.json").unlink()
     # exercises
