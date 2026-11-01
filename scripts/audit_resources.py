@@ -7,6 +7,7 @@ Results are temporary evidence, not a guarantee of access from every region.
 import argparse
 import concurrent.futures
 import datetime
+import hashlib
 import json
 import pathlib
 import re
@@ -23,6 +24,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--output', type=pathlib.Path, default=ROOT / 'temp/resource-audit/final-links.json')
     ap.add_argument('--workers', type=int, default=8)
+    ap.add_argument('--scope', choices=['learning', 'all'], default='learning',
+                    help='all also checks outline sources/TOCs and prerequisite evidence URLs')
+    ap.add_argument('--evidence-dir', type=pathlib.Path,
+                    help='temporary directory for fetched HTML text, for human content review')
     args = ap.parse_args()
     data = json.loads((ROOT / 'output/skilltree.json').read_text(encoding='utf-8'))
     uses = {}
@@ -30,7 +35,18 @@ def main():
         for key in ['resource', 'zhAlt']:
             resource = skill.get(key)
             if resource:
-                uses.setdefault(resource['url'], []).append({'id': skill['id'], 'language': resource['lang']})
+                uses.setdefault(resource['url'], []).append({'id': skill['id'], 'language': resource['lang'], 'role': key})
+        if args.scope == 'all':
+            for course in skill.get('courses', []):
+                uses.setdefault(course['url'], []).append({'id': skill['id'], 'role': 'prerequisite'})
+    if args.scope == 'all':
+        for path in sorted((ROOT / 'data/outlines').glob('*.json')):
+            outline = json.loads(path.read_text(encoding='utf-8'))
+            for source in outline['sources']:
+                for url in dict.fromkeys([source['url'], *source.get('toc_urls', [])]):
+                    uses.setdefault(url, []).append({'id': outline['id'], 'role': 'outline', 'source': source['key']})
+    if args.evidence_dir:
+        args.evidence_dir.mkdir(parents=True, exist_ok=True)
     gates = {urllib.parse.urlsplit(url).netloc: threading.Semaphore(2) for url in uses}
 
     def check(url):
@@ -50,6 +66,11 @@ def main():
                         text = re.sub(r'\s+', ' ', ''.join(parser.parts)).strip()
                         # Do not retain copyrighted article bodies in this report.
                         result['textLength'] = len(text)
+                        if args.evidence_dir:
+                            evidence = args.evidence_dir / (hashlib.sha256(url.encode()).hexdigest() + '.json')
+                            evidence.write_text(json.dumps({**result, 'text': ''.join(parser.parts)},
+                                                           ensure_ascii=False), encoding='utf-8')
+                            result['evidenceFile'] = evidence.relative_to(ROOT).as_posix()
                         if len(text) < 80 or re.search(r'access denied|just a moment|page not found', parser.title, re.I):
                             result['needsReview'] = 'Check rendered page: empty shell, challenge or error title'
         except urllib.error.HTTPError as exc:
@@ -65,7 +86,7 @@ def main():
             if i % 50 == 0:
                 print(f'Checked {i}/{len(uses)} URLs', flush=True)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    report = {'skills': len(data['skills']), 'urls': len(uses), 'results': results}
+    report = {'skills': len(data['skills']), 'scope': args.scope, 'urls': len(uses), 'results': results}
     args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     flagged = [r for r in results if r.get('status') != 200 or r.get('needsReview')]
     for item in flagged:
