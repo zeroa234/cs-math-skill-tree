@@ -58,8 +58,11 @@ def dump_exercises(items):
 def save_exercises(p, items):
     """Keep the file's existing layout: the compact one above, or plain json.dumps(indent=1) (two files use it)."""
     old = p.read_text(encoding="utf-8-sig").replace("\r", "")
-    plain = json.dumps(json.loads(old), ensure_ascii=False, indent=1) + "\n" == old
-    p.write_text(json.dumps(items, ensure_ascii=False, indent=1) + "\n" if plain else dump_exercises(items), encoding="utf-8")
+    plain = json.dumps(json.loads(old), ensure_ascii=False, indent=1)
+    if old in (plain, plain + "\n"):        # P4-P5.json has no newline at the end, X.json has one
+        p.write_text(json.dumps(items, ensure_ascii=False, indent=1) + ("\n" if old.endswith("\n") else ""), encoding="utf-8")
+    else:
+        p.write_text(dump_exercises(items), encoding="utf-8")
 
 
 # ── prereqs.txt ──────────────────────────────────────────────────────
@@ -100,7 +103,10 @@ def join_text(a, b):
 
 # ── outlines ─────────────────────────────────────────────────────────
 def outline(id_):
-    p = ROOT / f"data/outlines/{id_}.json"
+    """The archived map, or the draft if this tool wrote a newer one (several merges into the same skill)."""
+    p, d = ROOT / f"data/outlines/{id_}.json", DRAFTS / f"{id_}.json"
+    if d.exists() and (not p.exists() or d.stat().st_mtime > p.stat().st_mtime):
+        return load(d)
     return load(p) if p.exists() else None
 
 
@@ -110,7 +116,7 @@ def put_draft(o):
     save(DRAFTS / f"{o['id']}.json", o)
 
 
-def add_sources(dst, src, keys, only_branches=None):
+def add_sources(dst, src, keys, only_branches=None, fill_default=""):
     """Copy sources `keys` of outline `src` (and their branches) into `dst`; re-key, merging same-title sources."""
     remap = {}
     used = {s["key"] for s in dst["sources"]}
@@ -120,6 +126,8 @@ def add_sources(dst, src, keys, only_branches=None):
         same = next((d for d in dst["sources"] if d["title"].strip().lower() == s["title"].strip().lower()), None)
         if same:
             remap[s["key"]] = same["key"]
+            # the moved branches were checked against these pages, so keep them (check_outlines reads toc_urls)
+            same["toc_urls"] = list(dict.fromkeys(same.get("toc_urls", []) + s.get("toc_urls", [])))
             continue
         new = next(chr(c) for c in range(ord("A"), ord("Z") + 1) if chr(c) not in used)
         used.add(new)
@@ -129,6 +137,10 @@ def add_sources(dst, src, keys, only_branches=None):
         if b["src"] not in keys or (only_branches and b["title"] not in only_branches and b.get("zh") not in only_branches):
             continue
         b = {**b, "src": remap[b["src"]]}
+        main = dst["sources"][0]["key"]
+        if b["src"] != main and not b.get("fill"):
+            # a supplementary branch must say what it fills (check_outlines); default to where it came from
+            b["fill"] = fill_default or f"来自 {src['id']} 的导览图"
         twin = next((d for d in dst["outline"] if d["src"] == b["src"] and d["title"] == b["title"]), None)
         if twin:
             have = {i["title"] for i in twin.get("items", [])}

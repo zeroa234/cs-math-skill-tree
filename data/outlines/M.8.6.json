@@ -12,6 +12,19 @@
     "https://www.cecm.sfu.ca/~mmonagan/teaching/MACM401/"
    ],
    "why": "节点“现有英文学习资源”就是这门课；作者主页把 26 讲按 6 个主题分组（整数与多项式算法、模算法与 FFT、p 进与 Hensel 提升、多项式分解、符号积分）逐讲列出讲题，正好是节点的“精确运算、多项式算法与计算机代数系统”，且每讲都配视频与 Maple 工作表。"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Ideals, Varieties, and Algorithms: An Introduction to Computational Algebraic Geometry and Commutative Algebra, 4th Edition",
+   "by": "David A. Cox, John Little, Donal O’Shea",
+   "year": 2015,
+   "url": "https://www.idealsvarietiesalgorithms.org/",
+   "toc_urls": [
+    "https://link.springer.com/book/10.1007/978-3-319-16721-3",
+    "https://link.springer.com/content/pdf/bfm%3A978-3-319-16721-3%2F1.pdf"
+   ],
+   "why": "补 Gröbner 基与消元：多项式理想与代数簇的标准教材（Springer Undergraduate Texts in Mathematics），出版社免费提供的前置页 PDF 有完整目录；第 2 章 Gröbner 基、第 3 章消元理论是计算机代数里求解多元多项式方程组的标准算法。"
   }
  ],
  "outline": [
@@ -187,6 +200,84 @@
      "zh": "Risch 算法：指数扩域"
     }
    ]
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "Gröbner Bases",
+   "zh": "Gröbner 基",
+   "items": [
+    {
+     "ref": "§1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "§2",
+     "title": "Orderings on the Monomials in k[x1,..., xn]",
+     "zh": "k[x1,…,xn] 中单项式的序"
+    },
+    {
+     "ref": "§3",
+     "title": "A Division Algorithm in k[x1,..., xn]",
+     "zh": "k[x1,…,xn] 中的除法算法"
+    },
+    {
+     "ref": "§4",
+     "title": "Monomial Ideals and Dickson’s Lemma",
+     "zh": "单项式理想与 Dickson 引理"
+    },
+    {
+     "ref": "§5",
+     "title": "The Hilbert Basis Theorem and Gröbner Bases",
+     "zh": "Hilbert 基定理与 Gröbner 基"
+    },
+    {
+     "ref": "§6",
+     "title": "Properties of Gröbner Bases",
+     "zh": "Gröbner 基的性质"
+    },
+    {
+     "ref": "§7",
+     "title": "Buchberger’s Algorithm",
+     "zh": "Buchberger 算法"
+    },
+    {
+     "ref": "§8",
+     "title": "First Applications of Gröbner Bases",
+     "zh": "Gröbner 基的初步应用"
+    }
+   ],
+   "fill": "Gröbner 基与消元"
+  },
+  {
+   "src": "B",
+   "ref": "3",
+   "title": "Elimination Theory",
+   "zh": "消元理论",
+   "items": [
+    {
+     "ref": "§1",
+     "title": "The Elimination and Extension Theorems",
+     "zh": "消元定理与扩展定理"
+    },
+    {
+     "ref": "§2",
+     "title": "The Geometry of Elimination",
+     "zh": "消元的几何"
+    },
+    {
+     "ref": "§3",
+     "title": "Implicitization",
+     "zh": "隐式化"
+    },
+    {
+     "ref": "§4",
+     "title": "Singular Points and Envelopes",
+     "zh": "奇点与包络"
+    }
+   ],
+   "fill": "Gröbner 基与消元"
   }
  ],
  "coverage": [
@@ -222,13 +313,21 @@
     "A:Lecture 19"
    ],
    "note": "第 2 讲的 Maple 入门与第 19 讲的 Maple 中公式表示/求导；整门课的讲义、习题与 worksheets 都用 Maple，课程首页即以 Maple worksheets 组织。"
+  },
+  {
+   "topic": "Gröbner 基与消元",
+   "refs": [
+    "B:2",
+    "B:3"
+   ],
+   "note": "MACM 401 的讲题里没有 Gröbner 基；由 Cox–Little–O’Shea 第 2 章 Gröbner 基、第 3 章消元理论补（从删除的 M.3.6 移来）。"
   }
  ],
  "omitted": "只未收第 26 讲（Final exam info + review，考试信息与复习）。其余 25 讲全部收入；符号积分一组虽然不是节点简介的四条知识点本身，但它是计算机代数系统的标准应用（Risch 算法），故保留。",
- "notes": "作者主页把每讲写成一段描述而不是短语，所以 title 是整句照抄（含原文拼写错误 divison、Horrowitz，未改动）。分支标题按页面上六个加粗主题词抄，括号里的“N lectures”放进 zh 说明。页面本身没有给分组编号，故分支 ref 留空，coverage 用 A:#2…A:#5 指分支。",
+ "notes": "作者主页把每讲写成一段描述而不是短语，所以 title 是整句照抄（含原文拼写错误 divison、Horrowitz，未改动）。分支标题按页面上六个加粗主题词抄，括号里的“N lectures”放进 zh 说明。页面本身没有给分组编号，故分支 ref 留空，coverage 用 A:#2…A:#5 指分支。；从 M.3.6 移入来源 A→B 的分支：Gröbner 基、消元理论。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 31,
+  "exact": 45,
   "fuzzy": 0,
   "dropped": []
  }

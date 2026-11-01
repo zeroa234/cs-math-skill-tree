@@ -16,11 +16,11 @@
  "A.2.1": {
   "M.3.1": "数据矩阵、正规方程、PCA 都是线性代数；Stanford CS 229 要求 MATH 51，Berkeley CS 189 要求 MATH 54。",
   "M.6.1": "似然、分类概率、生成模型都建立在概率上；CS 229 要求 CS 109 级概率。",
-  "M.1.4.2": "梯度下降和损失函数求导要用梯度；CS 229 要求多元微积分，CS 189 要求 MATH 53。",
   "P.2.3": "CS 229 要求能用 Python/NumPy 写出不简单的程序，作业都用这个工具栈。",
   "M.6.2": "模型评估和置信区间要用统计推断。",
   "M.5.3": "Berkeley CS 189 要求 CS 70。",
-  "_summary": "Stanford CS 229：Python/NumPy 编程 + 概率 + 多元微积分 + 线性代数；Berkeley CS 189：MATH 53、MATH 54、CS 70。"
+  "_summary": "Stanford CS 229：Python/NumPy 编程 + 概率 + 多元微积分 + 线性代数；Berkeley CS 189：MATH 53、MATH 54、CS 70。",
+  "M.1.4.1": "梯度下降和损失函数求导要用梯度；CS 229 要求多元微积分，CS 189 要求 MATH 53。"
  },
  "A.2.2": {
   "M.6.2": "CMU 36-708 要求 36-705（中级统计理论）；泛化界建立在集中不等式与估计理论上。",
@@ -32,9 +32,9 @@
  },
  "A.2.3": {
   "A.2.1": "多伦多 CSC413 先修 CSC311（机器学习）；损失、过拟合、验证集这些概念要先有。",
-  "M.1.4.2": "反向传播就是多元链式法则；CSC413 要求多元微积分，CS 231n 要求熟练求导。",
   "M.8.5": "理解自动微分后，框架的 autograd 就不再是黑箱。",
-  "_summary": "多伦多 CSC413：CSC311 + 多元微积分 + 线性代数；Stanford CS 231n：Python、微积分、线性代数、概率统计。"
+  "_summary": "多伦多 CSC413：CSC311 + 多元微积分 + 线性代数；Stanford CS 231n：Python、微积分、线性代数、概率统计。",
+  "M.1.4.1": "反向传播就是多元链式法则；CSC413 要求多元微积分，CS 231n 要求熟练求导。"
  },
  "A.2.3.1": {
   "A.2.3": "Stanford CS 231n、CS 224N 都是先讲反向传播与训练，再讲卷积、循环、Transformer 等架构。",
@@ -87,11 +87,11 @@
  },
  "A.3.4": {
   "P.2.3": "UCSD CSE 258：all participants should be comfortable with programming (Python)。",
-  "M.1.4.2": "UCSD CSE 258 要求 comfortable with basic optimization and linear algebra；矩阵分解用梯度下降求解。",
   "A.2.1": "UCSD CSE 258 明说 No previous background in machine learning is required，学过机器学习会更快。",
   "M.6.1": "Stanford CS 246 期望概率基础。",
   "D.1.1": "交互日志和特征通常存放在数据库或数据仓库中。",
-  "_summary": "UCSD CSE 158/258：不要求机器学习背景，要求 Python、基础优化和线性代数；Stanford CS 246：编程、概率、算法分析。"
+  "_summary": "UCSD CSE 158/258：不要求机器学习背景，要求 Python、基础优化和线性代数；Stanford CS 246：编程、概率、算法分析。",
+  "M.1.4.1": "UCSD CSE 258 要求 comfortable with basic optimization and linear algebra；矩阵分解用梯度下降求解。"
  },
  "A.3.5": {
   "A.2.3": "Stanford CS236 的课前复习内容是 CNN、RNN、Transformer 与 PyTorch，默认已经学过深度学习。",
@@ -379,8 +379,8 @@
  },
  "F.1.6": {
   "F.2.3": "UCSD 细粒度复杂度课假定 basic complexity theory（NP-完全性）；条件下界就是复杂性论证。",
-  "F.1.4": "同一门课要求熟悉随机化算法；性质测试、次线性算法都靠随机抽样。",
-  "_summary": "UCSD Fine-Grained Complexity（Impagliazzo）：要求算法分析、随机化算法和基础复杂性；MIT 6.890 只要求 6.046。"
+  "F.1.4": "UCSD Fine-Grained Complexity 的先修原文要求熟悉随机化算法和动态规划。",
+  "_summary": "UCSD Fine-Grained Complexity（Impagliazzo）：要求算法分析（含随机化算法与动态规划）和基础复杂性（NP-完全性）；MIT 6.890 要求 6.046。"
  },
  "F.2.1": {
   "M.5.3": "MIT 18.404J 先修 6.042J / 18.200；泵引理、构造证明都是证明题。",
@@ -568,27 +568,14 @@
  "M.1.4.1": {
   "M.1.2": "偏导数就是固定其他变量的一元导数；MIT 18.02 先修 18.01。",
   "M.1.3": "UCSD 20C 要求先修完 20B（积分与级数），MIT 只要求 18.01 整门。",
-  "_summary": "MIT 18.02：先修 18.01；UCSD 20C：先修 20B。"
- },
- "M.1.4.2": {
-  "M.1.4.1": "梯度和雅可比矩阵由偏导数组成。",
-  "M.3.1": "雅可比矩阵与多元链式法则是矩阵乘法；UCSD MATH 20E（向量微积分）把线性代数 MATH 18 列为必修先修。",
-  "_summary": "UCSD MATH 20E：先修 MATH 18（线性代数）和 20C（偏导数）。"
- },
- "M.1.4.3": {
-  "M.1.4.2": "Hessian 是梯度的导数，二阶近似从一阶的梯度近似推广而来；UCSD 20E 先修 20C。",
-  "_summary": "UCSD MATH 20E 讲多元泰勒展开（Hessian），先修 20C 与线性代数（经梯度节点继承）。"
+  "M.3.1": "雅可比矩阵、海森矩阵和矩阵形式的链式法则要用矩阵乘法与行列式：UCSD MATH 20E（向量微积分，讲雅可比与多元泰勒展开）把线性代数 MATH 18 列为先修；但 MIT 18.02 只要求 18.01、课内自带矩阵入门，入门层的偏导数和梯度不依赖线性代数，所以列为推荐。",
+  "_summary": "MIT 18.02：先修 18.01；UCSD 20C：先修 20B；讲雅可比和海森（多元泰勒展开）的 UCSD MATH 20E 另要求线性代数 MATH 18。"
  },
  "M.1.4.4": {
   "M.1.3": "重积分化成累次的一元定积分；MIT 18.02 和 UCSD 20C 都只要求一元微积分。",
-  "M.1.4.1": "同一门多元微积分课里通常先讲偏导数，但算重积分不依赖它。",
-  "M.1.4.2": "一般换元公式要用雅可比行列式；极坐标换元可以在本节点里直接学。",
-  "_summary": "MIT 18.02 先修 18.01；UCSD 20C 先修 20B。两门都没要求梯度/雅可比。"
- },
- "M.1.4.5": {
-  "M.1.4.4": "曲面积分、高斯定理把通量化成重积分；UCSD 20E 先修 20C（含二重积分）。",
-  "M.1.4.2": "梯度、散度、旋度都是偏导数组合，线积分要用参数化求导；UCSD 20E 同时要求线性代数。",
-  "_summary": "UCSD MATH 20E：先修 MATH 18 + 20C。"
+  "M.1.4.1": "曲线积分要对参数化求导，梯度、散度、旋度都是偏导数的组合，一般换元公式用雅可比行列式：UCSD MATH 20E（向量微积分）先修 20C（偏导数），MIT 18.02 在同一门课里先讲偏导数再讲重积分与向量分析。",
+  "M.3.1": "UCSD MATH 20E 把线性代数 MATH 18 列为先修；MIT 18.02 不要求，所以列为推荐。",
+  "_summary": "MIT 18.02：先修 18.01，课内先讲偏导数再讲重积分和向量分析；UCSD 20C 先修 20B；UCSD 20E（向量微积分）先修 20C 与线性代数 MATH 18。"
  },
  "M.1.5": {
   "M.1.2": "泰勒级数和幂级数逐项求导要会求导；UCSD MATH 20B（积分与级数）先修 20A。",
@@ -616,9 +603,9 @@
   "M.1.4.1": "柯西–黎曼方程是偏导数关系，复积分是线积分；MIT 18.04 先修 18.02。",
   "M.1.5": "解析函数的幂级数、洛朗级数展开以级数为基础。",
   "M.2.1": "MIT 18.04 也要求 18.03 微分方程，主要用在应用部分。",
-  "M.1.4.5": "柯西积分定理可用格林定理来理解。",
   "M.1.6": "严格版本（MIT 18.112）要求实分析。",
-  "_summary": "MIT 18.04：先修 18.02 + 18.03；更严格的 18.112 先修 Analysis I。"
+  "_summary": "MIT 18.04：先修 18.02 + 18.03；更严格的 18.112 先修 Analysis I。",
+  "M.1.4.4": "柯西积分定理可用格林定理来理解。"
  },
  "M.1.9": {
   "M.1.5": "傅里叶级数本身是函数项级数，收敛性要用级数知识。",
@@ -639,8 +626,8 @@
   "M.1.4.1": "PDE 里全是偏导数；UCSD 110 要求 20E。",
   "M.3.1": "本征值问题与叠加原理是主线；MIT 18.303 和 UCSD 110 都要求线性代数。",
   "M.1.9": "分离变量的解用傅里叶级数表示。",
-  "M.1.4.5": "UCSD 110 要求 20E 向量微积分，推导守恒律时用散度定理。",
-  "_summary": "MIT 18.303：先修 18.06 线性代数；UCSD MATH 110：先修 MATH 18、20D、20E。"
+  "_summary": "MIT 18.303：先修 18.06 线性代数；UCSD MATH 110：先修 MATH 18、20D、20E。",
+  "M.1.4.4": "UCSD 110 要求 20E 向量微积分，推导守恒律时用散度定理。"
  },
  "M.2.3": {
   "M.2.1": "MIT 18.353J：Knowledge of ordinary differential equations is essential.",
@@ -679,11 +666,6 @@
   "M.5.3": "数论入门全是证明；多伦多 MAT315 要求 MAT246/CSC236（证明课），MIT 18.781 也说熟悉证明会有帮助。",
   "_summary": "MIT 18.781 没有正式先修（建议熟悉证明）；多伦多 MAT315 要求证明课 + 线性代数 + 多元微积分（后两项属于数学成熟度门槛，未计入）。"
  },
- "M.3.6": {
-  "M.3.4": "MIT 18.725 要求交换代数基础（局部化、素理想），18.712 要求 Algebra I/II。",
-  "M.3.1": "MIT 18.712：necessary and sufficient to have a strong background in linear algebra。",
-  "_summary": "MIT 18.725（代数几何）要求交换代数；MIT 18.712（表示论）要求 18.701/18.702 或 18.700/18.703。"
- },
  "M.4.1": {
   "_summary": "北美通常把它放在多元微积分前半段（MIT 18.02 先修 18.01），但向量运算、直线与平面方程本身不用微积分，作为第 1 步的起点。"
  },
@@ -691,8 +673,8 @@
   "M.1.4.1": "曲线曲面的切向量、度量都靠偏导数；多伦多 MAT363 要求 MAT237（多元微积分）。",
   "M.3.1": "切空间是向量空间，第一基本形式是内积；MIT 18.950 与多伦多 MAT363 都要求线性代数。",
   "M.1.6": "MIT 18.950 要求 Analysis I，讲流形部分时需要。",
-  "M.1.4.5": "曲面积分和 Stokes 定理在曲面论里反复出现。",
-  "_summary": "MIT 18.950：Analysis I + 线性代数；多伦多 MAT363：线性代数 + MAT237 多元微积分。"
+  "_summary": "MIT 18.950：Analysis I + 线性代数；多伦多 MAT363：线性代数 + MAT237 多元微积分。",
+  "M.1.4.4": "曲面积分和 Stokes 定理在曲面论里反复出现。"
  },
  "M.4.3": {
   "M.1.6": "MIT 18.901 要求 Rudin 水平的分析课，说明这一背景对内容和写证明都是 essential；UCSD 190A 要求实分析或 31CH。",
@@ -805,18 +787,17 @@
  },
  "M.7.2": {
   "M.3.1": "Stanford EE364a：Good knowledge of linear algebra；UCSD MATH 173A 要求 MATH 18。",
-  "M.1.4.2": "一阶条件、KKT 都直接用梯度；UCSD MATH 173A（凸性、最优性条件、对偶）要求 MATH 20C 多元微积分。",
   "M.7.1": "EE364a：exposure to optimization helpful but not required；线性规划和对偶是凸优化的特例。",
-  "M.1.4.3": "二阶条件判断凸性要用 Hessian。",
   "M.6.1": "EE364a 和 Berkeley EE 227BT 都写了概率，主要用在统计估计类应用。",
   "P.2.3": "EE364a 作业用 CVXPY，要求会基本的 Python。",
-  "_summary": "Stanford EE364a：线性代数 + 概率，Python 用于 CVXPY；Berkeley EE 227BT：Math 54 + Stat 2；UCSD MATH 173A：MATH 20C + MATH 18。"
+  "_summary": "Stanford EE364a：线性代数 + 概率，Python 用于 CVXPY；Berkeley EE 227BT：Math 54 + Stat 2；UCSD MATH 173A：MATH 20C + MATH 18。",
+  "M.1.4.1": "一阶条件、KKT 都直接用梯度；UCSD MATH 173A（凸性、最优性条件、对偶）要求 MATH 20C 多元微积分。；二阶条件判断凸性要用 Hessian。"
  },
  "M.7.3": {
   "M.7.2": "UCSD MATH 173B 要求 173A（凸优化）；非凸方法和最优性条件建立在凸优化概念上。",
-  "M.1.4.3": "二阶最优性条件、牛顿法和鞍点判别都靠 Hessian；UCSD MATH 171B 首先复习多元泰勒展开（先修 20C）。",
   "M.7.1": "UCSD MATH 171B 要求 171A（线性规划）。",
-  "_summary": "UCSD MATH 171B：先修 MATH 20C + 171A；MATH 173B：先修 173A。"
+  "_summary": "UCSD MATH 171B：先修 MATH 20C + 171A；MATH 173B：先修 173A。",
+  "M.1.4.1": "二阶最优性条件、牛顿法和鞍点判别都靠 Hessian；UCSD MATH 171B 首先复习多元泰勒展开（先修 20C）。"
  },
  "M.7.4": {
   "M.7.2": "UCSD MATH 173B（含随机方法）要求 173A 凸优化；收敛分析在凸函数上进行。",
@@ -867,10 +848,10 @@
   "_summary": "CMU 21-387：概率 + 多元微积分 + 编程经验；UCSD MATH 114：建议先修编程课。"
  },
  "M.8.5": {
-  "M.1.4.2": "自动微分实现的就是链式法则与雅可比乘积；MIT 18.S096 要求线性代数 + 多元微积分。",
   "P.1.1": "计算图、反向传播要写程序实现；CMU 10-414 的作业是手写 autodiff。",
   "F.1.1": "反向模式要按拓扑序遍历计算图。",
-  "_summary": "MIT 18.S096 Matrix Calculus：先修 18.06 + 18.02；CMU 10-414（dlsyscourse）第 4–5 讲实现自动微分。"
+  "_summary": "MIT 18.S096 Matrix Calculus：先修 18.06 + 18.02；CMU 10-414（dlsyscourse）第 4–5 讲实现自动微分。",
+  "M.1.4.1": "自动微分实现的就是链式法则与雅可比乘积；MIT 18.S096 要求线性代数 + 多元微积分。"
  },
  "M.8.6": {
   "F.1.2": "SFU MACM 401 的先修是 CMPT 307 数据结构与算法：大整数、多项式算法的复杂度分析是课程主线。",
@@ -882,8 +863,8 @@
   "_summary": "MIT 6.100L：No prerequisites，面向零基础；作为第 1 步的起点。"
  },
  "P.1.2": {
-  "P.1.1": "Cornell CS 2110 假定已有一门过程式语言的编程经验；GT CS 1331 先修 CS 1301/1315/1321。",
-  "_summary": "Cornell CS 2110 与 Georgia Tech CS 1331 都要求先修入门编程课。"
+  "P.1.1": "Cornell CS 2110 假定已有一门过程式语言的编程经验；Georgia Tech CS 1331（Java 面向对象入门）先修 CS 1301/1315/1321。",
+  "_summary": "Cornell CS 2110 与 Georgia Tech CS 1331 都要求先修入门编程课；MIT 6.092（Java 入门）建议有编程经验。"
  },
  "P.1.3": {
   "P.1.1": "CMU 15-150 要求 15-112 或 15-122，UW CSE 341 要求 CSE 123/143。",
@@ -897,11 +878,6 @@
   "F.1.1": "性能剖析要理解数据结构的复杂度。",
   "P.2.4": "MIT 6.102 要求开学前自学 Git。",
   "_summary": "MIT 6.1020（原 6.031）：Prereq 6.1010；课程网站要求先学 Git。"
- },
- "P.2.1": {
-  "P.1.1": "GT CS 1331（Java/OOP 入门）先修入门编程课。",
-  "P.1.2": "Java 的类、接口和集合框架都以面向对象为基础。",
-  "_summary": "Georgia Tech CS 1331：先修 CS 1301/1315/1321；MIT 6.092：建议有编程经验。"
  },
  "P.2.2": {
   "P.1.1": "CMU 15-213 先修 15-122，Stanford CS107 先修 CS106B，都以一门编程课为基础。",
@@ -978,8 +954,7 @@
  },
  "P.5.2": {
   "P.1.1": "Stanford CS 193A 要求 CS 106B（编程抽象）；NTNU INFT2508 建议有编程基础。",
-  "P.1.2": "NTNU INFT2508 建议会面向对象编程，Android/iOS 框架都基于类和回调。",
-  "P.2.1": "Stanford CS 193A：Java experience recommended。",
+  "P.1.2": "NTNU INFT2508 建议会面向对象编程，Android/iOS 框架都基于类和回调。；Stanford CS 193A：Java experience recommended。",
   "P.5.1": "NTNU INFT2508 建议先有 Web 开发和 JavaScript 经验（跨平台框架常用 Web 技术栈）。",
   "V.2.1": "移动界面设计要考虑交互与人因。",
   "_summary": "Stanford CS 193A：先修 CS 106B，建议有 Java 经验；NTNU INFT2508：建议编程、OOP、Web 基础。"
@@ -1178,21 +1153,14 @@
   "_summary": "Stony Brook CSE 332 Intro to Scientific Visualization：数据结构 + 线性代数 + 概率统计；研究生版 CSE 564 要求 JavaScript 与 Python。"
  },
  "X.1.1": {
-  "A.2.1": "MIT 6.5940 TinyML 先修 6.3900（机器学习入门）。",
+  "A.2.1": "MIT 6.5940 TinyML 先修 6.3900（机器学习入门）；Harvard MLSysBook 的 Edge AI 学习路径假定学过入门机器学习。",
   "C.1.1": "MIT 6.5940 先修 6.1910（计算结构）；量化、内存规划、算子加速都和硬件结构相关。",
   "A.2.3": "部署的多是深度网络，课程在课内讲压缩方法。",
   "H.3.1": "部署到微控制器需要单片机开发经验。",
   "H.3.2": "嵌入式系统与驱动知识。",
-  "_summary": "MIT 6.5940 TinyML and Efficient Deep Learning Computing：先修 6.1910 + 6.3900；Harvard TinyML（MLSysBook）：假定会 Python 和基础线性代数。"
- },
- "X.1.2": {
-  "A.2.1": "Harvard Edge AI 学习路径假定入门机器学习；MIT 6.5940 先修 6.3900。",
-  "C.1.1": "MIT 6.5940 先修 6.1910。",
-  "A.2.3": "边缘部署的模型多是深度网络。",
+  "_summary": "MIT 6.5940 TinyML and Efficient Deep Learning Computing：先修 6.1910 + 6.3900；Harvard MLSysBook 的 TinyML 与 Edge AI 学习路径：假定会 Python、基础线性代数和入门机器学习。",
   "H.4.4": "边缘计算架构。",
-  "A.4.1": "模型的部署、更新和监控属于 MLOps。",
-  "X.1.1": "嵌入式推理的压缩与量化方法。",
-  "_summary": "Harvard Edge AI 学习路径（MLSysBook）：假定 Python 与入门机器学习；MIT 6.5940：先修 6.1910 + 6.3900。"
+  "A.4.1": "模型的部署、更新和监控属于 MLOps。"
  },
  "X.1.3": {
   "M.3.1": "Berkeley CS 287 要求熟悉线性代数；坐标变换、状态估计都要用。",
@@ -1267,5 +1235,14 @@
   "M.8.3": "数值求解器是可微仿真的基础，但两门课都不把它列为先修。",
   "M.8.5": "自动微分是 PINN 与可微求解的核心工具。",
   "_summary": "MIT 18.337J Parallel Computing and Scientific Machine Learning：微积分、线性代数和编程为“essential”，其余内容课内讲；Northwestern ELEC_ENG 395/495 Scientific ML：无硬性先修，优化、深度学习和微分方程在前几周复习。"
+ },
+ "P.5.5": {
+  "F.1.1": "Kent State CS 38101（游戏编程入门）先修 CS 23001 数据结构与抽象；场景图是树结构，实体与组件的存储和查找都依赖基本数据结构。",
+  "P.1.2": "GT CS 6457：熟悉 Java 这类强类型面向对象语言有帮助。",
+  "P.2.2": "CMU 15-466 课程目录写明选课者应熟悉 C++（课程用 C++、SDL、OpenGL）；Northeastern CS 5540 只要求一学期高级语言编程经验，所以列为推荐。",
+  "V.1.1": "CMU 15-466 的正式先修是计算机图形学 15-462/15-362（满足 C++ 与 OpenGL 基础的学生可联系教师）；GT CS 6457 把图形学基础列为有用的先修知识；入门的游戏循环、2D 游戏与碰撞不依赖完整图形学，所以列为推荐。",
+  "M.3.1": "GT CS 6457：线性代数（齐次坐标的仿射变换、变换顺序）是有用的先修知识。",
+  "M.4.1": "GT CS 6457：要理解四元数、三维投影等几何变换。",
+  "_summary": "CMU 15-466：正式先修计算机图形学 15-462/15-362，并要求熟悉 C++ 与 OpenGL 基础；Kent State CS 38101：先修数据结构 CS 23001；GT CS 6457：线性代数与图形学基础、强类型面向对象语言有帮助；Northeastern CS 5540：一学期高级语言编程经验。"
  }
 }

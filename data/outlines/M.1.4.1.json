@@ -13,7 +13,9 @@
     "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives",
     "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
     "https://openstax.org/books/calculus-volume-3/pages/4-5-the-chain-rule",
-    "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient"
+    "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+    "https://openstax.org/books/calculus-volume-3/pages/5-7-change-of-variables-in-multiple-integrals",
+    "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems"
    ],
    "why": "节点“现有英文学习资源”就是这本书第 4 章：OpenStax 官方开放本科多元微积分教材，4.3 偏导数、4.4 切平面与线性近似（全微分）、4.5 链式法则与隐函数求导、4.6 方向导数与梯度，页内二级标题可抄到小节。"
   },
@@ -28,6 +30,30 @@
     "https://www.bananaspace.org/books/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"
    ],
    "why": "补“隐函数与逆函数定理”：OpenStax 只到隐函数求导，定理本身要更强的分析课；这份讲义（也是节点现有中文学习资源）第 33、34 讲正是反函数定理与隐函数定理。"
+  },
+  {
+   "key": "C",
+   "kind": "book",
+   "title": "Mathematics for Machine Learning",
+   "by": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
+   "year": 2020,
+   "url": "https://mml-book.github.io/",
+   "toc_urls": [
+    "https://mml-book.github.io/book/mml-book.pdf"
+   ],
+   "why": "补“二阶偏导矩阵（海森矩阵）”与“二阶近似”：5.7 高阶导数一节给出 Hessian，5.8 讲多元泰勒展开（二阶近似）。"
+  },
+  {
+   "key": "D",
+   "kind": "book",
+   "title": "Convex Optimization",
+   "by": "Stephen Boyd, Lieven Vandenberghe",
+   "year": 2004,
+   "url": "https://web.stanford.edu/~boyd/cvxbook/",
+   "toc_urls": [
+    "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf"
+   ],
+   "why": "补“连接二阶优化”：3.1 用海森矩阵的半正定性表述二阶条件，9.1/9.5 是无约束极小化与牛顿法（二阶模型）。"
   }
  ],
  "outline": [
@@ -161,6 +187,118 @@
    "title": "隐函数定理，子流形的判定",
    "fill": "补“隐函数定理”：由一个方程确定隐函数的条件",
    "items": []
+  },
+  {
+   "src": "A",
+   "ref": "5.7",
+   "title": "Change of Variables in Multiple Integrals",
+   "zh": "重积分的换元",
+   "items": [
+    {
+     "ref": "",
+     "title": "Planar Transformations",
+     "zh": "平面变换"
+    },
+    {
+     "ref": "",
+     "title": "Jacobians",
+     "zh": "雅可比"
+    },
+    {
+     "ref": "",
+     "title": "Change of Variables for Double Integrals",
+     "zh": "二重积分的换元"
+    },
+    {
+     "ref": "",
+     "title": "Change of Variables for Triple Integrals",
+     "zh": "三重积分的换元"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "30",
+   "title": "高维的微分学：高维函数的微分",
+   "fill": "补“标量场梯度”的严格版本：把 f:Rⁿ→R 的微分讲成线性映射，梯度是它的矩阵表示",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "31",
+   "title": "映射的微分",
+   "fill": "补“向量映射导数”：F:Rⁿ→Rᵐ 的导数是线性映射（雅可比矩阵），并由此给出映射情形的链式法则",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "4.7",
+   "title": "Maxima/Minima Problems",
+   "zh": "极值问题",
+   "items": [
+    {
+     "ref": "",
+     "title": "Critical Points",
+     "zh": "临界点"
+    },
+    {
+     "ref": "",
+     "title": "Second Derivative Test",
+     "zh": "二阶导数判别法"
+    },
+    {
+     "ref": "",
+     "title": "Absolute Maxima and Minima",
+     "zh": "全局最大值与最小值"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4.8",
+   "title": "Lagrange Multipliers",
+   "zh": "拉格朗日乘数法",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "5.7",
+   "title": "Higher-Order Derivatives",
+   "zh": "高阶导数",
+   "fill": "二阶偏导矩阵（海森矩阵）的矩阵写法",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "5.8",
+   "title": "Linearization and Multivariate Taylor Series",
+   "zh": "线性化与多元泰勒级数",
+   "fill": "二阶近似（二次型逼近）",
+   "items": []
+  },
+  {
+   "src": "D",
+   "ref": "3.1",
+   "title": "Basic properties and examples",
+   "zh": "基本性质与例子",
+   "fill": "连接二阶优化：用海森矩阵半正定/正定给出二阶条件（极值判别的一般化）",
+   "items": []
+  },
+  {
+   "src": "D",
+   "ref": "9.1",
+   "title": "Unconstrained minimization problems",
+   "zh": "无约束极小化问题",
+   "fill": "连接二阶优化：把海森矩阵放进极小化问题的框架",
+   "items": []
+  },
+  {
+   "src": "D",
+   "ref": "9.5",
+   "title": "Newton’s method",
+   "zh": "牛顿法",
+   "fill": "连接二阶优化：牛顿法用二阶（海森）模型产生下降步",
+   "items": []
   }
  ],
  "coverage": [
@@ -199,13 +337,78 @@
     "B:33"
    ],
    "note": "A（OpenStax）没有逆函数定理；B:33 在局部坐标/微分同胚的语境下证明反函数定理。"
+  },
+  {
+   "topic": "标量场梯度",
+   "refs": [
+    "A:4.6",
+    "B:30"
+   ],
+   "note": "A:4.6 给出 ∇f、方向导数 D_uf=∇f·u、梯度垂直于等值线、最速上升方向；B:30 把它写成微分的矩阵表示（严格版）。"
+  },
+  {
+   "topic": "向量映射导数",
+   "refs": [
+    "B:31",
+    "A:5.7"
+   ],
+   "note": "A:5.7 的 Jacobians 小节只把雅可比当作换元时的行列式（∂(x,y)/∂(u,v)），没有讲向量值映射的导数；B:31 的“映射的微分”才是 F:Rⁿ→Rᵐ 的导数=雅可比矩阵。"
+  },
+  {
+   "topic": "链式法则",
+   "refs": [
+    "A:4.5",
+    "B:31"
+   ],
+   "note": "A:4.5 的 Chain Rule for One/Two Independent Variables 与 Generalized Chain Rule 是标量情形的树状图公式；映射情形的链式法则（雅可比矩阵相乘）在 B:31。"
+  },
+  {
+   "topic": "坐标变换",
+   "refs": [
+    "A:5.7"
+   ],
+   "note": "Planar Transformations → Jacobians → 二重/三重积分换元，正是雅可比行列式在坐标变换里的用处。"
+  },
+  {
+   "topic": "二阶偏导矩阵",
+   "refs": [
+    "A:4.3",
+    "C:5.7",
+    "A:4.7"
+   ],
+   "note": "OpenStax 只把四个二阶偏导 fxx、fxy、fyx、fyy 写出来并用 D=fxxfyy−fxy² 组织，海森矩阵的矩阵形式在 B:5.7。"
+  },
+  {
+   "topic": "二阶近似",
+   "refs": [
+    "C:5.8",
+    "A:4.4"
+   ],
+   "note": "A:4.4 只到一阶（切平面/线性近似），二阶泰勒近似在 B:5.8。"
+  },
+  {
+   "topic": "极值判别",
+   "refs": [
+    "A:4.7",
+    "A:4.8",
+    "D:3.1"
+   ],
+   "note": "A:4.7 的 Second Derivative Test 用判别式 D 给出极值/鞍点判据；A:4.8 处理约束极值；C:3.1 把它推广成海森矩阵的半正定条件。"
+  },
+  {
+   "topic": "连接二阶优化",
+   "refs": [
+    "D:9.1",
+    "D:9.5"
+   ],
+   "note": "牛顿法一步就是最小化二阶近似，海森矩阵在这里直接进入算法。"
   }
  ],
- "omitted": "A（Calculus Volume 3）未收 4.1（多元函数、等值线）、4.2（多元极限与连续，属 M.1.1 的推广）、4.7（极值与海森矩阵，见 M.1.4.3）、4.8（拉格朗日乘子法）；第 1–3 章（参数方程与极坐标、空间向量、向量值函数）与第 5–7 章（重积分、向量场、二阶微分方程）也未收；各节的习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 33、34 讲，其余讲未收。",
- "notes": "A 的节内没有编号小节，第三层条目的 ref 留空。B 的章节页只有一个总目录，标题照抄（中文原文，故不写 zh），编号 33/34 就是原文的讲次。B 是研究生/英才班水平的分析讲义，只作为隐函数定理与逆函数定理这两个知识点的补充，不作为 D1 入门材料。",
+ "omitted": "A（Calculus Volume 3）未收 4.1（多元函数、等值线）、4.2（多元极限与连续，属 M.1.1 的推广）、4.7（极值与海森矩阵，见 M.1.4.3）、4.8（拉格朗日乘子法）；第 1–3 章（参数方程与极坐标、空间向量、向量值函数）与第 5–7 章（重积分、向量场、二阶微分方程）也未收；各节的习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 33、34 讲，其余讲未收。；A（Calculus Volume 3）未收 4.3（偏导数，见 M.1.4.1）、4.7（极值，见 M.1.4.3）、4.8（拉格朗日乘子法）、5.1–5.6（重积分的定义与各种坐标系，其中极坐标/柱坐标/球坐标部分见 M.1.4.4）；第 1–3 章与第 6–7 章未收；各节习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 30、31 讲，第 32 讲之后（微分同胚、子流形、反函数与隐函数定理）未收，因为它们属于 M.1.4.1 的知识点。；A 的第 4 章其余节（4.1 多元函数、4.2 极限与连续、4.5 链式法则、4.6 方向导数与梯度）以及第 1–3、5–7 章（参数方程与极坐标、空间向量、向量值函数、重积分、幂级数）与本节点关系较远，未收；各节的习题、Key Equations、Key Concepts、Glossary 也未收。B 只收第 5 章的 5.7、5.8，其余章（线性代数、解析几何、矩阵分解、概率、优化）未收。C 只收第 3 章 3.1 与第 9 章 9.1、9.5，其余章与附录未收。",
+ "notes": "A 的节内没有编号小节，第三层条目的 ref 留空。B 的章节页只有一个总目录，标题照抄（中文原文，故不写 zh），编号 33/34 就是原文的讲次。B 是研究生/英才班水平的分析讲义，只作为隐函数定理与逆函数定理这两个知识点的补充，不作为 D1 入门材料。；并入 M.1.4.2 的导览图：A 的节内没有编号小节，第三层条目的 ref 留空。B 的目录页只有一个总目录，中文标题照抄，不写 zh。雅可比矩阵的严格定义不在 OpenStax 里，故 B 是必要补充；B 属研究生/英才班水平，仅作这两个知识点的补充。；并入 M.1.4.3 的导览图：OpenStax 的节没有编号小节（页内二级标题只有文字标题），所以第三层条目的 ref 留空，coverage 只引到节一级。4.7 页内的 “Problem-Solving Strategy” 是重复出现的排版标题（下面还有副标题），为免歧义未收。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 23,
+  "exact": 40,
   "fuzzy": 0,
   "dropped": []
  }

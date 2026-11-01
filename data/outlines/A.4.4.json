@@ -13,31 +13,6 @@
     "https://marl-book.com/download/"
    ],
    "why": "节点“现有英文学习资源”就是这本 MIT Press 2024 的开放获取教材（作者官网免费整书 PDF + 讲义 + 代码），并且它是多智能体协作与博弈的标准参考：博弈模型（正则型/重复/随机/部分可观测随机博弈）、解概念（纳什、ε-纳什、相关均衡、帕累托最优、社会福利与公平、无悔）、MARL 的四大挑战（非平稳、均衡选择、信用分配、规模扩展）、基础算法与深度协作/自博弈方法。目录取自作者公开的整书 PDF（Contents），章→节→小节齐全。"
-  },
-  {
-   "key": "B",
-   "kind": "course",
-   "title": "CS 6964: Neuro-Symbolic Modeling",
-   "by": "Vivek Srikumar (University of Utah)",
-   "year": 2025,
-   "url": "https://svivek.com/teaching/neurosymbolic-modeling/fall2025/",
-   "toc_urls": [
-    "https://svivek.com/teaching/neurosymbolic-modeling/fall2025/lectures.html",
-    "https://svivek.com/teaching/neurosymbolic-modeling/fall2025/topics.html"
-   ],
-   "why": "补“符号推理结合”：主来源整本是 MARL，不含神经符号内容。这门犹他大学研究生课的公开课表逐讲列出符号逻辑回顾、神经符号方法概览、逻辑即损失（语义损失、多值逻辑与 t-范数）、用知识设计模型、对预测的结构化推理（图搜索、整数线性规划推理、带推理训练）、把符号放进网络内部训练（直通估计器、Gumbel softmax）等，正好是“神经 + 符号”结合的路线清单。"
-  },
-  {
-   "key": "C",
-   "kind": "course",
-   "title": "80816/80516: Causality and Machine Learning",
-   "by": "Kun Zhang (Carnegie Mellon University)",
-   "year": 2025,
-   "url": "https://www.andrew.cmu.edu/course/80-516/",
-   "toc_urls": [
-    "https://www.andrew.cmu.edu/course/80-516/"
-   ],
-   "why": "补“因果表征”与开放问题：主来源不含因果。这门 CMU 课程的公开课表分九个 Part，Part VII 正是 Causal representation learning（IID/多分布/时序三种可辨识设定与真实问题），Part VIII 讲因果视角下的迁移学习、生成模型、强化学习与大模型，Part IX 是应用与 Review and Outlook（开放问题讨论）。"
   }
  ],
  "outline": [
@@ -326,228 +301,45 @@
      "zh": "零和博弈中的策略自博弈"
     }
    ]
-  },
-  {
-   "src": "B",
-   "ref": "",
-   "title": "Lectures",
-   "zh": "课程讲次",
-   "fill": "补“符号推理结合”：主来源没有任何神经符号内容，这里按公开课表逐讲列出符号逻辑、逻辑即损失、用知识设计模型、结构化推理与带推理训练等神经—符号结合的方法。",
-   "items": [
-    {
-     "ref": "19-Aug",
-     "title": "Introduction",
-     "zh": "导论"
-    },
-    {
-     "ref": "21-Aug",
-     "title": "Neural networks refresher",
-     "zh": "神经网络回顾"
-    },
-    {
-     "ref": "26-Aug",
-     "title": "Symbolic logic",
-     "zh": "符号逻辑"
-    },
-    {
-     "ref": "2-Sep",
-     "title": "Neuro-symbolic methods: Overview",
-     "zh": "神经符号方法：概览"
-    },
-    {
-     "ref": "11-Sep",
-     "title": "Logic as loss: Overview",
-     "zh": "逻辑即损失：概览"
-    },
-    {
-     "ref": "16-Sep",
-     "title": "Semantic loss",
-     "zh": "语义损失"
-    },
-    {
-     "ref": "23-Sep",
-     "title": "Multi-valued logic and t-norm losses",
-     "zh": "多值逻辑与 t-范数损失"
-    },
-    {
-     "ref": "14-Oct",
-     "title": "Using knowledge to design models",
-     "zh": "用知识设计模型"
-    },
-    {
-     "ref": "21-Oct",
-     "title": "Reasoning about model predictions, structured prediction",
-     "zh": "对模型预测的推理与结构预测"
-    },
-    {
-     "ref": "28-Oct",
-     "title": "Graph search for structures",
-     "zh": "结构的图搜索"
-    },
-    {
-     "ref": "30-Oct",
-     "title": "Integer linear programming inference",
-     "zh": "整数线性规划推理"
-    },
-    {
-     "ref": "4-Nov",
-     "title": "Training with inference",
-     "zh": "带推理的训练"
-    },
-    {
-     "ref": "6-Nov",
-     "title": "Test-time compute with LLMs",
-     "zh": "大模型在测试时的计算"
-    },
-    {
-     "ref": "11-Nov",
-     "title": "Training with symbols within networks",
-     "zh": "在网络内部用符号训练"
-    },
-    {
-     "ref": "13-Nov",
-     "title": "The straight-through estimator",
-     "zh": "直通估计器"
-    },
-    {
-     "ref": "18-Nov",
-     "title": "Gumbel softmax",
-     "zh": "Gumbel softmax"
-    }
-   ]
-  },
-  {
-   "src": "C",
-   "ref": "Part VII",
-   "title": "Causal representation learning (CRL)",
-   "zh": "因果表征学习",
-   "fill": "补“因果表征”：主来源是 MARL 教材，完全没有因果内容；这一部分是因果表征学习的可辨识性主线索（IID 下的功能约束/稀疏性、多分布、时序数据），以及实际问题。",
-   "items": [
-    {
-     "ref": "03/20",
-     "title": "CRL in the IID case: Benefits from functional constraints or sparsity",
-     "zh": "IID 情形下的因果表征学习：功能约束或稀疏性带来的好处"
-    },
-    {
-     "ref": "03/25",
-     "title": "CRL from changes: Benefits from multiple distributions",
-     "zh": "借助变化做因果表征学习：多分布带来的好处"
-    },
-    {
-     "ref": "03/27",
-     "title": "CRL from temporal data",
-     "zh": "从时序数据做因果表征学习"
-    },
-    {
-     "ref": "04/01",
-     "title": "Real problems of CRL",
-     "zh": "因果表征学习的实际问题"
-    }
-   ]
-  },
-  {
-   "src": "C",
-   "ref": "Part VIII",
-   "title": "Causal view for machine learning and artificial intelligence",
-   "zh": "因果视角下的机器学习与人工智能",
-   "fill": "补“因果表征”在具体学习任务中的应用：迁移学习、半监督/强化学习与大模型、深度生成模型与因果生成式 AI、公平性。",
-   "items": [
-    {
-     "ref": "04/08",
-     "title": "Transfer learning and image translation",
-     "zh": "迁移学习与图像转换"
-    },
-    {
-     "ref": "04/10",
-     "title": "Semi-supervised learning, reinforcement learning, and large models",
-     "zh": "半监督学习、强化学习与大模型"
-    },
-    {
-     "ref": "04/15",
-     "title": "Unsupervised deep learning, deep generative models, and causal generative AI",
-     "zh": "无监督深度学习、深度生成模型与因果生成式 AI"
-    },
-    {
-     "ref": "04/17",
-     "title": "Fairness in machine learning",
-     "zh": "机器学习中的公平性"
-    }
-   ]
-  },
-  {
-   "src": "C",
-   "ref": "Part IX",
-   "title": "Real applications of causal discovery, review, and outlook",
-   "zh": "因果发现的实际应用、回顾与展望",
-   "fill": "补“开放研究问题”：除了 MARL 的 research agendas，这里给出因果方向的开放问题讨论（大模型时代的因果、自动化科学发现等）。",
-   "items": [
-    {
-     "ref": "04/22",
-     "title": "Applications of causal discovery and causal representation learning",
-     "zh": "因果发现与因果表征学习的应用"
-    },
-    {
-     "ref": "04/24",
-     "title": "Review and Outlook",
-     "zh": "回顾与展望"
-    }
-   ]
   }
  ],
  "coverage": [
   {
-   "topic": "协作",
+   "topic": "博弈模型",
    "refs": [
-    "A:5.4.3",
-    "A:9.5"
+    "A:3"
    ],
-   "note": "协作的两条主线：共同回报下的信用分配（5.4.3）与值分解方法（9.5）；B/C 里没有协作内容"
+   "note": "第 3 章：正则型博弈、重复博弈、随机博弈、部分可观测随机博弈、通信建模与知识假设。"
   },
   {
-   "topic": "博弈",
+   "topic": "解概念（纳什均衡等）",
    "refs": [
-    "A:3",
-    "A:4",
+    "A:4"
+   ],
+   "note": "第 4 章：最优响应、极小极大、纳什与 ϵ-纳什均衡、（粗）相关均衡、帕累托最优、社会福利与公平、无悔。"
+  },
+  {
+   "topic": "多智能体强化学习的基础算法与挑战",
+   "refs": [
+    "A:1",
+    "A:5",
     "A:6"
    ],
-   "note": "3 章给博弈模型，4 章给纳什/相关均衡/帕累托/社会福利与公平等解概念，6 章是求解这些概念的经典算法"
+   "note": "1.4 与第 5 章讲收敛类型和多智能体强化学习的挑战（含共同回报下的信用分配 5.4.3）；第 6 章是值迭代、联合动作学习、智能体建模、基于策略的学习与无悔学习等基础算法。"
   },
   {
-   "topic": "因果表征",
+   "topic": "多智能体深度强化学习",
    "refs": [
-    "C:Part VII",
-    "C:03/20",
-    "C:03/25",
-    "C:03/27",
-    "C:04/01"
-   ]
-  },
-  {
-   "topic": "符号推理结合",
-   "refs": [
-    "B:11-Sep",
-    "B:16-Sep",
-    "B:23-Sep",
-    "B:30-Oct",
-    "B:4-Nov",
-    "B:11-Nov"
+    "A:9"
    ],
-   "note": "从“逻辑即损失”（11-Sep 概览、16-Sep 语义损失、23-Sep t-范数）到“用推理训练/把符号放进网络”（30-Oct ILP 推理、4-Nov 带推理训练、11-Nov 网络内部用符号）"
-  },
-  {
-   "topic": "开放研究问题",
-   "refs": [
-    "A:1.5",
-    "C:04/24"
-   ],
-   "note": "A 的 1.5 Agendas of MARL 与 1.4 Challenges、C 的 Review and Outlook（讨论“大模型时代的因果”“能否不用因果”等）都是开放问题；B 的课程 topics 页另有 Technical challenges 一节，但没有对应到具体讲次，未收入 outline"
+   "note": "第 9 章：训练与执行模式（集中训练、分散执行）、共同回报博弈中的值分解、零和博弈中的策略自博弈。"
   }
  ],
  "omitted": "主来源 A 只收了与“协作与博弈”直接相关的 1、3、4、5、6、9 章；2 Reinforcement Learning、7 Deep Learning、8 Deep Reinforcement Learning 是单智能体与深度学习前置，10 章（PyTorch 实现细节）、11 章（环境清单）、附录 Surveys 未收，4.11（计算均衡的复杂性）、5.6/6.6 等 Summary 小节也未收。B 只收了有具体主题的讲次，日程里的 “(continued)”、Buffer lecture、Fall break、Thanksgiving、Reinforcement learning、Looking back at the semester 未收。C 只收 Part VII–IX，Part I–VI（统计与机器学习预备、因果效应识别与反事实、传统因果发现、函数因果模型、实践问题）未收。",
- "notes": "A 的目录抄自作者公开整书 PDF 的 Contents，标题去掉了前导编号（编号写在 ref 里），跨行标题按正确拼写合并（如 'Multi-Agent Reinforcement Learning in Games: First Steps and Challenges'）。B 的 ref 是课表里的日期（原文只有日期没有讲次号），标题是日期对应的讲题；B 的 topics 页另有一份分层主题清单，为保证标题可核对，outline 用的是 lectures 页的逐讲标题。C 的 ref 用 Part 号与日期。",
+ "notes": "A 的目录抄自作者公开整书 PDF 的 Contents，标题去掉了前导编号（编号写在 ref 里），跨行标题按正确拼写合并（如 'Multi-Agent Reinforcement Learning in Games: First Steps and Challenges'）。B 的 ref 是课表里的日期（原文只有日期没有讲次号），标题是日期对应的讲题；B 的 topics 页另有一份分层主题清单，为保证标题可核对，outline 用的是 lectures 页的逐讲标题。C 的 ref 用 Part 号与日期。；2026-11-01 收窄为多智能体强化学习：去掉神经符号（原 B）和因果（原 C）两个来源，因果推断见 M.6.2.3。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 82,
+  "exact": 52,
   "fuzzy": 0,
   "dropped": []
  }

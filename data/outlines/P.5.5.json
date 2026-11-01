@@ -1,0 +1,510 @@
+{
+ "id": "P.5.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Game Engine Architecture, 4th edition",
+   "by": "Jason Gregory",
+   "url": "https://www.gameenginebook.com/",
+   "toc_urls": [
+    "https://gameenginebook.com/toc.html"
+   ],
+   "why": "作者官方站上的完整目录（章→节两层，同时列 3rd/4th edition，这里按 4th 抄）；本书是游戏引擎课程的公认标准教材，章节正好覆盖游戏循环、输入、调试工具、渲染、动画、碰撞与刚体、玩法对象与运行时系统、资源与文件系统。"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "15-466/666 Computer Game Programming, Fall 2025",
+   "by": "Jim McCann, Carnegie Mellon University",
+   "year": 2025,
+   "url": "http://graphics.cs.cmu.edu/courses/15-466-f25/",
+   "toc_urls": [
+    "http://graphics.cs.cmu.edu/courses/15-466-f25/"
+   ],
+   "why": "补两个 A 里没有专门章节的点：ECS（实体-组件-系统）范式，以及试玩测试（playtest）的具体做法；CMU 这门课也是本节点的英文主学习资源（免费课程站）。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "引论",
+   "items": [
+    {
+     "ref": "1.5",
+     "title": "Runtime Engine Architecture",
+     "zh": "运行时引擎架构"
+    },
+    {
+     "ref": "1.6",
+     "title": "Tools and the Asset Pipeline",
+     "zh": "工具与资源管线"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Resources and the File System",
+   "zh": "资源与文件系统",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "File System",
+     "zh": "文件系统"
+    },
+    {
+     "ref": "7.2",
+     "title": "The Resource Manager",
+     "zh": "资源管理器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "The Game Loop and Real-Time Simulation",
+   "zh": "游戏循环与实时模拟",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "The Rendering Loop",
+     "zh": "渲染循环"
+    },
+    {
+     "ref": "8.2",
+     "title": "The Game Loop",
+     "zh": "游戏循环"
+    },
+    {
+     "ref": "8.3",
+     "title": "Game Loop Architectural Styles",
+     "zh": "游戏循环的架构风格"
+    },
+    {
+     "ref": "8.4",
+     "title": "Abstract Timelines",
+     "zh": "抽象时间线"
+    },
+    {
+     "ref": "8.5",
+     "title": "Measuring and Dealing with Time",
+     "zh": "时间的度量与处理"
+    },
+    {
+     "ref": "8.6",
+     "title": "Multiprocessor Game Loops",
+     "zh": "多处理器游戏循环"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Human Interface Devices",
+   "zh": "人机接口设备",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Types of Human Interface Devices",
+     "zh": "人机接口设备的类型"
+    },
+    {
+     "ref": "9.2",
+     "title": "Interfacing with a HID",
+     "zh": "与输入设备接口"
+    },
+    {
+     "ref": "9.3",
+     "title": "Types of Inputs",
+     "zh": "输入的类型"
+    },
+    {
+     "ref": "9.4",
+     "title": "Types of Outputs",
+     "zh": "输出的类型"
+    },
+    {
+     "ref": "9.5",
+     "title": "Game Engine HID Systems",
+     "zh": "游戏引擎的输入设备系统"
+    },
+    {
+     "ref": "9.6",
+     "title": "Human Interface Devices in Practice",
+     "zh": "输入设备的工程实践"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Tools for Debugging and Development",
+   "zh": "调试与开发工具",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Logging and Tracing",
+     "zh": "日志与追踪"
+    },
+    {
+     "ref": "10.2",
+     "title": "Debug Drawing Facilities",
+     "zh": "调试绘制工具"
+    },
+    {
+     "ref": "10.3",
+     "title": "In-Game Menus",
+     "zh": "游戏内菜单"
+    },
+    {
+     "ref": "10.4",
+     "title": "In-Game Console",
+     "zh": "游戏内控制台"
+    },
+    {
+     "ref": "10.5",
+     "title": "Debug Cameras and Pausing the Game",
+     "zh": "调试相机与暂停游戏"
+    },
+    {
+     "ref": "10.6",
+     "title": "Cheats",
+     "zh": "作弊指令"
+    },
+    {
+     "ref": "10.7",
+     "title": "Screenshots and Movie Capture",
+     "zh": "截图与录像"
+    },
+    {
+     "ref": "10.8",
+     "title": "In-Game Profiling",
+     "zh": "游戏内性能分析"
+    },
+    {
+     "ref": "10.9",
+     "title": "In-Game Memory Stats and Leak Detection",
+     "zh": "游戏内内存统计与泄漏检测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Rendering",
+   "zh": "渲染",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "The Rendering Problem",
+     "zh": "渲染问题"
+    },
+    {
+     "ref": "11.2",
+     "title": "Lights, Camera, Action!",
+     "zh": "灯光、相机与画面"
+    },
+    {
+     "ref": "11.3",
+     "title": "Foundations of 3D Rendering",
+     "zh": "三维渲染基础"
+    },
+    {
+     "ref": "11.4",
+     "title": "Programming the 3D Graphics Pipeline",
+     "zh": "三维图形管线编程"
+    },
+    {
+     "ref": "11.5",
+     "title": "Pipeline Management: The Application Layer",
+     "zh": "管线管理：应用层"
+    },
+    {
+     "ref": "11.6",
+     "title": "Geometry Processing and Other Visual Effects",
+     "zh": "几何处理与其他视觉效果"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Animation Systems",
+   "zh": "动画系统",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Types of Character Animation",
+     "zh": "角色动画的类型"
+    },
+    {
+     "ref": "13.2",
+     "title": "Skeletons",
+     "zh": "骨骼"
+    },
+    {
+     "ref": "13.3",
+     "title": "Poses",
+     "zh": "姿势"
+    },
+    {
+     "ref": "13.4",
+     "title": "Clips",
+     "zh": "动画片段"
+    },
+    {
+     "ref": "13.5",
+     "title": "Skinning and Matrix Palette Generation",
+     "zh": "蒙皮与矩阵调色板生成"
+    },
+    {
+     "ref": "13.6",
+     "title": "Animation Blending",
+     "zh": "动画混合"
+    },
+    {
+     "ref": "13.9",
+     "title": "The Animation Pipeline",
+     "zh": "动画管线"
+    },
+    {
+     "ref": "13.10",
+     "title": "Action State Machines",
+     "zh": "动作状态机"
+    },
+    {
+     "ref": "13.11",
+     "title": "Constraints",
+     "zh": "约束"
+    },
+    {
+     "ref": "13.12",
+     "title": "Motion Matching",
+     "zh": "动作匹配"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Collision and Rigid Body Dynamics",
+   "zh": "碰撞与刚体动力学",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "Do You Want Physics in Your Game?",
+     "zh": "游戏里是否需要物理"
+    },
+    {
+     "ref": "14.2",
+     "title": "Collision/Physics Middleware",
+     "zh": "碰撞与物理中间件"
+    },
+    {
+     "ref": "14.3",
+     "title": "The Collision Detection System",
+     "zh": "碰撞检测系统"
+    },
+    {
+     "ref": "14.4",
+     "title": "Rigid Body Dynamics",
+     "zh": "刚体动力学"
+    },
+    {
+     "ref": "14.5",
+     "title": "Integrating a Physics Engine into Your Game",
+     "zh": "把物理引擎集成进游戏"
+    },
+    {
+     "ref": "14.6",
+     "title": "Advanced Physics Features",
+     "zh": "高级物理特性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Introduction to Gameplay Systems",
+   "zh": "玩法系统导论",
+   "items": [
+    {
+     "ref": "16.1",
+     "title": "Anatomy of a Game World",
+     "zh": "游戏世界的构成"
+    },
+    {
+     "ref": "16.2",
+     "title": "Implementing Dynamic Elements: Game Objects",
+     "zh": "动态元素的实现：游戏对象"
+    },
+    {
+     "ref": "16.3",
+     "title": "Data-Driven Game Engines",
+     "zh": "数据驱动的游戏引擎"
+    },
+    {
+     "ref": "16.4",
+     "title": "The Game World Editor",
+     "zh": "游戏世界编辑器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Runtime Gameplay Systems",
+   "zh": "运行时玩法系统",
+   "items": [
+    {
+     "ref": "17.1",
+     "title": "Components of the Gameplay Foundation System",
+     "zh": "玩法基础系统的组成"
+    },
+    {
+     "ref": "17.2",
+     "title": "Runtime Object Model Architectures",
+     "zh": "运行时对象模型架构"
+    },
+    {
+     "ref": "17.3",
+     "title": "World Chunk Data Formats",
+     "zh": "世界分块数据格式"
+    },
+    {
+     "ref": "17.4",
+     "title": "Loading and Streaming Game Worlds",
+     "zh": "游戏世界的加载与流式载入"
+    },
+    {
+     "ref": "17.5",
+     "title": "Object References and World Queries",
+     "zh": "对象引用与世界查询"
+    },
+    {
+     "ref": "17.6",
+     "title": "Updating Game Objects in Real Time",
+     "zh": "实时更新游戏对象"
+    },
+    {
+     "ref": "17.7",
+     "title": "Concurrent Game Object Updates",
+     "zh": "并发的游戏对象更新"
+    },
+    {
+     "ref": "17.8",
+     "title": "Events and Message-Passing",
+     "zh": "事件与消息传递"
+    },
+    {
+     "ref": "17.9",
+     "title": "Scripting",
+     "zh": "脚本"
+    },
+    {
+     "ref": "17.10",
+     "title": "High-Level Game Flow",
+     "zh": "高层游戏流程"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "The ECS Paradigm",
+   "zh": "ECS 范式",
+   "fill": "补“游戏对象与组件架构”的现代数据导向实现（实体-组件-系统），A 的第 17.2 章只按对象模型架构泛讲",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "How to playtest",
+   "zh": "如何做试玩测试",
+   "fill": "补“玩法编程与调试工具”里的试玩测试与迭代方法，A 第 10 章只讲引擎内的调试工具",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "游戏循环与实时模拟",
+   "refs": [
+    "A:8",
+    "A:8.1",
+    "A:8.2",
+    "A:8.3",
+    "A:8.5"
+   ]
+  },
+  {
+   "topic": "游戏对象与组件架构",
+   "refs": [
+    "A:16.2",
+    "A:17.1",
+    "A:17.2",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "输入与相机",
+   "refs": [
+    "A:9",
+    "A:9.1",
+    "A:9.2",
+    "A:11.2",
+    "A:10.5"
+   ]
+  },
+  {
+   "topic": "碰撞检测与物理",
+   "refs": [
+    "A:14",
+    "A:14.3",
+    "A:14.4",
+    "A:14.5"
+   ]
+  },
+  {
+   "topic": "动画与渲染管线集成",
+   "refs": [
+    "A:13",
+    "A:13.9",
+    "A:11",
+    "A:11.4",
+    "A:11.5"
+   ]
+  },
+  {
+   "topic": "资源管线与引擎架构",
+   "refs": [
+    "A:1.5",
+    "A:1.6",
+    "A:7",
+    "A:7.2"
+   ]
+  },
+  {
+   "topic": "玩法编程与调试工具",
+   "refs": [
+    "A:17.6",
+    "A:17.8",
+    "A:17.9",
+    "A:10",
+    "A:10.1",
+    "A:10.2",
+    "B:#2"
+   ]
+  }
+ ],
+ "omitted": "未收：第 2–4 章（版本控制与工具、游戏软件工程基础、并发编程）、第 5 章（游戏用三维数学，属 M.3.1/M.4.1）、第 6 章（引擎支撑系统：内存/容器/字符串）、第 12 章（光照与后处理，偏渲染效果而非管线集成）、第 15 章（音频）、第 18 章（其余系统概述），以及同页列出的 3rd edition 目录（结构重复，只抄 4th）。这些章要么与简介的七个知识点没有直接对应，要么是更底层的系统/数学内容。",
+ "notes": "主来源是作者 Jason Gregory 的官方站（gameenginebook.com/toc.html），页面同时给 4th 与 3rd edition 目录，本文件按 4th edition 抄（章号与 3rd 不完全相同，例如 3rd 里 “Tools and the Asset Pipeline” 是 1.7，4th 是 1.6，这里已按 4th 写）。补充分支 B 只取 CMU 15-466/666（Fall 2025）日程里两次课的主题，用来补 ECS 与 playtest 两个 A 没有专门小节的知识点；该课程页本身只有“每次课一个主题”的粒度，不适合做章→节主来源。自查时 check_outlines.py 会额外报 'unknown skill id'：output/skilltree.json 里还没有新增的 P.5.5（目前 201 个技能，P.5.x 只有 P.5.1–P.5.4），这不是导览图的问题，需要主代理重新生成技能表。",
+ "checked": {
+  "date": "2026-11-01",
+  "exact": 73,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "id": "P.5.5",
+ "resource": {
+  "tier": "website",
+  "title": "CMU 15-466/666 Computer Game Programming（Fall 2025, Jim McCann）",
+  "url": "https://graphics.cs.cmu.edu/courses/15-466-f25/",
+  "lang": "en",
+  "free": true,
+  "covers": "覆盖简介的大部分：Timing + Main Loop（游戏循环与实时模拟）、Asset Pipelines 与 PPU466 sprite pipeline / Blender 到游戏（资源管线）、Scene Graphs、ECS Paradigm（游戏对象与组件架构）、Collision（碰撞检测）、Materials/Lighting/Framebuffers（渲染管线集成）、Sound、Text + Fonts、Linear Blend Skinning（动画集成）、Networking、playtesting（玩法调试与试玩）。未覆盖：刚体动力学/物理引擎的完整数值方法（只讲 collision 判定）、输入与相机没有单列课时（并入 main loop 与场景图）、商业引擎（Unity/Unreal）的具体工具链。",
+  "verified": true
+ },
+ "zh_alt": null,
+ "courses": [
+  {
+   "school": "Carnegie Mellon University",
+   "course": "15-466 Computer Game Programming",
+   "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/",
+   "prereq_text": "Students wishing to take this class should be familiar with the C++ language and have a basic understanding of the OpenGL API. If you meet these requirements but have not taken Computer Graphics (the formal prerequisite), please contact the instructor. Prerequisites: 15-462 or 15-362",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "V.1.1",
+    "P.2.2"
+   ]
+  },
+  {
+   "school": "Georgia Institute of Technology (OMSCS)",
+   "course": "CS 6457 Video Game Design",
+   "url": "https://omscs.gatech.edu/cs-6457-video-game-design",
+   "prereq_text": "Useful prerequisite knowledge for the course includes linear algebra and computer graphics basics. Understanding of affine transformations of homogeneous coordinates, transformation order, quaternions, 3D projection, matrix stacks, scene graphs, graphics lighting models such as the Phong reflection model, are all relevant. / Outside of C# experience, familiarity with a strongly typed object-oriented programming language such as Java is helpful.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "M.3.1",
+    "M.4.1",
+    "V.1.1",
+    "P.1.2"
+   ]
+  },
+  {
+   "school": "Kent State University",
+   "course": "CS 38101 Introduction to Game Programming",
+   "url": "https://catalog.kent.edu/coursesaz/cs/",
+   "prereq_text": "Prerequisite: Minimum C grade in CS 23001.（CS 23001 的官方标题为 \"COMPUTER SCIENCE II: DATA STRUCTURES AND ABSTRACTION\"）",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "F.1.1"
+   ]
+  },
+  {
+   "school": "Northeastern University",
+   "course": "CS 5540 Game Programming",
+   "url": "https://catalog.northeastern.edu/course-descriptions/cs/",
+   "prereq_text": "At least one semester of programming experience in a high-level language is required.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "P.1.1"
+   ]
+  }
+ ],
+ "candidate_check": {
+  "P.1.2": "recommended",
+  "P.2.2": "supported",
+  "F.1.1": "supported",
+  "M.3.1": "recommended",
+  "M.4.1": "recommended",
+  "V.1.1": "supported",
+  "P.4.1": "not_mentioned"
+ },
+ "extra_prereqs": [
+  {
+   "id": "P.1.1",
+   "kind": "required",
+   "evidence": "Northeastern CS 5540 原文 \"At least one semester of programming experience in a high-level language is required.\"；Kent State CS 38101 要求的 CS 23001 又以 CS 13001（程序设计入门）为先修"
+  }
+ ],
+ "notes": "2026-11-01 新增（对应 CS2023 SPD-Game）。课程证据与资源由 pi 检索（temp/research/repartition/P.5.5.json），CMU 15-466 的先修原文由主代理从 CMU 官方课程目录核对补入：正式先修是图形学 15-462/15-362，另要求熟悉 C++ 与 OpenGL。判定：只有 Kent State 要求的数据结构与入门内容直接相关，列为必须；图形学、C++、面向对象、线性代数与几何只有部分课程要求或写作“有帮助”，列为推荐。先修证据只用三门能打开且明确写了先修/建议知识的课：GT CS 6457（写作 'Useful prerequisite knowledge ...' 与 'familiarity with ... Java is helpful'，故记 recommended）、Kent State CS 38101（required，先修是数据结构课 CS 23001，故 F.1.1 记 supported）、Northeastern CS 5540（required，'one semester of programming experience'，故 P.1.1 记 required 并列入 extra_prereqs）。没有任何一门写 C/C++ 或数据结构以外的系统课，故 P.2.2、P.4.1 记 not_mentioned——但英文主资源 CMU 15-466 全程用现代 C++、SDL、OpenGL（其 Resources 段列出 cppreference、SDL、OpenGL 规范），可作 P.2.2/V.1.1 的语境参考，只是课程页没列先修要求（prereq 为空，故未写进 courses）。打不开的候选：UPenn CIS 564 Game Design and Development（cg.cis.upenn.edu 返回 403）、MUN COMP4300 Game Programming（cs.mun.ca 连续超时）、CMU 15-466 的 https 站点证书链错误（改用 http 打开并重定向到 .../15-466-f25/）。"
+}

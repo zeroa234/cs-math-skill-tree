@@ -6803,31 +6803,6 @@
      "https://marl-book.com/download/"
     ],
     "why": "节点“现有英文学习资源”就是这本 MIT Press 2024 的开放获取教材（作者官网免费整书 PDF + 讲义 + 代码），并且它是多智能体协作与博弈的标准参考：博弈模型（正则型/重复/随机/部分可观测随机博弈）、解概念（纳什、ε-纳什、相关均衡、帕累托最优、社会福利与公平、无悔）、MARL 的四大挑战（非平稳、均衡选择、信用分配、规模扩展）、基础算法与深度协作/自博弈方法。目录取自作者公开的整书 PDF（Contents），章→节→小节齐全。"
-   },
-   {
-    "key": "B",
-    "kind": "course",
-    "title": "CS 6964: Neuro-Symbolic Modeling",
-    "by": "Vivek Srikumar (University of Utah)",
-    "year": 2025,
-    "url": "https://svivek.com/teaching/neurosymbolic-modeling/fall2025/",
-    "toc_urls": [
-     "https://svivek.com/teaching/neurosymbolic-modeling/fall2025/lectures.html",
-     "https://svivek.com/teaching/neurosymbolic-modeling/fall2025/topics.html"
-    ],
-    "why": "补“符号推理结合”：主来源整本是 MARL，不含神经符号内容。这门犹他大学研究生课的公开课表逐讲列出符号逻辑回顾、神经符号方法概览、逻辑即损失（语义损失、多值逻辑与 t-范数）、用知识设计模型、对预测的结构化推理（图搜索、整数线性规划推理、带推理训练）、把符号放进网络内部训练（直通估计器、Gumbel softmax）等，正好是“神经 + 符号”结合的路线清单。"
-   },
-   {
-    "key": "C",
-    "kind": "course",
-    "title": "80816/80516: Causality and Machine Learning",
-    "by": "Kun Zhang (Carnegie Mellon University)",
-    "year": 2025,
-    "url": "https://www.andrew.cmu.edu/course/80-516/",
-    "toc_urls": [
-     "https://www.andrew.cmu.edu/course/80-516/"
-    ],
-    "why": "补“因果表征”与开放问题：主来源不含因果。这门 CMU 课程的公开课表分九个 Part，Part VII 正是 Causal representation learning（IID/多分布/时序三种可辨识设定与真实问题），Part VIII 讲因果视角下的迁移学习、生成模型、强化学习与大模型，Part IX 是应用与 Review and Outlook（开放问题讨论）。"
    }
   ],
   "outline": [
@@ -7116,221 +7091,38 @@
       "zh": "零和博弈中的策略自博弈"
      }
     ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Lectures",
-    "zh": "课程讲次",
-    "fill": "补“符号推理结合”：主来源没有任何神经符号内容，这里按公开课表逐讲列出符号逻辑、逻辑即损失、用知识设计模型、结构化推理与带推理训练等神经—符号结合的方法。",
-    "items": [
-     {
-      "ref": "19-Aug",
-      "title": "Introduction",
-      "zh": "导论"
-     },
-     {
-      "ref": "21-Aug",
-      "title": "Neural networks refresher",
-      "zh": "神经网络回顾"
-     },
-     {
-      "ref": "26-Aug",
-      "title": "Symbolic logic",
-      "zh": "符号逻辑"
-     },
-     {
-      "ref": "2-Sep",
-      "title": "Neuro-symbolic methods: Overview",
-      "zh": "神经符号方法：概览"
-     },
-     {
-      "ref": "11-Sep",
-      "title": "Logic as loss: Overview",
-      "zh": "逻辑即损失：概览"
-     },
-     {
-      "ref": "16-Sep",
-      "title": "Semantic loss",
-      "zh": "语义损失"
-     },
-     {
-      "ref": "23-Sep",
-      "title": "Multi-valued logic and t-norm losses",
-      "zh": "多值逻辑与 t-范数损失"
-     },
-     {
-      "ref": "14-Oct",
-      "title": "Using knowledge to design models",
-      "zh": "用知识设计模型"
-     },
-     {
-      "ref": "21-Oct",
-      "title": "Reasoning about model predictions, structured prediction",
-      "zh": "对模型预测的推理与结构预测"
-     },
-     {
-      "ref": "28-Oct",
-      "title": "Graph search for structures",
-      "zh": "结构的图搜索"
-     },
-     {
-      "ref": "30-Oct",
-      "title": "Integer linear programming inference",
-      "zh": "整数线性规划推理"
-     },
-     {
-      "ref": "4-Nov",
-      "title": "Training with inference",
-      "zh": "带推理的训练"
-     },
-     {
-      "ref": "6-Nov",
-      "title": "Test-time compute with LLMs",
-      "zh": "大模型在测试时的计算"
-     },
-     {
-      "ref": "11-Nov",
-      "title": "Training with symbols within networks",
-      "zh": "在网络内部用符号训练"
-     },
-     {
-      "ref": "13-Nov",
-      "title": "The straight-through estimator",
-      "zh": "直通估计器"
-     },
-     {
-      "ref": "18-Nov",
-      "title": "Gumbel softmax",
-      "zh": "Gumbel softmax"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "Part VII",
-    "title": "Causal representation learning (CRL)",
-    "zh": "因果表征学习",
-    "fill": "补“因果表征”：主来源是 MARL 教材，完全没有因果内容；这一部分是因果表征学习的可辨识性主线索（IID 下的功能约束/稀疏性、多分布、时序数据），以及实际问题。",
-    "items": [
-     {
-      "ref": "03/20",
-      "title": "CRL in the IID case: Benefits from functional constraints or sparsity",
-      "zh": "IID 情形下的因果表征学习：功能约束或稀疏性带来的好处"
-     },
-     {
-      "ref": "03/25",
-      "title": "CRL from changes: Benefits from multiple distributions",
-      "zh": "借助变化做因果表征学习：多分布带来的好处"
-     },
-     {
-      "ref": "03/27",
-      "title": "CRL from temporal data",
-      "zh": "从时序数据做因果表征学习"
-     },
-     {
-      "ref": "04/01",
-      "title": "Real problems of CRL",
-      "zh": "因果表征学习的实际问题"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "Part VIII",
-    "title": "Causal view for machine learning and artificial intelligence",
-    "zh": "因果视角下的机器学习与人工智能",
-    "fill": "补“因果表征”在具体学习任务中的应用：迁移学习、半监督/强化学习与大模型、深度生成模型与因果生成式 AI、公平性。",
-    "items": [
-     {
-      "ref": "04/08",
-      "title": "Transfer learning and image translation",
-      "zh": "迁移学习与图像转换"
-     },
-     {
-      "ref": "04/10",
-      "title": "Semi-supervised learning, reinforcement learning, and large models",
-      "zh": "半监督学习、强化学习与大模型"
-     },
-     {
-      "ref": "04/15",
-      "title": "Unsupervised deep learning, deep generative models, and causal generative AI",
-      "zh": "无监督深度学习、深度生成模型与因果生成式 AI"
-     },
-     {
-      "ref": "04/17",
-      "title": "Fairness in machine learning",
-      "zh": "机器学习中的公平性"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "Part IX",
-    "title": "Real applications of causal discovery, review, and outlook",
-    "zh": "因果发现的实际应用、回顾与展望",
-    "fill": "补“开放研究问题”：除了 MARL 的 research agendas，这里给出因果方向的开放问题讨论（大模型时代的因果、自动化科学发现等）。",
-    "items": [
-     {
-      "ref": "04/22",
-      "title": "Applications of causal discovery and causal representation learning",
-      "zh": "因果发现与因果表征学习的应用"
-     },
-     {
-      "ref": "04/24",
-      "title": "Review and Outlook",
-      "zh": "回顾与展望"
-     }
-    ]
    }
   ],
   "coverage": [
    {
-    "topic": "协作",
+    "topic": "博弈模型",
     "refs": [
-     "A:5.4.3",
-     "A:9.5"
+     "A:3"
     ],
-    "note": "协作的两条主线：共同回报下的信用分配（5.4.3）与值分解方法（9.5）；B/C 里没有协作内容"
+    "note": "第 3 章：正则型博弈、重复博弈、随机博弈、部分可观测随机博弈、通信建模与知识假设。"
    },
    {
-    "topic": "博弈",
+    "topic": "解概念（纳什均衡等）",
     "refs": [
-     "A:3",
-     "A:4",
+     "A:4"
+    ],
+    "note": "第 4 章：最优响应、极小极大、纳什与 ϵ-纳什均衡、（粗）相关均衡、帕累托最优、社会福利与公平、无悔。"
+   },
+   {
+    "topic": "多智能体强化学习的基础算法与挑战",
+    "refs": [
+     "A:1",
+     "A:5",
      "A:6"
     ],
-    "note": "3 章给博弈模型，4 章给纳什/相关均衡/帕累托/社会福利与公平等解概念，6 章是求解这些概念的经典算法"
+    "note": "1.4 与第 5 章讲收敛类型和多智能体强化学习的挑战（含共同回报下的信用分配 5.4.3）；第 6 章是值迭代、联合动作学习、智能体建模、基于策略的学习与无悔学习等基础算法。"
    },
    {
-    "topic": "因果表征",
+    "topic": "多智能体深度强化学习",
     "refs": [
-     "C:Part VII",
-     "C:03/20",
-     "C:03/25",
-     "C:03/27",
-     "C:04/01"
-    ]
-   },
-   {
-    "topic": "符号推理结合",
-    "refs": [
-     "B:11-Sep",
-     "B:16-Sep",
-     "B:23-Sep",
-     "B:30-Oct",
-     "B:4-Nov",
-     "B:11-Nov"
+     "A:9"
     ],
-    "note": "从“逻辑即损失”（11-Sep 概览、16-Sep 语义损失、23-Sep t-范数）到“用推理训练/把符号放进网络”（30-Oct ILP 推理、4-Nov 带推理训练、11-Nov 网络内部用符号）"
-   },
-   {
-    "topic": "开放研究问题",
-    "refs": [
-     "A:1.5",
-     "C:04/24"
-    ],
-    "note": "A 的 1.5 Agendas of MARL 与 1.4 Challenges、C 的 Review and Outlook（讨论“大模型时代的因果”“能否不用因果”等）都是开放问题；B 的课程 topics 页另有 Technical challenges 一节，但没有对应到具体讲次，未收入 outline"
+    "note": "第 9 章：训练与执行模式（集中训练、分散执行）、共同回报博弈中的值分解、零和博弈中的策略自博弈。"
    }
   ],
   "omitted": "主来源 A 只收了与“协作与博弈”直接相关的 1、3、4、5、6、9 章；2 Reinforcement Learning、7 Deep Learning、8 Deep Reinforcement Learning 是单智能体与深度学习前置，10 章（PyTorch 实现细节）、11 章（环境清单）、附录 Surveys 未收，4.11（计算均衡的复杂性）、5.6/6.6 等 Summary 小节也未收。B 只收了有具体主题的讲次，日程里的 “(continued)”、Buffer lecture、Fall break、Thanksgiving、Reinforcement learning、Looking back at the semester 未收。C 只收 Part VII–IX，Part I–VI（统计与机器学习预备、因果效应识别与反事实、传统因果发现、函数因果模型、实践问题）未收。"
@@ -20434,6 +20226,14 @@
     "zh": "MPC 并行算法（第二部分）",
     "fill": "通信（MPC 上的连通性/MST 等大规模并行算法）",
     "items": []
+   },
+   {
+    "src": "D",
+    "ref": "3",
+    "title": "Property Testing, Sorted, and Yao’s Principle",
+    "zh": "性质测试、有序性与 Yao 原理",
+    "fill": "性质测试",
+    "items": []
    }
   ],
   "coverage": [
@@ -20465,6 +20265,13 @@
      "C:6.3.3"
     ],
     "note": "C 第 6 章：频率矩（不同元素个数、出现次数、二阶矩）是流式摘要的核心，文档 sketch 与“大矩阵的草图”给草图技术的另外两支。"
+   },
+   {
+    "topic": "性质测试",
+    "refs": [
+     "D:3"
+    ],
+    "note": "CS 5234 第 3 讲：性质测试、有序性检测与 Yao 原理（从原 F.1.6 移来）。"
    }
   ],
   "omitted": "A（6.851）只取第 7–9 讲的内存层级部分，其余讲次（Temporal 持久化、Geometric 范围查询、Dynamic optimality、Dictionaries、Integer 结构与下界、Static trees、Succinct 结构等）与本节点三块内容不对应；A 第 8 讲的第 1 节“From Last Lectures...”、第 9 讲的“Overview”是过渡性小节，未收。B（15-210）只取讲代价模型的第 3 章与“Contraction and Scan”一份讲义，其余讲义（序列、排序、哈希、平衡树、DP、概率）属别的节点。C 只取第 6 章，其余章节（高维空间、SVD、随机游走、学习、聚类）未收；C 的 6.5 Bibliographic Notes 与 6.6 Exercises 也不收。D 只取第 10–12 讲（并行/MPC），其余讲次（性质测试、流式采样、图流、流式聚类、缓存）已由 A/C 或 F.1.6 覆盖。"
@@ -20485,18 +20292,6 @@
      "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/0f54b0ee1f3f47108c3bafaec54fd553_MIT6_890F14_Lec21.pdf"
     ],
     "why": "节点现有英文资源；OCW 课表给出“参数化复杂度 I/II”“3SUM & APSP”等精细复杂度讲次，而且每讲的 scribe notes 是带编号小节的正文（1 / 2.1 / 3.3 …），可以把每讲拆到节。"
-   },
-   {
-    "key": "B",
-    "kind": "course",
-    "title": "CS 5234 - Algorithms at Scale (Fall 2019)",
-    "by": "Seth Gilbert",
-    "year": 2019,
-    "url": "https://www.comp.nus.edu.sg/~gilbert/CS5234/",
-    "toc_urls": [
-     "https://www.comp.nus.edu.sg/~gilbert/CS5234/"
-    ],
-    "why": "补“性质测试”（以及次线性时间算法）：6.890 讲硬度与下界，没有性质测试一讲；CS 5234 第 3 讲就是 Property Testing, Sorted, and Yao's Principle，第 1 讲给次线性时间下的采样与图性质估计。"
    }
   ],
   "outline": [
@@ -20668,58 +20463,31 @@
       "zh": "猜想为三次时间难度的图问题"
      }
     ]
-   },
-   {
-    "src": "B",
-    "ref": "3",
-    "title": "Property Testing, Sorted, and Yao’s Principle",
-    "zh": "性质测试、有序性与 Yao 原理",
-    "fill": "性质测试",
-    "items": []
-   },
-   {
-    "src": "B",
-    "ref": "1",
-    "title": "Introduction and logistics",
-    "zh": "导论与课程安排",
-    "fill": "次线性时间下的采样与图性质估计",
-    "items": [
-     {
-      "ref": "",
-      "title": "Sampling",
-      "zh": "采样"
-     },
-     {
-      "ref": "",
-      "title": "Graph connectivity",
-      "zh": "图的连通性"
-     }
-    ]
    }
   ],
   "coverage": [
    {
-    "topic": "固定参数可解性",
+    "topic": "固定参数可解性与核化",
     "refs": [
      "A:13"
     ],
-    "note": "第 13 讲从 FPT/XP 的定义（General Idea）讲到 k-顶点覆盖的 FPT 算法与 EPTAS，再到参数化归约与 W[1]/W[2] 层级（独立集是 W[1] 完全、多色团、支配集）。"
+    "note": "第 13 讲的基本思想与 k-顶点覆盖例子讲 FPT；核化（kernelization）没有单列的节标题。"
    },
    {
-    "topic": "性质测试",
+    "topic": "W 层级与 ETH 下界",
     "refs": [
-     "B:3",
-     "B:1"
+     "A:13",
+     "A:14"
     ],
-    "note": "B 的第 3 讲是性质测试（含 Yao 原理这种下界工具），第 1 讲给次线性时间下的采样与图性质估计；6.890 里没有对应的一讲。CS5234 的手写讲义提不出节标题（打字版幻灯片也只有零散的幻灯片标题），所以这两条分支仍是平坦的。"
+    "note": "第 13 讲的参数化归约与 W[1]、W[2]；第 14 讲的指数时间假设（ETH、SETH）及其参数化推论。"
    },
    {
-    "topic": "条件性复杂度界",
+    "topic": "条件性复杂度界（SETH、3SUM、APSP）与细粒度归约",
     "refs": [
      "A:14",
      "A:21"
     ],
-    "note": "ETH 与 SETH 给出参数化与平面图上的下界（第 14 讲），3SUM/APSP 猜想给出另一条主流条件性下界（第 21 讲：3SUM-困难性、非二次下界、猜想的三次时间图问题）。"
+    "note": "SETH 在第 14 讲；3SUM 与全源最短路径的困难性、归约与由此得到的下界在第 21 讲。"
    }
   ],
   "omitted": "6.890 的其他各讲未收：1–9（3-partition、SAT、Circuit SAT、Planar SAT、Hamiltonicity、Graph Problems）是 NP 完全性归约的准备工作；10–12 不可近似性属 F.1.4；15–20、22–23（P/ASP、视频游戏、NCL、PPAD 等）与本节点三个知识点无关。13 讲里未收 1 Overview（过渡性小节）与 3.5 Partial Vertex Cover（原文标题带截断的冒号）；14 讲未收 1 Overview 与 4.1 “Stronger …”（原文标题被截断）。CS 5234 只取了 1、3 两讲，其余流算法/缓存/并行部分属 F.1.5。"
@@ -34023,7 +33791,9 @@
      "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives",
      "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
      "https://openstax.org/books/calculus-volume-3/pages/4-5-the-chain-rule",
-     "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient"
+     "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
+     "https://openstax.org/books/calculus-volume-3/pages/5-7-change-of-variables-in-multiple-integrals",
+     "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems"
     ],
     "why": "节点“现有英文学习资源”就是这本书第 4 章：OpenStax 官方开放本科多元微积分教材，4.3 偏导数、4.4 切平面与线性近似（全微分）、4.5 链式法则与隐函数求导、4.6 方向导数与梯度，页内二级标题可抄到小节。"
    },
@@ -34038,6 +33808,30 @@
      "https://www.bananaspace.org/books/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"
     ],
     "why": "补“隐函数与逆函数定理”：OpenStax 只到隐函数求导，定理本身要更强的分析课；这份讲义（也是节点现有中文学习资源）第 33、34 讲正是反函数定理与隐函数定理。"
+   },
+   {
+    "key": "C",
+    "kind": "book",
+    "title": "Mathematics for Machine Learning",
+    "by": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
+    "year": 2020,
+    "url": "https://mml-book.github.io/",
+    "toc_urls": [
+     "https://mml-book.github.io/book/mml-book.pdf"
+    ],
+    "why": "补“二阶偏导矩阵（海森矩阵）”与“二阶近似”：5.7 高阶导数一节给出 Hessian，5.8 讲多元泰勒展开（二阶近似）。"
+   },
+   {
+    "key": "D",
+    "kind": "book",
+    "title": "Convex Optimization",
+    "by": "Stephen Boyd, Lieven Vandenberghe",
+    "year": 2004,
+    "url": "https://web.stanford.edu/~boyd/cvxbook/",
+    "toc_urls": [
+     "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf"
+    ],
+    "why": "补“连接二阶优化”：3.1 用海森矩阵的半正定性表述二阶条件，9.1/9.5 是无约束极小化与牛顿法（二阶模型）。"
    }
   ],
   "outline": [
@@ -34171,148 +33965,6 @@
     "title": "隐函数定理，子流形的判定",
     "fill": "补“隐函数定理”：由一个方程确定隐函数的条件",
     "items": []
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "偏导数",
-    "refs": [
-     "A:4.3"
-    ],
-    "note": "二元/多元函数的偏导数、高阶偏导数、混合偏导数相等（Clairaut 定理）。"
-   },
-   {
-    "topic": "全微分",
-    "refs": [
-     "A:4.4"
-    ],
-    "note": "Differentials 小节给 dz=fx dx+fy dy；可微性（Differentiability）与切平面、线性近似在同一节。"
-   },
-   {
-    "topic": "方向导数",
-    "refs": [
-     "A:4.6"
-    ],
-    "note": "A:4.6 讲方向导数与梯度、梯度与等值线、三维情形；与 M.1.4.2 有一处重叠（那边聚焦梯度与雅可比矩阵）。"
-   },
-   {
-    "topic": "隐函数",
-    "refs": [
-     "A:4.5",
-     "B:34"
-    ],
-    "note": "A:4.5 的 Implicit Differentiation 只给求导公式（dy/dx=−Fx/Fy），隐函数定理本身在 B:34。"
-   },
-   {
-    "topic": "逆函数定理",
-    "refs": [
-     "B:33"
-    ],
-    "note": "A（OpenStax）没有逆函数定理；B:33 在局部坐标/微分同胚的语境下证明反函数定理。"
-   }
-  ],
-  "omitted": "A（Calculus Volume 3）未收 4.1（多元函数、等值线）、4.2（多元极限与连续，属 M.1.1 的推广）、4.7（极值与海森矩阵，见 M.1.4.3）、4.8（拉格朗日乘子法）；第 1–3 章（参数方程与极坐标、空间向量、向量值函数）与第 5–7 章（重积分、向量场、二阶微分方程）也未收；各节的习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 33、34 讲，其余讲未收。"
- },
- "M.1.4.2": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "book",
-    "title": "Calculus Volume 3",
-    "by": "Gilbert Strang, Edwin “Jed” Herman",
-    "year": 2016,
-    "url": "https://openstax.org/books/calculus-volume-3/pages/1-introduction",
-    "toc_urls": [
-     "https://openstax.org/books/calculus-volume-3/pages/4-introduction",
-     "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
-     "https://openstax.org/books/calculus-volume-3/pages/4-5-the-chain-rule",
-     "https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient",
-     "https://openstax.org/books/calculus-volume-3/pages/5-7-change-of-variables-in-multiple-integrals"
-    ],
-    "why": "节点“现有英文学习资源”就是这本书 4.6 的方向导数与梯度；同一本教材的 4.4（线性近似/全微分）、4.5（链式法则）、5.7（换元与雅可比行列式）正好拼出“标量场梯度 → 映射导数 → 链式法则 → 坐标变换”这条线。"
-   },
-   {
-    "key": "B",
-    "kind": "notes",
-    "title": "数学分析（讲义）",
-    "by": "于品，清华大学",
-    "year": 2018,
-    "url": "https://www.bananaspace.org/books/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/",
-    "toc_urls": [
-     "https://www.bananaspace.org/books/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"
-    ],
-    "why": "补“向量映射导数”：OpenStax 的雅可比只作为重积分换元的行列式出现，没有把 F:Rⁿ→Rᵐ 的导数讲成线性映射（雅可比矩阵）；这份讲义（也是节点现有中文学习资源）第 30、31 讲正是高维函数的微分与映射的微分。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "4.6",
-    "title": "Directional Derivatives and the Gradient",
-    "zh": "方向导数与梯度",
-    "items": [
-     {
-      "ref": "",
-      "title": "Directional Derivatives",
-      "zh": "方向导数"
-     },
-     {
-      "ref": "",
-      "title": "Gradient",
-      "zh": "梯度"
-     },
-     {
-      "ref": "",
-      "title": "Gradients and Level Curves",
-      "zh": "梯度与等值线"
-     },
-     {
-      "ref": "",
-      "title": "Three-Dimensional Gradients and Directional Derivatives",
-      "zh": "三维梯度与方向导数"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "4.4",
-    "title": "Tangent Planes and Linear Approximations",
-    "zh": "切平面与线性近似",
-    "items": [
-     {
-      "ref": "",
-      "title": "Linear Approximations",
-      "zh": "线性近似"
-     },
-     {
-      "ref": "",
-      "title": "Differentiability",
-      "zh": "可微性"
-     },
-     {
-      "ref": "",
-      "title": "Differentials",
-      "zh": "全微分"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "4.5",
-    "title": "The Chain Rule",
-    "zh": "链式法则",
-    "items": [
-     {
-      "ref": "",
-      "title": "Chain Rules for One or Two Independent Variables",
-      "zh": "一个或两个自变量情形的链式法则"
-     },
-     {
-      "ref": "",
-      "title": "The Generalized Chain Rule",
-      "zh": "一般形式的链式法则"
-     }
-    ]
    },
    {
     "src": "A",
@@ -34355,126 +34007,6 @@
     "title": "映射的微分",
     "fill": "补“向量映射导数”：F:Rⁿ→Rᵐ 的导数是线性映射（雅可比矩阵），并由此给出映射情形的链式法则",
     "items": []
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "标量场梯度",
-    "refs": [
-     "A:4.6",
-     "B:30"
-    ],
-    "note": "A:4.6 给出 ∇f、方向导数 D_uf=∇f·u、梯度垂直于等值线、最速上升方向；B:30 把它写成微分的矩阵表示（严格版）。"
-   },
-   {
-    "topic": "向量映射导数",
-    "refs": [
-     "B:31",
-     "A:5.7"
-    ],
-    "note": "A:5.7 的 Jacobians 小节只把雅可比当作换元时的行列式（∂(x,y)/∂(u,v)），没有讲向量值映射的导数；B:31 的“映射的微分”才是 F:Rⁿ→Rᵐ 的导数=雅可比矩阵。"
-   },
-   {
-    "topic": "链式法则",
-    "refs": [
-     "A:4.5",
-     "B:31"
-    ],
-    "note": "A:4.5 的 Chain Rule for One/Two Independent Variables 与 Generalized Chain Rule 是标量情形的树状图公式；映射情形的链式法则（雅可比矩阵相乘）在 B:31。"
-   },
-   {
-    "topic": "坐标变换",
-    "refs": [
-     "A:5.7"
-    ],
-    "note": "Planar Transformations → Jacobians → 二重/三重积分换元，正是雅可比行列式在坐标变换里的用处。"
-   }
-  ],
-  "omitted": "A（Calculus Volume 3）未收 4.3（偏导数，见 M.1.4.1）、4.7（极值，见 M.1.4.3）、4.8（拉格朗日乘子法）、5.1–5.6（重积分的定义与各种坐标系，其中极坐标/柱坐标/球坐标部分见 M.1.4.4）；第 1–3 章与第 6–7 章未收；各节习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 30、31 讲，第 32 讲之后（微分同胚、子流形、反函数与隐函数定理）未收，因为它们属于 M.1.4.1 的知识点。"
- },
- "M.1.4.3": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "book",
-    "title": "Calculus Volume 3",
-    "by": "Gilbert Strang, Edwin “Jed” Herman",
-    "year": 2016,
-    "url": "https://openstax.org/books/calculus-volume-3/pages/1-introduction",
-    "toc_urls": [
-     "https://openstax.org/books/calculus-volume-3/pages/4-introduction",
-     "https://openstax.org/books/calculus-volume-3/pages/4-3-partial-derivatives",
-     "https://openstax.org/books/calculus-volume-3/pages/4-4-tangent-planes-and-linear-approximations",
-     "https://openstax.org/books/calculus-volume-3/pages/4-7-maxima-minima-problems"
-    ],
-    "why": "节点“现有英文学习资源”就是这本书的 4.7 节，OpenStax 官方开放本科教材；海森矩阵本身没有独立小节，所以把它所在的 4.3 二阶偏导、4.4 线性近似、4.7 二阶导数判别、4.8 条件极值逐节抄下来，页内二级标题抄到小节。"
-   },
-   {
-    "key": "B",
-    "kind": "book",
-    "title": "Mathematics for Machine Learning",
-    "by": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
-    "year": 2020,
-    "url": "https://mml-book.github.io/",
-    "toc_urls": [
-     "https://mml-book.github.io/book/mml-book.pdf"
-    ],
-    "why": "补“二阶偏导矩阵（海森矩阵）”与“二阶近似”：5.7 高阶导数一节给出 Hessian，5.8 讲多元泰勒展开（二阶近似）。"
-   },
-   {
-    "key": "C",
-    "kind": "book",
-    "title": "Convex Optimization",
-    "by": "Stephen Boyd, Lieven Vandenberghe",
-    "year": 2004,
-    "url": "https://web.stanford.edu/~boyd/cvxbook/",
-    "toc_urls": [
-     "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf"
-    ],
-    "why": "补“连接二阶优化”：3.1 用海森矩阵的半正定性表述二阶条件，9.1/9.5 是无约束极小化与牛顿法（二阶模型）。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "4.3",
-    "title": "Partial Derivatives",
-    "zh": "偏导数",
-    "items": [
-     {
-      "ref": "",
-      "title": "Higher-Order Partial Derivatives",
-      "zh": "高阶偏导数"
-     },
-     {
-      "ref": "",
-      "title": "Equality of Mixed Partial Derivatives (Clairaut’s Theorem)",
-      "zh": "混合偏导数相等（Clairaut 定理）"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "4.4",
-    "title": "Tangent Planes and Linear Approximations",
-    "zh": "切平面与线性近似",
-    "items": [
-     {
-      "ref": "",
-      "title": "Tangent Planes",
-      "zh": "切平面"
-     },
-     {
-      "ref": "",
-      "title": "Differentiability",
-      "zh": "可微性"
-     },
-     {
-      "ref": "",
-      "title": "Differentials",
-      "zh": "全微分"
-     }
-    ]
    },
    {
     "src": "A",
@@ -34507,7 +34039,7 @@
     "items": []
    },
    {
-    "src": "B",
+    "src": "C",
     "ref": "5.7",
     "title": "Higher-Order Derivatives",
     "zh": "高阶导数",
@@ -34515,7 +34047,7 @@
     "items": []
    },
    {
-    "src": "B",
+    "src": "C",
     "ref": "5.8",
     "title": "Linearization and Multivariate Taylor Series",
     "zh": "线性化与多元泰勒级数",
@@ -34523,7 +34055,7 @@
     "items": []
    },
    {
-    "src": "C",
+    "src": "D",
     "ref": "3.1",
     "title": "Basic properties and examples",
     "zh": "基本性质与例子",
@@ -34531,7 +34063,7 @@
     "items": []
    },
    {
-    "src": "C",
+    "src": "D",
     "ref": "9.1",
     "title": "Unconstrained minimization problems",
     "zh": "无约束极小化问题",
@@ -34539,7 +34071,7 @@
     "items": []
    },
    {
-    "src": "C",
+    "src": "D",
     "ref": "9.5",
     "title": "Newton’s method",
     "zh": "牛顿法",
@@ -34549,10 +34081,77 @@
   ],
   "coverage": [
    {
+    "topic": "偏导数",
+    "refs": [
+     "A:4.3"
+    ],
+    "note": "二元/多元函数的偏导数、高阶偏导数、混合偏导数相等（Clairaut 定理）。"
+   },
+   {
+    "topic": "全微分",
+    "refs": [
+     "A:4.4"
+    ],
+    "note": "Differentials 小节给 dz=fx dx+fy dy；可微性（Differentiability）与切平面、线性近似在同一节。"
+   },
+   {
+    "topic": "方向导数",
+    "refs": [
+     "A:4.6"
+    ],
+    "note": "A:4.6 讲方向导数与梯度、梯度与等值线、三维情形；与 M.1.4.2 有一处重叠（那边聚焦梯度与雅可比矩阵）。"
+   },
+   {
+    "topic": "隐函数",
+    "refs": [
+     "A:4.5",
+     "B:34"
+    ],
+    "note": "A:4.5 的 Implicit Differentiation 只给求导公式（dy/dx=−Fx/Fy），隐函数定理本身在 B:34。"
+   },
+   {
+    "topic": "逆函数定理",
+    "refs": [
+     "B:33"
+    ],
+    "note": "A（OpenStax）没有逆函数定理；B:33 在局部坐标/微分同胚的语境下证明反函数定理。"
+   },
+   {
+    "topic": "标量场梯度",
+    "refs": [
+     "A:4.6",
+     "B:30"
+    ],
+    "note": "A:4.6 给出 ∇f、方向导数 D_uf=∇f·u、梯度垂直于等值线、最速上升方向；B:30 把它写成微分的矩阵表示（严格版）。"
+   },
+   {
+    "topic": "向量映射导数",
+    "refs": [
+     "B:31",
+     "A:5.7"
+    ],
+    "note": "A:5.7 的 Jacobians 小节只把雅可比当作换元时的行列式（∂(x,y)/∂(u,v)），没有讲向量值映射的导数；B:31 的“映射的微分”才是 F:Rⁿ→Rᵐ 的导数=雅可比矩阵。"
+   },
+   {
+    "topic": "链式法则",
+    "refs": [
+     "A:4.5",
+     "B:31"
+    ],
+    "note": "A:4.5 的 Chain Rule for One/Two Independent Variables 与 Generalized Chain Rule 是标量情形的树状图公式；映射情形的链式法则（雅可比矩阵相乘）在 B:31。"
+   },
+   {
+    "topic": "坐标变换",
+    "refs": [
+     "A:5.7"
+    ],
+    "note": "Planar Transformations → Jacobians → 二重/三重积分换元，正是雅可比行列式在坐标变换里的用处。"
+   },
+   {
     "topic": "二阶偏导矩阵",
     "refs": [
      "A:4.3",
-     "B:5.7",
+     "C:5.7",
      "A:4.7"
     ],
     "note": "OpenStax 只把四个二阶偏导 fxx、fxy、fyx、fyy 写出来并用 D=fxxfyy−fxy² 组织，海森矩阵的矩阵形式在 B:5.7。"
@@ -34560,7 +34159,7 @@
    {
     "topic": "二阶近似",
     "refs": [
-     "B:5.8",
+     "C:5.8",
      "A:4.4"
     ],
     "note": "A:4.4 只到一阶（切平面/线性近似），二阶泰勒近似在 B:5.8。"
@@ -34570,20 +34169,20 @@
     "refs": [
      "A:4.7",
      "A:4.8",
-     "C:3.1"
+     "D:3.1"
     ],
     "note": "A:4.7 的 Second Derivative Test 用判别式 D 给出极值/鞍点判据；A:4.8 处理约束极值；C:3.1 把它推广成海森矩阵的半正定条件。"
    },
    {
     "topic": "连接二阶优化",
     "refs": [
-     "C:9.1",
-     "C:9.5"
+     "D:9.1",
+     "D:9.5"
     ],
     "note": "牛顿法一步就是最小化二阶近似，海森矩阵在这里直接进入算法。"
    }
   ],
-  "omitted": "A 的第 4 章其余节（4.1 多元函数、4.2 极限与连续、4.5 链式法则、4.6 方向导数与梯度）以及第 1–3、5–7 章（参数方程与极坐标、空间向量、向量值函数、重积分、幂级数）与本节点关系较远，未收；各节的习题、Key Equations、Key Concepts、Glossary 也未收。B 只收第 5 章的 5.7、5.8，其余章（线性代数、解析几何、矩阵分解、概率、优化）未收。C 只收第 3 章 3.1 与第 9 章 9.1、9.5，其余章与附录未收。"
+  "omitted": "A（Calculus Volume 3）未收 4.1（多元函数、等值线）、4.2（多元极限与连续，属 M.1.1 的推广）、4.7（极值与海森矩阵，见 M.1.4.3）、4.8（拉格朗日乘子法）；第 1–3 章（参数方程与极坐标、空间向量、向量值函数）与第 5–7 章（重积分、向量场、二阶微分方程）也未收；各节的习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 33、34 讲，其余讲未收。；A（Calculus Volume 3）未收 4.3（偏导数，见 M.1.4.1）、4.7（极值，见 M.1.4.3）、4.8（拉格朗日乘子法）、5.1–5.6（重积分的定义与各种坐标系，其中极坐标/柱坐标/球坐标部分见 M.1.4.4）；第 1–3 章与第 6–7 章未收；各节习题、Key Equations、Key Concepts、Glossary 未收。B（于品《数学分析》）只收第 30、31 讲，第 32 讲之后（微分同胚、子流形、反函数与隐函数定理）未收，因为它们属于 M.1.4.1 的知识点。；A 的第 4 章其余节（4.1 多元函数、4.2 极限与连续、4.5 链式法则、4.6 方向导数与梯度）以及第 1–3、5–7 章（参数方程与极坐标、空间向量、向量值函数、重积分、幂级数）与本节点关系较远，未收；各节的习题、Key Equations、Key Concepts、Glossary 也未收。B 只收第 5 章的 5.7、5.8，其余章（线性代数、解析几何、矩阵分解、概率、优化）未收。C 只收第 3 章 3.1 与第 9 章 9.1、9.5，其余章与附录未收。"
  },
  "M.1.4.4": {
   "sources": [
@@ -34604,6 +34203,21 @@
      "https://openstax.org/books/calculus-volume-3/pages/5-7-change-of-variables-in-multiple-integrals"
     ],
     "why": "节点“现有英文学习资源”就是这本书第 5 章：OpenStax 官方开放本科多元微积分教材，二重积分（矩形/一般区域/极坐标）、三重积分（含柱坐标与球坐标）、换元与雅可比行列式一章一章排好，页内二级标题可抄到小节；无需补充来源。"
+   },
+   {
+    "key": "B",
+    "kind": "course",
+    "title": "Multivariable Calculus (18.02SC)",
+    "by": "Denis Auroux, MIT OpenCourseWare",
+    "year": 2010,
+    "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
+    "toc_urls": [
+     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/3.-double-integrals-and-line-integrals-in-the-plane/part-b-vector-fields-and-line-integrals/",
+     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/3.-double-integrals-and-line-integrals-in-the-plane/part-c-greens-theorem/",
+     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/4.-triple-integrals-and-surface-integrals-in-3-space/part-b-flux-and-the-divergence-theorem/",
+     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/4.-triple-integrals-and-surface-integrals-in-3-space/part-c-line-integrals-and-stokes-theorem/"
+    ],
+    "why": "节点“现有英文学习资源”就是这门课：MIT 官方开放课程按 Part → Session 给出每一讲的具体主题，线积分、通量与曲面积分、散度定理、旋度与斯托克斯定理正好集中在 Unit 3 Part B/C 与 Unit 4 Part B/C 四处，导览图和“去哪学”是同一份材料。"
    }
   ],
   "outline": [
@@ -34749,73 +34363,9 @@
       "zh": "三重积分的换元"
      }
     ]
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "二重积分",
-    "refs": [
-     "A:5.1",
-     "A:5.2",
-     "A:5.3"
-    ],
-    "note": "5.1 从体积/Riemann 和给定义与累次积分，5.2 推广到一般区域，5.3 是极坐标下的算法。"
    },
    {
-    "topic": "三重积分",
-    "refs": [
-     "A:5.4",
-     "A:5.5"
-    ],
-    "note": "5.4 给定义与一般有界区域上的算法（含交换积分次序），5.5 是柱坐标与球坐标两种常用坐标变换。"
-   },
-   {
-    "topic": "区域分割",
-    "refs": [
-     "A:5.2"
-    ],
-    "note": "“Decomposing Regions”小节讲把一个区域拆成若干 Type I/II 区域再分别积分；5.2 的 General Regions of Integration 先给 Type I/Type II 的判别。"
-   },
-   {
-    "topic": "换元",
-    "refs": [
-     "A:5.7",
-     "A:5.3",
-     "A:5.5"
-    ],
-    "note": "一般换元在 5.7（Planar Transformations → Jacobians → 二重/三重积分的换元）；极坐标、柱坐标、球坐标三个特例分别见 5.3 与 5.5。"
-   },
-   {
-    "topic": "雅可比行列式",
-    "refs": [
-     "A:5.7"
-    ],
-    "note": "Jacobians 小节给定义 ∂(x,y)/∂(u,v)，并用它给出换元公式 dx dy=|∂(x,y)/∂(u,v)|du dv。"
-   }
-  ],
-  "omitted": "5.6（Calculating Centers of Mass and Moments of Inertia，质心与转动惯量）与本节点的“积分计算本身”关系较远，未收；第 1–4 章（参数方程与极坐标、空间向量、向量值函数、多元微分）与第 6–7 章（向量场、二阶微分方程）未收；各节的习题、Key Equations、Key Concepts、Glossary 未收。"
- },
- "M.1.4.5": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "course",
-    "title": "Multivariable Calculus (18.02SC)",
-    "by": "Denis Auroux, MIT OpenCourseWare",
-    "year": 2010,
-    "url": "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/",
-    "toc_urls": [
-     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/3.-double-integrals-and-line-integrals-in-the-plane/part-b-vector-fields-and-line-integrals/",
-     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/3.-double-integrals-and-line-integrals-in-the-plane/part-c-greens-theorem/",
-     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/4.-triple-integrals-and-surface-integrals-in-3-space/part-b-flux-and-the-divergence-theorem/",
-     "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/4.-triple-integrals-and-surface-integrals-in-3-space/part-c-line-integrals-and-stokes-theorem/"
-    ],
-    "why": "节点“现有英文学习资源”就是这门课：MIT 官方开放课程按 Part → Session 给出每一讲的具体主题，线积分、通量与曲面积分、散度定理、旋度与斯托克斯定理正好集中在 Unit 3 Part B/C 与 Unit 4 Part B/C 四处，导览图和“去哪学”是同一份材料。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
+    "src": "B",
     "ref": "Part B",
     "title": "Vector Fields and Line Integrals",
     "zh": "向量场与线积分",
@@ -34865,10 +34415,11 @@
       "title": "Curl",
       "zh": "旋度"
      }
-    ]
+    ],
+    "fill": "曲线积分、梯度场与势函数（并入的原 M.1.4.5 主来源 MIT 18.02SC）"
    },
    {
-    "src": "A",
+    "src": "B",
     "ref": "Part C",
     "title": "Green's Theorem",
     "zh": "格林定理",
@@ -34913,10 +34464,11 @@
       "title": "Simply Connected Regions and Conservative",
       "zh": "单连通区域与保守场"
      }
-    ]
+    ],
+    "fill": "Green定理"
    },
    {
-    "src": "A",
+    "src": "B",
     "ref": "Part B",
     "title": "Flux and the Divergence Theorem",
     "zh": "通量与散度定理",
@@ -34961,10 +34513,11 @@
       "title": "Proof of the Divergence Theorem",
       "zh": "散度定理的证明"
      }
-    ]
+    ],
+    "fill": "曲面积分（通量）与 Gauss 定理（散度定理）"
    },
    {
-    "src": "A",
+    "src": "B",
     "ref": "Part C",
     "title": "Line Integrals and Stokes' Theorem",
     "zh": "线积分与斯托克斯定理",
@@ -35009,84 +34562,125 @@
       "title": "Stokes’ Theorem and Surface Independence",
       "zh": "斯托克斯定理与曲面无关性"
      }
-    ]
+    ],
+    "fill": "空间曲线积分、旋度与 Stokes定理"
    }
   ],
   "coverage": [
    {
+    "topic": "二重积分",
+    "refs": [
+     "A:5.1",
+     "A:5.2",
+     "A:5.3"
+    ],
+    "note": "5.1 从体积/Riemann 和给定义与累次积分，5.2 推广到一般区域，5.3 是极坐标下的算法。"
+   },
+   {
+    "topic": "三重积分",
+    "refs": [
+     "A:5.4",
+     "A:5.5"
+    ],
+    "note": "5.4 给定义与一般有界区域上的算法（含交换积分次序），5.5 是柱坐标与球坐标两种常用坐标变换。"
+   },
+   {
+    "topic": "区域分割",
+    "refs": [
+     "A:5.2"
+    ],
+    "note": "“Decomposing Regions”小节讲把一个区域拆成若干 Type I/II 区域再分别积分；5.2 的 General Regions of Integration 先给 Type I/Type II 的判别。"
+   },
+   {
+    "topic": "换元",
+    "refs": [
+     "A:5.7",
+     "A:5.3",
+     "A:5.5"
+    ],
+    "note": "一般换元在 5.7（Planar Transformations → Jacobians → 二重/三重积分的换元）；极坐标、柱坐标、球坐标三个特例分别见 5.3 与 5.5。"
+   },
+   {
+    "topic": "雅可比行列式",
+    "refs": [
+     "A:5.7"
+    ],
+    "note": "Jacobians 小节给定义 ∂(x,y)/∂(u,v)，并用它给出换元公式 dx dy=|∂(x,y)/∂(u,v)|du dv。"
+   },
+   {
     "topic": "曲线积分",
     "refs": [
-     "A:Session 57",
-     "A:Session 58",
-     "A:Session 59",
-     "A:Session 88"
+     "B:Session 57",
+     "B:Session 58",
+     "B:Session 59",
+     "B:Session 88"
     ],
     "note": "平面曲线上的功积分在 Unit 3 Part B（Session 57 定义、58 几何解释、59 例题），空间曲线积分在 Unit 4 Part C 的 Session 88。"
    },
    {
     "topic": "曲面积分",
     "refs": [
-     "A:Session 80",
-     "A:Session 81",
-     "A:Session 82",
-     "A:Session 83"
+     "B:Session 80",
+     "B:Session 81",
+     "B:Session 82",
+     "B:Session 83"
     ],
     "note": "课里以“通过曲面的通量”形式讲曲面积分：Session 80 给 ∫∫ F·n dS 的定义，81–83 讲怎么求 n dS（含 z = f(x, y) 与参数曲面）。标量曲面积分 ∫∫ f dS 没有单列。"
    },
    {
     "topic": "梯度",
     "refs": [
-     "A:Session 62",
-     "A:Session 85",
-     "A:Session 89"
+     "B:Session 62",
+     "B:Session 85",
+     "B:Session 89"
     ],
     "note": "Session 62 讲梯度场与 ∇f，Session 85 把 grad/div/curl 统一成 ∇ 记号，Session 89 在三维里复习梯度场与势函数。"
    },
    {
     "topic": "散度",
     "refs": [
-     "A:Session 69",
-     "A:Session 70",
-     "A:Session 84",
-     "A:Session 85"
+     "B:Session 69",
+     "B:Session 70",
+     "B:Session 84",
+     "B:Session 85"
     ],
     "note": "二维散度随 Green 定理的法向形式引入（69 通量、70 法向形式），三维散度在 Session 84/85。"
    },
    {
     "topic": "旋度",
     "refs": [
-     "A:Session 64",
-     "A:Session 66",
-     "A:Session 90"
+     "B:Session 64",
+     "B:Session 66",
+     "B:Session 90"
     ],
     "note": "Session 64 给平面旋度，Session 66 证明“旋度为零 ⇒ 保守”，Session 90 讲三维旋度。"
    },
    {
     "topic": "Green定理",
     "refs": [
-     "A:#2"
+     "B:#2"
     ],
     "note": "A:#2 = Unit 3 Part C 整块：Session 65 给定理（做功形式）、67 证明、69–71 法向形式与多段边界、68 用它求面积。"
    },
    {
     "topic": "Gauss定理",
     "refs": [
-     "A:#3",
-     "A:Session 86"
+     "B:#3",
+     "B:Session 86"
     ],
     "note": "A:#3 = Unit 4 Part B，Session 84 给散度（Gauss）定理，Session 86 是证明；Session 69/70 的二维版本是它的先导。"
    },
    {
     "topic": "Stokes定理",
     "refs": [
-     "A:#4",
-     "A:Session 91",
-     "A:Session 92"
+     "B:#4",
+     "B:Session 91",
+     "B:Session 92"
     ],
     "note": "A:#4 = Unit 4 Part C：Session 91 给斯托克斯定理、92 证明、93 例题、95 曲面无关性。"
    }
   ],
-  "omitted": "Unit 3 Part A（二重积分）已在 M.1.4.4 里收过，本节点未收；Unit 1、Unit 2（向量、矩阵、偏导、梯度与方向导数）属于更前面的节点，未收。Unit 4 Part B 的 Session 87（Diffusion Equation，扩散方程）是物理应用，未收；Unit 4 Part C 的 Session 96（Summary of Multiple Integration）是总复习，未收。各 Problem Set、Exam、Review、Physics Applications 页面也未收。"
+  "omitted": "5.6（Calculating Centers of Mass and Moments of Inertia，质心与转动惯量）与本节点的“积分计算本身”关系较远，未收；第 1–4 章（参数方程与极坐标、空间向量、向量值函数、多元微分）与第 6–7 章（向量场、二阶微分方程）未收；各节的习题、Key Equations、Key Concepts、Glossary 未收。；Unit 3 Part A（二重积分）已在 M.1.4.4 里收过，本节点未收；Unit 1、Unit 2（向量、矩阵、偏导、梯度与方向导数）属于更前面的节点，未收。Unit 4 Part B 的 Session 87（Diffusion Equation，扩散方程）是物理应用，未收；Unit 4 Part C 的 Session 96（Summary of Multiple Integration）是总复习，未收。各 Problem Set、Exam、Review、Physics Applications 页面也未收。"
  },
  "M.1.5": {
   "sources": [
@@ -40231,443 +39825,6 @@
    }
   ],
   "omitted": "A（Stein）的章末 Exercises 小节、Preface、Answers and Hints、References、Index 未收（习题与附录类）。B（18.781）的 SES 1–8、10–12（整除与 gcd、欧几里得算法、同余、Fermat/Euler/Wilson、中国剩余定理、RSA、原根、二次剩余与二次互反）与 SES 16、19–22（线性递推、生成函数续与二平方和、连分数 I–II）已由 A 的第 1、2、4、5 章覆盖，SES 9、18 是期中考试，均未收。"
- },
- "M.3.6": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "book",
-    "title": "Ideals, Varieties, and Algorithms: An Introduction to Computational Algebraic Geometry and Commutative Algebra, 4th Edition",
-    "by": "David A. Cox, John Little, Donal O’Shea",
-    "year": 2015,
-    "url": "https://www.idealsvarietiesalgorithms.org/",
-    "toc_urls": [
-     "https://link.springer.com/book/10.1007/978-3-319-16721-3",
-     "https://link.springer.com/content/pdf/bfm%3A978-3-319-16721-3%2F1.pdf"
-    ],
-    "why": "多项式理想与代数簇的标准教材（Springer Undergraduate Texts in Mathematics），出版社免费提供的前置页 PDF 里有完整目录（章 → 节，节按 §1、§2 编号），前五章正好是“多项式理想 ↔ 代数簇”这条线：理想、Gröbner 基、消元、代数–几何词典、坐标环与 Noether 正规化。"
-   },
-   {
-    "key": "B",
-    "kind": "course",
-    "title": "Algebraic Geometry (18.725)",
-    "by": "Roman Bezrukavnikov — MIT OpenCourseWare",
-    "year": 2015,
-    "url": "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/",
-    "toc_urls": [
-     "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/lecture-notes/",
-     "https://ocw.mit.edu/courses/18-725-algebraic-geometry-fall-2015/pages/calendar/"
-    ],
-    "why": "补 A 没有的研究生层次内容：射影簇与 Noether 正规化、Grassmann 簇、有限/仿射态射、乘积与分离性、完备簇、Chow 引理与 blown-up、层与 P1 上的可逆层、Bezout 定理。"
-   },
-   {
-    "key": "C",
-    "kind": "course",
-    "title": "Introduction to Representation Theory (18.712)",
-    "by": "Pavel Etingof — MIT OpenCourseWare",
-    "year": 2010,
-    "url": "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/",
-    "toc_urls": [
-     "https://ocw.mit.edu/courses/18-712-introduction-to-representation-theory-fall-2010/pages/lecture-notes/"
-    ],
-    "why": "补“群表示”这条线：表示论基本对象（代数、理想、由生成元与关系定义的代数）、有限群表示的进一步结果（诱导表示、Mackey 公式、Frobenius 互反律、Schur–Weyl 对偶）与箭图表示（根系、Gabriel 定理）。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "1",
-    "title": "Geometry, Algebra, and Algorithms",
-    "zh": "几何、代数与算法",
-    "items": [
-     {
-      "ref": "§1",
-      "title": "Polynomials and Affine Space",
-      "zh": "多项式与仿射空间"
-     },
-     {
-      "ref": "§2",
-      "title": "Affine Varieties",
-      "zh": "仿射簇"
-     },
-     {
-      "ref": "§3",
-      "title": "Parametrizations of Affine Varieties",
-      "zh": "仿射簇的参数化"
-     },
-     {
-      "ref": "§4",
-      "title": "Ideals",
-      "zh": "理想"
-     },
-     {
-      "ref": "§5",
-      "title": "Polynomials of One Variable",
-      "zh": "一元多项式"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "2",
-    "title": "Gröbner Bases",
-    "zh": "Gröbner 基",
-    "items": [
-     {
-      "ref": "§1",
-      "title": "Introduction",
-      "zh": "引言"
-     },
-     {
-      "ref": "§2",
-      "title": "Orderings on the Monomials in k[x1,..., xn]",
-      "zh": "k[x1,…,xn] 中单项式的序"
-     },
-     {
-      "ref": "§3",
-      "title": "A Division Algorithm in k[x1,..., xn]",
-      "zh": "k[x1,…,xn] 中的除法算法"
-     },
-     {
-      "ref": "§4",
-      "title": "Monomial Ideals and Dickson’s Lemma",
-      "zh": "单项式理想与 Dickson 引理"
-     },
-     {
-      "ref": "§5",
-      "title": "The Hilbert Basis Theorem and Gröbner Bases",
-      "zh": "Hilbert 基定理与 Gröbner 基"
-     },
-     {
-      "ref": "§6",
-      "title": "Properties of Gröbner Bases",
-      "zh": "Gröbner 基的性质"
-     },
-     {
-      "ref": "§7",
-      "title": "Buchberger’s Algorithm",
-      "zh": "Buchberger 算法"
-     },
-     {
-      "ref": "§8",
-      "title": "First Applications of Gröbner Bases",
-      "zh": "Gröbner 基的初步应用"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "3",
-    "title": "Elimination Theory",
-    "zh": "消元理论",
-    "items": [
-     {
-      "ref": "§1",
-      "title": "The Elimination and Extension Theorems",
-      "zh": "消元定理与扩展定理"
-     },
-     {
-      "ref": "§2",
-      "title": "The Geometry of Elimination",
-      "zh": "消元的几何"
-     },
-     {
-      "ref": "§3",
-      "title": "Implicitization",
-      "zh": "隐式化"
-     },
-     {
-      "ref": "§4",
-      "title": "Singular Points and Envelopes",
-      "zh": "奇点与包络"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "4",
-    "title": "The Algebra–Geometry Dictionary",
-    "zh": "代数–几何词典",
-    "items": [
-     {
-      "ref": "§1",
-      "title": "Hilbert’s Nullstellensatz",
-      "zh": "Hilbert 零点定理"
-     },
-     {
-      "ref": "§2",
-      "title": "Radical Ideals and the Ideal–Variety Correspondence",
-      "zh": "根理想与理想–簇对应"
-     },
-     {
-      "ref": "§3",
-      "title": "Sums, Products, and Intersections of Ideals",
-      "zh": "理想的交、和与积"
-     },
-     {
-      "ref": "§4",
-      "title": "Zariski Closures, Ideal Quotients, and Saturations",
-      "zh": "Zariski 闭包、理想商与饱和"
-     },
-     {
-      "ref": "§5",
-      "title": "Irreducible Varieties and Prime Ideals",
-      "zh": "不可约簇与素理想"
-     },
-     {
-      "ref": "§6",
-      "title": "Decomposition of a Variety into Irreducibles",
-      "zh": "簇分解为不可约分支"
-     },
-     {
-      "ref": "§7",
-      "title": "Proof of the Closure Theorem",
-      "zh": "闭包定理的证明"
-     },
-     {
-      "ref": "§8",
-      "title": "Primary Decomposition of Ideals",
-      "zh": "理想的准素分解"
-     },
-     {
-      "ref": "§9",
-      "title": "Summary",
-      "zh": "小结"
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "5",
-    "title": "Polynomial and Rational Functions on a Variety",
-    "zh": "簇上的多项式函数与有理函数",
-    "items": [
-     {
-      "ref": "§1",
-      "title": "Polynomial Mappings",
-      "zh": "多项式映射"
-     },
-     {
-      "ref": "§2",
-      "title": "Quotients of Polynomial Rings",
-      "zh": "多项式环的商"
-     },
-     {
-      "ref": "§3",
-      "title": "Algorithmic Computations in k[x1,..., xn]/I",
-      "zh": "k[x1,…,xn]/I 中的算法计算"
-     },
-     {
-      "ref": "§4",
-      "title": "The Coordinate Ring of an Affine Variety",
-      "zh": "仿射簇的坐标环"
-     },
-     {
-      "ref": "§5",
-      "title": "Rational Functions on a Variety",
-      "zh": "簇上的有理函数"
-     },
-     {
-      "ref": "§6",
-      "title": "Relative Finiteness and Noether Normalization",
-      "zh": "相对有限性与 Noether 正规化"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Topics",
-    "zh": "各讲主题",
-    "fill": "代数簇与结构方法（研究生讲法）：射影簇与 Noether 正规化、Grassmann 簇与有限/仿射态射、函数域与优势映射、乘积与分离性、完备簇、Chow 引理与 blow-up、层与 P1 上的可逆层、Bezout 定理，这些 A（Cox 前五章）没有",
-    "items": [
-     {
-      "ref": "3",
-      "title": "Projective Varieties, Noether Normalization",
-      "zh": "射影簇与 Noether 正规化"
-     },
-     {
-      "ref": "4",
-      "title": "Grassmannians, Finite and Affine Morphisms",
-      "zh": "Grassmann 簇、有限态射与仿射态射"
-     },
-     {
-      "ref": "5",
-      "title": "More on Finite Morphisms and Irreducible Varieties",
-      "zh": "有限态射与不可约簇续"
-     },
-     {
-      "ref": "6",
-      "title": "Function Field, Dominant Maps",
-      "zh": "函数域、优势映射"
-     },
-     {
-      "ref": "7",
-      "title": "Product of Varieties, Separatedness",
-      "zh": "簇的乘积、分离性"
-     },
-     {
-      "ref": "8",
-      "title": "Product Topology, Complete Varieties",
-      "zh": "乘积拓扑、完备簇"
-     },
-     {
-      "ref": "9",
-      "title": "Chow’s Lemma, Blowups",
-      "zh": "Chow 引理、blow-up"
-     },
-     {
-      "ref": "10",
-      "title": "Sheaves, Invertible Sheaves on P1",
-      "zh": "层、P1 上的可逆层"
-     },
-     {
-      "ref": "16",
-      "title": "Bezout’s Theorem",
-      "zh": "Bezout 定理"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "Chapter 1",
-    "title": "Basic Notions of Representation Theory",
-    "zh": "表示论的基本概念",
-    "fill": "群表示（表示的定义与代数框架）",
-    "items": [
-     {
-      "ref": "1.1",
-      "title": "What is representation theory?",
-      "zh": "什么是表示论"
-     },
-     {
-      "ref": "1.2",
-      "title": "Algebras",
-      "zh": "代数"
-     },
-     {
-      "ref": "1.3",
-      "title": "Representations",
-      "zh": "表示"
-     },
-     {
-      "ref": "1.4",
-      "title": "Ideals",
-      "zh": "理想"
-     },
-     {
-      "ref": "1.5",
-      "title": "Quotients",
-      "zh": "商"
-     },
-     {
-      "ref": "1.6",
-      "title": "Algebras defined by generators and relations",
-      "zh": "由生成元与关系定义的代数"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "Chapter 4",
-    "title": "Representations of Finite Groups: Further Results",
-    "zh": "有限群表示的进一步结果",
-    "fill": "群表示（诱导表示与有限群表示的核心定理）",
-    "items": [
-     {
-      "ref": "4.8",
-      "title": "Induced representations",
-      "zh": "诱导表示"
-     },
-     {
-      "ref": "4.9",
-      "title": "The Mackey formula",
-      "zh": "Mackey 公式"
-     },
-     {
-      "ref": "4.10",
-      "title": "Frobenius reciprocity",
-      "zh": "Frobenius 互反律"
-     },
-     {
-      "ref": "4.18",
-      "title": "Schur-Weyl duality",
-      "zh": "Schur–Weyl 对偶"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "Chapter 5",
-    "title": "Quiver Representations",
-    "zh": "箭图表示",
-    "fill": "结构方法（用箭图与根系分类表示，Gabriel 定理）",
-    "items": [
-     {
-      "ref": "5.2",
-      "title": "Indecomposable representations of the quivers A1,A2,A3",
-      "zh": "箭图 A1、A2、A3 的不可分解表示"
-     },
-     {
-      "ref": "5.4",
-      "title": "Roots",
-      "zh": "根"
-     },
-     {
-      "ref": "5.5",
-      "title": "Gabriel’s theorem",
-      "zh": "Gabriel 定理"
-     }
-    ]
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "多项式理想",
-    "refs": [
-     "A:1",
-     "A:2",
-     "A:3",
-     "A:4"
-    ],
-    "note": "A 第 1 章 §4 引出理想，第 2 章把多项式理想做成可算对象（单项式序、除法算法、Hilbert 基定理、Buchberger 算法），第 3 章用消元从理想里读出簇的几何，第 4 章是理想 ↔ 簇的对应字典（零点定理、根理想、准素分解）。"
-   },
-   {
-    "topic": "代数簇",
-    "refs": [
-     "A:1",
-     "A:4",
-     "A:5",
-     "B:3",
-     "B:5",
-     "B:7",
-     "B:8",
-     "B:9",
-     "B:16"
-    ],
-    "note": "A:1 仿射簇与参数化，A:4 不可约簇与簇的分解，A:5 坐标环与有理函数；B 补研究生层次：射影簇与 Noether 正规化（B:3）、有限态射与不可约性（B:5）、乘积与分离性（B:7）、完备簇（B:8）、Chow 引理与 blow-up（B:9）、Bezout 定理（B:16）。"
-   },
-   {
-    "topic": "群表示",
-    "refs": [
-     "C:Chapter 1",
-     "C:Chapter 4"
-    ],
-    "note": "C 的 Chapter 1 给表示论框架（代数、表示、理想、商、由生成元与关系定义的代数），Chapter 4 给有限群表示的进一步结果（诱导表示、Mackey 公式、Frobenius 互反律、Schur–Weyl 对偶）。"
-   },
-   {
-    "topic": "结构方法",
-    "refs": [
-     "A:5",
-     "B:4",
-     "B:10",
-     "C:Chapter 4",
-     "C:Chapter 5"
-    ],
-    "note": "A 第 5 章 §6 的相对有限性与 Noether 正规化是“用环的结构研究簇”的入口；B:4 的有限/仿射态射、B:10 的层与可逆层是几何侧的结构方法；C:Chapter 4–5 是把群/代数的结构（子群、对称群、箭图、根系）翻成表示论结论的标准技术。"
-   }
-  ],
-  "omitted": "A（Cox–Little–O’Shea）未收第 6 章（Robotics and Automatic Geometric Theorem Proving，机器人学与几何定理机器证明）、第 7 章（Invariant Theory of Finite Groups，有限群不变量理论）、第 8 章（Projective Algebraic Geometry，射影代数几何，本节点的射影簇走 B）、第 9 章（The Dimension of a Variety，簇的维数）、第 10 章（computing Gröbner bases 的新进展），以及 Notation、Appendix A–D（含习题答案与软件附录）。B（18.725）的 Lecture 1–2（Zariski 拓扑与仿射簇，已由 A 第 1 章覆盖）、Lecture 11–15（层函子、拟凝聚/凝聚层、可逆层、射影空间上的凝聚层、除子与 Picard 群）属层与上同调专题、Lecture 17–23（Abel–Jacobi 映射与椭圆曲线、Kähler 微分、光滑性与典范丛、Grassmann 簇的切丛、Riemann–Hurwitz、Bertini、层上同调）属曲线与上同调专题，与节点简介（多项式理想、代数簇、群表示与结构方法）不直接对应，均未收。C（18.712）的 Chapter 2（Character Theory of Finite Groups）、Chapter 3（有限群表示基础，已由 M.3.4 覆盖）、Chapter 6（Categories）、Chapter 7（Structure of Finite-Dimensional Algebras）未收。"
  },
  "M.4.1": {
   "sources": [
@@ -52534,6 +51691,19 @@
      "https://www.cecm.sfu.ca/~mmonagan/teaching/MACM401/"
     ],
     "why": "节点“现有英文学习资源”就是这门课；作者主页把 26 讲按 6 个主题分组（整数与多项式算法、模算法与 FFT、p 进与 Hensel 提升、多项式分解、符号积分）逐讲列出讲题，正好是节点的“精确运算、多项式算法与计算机代数系统”，且每讲都配视频与 Maple 工作表。"
+   },
+   {
+    "key": "B",
+    "kind": "book",
+    "title": "Ideals, Varieties, and Algorithms: An Introduction to Computational Algebraic Geometry and Commutative Algebra, 4th Edition",
+    "by": "David A. Cox, John Little, Donal O’Shea",
+    "year": 2015,
+    "url": "https://www.idealsvarietiesalgorithms.org/",
+    "toc_urls": [
+     "https://link.springer.com/book/10.1007/978-3-319-16721-3",
+     "https://link.springer.com/content/pdf/bfm%3A978-3-319-16721-3%2F1.pdf"
+    ],
+    "why": "补 Gröbner 基与消元：多项式理想与代数簇的标准教材（Springer Undergraduate Texts in Mathematics），出版社免费提供的前置页 PDF 有完整目录；第 2 章 Gröbner 基、第 3 章消元理论是计算机代数里求解多元多项式方程组的标准算法。"
    }
   ],
   "outline": [
@@ -52709,6 +51879,84 @@
       "zh": "Risch 算法：指数扩域"
      }
     ]
+   },
+   {
+    "src": "B",
+    "ref": "2",
+    "title": "Gröbner Bases",
+    "zh": "Gröbner 基",
+    "items": [
+     {
+      "ref": "§1",
+      "title": "Introduction",
+      "zh": "引言"
+     },
+     {
+      "ref": "§2",
+      "title": "Orderings on the Monomials in k[x1,..., xn]",
+      "zh": "k[x1,…,xn] 中单项式的序"
+     },
+     {
+      "ref": "§3",
+      "title": "A Division Algorithm in k[x1,..., xn]",
+      "zh": "k[x1,…,xn] 中的除法算法"
+     },
+     {
+      "ref": "§4",
+      "title": "Monomial Ideals and Dickson’s Lemma",
+      "zh": "单项式理想与 Dickson 引理"
+     },
+     {
+      "ref": "§5",
+      "title": "The Hilbert Basis Theorem and Gröbner Bases",
+      "zh": "Hilbert 基定理与 Gröbner 基"
+     },
+     {
+      "ref": "§6",
+      "title": "Properties of Gröbner Bases",
+      "zh": "Gröbner 基的性质"
+     },
+     {
+      "ref": "§7",
+      "title": "Buchberger’s Algorithm",
+      "zh": "Buchberger 算法"
+     },
+     {
+      "ref": "§8",
+      "title": "First Applications of Gröbner Bases",
+      "zh": "Gröbner 基的初步应用"
+     }
+    ],
+    "fill": "Gröbner 基与消元"
+   },
+   {
+    "src": "B",
+    "ref": "3",
+    "title": "Elimination Theory",
+    "zh": "消元理论",
+    "items": [
+     {
+      "ref": "§1",
+      "title": "The Elimination and Extension Theorems",
+      "zh": "消元定理与扩展定理"
+     },
+     {
+      "ref": "§2",
+      "title": "The Geometry of Elimination",
+      "zh": "消元的几何"
+     },
+     {
+      "ref": "§3",
+      "title": "Implicitization",
+      "zh": "隐式化"
+     },
+     {
+      "ref": "§4",
+      "title": "Singular Points and Envelopes",
+      "zh": "奇点与包络"
+     }
+    ],
+    "fill": "Gröbner 基与消元"
    }
   ],
   "coverage": [
@@ -52744,6 +51992,14 @@
      "A:Lecture 19"
     ],
     "note": "第 2 讲的 Maple 入门与第 19 讲的 Maple 中公式表示/求导；整门课的讲义、习题与 worksheets 都用 Maple，课程首页即以 Maple worksheets 组织。"
+   },
+   {
+    "topic": "Gröbner 基与消元",
+    "refs": [
+     "B:2",
+     "B:3"
+    ],
+    "note": "MACM 401 的讲题里没有 Gröbner 基；由 Cox–Little–O’Shea 第 2 章 Gröbner 基、第 3 章消元理论补（从删除的 M.3.6 移来）。"
    }
   ],
   "omitted": "只未收第 26 讲（Final exam info + review，考试信息与复习）。其余 25 讲全部收入；符号积分一组虽然不是节点简介的四条知识点本身，但它是计算机代数系统的标准应用（Risch 算法），故保留。"
@@ -53144,6 +52400,52 @@
      "https://java-programming.mooc.fi/part-6/"
     ],
     "why": "补“组合”：CS 2110 与 Java 教程都只讲继承这条关系，这个部分专门讲“对象内部持有其他对象”，即 has-a 的对象组合。"
+   },
+   {
+    "key": "D",
+    "kind": "course",
+    "title": "Java Programming MOOC",
+    "by": "University of Helsinki (Agile Education Research)",
+    "url": "https://java-programming.mooc.fi/",
+    "toc_urls": [
+     "https://java-programming.mooc.fi/",
+     "https://java-programming.mooc.fi/part-1/",
+     "https://java-programming.mooc.fi/part-2/",
+     "https://java-programming.mooc.fi/part-3/",
+     "https://java-programming.mooc.fi/part-4/",
+     "https://java-programming.mooc.fi/part-5/",
+     "https://java-programming.mooc.fi/part-6/",
+     "https://java-programming.mooc.fi/part-8/",
+     "https://java-programming.mooc.fi/part-9/",
+     "https://java-programming.mooc.fi/part-10/",
+     "https://java-programming.mooc.fi/part-11/",
+     "https://java-programming.mooc.fi/part-12/"
+    ],
+    "why": "节点现有英文资源就是这门课；14 个 part 每个都列出本章主题（类型与变量、类与对象、集合、继承与接口、异常、文件、类型参数），与节点简介逐条对应，且与赫尔辛基大学 CS1/高级编程课的正式内容同源。"
+   },
+   {
+    "key": "E",
+    "kind": "docs",
+    "title": "Lesson: Concurrency (The Java Tutorials)",
+    "by": "Oracle",
+    "year": 2024,
+    "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/",
+    "toc_urls": [
+     "https://docs.oracle.com/javase/tutorial/essential/concurrency/"
+    ],
+    "why": "补“并发基础”：MOOC 前 12 个 part 只到 GUI 与类型参数，不讲线程；Java 官方教程的并发一课按“进程与线程 → 同步 → 活跃性 → 高层并发对象”组织，是 Java 并发的最小完整目录。"
+   },
+   {
+    "key": "F",
+    "kind": "docs",
+    "title": "Introduction to the Build Lifecycle",
+    "by": "Apache Maven project",
+    "year": 2026,
+    "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html",
+    "toc_urls": [
+     "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"
+    ],
+    "why": "补“构建工具”：MOOC 全程用 IDE 的 TMC 插件交作业，不讲构建工具；Maven 官方这份指南讲清生命周期、阶段、插件目标与绑定，正是 Maven/Gradle 这类工具的共同心智模型。"
    }
   ],
   "outline": [
@@ -53267,6 +52569,419 @@
     "zh": "列表中的对象与作为对象组成部分的列表",
     "fill": "组合：一个对象内部持有其他对象（has-a），与继承的 is-a 关系对照",
     "items": []
+   },
+   {
+    "src": "D",
+    "ref": "",
+    "title": "Java Programming I",
+    "zh": "Java 编程 I",
+    "items": [
+     {
+      "ref": "Part 1",
+      "title": "Part 1",
+      "zh": "第 1 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Getting started with programming",
+        "zh": "开始编程"
+       },
+       {
+        "ref": "2",
+        "title": "Printing",
+        "zh": "打印输出"
+       },
+       {
+        "ref": "3",
+        "title": "Reading input",
+        "zh": "读取输入"
+       },
+       {
+        "ref": "4",
+        "title": "Variables",
+        "zh": "变量"
+       },
+       {
+        "ref": "5",
+        "title": "Calculating with numbers",
+        "zh": "数值计算"
+       },
+       {
+        "ref": "6",
+        "title": "Conditional statements and conditional operation",
+        "zh": "条件语句与条件运算"
+       }
+      ]
+     },
+     {
+      "ref": "Part 2",
+      "title": "Part 2",
+      "zh": "第 2 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Recurring problems and patterns to solve them",
+        "zh": "重复出现的问题及其解法套路"
+       },
+       {
+        "ref": "2",
+        "title": "Repeating functionality",
+        "zh": "重复执行的功能"
+       },
+       {
+        "ref": "3",
+        "title": "More loops",
+        "zh": "更多循环"
+       },
+       {
+        "ref": "4",
+        "title": "Methods and dividing the program into smaller parts",
+        "zh": "方法与把程序拆成小块"
+       }
+      ]
+     },
+     {
+      "ref": "Part 3",
+      "title": "Part 3",
+      "zh": "第 3 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Discovering errors",
+        "zh": "发现错误"
+       },
+       {
+        "ref": "2",
+        "title": "Lists",
+        "zh": "列表"
+       },
+       {
+        "ref": "3",
+        "title": "Arrays",
+        "zh": "数组"
+       },
+       {
+        "ref": "4",
+        "title": "Using strings",
+        "zh": "使用字符串"
+       }
+      ]
+     },
+     {
+      "ref": "Part 4",
+      "title": "Part 4",
+      "zh": "第 4 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Introduction to object-oriented programming",
+        "zh": "面向对象编程入门"
+       },
+       {
+        "ref": "2",
+        "title": "Objects in a list",
+        "zh": "列表中的对象"
+       },
+       {
+        "ref": "3",
+        "title": "Files and reading data",
+        "zh": "文件与读取数据"
+       }
+      ]
+     },
+     {
+      "ref": "Part 5",
+      "title": "Part 5",
+      "zh": "第 5 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Learning object-oriented programming",
+        "zh": "学习面向对象编程"
+       },
+       {
+        "ref": "2",
+        "title": "Removing repetitive code (overloading methods and constructors)",
+        "zh": "消除重复代码（重载方法与构造器）"
+       },
+       {
+        "ref": "3",
+        "title": "Primitive and reference variables",
+        "zh": "基本类型变量与引用变量"
+       },
+       {
+        "ref": "4",
+        "title": "Objects and references",
+        "zh": "对象与引用"
+       }
+      ]
+     },
+     {
+      "ref": "Part 6",
+      "title": "Part 6",
+      "zh": "第 6 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Objects on a list and a list as part of an object",
+        "zh": "列表中的对象与作为对象组成部分的列表"
+       },
+       {
+        "ref": "2",
+        "title": "Separating the user interface from program logic",
+        "zh": "把用户界面与程序逻辑分开"
+       },
+       {
+        "ref": "3",
+        "title": "Introduction to testing",
+        "zh": "测试入门"
+       },
+       {
+        "ref": "4",
+        "title": "Complex programs",
+        "zh": "更复杂的程序"
+       }
+      ]
+     }
+    ],
+    "fill": "用 Java 实践类型、集合、异常等（并入的原 P.2.1 主来源 Helsinki Java MOOC；目录只按 Part 编号，没有主题标题）"
+   },
+   {
+    "src": "D",
+    "ref": "",
+    "title": "Java Programming II",
+    "zh": "Java 编程 II",
+    "items": [
+     {
+      "ref": "Part 8",
+      "title": "Part 8",
+      "zh": "第 8 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Short recap",
+        "zh": "简要回顾"
+       },
+       {
+        "ref": "2",
+        "title": "Hash Map",
+        "zh": "哈希表"
+       },
+       {
+        "ref": "3",
+        "title": "Similarity of objects",
+        "zh": "对象的相似性"
+       },
+       {
+        "ref": "4",
+        "title": "Grouping data using hash maps",
+        "zh": "用哈希表对数据分组"
+       },
+       {
+        "ref": "5",
+        "title": "Fast data fetching and grouping information",
+        "zh": "快速取数与分组信息"
+       }
+      ]
+     },
+     {
+      "ref": "Part 9",
+      "title": "Part 9",
+      "zh": "第 9 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Class inheritance",
+        "zh": "类继承"
+       },
+       {
+        "ref": "2",
+        "title": "Interfaces",
+        "zh": "接口"
+       },
+       {
+        "ref": "3",
+        "title": "Object polymorphism",
+        "zh": "对象多态"
+       }
+      ]
+     },
+     {
+      "ref": "Part 10",
+      "title": "Part 10",
+      "zh": "第 10 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Handling collections as streams",
+        "zh": "以流的方式处理集合"
+       },
+       {
+        "ref": "2",
+        "title": "The Comparable Interface",
+        "zh": "Comparable 接口"
+       },
+       {
+        "ref": "3",
+        "title": "Other useful techniques",
+        "zh": "其他实用技巧"
+       }
+      ]
+     },
+     {
+      "ref": "Part 11",
+      "title": "Part 11",
+      "zh": "第 11 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Class diagrams",
+        "zh": "类图"
+       },
+       {
+        "ref": "2",
+        "title": "Packages",
+        "zh": "包"
+       },
+       {
+        "ref": "3",
+        "title": "Exceptions",
+        "zh": "异常"
+       },
+       {
+        "ref": "4",
+        "title": "Processing files",
+        "zh": "处理文件"
+       }
+      ]
+     },
+     {
+      "ref": "Part 12",
+      "title": "Part 12",
+      "zh": "第 12 部分",
+      "items": [
+       {
+        "ref": "1",
+        "title": "Type parameters",
+        "zh": "类型参数"
+       },
+       {
+        "ref": "2",
+        "title": "ArrayList and hash table",
+        "zh": "ArrayList 与哈希表"
+       },
+       {
+        "ref": "3",
+        "title": "Randomness",
+        "zh": "随机性"
+       },
+       {
+        "ref": "4",
+        "title": "Multidimensional data",
+        "zh": "多维数据"
+       }
+      ]
+     }
+    ],
+    "fill": "用 Java 实践类型、集合、异常等（同上，第二门课）"
+   },
+   {
+    "src": "E",
+    "ref": "",
+    "title": "Concurrency",
+    "zh": "并发",
+    "fill": "并发基础：进程与线程、线程的创建/睡眠/中断/汇合、同步与线程干扰、活跃性、线程池等高层并发对象",
+    "items": [
+     {
+      "ref": "",
+      "title": "Processes and Threads",
+      "zh": "进程与线程"
+     },
+     {
+      "ref": "",
+      "title": "Defining and Starting a Thread",
+      "zh": "定义并启动线程"
+     },
+     {
+      "ref": "",
+      "title": "Interrupts",
+      "zh": "中断"
+     },
+     {
+      "ref": "",
+      "title": "Joins",
+      "zh": "线程汇合"
+     },
+     {
+      "ref": "",
+      "title": "Synchronization",
+      "zh": "同步"
+     },
+     {
+      "ref": "",
+      "title": "Thread Interference",
+      "zh": "线程干扰"
+     },
+     {
+      "ref": "",
+      "title": "Synchronized Methods",
+      "zh": "同步方法"
+     },
+     {
+      "ref": "",
+      "title": "Liveness",
+      "zh": "活跃性"
+     },
+     {
+      "ref": "",
+      "title": "Deadlock",
+      "zh": "死锁"
+     },
+     {
+      "ref": "",
+      "title": "High Level Concurrency Objects",
+      "zh": "高层并发对象"
+     },
+     {
+      "ref": "",
+      "title": "Thread Pools",
+      "zh": "线程池"
+     }
+    ]
+   },
+   {
+    "src": "F",
+    "ref": "",
+    "title": "Introduction to the Build Lifecycle",
+    "zh": "构建生命周期导论",
+    "fill": "构建工具：构建生命周期、阶段、插件目标与阶段绑定，理解 mvn/gradle 命令如何驱动编译、测试、打包、部署",
+    "items": [
+     {
+      "ref": "",
+      "title": "Build Lifecycle Basics",
+      "zh": "构建生命周期基础"
+     },
+     {
+      "ref": "",
+      "title": "A Build Lifecycle is Made Up of Phases",
+      "zh": "生命周期由阶段组成"
+     },
+     {
+      "ref": "",
+      "title": "Usual Command Line Calls",
+      "zh": "常见命令行调用"
+     },
+     {
+      "ref": "",
+      "title": "A Build Phase is Made Up of Plugin Goals",
+      "zh": "构建阶段由插件目标组成"
+     },
+     {
+      "ref": "",
+      "title": "Built-in Lifecycle Bindings",
+      "zh": "内置的生命周期绑定"
+     }
+    ]
    }
   ],
   "coverage": [
@@ -53316,9 +53031,62 @@
      "B:#1",
      "A:2"
     ]
+   },
+   {
+    "topic": "类型",
+    "refs": [
+     "D:Part 1",
+     "D:Part 5",
+     "D:Part 12"
+    ]
+   },
+   {
+    "topic": "类与接口",
+    "refs": [
+     "D:Part 4",
+     "D:Part 5",
+     "D:Part 9",
+     "D:Part 11"
+    ]
+   },
+   {
+    "topic": "集合",
+    "refs": [
+     "D:Part 3",
+     "D:Part 8",
+     "D:Part 10",
+     "D:Part 12"
+    ]
+   },
+   {
+    "topic": "异常",
+    "refs": [
+     "D:Part 11",
+     "D:Part 3"
+    ]
+   },
+   {
+    "topic": "I/O",
+    "refs": [
+     "D:Part 1",
+     "D:Part 4",
+     "D:Part 11"
+    ]
+   },
+   {
+    "topic": "并发基础",
+    "refs": [
+     "E:#1"
+    ]
+   },
+   {
+    "topic": "构建工具",
+    "refs": [
+     "F:#1"
+    ]
    }
   ],
-  "omitted": "CS 2110 课表里与面向对象无关的讲次没收：第 1 讲（课程概览）、第 4 讲（规格说明与测试）、第 7 讲（异常与 I/O，属节点 P.2.1 的 Java 内容）、第 9 讲起的数据结构与算法（链表、集合、树、排序、哈希、图、并发、GUI）。Java 教程只取了“面向对象编程概念”一课，同一 trail 里的 Language Basics、Numbers and Strings 等未收。"
+  "omitted": "CS 2110 课表里与面向对象无关的讲次没收：第 1 讲（课程概览）、第 4 讲（规格说明与测试）、第 7 讲（异常与 I/O，属节点 P.2.1 的 Java 内容）、第 9 讲起的数据结构与算法（链表、集合、树、排序、哈希、图、并发、GUI）。Java 教程只取了“面向对象编程概念”一课，同一 trail 里的 Language Basics、Numbers and Strings 等未收。；MOOC 里没收：Part 7（Programming paradigms、Algorithms、Larger programming exercises，属算法与范式节点）、Part 13 与 Part 14（Swing/JavaFX 图形界面），以及各部分里的 End questionnaire / Summary / Conclusion 等行政性小节。Java 教程只取了并发一课，同一 trail 的 “The try-with-resources Statement”“Basic I/O” 等未收；Maven 只取了生命周期这一篇，POM、依赖机制、插件配置等未收。"
  },
  "P.1.3": {
   "sources": [
@@ -54138,525 +53906,6 @@
    }
   ],
   "omitted": "6.102 未收的 materials：03 Code Review、05 Designing Specifications、09 Functional Programming（函数式属节点 P.1.3）、10 Equality、12 Grammars & Parsing、17 Callbacks & Graphical User Interfaces、19 Little Languages，以及 tools（Git、TypeScript 基础）、problem sets 与期末项目；reading 的 Praxis 练习也没收。Rust 书只取第 4 章（其余章节属语言入门/进阶细节）；gprof 手册未收命令行选项章（第 4 章）、FAQ 与附录。"
- },
- "P.2.1": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "course",
-    "title": "Java Programming MOOC",
-    "by": "University of Helsinki (Agile Education Research)",
-    "url": "https://java-programming.mooc.fi/",
-    "toc_urls": [
-     "https://java-programming.mooc.fi/",
-     "https://java-programming.mooc.fi/part-1/",
-     "https://java-programming.mooc.fi/part-2/",
-     "https://java-programming.mooc.fi/part-3/",
-     "https://java-programming.mooc.fi/part-4/",
-     "https://java-programming.mooc.fi/part-5/",
-     "https://java-programming.mooc.fi/part-6/",
-     "https://java-programming.mooc.fi/part-8/",
-     "https://java-programming.mooc.fi/part-9/",
-     "https://java-programming.mooc.fi/part-10/",
-     "https://java-programming.mooc.fi/part-11/",
-     "https://java-programming.mooc.fi/part-12/"
-    ],
-    "why": "节点现有英文资源就是这门课；14 个 part 每个都列出本章主题（类型与变量、类与对象、集合、继承与接口、异常、文件、类型参数），与节点简介逐条对应，且与赫尔辛基大学 CS1/高级编程课的正式内容同源。"
-   },
-   {
-    "key": "B",
-    "kind": "docs",
-    "title": "Lesson: Concurrency (The Java Tutorials)",
-    "by": "Oracle",
-    "year": 2024,
-    "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/",
-    "toc_urls": [
-     "https://docs.oracle.com/javase/tutorial/essential/concurrency/"
-    ],
-    "why": "补“并发基础”：MOOC 前 12 个 part 只到 GUI 与类型参数，不讲线程；Java 官方教程的并发一课按“进程与线程 → 同步 → 活跃性 → 高层并发对象”组织，是 Java 并发的最小完整目录。"
-   },
-   {
-    "key": "C",
-    "kind": "docs",
-    "title": "Introduction to the Build Lifecycle",
-    "by": "Apache Maven project",
-    "year": 2026,
-    "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html",
-    "toc_urls": [
-     "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html"
-    ],
-    "why": "补“构建工具”：MOOC 全程用 IDE 的 TMC 插件交作业，不讲构建工具；Maven 官方这份指南讲清生命周期、阶段、插件目标与绑定，正是 Maven/Gradle 这类工具的共同心智模型。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Java Programming I",
-    "zh": "Java 编程 I",
-    "items": [
-     {
-      "ref": "Part 1",
-      "title": "Part 1",
-      "zh": "第 1 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Getting started with programming",
-        "zh": "开始编程"
-       },
-       {
-        "ref": "2",
-        "title": "Printing",
-        "zh": "打印输出"
-       },
-       {
-        "ref": "3",
-        "title": "Reading input",
-        "zh": "读取输入"
-       },
-       {
-        "ref": "4",
-        "title": "Variables",
-        "zh": "变量"
-       },
-       {
-        "ref": "5",
-        "title": "Calculating with numbers",
-        "zh": "数值计算"
-       },
-       {
-        "ref": "6",
-        "title": "Conditional statements and conditional operation",
-        "zh": "条件语句与条件运算"
-       }
-      ]
-     },
-     {
-      "ref": "Part 2",
-      "title": "Part 2",
-      "zh": "第 2 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Recurring problems and patterns to solve them",
-        "zh": "重复出现的问题及其解法套路"
-       },
-       {
-        "ref": "2",
-        "title": "Repeating functionality",
-        "zh": "重复执行的功能"
-       },
-       {
-        "ref": "3",
-        "title": "More loops",
-        "zh": "更多循环"
-       },
-       {
-        "ref": "4",
-        "title": "Methods and dividing the program into smaller parts",
-        "zh": "方法与把程序拆成小块"
-       }
-      ]
-     },
-     {
-      "ref": "Part 3",
-      "title": "Part 3",
-      "zh": "第 3 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Discovering errors",
-        "zh": "发现错误"
-       },
-       {
-        "ref": "2",
-        "title": "Lists",
-        "zh": "列表"
-       },
-       {
-        "ref": "3",
-        "title": "Arrays",
-        "zh": "数组"
-       },
-       {
-        "ref": "4",
-        "title": "Using strings",
-        "zh": "使用字符串"
-       }
-      ]
-     },
-     {
-      "ref": "Part 4",
-      "title": "Part 4",
-      "zh": "第 4 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Introduction to object-oriented programming",
-        "zh": "面向对象编程入门"
-       },
-       {
-        "ref": "2",
-        "title": "Objects in a list",
-        "zh": "列表中的对象"
-       },
-       {
-        "ref": "3",
-        "title": "Files and reading data",
-        "zh": "文件与读取数据"
-       }
-      ]
-     },
-     {
-      "ref": "Part 5",
-      "title": "Part 5",
-      "zh": "第 5 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Learning object-oriented programming",
-        "zh": "学习面向对象编程"
-       },
-       {
-        "ref": "2",
-        "title": "Removing repetitive code (overloading methods and constructors)",
-        "zh": "消除重复代码（重载方法与构造器）"
-       },
-       {
-        "ref": "3",
-        "title": "Primitive and reference variables",
-        "zh": "基本类型变量与引用变量"
-       },
-       {
-        "ref": "4",
-        "title": "Objects and references",
-        "zh": "对象与引用"
-       }
-      ]
-     },
-     {
-      "ref": "Part 6",
-      "title": "Part 6",
-      "zh": "第 6 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Objects on a list and a list as part of an object",
-        "zh": "列表中的对象与作为对象组成部分的列表"
-       },
-       {
-        "ref": "2",
-        "title": "Separating the user interface from program logic",
-        "zh": "把用户界面与程序逻辑分开"
-       },
-       {
-        "ref": "3",
-        "title": "Introduction to testing",
-        "zh": "测试入门"
-       },
-       {
-        "ref": "4",
-        "title": "Complex programs",
-        "zh": "更复杂的程序"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "src": "A",
-    "ref": "",
-    "title": "Java Programming II",
-    "zh": "Java 编程 II",
-    "items": [
-     {
-      "ref": "Part 8",
-      "title": "Part 8",
-      "zh": "第 8 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Short recap",
-        "zh": "简要回顾"
-       },
-       {
-        "ref": "2",
-        "title": "Hash Map",
-        "zh": "哈希表"
-       },
-       {
-        "ref": "3",
-        "title": "Similarity of objects",
-        "zh": "对象的相似性"
-       },
-       {
-        "ref": "4",
-        "title": "Grouping data using hash maps",
-        "zh": "用哈希表对数据分组"
-       },
-       {
-        "ref": "5",
-        "title": "Fast data fetching and grouping information",
-        "zh": "快速取数与分组信息"
-       }
-      ]
-     },
-     {
-      "ref": "Part 9",
-      "title": "Part 9",
-      "zh": "第 9 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Class inheritance",
-        "zh": "类继承"
-       },
-       {
-        "ref": "2",
-        "title": "Interfaces",
-        "zh": "接口"
-       },
-       {
-        "ref": "3",
-        "title": "Object polymorphism",
-        "zh": "对象多态"
-       }
-      ]
-     },
-     {
-      "ref": "Part 10",
-      "title": "Part 10",
-      "zh": "第 10 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Handling collections as streams",
-        "zh": "以流的方式处理集合"
-       },
-       {
-        "ref": "2",
-        "title": "The Comparable Interface",
-        "zh": "Comparable 接口"
-       },
-       {
-        "ref": "3",
-        "title": "Other useful techniques",
-        "zh": "其他实用技巧"
-       }
-      ]
-     },
-     {
-      "ref": "Part 11",
-      "title": "Part 11",
-      "zh": "第 11 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Class diagrams",
-        "zh": "类图"
-       },
-       {
-        "ref": "2",
-        "title": "Packages",
-        "zh": "包"
-       },
-       {
-        "ref": "3",
-        "title": "Exceptions",
-        "zh": "异常"
-       },
-       {
-        "ref": "4",
-        "title": "Processing files",
-        "zh": "处理文件"
-       }
-      ]
-     },
-     {
-      "ref": "Part 12",
-      "title": "Part 12",
-      "zh": "第 12 部分",
-      "items": [
-       {
-        "ref": "1",
-        "title": "Type parameters",
-        "zh": "类型参数"
-       },
-       {
-        "ref": "2",
-        "title": "ArrayList and hash table",
-        "zh": "ArrayList 与哈希表"
-       },
-       {
-        "ref": "3",
-        "title": "Randomness",
-        "zh": "随机性"
-       },
-       {
-        "ref": "4",
-        "title": "Multidimensional data",
-        "zh": "多维数据"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "",
-    "title": "Concurrency",
-    "zh": "并发",
-    "fill": "并发基础：进程与线程、线程的创建/睡眠/中断/汇合、同步与线程干扰、活跃性、线程池等高层并发对象",
-    "items": [
-     {
-      "ref": "",
-      "title": "Processes and Threads",
-      "zh": "进程与线程"
-     },
-     {
-      "ref": "",
-      "title": "Defining and Starting a Thread",
-      "zh": "定义并启动线程"
-     },
-     {
-      "ref": "",
-      "title": "Interrupts",
-      "zh": "中断"
-     },
-     {
-      "ref": "",
-      "title": "Joins",
-      "zh": "线程汇合"
-     },
-     {
-      "ref": "",
-      "title": "Synchronization",
-      "zh": "同步"
-     },
-     {
-      "ref": "",
-      "title": "Thread Interference",
-      "zh": "线程干扰"
-     },
-     {
-      "ref": "",
-      "title": "Synchronized Methods",
-      "zh": "同步方法"
-     },
-     {
-      "ref": "",
-      "title": "Liveness",
-      "zh": "活跃性"
-     },
-     {
-      "ref": "",
-      "title": "Deadlock",
-      "zh": "死锁"
-     },
-     {
-      "ref": "",
-      "title": "High Level Concurrency Objects",
-      "zh": "高层并发对象"
-     },
-     {
-      "ref": "",
-      "title": "Thread Pools",
-      "zh": "线程池"
-     }
-    ]
-   },
-   {
-    "src": "C",
-    "ref": "",
-    "title": "Introduction to the Build Lifecycle",
-    "zh": "构建生命周期导论",
-    "fill": "构建工具：构建生命周期、阶段、插件目标与阶段绑定，理解 mvn/gradle 命令如何驱动编译、测试、打包、部署",
-    "items": [
-     {
-      "ref": "",
-      "title": "Build Lifecycle Basics",
-      "zh": "构建生命周期基础"
-     },
-     {
-      "ref": "",
-      "title": "A Build Lifecycle is Made Up of Phases",
-      "zh": "生命周期由阶段组成"
-     },
-     {
-      "ref": "",
-      "title": "Usual Command Line Calls",
-      "zh": "常见命令行调用"
-     },
-     {
-      "ref": "",
-      "title": "A Build Phase is Made Up of Plugin Goals",
-      "zh": "构建阶段由插件目标组成"
-     },
-     {
-      "ref": "",
-      "title": "Built-in Lifecycle Bindings",
-      "zh": "内置的生命周期绑定"
-     }
-    ]
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "类型",
-    "refs": [
-     "A:Part 1",
-     "A:Part 5",
-     "A:Part 12"
-    ]
-   },
-   {
-    "topic": "类与接口",
-    "refs": [
-     "A:Part 4",
-     "A:Part 5",
-     "A:Part 9",
-     "A:Part 11"
-    ]
-   },
-   {
-    "topic": "集合",
-    "refs": [
-     "A:Part 3",
-     "A:Part 8",
-     "A:Part 10",
-     "A:Part 12"
-    ]
-   },
-   {
-    "topic": "异常",
-    "refs": [
-     "A:Part 11",
-     "A:Part 3"
-    ]
-   },
-   {
-    "topic": "I/O",
-    "refs": [
-     "A:Part 1",
-     "A:Part 4",
-     "A:Part 11"
-    ]
-   },
-   {
-    "topic": "并发基础",
-    "refs": [
-     "B:#1"
-    ]
-   },
-   {
-    "topic": "构建工具",
-    "refs": [
-     "C:#1"
-    ]
-   }
-  ],
-  "omitted": "MOOC 里没收：Part 7（Programming paradigms、Algorithms、Larger programming exercises，属算法与范式节点）、Part 13 与 Part 14（Swing/JavaFX 图形界面），以及各部分里的 End questionnaire / Summary / Conclusion 等行政性小节。Java 教程只取了并发一课，同一 trail 的 “The try-with-resources Statement”“Basic I/O” 等未收；Maven 只取了生命周期这一篇，POM、依赖机制、插件配置等未收。"
  },
  "P.2.2": {
   "sources": [
@@ -61584,6 +60833,508 @@
    }
   ],
   "omitted": "A 里没收的页面：What's new、Use cases、Guiding principles、FAQ、Future directions（版本与问答性质）、Supply chain threats（面向新手的概览）、Tracks、Distributing provenance、Assessing build platforms、Producing source、Verifying source、Assessing source control systems、Example controls、Verified Properties、General model、Verification Summary（Source 轨道与其余 attestation 格式，与本节点的五个知识点关系较远）；Build Provenance 页里的 Index of build types、Migrating from 0.2、Change history（各构建类型的索引与版本迁移）以及 Threats 页里每条威胁下的具体子项（(A) Producer 到 (I) Usage 等）留作 D3/D4 深入时再展开。B 里没收的组与页：History、Why reproducible builds?、Making plans、Academic publications（项目史与计划）、Value initialization 与 Rust/JVM/Helm（具体语言生态的差异页）、Specifications 组（SOURCE_DATE_EPOCH 标准与 BUILD_PATH_PREFIX_MAP 仍在 WIP）；这些是可复现构建的工程细节，与本节点五个知识点关系较远。C 里没收的章：PREFACE、THE INNOVATIVE HISTORY OF OWASP CYCLONEDX、INTRODUCTION 的其余小节（Design Philosophy、The Role of SBOM in Software Transparency、High-Level SBOM Use Cases、xBOM Capabilities）、LIFECYCLE PHASES、USE CASES 里的其余场景（Vulnerability Management、CMDB、License Compliance、Outdated Component Analysis、Pedigree、FOCI、Export Compliance、Procurement、Vendor Risk Management、Supply Chain Management、Composition Completeness、“Known Unknowns”、Version Ranges、Formulation Assurance、密码学资产相关的几节）、GENERATING CYCLONEDX BOMS 及其后的实践章节。"
+ },
+ "P.5.5": {
+  "sources": [
+   {
+    "key": "A",
+    "kind": "book",
+    "title": "Game Engine Architecture, 4th edition",
+    "by": "Jason Gregory",
+    "url": "https://www.gameenginebook.com/",
+    "toc_urls": [
+     "https://gameenginebook.com/toc.html"
+    ],
+    "why": "作者官方站上的完整目录（章→节两层，同时列 3rd/4th edition，这里按 4th 抄）；本书是游戏引擎课程的公认标准教材，章节正好覆盖游戏循环、输入、调试工具、渲染、动画、碰撞与刚体、玩法对象与运行时系统、资源与文件系统。"
+   },
+   {
+    "key": "B",
+    "kind": "course",
+    "title": "15-466/666 Computer Game Programming, Fall 2025",
+    "by": "Jim McCann, Carnegie Mellon University",
+    "year": 2025,
+    "url": "http://graphics.cs.cmu.edu/courses/15-466-f25/",
+    "toc_urls": [
+     "http://graphics.cs.cmu.edu/courses/15-466-f25/"
+    ],
+    "why": "补两个 A 里没有专门章节的点：ECS（实体-组件-系统）范式，以及试玩测试（playtest）的具体做法；CMU 这门课也是本节点的英文主学习资源（免费课程站）。"
+   }
+  ],
+  "outline": [
+   {
+    "src": "A",
+    "ref": "1",
+    "title": "Introduction",
+    "zh": "引论",
+    "items": [
+     {
+      "ref": "1.5",
+      "title": "Runtime Engine Architecture",
+      "zh": "运行时引擎架构"
+     },
+     {
+      "ref": "1.6",
+      "title": "Tools and the Asset Pipeline",
+      "zh": "工具与资源管线"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "7",
+    "title": "Resources and the File System",
+    "zh": "资源与文件系统",
+    "items": [
+     {
+      "ref": "7.1",
+      "title": "File System",
+      "zh": "文件系统"
+     },
+     {
+      "ref": "7.2",
+      "title": "The Resource Manager",
+      "zh": "资源管理器"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "8",
+    "title": "The Game Loop and Real-Time Simulation",
+    "zh": "游戏循环与实时模拟",
+    "items": [
+     {
+      "ref": "8.1",
+      "title": "The Rendering Loop",
+      "zh": "渲染循环"
+     },
+     {
+      "ref": "8.2",
+      "title": "The Game Loop",
+      "zh": "游戏循环"
+     },
+     {
+      "ref": "8.3",
+      "title": "Game Loop Architectural Styles",
+      "zh": "游戏循环的架构风格"
+     },
+     {
+      "ref": "8.4",
+      "title": "Abstract Timelines",
+      "zh": "抽象时间线"
+     },
+     {
+      "ref": "8.5",
+      "title": "Measuring and Dealing with Time",
+      "zh": "时间的度量与处理"
+     },
+     {
+      "ref": "8.6",
+      "title": "Multiprocessor Game Loops",
+      "zh": "多处理器游戏循环"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "9",
+    "title": "Human Interface Devices",
+    "zh": "人机接口设备",
+    "items": [
+     {
+      "ref": "9.1",
+      "title": "Types of Human Interface Devices",
+      "zh": "人机接口设备的类型"
+     },
+     {
+      "ref": "9.2",
+      "title": "Interfacing with a HID",
+      "zh": "与输入设备接口"
+     },
+     {
+      "ref": "9.3",
+      "title": "Types of Inputs",
+      "zh": "输入的类型"
+     },
+     {
+      "ref": "9.4",
+      "title": "Types of Outputs",
+      "zh": "输出的类型"
+     },
+     {
+      "ref": "9.5",
+      "title": "Game Engine HID Systems",
+      "zh": "游戏引擎的输入设备系统"
+     },
+     {
+      "ref": "9.6",
+      "title": "Human Interface Devices in Practice",
+      "zh": "输入设备的工程实践"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "10",
+    "title": "Tools for Debugging and Development",
+    "zh": "调试与开发工具",
+    "items": [
+     {
+      "ref": "10.1",
+      "title": "Logging and Tracing",
+      "zh": "日志与追踪"
+     },
+     {
+      "ref": "10.2",
+      "title": "Debug Drawing Facilities",
+      "zh": "调试绘制工具"
+     },
+     {
+      "ref": "10.3",
+      "title": "In-Game Menus",
+      "zh": "游戏内菜单"
+     },
+     {
+      "ref": "10.4",
+      "title": "In-Game Console",
+      "zh": "游戏内控制台"
+     },
+     {
+      "ref": "10.5",
+      "title": "Debug Cameras and Pausing the Game",
+      "zh": "调试相机与暂停游戏"
+     },
+     {
+      "ref": "10.6",
+      "title": "Cheats",
+      "zh": "作弊指令"
+     },
+     {
+      "ref": "10.7",
+      "title": "Screenshots and Movie Capture",
+      "zh": "截图与录像"
+     },
+     {
+      "ref": "10.8",
+      "title": "In-Game Profiling",
+      "zh": "游戏内性能分析"
+     },
+     {
+      "ref": "10.9",
+      "title": "In-Game Memory Stats and Leak Detection",
+      "zh": "游戏内内存统计与泄漏检测"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "11",
+    "title": "Rendering",
+    "zh": "渲染",
+    "items": [
+     {
+      "ref": "11.1",
+      "title": "The Rendering Problem",
+      "zh": "渲染问题"
+     },
+     {
+      "ref": "11.2",
+      "title": "Lights, Camera, Action!",
+      "zh": "灯光、相机与画面"
+     },
+     {
+      "ref": "11.3",
+      "title": "Foundations of 3D Rendering",
+      "zh": "三维渲染基础"
+     },
+     {
+      "ref": "11.4",
+      "title": "Programming the 3D Graphics Pipeline",
+      "zh": "三维图形管线编程"
+     },
+     {
+      "ref": "11.5",
+      "title": "Pipeline Management: The Application Layer",
+      "zh": "管线管理：应用层"
+     },
+     {
+      "ref": "11.6",
+      "title": "Geometry Processing and Other Visual Effects",
+      "zh": "几何处理与其他视觉效果"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "13",
+    "title": "Animation Systems",
+    "zh": "动画系统",
+    "items": [
+     {
+      "ref": "13.1",
+      "title": "Types of Character Animation",
+      "zh": "角色动画的类型"
+     },
+     {
+      "ref": "13.2",
+      "title": "Skeletons",
+      "zh": "骨骼"
+     },
+     {
+      "ref": "13.3",
+      "title": "Poses",
+      "zh": "姿势"
+     },
+     {
+      "ref": "13.4",
+      "title": "Clips",
+      "zh": "动画片段"
+     },
+     {
+      "ref": "13.5",
+      "title": "Skinning and Matrix Palette Generation",
+      "zh": "蒙皮与矩阵调色板生成"
+     },
+     {
+      "ref": "13.6",
+      "title": "Animation Blending",
+      "zh": "动画混合"
+     },
+     {
+      "ref": "13.9",
+      "title": "The Animation Pipeline",
+      "zh": "动画管线"
+     },
+     {
+      "ref": "13.10",
+      "title": "Action State Machines",
+      "zh": "动作状态机"
+     },
+     {
+      "ref": "13.11",
+      "title": "Constraints",
+      "zh": "约束"
+     },
+     {
+      "ref": "13.12",
+      "title": "Motion Matching",
+      "zh": "动作匹配"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "14",
+    "title": "Collision and Rigid Body Dynamics",
+    "zh": "碰撞与刚体动力学",
+    "items": [
+     {
+      "ref": "14.1",
+      "title": "Do You Want Physics in Your Game?",
+      "zh": "游戏里是否需要物理"
+     },
+     {
+      "ref": "14.2",
+      "title": "Collision/Physics Middleware",
+      "zh": "碰撞与物理中间件"
+     },
+     {
+      "ref": "14.3",
+      "title": "The Collision Detection System",
+      "zh": "碰撞检测系统"
+     },
+     {
+      "ref": "14.4",
+      "title": "Rigid Body Dynamics",
+      "zh": "刚体动力学"
+     },
+     {
+      "ref": "14.5",
+      "title": "Integrating a Physics Engine into Your Game",
+      "zh": "把物理引擎集成进游戏"
+     },
+     {
+      "ref": "14.6",
+      "title": "Advanced Physics Features",
+      "zh": "高级物理特性"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "16",
+    "title": "Introduction to Gameplay Systems",
+    "zh": "玩法系统导论",
+    "items": [
+     {
+      "ref": "16.1",
+      "title": "Anatomy of a Game World",
+      "zh": "游戏世界的构成"
+     },
+     {
+      "ref": "16.2",
+      "title": "Implementing Dynamic Elements: Game Objects",
+      "zh": "动态元素的实现：游戏对象"
+     },
+     {
+      "ref": "16.3",
+      "title": "Data-Driven Game Engines",
+      "zh": "数据驱动的游戏引擎"
+     },
+     {
+      "ref": "16.4",
+      "title": "The Game World Editor",
+      "zh": "游戏世界编辑器"
+     }
+    ]
+   },
+   {
+    "src": "A",
+    "ref": "17",
+    "title": "Runtime Gameplay Systems",
+    "zh": "运行时玩法系统",
+    "items": [
+     {
+      "ref": "17.1",
+      "title": "Components of the Gameplay Foundation System",
+      "zh": "玩法基础系统的组成"
+     },
+     {
+      "ref": "17.2",
+      "title": "Runtime Object Model Architectures",
+      "zh": "运行时对象模型架构"
+     },
+     {
+      "ref": "17.3",
+      "title": "World Chunk Data Formats",
+      "zh": "世界分块数据格式"
+     },
+     {
+      "ref": "17.4",
+      "title": "Loading and Streaming Game Worlds",
+      "zh": "游戏世界的加载与流式载入"
+     },
+     {
+      "ref": "17.5",
+      "title": "Object References and World Queries",
+      "zh": "对象引用与世界查询"
+     },
+     {
+      "ref": "17.6",
+      "title": "Updating Game Objects in Real Time",
+      "zh": "实时更新游戏对象"
+     },
+     {
+      "ref": "17.7",
+      "title": "Concurrent Game Object Updates",
+      "zh": "并发的游戏对象更新"
+     },
+     {
+      "ref": "17.8",
+      "title": "Events and Message-Passing",
+      "zh": "事件与消息传递"
+     },
+     {
+      "ref": "17.9",
+      "title": "Scripting",
+      "zh": "脚本"
+     },
+     {
+      "ref": "17.10",
+      "title": "High-Level Game Flow",
+      "zh": "高层游戏流程"
+     }
+    ]
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "The ECS Paradigm",
+    "zh": "ECS 范式",
+    "fill": "补“游戏对象与组件架构”的现代数据导向实现（实体-组件-系统），A 的第 17.2 章只按对象模型架构泛讲",
+    "items": []
+   },
+   {
+    "src": "B",
+    "ref": "",
+    "title": "How to playtest",
+    "zh": "如何做试玩测试",
+    "fill": "补“玩法编程与调试工具”里的试玩测试与迭代方法，A 第 10 章只讲引擎内的调试工具",
+    "items": []
+   }
+  ],
+  "coverage": [
+   {
+    "topic": "游戏循环与实时模拟",
+    "refs": [
+     "A:8",
+     "A:8.1",
+     "A:8.2",
+     "A:8.3",
+     "A:8.5"
+    ]
+   },
+   {
+    "topic": "游戏对象与组件架构",
+    "refs": [
+     "A:16.2",
+     "A:17.1",
+     "A:17.2",
+     "B:#1"
+    ]
+   },
+   {
+    "topic": "输入与相机",
+    "refs": [
+     "A:9",
+     "A:9.1",
+     "A:9.2",
+     "A:11.2",
+     "A:10.5"
+    ]
+   },
+   {
+    "topic": "碰撞检测与物理",
+    "refs": [
+     "A:14",
+     "A:14.3",
+     "A:14.4",
+     "A:14.5"
+    ]
+   },
+   {
+    "topic": "动画与渲染管线集成",
+    "refs": [
+     "A:13",
+     "A:13.9",
+     "A:11",
+     "A:11.4",
+     "A:11.5"
+    ]
+   },
+   {
+    "topic": "资源管线与引擎架构",
+    "refs": [
+     "A:1.5",
+     "A:1.6",
+     "A:7",
+     "A:7.2"
+    ]
+   },
+   {
+    "topic": "玩法编程与调试工具",
+    "refs": [
+     "A:17.6",
+     "A:17.8",
+     "A:17.9",
+     "A:10",
+     "A:10.1",
+     "A:10.2",
+     "B:#2"
+    ]
+   }
+  ],
+  "omitted": "未收：第 2–4 章（版本控制与工具、游戏软件工程基础、并发编程）、第 5 章（游戏用三维数学，属 M.3.1/M.4.1）、第 6 章（引擎支撑系统：内存/容器/字符串）、第 12 章（光照与后处理，偏渲染效果而非管线集成）、第 15 章（音频）、第 18 章（其余系统概述），以及同页列出的 3rd edition 目录（结构重复，只抄 4th）。这些章要么与简介的七个知识点没有直接对应，要么是更底层的系统/数学内容。"
  },
  "S.1.1": {
   "sources": [
@@ -72184,6 +71935,23 @@
      "https://hanlab.mit.edu/courses/2023-fall-65940"
     ],
     "why": "节点“现有英文学习资源”本身就是 MIT 这门研究生课的官方课表：逐讲列出 Lecture 1–26 的具体主题，并按 Chapter I 高效推理 / Chapter II 领域专用优化 / Chapter III 高效训练 / Chapter IV 进阶专题 分组；压缩四件套（剪枝、量化、NAS、蒸馏）、微控制器上的推理（MCUNet、TinyEngine 并行）与端侧训练正好对上节点的“资源受限设备上的推理、压缩和硬件协同”。"
+   },
+   {
+    "key": "B",
+    "kind": "book",
+    "title": "Introduction to Machine Learning Systems (Volume I)",
+    "by": "Vijay Janapa Reddi (Harvard University), MIT Press, open access",
+    "year": 2026,
+    "url": "https://mlsysbook.ai/vol1/",
+    "toc_urls": [
+     "https://mlsysbook.ai/vol1/",
+     "https://mlsysbook.ai/vol1/02_system_paradigms/02_system_paradigms.html",
+     "https://mlsysbook.ai/vol1/10_model_compression/10_model_compression.html",
+     "https://mlsysbook.ai/vol1/11_hw_acceleration/11_hw_acceleration.html",
+     "https://mlsysbook.ai/vol1/12_benchmarking/12_benchmarking.html",
+     "https://mlsysbook.ai/vol1/13_model_serving/13_model_serving.html"
+    ],
+    "why": "节点“现有英文学习资源”Edge AI learning path 自述尚无学期课表（the path has no semester syllabus yet），它指定的读物就是这本 CC-BY-NC-SA 开放教材 Volume I；第 2 章 System Paradigms 正好按 Cloud/Edge/Mobile/TinyML 四种部署范式讲边缘部署的延迟与隐私、混合分层协同，第 10–13 章补上边缘侧压缩、加速器、测量与延迟预算。"
    }
   ],
   "outline": [
@@ -72318,83 +72086,9 @@
       "zh": "高效微调与提示工程"
      }
     ]
-   }
-  ],
-  "coverage": [
-   {
-    "topic": "资源受限设备上的推理",
-    "refs": [
-     "A:Lecture 10",
-     "A:Lecture 11",
-     "A:Lecture 19"
-    ],
-    "note": "Lecture 10 讲微控制器级别的推理（MCUNet 的 TinyNAS + TinyEngine 协同设计），Lecture 11 讲推理引擎的算子实现与并行处理，Lecture 19 讲在设备上训练/迁移学习。课程 5 个 Lab 也是这条线：剪枝、量化、NAS、LLM 压缩、在笔记本上部署 LLM。"
    },
    {
-    "topic": "感知",
-    "refs": [
-     "A:Lecture 14",
-     "A:Lecture 15"
-    ],
-    "note": "感知模型的专用优化：Lecture 14 视觉 Transformer，Lecture 15 GAN、视频与点云等感知/生成模型的效率优化；Lecture 16 扩散模型同属生成模型侧。"
-   },
-   {
-    "topic": "压缩",
-    "refs": [
-     "A:Chapter I",
-     "A:Lecture 3",
-     "A:Lecture 4",
-     "A:Lecture 5",
-     "A:Lecture 6",
-     "A:Lecture 7",
-     "A:Lecture 8",
-     "A:Lecture 9",
-     "A:Lecture 12",
-     "A:Lecture 13"
-    ],
-    "note": "第一章整章是压缩：剪枝与稀疏化两讲、量化两讲、神经架构搜索两讲、知识蒸馏一讲；第二章的 Lecture 12–13 是 LLM 的压缩与加速。"
-   },
-   {
-    "topic": "硬件协同",
-    "refs": [
-     "A:Lecture 10",
-     "A:Lecture 11"
-    ],
-    "note": "Lecture 10 MCUNet 是模型-系统协同设计（TinyNAS 与 TinyEngine 联合搜），Lecture 11 TinyEngine 讲内存调度、算子实现与并行处理，即算法与硬件/运行时的协同。"
-   },
-   {
-    "topic": "与边缘AI相交",
-    "refs": [
-     "A:Lecture 19"
-    ],
-    "note": "本课以端上推理/端上训练为主，端边云协同、时延-功耗-隐私的系统权衡只是背景；这些是节点 X.1.2 的主题，本节点不重复设章。"
-   }
-  ],
-  "omitted": "A 未收：Chapter IV: Advanced Topics 下的 Lecture 21 Basics of Quantum Computing、Lecture 22 Quantum Machine Learning、Lecture 23 Noise Robust Quantum ML（量子计算与节点无关）；Sep 13 / Oct 18 / Nov 6 / Nov 27 四行只是各章的小标题行（页面里也带 Lecture 编号，故编号有重复），已作为分支标题使用；Oct 10 Student Holiday、Nov 23 Thanksgiving 两行无课，与 Lecture 24–26 Final Project Presentation 一并未收；课程事务（评分、Labs 说明、迟到政策）不是目录内容。"
- },
- "X.1.2": {
-  "sources": [
-   {
-    "key": "A",
-    "kind": "book",
-    "title": "Introduction to Machine Learning Systems (Volume I)",
-    "by": "Vijay Janapa Reddi (Harvard University), MIT Press, open access",
-    "year": 2026,
-    "url": "https://mlsysbook.ai/vol1/",
-    "toc_urls": [
-     "https://mlsysbook.ai/vol1/",
-     "https://mlsysbook.ai/vol1/02_system_paradigms/02_system_paradigms.html",
-     "https://mlsysbook.ai/vol1/10_model_compression/10_model_compression.html",
-     "https://mlsysbook.ai/vol1/11_hw_acceleration/11_hw_acceleration.html",
-     "https://mlsysbook.ai/vol1/12_benchmarking/12_benchmarking.html",
-     "https://mlsysbook.ai/vol1/13_model_serving/13_model_serving.html"
-    ],
-    "why": "节点“现有英文学习资源”Edge AI learning path 自述尚无学期课表（the path has no semester syllabus yet），它指定的读物就是这本 CC-BY-NC-SA 开放教材 Volume I；第 2 章 System Paradigms 正好按 Cloud/Edge/Mobile/TinyML 四种部署范式讲边缘部署的延迟与隐私、混合分层协同，第 10–13 章补上边缘侧压缩、加速器、测量与延迟预算。"
-   }
-  ],
-  "outline": [
-   {
-    "src": "A",
+    "src": "B",
     "ref": "2",
     "title": "2 System Paradigms",
     "zh": "系统范式",
@@ -72478,10 +72172,11 @@
       "title": "What Every Tier Shares",
       "zh": "各层共有的东西"
      }
-    ]
+    ],
+    "fill": "端边云协同：云、边、移动、TinyML 四种部署形态与时延/隐私权衡（并入的原 X.1.2 主来源 MLSysBook）"
    },
    {
-    "src": "A",
+    "src": "B",
     "ref": "10",
     "title": "10 Model Compression",
     "zh": "模型压缩",
@@ -72557,10 +72252,11 @@
       "title": "Choosing and Combining Techniques",
       "zh": "技术的选择与组合"
      }
-    ]
+    ],
+    "fill": "压缩"
    },
    {
-    "src": "A",
+    "src": "B",
     "ref": "11",
     "title": "11 Hardware Acceleration",
     "zh": "硬件加速",
@@ -72611,10 +72307,11 @@
        }
       ]
      }
-    ]
+    ],
+    "fill": "硬件协同"
    },
    {
-    "src": "A",
+    "src": "B",
     "ref": "12",
     "title": "12 Benchmarking",
     "zh": "基准测试",
@@ -72668,10 +72365,11 @@
        }
       ]
      }
-    ]
+    ],
+    "fill": "时延/功耗等推理基准测量"
    },
    {
-    "src": "A",
+    "src": "B",
     "ref": "13",
     "title": "13 Model Serving",
     "zh": "模型服务",
@@ -72717,84 +72415,126 @@
        }
       ]
      }
-    ]
+    ],
+    "fill": "边缘部署的推理服务"
    }
   ],
   "coverage": [
    {
+    "topic": "资源受限设备上的推理",
+    "refs": [
+     "A:Lecture 10",
+     "A:Lecture 11",
+     "A:Lecture 19"
+    ],
+    "note": "Lecture 10 讲微控制器级别的推理（MCUNet 的 TinyNAS + TinyEngine 协同设计），Lecture 11 讲推理引擎的算子实现与并行处理，Lecture 19 讲在设备上训练/迁移学习。课程 5 个 Lab 也是这条线：剪枝、量化、NAS、LLM 压缩、在笔记本上部署 LLM。"
+   },
+   {
+    "topic": "感知",
+    "refs": [
+     "A:Lecture 14",
+     "A:Lecture 15"
+    ],
+    "note": "感知模型的专用优化：Lecture 14 视觉 Transformer，Lecture 15 GAN、视频与点云等感知/生成模型的效率优化；Lecture 16 扩散模型同属生成模型侧。"
+   },
+   {
+    "topic": "压缩",
+    "refs": [
+     "A:Chapter I",
+     "A:Lecture 3",
+     "A:Lecture 4",
+     "A:Lecture 5",
+     "A:Lecture 6",
+     "A:Lecture 7",
+     "A:Lecture 8",
+     "A:Lecture 9",
+     "A:Lecture 12",
+     "A:Lecture 13"
+    ],
+    "note": "第一章整章是压缩：剪枝与稀疏化两讲、量化两讲、神经架构搜索两讲、知识蒸馏一讲；第二章的 Lecture 12–13 是 LLM 的压缩与加速。"
+   },
+   {
+    "topic": "硬件协同",
+    "refs": [
+     "A:Lecture 10",
+     "A:Lecture 11"
+    ],
+    "note": "Lecture 10 MCUNet 是模型-系统协同设计（TinyNAS 与 TinyEngine 联合搜），Lecture 11 TinyEngine 讲内存调度、算子实现与并行处理，即算法与硬件/运行时的协同。"
+   },
+   {
     "topic": "边缘部署的学习",
     "refs": [
-     "A:2.8",
-     "A:2.10"
+     "B:2.8",
+     "B:2.10"
     ],
     "note": "书里没有单独一节的“端上学习”：2.8 TinyML 讲微控制器的两级存储划分与端上训练的内存约束（引 TinyTL），2.10 混合架构讲把个性化/更新放到哪一层。系统化的端上训练在节点 X.1.1 的课程 Lecture 19。"
    },
    {
     "topic": "边缘部署的推理",
     "refs": [
-     "A:2.6",
-     "A:2.6.1",
-     "A:2.6.2",
-     "A:10",
-     "A:10.1",
-     "A:13.3"
+     "B:2.6",
+     "B:2.6.1",
+     "B:2.6.2",
+     "B:10",
+     "B:10.1",
+     "B:13.3"
     ],
     "note": "2.6 整节讲把推理放到边缘时的延迟/容量约束，第 10 章讲把模型压进部署预算，13.3 讲线上推理的请求生命周期与延迟预算。"
    },
    {
     "topic": "端边云协同",
     "refs": [
-     "A:2.1",
-     "A:2.5",
-     "A:2.7",
-     "A:2.9",
-     "A:2.10",
-     "A:2.10.1",
-     "A:2.10.2",
-     "A:2.11"
+     "B:2.1",
+     "B:2.5",
+     "B:2.7",
+     "B:2.9",
+     "B:2.10",
+     "B:2.10.1",
+     "B:2.10.2",
+     "B:2.11"
     ],
     "note": "2.1 给出云/边/移动/TinyML 四种部署格局，2.9 讲如何在层间选型，2.10 整节是混合架构（跨层分工的三种集成模式与生产通信方式），2.11 收在各层共有的约束。"
    },
    {
     "topic": "时延",
     "refs": [
-     "A:2.6.1",
-     "A:2.6.3",
-     "A:12.6.2",
-     "A:12.6.4",
-     "A:13.3.1",
-     "A:13.3.2",
-     "A:13.4.3"
+     "B:2.6.1",
+     "B:2.6.3",
+     "B:12.6.2",
+     "B:12.6.4",
+     "B:13.3.1",
+     "B:13.3.2",
+     "B:13.4.3"
     ],
     "note": "2.6.1 的数据本地性论证说明为什么远传延迟无法靠更快的远端算力消除；12.6.2 给出延迟/尾延迟等推理度量，12.6.4 是移动与边缘基准；13.3.1–13.3.2 拆解延迟预算，13.4.3 是尾延迟。"
    },
    {
     "topic": "功耗",
     "refs": [
-     "A:2.2",
-     "A:2.8",
-     "A:10.3.2",
-     "A:11.6.1"
+     "B:2.2",
+     "B:2.8",
+     "B:10.3.2",
+     "B:11.6.1"
     ],
     "note": "2.2 的物理约束里有功率墙（power wall）与内存墙，2.8 讲 TinyML 的功耗-能力权衡，10.3.2 讲精度与能耗的关系，11.6.1 的屋脊线把算力/带宽约束画成上界。"
    },
    {
     "topic": "隐私",
     "refs": [
-     "A:2.6"
+     "B:2.6"
     ],
     "note": "只有 2.6 的标题与正文正面讨论（数据本地性即隐私动机）；本书这一卷没有差分隐私、联邦学习之类的专章，故只到 2.6 一节。"
    },
    {
     "topic": "时延/功耗与隐私的权衡",
     "refs": [
-     "A:2.9",
-     "A:2.11"
+     "B:2.9",
+     "B:2.11"
     ],
     "note": "2.9 讲跨层权衡后的选型（含按运营代价筛选部署层），2.11 归纳各层共有的约束；具体的量化权衡分散在 2.5–2.8 各层的 trade-off 小节里。"
    }
   ],
-  "omitted": "A 未收：第 1、16 章（导论与结论）、第 3–9 章（生命周期、数据工程、神经网络计算与架构、框架、训练、数据选择——系统本身而非边缘侧问题）、第 14 章 ML Operations（云端运维）、第 15 章 Responsible Engineering（公平性/环境影响，非本节点的隐私权衡）；第 2 章内 2.4 System Balance and Hardware（单机硬件配比，属通用系统基础）；第 10 章内 10.2.2 Low-rank factorization、10.2.6 Adaptive computation methods、10.3.1 Numerical formats、10.3.5 When fewer bits run faster、10.4.1、10.5.1–10.5.4、第 11 章内 11.2 Hardware Specialization、11.3 Compute Primitives、第 12 章内 12.2 Benchmark Carpentry、12.4 Benchmark Suites、12.5 Training Benchmarks、第 13 章内 13.1 The Serving Inversion、13.2 Serving System Architecture。"
+  "omitted": "A 未收：Chapter IV: Advanced Topics 下的 Lecture 21 Basics of Quantum Computing、Lecture 22 Quantum Machine Learning、Lecture 23 Noise Robust Quantum ML（量子计算与节点无关）；Sep 13 / Oct 18 / Nov 6 / Nov 27 四行只是各章的小标题行（页面里也带 Lecture 编号，故编号有重复），已作为分支标题使用；Oct 10 Student Holiday、Nov 23 Thanksgiving 两行无课，与 Lecture 24–26 Final Project Presentation 一并未收；课程事务（评分、Labs 说明、迟到政策）不是目录内容。；A 未收：第 1、16 章（导论与结论）、第 3–9 章（生命周期、数据工程、神经网络计算与架构、框架、训练、数据选择——系统本身而非边缘侧问题）、第 14 章 ML Operations（云端运维）、第 15 章 Responsible Engineering（公平性/环境影响，非本节点的隐私权衡）；第 2 章内 2.4 System Balance and Hardware（单机硬件配比，属通用系统基础）；第 10 章内 10.2.2 Low-rank factorization、10.2.6 Adaptive computation methods、10.3.1 Numerical formats、10.3.5 When fewer bits run faster、10.4.1、10.5.1–10.5.4、第 11 章内 11.2 Hardware Specialization、11.3 Compute Primitives、第 12 章内 12.2 Benchmark Carpentry、12.4 Benchmark Suites、12.5 Training Benchmarks、第 13 章内 13.1 The Serving Inversion、13.2 Serving System Architecture。"
  },
  "X.1.3": {
   "sources": [
@@ -74928,18 +74668,6 @@
     "why": "节点现有的免费开放教材（CRC 出版、作者公开全文），是地理数据科学的标准课程式教材；数据表示、空间权重、空间自相关、点模式、空间回归正好构成“地理空间计算”的主干。"
    },
    {
-    "key": "B",
-    "kind": "book",
-    "title": "Introduction to Climate Science",
-    "by": "Andreas Schmittner",
-    "year": 2019,
-    "url": "https://open.oregonstate.education/climatescience/",
-    "toc_urls": [
-     "https://open.oregonstate.education/climatescience/"
-    ],
-    "why": "补“地球系统”：俄勒冈州立大学开放教材，按气候系统—辐射与能量收支—碳循环—环流过程—模式组织的章节，正是气候计算所需的物理框架。"
-   },
-   {
     "key": "C",
     "kind": "book",
     "title": "Spatial Data Science",
@@ -74950,18 +74678,6 @@
      "https://r-spatial.org/book/"
     ],
     "why": "补“时空”：主来源只讲空间，Pebesma & Bivand 的书用 data cube 组织时空数组，并有一章多变量与时空地统计。"
-   },
-   {
-    "key": "D",
-    "kind": "book",
-    "title": "Contemporary Digital Humanities",
-    "by": "Mark P. Wachowiak",
-    "year": 2021,
-    "url": "https://ecampusontario.pressbooks.pub/nudh1/",
-    "toc_urls": [
-     "https://ecampusontario.pressbooks.pub/nudh1/"
-    ],
-    "why": "补“文献与文化数据计算”：eCampusOntario 开放教材，单独一章列数字人文的计算技术（TEI 编码、数据挖掘、机器学习、数据库、OCR），并有远读一章。"
    }
   ],
   "outline": [
@@ -75256,131 +74972,6 @@
     ]
    },
    {
-    "src": "B",
-    "ref": "1",
-    "title": "Weather and Climate",
-    "zh": "天气与气候",
-    "fill": "补“地球系统”的框架：气候系统由哪些圈层构成、有哪些过程、随时间怎样变化。",
-    "items": [
-     {
-      "ref": "1b",
-      "title": "The Climate System",
-      "zh": "气候系统"
-     },
-     {
-      "ref": "1c",
-      "title": "Processes",
-      "zh": "过程"
-     },
-     {
-      "ref": "1d",
-      "title": "Temporal Variations",
-      "zh": "时间变化"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "4",
-    "title": "Theory",
-    "zh": "理论",
-    "fill": "补地球系统的能量与辐射基础：辐射、温室效应、能量收支、辐射强迫与反馈。",
-    "items": [
-     {
-      "ref": "4a",
-      "title": "Electromagnetic Radiation",
-      "zh": "电磁辐射"
-     },
-     {
-      "ref": "4b",
-      "title": "The Greenhouse Effect",
-      "zh": "温室效应"
-     },
-     {
-      "ref": "4c",
-      "title": "Earth’s Energy Budget",
-      "zh": "地球能量收支"
-     },
-     {
-      "ref": "4d",
-      "title": "Radiative Forcings, Feedback Processes, and Climate Sensitivity",
-      "zh": "辐射强迫、反馈过程与气候敏感度"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "5",
-    "title": "Carbon",
-    "zh": "碳",
-    "fill": "补地球系统的碳循环（气候模式的关键状态量）。",
-    "items": [
-     {
-      "ref": "5a",
-      "title": "The Natural Carbon Cycle",
-      "zh": "自然碳循环"
-     },
-     {
-      "ref": "5b",
-      "title": "Anthropogenic Carbon",
-      "zh": "人为碳"
-     },
-     {
-      "ref": "5c",
-      "title": "Carbonate Chemistry and Ocean Acidification",
-      "zh": "碳酸盐化学与海洋酸化"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "6",
-    "title": "Processes",
-    "zh": "过程",
-    "fill": "补地球系统内部的环流与水文过程，是气候模式要离散求解的对象。",
-    "items": [
-     {
-      "ref": "6a",
-      "title": "Atmospheric Circulation",
-      "zh": "大气环流"
-     },
-     {
-      "ref": "6b",
-      "title": "The Hydrologic Cycle",
-      "zh": "水文循环"
-     },
-     {
-      "ref": "6c",
-      "title": "Ocean Circulation",
-      "zh": "海洋环流"
-     }
-    ]
-   },
-   {
-    "src": "B",
-    "ref": "7",
-    "title": "Models",
-    "zh": "模式",
-    "fill": "补气候模式的构建、评估与应用，对应“用计算研究地球系统”的方法侧。",
-    "items": [
-     {
-      "ref": "7a",
-      "title": "Construction",
-      "zh": "构建"
-     },
-     {
-      "ref": "7b",
-      "title": "Evaluation",
-      "zh": "评估"
-     },
-     {
-      "ref": "7c",
-      "title": "Applications",
-      "zh": "应用"
-     }
-    ]
-   },
-   {
     "src": "C",
     "ref": "6",
     "title": "Data Cubes",
@@ -75397,150 +74988,59 @@
     "items": []
    },
    {
-    "src": "D",
-    "ref": "IV",
-    "title": "Digital Humanities Areas",
-    "zh": "数字人文的领域",
-    "fill": "补“文献与文化数据”：把文本分析、文化分析、博物馆与遗产等作为可计算的数据对象来划分。",
-    "items": [
-     {
-      "ref": "",
-      "title": "Data and Big Data",
-      "zh": "数据与大数据"
-     },
-     {
-      "ref": "",
-      "title": "Text Analysis and Literature Studies",
-      "zh": "文本分析与文学研究"
-     },
-     {
-      "ref": "",
-      "title": "Cultural Analytics",
-      "zh": "文化分析"
-     }
-    ]
+    "src": "C",
+    "ref": "2",
+    "title": "Coordinates",
+    "zh": "坐标",
+    "fill": "地图投影与坐标参考系",
+    "items": []
    },
    {
-    "src": "D",
-    "ref": "IX",
-    "title": "Computational Techniques in The Digital Humanities",
-    "zh": "数字人文中的计算技术",
-    "fill": "补文化/文献数据的计算技术栈：编码标准、数据挖掘、机器学习、数据库、OCR、统计。",
-    "items": [
-     {
-      "ref": "",
-      "title": "Mathematical Models",
-      "zh": "数学模型"
-     },
-     {
-      "ref": "",
-      "title": "Computing And Programming",
-      "zh": "计算与编程"
-     },
-     {
-      "ref": "",
-      "title": "XML AND TEI",
-      "zh": "XML 与 TEI 文本编码"
-     },
-     {
-      "ref": "",
-      "title": "Data Visualization and Information Visualization",
-      "zh": "数据可视化与信息可视化"
-     },
-     {
-      "ref": "",
-      "title": "Imaging, Image Processing, and Optical Character Recognition",
-      "zh": "成像、图像处理与光学字符识别"
-     },
-     {
-      "ref": "",
-      "title": "Data Mining",
-      "zh": "数据挖掘"
-     },
-     {
-      "ref": "",
-      "title": "Machine Learning",
-      "zh": "机器学习"
-     },
-     {
-      "ref": "",
-      "title": "Database Management Systems",
-      "zh": "数据库管理系统"
-     },
-     {
-      "ref": "",
-      "title": "Quantitative Analysis: Probability and Statistics",
-      "zh": "定量分析：概率与统计"
-     },
-     {
-      "ref": "",
-      "title": "Data Science and Big Data",
-      "zh": "数据科学与大数据"
-     }
-    ]
-   },
-   {
-    "src": "D",
-    "ref": "XI",
-    "title": "Close And Distant Reading In The Digital Humanities",
-    "zh": "数字人文中的细读与远读",
-    "fill": "补文献类文化数据的分析方法：细读与远读的差别，以及远读的可视化。",
-    "items": [
-     {
-      "ref": "",
-      "title": "Techniques in Close Reading and Distant Reading",
-      "zh": "细读与远读的技术"
-     },
-     {
-      "ref": "",
-      "title": "Distant Reading and Information Visualization",
-      "zh": "远读与信息可视化"
-     }
-    ]
+    "src": "C",
+    "ref": "4",
+    "title": "Spherical Geometries",
+    "zh": "球面几何",
+    "fill": "球面坐标上的距离与面积",
+    "items": []
    }
   ],
   "coverage": [
    {
-    "topic": "时空",
+    "topic": "空间数据与地图投影",
     "refs": [
      "A:5",
+     "C:2",
+     "C:4"
+    ],
+    "note": "A 第 5 个分支（书中 Spatial Data 一章）讲地理数据结构，投影只在代码里用 to_crs 带过；坐标参考系与投影由 C 第 2 章 Coordinates 补，球面上的距离与面积见 C 第 4 章 Spherical Geometries（两章只到章级，节标题未抄）。"
+   },
+   {
+    "topic": "空间权重与空间自相关",
+    "refs": [
      "A:6",
-     "A:8",
+     "A:8"
+    ],
+    "note": "A 的空间权重（邻接、距离、分块权重）与全局空间自相关两章。"
+   },
+   {
+    "topic": "点模式分析",
+    "refs": [
+     "A:10"
+    ]
+   },
+   {
+    "topic": "空间回归",
+    "refs": [
+     "A:13"
+    ]
+   },
+   {
+    "topic": "数据立方体与时空地统计",
+    "refs": [
      "C:6",
-     "C:13",
-     "B:1d"
+     "C:13"
     ],
-    "note": "A 给空间侧的数据结构、空间权重与空间统计，C 给时空数组组织（数据立方）与时空地统计，B 的时间变化一节给时间维的物理含义。"
-   },
-   {
-    "topic": "地球系统",
-    "refs": [
-     "B:1b",
-     "B:4",
-     "B:5",
-     "B:6",
-     "B:7"
-    ],
-    "note": "气候系统构成、辐射与能量收支、碳循环、三大环流过程、模式构建与评估。"
-   },
-   {
-    "topic": "文献与文化数据计算",
-    "refs": [
-     "D:IV",
-     "D:IX",
-     "D:XI"
-    ],
-    "note": "D 的领域划分、计算技术栈（TEI 编码、数据挖掘、机器学习、数据库、OCR）与远读方法。"
-   },
-   {
-    "topic": "地学知识",
-    "refs": [],
-    "note": "节点声明这是外部前置（地学或人文学科知识）。B 的第 1、4、5、6 章可当作地学入门，但不是系统地质/大气课程；主来源与补充来源都没有专门讲地学基础的章节。"
-   },
-   {
-    "topic": "人文学科知识",
-    "refs": [],
-    "note": "同样是外部前置。D 在“数字人文的领域”里点到文学研究、古典学、历史学、博物馆研究，但只是概述，不构成人文学科训练。"
+    "note": "C 第 6 章数据立方体、第 13 章多变量与时空地统计。"
    }
   ],
   "omitted": "A 全 14 章只收与“地理空间计算”直接相关的 5 章；未收 Geographic Thinking for Data Scientists、Computational Tools for Geographic Data Science（地理思维与工具环境，属入门铺垫）、Choropleth Mapping（制图）、Local Spatial Autocorrelation（局部指标）、Spatial Inequality Dynamics、Clustering and Regionalization、Spatial Feature Engineering（专题扩展），以及 References 与 Datasets 附录。B 只收气候系统的物理与模式部分；未收 Observations、Paleoclimate（观测与古气候记录，偏长期重建）、Impacts、Economics、Ethics、Solutions（影响、经济、伦理、对策），它们不是计算对象。C 只收 Data Cubes 与 Multivariate and Spatiotemporal Geostatistics；未收空间数据模型、可视化、插值、面数据与空间计量等其他章。D 只收数字人文领域、计算技术与远读三块；未收历史、二进制与布尔逻辑、Web、项目案例、档案、批评与未来等章。"

@@ -402,6 +402,14 @@
    "zh": "MPC 并行算法（第二部分）",
    "fill": "通信（MPC 上的连通性/MST 等大规模并行算法）",
    "items": []
+  },
+  {
+   "src": "D",
+   "ref": "3",
+   "title": "Property Testing, Sorted, and Yao’s Principle",
+   "zh": "性质测试、有序性与 Yao 原理",
+   "fill": "性质测试",
+   "items": []
   }
  ],
  "coverage": [
@@ -433,13 +441,20 @@
     "C:6.3.3"
    ],
    "note": "C 第 6 章：频率矩（不同元素个数、出现次数、二阶矩）是流式摘要的核心，文档 sketch 与“大矩阵的草图”给草图技术的另外两支。"
+  },
+  {
+   "topic": "性质测试",
+   "refs": [
+    "D:3"
+   ],
+   "note": "CS 5234 第 3 讲：性质测试、有序性检测与 Yao 原理（从原 F.1.6 移来）。"
   }
  ],
  "omitted": "A（6.851）只取第 7–9 讲的内存层级部分，其余讲次（Temporal 持久化、Geometric 范围查询、Dynamic optimality、Dictionaries、Integer 结构与下界、Static trees、Succinct 结构等）与本节点三块内容不对应；A 第 8 讲的第 1 节“From Last Lectures...”、第 9 讲的“Overview”是过渡性小节，未收。B（15-210）只取讲代价模型的第 3 章与“Contraction and Scan”一份讲义，其余讲义（序列、排序、哈希、平衡树、DP、概率）属别的节点。C 只取第 6 章，其余章节（高维空间、SVD、随机游走、学习、聚类）未收；C 的 6.5 Bibliographic Notes 与 6.6 Exercises 也不收。D 只取第 10–12 讲（并行/MPC），其余讲次（性质测试、流式采样、图流、流式聚类、缓存）已由 A/C 或 F.1.6 覆盖。",
- "notes": "本轮按“换源”处理：原主来源 CS5234 的 11 条讲次没有小节，而它的讲义是手写白板扫描（PDF 文本层只有页码，例如“10.Parallelism1.pdf”全文只有 page 1–16），无法逐讲补节，因此把 CS5234 降为补充分支 D（只保留并行/MPC 三讲），主来源换成先修证据里列出的 MIT 6.851（内存层级三讲，教授讲义有 2.1–4.2 的编号小节），并行代价模型换成 CMU 15-210 的讲义，流式摘要换成 FODS 第 6 章。D 的三条分支仍是平坦的：手写讲义提不出节标题；2019 年另有一份打字版幻灯片（如 10.Parallel1_slides.pdf）能读出文字，但只有“Summary / Today: Parallelism / Models of Parallelism”这类零散幻灯片标题，凑不出可信的节级结构，因此没有硬凑。",
+ "notes": "本轮按“换源”处理：原主来源 CS5234 的 11 条讲次没有小节，而它的讲义是手写白板扫描（PDF 文本层只有页码，例如“10.Parallelism1.pdf”全文只有 page 1–16），无法逐讲补节，因此把 CS5234 降为补充分支 D（只保留并行/MPC 三讲），主来源换成先修证据里列出的 MIT 6.851（内存层级三讲，教授讲义有 2.1–4.2 的编号小节），并行代价模型换成 CMU 15-210 的讲义，流式摘要换成 FODS 第 6 章。D 的三条分支仍是平坦的：手写讲义提不出节标题；2019 年另有一份打字版幻灯片（如 10.Parallel1_slides.pdf）能读出文字，但只有“Summary / Today: Parallelism / Models of Parallelism”这类零散幻灯片标题，凑不出可信的节级结构，因此没有硬凑。；从 F.1.6 移入来源 B→D 的分支：性质测试、有序性与 Yao 原理。",
  "checked": {
   "date": "2026-11-01",
-  "exact": 59,
+  "exact": 60,
   "fuzzy": 0,
   "dropped": []
  }
