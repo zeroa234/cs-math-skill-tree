@@ -30,15 +30,30 @@ const box = async (p, sel) => {
   if (!b) throw new Error(`没找到 ${sel}`);
   return { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) };
 };
+// 视口里看得见的每张技能卡的位置（id → 框），视频里给卡片加光、放标注用
+const visibleCards = (p) => p.evaluate(() => Object.fromEntries([...document.querySelectorAll(".card[data-id]")]
+  .map((c) => [c.dataset.id, c.getBoundingClientRect()])
+  .filter(([, r]) => r.width > 0 && r.right > 0 && r.bottom > 0 && r.left < innerWidth && r.top < innerHeight)
+  .map(([id, r]) => [id, { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }])));
+const allBoxes = (p, sel) => p.evaluate((sel) => [...document.querySelectorAll(sel)].map((e) => e.getBoundingClientRect())
+  .filter((r) => r.width > 0 || r.height > 0).map((r) => ({ x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) })), sel);
 async function shot(p, name, targets = {}, opts = {}) {
   await p.waitForTimeout(opts.wait ?? 700);
   const t = {};
-  for (const [k, sel] of Object.entries(targets)) t[k] = await box(p, sel);
+  // 选择器以 all: 开头的取所有匹配元素的框（数组），否则取第一个
+  for (const [k, sel] of Object.entries(targets)) t[k] = sel.startsWith("all:") ? await allBoxes(p, sel.slice(4)) : await box(p, sel);
+  // 导览图里的章 / 节标题：markmap 把文字放在 foreignObject 里，按完整文字找
+  for (const [k, text] of Object.entries(opts.texts ?? {})) {
+    // 章标题前面有编号（<span class="gm-ref">2.3</span>极限运算法则），所以允许前缀编号
+    const r = await p.locator(".g-stage foreignObject div div").filter({ hasText: new RegExp(`^[0-9.]* *${text}$`) }).first().boundingBox({ timeout: 3000 }).catch(() => null);
+    if (r) t[k] = { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) };
+    else console.warn(`导览图里没找到“${text}”`);
+  }
   const file = `${name}.png`;
   if (opts.element) await p.locator(opts.element).screenshot({ path: path.join(out, file) });
   else await p.screenshot({ path: path.join(out, file) });
   const vp = p.viewportSize();
-  meta[name] = { file, w: opts.elementBox?.w ?? vp.width, h: opts.elementBox?.h ?? vp.height, targets: t };
+  meta[name] = { file, w: opts.elementBox?.w ?? vp.width, h: opts.elementBox?.h ?? vp.height, targets: t, cards: await visibleCards(p) };
   console.log(name, JSON.stringify(t));
 }
 
@@ -51,7 +66,7 @@ async function shot(p, name, targets = {}, opts = {}) {
   await shot(p, "overview-hover-C", { C: '.region[data-lane="C"]' });
   // 2. 点进这个领域 → 技能地图
   await p.click('.region[data-lane="C"] .rg-main');
-  await shot(p, "map-C", { os: '.card[data-id="C.2.1"]' }, { wait: 1200 });
+  await shot(p, "map-C", { os: '.card[data-id="C.2.1"]', lane: "#lanes > .lane:nth-child(6)", cols: "all:.col-guide" }, { wait: 1200 });
   // 3. 选中操作系统：整条前置链高亮
   await p.locator('.card[data-id="C.2.1"]').dispatchEvent("click");
   await shot(p, "os", { os: '.card[data-id="C.2.1"]', panel: "#panel" });
@@ -73,7 +88,7 @@ async function shot(p, name, targets = {}, opts = {}) {
   await p.waitForTimeout(1200);
   await shot(p, "goal-before", { card: '.card[data-id="A.2.3"]', btn: "#panel >> text=设为目标，排出学习顺序" }, { wait: 300 });
   await p.click("#panel >> text=设为目标，排出学习顺序");
-  await shot(p, "goal-after", { card: '.card[data-id="A.2.3"]', plan: "#plan" }, { wait: 900 });
+  await shot(p, "goal-after", { card: '.card[data-id="A.2.3"]', plan: "#plan", items: "all:#plan-list > li" }, { wait: 900 });
   await ctx.close();
 }
 // 6. 详情面板整页（视口拉高，面板不用滚动就全部展开），视频里在框里往下“滚”
@@ -95,7 +110,8 @@ for (const id of ["C.2.1", "M.1.1", "A.2.3", "F.1.5", "C.1.1"]) {
   const { ctx, p } = await open();
   await p.goto(`${url}#skill/${id}/guide`);
   await p.waitForTimeout(2500);
-  await shot(p, `guide-${id}`, {}, { wait: 300 });
+  await shot(p, `guide-${id}`, { stage: ".g-stage", sources: ".g-sources" },
+    { wait: 300, texts: id === "M.1.1" ? { chapter: "极限运算法则", section: "用极限运算法则求极限" } : {} });
   await ctx.close();
 }
 fs.writeFileSync(path.join(out, "shots.json"), JSON.stringify({ view: VIEW, scale: 2, shots: meta }, null, 1));
