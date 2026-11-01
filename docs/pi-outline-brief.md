@@ -38,6 +38,13 @@ prompt 只写一句：“读 `projects/cs-math-skill-tree/docs/pi-outline-brief.
 - 只收和节点相关的章；习题、参考文献、附录、索引、前言不收。主来源里与节点无关而没收的章，在 `omitted` 里用一句话说明。
 - 规模：一般 4–15 个分支（章）、15–80 个叶子（节）。目录本身更大时，保留和节点简介相关的部分。
 
+### 已知的坑（2026-11-01 两轮检索总结）
+
+- MIT OCW：`/resources/...pdf` 和带尾斜杠的部分页面会 301 循环；先 `curl -s -A "Mozilla/5.0" <页面> | grep -o 'href="[^"]*"'` 找到真实地址，再用 research_tool 打开。Calendar 页有的是前端渲染（只有表头），改读 Lecture Notes / Readings 页。
+- 出版社目录：Springer 书页只有章，前置页 PDF（`link.springer.com/content/pdf/bfm:<ISBN>/1`）有完整章节目录；Pearson 产品页会截断，官方目录或样章 PDF（`ptgmedia.pearsoncmg.com`、`pearson.de`）更全；出版社页打不开时，美国国会图书馆编目页 `catdir.loc.gov`（注明“目录数据由出版社提供”）可用。
+- 整书 PDF 超过 60 MB（如 Sutton & Barto 2nd ed. 约 73 MB）读不了；research_tool 只抽前 400 页。
+- 讲义是白板扫描、幻灯片没有议程页、放在网盘或需要登录的，都抄不出节标题，不要硬凑。
+
 ## 3. 翻译
 
 每个英文标题配一个中文译名 `zh`：用国内教材的标准术语，简洁，不加解释（例：`Eigenvalues and Eigenvectors` → `特征值与特征向量`，`Rank-Nullity Theorem` → `秩-零化度定理`）。原文就是中文时不写 `zh`。专有名词（算法名、协议名、人名定理）可以保留英文，如 `TCP Congestion Control` → `TCP 拥塞控制`。
