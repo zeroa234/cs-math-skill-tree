@@ -21,6 +21,7 @@ Usage:  python -X utf8 scripts/learning_path_merge.py [--all | <ids>] [--report 
 """
 import ctypes
 import glob
+import hashlib
 import json
 import os
 import re
@@ -197,10 +198,14 @@ def build(id_, skills):
     applied = rec.setdefault("applied_additions", [])
     for p in sorted(glob.glob(os.path.join(REVIEW, "*-additions", id_ + ".json"))):
         tag = os.path.relpath(p, RAW).replace("\\", "/")
-        if tag in applied:
+        digest = hashlib.sha1(open(p, "rb").read()).hexdigest()[:10]
+        done = [a for a in applied if a.split("@")[0] == tag]
+        if done:
+            if "@" in done[0] and done[0] != f"{tag}@{digest}":
+                raise SystemExit(f"{id_}: {tag} changed after it was merged into the archived record; merge its new content by hand or rebuild from raw")
             continue
         merge_addition(rec, load(p), tag)
-        applied.append(tag)
+        applied.append(f"{tag}@{digest}")
     rec = simplify(rec)
     flags = []
     for s in rec["sources"]:
@@ -252,12 +257,19 @@ def main(argv):
         raise SystemExit(__doc__)
     report = []
     os.makedirs(REVIEW, exist_ok=True)
+    errors = []
     for id_ in ids:
-        rec, info = build(id_, skills)
+        try:
+            rec, info = build(id_, skills)
+        except (SystemExit, ValueError, KeyError) as e:  # e.g. an addition being rewritten right now
+            errors.append(f"{id_}: {e}")
+            continue
         with open(os.path.join(REVIEW, id_ + ".json"), "w", encoding="utf-8") as fh:
             json.dump(rec, fh, ensure_ascii=False, indent=1)
             fh.write("\n")
         report.append(info)
+    for e in errors:
+        print("SKIPPED", e)
     if report_path:
         with open(report_path, "w", encoding="utf-8") as fh:
             json.dump(report, fh, ensure_ascii=False, indent=1)

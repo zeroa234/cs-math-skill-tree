@@ -9,9 +9,9 @@
   "mainSkills": 121,
   "withResource": 192,
   "withChineseResource": 192,
-  "withBilingualPath": 75,
-  "completeChinesePaths": 74,
-  "completeEnglishPaths": 75,
+  "withBilingualPath": 78,
+  "completeChinesePaths": 76,
+  "completeEnglishPaths": 78,
   "resourcesReviewed": "2026-11-01",
   "withExercise": 192,
   "withGuide": 192,
@@ -9691,12 +9691,13 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "CMSC 754 Computational Geometry（University of Maryland, Fall 2023, Dave Mount）— 课程主页 + 全套讲义 PDF",
+    "title": "CMSC 754 Computational Geometry（University of Maryland, Fall 2023, Dave Mount）",
     "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
     "lang": "en",
     "free": true,
-    "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与点定位、Voronoi 图、Delaunay 三角剖分及构造、直线/超平面排列、范围搜索与 kd-树/正交范围树、WSPD、coresets、采样与 VC 维、运动规划。对应收窄后的凸包/线段求交/三角剖分/Voronoi/Delaunay/范围搜索；课程描述与 20 讲讲义里都没有曲面网格处理，几何处理不属本资源。",
-    "access": "课程主页与 20 讲讲义 PDF 公开；整套讲义 PDF 版权声明允许为教育目的免费复制与分发；无视频。"
+    "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与点定位、Voronoi 图、Delaunay 三角剖分及构造、直线／超平面排列、范围搜索与 kd-树／正交范围树、WSPD、coresets、采样与 VC 维、运动规划。",
+    "access": "课程主页与 20 讲讲义 PDF 公开；整套讲义 PDF 版权声明允许为教育目的免费复制与分发；无影片。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
@@ -9704,12 +9705,276 @@
     "url": "https://oi-wiki.org/geometry/",
     "lang": "zh",
     "free": true,
-    "covers": "二维/三维计算几何基础、凸包（Andrew 算法）、三角剖分（Delaunay 三角剖分与 Voronoi 图及对偶关系）、半平面交、旋转卡壳、平面最近点对、最小圆覆盖、反演变换；扫描线页只讲矩形面积并与二维数点，不是线段求交；范围搜索/点定位/排列没有对应条目。",
-    "access": "免费在线阅读（CC BY-SA 4.0）；无视频；条目偏竞赛与工程算法，定理与复杂度论证不如英文课程系统。"
+    "covers": "二维／三维计算几何基础、凸包（Andrew 算法）、三角剖分（Delaunay 三角剖分与 Voronoi 图及对偶关系）、半平面交、旋转卡壳、平面最近点对、最小圆覆盖、反演变换；扫描线页只讲矩形面积与二维数点，不是线段求交；范围搜索／点定位／排列没有对应条目。",
+    "access": "免费在线阅读（CC BY-SA 4.0）；中文；无影片；偏竞赛与工程算法，定理与复杂度论证不如课程系统。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "video",
+     "title": "《Computational Geometry（上）（下）》经典计算几何 295 讲（B 站公开录像）",
+     "url": "https://www.bilibili.com/video/BV1rj411673b/",
+     "lang": "zh",
+     "free": true,
+     "covers": "分 P 按 01-A…01-M（凸包：Planarity、Amortization、Merge、Common Kernel、Interior/Exterior、Common Tangents、Stitch、Zig-Zag）、02-A…02-J（平面扫描与几何求交：Min-Gap/Max-Gap、Lower Bound、Event Queue、Sweepline Status、Monotone Partitioning、Plane Sweeping）、03-A…03-E（多边形剖分：三角剖分、三着色、支配集、鸽巢原理、Ear & Mouth）、04-A…04-M（Voronoi 图与 Delaunay：Common Tangents、Contour Length、Fortune's Trick、Site Event）、05-A…05-H（Lower Bound、History、Complexity、Approximation、Hardness、Strategies）编号组织；课程简介明确写教学目标包含“凸包、多边形细分、Voronoi 图、Delaunay 三角剖分，以及几何求交、点定位、范围查找、截窗查询”。",
+     "access": "第三方转载，授权未核。B 站免费观看，“上”为 200 个分 P（每 P 2–9 分钟的小节），中文授课；上传者为营销式搬运账号，非清华官方账号；字幕未核对。另有“(下)”由另一账号发布。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "清华大学《计算几何》课程站（邓俊辉，课程号 70240183；含历学期课程进度与 Lecture Notes 链接）",
+     "url": "https://dsa.cs.tsinghua.edu.cn/~deng/cg/",
+     "lang": "zh",
+     "free": true,
+     "covers": "课程站给出教材（de Berg 等《Computational Geometry: Algorithms & Applications》）、Lecture Notes（清华云盘）、以及 Fall 2006/2004/2003/2001 各学期课程页。Fall 2006 课程页的“重要知识点”清单逐条列出：Convex hull、(Delaunay) triangulation、Voronoi diagram、(Planar) arrangement、(Planar) configuration / dissection、(Planar) point location、(Planar) range search、Geometric Intersection——中文侧缺的“范围查找（range search）”正是这份官方课程大纲里的一行。",
+     "access": "清华大学课程站免费公开，无需注册（Lecture Notes 走清华云盘链接，可能需要清华账号，未点开核对）；页面为 GBK 编码，正文中文在纯文本抓取时会乱码，英文知识点名可读；中文授课（配套 B 站录像）。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "OI Wiki：计算几何（凸包、三角剖分含 Delaunay/Voronoi）",
+      "url": "https://oi-wiki.org/geometry/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "二维／三维计算几何基础、凸包（Andrew 算法）、三角剖分（Delaunay 三角剖分与 Voronoi 图及对偶关系）、半平面交、旋转卡壳、平面最近点对、最小圆覆盖、反演变换；扫描线页只讲矩形面积与二维数点，不是线段求交；范围搜索／点定位／排列没有对应条目。",
+      "access": "免费在线阅读（CC BY-SA 4.0）；中文；无影片；偏竞赛与工程算法，定理与复杂度论证不如课程系统。",
+      "publisher": "OI Wiki 社群"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "《Computational Geometry（上）（下）》经典计算几何 295 讲（B 站公开录像）",
+      "url": "https://www.bilibili.com/video/BV1rj411673b/",
+      "tier": "video",
+      "free": true,
+      "role": "supplement",
+      "covers": "分 P 按 01-A…01-M（凸包：Planarity、Amortization、Merge、Common Kernel、Interior/Exterior、Common Tangents、Stitch、Zig-Zag）、02-A…02-J（平面扫描与几何求交：Min-Gap/Max-Gap、Lower Bound、Event Queue、Sweepline Status、Monotone Partitioning、Plane Sweeping）、03-A…03-E（多边形剖分：三角剖分、三着色、支配集、鸽巢原理、Ear & Mouth）、04-A…04-M（Voronoi 图与 Delaunay：Common Tangents、Contour Length、Fortune's Trick、Site Event）、05-A…05-H（Lower Bound、History、Complexity、Approximation、Hardness、Strategies）编号组织；课程简介明确写教学目标包含“凸包、多边形细分、Voronoi 图、Delaunay 三角剖分，以及几何求交、点定位、范围查找、截窗查询”。",
+      "access": "第三方转载，授权未核。B 站免费观看，“上”为 200 个分 P（每 P 2–9 分钟的小节），中文授课；上传者为营销式搬运账号，非清华官方账号；字幕未核对。另有“(下)”由另一账号发布。",
+      "publisher": "B 站上传者：会了么（课程来源／教师未在页面标明）",
+      "reupload": true,
+      "official_search": "官方渠道已查：①清华大学《计算几何》课程站 https://dsa.cs.tsinghua.edu.cn/~deng/cg/ 可正常打开（邓俊辉，课程号 70240183，含 Lecture Notes 与 2001/2003/2004/2006 各学期课程页），已作为 r7-zh1 登记；②该站 Fall 2006 课程页的“重要知识点”清单含 (Planar) range search、(Planar) point location，与 B 站这套 200 讲录像的课程简介所述“范围查找、截窗查询”一致，可确认录像内容是清华这门课；③B 站上传者为 6.8 万粉的营销式账号（简介“关注我,为中国教育点赞！…VX…”），不是清华官方账号，故转载保留 reupload:true，官方版按课程站登记。",
+      "updated_by": [
+       "review/pi-additions/M.4.4.json"
+      ]
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "CMSC 754 Computational Geometry（University of Maryland, Fall 2023, Dave Mount）",
+      "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
+      "tier": "website",
+      "free": true,
+      "role": "primary",
+      "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与点定位、Voronoi 图、Delaunay 三角剖分及构造、直线／超平面排列、范围搜索与 kd-树／正交范围树、WSPD、coresets、采样与 VC 维、运动规划。",
+      "access": "课程主页与 20 讲讲义 PDF 公开；整套讲义 PDF 版权声明允许为教育目的免费复制与分发；无影片。",
+      "publisher": "University of Maryland（Prof. Dave Mount）"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "清华大学《计算几何》课程站（邓俊辉，课程号 70240183；含历学期课程进度与 Lecture Notes 链接）",
+      "url": "https://dsa.cs.tsinghua.edu.cn/~deng/cg/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "课程站给出教材（de Berg 等《Computational Geometry: Algorithms & Applications》）、Lecture Notes（清华云盘）、以及 Fall 2006/2004/2003/2001 各学期课程页。Fall 2006 课程页的“重要知识点”清单逐条列出：Convex hull、(Delaunay) triangulation、Voronoi diagram、(Planar) arrangement、(Planar) configuration / dissection、(Planar) point location、(Planar) range search、Geometric Intersection——中文侧缺的“范围查找（range search）”正是这份官方课程大纲里的一行。",
+      "access": "清华大学课程站免费公开，无需注册（Lecture Notes 走清华云盘链接，可能需要清华账号，未点开核对）；页面为 GBK 编码，正文中文在纯文本抓取时会乱码，英文知识点名可读；中文授课（配套 B 站录像）。",
+      "publisher": "清华大学计算机科学与技术系（授课教师：邓俊辉）",
+      "reupload": false,
+      "official_search": "",
+      "added_by": "review/pi-additions/M.4.4.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "凸包",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "凸包（Andrew 算法）",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "第 01 章凸包：Extremity、To-Left、Graham/Jarvis、下界、分治",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Convex Hulls（Graham/Jarvis/Chan 与下界）",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文 OI Wiki 给 Andrew 算法与代码，影片第 01 章给多种算法与下界；英文 CMSC754 凸包讲次对应。"
+     },
+     {
+      "topic": "线段求交",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "第 02 章线段求交：Element Uniqueness、brute-force、proximity/separability、sickles、monotone partitioning",
+        "extent": "covered"
+       },
+       {
+        "source": "zh1",
+        "section": "扫描线（只讲矩形面积，不是线段求交）",
+        "extent": "partial"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Segment Intersection",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文 OI Wiki 没有线段求交条目（扫描线只讲矩形面积），故由影片第 02 章补；英文 CMSC754 的 Segment Intersection 讲次对应。"
+     },
+     {
+      "topic": "空间划分",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "第 06 章点定位与梯形分解：Subdivision、Search Structure、Ray Shooting",
+        "extent": "covered"
+       },
+       {
+        "source": "zh1",
+        "section": "三角剖分（Delaunay 对偶）；无一般空间划分条目",
+        "extent": "partial"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Trapezoidal Decomposition / Point Location；Arrangements",
+        "extent": "covered"
+       }
+      ],
+      "note": "空间划分按梯形分解、点定位与排列理解；中文影片第 06 章有梯形分解与搜寻结构，英文 CMSC754 的 point location／arrangements 对应。"
+     },
+     {
+      "topic": "Voronoi 与 Delaunay 结构",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "Delaunay 三角剖分与 Voronoi 图及对偶关系",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "第 04 章 Voronoi（beach line、site/circle event）；第 05 章 Delaunay（空外接圆、edge flipping）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Voronoi Diagrams；Delaunay Triangulations",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文 OI Wiki 与影片第 04–05 章都覆盖 Voronoi／Delaunay，影片另有 Fortune 扫描线与构造细节；英文 CMSC754 两个讲次对应。"
+     },
+     {
+      "topic": "范围搜索与几何算法",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh2",
+        "section": "第 06 章点定位、ray shooting（只到点定位／射线，不含正交范围搜索、kd-tree）",
+        "extent": "partial"
+       },
+       {
+        "source": "zh1",
+        "section": "最近点对、旋转卡壳、最小圆覆盖（几何算法，但不是范围搜索）",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "清华《计算几何》Fall 2006 课程页“重要知识点”：(Planar) range search、(Planar) point location；配套录像见 zh2（200 讲，简介列“范围查找、截窗查询”）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Range Searching（kd-trees、orthogonal range trees）；Point Location",
+        "extent": "covered"
+       }
+      ],
+      "note": "「范围搜索与几何算法」包含正交范围搜索、kd-tree、范围树等；中文影片只有点定位／ray shooting，OI Wiki 只有最近点对等几何算法，故中文只 partial。英文 CMSC754 的 Range Searching 讲次完整覆盖。；“范围搜索”这一半由清华课程的官方知识点清单承担（(Planar) range search、(Planar) point location 是正式知识点），配套中文课堂录像为 zh2（200 讲，简介同样列明“范围查找、截窗查询”，分 P 按 01–05 章编号）；“几何算法”这一半由现有 zh1（OI Wiki 计算几何：凸包、三角剖分含 Delaunay/Voronoi、扫描线）与 zh2 的 01–04 各章承担。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "先读凸包、Delaunay／Voronoi 条目，建立基本算法与代码实作。"
+       },
+       {
+        "source": "zh2",
+        "read": "看第 01 章凸包、第 02 章线段求交，补 OI Wiki 没有的线段求交与下界。"
+       },
+       {
+        "source": "zh2",
+        "read": "看第 03–05 章三角剖分、Voronoi、Delaunay，再看第 06 章点定位／梯形分解。"
+       },
+       {
+        "source": "zh1",
+        "read": "用最近点对、旋转卡壳、最小圆覆盖等条目补几何算法；正交范围搜索需另读英文 CMSC754。"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "先看清华课程站 Fall 2006 课程页的“重要知识点”与“课程进度计划”，明确凸包→几何求交→多边形剖分→Voronoi/Delaunay→点定位与范围查找的次序；再按 Lecture Notes 链接取讲义对照。"
+       },
+       {
+        "source": "zh2",
+        "read": "按分 P 编号顺序看 01（凸包）→02（平面扫描与几何求交）→03（多边形剖分）→04（Voronoi 与 Delaunay）→05（Lower Bound／History／Complexity／Strategies 一组，即范围查找相关小节），每看完一章用 OI Wiki（zh1）对应条目复核实现细节。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "Read the Convex Hulls, Segment Intersection and Triangulation lectures first."
+       },
+       {
+        "source": "en1",
+        "read": "Continue with Voronoi Diagrams, Delaunay Triangulations, Point Location and Arrangements."
+       },
+       {
+        "source": "en1",
+        "read": "Finish with Range Searching (kd-trees/orthogonal range trees), WSPD, coresets and sampling."
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": []
+   },
    "courses": [
     {
      "school": "University of Maryland (College Park)",
@@ -9839,12 +10104,13 @@
    "reach": 0,
    "resource": {
     "tier": "material",
-    "title": "Introduction to Topological Data Analysis — ETH Zürich 讲义（FS 2026，P. Schnider / L. Slot / S. Weber）",
+    "title": "Introduction to Topological Data Analysis — ETH Zürich 讲义（FS 2026）",
     "url": "https://ti.inf.ethz.ch/ew/courses/TDA26/Script.pdf",
     "lang": "en",
     "free": true,
-    "covers": "点集/度量空间、代数基础、同调（单纯复形、链、边界映射、同调群、奇异同调）、持续同调（过滤、持久模、条形码、配对与矩阵约化算法）、点云复形（Čech/Vietoris–Rips、Delaunay/Alpha）、持续图距离与稳定性（bottleneck/Wasserstein、interleaving 距离与稳定性定理）、Reeb 图与 Mapper（数据拓扑摘要）、最优生成元、多参数持续。对应收窄后的单纯复形/同调/持续同调/数据拓扑摘要与稳定性；不含几何深度学习。",
-    "access": "ETH 课程站点直接公开整本讲义 PDF（FS 2026 版），无需登录；无视频；只需线性代数，不要求先修拓扑。"
+    "covers": "点集／度量空间、代数基础、同调（单纯复形、链、边界映射、同调群、奇异同调）、持续同调（过滤、持久模、条形码、配对与矩阵约化）、点云复形（Čech／Vietoris–Rips、Delaunay／Alpha）、持续图距离与稳定性（bottleneck／Wasserstein、interleaving 距离与稳定性定理）、Reeb 图与 Mapper、最优生成元、多参数持续。",
+    "access": "ETH 课程站直接公开整本讲义 PDF（FS 2026 版），无需登录；无影片；只需线性代数，不要求先修拓扑。",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "material",
@@ -9852,22 +10118,246 @@
     "url": "https://tianboqi.github.io/files/tda.pdf",
     "lang": "zh",
     "free": true,
-    "covers": "点集拓扑基础、单纯形与单纯复形（拓扑空间的三角剖分）、单纯链群与单纯同调、持续同调（从数据构建复形、Z2 上的持续同调及计算）、持续同调算法实践（调包实现）；不含 bottleneck 稳定性定理、Reeb/Mapper，也不含几何深度学习。",
-    "access": "作者个人网站公开 PDF，含中文目录与正文；需要点集拓扑、线性代数与证明基础；无视频。"
+    "covers": "第一部分：点集拓扑基础、单纯形与单纯复形、单纯链群与单纯同调；第二部分：从数据构建复形、持续同调、Z2 上的持续同调及计算、持续同调算法实践（调包实现）。",
+    "access": "作者个人网站公开 PDF，含中文目录与正文；需要点集拓扑、线性代数与证明基础；无影片。",
+    "role": "primary"
    },
    "zhResourceNote": "",
    "extraResources": [
     {
+     "tier": "video",
+     "title": "《面向应用的拓扑数据分析基础（一）》暑期课录像（约 104 分钟）",
+     "url": "https://www.bilibili.com/video/BV18z4y137Lv/",
+     "lang": "zh",
+     "free": true,
+     "covers": "面向非拓扑专业的 TDA 入门：把代数拓扑部分理论封装成黑箱，解释输入、输出、背景与动机；作为点云与持续同调的直观补充。",
+     "access": "B 站免费观看，暑期课 4 讲（本页为第一讲，约 1 小时 44 分），中文授课；PPT 与视频可通过简介里的百度网盘获取；讲课者为个人账号（非学校官方）；字幕未核对。",
+     "role": "supplement"
+    },
+    {
      "tier": "material",
-     "title": "Ghrist：Elementary Applied Topology",
-     "url": "https://www2.math.upenn.edu/~ghrist/notes.html",
+     "title": "ETH Zürich TDA 课程 Chapter 6: Distances and Stability（PDF，2025 版讲义）",
+     "url": "https://ti.inf.ethz.ch/ew/courses/TDA25/Chapter6.pdf",
      "lang": "en",
      "free": true,
-     "covers": "作者开放各章 PDF，拓扑背景与应用的另一条路线。",
-     "access": "免费公开正文，无需注册。"
+     "covers": "整章讲持续同调的距离与稳定性：6.1 Distance Metrics on Persistence Diagrams、6.1.1 Bottleneck Distance（定义 6.2：db(Dgm_p(F),Dgm_p(G)) := inf_π sup_x ||x−π(x)||₁，先证明它是度量）、Hausdorff 距离、以及后续的稳定性定理（把过滤函数的扰动与条形码/图的距离联系起来）。",
+     "access": "ETH 课程站免费 PDF，无注册；英文；数学排版 PDF。",
+     "role": "reference"
     }
    ],
-   "learningPath": null,
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "齐天博《拓扑学与拓扑数据分析》（作者公开中文讲义）",
+      "url": "https://tianboqi.github.io/files/tda.pdf",
+      "tier": "material",
+      "free": true,
+      "role": "primary",
+      "covers": "第一部分：点集拓扑基础、单纯形与单纯复形、单纯链群与单纯同调；第二部分：从数据构建复形、持续同调、Z2 上的持续同调及计算、持续同调算法实践（调包实现）。",
+      "access": "作者个人网站公开 PDF，含中文目录与正文；需要点集拓扑、线性代数与证明基础；无影片。",
+      "publisher": "齐天博（tianboqi.github.io）"
+     },
+     {
+      "key": "zh2",
+      "lang": "zh",
+      "title": "《面向应用的拓扑数据分析基础（一）》暑期课录像（约 104 分钟）",
+      "url": "https://www.bilibili.com/video/BV18z4y137Lv/",
+      "tier": "video",
+      "free": true,
+      "role": "supplement",
+      "covers": "面向非拓扑专业的 TDA 入门：把代数拓扑部分理论封装成黑箱，解释输入、输出、背景与动机；作为点云与持续同调的直观补充。",
+      "access": "B 站免费观看，暑期课 4 讲（本页为第一讲，约 1 小时 44 分），中文授课；PPT 与视频可通过简介里的百度网盘获取；讲课者为个人账号（非学校官方）；字幕未核对。",
+      "publisher": "B 站账号“阿斯特里克”（166 粉）。依据：视频页简介是讲课人自述——“这是一期非正式的拓扑数据分析（Topological Data Analysis, TDA）暑期课的录像……前置知识只需要线性代数……欢迎在评论区留言讨论。PPT 及视频下载可用以下度盘链接”“暑期课共四次……如果想与我合作可以私信聊”；页面版权位标“未经作者授权，禁止转载”。属讲课人本人发布自己的暑期课录像（4 讲合集），不是第三方转载；账号为个人账号，非学校官方号。",
+      "reupload": false,
+      "updated_by": [
+       "review/pi-additions/M.4.5.json"
+      ]
+     },
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Introduction to Topological Data Analysis — ETH Zürich 讲义（FS 2026）",
+      "url": "https://ti.inf.ethz.ch/ew/courses/TDA26/Script.pdf",
+      "tier": "material",
+      "free": true,
+      "role": "primary",
+      "covers": "点集／度量空间、代数基础、同调（单纯复形、链、边界映射、同调群、奇异同调）、持续同调（过滤、持久模、条形码、配对与矩阵约化）、点云复形（Čech／Vietoris–Rips、Delaunay／Alpha）、持续图距离与稳定性（bottleneck／Wasserstein、interleaving 距离与稳定性定理）、Reeb 图与 Mapper、最优生成元、多参数持续。",
+      "access": "ETH 课程站直接公开整本讲义 PDF（FS 2026 版），无需登录；无影片；只需线性代数，不要求先修拓扑。",
+      "publisher": "ETH Zürich（P. Schnider / L. Slot / S. Weber）"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "ETH Zürich TDA 课程 Chapter 6: Distances and Stability（PDF，2025 版讲义）",
+      "url": "https://ti.inf.ethz.ch/ew/courses/TDA25/Chapter6.pdf",
+      "tier": "material",
+      "free": true,
+      "role": "reference",
+      "covers": "整章讲持续同调的距离与稳定性：6.1 Distance Metrics on Persistence Diagrams、6.1.1 Bottleneck Distance（定义 6.2：db(Dgm_p(F),Dgm_p(G)) := inf_π sup_x ||x−π(x)||₁，先证明它是度量）、Hausdorff 距离、以及后续的稳定性定理（把过滤函数的扰动与条形码/图的距离联系起来）。",
+      "access": "ETH 课程站免费 PDF，无注册；英文；数学排版 PDF。",
+      "publisher": "ETH Zürich（TDA 课程教学团队，2025 版讲义）",
+      "reupload": false,
+      "official_search": "",
+      "added_by": "review/pi-additions/M.4.5.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "单纯复形与同调",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "2.1 单纯形与复形、拓扑空间的三角剖分；2.2 单纯链群与单纯同调群",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Homology：simplicial complexes、chains、boundary maps、homology groups、singular homology",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文齐天博第 2 章从单纯形、链群到同调群完整讲；英文 ETH 讲义的同调章节对应，并多讲奇异同调。"
+     },
+     {
+      "topic": "持续同调与条形码",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "3.2 从数据构建复形、持续同调、Z2 上的持续同调及计算；3.3 算法实践",
+        "extent": "covered"
+       },
+       {
+        "source": "zh2",
+        "section": "TDA 暑期课第一讲（持续同调直观）",
+        "extent": "partial"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Persistent homology：filtration、persistence modules、barcodes、pairing/matrix reduction",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文齐天博第 3 章有持续同调与 Z2 计算，暑期课只作直观补充；英文 ETH 讲义有 filtration／barcode／matrix reduction 的完整处理。"
+     },
+     {
+      "topic": "点云的多尺度拓扑结构",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "3.1 数据的拓扑结构；3.2.1 从数据构建复形",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Point cloud complexes：Čech/Vietoris–Rips、Delaunay/Alpha complexes",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文讲义从数据构建复形并做多尺度持续同调；英文 ETH 讲义另列 Čech／VR／Delaunay／Alpha 复形。"
+     },
+     {
+      "topic": "拓扑摘要的稳定性",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "全书没有 bottleneck／Wasserstein 稳定性定理或 Reeb/Mapper 章节",
+        "extent": "partial"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "Persistence diagram distances and stability：bottleneck/Wasserstein、interleaving distance and stability theorem",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文主讲义明确没有稳定性与 Reeb/Mapper；暑期课只有一讲入门，未见稳定性定理。此项中文标 partial，不假报 covered；英文 ETH 讲义有完整章节。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "partial",
+      "covered": 3,
+      "total": 4,
+      "gaps": [
+       "拓扑摘要的稳定性"
+      ],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "读第 1 章点集拓扑基础，补拓扑空间、连续映射与同伦。"
+       },
+       {
+        "source": "zh1",
+        "read": "读第 2 章单纯形、单纯复形、链群与同调群。"
+       },
+       {
+        "source": "zh1",
+        "read": "读第 3 章从数据构建复形、Z2 持续同调、barcode 计算与调包实践。"
+       },
+       {
+        "source": "zh2",
+        "read": "看暑期课第一讲建立直观；稳定性与 Reeb/Mapper 仍无中文材料，需另找。"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 4,
+      "total": 4,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "Read the homology chapters first: simplicial complexes, chains, boundary maps and homology groups."
+       },
+       {
+        "source": "en1",
+        "read": "Read persistent homology: filtrations, persistence modules, barcodes and the matrix reduction algorithm."
+       },
+       {
+        "source": "en1",
+        "read": "Read point cloud complexes (Čech/VR/Delaunay/Alpha), then persistence diagram distances and the stability theorem."
+       },
+       {
+        "source": "en1",
+        "read": "Finish with Reeb graphs/Mapper and the multiparameter chapter."
+       },
+       {
+        "source": "r7-en1",
+        "read": "读 Chapter 6 的 6.1/6.1.1：先按定义 6.2 手算两个小的持久图之间的 bottleneck distance，再读稳定性定理部分，弄清过滤函数扰动 ≤ε 时条形码距离 ≤ε 的含义。"
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": [
+     {
+      "lang_missing": "zh",
+      "topic": "拓扑摘要的稳定性",
+      "source": "en1",
+      "reason": "本轮中文侧四个渠道都查过仍无系统教学：文字（齐天博讲义 PDF 全文按“稳定/瓶颈/Wasserstein/interleaving”检索无命中；三轮中文检索只得到知乎单篇系列、CSDN 短文、中文维基与一篇中文综述论文，均不构成章节级教学）、视频（B 站三组关键词检索没有中文 TDA 稳定性讲次，唯一相关的暑期课 4 讲只有“（一）～（四）”无小节标题、无法确认）、官方课程（中国大学MOOC/学堂在线检索无拓扑数据分析或持续同调课程；上海科技大学《拓扑数据分析导论》教学大纲虽存在，但大纲里只有 Persistent homology 与 Mapper，没有稳定性单元，也无公开讲义/录像）、付费/出版物（未出现可核目录的中文《拓扑数据分析》教材页）。因此中文学习者的稳定性部分只能看现有 en1（ETH 讲义）的稳定性章节，本轮另补了更精确的 TDA25 Chapter 6“Distances and Stability”。",
+      "searched_channels": [
+       "text",
+       "video",
+       "paid"
+      ],
+      "confirmed_by": "review/pi-additions/M.4.5.json"
+     }
+    ]
+   },
    "courses": [
     {
      "school": "Duke University",
@@ -21010,6 +21500,16 @@
      "covers": "课程概述按周列出内容：（1）NumPy——“讲解 N 维数据的表达及科学计算的基本概念和运算方法”；（2）Matplotlib（坐标系、散点图、极坐标图）；（3）Pandas——“介绍并讲解 Series 和 DataFrame 数据类型的表示和基本使用”。补中文侧缺的数组与数据框，以及 Python 里数组式科学计算的基础运算。",
      "access": "中国大学MOOC 免费注册后可学习视频（认证证书另收费）；中文授课；字幕未核对。参考资料列《Python语言程序设计基础（第3版）》与《利用Python进行数据分析》。",
      "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "菜鸟教程：SciPy 教程（中文，优化器、插值、显着性检验、稀疏矩阵、空间数据等模块）",
+     "url": "https://www.runoob.com/scipy/scipy-tutorial.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "SciPy 安装与模块列表；优化器（scipy.optimize.minimize、求根）、插值（interp1d、样条、径向基函数）、显着性检验（scipy.stats）、稀疏矩阵、图结构、空间数据；每节配可运行实例和输出。",
+     "access": "免费中文网页教程，无需注册；页面有广告。",
+     "role": "supplement"
     }
    ],
    "learningPath": {
@@ -21065,6 +21565,20 @@
       "reupload": false,
       "official_search": "",
       "added_by": "review/pi-additions/P.2.3.json"
+     },
+     {
+      "key": "main-zh-scipy",
+      "lang": "zh",
+      "title": "菜鸟教程：SciPy 教程（中文，优化器、插值、显着性检验、稀疏矩阵、空间数据等模块）",
+      "url": "https://www.runoob.com/scipy/scipy-tutorial.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "SciPy 安装与模块列表；优化器（scipy.optimize.minimize、求根）、插值（interp1d、样条、径向基函数）、显着性检验（scipy.stats）、稀疏矩阵、图结构、空间数据；每节配可运行实例和输出。",
+      "access": "免费中文网页教程，无需注册；页面有广告。",
+      "publisher": "菜鸟教程（runoob.com）",
+      "reupload": false,
+      "added_by": "review/main-additions/P.2.3.json"
      }
     ],
     "topics": [
@@ -21114,6 +21628,11 @@
         "source": "r7-zh1",
         "section": "第 1 周 NumPy：N 维数据的表达及科学计算的基本概念和运算方法",
         "extent": "partial"
+       },
+       {
+        "source": "main-zh-scipy",
+        "section": "SciPy 优化器、SciPy 插值、Scipy 显着性检验、SciPy 稀疏矩阵（接北理工《Python数据分析与展示》第 1 周 NumPy）",
+        "extent": "covered"
        }
       ],
       "en": [
@@ -21123,7 +21642,7 @@
         "extent": "covered"
        }
       ],
-      "note": "中文侧同样缺 SciPy 教学材料。；这一周覆盖 Python 里数组式科学计算的基础：N 维数组、向量化运算、随机数、CSV 与多维数据存取，够用但不含 SciPy 的插值、优化与拟合、数值积分、信号处理等模块级内容，所以中文侧只算部分覆盖。"
+      "note": "中文侧同样缺 SciPy 教学材料。；这一周覆盖 Python 里数组式科学计算的基础：N 维数组、向量化运算、随机数、CSV 与多维数据存取，够用但不含 SciPy 的插值、优化与拟合、数值积分、信号处理等模块级内容，所以中文侧只算部分覆盖。；NumPy 层面由北理工课第 1 周讲，SciPy 的优化、插值、统计检验由菜鸟教程逐模块配例子讲，组合起来与英文 SciPy Lecture Notes 1.6 的入门范围相当。pi 查了莫烦、scipy-lectures、MOOC 与 B 站后判定中文没有，漏查了这套中文教程，跨语言补充撤销。"
      },
      {
       "topic": "环境管理与自动化",
@@ -21152,12 +21671,10 @@
     ],
     "routes": {
      "zh": {
-      "status": "partial",
-      "covered": 3,
+      "status": "complete",
+      "covered": 4,
       "total": 4,
-      "gaps": [
-       "科学计算"
-      ],
+      "gaps": [],
       "steps": [
        {
         "source": "zh1",
@@ -21166,6 +21683,10 @@
        {
         "source": "r7-zh1",
         "read": "接廖雪峰教程之后：第 1 周 NumPy（N 维数组、索引切片、广播式运算、随机数与 CSV/多维数据存取），做一遍把表格数据读进数组并做统计的小练习；第 2 周 Matplotlib 出图；第 3 周 Pandas（Series 与 DataFrame 的建立、索引、筛选、分组统计）。"
+       },
+       {
+        "source": "main-zh-scipy",
+        "read": "学完 NumPy 后按菜鸟教程 SciPy 部分依次做优化器、插值、显着性检验三节的实例，自己换数据各写一个小例子。"
        }
       ]
      },
@@ -21186,20 +21707,7 @@
       ]
      }
     },
-    "crossLanguageFallbacks": [
-     {
-      "lang_missing": "zh",
-      "topic": "科学计算",
-      "source": "en1",
-      "reason": "本轮中文侧查了四个渠道仍无 SciPy 的工具教学：文字（莫烦Python 数据处理只有 Numpy/Pandas/Matplotlib，无 SciPy；scipy-lectures 无中文版）、视频（B 站三组关键词都没有中文授课的 SciPy 系列课，数学建模/计算方法课是数值数学理论，不是 SciPy 用法）、官方课程（中国大学MOOC 只有《数值分析/计算方法》类理论课与《Python数据分析与展示》，后者 NumPy 周只到“科学计算的基本概念和运算方法”）、付费（张若愚《Python科学计算》只有百科与电商页，出版社目录页未取到）。所以中文路线里 SciPy 的插值/优化/积分部分仍看英文 SciPy Lecture Notes（en1）第 1.6 节。",
-      "searched_channels": [
-       "text",
-       "video",
-       "paid"
-      ],
-      "confirmed_by": "review/pi-additions/P.2.3.json"
-     }
-    ]
+    "crossLanguageFallbacks": []
    },
    "courses": [
     {
@@ -24755,25 +25263,389 @@
    "step": 3,
    "reach": 0,
    "resource": {
-    "tier": "website",
-    "title": "Software Engineering at Google（免费在线版：第 1 章 Programming over Time、第 15 章 Deprecation、第 17 章 Code Search、第 22 章 Large-Scale Changes）",
+    "tier": "material",
+    "title": "Software Engineering at Google（免费在线版）：第 1 章 Programming over Time、第 15 章 Deprecation、第 17 章 Code Search、第 22 章 Large-Scale Changes",
     "url": "https://abseil.io/resources/swe-book/html/toc.html",
     "lang": "en",
     "free": true,
-    "covers": "第 1 章讲“软件工程 = 编程对时间积分”、可持续性与长期变更成本（技术债的根源）；第 15 章 Deprecation 讲系统老化、弃用策略、兼容期与迁移；第 17 章 Code Search 讲在大代码库中定位与阅读陌生代码；第 22 章 Large-Scale Changes 讲大规模重构/迁移的流程与工具。覆盖可维护性、兼容性、迁移、代码理解与技术债。"
+    "covers": "第 1 章讲“软件工程 = 编程随时间积分”、可持续性与长期变更成本（技术债的根源）；第 15 章 Deprecation 讲系统老化、弃用策略、兼容期与迁移；第 17 章 Code Search 讲在大代码库中定位与阅读陌生代码；第 22 章 Large-Scale Changes 讲大规模重构/迁移的流程与工具。覆盖可维护性、兼容性、迁移、代码理解与技术债；经验研究（实证方法）不在其中。",
+    "access": "免费在线 HTML（O'Reilly 授权公开版），无需注册；纸质版付费。",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "北京大学《软件工程》",
+    "tier": "book",
+    "title": "《软件工程：经典、现代和前沿》第 10 章 软件维护和演化（北大 101 计划教材）",
     "url": "https://www.icourse163.org/course/PKU-1003177002",
     "lang": "zh",
-    "free": null,
-    "covers": "按目录选择软件过程、需求、设计、测试及维护相关章节；高级并发编程与技术债量化仍需英文补充。",
-    "access": "大纲公开；视频可能需注册或参加开课学期，认证证书收费"
+    "free": false,
+    "covers": "课程页列出的教材目录中第 10 章为“软件维护和演化”。章节标题可核，正文未打开；可维护性/兼容性/迁移/代码理解/技术债在该章内的小节覆盖未知，教材另有第 13 章群体化开发（开源协作）与第 14 章 DevOps，可在演化语境下参考。",
+    "access": "教材需购买（北京大学出版社 2024，价格未核、未购买）；章节表引自北大 MOOC 课页。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
-   "learningPath": null,
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "《语义化版本 2.0.0》中文版（semver.org 官方中文译本）",
+     "url": "https://semver.org/lang/zh-CN/",
+     "lang": "zh",
+     "free": true,
+     "covers": "完整规范正文：主版本号·次版本号·修订号的定义与递增规则（做了不兼容的 API 修改→主版本号；向下兼容的功能性新增→次版本号；向下兼容的问题修正→修订号），以及“依赖地狱”的成因与“必须定义公共 API”“发行后禁止改变该版本内容”等强制性条款；后文逐条给出 11 条规范与常见问题（如何判断一次改动是否破坏兼容）。",
+     "access": "免费阅读，无需注册；简体中文（官方译本）。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Strangler Fig 模式（Microsoft Learn 中文，Azure 体系结构中心 云设计模式）",
+     "url": "https://learn.microsoft.com/zh-cn/azure/architecture/patterns/strangler-fig",
+     "lang": "zh",
+     "free": true,
+     "covers": "讲“增量迁移旧系统”的做法：先确定新的服务边界，再逐块把功能片段替换为新的应用与服务；用门面（代理）拦截发往旧系统的请求并在新旧之间路由；给出四个阶段的图示（门面路由→增量迁移→旧系统退役→拆除门面），并说明这种分阶段方式如何降低迁移风险、让旧系统在迁移期间继续运行。",
+     "access": "免费阅读，无需注册；简体中文（Microsoft 官方文档）。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "《如何阅读代码》（Thoughtworks China 洞见博客，张旭海）",
+     "url": "https://www.thoughtworks.com/zh-cn/insights/blog/careers-at-thoughtworks/how-to-read-code",
+     "lang": "zh",
+     "free": true,
+     "covers": "按步骤讲读陌生代码：怎么挑合适的代码库（感兴趣领域、经典且被大量使用、规模合适——标准库/redis/leveldb/xv6 这类）、先看文档（Get Started/Example）、再看目录结构（base/net/demo/tests/docs 各是什么）、从示例与测试代码入手、配合视频与 PPT、用断点与打印栈跟踪调用流程、边读边加注释与画 UML/流程图、最后仿写一个简化版检验是否真懂。",
+     "access": "免费阅读，无需注册；简体中文（Thoughtworks 中国官方博客）。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "《软件工程——理论与实践》（毛新军、董威，高等教育出版社，“101 计划”教材）第 15 章 软件维护和演化",
+     "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=64cd2f16938b7cc2960f0b58",
+     "lang": "zh",
+     "free": false,
+     "covers": "官方目录逐节列出：15.1 软件维护（何为维护、特点与挑战、维护工程师）、15.2 软件演化（何为演化、软件演化法则）、15.3 软件逻辑老化问题（何为逻辑老化、解决逻辑老化的方法）、15.4 软件维护技术、15.5 软件维护过程、15.6 软件的可维护性、15.7 软件维护的输出。",
+     "access": "需购买，高教社玄书平台标价 79.00 元（未购买，仅核对官方目录）；简体中文。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Technical Debt（Martin Fowler bliki）",
+     "url": "https://martinfowler.com/bliki/TechnicalDebt.html",
+     "lang": "en",
+     "free": true,
+     "covers": "把 Ward Cunningham 的技术债隐喻讲透：cruft（内部质量缺陷）如何累积、为什么“多花的力气”就是利息（举了模块结构混乱导致四天变六天的例子），以及债务的分类与偿还策略。",
+     "access": "免费阅读，无需注册；英文。作者本人站点（Martin Fowler）。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "ACM SIGSOFT Empirical Standards for Software Engineering（实证研究标准，含 19 种研究方法的清单）",
+     "url": "https://www2.sigsoft.org/EmpiricalStandards/",
+     "lang": "en",
+     "free": true,
+     "covers": "ACM SIGSOFT 官方的软件工程实证研究证据标准：为每种常见研究方法（如受控实验、案例研究、调查、复现研究等共 19 种）给出独立标准，每份标准区分 essential / desirable / extraordinary 属性，并配作者与审稿人用的 checklist，说明一项实证研究应当怎样设计与报告。",
+     "access": "免费阅读，无需注册；英文。",
+     "role": "supplement"
+    }
+   ],
+   "learningPath": {
+    "checkedAt": "2026-11-01",
+    "sources": [
+     {
+      "key": "en1",
+      "lang": "en",
+      "title": "Software Engineering at Google（免费在线版）：第 1 章 Programming over Time、第 15 章 Deprecation、第 17 章 Code Search、第 22 章 Large-Scale Changes",
+      "url": "https://abseil.io/resources/swe-book/html/toc.html",
+      "tier": "material",
+      "free": true,
+      "role": "primary",
+      "covers": "第 1 章讲“软件工程 = 编程随时间积分”、可持续性与长期变更成本（技术债的根源）；第 15 章 Deprecation 讲系统老化、弃用策略、兼容期与迁移；第 17 章 Code Search 讲在大代码库中定位与阅读陌生代码；第 22 章 Large-Scale Changes 讲大规模重构/迁移的流程与工具。覆盖可维护性、兼容性、迁移、代码理解与技术债；经验研究（实证方法）不在其中。",
+      "access": "免费在线 HTML（O'Reilly 授权公开版），无需注册；纸质版付费。",
+      "publisher": "Google（O'Reilly）"
+     },
+     {
+      "key": "zh1",
+      "lang": "zh",
+      "title": "《软件工程：经典、现代和前沿》第 10 章 软件维护和演化（北大 101 计划教材）",
+      "url": "https://www.icourse163.org/course/PKU-1003177002",
+      "tier": "book",
+      "free": false,
+      "role": "primary",
+      "covers": "课程页列出的教材目录中第 10 章为“软件维护和演化”。章节标题可核，正文未打开；可维护性/兼容性/迁移/代码理解/技术债在该章内的小节覆盖未知，教材另有第 13 章群体化开发（开源协作）与第 14 章 DevOps，可在演化语境下参考。",
+      "access": "教材需购买（北京大学出版社 2024，价格未核、未购买）；章节表引自北大 MOOC 课页。",
+      "publisher": "北京大学出版社"
+     },
+     {
+      "key": "r7-zh1",
+      "lang": "zh",
+      "title": "《语义化版本 2.0.0》中文版（semver.org 官方中文译本）",
+      "url": "https://semver.org/lang/zh-CN/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "完整规范正文：主版本号·次版本号·修订号的定义与递增规则（做了不兼容的 API 修改→主版本号；向下兼容的功能性新增→次版本号；向下兼容的问题修正→修订号），以及“依赖地狱”的成因与“必须定义公共 API”“发行后禁止改变该版本内容”等强制性条款；后文逐条给出 11 条规范与常见问题（如何判断一次改动是否破坏兼容）。",
+      "access": "免费阅读，无需注册；简体中文（官方译本）。",
+      "publisher": "semver.org（Semantic Versioning 规范官方站，中文译本）",
+      "reupload": false,
+      "added_by": "review/pi-additions/P.4.6.json"
+     },
+     {
+      "key": "r7-zh2",
+      "lang": "zh",
+      "title": "Strangler Fig 模式（Microsoft Learn 中文，Azure 体系结构中心 云设计模式）",
+      "url": "https://learn.microsoft.com/zh-cn/azure/architecture/patterns/strangler-fig",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "讲“增量迁移旧系统”的做法：先确定新的服务边界，再逐块把功能片段替换为新的应用与服务；用门面（代理）拦截发往旧系统的请求并在新旧之间路由；给出四个阶段的图示（门面路由→增量迁移→旧系统退役→拆除门面），并说明这种分阶段方式如何降低迁移风险、让旧系统在迁移期间继续运行。",
+      "access": "免费阅读，无需注册；简体中文（Microsoft 官方文档）。",
+      "publisher": "Microsoft Learn / Azure Architecture Center（官方文档）",
+      "reupload": false,
+      "added_by": "review/pi-additions/P.4.6.json"
+     },
+     {
+      "key": "r7-zh3",
+      "lang": "zh",
+      "title": "《如何阅读代码》（Thoughtworks China 洞见博客，张旭海）",
+      "url": "https://www.thoughtworks.com/zh-cn/insights/blog/careers-at-thoughtworks/how-to-read-code",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "按步骤讲读陌生代码：怎么挑合适的代码库（感兴趣领域、经典且被大量使用、规模合适——标准库/redis/leveldb/xv6 这类）、先看文档（Get Started/Example）、再看目录结构（base/net/demo/tests/docs 各是什么）、从示例与测试代码入手、配合视频与 PPT、用断点与打印栈跟踪调用流程、边读边加注释与画 UML/流程图、最后仿写一个简化版检验是否真懂。",
+      "access": "免费阅读，无需注册；简体中文（Thoughtworks 中国官方博客）。",
+      "publisher": "Thoughtworks China（公司官方洞见博客，署名作者张旭海）",
+      "reupload": false,
+      "added_by": "review/pi-additions/P.4.6.json"
+     },
+     {
+      "key": "r7-zh4",
+      "lang": "zh",
+      "title": "《软件工程——理论与实践》（毛新军、董威，高等教育出版社，“101 计划”教材）第 15 章 软件维护和演化",
+      "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=64cd2f16938b7cc2960f0b58",
+      "tier": "book",
+      "free": false,
+      "role": "supplement",
+      "covers": "官方目录逐节列出：15.1 软件维护（何为维护、特点与挑战、维护工程师）、15.2 软件演化（何为演化、软件演化法则）、15.3 软件逻辑老化问题（何为逻辑老化、解决逻辑老化的方法）、15.4 软件维护技术、15.5 软件维护过程、15.6 软件的可维护性、15.7 软件维护的输出。",
+      "access": "需购买，高教社玄书平台标价 79.00 元（未购买，仅核对官方目录）；简体中文。",
+      "publisher": "高等教育出版社（玄书为高教社官方产品信息检索系统；作者毛新军、董威，国防科技大学）",
+      "reupload": false,
+      "added_by": "review/pi-additions/P.4.6.json"
+     },
+     {
+      "key": "r7-en1",
+      "lang": "en",
+      "title": "Technical Debt（Martin Fowler bliki）",
+      "url": "https://martinfowler.com/bliki/TechnicalDebt.html",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "把 Ward Cunningham 的技术债隐喻讲透：cruft（内部质量缺陷）如何累积、为什么“多花的力气”就是利息（举了模块结构混乱导致四天变六天的例子），以及债务的分类与偿还策略。",
+      "access": "免费阅读，无需注册；英文。作者本人站点（Martin Fowler）。",
+      "publisher": "martinfowler.com（Martin Fowler 官方 bliki）",
+      "reupload": false,
+      "added_by": "review/pi-additions/P.4.6.json"
+     },
+     {
+      "key": "r7-en2",
+      "lang": "en",
+      "title": "ACM SIGSOFT Empirical Standards for Software Engineering（实证研究标准，含 19 种研究方法的清单）",
+      "url": "https://www2.sigsoft.org/EmpiricalStandards/",
+      "tier": "website",
+      "free": true,
+      "role": "supplement",
+      "covers": "ACM SIGSOFT 官方的软件工程实证研究证据标准：为每种常见研究方法（如受控实验、案例研究、调查、复现研究等共 19 种）给出独立标准，每份标准区分 essential / desirable / extraordinary 属性，并配作者与审稿人用的 checklist，说明一项实证研究应当怎样设计与报告。",
+      "access": "免费阅读，无需注册；英文。",
+      "publisher": "ACM SIGSOFT（Empirical Standards 项目官方站）",
+      "reupload": false,
+      "added_by": "review/pi-additions/P.4.6.json"
+     }
+    ],
+    "topics": [
+     {
+      "topic": "可维护性",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 10 章 软件维护和演化",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "第 1 章 Programming over Time（可持续性与长期成本）",
+        "extent": "covered"
+       }
+      ],
+      "note": "章节标题可核；正文小节未打开。"
+     },
+     {
+      "topic": "兼容性",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 10 章（兼容性小节未核）",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh1",
+        "section": "摘要（三条递增规则）与“语义化版本控制规范”11 条",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "第 15 章 Deprecation（弃用期与兼容窗口）",
+        "extent": "covered"
+       }
+      ],
+      "note": "旧记录中文只有教材第 10 章的章名。SemVer 中文规范把“什么算不兼容的改动、什么算向下兼容的新增/修正”写成了可判定的规则（并解释依赖地狱），这正是维护阶段判断兼容性的操作依据；与已有的英文第 15 章 Deprecation（弃用期与兼容窗口）互为对照。"
+     },
+     {
+      "topic": "迁移",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 10 章（迁移小节未核）",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh2",
+        "section": "上下文和问题／解决方案（服务边界、门面路由、四阶段）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "第 22 章 Large-Scale Changes（大规模迁移的流程与工具）",
+        "extent": "covered"
+       }
+      ],
+      "note": "旧记录中文只有教材第 10 章的章名，没有迁移的做法。这份微软官方中文文档讲的是“增量迁移旧系统”的标准做法：先定服务边界，再逐块替换并用门面在新旧之间路由，最后退役旧系统，正好补上“迁移”这一条。"
+     },
+     {
+      "topic": "代码理解",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "r7-zh3",
+        "section": "正文 1–5 节（选项目、先看文档、看目录结构、从示例/测试入手、断点与日志跟踪、注释与画图、仿写）",
+        "extent": "covered"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "第 17 章 Code Search（在大代码库中定位与阅读陌生代码）",
+        "extent": "covered"
+       }
+      ],
+      "note": "中文侧没有代码理解/代码检索材料。；上一轮曾判定“中文没有代码理解的教学”，本轮重查后撤回：Thoughtworks 中国这篇方法文给的是可照着做的步骤，而不是泛泛而谈。配合 r7-zh4 第 15 章（维护中的代码理解与再工程语境）与已有的英文第 17 章 Code Search，中文侧补上该点。"
+     },
+     {
+      "topic": "技术债与经验研究",
+      "stage": "core",
+      "zh": [
+       {
+        "source": "zh1",
+        "section": "第 10 章（技术债与实证研究是否覆盖未核）",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-zh4",
+        "section": "第 15 章 15.2 软件演化（演化法则）、15.3 软件逻辑老化问题（何为逻辑老化、解决方法）、15.6 软件的可维护性",
+        "extent": "partial"
+       }
+      ],
+      "en": [
+       {
+        "source": "en1",
+        "section": "第 1 章（技术债的根源：变更成本随时间累积）；无经验研究方法章节",
+        "extent": "partial"
+       },
+       {
+        "source": "r7-en2",
+        "section": "ACM SIGSOFT Empirical Standards：General Standard 与各研究方法（case study、experiment、survey 等）的 essential/desirable 清单",
+        "extent": "covered"
+       },
+       {
+        "source": "r7-en1",
+        "section": "Technical Debt 全文（cruft、利息、偿还）",
+        "extent": "covered"
+       }
+      ],
+      "note": "两语言都缺“软件工程经验研究（实证方法）”：英文书是工程实践书，不讲研究方法；中文教材章节未核。；英文由两份材料组合：Fowler 的 Technical Debt 讲技术债（cruft、利息、偿还），ACM SIGSOFT 实证研究标准讲如何做和评审软件工程经验研究。原记录只把 Fowler 记为覆盖，经验研究一半没有挂来源，此处补上。；“技术债”这一半在中文里有对应教学：教材把“软件逻辑老化”单独成节讲成因与治理，可维护性单独成节；但“经验研究”（实证方法：如何设计案例研究/实验、如何评估结论）在中文侧只找到期刊综述与论文，没有教材式的方法教学，故整条只算 partial，并列入 unresolved。；技术债这一半由 Fowler 的定义与利息算例给出；经验研究这一半由 r7-en2（ACM SIGSOFT 实证研究标准，19 种方法各有标准与 checklist）给出——两者合起来覆盖整条。旧记录英文侧只有第 1 章“变更成本随时间累积”一句。"
+     }
+    ],
+    "routes": {
+     "zh": {
+      "status": "partial",
+      "covered": 4,
+      "total": 5,
+      "gaps": [
+       "技术债与经验研究"
+      ],
+      "steps": [
+       {
+        "source": "zh1",
+        "read": "第 10 章 软件维护和演化（需自备教材），按可维护性/兼容性/迁移逐节做笔记"
+       },
+       {
+        "source": "r7-zh1",
+        "read": "读摘要与 11 条规范，给自己项目里最近三次改动各判一次“这是主/次/修订号变更”，并写清判据（公共 API 有没有变）"
+       },
+       {
+        "source": "r7-zh2",
+        "read": "按四阶段画一遍自己系统的迁移方案：新服务边界在哪、门面放哪、先迁哪个功能片段、旧系统什么时候退役"
+       },
+       {
+        "source": "r7-zh3",
+        "read": "挑一个中等规模开源项目，按文中步骤走一遍：先读文档与目录结构，从测试与示例入手，用断点跟一条主流程，画出调用图，最后仿写一个最小版本"
+       },
+       {
+        "source": "r7-zh4",
+        "read": "读第 15 章 15.2–15.3 与 15.6，为上面那个项目写一份“技术债清单”：哪些属于逻辑老化、哪些属于可维护性不足、各自打算怎么还"
+       }
+      ]
+     },
+     "en": {
+      "status": "complete",
+      "covered": 5,
+      "total": 5,
+      "gaps": [],
+      "steps": [
+       {
+        "source": "en1",
+        "read": "第 1 章 Programming over Time→第 15 章 Deprecation→第 22 章 Large-Scale Changes→第 17 章 Code Search"
+       },
+       {
+        "source": "r7-en1",
+        "read": "读 Technical Debt 全文，用“四天变六天”的算法给自己项目里两处 cruft 估一次利息（每次改动的额外工时）"
+       },
+       {
+        "source": "r7-en2",
+        "read": "在 19 份实证研究标准里选 case study 与 controlled experiment 两份，读 essential 属性清单，然后照它给自己的一个观察写研究设计与报告提纲"
+       }
+      ]
+     }
+    },
+    "crossLanguageFallbacks": [
+     {
+      "lang_missing": "zh",
+      "topic": "技术债与经验研究",
+      "source": "r7-en2",
+      "reason": "中文路线的技术债一半由毛新军《软件工程——理论与实践》15.2–15.3（软件演化、逻辑老化）和 15.6（可维护性）承担；“经验研究”一半（如何设计与评估案例研究、实验、调查）在中文侧三个渠道都只找到期刊论文和综述：文字检索命中《软件学报》实证研究论文与 Pressman《软件工程：实践者的研究方法》（书名里的“研究方法”指工程方法，不是实证研究）；B 站站内检索只有考研经验分享；付费教材检索只有通用软件工程教材。因此这一半改读英文 ACM SIGSOFT Empirical Standards。",
+      "searched_channels": [
+       "text",
+       "video",
+       "paid"
+      ],
+      "confirmed_by": "review/main-additions/P.4.6.json"
+     }
+    ]
+   },
    "courses": [
     {
      "school": "University of Zurich",
@@ -33892,23 +34764,77 @@
    "reach": 13,
    "resource": {
     "tier": "book",
-    "title": "An Introduction to Statistical Learning with Applications in R/Python（James, Witten, Hastie, Tibshirani，2nd ed., 2021/2023）",
+    "title": "An Introduction to Statistical Learning with Applications in R/Python (James, Witten, Hastie, Tibshirani)",
     "url": "https://www.statlearning.com/",
     "lang": "en",
     "free": true,
-    "covers": "作者官方站点，页面明确提供 'Download ISL with R' / 'Download ISL with Python' 的免费 PDF（两版都有），每章带 R 与 Python lab。内容正好覆盖本节点入门层：第 2 章统计学习的偏差-方差与泛化直觉；第 3 章线性回归；第 4 章分类（logistic、LDA/QDA、KNN）；第 5–6 章重采样、模型选择与正则化（ridge/lasso）；第 7 章非线性与样条/GAM；第 8 章树与集成；第 9 章 SVM；第 10 章神经网络入门；第 12 章无监督学习（PCA、k-means、层次聚类）。特征工程与半监督只在零散处提及，属该资源之外。"
+    "covers": "Ch2 bias-variance and generalization intuition; Ch3 linear regression; Ch4 classification (logistic, LDA/QDA, KNN); Ch5–6 resampling, model selection and regularization; Ch7 nonlinearity/splines/GAM; Ch8 trees and ensembles; Ch9 SVM; Ch10 neural networks; Ch12 unsupervised learning (PCA, k-means, hierarchical clustering); each chapter has R and Python labs.",
+    "access": "Authors' official site provides free PDFs of both the R and Python editions (ISLR2/ISLP); no registration.",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "Datawhale《南瓜书》",
-    "url": "https://datawhalechina.github.io/pumpkin-book/",
+    "tier": "video",
+    "title": "李宏毅《机器学习》2023 Spring（台大，中文授课，课程网页含视频与 slides）",
+    "url": "https://speech.ee.ntu.edu.tw/~hylee/ml/2023-spring.php",
     "lang": "zh",
     "free": true,
-    "covers": "《机器学习》的公式推导与学习笔记；按概率图模型、分类、聚类和学习理论章节选择，需配合原书。",
-    "access": "免费开放笔记；不是《机器学习》原书全文"
+    "covers": "中文视频：机器学习基本概念、回归（Pokemon CP）、分类（Pokemon classification）、logistic regression、梯度下降、反向传播、CNN、self-attention，以及后续的无监督学习/自编码器等单元；作业含 Kaggle 竞赛。覆盖回归/分类、聚类与降维、表示学习的主要入口。",
+    "access": "课程网页与 YouTube 视频免费；slides 为英文，授课语言中文；未核对字幕。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
+   "extraResources": [
+    {
+     "tier": "material",
+     "title": "Datawhale《南瓜书》：聚类、降维与特征选择的公式推导",
+     "url": "https://github.com/datawhalechina/pumpkin-book",
+     "lang": "zh",
+     "free": true,
+     "covers": "聚类（原型/密度/层次）、降维与度量学习（PCA）、特征选择与稀疏学习的推导；需配合周志华《机器学习》原书使用。",
+     "access": "开源免费；README 明确必须以西瓜书为主线，不能单独作为教材。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Google 机器学习速成课程（官方简体中文版）· 数据模块：处理数值数据 / 处理分类数据",
+     "url": "https://developers.google.com/machine-learning/crash-course/numerical-data?hl=zh-cn",
+     "lang": "zh",
+     "free": true,
+     "covers": "特征工程的中文系统单元：数值特征的标准化、分箱、良好数值特征的品质、多项式转换；分类数据的独热编码、特征哈希、均值编码、特征组合（feature cross）；每个单元配 10–20 分钟讲解、编程练习与测验，另有“数据集、泛化和过拟合”模块讲训练/验证/测试划分。",
+     "access": "免费，无需注册即可阅读全部单元正文与练习说明；页面为 Google 官方简体中文版（机器翻译），动画/视频是否中文配音未核对。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "《动手学深度学习》中文版 4.9 环境和分布偏移 · 4.9.4 学习问题的分类法",
+     "url": "https://zh-v2.d2l.ai/chapter_multilayer-perceptrons/environment.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "学习设置的分类：4.9.4.1 批量学习、4.9.4.2 在线学习、4.9.4.3 老虎机、4.9.4.4 控制、4.9.4.5 强化学习、4.9.4.6 考虑到环境；前面 4.9.1–4.9.3 讲协变量偏移、标签偏移、概念偏移及纠正。",
+     "access": "免费在线阅读（CC BY-SA），无注册；中文教材。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "Google Machine Learning Crash Course — Data modules: Numerical data / Categorical data",
+     "url": "https://developers.google.com/machine-learning/crash-course/numerical-data",
+     "lang": "en",
+     "free": true,
+     "covers": "Feature engineering units with exercises: normalization, binning, qualities of good numerical features, polynomial transforms; one-hot encoding, feature hashing, mean encoding, feature crosses; plus the 'Datasets, generalization and overfitting' module on train/validation/test splits.",
+     "access": "Free, no registration for the reading units and exercise instructions; interactive exercises use Colab.",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "Deep Learning (Goodfellow, Bengio, Courville) — Chapter 15 Representation Learning (free HTML)",
+     "url": "https://www.deeplearningbook.org/contents/representation.html",
+     "lang": "en",
+     "free": true,
+     "covers": "表示：什么算好的表示、监督式前馈网络作为表示学习、贪心逐层预训练、自编码器（欠完备/正则化/稀疏/去噪）、流形解释、分布式表示与深度表示的理论优势。",
+     "access": "Free HTML chapter, no registration (MIT Press book posted by the authors).",
+     "role": "supplement"
+    }
+   ],
    "learningPath": null,
    "courses": [
     {
@@ -35227,23 +36153,67 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "Deep Learning Systems: Algorithms and Implementation（CMU 10-414/714，dlsyscourse.org 公开讲义与视频）",
+    "title": "CMU 10-414/714 Deep Learning Systems: Algorithms and Implementation (dlsyscourse.org)",
     "url": "https://dlsyscourse.org/",
     "lang": "en",
     "free": true,
-    "covers": "课程主页 + Lectures 页给出全部公开 slides/notebook 与 2022 版 YouTube 录像（站点自述 'Primary Resource: Lecture slides and implementation notebooks'、'No required textbook'）。与节点对应：3–5 讲 前向/反向传播与自动微分、6 讲 Optimization（SGD/动量/Adam 等优化器及其实现）、8 讲 Normalization 与 Dropout、10–13 讲 硬件加速与 GPU（含 kernel 级实现）、14 讲 卷积实现、15–18 讲 序列模型与 Transformer、19 讲 Training Large Models（大模型训练、并行与内存）、23 讲 Model Deployment（部署与推理）。量化/蒸馏这类压缩技术在部署相关讲次里只是提及，系统覆盖不如专门的压缩文献，属该资源之外。"
+    "covers": "Lectures and notebooks: forward/backward and automatic differentiation (3–5), optimization incl. SGD/momentum/Adam (6), normalization and dropout (8), hardware acceleration and GPU kernels (10–13), convolution implementations (14), sequence models and Transformers (15–18), training large models with parallelism and memory (19), model deployment and inference (23).",
+    "access": "Free slides/notebooks and the 2022 YouTube lecture recordings; the site states slides and implementation notebooks are the primary resource and there is no required textbook. Quantization/distillation are only mentioned in deployment lectures.",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "《动手学深度学习》：计算性能",
-    "url": "https://zh-v2.d2l.ai/chapter_computational-performance/index.html",
+    "title": "AI System（中文开源课程，ZOMI/Infrasys-AI）第四篇 推理系统与引擎：模型轻量化、低比特量化原理、QAT、训练后量化与部署、模型剪枝、知识蒸馏原理、推理系统架构",
+    "url": "https://infrasys-ai.github.io/aisystem-docs/04Inference03Slim/02Quant.html",
     "lang": "zh",
     "free": true,
-    "covers": "异步执行、自动并行、多 GPU 计算与训练；推理服务和编译器系统仍需英文课程。",
-    "access": "免费阅读"
+    "covers": "中文成体系的推理侧系统课：推理系统介绍/推理流程全景/推理系统架构/推理引擎架构/MindIE 与 AscendCL 示例；模型轻量化总览（模型压缩四件套）、低比特量化原理（饱和/非饱和、线性/非线性、对称/非对称）、感知量化训练 QAT、训练后量化与部署（校准与部署流程）、模型剪枝、知识蒸馏原理（response/feature/relation-based、offline/online/self-distillation）。",
+    "access": "免费在线阅读（GitHub Pages），无注册；中文，配套 PPT 与 B 站「ZOMI酱」视频（视频是否逐节覆盖未核对）。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "MIT 6.5940 TinyML and Efficient Deep Learning Computing — pruning, quantization, distillation, NAS",
+     "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+     "lang": "en",
+     "free": true,
+     "covers": "Pruning and sparsity, quantization, knowledge distillation, neural architecture search, on-device training and deployment labs. Supplies the compression/quantization/distillation topics that dlsyscourse only mentions.",
+     "access": "Free schedule, slides and labs; lecture videos are on the MIT HAN Lab YouTube channel with YouTube automatic captions only (no human captions verified).",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "《动手学深度学习》中文版 第12章 计算性能（异步计算、自动并行、多 GPU）",
+     "url": "https://zh-v2.d2l.ai/chapter_computational-performance/index.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "12.1 编译器和解释器、12.2 异步计算、12.3 自动并行、12.4 多 GPU 训练、12.5 多 GPU 的简洁实现、12.6 参数服务器。覆盖分布式/并行训练的基础实现；不含混合精度、量化、蒸馏与推理服务。",
+     "access": "免费中文正文与 notebook。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "MindSpore 官方教程（中文）· 自动混合精度",
+     "url": "https://mindspore.cn/tutorials/zh-CN/r2.6.0rc1/beginner/mixed_precision.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "混合精度：FP64/FP32/FP16 表示与位宽代价、TensorCore/Cube 为何对低精度有加速、典型混合精度流程（参数 FP32、FP16 算子 cast、Loss 用 FP32、Loss Scale 防下溢、梯度溢出判断跳过更新）、mindspore.amp 接口与手写数字识别实例演示。",
+     "access": "免费在线教程，无需注册；中文；含可运行代码示例。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "PyTorch Tutorials — Automatic Mixed Precision recipe",
+     "url": "https://docs.pytorch.org/tutorials/recipes/recipes/amp_recipe.html",
+     "lang": "en",
+     "free": true,
+     "covers": "Mixed precision: which ops run in float16/bfloat16 vs need float32 range, torch.autocast regions, GradScaler for gradient underflow, a measured before/after timing script, and the standalone runnable script.",
+     "access": "Free, no registration; English; runnable code included.",
+     "role": "supplement"
+    }
+   ],
    "learningPath": null,
    "courses": [
     {
@@ -35401,24 +36371,38 @@
    "step": 6,
    "reach": 1,
    "resource": {
-    "tier": "website",
-    "title": "UCL Course on Reinforcement Learning（David Silver，10 讲 slides + 视频 + Easy21 作业）",
+    "tier": "video",
+    "title": "UCL Course on Reinforcement Learning (David Silver) — 10 lectures, slides, videos, Easy21 assignment",
     "url": "https://davidstarsilver.wordpress.com/teaching/",
     "lang": "en",
     "free": true,
-    "covers": "Silver 在 UCL 的强化学习课程站点（CC-BY-NC 4.0，slides 与录像全公开）。Lecture 1–2：RL 问题设定与马尔可夫决策过程（回报、值函数、Bellman 方程、最优策略）；3：Planning by Dynamic Programming（策略/值迭代）；4–5：Model-Free Prediction 与 Control（TD(0)、TD(λ)、SARSA、Q-learning、重要性采样）；6：Value Function Approximation（含 DQN）；7：Policy Gradient（REINFORCE、actor-critic）；8：Integrating Learning and Planning（Dyna、基于模拟的搜索、MCTS）；9：Exploration and Exploitation（ε-greedy、UCB、Thompson 采样）；10：经典游戏案例。离线 RL（batch/offline）与运筹/控制的交叉只是零星提及，属该资源之外。"
+    "covers": "Lecture 1–2: RL problem and MDPs (returns, value functions, Bellman equations, optimal policies); 3: planning by dynamic programming; 4–5: model-free prediction and control (TD(0), TD(λ), SARSA, Q-learning, importance sampling); 6: value function approximation incl. DQN; 7: policy gradient (REINFORCE, actor-critic); 8: integrating learning and planning (Dyna, MCTS); 9: exploration vs exploitation (ε-greedy, UCB, Thompson sampling); 10: case study.",
+    "access": "Slides and lecture videos public under CC BY-NC 4.0; the Easy21 assignment is described on the site. Offline/batch RL and OR/control intersections are only mentioned in passing.",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "《动手学强化学习》",
+    "tier": "book",
+    "title": "《动手学强化学习》（张伟楠、沈键等，上海交大）— 免费中文教材 + notebook + 视频",
     "url": "https://hrl.boyuai.com/",
     "lang": "zh",
     "free": true,
-    "covers": "从马尔可夫决策过程到强化学习算法；多智能体内容属于扩展，因果与神经符号部分仍需单独资料。",
-    "access": "免费阅读"
+    "covers": "中文正文按基础篇（多臂老虎机、MDP、动态规划、时序差分、Dyna-Q）、进阶篇（价值函数近似、DQN、策略梯度、Actor-Critic、DDPG、PPO、SAC）、前沿篇（模仿学习、离线强化学习、多智能体强化学习等）组织，每章配可在线运行的 Jupyter Notebook；官网写明配套视频课在伯禹平台免费开放。",
+    "access": "在线正文、notebook 与视频课免费；纸书在京东/当当另售（不作为必需）。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "Berkeley CS 185/285 Deep Reinforcement Learning (Sergey Levine, Spring 2026) — Lectures 17–19 & 23 (Offline RL, Exploration) + Homework 5",
+     "url": "https://rail.eecs.berkeley.edu/deeprlcourse/",
+     "lang": "en",
+     "free": true,
+     "covers": "探索与离线学习：Lecture 17/18 Offline RL Part 1–2（离线 RL 的定义、on-policy/off-policy/offline 的区别、分布偏移与保守价值估计）、Lecture 19 Exploration（exploration-exploitation 的两种定义、如何发现需要长序列才得奖励的策略）、Lecture 23 Advanced Exploration；配套 Discussion Section 9 (Offline RL) 与 Homework 5: Offline RL。",
+     "access": "课程站点公开全部 slides 与作业（免费）；2026 春季课程录像需按站点链接（Fall 2023 recordings 公开）。仅核对 slides，视频是否公开可播未逐条核对。",
+     "role": "supplement"
+    }
+   ],
    "learningPath": null,
    "courses": [
     {
@@ -35550,24 +36534,47 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "Aalto CS-E4740 Federated Learning：课程与开放教材",
+    "title": "Aalto CS-E4740 Federated Learning — course site and open textbook",
     "url": "https://federatedlearningaalto.github.io/",
     "lang": "en",
     "free": true,
-    "covers": "整门课只讲联邦学习，从“经验图上的广义全变差（GTVMin）最小化”一个设计原则推出算法：FedGD/FedAvg/FedProx 与 clustered federated learning 的推导、聚合的不动点与异步迭代、通信轮数与精度的权衡（多少轮买多少精度）、看不到数据时如何判断哪些设备该一起学（经验图与联邦聚类，即设备数据异构下的分组）、恶意参与者的鲁棒性、差分隐私的效用代价、以及交换的模型参数何时仍算个人数据（GDPR/EU AI Act）。对应收窄后的四项：非独立同分布（异构分组）、聚合、通信、隐私；不含迁移学习、多任务与元学习。",
-    "access": "免费：站点公开 12 讲大纲与 slides（课程仓库），2027 版录像尚未发布，可先看 2025 版录像；外校无需注册即可跟随作业与截止日期（Aalto 学生走 Sisu）；教材为 arXiv 开放稿。 2027 年课表属于计划；当前使用已公开的教材、slides 与 2025 录像。录像字幕未核对。"
+    "covers": "A full course deriving FL from generalized total variation minimization on empirical graphs: FedGD/FedAvg/FedProx and clustered FL, fixed points and asynchronous iterations, communication rounds vs accuracy, grouping devices with heterogeneous data (empirical graphs and clustering), robustness to malicious participants, differential privacy utility cost, and when exchanged model parameters still count as personal data (GDPR/EU AI Act).",
+    "access": "Free syllabus and slides; the 2027 recordings are not released yet, the 2025 recordings are available; the textbook is an open arXiv draft. Videos' captions not checked.",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "隐语 SecretFlow 官方中文文档 · 教程（联邦学习 / 隐私计算）",
-    "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+    "title": "华为云开发者学堂「联邦学习课程学习路径」（4 个阶段 / 7 门课程，中文）",
+    "url": "https://edu.huaweicloud.com/roadmap/federatedlearning.html",
     "lang": "zh",
     "free": true,
-    "covers": "教程目录的“联邦学习”一组给出十多个可运行例子：水平联邦（图像分类、PyTorch 后端、水平 XGBoost）、垂直联邦 XGB（SecureBoost）、拆分学习（银行营销、图神经网络）、混合联邦逻辑回归、预训练模型微调，以及拆分学习中的通信压缩、流水线并行与 FeatureInferenceAttack/LabelInferenceAttack（隐私攻击示例）；另有 PSI、SPU、TEEU 等隐私计算组件教程。覆盖聚合（FedAvg 类框架）、通信压缩与隐私三块；数据异构（非 IID）与收敛分析没有专门教程，理论部分靠英文主资源。",
-    "access": "免费在线阅读；文档随 stable 分支更新；跑例子需安装 SecretFlow 并准备多参与方环境。"
+    "covers": "中文成体系的学习路径：第一阶段「联邦学习系统基础及进阶」——联邦学习基础理论（系统介绍、业界发展、分布式训练初步实现）与系统进阶（更严苛的隐私保护方法、FedOpt 与 FedMDGA）；第二阶段「联邦学习分类」——算法异构的松耦合联邦学习（LCFL）、模型异构联邦学习、联邦元学习（横向联邦个性化）；第三阶段「纵向联邦学习」——纵向联邦原理与最简单的纵向联邦实现；第四阶段「联邦学习应用」——业界应用与上手一个自己的联邦学习应用。",
+    "access": "免费，华为云账号登录后学习；中文；每门课标 1 课时，全路径合计 7 课时，属短课路径，深度不如教材。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "隐语 SecretFlow 官方中文文档 · 联邦学习教程",
+     "url": "https://secretflow.readthedocs.io/zh-cn/stable/tutorial/index.html",
+     "lang": "zh",
+     "free": true,
+     "covers": "联邦学习教程组：水平联邦（图像分类、PyTorch 后端、水平 XGBoost）、垂直联邦 XGB（SecureBoost）、拆分学习（银行营销、GNN）、混合联邦逻辑回归、预训练模型微调，以及拆分学习的通信压缩、流水线并行与 FeatureInferenceAttack/LabelInferenceAttack 隐私攻击示例；另有 PSI、SPU、TEEU 组件教程。",
+     "access": "免费在线阅读；运行例子需安装 SecretFlow 并准备多参与方环境。工具文档，不含非 IID 收敛分析。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "北京理工大学信息系统及安全对抗实验中心 组会报告《联邦学习的参数更新方法》（崔成钢，2021）",
+     "url": "https://www.isclab.org.cn/wp-content/uploads/2021/10/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8F%82%E6%95%B0%E6%9B%B4%E6%96%B0%E6%96%B9%E6%B3%95-%E5%B4%94%E6%88%90%E9%92%A2.pdf",
+     "lang": "zh",
+     "free": true,
+     "covers": "非独立同分布数据：Non-IID 的四类表现（特征分布倾斜、标签分布倾斜、标签相同特征不同即概念飘移、特征相同标签不同、客户端数据量不平衡）、FedAvg 的 IID 与等量假设、以及针对 Non-IID 的 FedProx（邻近项约束本地更新）做法；并给出横向/纵向联邦与跨设备/跨孤岛的分类。",
+     "access": "实验室官网公开 PDF（免费）；中文；报告为北京理工大学实验室研究生组会材料，非正式课程。",
+     "role": "supplement"
+    }
+   ],
    "learningPath": null,
    "courses": [
     {
@@ -35690,24 +36697,58 @@
    "step": 6,
    "reach": 0,
    "resource": {
-    "tier": "website",
-    "title": "Speech and Language Processing (3rd ed. draft) — Jurafsky & Martin 免费在线教材",
+    "tier": "book",
+    "title": "Speech and Language Processing (3rd ed. draft) — Jurafsky & Martin, free online chapters",
     "url": "https://web.stanford.edu/~jurafsky/slp3/",
     "lang": "en",
     "free": true,
-    "covers": "作者按章免费放出的 3 版草稿（含幻灯片），可逐章在浏览器里系统学 NLP：第 2 章 Words and Tokens（分词/文本表示）、第 3 章 n-gram 语言模型、第 4 章逻辑回归与文本分类、第 5 章 Embeddings、第 6-7 章神经网络与 Transformer/预训练、第 8 章后训练、第 9 章掩码语言模型、第 11 章信息检索与 RAG、第 13 章机器翻译、第 14 章 RNN/LSTM、第 18 章序列标注（词性、命名实体）、第 19-20 章 CFG 与依存句法分析、第 21 章信息抽取（关系、事件、时间）、第 22 章语义角色、第 24 章共指与实体链接、第 25-26 章篇章与会话。正好覆盖节点的文本表示、语言建模、结构预测、信息抽取、检索与语言评测（各章附带评测指标与基准讨论）。"
+    "covers": "Ch2 words/tokens, Ch3 n-gram language models, Ch4 logistic regression and text classification, Ch5 embeddings, Ch6–7 neural networks/Transformers/pretraining, Ch8 post-training, Ch9 masked language models, Ch11 information retrieval and RAG, Ch13 machine translation, Ch14 RNNs, Ch18 sequence labeling (POS/NER), Ch19–20 CFG and dependency parsing, Ch21 information extraction, Ch22 semantic roles, Ch24 coreference/entity linking.",
+    "access": "Free per-chapter PDFs and slides from the authors' site; no registration.",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "Hugging Face 大语言模型课程（中文）",
-    "url": "https://huggingface.co/learn/llm-course/zh-CN/chapter1/1",
+    "tier": "video",
+    "title": "西湖大学公开课《自然语言处理》（张岳，15 讲，中文授课；官方课程页含 slides/notes/作业，B 站「WestlakeNLP」同步）",
+    "url": "https://www.bilibili.com/video/BV1wCPmzPEpE/",
     "lang": "zh",
     "free": true,
-    "covers": "Transformer、分词、数据集与微调实践；偏现代 NLP，不替代全部语言学和语音内容。",
-    "access": "免费阅读"
+    "covers": "语言建模与结构预测的中文系统课：Counting relative frequencies（概率模型、语言模型、朴素贝叶斯文本分类）、Using Information Theory（信息论、最大熵、交叉熵与困惑度）、Hidden Variables/EM、Generative Sequence Labeling（序列标注、HMM）、Discriminative Sequence Labeling（MEMM、标签偏置、CRF）、Sequence Segmentation（半马尔可夫 CRF）、Predicting Tree Structures 与 Transition-based structure prediction（句法树结构预测）、Neural structured prediction（Ch15：序列标注、依存句法、成分句法）、Representation learning、Working with two texts（seq2seq：机器翻译/摘要/对话）。",
+    "access": "B 站免费播放（西湖大学公开课，官方账号）；配套 slides/notes/作业在课程页 https://westlakenlp.github.io/nlpml/ 免费下载；课程页写明 “The course is taught in Chinese”。未核对是否有字幕。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "Hugging Face 大语言模型课程（官方中文版）",
+     "url": "https://huggingface.co/learn/llm-course/zh-CN/chapter1/1",
+     "lang": "zh",
+     "free": true,
+     "covers": "中文正文：Transformer 模型、分词、数据集处理、微调与共享模型；偏现代 NLP/LLM 实践，覆盖文本表示（tokenization/embeddings）与预训练语言模型的使用，但不含 n-gram 语言建模、序列标注、句法分析、信息抽取与检索评估。",
+     "access": "免费阅读，可在线跑示例；部分章节需 Hugging Face 账号。",
+     "role": "supplement"
+    },
+    {
+     "tier": "book",
+     "title": "《自然语言处理》（刘挺、秦兵、赵军、黄萱菁、车万翔，高等教育出版社，2021，定价 54.00 元）",
+     "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=60b122b1adb85dae6a2f4027",
+     "lang": "zh",
+     "free": false,
+     "covers": "中文教材：第6章 语言模型（6.1 n 元语言模型、6.1.3 语言模型性能评价、6.1.4 平滑、6.2 神经网络语言模型）、第7章 词法分析、第8章 句法分析（8.2.4/8.3.3 评价指标）、第9章 语义分析、第10章 信息抽取（10.1 命名实体识别：规则/统计/深度学习，10.2 实体关系抽取）、第14–16 章 问答/对话/机器翻译。",
+     "access": "需购买（高教社官方页标价 54.00 元，ISBN 978-7-04-056177-7，432 页）；无免费全文，未购买。",
+     "role": "supplement"
+    },
+    {
+     "tier": "material",
+     "title": "中国科学技术大学《信息检索与数据挖掘》课程课件（中文，含第6章 检索的评价、第8章 概率模型、第9章 基于语言建模的检索模型）",
+     "url": "http://staff.ustc.edu.cn/~network/ir/ir_index.htm",
+     "lang": "zh",
+     "free": true,
+     "covers": "检索与检索评测的中文课件：第2章 布尔检索及倒排索引、第5章 向量空间模型与评分、第6章 检索的评价（查全率/查准率、效果与效率评价、评测语料与评测会议）、第7章 相关反馈与查询扩展、第8章 概率模型（概率排序原理、BIM 与 BM25）、第9章 基于语言建模的检索模型、第12章 web 搜索。",
+     "access": "大学课程主页公开 PDF 课件，免费；中文；课程主页为 2016 年开课、课件标注 2019/4/7，教材为 Manning《信息检索导论》（中文译本，人民邮电）。",
+     "role": "supplement"
+    }
+   ],
    "learningPath": null,
    "courses": [
     {
@@ -36040,23 +37081,47 @@
    "reach": 0,
    "resource": {
     "tier": "website",
-    "title": "Hugging Face Audio Course（官方免费教程站）",
+    "title": "Hugging Face Audio Course (official, 8 units)",
     "url": "https://huggingface.co/learn/audio-course/chapter0/introduction",
     "lang": "en",
     "free": true,
-    "covers": "官方 8 个单元的免费教程，浏览器里边读边跑代码：Unit 1 音频数据与表征（采样、波形、频谱图/特征、数据准备与切分）、Unit 2 音频任务总览（音频分类、语音识别、语音合成、语音翻译）、Unit 3 用于音频的 Transformer 架构（Wav2Vec2、Whisper、CTC）、Unit 4 训练音乐流派分类器、Unit 5 自动语音识别（用预训练模型转写、WER 等评测指标、微调 Whisper）、Unit 6 文本转语音（SpeechT5、微调与声码器）、Unit 7 综合项目（语音到语音翻译）、Unit 8 收尾。对应节点的音频表征、声学建模（Transformer/CTC）、语音识别、语音合成与语音交互应用。"
+    "covers": "Unit 1 audio data and representations (sampling, waveforms, spectrograms, data preparation/splitting), Unit 2 audio tasks overview (classification, ASR, TTS, translation), Unit 3 Transformer architectures for audio (Wav2Vec2, Whisper, CTC), Unit 4 music genre classification, Unit 5 ASR (transcription, WER, Whisper fine-tuning), Unit 6 TTS (SpeechT5, vocoders), Unit 7 speech-to-speech translation project, Unit 8 conclusion.",
+    "access": "Free official course with runnable notebooks; Hugging Face account may be needed for model upload but not for reading.",
+    "role": "primary"
    },
    "zhAlt": {
     "tier": "website",
-    "title": "Hugging Face 音频课程（中文）",
-    "url": "https://huggingface.co/learn/audio-course/zh-CN/chapter0/introduction",
+    "title": "李宏毅《Deep Learning for Human Language Processing》2020 Spring（台湾大学官方课程页，中文授课，slide + video 全公开）",
+    "url": "https://speech.ee.ntu.edu.tw/~hylee/dlhlp/2020-spring.php",
     "lang": "zh",
     "free": true,
-    "covers": "音频数据、音频分类、语音识别与语音生成；使用开源模型完成实践。",
-    "access": "免费阅读"
+    "covers": "中文语音与语言处理成课内容：Speech Recognition 1–6（ASR/ASR2/ASR3 slides：LAS/CTC/RNA/RNN-T 等 seq2seq 声学模型与对齐问题、语言模型融合）、Speech Separation 1–2、Speech Synthesis 1–2（TTS slide）、Speaker Verification、Voice Conversion、NLP tasks/BERT、Chatbot 与 DSTQA 等对话相关讲次，并配 HW1–HW4。",
+    "access": "台大课程页免费公开每讲 slide 与 video 链接；中文授课（李宏毅）；无注册要求。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
+   "extraResources": [
+    {
+     "tier": "website",
+     "title": "Hugging Face 音频课程（官方中文版）",
+     "url": "https://huggingface.co/learn/audio-course/zh-CN/chapter0/introduction",
+     "lang": "zh",
+     "free": true,
+     "covers": "与英文版同构的中文正文：音频数据与表征、音频分类、ASR（含 WER 与 Whisper 微调）、TTS、语音翻译项目；使用开源模型完成实践。",
+     "access": "免费在线阅读；需要时可注册 Hugging Face 账号上传/下载模型。",
+     "role": "supplement"
+    },
+    {
+     "tier": "video",
+     "title": "李宏毅《深度学习与人类语言处理》2020（语音识别、语音合成、语音分离）",
+     "url": "https://www.bilibili.com/video/BV1hZ4y1w7j1/",
+     "lang": "zh",
+     "free": true,
+     "covers": "中文授课 16 讲：Speech Recognition 1–7（Overview、LAS、CTC/RNN-T、HMM 可选、对齐、语言模型）、Voice Conversion（特征解耦）、Speech Synthesis、Speech Separation。补声学建模（CTC/RNN-T/HMM）与合成的理论讲次。",
+     "access": "第三方转载，授权未核。B站搬运自李宏毅 YouTube 课程（简介给出原链接），免费；上传者非作者本人，未核对字幕。",
+     "role": "alternative"
+    }
+   ],
    "learningPath": null,
    "courses": [
     {
@@ -37148,7 +38213,7 @@
     "lang": "zh",
     "free": true,
     "covers": "第1章 绪论（信息安全三要素机密性/完整性/可用性、威胁模型、风险管理、纵深防御、安全技术体系）；第2章 密码技术；第3章 身份认证（Kerberos v4/v5、PKI/X.509）；第4章 授权与访问控制（DAC、MAC、RBAC、ABAC/ABE、PMI）；第5–13章 信息隐藏、OS/数据库安全、网络与系统攻击、入侵检测与应急响应、数字取证、IPSec/TLS/SET、恶意代码、内容安全。",
-    "access": "免费：GitHub 仓库内 13 个中文 PDF（infoSec01–13）。这是学生整理上传的授课课件，不是学校官方发布页，版权归授课教师；课程本身为 USTC 3 学分 40 学时+40 学时实验（课件第1页写明）。教师主页 http://staff.ustc.edu.cn/~billzeng/ 可核对授课与教材。",
+    "access": "第三方转载，授权未核。免费：GitHub 仓库内 13 个中文 PDF（infoSec01–13）。这是学生整理上传的授课课件，不是学校官方发布页，版权归授课教师；课程本身为 USTC 3 学分 40 学时+40 学时实验（课件第1页写明）。教师主页 http://staff.ustc.edu.cn/~billzeng/ 可核对授课与教材。",
     "role": "primary"
    },
    "zhResourceNote": "",
@@ -37184,33 +38249,33 @@
      "role": "reference"
     },
     {
-     "tier": "material",
-     "title": "Microsoft：最小特权原则与权限过大的具体案例",
-     "url": "https://learn.microsoft.com/zh-cn/entra/identity-platform/secure-least-privileged-access",
+     "tier": "website",
+     "title": "最小特权原则：最小化访问如何保护系统（中文教程，含实施步骤与示例）",
+     "url": "https://www.datacamp.com/zh/tutorial/principle-of-least-privilege",
      "lang": "zh",
      "free": true,
-     "covers": "最小特权的定义、未使用/可缩小权限的区别、横向/纵向风险、权限收敛与定期审核。",
-     "access": "微软官方免费中文正文；以Microsoft Graph权限为例，理解原则不需购买云服务。",
+     "covers": "全文七节：什么是最小特权原则（定义、PoLP/PoMP/PoLA 别名、适用于用户/服务/应用/API/后台进程）、最小特权原则如何运作（基于角色的访问、限时或即时 JIT 访问、特权括起 privilege bracketing、零信任）、为什么重要（缩小攻击面、限制横向移动）、最小特权原则的实践示例、如何实施（分步骤）、挑战与局限、相近原则与相关概念。",
+     "access": "免费网页，无需注册；简体中文（DataCamp 官方中文版教程，原文为英文教程的本地化版本）；无视频、无字幕。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "高校攻击面管理思考与实践（《中国教育网络》，中国教育和科研计算机网 CERNET）",
+     "url": "https://www.edu.cn/xxh/xy/xytp/202406/t20240606_2614579.shtml",
+     "lang": "zh",
+     "free": true,
+     "covers": "攻击面的分类（Gartner 的 EASM 外部攻击面管理、CAASM 网络资产攻击面管理、DRPS 数字风险保护服务）与做法链：资产梳理（含被动数据获取：全流量检测、应用交付平台日志；主动获取：Shodan/Censys/ZoomEye 等测绘引擎与 API）→ 高频脆弱性扫描与 VPT 漏洞优先级 → 暴露面收缩（网站群、应用交付平台白名单、服务器端口按管理/业务分类限制、API 资产与 API 网关、终端类系统单独安全域、分区分域 ACL）→ 攻击面混淆（蜜罐）。",
+     "access": "免费网页全文，无需注册；简体中文；作者为高校网络安全从业者（文章署名“中国教育网络”，2024-06-06 发布）。",
      "role": "supplement"
     },
     {
      "tier": "material",
-     "title": "Microsoft：威胁建模安全基础知识（中文分步培训）",
-     "url": "https://learn.microsoft.com/zh-cn/training/paths/tm-threat-modeling-fundamentals/",
+     "title": "信息技术安全风险管理实务指南（第 1.1 版，2024 年 7 月，简体中文版）",
+     "url": "https://www.govcert.gov.hk/doc/PG%20for%20IT%20Security%20Risk%20Management_SC.pdf",
      "lang": "zh",
      "free": true,
-     "covers": "从系统/数据流和信任边界识别威胁，使用框架、按风险排序，再选择安全控制；补攻击面与风险管理入门。",
-     "access": "中文培训正文可公开阅读；成就记录可需登录，Azure开户推广不属于本路线要求。",
-     "role": "supplement"
-    },
-    {
-     "tier": "material",
-     "title": "OWASP：Authorization教学指南",
-     "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
-     "lang": "en",
-     "free": true,
-     "covers": "认证与授权的区别、业务角色与权限矩阵、最小特权、默认拒绝和授权测试；配CS161的口令/会话章节。",
-     "access": "OWASP官方英文全文免费，无需注册。",
+     "covers": "风险管理方法链：风险背景（4.2 了解风险背景）、风险准则（4.3 风险偏好声明及风险承受能力标准制定）、风险评估（识别风险/分析风险/评价风险，按资产—威胁—漏洞—可能性—影响展开）、风险汇总与关联（6.2 执行风险关联、汇总和正规化）、风险处理（降低/转移/接受等处置选项与残余风险）、风险监察与报告（7.1–7.3 监察已识别风险和风险处理活动、监察风险环境、定期风险报告），附件给风险类别与 KPIs/KRIs 示例。",
+     "access": "免费 PDF 全文（香港特区政府数字政策办公室政府计算机保安事故协调中心 GOVCERT.HK 发布，简体中文版），无需注册；无视频。",
      "role": "supplement"
     }
    ],
@@ -37367,23 +38432,47 @@
    "reach": 1,
    "resource": {
     "tier": "website",
-    "title": "CS255: Introduction to Cryptography（Stanford，Dan Boneh；课程主页 + 完整 lecture 列表/slides + cs255 online 视频）",
+    "title": "CS255 Introduction to Cryptography（Stanford，Dan Boneh；syllabus + 逐讲 reading + cs255 online 录像）",
     "url": "https://crypto.stanford.edu/~dabo/cs255/",
     "lang": "en",
     "free": true,
-    "covers": "syllabus 逐讲讲：一次一密与流密码、语义安全、分组密码（AES、Even-Mansour、Luby-Rackoff）、PRP/PRF 与工作模式、CBC-MAC/PMAC、抗碰撞哈希（Merkle-Damgård、Davies-Meyer、SHA/HMAC）、公钥密码（ElGamal、RSA trapdoor）、数字签名定义与 RSA 签名、哈希签名与证书/证书透明/吊销、认证密钥交换与 SSL/TLS 会话建立，末尾还讲后量子签名与零知识证明入门——正好覆盖对称/公钥、哈希、MAC、签名、密钥管理（PKI/证书）与协议。"
+    "covers": "Lec 2–4 一次一密/流密码、语义安全、分组密码与 PRP/PRF 模式；Lec 6 消息完整性（CBC-MAC、PMAC）；Lec 7 抗碰撞哈希（Merkle-Damgård、Davies-Meyer、SHA/HMAC）；Lec 8 AEAD；Lec 9–12 有限循环群、Diffie-Hellman、ElGamal、RSA trapdoor；Lec 13–15 数字签名、证书/CT/吊销、密钥交换与 TLS；其后为后量子签名与零知识入门。",
+    "access": "课程主页、syllabus、讲义 PDF 与 cs255 online 录像入口免费公开，无需注册；英文授课，讲义可替代字幕（视频字幕未核对）。",
+    "role": "primary"
    },
    "zhAlt": {
-    "tier": "website",
-    "title": "CTF Wiki：密码学",
-    "url": "https://ctf-wiki.org/crypto/introduction/",
+    "tier": "material",
+    "title": "《信息安全导论》第2–3章 密码技术课件（中国科学技术大学 曾凡平，学生整理上传的 PDF）",
+    "url": "https://github.com/HoshiGaOChiru/USTC-Information-Security",
     "lang": "zh",
     "free": true,
-    "covers": "对称密码、公钥密码、哈希与签名的练习导览；偏 CTF，不代替现代密码学的安全证明。",
-    "access": "免费阅读"
+    "covers": "infoSec02(1).pdf：2.x 对称密码（DES/AES 思路）、公钥密码（RSA/ElGamal）、2.4 散列函数和消息认证码（单向性、抗碰撞性、MAC）、2.5 数字签名、2.6 密钥管理与公钥分配；infoSec03.pdf：数字签名算法与密钥管理续；infoSec11.pdf：IPSec/SSL-TLS/SET 协议。",
+    "access": "第三方转载，授权未核。免费：GitHub 仓库内中文 PDF。学生整理上传的授课课件，不是学校官方发布页，版权归授课教师；课程为 USTC 3 学分（40 学时+实验）。第2章 2.6 密钥管理在课件里标注“自学，不考核”。",
+    "role": "primary"
    },
    "zhResourceNote": "",
-   "extraResources": [],
+   "extraResources": [
+    {
+     "tier": "video",
+     "title": "现代密码学（电子科技大学，中国大学MOOC，国家精品在线开放课程；杨波《现代密码学》第5版配套）",
+     "url": "https://www.icourse163.org/course/UESTC-1003046001",
+     "lang": "zh",
+     "free": null,
+     "covers": "第1章 概述与古典密码；第2–6章 流密码、分组密码、公钥密码、杂凑函数、数字签名；第7章 密码协议（Diffie-Hellman 密钥交换、Shamir 秘密分享）；第8章 可证明安全初步；第9章 属性基加密、全同态加密、后量子密码学。",
+     "access": "中国大学MOOC 免费注册学习；页面标注“认证学习”，认证证书收费；视频按开课学期提供。字幕未核对（MOOC 字幕需登录才显示）。",
+     "role": "supplement"
+    },
+    {
+     "tier": "website",
+     "title": "CTF Wiki：密码学（中文练习向导览）",
+     "url": "https://ctf-wiki.org/crypto/introduction/",
+     "lang": "zh",
+     "free": true,
+     "covers": "古典密码、对称/公钥、哈希与签名的题目式练习入口；用于动手验证，不承担安全定义与可证明安全的讲解。",
+     "access": "免费在线阅读，社区维护；随站点更新。",
+     "role": "alternative"
+    }
+   ],
    "learningPath": null,
    "courses": [
     {

@@ -1,0 +1,464 @@
+{
+ "id": "P.4.6",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Software Engineering at Google（免费在线版）：第 1 章 Programming over Time、第 15 章 Deprecation、第 17 章 Code Search、第 22 章 Large-Scale Changes",
+   "url": "https://abseil.io/resources/swe-book/html/toc.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第 1 章讲“软件工程 = 编程随时间积分”、可持续性与长期变更成本（技术债的根源）；第 15 章 Deprecation 讲系统老化、弃用策略、兼容期与迁移；第 17 章 Code Search 讲在大代码库中定位与阅读陌生代码；第 22 章 Large-Scale Changes 讲大规模重构/迁移的流程与工具。覆盖可维护性、兼容性、迁移、代码理解与技术债；经验研究（实证方法）不在其中。",
+   "access": "免费在线 HTML（O'Reilly 授权公开版），无需注册；纸质版付费。",
+   "publisher": "Google（O'Reilly）",
+   "evidence": {
+    "url": "https://abseil.io/resources/swe-book/html/ch15.html",
+    "location": "第 15 章 Deprecation、第 17 章 Code Search、第 22 章 Large-Scale Changes 标题与正文",
+    "finding": "三页分别返回标题 Deprecation（3.3 万字符）、Code Search（4.8 万）、Large-Scale Changes（5.0 万），正文可读。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《软件工程：经典、现代和前沿》第 10 章 软件维护和演化（北大 101 计划教材）",
+   "url": "https://www.icourse163.org/course/PKU-1003177002",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "课程页列出的教材目录中第 10 章为“软件维护和演化”。章节标题可核，正文未打开；可维护性/兼容性/迁移/代码理解/技术债在该章内的小节覆盖未知，教材另有第 13 章群体化开发（开源协作）与第 14 章 DevOps，可在演化语境下参考。",
+   "access": "教材需购买（北京大学出版社 2024，价格未核、未购买）；章节表引自北大 MOOC 课页。",
+   "publisher": "北京大学出版社",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/PKU-1003177002",
+    "location": "参考资料段“第10章软件维护和演化”",
+    "finding": "课程页列举主教材 11 章经典部分时，第 10 章写作“软件维护和演化”。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《语义化版本 2.0.0》中文版（semver.org 官方中文译本）",
+   "url": "https://semver.org/lang/zh-CN/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "完整规范正文：主版本号·次版本号·修订号的定义与递增规则（做了不兼容的 API 修改→主版本号；向下兼容的功能性新增→次版本号；向下兼容的问题修正→修订号），以及“依赖地狱”的成因与“必须定义公共 API”“发行后禁止改变该版本内容”等强制性条款；后文逐条给出 11 条规范与常见问题（如何判断一次改动是否破坏兼容）。",
+   "access": "免费阅读，无需注册；简体中文（官方译本）。",
+   "publisher": "semver.org（Semantic Versioning 规范官方站，中文译本）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://semver.org/lang/zh-CN/",
+    "location": "“摘要”与“语义化版本控制规范（SemVer）”各条",
+    "finding": "页面确认三条递增规则与兼容性判断标准，并解释依赖地狱；规范条款用“必须/禁止”写明公共 API 与兼容的关系。"
+   },
+   "added_by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "Strangler Fig 模式（Microsoft Learn 中文，Azure 体系结构中心 云设计模式）",
+   "url": "https://learn.microsoft.com/zh-cn/azure/architecture/patterns/strangler-fig",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲“增量迁移旧系统”的做法：先确定新的服务边界，再逐块把功能片段替换为新的应用与服务；用门面（代理）拦截发往旧系统的请求并在新旧之间路由；给出四个阶段的图示（门面路由→增量迁移→旧系统退役→拆除门面），并说明这种分阶段方式如何降低迁移风险、让旧系统在迁移期间继续运行。",
+   "access": "免费阅读，无需注册；简体中文（Microsoft 官方文档）。",
+   "publisher": "Microsoft Learn / Azure Architecture Center（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/architecture/patterns/strangler-fig",
+    "location": "“上下文和问题”“解决方案”两节及四阶段图示说明",
+    "finding": "页面确认按服务边界增量迁移、门面路由、旧系统退役到移除门面的完整流程，并说明迁移期间客户无感知。"
+   },
+   "added_by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "《如何阅读代码》（Thoughtworks China 洞见博客，张旭海）",
+   "url": "https://www.thoughtworks.com/zh-cn/insights/blog/careers-at-thoughtworks/how-to-read-code",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "按步骤讲读陌生代码：怎么挑合适的代码库（感兴趣领域、经典且被大量使用、规模合适——标准库/redis/leveldb/xv6 这类）、先看文档（Get Started/Example）、再看目录结构（base/net/demo/tests/docs 各是什么）、从示例与测试代码入手、配合视频与 PPT、用断点与打印栈跟踪调用流程、边读边加注释与画 UML/流程图、最后仿写一个简化版检验是否真懂。",
+   "access": "免费阅读，无需注册；简体中文（Thoughtworks 中国官方博客）。",
+   "publisher": "Thoughtworks China（公司官方洞见博客，署名作者张旭海）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.thoughtworks.com/zh-cn/insights/blog/careers-at-thoughtworks/how-to-read-code",
+    "location": "正文“1. 寻找一位好老师”（选项目）、“2. 先看文档”、“3. 了解代码目录结构”等小节",
+    "finding": "页面确认这是一篇分步的方法文：从选题、读文档、看目录结构到从示例/测试入手、用调试工具跟踪、画图与仿写，而不是只讲“多看源码”。"
+   },
+   "added_by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "《软件工程——理论与实践》（毛新军、董威，高等教育出版社，“101 计划”教材）第 15 章 软件维护和演化",
+   "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=64cd2f16938b7cc2960f0b58",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "官方目录逐节列出：15.1 软件维护（何为维护、特点与挑战、维护工程师）、15.2 软件演化（何为演化、软件演化法则）、15.3 软件逻辑老化问题（何为逻辑老化、解决逻辑老化的方法）、15.4 软件维护技术、15.5 软件维护过程、15.6 软件的可维护性、15.7 软件维护的输出。",
+   "access": "需购买，高教社玄书平台标价 79.00 元（未购买，仅核对官方目录）；简体中文。",
+   "publisher": "高等教育出版社（玄书为高教社官方产品信息检索系统；作者毛新军、董威，国防科技大学）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=64cd2f16938b7cc2960f0b58",
+    "location": "图书详情页目录中“第15章 软件维护和演化”下 15.1–15.7 各节",
+    "finding": "页面确认定价 79.00 元与第 15 章逐节目录（含 15.2.2 软件演化法则、15.3 软件逻辑老化问题、15.6 软件的可维护性）；第 16 章为软件项目管理，全书未见“经验研究方法”专章。"
+   },
+   "added_by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Technical Debt（Martin Fowler bliki）",
+   "url": "https://martinfowler.com/bliki/TechnicalDebt.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "把 Ward Cunningham 的技术债隐喻讲透：cruft（内部质量缺陷）如何累积、为什么“多花的力气”就是利息（举了模块结构混乱导致四天变六天的例子），以及债务的分类与偿还策略。",
+   "access": "免费阅读，无需注册；英文。作者本人站点（Martin Fowler）。",
+   "publisher": "martinfowler.com（Martin Fowler 官方 bliki）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://martinfowler.com/bliki/TechnicalDebt.html",
+    "location": "开篇定义段与四天/六天的利息示例",
+    "finding": "页面确认技术债隐喻的定义（cruft 累积、加新功能的额外开销即利息）与作者 2019-05-21 署名。"
+   },
+   "added_by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "key": "r7-en2",
+   "lang": "en",
+   "title": "ACM SIGSOFT Empirical Standards for Software Engineering（实证研究标准，含 19 种研究方法的清单）",
+   "url": "https://www2.sigsoft.org/EmpiricalStandards/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "ACM SIGSOFT 官方的软件工程实证研究证据标准：为每种常见研究方法（如受控实验、案例研究、调查、复现研究等共 19 种）给出独立标准，每份标准区分 essential / desirable / extraordinary 属性，并配作者与审稿人用的 checklist，说明一项实证研究应当怎样设计与报告。",
+   "access": "免费阅读，无需注册；英文。",
+   "publisher": "ACM SIGSOFT（Empirical Standards 项目官方站）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www2.sigsoft.org/EmpiricalStandards/",
+    "location": "首页 “Empirical Standards for Software Engineering”“19 empirical standards to choose from”“Desirable and extraordinary attributes” 各段",
+    "finding": "页面确认这是 SE 研究的官方证据标准集合，按研究方法各有标准，并给出 essential/desirable/extraordinary 三级属性与 checklist。"
+   },
+   "added_by": "review/pi-additions/P.4.6.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "可维护性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 10 章 软件维护和演化",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 1 章 Programming over Time（可持续性与长期成本）",
+     "extent": "covered"
+    }
+   ],
+   "note": "章节标题可核；正文小节未打开。"
+  },
+  {
+   "topic": "兼容性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 10 章（兼容性小节未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "摘要（三条递增规则）与“语义化版本控制规范”11 条",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 15 章 Deprecation（弃用期与兼容窗口）",
+     "extent": "covered"
+    }
+   ],
+   "note": "旧记录中文只有教材第 10 章的章名。SemVer 中文规范把“什么算不兼容的改动、什么算向下兼容的新增/修正”写成了可判定的规则（并解释依赖地狱），这正是维护阶段判断兼容性的操作依据；与已有的英文第 15 章 Deprecation（弃用期与兼容窗口）互为对照。"
+  },
+  {
+   "topic": "迁移",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 10 章（迁移小节未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "上下文和问题／解决方案（服务边界、门面路由、四阶段）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 22 章 Large-Scale Changes（大规模迁移的流程与工具）",
+     "extent": "covered"
+    }
+   ],
+   "note": "旧记录中文只有教材第 10 章的章名，没有迁移的做法。这份微软官方中文文档讲的是“增量迁移旧系统”的标准做法：先定服务边界，再逐块替换并用门面在新旧之间路由，最后退役旧系统，正好补上“迁移”这一条。"
+  },
+  {
+   "topic": "代码理解",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh3",
+     "section": "正文 1–5 节（选项目、先看文档、看目录结构、从示例/测试入手、断点与日志跟踪、注释与画图、仿写）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 17 章 Code Search（在大代码库中定位与阅读陌生代码）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧没有代码理解/代码检索材料。；上一轮曾判定“中文没有代码理解的教学”，本轮重查后撤回：Thoughtworks 中国这篇方法文给的是可照着做的步骤，而不是泛泛而谈。配合 r7-zh4 第 15 章（维护中的代码理解与再工程语境）与已有的英文第 17 章 Code Search，中文侧补上该点。"
+  },
+  {
+   "topic": "技术债与经验研究",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 10 章（技术债与实证研究是否覆盖未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh4",
+     "section": "第 15 章 15.2 软件演化（演化法则）、15.3 软件逻辑老化问题（何为逻辑老化、解决方法）、15.6 软件的可维护性",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第 1 章（技术债的根源：变更成本随时间累积）；无经验研究方法章节",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en2",
+     "section": "ACM SIGSOFT Empirical Standards：General Standard 与各研究方法（case study、experiment、survey 等）的 essential/desirable 清单",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Technical Debt 全文（cruft、利息、偿还）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都缺“软件工程经验研究（实证方法）”：英文书是工程实践书，不讲研究方法；中文教材章节未核。；英文由两份材料组合：Fowler 的 Technical Debt 讲技术债（cruft、利息、偿还），ACM SIGSOFT 实证研究标准讲如何做和评审软件工程经验研究。原记录只把 Fowler 记为覆盖，经验研究一半没有挂来源，此处补上。；“技术债”这一半在中文里有对应教学：教材把“软件逻辑老化”单独成节讲成因与治理，可维护性单独成节；但“经验研究”（实证方法：如何设计案例研究/实验、如何评估结论）在中文侧只找到期刊综述与论文，没有教材式的方法教学，故整条只算 partial，并列入 unresolved。；技术债这一半由 Fowler 的定义与利息算例给出；经验研究这一半由 r7-en2（ACM SIGSOFT 实证研究标准，19 种方法各有标准与 checklist）给出——两者合起来覆盖整条。旧记录英文侧只有第 1 章“变更成本随时间累积”一句。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第 10 章 软件维护和演化（需自备教材），按可维护性/兼容性/迁移逐节做笔记"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读摘要与 11 条规范，给自己项目里最近三次改动各判一次“这是主/次/修订号变更”，并写清判据（公共 API 有没有变）"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "按四阶段画一遍自己系统的迁移方案：新服务边界在哪、门面放哪、先迁哪个功能片段、旧系统什么时候退役"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "挑一个中等规模开源项目，按文中步骤走一遍：先读文档与目录结构，从测试与示例入手，用断点跟一条主流程，画出调用图，最后仿写一个最小版本"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "读第 15 章 15.2–15.3 与 15.6，为上面那个项目写一份“技术债清单”：哪些属于逻辑老化、哪些属于可维护性不足、各自打算怎么还"
+    }
+   ],
+   "gaps": [
+    "技术债与经验研究"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "第 1 章 Programming over Time→第 15 章 Deprecation→第 22 章 Large-Scale Changes→第 17 章 Code Search"
+    },
+    {
+     "source": "r7-en1",
+     "read": "读 Technical Debt 全文，用“四天变六天”的算法给自己项目里两处 cruft 估一次利息（每次改动的额外工时）"
+    },
+    {
+     "source": "r7-en2",
+     "read": "在 19 份实证研究标准里选 case study 与 controlled experiment 两份，读 essential 属性清单，然后照它给自己的一个观察写研究设计与报告提纲"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://abseil.io/resources/swe-book/html/ch15.html、ch17.html、ch22.html",
+   "result": "采纳：Deprecation/Code Search/Large-Scale Changes 三章正文可读，正好对应兼容性/代码理解/迁移。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/PKU-1003177002（主教材第 10 章）",
+   "result": "部分采纳：确认第 10 章为“软件维护和演化”，但正文与小节不可核。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站与中文 MOOC 检索维护/演化/技术债课程（此前检索软件工程课程时已覆盖）",
+   "result": "未找到：中文侧只有软件工程导论课与考研速成，没有维护/演化/技术债的专门课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "经验软件工程 实证研究方法 课程 软件工程研究方法",
+   "result": "只有百科、教材电商页、国科大软件工程课程大纲与南大实证论文列表，没有讲实证方法的中文教学。",
+   "by": "review/main-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 软件工程 研究方法 实证",
+   "result": "电子科大、江西财大、北大、北理工的软件工程/测试课，课程概述均不含实证研究方法。",
+   "by": "review/main-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 软件工程 实证研究 经验软件工程 讲座",
+   "result": "只有考研经验分享和无关专栏。",
+   "by": "review/main-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "实证软件工程 教材 出版社 软件工程实证研究方法 书",
+   "result": "只有 Pressman、北大 101 计划等通用软件工程教材，没有中文的实证软件工程方法教材。",
+   "by": "review/main-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "如何阅读源码 代码理解 方法 中文 教程 陌生代码库 上手",
+   "result": "采纳：Thoughtworks 中国《如何阅读代码》（分步方法）；知乎长文与“用 AI 工具读代码”的文章未采用（前者是经验帖、后者是工具用法）",
+   "by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "技术债 实证研究 经验软件工程 中文 教材 软件维护与演化 迁移 兼容性",
+   "result": "部分采纳：找到高教社《软件工程——理论与实践》（毛新军、董威）第 15 章目录；掘金技术债文章作线索；经验研究仍只有期刊综述",
+   "by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "遗留系统 迁移 中文 教程 绞杀者模式 逐步替换 新旧系统并行 数据迁移",
+   "result": "采纳：Microsoft Learn 中文《Strangler Fig 模式》（官方文档，四阶段迁移流程）；掘金/gitbooks 同主题文章未采用",
+   "by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://semver.org/lang/zh-CN/、https://learn.microsoft.com/zh-cn/azure/architecture/patterns/strangler-fig、https://www.thoughtworks.com/zh-cn/insights/blog/careers-at-thoughtworks/how-to-read-code、高教社 bookId=64cd2f16938b7cc2960f0b58",
+   "result": "采纳：四页正文均打开核对（SemVer 递增规则、Strangler Fig 四阶段、读代码的分步方法、第 15 章 15.1–15.7 目录）",
+   "by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.ituring.com.cn/book/536（《修改代码的艺术》图灵社区页）",
+   "result": "不合适：页面为 JS 渲染，抓不到正文目录，未登记",
+   "by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "经验软件工程 实证研究 方法 综述 软件学报 中文 软件工程 实验研究",
+   "result": "不合适：只有《软件学报》论文与高校教师论文列表、综述清单，没有讲实证研究方法的教材或课程，故 zh 的“经验研究”留在 unresolved",
+   "by": "review/pi-additions/P.4.6.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://martinfowler.com/bliki/TechnicalDebt.html 与 https://acmsigsoft.github.io/EmpiricalStandards/（跳转 www2.sigsoft.org）",
+   "result": "采纳：前者确认技术债隐喻与利息算例，后者确认 19 份实证研究标准与 essential/desirable/extraordinary 三级属性",
+   "by": "review/pi-additions/P.4.6.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文与 P.4.1–P.4.5 共用同一段泛化 covers，且说“高级并发编程与技术债量化仍需英文补充”；本次把中文限定到教材第 10 章，并明确技术债/经验研究缺。",
+  "旧条目英文列的四章已逐页核实存在（15 Deprecation、17 Code Search、22 Large-Scale Changes，另有第 1 章），映射成立。",
+  "旧条目 note 提到“经验研究方法在教材（SE at Google）里没有，需要 UZH 的读物清单”，本次确认英文侧同样没有，中文也没有。",
+  "[review/pi-additions/P.4.6.json] 未解决 zh「技术债与经验研究」：只覆盖了“技术债/软件老化”这一半（毛新军教材 15.2–15.3、15.6）。中文侧查不到“经验研究/实证方法”的教材式教学：北大《软件工程：经典、现代和前沿》与毛新军《软件工程——理论与实践》目录都没有实证研究方法章；中国大学MOOC 相关课程大纲为空无法核对；检索到的中文材料是《软件学报》《计算机学报》的综述与研究论文（如缺陷预测综述），属于研究成果而不是方法教学。已用 Tavily 四次专查（含“经验软件工程 教材 目录”“实证研究方法 课件”），打开上述书目页、《软件学报》首页与《构建之法（第三版）》目录页（微信读书）核对；《构建之法》章目为概论、个人技术和流程、软件工程师的成长、两人合作、团队和流程、敏捷流程等，也没有实证研究方法章。检索到的中文相关材料是《软件学报》《计算机学报》的综述与研究论文（如缺陷预测综述），属于研究成果而不是方法教学。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "技术债与经验研究",
+   "source": "r7-en2",
+   "reason": "中文路线的技术债一半由毛新军《软件工程——理论与实践》15.2–15.3（软件演化、逻辑老化）和 15.6（可维护性）承担；“经验研究”一半（如何设计与评估案例研究、实验、调查）在中文侧三个渠道都只找到期刊论文和综述：文字检索命中《软件学报》实证研究论文与 Pressman《软件工程：实践者的研究方法》（书名里的“研究方法”指工程方法，不是实证研究）；B 站站内检索只有考研经验分享；付费教材检索只有通用软件工程教材。因此这一半改读英文 ACM SIGSOFT Empirical Standards。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/main-additions/P.4.6.json"
+  }
+ ],
+ "name": "软件维护、演化与技术债",
+ "description": "可维护性、兼容性、迁移、代码理解、技术债与经验研究。",
+ "applied_additions": [
+  "review/main-additions/P.4.6.json",
+  "review/pi-additions/P.4.6.json"
+ ]
+}

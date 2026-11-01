@@ -72,6 +72,25 @@
     "finding": "页面原文写明“（1）Python第三方库NumPy，讲解N维数据的表达及科学计算的基本概念和运算方法”“（3）Python第三方库Pandas……介绍并讲解Series和DataFrame数据类型的表示和基本使用”，并标注“国家精品在线开放课程”。课程大纲区域为 JS 渲染，逐单元标题未取到（网易公开课另有该 MOOC 的分集页面，可作观看入口）。"
    },
    "added_by": "review/pi-additions/P.2.3.json"
+  },
+  {
+   "key": "main-zh-scipy",
+   "lang": "zh",
+   "title": "菜鸟教程：SciPy 教程（中文，优化器、插值、显着性检验、稀疏矩阵、空间数据等模块）",
+   "url": "https://www.runoob.com/scipy/scipy-tutorial.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "SciPy 安装与模块列表；优化器（scipy.optimize.minimize、求根）、插值（interp1d、样条、径向基函数）、显着性检验（scipy.stats）、稀疏矩阵、图结构、空间数据；每节配可运行实例和输出。",
+   "access": "免费中文网页教程，无需注册；页面有广告。",
+   "publisher": "菜鸟教程（runoob.com）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.runoob.com/scipy/scipy-interpolation.html",
+    "location": "SciPy 优化器、SciPy 插值、Scipy 显着性检验三页",
+    "finding": "插值页讲 interp1d/UnivariateSpline/Rbf 并给出实例与输出；优化器页讲 scipy.optimize.minimize 的参数与求最小值、求根；教程首页列出最优化、线性代数、积分、插值等模块。"
+   },
+   "added_by": "review/main-additions/P.2.3.json"
   }
  ],
  "topics": [
@@ -121,6 +140,11 @@
      "source": "r7-zh1",
      "section": "第 1 周 NumPy：N 维数据的表达及科学计算的基本概念和运算方法",
      "extent": "partial"
+    },
+    {
+     "source": "main-zh-scipy",
+     "section": "SciPy 优化器、SciPy 插值、Scipy 显着性检验、SciPy 稀疏矩阵（接北理工《Python数据分析与展示》第 1 周 NumPy）",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -130,7 +154,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文侧同样缺 SciPy 教学材料。；这一周覆盖 Python 里数组式科学计算的基础：N 维数组、向量化运算、随机数、CSV 与多维数据存取，够用但不含 SciPy 的插值、优化与拟合、数值积分、信号处理等模块级内容，所以中文侧只算部分覆盖。"
+   "note": "中文侧同样缺 SciPy 教学材料。；这一周覆盖 Python 里数组式科学计算的基础：N 维数组、向量化运算、随机数、CSV 与多维数据存取，够用但不含 SciPy 的插值、优化与拟合、数值积分、信号处理等模块级内容，所以中文侧只算部分覆盖。；NumPy 层面由北理工课第 1 周讲，SciPy 的优化、插值、统计检验由菜鸟教程逐模块配例子讲，组合起来与英文 SciPy Lecture Notes 1.6 的入门范围相当。pi 查了莫烦、scipy-lectures、MOOC 与 B 站后判定中文没有，漏查了这套中文教程，跨语言补充撤销。"
   },
   {
    "topic": "环境管理与自动化",
@@ -159,7 +183,7 @@
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -168,11 +192,13 @@
     {
      "source": "r7-zh1",
      "read": "接廖雪峰教程之后：第 1 周 NumPy（N 维数组、索引切片、广播式运算、随机数与 CSV/多维数据存取），做一遍把表格数据读进数组并做统计的小练习；第 2 周 Matplotlib 出图；第 3 周 Pandas（Series 与 DataFrame 的建立、索引、筛选、分组统计）。"
+    },
+    {
+     "source": "main-zh-scipy",
+     "read": "学完 NumPy 后按菜鸟教程 SciPy 部分依次做优化器、插值、显着性检验三节的实例，自己换数据各写一个小例子。"
     }
    ],
-   "gaps": [
-    "科学计算"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -255,6 +281,14 @@
    "query_or_url": "Python科学计算 第2版 张若愚 清华大学出版社 目录 SciPy",
    "result": "未采纳：命中百度百科、Scribd 上传件（盗版镜像，按规则不用）、淘宝/京东商品页，没有能核对目录的出版社官方页；付费来源登记不了。",
    "by": "review/pi-additions/P.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.runoob.com/scipy/scipy-tutorial.html",
+   "result": "中文 SciPy 模块级教程，采纳。",
+   "by": "review/main-additions/P.2.3.json"
   }
  ],
  "findings": [
@@ -263,23 +297,11 @@
   "旧条目英文写 pandas 在“3.1 Statistics in Python”，与目录一致；环境管理/自动化按旧条目 note 的提示补 Missing Semester。",
   "[review/pi-additions/P.2.3.json] 未解决 zh「科学计算」：中文只有部分覆盖：NumPy 的数组式科学计算基础已由北理工 MOOC 覆盖，但 SciPy 的插值、优化与拟合、数值积分、信号处理没有可核的中文系统教学（本轮文字/视频/官方课/付费四路都查过），故标 partial 并走英文补。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "科学计算",
-   "source": "en1",
-   "reason": "本轮中文侧查了四个渠道仍无 SciPy 的工具教学：文字（莫烦Python 数据处理只有 Numpy/Pandas/Matplotlib，无 SciPy；scipy-lectures 无中文版）、视频（B 站三组关键词都没有中文授课的 SciPy 系列课，数学建模/计算方法课是数值数学理论，不是 SciPy 用法）、官方课程（中国大学MOOC 只有《数值分析/计算方法》类理论课与《Python数据分析与展示》，后者 NumPy 周只到“科学计算的基本概念和运算方法”）、付费（张若愚《Python科学计算》只有百科与电商页，出版社目录页未取到）。所以中文路线里 SciPy 的插值/优化/积分部分仍看英文 SciPy Lecture Notes（en1）第 1.6 节。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/P.2.3.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "Python与科学计算工具",
  "description": "脚本、数组与数据框、科学计算、环境管理与自动化。",
  "applied_additions": [
-  "review/pi-additions/P.2.3.json"
+  "review/pi-additions/P.2.3.json",
+  "review/main-additions/P.2.3.json"
  ]
 }

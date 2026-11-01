@@ -1,0 +1,336 @@
+{
+ "id": "M.4.5",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "齐天博《拓扑学与拓扑数据分析》（作者公开中文讲义）",
+   "url": "https://tianboqi.github.io/files/tda.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第一部分：点集拓扑基础、单纯形与单纯复形、单纯链群与单纯同调；第二部分：从数据构建复形、持续同调、Z2 上的持续同调及计算、持续同调算法实践（调包实现）。",
+   "access": "作者个人网站公开 PDF，含中文目录与正文；需要点集拓扑、线性代数与证明基础；无影片。",
+   "publisher": "齐天博（tianboqi.github.io）",
+   "evidence": {
+    "url": "https://tianboqi.github.io/files/tda.pdf",
+    "location": "PDF 目录：1 点集拓扑学基础；2 单纯形与复形、单纯同调论；3 持续同调方法（从数据构建复形、Z2 持续同调、算法实践）",
+    "finding": "实际下载 PDF 并读到目录与正文；有单纯复形／同调与持续同调，但检索全书没有『稳定性』『bottleneck』『Reeb』『Mapper』。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《面向应用的拓扑数据分析基础（一）》暑期课录像（约 104 分钟）",
+   "url": "https://www.bilibili.com/video/BV18z4y137Lv/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "面向非拓扑专业的 TDA 入门：把代数拓扑部分理论封装成黑箱，解释输入、输出、背景与动机；作为点云与持续同调的直观补充。",
+   "access": "B 站免费观看，暑期课 4 讲（本页为第一讲，约 1 小时 44 分），中文授课；PPT 与视频可通过简介里的百度网盘获取；讲课者为个人账号（非学校官方）；字幕未核对。",
+   "publisher": "B 站账号“阿斯特里克”（166 粉）。依据：视频页简介是讲课人自述——“这是一期非正式的拓扑数据分析（Topological Data Analysis, TDA）暑期课的录像……前置知识只需要线性代数……欢迎在评论区留言讨论。PPT 及视频下载可用以下度盘链接”“暑期课共四次……如果想与我合作可以私信聊”；页面版权位标“未经作者授权，禁止转载”。属讲课人本人发布自己的暑期课录像（4 讲合集），不是第三方转载；账号为个人账号，非学校官方号。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV18z4y137Lv/",
+    "location": "影片标题与说明：非正式 TDA 暑期课录像，前置只需线性代数，代数拓扑部分作黑箱处理；共四次课，本片为（一）",
+    "finding": "实际打开 B 站页，看到单讲时长与课程说明；可作直观入门，但不是完整四讲，不能单独充整门 TDA。"
+   },
+   "reupload": false,
+   "updated_by": [
+    "review/pi-additions/M.4.5.json"
+   ]
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Introduction to Topological Data Analysis — ETH Zürich 讲义（FS 2026）",
+   "url": "https://ti.inf.ethz.ch/ew/courses/TDA26/Script.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "点集／度量空间、代数基础、同调（单纯复形、链、边界映射、同调群、奇异同调）、持续同调（过滤、持久模、条形码、配对与矩阵约化）、点云复形（Čech／Vietoris–Rips、Delaunay／Alpha）、持续图距离与稳定性（bottleneck／Wasserstein、interleaving 距离与稳定性定理）、Reeb 图与 Mapper、最优生成元、多参数持续。",
+   "access": "ETH 课程站直接公开整本讲义 PDF（FS 2026 版），无需登录；无影片；只需线性代数，不要求先修拓扑。",
+   "publisher": "ETH Zürich（P. Schnider / L. Slot / S. Weber）",
+   "evidence": {
+    "url": "https://ti.inf.ethz.ch/ew/courses/TDA26/Script.pdf",
+    "location": "PDF 目录：homology、persistent homology、barcodes、point cloud complexes、bottleneck/Wasserstein stability、Reeb graphs/Mapper",
+    "finding": "实际下载讲义并检索目录与正文；稳定性（bottleneck/Wasserstein）、Reeb/Mapper、点云复形都有章节，属完整 TDA 课程。"
+   }
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "ETH Zürich TDA 课程 Chapter 6: Distances and Stability（PDF，2025 版讲义）",
+   "url": "https://ti.inf.ethz.ch/ew/courses/TDA25/Chapter6.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "reference",
+   "covers": "整章讲持续同调的距离与稳定性：6.1 Distance Metrics on Persistence Diagrams、6.1.1 Bottleneck Distance（定义 6.2：db(Dgm_p(F),Dgm_p(G)) := inf_π sup_x ||x−π(x)||₁，先证明它是度量）、Hausdorff 距离、以及后续的稳定性定理（把过滤函数的扰动与条形码/图的距离联系起来）。",
+   "access": "ETH 课程站免费 PDF，无注册；英文；数学排版 PDF。",
+   "publisher": "ETH Zürich（TDA 课程教学团队，2025 版讲义）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://ti.inf.ethz.ch/ew/courses/TDA25/Chapter6.pdf",
+    "location": "Chapter 6 Distances and Stability：6.1 Distance Metrics on Persistence Diagrams、6.1.1 Bottleneck Distance、Definition 6.2、Observation 6.3",
+    "finding": "PDF 正文确认章节标题为“Distances and Stability”，并逐节给出 bottleneck distance 的匹配式定义（inf over bijections of sup L1 距离）与“它是持久图空间上的度量”的观察，说明稳定性部分有独立成章的教学。"
+   },
+   "added_by": "review/pi-additions/M.4.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "单纯复形与同调",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.1 单纯形与复形、拓扑空间的三角剖分；2.2 单纯链群与单纯同调群",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Homology：simplicial complexes、chains、boundary maps、homology groups、singular homology",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文齐天博第 2 章从单纯形、链群到同调群完整讲；英文 ETH 讲义的同调章节对应，并多讲奇异同调。"
+  },
+  {
+   "topic": "持续同调与条形码",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "3.2 从数据构建复形、持续同调、Z2 上的持续同调及计算；3.3 算法实践",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "TDA 暑期课第一讲（持续同调直观）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Persistent homology：filtration、persistence modules、barcodes、pairing/matrix reduction",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文齐天博第 3 章有持续同调与 Z2 计算，暑期课只作直观补充；英文 ETH 讲义有 filtration／barcode／matrix reduction 的完整处理。"
+  },
+  {
+   "topic": "点云的多尺度拓扑结构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "3.1 数据的拓扑结构；3.2.1 从数据构建复形",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Point cloud complexes：Čech/Vietoris–Rips、Delaunay/Alpha complexes",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文讲义从数据构建复形并做多尺度持续同调；英文 ETH 讲义另列 Čech／VR／Delaunay／Alpha 复形。"
+  },
+  {
+   "topic": "拓扑摘要的稳定性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "全书没有 bottleneck／Wasserstein 稳定性定理或 Reeb/Mapper 章节",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Persistence diagram distances and stability：bottleneck/Wasserstein、interleaving distance and stability theorem",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文主讲义明确没有稳定性与 Reeb/Mapper；暑期课只有一讲入门，未见稳定性定理。此项中文标 partial，不假报 covered；英文 ETH 讲义有完整章节。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读第 1 章点集拓扑基础，补拓扑空间、连续映射与同伦。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第 2 章单纯形、单纯复形、链群与同调群。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第 3 章从数据构建复形、Z2 持续同调、barcode 计算与调包实践。"
+    },
+    {
+     "source": "zh2",
+     "read": "看暑期课第一讲建立直观；稳定性与 Reeb/Mapper 仍无中文材料，需另找。"
+    }
+   ],
+   "gaps": [
+    "拓扑摘要的稳定性"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the homology chapters first: simplicial complexes, chains, boundary maps and homology groups."
+    },
+    {
+     "source": "en1",
+     "read": "Read persistent homology: filtrations, persistence modules, barcodes and the matrix reduction algorithm."
+    },
+    {
+     "source": "en1",
+     "read": "Read point cloud complexes (Čech/VR/Delaunay/Alpha), then persistence diagram distances and the stability theorem."
+    },
+    {
+     "source": "en1",
+     "read": "Finish with Reeb graphs/Mapper and the multiparameter chapter."
+    },
+    {
+     "source": "r7-en1",
+     "read": "读 Chapter 6 的 6.1/6.1.1：先按定义 6.2 手算两个小的持久图之间的 bottleneck distance，再读稳定性定理部分，弄清过滤函数扰动 ≤ε 时条形码距离 ≤ε 的含义。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://tianboqi.github.io/files/tda.pdf（既有主資源，逐章檢索）",
+   "result": "保留：单纯复形／同调／持续同调完整，但确认没有稳定性、Reeb、Mapper。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「拓扑数据分析 持续同调 稳定性」「Mapper 拓扑数据分析」「持续同调 课程」",
+   "result": "只找到一讲 TDA 暑期课与 barcode 原理短片，没有稳定性定理或 Mapper 的完整中文课；中文 stability 标 partial。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ti.inf.ethz.ch/ew/courses/TDA26/Script.pdf（既有主資源）",
+   "result": "采纳：ETH 讲义完整覆盖同调、持续同调、点云复形、bottleneck/Wasserstein 稳定性、Reeb/Mapper。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "持续同调 稳定性定理 瓶颈距离 讲义",
+   "result": "中文结果只有知乎入门文章（不含稳定性定理）、维基百科与一篇图学学报综述（摘要无稳定性内容）；相关讲义都是英文（ETH TDA25 第 6 章、Fugacci 讲义）。",
+   "by": "review/main-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 持续同调 稳定性 拓扑数据分析",
+   "result": "只有科普专栏和一则未注明内容的 TDA 视频，没有讲持续图稳定性的中文课程。主代理复核，支持 pi 的跨语言补充。",
+   "by": "review/main-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://tianboqi.github.io/files/tda.pdf（现有 zh1 全文，按关键词 稳定|瓶颈|Wasserstein|interleav 检索）",
+   "result": "确认仍缺：全文命中只有一般拓扑里的“距离/度量空间”讨论，没有“稳定性/瓶颈距离/interleaving”章节，zh1 确实不覆盖这一项。",
+   "by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "持续同调 / 拓扑数据分析 课程 讲座 / 持续同调 稳定性 瓶颈距离",
+   "result": "不合适：检索被游戏王“同调”卡组、Blender 拓扑、数据分析求职课淹没；唯一相关的 TDA 视频就是现有 zh2（暑期课 4 讲），其分 P 只有“（一）～（四）”无小节标题，无法确认是否讲稳定性。",
+   "by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV18z4y137Lv/",
+   "result": "核对身份：简介为讲课人自述（暑期课共四次、PPT 走度盘、欢迎留言讨论），页面标“未经作者授权，禁止转载”，据此把 zh2 改判为非转载（reupload:false）。",
+   "by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "拓扑数据分析 持续同调 稳定性 瓶颈距离 讲义 中文 pdf；瓶颈距离 持续同调 稳定性定理 中文 讲解；计算拓扑 持续同调 讲义 大学 课程 稳定性 中文 教学",
+   "result": "未采纳：三次检索只得到知乎“拓扑数据分析－持续同调（一）”系列、CSDN 单篇《持续同调介绍》、中文维基、以及《计算机辅助拓扑设计——持续同调在几何设计和处理中的应用》（图形学报 2022 综述，属论文不是教学），没有可核的中文稳定性章节或中文课程；命中的稳定性章节都是英文（ETH TDA25 Chapter 6、fugacci 的 Persistence & Stability 讲义）。",
+   "by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "限定 icourse163.org / xuetangx.com 搜“拓扑数据分析 持续同调 课程”",
+   "result": "未命中：返回的是北航《应用数学分析》（其中一模块“拓扑学与应用初步”讲什么是拓扑、闭曲面分类，不是 TDA）、市场调查/数据分析类课与 Python 大数据分析，没有拓扑数据分析或持续同调课程。",
+   "by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily+fetch",
+   "query_or_url": "拓扑数据分析 图书 持续同调 教材 出版社 目录 → 命中上海科技大学《拓扑数据分析导论》教学大纲 https://ims.shanghaitech.edu.cn/2020/0930/c7363a56127/page.htm",
+   "result": "部分采纳但不计为覆盖：该大纲（已打开）把课程分为集合论 1 周、点集拓扑 5 周、代数拓扑 4 周、Persistent homology 3 周、Mapper 算法 3 周，没有稳定性（bottleneck/Wasserstein/interleaving）单元，且只是大纲、无公开讲义或录像；图书方向未出现可核目录的中文 TDA 教材页。",
+   "by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ti.inf.ethz.ch/ew/courses/TDA25/Chapter6.pdf",
+   "result": "采纳：ETH 课程讲义第 6 章“Distances and Stability”含 bottleneck distance 定义与度量化证明，可作英文侧稳定性的精确章节证据。",
+   "by": "review/pi-additions/M.4.5.json"
+  }
+ ],
+ "findings": [
+  "原中文主资源齐天博讲义已覆盖前三项，但明确没有稳定性与 Reeb/Mapper；不能因为它标题叫「拓扑数据分析」就说四项都完成。本节 zh 路线如实标 partial。",
+  "原英文 ETH 讲义是完整课程，含 stability 与 Mapper；保留为英文主资源。",
+  "中文暑期课只有第一讲（四次课中的第一次），只能作直观补充，不能充完整课程；已在 access 写明。",
+  "「拓扑摘要的稳定性」是简介中的必学项，没有被降成 extension；中文缺口保留在 routes.gaps，等待主代理决定是否补中文材料。",
+  "其余三项中英文都有 covered，没有用英文替代中文已覆盖的部分。",
+  "[review/pi-additions/M.4.5.json] 未解决 zh「拓扑摘要的稳定性」：中文侧没有找到可核的稳定性（bottleneck/Wasserstein、interleaving）系统教学：讲义、B 站视频、中文检索、出版物四个方向都查过（见 fallback_confirm），只能标为未解决，走英文补。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "拓扑摘要的稳定性",
+   "source": "en1",
+   "reason": "本轮中文侧四个渠道都查过仍无系统教学：文字（齐天博讲义 PDF 全文按“稳定/瓶颈/Wasserstein/interleaving”检索无命中；三轮中文检索只得到知乎单篇系列、CSDN 短文、中文维基与一篇中文综述论文，均不构成章节级教学）、视频（B 站三组关键词检索没有中文 TDA 稳定性讲次，唯一相关的暑期课 4 讲只有“（一）～（四）”无小节标题、无法确认）、官方课程（中国大学MOOC/学堂在线检索无拓扑数据分析或持续同调课程；上海科技大学《拓扑数据分析导论》教学大纲虽存在，但大纲里只有 Persistent homology 与 Mapper，没有稳定性单元，也无公开讲义/录像）、付费/出版物（未出现可核目录的中文《拓扑数据分析》教材页）。因此中文学习者的稳定性部分只能看现有 en1（ETH 讲义）的稳定性章节，本轮另补了更精确的 TDA25 Chapter 6“Distances and Stability”。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/M.4.5.json"
+  }
+ ],
+ "name": "拓扑数据分析",
+ "description": "单纯复形与同调、持续同调与条形码、点云的多尺度拓扑结构；拓扑摘要的稳定性。",
+ "applied_additions": [
+  "review/main-additions/M.4.5.json",
+  "review/pi-additions/M.4.5.json"
+ ]
+}

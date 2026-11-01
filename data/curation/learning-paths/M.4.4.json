@@ -1,0 +1,316 @@
+{
+ "id": "M.4.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "OI Wiki：计算几何（凸包、三角剖分含 Delaunay/Voronoi）",
+   "url": "https://oi-wiki.org/geometry/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "二维／三维计算几何基础、凸包（Andrew 算法）、三角剖分（Delaunay 三角剖分与 Voronoi 图及对偶关系）、半平面交、旋转卡壳、平面最近点对、最小圆覆盖、反演变换；扫描线页只讲矩形面积与二维数点，不是线段求交；范围搜索／点定位／排列没有对应条目。",
+   "access": "免费在线阅读（CC BY-SA 4.0）；中文；无影片；偏竞赛与工程算法，定理与复杂度论证不如课程系统。",
+   "publisher": "OI Wiki 社群",
+   "evidence": {
+    "url": "https://oi-wiki.org/geometry/",
+    "location": "计算几何目录：凸包、三角剖分、Delaunay 三角剖分、Voronoi 图、半平面交、扫描线、最近点对等",
+    "finding": "实际打开 OI Wiki 计算几何首页，看到条目列表与简介；凸包与 Delaunay/Voronoi 有条目，但扫描线只讲矩形面积，没有线段求交或范围搜索。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《Computational Geometry（上）（下）》经典计算几何 295 讲（B 站公开录像）",
+   "url": "https://www.bilibili.com/video/BV1rj411673b/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "分 P 按 01-A…01-M（凸包：Planarity、Amortization、Merge、Common Kernel、Interior/Exterior、Common Tangents、Stitch、Zig-Zag）、02-A…02-J（平面扫描与几何求交：Min-Gap/Max-Gap、Lower Bound、Event Queue、Sweepline Status、Monotone Partitioning、Plane Sweeping）、03-A…03-E（多边形剖分：三角剖分、三着色、支配集、鸽巢原理、Ear & Mouth）、04-A…04-M（Voronoi 图与 Delaunay：Common Tangents、Contour Length、Fortune's Trick、Site Event）、05-A…05-H（Lower Bound、History、Complexity、Approximation、Hardness、Strategies）编号组织；课程简介明确写教学目标包含“凸包、多边形细分、Voronoi 图、Delaunay 三角剖分，以及几何求交、点定位、范围查找、截窗查询”。",
+   "access": "第三方转载，授权未核。B 站免费观看，“上”为 200 个分 P（每 P 2–9 分钟的小节），中文授课；上传者为营销式搬运账号，非清华官方账号；字幕未核对。另有“(下)”由另一账号发布。",
+   "publisher": "B 站上传者：会了么（课程来源／教师未在页面标明）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1rj411673b/",
+    "location": "B 站分 P 目录：01 凸包、02 线段求交（EU、Proximity & Separability、Sickles、Monotone Partitioning）、03 三角剖分、04 Voronoi（Beach Line、Site Event）、05 Delaunay、06 点定位（Point Location、Trapezoids、Ray Shooting）",
+    "finding": "实际打开上／下集合，读取 295 个分 P 标题；凸包、线段求交、三角剖分、Voronoi／Delaunay、点定位都有完整章节。"
+   },
+   "reupload": true,
+   "official_search": "官方渠道已查：①清华大学《计算几何》课程站 https://dsa.cs.tsinghua.edu.cn/~deng/cg/ 可正常打开（邓俊辉，课程号 70240183，含 Lecture Notes 与 2001/2003/2004/2006 各学期课程页），已作为 r7-zh1 登记；②该站 Fall 2006 课程页的“重要知识点”清单含 (Planar) range search、(Planar) point location，与 B 站这套 200 讲录像的课程简介所述“范围查找、截窗查询”一致，可确认录像内容是清华这门课；③B 站上传者为 6.8 万粉的营销式账号（简介“关注我,为中国教育点赞！…VX…”），不是清华官方账号，故转载保留 reupload:true，官方版按课程站登记。",
+   "updated_by": [
+    "review/pi-additions/M.4.4.json"
+   ]
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMSC 754 Computational Geometry（University of Maryland, Fall 2023, Dave Mount）",
+   "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "凸包（Graham/Jarvis/Chan 与下界）、线段求交、多边形三角剖分、半平面交与点线对偶、低维线性规划、梯形分解与点定位、Voronoi 图、Delaunay 三角剖分及构造、直线／超平面排列、范围搜索与 kd-树／正交范围树、WSPD、coresets、采样与 VC 维、运动规划。",
+   "access": "课程主页与 20 讲讲义 PDF 公开；整套讲义 PDF 版权声明允许为教育目的免费复制与分发；无影片。",
+   "publisher": "University of Maryland（Prof. Dave Mount）",
+   "evidence": {
+    "url": "https://www.cs.umd.edu/class/fall2023/cmsc754/",
+    "location": "课程主页 Lecture Notes 列表：Convex Hulls、Segment Intersection、Triangulation、Voronoi Diagrams、Delaunay Triangulations、Point Location、Range Searching、Arrangements 等",
+    "finding": "实际打开课程主页，看到 20 讲讲义 PDF 与主题列表；范围搜索、点定位、Voronoi／Delaunay、线段求交都有对应讲次。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "清华大学《计算几何》课程站（邓俊辉，课程号 70240183；含历学期课程进度与 Lecture Notes 链接）",
+   "url": "https://dsa.cs.tsinghua.edu.cn/~deng/cg/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程站给出教材（de Berg 等《Computational Geometry: Algorithms & Applications》）、Lecture Notes（清华云盘）、以及 Fall 2006/2004/2003/2001 各学期课程页。Fall 2006 课程页的“重要知识点”清单逐条列出：Convex hull、(Delaunay) triangulation、Voronoi diagram、(Planar) arrangement、(Planar) configuration / dissection、(Planar) point location、(Planar) range search、Geometric Intersection——中文侧缺的“范围查找（range search）”正是这份官方课程大纲里的一行。",
+   "access": "清华大学课程站免费公开，无需注册（Lecture Notes 走清华云盘链接，可能需要清华账号，未点开核对）；页面为 GBK 编码，正文中文在纯文本抓取时会乱码，英文知识点名可读；中文授课（配套 B 站录像）。",
+   "publisher": "清华大学计算机科学与技术系（授课教师：邓俊辉）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://dsa.cs.tsinghua.edu.cn/~deng/cg/70240183@2006fall/index.htm",
+    "location": "Fall 2006 课程页“重要知识点”清单与“课程进度计划”表（第 1 周 Convex Hull、第 5 周 Geometric Intersection 等）",
+    "finding": "清单逐行列出 Convex hull、(Delaunay) triangulation、Voronoi diagram、(Planar) arrangement、(Planar) configuration / dissection、(Planar) point location、(Planar) range search、Geometric Intersection，确认范围查找是该课程的正式知识点；页面中文因 GBK 编码在抓取文本里乱码，但英文条目完整可读。"
+   },
+   "added_by": "review/pi-additions/M.4.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "凸包",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "凸包（Andrew 算法）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第 01 章凸包：Extremity、To-Left、Graham/Jarvis、下界、分治",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Convex Hulls（Graham/Jarvis/Chan 与下界）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 OI Wiki 给 Andrew 算法与代码，影片第 01 章给多种算法与下界；英文 CMSC754 凸包讲次对应。"
+  },
+  {
+   "topic": "线段求交",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 02 章线段求交：Element Uniqueness、brute-force、proximity/separability、sickles、monotone partitioning",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "扫描线（只讲矩形面积，不是线段求交）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Segment Intersection",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 OI Wiki 没有线段求交条目（扫描线只讲矩形面积），故由影片第 02 章补；英文 CMSC754 的 Segment Intersection 讲次对应。"
+  },
+  {
+   "topic": "空间划分",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 06 章点定位与梯形分解：Subdivision、Search Structure、Ray Shooting",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "三角剖分（Delaunay 对偶）；无一般空间划分条目",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Trapezoidal Decomposition / Point Location；Arrangements",
+     "extent": "covered"
+    }
+   ],
+   "note": "空间划分按梯形分解、点定位与排列理解；中文影片第 06 章有梯形分解与搜寻结构，英文 CMSC754 的 point location／arrangements 对应。"
+  },
+  {
+   "topic": "Voronoi 与 Delaunay 结构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Delaunay 三角剖分与 Voronoi 图及对偶关系",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第 04 章 Voronoi（beach line、site/circle event）；第 05 章 Delaunay（空外接圆、edge flipping）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Voronoi Diagrams；Delaunay Triangulations",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 OI Wiki 与影片第 04–05 章都覆盖 Voronoi／Delaunay，影片另有 Fortune 扫描线与构造细节；英文 CMSC754 两个讲次对应。"
+  },
+  {
+   "topic": "范围搜索与几何算法",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第 06 章点定位、ray shooting（只到点定位／射线，不含正交范围搜索、kd-tree）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "最近点对、旋转卡壳、最小圆覆盖（几何算法，但不是范围搜索）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "清华《计算几何》Fall 2006 课程页“重要知识点”：(Planar) range search、(Planar) point location；配套录像见 zh2（200 讲，简介列“范围查找、截窗查询”）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Range Searching（kd-trees、orthogonal range trees）；Point Location",
+     "extent": "covered"
+    }
+   ],
+   "note": "「范围搜索与几何算法」包含正交范围搜索、kd-tree、范围树等；中文影片只有点定位／ray shooting，OI Wiki 只有最近点对等几何算法，故中文只 partial。英文 CMSC754 的 Range Searching 讲次完整覆盖。；“范围搜索”这一半由清华课程的官方知识点清单承担（(Planar) range search、(Planar) point location 是正式知识点），配套中文课堂录像为 zh2（200 讲，简介同样列明“范围查找、截窗查询”，分 P 按 01–05 章编号）；“几何算法”这一半由现有 zh1（OI Wiki 计算几何：凸包、三角剖分含 Delaunay/Voronoi、扫描线）与 zh2 的 01–04 各章承担。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读凸包、Delaunay／Voronoi 条目，建立基本算法与代码实作。"
+    },
+    {
+     "source": "zh2",
+     "read": "看第 01 章凸包、第 02 章线段求交，补 OI Wiki 没有的线段求交与下界。"
+    },
+    {
+     "source": "zh2",
+     "read": "看第 03–05 章三角剖分、Voronoi、Delaunay，再看第 06 章点定位／梯形分解。"
+    },
+    {
+     "source": "zh1",
+     "read": "用最近点对、旋转卡壳、最小圆覆盖等条目补几何算法；正交范围搜索需另读英文 CMSC754。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先看清华课程站 Fall 2006 课程页的“重要知识点”与“课程进度计划”，明确凸包→几何求交→多边形剖分→Voronoi/Delaunay→点定位与范围查找的次序；再按 Lecture Notes 链接取讲义对照。"
+    },
+    {
+     "source": "zh2",
+     "read": "按分 P 编号顺序看 01（凸包）→02（平面扫描与几何求交）→03（多边形剖分）→04（Voronoi 与 Delaunay）→05（Lower Bound／History／Complexity／Strategies 一组，即范围查找相关小节），每看完一章用 OI Wiki（zh1）对应条目复核实现细节。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the Convex Hulls, Segment Intersection and Triangulation lectures first."
+    },
+    {
+     "source": "en1",
+     "read": "Continue with Voronoi Diagrams, Delaunay Triangulations, Point Location and Arrangements."
+    },
+    {
+     "source": "en1",
+     "read": "Finish with Range Searching (kd-trees/orthogonal range trees), WSPD, coresets and sampling."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://oi-wiki.org/geometry/（既有主資源）",
+   "result": "保留为中文凸包／Delaunay／Voronoi 的文字来源，但确认它没有线段求交与范围搜索。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜尋「计算几何 大学 课程」「计算几何 Voronoi Delaunay 课程」；核對 BV1rj411673b 與 BV1Hj411z74F 的 295 個分 P",
+   "result": "采纳：经典计算几何 295 讲，01 凸包、02 线段求交、03 三角剖分、04–05 Voronoi/Delaunay、06 点定位；讲解语言未逐段核对，已标明。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.umd.edu/class/fall2023/cmsc754/（既有主資源）",
+   "result": "采纳：CMSC754 20 讲讲义覆盖凸包、线段求交、Voronoi/Delaunay、点定位、范围搜索；免费 PDF。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://dsa.cs.tsinghua.edu.cn/~deng/cg/ 与 /70240183@2006fall/index.htm",
+   "result": "采纳：清华邓俊辉计算几何课程站可打开，Fall 2006 页“重要知识点”含 (Planar) range search、(Planar) point location、(Planar) arrangement 等，确认范围查找是正式课程内容。",
+   "by": "review/pi-additions/M.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV1rj411673b/",
+   "result": "核对：标题《Computational Geometry(上)经典计算几何…》共 200 个分 P，按 01/02/03/04/05 编号组织；简介明确写教学目标含“凸包、多边形细分、Voronoi 图、Delaunay 三角剖分，以及几何求交、点定位、范围查找、截窗查询”；上传者为 6.8 万粉营销式账号（简介带微信号），非清华官方。",
+   "by": "review/pi-additions/M.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://oi-wiki.org/geometry/（复核现有 zh1 是否含范围查找）",
+   "result": "确认仍不含：OI Wiki 计算几何部分只有凸包、扫描线、三角剖分等条目（/geometry/range-tree/ 与 /ds/kdtree/ 均 404），所以范围查找必须靠清华课程这条线补，OI Wiki 继续承担“几何算法”的实现细节。",
+   "by": "review/pi-additions/M.4.4.json"
+  }
+ ],
+ "findings": [
+  "原中文主资源 OI Wiki 只有凸包／Delaunay／Voronoi 与零散几何算法，没有线段求交、空间划分、范围搜索；不能单独充完整计算几何课。本次补 295 讲经典计算几何录像，覆盖前四项。",
+  "范围搜索仍是中文缺口：影片第 06 章只到点定位／ray shooting，OI Wiki 没有 kd-tree／范围树；本节 zh 路线如实标 partial，没有把点定位冒充范围搜索。",
+  "295 讲录像的课程说明与标题为中文，但分 P 标题与投影片多英文，讲解语言未逐段核对；已在 access 写明，没有断言『中文授课』已核。",
+  "英文 CMSC754 本身已覆盖五项（含 range searching），保留为英文主资源，不需要另找影片。",
+  "五项均为必学；中文 partial 只缺范围搜索，不是把整节降级。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "计算几何",
+ "description": "凸包、线段求交、空间划分、Voronoi 与 Delaunay 结构、范围搜索与几何算法。",
+ "applied_additions": [
+  "review/pi-additions/M.4.4.json"
+ ]
+}
