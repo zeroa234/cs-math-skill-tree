@@ -1,0 +1,231 @@
+{
+ "id": "F.2.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 18.404J Theory of Computation (Fall 2020, Michael Sipser, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Calendar 共 27 次课（逐条核对）。本节点只用前 5 讲：1 Introduction, Finite Automata, Regular Expressions；2 Nondeterminism, Closure Properties, Regular Expressions→Finite Automata；3 The Regular Pumping Lemma, Finite Automata→Regular Expressions, CFGs；4 Pushdown Automata, CFG↔PDA；5 The CF Pumping Lemma, Turing Machines。正规语言/正则表达式/封闭性/泵引理、CFG、PDA、CFL 泵引理全在；第 6 讲起进入图灵机与可计算性（属 F.2.2/F.2.3）。配讲义、视频、习题与考试（含解答）。",
+   "access": "OCW 免费，无需注册；有讲课视频与讲义 pdf，部分讲次提供 transcript（英文字幕状态未逐讲核对）。",
+   "publisher": "MIT OpenCourseWare（Michael Sipser）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/pages/calendar/",
+    "location": "Calendar 表 SES 1–5 行",
+    "finding": "表内第 1–5 次课主题依次为 FA/RE、非确定性/封闭性、正则泵引理与 CFG、PDA 与 CFG↔PDA、CF 泵引理与图灵机，正好覆盖形式语言与自动机部分。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京航空航天大学《计算理论》（中国大学MOOC，网络空间安全学院）",
+   "url": "https://www.icourse163.org/course/BUAA-1473089162",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "授课目标原文：正则语言与上下文无关语言的形式化描述与识别、有穷自动机与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性；页面未列分讲大纲，文法的四类分类不在此课程目标里。",
+   "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；评分含单元测验、期中与期末。视频与字幕需登录，未核对。",
+   "publisher": "北京航空航天大学 / 中国大学MOOC（高等教育出版社）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BUAA-1473089162",
+    "location": "授课目标段与参考资料段",
+    "finding": "授课目标第一句按顺序列出自动机与语言、可计算性、复杂性三块内容；参考资料给出 Sipser 中译本的译者、出版社与年份；“课程大纲”标题下只有预备知识与参考资料。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.2.1.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《编译原理》录课合集（B 站「蒋老师的课堂」，自制，24 个分P；第 2 章讲形式语言与文法，含 2-5「文法和语言的分类及文法的其他表示方法」）",
+   "url": "https://www.bilibili.com/video/BV1De4y1N71q",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 2 章：2-1 形式语言与符号串的基本概念、2-2 文法和语言的形式定义、2-3 短语和简单短语、2-4 文法的二义性和语言的二义性、2-5 文法和语言的分类及文法的其他表示方法；第 3 章用左右线性文法构造状态转换图、正规表达式与正规文法/自动机的等价转换。即“文法—语言—分类（0/1/2/3 型）—正规文法与有穷自动机对应”这一条线。",
+   "access": "免费观看，无需注册即可看；B 站自制投稿（copyright=1），合集“2022/2023编译原理录课”共 24 个分P；中文讲授；字幕未核对。",
+   "publisher": "B 站账号「蒋老师的课堂」（教师个人录课账号，页面未说明所属学校，故不认定为某教材作者本人）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1De4y1N71q",
+    "location": "视频标题「2-5_文法和语言的分类及文法的其他表示方法」；同合集分P列表（2-1 形式语言与符号串的基本概念、2-2 文法和语言的形式定义、2-4 文法的二义性和语言的二义性、3-2 由左右线性文法构造状态转换图、3-7 正规表达式和正规文法的等价转换）",
+    "finding": "用 bvinfo 读公开视频页确认：owner=蒋老师的课堂、copyright=1（自制）、标题为“2-5_文法和语言的分类及文法的其他表示方法”，简介写“文法分类的快速方法来源于定义……可以回归到最原始的定义去找规律”；同合集 24 个分P 的标题由页面 __INITIAL_STATE__ 的 ugc_season 读出。未观看视频内容，分类的具体讲法以标题与简介为据。"
+   },
+   "added_by": "review/pi-additions/F.2.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "正则/上下文无关语言",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“有穷自动机与正则语言、上下文无关文法与下推自动机”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 1–3（正则语言、RE、封闭性、正则泵引理）与 Session 3–5（CFG、CFL 泵引理）",
+     "extent": "covered"
+    }
+   ],
+   "note": "北航课程授课目标明确点名这两块，但页面无分讲大纲；按课程级主题计 covered，讲次未核。"
+  },
+  {
+   "topic": "有限/下推自动机",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“有穷自动机…”“上下文无关文法与下推自动机”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 1–2（DFA/NFA、子集构造）、Session 4（PDA 与 CFG 等价）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "文法与形式语言层级",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "第 2 章 2-2 文法和语言的形式定义、2-5 文法和语言的分类及文法的其他表示方法；第 3 章 3-2 由左右线性文法构造状态转换图、3-7 正规表达式和正规文法的等价转换",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 3–5 由正则→CFL→图灵机可判定语言的包含关系建立层级（未用 Chomsky 0–3 型文法表）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧没有来源：北航课程目标未列语言层级，B 站只有零散的编译原理“文法和语言的形式定义”单集，不是课程。英文以自动机/语言包含关系讲层级，没有 Chomsky 文法分类表，这一点在 note 里标明。；r7-zh1 的 2-2 先给文法 G=(V,T,P,S) 与语言 L(G) 的形式定义、推导与规约，2-5 直接讲“文法和语言的分类”（即 0/1/2/3 型文法及其生成的语言），第 3 章再把 3 型文法（正规文法）与有穷自动机做等价转换。zh1（北航《计算理论》）提供 2 型/3 型对应的下推自动机与有穷自动机、以及 0 型对应的图灵机模型。两者合起来覆盖“文法与形式语言层级”：分类规则 + 四类语言 + 与自动机的对应关系。旧结论说“中文只有编译原理单集片段”，本轮核到的是成体系的 24 集录课，其中 2-5 就是分类专讲。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "跟课读“有穷自动机与正则语言”“上下文无关文法与下推自动机”两部分，配合 Sipser 中译本第 1–2 章做习题（教材需自备）"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "看 2-1、2-2 建立符号串/语言/文法的形式定义，能写出 L(G) 与推导序列；再看 2-5，把 0 型（短语结构）、1 型（上下文有关）、2 型（上下文无关）、3 型（正规）的限制条件逐条写下并各举一个文法；随后看 3-2、3-7，把 3 型文法转成状态转换图并与正规式互转，对照 zh1 的下推自动机/图灵机，填一张“文法类型—语言类—识别装置”对照表。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Session 1→2→3（正则语言到 CFG）→4（PDA）→5（CF 泵引理），每讲读完讲义再做作业 1"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ocw.mit.edu/courses/18-404j-.../pages/calendar/ 27 次课表",
+   "result": "采纳：Session 1–5 与本节点三个知识项对齐，后半学期内容归 F.2.2/F.2.3，不再复用到本节点。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/BUAA-1473089162 逐段读页面",
+   "result": "部分采纳：授课目标确实点名自动机与语言、CFG/PDA，但没有分讲大纲；同页还确认参考教材是 Sipser 中译本。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「形式语言与自动机」「计算理论 自动机 完整课程」",
+   "result": "不合适：只有个人上传的复习片段（如“上下文无关文法设计”“哈工大 形式语言与自动机 知识点回顾 NFA”）与无关的考研/计组内容，没有可核的完整中文课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 形式语言与自动机 文法 Chomsky 语言 层级",
+   "result": "采纳哈尔滨工业大学《形式语言与自动机理论》（中国大学MOOC，王春宇）为中文课程背景：授课目标含正则/上下文无关语言与文法、自动机；但其官方大纲（智慧高教页）只到第 7 章上下文无关语言的性质，没有单列“文法的分类/乔姆斯基谱系”。",
+   "by": "review/pi-additions/F.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "形式语言与自动机 讲义 中文 文法 语言 四类 Chomsky 层级 pdf 课程",
+   "result": "部分采纳线索：南京大学形式语言与自动机同步笔记站（fla.cuijiacai.com）与哈工大课程页；核对后前者只讲乔姆斯基范式（CNF），不讲四类文法谱系，未用作覆盖来源。",
+   "by": "review/pi-additions/F.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch.py bili「形式语言与自动机 哈工大 乔姆斯基 文法」「文法的分类 乔姆斯基 形式语言 蒋」",
+   "result": "两次检索命中 B 站「蒋老师的课堂」2-2 与 2-5 两集；bvinfo 核到 2-5 标题为“文法和语言的分类及文法的其他表示方法”、合集 24 个分P、自制投稿，采纳为中文视频来源。",
+   "by": "review/pi-additions/F.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "编译原理 文法的分类 0型 1型 2型 3型 上下文有关 乔姆斯基 讲义 pdf",
+   "result": "不合适：中科大《编译原理》第 4 版 PDF（staff.ustc.edu.cn）目录里确有“3.2.4 文法的种类——形式语言鸟瞰”，但用 pypdf 抽出的正文是 CID 乱码、无法核对正文，按规则不登记；其余命中为 CSDN/知乎/维基百科/腾讯云短文。",
+   "by": "review/pi-additions/F.2.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:higher.smartedu.cn 形式语言与自动机理论 哈尔滨工业大学 课程大纲；site:higher.smartedu.cn 编译原理 哈尔滨工业大学 陈鄞 课程大纲",
+   "result": "打开智慧高教两门课的官方大纲：形式语言与自动机理论（王春宇）第 1–7 章为简介/有穷自动机/正则表达式/正则语言性质/上下文无关文法/下推自动机/CFL 性质；哈工大《编译原理》（陈鄞）第 1–23 讲以词法、语法分析、语义翻译、优化为主，均未单列四类文法。",
+   "by": "review/pi-additions/F.2.1.json"
+  }
+ ],
+ "findings": [
+  "旧条目把同一门北航《计算理论》同时当作 F.2.1/F.2.2/F.2.3 的中文来源且 covers 完全相同；本文件只取其中“有穷自动机与正则语言、上下文无关文法与下推自动机”两部分，并把“只有授课目标、没有分讲大纲”写成 partial。",
+  "旧条目说课程“按章节选择”，但页面并没有章节表，这句无法核验，已删。",
+  "英文侧旧条目已写明用 Sipser 第 1–3 章讲前半，与 Calendar 的 Session 1–5 对得上，保留。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "形式语言与自动机",
+ "description": "正则/上下文无关语言、有限/下推自动机、文法与形式语言层级。",
+ "applied_additions": [
+  "review/pi-additions/F.2.1.json@a2d55680a9"
+ ]
+}

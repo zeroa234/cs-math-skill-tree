@@ -1,0 +1,490 @@
+{
+ "id": "F.1.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Algorithms by Jeff Erickson（UIUC，作者自出版，全彩电子版免费）",
+   "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "全书目录逐章：Introduction、Recursion（50 页，含分治与递归式）、Backtracking、Dynamic Programming、Greedy Algorithms、Basic Graph Algorithms、Depth-First Search、Minimum Spanning Trees、Shortest Paths、All-Pairs Shortest Paths、Maximum Flows & Minimum Cuts、Applications of Flows and Cuts、NP-Hardness；附录 I 归纳法证明、附录 II Solving Recurrences。书中不讲的进阶专题在 Director's Cut 讲义里：String Matching（14 页）、Amortized Analysis（14 页）、Hashing、Disjoint Sets 等。字符串索引结构不在书与讲义里，另配 algs4。",
+   "access": "免费（CC BY 4.0，可下载/打印/分发）；Amazon 黑白纸质版 $27.50，非必需。作者自述本书不是数据结构与算法的第一门课，假定已学离散数学与基础数据结构；摊还分析讲义近年未在课内使用，但公开可读。",
+   "publisher": "Jeff Erickson（UIUC 计算机系教授）",
+   "evidence": {
+    "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
+    "location": "「Individual chapters」章节列表与「More Algorithms Lecture Notes / Director's Cut」列表；Context、Prerequisites 段",
+    "finding": "页面列出各章页数与 Director's Cut 的 String Matching(14)、Amortized Analysis(14) 等；Prerequisites 段明确写本书不覆盖 stacks/queues/hash tables/amortized analysis 等数据结构内容。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Algorithms, 4th Edition 配套站：§5.2 Tries、§5.3 Substring Search、§6.3 Suffix Arrays",
+   "url": "https://algs4.cs.princeton.edu/52trie/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "补 Erickson 没有的字符串索引结构：§5.2 三叉查找树/R 向 trie 与字符串符号表，§5.3 子串查找（KMP、Boyer–Moore、Rabin–Karp），§6.3 后缀数组（后缀排序、最长重复子串、关键词索引）。",
+   "access": "免费在线正文与代码，无需注册。",
+   "publisher": "Robert Sedgewick / Kevin Wayne（Princeton）",
+   "evidence": {
+    "url": "https://algs4.cs.princeton.edu/63suffix/",
+    "location": "章节页标题 Suffix Arrays 与正文小节（Suffix sorting、Longest repeated substring、Keyword-in-context）",
+    "finding": "§5.2/§5.3/§6.3 三页都能打开并给出正文与代码，属于教材配套全文。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Hello 算法（krahets，中文开源在线教材）",
+   "url": "https://www.hello-algo.com/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章 复杂度分析（时间/空间复杂度、迭代与递归、递推式）、第 9 章 图（表示与 BFS/DFS 遍历）、第 12 章 分治、第 13 章 回溯、第 14 章 动态规划、第 15 章 贪心。覆盖渐近分析、递归、分治、贪心、DP、图的遍历；最短路、网络流与匹配、字符串、摊还分析不在书内。",
+   "access": "免费在线阅读，代码可一键运行；plain fetch 被 Vercel 429 拦截，改用 Tavily extract 读到各章正文。",
+   "publisher": "krahets（社区作者）",
+   "evidence": {
+    "url": "https://www.hello-algo.com/chapter_computational_complexity/",
+    "location": "第 2 章 复杂度分析；另核对第 12 章 分治、第 14 章 动态规划、第 15 章 贪心、第 9 章 图",
+    "finding": "各章页首显示章号与章名（第 2 章 复杂度分析 / 第 12 章 分治 / 第 14 章 动态规划 / 第 15 章 贪心 / 第 9 章 图），正文含小节与代码。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "山东财经大学《算法分析与设计》（中国大学MOOC，李恒武等）",
+   "url": "https://www.icourse163.org/course/SDCJDX-1206671828",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "授课目标原文列出的方法：枚举、递推、贪心、分治、动态规划、回溯、分支限界、网络流、图算法、随机算法、近似算法；先修为高级语言程序设计与数据结构。用来补中文侧的网络流、图算法（含最短路）与算法设计范式，并给出配套教材（王晓东《计算机算法设计与分析》等）。页面未渲染分讲大纲。",
+   "access": "中国大学MOOC 注册后按开放学期免费学习，认证证书另计；页面显示“认证学习”。视频与字幕需登录，未核对。",
+   "publisher": "山东财经大学 / 中国大学MOOC（高等教育出版社）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/SDCJDX-1206671828",
+    "location": "授课目标第 1 条与“课程大纲/预备知识/参考资料”栏",
+    "finding": "授课目标逐项列出枚举、递推、贪心、分治、动态规划、回溯、分支限界、网络流、图算法、随机算法、近似算法；“课程大纲”标题下只有预备知识与教材清单，没有章节列表。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "OI Wiki：最短路 / 网络流简介 / 二分图",
+   "url": "https://oi-wiki.org/graph/shortest-path/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "最短路页（Dijkstra、Bellman–Ford、SPFA、Floyd、Johnson 等算法与实现）；网络流简介页只作概念入口（流网络、最大流/最小割的定义与算法索引）；二分图页作匹配概念入口（判定、最大匹配、最小点覆盖、Kőnig 定理）。定理证明与匹配归约分别见本轮新增的 /graph/flow/max-flow/ 与 /graph/graph-matching/bigraph-match/ 两页。",
+   "access": "免费在线正文，无需注册。",
+   "publisher": "OI Wiki 社区（开源算法百科）",
+   "evidence": {
+    "url": "https://oi-wiki.org/graph/flow/",
+    "location": "页面标题「网络流简介」；同法核对「最短路」「二分图」两页",
+    "finding": "三页均可打开，最短路页正文约 2 万字含各算法小节，网络流页是分部简介并链到最大流/最小割等子页。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.1.2.json"
+   ]
+  },
+  {
+   "key": "zh4",
+   "lang": "zh",
+   "title": "OI Wiki：前缀函数与 KMP 算法 / 后缀数组 (SA)",
+   "url": "https://oi-wiki.org/string/kmp/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "KMP 页讲前缀函数定义、性质、求法与匹配应用；后缀数组页讲 SA 的定义、倍增与 SA-IS/DC3 构造、以及“在字符串中找子串”“最长公共前缀”等索引应用。补中文侧字符串匹配与索引。",
+   "access": "免费在线正文，无需注册。",
+   "publisher": "OI Wiki 社区",
+   "evidence": {
+    "url": "https://oi-wiki.org/string/sa/",
+    "location": "后缀数组页目录（倍增法、O(n) 做法 SA-IS/DC3、后缀数组的应用）",
+    "finding": "页面正文两万余字，含构造方法与“在字符串中找子串”等索引应用；KMP 页同样为完整正文。"
+   }
+  },
+  {
+   "key": "zh5",
+   "lang": "zh",
+   "title": "OI Wiki：均摊复杂度",
+   "url": "https://oi-wiki.org/basic/amortized-analysis/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "摊还（均摊）分析：聚合分析、记账法、势能法，用于动态数组扩容等场景。补本节点“动态规划与摊还分析”里的摊还部分。",
+   "access": "免费在线正文，无需注册。",
+   "publisher": "OI Wiki 社区",
+   "evidence": {
+    "url": "https://oi-wiki.org/basic/amortized-analysis/",
+    "location": "页面标题「均摊复杂度」与正文三种分析方法小节",
+    "finding": "页面约 1 万字，正文分聚合分析/记账法/势能法讲均摊复杂度。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "OI Wiki：最大流（含最大流最小割定理及其证明、Dinic/ISAP/HLPP 与复杂度分析）",
+   "url": "https://oi-wiki.org/graph/flow/max-flow/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "网络流模型与可行流/最大流定义、Ford–Fulkerson 增广与残量网络、最大流最小割定理的完整证明（取等条件、由增广停止构造最小割）、Dinic 分层图与阻塞流、当前弧优化、ISAP/HLPP 预流推进，以及各算法在一般/单位容量网络上的复杂度证明；页内明确写“Kőnig 定理是最大流最小割定理的特殊情形”。",
+   "access": "免费在线阅读，CC BY-SA 4.0，无需注册；简体中文。",
+   "publisher": "OI Wiki 社区（开源算法百科）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://oi-wiki.org/graph/flow/max-flow/",
+    "location": "「最大流最小割定理」小节及其「证明」段；「时间复杂度分析」段",
+    "finding": "打开确认正文有最大流最小割定理的证明：“假设某一轮增广后，我们得到流 f 使得 Gf 上不存在增广路……记从 s 出发可以到达的结点组成的点集为 S”，并写“容易看出，Kőnig 定理是最大流最小割定理的特殊情形。实际上，它们都和线性规划中的对偶有关”；同页给出 Dinic/ISAP/HLPP 与单位容量网络 O(|E|√|V|) 等复杂度结论。旧条目说“网络流页只是分部简介、未讲最大流最小割定理”，指的是 /graph/flow/ 简介页，本轮核到定理正文在 /graph/flow/max-flow/ 页。"
+   },
+   "added_by": "review/pi-additions/F.1.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "OI Wiki：二分图最大匹配（Kuhn/Hopcroft–Karp、归约为最大流、Kőnig 定理与线性规划形式）",
+   "url": "https://oi-wiki.org/graph/graph-matching/bigraph-match/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "二分图与匹配的定义、Berge 引理与增广路、Kuhn（匈牙利）算法、Hopcroft–Karp 算法及分层图/阻塞流优化与复杂度证明，以及“归约为最大流问题”一节（加源点汇点、容量全 1，整数流与匹配一一对应，任意最大流算法可用于匹配并需针对性优化）、最小点覆盖/Kőnig 定理、二分图最大独立集与线性规划形式。",
+   "access": "免费在线阅读，CC BY-SA 4.0，无需注册；简体中文。",
+   "publisher": "OI Wiki 社区（开源算法百科）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://oi-wiki.org/graph/graph-matching/bigraph-match/",
+    "location": "「归约为最大流问题」「Kőnig 定理/最小点覆盖」「Hopcroft–Karp 正确性证明」「线性规划形式」各节",
+    "finding": "打开确认：“二分图最大匹配问题可以归约为最大流问题……所有边的容量都是 1。这样得到的有向图中的每个整数流，都和二分图中的一组匹配一一对应”“任何可以解决最大流问题的算法都可以用于解决二分图最大匹配问题……Kuhn 算法和 Hopcroft–Karp 算法都是最大流问题中相应算法的特例”；并写“从网络流的角度看，最小点覆盖问题就是最小割问题……Kőnig 定理可以看作是最大流最小割定理的特殊情形”。"
+   },
+   "added_by": "review/pi-additions/F.1.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "渐近分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 2 章 复杂度分析（时间/空间复杂度、大 O 记号）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Introduction（20 页，渐近记号与算法分析）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "递归",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 2 章 复杂度分析：迭代与递归、递归树与递推式",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Recursion（50 页）＋附录 II Solving Recurrences（22 页）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "分治",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 12 章 分治",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Recursion（分治、主定理与递归式求解）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "贪心",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 15 章 贪心",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Greedy Algorithms（28 页）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "动态规划与摊还分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 14 章 动态规划",
+     "extent": "covered"
+    },
+    {
+     "source": "zh5",
+     "section": "均摊复杂度：聚合分析/记账法/势能法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Dynamic Programming（62 页）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Director's Cut：Amortized Analysis（14 页）",
+     "extent": "covered"
+    }
+   ],
+   "note": "摊还分析在英文书里不在正文章节而是 Director's Cut 讲义（作者注明近年未在课内使用）；中文侧用 OI Wiki 的三种方法页，深度是入门级。"
+  },
+  {
+   "topic": "图的遍历",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 9 章 图：图的遍历（BFS/DFS）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Basic Graph Algorithms（38 页）、Depth-First Search（32 页）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "最短路",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "最短路（Dijkstra/Bellman–Ford/Floyd/Johnson）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "授课目标中的“图算法”",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Shortest Paths（36 页）、All-Pairs Shortest Paths（18 页）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文以 OI Wiki 的算法与实现为主，正确性证明与负权/势函数推导弱于英文教材。"
+  },
+  {
+   "topic": "网络流与匹配",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "网络流简介、二分图（最大匹配）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "授课目标中的“网络流”",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "最大流页：「最大流最小割定理」小节与「证明」段；Dinic/ISAP/HLPP 与复杂度分析",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "二分图最大匹配页：「归约为最大流问题」「Kőnig 定理」「Hopcroft–Karp 正确性证明」",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Maximum Flows & Minimum Cuts（26 页）、Applications of Flows and Cuts（26 页，含二分图匹配）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧 OI Wiki 的网络流页是分部简介并链到子页，MOOC 只在大纲里点名“网络流”，两处都没有把最大流最小割定理与匹配归约系统讲完，故判 partial；英文由教材两章完整覆盖。；简介要求的是网络流与匹配本身的算法与理论。r7-zh1 给出流网络模型、增广路与残量网络、最大流最小割定理的完整证明（含由增广停止时的可达集构造最小割）以及主要算法的复杂度结论，这一半（网络流）已到定理证明深度。；匹配这一半由 r7-zh2 补全：Berge 引理与增广路、Kuhn 与 Hopcroft–Karp 算法（含正确性与复杂度证明）、把匹配归约为最大流并指出 Kuhn/Hopcroft–Karp 是最大流算法的特例、最小点覆盖与 Kőnig 定理及线性规划对偶。配合 r7-zh1 的定理与算法，覆盖“网络流与匹配”全部内容；OI Wiki 的写法是算法竞赛风格（证明＋模板），理论深度到定理证明，但不像教材那样给完整练习题。"
+  },
+  {
+   "topic": "字符串匹配与索引",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh4",
+     "section": "前缀函数与 KMP 算法、后缀数组 (SA)",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Director's Cut：String Matching（14 页）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "§5.2 Tries、§5.3 Substring Search、§6.3 Suffix Arrays",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文的匹配算法在 Erickson 讲义，索引结构（trie/后缀数组）在 algs4；中文两样都在 OI Wiki。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第 2 章（复杂度与递归）→第 12 章分治→第 15 章贪心→第 14 章 DP→第 9 章图遍历，边读边实现"
+    },
+    {
+     "source": "zh5",
+     "read": "读完 DP 后读均摊复杂度，能对动态数组扩容做势能法分析"
+    },
+    {
+     "source": "zh3",
+     "read": "按最短路→网络流简介→二分图顺序读，把模板代码跑通"
+    },
+    {
+     "source": "zh4",
+     "read": "KMP 与后缀数组两页，配合习题实现一次"
+    },
+    {
+     "source": "zh2",
+     "read": "需要系统视频与作业时跟课，用其网络流/图算法/近似算法章节补全"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读「最大流」页：先用残量网络把 Ford–Fulkerson 增广走一遍，再逐行跟「最大流最小割定理」的证明，自己复述“增广停止时 S 与 T 构成最小割”的论证；然后读 Dinic 分层＋阻塞流与当前弧，写下一般图与单位容量网络两种复杂度，最后看 ISAP/HLPP 体会预流推进与增广路算法的差别。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读「二分图最大匹配」页：由 Berge 引理说明增广路与最大匹配的等价，实现 Kuhn 与 Hopcroft–Karp 各一遍；再读「归约为最大流问题」，手画源点—左部—右部—汇点的容量 1 网络并证明整数流与匹配一一对应；最后用最小割解释 Kőnig 定理，把匹配、点覆盖、最大流三个结论串成一条线。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Introduction→Recursion（配附录 II）→Greedy→DP→Basic Graph Algorithms→DFS→Shortest Paths/All-Pairs→Max Flows/Applications，做每章习题"
+    },
+    {
+     "source": "en1",
+     "read": "Director's Cut 两篇：String Matching 与 Amortized Analysis"
+    },
+    {
+     "source": "en2",
+     "read": "§5.2/§5.3/§6.3 补 trie、子串查找与后缀数组"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://jeffe.cs.illinois.edu/teaching/algorithms/ 章节与 Director's Cut 列表",
+   "result": "采纳为英文主教材；同时纠正旧条目“摊还分析在书内”的说法——正文明确不覆盖 amortized analysis，只有 Director's Cut 讲义。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://algs4.cs.princeton.edu/52trie/ 、/53substring/、/63suffix/",
+   "result": "采纳：补字符串索引结构（trie/子串查找/后缀数组），三页均为全文。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://oi-wiki.org/graph/shortest-path/ 、/graph/flow/、/graph/bi-graph/、/string/kmp/、/string/sa/、/basic/amortized-analysis/",
+   "result": "采纳 KMP/后缀数组/均摊复杂度三页为完整正文；网络流页只是分部简介，据此把“网络流与匹配”判 partial。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/SDCJDX-1206671828（山东财经《算法分析与设计》）",
+   "result": "采纳为中文视频补充：授课目标确实列了网络流/图算法/随机/近似；但无分讲大纲、视频需登录，故相关映射标 partial。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://oi-wiki.org/graph/flow/ 、/graph/flow/max-flow/ 、/graph/flow/min-cut/ 、/graph/graph-matching/bigraph-match/ 、/graph/bi-graph/",
+   "result": "采纳 max-flow 与 bigraph-match 两页：前者含最大流最小割定理证明，后者含“归约为最大流问题”与 Kőnig 定理。旧的“网络流简介只是分部简介”成立，但定理正文在 max-flow 子页，故原 partial 判定过严。",
+   "by": "review/pi-additions/F.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch.py bili「网络流 最大流 最小割 算法」",
+   "result": "不合适：返回初中最短路径、运筹学期末速成（BV1EXvYegEfr「运筹学 最大流最小割集 应试纯技巧」）、线性规划与达摩院 MindOpt 网络流应用，均为应试技巧或应用介绍，没有算法课程式讲授网络流模型与匹配归约；本节点已由 OI Wiki 正文覆盖，不再据此下“B 站没有”的结论。",
+   "by": "review/pi-additions/F.1.2.json"
+  }
+ ],
+ "findings": [
+  "旧条目英文 covers 说摊还分析与字符串匹配“在 Director's Cut 讲义里”，这点成立，但同一页的 Prerequisites 明确本书不覆盖 amortized analysis，需写清是讲义而非正文。",
+  "旧条目说该书写了 Hashing/Disjoint Sets，属实（Director's Cut），但与 F.1.1 重叠，本节点不再列。",
+  "旧条目中文把最短路/网络流/字符串都算“未覆盖”，实际 OI Wiki 有最短路、网络流简介、二分图、KMP、后缀数组的正文；现改为可学来源并按深度如实标 covered/partial。",
+  "旧条目没有中文算法设计范式（分治/贪心/DP/摊还）以外的系统课；补山东财经《算法分析与设计》作视频补充（授课目标逐项点名网络流与图算法）。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "算法分析与设计",
+ "description": "渐近分析、递归、分治、贪心、动态规划与摊还分析；图的遍历、最短路、网络流与匹配，字符串匹配与索引。",
+ "applied_additions": [
+  "review/pi-additions/F.1.2.json@85bc301b49"
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "id": "F.2.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.045J Automata, Computability, and Complexity (Spring 2011, Scott Aaronson, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Calendar 逐讲核对：Lec 6 Turing machines、7 Decidability、8 Undecidable problems and Post correspondence problem (PCP)、9 Mapping reducibility and Rice's theorem、10 Self-reference and the recursion theorem；前后为 Lec 3–5 DFA/NFA/正则语言与 Lec 12 起的时间复杂性、NP 完全性、概率图灵机、密码学与量子计算。正好覆盖图灵机、可判定/不可判定、映射归约与递归定理。",
+   "access": "OCW 免费，无需注册；有讲义、6 套习题（OCW 未列习题解答）；本课程无讲课录像。英文字幕不适用（无视频）。",
+   "publisher": "MIT OpenCourseWare（Scott Aaronson）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/pages/calendar/",
+    "location": "Calendar 表 Lec 6–10 行",
+    "finding": "表内 Lec 6 为 Turing machines、7 Decidability、8 Undecidable problems and PCP、9 Mapping reducibility and Rice's theorem、10 Self-reference and the recursion theorem。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京航空航天大学《计算理论》（中国大学MOOC，网络空间安全学院）",
+   "url": "https://www.icourse163.org/course/BUAA-1473089162",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "授课目标原文：有穷自动机与正则语言、上下文无关文法与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性；页面未列分讲大纲，未确认含递归定理与不可解度。",
+   "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；视频与字幕需登录，未核对。",
+   "publisher": "北京航空航天大学 / 中国大学MOOC（高等教育出版社）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BUAA-1473089162",
+    "location": "授课目标段与参考资料段",
+    "finding": "授课目标按顺序列出“丘奇-图灵论题、可判定性、可规约性、时间复杂性”；参考资料为 Sipser 中译本（段磊、唐常杰等译，机械工业出版社 2015）；“课程大纲”栏无章节表。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.2.2.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《可计算性理论》讲义第 2 讲（杨睿之，复旦大学哲学学院，2021 年课程 PDF）",
+   "url": "http://logic.fudan.edu.cn/doc/Course/2021/Recursion02.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "部分递归函数与可计算函数的定义（存在图灵机/程序 P 计算）、通用图灵机 Ξ、s-m-n 引理（参数引理：对每个二元部分可计算函数 Θ 存在严格递增可计算 q 使 Φ_{q(x)}(y)=Θ(x,y)）、s-m-n 引理的一般形式，以及递归定理（Recursion Theorem）的陈述与证明：对可计算 g 存在 e 使 Φ_{g(e)}=Φ_e，e 是 g 的不动点，并可由 g 的编号能行得到。",
+   "access": "免费 PDF（39 页，课程讲义，可直接下载），无需注册；简体中文；正文为幻灯片式提要＋证明。",
+   "publisher": "杨睿之（复旦大学哲学学院）；课程参考书《递归论：算法与随机性基础》（复旦大学出版社）与《数理逻辑：证明及其限度》",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://logic.fudan.edu.cn/doc/Course/2021/Recursion02.pdf",
+    "location": "第 1 页标题「可计算性理论／杨睿之／复旦大学哲学学院」；「s-m-n 引理」页；「递归定理」页",
+    "finding": "打开确认正文：“定理（递归定理（Recursion Theorem））令 g: N→N 是可计算函数，那么存在 e 使得 Φ_{g(e)} = Φ_e……我们称 e 是 g 的不动点。e 可以通过 g 的编号能行地得到”，并给出用参数引理构造 q、取 d 使 q=Φ_d、e=q(d) 的证明；另有“引理（参数引理）对每个二元的部分可计算函数 Θ，存在一个严格递增的可计算函数 q，使得 ∀x∀y Φ_{q(x)}(y)=Θ(x,y)”。"
+   },
+   "added_by": "review/pi-additions/F.2.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《可计算性理论》讲义第 3 讲（杨睿之，复旦大学哲学学院，2021 年课程 PDF）：递归可枚举集、多一归约与图灵归约",
+   "url": "http://logic.fudan.edu.cn/doc/Course/2021/Recursion03.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "s-m-n 定理与递归定理的应用；递归可枚举集（c.e.）与多一归约 ≤m（含“A 是 c.e. 的当且仅当 A ≤m 0′”）；图灵归约 ≤T 与图灵跃迁（Turing jump），含“X ≤T Y 当且仅当 X′ ≤m Y′”。",
+   "access": "免费 PDF（课程讲义），无需注册；简体中文。",
+   "publisher": "杨睿之（复旦大学哲学学院）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://logic.fudan.edu.cn/doc/Course/2021/Recursion03.pdf",
+    "location": "目录/提要页：「s-m-n 定理和递归定理」「递归可枚举集、多一归约」「图灵归约、图灵跃迁」及其定理",
+    "finding": "打开确认正文列有“递归可枚举集、多一归约”“定理：A 是 c.e. 的，当且仅当 A ≤m 0′”“图灵归约、图灵跃迁”“定理：X ≤T Y，当且仅当 X′ ≤m Y′”，即多一归约与图灵归约两套归约及跃迁算子。"
+   },
+   "added_by": "review/pi-additions/F.2.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "Turing机",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“丘奇-图灵论题”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 6 Turing machines",
+     "extent": "covered"
+    }
+   ],
+   "note": "北航课程授课目标点名图灵机与可判定性；无分讲大纲，讲次未核。"
+  },
+  {
+   "topic": "可判定与不可判定问题",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“可判定性”",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 7 Decidability、Lec 8 Undecidable problems and PCP",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "归约与递归理论",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“可规约性”（映射归约）；递归定理未列",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "「递归可枚举集、多一归约」（A c.e. ⇔ A ≤m 0′）与「图灵归约、图灵跃迁」（X ≤T Y ⇔ X′ ≤m Y′）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "「s-m-n 引理」与「递归定理（不动点定理）」的陈述与证明",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 9 Mapping reducibility and Rice's theorem、Lec 10 Self-reference and the recursion theorem",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只有“可规约性”一个词，递归定理/自指没有对应内容。；“归约”这一半由 r7-zh2 给全：先定义 c.e. 集与多一归约 ≤m，给出 A c.e. ⇔ A ≤m 0′ 的刻画（这正是用归约把不可判定性搬到具体问题的工具），再定义图灵归约 ≤T 与图灵跃迁，并给 X ≤T Y ⇔ X′ ≤m Y′ 的关系定理。北航《计算理论》（zh1）只到“可规约性（映射归约）”的概念层，这里补上了 c.e. 集、跃迁与两套归约的相互刻画。；“递归理论”这一半由 r7-zh1 覆盖：先给部分递归函数/可计算函数与通用图灵机的形式定义，再证参数引理（s-m-n）与递归定理（对任意可计算 g 存在 e 使 Φ_{g(e)}=Φ_e，且 e 能行可得）。递归定理是递归论的核心（自指、病毒与自再生系统的理论基础），旧材料没有；与 r7-zh2 的归约部分合起来，正好是“归约与递归理论”的完整入门。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "跟课读图灵机、可判定性、可规约性三段，配 Sipser 中译本对应章节（需自备教材）做证明练习"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第 2 讲：先确认部分递归函数/可计算函数与通用图灵机的定义，再跟参数引理（s-m-n）的构造，最后把递归定理的证明抄一遍并复述“由参数引理造 q、取 d 使 q=Φ_d、e=q(d) 为不动点”的能行性。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读第 3 讲：用递归定理做一两个自指构造（如构造输出自身代码的程序），再学 c.e. 集与多一归约，证 A c.e. ⇔ A ≤m 0′；然后学图灵归约与跃迁，理解 X ≤T Y ⇔ X′ ≤m Y′，并用停机问题把不可判定性归约到一两个具体问题。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Lec 6（图灵机）→7（可判定性）→8（不可判定与 PCP）→9（映射归约与 Rice 定理）→10（自指与递归定理），配 3 套 problem set"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ocw.mit.edu/courses/6-045j-.../pages/calendar/ 23 讲表",
+   "result": "采纳：Lec 6–10 与三个知识项一一对应；确认课程无录像、无习题解答。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/BUAA-1473089162（北航《计算理论》）",
+   "result": "部分采纳：授课目标点名丘奇-图灵论题、可判定性、可规约性，但没有分讲大纲，递归定理未列。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "查中文免费正文是否有可计算性/递归定理材料（中文 MOOC 页面、B 站检索“计算理论 自动机 完整课程”）",
+   "result": "未找到：中文侧只有北航这一门课与 Sipser 中译本（付费教材，未打开书页，不登记章节）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可计算性理论 递归定理 归约 中文 讲义 pdf 课程 图灵机",
+   "result": "采纳复旦大学 logic.fudan.edu.cn 的《可计算性理论》讲义（杨睿之）：Recursion02 含 s-m-n 引理与递归定理证明，Recursion03 含 c.e. 集、多一归约、图灵归约与跃迁。知乎单篇与百科条目未采纳。",
+   "by": "review/pi-additions/F.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 可计算性 计算理论 递归定理 归约 研究生",
+   "result": "只命中北京航空航天大学《计算理论》（已有 zh1，授课目标为自动机/可判定性/可规约性/时间复杂性）与不相关的导论课；中国大学MOOC 上没有以递归定理/归约为主线的可计算性课程。",
+   "by": "review/pi-additions/F.2.2.json"
+  }
+ ],
+ "findings": [
+  "旧条目把北航《计算理论》与 F.2.1/F.2.3 共用同一段 covers；本文件只取“图灵机/可判定性/可规约性”三项，并把递归定理明确写成中文缺口。",
+  "旧条目说 OCW“23 讲（讲义与 6 套习题）”，Calendar 确实到 Lec 23 并列出 6 套 problem set，保留；但旧条目“第 6-10 讲正是本节点核心”得到确认。",
+  "英文课程无录像，旧条目未提，已在 access 里写明（不影响可学性，讲义完整）。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "可计算性理论",
+ "description": "Turing机、可判定与不可判定问题、归约与递归理论。",
+ "applied_additions": [
+  "review/pi-additions/F.2.2.json@88fe6609c8"
+ ]
+}

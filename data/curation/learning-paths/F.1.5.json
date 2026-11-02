@@ -1,0 +1,313 @@
+{
+ "id": "F.1.5",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS 5234 Algorithms at Scale (Fall 2019, Seth Gilbert, NUS School of Computing)",
+   "url": "https://www.comp.nus.edu.sg/~gilbert/CS5234/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Schedule 逐课核对：Part 1「Graph properties in less than linear time」= Class 1 采样与连通性、Class 2 用采样估计 MST 权重、Class 3 Property Testing / Sorted / Yao's Principle；Part 2「Sketches and streams」= Class 4 流上采样（附 Flajolet-Martin 与 Misra-Gries 原始论文）、Class 5 图流算法、Class 6 流式聚类；之后 Part 3 缓存与外存（B 树/buffer tree、cache-oblivious）、Part 4 并行（多核、MapReduce/MPC、并行前缀和与工作量/跨度）。每次课有 slides＋手写笔记＋problem set 与解答。",
+   "access": "免费公开，无需注册；pdf 讲义与习题解答可直接下载。视频未公开，属讲义型课程。",
+   "publisher": "Seth Gilbert（NUS School of Computing）",
+   "evidence": {
+    "url": "https://www.comp.nus.edu.sg/~gilbert/CS5234/",
+    "location": "「Schedule」表的 Class 1–6 与 Part 1/Part 2 分组标题",
+    "finding": "表内逐课列出日期、主题与 pdf 链接：Class 3 标题为 Property Testing, Sorted, and Yao's Principle；Class 4 为 Sampling from a stream 并链 Flajolet-Martin、Misra-Gries 原文。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "哈尔滨工业大学《大数据算法》（王宏志等，国家高等教育智慧教育平台收录，中国大学MOOC 开课）",
+   "url": "https://higher.smartedu.cn/course/68cb23eca9f4619f8f360d9b",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "官方大纲十讲：第一讲 大数据算法概述；第二讲 亚线性算法（分讲标题经同课转载核对为 2.1 亚线性算法的定义、2.2 水库抽样—空间亚线性算法、2.3 平面图直径—时间亚线性计算算法、2.4 全0数组判定—时间亚线性判定算法）；第三讲 亚线性算法例析（3.1a/3.1b 数据流中频繁元素 基础知识/算法与分析、3.2a/3.2b 生成树权重一/二、3.3 数组有序性判定）；第四讲 外存算法概述；第五讲 外存查找结构（B 树、KD 树）；第六讲 外存图数据算法（表排序、时间前向处理、缩图法）；第七至九讲 MapReduce 与超越 MapReduce 的并行大数据处理；第十讲 众包算法。",
+   "access": "国家级平台免费注册选课（开课平台为中国大学MOOC），认证证书另计；当前显示已结课，需等下一期。视频与字幕需登录，未核对。",
+   "publisher": "哈尔滨工业大学（王宏志、梁志宇、刘显敏）/ 高等教育出版社平台",
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/68cb23eca9f4619f8f360d9b",
+    "location": "课程大纲栏第一讲至第十讲标题",
+    "finding": "平台页把 10 讲标题与每讲作业/测验逐条列出（亚线性两讲、外存三讲、MapReduce 三讲、众包一讲），可核对主题与顺序。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.1.5.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "并行算法（xestray 站点《高级数据结构与算法分析》讲义第 14 讲）",
+   "url": "https://xestray.cc/ComputerScience/ADS/lec-14/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "并行算法的度量与模型：加速比 S(p)=T1/Tp、PRAM（EREW/CREW/CRCW-Priority 等子模型）、Amdahl 定律与最大加速比；以“深度 D(n)”和“总工作量 W(n)”成对写出并行算法的递推式并求解（并行求和、前缀和、归并、最大元素）；划分范式、双对数范式 D(n)=O(log log n)/W(n)=O(n log log n)、加速级联范式（把 W(n) 压到 O(n)），并给出 O(1) 深度、O(n) 工作量的随机化最大值算法。",
+   "access": "免费网页正文（约 6300 字、22 行代码、12 张图），含公式与递推推导，无需注册；简体中文；作者自述整理自“吴一航学长的 ADS 讲义”。",
+   "publisher": "xestray（个人整理的《高级数据结构与算法分析》课程讲义站点）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xestray.cc/ComputerScience/ADS/lec-14/",
+    "location": "「概念与定理」中的加速比、内存共享模型（PRAM）、Amdahl 定律各段；「寻找最大元素问题」的双对数范式与加速级联范式推导",
+    "finding": "打开确认正文：“设整个算法深度为 D(n)，工作量为 W(n)，它们都是关于数组长度的函数”，并写出 D(n)=D(√n)+O(1)、W(n)=√n·W(√n)+O(n) 的递推与结果；“加速比 S(p)=T1/Tp”“阿姆达尔定律 S(p)=1/(f+(1-f)/p)”及 PRAM 的 CRCW-P（Priority）等子模型。旧结论说中文只有 MapReduce/OpenMP 编程、没有 fork-join 工作量-跨度分析；这份讲义正是按“工作量＋深度”分析 PRAM 并行算法。"
+   },
+   "added_by": "review/pi-additions/F.1.5.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "Count-Min Sketch：点查询误差界、保守更新与生产实现（中文原理与代码）",
+   "url": "https://quant67.com/post/algorithms/31-count-min-sketch/count-min-sketch.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "配主课流算法讲次，读Count-Min的更新/查询、误差界证明与Count Sketch比较；用小数据流验证空间与误差变化。",
+   "access": "免费公开中文教学正文。",
+   "publisher": "原作者公开教程",
+   "evidence": {
+    "url": "https://quant67.com/post/algorithms/31-count-min-sketch/count-min-sketch.html",
+    "location": "问题模型、数据结构、误差界证明与Count Sketch各节",
+    "finding": "已读正文及代码入口：有手算、参数推导、概率误差界证明及正负更新边界；用作流式草图专题补充。"
+   },
+   "added_by": "review/verified-additions/F.1.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "工作量/跨度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "「概念与定理」（加速比、PRAM、Amdahl 定律）与「寻找最大元素问题」（深度 D(n)/工作量 W(n) 的递推与双对数、加速级联范式）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Part 4 并行算法：并行前缀和与 fork-join 的工作量/跨度分析",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧没有来源：哈工大《大数据算法》只讲 MapReduce 并行模型，没有 fork-join 的工作量/跨度分析；B 站定向搜索也没有中文并行算法课程。；“工作量/跨度”要的是把并行算法拆成总工作量 W(n) 与关键路径长度（跨度/深度）D(n) 两个度量并据此分析。r7-zh1 明确以“深度 D(n)”与“总工作量 W(n)”成对建模，给出递推式（D(n)=D(√n)+O(1)、W(n)=√n·W(√n)+O(n)）与解，并用加速比、Amdahl 定律把两个度量与 p 个处理器的实际时间联系起来；还给出 O(1) 深度、O(n) 工作量的随机化算法作为“跨度优先”的例子。对应 fork-join 模型里 work/span 的分析套路（PRAM 里称工作量/深度）。"
+  },
+  {
+   "topic": "通信与I/O复杂度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第四讲 外存算法概述、第五讲 外存查找结构、第六讲 外存图数据算法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Part 3 缓存与外存（B 树、buffer trees、cache-efficient/cache-oblivious 图算法）与 Part 4 的 MPC/MapReduce 轮次",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧有外存 I/O 的三讲讲名可核；并行通信只有 MapReduce 三讲，I/O 复杂度的定量模型仍弱于英文。"
+  },
+  {
+   "topic": "草图和流式摘要",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二讲 亚线性算法、第三讲 亚线性算法例析（采样与估计）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "第二讲 2.2 水库抽样—空间亚线性算法；第三讲 3.1a/3.1b 数据流中频繁元素（基础知识、算法与分析）、3.2a/3.2b 生成树权重一/二",
+     "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "数据流模型；结构/更新/查询；概率误差证明；Count Sketch比较",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Class 4 流上采样（Flajolet-Martin、Misra-Gries heavy hitters）、Class 5 图流、Class 6 流式聚类",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文两讲是亚线性算法与采样，大纲没有“草图/摘要”条目，故 partial。；官方课程第三讲确实是数据流算法：数据流中频繁元素（重元素/频繁项）的定义、算法与空间分析，以及数据流中生成树权重的估计（经典流式图摘要），第二讲的水库抽样是流式均匀抽样。这些属于“流式摘要”一侧；但“草图”里以线性草图/哈希草图为主的一类（Count-Min、AMS 矩估计、Bloom 过滤器等）在这门课与目前查到的中文材料里都没有独立讲授，所以本知识点整体记 partial，草图部分列入 unresolved。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
+  },
+  {
+   "topic": "性质测试",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二讲 2.4 全0数组判定—时间亚线性判定算法；第三讲 3.3 数组有序性判定",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Class 3 Property Testing, Sorted, and Yao's Principle（附 property testing 背景论文）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧无对应内容。；性质测试的入门内容就是“判定型问题在亚线性查询下的可测性”：允许 ε 距离内的近似判定，用抽样/查询给出高概率结论。该课程用两个标准例子讲这件事：全 0 数组判定（若数组全 0 则接受，若与全 0 相差 ε 比例则拒绝）与数组有序性判定（单调性测试），正是 property testing 的典型入门例（对应英文教材里的 all-zeros / sortedness tester）。旧结论说“中文大数据算法课大纲没有 property testing 条目”，本轮的转载分讲标题与官方十讲大纲（第二讲“亚线性算法”、第三讲“亚线性算法例析”）对得上，故按官方课程记 covered。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第二至三讲（亚线性）→第四至六讲（外存）→第七至九讲（MapReduce）顺序跟课，配合课程作业做一次外存查找结构实现"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读加速比、PRAM 子模型与 Amdahl 定律，把“p 个处理器的时间”与“工作量/深度”两套说法对应起来；再跟并行求和、前缀和、最大元素三例，自己写出 W(n)、D(n) 递推并解出；最后读双对数范式与加速级联范式，说明为什么后者能把工作量压到 O(n) 而深度仍是 O(log log n)。"
+    },
+    {
+     "source": "zh1",
+     "read": "按第二讲→第三讲顺序看：先看亚线性算法定义与水库抽样（空间亚线性、流式均匀抽样），再看“数据流中频繁元素”两集并复述其空间上界与误差保证，接着看“生成树权重”两集理解流式图摘要；然后用 2.4 全0数组判定与 3.3 数组有序性判定两集，写出判定型性质测试的 (ε, δ) 定义与抽样查询过程，比较它与“计算型”亚线性算法的差别。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "配主课流算法讲次，读Count-Min的更新/查询、误差界证明与Count Sketch比较；用小数据流验证空间与误差变化。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Class 1–3（采样、MST 权重、性质测试与 Yao 原理）→Class 4–6（流上采样、图流、流式聚类）→Part 3（缓存/外存）→Part 4（并行与工作量/跨度），每题做完 problem set 并对照解答"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.comp.nus.edu.sg/~gilbert/CS5234/ Schedule 表",
+   "result": "采纳：逐课主题与 pdf 均在，Class 3 性质测试、Class 4 Flajolet-Martin/Misra-Gries 可核；课程无公开视频，按讲义课登记。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://higher.smartedu.cn/course/68cb23eca9f4619f8f360d9b（哈工大《大数据算法》）；同时打开 icourse163 同名课页",
+   "result": "采纳：平台页有完整 10 讲大纲；icourse163 页面只有课程概述与教材章节引用，没有大纲，故以平台页为证据。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「大数据算法 王宏志」「亚线性算法 外存算法」",
+   "result": "不合适：返回考研/计组/最优化等无关内容，没有可核的中文大数据算法系列。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/BIT-1470418179（北理工《并行编程原理与实践》，查是否含工作量/跨度）",
+   "result": "不合适：课程内容是 OpenMP/MPI/CUDA 并行编程与优化，不讲 fork-join 工作量/跨度模型。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://xestray.cc/ComputerScience/ADS/lec-14/（并行算法讲义，含 D(n)/W(n)）",
+   "result": "采纳：讲义以“深度 D(n)＋工作量 W(n)”成对分析 PRAM 并行算法，含加速比、Amdahl 定律与双对数/加速级联范式，补上旧结论说中文没有的 work/span 分析。",
+   "by": "review/pi-additions/F.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/68cb23eca9f4619f8f360d9b（哈工大《大数据算法》官方课程页）＋ https://www.icourse163.org/course/HIT-10001",
+   "result": "采纳：智慧教育平台页列出十讲大纲（第二讲 亚线性算法、第三讲 亚线性算法例析、第四至六讲 外存、第七至九讲 MapReduce、第十讲 众包）；icourse163 同课页课程大纲只有“预备知识”。",
+   "by": "review/pi-additions/F.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "youtube",
+   "query_or_url": "yt-dlp --flat-playlist「大数据算法-王宏志（哈工大）」https://www.youtube.com/playlist?list=PLBPbUxsZM4SbiulaROBb1yY1TAPHVw_jt",
+   "result": "仅用于核对讲次标题（第三方转载，40 个分P）：2.2 水库抽样—空间亚线性算法、2.3 平面图直径—时间亚线性计算算法、2.4 全0数组判定—时间亚线性判定算法、3.1a/3.1b 数据流中频繁元素、3.2a/3.2b 生成树权重、3.3 数组有序性判定。据此确认官方课程讲了流式摘要与两个性质测试例子；覆盖仍记在官方课程名下。",
+   "by": "review/pi-additions/F.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "数据流算法 Count-Min Sketch 布隆过滤器 草图 讲义 中文 课程 大数据",
+   "result": "不合适：命中 YouTube 英文讲解、Utah 英文讲义、维基百科、CSDN/知乎/Redis 博客短文，没有中文系统讲授线性草图/Count-Min/AMS 的课程或讲义；据此把“草图”留在 unresolved。",
+   "by": "review/pi-additions/F.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "性质测试 property testing 亚线性算法 讲义 中文 综述 课程",
+   "result": "不合适：返回 Property Testing Review、Dana Ron 英文综述、CSDN 单篇笔记与 B 站无关视频；中文系统讲义未找到。性质测试改由哈工大课程的 2.4/3.3 两个判定算法例子覆盖，不再依赖这类英文材料。",
+   "by": "review/pi-additions/F.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch.py bili「数据流算法 Count-Min Sketch 布隆过滤器 大数据算法」「property testing 性质测试 亚线性算法」",
+   "result": "不合适：返回大数据期末速成、Spark/GreenPlum 教程、软测决策表、AR 模型平稳性等无关内容，未出现中文草图/性质测试课程；因已有官方课程覆盖性质测试，未据此下“B 站没有”的结论，草图缺口另记 unresolved。",
+   "by": "review/pi-additions/F.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://quant67.com/post/algorithms/31-count-min-sketch/count-min-sketch.html",
+   "result": "已读正文及代码入口：有手算、参数推导、概率误差界证明及正负更新边界；用作流式草图专题补充。",
+   "by": "review/verified-additions/F.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "Count-Min Sketch AMS 数据流算法 草图 讲义 课程 中文",
+   "result": "只有知乎单篇（403）与英文讲义，未采用。",
+   "by": "review/main-additions/F.1.5.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文 covers 把课程大纲只列到讲名并承认“没有单列草图与流式摘要，也没有工作量/跨度的形式化模型”，这与实际一致；本次补上“性质测试也没有”的缺口。",
+  "旧条目英文证据写 Class 9 为期中、Class 13 为项目汇报，本次实际打开 Schedule 只核到 Class 1–6 的主题与 Part 分组（后续课程主题在页面更下方），因此本文件只引用已核到的 Class 1–6 与 Part 3/4 标题，不复制旧条目的 class 序号断言。",
+  "哈工大课程的官方平台页比 icourse163 课页信息多（有逐讲大纲），中文证据改用平台页。",
+  "[review/pi-additions/F.1.5.json] 未解决 zh「草图和流式摘要」：流式摘要一侧已由哈工大《大数据算法》第三讲（数据流中频繁元素、生成树权重）与第二讲水库抽样覆盖；但“草图”指的一类线性/哈希草图（Count-Min、AMS 矩估计、Bloom 过滤器等）在中文课程、讲义与付费教材页里都没有查到系统讲授（Tavily 文字检索与 B 站检索均只得到单篇博客或英文材料），故整体只能记 partial。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "并行、外存与流算法",
+ "description": "工作量/跨度、通信与I/O复杂度、草图和流式摘要、性质测试。",
+ "applied_additions": [
+  "review/pi-additions/F.1.5.json@ef24c2a00e",
+  "review/verified-additions/F.1.5.json@70e565c9c3",
+  "review/main-additions/F.1.5.json@0f9de0ad14"
+ ]
+}

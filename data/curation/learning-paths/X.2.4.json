@@ -1,0 +1,379 @@
+{
+ "id": "X.2.4",
+ "name": "医疗健康信息学",
+ "description": "临床数据、医疗信息系统、决策支持和评价；外部前置为医学与临床流程。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Health Information Systems: Technological and Management Perspectives (3rd ed., Springer 2023, Open Access)",
+   "url": "https://link.springer.com/book/10.1007/978-3-031-12310-8",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Open-access book on health information systems: architecture, integration standards, strategic/tactical/operational management, quality evaluation and research settings; clinical data and decision support are treated at the system level.",
+   "access": "Springer states Open Access; PDF/EPUB free to download, print copy sold separately.",
+   "publisher": "Springer",
+   "evidence": {
+    "url": "https://link.springer.com/book/10.1007/978-3-031-12310-8",
+    "location": "Book page: Open Access badge and chapter list",
+    "finding": "The Springer page marks the book Open Access and lists chapters on health information systems architecture, management and evaluation."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Microsoft Learn 中文：Azure Health Data Services 中的 FHIR 服务",
+   "url": "https://learn.microsoft.com/zh-cn/azure/healthcare-apis/fhir/overview",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "中文工程文档：FHIR 资源模型、REST API、搜索、版本与互操作；补医疗数据交换标准的实践，不替代医疗信息系统课程。",
+   "access": "文档免费；实际部署 Azure 服务可能收费。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为API/标准参考，原记 primary。）",
+   "publisher": "Microsoft",
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/healthcare-apis/fhir/overview",
+    "location": "文档概述与目录",
+    "finding": "中文页介绍 FHIR 服务、资源模型与 API，并链接到搜索、版本等子页。"
+   }
+  },
+  {
+   "key": "fix-zh-medbook",
+   "lang": "zh",
+   "title": "医学信息与医用计算机基础（王杉主编）",
+   "url": "https://www.imed.org.cn/jcdl_51.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "第4–12章覆盖HIS、集成、电子病历、PACS、医学决策支持、临床数据中心与挖掘、评价。",
+   "access": "目录公开，正文需购买或机构授权，未购买。官方购买说明 https://www.imed.org.cn/news_029.html 为2016年资料，不作当前价格依据。",
+   "publisher": "国家医学电子书包／北京医视时代",
+   "evidence": {
+    "url": "https://www.imed.org.cn/jcdl_51.html",
+    "location": "内容目录第4–12章",
+    "finding": "官方目录明确列临床数据中心、决策支持和评价专章，非免费全文。"
+   },
+   "added_by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "key": "fix-zh-workflow",
+   "lang": "zh",
+   "title": "医学检查决策",
+   "url": "https://www.msdmanuals.cn/home/special-subjects/clinical-research-and-medical-decision-making/medical-testing-decisions",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "病史、体检、检查选择、结果解释，临床流程背景。",
+   "access": "中文完整正文免费，不替代完整医学教育。",
+   "publisher": "MSD Manuals／Brian F. Mandell",
+   "evidence": {
+    "url": "https://www.msdmanuals.cn/home/special-subjects/clinical-research-and-medical-decision-making/medical-testing-decisions",
+    "location": "收集基本医疗信息、医疗检查的种类",
+    "finding": "教学正文从病史体检讲到检查决策。"
+   },
+   "added_by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "key": "fix-en-expert",
+   "lang": "en",
+   "title": "MIT HST.951J Introduction / Expert Systems",
+   "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/371121f1a51f3c1903cee9fd86022412_lecture1.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "规则推理、MYCIN、诊断算法。",
+   "access": "44页免费官方讲义。",
+   "publisher": "MIT OCW",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/371121f1a51f3c1903cee9fd86022412_lecture1.pdf",
+    "location": "PDF pp.1–15",
+    "finding": "讲流程图、规则、反向链及确定性因子。"
+   },
+   "added_by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "key": "fix-en-eval",
+   "lang": "en",
+   "title": "Behavior of Various Machine Learning Models in the Face of Noisy Data",
+   "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-fall-2005/53b7f9939d181290867cf652cfd60a5e_full_text.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "临床预测模型和噪声鲁棒性评价教学案例。",
+   "access": "15页免费课程项目，非独立课程。",
+   "publisher": "MIT OCW／Michael D. Blechner",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-fall-2005/53b7f9939d181290867cf652cfd60a5e_full_text.pdf",
+    "location": "Methods / Results / Discussion",
+    "finding": "比较乳腺病理数据上规则、树、神经网络及逻辑回归。"
+   },
+   "added_by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "key": "fix-en-workflow",
+   "lang": "en",
+   "title": "Overview of Medical Decision Making",
+   "url": "https://www.merckmanuals.com/home/special-subjects/clinical-research-and-medical-decision-making/overview-of-medical-decision-making",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "诊断治疗目标、患者共同决策背景。",
+   "access": "英文完整正文免费，链接检查与治疗决策。",
+   "publisher": "Merck Manuals",
+   "evidence": {
+    "url": "https://www.merckmanuals.com/home/special-subjects/clinical-research-and-medical-decision-making/overview-of-medical-decision-making",
+    "location": "Defining Goals",
+    "finding": "讲解诊疗目标、风险和患者意愿的权衡。"
+   },
+   "added_by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "大数据背景下的智慧医院（国家高等教育智慧教育平台课程，开课教师 吴雅琴、王晓东、王超、左风云、赵慧茹；含逐章逐节大纲）",
+   "url": "https://higher.smartedu.cn/course/69a2133495df98bb276ca527",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程章节：技术在智慧医院中的作用；医院信息系统（3.1「他」是谁 / 3.2 技术特点 / 3.3 聪明如「他」）；智慧医院门诊信息化管理（门诊业务流程与新思路）；智慧医院住院管理信息化（住院管理业务流程）；电子病历；医技系统助力医院信息化管理；医学影像信息化管理；病案信息管理；远程医疗；大数据技术在智慧医院管理中的应用；新技术助力智慧医院；互联网医疗；人工智能大模型赋能医疗。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整章节大纲（附课程测验）；中文讲授；面向本科各专业选修；视频开放时间与字幕未核对。",
+   "publisher": "国家高等教育智慧教育平台（开课教师 吴雅琴、王晓东、王超、左风云、赵慧茹）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/69a2133495df98bb276ca527",
+    "location": "「课程大纲 / 课程章节」列表：医院信息系统、智慧医院门诊信息化管理、智慧医院住院管理信息化、电子病历、医技系统助力医院信息化管理、医学影像信息化管理、病案信息管理、远程医疗、大数据技术在智慧医院管理中的应用、人工智能大模型赋能医疗",
+    "finding": "读到逐章逐节大纲（含 3.1–5.3 的小节标题），确认这是一门系统讲医院信息系统与临床数据（电子病历/病案/影像）的中文课程，并在后段讲大数据分析与 AI 大模型在医疗决策中的用法，可作中文侧成体系主资源。"
+   },
+   "added_by": "review/pi-additions/X.2.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "临床数据",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "FHIR 资源模型与数据交换（只到标准层）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-medbook",
+     "section": "第7、11、19章",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "电子病历；病案信息管理；医学影像信息化管理；医技系统助力医院信息化管理",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Health information systems chapters on clinical data and system architecture",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有 FHIR 标准与 API，没有临床数据建模/清洗/分析。；原zh1教FHIR交换，本书补电子病历、数据中心及挖掘，组合覆盖临床记录到分析。；电子病历、病案、影像与医技数据各成一章，覆盖临床数据的产生、存储与管理，而不是只看 FHIR 这类接口文档。"
+  },
+  {
+   "topic": "医疗信息系统",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "FHIR 服务（系统集成的一个标准，不是 HIS 全貌）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-medbook",
+     "section": "第4–8、10章",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "医院信息系统（是什么/技术特点/能力）；智慧医院门诊信息化管理（4.1–4.5 门诊流程与信息化新思路）；智慧医院住院管理信息化（5.1–5.3 住院业务流程）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Architecture, integration standards, management",
+     "extent": "covered"
+    }
+   ],
+   "note": "原zh1补互操作，本书补HIS规划、临床、影像及管理系统，覆盖整体架构。；HIS 总论 + 门诊 + 住院三条业务线各有小节讲流程与信息化改造，构成中文的医疗信息系统主线；远程医疗与互联网医疗两章补服务形态。"
+  },
+  {
+   "topic": "决策支持和评价",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-medbook",
+     "section": "第9、12章",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "大数据技术在智慧医院管理中的应用；人工智能大模型赋能医疗；新技术助力智慧医院",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "质量评价章节；CDSS 算法只到系统层讨论",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-expert",
+     "section": "规则推理、MYCIN",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-en-eval",
+     "section": "Methods / Results",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有 CDSS 算法与评价的课程级材料；原 granularity 已注明此项覆盖较浅。；第9章医学决策支持与第12章系统评价共同补齐原中文缺口，原zh1用于工程衔接。；与fix-en-eval模型比较及原en1系统质量评价组合，覆盖算法、模型性能与系统评价。；结合fix-en-expert推理算法和原en1质量评价，完成模型鲁棒性评价案例。；课程后段讲大数据分析与 AI 大模型如何支撑医院的决策与管理（属决策支持的应用侧），配合现有 fix-zh-medbook 的决策支持内容可覆盖该点；但「评价」（临床效果评估、系统评价方法）在这门课里没有独立章节，仍主要靠英文材料。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读 FHIR 概览、资源模型与搜索，理解医疗数据交换标准的工程形态。"
+    },
+    {
+     "source": "fix-zh-workflow",
+     "read": "先复习病史、体检、检查、解释结果；完整医学前置另修。"
+    },
+    {
+     "source": "fix-zh-medbook",
+     "read": "获得正版授权后读4–8、11、9、12章；原zh1仅作FHIR工程补充。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按章节顺序走：先看医院信息系统总论，再跟门诊、住院两条业务流程画出信息流；然后读电子病历/病案/影像三章搞清临床数据的结构与管理；最后看大数据分析与 AI 大模型赋能医疗两章，写一段「某科室能用什么数据支持什么决策」的分析。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the architecture, integration-standards, management and quality-evaluation chapters; use the open PDF."
+    },
+    {
+     "source": "fix-en-workflow",
+     "read": "Review clinical goals before original en1."
+    },
+    {
+     "source": "fix-en-expert",
+     "read": "Study rule inference and MYCIN after systems chapters."
+    },
+    {
+     "source": "fix-en-eval",
+     "read": "Compare methods and noisy-data evaluation; connect to en1 quality evaluation."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 Microsoft Learn 中文 FHIR 文档",
+   "result": "采纳 zh1；确认只有 FHIR 工程文档，无临床数据/信息系统/评价课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「医疗信息学 课程」「临床决策支持 课程」",
+   "result": "结果为零散讲座与产品演示，无系统中文课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核到中文医疗信息学教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "Springer 开放获取书页",
+   "result": "采纳 en1；确认 Open Access 与章节结构。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "医学信息学 教材 临床决策支持 医疗信息系统 目录 人民卫生出版社",
+   "result": "打开医学电子书包目录、清华教材页和科学出版社30页试读，未称免费全文。",
+   "by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "医学信息学 课程 医院信息系统 临床 中国大学MOOC",
+   "result": "找到安徽中医药大学超星及国家平台课程介绍，未验证视频获取，不作覆盖依据。",
+   "by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "https://www.imed.org.cn/news_029.html",
+   "result": "打开官方购买说明，登记收费教材，未购买。",
+   "by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "MIT HST.951 medical decision support lectures",
+   "result": "打开具体讲义及课程项目全文；课程目录入口缓存失败。",
+   "by": "review/data-app-additions/X.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "医学信息学 课程 医院信息系统 电子病历 临床决策支持 评价（限定 icourse163/higher.smartedu/xuetangx）",
+   "result": "命中智慧高教《大数据背景下的智慧医院》（两个课程 id）、《医学影像信息学》、周口职院《卫生信息技术应用基础》、武大《循证医学》与协和《临床科研实践培训课程》；选《大数据背景下的智慧医院》作中文 primary（覆盖 HIS/电子病历/病案/影像/决策）。",
+   "by": "review/pi-additions/X.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/69a2133495df98bb276ca527",
+   "result": "第一次请求超时，重试成功；读到 13 个课程章节与 3.1–5.3 小节标题（医院信息系统、门诊、住院、电子病历、医技、影像、病案、远程医疗、大数据应用、新技术、互联网医疗、AI 大模型）。",
+   "by": "review/pi-additions/X.2.4.json"
+  }
+ ],
+ "findings": [
+  "原英文 Springer 书是开放获取的信息系统教材，架构/集成/管理/评价都有章，保留；CDSS 算法与评价仍浅。",
+  "原中文只有 FHIR 文档，是标准/API 参考，不能覆盖临床数据、HIS 与评价；中文 partial。",
+  "没有把 FHIR 文档当成医疗信息学课程。",
+  "简介中的说明条目不作为知识点：外部前置为医学与临床流程",
+  "[review/data-app-additions/X.2.4.json] 未解决 zh「外部前置为医学与临床流程」：免费流程文章可入门；完整医学基础仍属外部前置，未宣称单篇补齐。",
+  "[review/data-app-additions/X.2.4.json] 未解决 en「外部前置为医学与临床流程」：Merck背景文章不代替完整外部医学基础。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/X.2.4.json@be2b83e314",
+  "review/pi-additions/X.2.4.json@6f5b32e358"
+ ]
+}

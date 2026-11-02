@@ -1,0 +1,428 @@
+{
+ "id": "V.1.2",
+ "name": "多媒体技术",
+ "description": "图像/音频/视频表示、编码压缩、容器、同步、传输与媒体管线。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Multimedia Technologies & Applications — Lecture Notes（Hosei University, Jianhua Ma，14 讲 PDF）",
+   "url": "https://jianhua.cis.k.hosei.ac.jp/course/mm/Lecture_Note.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "L01 多媒体概念；L02 音频基础；L03 音频编码与标准；L04 图像/视频基础；L05 JPEG 与 H.26x；L06 MPEG 标准；L07 高级编码回顾；L08 媒体对象制作；L09 媒体集成与呈现（同步）；L10 媒体保护；L11 检索；L12 互联网媒体分发（流式传输）；L13 IP 电话/视频会议；L14 无线移动多媒体。",
+   "access": "课程页与 14 个 PDF 免费公开，无需注册；英文。",
+   "publisher": "Hosei University / Jianhua Ma",
+   "evidence": {
+    "url": "https://jianhua.cis.k.hosei.ac.jp/course/mm/Lecture_Note.html",
+    "location": "Lesson 01–14 标题列表",
+    "finding": "页面逐条列出 Lesson 01 Multimedia Concept、02 Audio Fundamentals、03 Audio Coding、04 Image/Video Fundamentals、05 Image/Video Coding: JPEG and H.26x、06 MPEG Coding Standards、09 媒体集成与呈现、12 互联网分发、13 IP 电话/视频会议、14 无线移动多媒体。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "MDN: Media container formats (file types)",
+   "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Containers",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "容器的定义（把视频/音频/字幕轨道与元数据打包）、容器 vs 编解码器的区别、常见容器（MP4、WebM、Ogg、QuickTime、MPEG-TS 等）与浏览器支持；补讲义未单列的“容器”概念。",
+   "access": "MDN 免费（CC BY-SA）；英文；是概念说明而非课程。",
+   "publisher": "Mozilla / MDN 社区",
+   "evidence": {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Containers",
+    "location": "正文开头“What is a container?”与容器列表",
+    "finding": "页面解释容器格式把音频/视频/字幕与元数据打包，并区分 container 与 codec，逐一介绍 MP4/WebM/Ogg 等格式。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《数字媒体技术概论》（中国传媒大学 严明、张岳，学校官方 B 站，46 讲）",
+   "url": "https://www.bilibili.com/video/BV1AE411B7KV/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "分 P 目录：2.1–2.5 图像基础/数字图像处理/视频基础/数字视频关键技术/应用；4.1–4.4 数字语音基本概念与语音技术；7.1–7.4 数据压缩原理、音频/图像/视频压缩编码；9.1–9.5 存储、数据中心、云计算存储、多媒体网络传输（两讲）；10.1–10.5 加密、数字水印、取证、生物认证。",
+   "access": "中国传媒大学官方账号免费中文课程（已完结，46 P）；B站可能需要登录或访问校验；字幕未逐段核对。",
+   "publisher": "中国传媒大学（官方 B 站账号）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1AE411B7KV/",
+    "location": "视频选集（1/46）列表：2.1–2.5、4.1–4.4、7.1–7.4、9.1–9.5、10.1–10.5",
+    "finding": "页面视频选集列出“2.1图像基础知识、2.3视频基础知识、4.1数字语音的基本概念、7.2音频数据的压缩编码、7.4数字视频的压缩编码、9.4/9.5多媒体网络传输技术”等分 P 标题。"
+   },
+   "official_search": "（本轮补查，非转载确认）zh1 是中国传媒大学官方 B 站账号发布的课程（原记录 reupload=false），本轮在中国大学MOOC 找到同一门课的官方页面 https://www.icourse163.org/course/CUC-1206705818 （课程名《数字媒体技术概论》，考核含单元测验/作业/期末，参考资料第 1 项即主讲人严明《数字媒体技术概论（融媒体版）》清华大学出版社 2023），可互相印证课程身份；配套教材目录见新增 r7-zh1。",
+   "updated_by": [
+    "review/pi-additions/V.1.2.json"
+   ]
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "MDN 中文：媒体容器格式（文件类型）",
+   "url": "https://developer.mozilla.org/zh-CN/docs/Web/Media/Guides/Formats/Containers",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文解释容器与编解码器的区别、常见容器（MP4/WebM/Ogg 等）与浏览器支持；补中文课程未讲的“容器”概念。",
+   "access": "MDN 中文页面免费（CC BY-SA）；是文档说明，不是课程。",
+   "publisher": "Mozilla / MDN 中文社区",
+   "evidence": {
+    "url": "https://developer.mozilla.org/zh-CN/docs/Web/Media/Guides/Formats/Containers",
+    "location": "中文正文：容器的定义与容器格式列表",
+    "finding": "中文页标题为“媒体容器格式（文件类型）”，正文解释容器把音视频与元数据打包，并列出 MP4/WebM/Ogg 等格式。"
+   }
+  },
+  {
+   "key": "final-zh1",
+   "lang": "zh",
+   "title": "《如何用 FFmpeg 编写一个简单播放器——详细步骤介绍》（dranger 教程中文译本，8 个指导；第 29–37 页为指导 5「如何同步视频」与指导 6「同步音频」）",
+   "url": "https://github.com/0voice/ffmpeg_develop_doc/blob/main/文档库/ffmpeg的tutorial中文版.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "指导 5「如何同步视频」：先说清 DTS/PTS 与 B 帧重排（为什么解码序与显示序不同），再「写代码：使用 PTS 来同步」给出 diff = vp->pts - ref_clock、sync_threshold = max(delay, AV_SYNC_THRESHOLD)、AV_NOSYNC_THRESHOLD 判断与 frame_timer 逐帧调度；「同步：声音时钟」一节用 get_audio_clock() 和 hw_buf_size/bytes_per_sec 扣掉还没播完的硬件缓冲，把音频时钟算准。指导 6「同步音频」给出反过来的做法（视频时钟）并说明如何推广到外部时钟。",
+   "access": "第三方转载，授权未核。免费 PDF（转载在 0voice/ffmpeg_develop_doc 仓库「文档库」目录下）；中文译本，逐段解释配完整代码；原教程是 Stephen Dranger 的 dranger.com/ffmpeg（英文）；译本授权与译者署名均未核对。",
+   "publisher": "原作者 Stephen Dranger（dranger.com/ffmpeg）；中文译本未署名，GitHub 仓库 0voice/ffmpeg_develop_doc 为第三方转载",
+   "reupload": true,
+   "official_search": "2026-11-01 查：①原站 http://dranger.com/ffmpeg/ 已无法解析（fetch 报 DNS getaddrinfo failed），archive.org 上仍有旧快照；②作者与译者都没有发布官方中文版，检索未见任何官方中文页面；③该仓库里只有这一份中文译本 PDF，无译本说明页，故按转载登记。",
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/0voice/ffmpeg_develop_doc/main/文档库/ffmpeg的tutorial中文版.pdf",
+    "location": "PDF 第 29–37 页：指导 5「如何同步视频」→「写代码：使用 PTS 来同步」→「同步：声音时钟」；第 37 页起为指导 6「同步音频」",
+    "finding": "读到「diff = vp->pts - ref_clock; sync_threshold = (delay > AV_SYNC_THRESHOLD) ? delay : AV_SYNC_THRESHOLD;」「如果时间戳太落后于音频时间，我们加倍计算延迟。如果时间戳太领先于音频时间，我们将尽可能快的刷新」以及 get_audio_clock() 用 hw_buf_size 与 bytes_per_sec 修正音频时钟的完整代码与逐句解释，确认是分步教学而非只给结论。"
+   },
+   "added_by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "key": "final-zh2",
+   "lang": "zh",
+   "title": "博客园《FFmpeg学习：音视频同步（1）相关基础定义》＋（2）同步策略（小超不挑食，两篇短文，含代码）",
+   "url": "https://www.cnblogs.com/zjacky/p/16496139.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "（1）time_base 是什么、PTS/DTS/duration 的区别、AVStream/AVCodecContext/AVPacket/AVFrame 各处时间基、tbn/tbc/tbr 与内部时间基 AV_TIME_BASE、时间基换算的来由；（2）三种同步方式（同步到外部时钟、音频同步到视频、视频同步到音频）与「为什么主流是把视频同步到音频」的感知理由，Audio_Clock 的两步计算（用包 pts 设时钟、再用样本数与采样率补足包内已播时长）及对应代码。",
+   "access": "博客园免费阅读，中文；个人技术博客，无视频与作业；（2）篇的站内链接指向（1）篇 https://www.cnblogs.com/zjacky/p/16496139.html。",
+   "publisher": "博客园 / 小超不挑食（个人技术博客）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.cnblogs.com/zjacky/p/16553396.html",
+    "location": "（2）「同步方式」三小节与「Audio_Clock」小节；（1）「pts、dts、duration」「不同结构体的 time_base」「三种时间基 tbr、tbn 和 tbc」",
+    "finding": "（2）正文逐条列出三种同步方式并说明「人对于声音的敏感度更高…一般都会采用第三种方式」，随后给出 audio_clock = av_q2d(time_base)*pkt->pts 与按采样率补时长的代码；（1）正文给出 time_base/PTS/DTS/duration 定义与 tbn/tbc/tbr、AV_TIME_BASE 的换算说明。"
+   },
+   "added_by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《数字媒体技术概论（融媒体版）》（严明，清华大学出版社 2023-03；中国传媒大学国家一流本科课程（线上）配套教材，全书 12 章）",
+   "url": "https://www.tup.com.cn/booksCenter/book_09253102.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "全书 12 章：第1章 融媒体技术基础（融媒体概念、媒体分类、研究领域）；第2章 数字图像及视频技术（图像/视频基础、增强去噪、几何变换、傅里叶与小波、视频处理）；第3章 计算机视觉技术；第4章 数字音频技术（含心理声学模型、语音信号处理）；第5章 计算机图形与动画技术；第6章 虚拟现实技术；第7章 数字游戏产业与开发；其余章讲数字媒体存储、传播、管理、安全、交互与融媒体应用。",
+   "access": "付费教材，定价 59 元（ISBN 9787302627708，2023.03，第 1-10 印次；清华社提供教师课件与 32 学时教学大纲）；本轮只读出版社官方目录与前言，未购买正文。",
+   "publisher": "清华大学出版社（严明，中国传媒大学）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.tup.com.cn/booksCenter/book_09253102.html",
+    "location": "出版社「图书详情」页：内容简介「全书共12章…数字媒体信息的获取、处理、存储、传播、安全、交互」、前言逐章说明、目录（第1章 融媒体技术基础 1.1…）、定价 59 元、ISBN 9787302627708",
+    "finding": "确认这是现有 zh1（中国传媒大学《数字媒体技术概论》46 讲课）的配套教材与同一作者，覆盖图像/视频/音频/图形动画/VR/存储传播；用全文检索「同步」在该页 0 命中，说明这本教材没有音视频同步专节。"
+   },
+   "added_by": "review/pi-additions/V.1.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "图像/音频/视频表示",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.1–2.4 图像基础/视频基础；4.1 数字语音的基本概念",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L02 Audio Fundamentals；L04 Image/Video Fundamentals",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "编码压缩",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "7.1–7.4 数据压缩原理、音频/图像/视频压缩编码",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L03 Audio Coding；L05 JPEG and H.26x；L06 MPEG Coding Standards；L07 Review of Advanced MM Coding",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "容器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "容器定义与常见格式（MP4/WebM/Ogg）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "What is a container? + 容器格式列表",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都靠 MDN 的概念页覆盖“容器是什么/有哪些”，没有 MP4 box 结构、TS 分组与 mux/demux 实操；深度有限但在本技能范围内可接受。"
+  },
+  {
+   "topic": "同步",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "9.4/9.5 多媒体网络传输（涉及实时传输，但无同步专章）",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh1",
+     "section": "指导 5「如何同步视频」（DTS/PTS → 用 PTS 同步的完整代码 → 声音时钟 get_audio_clock）＋指导 6「同步音频」（视频时钟与外部时钟）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh2",
+     "section": "（1）time_base / PTS / DTS / duration 与时间基换算；（2）三种同步方式与 Audio_Clock 计算",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L09 媒体集成与呈现（同步）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程没有音视频同步（时间戳、唇同步、缓冲策略）的专门内容；英文 L09 以同步为主线（全文 19 处 synchron）。；音画同步的机制在这份中文译本里有完整的分步教学：先用 B 帧存储顺序解释 DTS 与 PTS 为什么不同，再写出「这一帧该在什么时候显示」的 diff/threshold 代码，接着说明落后就加倍延迟、领先就尽快刷新（等价于丢帧/等待的缓冲策略），最后用 get_audio_clock() 把音频硬件缓冲扣掉，得到真正可用的主时钟；指导 6 还给出反向同步与外部时钟的推广。时间戳、主时钟、缓冲/丢帧这三块都在，且每步都有可编译的代码和解释，不是只定义概念。；两篇短文补上前一份材料里没有单独讲透的基础层：时间基与 PTS/DTS 的数值含义、tbn/tbc/tbr 与 AV_TIME_BASE 的差别，以及三种同步策略的取舍（为何以音频为主时钟）和 Audio_Clock 的两步算法。作为「同步」这一知识点的入门读物，它让读者在动手写播放器之前先弄清单位与时钟来源，与 final-zh1 的代码教学互补。"
+  },
+  {
+   "topic": "传输与媒体管线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "9.4/9.5 多媒体网络传输技术（两讲）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L12 Internet Media Distribution（流式传输）；L13 IP Telephony and Video Conferencing；L14 Wireless Mobile Multimedia",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先看 2.x 图像/视频与 4.1 语音基础，再看 7.x 压缩编码，最后看 9.4/9.5 网络传输；每章整理“表示→压缩→传输”的链路。"
+    },
+    {
+     "source": "zh2",
+     "read": "读容器页补齐“容器 vs 编解码器”，能说出 MP4/WebM 里装了什么。"
+    },
+    {
+     "source": "final-zh2",
+     "read": "先读（1）把时间基与 PTS/DTS 的单位弄清楚（能自己算出一帧的显示秒数），再读（2）记住三种同步方式和「以音频为主时钟」的理由，并手算一个 Audio_Clock。"
+    },
+    {
+     "source": "final-zh1",
+     "read": "按指导 5 走一遍：先看 B 帧与 DTS/PTS 的存储顺序，再照「写代码：使用 PTS 来同步」实现 diff/sync_threshold 的调度，然后按「同步：声音时钟」实现 get_audio_clock（含硬件缓冲补偿）；用一份音画本就对齐的样本和一份人为偏移的样本各跑一次，记录偏移被拉回的过程。再看指导 6 把主时钟换成视频时钟/外部时钟，比较三种主时钟的差别。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 L02–L07 学音频/图像/视频表示与编码，理解 DCT/量化、运动补偿与 H.26x/MPEG。"
+    },
+    {
+     "source": "en1",
+     "read": "L09 学媒体集成与同步，L12–L14 学流式分发、IP 电话与无线多媒体，串成媒体管线。"
+    },
+    {
+     "source": "en2",
+     "read": "用 MDN 容器页补齐容器概念与常见格式。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.bilibili.com/video/BV1AE411B7KV/（分 P 列表）；MDN 中文容器页",
+   "result": "采纳：中文课程覆盖表示/压缩/传输，缺同步；MDN 补容器概念。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国传媒大学《数字媒体技术概论》46 讲（官方账号）",
+   "result": "采纳为主资源：已核对 46 个分 P 标题。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《多媒体技术》教材",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://jianhua.cis.k.hosei.ac.jp/course/mm/Lecture_Note.html ; MDN containers",
+   "result": "采纳：14 讲目录与容器页正文核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch(DuckDuckGo lite)",
+   "query_or_url": "https://lite.duckduckgo.com/lite/?q=dranger+ffmpeg+tutorial+中文+翻译+音频同步",
+   "result": "采纳线索：命中 0voice/ffmpeg_develop_doc 里的「ffmpeg的tutorial中文版.pdf」、博客园 zjacky 同步两篇、博客园 bylijian《FFmpeg的tutorial 学习》（只是书目式介绍，未采纳）。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://raw.githubusercontent.com/0voice/ffmpeg_develop_doc/main/文档库/ffmpeg的tutorial中文版.pdf（第 29–37 页）",
+   "result": "采纳为 final-zh1：确认指导 5/6 有 DTS/PTS 解释、PTS 同步代码、sync_threshold、get_audio_clock 缓冲补偿。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.cnblogs.com/zjacky/p/16496139.html 与 https://www.cnblogs.com/zjacky/p/16553396.html",
+   "result": "采纳为 final-zh2：读到时间基/PTS/DTS 定义、三种同步方式与 Audio_Clock 代码。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "vsearch.py bili",
+   "query_or_url": "音视频同步 原理 / ffmpeg 音视频同步 时钟（两次）",
+   "result": "不合适：无 cookie 时返回剪辑工具、格式转换、播放器测评等无关结果，无法据此判断 B 站有无教学（按 brief 只作「找不到」，不作「没有」的证据）。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch(DuckDuckGo lite site:bilibili.com)",
+   "query_or_url": "https://lite.duckduckgo.com/lite/?q=site:bilibili.com+ffmpeg+音视频同步+原理 → 打开 https://www.bilibili.com/video/BV16N41167KX/",
+   "result": "不采纳：标题写「音视频同步原理分析（音视频时基、缓存控制、音视频同步算法）」，但页面只有「领取资料、源码、笔记、咨询 vip 课程」的引流文案，无分 P 目录、无时长信息，属培训机构试听片段；同类 BV1C29kB8EDs、BV1GK411f7hN 也是转载/引流。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://ke.qq.com/course/3202131（上述引流视频指向的正版付费课）",
+   "result": "无法核对：页面只剩「腾讯课堂公告」一页，平台已停止服务，拿不到课程目录与定价，故不登记付费来源。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch + archive.org",
+   "query_or_url": "http://dranger.com/ffmpeg/ ；https://blog.csdn.net/leixiaohua1020/article/details/18893769 与 /15811977 的 archive.org 快照",
+   "result": "原站 DNS 已不可解析；雷霄骅两篇（原作者本人博客）经 web.archive.org 打开后只把「视音频同步」列为播放器四步的最后一步并给一句定义，没有同步机制的教学，故未采纳为来源（不能靠一句定义算覆盖）。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "（未执行）tavily_search 两次调用均返回「未找到 Tavily API Key：设环境变量 TAVILY_API_KEY，或写 config/tavily.json」",
+   "result": "本技能检索改用免费的 DuckDuckGo lite（lite.duckduckgo.com）、B 站 SSR 搜索与直接打开官方页，未消耗 Tavily 额度。",
+   "by": "review/final-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "多媒体技术 课程 多媒体同步 音视频同步 时间戳 唇同步 缓冲区 教学大纲",
+   "result": "返回的全是博客/工程文章（敏航手记、声网博客、FFmpeg 播放器同步、WebRTC 同步、CSDN），没有课程或教材章节。",
+   "by": "review/pi-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "多媒体技术 课程 大纲 章节 多媒体同步 压缩编码 媒体传输（限定 higher.smartedu/icourse163/xuetangx）",
+   "result": "命中同济《多媒体技术与应用》（7 单元，偏软件操作）、深圳大学《多媒体技术及应用》、中传《数字媒体技术概论》；三门的概述都只到「压缩编码/传输/应用」，没有同步单元。",
+   "by": "review/pi-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "数字媒体技术概论 融媒体版 严明 清华大学出版社 目录 媒体同步 章节",
+   "result": "命中清华社图书详情页（book_09253102）与一份 32 学时教学大纲（搜狐转载）；打开后目录与该大纲都没有「同步」。",
+   "by": "review/pi-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.tup.com.cn/booksCenter/book_09253102.html ＋ https://www.sohu.com/a/746386395_453160",
+   "result": "出版社页全文检索「同步」0 命中；32 学时大纲（1 融媒体基础 2 图像视频 3 计算机视觉 4 音频 5 图形动画 6 VR 7 游戏…）也无同步单元。",
+   "by": "review/pi-additions/V.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 音视频同步 原理 课程 时间戳 播放器 同步策略",
+   "result": "B 站确有大量「音视频同步」内容，但打开两条核对（BV1vN4y1j7ms、BV1f34y1J7HP）都是培训机构（零声教育/linux技术栈）的试听片段与引流视频，另一条 BV1LL411b7xo 标题自述「从培训机构偷来」属未授权搬运；没有高校或平台的同步课程单元，不能算教学来源。",
+   "by": "review/pi-additions/V.1.2.json"
+  }
+ ],
+ "findings": [
+  "原中英文条目方向正确；核对后确认 Hosei 14 讲覆盖表示/编码/同步/传输，但容器未单列。",
+  "中文课程 46 P 目录里确实有图像/视频/语音/压缩/网络传输，但没有“容器”和“同步”专章。",
+  "容器用 MDN 中英文概念页补齐（明确标注是文档而非课程）；同步只有英文 L09，中文判 partial。",
+  "[review/pi-additions/V.1.2.json] 未解决 zh「同步」：四个渠道都查过仍无中文的课程级教学：①中文课程平台（中国大学MOOC/智慧高教/学堂在线）检索到的多媒体课（同济、深大、中传）大纲只到压缩编码/传输/应用；②中传课程的配套教材《数字媒体技术概论（融媒体版）》12 章目录与 32 学时教学大纲均无「同步」，全文检索 0 命中；③通用检索只有博客与工程文章（PTS/时钟/缓冲区/WebRTC 同步），可读但不是课程；④site:bilibili.com 检索到的同步视频都是培训机构试听片段或未授权搬运（BV1LL411b7xo 自述「偷来」），未采纳。旧结论「中文缺音视频同步专门内容」本轮带搜索复核后仍成立。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/final-additions/V.1.2.json@bc34d81e66",
+  "review/pi-additions/V.1.2.json@1b1e9317a2"
+ ]
+}

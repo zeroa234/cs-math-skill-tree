@@ -1,0 +1,321 @@
+{
+ "id": "V.1.3",
+ "name": "物理与可微渲染",
+ "description": "光传输、蒙特卡洛渲染、逆向与可微渲染；一般物理仿真只作一讲应用延伸。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Physically Based Rendering: From Theory to Implementation, 4th ed.（Pharr / Jakob / Humphreys；全文在线免费）",
+   "url": "https://pbr-book.org/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章 Monte Carlo Integration（重要性采样、分布变换）、第 3 章几何与变换、第 4 章辐射度量学/光谱/颜色、第 8 章采样与重建、第 9 章反射模型（BRDF/BSDF）、第 11 章体积散射、第 12 章光源、第 13–14 章 Light Transport I/II（表面与体积光传输、path tracing、bidirectional 方法）、第 15 章 GPU wavefront 渲染。",
+   "access": "4th edition 全文在线免费阅读（pbr-book.org），无需注册；英文。",
+   "publisher": "Matt Pharr, Wenzel Jakob, Greg Humphreys（MIT Press）",
+   "evidence": {
+    "url": "https://pbr-book.org/",
+    "location": "首页与在线目录（4ed）",
+    "finding": "首页说明这是 physically based rendering 的教材并强调理论与实现（literate programming）；在线版可进入各章（Monte Carlo Integration、Light Transport 等）。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "15-468/668/868 Physics-based Rendering（CMU，Spring 2026，Ioannis Gkioulekas；课程页 + 作业 + 渲染竞赛）",
+   "url": "https://imaging.cs.cmu.edu/15-468/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程描述：light transport 的理论与模拟、scientific imaging、differentiable/inverse/neural rendering；要求学生自己实现 Monte Carlo renderer 并参加渲染竞赛；含一讲 physics simulation 导论。",
+   "access": "课程页、syllabus 与作业说明公开；视频/字幕未核对。英文。",
+   "publisher": "Carnegie Mellon University / Yannis Gkioulekas",
+   "evidence": {
+    "url": "https://imaging.cs.cmu.edu/15-468/",
+    "location": "首页课程描述段",
+    "finding": "页面写“In this course you will learn all about: the theory and simulation of light transport… as well as differentiable, inverse, and neural rendering. You will also build your own Monte Carlo renderer”。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "GAMES202：高质量实时渲染（闫令琪，中文授课，15 讲 + 作业）",
+   "url": "https://games-cn.org/games202/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "15 讲大纲：实时渲染概述、渲染管线/渲染方程/微积分回顾、实时阴影（shadow mapping/VSM/PCSS/SDF）、实时环境光照（prefiltering/split sum）、实时全局光照（SSAO/RSM/VPL/LPV/VXGI/PRT）、实时高质量着色（Disney BRDF/GGX/LTC、participating media、BSSRDF）、实时光线追踪（backprojection/denoising/SVGF）、TAA/SMAA/DLSS。覆盖渲染方程与 GI 的工程近似，不讲可微渲染。",
+   "access": "课程主页与大纲免费；中文授课、英文课件，每课当天放出录像；作业通过 CES-Alpha 提交，非强制；结业证书由 GAMES 平台发放。",
+   "publisher": "闫令琪（UC Santa Barbara）/ GAMES 平台",
+   "evidence": {
+    "url": "https://games-cn.org/games202/",
+    "location": "课程大纲（暂定）【1】–【15】",
+    "finding": "页面课程大纲列出“【2】回顾：渲染管线、着色语言、渲染方程、微积分基础”“【6】–【8】实时全局光照 1–3”“【9】实时高质量着色 1（Disney principled BRDF，GGX，LTC）”“【12】–【13】实时光线追踪 1–2（denoising，SVGF）”，并写明“中文授课，英文课件”。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "GAMES103：基于物理的计算机动画入门（GAMES 平台，中文授课）",
+   "url": "https://games-cn.org/games103/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "基于物理的动画（刚体、质点弹簧、约束、碰撞、流体入门）；对应简介里“一般物理仿真只作一讲应用延伸”的延伸部分，不用于渲染主线。",
+   "access": "课程主页与视频入口公开；中文授课；字幕未核对。",
+   "publisher": "GAMES 平台（课程教师见主页）",
+   "evidence": {
+    "url": "https://games-cn.org/games103/",
+    "location": "课程主页标题与课程介绍",
+    "finding": "页面为 GAMES103 基于物理的计算机动画入门课程页，含课程主页/PPT 和视频/作业入口（GAMES 平台 1-基础课程列表亦列出该课）。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "GAMES101: 现代计算机图形学入门（闫令琪，UCSB/GAMES 官方课程主页，22 讲，中文授课英文课件，录像在 B 站）",
+   "url": "https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程四大组成之一即「光的传播理论（光子映射）」；周表里 Mar 24 光线追踪（基本原理）、Mar 27 光线追踪（加速结构）、Mar 31 光线追踪（辐射度量学、渲染方程与全局光照）、Apr 5 光线追踪（蒙特卡洛积分与路径追踪）、Apr 7 材质与外观（阅读第 24 章 Reflection，讲 BRDF/反射模型）；另有光栅化、几何、动画与模拟部分。8 次小作业 + 1 次大作业，均为编程任务并给框架。",
+   "access": "课程主页免费（公开课件 PDF + 阅读材料 + 作业框架），录像在 B 站免费；中文授课、英文课件（页面自述）；无考试；字幕情况未核对。",
+   "publisher": "闫令琪（UC San Francisco/UCSB 主页；GAMES 平台课程，页脚注明由 GAMES 组织）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html",
+    "location": "「课程介绍」四大组成列表「光线传播理论 [光子映射 (Jensen)]」；「课程大纲与讲义」表：Mar 31「光线追踪（辐射度量学、渲染方程与全局光照）」、Apr 5「光线追踪（蒙特卡洛积分与路径追踪）」、Apr 7「材质与外观」；「课时安排」注明中文授课、英文课件、录像在 Bilibili 更新",
+    "finding": "打开官方课程页确认这两讲标题逐字就是辐射度量学/渲染方程/全局光照与蒙特卡洛积分/路径追踪，且课程明确以「光的传播理论」为四大板块之一——此前「中文只有实时渲染工程近似、缺辐射传输与 path integral」的判断不成立。"
+   },
+   "added_by": "review/pi-additions/V.1.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "可微绘制技术研究进展（许威威、周漾、吴鸿智、过洁；《中国图象图形学报》2021, 26(06):1521-1535，DOI 10.11834/jig.200853，免费 PDF）",
+   "url": "https://www.cjig.cn/rc-pub/front/front-article/download/55704529/lowqualitypdf/%E5%8F%AF%E5%BE%AE%E7%BB%98%E5%88%B6%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E8%BF%9B%E5%B1%95.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "可微绘制（可微渲染）的系统中文综述：问题定义（改造光栅化/光线跟踪流程以支持梯度回传，计算输出图像变化对输入几何、材质属性的导数）、与优化及深度学习结合做逆向推理；按真实感绘制、三维重建、表观采集建模三条应用线组织，含基于图像的绘制、表达学习、逆向光学设计等分支，并给出发展趋势。作者单位：浙江大学 CAD&CG 国家重点实验室、深圳大学、南京大学。",
+   "access": "期刊官网免费下载 PDF（低质量版），无需注册；中文；属同行评议综述而非课程，无配套作业。",
+   "publisher": "《中国图象图形学报》（中国科学院空天信息创新研究院等主办）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.cjig.cn/rc-pub/front/front-article/download/55704529/lowqualitypdf/...pdf",
+    "location": "PDF 首页：题目《可微绘制技术研究进展》、作者许威威/周漾/吴鸿智/过洁、引用格式 2021,26(06):1521-1535、DOI；摘要「支持梯度信息回传以计算由输出图像的变化导致的输入几何、材质属性变化…与优化及深度学习技术等相结合支持从数据中学习绘制模型和逆向推理」；正文 0 引言起",
+    "finding": "打开 PDF 读到中文摘要与引言，确认这是系统讲可微渲染与逆渲染（含梯度计算动机、应用线分类）的中文综述；可作为中文侧「逆向与可微渲染」的概念与方法主线，但没有课程式的推导练习。"
+   },
+   "added_by": "review/pi-additions/V.1.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "光传输",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第2讲 渲染方程；第6–8讲 实时全局光照；第9讲 BRDF",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Mar 31 光线追踪（辐射度量学、渲染方程与全局光照），阅读材料 Fundamentals of Computer Graphics 第 18 章 Light",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第13–14章 Light Transport I/II；第4章 辐射度量学",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "课程描述：theory and simulation of light transport",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文是实时渲染里的工程近似（SSAO/RSM/VPL/PRT），不是辐射传输方程与 path integral 的系统推导。；一整讲从辐射度量学（辐射强度/辐照度/辐射亮度）推到渲染方程与全局光照，这正是光传输的中文系统推导，取代此前「只有 SSAO/VPL/PRT 工程近似」的说法。"
+  },
+  {
+   "topic": "蒙特卡洛渲染",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第12–13讲 实时光线追踪与 denoising（涉及采样，但无 MC 积分推导）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Apr 5 光线追踪（蒙特卡洛积分与路径追踪）；Apr 7 材质与外观（BRDF/反射模型）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "第2章 Monte Carlo Integration；第8章 Sampling and Reconstruction",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "自己实现 Monte Carlo renderer + 渲染竞赛",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文没有重要性采样/方差分析/估计量的系统教学与实现任务。；该讲专门讲蒙特卡洛积分与路径追踪（估计量、采样与噪声），并有配套编程作业框架可自己写一个 path tracer；材质一讲补 BRDF 采样所需的分布。"
+  },
+  {
+   "topic": "逆向与可微渲染",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh2",
+     "section": "摘要与第 0 节引言起的全文结构：可微绘制定义与梯度回传、真实感绘制、三维重建、表观采集建模三条应用线",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "differentiable, inverse, and neural rendering",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文材料（GAMES202/103）完全没有可微/逆向渲染内容。；中文侧此前完全没有可微/逆向渲染材料；这篇同行评议综述把「渲染过程可微→反传梯度→反解几何/材质/光照」的问题设定、方法分类和应用都讲到了，先读它建立框架，再回 GAMES101 的路径追踪一讲把前向渲染跑通，即可动手做可微实现。注意：它是综述不是课程，缺推导练习与代码任务，属本技能最弱的一环。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 15 讲学渲染方程、实时阴影、环境光照、GI、着色与实时光追/降噪，理解实时渲染中的近似与取舍。"
+    },
+    {
+     "source": "zh2",
+     "read": "需要物理动画背景时看 GAMES103 的刚体与质点弹簧部分，只作延伸。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先看 Mar 24–27 的光线追踪原理与加速结构，再重点学 Mar 31（辐射度量学→渲染方程→全局光照）与 Apr 5（蒙特卡洛积分与路径追踪），按作业框架实现一个带重要性采样的路径追踪器；Apr 7 材质与外观补 BRDF。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读综述的引言与三节应用（真实感绘制/三维重建/表观采集建模），写清「前向渲染可微化有哪几种做法（重参数化、边缘采样、伴随法）」「逆渲染的未知量与损失如何定义」，再挑一条应用线对照 GAMES101 的路径追踪代码改造成可微版本。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "读第2章 Monte Carlo 与第8章采样，完成重要性采样的推导与实现；读第4章辐射度量学建立单位与量的概念。"
+    },
+    {
+     "source": "en1",
+     "read": "读第9章 BRDF、第13–14章 Light Transport 与 path tracing，自己写一个 path tracer 并做方差对比。"
+    },
+    {
+     "source": "en2",
+     "read": "按课程作业实现 differentiable renderer，理解 inverse rendering 的梯度从哪来，并读 neural rendering 部分。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://games-cn.org/games202/ ; https://games-cn.org/games103/",
+   "result": "采纳：GAMES202 覆盖实时渲染与 GI，GAMES103 覆盖物理动画；无可微渲染。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "GAMES202 录像入口（每课当天放出录像）",
+   "result": "采纳：中文授课、英文课件；未核对字幕。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文可微渲染/物理渲染教材与课程",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://pbr-book.org/ ; https://imaging.cs.cmu.edu/15-468/",
+   "result": "采纳：PBRT 章目录与 15-468 课程描述核对。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "query_or_url": "CMU 15-468 课程页与 PBRT 目录（查 physics animation/simulation）",
+   "result": "未找到物理动画讲次：15-468 的 simulation 均指 light transport，PBRT 不含动画。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "query_or_url": "PBRT 4ed 印刷版与图形学教材（physics-based animation）",
+   "result": "PBRT 为渲染教材，不含物理动画；付费动画教材未核实到可核对目录页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://imaging.cs.cmu.edu/15-468/ （physics 关键词检索）",
+   "result": "页内 physics 3 处均属 physics-based rendering 表述，无动画/仿真讲次。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html（games-cn.org/games101 已 404，改用作者主页）",
+   "result": "读到 22 讲完整周表，含 Mar 31 辐射度量学/渲染方程/全局光照、Apr 5 蒙特卡洛积分与路径追踪、Apr 7 材质与外观，以及「中文授课、英文课件、录像在 B 站」的自述 → 采纳为 r7-zh1（中文 primary）。",
+   "by": "review/pi-additions/V.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "站内搜「可微渲染」",
+   "result": "结果全是渲染/PBR/云渲染教程与无关内容，没有可微渲染课程；证明 B 站站内搜索不可靠，随后改用 tavily 检索。",
+   "by": "review/pi-additions/V.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可微渲染 逆渲染 differentiable rendering 中文 课程 讲座 教程 原理实现",
+   "result": "命中知乎/CSDN/阿里云博客、一份中文期刊综述 PDF（可微绘制技术研究进展）、清华计图 JRender 可微渲染研讨会新闻；没有中文课程。采纳期刊综述作 r7-zh2，JRender 只是库与会议消息、未采纳。",
+   "by": "review/pi-additions/V.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://games-cn.org/",
+   "result": "读到 GAMES 在线课程清单（001/002/003/101/102/103/104/105/106/201/203/204/301/302/401），其中没有可微渲染专课；203 三维重建和理解、204 计算成像只相邻，未采纳。",
+   "by": "review/pi-additions/V.1.3.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 GAMES202 是实时渲染课，不能覆盖光传输理论与可微渲染；本轮补 GAMES103 覆盖物理动画延伸项。",
+  "中文缺蒙特卡洛渲染的系统推导与可微/逆向渲染，判 partial（光传输也只有工程近似）。",
+  "英文 PBRT + CMU 15-468 覆盖光传输、MC 渲染与可微渲染，判 complete。",
+  "简介中的说明条目不作为知识点：一般物理仿真只作一讲应用延伸"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/V.1.3.json@84a4d6b70e"
+ ]
+}

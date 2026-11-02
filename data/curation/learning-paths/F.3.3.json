@@ -1,0 +1,325 @@
+{
+ "id": "F.3.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMU 15-414 Bug Catching: Automated Program Verification and Testing（Fall 2026 课程站，逐讲 PDF 讲义 + Why3）",
+   "url": "https://www.cs.cmu.edu/~15414/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Fall 2026 Schedule 逐条核对：8/27 Contracts、9/1 Data Structures、9/3 Arrays and Ghosts、9/8 Semantics、9/10 Semantics in Why3、9/15 Dynamic Logic、9/17 Loops（循环不变式）、9/22 Arrays、9/24 Induction、9/29 Convergence、10/1 Predicate Transformers、10/8 Sequent Calculus、10/20 Certificates、11/5 Linear Temporal Logic、11/10 LTL Model Checking、11/12 Branching Time Properties、11/17 CTL Model Checking、11/19 Software and Bounded Model Checking、12/1 Real World Verification。覆盖契约、Hoare 逻辑（Dynamic Logic/predicate transformers）、不变式、时序逻辑与状态空间（模型检查）；没有抽象解释讲次。",
+   "access": "免费公开课表与讲义 pdf 链接，无需注册；作业用 Why3 写机器检查的验证代码。",
+   "publisher": "Carnegie Mellon University（15-414 教学团队）",
+   "evidence": {
+    "url": "https://www.cs.cmu.edu/~15414/schedule.html",
+    "location": "Fall 2026 Schedule 8/27 Contracts 至 11/19 Software and Bounded Model Checking 各行",
+    "finding": "表内按日期列出 Contracts、Dynamic Logic、Loops、Predicate Transformers、Linear Temporal Logic、LTL Model Checking、CTL Model Checking、Software and Bounded Model Checking 等主题，均带 [pdf] 讲义链接。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《软件基础》中文版（第二卷 编程语言基础：Hoare 逻辑与类型；含 Coq 机器检查）",
+   "url": "https://rocq-zh.github.io/SF-zh/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第一卷《逻辑基础》与第二卷《编程语言基础》：第二卷讲操作语义、霍尔逻辑（前置/后置条件、循环不变式）与静态类型系统，全部用 Coq 证明脚本；覆盖契约式规格、Hoare 逻辑与不变式。不含抽象解释、时序逻辑与模型检查。",
+   "access": "免费在线阅读，无需注册；需安装 Rocq/Coq 做练习。",
+   "publisher": "Benjamin C. Pierce 等（UPenn），中文译者项目",
+   "evidence": {
+    "url": "https://rocq-zh.github.io/SF-zh/",
+    "location": "首页第二卷说明段",
+    "finding": "首页写明第二卷“考察编程语言理论，包括操作语义、霍尔逻辑以及静态类型系统”，并声明全书细节均为 Coq 证明脚本。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《软件分析技术》第 5 讲 加宽变窄和抽象解释（熊英飞，北京大学，2025 秋课程讲义 PDF）",
+   "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides05_dataflow_analysis_III.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "以区间分析为例：有界半格、合并操作与变换函数；格的高度过高导致不收敛；加宽 widening（降低格的高度/按变化趋势猜测）与变窄 narrowing；伽罗瓦连接（Galois connection）D,⊆ ⇋α/γ 虚,⊑ 的定义与 α/γ 的单调性、γ∘α 与 α∘γ 的包含关系；由伽罗瓦连接定义程序分析的安全性（具体域=执行踪迹集合、抽象域=分析结果、α X = ⊔_{x∈X} β(x)、γ 甲 = {x | β x ⊑ 甲}）；函数的安全抽象、最佳抽象（α∘f∘γ = 子）与精确抽象的区别；用最小上界引理证明 α X ⊑ 甲 ⇔ X ⊆ γ 甲。",
+   "access": "免费 PDF（课程站公开讲义），无需注册；简体中文（数学符号较多）。",
+   "publisher": "熊英飞（北京大学计算机学院副教授），北京大学《软件分析技术》2025 秋",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides05_dataflow_analysis_III.pdf",
+    "location": "第 2–13 页区间分析与加宽/变窄；第 33–38 页「伽罗瓦连接」定义、单调性证明与「定义程序分析的安全性」；第 36 页「函数抽象」",
+    "finding": "打开确认正文（中文）：给出 α 与 γ 的单调性条件、γ∘α 与 α∘γ 的包含关系，并写“程序静态分析中，一般直接将 α∘γ 定义为等价变换”；“定义程序分析的安全性：程序的执行踪迹集合和分析结果域构成伽罗瓦连接……具体域：执行踪迹集合＋集合子集关系；抽象域：分析结果＋分析结果上的偏序关系”；“子是 f 的安全抽象，当且仅当 α∘f∘γ 甲 ⊑ 子 甲……最佳抽象当且仅当 α∘f∘γ = 子……最佳抽象总是存在，但精确抽象不一定存在”。"
+   },
+   "added_by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Static Program Analysis（Anders Møller & Michael I. Schwartzbach，Aarhus University，免费在线教材）",
+   "url": "https://cs.au.dk/~amoeller/spa/spa.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 6 章 Widening（6.1 Interval Analysis、6.2 Widening and Narrowing）；第 12 章 Abstract Interpretation（12.1 A Collecting Semantics for TIP、12.2 Abstraction and Concretization 起）；前言说明全书覆盖 lattice theory、dataflow analysis、fixed-point algorithms、widening/narrowing、path sensitivity、relational analysis、interprocedural/context sensitivity、pointer analysis，以及 “key concepts of semantics-based abstract interpretation”。",
+   "access": "免费在线 PDF 全书（约 39 万字符），无需注册；英文。",
+   "publisher": "Anders Møller & Michael I. Schwartzbach（Aarhus University）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://cs.au.dk/~amoeller/spa/spa.pdf",
+    "location": "Contents 中「6 Widening 79 / 6.1 Interval Analysis / 6.2 Widening and Narrowing」「12 Abstract Interpretation 173 / 12.1 A Collecting Semantics for TIP / 12.2 Abstraction and Concretization」；Preface 的覆盖清单",
+    "finding": "打开确认目录逐条列出第 12 章 Abstract Interpretation（含 Collecting Semantics 与 Abstraction and Concretization）与第 6 章 Widening/Narrowing，前言并声明覆盖 “key concepts of semantics-based abstract interpretation”。旧记录英文侧对“抽象解释”为空，本书正好补上。"
+   },
+   "added_by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "模型检验原理（Baier、Katoen，中文译本）",
+   "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_08452701.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "先读第2章迁移系统及状态空间，再读第5章LTL与第6章CTL；画小系统的状态图并验证安全性与活性。",
+   "access": "出版社公开目录用于核对范围；完整中文教材需购买或通过合法馆藏借阅。本轮未购买、未读收费全文。",
+   "publisher": "出版社官方页面",
+   "evidence": {
+    "url": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08452701",
+    "location": "第2、5、6章",
+    "finding": "官方目录分别列出系统状态建模和状态空间爆炸、LTL与CTL语法语义以及检验算法。"
+   },
+   "added_by": "review/verified-additions/F.3.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "契约",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二卷：以 Hoare 逻辑的前置/后置条件表达程序规格",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "8/27 Contracts、9/3 Arrays and Ghosts、9/10 Semantics in Why3",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧是规格＝前后置条件的形式化写法，没有厂商契约语言（如 Dafny/Why3 的 contract 语法），但概念与写法都在。"
+  },
+  {
+   "topic": "Hoare逻辑",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二卷 霍尔逻辑（Hoare 三元组与推理规则）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "9/15 Dynamic Logic、9/17 Loops、10/1 Predicate Transformers",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "不变式",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二卷 循环不变式（while 规则的 inv 断言）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "9/17 Loops（循环不变式）、9/24 Induction、9/29 Convergence",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧还讲终止性（Convergence/variant），中文侧 SF 的 Hoare 部分对终止讨论较少。"
+  },
+  {
+   "topic": "抽象解释",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "第 5 讲：区间分析→加宽/变窄→伽罗瓦连接（α/γ）→程序分析安全性→函数的安全/最佳/精确抽象",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "r7-en1",
+     "section": "第 12 章 Abstract Interpretation（12.1 Collecting Semantics、12.2 Abstraction and Concretization）；第 6 章 Widening and Narrowing",
+     "extent": "covered"
+    }
+   ],
+   "note": "两种语言都没有来源：15-414 只到 predicate transformers 与 model checking，没有抽象解释；中文侧也没有。；旧记录中文侧这一项为空。r7-zh1 把抽象解释讲成一条完整链：先用区间分析暴露“格太高不收敛”，引入 widening/narrowing；再给具体域与抽象域之间的伽罗瓦连接 D,⊆ ⇋α/γ 虚,⊑，证明 α/γ 的单调性与两个包含关系；然后用“执行踪迹集合→分析结果”的 α、γ 定义说明什么是一个安全的程序分析；最后区分函数的安全抽象（α∘f∘γ ⊑ 子）、最佳抽象（α∘f∘γ = 子）与精确抽象。定义、证明与“为什么这样定义就安全”都在，属于抽象解释的核心内容。；旧记录英文侧这一项也是空的。r7-en1 是程序分析的标准开放教材：第 12 章先给 TIP 的收集语义（collecting semantics），再讲抽象与具体化（abstraction/concretization）的一般框架；第 6 章用区间分析讲 widening/narrowing，正好补上不动点求解不收敛的处理办法。与前面的数据流分析章节连起来，抽象解释在英文侧有了成体系的一章。"
+  },
+  {
+   "topic": "时序逻辑与状态空间",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "verified-zh1",
+     "section": "第2章系统建模与状态空间；第5–6章LTL/CTL及模型检验",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "11/5 Linear Temporal Logic、11/10 LTL Model Checking、11/12 Branching Time Properties、11/17 CTL Model Checking、11/19 Software and Bounded Model Checking",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧完全没有 LTL/CTL 与模型检查材料（B 站搜索“模型检测 时序逻辑”只返回数字电路时序逻辑）。；中文侧本轮没找到 LTL/CTL 与状态空间搜索（模型检查）的教学正文：中国大学MOOC 与智慧高教检索到的“时序逻辑”全是数字电路的时序逻辑电路，B 站检索同样只返回电路与统计检验内容，中文教材也没有可核目录。故按 fallback 使用英文 en1 的模型检查讲次，中文仍记 partial 并列入 unresolved。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第二卷《编程语言基础》：操作语义→Hoare 逻辑（前后置条件、循环不变式），用 Coq 做练习"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读第 5 讲：先用区间分析手算一个循环的上界，说明为什么会不收敛；再写清 widening/narrowing 各降低/恢复什么；然后把伽罗瓦连接的四条性质（α、γ 单调，γ∘α 放大、α∘γ 缩小）逐条证一遍；最后用“执行踪迹集合→分析结果”的 α、γ 说明一个数据流分析为什么安全，并区分安全抽象、最佳抽象与精确抽象。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "先读第2章迁移系统及状态空间，再读第5章LTL与第6章CTL；画小系统的状态图并验证安全性与活性。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Contracts→Semantics/Semantics in Why3→Dynamic Logic→Loops→Arrays/Induction/Convergence→Predicate Transformers→LTL 与 LTL Model Checking→Branching Time/CTL→Software and Bounded Model Checking，作业用 Why3 写验证代码"
+    },
+    {
+     "source": "r7-en1",
+     "read": "读第 12 章：先看 TIP 的 collecting semantics，再把 abstraction/concretization 与第 6 章的 interval analysis、widening/narrowing 对照，做一章末练习；需要更细的域构造时回看第 5 章 lattice 与不动点算法。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.cmu.edu/~15414/schedule.html（Fall 2026）逐日期主题",
+   "result": "采纳：契约/Hoare/不变式/时序逻辑/模型检查都有讲次；确认无抽象解释。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://rocq-zh.github.io/SF-zh/ 第二卷说明",
+   "result": "采纳：Hoare 逻辑与不变式有中文正文；无模型检查/抽象解释。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「模型检测 时序逻辑」",
+   "result": "不合适：只返回数字电路“时序逻辑”实验与 FPGA 时序约束内容，没有 LTL/CTL/模型检测课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://xiongyingfei.github.io/SA_new/2025/lectures.html → slides/slides05_dataflow_analysis_III.pdf（「加宽变窄和抽象解释」）",
+   "result": "采纳：讲义为中文，含区间分析、widening/narrowing、伽罗瓦连接 α/γ 及其证明、程序分析安全性的形式定义、函数的安全/最佳/精确抽象。",
+   "by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://cs.au.dk/~amoeller/spa/spa.pdf（Møller & Schwartzbach, Static Program Analysis）",
+   "result": "采纳为英文抽象解释来源：第 12 章 Abstract Interpretation（12.1 Collecting Semantics for TIP、12.2 Abstraction and Concretization）与第 6 章 Widening/Narrowing。",
+   "by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "模型检测 时序逻辑 LTL CTL 状态空间 中文 讲义 课程 pdf 模型检验",
+   "result": "不合适：只有 CSDN 单篇、维基 LTL、Bohrium 词条、个人博客“重新开始学数学·数理逻辑”，没有中文模型检查课程或讲义。",
+   "by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "模型检验 讲义 Kripke 结构 CTL 状态空间 教材 中文 形式化方法 课程 pdf 大学",
+   "result": "不合适：命中中科大《形式化方法类课程设置及教学内容探索》论文（讲课程设置，不是教材正文）、一篇个人调研报告与无关 PDF，没有可学的模型检查正文。",
+   "by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 形式化方法 模型检验 时序逻辑；site:higher.smartedu.cn 模型检验 时序逻辑 形式化验证 课程",
+   "result": "不合适：两个平台检索到的“时序逻辑”全是数字电路/数字逻辑课程（电工电子技术、数字系统与逻辑设计、数字逻辑电路实验等），没有模型检验课；据此中文模型检查按 fallback 处理。",
+   "by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch.py bili「模型检测 模型检验 LTL CTL 形式化验证」",
+   "result": "不合适：返回 ADF 检验、GARCH、stata 机制检验、数位板 CTL4100、LASSO 回归等无关内容，没有模型检查课程视频。",
+   "by": "review/pi-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08452701",
+   "result": "官方目录分别列出系统状态建模和状态空间爆炸、LTL与CTL语法语义以及检验算法。",
+   "by": "review/verified-additions/F.3.3.json"
+  }
+ ],
+ "findings": [
+  "旧条目把同一份《软件基础》中文版同时用作 F.2.4/F.3.2/F.3.3 的 covers，实际它只覆盖 Hoare 逻辑与不变式，不覆盖模型检查；本文件据此把中文判为 gap。",
+  "旧条目 note 已写“抽象解释不在这门课（CMU 17-355 有）”，本次确认 15-414 Fall 2026 也没有抽象解释，且中文侧同样没有。",
+  "旧条目英文 covers 已列全契约/Hoare/不变式/时序逻辑，与 Fall 2026 课表一致，保留并按日期细化。",
+  "[review/pi-additions/F.3.3.json] 未解决 zh「时序逻辑与状态空间」：中文没有可核的 LTL/CTL 与状态空间搜索教学材料（免费正文、MOOC/平台视频、可查目录的付费教材都没找到），本轮只能 fallback 到英文 en1；中文侧该知识点记 partial。",
+  "合并时去掉了跨语言的引用（应写成跨语言补充）：时序逻辑与状态空间/zh->en1"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "程序验证与模型检查",
+ "description": "契约、Hoare逻辑、不变式、抽象解释、时序逻辑与状态空间。",
+ "applied_additions": [
+  "review/pi-additions/F.3.3.json@0997a35f0e",
+  "review/verified-additions/F.3.3.json@288232a701"
+ ]
+}

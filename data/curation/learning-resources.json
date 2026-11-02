@@ -156,31 +156,37 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/S.5.2.json。"
     },
     "D.1.5": {
-      "review": "OpenMetadata覆盖目录血缘质量等工程操作，治理组织、责任和生命周期政策仍需治理教材。",
-      "tier": "website",
-      "title": "OpenMetadata 官方文档：数据治理、元数据、质量与血缘",
-      "url": "https://docs.open-metadata.org/latest",
-      "free": true,
-      "covers": "从 Quickstart 建立练习环境，学习数据目录、元数据采集、质量检测、血缘与治理；属于工程实践资料，治理组织理论另读专业教材。",
-      "access": "文档免费；本地实践需 Docker 或相应运行环境"
+      "title": "DAMA-DMBOK®: Data Management Body of Knowledge, 2nd Edition (DAMA International) — 官方图书页",
+      "url": "https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/",
+      "tier": "book",
+      "lang": "en",
+      "free": false,
+      "covers": "DAMA 官方数据管理知识体系教材（第2版）：按数据管理职能分章组织，其中 Data Governance、Metadata Management、Data Quality Management、Data Modeling and Design、Data Storage and Operations、Data Management Organization and Role Expectations 等章分别对应治理责任与决策体系、元数据与目录、质量规则与度量、数据模型与模式、生命周期操作、角色与职责。章号对照见同一版中文版官方介绍页（r7-zh1）。",
+      "access": "付费纸书/电子书，DAMA 官网提供「Order the DAMA-DMBOK®」购买入口并列出译本（Italian 等）；本轮只读官方介绍页，未购买；正文未打开。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/D.1.5.json。"
     },
     "X.1.3": {
-      "review": "高校官方汇总的YouTube公开课可替代付费课程入口；覆盖自动驾驶算法主线，安全关键与部署项目另补。",
-      "free": true,
-      "access": "大学实验室官方页面嵌入YouTube公开录像；免费播放依YouTube网络可用性，未逐段验证英文CC字幕；这不是付费学位或认证。",
-      "tier": "video",
-      "title": "University of Bonn — Techniques for Self-Driving Cars（StachnissLab官方YouTube课程）",
+      "title": "University of Bonn — Techniques for Self-Driving Cars (StachnissLab), 10 recorded lectures",
       "url": "https://www.ipb.uni-bonn.de/sdc-2021/index.html",
-      "covers": "按官方课程页的YouTube录像学习定位、控制、MPC、规划、行为估计、感知和工程实践；共10段课程录像，需概率、线性代数、控制和ML基础。车辆实时系统、完整安全工程及独立项目仍需补充。"
+      "tier": "video",
+      "lang": "en",
+      "free": true,
+      "covers": "Official course page with embedded YouTube lectures on localization, control, MPC (two lectures), planning, behavior estimation and perception (two lectures) plus engineering practice; requires probability, linear algebra, control and ML basics.",
+      "access": "University lab page with public YouTube recordings; free playback depends on YouTube availability; English CC captions were not verified lecture by lecture. Not a paid degree or certificate.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/X.1.3.json。"
     },
     "X.2.4": {
-      "review": "医学信息学作者团队的开放教材可替代付费课程入口，系统架构/管理/评价适合作主线；临床与决策支持实践仍需补充。",
-      "free": true,
-      "access": "Springer出版社明确Open Access，可免费下载PDF/EPUB；纸质书另售，未把纸质价格当成电子全文费用。",
-      "tier": "book",
-      "title": "Health Information Systems: Technological and Management Perspectives（3rd ed., 2023，开放获取）",
+      "title": "Health Information Systems: Technological and Management Perspectives (3rd ed., Springer 2023, Open Access)",
       "url": "https://link.springer.com/book/10.1007/978-3-031-12310-8",
-      "covers": "选读基础概念、医疗信息系统架构与集成标准、战略/战术/运营管理、质量评价及研究场景；临床决策支持算法与数据分析实践仍配导览中的MIT HST.951。"
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "Open-access book on health information systems: architecture, integration standards, strategic/tactical/operational management, quality evaluation and research settings; clinical data and decision support are treated at the system level.",
+      "access": "Springer states Open Access; PDF/EPUB free to download, print copy sold separately.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/X.2.4.json。"
     },
     "M.4.5": {
       "title": "Introduction to Topological Data Analysis — ETH Zürich 讲义（FS 2026）",
@@ -205,10 +211,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/M.6.4.json。"
     },
     "F.1.6": {
-      "review": "6.890 有参数化复杂度两讲（W 层级；ETH 与平面 FPT）和 3SUM/APSP 细粒度归约一讲，加上 NP 难归约工具箱；核化和 FPT 算法设计没有单列。",
-      "covers": "第 13 讲 W 层级、第 14 讲 ETH 与平面图上的 FPT、第 21 讲 3SUM 与 APSP 细粒度归约，以及支撑这些下界的 NP 难与不可近似归约（3-partition、SAT、平面 SAT、哈密顿性、间隙不可近似性）。未覆盖：核化没有单列一讲，SETH 下界只在 ETH 和 3SUM 两讲里顺带提到，没有系统讲分支、迭代压缩等 FPT 算法设计。",
-      "access": "OCW 免费，无需注册，有讲义、完整讲课录像、作业和项目说明。23 讲中 21 讲有英文字幕，页面可下载讲稿。",
-      "note": "核化和 FPT 算法设计需另读参数化算法教材。"
+      "title": "MIT 6.890 Algorithmic Lower Bounds: Fun with Hardness Proofs (Fall 2014, Erik Demaine, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "MIT 6.890（Fall 2014）以“hardness proofs”为主线：参数化复杂性（FPT 与 W 层级）、ETH/SETH 下的下界、3SUM/APSP 等细粒度归约与条件性下界、以及 P/NP 之外的复杂度假设。课程站公开讲义与习题，但核化（kernelization）与核下界不在其中。",
+      "access": "OCW 免费，无需注册；有全套讲义、讲课视频、习题与项目说明，页面可下载。英文字幕状态未逐讲核对（OCW 部分讲次提供 transcript）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.1.6.json。"
     },
     "P.5.2": {
       "title": "Android Developers — Android Basics with Compose（Google 官方免费自学课程）",
@@ -354,20 +365,48 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/H.4.4.json。"
     },
     "V.1.3": {
-      "review": "PBRT4是物理渲染主教材，物理仿真、逆向与可微渲染需配导览CMU课程。",
-      "note": "主要覆盖基于物理的渲染；物理仿真与可微图形需补充其它教材。"
+      "title": "Physically Based Rendering: From Theory to Implementation, 4th ed.（Pharr / Jakob / Humphreys；全文在线免费）",
+      "url": "https://pbr-book.org/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "第 2 章 Monte Carlo Integration（重要性采样、分布变换）、第 3 章几何与变换、第 4 章辐射度量学/光谱/颜色、第 8 章采样与重建、第 9 章反射模型（BRDF/BSDF）、第 11 章体积散射、第 12 章光源、第 13–14 章 Light Transport I/II（表面与体积光传输、path tracing、bidirectional 方法）、第 15 章 GPU wavefront 渲染。",
+      "access": "4th edition 全文在线免费阅读（pbr-book.org），无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.1.3.json。"
     },
     "I.1.1": {
-      "review": "Saylor课程对应系统构成与组织应用，信息页需继续进入各学习单元；测验进度可能需账户。",
-      "note": "课程信息页和内容可查看；学习进度、测验可能需要注册。"
+      "title": "BUS206: Management Information Systems（Saylor University 免费自学课程）",
+      "url": "https://learn.saylor.org/course/info.php?id=41",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "官方课程简介：components of business information systems，重点是 data transmission、management information software、businesses manage data；把技术放在企业业务与组织管理语境里讲。",
+      "access": "课程信息页与内容可查看；学习进度、测验与证书可能需注册/付费。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/I.1.1.json。"
     },
     "I.1.4": {
-      "review": "MIT1.040是工程建设项目管理，计划风险方法可迁移，但软件/IT交付案例需另补。",
-      "note": "通用项目管理课程偏工程建设案例，IT 项目实践需补充软件交付材料。"
+      "title": "1.040 Project Management（MIT OCW，Spring 2004；讲义、日程、项目作业）",
+      "url": "https://ocw.mit.edu/courses/1-040-project-management-spring-2004/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "以 project life-cycle 的 organizing / planning / monitoring / controlling / learning 为框架：组织与 OBS、WBS 与成本分解、CPM/PDM/PERT 进度、Resource Loading、Earned Value、变更控制、Risk Management、Quality Monitoring，案例面向建筑/工程（A/E/C）。",
+      "access": "OCW 免费公开讲义、日程与项目作业，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/I.1.4.json。"
     },
     "I.2.1": {
-      "review": "2005年课程可学伦理论证与历史案例，不能作为当前法规、AI偏见和可持续性全套教材。",
-      "note": "课程案例较早，适合伦理推理；涉及当代政策时需要另查当前官方材料。"
+      "title": "6.805 / STS.085 Ethics and the Law on the Electronic Frontier（MIT OpenCourseWare，Fall 2005；阅读、讲义、作业与项目）",
+      "url": "https://ocw.mit.edu/courses/6-805-ethics-and-the-law-on-the-electronic-frontier-fall-2005/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Calendar：Unit A Regulating the Decentralized Internet（互联网与宪法、过滤与用户控制）、Unit B Regulating Government Use of Surveillance Technology（第四修正案与电子监控、Crypto Wars、9/11 后画像与数据挖掘）、Unit C The Transparency Challenge（匿名 vs 透明、网上个人信息、消费者保护）；配 Brin/O'Harrow 必读书。",
+      "access": "OCW 免费公开阅读、讲义、作业与项目，无需注册；英文。案例较早（2005），涉及现行法规需另查。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/I.2.1.json。"
     },
     "X.2.5": {
       "title": "Geographic Data Science with Python (Rey, Arribas-Bel, Wolf) — free online book",
@@ -814,44 +853,125 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/F.1.1.json。"
     },
     "F.1.2": {
-      "tier": "website",
-      "title": "Algorithms by Jeff Erickson（UIUC 教授自编教材，全书 PDF 免费在线；含 Amortized Analysis、String Matching 等附加讲义）",
+      "title": "Algorithms by Jeff Erickson（UIUC，作者自出版，全彩电子版免费）",
       "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
+      "tier": "material",
       "lang": "en",
       "free": true,
-      "access": "作者自出版，全彩电子版与各章 PDF 在站点永久免费下载（CC BY 4.0，可打印分发）；黑白纸质版在 Amazon 售价 $27.50，非必需。该页同时是 UIUC CS 374 / CS 473 两门课的主要教材页，另有作业与考试存档页。",
-      "covers": "覆盖简介的绝大部分：Introduction + Recursion（递归与递归式求解，另见附录 II Solving Recurrences）、Backtracking、Dynamic Programming（含 Advanced DP 附加讲义）、Greedy Algorithms、Basic Graph Algorithms 与 Depth-First Search（BFS/DFS、拓扑、连通分量）、Minimum Spanning Trees、Shortest Paths（Dijkstra/Bellman-Ford/DAG）、All-Pairs Shortest Paths、Maximum Flows & Minimum Cuts 与 Applications of Flows and Cuts（含二分图匹配）、NP-Hardness；另外站在『Director's Cut』讲义里补了 Amortized Analysis（14 页）、String Matching（14 页，已核到 Rabin–Karp 指纹法部分）、Hashing、Disjoint Sets（并查集与摊还）。未覆盖：字符串索引结构（后缀数组/后缀自动机/Trie 的索引与压缩索引）没有专门章节；摊还分析不在书内而在附加讲义里；书自述『不是数据结构与算法的第一门课』，假定读过 CS 173（离散数学）与 CS 225（数据结构），也不讲栈/队列/堆/平衡树/哈希表等基础数据结构本身。",
-      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。"
+      "covers": "全书目录逐章：Introduction、Recursion（50 页，含分治与递归式）、Backtracking、Dynamic Programming、Greedy Algorithms、Basic Graph Algorithms、Depth-First Search、Minimum Spanning Trees、Shortest Paths、All-Pairs Shortest Paths、Maximum Flows & Minimum Cuts、Applications of Flows and Cuts、NP-Hardness；附录 I 归纳法证明、附录 II Solving Recurrences。书中不讲的进阶专题在 Director's Cut 讲义里：String Matching（14 页）、Amortized Analysis（14 页）、Hashing、Disjoint Sets 等。字符串索引结构不在书与讲义里，另配 algs4。",
+      "access": "免费（CC BY 4.0，可下载/打印/分发）；Amazon 黑白纸质版 $27.50，非必需。作者自述本书不是数据结构与算法的第一门课，假定已学离散数学与基础数据结构；摊还分析讲义近年未在课内使用，但公开可读。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.1.2.json。"
     },
     "F.1.4": {
-      "review": "研究生算法讲义分讲近似、在线与随机算法，符合D3，需先有算法分析。"
+      "title": "A Course in Graduate Algorithms（Bo Waggoner, CU Boulder CSCI 5454）讲义与视频",
+      "url": "https://bowaggoner.com/courses/gradalg/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "16 讲，逐讲列出 Videos/Notes。Module 2 直接对应本节点：Lecture 6 Intro to Approximation Algorithms（近似比、顶点覆盖/集合覆盖/背包）、Lecture 7 Intro to Online Algorithms（竞争比、ski rental、确定性下界）、Lecture 8 Intro to Randomized Algorithms（期望/高概率保证、随机化舍入）、Lecture 9 Hash Tables、Lecture 10 Streaming Algorithms；Lecture 1 讲 Word-RAM 与 Big-O，2–5 讲 DFS/拓扑、最短路、DP、最大流最小割作前置。",
+      "access": "免费：每讲的 notes 与视频链接公开（视频托管在课程页），无需注册；讲义比视频多出部分证明。英文字幕状态未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.1.4.json。"
     },
     "F.1.5": {
-      "review": "CS 5234 第一部分讲次线性时间和性质测试，后面是草图与流、外存与缓存无关算法、并行模型与工作量/跨度，覆盖本技能全部主题。"
+      "title": "CS 5234 Algorithms at Scale (Fall 2019, Seth Gilbert, NUS School of Computing)",
+      "url": "https://www.comp.nus.edu.sg/~gilbert/CS5234/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Schedule 逐课核对：Part 1「Graph properties in less than linear time」= Class 1 采样与连通性、Class 2 用采样估计 MST 权重、Class 3 Property Testing / Sorted / Yao's Principle；Part 2「Sketches and streams」= Class 4 流上采样（附 Flajolet-Martin 与 Misra-Gries 原始论文）、Class 5 图流算法、Class 6 流式聚类；之后 Part 3 缓存与外存（B 树/buffer tree、cache-oblivious）、Part 4 并行（多核、MapReduce/MPC、并行前缀和与工作量/跨度）。每次课有 slides＋手写笔记＋problem set 与解答。",
+      "access": "免费公开，无需注册；pdf 讲义与习题解答可直接下载。视频未公开，属讲义型课程。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.1.5.json。"
     },
     "F.2.1": {
-      "review": "18.404J前段直接对应正规语言、CFG和自动机，后段可留作可计算性后续。"
+      "title": "MIT 18.404J Theory of Computation (Fall 2020, Michael Sipser, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Calendar 共 27 次课（逐条核对）。本节点只用前 5 讲：1 Introduction, Finite Automata, Regular Expressions；2 Nondeterminism, Closure Properties, Regular Expressions→Finite Automata；3 The Regular Pumping Lemma, Finite Automata→Regular Expressions, CFGs；4 Pushdown Automata, CFG↔PDA；5 The CF Pumping Lemma, Turing Machines。正规语言/正则表达式/封闭性/泵引理、CFG、PDA、CFL 泵引理全在；第 6 讲起进入图灵机与可计算性（属 F.2.2/F.2.3）。配讲义、视频、习题与考试（含解答）。",
+      "access": "OCW 免费，无需注册；有讲课视频与讲义 pdf，部分讲次提供 transcript（英文字幕状态未逐讲核对）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.2.1.json。"
     },
     "F.2.2": {
-      "review": "6.045J中段对应可判定性、归约和递归定理，选择讲次即可。"
+      "title": "MIT 6.045J Automata, Computability, and Complexity (Spring 2011, Scott Aaronson, MIT OpenCourseWare)",
+      "url": "https://ocw.mit.edu/courses/6-045j-automata-computability-and-complexity-spring-2011/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Calendar 逐讲核对：Lec 6 Turing machines、7 Decidability、8 Undecidable problems and Post correspondence problem (PCP)、9 Mapping reducibility and Rice's theorem、10 Self-reference and the recursion theorem；前后为 Lec 3–5 DFA/NFA/正则语言与 Lec 12 起的时间复杂性、NP 完全性、概率图灵机、密码学与量子计算。正好覆盖图灵机、可判定/不可判定、映射归约与递归定理。",
+      "access": "OCW 免费，无需注册；有讲义、6 套习题（OCW 未列习题解答）；本课程无讲课录像。英文字幕不适用（无视频）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.2.2.json。"
     },
     "F.2.3": {
-      "review": "CMU理论课含时间空间、随机化及线路，符合D3证明型路线。"
+      "title": "CMU 15-455 Undergraduate Complexity Theory (Spring 2017, Ryan O'Donnell)",
+      "url": "https://www.cs.cmu.edu/~odonnell/15455-s17/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "课程页逐讲列出主题与 Sipser 阅读节号（28 讲）：Lec 4 时间复杂度与通用 TM、5 时间层次定理、6 P、7 SAT、8–9 NP 与非确定性、10 归约、11 Cook–Levin、12 NP 完全归约、13 search-to-decision 与 padding、14 Ladner/Mahaney、15 coNP、16 空间复杂度、17 Savitch 与 NL、18 NL 完全性、19 PSPACE 完全性（TQBF）、20 Immerman–Szelepcsényi、21 RP/coRP/ZPP、22 BPP；课程说明还写覆盖 circuits 等计算模型、多项式层次与 ETH/细粒度复杂度。线路的“模型”有，但讲次表里没有线路下界（AC0/奇偶性下界）的专门一讲。",
+      "access": "免费公开课程页，无需注册；每讲给主题＋教材节号，有 11 套作业（页面列出 Homework 01–11），无公开录像。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.2.3.json。"
     },
     "F.2.4": {
-      "review": "CMU15-414直接有SAT/SMT与可检查证明；归结和一般定理证明不应只凭课程名称推定完整覆盖。"
+      "title": "CMU 15-414 Bug Catching: Automated Program Verification and Testing（Spring 2021 课程站）",
+      "url": "https://www.cs.cmu.edu/~15414/s21/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Schedule 逐条核对：3/18 SAT Solving、3/23 SAT Encodings、4/1 SMT Solving、4/6 SMT Theories、4/8 SMT Encodings、4/13 SMT Quantifiers；每讲有 pdf 讲义与 live code，课程用 Why3 写机器检查的验证代码。前段（Logical Contracts、Data Structures、Ghosts、Semantics、Dynamic Logic、Loops）建立契约与证明规则基础。",
+      "access": "免费公开课程页与讲义链接，无需注册；录像在 YouTube 频道（页面给出入口）。英文字幕状态未核对。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.2.4.json。"
     },
     "F.3.1": {
-      "review": "EECS390讲范式、替换、求值和lambda演算，主题匹配，需完成基础编程。"
+      "title": "Programming Language Principles and Paradigms（University of Michigan 在线讲义，eecs390.github.io）",
+      "url": "https://eecs390.github.io/notes/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "目录逐节核对：Functional Programming（Scheme：表达式、递归、尾递归、高阶函数/函数对象、currying）、Declarative Programming / Logic Programming（Prolog：事实规则、列表、算术、Unification and Search、Search Order and Backtracking、Cut）、Theory 章 Lambda Calculus（β/α 归约与 subst 替换变换器、非终止计算、Normal-Order Evaluation、Church 数/布尔/对、递归、Equivalent Models、λ 演算的操作语义）与 Formal Type Systems。正对应函数式/逻辑式计算、替换、求值策略与计算模型。",
+      "access": "免费公开在线讲义（Sphinx 文档），无需注册；无配套视频。讲义原为 University of Michigan EECS 490 Programming Languages 编写，EECS 390 为相关课程。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.3.1.json。"
     },
     "F.3.2": {
-      "review": "CS345H强于操作/公理语义和类型安全，指称语义、子类型及依赖类型须分源补齐。"
+      "title": "UT Austin CS 345H Programming Languages (Honors), Spring 2024（James Bornholt）",
+      "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Schedule 逐讲核对：Semantics via Interpreters、Transition Systems、IMP and Operational Semantics（操作语义）、Axiomatic Semantics; Hoare Logic（公理语义）、Hoare Logic in Practice: Dafny、Lambda Calculus、Simply-Typed Lambda Calculus; Type Safety、Types in Practice: Linear Types and Rust、Polymorphism and System F、Types Potpourri: Products and Sums。每讲配 Lecture.v（Coq）或 lecture.rs；没有指称语义、子类型与依赖类型讲次。",
+      "access": "免费公开课程站（schedule、readings、homework、project 页均开放）；无公开录像。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.3.2.json。"
     },
     "F.3.3": {
-      "review": "CMU程序验证课与分析补充覆盖验证、模型检查和程序分析，需逻辑与语义基础。"
+      "title": "CMU 15-414 Bug Catching: Automated Program Verification and Testing（Fall 2026 课程站，逐讲 PDF 讲义 + Why3）",
+      "url": "https://www.cs.cmu.edu/~15414/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Fall 2026 Schedule 逐条核对：8/27 Contracts、9/1 Data Structures、9/3 Arrays and Ghosts、9/8 Semantics、9/10 Semantics in Why3、9/15 Dynamic Logic、9/17 Loops（循环不变式）、9/22 Arrays、9/24 Induction、9/29 Convergence、10/1 Predicate Transformers、10/8 Sequent Calculus、10/20 Certificates、11/5 Linear Temporal Logic、11/10 LTL Model Checking、11/12 Branching Time Properties、11/17 CTL Model Checking、11/19 Software and Bounded Model Checking、12/1 Real World Verification。覆盖契约、Hoare 逻辑（Dynamic Logic/predicate transformers）、不变式、时序逻辑与状态空间（模型检查）；没有抽象解释讲次。",
+      "access": "免费公开课表与讲义 pdf 链接，无需注册；作业用 Why3 写机器检查的验证代码。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.3.3.json。"
     },
     "F.3.4": {
-      "review": "Software Foundations是机器可检查的证明脚本教材，适合边做边学；需为Coq/Rocq环境留出配置时间。"
+      "title": "Software Foundations（University of Pennsylvania，Benjamin C. Pierce 等，7 卷全免费在线，Rocq/Coq）",
+      "url": "https://softwarefoundations.cis.upenn.edu/",
+      "tier": "material",
+      "lang": "en",
+      "free": true,
+      "covers": "首页逐卷说明：Vol 1 Logical Foundations（函数式编程、逻辑基础、计算机辅助定理证明、Rocq）、Vol 2 Programming Language Foundations（操作语义、Hoare 逻辑、类型系统）、Vol 3 Verified Functional Algorithms、Vol 4 QuickChick、Vol 5 Verifiable C（用 Princeton Verified Software Toolchain 规格化并验证真实 C 程序）、Vol 6 Separation Logic Foundations（在上面搭验证工具）、Vol 7 Security Foundations。覆盖命题即类型/机器检查证明（Vol 1–2）与精化到真实 C 程序、可信工具链（Vol 5–6）。",
+      "access": "免费在线全书（每卷含练习，全部是 Rocq 证明脚本），无需注册；需安装 Rocq/Coq。首页写明“No specific background in logic or programming languages is assumed”。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/F.3.4.json。"
     },
     "P.1.1": {
       "title": "Harvard CS50P：Introduction to Programming with Python（零基础讲义、课程与练习）",
@@ -1195,12 +1315,26 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/C.5.3.json。"
     },
     "D.1.1": {
-      "review": "BCcampus教材覆盖ER、规范化与SQL；关系代数的形式运算宜配导览CMU讲义。"
+      "title": "Database Design – 2nd Edition (Adrienne Watt & Nelson Eng, BCcampus Open Textbook)",
+      "url": "https://opentextbc.ca/dbdesign01/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "Ch2–Ch4 database concepts and types of data models, Ch5 Data Modelling, Ch7 The Relational Data Model, Ch8 The Entity Relationship Data Model, Ch9 Integrity Rules and Constraints, Ch10 ER Modelling, Ch11 Functional Dependencies, Ch12 Normalization, Ch13 Database Development Process, Ch14 Database Users, Ch15 SQL DDL, Ch16 SQL DML, plus Appendix B ERD exercises and Appendix C SQL lab with solutions.",
+      "access": "Free online reading and free EPUB/PDF/XHTML downloads under CC BY 4.0; no registration. Does not appear to contain a dedicated relational-algebra chapter (algebra is supplied by en2).",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/D.1.1.json。"
     },
     "D.1.2": {
-      "review": "CMU445对应内核全部主干，但2026秋课程尚在进行，未发布讲次应使用已完整结束的历史版本。",
-      "title": "CMU 15-445/645 Intro to Database Systems（Fall 2026课程；材料以发布进度为准）",
-      "access": "公开讲义与已发布材料可读；2026秋课程进行中，不保证后续录像和全部作业解答已公开，可从课程归档选择已结束版本。"
+      "title": "CMU 15-445/645 Intro to Database Systems (Fall 2026) — schedule, slides, notes, video",
+      "url": "https://15445.courses.cs.cmu.edu/fall2026/schedule.html",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "#03–06 storage models/compression, #07 hash tables, #08–09 indexes & filters (tree/hash/vector), #10 index concurrency, #11 sorting & aggregation, #13 join algorithms, #14–15 query execution, #16–17 query planning & optimization, #18 concurrency-control theory, #19 2PL, #20 timestamp ordering, #21 MVCC, #22 logging, #23 recovery, #24 distributed databases. Every row links Slides, Notes, a Video and textbook readings.",
+      "access": "Free public schedule with slides/notes/videos; Fall 2026 is in progress, so later lectures and solution material appear as released (past semesters are archived on the same site). Assignments page states P1–P2 forbid coding agents.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/D.1.2.json。"
     },
     "D.1.4": {
       "title": "PostgreSQL 18 Documentation, Part III. Server Administration (official)",
@@ -1246,13 +1380,37 @@
       "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。"
     },
     "D.3.2": {
-      "review": "MMDS适合关联、聚类和大规模挖掘，异常检测须读scikit-learn专章。"
+      "title": "Mining of Massive Datasets (Jure Leskovec, Anand Rajaraman, Jeff Ullman) — free full PDF, slides, videos",
+      "url": "http://www.mmds.org/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "Ch1 Data Mining, Ch3 Similarity Search, Ch5 Link Analysis, Ch6 Frequent Itemsets (association rules), Ch7 Clustering, Ch9 Recommendation Systems, Ch10 Mining Social-Network Graphs, Ch11 Dimensionality Reduction, Ch12 Large-Scale Machine Learning; the site offers the whole book as free PDFs plus CS246 lecture slides and videos.",
+      "access": "Free chapter PDFs and slides from the authors' site; the book is also sold in print. Anomaly detection is not a chapter.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/D.3.2.json。"
     },
     "D.4.1": {
-      "review": "Hogan等开放教材覆盖图表示、本体、融合和查询，适合完整知识图谱主线。"
+      "title": "Knowledge Graphs (Hogan, Blomqvist, Cochez et al., Springer 2021) — free HTML full book",
+      "url": "https://kgbook.org/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "Ch2 Data Graphs and 2.2 Querying (basic/complex/navigational graph patterns, graph stores), Ch3 Schema, Identity and Context (semantic schema, validating schema, persistent identifiers, external identity links), Ch4 Deductive Knowledge (ontologies, entailment, rules, description logics), Ch5 Inductive Knowledge, Ch6 Creation and Enrichment (NER, entity linking, relation extraction, mapping tables, cross-graph mapping), Ch7 Quality, Ch8 Refinement.",
+      "access": "Free HTML full text on the authors' site (Springer open access); no registration.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/D.4.1.json。"
     },
     "D.4.2": {
-      "review": "同一教材的描述逻辑与规则推理直接相关，现代神经符号研究仍需专门论文。"
+      "title": "Knowledge Graphs (Springer 2021, open access) — Ch4 Deductive Knowledge and Ch5 Inductive Knowledge",
+      "url": "https://kgbook.org/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "4.1 Ontologies (interpretations/models, ontology features, entailment, if-then vs if-and-only-if), 4.2.1 Rules, 4.2.2 Description Logics; 3.2.2 External identity links for cross-source semantic interoperability; Ch5 Inductive Knowledge: 5.2 embeddings, 5.3 GNNs, 5.4 Symbolic Learning (rule mining, axiom mining) — the neuro-symbolic combination; Ch7–8 quality and refinement.",
+      "access": "Free HTML full text, no registration.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/D.4.2.json。"
     },
     "A.1.1": {
       "title": "Artificial Intelligence: Foundations of Computational Agents (Poole & Mackworth, 3rd ed.) — free HTML",
@@ -1739,10 +1897,26 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/V.1.1.json。"
     },
     "V.1.2": {
-      "review": "Hosei14讲对应媒体表示与压缩，偏H.26x/MPEG旧标准；现代AV1/HEVC与容器实现另补。"
+      "title": "Multimedia Technologies & Applications — Lecture Notes（Hosei University, Jianhua Ma，14 讲 PDF）",
+      "url": "https://jianhua.cis.k.hosei.ac.jp/course/mm/Lecture_Note.html",
+      "tier": "material",
+      "lang": "en",
+      "free": true,
+      "covers": "L01 多媒体概念；L02 音频基础；L03 音频编码与标准；L04 图像/视频基础；L05 JPEG 与 H.26x；L06 MPEG 标准；L07 高级编码回顾；L08 媒体对象制作；L09 媒体集成与呈现（同步）；L10 媒体保护；L11 检索；L12 互联网媒体分发（流式传输）；L13 IP 电话/视频会议；L14 无线移动多媒体。",
+      "access": "课程页与 14 个 PDF 免费公开，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.1.2.json。"
     },
     "V.2.1": {
-      "review": "MIT6.831含认知相关设计原理与任务分析，适合作入门；设备和界面实例较旧。"
+      "title": "6.831 User Interface Design and Implementation（MIT OpenCourseWare，Spring 2011；讲义、作业、项目、课堂活动）",
+      "url": "https://ocw.mit.edu/courses/6-831-user-interface-design-and-implementation-spring-2011/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "课程日程按 Usability、Learnability、Visibility、Efficiency、Errors and User Control、User-centered Design、Task Analysis、Generating Designs、UI Software Architecture、Input、User Testing、Experiment Analysis、Prototyping、Graphic Design 组织；感知/注意/记忆作为可用性与可学习性的设计依据在各讲中讲，不是独立心理学章。",
+      "access": "OCW 免费公开讲义、作业与 in-class activities，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.2.1.json。"
     },
     "V.2.2": {
       "review": "UW440以研究、原型和评估迭代组织，适合项目学习；应实际完成用户研究而非只看主页。"
@@ -1754,34 +1928,73 @@
       "review": "LaValle VR书覆盖追踪、感知和交互，AR与协作系统须补专门来源。"
     },
     "V.3.1": {
-      "review": "Wilke适合视觉编码和图表设计，交互、多视图与用户评估需配Munzner。"
+      "title": "Fundamentals of Data Visualization（Claus O. Wilke, O'Reilly 2019；作者主页免费全文）",
+      "url": "https://clauswilke.com/dataviz/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "Part I：2 Mapping data onto aesthetics（2.1 aesthetics and types of data、2.2 scales）、3 Coordinate systems and axes（含非线性轴）、4 Color scales、5 Directory of visualizations（amounts/distributions/proportions/x–y/geospatial/uncertainty）；后续章节含图表设计、感知与色盲、Ugly/bad/wrong figures（读图误差与误导）。交互不是本书重点。",
+      "access": "作者主页免费在线全文（HTML），无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.3.1.json。"
     },
     "V.3.2": {
       "review": "StonyBrook332课程与导览教材覆盖科学可视化和可视分析，需图形及数据基础。"
     },
     "I.1.2": {
-      "review": "MIT15.571适合业务对齐和价值管理，IT采购、服务组合与治理流程需配FitSM等补充。"
+      "title": "15.571 Generating Business Value from Information Technology（MIT OCW，Sloan，Prof. Jeanne Ross；讲义、讨论题与项目）",
+      "url": "https://ocw.mit.edu/courses/15-571-generating-business-value-from-information-technology-spring-2009/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "讲义依次覆盖 why study IT value、business operating model、IT governance（决策权与问责）、IT investment、project governance、business architecture and change management、enterprise architecture、managing change、IT risk management、IT outsourcing / BPO、globalization、innovation、IT savvy、agility。",
+      "access": "OCW 免费公开讲义、日历、阅读与讨论题，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/I.1.2.json。"
     },
     "I.1.3": {
-      "review": "BPM作者配套网站有讲义录像，流程生命周期对应良好；教材全文并不因此免费。"
+      "title": "Fundamentals of Business Process Management 配套网站（Dumas / La Rosa / Mendling / Reijers；slides + 视频讲座 + 模型集）",
+      "url": "https://fundamentals-of-bpm.org/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "第二版结构：process identification、process discovery、qualitative process analysis、process redesign、process automation、process monitoring，新增 BPM as an enterprise capability（战略对齐与治理）；站点提供 slides、video lectures、figures 与模型集。",
+      "access": "站点免费提供 slides 与 video lectures；教材本身（Springer）付费。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/I.1.3.json。"
     },
     "I.2.2": {
-      "title": "Technical Writing Essentials: Introduction to Professional Communications in the Technical Fields（Suzan Last，BCcampus 开放教材，CC BY 4.0）",
+      "title": "Technical Writing Essentials: Introduction to Professional Communications in the Technical Fields（Suzan Last，BCcampus 开放教材，CC BY）",
       "url": "https://pressbooks.bccampus.ca/technicalwriting/",
       "tier": "book",
       "lang": "en",
       "free": true,
-      "covers": "第1章 技术沟通的问题解决取向、惯例与修辞情境、写作过程；第2章 职业文体（读者中心写作、7C、精确用词、说服与伦理）；第3章 文档设计（可读性、标题、列表、图表、样式指南与模板）；第4章 团队与沟通（团队项目工具、团队章程/议程/纪要/Gantt/工作日志、Tuckman/DISC/GRIP/Thomas-Kilmann、协作写作、冲突管理）；第5章 做研究（研究术语、来源查找与评估、逻辑谬误、范围界定、人类研究伦理、问卷与访谈）；第6章 IEEE 引用与参考文献；第7章 常见文档类型（邮件/备忘录/信件、提案、进度报告、技术描述、长篇建议与可行性报告、实验报告、操作说明）；第8章 口头与视觉展示；附录 H 同行评审要点。正好对应收窄后的“技术文档/审查/读者与团队沟通 + 文献检索批判阅读作为写作中的信息处理”。",
-      "access": "免费：CC BY 4.0，网页全文 + EPUB / 数字 PDF / 打印 PDF / MOBI 下载；无需注册。",
-      "review": "2026-11-01 按收窄后的学习目标复核。英文主资源从 Purdue OWL 换成开放教材 Technical Writing Essentials：OWL 是条目式参考，缺“团队沟通/协作写作/冲突管理”和“来源评估+同行评审”的教材化章节，新教材第4–5章与附录 H 正好补上收窄后的范围；OWL 仍可作速查（https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/index.html ）。中文一侧没有免费的技术沟通教材：中国大学MOOC 的写作课都是学术论文写作（哈工大《学术写作与学术规范》、电子科大《学术规范与论文写作》），与“技术文档/团队沟通”不是一回事；若只想要中文文档风格规范，可另加阮一峰《中文技术文档写作规范》https://github.com/ruanyf/document-style-guide 作补充，但它只是风格规范，不承载课程。"
+      "covers": "书中说明覆盖 audience and task analysis in workplace contexts、clear and concise communications style、effective document design、teamwork and collaboration、fundamental research skills；章目录含职业文体、文档设计、团队与沟通、做研究、引用、常见文档类型与口头/视觉展示。",
+      "access": "CC BY 开放教材，网页全文 + EPUB/PDF/MOBI 下载，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/I.2.2.json。"
     },
     "I.2.3": {
-      "review": "Turing Way直接对应可复现、项目与伦理，实验效度和统计设计配专业教材。"
+      "title": "The Turing Way: A handbook for reproducible, ethical and collaborative data science（社区维护，CC-BY，网页版全书）",
+      "url": "https://book.the-turing-way.org/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Guide for Reproducible Research、Guide for Project Design、Guide for Communication、Guide for Collaboration、Guide for Ethical Research、Community Handbook；讲可复现研究、项目/实验设计、数据与代码开放、伦理与协作规范。假设检验/误差与效度的统计细节需另配教材。",
+      "access": "CC-BY 4.0，网页全书免费；可下载。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/I.2.3.json。"
     },
     "X.1.1": {
-      "review": "MIT 6.5940 讲剪枝、量化、蒸馏、NAS、微控制器上的 TinyML 和端侧训练，是资源受限推理与部署的主干；感知前端、端边云协同和隐私权衡只间接涉及。",
-      "covers": "剪枝与稀疏、量化、知识蒸馏、神经架构搜索、MCUNet 微控制器上的 TinyML、端侧训练；5 个 lab 依次是剪枝、量化、NAS、大模型压缩、在笔记本上部署 Llama2-7B。未覆盖：感知任务本身、端边云协同调度、时延/功耗/隐私的系统性权衡（只在效率指标和部署 lab 里间接涉及）。",
-      "access": "课程页免费公开日程、每讲 slides 和 lab。课程页链接的 21 段讲课录像在 MIT HAN Lab 官方 YouTube 频道，只有 YouTube 自动生成的英文字幕，没有人工字幕。"
+      "title": "MIT 6.5940 TinyML and Efficient Deep Learning Computing (Song Han) — slides, videos, 5 labs",
+      "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Pruning and sparsity, quantization, knowledge distillation, neural architecture search, MCUNet TinyML on microcontrollers, on-device training; labs: pruning, quantization, NAS, LLM compression, deploying Llama2-7B on a laptop.",
+      "access": "Free schedule, slides and labs; the 21 lecture videos are on the MIT HAN Lab YouTube channel with automatic captions only (no human captions verified).",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/X.1.1.json。"
     },
     "X.2.1": {
       "title": "6.047 Computational Biology (MIT OpenCourseWare, Manolis Kellis) — lectures, open textbook, assignments",
@@ -4797,6 +5010,316 @@
       "covers": "KubeEdge 架构（cloud/core/edge）、把容器化业务与设备管理扩展到边缘节点、边缘自治、MQTT 设备通信、云边元数据同步；解释在边缘处理数据可降低带宽、提高响应、保护隐私。",
       "access": "官方中文文档免费；动手需要 Kubernetes/Linux 环境，旧版命令需对照当前发行版。",
       "role": "primary"
+    },
+    "path-f-1-2": {
+      "title": "Hello 算法（krahets，中文开源在线教材）",
+      "url": "https://www.hello-algo.com/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第 2 章 复杂度分析（时间/空间复杂度、迭代与递归、递推式）、第 9 章 图（表示与 BFS/DFS 遍历）、第 12 章 分治、第 13 章 回溯、第 14 章 动态规划、第 15 章 贪心。覆盖渐近分析、递归、分治、贪心、DP、图的遍历；最短路、网络流与匹配、字符串、摊还分析不在书内。",
+      "access": "免费在线阅读，代码可一键运行；plain fetch 被 Vercel 429 拦截，改用 Tavily extract 读到各章正文。",
+      "role": "primary"
+    },
+    "path-f-1-4": {
+      "title": "武汉大学《高级算法》（中国大学MOOC，林海；含近似算法、随机算法、在线算法模块，配套教材《高级算法》机械工业出版社 2024）",
+      "url": "https://www.icourse163.org/course/WHU-1485333166",
+      "tier": "video",
+      "lang": "zh",
+      "free": true,
+      "covers": "课程概述原文按模块写清三条线：近似算法模块“给出可证明质量的近似解与近似比分析”，随机算法模块“提升期望效率并加强概率论证”，在线算法模块“引入竞争分析应对实时决策”；另含线性规划、高级图算法、NP 问题与启发式算法。以主讲教师教材《高级算法》为依托，“MOOC 与教材章节相互对应”。页面“课程大纲”栏只列了预备知识（算法设计与分析），未渲染分讲标题。",
+      "access": "中国大学MOOC 免费注册学习，认证证书需付费申请；中文授课（课程为依据课堂实录剪辑）；视频与字幕需登录，分讲标题未核对。",
+      "role": "primary"
+    },
+    "path-f-1-5": {
+      "title": "哈尔滨工业大学《大数据算法》（王宏志等，国家高等教育智慧教育平台收录，中国大学MOOC 开课）",
+      "url": "https://higher.smartedu.cn/course/68cb23eca9f4619f8f360d9b",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "官方大纲十讲：第一讲 大数据算法概述；第二讲 亚线性算法（分讲标题经同课转载核对为 2.1 亚线性算法的定义、2.2 水库抽样—空间亚线性算法、2.3 平面图直径—时间亚线性计算算法、2.4 全0数组判定—时间亚线性判定算法）；第三讲 亚线性算法例析（3.1a/3.1b 数据流中频繁元素 基础知识/算法与分析、3.2a/3.2b 生成树权重一/二、3.3 数组有序性判定）；第四讲 外存算法概述；第五讲 外存查找结构（B 树、KD 树）；第六讲 外存图数据算法（表排序、时间前向处理、缩图法）；第七至九讲 MapReduce 与超越 MapReduce 的并行大数据处理；第十讲 众包算法。",
+      "access": "国家级平台免费注册选课（开课平台为中国大学MOOC），认证证书另计；当前显示已结课，需等下一期。视频与字幕需登录，未核对。",
+      "role": "primary"
+    },
+    "path-f-1-6": {
+      "title": "《参数计算导论》（王建新、冯启龙，《信息科学技术学术着作丛书》，科学出版社；中文参数计算专着）",
+      "url": "https://weread.qq.com/web/reader/cbc32e20811e5e442g017eab",
+      "tier": "book",
+      "lang": "zh",
+      "free": false,
+      "covers": "目录可核到章/节：第 1 章 导引；第 2 章 参数计算简介（2.1 NP 完全理论、2.2 固定参数可解、2.3 固定参数不可解、2.4 固定参数枚举、2.5 参数化方法）；第 3 章 核心化（3.1 NT 定理与基于最大匹配/线性规划的 NT 算法、3.2 皇冠分解、3.3 极值归纳技术、3.4 随机方法、3.5 基于低度点的核心化、3.6 核下界技术：对偶性方法/基于复杂性理论假设的方法/基于参数化规约）；第 4 章 分支搜索法；第 5 章 迭代压缩和局部贪婪；第 6 章 随机参数算法设计技术（含确定化方法与 (n,k)-Universal Set）；第 7 章 彩色编码；第 8 章 平面图参数算法设计技术（8.1 平面图上的核心化技术）。",
+      "access": "需购买（科学出版社纸本，本页所在微信读书版本显示“本书已下架，内容不再支持阅读”，只能看到目录，未购买）；简体中文。",
+      "role": "primary"
+    },
+    "path-f-2-1": {
+      "title": "北京航空航天大学《计算理论》（中国大学MOOC，网络空间安全学院）",
+      "url": "https://www.icourse163.org/course/BUAA-1473089162",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "授课目标原文：正则语言与上下文无关语言的形式化描述与识别、有穷自动机与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性；页面未列分讲大纲，文法的四类分类不在此课程目标里。",
+      "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；评分含单元测验、期中与期末。视频与字幕需登录，未核对。",
+      "role": "primary"
+    },
+    "path-f-2-2": {
+      "title": "北京航空航天大学《计算理论》（中国大学MOOC，网络空间安全学院）",
+      "url": "https://www.icourse163.org/course/BUAA-1473089162",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "授课目标原文：有穷自动机与正则语言、上下文无关文法与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性；页面未列分讲大纲，未确认含递归定理与不可解度。",
+      "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；视频与字幕需登录，未核对。",
+      "role": "primary"
+    },
+    "path-f-2-3": {
+      "title": "北京航空航天大学《计算理论》（中国大学MOOC，网络空间安全学院）",
+      "url": "https://www.icourse163.org/course/BUAA-1473089162",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "授课目标原文：有穷自动机与正则语言、上下文无关文法与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性（含 P/NP）；页面未列分讲大纲，NP 完全性、空间/随机复杂度、电路复杂度均未在目标中单列。",
+      "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；视频与字幕需登录，未核对。",
+      "role": "primary"
+    },
+    "path-f-2-4": {
+      "title": "《软件基础》中文版（Logical Foundations 等四卷，Rocq/Coq，译者项目）",
+      "url": "https://rocq-zh.github.io/SF-zh/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第一卷《逻辑基础》：函数式编程、逻辑的基本概念（命题/谓词逻辑、真值表与可满足性概念）、计算机辅助定理证明与 Coq；第四卷《QuickChick：用 Coq 进行基于性质的测试》。书中每处细节都是机器验证的证明脚本，正好对应“证明搜索与可检查证明”的中文材料；但不含 SAT 求解算法、SMT 求解器与归结原理。",
+      "access": "免费在线阅读（HTML 版），无需注册；需安装 Rocq/Coq 才能做练习。",
+      "role": "primary"
+    },
+    "path-f-3-1": {
+      "title": "Composing Programs 中文译本（CS Five 翻译项目）",
+      "url": "https://composingprograms.netlify.app/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "Composing Programs 中译：1.6 高阶函数、3.2 函数式编程、4.3 声明式编程；第 3 章解释器以环境模型实现参数绑定与求值过程。全书的“替换”只到用环境模型解释参数绑定，没有形式化代换定义与 λ-演算归约策略。",
+      "access": "免费中文译文（网页版），部分代码与术语保留英文；无视频。",
+      "role": "primary"
+    },
+    "path-f-3-2": {
+      "title": "《软件基础》中文版（Logical Foundations / Programming Language Foundations，Rocq/Coq）",
+      "url": "https://rocq-zh.github.io/SF-zh/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "《软件基础》中文版第二卷《编程语言基础》：程序的等价关系、霍尔逻辑（第一部分与第二部分）、小步语义、简单类型系统与类型安全（可进性与保型性）。注意：第二卷目录里虽有「Subtyping (Sub)」一章，但该章正文仍是英文原文（未译），不能算中文的子类型教学。",
+      "access": "免费在线阅读；需安装 Rocq/Coq 做练习。",
+      "role": "primary"
+    },
+    "path-f-3-3": {
+      "title": "《软件基础》中文版（第二卷 编程语言基础：Hoare 逻辑与类型；含 Coq 机器检查）",
+      "url": "https://rocq-zh.github.io/SF-zh/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第一卷《逻辑基础》与第二卷《编程语言基础》：第二卷讲操作语义、霍尔逻辑（前置/后置条件、循环不变式）与静态类型系统，全部用 Coq 证明脚本；覆盖契约式规格、Hoare 逻辑与不变式。不含抽象解释、时序逻辑与模型检查。",
+      "access": "免费在线阅读，无需注册；需安装 Rocq/Coq 做练习。",
+      "role": "primary"
+    },
+    "path-f-3-4": {
+      "title": "《Lean 形式化数学》中文版（Mathematics in Lean 中译，Lean 中文社区）",
+      "url": "https://www.leanprover.cn/math-in-lean-zh/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "中译 13 章：引言、基础、逻辑、集合和函数、初等数论、离散数学、结构体、层次结构、群与环、线性代数、拓扑学、微分学、积分和测度论。覆盖命题即类型（第 3 章逻辑）与用 Lean/mathlib 做机器检查证明；不含精化到真实程序与可信计算基。",
+      "access": "免费在线阅读，无需注册；练习需按页面说明安装 Lean 与 mathlib（版本以页面为准）。",
+      "role": "primary"
+    },
+    "path-d-1-1": {
+      "title": "厦门大学林子雨数据库系统原理公开讲义",
+      "url": "https://dblab.xmu.edu.cn/post/database2020/",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第1–3、5–7章：概念模型、关系代数、SQL、完整性、规范化与数据库设计。",
+      "access": "免费大学作者PDF，无登录；已打开第2、3、6、7章，分别135、272、180、75页。班级页为2020，链接PDF为2017版；不是付费书镜像。",
+      "role": "primary"
+    },
+    "path-d-1-2": {
+      "title": "数据库管理系统（清华大学 李国良；作者/课题组官方课程页：16 讲课件 PDF/PPTX + 视频链接 + 5 个课程实验）",
+      "url": "https://dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "第05讲 数据库存储、第06讲 事务管理、第07讲 数据库原子性和持久性实现及故障恢复、第08讲 并发控制、第09讲 数据库索引、第10讲 查询处理、第11讲 查询优化、第12讲 查询执行（另有 01 概述、02 关系模型、03 设计、04 SQL、13 安全、14 高级数据库、15 GaussDB、16 SQLite）；课程实验 1 存储、2 故障恢复、3 并发控制、4 查询执行、5 查询优化，实验文档 thu-db.github.io/huadb-doc、代码 github.com/thu-db/huadb。",
+      "access": "清华大学数据库组/李国良个人主页，免费公开课件 PDF 与视频链接，无需注册；中文授课；每讲视频指向 B 站官方账号 THUDBGroup 的合集（见 r7-zh2）；字幕情况未核对。",
+      "role": "primary"
+    },
+    "path-d-1-5": {
+      "title": "《DAMA 数据管理知识体系指南（原书第 2 版）》（DAMA International 着，DAMA 中国分会译，机械工业出版社 2020-05）— DAMA 中国官网本书介绍与章节对照",
+      "url": "https://www.mydama.org.cn/chubanwu/%E5%86%85%E5%AE%B9%E7%AE%80%E4%BB%8B",
+      "tier": "book",
+      "lang": "zh",
+      "free": false,
+      "covers": "全书的 11 个数据管理职能章＋主题章：第3章 数据治理（决策权与责任体系）、第4章 数据架构、第5章 数据建模和设计、第6章 数据存储和操作（含「在整个数据生命周期中，从计划到销毁」的运维活动）、第7章 数据安全、第8章 数据集成和互操作、第9章 文档和内容管理、第10章 参考数据和主数据、第11章 数据仓库和商务智能、第12章 元数据管理（定义、模型、数据流等元数据）、第13章 数据质量管理（规划并实施质量技术以测量、评估和提高适用性）、第16章 数据管理组织和角色期望（组建团队与角色职责）、第17章 数据管理和组织变革管理。",
+      "access": "付费纸书/电子书（机械工业出版社 2020 年 5 月出版，44 万字）；DAMA 中国官网免费提供本书简介与章节对照，不提供全文；本轮未购买、未阅读正文。网络上流传的中文版 PDF 属未授权副本，未采用。",
+      "role": "primary"
+    },
+    "path-d-3-2": {
+      "title": "数据仓库与数据挖掘（北京理工大学 袁汉宁、王树良、耿晶、阮思捷、金福生、方兰婷；中国大学MOOC BIT-1464031178 / 国家高等教育智慧教育平台，10 章含逐节大纲）",
+      "url": "https://higher.smartedu.cn/course/6892710af57d20271c59a4ac",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "第1章 Introduction：What Is Data Mining、Data Mining Process、Data to be Mined、Data Mining Tasks、Evaluation of Knowledge；第2章 Data（数据对象与属性类型、统计描述、相似性度量）；第3章 Data Preprocessing（Overview、Cleaning、Integration、Transformation、Data Reduction）；第4章 Association Rule Mining（Basic Concept、Frequent Itemset Generation、Rule Generation、Apriori 复杂度因素、频繁项集紧凑表示、Pattern Evaluation）；第5章 Classification（含模型评估与选择、类不平衡）；第6章 Cluster Analysis（划分/层次/密度与网格、聚类评价）；第7章 Outlier Analysis（离群点与离群分析、检测方法、统计方法、基于邻近度、基于聚类与分类的方法）；第8章 数据可视化；第9章 数据仓库；第10章 数据资源/使用/生态。",
+      "access": "中国大学MOOC 与智慧高教平台免费注册学习，视频按学期开放；中文课程（课程概述为中文，章节标题用英文），讲解语言未逐节核对，字幕未核对。",
+      "role": "primary"
+    },
+    "path-d-4-1": {
+      "title": "浙江大学《知识图谱导论》（中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/ZJU-1464119172",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "官方课程页（国家高等教育智慧教育平台）列出的九章：知识图谱概论、知识表示（符号与向量）、存储与查询、抽取与构建、推理（基于 Ontology / 基于规则 / 嵌入学习 / 规则学习 / Ontology Embedding）、融合（本体匹配、实体对齐）、问答、图算法与图数据分析、技术发展（多模态、KG 与图神经网络融合、KG 与大语言模型等）。",
+      "access": "中国大学MOOC 免费注册学习，视频按开放学期；课程页只给概述、目标与预备知识，未登录核对逐讲视频；认证证书另计。",
+      "role": "primary"
+    },
+    "path-d-4-2": {
+      "title": "《知识图谱：算法与实践》（赵军主编，赵军、刘康、何世柱、陈玉博、张元哲编着，高等教育出版社 2022-03；第2章知识表示、第8章知识推理）",
+      "url": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=61df11cd938b7cc2960ee421",
+      "tier": "book",
+      "lang": "zh",
+      "free": false,
+      "covers": "第2章 知识表示：2.2 经典知识表示理论（2.2.1 语义网络、2.2.2 框架、2.2.3 一阶谓词逻辑、2.2.4 描述逻辑）；2.3 语义网技术体系（2.3.1 语义网整体架构、2.3.2 RDF 及其语义扩展 RDFS、2.3.3 本体与本体描述语言 OWL、2.3.4 规则及其交换格式、2.3.5 查询语言）；2.4 知识图谱及其知识体系；第8章 知识推理：8.1 概述（推理类型、典型应用）、8.2 归纳推理：规则获取（一阶规则学习、关联规则挖掘、概率统计规则权重）、8.3 演绎推理：规则应用（马尔科夫逻辑网、概率软逻辑）、8.4 混合式推理。",
+      "access": "付费教材，定价 48.00 元（ISBN 978-7-04-057725-9，2022 年 3 月，292 页；2025 年 8 月最新印次），高教社官方产品页可查完整目录；本轮未购买、未读正文。",
+      "role": "primary"
+    },
+    "path-v-1-2": {
+      "title": "《数字媒体技术概论》（中国传媒大学 严明、张岳，学校官方 B 站，46 讲）",
+      "url": "https://www.bilibili.com/video/BV1AE411B7KV/",
+      "tier": "video",
+      "lang": "zh",
+      "free": true,
+      "covers": "分 P 目录：2.1–2.5 图像基础/数字图像处理/视频基础/数字视频关键技术/应用；4.1–4.4 数字语音基本概念与语音技术；7.1–7.4 数据压缩原理、音频/图像/视频压缩编码；9.1–9.5 存储、数据中心、云计算存储、多媒体网络传输（两讲）；10.1–10.5 加密、数字水印、取证、生物认证。",
+      "access": "中国传媒大学官方账号免费中文课程（已完结，46 P）；B站可能需要登录或访问校验；字幕未逐段核对。",
+      "role": "primary"
+    },
+    "path-v-1-3": {
+      "title": "GAMES101: 现代计算机图形学入门（闫令琪，UCSB/GAMES 官方课程主页，22 讲，中文授课英文课件，录像在 B 站）",
+      "url": "https://sites.cs.ucsb.edu/~lingqi/teaching/games101.html",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "课程四大组成之一即「光的传播理论（光子映射）」；周表里 Mar 24 光线追踪（基本原理）、Mar 27 光线追踪（加速结构）、Mar 31 光线追踪（辐射度量学、渲染方程与全局光照）、Apr 5 光线追踪（蒙特卡洛积分与路径追踪）、Apr 7 材质与外观（阅读第 24 章 Reflection，讲 BRDF/反射模型）；另有光栅化、几何、动画与模拟部分。8 次小作业 + 1 次大作业，均为编程任务并给框架。",
+      "access": "课程主页免费（公开课件 PDF + 阅读材料 + 作业框架），录像在 B 站免费；中文授课、英文课件（页面自述）；无考试；字幕情况未核对。",
+      "role": "primary"
+    },
+    "path-v-2-1": {
+      "title": "人机交互与用户体验设计（南京大学，中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NJU-1466990164",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "以用户为中心的系统设计方法：需求分析、交互设计与体验评估；讲“为什么产品会不好用”“如何确认用户需求并定义其行为”。课程概述未单列感知/注意/心智模型等认知心理学内容。",
+      "access": "中国大学MOOC 免费注册学习；认证证书为付费电子证书（需实名）；视频按学期开放，字幕未核对。教材为冯桂焕《人机交互—软件工程视角》。",
+      "role": "primary"
+    },
+    "path-v-3-1": {
+      "title": "可视化导论（浙江大学，中国大学MOOC；15 章，基础篇/数据篇/应用篇）",
+      "url": "https://www.icourse163.org/course/ZJU-1206452826",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "基础篇（人、数据、可视化流程的理论与概念，含视觉编码与感知）；数据篇（时空、地理信息、高维非空间、层次与网络数据的可视化方法）；应用篇（可视化工具与实例）。15 章，偏原理与类型方法，交互与读图误差只在流程/评估处点到。",
+      "access": "中国大学MOOC 免费注册学习；认证证书为付费电子证书（需实名）；视频按学期开放，字幕未核对。",
+      "role": "primary"
+    },
+    "path-i-1-1": {
+      "title": "管理信息系统（中南财经政法大学，中国大学MOOC；4 部分 10 章）",
+      "url": "https://www.icourse163.org/course/ZNUEDU-1002531022",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "第一部分 基本概念（MIS 概述、研制途径、面向对象与 UML）；第二部分 系统建设（规划、分析、设计、实施）；第三部分 系统管理（开发管理、运行管理）；第四部分 典型应用（企业管理信息化）；以一个案例贯穿，强调业务流程同时兼顾技术实现。",
+      "access": "中国大学MOOC 免费注册学习；页面标注“认证学习”，证书付费；视频按学期开放，字幕未核对。",
+      "role": "primary"
+    },
+    "path-i-1-2": {
+      "title": "信息系统项目管理师教程（第4版，官方教材）",
+      "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html",
+      "tier": "book",
+      "lang": "zh",
+      "free": false,
+      "covers": "选读第3章治理、第4章组织和服务、第16章采购、第20章组合管理、第22章战略与转型；配免费中文课程理解业务对齐，围绕一个组织编写治理与变革方案。",
+      "access": "出版社公开目录用于核对范围；完整中文教材需购买或通过合法馆藏借阅。本轮未购买、未读收费全文。",
+      "role": "primary"
+    },
+    "path-i-1-4": {
+      "title": "项目管理（西北工业大学，中国大学MOOC；白思俊团队，5 章 36 讲）",
+      "url": "https://www.icourse163.org/course/NWPU-1003729004",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "第1章 项目与项目管理；第2章 项目组织与项目团队；第3章 项目计划与控制（启动与目标、范围分解、时间计划、资源与费用计划、进度控制、验收管理）；第4章 项目综合管理（利益相关者、质量、采购、信息与沟通、冲突、风险管理）；第5章 成功项目管理的应用与案例。",
+      "access": "中国大学MOOC 免费注册学习；页面说明可申请 IPMP D 级证书/在线认证考试（付费）；视频按学期开放，字幕未核对。",
+      "role": "primary"
+    },
+    "path-i-2-1": {
+      "title": "计算机伦理学 CS3309（上海交通大学 李超；CE01–CE16 中文课件）",
+      "url": "https://cs.sjtu.edu.cn/~lichao/courses/cs3309.html",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "四部分：理论基础（CE01–CE06 伦理学理论）、技术伦理（CE07 技术变革、CE08 专业责任、CE09 指导准则）、典型案例（CE10 健康安全、CE11 自由尊重、CE12 隐私保护、CE13 公平公正、CE14 真实可信、CE15 产权利益）、总结（CE16）。",
+      "access": "教师课程站公开 CE01–CE16 中文 PDF；最新录像与作业在 CANVAS（校内），不能称全部录像公开。",
+      "role": "primary"
+    },
+    "path-i-2-2": {
+      "title": "英文技术写作（东南大学，中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/SDU-1206693808",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "技术写作的基本概念与语言特点、文档信息设计的基本原则、常见技术文档类型（备忘录/电子邮件、简历与求职信、用户手册与说明书、企划书、专业报告）、技术写作必备的研究方法；以“文本读者为中心”。",
+      "access": "中国大学MOOC 免费注册学习（页面标注“智慧慕课/认证学习”，认证证书可能收费）；视频按学期开放；授课语言与字幕未核实（课程对象是英文技术文档）。",
+      "role": "primary"
+    },
+    "path-i-2-3": {
+      "title": "科学研究方法与论文写作（复旦大学，中国大学MOOC，国家精品在线开放课程）",
+      "url": "https://www.icourse163.org/course/FUDAN-1206362806",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "上篇 科学研究方法（以“科学假设为驱动”、实验设计能力）、中篇 学术论文写作方法、下篇 投稿与发表；大纲含学术诚信。",
+      "access": "中国大学MOOC 免费注册学习，页面标注“随到随学”；视频按学期/随学开放；字幕未核对。",
+      "role": "primary"
+    },
+    "path-x-1-1": {
+      "title": "机器视觉与边缘计算应用（复旦大学，中国大学MOOC FUDAN-1456632162；目标检测算法 + OpenVINO/头歌平台模型优化与推理 + 边缘计算案例实训）",
+      "url": "https://www.icourse163.org/course/FUDAN-1456632162",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "课程概述与授课目标：①介绍机器视觉相关目标检测常用算法原理（迁移学习再训练预训练模型）；②重点讲业界实战型深度学习预训练模型加速平台的安装与使用（OpenVINO、头歌），做模型优化与推理；③通过案例与综合实训把机器视觉用到智能交通灯控制、儿童睡姿检测、智能冰箱、智能售药机等典型边缘计算场景；④授课目标要求用 OpenVINO（含 AIxBoard 板子）实现目标检测、语义分割等预训练模型在边缘计算领域的应用；案例代码来自 openvinotoolkit/openvino_notebooks。",
+      "access": "中国大学MOOC 免费注册学习，视频按学期开放；中文讲授；课程大纲区未列逐讲标题（只有课程概述/授课目标/预备知识），字幕未核对；实训依赖 OpenVINO 与头歌平台（免费）。",
+      "role": "primary"
+    },
+    "path-x-1-3": {
+      "title": "百度 Apollo《自动驾驶入门与实践》官方课程",
+      "url": "https://apollo.baidu.com/community/online-course/218",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "官方中文课程：部署 Apollo、感知、定位、预测、规划、控制与仿真实践；覆盖简介的感知/定位/预测/规划/控制，实时安全评估与实车工程不在课程内。",
+      "access": "课程页标注免费，学习可能需要 Apollo 账号；配套硬件、云服务和实车环境不包含在免费课程内。",
+      "role": "primary"
+    },
+    "path-x-2-4": {
+      "title": "大数据背景下的智慧医院（国家高等教育智慧教育平台课程，开课教师 吴雅琴、王晓东、王超、左风云、赵慧茹；含逐章逐节大纲）",
+      "url": "https://higher.smartedu.cn/course/69a2133495df98bb276ca527",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "课程章节：技术在智慧医院中的作用；医院信息系统（3.1「他」是谁 / 3.2 技术特点 / 3.3 聪明如「他」）；智慧医院门诊信息化管理（门诊业务流程与新思路）；智慧医院住院管理信息化（住院管理业务流程）；电子病历；医技系统助力医院信息化管理；医学影像信息化管理；病案信息管理；远程医疗；大数据技术在智慧医院管理中的应用；新技术助力智慧医院；互联网医疗；人工智能大模型赋能医疗。",
+      "access": "国家高等教育智慧教育平台免费查看课程页与完整章节大纲（附课程测验）；中文讲授；面向本科各专业选修；视频开放时间与字幕未核对。",
+      "role": "primary"
     }
   },
   "chinese": {
@@ -4921,48 +5444,48 @@
       "covers": "第 3 章 数据结构、第 4 章 数组与链表、第 5 章 栈与队列、第 6 章 哈希表、第 7 章 树（二叉树、二叉搜索树、AVL、堆之外的红黑树仅有简介）、第 8 章 堆、第 9 章 图（图的表示：邻接矩阵/邻接表，图的操作与遍历）。覆盖数组、链表、栈队列、哈希、树、堆与图的存储与遍历；不把“不变量”作为独立概念讲，只在二叉搜索树/堆的性质处隐含。"
     },
     "F.1.2": {
-      "source": "zh-gran-f-1-2",
-      "covers": "覆盖简介里的算法范式与图遍历部分：复杂度分析（含时间/空间复杂度与递推式）、数组与链表/栈与队列/哈希表/树/堆（基础数据结构，英文那本书不讲的这部分这里补齐）、图的表示与遍历（BFS/DFS）、搜索（二分等）、排序、分治、回溯、动态规划、贪心。未覆盖：最短路的算法（Dijkstra/Bellman-Ford/Floyd）、网络流与二分图匹配、字符串匹配（KMP/Z 等）与字符串索引（Trie 之外的后缀数组/自动机），也没有摊还分析。"
+      "source": "path-f-1-2",
+      "covers": "第 2 章 复杂度分析（时间/空间复杂度、迭代与递归、递推式）、第 9 章 图（表示与 BFS/DFS 遍历）、第 12 章 分治、第 13 章 回溯、第 14 章 动态规划、第 15 章 贪心。覆盖渐近分析、递归、分治、贪心、DP、图的遍历；最短路、网络流与匹配、字符串、摊还分析不在书内。"
     },
     "M.5.5": {
       "source": "path-m-5-5",
       "covers": "图的基本概念（第一章 5 次课）；欧拉图、哈密尔顿图、度极大哈密尔顿与 TSP；偶图匹配、因子分解、Tutte 定理、匈牙利最优匹配算法；平面图、对偶图、平面性判定；边着色、点着色、色多项式；独立集与覆盖；有向图。"
     },
     "F.2.1": {
-      "source": "theory",
-      "covers": "自动机与形式语言、图灵机、可判定性、归约及时间复杂性；按章节选择。"
+      "source": "path-f-2-1",
+      "covers": "授课目标原文：正则语言与上下文无关语言的形式化描述与识别、有穷自动机与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性；页面未列分讲大纲，文法的四类分类不在此课程目标里。"
     },
     "F.2.2": {
-      "source": "theory",
-      "covers": "自动机与形式语言、图灵机、可判定性、归约及时间复杂性；按章节选择。"
+      "source": "path-f-2-2",
+      "covers": "授课目标原文：有穷自动机与正则语言、上下文无关文法与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性；页面未列分讲大纲，未确认含递归定理与不可解度。"
     },
     "F.2.3": {
-      "source": "theory",
-      "covers": "自动机与形式语言、图灵机、可判定性、归约及时间复杂性；按章节选择。"
+      "source": "path-f-2-3",
+      "covers": "授课目标原文：有穷自动机与正则语言、上下文无关文法与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性（含 P/NP）；页面未列分讲大纲，NP 完全性、空间/随机复杂度、电路复杂度均未在目标中单列。"
     },
     "F.2.4": {
-      "source": "sf",
-      "covers": "第一卷读逻辑与机器证明，第二卷读操作语义、类型和 Hoare 逻辑；模型检查及 SMT 不由这套书完整覆盖。"
+      "source": "path-f-2-4",
+      "covers": "第一卷《逻辑基础》：函数式编程、逻辑的基本概念（命题/谓词逻辑、真值表与可满足性概念）、计算机辅助定理证明与 Coq；第四卷《QuickChick：用 Coq 进行基于性质的测试》。书中每处细节都是机器验证的证明脚本，正好对应“证明搜索与可检查证明”的中文材料；但不含 SAT 求解算法、SMT 求解器与归结原理。"
     },
     "F.3.2": {
-      "source": "sf",
-      "covers": "第一卷读逻辑与机器证明，第二卷读操作语义、类型和 Hoare 逻辑；模型检查及 SMT 不由这套书完整覆盖。"
+      "source": "path-f-3-2",
+      "covers": "《软件基础》中文版第二卷《编程语言基础》：程序的等价关系、霍尔逻辑（第一部分与第二部分）、小步语义、简单类型系统与类型安全（可进性与保型性）。注意：第二卷目录里虽有「Subtyping (Sub)」一章，但该章正文仍是英文原文（未译），不能算中文的子类型教学。"
     },
     "F.3.3": {
-      "source": "sf",
-      "covers": "第一卷读逻辑与机器证明，第二卷读操作语义、类型和 Hoare 逻辑；模型检查及 SMT 不由这套书完整覆盖。"
+      "source": "path-f-3-3",
+      "covers": "第一卷《逻辑基础》与第二卷《编程语言基础》：第二卷讲操作语义、霍尔逻辑（前置/后置条件、循环不变式）与静态类型系统，全部用 Coq 证明脚本；覆盖契约式规格、Hoare 逻辑与不变式。不含抽象解释、时序逻辑与模型检查。"
     },
     "F.3.4": {
-      "source": "lean",
-      "covers": "使用 Lean 与 Mathlib 完成形式化证明，含实例与练习。"
+      "source": "path-f-3-4",
+      "covers": "中译 13 章：引言、基础、逻辑、集合和函数、初等数论、离散数学、结构体、层次结构、群与环、线性代数、拓扑学、微分学、积分和测度论。覆盖命题即类型（第 3 章逻辑）与用 Lean/mathlib 做机器检查证明；不含精化到真实程序与可信计算基。"
     },
     "P.1.3": {
       "source": "path-p-1-3",
       "covers": "目录核对：1.6 高阶函数、1.7 递归函数、3.2 函数式编程、3.4 组合语言的解释器、3.5 抽象语言的解释器、4.2 隐式序列、4.3 声明式编程。覆盖高阶函数、递归、流（惰性序列）与声明式/逻辑式查询表达；不含 OCaml/Haskell 式的模式匹配，也不系统讲不可变数据结构。"
     },
     "F.3.1": {
-      "source": "sicp",
-      "covers": "从第 1 章函数抽象、第 3 章函数式编程与解释器、第 4 章逻辑式编程学习不同范式；形式化 λ 演算仍配合英文课程。"
+      "source": "path-f-3-1",
+      "covers": "Composing Programs 中译：1.6 高阶函数、3.2 函数式编程、4.3 声明式编程；第 3 章解释器以环境模型实现参数绑定与求值过程。全书的“替换”只到用环境模型解释参数绑定，没有形式化代换定义与 λ-演算归约策略。"
     },
     "P.1.1": {
       "source": "path-p-1-1",
@@ -5093,8 +5616,8 @@
       "covers": "第 2 章 分布式系统模型：两将军问题、拜占庭将军问题、通信模型、故障模型（崩溃/遗漏/时序/拜占庭等故障类型与同步/异步时间模型）；第 4 章 复制：节点失效、一致性模型（顺序一致性、线性一致性、因果一致性、最终一致性、CAP 定理、客户端一致性模型）；第 5 章 共识算法：5.1 共识算法简介（共识与一致性的关系、脑裂、状态机复制、原子广播、配置变更）、5.2 FLP 不可能定理、5.3 Paxos（诞生、Basic Paxos 两轮 RPC、Multi Paxos 的“一次 Prepare 多次 Accept”降低消息量、活锁问题）。"
     },
     "D.1.2": {
-      "source": "tidb",
-      "covers": "分布式 SQL、存储、事务与 Raft 的工程实例；一致性理论证明和通用数据库内核仍配合英文课程。"
+      "source": "path-d-1-2",
+      "covers": "第05讲 数据库存储、第06讲 事务管理、第07讲 数据库原子性和持久性实现及故障恢复、第08讲 并发控制、第09讲 数据库索引、第10讲 查询处理、第11讲 查询优化、第12讲 查询执行（另有 01 概述、02 关系模型、03 设计、04 SQL、13 安全、14 高级数据库、15 GaussDB、16 SQLite）；课程实验 1 存储、2 故障恢复、3 并发控制、4 查询执行、5 查询优化，实验文档 thu-db.github.io/huadb-doc、代码 github.com/thu-db/huadb。"
     },
     "D.1.3": {
       "source": "path-d-1-3",
@@ -5121,8 +5644,8 @@
       "covers": "29 讲完整课程：1–2 并行计算概述、3–4 并行计算机系统及结构模型、5–6 当代并行计算机系统介绍、7–8 并行计算性能评测、9–10 并行算法的设计基础、11 并行算法的一般设计策略、12–13 并行算法的基本设计技术、14 基本通信操作、15 并行算法的一般设计过程、16–18 稠密矩阵运算、19 线性方程组的求解、20 快速傅里叶变换、21–23 并行程序设计基础、24–26 共享存储系统并行编程、27–29 分布存储系统并行编程。主教材为陈国良《并行计算——结构·算法·编程》（高等教育出版社，ISBN 7-04-013307-5）。"
     },
     "D.1.1": {
-      "source": "sql",
-      "covers": "使用查询示例练习 SQL；关系建模、ER 图和规范化仍配合英文教材。"
+      "source": "path-d-1-1",
+      "covers": "第1–3、5–7章：概念模型、关系代数、SQL、完整性、规范化与数据库设计。"
     },
     "D.1.4": {
       "source": "path-d-1-4",
@@ -5149,8 +5672,8 @@
       "covers": "作者官方书页：第12章 计算学习理论（PAC、VC 维、泛化界、稳定性）、第14章 概率图模型（HMM、MRF、CRF）；南瓜书是它的配套推导。"
     },
     "D.3.2": {
-      "source": "pumpkin",
-      "covers": "《机器学习》的公式推导与学习笔记；按概率图模型、分类、聚类和学习理论章节选择，需配合原书。"
+      "source": "path-d-3-2",
+      "covers": "第1章 Introduction：What Is Data Mining、Data Mining Process、Data to be Mined、Data Mining Tasks、Evaluation of Knowledge；第2章 Data（数据对象与属性类型、统计描述、相似性度量）；第3章 Data Preprocessing（Overview、Cleaning、Integration、Transformation、Data Reduction）；第4章 Association Rule Mining（Basic Concept、Frequent Itemset Generation、Rule Generation、Apriori 复杂度因素、频繁项集紧凑表示、Pattern Evaluation）；第5章 Classification（含模型评估与选择、类不平衡）；第6章 Cluster Analysis（划分/层次/密度与网格、聚类评价）；第7章 Outlier Analysis（离群点与离群分析、检测方法、统计方法、基于邻近度、基于聚类与分类的方法）；第8章 数据可视化；第9章 数据仓库；第10章 数据资源/使用/生态。"
     },
     "A.2.3": {
       "source": "path-a-2-3",
@@ -5325,8 +5848,8 @@
       "covers": "向量的概念、加法、数乘、线性关系与分解；标架与坐标、轴上投影、数量积、向量积、混合积；轨迹与方程；平面方程、点／平面／直线的相互位置、平面束；柱面、锥面、旋转曲面、椭球面、双曲面、抛物面；二次曲线与直线的位置、渐近方向／中心／渐近线、切线、直径。"
     },
     "V.1.3": {
-      "source": "games202",
-      "covers": "实时阴影、全局光照和渲染技术；仿真及可微图形仍需英文补充。"
+      "source": "path-v-1-3",
+      "covers": "课程四大组成之一即「光的传播理论（光子映射）」；周表里 Mar 24 光线追踪（基本原理）、Mar 27 光线追踪（加速结构）、Mar 31 光线追踪（辐射度量学、渲染方程与全局光照）、Apr 5 光线追踪（蒙特卡洛积分与路径追踪）、Apr 7 材质与外观（阅读第 24 章 Reflection，讲 BRDF/反射模型）；另有光栅化、几何、动画与模拟部分。8 次小作业 + 1 次大作业，均为编程任务并给框架。"
     },
     "V.2.4": {
       "source": "xr",
@@ -5345,28 +5868,24 @@
       "covers": "中文授课 26 讲：课程简介、BTC 密码学原理、数据结构、协议、实现、网络、挖矿与难度、脚本、分叉、ETH 与智能合约、共识等；覆盖密码承诺、共识、账本与智能合约，经济机制只作背景。"
     },
     "I.1.1": {
-      "source": "mis",
-      "covers": "信息系统基础、组织应用和管理视角；按目录选择战略、建设和运行相关章节。"
+      "source": "path-i-1-1",
+      "covers": "第一部分 基本概念（MIS 概述、研制途径、面向对象与 UML）；第二部分 系统建设（规划、分析、设计、实施）；第三部分 系统管理（开发管理、运行管理）；第四部分 典型应用（企业管理信息化）；以一个案例贯穿，强调业务流程同时兼顾技术实现。"
     },
     "I.1.2": {
-      "source": "mis",
-      "covers": "信息系统基础、组织应用和管理视角；按目录选择战略、建设和运行相关章节。"
+      "source": "path-i-1-2",
+      "covers": "选读第3章治理、第4章组织和服务、第16章采购、第20章组合管理、第22章战略与转型；配免费中文课程理解业务对齐，围绕一个组织编写治理与变革方案。"
     },
     "I.1.4": {
-      "source": "project-management",
-      "covers": "通用项目管理的计划、进度与风险方法；IT 交付案例仍配合英文课程。"
+      "source": "path-i-1-4",
+      "covers": "第1章 项目与项目管理；第2章 项目组织与项目团队；第3章 项目计划与控制（启动与目标、范围分解、时间计划、资源与费用计划、进度控制、验收管理）；第4章 项目综合管理（利益相关者、质量、采购、信息与沟通、冲突、风险管理）；第5章 成功项目管理的应用与案例。"
     },
     "D.1.5": {
-      "source": "zh-governance",
-      "covers": "依使用流程实践数据标准、数据建模、数据质量、目录采集与血缘，并读数据目录子指南；组织责任和通用治理理论另学。"
-    },
-    "I.1.3": {
-      "source": "zh-bpm",
-      "covers": "读业务流程基础、BPM、BPMN流程建模、治理和DMN决策建模单元；定量排队分析与厂商无关实施另补。"
+      "source": "path-d-1-5",
+      "covers": "全书的 11 个数据管理职能章＋主题章：第3章 数据治理（决策权与责任体系）、第4章 数据架构、第5章 数据建模和设计、第6章 数据存储和操作（含「在整个数据生命周期中，从计划到销毁」的运维活动）、第7章 数据安全、第8章 数据集成和互操作、第9章 文档和内容管理、第10章 参考数据和主数据、第11章 数据仓库和商务智能、第12章 元数据管理（定义、模型、数据流等元数据）、第13章 数据质量管理（规划并实施质量技术以测量、评估和提高适用性）、第16章 数据管理组织和角色期望（组建团队与角色职责）、第17章 数据管理和组织变革管理。"
     },
     "I.2.1": {
-      "source": "zh-computing-ethics",
-      "covers": "按伦理理论、技术变革与专业责任、健康安全/自由/隐私/公平/真实/产权案例的CE01–CE16公开课件学习，并写案例分析；当前法规另查。"
+      "source": "path-i-2-1",
+      "covers": "四部分：理论基础（CE01–CE06 伦理学理论）、技术伦理（CE07 技术变革、CE08 专业责任、CE09 指导准则）、典型案例（CE10 健康安全、CE11 自由尊重、CE12 隐私保护、CE13 公平公正、CE14 真实可信、CE15 产权利益）、总结（CE16）。"
     },
     "A.4.2": {
       "source": "path-a-4-2",
@@ -5389,8 +5908,8 @@
       "covers": "KubeEdge 架构（cloud/core/edge）、把容器化业务与设备管理扩展到边缘节点、边缘自治、MQTT 设备通信、云边元数据同步；解释在边缘处理数据可降低带宽、提高响应、保护隐私。"
     },
     "D.4.1": {
-      "source": "zh-knowledge-graphs",
-      "covers": "按表示、存储、获取、融合、本体、推理和查询/问答单元建立图谱，配课程项目。"
+      "source": "path-d-4-1",
+      "covers": "官方课程页（国家高等教育智慧教育平台）列出的九章：知识图谱概论、知识表示（符号与向量）、存储与查询、抽取与构建、推理（基于 Ontology / 基于规则 / 嵌入学习 / 规则学习 / Ontology Embedding）、融合（本体匹配、实体对齐）、问答、图算法与图数据分析、技术发展（多模态、KG 与图神经网络融合、KG 与大语言模型等）。"
     },
     "M.6.4": {
       "source": "path-m-6-4",
@@ -5409,12 +5928,12 @@
       "covers": "中文课程：学习分析的理论基础、技术方法、实践应用、潜能挑战与未来展望；用 R 语言演示如何分析教育研究与实践数据（编程填空、同伴互评），案例来自真实教学。覆盖学习平台数据的分析流程与效果评估，但不含智能辅导系统与测量理论（IRT）。"
     },
     "X.1.1": {
-      "source": "mindspore-lite",
-      "covers": "端侧推理（C++/Java 接口、模型转换）、端侧训练、训练后量化、在 MCU 等小型系统上推理、通过 Delegate 接入专用芯片、静态库裁剪和基准测试。这是工具链文档不是课程，感知算法、端边云协同和隐私权衡要配合英文课程。"
+      "source": "path-x-1-1",
+      "covers": "课程概述与授课目标：①介绍机器视觉相关目标检测常用算法原理（迁移学习再训练预训练模型）；②重点讲业界实战型深度学习预训练模型加速平台的安装与使用（OpenVINO、头歌），做模型优化与推理；③通过案例与综合实训把机器视觉用到智能交通灯控制、儿童睡姿检测、智能冰箱、智能售药机等典型边缘计算场景；④授课目标要求用 OpenVINO（含 AIxBoard 板子）实现目标检测、语义分割等预训练模型在边缘计算领域的应用；案例代码来自 openvinotoolkit/openvino_notebooks。"
     },
     "X.2.4": {
-      "source": "fhir",
-      "covers": "医疗信息互操作与 FHIR 的工程实践补充，以 Azure 为实例；不替代医疗工作流和信息学完整课程。"
+      "source": "path-x-2-4",
+      "covers": "课程章节：技术在智慧医院中的作用；医院信息系统（3.1「他」是谁 / 3.2 技术特点 / 3.3 聪明如「他」）；智慧医院门诊信息化管理（门诊业务流程与新思路）；智慧医院住院管理信息化（住院管理业务流程）；电子病历；医技系统助力医院信息化管理；医学影像信息化管理；病案信息管理；远程医疗；大数据技术在智慧医院管理中的应用；新技术助力智慧医院；互联网医疗；人工智能大模型赋能医疗。"
     },
     "M.4.2": {
       "source": "path-m-4-2",
@@ -5465,16 +5984,16 @@
       "covers": "多项式基础与计算机代数入门、多项式消元与方程求解（结式、Gröbner 基、特徵列）、计算交换代数与代数几何、计算实代数几何、几何定理的机器证明；教材为王东明等《多项式代数》。"
     },
     "F.1.4": {
-      "source": "zh-random-algorithms",
-      "covers": "重点读第11章随机算法、第12章P与NP、第13章近似算法；在线算法、竞争比与下界仍用英文讲义。"
+      "source": "path-f-1-4",
+      "covers": "课程概述原文按模块写清三条线：近似算法模块“给出可证明质量的近似解与近似比分析”，随机算法模块“提升期望效率并加强概率论证”，在线算法模块“引入竞争分析应对实时决策”；另含线性规划、高级图算法、NP 问题与启发式算法。以主讲教师教材《高级算法》为依托，“MOOC 与教材章节相互对应”。页面“课程大纲”栏只列了预备知识（算法设计与分析），未渲染分讲标题。"
     },
     "F.1.5": {
-      "source": "zh-hit-bigdata-algo",
-      "covers": "学第二、三讲亚线性算法（概述与例析）、第四至六讲外存算法（概述、外存查找结构、外存图数据算法）、第七至九讲 MapReduce 与超越 MapReduce 的并行算法；第十讲众包算法超出本技能。大纲只列到讲名，看不出是否讲性质测试；没有单列草图与流式摘要，也没有工作量/跨度的形式化模型，这几项看英文课程。"
+      "source": "path-f-1-5",
+      "covers": "官方大纲十讲：第一讲 大数据算法概述；第二讲 亚线性算法（分讲标题经同课转载核对为 2.1 亚线性算法的定义、2.2 水库抽样—空间亚线性算法、2.3 平面图直径—时间亚线性计算算法、2.4 全0数组判定—时间亚线性判定算法）；第三讲 亚线性算法例析（3.1a/3.1b 数据流中频繁元素 基础知识/算法与分析、3.2a/3.2b 生成树权重一/二、3.3 数组有序性判定）；第四讲 外存算法概述；第五讲 外存查找结构（B 树、KD 树）；第六讲 外存图数据算法（表排序、时间前向处理、缩图法）；第七至九讲 MapReduce 与超越 MapReduce 的并行大数据处理；第十讲 众包算法。"
     },
     "F.1.6": {
-      "source": "zh-parameterized",
-      "covers": "读第一章绪论：固定参数可解（FPT）的定义与意义、核化作为预处理和设计工具、精确算法与强指数时间假设（SETH）的背景；正文以反馈点集、反馈边集问题示范参数算法与精确算法的设计。没有 W 层级、W[1]-难归约和 3SUM/APSP 细粒度归约，这一半要读英文课程。"
+      "source": "path-f-1-6",
+      "covers": "目录可核到章/节：第 1 章 导引；第 2 章 参数计算简介（2.1 NP 完全理论、2.2 固定参数可解、2.3 固定参数不可解、2.4 固定参数枚举、2.5 参数化方法）；第 3 章 核心化（3.1 NT 定理与基于最大匹配/线性规划的 NT 算法、3.2 皇冠分解、3.3 极值归纳技术、3.4 随机方法、3.5 基于低度点的核心化、3.6 核下界技术：对偶性方法/基于复杂性理论假设的方法/基于参数化规约）；第 4 章 分支搜索法；第 5 章 迭代压缩和局部贪婪；第 6 章 随机参数算法设计技术（含确定化方法与 (n,k)-Universal Set）；第 7 章 彩色编码；第 8 章 平面图参数算法设计技术（8.1 平面图上的核心化技术）。"
     },
     "P.3.2": {
       "source": "path-p-3-2",
@@ -5489,8 +6008,8 @@
       "covers": "中文正文：面向文档、索引与检索、全文搜索、分析器、相关性评分、集群内原理、分布式文档存储、分片与副本、搜索执行与近实时。覆盖倒排索引的使用、排序与在线检索服务；不含检索评估指标与稠密向量检索。"
     },
     "D.4.2": {
-      "source": "zh-knowledge-graphs",
-      "covers": "选知识表示、规则及本体推理、知识融合、语义约束和本体表示学习；严格描述逻辑与神经符号研究仍配英文。"
+      "source": "path-d-4-2",
+      "covers": "第2章 知识表示：2.2 经典知识表示理论（2.2.1 语义网络、2.2.2 框架、2.2.3 一阶谓词逻辑、2.2.4 描述逻辑）；2.3 语义网技术体系（2.3.1 语义网整体架构、2.3.2 RDF 及其语义扩展 RDFS、2.3.3 本体与本体描述语言 OWL、2.3.4 规则及其交换格式、2.3.5 查询语言）；2.4 知识图谱及其知识体系；第8章 知识推理：8.1 概述（推理类型、典型应用）、8.2 归纳推理：规则获取（一阶规则学习、关联规则挖掘、概率统计规则权重）、8.3 演绎推理：规则应用（马尔科夫逻辑网、概率软逻辑）、8.4 混合式推理。"
     },
     "A.1.1": {
       "source": "path-a-1-1",
@@ -5525,36 +6044,36 @@
       "covers": "实时调度中的 RM 算法、利用率界与精确可调度性判定、调度开销与优先级反转；手算例题。"
     },
     "V.1.2": {
-      "source": "zh-multimedia",
-      "covers": "选第2章图像视频、第4章数字语音、第7章音频/图像/视频压缩、第9章存储与网络传输；容器、同步和现代媒体流水线配英文。"
+      "source": "path-v-1-2",
+      "covers": "分 P 目录：2.1–2.5 图像基础/数字图像处理/视频基础/数字视频关键技术/应用；4.1–4.4 数字语音基本概念与语音技术；7.1–7.4 数据压缩原理、音频/图像/视频压缩编码；9.1–9.5 存储、数据中心、云计算存储、多媒体网络传输（两讲）；10.1–10.5 加密、数字水印、取证、生物认证。"
     },
     "V.2.1": {
-      "source": "zh-hci",
-      "covers": "选认知心理、人因、交互模型、任务分析与可用性原理；先理解用户能力与错误，再做界面分析。"
+      "source": "path-v-2-1",
+      "covers": "以用户为中心的系统设计方法：需求分析、交互设计与体验评估；讲“为什么产品会不好用”“如何确认用户需求并定义其行为”。课程概述未单列感知/注意/心智模型等认知心理学内容。"
     },
     "V.2.2": {
       "source": "zh-hci",
       "covers": "选交互需求获取、用户研究、设计过程、原型及交互产品评估，完成一个迭代设计项目。"
     },
     "V.3.1": {
-      "source": "zh-visualization",
-      "covers": "按基础篇的人、数据与可视化流程学习视觉编码、图表和感知，再读应用篇并完成作品；交互评估配英文教材。"
+      "source": "path-v-3-1",
+      "covers": "基础篇（人、数据、可视化流程的理论与概念，含视觉编码与感知）；数据篇（时空、地理信息、高维非空间、层次与网络数据的可视化方法）；应用篇（可视化工具与实例）。15 章，偏原理与类型方法，交互与读图误差只在流程/评估处点到。"
     },
     "V.3.2": {
       "source": "zh-visualization",
       "covers": "从时空、地理、高维、层次和网络数据可视化及可视分析入门；场/体数据算法和完整用户评估仍配英文。"
     },
     "I.2.2": {
-      "source": "zh-gran-i-2-2",
-      "covers": "中文慕课：文献检索（数据库与检索式）、文献管理与阅读、选题与开题、论文结构与写作、投稿与规范、实验报告——对应“写作中的信息处理（检索/批判阅读/引用）”这一块。技术文档体裁（提案、进度报告、操作说明）、审查（peer review）与团队沟通不在本课范围，用英文主资源补。"
+      "source": "path-i-2-2",
+      "covers": "技术写作的基本概念与语言特点、文档信息设计的基本原则、常见技术文档类型（备忘录/电子邮件、简历与求职信、用户手册与说明书、企划书、专业报告）、技术写作必备的研究方法；以“文本读者为中心”。"
     },
     "I.2.3": {
-      "source": "zh-research",
-      "covers": "选学术诚信、科学问题与假设、验证假设、实验共性及方法报告；代码/数据版本、复现与实验效度仍配Turing Way。"
+      "source": "path-i-2-3",
+      "covers": "上篇 科学研究方法（以“科学假设为驱动”、实验设计能力）、中篇 学术论文写作方法、下篇 投稿与发表；大纲含学术诚信。"
     },
     "X.1.3": {
-      "source": "zh-autonomous-driving",
-      "covers": "按官方课程部署Apollo并学习感知、定位、预测、规划、控制与仿真实践；实时安全评估和实车工程仍需专门训练。"
+      "source": "path-x-1-3",
+      "covers": "官方中文课程：部署 Apollo、感知、定位、预测、规划、控制与仿真实践；覆盖简介的感知/定位/预测/规划/控制，实时安全评估与实车工程不在课程内。"
     },
     "X.2.2": {
       "source": "path-x-2-2",
@@ -5569,7 +6088,9 @@
       "covers": "泊松／马尔可夫过程、Kendall 记号、M/M/1、多服务台与损失系统、Little 定律、电话网性能与 Python 仿真。"
     }
   },
-  "chineseGaps": {},
+  "chineseGaps": {
+    "I.1.3": "本轮未找到可组成独立中文路线的教学，逐知识点缺口与查找记录见双语路线。"
+  },
   "supplementary": {
     "D.3.1": [
       {
@@ -5602,31 +6123,74 @@
     ],
     "F.1.2": [
       {
-        "title": "OI Wiki：字符串",
-        "url": "https://oi-wiki.org/string/",
-        "lang": "zh",
-        "covers": "补字符串匹配、Trie、后缀数组/自动机等索引。社区维护的算法参考书，非大学课程。",
+        "title": "Algorithms, 4th Edition 配套站：§5.2 Tries、§5.3 Substring Search、§6.3 Suffix Arrays",
+        "url": "https://algs4.cs.princeton.edu/52trie/",
         "tier": "material",
-        "access": "免费在线正文，无需注册。",
-        "free": true
-      },
-      {
-        "title": "OI Wiki：图论",
-        "url": "https://oi-wiki.org/graph/",
-        "lang": "zh",
-        "covers": "补最短路、网络流和匹配。先完成基础数据结构与算法范式。",
-        "tier": "material",
-        "access": "免费在线正文，无需注册。",
-        "free": true
-      },
-      {
-        "title": "Algorithms, 4th Edition：Strings",
-        "url": "https://algs4.cs.princeton.edu/50strings/",
         "lang": "en",
-        "covers": "作者配套网站：Trie、子串查找、正则表达式；后缀数组另见该站 Context 章。",
+        "free": true,
+        "covers": "补 Erickson 没有的字符串索引结构：§5.2 三叉查找树/R 向 trie 与字符串符号表，§5.3 子串查找（KMP、Boyer–Moore、Rabin–Karp），§6.3 后缀数组（后缀排序、最长重复子串、关键词索引）。",
+        "access": "免费在线正文与代码，无需注册。",
+        "role": "supplement"
+      },
+      {
+        "title": "山东财经大学《算法分析与设计》（中国大学MOOC，李恒武等）",
+        "url": "https://www.icourse163.org/course/SDCJDX-1206671828",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "授课目标原文列出的方法：枚举、递推、贪心、分治、动态规划、回溯、分支限界、网络流、图算法、随机算法、近似算法；先修为高级语言程序设计与数据结构。用来补中文侧的网络流、图算法（含最短路）与算法设计范式，并给出配套教材（王晓东《计算机算法设计与分析》等）。页面未渲染分讲大纲。",
+        "access": "中国大学MOOC 注册后按开放学期免费学习，认证证书另计；页面显示“认证学习”。视频与字幕需登录，未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "OI Wiki：最短路 / 网络流简介 / 二分图",
+        "url": "https://oi-wiki.org/graph/shortest-path/",
         "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "最短路页（Dijkstra、Bellman–Ford、SPFA、Floyd、Johnson 等算法与实现）；网络流简介页只作概念入口（流网络、最大流/最小割的定义与算法索引）；二分图页作匹配概念入口（判定、最大匹配、最小点覆盖、Kőnig 定理）。定理证明与匹配归约分别见本轮新增的 /graph/flow/max-flow/ 与 /graph/graph-matching/bigraph-match/ 两页。",
         "access": "免费在线正文，无需注册。",
-        "free": true
+        "role": "supplement"
+      },
+      {
+        "title": "OI Wiki：前缀函数与 KMP 算法 / 后缀数组 (SA)",
+        "url": "https://oi-wiki.org/string/kmp/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "KMP 页讲前缀函数定义、性质、求法与匹配应用；后缀数组页讲 SA 的定义、倍增与 SA-IS/DC3 构造、以及“在字符串中找子串”“最长公共前缀”等索引应用。补中文侧字符串匹配与索引。",
+        "access": "免费在线正文，无需注册。",
+        "role": "supplement"
+      },
+      {
+        "title": "OI Wiki：均摊复杂度",
+        "url": "https://oi-wiki.org/basic/amortized-analysis/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "摊还（均摊）分析：聚合分析、记账法、势能法，用于动态数组扩容等场景。补本节点“动态规划与摊还分析”里的摊还部分。",
+        "access": "免费在线正文，无需注册。",
+        "role": "supplement"
+      },
+      {
+        "title": "OI Wiki：最大流（含最大流最小割定理及其证明、Dinic/ISAP/HLPP 与复杂度分析）",
+        "url": "https://oi-wiki.org/graph/flow/max-flow/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "网络流模型与可行流/最大流定义、Ford–Fulkerson 增广与残量网络、最大流最小割定理的完整证明（取等条件、由增广停止构造最小割）、Dinic 分层图与阻塞流、当前弧优化、ISAP/HLPP 预流推进，以及各算法在一般/单位容量网络上的复杂度证明；页内明确写“Kőnig 定理是最大流最小割定理的特殊情形”。",
+        "access": "免费在线阅读，CC BY-SA 4.0，无需注册；简体中文。",
+        "role": "supplement"
+      },
+      {
+        "title": "OI Wiki：二分图最大匹配（Kuhn/Hopcroft–Karp、归约为最大流、Kőnig 定理与线性规划形式）",
+        "url": "https://oi-wiki.org/graph/graph-matching/bigraph-match/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "二分图与匹配的定义、Berge 引理与增广路、Kuhn（匈牙利）算法、Hopcroft–Karp 算法及分层图/阻塞流优化与复杂度证明，以及“归约为最大流问题”一节（加源点汇点、容量全 1，整数流与匹配一一对应，任意最大流算法可用于匹配并需针对性优化）、最小点覆盖/Kőnig 定理、二分图最大独立集与线性规划形式。",
+        "access": "免费在线阅读，CC BY-SA 4.0，无需注册；简体中文。",
+        "role": "supplement"
       }
     ],
     "D.2.2": [
@@ -5994,22 +6558,24 @@
     ],
     "I.2.2": [
       {
-        "title": "Purdue OWL：Conducting Research",
-        "url": "https://owl.purdue.edu/owl/research_and_citation/conducting_research/index.html",
-        "tier": "material",
-        "lang": "en",
-        "free": true,
-        "access": "免费公开正文；具体课程视频的访问条件以来源说明为准。",
-        "covers": "补为写作寻找、评价和整合资料。"
+        "title": "科技文献检索与论文写作（南京理工大学，中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/NJUST-1468779200",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "从选题到终稿的写作要求、写作技巧与规范，以及“如何阅读、评判、分析与利用资料”——对应“写作中的信息检索与批判阅读”；技术文档体裁、同行评审与团队沟通不在本课。",
+        "access": "中国大学MOOC 免费注册学习；视频按学期开放；字幕未核对。",
+        "role": "supplement"
       },
       {
-        "title": "英文技术写作（东南大学，中国大学MOOC；国家精品在线开放课程）",
-        "url": "https://www.icourse163.org/learn/SDU-1206693808",
+        "title": "管理沟通（东北大学，中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/NEU-1473974162",
         "tier": "video",
-        "lang": "unknown",
-        "free": null,
-        "access": "中国大学MOOC 免费注册学习（页面标注“智慧慕课/认证学习”，认证证书可能收费）；课程材料与作业随当前开放学期提供。 字幕未核对。 公开介绍可读，当前旁听与视频条件未登录核验。 课程简介为中文，授课及字幕语言未核对。",
-        "covers": "课程概述原文：技术写作的基本概念与语言特点、文档信息设计的基本原则、常见技术文档类型（往来信函/备忘录/电子邮件、求职文件/简历/求职信、用户手册和说明书、企划书、专业报告）、技术写作必备的研究方法；特色写明“以文本读者为中心”，并训练研究与分析能力、职场沟通。与收窄后的“技术文档/审查/读者与团队沟通、检索与批判阅读作为写作中的信息处理”基本对齐；缺口是团队协作与冲突管理（可用 BCcampus 教材第4章补）与中文文档规范（阮一峰规范可补）。边界：课程对象是英文技术文档，讲解语言与作业语言以平台为准（未核实是否全中文讲授、是否有中文字幕），中文写作实践需自行迁移。"
+        "lang": "zh",
+        "free": true,
+        "covers": "课程概述按“个人—人际—组织”三层组织：自我沟通、倾听、演讲与表达；面谈、人际沟通、跨文化沟通；组织层面的笔头沟通、会议沟通、上下行沟通、危机沟通与团队冲突管理。概述并点名可操作工具：“团队冲突的五类处理方式”“沟通受众的三维分析模型”“面谈问题的漏斗型/倒斗型顺序”“演讲稿开头的六种设计方法”。",
+        "access": "中国大学MOOC 免费注册学习，认证证书另计；中文授课；课程大纲栏为空，视频与分讲需登录，字幕未核对。",
+        "role": "supplement"
       }
     ],
     "H.2.2": [
@@ -6302,24 +6868,56 @@
     ],
     "F.3.4": [
       {
-        "title": "Mathematics in Lean：形式化数学免费教材",
+        "title": "Mathematics in Lean（Avigad 等，Lean4/mathlib 形式化数学教材，免费在线）",
         "url": "https://avigad.github.io/mathematics_in_lean/",
         "tier": "material",
         "lang": "en",
         "free": true,
-        "covers": "Lean4/mathlib 的逻辑、集合函数、代数、线性代数与分析形式化；任选数学实例练习机器检查证明，不要求同时精通 Rocq 与 Lean。",
-        "access": "官方免费公开文字材料；不依赖视频字幕。"
+        "covers": "13 章目录：Introduction、Basics、Logic、Sets and Functions、Elementary Number Theory、Discrete Mathematics、Structures、Hierarchies、Groups and Rings、Linear algebra、Topology、Differential Calculus、Integration and Measure Theory。提供 Lean 侧的“命题即类型＋机器检查证明”与真实数学形式化练习，不必与 Rocq 同时学。",
+        "access": "免费在线阅读（Lean 4 版本），无需注册；练习需装 Lean/mathlib。",
+        "role": "supplement"
       }
     ],
     "V.1.3": [
       {
-        "title": "CMU15-468：物理与可微渲染课件",
+        "title": "15-468/668/868 Physics-based Rendering（CMU，Spring 2026，Ioannis Gkioulekas；课程页 + 作业 + 渲染竞赛）",
         "url": "https://imaging.cs.cmu.edu/15-468/",
-        "tier": "material",
+        "tier": "website",
         "lang": "en",
         "free": true,
-        "covers": "免费逐讲课件覆盖逆向/可微渲染，并有一讲 Physics simulation 导论；不宣称包含完整物理动画课。",
-        "access": "官方免费公开文字材料；不依赖视频字幕。"
+        "covers": "课程描述：light transport 的理论与模拟、scientific imaging、differentiable/inverse/neural rendering；要求学生自己实现 Monte Carlo renderer 并参加渲染竞赛；含一讲 physics simulation 导论。",
+        "access": "课程页、syllabus 与作业说明公开；视频/字幕未核对。英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "GAMES202：高质量实时渲染（闫令琪，中文授课，15 讲 + 作业）",
+        "url": "https://games-cn.org/games202/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "15 讲大纲：实时渲染概述、渲染管线/渲染方程/微积分回顾、实时阴影（shadow mapping/VSM/PCSS/SDF）、实时环境光照（prefiltering/split sum）、实时全局光照（SSAO/RSM/VPL/LPV/VXGI/PRT）、实时高质量着色（Disney BRDF/GGX/LTC、participating media、BSSRDF）、实时光线追踪（backprojection/denoising/SVGF）、TAA/SMAA/DLSS。覆盖渲染方程与 GI 的工程近似，不讲可微渲染。",
+        "access": "课程主页与大纲免费；中文授课、英文课件，每课当天放出录像；作业通过 CES-Alpha 提交，非强制；结业证书由 GAMES 平台发放。",
+        "role": "supplement"
+      },
+      {
+        "title": "GAMES103：基于物理的计算机动画入门（GAMES 平台，中文授课）",
+        "url": "https://games-cn.org/games103/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "基于物理的动画（刚体、质点弹簧、约束、碰撞、流体入门）；对应简介里“一般物理仿真只作一讲应用延伸”的延伸部分，不用于渲染主线。",
+        "access": "课程主页与视频入口公开；中文授课；字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "可微绘制技术研究进展（许威威、周漾、吴鸿智、过洁；《中国图象图形学报》2021, 26(06):1521-1535，DOI 10.11834/jig.200853，免费 PDF）",
+        "url": "https://www.cjig.cn/rc-pub/front/front-article/download/55704529/lowqualitypdf/%E5%8F%AF%E5%BE%AE%E7%BB%98%E5%88%B6%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E8%BF%9B%E5%B1%95.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "可微绘制（可微渲染）的系统中文综述：问题定义（改造光栅化/光线跟踪流程以支持梯度回传，计算输出图像变化对输入几何、材质属性的导数）、与优化及深度学习结合做逆向推理；按真实感绘制、三维重建、表观采集建模三条应用线组织，含基于图像的绘制、表达学习、逆向光学设计等分支，并给出发展趋势。作者单位：浙江大学 CAD&CG 国家重点实验室、深圳大学、南京大学。",
+        "access": "期刊官网免费下载 PDF（低质量版），无需注册；中文；属同行评议综述而非课程，无配套作业。",
+        "role": "supplement"
       }
     ],
     "P.1.1": [
@@ -6403,9 +7001,9 @@
         "tier": "video",
         "lang": "zh",
         "free": true,
-        "covers": "1.2 分布式数据库的数据管理、1.3 ACID 与 BASE、1.4 NoSQL 数据库分类；2.1–2.5 HBase/HDFS；3.1 HBase 数据模型；4.2 HBase Region 管理（分片与 Region 定位）；38 讲 MongoDB 服务。用于把 NoSQL 模型与 HBase 分片落到可操作层面。",
-        "access": "B站免费播放；个人教师账号（计算机杨老师），非高校官方账号；未核对字幕。",
-        "role": "supplement"
+        "covers": "40 个分 P 的实际内容是 1.x 分布式数据库概述与 ACID/BASE、NoSQL 分类，2.x–4.x 全部是 HBase（简介、数据模型、Shell、Java/Thrift 编程、Region 管理、集群管理），不含两阶段提交/Paxos/Raft 等提交协议。",
+        "access": "第三方转载，授权未核。B站免费播放；个人教师账号（计算机杨老师），非高校官方账号；未核对字幕。",
+        "role": "alternative"
       },
       {
         "title": "TiDB 官方中文文档：整体架构（TiKV Region 与分布式事务）",
@@ -6418,13 +7016,23 @@
         "role": "reference"
       },
       {
-        "title": "PingCAP：TiDB乐观事务模型（中文原理教程）",
-        "url": "https://docs.pingcap.com/zh/tidb/stable/optimistic-transaction/",
+        "title": "PingCAP 官方中文培训课程：TiDB 数据库核心原理与架构（101_v6）＋开发者课程 TiDB 特有功能与事务控制（204_v6）",
+        "url": "https://img1.pingcap.com/files/2023/10/20231030033451647.pdf",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "101 课程第 01 章「TiDB 数据库架构」含 TiKV 架构与数据持久化、TiKV 如何提供 MVCC 和分布式事务支持、TiKV 基于 Raft 算法的分布式一致性；另有第 02 章起的存储与调度等章节；204 课程「TiDB 特有功能与事务控制」讲事务控制。课程为在线学习，标注 9 小时、限时免费。",
+        "access": "PingCAP 官方培训认证手册 PDF 免费下载，列明课程大纲与在线学习地址 cn.pingcap.com/courses-catalog；在线课程需在该站注册（限时免费，认证考试另收费）；中文课件与中文讲授（视频讲解语言与字幕未核对，本轮只核对了课程大纲）。",
+        "role": "supplement"
+      },
+      {
+        "title": "北京理工大学研究生课程《分布式数据库》教学大纲（研究生院公开 PDF）",
+        "url": "https://grd.bit.edu.cn/docs/20180102010842574986.pdf",
         "tier": "material",
         "lang": "zh",
         "free": true,
-        "covers": "实际讲解跨节点两阶段提交、时间戳/MVCC、prewrite与primary提交、冲突检测及重试局限。",
-        "access": "厂商官方免费中文正文，无需部署云集群；注意当前版本已废弃自动重试，按页面版本提示阅读。",
+        "covers": "第4章 分布式数据库中的事务管理和恢复（8 学时）：4.1 分布式事务的基本概念、4.2 分布式事务模型、4.3 分布式事务的执行与恢复、4.4 分布式事务的两阶段提交协议、4.5 分布式事务与数据库的一致性；第5章 分布式并发控制（6 学时）：5.1 概念和理论、5.2 封锁技术；另有分布式数据库系统设计（6 学时）与分布式查询处理与优化（6 学时）。",
+        "access": "北理工研究生院官网公开的课程教学大纲 PDF，免费、无需注册；只有章节与学时，没有配套讲义/录像公开（未找到）。",
         "role": "supplement"
       }
     ],
@@ -9524,6 +10132,16 @@
         "covers": "机器学习的统计学基础：基本概率论概念、常用随机分布、指数族分布与统计量、信息度量、概率不等式、随机变量收敛、贝叶斯推理等（官方内容简介原文）；同样不含稀疏估计专章。",
         "access": "北京大学媒体资源服务平台，标注「开放范围：全网」「课程语言：中文」「课程学时：32」；分讲目录同样由平台动态加载，未逐讲核对。",
         "role": "supplement"
+      },
+      {
+        "title": "高维统计学：非渐近视角（Wainwright，中文译本）",
+        "url": "https://www.cmpedu.com/books/book/5606424.htm",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "先学第4章一致收敛；接第7章稀疏线性模型、Lasso相合性、估计和预测误差；第9章扩展到正则化M估计。",
+        "access": "出版社公开目录用于核对范围；完整中文教材需购买或通过合法馆藏借阅。本轮未购买、未读收费全文。",
+        "role": "supplement"
       }
     ],
     "M.6.3": [
@@ -11047,6 +11665,1172 @@
         "free": true,
         "covers": "离线性：设备与下游设备在断网/间歇连接下长时间运行；离线模式下 IoT Edge hub 承担消息缓存（重连后补发）、代替 IoT Hub 认证模块与下游设备、维持本地处理三个角色。",
         "access": "Microsoft Learn 免费英文文档。",
+        "role": "supplement"
+      }
+    ],
+    "F.1.4": [
+      {
+        "title": "山东财经大学《算法分析与设计》（中国大学MOOC，李恒武等）",
+        "url": "https://www.icourse163.org/course/SDCJDX-1206671828",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "授课目标原文列出的方法：枚举、递推、贪心、分治、动态规划、回溯、分支限界、网络流、图算法、随机算法、近似算法；先修为高级语言程序设计与数据结构。页面未渲染分讲大纲，“随机算法”“近似算法”只到目标点名，没有可核的讲次与深度。",
+        "access": "中国大学MOOC 注册后按开放学期免费学习，认证证书另计；视频与字幕需登录，未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "随机算法（xestray 站点《高级数据结构与算法分析》讲义第 13 讲）",
+        "url": "https://xestray.cc/ComputerScience/ADS/lec-13/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "随机化算法的两类保证及其定义：蒙特卡洛（“只以高概率给出正确答案”，用于近似解/估算）与拉斯维加斯（“总是正确、期望时间高效”）；雇佣问题的指示器随机变量期望分析；随机化快速排序的期望 O(n log n) 分析（按 type j 子问题计数推出 E[T]=O(N)）。",
+        "access": "免费网页正文，无需注册；简体中文；作者自述讲义整理自“吴一航学长的 ADS 讲义”。",
+        "role": "supplement"
+      },
+      {
+        "title": "近似算法（xestray 站点《高级数据结构与算法分析》讲义第 11 讲）",
+        "url": "https://xestray.cc/ComputerScience/ADS/lec-11/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "近似比 ρ(n)（A(I) ≤ ρ(n)·OPT(I)）与渐近近似比（A(I) ≤ α·OPT(I)+k）的定义与区别；一维装箱 Next Fit/Any Fit 的近似比；装箱问题 3/2 近似比下界的反证证明（若存在 <3/2 的多项式近似算法则可判定“能否装入两箱”这一 NPC 问题）；0-1 背包的 2-近似与 FPTAS；K-Center 的 2-近似与“最优近似比”论证。",
+        "access": "免费网页正文含 LaTeX 公式与证明，无需注册；简体中文。",
+        "role": "supplement"
+      },
+      {
+        "title": "竞争分析与在线算法（《土法炼钢》算法系列第 115 篇，中文长文教程）",
+        "url": "https://quant67.com/post/algorithms/115-competitive-analysis/competitive-analysis.html",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "在线与离线算法的定义差异、对手模型（自适应/ oblivious）、确定性竞争比与随机化竞争比的形式定义、竞争比与近似比的区别；滑雪租赁的确定性最优策略与确定性下界、随机化策略；分页问题 LRU 的 k-竞争性证明、确定性下界（对手每次请求缺页页）、随机化标记算法与随机化下界；k-server 与 Work Function 算法；在线二分搜索/单向交易；Yao 原理（minimax 定理、随机化下界证明方法）；在线负载均衡与 Adwords 的贪心/BALANCE。",
+        "access": "免费网页正文，含公式推导、定理与证明、Python 模拟代码，无需注册；简体中文。",
+        "role": "supplement"
+      },
+      {
+        "title": "《高级算法》（林海，机械工业出版社，ISBN 978-7-111-76447-2，定价 59.0 元；出版社官方图书页）",
+        "url": "http://cs.cmpedu.com/books/book/5608710.htm",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "官方内容简介明确本书含“困难问题的常用算法，如近似算法、随机算法、在线算法、启发式算法”，并含困难问题（NPC）的概念与证明、线性规划/整数规划模型、高级图算法（中心性、社群发现）；每章给应用实例。出版社页面注明配套资源含电子课件、教学大纲、微课视频与 B 站（账号 foretmer）录课。页面未展示章节目录。",
+        "access": "需购买，定价 59.0 元（2024-11-29 出版，1-2 印次）；无免费电子版；未购买。",
+        "role": "reference"
+      }
+    ],
+    "F.1.5": [
+      {
+        "title": "并行算法（xestray 站点《高级数据结构与算法分析》讲义第 14 讲）",
+        "url": "https://xestray.cc/ComputerScience/ADS/lec-14/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "并行算法的度量与模型：加速比 S(p)=T1/Tp、PRAM（EREW/CREW/CRCW-Priority 等子模型）、Amdahl 定律与最大加速比；以“深度 D(n)”和“总工作量 W(n)”成对写出并行算法的递推式并求解（并行求和、前缀和、归并、最大元素）；划分范式、双对数范式 D(n)=O(log log n)/W(n)=O(n log log n)、加速级联范式（把 W(n) 压到 O(n)），并给出 O(1) 深度、O(n) 工作量的随机化最大值算法。",
+        "access": "免费网页正文（约 6300 字、22 行代码、12 张图），含公式与递推推导，无需注册；简体中文；作者自述整理自“吴一航学长的 ADS 讲义”。",
+        "role": "supplement"
+      },
+      {
+        "title": "Count-Min Sketch：点查询误差界、保守更新与生产实现（中文原理与代码）",
+        "url": "https://quant67.com/post/algorithms/31-count-min-sketch/count-min-sketch.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "配主课流算法讲次，读Count-Min的更新/查询、误差界证明与Count Sketch比较；用小数据流验证空间与误差变化。",
+        "access": "免费公开中文教学正文。",
+        "role": "supplement"
+      }
+    ],
+    "F.1.6": [
+      {
+        "title": "白天《反馈集相关问题的参数与精确算法研究》（电子科技大学博士学位论文，2024）",
+        "url": "https://tianbaics.github.io/Dissertation.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "绪论与第 2 章给出中文本语与背景：固定参数可解（FPT）的定义（时间复杂度中参数部分可超多项式）、W 层级包含关系 FPT=W[0]⊆W[1]⊆…⊆W[SAT]⊆W[P]、W[t]-难/完全的定义与独立集、团、碰撞集、集合覆盖的层级例子、FPT≠W[1] 蕴含 P≠NP；并把强指数时间假设（SETH）与集合覆盖猜想作为精确算法下界的研究背景。正文以反馈点集/反馈边集示范参数算法（迭代压缩、分支、分治）。全文没有“核化（kernelization）”内容，也没有 3SUM/APSP 的细粒度归约。",
+        "access": "作者 GitHub Pages 公开 PDF，免费；研究级学位论文，不是入门教材，先读绪论与第 2 章基础段。",
+        "role": "supplement"
+      },
+      {
+        "title": "Parameterized Algorithms（Cygan, Fomin, Kowalik, Lokshtanov, Marx, Pilipczuk, Pilipczuk, Saurabh；Springer 2015，作者站点公开的免费全书 PDF）",
+        "url": "https://www.mimuw.edu.pl/~malcin/book/parameterized-algorithms.pdf",
+        "tier": "book",
+        "lang": "en",
+        "free": true,
+        "covers": "Part I 基础工具：第 1 章 Introduction（FPT 定义与参数化视角）、第 2 章 Kernelization（2.1 形式定义起，核与 kernelization 的定义与基本构造）、第 5 章 Randomized methods；Part II 进阶算法（第 9 章 advanced kernelization 技术、第 10 章代数技术、第 11 章 treewidth 上 DP 加速、第 12 章 matroids）；Part III 下界：第 13 章 Fixed-parameter intractability（13.1 参数化归约、13.3 The W-hierarchy、13.5 W[1]/W[2]-完全问题）、第 14 章 Lower bounds based on the Exponential-Time Hypothesis（14.1 ETH 的动机与基本结果）、第 15 章 核下界（composition 与 polynomial-parameter transformations，证明 Longest Path 等问题没有多项式核）。",
+        "access": "作者站点免费 PDF 全书（约 100 万字符正文，可下载阅读）；Springer 纸质/电子版需购买。英文。",
+        "role": "supplement"
+      }
+    ],
+    "F.2.1": [
+      {
+        "title": "《编译原理》录课合集（B 站「蒋老师的课堂」，自制，24 个分P；第 2 章讲形式语言与文法，含 2-5「文法和语言的分类及文法的其他表示方法」）",
+        "url": "https://www.bilibili.com/video/BV1De4y1N71q",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "第 2 章：2-1 形式语言与符号串的基本概念、2-2 文法和语言的形式定义、2-3 短语和简单短语、2-4 文法的二义性和语言的二义性、2-5 文法和语言的分类及文法的其他表示方法；第 3 章用左右线性文法构造状态转换图、正规表达式与正规文法/自动机的等价转换。即“文法—语言—分类（0/1/2/3 型）—正规文法与有穷自动机对应”这一条线。",
+        "access": "免费观看，无需注册即可看；B 站自制投稿（copyright=1），合集“2022/2023编译原理录课”共 24 个分P；中文讲授；字幕未核对。",
+        "role": "supplement"
+      }
+    ],
+    "F.2.2": [
+      {
+        "title": "《可计算性理论》讲义第 2 讲（杨睿之，复旦大学哲学学院，2021 年课程 PDF）",
+        "url": "http://logic.fudan.edu.cn/doc/Course/2021/Recursion02.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "部分递归函数与可计算函数的定义（存在图灵机/程序 P 计算）、通用图灵机 Ξ、s-m-n 引理（参数引理：对每个二元部分可计算函数 Θ 存在严格递增可计算 q 使 Φ_{q(x)}(y)=Θ(x,y)）、s-m-n 引理的一般形式，以及递归定理（Recursion Theorem）的陈述与证明：对可计算 g 存在 e 使 Φ_{g(e)}=Φ_e，e 是 g 的不动点，并可由 g 的编号能行得到。",
+        "access": "免费 PDF（39 页，课程讲义，可直接下载），无需注册；简体中文；正文为幻灯片式提要＋证明。",
+        "role": "supplement"
+      },
+      {
+        "title": "《可计算性理论》讲义第 3 讲（杨睿之，复旦大学哲学学院，2021 年课程 PDF）：递归可枚举集、多一归约与图灵归约",
+        "url": "http://logic.fudan.edu.cn/doc/Course/2021/Recursion03.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "s-m-n 定理与递归定理的应用；递归可枚举集（c.e.）与多一归约 ≤m（含“A 是 c.e. 的当且仅当 A ≤m 0′”）；图灵归约 ≤T 与图灵跃迁（Turing jump），含“X ≤T Y 当且仅当 X′ ≤m Y′”。",
+        "access": "免费 PDF（课程讲义），无需注册；简体中文。",
+        "role": "supplement"
+      }
+    ],
+    "F.2.3": [
+      {
+        "title": "Computational Complexity: A Modern Approach（Arora & Barak，作者站点公开的免费 draft PDF）",
+        "url": "https://theory.cs.princeton.edu/complexity/book.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "第 6 章 Circuits（6.1 布尔线路、6.2 Karp–Lipton、6.3 Circuit lowerbounds、6.4 非一致层次定理、6.6 指数规模线路）与第 13 章 Circuit lowerbounds（13.1 AC0 与 Håstad Switching Lemma、13.4 线路复杂度的前沿与对角化下界）。补 15-455 没有的线路复杂度与下界。",
+        "access": "作者站点公开的 2007 年 draft PDF（免费阅读）；书页声明 draft 不得未经许可再分发，只作在线阅读链接，不下载传播。正式版由 Cambridge University Press 出版（付费，未核价）。",
+        "role": "supplement"
+      },
+      {
+        "title": "《计算复杂性理论》（傅育熙，清华大学出版社，2023；上海交通大学《计算复杂性》课程指定参考教材，课程站给出前 15 页 PDF）",
+        "url": "https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "课程站按章列出的讲义与教材章节一一对应：时间复杂性、空间复杂性、NP 完全性、多项式谱系、电路复杂性、随机计算（另有交互证明系统、近似计算与不可近似性）；课程站另给教材勘误（第 3.6 节 Håstad 对换引理的更正），说明教材含 Håstad switching lemma 这一电路下界工具。",
+        "access": "需购买（清华大学出版社 2023，课程站未标价，仅提供 1–15 页 PDF 与勘误）；中文教材；未购买。",
+        "role": "supplement"
+      },
+      {
+        "title": "上海交通大学《计算复杂性》课程讲义（傅育熙，2026 秋，CS3954/CS4308/CS7313）：时间、空间、NP 完全性、电路、随机计算各章 PDF",
+        "url": "https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/slides/2.Space-Complexity.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "与教材同章的讲义（正文为英文，页脚标中文书名与章名）：空间复杂性章含 Space Bounded Computation、Logspace Reduction、PSPACE Completeness、Savitch Theorem、NL Completeness、Immerman–Szelepcsényi 定理；NP 完全性章从 Cook 1971/Levin 1973 起讲 NP 完全性；电路复杂性章含 Boolean Circuit Model、Uniform Circuit、P/poly、Karp–Lipton 定理、NC 与 AC、P-Completeness、Håstad Switching Lemma；随机计算章含 Tail Distribution、概率图灵机、PP/BPP/ZPP、Random Walk 与 RL。",
+        "access": "免费 PDF，无需注册；正文为英文（仅页脚与书名中文），因此只作结构/深度参照，不计为中文教学正文。",
+        "role": "reference"
+      }
+    ],
+    "F.2.4": [
+      {
+        "title": "CMU 15-414 (Fall 2026) Schedule：Resolution / Sequent Calculus / Certificates",
+        "url": "https://www.cs.cmu.edu/~15414/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Fall 2026 课表逐条核对：10/8 Sequent Calculus、10/20 Certificates（可检查证明）、10/22 Resolution（归结）、10/27 Equality and Uninterpreted Functions、10/29 Theory Combination，另有 Contracts、Dynamic Logic、Loops、Induction、Predicate Transformers。补 s21 版没有单列的归结与证书/证明检查。",
+        "access": "免费公开课表与讲义链接，无需注册；讲义 pdf 链接在表内。",
+        "role": "supplement"
+      },
+      {
+        "title": "青岛大学《人工智能基础》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/QDU-1206502801",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "课程七部分含“经典逻辑推理”，简介写“掌握规则演绎系统和产生式系统的推理技术”，但课程大纲栏为空、无分讲标题，不能确认讲归结原理的讲次与深度。",
+        "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；视频与字幕需登录，未核对。",
+        "role": "alternative"
+      },
+      {
+        "title": "《软件分析技术》第 12 讲 布尔可满足性（熊英飞，北京大学，2025 秋课程讲义 PDF）",
+        "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides12_SAT.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "约束求解的问题设定（可满足/给赋值/给不可满足核心）；SAT 的文字、子句、合取范式 CNF 与“寻找使所有子句为真的布尔赋值”的定义；完整搜索与赋值推导（单元传播 Unit Propagation、Unate Propagation）、冲突检测、DPLL 递归过程；预处理中的归结 Resolution（两子句含 x 与 ¬x 时合并消去 x，多子句归结做笛卡尔积）与“早期完全基于归结、不穷举赋值的 DP 算法”；变量选择、Pure literal elimination、等价子句类；CDCL 冲突导向子句学习（切割使决策节点与矛盾节点不连通、回跳）。",
+        "access": "免费 PDF（课程站公开讲义），无需注册；简体中文；面向程序分析的约束求解视角。",
+        "role": "supplement"
+      },
+      {
+        "title": "《软件分析技术》第 13 讲 可满足性模理论（熊英飞，北京大学，2025 秋课程讲义 PDF）",
+        "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides13_SMT.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "SMT 的定义（给定一组理论、按给定逻辑求公式在该组理论解释下的可满足性）、理论（theory）与一阶公理；常见理论举例 EUF（等式与未解释函数，含公理与用不动点合并等价类的求解）、算术/线性方程组；Eager 编码成 SAT 的三种问题；Lazy 方法（黑盒组合 SAT 求解器与理论求解器，EUF/线性算术求解器，SAT 与 EUF 交替返回 SAT/UNSAT 的完整示例）；CDCL 复习与“理论指引”的动机（把定理信息回传给 SAT 求解器）。",
+        "access": "免费 PDF（课程站公开讲义），无需注册；简体中文。",
+        "role": "supplement"
+      }
+    ],
+    "F.3.1": [
+      {
+        "title": "《编程语言基础：Agda 描述》第二分册 Lambda：λ-演算简介（PLFA 中文版，Lambda 一章）",
+        "url": "https://agda-zh.github.io/PLFA-zh/Lambda/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "λ-演算的三类构造（变量、抽象、应用）与简单类型 λ-演算/PCF 的语法（BNF）；约束变量与自由变量、闭项与开项、α-重命名；代换（项中代入项）与 β-归约；归约规则的设计“使得一个项的子项在整项被归约之前先被归约。这被称为传值（Call-by-value）归约”，从左向右的确定性归约，小步操作语义与弱头范式（WHNF）；用 Church 表示法编码自然数并验证 plusᶜ · twoᶜ · twoᶜ 归约到四。",
+        "access": "免费在线全书，CC BY 4.0（中文译本由社区维护），无需注册；简体中文；含 Agda 代码与练习。",
+        "role": "supplement"
+      },
+      {
+        "title": "《编程语言基础：Agda 描述》附录 Substitution：无类型 λ-演算中的代换",
+        "url": "https://agda-zh.github.io/PLFA-zh/Substitution/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "代换（substitution）的形式定义与代换引理：M[x:=N][y:=L] = M[y:=L][x:=N[y:=L]]（Barendregt 1984 称代换引理），de Bruijn 索引下的平行代换形式 subst σ (M [ N ]) ≡ (subst (exts σ) M) [ subst σ N ]；重命名 rename 与代换的交换律；Abadi–Cardelli–Curien–Levy 的平行代换 σ-代数方程。",
+        "access": "免费在线全书，CC BY 4.0；简体中文；含 Agda 形式化。",
+        "role": "supplement"
+      },
+      {
+        "title": "《编程语言基础：Agda 描述》Untyped：完全正规化的无类型 λ-演算（传名调用的对照章）",
+        "url": "https://agda-zh.github.io/PLFA-zh/Untyped/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "把上一章“传值调用＋弱头范式＋确定性归约”换成“传名调用（Call-by-name）＋完全正规化＋非确定性归约＋开放项”的对照；只用变量/抽象/应用三种构造把自然数与不动点编码进去，并给出求值器。",
+        "access": "免费在线全书，CC BY 4.0；简体中文。",
+        "role": "supplement"
+      }
+    ],
+    "F.3.2": [
+      {
+        "title": "Programming Language Foundations in Agda（PLFA，Wadler & Kokke，免费在线）",
+        "url": "https://plfa.github.io/",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "目录核对：第二分册 Properties（可进性与保型性，即类型安全证明）、DeBruijn（内在类型的 de Bruijn 表示）、More、Inference（双向类型推理）；第三分册 Denotational Semantics（Denotational、Compositional、Soundness、Adequacy、ContextualEquivalence）——补 345H 没有的指称语义。全书用依赖类型的 Agda 写，是依赖类型的第一手实践。",
+        "access": "免费在线（HTML/epub），CC BY 4.0；需安装 Agda 做练习。",
+        "role": "supplement"
+      },
+      {
+        "title": "Programming Language Principles and Paradigms（University of Michigan 讲义）：Formal Type Systems 一节",
+        "url": "https://eecs390.github.io/notes/theory.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Formal Type Systems 小节：Variables、Functions、Subtyping（含 Subtyping and Arithmetic Operators、The Top Type、Subtyping and Functions、Full Typing Rules），给出子类型关系 S <: T 的形式规则与函数参数的逆变规则。补 345H 没有的子类型。",
+        "access": "免费公开讲义，无需注册。",
+        "role": "supplement"
+      },
+      {
+        "title": "《编程语言基础：Agda 描述》中文版（PLFA-zh，全书已译完）",
+        "url": "https://agda-zh.github.io/PLFA-zh/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "PLFA 中文版：《Quantifiers 全称量词与存在量词》以依值函数类型（Dependent Function Type／依赖积 Π）形式化 ∀、以依赖对形式化 ∃，并解释 Π[x∈A](B x) 的记法；《Equality》《Isomorphism》《DeBruijn》《Inference》等章全程用依值类型书写与证明。全书没有子类型规则。",
+        "access": "免费在线阅读，全书已翻译完毕；需安装 Agda 做练习。",
+        "role": "supplement"
+      },
+      {
+        "title": "《软件科学基础》第 25 讲 子类型（熊英飞，北京大学，2024 春课程讲义 PDF）",
+        "url": "https://xiongyingfei.github.io/SF/2024/slides/25-subtyping.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "子类/子类型关系 S <: T 的定义与动机（记录 Person/Student 的例子在 STLC 中类型不正确）；名义类型系统 vs 结构类型系统（前者由用户定义、后者由系统推出，函数式语言常用结构类型）；Liskov 替换原则（能替换 T 的地方都能替换成 S 则 S 是 T 的子类）；子类型关系的自反与传递；记录类型的宽度/深度子类型；函数子类型的判定（Student→Student 是否 Person→Person 的子类型）与引用类型 Ref Student 的变型问题。",
+        "access": "免费 PDF（课程站公开讲义），无需注册；简体中文（术语用中英对照）。",
+        "role": "supplement"
+      }
+    ],
+    "F.3.3": [
+      {
+        "title": "《软件分析技术》第 5 讲 加宽变窄和抽象解释（熊英飞，北京大学，2025 秋课程讲义 PDF）",
+        "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides05_dataflow_analysis_III.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "以区间分析为例：有界半格、合并操作与变换函数；格的高度过高导致不收敛；加宽 widening（降低格的高度/按变化趋势猜测）与变窄 narrowing；伽罗瓦连接（Galois connection）D,⊆ ⇋α/γ 虚,⊑ 的定义与 α/γ 的单调性、γ∘α 与 α∘γ 的包含关系；由伽罗瓦连接定义程序分析的安全性（具体域=执行踪迹集合、抽象域=分析结果、α X = ⊔_{x∈X} β(x)、γ 甲 = {x | β x ⊑ 甲}）；函数的安全抽象、最佳抽象（α∘f∘γ = 子）与精确抽象的区别；用最小上界引理证明 α X ⊑ 甲 ⇔ X ⊆ γ 甲。",
+        "access": "免费 PDF（课程站公开讲义），无需注册；简体中文（数学符号较多）。",
+        "role": "supplement"
+      },
+      {
+        "title": "Static Program Analysis（Anders Møller & Michael I. Schwartzbach，Aarhus University，免费在线教材）",
+        "url": "https://cs.au.dk/~amoeller/spa/spa.pdf",
+        "tier": "book",
+        "lang": "en",
+        "free": true,
+        "covers": "第 6 章 Widening（6.1 Interval Analysis、6.2 Widening and Narrowing）；第 12 章 Abstract Interpretation（12.1 A Collecting Semantics for TIP、12.2 Abstraction and Concretization 起）；前言说明全书覆盖 lattice theory、dataflow analysis、fixed-point algorithms、widening/narrowing、path sensitivity、relational analysis、interprocedural/context sensitivity、pointer analysis，以及 “key concepts of semantics-based abstract interpretation”。",
+        "access": "免费在线 PDF 全书（约 39 万字符），无需注册；英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "模型检验原理（Baier、Katoen，中文译本）",
+        "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_08452701.html",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "先读第2章迁移系统及状态空间，再读第5章LTL与第6章CTL；画小系统的状态图并验证安全性与活性。",
+        "access": "出版社公开目录用于核对范围；完整中文教材需购买或通过合法馆藏借阅。本轮未购买、未读收费全文。",
+        "role": "supplement"
+      }
+    ],
+    "D.1.1": [
+      {
+        "title": "CS186 Database Systems — online notes (UC Berkeley)",
+        "url": "https://cs186berkeley.net/notes/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Left-hand topic list: SQL Part 1 - Basic Queries, SQL Part 2 - Joins & Subqueries, Relational Algebra, DB Design (plus storage/index/transaction/recovery notes used by D.1.2). Supplies the relational algebra that en1 does not teach.",
+        "access": "Free HTML notes, no registration; site states the notes are under construction and the official lectures are authoritative. Read the Relational Algebra, SQL Part 1/2 and DB Design notes.",
+        "role": "supplement"
+      },
+      {
+        "title": "【哈工大】数据库系统 战德臣（全23讲）",
+        "url": "https://www.bilibili.com/video/BV1HY4y1b72A/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "第3–5讲 关系模型之基本概念/关系代数/关系演算；第6–7讲 SQL 概述与复杂查询、视图；第8讲 SQL 与数据库完整性和安全性；第9–10讲 嵌入式 SQL；第11–12讲 数据建模（ER 思想、工程化方法与案例）；第13讲 数据库设计过程；第14–16讲 函数依赖、关系模式规范形式与模式分解。覆盖实体关系、关系模型与关系代数、约束、规范化、SQL 查询和数据建模全过程。",
+        "access": "第三方转载，授权未核。B站免费播放，23 个分 P 共约 31.7 小时；上传者「农夫CC」是课程录像的搬运账号，不是哈工大官方账号，课程主体为哈工大计算机学院战德臣教授。页面无字幕轨信息，未核对人工字幕；与官方 MOOC 的对应关系见 zh2。",
+        "role": "alternative"
+      },
+      {
+        "title": "数据库系统（上）：模型与语言（哈尔滨工业大学，中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/HIT-1001516002",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "官方课程概述写明本系列分四部分、按三门课开放；本课（上）包含「基本知识与关系模型」和「数据库语言及其应用」，即关系模型、SQL 与完整性；「数据建模与数据库设计」（ER、规范化）在第二门《数据库系统（中）—建模与设计》中，第三门《数据库系统（下）—管理与技术》接内核。与 zh1 的第 1–16 讲是同一套课。",
+        "access": "中国大学MOOC 免费注册学习，视频按开课学期开放，认证证书另计；课程大纲折叠在页面中，本次打开只读到课程概述与参考教材，未登录核对视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "数据库系统概论（第6版，王珊、杜小勇、陈红，高等教育出版社 2023）",
+        "url": "https://mall.hep.com.cn/index.php/product-40316.html",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "国内数据库课程的标准教材：关系模型与关系代数、SQL、数据库安全性与完整性、关系数据理论（函数依赖与范式）、数据库设计、存储管理、查询处理与优化、恢复与并发。用于补齐中文纸面推导与习题。",
+        "access": "付费纸书，定价 59.00 元（ISBN 9787040591255，2023-03，500 页）；出版社商城页面可查目录与购买，未购买、无免费电子全文。",
+        "role": "reference"
+      },
+      {
+        "title": "数据库系统（上）：模型与语言（哈尔滨工业大学 战德臣、张丽杰、史建焘；国家高等教育智慧教育平台官方课程页，含第1–10讲完整目录与分节视频标题）",
+        "url": "https://higher.smartedu.cn/course/679420d0225d72705e9d6aa5",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "第1讲 初步认识数据库系统；第2讲 数据库系统的结构抽象与演变；第3讲 关系模型之基本概念；第4讲 关系模型之关系代数；第5讲 关系模型之关系演算（501–504、509–512）；第6讲 SQL语言之概述（601–609）；第7讲 SQL语言之复杂查询与视图（701–711）；第8讲 SQL语言与数据库完整性和安全性（801–815，含完整性约束规则、断言、触发器、自主/强制安全性）；第9–10讲 嵌入式SQL（901–911、A01–A10）。",
+        "access": "国家高等教育智慧教育平台（教育部主办、高教社运维）免费查看课程页与完整大纲；页面标注开课平台为「爱课程（中国大学MOOC）」、20 周、开课中，实际看视频需在爱课程/中国大学MOOC 免费注册；中文讲授；页面只给视频标题与时长，未见字幕轨说明（未核对字幕）。",
+        "role": "supplement"
+      },
+      {
+        "title": "数据库系统（中）：建模与设计（哈尔滨工业大学 战德臣等；国家高等教育智慧教育平台官方课程页，含第1–6讲＝系列课总第11–16讲目录）",
+        "url": "https://higher.smartedu.cn/course/69811b6e95df98bb27c3c012",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "第1讲（总第11讲）数据建模：型的概念、E-R 模型、联系与基数、Chen 方法与 Crow's Foot 方法及物资管理系统建模案例；第2讲（总第12讲）数据建模工程化方法 IDEF1X（独立/从属实体、标定/非标定联系、分类联系）与四个建模案例；第3讲（总第13讲）数据库设计过程（需求分析、概念/逻辑/物理数据库设计）；第4讲（总第14讲）函数依赖及其 Armstrong 公理、属性闭包、最小覆盖；第5讲（总第15讲）1NF/2NF/3NF/BCNF、多值依赖；第6讲（总第16讲）模式分解的无损连接与保持依赖检验、分解成 BCNF/3NF 的算法、第5范式。",
+        "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲；开课平台为爱课程（中国大学MOOC），看视频需在该平台免费注册；中文讲授；未见字幕说明（未核对）。",
+        "role": "supplement"
+      }
+    ],
+    "D.1.2": [
+      {
+        "title": "CS186 Database Systems — online notes (UC Berkeley): B+Trees, Query Optimization, Transactions, Recovery",
+        "url": "https://cs186berkeley.net/notes/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Free text notes for B+Trees, Buffer Management, Hashing, Sorting, Iterators and Joins, Query Optimization, Transactions & Concurrency I/II, Recovery, Parallel Query Processing. Useful as readable prose when a lecture video is not enough; the site warns it is not comprehensive.",
+        "access": "Free HTML, no registration; read-only notes, no exercises.",
+        "role": "supplement"
+      },
+      {
+        "title": "【哈工大】数据库系统 战德臣（全23讲）— 第17–23讲",
+        "url": "https://www.bilibili.com/video/BV1HY4y1b72A/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "第17讲 数据库物理存储；第18讲 数据库索引技术；第19–20讲 查询实现算法（一趟/两趟扫描）；第21讲 查询优化技术；第22讲 并发控制；第23讲 故障恢复。覆盖索引、执行计划与代价估算、并发控制、日志与恢复。",
+        "access": "第三方转载，授权未核。B站免费播放，分P 17–23 共约 12 小时；上传者「农夫CC」是搬运账号，非哈工大官方号；无字幕轨信息，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "《数据库管理系统——从基本原理到系统构建》清华大学李国良主讲（B站，23 个分P）",
+        "url": "https://www.bilibili.com/video/BV16Ra4zGEqA/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "第5章 数据库存储、第6章 事务管理、第7章 原子性和持久性实现及故障恢复、第8章 并发控制、第9章 数据库索引、第10章 查询处理、第11章 查询优化、第12章 查询执行。比 zh1 多出「查询执行/执行计划」的系统讲次，正好补执行计划与代价模型的细节。",
+        "access": "第三方转载，授权未核。B站免费播放；上传者「Miss_2026」为个人搬运账号，简介写明这是「101计划」教材《数据库管理系统》的配套教学视频、由清华大学李国良教授主讲；未核对字幕。",
+        "role": "alternative"
+      },
+      {
+        "title": "数据库系统概论（第6版，王珊等）— 系统篇",
+        "url": "https://mall.hep.com.cn/index.php/product-40316.html",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "第三篇系统篇：关系数据库存储管理、关系查询处理和查询优化、数据库恢复技术、并发控制、数据库管理系统概述。适合做纸面推导与习题。",
+        "access": "付费纸书 59.00 元（ISBN 9787040591255，2023-03）；无免费全文。",
+        "role": "reference"
+      },
+      {
+        "title": "数据库管理系统实现基础讲义 第3章",
+        "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-3",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "B+树与静态、动态散列。",
+        "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+        "role": "supplement"
+      },
+      {
+        "title": "数据库管理系统实现基础讲义 第4章",
+        "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-4",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "查询处理与算子执行。",
+        "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+        "role": "supplement"
+      },
+      {
+        "title": "数据库管理系统实现基础讲义 第5章",
+        "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-5",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "计划树、逻辑与物理优化、基于代价的选择。",
+        "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+        "role": "supplement"
+      },
+      {
+        "title": "数据库管理系统实现基础讲义 第6章",
+        "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-6",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "并发控制、锁协议、日志与故障恢复。",
+        "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+        "role": "supplement"
+      },
+      {
+        "title": "CMU 15-445 Fall 2025 archived notes",
+        "url": "https://15445.courses.cs.cmu.edu/fall2025/schedule.html",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "07–10索引；11–16执行与优化；17–20并发；21–22日志恢复。",
+        "access": "已结束课程公开讲义；已实际打开16-optimization2.pdf和22-recovery.pdf。以正文为主，视频字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "数据库管理系统（数据库内核技术）— B 站官方账号 THUDBGroup 自制合集，23 分 P",
+        "url": "https://www.bilibili.com/video/BV15u4y1Q71R/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "第1讲 数据库概述、2 关系模型、3 数据库设计、4 SQL、5 数据库存储引擎、6 事务处理、7 故障恢复、8 并发控制、9 索引、10 查询处理、11 数据库优化器、12 数据库执行器、13 数据库安全、14 高级数据库（1 分布式/2 OLAP/3 HTAP/4 内存/5 云原生/6 新硬件/7 NoSQL/8 AI与数据库）、15 GaussDB 简介、16 SQLite 简介。",
+        "access": "B 站免费播放，23 个分 P（第14讲拆成 8 个分 P）；UP 主 THUDBGroup、页面标注「自制」，视频简介给出课程主页 dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html，与作者页第01–16讲的视频链接 p=1–14/22/23 对应；中文讲授；字幕未核对。",
+        "role": "supplement"
+      }
+    ],
+    "D.1.5": [
+      {
+        "title": "OpenMetadata Documentation v2.0.x (Data Discovery, Data Contracts, Data Quality and Observability, Data Lineage, Data Governance)",
+        "url": "https://docs.open-metadata.org/latest",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Navigation groups: Data Discovery (catalog, search, glossary/tags), Data Contracts, Data Quality and Observability (tests, profiler, incidents), Data Lineage (column-level lineage), Data Governance; the home page states the goal is to 'document, discover, and govern your data assets end-to-end'.",
+        "access": "Free documentation; a hosted/self-managed deployment is needed to run the Quickstart, and some cloud features are paid. Tool documentation, so organisational stewardship/lifecycle theory is not covered.（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+        "role": "supplement"
+      },
+      {
+        "title": "华为云 DataArts Studio 用户指南：DataArts Studio 使用流程（数据治理）",
+        "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0007.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文流程正文：数据目录（元数据采集、数据地图查看资产）、数据架构（关系建模/维度建模、码表与数据标准）、数据质量（完整性/有效性/及时性/一致性/准确性/唯一性六维度，可按数据标准生成质量规则并周期监控）、数据安全（访问权限、敏感数据识别、隐私保护，写明覆盖数据生命周期内统一的数据使用保护）、数据开发与运维调度。",
+        "access": "官方中文文档免费阅读；实际治理需要购买 DataArts Studio 实例、存储与计算资源，本次未开通云服务。（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+        "role": "supplement"
+      },
+      {
+        "title": "华为云 DataArts Studio 数据质量：新建数据质量规则",
+        "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0715.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "质量规则的创建步骤与规则模板：单列/跨列/跨行/跨表校验，与数据标准联动；用于把 zh1 的六维度落到可执行的规则配置。",
+        "access": "免费中文文档；同样需要实例才能操作。",
+        "role": "supplement"
+      },
+      {
+        "title": "DataArts Studio数据血缘方案及配置教程",
+        "url": "https://support.huaweicloud.com/usermanual-dataartsstudio/dataartsstudio_01_0560.html",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "血缘概念、源表到目标表加工图、自动及手动解析；与配置页配套。",
+        "access": "中文正文免费；不是中文视频证据。实际云实例可能收费，未开通。",
+        "role": "supplement"
+      },
+      {
+        "title": "DataArts Studio配置数据血缘",
+        "url": "https://support.huaweicloud.com/usermanual-dataartsstudio/dataartsstudio_01_0561.html",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "SQL与集成节点的自动血缘解析范围、手动输入输出配置。",
+        "access": "免费中文操作教学；云实践可能收费。",
+        "role": "supplement"
+      },
+      {
+        "title": "使用架构演变更新表架构：Delta教学实例",
+        "url": "https://learn.microsoft.com/zh-cn/azure/databricks/tables/update-schema",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "增删、重命名、类型修改、重写和自动演化；新旧数据与流读取影响。",
+        "access": "免费中文正文已读；页面含授权通用提示但正文可读取。不是整门课，只作原治理路线实操补充；云执行可能收费。",
+        "role": "supplement"
+      },
+      {
+        "title": "Zerobus架构管理：兼容与生产者变更",
+        "url": "https://learn.microsoft.com/zh-cn/azure/databricks/ingestion/zerobus-schema-management",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "严格、可空、救援字段三情景与非中断演化。",
+        "access": "免费中文教学正文；通用授权提示与可读正文并存。只作兼容性案例，无服务开通。",
+        "role": "supplement"
+      },
+      {
+        "title": "数据资产管理实践白皮书3.0：组织职责与认责",
+        "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/201812/P020181214608773379834.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "组织层级、决策者/管理者/提供者/开发者/消费者及职责闭环。",
+        "access": "机构官网免费全文PDF；首次超时后重新打开成功。",
+        "role": "supplement"
+      },
+      {
+        "title": "研究资料管理学习指引：管理工具库",
+        "url": "https://www.lib.ntu.edu.tw/events/2022_RDMLA_class/04.html",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "数据生命周期模型与计划、收集、组织、存储描述、分析、典藏共享及再用任务。",
+        "access": "免费繁体中文正文；采用网页教学，不把外链英文资源或视频算中文课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "Update table schemas with schema evolution",
+        "url": "https://learn.microsoft.com/en-us/azure/databricks/tables/update-schema",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "Schema evolution through explicit DDL and automatic MERGE, rewrite and reader implications.",
+        "access": "Free English teaching examples; generic authorization notice appears but full text was readable. Runtime/cloud use may cost; no service started.",
+        "role": "supplement"
+      },
+      {
+        "title": "Apache Iceberg Evolution",
+        "url": "https://iceberg.apache.org/docs/latest/evolution/",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "Safe column evolution, field IDs and coexistence of partition versions.",
+        "access": "Free English conceptual and example-based text; supplement only, not the whole governance course.",
+        "role": "supplement"
+      },
+      {
+        "title": "Data ownership model",
+        "url": "https://www.gov.uk/government/publications/data-ownership-in-government/data-ownership-model",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "Owner, steward, custodian accountabilities, shared datasets and retention responsibilities.",
+        "access": "Free English institutional guidance and scenarios; no registration.",
+        "role": "supplement"
+      },
+      {
+        "title": "The Government Data Quality Framework",
+        "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "Stage-specific management from planning/collection through preservation or destruction.",
+        "access": "Free English institutional teaching guidance and case studies.",
+        "role": "supplement"
+      }
+    ],
+    "D.3.2": [
+      {
+        "title": "Datawhale《南瓜书》（《机器学习》公式推导与学习笔记）",
+        "url": "https://datawhalechina.github.io/pumpkin-book/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "聚类（原型/密度/层次聚类）、降维（PCA）、特征选择与稀疏学习的推导，以及模型评估与比较；用于补中文的聚类与降维数学细节，需配合周志华《机器学习》原书章节。",
+        "access": "免费开放的中文笔记；不是原书全文，也不含关联规则/异常检测。",
+        "role": "supplement"
+      },
+      {
+        "title": "三大聚类算法 kmeans / DBSCAN / 层次聚类（B 站 28 分 P，咕泡 AI 培训课程录像剪辑）",
+        "url": "https://www.bilibili.com/video/BV1ST411w7De/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "28 个分 P：K-means 与 DBSCAN 原理/流程/可视化、K-means 代码实现（含鸢尾花案例）、聚类实验分析（Inertia、K 值选择、轮廓系数、存在问题）、层次聚类概述/流程/实例、聚类算法实战。只覆盖聚类，不含关联规则、模式挖掘、异常检测与数据挖掘过程。",
+        "access": "第三方转载，授权未核。B站免费播放；个人账号课程，未核对字幕。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）",
+        "role": "alternative"
+      },
+      {
+        "title": "scikit-learn User Guide 2.7. Novelty and Outlier Detection",
+        "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "新颖性检测与离群点检测的完整流程与对比：One-Class SVM（含线性近似 SGDOneClassSVM）、Isolation Forest、Local Outlier Factor（含 novelty=True 的正确用法警告）、Elliptic Envelope（协方差估计），以及各方法适用场景与示例代码。",
+        "access": "官方文档免费、无需注册；英文；含可直接运行的示例。",
+        "role": "supplement"
+      }
+    ],
+    "D.4.1": [
+      {
+        "title": "知识图谱导论（浙江大学，国家高等教育智慧教育平台官方课程页，含第一章至第九章逐节大纲）",
+        "url": "https://higher.smartedu.cn/course/66e371aa711dc30c34d6e54c",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "第一章 知识图谱概论（1.1 语言与知识 …）；第二章 知识图谱表示（2.1 什么是知识表示、2.2 人工智能历史长河中的知识表示、2.3 知识图谱的符号表示方法、2.4 向量表示方法）；第三章 存储与查询（基于关系型数据库的存储…）；第四章 抽取与构建；第五章 推理（5.1 什么是推理、5.2 推理简介、5.3.1 基于 Ontology 的推理、5.3.2 基于规则的推理、5.4.1 基于嵌入学习的推理、5.4.2 基于规则学习的推理、5.4.3 Ontology Embedding）；第六章 融合（6.2 概念层融合——本体匹配、6.3 实例层融合——实体对齐）；第七章 问答；第八章 图算法与图数据分析；第九章 技术发展（9.1 多模态知识图谱…）。",
+        "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲（开课平台为中国大学MOOC）；中文讲授；页面未给字幕说明（未核对）。",
+        "role": "supplement"
+      },
+      {
+        "title": "《知识图谱：算法与实践》（赵军主编，赵军、刘康、何世柱、陈玉博、张元哲编着，高等教育出版社 2022-03）",
+        "url": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=61df11cd938b7cc2960ee421",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "第1章 知识图谱概述（知识建模/获取/融合/推理/管理/应用）；第2章 知识表示：2.2 经典知识表示理论（语义网络、框架、一阶谓词逻辑、描述逻辑 2.2.4），2.3 语义网技术体系（2.3.1 语义网整体架构、2.3.2 RDF 及其语义扩展 RDFS、2.3.3 本体（Ontology）与本体描述语言（OWL）、2.3.4 规则及其交换格式、2.3.5 查询语言），2.4 知识图谱及其知识体系；第3 章起讲实体识别等获取技术；第7–8 章讲知识融合与推理（8.2 归纳推理：规则获取、8.3 演绎推理：规则应用、8.4 混合式推理）。",
+        "access": "付费教材，定价 48.00 元（ISBN 978-7-04-057725-9，2022 年 3 月，292 页，330 千字；2025 年 8 月最新印次），高教社产品页可查目录与购买；配套 Abook 网站项目资源；本轮未购买、未读正文。",
+        "role": "supplement"
+      }
+    ],
+    "D.4.2": [
+      {
+        "title": "浙江大学《知识图谱导论》（中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/ZJU-1464119172",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "官方课程页（智慧高教）九章大纲：概论、知识表示（符号/向量）、存储与查询、抽取与构建、推理（Ontology/规则/嵌入学习/规则学习/Ontology Embedding）、融合（本体匹配、实体对齐）、问答、图算法与图数据分析、技术发展（多模态、KG 与图神经网络融合、KG 与大语言模型）。",
+        "access": "中国大学MOOC 免费注册学习，视频按开放学期；未登录核对逐讲；认证证书另计。",
+        "role": "supplement"
+      },
+      {
+        "title": "知识图谱导论（浙江大学，国家高等教育智慧教育平台官方课程页，含第五章推理与第九章技术发展逐节大纲）",
+        "url": "https://higher.smartedu.cn/course/66e371aa711dc30c34d6e54c",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "第五章 知识图谱推理：5.1 什么是推理、5.2 推理简介、5.3.1 基于 Ontology 的推理、5.3.2 基于规则的推理、5.4.1 基于嵌入学习的知识图谱推理、5.4.2 基于规则学习的知识图谱推理、5.4.3 Ontology Embedding——本体概念层推理；第六章 融合：6.2 概念层融合——本体匹配、6.3 实例层融合——实体对齐；第九章 技术发展：9.1 多模态知识图谱等（课程目标提及知识图谱与图神经网络的融合、知识增强的语言预训练、知识图谱与大语言模型的互补）。",
+        "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲；中文讲授；字幕未核对。",
+        "role": "supplement"
+      }
+    ],
+    "V.1.2": [
+      {
+        "title": "MDN: Media container formats (file types)",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Containers",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "容器的定义（把视频/音频/字幕轨道与元数据打包）、容器 vs 编解码器的区别、常见容器（MP4、WebM、Ogg、QuickTime、MPEG-TS 等）与浏览器支持；补讲义未单列的“容器”概念。",
+        "access": "MDN 免费（CC BY-SA）；英文；是概念说明而非课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "MDN 中文：媒体容器格式（文件类型）",
+        "url": "https://developer.mozilla.org/zh-CN/docs/Web/Media/Guides/Formats/Containers",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文解释容器与编解码器的区别、常见容器（MP4/WebM/Ogg 等）与浏览器支持；补中文课程未讲的“容器”概念。",
+        "access": "MDN 中文页面免费（CC BY-SA）；是文档说明，不是课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "《如何用 FFmpeg 编写一个简单播放器——详细步骤介绍》（dranger 教程中文译本，8 个指导；第 29–37 页为指导 5「如何同步视频」与指导 6「同步音频」）",
+        "url": "https://github.com/0voice/ffmpeg_develop_doc/blob/main/文档库/ffmpeg的tutorial中文版.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "指导 5「如何同步视频」：先说清 DTS/PTS 与 B 帧重排（为什么解码序与显示序不同），再「写代码：使用 PTS 来同步」给出 diff = vp->pts - ref_clock、sync_threshold = max(delay, AV_SYNC_THRESHOLD)、AV_NOSYNC_THRESHOLD 判断与 frame_timer 逐帧调度；「同步：声音时钟」一节用 get_audio_clock() 和 hw_buf_size/bytes_per_sec 扣掉还没播完的硬件缓冲，把音频时钟算准。指导 6「同步音频」给出反过来的做法（视频时钟）并说明如何推广到外部时钟。",
+        "access": "第三方转载，授权未核。免费 PDF（转载在 0voice/ffmpeg_develop_doc 仓库「文档库」目录下）；中文译本，逐段解释配完整代码；原教程是 Stephen Dranger 的 dranger.com/ffmpeg（英文）；译本授权与译者署名均未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "博客园《FFmpeg学习：音视频同步（1）相关基础定义》＋（2）同步策略（小超不挑食，两篇短文，含代码）",
+        "url": "https://www.cnblogs.com/zjacky/p/16496139.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "（1）time_base 是什么、PTS/DTS/duration 的区别、AVStream/AVCodecContext/AVPacket/AVFrame 各处时间基、tbn/tbc/tbr 与内部时间基 AV_TIME_BASE、时间基换算的来由；（2）三种同步方式（同步到外部时钟、音频同步到视频、视频同步到音频）与「为什么主流是把视频同步到音频」的感知理由，Audio_Clock 的两步计算（用包 pts 设时钟、再用样本数与采样率补足包内已播时长）及对应代码。",
+        "access": "博客园免费阅读，中文；个人技术博客，无视频与作业；（2）篇的站内链接指向（1）篇 https://www.cnblogs.com/zjacky/p/16496139.html。",
+        "role": "supplement"
+      },
+      {
+        "title": "《数字媒体技术概论（融媒体版）》（严明，清华大学出版社 2023-03；中国传媒大学国家一流本科课程（线上）配套教材，全书 12 章）",
+        "url": "https://www.tup.com.cn/booksCenter/book_09253102.html",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "全书 12 章：第1章 融媒体技术基础（融媒体概念、媒体分类、研究领域）；第2章 数字图像及视频技术（图像/视频基础、增强去噪、几何变换、傅里叶与小波、视频处理）；第3章 计算机视觉技术；第4章 数字音频技术（含心理声学模型、语音信号处理）；第5章 计算机图形与动画技术；第6章 虚拟现实技术；第7章 数字游戏产业与开发；其余章讲数字媒体存储、传播、管理、安全、交互与融媒体应用。",
+        "access": "付费教材，定价 59 元（ISBN 9787302627708，2023.03，第 1-10 印次；清华社提供教师课件与 32 学时教学大纲）；本轮只读出版社官方目录与前言，未购买正文。",
+        "role": "supplement"
+      }
+    ],
+    "V.2.1": [
+      {
+        "title": "设计心理学（中国大学MOOC，课程代码 12022370，2 学分/32 学时；开课单位为设计艺术学院，授课大纲逐章列出教学内容）",
+        "url": "https://www.icourse163.org/course/detail.htm?cid=1002058014",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "第一章 设计心理学概述（设计心理活动过程、心理学研究方法）；第二章 认知的心理过程与人的心理状况（4 学时）：感觉、人的视觉感受、知觉、人对产品的知觉；观察、记忆、思维、想象；意识、注意、意志行为、情绪情感，重点为「知觉的有关特性」「注意的特征」；第三章 人的个性心理；第四章 设计心理的认识过程（4 学时）：设计的感觉与知觉、拮抗色理论、设计与用户心理关系；另有消费者心理、审美心理、创造心理、研究与实验方法等模块。",
+        "access": "中国大学MOOC 免费注册学习（认证证书另计）；中文讲授；页面只给出授课大纲与考核方式（平时作业 50%+期末 50%，以小论文形式），未列视频分节；字幕未核对。平台页未显示开课学校名称（只写「设计艺术学院」），学校身份未完全核实。",
+        "role": "supplement"
+      },
+      {
+        "title": "使用者体验设计的思维与逻辑（上）— 单元 2「使用者心智模型与产品设计」（政府网站营运交流平台，繁体中文 UX 课程单元）",
+        "url": "https://www.webguide.nat.gov.tw/article/551/show",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "心智模型（mental model）的概念来源（Don Norman 在《设计心理学》中推广、Alan Cooper 的三种模型）、设计师与使用者心智模型为何不同、心智模型如何影响用户对产品的预期与操作、以及在产品设计与 UX 流程中如何使用心智模型（含案例与「我如果是用户」式判断的局限）。",
+        "access": "台湾政府网站营运交流平台免费阅读，无需注册；繁体中文；属「认识UX」章节的单元 2（课程单元文章形态，非视频）；简体字学习者需适应术语差异（心智模型/使用者）。",
+        "role": "supplement"
+      }
+    ],
+    "V.3.1": [
+      {
+        "title": "CSE 412 Introduction to Data Visualization（UW，课程目录描述）",
+        "url": "https://courses.cs.washington.edu/courses/cse412/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "目录描述列 topics: data models、visual encoding methods、data preparation、exploratory analysis、uncertainty、cartography、interaction techniques、visual perception、evaluation methods；只提供课程定位，不提供公开讲义。",
+        "access": "UW 课程目录页免费可读；无公开讲义/视频。英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "大数据可视化与可视分析·智慧教材（17 章交互式中文教材，免费，含 60+ 交互演示/150+ 测验；作者 simingchen，复旦大学可视分析与智能决策实验室）",
+        "url": "http://simingchen.me/smart-textbook",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "第一部分·道（基础理论与设计原则）：Ch1 绪论（数据侦探案例、可视化历史、南丁格尔玫瑰图）、Ch2 数据基础（属性类型、组织方式、预处理、描述统计）、Ch3 可视化的心理学与设计基础（前注意加工、格式塔法则、视觉变量与映射规则）、Ch4 可视化的交互与动画基础（交互本质、界面范式、基本交互类型、刷选-链接、WIMP、动画编码）、Ch5 编程基础（HTML/CSS/JS、D3.js、Vega-Lite、Tableau）；第二部分·术（按数据类型）：Ch6 高维（雷达图/平行坐标/散点图矩阵、PCA/MDS/t-SNE）、Ch7 时序（折线、日历热力图、螺旋图、DTW）、Ch8 地理时空（地图投影、符号系统、等值区域图、OD 流、时空立方体）、Ch9 科学数据（标量场/流场、等值面、流线、体绘制）、Ch10 图数据（力导向布局、邻接矩阵、社区检测、边捆绑）、Ch11 层次数据（节点-链接树、矩形树图、旭日图、圆堆图）；第三部分 可视分析方法与领域应用（Ch12 可视分析方法论：流水线、六大分析模式、人在回路；Ch13 社交媒体；Ch14 金融科技；Ch15 数字人文；Ch16 科学模拟数据）；第四部分 Ch17 未来趋势。",
+        "access": "免费在线交互教材，无需注册；中文；每章配交互演示与测验；无纸质版。（另见 2026-11 打开时的站点为 simingchen.me/smart-textbook）",
+        "role": "supplement"
+      }
+    ],
+    "I.1.1": [
+      {
+        "title": "Information Systems for Business and Beyond (2019), Chapter 9: The People in Information Systems（David T. Bourgeois 等，开放教材，免费在线）",
+        "url": "https://opentextbook.site/informationsystems2019/chapter/chapter-9-the-people-in-information-systems-information-systems-introduction/",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "章首学习目标即“describe each of the different roles that people play in the design, development, and use of information systems”“understand the different career paths…”“explain the importance of where the information-systems function is placed in an organization”；正文按“系统的创造者（systems analyst、software engineer、systems engineer、network engineer 等）—运行与支持者（computer operator、database administrator、help desk/support analyst、trainer）—使用者—信息系统管理（Managing Information Systems）”分组逐一讲各角色的职责与技能，并讨论 IT 职能在组织中的位置。",
+        "access": "免费在线阅读，开放教材（CC 许可，可整本下载），无需注册；英文。",
+        "role": "supplement"
+      }
+    ],
+    "I.1.2": [
+      {
+        "title": "管理信息系统（中南财经政法大学，中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/ZNUEDU-1002531022",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "第三部分 系统管理：系统开发管理、系统运行管理；第二部分 系统规划（含企业信息化规划思路）；第四部分 企业管理信息化。提供“建设—运行”的管理语境，但不讲 IT 治理结构、投资组合决策、外包采购与服务管理（ITIL）。",
+        "access": "中国大学MOOC 免费注册学习；认证证书付费；视频按学期开放，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "管理信息系统（A）（中南民族大学，学银在线／国家高等教育智慧教育平台；14 章，含「信息系统与企业战略」「信息系统维护与评价」与 13.6「信息系统安全管理与 IT 治理」）",
+        "url": "https://higher.smartedu.cn/course/69bc70fb95df98bb27f97941",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "官方大纲 14 章：管理信息系统概述、信息系统与企业管理、信息系统与企业战略、信息系统的伦理/安全策略与法律法规、信息系统的技术基础、数据库技术、数据挖掘与大数据分析、典型的管理信息系统、电子商务与电子政务、决策支持系统与人工智能、信息系统规划、信息系统开发过程、信息系统维护与评价、信息系统驱动的商业模式创新、管理信息系统研究基础、发展趋势。其中第 3 章分 3.1 企业战略概述、3.2 信息系统在企业中的战略价值、3.3 信息系统与企业战略的匹配、3.4 信息系统对企业战略的支持（含两段学习视频与课程 PPT）；第 13 章含 13.6 学习视频2「信息系统安全管理与 IT 治理」。",
+        "access": "学银在线/智慧高教免费学习（需注册平台账号）；中文授课；视频与分讲需登录，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "IT治理（彼得·维尔、珍妮·罗斯，中文译本）",
+        "url": "https://www.cp.com.cn/book/7-100-04479-0_51.html",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "用第1–4章理解治理责任与决策机制，第6章练习把业务目标对应到IT治理与绩效指标。",
+        "access": "出版社公开目录用于核对范围；完整中文教材需购买或通过合法馆藏借阅。本轮未购买、未读收费全文。",
+        "role": "supplement"
+      },
+      {
+        "title": "中国大学MOOC《管理信息系统》（课程页 cid=1002054018；第九章 信息系统的战略规划）",
+        "url": "https://www.icourse163.org/course/detail.htm?cid=1002054018",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "原理部分：信息系统与企业可持续竞争优势、与组织控制和业务流程的关系（含案例讨论）；第九章 信息系统的战略规划：信息系统生命周期、战略规划的目的和内容、规划工作的特点与方法。",
+        "access": "中国大学MOOC 官方课程，注册后学习，认证证书收费；中文授课；开课学校在抓取到的页面文字中未显示；字幕未核对。",
+        "role": "supplement"
+      }
+    ],
+    "I.1.3": [
+      {
+        "title": "Managing Business Processes with SAP Signavio Solutions（SAP Learning，页面标注 | ZH，11 units）",
+        "url": "https://learning.sap.com/courses/managing-business-processes-with-sap-signavio-solutions-zh",
+        "tier": "video",
+        "lang": "zh",
+        "free": null,
+        "covers": "11 个单元，围绕用 Signavio 管理/优化流程、把复杂流程组织成可视化表示、选择可视化工具；是产品操作课，讲 BPMN 建模与工具用法，不讲流程挖掘算法、定性分析与持续改进方法。",
+        "access": "SAP Learning 免费注册可学；页面正文为英文（仅标题含 | ZH），练习系统与 Signavio 许可依 SAP 条件。中文授课/字幕未核实。",
+        "role": "supplement"
+      },
+      {
+        "title": "Petri 网：模型、理论与应用（清华大学，学堂在线／国家高等教育智慧教育平台；袁崇义、闻立杰、王建民）",
+        "url": "https://higher.smartedu.cn/course/6786ec9c225d72705e5dc394",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程简介写明应用实例含“业务流程管理问题和过程挖掘”，且“同步理论是 BPM 建模的理论基础”；官方大纲第五章「业务流程管理」含 5-1 工作流网（WF_net）、5-2 工作流管理联盟等节；另有序论、有向网、Petri 网层次系统（EN/ C-E / P-T / 高级网 / 化简网）、网论（网拓扑、并发论、网逻辑、信息流网、同步论与同步器、建模方法论）等章。",
+        "access": "学堂在线免费学习（需注册）；中文授课；视频与分讲需登录，字幕未核对。",
+        "role": "supplement"
+      }
+    ],
+    "I.1.4": [
+      {
+        "title": "Project Management – 2nd Edition, Chapter 15: Communications Planning（Adrienne Watt 等，BCcampus 开放教材，CC BY）",
+        "url": "https://opentextbc.ca/projectmanagement/chapter/chapter-15-communications-planning-project-management/",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "沟通规划：什么是沟通计划、为什么需要它；沟通模型中的发送者/接收者/渠道与沟通复杂度；新沟通技术的取舍（是否带来竞争优势、团队能否快速掌握）；沟通计划模板（Figure 15.2 Communications Plan Template）及按干系人分配信息、频率与责任；章末附改编来源与许可。",
+        "access": "免费在线阅读，CC BY-NC-SA 4.0（部分图表另有许可），无需注册；英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "Project Management – 2nd Edition, Chapter 14: Quality Planning 与 Chapter 5: Stakeholder Management（同上开放教材）",
+        "url": "https://opentextbc.ca/projectmanagement/chapter/chapter-14-quality-planning-project-management/",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "第 14 章质量规划：项目管理的质量定义（客户满意、适用性 fitness to use、符合需求 conformance to requirements）、质量方针与组织/法规约束、质量与等级（quality and grade）的区别、质量测量活动与测试设计、质量成本；第 5 章干系人管理：干系人识别与角色、干系人分析模板（姓名/角色、重要程度、增强支持的战略）、用沟通计划维系干系人支持、干系人沟通模板。",
+        "access": "免费在线阅读，CC BY-NC-SA 4.0；英文。",
+        "role": "supplement"
+      }
+    ],
+    "I.2.1": [
+      {
+        "title": "Green Software Practitioner（Green Software Foundation；免费课程，含多语言版）",
+        "url": "https://learn.greensoftware.foundation/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "可持续软件的原则与实践：碳效率、能耗效率、碳感知、硬件效率、测量与绿色架构；补“可持续性”这一主题。",
+        "access": "课程免费在线（注册可记进度）；有中文（中国）等语言版本。英文原版。",
+        "role": "supplement"
+      },
+      {
+        "title": "Green Software Practitioner 中文版（绿色软件基金会）",
+        "url": "https://learn.greensoftware.foundation/zh-CN/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文版可持续软件课程：碳效率、能耗效率、碳感知、硬件效率与测量；补中文“可持续性”内容。",
+        "access": "免费在线；中文（中国）版本由官方提供，注册可记进度。",
+        "role": "supplement"
+      },
+      {
+        "title": "Introduction to Intellectual Property（OpenStax，2021，开放教材；含专利、版权、商标、商业秘密四类）",
+        "url": "https://openstax.org/books/introduction-intellectual-property/pages/1-introduction",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "第 1–2 章专利（专利保护的基础、可专利客体与授权条件、专利实施与诉讼）；第 3 章版权（3.1 The Basics of Copyright、早期版权制度、美国版权制度、可受版权保护的作品等）；第 4 章商标（以 TESLA 商标照片开章）；第 5 章商业秘密（以“hush!”照片开章）。四类知识产权各有整章，配章末练习与词汇表。",
+        "access": "免费在线阅读（OpenStax 官网，可整本阅读），CC BY-NC-SA；英文；无需注册。",
+        "role": "supplement"
+      },
+      {
+        "title": "Fairness and Machine Learning: Limitations and Opportunities（Barocas, Hardt, Narayanan，免费在线全书 fairmlbook.org）",
+        "url": "https://fairmlbook.org/",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "第 1 章在决策论框架下引入形式化的非歧视准则（non-discrimination criteria）及其相互关系与局限；第 2 章讲美国反歧视法是什么、不是什么、如何权衡及其对机器学习的适用；第 7 章讲在实践中检验歧视（testing discrimination in practice）；全书以“偏见的来源—度量—缓解—局限”为主线。",
+        "access": "免费在线阅读，全书 PDF 可下载；英文；无需注册。",
+        "role": "supplement"
+      }
+    ],
+    "I.2.3": [
+      {
+        "title": "17-803 Empirical Methods（CMU，Spring 2026，Bogdan Vasilescu；课程主页 + slides）",
+        "url": "https://bvasiles.github.io/empirical-methods/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "面向 CS 博士的实证方法综述：访谈与定性编码、问卷设计、定量统计分析与研究设计；明确要求判断 study design 是否能支持结论、是否存在 threats to validity；补 Turing Way 缺的误差与效度。",
+        "access": "课程主页与 slides 免费公开；reading 在需 CMU 登录的共享盘。英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "体育科学研究方法（湖南师范大学，中国大学MOOC）",
+        "url": "https://www.icourse163.org/course/HUNNU-1003626002",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程以“选题→设计→实施→分析→写作”全程训练为目标，覆盖调查研究、实验设计、数据分析与论文写作；课程问答中明确讲信度与效度的定义与检验：“信度指测量结果的稳定性和一致性，效度指测量是否真正测到了想测的东西。它们决定了您的研究结论是否可信，是问卷和测量工具的‘生命线’。课程会用通俗案例帮您理解并掌握基本检验方法”，问卷设计部分要求“注意问卷的整体结构与信效度检验”并做师生评议修改。",
+        "access": "中国大学MOOC 免费注册学习，认证证书另计；中文授课；大纲需登录，字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "FORRT 开放科学术语表（中文版）：内部效度、外部效度",
+        "url": "https://forrt.org/glossary/chinese/%E5%86%85%E9%83%A8%E6%95%88%E5%BA%A6/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "内部效度（研究结果反映真实效应而非混杂因素与方法缺陷的程度）、外部效度（结果推广到其他测量、情境、人群、地点和时间的程度及其受交互作用与非代表性样本的影响），附原始参考文献。",
+        "access": "开放科学社区 FORRT 的中文译本，免费；条目经多人审阅，属术语表级的定义与说明。",
+        "role": "supplement"
+      }
+    ],
+    "X.1.1": [
+      {
+        "title": "MindSpore Lite 官方中文端侧推理文档",
+        "url": "https://www.mindspore.cn/lite/docs/zh-CN/master/index.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文文档：端侧推理（C++/Java 接口、模型转换）、端侧训练、训练后量化、在 MCU 等小型系统上推理、通过 Delegate 接入专用芯片、静态库裁剪与基准测试。属于工具链文档，不含压缩算法理论与端边云调度。",
+        "access": "免费阅读；实际部署需目标硬件与 MindSpore Lite 工具链。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+        "role": "supplement"
+      },
+      {
+        "title": "动手学深度学习：单发多框检测（SSD）",
+        "url": "https://zh-v2.d2l.ai/chapter_computer-vision/ssd.html",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "目标检测模型、分类及框回归损失、训练与预测代码和练习。",
+        "access": "作者官方中文在线教材全文已打开；代码可按框架选择，不需视频。训练硬件由学习者提供。",
+        "role": "supplement"
+      },
+      {
+        "title": "Dive into Deep Learning: Single Shot Multibox Detection",
+        "url": "https://d2l.ai/chapter_computer-vision/ssd.html",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "Object detection model construction, training, prediction and exercises.",
+        "access": "Free author-hosted English chapter with code; opened full text. Compute costs are separate.",
+        "role": "supplement"
+      },
+      {
+        "title": "面向边缘智能的协同推理综述",
+        "url": "https://qijianpeng.github.io/assets/pdf/edgeintelligence2023jfyz.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "模型轻量化、切割、云边与边边架构、动态资源及能耗/时延/隐私取舍。",
+        "access": "作者齐建鹏公开17页中文论文全文已打开；作为主线外的专题讲解，不当整课。",
+        "role": "supplement"
+      },
+      {
+        "title": "边端融合的终端情境自适应深度感知模型",
+        "url": "https://www.zjujournals.com/eng/article/2021/1008-973X/202104004.shtml",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "结构化剪枝、ADMM压缩与模型分割联合设计，动态设备资源约束下的算法及实验。",
+        "access": "浙江大学学报官方中文HTML全文已打开；方法实例补充，读公式和实验而非只读摘要。",
+        "role": "supplement"
+      },
+      {
+        "title": "A Survey on Collaborative DNN Inference for Edge Intelligence",
+        "url": "https://arxiv.org/pdf/2207.07812",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "Cloud/device/edge collaboration and latency, energy and privacy tradeoffs.",
+        "access": "Author-deposited full English PDF opened; specialist reading supplement.",
+        "role": "supplement"
+      }
+    ],
+    "X.1.3": [
+      {
+        "title": "《自动驾驶技术指南》系统软件框架总览（云飞机器人实验室开源中文指南；含「端到端时间预算分析」「延迟分解模型」「各模块时间预算分配」）",
+        "url": "https://yfrobotics.github.io/self-driving-handbook-cn/algorithm/sw_overview/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "把自动驾驶软件栈当成实时系统来教：为什么要把传感器输入在 100–200 ms 内变成控制指令；端到端延迟与安全的关系（100 km/h 下 200 ms ≈ 5.6 m 盲行、50 ms ≈ 1.4 m）；延迟分解模型（传感器物理触发 → 采集 → 预处理 → 感知 → 定位 → 预测 → 规划 → 控制计算 → 指令传输 → 执行器机械响应 50–200 ms）；各模块时间预算分配表（采集 5 ms、预处理 5 ms、感知 50 ms、定位 10 ms、预测 30 ms、规划 80 ms、控制 10 ms、指令传输 5 ms，软件端到端 80–200 ms 且须 < 200 ms，并逐行给出关键瓶颈）；AUTOSAR AP/CP 分工与实时底盘控制；ROS 2 / Cyber RT / AUTOSAR Adaptive 的中间件延迟与「任务调度抖动」对比（1–5 ms / < 0.5 ms / < 1 ms）与确定性；用流水线并行压缩端到端延迟。",
+        "access": "免费中文网页，无需注册；CC BY-SA 4.0；中文写作，含表与 ASCII 数据流图，无视频。由云飞机器人实验室发起、GitHub 开源（yfrobotics/self-driving-handbook-cn），贡献者名单只列 2 人，属社区维护的技术维基而非高校课程；本页数值（典型延迟、抖动区间）是工程经验值，页面未逐条给出来源，需与具体平台实测/标准原文交叉核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "《自动驾驶技术指南》系统安全保障（ISO 26262 功能安全、FTTI 时序预算、ISO 21448 SOTIF、Safety Case 与 GSN、场景覆盖度与残余风险）",
+        "url": "https://yfrobotics.github.io/self-driving-handbook-cn/system/safety/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文系统讲安全评估：安全标准体系；ISO 26262 与 ASIL（QM/A/B/C/D 五档、S/E/C 三因素定级、典型 ADAS 感知链路 ASIL-D 而摄像头 ASIL-B 的对比）；V 字形开发模型与各阶段安全分析；FMEA（RPN=严重度×频率×可检测性）与 FTA；ASIL 分解及共因故障隔离前提；**FTTI 时序预算**（FTTI = T_detect + T_decide + T_react，ASIL-D 制动常见 FTTI=100 ms、拆成 30/30/40 ms，并说明要落到中断延迟、总线带宽、执行器响应）；ISO 21448 SOTIF 四象限（K1/U1/K2/U2 与「把 U2 暴露成 K2 再消除」的验证目标）；ISO 26262 × SOTIF 联合流程五节点；Hazard Library 的字段与版本化要求；冗余设计（传感器/计算/通信/电源）；Fail-Safe / Fail-Degraded / Fail-Operational 的级别对应；RSS；Safety Case 与 GSN 论证；ISO/PAS 8800；场景覆盖度 vs 里程覆盖度、ODD 分层覆盖、交互覆盖、残余风险；并给出一份「制动失效的 Safety Case 骨架」（SG1 非预期制动率 <1e-8/h、ASIL-D、FSR、场景库覆盖 >98%/95% 的分支）。",
+        "access": "免费中文网页，无需注册；CC BY-SA 4.0；中文写作，含 GSN/故障树/四象限等 ASCII 图与数值。参考资料列出 ISO 26262:2018、ISO 21448:2019、RSS 原始论文 arXiv:1708.06374、RAND 2020 报告。同 final-zh1，属社区维基而非高校课程；标准条款的转述需与标准原文核对（页面未给条款号）。",
+        "role": "supplement"
+      },
+      {
+        "title": "Apollo Cyber RT 调度机制（百度 Apollo 开源项目官方中文文档）",
+        "url": "https://raw.githubusercontent.com/ApolloAuto/apollo/master/docs/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%A0%B8%E5%BF%83/CyberRT/Cyber%20RT%20%E8%B0%83%E5%BA%A6%E6%9C%BA%E5%88%B6.md",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "自动驾驶框架的实时调度入门：操作系统为什么要调度（效率与公平的取舍）、用 3 个任务 10 s/6 s/4 s 的编排例子与超市排队类比推出最短时间优先（SJF）、再说明「任务执行完之前不知道要跑多久」导致 SJF 失效而引出时间片轮转与抢占；Cyber RT 的改进：给 Linux 打实时补丁以支持抢占、把摄像头/激光雷达/串口等外设中断绑定到单独核；用 Cgroup 做资源限制/优先级/监控/冻结；线程优先级与 pthread_setaffinity_np 的 CPU 亲和写法；并提醒「实时操作系统不是万能的，处理不过来时要检查资源是否足够」。",
+        "access": "免费中文 Markdown（Apache 2.0 仓库内文档），无需注册；中文写作、含代码片段与插图；本页是代码仓库里的文档源文件（raw），阅读时无渲染，链接与图片为仓库相对路径。不是一门课，但是官方框架文档里的分步原理讲解，且带调度策略的推演过程。",
+        "role": "supplement"
+      },
+      {
+        "title": "Apollo Cyber RT 性能分析工具（百度 Apollo 开源项目官方中文文档：多维指标采集、可视化、进程级/函数级分析与火焰图）",
+        "url": "https://raw.githubusercontent.com/ApolloAuto/apollo/master/docs/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%A0%B8%E5%BF%83/CyberRT/Cyber%20RT%20%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7.md",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "怎么在真实自动驾驶系统上做性能测量与瓶颈定位：为什么路测里性能问题难找（「如何发现、分析、定位和解决性能问题相对有一定门槛」）；工具采集哪些指标（CPU/GPU 使用率、内存与显存占用、块设备读写速率/等待时间/IOPS/等待队列长度、网卡读写速率与带宽，分系统级与进程级）；实时跟踪指标以定位拖慢系统的瓶颈进程；可视化界面的读法（进程级宏观视图 → 定位哪个进程在拖慢整体）；函数级深入分析（对每个进程生成火焰图、有向图，CPU/内存/GPU 指标依赖 NVIDIA Nsight）；部署与使用前提（需装最新版 Apollo，clone 源码）。",
+        "access": "免费中文 Markdown（Apache 2.0 仓库内文档），无需注册；中文写作；实际使用需要部署 Apollo（源码 + Docker 环境）才能看到界面与图表，文中图片以仓库相对路径给出。属工具文档，但不是只有参数表——给出了「测什么指标、按系统级/进程级/函数级三层读数据、火焰图定位到代码」的分步方法。",
+        "role": "supplement"
+      },
+      {
+        "title": "如何使用 ros2_tracing 跟踪和分析应用程序（ROS 2 官方教程中文译本：trace 采集、babeltrace 查看、tracetools_analysis 统计回调时长）",
+        "url": "https://ros.ncnynl.com/cn/jazzy/Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "用 ROS 2 的 tracing 做时延测量的完整流程：确认跟踪已启用、建工作区克隆 performance_test 与 tracetools_analysis、用 rosdep 装依赖、跑一次 performance_test 实验并生成 trace 目录、用 babeltrace 读原始 CTF 事件（时间戳/事件类型/所属进程/字段值）、用 tracetools_analysis 的 Python API 在 Jupyter + bokeh 里画「订阅回调持续时间」的分布、如何读图（大多数回调 <0.01 ms、少数离群 >0.02–0.03 ms）、以及下一步查 API 文档与其他示例笔记本。自动驾驶里「每个回调要多久、抖动多大」就是靠这类 trace 量化出来的。",
+        "access": "免费中文网页，无需注册；中文（译自 ROS 2 documentation Jazzy 的 Advanced 教程），含命令与代码块。站点 ros.ncnynl.com 是 ROS 2 官方文档的中文镜像/译本站，非 docs.ros.org 本体（本轮尝试打开英文原页 https://docs.ros.org/en/jazzy/Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html 被反爬拦住，只返回 bot 校验页，故英文原页未核对正文）。跑通需要 Linux + ROS 2 Jazzy 环境。",
+        "role": "supplement"
+      },
+      {
+        "title": "Autoware Documentation — Evaluating real-time performance（Tuning parameters and performance / Evaluation；含性能测量方法、隔离核与内核配置、pmu_analyzer、感知与规划组件的性能案例分析）",
+        "url": "https://docs.autoware.org/main/tutorials/integrating-autoware/tuning-parameters-and-performance/evaluation/evaluating-real-time-performance/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "自动驾驶系统的实时性能怎么量、怎么改：为什么 Autoware 必须当实时系统、为什么要让每个 callback 的 response time 尽量小；「没有精确测量就不可能改进」——要先排除操作系统与 CPU 频率扰动对测量的影响；单节点执行法（用 ros2_single_node_replayer 录下整系统运行时目标节点的全部输入 topic，再在单节点里以同样逻辑回放，绕开调度干扰）；隔离核的准备（固定 CPU 频率、关 turbo boost、最少化定时器中断、offload RCU 回调、超线程配对核一起隔离；CONFIG_NO_HZ_FULL / CONFIG_RCU_NOCB_CPU 与 isolcpus/rcu_nocbs/nohz_full/intel_pstate=disable 启动参数；scaling_governor=userspace 后写 scaling_setspeed；echo 0 > cpufreq/boost）；用 taskset 绑核、减少 LLC 干扰；测量与可视化（在源码里埋时间戳与性能计数器，用 pmu_analyzer 量任意区段的 turnaround time 与各种 perf counter）；两组案例研究（感知的 ring_outlier_filter、规划组件）示范从指令数、LLC-load-misses/LLC-store-misses、cache-misses、minor-faults 等计数器找瓶颈。",
+        "access": "免费英文网页，无需注册；Autoware 官方文档（Autoware Foundation / TIER IV 维护）；中文版未在本站看到，也未核对有无中译。测量流程假定 Linux + Intel CPU，作者明说其他环境要做类似考虑。",
+        "role": "supplement"
+      },
+      {
+        "title": "Autoware Documentation — Defining temporal performance metrics on components（execution frequency 与 response time 两类指标、checkpoint 设计与示例指标表 AWOV-001…、CARET/ros2_tracing 工具）",
+        "url": "https://docs.autoware.org/main/tutorials/others/defining-temporal-performance-metrics/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "实时预算怎么定成可测的东西：为什么「sufficient temporal performance」要按产品类型与 ODD 分别定义（所以本页只定指标不定要求）；指标只有两类——execution frequency（用 IPC 消息频率观测）与 response time（一条 path 上起止时间戳之差）；如何在 Autoware 里挑该测的消息与 path（传感器观测被消费的边界、功能边界如感知/规划的边界、定时频率切换处、两路消息同步合并处、必须按期望频率发出的车辆指令）；建议从架构层到详细设计层增量定义、别混不同粒度；给整车主链路（LiDAR→sensing→perception→localization→planning→control→vehicle interface→ECU）与感知、障碍物分割到规划之间两条链路的 checkpoint 模型（CPA/CPP/CPS 编号）；示例指标表逐条给出 AWOV-001…010 的指标定义、所属模块、要求值与理由（如 Prediction→Planning 更新率 10 Hz、Detection 结果 10 Hz、NDT 位姿 10 Hz、EKF 反馈位姿 50 Hz、Localization→Planning 50 Hz、Planning→Control 的 response time），并点名 CARET 与 ros2_tracing 是 Linux/ROS 2 上的推荐评测工具（TIER IV 发布过一份 Autoware 2022.12 的 CARET 样例报告）。",
+        "access": "免费英文网页，无需注册；Autoware 官方文档；英文；页面明确说自己不教工具用法（只讲指标设计），工具用法要另看 CARET / ros2_tracing 的 user guide。",
+        "role": "supplement"
+      },
+      {
+        "title": "Phil Koopman (Carnegie Mellon University) — Short course on Autonomous Vehicle Safety + lecture/talk archive（UL 4600 safety case、Safety Performance Indicators、SOTIF、Scenario-Based Assurance 等）",
+        "url": "https://users.ece.cmu.edu/~koopman/lectures/",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "页面分类含「Short course on Autonomous Vehicle Safety」「Selected keynote talks and webinars」，其中与安全评估直接相关的有：Approaches to Validating Autonomous Vehicle Safety（L125_SPI_Monitoring 讲义：未知危害、SOTIF 触发事件、危害分析与闭环验证）、「Safety Case Considerations for Scenario-Based Assurance」(2023)、「UL 4600 3rd edition webinar」、「Safety Performance Indicators」(2022)、「A Safety Case + SPI Metric Approach for Autonomous Vehicle Safety」(2020)、「Why SOTIF?」等；另有 18-642 Embedded Software Engineering（含 Concurrency、Scheduling、End-To-End System Scheduling）讲义页。",
+        "access": "CMU 教职个人主页，免费公开 PDF 讲义与视频链接；英文；页面末尾有版权声明（可引用/教学使用需遵守）；无注册。",
+        "role": "supplement"
+      },
+      {
+        "title": "ISO 21448（SOTIF）预期功能安全人员资质培训（TÜV 南德中文培训课程，2 天，面向 ADAS/高度自动驾驶开发人员）",
+        "url": "https://www.tuvsud.cn/zh-cn/services/training/cn/personnel-qualifications-and-professional-skills/iso-21448-sotif",
+        "tier": "website",
+        "lang": "zh",
+        "free": false,
+        "covers": "课程背景与收益：SOTIF（ISO/PAS 21448）如何补充功能安全（ISO 26262），把「功能性能和稳健性不足引起的风险」降到最小；课程对象为管理人员、安全管理人员、系统/传感器/部件开发、质量与测试工程师；收益包括了解 ISO 21448/SOTIF 的基本概念与要求、与 ISO 26262 的关系等（具体日程需向培训机构索取）。",
+        "access": "付费企业培训（2 天，页面未标价格，需咨询 TÜV 南德）；中文授课（页面为简体中文版培训页，实际讲解语言与教材语言未核对）；不发免费录像。",
+        "role": "supplement"
+      }
+    ],
+    "X.2.4": [
+      {
+        "title": "Microsoft Learn 中文：Azure Health Data Services 中的 FHIR 服务",
+        "url": "https://learn.microsoft.com/zh-cn/azure/healthcare-apis/fhir/overview",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文工程文档：FHIR 资源模型、REST API、搜索、版本与互操作；补医疗数据交换标准的实践，不替代医疗信息系统课程。",
+        "access": "文档免费；实际部署 Azure 服务可能收费。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为API/标准参考，原记 primary。）",
+        "role": "reference"
+      },
+      {
+        "title": "医学信息与医用计算机基础（王杉主编）",
+        "url": "https://www.imed.org.cn/jcdl_51.html",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "第4–12章覆盖HIS、集成、电子病历、PACS、医学决策支持、临床数据中心与挖掘、评价。",
+        "access": "目录公开，正文需购买或机构授权，未购买。官方购买说明 https://www.imed.org.cn/news_029.html 为2016年资料，不作当前价格依据。",
+        "role": "supplement"
+      },
+      {
+        "title": "医学检查决策",
+        "url": "https://www.msdmanuals.cn/home/special-subjects/clinical-research-and-medical-decision-making/medical-testing-decisions",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "病史、体检、检查选择、结果解释，临床流程背景。",
+        "access": "中文完整正文免费，不替代完整医学教育。",
+        "role": "supplement"
+      },
+      {
+        "title": "MIT HST.951J Introduction / Expert Systems",
+        "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-spring-2003/371121f1a51f3c1903cee9fd86022412_lecture1.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "规则推理、MYCIN、诊断算法。",
+        "access": "44页免费官方讲义。",
+        "role": "supplement"
+      },
+      {
+        "title": "Behavior of Various Machine Learning Models in the Face of Noisy Data",
+        "url": "https://ocw.mit.edu/courses/hst-951j-medical-decision-support-fall-2005/53b7f9939d181290867cf652cfd60a5e_full_text.pdf",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "临床预测模型和噪声鲁棒性评价教学案例。",
+        "access": "15页免费课程项目，非独立课程。",
+        "role": "supplement"
+      },
+      {
+        "title": "Overview of Medical Decision Making",
+        "url": "https://www.merckmanuals.com/home/special-subjects/clinical-research-and-medical-decision-making/overview-of-medical-decision-making",
+        "tier": "material",
+        "lang": "en",
+        "free": true,
+        "covers": "诊断治疗目标、患者共同决策背景。",
+        "access": "英文完整正文免费，链接检查与治疗决策。",
         "role": "supplement"
       }
     ]

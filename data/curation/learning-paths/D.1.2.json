@@ -1,0 +1,576 @@
+{
+ "id": "D.1.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMU 15-445/645 Intro to Database Systems (Fall 2026) — schedule, slides, notes, video",
+   "url": "https://15445.courses.cs.cmu.edu/fall2026/schedule.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "#03–06 storage models/compression, #07 hash tables, #08–09 indexes & filters (tree/hash/vector), #10 index concurrency, #11 sorting & aggregation, #13 join algorithms, #14–15 query execution, #16–17 query planning & optimization, #18 concurrency-control theory, #19 2PL, #20 timestamp ordering, #21 MVCC, #22 logging, #23 recovery, #24 distributed databases. Every row links Slides, Notes, a Video and textbook readings.",
+   "access": "Free public schedule with slides/notes/videos; Fall 2026 is in progress, so later lectures and solution material appear as released (past semesters are archived on the same site). Assignments page states P1–P2 forbid coding agents.",
+   "publisher": "Carnegie Mellon University (Jignesh Patel et al.)",
+   "evidence": {
+    "url": "https://15445.courses.cs.cmu.edu/fall2026/schedule.html",
+    "location": "Schedule table, rows #01–#25",
+    "finding": "Rows list #07 Hash Tables, #08–09 Indexes & Filters, #13 Joins, #14–15 Query Execution, #16–17 Query Planning & Optimization, #18–21 Concurrency Control, #22 Logging, #23 Recovery, #24 Distributed Databases, each with slides/notes/video links."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "CS186 Database Systems — online notes (UC Berkeley): B+Trees, Query Optimization, Transactions, Recovery",
+   "url": "https://cs186berkeley.net/notes/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Free text notes for B+Trees, Buffer Management, Hashing, Sorting, Iterators and Joins, Query Optimization, Transactions & Concurrency I/II, Recovery, Parallel Query Processing. Useful as readable prose when a lecture video is not enough; the site warns it is not comprehensive.",
+   "access": "Free HTML, no registration; read-only notes, no exercises.",
+   "publisher": "UC Berkeley CS186 teaching staff",
+   "evidence": {
+    "url": "https://cs186berkeley.net/notes/",
+    "location": "Navigation list and page notice",
+    "finding": "Topic list includes B+Trees, Buffer Management, Sorting, Iterators and Joins, Query Optimization, Transactions I/II, Recovery; notice says notes are under construction and official lectures are authoritative."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "【哈工大】数据库系统 战德臣（全23讲）— 第17–23讲",
+   "url": "https://www.bilibili.com/video/BV1HY4y1b72A/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "第17讲 数据库物理存储；第18讲 数据库索引技术；第19–20讲 查询实现算法（一趟/两趟扫描）；第21讲 查询优化技术；第22讲 并发控制；第23讲 故障恢复。覆盖索引、执行计划与代价估算、并发控制、日志与恢复。",
+   "access": "第三方转载，授权未核。B站免费播放，分P 17–23 共约 12 小时；上传者「农夫CC」是搬运账号，非哈工大官方号；无字幕轨信息，字幕未核对。",
+   "publisher": "哈尔滨工业大学 战德臣 主讲（B站 UP 主「农夫CC」搬运）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1HY4y1b72A/",
+    "location": "分 P 列表第 17–23 讲",
+    "finding": "分P标题依次为数据库物理存储、数据库索引技术、一趟扫描算法、两趟扫描算法、查询优化技术、并发控制、故障恢复。"
+   },
+   "official_search": "（本轮补查）哈工大《数据库系统》系列第三门《数据库系统（下）：管理与技术》的官方版在中国大学MOOC：https://www.icourse163.org/learn/HIT-1001578001 （已打开，正文写明「本课程《数据库系统（下）-管理与技术》将包括第四部分内容」，参考资料指定《数据库系统实现》为主教材，属管理系统实现技术）。但该页「课程大纲」只显示预备知识与参考资料，未列第17–23讲讲次；另查国家高等教育智慧教育平台同一系列只检索到「上」与「中」两门的课程页（见 D.1.1 的 r7-zh1/r7-zh2），未检索到「下」的平台页。因此官方版确认存在、但讲次仍只能用本转载核对，保留 reupload=true。",
+   "updated_by": [
+    "review/pi-additions/D.1.2.json"
+   ],
+   "reupload": true
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《数据库管理系统——从基本原理到系统构建》清华大学李国良主讲（B站，23 个分P）",
+   "url": "https://www.bilibili.com/video/BV16Ra4zGEqA/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "第5章 数据库存储、第6章 事务管理、第7章 原子性和持久性实现及故障恢复、第8章 并发控制、第9章 数据库索引、第10章 查询处理、第11章 查询优化、第12章 查询执行。比 zh1 多出「查询执行/执行计划」的系统讲次，正好补执行计划与代价模型的细节。",
+   "access": "第三方转载，授权未核。B站免费播放；上传者「Miss_2026」为个人搬运账号，简介写明这是「101计划」教材《数据库管理系统》的配套教学视频、由清华大学李国良教授主讲；未核对字幕。",
+   "publisher": "清华大学 李国良（B站 UP 主「Miss_2026」搬运）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV16Ra4zGEqA/",
+    "location": "分 P 列表第 5–12 章",
+    "finding": "分P包括第5章数据库存储、第6章事务管理、第7章故障恢复、第8章并发控制、第9章数据库索引、第10章查询处理、第11章查询优化、第12章查询执行。"
+   },
+   "reupload": true,
+   "official_search": "（本轮补查）已找到官方版并改成 alternative：①作者/课题组课程主页 https://dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html 列出第01–16讲课件与视频链接（新增 r7-zh1）；②作者页的视频链接全部指向 B 站 BV15u4y1Q71R，该视频 UP 主为 THUDBGroup、标注「自制」，简介首行即课程主页地址（新增 r7-zh2）。本 key（BV16Ra4zGEqA）是他人上传的 23 条同名合集，保留作转载并只用于核对章节标题。",
+   "updated_by": [
+    "review/pi-additions/D.1.2.json"
+   ]
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "数据库系统概论（第6版，王珊等）— 系统篇",
+   "url": "https://mall.hep.com.cn/index.php/product-40316.html",
+   "tier": "book",
+   "free": false,
+   "role": "reference",
+   "covers": "第三篇系统篇：关系数据库存储管理、关系查询处理和查询优化、数据库恢复技术、并发控制、数据库管理系统概述。适合做纸面推导与习题。",
+   "access": "付费纸书 59.00 元（ISBN 9787040591255，2023-03）；无免费全文。",
+   "publisher": "高等教育出版社",
+   "evidence": {
+    "url": "https://mall.hep.com.cn/index.php/product-40316.html",
+    "location": "商品参数与内容简介",
+    "finding": "商品页列出第6版、定价59.00、ISBN 9787040591255，内容简介说明系统篇含存储管理、查询处理与优化、恢复、并发控制。"
+   }
+  },
+  {
+   "key": "fix-zh-dbms-3",
+   "lang": "zh",
+   "title": "数据库管理系统实现基础讲义 第3章",
+   "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-3",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "B+树与静态、动态散列。",
+   "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+   "publisher": "谢美意、左琼／OceanBase-Partner",
+   "evidence": {
+    "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-3",
+    "location": "3.2、3.3",
+    "finding": "正文解释查找、插入、删除、分裂及散列扩展。"
+   },
+   "added_by": "review/data-app-additions/D.1.2.json"
+  },
+  {
+   "key": "fix-zh-dbms-4",
+   "lang": "zh",
+   "title": "数据库管理系统实现基础讲义 第4章",
+   "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-4",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "查询处理与算子执行。",
+   "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+   "publisher": "谢美意、左琼／OceanBase-Partner",
+   "evidence": {
+    "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-4",
+    "location": "第4章查询处理",
+    "finding": "已打开正文；与第5章计划树及物理选择衔接。"
+   },
+   "added_by": "review/data-app-additions/D.1.2.json"
+  },
+  {
+   "key": "fix-zh-dbms-5",
+   "lang": "zh",
+   "title": "数据库管理系统实现基础讲义 第5章",
+   "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-5",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "计划树、逻辑与物理优化、基于代价的选择。",
+   "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+   "publisher": "谢美意、左琼／OceanBase-Partner",
+   "evidence": {
+    "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-5",
+    "location": "5.1、5.2及物理优化部分",
+    "finding": "正文说明扫描路径、多表连接顺序和计划选择，含代数等价及子查询例子。"
+   },
+   "added_by": "review/data-app-additions/D.1.2.json"
+  },
+  {
+   "key": "fix-zh-dbms-6",
+   "lang": "zh",
+   "title": "数据库管理系统实现基础讲义 第6章",
+   "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-6",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "并发控制、锁协议、日志与故障恢复。",
+   "access": "免费中文HTML教学正文，含算法和实例，无须登录；主页署名华中科技大学谢美意、左琼，OceanBase-Partner维护。",
+   "publisher": "谢美意、左琼／OceanBase-Partner",
+   "evidence": {
+    "url": "https://oceanbase-partner.github.io/lectures-on-dbms-implementation/lecture-6",
+    "location": "6.2、6.3、6.4.3",
+    "finding": "正文有可串行化、封锁、WAL、UNDO/REDO与恢复；不是只列术语。"
+   },
+   "added_by": "review/data-app-additions/D.1.2.json"
+  },
+  {
+   "key": "fix-en-cmu2025",
+   "lang": "en",
+   "title": "CMU 15-445 Fall 2025 archived notes",
+   "url": "https://15445.courses.cs.cmu.edu/fall2025/schedule.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "07–10索引；11–16执行与优化；17–20并发；21–22日志恢复。",
+   "access": "已结束课程公开讲义；已实际打开16-optimization2.pdf和22-recovery.pdf。以正文为主，视频字幕未核对。",
+   "publisher": "Carnegie Mellon University／Andy Pavlo",
+   "evidence": {
+    "url": "https://15445.courses.cs.cmu.edu/fall2025/schedule.html",
+    "location": "#16 Notes与#22 Notes",
+    "finding": "分别为5页优化讲义及6页崩溃恢复讲义，提供已发布的材料，补原2026进行中主线的时间限制。"
+   },
+   "added_by": "review/data-app-additions/D.1.2.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "数据库管理系统（清华大学 李国良；作者/课题组官方课程页：16 讲课件 PDF/PPTX + 视频链接 + 5 个课程实验）",
+   "url": "https://dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "第05讲 数据库存储、第06讲 事务管理、第07讲 数据库原子性和持久性实现及故障恢复、第08讲 并发控制、第09讲 数据库索引、第10讲 查询处理、第11讲 查询优化、第12讲 查询执行（另有 01 概述、02 关系模型、03 设计、04 SQL、13 安全、14 高级数据库、15 GaussDB、16 SQLite）；课程实验 1 存储、2 故障恢复、3 并发控制、4 查询执行、5 查询优化，实验文档 thu-db.github.io/huadb-doc、代码 github.com/thu-db/huadb。",
+   "access": "清华大学数据库组/李国良个人主页，免费公开课件 PDF 与视频链接，无需注册；中文授课；每讲视频指向 B 站官方账号 THUDBGroup 的合集（见 r7-zh2）；字幕情况未核对。",
+   "publisher": "清华大学数据库组（dbgroup.cs.tsinghua.edu.cn，李国良 liguoliang@tsinghua.edu.cn）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html",
+    "location": "「当前课程 / 数据库管理系统 → 课程资料」第01–16讲列表（每讲带 slidesNN.pdf 与 BV15u4y1Q71R?p=N 视频链接）、「课程实验」实验1–5",
+    "finding": "打开页面读到 16 讲标题与课件/视频链接，第05–12讲正是存储、事务管理、故障恢复、并发控制、索引、查询处理、查询优化、查询执行；另读到 5 个课程实验（haudb）说明这是「造数据库」的系统课而非产品文档。"
+   },
+   "added_by": "review/pi-additions/D.1.2.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "数据库管理系统（数据库内核技术）— B 站官方账号 THUDBGroup 自制合集，23 分 P",
+   "url": "https://www.bilibili.com/video/BV15u4y1Q71R/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "第1讲 数据库概述、2 关系模型、3 数据库设计、4 SQL、5 数据库存储引擎、6 事务处理、7 故障恢复、8 并发控制、9 索引、10 查询处理、11 数据库优化器、12 数据库执行器、13 数据库安全、14 高级数据库（1 分布式/2 OLAP/3 HTAP/4 内存/5 云原生/6 新硬件/7 NoSQL/8 AI与数据库）、15 GaussDB 简介、16 SQLite 简介。",
+   "access": "B 站免费播放，23 个分 P（第14讲拆成 8 个分 P）；UP 主 THUDBGroup、页面标注「自制」，视频简介给出课程主页 dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html，与作者页第01–16讲的视频链接 p=1–14/22/23 对应；中文讲授；字幕未核对。",
+   "publisher": "清华大学数据库组（B 站账号 THUDBGroup，自制；与作者课程主页互链）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV15u4y1Q71R/",
+    "location": "页面 owner=THUDBGroup、copyright=自制、简介首行「课程主页：https://dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html」，分 P 列表 23 条",
+    "finding": "确认这是清华数据库组官方号自制的课程录像（非搬运），分 P 标题与作者页 16 讲一一对应，第5–12讲覆盖存储引擎/事务/恢复/并发/索引/查询处理/优化器/执行器，正好是 D.1.2 的必学范围。"
+   },
+   "added_by": "review/pi-additions/D.1.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "索引",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第18讲 数据库索引技术",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第9章 数据库索引",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-dbms-3",
+     "section": "3.2–3.3 B+树和散列",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第09讲 数据库索引（课件 slides09.pdf + 视频 p=9）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "#07 Hash Tables；#08–09 Indexes & Filters；#10 Index Concurrency Control",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "B+Trees；Hashing",
+     "extent": "covered"
+    }
+   ],
+   "note": "原中文主线依赖个人搬运视频；补入作者正文的树操作与散列算法，配合原zh1/zh2完成索引教学。；官方课程页有独立一讲讲索引，配套实验 1（存储）可动手实现；B 站官方合集 p=9 同名，覆盖记在官方版名下。"
+  },
+  {
+   "topic": "执行计划",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第10章 查询处理；第12章 查询执行",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "第19–20讲 查询实现算法之一趟/两趟扫描",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-dbms-4",
+     "section": "第4章算子；第5章5.1计划树",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第10讲 查询处理（slides10）+ 第12讲 查询执行（slides12）；实验 4 查询执行",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "#11 Sorting & Aggregations；#13 Joins；#14–15 Query Execution",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Sorting；Iterators and Joins",
+     "extent": "covered"
+    }
+   ],
+   "note": "原zh2查询执行录像配合第4章算子和第5章计划树，串起计划结构、物理算子与执行。；查询处理讲算子与代数，查询执行讲执行器；实验 4 要求自己实现执行算子，覆盖执行计划这一层。"
+  },
+  {
+   "topic": "代价模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第21讲 查询优化技术",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第11章 查询优化",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-dbms-5",
+     "section": "第5章逻辑、物理优化与计划代价",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第11讲 查询优化（slides11 数据库优化器）；实验 5 查询优化",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "#16–17 Query Planning & Optimization I–II",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Query Optimization",
+     "extent": "covered"
+    }
+   ],
+   "note": "基数估计、连接顺序与计划代价。；第5章的计划枚举、存取路径和代价比较配合原zh1第21讲，形成中文原理与示例主线。；整讲讲优化器（逻辑/物理优化与计划代价），实验 5 要求实现优化器，比只列术语的章节系统。"
+  },
+  {
+   "topic": "并发控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第22讲 数据库事务处理技术之并发控制",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第8章 并发控制",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-dbms-6",
+     "section": "6.2并发正确性；6.3封锁",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第06讲 事务管理 + 第08讲 并发控制；实验 3 并发控制",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "#18 Concurrency Control Theory；#19 2PL；#20 Timestamp Ordering；#21 MVCC",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Transactions & Concurrency I–II",
+     "extent": "covered"
+    }
+   ],
+   "note": "可串行化、锁和调度正文配合原zh1并发讲次，覆盖正确性与实现；不将事务简介当全部内容。；事务管理一讲加并发控制一讲，并有实现并发控制的实验。"
+  },
+  {
+   "topic": "日志与恢复",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第23讲 数据库事务处理技术之故障恢复",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第7章 数据库原子性和持久性实现及故障恢复",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-dbms-6",
+     "section": "6.4故障恢复，尤其6.4.3日志",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第07讲 数据库原子性和持久性实现及故障恢复；实验 2 故障恢复",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "#22 Database Logging；#23 Database Recovery",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Recovery",
+     "extent": "covered"
+    }
+   ],
+   "note": "WAL、UNDO/REDO与故障恢复正文配合原zh1第23讲，覆盖日志原则及恢复过程。；原子性/持久性与故障恢复整讲，实验 2 要求实现日志与恢复流程；官方 B 站合集 p=7 同名。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "从第17讲物理存储、第18讲索引开始，跟做 B+ 树插入/删除与索引选择；第19–21讲把扫描算法、连接算法和查询优化串起来，能手算一个两表连接的代价并比较计划。"
+    },
+    {
+     "source": "zh2",
+     "read": "用第10–12章补「执行计划/查询执行」的系统讲法；第7–8章与 zh1 第22–23讲互相核对日志、恢复与并发控制。"
+    },
+    {
+     "source": "zh3",
+     "read": "需要习题与更严格的定义时读教材系统篇（存储、查询处理与优化、恢复、并发）。"
+    },
+    {
+     "source": "fix-zh-dbms-3",
+     "read": "先读第3章并手推B+树和散列，再接第4章算子。"
+    },
+    {
+     "source": "fix-zh-dbms-4",
+     "read": "读算子算法，与第5章计划树联系，比较不同连接的执行方式。"
+    },
+    {
+     "source": "fix-zh-dbms-5",
+     "read": "读逻辑和物理优化，按示例比较计划及存取代价；原录像作补充。"
+    },
+    {
+     "source": "fix-zh-dbms-6",
+     "read": "依次读并发正确性、封锁、日志恢复，手推调度及故障后的UNDO/REDO。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读/看第09讲索引与第05讲存储，理解页与索引结构；然后第10讲查询处理、第12讲查询执行，做实验 4 实现算子；再第11讲优化器，做实验 5 比较不同计划的代价。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "事务线：第06讲事务管理 → 第08讲并发控制（实验 3）→ 第07讲原子性与持久性/故障恢复（实验 2）；每讲先读 slides PDF 再看视频，最后手推一个调度与一次崩溃后的 UNDO/REDO。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "视频只从官方合集看：p=5 存储引擎、p=9 索引、p=10–12 查询处理/优化器/执行器、p=6–8 事务处理/故障恢复/并发控制；第14讲 8 个分 P 讲分布式、OLAP、HTAP、内存、云原生、新硬件、NoSQL 与 AI 与数据库，可作为延伸。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the schedule in order from #03 storage through #24: watch each lecture and read its notes; stop after #10 to build an index, then #11–17 to implement operators and a cost-based optimizer."
+    },
+    {
+     "source": "en2",
+     "read": "Use the CS186 notes for B+Trees, Iterators and Joins, Query Optimization, Transactions and Recovery as a second written explanation before doing the CMU projects."
+    },
+    {
+     "source": "fix-en-cmu2025",
+     "read": "原2026主课后半未发布时直接读已结束2025版07–22讲的Notes，特别16与21–22；配合原en2 Berkeley文本，无须等待未来授课。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「分布式数据库 原理 课程」「数据库系统 运维 管理 课程」，并核对 BV1HY4y1b72A 分P",
+   "result": "采纳战德臣第17–23讲为中文视频主线；李国良课程第5–12章补执行计划/查询执行。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开中国大学MOOC《数据库系统（上）》页面确认系列课结构",
+   "result": "确认「管理与技术」是第三门课，与战德臣录像第17–23讲同源；课程页未给逐讲大纲，故中文文本细节以教材与录像为准。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "高等教育出版社商城《数据库系统概论（第6版）》",
+   "result": "采纳为参考书（59 元），未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "打开 CMU 15-445 Fall 2026 schedule 与 CS186 notes 目录",
+   "result": "采纳 en1 为英文主线、en2 为文字补充；两者合起来覆盖索引/执行计划/代价模型/并发/恢复。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "数据库管理系统实现基础讲义 查询优化",
+   "result": "打开OceanBase-Partner主页及第3–6章中文正文，署名谢美意、左琼；人大讲义页面打开超时。",
+   "by": "review/data-app-additions/D.1.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://15445.courses.cs.cmu.edu/fall2025/schedule.html",
+   "result": "打开归档课程和优化、恢复PDF，纠正2026进行中材料被笼统当全已发布的风险。",
+   "by": "review/data-app-additions/D.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "清华大学 李国良 数据库管理系统 从基本原理到系统构建 课程 学堂在线",
+   "result": "命中作者/课题组官方课程页 dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html 与 B 站同名合集；另有高教社教材页（86.00 元，未购买、未登记）。采纳作者页。",
+   "by": "review/pi-additions/D.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html（普通抓取只得到导航，改用 tavily extract 读全文）",
+   "result": "读到第01–16讲标题、每讲的 slidesNN.pdf 与 BV15u4y1Q71R?p=N 视频链接、实验 1–5（huadb）；确认第05–12讲覆盖存储/事务/恢复/并发/索引/查询处理/优化/执行。",
+   "by": "review/pi-additions/D.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/learn/HIT-1001578001",
+   "result": "哈工大系列第三门《数据库系统（下）：管理与技术》官方页确认存在且属「第四部分 管理系统实现技术」，但大纲区只有预备知识与参考资料，未列讲次，故 zh1 的讲次仍需转载核对。",
+   "by": "review/pi-additions/D.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "youtube/bilibili",
+   "query_or_url": "https://www.bilibili.com/video/BV15u4y1Q71R/（bvinfo.py 读分 P）",
+   "result": "确认 owner=THUDBGroup、自制、23 分 P，标题为第1–16讲（第14讲 8 个分 P），简介首行为课程主页地址 → 认定官方版，采纳为 r7-zh2。",
+   "by": "review/pi-additions/D.1.2.json"
+  }
+ ],
+ "findings": [
+  "原英文资源 CMU 15-445 的 schedule 已逐行核对，25 讲里索引、执行计划、代价模型、并发控制、日志与恢复都有独立讲次，且每讲配 slides/notes/video，保留。",
+  "原中文条目只给 TiDB「整体架构」一页，讲的是分布式 SQL 的工程实例，不能提供数据库内核的执行器、代价模型与恢复算法教学；本次换成战德臣 23 讲的第17–23讲（视频），并用李国良课程的查询执行/优化章节补充，中文路线才覆盖简介全部五项。",
+  "战德臣与李国良两套录像都是个人账号搬运的大学课程，不是官方发布账号；课程身份由分P标题、简介和官方 MOOC 页互证，字幕均未核对。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "数据库内核与查询优化",
+ "description": "索引、执行计划、代价模型、并发控制、日志与恢复。",
+ "applied_additions": [
+  "review/data-app-additions/D.1.2.json@9d7a988238",
+  "review/pi-additions/D.1.2.json@cf394e93d6"
+ ]
+}

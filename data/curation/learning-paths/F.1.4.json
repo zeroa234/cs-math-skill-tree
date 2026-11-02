@@ -1,0 +1,335 @@
+{
+ "id": "F.1.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "A Course in Graduate Algorithms（Bo Waggoner, CU Boulder CSCI 5454）讲义与视频",
+   "url": "https://bowaggoner.com/courses/gradalg/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "16 讲，逐讲列出 Videos/Notes。Module 2 直接对应本节点：Lecture 6 Intro to Approximation Algorithms（近似比、顶点覆盖/集合覆盖/背包）、Lecture 7 Intro to Online Algorithms（竞争比、ski rental、确定性下界）、Lecture 8 Intro to Randomized Algorithms（期望/高概率保证、随机化舍入）、Lecture 9 Hash Tables、Lecture 10 Streaming Algorithms；Lecture 1 讲 Word-RAM 与 Big-O，2–5 讲 DFS/拓扑、最短路、DP、最大流最小割作前置。",
+   "access": "免费：每讲的 notes 与视频链接公开（视频托管在课程页），无需注册；讲义比视频多出部分证明。英文字幕状态未核对。",
+   "publisher": "Bo Waggoner（University of Colorado Boulder）",
+   "evidence": {
+    "url": "https://bowaggoner.com/courses/gradalg/",
+    "location": "Module 2 标题与 Lecture 6/7/8/10 条目",
+    "finding": "页面按 Module 1–3 列出 16 讲，每讲有 Videos 与 Notes 链接；Module 2 标题为 Approximation, Online, and Randomized Algorithms。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "山东财经大学《算法分析与设计》（中国大学MOOC，李恒武等）",
+   "url": "https://www.icourse163.org/course/SDCJDX-1206671828",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "授课目标原文列出的方法：枚举、递推、贪心、分治、动态规划、回溯、分支限界、网络流、图算法、随机算法、近似算法；先修为高级语言程序设计与数据结构。页面未渲染分讲大纲，“随机算法”“近似算法”只到目标点名，没有可核的讲次与深度。",
+   "access": "中国大学MOOC 注册后按开放学期免费学习，认证证书另计；视频与字幕需登录，未核对。",
+   "publisher": "山东财经大学 / 中国大学MOOC（高等教育出版社）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/SDCJDX-1206671828",
+    "location": "授课目标第 1 条、参考资料第 2 项（王晓东《计算机算法设计与分析》第 5 版）",
+    "finding": "授课目标逐项列出随机算法与近似算法；“课程大纲”栏没有章节表，只有预备知识与教材清单。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.1.4.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "武汉大学《高级算法》（中国大学MOOC，林海；含近似算法、随机算法、在线算法模块，配套教材《高级算法》机械工业出版社 2024）",
+   "url": "https://www.icourse163.org/course/WHU-1485333166",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "课程概述原文按模块写清三条线：近似算法模块“给出可证明质量的近似解与近似比分析”，随机算法模块“提升期望效率并加强概率论证”，在线算法模块“引入竞争分析应对实时决策”；另含线性规划、高级图算法、NP 问题与启发式算法。以主讲教师教材《高级算法》为依托，“MOOC 与教材章节相互对应”。页面“课程大纲”栏只列了预备知识（算法设计与分析），未渲染分讲标题。",
+   "access": "中国大学MOOC 免费注册学习，认证证书需付费申请；中文授课（课程为依据课堂实录剪辑）；视频与字幕需登录，分讲标题未核对。",
+   "publisher": "武汉大学 / 中国大学MOOC（高等教育出版社·网易），主讲林海（武汉大学国家网络安全学院副教授）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/WHU-1485333166",
+    "location": "「课程概述」第 2–3 段、「授课目标」「课程大纲」「参考资料」「常见问题」栏",
+    "finding": "打开确认原文：“课程重点讲授困难问题的求解策略：近似算法给出可证明质量的近似解与近似比分析；随机算法提升期望效率并加强概率论证；在线算法引入竞争分析应对实时决策；启发式算法强调工程可用性与效果评估”；参考资料写“教材：林海主编《高级算法》，机械工业出版社出版”；课程大纲栏只有“预备知识：算法设计与分析”，没有分讲列表。"
+   },
+   "added_by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "随机算法（xestray 站点《高级数据结构与算法分析》讲义第 13 讲）",
+   "url": "https://xestray.cc/ComputerScience/ADS/lec-13/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "随机化算法的两类保证及其定义：蒙特卡洛（“只以高概率给出正确答案”，用于近似解/估算）与拉斯维加斯（“总是正确、期望时间高效”）；雇佣问题的指示器随机变量期望分析；随机化快速排序的期望 O(n log n) 分析（按 type j 子问题计数推出 E[T]=O(N)）。",
+   "access": "免费网页正文，无需注册；简体中文；作者自述讲义整理自“吴一航学长的 ADS 讲义”。",
+   "publisher": "xestray（个人整理的《高级数据结构与算法分析》课程讲义站点）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xestray.cc/ComputerScience/ADS/lec-13/",
+    "location": "「随机算法」页 Table of contents：雇佣问题（Hiring Problem）/朴素思路/随机算法/在线雇佣问题/随机化快速排序；正文蒙特卡洛与拉斯维加斯定义段",
+    "finding": "打开确认正文：“蒙特卡洛算法（Monte Carlo Algorithm）：efficient randomized algorithms that only need to yield the correct answer with high probability”“拉斯维加斯算法（Las Vegas Algorithm）：randomized algorithms that are always correct, and run efficiently in expectation”，随后用雇佣问题算期望雇佣成本、用 type j 子问题计数给出随机化快排的期望时间。"
+   },
+   "added_by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "近似算法（xestray 站点《高级数据结构与算法分析》讲义第 11 讲）",
+   "url": "https://xestray.cc/ComputerScience/ADS/lec-11/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "近似比 ρ(n)（A(I) ≤ ρ(n)·OPT(I)）与渐近近似比（A(I) ≤ α·OPT(I)+k）的定义与区别；一维装箱 Next Fit/Any Fit 的近似比；装箱问题 3/2 近似比下界的反证证明（若存在 <3/2 的多项式近似算法则可判定“能否装入两箱”这一 NPC 问题）；0-1 背包的 2-近似与 FPTAS；K-Center 的 2-近似与“最优近似比”论证。",
+   "access": "免费网页正文含 LaTeX 公式与证明，无需注册；简体中文。",
+   "publisher": "xestray（个人整理的《高级数据结构与算法分析》课程讲义站点）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xestray.cc/ComputerScience/ADS/lec-11/",
+    "location": "「近似算法」页「基本概念」「一维装箱问题」「0-1 背包问题」「K-Center 聚类问题」各节",
+    "finding": "打开确认正文：给出 A(I) ≤ α·OPT(I) 与渐近近似比 A(I) ≤ α·OPT(I)+k 的定义；用“若存在近似比小于 3/2 的多项式时间近似算法 A……则只可能 P=NP”证明装箱下界；背包一节写“基础的 2-近似算法”“FPTAS 算法”，K-Center 一节写“聚类问题的最优近似比”。"
+   },
+   "added_by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "key": "r7-zh4",
+   "lang": "zh",
+   "title": "竞争分析与在线算法（《土法炼钢》算法系列第 115 篇，中文长文教程）",
+   "url": "https://quant67.com/post/algorithms/115-competitive-analysis/competitive-analysis.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "在线与离线算法的定义差异、对手模型（自适应/ oblivious）、确定性竞争比与随机化竞争比的形式定义、竞争比与近似比的区别；滑雪租赁的确定性最优策略与确定性下界、随机化策略；分页问题 LRU 的 k-竞争性证明、确定性下界（对手每次请求缺页页）、随机化标记算法与随机化下界；k-server 与 Work Function 算法；在线二分搜索/单向交易；Yao 原理（minimax 定理、随机化下界证明方法）；在线负载均衡与 Adwords 的贪心/BALANCE。",
+   "access": "免费网页正文，含公式推导、定理与证明、Python 模拟代码，无需注册；简体中文。",
+   "publisher": "《土法炼钢 · 系统与基础设施》算法系列（个人技术长文站点，2025-07-15 发布）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://quant67.com/post/algorithms/115-competitive-analysis/competitive-analysis.html",
+    "location": "目录「三、竞争比的严格定义」「四、滑雪租赁问题（4.3 确定性下界、4.4 随机化策略）」「五、分页问题（5.3 LRU 是 k-竞争的、5.4 确定性下界、5.5 随机化：标记算法、5.6 随机化下界）」「八、Yao 原理」「九、在线负载均衡」",
+    "finding": "打开确认正文（约 2.6 万字符）：3.1/3.2 给确定性/随机化竞争比定义并要求 A(σ) ≤ c·OPT(σ)+α、c_A = sup A(σ)/OPT(σ)；5.4 给出“对于缓存大小为 k 的分页问题，没有确定性在线算法能达到小于 k 的竞争比”的对手论证与 OPT 的 lazy 分析；5.6 用 Yao 原理给随机化下界。"
+   },
+   "added_by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "key": "r7-zh5",
+   "lang": "zh",
+   "title": "《高级算法》（林海，机械工业出版社，ISBN 978-7-111-76447-2，定价 59.0 元；出版社官方图书页）",
+   "url": "http://cs.cmpedu.com/books/book/5608710.htm",
+   "tier": "book",
+   "free": false,
+   "role": "reference",
+   "covers": "官方内容简介明确本书含“困难问题的常用算法，如近似算法、随机算法、在线算法、启发式算法”，并含困难问题（NPC）的概念与证明、线性规划/整数规划模型、高级图算法（中心性、社群发现）；每章给应用实例。出版社页面注明配套资源含电子课件、教学大纲、微课视频与 B 站（账号 foretmer）录课。页面未展示章节目录。",
+   "access": "需购买，定价 59.0 元（2024-11-29 出版，1-2 印次）；无免费电子版；未购买。",
+   "publisher": "机械工业出版社（机工教育服务网），作者林海（武汉大学国家网络安全学院）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://cs.cmpedu.com/books/book/5608710.htm",
+    "location": "「图书简介」段、「配套资源」行、版本信息（ISBN、出版日期、定价）",
+    "finding": "打开确认：“本书的内容主要包括两个方面……包括：困难问题的概念和证明；困难问题的常用模型，如线性规划和整数规划；困难问题的常用算法，如近似算法、随机算法、在线算法、启发式算法”“定价：59.0”“出版日期 2024-11-29”“配套资源：电子课件、教学大纲、微课视频、MOOC（B站）……录课已经发布在 B站，账号为 foretmer”。"
+   },
+   "added_by": "review/pi-additions/F.1.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "随机化保证",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“随机算法”（无分讲大纲，深度未核）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "蒙特卡洛/拉斯维加斯两类的定义；雇佣问题期望分析；随机化快速排序期望 O(n log n) 分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 8 Intro to Randomized Algorithms（期望/高概率界、随机化舍入）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有课程目标层面的点名，没有可核的讲次与正文；英文有讲义＋视频。；“随机化保证”要的是随机算法给出什么样的保证（总正确但期望时间、或以高概率正确）。r7-zh2 正是按这两类保证组织：先给 Monte Carlo（high probability 正确）与 Las Vegas（always correct, efficiently in expectation）的定义，再用雇佣问题算期望成本、用子问题分类计数证明随机化快排只是期望 O(n log n)（即拉斯维加斯型保证）。r7-zh1 的随机算法模块（“提升期望效率并加强概率论证”）提供成体系课程与练习。"
+  },
+  {
+   "topic": "近似比",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“近似算法”（无分讲大纲）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "近似比与渐近近似比定义；装箱 Next Fit/Any Fit；3/2 下界反证；背包 2-近似与 FPTAS；K-Center 最优近似比",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 6 Intro to Approximation Algorithms",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧未核到近似比定义与分析的正文/讲次。；r7-zh3 先给 ρ(n) 与渐近近似比 α·OPT+k 的定义（并区分二者），再用四类问题做“设计—分析—下界”的完整训练：装箱的 Any Fit 与“小于 3/2 则 P=NP”的下界证明、背包的 2-近似与 FPTAS、K-Center 的 2-近似与最优近似比。这已包含近似比的定义、证明与不可改进性判断，超出“入门比较”要求。r7-zh1 的近似算法模块（“可证明质量的近似解与近似比分析”）提供配套课程。"
+  },
+  {
+   "topic": "竞争分析与下界",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh4",
+     "section": "竞争比形式定义与对手模型；滑雪租赁确定性下界；分页 LRU k-竞争性、确定性下界、随机化标记算法与随机化下界；Yao 原理",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 7 Intro to Online Algorithms（竞争比、ski rental、确定性下界）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧无对应内容：课程目标未列在线算法，B 站定向搜索也没有可核的中文在线算法课程。；旧结论说中文没有系统讲竞争比/在线算法的材料。r7-zh4 完整给出：竞争比 A(σ) ≤ c·OPT(σ)+α 与 c_A=sup A/OPT 的定义、对手模型、与近似比的区别；滑雪租赁的确定性下界；分页问题 LRU 的 k-竞争性证明、确定性下界（对手总请求缺页页 + OPT 的 lazy 分析）与随机化标记算法的下界（Yao 原理）。定义、上界证明、下界证明三件都在，构成本知识点所需的“竞争分析＋下界”。r7-zh1 的在线算法模块与 r7-zh5 的在线算法章提供成体系课程与教材对照。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "跟课学随机算法与近似算法部分（需登录平台，按开课学期），用配套教材王晓东《计算机算法设计与分析》相应章节补推导"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按“近似算法→随机算法→在线算法”三个模块跟课，每模块记一条主线：近似比分析与不可近似性、期望/高概率保证、竞争比与对手模型；跟完一章就回到 r7-zh2/zh3/zh4 的对应讲义做一遍推导与练习。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "先抄下 Monte Carlo 与 Las Vegas 的定义并各举一例；用指示器随机变量重算雇佣问题的期望成本；再按 type j 子问题计数推出随机化快排期望 O(n log n)，并说明它是拉斯维加斯型保证（总正确、期望快）。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "写出近似比与渐近近似比定义；对一维装箱算 Next Fit/Any Fit 的比值，再跟着做 3/2 下界的反证（由近似算法判定“两箱可装”而推出 P=NP）；对 0-1 背包走 2-近似＋FPTAS 的取舍，最后用 K-Center 体会“最优近似比”的证明。"
+    },
+    {
+     "source": "r7-zh4",
+     "read": "按目录顺序读：先立竞争比与对手模型，再算滑雪租赁的确定性最优策略与下界；然后读分页问题，自己复述 LRU 的 k-竞争性证明与“没有确定性算法优于 k”的对手论证；最后用标记算法＋Yao 原理理解随机化下界，把 Python 模拟跑一遍改参数看比值。"
+    },
+    {
+     "source": "r7-zh5",
+     "read": "作为教材对照：需要更系统的习题与章节顺序时按本书近似算法/随机算法/在线算法三章补齐（需购买，本轮未购）。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "若基础生疏，先过 Lecture 1–5（Word-RAM/Big-O、DFS、最短路、DP、最大流）"
+    },
+    {
+     "source": "en1",
+     "read": "按 Lecture 6 近似 → 7 在线 → 8 随机化顺序读 notes 并跟视频，完成讲义里的证明与练习"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://bowaggoner.com/courses/gradalg/ 逐讲列表",
+   "result": "采纳：Lecture 6/7/8/10 与三个知识项一一对应，Module 2 标题即 Approximation, Online, and Randomized Algorithms。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「在线算法 竞争比」「随机算法 近似算法」",
+   "result": "不合适：返回命理、大模型部署、最优化理论、考研 408 等无关或非算法课程内容，没有发布者可核的在线算法系列。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/SDCJDX-1206671828（山东财经《算法分析与设计》）",
+   "result": "部分采纳：课程目标确实写了随机算法与近似算法，但没有分讲大纲与正文，在线算法完全未列。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 算法设计与分析 随机算法 近似算法",
+   "result": "采纳新发现：武汉大学《高级算法》（WHU-1485333166）课程概述按模块列出近似算法（近似比分析）、随机算法（概率论证）、在线算法（竞争分析）；山东财经《算法分析与设计》只在授课目标点名随机/近似，无分讲大纲，遂把后者在 F.1.4 改为 supplement。",
+   "by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "近似算法 近似比 讲义 中文 pdf 随机算法 概率方法 课程 教学",
+   "result": "采纳 xestray《高级数据结构与算法分析》讲义第 11 讲（近似算法）：有近似比/渐近近似比定义、装箱 3/2 下界证明、背包 FPTAS、K-Center 最优近似比；维基百科“近似算法”条目不作为教学来源。",
+   "by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "在线算法 竞争分析 缓存 分页 竞争比 下界 章节 教材 中文 算法设计与分析 讲义",
+   "result": "采纳 quant67《竞争分析与在线算法》（10 节长文，含竞争比定义、ski rental/分页的确定性与随机化下界、Yao 原理、负载均衡与 Adwords）；同批返回的博客园短文只有结论没有证明，未采纳。",
+   "by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "高级算法 林海 机械工业出版社 目录 在线算法 竞争比",
+   "result": "采纳出版社官方图书页（cs.cmpedu.com）作付费教材登记：内容简介列出近似/随机/在线/启发式算法章，定价 59.0 元，配套录课在 B 站账号 foretmer；页面未展示目录，未购买。",
+   "by": "review/pi-additions/F.1.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch.py bili「随机算法 近似算法 在线算法 竞争分析 课程」；「foretmer 高级算法」；tavily site:bilibili.com foretmer 高级算法",
+   "result": "B 站搜索结果噪声大：命中数据库/操作系统期末速成、随机过程、最优化课程等，只有 foretmer 的“社群模块度”等单集（已核 owner=foretmer、copyright=自制），未核到“高级算法”在线算法分P；因已由讲义与 MOOC 覆盖，不下“B 站没有”的结论。",
+   "by": "review/pi-additions/F.1.4.json"
+  }
+ ],
+ "findings": [
+  "旧条目把中文覆盖写成“重点读第11章随机算法、第12章P与NP、第13章近似算法”，但课程页并没有渲染章节表，章号无从核对；现改为只按授课目标里的“随机算法/近似算法”点名，并标 partial。",
+  "旧条目已写明在线算法仍用英文讲义，这次确认中文侧确实没有对应材料（视频与文字都没有），因此中文路线状态由 partial 降为 gap。",
+  "英文主资源核实：16 讲中 Module 2 三讲正好覆盖三个知识项，且 notes 比视频多证明。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "随机、近似与在线算法",
+ "description": "随机化保证、近似比、竞争分析与下界。",
+ "applied_additions": [
+  "review/pi-additions/F.1.4.json@340bd35000"
+ ]
+}

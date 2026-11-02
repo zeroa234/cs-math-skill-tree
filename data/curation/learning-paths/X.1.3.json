@@ -1,0 +1,544 @@
+{
+ "id": "X.1.3",
+ "name": "自动驾驶与自主系统",
+ "description": "感知、定位、预测、规划、控制、实时与安全评估；同时需要领域工程基础。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "University of Bonn — Techniques for Self-Driving Cars (StachnissLab), 10 recorded lectures",
+   "url": "https://www.ipb.uni-bonn.de/sdc-2021/index.html",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "Official course page with embedded YouTube lectures on localization, control, MPC (two lectures), planning, behavior estimation and perception (two lectures) plus engineering practice; requires probability, linear algebra, control and ML basics.",
+   "access": "University lab page with public YouTube recordings; free playback depends on YouTube availability; English CC captions were not verified lecture by lecture. Not a paid degree or certificate.",
+   "publisher": "University of Bonn (Cyrill Stachniss lab)",
+   "evidence": {
+    "url": "https://www.ipb.uni-bonn.de/sdc-2021/index.html",
+    "location": "Lecture list and embedded videos",
+    "finding": "The page lists the ten lectures (localization, control, MPC I–II, planning, behavior estimation, perception I–II) with embedded YouTube links."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "百度 Apollo《自动驾驶入门与实践》官方课程",
+   "url": "https://apollo.baidu.com/community/online-course/218",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "官方中文课程：部署 Apollo、感知、定位、预测、规划、控制与仿真实践；覆盖简介的感知/定位/预测/规划/控制，实时安全评估与实车工程不在课程内。",
+   "access": "课程页标注免费，学习可能需要 Apollo 账号；配套硬件、云服务和实车环境不包含在免费课程内。",
+   "publisher": "Baidu Apollo",
+   "evidence": {
+    "url": "https://apollo.baidu.com/community/online-course/218",
+    "location": "课程简介与章节",
+    "finding": "课程页列出感知、定位、预测、规划、控制与仿真实践等模块，并标注免费。"
+   }
+  },
+  {
+   "key": "final-zh1",
+   "lang": "zh",
+   "title": "《自动驾驶技术指南》系统软件框架总览（云飞机器人实验室开源中文指南；含「端到端时间预算分析」「延迟分解模型」「各模块时间预算分配」）",
+   "url": "https://yfrobotics.github.io/self-driving-handbook-cn/algorithm/sw_overview/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "把自动驾驶软件栈当成实时系统来教：为什么要把传感器输入在 100–200 ms 内变成控制指令；端到端延迟与安全的关系（100 km/h 下 200 ms ≈ 5.6 m 盲行、50 ms ≈ 1.4 m）；延迟分解模型（传感器物理触发 → 采集 → 预处理 → 感知 → 定位 → 预测 → 规划 → 控制计算 → 指令传输 → 执行器机械响应 50–200 ms）；各模块时间预算分配表（采集 5 ms、预处理 5 ms、感知 50 ms、定位 10 ms、预测 30 ms、规划 80 ms、控制 10 ms、指令传输 5 ms，软件端到端 80–200 ms 且须 < 200 ms，并逐行给出关键瓶颈）；AUTOSAR AP/CP 分工与实时底盘控制；ROS 2 / Cyber RT / AUTOSAR Adaptive 的中间件延迟与「任务调度抖动」对比（1–5 ms / < 0.5 ms / < 1 ms）与确定性；用流水线并行压缩端到端延迟。",
+   "access": "免费中文网页，无需注册；CC BY-SA 4.0；中文写作，含表与 ASCII 数据流图，无视频。由云飞机器人实验室发起、GitHub 开源（yfrobotics/self-driving-handbook-cn），贡献者名单只列 2 人，属社区维护的技术维基而非高校课程；本页数值（典型延迟、抖动区间）是工程经验值，页面未逐条给出来源，需与具体平台实测/标准原文交叉核对。",
+   "publisher": "云飞机器人实验室（yfrobotics）发起的开源中文技术指南《自动驾驶技术指南》，GitHub: yfrobotics/self-driving-handbook-cn",
+   "reupload": false,
+   "evidence": {
+    "url": "https://yfrobotics.github.io/self-driving-handbook-cn/algorithm/sw_overview/",
+    "location": "「端到端时间预算分析」→「延迟分解模型」→「各模块时间预算分配」表 →「中间件深度对比 / ROS 2 / Cyber RT / AUTOSAR Adaptive 三者对比」表 →「Pipeline 并行化优化」",
+    "finding": "实际打开正文读到：开篇「自动驾驶软件栈是一个高度复杂的实时系统，需要将传感器输入在 100–200 ms 内转化为车辆控制指令」；「以 100 km/h 速度行驶时，200 ms 延迟对应约 5.6 m 的盲行距离；50 ms 延迟对应约 1.4 m」；模块预算表逐行列出处理频率/典型延迟/时间预算/关键瓶颈（感知 10–25 Hz、20–50 ms、预算 50 ms；规划 10 Hz、50–100 ms、预算 80 ms；软件端到端总计 80–200 ms、目标 < 200 ms）；中间件对比表给出消息延迟（1 KB 进程内 50–200 μs）与任务调度抖动（DDS 1–5 ms、Cyber RT < 0.5 ms、POSIX RT < 1 ms）。确属中文讲授时延预算，不是名词表。"
+   },
+   "added_by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "key": "final-zh2",
+   "lang": "zh",
+   "title": "《自动驾驶技术指南》系统安全保障（ISO 26262 功能安全、FTTI 时序预算、ISO 21448 SOTIF、Safety Case 与 GSN、场景覆盖度与残余风险）",
+   "url": "https://yfrobotics.github.io/self-driving-handbook-cn/system/safety/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文系统讲安全评估：安全标准体系；ISO 26262 与 ASIL（QM/A/B/C/D 五档、S/E/C 三因素定级、典型 ADAS 感知链路 ASIL-D 而摄像头 ASIL-B 的对比）；V 字形开发模型与各阶段安全分析；FMEA（RPN=严重度×频率×可检测性）与 FTA；ASIL 分解及共因故障隔离前提；**FTTI 时序预算**（FTTI = T_detect + T_decide + T_react，ASIL-D 制动常见 FTTI=100 ms、拆成 30/30/40 ms，并说明要落到中断延迟、总线带宽、执行器响应）；ISO 21448 SOTIF 四象限（K1/U1/K2/U2 与「把 U2 暴露成 K2 再消除」的验证目标）；ISO 26262 × SOTIF 联合流程五节点；Hazard Library 的字段与版本化要求；冗余设计（传感器/计算/通信/电源）；Fail-Safe / Fail-Degraded / Fail-Operational 的级别对应；RSS；Safety Case 与 GSN 论证；ISO/PAS 8800；场景覆盖度 vs 里程覆盖度、ODD 分层覆盖、交互覆盖、残余风险；并给出一份「制动失效的 Safety Case 骨架」（SG1 非预期制动率 <1e-8/h、ASIL-D、FSR、场景库覆盖 >98%/95% 的分支）。",
+   "access": "免费中文网页，无需注册；CC BY-SA 4.0；中文写作，含 GSN/故障树/四象限等 ASCII 图与数值。参考资料列出 ISO 26262:2018、ISO 21448:2019、RSS 原始论文 arXiv:1708.06374、RAND 2020 报告。同 final-zh1，属社区维基而非高校课程；标准条款的转述需与标准原文核对（页面未给条款号）。",
+   "publisher": "云飞机器人实验室（yfrobotics）发起的开源中文技术指南《自动驾驶技术指南》，GitHub: yfrobotics/self-driving-handbook-cn",
+   "reupload": false,
+   "evidence": {
+    "url": "https://yfrobotics.github.io/self-driving-handbook-cn/system/safety/",
+    "location": "「安全标准体系」→「ISO 26262：功能安全」→「ASIL 等级确定」→「V 字形开发模型」→「FMEA 与 FTA」→「ASIL 分解」→「FTTI 时序预算」→「ISO 21448：SOTIF」→「ISO 26262 × SOTIF 联合流程」→「Hazard Library」→「冗余设计」→「Fail-Safe vs Fail-Operational」→「RSS」→「Safety Case 与 GSN 论证」→「AI 特有的安全工程：ISO/PAS 8800」→「场景覆盖度 vs 里程覆盖度」→「实战样例：制动失效的 Safety Case 骨架」",
+    "finding": "实际打开正文并逐节读到：FTTI 节原文「故障容忍时间间隔（FTTI）是『故障发生→触发危害』之间可接受的最大时间窗口……FTTI = T_detect + T_decide + T_react。例如 ASIL-D 级制动系统常见 FTTI = 100 ms，其中 T_detect ≤ 30 ms，T_decide ≤ 30 ms，T_react ≤ 40 ms。设计时必须把这些预算落到具体硬件与软件环节（中断延迟、总线带宽、执行器响应）」——这一句同时讲清了实时预算与安全评估的接口；SOTIF 节给出四象限与「将 U₂ 场景充分暴露（使其转变为 K₂），再通过系统设计消除 K₂」的验证目标；Safety Case 节给出「G1: 车辆在 ODD 内以可接受风险运营」的 GSN 骨架与制动失效实战样例（SG1 <1e-8/h、FSR1–3、场景库覆盖阈值、残余风险）。不是只有标准名词的目录页。"
+   },
+   "added_by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "key": "final-zh3",
+   "lang": "zh",
+   "title": "Apollo Cyber RT 调度机制（百度 Apollo 开源项目官方中文文档）",
+   "url": "https://raw.githubusercontent.com/ApolloAuto/apollo/master/docs/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%A0%B8%E5%BF%83/CyberRT/Cyber%20RT%20%E8%B0%83%E5%BA%A6%E6%9C%BA%E5%88%B6.md",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "自动驾驶框架的实时调度入门：操作系统为什么要调度（效率与公平的取舍）、用 3 个任务 10 s/6 s/4 s 的编排例子与超市排队类比推出最短时间优先（SJF）、再说明「任务执行完之前不知道要跑多久」导致 SJF 失效而引出时间片轮转与抢占；Cyber RT 的改进：给 Linux 打实时补丁以支持抢占、把摄像头/激光雷达/串口等外设中断绑定到单独核；用 Cgroup 做资源限制/优先级/监控/冻结；线程优先级与 pthread_setaffinity_np 的 CPU 亲和写法；并提醒「实时操作系统不是万能的，处理不过来时要检查资源是否足够」。",
+   "access": "免费中文 Markdown（Apache 2.0 仓库内文档），无需注册；中文写作、含代码片段与插图；本页是代码仓库里的文档源文件（raw），阅读时无渲染，链接与图片为仓库相对路径。不是一门课，但是官方框架文档里的分步原理讲解，且带调度策略的推演过程。",
+   "publisher": "百度 Apollo 开源项目（ApolloAuto/apollo 仓库 docs/框架设计/软件核心/CyberRT），Apache-2.0",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/ApolloAuto/apollo/master/docs/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%A0%B8%E5%BF%83/CyberRT/Cyber%20RT%20%E8%B0%83%E5%BA%A6%E6%9C%BA%E5%88%B6.md",
+    "location": "「Cyber RT 调度整体介绍 / 操作系统调度策略 / 调度改变了什么？/ 最短时间优先？/ 如何保证公平？/ 程序时间可以预知吗？」→「Cyber RT 的改进 / 实时操作系统 / 资源限制&优先级」",
+    "finding": "实际打开正文读到：调度目的「最大化利用系统资源（特别是 CPU 资源）……本质是为了：效率最大化，兼顾公平」；三任务例子与「通过上面的例子可以看出，策略1和策略2的CPU总执行时间不变，但是等待时间变少了」；「每次只创建小任务……会导致大任务总是得不到执行，一直处于饥饿状态」；「在任务执行完之前，我们并不知道任务会执行多久！！！策略失效了！！！」→ 时间片轮转 + 「要支持时间片轮转，操作系统和硬件配合，实现任务抢占」；Cyber RT 侧「实时操作系统，通过给 linux 打实时补丁，支持抢占」「中断绑定」；Cgroup 四条特性；以及「实时操作系统不是万能的……当程序处理不过来的时候，我们要检查资源是否足够」。属于有推演、有例子的中文实时调度教学。"
+   },
+   "added_by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "key": "final-zh4",
+   "lang": "zh",
+   "title": "Apollo Cyber RT 性能分析工具（百度 Apollo 开源项目官方中文文档：多维指标采集、可视化、进程级/函数级分析与火焰图）",
+   "url": "https://raw.githubusercontent.com/ApolloAuto/apollo/master/docs/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%A0%B8%E5%BF%83/CyberRT/Cyber%20RT%20%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7.md",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "怎么在真实自动驾驶系统上做性能测量与瓶颈定位：为什么路测里性能问题难找（「如何发现、分析、定位和解决性能问题相对有一定门槛」）；工具采集哪些指标（CPU/GPU 使用率、内存与显存占用、块设备读写速率/等待时间/IOPS/等待队列长度、网卡读写速率与带宽，分系统级与进程级）；实时跟踪指标以定位拖慢系统的瓶颈进程；可视化界面的读法（进程级宏观视图 → 定位哪个进程在拖慢整体）；函数级深入分析（对每个进程生成火焰图、有向图，CPU/内存/GPU 指标依赖 NVIDIA Nsight）；部署与使用前提（需装最新版 Apollo，clone 源码）。",
+   "access": "免费中文 Markdown（Apache 2.0 仓库内文档），无需注册；中文写作；实际使用需要部署 Apollo（源码 + Docker 环境）才能看到界面与图表，文中图片以仓库相对路径给出。属工具文档，但不是只有参数表——给出了「测什么指标、按系统级/进程级/函数级三层读数据、火焰图定位到代码」的分步方法。",
+   "publisher": "百度 Apollo 开源项目（ApolloAuto/apollo 仓库 docs/框架设计/软件核心/CyberRT），Apache-2.0",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/ApolloAuto/apollo/master/docs/%E6%A1%86%E6%9E%B6%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%A0%B8%E5%BF%83/CyberRT/Cyber%20RT%20%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7.md",
+    "location": "「性能分析能力介绍 / 多维数据采集，全面监控 / 直观的性能可视化界面 / 进程级分析 / 函数级分析（火焰图、有向图、NVIDIA Nsight）」→「如何使用 / 使用前：Apollo 安装」",
+    "finding": "实际打开正文读到：指标分类表（分类/指标/系统级别/进程级别，逐项列出 CPU 使用率、GPU 使用率、内存使用大小、显存使用大小、块设备读写速率/设备等待时间/设备IOPS/设备等待队列长度、网卡读写速率/设备带宽使用率）；「通过对这些关键指标的实时跟踪，您可以快速识别出自动驾驶系统中影响性能的瓶颈进程所在」；「通过对每个进程针对每个 cpu、内存、gpu 指标（依赖 nvidia nsight 工具）生成火焰图、有向图等，从而识别需要优化的代码部分」。确认是中文的测量方法教学，而非 API 索引。另核对同目录另有英文版 Cyber RT Performance Analysis Tool.md，中文版存在且已读。"
+   },
+   "added_by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "key": "final-zh5",
+   "lang": "zh",
+   "title": "如何使用 ros2_tracing 跟踪和分析应用程序（ROS 2 官方教程中文译本：trace 采集、babeltrace 查看、tracetools_analysis 统计回调时长）",
+   "url": "https://ros.ncnynl.com/cn/jazzy/Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "用 ROS 2 的 tracing 做时延测量的完整流程：确认跟踪已启用、建工作区克隆 performance_test 与 tracetools_analysis、用 rosdep 装依赖、跑一次 performance_test 实验并生成 trace 目录、用 babeltrace 读原始 CTF 事件（时间戳/事件类型/所属进程/字段值）、用 tracetools_analysis 的 Python API 在 Jupyter + bokeh 里画「订阅回调持续时间」的分布、如何读图（大多数回调 <0.01 ms、少数离群 >0.02–0.03 ms）、以及下一步查 API 文档与其他示例笔记本。自动驾驶里「每个回调要多久、抖动多大」就是靠这类 trace 量化出来的。",
+   "access": "免费中文网页，无需注册；中文（译自 ROS 2 documentation Jazzy 的 Advanced 教程），含命令与代码块。站点 ros.ncnynl.com 是 ROS 2 官方文档的中文镜像/译本站，非 docs.ros.org 本体（本轮尝试打开英文原页 https://docs.ros.org/en/jazzy/Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html 被反爬拦住，只返回 bot 校验页，故英文原页未核对正文）。跑通需要 Linux + ROS 2 Jazzy 环境。",
+   "publisher": "ROS 2 官方文档中文镜像站 ros.ncnynl.com（内容译自 ROS 2 documentation，Jazzy 版 Advanced/Tracing 教程）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ros.ncnynl.com/cn/jazzy/Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html",
+    "location": "正文「…跟踪是否已启用」→ 创建工作区与克隆仓库 → 运行 performance_test → 「babeltrace ~/.ros/tracing/perf-test | less」→「分析：tracetools_analysis 提供了一个 Python API 来轻松分析跟踪」→ 在 Jupyter 笔记本中画回调持续时间图（「大多数回调所用时间少于 0.01 毫秒，但也有一些异常值所用时间超过 0.02 或 0.03 毫秒」）→「结论」",
+    "finding": "实际打开正文确认全文为中文，含逐步命令（source、rosdep、build）、babeltrace 读 CTF 的说明（「每个事件都有一个时间戳、一个事件类型、有关生成事件的进程的一些信息以及给定事件类型的字段的值」）与绘图步骤和读图结论。属可照做的测量教程，不是术语解释。"
+   },
+   "added_by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "key": "final-en1",
+   "lang": "en",
+   "title": "Autoware Documentation — Evaluating real-time performance（Tuning parameters and performance / Evaluation；含性能测量方法、隔离核与内核配置、pmu_analyzer、感知与规划组件的性能案例分析）",
+   "url": "https://docs.autoware.org/main/tutorials/integrating-autoware/tuning-parameters-and-performance/evaluation/evaluating-real-time-performance/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "自动驾驶系统的实时性能怎么量、怎么改：为什么 Autoware 必须当实时系统、为什么要让每个 callback 的 response time 尽量小；「没有精确测量就不可能改进」——要先排除操作系统与 CPU 频率扰动对测量的影响；单节点执行法（用 ros2_single_node_replayer 录下整系统运行时目标节点的全部输入 topic，再在单节点里以同样逻辑回放，绕开调度干扰）；隔离核的准备（固定 CPU 频率、关 turbo boost、最少化定时器中断、offload RCU 回调、超线程配对核一起隔离；CONFIG_NO_HZ_FULL / CONFIG_RCU_NOCB_CPU 与 isolcpus/rcu_nocbs/nohz_full/intel_pstate=disable 启动参数；scaling_governor=userspace 后写 scaling_setspeed；echo 0 > cpufreq/boost）；用 taskset 绑核、减少 LLC 干扰；测量与可视化（在源码里埋时间戳与性能计数器，用 pmu_analyzer 量任意区段的 turnaround time 与各种 perf counter）；两组案例研究（感知的 ring_outlier_filter、规划组件）示范从指令数、LLC-load-misses/LLC-store-misses、cache-misses、minor-faults 等计数器找瓶颈。",
+   "access": "免费英文网页，无需注册；Autoware 官方文档（Autoware Foundation / TIER IV 维护）；中文版未在本站看到，也未核对有无中译。测量流程假定 Linux + Intel CPU，作者明说其他环境要做类似考虑。",
+   "publisher": "Autoware Foundation（Autoware Documentation，main 分支）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.autoware.org/main/tutorials/integrating-autoware/tuning-parameters-and-performance/evaluation/evaluating-real-time-performance/",
+    "location": "Introduction → Performance measurement → Single node execution（ros2_single_node_replayer）→ Prepare separated cores（CONFIG_NO_HZ_FULL / CONFIG_RCU_NOCB_CPU、GRUB_CMDLINE_LINUX_DEFAULT=\"... isolcpus=2,8 rcu_nocbs=2,8 rcu_nocb_poll nohz_full=2,8 intel_pstate=disable\"、scaling_governor、cpufreq/boost=0）→ Run single node separately（taskset）→ Measurement and visualization（pmu_analyzer）→ Case studies（Sensing component: ring_outlier_filter；Planning component）",
+    "finding": "实际打开并分段读到：开篇「Autoware should be real-time system when integrated to a service. Therefore, the response time of each callback should be as small as possible」；「Improvement is impossible without precise measurements」；「To eliminate the influence of scheduling, the node being measured should operate independently」；隔离核四条条件与具体内核参数；「embed code for logging timestamps and performance counter values… a tool called pmu_analyzer has been prepared. This tool can measure the turnaround time of any section in the source code, as well as various performance counters」；案例里「pay attention to instructions, LLC-load-misses, LLC-store-misses, cache-misses, and minor-faults」。确认是分步的测量方法论教学，不是 API 索引。"
+   },
+   "added_by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "key": "final-en2",
+   "lang": "en",
+   "title": "Autoware Documentation — Defining temporal performance metrics on components（execution frequency 与 response time 两类指标、checkpoint 设计与示例指标表 AWOV-001…、CARET/ros2_tracing 工具）",
+   "url": "https://docs.autoware.org/main/tutorials/others/defining-temporal-performance-metrics/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "实时预算怎么定成可测的东西：为什么「sufficient temporal performance」要按产品类型与 ODD 分别定义（所以本页只定指标不定要求）；指标只有两类——execution frequency（用 IPC 消息频率观测）与 response time（一条 path 上起止时间戳之差）；如何在 Autoware 里挑该测的消息与 path（传感器观测被消费的边界、功能边界如感知/规划的边界、定时频率切换处、两路消息同步合并处、必须按期望频率发出的车辆指令）；建议从架构层到详细设计层增量定义、别混不同粒度；给整车主链路（LiDAR→sensing→perception→localization→planning→control→vehicle interface→ECU）与感知、障碍物分割到规划之间两条链路的 checkpoint 模型（CPA/CPP/CPS 编号）；示例指标表逐条给出 AWOV-001…010 的指标定义、所属模块、要求值与理由（如 Prediction→Planning 更新率 10 Hz、Detection 结果 10 Hz、NDT 位姿 10 Hz、EKF 反馈位姿 50 Hz、Localization→Planning 50 Hz、Planning→Control 的 response time），并点名 CARET 与 ros2_tracing 是 Linux/ROS 2 上的推荐评测工具（TIER IV 发布过一份 Autoware 2022.12 的 CARET 样例报告）。",
+   "access": "免费英文网页，无需注册；Autoware 官方文档；英文；页面明确说自己不教工具用法（只讲指标设计），工具用法要另看 CARET / ros2_tracing 的 user guide。",
+   "publisher": "Autoware Foundation（Autoware Documentation，main 分支）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.autoware.org/main/tutorials/others/defining-temporal-performance-metrics/",
+    "location": "Motivation to defining temporal performance metrics → Tools for evaluating the metrics（CARET、ros2_tracing、TIER IV 的样例报告）→ Policies to define temporal performance metrics（execution frequency / response time、选点五条特征、按架构层增量定义）→ List of sample metrics（Top-level / Perception / obstacle segmentation 到 planning 的 checkpoint 模型与 AWOV-001…010 表）",
+    "finding": "实际打开并分三段读到：指标只有两类「Each of temporal performance metrics is categorized into two types: execution frequency and response time」；「Response time is duration elapsed through a series of processing. A series of processing is referred to as a path. Response time is calculated from timestamps of start and end of a path」；「both CARET and ros2_tracing are recommended options when evaluating Autoware on Linux and ROS 2」；示例表逐行读到 AWOV-001「Update rate of result from Prediction to Planning / Perception / 10 Hz」、AWOV-005「Message rate from CPA #4 to CPA #5 / Detection result received by Tracking / 10 Hz」、AWOV-008「50 Hz」、AWOV-009「50 Hz」、AWOV-010「Response time from CPA #20 to CPA #23 / Processing time from beginning of Planning to consumption of Trajectory message in Control」。确认给出的是可直接拿来写预算表的指标定义与要求值，不是泛泛而谈。"
+   },
+   "added_by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Phil Koopman (Carnegie Mellon University) — Short course on Autonomous Vehicle Safety + lecture/talk archive（UL 4600 safety case、Safety Performance Indicators、SOTIF、Scenario-Based Assurance 等）",
+   "url": "https://users.ece.cmu.edu/~koopman/lectures/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "页面分类含「Short course on Autonomous Vehicle Safety」「Selected keynote talks and webinars」，其中与安全评估直接相关的有：Approaches to Validating Autonomous Vehicle Safety（L125_SPI_Monitoring 讲义：未知危害、SOTIF 触发事件、危害分析与闭环验证）、「Safety Case Considerations for Scenario-Based Assurance」(2023)、「UL 4600 3rd edition webinar」、「Safety Performance Indicators」(2022)、「A Safety Case + SPI Metric Approach for Autonomous Vehicle Safety」(2020)、「Why SOTIF?」等；另有 18-642 Embedded Software Engineering（含 Concurrency、Scheduling、End-To-End System Scheduling）讲义页。",
+   "access": "CMU 教职个人主页，免费公开 PDF 讲义与视频链接；英文；页面末尾有版权声明（可引用/教学使用需遵守）；无注册。",
+   "publisher": "Philip Koopman（Carnegie Mellon University 电子与计算机工程系；UL 4600 标准主要起草人）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://users.ece.cmu.edu/~koopman/lectures/",
+    "location": "页面目录「Short course on Autonomous Vehicle Safety」「Selected keynote talks and webinars」下的条目：「Approaches to Validating Autonomous Vehicle Safety」（PDF 正文含 SOTIF / hazard analysis / triggering events）、「Safety Case Considerations for Scenario-Based Assurance」、「UL 4600 3rd edition webinar」、「Safety Performance Indicators」、「Why SOTIF?」",
+    "finding": "确认这是 AV 安全验证的课程/讲座级英文材料（作者是 UL 4600 起草人），内容覆盖安全案例、安全性能指标、SOTIF 与基于场景的保证——正好是「安全评估」那一半；同一站点的 18-642 讲义提供 scheduling/端到端调度，但不是自动驾驶实时性的专门教学。"
+   },
+   "added_by": "review/pi-additions/X.1.3.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "ISO 21448（SOTIF）预期功能安全人员资质培训（TÜV 南德中文培训课程，2 天，面向 ADAS/高度自动驾驶开发人员）",
+   "url": "https://www.tuvsud.cn/zh-cn/services/training/cn/personnel-qualifications-and-professional-skills/iso-21448-sotif",
+   "tier": "website",
+   "free": false,
+   "role": "supplement",
+   "covers": "课程背景与收益：SOTIF（ISO/PAS 21448）如何补充功能安全（ISO 26262），把「功能性能和稳健性不足引起的风险」降到最小；课程对象为管理人员、安全管理人员、系统/传感器/部件开发、质量与测试工程师；收益包括了解 ISO 21448/SOTIF 的基本概念与要求、与 ISO 26262 的关系等（具体日程需向培训机构索取）。",
+   "access": "付费企业培训（2 天，页面未标价格，需咨询 TÜV 南德）；中文授课（页面为简体中文版培训页，实际讲解语言与教材语言未核对）；不发免费录像。",
+   "publisher": "TÜV SÜD 南德（第三方认证机构官方培训）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.tuvsud.cn/zh-cn/services/training/cn/personnel-qualifications-and-professional-skills/iso-21448-sotif",
+    "location": "「课程简介 → 课程时长 2 天 / 目标学员 / 课程收益」：「了解ISO 21448/SOTIF标准的基本概念和要求」「了解ISO 21448规范以及与ISO 26262的关系」；课程背景段「对于辅助驾驶系统和自动驾驶，预期功能安全（SOTIF）成为了功能安全的非常重要的补充」",
+    "finding": "确认中文侧存在官方机构的 SOTIF 付费培训（讲师授课、2 天），覆盖安全评估的标准与流程；但没有公开讲义、也没有实时性（时延/调度）内容，且需付费。"
+   },
+   "added_by": "review/pi-additions/X.1.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "感知",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "感知模块",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Perception I–II",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "定位",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "定位模块",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Localization",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "预测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "预测模块",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Behavior estimation（预测行为）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "规划",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "规划模块",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Planning",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "控制模块",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Control；MPC I–II",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "实时与安全评估",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "只在仿真实践中间接涉及，无独立单元",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh1",
+     "section": "「端到端时间预算分析」「延迟分解模型」「各模块时间预算分配」表；「ROS 2 / Cyber RT / AUTOSAR Adaptive 三者对比」（消息延迟、任务调度抖动、确定性）；「Pipeline 并行化优化」",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh2",
+     "section": "「FTTI 时序预算」节（FTTI = T_detect + T_decide + T_react，ASIL-D 制动 100 ms 拆 30/30/40 ms）；「ISO 26262」「ASIL 分解」「ISO 21448 SOTIF 四象限」「ISO 26262 × SOTIF 联合流程」「Safety Case 与 GSN 论证」「场景覆盖度 vs 里程覆盖度」「实战样例：制动失效的 Safety Case 骨架」",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh3",
+     "section": "「操作系统调度策略」→「最短时间优先 / 公平 / 时间片轮转与抢占」→「Cyber RT 的改进：实时操作系统（给 Linux 打实时补丁、中断绑定）、Cgroup 资源限制与优先级、CPU 亲和」",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh4",
+     "section": "「性能分析能力介绍」的指标表（CPU/GPU/内存/显存/块设备 IO/网卡，分系统级与进程级）→ 实时跟踪定位瓶颈进程 → 进程级可视化 → 函数级火焰图与有向图（依赖 NVIDIA Nsight）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh5",
+     "section": "启用 tracing → 跑 performance_test → babeltrace 读 CTF 事件 → tracetools_analysis 在 Jupyter 里画订阅回调持续时间分布并读离群点",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "ISO 21448（SOTIF）预期功能安全人员资质培训：SOTIF 概念与要求、与 ISO 26262 的关系、面向 ADAS/自动驾驶的风险降低",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "课程无实时系统/安全评估专讲",
+     "extent": "partial"
+    },
+    {
+     "source": "final-en1",
+     "section": "Performance measurement → Single node execution（ros2_single_node_replayer）→ Prepare separated cores（nohz_full/rcu_nocbs/isolcpus/intel_pstate=disable、关 turbo）→ taskset 绑核 → Measurement and visualization（pmu_analyzer、turnaround time + perf counters）→ Case studies（ring_outlier_filter、Planning）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-en2",
+     "section": "Policies to define temporal performance metrics（execution frequency vs response time、如何选消息与 path）＋ List of sample metrics（CPA/CPP/CPS checkpoint 模型与 AWOV-001…010 要求值）＋ Tools（CARET、ros2_tracing）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Approaches to Validating Autonomous Vehicle Safety（SOTIF、危害分析、触发事件与验证闭环）；Safety Case Considerations for Scenario-Based Assurance；UL 4600 webinar；Safety Performance Indicators",
+     "extent": "partial"
+    }
+   ],
+   "note": "两边都没有实时性/功能安全的独立教学单元；原 granularity 已注明此项只在技能标签里出现。；中文侧的「实时预算」这一半此前完全没有：这本指南把 100–200 ms 的端到端指标拆成十来个环节的延迟，并给出每环节的时间预算与瓶颈（感知 50 ms、规划 80 ms、控制 10 ms，软件端到端 80–200 ms），还说明 200 ms 在 100 km/h 下等于 5.6 m 盲行——把「时延预算」和「安全」在数量上挂上了钩。这是设计期预算这一面。；中文侧的「安全评估」这一半此前只有付费 TÜV 培训的课程大纲：这一页把安全评估讲成可操作流程——ASIL 定级、V 模型、FMEA/FTA、ASIL 分解、FTTI 时序预算、SOTIF 四象限与 U2→K2 验证目标、Hazard Library、冗余与 Fail-Operational、Safety Case/GSN 与制动失效样例、场景覆盖度与残余风险。关键是把 FTTI 写成「检测 30 + 决策 30 + 执行 40 ms」的时序预算，正好是「实时」与「安全评估」的接口，两半由此合成一个知识点。；补「实时调度」这一面：从 SJF 为什么失效推到时间片轮转与抢占，再落到自动驾驶框架里的实际做法（RT 补丁、外设中断绑核、Cgroup 限资源与调优先级、pthread_setaffinity_np 绑核），并给出「实时系统不是万能的，要先检查资源够不够」的判断准则。这是中文里少见的、带推演过程的实时调度讲解。；补「测量」这一面：先采哪些指标、按系统级→进程级→函数级三层读，用火焰图定位到需要优化的代码，这是把「时延超标」从现象追到具体模块的实际方法。；补最底层的量化手段：用 ROS 2 tracing 把「每个回调跑了多久、抖动多大」直接量出来（示例里大多数回调 <0.01 ms、离群 0.02–0.03 ms），这样 FTTI/端到端预算才有实测输入，而不是只停在纸面分配。；英文侧此前只有通用嵌入式调度讲义，没有 AV 的实测方法：这一页把「实时」讲成可执行的测量流程——先排除 OS 与频率扰动，再把单节点隔离到专用核上回放录制数据，用 pmu_analyzer 量任意代码段 turnaround time 与计数器，最后用指令数、LLC miss、cache-misses、minor-faults 等定位瓶颈并给两组改造案例。；补「实时预算」这一面：把预算定义成两类可测指标（频率、响应时间），给出选点规则与整车主链路/感知链路的 checkpoint 编号，再逐条列出带要求值的示例指标（Prediction→Planning 10 Hz、Localization→Planning 50 Hz、Planning→Control 的 response time），使「预算」可以写成检查表；与 final-en1 的测量方法、r7-en1 的安全评估合起来，英文侧这一条不再缺。；「安全评估」这一半已有课程/讲座级材料：安全案例（safety case）、安全性能指标（SPI）、基于场景的保证与 SOTIF 验证流程，正好补上此前只有 Coursera 技能标签的空白；但「实时」（感知-规划-控制的时延预算、实时调度与最坏执行时间）在 Koopman 的 AV 材料里没有专门一讲（只有 18-642 的通用 scheduling 讲义），故仍算部分覆盖。；中文侧终于有官方机构（TÜV 南德）的 SOTIF 培训覆盖「安全评估」的标准与流程，可用来理解预期功能安全怎么评；但它是付费企业培训、无公开讲义，且完全不涉及实时性（时延预算/调度），故只算部分覆盖。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按部署→感知→定位→预测→规划→控制→仿真的顺序学习，在仿真里跑通一条闭环。"
+    },
+    {
+     "source": "final-zh1",
+     "read": "读「端到端时间预算分析」与「各模块时间预算分配」表，自己画一遍延迟分解链，并算出：目标车速下允许的端到端时延、当前每个环节的典型延迟余量、哪三个环节最可能先超预算（例如感知 50 ms、规划 80 ms、执行器 50–200 ms）。再把中间件对比表里的调度抖动数字填进这条链，说明抖动怎么吃掉余量。"
+    },
+    {
+     "source": "final-zh2",
+     "read": "按「ASIL 定级 → FMEA/FTA → ASIL 分解 → FTTI 时序预算 → SOTIF 四象限 → Safety Case/GSN」的顺序读；重点做两件事：给一个自己熟悉的功能（如 AEB）定 ASIL 并写出 HARA 的 S/E/C；把它的 FTTI 拆成 T_detect + T_decide + T_react 三段具体毫秒数，并指出每段该由哪个模块的量测（中断延迟、回调时长、总线与执行器响应）来验证。最后照「制动失效的 Safety Case 骨架」给该功能写一份 G1/SG/FSR/证据链的最小 Safety Case。"
+    },
+    {
+     "source": "final-zh3",
+     "read": "跟着三任务例子算一遍 SJF 与时间片轮转的总等待时间，说明为什么 SJF 在不知道执行时间时失效、抢占为什么必须靠内核+硬件配合；然后在 Linux 上做两件事：用 cyclictest 或自写实时线程量一次调度抖动，再用 pthread_setaffinity_np / taskset 把线程绑到一个核上复测，比较抖动变化；最后用 cgroup 给该进程限一个 CPU 配额，观察超配额时的表现。"
+    },
+    {
+     "source": "final-zh4",
+     "read": "照指标表列出你要监测的指标清单（至少覆盖 CPU/GPU 使用率、内存与显存、块设备等待时间、网卡带宽），按系统级→进程级→函数级三层设计一次排查：先用系统级找时间段，再用进程级找瓶颈进程，最后到函数级看火焰图/有向图定位到代码段。若无法部署 Apollo，就用 perf/nsight 在本机复现同样三层流程。"
+    },
+    {
+     "source": "final-zh5",
+     "read": "在 ROS 2 环境里跑一遍教程：启用 tracing、跑 performance_test、用 babeltrace 看一条 CTF 事件、再用 tracetools_analysis 画出订阅回调持续时间分布；把离群点对应的回调找出来，量出它的 p99 时长，填进你在 final-zh1 里画的那张时间预算表。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "如需系统学 SOTIF，报名 TÜV 南德中文培训（2 天，付费）或用其课程大纲自查：能说清 SOTIF 与 ISO 26262 的分工、功能不足与可预见误用的风险如何识别与降低。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Watch localization, control, MPC I–II, planning, behavior estimation and perception I–II in order; implement a small MPC and a planning example."
+    },
+    {
+     "source": "final-en1",
+     "read": "Follow the measurement recipe on a single node: record the node's input topics with ros2_single_node_replayer while the full stack runs, isolate cores (nohz_full, rcu_nocbs, isolcpus, intel_pstate=disable, turbo off), pin the node with taskset, then instrument the hot section and measure turnaround time with pmu_analyzer. Reproduce one case-study analysis: read instructions, LLC-load-misses, LLC-store-misses and minor-faults for the sensing node, propose one change, re-measure, and report the p50/p99 turnaround times before and after."
+    },
+    {
+     "source": "final-en2",
+     "read": "Turn your own stack into a budget table: choose two message boundaries (sensor-consumed boundary, perception/planning boundary) plus one timer-switched boundary, define execution-frequency metrics (from IPC message timestamps) and response-time metrics (path start/end timestamps) for them, and assign required values the way AWOV-001…010 does with a written justification per row. Then state which tool (CARET or ros2_tracing) would produce each number, and how you would test it with a rosbag replay."
+    },
+    {
+     "source": "r7-en1",
+     "read": "先读 Approaches to Validating Autonomous Vehicle Safety 讲义（搞清安全案例、SPI、SOTIF 触发事件与验证闭环），再看 Safety Case Considerations for Scenario-Based Assurance 与 UL 4600 webinar，最后用 SPI 思路给一个 L2 功能写 3 个可测的安全指标。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「自动驾驶 课程 完整」",
+   "result": "多为企业课程与感知算法单讲；采用 Apollo 官方课程作为中文主线。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 Apollo 在线课程页",
+   "result": "采纳 zh1；确认覆盖感知/定位/预测/规划/控制/仿真，实时安全缺。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "Apollo 课程免费，未另找付费中文教材。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.ipb.uni-bonn.de/sdc-2021/index.html",
+   "result": "采纳 en1；10 段录像覆盖定位/控制/MPC/规划/行为估计/感知。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "Autoware documentation performance latency monitoring real-time",
+   "result": "命中 docs.autoware.org 的「Defining temporal performance metrics on components」，另有一条 tier4.github.io 的 localization 设计页提到「Latency and stagger should be sufficiently small」。采纳前者为 final-en2；再顺着 Autoware 站点 sitemap 找到同目录下的 evaluation/evaluating-real-time-performance，打开后采纳为 final-en1。",
+   "by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "自动驾驶 实时性 时延 预算 测量 教学 中文 调度",
+   "result": "第一条命中 yfrobotics.github.io/self-driving-handbook-cn「系统软件框架总览」，正文里就有「端到端时间预算分析」与模块预算表，采纳为 final-zh1；同站 system/safety 页后续采纳为 final-zh2。其余为论文 PDF（融合时延鲁棒控制）、车路协同 PDF 与大量无关财经新闻，未采纳。",
+   "by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "Apollo Cyber RT 时延 性能分析 调度 中文 文档",
+   "result": "命中 ApolloAuto/apollo 仓库中的中文文档《Cyber RT Performance Analysis Tool》（实际同目录还有中文版《Cyber RT 性能分析工具.md》），以及腾讯云 CyberRT 源码分析文章、apollo Cyber RT 官网页。用 GitHub contents API 列目录后确认中文版存在，打开采纳为 final-zh4；同目录的《Cyber RT 调度机制.md》打开后采纳为 final-zh3。",
+   "by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "Autoware 时延 测量 CARET ros2_tracing 中文 性能剖析",
+   "result": "命中 ros.ncnynl.com 的 ROS 2 中文教程《如何使用 ros2_tracing 跟踪和分析应用程序》（Jazzy），打开确认是中文分步测量教程，采纳为 final-zh5；同时出现 CARET 的 ROSCon 2022 英文 PDF（英文，未采纳）与一篇论文评述站的中文摘要（非教学，未采纳）。",
+   "by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://docs.ros.org/en/jazzy/Tutorials/Advanced/ROS2-Tracing-Trace-and-Analyze.html",
+   "result": "被反爬拦住，只返回「Making sure you're not a bot!」校验页（0 处匹配），未读到正文；因此没有登记英文版 ros2_tracing 教程，英文测量侧改用 Autoware 官方教程。",
+   "by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "未另做 B 站检索；本轮按用户要求集中在 Autoware/Apollo 的 latency/performance profiling 与实时预算/测量",
+   "result": "未检索（不做「B 站没有」的结论）。上一轮已记录 B 站多为企业课与感知单讲；本轮新增的中文材料是官方文档与开源指南，不是视频。",
+   "by": "review/final-additions/X.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "自动驾驶 功能安全 ISO 26262 预期功能安全 SOTIF 实时性 评估 课程 中文 教学",
+   "result": "返回厂商/认证机构页面（TÜV 南德 SOTIF 中文培训、IAE SOTIF 培训、MulticoreWare、Ansys、PTC）与知乎文章、专利；采纳 TÜV 南德中文培训为 r7-zh1（付费课程），其余为科普或商业宣传。",
+   "by": "review/pi-additions/X.1.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "autonomous vehicle safety course lecture notes ISO 26262 SOTIF real-time constraints free Koopman",
+   "result": "命中 CMU Koopman 的讲义 PDF（users.ece.cmu.edu/~koopman/lectures/L125_SPI_Monitoring.pdf）与多篇标准对比文章；顺其链接打开讲义总目录，采纳为 r7-en1。",
+   "by": "review/pi-additions/X.1.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://users.ece.cmu.edu/~koopman/lectures/",
+   "result": "读到「Short course on Autonomous Vehicle Safety」与讲座清单（Safety Case / SPI / UL 4600 / SOTIF / Scenario-Based Assurance），以及 18-642 的 Concurrency、Scheduling、End-To-End System Scheduling 讲义条目。",
+   "by": "review/pi-additions/X.1.3.json"
+  }
+ ],
+ "findings": [
+  "原英文 Bonn 课程录像覆盖定位、控制、MPC、规划、行为估计与感知，保留；实时与安全评估不在其中。",
+  "原中文 Apollo 课程页面确实列出感知/定位/预测/规划/控制/仿真，覆盖五项核心，但实时安全只到仿真，中文 partial。",
+  "「领域工程基础」是原简介写明的外部前置，两边都按 extension 处理。",
+  "简介中的说明条目不作为知识点：同时需要领域工程基础",
+  "[review/final-additions/X.1.3.json] 未解决 zh「实时与安全评估」：已按「预算 + 调度 + 测量 + 安全评估」四块组合覆盖，但需主代理复核对可信度：final-zh1/final-zh2 出自社区维护的开源维基（云飞机器人实验室，贡献者 2 人，CC BY-SA 4.0），数值与标准条款转述未逐条给出处，建议在正式记录里保留「需与 ISO 26262/21448 原文及本机实测核对」的提示；final-zh3/final-zh4 是 Apollo 仓库内的文档源文件（raw Markdown，无渲染），正文已读到但图表需在仓库里看。",
+  "[review/pi-additions/X.1.3.json] 未解决 en「实时与安全评估」：「安全评估」已由 Koopman 的 AV Safety 课程材料覆盖；缺的是「实时」：英文可查到的是通用嵌入式调度讲义（18-642 的 Scheduling/End-To-End System Scheduling），没有针对自动驾驶感知-规划-控制时延预算、最坏执行时间与实时保证的课程级材料。",
+  "[review/pi-additions/X.1.3.json] 未解决 zh「实时与安全评估」：中文只有付费的 SOTIF 企业培训（TÜV 南德，2 天，无公开讲义）覆盖安全评估，实时性（时延预算、调度、时限分析）在中文课程里没有对应单元：查了中文课程平台、通用检索与认证机构培训页三渠道，均未找到中文的自动驾驶实时性教学。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/final-additions/X.1.3.json@3b33c64562",
+  "review/pi-additions/X.1.3.json@69c66f2ccc"
+ ]
+}

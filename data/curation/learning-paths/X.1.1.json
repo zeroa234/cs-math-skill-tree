@@ -1,0 +1,457 @@
+{
+ "id": "X.1.1",
+ "name": "嵌入式与边缘AI",
+ "description": "资源受限设备上的推理、感知、压缩和硬件协同；边缘部署的学习/推理、端边云协同、时延/功耗与隐私权衡。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.5940 TinyML and Efficient Deep Learning Computing (Song Han) — slides, videos, 5 labs",
+   "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Pruning and sparsity, quantization, knowledge distillation, neural architecture search, MCUNet TinyML on microcontrollers, on-device training; labs: pruning, quantization, NAS, LLM compression, deploying Llama2-7B on a laptop.",
+   "access": "Free schedule, slides and labs; the 21 lecture videos are on the MIT HAN Lab YouTube channel with automatic captions only (no human captions verified).",
+   "publisher": "MIT (Song Han)",
+   "evidence": {
+    "url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+    "location": "Course schedule and lab list",
+    "finding": "The page lists lectures on pruning, quantization, distillation, NAS and MCUNet, plus five labs including LLM deployment."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "MindSpore Lite 官方中文端侧推理文档",
+   "url": "https://www.mindspore.cn/lite/docs/zh-CN/master/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文文档：端侧推理（C++/Java 接口、模型转换）、端侧训练、训练后量化、在 MCU 等小型系统上推理、通过 Delegate 接入专用芯片、静态库裁剪与基准测试。属于工具链文档，不含压缩算法理论与端边云调度。",
+   "access": "免费阅读；实际部署需目标硬件与 MindSpore Lite 工具链。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+   "publisher": "昇思 MindSpore 社区",
+   "evidence": {
+    "url": "https://www.mindspore.cn/lite/docs/zh-CN/master/index.html",
+    "location": "文档首页目录",
+    "finding": "目录列出端侧推理、端侧训练、训练后量化、MCU 部署、Delegate、静态库裁剪与基准测试。"
+   }
+  },
+  {
+   "key": "fix-zh-vision",
+   "lang": "zh",
+   "title": "动手学深度学习：单发多框检测（SSD）",
+   "url": "https://zh-v2.d2l.ai/chapter_computer-vision/ssd.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "目标检测模型、分类及框回归损失、训练与预测代码和练习。",
+   "access": "作者官方中文在线教材全文已打开；代码可按框架选择，不需视频。训练硬件由学习者提供。",
+   "publisher": "张阿斯顿、李沐、扎卡里·立顿、亚历山大·斯莫拉 / D2L",
+   "evidence": {
+    "url": "https://zh-v2.d2l.ai/chapter_computer-vision/ssd.html",
+    "location": "13.7 模型、训练、预测与练习；前置13.3–13.6",
+    "finding": "有SSD模型设计、检测数据集、损失及推理实现，可承担感知算法教学。"
+   },
+   "added_by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "key": "fix-en-vision",
+   "lang": "en",
+   "title": "Dive into Deep Learning: Single Shot Multibox Detection",
+   "url": "https://d2l.ai/chapter_computer-vision/ssd.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Object detection model construction, training, prediction and exercises.",
+   "access": "Free author-hosted English chapter with code; opened full text. Compute costs are separate.",
+   "publisher": "Aston Zhang, Zachary Lipton, Mu Li, Alexander Smola / D2L",
+   "evidence": {
+    "url": "https://d2l.ai/chapter_computer-vision/ssd.html",
+    "location": "14.7; background 14.3–14.6",
+    "finding": "Teaches SSD detector architecture and runnable training/prediction."
+   },
+   "added_by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "key": "fix-zh-collaborative",
+   "lang": "zh",
+   "title": "面向边缘智能的协同推理综述",
+   "url": "https://qijianpeng.github.io/assets/pdf/edgeintelligence2023jfyz.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "模型轻量化、切割、云边与边边架构、动态资源及能耗/时延/隐私取舍。",
+   "access": "作者齐建鹏公开17页中文论文全文已打开；作为主线外的专题讲解，不当整课。",
+   "publisher": "王睿、齐建鹏、陈亮、杨龙；计算机研究与发展",
+   "evidence": {
+    "url": "https://qijianpeng.github.io/assets/pdf/edgeintelligence2023jfyz.pdf",
+    "location": "第2节核心方法与架构；图7及表2；第3节挑战",
+    "finding": "以方法和拓扑比较讲模型切割、压缩、不同部署架构，表2比较资源限制及能耗时延折中。"
+   },
+   "added_by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "key": "fix-zh-adaptive",
+   "lang": "zh",
+   "title": "边端融合的终端情境自适应深度感知模型",
+   "url": "https://www.zjujournals.com/eng/article/2021/1008-973X/202104004.shtml",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "结构化剪枝、ADMM压缩与模型分割联合设计，动态设备资源约束下的算法及实验。",
+   "access": "浙江大学学报官方中文HTML全文已打开；方法实例补充，读公式和实验而非只读摘要。",
+   "publisher": "王虹力、郭斌等 / 浙江大学学报（工学版）",
+   "evidence": {
+    "url": "https://www.zjujournals.com/eng/article/2021/1008-973X/202104004.shtml",
+    "location": "1.1–1.2；2 X-ADMM；GADS与实验",
+    "finding": "解释非结构剪枝为何依赖硬件支持，并给出硬件资源变化下的结构化压缩和切割方法。"
+   },
+   "added_by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "key": "fix-en-collaborative",
+   "lang": "en",
+   "title": "A Survey on Collaborative DNN Inference for Edge Intelligence",
+   "url": "https://arxiv.org/pdf/2207.07812",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Cloud/device/edge collaboration and latency, energy and privacy tradeoffs.",
+   "access": "Author-deposited full English PDF opened; specialist reading supplement.",
+   "publisher": "Weiqing Ren et al. / arXiv; Machine Intelligence Research",
+   "evidence": {
+    "url": "https://arxiv.org/pdf/2207.07812",
+    "location": "Sections 2–6 and 7.4",
+    "finding": "Compares four collaboration paradigms, optimization objectives and security/privacy issues."
+   },
+   "added_by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "机器视觉与边缘计算应用（复旦大学，中国大学MOOC FUDAN-1456632162；目标检测算法 + OpenVINO/头歌平台模型优化与推理 + 边缘计算案例实训）",
+   "url": "https://www.icourse163.org/course/FUDAN-1456632162",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程概述与授课目标：①介绍机器视觉相关目标检测常用算法原理（迁移学习再训练预训练模型）；②重点讲业界实战型深度学习预训练模型加速平台的安装与使用（OpenVINO、头歌），做模型优化与推理；③通过案例与综合实训把机器视觉用到智能交通灯控制、儿童睡姿检测、智能冰箱、智能售药机等典型边缘计算场景；④授课目标要求用 OpenVINO（含 AIxBoard 板子）实现目标检测、语义分割等预训练模型在边缘计算领域的应用；案例代码来自 openvinotoolkit/openvino_notebooks。",
+   "access": "中国大学MOOC 免费注册学习，视频按学期开放；中文讲授；课程大纲区未列逐讲标题（只有课程概述/授课目标/预备知识），字幕未核对；实训依赖 OpenVINO 与头歌平台（免费）。",
+   "publisher": "复旦大学（中国大学MOOC 官方课程）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/FUDAN-1456632162",
+    "location": "「课程概述」第 2、3 问：「通过案例和实验的方式，详细地介绍如何利用OpenVINO、头歌等深度学习加速平台进行模型的优化和推理，实现机器视觉在边缘计算领域的应用」「实现目标检测、语义分割等预训练模型在边缘计算领域的应用方法」；「授课目标」：「应用OpenVINO平台（含AIxBoard板子），实现典型的机器视觉应用，在此基础上做创新性的边缘计算应用」",
+    "finding": "打开正文确认这是一门中文的边缘 AI 部署课：从目标检测原理到模型优化/加速平台，再到真实板子（AIxBoard）与边缘场景实训，覆盖「资源受限设备上的推理」「感知」「压缩与硬件协同」「边缘部署」这几条，可作中文侧成体系主资源。"
+   },
+   "added_by": "review/pi-additions/X.1.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "资源受限设备上的推理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "端侧推理、模型转换、MCU 推理",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "课程概述第 2 问（OpenVINO/头歌 平台做模型优化与推理）＋授课目标（在 AIxBoard 板子上跑目标检测/语义分割）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "MCUNet TinyML；pruning/quantization；deployment lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "把「在受限设备上把模型跑起来」当成课程目标：先用加速平台做模型优化与推理，再落到 AIxBoard 这类边缘板子上，属课程级的部署教学，不再只有产品文档。"
+  },
+  {
+   "topic": "感知",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖感知任务/模型",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-vision",
+     "section": "13.3–13.7，重点SSD训练预测",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "目标检测常用算法原理（预训练模型 + 迁移学习再训练）与语义分割应用；案例含智能交通灯、儿童睡姿检测、智能冰箱、智能售药机",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "TinyML 案例涉及视觉/语音感知，但非独立感知课程",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-vision",
+     "section": "14.3–14.7",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都把感知当作应用背景，没有感知算法教学。；原zh1教端侧工具；新增检测模型、损失与预测代码，先学感知再将模型接到原端侧推理流程。；原en1压缩部署配新增目标检测算法训练，形成感知模型到受限设备的路线。；目标检测/语义分割是边缘感知的核心任务，课程既讲算法原理又给可跑案例，补上此前只有教材章节（SSD）而没有边缘侧实训的空白。"
+  },
+  {
+   "topic": "压缩和硬件协同",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "训练后量化、Delegate 专用芯片、静态库裁剪",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-adaptive",
+     "section": "1.1、2与实验",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "OpenVINO 模型优化与推理（含 CPU/iGPU/VPU/FPGA 等异构硬件执行，见课程概述引用的工具说明）＋ AIxBoard 板子实训",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Pruning/sparsity、quantization、NAS、hardware-aware 设计",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只到工具层量化与 delegate，没有剪枝/NAS/硬件协同设计。；原zh1量化与Delegate，加新文结构化剪枝、资源约束联合切割及实验；再用fix-zh-collaborative比较压缩方法，覆盖算法与硬件约束协同，非仅接口调用。；课程以模型优化 + 异构硬件（含专用加速板）为主线做部署，正是「压缩与硬件协同」在工程课里的落法；量化/剪枝的理论深度不如 MIT 6.5940，但中文侧有了可跟做的课程。"
+  },
+  {
+   "topic": "边缘部署的学习/推理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "端侧训练与端侧推理",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "On-device training；deployment labs",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "端边云协同",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-collaborative",
+     "section": "2 核心方法与架构、图7、表2",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "未覆盖（课程聚焦单设备效率）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-collaborative",
+     "section": "2–6",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有端边云协同调度；原 granularity 也注明此项证据弱、建议收窄。；接原zh1设备部署，以模型切割与架构比较补云边端之间任务分配，并用fix-zh-adaptive看动态调整实例。；原en1负责单设备；新增四种协作架构与分割调度补上跨设备部署。"
+  },
+  {
+   "topic": "时延/功耗与隐私权衡",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "基准测试（时延/内存），无功耗与隐私权衡",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-collaborative",
+     "section": "2.1–2.2、图7及表2",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "效率指标与部署 lab 间接涉及，无系统权衡分析",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-collaborative",
+     "section": "2、3.2、4–6、7.4",
+     "extent": "covered"
+    }
+   ],
+   "note": "原zh1基准时延，加本文计算、通信、能耗与隐私的联合比较，并用fix-zh-adaptive的带宽/电量变化案例理解选择，不把本地部署自动当隐私保证。；原en1效率实验加新文架构与优化比较，解释卸载位置影响通信、计算和隐私，补系统取舍。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按模型转换→端侧推理→训练后量化→MCU 部署→Delegate 的顺序做一遍，记录时延与内存。"
+    },
+    {
+     "source": "fix-zh-vision",
+     "read": "完成检测模型训练预测后回原zh1做端侧推理。"
+    },
+    {
+     "source": "fix-zh-adaptive",
+     "read": "读剪枝硬件约束、X-ADMM与GADS，逐项记录资源、精度和时延的关系。"
+    },
+    {
+     "source": "fix-zh-collaborative",
+     "read": "读第2–3节及图表，比较云边端放置方案，结合原zh1基准思考通信能耗与隐私。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先按课程学目标检测原理并用预训练模型做一次迁移学习，再用 OpenVINO 做模型转换与推理优化（对比 FP32/FP16/INT8 的时延），最后在 AIxBoard 或等价边缘设备上跑通一个案例（如睡姿检测），记录时延、功耗与精度变化。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Follow the lectures on pruning, quantization, distillation and NAS, then do the pruning/quantization/NAS labs and the Llama2-7B deployment lab."
+    },
+    {
+     "source": "fix-en-vision",
+     "read": "Train and predict with SSD, then apply original en1 efficiency/deployment lessons."
+    },
+    {
+     "source": "fix-en-collaborative",
+     "read": "Compare sections 2–6 architectures and optimization objectives, then section 7.4 privacy; connect to original en1 deployment metrics."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 MindSpore Lite 中文文档",
+   "result": "采纳 zh1；确认只有端侧推理/训练/量化/delegate 工具内容。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「TinyML 边缘计算 课程」",
+   "result": "有 Edge Impulse/Arduino 实战与 10 分钟科普，无覆盖压缩算法与硬件协同的中文课，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核到中文 TinyML 教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://hanlab.mit.edu/courses/2023-fall-65940",
+   "result": "采纳 en1；课程覆盖剪枝/量化/蒸馏/NAS/MCUNet/端侧训练与 5 个 lab。"
+  },
+  {
+   "lang": "zh",
+   "result": "找到出版社边缘计算候选；进一步优先核作者公开全文。",
+   "query_or_url": "边缘智能 教材 剪枝 隐私 云边端 协同 清华大学出版社",
+   "by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "result": "打开齐建鹏作者公开全文，核架构图与比较表。",
+   "query_or_url": "边缘智能 协同 推理 隐私 教程 综述 计算机学报",
+   "by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "result": "找到并打开浙大学报完整方法实例，核剪枝硬件限制与联合优化。",
+   "query_or_url": "site.tup.tsinghua.edu.cn 模型压缩 硬件 协同 边缘",
+   "by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "result": "打开作者中文SSD全文。",
+   "query_or_url": "site.zh.d2l.ai/chapter_computer-vision/ ssd",
+   "by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "lang": "en",
+   "result": "打开英文计算机视觉目录并点击SSD正文。",
+   "query_or_url": "site.d2l.ai/chapter_computer-vision/ssd.html",
+   "by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "lang": "en",
+   "result": "哈佛课程介绍仅作候选，优先采用免费完整D2L算法教材。",
+   "query_or_url": "TinyML edx Harvard book motion audio vision free",
+   "by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "lang": "en",
+   "result": "打开arXiv作者全文，核能耗优化和7.4隐私，不只用摘要。",
+   "query_or_url": "edge intelligence collaborative DNN inference survey",
+   "by": "review/data-app-additions/X.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "边缘计算 嵌入式人工智能 课程 大纲 模型压缩 端侧推理 部署 端边云协同（限定 icourse163/higher.smartedu/xuetangx）",
+   "result": "命中复旦大学《机器视觉与边缘计算应用》（含 OpenVINO/AIxBoard 边缘实训）、南邮《嵌入式智能终端应用开发》（偏 App 开发）、苏州工业职院《工业数据采集与边缘服务》（职教 1+X）；选复旦课作中文 primary。",
+   "by": "review/pi-additions/X.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/FUDAN-1456632162",
+   "result": "读到课程概述五问与授课目标：目标检测原理→OpenVINO/头歌 模型优化与推理→边缘场景案例（智能交通灯/睡姿检测/智能冰箱/售药机）→AIxBoard 板子；大纲区无逐讲列表。",
+   "by": "review/pi-additions/X.1.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 6.5940 覆盖受限设备推理、压缩与硬件协同，保留；感知、端边云、功耗/隐私权衡确实不在课程。",
+  "原中文 MindSpore Lite 是工具链文档，覆盖端侧推理/量化/端侧训练，但不能教压缩算法与硬件协同；中文 partial。",
+  "原 granularity 已注明端边云与时延/功耗证据弱，本结果与之一致。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/X.1.1.json@d90c334a96",
+  "review/pi-additions/X.1.1.json@989d81b127"
+ ]
+}

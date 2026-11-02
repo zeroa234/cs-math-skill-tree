@@ -1,0 +1,644 @@
+{
+ "id": "D.1.5",
+ "name": "数据治理、元数据与质量",
+ "description": "血缘、目录、模式演化、质量规则、责任与数据生命周期。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "OpenMetadata Documentation v2.0.x (Data Discovery, Data Contracts, Data Quality and Observability, Data Lineage, Data Governance)",
+   "url": "https://docs.open-metadata.org/latest",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Navigation groups: Data Discovery (catalog, search, glossary/tags), Data Contracts, Data Quality and Observability (tests, profiler, incidents), Data Lineage (column-level lineage), Data Governance; the home page states the goal is to 'document, discover, and govern your data assets end-to-end'.",
+   "access": "Free documentation; a hosted/self-managed deployment is needed to run the Quickstart, and some cloud features are paid. Tool documentation, so organisational stewardship/lifecycle theory is not covered.（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+   "publisher": "OpenMetadata (Collate)",
+   "evidence": {
+    "url": "https://docs.open-metadata.org/latest",
+    "location": "Left navigation: Data Discovery / Data Contracts / Data Quality and Observability / Data Lineage / Data Governance",
+    "finding": "Opened the docs home; the navigation lists the five governance-related sections and the page tagline describes documenting, discovering and governing data assets end-to-end."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "华为云 DataArts Studio 用户指南：DataArts Studio 使用流程（数据治理）",
+   "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0007.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文流程正文：数据目录（元数据采集、数据地图查看资产）、数据架构（关系建模/维度建模、码表与数据标准）、数据质量（完整性/有效性/及时性/一致性/准确性/唯一性六维度，可按数据标准生成质量规则并周期监控）、数据安全（访问权限、敏感数据识别、隐私保护，写明覆盖数据生命周期内统一的数据使用保护）、数据开发与运维调度。",
+   "access": "官方中文文档免费阅读；实际治理需要购买 DataArts Studio 实例、存储与计算资源，本次未开通云服务。（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+   "publisher": "华为云",
+   "evidence": {
+    "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0007.html",
+    "location": "「数据目录（元数据采集）」「数据架构」「数据质量」「数据安全」各段",
+    "finding": "正文写明数据质量可从完整性、有效性、及时性、一致性、准确性、唯一性六个维度分析并周期性监控；数据安全段写明为数据湖提供数据生命周期内统一的数据使用保护能力。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "华为云 DataArts Studio 数据质量：新建数据质量规则",
+   "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0715.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "质量规则的创建步骤与规则模板：单列/跨列/跨行/跨表校验，与数据标准联动；用于把 zh1 的六维度落到可执行的规则配置。",
+   "access": "免费中文文档；同样需要实例才能操作。",
+   "publisher": "华为云",
+   "evidence": {
+    "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0715.html",
+    "location": "新建数据质量规则页面正文",
+    "finding": "页面标题为「新建数据质量规则」，正文给出规则配置流程与校验维度，作为 zh1 质量章节的操作补充。"
+   }
+  },
+  {
+   "key": "fix-zh-lineage",
+   "lang": "zh",
+   "title": "DataArts Studio数据血缘方案及配置教程",
+   "url": "https://support.huaweicloud.com/usermanual-dataartsstudio/dataartsstudio_01_0560.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "血缘概念、源表到目标表加工图、自动及手动解析；与配置页配套。",
+   "access": "中文正文免费；不是中文视频证据。实际云实例可能收费，未开通。",
+   "publisher": "华为云",
+   "evidence": {
+    "url": "https://support.huaweicloud.com/usermanual-dataartsstudio/dataartsstudio_01_0560.html",
+    "location": "什么是数据血缘、实现方案；链接配置数据血缘",
+    "finding": "正文用wk_01→wk_02→多张目标表解释加工关系，说明采集、运行与展示顺序。"
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-zh-lineage-config",
+   "lang": "zh",
+   "title": "DataArts Studio配置数据血缘",
+   "url": "https://support.huaweicloud.com/usermanual-dataartsstudio/dataartsstudio_01_0561.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "SQL与集成节点的自动血缘解析范围、手动输入输出配置。",
+   "access": "免费中文操作教学；云实践可能收费。",
+   "publisher": "华为云",
+   "evidence": {
+    "url": "https://support.huaweicloud.com/usermanual-dataartsstudio/dataartsstudio_01_0561.html",
+    "location": "自动血缘解析、手动配置血缘",
+    "finding": "实际打开配置正文，说明支持节点与手动配置覆盖自动解析的规则。"
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-zh-schema",
+   "lang": "zh",
+   "title": "使用架构演变更新表架构：Delta教学实例",
+   "url": "https://learn.microsoft.com/zh-cn/azure/databricks/tables/update-schema",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "增删、重命名、类型修改、重写和自动演化；新旧数据与流读取影响。",
+   "access": "免费中文正文已读；页面含授权通用提示但正文可读取。不是整门课，只作原治理路线实操补充；云执行可能收费。",
+   "publisher": "Microsoft Learn／Azure Databricks",
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/databricks/tables/update-schema",
+    "location": "手动架构变更；启用架构演变；MERGE示例；替换表架构",
+    "finding": "给出变更前后结构、SQL及合并行为；明确删除元数据不等于删除底层数据。"
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-zh-schema-contract",
+   "lang": "zh",
+   "title": "Zerobus架构管理：兼容与生产者变更",
+   "url": "https://learn.microsoft.com/zh-cn/azure/databricks/ingestion/zerobus-schema-management",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "严格、可空、救援字段三情景与非中断演化。",
+   "access": "免费中文教学正文；通用授权提示与可读正文并存。只作兼容性案例，无服务开通。",
+   "publisher": "Microsoft Learn／Azure Databricks",
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/azure/databricks/ingestion/zerobus-schema-management",
+    "location": "记录如何与表格匹配；合同形成的三种方式；架构演变",
+    "finding": "用JSON与建表例子解释接受和拒绝，先改表再发新结构，可空列允许旧生产者继续写入。"
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-zh-governance-roles",
+   "lang": "zh",
+   "title": "数据资产管理实践白皮书3.0：组织职责与认责",
+   "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/201812/P020181214608773379834.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "组织层级、决策者/管理者/提供者/开发者/消费者及职责闭环。",
+   "access": "机构官网免费全文PDF；首次超时后重新打开成功。",
+   "publisher": "中国信息通信研究院／CCSA TC601",
+   "evidence": {
+    "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/201812/P020181214608773379834.pdf",
+    "location": "印刷页24–26，图5、表2、图6；三段八步法案例",
+    "finding": "给出角色主要职责、能力要求和认责流程；并非只有owner字段。"
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-zh-lifecycle",
+   "lang": "zh",
+   "title": "研究资料管理学习指引：管理工具库",
+   "url": "https://www.lib.ntu.edu.tw/events/2022_RDMLA_class/04.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "数据生命周期模型与计划、收集、组织、存储描述、分析、典藏共享及再用任务。",
+   "access": "免费繁体中文正文；采用网页教学，不把外链英文资源或视频算中文课程。",
+   "publisher": "国立台湾大学图书馆",
+   "evidence": {
+    "url": "https://www.lib.ntu.edu.tw/events/2022_RDMLA_class/04.html",
+    "location": "研究资料生命周期；学习资源与管理工具各阶段",
+    "finding": "中文正文比较多种模型并说明阶段任务，DMP需记录角色权责和资源；研究数据案例可迁移到治理规划。"
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-en-schema",
+   "lang": "en",
+   "title": "Update table schemas with schema evolution",
+   "url": "https://learn.microsoft.com/en-us/azure/databricks/tables/update-schema",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Schema evolution through explicit DDL and automatic MERGE, rewrite and reader implications.",
+   "access": "Free English teaching examples; generic authorization notice appears but full text was readable. Runtime/cloud use may cost; no service started.",
+   "publisher": "Microsoft Learn／Azure Databricks",
+   "evidence": {
+    "url": "https://learn.microsoft.com/en-us/azure/databricks/tables/update-schema",
+    "location": "Manual schema changes; Enable schema evolution; MERGE examples",
+    "finding": "Provides before/after schema and SQL examples, explaining concurrent-write conflicts and restarted readers."
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-en-iceberg",
+   "lang": "en",
+   "title": "Apache Iceberg Evolution",
+   "url": "https://iceberg.apache.org/docs/latest/evolution/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Safe column evolution, field IDs and coexistence of partition versions.",
+   "access": "Free English conceptual and example-based text; supplement only, not the whole governance course.",
+   "publisher": "Apache Software Foundation",
+   "evidence": {
+    "url": "https://iceberg.apache.org/docs/latest/evolution/",
+    "location": "Schema evolution/Correctness; Partition evolution",
+    "finding": "Explains why field identity prevents accidental reuse and how old/new layouts coexist, with examples."
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-en-roles",
+   "lang": "en",
+   "title": "Data ownership model",
+   "url": "https://www.gov.uk/government/publications/data-ownership-in-government/data-ownership-model",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Owner, steward, custodian accountabilities, shared datasets and retention responsibilities.",
+   "access": "Free English institutional guidance and scenarios; no registration.",
+   "publisher": "UK Government",
+   "evidence": {
+    "url": "https://www.gov.uk/government/publications/data-ownership-in-government/data-ownership-model",
+    "location": "6 Data ownership roles and responsibilities; 7 Merged data sets and data services",
+    "finding": "Separates strategic accountability, day-to-day stewardship and technical custody, with shared-data scenarios."
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "fix-en-lifecycle",
+   "lang": "en",
+   "title": "The Government Data Quality Framework",
+   "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Stage-specific management from planning/collection through preservation or destruction.",
+   "access": "Free English institutional teaching guidance and case studies.",
+   "publisher": "UK Government",
+   "evidence": {
+    "url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework",
+    "location": "The data lifecycle; The stages of the data lifecycle",
+    "finding": "Explains lifecycle stages and their quality issues, supplies action guidance rather than only a glossary definition."
+   },
+   "added_by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《DAMA 数据管理知识体系指南（原书第 2 版）》（DAMA International 着，DAMA 中国分会译，机械工业出版社 2020-05）— DAMA 中国官网本书介绍与章节对照",
+   "url": "https://www.mydama.org.cn/chubanwu/%E5%86%85%E5%AE%B9%E7%AE%80%E4%BB%8B",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "全书的 11 个数据管理职能章＋主题章：第3章 数据治理（决策权与责任体系）、第4章 数据架构、第5章 数据建模和设计、第6章 数据存储和操作（含「在整个数据生命周期中，从计划到销毁」的运维活动）、第7章 数据安全、第8章 数据集成和互操作、第9章 文档和内容管理、第10章 参考数据和主数据、第11章 数据仓库和商务智能、第12章 元数据管理（定义、模型、数据流等元数据）、第13章 数据质量管理（规划并实施质量技术以测量、评估和提高适用性）、第16章 数据管理组织和角色期望（组建团队与角色职责）、第17章 数据管理和组织变革管理。",
+   "access": "付费纸书/电子书（机械工业出版社 2020 年 5 月出版，44 万字）；DAMA 中国官网免费提供本书简介与章节对照，不提供全文；本轮未购买、未阅读正文。网络上流传的中文版 PDF 属未授权副本，未采用。",
+   "publisher": "DAMA International（国际数据管理协会）着；DAMA 中国分会翻译；机械工业出版社出版",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.mydama.org.cn/chubanwu/%E5%86%85%E5%AE%B9%E7%AE%80%E4%BB%8B/",
+    "location": "正文「图8. DAMA-DMBOK2章节分布」后的职能说明：「数据治理…（参见第3章）」「数据存储和操作…在整个数据生命周期中，从计划到销毁…（参见第6章）」「元数据管理…包括定义、模型、数据流…（参见第12章）」「数据质量管理…测量、评估和提高数据在组织内的适用性（参见第13章）」「数据管理组织和角色期望…（第16章）」",
+    "finding": "确认这是一本按职能分章、章号明确的成体系教材，数据治理/元数据/数据质量/角色期望各有专章，可对上本技能的「目录、质量规则、责任与数据生命周期」；介绍页同时说明中文版由机械工业出版社出版、DAMA 中国分会翻译。"
+   },
+   "added_by": "review/pi-additions/D.1.5.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "DAMA-DMBOK®: Data Management Body of Knowledge, 2nd Edition (DAMA International) — 官方图书页",
+   "url": "https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "DAMA 官方数据管理知识体系教材（第2版）：按数据管理职能分章组织，其中 Data Governance、Metadata Management、Data Quality Management、Data Modeling and Design、Data Storage and Operations、Data Management Organization and Role Expectations 等章分别对应治理责任与决策体系、元数据与目录、质量规则与度量、数据模型与模式、生命周期操作、角色与职责。章号对照见同一版中文版官方介绍页（r7-zh1）。",
+   "access": "付费纸书/电子书，DAMA 官网提供「Order the DAMA-DMBOK®」购买入口并列出译本（Italian 等）；本轮只读官方介绍页，未购买；正文未打开。",
+   "publisher": "DAMA International®（官方出版方）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/",
+    "location": "页面正文「The DAMA-DMBOK® is the globally recognized framework for data management…principles, practices, and functions…」与「What's New in the 2nd Edition」（Expanded data ethics coverage / Updated content on data governance / New insights into data integration & interoperability）、「Order the DAMA-DMBOK®」「Available In … Italian」",
+    "finding": "确认官方图书页存在、这是第 2 版并由 DAMA International 出版，页面明确写它按数据管理职能（functions）组织并含数据治理内容，可作英文侧成体系教材；但没有公开章节目录，章号用同版中文官方介绍页核对。"
+   },
+   "added_by": "review/pi-additions/D.1.5.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "血缘",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据目录／数据地图（仅说明查看资产，未展开血缘）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-lineage",
+     "section": "什么是数据血缘；数据血缘实现方案",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-lineage-config",
+     "section": "自动血缘解析；手动配置血缘",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data Lineage（列级血缘）",
+     "extent": "covered"
+    }
+   ],
+   "note": "DataArts 使用流程页只写数据地图查看资产，没有血缘专节；中文血缘需要另找材料，本条按 partial 记。；原zh1数据地图只到目录；概念和加工图先说明来源及去向，再用fix-zh-lineage-config配置节点和输入输出，和原目录采集路线组合覆盖血缘。；与fix-zh-lineage概念正文及原zh1元数据采集组合，落实SQL/集成节点、源目标和展示前提；覆盖生成与追溯，而非只有入口。"
+  },
+  {
+   "topic": "目录",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据目录（元数据采集、数据地图）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第12章 元数据管理（元数据的定义、模型、数据流；规划、实施和控制活动）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data Discovery（catalog、搜索、术语表/标签）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Metadata Management chapter（同版章号：第12章，见 r7-zh1 官方章节对照）",
+     "extent": "covered"
+    }
+   ],
+   "note": "目录/元数据这一章在 DAMA 体系里是独立职能章，给出元数据分类与采集治理流程，正对「目录」这条必学点；与现有 zh1 的产品操作页互补（教材给体系，产品页给操作）。；英文侧此前只有 OpenMetadata 产品文档（en1），补上 DAMA-DMBOK 的元数据管理章后有了教材级体系。"
+  },
+  {
+   "topic": "模式演化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖（数据架构讲建模与标准，不讲 schema evolution）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-schema",
+     "section": "手动架构变更；启用架构演变；MERGE实例；替换表架构",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-schema-contract",
+     "section": "记录匹配；三种情景；架构演变",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data Contracts（只到契约与校验，未系统讲模式演化）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-schema",
+     "section": "Manual schema changes; Enable schema evolution; MERGE examples",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-en-iceberg",
+     "section": "Schema evolution/Correctness; Partition evolution",
+     "extent": "covered"
+    }
+   ],
+   "note": "两种语言都缺模式演化（兼容性、迁移、版本化）的系统教学，本条两边都只能 partial。；原zh1建模不含演化；本教程用迁移操作和变更前后数据行为补实践，再接fix-zh-schema-contract兼容性与分阶段发布；组合覆盖结构变化、数据保留和消费者协调。；与fix-zh-schema操作教程及原zh1模型标准组合，解释可空列如何兼容旧生产者、先改表后改生产者及不兼容记录处理；不把ALTER语法本身算完整演化教学。；Original en1 Data Contracts supplies governance context; this teaching tutorial supplies migration and old/new schema examples; fix-en-iceberg adds stable field identity and version coexistence to complete the item.；Combine field IDs, safe changes and coexisting metadata versions with fix-en-schema migration examples and original en1 contracts; distinguish schema evolution from checking a static contract."
+  },
+  {
+   "topic": "质量规则",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据质量：六维度分析与按标准生成规则",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "新建数据质量规则",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第13章 数据质量管理（规划和实施质量管理技术，测量、评估和提高数据适用性）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data Quality and Observability（tests、profiler、incidents）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Data Quality Management chapter（第13章）",
+     "extent": "covered"
+    }
+   ],
+   "note": "DAMA 第13章是质量维度/度量/改进的成体系讲法，能把现有华为云「新建数据质量规则」的具体操作放回方法论里。；教材级质量维度/度量/改进方法，配 en1 的 Data Quality and Observability 实操。"
+  },
+  {
+   "topic": "责任与数据生命周期",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据安全：数据生命周期内的使用保护；流程中设置审核人",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-zh-governance-roles",
+     "section": "图5、表2、图6组织与认责；实施案例",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-lifecycle",
+     "section": "研究资料生命周期；设计计划至检索再用的中文阶段说明",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第3章 数据治理（决策权与责任体系）＋第16章 数据管理组织和角色期望＋第6章 数据存储和操作（数据生命周期从计划到销毁）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Data Governance（所有权/术语/标签，未讲生命周期阶段与责任矩阵）",
+     "extent": "partial"
+    },
+    {
+     "source": "fix-en-roles",
+     "section": "6 roles and responsibilities; 7 merged datasets",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-en-lifecycle",
+     "section": "The data lifecycle; stages from Plan to Archive or destroy",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Data Governance chapter（第3章）＋Data Management Organization and Role Expectations chapter（第16章）＋Data Storage and Operations chapter（第6章，lifecycle from plan to destroy）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都只到工具里的 owner/审核角色与生命周期安全，不含 DAMA 式责任矩阵（steward/owner/custodian）与生命周期阶段治理。；本白皮书补原zh1审核人与owner之外的组织职责和冲突处理；fix-zh-lifecycle补各阶段任务与DMP权责，两者合起来覆盖责任与生命周期。；用中文大学教学说明生命周期任务，与fix-zh-governance-roles角色矩阵和原zh1生命周期安全组合，将阶段、责任、存储描述和长期保存联系起来；不同领域可选不同模型。；Original en1 owner/tag tools are complemented by organizational accountability and shared-data scenarios here, plus stage-specific lifecycle teaching in fix-en-lifecycle; together cover both halves.；Combine stage tasks and quality risks with fix-en-roles owner/steward/custodian responsibilities and original en1 governance implementation; covers lifecycle beyond a tool ownership field.；治理章定义认责与决策权，组织章讲角色职责，存储章讲从计划到销毁的生命周期操作，三章合起来正好是这条必学点的完整体系（现有材料只有产品流程与白皮书片段）。；把英国政府数据质量框架与所有权模型（fix-en-*）的零散材料升级为教材主线：治理责任体系 + 组织角色 + 生命周期操作。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按使用流程依次走：元数据采集与数据地图、数据架构里的关系/维度建模与数据标准、数据质量的六维度规则、数据安全的权限与敏感数据识别。"
+    },
+    {
+     "source": "zh2",
+     "read": "照「新建数据质量规则」配置一次单列与跨表校验，理解规则模板与调度。"
+    },
+    {
+     "source": "fix-zh-governance-roles",
+     "read": "先读角色职责表和认责流程，再回原DataArts流程，给每项动作指定决策、执行和反馈责任。"
+    },
+    {
+     "source": "fix-zh-lifecycle",
+     "read": "读中文阶段任务，为一份数据集写DMP，标明收集、描述、存储、分析、典藏共享与再用责任，和原安全措施对应。"
+    },
+    {
+     "source": "fix-zh-lineage",
+     "read": "原目录与质量规则已覆盖；接本页加工图，手画一源多目标血缘并追溯来源。"
+    },
+    {
+     "source": "fix-zh-lineage-config",
+     "read": "继续读解析限制和手动配置，明确输入输出与元数据采集前提；阅读不需购买云实例。"
+    },
+    {
+     "source": "fix-zh-schema",
+     "read": "读变更前后结构及MERGE例子，区分元数据变更与数据重写，标明流读取和并发写影响。"
+    },
+    {
+     "source": "fix-zh-schema-contract",
+     "read": "逐个判断JSON记录在三种表定义下是否被接受，安排先改表后改生产者，解释旧写入端如何继续工作。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先系统读第3章（治理与认责）、第12章（元数据/目录）、第13章（数据质量）、第16章（组织与角色）、第6章（生命周期操作），每章按「目标与原则/活动/角色职责/交付物」四栏做笔记；再把 zh1 华为云 DataArts 的目录、质量规则、血缘操作对应到相应章节的活动清单上。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Data Discovery, Data Lineage, Data Quality and Observability, Data Contracts and Data Governance in that order, and run the Quickstart to ingest one database and inspect its lineage graph."
+    },
+    {
+     "source": "fix-en-roles",
+     "read": "Read role accountabilities and shared-data scenarios; map them to the original OpenMetadata owner and governance workflow."
+    },
+    {
+     "source": "fix-en-lifecycle",
+     "read": "Read the lifecycle stages and risks; assign each action to owner, steward or custodian using fix-en-roles."
+    },
+    {
+     "source": "fix-en-schema",
+     "read": "After original Data Contracts, work through schema-before/schema-after and MERGE behavior; document reader and writer coordination."
+    },
+    {
+     "source": "fix-en-iceberg",
+     "read": "Read field-ID correctness and old/new layout coexistence; connect evolution and versioning to original metadata ingestion. No platform subscription needed to read."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Read the Data Governance, Metadata Management, Data Quality Management, Data Storage and Operations and Organization & Role Expectations chapters, and write a one-page governance charter (owners, decision rights, quality metrics, lifecycle stages) that you then implement in OpenMetadata from en1."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开华为云 DataArts Studio 使用流程与新建数据质量规则页",
+   "result": "采纳 zh1/zh2：中文正文可核到目录、建模/标准、六维度质量与生命周期安全。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「数据治理 课程 元数据 血缘」",
+   "result": "结果多为平台功能演示与血缘工具介绍（如 Sqllineage），没有系统课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "DAMA-DMBOK 中文版／数据治理教材检索",
+   "result": "未找到可核价的官方购买页；不把未核实的书登记为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://docs.open-metadata.org/latest 导航",
+   "result": "采纳 en1 的工具正文；确认其只覆盖目录/血缘/质量/治理工具，不覆盖模式演化与组织责任理论。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.support.huaweicloud.com 血缘 影响分析 DataArts",
+   "result": "打开方案与配置两页，找到概念、加工图和节点教学，不因原流程页缺专节认定没有血缘材料。",
+   "by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.learn.microsoft.com/zh-cn/azure/databricks 更新表架构",
+   "result": "打开中文演化实例与Zerobus兼容情景；中文网页不当中文视频。",
+   "by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.edu.tw 研究資料 生命週期 管理",
+   "result": "打开台湾大学和台湾师范大学图书馆中文正文，采纳前者详细阶段任务。",
+   "by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.caict.ac.cn 数据资产 管理 实践 白皮书 生命周期 组织",
+   "result": "重新打开信通院3.0版免费全文，核对角色表与认责流程；不是书籍镜像。",
+   "by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "site.iceberg.apache.org Evolution Schema evolution",
+   "result": "打开Apache正文，并另开Microsoft英文迁移实例，不把API目录当课程。",
+   "by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "site.gov.uk data ownership model data lifecycle owner steward",
+   "result": "打开政府ownership model与quality framework正文，分别覆盖角色与阶段。",
+   "by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "site.tup.com.cn 数据治理 生命周期 数据管理者 试读",
+   "result": "打开清华出版社10136201目录及第1章合法试读；只证明该章免费，没有据此宣称全书免费。免费材料已能组合，不列付费主线。",
+   "by": "review/data-app-additions/D.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "DAMA 数据管理知识体系指南 原书第2版 机械工业出版社 目录 数据治理 元数据 数据质量",
+   "result": "命中 DAMA 中国官网本书介绍页（mydama.org.cn，采纳为 r7-zh1）、微信读书页面与一个 GitHub 上的未授权中文版 PDF（未采用）；未见免费的系统课程。",
+   "by": "review/pi-additions/D.1.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.mydama.org.cn/chubanwu/内容简介",
+   "result": "读到全书职能章与章号（第3章治理、第6章存储与生命周期、第12章元数据、第13章质量、第16章组织与角色）、11 个职能与 7 个环境要素框架，以及「机械工业出版社出版、DAMA 中国分会翻译」，确认可作中文 primary 教材。",
+   "by": "review/pi-additions/D.1.5.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.dama.org/cpages/body-of-knowledge（跳转到 /learning-resources/dama-data-management-body-of-knowledge-dmbok/）",
+   "result": "读到 DAMA 官方 DMBOK 页：第 2 版、由 DAMA International 出版、按 functions 组织、含 data governance 更新，提供 Order 入口与译本列表；无公开章节目录，章号改用同版中文官方页对照。",
+   "by": "review/pi-additions/D.1.5.json"
+  }
+ ],
+ "findings": [
+  "原中文资源是 DataArts 使用流程页，确实有目录、建模/标准、质量六维度与生命周期安全，但没有血缘正文，也未讲模式演化与责任矩阵。",
+  "原英文 OpenMetadata 文档有 Data Lineage/Data Discovery/Data Quality 的完整工具正文，但同样是产品文档，缺模式演化与组织治理理论。",
+  "本节点两种语言都只能算 partial：工具层可学，治理理论与模式演化两边都没有免费课程级材料；没有用另一语言冒充补齐。",
+  "[review/pi-additions/D.1.5.json] 未解决 zh「主资源」：已找到成体系中文教材（DAMA-DMBOK2 中文版，机电社 2020），但它是付费书、官网只公开章节对照，没有像课程那样可免费逐章学习的正文；本轮未购买也未读正文，故中文主资源的可及性仍受限（教材本身成立，不是缺材料）。",
+  "[review/pi-additions/D.1.5.json] 未解决 en「主资源」：英文侧同样只找到 DAMA-DMBOK 第 2 版这一本官方教材（付费、官网无公开章节目录）；未找到免费、成体系的英文数据治理课程（Coursera/edX 相关课均付费且未核实大纲），故英文 primary 为付费教材，正文未读。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/data-app-additions/D.1.5.json@62b2a19889",
+  "review/pi-additions/D.1.5.json@73bd8ef395"
+ ]
+}

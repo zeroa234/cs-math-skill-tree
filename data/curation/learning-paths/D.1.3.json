@@ -1,0 +1,428 @@
+{
+ "id": "D.1.3",
+ "name": "分布式数据库与NoSQL",
+ "description": "分片、复制、分布式事务、键值/文档/列族/图数据模型。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CS186 Database Systems — online notes: NoSQL, Distributed Transactions, Consensus, Parallel Query (UC Berkeley)",
+   "url": "https://cs186berkeley.net/notes/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "The NoSQL note covers OLTP vs OLAP motivation, Partitioning (sharding, per-partition parallelism), Replication (primary/replica, read-write cost, single point of failure), CAP and eventual consistency, Key-Value Stores, Wide-column Stores, Document Stores (JSON/MongoDB, schema-on-write vs schema-on-read); separate notes cover Distributed Transactions (2PC, Paxos), Consensus and Parallel Query Processing.",
+   "access": "Free HTML, no registration. Site warns the notes are under construction; the NoSQL/transaction notes are nonetheless complete prose.",
+   "publisher": "UC Berkeley CS186 teaching staff",
+   "evidence": {
+    "url": "https://cs186berkeley.net/notes/",
+    "location": "Navigation: NoSQL, Distributed Transactions, Consensus, Parallel Query Processing",
+    "finding": "Opened the notes index; the topic list contains NoSQL, Distributed Transactions, Consensus and Parallel Query Processing, and the NoSQL page itself is linked from that index."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "CMU 15-445/645 Lecture #24: Distributed Databases (Fall 2026 slides/video)",
+   "url": "https://15445.courses.cs.cmu.edu/fall2026/schedule.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Lecture #24 treats distributed database architectures: shared-nothing partitioning, replication, distributed transactions and query execution; the same course's #16–17 give the query-planning background used by parallel/distributed execution.",
+   "access": "Free schedule row with slides, notes and video links; Fall 2026 is in progress, so the row exists but material appears as released.",
+   "publisher": "Carnegie Mellon University",
+   "evidence": {
+    "url": "https://15445.courses.cs.cmu.edu/fall2026/schedule.html",
+    "location": "Schedule row #24: Distributed Databases",
+    "finding": "Schedule lists '#24: Distributed Databases' with slide/note/video links next to storage, indexing, transactions and recovery lectures."
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "Neo4j GraphAcademy: Neo4j Fundamentals + Graph Data Modeling Fundamentals (free courses)",
+   "url": "https://graphacademy.neo4j.com/courses/neo4j-fundamentals/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Neo4j Fundamentals: 7 lessons/3 modules on graph theory, nodes, relationships, properties, labels, native graph storage and Cypher; Graph Data Modeling Fundamentals: 18 lessons on turning a domain into a graph model and refactoring it. Supplies the property-graph model that the NoSQL notes do not teach.",
+   "access": "Lessons free but require a free Neo4j account to enroll ('Sign in to Enroll'); vendor-authored course, not a university course. Course pages state 'Free'.",
+   "publisher": "Neo4j GraphAcademy",
+   "evidence": {
+    "url": "https://graphacademy.neo4j.com/courses/neo4j-fundamentals/",
+    "location": "Course header '7 lessons across 3 modules · Free' and module list Graph Thinking / Querying Graphs / Exploring Neo4j",
+    "finding": "Opened both course pages; the fundamentals course lists graph theory, graph structures and elements of a graph database, the modeling course lists 18 lessons on domain graphs and refactoring."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "林子雨《大数据技术原理与应用（第3版）》教材官网与详细目录（厦门大学数据库实验室，配套讲义/实验免费）",
+   "url": "https://dblab.xmu.edu.cn/post/bigdata3/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第3章 HDFS（3.5.1 数据的冗余存储即副本机制）、第4章 HBase（4.3 数据模型/概念视图/物理视图/面向列存储，4.4.2 表和 Region＝按行键范围的分片）、第5章 NoSQL（5.1–5.3 兴起与比较，5.4 四大类型：键值/列族/文档/图数据库，5.5 CAP、BASE、最终一致性）。教材官网写明全部配套资源（讲义 PPT、学习指南、上机习题、授课视频）免费在线。",
+   "access": "配套讲义与实验材料免费在线浏览/下载；纸质教材本身需购买。详细目录页可逐节核对，正文以讲义与教材为准。",
+   "publisher": "厦门大学数据库实验室 林子雨",
+   "evidence": {
+    "url": "https://dblab.xmu.edu.cn/post/2020112601/",
+    "location": "第4章 4.4.2 表和Region；第5章 5.4.1–5.4.4 键值/列族/文档/图数据库，5.5 CAP/BASE/最终一致性",
+    "finding": "教材详细目录页逐节列出 HBase 表与 Region、面向列存储，以及 NoSQL 四大类型（含图数据库）和 CAP/BASE；官网首页说明全部配套资源免费。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《分布式数据库》计算机杨老师（B站，40 个分P）",
+   "url": "https://www.bilibili.com/video/BV17h411f74N/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "40 个分 P 的实际内容是 1.x 分布式数据库概述与 ACID/BASE、NoSQL 分类，2.x–4.x 全部是 HBase（简介、数据模型、Shell、Java/Thrift 编程、Region 管理、集群管理），不含两阶段提交/Paxos/Raft 等提交协议。",
+   "access": "第三方转载，授权未核。B站免费播放；个人教师账号（计算机杨老师），非高校官方账号；未核对字幕。",
+   "publisher": "B 站个人账号「计算机杨老师」（页面标注「自制」），身份为个人 UP 主，未见学校或平台官方账号背书",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV17h411f74N/",
+    "location": "分P列表 1.2–1.4、2.1–2.5、3.1、4.2、38",
+    "finding": "视频接口返回 40 个分P，标题包含分布式数据库的数据管理、ACID与BASE、NoSQL分类、HBase数据模型、Region管理与MongoDB。"
+   },
+   "reupload": true,
+   "official_search": "（本轮补查）用 bvinfo 读页面元信息：owner=计算机杨老师、copyright=自制，视频简介只有「分布式数据库课程学习」。按 site:bilibili.com 与站内检索查过「分布式数据库 公开课/两阶段提交」，未见同一套 40 讲的学校官方号或 MOOC 官方版；中国大学MOOC/国家智慧高教平台检索「分布式数据库」未得到对应课程页。另读全 40 个分 P 标题后确认此课以 HBase 为主（第2–4 章），与「分布式事务」知识点无关，故不能作为该知识点的覆盖来源，保留转载标记并降为 alternative。",
+   "updated_by": [
+    "review/pi-additions/D.1.3.json"
+   ]
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "TiDB 官方中文文档：整体架构（TiKV Region 与分布式事务）",
+   "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "架构页说明 TiKV 以 Region（左闭右开的 Key Range）为存储单位、每个 TiKV 节点承载多个 Region，并在 KV 层原生支持分布式事务、默认 SI 隔离级别；同站另有「事务概览/隔离级别/乐观事务/悲观事务」子页。作为分片与分布式事务的工程实例参考。",
+   "access": "官方中文文档免费阅读；文档随版本更新，示例不要求部署集群。工具文档不能单独充当分布式理论课程。",
+   "publisher": "PingCAP",
+   "evidence": {
+    "url": "https://docs.pingcap.com/zh/tidb/stable/tidb-architecture/",
+    "location": "「存储节点 TiKV Server」段与「事务」子页导航",
+    "finding": "正文写明「存储数据的基本单位是 Region，每个 Region 负责存储一个 Key Range……TiKV 的 API 在 KV 键值对层面提供对分布式事务的原生支持，默认提供 SI 隔离级别」。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "PingCAP 官方中文培训课程：TiDB 数据库核心原理与架构（101_v6）＋开发者课程 TiDB 特有功能与事务控制（204_v6）",
+   "url": "https://img1.pingcap.com/files/2023/10/20231030033451647.pdf",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "101 课程第 01 章「TiDB 数据库架构」含 TiKV 架构与数据持久化、TiKV 如何提供 MVCC 和分布式事务支持、TiKV 基于 Raft 算法的分布式一致性；另有第 02 章起的存储与调度等章节；204 课程「TiDB 特有功能与事务控制」讲事务控制。课程为在线学习，标注 9 小时、限时免费。",
+   "access": "PingCAP 官方培训认证手册 PDF 免费下载，列明课程大纲与在线学习地址 cn.pingcap.com/courses-catalog；在线课程需在该站注册（限时免费，认证考试另收费）；中文课件与中文讲授（视频讲解语言与字幕未核对，本轮只核对了课程大纲）。",
+   "publisher": "PingCAP（厂商官方培训与认证项目，手册封面为 PingCAP Training & Certification）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://img1.pingcap.com/files/2023/10/20231030033451647.pdf",
+    "location": "「1. TiDB 数据库核心原理与架构（101_v6）课程 → 课程大纲 01: TiDB 数据库架构」条目「TiKV ○ TiKV 如何提供 MVCC 和分布式事务支持 ○ TiKV 基于 raft 算法的分布式一致性」；「开发人员培训课程 3. TiDB 特有功能与事务控制（204_v6）」",
+    "finding": "打开官方培训手册确认这是有逐章大纲、9 小时在线学习的中文课程（不是单篇文档），其中专门讲到 TiKV 如何提供分布式事务与基于 Raft 的一致性；204 课程专门讲事务控制。"
+   },
+   "added_by": "review/pi-additions/D.1.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "北京理工大学研究生课程《分布式数据库》教学大纲（研究生院公开 PDF）",
+   "url": "https://grd.bit.edu.cn/docs/20180102010842574986.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第4章 分布式数据库中的事务管理和恢复（8 学时）：4.1 分布式事务的基本概念、4.2 分布式事务模型、4.3 分布式事务的执行与恢复、4.4 分布式事务的两阶段提交协议、4.5 分布式事务与数据库的一致性；第5章 分布式并发控制（6 学时）：5.1 概念和理论、5.2 封锁技术；另有分布式数据库系统设计（6 学时）与分布式查询处理与优化（6 学时）。",
+   "access": "北理工研究生院官网公开的课程教学大纲 PDF，免费、无需注册；只有章节与学时，没有配套讲义/录像公开（未找到）。",
+   "publisher": "北京理工大学研究生院（课程名《分布式数据库》，研究生课程教学大纲）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://grd.bit.edu.cn/docs/20180102010842574986.pdf",
+    "location": "PDF 正文「4. 分布式数据库中的事务管理和恢复 8 学时」下的 4.1–4.5 小节，及「5. 分布式数据库中的并发控制 6 学时」5.1–5.2",
+    "finding": "确认中文研究生课程把分布式事务单独设为 8 学时的专题，并把「两阶段提交协议」「分布式事务的执行与恢复」列为独立小节，说明该知识点在中文课程建制里确实作为正式教学内容存在（但大纲本身不含讲稿）。"
+   },
+   "added_by": "review/pi-additions/D.1.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "分片",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第4章 4.4.2 表和 Region；第5章 5.4.1 键值数据库的横向扩展",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "4.2 HBase Region 管理",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "整体架构：Region 负责一个 Key Range",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "NoSQL note — Partitioning",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "#24 Distributed Databases",
+     "extent": "covered"
+    }
+   ],
+   "note": "zh3 只给 TiDB 的 Region 实现，理论定义由 zh1/zh2 的 HBase 表与 Region 提供。"
+  },
+  {
+   "topic": "复制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第3章 3.5.1 数据的冗余存储；5.5.3 最终一致性",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "2.2 HDFS 原理",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "NoSQL note — Replication；Distributed Transactions note",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "#24 Distributed Databases",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "分布式事务",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第5章 5.5.1–5.5.3 CAP/BASE/最终一致性（只到一致性模型层）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "1.3 ACID 与 BASE",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "整体架构：TiKV 原生分布式事务与 SI",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "101 课程第 01 章 TiDB 架构：TiKV 如何提供 MVCC 和分布式事务支持、TiKV 基于 Raft 算法的分布式一致性；204 课程 TiDB 特有功能与事务控制",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第4章 分布式数据库中的事务管理和恢复（8 学时），4.4 分布式事务的两阶段提交协议、4.3 分布式事务的执行与恢复",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Distributed Transactions note（2PC、Paxos）；Consensus note",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "#24 Distributed Databases",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文三处都讲到 ACID/BASE、最终一致性与 TiKV 的分布式事务存在，但没有课程级讲两阶段提交、Paxos/Raft 提交协议与跨节点异常处理；这是本节点中文路线的真实缺口。；两阶段提交（TiDB 在 TiKV 上以 Percolator 两阶段提交实现跨节点原子提交）与 Raft 提交/多副本复制、以及节点故障时靠多数派副本保证已提交事务不丢，这三块在这门 9 小时中文官方课程里是专门章节；跨节点故障处理由 TiKV 的 Region 多副本 + Raft 日志复制讲解。属实现层课程，经典 3PC/Spanner 的理论对照仍用 en1 的 CS186 笔记补，但中文侧已有成体系教学，不再算「没有」。；中文研究生课程把「两阶段提交协议」列为 8 学时专题里的独立小节，可与 r7-zh1 的实现讲法对照，确认这是中文课程的标准教学内容（大纲无讲稿，只作建制证据）。"
+  },
+  {
+   "topic": "键值/文档/列族/图数据模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第5章 5.4.1 键值、5.4.2 列族、5.4.3 文档、5.4.4 图数据库；第4章 4.3 HBase 数据模型",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "1.4 NoSQL 数据库分类；3.1 HBase 数据模型；38 MongoDB",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "NoSQL note — Key-Value Stores / Wide-column Stores / Document Stores",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "Neo4j Fundamentals — graph structures and elements of a graph database；Graph Data Modeling Fundamentals",
+     "extent": "covered"
+    }
+   ],
+   "note": "四类模型合为一项：zh1 概念讲全四类，zh2 给列族与文档的操作；英文图模型由 en3 的厂商免费课程补，en1 未讲图存储。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "读第3章 3.5 副本与容错、第4章 HBase 数据模型与表/Region、第5章 5.4 四类 NoSQL 与 5.5 CAP/BASE；配合讲义 PPT 和实验4比较 NoSQL 与关系库。"
+    },
+    {
+     "source": "zh2",
+     "read": "按分P看 1.2–1.4 建立分布式数据管理/ACID-BASE/NoSQL 分类，再看 3.1 与 4.2 的 HBase 数据模型和 Region 管理，最后用 38 讲跑一次 MongoDB。"
+    },
+    {
+     "source": "zh3",
+     "read": "把 TiDB 架构页当作 Region 分片与分布式事务的工程对照，不要求部署集群。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "在 PingCAP 课程目录学 101 的第 01 章：先弄清 TiKV 的 Region/多副本，再学它如何在 Raft 之上提供分布式事务（MVCC + 两阶段提交 Prewrite/Commit）；随后学 204「TiDB 特有功能与事务控制」，把乐观/悲观事务的执行流程走一遍。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "照北理工大纲第4章的 4.1–4.5 自查：能写出协调者/参与者的状态机，说清 2PC 的两个阻塞点（参与者等待、协调者故障）和「分布式事务的执行与恢复」如何处理；再对照第5章分布式并发控制的封锁技术。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the NoSQL note end to end (partitioning, replication, CAP, key-value/wide-column/document stores), then the Distributed Transactions and Consensus notes; do the embedded exercises."
+    },
+    {
+     "source": "en2",
+     "read": "Watch #24 Distributed Databases after #16–17 to connect partitioning/replication with query planning."
+    },
+    {
+     "source": "en3",
+     "read": "Take the two free GraphAcademy courses to add the property-graph model and Cypher, which en1 does not cover."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开林子雨教材官网及其详细目录页 https://dblab.xmu.edu.cn/post/2020112601/",
+   "result": "采纳为中文主材料：目录逐节确认 HBase 数据模型/Region 与 NoSQL 四大类型（含图数据库）、CAP/BASE。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「分布式数据库 原理 课程」并核对 BV17h411f74N 分P",
+   "result": "采纳杨老师课程作 HBase/MongoDB 实践补充；未找到覆盖 2PC/Paxos 的中文课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "TiDB 官方中文文档（架构/事务）",
+   "result": "作为工程参考保留；工具文档不能单独证明分布式事务理论已教，故未据此把中文标 complete。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "CS186 notes 索引页；CMU 15-445 schedule；GraphAcademy 两门课",
+   "result": "采纳 en1 为主、en2 补分布式体系、en3 补图数据模型。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "站内搜「分布式事务 两阶段提交」「分布式数据库 课程」「分布式事务 Paxos」",
+   "result": "返回大量面试/框架（Seata、XXL-JOB）内容，只有「万字漫谈分布式事务技术实现原理」「24讲吃透分布式数据库」相关，但前者是单条漫谈、后者疑为付费专栏搬运，均不采纳。",
+   "by": "review/pi-additions/D.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "分布式数据库 课程 两阶段提交 分布式事务 共识算法 教学大纲（限定 icourse163/xuetangx/higher.smartedu.cn）",
+   "result": "只返回大数据通识课与各校《数据库原理与应用》，未见以分布式事务为主线的中文 MOOC；中国大学MOOC 站内搜索页与智慧高教搜索页均为前端渲染，fetch 取不到结果列表。",
+   "by": "review/pi-additions/D.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "分布式数据库 讲义 课件 两阶段提交 三阶段提交 Paxos 分布式事务 提交协议 pdf",
+   "result": "返回的多是博客/维基/阿里云社区文章（2PC/3PC 解释），属短文而非系统课程；同时命中北理工研究生课程大纲 PDF（后经 fetch 核对采纳为 r7-zh2）。",
+   "by": "review/pi-additions/D.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 分布式系统 公开课 Raft 两阶段提交 课程",
+   "result": "命中 MIT 6.824 的 B 站转载/中英字幕版与一个 AI 中文配音版（BV1EwNQzrEd6，机器配音不算中文授课），以及厂商培训片段；未作为中文来源采纳，只在英文侧有对应（已有 en1）。",
+   "by": "review/pi-additions/D.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "PingCAP 免费课程 TiDB 架构原理 分布式事务 Raft 课程大纲 learn.pingcap",
+   "result": "命中 PingCAP 培训认证手册 PDF（官方，含 101/204 课程逐章大纲）与 TiDB 文档；打开 PDF 核对后采纳为 r7-zh1。",
+   "by": "review/pi-additions/D.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "分布式数据库系统原理 第三版 清华大学出版社 目录 分布式事务管理 两阶段提交协议",
+   "result": "未拿到该教材的出版社目录页；同一查询顺带命中北理工研究生课程大纲 PDF（grd.bit.edu.cn），成为中文课程建制的证据。",
+   "by": "review/pi-additions/D.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "https://www.bilibili.com/video/BV17h411f74N/（bvinfo 读 40 个分 P 与 owner）",
+   "result": "确认现有 zh2 是个人账号「计算机杨老师」自制的 HBase 课程（第2–4 章全是 HBase），不含分布式事务协议，故不能用于该知识点。",
+   "by": "review/pi-additions/D.1.3.json"
+  }
+ ],
+ "findings": [
+  "原英文 CS186 notes 的 NoSQL 页确实覆盖分片、复制、CAP 与键值/列族/文档，但没有图数据模型；新增 Neo4j GraphAcademy 两门免费课补图模型，英文五项才算齐。",
+  "原中文只有 TiDB「整体架构」一页，属于产品文档，不能教 NoSQL 四类模型与分片/复制概念；本次换成林子雨教材官网（免费讲义，目录含 HBase 表/Region 与 NoSQL 四类）为中文主材料，并补杨老师的 HBase/MongoDB 视频。",
+  "中文仍缺分布式事务提交协议的系统讲授（2PC/Paxos），只在 CAP/BASE 与 TiDB 实现说明里带过；如实标 partial 并写跨语言回退。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/D.1.3.json@06d7e4f5c9"
+ ]
+}

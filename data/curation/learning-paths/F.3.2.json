@@ -1,0 +1,316 @@
+{
+ "id": "F.3.2",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "UT Austin CS 345H Programming Languages (Honors), Spring 2024（James Bornholt）",
+   "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Schedule 逐讲核对：Semantics via Interpreters、Transition Systems、IMP and Operational Semantics（操作语义）、Axiomatic Semantics; Hoare Logic（公理语义）、Hoare Logic in Practice: Dafny、Lambda Calculus、Simply-Typed Lambda Calculus; Type Safety、Types in Practice: Linear Types and Rust、Polymorphism and System F、Types Potpourri: Products and Sums。每讲配 Lecture.v（Coq）或 lecture.rs；没有指称语义、子类型与依赖类型讲次。",
+   "access": "免费公开课程站（schedule、readings、homework、project 页均开放）；无公开录像。",
+   "publisher": "James Bornholt（UT Austin）",
+   "evidence": {
+    "url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/schedule/",
+    "location": "Schedule 表 1/25–4/18 各行",
+    "finding": "表内按日期列出 Semantics via Interpreters、IMP and Operational Semantics、Axiomatic Semantics; Hoare Logic、Simply-Typed Lambda Calculus; Type Safety、Polymorphism and System F 等主题，并给 Lecture.v 代码。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Programming Language Foundations in Agda（PLFA，Wadler & Kokke，免费在线）",
+   "url": "https://plfa.github.io/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "目录核对：第二分册 Properties（可进性与保型性，即类型安全证明）、DeBruijn（内在类型的 de Bruijn 表示）、More、Inference（双向类型推理）；第三分册 Denotational Semantics（Denotational、Compositional、Soundness、Adequacy、ContextualEquivalence）——补 345H 没有的指称语义。全书用依赖类型的 Agda 写，是依赖类型的第一手实践。",
+   "access": "免费在线（HTML/epub），CC BY 4.0；需安装 Agda 做练习。",
+   "publisher": "Philip Wadler、Wen Kokke（爱丁堡大学）",
+   "evidence": {
+    "url": "https://plfa.github.io/",
+    "location": "目录 Part 2（Properties、DeBruijn、Inference）与 Part 3: Denotational Semantics（Denotational…ContextualEquivalence）",
+    "finding": "目录页列出第二分册各章与第三分册“Denotational Semantics”五章，均为可点击正文。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "Programming Language Principles and Paradigms（University of Michigan 讲义）：Formal Type Systems 一节",
+   "url": "https://eecs390.github.io/notes/theory.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Formal Type Systems 小节：Variables、Functions、Subtyping（含 Subtyping and Arithmetic Operators、The Top Type、Subtyping and Functions、Full Typing Rules），给出子类型关系 S <: T 的形式规则与函数参数的逆变规则。补 345H 没有的子类型。",
+   "access": "免费公开讲义，无需注册。",
+   "publisher": "University of Michigan（EECS 390/490 讲义）",
+   "evidence": {
+    "url": "https://eecs390.github.io/notes/theory.html",
+    "location": "目录与正文 Formal Type Systems → Subtyping 小节",
+    "finding": "theory.html 正文含 S <: T 记号、Top 类型与函数子类型的逆变规则，并给出完整 typing rules。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《软件基础》中文版（Logical Foundations / Programming Language Foundations，Rocq/Coq）",
+   "url": "https://rocq-zh.github.io/SF-zh/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "《软件基础》中文版第二卷《编程语言基础》：程序的等价关系、霍尔逻辑（第一部分与第二部分）、小步语义、简单类型系统与类型安全（可进性与保型性）。注意：第二卷目录里虽有「Subtyping (Sub)」一章，但该章正文仍是英文原文（未译），不能算中文的子类型教学。",
+   "access": "免费在线阅读；需安装 Rocq/Coq 做练习。",
+   "publisher": "Benjamin C. Pierce 等（UPenn），中文译者项目",
+   "evidence": {
+    "url": "https://rocq-zh.github.io/SF-zh/plf-current/Sub.html",
+    "location": "章节首段 Concepts / A Motivating Example",
+    "finding": "打开 Sub.html 确认正文为英文：“We now turn to the study of subtyping, a key feature needed to support the object-oriented programming style.” 同卷目录 toc.html 列有「Subtyping (Sub)」。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.3.2.json"
+   ]
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《编程语言基础：Agda 描述》中文版（PLFA-zh，全书已译完）",
+   "url": "https://agda-zh.github.io/PLFA-zh/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "PLFA 中文版：《Quantifiers 全称量词与存在量词》以依值函数类型（Dependent Function Type／依赖积 Π）形式化 ∀、以依赖对形式化 ∃，并解释 Π[x∈A](B x) 的记法；《Equality》《Isomorphism》《DeBruijn》《Inference》等章全程用依值类型书写与证明。全书没有子类型规则。",
+   "access": "免费在线阅读，全书已翻译完毕；需安装 Agda 做练习。",
+   "publisher": "Philip Wadler、Wen Kokke 原着，中文译者项目（agda-zh）",
+   "evidence": {
+    "url": "https://agda-zh.github.io/PLFA-zh/",
+    "location": "目录“第二分册：编程语言基础”与“第三分册：指称语义”条目",
+    "finding": "目录页列出“可进性与保型性”“指称语义：无类型 λ-演算的指称语义”等中文章名，并声明“目前全书已翻译完毕”。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.3.2.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《软件科学基础》第 25 讲 子类型（熊英飞，北京大学，2024 春课程讲义 PDF）",
+   "url": "https://xiongyingfei.github.io/SF/2024/slides/25-subtyping.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "子类/子类型关系 S <: T 的定义与动机（记录 Person/Student 的例子在 STLC 中类型不正确）；名义类型系统 vs 结构类型系统（前者由用户定义、后者由系统推出，函数式语言常用结构类型）；Liskov 替换原则（能替换 T 的地方都能替换成 S 则 S 是 T 的子类）；子类型关系的自反与传递；记录类型的宽度/深度子类型；函数子类型的判定（Student→Student 是否 Person→Person 的子类型）与引用类型 Ref Student 的变型问题。",
+   "access": "免费 PDF（课程站公开讲义），无需注册；简体中文（术语用中英对照）。",
+   "publisher": "熊英飞（北京大学计算机学院副教授），北京大学《软件科学基础》2024 春",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xiongyingfei.github.io/SF/2024/slides/25-subtyping.pdf",
+    "location": "第 2–5 页「子类」「子类关系 S <: T」「Nominal vs Structural」「结构类型系统」「Liskov 替换原则」；第 11 页「定义子类：函数」",
+    "finding": "打开确认正文（中文）：“S <: T 表示 S 是 T 的子类”“传统面向对象语言是名义类型系统……在 STLC 中，我们希望实现结构类型系统：类型之间的子类关系是系统自动推出的”“Liskov 替换原则：如果在使用 T 类型的值的场合，都可以替换成 S 类型的值，那么 S 就是 T 的子类”，并逐页讨论 Student→Student 与 Person→Person、Ref Student 与 Ref Person 的子类关系。"
+   },
+   "added_by": "review/pi-additions/F.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "操作/指称/公理语义",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二卷：操作语义、霍尔逻辑（公理语义）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第三分册：指称语义（Denotational/Compositional/Soundness/Adequacy）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "IMP and Operational Semantics、Axiomatic Semantics; Hoare Logic",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Part 3 Denotational Semantics 五章",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都把三种语义拆在不同材料里：操作/公理在课程，指称在 PLFA。"
+  },
+  {
+   "topic": "类型安全",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二卷：静态类型系统",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第二分册：可进性与保型性（progress & preservation）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Simply-Typed Lambda Calculus; Type Safety",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Properties: Progress and Preservation",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "子类型与依赖类型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "全书用依赖类型的 Agda 写（内在类型表示、双向类型推理），但无子类型规则",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 25 讲 子类型：S <: T、名义 vs 结构、Liskov 替换原则、自反/传递、记录宽度与深度、函数与引用类型的子类型",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "《Quantifiers》依值函数类型（Π）与依赖对；《Equality》《DeBruijn》《Inference》全程依值类型",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en3",
+     "section": "Formal Type Systems → Subtyping（S <: T、Top、函数子类型逆变、完整 typing rules）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "依赖类型以 Agda 内在类型表示实践（DeBruijn/Inference），无依赖类型元理论",
+     "extent": "partial"
+    }
+   ],
+   "note": "英文侧子类型有形式规则、依赖类型有实践；中文侧只有依赖类型实践，没有子类型。合成判：英文 covered（并注明缺元理论），中文 partial。；“子类型”这一半由 r7-zh1 覆盖：先以 Person/Student 记录的例子说明为什么 STLC 需要子类型，再给 S <: T 的替换语义（Liskov 原则）、名义与结构两套类型系统的差别、自反与传递规则，并把规则推到记录（宽度/深度子类型）、函数（参数逆变/结果协变）与引用类型。旧记录里中文完全空缺，而《软件基础》中文版虽然有 Subtyping 章但正文仍是英文（见 source_updates），所以必须另找中文讲义，这一讲正好补上。；“依赖类型”这一半由 PLFA 中文版（zh2）覆盖：《Quantifiers》章明写“我们用依值函数类型（Dependent Function Type）来形式化全称量化……依值函数类型也被叫做依赖积（Dependent Product）……∀ (x : A) → B x 的记法有时也被 Π[ x ∈ A ] (B x) 取代”，并用依赖对形式化存在量词；后续相等、de Bruijn、双向类型推理各章都在依值类型里写证明。与 r7-zh1 的子类型规则合起来，覆盖“子类型与依赖类型”。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第二卷《编程语言基础》：操作语义→霍尔逻辑→静态类型系统，跟着 Coq 脚本做练习"
+    },
+    {
+     "source": "zh2",
+     "read": "第二分册“可进性与保型性”→第三分册“指称语义”五章，装 Agda 跑通"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按第 2–5 页走：先用记录例子说明子类型的动机，写下 S <: T 的替换定义与 Liskov 原则；再区分名义/结构类型系统；然后逐条推记录宽度子类型与深度子类型，判断 Student→Student 与 Person→Person 谁是谁的子类型（说明参数逆变、结果协变），最后讨论 Ref 为什么不能协变。"
+    },
+    {
+     "source": "zh2",
+     "read": "读《Quantifiers》章：把 ∀ 看成依值函数类型 Π、∃ 看成依赖对 Σ，写出 Π[x∈A](B x) 与 A 上有限类型时成员数的乘积解释；随后在《Equality》与《Inference》章里找两处“返回值类型依赖参数值”的例子（如长度索引向量），确认依赖类型与普通多态的区别。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Semantics via Interpreters→Transition Systems→IMP/操作语义→Hoare 逻辑与 Dafny→STLC 与 Type Safety→System F/线性类型/积和类型"
+    },
+    {
+     "source": "en3",
+     "read": "Formal Type Systems 的 Subtyping 小节补子类型规则"
+    },
+    {
+     "source": "en2",
+     "read": "Properties（progress/preservation）与 Part 3 指称语义，用 Agda 做练习体会依赖类型"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.utexas.edu/~bornholt/courses/cs345h-24sp/schedule/ 逐讲表",
+   "result": "采纳：操作/公理语义与类型安全有讲次；确认无指称语义、子类型、依赖类型讲次。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://plfa.github.io/ 目录",
+   "result": "采纳：第三分册指称语义补 345H 的缺口；Properties 章补类型安全的机器检查证明。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://agda-zh.github.io/PLFA-zh/ 目录（由英文版页面的“中文”链接找到）",
+   "result": "采纳：PLFA 中文全译本含指称语义分册，是本次中文侧的关键发现。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://rocq-zh.github.io/SF-zh/ → 第二卷 toc.html → Sub.html",
+   "result": "关键核实：SF-zh 第二卷目录确有「Subtyping (Sub)」章，但打开 Sub.html 发现正文仍是英文原文（未翻译），故不能算中文子类型教学；这一点写进 zh1 的 source_updates。",
+   "by": "review/pi-additions/F.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "子类型 协变 逆变 类型系统 讲义 中文 课程 类型安全 记录 宽度子类型 pdf",
+   "result": "不合适：只命中百度百科“协变”、维基“协变与逆变”、Datawhale 类型系统科普与 CSDN 博客，均非系统教学。",
+   "by": "review/pi-additions/F.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "程序设计语言理论 子类型 课件 讲义 中文 类型系统 记录 函数 子类型规则 大学",
+   "result": "命中两条线索：①《类型和程序设计语言》中文版在 archive.org 的扫描件（属商业书 PDF 镜像，按规则不用）；②北京大学熊英飞《软件科学基础》2024 春课程站。沿课程站讲义页找到第 25 讲「Sub: Subtyping」，打开确认正文为中文并覆盖子类型规则，遂采纳。",
+   "by": "review/pi-additions/F.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://agda-zh.github.io/PLFA-zh/Quantifiers/",
+   "result": "采纳为依赖类型的中文正文：该章用依值函数类型 Π 形式化全称量词、用依赖对形式化存在量词，并解释 Π[x∈A](B x) 记法。",
+   "by": "review/pi-additions/F.3.2.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写《软件基础》中文版，且与 F.2.4/F.3.3 共用同一段 covers；本次为 F.3.2 找到 PLFA 中文全译本，补上“指称语义”这一中文缺口。",
+  "旧条目英文只写 345H，并自认“指称语义、子类型与依赖类型不是这条主线上的内容”；本次用 PLFA（指称语义/类型安全）与 EECS 390 讲义（子类型规则）补齐，并在 note 里说明依赖类型只有实践没有元理论。",
+  "中文侧子类型仍是缺口（SF-zh、PLFA-zh 都不讲子类型）。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "类型系统与程序语义",
+ "description": "操作/指称/公理语义、类型安全、子类型与依赖类型。",
+ "applied_additions": [
+  "review/pi-additions/F.3.2.json@2b029a2490"
+ ]
+}

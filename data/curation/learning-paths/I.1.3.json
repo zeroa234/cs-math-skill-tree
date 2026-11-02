@@ -1,0 +1,322 @@
+{
+ "id": "I.1.3",
+ "name": "业务流程管理",
+ "description": "流程发现、建模、分析、执行、自动化与持续改进。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Fundamentals of Business Process Management 配套网站（Dumas / La Rosa / Mendling / Reijers；slides + 视频讲座 + 模型集）",
+   "url": "https://fundamentals-of-bpm.org/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "第二版结构：process identification、process discovery、qualitative process analysis、process redesign、process automation、process monitoring，新增 BPM as an enterprise capability（战略对齐与治理）；站点提供 slides、video lectures、figures 与模型集。",
+   "access": "站点免费提供 slides 与 video lectures；教材本身（Springer）付费。英文。",
+   "publisher": "Marlon Dumas, Marcello La Rosa, Jan Mendling, Hajo A. Reijers",
+   "evidence": {
+    "url": "https://fundamentals-of-bpm.org/",
+    "location": "About 段：第二版章节说明与站点材料说明",
+    "finding": "页面写第二版“includes extended and completely revised chapters on process identification, process discovery, qualitative process analysis, process redesign, process automation and process monitoring”，并写“In this website you will find slides and video lectures, figures and other supplementary material”。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Managing Business Processes with SAP Signavio Solutions（SAP Learning，页面标注 | ZH，11 units）",
+   "url": "https://learning.sap.com/courses/managing-business-processes-with-sap-signavio-solutions-zh",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "11 个单元，围绕用 Signavio 管理/优化流程、把复杂流程组织成可视化表示、选择可视化工具；是产品操作课，讲 BPMN 建模与工具用法，不讲流程挖掘算法、定性分析与持续改进方法。",
+   "access": "SAP Learning 免费注册可学；页面正文为英文（仅标题含 | ZH），练习系统与 Signavio 许可依 SAP 条件。中文授课/字幕未核实。",
+   "publisher": "SAP",
+   "evidence": {
+    "url": "https://learning.sap.com/courses/managing-business-processes-with-sap-signavio-solutions-zh",
+    "location": "About this course 段与“11 Units / Intermediate”",
+    "finding": "页面显示“11 Units”“Intermediate”，About this course 的英文目标写“manage and optimize business processes”“Organize complex processes into easy-to-understand visual representations”“Understand features and functions of SAP Signavio products”。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "Petri 网：模型、理论与应用（清华大学，学堂在线／国家高等教育智慧教育平台；袁崇义、闻立杰、王建民）",
+   "url": "https://higher.smartedu.cn/course/6786ec9c225d72705e5dc394",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程简介写明应用实例含“业务流程管理问题和过程挖掘”，且“同步理论是 BPM 建模的理论基础”；官方大纲第五章「业务流程管理」含 5-1 工作流网（WF_net）、5-2 工作流管理联盟等节；另有序论、有向网、Petri 网层次系统（EN/ C-E / P-T / 高级网 / 化简网）、网论（网拓扑、并发论、网逻辑、信息流网、同步论与同步器、建模方法论）等章。",
+   "access": "学堂在线免费学习（需注册）；中文授课；视频与分讲需登录，字幕未核对。",
+   "publisher": "清华大学（袁崇义、闻立杰、王建民），学堂在线，收录于国家高等教育智慧教育平台",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/6786ec9c225d72705e5dc394",
+    "location": "「课程简介」段（Petri 网的应用实例包括……业务流程管理问题和过程挖掘；同步理论是 BPM 建模的理论基础）；「课程大纲」第五章「业务流程管理」5-1 工作流网（WF_net）、5-2 工作流管理联盟",
+    "finding": "打开确认课程简介原文与官方大纲：第五章标题为「业务流程管理」，首两节为「5-1 工作流网（WF_net）」「5-2 工作流管理联盟」；简介并写“Petri 网的应用实例包括：哲学家就餐问题、N 部电梯控制问题、业务流程管理问题和过程挖掘”。页面只渲染到第五章前两节，后续小节未显示，故只按可核节标题判定。"
+   },
+   "added_by": "review/pi-additions/I.1.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "流程发现",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "Signavio 中的流程梳理（无 process discovery/挖掘算法）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "课程简介「过程挖掘」应用实例（第五章之前各章作为 Petri 网方法铺垫）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "process identification、process discovery 章与视频",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文是工具里的流程梳理，没有事件日志、α/inductive miner 等流程挖掘内容。；流程发现（从事件日志挖掘流程模型）在 r7-zh1 里只作为“应用实例”出现，没有单独章节可核到事件日志、α 算法/启发式挖掘/一致性检查等具体内容；第五章讲的是建模与执行而非发现。故本知识点记 partial，并在 unresolved 里说明。"
+  },
+  {
+   "topic": "建模",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "把流程组织成可视化表示（BPMN 建模与工具）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "BPMN 建模章与 slides/视频",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文靠产品课覆盖 BPMN 操作层；语义、模式与建模陷阱的讲解不如教材系统。"
+  },
+  {
+   "topic": "分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "无定性/定量流程分析单元",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "qualitative process analysis（以及定量分析）章与视频",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "执行",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "工具中的流程执行/发布（产品操作）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第五章 5-1 工作流网（WF_net）、5-2 工作流管理联盟",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "process automation / process-aware information systems 章",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有产品里的执行配置，没有流程引擎、BPEL 与流程感知信息系统原理。；“执行”要的是流程引擎与流程感知信息系统的原理。工作流网（WF_net）正是给流程执行建模的形式工具（库所/变迁表示状态与任务、token 表示案例的推进），工作流管理联盟（WFMC）则给出流程定义、引擎、工作流管理系统参考架构的标准术语。r7-zh1 第五章以这两节开篇，把“执行”的形式模型与体系结构都摆出来了；产品级引擎操作（部署、监控面板）不在其中，但知识点要求的是原理，故记 covered。旧结论说中文只有产品执行配置，本轮核到的是形式语义与参考模型。"
+  },
+  {
+   "topic": "自动化与持续改进",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "工具中的优化建议，无监控/改进闭环",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "process automation、process monitoring（BPM as enterprise capability 含治理）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "用 Signavio 的 11 个单元学 BPMN 建模与流程可视化，做出一个可发布的流程模型；分析/挖掘/监控需另补。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读第三章 Petri 网层次系统（EN/C-E/P-T、并发与冲突的准确含义），再读第四章同步论/信息流网，最后读第五章 5-1 工作流网与 5-2 工作流管理联盟：把一条业务流程画成 WF_net，标出案例 token 的推进、选择/并行分支与终止条件，并对照 WFMC 参考模型说明“流程定义—引擎—工作流管理系统”各层职责。"
+    }
+   ],
+   "gaps": [
+    "流程发现",
+    "分析",
+    "自动化与持续改进"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按第二版顺序学 process identification → discovery → analysis → redesign，并做 slides 后的练习。"
+    },
+    {
+     "source": "en1",
+     "read": "再学 automation 与 monitoring，用模型集与视频把“建模—执行—监控—改进”串成闭环。"
+    },
+    {
+     "source": "en1",
+     "read": "流程发现、分析、自动化与持续改进继续按 Dumas 等《Fundamentals of Business Process Management》配套站的方法章与视频学习（process discovery、qualitative/quantitative analysis、process redesign、process monitoring）。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://learning.sap.com/courses/managing-business-processes-with-sap-signavio-solutions-zh",
+   "result": "采纳为补充：11 单元产品课，正文为英文，覆盖 BPMN 操作。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 业务流程管理/BPM 类课程检索",
+   "result": "检索被限流，未核实到具体中文 BPM 课程页；不登记。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《业务流程管理》教材与流程挖掘书",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://fundamentals-of-bpm.org/",
+   "result": "采纳：第二版章节与 slides/视频说明核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:higher.smartedu.cn 业务流程管理 流程管理 课程",
+   "result": "采纳清华大学《Petri 网：模型、理论与应用》（学堂在线）：第五章「业务流程管理」含工作流网与工作流管理联盟，简介把过程挖掘列为应用实例；其余命中 ERP、会计信息系统、信息系统分析与设计等课，只讲业务流程分析与建模一节，不能当主资源。",
+   "by": "review/pi-additions/I.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "业务流程管理 中文 教材 目录 BPMN 流程挖掘 流程分析 改进 出版社",
+   "result": "不合适：命中百度百科、IBM/红帽/达索/飞书/ProcessMind/Avolution 的产品科普页与“BPM CBOK 中文版”培训商新闻（无出版社目录页可核），没有可学的正文或可核目录。",
+   "by": "review/pi-additions/I.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "同上（BPM CBOK 指南中文版）",
+   "result": "只得到培训商对 ABPMP《BPM CBOK》中文版的介绍，未见出版社/协会官方目录页，未登记为付费来源。",
+   "by": "review/pi-additions/I.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "过程挖掘 流程挖掘 Alpha算法 课程 中文 OR Process Mining 中文字幕",
+   "result": "B 站只有字幕制作中的 Coursera 搬运和厂商专栏，未采用。",
+   "by": "review/main-additions/I.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "业务流程管理基础 Dumas 中译本 OR 业务流程管理 教材 流程发现 过程挖掘 出版社 目录",
+   "result": "没有找到 Dumas 等《业务流程管理基础》中译本或其他可核目录的中文 BPM 教材。",
+   "by": "review/main-additions/I.1.3.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 SAP Signavio 课程页面虽标 |ZH，但正文是英文，且是产品操作课，不能当作中文 BPM 系统教学；保留为补充并如实记录语言。",
+  "中文缺流程挖掘（discovery）、定性分析、执行原理与监控闭环，判 partial。",
+  "英文配套站明确提供 slides 与 video lectures，覆盖第二版全部主线章节。",
+  "[review/pi-additions/I.1.3.json] 未解决 zh「主资源」：need_primary 未解决：中文没有一门以 BPM 全生命周期（发现—建模—分析—执行—改进）为主线的课程/教材可核；清华《Petri 网》只把业务流程管理作为一章，BPM CBOK 中文版只有培训商页面，无出版社目录页，不能当主资源。",
+  "[review/pi-additions/I.1.3.json] 未解决 zh「流程发现」：过程挖掘在清华课程里只列为应用实例，未核到事件日志、挖掘算法与一致性检查的讲次，记 partial。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "分析",
+   "source": "en1",
+   "reason": "中文检索只得到产品科普页与百科，没有可核的定性/定量流程分析（价值增值分析、流量分析、排队/仿真）教学正文；清华 Petri 网课第五章只讲建模与执行。故按 fallback 用 en1 的分析章。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/I.1.3.json"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "自动化与持续改进",
+   "source": "en1",
+   "reason": "中文只有产品“优化建议/自动化”宣传页，没有监控指标、流程绩效与改进闭环的教学材料；MOOC 大纲中也没有对应章节。按 fallback 用 en1 的 process monitoring/redesign 章。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/I.1.3.json"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "流程发现",
+   "source": "en1",
+   "reason": "流程发现（过程挖掘）在中文侧只有 CSDN 博客、厂商介绍和一份字幕仍在翻译中的 Coursera 课程搬运；清华《Petri 网》第五章只讲工作流网建模，不讲从事件日志发现模型；三个渠道均已查。改读英文主资源。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/main-additions/I.1.3.json"
+  }
+ ],
+ "applied_additions": [
+  "review/pi-additions/I.1.3.json@c59e1f41a1",
+  "review/main-additions/I.1.3.json@42409dd70e"
+ ]
+}

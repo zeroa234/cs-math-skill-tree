@@ -1,0 +1,291 @@
+{
+ "id": "F.2.3",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMU 15-455 Undergraduate Complexity Theory (Spring 2017, Ryan O'Donnell)",
+   "url": "https://www.cs.cmu.edu/~odonnell/15455-s17/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "课程页逐讲列出主题与 Sipser 阅读节号（28 讲）：Lec 4 时间复杂度与通用 TM、5 时间层次定理、6 P、7 SAT、8–9 NP 与非确定性、10 归约、11 Cook–Levin、12 NP 完全归约、13 search-to-decision 与 padding、14 Ladner/Mahaney、15 coNP、16 空间复杂度、17 Savitch 与 NL、18 NL 完全性、19 PSPACE 完全性（TQBF）、20 Immerman–Szelepcsényi、21 RP/coRP/ZPP、22 BPP；课程说明还写覆盖 circuits 等计算模型、多项式层次与 ETH/细粒度复杂度。线路的“模型”有，但讲次表里没有线路下界（AC0/奇偶性下界）的专门一讲。",
+   "access": "免费公开课程页，无需注册；每讲给主题＋教材节号，有 11 套作业（页面列出 Homework 01–11），无公开录像。",
+   "publisher": "Ryan O'Donnell（Carnegie Mellon University）",
+   "evidence": {
+    "url": "https://www.cs.cmu.edu/~odonnell/15455-s17/",
+    "location": "Lectures 列表 Lec 04–22 与「Course description」段",
+    "finding": "逐讲列出主题与 Sipser 章节（如 Lec 11 NP-completeness and the Cook-Levin Theorem、Lec 16 Space complexity、Lec 21 Randomized complexity: RP, coRP, and ZPP）；课程说明写 topics include models of computation (Turing Machines, circuits, …)，但没有线路下界讲次。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Computational Complexity: A Modern Approach（Arora & Barak，作者站点公开的免费 draft PDF）",
+   "url": "https://theory.cs.princeton.edu/complexity/book.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 6 章 Circuits（6.1 布尔线路、6.2 Karp–Lipton、6.3 Circuit lowerbounds、6.4 非一致层次定理、6.6 指数规模线路）与第 13 章 Circuit lowerbounds（13.1 AC0 与 Håstad Switching Lemma、13.4 线路复杂度的前沿与对角化下界）。补 15-455 没有的线路复杂度与下界。",
+   "access": "作者站点公开的 2007 年 draft PDF（免费阅读）；书页声明 draft 不得未经许可再分发，只作在线阅读链接，不下载传播。正式版由 Cambridge University Press 出版（付费，未核价）。",
+   "publisher": "Sanjeev Arora / Boaz Barak（Princeton）",
+   "evidence": {
+    "url": "https://theory.cs.princeton.edu/complexity/book.pdf",
+    "location": "目录页 Chapter 6 Circuits（6.3 Circuit lowerbounds）与 Chapter 13 Circuit lowerbounds（13.1 AC0 and Håstad's Switching Lemma）",
+    "finding": "PDF 抽取的目录明确列出第 6 章与第 13 章及其小节，含 AC0 与 switching lemma 的下界证明章节。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "北京航空航天大学《计算理论》（中国大学MOOC，网络空间安全学院）",
+   "url": "https://www.icourse163.org/course/BUAA-1473089162",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "授课目标原文：有穷自动机与正则语言、上下文无关文法与下推自动机、丘奇-图灵论题、可判定性、可规约性、时间复杂性（含 P/NP）；页面未列分讲大纲，NP 完全性、空间/随机复杂度、电路复杂度均未在目标中单列。",
+   "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；视频与字幕需登录，未核对。",
+   "publisher": "北京航空航天大学 / 中国大学MOOC（高等教育出版社）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/BUAA-1473089162",
+    "location": "授课目标段（“时间复杂性”）与参考资料段",
+    "finding": "授课目标只写“时间复杂性”，没有空间/随机/线路复杂度；页面无分讲大纲。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.2.3.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《计算复杂性理论》（傅育熙，清华大学出版社，2023；上海交通大学《计算复杂性》课程指定参考教材，课程站给出前 15 页 PDF）",
+   "url": "https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "课程站按章列出的讲义与教材章节一一对应：时间复杂性、空间复杂性、NP 完全性、多项式谱系、电路复杂性、随机计算（另有交互证明系统、近似计算与不可近似性）；课程站另给教材勘误（第 3.6 节 Håstad 对换引理的更正），说明教材含 Håstad switching lemma 这一电路下界工具。",
+   "access": "需购买（清华大学出版社 2023，课程站未标价，仅提供 1–15 页 PDF 与勘误）；中文教材；未购买。",
+   "publisher": "傅育熙（上海交通大学教授），清华大学出版社",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/",
+    "location": "「讲义」列表（课程简介/时间复杂性/空间复杂性/NP 完全性/多项式谱系/电路复杂性/随机计算）与「参考教材」段「《计算复杂性理论》，傅育熙，清华大学出版社，2023」；「教材勘误」第 3.6 节 Håstad 对换引理",
+    "finding": "打开确认课程站原文列出上述六份讲义与参考教材《计算复杂性理论》（清华大学出版社 2023），勘误页写“第 3.6 节（Håstad 对换引理）的更正”。教材 PDF 前 15 页因字体编码抽取为乱码，未能读正文，章目以课程站与同课讲义页脚（“《计算复杂性理论》，傅育熙，清华大学出版社 电路复杂性 1/72”）互证。"
+   },
+   "added_by": "review/pi-additions/F.2.3.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "上海交通大学《计算复杂性》课程讲义（傅育熙，2026 秋，CS3954/CS4308/CS7313）：时间、空间、NP 完全性、电路、随机计算各章 PDF",
+   "url": "https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/slides/2.Space-Complexity.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "reference",
+   "covers": "与教材同章的讲义（正文为英文，页脚标中文书名与章名）：空间复杂性章含 Space Bounded Computation、Logspace Reduction、PSPACE Completeness、Savitch Theorem、NL Completeness、Immerman–Szelepcsényi 定理；NP 完全性章从 Cook 1971/Levin 1973 起讲 NP 完全性；电路复杂性章含 Boolean Circuit Model、Uniform Circuit、P/poly、Karp–Lipton 定理、NC 与 AC、P-Completeness、Håstad Switching Lemma；随机计算章含 Tail Distribution、概率图灵机、PP/BPP/ZPP、Random Walk 与 RL。",
+   "access": "免费 PDF，无需注册；正文为英文（仅页脚与书名中文），因此只作结构/深度参照，不计为中文教学正文。",
+   "publisher": "傅育熙（上海交通大学），课程站点 basics.sjtu.edu.cn",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/slides/5.Circuit-Complexity.pdf",
+    "location": "第 3 页 Synopsis：「1. Boolean Circuit Model 2. Uniform Circuit 3. P/poly 4. Karp-Lipton Theorem 5. NC and AC 6. P-Completeness 7. Håstad Switching Lemma」；页脚「《计算复杂性理论》，傅育熙，清华大学出版社 电路复杂性 2 / 72」",
+    "finding": "打开确认电路讲义目录含 P/poly、Karp–Lipton、NC/AC、P-完全性与 Håstad Switching Lemma；另核空间章 Synopsis 含 PSPACE 完全性、Savitch 定理、NL 完全性与 Immerman–Szelepcsényi 定理，随机章 Synopsis 含 PP/BPP/ZPP 与 RL。讲义正文为英文，故只用来核对中文教材同章该讲什么。"
+   },
+   "added_by": "review/pi-additions/F.2.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "P/NP",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“时间复杂性”（含 P/NP）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 6 Problems in P、Lec 7 SAT、Lec 8–9 NP、Lec 15 coNP",
+     "extent": "covered"
+    }
+   ],
+   "note": "只核到课程目标层面的“时间复杂性”；无分讲大纲。"
+  },
+  {
+   "topic": "完备性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "授课目标“时间复杂性”（NP 完全性包含其中，但页面未单列）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "「NP 完全性」章（同课讲义：Cook 1971/Levin 1973 起讲 NP 完全性、多项式谱系章）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 10 Reductions、Lec 11 Cook–Levin、Lec 12 NP-completeness reductions、Lec 18 NL-completeness、Lec 19 PSPACE-completeness (TQBF)",
+     "extent": "covered"
+    }
+   ],
+   "note": "完备性要的是“NP 完全性的定义与证明套路（Cook–Levin、归约链）”。r7-zh1 是中文教材的第「NP 完全性」章，同课讲义从 Cook 1971 与 Levin 1973 两条独立路线讲 NP 完全性，并有专章讲多项式谱系；zh1（北航《计算理论》）只把 NP 完全性含在“时间复杂性”目标里、未单列，现在由教材章补到完备性本身。"
+  },
+  {
+   "topic": "空间/随机复杂度",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "「空间复杂性」章、「随机计算」章（同课讲义含 PSPACE 完全性、Savitch 定理、NL 完全性、Immerman–Szelepcsényi；PP/BPP/ZPP、RL）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lec 16 Space complexity、17 Savitch/NL、19 PSPACE、20 Immerman–Szelepcsényi、21 RP/coRP/ZPP、22 BPP",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程目标没有空间复杂度与随机复杂度，中文侧无来源。；旧记录这一项中文为空。r7-zh1 有两整章：空间复杂性（空间有界计算、对数空间归约、PSPACE 完全性、Savitch 定理、NL 完全性、Immerman–Szelepcsényi）与随机计算（尾分布、概率图灵机、PP/BPP/ZPP、随机游走与 RL）。同课讲义页脚标明这两章就是教材对应章，内容范围由此可核。"
+  },
+  {
+   "topic": "线路复杂度与下界",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "「电路复杂性」章（含 P/poly、Karp–Lipton、NC/AC、P-完全性、Håstad Switching Lemma）以及勘误中的第 3.6 节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Course description 只把 circuits 列为计算模型，无下界讲次",
+     "extent": "partial"
+    },
+    {
+     "source": "en2",
+     "section": "第 6 章 Circuits（6.3 Circuit lowerbounds）、第 13 章 Circuit lowerbounds（13.1 AC0 与 Håstad Switching Lemma）",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文由 Arora–Barak 第 6/13 章补齐；中文无来源。；简介要的是线路模型与下界。r7-zh1 的电路复杂性章覆盖非一致模型（布尔电路、一致电路、P/poly）、Karp–Lipton 定理、NC/AC 与 P-完全性，并以 Håstad switching lemma（教材第 3.6 节，课程站有勘误）作为 AC0 下界的工具——正好补上旧记录说英文课也只写到 circuits 模型、没核到“parity 的 AC0 下界”这一层。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "跟课学“时间复杂性”一段（P/NP 与 NP 完全性），配 Sipser 中译本相应章节"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按书序读：时间复杂性（图灵机、P/NP、时间谱系）→ NP 完全性（Cook–Levin 与归约链，自己做 3-SAT→团/顶点覆盖的归约）→ 多项式谱系 → 空间复杂性（Savitch、PSPACE 完全性、NL 完全性与 Immerman–Szelepcsényi）→ 随机计算（PP/BPP/ZPP 与 RL）→ 电路复杂性（P/poly、Karp–Lipton、NC/AC、P-完全性、Håstad switching lemma 证 parity ∉ AC0）。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "配套讲义当作“每章讲到哪”的目录：读完每章书后对照讲义 Synopsis 核对是否漏掉 PSPACE 完全性、Savitch、Håstad 等条目；讲义正文是英文，只在概念对不上时查阅。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Lec 4–15（时间复杂性、P/NP、归约与 NP 完全、Ladner/Mahaney）→16–20（空间与层次）→21–22（随机复杂度），按每讲的 Sipser 节号读教材并做 11 套作业"
+    },
+    {
+     "source": "en2",
+     "read": "第 6 章 Circuits 与第 13 章 Circuit lowerbounds（AC0、switching lemma），补线路与下界"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.cmu.edu/~odonnell/15455-s17/ 逐讲列表与 Course description",
+   "result": "采纳：P/NP、完备性、空间/随机复杂度都有对应讲次；线路只作模型提及，无下界讲次。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://theory.cs.princeton.edu/complexity/book.pdf 目录检索 circuit",
+   "result": "采纳为线路与下界的补充：第 6 章与第 13 章含 AC0 与 switching lemma。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/BUAA-1473089162（北航《计算理论》）",
+   "result": "部分采纳：只有“时间复杂性”一块，空间/随机/线路复杂度均未列。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "B 站与中文 MOOC 检索中文计算复杂性课程（“计算理论 自动机 完整课程”等）",
+   "result": "未找到：中文侧没有可核的、讲空间/随机/线路复杂度的完整课程或免费正文。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/（上海交大《计算复杂性》课程站）",
+   "result": "采纳：课程站是作者官方页面，列中文讲义章名（时间/空间/NP 完全性/多项式谱系/电路/随机计算）与指定中文教材《计算复杂性理论》（清华大学出版社 2023），并给教材勘误（第 3.6 节 Håstad 对换引理）。",
+   "by": "review/pi-additions/F.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "该站 slides/2.Space-Complexity.pdf、3.NP-Completeness.pdf、5.Circuit-Complexity.pdf、6.Randomized-Computation.pdf",
+   "result": "采纳为“每章讲到哪”的结构证据：空间章含 PSPACE 完全性/Savitch/NL 完全性/Immerman–Szelepcsényi；NP 章从 Cook 1971、Levin 1973 讲起；电路章含 P/poly、Karp–Lipton、NC/AC、P-完全性、Håstad Switching Lemma；随机章含 PP/BPP/ZPP、RL。讲义正文为英文，未计为中文教学正文。",
+   "by": "review/pi-additions/F.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "计算复杂性 中文 讲义 PSPACE BPP 电路复杂度 下界 NP完全 课件 pdf 大学",
+   "result": "采纳上海交大课程站（同上一手打开）；其余命中为百度百科、维基百科“电路复杂性”、集智科普长文与个人概念备忘，按规则不作覆盖来源。",
+   "by": "review/pi-additions/F.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "计算复杂性导论 堵丁柱 目录 高等教育出版社 NP完全 空间复杂性 电路复杂性",
+   "result": "只找到高教社“学术前沿在线”的丛书价目表（《计算复杂性导论》堵丁柱等，53 元），没有可核的本书目录页，未登记为来源；中文付费材料最终采用傅育熙《计算复杂性理论》。",
+   "by": "review/pi-additions/F.2.3.json"
+  }
+ ],
+ "findings": [
+  "旧条目说 15-455“覆盖 circuits（线路）等模型”，容易读成已覆盖线路复杂度；实际只是课程说明里把 circuits 列为模型，讲次表没有线路下界，已改为 partial 并补 Arora–Barak。",
+  "旧条目把同一北航课程同时当作 F.2.1/F.2.2/F.2.3 的中文来源；本文件只取“时间复杂性”一块，其余写明中文缺口。",
+  "旧条目 note 怀疑“线路复杂度下界未核到讲次”，本次核对确认如此。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "计算复杂性理论",
+ "description": "P/NP、完备性、空间/随机复杂度、线路复杂度与下界。",
+ "applied_additions": [
+  "review/pi-additions/F.2.3.json@03d9268b8d"
+ ]
+}

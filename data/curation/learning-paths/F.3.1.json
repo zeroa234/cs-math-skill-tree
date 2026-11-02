@@ -1,0 +1,261 @@
+{
+ "id": "F.3.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Programming Language Principles and Paradigms（University of Michigan 在线讲义，eecs390.github.io）",
+   "url": "https://eecs390.github.io/notes/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "目录逐节核对：Functional Programming（Scheme：表达式、递归、尾递归、高阶函数/函数对象、currying）、Declarative Programming / Logic Programming（Prolog：事实规则、列表、算术、Unification and Search、Search Order and Backtracking、Cut）、Theory 章 Lambda Calculus（β/α 归约与 subst 替换变换器、非终止计算、Normal-Order Evaluation、Church 数/布尔/对、递归、Equivalent Models、λ 演算的操作语义）与 Formal Type Systems。正对应函数式/逻辑式计算、替换、求值策略与计算模型。",
+   "access": "免费公开在线讲义（Sphinx 文档），无需注册；无配套视频。讲义原为 University of Michigan EECS 490 Programming Languages 编写，EECS 390 为相关课程。",
+   "publisher": "University of Michigan（EECS 390/490 教学团队）",
+   "evidence": {
+    "url": "https://eecs390.github.io/notes/theory.html",
+    "location": "Theory → Lambda Calculus 各小节；同页 subst/beta/alpha 变换器定义",
+    "finding": "theory.html 正文给出 β-reduction 的 subst(body,var,arg) 递归定义、α 改名、normal-order 求值示例与 λ 演算操作语义规则；目录里另有 Logic Programming/Prolog 与 Formal Type Systems。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Composing Programs 中文译本（CS Five 翻译项目）",
+   "url": "https://composingprograms.netlify.app/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "Composing Programs 中译：1.6 高阶函数、3.2 函数式编程、4.3 声明式编程；第 3 章解释器以环境模型实现参数绑定与求值过程。全书的“替换”只到用环境模型解释参数绑定，没有形式化代换定义与 λ-演算归约策略。",
+   "access": "免费中文译文（网页版），部分代码与术语保留英文；无视频。",
+   "publisher": "John DeNero 等（UC Berkeley CS 61A 教材），中文译者为 CS Five 项目",
+   "evidence": {
+    "url": "https://composingprograms.netlify.app/",
+    "location": "侧栏目录第一章 1.6、第三章 3.2/3.4/3.5、第四章 4.3",
+    "finding": "首页侧栏列出全部章节标题：1.6 高阶函数、3.2 函数式编程、3.4 组合语言的解释器、3.5 抽象语言的解释器、4.3 声明式编程。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.3.1.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《编程语言基础：Agda 描述》第二分册 Lambda：λ-演算简介（PLFA 中文版，Lambda 一章）",
+   "url": "https://agda-zh.github.io/PLFA-zh/Lambda/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "λ-演算的三类构造（变量、抽象、应用）与简单类型 λ-演算/PCF 的语法（BNF）；约束变量与自由变量、闭项与开项、α-重命名；代换（项中代入项）与 β-归约；归约规则的设计“使得一个项的子项在整项被归约之前先被归约。这被称为传值（Call-by-value）归约”，从左向右的确定性归约，小步操作语义与弱头范式（WHNF）；用 Church 表示法编码自然数并验证 plusᶜ · twoᶜ · twoᶜ 归约到四。",
+   "access": "免费在线全书，CC BY 4.0（中文译本由社区维护），无需注册；简体中文；含 Agda 代码与练习。",
+   "publisher": "Wadler & Kokke 原着，PLFA 中文翻译项目（agda-zh.github.io）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://agda-zh.github.io/PLFA-zh/Lambda/",
+    "location": "「约束变量与自由变量」「α-重命名」「代换」「归约」「小步操作语义」各节；Church 表示法例子",
+    "finding": "打开确认正文：“λ-演算，最早由逻辑学家 Alonzo Church 在 1932 年发表，是一种只含有三种构造的演算——变量（Variable）、抽象（Abstraction）与应用（Application）”；“我们小心地设计这些归约规则，使得一个项的子项在整项被归约之前先被归约。这被称为传值（Call-by-value）归约……这种解释项的含义的方法叫做小步操作语义（Small-step Operational Semantics）”；并给出 α-重命名与 Church 表示法下 plusᶜ · twoᶜ · twoᶜ 归约到 `suc `suc `suc `suc `zero 的例子。"
+   },
+   "added_by": "review/pi-additions/F.3.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《编程语言基础：Agda 描述》附录 Substitution：无类型 λ-演算中的代换",
+   "url": "https://agda-zh.github.io/PLFA-zh/Substitution/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "代换（substitution）的形式定义与代换引理：M[x:=N][y:=L] = M[y:=L][x:=N[y:=L]]（Barendregt 1984 称代换引理），de Bruijn 索引下的平行代换形式 subst σ (M [ N ]) ≡ (subst (exts σ) M) [ subst σ N ]；重命名 rename 与代换的交换律；Abadi–Cardelli–Curien–Levy 的平行代换 σ-代数方程。",
+   "access": "免费在线全书，CC BY 4.0；简体中文；含 Agda 形式化。",
+   "publisher": "Wadler & Kokke 原着，PLFA 中文翻译项目",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://agda-zh.github.io/PLFA-zh/Substitution/",
+    "location": "「引言」段与 subst-commute / rename-subst-commute 两条引理",
+    "finding": "打开确认正文：“本章的主要目的是证明代换与自身可交换。Barendregt (1984) 将此称为代换引理：M [x:=N] [y:=L] = M [y:=L] [x:= N[y:=L] ]”，并给出 de Bruijn 形式的 subst σ (M [ N ]) ≡ (subst (exts σ) M) [ subst σ N ]（subst-commute）与 rename ρ (M [ N ]) ≡ (rename (ext ρ) M) [ rename ρ N ]。"
+   },
+   "added_by": "review/pi-additions/F.3.1.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "《编程语言基础：Agda 描述》Untyped：完全正规化的无类型 λ-演算（传名调用的对照章）",
+   "url": "https://agda-zh.github.io/PLFA-zh/Untyped/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "把上一章“传值调用＋弱头范式＋确定性归约”换成“传名调用（Call-by-name）＋完全正规化＋非确定性归约＋开放项”的对照；只用变量/抽象/应用三种构造把自然数与不动点编码进去，并给出求值器。",
+   "access": "免费在线全书，CC BY 4.0；简体中文。",
+   "publisher": "Wadler & Kokke 原着，PLFA 中文翻译项目",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://agda-zh.github.io/PLFA-zh/Untyped/",
+    "location": "章首的“此前/现在”对照列表",
+    "finding": "打开确认正文：“之前的章节中讨论了传值调用（Call-by-value）的演算；我们这次讨论传名调用（Call-by-name）。之前的章节中讨论了弱头范式（Weak Head Normal Form），其归约止步于 λ 抽象；我们这次讨论完全正规化（Full Normalisation）……之前的章节中讨论了确定性（Deterministic）的归约……我们这次讨论非确定性（Non-deterministic）的归约”。"
+   },
+   "added_by": "review/pi-additions/F.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "函数式/逻辑式计算",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "1.6 高阶函数、3.2 函数式编程、4.3 声明式编程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Functional Programming（Scheme）与 Logic Programming（Prolog：Unification and Search、Backtracking）",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文侧 Prolog 讲得更系统（合一、搜索顺序、cut）；中文侧 4.3 是声明式编程入门。"
+  },
+  {
+   "topic": "替换",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "3.4/3.5 解释器里以环境模型实现参数绑定与求值，没有形式化替换定义",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "Substitution 章：代换定义、代换引理、平行代换与重命名交换律",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "theory.html：subst(body, var, arg) 变换器定义、α 改名与 β-reduction",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只有解释器实现层面的“把实参代进形参”，缺形式化替换与变量捕获讨论。；旧中文材料（Composing Programs 中译）只有环境模型，没有形式化替换。r7-zh2 正是代换一章：给出 M[x:=N] 的代换定义、代换引理（连续两次代换可交换的等式）、de Bruijn 索引下的平行代换 subst σ 及其与重命名的交换律，并用 Agda 形式化。r7-zh1 的 Lambda 章则给出“约束/自由变量、α-重命名、避免变量捕获”的前置概念。两者合起来覆盖“替换”。"
+  },
+  {
+   "topic": "求值策略与计算模型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "3.4/3.5 解释器（求值过程）；无 λ 演算与正规序求值",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Lambda 章：传值（Call-by-value）小步语义、从左到右的确定性归约、弱头范式；λ-演算作为三构造的形式系统与 Church 表示法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "theory.html：Normal-Order Evaluation、非终止计算、Church 数、Equivalent Models（与图灵机等模型等价）、λ 演算操作语义",
+     "extent": "covered"
+    }
+   ],
+   "note": "计算模型（λ 演算与图灵机等价）中文侧完全没有。；求值策略一半：r7-zh1 明确写出“子项先归约＝传值调用”“从左向右的归约是确定的（每项至多一个可归约项）”“小步操作语义与弱头范式”，r7-zh3 又把同一演算改成“传名调用＋完全正规化＋非确定性归约＋开放项”，两者正好构成“按值 vs 按名、弱头范式 vs 完全正规化、确定 vs 非确定”的策略对照。计算模型一半：r7-zh1 从 Church 1932 的三种构造讲起，用 Church 表示法编码自然数并验证算术归约，说明 λ-演算本身就是一个可计算性模型（配 zh1 的函数式/声明式计算与解释器）。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "1.6 高阶函数→1.7 递归→3.2 函数式编程→3.4/3.5 解释器→4.3 声明式编程，边读边写解释器"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读 Lambda 章：先抄下三类构造与 BNF，分清约束/自由变量与开闭项；做一遍 α-重命名以避免捕获；按小步语义把 (ƛ x ⇒ x) · y 与 plusᶜ · twoᶜ · twoᶜ 各推一步，确认“子项先归约、从左到右、每项至多一步”，并说明这是传值调用与弱头范式。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读 Substitution 章：写出代换定义，手工验证代换引理的两边相等；再看 de Bruijn 版的平行代换与 rename-subst-commute，理解为什么替换必须先处理变量捕获。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "读 Untyped 章：对照 Lambda 章的四条差异（传名 vs 传值、完全正规化 vs 弱头范式、非确定 vs 确定、开放 vs 封闭），用其求值器跑 plus · two · two，并说明传名调用为什么会重复求值、何时更省。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Functional Programming（Scheme）→Lambda Calculus 全节（替换与归约、正规序、Church 数、Equivalent Models）→Logic Programming（Prolog 与合一/回溯），最后读 Formal Type Systems 作衔接"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://eecs390.github.io/notes/ 与 /notes/theory.html 逐节核对",
+   "result": "采纳：替换/正规序/Church 数/等价模型/操作语义都在 theory.html 正文里；同时确认讲义也讲 Prolog。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://composingprograms.netlify.app/ 目录",
+   "result": "采纳为中文主材料：函数式与声明式编程、解释器都有；但无 λ 演算。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「lambda演算 程序设计语言」",
+   "result": "不合适：返回 C#/C++ lambda 语法、软考程序语言基础、自考真题等，没有中文 λ 演算/程序语言理论课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "λ演算 替换 求值策略 正规序 惰性求值 讲义 中文 课程 程序设计语言理论 pdf",
+   "result": "直接命中多为百科、Learn X in Y minutes 与个人博客（刘家财），不足以作系统教学；由此改查已有的 PLFA 中文版，核到 Lambda/Substitution/Untyped 三章正好讲代换与两种求值策略，遂采纳。",
+   "by": "review/pi-additions/F.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://agda-zh.github.io/PLFA-zh/ → Lambda/、Substitution/、Untyped/",
+   "result": "采纳三章：Lambda 章含 α-重命名、代换、传值调用小步语义与 Church 表示法；Substitution 附录含代换引理与平行代换；Untyped 章以传名调用＋完全正规化作对照。",
+   "by": "review/pi-additions/F.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 程序设计语言 原理 λ演算 类型系统 课程",
+   "result": "不合适：只命中 C 语言/汇编等程序设计入门课，没有以 λ-演算/类型系统为主线的中文 MOOC。",
+   "by": "review/pi-additions/F.3.1.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文写“形式化 λ 演算仍配合英文课程”，本次确认属实：中文译本没有 λ 演算，故中文路线只能 partial。",
+  "旧条目英文 covers 说讲义讲“替换”，本次在 theory.html 正文核到 subst 变换器与 α/β 归约，证据成立。",
+  "讲义归属：目录页写的是 EECS 390 讲义站，旧条目 note 已注明原为 EECS 490 编写，保留该说明。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "计算范式与λ演算",
+ "description": "函数式/逻辑式计算、替换、求值策略与计算模型。",
+ "applied_additions": [
+  "review/pi-additions/F.3.1.json@bc31632f77"
+ ]
+}

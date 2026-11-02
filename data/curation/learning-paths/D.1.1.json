@@ -1,0 +1,451 @@
+{
+ "id": "D.1.1",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Database Design – 2nd Edition (Adrienne Watt & Nelson Eng, BCcampus Open Textbook)",
+   "url": "https://opentextbc.ca/dbdesign01/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch2–Ch4 database concepts and types of data models, Ch5 Data Modelling, Ch7 The Relational Data Model, Ch8 The Entity Relationship Data Model, Ch9 Integrity Rules and Constraints, Ch10 ER Modelling, Ch11 Functional Dependencies, Ch12 Normalization, Ch13 Database Development Process, Ch14 Database Users, Ch15 SQL DDL, Ch16 SQL DML, plus Appendix B ERD exercises and Appendix C SQL lab with solutions.",
+   "access": "Free online reading and free EPUB/PDF/XHTML downloads under CC BY 4.0; no registration. Does not appear to contain a dedicated relational-algebra chapter (algebra is supplied by en2).",
+   "publisher": "Adrienne Watt & Nelson Eng / BCcampus Open Education (Pressbooks)",
+   "evidence": {
+    "url": "https://opentextbc.ca/dbdesign01/",
+    "location": "Book Contents navigation and Book Description",
+    "finding": "Contents list shows the ER, relational-model, constraints, functional-dependency, normalization, development-process and two SQL chapters; the description says this edition adds SQL, key terms and chapter review exercises."
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "CS186 Database Systems — online notes (UC Berkeley)",
+   "url": "https://cs186berkeley.net/notes/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Left-hand topic list: SQL Part 1 - Basic Queries, SQL Part 2 - Joins & Subqueries, Relational Algebra, DB Design (plus storage/index/transaction/recovery notes used by D.1.2). Supplies the relational algebra that en1 does not teach.",
+   "access": "Free HTML notes, no registration; site states the notes are under construction and the official lectures are authoritative. Read the Relational Algebra, SQL Part 1/2 and DB Design notes.",
+   "publisher": "UC Berkeley CS186 teaching staff",
+   "evidence": {
+    "url": "https://cs186berkeley.net/notes/",
+    "location": "Navigation list: 'Relational Algebra', 'SQL Part 1 - Basic Queries', 'SQL Part 2 - Joins & Subqueries', 'DB Design'",
+    "finding": "The notes index lists the exact topics; the site itself warns it is not comprehensive, so it is used only for the algebra/SQL-design gaps, not as the whole course."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "【哈工大】数据库系统 战德臣（全23讲）",
+   "url": "https://www.bilibili.com/video/BV1HY4y1b72A/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "第3–5讲 关系模型之基本概念/关系代数/关系演算；第6–7讲 SQL 概述与复杂查询、视图；第8讲 SQL 与数据库完整性和安全性；第9–10讲 嵌入式 SQL；第11–12讲 数据建模（ER 思想、工程化方法与案例）；第13讲 数据库设计过程；第14–16讲 函数依赖、关系模式规范形式与模式分解。覆盖实体关系、关系模型与关系代数、约束、规范化、SQL 查询和数据建模全过程。",
+   "access": "第三方转载，授权未核。B站免费播放，23 个分 P 共约 31.7 小时；上传者「农夫CC」是课程录像的搬运账号，不是哈工大官方账号，课程主体为哈工大计算机学院战德臣教授。页面无字幕轨信息，未核对人工字幕；与官方 MOOC 的对应关系见 zh2。",
+   "publisher": "哈尔滨工业大学 战德臣 主讲（B站 UP 主「农夫CC」搬运）",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1HY4y1b72A/",
+    "location": "分 P 列表第 1–16 讲",
+    "finding": "B站视频接口返回 23 个分 P，标题依次为初步认识数据库系统、关系模型、关系代数、关系演算、SQL 语言、完整性安全性、嵌入式 SQL、数据建模、数据库设计、函数依赖与范式；上传者为个人账号。"
+   },
+   "official_search": "（本轮补查）B 站 23 讲转载已找到官方版：①国家高等教育智慧教育平台《数据库系统（上）：模型与语言》course/679420d0225d72705e9d6aa5（第1–10讲，官方页有逐节标题，与转载第1–10讲一致）；②同平台《数据库系统（中）：建模与设计》course/69811b6e95df98bb27c3c012（系列课总第11–16讲，即转载第11–16讲）；③现有 zh2 的中国大学MOOC 课程页（HIT-1001516002）也确认本课是「四部分三门课」系列的上篇，但其大纲靠前端加载、正文只到「预备知识」。覆盖改记在 r7-zh1/r7-zh2 名下，zh1 只作分 P 标题核对用的转载（保留 reupload=true）。",
+   "updated_by": [
+    "review/pi-additions/D.1.1.json"
+   ],
+   "reupload": true
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "数据库系统（上）：模型与语言（哈尔滨工业大学，中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/HIT-1001516002",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "官方课程概述写明本系列分四部分、按三门课开放；本课（上）包含「基本知识与关系模型」和「数据库语言及其应用」，即关系模型、SQL 与完整性；「数据建模与数据库设计」（ER、规范化）在第二门《数据库系统（中）—建模与设计》中，第三门《数据库系统（下）—管理与技术》接内核。与 zh1 的第 1–16 讲是同一套课。",
+   "access": "中国大学MOOC 免费注册学习，视频按开课学期开放，认证证书另计；课程大纲折叠在页面中，本次打开只读到课程概述与参考教材，未登录核对视频。",
+   "publisher": "哈尔滨工业大学 / 中国大学MOOC（高教社·网易）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/HIT-1001516002",
+    "location": "课程概述第二段（四部分、三门系列课）与参考教材",
+    "finding": "页面写明课程分「基本知识与关系模型」「数据库语言及其应用」「数据建模与数据库设计」「数据库管理系统实现技术」四部分并拆成三门课开放；列出《数据库系统概念》《数据库系统实现》中译本为参考书。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "数据库系统概论（第6版，王珊、杜小勇、陈红，高等教育出版社 2023）",
+   "url": "https://mall.hep.com.cn/index.php/product-40316.html",
+   "tier": "book",
+   "free": false,
+   "role": "reference",
+   "covers": "国内数据库课程的标准教材：关系模型与关系代数、SQL、数据库安全性与完整性、关系数据理论（函数依赖与范式）、数据库设计、存储管理、查询处理与优化、恢复与并发。用于补齐中文纸面推导与习题。",
+   "access": "付费纸书，定价 59.00 元（ISBN 9787040591255，2023-03，500 页）；出版社商城页面可查目录与购买，未购买、无免费电子全文。",
+   "publisher": "高等教育出版社",
+   "evidence": {
+    "url": "https://mall.hep.com.cn/index.php/product-40316.html",
+    "location": "商品参数：ISBN、出版年月、作者、定价、版次",
+    "finding": "页面列出 ISBN 9787040591255、2023-03、王珊/杜小勇/陈红、定价 59.00、第 6 版、500 页。"
+   }
+  },
+  {
+   "key": "fix-zh-xmu",
+   "lang": "zh",
+   "title": "厦门大学林子雨数据库系统原理公开讲义",
+   "url": "https://dblab.xmu.edu.cn/post/database2020/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第1–3、5–7章：概念模型、关系代数、SQL、完整性、规范化与数据库设计。",
+   "access": "免费大学作者PDF，无登录；已打开第2、3、6、7章，分别135、272、180、75页。班级页为2020，链接PDF为2017版；不是付费书镜像。",
+   "publisher": "厦门大学数据库实验室／林子雨",
+   "evidence": {
+    "url": "https://dblab.xmu.edu.cn/post/database2020/",
+    "location": "课件下载表及第2、3、6、7章PDF正文",
+    "finding": "有关系运算、SQL实例、函数依赖和范式推导及ER设计；同页提供作业与实验。"
+   },
+   "added_by": "review/data-app-additions/D.1.1.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "数据库系统（上）：模型与语言（哈尔滨工业大学 战德臣、张丽杰、史建焘；国家高等教育智慧教育平台官方课程页，含第1–10讲完整目录与分节视频标题）",
+   "url": "https://higher.smartedu.cn/course/679420d0225d72705e9d6aa5",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "第1讲 初步认识数据库系统；第2讲 数据库系统的结构抽象与演变；第3讲 关系模型之基本概念；第4讲 关系模型之关系代数；第5讲 关系模型之关系演算（501–504、509–512）；第6讲 SQL语言之概述（601–609）；第7讲 SQL语言之复杂查询与视图（701–711）；第8讲 SQL语言与数据库完整性和安全性（801–815，含完整性约束规则、断言、触发器、自主/强制安全性）；第9–10讲 嵌入式SQL（901–911、A01–A10）。",
+   "access": "国家高等教育智慧教育平台（教育部主办、高教社运维）免费查看课程页与完整大纲；页面标注开课平台为「爱课程（中国大学MOOC）」、20 周、开课中，实际看视频需在爱课程/中国大学MOOC 免费注册；中文讲授；页面只给视频标题与时长，未见字幕轨说明（未核对字幕）。",
+   "publisher": "哈尔滨工业大学 / 国家高等教育智慧教育平台（开课平台：爱课程·中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/679420d0225d72705e9d6aa5",
+    "location": "「课程大纲」区块：第1讲-初步认识数据库系统 … 第4讲（QBE、三种关系运算之比较）、第5讲（501 什么是关系元组演算 / 503 存在量词与全称量词）、第6–8讲、第9–10讲（A07 什么是ODBC、A08 什么是JDBC）",
+    "finding": "打开官方平台页面读到逐讲逐节标题与时长，第3–10讲的内容与现有 zh1（B站 23 讲转载）的第3–10讲标题一一对应，确认 zh1 前 10 讲就是这门官方《数据库系统（上）》；平台标注开课高校哈尔滨工业大学、开课教师战德臣等三人。"
+   },
+   "added_by": "review/pi-additions/D.1.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "数据库系统（中）：建模与设计（哈尔滨工业大学 战德臣等；国家高等教育智慧教育平台官方课程页，含第1–6讲＝系列课总第11–16讲目录）",
+   "url": "https://higher.smartedu.cn/course/69811b6e95df98bb27c3c012",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "第1讲（总第11讲）数据建模：型的概念、E-R 模型、联系与基数、Chen 方法与 Crow's Foot 方法及物资管理系统建模案例；第2讲（总第12讲）数据建模工程化方法 IDEF1X（独立/从属实体、标定/非标定联系、分类联系）与四个建模案例；第3讲（总第13讲）数据库设计过程（需求分析、概念/逻辑/物理数据库设计）；第4讲（总第14讲）函数依赖及其 Armstrong 公理、属性闭包、最小覆盖；第5讲（总第15讲）1NF/2NF/3NF/BCNF、多值依赖；第6讲（总第16讲）模式分解的无损连接与保持依赖检验、分解成 BCNF/3NF 的算法、第5范式。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲；开课平台为爱课程（中国大学MOOC），看视频需在该平台免费注册；中文讲授；未见字幕说明（未核对）。",
+   "publisher": "哈尔滨工业大学 / 国家高等教育智慧教育平台（开课平台：爱课程·中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/69811b6e95df98bb27c3c012",
+    "location": "「课程大纲」区块：第1讲 数据建模（什么是E-R模型、Chen方法表达E-R模型…）、第2讲 数据建模：工程化方法及案例分析、第3讲 数据库设计过程、第4讲 函数依赖及其公理/定理、第5讲（总第15讲）关系模式设计之规范形式、第6讲 模式分解存在什么问题",
+    "finding": "读到 6 讲完整标题与分节（含「第14讲回顾本讲学习了什么」「第5讲（总第15讲）」字样），说明这门官方课就是系列课总第11–16讲，正好覆盖 ER 建模、设计过程、函数依赖与规范化。"
+   },
+   "added_by": "review/pi-additions/D.1.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "实体关系",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第11–12讲 数据建模：思想与方法／工程化方法与案例",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-xmu",
+     "section": "第1章概念模型；第7章概念与逻辑结构设计",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第1讲（总第11讲）数据建模：型与值、E-R 模型、实体与实例、联系与元数/基数、Chen 方法与 Crow's Foot 方法及物资管理系统建模案例；第2讲 IDEF1X 工程化建模",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch8 The Entity Relationship Data Model；Ch10 ER Modelling；Appendix B ERD exercises",
+     "extent": "covered"
+    }
+   ],
+   "note": "弱实体、基数与 ER 图转关系模式在 zh1 第11–13讲合起来讲。；原zh1主线是个人搬运录像，补作者讲义：概念模型、ER设计和关系映射合起来覆盖实体联系及建模。；从概念到两种建模记号再到案例，覆盖实体关系建模本身；这是官方系列课的中篇，不在 r7-zh1 里。"
+  },
+  {
+   "topic": "关系代数",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第4讲 关系模型之关系代数；第5讲 关系模型之关系演算",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-xmu",
+     "section": "第2章2.4关系代数",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第4讲 关系模型之关系代数；第5讲 关系模型之关系演算（501 什么是关系元组演算、503 存在量词与全称量词、511 三种关系运算之比较）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Relational Algebra note",
+     "extent": "covered"
+    }
+   ],
+   "note": "en1 的目录没有独立关系代数章，英文这一项由 en2 补；en2 自述 notes 尚不完备，但该章正文完整。；配合原zh1第4讲，讲义的集合运算、专门关系运算与查询表达式实例提供完整中文纸面学习。；官方课把关系代数、元组/域演算与三者比较分成两讲逐节讲，转载第4–5讲标题与之相同，覆盖记在官方版名下。"
+  },
+  {
+   "topic": "约束",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第8讲 SQL语言与数据库完整性和安全性",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-xmu",
+     "section": "第2章完整性；第3章SQL；第5章数据库完整性",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第8讲 SQL语言与数据库完整性和安全性：801 数据库完整性概念及完整性约束规则、802 完整性分类、803 SQL表完整性与列完整性、804 SQL的断言、805–807 触发器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch9 Integrity Rules and Constraints",
+     "extent": "covered"
+    }
+   ],
+   "note": "主键/外键、实体完整性与参照完整性；zh1 同时讲安全性，安全理论不在本节点范围。；配合原zh1第8讲，以完整性定义、SQL声明、实体/参照/用户约束和触发器覆盖概念与实现。；实体/参照/用户定义完整性、断言与触发器都有独立小节和示例，是完整的约束教学。"
+  },
+  {
+   "topic": "规范化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第14–16讲 函数依赖及其公理定理／关系模式设计之规范形式／模式分解",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-xmu",
+     "section": "第6章规范化、公理系统与模式分解",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第4讲（总第14讲）函数依赖与 Armstrong 公理、属性闭包、最小覆盖；第5讲（总第15讲）1NF/2NF/3NF/BCNF、多值依赖；第6讲（总第16讲）无损连接分解、保持依赖分解、分解成 BCNF/3NF 的算法、第5范式",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch11 Functional Dependencies；Ch12 Normalization",
+     "extent": "covered"
+    }
+   ],
+   "note": "配合原zh1第14–16讲，公开讲义补充函数依赖、候选码、范式与分解推导。；函数依赖推导、范式判定与模式分解算法三讲连讲，含检验算法，比只讲定义的章节完整。"
+  },
+  {
+   "topic": "查询与数据建模",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第6–7讲 SQL 概述与复杂查询/视图；第11–13讲 数据建模与数据库设计过程",
+     "extent": "covered"
+    },
+    {
+     "source": "fix-zh-xmu",
+     "section": "第3章SQL查询与视图；第7章需求分析至实施维护",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第6讲 SQL语言之概述（602 建立数据库、603 基本查询、604 多表联合查询）、第7讲 SQL语言之复杂查询与视图（701–710 IN/ThetaSome/Exists 子查询、分组聚集、空值、外连接、视图）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第3讲（总第13讲）数据库设计过程：需求分析、概念数据库设计、逻辑数据库设计、物理数据库设计",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch5 Data Modelling；Ch13 Database Development Process；Ch15–16 SQL；Appendix C SQL Lab",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：查询由 SQL 讲次覆盖，数据建模由 ER→逻辑→物理的设计过程覆盖。；查询用第3章实例及实验，建模用第7章需求、ER、逻辑和物理设计；配合原录像覆盖组合项两部分。；SQL 查询部分官方课逐节覆盖到子查询、空值与外连接、视图，并配 SQL Server 上机；数据建模部分见下一条 r7-zh2。；设计过程四个阶段各有小节与检查问题，补上 r7-zh1 不含的数据库设计流程。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按第3–5讲建立关系模型与关系代数，做讲后练习；第6–7讲跟做 SQL 查询与视图，第8讲补完整性/安全性，第9–10讲看嵌入式 SQL 的用法。"
+    },
+    {
+     "source": "zh1",
+     "read": "第11–13讲自己做一遍 ER 建模与设计过程案例，再读第14–16讲函数依赖、范式和模式分解，能判断一张表是否满足 3NF/BCNF。"
+    },
+    {
+     "source": "zh2",
+     "read": "用官方 MOOC 的作业与测验核对第1–16讲；若需要证书再走认证学习。"
+    },
+    {
+     "source": "zh3",
+     "read": "需要纸面推导和习题时对照教材第2–7章（关系模型、SQL、规范化、设计）。"
+    },
+    {
+     "source": "fix-zh-xmu",
+     "read": "在原搬运录像之前先读大学讲义：第1–2章→第3、5章→第7章→第6章，做同页作业和SQL实验。英文原en1+en2完整，不更改。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按官方目录学「上篇」：第3–5讲建立关系模型、关系代数与关系演算（做 401–511 的练习）；第6–7讲跟做 SQL 查询与视图；第8讲补完整性约束与触发器；第9–10讲看嵌入式 SQL 的游标与动态 SQL 用法。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "接「中篇」：第1–2讲自己画一遍 ER 图（Chen 与 Crow's Foot 各一次）并读 IDEF1X 案例；第3讲走一遍需求→概念→逻辑→物理设计；第4–6讲推函数依赖与闭包，判断一张表是否满足 3NF/BCNF，并检验一个分解是否无损且保持依赖。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Ch2–Ch5 for models and modelling, Ch7–Ch13 for relational model, ER, constraints, functional dependencies, normalization and the development process; do the chapter review exercises and Appendix B."
+    },
+    {
+     "source": "en2",
+     "read": "Read the Relational Algebra note (missing from en1), then SQL Part 1–2 and DB Design to check query formulation against Berkeley's course notes."
+    },
+    {
+     "source": "en1",
+     "read": "Work Appendix C SQL lab with solutions against a local PostgreSQL/MySQL instance."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「数据库系统 中 建模与设计 战德臣」「数据库系统 下 管理与技术 战德臣」",
+   "result": "采纳 BV1HY4y1b72A（哈工大战德臣全23讲，分P标题覆盖关系代数、SQL、数据建模、函数依赖与范式、索引、查询优化、并发与恢复）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 https://www.icourse163.org/course/HIT-1001516002",
+   "result": "采纳为官方课程配套（免费注册）；页面确认四部分拆三门课，数据建模与规范化在第二门。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "打开高等教育出版社商城《数据库系统概论（第6版）》商品页",
+   "result": "采纳为中文纸面参考，59.00 元、ISBN 9787040591255；不购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "打开 https://opentextbc.ca/dbdesign01/ 目录",
+   "result": "采纳 en1；目录无关系代数章，故补 en2。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "site.edu.cn 数据库系统 讲义 关系代数 ER 规范化 pdf 中文",
+   "result": "打开厦门大学作者站及第2、3、6、7章PDF；人大站超时，未以搜索摘要当正文。",
+   "by": "review/data-app-additions/D.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "哈尔滨工业大学 数据库系统 战德臣 学堂在线 课程 讲次",
+   "result": "命中三条有用结果：国家高等教育智慧教育平台《数据库系统（上）：模型与语言》course/679420d0225d72705e9d6aa5、中国大学MOOC 的 HIT-1001516002/learn 页、以及 B 站转载；确认官方版存在并可读，采纳 smartedu 页为 r7-zh1。",
+   "by": "review/pi-additions/D.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/679420d0225d72705e9d6aa5",
+   "result": "读到第1–10讲完整目录与分节视频标题（501 什么是关系元组演算、603 基本查询、801 完整性约束规则、A07 ODBC 等），开课高校哈尔滨工业大学、教师战德臣等三人，采纳。",
+   "by": "review/pi-additions/D.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "site:higher.smartedu.cn 数据库系统 哈尔滨工业大学 建模与设计 管理与技术",
+   "result": "命中《数据库系统（中）：建模与设计》course/69811b6e95df98bb27c3c012（另一镜像 id 6a55669d40d86e7f37ad17f4），采纳为 r7-zh2；同次结果未给出「下」的平台页。",
+   "by": "review/pi-additions/D.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/69811b6e95df98bb27c3c012",
+   "result": "读到第1讲数据建模（E-R、Chen、Crow's Foot）到第6讲模式分解的完整六讲目录，含「第5讲（总第15讲）」标注，确认它是系列总第11–16讲。",
+   "by": "review/pi-additions/D.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "\"数据库系统（下）\" 哈尔滨工业大学 管理与技术 课程大纲 事务 恢复 并发",
+   "result": "命中 icourse163 HIT-1001578001（下篇，第四部分「数据库管理系统实现技术」）；该课属 D.1.2 范围，本条只用于确认系列三门课的官方版都在线。",
+   "by": "review/pi-additions/D.1.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/learn/HIT-1001578001",
+   "result": "确认下篇官方页写明「本课程《数据库系统（下）-管理与技术》将包括第四部分内容」，但大纲区只显示预备知识与参考资料，未列讲次；对 D.1.1 无影响。",
+   "by": "review/pi-additions/D.1.1.json"
+  }
+ ],
+ "findings": [
+  "原有中文条目只给 TiDB 的 SELECT 语句文档，是单条 SQL 语法参考，不能覆盖 ER 建模、关系模型、规范化与设计流程，属于「库 API 文档顶替课程」，本次换成哈工大战德臣的完整课程录像，并把 TiDB 文档降为不需要保留的参考。",
+  "原英文主资源 BCcampus 教材的目录核对后确实覆盖 ER、关系模型、约束、函数依赖、规范化、SQL 与开发流程，但没有关系代数；新增 CS186 notes 的 Relational Algebra 一讲补齐，英文路线才算完整。",
+  "B站录像上传者是个人搬运账号而非哈工大官方号，课程身份以分P标题、课程描述与官方MOOC页面相互印证；字幕情况未核对，不能声称有中文人工字幕。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "数据建模、关系模型与SQL",
+ "description": "实体关系、关系代数、约束、规范化、查询与数据建模。",
+ "applied_additions": [
+  "review/data-app-additions/D.1.1.json@349c658c13",
+  "review/pi-additions/D.1.1.json@59e482af66"
+ ]
+}

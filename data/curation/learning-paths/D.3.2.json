@@ -1,0 +1,346 @@
+{
+ "id": "D.3.2",
+ "name": "知识发现与数据挖掘",
+ "description": "关联、聚类、异常、模式挖掘、数据选择与发现过程。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Mining of Massive Datasets (Jure Leskovec, Anand Rajaraman, Jeff Ullman) — free full PDF, slides, videos",
+   "url": "http://www.mmds.org/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch1 Data Mining, Ch3 Similarity Search, Ch5 Link Analysis, Ch6 Frequent Itemsets (association rules), Ch7 Clustering, Ch9 Recommendation Systems, Ch10 Mining Social-Network Graphs, Ch11 Dimensionality Reduction, Ch12 Large-Scale Machine Learning; the site offers the whole book as free PDFs plus CS246 lecture slides and videos.",
+   "access": "Free chapter PDFs and slides from the authors' site; the book is also sold in print. Anomaly detection is not a chapter.",
+   "publisher": "Cambridge University Press / Stanford (authors' site)",
+   "evidence": {
+    "url": "http://www.mmds.org/",
+    "location": "Book contents and resources list",
+    "finding": "The site offers the full book by chapter as PDF and links lecture slides/videos; the table of contents includes frequent itemsets, clustering, link analysis and dimensionality reduction."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Datawhale《南瓜书》（《机器学习》公式推导与学习笔记）",
+   "url": "https://datawhalechina.github.io/pumpkin-book/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "聚类（原型/密度/层次聚类）、降维（PCA）、特征选择与稀疏学习的推导，以及模型评估与比较；用于补中文的聚类与降维数学细节，需配合周志华《机器学习》原书章节。",
+   "access": "免费开放的中文笔记；不是原书全文，也不含关联规则/异常检测。",
+   "publisher": "Datawhale 社区",
+   "evidence": {
+    "url": "https://datawhalechina.github.io/pumpkin-book/",
+    "location": "目录：聚类、降维与度量学习、特征选择与稀疏学习",
+    "finding": "站点目录按《机器学习》章节组织，含聚类、降维与特征选择各章的公式推导。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "三大聚类算法 kmeans / DBSCAN / 层次聚类（B 站 28 分 P，咕泡 AI 培训课程录像剪辑）",
+   "url": "https://www.bilibili.com/video/BV1ST411w7De/",
+   "tier": "video",
+   "free": true,
+   "role": "alternative",
+   "covers": "28 个分 P：K-means 与 DBSCAN 原理/流程/可视化、K-means 代码实现（含鸢尾花案例）、聚类实验分析（Inertia、K 值选择、轮廓系数、存在问题）、层次聚类概述/流程/实例、聚类算法实战。只覆盖聚类，不含关联规则、模式挖掘、异常检测与数据挖掘过程。",
+   "access": "第三方转载，授权未核。B站免费播放；个人账号课程，未核对字幕。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）",
+   "publisher": "B 站账号「神经网络与深度学习」（页面标注自制），视频简介为「咕泡AI」公众号引流资料包，属商业培训课程内容，非高校或平台官方课",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1ST411w7De/",
+    "location": "标题与时长（257 分钟）",
+    "finding": "B站接口返回标题「我居然三小时学懂了【三大聚类算法kmeans/DBSCAN/层次】」，时长 257 分钟。"
+   },
+   "official_search": "（本轮补查）用 bvinfo 读页面元信息：owner=神经网络与深度学习、标注自制，简介是咕泡 AI 公众号引流，属培训机构内容；未找到高校或 MOOC 平台的官方免费版（该课疑为咕泡付费课程剪辑）。本轮另用 include_domains 限定 icourse163/xuetangx/智慧高教检索「数据挖掘 关联规则 Apriori 异常检测」，找到北京理工大学《数据仓库与数据挖掘》官方 MOOC（新增 r7-zh1），中文主资源改记在 r7-zh1 名下，本 key 降为 alternative，只作聚类部分的补充。",
+   "updated_by": [
+    "review/pi-additions/D.3.2.json"
+   ],
+   "reupload": true
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "数据仓库与数据挖掘（北京理工大学 袁汉宁、王树良、耿晶、阮思捷、金福生、方兰婷；中国大学MOOC BIT-1464031178 / 国家高等教育智慧教育平台，10 章含逐节大纲）",
+   "url": "https://higher.smartedu.cn/course/6892710af57d20271c59a4ac",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "第1章 Introduction：What Is Data Mining、Data Mining Process、Data to be Mined、Data Mining Tasks、Evaluation of Knowledge；第2章 Data（数据对象与属性类型、统计描述、相似性度量）；第3章 Data Preprocessing（Overview、Cleaning、Integration、Transformation、Data Reduction）；第4章 Association Rule Mining（Basic Concept、Frequent Itemset Generation、Rule Generation、Apriori 复杂度因素、频繁项集紧凑表示、Pattern Evaluation）；第5章 Classification（含模型评估与选择、类不平衡）；第6章 Cluster Analysis（划分/层次/密度与网格、聚类评价）；第7章 Outlier Analysis（离群点与离群分析、检测方法、统计方法、基于邻近度、基于聚类与分类的方法）；第8章 数据可视化；第9章 数据仓库；第10章 数据资源/使用/生态。",
+   "access": "中国大学MOOC 与智慧高教平台免费注册学习，视频按学期开放；中文课程（课程概述为中文，章节标题用英文），讲解语言未逐节核对，字幕未核对。",
+   "publisher": "北京理工大学（中国大学MOOC 官方课程；智慧高教平台同步）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/6892710af57d20271c59a4ac",
+    "location": "「课程大纲」区块第1–10章逐节条目，尤其「4 Association Rule Mining」下的 Basic Concept / Frequent Itemset Generation / Rule Generation / Factors Affecting Complexity of Apriori / Compact Representation of Frequent Itemsets / Pattern Evaluation，以及「7 Outlier Analysis」下的 Outlier Detection Methods / Statistical / Proximity-Based / Clustering-Based and Classification-Based Approaches",
+    "finding": "打开官方平台页读到完整章节大纲，确认这门中文 MOOC 把关联规则（含 Apriori 复杂度与频繁项集紧凑表示）和离群点分析各设一整章，并在第1章讲数据挖掘过程与知识评价，正好对上本技能的中文缺口。"
+   },
+   "added_by": "review/pi-additions/D.3.2.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "scikit-learn User Guide 2.7. Novelty and Outlier Detection",
+   "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "新颖性检测与离群点检测的完整流程与对比：One-Class SVM（含线性近似 SGDOneClassSVM）、Isolation Forest、Local Outlier Factor（含 novelty=True 的正确用法警告）、Elliptic Envelope（协方差估计），以及各方法适用场景与示例代码。",
+   "access": "官方文档免费、无需注册；英文；含可直接运行的示例。",
+   "publisher": "scikit-learn developers（官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+    "location": "页内目录 2.7 Novelty and Outlier Detection；正文小节 One-Class SVM / Isolation Forest / Local Outlier Factor / Elliptic Envelope，以及「Warning: Novelty detection with Local Outlier Factor」",
+    "finding": "确认文档按方法分节给出原理与示例，是「异常检测」在英文侧可用的分步教学（补 MMDS 全书无异常检测章的缺口）。"
+   },
+   "added_by": "review/pi-additions/D.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "关联",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第4章 Association Rule Mining：Basic Concept、Frequent Itemset Generation、Rule Generation、Factors Affecting Complexity of Apriori、Pattern Evaluation",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch6 Frequent Itemsets（Apriori、FP-growth、关联规则）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有零散 Apriori 短视频，未达到课程级，未登记为来源。；整章从支持度/置信度定义讲到 Apriori 逐层生成、规则生成与模式评价，是课程级的关联规则教学，此前中文只有聚类课的零散材料。"
+  },
+  {
+   "topic": "聚类",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "k-means / DBSCAN / 层次聚类",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "聚类章节的公式推导",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch7 Clustering",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "异常",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第7章 Outlier Analysis：Outlier and Outlier Analysis、Outlier Detection Methods、Statistical Approaches、Proximity-Based Approaches、Clustering-Based and Classification-Based Approaches",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "未设异常检测章（教材无此章）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "2.7 Novelty and Outlier Detection：One-Class SVM、Isolation Forest、Local Outlier Factor、Elliptic Envelope",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都没有课程级异常检测材料；本项目 A.2.1 的聚类/异常条目可作交叉参考。；离群点分析单独成章，按统计、邻近度、聚类/分类三类方法分别讲并有测验，覆盖「异常」这条必学点。；MMDS 全书（含第 3 版第13章深度学习）没有异常检测章（已核对 mmds.org 的章节表），英文侧缺的这一点用 scikit-learn 官方指南的分步讲解＋可运行示例补上；与 en1 的聚类/关联章节合起来仍以 MMDS 为主资源。"
+  },
+  {
+   "topic": "模式挖掘",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖（只有聚类/降维）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第4章 Compact Representation of Frequent Itemsets（频繁项集紧凑表示/FP 树）＋ Pattern Evaluation；第1章 Data Mining Tasks 与 Evaluation of Knowledge",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch6 Frequent Itemsets；Ch10 Mining Social-Network Graphs",
+     "extent": "covered"
+    }
+   ],
+   "note": "频繁项集的紧凑表示与模式评价是频繁模式挖掘的核心内容（Apriori 之外的另一条主线），配合第1章的任务分类，构成完整的模式挖掘教学。"
+  },
+  {
+   "topic": "数据选择与发现过程",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模型评估与比较（只到评估，不含发现流程）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第1章 Data Mining Process、Data to be Mined、Data Mining Tasks、Evaluation of Knowledge；第3章 Data Preprocessing（Overview、Data Reduction）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch1 Data Mining（发现流程与规模问题）；Ch3 Similarity Search",
+     "extent": "covered"
+    }
+   ],
+   "note": "第1章把 KDD/数据挖掘过程作为独立一节，第3章的数据归约讲选择与降维，两处合起来覆盖「数据选择与发现过程」。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh2",
+     "read": "先看三大聚类，动手实现 k-means 与 DBSCAN 并比较参数影响。"
+    },
+    {
+     "source": "zh1",
+     "read": "读聚类与降维章节的推导，把算法与《机器学习》原书对应章节对齐。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按章节顺序：第1章先弄清数据挖掘过程与任务；第3章做一遍清洗/集成/变换/归约；第4章手算一次 Apriori 的候选项集与支持度，再读频繁项集紧凑表示与模式评价；第7章按统计/邻近度/聚类三类方法各做一个小实验；第6章聚类可与现有聚类材料对照。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Ch1, Ch3, Ch6, Ch7 and Ch10–11 in that order; do the exercises and use the CS246 slides for the lectures."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Read 2.7 in order (One-Class SVM → Isolation Forest → LOF → Elliptic Envelope), run each example on the same dataset and compare which points each method flags; note the LOF novelty warning."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "南瓜书目录；MMDS 目录",
+   "result": "南瓜书只覆盖聚类/降维推导，MMDS 覆盖关联/聚类/图挖掘；两边都不含异常。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「数据挖掘 课程 关联规则 聚类 完整」",
+   "result": "只有聚类合集与 Apriori 单集，无完整中文数据挖掘课；采纳聚类合集作补充。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "《数据挖掘：概念与技术》中文版检索",
+   "result": "未核到可读的出版社目录/价格页，不登记为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "http://www.mmds.org/",
+   "result": "采纳 en1；确认全书免费 PDF 与 slides，目录无异常检测章。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "数据挖掘 课程 关联规则 Apriori FP-growth 异常检测 聚类 教学大纲（限定 icourse163/xuetangx/higher.smartedu）",
+   "result": "命中北京理工大学《数据仓库与数据挖掘》（icourse163 BIT-1464031178 与智慧高教 course/6892710af57d20271c59a4ac），另有国防科技大学《数据挖掘》、中央财经大学《数据挖掘与python实践》、合肥工业大学《金融数据挖掘》；北理工课章节最贴合（专章讲关联与离群点），采纳。",
+   "by": "review/pi-additions/D.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/6892710af57d20271c59a4ac",
+   "result": "第一次请求超时，重试成功；读到第1–10章逐节大纲（含 Association Rule Mining 六节、Outlier Analysis 五节），作为 section 证据。",
+   "by": "review/pi-additions/D.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/BIT-1464031178",
+   "result": "中国大学MOOC 页面正文确认同一门课的课程概述（含关联挖掘、异常检测等），大纲区只有标题、无逐节列表，故逐节证据用智慧高教页。",
+   "by": "review/pi-additions/D.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "http://www.mmds.org/",
+   "result": "核对第 3 版章节表（1 Data Mining … 12、13 Neural Nets and Deep Learning），确认全书没有异常/离群检测章，因此 en 的「异常」必须另找来源。",
+   "by": "review/pi-additions/D.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+   "result": "确认 2.7 Novelty and Outlier Detection 有 One-Class SVM/Isolation Forest/LOF/Elliptic Envelope 分节与示例，采纳为 r7-en1。",
+   "by": "review/pi-additions/D.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "https://www.bilibili.com/video/BV1ST411w7De/（bvinfo 读 28 个分 P 与 owner）",
+   "result": "确认现有 zh2 是咕泡 AI 培训课程剪辑（个人账号自制、公众号引流），只讲聚类三算法，不含关联/模式挖掘/异常，故降为 alternative。",
+   "by": "review/pi-additions/D.3.2.json"
+  }
+ ],
+ "findings": [
+  "原英文 MMDS 是完整的挖掘教材，关联/聚类/图挖掘/降维都有章，但异常检测确实没有，英文只能 partial。",
+  "原中文南瓜书只是《机器学习》的推导笔记，覆盖聚类与降维，不含关联规则与异常；补了一个中文聚类视频，仍不足以覆盖五项，如实标 partial。",
+  "未用 MMDS 直接顶替中文的关联规则/模式挖掘缺口。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/D.3.2.json@67a855c0d0"
+ ]
+}

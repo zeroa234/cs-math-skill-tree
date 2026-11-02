@@ -196,9 +196,11 @@ def build(id_, skills):
         if s.get("tier") == "course":
             s["tier"] = "website"
     applied = rec.setdefault("applied_additions", [])
-    # Research additions first, the main agent's review corrections (main-additions) last.
+    # Final reviews can refer to sources introduced by the research batches.
+    # Apply those batches first and the main agent's corrections last.
     found = glob.glob(os.path.join(REVIEW, "*-additions", id_ + ".json"))
-    for p in sorted(found, key=lambda q: (os.path.basename(os.path.dirname(q)) == "main-additions", q)):
+    review_order = {"final-additions": 1, "verified-additions": 2, "main-additions": 3}
+    for p in sorted(found, key=lambda q: (review_order.get(os.path.basename(os.path.dirname(q)), 0), q)):
         tag = os.path.relpath(p, RAW).replace("\\", "/")
         digest = hashlib.sha1(open(p, "rb").read()).hexdigest()[:10]
         done = [a for a in applied if a.split("@")[0] == tag]
@@ -209,6 +211,24 @@ def build(id_, skills):
         merge_addition(rec, load(p), tag)
         applied.append(f"{tag}@{digest}")
     rec = simplify(rec)
+    # A route or a topic's language column may only cite sources in that language; cross-language
+    # help belongs in cross_language_fallbacks. Drop invalid citations (they never count as coverage).
+    lang_of = {s["key"]: s["lang"] for s in rec["sources"]}
+    dropped_refs = []
+    for t in rec["topics"]:
+        for lang in ("zh", "en"):
+            bad = [r for r in t.get(lang, []) if lang_of.get(r["source"]) != lang]
+            if bad:
+                t[lang] = [r for r in t[lang] if r not in bad]
+                dropped_refs += [f"{t['topic']}/{lang}->{r['source']}" for r in bad]
+    for lang in ("zh", "en"):
+        steps = rec["routes"].get(lang, {}).get("steps", [])
+        bad = [s for s in steps if lang_of.get(s["source"]) != lang]
+        if bad:
+            rec["routes"][lang]["steps"] = [s for s in steps if s not in bad]
+            dropped_refs += [f"route {lang}->{s['source']}" for s in bad]
+    if dropped_refs:
+        rec.setdefault("findings", []).append("合并时去掉了跨语言的引用（应写成跨语言补充）：" + "、".join(dropped_refs))
     flags = []
     for s in rec["sources"]:
         text = " ".join(str(s.get(k, "")) for k in ("publisher", "access", "title"))

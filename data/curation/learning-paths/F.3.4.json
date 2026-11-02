@@ -1,0 +1,242 @@
+{
+ "id": "F.3.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Software Foundations（University of Pennsylvania，Benjamin C. Pierce 等，7 卷全免费在线，Rocq/Coq）",
+   "url": "https://softwarefoundations.cis.upenn.edu/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "首页逐卷说明：Vol 1 Logical Foundations（函数式编程、逻辑基础、计算机辅助定理证明、Rocq）、Vol 2 Programming Language Foundations（操作语义、Hoare 逻辑、类型系统）、Vol 3 Verified Functional Algorithms、Vol 4 QuickChick、Vol 5 Verifiable C（用 Princeton Verified Software Toolchain 规格化并验证真实 C 程序）、Vol 6 Separation Logic Foundations（在上面搭验证工具）、Vol 7 Security Foundations。覆盖命题即类型/机器检查证明（Vol 1–2）与精化到真实 C 程序、可信工具链（Vol 5–6）。",
+   "access": "免费在线全书（每卷含练习，全部是 Rocq 证明脚本），无需注册；需安装 Rocq/Coq。首页写明“No specific background in logic or programming languages is assumed”。",
+   "publisher": "University of Pennsylvania（Pierce 等）",
+   "evidence": {
+    "url": "https://softwarefoundations.cis.upenn.edu/",
+    "location": "首页 Volume 1–7 说明段",
+    "finding": "首页逐卷列出内容，Volume 5 为“Verifiable C … using the Princeton Verified Software Toolchain”，Volume 6 为 Separation Logic Foundations。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Mathematics in Lean（Avigad 等，Lean4/mathlib 形式化数学教材，免费在线）",
+   "url": "https://avigad.github.io/mathematics_in_lean/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "13 章目录：Introduction、Basics、Logic、Sets and Functions、Elementary Number Theory、Discrete Mathematics、Structures、Hierarchies、Groups and Rings、Linear algebra、Topology、Differential Calculus、Integration and Measure Theory。提供 Lean 侧的“命题即类型＋机器检查证明”与真实数学形式化练习，不必与 Rocq 同时学。",
+   "access": "免费在线阅读（Lean 4 版本），无需注册；练习需装 Lean/mathlib。",
+   "publisher": "Jeremy Avigad 等（CMU/NYU 等）",
+   "evidence": {
+    "url": "https://avigad.github.io/mathematics_in_lean/",
+    "location": "目录 1–13 章标题",
+    "finding": "目录列出 3. Logic、9. Groups and Rings、13. Integration and Measure Theory 等章，正文可读。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《Lean 形式化数学》中文版（Mathematics in Lean 中译，Lean 中文社区）",
+   "url": "https://www.leanprover.cn/math-in-lean-zh/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "中译 13 章：引言、基础、逻辑、集合和函数、初等数论、离散数学、结构体、层次结构、群与环、线性代数、拓扑学、微分学、积分和测度论。覆盖命题即类型（第 3 章逻辑）与用 Lean/mathlib 做机器检查证明；不含精化到真实程序与可信计算基。",
+   "access": "免费在线阅读，无需注册；练习需按页面说明安装 Lean 与 mathlib（版本以页面为准）。",
+   "publisher": "Jeremy Avigad 等原着，Lean 中文社区翻译",
+   "evidence": {
+    "url": "https://www.leanprover.cn/math-in-lean-zh/",
+    "location": "目录 1–13 章（含 3. 逻辑、9. 群与环、13. 积分和测度论）",
+    "finding": "页面目录列出 13 章中文标题，正文可读；书名页标注 Mathematics in Lean 0.1 documentation。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "命题即类型",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 3 章 逻辑（命题、证明项与蕴含的构造）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Vol 1 Logical Foundations（命题/谓词逻辑与 Coq 证明项）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "3. Logic",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧用 Lean 讲；英文侧 Rocq（SF）与 Lean（MiL）两条都可。"
+  },
+  {
+   "topic": "机器检查证明",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "全书以 Lean 证明脚本完成数学命题（第 3 章起至第 13 章）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Vol 1–3（Coq 证明脚本，含 Verified Functional Algorithms）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "精化与可信计算基",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "只到数学形式化，没有从规格精化到真实程序或 TCB 讨论",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Vol 5 Verifiable C（用 VST 验证真实 C 程序）、Vol 6 Separation Logic Foundations（自建验证工具）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧只能靠“证明内核即 TCB”的隐含理解，没有精化（refinement）到真实 C 程序的中文教材。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第 1–4 章（引言/基础/逻辑/集合与函数）打通 Lean 证明流程→第 5–9 章数论/离散数学/结构体/群环，完成书中的机器检查练习"
+    }
+   ],
+   "gaps": [
+    "精化与可信计算基"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Vol 1 Logical Foundations（逻辑与机器检查证明）→Vol 2 Programming Language Foundations→Vol 3 Verified Functional Algorithms"
+    },
+    {
+     "source": "en1",
+     "read": "Vol 5 Verifiable C（规格化并验证真实 C 程序，理解工具链的信任边界）与 Vol 6 Separation Logic Foundations"
+    },
+    {
+     "source": "en2",
+     "read": "选数学分支（第 5–13 章）在 Lean4/mathlib 里做形式化练习"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://softwarefoundations.cis.upenn.edu/ 卷目录",
+   "result": "采纳：Vol 1–7 逐卷用途可见，Vol 5/6 正是精化到真实 C 程序与自建验证工具。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://avigad.github.io/mathematics_in_lean/ 目录",
+   "result": "采纳：Lean 侧形式化数学 13 章，可作 Rocq 之外的替代路径。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.leanprover.cn/math-in-lean-zh/ 目录",
+   "result": "采纳为中文主材料：13 章中译齐全；确认没有精化/TCB 内容。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "精化 演算 规格说明 程序 形式化 讲义 中文 课程 精化关系 Event-B",
+   "result": "只命中北京大学裘宗燕《软件形式化方法（基于 B 方法）》课程页（结果标题写“主要讨论基于 B 方法的形式化规范、验证和精化”），但按该 URL 打开时站点已改版：http/https 的 math.pku.edu.cn/teachers/qiuzy/fm_B 及目录均返回 404，无法核对讲义正文，按规则不登记。",
+   "by": "review/pi-additions/F.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "B方法 精化 讲义 中文 课件 软件形式化方法 北京大学出版社 教材 目录",
+   "result": "不合适：只返回中科大华保健《形式化方法：理论及应用》前言（13 章为逻辑、SAT/SMT、符号执行、程序验证、程序合成、Curry-Howard、依赖类型，无精化与 TCB 章）与无关条目。",
+   "by": "review/pi-additions/F.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可信计算基 TCB 中文 讲义 课程 信息安全 形式化 验证",
+   "result": "不合适：命中博客园《Trusted Computing Base》单篇、NIST 术语表、知乎可信计算科普、浪潮产品介绍与 CCF 会议通知，没有中文课程/教材正文。",
+   "by": "review/pi-additions/F.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 信息安全 可信计算基 安全模型 访问控制 课程 大纲",
+   "result": "不合适：中国大学MOOC 上信息安全类课程（信息工程大学、哈工程、信息安全概论等）大纲只列保密/认证/访问控制/计算环境安全，没有“可信计算基”单元，也没有精化。",
+   "by": "review/pi-additions/F.3.4.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写“使用 Lean 与 Mathlib 完成形式化证明，含实例与练习”，没有落到知识项；本次按 13 章目录把“命题即类型/机器检查证明”对上，并把“精化与可信计算基”标为中文缺口。",
+  "旧条目英文把 Software Foundations 六卷写成“6 卷”，首页实际列到 Volume 7（Security Foundations），已按 7 卷核对；关键仍是 Vol 1–2 与 Vol 5–6。",
+  "旧条目 extraResources 的 Mathematics in Lean 已核实可打开，作为英文 Lean 路线保留。",
+  "合并时去掉了跨语言的引用（应写成跨语言补充）：route zh->en1"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "精化与可信计算基",
+   "source": "en1",
+   "reason": "本轮查过三个渠道：①文字——中文检索只找到北大裘宗燕 B 方法课程页的搜索摘要（页面现已 404，无法核正文），中科大华保健《形式化方法：理论及应用》13 章无精化/TCB 章；②视频——中国大学MOOC 信息安全类课程大纲只到访问控制与计算环境安全，没有可信计算基单元；③付费——没有查到可核目录的中文“精化/TCB”教材。故中文侧按 fallback 继续用 en1（Software Foundations 的 Verifiable C/Separation Logic 卷）讲精化与可信计算基。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/F.3.4.json"
+  }
+ ],
+ "name": "证明助手与形式化数学",
+ "description": "命题即类型、机器检查证明、精化与可信计算基。",
+ "applied_additions": [
+  "review/pi-additions/F.3.4.json@82cb057ff9"
+ ]
+}

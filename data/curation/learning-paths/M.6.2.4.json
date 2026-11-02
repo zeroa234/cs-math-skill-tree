@@ -100,6 +100,24 @@
     "finding": "实际打开课程页，确认官方版存在且全网开放；内容简介与 B 站 39 讲转载的前半部分讲题（概率基础、随机变量、概率不等式、随机收敛、贝叶斯）一致，但官方目录未公开。"
    },
    "added_by": "review/pi-additions/M.6.2.4.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "高维统计学：非渐近视角（Wainwright，中文译本）",
+   "url": "https://www.cmpedu.com/books/book/5606424.htm",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "先学第4章一致收敛；接第7章稀疏线性模型、Lasso相合性、估计和预测误差；第9章扩展到正则化M估计。",
+   "access": "出版社公开目录用于核对范围；完整中文教材需购买或通过合法馆藏借阅。本轮未购买、未读收费全文。",
+   "publisher": "出版社官方页面",
+   "evidence": {
+    "url": "https://www.cmpedu.com/books/book/5606424.htm",
+    "location": "第4、7、9章",
+    "finding": "出版社完整目录列有一致律、Lasso相合性及估计和预测误差的推导章节，带习题。"
+   },
+   "added_by": "review/verified-additions/M.6.2.4.json"
   }
  ],
  "topics": [
@@ -140,6 +158,11 @@
      "source": "zh2",
      "section": "高维概率／统计机器学习没有稀疏估计专章",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "7.1–7.3：稀疏模型、还原与有噪估计",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -149,7 +172,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文两门课偏概率工具与一般统计学习，没有 lasso／稀疏高维估计的专门章节；此项中文 partial。英文 36-708 有 Sparsity 与 Nonparametric Sparsity 讲义。"
+   "note": "中文两门课偏概率工具与一般统计学习，没有 lasso／稀疏高维估计的专门章节；此项中文 partial。英文 36-708 有 Sparsity 与 Nonparametric Sparsity 讲义。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
   },
   {
    "topic": "一致性",
@@ -159,6 +182,11 @@
      "source": "zh2",
      "section": "Stochastic Convergence 概念／性质／应用（收敛与一致性工具）",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "第4章一致大数定律；7.5变量选择相合性",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -168,7 +196,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有随机收敛的一般工具，没有针对高维估计一致性的完整章节；英文 36-708 在非参数回归与稀疏性讲义中处理 consistency。"
+   "note": "中文只有随机收敛的一般工具，没有针对高维估计一致性的完整章节；英文 36-708 在非参数回归与稀疏性讲义中处理 consistency。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
   },
   {
    "topic": "风险界与高维估计",
@@ -183,6 +211,11 @@
      "source": "zh2",
      "section": "统计机器学习（泛化／收敛工具，未系统讲高维估计风险界）",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "7.3–7.4误差界；9.4–9.6正则化估计界",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -192,12 +225,12 @@
      "extent": "covered"
     }
    ],
-   "note": "中文有高维概率与随机收敛工具，但没有 minimax 下界／高维估计风险界的完整课程；此项中文 partial，英文 36-708 的 Minimax Theory 与 Sparsity 讲义 covered。"
+   "note": "中文有高维概率与随机收敛工具，但没有 minimax 下界／高维估计风险界的完整课程；此项中文 partial，英文 36-708 的 Minimax Theory 与 Sparsity 讲义 covered。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
   }
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -214,13 +247,13 @@
     {
      "source": "r7-zh2",
      "read": "在北大平台看《统计机器学习》官方视频，补概率不等式、随机变量收敛（Stochastic Convergence）等工具，为读高维估计的一致性证明打底。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "先学第4章一致收敛；接第7章稀疏线性模型、Lasso相合性、估计和预测误差；第9章扩展到正则化M估计。"
     }
    ],
-   "gaps": [
-    "稀疏性",
-    "一致性",
-    "风险界与高维估计"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -347,6 +380,14 @@
    "query_or_url": "高维统计 高维数据分析 教材 出版社 目录 稀疏 变量选择",
    "result": "只找到百科条目：Bühlmann & van de Geer《高维数据统计方法、理论与应用》（国防工业出版社 2018，14 章，前 5 章 Lasso、6–10 章变量选择与惩罚过程理论）与图书馆书目页；没有出版社官网目录页可核，按规则不登记付费来源，未购买。",
    "by": "review/pi-additions/M.6.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://www.cmpedu.com/books/book/5606424.htm",
+   "result": "出版社完整目录列有一致律、Lasso相合性及估计和预测误差的推导章节，带习题。",
+   "by": "review/verified-additions/M.6.2.4.json"
   }
  ],
  "findings": [
@@ -355,47 +396,11 @@
   "英文 36-708 已有 Sparsity／Minimax Theory，保留为英文主资源。",
   "四项中只有集中不等式中文 covered；稀疏性、一致性、风险界中文 partial，故 zh 路线 partial，没有假报 complete。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "稀疏性",
-   "source": "en1",
-   "reason": "本轮查了三个渠道：文字——香蕉空间无高维统计条目，北大李东风讲义（唯一见到讲 lasso 的中文讲义）抓取时全部 404，中文维基/知乎/百科只是词条；视频——中文两门张志华课的分P讲题（官方目录不可读，转载分P可读）没有 Lasso/稀疏估计讲次，B 站按关键词搜到的都是 ComfyUI/AI 生成内容；正版付费——中文系统教材（如 Bühlmann 中译本）只有百科与图书馆书目信息，没有出版社目录页可核，未购买。故中文仍缺，用 en1 的 Sparsity 与 Nonparametric Sparsity 讲义补。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.6.2.4.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "一致性",
-   "source": "en1",
-   "reason": "中文只有随机收敛工具课（张志华《统计机器学习》的 Stochastic Convergence 概念/性质/应用，已 mapped partial），没有针对高维估计一致性（Lasso 符号一致性、估计误差收敛率）的完整教学；官方《高维概率论（2024）》分讲目录平台动态加载读不到，无法核对是否讲到；北大葛浩课程页只有大纲。故用 en1 的非参数回归/稀疏性讲义补 consistency。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.6.2.4.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "风险界与高维估计",
-   "source": "en1",
-   "reason": "中文能找到的高维概率课（张志华 2024 官方版/转载）以集中不等式与随机矩阵为主，北大葛浩课虽在大纲里写「统计学习理论」并指定 Wainwright 教材，但没有公开讲义或录像，无法据以判定 minimax 下界/风险界讲过；中文 MOOC 与香蕉空间均无对应课程。故用 en1 的 Minimax Theory 与 Sparsity 讲义补。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.6.2.4.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "高维统计与统计学习理论",
  "description": "集中不等式、稀疏性、一致性、风险界与高维估计。",
  "applied_additions": [
-  "review/pi-additions/M.6.2.4.json@c6d0a38354"
+  "review/pi-additions/M.6.2.4.json@c6d0a38354",
+  "review/verified-additions/M.6.2.4.json@6022909c61"
  ]
 }

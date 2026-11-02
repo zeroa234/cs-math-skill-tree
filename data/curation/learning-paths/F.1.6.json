@@ -1,0 +1,301 @@
+{
+ "id": "F.1.6",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "MIT 6.890 Algorithmic Lower Bounds: Fun with Hardness Proofs (Fall 2014, Erik Demaine, MIT OpenCourseWare)",
+   "url": "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "MIT 6.890（Fall 2014）以“hardness proofs”为主线：参数化复杂性（FPT 与 W 层级）、ETH/SETH 下的下界、3SUM/APSP 等细粒度归约与条件性下界、以及 P/NP 之外的复杂度假设。课程站公开讲义与习题，但核化（kernelization）与核下界不在其中。",
+   "access": "OCW 免费，无需注册；有全套讲义、讲课视频、习题与项目说明，页面可下载。英文字幕状态未逐讲核对（OCW 部分讲次提供 transcript）。",
+   "publisher": "MIT OpenCourseWare（Erik Demaine）",
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/pages/calendar/",
+    "location": "Calendar 表 SESS 13 / 14 / 21 行",
+    "finding": "Calendar 列出 23 次课；第 13 次为“Parameterized Complexity I: W Hierarchy”，第 14 次为“Parameterized Complexity II: ETH & Planar”，第 21 次为“3SUM & APSP”；表中无 kernelization、SETH 条目。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.1.6.json"
+   ]
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "白天《反馈集相关问题的参数与精确算法研究》（电子科技大学博士学位论文，2024）",
+   "url": "https://tianbaics.github.io/Dissertation.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "绪论与第 2 章给出中文本语与背景：固定参数可解（FPT）的定义（时间复杂度中参数部分可超多项式）、W 层级包含关系 FPT=W[0]⊆W[1]⊆…⊆W[SAT]⊆W[P]、W[t]-难/完全的定义与独立集、团、碰撞集、集合覆盖的层级例子、FPT≠W[1] 蕴含 P≠NP；并把强指数时间假设（SETH）与集合覆盖猜想作为精确算法下界的研究背景。正文以反馈点集/反馈边集示范参数算法（迭代压缩、分支、分治）。全文没有“核化（kernelization）”内容，也没有 3SUM/APSP 的细粒度归约。",
+   "access": "作者 GitHub Pages 公开 PDF，免费；研究级学位论文，不是入门教材，先读绪论与第 2 章基础段。",
+   "publisher": "白天（电子科技大学，导师肖鸣宇）",
+   "evidence": {
+    "url": "https://tianbaics.github.io/Dissertation.pdf",
+    "location": "第 1 章绪论（SETH/集合覆盖猜想背景）与第 2 章 W 层级包含关系段（PDF 抽取文本第 23–24、44 页附近）",
+    "finding": "PDF 文本可抽取：含 FPT 定义、FPT=W[0]⊆W[1]⊆…⊆W[P] 的包含链与 W[t]-完全例子、SETH 与集合覆盖猜想；检索全文“核化”零命中，“细粒度”零命中。"
+   }
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "Parameterized Algorithms（Cygan, Fomin, Kowalik, Lokshtanov, Marx, Pilipczuk, Pilipczuk, Saurabh；Springer 2015，作者站点公开的免费全书 PDF）",
+   "url": "https://www.mimuw.edu.pl/~malcin/book/parameterized-algorithms.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "Part I 基础工具：第 1 章 Introduction（FPT 定义与参数化视角）、第 2 章 Kernelization（2.1 形式定义起，核与 kernelization 的定义与基本构造）、第 5 章 Randomized methods；Part II 进阶算法（第 9 章 advanced kernelization 技术、第 10 章代数技术、第 11 章 treewidth 上 DP 加速、第 12 章 matroids）；Part III 下界：第 13 章 Fixed-parameter intractability（13.1 参数化归约、13.3 The W-hierarchy、13.5 W[1]/W[2]-完全问题）、第 14 章 Lower bounds based on the Exponential-Time Hypothesis（14.1 ETH 的动机与基本结果）、第 15 章 核下界（composition 与 polynomial-parameter transformations，证明 Longest Path 等问题没有多项式核）。",
+   "access": "作者站点免费 PDF 全书（约 100 万字符正文，可下载阅读）；Springer 纸质/电子版需购买。英文。",
+   "publisher": "Marek Cygan 等八人（华沙大学/伯尔尼大学/乌得勒支大学等），Springer-Verlag",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.mimuw.edu.pl/~malcin/book/parameterized-algorithms.pdf",
+    "location": "Preface（Part I/II/III 说明，page 6–8）；Contents（page 11–13）：2 Kernelization / 2.1 Formal definitions，13 Fixed-parameter intractability / 13.1 Parameterized reductions / 13.3 The W-hierarchy / 13.5 Problems complete for W[1] and W[2]，14 Lower bounds based on the Exponential-Time Hypothesis / 14.1 The Exponential-Time Hypothesis，以及 Preface 中“Chapter 15 gives the tools for showing lower bounds for kernelization algorithms … such as Longest Path, do not admit polynomial kernels”",
+    "finding": "打开 PDF 确认目录与前言：第 2 章为 Kernelization 并给出形式定义，第 13 章为参数化不可解性与 W-hierarchy，第 14 章为基于 ETH 的下界，第 15 章为核下界（composition 与多项式参数变换）；前言明说 Part III 讲“the intractability theory of parameterized complexity, lower bounds based on the Exponential Time Hypothesis, and lower bounds on kernels”。旧记录里英文“固定参数可解性与核化”只到 partial（MIT 6.890 只讲参数化问题的指数结构），本书把核化与核下界补齐。"
+   },
+   "added_by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《参数计算导论》（王建新、冯启龙，《信息科学技术学术着作丛书》，科学出版社；中文参数计算专着）",
+   "url": "https://weread.qq.com/web/reader/cbc32e20811e5e442g017eab",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "目录可核到章/节：第 1 章 导引；第 2 章 参数计算简介（2.1 NP 完全理论、2.2 固定参数可解、2.3 固定参数不可解、2.4 固定参数枚举、2.5 参数化方法）；第 3 章 核心化（3.1 NT 定理与基于最大匹配/线性规划的 NT 算法、3.2 皇冠分解、3.3 极值归纳技术、3.4 随机方法、3.5 基于低度点的核心化、3.6 核下界技术：对偶性方法/基于复杂性理论假设的方法/基于参数化规约）；第 4 章 分支搜索法；第 5 章 迭代压缩和局部贪婪；第 6 章 随机参数算法设计技术（含确定化方法与 (n,k)-Universal Set）；第 7 章 彩色编码；第 8 章 平面图参数算法设计技术（8.1 平面图上的核心化技术）。",
+   "access": "需购买（科学出版社纸本，本页所在微信读书版本显示“本书已下架，内容不再支持阅读”，只能看到目录，未购买）；简体中文。",
+   "publisher": "王建新、冯启龙；科学出版社《信息科学技术学术着作丛书》",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://weread.qq.com/web/reader/cbc32e20811e5e442g017eab",
+    "location": "目录：第 2 章「参数计算简介」下的 2.1–2.5；第 3 章「核心化」下的 3.1–3.6（含 3.6 核下界技术）；第 4–8 章标题",
+    "finding": "打开确认目录逐条列出“2.2 固定参数可解”“2.3 固定参数不可解”“核心化13”“3.1 NT 定理”“3.2 皇冠分解”“3.3 极值归纳技术”“3.5 基于低度点的核心化方法”“3.6 核下界技术（3.6.1 对偶性方法 / 3.6.2 基于复杂性理论假设的方法 / 3.6.3 基于参数化规约）”，以及第 4 章分支搜索法、第 6 章随机参数算法设计技术、第 8 章平面图参数算法设计技术。"
+   },
+   "added_by": "review/pi-additions/F.1.6.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "固定参数可解性与核化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "绪论与第 2 章：FPT 定义与参数算法示例（无核化内容）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 2 章 2.2 固定参数可解 / 2.3 固定参数不可解；第 3 章 核心化（3.1 NT 定理、3.2 皇冠分解、3.3 极值归纳、3.4 随机方法、3.5 低度点核心化、3.6 核下界技术）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 13–14 只讲参数化复杂度的层级与下界；FPT 算法设计与核化不在课程内",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "第 2 章 Kernelization（2.1 形式定义及后续构造）、第 9 章 advanced kernelization、第 15 章 核下界",
+     "extent": "covered"
+    }
+   ],
+   "note": "两语言都缺核化（kernelization）：中文论文全文检索无“核化”，MIT 课程 Calendar 无该条目。FPT 概念两侧都有，但“FPT 算法设计（有界搜索树、迭代压缩）”只在中文论文正文以具体问题示范，不是教学章节。；英文侧原来只有 MIT 6.890 的 FPT/参数化指数结构，核化没有被讲到。r7-en1 是参数化算法的标准教材：第 2 章从“核与 kernelization 的形式定义”讲起并给基本构造，第 9 章给进阶核化技术（min-max、概率方法、平面图性质），第 15 章用 composition 与多项式参数变换证明 Longest Path 等问题不存在多项式核。FPT 定义、核化算法与核下界三块齐全，正好补上英文的“固定参数可解性与核化”。；旧中文主材料是一篇博士论文（反馈集问题的参数与精确算法），只能算 FPT 的示例，没有核化。r7-zh1 是中文参数计算专着，第 2 章给固定参数可解/不可解与参数化方法的定义，第 3 章整章讲核心化：NT 定理（最大匹配/线性规划两种算法）、皇冠分解、极值归纳、随机方法、低度点核心化，并以 3.6 节讲核下界（对偶性、复杂性假设、参数化规约）。定义、构造、下界三段都有，中文侧由此覆盖。"
+  },
+  {
+   "topic": "W 层级与 ETH 下界",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第 2 章 W 层级包含关系与 W[t]-完全例子；绪论 ETH/SETH 背景",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "第 2 章 2.3 固定参数不可解；第 3 章 3.6.2 基于复杂性理论假设的方法",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 13 Parameterized Complexity I: W Hierarchy、Session 14 ETH & Planar",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有定义与包含链但没有 ETH 下的具体下界证明；英文两讲有归约与证明。；r7-zh1 的 2.3 节讲固定参数不可解（W 层级一侧），但目录层面看不到 ETH 假设下的下界推导；3.6.2 只把“复杂性理论假设”用于核下界。原中文来源（白天博士论文）第 2 章给出 W 层级包含关系与 W[t]-完全例子、绪论只把 ETH/SETH 作背景点名。两者合起来 W 层级可学，ETH 下界的系统讲授仍缺，故本知识点记 partial 并列入 unresolved。"
+  },
+  {
+   "topic": "条件性复杂度界（SETH/3SUM/APSP）与细粒度归约",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "绪论：SETH 作为精确算法下界背景被点名",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Session 14 讲 ETH（Calendar 无单列 SETH 讲次）",
+     "extent": "partial"
+    },
+    {
+     "source": "en1",
+     "section": "Session 21 3SUM & APSP",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Session 21 3SUM & APSP（细粒度归约）",
+     "extent": "covered"
+    }
+   ],
+   "note": "SETH 两侧都只是提到：中文在绪论背景段，英文课程以 ETH 为主，SETH 未单列。；中文论文没有 3SUM 内容。；中文侧无 APSP 与细粒度归约。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读绪论与第 2 章的 FPT/W 层级基础段建立中文术语，再按需读反馈点集章节看参数算法如何构造"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按第 2 章（2.2 固定参数可解、2.3 固定参数不可解）建立定义，再逐节读第 3 章核心化：先跟 NT 定理的匹配版算法，再看皇冠分解与极值归纳如何处理点覆盖/Packing，最后用 3.6 节的三种方法理解“为什么某些问题没有多项式核”；有余力再做第 4 章分支搜索与第 5 章迭代压缩的例题。"
+    }
+   ],
+   "gaps": [
+    "W 层级与 ETH 下界",
+    "条件性复杂度界（SETH/3SUM/APSP）与细粒度归约"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Session 13（W 层级）→14（ETH 与平面问题）→21（3SUM & APSP）按序看讲义与视频，先补 Session 4–9 的 SAT/平面 SAT 归约作前置"
+    },
+    {
+     "source": "r7-en1",
+     "read": "先读第 1–2 章建立 FPT 与核的定义，并做第 2 章的核化构造练习；跳到第 9 章看进阶核化（min-max/概率方法/平面图），再读第 13 章 13.1–13.5 建立参数化归约与 W 层级，最后读第 14 章（ETH 下界）与第 15 章（核下界、composition），把“算法—不可解—核下界”三条线接起来。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ocw.mit.edu/courses/6-890-.../pages/calendar/ 完整 23 次课表",
+   "result": "采纳：第 13/14/21 讲与三个下界主题对应；确认没有 kernelization/SETH 专讲，据此把两处英文映射降为 partial。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://tianbaics.github.io/Dissertation.pdf 全文检索「核化」「细粒度」「SETH」「W[1]」",
+   "result": "采纳为中文术语来源（FPT/W 层级/SETH 背景）；同时纠正旧条目“读第一章绪论：核化作为预处理和设计工具”——全文没有“核化”二字。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「参数化算法 固定参数可解」",
+   "result": "不合适：返回运筹学大 M 法、参数化建模（CAD）、JMeter 参数化等无关内容，无中文参数化复杂度课程。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.mimuw.edu.pl/~malcin/book/parameterized-algorithms.pdf（Preface 与 Contents）",
+   "result": "采纳为英文主教材：第 2 章 Kernelization（含 2.1 形式定义）、第 13 章 Fixed-parameter intractability（13.3 The W-hierarchy）、第 14 章 ETH 下界、第 15 章核下界；补齐旧记录英文只有 MIT 6.890 的核化缺口。",
+   "by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "参数化算法 中文 教材 图书 出版社 固定参数可解 核化 目录",
+   "result": "采纳《参数计算导论》（王建新、冯启龙，科学出版社）：微信读书页可核到第 2 章固定参数可解/不可解、第 3 章核心化全章（NT 定理、皇冠分解、极值归纳、低度点核心化、核下界）。需购买，未购买。",
+   "by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "参数化算法 核化 固定参数可解 W[1] ETH 讲义 中文 课程 综述",
+   "result": "不合适：返回英文 W Hierarchy 讲解视频、强化学习“参数化策略”、机器学习“参数化学习”与联邦学习论文，均非参数化复杂性教学；另在 sciengine 命中一篇中文《核心化技术》综述（可作参考，未作为覆盖来源）。",
+   "by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "细粒度复杂度 SETH 3SUM APSP 中文 讲义 综述 课程",
+   "result": "不合适：只有 AGI Hunt/知乎对 3SUM、APSP 新论文的科普与英文课程页，没有中文系统讲义；细粒度复杂度中文教学判为未找到，转 fallback。",
+   "by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "vsearch.py bili「参数化算法 固定参数可解 核化 FPT」；tavily site:bilibili.com 参数化算法 核化 固定参数 W[2] ETH 复杂度",
+   "result": "B 站两次检索都无相关课程：vsearch 返回编译原理 Thompson 算法、分离常数、方框图化简、化学配平；site:bilibili.com 只返回 Grasshopper 参数化建模、YOLOv5 参数、XGBoost 超参、分数阶模型参数拟合与一个“施温格参数化”物理视频。可确认 B 站没有中文参数化算法/核化课程。",
+   "by": "review/pi-additions/F.1.6.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文 covers 声称论文第一章讲“核化作为预处理和设计工具”，实际全文检索“核化”零命中，属误读，已改。",
+  "旧条目英文说“SETH 下界只在 ETH 和 3SUM 两讲里顺带提到”，与 Calendar 一致（无 SETH 单列）。",
+  "旧条目说“核化和 FPT 算法设计需另读参数化算法教材”，本次确认中英文两侧都缺，属真实缺口而非仅英文缺。",
+  "granularity 的 note 也提到“核化未核到”，与本次结果一致。",
+  "2026-11-02 主代理：简介括号内改用斜杠，原被拆开的三个片段合并为同一知识点，引用原样保留。",
+  "[review/pi-additions/F.1.6.json] 未解决 zh「W 层级与 ETH 下界」：中文侧只能拼出 W 层级（《参数计算导论》2.3 固定参数不可解＋白天博士论文第 2 章的 W[t]-完全例子），ETH 假设下的下界推导没有可核的中文讲授；目录与检索都没有对应章节，故记 partial。",
+  "合并时去掉了跨语言的引用（应写成跨语言补充）：route zh->en1"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "条件性复杂度界（SETH/3SUM/APSP）与细粒度归约",
+   "source": "en1",
+   "reason": "本轮三个渠道都查过：①文字——Tavily 中文检索“细粒度复杂度 SETH 3SUM APSP 中文 讲义 综述 课程”只得到新论文科普与英文课程页，中文教材《参数计算导论》目录只到参数化算法/核化，没有细粒度一章；②视频——B 站 vsearch 与 site:bilibili.com 检索“参数化算法/核化/复杂度”均无相关课程；③付费——中文图书检索只命中《参数计算导论》（无细粒度章）与维基条目。MIT 6.890（en1）含 SETH/3SUM/APSP 与细粒度归约，故中文侧按 fallback 使用 en1。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "W 层级与 ETH 下界",
+   "source": "en1",
+   "reason": "W 层级在中文侧只有王建新、冯启龙《参数计算导论》2.3 节（付费）与一篇学位论文提及；基于指数时间假设（ETH）的下界没有中文讲授，pi 已查文字、B 站与付费教材三个渠道。整条改读英文主资源，中文《参数计算导论》可作 W 层级部分的对照。",
+   "searched_channels": [
+    "text",
+    "video",
+    "paid"
+   ],
+   "confirmed_by": "review/main-additions/F.1.6.json"
+  }
+ ],
+ "name": "参数化与细粒度复杂度",
+ "description": "固定参数可解性与核化、W 层级与 ETH 下界、条件性复杂度界（SETH/3SUM/APSP）与细粒度归约。",
+ "applied_additions": [
+  "review/pi-additions/F.1.6.json@5de5fd15b9",
+  "review/main-additions/F.1.6.json@244668cd47"
+ ]
+}

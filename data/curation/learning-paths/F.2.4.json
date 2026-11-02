@@ -1,0 +1,333 @@
+{
+ "id": "F.2.4",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CMU 15-414 Bug Catching: Automated Program Verification and Testing（Spring 2021 课程站）",
+   "url": "https://www.cs.cmu.edu/~15414/s21/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Schedule 逐条核对：3/18 SAT Solving、3/23 SAT Encodings、4/1 SMT Solving、4/6 SMT Theories、4/8 SMT Encodings、4/13 SMT Quantifiers；每讲有 pdf 讲义与 live code，课程用 Why3 写机器检查的验证代码。前段（Logical Contracts、Data Structures、Ghosts、Semantics、Dynamic Logic、Loops）建立契约与证明规则基础。",
+   "access": "免费公开课程页与讲义链接，无需注册；录像在 YouTube 频道（页面给出入口）。英文字幕状态未核对。",
+   "publisher": "Carnegie Mellon University（Ruben Martins、Frank Pfenning）",
+   "evidence": {
+    "url": "https://www.cs.cmu.edu/~15414/s21/schedule.html",
+    "location": "Schedule 表 3/18–4/13 各行",
+    "finding": "表内按日期列出 SAT Solving、SAT Encodings、SMT Solving、SMT Theories、SMT Encodings、SMT Quantifiers，每行有 [pdf] 讲义与 live code 链接。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "CMU 15-414 (Fall 2026) Schedule：Resolution / Sequent Calculus / Certificates",
+   "url": "https://www.cs.cmu.edu/~15414/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Fall 2026 课表逐条核对：10/8 Sequent Calculus、10/20 Certificates（可检查证明）、10/22 Resolution（归结）、10/27 Equality and Uninterpreted Functions、10/29 Theory Combination，另有 Contracts、Dynamic Logic、Loops、Induction、Predicate Transformers。补 s21 版没有单列的归结与证书/证明检查。",
+   "access": "免费公开课表与讲义链接，无需注册；讲义 pdf 链接在表内。",
+   "publisher": "Carnegie Mellon University（15-414 教学团队）",
+   "evidence": {
+    "url": "https://www.cs.cmu.edu/~15414/schedule.html",
+    "location": "Fall 2026 schedule 表 10/8、10/20、10/22、10/27、10/29 行",
+    "finding": "表内明确有“Resolution”“Certificates”“Sequent Calculus”“Equality and Uninterpreted Functions”“Theory Combination”五讲，均带 [pdf] 讲义。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "《软件基础》中文版（Logical Foundations 等四卷，Rocq/Coq，译者项目）",
+   "url": "https://rocq-zh.github.io/SF-zh/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第一卷《逻辑基础》：函数式编程、逻辑的基本概念（命题/谓词逻辑、真值表与可满足性概念）、计算机辅助定理证明与 Coq；第四卷《QuickChick：用 Coq 进行基于性质的测试》。书中每处细节都是机器验证的证明脚本，正好对应“证明搜索与可检查证明”的中文材料；但不含 SAT 求解算法、SMT 求解器与归结原理。",
+   "access": "免费在线阅读（HTML 版），无需注册；需安装 Rocq/Coq 才能做练习。",
+   "publisher": "Benjamin C. Pierce 等（UPenn），中文译者项目",
+   "evidence": {
+    "url": "https://rocq-zh.github.io/SF-zh/",
+    "location": "首页对四卷内容的说明段",
+    "finding": "首页写明“每卷书中的所有文本，包括练习，都是一份 Coq 证明助理的证明脚本”，并逐卷说明逻辑基础、编程语言基础、函数式算法验证、QuickChick 性质测试。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "青岛大学《人工智能基础》（中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/QDU-1206502801",
+   "tier": "video",
+   "free": null,
+   "role": "alternative",
+   "covers": "课程七部分含“经典逻辑推理”，简介写“掌握规则演绎系统和产生式系统的推理技术”，但课程大纲栏为空、无分讲标题，不能确认讲归结原理的讲次与深度。",
+   "access": "中国大学MOOC 免费注册后按开放学期学习，认证证书另计；视频与字幕需登录，未核对。",
+   "publisher": "青岛大学 / 中国大学MOOC（高等教育出版社）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/QDU-1206502801",
+    "location": "课程概述段（“通过绪论、盲目搜索、知情搜索、博弈中的搜索、经典逻辑推理、不确定性推理、专家系统七部分内容”）",
+    "finding": "页面只有七部分主题列表与课程简介，没有章节大纲；无法确认“归结原理”是否单列。"
+   },
+   "updated_by": [
+    "review/pi-additions/F.2.4.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《软件分析技术》第 12 讲 布尔可满足性（熊英飞，北京大学，2025 秋课程讲义 PDF）",
+   "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides12_SAT.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "约束求解的问题设定（可满足/给赋值/给不可满足核心）；SAT 的文字、子句、合取范式 CNF 与“寻找使所有子句为真的布尔赋值”的定义；完整搜索与赋值推导（单元传播 Unit Propagation、Unate Propagation）、冲突检测、DPLL 递归过程；预处理中的归结 Resolution（两子句含 x 与 ¬x 时合并消去 x，多子句归结做笛卡尔积）与“早期完全基于归结、不穷举赋值的 DP 算法”；变量选择、Pure literal elimination、等价子句类；CDCL 冲突导向子句学习（切割使决策节点与矛盾节点不连通、回跳）。",
+   "access": "免费 PDF（课程站公开讲义），无需注册；简体中文；面向程序分析的约束求解视角。",
+   "publisher": "熊英飞（北京大学计算机学院副教授），北京大学《软件分析技术》2025 秋",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides12_SAT.pdf",
+    "location": "第 3–5 页「约束求解」与「历史」；第 6 页「SAT 问题：子句集上的约束求解问题」；第 17–19 页「单元传播」「DPLL」「优化3：预处理——归结 Resolution」；第 23 页「CDCL」",
+    "finding": "打开确认正文（中文）：“SAT 问题：子句集上的约束求解问题——给定一组子句，寻找一个布尔赋值，使得所有子句为真”；DPLL 伪代码与“该算法被称为 DPLL，由 Davis, Putnam, Logermann Loveland 在 1962 年代提出”；第 19 页写“归结 Resolution：两个子句分别包括 x 和 ¬x 时，且 x 在其余子句不出现，可以将两个子句合并成一个并删掉 x 和 ¬x”，并给多子句归结的笛卡尔积例子与“早期存在完全基于归结，不穷举赋值的算法（DP 算法）”；第 23 页讲 CDCL“在搜索过程中学习问题的性质，加入约束集合中”。"
+   },
+   "added_by": "review/pi-additions/F.2.4.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "《软件分析技术》第 13 讲 可满足性模理论（熊英飞，北京大学，2025 秋课程讲义 PDF）",
+   "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides13_SMT.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "SMT 的定义（给定一组理论、按给定逻辑求公式在该组理论解释下的可满足性）、理论（theory）与一阶公理；常见理论举例 EUF（等式与未解释函数，含公理与用不动点合并等价类的求解）、算术/线性方程组；Eager 编码成 SAT 的三种问题；Lazy 方法（黑盒组合 SAT 求解器与理论求解器，EUF/线性算术求解器，SAT 与 EUF 交替返回 SAT/UNSAT 的完整示例）；CDCL 复习与“理论指引”的动机（把定理信息回传给 SAT 求解器）。",
+   "access": "免费 PDF（课程站公开讲义），无需注册；简体中文。",
+   "publisher": "熊英飞（北京大学计算机学院副教授），北京大学《软件分析技术》2025 秋",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://xiongyingfei.github.io/SA_new/2025/slides/slides13_SMT.pdf",
+    "location": "第 2–3 页「理论(Theory)」与「可满足性模理论」定义；第 3 页 EUF 公理；第 6–10 页「Eager 方法的问题」「Lazy 方法」与 SAT/EUF 交替示例；第 12 页「复习：CDCL 算法」",
+    "finding": "打开确认正文（中文）：“理论(Theory)：针对一个领域的一组公理”“可满足性模理论：给定一组理论，根据给定逻辑，求在该组理论解释下公式的可满足性”；EUF 公理页；“Lazy 方法：黑盒混合 SAT 求解器和各种理论求解器……输入：属于特定理论的公式组，组内公式属于合取关系”，并给出 SAT 求解器与 EUF 求解器交替返回 SAT/UNSAT 的完整例子。"
+   },
+   "added_by": "review/pi-additions/F.2.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "可满足性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一卷《逻辑基础》：命题逻辑、真值表与可满足性概念",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "「约束求解」与「SAT 问题」定义、CNF、完整搜索/赋值推导/冲突检测、DPLL",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "3/18 SAT Solving、3/23 SAT Encodings",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有逻辑层面的可满足性概念，没有 SAT 求解算法；英文有 SAT 求解与编码两讲。；旧中文材料只有《软件基础》里的命题逻辑与真值表（可满足性概念）。r7-zh1 直接以“布尔可满足性”为题：给 SAT 的问题定义（子句集上求布尔赋值使所有子句为真）、CNF 与子句/文字的定义、朴素穷举、单元传播与 Unate 传播、冲突检测，并给出 DPLL 伪代码与出处，属于可满足性本身的完整入门教学。"
+  },
+  {
+   "topic": "SAT/SMT",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "SAT solver 求解流程：DPLL→预处理（归结、纯文字、等价类）→变量选择→CDCL 子句学习",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "SMT 定义与理论（EUF、算术）、Eager 编码、Lazy 组合（SAT＋理论求解器）、CDCL(T) 动机",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "3/18 SAT Solving、3/23 SAT Encodings、4/1 SMT Solving、4/6 SMT Theories、4/8 SMT Encodings、4/13 SMT Quantifiers",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "10/27 Equality and Uninterpreted Functions、10/29 Theory Combination",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧完全没有 SAT/SMT 求解器内容（B 站检索“SAT求解器”“SMT 求解器 课程”无对口结果）。；“SAT/SMT”一半是 SAT 求解器怎么工作：r7-zh1 讲了约束求解器的输出约定（可满足/赋值/不可满足核心）、DPLL 的递归框架与三类优化（赋值推导、预处理、变量选择），以及 CDCL 的核心（用切割把决策节点与矛盾节点分开、学习新子句并回跳）。与 r7-zh2 的 SMT 部分合起来覆盖 SAT/SMT。；SMT 一半由 r7-zh2 覆盖：先给“给定一组理论求公式在该理论解释下可满足性”的定义与 EUF/线性算术两个典型理论，再比较 Eager（把理论编码成 SAT）与 Lazy（黑盒组合 SAT 求解器与理论求解器）两条路线，并用 SAT 与 EUF 交替返回 SAT/UNSAT 的例子走通流程，最后以 CDCL 复习引到“能否让理论指引搜索”。这正是从 SAT 到 SMT 的入门路径。"
+  },
+  {
+   "topic": "归结",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "课程概述“经典逻辑推理”一部分（无分讲大纲，无法确认为归结原理）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "「优化3：预处理」中的归结 Resolution（含多子句归结）与基于归结的 DP 算法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "10/22 Resolution（配 10/8 Sequent Calculus）",
+     "extent": "covered"
+    }
+   ],
+   "note": "英文有专门的 Resolution 讲次；中文只能指向 AI 课的“经典逻辑推理”，未核到归结原理的具体讲次。；旧中文只有青岛大学 AI 课“经典逻辑推理”一段，无法确认讲归结。r7-zh1 明确给出归结规则：“两个子句分别包括 x 和 ¬x 时，且 x 在其余子句不出现，可以将两个子句合并成一个并删掉 x 和 ¬x”，并给 {1,2,−3}+{4,3}⇒{1,2,4} 的例子、多子句归结的笛卡尔积例子，以及“早期存在完全基于归结，不穷举赋值的算法（DP 算法），但速度通常显着落后于 DPLL”。规则、例子、与 DPLL 的对比都在，故记 covered。"
+  },
+  {
+   "topic": "证明搜索与可检查证明",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一卷《逻辑基础》计算机辅助定理证明与 Coq；第四卷 QuickChick",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "全课程用 Why3 写机器检查的验证代码（assignments 与 live code）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "10/20 Certificates（可检查证书）、10/8 Sequent Calculus",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "第一卷《逻辑基础》从头做练习（装 Coq），把命题/谓词逻辑与机器检查证明走通"
+    },
+    {
+     "source": "zh2",
+     "read": "读“经典逻辑推理”一段补归结推理的直觉（深度未核）"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读第 3–6 页把约束求解的输出约定与 SAT/CNF 定义弄清；再手推第 15–17 页的赋值推导与单元传播；照第 18 页伪码实现一个 DPLL；然后读第 19 页归结规则并做两道多子句归结题，理解为什么纯归结的 DP 算法慢；最后读第 23 页起的 CDCL，能画出“切割决策节点与矛盾节点”的学习子句与回跳层级。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读第 2–3 页 SMT 与理论的定义、EUF 公理；比较 Eager 与 Lazy 两条路线的问题；跟第 9 页 SAT＋EUF 交替求解的例子走一遍（哪一步 SAT 返回 SAT、哪一步 EUF 返回 UNSAT、新子句怎么加回）；最后读 CDCL 复习页，说明 DPLL(T) 需要理论求解器向 SAT 回传什么信息。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "先读前段契约/语义/Dynamic Logic 建立证明规则，再学 3/18–3/23 SAT 与 4/1–4/13 SMT 六讲，做对应 assignment"
+    },
+    {
+     "source": "en2",
+     "read": "补 10/22 Resolution、10/8 Sequent Calculus、10/20 Certificates，以及 10/27–10/29 的 EUF 与理论组合"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.cs.cmu.edu/~15414/s21/schedule.html 与 https://www.cs.cmu.edu/~15414/schedule.html（Fall 2026）",
+   "result": "采纳：s21 有 SAT/SMT 六讲，f26 有 Resolution/Certificates/Theory Combination；两版合起来覆盖四个知识项。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://rocq-zh.github.io/SF-zh/ 四卷说明",
+   "result": "采纳为中文主材料：逻辑基础＋机器检查证明对应“证明搜索与可检查证明”，但没有 SAT/SMT。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B 站搜索「SAT求解器」「SMT 求解器 课程」「归结原理」",
+   "result": "不合适：返回 SAT 考试（美国高考）、求解器游戏外挂、运筹学大 M 法等无关内容，没有中文 SAT/SMT 课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.icourse163.org/course/QDU-1206502801（青岛大学《人工智能基础》）",
+   "result": "部分采纳：七部分里有“经典逻辑推理”，可作归结的中文入口，但无大纲、未核到归结原理讲次。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文付费教材/课程（出版社、图灵/人邮/机工、中国大学MOOC 认证课）",
+   "result": "本次未取到可核的中文付费条目（未购买、未打开书页），故不作为中文覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "SAT 求解器 CDCL DPLL SMT 中文 讲义 课程 约束求解 教学",
+   "result": "命中北大熊英飞《软件分析》旧课件链接（xiongyingfei.github.io/SA/2020/12_SAT.pdf）与中科院软件所“从 SAT 到 SMT”新闻稿；前者 2020 年 PDF 已随站点改版下线（404），沿课程站找到 2025 秋现行讲义并采纳。",
+   "by": "review/pi-additions/F.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://xiongyingfei.github.io/courses.html → /SA_new/2025/lectures.html → slides/slides12_SAT.pdf、slides13_SMT.pdf",
+   "result": "采纳：课程站课程内容明写“基于约束求解的程序分析（SAT、SMT、符号执行等）”，讲义页列出「布尔可满足性」「可满足性模理论」两讲；两份 PDF 均为中文，含 SAT/CNF/DPLL/归结 Resolution/CDCL 与 SMT/EUF/Lazy 方法。",
+   "by": "review/pi-additions/F.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "归结原理 完备性 自动推理 中文 讲义 数理逻辑 课程 归结反演",
+   "result": "不合适：维基/百度百科“归结原理/归结反演系统”、北大林作铨数理逻辑讲义（链接 404）、南京某数理逻辑讲义（正文无“归结”）；最终由北大 SAT 讲义第 19 页覆盖归结规则与例子。",
+   "by": "review/pi-additions/F.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "人工智能 归结原理 子句集 合一 归结反演 课件 pdf 大学 课程；site:higher.smartedu.cn 人工智能 归结 推理 课程大纲",
+   "result": "不合适：CSDN 实验报告、中国大学MOOC 考研冲刺课的分讲（置换与合一/子句集/归结原理/归结反演，属应试速成）、智慧高教多门 AI 课大纲只写“经典逻辑推理”没有归结条目；未采纳为覆盖来源。",
+   "by": "review/pi-additions/F.2.4.json"
+  }
+ ],
+ "findings": [
+  "旧条目中文只写《软件基础》中文版，且与 F.3.2/F.3.3 完全同一段 covers；本文件把它的作用限定在“逻辑与机器检查证明”，并明确 SAT/SMT/归结不在其中。",
+  "旧条目英文写 15-414 s21“含 SAT Solving、SAT Encodings、SMT Solving、SMT Theories、SMT Encodings 五讲”，实际还有 4/13 SMT Quantifiers，共六讲；另发现 Fall 2026 版有单列的 Resolution 与 Certificates 讲次，正好补“归结”。",
+  "中文侧 SAT/SMT 是真实缺口，已按三渠道（文字/视频/付费未找到）记录。"
+ ],
+ "cross_language_fallbacks": [],
+ "name": "计算逻辑与自动定理证明",
+ "description": "可满足性、SAT/SMT、归结、证明搜索与可检查证明。",
+ "applied_additions": [
+  "review/pi-additions/F.2.4.json@f58489e275"
+ ]
+}
