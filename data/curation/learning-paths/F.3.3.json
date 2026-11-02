@@ -93,6 +93,46 @@
     "finding": "官方目录分别列出系统状态建模和状态空间爆炸、LTL与CTL语法语义以及检验算法。"
    },
    "added_by": "review/verified-additions/F.3.3.json"
+  },
+  {
+   "key": "video-zh-ios-fm",
+   "lang": "zh",
+   "title": "中国科学院软件研究所《形式化方法》课程讲义（张文辉）：Kripke 结构、迁移系统、线性/分支时序逻辑、模型检测方法",
+   "url": "http://lcs.ios.ac.cn/~zwh/fm/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程按讲公开 PDF：lec02 Kripke 结构、lec03 公平 Kripke 结构、lec04 基于一阶逻辑的迁移系统、lec05–06 迁移系统模型、lec07–08 线性时序逻辑（LTL）、lec09 分支时序逻辑（CTL）、lec10–12 演绎验证、lec13 模型检测方法（符号模型、CTL/LTL 模型检测、显式/符号/限界模型检测）。覆盖状态空间建模（Kripke/迁移系统）、LTL/CTL 语法语义、模型检测算法与状态空间爆炸相关方法。",
+   "access": "中国科学院软件研究所教师主页公开的课程 PDF，免费、无需注册；中文正文（标题与术语中英混排），无视频/字幕问题。",
+   "publisher": "张文辉（中国科学院软件研究所，计算机科学国家重点实验室）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://lcs.ios.ac.cn/~zwh/fm/lec13.pdf",
+    "location": "lec13 第 4–6 页：Kripke 结构、卫式迁移/流程图/结构化程序模型、显式状态模型检测、符号与限界模型检测；第 6 页起 CTL/LTL 模型检测方法",
+    "finding": "实际抽取 lec13：正文写「模型检测方法」「Kripke 结构」「显式状态模型检测」「符号与限界模型检测」「CTL 模型检测方法」「LTL 模型检测方法」，并给出符号模型与标号 Kripke 模型的对应；不是课程介绍或目录页。另打开 lec02（Kripke Structures）、lec04（基于一阶逻辑的迁移系统）、lec07（Linear Temporal Logic）、lec09（Branching Time Temporal Logics），确认各讲正文存在。"
+   },
+   "added_by": "review/video-math-additions/F.3.3.json"
+  },
+  {
+   "key": "video-zh-ios-fm-index",
+   "lang": "zh",
+   "title": "中国科学院软件研究所《形式化方法》课程主页（张文辉）：讲次目录与讲义下载",
+   "url": "http://lcs.ios.ac.cn/~zwh/fm/index.htm",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "课程目录：形式化模型（Kripke 结构、公平 Kripke 结构、迁移系统）、时序逻辑（线性时序逻辑 I/II、分支时序逻辑）、演绎验证、模型检测方法与课程总结；附习题与习题解答。",
+   "access": "课程主页免费公开，中文；讲义为 PDF，可直接下载。",
+   "publisher": "张文辉（中国科学院软件研究所）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://lcs.ios.ac.cn/~zwh/fm/",
+    "location": "课程主页「2 形式化模型」「3 时序逻辑」「5 模型检测方法与课程总结」列表：lec02–lec09、lec13 及 exercise.pdf",
+    "finding": "实际打开课程主页，看到 lec02 Kripke 结构、lec04 一般迁移系统模型、lec05–06 迁移系统模型、lec07–08 线性时序逻辑、lec09 分支时序逻辑、lec13 模型检测方法＋课程总结，以及习题与解答链接。"
+   },
+   "added_by": "review/video-math-additions/F.3.3.json"
   }
  ],
  "topics": [
@@ -180,6 +220,11 @@
      "source": "verified-zh1",
      "section": "第2章系统建模与状态空间；第5–6章LTL/CTL及模型检验",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-ios-fm",
+     "section": "lec02 Kripke 结构；lec04–06 迁移系统模型；lec07–08 线性时序逻辑；lec09 分支时序逻辑；lec13 模型检测方法（符号模型、CTL/LTL 模型检测、显式/符号/限界模型检测）",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -189,7 +234,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文侧完全没有 LTL/CTL 与模型检查材料（B 站搜索“模型检测 时序逻辑”只返回数字电路时序逻辑）。；中文侧本轮没找到 LTL/CTL 与状态空间搜索（模型检查）的教学正文：中国大学MOOC 与智慧高教检索到的“时序逻辑”全是数字电路的时序逻辑电路，B 站检索同样只返回电路与统计检验内容，中文教材也没有可核目录。故按 fallback 使用英文 en1 的模型检查讲次，中文仍记 partial 并列入 unresolved。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
+   "note": "中文侧完全没有 LTL/CTL 与模型检查材料（B 站搜索“模型检测 时序逻辑”只返回数字电路时序逻辑）。；中文侧本轮没找到 LTL/CTL 与状态空间搜索（模型检查）的教学正文：中国大学MOOC 与智慧高教检索到的“时序逻辑”全是数字电路的时序逻辑电路，B 站检索同样只返回电路与统计检验内容，中文教材也没有可核目录。故按 fallback 使用英文 en1 的模型检查讲次，中文仍记 partial 并列入 unresolved。；补充到同语言教学材料；按所列章节与现有主课组合学习。；现有中文只有付费的 Baier、Katoen《模型检验原理》中译本（verified-zh1）把状态空间、LTL/CTL 与模型检验算法串起来；免费中文的《软件基础》只讲 Hoare 逻辑，抽象解释讲义也不讲时序逻辑。中科院软件所这套课程讲义从 Kripke 结构与迁移系统（状态空间的形式模型）讲到 LTL/CTL 的语法语义，再到符号模型、CTL/LTL 模型检测与限界模型检测，正好覆盖该知识项的全部概念，并可与现有中文 Hoare/抽象解释材料组合，不再依赖付费译本。"
   }
  ],
  "routes": {
@@ -205,8 +250,16 @@
      "read": "读第 5 讲：先用区间分析手算一个循环的上界，说明为什么会不收敛；再写清 widening/narrowing 各降低/恢复什么；然后把伽罗瓦连接的四条性质（α、γ 单调，γ∘α 放大、α∘γ 缩小）逐条证一遍；最后用“执行踪迹集合→分析结果”的 α、γ 说明一个数据流分析为什么安全，并区分安全抽象、最佳抽象与精确抽象。"
     },
     {
-     "source": "verified-zh1",
-     "read": "先读第2章迁移系统及状态空间，再读第5章LTL与第6章CTL；画小系统的状态图并验证安全性与活性。"
+     "source": "video-zh-ios-fm",
+     "read": "先读 lec02 Kripke 结构与 lec04–06 迁移系统模型，写出一个小并发系统的状态图、初始状态与迁移关系。"
+    },
+    {
+     "source": "video-zh-ios-fm",
+     "read": "读 lec07–08 线性时序逻辑：LTL 语法、路径语义、常用等价；再用 lec09 学 CTL 的分支时间语义，比较 LTL 与 CTL 的表达能力。"
+    },
+    {
+     "source": "video-zh-ios-fm",
+     "read": "读 lec13 模型检测方法：符号模型与 Kripke 结构的对应、CTL 标号算法、LTL 的自动机/表法方法、显式/符号/限界模型检测的适用场景；做 exercise.pdf 中的状态空间与时序逻辑题。"
     }
    ],
    "gaps": []
@@ -306,6 +359,30 @@
    "query_or_url": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=08452701",
    "result": "官方目录分别列出系统状态建模和状态空间爆炸、LTL与CTL语法语义以及检验算法。",
    "by": "review/verified-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili-search",
+   "query_or_url": "模型检验 时序逻辑 LTL CTL；模型检测 课程 中文；线性时序逻辑 课程",
+   "result": "搜到「模型检测原理」112 讲（分 P 标题含转换系统、LTL、CTL、CTL*、公平性、安全性/活性）与若干单讲；未把无机构署名的转载课当唯一证据，改用可核讲次与 PDF 正文的中科院课程。",
+   "by": "review/video-math-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "模型检测 课件 LTL CTL 中科院 软件所 课程",
+   "result": "采纳中科院软件所张文辉《形式化方法》课程主页与 lec02–lec13；lec13 正文确认模型检测方法、符号模型、CTL/LTL 模型检测。",
+   "by": "review/video-math-additions/F.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "http://lcs.ios.ac.cn/~zwh/fm/lec13.pdf；lec02.pdf；lec04.pdf；lec07.pdf；lec09.pdf",
+   "result": "逐讲抽取正文：lec13 有模型检测方法与状态空间；lec02/04 有 Kripke/迁移系统；lec07/09 有 LTL/CTL。确认是中文大学课程讲义，不是课程简介。",
+   "by": "review/video-math-additions/F.3.3.json"
   }
  ],
  "findings": [
@@ -320,6 +397,7 @@
  "description": "契约、Hoare逻辑、不变式、抽象解释、时序逻辑与状态空间。",
  "applied_additions": [
   "review/pi-additions/F.3.3.json@0997a35f0e",
-  "review/verified-additions/F.3.3.json@288232a701"
+  "review/verified-additions/F.3.3.json@288232a701",
+  "review/video-math-additions/F.3.3.json@9761e49886"
  ]
 }

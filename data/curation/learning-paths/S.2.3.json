@@ -62,7 +62,7 @@
    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=53531",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "12 章：分析环境与逆向工具、Dalvik 字节码、APK/DEX/ARSC/META-INF 格式、静态与动态分析、Hook 与注入（含绕过 SSL Pinning）、软件保护（混淆/完整性校验/反调试/Root 检测）、软件壳。偏逆向与加固，不含设备身份（Keystore/生物识别/attestation）与测试标准。",
    "access": "出版社商品页与完整目录可核，全文需购买；核实时页面显示无库存。未购买。",
    "publisher": "电子工业出版社 / 丰生强",
@@ -82,7 +82,7 @@
    "url": "https://source.android.com/docs/security/app-sandbox?hl=zh-cn",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "移动平台沙箱的内核实现：每个应用分配唯一 UID 并在自己进程中运行，内核用 Linux UID/GID 实现内核级应用沙盒，默认应用之间不能互相交互；保护机制的演进（Android 5.0 SELinux 提供 MAC 隔离系统与应用；6.0 跨用户边界隔离并把应用家目录默认权限由 751 改 700；8.0 全部应用跑 seccomp-bpf 系统调用过滤；9.0 targetSdk≥28 的非特权应用各自独立 SELinux 沙盒；10.0 过滤外部存储视图）；共享文件的正确做法（ContentProvider、MediaStore）与“把应用数据设为所有人可读”为何危险。",
    "access": "免费中文文档（AOSP 官方站点简体中文），无需注册；无视频；面向平台开发者/ROM 维护者，术语偏底层。",
    "publisher": "Google / Android Open Source Project（官方文档中文版）",
@@ -298,14 +298,6 @@
      "read": "先读 Android 开发基础与 APK 结构，能在 Manifest 里指出组件与权限声明，再用逆向条目做一次静态分析。"
     },
     {
-     "source": "zh2",
-     "read": "跟 Android 安全实践单元做一遍环境搭建、抓包与简单 Hook，记录每一步的观察点。"
-    },
-    {
-     "source": "zh3",
-     "read": "需要系统化时按第3–4章补文件格式，第10–12章补 Hook/加固/脱壳；设备身份与测试标准仍缺。"
-    },
-    {
      "source": "r7-zh1",
      "read": "读《应用沙盒》，画一条从 UID/DAC 基线到 SELinux MAC、再加 seccomp-bpf 的隔离叠加图，并回答：为什么“共享同一内核”的沙箱一旦内核有漏洞就可能整体失守？再写出跨应用共享数据的两种正确做法与一种错误做法。"
     },
@@ -320,10 +312,6 @@
     {
      "source": "r7-zh4",
      "read": "读《网络安全配置》，为一个真实 App 写一份 network_security_config：生产环境只信任指定 CA、关闭明文流量、debug 构建用 debug-overrides 加载用户证书，然后说明这样配置能挡住哪类中间人攻击、挡不住哪类（如应用层证书固定被绕过）。"
-    },
-    {
-     "source": "zh3",
-     "read": "以《Android 软件安全权威指南》为主线，按 APK 结构 → 静态分析 → 动态调试 → Hook 注入 → 加固与对抗的顺序学，配合 AOSP 中文安全文档理解沙盒、密钥库与文件级加密。"
     },
     {
      "source": "main-zh-tm",

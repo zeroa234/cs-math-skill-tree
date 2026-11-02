@@ -45,7 +45,7 @@
    "url": "https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "作者官方书页：第12章 计算学习理论（PAC、VC 维、泛化界、稳定性）、第14章 概率图模型（HMM、MRF、CRF）；南瓜书是它的配套推导。",
    "access": "付费纸书（ISBN 978-7-302-206853-6，425 页），作者页提供目录与样章，未标价、未购买、无免费全文。",
    "publisher": "清华大学出版社 / 周志华",
@@ -126,6 +126,25 @@
     "finding": "Opened English正文; discusses covariate/label/concept shift, assumptions, importance weights and deployment feedback."
    },
    "added_by": "review/ai-additions/A.2.2.json"
+  },
+  {
+   "key": "video-zh-ntu-theory",
+   "lang": "zh",
+   "title": "林轩田：机器学习基石（台大官方中文授课与公开视频）",
+   "url": "https://www.csie.ntu.edu.tw/~htlin/course/ml20fall/",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "官方页面明确Language: Mandarin teaching with English slides，提供泛化理论YouTube分讲、VC维及风险/误差讲次和作业；不是把英文课件当中文正文。",
+   "access": "官方标注中文授课、英文课件；课程页有公开视频入口与习题，未逐集播放或核字幕，2020现场screencast可能另有登录条件。使用页面公开的suggested watching。",
+   "publisher": "台湾大学 林轩田",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.csie.ntu.edu.tw/~htlin/course/ml20fall/",
+    "location": "9/29可学习性，10/6–10/9泛化理论，10/13 VC dimension，10/16 noise/error；课程指定的YouTube视频",
+    "finding": "官方页面明确Language: Mandarin teaching with English slides，提供泛化理论YouTube分讲、VC维及风险/误差讲次和作业；不是把英文课件当中文正文。"
+   },
+   "added_by": "review/video-main-additions/A.2.2.json"
   }
  ],
  "topics": [
@@ -142,6 +161,11 @@
      "source": "zh2",
      "section": "第12章 计算学习理论（经验误差与泛化误差）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-ntu-theory",
+     "section": "可学习性与泛化单元的Ein/Eout，noise and error及后续学习原则",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -151,7 +175,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有公式推导，缺独立讲授。"
+   "note": "中文只有公式推导，缺独立讲授。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "PAC/VC",
@@ -166,6 +190,11 @@
      "source": "zh2",
      "section": "第12章 计算学习理论（PAC 学习、VC 维）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-ntu-theory",
+     "section": "how can machines learn? 之前的learnability、growth function、break point、generalization与VC dimension单元",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -175,7 +204,7 @@
      "extent": "covered"
     }
    ],
-   "note": ""
+   "note": "本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "稳定性",
@@ -246,10 +275,6 @@
    "status": "complete",
    "steps": [
     {
-     "source": "zh2",
-     "read": "以《机器学习》第12章为主线读 PAC 学习、VC 维与泛化界，再用南瓜书核对推导。"
-    },
-    {
      "source": "zh1",
      "read": "以西瓜书第12章为主线，逐节用南瓜书核对 PAC、VC 维与泛化界的推导。"
     },
@@ -260,6 +285,10 @@
     {
      "source": "fix-zh-shift",
      "read": "复习zh2第2章偏差方差，再读4.9并实现分布判别与重要性加权，记录所需假设。"
+    },
+    {
+     "source": "video-zh-ntu-theory",
+     "read": "先看可学习性与泛化理论公开分讲，再学VC维；区分训练误差与泛化误差，并说明置信度、样本量与假设空间大小的关系。"
     }
    ],
    "gaps": []
@@ -325,6 +354,14 @@
    "result": "两种语言正文均打开；以现有偏差方差材料加本章补复合知识项。",
    "query_or_url": "D2L 环境和分布偏移 / Environment and Distribution Shift",
    "by": "review/ai-additions/A.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "web",
+   "query_or_url": "https://www.csie.ntu.edu.tw/~htlin/course/ml20fall/",
+   "result": "官方页面明确Language: Mandarin teaching with English slides，提供泛化理论YouTube分讲、VC维及风险/误差讲次和作业；不是把英文课件当中文正文。",
+   "by": "review/video-main-additions/A.2.2.json"
   }
  ],
  "findings": [
@@ -334,6 +371,7 @@
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/ai-additions/A.2.2.json"
+  "review/ai-additions/A.2.2.json",
+  "review/video-main-additions/A.2.2.json@c24c6fd616"
  ]
 }

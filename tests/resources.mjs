@@ -47,6 +47,16 @@ try {
     assert(links.every(l => l.target === "_blank" && l.rel.includes("noopener") && l.rel.includes("noreferrer")));
     assert.equal(await page.locator(".res-heading", { hasText: "中文资源" }).count(), s.zhAlt ? 1 : 0, s.id);
     if (!s.zhAlt) assert.match(await page.locator(".learning-resources .pending").innerText(), /暂未找到/);
+    const routes = page.locator(".learning-route");
+    assert.equal(await routes.count(), 2, `${s.id}: both language routes must render`);
+    for (const [index, lang] of ["zh", "en"].entries()) {
+      const expected = s.learningPath.routes[lang];
+      const route = routes.nth(index);
+      assert((await route.locator("summary").first().innerText()).includes(`免费已核 ${expected.freeCovered}/${expected.total}`), `${s.id}/${lang}: misleading free coverage`);
+      const text = await route.textContent();
+      if (expected.paidTopics.length) assert(text.includes(`当前需付费补读：${expected.paidTopics.join("、")}`));
+      if (expected.accessPendingTopics.length) assert(text.includes(`费用或回放条件待核：${expected.accessPendingTopics.join("、")}`));
+    }
   }
   await page.evaluate(() => { location.hash = "skill/P.5.3"; });
   await page.waitForFunction(() => document.querySelector(".extra-resources"));
@@ -54,6 +64,12 @@ try {
   await page.setViewportSize({ width: 390, height: 844 });
   assert(await page.locator(".extra-resources").getAttribute("open") !== null);
   assert(!(await page.locator(".learning-resources").evaluate(e => e.scrollWidth > e.clientWidth + 1)));
+  for (const id of ["P.1.1", "P.4.1"]) {
+    await page.evaluate(id => { location.hash = `skill/${id}`; }, id);
+    await page.waitForFunction(name => document.querySelector(".p-title")?.textContent === name, byId.get(id).name);
+    await page.locator(".coverage-details").evaluate(e => { e.open = true; });
+    assert(!(await page.locator(".learning-paths").evaluate(e => e.scrollWidth > e.clientWidth + 1)), `${id}: chapter table overflows at 390px`);
+  }
   // Pick examples from the data so the checks follow resource changes instead of hard-coded skills.
   const cards = s => [s.resource, s.zhAlt].filter(Boolean);
   const conditional = data.skills.filter(s => cards(s).some(r => r.free === null)).map(s => s.id);

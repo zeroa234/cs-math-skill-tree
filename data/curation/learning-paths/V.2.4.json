@@ -45,7 +45,7 @@
    "url": "https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "第1章 VR 技术概论：1.1 定义、1.2 特性（1.2.1 沉浸性、1.2.2 交互性、1.2.3 想象性）、1.3 虚拟现实与增强现实/混合现实；第2章 VR 系统硬件设备：2.1 感知设备（视觉/听觉/触觉/嗅觉）、2.2 基于自然的交互设备（三维控制器、数据手套、体感交互、语音交互、触觉交互）、2.3 三维定位跟踪设备（2.3.1 电磁跟踪、2.3.4 机械跟踪、2.3.5 惯性位置跟踪）、2.4 虚拟世界生成设备；第3章 相关技术：3.1 立体显示技术（彩色眼镜/偏振/串行/裸眼/全息）、3.2 环境建模、3.3 真实感实时绘制、3.4 三维虚拟声音、3.5 自然交互与传感技术（手势、表情、眼动跟踪、触觉反馈、定位跟踪）、3.6 碰撞检测、3.7 数据传输（5G/蓝牙/WiFi）；第4章 建模软件与开发引擎（3ds Max/Maya/C4D/RealityCapture、Unity/Unreal/VRPlatform）；第5章 全景技术；第6章 Unity 3D 开发基础与 VR/AR 应用案例。",
    "access": "付费教材（北京邮电大学出版社，2021-03-04，版次 1-6；出版社页面未列出定价与 ISBN，需在书店核实）；中文；本轮只读官方目录与内容简介，未购买正文。",
    "publisher": "北京邮电大学出版社（胡小强 编着）",
@@ -83,7 +83,7 @@
    "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/develop/unity/tutorials/mr-learning-sharing-01",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "教程 1 简介给出环境与版本前提（Unity 2020 LTS、MRTK 2.7）；教程 2「设置 Photon Unity 网络」逐屏讲导入 PUN 2、创建 Photon 应用（PUN 类型）、把 AppId 填进 PUN 向导；教程 3「连接多个用户」配置 PhotonUser prefab 并部署到 HoloLens，验证「多个用户连接到同一体验并看到彼此移动」；教程 4「与多名用户共享对象移动」把对象运动状态跨设备同步。",
    "access": "微软官方文档，免费，中文为官方本地化页面（页面有「使用英语阅读」切换）；需 Unity、MRTK 与 Photon 账号（免费额度）才能动手；不含共享空间锚点与社会存在/协作行为研究。",
    "publisher": "Microsoft（Microsoft Learn，混合现实开发文档）",
@@ -151,6 +151,82 @@
     "finding": "确认存在一本中文的 VR 交互研究专着，且把「原型设计与评估」列为章级内容；但简介没有逐章节标题，无法据此判断是否讲存在感/晕动测量，故只作 reference 不当覆盖依据。"
    },
    "added_by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "key": "video-zh-xr-mapping",
+   "lang": "zh",
+   "title": "Microsoft：空间映射与虚实融合设计（中文教学正文）",
+   "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/spatial-mapping",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实际中文正文解释表面网格如何使虚物与现实表面发生放置、遮挡及碰撞，包含流程、使用场景和原型验证。",
+   "access": "官方中文本地化正文免费；部分翻译生硬。内嵌演示的语音/字幕未核；实践可用仿真器，真实硬件另有成本。",
+   "publisher": "Microsoft Mixed Reality",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/spatial-mapping",
+    "location": "概念概述、放置、遮挡、物理/导航、观察程序、环境扫描体验与调试",
+    "finding": "实际中文正文解释表面网格如何使虚物与现实表面发生放置、遮挡及碰撞，包含流程、使用场景和原型验证。"
+   },
+   "added_by": "review/video-main-additions/V.2.4.json"
+  },
+  {
+   "key": "video-zh-xr-coordinates",
+   "lang": "zh",
+   "title": "Microsoft：混合现实坐标系与6DOF跟踪",
+   "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/coordinate-systems",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "公开中文正文按设备空间坐标和6DOF解释跟踪能力、定位点、房间/世界规模；配既有Unity XR输入与追踪材料。",
+   "access": "官方免费中文本地化正文；这里学坐标与跟踪模型，不替代机器人SLAM的算法推导；HoloLens为经典设备背景。",
+   "publisher": "Microsoft Mixed Reality",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/coordinate-systems",
+    "location": "空间坐标系、体验规模、6DOF、定位点与参考框架",
+    "finding": "公开中文正文按设备空间坐标和6DOF解释跟踪能力、定位点、房间/世界规模；配既有Unity XR输入与追踪材料。"
+   },
+   "added_by": "review/video-main-additions/V.2.4.json"
+  },
+  {
+   "key": "video-zh-xr-frame",
+   "lang": "zh",
+   "title": "Microsoft：全息帧与空间界面设计",
+   "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/holographic-frame",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实际中文正文讨论空间布局、注意引导、与对象绑定的菜单和避免头锁定界面，并有案例。",
+   "access": "官方免费中文本地化正文；少量机器翻译词汇需结合图示理解。",
+   "publisher": "Microsoft Mixed Reality",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/holographic-frame",
+    "location": "针对内容设计、注意提示、命令/导航/菜单、凝视和目标",
+    "finding": "实际中文正文讨论空间布局、注意引导、与对象绑定的菜单和避免头锁定界面，并有案例。"
+   },
+   "added_by": "review/video-main-additions/V.2.4.json"
+  },
+  {
+   "key": "video-zh-xr-gaze",
+   "lang": "zh",
+   "title": "Microsoft：凝视并提交（交互模型与实践）",
+   "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/gaze-and-commit",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "正文给头部和眼动视线向量、射线相交选取、视觉反馈及提交方式，补空间界面的具体交互。",
+   "access": "官方免费中文本地化正文；演示视频字幕未核，覆盖判断依文字与图示。",
+   "publisher": "Microsoft Mixed Reality",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/gaze-and-commit",
+    "location": "头部/眼动跟踪、光标、提交方式与应用场景",
+    "finding": "正文给头部和眼动视线向量、射线相交选取、视觉反馈及提交方式，补空间界面的具体交互。"
+   },
+   "added_by": "review/video-main-additions/V.2.4.json"
   }
  ],
  "topics": [
@@ -167,6 +243,11 @@
      "source": "r7-zh1",
      "section": "1.3 虚拟现实与增强现实、混合现实；1.2 特性（沉浸性/交互性/想象性）；3.1 立体显示技术（彩色眼镜、偏振光、串行式、裸眼立体、全息）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-xr-mapping",
+     "section": "表面观察程序、世界锁定坐标、放置/遮挡/物理/导航与扫描体验",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -176,7 +257,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有引擎接入，没有显示光学、透视式 HMD 的标定与虚实对齐原理。；教材先把 VR/AR/MR 的关系讲清，再用一章讲立体显示与全息等显示技术，正是「虚实融合」在显示侧的原理，而不是引擎接入配置；中文侧首次有了教材级依据。"
+   "note": "中文只有引擎接入，没有显示光学、透视式 HMD 的标定与虚实对齐原理。；教材先把 VR/AR/MR 的关系讲清，再用一章讲立体显示与全息等显示技术，正是「虚实融合」在显示侧的原理，而不是引擎接入配置；中文侧首次有了教材级依据。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "追踪",
@@ -191,6 +272,11 @@
      "source": "r7-zh1",
      "section": "2.3 三维定位跟踪设备（2.3.1 电磁跟踪系统、2.3.4 机械跟踪系统、2.3.5 惯性位置跟踪系统）＋3.5.6 定位跟踪技术",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-xr-coordinates",
+     "section": "空间坐标系、6DOF、参考框架与空间定位点；配既有Unity XR追踪输入",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -200,7 +286,7 @@
      "extent": "covered"
     }
    ],
-   "note": "按电磁/机械/惯性三类跟踪原理分别成节，后面自然交互一章还有定位跟踪与眼动跟踪，覆盖「追踪」这条必学点（原理层面，未涉及具体 SDK 的延迟测量实验）。"
+   "note": "按电磁/机械/惯性三类跟踪原理分别成节，后面自然交互一章还有定位跟踪与眼动跟踪，覆盖「追踪」这条必学点（原理层面，未涉及具体 SDK 的延迟测量实验）。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "空间界面",
@@ -215,6 +301,16 @@
      "source": "r7-zh1",
      "section": "2.2 基于自然的交互设备（三维控制器、数据手套、体感交互、语音交互、触觉交互）＋3.5 自然交互与传感技术（手势识别、面部表情、眼动跟踪、触觉力觉反馈、嗅觉交互）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-xr-frame",
+     "section": "内容布局、命令/导航/菜单、凝视与目标；配本路线空间映射/坐标文档",
+     "extent": "covered"
+    },
+    {
+     "source": "video-zh-xr-gaze",
+     "section": "头部/眼动视线、光标反馈、手势/语音/控制器提交与示例",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -224,7 +320,7 @@
      "extent": "covered"
     }
    ],
-   "note": "把空间交互的输入设备与识别技术分层讲清（设备层 + 交互技术层），是空间界面的技术基础；但界面设计原则与人因评估仍缺（见 unresolved）。"
+   "note": "把空间交互的输入设备与识别技术分层讲清（设备层 + 交互技术层），是空间界面的技术基础；但界面设计原则与人因评估仍缺（见 unresolved）。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "协作",
@@ -284,10 +380,6 @@
      "read": "按 XR 手册搭一个可运行的 VR/AR 场景，接入手柄/手势输入，记录追踪丢失与性能问题。"
     },
     {
-     "source": "r7-zh1",
-     "read": "先读第1章弄清 VR/AR/MR 与沉浸性/交互性，再读第2章硬件（感知设备→自然交互设备→三维定位跟踪）与第3章技术（立体显示→建模→绘制→三维声音→自然交互与传感→碰撞→传输），每节配一个手上设备的实测记录（如头显刷新率、控制器 6DoF 精度）。"
-    },
-    {
      "source": "r7-zh2",
      "read": "用中科大 MOOC 串起 VR/AR/MR 三条应用线，跟着做一次沉浸式内容制作（全景或 AR 项目），把教材里的显示/追踪原理对应到你实际用的设备与 SDK 上。"
     },
@@ -302,6 +394,22 @@
     {
      "source": "final-zh2",
      "read": "在你自己的场景里核对晕动风险清单：内容是否落在 1.25–5 m、有无 40 cm 内的近距离内容、IPD/垂直偏移是否校准、是否稳定 ≥60 FPS、虚拟移动是否由用户主动控制；按「深度预算」估算近距离注视占比，超标就给 3–5 位用户做一次舒适度测试并记录不适出现的时间点。"
+    },
+    {
+     "source": "video-zh-xr-mapping",
+     "read": "以把虚物放到桌面为例，画出扫描、网格、坐标、放置和遮挡流程，并说明表面丢失的处理。"
+    },
+    {
+     "source": "video-zh-xr-coordinates",
+     "read": "区分方向追踪和6DOF，说明视图、设备与世界坐标的关系，列出失去定位时界面应如何响应。"
+    },
+    {
+     "source": "video-zh-xr-frame",
+     "read": "为房间中的三个交互对象画菜单和注意提示，解释为何不把所有菜单锁在用户头前。"
+    },
+    {
+     "source": "video-zh-xr-gaze",
+     "read": "给前述空间界面选择凝视或头部追踪模型，定义选中反馈和提交动作，并解释眼动与头部模型的取舍。"
     }
    ],
    "gaps": []
@@ -433,6 +541,38 @@
    "query_or_url": "虚拟现实 用户体验 晕动 舒适度 课程 大纲 交互设计 中国大学MOOC（同第二条）",
    "result": "未找到可核对的中文 VR 沉浸感/晕动评估课程或视频课；中传/中科大/中传课程页都只到「概述+参考教材」这一层。",
    "by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/spatial-mapping",
+   "result": "实际中文正文解释表面网格如何使虚物与现实表面发生放置、遮挡及碰撞，包含流程、使用场景和原型验证。",
+   "by": "review/video-main-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/coordinate-systems",
+   "result": "公开中文正文按设备空间坐标和6DOF解释跟踪能力、定位点、房间/世界规模；配既有Unity XR输入与追踪材料。",
+   "by": "review/video-main-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/holographic-frame",
+   "result": "实际中文正文讨论空间布局、注意引导、与对象绑定的菜单和避免头锁定界面，并有案例。",
+   "by": "review/video-main-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/gaze-and-commit",
+   "result": "正文给头部和眼动视线向量、射线相交选取、视觉反馈及提交方式，补空间界面的具体交互。",
+   "by": "review/video-main-additions/V.2.4.json"
   }
  ],
  "findings": [
@@ -445,6 +585,7 @@
  "cross_language_fallbacks": [],
  "applied_additions": [
   "review/pi-additions/V.2.4.json@2c9ffec439",
-  "review/final-additions/V.2.4.json@fd41248210"
+  "review/final-additions/V.2.4.json@fd41248210",
+  "review/video-main-additions/V.2.4.json@5e590f3073"
  ]
 }

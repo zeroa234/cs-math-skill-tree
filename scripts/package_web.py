@@ -32,6 +32,7 @@ README = """CS × 数学技能树
 说明：共 {skills} 个学习单元、{required} 条必须前置；{prereq_status}。每条连线附课程先修、同课顺序或先修链证据与入门理由。
 技能分课程、基础模块、进阶模块与教材单元，学习量不同；详情可查划分依据。补充材料含免费/注册/付费备选，字幕和覆盖缺口均按说明。
 双语学习路线：{audited} 个技能已逐知识点对应章节；中文 {chinese} 条、英文 {english} 条路线覆盖全部必学项。
+其中中文 {free_chinese} 条、英文 {free_english} 条路线的全部必学项已有免费教学；其余的付费补读、费用或回放条件待核项分别标明。
 其余知识项在页面明确列出跨语言补读；“覆盖”包含已核目录的付费材料，不表示所有正文都免费或已通读。
 知识导览图的每个标题都和来源目录页逐条核对过。
 第三方组件：Panzoom 4.6.2（MIT）、d3 7.9.0（ISC）、markmap-view 0.18.12（MIT），许可证见 vendor/ 下的同名 txt。
@@ -56,6 +57,7 @@ def main():
         # UTF-8 with BOM so Windows Notepad shows the Chinese text correctly
         z.writestr(f"{top}/README.txt", "﻿" + README.format(skills=len(skills), required=data["meta"]["requiredEdges"],
             audited=data["meta"]["withBilingualPath"], chinese=data["meta"]["completeChinesePaths"], english=data["meta"]["completeEnglishPaths"],
+            free_chinese=data["meta"]["freeChinesePaths"], free_english=data["meta"]["freeEnglishPaths"],
             prereq_status=(f"{drafts} 个技能的前置仍待核实" if drafts else "当前没有标为前置待核实的技能")).replace("\n", "\r\n"))
     print(out, f"{out.stat().st_size / 1024:.0f} KB")
 

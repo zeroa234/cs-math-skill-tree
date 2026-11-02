@@ -89,6 +89,46 @@
     "finding": "大学正式馆藏核实中文译本、译者、ISBN 7-115-15168-7和逐讲目录。与同着原版的条件/稳定性部分对应；范围依据目录，未读译本收费全文。"
    },
    "added_by": "review/verified-additions/M.8.1.json"
+  },
+  {
+   "key": "video-zh-tsinghua-advnum-2010-l2",
+   "lang": "zh",
+   "title": "清华大学《高等数值算法与应用》第二讲讲义（喻文健，2010）：误差、条件数、残差与算法稳定性、LU 分解的向后误差分析",
+   "url": "https://numbda.cs.tsinghua.edu.cn/~yuwj/course/2010/2.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "幻灯片 2 给出 Forward Error & Backward Error 的定义与「最终计算准确 = 不敏感问题 + 稳定算法」；幻灯片 9–16 讲向量/矩阵范数、矩阵条件数与线性方程组敏感性；幻灯片 38 起讲 LU 分解的算法稳定性：计算解满足 (A+E)x=b 时矩阵上的向后误差反映算法稳定性，Wilkinson 的向后误差界含增长因子 ρ，不选主元 LU 的 ρ 可任意大（不稳定），部分选主元 ρ≤2^{n-1} 且实际很小（稳定）；随后给 Cholesky 与 QR/Householder 分解。",
+   "access": "清华大学教师课程页公开的讲义 PDF，免费、无需注册；中文正文（英文术语与公式），无视频/字幕问题。",
+   "publisher": "喻文健（清华大学计算机科学与技术系）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://numbda.cs.tsinghua.edu.cn/~yuwj/course/2010/2.pdf",
+    "location": "幻灯片 2「Forward Error & Backward Error / Sensitivity & Conditioning / Stability & Accuracy」；幻灯片 38「LU分解的算法稳定性」；幻灯片 39–44选主元、增长因子与 Cholesky",
+    "finding": "实际抽取 PDF：幻灯片 2 明确定义前向/后向误差，并写「稳定指计算过程中误差对结果的影响不大；以 BEA 论，邻近问题的准确解」；幻灯片 38 写「假设计算解满足 (A+E)x=b，则矩阵上的向后误差反映求解算法的稳定性」，给出 ρε_mach 界并比较不选主元与部分选主元；这是后向误差分析而非仅条件数。"
+   },
+   "added_by": "review/video-math-additions/M.8.1.json"
+  },
+  {
+   "key": "video-zh-pku-wen-nla",
+   "lang": "zh",
+   "title": "文再文《数值代数基础》（北京大学北京国际数学研究中心，教材《最优化：建模、算法与理论》配套电子教案）",
+   "url": "https://faculty.bicmr.pku.edu.cn/~wenzw/optbook/lect/04-num_lin_alg-newl.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "53 页中文讲义：矩阵结构与 flop 计数、LU/Cholesky/QR 分解、Householder 三角化与 Givens 旋转、特征值/奇异值分解；第 27–30 页构造 QR 分解并指出「QR 分解数值稳定性好」，第 49 页指出正规方程法可能数值不稳定、SVD 方法数值稳定。",
+   "access": "北京大学教师主页公开的电子教案 PDF，免费；中文正文。",
+   "publisher": "文再文（北京大学北京国际数学研究中心）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://faculty.bicmr.pku.edu.cn/~wenzw/optbook/lect/04-num_lin_alg-newl.pdf",
+    "location": "第 27–30 页「QR分解」与 Householder 三角化；第 49 页正规方程与 SVD 的稳定性对比",
+    "finding": "实际抽取 PDF：第 1 页标题「数值代数基础」，正文为中文；第 27–30 页给出 A=QR、约化 QR 唯一性、Gram-Schmidt/Householder 两种算法，并写「QR 分解数值稳定性好」；可补后向稳定性的正交变换实例。"
+   },
+   "added_by": "review/video-math-additions/M.8.1.json"
   }
  ],
  "topics": [
@@ -153,6 +193,11 @@
      "source": "verified-zh1",
      "section": "第14–17讲：稳定性及其在Householder、回代中的分析",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-tsinghua-advnum-2010-l2",
+     "section": "幻灯片 2 Forward Error & Backward Error、Stability & Accuracy；幻灯片 38 LU 分解的算法稳定性（(A+E)x=b 的向后误差、增长因子、部分选主元稳定）；配合同课程 QR/Householder 讲义与文再文《数值代数基础》第 27–30 页",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -162,7 +207,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文没有明确的後向稳定性章节；广西课程可能涉及但无法逐讲核对。英文 18.335J 的 stability/accuracy 讲义覆盖。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
+   "note": "中文没有明确的後向稳定性章节；广西课程可能涉及但无法逐讲核对。英文 18.335J 的 stability/accuracy 讲义覆盖。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。；现有中文 zh1/zh2 只讲到浮点数、舍入误差与条件数（zh1 分 P 未细分，zh2 CH1 是 Rounding Error），真正讲「后向稳定性」的只有付费的 Trefethen 中译本（verified-zh1）。清华讲义幻灯片 2 把前向误差、后向误差与算法稳定性分开定义，幻灯片 38 用 (A+E)x=b 的扰动方程与增长因子给出 LU 的后向误差界，并判定不选主元不稳定、部分选主元稳定；文再文讲义再给 Householder QR 的构造与「QR 数值稳定性好」的结论。两者合起来覆盖定义、误差界、稳定性判定和正交变换实例，并与现有浮点数/条件数材料衔接，因此不再依赖付费书。"
   },
   {
    "topic": "直接/迭代线性求解与特征值计算",
@@ -210,8 +255,16 @@
      "read": "在中国大学 MOOC 学东北大学《数值分析》第二章 2.9–2.14：先掌握向量/矩阵范数与谱半径，再看「线性方程组的固有形态」和「病态方程组的处理」，练习估计 cond(A) 与误差放大倍数。"
     },
     {
-     "source": "verified-zh1",
-     "read": "配现有中文数值分析课程读第14–17讲，区分前向误差、后向误差和条件数，用Householder/回代的分析解释后向稳定性。"
+     "source": "video-zh-tsinghua-advnum-2010-l2",
+     "read": "先读幻灯片 2：写出前向误差、后向误差、条件数与稳定性的定义，记住「准确 = 良态问题 + 稳定算法」。"
+    },
+    {
+     "source": "video-zh-tsinghua-advnum-2010-l2",
+     "read": "读幻灯片 9–16 范数与条件数，再读幻灯片 38：由 (A+E)x=b 推导后向误差界，理解增长因子 ρ 为什么能判定 LU 是否稳定，比较不选主元与部分选主元。"
+    },
+    {
+     "source": "video-zh-pku-wen-nla",
+     "read": "读第 27–30 页 Householder QR 的构造，理解正交变换为何数值稳定；用一个小矩阵手算一次 Householder 消元，再用 numpy 验证残差。"
     }
    ],
    "gaps": []
@@ -319,6 +372,30 @@
    "query_or_url": "https://lib2.buct.edu.cn/bookInfo_0100041518.html",
    "result": "大学正式馆藏核实中文译本、译者、ISBN 7-115-15168-7和逐讲目录。与同着原版的条件/稳定性部分对应；范围依据目录，未读译本收费全文。",
    "by": "review/verified-additions/M.8.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "数值线性代数 向后误差 后向稳定 Householder 讲义",
+   "result": "搜到清华喻文健课程讲义 2010/2.pdf（Forward/Backward Error、LU 稳定性）与文再文《数值代数基础》；另有博客与百科只作定位，未当课程。",
+   "by": "review/video-math-additions/M.8.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://numbda.cs.tsinghua.edu.cn/~yuwj/course/2010/2.pdf",
+   "result": "采纳：幻灯片 2 定义前向/后向误差与稳定性，幻灯片 38 给 LU 的向后误差界与增长因子判定；确认是中文大学讲义正文。",
+   "by": "review/video-math-additions/M.8.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili-search",
+   "query_or_url": "数值线性代数 全集；后向稳定 数值代数 视频；数值分析 稳定性 Householder",
+   "result": "只搜到分 P 无小节标题的课程录像与短视频（如「数值分析CH01_04算法的稳定性」单讲），无法核对是否讲后向误差界与 LU/Householder 稳定性；未用标题充证据，改用可核页面的大学讲义。",
+   "by": "review/video-math-additions/M.8.1.json"
   }
  ],
  "findings": [
@@ -332,6 +409,7 @@
  "description": "浮点数、条件数、后向稳定性、直接/迭代线性求解与特征值计算。",
  "applied_additions": [
   "review/pi-additions/M.8.1.json@2ce211434f",
-  "review/verified-additions/M.8.1.json@2a1a527de2"
+  "review/verified-additions/M.8.1.json@2a1a527de2",
+  "review/video-math-additions/M.8.1.json@7bfa501c88"
  ]
 }

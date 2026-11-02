@@ -120,6 +120,46 @@
     "finding": "实际打开高教社图书页，读到第三章目录；确认方差缩减与重要抽样都有专节（教材为付费正版书，未购买正文）。"
    },
    "added_by": "review/pi-additions/M.8.4.json"
+  },
+  {
+   "key": "video-zh-ustc-statcomp-lec5",
+   "lang": "zh",
+   "title": "中国科学技术大学《统计计算》第五讲：Monte Carlo 积分和方差减少技术（Weiping Zhang，2009 秋课程讲义 PDF）",
+   "url": "http://staff.ustc.edu.cn/~zwp/teach/Stat-Comp/Lec5.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 1 章 Monte Carlo Integration and Variance Reduction（51 页）：1.1 简单 Monte Carlo 估计与方差/效率；1.2 方差缩减总述；1.3 对立变量法（antithetic variables）；1.4 控制变量法（含 antithetic 作为控制变量、多个控制变量）；1.5 重要性抽样（importance sampling）；1.6 分层抽样；1.7 分层重要性抽样。每节配 R 代码与数值例题（如用 MC 估计 e^{-x} 积分、正态尾概率、控制变量方差缩减比例）。",
+   "access": "中国科学技术大学教师课程页公开的讲义 PDF，免费、无需注册；正文为中文（PDF 内嵌 SimSun 中文字体），公式与节标题用英文；无视频、无字幕问题。",
+   "publisher": "Weiping Zhang（中国科学技术大学，统计计算课程）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://staff.ustc.edu.cn/~zwp/teach/Stat-Comp/Lec5.pdf",
+    "location": "PDF 目录：1.2 Variance Reduction、1.3 Antithetic Variables、1.4 Control Variates、1.5 Importance sampling、1.6 Stratified Sampling、1.7 Stratified Importance Sampling；正文第 35 页起为 Importance sampling，第 43 页起为 Stratified Sampling",
+    "finding": "实际下载并抽取 51 页 PDF：目录与正文确有方差缩减各方法和重要性抽样专节；正文含 R 代码块与算例（如 MC.Phi、控制变量方差比较）。内嵌字体为 SimSun，确认正文是中文而非英文讲义。"
+   },
+   "added_by": "review/video-math-additions/M.8.4.json"
+  },
+  {
+   "key": "video-zh-ustc-statcomp-page",
+   "lang": "zh",
+   "title": "中国科学技术大学《统计计算》课程主页（2009 秋，Weiping Zhang）：第五讲 Monte Carlo 积分和方差减少技术",
+   "url": "http://staff.ustc.edu.cn/~zwp/teach/Stat-Comp/statcomp.htm",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "课程目录与讲次：第四讲随机数产生方法、第五讲 Monte Carlo 积分和方差减少技术、第六讲 Monte Carlo 方法在统计推断中的应用、第八至九讲 Markov Chain Monte Carlo；给出讲义、R 代码与作业入口。",
+   "access": "课程主页免费公开，中文；讲义为 PDF，作业与 R 代码可直接下载。",
+   "publisher": "Weiping Zhang（中国科学技术大学）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://staff.ustc.edu.cn/~zwp/teach/Stat-Comp/statcomp.htm",
+    "location": "课程内容段与「课件及讲义」列表：第五讲: Monte Carlo 积分和方差减少技术 → 讲义 Lec5.pdf、R Code、作业",
+    "finding": "实际打开课程页，看到第五讲的标题、讲义/R 代码/作业链接，以及第四、六、八、九讲的 Monte Carlo 与 MCMC 讲次，可确认 Lec5 属于完整统计计算课程而非单篇科普。"
+   },
+   "added_by": "review/video-math-additions/M.8.4.json"
   }
  ],
  "topics": [
@@ -160,6 +200,11 @@
      "source": "r7-zh1",
      "section": "第 3 章 3.3 方差缩减方法：3.3.1 控制变量法、3.3.2 对立变量法；另 3.2.5 分层抽样法",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-ustc-statcomp-lec5",
+     "section": "第 1.2–1.4、1.6–1.7 节：方差缩减总述、对立变量法、控制变量法（含多控制变量）、分层抽样、分层重要性抽样；每节配 R 代码与数值例题",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -169,7 +214,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有 33 分钟入门单讲，没有控制变量／分层抽样的完整课程；英文 CMU 有 Variance Reduction I–II。；中文正版教材有专节系统讲控制变量、对立变量与分层抽样，正好是简介里方差缩减的三种标准手段；B 站 zh3 的 33 分钟视频可作直观入门（但它是英文讲座的中文翻译，只作辅助）。"
+   "note": "中文只有 33 分钟入门单讲，没有控制变量／分层抽样的完整课程；英文 CMU 有 Variance Reduction I–II。；中文正版教材有专节系统讲控制变量、对立变量与分层抽样，正好是简介里方差缩减的三种标准手段；B 站 zh3 的 33 分钟视频可作直观入门（但它是英文讲座的中文翻译，只作辅助）。；现有中文只有 33 分钟入门单讲（zh3, partial）与被付费墙挡住的《统计计算》第二版（r7-zh1）。中科大第五讲讲义把对立变量、控制变量、分层抽样与分层重要性抽样的构造、方差比较和 R 实现逐步讲完，并给数值例题；与 zh3 的直观导入组合后，方差缩减的必学内容不再依赖付费书。"
   },
   {
    "topic": "重要性抽样",
@@ -184,6 +229,11 @@
      "source": "r7-zh1",
      "section": "第 3 章 3.2.4 重要抽样法",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-ustc-statcomp-lec5",
+     "section": "第 1.5 节 Importance sampling（第 35–43 页）：提议分布、权重、估计量、方差与提议分布选择，含 R 代码与例题；1.7 节分层重要性抽样",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -193,7 +243,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有 13 分钟双语短片，且不是中文授课；只能算 partial。英文 CMU 有 importance sampling 与 QMC。；教材单列「重要抽样法」一节，讲提议分布与加权估计量、与随机投点法的方差比较；zh4 的 13 分钟双语短片（英语授课＋中文字幕）只作入门动画，不计为中文授课。"
+   "note": "中文只有 13 分钟双语短片，且不是中文授课；只能算 partial。英文 CMU 有 importance sampling 与 QMC。；教材单列「重要抽样法」一节，讲提议分布与加权估计量、与随机投点法的方差比较；zh4 的 13 分钟双语短片（英语授课＋中文字幕）只作入门动画，不计为中文授课。；现有中文 zh4 是英语授课＋中文字幕的 13 分钟短片，只能算 partial；付费书 r7-zh1 3.2.4 有定义但未购买。中科大讲义 1.5 节从提议分布与权重的推导讲到方差比较和实现，1.7 节再给分层重要性抽样；与 zh4 的直观短片组合后，重要性抽样的原理、估计量与实现均有免费中文正文。"
   },
   {
    "topic": "MCMC与误差评估",
@@ -241,8 +291,16 @@
      "read": "看重要性采样双语短片；它是英语授课＋中文字幕，只作入门。"
     },
     {
-     "source": "r7-zh1",
-     "read": "读李东风《统计计算（第二版）》第 3 章：3.2.4 重要抽样法 → 3.2.5 分层抽样法 → 3.3 方差缩减方法（控制变量、对立变量），按书中 R 代码把三种方差缩减各实现一遍并比较方差。"
+     "source": "video-zh-ustc-statcomp-page",
+     "read": "先看课程页第五讲说明，确认这是统计计算课中的 Monte Carlo 与方差缩减讲次，下载 Lec5.pdf 与 Lec5.R。"
+    },
+    {
+     "source": "video-zh-ustc-statcomp-lec5",
+     "read": "读 1.1–1.2 节建立 MC 估计与方差/效率；依次做 1.3 对立变量、1.4 控制变量、1.6 分层抽样的推导与 R 例题，比较方差缩减比例。"
+    },
+    {
+     "source": "video-zh-ustc-statcomp-lec5",
+     "read": "读 1.5 重要性抽样：提议分布、权重与估计量、方差公式、提议分布选择；跑例题并改提议分布观察方差；再读 1.7 分层重要性抽样。"
     }
    ],
    "gaps": []
@@ -340,6 +398,30 @@
    "query_or_url": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=67114363e4efbc722ba48548",
    "result": "采纳：读到第三章目录（3.2.4 重要抽样法、3.2.5 分层抽样法、3.3 方差缩减方法、3.3.1 控制变量法、3.3.2 对立变量法），确认两处缺口都有专节；书为付费，未购买正文。",
    "by": "review/pi-additions/M.8.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "\"统计计算\" 李东风 第三章 随机模拟 重要抽样 方差缩减 讲义",
+   "result": "先查到李东风《统计计算》课程讲义 demoprint.pdf 的目录（3.2.4 重要抽样、3.3 方差缩减），但现站点返回 404；未把该失效链接当作可用来源。",
+   "by": "review/video-math-additions/M.8.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "统计计算 课程 讲义 重要抽样 方差缩减 edu.cn",
+   "result": "采纳中科大张伟平《统计计算》课程页与第五讲讲义；页面明确列出 Monte Carlo 积分和方差减少技术，PDF 51 页有 1.2–1.7 节。",
+   "by": "review/video-math-additions/M.8.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili-search",
+   "query_or_url": "统计计算 李东风；蒙特卡洛方法 课程；重要性抽样 方差缩减 中文",
+   "result": "搜到上海大学温智婕《统计计算方法》转载（30/48 讲、分 P 仅「1讲/2讲」无小节标题，不能证明覆盖重要性抽样/方差缩减）与若干短视频；未用它们充覆盖，改用可核章节的大学讲义。",
+   "by": "review/video-math-additions/M.8.4.json"
   }
  ],
  "findings": [
@@ -354,6 +436,7 @@
  "name": "蒙特卡洛方法",
  "description": "随机抽样、方差缩减、重要性抽样、MCMC与误差评估；与贝叶斯统计交叉。",
  "applied_additions": [
-  "review/pi-additions/M.8.4.json@0d7421fa8a"
+  "review/pi-additions/M.8.4.json@0d7421fa8a",
+  "review/video-math-additions/M.8.4.json@7ed7ab4642"
  ]
 }

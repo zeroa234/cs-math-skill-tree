@@ -32,11 +32,14 @@ def covered_by(rec, topic, lang):
 core_total = sum(sum(t["stage"] == "core" for t in r["topics"]) for r in recs.values())
 fallbacks = [(i, f) for i, r in sorted(recs.items()) for f in r.get("cross_language_fallbacks", [])]
 print(f"- 已归档双语路线：**{len(recs)}/{len(skills)}** 个技能，必学知识点 **{core_total}** 个。")
+free_routes = {lang: sum(all(any(s["free"] is True for s in covered_by(r, t["topic"], lang))
+                 for t in r["topics"] if t["stage"] == "core") for r in recs.values()) for lang in ("zh", "en")}
+print(f"- 全部必学项均有免费教学：中文 **{free_routes['zh']}** 条、英文 **{free_routes['en']}** 条路线。此数与包含付费材料的范围覆盖数分别统计。")
 print(f"- 跨语言补充：**{len(fallbacks)}** 个知识点（中文 {sum(f['lang_missing'] == 'zh' for _, f in fallbacks)}、英文 {sum(f['lang_missing'] == 'en' for _, f in fallbacks)}），每条都经过带网页搜索的一轮确认。")
 print()
-print("| 领域 | 技能 | 中文全部覆盖 | 英文全部覆盖 | 跨语言补充的知识点 |")
-print("|---|---|---|---|---|")
-by = collections.defaultdict(lambda: [0, 0, 0, 0])
+print("| 领域 | 技能 | 中文全部覆盖 | 英文全部覆盖 | 中文全部免费 | 英文全部免费 | 跨语言补充的知识点 |")
+print("|---|---|---|---|---|---|---|")
+by = collections.defaultdict(lambda: [0, 0, 0, 0, 0, 0])
 for i, r in recs.items():
     d = LANE[i]
     gaps = {f["lang_missing"]: 0 for f in r.get("cross_language_fallbacks", [])}
@@ -44,9 +47,12 @@ for i, r in recs.items():
     by[d][1] += r["routes"]["zh"]["status"] == "complete"
     by[d][2] += r["routes"]["en"]["status"] == "complete"
     by[d][3] += len(r.get("cross_language_fallbacks", []))
+    for lang, index in (("zh", 4), ("en", 5)):
+        by[d][index] += all(any(s["free"] is True for s in covered_by(r, t["topic"], lang))
+                           for t in r["topics"] if t["stage"] == "core")
 for d in sorted(by):
-    n, zh, en, fb = by[d]
-    print(f"| {d} | {n} | {zh} | {en} | {fb} |")
+    n, zh, en, fb, free_zh, free_en = by[d]
+    print(f"| {d} | {n} | {zh} | {en} | {free_zh} | {free_en} | {fb} |")
 print()
 print("### 跨语言补充（逐条）")
 print()
@@ -82,3 +88,21 @@ print("| 技能 | 语言 | 知识点 | 付费材料 |")
 print("|---|---|---|---|")
 for i, lang, topic, s in paid_only:
     print(f"| {i} | {'中文' if lang == 'zh' else '英文'} | {topic} | [{s['title']}]({s['url']}) |")
+pending = []
+for i, r in sorted(recs.items()):
+    for t in r["topics"]:
+        if t["stage"] != "core":
+            continue
+        for lang in ("zh", "en"):
+            c = covered_by(r, t["topic"], lang)
+            if any(s["free"] is None for s in c) and not any(s["free"] is True for s in c):
+                pending.append((i, lang, t["topic"]))
+print()
+print(f"### 费用或回放条件待核（{len(pending)} 个语言×知识项）")
+print()
+print("课程大纲能支持范围判断，但注册、已结课回放或费用尚未确认；这些项目不计入已核免费覆盖，也不直接判为必须付费。具体条件见各来源 access。")
+print()
+print("| 技能 | 语言 | 知识点 |")
+print("|---|---|---|")
+for i, lang, topic in pending:
+    print(f"| {i} | {'中文' if lang == 'zh' else '英文'} | {topic} |")

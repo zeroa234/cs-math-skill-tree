@@ -507,6 +507,8 @@ const data = {
     withChineseResource: out.filter((s) => s.zhAlt).length,
     withBilingualPath: out.filter(s => s.learningPath).length,
     completeChinesePaths: out.filter(s => s.learningPath?.routes.zh.status === "complete").length,
+    freeChinesePaths: out.filter(s => s.learningPath?.routes.zh.freeCovered === s.learningPath?.routes.zh.total).length,
+    freeEnglishPaths: out.filter(s => s.learningPath?.routes.en.freeCovered === s.learningPath?.routes.en.total).length,
     completeEnglishPaths: out.filter(s => s.learningPath?.routes.en.status === "complete").length,
     resourcesReviewed: resourceReview.checkedAt,
     withExercise: out.filter((s) => s.exercise).length,

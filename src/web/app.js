@@ -431,7 +431,7 @@
       el("p", { class: "route-summary" }, ["zh", "en"].map(lang => `${title[lang]} ${path.routes[lang].covered}/${path.routes[lang].total}`).join(" · ") + " 个必学知识点有对应教学内容"));
     for (const lang of ["zh", "en"]) {
       const route = path.routes[lang];
-      const text = route.status === "complete" ? `覆盖 ${route.total}/${route.total}` : `待补 ${route.gaps.length} 项`;
+      const text = (route.status === "complete" ? `覆盖 ${route.total}/${route.total}` : `待补 ${route.gaps.length} 项`) + ` · 免费已核 ${route.freeCovered}/${route.total}`;
       box.append(el("details", { class: "learning-route", open: lang === "zh" },
         el("summary", {}, `${title[lang]}独立学习路线 · ${text}`),
         el("ol", {}, (seen => route.steps.map(step => {
@@ -443,6 +443,8 @@
           return el("li", {}, linked(step.source), first ? el("span", { class: "route-cost" }, cost) : null,
             el("p", {}, step.read), first ? el("p", { class: "route-access" }, r.access) : null);
         }))(new Set())),
+        route.paidTopics.length ? el("p", { class: "route-gap" }, `当前需付费补读：${route.paidTopics.join("、")}`) : null,
+        route.accessPendingTopics.length ? el("p", { class: "route-gap" }, `费用或回放条件待核：${route.accessPendingTopics.join("、")}`) : null,
         route.gaps.length ? el("p", { class: "route-gap" }, `尚待补齐：${route.gaps.join("、")}`) : null));
     }
     const table = el("table", { class: "coverage-table" },

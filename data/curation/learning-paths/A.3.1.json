@@ -94,6 +94,25 @@
     "finding": "PDF 正文确认是中文讲授的检索模型课件（不是目录页），课程主页说明第6章专门讲检索评价；据此补中文的“检索”与检索侧评测。"
    },
    "added_by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "key": "video-zh-fudan-nlp",
+   "lang": "zh",
+   "title": "张奇、桂韬、黄萱菁《自然语言处理导论》（作者公开完整版）",
+   "url": "https://intro-nlp.github.io/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "已下载作者明确公开的604页PDF并核目录；信息抽取一整章从实体到关系与事件，正文文件免费可读，不只是纸书目录。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "复旦大学NLP团队；作者官网",
+   "reupload": false,
+   "evidence": {
+    "url": "https://intro-nlp.github.io/",
+    "location": "作者主页“完整版”PDF，第7章pp.217起；7.1概述、7.2命名实体识别、7.3关系抽取、7.4事件抽取",
+    "finding": "已下载作者明确公开的604页PDF并核目录；信息抽取一整章从实体到关系与事件，正文文件免费可读，不只是纸书目录。"
+   },
+   "added_by": "review/video-main-additions/A.3.1.json"
   }
  ],
  "topics": [
@@ -177,6 +196,11 @@
      "source": "r7-zh2",
      "section": "第10章 信息抽取：10.1 命名实体识别（规则/统计/深度学习）、10.2 实体关系抽取",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-fudan-nlp",
+     "section": "第7章：7.1概述、7.2命名实体识别、7.3关系抽取、7.4事件抽取",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -186,7 +210,7 @@
      "extent": "covered"
     }
    ],
-   "note": "r7-zh2 第10章把信息抽取拆成命名实体识别与实体关系抽取两条主线，并给三类 NER 方法；模型基础由 r7-zh1 的序列标注（HMM/CRF）提供，两者合起来构成中文的信息抽取教学。"
+   "note": "r7-zh2 第10章把信息抽取拆成命名实体识别与实体关系抽取两条主线，并给三类 NER 方法；模型基础由 r7-zh1 的序列标注（HMM/CRF）提供，两者合起来构成中文的信息抽取教学。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "检索与语言评测",
@@ -226,12 +250,12 @@
      "read": "按讲次看：先看 Counting relative frequencies 与 Using Information Theory，手写 n 元语言模型并计算困惑度；再依次看生成式/判别式序列标注、序列切分与树结构预测，各实现一次 HMM 与线性链 CRF 的分词/词性标注；最后看 Neural structured prediction 与 Working with two texts。"
     },
     {
-     "source": "r7-zh2",
-     "read": "买书后读第10章：先按 10.1 的规则/统计/深度学习三条路线各实现一个 NER，再读 10.2 做一次实体关系抽取，并把第6章 6.1.3 的语言模型评价与第8章的评价指标当评测参考。"
-    },
-    {
      "source": "r7-zh3",
      "read": "读第5、8、9 章课件，实现向量空间模型、BM25 与查询似然检索三种排序并对比；再读第6章，用查全率/查准率和一组标注查询评价自己的检索系统。"
+    },
+    {
+     "source": "video-zh-fudan-nlp",
+     "read": "下载作者主页公开完整版，读第7章；将同一新闻分别标成实体、关系和事件结构，比较三个任务的输入输出。"
     }
    ],
    "gaps": []
@@ -319,6 +343,14 @@
    "query_or_url": "site:bilibili.com 西湖大学 自然语言处理 公开课 张岳",
    "result": "确认 B 站有西湖大学张岳 15 讲公开课（BV1wCPmzPEpE 第一讲、BV1yzPSzCEU4 第二讲），另有按章分节的“自然语言处理在线课程”（第二章 最大似然估算/词概率模型/语言模型/Good-Turing 平滑、第六章 熵、困惑度和词表示、第十章 PCFG、第十二章 贝叶斯网络、第十四章 LSTM），可补强语言建模与句法/结构预测的中文讲次证据。",
    "by": "review/pi-additions/A.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://intro-nlp.github.io/",
+   "result": "已下载作者明确公开的604页PDF并核目录；信息抽取一整章从实体到关系与事件，正文文件免费可读，不只是纸书目录。",
+   "by": "review/video-main-additions/A.3.1.json"
   }
  ],
  "findings": [
@@ -328,6 +360,7 @@
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/pi-additions/A.3.1.json@c021f4b0a1"
+  "review/pi-additions/A.3.1.json@c021f4b0a1",
+  "review/video-main-additions/A.3.1.json@2ffcfda93a"
  ]
 }

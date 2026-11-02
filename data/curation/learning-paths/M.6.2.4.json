@@ -118,6 +118,46 @@
     "finding": "出版社完整目录列有一致律、Lasso相合性及估计和预测误差的推导章节，带习题。"
    },
    "added_by": "review/verified-additions/M.6.2.4.json"
+  },
+  {
+   "key": "video-zh-lasso-consistency",
+   "lang": "zh",
+   "title": "徐芝兰《高维统计：LASSO 的 Variable Selection Consistency 及其潜在问题、Adaptive LASSO 的作用》（5 个分 P，约 90 分钟）",
+   "url": "https://www.bilibili.com/video/BV1pN4y1d7me/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "分 P：背景（2:49）、LASSO 与 variable selection consistency（14:13）、不一致的证明（34:44）、一致性与收敛速率不能兼得（31:44）、Adaptive LASSO 的意义（6:09）。从 Lasso 的变量选择相合性定义讲到不相合的反例证明、相合性与收敛速率的权衡，以及 Adaptive Lasso 如何修正。",
+   "access": "B 站免费观看；中文标题与中文简介，上传者为统计教学账号「徐芝兰」；讲解语言未逐字核听，字幕未核。",
+   "publisher": "徐芝兰（B 站统计教学账号）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1pN4y1d7me/",
+    "location": "视频选集：背景、LASSO 与 variable selection consistency、不一致的证明、一致性与收敛速率不能兼得、Adaptive LASSO 的意义；简介写「最后那 p 提到的定理证明就不讲了……Adaptive LASSO 那篇论文的定理 2 的证明」",
+    "finding": "实际打开页面：5 个分 P 的标题逐条列出，内容从 Lasso 变量选择相合性到不相合证明与速率权衡；简介说明证明取舍。属专题短课，不是只讲 Lasso 定义的科普。"
+   },
+   "added_by": "review/video-math-additions/M.6.2.4.json"
+  },
+  {
+   "key": "video-zh-lasso-risk",
+   "lang": "zh",
+   "title": "徐芝兰《高维统计：LASSO 预测误差的上界》（2 个分 P，约 28 分钟）",
+   "url": "https://www.bilibili.com/video/BV1B8411h7HX/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "分 P：power one bound（15:42）、LASSO 的预测误差（12:29）。用集中不等式/幂一界推导 Lasso 的预测误差上界，属于高维线性模型的风险界。",
+   "access": "B 站免费观看；中文标题与中文简介，上传者为「徐芝兰」；讲解语言未逐字核听，字幕未核。",
+   "publisher": "徐芝兰（B 站统计教学账号）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1B8411h7HX/",
+    "location": "视频选集：power one bound、LASSO 的预测误差；简介写「复健」并标注高维统计、机器学习、概率、统计学、LASSO",
+    "finding": "实际打开页面：两个分 P 分别讲 power one bound 与 Lasso 预测误差，合计约 28 分钟；标题与分 P 明确指向 Lasso 风险上界，但只覆盖 Lasso 这一估计量。"
+   },
+   "added_by": "review/video-math-additions/M.6.2.4.json"
   }
  ],
  "topics": [
@@ -163,6 +203,11 @@
      "source": "verified-zh1",
      "section": "7.1–7.3：稀疏模型、还原与有噪估计",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-lasso-consistency",
+     "section": "分 P「LASSO 与 variable selection consistency」「不一致的证明」「Adaptive LASSO 的意义」；配 zh1 高维概率论与 zh2 统计机器学习中的稀疏/高维内容",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -172,7 +217,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文两门课偏概率工具与一般统计学习，没有 lasso／稀疏高维估计的专门章节；此项中文 partial。英文 36-708 有 Sparsity 与 Nonparametric Sparsity 讲义。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
+   "note": "中文两门课偏概率工具与一般统计学习，没有 lasso／稀疏高维估计的专门章节；此项中文 partial。英文 36-708 有 Sparsity 与 Nonparametric Sparsity 讲义。；补充到同语言教学材料；按所列章节与现有主课组合学习。；现有中文 zh2 明确说「高维概率/统计机器学习没有稀疏估计专章」，r7-zh1 是付费译本。徐芝兰专题用 Lasso 的变量选择、稀疏性假设、不相合反例与 Adaptive Lasso 讲清「稀疏性为什么使高维估计可行、何时会失效」；与 zh1 的随机矩阵/集中不等式、zh2 的高维直观组合后，稀疏性有免费中文专题讲解，付费书可留作系统备选。"
   },
   {
    "topic": "一致性",
@@ -187,6 +232,11 @@
      "source": "verified-zh1",
      "section": "第4章一致大数定律；7.5变量选择相合性",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-lasso-consistency",
+     "section": "分 P「LASSO 与 variable selection consistency」「不一致的证明」「一致性与收敛速率不能兼得」；配 zh2 的 Stochastic Convergence 概念/性质/应用与 zh1 的高维概率工具",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -196,7 +246,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有随机收敛的一般工具，没有针对高维估计一致性的完整章节；英文 36-708 在非参数回归与稀疏性讲义中处理 consistency。；补充到同语言教学材料；按所列章节与现有主课组合学习。"
+   "note": "中文只有随机收敛的一般工具，没有针对高维估计一致性的完整章节；英文 36-708 在非参数回归与稀疏性讲义中处理 consistency。；补充到同语言教学材料；按所列章节与现有主课组合学习。；现有中文 zh2 只讲随机收敛的一般概念，zh1 讲高维概率工具，付费的 Wainwright 中译本才系统讲高维估计的相合性。徐芝兰的 5 段专题从 Lasso 变量选择相合性的定义讲到不相合的反例证明、相合性与收敛速率的权衡，并说明 Adaptive Lasso 的修正；与 zh2 的收敛概念、zh1 的集中不等式组合后，高维稀疏估计的相合性这一核心情形有免费中文讲解，不再只靠付费书。"
   },
   {
    "topic": "风险界与高维估计",
@@ -251,6 +301,18 @@
     {
      "source": "verified-zh1",
      "read": "先学第4章一致收敛；接第7章稀疏线性模型、Lasso相合性、估计和预测误差；第9章扩展到正则化M估计。"
+    },
+    {
+     "source": "video-zh-lasso-consistency",
+     "read": "先看「背景」与「LASSO 与 variable selection consistency」：写出稀疏线性模型、Lasso 估计、变量选择相合性的定义，明确需要哪些假设（设计矩阵、不可表示条件、正则参数）。"
+    },
+    {
+     "source": "video-zh-lasso-consistency",
+     "read": "看「不一致的证明」与「一致性与收敛速率不能兼得」：跟着反例理解 Lasso 在相关变量下会选错变量，以及相合性与收敛速率的权衡；再看 Adaptive Lasso 如何用权重修正。"
+    },
+    {
+     "source": "video-zh-lasso-risk",
+     "read": "看「power one bound」与「LASSO 的预测误差」：用集中不等式推出预测误差上界；把上界中的稀疏度、正则参数与噪声项同 zh1 的集中不等式对照。"
     }
    ],
    "gaps": []
@@ -388,19 +450,45 @@
    "query_or_url": "https://www.cmpedu.com/books/book/5606424.htm",
    "result": "出版社完整目录列有一致律、Lasso相合性及估计和预测误差的推导章节，带习题。",
    "by": "review/verified-additions/M.6.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili-search",
+   "query_or_url": "高维统计 课程；高维统计 稀疏 Lasso；统计学习理论 课程 中文；高维统计 相合性；Lasso 相合性 证明；徐芝兰 Lasso",
+   "result": "采纳徐芝兰的 Lasso 相合性 5 讲与 Lasso 预测误差 2 讲；另有 UCLA/加州大学高维统计课，但为英文授课或机器翻译中配，未当中文正文；「从零开始的高维统计」为单集自学视频，未用作系统覆盖。",
+   "by": "review/video-math-additions/M.6.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "高维统计 课程 讲义 Lasso 相合性 风险界 中文 pdf；高维统计 讲义 oracle inequality 中文 Lasso 风险界；Lasso 相合性 Oracle 不等式 中文 讲义 pdf 高维",
+   "result": "未找到免费中文大学课程/讲义；找到的多为英文讲义、单篇论文或付费译本。中文免费教学以徐芝兰专题视频为主，故风险界只标到 Lasso 预测误差，未把一般高维 M 估计/极小极大风险界算作已覆盖。",
+   "by": "review/video-math-additions/M.6.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.bilibili.com/video/BV1pN4y1d7me/；https://www.bilibili.com/video/BV1B8411h7HX/",
+   "result": "核对分 P 标题与简介：相合性 5 段含不一致证明与速率权衡；预测误差 2 段含 power one bound 与 Lasso 预测误差。确认是专题短课，不是只有标题。",
+   "by": "review/video-math-additions/M.6.2.4.json"
   }
  ],
  "findings": [
   "原中文 zhAlt 是 Datawhale《南瓜书》，那是《机器学习》的公式笔记，不是高维统计／统计学习理论课程；这是明显错配。本次改以张志华《高维概率论》与《统计机器学习》作中文概率工具，并如实标 partial。",
   "中文没有可核的稀疏高维估计与 minimax 风险界完整课程；B 站上的 Berkeley STATS200C 是英语授课、中文字幕，不能冒充中文教学。此缺口保留。",
   "英文 36-708 已有 Sparsity／Minimax Theory，保留为英文主资源。",
-  "四项中只有集中不等式中文 covered；稀疏性、一致性、风险界中文 partial，故 zh 路线 partial，没有假报 complete。"
+  "四项中只有集中不等式中文 covered；稀疏性、一致性、风险界中文 partial，故 zh 路线 partial，没有假报 complete。",
+  "[review/video-math-additions/M.6.2.4.json] 未解决 zh「风险界与高维估计」：免费中文目前只找到徐芝兰的 Lasso 预测误差上界（2 个分 P，约 28 分钟），覆盖的是 Lasso 这一具体估计量的风险界；高维 M 估计、正则化 M 估计的 Oracle 不等式、极小极大下界等「高维估计」的一般理论，仍只有付费的 Wainwright 中译本（verified-zh1）系统讲解。现有中文 zh1/zh2 提供集中不等式与随机收敛工具，但没有把一般高维估计的风险界讲全，故不把该项标 covered。"
  ],
  "cross_language_fallbacks": [],
  "name": "高维统计与统计学习理论",
  "description": "集中不等式、稀疏性、一致性、风险界与高维估计。",
  "applied_additions": [
   "review/pi-additions/M.6.2.4.json@c6d0a38354",
-  "review/verified-additions/M.6.2.4.json@6022909c61"
+  "review/verified-additions/M.6.2.4.json@6022909c61",
+  "review/video-math-additions/M.6.2.4.json@5ce5b3fd11"
  ]
 }

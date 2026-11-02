@@ -45,7 +45,7 @@
    "url": "https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "作者官方书页：第12章 计算学习理论（PAC、VC 维、泛化界、稳定性）、第14章 概率图模型（HMM、MRF、CRF）；南瓜书是它的配套推导。",
    "access": "付费纸书（ISBN 978-7-302-206853-6，425 页），作者页提供目录与样章，未标价、未购买、无免费全文。",
    "publisher": "清华大学出版社 / 周志华",
@@ -62,7 +62,7 @@
    "url": "https://oa.ee.tsinghua.edu.cn/ouzhijian/pgm/pgm.htm",
    "tier": "material",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "Lesson06–08 变量消除、团树消息传递与三角化；Lesson10 采样/MCMC、Lesson11 变分推理；Lesson04–05 参数估计、Lesson12 贝叶斯估计、Lesson13 结构学习。",
    "access": "作者大学主页免费课件；版权保留，仅链接学习，不镜像。数学符号和若干术语为英文，正文含中文讲解；参考书为补充阅读。",
    "publisher": "清华大学电子工程系 / 欧智坚",
@@ -72,6 +72,25 @@
     "finding": "已打开中文精确推理正文及采样、变分、结构学习课件；不是仅课纲。课程覆盖此前仅靠西瓜书入门的推断与结构学习。"
    },
    "added_by": "review/ai-additions/A.1.2.json"
+  },
+  {
+   "key": "video-zh-pgm",
+   "lang": "zh",
+   "title": "shuhuai008：机器学习白板推导（九）概率图模型基础",
+   "url": "https://www.bilibili.com/video/BV1BW41117xo/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "已获取视频实际页面，原作者shuhuai008，完整15集目录；有向/无向图表示及推断均有具体讲次。",
+   "access": "原作者公开B站中文教学视频；本轮核到作者、15集目录及免费入口，未逐集播放，字幕未核对。",
+   "publisher": "shuhuai008 原作者账号；配套作者仓库 shuhuai007/Machine-Learning-Session",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1BW41117xo/",
+    "location": "15个分集：贝叶斯网络条件独立性/D分离/例子、马尔可夫随机场条件独立性/因子分解、变量消去与信念传播",
+    "finding": "已获取视频实际页面，原作者shuhuai008，完整15集目录；有向/无向图表示及推断均有具体讲次。"
+   },
+   "added_by": "review/video-main-additions/A.1.2.json"
   }
  ],
  "topics": [
@@ -88,6 +107,11 @@
      "source": "zh2",
      "section": "第14章 概率图模型（贝叶斯网）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-pgm",
+     "section": "第2–4讲：条件独立性、D-Separation与具体模型；第7–12讲推断",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -97,7 +121,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有配套推导，缺独立正文与独立性判定的系统讲解。"
+   "note": "中文只有配套推导，缺独立正文与独立性判定的系统讲解。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "Markov网络",
@@ -112,6 +136,11 @@
      "source": "zh2",
      "section": "第14章 概率图模型（马尔可夫随机场/条件随机场）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-pgm",
+     "section": "第5–6讲：马尔可夫随机场的条件独立性与因子分解；后续因子图和传播",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -121,7 +150,7 @@
      "extent": "covered"
     }
    ],
-   "note": ""
+   "note": "本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "推断",
@@ -187,16 +216,16 @@
    "status": "complete",
    "steps": [
     {
-     "source": "zh2",
-     "read": "以《机器学习》第14章为主线读概率图模型：有向/无向表示、HMM 推断与参数学习；再用南瓜书核对推导。"
-    },
-    {
      "source": "zh1",
      "read": "以周志华《机器学习》第14章为主线，遇到 HMM/MRF/CRF 的推导时查南瓜书对应公式。"
     },
     {
      "source": "fix-zh-pgm",
      "read": "在现有 zh2 第14章之后按 06→07→08→10→11 补精确/近似推断，再按04→05→12→13补学习；在三至四节点图上比较两种消元顺序和两种结构评分。"
+    },
+    {
+     "source": "video-zh-pgm",
+     "read": "按有向图→无向图→推断学习；自己画一个3节点图，分别检验D分离、因子分解和变量消去。"
     }
    ],
    "gaps": []
@@ -242,6 +271,14 @@
    "result": "发现并打开欧智坚大学主页的全套中文课件，采用推断和学习单元。",
    "query_or_url": "概率图模型 变量消去 置信传播 结构学习 中文 讲义 朱军",
    "by": "review/ai-additions/A.1.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "web",
+   "query_or_url": "https://www.bilibili.com/video/BV1BW41117xo/",
+   "result": "已获取视频实际页面，原作者shuhuai008，完整15集目录；有向/无向图表示及推断均有具体讲次。",
+   "by": "review/video-main-additions/A.1.2.json"
   }
  ],
  "findings": [
@@ -251,6 +288,7 @@
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/ai-additions/A.1.2.json"
+  "review/ai-additions/A.1.2.json",
+  "review/video-main-additions/A.1.2.json@ba70d1eeb2"
  ]
 }

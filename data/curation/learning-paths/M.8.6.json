@@ -86,6 +86,46 @@
     "location": "出版社介绍：'Features new central theoretical results such as the elimination theorem, the extension theorem...'；'Discusses some of the newer approaches to computing Groebner bases'；eBook EUR 38.51",
     "finding": "实际打开出版社页，看到 Gröbner 基、消元定理与定价；正文需订阅／购买，未下载或使用镜像。"
    }
+  },
+  {
+   "key": "video-en-boocher-gb",
+   "lang": "en",
+   "title": "Adam Boocher, Gröbner Bases for Commutative Algebraists (RTG Workshop at Utah, May 2018) — lecture notes",
+   "url": "http://www.math.utah.edu/agtrtg/commutative-algebra/Boocher_lectures.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Term orders and initial ideals, division algorithm, applications (solving polynomial systems by elimination order), initial ideals and Hilbert functions, homogenization and generic initial ideals; §2.13 states Buchberger's algorithm with S-polynomials, and the notes explain the elimination-order use for solving systems; exercises for Day 1 and additional exercises. English.",
+   "access": "University of Utah RTG workshop page's free PDF, no registration; English; no video/subtitles.",
+   "publisher": "Adam Boocher (University of Utah RTG Workshop, May 2018)",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://www.math.utah.edu/agtrtg/commutative-algebra/Boocher_lectures.pdf",
+    "location": "Title page and Contents: §2 What is a Gröbner Basis? (2.1 Monomial Term Orders and the Initial Ideal, 2.2 The Division Algorithm, 2.3 Some Applications of the Division Algorithm), §3 Gröbner bases and Free Resolutions, §4 Exercises for Day 1; Theorem 2.13 Buchberger's Algorithm with S-pair formula",
+    "finding": "Actual PDF: title 'Gröbner Bases for Commutative Algebraists', contents list term orders, division algorithm, elimination-order applications, and Theorem 2.13 labels Buchberger's Algorithm with the S-pair definition. This is teaching text with proofs and exercises, not a course abstract."
+   },
+   "added_by": "review/video-math-additions/M.8.6.json"
+  },
+  {
+   "key": "video-en-sturmfels-cbms",
+   "lang": "en",
+   "title": "Bernd Sturmfels, Solving Systems of Polynomial Equations (CBMS Regional Conference Series 97, AMS 2002) — author's free PDF",
+   "url": "https://math.berkeley.edu/~bernd/cbms.pdf",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "Chapter 2 Gröbner Bases of Zero-Dimensional Ideals (computing standard monomials and the radical, companion matrices, trace form, solving in Singular), Chapter 4 Resultants (univariate/multivariate/sparse resultants, elimination theory), Chapter 5 Primary Decomposition; worked examples and software sessions. English.",
+   "access": "Author's Berkeley page hosts the free PDF of the CBMS book; no registration; English; no video/subtitles. The AMS print edition is paid, but the author's PDF is free.",
+   "publisher": "Bernd Sturmfels (UC Berkeley); CBMS/AMS",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "https://math.berkeley.edu/~bernd/cbms.pdf",
+    "location": "Contents: Chapter 2 Gröbner Bases of Zero-Dimensional Ideals (2.1 Computing Standard Monomials and the Radical; 2.5 Solving Polynomial Equations in Singular), Chapter 4 Resultants (4.1 Univariate Resultant; 4.3 Sparse Resultant), Chapter 5 Primary Decomposition",
+    "finding": "Actual PDF: contents and body show Chapter 2 on Gröbner bases of zero-dimensional ideals and Chapter 4 on resultants/elimination, with explicit Singular/Macaulay2 sessions and worked examples. The text states that elimination ideals are obtained from a Gröbner basis with an elimination term order."
+   },
+   "added_by": "review/video-math-additions/M.8.6.json"
   }
  ],
  "topics": [
@@ -186,9 +226,14 @@
      "source": "en1",
      "section": "MACM401 没有 Gröbner 基与消元",
      "extent": "partial"
+    },
+    {
+     "source": "video-en-boocher-gb",
+     "section": "§2.1 term orders and initial ideals; §2.2 division algorithm; §2.3 applications to solving systems by elimination; §2.13 Buchberger's algorithm and S-polynomials; exercises for Day 1. Combine with Sturmfels Chapter 2 (Gröbner bases of zero-dimensional ideals) and Chapter 4 (resultants/elimination)",
+     "extent": "covered"
     }
    ],
-   "note": "中文课程与第二章课件明确讲 Gröbner 基与消元；英文 MACM401 不讲，故补 Cox–Little–O'Shea 第 2–3 章（付费）。这是本节英文的付费补充，不是免费完整路线。"
+   "note": "中文课程与第二章课件明确讲 Gröbner 基与消元；英文 MACM401 不讲，故补 Cox–Little–O'Shea 第 2–3 章（付费）。这是本节英文的付费补充，不是免费完整路线。；The existing English route had MACM401 for polynomial algorithms and symbolic integration, but MACM401 explicitly has no Gröbner bases or elimination; the only English coverage was the paid Cox–Little–O'Shea book (en2). Boocher's free lecture notes give term orders, initial ideals, the division algorithm, Buchberger's algorithm and the elimination-order application, with exercises; Sturmfels's author-hosted free book gives elimination ideals, resultants, zero-dimensional Gröbner bases and worked Singular/Macaulay2 examples. Together they cover the definition, construction and elimination use of Gröbner bases, so the paid book is no longer needed for this topic."
   },
   {
    "topic": "计算机代数系统",
@@ -245,8 +290,16 @@
      "read": "Do the Maple worksheets for formula representation, differentiation and symbolic integration."
     },
     {
-     "source": "en2",
-     "read": "Read Chapters 2–3 of Cox–Little–O'Shea for Gröbner bases, Buchberger's algorithm and elimination (paid book)."
+     "source": "video-en-boocher-gb",
+     "read": "Read §2.1–2.3: monomial term orders, initial ideal, division algorithm, and the elimination-order recipe for solving polynomial systems; do the Day 1 exercises."
+    },
+    {
+     "source": "video-en-boocher-gb",
+     "read": "Read §2.13 Buchberger's algorithm and the S-pair definition; compute a small Gröbner basis by hand, then check it with a CAS."
+    },
+    {
+     "source": "video-en-sturmfels-cbms",
+     "read": "Read Chapter 2 (standard monomials, radical, companion matrices, solving in Singular) and Chapter 4 (univariate and multivariate resultants, elimination theory); run the book's Singular/Macaulay2 examples on one small system."
     }
    ],
    "gaps": []
@@ -270,6 +323,30 @@
    "channel": "text",
    "query_or_url": "https://www.cecm.sfu.ca/~mmonagan/teaching/MACM401/；https://link.springer.com/book/10.1007/978-3-319-16721-3",
    "result": "采纳：MACM401 讲多项式算法与符号积分，Cox 教材补 Gröbner／消元（付费 EUR 38.51）。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "Sturmfels Solving Systems of Polynomial Equations free pdf Groebner elimination",
+   "result": "Found the author-hosted PDF at math.berkeley.edu/~bernd/cbms.pdf; verified Chapter 2 Gröbner bases and Chapter 4 resultants/elimination.",
+   "by": "review/video-math-additions/M.8.6.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "Groebner bases lecture notes pdf Buchberger algorithm elimination free university",
+   "result": "Found Boocher's RTG lecture notes (Utah) with §2.13 Buchberger's algorithm and elimination-order applications; adopted as the construction/algorithm source.",
+   "by": "review/video-math-additions/M.8.6.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.maths.tcd.ie/~vdots/teaching/MA341D-1718.html；http://www.algebra.uni-linz.ac.at/Students/GroebnerBases/w24/",
+   "result": "TCD course has a detailed English syllabus (Buchberger, elimination, resultants) but no lecture-note PDF; Linz course notes are in German. Both were checked and not used as the main English text.",
+   "by": "review/video-math-additions/M.8.6.json"
   }
  ],
  "findings": [
@@ -281,5 +358,7 @@
  "cross_language_fallbacks": [],
  "name": "符号计算与计算代数",
  "description": "表达式化简、精确运算、多项式算法、Gröbner 基与消元、计算机代数系统。",
- "applied_additions": []
+ "applied_additions": [
+  "review/video-math-additions/M.8.6.json@6352bc9ff2"
+ ]
 }

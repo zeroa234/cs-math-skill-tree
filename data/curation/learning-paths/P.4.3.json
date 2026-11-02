@@ -166,6 +166,82 @@
     "finding": "页面标题“A Solid Guide to SOLID Principles”，正文列出五个原则名称，并在每个原则下链接到 Baeldung 的单独教程文章（含 Java 代码）。"
    },
    "added_by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "key": "video-zh-neu-se",
+   "lang": "zh",
+   "title": "东北大学《软件工程》（中国大学MOOC；第四章 面向对象范型、第五章 面向对象分析、第六章 面向对象设计）",
+   "url": "https://www.icourse163.org/course/detail.htm?cid=1001812013",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "4.1 内聚、4.2 耦合、4.3 数据封装与信息隐藏、4.4 类的继承、4.5 类的聚合、4.6 类的关联、4.7 多态与动态绑定、4.8 OO 范型、4.9 UML；5.1 用例建模、5.2 用例图、5.3 类建模、5.4 动态建模；6.1 软件系统设计、6.2 面向对象设计。",
+   "access": "中国大学MOOC 页面只有课程概述与授课大纲，本轮未确认注册入口、当前学期是否开放及免费状态，free 置 null，条件待核；大纲可用于核对讲次。",
+   "publisher": "东北大学《软件工程》课程团队（中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/detail.htm?cid=1001812013",
+    "location": "授课大纲：第四章 4.1 内聚、4.2 耦合、4.3 数据封装与信息隐藏、4.4 类的继承、4.5 类的聚合、4.6 类的关联、4.7 多态与动态绑定、4.8 OO范型、4.9 UML；第五章 5.1 用例建模、5.2 用例图、5.3 类建模、5.4 动态建模；第六章 6.1 软件系统设计、6.2 面向对象设计",
+    "finding": "读到内聚/耦合/封装与信息隐藏被单列成 4.1–4.3，UML 单列 4.9，用例/类/动态建模分列 5.1–5.4，确认它既能讲职责分配与设计原则（内聚/耦合/封装），也能讲 UML 的核心图型。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "key": "video-zh-uml7",
+   "lang": "zh",
+   "title": "《程序员必知必会 7 种 UML 图：类图、序列图、组件图、部署图、用例图、状态图和活动图》（百度开发者中心）",
+   "url": "https://developer.baidu.com/article/details/2855943",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "7 种 UML 图的用途与画法要点：类图（类/接口/继承/聚合/关联）、序列图（对象/消息/时间顺序）、组件图（组件/接口/依赖）、部署图（节点/配置/物理结构）、用例图（参与者/用例/交互）、状态图（状态/转换/事件）、活动图（活动/控制流/执行路径）。",
+   "access": "百度开发者中心公开中文文章，无需注册；短文，不是课程。",
+   "publisher": "百度开发者中心（作者 rousong）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.baidu.com/article/details/2855943",
+    "location": "正文按图种分节：类图、序列图、组件图、部署图、用例图、状态图、活动图；每节给「展示什么、帮助了解什么、画的时候应包含什么」",
+    "finding": "读到组件图讲组件/接口/依赖、部署图讲节点/配置/物理结构、状态图讲状态/转换/事件、活动图讲活动/控制流/执行路径，确认它能补东北大学课程没展开的组件图与部署图；但只是短文，故只作 UML 图型清单补充。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "key": "video-zh-solid",
+   "lang": "zh",
+   "title": "《SOLID 原则》（众里千寻，五种面向对象设计原则 + 代码示例）",
+   "url": "https://everfind.github.io/posts/2021/06/24/solid.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "SOLID 五原则：单一职责 SRP（一个类只对一个角色负责，易测试/易维护）、开闭 OCP（对扩展开放、对修改关闭，用工厂/多态改造）、里氏替换 LSP（子类可替换父类且不改变行为）、接口隔离 ISP（大接口拆小，实现类只依赖需要的接口）、依赖倒置 DIP（高层依赖抽象而非低层实现，用接口解耦）；每条配代码示例与重构前后对比。",
+   "access": "作者博客公开中文全文，无需注册；文章不是课程。",
+   "publisher": "众里千寻（everfind.github.io）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://everfind.github.io/posts/2021/06/24/solid.html",
+    "location": "正文五节：单一职责原则（SRP）、开闭原则（OCP）、里氏替换原则（LSP）、接口隔离原则（ISP）、依赖倒置原则（DIP）；每节含代码示例（如 BookPrinter 拆分、ComputerFactory 改造、Keyboard 接口解耦）",
+    "finding": "读到「应用单一职责的类易测试、测试 case 少」「开闭原则对扩展开放、对修改关闭，用工厂/多态改造」「里氏替换是子类可替换父类且不改变软件行为」「接口隔离把大接口拆小」「依赖倒置让高层依赖抽象，用 Keyboard 接口解耦」等原文与代码，确认它把 SOLID 五条讲成了可对照代码的规则。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "key": "video-zh-sjtu-rup-uml",
+   "lang": "zh",
+   "title": "上海交通大学《软件过程与管理》第2讲 软件开发过程（RUP 与 UML、敏捷过程，沈备军）",
+   "url": "https://base.sjtu.edu.cn/~bjshen/spm/ppt/02.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "统一软件过程 RUP：风险驱动、基于 UML 与构件式架构的迭代递增过程；RUP 最佳实践（迭代开发、管理需求、构件架构、用 UML 可视化建模、持续验证质量、管理变更）；敏捷过程 XP/Scrum/MSF；选择和实施软件过程。",
+   "access": "上海交大课程站公开 PDF，无需注册；中文；课程讲义，不是视频。",
+   "publisher": "上海交通大学 沈备军（软件过程与管理课程）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://base.sjtu.edu.cn/~bjshen/spm/ppt/02.pdf",
+    "location": "第2讲 PPT：统一软件过程 RUP（风险驱动、基于 UML 和构件式架构的迭代递增）；RUP 最佳实践（Develop Iteratively、Manage Requirements、Use Component Architectures、Model Visually (UML)、Continuously Verify Quality、Manage Change）；敏捷过程 XP/SCRUM/MSF；选择和实施软件过程",
+    "finding": "读到 RUP 把 UML 作为可视化建模语言、把「Model Visually (UML)」列为六条最佳实践之一，并说明 RUP 是迭代递增过程，确认它能把 UML 放回开发过程，而不是只讲图符。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.3.json"
   }
  ],
  "topics": [
@@ -216,6 +292,11 @@
      "source": "r7-zh1",
      "section": "单元 2（2.1–2.5 用例图、活动图）、单元 3（3.1–3.4 类图、对象图、包图）、单元 4（4.1–4.3 顺序图、协作图、状态图）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-uml7",
+     "section": "7 种 UML 图（类图/序列图/组件图/部署图/用例图/状态图/活动图）的用途与画法要点；配合 video-zh-sjtu-rup-uml 的 RUP/UML 最佳实践与东北大学 4.9/5.1–5.4（free 待核，可作扩展）",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -230,7 +311,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两语言都只有类图，没有用例图/顺序图/状态图/活动图的系统讲解（那部分在 P.4.2 的 Cornell CS 5150 Lecture 4）。；这条要求的是会用 UML 表达分析与设计，教材按“功能需求建模→静态建模→动态建模”三个单元把用例图、活动图、类图、对象图、包图、顺序图、协作图、状态图的记法与建模步骤分开讲，每个单元都有引例和任务实施，不是只讲类图。；旧记录英文侧只有设计模式里的类图子集。uml-diagrams.org 按图种逐页讲概念、记法和示例，把 UML 从“类图”扩到用例图、顺序图、状态机、活动图、组件图、部署图、包图，覆盖该知识点。"
+   "note": "两语言都只有类图，没有用例图/顺序图/状态图/活动图的系统讲解（那部分在 P.4.2 的 Cornell CS 5150 Lecture 4）。；这条要求的是会用 UML 表达分析与设计，教材按“功能需求建模→静态建模→动态建模”三个单元把用例图、活动图、类图、对象图、包图、顺序图、协作图、状态图的记法与建模步骤分开讲，每个单元都有引例和任务实施，不是只讲类图。；旧记录英文侧只有设计模式里的类图子集。uml-diagrams.org 按图种逐页讲概念、记法和示例，把 UML 从“类图”扩到用例图、顺序图、状态机、活动图、组件图、部署图、包图，覆盖该知识点。；UML 图型先用百度 7 图短文把类图、序列图、组件图、部署图、用例图、状态图、活动图的用途与画法要点列清楚；再用 SJTU 第2讲把 UML 放回 RUP 的「Model Visually (UML)」最佳实践与迭代过程。东北大学 4.9/5.1–5.4 的 UML/用例/类/动态建模讲次可作扩展，但其 free 已置 null、条件待核；免费正文由这两份公开材料承担。"
   },
   {
    "topic": "接口",
@@ -264,6 +345,11 @@
      "source": "r7-zh3",
      "section": "第 7 章 什么是敏捷设计；第 8–12 章 SRP/OCP/LSP/DIP/ISP；第 20 章 包的设计原则",
      "extent": "covered"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "GRASP 1–9 节（信息专家、创造者、高内聚、低耦合、控制器、多态、纯虚构、间接性、变化预防）；配合 video-zh-solid 的 SOLID 五原则与 video-zh-neu-se 的 4.1 内聚/4.2 耦合/4.3 封装（free 待核，可作扩展）",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -278,7 +364,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两语言的这个来源都不单列 SOLID/设计原则，只在模式动机里体现。；SOLID 五个原则在中文版里各占一章（第 8–12 章），前面第 7 章先讲“什么是坏设计（僵化、脆弱、牢固、粘滞）”引出这些原则，后面第 20 章把同样的原则推到包一级。旧记录里中文只有“模式动机中隐含的原则”，现在是逐章教学。；旧记录英文侧只有“模式动机中隐含的设计原则”。Baeldung 的 SOLID 指南逐条讲五个原则并配 Java 代码例子（如 SRP 的独立教程），补上成体系的设计原则教学。"
+   "note": "两语言的这个来源都不单列 SOLID/设计原则，只在模式动机里体现。；SOLID 五个原则在中文版里各占一章（第 8–12 章），前面第 7 章先讲“什么是坏设计（僵化、脆弱、牢固、粘滞）”引出这些原则，后面第 20 章把同样的原则推到包一级。旧记录里中文只有“模式动机中隐含的原则”，现在是逐章教学。；旧记录英文侧只有“模式动机中隐含的设计原则”。Baeldung 的 SOLID 指南逐条讲五个原则并配 Java 代码例子（如 SRP 的独立教程），补上成体系的设计原则教学。；设计原则分三层：GRASP 九条讲「职责给谁」，SOLID 五条讲「类/接口怎么依赖」，内聚/耦合/封装是底层判据。GRASP 与 SOLID 都有免费中文正文与代码示例；东北大学 4.1–4.3 可作扩展，但其 free 已置 null、条件待核。这样不再依赖付费的《敏捷软件开发》第 7–12 章。"
   },
   {
    "topic": "模式与重构",
@@ -309,20 +395,24 @@
      "read": "先读设计模式总述与分类，再按创建型→结构型→行为型各挑 2–3 个模式实现一遍，最后读重构板块的代码坏味"
     },
     {
-     "source": "zh2",
-     "read": "第 5 章 面向对象开发方法（需自备教材）补分析/设计过程"
-    },
-    {
-     "source": "r7-zh1",
-     "read": "选一个熟悉的业务（图书借阅/外卖下单），按单元 2 画用例图并写用例文档，按单元 3 画类图（含关联重数与代码映射）与包图，按单元 4 画一张顺序图和一张状态图，做到同一案例全套图前后一致"
-    },
-    {
      "source": "r7-zh2",
      "read": "读九条职责分配规则，回头检查上一步的类图：哪些职责分错了（例如把“计算总价”放在界面类里），按信息专家/创建者/低耦合高内聚改一版"
     },
     {
-     "source": "r7-zh3",
-     "read": "读第 7 章建立“坏设计”的判据，再读第 8–12 章 SOLID 五原则，每读完一章就把上一步的代码改一处；最后读第 20 章包的设计原则，检查包之间的依赖方向"
+     "source": "video-zh-sjtu-rup-uml",
+     "read": "读第2讲的 RUP 六条最佳实践，重点看「Model Visually (UML)」和迭代递增：说明 UML 图在 RUP 的哪个阶段画、给谁看、如何随迭代更新。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "读 GRASP 九条，对上面的类图逐条问：这个职责给了信息专家吗？创建关系合理吗？有没有不必要的耦合？哪些变化点应该用多态/间接性隔离？把修改建议写回类图。"
+    },
+    {
+     "source": "video-zh-uml7",
+     "read": "用 7 图短文补组件图与部署图：把系统拆成 3–5 个组件、标接口与依赖，再画部署图（节点/运行环境/配置），检查类图里的组件边界是否合理。"
+    },
+    {
+     "source": "video-zh-solid",
+     "read": "读 SOLID 五节，每节挑一个自己项目里的类按原则检查：职责是否单一？新增类型是否要改旧代码？子类能否替换父类？接口是否过大？高层是否直接依赖低层实现？把至少两条改成代码。"
     }
    ],
    "gaps": []
@@ -440,6 +530,54 @@
    "query_or_url": "（未用 Tavily 查 UML/SOLID，直接打开 uml-diagrams.org 与 baeldung.com 两个已知站点）",
    "result": "省额度：这两个站点地址由上一轮记录与常识可得，直接 fetch 核验",
    "by": "review/pi-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "UML 中国大学MOOC 课程 用例图 类图 组件图 部署图 状态图",
+   "result": "未命中专门的 UML MOOC；命中东北大学《软件工程》大纲（4.9 UML、5.1–5.4 用例/类/动态建模），以及百度 7 图短文（含组件图/部署图），分别采纳。",
+   "by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "职责分配原则 GRASP 中文 九种模式",
+   "result": "命中 carecraft 的 GRASP 中文讲解，打开读到九条模式与适用条件，采纳为 video-zh-grasp。",
+   "by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://developer.baidu.com/article/details/2855943",
+   "result": "采纳为 video-zh-uml7：读到类图/序列图/组件图/部署图/用例图/状态图/活动图的用途与画法要点。",
+   "by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/detail.htm?cid=1001812013",
+   "result": "采纳为 video-zh-neu-se：读到 4.1–4.9 的 OO 范型/UML 讲次与 5.1–5.4 的用例/类/动态建模讲次。",
+   "by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://everfind.github.io/posts/2021/06/24/solid.html",
+   "result": "采纳为 video-zh-solid：读到 SOLID 五原则的定义、代码示例与重构前后对比（SRP/OCP/LSP/ISP/DIP）。",
+   "by": "review/video-engineering-additions/P.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://base.sjtu.edu.cn/~bjshen/spm/ppt/02.pdf",
+   "result": "采纳为 video-zh-sjtu-rup-uml：读到 RUP 基于 UML/构件、迭代递增、六条最佳实践与敏捷过程。",
+   "by": "review/video-engineering-additions/P.4.3.json"
   }
  ],
  "findings": [
@@ -451,6 +589,7 @@
  "name": "软件设计与面向对象分析设计",
  "description": "职责分配、UML、接口、设计原则、模式与重构。",
  "applied_additions": [
-  "review/pi-additions/P.4.3.json"
+  "review/pi-additions/P.4.3.json",
+  "review/video-engineering-additions/P.4.3.json@0ed004d086"
  ]
 }

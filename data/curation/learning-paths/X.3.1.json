@@ -73,6 +73,63 @@
     "finding": "明确介绍量子噪声和纠错、熵与信息论，且为中文译本。"
    },
    "added_by": "review/data-app-additions/X.3.1.json"
+  },
+  {
+   "key": "video-zh-quantum-alg",
+   "lang": "zh",
+   "title": "张永德：量子算法概论（北京大学公开中文讲稿）",
+   "url": "https://www.phy.pku.edu.cn/jhchen/files/Q-11.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "已读实际中文讲稿的算法步骤与公式；本源量子公开教材4.4/4.7还可提供Grover/Shor实现例子。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "北京大学2014《量子信息物理原理》公开课程讲稿",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.phy.pku.edu.cn/jhchen/files/Q-11.pdf",
+    "location": "21页：Deutsch、量子DFT、Shor求周期、Grover搜索及推导",
+    "finding": "已读实际中文讲稿的算法步骤与公式；本源量子公开教材4.4/4.7还可提供Grover/Shor实现例子。"
+   },
+   "added_by": "review/video-main-additions/X.3.1.json"
+  },
+  {
+   "key": "video-zh-quantum-error",
+   "lang": "zh",
+   "title": "张永德：量子误差纠正与保真度计算（北京大学公开中文讲稿）",
+   "url": "https://www.phy.pku.edu.cn/jhchen/files/Q-12.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实际正文从经典重复码进入量子误差的类型和纠正手续，有推导；量子信息一半配同课第13章，而不是只以科普充整项。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "北京大学《量子信息物理原理》课程讲稿",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.phy.pku.edu.cn/jhchen/files/Q-12.pdf",
+    "location": "19页，第12章：误差来源、位/相位翻转、量子纠正及保真度",
+    "finding": "实际正文从经典重复码进入量子误差的类型和纠正手续，有推导；量子信息一半配同课第13章，而不是只以科普充整项。"
+   },
+   "added_by": "review/video-main-additions/X.3.1.json"
+  },
+  {
+   "key": "video-zh-quantum-info",
+   "lang": "zh",
+   "title": "张永德：量子信息论（北京大学公开中文讲稿）",
+   "url": "https://www.phy.pku.edu.cn/jhchen/files/Q-13.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实际中文讲稿给出熵、典型序列与编码的推导；与第12章纠错讲稿共同覆盖中文组合项。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "北京大学《量子信息物理原理》课程讲稿",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.phy.pku.edu.cn/jhchen/files/Q-13.pdf",
+    "location": "19页，第13章：Shannon熵与编码、量子信息理论",
+    "finding": "实际中文讲稿给出熵、典型序列与编码的推导；与第12章纠错讲稿共同覆盖中文组合项。"
+   },
+   "added_by": "review/video-main-additions/X.3.1.json"
   }
  ],
  "topics": [
@@ -127,6 +184,11 @@
      "source": "fix-zh-qalg",
      "section": "第5–6章：Fourier变换及应用、量子搜索",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-quantum-alg",
+     "section": "Deutsch、量子DFT、Shor和Grover四个单元，含算法步骤与原理",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -136,7 +198,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只到 QFT/相位估计，没有 Shor/Grover 的完整讲次。；原zh1已教QFT与相位估计，本书接Fourier算法应用和Grover搜索；完成从线路到算法和复杂度分析的中文主线。"
+   "note": "中文只到 QFT/相位估计，没有 Shor/Grover 的完整讲次。；原zh1已教QFT与相位估计，本书接Fourier算法应用和Grover搜索；完成从线路到算法和复杂度分析的中文主线。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "纠错和量子信息",
@@ -151,6 +213,16 @@
      "source": "fix-zh-qinfo",
      "section": "量子噪声与纠错、熵、量子信息论（原着第8–12章）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-quantum-error",
+     "section": "第12章误差、纠正与保真度；另读同课第13章信息论，组合覆盖",
+     "extent": "covered"
+    },
+    {
+     "source": "video-zh-quantum-info",
+     "section": "第13章经典Shannon理论与量子信息论；配第12章量子纠错",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -160,7 +232,7 @@
      "extent": "covered"
     }
    ],
-   "note": "组合项：纠错与量子信息英文都有专章；中文 14 讲未到。；原zh1提供态、测量、电路前置；本卷接噪声与纠错再到熵和信息论，两部分共同覆盖组合项，未用英文讲义顶替。"
+   "note": "组合项：纠错与量子信息英文都有专章；中文 14 讲未到。；原zh1提供态、测量、电路前置；本卷接噪声与纠错再到熵和信息论，两部分共同覆盖组合项，未用英文讲义顶替。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   }
  ],
  "routes": {
@@ -172,12 +244,16 @@
      "read": "按线性代数→量子力学假设→密度算子→量子电路→QFT→相位估计的顺序看 14 讲，并做相位估计的推导。"
     },
     {
-     "source": "fix-zh-qalg",
-     "read": "先按原zh1学习态、测量、电路及QFT；正版书第5–6章补因子分解等Fourier应用和量子搜索，复习第2章背景。"
+     "source": "video-zh-quantum-alg",
+     "read": "先用讲稿推演Deutsch、QFT、Shor与Grover，再用本源量子免费教材对应示例验证小规模结果。"
     },
     {
-     "source": "fix-zh-qinfo",
-     "read": "正版书依次学噪声、纠错、熵与量子信息论，结合原zh1密度算子；英文en1继续保留独立主线。"
+     "source": "video-zh-quantum-error",
+     "read": "推演位翻转与相位翻转误差的纠正，再对照噪声前后状态计算保真度。"
+    },
+    {
+     "source": "video-zh-quantum-info",
+     "read": "学习熵与编码的关系，再比较经典信息和量子信息的限制；与第12章联合完成纠错和信息论入门。"
     }
    ],
    "gaps": []
@@ -238,6 +314,30 @@
    "query_or_url": "量子计算和量子信息（二） 清华出版社",
    "result": "搜索并打开出版社两个中文译本书页；排除10周年英文影印本，不购买。",
    "by": "review/data-app-additions/X.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://www.phy.pku.edu.cn/jhchen/files/Q-11.pdf",
+   "result": "已读实际中文讲稿的算法步骤与公式；本源量子公开教材4.4/4.7还可提供Grover/Shor实现例子。",
+   "by": "review/video-main-additions/X.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://www.phy.pku.edu.cn/jhchen/files/Q-12.pdf",
+   "result": "实际正文从经典重复码进入量子误差的类型和纠正手续，有推导；量子信息一半配同课第13章，而不是只以科普充整项。",
+   "by": "review/video-main-additions/X.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://www.phy.pku.edu.cn/jhchen/files/Q-13.pdf",
+   "result": "实际中文讲稿给出熵、典型序列与编码的推导；与第12章纠错讲稿共同覆盖中文组合项。",
+   "by": "review/video-main-additions/X.3.1.json"
   }
  ],
  "findings": [
@@ -249,6 +349,7 @@
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/data-app-additions/X.3.1.json"
+  "review/data-app-additions/X.3.1.json",
+  "review/video-main-additions/X.3.1.json@185f33d3b5"
  ]
 }

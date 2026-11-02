@@ -90,6 +90,63 @@
     "finding": "打开确认目录原文：“4 Cookie和会话安全…4.5 会话安全 4.5.1 会话管理 4.5.2 固定会话攻击”“13 身份认证 13.1 概述 13.2 密码的安全性 13.3 身份认证的方式 13.3.1 HTTP认证 13.3.2 表单登录 13.3.3 客户端证书 13.3.4 一次性密码 13.3.5 多因素认证”“14.2.3 基于属性的访问控制 14.3 越权访问漏洞 14.3.1 垂直越权访问 14.3.2 水平越权访问 14.4 零信任模型”“16 API安全 16.1 API安全概述 16.2 常见API架构 16.2.1 SOAP 16.2.2 REST 16.2.3 GraphQL 16.3 OpenAPI规范 16.4 常见的API漏洞 16.5 API安全实践”；版权区显示作者吴翰清、叶敏，2023-07，ISBN 9787121459672，定价 ￥108.0。"
    },
    "added_by": "review/pi-additions/S.3.1.json"
+  },
+  {
+   "key": "video-zh-django-auth",
+   "lang": "zh",
+   "title": "MDN Django教程8：用户授权与许可（中文可操作教程）",
+   "url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Authentication",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实际中文正文和代码创建用户及登录界面，使用login_required、PermissionRequiredMixin约束访问；附仅馆员可见的权限挑战。",
+   "access": "免费中文教程与示例；示例框架版本较旧，按文中提示配当前Django文档；不是API索引。",
+   "publisher": "MDN 社区维护的中文教学",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Authentication",
+    "location": "认证/登录登出、限制视图、借阅者数据过滤、权限装饰器与挑战练习",
+    "finding": "实际中文正文和代码创建用户及登录界面，使用login_required、PermissionRequiredMixin约束访问；附仅馆员可见的权限挑战。"
+   },
+   "added_by": "review/video-main-additions/S.3.1.json"
+  },
+  {
+   "key": "video-zh-cookie",
+   "lang": "zh",
+   "title": "MDN：HTTP Cookie与会话安全（中文原理和示例）",
+   "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Cookies",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "免费中文正文解释状态保持及安全属性，并强调认证后重新生成会话Cookie以避免会话固定问题。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "MDN 中文教学正文",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Cookies",
+    "location": "会话管理、创建/发送Cookie、Secure/HttpOnly/SameSite、会话标识重生成",
+    "finding": "免费中文正文解释状态保持及安全属性，并强调认证后重新生成会话Cookie以避免会话固定问题。"
+   },
+   "added_by": "review/video-main-additions/S.3.1.json"
+  },
+  {
+   "key": "video-zh-cors",
+   "lang": "zh",
+   "title": "MDN：跨源资源共享CORS（中文分步HTTP示例）",
+   "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/CORS",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "免费中文正文有完整HTTP请求/响应与凭据、预检示例；配现有CTF Wiki的XSS/CSRF/SSRF及Django服务端授权，覆盖两端和接口边界。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "MDN 中文教学正文",
+   "reupload": false,
+   "evidence": {
+    "url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/CORS",
+    "location": "简单请求、预检请求、带凭据请求、服务端响应头与浏览器限制",
+    "finding": "免费中文正文有完整HTTP请求/响应与凭据、预检示例；配现有CTF Wiki的XSS/CSRF/SSRF及Django服务端授权，覆盖两端和接口边界。"
+   },
+   "added_by": "review/video-main-additions/S.3.1.json"
   }
  ],
  "topics": [
@@ -130,6 +187,16 @@
      "source": "r7-zh1",
      "section": "第4章 Cookie 和会话安全（含 4.5 会话管理、4.5.2 固定会话攻击）+ 第13章 身份认证（密码安全性、HTTP 认证/表单/客户端证书/OTP/MFA）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-django-auth",
+     "section": "用户认证、登录/登出及限制已登录视图；会话机制配MDN Cookie安全章节",
+     "extent": "covered"
+    },
+    {
+     "source": "video-zh-cookie",
+     "section": "Cookie状态保持、安全属性、认证后的会话标识重新生成；配Django认证示例",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -144,7 +211,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文没有口令/多因素/会话固定/OAuth/JWT 的系统章与实验。；旧结论说中文只有零散会话内容与操作演示，没有口令/多因素/会话固定/的系统讲解。这本教材把“认证”和“会话”分成两章：认证章从密码存储与强度讲到 HTTP 认证、表单登录、客户端证书、一次性密码、多因素认证五种方式；会话章从 Cookie 属性（Secure/HttpOnly/SameSite 等）讲到会话管理生命周期与固定会话攻击。两者合起来覆盖了口令、多因素、会话固定这一整条链，且都是设计侧的防守视角。"
+   "note": "中文没有口令/多因素/会话固定/OAuth/JWT 的系统章与实验。；旧结论说中文只有零散会话内容与操作演示，没有口令/多因素/会话固定/的系统讲解。这本教材把“认证”和“会话”分成两章：认证章从密码存储与强度讲到 HTTP 认证、表单登录、客户端证书、一次性密码、多因素认证五种方式；会话章从 Cookie 属性（Secure/HttpOnly/SameSite 等）讲到会话管理生命周期与固定会话攻击。两者合起来覆盖了口令、多因素、会话固定这一整条链，且都是设计侧的防守视角。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "访问控制",
@@ -159,6 +226,11 @@
      "source": "r7-zh1",
      "section": "第14章 访问控制（14.2.3 基于属性的访问控制、14.3 越权访问漏洞：垂直/水平越权、14.4 零信任模型）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-django-auth",
+     "section": "按用户过滤借阅列表、permission_required与PermissionRequiredMixin、馆员权限挑战",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -168,7 +240,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文缺 IDOR/水平越权/垂直越权/业务逻辑绕过的系统内容与实验。；旧结论说中文缺 IDOR/越权/业务逻辑绕过的系统内容。第14章把访问控制拆成模型（含 ABAC）与失效形态（垂直越权=功能级越权、水平越权=对象级越权，即 IDOR），并给出零信任下的授权原则，正好对上 OWASP A01 的“功能级授权失效/对象级授权失效”两类。业务逻辑绕过在 CTF Wiki 的逻辑漏洞条目里另有覆盖，可与本章互补。"
+   "note": "中文缺 IDOR/水平越权/垂直越权/业务逻辑绕过的系统内容与实验。；旧结论说中文缺 IDOR/越权/业务逻辑绕过的系统内容。第14章把访问控制拆成模型（含 ABAC）与失效形态（垂直越权=功能级越权、水平越权=对象级越权，即 IDOR），并给出零信任下的授权原则，正好对上 OWASP A01 的“功能级授权失效/对象级授权失效”两类。业务逻辑绕过在 CTF Wiki 的逻辑漏洞条目里另有覆盖，可与本章互补。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "服务端/客户端与接口安全",
@@ -183,6 +255,11 @@
      "source": "r7-zh1",
      "section": "第16章 API 安全（API 架构 SOAP/REST/GraphQL、OpenAPI 规范、常见 API 漏洞、API 安全实践）+ 第2章 HTTP/2、HTTP/3、WebSocket + 第5章 同源策略/WebSocket 跨域",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-cors",
+     "section": "CORS的简单/预检/凭据请求；配本路线CTF Wiki攻击机制与Django服务端权限案例",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -192,7 +269,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文有服务端与客户端两侧的漏洞条目，但没有 API/GraphQL/WebSocket 与请求走私这类接口层内容。；负责接口层这一半：先讲 REST/GraphQL/SOAP 三类 API 架构与 OpenAPI 描述规范，再给常见 API 漏洞（对象级/属性级授权、批量赋值、过度数据暴露等）与防护实践；配合第2/5章的 HTTP 版本与 WebSocket 跨域，能说明“接口安全”与浏览器同源策略、服务端授权之间的关系。服务端注入与客户端 XSS/CSRF 仍由既有 zh1（CTF Wiki）承担，两者合起来覆盖本知识点。注意：HTTP 请求走私（request smuggling）在该书目录中未单列，属本知识点内仍偏薄的一小块。"
+   "note": "中文有服务端与客户端两侧的漏洞条目，但没有 API/GraphQL/WebSocket 与请求走私这类接口层内容。；负责接口层这一半：先讲 REST/GraphQL/SOAP 三类 API 架构与 OpenAPI 描述规范，再给常见 API 漏洞（对象级/属性级授权、批量赋值、过度数据暴露等）与防护实践；配合第2/5章的 HTTP 版本与 WebSocket 跨域，能说明“接口安全”与浏览器同源策略、服务端授权之间的关系。服务端注入与客户端 XSS/CSRF 仍由既有 zh1（CTF Wiki）承担，两者合起来覆盖本知识点。注意：HTTP 请求走私（request smuggling）在该书目录中未单列，属本知识点内仍偏薄的一小块。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   }
  ],
  "routes": {
@@ -204,20 +281,16 @@
      "read": "按 Web 简介 → SQL 注入 → XSS → CSRF → SSRF → 文件上传 的顺序读原理，每个漏洞在本地靶场复现一次。"
     },
     {
-     "source": "zh2",
-     "read": "跟 WEB 安全实践单元做一遍环境与工具（Burp/浏览器开发者工具）操作，形成“发现-验证-利用”的记录。"
+     "source": "video-zh-django-auth",
+     "read": "完成LocalLibrary认证与权限练习；用普通用户和馆员分别检查允许/拒绝的访问，避免用超级用户测试一切。"
     },
     {
-     "source": "r7-zh1",
-     "read": "读第13章，为“口令登录→多因素→会话建立”画一条时序图，标出每一步的攻击面（撞库、会话固定、Cookie 窃取）；再读第4章，用 Cookie 属性（Secure/HttpOnly/SameSite/作用域）逐条说明它们各自挡住哪类攻击，并复现“固定会话攻击”的成因。"
+     "source": "video-zh-cookie",
+     "read": "追踪登录前后浏览器与服务器交换的Cookie；解释Secure、HttpOnly、SameSite分别约束什么，不能互相替代。"
     },
     {
-     "source": "r7-zh1",
-     "read": "读第14章，用一张表区分垂直越权与水平越权（谁能访问谁的对象/功能），并为每种越权写一条服务端校验规则（不要在前端做权限），最后说明零信任模型相对边界防护改变了什么。"
-    },
-    {
-     "source": "r7-zh1",
-     "read": "读第16章，先比较 REST 与 GraphQL 的攻击面差异（字段级暴露、批量查询、introspection），再按 16.4 的漏洞清单给自己熟悉的一个接口做一次评审，写出“对象级授权 + 属性级授权 + 速率限制 + 日志”四条整改项。"
+     "source": "video-zh-cors",
+     "read": "画浏览器、API服务器和攻击站点三方请求图；区分CORS与服务端授权，解释为什么放开跨域不能代替权限检查。"
     }
    ],
    "gaps": []
@@ -297,6 +370,30 @@
    "query_or_url": "Web安全 课程 中国大学MOOC 认证 会话 越权 访问控制 API 接口安全 教材 目录",
    "result": "不合适：命中 MOOC 平台帮助文档与既有北理工课程页，未见以“认证会话/访问控制/接口安全”为主线的中文慕课；本轮不据此下“没有”结论，仅说明未采纳。",
    "by": "review/pi-additions/S.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Authentication",
+   "result": "实际中文正文和代码创建用户及登录界面，使用login_required、PermissionRequiredMixin约束访问；附仅馆员可见的权限挑战。",
+   "by": "review/video-main-additions/S.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/Cookies",
+   "result": "免费中文正文解释状态保持及安全属性，并强调认证后重新生成会话Cookie以避免会话固定问题。",
+   "by": "review/video-main-additions/S.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/CORS",
+   "result": "免费中文正文有完整HTTP请求/响应与凭据、预检示例；配现有CTF Wiki的XSS/CSRF/SSRF及Django服务端授权，覆盖两端和接口边界。",
+   "by": "review/video-main-additions/S.3.1.json"
   }
  ],
  "findings": [
@@ -306,6 +403,7 @@
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/pi-additions/S.3.1.json@96a8ec9d90"
+  "review/pi-additions/S.3.1.json@96a8ec9d90",
+  "review/video-main-additions/S.3.1.json@2bad7855a1"
  ]
 }

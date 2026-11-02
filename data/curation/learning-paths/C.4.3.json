@@ -91,6 +91,46 @@
     "finding": "简介写明本书讨论同步、异步和部分同步模型下的互斥性、一致性和通信问题，给出多种算法或不可能性结果，并有精确的复杂度衡量。"
    },
    "added_by": "review/main-additions/C.4.3.json"
+  },
+  {
+   "key": "video-zh-ustc-dist-slides",
+   "lang": "zh",
+   "title": "中国科学技术大学《分布式算法》课程课件（汪炀、黄刘生）：复杂性度量、消息复杂度、下界与不可能结果、环上 leader 选举下界",
+   "url": "http://home.ustc.edu.cn/~zgm1993/alg/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "分布式算法课件 1–6（ch31–ch36）：Ch.1 导论 §1.2 给出计算模型与复杂性度量，明确「通信成本：msg 的…」并把「否定结果、下界和不可能的结果」列为核心；Ch.2 消息传递系统给出消息复杂度（消息总数）与位复杂度、同步/异步模型；Ch.4 环上 leader 选举给出匿名算法不可能性、LCR O(n^2)、O(n log n) 算法；Ch.5 给出基于比较的 leader 选举 Ω(n log n) 消息下界、时间受限算法的下界证明；Ch.3/6 还含生成树、DFS、因果通信等。",
+   "access": "中国科学技术大学课程主页公开的 PPT 课件，免费、无需注册；中文正文；无视频/字幕问题。课程视频在 USTC 网络教学平台，B 站有第三方搬运（见下条）。",
+   "publisher": "汪炀、黄刘生（中国科学技术大学计算机学院）",
+   "reupload": false,
+   "official_search": "",
+   "evidence": {
+    "url": "http://home.ustc.edu.cn/~zgm1993/alg/ppt/ch31(New).ppt",
+    "location": "ch31 幻灯片「§1.2 分布式计算的理论」：复杂性度量标准（时间、空间、通信成本：msg 的…）、「否定结果、下界和不可能的结果」；ch32「消息复杂度：消息总数」「位复杂度」；ch34–35 leader 选举与 Ω(n log n) 下界、基于比较算法的下界证明",
+    "finding": "实际下载并抽取 ch31–ch36 的 PPT 文本：ch31 明写通信成本与下界/不可能结果；ch32 定义消息复杂度与位复杂度；ch34 给出匿名环选举不可能性与 O(n^2)/O(n log n) 算法；ch35 给出「异步通信模型中领导者选举问题所需的消息数下界为 Ω(n log n)」及基于比较/时间受限算法的下界证明。"
+   },
+   "added_by": "review/video-math-additions/C.4.3.json"
+  },
+  {
+   "key": "video-zh-ustc-dist-video",
+   "lang": "zh",
+   "title": "中国科学技术大学《分布式算法》21 讲（汪炀）— B 站第三方搬运",
+   "url": "https://www.bilibili.com/video/BV1nQ4y1f78C/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "21 讲课程录像（分 P 仅「分布式算法01–21」，无小节标题）：按 USTC 算法设计与分析课程中的分布式算法部分组织，配合上述 ch31–ch36 课件学习复杂性度量、同步/异步网络、生成树、leader 选举、下界与不可能结果。",
+   "access": "第三方转载，授权未核。B 站免费观看；上传者「高级特工刘闪」为第三方搬运，简介给出原课程地址 http://wlkt.ustc.edu.cn/video/detail_2101_20993.htm；中文课程录像，讲解语言未逐段核听，字幕未核；授权未核。",
+   "publisher": "原课：中国科学技术大学（汪炀）；B 站上传：高级特工刘闪（第三方）",
+   "reupload": true,
+   "official_search": "已查 USTC 网络教学平台原课程页 http://wlkt.ustc.edu.cn/video/detail_2101_20993.htm（访问超时）与 USTC 算法课课件页 http://home.ustc.edu.cn/~zgm1993/alg/（课件可下载）；未找到可访问的官方公开视频页，故 B 站版按第三方转载登记。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1nQ4y1f78C/",
+    "location": "B 站视频页：标题「中国科学技术大学-分布式算法-算法理论-算法设计与分析-汪炀」，视频选集 1/21「分布式算法01」至 21/21「分布式算法21」，简介给出 wlkt.ustc.edu.cn 原课程链接",
+    "finding": "实际打开 B 站页：21 个分 P 均为课程录像，上传者为第三方，简介指向 USTC 原课程页；分 P 没有小节标题，因此具体主题以同课程 ch31–ch36 中文课件为准，不靠视频标题推断。"
+   },
+   "added_by": "review/video-math-additions/C.4.3.json"
   }
  ],
  "topics": [
@@ -184,6 +224,11 @@
      "source": "main-zh-lynch",
      "section": "各章算法的消息复杂度与下界（如环上领导者选举）、不可能性结果",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-ustc-dist-slides",
+     "section": "ch31 §1.2 复杂性度量（时间、空间、通信成本）与「下界和不可能的结果」；ch32 消息复杂度/位复杂度；ch34–35 环上 leader 选举的 Ω(n log n) 消息下界与基于比较/时间受限算法的下界证明；配合 r7-zh1 第 4 章 CAP 与一致性模型",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -193,7 +238,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文完全没有下界/通信复杂度内容。；可用性一半已覆盖：CAP 定理与一致性模型逐节讲清分区时必须在可用性与一致性之间取舍。通信复杂度只到工程层（Basic Paxos 需两轮 RPC、消息量成倍增加，Multi-Paxos 用“一次 Prepare 多次 Accept”把每轮消息摊薄），没有通信复杂度理论（协议/判定树、下界证明）的中文教学，故整体只能算 partial。；可用性一半由《图解分布式系统原理》第 4 章 CAP 讲分区时可用性与一致性的取舍；通信复杂度一半由林奇《分布式算法》中译本讲各算法的消息复杂度与下界，它就是英文路线 MIT 6.852J 所用教材的中译本。中文侧只能靠这本付费教材承担通信复杂度。"
+   "note": "中文完全没有下界/通信复杂度内容。；可用性一半已覆盖：CAP 定理与一致性模型逐节讲清分区时必须在可用性与一致性之间取舍。通信复杂度只到工程层（Basic Paxos 需两轮 RPC、消息量成倍增加，Multi-Paxos 用“一次 Prepare 多次 Accept”把每轮消息摊薄），没有通信复杂度理论（协议/判定树、下界证明）的中文教学，故整体只能算 partial。；可用性一半由《图解分布式系统原理》第 4 章 CAP 讲分区时可用性与一致性的取舍；通信复杂度一半由林奇《分布式算法》中译本讲各算法的消息复杂度与下界，它就是英文路线 MIT 6.852J 所用教材的中译本。中文侧只能靠这本付费教材承担通信复杂度。；现有中文里，可用性（CAP/一致性取舍）由 r7-zh1 第 4 章免费覆盖，但通信复杂度与下界只有付费的 Lynch 中译本（main-zh-lynch）系统讲。中科大课件把通信成本（消息数/位数）作为复杂性度量，给出同步/异步模型、leader 选举的 Ω(n log n) 消息下界、匿名算法不可能性与时间受限算法下界，并明确把「否定结果、下界和不可能的结果」作为分布式算法理论的核心；与 r7-zh1 的 CAP/可用性材料组合后，可用性取舍与通信复杂度/下界两块都有免费中文正文，付费书只留作备选。"
   }
  ],
  "routes": {
@@ -209,8 +254,16 @@
      "read": "读第 2 章建立故障模型与时间模型（区分崩溃故障/拜占庭故障、同步/异步系统），再读第 4 章的一致性模型把线性化与顺序一致性、因果一致性、最终一致性排成强弱序列，最后读第 5 章 5.2 FLP 与 5.3 Paxos/Multi-Paxos，用 FLP 解释为什么工程共识要靠超时与随机化。"
     },
     {
-     "source": "main-zh-lynch",
-     "read": "读林奇《分布式算法》同步环上领导者选举一章，比较 LCR 与 HS 算法的消息复杂度，并理解基于比较的选举算法的消息下界。"
+     "source": "video-zh-ustc-dist-slides",
+     "read": "读 ch31 §1.2：列出计算模型（同步/异步、消息传递/共享存储）、故障类型与复杂性度量（时间、空间、消息数、位数），并记下「下界和不可能的结果」这一研究目标。"
+    },
+    {
+     "source": "video-zh-ustc-dist-slides",
+     "read": "读 ch32 的消息复杂度定义，区分消息总数与位复杂度；用一个小网络手算广播/敛播的消息数与轮数。"
+    },
+    {
+     "source": "video-zh-ustc-dist-slides",
+     "read": "读 ch34–35：匿名环选举不可能性、LCR 的 O(n^2)、O(n log n) 算法，以及 Ω(n log n) 消息下界的证明思路；配合 r7-zh1 第 4 章 CAP 定理，写一段「可用性与通信开销取舍」的笔记。"
     }
    ],
    "gaps": []
@@ -286,6 +339,30 @@
    "query_or_url": "分布式算法 课程 消息复杂度 通信复杂度 南京大学 黄宇 讲义",
    "result": "只找到教师主页与实验室页面，没有公开讲义。",
    "by": "review/main-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili-search",
+   "query_or_url": "分布式算法 课程 共识 下界；分布式系统 理论 课程 中文；分布式算法 中文 讲义",
+   "result": "采纳中国科学技术大学《分布式算法》21 讲（汪炀）与同课程 ch31–ch36 课件；另有 MIT 6.824 中文配音版，但那是工程系统课且为配音，不作为理论覆盖率证据。",
+   "by": "review/video-math-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "http://home.ustc.edu.cn/~zgm1993/alg/ 与 ppt/ch31(New).ppt … ch36(New).ppt",
+   "result": "下载并抽取 PPT 文本：ch31 有通信成本与下界/不可能结果；ch32 有消息复杂度/位复杂度；ch34–35 有 leader 选举下界与证明。确认是中文大学课件正文，不是课程简介。",
+   "by": "review/video-math-additions/C.4.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "http://wlkt.ustc.edu.cn/video/detail_2101_20993.htm",
+   "result": "USTC 原课程页访问超时，未能核对官方视频；B 站版按第三方转载登记，并在 official_search 写明已查官方页与课件页。",
+   "by": "review/video-math-additions/C.4.3.json"
   }
  ],
  "findings": [
@@ -299,6 +376,7 @@
  "description": "故障模型、线性化、共识可解性、可用性与通信复杂度。",
  "applied_additions": [
   "review/pi-additions/C.4.3.json@feca2d9cd2",
-  "review/main-additions/C.4.3.json@3fe933ecf6"
+  "review/main-additions/C.4.3.json@3fe933ecf6",
+  "review/video-math-additions/C.4.3.json@9bb98b3e54"
  ]
 }

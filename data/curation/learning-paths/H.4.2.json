@@ -9,7 +9,7 @@
    "url": "https://ocw.aca.ntu.edu.tw/courses/mooc0031",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "物体在空间运动的描述、机械手臂正/逆运动学、Jacobian、机械手臂轨迹规划与实例；共 7 讲。",
    "access": "NTU OCW 免费影片；中文授课。Coursera 版自 2025 年 8 月起只免费预览第一单元，完整需付费，故以 OCW 为准。",
    "publisher": "国立台湾大学（林沛群）",
@@ -26,7 +26,7 @@
    "url": "https://www.icourse163.org/course/NEU-1003431001",
    "tier": "website",
    "free": null,
-   "role": "primary",
+   "role": "alternative",
    "covers": "机构组成、坐标变换、位姿运动学、速度建模、动力学建模、驱动系统、位姿轨迹控制、力控制、智能控制；11 章，含 MATLAB 仿真。",
    "access": "视频需注册选课，按学期开放，认证证书收费；课程说明视频/课件是提纲性的，需配合教材。",
    "publisher": "东北大学机器人科学与工程学院",
@@ -107,6 +107,45 @@
     "finding": "正文用数值例子讲预测与测量的加权融合（即多源信息融合的核心），可作为“感知融合”的中文入门；站内“传感器融合”作为专题只在付费书里，本轮未读。"
    },
    "added_by": "review/pi-additions/H.4.2.json"
+  },
+  {
+   "key": "video-zh-gao",
+   "lang": "zh",
+   "title": "【高翔】视觉 SLAM 十四讲（B 站 9 讲转载，含 ch7_1/ch7_2 视觉里程计、ch8 视觉里程计 2、ch10 后端）",
+   "url": "https://www.bilibili.com/video/BV16t411g7FR",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "ch1~2 初识 SLAM、ch3 三维空间刚体运动、ch4 李群与李代数、ch5 相机与图像、ch6 非线性优化、ch7_1/ch7_2 视觉里程计 1（特征点法）、ch8 视觉里程计 2（直接法/光流）、ch10 后端 2（位姿图）。",
+   "access": "第三方转载，授权未核；B 站公开可播，中文授课，页面未提供字幕，字幕未核；9 讲只到 ch10，不含 ch9、ch11 回环检测、ch12 建图、ch13 实践。",
+   "publisher": "高翔（原课）；B 站转载 UP 主 攻城狮之家",
+   "reupload": true,
+   "official_search": "https://raw.githubusercontent.com/gaoxiang12/slambook2/master/README.md；README 正文链接列表与说明：京东书籍链接、豆瓣、第一版代码、英文版代码、百度云备份；没有免费录像链接；作者 GitHub README 只列书（京东/豆瓣）与配套代码，未列任何免费视频；B 站这套 9 讲是第三方转载，故按转载规则标注 reupload:true、授权未核，并把它限定为 ch7/8/10 的理论补充。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV16t411g7FR",
+    "location": "页面「视频选集（1/9）」：视觉SLAM十四讲ch1~2（01:37:39）、ch3（02:03:37）、ch4（01:34:01）、ch5（01:15:56）、ch6（01:33:16）、ch7_1（01:31:24）、ch7_2（01:08:49）、ch8（01:16:34）、ch10（01:31:32）；UP 主 攻城狮之家",
+    "finding": "逐集读到 ch7 视觉里程计分两讲、ch8 视觉里程计 2、ch10 后端各一讲，确认它能把 VO 与位姿图后端讲出来；同时确认只有 9 讲、没有 ch11 回环和 ch12 建图，所以不能单独拿它宣称覆盖「定位建图」。"
+   },
+   "added_by": "review/video-engineering-additions/H.4.2.json"
+  },
+  {
+   "key": "video-zh-cvlife",
+   "lang": "zh",
+   "title": "计算机视觉 life《视觉惯性 SLAM：理论与源码解析》配套 B 站系列（ORB-SLAM2/ORB-SLAM3 全流程）",
+   "url": "https://www.bilibili.com/video/BV17URnYAEZ8",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "理论部分 01–13：SLAM 简介、C++/CMake、齐次坐标、刚体旋转、针孔相机、对极约束、单应、基础矩阵/三角化、PnP、g2o 图优化；ORB-SLAM2 部分 01–20：ORB 特征、特征均匀化、匹配、词袋、地图点/关键帧/图结构、单目/双目初始化、跟踪线程、局部建图线程（新关键帧/剔除/地图点融合/关键帧剔除）、闭环检测、闭环候选验证、Sim(3)、闭环矫正与全局 BA、局部 BA、Sim3/本质图/全局优化；ORB-SLAM3 部分含多地图系统、地图融合。",
+   "access": "B 站「计算机视觉life」机构号公开合集，视频可直接播放；中文授课；页面未提供字幕轨，字幕未核；是作者课程的配套讲解，不是只给书目录。",
+   "publisher": "计算机视觉life（《视觉惯性 SLAM：理论与源码解析》作者团队）B 站机构号",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV17URnYAEZ8",
+    "location": "页面「视频选集（14/49）」：01 SLAM简介与应用场景…13 构建G2O顶点；01 ORB-SLAM2简介及应用示例…12 局部建图线程的流程及目的、13 局部建图线程处理新关键帧/剔除/新生成地图点、15 闭环检测简介/意义/流程、16 寻找并验证闭环候选关键帧、17 计算Sim(3)变换、18 闭环矫正与全局BA、20 闭环中的Sim3优化/本质图优化/全局优化；ORB-SLAM3 部分 09 多地图系统、12 闭环和地图融合里检测共同区域、15 视觉惯性地图融合",
+    "finding": "读到「局部建图线程」「闭环检测」「Sim(3)」「闭环矫正与全局 BA」「多地图系统/地图融合」等明确讲次，确认它覆盖了高翔 9 讲缺失的建图与回环两段；理论 01–13 又把相机模型、对极几何、PnP、g2o 补齐，因此可作为「定位建图」的中文主线。"
+   },
+   "added_by": "review/video-engineering-additions/H.4.2.json"
   }
  ],
  "topics": [
@@ -152,6 +191,11 @@
      "source": "r7-zh1",
      "section": "第 2 讲 2.2 经典视觉 SLAM 框架（视觉里程计/后端优化/回环检测/建图）+ 第 7–10 讲视觉里程计与后端",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-cvlife",
+     "section": "理论 01–13（SLAM 简介、相机模型、对极几何/单应、三角化、PnP、g2o）＋ORB-SLAM2 01–20（跟踪线程、局部建图线程、闭环检测/验证、Sim(3)、闭环矫正与全局 BA）＋ORB-SLAM3 多地图/地图融合",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -161,7 +205,7 @@
      "extent": "covered"
     }
    ],
-   "note": "英文由 Freiburg Robot Mapping 补 SLAM；中文仍无 SLAM 课程。；旧中文只有台大与东北大学的运动学/控制课，完全不含 SLAM；《视觉 SLAM 十四讲》第 2 讲给出完整框架，再用视觉里程计、后端优化、回环检测、建图四部分展开，补上中文“定位建图”。"
+   "note": "英文由 Freiburg Robot Mapping 补 SLAM；中文仍无 SLAM 课程。；旧中文只有台大与东北大学的运动学/控制课，完全不含 SLAM；《视觉 SLAM 十四讲》第 2 讲给出完整框架，再用视觉里程计、后端优化、回环检测、建图四部分展开，补上中文“定位建图”。；「定位建图」至少要有四段：前端位姿估计、后端优化、回环检测、建图。video-zh-cvlife 的理论 01–13 给相机模型、对极几何、PnP、图优化；ORB-SLAM2 部分把跟踪线程、局部建图线程（新关键帧/地图点融合/关键帧剔除）、闭环检测与验证、Sim(3)、闭环矫正与全局 BA 逐段讲开；ORB-SLAM3 再补多地图与地图融合。video-zh-gao 的 ch7/8/10 只补 VO 与位姿图后端的理论视角，不能单独覆盖回环/建图，所以本项以 cvlife 为主线、高翔 9 讲为对照；已有免费 zh1（台大机器人学）负责运动学，r7-zh2（KalmanFilter 中文教程）负责滤波融合，合起来覆盖定位建图的入门全链。"
   },
   {
    "topic": "轨迹规划",
@@ -241,16 +285,20 @@
      "read": "先看台大 7 讲，掌握空间描述、正/逆运动学、Jacobian 与轨迹规划。"
     },
     {
-     "source": "zh2",
-     "read": "再学东北大学第 1–8 章补动力学、驱动与位姿/力控制，做 MATLAB 仿真。"
-    },
-    {
-     "source": "r7-zh1",
-     "read": "在台大/东北大学学完运动学与控制后读《视觉 SLAM 十四讲》：先第 2 讲建立“视觉里程计—后端优化—回环检测—建图”框架与数学表述，再按第 7–8 讲实现特征点法与直接法里程计，第 9–10 讲做后端优化与回环，最后建图；配套跑通书里的代码。"
-    },
-    {
      "source": "r7-zh2",
      "read": "用 KalmanFilter.NET 中文站的传感器融合一章，把里程计与 IMU/视觉的测量写进同一状态向量做一次融合，观察协方差如何随观测更新。"
+    },
+    {
+     "source": "video-zh-cvlife",
+     "read": "先看理论 01–13：SLAM 框架 → 针孔相机/畸变 → 对极约束/单应/三角化 → PnP → g2o 图优化；每讲配合 slambook2 对应章节代码跑一遍（ch5 相机、ch7 特征点、ch8 直接法、ch9/10 后端）。"
+    },
+    {
+     "source": "video-zh-gao",
+     "read": "用高翔 ch7_1/ch7_2 对照特征点法与直接法/光流，用 ch8 对照 VO 2，用 ch10 对照位姿图后端；只把这 4 讲当理论对照，回环与建图不要在这里找。"
+    },
+    {
+     "source": "video-zh-cvlife",
+     "read": "进入 ORB-SLAM2 部分：跟踪线程 → 局部建图线程（关键帧/地图点/剔除与融合）→ 闭环检测与候选验证 → Sim(3) → 闭环矫正与全局 BA；最后看 ORB-SLAM3 的多地图与地图融合，画一张从 VO 到全局一致地图的流程图。"
     }
    ],
    "gaps": []
@@ -314,6 +362,46 @@
    "query_or_url": "https://kalmanfilter.net/CN/default_cn.aspx",
    "result": "打开中文站正文，确认以示例讲卡尔曼滤波的预测/测量加权融合；站内“传感器融合”专题只在付费书介绍里，已在 evidence 注明。",
    "by": "review/pi-additions/H.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "高翔 SLAM十四讲 B站 视频 第1讲 第2讲",
+   "result": "命中 B 站 BV16t411g7FR【高翔】视觉SLAM十四讲；打开读到 9 个分集与 ch7_1/ch7_2/ch8/ch10，确认是第三方转载且不完整，遂标 reupload:true。",
+   "by": "review/video-engineering-additions/H.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://raw.githubusercontent.com/gaoxiang12/slambook2/master/README.md",
+   "result": "作者官方 README 只列书与代码、无免费录像，作为 official_search 证据；确认 B 站 9 讲为转载。",
+   "by": "review/video-engineering-additions/H.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "视觉SLAM十四讲 第11讲 回环检测 第12讲 建图 B站",
+   "result": "未找到高翔本人的 ch11/ch12 免费录像；只找到笔记与零散演示，不能冒充课程。",
+   "by": "review/video-engineering-additions/H.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "ORB-SLAM2 中文 视频 教程 回环检测 建图 B站 全集",
+   "result": "命中 B 站 BV17URnYAEZ8《01 ORB-SLAM2简介及应用示例》；打开读到 49 集选集，含局部建图、闭环检测、Sim(3)、全局 BA、多地图，采纳为 video-zh-cvlife。",
+   "by": "review/video-engineering-additions/H.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "浙江大学 视觉SLAM 公开课 章国锋 B站 回环 建图",
+   "result": "命中 BV1ax411R7Hd 浙江大学视觉 SLAM 公开课（29 讲）；查看选集发现只有 13__SLAM 一讲直接讲 SLAM，其余是通用计算机视觉，不能覆盖建图/回环全链，未采用。",
+   "by": "review/video-engineering-additions/H.4.2.json"
   }
  ],
  "findings": [
@@ -325,6 +413,7 @@
  "name": "机器人建模、规划与控制",
  "description": "运动学/动力学、定位建图、轨迹规划、感知融合与机器人控制。",
  "applied_additions": [
-  "review/pi-additions/H.4.2.json@a0eaec856f"
+  "review/pi-additions/H.4.2.json@a0eaec856f",
+  "review/video-engineering-additions/H.4.2.json@4f8d06459e"
  ]
 }

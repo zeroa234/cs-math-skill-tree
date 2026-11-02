@@ -8,6 +8,13 @@ function audit(){return {id:skill.id,name:skill.name,description:skill.desc,sour
 test('independent complete routes retain chapter-level coverage',()=>{
  const result=assessLearningPath(audit(),skill);assert.deepEqual(result.problems,[]);assert.equal(result.routes.zh.covered,2);assert.equal(result.routes.en.status,'complete');
 });
+test('coverage, free teaching and uncertain access are counted separately',()=>{
+ const record=audit();record.sources[0].free=false;
+ let route=assessLearningPath(record,skill).routes.zh;
+ assert.equal(route.status,'complete');assert.equal(route.freeCovered,0);assert.deepEqual(route.paidTopics,['变量','调试']);
+ record.sources[0].free=null;route=assessLearningPath(record,skill).routes.zh;
+ assert.equal(route.freeCovered,0);assert.deepEqual(route.paidTopics,[]);assert.deepEqual(route.accessPendingTopics,['变量','调试']);
+});
 test('reference-only material cannot establish a novice teaching route',()=>{
  const record=audit();record.sources[0].role='reference';const result=assessLearningPath(record,skill);assert(result.problems.some(s=>s.includes('claims complete')));assert.equal(result.routes.zh.status,'gap');
 });

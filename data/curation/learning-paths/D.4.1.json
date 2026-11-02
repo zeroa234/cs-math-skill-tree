@@ -78,6 +78,25 @@
     "finding": "在出版社官方目录里确认这本书把本体与 OWL、规则交换格式、查询语言独立成节，是中文教材层面对「语义约束」的正式教学；同时给出定价与 ISBN，可用于登记付费渠道。"
    },
    "added_by": "review/pi-additions/D.4.1.json"
+  },
+  {
+   "key": "video-zh-dl",
+   "lang": "zh",
+   "title": "戴洪良《知识表示》：描述逻辑和语义网（公开中文课件）",
+   "url": "https://hldai.github.io/krr24/slides/7-%E6%8F%8F%E8%BF%B0%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%AD%E4%B9%89%E7%BD%91.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实际PDF包含ALC语义和推理、Tableau步骤，以及OWL包含/等价/不相交、属性定义域值域等约束例子。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "戴洪良，南京航空航天大学；作者公开课程主页",
+   "reupload": false,
+   "evidence": {
+    "url": "https://hldai.github.io/krr24/slides/7-%E6%8F%8F%E8%BF%B0%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%AD%E4%B9%89%E7%BD%91.pdf",
+    "location": "48页：pp.2–25描述逻辑/ALC/TBox/ABox/解释/推理/Tableau；pp.39–43 OWL类、属性与限制",
+    "finding": "实际PDF包含ALC语义和推理、Tableau步骤，以及OWL包含/等价/不相交、属性定义域值域等约束例子。"
+   },
+   "added_by": "review/video-main-additions/D.4.1.json"
   }
  ],
  "topics": [
@@ -151,6 +170,11 @@
      "source": "r7-zh2",
      "section": "2.3.3 本体 (Ontology) 与本体描述语言 (OWL)；2.3.4 规则及其交换格式；2.3.5 查询语言（配合 2.2.4 描述逻辑）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-dl",
+     "section": "pp.39–43：OWL类包含/等价/不相交，属性域和值域；配前半ALC语义",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -160,7 +184,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文课程讲本体与推理，但没有把 validating schema/OWL 约束单独成节。；中文教材第2章把语义网技术体系拆成 RDFS、本体与 OWL、规则交换格式、查询语言四节，OWL 公理（基数、值域、不相交、属性特征）就是知识图谱的语义约束的正式表达方式，规则节给出另一类约束/派生规则；与 r7-zh1 第5.3.1「基于 Ontology 的推理」合起来，构成本体层约束及其推理的中文教学。注意：这本教材没有讲 SHACL 这类「形状约束」语言，若需要 SHACL 具体语法仍要读英文规范。"
+   "note": "中文课程讲本体与推理，但没有把 validating schema/OWL 约束单独成节。；中文教材第2章把语义网技术体系拆成 RDFS、本体与 OWL、规则交换格式、查询语言四节，OWL 公理（基数、值域、不相交、属性特征）就是知识图谱的语义约束的正式表达方式，规则节给出另一类约束/派生规则；与 r7-zh1 第5.3.1「基于 Ontology 的推理」合起来，构成本体层约束及其推理的中文教学。注意：这本教材没有讲 SHACL 这类「形状约束」语言，若需要 SHACL 具体语法仍要读英文规范。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "知识融合与图谱查询",
@@ -191,12 +215,12 @@
      "read": "按表示→存储→获取→融合→推理→问答的顺序看视频，配合讲义做一次从文本抽取到图谱构建的小项目。"
     },
     {
-     "source": "r7-zh2",
-     "read": "先读第2章：2.2.4 描述逻辑了解概念/角色/个体与可满足性，2.3.2–2.3.3 用 RDFS 与 OWL 写一个带基数与值域约束的小本体（可用 Protégé），2.3.4 比较规则与 OWL 公理各自能表达什么约束，2.3.5 用查询语言验证约束是否被违反。"
-    },
-    {
      "source": "r7-zh1",
      "read": "对照官方大纲看第2章 2.3 符号表示方法与第5章 5.3.1 基于 Ontology 的推理，确认约束在本体推理里怎么被用到；第6章 6.2 本体匹配看多源本体对齐时约束如何参与。"
+    },
+    {
+     "source": "video-zh-dl",
+     "read": "在已有图谱中加入类不相交、包含和属性域值域限制；区分开放世界下的本体推断与封闭世界数据库校验。"
     }
    ],
    "gaps": []
@@ -268,6 +292,14 @@
    "query_or_url": "知识图谱 方法实践与应用 王昊奋 电子工业出版社 目录 本体 知识表示 OWL 推理 章节",
    "result": "顺带命中高教社《知识图谱：算法与实践》产品页（xuanshu.hep.com.cn，bookId=61df11cd938b7cc2960ee421），打开后目录含 2.3.3 本体与 OWL、2.3.4 规则交换格式 → 采纳为 r7-zh2（付费教材）。",
    "by": "review/pi-additions/D.4.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://hldai.github.io/krr24/slides/7-%E6%8F%8F%E8%BF%B0%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%AD%E4%B9%89%E7%BD%91.pdf",
+   "result": "实际PDF包含ALC语义和推理、Tableau步骤，以及OWL包含/等价/不相交、属性定义域值域等约束例子。",
+   "by": "review/video-main-additions/D.4.1.json"
   }
  ],
  "findings": [
@@ -277,6 +309,7 @@
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/pi-additions/D.4.1.json@837694f992"
+  "review/pi-additions/D.4.1.json@837694f992",
+  "review/video-main-additions/D.4.1.json@a024c24cd5"
  ]
 }

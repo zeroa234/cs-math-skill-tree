@@ -71,6 +71,82 @@
     "publisher_sample": "https://www.tup.com.cn/upload/books/yz/092960-01.pdf"
    },
    "added_by": "review/verified-additions/H.3.4.json"
+  },
+  {
+   "key": "video-zh-tup-wcet",
+   "lang": "zh",
+   "title": "《嵌入式软件的时间分析》第 5 章「软件时间分析方法」清华大学出版社官方试读（Peter Gliwa 着，中文译本）",
+   "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/092960-01.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "5.1 时间分析方法概览与通信/调度/代码层级；5.2 追踪、分析、时间测量与追踪的区别；5.3 静态代码分析：WCET/BCET 定义、静态分析工作流（反汇编→控制流/调用树→循环上界→按处理器模型累加）、用例、限制（间接调用、递归、循环上界、注释、运行模式与互斥代码、高估、中断/多核/暂时性错误）、与 AbsInt aiT 专家的访谈。",
+   "access": "清华大学出版社官网「试读」PDF，公开免费，无需注册；中文译本；只含第 5 章（试读），不是全书。",
+   "publisher": "Peter Gliwa 着，中文译本；清华大学出版社（ISBN 9787302596530）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/092960-01.pdf",
+    "location": "PDF 第 1–7 页：第 5 章标题；5.1 概览及在不同层面上的分类（通信/调度/代码层级）；5.2 术语定义（追踪、分析、时间测量）；5.3 静态代码分析（5.3.1 基础功能和工作流、5.3.2 用例、5.3.3 限制、5.3.4 专家访谈）",
+    "finding": "读到「可能的最大 CET 是指 WCET（最坏情况执行时间）」「静态分析读取可执行文件、反汇编、推导控制流与函数调用树、确定最大循环迭代次数、沿控制流累加」「多数情况下无法在有限时间算出真实 WCET，但可算出保证大于 WCET 的上界」等原文，确认它把 WCET 的定义、静态分析流程与限制讲成了可操作步骤；但没有测量章节（试读只到 5.3）。"
+   },
+   "added_by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "key": "video-zh-thesis-wcet",
+   "lang": "zh",
+   "title": "吕鸣松《实时系统最坏情况执行时间分析技术的研究》（东北大学博士学位论文，2009；湖南大学 esnl 站点公开 PDF）",
+   "url": "https://esnl.hnu.edu.cn/ecps2018/2019_1_4_4.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第 2 章 WCET 分析研究背景：2.1 影响 WCET 与复杂性的因素（含时间异常）；2.2.1 静态 WCET 分析（CFG、基于语法树/ILP 的 WCET 计算、控制流分析、处理器行为分析，含 CFG 与 ILP 例子）；2.2.2 动态 WCET 分析（基于测量的方法、软件/硬件测量、测整个程序还是测局部、测量框架）；2.2.3 静态分析与动态分析的比较（静态结果安全、动态可能漏掉最坏情况）。",
+   "access": "湖南大学 esnl 站点公开的博士论文 PDF，免费；中文；学术论文，不是课程，但有 CFG/ILP 例子与静态/动态方法对照。",
+   "publisher": "吕鸣松（东北大学博士学位论文，导师于戈、邓庆绪）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://esnl.hnu.edu.cn/ecps2018/2019_1_4_4.pdf",
+    "location": "目录与正文第 2 章：2.2.1 静态 WCET 分析技术（2.2.1.1 WCET 计算、2.2.1.2 控制流分析、2.2.1.3 处理器行为分析）；2.2.2 动态 WCET 分析技术；2.2.3 静态分析技术与动态分析技术的比较；图 2.2 CFG 举例、图 2.5 隐式路径枚举技术举例",
+    "finding": "读到「动态 WCET 分析又称基于测量的 WCET 分析，其基本方法是在目标处理器上实际执行待分析程序，采用软件或硬件测量来估计 WCET」「测量整个程序精度不高，因为完整程序状态空间很大；可划分成若干块分别测量」「静态分析结果安全，动态分析结果不安全，测量得到的最大执行时间可能小于实际 WCET」等原文，正好补上清华试读缺失的测量与静态/动态对照。"
+   },
+   "added_by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "key": "video-zh-pi",
+   "lang": "zh",
+   "title": "李光成、褚伟《基于 μC/OS-II 嵌入式实时系统的优先级倒置分析》（计算机技术与发展，2007）",
+   "url": "http://www.xactad.net/oa/pdfdow.aspx?Sid=200707028",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "μC/OS-II 静态优先级抢占调度；有界优先级倒置与无界优先级倒置的三个任务时间线；优先级继承协议与优先级天花板协议的比较；在 μC/OS-II 中避免优先级倒置的系统分析与设计。",
+   "access": "《计算机技术与发展》期刊公开 PDF，免费；中文；PDF 为旧刊扫描/OCR，个别字符有误但正文可读。",
+   "publisher": "计算机技术与发展（李光成、褚伟，合肥工业大学计算机网络研究所）",
+   "reupload": false,
+   "evidence": {
+    "url": "http://www.xactad.net/oa/pdfdow.aspx?Sid=200707028",
+    "location": "第 2 节：2.1 有界优先级倒置（图 2 的 T1–T6 时间线）、2.2 无界优先级倒置（图 3）；第 3 节起：优先级继承协议与天花板优先级协议的比较、μC/OS-II 中的方案设计",
+    "finding": "读到低优先级任务持锁后被中优先级任务抢占、高优先级任务被迫等待的完整时间线，以及「优先级继承协议和天花板优先级协议都可一定程度上解决优先级倒置」的比较，确认它把优先级反转从现象讲到两种协议，而不是只给定义。"
+   },
+   "added_by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "key": "video-zh-mpcp",
+   "lang": "zh",
+   "title": "曹永立、杨茂林、廖勇《基于 MPCP 协议的任务最坏阻塞时间分析》（电子科技大学学报，2016）",
+   "url": "https://www.juestc.uestc.edu.cn/cn/article/pdf/preview/10.3969/j.issn.1001-0548.2016.06.022.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实时任务互斥访问共享资源时的实时锁协议；任务建模为非临界区与临界区交替序列；最坏阻塞时间（WCTBT）的组成与响应时间分析（RTA）；临界区累计执行时间上界、多次请求同一资源的最短执行时间；可调度性实验。",
+   "access": "《电子科技大学学报》官网公开 PDF，免费；中文；论文面向多核/多处理器 P-FP+MPCP，属进阶材料。",
+   "publisher": "电子科技大学学报（曹永立、杨茂林、廖勇，信息与软件工程学院）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.juestc.uestc.edu.cn/cn/article/pdf/preview/10.3969/j.issn.1001-0548.2016.06.022.pdf",
+    "location": "摘要与第 1 节任务模型：任务 τ_i 表示为非临界区段与临界区段交替序列 ((NC_i1, C_i1, NC_i2, C_i2, …), T_i)；第 2 节起：最坏阻塞时间分析、响应时间分析、可调度性实验",
+    "finding": "读到「在实时系统中，任务互斥访问关键数据结构、I/O 设备等共享资源时，需要采用实时锁协议以避免死锁、阻塞链，同时减小优先级反转所造成的调度损失」「可调度性分析包含任务最坏阻塞时间分析」以及临界区/非临界区交替的任务模型，确认它把共享资源的影响落成了可计算的阻塞时间项，而不是只讲优先级反转故事。"
+   },
+   "added_by": "review/video-engineering-additions/H.3.4.json"
   }
  ],
  "topics": [
@@ -130,6 +206,11 @@
      "source": "verified-zh1",
      "section": "4.1时间参数、5.3静态代码分析、5.5测量与6.6 WCET案例",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-tup-wcet",
+     "section": "第 5 章 5.1 时间分析方法概览、5.2 术语、5.3 静态代码分析（5.3.1 工作流、5.3.2 用例、5.3.3 限制、5.3.4 专家访谈）；配合 video-zh-thesis-wcet 的 2.2.2 动态分析、2.2.3 静态/动态比较",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -139,7 +220,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文没有 WCET 测量/分析材料。；补充同语言具体教学章节，与既有主课组合学习。"
+   "note": "中文没有 WCET 测量/分析材料。；补充同语言具体教学章节，与既有主课组合学习。；清华官方试读把 WCET 的定义、静态分析工作流与限制讲到了可操作层（反汇编、控制流/调用树、循环上界、处理器模型、上界而非真值），但试读只到 5.3，没有测量；吕鸣松论文的 2.2.2 正好补动态/基于测量的 WCET（软件/硬件测量、测整个程序还是测局部），2.2.3 再讲清「静态结果安全、动态测量可能漏掉最坏情况」。两篇合起来覆盖「定义—静态分析—动态测量—结果解释」全项，且能解释为什么不能把有限测试的最大值直接当 WCET。"
   },
   {
    "topic": "资源共享与时间正确性分析",
@@ -159,6 +240,11 @@
      "source": "verified-zh1",
      "section": "5.8–5.9调度模拟/静态调度分析，7.2–7.3并发、共享数据与自旋锁",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-pi",
+     "section": "第 2 节 有界/无界优先级倒置（三任务时间线）＋优先级继承协议与优先级天花板协议比较；配合 video-zh-mpcp 的任务模型、最坏阻塞时间与响应时间分析",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -168,7 +254,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文有优先级反转现象与临界段实现，缺阻塞时间/响应时间分析。；补充同语言具体教学章节，与既有主课组合学习。"
+   "note": "中文有优先级反转现象与临界段实现，缺阻塞时间/响应时间分析。；补充同语言具体教学章节，与既有主课组合学习。；先用 2007 年这篇把「低优先级持锁—中优先级抢占—高优先级等待」的有界/无界优先级倒置时间线走一遍，理解优先级继承与天花板两种协议各自解决什么；再用 2016 年 MPCP 论文把任务拆成临界区/非临界区交替序列，看到最坏阻塞时间如何作为一项进入响应时间/可调度性分析。已有免费 zh1（RM 可调度性判定）给周期/执行时间/时限与优先级反转背景，zh2（FreeRTOS 内核）给临界段/互斥的真实实现，四者合起来覆盖「机制—协议—阻塞时间—可调度性」的入门链；多核 MPCP 的完整推导仍需读论文，不影响本项入门覆盖。"
   }
  ],
  "routes": {
@@ -184,8 +270,20 @@
      "read": "对照 FreeRTOS 的任务优先级/时间片/临界段实现。"
     },
     {
-     "source": "verified-zh1",
-     "read": "配现有RTOS课程读第4章时间参数；第5章比较静态分析、测量与调度分析，第6.6节理解实测值与静态界限为何会冲突，第7.3节分析共享数据和自旋锁的时间影响。不要把有限测试的最大值直接当作已证明的WCET。"
+     "source": "video-zh-tup-wcet",
+     "read": "先读第 5 章 5.1–5.3：按 5.3.1 的静态分析工作流，拿一个自己写的带循环/函数调用的小程序，画出 CFG 与调用树，标出循环上界和最长路径；再读 5.3.3 的限制，说明哪些情况（间接调用、递归、中断/多核）会让静态 WCET 不可靠。"
+    },
+    {
+     "source": "video-zh-thesis-wcet",
+     "read": "读 2.2.2 动态 WCET 分析与 2.2.3 静态/动态比较，重点记「测整个程序 vs 测局部」「软件测量 vs 硬件测量」「为什么测量最大值不是安全上界」；用同一段程序做一次计时，比较实测最大值与静态上界。"
+    },
+    {
+     "source": "video-zh-pi",
+     "read": "读有界/无界优先级倒置两节，照图 2/图 3 重画三任务时间线；再读优先级继承与天花板协议比较，说明两种协议分别把无界等待限制到什么程度。"
+    },
+    {
+     "source": "video-zh-mpcp",
+     "read": "读任务模型与最坏阻塞时间部分：把任务写成「非临界区—临界区」交替序列，列出阻塞时间项，再把它代进响应时间分析，说明共享资源如何影响可调度性；多核/MPCP 细节可只抓模型与阻塞项，不要求完整推导。"
     }
    ],
    "gaps": []
@@ -277,6 +375,54 @@
    "query_or_url": "https://www.gliwa.com/media/cn_embeddedsoftwaretiming_gliwa_content.pdf",
    "result": "作者公司公布完整中文目录，包含静态代码分析、测量/追踪、静态调度分析、WCET案例与多核自旋锁；清华出版社样章和总书目确认正式译本。",
    "by": "review/verified-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "WCET 最坏执行时间 测量 静态分析 中文 教程",
+   "result": "命中知乎多核 WCET/静态分析文章、AbsInt 中文产品页、百度百科 WCET；产品页与百科不足以当课程，改查学术/大学材料。",
+   "by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "WCET 分析 方法 综述 中文 pdf 测量 静态",
+   "result": "命中多篇英文 WCET 论文；中文侧命中湖南大学 esnl 的吕鸣松博士论文 PDF（2.2.2 动态 WCET、2.2.3 静态/动态比较），采纳为 video-zh-thesis-wcet。",
+   "by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.tup.tsinghua.edu.cn/upload/books/yz/092960-01.pdf",
+   "result": "采纳为 video-zh-tup-wcet：读到第 5 章 5.1–5.3 的 WCET 定义、静态分析工作流、限制与专家访谈；试读不含测量章节。",
+   "by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "优先级继承 优先级天花板 阻塞时间 实时调度 讲义 pdf",
+   "result": "命中 2007 年《基于 μC/OS-II 嵌入式实时系统的优先级倒置分析》与 2016 年《基于 MPCP 协议的任务最坏阻塞时间分析》，分别采纳为 video-zh-pi 与 video-zh-mpcp。",
+   "by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "http://www.xactad.net/oa/pdfdow.aspx?Sid=200707028",
+   "result": "采纳：读到有界/无界优先级倒置时间线、优先级继承/天花板比较与 μC/OS-II 方案设计。",
+   "by": "review/video-engineering-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.juestc.uestc.edu.cn/cn/article/pdf/preview/10.3969/j.issn.1001-0548.2016.06.022.pdf",
+   "result": "采纳：读到临界区/非临界区任务模型、最坏阻塞时间与响应时间分析、可调度性实验。",
+   "by": "review/video-engineering-additions/H.3.4.json"
   }
  ],
  "findings": [
@@ -293,6 +439,7 @@
  "applied_additions": [
   "review/pi-additions/H.3.4.json@5dc10f9577",
   "review/main-additions/H.3.4.json@49d5fa51e8",
-  "review/verified-additions/H.3.4.json@5dd2253a11"
+  "review/verified-additions/H.3.4.json@5dd2253a11",
+  "review/video-engineering-additions/H.3.4.json@48e80e11fa"
  ]
 }

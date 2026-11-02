@@ -28,7 +28,7 @@
    "url": "https://www.icourse163.org/course/ZJU-1464119172",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "官方课程页（智慧高教）九章大纲：概论、知识表示（符号/向量）、存储与查询、抽取与构建、推理（Ontology/规则/嵌入学习/规则学习/Ontology Embedding）、融合（本体匹配、实体对齐）、问答、图算法与图数据分析、技术发展（多模态、KG 与图神经网络融合、KG 与大语言模型）。",
    "access": "中国大学MOOC 免费注册学习，视频按开放学期；未登录核对逐讲；认证证书另计。",
    "publisher": "浙江大学 / 中国大学MOOC",
@@ -48,7 +48,7 @@
    "url": "https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=61df11cd938b7cc2960ee421",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "第2章 知识表示：2.2 经典知识表示理论（2.2.1 语义网络、2.2.2 框架、2.2.3 一阶谓词逻辑、2.2.4 描述逻辑）；2.3 语义网技术体系（2.3.1 语义网整体架构、2.3.2 RDF 及其语义扩展 RDFS、2.3.3 本体与本体描述语言 OWL、2.3.4 规则及其交换格式、2.3.5 查询语言）；2.4 知识图谱及其知识体系；第8章 知识推理：8.1 概述（推理类型、典型应用）、8.2 归纳推理：规则获取（一阶规则学习、关联规则挖掘、概率统计规则权重）、8.3 演绎推理：规则应用（马尔科夫逻辑网、概率软逻辑）、8.4 混合式推理。",
    "access": "付费教材，定价 48.00 元（ISBN 978-7-04-057725-9，2022 年 3 月，292 页；2025 年 8 月最新印次），高教社官方产品页可查完整目录；本轮未购买、未读正文。",
    "publisher": "高等教育出版社（赵军主编，中国科学院自动化研究所团队）",
@@ -78,6 +78,25 @@
     "finding": "读到官方逐节大纲，确认这门中文课把「本体推理—规则推理—嵌入/规则学习—本体嵌入」并列讲授，并把本体匹配、实体对齐、多模态与 KG+LLM 单独成节，可作为「语义互操作」与「神经符号结合」的中文课程证据。"
    },
    "added_by": "review/pi-additions/D.4.2.json"
+  },
+  {
+   "key": "video-zh-dl",
+   "lang": "zh",
+   "title": "戴洪良《知识表示》：描述逻辑和语义网（公开中文课件）",
+   "url": "https://hldai.github.io/krr24/slides/7-%E6%8F%8F%E8%BF%B0%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%AD%E4%B9%89%E7%BD%91.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "实际PDF包含ALC语义和推理、Tableau步骤，以及OWL包含/等价/不相交、属性定义域值域等约束例子。",
+   "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+   "publisher": "戴洪良，南京航空航天大学；作者公开课程主页",
+   "reupload": false,
+   "evidence": {
+    "url": "https://hldai.github.io/krr24/slides/7-%E6%8F%8F%E8%BF%B0%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%AD%E4%B9%89%E7%BD%91.pdf",
+    "location": "48页：pp.2–25描述逻辑/ALC/TBox/ABox/解释/推理/Tableau；pp.39–43 OWL类、属性与限制",
+    "finding": "实际PDF包含ALC语义和推理、Tableau步骤，以及OWL包含/等价/不相交、属性定义域值域等约束例子。"
+   },
+   "added_by": "review/video-main-additions/D.4.2.json"
   }
  ],
  "topics": [
@@ -94,6 +113,11 @@
      "source": "r7-zh1",
      "section": "第2章 2.2 经典知识表示理论 → 2.2.4 描述逻辑（与 2.2.3 一阶谓词逻辑、2.3.3 本体与 OWL 相连）",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-dl",
+     "section": "pp.2–25：概念/角色、TBox/ABox、ALC解释、可满足性与Tableau",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -103,7 +127,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文课程有本体与推理，但描述逻辑的语法/语义与可判定性没有系统推导。；中文教材把描述逻辑作为「经典知识表示理论」的独立小节，紧接一阶谓词逻辑、上承 OWL 本体语言，构成「描述逻辑→OWL→本体推理」的完整中文链路，正好补上此前中文只有百科/博客的局面。"
+   "note": "中文课程有本体与推理，但描述逻辑的语法/语义与可判定性没有系统推导。；中文教材把描述逻辑作为「经典知识表示理论」的独立小节，紧接一阶谓词逻辑、上承 OWL 本体语言，构成「描述逻辑→OWL→本体推理」的完整中文链路，正好补上此前中文只有百科/博客的局面。；本轮补到实际免费的中文教学，和本路线已有材料组合学习；付费书可选，不再是此知识项唯一完整来源。"
   },
   {
    "topic": "规则推理",
@@ -163,12 +187,12 @@
      "read": "先看表示与本体，再看推理模块的规则/本体推理，最后看融合与 KG+GNN/LLM 的讲次，配合讲义做一个小型本体推理练习。"
     },
     {
-     "source": "r7-zh1",
-     "read": "读第2章：先看 2.2.3 一阶谓词逻辑，再读 2.2.4 描述逻辑（概念/角色构造子、TBox/ABox、可满足性与包含推理），然后 2.3.3 把它映射到 OWL；第8章按 8.1→8.2→8.3→8.4 走一遍归纳/演绎/混合推理，理解符号规则与概率方法如何结合。"
-    },
-    {
      "source": "r7-zh2",
      "read": "看第五章 5.3.1 基于 Ontology 的推理 → 5.3.2 基于规则的推理 → 5.4.x 嵌入与规则学习 → 5.4.3 本体嵌入；再对照第六章本体匹配/实体对齐理解多源本体的语义互操作，最后看第九章 KG 与 LLM/GNN 的结合。"
+    },
+    {
+     "source": "video-zh-dl",
+     "read": "用ALC描述两个概念及一个角色，写TBox与ABox；按课件的Tableau步骤判断可满足性。"
     }
    ],
    "gaps": []
@@ -240,6 +264,14 @@
    "query_or_url": "知识图谱 方法实践与应用 王昊奋 电子工业出版社 目录 本体 知识表示 OWL 推理 章节",
    "result": "命中高教社《知识图谱：算法与实践》产品页，打开后目录含 2.2.4 描述逻辑、2.3.3 本体与 OWL、8.3/8.4 演绎与混合式推理 → 采纳为 r7-zh1（付费教材，中文 primary）。",
    "by": "review/pi-additions/D.4.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://hldai.github.io/krr24/slides/7-%E6%8F%8F%E8%BF%B0%E9%80%BB%E8%BE%91%E5%92%8C%E8%AF%AD%E4%B9%89%E7%BD%91.pdf",
+   "result": "实际PDF包含ALC语义和推理、Tableau步骤，以及OWL包含/等价/不相交、属性定义域值域等约束例子。",
+   "by": "review/video-main-additions/D.4.2.json"
   }
  ],
  "findings": [
@@ -249,6 +281,7 @@
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/pi-additions/D.4.2.json@eba04e16e3"
+  "review/pi-additions/D.4.2.json@eba04e16e3",
+  "review/video-main-additions/D.4.2.json@77a8a1ffeb"
  ]
 }

@@ -152,6 +152,25 @@
     "finding": "清华大学出版社完整目录明确列出信息不对称、博弈论、最脆弱环节、补丁周期、隐私经济学与DRM经济学。"
    },
    "added_by": "review/release-additions/S.5.2.json"
+  },
+  {
+   "key": "video-zh-sec-econ-intro",
+   "lang": "zh",
+   "title": "孙惠平：信息安全工程的经济学导入（北大公开课件）",
+   "url": "https://huipingsun.github.io/ise2020/class_files/ISE2020_01.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "第14–17页介绍柠檬市场、信息安全市场中的信息不对称、网络外部性和厂商/用户安全激励；属于概念导入。",
+   "access": "教师公开中文课件免费，文字提取有字体编码问题，本轮渲染核对第14–17页。2016年经济学专讲链接404，未用它证明覆盖；完整模型仍可配中文付费教材。",
+   "publisher": "孙惠平，北京大学公开课程",
+   "reupload": false,
+   "evidence": {
+    "url": "https://huipingsun.github.io/ise2020/class_files/ISE2020_01.pdf",
+    "location": "幻灯片14–17：柠檬市场、信息安全柠檬市场、网络外部性、何时考虑安全",
+    "finding": "已看实际渲染：质量信息不对称、价格/安全成本、平台规模效应、厂商与用户的激励冲突。只作安全经济学概念导入，不夸成整门研究方法课。"
+   },
+   "added_by": "review/video-main-additions/S.5.2.json"
   }
  ],
  "topics": [
@@ -255,6 +274,11 @@
      "source": "release-zh-anderson",
      "section": "第7章经济学：7.3信息经济学、7.4博弈论、7.5安全经济学和可靠性；网络测量另读本路线清华课件第12章",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-sec-econ-intro",
+     "section": "幻灯片14–17安全市场与激励；网络测量配清华第12章；经济学完整范围仍配中文教材",
+     "extent": "partial"
     }
    ],
    "en": [
@@ -264,7 +288,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有网络测量综述（且限于 SDN），没有安全经济学（攻击成本/防御投入/激励）的内容。；只覆盖“网络测量”这一半：把面向安全的测量拆成“流量特征—分析算法—分析目标”三要素，说明特征选择决定系统能力上限，并比较专家规则与机器学习两类检测算法在覆盖面与误报上的差别；配套实验（含原论文与开源代码）给出可复现的测量流程（采集→特征→检测/指纹→评估）。“安全经济学”一半中文无可登记材料，故本知识点整体记 partial。；「网络测量」这一半中文已有教材级材料：一本 13 章的中文《网络测量学》把测量算法、测量工具、开源数据并列，并覆盖流量测量分类、加密流量识别与恶意流量测量、流量仿真与公共数据集，比此前只有一篇 SDN 测量综述要成体系。但本轮只核到馆藏记录的内容摘要，未核到出版社目录与正文，且该书是否讲到「面向安全的测量如何服务于攻防决策」无法确认，故只记 partial。；本书补安全经济学这一半；测量方法、数据与实验仍用既有r7-zh1第12章。两份中文材料组合覆盖，未把书目目录当作免费正文。"
+   "note": "中文只有网络测量综述（且限于 SDN），没有安全经济学（攻击成本/防御投入/激励）的内容。；只覆盖“网络测量”这一半：把面向安全的测量拆成“流量特征—分析算法—分析目标”三要素，说明特征选择决定系统能力上限，并比较专家规则与机器学习两类检测算法在覆盖面与误报上的差别；配套实验（含原论文与开源代码）给出可复现的测量流程（采集→特征→检测/指纹→评估）。“安全经济学”一半中文无可登记材料，故本知识点整体记 partial。；「网络测量」这一半中文已有教材级材料：一本 13 章的中文《网络测量学》把测量算法、测量工具、开源数据并列，并覆盖流量测量分类、加密流量识别与恶意流量测量、流量仿真与公共数据集，比此前只有一篇 SDN 测量综述要成体系。但本轮只核到馆藏记录的内容摘要，未核到出版社目录与正文，且该书是否讲到「面向安全的测量如何服务于攻防决策」无法确认，故只记 partial。；本书补安全经济学这一半；测量方法、数据与实验仍用既有r7-zh1第12章。两份中文材料组合覆盖，未把书目目录当作免费正文。；补到了免费经济学导入，但未把四张导入课件判成完整的安全经济学教学。"
   }
  ],
  "routes": {
@@ -302,6 +326,10 @@
     {
      "source": "release-zh-anderson",
      "read": "完成清华课件第12章测量实验后，读本书第7章；用补丁部署或隐私保护案例，区分技术效果、参与方激励和外部性。"
+    },
+    {
+     "source": "video-zh-sec-econ-intro",
+     "read": "先读第14–17页，用柠檬市场和网络外部性解释技术有效为何未必带来足够安全投入，再决定是否深入读中文教材经济学章。"
     }
    ],
    "gaps": []
@@ -461,6 +489,36 @@
    "query_or_url": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=03008201",
    "result": "清华大学出版社完整目录明确列出信息不对称、博弈论、最脆弱环节、补丁周期、隐私经济学与DRM经济学。",
    "by": "review/release-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://huipingsun.github.io/ise2016/",
+   "result": "课程明确有经济学专讲，但所链ISE2016_02.pdf本机404，不能当已读完整免费教学。",
+   "by": "review/video-main-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "web",
+   "query_or_url": "https://www.bilibili.com/video/BV1Kr4y1y7dC/",
+   "result": "转载MIT6.858合集第23讲安全经济学；发布者标题写中文字幕，实际字幕未核，不用于证明中文全覆盖。",
+   "by": "review/video-main-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "信息安全 经济学 综述 pdf；安全经济学 site:edu.cn 成本；网络安全经济学 投资 pdf",
+   "result": "区分工业安全经济学与网络安全经济学；电子科大网络安全投资论文仅取到摘要，正文返回403，不充免费教学依据。已读孙惠平导论4页经济学实例，只补激励/外部性入门；2016完整经济学课件链接404，未把2020可用安全课误当经济学课。",
+   "by": "review/video-main-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "https://www.bilibili.com/video/BV1Kr4y1y7dC",
+   "result": "有MIT6.858安全经济学转载讲次，标题声称字幕但本轮未核实际中文字幕，不凭标题当已核中文教学。",
+   "by": "review/video-main-additions/S.5.2.json"
   }
  ],
  "findings": [
@@ -470,13 +528,15 @@
   "[review/pi-additions/S.5.2.json] 未解决 zh「网络测量与安全经济学」：只覆盖了“网络测量”这一半（r7-zh2 第12章 + 配套实验）；“安全经济学”一半未解决：中文检索只得到《网络经济学》教材与计量经济学讲义，没有讲攻击者激励、成本转移、外部性、责任分配等安全经济学内容的中文课程或教材；清华导论第2章的博弈论/最优化只是通用理论工具，不足以充当安全经济学教学。故该知识点整体记 partial（测量已覆盖、经济学未覆盖）。",
   "[review/pi-additions/S.5.2.json] 未解决 zh「可复现实验」：中文只找到通用“论文复现指南”（机器学习方向，讲环境锁定 requirements.txt、一键复现、复现包），没有针对系统安全实验的可复现规范教学（实验环境固定/镜像、攻击脚本与流量回放、artifact 打包与评审流程）。清华导论的实验虽给出论文与代码链接，但未教“如何让别人复现你的实验”，不能算覆盖。",
   "[review/pi-additions/S.5.2.json] 未解决 zh「主资源」：need_primary 未解决：中文没有以“系统安全研究方法/安全测量”为主线的免费课程或教材可核对到章节目录。已试：清华《网络空间安全导论》（通识课，非研究方法课）、中文期刊综述（既有 zh1 为 SDN 测量综述）、以及两轮 Tavily 检索（可复现/安全经济学）均无结果。可用替代仍是英文 Anderson《Security Engineering》+ MIT 6.858（既有 en1/en2）。",
-  "[review/closure-additions/S.5.2.json] 未解决 zh「网络测量与安全经济学」：安全经济学一半仍未解决（原因见 fallback_confirm）。补充线索给后续轮次：清华大学出版社 2012 年《信息安全工程》（安德森）是最可能的正版中文源，若能拿到实体书或可读的目录页，只需确认第 7 章「经济学」的译名与节标题即可登记；另可查《加密流量测量与分析》（东南大学出版社 2018，ISBN 9787564181956）作为网络测量一半的补充。"
+  "[review/closure-additions/S.5.2.json] 未解决 zh「网络测量与安全经济学」：安全经济学一半仍未解决（原因见 fallback_confirm）。补充线索给后续轮次：清华大学出版社 2012 年《信息安全工程》（安德森）是最可能的正版中文源，若能拿到实体书或可读的目录页，只需确认第 7 章「经济学」的译名与节标题即可登记；另可查《加密流量测量与分析》（东南大学出版社 2018，ISBN 9787564181956）作为网络测量一半的补充。",
+  "[review/video-main-additions/S.5.2.json] 未解决 zh「网络测量与安全经济学」：本轮已找到免费经济学概念导入与宣称中文字幕的视频，但完整中文视频字幕/授权未核，付费教材仍是当前已核完整中文补充。"
  ],
  "cross_language_fallbacks": [],
  "applied_additions": [
   "review/pi-additions/S.5.2.json@08adf8719b",
   "review/main-additions/S.5.2.json@53be108d56",
   "review/closure-additions/S.5.2.json@594a2534c6",
-  "review/release-additions/S.5.2.json@3a5b372ad7"
+  "review/release-additions/S.5.2.json@3a5b372ad7",
+  "review/video-main-additions/S.5.2.json@834177d05d"
  ]
 }

@@ -70,6 +70,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 
 ```bash
 node --test tests/learning-paths.mjs
+python -X utf8 tests/learning-path-merge.py
 node scripts/build.mjs
 node scripts/check-learning-paths.mjs --require-all
 node tests/resources.mjs
@@ -96,7 +97,7 @@ node scripts/archive-learning-paths.mjs --archive --reviewed <ids>  # 写入 dat
 
 `learning_path_merge.py`（需要 Windows，用系统的 `LCMapStringEx` 把中文转成简体）从已归档记录（没有就用原始研究记录）出发，先叠加研究批次，再叠加 final-additions，之后是 publication/verified-additions，最后 main-additions；同组按文件名顺序叠加补充文件，按章节引用重新计算每种语言的覆盖和缺口，删掉已不是缺口的跨语言补充，每种语言只留覆盖知识点最多的一个主资源。任一合并失败时命令返回非零，禁止把上次残留的候选当作新结果归档。已并入归档记录的补充文件按内容哈希记录，文件之后再被改写会报错，不会悄悄漏掉；所以复核修正要另写新文件，不要改已并入的文件。
 
-统计报告用 `python -X utf8 scripts/report_learning_paths.py` 从已归档记录生成。覆盖数按实际教学引用与学习步骤计算，查阅参考不计入；付费目录支持范围判断，完整正文未读时必须写明。当前发布记录：192 个技能、891 个必学知识项，中文 189 条完整路线、英文 192 条，3 项中文需英文补读。
+统计报告用 `python -X utf8 scripts/report_learning_paths.py` 从已归档记录生成。覆盖数按实际教学引用与学习步骤计算，查阅参考不计入；`freeCovered` 只计 `free:true` 的教学，`paidTopics` 与 `accessPendingTopics` 分别记录付费和费用/回放条件待核，不把 null 算作免费。免费路线完整时，合并器把非免费来源移出必读步骤，保留为备选。同一 URL 的不同资源类型（课程视频/配套付费书）不能合并费用身份。付费目录支持范围判断，完整正文未读时必须写明。当前发布记录：192 个技能、891 个必学知识项，中文 189 条完整路线、英文 192 条，3 项中文需英文补读。
 
 视频字幕写进 `access`，核不了就写“未核对”和原因，不要猜：
 

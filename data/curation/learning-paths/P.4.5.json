@@ -26,7 +26,7 @@
    "url": "https://www.icourse163.org/course/PKU-1003177002",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "课程页列出的教材目录中，第 7 章为“软件测试”（第 8 章 软件集成、交付与部署）。章节标题可核，正文未打开；单元/集成/系统测试、覆盖率等小节内容未逐项核对，性质测试与故障注入是否覆盖未知。",
    "access": "教材需购买（北京大学出版社 2024，价格未核、未购买）；章节表引自北大 MOOC 课页。",
    "publisher": "北京大学出版社",
@@ -60,7 +60,7 @@
    "url": "https://houbb.github.io/2016/04/26/test-property-based-01-overview",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "讲清基于属性的测试与传统“例子驱动测试”的区别，并逐项解释关键概念：属性（对任何输入都成立的断言，如“排序后数组升序”）、生成器（随机生成整数/字符串/对象等输入）、以及缩小（shrinking）；末尾列出可直接用的工具：JUnit-quickcheck、jqwik（JUnit 5）、JCheck、QuickCheck、ScalaCheck，并说明哪些支持缩小。",
    "access": "免费阅读，无需注册；简体中文。个人技术博客文章（非课程）。",
    "publisher": "Echo Blog（houbb 的个人技术博客）",
@@ -147,6 +147,25 @@
     "finding": "页面确认故障注入的实验化做法：稳态指标、假设、注入真实故障变量、用对照组与实验组比较来否证假设；并说明这是建立系统韧性信心的手段。"
    },
    "added_by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "key": "video-zh-test-levels",
+   "lang": "zh",
+   "title": "《构建质量的堡垒：一文读懂单元测试、集成测试、系统测试与回归测试》（博客园，2025）",
+   "url": "https://www.cnblogs.com/ljbguanli/p/19160141",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "单元测试（函数/方法/类，开发者写，隔离依赖，Mock/Stub，TDD）、集成测试（模块/服务接口、数据传递、CI 触发）、系统测试（完整系统黑盒，功能/性能/安全/兼容性/体验，QA 执行）、回归测试（修改后重跑，CI/CD 自动化）；四者对象/关注点/执行者/阶段对照表。",
+   "access": "博客园公开中文文章，无需注册；短文，不是课程。",
+   "publisher": "博客园 ljbguanli",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.cnblogs.com/ljbguanli/p/19160141",
+    "location": "正文四节：一、单元测试（检验代码的“砖瓦”）；二、集成测试（检验“组件”间的协作）；三、系统测试（检验完整的“产品”）；四、回归测试（守护已有的“成果”）；末尾「总结与关系」对照表（测试对象/关注点/执行者/阶段类比）",
+    "finding": "读到单元测试「最小可测试单元，通常是一个函数、方法或类，隔离外部数据库/网络，用 Mock/Stub」、集成测试「模块/服务间接口与数据传递，CI 每次合并触发」、系统测试「完整系统黑盒，功能/性能/安全/兼容性」以及四者对照表，确认它把三个层级的边界讲清，正好补北大「测试步骤」的视频标题无法展开的细节。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.5.json"
   }
  ],
  "topics": [
@@ -163,6 +182,11 @@
      "source": "zh2",
      "section": "课程概述“软件测试”",
      "extent": "partial"
+    },
+    {
+     "source": "video-zh-test-levels",
+     "section": "一、单元测试；二、集成测试；三、系统测试；四、回归测试；末尾四者对照表",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -172,7 +196,7 @@
      "extent": "covered"
     }
    ],
-   "note": "章节标题可核；正文小节未打开。"
+   "note": "章节标题可核；正文小节未打开。；这一项的关键是分清层级边界：短文用「砖瓦—组件—整车—装修复查」四个比喻，把单元测试（函数/类、开发者、隔离依赖、Mock/Stub）、集成测试（模块/服务接口、数据传递、CI 触发）、系统测试（完整系统黑盒、功能/性能/安全/兼容性、QA）和回归测试（修改后重跑）的对象、关注点、执行者、阶段列成对照表；北大第 9 周再用「概念—过程模型和原则—白盒—黑盒—测试步骤」把方法放回测试过程。两者合起来覆盖「层级 + 方法 + 过程」；已有 r7-zh1（性质测试）、r7-zh2（覆盖率）、r7-zh3（混沌工程/故障注入）分别补性质测试、覆盖率与故障注入，不再依赖付费教材的测试章。"
   },
   {
    "topic": "性质测试",
@@ -252,14 +276,6 @@
    "status": "complete",
    "steps": [
     {
-     "source": "zh1",
-     "read": "第 7 章 软件测试整章（需自备教材）→第 8 章 软件集成、交付与部署"
-    },
-    {
-     "source": "zh2",
-     "read": "跟课的软件测试部分，用课程项目练测试用例设计"
-    },
-    {
      "source": "r7-zh1",
      "read": "读概念段并照着写两个属性测试：一个测排序（输出升序且元素多重集不变），一个测“编码再解码等于原文”，用 jqwik 或 JUnit-quickcheck 跑，故意让属性失败一次，观察缩小后的最小反例"
     },
@@ -270,6 +286,14 @@
     {
      "source": "r7-zh3",
      "read": "按四步设计一个实验：先写稳态指标（如订单接口 QPS 与错误率区间），再写“杀掉一个实例后应自动摘除并恢复”的假设，然后在测试环境注入实例故障，最后对照假设评估并记录结论"
+    },
+    {
+     "source": "video-zh-test-levels",
+     "read": "读四层级短文与对照表，给一个自己写过的小项目各写一个例子：一个单元测试（纯函数 + Mock 依赖）、一个集成测试（模块/API 间数据传递）、一个系统测试（端到端功能/性能/兼容性），并说明回归测试在每次提交后跑什么。"
+    },
+    {
+     "source": "video-zh-test-levels",
+     "read": "把已有免费材料接上：用 r7-zh2 的语句/判定/条件/路径覆盖检查单元测试覆盖率，用 r7-zh1 的 property-based testing 补生成式用例，用 r7-zh3 的混沌实验补系统级故障注入；三者在不同层级各司其职。"
     }
    ],
    "gaps": []
@@ -359,6 +383,38 @@
    "query_or_url": "https://principlesofchaos.org/",
    "result": "采纳：确认稳态/假设/引入故障变量/否证假设四步与系统性弱点清单",
    "by": "review/pi-additions/P.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "单元测试 集成测试 系统测试 中文 课程 讲义 软件测试",
+   "result": "命中知乎/博客园/IBM/AWS 等层级说明；知乎 403，博客园《构建质量的堡垒》可读且有四层对照表，采纳为 video-zh-test-levels。",
+   "by": "review/video-engineering-additions/P.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "软件测试 单元测试 集成测试 系统测试 中国大学MOOC 课程大纲",
+   "result": "命中南京大学/浙江万里/三江学院软件测试课程，但页面多只有概述、无逐讲层级；北大《软件工程》Coursera 页有第9周 5 个测试视频，采纳为 video-zh-pku-se。",
+   "by": "review/video-engineering-additions/P.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.coursera.org/learn/ruanjian-gongcheng",
+   "result": "采纳：读到第9周软件测试概念/过程模型和原则/白盒/黑盒/测试步骤五个视频及第10周测试计划同行评审。",
+   "by": "review/video-engineering-additions/P.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.cnblogs.com/ljbguanli/p/19160141",
+   "result": "采纳：读到单元/集成/系统/回归四层的对象、关注点、执行者、阶段对照表与 Mock/Stub、CI 触发等细节。",
+   "by": "review/video-engineering-additions/P.4.5.json"
   }
  ],
  "findings": [
@@ -370,6 +426,7 @@
  "name": "软件测试、质量与可靠性",
  "description": "单元/集成/系统测试、性质测试、覆盖率、故障注入与质量评估。",
  "applied_additions": [
-  "review/pi-additions/P.4.5.json"
+  "review/pi-additions/P.4.5.json",
+  "review/video-engineering-additions/P.4.5.json@27676db740"
  ]
 }

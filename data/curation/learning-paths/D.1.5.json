@@ -11,7 +11,7 @@
    "url": "https://docs.open-metadata.org/latest",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "Navigation groups: Data Discovery (catalog, search, glossary/tags), Data Contracts, Data Quality and Observability (tests, profiler, incidents), Data Lineage (column-level lineage), Data Governance; the home page states the goal is to 'document, discover, and govern your data assets end-to-end'.",
    "access": "Free documentation; a hosted/self-managed deployment is needed to run the Quickstart, and some cloud features are paid. Tool documentation, so organisational stewardship/lifecycle theory is not covered.（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
    "publisher": "OpenMetadata (Collate)",
@@ -28,7 +28,7 @@
    "url": "https://support.huaweicloud.com/intl/zh-cn/usermanual-dataartsstudio/dataartsstudio_01_0007.html",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "中文流程正文：数据目录（元数据采集、数据地图查看资产）、数据架构（关系建模/维度建模、码表与数据标准）、数据质量（完整性/有效性/及时性/一致性/准确性/唯一性六维度，可按数据标准生成质量规则并周期监控）、数据安全（访问权限、敏感数据识别、隐私保护，写明覆盖数据生命周期内统一的数据使用保护）、数据开发与运维调度。",
    "access": "官方中文文档免费阅读；实际治理需要购买 DataArts Studio 实例、存储与计算资源，本次未开通云服务。（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
    "publisher": "华为云",
@@ -242,7 +242,7 @@
    "url": "https://www.mydama.org.cn/chubanwu/%E5%86%85%E5%AE%B9%E7%AE%80%E4%BB%8B",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "全书的 11 个数据管理职能章＋主题章：第3章 数据治理（决策权与责任体系）、第4章 数据架构、第5章 数据建模和设计、第6章 数据存储和操作（含「在整个数据生命周期中，从计划到销毁」的运维活动）、第7章 数据安全、第8章 数据集成和互操作、第9章 文档和内容管理、第10章 参考数据和主数据、第11章 数据仓库和商务智能、第12章 元数据管理（定义、模型、数据流等元数据）、第13章 数据质量管理（规划并实施质量技术以测量、评估和提高适用性）、第16章 数据管理组织和角色期望（组建团队与角色职责）、第17章 数据管理和组织变革管理。",
    "access": "付费纸书/电子书（机械工业出版社 2020 年 5 月出版，44 万字）；DAMA 中国官网免费提供本书简介与章节对照，不提供全文；本轮未购买、未阅读正文。网络上流传的中文版 PDF 属未授权副本，未采用。",
    "publisher": "DAMA International（国际数据管理协会）着；DAMA 中国分会翻译；机械工业出版社出版",
@@ -261,7 +261,7 @@
    "url": "https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "DAMA 官方数据管理知识体系教材（第2版）：按数据管理职能分章组织，其中 Data Governance、Metadata Management、Data Quality Management、Data Modeling and Design、Data Storage and Operations、Data Management Organization and Role Expectations 等章分别对应治理责任与决策体系、元数据与目录、质量规则与度量、数据模型与模式、生命周期操作、角色与职责。章号对照见同一版中文版官方介绍页（r7-zh1）。",
    "access": "付费纸书/电子书，DAMA 官网提供「Order the DAMA-DMBOK®」购买入口并列出译本（Italian 等）；本轮只读官方介绍页，未购买；正文未打开。",
    "publisher": "DAMA International®（官方出版方）",
@@ -491,10 +491,6 @@
     {
      "source": "fix-zh-schema-contract",
      "read": "逐个判断JSON记录在三种表定义下是否被接受，安排先改表后改生产者，解释旧写入端如何继续工作。"
-    },
-    {
-     "source": "r7-zh1",
-     "read": "先系统读第3章（治理与认责）、第12章（元数据/目录）、第13章（数据质量）、第16章（组织与角色）、第6章（生命周期操作），每章按「目标与原则/活动/角色职责/交付物」四栏做笔记；再把 zh1 华为云 DataArts 的目录、质量规则、血缘操作对应到相应章节的活动清单上。"
     }
    ],
    "gaps": []
@@ -521,10 +517,6 @@
     {
      "source": "fix-en-iceberg",
      "read": "Read field-ID correctness and old/new layout coexistence; connect evolution and versioning to original metadata ingestion. No platform subscription needed to read."
-    },
-    {
-     "source": "r7-en1",
-     "read": "Read the Data Governance, Metadata Management, Data Quality Management, Data Storage and Operations and Organization & Role Expectations chapters, and write a one-page governance charter (owners, decision rights, quality metrics, lifecycle stages) that you then implement in OpenMetadata from en1."
     }
    ],
    "gaps": []

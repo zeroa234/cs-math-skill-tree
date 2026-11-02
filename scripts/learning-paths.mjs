@@ -63,7 +63,11 @@ export function assessLearningPath(record, skill) {
     if (status==='complete' && !(record.sources||[]).some(s=>s.lang===lang && s.role==='primary' && stepKeys.has(s.key))) bad(`${lang}: complete route has no primary teaching material`);
     const declared=route?.gaps || [];
     for (const topic of uncovered) if (!declared.includes(topic)) bad(`${lang}: unreported gap ${topic}`);
-    routes[lang]={status,covered,total:core.length,gaps:uncovered,steps:route?.steps||[]};
+    const teaching = t => (t[lang] || []).filter(ref => ref.extent === 'covered' && sources.get(ref.source)?.lang === lang && sources.get(ref.source)?.role !== 'reference' && stepKeys.has(ref.source)).map(ref => sources.get(ref.source));
+    const freeCovered = core.filter(t => teaching(t).some(s => s.free === true)).length;
+    const paidTopics = core.filter(t => teaching(t).length && teaching(t).every(s => s.free === false)).map(t => t.topic);
+    const accessPendingTopics = core.filter(t => teaching(t).some(s => s.free === null) && !teaching(t).some(s => s.free === true)).map(t => t.topic);
+    routes[lang]={status,covered,total:core.length,gaps:uncovered,freeCovered,paidTopics,accessPendingTopics,steps:route?.steps||[]};
   }
   for (const f of record.cross_language_fallbacks || []) {
     const lang=f.lang_missing;

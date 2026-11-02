@@ -9,7 +9,7 @@
    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "第 1 章验证全视（流程/周期/检查点）、第 2 章验证策略、第 3 章验证方法（定向/随机/覆盖率驱动随机/TLM/断言；静态检查含语法/语义/跨时钟域/形式验证）、第 4–5 章验证计划与管理、第 6 章验证结构、第 7 章起 SystemVerilog 环境与 UVM。",
    "access": "电子工业出版社正式商品页，纸质书定价 ¥99.0（2018 年版，560 页）；全文需购买，未购买。目录可公开核对。",
    "publisher": "刘斌（路桑），电子工业出版社",
@@ -106,6 +106,63 @@
     "finding": "已核机工官方数字馆完整目录，包含组合锁属性验证环境与形式化等价性验证专题，不再只依据馆藏名。"
    },
    "added_by": "review/verified-additions/H.2.2.json"
+  },
+  {
+   "key": "video-zh-luke",
+   "lang": "zh",
+   "title": "路科芯院 B 站「芯片验证 V 系列课程」试学合集（路桑/刘斌团队，含 SV 系统验证与 V1 Pro UVM 周次）",
+   "url": "https://www.bilibili.com/video/BV1f94y167rA",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "SV 系统验证：第五周随机约束-1~4 与随机约束练习、第八周随机约束-1~4、第十周覆盖率概述/覆盖率种类/代码覆盖率/功能覆盖率-1~2 与覆盖率练习、第十二周断言-1~4；V1 Pro：第 7 周代码覆盖和功能覆盖率、第 8 周 UVM 总览和基础结构、第 9 周工厂机制和 TLM 通信、第 10 周从 SV 到 UVM 环境结构的过渡、第 11 周序列发送/序列组织、第 12 周 UVM 测试平台总结。",
+   "access": "B 站「路科芯院」机构号公开多 P 合集，视频可直接播放；中文授课；页面未提供字幕轨，字幕未核。合集标注「试学」，但所列分集均为公开可播的完整单集，不是只给课程介绍。",
+   "publisher": "路科芯院（路科验证，刘斌/路桑团队）B 站官方机构号",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1f94y167rA",
+    "location": "页面「视频选集」：SV系统验证 第五周 随机约束-1~4、第八周 随机约束-1~4、第十周 覆盖率概述/覆盖率种类/代码覆盖率/功能覆盖率-1~2、第十二周 断言-1~4；芯片验证V1 Pro系列 第7周 代码覆盖和功能覆盖率、第8周 UVM总览和基础结构、第9周 工厂机制和TLM通信、第10周 从SV到UVM环境结构的过渡、第11周 序列发送/序列组织、第12周 UVM测试平台总结",
+    "finding": "逐条读到约束随机、覆盖率、断言四讲以及 UVM 五周的讲次与时长（如第8周 01:27:31、第9周 01:25:37、第11周 序列发送 34:57），确认这是按周组织的免费中文验证课，而不是只有课程广告；UVM 部分从总览/基础结构讲到工厂、TLM、环境过渡、序列与测试平台总结，构成一条可跟的 UVM 流程。"
+   },
+   "added_by": "review/video-engineering-additions/H.2.2.json"
+  },
+  {
+   "key": "video-zh-formal",
+   "lang": "zh",
+   "title": "《Formal 验证技术总结》（Wenhui's Rotten Pen，含 SVA 语法与 JasperGold FPV 流程）",
+   "url": "https://www.wenhui.space/docs/07-ic-verify/formal/formal/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "形式化验证与仿真的区别、形式化验证适用设计、SVA 三种使用类型（assume/assert/cover）的标准写法与精简写法、property 命名习惯、JasperGold FPV 的验证环境/启动脚本/启动命令、复杂设计的分功能验证与状态空间削减。",
+   "access": "作者博客公开全文，无需注册；中文；文档含代码片段与 Tcl 脚本，不是视频。",
+   "publisher": "Wenhui's Rotten Pen（IC 验证从业者技术博客）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.wenhui.space/docs/07-ic-verify/formal/formal/",
+    "location": "正文目录与内容：模拟仿真验证和形式化验证／什么是形式化验证／SVA语法（Assume、Assert、Cover 三节，均给出 property 标准写法与精简写法）／JasperGold的使用（验证环境、启动脚本、启动命令）／复杂设计如何完成验证",
+    "finding": "读到 assume/assert/cover 三种 SVA 属性的完整写法与 JasperGold 的 analyze/elaborate/clock/reset/prove/report 脚本，确认它是在教「怎样写属性并跑 FPV」，不是只解释名词；同时说明形式化不能替代仿真、状态爆炸与适用设计。"
+   },
+   "added_by": "review/video-engineering-additions/H.2.2.json"
+  },
+  {
+   "key": "video-zh-lec",
+   "lang": "zh",
+   "title": "《Formality 的逻辑等价性检查介绍和参考脚本》（iLoveIC/IC 技术圈）",
+   "url": "https://www.iccircle.com/column?id=44",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "形式验证的两大应用（SVA 检查与 LEC 检查）、LEC 的基本单位逻辑锥、参考设计 Ref 与实现 Imp、综合/后端优化造成的寄存器合并/复制/打平/改名与 keypoint 映射、SVF 记录、Formality 的 setup/match/verify 流程与一份可裁剪的参考脚本。",
+   "access": "IC 技术圈专栏公开全文，无需注册；中文；文档含 Formality Tcl 脚本。",
+   "publisher": "iLoveIC（IC 技术圈专栏）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.iccircle.com/column?id=44",
+    "location": "正文小标题：形式验证在芯片设计流程中的应用（应用一 SVA 检查、应用二 LEC 检查）／LEC 检查中的基本单位：逻辑锥／Formality 在设计流程中的应用／formality 的使用 flow／参考脚本",
+    "finding": "读到 LEC 把 RTL 当 Reference、网表当 Implement，按 DFF 与输出端口切逻辑锥并做 keypoint 映射，以及 read_verilog -r/-i、set_top、set_svf、match、verify 的脚本，确认覆盖的是等价性检查（LEC）的入门流程，而不只是属性检查。"
+   },
+   "added_by": "review/video-engineering-additions/H.2.2.json"
   }
  ],
  "topics": [
@@ -141,6 +198,11 @@
      "source": "zh1",
      "section": "第 3 章覆盖率驱动随机、第 7 章起 SV 随机约束",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-luke",
+     "section": "SV系统验证 第五周 随机约束-1~4、第八周 随机约束-1~4、第八周【练习】随机约束嵌套和旗语应用；V1 Pro 第5周 随机约束和线程控制；第11周 序列发送/序列组织",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -150,7 +212,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两侧都讲 constrained random 与 sequence。"
+   "note": "两侧都讲 constrained random 与 sequence。；先看第五周/第八周的随机约束四讲建立 constraint/randomize/约束嵌套，再做第八周练习把约束用到激励生成；V1 Pro 第5周把随机约束与线程控制放在一起，第11周把随机激励组织成 sequence。这样「受约束随机激励」不只停在 randomize 语法，而是走到 sequence 级激励组织；与已有的 Accellera 指南 constrained random/sequences 章节可互相对照。"
   },
   {
    "topic": "断言与覆盖率",
@@ -159,6 +221,11 @@
     {
      "source": "zh1",
      "section": "第 3 章断言检查与功能覆盖",
+     "extent": "covered"
+    },
+    {
+     "source": "video-zh-luke",
+     "section": "SV系统验证 第十周 覆盖率概述/覆盖率种类/代码覆盖率/功能覆盖率-1~2、第十周【练习】添加功能覆盖率并且收集分析；第十二周 断言-1~4；V1 Pro 第7周 代码覆盖和功能覆盖率",
      "extent": "covered"
     }
    ],
@@ -174,7 +241,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两侧都覆盖 SVA 与覆盖率；SBY 补形式断言。"
+   "note": "两侧都覆盖 SVA 与覆盖率；SBY 补形式断言。；覆盖率部分从「覆盖率概述/种类」到代码覆盖率、功能覆盖率两讲，再到练习里实际添加并收集功能覆盖率；断言部分连讲四讲，覆盖 SVA 断言的使用。两者合起来覆盖「断言 + 覆盖率」这一项，且能落到练习；与已有 Accellera 指南的 assertions/functional coverage 章节互为中英文对照。"
   },
   {
    "topic": "UVM 验证流程",
@@ -183,6 +250,11 @@
     {
      "source": "zh1",
      "section": "第 7 章起 SystemVerilog 环境与 UVM",
+     "extent": "covered"
+    },
+    {
+     "source": "video-zh-luke",
+     "section": "芯片验证V1 Pro系列：第8周 UVM总览和基础结构、第9周 工厂机制和TLM通信、第10周 从SV到UVM环境结构的过渡、第11周 序列发送/序列组织、第12周 UVM测试平台总结",
      "extent": "covered"
     }
    ],
@@ -193,7 +265,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文书后段讲 UVM；英文官方指南是完整 UVM 流程。"
+   "note": "中文书后段讲 UVM；英文官方指南是完整 UVM 流程。；这五周把 UVM 从「总览与基础结构」推到「工厂+TLM」「SV 环境过渡」「sequence 发送与组织」「测试平台总结」，正好对应 UVM 验证流程的骨架：环境组件与层次、组件创建与通信、sequence 驱动、测试平台收束。它不替代 Accellera 官方 UVM 1.2 指南（已有英文免费全文），但中文侧不再只有一本付费书；可以先用这五周建立可运行的流程，再用官方指南查 API 细节。"
   },
   {
    "topic": "形式验证与等价性检查入门",
@@ -207,6 +279,11 @@
     {
      "source": "verified-zh1",
      "section": "第4章形式化属性验证；第8章形式化等价性验证",
+     "extent": "covered"
+    },
+    {
+     "source": "video-zh-formal",
+     "section": "SVA语法（Assume/Assert/Cover）＋JasperGold的使用（验证环境、启动脚本、启动命令）＋复杂设计如何完成验证；配合 video-zh-lec 的 LEC 流程与参考脚本",
      "extent": "covered"
     }
    ],
@@ -222,7 +299,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两侧都只有形式属性验证入门，缺等价性检查（LEC）教学。；旧的 en2（SBY）只讲属性检查（k-induction/BMC），缺等价性检查；EQY 官方 quickstart 正是用 gold 设计与被综合改坏的 gate 设计做等价性验证并定位失配，补上 LEC 这一半，两者合起来覆盖“形式验证与等价性检查入门”。；补充同语言具体教学章节，与既有主课组合学习。"
+   "note": "两侧都只有形式属性验证入门，缺等价性检查（LEC）教学。；旧的 en2（SBY）只讲属性检查（k-induction/BMC），缺等价性检查；EQY 官方 quickstart 正是用 gold 设计与被综合改坏的 gate 设计做等价性验证并定位失配，补上 LEC 这一半，两者合起来覆盖“形式验证与等价性检查入门”。；补充同语言具体教学章节，与既有主课组合学习。；这一项有两个概念，必须分开补：video-zh-formal 用 property + assume/assert/cover 和 JasperGold FPV 脚本讲属性验证；video-zh-lec 用 Ref/Imp、逻辑锥、keypoint 映射和 Formality 脚本讲等价性检查。两者合起来才是「形式验证与等价性检查入门」；只读其中一篇会缺另一半。已有英文 SBY/EQY 文档仍可作工具练习，但中文侧现在有可读的完整流程。"
   }
  ],
  "routes": {
@@ -230,16 +307,20 @@
    "status": "complete",
    "steps": [
     {
-     "source": "zh1",
-     "read": "按第 1–3 章建立验证流程/策略/方法，再读第 6–7 章 SV 环境与 UVM，动手写 driver/monitor/sequence 与覆盖率。"
-    },
-    {
      "source": "zh2",
      "read": "用 E4 的 difftest 流程对一个处理器做功能仿真与波形调试。"
     },
     {
-     "source": "verified-zh1",
-     "read": "读第4章属性验证的组合锁示例，再读第8章形式化等价性验证；比较验证单个实现的属性与验证两个实现功能等价的目标。"
+     "source": "video-zh-luke",
+     "read": "先按 SV 系统验证第五周随机约束-1~4 → 第八周随机约束-1~4 → 第八周练习做一遍约束随机激励；再看第十周覆盖率四讲 + 练习，最后看第十二周断言-1~4，把断言与覆盖率接到同一个测试平台上。"
+    },
+    {
+     "source": "video-zh-luke",
+     "read": "接着看 V1 Pro 第8周 UVM总览和基础结构 → 第9周工厂机制和TLM通信 → 第10周从SV到UVM环境结构的过渡 → 第11周序列发送/序列组织 → 第12周UVM测试平台总结，边看边把上一阶段的 SV 测试平台改写成 UVM 环境。"
+    },
+    {
+     "source": "video-zh-formal",
+     "read": "先读 SVA 三种属性写法，照 JasperGold 的 analyze/elaborate/clock/reset/prove/report 脚本对一个自己写的小模块跑一次 FPV；再读 video-zh-lec 的 LEC 流程，用 Formality 的 Ref/Imp、set_svf、match、verify 脚本对综合前后两个版本做一次等价性检查。"
     }
    ],
    "gaps": []
@@ -315,6 +396,46 @@
    "query_or_url": "https://ebooks.cmpbook.com/detail?id=29267",
    "result": "已核机工官方数字馆完整目录，包含组合锁属性验证环境与形式化等价性验证专题，不再只依据馆藏名。",
    "by": "review/verified-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "路科验证 UVM 免费 公开课 视频 B站",
+   "result": "采纳线索：命中 B 站「芯片验证V2 Opus课程…【试学】」；打开后确认是路科芯院机构号的多 P 合集，视频选集含 SV 随机约束/覆盖率/断言与 V1 Pro 的 UVM 第8–12周，遂定为 video-zh-luke。",
+   "by": "review/video-engineering-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "UVM 验证 中文 视频教程 B站 分集 SystemVerilog 断言",
+   "result": "部分噪声（大量短视频/新闻），但确认中文 UVM 材料以 B 站机构号试学合集为主；未采用只有标题的零散转载。",
+   "by": "review/video-engineering-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "形式验证 等价性检查 中文 教程 B站 IC验证",
+   "result": "未找到可核分集的中文形式验证视频；改查文档，命中 iLoveIC 的 Formality LEC 文章与 Wenhui 的 Formal 总结。",
+   "by": "review/video-engineering-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.wenhui.space/docs/07-ic-verify/formal/formal/",
+   "result": "采纳为 video-zh-formal：读到 SVA assume/assert/cover 写法、JasperGold 环境/脚本/命令与复杂设计验证方案。",
+   "by": "review/video-engineering-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.iccircle.com/column?id=44",
+   "result": "采纳为 video-zh-lec：读到 LEC 逻辑锥、Ref/Imp、keypoint 映射与 Formality 参考脚本。",
+   "by": "review/video-engineering-additions/H.2.2.json"
   }
  ],
  "findings": [
@@ -329,6 +450,7 @@
  "description": "仿真与测试平台、受约束随机激励、断言与覆盖率、UVM 验证流程；形式验证与等价性检查入门。",
  "applied_additions": [
   "review/pi-additions/H.2.2.json@49ba5f2824",
-  "review/verified-additions/H.2.2.json@7b68ff2ab1"
+  "review/verified-additions/H.2.2.json@7b68ff2ab1",
+  "review/video-engineering-additions/H.2.2.json@a52b3a3e14"
  ]
 }

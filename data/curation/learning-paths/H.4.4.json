@@ -146,6 +146,25 @@
     "finding": "官方页面有本地计算/通信模型、卸载和实验分析目录，内容介绍明确以计算时延为评估目标。"
    },
    "added_by": "review/publication-additions/H.4.4.json"
+  },
+  {
+   "key": "video-zh-edge-latency",
+   "lang": "zh",
+   "title": "刘耿旗、张旭秀、马洪源、闫涵《多边缘节点场景下的计算任务卸载算法》（信息与控制，2023）",
+   "url": "https://xk.sia.cn/cn/article/pdf/preview/10.13976/j.cnki.xk.2023.2391.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "多终端多边缘卸载场景建模；1.2 时延模型：无线传输速率（香农公式）、任务传输时间、本地执行时间、边缘服务器执行时间；1.4 计算模型：系统总执行时间 T=Σ(T_l,j + T_j,i,k + T_k,j + T_wait,j)、总能耗 E、时延/能耗加权目标 F=αT+(1−α)E；改进蛙跳算法与仿真实验（与 LOCAL/RANDOM/GA/PSO 对比）。",
+   "access": "《信息与控制》官网公开 PDF，免费；中文；学术论文，不是课程，但有完整公式、目标函数与仿真对比。",
+   "publisher": "信息与控制（刘耿旗、张旭秀、马洪源、闫涵；大连交通大学/大连理工大学）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://xk.sia.cn/cn/article/pdf/preview/10.13976/j.cnki.xk.2023.2391.pdf",
+    "location": "第 1.2 节 时延模型（1 传输时间：香农公式算速率 r_i,k，任务传输时间 T_j,i,k=d_i,j/f；本地执行时间；边缘执行时间）；第 1.4 节 计算模型：T=Σ_{i=1}^{N}Σ_{j=1}^{m}(T_l,j+T_j,i,k+T_k,j+T_wait,j)（式 9）、E（式 10）、F=αT+(1−α)E（式 11）；第 4 节仿真实验与第 5 节结论",
+    "finding": "读到式 (9) 把总时延拆成「本地执行 T_l,j + 传输 T_j,i,k + 边缘执行 T_k,j + 等待 T_wait,j」四项，并用香农公式把传输速率与带宽/功率/信道增益/噪声联系起来；式 (11) 再把时延与能耗加权成目标函数，仿真部分与 LOCAL/RANDOM/GA/PSO 对比。确认它是可拿来算的时延模型，而不是只谈「边缘降低时延」的定性介绍。"
+   },
+   "added_by": "review/video-engineering-additions/H.4.4.json"
   }
  ],
  "topics": [
@@ -181,6 +200,11 @@
      "source": "publication-zh1",
      "section": "第4章本地计算/通信模型与实验；低时延卸载专题",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-edge-latency",
+     "section": "1.2 时延模型（传输时间/本地执行/边缘执行）＋1.4 计算模型（式 9 总时延、式 11 时延-能耗加权目标）＋第 4 节仿真实验",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -195,7 +219,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两侧都只定性讲响应时间，没有时延建模/排队分析。；英文侧把时延从“动机”推进到“调度方案比较中的目标量”，与 en1 的响应时间讨论合起来覆盖“研究时延”。；中文付费专题已有明确模型与实验，撤销此前只根据旧主课无专节而作的英文回退。"
+   "note": "两侧都只定性讲响应时间，没有时延建模/排队分析。；英文侧把时延从“动机”推进到“调度方案比较中的目标量”，与 en1 的响应时间讨论合起来覆盖“研究时延”。；中文付费专题已有明确模型与实验，撤销此前只根据旧主课无专节而作的英文回退。；「研究时延」需要的是一条能算的链路：任务数据量 d、无线速率 r（香农公式，含带宽 W、功率 P、信道增益 H、噪声 N0）、传输时间 d/f、本地执行时间、边缘执行时间、排队/等待时间，最后合成总时延 T。这篇中文论文把这几项写成式 (1)–(9)，并给出时延-能耗加权目标与仿真对比，正好补上已有 zh1（KubeEdge 官方文档，只定性说降低时延）和 en1（Shi 等综述，讲响应时间但非中文）缺的模型层；已有 r7-zh2（边缘缓存迁移决策）再把资源分配/迁移决策接上。三者合起来可以完成「场景—时延模型—优化目标—实验比较」的时延研究入门。"
   },
   {
    "topic": "带宽",
@@ -284,10 +308,6 @@
      "read": "按 KubeEdge 架构→云端/边缘端→边缘自治→设备管理部署一个边缘节点，观察断网行为。"
     },
     {
-     "source": "zh2",
-     "read": "选做 OpenVINO 边缘部署案例，理解模型在边缘运行的约束。"
-    },
-    {
      "source": "r7-zh1",
      "read": "读《边缘计算迁移研究综述》的演进与模型对比部分：列出每种迁移模型假设了什么资源约束（带宽/能耗/算力），并说明为什么边缘节点受限会迫使做迁移决策。"
     },
@@ -296,8 +316,12 @@
      "read": "再读面向缓存的迁移决策论文：把它的目标函数（时延+能耗加权）与约束抄下来，尝试把权重调大调小，观察迁移/缓存决策怎么变。"
     },
     {
-     "source": "publication-zh1",
-     "read": "先把一项请求拆成本地处理、传输、边缘排队和远端处理时间，再按第4章模型和实验比较本地/边缘卸载；区分模型估计与实际测量。"
+     "source": "video-zh-edge-latency",
+     "read": "先读 1.2 时延模型：照式 (1) 用香农公式算一个任务到边缘服务器的速率，再算传输时间；分别算本地执行与边缘执行时间，列出等待时间。再读 1.4 的计算模型，把四项代进式 (9) 得到总时延，并用式 (11) 改变 α 看时延/能耗权重如何改变卸载选择。"
+    },
+    {
+     "source": "video-zh-edge-latency",
+     "read": "读第 4 节仿真设置与结果：记录对比算法（LOCAL/RANDOM/GA/PSO）与评价指标，说明本文方法在时延和能耗上的改进；再用已有 zh1 的 KubeEdge 部署图说明这些时延项分别落在云、边、端的哪一段。"
     }
    ],
    "gaps": []
@@ -397,6 +421,30 @@
    "query_or_url": "https://www.ecsponline.com/goods.php?id=227024",
    "result": "官方页面有本地计算/通信模型、卸载和实验分析目录，内容介绍明确以计算时延为评估目标。",
    "by": "review/publication-additions/H.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "边缘计算 时延模型 计算卸载 中文 讲义 课程",
+   "result": "命中多篇中文期刊论文与厂商介绍；其中《多边缘节点场景下的计算任务卸载算法》含明确「1.2 时延模型」小节，遂打开核读。",
+   "by": "review/video-engineering-additions/H.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "边缘计算 中国大学MOOC 时延 卸载 章节",
+   "result": "未命中专门讲时延模型的免费中文 MOOC；复旦大学《机器视觉与边缘计算应用》偏部署案例，不含时延公式，未采用。",
+   "by": "review/video-engineering-additions/H.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://xk.sia.cn/cn/article/pdf/preview/10.13976/j.cnki.xk.2023.2391.pdf",
+   "result": "采纳为 video-zh-edge-latency：读到式 (1)–(9) 的传输/本地/边缘/等待时间与总时延、式 (11) 时延-能耗加权目标、第 4 节仿真对比。",
+   "by": "review/video-engineering-additions/H.4.4.json"
   }
  ],
  "findings": [
@@ -411,6 +459,7 @@
  "applied_additions": [
   "review/pi-additions/H.4.4.json@e56e75dd71",
   "review/main-additions/H.4.4.json@c42f7c8379",
-  "review/publication-additions/H.4.4.json@cf84afa95a"
+  "review/publication-additions/H.4.4.json@cf84afa95a",
+  "review/video-engineering-additions/H.4.4.json@b3b2600937"
  ]
 }

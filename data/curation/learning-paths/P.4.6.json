@@ -26,7 +26,7 @@
    "url": "https://www.icourse163.org/course/PKU-1003177002",
    "tier": "book",
    "free": false,
-   "role": "primary",
+   "role": "alternative",
    "covers": "课程页列出的教材目录中第 10 章为“软件维护和演化”。章节标题可核，正文未打开；可维护性/兼容性/迁移/代码理解/技术债在该章内的小节覆盖未知，教材另有第 13 章群体化开发（开源协作）与第 14 章 DevOps，可在演化语境下参考。",
    "access": "教材需购买（北京大学出版社 2024，价格未核、未购买）；章节表引自北大 MOOC 课页。",
    "publisher": "北京大学出版社",
@@ -43,7 +43,7 @@
    "url": "https://semver.org/lang/zh-CN/",
    "tier": "website",
    "free": true,
-   "role": "supplement",
+   "role": "primary",
    "covers": "完整规范正文：主版本号·次版本号·修订号的定义与递增规则（做了不兼容的 API 修改→主版本号；向下兼容的功能性新增→次版本号；向下兼容的问题修正→修订号），以及“依赖地狱”的成因与“必须定义公共 API”“发行后禁止改变该版本内容”等强制性条款；后文逐条给出 11 条规范与常见问题（如何判断一次改动是否破坏兼容）。",
    "access": "免费阅读，无需注册；简体中文（官方译本）。",
    "publisher": "semver.org（Semantic Versioning 规范官方站，中文译本）",
@@ -187,6 +187,63 @@
     "finding": "实际打开 PDF 逐页读到定义段原文与 Y in 的出处，以及证据来源（文件/档案纪录/访谈/直接观察/参与观察）的优缺点表；确认这是中文讲授「经验研究怎么做」的方法材料，而不是只给术语。"
    },
    "added_by": "review/closure-additions/P.4.6.json"
+  },
+  {
+   "key": "video-zh-neu-se",
+   "lang": "zh",
+   "title": "东北大学《软件工程》（中国大学MOOC；第八章 维护）",
+   "url": "https://www.icourse163.org/course/detail.htm?cid=1001812013",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "8.1 维护的必要性、8.2 对维护人员的要求；另第七章 7.1 编程语言、7.2 良好的编程习惯、7.3 实现与集成，可作为维护前的代码质量背景。",
+   "access": "中国大学MOOC 页面只有课程概述与授课大纲，本轮未确认注册入口、当前学期是否开放及免费状态，free 置 null，条件待核；大纲可用于核对讲次。",
+   "publisher": "东北大学《软件工程》课程团队（中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/detail.htm?cid=1001812013",
+    "location": "授课大纲：第八章 8.1 维护的必要性、8.2 对维护人员的要求；第七章 7.1 编程语言、7.2 良好的编程习惯、7.3 实现与集成",
+    "finding": "读到「维护的必要性」与「对维护人员的要求」两讲，确认课程把维护单独成章，并先讲为什么维护、维护人员需要什么；但只有两讲，需再补可维护性的质量模型与度量。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.6.json"
+  },
+  {
+   "key": "video-zh-maintainability",
+   "lang": "zh",
+   "title": "《软件设计：推荐 ISO/IEC 25010:2023 标准，软件质量框架与设计指南》（腾讯云开发者社区）",
+   "url": "https://cloud.tencent.com/developer/article/2426708",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "ISO/IEC 25010:2023 的八个质量属性；维护性（Maintainability）定义为「软件被修改的能力」，子特性为可分析性、可修改性、可测试性、可重用性、可模块性；维护性设计建议：模块化设计、提升代码可读性、减少变更与测试成本。",
+   "access": "腾讯云开发者社区公开中文文章，无需注册；文章不是课程。",
+   "publisher": "腾讯云开发者社区",
+   "reupload": false,
+   "evidence": {
+    "url": "https://cloud.tencent.com/developer/article/2426708",
+    "location": "正文「ISO/IEC 25010:2023 标准概述」：维护性 (Maintainability)：软件被修改的能力 → 可分析性、可修改性、可测试性、可重用性、可模块性；「ISO/IEC 25010:2023 标准在软件设计中的应用」：维护性设计——采用模块化设计，提升代码可读性和可维护性，减少变更和测试成本",
+    "finding": "读到维护性的五个子特性（可分析/可修改/可测试/可重用/可模块）与「模块化 + 可读性」的设计建议，确认它补上了东北大学两讲缺的质量模型与设计抓手；但它是标准解读文章，不是课程，故只作补充。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.6.json"
+  },
+  {
+   "key": "video-zh-cyclomatic",
+   "lang": "zh",
+   "title": "《什么是圈复杂度？软件工程测试中的定义指南与示例》（Sonar 中文资源库）",
+   "url": "https://www.sonarsource.com/zh/resources/library/cyclomatic-complexity/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "圈复杂度定义（McCabe 1976，按程序独立路径数量化复杂度）、控制流图与 V=E−N+2 计算、复杂度高低与可读性/可测试性/可维护性的关系、用复杂度排重构与测试优先级、管理该指标的工具。",
+   "access": "Sonar 官方中文资源库文章，公开免费，无需注册；厂商教学文章，不是课程。",
+   "publisher": "Sonar（SonarSource）中文资源库",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.sonarsource.com/zh/resources/library/cyclomatic-complexity/",
+    "location": "正文：什么是圈复杂度（McCabe 1976；独立路径数量化）；圈复杂度的计算公式（控制流图、V=E−N+2）；为什么重要（高复杂度更易出错、测试与维护更难；低复杂度可读、易理解/测试/修改）；如何管理该指标",
+    "finding": "读到「圈复杂度高的程序往往更易出错，且测试与维护难度更大；较低的圈复杂度值表明程序可读性强，更易理解、测试和修改」「通过量化程序复杂度，开发者能更有效地规划代码修改、重构和测试的优先级」以及 V=E−N+2 的算法，确认它给了一个可计算的维护性指标，而不只是说「代码要简单」。"
+   },
+   "added_by": "review/video-engineering-additions/P.4.6.json"
   }
  ],
  "topics": [
@@ -198,6 +255,11 @@
      "source": "zh1",
      "section": "第 10 章 软件维护和演化",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-maintainability",
+     "section": "video-zh-maintainability 的 ISO/IEC 25010 维护性定义/五子特性/模块化与可读性设计建议；配合 video-zh-cyclomatic 的 V=E−N+2 指标与 video-zh-neu-se 的 8.1/8.2（free 待核，可作扩展）",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -207,7 +269,7 @@
      "extent": "covered"
     }
    ],
-   "note": "章节标题可核；正文小节未打开。"
+   "note": "章节标题可核；正文小节未打开。；可维护性先用 ISO/IEC 25010 把定义与五个子特性（可分析/可修改/可测试/可重用/可模块）立起来，并给出模块化/可读性的设计抓手；再用 Sonar 圈复杂度 V=E−N+2 把「复杂度」变成可算的代码级指标。东北大学 8.1/8.2 的维护必要性与维护人员要求可作扩展，但其 free 已置 null、条件待核；免费正文由这两份公开材料承担。兼容性/迁移/代码理解/技术债仍由已有 r7-zh1（语义化版本）、r7-zh2（Strangler Fig）、r7-zh3（如何阅读代码）、closure-zh1（技术债识别）、closure-zh2（案例研究方法）补。"
   },
   {
    "topic": "兼容性",
@@ -326,10 +388,6 @@
    "status": "complete",
    "steps": [
     {
-     "source": "zh1",
-     "read": "第 10 章 软件维护和演化（需自备教材），按可维护性/兼容性/迁移逐节做笔记"
-    },
-    {
      "source": "r7-zh1",
      "read": "读摘要与 11 条规范，给自己项目里最近三次改动各判一次“这是主/次/修订号变更”，并写清判据（公共 API 有没有变）"
     },
@@ -342,16 +400,20 @@
      "read": "挑一个中等规模开源项目，按文中步骤走一遍：先读文档与目录结构，从测试与示例入手，用断点跟一条主流程，画出调用图，最后仿写一个最小版本"
     },
     {
-     "source": "r7-zh4",
-     "read": "读第 15 章 15.2–15.3 与 15.6，为上面那个项目写一份“技术债清单”：哪些属于逻辑老化、哪些属于可维护性不足、各自打算怎么还"
-    },
-    {
      "source": "closure-zh1",
      "read": "读「识别和分类技术债」一节，照它的决策点给自己项目里的 10 条 issue/待办做一次分类：先剔除没有落到具体工件（代码、数据模型、构建脚本、测试）的条目，再区分「用户可见的不正确功能」与「设计问题」，只有后者且有副作用累积证据（重复代码、非标准绑定、不一致实现等）才记为技术债；最后统计你手上 10 条里真正算债的比例，并与文中 1,264→109 的比例对照，说明你的判定标准与它的差异。"
     },
     {
      "source": "closure-zh2",
      "read": "按「定义 → 步骤 → 优缺点 → 应用」读，重点用证据来源优缺点表审一遍 closure-zh1 里的那份实证研究：它的样本来自哪几类系统、用的是问题跟踪系统的文本还是访谈、可能有哪种偏见（选择偏倚/报告偏见/编码者主观），并写下如果要复现这个分类你会怎么控制编码一致性。"
+    },
+    {
+     "source": "video-zh-maintainability",
+     "read": "读 ISO/IEC 25010 的维护性定义与五个子特性，给自己手上的项目按可分析/可修改/可测试/可重用/可模块各打 1–5 分，写两条改进；再用 r7-zh1 检查版本兼容策略、r7-zh2 设计一次 Strangler Fig 迁移、r7-zh3 的读代码步骤读一个陌生模块、closure-zh1 的技术债分类识别并记录债务。"
+    },
+    {
+     "source": "video-zh-cyclomatic",
+     "read": "读圈复杂度定义与 V=E−N+2 的计算，给自己项目里最长的 3 个函数画控制流图并算复杂度；把 V>10 的函数列成重构清单，说明拆分支/提取函数后复杂度如何下降。"
     }
    ],
    "gaps": []
@@ -527,6 +589,46 @@
    "query_or_url": "https://www.lsc.org.cn/d/2016-11/11/201611111425593.pdf（南开大学宫平《案例研究的方法与应用》）；另试 http://www.fe.hku.hk/.../Conducting_Case_Studies_Chi.pdf（Yin 章节中译，PDF 字符抽取错乱）",
    "result": "南开宫平的 PDF 抽取干净，逐页读到 Yin 定义、研究步骤、证据来源优缺点表，采纳为 closure-zh2；港大那份是 Yin 章节中译但文字层错乱（每个字之间插入空格），不作来源，只在检索记录里留档。",
    "by": "review/closure-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "软件可维护性 中文 课程 讲义 度量 维护类型",
+   "result": "命中百度百科（403 无法读）、DDIA 中文可维护性章节（翻译来源不明）、51Testing 测试代码可维护性；未找到专门中文课程，改查 ISO 25010 中文解读。",
+   "by": "review/video-engineering-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "软件可维护性 度量 指标 ISO 25010 中文 文章",
+   "result": "命中腾讯云《软件设计：推荐 ISO/IEC 25010:2023 标准》，打开读到维护性定义、五个子特性与模块化/可读性设计建议，采纳为 video-zh-maintainability。",
+   "by": "review/video-engineering-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/detail.htm?cid=1001812013",
+   "result": "采纳为 video-zh-neu-se：读到第八章 8.1 维护的必要性、8.2 对维护人员的要求与第七章编程习惯。",
+   "by": "review/video-engineering-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://cloud.tencent.com/developer/article/2426708",
+   "result": "采纳：读到维护性 (Maintainability) 的五个子特性与维护性设计建议。",
+   "by": "review/video-engineering-additions/P.4.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.sonarsource.com/zh/resources/library/cyclomatic-complexity/",
+   "result": "采纳为 video-zh-cyclomatic：读到圈复杂度定义、V=E−N+2、与可读性/可测试性/可维护性的关系及重构优先级。",
+   "by": "review/video-engineering-additions/P.4.6.json"
   }
  ],
  "findings": [
@@ -541,6 +643,7 @@
  "applied_additions": [
   "review/main-additions/P.4.6.json",
   "review/pi-additions/P.4.6.json",
-  "review/closure-additions/P.4.6.json@c2509fe1dd"
+  "review/closure-additions/P.4.6.json@c2509fe1dd",
+  "review/video-engineering-additions/P.4.6.json@aee02d7a09"
  ]
 }

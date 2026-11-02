@@ -105,13 +105,15 @@ def compute_routes(rec):
 
 def merge_addition(rec, add, tag):
     keys = {s["key"] for s in rec["sources"]}
-    by_url = {(s["lang"], s["url"]): s["key"] for s in rec["sources"]}
+    # A course page can also host the catalogue for its paid textbook. Sharing a
+    # URL does not make the video and book the same teaching material or cost.
+    by_url = {(s["lang"], s["url"], s["tier"]): s["key"] for s in rec["sources"]}
     rename = {}
     for s in add.get("sources", []):
         s = dict(s)
         if s.get("tier") == "course":
             s["tier"] = "website"
-        existing = by_url.get((s["lang"], s["url"]))
+        existing = by_url.get((s["lang"], s["url"], s["tier"]))
         if existing:
             rename[s["key"]] = existing
             continue
@@ -123,7 +125,7 @@ def merge_addition(rec, add, tag):
         s["added_by"] = tag
         rec["sources"].append(s)
         keys.add(k)
-        by_url[(s["lang"], s["url"])] = k
+        by_url[(s["lang"], s["url"], s["tier"])] = k
     for r in add.get("remove_sources", []):
         key = r["key"]
         if not any(s["key"] == key for s in rec["sources"]):
@@ -254,6 +256,29 @@ def build(id_, skills):
                     notes.append(f"{s['key']}: demoted to supplement (one primary per language; kept {keep['key']})")
         elif not prim:
             need_primary.append(lang)
+    # Once a whole language route has explicit free teaching, keep paid/unknown-cost
+    # sources as alternatives, outside the required reading sequence.
+    by_key = {s["key"]: s for s in rec["sources"]}
+    for lang in ("zh", "en"):
+        route = rec["routes"][lang]
+        step_keys = {st["source"] for st in route.get("steps", [])}
+        free_keys = {s["key"] for s in rec["sources"] if s["lang"] == lang and s["free"] is True
+                     and s["role"] != "reference" and s["key"] in step_keys}
+        taught = [t for t in core if any(ref["extent"] == "covered" and ref["source"] in step_keys
+                  and by_key[ref["source"]]["role"] != "reference" for ref in t.get(lang, []))]
+        if not taught or not all(any(ref["extent"] == "covered" and ref["source"] in free_keys
+                       for ref in t.get(lang, [])) for t in taught):
+            continue
+        route["steps"] = [st for st in route["steps"] if by_key[st["source"]]["free"] is True]
+        for s in rec["sources"]:
+            if s["lang"] == lang and s["role"] == "primary" and s["key"] not in free_keys:
+                s["role"] = "alternative"
+        if not any(s["role"] == "primary" and s["key"] in free_keys for s in rec["sources"]):
+            candidates = [s for s in rec["sources"] if s["key"] in free_keys]
+            chosen = max(candidates, key=lambda s: sum(any(ref["source"] == s["key"] and ref["extent"] == "covered"
+                         for ref in t.get(lang, [])) for t in core))
+            chosen["role"] = "primary"
+            notes.append(f"{lang}: free sources teach all currently covered topics; chose {chosen['key']} as primary, paid materials remain alternatives")
     gaps = compute_routes(rec)
     kept = []
     for f in rec.get("cross_language_fallbacks", []):

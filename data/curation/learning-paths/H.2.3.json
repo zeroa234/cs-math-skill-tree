@@ -128,6 +128,82 @@
     "finding": "英文正文逐节给电源与去耦、叠层与地平面、屏蔽的具体建议，可作英文侧供电与 EMC 的板级实操材料。"
    },
    "added_by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "key": "video-zh-gy",
+   "lang": "zh",
+   "title": "B 站「广元兄0」信号完整性相关短课（反射、端接、串扰、S 参数、PDN）",
+   "url": "https://www.bilibili.com/video/BV1PC4y1p7bX",
+   "tier": "video",
+   "free": true,
+   "role": "reference",
+   "covers": "可选参考（不参与免费覆盖计数）：同一 UP 主的相关 SI 短课，含传输线模型/返回路径、反射、容性/感性反射、端接、S 参数、近端/远端串扰、损耗、PDN、平面谐振、过孔/残桩、差分 S 参数等主题，供需要按主题补看时使用。",
+   "access": "B 站个人技术号公开相关短课，公开可播；页面为中文标题/中文简介，未提供字幕，未逐集听音核对语言；这是「接下来播放」相关视频列表而非认证课程包，只作可选 reference，不作为唯一免费覆盖。",
+   "publisher": "B 站 UP 主 广元兄0（个人信号完整性/ADS 技术分享）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1PC4y1p7bX",
+    "location": "视频页「接下来播放」同一 UP 主的相关视频列表：信号完整性--反射、容性反射&感性反射、信号完整性--S参数、近端串扰&远端串扰、导体损耗OR介质损耗、3W原则与3H原则、传输线基础知识之返回路径、端接方式（终端端接）、什么时候考虑端接（Len,Td）、PDN（Sigrity&SIwave&ADS）、平面谐振、Stub残桩的影响、Via simulation、表面粗糙度、传输线模型、单端转差分S参数",
+    "finding": "读到同一 UP 主按「传输线模型/返回路径 → 反射与容性/感性反射 → 端接方式与何时端接 → 近端/远端串扰 → S 参数与损耗 → PDN/平面谐振/过孔/残桩」排列的 16 个相关短课，标题不是泛泛的「信号完整性入门」，而是逐主题；但这是「接下来播放」的相关视频列表，不是平台认证的课程包，未逐集听音，语言只按频道定位判断。"
+   },
+   "added_by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "key": "video-zh-rs-si",
+   "lang": "zh",
+   "title": "《信号完整性测试基础》（罗德与施瓦茨中国，2025-05，应用卡片 01.00 版）",
+   "url": "https://edm.eeworld.com.cn/edm/RS_202509/1.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "信号完整性定义、高速互连系统 Tx/Rx/通道组成、阻抗失配/反射/振铃/过冲、插入损耗与趋肤效应/介质损耗、近端/远端串扰、抖动（RJ/DJ）、眼图分析与误码率测试（BERT），并给出 FR4 10 GHz 损耗、间距与串扰等数量级例子。",
+   "access": "EEWorld 转载的罗德与施瓦茨官方中文应用卡片 PDF，公开下载；中文；文档为测试基础指南，不是视频课程。",
+   "publisher": "罗德与施瓦茨（中国）科技有限公司，EEWorld 资料页转载",
+   "reupload": false,
+   "evidence": {
+    "url": "https://edm.eeworld.com.cn/edm/RS_202509/1.pdf",
+    "location": "第 1–3 页：信号完整性基本概念（定义、测试重要性、Tx/Channel/Rx 组成）；影响信号完整性的核心因素（1 阻抗失配、2 衰减/损耗、3 串扰 NEXT/FEXT、4 抖动噪声）；眼图分析与误码率测试",
+    "finding": "读到「阻抗突变→部分能量反射回源端，形成振铃或过冲」「插入损耗随频率升高快速增长，10 GHz 时 FR4 可达 -2 dB/inch」「串扰强度与走线间距平方成反比」等带数量级的说明，以及眼图/BERT 的评估方法，确认它能补上 SI 的测量与评价层，而不是产品广告。"
+   },
+   "added_by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "key": "video-zh-diffpair",
+   "lang": "zh",
+   "title": "《差分对路由》（Altium Designer 官方中文技术文档，含差分信号/共模抑制/阻抗与长度匹配）",
+   "url": "https://www.altium.com/cn/documentation/altium-designer/pcb/high-speed-design/interactively-routing-differential-pairs",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "差分信号传输原理（一对大小相等、极性相反的信号，抑制共模噪声、降低 EMI）；PCB 差分对布线目标；每条走线阻抗设为输入差分电缆阻抗的一半、接收端按各自特性阻抗端接、两条线长度匹配（USB 3.x 例：长度差不超过 10 mil）、等长绕障、保持阻抗不变时换层；原理图/约束管理器定义差分对、xNet/xSignal、PCB 差分对编辑器与长度/阻抗约束。",
+   "access": "Altium 官方中文技术文档，公开免费，无需注册；厂商文档，不是课程。",
+   "publisher": "Altium Designer 官方文档（中文）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.altium.com/cn/documentation/altium-designer/pcb/high-speed-design/interactively-routing-differential-pairs",
+    "location": "正文「差分信号传输系统」「差分对 PCB 布线」「在设计输入阶段定义差分对」「查看和管理 PCB 上的差分对」；关键句：每条信号走线阻抗设为输入差分电缆阻抗的一半、接收端按两条线各自特性阻抗端接、两条线长度保持一致（USB 3.x 长度差不超过 10 mil）、保持信号阻抗不变即可换层",
+    "finding": "读到差分信号用一对极性相反的信号抑制共模噪声与 EMI，以及差分对布线的四条硬要求（阻抗、端接、长度匹配、等长绕障）和 USB 3.x 10 mil 的例子，确认它补上了视频系列只讲「单端转差分 S 参数」而没有展开的差分阻抗/长度匹配/端接。"
+   },
+   "added_by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "key": "video-zh-reflection",
+   "lang": "zh",
+   "title": "《信号反射和阻抗失配的联系》（Cadence 中文技术博客，含反射系数、过冲/下冲与端接）",
+   "url": "https://community.cadence.com/cadence_blogs_8/b/pcbchn/posts/1360533",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "传输线阻抗失配产生反射、反射系数公式、高阻抗负载的过阻尼/缓慢上升、低阻抗负载的下冲/欠阻尼振荡、源端串联端接与负载端并联/上拉/Thevenin 端接、片内端接 ODT 与查数据手册的注意事项。",
+   "access": "Cadence 官方中文技术博客，公开免费，无需注册；厂商技术文章，不是课程。",
+   "publisher": "Cadence（PCB、IC封装设计与仿真分析博客）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://community.cadence.com/cadence_blogs_8/b/pcbchn/posts/1360533",
+    "location": "正文：端接线路上出现信号反射的原因（反射系数公式）、高阻抗负载的信号反射（过阻尼/缓慢上升）、低阻抗负载的信号反射（下冲/欠阻尼振荡）、现代 IC 的片内端接 ODT、源端串联端接与负载端并联/上拉/Thevenin 端接",
+    "finding": "读到「阻抗失配会产生反射，回到信号源」「负载输入阻抗与线路阻抗失配时在负载处发生反射」「高阻抗负载导致缓慢上升，低阻抗负载导致下冲」「源端可串联端接，负载端可用并联/上拉/Thevenin 端接」等原文，确认它把反射系数、过冲/下冲与端接方案讲成了可对照的因果关系。"
+   },
+   "added_by": "review/video-engineering-additions/H.2.3.json"
   }
  ],
  "topics": [
@@ -216,6 +292,11 @@
      "source": "r7-zh1",
      "section": "第 7–11 章：传输线物理基础、反射、有损线与上升边退化、串扰、差分对与差分阻抗",
      "extent": "covered"
+    },
+    {
+     "source": "video-zh-rs-si",
+     "section": "video-zh-rs-si 第1–3页（SI 定义/Tx-Rx-通道/阻抗失配/损耗/串扰/抖动/眼图-BERT）＋video-zh-reflection（反射系数、高低阻抗负载、源端/负载端端接、ODT）＋video-zh-diffpair（差分信号/共模抑制/差分阻抗/长度匹配/端接）；传输线与布局用已有 zh1/zh2",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -230,7 +311,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两侧都缺 SI 主线章节。；中文侧原来只有 EDA 操作文档，完全没有传输线/反射/串扰；这本书按 SI 六类问题逐章讲并有估算公式与设计准则，覆盖“信号完整性”。；英文侧原来只有课程里的高级仿真讲座；6.776 的这三讲讲清传输线模型、反射与 S 参数，是 SI 分析的理论核心。"
+   "note": "两侧都缺 SI 主线章节。；中文侧原来只有 EDA 操作文档，完全没有传输线/反射/串扰；这本书按 SI 六类问题逐章讲并有估算公式与设计准则，覆盖“信号完整性”。；英文侧原来只有课程里的高级仿真讲座；6.776 的这三讲讲清传输线模型、反射与 S 参数，是 SI 分析的理论核心。；免费覆盖改为以中文文档为主线：先用 R&S 中文指南建立 SI 定义、Tx/Rx/通道与四类核心因素（阻抗失配、损耗、串扰、抖动），并知道眼图/BERT 怎么评价；再用 Cadence 中文博客补反射系数、高阻抗负载的缓慢上升/低阻抗负载的下冲，以及源端串联、负载端并联/上拉/Thevenin、ODT 的取舍；差分对用 Altium 官方中文文档补差分信号抑制共模/EMI、每条线阻抗为差分电缆阻抗一半、按各自特性阻抗端接、长度匹配（USB 3.x ≤10 mil）与等长绕障。传输线/布局/PDN 由已有免费 zh1（嘉立创 EDA）与 r7-zh2（乐鑫硬件设计指南）承担。广元兄视频只作可选 reference，不参与覆盖计数；这样不靠「中文标题推断视频语言」也能覆盖 SI 入门的设计—布局—测量三层。"
   },
   {
    "topic": "电磁兼容与制造约束",
@@ -280,12 +361,24 @@
      "read": "用 KiCad 入门文档走第二套工具流程，理解封装/网络表/制造文件。"
     },
     {
-     "source": "r7-zh1",
-     "read": "在嘉立创 EDA 画完第一块板后读这本书：先第 7–9 章（传输线、反射、有损线）算一条走线的阻抗与临界长度，再第 10–11 章看串扰与差分对，最后第 6 章 PDN 与回路电感，给自己板子的电源平面做一次去耦与过孔布置。"
-    },
-    {
      "source": "r7-zh2",
      "read": "对照乐鑫《ESP 硬件设计指南》：按“电源（数字/模拟）”“四层/两层板”把地平面、电源走线与射频屏蔽落到自己的板子上，并读“版图设计常见问题”学会从现象反查供电/EMC 原因。"
+    },
+    {
+     "source": "video-zh-rs-si",
+     "read": "读第 1–3 页的 SI 定义、Tx/Channel/Rx、四类核心因素与眼图/BERT，把文档里的反射/串扰/损耗换成可测量的指标（插损 dB/inch、NEXT/FEXT、眼高/眼宽、BER），再用已有 zh1 的布局布线与 r7-zh2 的电源/地平面检查表做一次板级自查。"
+    },
+    {
+     "source": "video-zh-reflection",
+     "read": "读「端接线路上出现信号反射的原因」与高/低阻抗负载两节：写出反射系数公式，解释高阻抗负载为什么缓慢上升、低阻抗负载为什么下冲；再读端接部分，列出源端串联、负载端并联/上拉/Thevenin、ODT 各自适用场景。"
+    },
+    {
+     "source": "video-zh-diffpair",
+     "read": "读「差分信号传输系统」与「差分对 PCB 布线」两节：记下差分对抑制共模噪声/EMI 的原因，以及阻抗（每条线为差分电缆阻抗一半）、端接（按各自特性阻抗）、长度匹配（USB 3.x ≤10 mil）、等长绕障、保持阻抗换层五条布线要求；在自己的板子上找一对差分线按这五条检查。"
+    },
+    {
+     "source": "video-zh-gy",
+     "read": "可选（不要求）：若想按主题补看，再在 B 站该 UP 主的相关视频里选看反射/端接/串扰/PDN 等单集；不要把它当作唯一免费来源，语言与字幕未核。"
     }
    ],
    "gaps": []
@@ -371,6 +464,62 @@
    "query_or_url": "https://www.ti.com/about-ti/events/power-supply-design-seminar.html",
    "result": "TI 电源设计研讨会现为线下活动报名页，无免费讲义正文，未采纳为供电材料。",
    "by": "review/pi-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信号完整性 中文 公开课 大学 讲义 传输线 反射 串扰",
+   "result": "未命中中文大学 MOOC；命中 Tektronix 中文《信号完整性基础》PDF（后因 403 无法读取）、Wiki-Power 基础概念页（传输线/串扰页仍在建）与 Teledyne LeCroy 信号完整性学院（英文授课为主），遂转查中文短课与官方中文测试指南。",
+   "by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "信号完整性 视频教程 中文 阻抗 端接 差分 电源完整性 免费",
+   "result": "命中 B 站「信号完整性--反射」及其同作者系列；打开页面读到 16 个同系列分集（反射/端接/串扰/S 参数/PDN/过孔/残桩），采纳为 video-zh-gy。",
+   "by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "site:icourse163.org 信号完整性",
+   "result": "不合适：只返回信号与系统、数字信号处理等课程，没有信号完整性专门课。",
+   "by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://download.tek.com/document/54C-22137-1_1.pdf",
+   "result": "不采纳：HTTP 403，无法读取正文；改用可读的罗德与施瓦茨中文应用卡片。",
+   "by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://edm.eeworld.com.cn/edm/RS_202509/1.pdf",
+   "result": "采纳为 video-zh-rs-si：读到 SI 定义、Tx/Rx/通道、阻抗失配/损耗/串扰/抖动、眼图与 BERT，含 FR4 损耗与间距数量级。",
+   "by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.altium.com/cn/documentation/altium-designer/pcb/high-speed-design/interactively-routing-differential-pairs",
+   "result": "采纳为 video-zh-diffpair：读到差分信号/共模抑制/EMI、差分阻抗为单端一半、端接、长度匹配（USB 3.x 10 mil）、等长绕障与换层规则。",
+   "by": "review/video-engineering-additions/H.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://community.cadence.com/cadence_blogs_8/b/pcbchn/posts/1360533",
+   "result": "采纳为 video-zh-reflection：读到反射系数、高/低阻抗负载波形、源端/负载端端接与 ODT 注意事项。",
+   "by": "review/video-engineering-additions/H.2.3.json"
   }
  ],
  "findings": [
@@ -382,6 +531,7 @@
  "name": "PCB设计与板级工程",
  "description": "原理图、布局布线、供电、信号完整性、电磁兼容与制造约束。",
  "applied_additions": [
-  "review/pi-additions/H.2.3.json@cf4b72436e"
+  "review/pi-additions/H.2.3.json@cf4b72436e",
+  "review/video-engineering-additions/H.2.3.json@0941dd1228"
  ]
 }
