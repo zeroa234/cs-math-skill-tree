@@ -1,0 +1,422 @@
+{
+ "id": "V.3.2",
+ "name": "科学可视化与可视分析",
+ "description": "场/体数据、时空与图可视化、多视图、人在回路分析与评估。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "CSE 332 / ISE 332 Intro to Scientific Visualization（Stony Brook，Klaus Mueller；课程主页 + 逐讲日程 + labs）",
+   "url": "https://www3.cs.stonybrook.edu/~mueller/teaching/cse332/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Summary 写明从 visual perception、cognition、HCI、sense-making、data science、AI、computer graphics、information visualization 出发，讲如何耦合成可交互的 visual analytics pipeline；日程含科学/医学可视化与体绘制、高维数据与降维/PCA、聚类、视觉设计与美学、交互原则、visual analytics/human-centered AI；配 lab 与期末项目视频。",
+   "access": "课程主页、日程与 lab 链接免费公开，无需注册；英文。",
+   "publisher": "Stony Brook University / Prof. Klaus Mueller",
+   "evidence": {
+    "url": "https://www3.cs.stonybrook.edu/~mueller/teaching/cse332/syllabus.html",
+    "location": "日程：9/10 High-D data、9/17 Perception and cognition、9/29–10/1 multivariate/high-D、10/8 Principles of interaction、10/20 Visual analytics",
+    "finding": "日程逐条列出 High-D data（subspaces, dimension reduction, PCA）、Cluster analysis、Perception and cognition、Visual design and aesthetics、Visualization of multivariate and high-D data、Principles of interaction、Visual analytics/human-centered AI。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "可视化导论（浙江大学，中国大学MOOC；15 章）",
+   "url": "https://www.icourse163.org/course/ZJU-1206452826",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "数据篇按数据类型讲时空数据、地理信息数据、高维非空间数据、层次和网络数据的可视化方法与可视分析入门；基础篇讲人/数据/流程；应用篇讲工具与实例。不含场/体数据与体绘制。",
+   "access": "中国大学MOOC 免费注册学习；认证证书为付费电子证书；视频按学期开放，字幕未核对。",
+   "publisher": "浙江大学（课程团队）",
+   "evidence": {
+    "url": "https://www.icourse163.org/course/ZJU-1206452826",
+    "location": "课程概述：数据篇与应用篇",
+    "finding": "课程概述写数据篇“针对实际应用中遇到的不同类型的数据，包括时空数据，地理信息数据、高维非空间数据，层次和网络数据，介绍相应的可视化方法”，应用篇“着重介绍可视化工具及应用实例”。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "大数据可视化与可视分析·智慧教材（17 章交互式中文教材，免费；第 9 章科学数据可视化、第 12 章可视分析方法论、第 16 章科学模拟数据可视分析）",
+   "url": "http://simingchen.me/smart-textbook",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "Ch8 地理时空数据可视化（地图投影、符号系统、等值区域图、OD 流、时空立方体）；Ch9 科学数据可视化（标量场、流场、特征提取、等值面、流线、体绘制、颜色映射）；Ch10 图数据可视化（力导向布局、邻接矩阵、社区检测、边捆绑）；Ch11 层次数据可视化（节点-链接树、矩形树图、旭日图、圆堆图）；Ch12 可视分析方法论（可视分析流水线、构建方法论、六大分析模式、人在回路、态势感知）；Ch16 科学模拟数据可视分析。",
+   "access": "免费在线交互教材，无需注册；中文；每章配交互演示与知识测验。",
+   "publisher": "simingchen（陈思明，复旦大学大数据学院/可视分析与智能决策实验室）",
+   "reupload": false,
+   "evidence": {
+    "url": "http://simingchen.me/smart-textbook",
+    "location": "首页章节目录：Chapter 9「科学数据可视化：探索标量场、流场和特征提取的可视化方法，包括等值面、流线和体绘制技术」；Chapter 8「地理时空数据可视化…时空立方体」；Chapter 12「可视分析方法论：理解可视分析流水线、构建方法论与六大分析模式…人在回路」；Chapter 16「科学模拟数据可视分析」",
+    "finding": "读到第 8/9/12/16 章的知识点标签，确认标量场/流场/等值面/流线/体绘制与可视分析方法论（人在回路）在中文免费教材里各有整章。"
+   },
+   "added_by": "review/pi-additions/V.3.2.json"
+  },
+  {
+   "key": "final-zh1",
+   "lang": "zh",
+   "title": "《数据可视化（纪念版）》（陈为 等，电子工业出版社 2023-03，ISBN 9787121450969，756 页，15 章分 4 篇；第 4.3.3 节「多视图协调关联」、第 12 章「可视化中的交互」、第 13 章「可视化效果评测与用户实验」）",
+   "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=62229",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "4.3.3 多视图协调关联（p151）；第 12 章 可视化中的交互：12.1 交互准则（交互延时/成本/场景变化）、12.2 交互分类、12.3 交互技术（12.3.1 选择、12.3.2 导航、12.3.3 重配、12.3.4 编码、12.3.5 抽象/具象、12.3.6 过滤、12.3.7 关联 p579、12.3.8 概览+细节 p581、12.3.9 焦点+上下文 p584）、12.4 交互与硬件设备；第 13 章 可视化效果评测与用户实验：13.1 评测流程、13.2 评测方法（13.2.1 用户实验、13.2.2 专家评估/启发式评估、13.2.3 案例研究、13.2.4 指标评估、13.2.5 众包、13.2.6 标注）、13.3 用户实验（13.3.1 确定实验目标、13.3.2 准备实验、13.3.3 进行实验、13.3.4 分析结果并讨论、13.3.5 评测案例分析）、13.4 总结。",
+   "access": "付费纸书，定价 269.99 元（ISBN 9787121450969，756 页，2023-03）；出版社官网可读完整目录与内容简介，正文需购买；中文。",
+   "publisher": "电子工业出版社（陈为 等；出版社页未注明作者单位）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=62229",
+    "location": "出版社「目 录」：基础篇 4.3.3 多视图协调关联 151；用户篇 第12章 可视化中的交互（12.3.7 关联 579、12.3.8 概览+ 细节 581、12.3.9 焦点+ 上下文 584）；第13章 可视化效果评测与用户实验（13.1 评测流程 608、13.2 评测方法 609、13.3 用户实验 613、13.3.5 评测案例分析 620）",
+    "finding": "逐节读到「多视图协调关联」独立小节与第 13 章「评测流程—评测方法（用户实验/专家评估/案例研究/指标评估/众包/标注）—用户实验四步—案例分析」的完整结构，确认这本中文教材同时把多视图协同与可视化评估写成可操作章节；同页读到定价 269.99 元、ISBN、756 页。"
+   },
+   "added_by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "key": "final-en1",
+   "lang": "en",
+   "title": "Fundamentals of Data Visualization（Claus O. Wilke, O'Reilly；作者官网免费全文：Ch13 Visualizing time series and other functions of an independent variable / Ch15 Visualizing geospatial data / Ch11 Visualizing nested proportions / Ch21 Multi-panel figures）",
+   "url": "https://clauswilke.com/dataviz/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "Ch13 时间序列与其他自变量函数（13.1 单序列、13.2 多序列与剂量-响应曲线、13.3 两个以上响应变量的时间序列）；Ch15 地理空间数据可视化（含投影问题）；Ch11 嵌套比例（11.2 马赛克图与矩形树图）；Ch21 多面板图（21.1 小倍数、21.2 复合图）。全书无网络/图数据专章。",
+   "access": "作者官网免费全文（HTML），英文；可在线读，也可下载；无视频与练习。",
+   "publisher": "Claus O. Wilke（德克萨斯大学奥斯汀分校），O'Reilly Media 出版",
+   "reupload": false,
+   "evidence": {
+    "url": "https://clauswilke.com/dataviz/",
+    "location": "官网目录：13 Visualizing time series and other functions of an independent variable（13.1 Individual time series、13.2 Multiple time series and dose–response curves、13.3 Time series of two or more response variables）；15 Visualizing geospatial data；11 Visualizing nested proportions（11.2 Mosaic plots and treemaps）；21 Multi-panel figures（21.1 Small multiples）",
+    "finding": "目录逐条读到第 13/15/11/21 章标题与子节，确认英文侧「时空」有专章（时序 + 地理空间），且全书目录里确实没有网络/图数据可视化章——这一点是旧记录没写清的：原文把 Wilke 的章节挂在 en1（Stony Brook CSE332）名下，属来源映射错误，本轮用 final-en1 单独登记。"
+   },
+   "added_by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "key": "final-en2",
+   "lang": "en",
+   "title": "Network diagram — from Data to Viz（Yan Holtz 等，免费图表选择指南，含 definition / common mistakes / related chart types / code）",
+   "url": "https://www.data-to-viz.com/graph/network.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "网络图（graph）的定义：实体=节点、关系=边，以共同作者网络为例说明「同一篇论文至少合作一次就连边」；随后给常见错误（mistake）、相关图表类型（related）与可运行代码（R/ggplot2、networkD3 等），用于判断什么数据该用网络图、什么情况该换别的图。",
+   "access": "免费网页，英文；是图表选择指南 + 代码，不是课程；不含布局算法推导。",
+   "publisher": "Yan Holtz（data-to-viz.com）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.data-to-viz.com/graph/network.html",
+    "location": "「Definition」段与页内 definition / mistake / related / code 四个分区",
+    "finding": "读到定义段「Network diagrams (also called Graphs) show interconnections between a set of entities. Each entity is represented by a Node (or vertice). Connections between nodes are represented through links (or edges).」与共同作者网络示例，以及 mistake/related/code 三个分区的入口，确认这是带示例与代码的概念教学页。"
+   },
+   "added_by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "key": "final-en3",
+   "lang": "en",
+   "title": "Network Graph — the D3 Graph Gallery（Yan Holtz，网络图实现的分步示例集：输入格式、force 参数、交互、模板）",
+   "url": "https://d3-graph-gallery.com/network.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "网络图实现的分步路径：先讲输入数据必须是 nodes + links 的 JSON（给示例），再解释 d3-force 三种力（Link 按 link distance 拉近、Many-Body 正吸引/负排斥、Positioning 推向目标位置）与「先理解 force 参数」；然后 Step by step 从「Most basic」最小可运行例子开始，到 Interactivity（tooltip、拖拽、高亮某节点的关系）、Template（以研究者共同作者网络为模板）、Selection of blocks（Les Misérables 人物共现网络等真实数据例子），最后给 d3-force 文档与可调参数的测试场。",
+   "access": "免费网页，英文；示例代码可复制运行；无视频、无系统讲解布局算法分类。",
+   "publisher": "Yan Holtz（d3-graph-gallery.com）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://d3-graph-gallery.com/network.html",
+    "location": "「A note on input data format」（nodes/links JSON 示例）、「Understand force parameters」（Link / Many-Body / Positioning）、「Step by step → Most basic」「Interactivity」「Template」「Selection of blocks」「D3-force documentation」「Related chart types」",
+    "finding": "读到逐步结构：先给 nodes/links 的 JSON 格式与转换提示，再解释三种 force，再按「最基础→交互→模板→真实数据块」递进给代码；页面还列出 chord/Sankey/arc/edge bundling 等相关图型，可作为「图可视化」的英文实现教学。"
+   },
+   "added_by": "review/final-additions/V.3.2.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "场/体数据",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "r7-zh1",
+     "section": "Chapter 9 科学数据可视化（标量场、流场、特征提取、等值面、流线、体绘制、颜色映射）＋ Chapter 16 科学模拟数据可视分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "科学/医学可视化与体绘制讲次（summary 与 schedule 中的 scientific & medical visualization）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文课程是信息可视化向（时空/高维/层次网络），完全不讲标量场、等值面与体绘制。；整章按标量场/流场讲等值面与流线，并专门讲体绘制与颜色映射，第 16 章再把科学模拟数据接上；这是中文侧第一次有教材级的场/体数据可视化教学（此前「中文课程完全不讲」不成立）。"
+  },
+  {
+   "topic": "时空与图可视化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "数据篇：时空数据、地理信息数据、层次和网络数据",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "日程中的 temporal/cluster 与 visual analytics 部分（非专章）",
+     "extent": "partial"
+    },
+    {
+     "source": "final-en1",
+     "section": "Ch13 Visualizing time series（13.1 单序列、13.2 多序列与剂量-响应、13.3 多响应变量）；Ch15 Visualizing geospatial data（含投影）；Ch11 Visualizing nested proportions（11.2 马赛克图与矩形树图）；Ch21 Multi-panel figures（21.1 小倍数）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-en2",
+     "section": "Network diagram 页：Definition（节点/边、共同作者网络示例）、mistake、related chart types、code",
+     "extent": "covered"
+    },
+    {
+     "source": "final-en3",
+     "section": "Network Graph 页：输入数据 nodes+links JSON → 三种 force 参数 → Most basic → Interactivity → Template → 真实数据块",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文对时空/地理/层次/网络数据的类型方法覆盖更细；英文课偏科学可视化与高维。；时空一侧 Wilke 有完整两章（时序 Ch13、地理时空 Ch15）并含投影问题，层次/嵌套也有 Ch11；但「图/网络数据」在 FoDV 里没有专章，英文侧这一半仍空。；英文侧的「时空」现在挂在正确的来源名下：Wilke 全书免费，第 13 章整章讲时序（单序列→多序列→多响应变量），第 15 章整章讲地理空间（含投影选择），第 11 章补层次/嵌套比例、第 21 章补小倍数与复合图。旧记录把这几章写在 en1（Stony Brook CSE332）名下是来源映射错误——CSE332 日程里没有这些章，本轮用 final-en1 单独登记后，这部分不再依赖 zh 材料。；补英文侧一直缺的「图/网络数据」这一半：先给网络图的定义与一个真实例子（共同作者网络），再用 mistake 区说明常见误用、用 related 区给出该换用什么图型（弦图/桑基/弧线图/边捆绑），最后给可运行代码。它解决的是「什么时候该用网络图、什么时候不该」，正好是旧记录里英文侧空着的那一半。；补实现层：把网络图拆成「数据格式—力导向参数—最小可运行例子—交互（tooltip/拖拽/高亮邻居）—模板—真实数据案例」的递进步骤，并给出 d3-force 文档与参数测试场。与 final-en2 的概念层合起来，英文侧「图可视化」从选型到画出来都有分步例子，不需要再借中文 Ch10。"
+  },
+  {
+   "topic": "多视图",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "可视分析入门中提及多视图协同，无专章",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh1",
+     "section": "4.3.3 多视图协调关联（p151）；第 12 章 12.3.7 关联（p579）、12.3.8 概览+细节（p581）、12.3.9 焦点+上下文（p584），配合 12.1 交互准则与 12.2 交互分类",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Visual analytics pipeline 与 interaction 讲次（多视图协调作为 VA 的分析机制）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有“多视图协调（linking/brushing、视图一致性）”的独立章；英文把它放在 VA pipeline/交互讲次里讲，中文只在概述提到。；中文侧终于有把「多视图」当方法单元讲的内容：4.3.3 直接讲多视图协调关联，第 12 章再把协调所需的交互技术拆成关联（视图间联动）、概览+细节（总览与细看分工）、焦点+上下文（局部放大不丢全局）三种范式，并先给交互延时/成本与交互分类作判据。这样「多视图 = 多个视图 + 联动 + 布局与一致性」在中文里有章节级依据，不再只是课程概述里的一句话。"
+  },
+  {
+   "topic": "人在回路分析与评估",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "可视分析学概述（人在分析回路中的角色）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "Chapter 12 可视分析方法论（可视分析流水线、构建方法论、六大分析模式、人在回路、态势感知）",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh1",
+     "section": "第 13 章 可视化效果评测与用户实验：13.1 评测流程、13.2 评测方法（用户实验/专家评估与启发式评估/案例研究/指标评估/众包/标注）、13.3 用户实验（确定目标→准备→进行→分析讨论）、13.3.5 评测案例分析",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Visual analytics / human-centered AI / mixed-initiative、sense-making、labs 与期末项目",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有可视分析概念，没有用户研究/任务分析与 VA 系统评估方法；英文把 sense-making 与 human-centered AI 作为主线并有项目。；「人在回路」在方法论章有明确定位（分析流水线中各环节的人机分工与六种分析模式），可视分析的整体流程也讲了；但「评估方法」（用户研究、任务分析、对照实验）在目录里看不到独立章节，这部分仍薄，故记为 partial 并列入 unresolved。；「人在回路」的概念已有 r7-zh1 第 12 章（可视分析流水线中人与机器的分工），缺的是「怎么评估」；这一章正好补上：先给评测流程，再列六种评测方法及其适用场景（用户实验、专家启发式评估、案例研究、指标、众包、标注），然后把用户实验拆成定目标—准备—实施—分析四步并附完整案例分析。中文侧现在可以做一次可视分析系统的用户实验并写评测报告。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按数据篇学时空/地理/高维/层次网络的表示与布局，应用篇跟工具做两三个案例；场/体数据需另补。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按 Ch9 → Ch12 → Ch16 走：先把标量场/流场的等值面、流线与体绘制在同一份数据上各画一次（可用 ParaView/Inviwo 之类工具），再读 Ch12 用可视分析流水线描述你这次分析里「人做什么、机器做什么」，最后看 Ch16 的科学模拟案例。"
+    },
+    {
+     "source": "final-zh1",
+     "read": "先读 4.3.3 多视图协调关联与 12.3.7–12.3.9（关联/概览+细节/焦点+上下文），用同一份数据做三个视图（如地图+时间轴+散点），实现刷选联动与焦点+上下文，记录交互延时；再按第 13 章走一遍评测：定目标→选方法（先做专家启发式评估，再做 5–8 人用户实验）→准备任务与问卷→实施→分析并写一份含「指标 + 发现 + 改进」的评测报告。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "先读 summary 与 perception/cognition 讲次建立视觉通道与感知限制，再做高维/聚类 lab。"
+    },
+    {
+     "source": "en1",
+     "read": "跟 scientific & medical visualization 与体绘制讲次实现一次体渲染；最后用 interaction/VA 讲次与期末项目做人在回路的分析流程。"
+    },
+    {
+     "source": "final-en1",
+     "read": "用 Wilke Ch13 画同一组数据的单序列/多序列/多响应变量三种时序图并比较；用 Ch15 处理一份带经纬度的数据，说明投影选择对结论的影响；Ch21 的小倍数用来把多个时空切片并排比较。"
+    },
+    {
+     "source": "final-en2",
+     "read": "先读 Network diagram 页的 definition 与 mistake，判断手上这份关系数据该用网络图还是换成矩阵/桑基/弧线图，并写下理由。"
+    },
+    {
+     "source": "final-en3",
+     "read": "把关系数据整理成 nodes+links 的 JSON，照 Most basic 例子画出最小网络图，再调 Link/Many-Body/Positioning 三个 force 参数观察布局变化，最后加 tooltip、拖拽与「高亮邻居」交互，用 Les Misérables 例子对照自己的图。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://www.icourse163.org/course/ZJU-1206452826",
+   "result": "采纳：中文覆盖时空/地理/高维/层次网络，无场/体数据。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 可视化导论",
+   "result": "采纳为主资源：视频按学期开放。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《科学可视化》教材",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www3.cs.stonybrook.edu/~mueller/teaching/cse332/ + syllabus.html",
+   "result": "采纳：summary 与逐讲日程核对。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "query_or_url": "CSE332 主页 playlist 与 lab 链接（查时空/图可视化）",
+   "result": "未找到时空/层次网络可视化的独立讲次；课程重心在科学可视化与 VA。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "query_or_url": "Munzner《Visualization Analysis and Design》等教材",
+   "result": "付费教材未核实到可核对目录页，未购买；不作为免费覆盖来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "数据可视化 陈为 电子工业出版社 目录 可视化交互 布局 体绘制 多视图 可视分析",
+   "result": "命中 simingchen.me/smart-textbook《大数据可视化与可视分析·智慧教材》，打开核对目录后采纳（第 9 章体绘制/等值面/流线、第 12 章人在回路）→ r7-zh1。",
+   "by": "review/pi-additions/V.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://clauswilke.com/dataviz/（现有 en1 目录）",
+   "result": "读到目录：Ch13 Visualizing time series…、Ch15 Visualizing geospatial data（15.1 Projections）、Ch11 Visualizing nested proportions（11.2 Mosaic plots and treemaps）；确认英文侧时序与地理时空有专章，但全书无网络/图数据章。",
+   "by": "review/pi-additions/V.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "数据可视化 陈为 电子工业出版社 目录 交互 多视图 可视分析 评估",
+   "result": "命中百度百科《数据可视化》目录片段（13.3.6 过滤/13.3.7 关联/14.1 评测流程/14.3 评测方法）与智慧教材页；百科是第三方，改去出版社页核对。",
+   "by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "site:phei.com.cn 数据可视化 目录 交互 评估",
+   "result": "采纳：命中电子工业出版社《数据可视化（纪念版）》（bookid=62229），打开读到 4.3.3 多视图协调关联、第 12 章交互技术、第 13 章评测与用户实验的完整目录、定价 269.99 元与 ISBN → final-zh1。",
+   "by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/learn/ZJU-1206452826（浙大《可视化导论》学习页）",
+   "result": "不合适：页面只有课程概述（15 章、三模块），「课程大纲」区块为空，拿不到逐讲标题，无法用它核对多视图/评估讲次；浙大课程仍作 zh1 主资源保留。",
+   "by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "多视图协同 可视分析 联动 刷选 中文 综述 方法 分类",
+   "result": "不合适：返回视觉提示学习综述、Tableau 白皮书等，没有中文的多视图协同教学；中文侧最终靠教材 4.3.3 与第 12 章落地。",
+   "by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://clauswilke.com/dataviz/",
+   "result": "采纳为 final-en1：目录确认 Ch13 时序、Ch15 地理空间、Ch11 嵌套比例、Ch21 小倍数，且全书无网络/图章——据此把旧记录里挂在 en1 名下的 Wilke 章节改记到 final-en1。",
+   "by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.data-to-viz.com/graph/network.html 与 https://d3-graph-gallery.com/network.html",
+   "result": "采纳为 final-en2 / final-en3：前者给网络图定义、常见错误、相关图型与代码；后者给 nodes+links 输入格式、三种 force 参数、Most basic→Interactivity→Template→真实数据块的递进示例。",
+   "by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "tool": "fetch + archive.org",
+   "query_or_url": "https://networksciencebook.com/chapter/2（Barabasi《Network Science》第 2 章）",
+   "result": "打不开：站点与 archive.org 快照都只有 JS 模板（返回 60–278 字符，只有 {{ helloChapter }}），读不到正文，故未采纳 Barabasi；改走 data-to-viz + D3 Graph Gallery。",
+   "by": "review/final-additions/V.3.2.json"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "（未单独检索英文付费教材：en 缺口用免费材料已可自足，未购买或登记付费英文书）",
+   "result": "未执行付费渠道检索。",
+   "by": "review/final-additions/V.3.2.json"
+  }
+ ],
+ "findings": [
+  "原中文条目浙大《可视化导论》是信息可视化向，覆盖时空/图/高维，但不讲场/体数据，属结构性缺口。",
+  "英文 CSE332 是科学可视化+可视分析课，含体绘制与 VA pipeline，可补场/体数据与人在回路。",
+  "多视图两边都只有概述级内容，未假报为已系统覆盖。",
+  "[review/pi-additions/V.3.2.json] 未解决 zh「多视图」：中文免费教材（r7-zh1）目录里没有「多视图/联动多视图（multiple coordinated views）」独立章节：Ch4 有刷选-链接这类联动技术、Ch10 有邻接矩阵等并列视图，但没有把多视图协同（视图组合、布局、一致性）作为方法单元讲；本轮另查了通用检索与课程平台，未见中文课程级的多视图教学。",
+  "[review/pi-additions/V.3.2.json] 未解决 zh「人在回路分析与评估」：「人在回路」已由 r7-zh1 第 12 章覆盖，但「评估」（用户研究、任务分析、可视分析系统的对照实验与指标）在中文侧仍无课程级材料：教材目录无评估章，浙大 MOOC 只在后段几讲浅讲；三渠道均未找到中文的可视分析评估方法教学。",
+  "最终复核删除旧记录中错挂在CSE332来源名下的Wilke章节；这些章节已在final-en1的正确来源下列出。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/V.3.2.json@05dcaaab19",
+  "review/final-additions/V.3.2.json@f00eec9dcd"
+ ]
+}

@@ -449,7 +449,7 @@
       el("thead", {}, el("tr", {}, el("th", { scope: "col" }, "知识点"), el("th", { scope: "col" }, "中文章节"), el("th", { scope: "col" }, "英文章节"))),
       el("tbody", {}, path.topics.map(topic => el("tr", {},
         el("th", { scope: "row" }, topic.topic, topic.stage === "extension" ? el("span", { class: "route-access" }, "选读延伸") : null,
-          topic.note ? el("span", { class: "route-access" }, topic.note) : null),
+          topic.stage === "extension" && topic.note ? el("span", { class: "route-access" }, topic.note) : null),
         ...["zh", "en"].map(lang => el("td", {},
           topic[lang]?.length ? topic[lang].map(ref => el("div", {}, linked(ref.source, (ref.extent === "partial" ? "部分：" : "") + ref.section))) : "待补"))))));
     box.append(el("details", { class: "coverage-details" }, el("summary", {}, "逐知识点查看对应章节"), table));

@@ -90,23 +90,22 @@
    "added_by": "review/pi-additions/H.2.2.json"
   },
   {
-   "key": "r7-zh2",
+   "key": "verified-zh1",
    "lang": "zh",
-   "title": "《形式化验证：现代 VLSI 设计的必备工具包（原书第 2 版）》（Seligman 等，李建文、蒲戈光译，机械工业出版社，2026）",
-   "url": "https://xhwxt.sdjzu.edu.cn/mspace/searchDetailLocal/m9ce180564c87c7f46701d25c96341ec8",
+   "title": "形式化验证：现代VLSI设计的必备工具包（原书第2版，中文译本）",
+   "url": "https://ebooks.cmpbook.com/detail?id=29267",
    "tier": "book",
    "free": false,
    "role": "supplement",
-   "covers": "书目记录为 Seligman《Formal Verification: An Essential Toolkit for Modern VLSI Design》第 2 版的中文译本；原书体系含 FPV（属性检查）、等价性检查（LEC）、覆盖率与形式验证部署。具体章节目录本轮未打开核对。",
-   "access": "机械工业出版社 2026 年版，需购买；馆藏检索页可见书名/作者/译者/出版项，正文与目录为 JS 渲染未取到。",
-   "publisher": "机械工业出版社（原着 Erik Seligman 等；译者 李建文、蒲戈光）",
-   "reupload": false,
+   "covers": "读第4章属性验证的组合锁示例，再读第8章形式化等价性验证；比较验证单个实现的属性与验证两个实现功能等价的目标。",
+   "access": "已核中文版本及公开目录；目录免费，完整教材须购买或合法借阅，本轮未读收费全文。",
+   "publisher": "作者或出版社官方来源",
    "evidence": {
-    "url": "https://xhwxt.sdjzu.edu.cn/mspace/searchDetailLocal/m9ce180564c87c7f46701d25c96341ec8",
-    "location": "图书馆书目检索结果：题名《形式化验证:现代VLSI设计的必备工具包》、着者“埃里克·塞利格曼…”、译者“李建文, 蒲戈光”、出版项“北京:机械工业出版社, 2026”、附“目录”链接",
-    "finding": "页面确认存在这部中译本及其版本/译者信息，但页面为 JS 应用，实际目录未渲染出来，故本轮不据此判定章节覆盖。"
+    "url": "https://ebooks.cmpbook.com/detail?id=29267",
+    "location": "第4章FPV、第8章FEV",
+    "finding": "已核机工官方数字馆完整目录，包含组合锁属性验证环境与形式化等价性验证专题，不再只依据馆藏名。"
    },
-   "added_by": "review/pi-additions/H.2.2.json"
+   "added_by": "review/verified-additions/H.2.2.json"
   }
  ],
  "topics": [
@@ -204,6 +203,11 @@
      "source": "zh1",
      "section": "第 3 章静态检查/形式验证一节；等价性检查无独立章",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "第4章形式化属性验证；第8章形式化等价性验证",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -218,12 +222,12 @@
      "extent": "covered"
     }
    ],
-   "note": "两侧都只有形式属性验证入门，缺等价性检查（LEC）教学。；旧的 en2（SBY）只讲属性检查（k-induction/BMC），缺等价性检查；EQY 官方 quickstart 正是用 gold 设计与被综合改坏的 gate 设计做等价性验证并定位失配，补上 LEC 这一半，两者合起来覆盖“形式验证与等价性检查入门”。"
+   "note": "两侧都只有形式属性验证入门，缺等价性检查（LEC）教学。；旧的 en2（SBY）只讲属性检查（k-induction/BMC），缺等价性检查；EQY 官方 quickstart 正是用 gold 设计与被综合改坏的 gate 设计做等价性验证并定位失配，补上 LEC 这一半，两者合起来覆盖“形式验证与等价性检查入门”。；补充同语言具体教学章节，与既有主课组合学习。"
   }
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -232,11 +236,13 @@
     {
      "source": "zh2",
      "read": "用 E4 的 difftest 流程对一个处理器做功能仿真与波形调试。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "读第4章属性验证的组合锁示例，再读第8章形式化等价性验证；比较验证单个实现的属性与验证两个实现功能等价的目标。"
     }
    ],
-   "gaps": [
-    "形式验证与等价性检查入门"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -301,31 +307,28 @@
    "query_or_url": "https://yosyshq.readthedocs.io/projects/eqy/en/latest/quickstart.html",
    "result": "采纳：EQY quickstart 用 gold/gate 设计与 .eqy 配置讲等价性检查，补英文 LEC 缺口。",
    "by": "review/pi-additions/H.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://ebooks.cmpbook.com/detail?id=29267",
+   "result": "已核机工官方数字馆完整目录，包含组合锁属性验证环境与形式化等价性验证专题，不再只依据馆藏名。",
+   "by": "review/verified-additions/H.2.2.json"
   }
  ],
  "findings": [
   "旧中文只有“一生一芯”E4，只覆盖仿真，不能证明 SVA/UVM/形式验证；已补正式出版的中文书。",
   "旧英文 UVM 指南与 SBY 保留；两者都不含等价性检查。",
   "本节点两侧都缺 LEC，故为 partial。",
-  "[review/pi-additions/H.2.2.json] 未解决 zh「形式验证与等价性检查入门」：只有 zh1 第 3 章“静态检查/形式验证”一节的 partial，且新登记的 Seligman 中译本目录未能打开核对；中文免费渠道无系统教学，需主代理复核该译本目录后再决定是否把 zh 侧升为 covered。"
+  "[review/pi-additions/H.2.2.json] 未解决 zh「形式验证与等价性检查入门」：只有 zh1 第 3 章“静态检查/形式验证”一节的 partial，且新登记的 Seligman 中译本目录未能打开核对；中文免费渠道无系统教学，需主代理复核该译本目录后再决定是否把 zh 侧升为 covered。",
+  "[review/verified-additions/H.2.2.json] 删除来源 r7-zh2：同一本中文书已找到出版社官方目录与电子书入口，替换只有馆藏名称的旧链接。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "形式验证与等价性检查入门",
-   "source": "r7-en3",
-   "reason": "中文三个渠道都查过：文字（Tavily 两轮，只有维基/公司新闻/知乎短文/已失效的 EasyFormal）、视频（B 站站内 5 组关键词 + site:bilibili.com 一次，无形式验证或 LEC 课程）、付费（现有《芯片验证漫游指南》只有第 3 章一节；Seligman 中译本已登记但目录未核）。因此本轮中文侧仍只有概念级 partial，形式验证与 LEC 的实际操作入门先借用英文 EQY（r7-en3）与 SBY（en2）。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/H.2.2.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "硬件设计验证",
  "description": "仿真与测试平台、受约束随机激励、断言与覆盖率、UVM 验证流程；形式验证与等价性检查入门。",
  "applied_additions": [
-  "review/pi-additions/H.2.2.json@49ba5f2824"
+  "review/pi-additions/H.2.2.json@49ba5f2824",
+  "review/verified-additions/H.2.2.json@7b68ff2ab1"
  ]
 }

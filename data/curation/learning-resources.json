@@ -420,8 +420,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/X.2.5.json。"
     },
     "X.3.3": {
-      "review": "SciML教材适合可微求解、反问题和PINN，神经算子须补neuraloperator理论与实践。",
-      "note": "科学机器学习与可微求解的理论主干；神经算子的代码案例可补充中文 MindSpore Science 文档。"
+      "title": "Parallel Computing and Scientific Machine Learning (SciML) — MIT 18.337J/6.338J online book and course",
+      "url": "https://book.sciml.ai/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "Online book/course: sequential and parallel code, dynamical systems and ODE integrators, stiff ODEs, forward and reverse automatic differentiation, adjoints and δP, inverse problems and differentiable programming, neural ODEs, GPU/MPI, PDE discretization, physics-informed learning (PINNs/neural differential equations), probabilistic programming and uncertainty quantification; course site, homeworks and recordings linked.",
+      "access": "Free online book and course materials; no registration.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/X.3.3.json。"
     },
     "M.1.2": {
       "title": "OpenStax Calculus Volume 1, Chapter 3: Derivatives",
@@ -1370,14 +1377,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/D.2.3.json。"
     },
     "D.3.1": {
-      "tier": "website",
-      "title": "UC Berkeley Data 100: Principles and Techniques of Data Science — Course Notes（Fall 2025 版，伯克利 Data Science 教学团队）",
+      "title": "UC Berkeley Data 100: Principles and Techniques of Data Science — Course Notes (Fall 2025)",
       "url": "https://ds100.org/course-notes/",
+      "tier": "website",
       "lang": "en",
       "free": true,
-      "access": "免费公开的 MyST 站点，全部笔记在线可读、无需注册；配套课程站 https://ds100.org/fa25/ 另有讲义日历（Lecture 1–29）、Note 链接、Jupyter 形式的 lab/作业与讨论课、习题解答，页面注明该学期内容已归档备查。",
-      "covers": "覆盖简介的绝大部分：Introduction（数据科学生命周期与问题定义、选择的伦理后果）、EDA I–V（读入数据、清洗与缺失值、探索分析、分组聚合）、Regular Expressions、Visualization I–II、Sampling（抽样方法与抽样偏差）、Modeling & SLR / Loss & Transformations / OLS / sklearn 与梯度下降（统计包与建模工具箱）、Feature Engineering、Case Study in Human Contexts and Ethics、Cross Validation and Regularization（训练/验证/测试集、用交叉验证选超参、按组切分可避免数据泄漏 data leakage）、Random Variables、Estimators, Bias, and Variance（偏差-方差）、Parameter Inference and Bootstrapping（不确定性/自助法）、Logistic Regression、Clustering、PCA。未覆盖：Notebook 与实验环境本身怎么搭、实验记录、随机种子与依赖固定等可复现流程（只在示例里用 random_state / np.random.seed 保证结果可复现）；也没有系统讲数据获取渠道（爬虫/API/数据库）。",
-      "review": "2026-11-01 按粒度调整后的简介重新核对；免费正文优先，缺口另列补充资源。"
+      "covers": "Data science lifecycle and problem definition; EDA I–V (loading, cleaning/missing values, exploration, grouping); regex; visualization I–II; sampling and sampling bias; modeling/SLR/loss/OLS/sklearn; feature engineering; cross-validation and regularization (train/validation/test, leakage via grouped splits); estimators, bias and variance; bootstrapping and uncertainty; logistic regression, clustering, PCA. Jupyter notebooks are used throughout the course.",
+      "access": "Free public MyST site, no registration; the companion course site (ds100.org/fa25) has the lecture calendar, labs and homeworks.",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/D.3.1.json。"
     },
     "D.3.2": {
       "title": "Mining of Massive Datasets (Jure Leskovec, Anand Rajaraman, Jeff Ullman) — free full PDF, slides, videos",
@@ -1919,13 +1927,37 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/V.2.1.json。"
     },
     "V.2.2": {
-      "review": "UW440以研究、原型和评估迭代组织，适合项目学习；应实际完成用户研究而非只看主页。"
+      "title": "CSE 440 Introduction to HCI: User Interface Design, Prototyping, and Evaluation（UW，Autumn 2024 课程主页；milestones/assignments/calendar）",
+      "url": "https://courses.cs.washington.edu/courses/cse440/24au/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "整门课围绕小组设计项目：Ideate and Propose Design Problems → Study Existing Practices and Challenges → Explore Potential Design Opportunities and Tradeoffs → Evaluate and Iterate Upon a Design → Communicate；学习目标含 Design Research Methods、Task-Focused Scenario Development / Sketching / Storyboarding、Rapid Prototyping and Iteration；Milestone 1–5 与 Calendar 给出每阶段交付物。",
+      "access": "课程主页、milestones、assignments、calendar 免费公开；往季存档可查。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.2.2.json。"
     },
     "V.2.3": {
-      "review": "W3C WAI教程可直接实施与评估，聚焦Web，法规合规仍需地区和版本核验。"
+      "title": "W3C Web Accessibility Initiative (WAI) Tutorials（官方免费教程：Accessibility Fundamentals / Design & Develop / Test & Evaluate）",
+      "url": "https://www.w3.org/WAI/tutorials/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Accessibility Fundamentals（残障类型、辅助技术如何配合浏览器）、Design & Develop（图片替代文本、表格、表单、菜单、页面结构等可感知/可操作做法）、Test & Evaluate（评估方法与工具）；面向 Web，非 Web 端（桌面/移动原生、硬件辅助设备）不在其中。",
+      "access": "W3C 官方免费，无需注册；英文（另有 Bahasa Indonesia 翻译，无中文版）。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.2.3.json。"
     },
     "V.2.4": {
-      "review": "LaValle VR书覆盖追踪、感知和交互，AR与协作系统须补专门来源。"
+      "title": "Virtual Reality（Steven M. LaValle, Cambridge University Press, 2023；作者主页免费全文 + 配套 NPTEL/IIT Madras MOOC 讲座）",
+      "url": "https://lavalle.pl/vr/",
+      "tier": "book",
+      "lang": "en",
+      "free": true,
+      "covers": "作者主页原文：geometric modeling、transformations、graphical rendering、optics、human vision/auditory/vestibular systems、tracking systems、interface design、human factors、developer recommendations、technological issues；配套 YouTube 讲座为 NPTEL/IIT Madras 2016 免费 MOOC。多用户协作只在人因/设计章节间接触及。",
+      "access": "全书 PDF 免费下载/打印/分发（作者明确许可，仅保留版权图片的 fair use 提示）；MOOC 讲座在 YouTube 免费。英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.2.4.json。"
     },
     "V.3.1": {
       "title": "Fundamentals of Data Visualization（Claus O. Wilke, O'Reilly 2019；作者主页免费全文）",
@@ -1939,7 +1971,15 @@
       "review": "逐知识点核查与独立英文路线见 learning-paths/V.3.1.json。"
     },
     "V.3.2": {
-      "review": "StonyBrook332课程与导览教材覆盖科学可视化和可视分析，需图形及数据基础。"
+      "title": "CSE 332 / ISE 332 Intro to Scientific Visualization（Stony Brook，Klaus Mueller；课程主页 + 逐讲日程 + labs）",
+      "url": "https://www3.cs.stonybrook.edu/~mueller/teaching/cse332/",
+      "tier": "website",
+      "lang": "en",
+      "free": true,
+      "covers": "Summary 写明从 visual perception、cognition、HCI、sense-making、data science、AI、computer graphics、information visualization 出发，讲如何耦合成可交互的 visual analytics pipeline；日程含科学/医学可视化与体绘制、高维数据与降维/PCA、聚类、视觉设计与美学、交互原则、visual analytics/human-centered AI；配 lab 与期末项目视频。",
+      "access": "课程主页、日程与 lab 链接免费公开，无需注册；英文。",
+      "role": "primary",
+      "review": "逐知识点核查与独立英文路线见 learning-paths/V.3.2.json。"
     },
     "I.1.2": {
       "title": "15.571 Generating Business Value from Information Technology（MIT OCW，Sloan，Prof. Jeanne Ross；讲义、讨论题与项目）",
@@ -5320,6 +5360,76 @@
       "covers": "课程章节：技术在智慧医院中的作用；医院信息系统（3.1「他」是谁 / 3.2 技术特点 / 3.3 聪明如「他」）；智慧医院门诊信息化管理（门诊业务流程与新思路）；智慧医院住院管理信息化（住院管理业务流程）；电子病历；医技系统助力医院信息化管理；医学影像信息化管理；病案信息管理；远程医疗；大数据技术在智慧医院管理中的应用；新技术助力智慧医院；互联网医疗；人工智能大模型赋能医疗。",
       "access": "国家高等教育智慧教育平台免费查看课程页与完整章节大纲（附课程测验）；中文讲授；面向本科各专业选修；视频开放时间与字幕未核对。",
       "role": "primary"
+    },
+    "path-i-1-3": {
+      "title": "信息系统项目管理师教程（第4版）：流程管理专题",
+      "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html",
+      "tier": "book",
+      "lang": "zh",
+      "free": false,
+      "covers": "读23.2流程规划、执行、评价及持续改进；用现有Petri网/工作流课程落实自动执行，以指标对照评价改进前后的流程。",
+      "access": "公开书目信息与目录可核对范围；全文需购买或经合法图书馆借阅，本轮未购买、未读收费全文。",
+      "role": "primary"
+    },
+    "path-x-3-3": {
+      "title": "MindSpore Science 快速开始：FNO 算子求解 Burgers 方程（官方中文教程，含原理、FNO1D 建模、训练与验证 notebook、相对 MSE 误差）",
+      "url": "https://www.mindspore.cn/mindscience/docs/zh-CN/master/quick_start.html",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "神经算子的「原理 + 跑通」最小闭环：概述先点明经典网络只在有限维空间映射、只能学到与特定离散化相关的解，而 FNO 学习无限维函数空间映射、可直接学「任意函数参数 → 解」的映射因而泛化更强（并给出原论文 FNO for Parametric PDEs 的出处）；再给一维 Burgers 方程（含粘性项 ν）与 u0 ↦ u(·,t) 的映射设定；然后逐步：关键接口导入 → 创建数据集 → 构建模型（mindscience.models 的 FNO1D）→ 优化器（warmup + 余弦退火）→ 模型训练（train.py 脚本 / 中英文 Jupyter 逐行跑训练与验证）→ 结果展示（t∈(0,3] 的数值解与各时刻切片）；最后是接口说明表（FNO1D、RelativeRMSELoss 相对 MSE 误差、UnsteadyFlowWithLoss 非稳态流损失）。",
+      "access": "免费中文网页，无需注册；中文；代码可运行需安装 MindSpore 与 MindSpore Science（Ascend/GPU/CPU 环境）。有中文版与英文版 Jupyter Notebook。",
+      "role": "primary"
+    },
+    "path-d-3-1": {
+      "title": "Datawhale《动手学数据分析》（开源中文教程，Jupyter notebook）",
+      "url": "https://github.com/datawhalechina/hands-on-data-analysis",
+      "tier": "material",
+      "lang": "zh",
+      "free": true,
+      "covers": "第一单元 数据载入与初步观察、pandas 基础、探索性数据分析；第二单元 数据清洗与特征处理、数据重构、数据可视化；第三单元 数据建模（sklearn）与模型评估。全流程用 Jupyter notebook，覆盖数据获取后的清洗、探索、建模与评估。",
+      "access": "GitHub 开源仓库免费阅读/下载，每节同时给「课程」与「答案」两版 notebook；不含抽样偏差、数据泄漏、交叉验证、不确定性与实验记录的系统讲解。",
+      "role": "primary"
+    },
+    "path-v-2-2": {
+      "title": "人机交互与用户体验设计（南京大学，中国大学MOOC）",
+      "url": "https://www.icourse163.org/course/NJU-1466990164",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "以用户为中心的设计方法：需求分析（用户需求与行为定义）、交互设计、体验评估；覆盖“访谈/需求→设计→评估”的主线，但没有可核对的可用性实验设计与统计单元。",
+      "access": "中国大学MOOC 免费注册学习；认证证书为付费电子证书（需实名）；视频按学期开放，字幕未核对。",
+      "role": "primary"
+    },
+    "path-v-2-3": {
+      "title": "MDN 中文：无障碍（学习 Web 开发模块）",
+      "url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Accessibility",
+      "tier": "website",
+      "lang": "zh",
+      "free": true,
+      "covers": "中文讲解“无障碍”的含义（不同身体/精神障碍、键盘/触摸/屏幕阅读器/语音助手等访问方式）、HTML 语义与最佳实践、CSS/JS 中的无障碍注意点、用浏览器无障碍检查器做检查；面向 Web。",
+      "access": "MDN 中文页免费（CC BY-SA），社区从英文翻译；含视频与外链，字幕未核对。",
+      "role": "primary"
+    },
+    "path-v-2-4": {
+      "title": "《虚拟现实技术与应用》（胡小强 编着，北京邮电大学出版社 2021-03，第 1-6 版次；全书 6 章，出版社官方目录逐节可见）",
+      "url": "https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html",
+      "tier": "book",
+      "lang": "zh",
+      "free": false,
+      "covers": "第1章 VR 技术概论：1.1 定义、1.2 特性（1.2.1 沉浸性、1.2.2 交互性、1.2.3 想象性）、1.3 虚拟现实与增强现实/混合现实；第2章 VR 系统硬件设备：2.1 感知设备（视觉/听觉/触觉/嗅觉）、2.2 基于自然的交互设备（三维控制器、数据手套、体感交互、语音交互、触觉交互）、2.3 三维定位跟踪设备（2.3.1 电磁跟踪、2.3.4 机械跟踪、2.3.5 惯性位置跟踪）、2.4 虚拟世界生成设备；第3章 相关技术：3.1 立体显示技术（彩色眼镜/偏振/串行/裸眼/全息）、3.2 环境建模、3.3 真实感实时绘制、3.4 三维虚拟声音、3.5 自然交互与传感技术（手势、表情、眼动跟踪、触觉反馈、定位跟踪）、3.6 碰撞检测、3.7 数据传输（5G/蓝牙/WiFi）；第4章 建模软件与开发引擎（3ds Max/Maya/C4D/RealityCapture、Unity/Unreal/VRPlatform）；第5章 全景技术；第6章 Unity 3D 开发基础与 VR/AR 应用案例。",
+      "access": "付费教材（北京邮电大学出版社，2021-03-04，版次 1-6；出版社页面未列出定价与 ISBN，需在书店核实）；中文；本轮只读官方目录与内容简介，未购买正文。",
+      "role": "primary"
+    },
+    "path-v-3-2": {
+      "title": "可视化导论（浙江大学，中国大学MOOC；15 章）",
+      "url": "https://www.icourse163.org/course/ZJU-1206452826",
+      "tier": "video",
+      "lang": "zh",
+      "free": null,
+      "covers": "数据篇按数据类型讲时空数据、地理信息数据、高维非空间数据、层次和网络数据的可视化方法与可视分析入门；基础篇讲人/数据/流程；应用篇讲工具与实例。不含场/体数据与体绘制。",
+      "access": "中国大学MOOC 免费注册学习；认证证书为付费电子证书；视频按学期开放，字幕未核对。",
+      "role": "primary"
     }
   },
   "chinese": {
@@ -5652,8 +5762,8 @@
       "covers": "与英文官方手册同构的完整中文正文：18.8 加密选项、18.9 SSL、18.10 GSSAPI、18.11 SSH 隧道；19.3 连接与认证、19.8 错误报告和日志、19.9 运行时统计、19.10 清理；20 客户端认证；21 数据库角色；24 日常维护（清理、重建索引、日志文件维护）；25 备份和恢复（SQL Dump、文件系统级备份、连续归档与 PITR）；26 高可用与复制；27 监控数据库活动；28 可靠性和 WAL；29 逻辑复制。"
     },
     "D.3.1": {
-      "source": "zh-gran-d-3-1",
-      "covers": "覆盖简介的流程与工具部分：第一单元 数据载入及初步观察、pandas 基础、探索性数据分析；第二单元 数据清洗及特征处理、数据重构（1/2）、数据可视化；第三单元 数据建模（sklearn）与模型评估（评价）。全程用 Jupyter notebook，正好对应 Notebook 工作流。未覆盖：抽样偏差、数据泄漏、交叉验证的系统讲解、不确定性/自助法、实验记录与可复现流程（环境固定、随机种子、依赖锁定）。"
+      "source": "path-d-3-1",
+      "covers": "第一单元 数据载入与初步观察、pandas 基础、探索性数据分析；第二单元 数据清洗与特征处理、数据重构、数据可视化；第三单元 数据建模（sklearn）与模型评估。全流程用 Jupyter notebook，覆盖数据获取后的清洗、探索、建模与评估。"
     },
     "M.6.2.4": {
       "source": "path-m-6-2-4",
@@ -5756,8 +5866,8 @@
       "covers": "中文成课内容（课程大纲）：第一章 AI 安全与伦理概述（概念、重要性、基本范式）、第二章 对抗攻击方法（数字攻击、物理攻击）、第三章 对抗防御方法（预处理/处理中/后处理防御）、第四章 后门攻击与防御（后门攻防概述、数据投毒、训练过程的后门、后门防御）、第五章 AI 伦理技术（算法偏见与歧视、隐私和数据安全、透明和可解释性）、第六章 攻击在 AI 伦理中的良性应用。"
     },
     "X.3.3": {
-      "source": "mindscience",
-      "covers": "从中文快速开始中的 FNO 求解 Burgers 方程案例学习神经算子与科学建模；PINN 和其它可微求解方法以英文课程补充。"
+      "source": "path-x-3-3",
+      "covers": "神经算子的「原理 + 跑通」最小闭环：概述先点明经典网络只在有限维空间映射、只能学到与特定离散化相关的解，而 FNO 学习无限维函数空间映射、可直接学「任意函数参数 → 解」的映射因而泛化更强（并给出原论文 FNO for Parametric PDEs 的出处）；再给一维 Burgers 方程（含粘性项 ν）与 u0 ↦ u(·,t) 的映射设定；然后逐步：关键接口导入 → 创建数据集 → 构建模型（mindscience.models 的 FNO1D）→ 优化器（warmup + 余弦退火）→ 模型训练（train.py 脚本 / 中英文 Jupyter 逐行跑训练与验证）→ 结果展示（t∈(0,3] 的数值解与各时刻切片）；最后是接口说明表（FNO1D、RelativeRMSELoss 相对 MSE 误差、UnsteadyFlowWithLoss 非稳态流损失）。"
     },
     "X.3.1": {
       "source": "path-x-3-1",
@@ -5852,12 +5962,12 @@
       "covers": "课程四大组成之一即「光的传播理论（光子映射）」；周表里 Mar 24 光线追踪（基本原理）、Mar 27 光线追踪（加速结构）、Mar 31 光线追踪（辐射度量学、渲染方程与全局光照）、Apr 5 光线追踪（蒙特卡洛积分与路径追踪）、Apr 7 材质与外观（阅读第 24 章 Reflection，讲 BRDF/反射模型）；另有光栅化、几何、动画与模拟部分。8 次小作业 + 1 次大作业，均为编程任务并给框架。"
     },
     "V.2.4": {
-      "source": "xr",
-      "covers": "XR 开发环境、输入与交互实践；感知、人因和协作理论需英文教材。"
+      "source": "path-v-2-4",
+      "covers": "第1章 VR 技术概论：1.1 定义、1.2 特性（1.2.1 沉浸性、1.2.2 交互性、1.2.3 想象性）、1.3 虚拟现实与增强现实/混合现实；第2章 VR 系统硬件设备：2.1 感知设备（视觉/听觉/触觉/嗅觉）、2.2 基于自然的交互设备（三维控制器、数据手套、体感交互、语音交互、触觉交互）、2.3 三维定位跟踪设备（2.3.1 电磁跟踪、2.3.4 机械跟踪、2.3.5 惯性位置跟踪）、2.4 虚拟世界生成设备；第3章 相关技术：3.1 立体显示技术（彩色眼镜/偏振/串行/裸眼/全息）、3.2 环境建模、3.3 真实感实时绘制、3.4 三维虚拟声音、3.5 自然交互与传感技术（手势、表情、眼动跟踪、触觉反馈、定位跟踪）、3.6 碰撞检测、3.7 数据传输（5G/蓝牙/WiFi）；第4章 建模软件与开发引擎（3ds Max/Maya/C4D/RealityCapture、Unity/Unreal/VRPlatform）；第5章 全景技术；第6章 Unity 3D 开发基础与 VR/AR 应用案例。"
     },
     "V.2.3": {
-      "source": "zh-wcag",
-      "covers": "按可感知、可操作、可理解与鲁棒原则逐条实践成功准则和符合性评价；2.2新增准则继续查英文W3C。"
+      "source": "path-v-2-3",
+      "covers": "中文讲解“无障碍”的含义（不同身体/精神障碍、键盘/触摸/屏幕阅读器/语音助手等访问方式）、HTML 语义与最佳实践、CSS/JS 中的无障碍注意点、用浏览器无障碍检查器做检查；面向 Web。"
     },
     "X.2.5": {
       "source": "path-x-2-5",
@@ -6052,16 +6162,16 @@
       "covers": "以用户为中心的系统设计方法：需求分析、交互设计与体验评估；讲“为什么产品会不好用”“如何确认用户需求并定义其行为”。课程概述未单列感知/注意/心智模型等认知心理学内容。"
     },
     "V.2.2": {
-      "source": "zh-hci",
-      "covers": "选交互需求获取、用户研究、设计过程、原型及交互产品评估，完成一个迭代设计项目。"
+      "source": "path-v-2-2",
+      "covers": "以用户为中心的设计方法：需求分析（用户需求与行为定义）、交互设计、体验评估；覆盖“访谈/需求→设计→评估”的主线，但没有可核对的可用性实验设计与统计单元。"
     },
     "V.3.1": {
       "source": "path-v-3-1",
       "covers": "基础篇（人、数据、可视化流程的理论与概念，含视觉编码与感知）；数据篇（时空、地理信息、高维非空间、层次与网络数据的可视化方法）；应用篇（可视化工具与实例）。15 章，偏原理与类型方法，交互与读图误差只在流程/评估处点到。"
     },
     "V.3.2": {
-      "source": "zh-visualization",
-      "covers": "从时空、地理、高维、层次和网络数据可视化及可视分析入门；场/体数据算法和完整用户评估仍配英文。"
+      "source": "path-v-3-2",
+      "covers": "数据篇按数据类型讲时空数据、地理信息数据、高维非空间数据、层次和网络数据的可视化方法与可视分析入门；基础篇讲人/数据/流程；应用篇讲工具与实例。不含场/体数据与体绘制。"
     },
     "I.2.2": {
       "source": "path-i-2-2",
@@ -6086,39 +6196,84 @@
     "M.6.6": {
       "source": "path-m-6-6",
       "covers": "泊松／马尔可夫过程、Kendall 记号、M/M/1、多服务台与损失系统、Little 定律、电话网性能与 Python 仿真。"
+    },
+    "I.1.3": {
+      "source": "path-i-1-3",
+      "covers": "读23.2流程规划、执行、评价及持续改进；用现有Petri网/工作流课程落实自动执行，以指标对照评价改进前后的流程。"
     }
   },
-  "chineseGaps": {
-    "I.1.3": "本轮未找到可组成独立中文路线的教学，逐知识点缺口与查找记录见双语路线。"
-  },
+  "chineseGaps": {},
   "supplementary": {
     "D.3.1": [
       {
-        "title": "Python Data Science Handbook",
-        "url": "https://jakevdp.github.io/PythonDataScienceHandbook/",
-        "lang": "en",
-        "covers": "补 Jupyter/IPython、NumPy、pandas、Matplotlib 工具操作，适合并读。",
-        "tier": "material",
-        "access": "免费在线正文，无需注册。",
-        "free": true
+        "title": "《数据科学导论》中文视频课程（B站，约 13 小时）",
+        "url": "https://www.bilibili.com/video/BV1NU4y1A7fJ/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文讲授数据科学流程、数据获取与清洗、探索分析与建模的入门内容；用于补中文的流程讲解，具体讲次未逐集核对。",
+        "access": "第三方转载，授权未核。B站免费播放；上传者为个人账号，未核实是否作者本人发布，也未核对字幕。",
+        "role": "supplement"
       },
       {
-        "title": "DVC：实验管理",
-        "url": "https://dvc.org/doc/user-guide/experiment-management",
-        "lang": "en",
-        "covers": "补实验参数、指标、模型与数据版本记录；是工具实例，不代表必须使用 DVC。",
-        "tier": "material",
-        "access": "免费在线正文，无需注册。",
-        "free": true
+        "title": "探索数据的奥秘（南京大学，中国大学MOOC；按「问题提出-目标制定-数据收集-探索性数据分析-建立模型-评价模型-结果展示」七步规范化流程组织）",
+        "url": "https://www.icourse163.org/course/NJU-1449346162",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "数据科学的基本概念与规范化流程：问题提出、目标制定、数据收集（含「有偏样本搜集」等错误来源）、探索性数据分析、建立模型、评价模型、结果展示；并专门讨论「结论误导（如有偏样本搜集、p 值操纵等）」，全课代码用 Python 编写，另有专章介绍 Python 使用。配套教材：黄晓林、刘斌等《数据科学导论——探索数据的奥秘（第2版）》清华大学出版社 2025。",
+        "access": "中国大学MOOC 免费注册学习，视频按开课学期开放；认证证书另计费；中文讲授；页面未列逐讲大纲（只有课程概述、预备知识与参考资料），字幕情况未核对。",
+        "role": "supplement"
       },
       {
-        "title": "scikit-learn：常见陷阱与推荐做法",
-        "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+        "title": "斯坦福 CS329P《实用机器学习》中文版（课程主页 c.d2l.ai/stanford-cs329p；中文视频在作者本人 B 站账号「跟李沐学AI」）",
+        "url": "https://c.d2l.ai/stanford-cs329p/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程日程与分节：1.x 数据获取/网页抓取/数据标注、2.1 探索性数据分析–2.4 特征工程、2.5 数据科学家的日常、3.x 机器学习回顾、4.1 模型评估、4.2 过拟合和欠拟合、4.3 模型验证、5.1 方差和偏差、5.2–5.4 Bagging/Boosting/Stacking、8–11 协变量偏移/标签偏移/非 IID 数据、12 模型调参。",
+        "access": "课程主页免费（CC-BY-SA-4.0/MIT-0），无注册；视频为中文讲授（作者本人在 B 站「跟李沐学AI」逐节发布，如 av675507034「1.1 课程介绍」页面标注「自制」并回链课程主页）；字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "时间序列预测避坑：随机切分、前视偏差与数据泄漏｜真实数据实战（B 站，Claire_xihan）",
+        "url": "https://www.bilibili.com/video/BV1i4gp6JEV3/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "用 UCI Bike Sharing 17,379 条逐小时数据演示时间序列场景的数据泄漏：随机切分为何破坏时间顺序而把未来信息带进训练集（时间信息泄漏/前视偏差）、留后法（前 80% 训练后 20% 测试）、滚动验证的基本逻辑、预测起点与特征可用性、样本内拟合与样本外预测的区别。属“时间/未来信息型泄漏”的实例教学，与预处理型泄漏互补。",
+        "access": "B 站免费，单集约 8 分钟，中文讲授、有分段时间轴；个人账号自制（非机构课程）。本轮判定：虽为短视频，但按时间轴逐段讲清了泄漏如何发生、怎么用留后法与滚动验证避免，属该知识点的一类实际教学，不再以“时长不足”排除。",
+        "role": "supplement"
+      },
+      {
+        "title": "The Turing Way — A handbook to reproducible, ethical and collaborative data science（Guide for Reproducible Research / Guide for Project Design / Guide for Communication / Guide for Collaboration / Guide for Ethical Research）",
+        "url": "https://book.the-turing-way.org/",
+        "tier": "book",
         "lang": "en",
-        "covers": "补数据泄漏、预处理划分与随机性控制。",
+        "free": true,
+        "covers": "面向数据科学项目的可复现与协作实操：研究数据管理、可复现的计算环境、开放笔记本/记录（open notebooks）、项目设计与计划、结果沟通（含不确定性表述与可视化），以及协作与伦理审查流程。",
+        "access": "全书在线免费，CC-BY-4.0，可下载；英文；社区协作维护（Alan Turing Institute 发起）；无注册。",
+        "role": "supplement"
+      },
+      {
+        "title": "scikit-learn 中文文档 12. 常见陷阱与推荐做法（12.1 不一致的预处理、12.2 数据泄露）",
+        "url": "https://scikit-learn.cn/stable/common_pitfalls.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "把“数据泄露”当作独立小节系统讲：定义（构模时用到了预测时拿不到的信息）、后果（交叉验证等性能估计过于乐观、上线后变差）、成因（没先分开训练/测试；预处理只在全部数据上做，均值/缩放/填补/PCA/特征选择把测试集信息带进模型）、避免办法（先划分；fit 只在训练子集、transform 在两个子集；用 Pipeline 串起来并放进 cross_val_score）；12.2.2 用 10,000 个随机特征做二分类给出可运行的错误/正确对照：用全部数据先做 SelectKBest(k=25) 特征选择，测试准确率 0.76；先 train_test_split 再用训练集 fit_transform、测试集 transform，准确率回到 0.5（接近纯随机）；再给 make_pipeline(SelectKBest(25), HistGradientBoostingClassifier) 版本与 cross_val_score 写法。12.1 另讲训练集缩放了、测试集没缩放的错误示例与正确示例（MSE 62.80 → 0.90）。",
+        "access": "免费中文网页，无需注册、无需下载；中文；代码块可直接复制运行（numpy/sklearn）。本页与上游 scikit-learn 1.9 官方文档的 stable 版同章号、同小节标题，是中文译本（scikit-learn.cn）。站点是社区维护的中文文档站，本轮未在其页面找到编者署名或与 scikit-learn 项目的关系说明，故只按“官方文档的中文译本”引用其正文内容，未核对其编辑流程。",
+        "role": "supplement"
+      },
+      {
+        "title": "机器学习准备数据时如何避免数据泄漏（腾讯云开发者社区中文教程，含训练/测试划分与 K 折交叉验证两种评估下的原始与正确数据准备完整代码）",
+        "url": "https://cloud.tencent.com/developer/article/1692559",
         "tier": "material",
-        "access": "免费在线正文，无需注册。",
-        "free": true
+        "lang": "zh",
+        "free": true,
+        "covers": "以合成二分类数据（make_classification，2000 样本 20 特征）讲数据准备阶段的数据泄漏：先讲“常见但不正确”的做法（先对整个数据集做 MinMaxScaler/特征选择等变换，再划分训练-测试或用 K 折交叉验证），再讲正确做法（先划分，只在训练集 fit，transform 同时作用于训练集与测试集）；给了四份可运行 Python 代码与结果对照：原始方法训练-测试评估（泄漏，约 84.848%）、正确方法训练-测试评估（约 85.455%）、原始方法 K 折评估、正确方法 K 折评估；并专门讨论“为什么这次泄漏没让分数变高”以及如何用泄漏识别（分数好得可疑、训练与验证分数差、事后上线掉分）。",
+        "access": "免费中文正文（约 5000 字），无需注册登录即可读全文；中文；含完整代码块。译文：正文保留原作者口吻（“在我的新书……中了解”），并链到 machinelearningmastery.com 的原书页，属 Jason Brownlee 英文教程的中译，译者署名 Sam Gor；非原创中文教材。",
+        "role": "supplement"
       }
     ],
     "F.1.2": [
@@ -6407,6 +6562,16 @@
         "covers": "排队基础与单队列模型；不覆盖排队网络／MVA。",
         "access": "课程平台公开 PDF 预览；HTTP 非标准端口，部分网络可能无法打开。",
         "role": "supplement"
+      },
+      {
+        "title": "计算机系统的性能建模与设计：排队论实战（中文译本）",
+        "url": "https://ebooks.cmpbook.com/detail?id=24622",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "配免费排队论入门录像学习：第6章运筹定律用于瓶颈推断，第17–19章读开放/封闭网络并手算均值分析例题。",
+        "access": "公开书目信息与目录可核对范围；全文需购买或经合法图书馆借阅，本轮未购买、未读收费全文。",
+        "role": "supplement"
       }
     ],
     "V.1.1": [],
@@ -6576,6 +6741,26 @@
         "covers": "课程概述按“个人—人际—组织”三层组织：自我沟通、倾听、演讲与表达；面谈、人际沟通、跨文化沟通；组织层面的笔头沟通、会议沟通、上下行沟通、危机沟通与团队冲突管理。概述并点名可操作工具：“团队冲突的五类处理方式”“沟通受众的三维分析模型”“面谈问题的漏斗型/倒斗型顺序”“演讲稿开头的六种设计方法”。",
         "access": "中国大学MOOC 免费注册学习，认证证书另计；中文授课；课程大纲栏为空，视频与分讲需登录，字幕未核对。",
         "role": "supplement"
+      },
+      {
+        "title": "MDN 中文文档写作规范",
+        "url": "https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "先按读者、完整性、示例、术语和结构检查文档，实际运行示例核对技术事实；依审查记录改写，英语特有拼写规则不套用中文。",
+        "access": "中文教学正文免费公开。",
+        "role": "supplement"
+      },
+      {
+        "title": "GitHub 中文指南：提交、讨论和处理审阅反馈",
+        "url": "https://docs.github.com/zh/pull-requests/reference/pull-request-reviews",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "把文档修改放入拉取请求，按MDN标准逐项写出可定位反馈；区分批准与请求修改，再核对修改是否落实。",
+        "access": "中文教学正文免费公开。",
+        "role": "supplement"
       }
     ],
     "H.2.2": [
@@ -6610,13 +6795,13 @@
         "role": "supplement"
       },
       {
-        "title": "《形式化验证：现代 VLSI 设计的必备工具包（原书第 2 版）》（Seligman 等，李建文、蒲戈光译，机械工业出版社，2026）",
-        "url": "https://xhwxt.sdjzu.edu.cn/mspace/searchDetailLocal/m9ce180564c87c7f46701d25c96341ec8",
+        "title": "形式化验证：现代VLSI设计的必备工具包（原书第2版，中文译本）",
+        "url": "https://ebooks.cmpbook.com/detail?id=29267",
         "tier": "book",
         "lang": "zh",
         "free": false,
-        "covers": "书目记录为 Seligman《Formal Verification: An Essential Toolkit for Modern VLSI Design》第 2 版的中文译本；原书体系含 FPV（属性检查）、等价性检查（LEC）、覆盖率与形式验证部署。具体章节目录本轮未打开核对。",
-        "access": "机械工业出版社 2026 年版，需购买；馆藏检索页可见书名/作者/译者/出版项，正文与目录为 JS 渲染未取到。",
+        "covers": "读第4章属性验证的组合锁示例，再读第8章形式化等价性验证；比较验证单个实现的属性与验证两个实现功能等价的目标。",
+        "access": "已核中文版本及公开目录；目录免费，完整教材须购买或合法借阅，本轮未读收费全文。",
         "role": "supplement"
       }
     ],
@@ -6712,6 +6897,36 @@
         "covers": "第7章 操作系统安全：攻击对象为内存管理/进程管理/I-O 管理，第二节基础防御方案（W^X、NX/DEP、ASLR），第四节高级系统保护方案（控制流完整性、指针完整性），并把“未考虑不合法输入、随机化程度不够”总结为设计缺陷；第3章 基本机制：移动目标防御（“动态＋异构”，本质是“通过增加系统的随机性和不可预测性来防范网络攻击”“增加攻击者的攻击成本”，分动态网络/平台/环境/软件/数据五个层次）、拟态防御（“动态＋异构＋冗余”，扰乱攻击链、使攻击代价倍增），以及沙箱/入侵容忍/可信计算/零信任等机制的取舍。",
         "access": "免费 GitHub 仓库，PDF 直接下载，无需注册；简体中文；团队自述为“大幅精简”版 PPT。",
         "role": "supplement"
+      },
+      {
+        "title": "《网络测量学 = Network Measuring》（中文教材，13 章：测量算法、测量工具、开源数据、流量测量方法与分类、加密流量与恶意流量测量、流量仿真、公共数据集）",
+        "url": "https://julac-hkpu.primo.exlibrisgroup.com/discovery/fulldisplay/alma991023017969303411/852JULAC_HKPU:HKPU",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "中文成体系的网络测量教材：全书 13 章，按「测量算法、测量工具、开源数据」三条线组织，内容含网络流量测量方法与分类、加密流量测量（加密协议分析、加密与非加密流量识别）、恶意流量测量、流量仿真、公共数据集等；把测量对象、测量方法、工具与公开数据放在同一框架里讲，正好补中文侧「网络测量」这一半（此前只有一篇 SDN 测量综述）。",
+        "access": "需购买（正版中文教材）。本轮只核到图书馆馆藏记录（香港理工大学 JULAC 联合目录）给出的书名、并列英文名与 13 章内容摘要，未核到出版社目录页、定价与出版年，也未购买或阅读正文；作者一般署为程光等（东南大学网络测量团队），但该馆藏记录未显示责任者字段，本轮未据以断定。",
+        "role": "supplement"
+      },
+      {
+        "title": "Vulhub 中文说明（开源漏洞靶场集合：docker compose 一条命令启动固定环境，每个环境目录自带复现步骤与使用说明）",
+        "url": "https://raw.githubusercontent.com/vulhub/vulhub/master/README.zh-cn.md",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "把安全实验的「环境固定 + 步骤脚本化」做成可直接照做的流程：Vulhub 是「开源的、即开即用的漏洞靶场环境集合」，全部环境基于 Docker compose 制作，「只需一条命令即可快速启动用于安全研究、学习或演示的漏洞环境」；给出完整操作链——装 Docker → git clone → cd 到某个 CVE 目录 → docker compose up -d 启动 → 按该目录 README 的复现步骤操作 → docker compose down -v 清理；并提示内存/架构限制与「不要用于生产」。这解决的是复现实验最容易崩的一环：环境与依赖不再靠口口相传，而是容器化的可重建快照。",
+        "access": "免费开源（GitHub，中文 README 与英文 README 并存），无需注册；中文；仓库内含 CVE 目录与每环境 README。注意：仓库面向漏洞复现，不含实验日志规范、随机性控制与 artifact 评审流程；使用需遵守其「仅用于测试与教学」的声明。",
+        "role": "supplement"
+      },
+      {
+        "title": "Ross Anderson《信息安全工程（第2版）》中文译本",
+        "url": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=03008201",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "第7章从信息经济学、博弈论进入安全投入与激励分析；配既有清华流量测量课件，覆盖测量与安全经济学组合项。",
+        "access": "正版中文纸书；出版社公开目录已核对，完整正文需购买。本轮未购买或通读正文。",
+        "role": "supplement"
       }
     ],
     "M.1.9": [
@@ -6756,6 +6971,16 @@
         "covers": "整章讲持续同调的距离与稳定性：6.1 Distance Metrics on Persistence Diagrams、6.1.1 Bottleneck Distance（定义 6.2：db(Dgm_p(F),Dgm_p(G)) := inf_π sup_x ||x−π(x)||₁，先证明它是度量）、Hausdorff 距离、以及后续的稳定性定理（把过滤函数的扰动与条形码/图的距离联系起来）。",
         "access": "ETH 课程站免费 PDF，无注册；英文；数学排版 PDF。",
         "role": "reference"
+      },
+      {
+        "title": "数据的形状：拓扑数据分析入门（自云鹏，山东大学）",
+        "url": "https://faculty.sdu.edu.cn/ziyunpeng/zh_CN/article/1895214/content/9669.htm",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "主课学会持续图后，读第五节，区分函数扰动与点云扰动；用给定误差上界估算持续图变化。此短文补稳定性的陈述、意义和应用，不替代全课，也不承诺完整证明。",
+        "access": "作者官方中文正文免费；定位为专题入门讲解。",
+        "role": "supplement"
       }
     ],
     "M.7.6": [
@@ -6864,6 +7089,16 @@
         "covers": "任务状态/优先级/时间片、临界段、阻塞延时、调度器实现；可把 RM/EDF 理论对照到真实 RTOS 调度。",
         "access": "免费在线；中文；需 STM32 板卡实验。",
         "role": "supplement"
+      },
+      {
+        "title": "嵌入式软件的时间分析（Peter Gliwa，中文译本）",
+        "url": "https://www.gliwa.com/media/cn_embeddedsoftwaretiming_gliwa_content.pdf",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "配现有RTOS课程读第4章时间参数；第5章比较静态分析、测量与调度分析，第6.6节理解实测值与静态界限为何会冲突，第7.3节分析共享数据和自旋锁的时间影响。不要把有限测试的最大值直接当作已证明的WCET。",
+        "access": "已核中文版本及公开目录；目录免费，完整教材须购买或合法借阅，本轮未读收费全文。 ISBN 9787302596530；链接为作者官方中文目录，出版社样章见证据记录。",
+        "role": "supplement"
       }
     ],
     "F.3.4": [
@@ -6875,6 +7110,16 @@
         "free": true,
         "covers": "13 章目录：Introduction、Basics、Logic、Sets and Functions、Elementary Number Theory、Discrete Mathematics、Structures、Hierarchies、Groups and Rings、Linear algebra、Topology、Differential Calculus、Integration and Measure Theory。提供 Lean 侧的“命题即类型＋机器检查证明”与真实数学形式化练习，不必与 Rocq 同时学。",
         "access": "免费在线阅读（Lean 4 版本），无需注册；练习需装 Lean/mathlib。",
+        "role": "supplement"
+      },
+      {
+        "title": "Lean 中文手册：验证证明与信任边界",
+        "url": "https://www.leanprover.cn/reference-manual/latest/ValidatingProofs/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "通过打印公理、内核重放与外部检查器讲可信计算基及其限制；只补当前组合知识点的TCB部分，精化仍需所列英文教材。",
+        "access": "Lean中文社区翻译的免费教程；对照原官方手册，命令与信任模型取决于Lean版本。",
         "role": "supplement"
       }
     ],
@@ -8930,6 +9175,26 @@
         "covers": "ACM SIGSOFT 官方的软件工程实证研究证据标准：为每种常见研究方法（如受控实验、案例研究、调查、复现研究等共 19 种）给出独立标准，每份标准区分 essential / desirable / extraordinary 属性，并配作者与审稿人用的 checklist，说明一项实证研究应当怎样设计与报告。",
         "access": "免费阅读，无需注册；英文。",
         "role": "supplement"
+      },
+      {
+        "title": "【翻译】通过跟踪技术债来改进你的开发实践（顾宇译自 CMU SEI 官方博客《Got Technical Debt? Track Technical Debt to Improve Your Development Practices》）",
+        "url": "https://www.guyu.me/blog/2022/0610_track-technical-debt-to-improve-your-development-practices/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "技术债的中文系统讲解 + 一个完整的实证研究范例：① 概念与边界——技术债不该被当成缺陷/Bug，「缺陷和 Bug 是最终用户可见的不正确功能；而技术债往往源于用户不可见的设计和系统问题」，并把技术债定义细化为「与可能承载当前或预期的额外积累的软件单元相关的设计工作」；② 分类决策树——先判「与可执行文件或数据相关」（必须落在具体工件：代码、实现单元、数据模型、构建脚本、单元测试上，否则不算技术债），再把缺陷分成「不正确的功能」（不是债）与「设计问题」（若有意外副作用累积的证据或可估计会累积，则算债，例子含重复代码、非标准绑定、类型不匹配、不一致实现、未使用的类），再区分「新功能」与「设计限制」；③ 实证做法——人工检查 Chromium、CONNECT 两个开源项目与两个政府 IT 项目的四个问题跟踪系统共 1,264 个 issue，识别出 109 个技术债样本，目标是「精确识别可重复的问题分类」，并引用技术债文献（Guo 2011、Li 2014、Potdar 2014、Ernst 2015）与国际标准（ISO/IEC 25010:2011）；④ 落地建议——调查反馈显示即使 issue tracker 里写了技术债信息，开发者也可能不优先偿还或只治表面症状，需让债更可见。",
+        "access": "免费中文网页，无需注册；中文译文（译者顾宇，个人博客），原文为 CMU SEI（Software Engineering Institute）官方博客 2022 年文章，译文标注了原文链接与「3709 字/8 分钟」；属译文而非原创中文教材，未标注授权方式。",
+        "role": "supplement"
+      },
+      {
+        "title": "案例研究的方法与应用（南开大学 宫平，中文讲义 PDF：案例研究定义、步骤、优缺点、应用）",
+        "url": "https://www.lsc.org.cn/d/2016-11/11/201611111425593.pdf",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文讲「经验研究」最常用的案例研究方法：定义（「案例研究是一种经验主义的探究，它研究现实生活背景中的暂时现象；在这样一种研究情境中，现象本身与其背景之间的界限不明显，研究者只能大量运用事例证据（Evidence）来展开研究」——引 Robert K. Yin, 1984）；案例研究「既不是资料收集，又不仅限于设计研究方案本身，而是一种全面的、综合的研究思路」，要综合运用历史数据、档案材料、访谈、观察等方法；讲义按「案例研究法介绍 → 案例研究的步骤 → 案例研究法的优缺点 → 案例研究的应用」组织，并给出证据来源的优缺点对照表（文件：稳定、非涉入式、确切、范围广泛／可检索性可能低、收集不完整会有偏选择、报告有偏见；档案纪录；访谈：有目标、见解深刻／问题建构不佳造成偏见、回应偏见、回忆不准确、反射现象；直接观察：真实、包含情景／消耗时间、节选、反射现象、成本高；参与观察）。",
+        "access": "免费中文 PDF（中国科协学会服务中心 lsc.org.cn 会议/培训资料），无需注册；中文；作者南开大学宫平；为讲义幻灯，非教材，无习题。",
+        "role": "supplement"
       }
     ],
     "A.2.1": [
@@ -9952,6 +10217,16 @@
         "covers": "可信软件与良性软件、安全周界、参照监视器与引用验证机制、安全内核的设计原则（精简以便验证正确性），即可信计算基的核心概念。",
         "access": "出版社官网免费公开的教材样章 PDF；全书需购买。",
         "role": "supplement"
+      },
+      {
+        "title": "完整性条件下无干扰模型（张帆、陈曙、桑永宣等，《通信学报》2011 年 32 卷 10 期，78–85 页；以 Rushby 的无干扰工作为基础，给出视图划分系统、动作等价关系与等价自动机的无干扰推演）",
+        "url": "https://www.joconline.com.cn/zh/article/74413068",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文学术文献里对「非干扰」的形式化处理：摘要明确「以 Rushby 的无干扰工作为基础，对完整性条件下的无干扰模型进行了研究」；指出 Rushby 定义的「视图划分系统」与「基于引用监视器假设的系统」在完整性条件下与机密性条件下一样都满足无干扰；给出 Biba 模型的无干扰解释；提出「动作等价关系」并用它研究完整性条件下的信息流释放问题；提出「等价自动机」与「纯化等价自动机」两个图形化工具，用于帮助进行完整性无干扰推演。",
+        "access": "《通信学报》官网免费可读题录与中英文摘要，正文需按期刊渠道获取（本轮只读到摘要与题录，未读全文、未购买）；中文；属研究论文，不是入门教学，也没有给出从「非干扰定义 → 展开条件 → 归纳证明」的完整教学链条。",
+        "role": "reference"
       }
     ],
     "M.5.3": [
@@ -10300,6 +10575,16 @@
         "covers": "随机梯度下降、一般凸与强凸情形的收敛性分析、方差减小技术（SAG、SAGA、SVRG）。",
         "access": "作者主页免费课件 PDF，中文。",
         "role": "supplement"
+      },
+      {
+        "title": "庞丽萍、肖现涛《最优化方法》：随机规划模型",
+        "url": "https://wz.dutp.cn/index/product/detail.html?id=3887",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "第6章补随机规划模型与求解；收敛分析配文再文公开课件第25讲第3节，组成独立中文路线。",
+        "access": "正版中文纸书；出版社公开目录已核对，完整正文需购买。本轮未购买或通读正文。",
+        "role": "supplement"
       }
     ],
     "M.7.5": [
@@ -10343,6 +10628,16 @@
         "free": true,
         "covers": "第一章 绪论（1.1 研究对象、1.2 误差来源与分类、1.3 有效数字、1.4–1.6 数值计算中的若干原则）；第二章 解线性方程组的直接方法（2.8 追赶法、2.9 向量范数、2.10 范数等价性、2.11 矩阵范数、2.12 相容矩阵范数与谱半径、2.13 线性方程组的固有形态、2.14 病态方程组的处理）；第三章 迭代法（3.3–3.6 收敛性与误差分析、SOR）；第四章 非线性方程求根；第六章 数值积分；第七章 常微分方程数值解（7.10–7.11 单步法稳定性）。",
         "access": "中国大学 MOOC 免费注册学习（认证证书另收费）；中文授课；教材张铁、邵新慧《数值分析》（科学出版社 2022）。字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "数值线性代数（Trefethen、Bau；陆金甫、关治译）",
+        "url": "https://lib2.buct.edu.cn/bookInfo_0100041518.html",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "配现有中文数值分析课程读第14–17讲，区分前向误差、后向误差和条件数，用Householder/回代的分析解释后向稳定性。",
+        "access": "公开书目信息与目录可核对范围；全文需购买或经合法图书馆借阅，本轮未购买、未读收费全文。",
         "role": "supplement"
       }
     ],
@@ -11666,6 +11961,16 @@
         "covers": "离线性：设备与下游设备在断网/间歇连接下长时间运行；离线模式下 IoT Edge hub 承担消息缓存（重连后补发）、代替 IoT Hub 认证模块与下游设备、维持本地处理三个角色。",
         "access": "Microsoft Learn 免费英文文档。",
         "role": "supplement"
+      },
+      {
+        "title": "边缘计算中的资源调度机制（郑瑞娟等，科学出版社）",
+        "url": "https://www.ecsponline.com/goods.php?id=227024",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "配边缘部署主课读本地计算与通信时间模型、低时延卸载、资源分配和实验比较；定位为时延专题补充，需有概率/优化基础。",
+        "access": "出版社完整中文目录公开，全文需购买或合法借阅；未购买、未读收费全文。",
+        "role": "supplement"
       }
     ],
     "F.1.4": [
@@ -11761,6 +12066,16 @@
         "free": true,
         "covers": "Part I 基础工具：第 1 章 Introduction（FPT 定义与参数化视角）、第 2 章 Kernelization（2.1 形式定义起，核与 kernelization 的定义与基本构造）、第 5 章 Randomized methods；Part II 进阶算法（第 9 章 advanced kernelization 技术、第 10 章代数技术、第 11 章 treewidth 上 DP 加速、第 12 章 matroids）；Part III 下界：第 13 章 Fixed-parameter intractability（13.1 参数化归约、13.3 The W-hierarchy、13.5 W[1]/W[2]-完全问题）、第 14 章 Lower bounds based on the Exponential-Time Hypothesis（14.1 ETH 的动机与基本结果）、第 15 章 核下界（composition 与 polynomial-parameter transformations，证明 Longest Path 等问题没有多项式核）。",
         "access": "作者站点免费 PDF 全书（约 100 万字符正文，可下载阅读）；Springer 纸质/电子版需购买。英文。",
+        "role": "supplement"
+      },
+      {
+        "title": "算法分析进阶：超越最坏情况分析（中文译本）",
+        "url": "https://ebooks.cmpbook.com/detail?id=28145",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "先配《参数计算导论》理解W层级，再读本书2.5.1–2.5.3比较参数困难性、指数时间假设和核化下界。未核到3SUM/APSP中文教学，另保留该项英文补读。",
+        "access": "已核中文版本及公开目录；目录免费，完整教材须购买或合法借阅，本轮未读收费全文。",
         "role": "supplement"
       }
     ],
@@ -12520,6 +12835,16 @@
         "covers": "课程简介写明应用实例含“业务流程管理问题和过程挖掘”，且“同步理论是 BPM 建模的理论基础”；官方大纲第五章「业务流程管理」含 5-1 工作流网（WF_net）、5-2 工作流管理联盟等节；另有序论、有向网、Petri 网层次系统（EN/ C-E / P-T / 高级网 / 化简网）、网论（网拓扑、并发论、网逻辑、信息流网、同步论与同步器、建模方法论）等章。",
         "access": "学堂在线免费学习（需注册）；中文授课；视频与分讲需登录，字幕未核对。",
         "role": "supplement"
+      },
+      {
+        "title": "凡得科技流程挖掘课堂：第1讲流程发现",
+        "url": "https://fande.cn/article/80",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "读事件日志、活动关系与Alpha发现过程，再比较启发式和归纳发现；根据一份小日志手画流程模型。",
+        "access": "中文教学正文免费公开。",
+        "role": "supplement"
       }
     ],
     "I.1.4": [
@@ -12615,6 +12940,36 @@
         "free": true,
         "covers": "内部效度（研究结果反映真实效应而非混杂因素与方法缺陷的程度）、外部效度（结果推广到其他测量、情境、人群、地点和时间的程度及其受交互作用与非代表性样本的影响），附原始参考文献。",
         "access": "开放科学社区 FORRT 的中文译本，免费；条目经多人审阅，属术语表级的定义与说明。",
+        "role": "supplement"
+      },
+      {
+        "title": "论文复现指南-CV方向（PaperReadNotes，中文；含 12 步对齐流程、reprod_log 差异日志与验收阈值、常见 bug 汇总）",
+        "url": "https://xu-lin.gitbook.io/paper_read/source/implementation/articlereproduction_cv",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "把「复现」拆成可执行的逐步对齐清单：3.1 模型结构对齐 → 3.2 准备小数据集、验证集数据读取对齐 → 3.3 评估指标对齐 → 3.4 损失函数对齐 → 3.5 优化器对齐 → 3.6 学习率对齐 → 3.7 正则化策略对齐 → 3.8 反向对齐 → 3.9 训练集数据读取对齐 → 3.10 网络初始化对齐 → 3.11 模型训练对齐 → 3.12 规范训练日志 → 3.13 预测程序开发 → 3.14 单机多卡训练；第 4 章逐项给注意事项与 FAQ（4.15 常见 bug 汇总）。方法上要求：先用 fake data 与前向对齐把结构/算子对上，再逐层（指标、loss、反向、初始化、训练）用 reprod_log 把两边结果存成 npy 文件对（forward_/metric_/loss_/bp_align_/train_align_）并跑 check_log_diff 打印 diff 日志，按「check passed: True/False」与 diff 值判定是否对齐，未通过就定位到那一层。",
+        "access": "免费中文网页（GitBook），无需注册；中文；含命令行、日志样例与目录结构示例。内容来自论文复现赛/复现工程的实践文档（reprod_log 工具 + 对齐流程），但站点为个人 GitBook，未标注作者任职与更新时间，属工程实践文档而非教材。",
+        "role": "supplement"
+      },
+      {
+        "title": "DI-engine 文档·最佳实践：随机种子（OpenDILab 官方中文文档，讲全局种子、环境种子、dynamic_seed、评估期固定种子与多进程种子继承问题）",
+        "url": "https://raw.githubusercontent.com/opendilab/DI-engine-docs/main/source/04_best_practice/random_seed_zh.rst",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "复现里的随机性控制：为什么「为了复现或者公平比较其他算法的实验结果，我们需要使用相同的随机种子」；入口函数的全局 seed 参数与 set_pkg_seed（random / numpy / torch / torch.cuda 一并设种）；collector/evaluator 的环境种子如何由单一 seed 生成为列表（seed + i），以及 seed(list) 的长度校验；dynamic_seed 在训练时让每个 episode 不同、在评估时关闭以保证「每次评估策略时是在一组相同的随机种子上评估，增加不同训练步数上模型评估结果的可比性」；多进程场景下子进程不继承父进程种子、需要给每个环境重置种子的注意事项。",
+        "access": "免费中文文档（GitHub raw 的 .rst 源文件，无渲染）；中文；代码片段可直接对照。属框架官方文档的一节（最佳实践），只覆盖「种子/评估可比性」这一面，不含数据版本与依赖锁定。",
+        "role": "supplement"
+      },
+      {
+        "title": "How To Do Ablation Experiments（Yuxin's Blog，中文正文：消融/控制变量、基线该怎么选、recipe 与实现一致性）",
+        "url": "https://ppwwyyxx.com/blog/2022/How-to-do-Ablation-Experiments/",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "「基线」到底怎么设、对照怎么做：理想的一组 ablation 应当「所有实验尽量使用一份代码实现，和相同的实验 recipe，这样才算是真的 ablation」，并强调实现的影响（TensorFlow 跑的实验和 PyTorch 跑的实验不能放进同一组 ablation）；举反例说明只有 system-level 结果、没有跟已有结构做 ablation 的新模型说明不了问题（EfficientNet vs Revisiting ResNets、FCOS vs ATSS）；指出「控制变量」并不美好——变量之间存在未知相关性，结论可能只在某个 baseline 下成立；因此「要缓解这个 concern，应当选择常用的、有代表性的实验 recipe（包括 baseline、hyperparameter、evaluation protocol 等）」，并明确「一个好的 baseline 并不需要是 SOTA，但是需要是一个领域内大家公认具有代表性的结果」；还讨论不同变量的效果常常不可叠加（loss 与它的系数可互相替代的例子）。",
+        "access": "免费中文网页，无需注册；正文中文（站点有 English Only / English + 中文 切换）；作者为 FAIR 研究者 Yuxin Wu 的个人博客，属研究者经验文而非教材，无作业与习题。",
         "role": "supplement"
       }
     ],
@@ -12831,6 +13186,296 @@
         "free": true,
         "covers": "诊断治疗目标、患者共同决策背景。",
         "access": "英文完整正文免费，链接检查与治疗决策。",
+        "role": "supplement"
+      }
+    ],
+    "X.3.3": [
+      {
+        "title": "MindSpore Science 官方中文文档（MindSpore Flow / Earth 等组件）",
+        "url": "https://www.mindspore.cn/mindscience/docs/zh-CN/master/index.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文文档：MindSpore Flow（PINN、FNO 等科学计算模型与案例）、Earth、Chemistry 等组件；可用于跑通 PINN/FNO 求解 PDE 的示例，但不讲反问题、伴随方法与可微求解的系统理论。",
+        "access": "免费阅读；运行示例需安装 MindSpore 与 MindSpore Science。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+        "role": "supplement"
+      },
+      {
+        "title": "基于神经网络的偏微分方程求解方法研究综述（查文舒、李道伦、沈路航、张雯、刘旭亮，《力学学报》，EI/Scopus 收录期刊官网免费全文）",
+        "url": "https://lxxb.cstam.org.cn/cn/article/id/e3570f41-6938-4f31-b644-9be812d61cbc",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "中文系统综述：先讲偏微分方程智能求解的发展历程，再「从反演未知偏微分方程与求解已知偏微分方程两个角度展开」，其中反演部分讲恢复方程与参数反演；求解部分按损失函数构建方式分三类——数据驱动、物理约束（PINN 式，把控制方程加进损失）、物理驱动（纯物理约束、不用标签数据），并横向比较全连接/卷积/循环等网络结构，最后给应用场景与展望（参考文献 102 篇）。",
+        "access": "《力学学报》官网免费阅读摘要与 HTML 全文（本轮读的是摘要与英文摘要）；中文；属同行评议综述，无配套代码与作业。",
+        "role": "supplement"
+      },
+      {
+        "title": "NeuralOperator: Neural Operators in PyTorch（官方文档 v2.0.0，含 Fourier Neural Operator 官方实现与 Quickstart 教程）",
+        "url": "https://neuraloperator.github.io/dev/index.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "神经算子的定义与动机（学习函数空间之间的映射、分辨率无关）、库内包含的算子结构（Fourier Neural Operator 官方实现等）、以及完整 Quickstart 工作流：加载数据 → 构建 neural operator → 训练 → 保存模型，另有 Examples 与安装说明。",
+        "access": "官方文档免费、无注册；英文；含可运行代码示例。",
+        "role": "supplement"
+      },
+      {
+        "title": "《基于物理的深度学习》（Physics-Based Deep Learning v0.2 中文译本，全书在线、每章配可执行 Jupyter notebook）",
+        "url": "https://www.topcfd.cn/Ebook/PBDL/",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "成体系的中文主线，按「物理约束 → 可微物理 → 反演 → 不确定性」的整合紧密度递增排列：2 概述、3 监督学习、4 物理损失、5 PINN 优化 Burgers 方程、6 物理损失的讨论；**7 可微分物理介绍（把数值求解器的每个算子做成可微、用反向传播让梯度在模拟器与网络之间流动、雅可比矩阵）、8 用 DP 梯度优化 Burgers、9 讨论、10 可微分流体模拟、11 把 DP 整合进神经网络、12 用深度学习减少数值误差**；13 利用神经网络求解逆问题、14 讨论；15–16 强化学习入门与用 RL 控制 Burgers；17 尺度不变量和反演、18 比较不同优化器、19 尺度不变物理训练、20 用尺度不变更新学习反演热传导、21 半逆梯度、22 耦合振子、23 讨论；24 后验推断简介、25 用贝叶斯神经网络的 RANS 翼型流动；26 其他主题、27 模型简化和时间序列、28 GAN、29 非结构化网格与无网格方法、30 展望。",
+        "access": "第三方转载，授权未核。第三方中文译本，译者与授权未核；译文有机器翻译痕迹。原书公开，可对照英文原文；本链接不是TUM官方中文版本。正文和示例可免费阅读。",
+        "role": "supplement"
+      },
+      {
+        "title": "PaddleScience 经典案例：NeuralOperator（TFNO / UNO / SFNO 的模型原理与 Darcy-flow、球面浅水方程训练验证代码）",
+        "url": "https://paddlescience-docs.readthedocs.io/zh-cn/latest/examples/neuraloperator/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "比单案例更完整的神经算子讲解：1 背景简介（PDE 反复求解的代价、经典网络只能学与特定离散化相关的解 → 神经算子学与网格无关的无限维算子，FNO 直接在傅里叶空间参数化积分核，论文在 Burgers/Darcy/Navier-Stokes 上验证，首次做到零样本超分辨、比传统求解器快三个数量级）；2 模型原理（积分算子限制为卷积、在傅里叶域用线性变换实例化、与离散化无关地共享网络参数；训练/推理流程：X[w,h] → Y[w,h] 与真值算 LpLoss 或 H1 损失）；3 TFNO 训练 Darcy-flow（数据集：1000 条 16×16 训练、另给 32×32 测试；SupervisedConstraint 构建、模型、学习率与优化器、评估器、训练评估、模型导出与推理）；4 UNO 同流程；5 SFNO 训练球面浅水方程（SWE）；6 结果展示（TFNO/UNO 的预测 vs 真值、SFNO 的预测 vs 真值）。",
+        "access": "免费中文网页（Read the Docs），无需注册；中文；代码在 PaddleScience 仓库（examples/neuraloperator），需装 PaddlePaddle 与 PaddleScience。原文数据集描述写作「1000 条 16x16 分辨率大小的训练数据；50 条 32x32 和 50 条 32x32 分辨率大小的测试数据」，两个测试分辨率重复，疑为笔误，本轮未核到仓库配置里的真实分辨率。",
+        "role": "supplement"
+      },
+      {
+        "title": "【中文配音】科学与工程领域的 AI（2024）- 苏黎世联邦理工学院（B站，28 讲，含算子学习 8 讲、PINN 5 讲、神经微分方程与模型发现）",
+        "url": "https://www.bilibili.com/video/BV1gJHYeREEj/",
+        "tier": "video",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程级的中文可听材料，讲次按算子学习成体系排列：1 课程介绍、2–3 深度学习简介、4 偏微分方程在科学中的重要性、5 基于物理信息的神经网络介绍、6–7 PINN 限制和扩展 1–2、8–9 PINN 理论 1–2、**10–11 算子学习介绍 1–2、12 卷积神经算子（CNO）、13 傅里叶神经算子（FNO）、14 谱神经算子与 DeepONet、15 时间依赖神经算子、16 大规模神经算子、17 注意力作为神经算子、18 窗口注意力与缩放定律**、19–20 混合工作流 1–2、**21 神经微分方程**、22 扩散模型导论、23 JAX、**24 符号回归与模型发现**、25–26 AI 在化学和生物学中的应用。",
+        "access": "第三方转载，授权未核。B站免费播放，中文配音（标题与简介写明「中文配音」；未说明是人工配音还是合成配音，本轮未播放核对音轨与术语准确性）；上传者账号 Fentwer，页面标注「自制」（copyright=1），但实际是把 ETH Zürich 的英文课程配成中文，属二次加工；字幕情况未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "PaddleScience 复现指南（中文）：模型复现流程与验收标准（定性一致 + 定量相对误差 ≤10%）",
+        "url": "https://paddlescience-docs.readthedocs.io/zh-cn/latest/reproduction/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "把「科学验证」写成可执行的验收协议：复现论文指标时要「结合论文中提到的典型 demo，进行关键指标复现，即能够基于飞桨复现论文中的指标，如图表、数据等，其收敛趋势、数值等应基本一致（与作者提供指标的相对误差在 ±10% 以内即可）」；3 验收标准给出交付产物（代码 + 预训练参数 + AIStudio/官网文档）与两类判据——定性分析（模型收敛曲线、最终效果图示与论文保持一致）、定量分析（|复现指标−源代码指标|/源代码指标 ≤ 10%）；并规定复现文档必须包含模型简介、问题定义、问题求解（逐步讲解训练评估与可视化的编写过程）、完整代码、结果展示图，且开头写明论文题目/地址/参考代码链接。",
+        "access": "免费中文网页（Read the Docs），无需注册；中文。内容面向向 PaddleScience 提交复现 PR 的人，但其中「怎么算验证通过」的判据可迁移到任何 SciML 复现实验。",
+        "role": "supplement"
+      },
+      {
+        "title": "AI in the Sciences and Engineering (ETH Zürich, 2024) — official course project page with topics and tutorial notebooks（PINNs, neural operators incl. FNO/CNO/DeepONet + theory, differentiable scientific algorithms, neural differential equations, equation discovery）",
+        "url": "https://github.com/camlab-ethz/AI_Science_Engineering",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "Course-level English treatment that fills the operator-learning gap with theory and hands-on tutorials. Topics listed: key scientific tasks (simulation, inverse problems, equation discovery, design, control) and why classical methods struggle; physics-informed neural networks for forward, inverse and equation-discovery PDE problems; neural operators including Fourier neural operators, convolutional neural operators and DeepONets for surrogate models, and their theoretical foundations; differentiable scientific algorithms, neural differential equations, and hybrid workflows; AI for symbolic regression and equation discovery; GNNs in science; foundation models for scientific discovery. Tutorials: 01 function approximation in PyTorch, 02 cross validation and intro to CNNs, 03 PINN training, 04 PINNs for inverse problems, 05 operator learning — FNO, 06 operator learning — CNO, 07 GNNs, 08 vision transformers for PDEs, 09 DDPM, 10 coding autodiff, 11 JAX/NDEs/diffusion, plus new time-dependent CNO and transfer learning for PDEs; datasets and an Allen-Cahn dataset link provided.",
+        "access": "Free public GitHub project page (course materials), no registration; lecture recordings are on the official CAMLab ETH Zürich YouTube playlist (linked from the page), slides on the official course page camlab.ethz.ch/teaching/ai-in-the-sciences-and-engineering-2024.html (that HTML page is JS-rendered: only the footer was readable). English. Tutorials are Jupyter notebooks.",
+        "role": "supplement"
+      }
+    ],
+    "V.2.2": [
+      {
+        "title": "UI 及交互技术（南京邮电大学，中国大学MOOC；以交互设计项目流程组织：用户研究方法→需求分析→方案设计→原型设计→可用性测试）",
+        "url": "https://www.icourse163.org/course/NJUPT-1206905803",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程概述写明：坚持以用户为中心，培养「更好地理解用户研究方法并应用于交互设计项目中，根据用户需求阶段的分析，进行方案设计、原型设计和可用性测试，掌握交互设计项目流程」，并以真实交互设计项目为纽带、小组合作完成从需求到原型到测试的全流程；教材参考《人机交互设计（第2版）》（单美贤，电子工业出版社 2022）等。",
+        "access": "中国大学MOOC 免费注册学习；中文讲授；页面大纲区只有标题，未列逐讲视频名称；字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "用户体验分析（中国大学MOOC，含完整授课大纲：交互设计研究/设计开发/视觉设计三部分）",
+        "url": "https://www.icourse163.org/course/detail.htm?cid=1450961163",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "授课大纲：①交互设计研究——市场调研、用户研究、视觉设计研究，作业为同类型互动媒体作品评估；②以用户为中心的设计——认识用户体验要素（战略层/范围层/结构层、框架层/表现层）、移动交互基础；③设计开发——概念思考与信息组织、站点地图/任务流程/导航系统、原型/线框/故事板/样片/反馈与测试；④视觉设计（色彩、图形、编排与网格）。",
+        "access": "中国大学MOOC 免费注册学习；中文讲授；授课大纲逐条可见，但视频分节与字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "《设计调研（第 3 版）》（戴力农 主编，2023-12 发行，244 千字；第 1 章「数据采集法」含 1.2 单人访谈法，第 2 章含 2.7 可用性测试）",
+        "url": "https://www.dedao.cn/ebook/detail?id=6JvkYVNn8NXVry5MeG6Z9RALK2dxJ3GPJ86w7olBEmjgakz1DPvYObQ4qpQdZqme",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "1.2 单人访谈法：1.2.1 什么是单人访谈法、1.2.2 招募、1.2.3 访谈结构、1.2.4 访谈类型、1.2.5 访谈技巧、1.2.6 访谈环境、1.2.7 记录访谈、1.2.8 远程用户访谈；1.3 焦点小组（含 1.3.5 访谈大纲、1.3.7 访谈技巧、1.3.8 访谈记录）。2.7 可用性测试：2.7.1 什么是可用性测试、2.7.2 测试功能点、2.7.3 大纲和脚本、2.7.4 实施测试、2.7.5 整理数据、2.7.6 常见的问题和对策。",
+        "access": "正版电子书，得到 App 定价 59.40 元（纸书另计），页面可读完整目录与内容简介，正文需购买；中文教材，无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "《用户体验度量：收集、分析与呈现（纪念版）》（Tom Tullis、Bill Albert 着，周荣刚、秦宪刚 译，电子工业出版社 2020-06）",
+        "url": "https://phei.com.cn/module/goods/wssd_content.jsp?bookid=55750",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "第 2 章 背景知识：自变量与因变量、数据类型、描述性统计（集中趋势/变异性）、置信区间、比较平均数（独立样本/配对样本/两个以上样本）、变量间关系、非参数检验；第 3 章 规划：形成式与总结式可用性、用户目标（绩效/满意度）、10 种可用性研究、评估方法（传统引导式可用性测试/在线非引导式/在线调查）、参与者与数据整理；第 4 章 绩效度量（任务成功、二分式成功、易学性）；第 5 章 基于问题的度量（如何发现可用性问题、严重性评估、5.7 参与者数量「五个参与者足够/不够」）；第 6 章 自我报告度量（Likert/语义差异量表、ASQ、SUS）；第 7 章 行为和生理度量（言语表情编码、眼动）。",
+        "access": "付费纸书，定价 118.00 元（ISBN 9787121385353，340 页）；出版社官网可读完整目录、内容简介与前言，正文需购买；中文译本，无视频。",
+        "role": "supplement"
+      },
+      {
+        "title": "《深度干货！超全面的用户访谈学习指南（附访谈模板）》（优设网，2019-03，作者 UXD笔记）",
+        "url": "https://www.uisdc.com/uesr-interview-guide",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "按步骤讲访谈：先分结构式/半结构式/开放式三类并说明何时用；「1. 明确访谈目的」「2. 设计访谈提纲」（提问目的、由易变难由浅入深、单次 1 小时内）、「用户招募的三大流程」、「访谈技巧」、「分析整理」（转录→拆维度→分析报告→交接）；附访谈模板与分析报告示例。",
+        "access": "优设网免费阅读，中文；单篇约 18 分钟阅读量的教程，含模板与示例，无视频、无作业。",
+        "role": "supplement"
+      }
+    ],
+    "V.2.3": [
+      {
+        "title": "W3C《Web 内容无障碍指南 WCAG 2.1》授权中文翻译",
+        "url": "https://www.w3.org/Translations/WCAG21-zh/",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "可感知、可操作、可理解、鲁棒四原则与逐条成功准则、符合性等级；是规范条文，不是教学课程，也不含评估操作教程；2.2 新增准则需查英文。",
+        "access": "W3C 授权中文规范，免费；为 2.1 版。",
+        "role": "reference"
+      },
+      {
+        "title": "《了解无障碍功能（Learn Accessibility）》中文版课程——测试三单元：自动化无障碍功能测试 / 手动无障碍功能测试 / 辅助技术测试（web.dev，Google 官方课程页）",
+        "url": "https://web.dev/learn/accessibility/test-manual?hl=zh-cn",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "测试部分按「自动化 → 手动 → 辅助技术」三个单元递进：自动化单元讲工具能覆盖与不能覆盖的 WCAG 检查点；手动单元给出「可自动化 / 无法自动化」对照表（纯色对比度可自动、渐变与图片上的文字对比度不可；替代文本「存在」可自动、「准确且分配正确」不可等），并逐项讲键盘检查（Tab 顺序是否符合逻辑、焦点指示器是否可见、是否会被困住）、以视觉为中心的审核与常规内容检查；辅助技术单元讲屏幕阅读器测试基础、低技术/高科技/硬件/软件四类 AT 与「在整个测试流程中使用多种 AT」。",
+        "access": "免费，无需注册；中文页面由 Google 用 AI 翻译（页面自述「Google 会使用 AI 技术将内容翻译成您偏好的语言。AI 翻译可能包含错误」），不是人工中译；含练习与单元间的前后衔接要求。",
+        "role": "supplement"
+      },
+      {
+        "title": "《辅助功能测试》（Microsoft Learn 中文，Windows 应用辅助功能设计与测试文档）",
+        "url": "https://learn.microsoft.com/zh-cn/windows/apps/design/accessibility/accessibility-testing",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "官方中文的辅助功能测试流程：先建立「以自动化为先」的工作流（把可访问性测试当发布门槛、定义基准、在 CI 里跑自动检查、关键问题让构建失败、为人判断留手动屏幕阅读器与键盘验证）；再逐项给测试步骤——键盘可访问性（完整且符合逻辑的 Tab 顺序、方向键、Enter/空格触发）、可见文本对比度（用对比度工具，引 WCAG 2.2 G18）、高对比度主题、显示缩放/DPI、讲述人验证主场景（Win+Ctrl+Enter 启动、Tab/方向键/Caps Lock+方向键导航、逐个控件听名称/状态/类型、Caps Lock+Enter 调用操作、表格行列标题、Caps Lock+Shift+Enter 搜索、关显示器仅用键盘+讲述人走完主流程、Control+Caps Lock+F12 开发者模式）、讲述人触摸模式、用 Inspect/UIA 验证检查 UI 自动化树、AccEvent 事件监视。",
+        "access": "微软官方文档，免费；中文为官方本地化页面（同页有「使用英语阅读」切换）；面向 Windows 原生应用，Web 端需自行对应。",
+        "role": "supplement"
+      },
+      {
+        "title": "《无障碍评级测试方法介绍》（中国互联网信息应用适老化及无障碍公共服务平台，YD/T 1822-2008 信息无障碍系列标准的测试方法）",
+        "url": "https://www.wcag.org.cn/sy/yybztx/bzjd/ff/index.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "按四大原则组织的测试方法目录：4. 内容的可感知性测试（4.1 为所有非文本内容提供替代文本测试、4.2 为多媒体信息提供同步替代文本测试、4.3 信息和结构可以与表现相分离测试、4.4 前景信息和背景区分测试）；5. 内容中的接口组件的可操作性测试（5.1 所有功能都可通过键盘接口操作测试、5.2 控制时限、5.3 避开光敏性内容、5.4 提供查找内容机制、5.5 帮助用户避免错误）；6. 内容与控制的可理解性测试；7. 兼容性测试。",
+        "access": "平台免费公开；中文；本轮实际取到的正文是 3 术语和定义（含信息无障碍/辅助技术/亮度对比度/闪烁门限等定义），4–7 章测试方法只在页面导航里看到条目，各节正文未取到，故只作 reference，不用它单独支撑覆盖。",
+        "role": "reference"
+      }
+    ],
+    "V.2.4": [
+      {
+        "title": "Unity 官方中文手册 · XR（XR 开发、输入与交互）",
+        "url": "https://docs.unity3d.com/cn/current/Manual/XR.html",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "XR 工程实践：XR 插件架构、输入系统、AR Foundation/VR 设备接入、渲染与性能设置；讲“怎么在引擎里做”，不讲显示光学、追踪原理、空间界面理论与协作研究。",
+        "access": "官方中文手册免费；随 Unity 版本更新（当前 Unity 6.0）；动手需安装 Unity 与设备 SDK。",
+        "role": "supplement"
+      },
+      {
+        "title": "沉浸式媒体：虚拟现实、增强现实与混合现实（中国科学技术大学，中国大学MOOC USTC-1463111171；配套教材《虚拟/增强现实技术及其应用》张燕翔）",
+        "url": "https://www.icourse163.org/course/USTC-1463111171",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "课程概述自述「系统深入地讲解沉浸式媒体技术的三大重要方面：虚拟现实、增强现实与混合现实」，理论+前沿+实践（制作技术可上手）并重，落点是「知道采取什么技术路线及手段去实现」；参考教材《虚拟/增强现实技术及其应用》（张燕翔，中国科学技术大学出版社）。",
+        "access": "中国大学MOOC 免费注册学习；中文讲授；页面大纲区未列逐讲标题（只有课程概述与参考教材），字幕未核对。",
+        "role": "supplement"
+      },
+      {
+        "title": "《多用户功能教程》（Microsoft Learn 中文，混合现实 Unity 教程 1–4：简介 / 设置 Photon Unity 网络 / 连接多个用户 / 与多名用户共享对象移动）",
+        "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/develop/unity/tutorials/mr-learning-sharing-01",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "教程 1 简介给出环境与版本前提（Unity 2020 LTS、MRTK 2.7）；教程 2「设置 Photon Unity 网络」逐屏讲导入 PUN 2、创建 Photon 应用（PUN 类型）、把 AppId 填进 PUN 向导；教程 3「连接多个用户」配置 PhotonUser prefab 并部署到 HoloLens，验证「多个用户连接到同一体验并看到彼此移动」；教程 4「与多名用户共享对象移动」把对象运动状态跨设备同步。",
+        "access": "微软官方文档，免费，中文为官方本地化页面（页面有「使用英语阅读」切换）；需 Unity、MRTK 与 Photon 账号（免费额度）才能动手；不含共享空间锚点与社会存在/协作行为研究。",
+        "role": "supplement"
+      },
+      {
+        "title": "《舒适（Comfort）》（Microsoft Learn 中文，混合现实设计指南）",
+        "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/comfort",
+        "tier": "website",
+        "lang": "zh",
+        "free": true,
+        "covers": "讲清晕动与不适的成因与对策：HoloLens 约 2.0 m 的固定光学距离导致 vergence-accommodation 冲突，内容该放在 1.25–5 m、40 cm 内淡出、30 cm 裁剪平面；近距交互的距离风险；IPD 与垂直偏移（VO）不匹配会加重不适；渲染至少 60 FPS、降低延迟（30 FPS 可能多 33.3 ms 延迟）以减少抖动与预测误差；虚拟移动与真实前庭线索冲突会诱发晕动，对策是「始终让用户控制其移动」、避开发方向性、按预计注视时长设「深度预算」并做用户测试。",
+        "access": "微软官方文档，免费；中文页面为机器本地化，标题被译成「安慰」（原文 Comfort），正文可读；面向 Windows Mixed Reality/HoloLens，原理可迁移到其他 HMD。",
+        "role": "supplement"
+      },
+      {
+        "title": "《空间存在：虚拟环境中何以产生身临其境之感?》（《心理科学进展》2018 年第 26 卷第 8 期，中文综述，起始页 1383）",
+        "url": "https://journal.psych.ac.cn/xlkxjz/article/2018/1671-3710/1671-3710-26-8-1383.shtml",
+        "tier": "material",
+        "lang": "zh",
+        "free": true,
+        "covers": "「4.1 空间存在的实验研究范式」：先用问卷测被试特质（人口学、动机、兴趣、认知卷入）、设预实验熟悉流程；正式实验里个人特质作被试间变量、媒介特质作被试内变量，被试进入虚拟环境完成不同任务；最后用量表测空间存在，部分研究再做深度访谈。「4.2 空间存在的测量」：语义量表（SPES 8 题、两维信度 0.81/0.92；MEC-SPQ 16 题李克特 5 点；ITC-SOPI 等）与对语义量表局限的讨论。",
+        "access": "期刊官网开放阅读（中文），免费；是综述论文而非课程，但实验范式与量表两节是分步讲解；不含晕动量表（SSQ）操作细节。",
+        "role": "supplement"
+      },
+      {
+        "title": "《虚拟现实交互研究》（陈京炜 着，中国传媒大学出版社 2020-10，ISBN 978-7-5657-2753-5，「媒体艺术与技术丛书」）",
+        "url": "https://www.cucp.com.cn/Book/Details/290",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "出版社内容简介：全书六章，包括「数字影像在虚拟现实语境下的发展与特征」「数字影像在虚拟现实语境下的交互品质」「原型设计与评估」「基于交互品质的设计与评估」等；作者为中国传媒大学动画与数字艺术学院副教授，主讲国家级一流本科课程「游戏心理学」。",
+        "access": "正版付费图书，出版社页面有「立即购买」但未标价；本轮只读出版社内容简介与书目信息，未购买正文，章节细节未核对。",
+        "role": "reference"
+      }
+    ],
+    "V.3.2": [
+      {
+        "title": "大数据可视化与可视分析·智慧教材（17 章交互式中文教材，免费；第 9 章科学数据可视化、第 12 章可视分析方法论、第 16 章科学模拟数据可视分析）",
+        "url": "http://simingchen.me/smart-textbook",
+        "tier": "book",
+        "lang": "zh",
+        "free": true,
+        "covers": "Ch8 地理时空数据可视化（地图投影、符号系统、等值区域图、OD 流、时空立方体）；Ch9 科学数据可视化（标量场、流场、特征提取、等值面、流线、体绘制、颜色映射）；Ch10 图数据可视化（力导向布局、邻接矩阵、社区检测、边捆绑）；Ch11 层次数据可视化（节点-链接树、矩形树图、旭日图、圆堆图）；Ch12 可视分析方法论（可视分析流水线、构建方法论、六大分析模式、人在回路、态势感知）；Ch16 科学模拟数据可视分析。",
+        "access": "免费在线交互教材，无需注册；中文；每章配交互演示与知识测验。",
+        "role": "supplement"
+      },
+      {
+        "title": "《数据可视化（纪念版）》（陈为 等，电子工业出版社 2023-03，ISBN 9787121450969，756 页，15 章分 4 篇；第 4.3.3 节「多视图协调关联」、第 12 章「可视化中的交互」、第 13 章「可视化效果评测与用户实验」）",
+        "url": "https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=62229",
+        "tier": "book",
+        "lang": "zh",
+        "free": false,
+        "covers": "4.3.3 多视图协调关联（p151）；第 12 章 可视化中的交互：12.1 交互准则（交互延时/成本/场景变化）、12.2 交互分类、12.3 交互技术（12.3.1 选择、12.3.2 导航、12.3.3 重配、12.3.4 编码、12.3.5 抽象/具象、12.3.6 过滤、12.3.7 关联 p579、12.3.8 概览+细节 p581、12.3.9 焦点+上下文 p584）、12.4 交互与硬件设备；第 13 章 可视化效果评测与用户实验：13.1 评测流程、13.2 评测方法（13.2.1 用户实验、13.2.2 专家评估/启发式评估、13.2.3 案例研究、13.2.4 指标评估、13.2.5 众包、13.2.6 标注）、13.3 用户实验（13.3.1 确定实验目标、13.3.2 准备实验、13.3.3 进行实验、13.3.4 分析结果并讨论、13.3.5 评测案例分析）、13.4 总结。",
+        "access": "付费纸书，定价 269.99 元（ISBN 9787121450969，756 页，2023-03）；出版社官网可读完整目录与内容简介，正文需购买；中文。",
+        "role": "supplement"
+      },
+      {
+        "title": "Fundamentals of Data Visualization（Claus O. Wilke, O'Reilly；作者官网免费全文：Ch13 Visualizing time series and other functions of an independent variable / Ch15 Visualizing geospatial data / Ch11 Visualizing nested proportions / Ch21 Multi-panel figures）",
+        "url": "https://clauswilke.com/dataviz/",
+        "tier": "book",
+        "lang": "en",
+        "free": true,
+        "covers": "Ch13 时间序列与其他自变量函数（13.1 单序列、13.2 多序列与剂量-响应曲线、13.3 两个以上响应变量的时间序列）；Ch15 地理空间数据可视化（含投影问题）；Ch11 嵌套比例（11.2 马赛克图与矩形树图）；Ch21 多面板图（21.1 小倍数、21.2 复合图）。全书无网络/图数据专章。",
+        "access": "作者官网免费全文（HTML），英文；可在线读，也可下载；无视频与练习。",
+        "role": "supplement"
+      },
+      {
+        "title": "Network diagram — from Data to Viz（Yan Holtz 等，免费图表选择指南，含 definition / common mistakes / related chart types / code）",
+        "url": "https://www.data-to-viz.com/graph/network.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "网络图（graph）的定义：实体=节点、关系=边，以共同作者网络为例说明「同一篇论文至少合作一次就连边」；随后给常见错误（mistake）、相关图表类型（related）与可运行代码（R/ggplot2、networkD3 等），用于判断什么数据该用网络图、什么情况该换别的图。",
+        "access": "免费网页，英文；是图表选择指南 + 代码，不是课程；不含布局算法推导。",
+        "role": "supplement"
+      },
+      {
+        "title": "Network Graph — the D3 Graph Gallery（Yan Holtz，网络图实现的分步示例集：输入格式、force 参数、交互、模板）",
+        "url": "https://d3-graph-gallery.com/network.html",
+        "tier": "website",
+        "lang": "en",
+        "free": true,
+        "covers": "网络图实现的分步路径：先讲输入数据必须是 nodes + links 的 JSON（给示例），再解释 d3-force 三种力（Link 按 link distance 拉近、Many-Body 正吸引/负排斥、Positioning 推向目标位置）与「先理解 force 参数」；然后 Step by step 从「Most basic」最小可运行例子开始，到 Interactivity（tooltip、拖拽、高亮某节点的关系）、Template（以研究者共同作者网络为模板）、Selection of blocks（Les Misérables 人物共现网络等真实数据例子），最后给 d3-force 文档与可调参数的测试场。",
+        "access": "免费网页，英文；示例代码可复制运行；无视频、无系统讲解布局算法分类。",
         "role": "supplement"
       }
     ]

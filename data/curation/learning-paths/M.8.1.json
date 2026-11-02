@@ -71,6 +71,24 @@
     "finding": "实际打开课程页读到逐节目录，确认第二章有范数、谱半径与病态方程组处理的连续 6 节，正是条件数教学所在；课程页未出现「后向误差/后向稳定性」字样。"
    },
    "added_by": "review/pi-additions/M.8.1.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "数值线性代数（Trefethen、Bau；陆金甫、关治译）",
+   "url": "https://lib2.buct.edu.cn/bookInfo_0100041518.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "配现有中文数值分析课程读第14–17讲，区分前向误差、后向误差和条件数，用Householder/回代的分析解释后向稳定性。",
+   "access": "公开书目信息与目录可核对范围；全文需购买或经合法图书馆借阅，本轮未购买、未读收费全文。",
+   "publisher": "人民邮电出版社中文译本；北京化工大学图书馆正式馆藏与目录",
+   "evidence": {
+    "url": "https://lib2.buct.edu.cn/bookInfo_0100041518.html",
+    "location": "第14–17讲稳定性、Householder与回代稳定性",
+    "finding": "大学正式馆藏核实中文译本、译者、ISBN 7-115-15168-7和逐讲目录。与同着原版的条件/稳定性部分对应；范围依据目录，未读译本收费全文。"
+   },
+   "added_by": "review/verified-additions/M.8.1.json"
   }
  ],
  "topics": [
@@ -130,6 +148,11 @@
      "source": "zh1",
      "section": "算法稳定性部分（分 P 未细分，无法确认後向稳定性讲次）",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "第14–17讲：稳定性及其在Householder、回代中的分析",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -139,7 +162,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文没有明确的後向稳定性章节；广西课程可能涉及但无法逐讲核对。英文 18.335J 的 stability/accuracy 讲义覆盖。"
+   "note": "中文没有明确的後向稳定性章节；广西课程可能涉及但无法逐讲核对。英文 18.335J 的 stability/accuracy 讲义覆盖。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
   },
   {
    "topic": "直接/迭代线性求解与特征值计算",
@@ -168,7 +191,7 @@
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh2",
@@ -185,11 +208,13 @@
     {
      "source": "r7-zh1",
      "read": "在中国大学 MOOC 学东北大学《数值分析》第二章 2.9–2.14：先掌握向量/矩阵范数与谱半径，再看「线性方程组的固有形态」和「病态方程组的处理」，练习估计 cond(A) 与误差放大倍数。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "配现有中文数值分析课程读第14–17讲，区分前向误差、后向误差和条件数，用Householder/回代的分析解释后向稳定性。"
     }
    ],
-   "gaps": [
-    "后向稳定性"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -286,6 +311,14 @@
    "query_or_url": "徐树方 数值线性代数 北京大学出版社 目录 误差分析 条件数 稳定性",
    "result": "只找到百度百科条目（第一章导言列「敏度分析与误差分析」等五节）与 Anna's Archive/Scribd 的盗版 PDF 链接（按规则不采用）；没有出版社官网目录页可核，未登记付费来源。",
    "by": "review/pi-additions/M.8.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://lib2.buct.edu.cn/bookInfo_0100041518.html",
+   "result": "大学正式馆藏核实中文译本、译者、ISBN 7-115-15168-7和逐讲目录。与同着原版的条件/稳定性部分对应；范围依据目录，未读译本收费全文。",
+   "by": "review/verified-additions/M.8.1.json"
   }
  ],
  "findings": [
@@ -294,23 +327,11 @@
   "条件数与後向稳定性在中文没有可核的专门教材；广西课程可能涵盖，但没有标题证据，故不假报 covered。",
   "浮点由台大 CH1 明确覆盖，直接／迭代求解与特徵值由广西课程教材主题覆盖；zh 路线仍因条件数／後向稳定性 partial。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "后向稳定性",
-   "source": "en1",
-   "reason": "本轮查了：文字——中文只有数值分析课程大纲提到「病态问题与条件数」「稳定性分析」，没有把后向误差/后向稳定性作为独立概念的讲义（fast.ai 中文翻译博客不算原创教学）；视频——中文 MOOC 的稳定性章节指的是 ODE 单步法稳定性（东北大学 7.10–7.11、华科 5.3–5.4），线性方程组部分只到条件数与病态方程组（东北大学 2.13–2.14、华科 6.5 误差分析），没有后向稳定性专讲；正版付费——徐树方《数值线性代数》等中文教材为付费书，未购买、未读正文。故用 en1（18.335J）的后向稳定性内容补。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.8.1.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "误差、稳定性与数值线性代数",
  "description": "浮点数、条件数、后向稳定性、直接/迭代线性求解与特征值计算。",
  "applied_additions": [
-  "review/pi-additions/M.8.1.json@2ce211434f"
+  "review/pi-additions/M.8.1.json@2ce211434f",
+  "review/verified-additions/M.8.1.json@2a1a527de2"
  ]
 }

@@ -115,6 +115,25 @@
     "finding": "正文解释安全内核是参照监视器的实现，应尽可能精简以便正确性验证，并区分安全周界内外的软件。"
    },
    "added_by": "review/main-additions/S.5.1.json"
+  },
+  {
+   "key": "closure-zh1",
+   "lang": "zh",
+   "title": "完整性条件下无干扰模型（张帆、陈曙、桑永宣等，《通信学报》2011 年 32 卷 10 期，78–85 页；以 Rushby 的无干扰工作为基础，给出视图划分系统、动作等价关系与等价自动机的无干扰推演）",
+   "url": "https://www.joconline.com.cn/zh/article/74413068",
+   "tier": "material",
+   "free": true,
+   "role": "reference",
+   "covers": "中文学术文献里对「非干扰」的形式化处理：摘要明确「以 Rushby 的无干扰工作为基础，对完整性条件下的无干扰模型进行了研究」；指出 Rushby 定义的「视图划分系统」与「基于引用监视器假设的系统」在完整性条件下与机密性条件下一样都满足无干扰；给出 Biba 模型的无干扰解释；提出「动作等价关系」并用它研究完整性条件下的信息流释放问题；提出「等价自动机」与「纯化等价自动机」两个图形化工具，用于帮助进行完整性无干扰推演。",
+   "access": "《通信学报》官网免费可读题录与中英文摘要，正文需按期刊渠道获取（本轮只读到摘要与题录，未读全文、未购买）；中文；属研究论文，不是入门教学，也没有给出从「非干扰定义 → 展开条件 → 归纳证明」的完整教学链条。",
+   "publisher": "《通信学报》（中国通信学会主办），2011 年第 32 卷第 10 期",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.joconline.com.cn/zh/article/74413068/",
+    "location": "文章首页题录「完整性条件下无干扰模型 / Noninterference model for integrity / 通信学报 2011年32卷第10期 页码：78-85」与摘要段",
+    "finding": "实际打开读到摘要原文：「以Rushby的无干扰工作为基础，对完整性条件下的无干扰模型进行了研究：指出了Rushby所定义的视图划分系统和基于引用监视器假设的系统在完整性条件下和机密性条件下一样都是满足无干扰的；给出了Biba模型的无干扰解释；提出了动作等价关系，并利用动作等价关系研究了完整性条件下的信息流释放问题；提出了等价自动机和纯化等价自动机的观点，并说明了如何利用这2个图形化的工具帮助进行完整性无干扰推演。」确认中文文献里确实有非干扰的严格定义与推演方法，但这是论文摘要级材料。"
+   },
+   "added_by": "review/closure-additions/S.5.1.json"
   }
  ],
  "topics": [
@@ -179,6 +198,11 @@
      "source": "zh1",
      "section": "信息流相关段落仅作背景提及",
      "extent": "partial"
+    },
+    {
+     "source": "closure-zh1",
+     "section": "摘要：以 Rushby 的无干扰工作为基础、视图划分系统、动作等价关系、等价自动机与纯化等价自动机的无干扰推演、Biba 模型的无干扰解释",
+     "extent": "partial"
     }
    ],
    "en": [
@@ -188,7 +212,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文没有非干扰（noninterference）的定义、类型系统与证明，属实质缺口。"
+   "note": "中文没有非干扰（noninterference）的定义、类型系统与证明，属实质缺口。；这份中文期刊文献证明中文里「非干扰」不是一个只有译名的概念：它明确以 Rushby 的无干扰为基础，用「视图划分系统」刻画观察者能看到什么、用「动作等价关系」刻画两次执行在观察者看来是否相同，并用等价自动机做无干扰推演——这正是非干扰定义与归纳证明所需的三个零件。但它是研究论文且只读到摘要，既没有教学式的定义展开，也没有可跟着做的证明练习，故只记 partial，不据此关闭缺口。"
   },
   {
    "topic": "形式验证和可信基",
@@ -253,6 +277,10 @@
     {
      "source": "main-zh-tcb",
      "read": "读清华社样章中参照监视器与安全内核两节，说明为什么可信计算基要小到能被验证。"
+    },
+    {
+     "source": "closure-zh1",
+     "read": "只用它做术语与框架对照：读摘要，抄下「视图划分系统（观察者能观察到什么）」「动作等价关系（两次执行何时对观察者等价）」「等价自动机（如何做无干扰推演）」三个概念，然后回到英文主资源 15-316 的定义，用中文把这三者一一对应到「系统执行 → 观察者视图 → 不可区分 → 非干扰」的链条上，确认自己没有把非干扰误当成「保密/访问控制」。"
     }
    ],
    "gaps": [
@@ -366,6 +394,45 @@
    "query_or_url": "https://www.tup.com.cn/upload/books/yz/107490-01.pdf",
    "result": "清华社样章讲参照监视器与安全内核，采纳为可信基材料。",
    "by": "review/main-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "非干扰 无干扰性 noninterference 信息流 安全 中文 讲义 定义 证明",
+   "result": "命中最主要的仍是英文 UT CS361《Lecture 17: Non-Interference》、CCF 术语快线「信息流安全」词条（打开后被 WAF/JS 挑战挡住，只返回 appkey 脚本，读不到正文）、以及《完整性条件下无干扰模型》（通信学报 2011）。后者打开读到摘要，采纳为 closure-zh1（role=reference，只记 partial）。",
+   "by": "review/closure-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息流安全 模型 讲义 无干扰 多级安全 教材 章节 中文 大学 课程",
+   "result": "命中中科院大学《人工智能安全》课程大纲（与信息流无关）与北理工《信息系统安全与对抗实践》MOOC 页（无相关章节）。没有中文课程或教材章节讲非干扰。",
+   "by": "review/closure-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息流安全 无干扰 类型系统 讲义 课件 中文 安全 课程 pdf 展开 传递性",
+   "result": "返回的都是非学术内容（某民间组织的网络与通讯安全教程 PDF、某地的资安教材），与信息流类型系统/非干扰无关，未采纳。",
+   "by": "review/closure-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "（未再单独检索付费教材）",
+   "result": "上一轮已查过付费教材渠道（只找到《操作系统安全》百科条目，无可核目录）；本轮时间集中在文字与课程两条线，未再开付费检索，故不对「中文教材一定没有」下结论。",
+   "by": "review/closure-additions/S.5.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "形式化方法 精化 非干扰 教材 出版社 目录（最终复核）",
+   "result": "清华出版社CISSP目录有非干扰模型小节，形式化方法导论侧重模型检验；目录范围仍不足以核实当前缺项的形式化推理教学。"
   }
  ],
  "findings": [
@@ -374,24 +441,26 @@
   "英文 15-316 覆盖策略模型、类型系统非干扰、可信基与模型检测；协议层由 ProVerif 手册补，两者合起来完整。",
   "[review/pi-additions/S.5.1.json] 未解决 zh「非干扰」：两轮中文检索（“非干扰/无干扰/信息流安全/noninterference”组合）只得到英文讲义与一篇中科大形式化方法教研论文，未找到用中文讲 noninterference 定义、格/安全级别、类型系统与证明的材料；本轮不据此断言“中文完全没有”，仅说明未检索到可登记来源（Tavily 余量已用于其他技能）。",
   "[review/pi-additions/S.5.1.json] 未解决 zh「形式验证和可信基」：只解决一半：形式验证部分已由 r7-zh1 覆盖（Dolev-Yao + BAN + ProVerif/Tamarin/Spin + TLS 1.2 案例），但“可信基/引用监控器”的可操作中文教学仍缺——既有 zh2（中科大课件）只有 TCG/TPM 与可信计算概述，zh1（卿斯汉综述）是 2003 年综述；北大 Coursera《操作系统与虚拟化安全》有 M7 安全模型、M8 安全体系结构，但模块内部讲次无法核对（Coursera 只公开模块标题）。故记 partial。",
-  "[review/pi-additions/S.5.1.json] 未解决 zh「主资源」：need_primary 未解决：中文没有一门以“协议验证与信息流安全”为主线的免费课程或教材可核对到章节目录。已试：中国大学MOOC/学堂在线检索（无该主题课程）、quant67 系列（单篇长文，非课程）、中科大形式化方法教研论文（教研讨论，不是教材）、北大 Coursera（OS 与虚拟化安全，非协议验证）。可用替代是英文 CMU 15-316 + ProVerif 手册（既有 en1/en2）。"
+  "[review/pi-additions/S.5.1.json] 未解决 zh「主资源」：need_primary 未解决：中文没有一门以“协议验证与信息流安全”为主线的免费课程或教材可核对到章节目录。已试：中国大学MOOC/学堂在线检索（无该主题课程）、quant67 系列（单篇长文，非课程）、中科大形式化方法教研论文（教研讨论，不是教材）、北大 Coursera（OS 与虚拟化安全，非协议验证）。可用替代是英文 CMU 15-316 + ProVerif 手册（既有 en1/en2）。",
+  "[review/closure-additions/S.5.1.json] 未解决 zh「非干扰」：仍缺中文的「非干扰定义 + 展开条件 + 归纳证明」教学。留给后续轮次的线索：①《通信学报》2011 那篇若能拿到全文，可确认它是否给出可跟做的推演步骤；②CCF 术语快线「信息流安全」词条（ccf.org.cn 2021-09-17）若在可执行 JS 的环境打开，可能有关键术语的中文定义，值得再试一次；③中文信息流安全方向的学位论文通常会在第 2 章综述里把非干扰定义与传递性写清楚，但本轮未检索学位论文库。"
  ],
  "cross_language_fallbacks": [
   {
    "lang_missing": "zh",
    "topic": "非干扰",
    "source": "en1",
-   "reason": "非干扰（Goguen–Meseguer 无干扰、基于类型系统的信息流控制）在中文侧三个渠道都没找到教学：文字检索只有英文讲义（UT CS361 Lecture 17）、一篇华南师大学报论文和一个读不出正文的 CCF 术语页；B 站站内检索只有渗透测试与毕设选题视频；付费教材检索只找到《操作系统安全》百科条目，没有可核目录。因此这一知识点改读英文主资源。",
+   "reason": "已检索中文文字、视频与付费教材。研究论文及CISSP中文教材有非干扰模型的介绍，但本轮未核到与本技能形式化建模、信息流约束及证明练习相配的中文教学。继续用CMU 15-316的非干扰单元补读；不据此断言中文材料不存在。",
    "searched_channels": [
     "text",
     "video",
     "paid"
    ],
-   "confirmed_by": "review/main-additions/S.5.1.json"
+   "confirmed_by": "review/closure-additions/S.5.1.json"
   }
  ],
  "applied_additions": [
   "review/pi-additions/S.5.1.json@ea1de88ef4",
-  "review/main-additions/S.5.1.json@8c5a0807f0"
+  "review/main-additions/S.5.1.json@8c5a0807f0",
+  "review/closure-additions/S.5.1.json@2f6444c3a5"
  ]
 }

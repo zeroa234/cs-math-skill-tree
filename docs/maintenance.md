@@ -44,7 +44,7 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 | `python -X utf8 scripts/merge_skills.py merge/drop/move-source/drop-source …` | 改技能划分时搬数据：前置、理由、课程证据、练习题、导览图来源、学习资源、英文名一起改，见下面“改技能划分” |
 | `scripts/archive_research.py` | 把审核过的检索结果从 `temp/research/nodes/` 归档到 `data/research/nodes/` |
 | `node tests/screenshot.mjs`、`node tests/screenshot-panel.mjs <id>` | 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器），含深链回归检查 |
-| `node scripts/readme-images.mjs` | 按当前构建重截 README 的四张预览图 `docs/images/{overview,skill-map,goal,guide}.webp`（1920×1080 深色，转 WebP 要 Python + Pillow）；数据变了就重跑。封面 `cover.webp` 另由 `scripts/promo/cover.py` 生成 |
+| `node scripts/readme-images.mjs` | 按当前构建重截 README 的五张预览图 `docs/images/{overview,skill-map,goal,guide,bilingual-path}.webp`（1920×1080 深色，转 WebP 要 Python + Pillow）；数据变了就重跑。封面 `cover.webp` 另由 `scripts/promo/cover.py` 生成 |
 | `python -X utf8 scripts/package_web.py [标签]` | 把网页打成 `output/cs-math-skill-tree-<标签>.zip` 分享给别人（标签默认是当天日期，发 Release 时用版本号；解压后双击 index.html；含 README.txt 和第三方许可证，README.txt 里“前置待核实”的个数从数据里数）。先跑 build |
 | `node tests/a11y.mjs [report.json]` | axe-core 按 WCAG 2.2 AA 审计 15 个界面状态（含知识导览图），并跑一遍纯键盘的主流程；结论见 `docs/hci-ux-review.md` |
 | `scripts/promo/`（`capture-app.mjs`、`build-graph.mjs`、`word-times.mjs`、`blender-tree.py`、`render-blender.sh`、`render.sh`） | 宣传片：页面截图、动画数据、Blender 3D 技能树、成片。画面代码在 `src/promo/`（Remotion），文稿 `data/promo/script.json`，步骤和坑见 `docs/promo-video.md` |
@@ -75,7 +75,7 @@ node scripts/check-learning-paths.mjs --require-all
 node tests/resources.mjs
 ```
 
-发布前 `--require-all` 必须通过：覆盖全树，每个语言的必学缺口要么补齐，要么有查过三类渠道的跨语言回退。页面顶部显示实际覆盖数，不用“有中文入口的技能数”代替完整路线数。
+构建也要求全树都有路线、每个必学缺口都有已研究的跨语言补充；发布前 `--require-all` 必须通过：覆盖全树，每个语言的必学缺口要么补齐，要么有查过三类渠道的跨语言回退。页面顶部显示实际覆盖数，不用“有中文入口的技能数”代替完整路线数。
 
 #### 规则补充（2026-11-02 第七轮）
 
@@ -94,7 +94,9 @@ node scripts/archive-learning-paths.mjs --reviewed <ids>            # 只校验
 node scripts/archive-learning-paths.mjs --archive --reviewed <ids>  # 写入 data/curation/learning-paths 与 learning-resources.json
 ```
 
-`learning_path_merge.py`（需要 Windows，用系统的 `LCMapStringEx` 把中文转成简体）从已归档记录（没有就用原始研究记录）出发，按文件名顺序叠加补充文件，按章节引用重新计算每种语言的覆盖和缺口，删掉已不是缺口的跨语言补充，每种语言只留覆盖知识点最多的一个主资源。已并入归档记录的补充文件按内容哈希记录，文件之后再被改写会报错，不会悄悄漏掉；所以复核修正要另写新文件，不要改已并入的文件。
+`learning_path_merge.py`（需要 Windows，用系统的 `LCMapStringEx` 把中文转成简体）从已归档记录（没有就用原始研究记录）出发，先叠加研究批次，再叠加 final-additions，之后是 publication/verified-additions，最后 main-additions；同组按文件名顺序叠加补充文件，按章节引用重新计算每种语言的覆盖和缺口，删掉已不是缺口的跨语言补充，每种语言只留覆盖知识点最多的一个主资源。任一合并失败时命令返回非零，禁止把上次残留的候选当作新结果归档。已并入归档记录的补充文件按内容哈希记录，文件之后再被改写会报错，不会悄悄漏掉；所以复核修正要另写新文件，不要改已并入的文件。
+
+统计报告用 `python -X utf8 scripts/report_learning_paths.py` 从已归档记录生成。覆盖数按实际教学引用与学习步骤计算，查阅参考不计入；付费目录支持范围判断，完整正文未读时必须写明。当前发布记录：192 个技能、891 个必学知识项，中文 189 条完整路线、英文 192 条，3 项中文需英文补读。
 
 视频字幕写进 `access`，核不了就写“未核对”和原因，不要猜：
 

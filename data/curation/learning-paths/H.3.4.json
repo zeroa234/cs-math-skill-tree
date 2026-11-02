@@ -52,6 +52,25 @@
     "location": "目录：12 Scheduling（12.1–12.6）、16.3 Factors Determining Execution Time、16.4 Basics of Execution Time Analysis；正文提到 safety-critical",
     "finding": "PDF 目录明确列 RM/EDF/互斥/多处理器调度与执行时间分析章节，正文讨论安全关键系统的认证需求。"
    }
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "嵌入式软件的时间分析（Peter Gliwa，中文译本）",
+   "url": "https://www.gliwa.com/media/cn_embeddedsoftwaretiming_gliwa_content.pdf",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "配现有RTOS课程读第4章时间参数；第5章比较静态分析、测量与调度分析，第6.6节理解实测值与静态界限为何会冲突，第7.3节分析共享数据和自旋锁的时间影响。不要把有限测试的最大值直接当作已证明的WCET。",
+   "access": "已核中文版本及公开目录；目录免费，完整教材须购买或合法借阅，本轮未读收费全文。 ISBN 9787302596530；链接为作者官方中文目录，出版社样章见证据记录。",
+   "publisher": "作者或出版社官方来源",
+   "evidence": {
+    "url": "https://www.gliwa.com/media/cn_embeddedsoftwaretiming_gliwa_content.pdf",
+    "location": "第4–5章、6.6、7.3",
+    "finding": "作者公司公布完整中文目录，包含静态代码分析、测量/追踪、静态调度分析、WCET案例与多核自旋锁；清华出版社样章和总书目确认正式译本。",
+    "publisher_sample": "https://www.tup.com.cn/upload/books/yz/092960-01.pdf"
+   },
+   "added_by": "review/verified-additions/H.3.4.json"
   }
  ],
  "topics": [
@@ -106,6 +125,11 @@
      "source": "zh1",
      "section": "未涉及 WCET 分析",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "4.1时间参数、5.3静态代码分析、5.5测量与6.6 WCET案例",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -115,7 +139,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文没有 WCET 测量/分析材料。"
+   "note": "中文没有 WCET 测量/分析材料。；补充同语言具体教学章节，与既有主课组合学习。"
   },
   {
    "topic": "资源共享与时间正确性分析",
@@ -130,6 +154,11 @@
      "source": "zh2",
      "section": "临界段保护/互斥实现",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "5.8–5.9调度模拟/静态调度分析，7.2–7.3并发、共享数据与自旋锁",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -139,12 +168,12 @@
      "extent": "covered"
     }
    ],
-   "note": "中文有优先级反转现象与临界段实现，缺阻塞时间/响应时间分析。"
+   "note": "中文有优先级反转现象与临界段实现，缺阻塞时间/响应时间分析。；补充同语言具体教学章节，与既有主课组合学习。"
   }
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -153,12 +182,13 @@
     {
      "source": "zh2",
      "read": "对照 FreeRTOS 的任务优先级/时间片/临界段实现。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "配现有RTOS课程读第4章时间参数；第5章比较静态分析、测量与调度分析，第6.6节理解实测值与静态界限为何会冲突，第7.3节分析共享数据和自旋锁的时间影响。不要把有限测试的最大值直接当作已证明的WCET。"
     }
    ],
-   "gaps": [
-    "最坏执行时间",
-    "资源共享与时间正确性分析"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -239,6 +269,14 @@
    "query_or_url": "实时系统 Jane W.S. Liu 中译本 出版社 目录 优先级天花板 资源访问控制",
    "result": "没有找到 Liu《实时系统》中译本或其他中文实时系统教材的出版社可核目录；结果只有英文讲义、CSDN 博客对优先级天花板的介绍和研究论文。付费渠道没有可用的中文教学，跨语言补充维持。",
    "by": "review/main-additions/H.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://www.gliwa.com/media/cn_embeddedsoftwaretiming_gliwa_content.pdf",
+   "result": "作者公司公布完整中文目录，包含静态代码分析、测量/追踪、静态调度分析、WCET案例与多核自旋锁；清华出版社样章和总书目确认正式译本。",
+   "by": "review/verified-additions/H.3.4.json"
   }
  ],
  "findings": [
@@ -249,36 +287,12 @@
   "[review/pi-additions/H.3.4.json] 未解决 zh「最坏执行时间」：本轮已查文字、视频与付费/官方渠道，中文没有讲 WCET 分析方法的系统教学；需主代理决定是否接受长期借用英文，或另找中文实时系统教材（本轮未能核到可公开验证的目录页）。",
   "[review/pi-additions/H.3.4.json] 未解决 zh「资源共享与时间正确性分析」：同上：中文缺阻塞时间/响应时间分析的教学，现有 zh1/zh2 只能算实现层 partial。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "最坏执行时间",
-   "source": "en1",
-   "reason": "中文三个渠道都查过：文字（两轮 Tavily，只有百科/专利/工具页与“用到 WCET”的研究论文）、视频（B 站两组关键词无相关课程）、付费/官方（无讲 WCET 分析的中文教材章节可核，FreeRTOS 中文文档正文取不到）。因此中文侧保持 partial，WCET 的方法（执行时间的影响因素、静态/测量分析思路）先借用英文 Lee & Seshia 第 16 章。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/H.3.4.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "资源共享与时间正确性分析",
-   "source": "en1",
-   "reason": "中文只有 RM 论文里对优先级反转的一句提及和 FreeRTOS 书里的临界段/互斥实现（旧记录 partial），没有阻塞时间/响应时间分析的中文教学；B 站与文字搜索均未找到。阻塞与互斥下的可调度性分析先借用 en1 第 12 章（scheduling + mutex/priority inversion）。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/H.3.4.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "实时系统",
  "description": "时限、调度可分析性、最坏执行时间、资源共享与时间正确性分析；安全关键系统只作应用背景。",
  "applied_additions": [
   "review/pi-additions/H.3.4.json@5dc10f9577",
-  "review/main-additions/H.3.4.json@49d5fa51e8"
+  "review/main-additions/H.3.4.json@49d5fa51e8",
+  "review/verified-additions/H.3.4.json@5dd2253a11"
  ]
 }

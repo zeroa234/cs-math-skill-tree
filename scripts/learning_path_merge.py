@@ -199,7 +199,7 @@ def build(id_, skills):
     # Final reviews can refer to sources introduced by the research batches.
     # Apply those batches first and the main agent's corrections last.
     found = glob.glob(os.path.join(REVIEW, "*-additions", id_ + ".json"))
-    review_order = {"final-additions": 1, "verified-additions": 2, "main-additions": 3}
+    review_order = {"final-additions": 1, "publication-additions": 2, "verified-additions": 2, "main-additions": 3}
     for p in sorted(found, key=lambda q: (review_order.get(os.path.basename(os.path.dirname(q)), 0), q)):
         tag = os.path.relpath(p, RAW).replace("\\", "/")
         digest = hashlib.sha1(open(p, "rb").read()).hexdigest()[:10]
@@ -300,6 +300,8 @@ def main(argv):
     print(f"{len(report)} candidates; gap topics zh {zh} / en {en}; "
           f"fallbacks {sum(len(r['fallbacks']) for r in report)}; dropped fallbacks {sum(r['dropped_fallbacks'] for r in report)}; "
           f"re-uploads lacking official check {sum(len(r['reupload_flags']) for r in report)}")
+    if errors:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

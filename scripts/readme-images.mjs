@@ -1,4 +1,4 @@
-// README preview screenshots (docs/images/{overview,skill-map,goal,guide}.webp) from the current build.
+// README preview screenshots from the current build, including the bilingual route detail.
 // usage: node scripts/readme-images.mjs   — needs Python with Pillow for the WebP step (run build first)
 import { chromium } from "playwright-core";
 import { execFileSync } from "node:child_process";
@@ -22,7 +22,8 @@ async function shot(name, steps) {
   await p.click("#btn-intro-ok");
   await steps(p);
   await p.waitForTimeout(800);
-  await p.screenshot({ path: path.join(shots, `${name}.png`) });
+  if (name === "bilingual-path") await p.locator(".learning-paths").screenshot({ path: path.join(shots, `${name}.png`) });
+  else await p.screenshot({ path: path.join(shots, `${name}.png`) });
   await ctx.close();
 }
 
@@ -43,6 +44,12 @@ await shot("guide", async (p) => {
   await p.waitForSelector(".markmap, svg.markmap", { timeout: 10000 }).catch(() => {});
   await p.waitForTimeout(1200);
 });
+await shot("bilingual-path", async (p) => {
+  await p.evaluate(() => { location.hash = "skill/P.1.1"; });
+  await p.waitForSelector(".learning-paths");
+  await p.locator(".learning-route").nth(1).evaluate(e => { e.open = true; });
+  await p.locator(".coverage-details").evaluate(e => { e.open = true; });
+});
 await browser.close();
 if (errors.length) throw new Error(errors.join("\n"));
 
@@ -50,8 +57,8 @@ const py = `
 import sys
 from PIL import Image
 src, dst = sys.argv[1], sys.argv[2]
-for n in ["overview", "skill-map", "goal", "guide"]:
+for n in ["overview", "skill-map", "goal", "guide", "bilingual-path"]:
     Image.open(f"{src}/{n}.png").convert("RGB").save(f"{dst}/{n}.webp", quality=82, method=6)
 `;
 execFileSync("python", ["-c", py, shots, path.join(ROOT, "docs/images")], { stdio: "inherit" });
-console.log("docs/images/{overview,skill-map,goal,guide}.webp");
+console.log("docs/images/{overview,skill-map,goal,guide,bilingual-path}.webp");

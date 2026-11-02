@@ -150,6 +150,24 @@
     "finding": "73 页课件，提纲与正文含 SAG、SAGA、SVRG 各小节。"
    },
    "added_by": "review/main-additions/M.7.4.json"
+  },
+  {
+   "key": "release-zh-stochastic",
+   "lang": "zh",
+   "title": "庞丽萍、肖现涛《最优化方法》：随机规划模型",
+   "url": "https://wz.dutp.cn/index/product/detail.html?id=3887",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "第6章补随机规划模型与求解；收敛分析配文再文公开课件第25讲第3节，组成独立中文路线。",
+   "access": "正版中文纸书；出版社公开目录已核对，完整正文需购买。本轮未购买或通读正文。",
+   "publisher": "出版社官方图书页面",
+   "evidence": {
+    "url": "https://wz.dutp.cn/index/product/detail.html?id=3887",
+    "location": "第6章随机规划模型，6.3–6.6，pp.141–162；第7章随机优化方法",
+    "finding": "大连理工大学出版社实际目录列出两阶段/多阶段随机线性规划、随机对偶动态规划、渐近对冲及习题；ISBN9787568529297。"
+   },
+   "added_by": "review/release-additions/M.7.4.json"
   }
  ],
  "topics": [
@@ -238,6 +256,16 @@
      "source": "main-zh-wen-book",
      "section": "1.5.3、4.4 随机优化问题（期望形式与样本近似）；8.7 随机梯度法的收敛性分析",
      "extent": "partial"
+    },
+    {
+     "source": "main-zh-wen-slides",
+     "section": "「3 收敛性分析」：一般凸函数下随机梯度算法的收敛性、可微强凸函数下随机梯度算法的收敛性（含迭代格式与假设）；「4 方差减小技术」中的动量方法图例",
+     "extent": "partial"
+    },
+    {
+     "source": "release-zh-stochastic",
+     "section": "第6章6.3随机规划模型、6.4两阶段、6.5多阶段、6.6随机规划算法及习题；收敛性配本路线文再文第25讲第3节",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -252,12 +280,12 @@
      "extent": "covered"
     }
    ],
-   "note": "此项组合「随机规划」与「收敛分析」：收敛分析中英文都有（zh1、en1），但 scenario／sample average approximation 的随机规划两边都没有；故两边都 partial，不假报 covered。；两阶段/多阶段随机规划的建模、SAA 近似及其收敛与 minimax 误差分析都在正文里，作者是该领域标准教材的作者，覆盖「随机规划与收敛分析」两半。；中文能学到期望形式的随机优化模型、用样本近似目标函数以及随机梯度法的收敛分析；两阶段补偿模型等经典随机规划内容中文仍没有找到，这一半保留英文 Shapiro 讲义的跨语言补充。"
+   "note": "此项组合「随机规划」与「收敛分析」：收敛分析中英文都有（zh1、en1），但 scenario／sample average approximation 的随机规划两边都没有；故两边都 partial，不假报 covered。；两阶段/多阶段随机规划的建模、SAA 近似及其收敛与 minimax 误差分析都在正文里，作者是该领域标准教材的作者，覆盖「随机规划与收敛分析」两半。；中文能学到期望形式的随机优化模型、用样本近似目标函数以及随机梯度法的收敛分析；两阶段补偿模型等经典随机规划内容中文仍没有找到，这一半保留英文 Shapiro 讲义的跨语言补充。；补上「收敛分析」这一半的中文课程级材料：此前中文只有 d2l 的优化算法章节（讲算法与直觉，不含收敛定理）与刘浩洋等教材的章节索引，这一讲把 SGD 在凸 / 强凸可微两种假设下的收敛结论与证明框架直接写在中文课件里。但「随机规划」那一半（两阶段、追索函数、机会约束、样本平均近似 SAA 及其收敛）本轮仍未找到可打开的中文教学，故整条只记 partial，不据此关闭缺口。；现有免费文再文课件给随机梯度的凸/强凸收敛分析，新教材补不同于SGD的随机规划模型与算法；两者共同覆盖组合知识项。"
   }
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -278,11 +306,17 @@
     {
      "source": "main-zh-wen-slides",
      "read": "对照第 25 讲课件，推导 SVRG 一轮外循环的更新，并比较它与普通随机梯度法的方差。"
+    },
+    {
+     "source": "main-zh-wen-slides",
+     "read": "读第 25 讲：先抄下 SGD 的迭代格式与「一般凸」「可微强凸」两组假设，再逐条对照收敛性分析里给出的收敛率结论，写出每组假设各自用到哪几条（有界方差、步长条件、强凸参数）；最后用动量方法的图例解释「病态问题上普通 SGD 为什么来回震荡」，并在一个小二次函数上跑 SGD 与 momentum 验证收敛速度差异。"
+    },
+    {
+     "source": "release-zh-stochastic",
+     "read": "读第6章，建立一个两阶段带追索的随机线性规划并解释信息何时揭示；再读文再文第25讲第3节，逐项列出随机梯度收敛界所用假设。"
     }
    ],
-   "gaps": [
-    "随机规划与收敛分析"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -409,6 +443,62 @@
    "query_or_url": "文再文 最优化 建模 算法与理论 随机优化 SVRG SAGA 方差缩减 课件",
    "result": "找到作者主页的教材与课件，课件第 25 讲含 SAG/SAGA/SVRG，采纳。",
    "by": "review/main-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "随机规划 教材 中文 出版社 目录 两阶段 机会约束 样本平均近似",
+   "result": "只命中知乎《初识随机规划(2)：两阶段随机规划(一个详细的例子)》、一篇随机二阶锥 SAA 论文摘要、百度百科「随机规划」词条。没有出版社目录页，也没有可直接读的教材正文。",
+   "by": "review/closure-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "随机规划 讲义 课程 中文 pdf 随机优化 收敛性 证明",
+   "result": "命中中国运筹学会《中国数学规划新近进展及展望》PDF（把随机规划作为分支简介，属综述）、知乎两阶段例子、清华《运筹学》教材 PDF 镜像（不采用镜像）、中科大《概率论》讲义。综述只给分支定位，不足以教建模。",
+   "by": "review/closure-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "随机规划 王金德 刘宝碇 不确定规划 教材 目录 出版社",
+   "result": "只命中百度百科「随机规划与模糊规划」（刘宝碇，清华大学出版社）词条，页面无目录且百度百科此前对抓取返回 403；未能核到章节。site:tup.com.cn 检索「随机规划 教材 目录」命中的是一本概率论教材，不是随机规划。",
+   "by": "review/closure-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "两阶段随机规划 中文 讲解 场景 第一阶段 第二阶段 补偿 决策 例子 教程",
+   "result": "搜索结果摘要里能看到知乎两阶段模型的公式（max E_p[h(z,K)] − Σ f_i z_i，z_i∈{0,1}；战略/战术/作业三层决策）与《随机规划问题的两种分解算法研究》（山东大学学报 2006）、《「货到人」拣选系统的两阶段随机规划模型》（汉斯，开放获取）。但知乎正文抓取返回 403、CSDN 转载返回 521，无法打开正文；期刊论文是研究文献不是教学，故均未登记。",
+   "by": "review/closure-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "随机规划 大学 课程 章节 运筹学 中国大学MOOC 学堂在线 讲授 不确定性优化",
+   "result": "命中北京理工大学《运筹学》（中国大学MOOC）与另一门《运筹学》。打开北理工课程页读到大纲：优化与搜索、线性规划、对偶模型、运输问题、网络模型、整数规划、目标规划、动态规划与排队论——**不含随机规划**。中文 MOOC 这条线再次确认没有。",
+   "by": "review/closure-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://faculty.bicmr.pku.edu.cn/~wenzw/optbook/lect/25-lect-sto-ch.pdf（文再文第 25 讲）",
+   "result": "读到目录含「3 收敛性分析（一般凸/可微强凸）」与动量方法图例，采纳为 closure-zh1 覆盖「收敛分析」一半。",
+   "by": "review/closure-additions/M.7.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://wz.dutp.cn/index/product/detail.html?id=3887",
+   "result": "大连理工大学出版社实际目录列出两阶段/多阶段随机线性规划、随机对偶动态规划、渐近对冲及习题；ISBN9787568529297。",
+   "by": "review/release-additions/M.7.4.json"
   }
  ],
  "findings": [
@@ -416,26 +506,16 @@
   "南京大学暑期班是江苏省运筹学会官方账号、张立卫主讲，内容与 Robbins–Monro／Kiefer–Wolfowitz 对应；比第三方搬运可靠。",
   "原英文 ELE522 的 covers 已如实承认没有随机规划与 Robbins–Monro；本次保留这个缺口，没有把 ELE522 说成三项都完整。",
   "中文方差缩减只有 33 分钟入门单讲，没有 SVRG/SAGA 分析；此项中文 partial。",
-  "「随机规划与收敛分析」两边都只覆盖收敛分析，没有 scenario/SAA；故 zh/en 都 partial，并在 gaps 写明。"
+  "「随机规划与收敛分析」两边都只覆盖收敛分析，没有 scenario/SAA；故 zh/en 都 partial，并在 gaps 写明。",
+  "[review/closure-additions/M.7.4.json] 未解决 zh「随机规划与收敛分析」：随机规划（两阶段/追索/机会约束/SAA 及其收敛）在中文侧仍未找到可打开的免费教学，原因见 fallback_confirm。留给后续轮次的线索：①若能拿到刘宝碇《随机规划与模糊规划》实体书或可读目录，可确认其两阶段与机会约束章节；②知乎「初识随机规划」系列若能在可访问环境打开（p/492746468、p/427314149），是现成的最佳中文入门例子，但本轮 403；③山东大学学报 2006《随机规划问题的两种分解算法研究》可作为「两阶段模型 + 分解算法」的中文参考（研究文献，需自行判定能否当教学用）。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "随机规划与收敛分析",
-   "source": "r7-en2",
-   "reason": "中文查了课程/讲义/视频三个渠道：大学课程页与中文 MOOC 均无随机规划课；B 站只有电力系统应用讲座（场景法两阶段+CVaR）与运筹学基础课（两阶段法是线性规划单纯形法，不是随机规划）；zh1 南大暑期班分P 只有日期编号，无法核对是否讲到随机规划。故用 Shapiro 的英文讲义（r7-en2）补建模、SAA 与收敛分析。 正版付费——中文随机优化/随机规划教材只有百科与书目信息，没有出版社目录页可核，未购买。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.7.4.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "随机优化",
  "description": "随机梯度、随机逼近、方差缩减、随机规划与收敛分析。",
  "applied_additions": [
   "review/pi-additions/M.7.4.json@d71e735a91",
-  "review/main-additions/M.7.4.json@cac521897d"
+  "review/main-additions/M.7.4.json@cac521897d",
+  "review/closure-additions/M.7.4.json@c2ec516096",
+  "review/release-additions/M.7.4.json@3ca58add9f"
  ]
 }

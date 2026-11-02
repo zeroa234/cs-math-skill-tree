@@ -1,0 +1,338 @@
+{
+ "id": "V.2.3",
+ "name": "可访问性与包容性设计",
+ "description": "多种能力和设备条件、辅助技术、可感知/可操作与设计评估。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "W3C Web Accessibility Initiative (WAI) Tutorials（官方免费教程：Accessibility Fundamentals / Design & Develop / Test & Evaluate）",
+   "url": "https://www.w3.org/WAI/tutorials/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Accessibility Fundamentals（残障类型、辅助技术如何配合浏览器）、Design & Develop（图片替代文本、表格、表单、菜单、页面结构等可感知/可操作做法）、Test & Evaluate（评估方法与工具）；面向 Web，非 Web 端（桌面/移动原生、硬件辅助设备）不在其中。",
+   "access": "W3C 官方免费，无需注册；英文（另有 Bahasa Indonesia 翻译，无中文版）。",
+   "publisher": "W3C Web Accessibility Initiative (WAI)",
+   "evidence": {
+    "url": "https://www.w3.org/WAI/tutorials/",
+    "location": "顶部语言栏（English / Bahasa Indonesia / All Translations）与 Design & Develop、Test & Evaluate 导航",
+    "finding": "页面显示“This page in: English / Bahasa Indonesia / All Translations”，并列出 Accessibility Fundamentals、Design & Develop（Tips for Writing/Designing/Developing、Audio & Video Media）、Test & Evaluate 等分区。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "MDN 中文：无障碍（学习 Web 开发模块）",
+   "url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Accessibility",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "中文讲解“无障碍”的含义（不同身体/精神障碍、键盘/触摸/屏幕阅读器/语音助手等访问方式）、HTML 语义与最佳实践、CSS/JS 中的无障碍注意点、用浏览器无障碍检查器做检查；面向 Web。",
+   "access": "MDN 中文页免费（CC BY-SA），社区从英文翻译；含视频与外链，字幕未核对。",
+   "publisher": "Mozilla / MDN 中文社区",
+   "evidence": {
+    "url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Accessibility",
+    "location": "模块开头“概述”“指南”“评估”三节",
+    "finding": "中文正文写“当有人将一个网站描述为‘无障碍’时，意味着不论用户访问 Web 的方式如何，任何一个用户（甚至是有身体或精神障碍的用户）都能使用网站全部的特性和内容”，并列出键盘/鼠标/触摸屏/屏幕阅读器/语音助手与无障碍检查器。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "W3C《Web 内容无障碍指南 WCAG 2.1》授权中文翻译",
+   "url": "https://www.w3.org/Translations/WCAG21-zh/",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "可感知、可操作、可理解、鲁棒四原则与逐条成功准则、符合性等级；是规范条文，不是教学课程，也不含评估操作教程；2.2 新增准则需查英文。",
+   "access": "W3C 授权中文规范，免费；为 2.1 版。",
+   "publisher": "W3C / 中文授权翻译",
+   "evidence": {
+    "url": "https://www.w3.org/Translations/WCAG21-zh/",
+    "location": "目录：1. 可感知 / 2. 可操作 / 3. 可理解 / 4. 鲁棒",
+    "finding": "中文规范页按四大原则与成功准则组织，逐条给符合性要求，属标准条文。"
+   }
+  },
+  {
+   "key": "final-zh1",
+   "lang": "zh",
+   "title": "《了解无障碍功能（Learn Accessibility）》中文版课程——测试三单元：自动化无障碍功能测试 / 手动无障碍功能测试 / 辅助技术测试（web.dev，Google 官方课程页）",
+   "url": "https://web.dev/learn/accessibility/test-manual?hl=zh-cn",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "测试部分按「自动化 → 手动 → 辅助技术」三个单元递进：自动化单元讲工具能覆盖与不能覆盖的 WCAG 检查点；手动单元给出「可自动化 / 无法自动化」对照表（纯色对比度可自动、渐变与图片上的文字对比度不可；替代文本「存在」可自动、「准确且分配正确」不可等），并逐项讲键盘检查（Tab 顺序是否符合逻辑、焦点指示器是否可见、是否会被困住）、以视觉为中心的审核与常规内容检查；辅助技术单元讲屏幕阅读器测试基础、低技术/高科技/硬件/软件四类 AT 与「在整个测试流程中使用多种 AT」。",
+   "access": "免费，无需注册；中文页面由 Google 用 AI 翻译（页面自述「Google 会使用 AI 技术将内容翻译成您偏好的语言。AI 翻译可能包含错误」），不是人工中译；含练习与单元间的前后衔接要求。",
+   "publisher": "web.dev（Google Chrome 团队）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://web.dev/learn/accessibility/test-manual?hl=zh-cn",
+    "location": "「手动无障碍功能测试」正文：手动测试基础知识、可自动化/无法自动化对照表、手动测试的类型、键盘检查；另打开 https://web.dev/learn/accessibility/test-automated?hl=zh-cn（自动化无障碍功能测试）与 https://web.dev/learn/accessibility/test-assistive-technology?hl=zh-cn（辅助技术测试）",
+    "finding": "手动单元正文写「自动化工具无法涵盖 WCAG 中确定的所有成功标准，因此您必须运行自动化无障碍功能测试并持续进行测试」，并用表格列出可/不可自动化的检查项；键盘检查一节列出「网页或功能是否需要使用鼠标」「Tab 键顺序是否符合逻辑且直观」「键盘焦点指示器是否始终可见」等问题；辅助技术单元正文列出声控/眼动/开关/盲文设备与屏幕阅读器，并进入「屏幕阅读器测试基础知识」。三单元构成完整的评估流程教学。"
+   },
+   "added_by": "review/final-additions/V.2.3.json"
+  },
+  {
+   "key": "final-zh2",
+   "lang": "zh",
+   "title": "《辅助功能测试》（Microsoft Learn 中文，Windows 应用辅助功能设计与测试文档）",
+   "url": "https://learn.microsoft.com/zh-cn/windows/apps/design/accessibility/accessibility-testing",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "官方中文的辅助功能测试流程：先建立「以自动化为先」的工作流（把可访问性测试当发布门槛、定义基准、在 CI 里跑自动检查、关键问题让构建失败、为人判断留手动屏幕阅读器与键盘验证）；再逐项给测试步骤——键盘可访问性（完整且符合逻辑的 Tab 顺序、方向键、Enter/空格触发）、可见文本对比度（用对比度工具，引 WCAG 2.2 G18）、高对比度主题、显示缩放/DPI、讲述人验证主场景（Win+Ctrl+Enter 启动、Tab/方向键/Caps Lock+方向键导航、逐个控件听名称/状态/类型、Caps Lock+Enter 调用操作、表格行列标题、Caps Lock+Shift+Enter 搜索、关显示器仅用键盘+讲述人走完主流程、Control+Caps Lock+F12 开发者模式）、讲述人触摸模式、用 Inspect/UIA 验证检查 UI 自动化树、AccEvent 事件监视。",
+   "access": "微软官方文档，免费；中文为官方本地化页面（同页有「使用英语阅读」切换）；面向 Windows 原生应用，Web 端需自行对应。",
+   "publisher": "Microsoft（Microsoft Learn，Windows 应用开发文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows/apps/design/accessibility/accessibility-testing",
+    "location": "「辅助功能测试过程」「测试键盘可访问性」「验证可见文本的对比度」「在高对比度下验证您的应用程序」「使用显示设置来验证您的应用」「使用讲述人验证主要应用场景」（含鼠标键盘与触摸模式两套步骤）「检查应用的 UI 自动化表示形式」",
+    "finding": "读到逐条测试步骤，例如讲述人测试写「按 Windows 徽标键 + Ctrl + Enter 启动讲述人…使用 Tab 键、箭头键和 Caps Lock + 箭头键导航…按 Caps Lock + Enter 验证是否可以使用讲述人调用其操作…关闭监视器并尝试仅使用键盘和讲述人完成主要应用场景」，以及对比度测试引 WCAG 2.2 G18、UIA 树用 Inspect 检查。这是可照着做的中文评估流程，不只是原则说明。"
+   },
+   "added_by": "review/final-additions/V.2.3.json"
+  },
+  {
+   "key": "final-zh3",
+   "lang": "zh",
+   "title": "《无障碍评级测试方法介绍》（中国互联网信息应用适老化及无障碍公共服务平台，YD/T 1822-2008 信息无障碍系列标准的测试方法）",
+   "url": "https://www.wcag.org.cn/sy/yybztx/bzjd/ff/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "按四大原则组织的测试方法目录：4. 内容的可感知性测试（4.1 为所有非文本内容提供替代文本测试、4.2 为多媒体信息提供同步替代文本测试、4.3 信息和结构可以与表现相分离测试、4.4 前景信息和背景区分测试）；5. 内容中的接口组件的可操作性测试（5.1 所有功能都可通过键盘接口操作测试、5.2 控制时限、5.3 避开光敏性内容、5.4 提供查找内容机制、5.5 帮助用户避免错误）；6. 内容与控制的可理解性测试；7. 兼容性测试。",
+   "access": "平台免费公开；中文；本轮实际取到的正文是 3 术语和定义（含信息无障碍/辅助技术/亮度对比度/闪烁门限等定义），4–7 章测试方法只在页面导航里看到条目，各节正文未取到，故只作 reference，不用它单独支撑覆盖。",
+   "publisher": "中国互联网信息应用适老化及无障碍公共服务平台（wcag.org.cn），标准为 YD/T 1822-2008 信息无障碍系列标准",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.wcag.org.cn/sy/yybztx/bzjd/ff/index.html",
+    "location": "页面导航「4.内容的可感知性测试」至「7.兼容性测试」及各小节标题；正文 3.1 术语和定义（3.1.4 辅助技术、3.1.21 亮度对比度、3.1.22 上下文变化等）",
+    "finding": "确认这是中文的行业标准测试方法文本，测试章节严格按可感知/可操作/可理解/兼容性四原则分节；实际抓到的正文只到术语部分，测试条目正文未取到，因此不据此判覆盖。"
+   },
+   "added_by": "review/final-additions/V.2.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "多种能力和设备条件",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "概述：不同身体/精神障碍与键盘、触摸、屏幕阅读器、语音助手",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Accessibility Fundamentals（残障类型与使用情境）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "辅助技术",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "屏幕阅读器/语音助手与 HTML 语义的关系",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Accessibility Fundamentals 中 AT 与浏览器配合；Design & Develop 中的语义结构",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边的“辅助技术”都集中在 Web（屏幕阅读器/语音），不含硬件辅助设备（开关、眼动、盲文终端）的适配。"
+  },
+  {
+   "topic": "可感知/可操作与设计评估",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "指南与评估节：语义、替代文本、键盘可用性与检查器",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "WCAG 2.1 可感知/可操作原则与成功准则",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "WCAG 2.1 中文翻译：原则一「可感知」（1.1–1.4 指南与成功准则）、原则二「可操作」（2.1–2.5），及「符合性要求」",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh1",
+     "section": "测试三单元：自动化无障碍功能测试 → 手动无障碍功能测试（键盘检查、视觉审核、内容检查）→ 辅助技术测试（屏幕阅读器测试基础、多类 AT）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh2",
+     "section": "「辅助功能测试过程」及键盘/对比度/高对比度/显示缩放/讲述人（鼠标键盘与触摸两套）/UIA 树检查各节",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Design & Develop（图片/表格/表单/菜单/结构）+ Test & Evaluate（评估方法与工具）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有原则条文与入门实践，但没有 WAI 式的完整评估流程（选页、抽样、人工+工具、记录不符合项）。；「可感知/可操作」这一半有权威中文条文（每条成功准则都写了要满足什么、什么算失败），够用来做设计判断；但「设计评估」那一半（如何抽样页面、人工+工具组合、记录问题与复测）在 WCAG 正文里没有流程教学，中文也仍未找到 WAI 式的评估教程，故只能算部分覆盖。；补上了「设计评估」这一半的中文教学：先讲清自动化工具能覆盖什么、不能覆盖什么（并给出对照表），再逐项教手动检查（Tab 顺序、焦点指示器、键盘陷阱、视觉审核、内容检查），最后进入辅助技术测试。这样「可感知/可操作」不再只是 WCAG 条文，而是有「用什么工具、按什么顺序、怎么判断通过」的流程；配合已有 zh1（MDN 中文入门实践）与 zh2（WCAG 2.1 中文条文），中文侧从原则到评估形成闭环。；给出可直接执行的官方中文检查单：把可访问性测试当发布门槛、在 CI 跑自动检查、为人判断留手动验证；键盘测试查 Tab 顺序与触发；对比度用工具量并引 WCAG G18；高对比度、缩放各测一遍；讲述人部分给到具体按键与「关掉显示器只用键盘+讲述人走完主流程」这种验收式步骤；最后用 Inspect/UIA 看自动化树。对「可感知」的可操作判断（对比度、替代文本是否被朗读）与「可操作」的判断（键盘、AT 调用）都给了步骤与判据。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读“概述”理解不同能力与访问方式，再按“指南”做语义化 HTML、替代文本、键盘可用性练习，最后用浏览器无障碍检查器自查。"
+    },
+    {
+     "source": "zh2",
+     "read": "把 WCAG 2.1 的可感知/可操作准则当检查表逐条对照自己的页面。"
+    },
+    {
+     "source": "zh2",
+     "read": "按 WCAG 2.1 中文翻译逐条过原则一/原则二的成功准则，对你手上的 2–3 个页面各写一条「违反哪条准则、证据是什么」；评估流程部分暂用英文 WAI 教程（en1）的 Test & Evaluate 章节对照执行。"
+    },
+    {
+     "source": "final-zh1",
+     "read": "按三单元顺序做：先用自动化工具扫自己的 2–3 个页面并记下「工具报了哪些、漏了哪些」（对照单元里的可/不可自动化表），再手动做键盘检查（拔掉鼠标走完主流程，记录 Tab 顺序、焦点可见性、键盘陷阱），最后用一个屏幕阅读器按「辅助技术测试」单元走一遍主流程。"
+    },
+    {
+     "source": "final-zh2",
+     "read": "把这页当验收清单：先按「测试键盘可访问性」与「验证可见文本的对比度」各测一次并记数值，再做高对比度与缩放两项，然后用讲述人按页面给的按键步骤走完主场景（含关显示器只靠键盘+讲述人的那一遍），最后用 Inspect 看 UIA 树，把不符合项写成「控件—问题—对应准则—修复建议」。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Accessibility Fundamentals → Design & Develop：为图片、表格、表单、菜单写正确的语义与替代文本。"
+    },
+    {
+     "source": "en1",
+     "read": "Test & Evaluate：按教程选页、组合人工检查与工具，产出不符合项清单并复测。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Accessibility ; https://www.w3.org/Translations/WCAG21-zh/",
+   "result": "采纳：MDN 中文有入门教学，WCAG 中文是规范条文（reference）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "W3C WAI 教程语言栏（仅 English/Bahasa Indonesia）与中国大学MOOC 信息无障碍类课程检索",
+   "result": "WAI 无中文版；MOOC 检索被限流，未核实到具体中文无障碍课程页。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《信息无障碍》教材与培训",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://www.w3.org/WAI/tutorials/",
+   "result": "采纳：Fundamentals / Design & Develop / Test & Evaluate 三分区核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "信息无障碍 无障碍设计 WCAG 可感知 可操作 评估 课程（限定 icourse163/higher.smartedu/xuetangx）",
+   "result": "结果全是无关课程（可视化程序设计、无人机、康复评定、Python、学前特殊儿童教育），没有任何「信息无障碍/无障碍设计」中文课程；说明中文课程平台上没有对应的成体系课程。",
+   "by": "review/pi-additions/V.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://developer.mozilla.org/zh-CN/docs/Learn_web_development/Core/Accessibility（现有 zh1）",
+   "result": "打开后只取到站点导航，未读到模块内的单元列表，无法确认中文 MDN 是否有「无障碍评估」单元；本轮不据此下结论。",
+   "by": "review/pi-additions/V.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "信息无障碍 教材 目录 WCAG 无障碍测试 评估 方法 中文 出版社",
+   "result": "采纳线索：命中 wcag.org.cn「无障碍评级测试方法介绍」、web.dev 中文「自动化无障碍功能测试」、Adobe WCAG 2.1 快速指南（企业文档，未采纳）；没有命中中文无障碍教材的目录页。",
+   "by": "review/final-additions/V.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.w3.org/WAI/test-evaluate/ 与 https://www.w3.org/Translations/",
+   "result": "确认 WAI 的 Test & Evaluate 页面语言只有 English/español/français（无中文）；W3C 授权翻译索引里 WCAG 相关条目没有中文的评估方法（WCAG-EM）译本，故 WAI 评估方法仍只能读英文（不改变旧结论）。",
+   "by": "review/final-additions/V.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://web.dev/learn/accessibility/test-automated?hl=zh-cn 、/test-manual?hl=zh-cn 、/test-assistive-technology?hl=zh-cn",
+   "result": "采纳为 final-zh1：三个中文单元都打开确认标题与正文（自动化/手动/辅助技术测试），页面自述中文由 Google AI 翻译。",
+   "by": "review/final-additions/V.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/windows/apps/design/accessibility/accessibility-testing",
+   "result": "采纳为 final-zh2：读到键盘/对比度/高对比度/缩放/讲述人（含按键步骤）/UIA 的完整测试流程。",
+   "by": "review/final-additions/V.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.wcag.org.cn/sy/yybztx/bzjd/ff/index.html",
+   "result": "登记为 final-zh3（reference）：确认是 YD/T 1822-2008 的测试方法中文文本、按四原则分章，但正文只取到术语部分，测试各节未读到。",
+   "by": "review/final-additions/V.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "（同第一条检索：中文无障碍教材/培训的目录页）",
+   "result": "未找到可核对目录的中文无障碍教材或正版课程页；本轮不再声称「中文没有教材」，只记录「未检索到可核对目录的付费教材」。",
+   "by": "review/final-additions/V.2.3.json"
+  }
+ ],
+ "findings": [
+  "原中文条目只是 WCAG 2.1 中文规范，属 reference，不能当教学；本轮补 MDN 中文无障碍学习模块作为中文主资源（仍是 Web 向）。",
+  "W3C WAI 教程没有中文版（只有 English/Bahasa Indonesia），中文评估流程只能靠 MDN 入门 + WCAG 条文，故判 partial。",
+  "非 Web 端（桌面/移动原生、硬件辅助设备）两语都缺，本技能不把它写成已覆盖。",
+  "[review/pi-additions/V.2.3.json] 未解决 zh「可感知/可操作与设计评估」：「可感知/可操作」有 WCAG 2.1 授权中文翻译的条文可依（可读但非教学），「设计评估」的流程（抽样选页、人工+工具结合、问题记录与复测、报告）中文仍缺：本轮查了中文课程平台（icourse163/智慧高教/学堂在线，无信息无障碍课程）、MDN 中文无障碍模块（抓取只得到导航，未能确认评估单元）与 WCAG 中文翻译（无评估流程），与旧结论一致。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/V.2.3.json@07cb728617",
+  "review/final-additions/V.2.3.json@0d33e07d56"
+ ]
+}

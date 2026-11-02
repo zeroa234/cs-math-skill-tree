@@ -1,0 +1,641 @@
+{
+ "id": "D.3.1",
+ "name": "数据科学导论与工具箱",
+ "description": "问题定义、数据获取、清洗、探索分析、Notebook、统计包与工作流；抽样偏差、数据泄漏、评估指标、交叉验证、实验记录与结论的不确定性。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "UC Berkeley Data 100: Principles and Techniques of Data Science — Course Notes (Fall 2025)",
+   "url": "https://ds100.org/course-notes/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Data science lifecycle and problem definition; EDA I–V (loading, cleaning/missing values, exploration, grouping); regex; visualization I–II; sampling and sampling bias; modeling/SLR/loss/OLS/sklearn; feature engineering; cross-validation and regularization (train/validation/test, leakage via grouped splits); estimators, bias and variance; bootstrapping and uncertainty; logistic regression, clustering, PCA. Jupyter notebooks are used throughout the course.",
+   "access": "Free public MyST site, no registration; the companion course site (ds100.org/fa25) has the lecture calendar, labs and homeworks.",
+   "publisher": "UC Berkeley Data Science teaching team",
+   "evidence": {
+    "url": "https://ds100.org/course-notes/",
+    "location": "Course notes table of contents",
+    "finding": "The notes index lists the lifecycle, EDA, sampling, modeling, cross-validation, estimators/bias-variance, bootstrapping, logistic regression, clustering and PCA chapters."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Datawhale《动手学数据分析》（开源中文教程，Jupyter notebook）",
+   "url": "https://github.com/datawhalechina/hands-on-data-analysis",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "第一单元 数据载入与初步观察、pandas 基础、探索性数据分析；第二单元 数据清洗与特征处理、数据重构、数据可视化；第三单元 数据建模（sklearn）与模型评估。全流程用 Jupyter notebook，覆盖数据获取后的清洗、探索、建模与评估。",
+   "access": "GitHub 开源仓库免费阅读/下载，每节同时给「课程」与「答案」两版 notebook；不含抽样偏差、数据泄漏、交叉验证、不确定性与实验记录的系统讲解。",
+   "publisher": "Datawhale 社区",
+   "evidence": {
+    "url": "https://github.com/datawhalechina/hands-on-data-analysis",
+    "location": "README 目录与各章 notebook",
+    "finding": "README 写明以项目为主线，分数据载入/探索、清洗与特征处理、建模与评估三部分，并同时放课程版与答案版 notebook。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《数据科学导论》中文视频课程（B站，约 13 小时）",
+   "url": "https://www.bilibili.com/video/BV1NU4y1A7fJ/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文讲授数据科学流程、数据获取与清洗、探索分析与建模的入门内容；用于补中文的流程讲解，具体讲次未逐集核对。",
+   "access": "第三方转载，授权未核。B站免费播放；上传者为个人账号，未核实是否作者本人发布，也未核对字幕。",
+   "publisher": "B站 UP 主「达芬奇祖父」",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1NU4y1A7fJ/",
+    "location": "视频标题与时长（796 分钟）",
+    "finding": "B站接口返回标题「数据科学导论」，时长 796 分钟，上传者为个人账号；未逐集核对讲次内容。"
+   },
+   "reupload": true,
+   "official_search": "（本轮补查）读 B 站页面元信息：owner=达芬奇祖父、标注「自制」、简介仅「数据科学导论，南开大学」，48 个分 P（1.1 什么是数据科学 … 5.2 关联规则），上传者为个人账号，未见南开大学官方号或课程页。本轮用 include_domains 限定 icourse163.org / xuetangx.com / higher.smartedu.cn 检索「数据科学导论/数据科学流程」两次，返回的是西京学院、南京大学《探索数据的奥秘》、东华大学《数据科学技术与应用》、浙江大学《大数据解析与应用导论》，未见南开同名官方课；故保留转载标记。另：该 48 讲的正文范围只到关联规则，不含抽样偏差/数据泄漏/交叉验证/实验记录，因此不再用它覆盖这些知识点。",
+   "updated_by": [
+    "review/pi-additions/D.3.1.json"
+   ]
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "探索数据的奥秘（南京大学，中国大学MOOC；按「问题提出-目标制定-数据收集-探索性数据分析-建立模型-评价模型-结果展示」七步规范化流程组织）",
+   "url": "https://www.icourse163.org/course/NJU-1449346162",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "数据科学的基本概念与规范化流程：问题提出、目标制定、数据收集（含「有偏样本搜集」等错误来源）、探索性数据分析、建立模型、评价模型、结果展示；并专门讨论「结论误导（如有偏样本搜集、p 值操纵等）」，全课代码用 Python 编写，另有专章介绍 Python 使用。配套教材：黄晓林、刘斌等《数据科学导论——探索数据的奥秘（第2版）》清华大学出版社 2025。",
+   "access": "中国大学MOOC 免费注册学习，视频按开课学期开放；认证证书另计费；中文讲授；页面未列逐讲大纲（只有课程概述、预备知识与参考资料），字幕情况未核对。",
+   "publisher": "南京大学（中国大学MOOC 平台官方课程）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/NJU-1449346162",
+    "location": "「课程概述」第二、三段：「一些由于基本概念不清晰或应用不规范而带来的结论误导（如有偏样本搜集、p值操纵等）」；「将遵照严谨的科学探索流程，按『问题提出-目标制定-数据收集-探索性数据分析-建立模型-评价模型-结果展示』的规范化步骤为学生依次介绍各环节的关键概念、原理和准则」；「参考资料」列出清华社 2025 教材",
+    "finding": "打开正文确认这门中文 MOOC 是按七步数据科学流程逐环节讲的，明确点到「有偏样本搜集」与「p 值操纵」这类结论可靠性问题，可对上「问题定义」「抽样偏差」「结论的不确定性」；大纲区未列讲次（前端加载）。"
+   },
+   "added_by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "斯坦福 CS329P《实用机器学习》中文版（课程主页 c.d2l.ai/stanford-cs329p；中文视频在作者本人 B 站账号「跟李沐学AI」）",
+   "url": "https://c.d2l.ai/stanford-cs329p/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程日程与分节：1.x 数据获取/网页抓取/数据标注、2.1 探索性数据分析–2.4 特征工程、2.5 数据科学家的日常、3.x 机器学习回顾、4.1 模型评估、4.2 过拟合和欠拟合、4.3 模型验证、5.1 方差和偏差、5.2–5.4 Bagging/Boosting/Stacking、8–11 协变量偏移/标签偏移/非 IID 数据、12 模型调参。",
+   "access": "课程主页免费（CC-BY-SA-4.0/MIT-0），无注册；视频为中文讲授（作者本人在 B 站「跟李沐学AI」逐节发布，如 av675507034「1.1 课程介绍」页面标注「自制」并回链课程主页）；字幕未核对。",
+   "publisher": "斯坦福 CS329P（2021 秋，Qingqing Huang / Mu Li / Alex Smola）；中文视频由李沐本人账号发布",
+   "reupload": false,
+   "evidence": {
+    "url": "https://c.d2l.ai/stanford-cs329p/",
+    "location": "「Lectures」表：6. Model Validation（Evaluation metrics, underfitting and overfitting, model validation）、7. Model Combination（Bias and variance…）、8–9. Covariate Shift、10. Label Shift、11. Data beyond IID、12. Model Tuning；Part I 的 1–3 为 Data I–III（data acquisition / web scraping / data labeling / EDA / cleaning / feature engineering）",
+    "finding": "读到完整日程，确认第 6 讲就是模型验证（评估指标、过拟合欠拟合、交叉验证所属的 model validation），第 8–11 讲处理分布/抽样造成的偏移；B 站 av675507034 确认中文视频由「跟李沐学AI」自制发布并回链该课程主页。"
+   },
+   "added_by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "key": "r7-zh3",
+   "lang": "zh",
+   "title": "时间序列预测避坑：随机切分、前视偏差与数据泄漏｜真实数据实战（B 站，Claire_xihan）",
+   "url": "https://www.bilibili.com/video/BV1i4gp6JEV3/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "用 UCI Bike Sharing 17,379 条逐小时数据演示时间序列场景的数据泄漏：随机切分为何破坏时间顺序而把未来信息带进训练集（时间信息泄漏/前视偏差）、留后法（前 80% 训练后 20% 测试）、滚动验证的基本逻辑、预测起点与特征可用性、样本内拟合与样本外预测的区别。属“时间/未来信息型泄漏”的实例教学，与预处理型泄漏互补。",
+   "access": "B 站免费，单集约 8 分钟，中文讲授、有分段时间轴；个人账号自制（非机构课程）。本轮判定：虽为短视频，但按时间轴逐段讲清了泄漏如何发生、怎么用留后法与滚动验证避免，属该知识点的一类实际教学，不再以“时长不足”排除。",
+   "publisher": "B 站个人账号 Claire_xihan（自制，非机构课程）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1i4gp6JEV3/",
+    "location": "视频简介的分段目录：「03:14 随机切分为什么不适合时间序列」「04:53 滚动验证的基本逻辑」「06:21 预测起点、特征可用性与数据泄漏」「07:15 样本内拟合和样本外预测的区别」",
+    "finding": "确认这是以真实数据讲「数据泄漏/前视偏差」以及滚动验证的中文教学视频，虽是短视频而非课程单元，但确实分步讲了泄漏如何发生、怎么避免，可补「数据泄漏」这一具体点。"
+   },
+   "added_by": "review/pi-additions/D.3.1.json",
+   "updated_by": [
+    "review/final-additions/D.3.1.json"
+   ]
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "The Turing Way — A handbook to reproducible, ethical and collaborative data science（Guide for Reproducible Research / Guide for Project Design / Guide for Communication / Guide for Collaboration / Guide for Ethical Research）",
+   "url": "https://book.the-turing-way.org/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "面向数据科学项目的可复现与协作实操：研究数据管理、可复现的计算环境、开放笔记本/记录（open notebooks）、项目设计与计划、结果沟通（含不确定性表述与可视化），以及协作与伦理审查流程。",
+   "access": "全书在线免费，CC-BY-4.0，可下载；英文；社区协作维护（Alan Turing Institute 发起）；无注册。",
+   "publisher": "The Turing Way Community（Alan Turing Institute 发起的开源手册项目）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://book.the-turing-way.org/",
+    "location": "首页目录：Foreword / Pathways / Guide for Reproducible Research / Guide for Project Design / Guide for Communication / Guide for Collaboration / Guide for Ethical Research / Community Handbook；首页自述「handbook to reproducible, ethical and collaborative data science」",
+    "finding": "确认这是成体系的开放手册（分五大指南），覆盖可复现研究（记录与环境）、项目设计、沟通与协作，正好补「实验记录」与「结论如何沟通/不确定性」这类流程性内容。"
+   },
+   "added_by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "key": "final-zh1",
+   "lang": "zh",
+   "title": "scikit-learn 中文文档 12. 常见陷阱与推荐做法（12.1 不一致的预处理、12.2 数据泄露）",
+   "url": "https://scikit-learn.cn/stable/common_pitfalls.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "把“数据泄露”当作独立小节系统讲：定义（构模时用到了预测时拿不到的信息）、后果（交叉验证等性能估计过于乐观、上线后变差）、成因（没先分开训练/测试；预处理只在全部数据上做，均值/缩放/填补/PCA/特征选择把测试集信息带进模型）、避免办法（先划分；fit 只在训练子集、transform 在两个子集；用 Pipeline 串起来并放进 cross_val_score）；12.2.2 用 10,000 个随机特征做二分类给出可运行的错误/正确对照：用全部数据先做 SelectKBest(k=25) 特征选择，测试准确率 0.76；先 train_test_split 再用训练集 fit_transform、测试集 transform，准确率回到 0.5（接近纯随机）；再给 make_pipeline(SelectKBest(25), HistGradientBoostingClassifier) 版本与 cross_val_score 写法。12.1 另讲训练集缩放了、测试集没缩放的错误示例与正确示例（MSE 62.80 → 0.90）。",
+   "access": "免费中文网页，无需注册、无需下载；中文；代码块可直接复制运行（numpy/sklearn）。本页与上游 scikit-learn 1.9 官方文档的 stable 版同章号、同小节标题，是中文译本（scikit-learn.cn）。站点是社区维护的中文文档站，本轮未在其页面找到编者署名或与 scikit-learn 项目的关系说明，故只按“官方文档的中文译本”引用其正文内容，未核对其编辑流程。",
+   "publisher": "scikit-learn 中文文档站（scikit-learn.cn），内容为 scikit-learn 官方文档 common_pitfalls（英文 stable 版 1.9.1）的中文译本",
+   "reupload": false,
+   "evidence": {
+    "url": "https://scikit-learn.cn/stable/common_pitfalls.html",
+    "location": "12. 常见陷阱与推荐做法 → 12.2 数据泄露 / 12.2.1 如何避免数据泄露 / 12.2.2 预处理期间的数据泄露（错误示例 0.76、正确示例 0.5、make_pipeline 示例、cross_val_score 段）；12.1 不一致的预处理（62.80… / 0.90…）",
+    "finding": "实际打开中文正文并逐段读到：定义句「数据泄露发生在构建模型时使用了预测时不可用的信息。这会导致性能估计过于乐观（例如通过交叉验证）」；避免清单「务必先将数据划分为训练和测试子集，尤其是在执行任何预处理步骤之前」「永远不要包含测试数据」「使用 Pipeline 是防止数据泄露的好方法」；错误示例 accuracy_score=0.76（y 完全随机）与正确示例 0.5 的完整代码与输出；并注明泄露风险与 StandardScaler、SimpleImputer、PCA 等几乎所有变换都相关。另核对了英文上游 https://scikit-learn.org/stable/common_pitfalls.html 的同名小节，确认章节对应。"
+   },
+   "added_by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "key": "final-zh2",
+   "lang": "zh",
+   "title": "机器学习准备数据时如何避免数据泄漏（腾讯云开发者社区中文教程，含训练/测试划分与 K 折交叉验证两种评估下的原始与正确数据准备完整代码）",
+   "url": "https://cloud.tencent.com/developer/article/1692559",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "以合成二分类数据（make_classification，2000 样本 20 特征）讲数据准备阶段的数据泄漏：先讲“常见但不正确”的做法（先对整个数据集做 MinMaxScaler/特征选择等变换，再划分训练-测试或用 K 折交叉验证），再讲正确做法（先划分，只在训练集 fit，transform 同时作用于训练集与测试集）；给了四份可运行 Python 代码与结果对照：原始方法训练-测试评估（泄漏，约 84.848%）、正确方法训练-测试评估（约 85.455%）、原始方法 K 折评估、正确方法 K 折评估；并专门讨论“为什么这次泄漏没让分数变高”以及如何用泄漏识别（分数好得可疑、训练与验证分数差、事后上线掉分）。",
+   "access": "免费中文正文（约 5000 字），无需注册登录即可读全文；中文；含完整代码块。译文：正文保留原作者口吻（“在我的新书……中了解”），并链到 machinelearningmastery.com 的原书页，属 Jason Brownlee 英文教程的中译，译者署名 Sam Gor；非原创中文教材。",
+   "publisher": "腾讯云开发者社区（文章作者 Sam Gor，译自 Machine Learning Mastery 数据准备系列）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://cloud.tencent.com/developer/article/1692559",
+    "location": "小节：原始数据准备方法的问题 / 用原始数据准备方法进行训练-测试评估 / 用正确的数据准备方法进行训练集-测试集评估 / 用 K 折交叉验证进行数据准备 / 用原始数据准备方法进行交叉验证评估 / 用正确的数据准备方法进行交叉验证评估",
+    "finding": "实际打开正文确认：目录与正文两处都列出“原始 vs 正确”在训练-测试与 K 折两种评估下的四组对照；正文逐段给出「首先将数据分为训练集和测试集」「然后我们可以定义 MinMaxScaler 并在训练集上调用 fit() 函数，然后在训练集和测试集上应用 transform()」等分步说明，以及 84.848% / 85.455% 两组实测数字和对“泄漏未必让分数更高”的解释。不是只有名词解释的科普短文。"
+   },
+   "added_by": "review/final-additions/D.3.1.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "问题定义",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一单元 数据载入前的任务理解（只到项目背景）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "课程概述载明的流程第一步「问题提出」与第二步「目标制定」",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Introduction: data science lifecycle and problem definition",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文教程直接从数据载入开始，问题定义只有项目背景，没有生命周期方法。；这门中文 MOOC 明确按七步流程组织，前两步就是问题定义（提出问题、定目标），并要求学生按该流程完成模拟项目；比只讲工具的教程更对口这条必学点。"
+  },
+  {
+   "topic": "数据获取",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一单元 数据载入（read_csv 等）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "EDA I: loading data; course labs",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都偏文件读取，不含爬虫/API/数据库获取。"
+  },
+  {
+   "topic": "清洗",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二单元 数据清洗及特征处理、数据重构",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "EDA II–III: cleaning, missing values, transformations",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "探索分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一单元 探索性数据分析；第二单元 数据可视化",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "EDA IV–V; Visualization I–II",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "Notebook",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "全部章节以 Jupyter notebook（课程版/答案版）组织",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Notes and labs are Jupyter notebooks; course site links labs",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "统计包与工作流",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "pandas / sklearn 建模与评估流程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Modeling, OLS, sklearn and gradient descent; feature engineering",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "抽样偏差",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "流程第三步「数据收集」中的「有偏样本搜集」与「结论误导」讨论",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Sampling: sampling methods and sampling bias",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文教程没有抽样方法/抽样偏差章节。；课程把「有偏样本搜集」列为首要的结论误导来源，并在数据收集环节讲规范；CS329P（r7-zh2）第 8–10 讲的协变量偏移/标签偏移可作分布层面的补充。"
+  },
+  {
+   "topic": "数据泄漏",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖（只在建模时切分训练/测试）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "03:14 随机切分为什么不适合时间序列；06:21 预测起点、特征可用性与数据泄漏；07:15 样本内拟合与样本外预测",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh1",
+     "section": "12.2 数据泄露（12.2.1 如何避免；12.2.2 预处理期间的数据泄露：错误示例 SelectKBest 全量 fit → 0.76 vs 正确示例先划分 → 0.5，及 make_pipeline + cross_val_score）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh2",
+     "section": "原始数据准备方法的问题；用原始/正确的数据准备方法分别做训练-测试评估与 K 折交叉验证评估（四组完整代码与 84.848%/85.455% 等实测结果）",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-zh3",
+     "section": "03:14 随机切分为什么不适合时间序列；04:53 滚动验证的基本逻辑；06:21 预测起点、特征可用性与数据泄漏；07:15 样本内拟合和样本外预测的区别（时间/未来信息型泄漏）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Cross Validation and Regularization: leakage, grouped splits",
+     "extent": "covered"
+    }
+   ],
+   "note": "这条中文视频用真实数据分步讲了泄漏（前视偏差）如何产生、怎么用留后法与滚动验证避免，能作为「数据泄漏」的实例教学；但它是单集短视频，没有课程单元级的系统讲解，故记为 partial 并列入 unresolved。；中文侧此前只有 8 分钟视频，被记成 partial。scikit-learn 中文文档这一节把泄漏的定义、为什么交叉验证分数会过于乐观、以及“先划分→只在训练集 fit→测试集 transform→用 Pipeline 包起来”的正确写法，全部落成可运行的错误/正确对照代码（y 完全随机，泄漏版 0.76、正确版 0.5），属于分步例子充足的短文教学，可直接支撑“预处理/特征选择型泄漏”这一面。；补上 K 折交叉验证场景下的泄漏演示：这份中文教程把“先全量归一化再 K 折”与“先划分、只在训练折上 fit”写成两段可直接跑的代码并对比分数，还解释了泄漏没让分数变高时的判读，正好补 sklearn 文档只讲单次划分的那一面。；三类泄漏分工：final-zh1 负责预处理与特征选择型（含 Pipeline 正确做法），final-zh2 负责 K 折评估下的数据准备型，这条 8 分钟中文实战视频负责时间序列的前视偏差/未来信息型（随机切分 vs 留后法 vs 滚动验证）。它按时间轴分步讲了泄漏怎么产生、怎么避免，是一类具体泄漏的完整实例教学，不再按“短视频不算课程单元”排除。三份合起来，中文侧对“数据泄漏”这条必学点的教学是完整的。"
+  },
+  {
+   "topic": "评估指标",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第三单元 模型评估（准确率等）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Loss and transformations; logistic regression evaluation",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "交叉验证",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未系统覆盖（只做一次 train/test 划分）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh2",
+     "section": "第 6 讲 Model Validation（评估指标、过拟合与欠拟合、模型验证），对应中文视频 4.1 模型评估 / 4.2 过拟合和欠拟合 / 4.3 模型验证",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Cross Validation and Regularization",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文视频分节到「模型验证」，讲训练/验证/测试划分与验证方法；再配合第 7 讲的偏差-方差与 5.1 方差和偏差，能把交叉验证为什么能估计泛化误差讲清。"
+  },
+  {
+   "topic": "实验记录与结论的不确定性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "流程最后三步「建立模型-评价模型-结果展示」，及课程概述点出的「p 值操纵」",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Parameter Inference and Bootstrapping；只在示例中固定随机种子",
+     "extent": "partial"
+    },
+    {
+     "source": "en1",
+     "section": "Data 100 notes：Parameter Inference and Bootstrapping；Estimators, Bias, and Variance",
+     "extent": "covered"
+    },
+    {
+     "source": "r7-en1",
+     "section": "Guide for Reproducible Research（研究数据管理、可复现环境、open notebooks）＋ Guide for Project Design ＋ Guide for Communication",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都缺实验记录/可复现流程；不确定性只有英文的 bootstrap 讲次。；南大课把「评价模型—结果展示」作为独立环节，并把 p 值操纵作为结论不可靠的典型，直接对应「结论的不确定性」；「实验记录」一面由该课的规范化流程与模拟项目要求承担（按流程记录每一步），中文侧仍偏流程规范而非电子实验记录工具。；这两节讲估计量的偏差/方差与自助法/区间推断，是「结论的不确定性」的统计侧正课内容（此前未映射到本条）。；「实验记录」一面由可复现研究指南（如何记录环境、数据与过程、开放笔记本）承担，与 en1 的统计推断合起来覆盖整条必学点。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按三个单元做完数据载入、清洗、重构、可视化、建模与评估的 notebook，每步改数据并重跑。"
+    },
+    {
+     "source": "zh2",
+     "read": "需要流程讲解时看中文数据科学导论视频，补问题定义与工作流的直觉。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "按七步流程走一遍：先练「问题提出→目标制定」把一句话业务问题写成可检验的数据问题；再在「数据收集」环节识别有偏样本；最后在「评价模型→结果展示」环节用课程给的错误案例（p 值操纵）自查结论表述。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "看中文视频 4.1 模型评估 → 4.2 过拟合和欠拟合 → 4.3 模型验证，自己在 notebook 里做一次训练/验证/测试划分与 K 折交叉验证；再接第 8–10 讲理解数据分布偏移。"
+    },
+    {
+     "source": "r7-zh3",
+     "read": "用一条时间序列数据复现视频里的对比：随机切分 vs 前 80%/后 20% 留后法 vs 滚动验证，记录三种评估指标的差异并解释哪一种是泄漏。"
+    },
+    {
+     "source": "final-zh1",
+     "read": "打开 12.2 数据泄露：先看 12.2.2 的错误示例（不划分就用 SelectKBest(k=25).fit_transform(X, y) 做特征选择，10,000 个随机特征也能拿到 0.76），再逐行跑正确示例（先 train_test_split，只在训练集 fit_transform、测试集 transform），确认分数回到 0.5；然后把同一流程改写成 make_pipeline(SelectKBest(25), HistGradientBoostingClassifier) 并放进 cross_val_score，确认 Pipeline 版仍是 0.5。最后读 12.1 的缩放不一致示例，说清“预处理不一致”和“数据泄漏”为什么是两件事。"
+    },
+    {
+     "source": "final-zh2",
+     "read": "用 make_classification 造一份自己的数据，把教程的四组对照各跑一遍：先把归一化放在划分之前（错）与之后（对）做训练-测试评估；再在 K 折交叉验证里重复同样的对照。记录四组准确率，解释为什么这一例里泄漏版（84.848%）反而低于正确版（85.455%），并列出你自己排查泄漏的三条判据（分数好得可疑、训练与验证分数差距、上线掉分）。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the lifecycle/EDA chapters, then sampling, cross-validation/leakage, estimators and bootstrapping, and do the labs on the Fall 2025 course site."
+    },
+    {
+     "source": "r7-en1",
+     "read": "Read Guide for Reproducible Research (research data management, reproducible environments, open notebooks) and the Project Design + Communication guides; then write your experiment log template (question, data version, environment, metrics, uncertainty) and use it for the rest of the skill."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "Datawhale hands-on-data-analysis；Data 100 notes",
+   "result": "采纳 zh1 与 en1；核对到中文缺抽样偏差/泄漏/交叉验证。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「数据科学导论 课程 完整」",
+   "result": "采纳 BV1NU4y1A7fJ（13 小时中文导论）为流程补充；内容未逐集核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "未另找付费中文教材",
+   "result": "免费开源教程 + 中文视频已能覆盖清洗/EDA/建模，缺口属统计方法，未核实到对应中文教材章节，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://ds100.org/course-notes/ 目录",
+   "result": "采纳 en1，确认其覆盖抽样偏差、交叉验证与 bootstrap，但没有实验记录章节。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "站内搜「数据科学导论 课程」「交叉验证 数据泄漏 机器学习」；bvinfo 读 BV1NU4y1A7fJ（现有 zh2）",
+   "result": "站内搜索大量无关；确认现有 zh2（南开《数据科学导论》，48 分 P）只到 5.2 关联规则，不含本技能缺口；另发现「华盛顿大学数据科学导论（双语字幕）」等英文课转载，未采纳。",
+   "by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "数据科学 机器学习 课程 交叉验证 数据泄漏 抽样偏差 讲授（限定 icourse163/xuetangx/higher.smartedu/bilibili）",
+   "result": "返回多为 B 站短视频（小萌五分钟交叉验证、时间序列泄漏实战）与浙大环境数据分析等；采纳其中的泄漏实战视频作补充。",
+   "by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "数据科学导论 数据科学流程 问题定义 数据获取 数据清洗 探索性分析（限定 xuetangx/icourse163/higher.smartedu）",
+   "result": "命中南京大学《探索数据的奥秘》（NJU-1449346162），其概述明确按七步流程组织并点到有偏样本与 p 值操纵 → 采纳为 r7-zh1（primary）；同批还有西京学院《数据科学导论》（学堂在线）、东华《数据科学技术与应用》，均不如南大课贴合「流程与偏差」。",
+   "by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/NJU-1449346162",
+   "result": "读到课程概述全文（七步流程、有偏样本搜集、p 值操纵）与参考资料（清华社 2025 教材）；大纲区只显示预备知识/参考资料，无逐讲列表。",
+   "by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 实用机器学习 李沐 模型验证 CS329P",
+   "result": "找到「跟李沐学AI」发布的逐节中文视频（av675507034 为 1.1 课程介绍，另有 4.1 模型评估/4.3 模型验证/9.1 模型调参等），配合官方课程页采纳为 r7-zh2。",
+   "by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://the-turing-way.netlify.app/（跳转 book.the-turing-way.org）",
+   "result": "读到目录五大指南（Reproducible Research / Project Design / Communication / Collaboration / Ethical Research）与 CC-BY 授权，采纳为 r7-en1 补「实验记录」。",
+   "by": "review/pi-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "scikit-learn 中文 常见陷阱 数据泄漏",
+   "result": "命中 scikit-learn.cn/stable/common_pitfalls.html（中文「12.2 数据泄露」）、scikit-learn.org.cn 入门页、Google《数据陷阱》中文版。采纳 scikit-learn.cn 为 final-zh1；Google 页正文由 JS 渲染，普通抓取只拿到导航（2297 字符、0 处“泄漏”），未采纳。",
+   "by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "数据泄漏 data leakage 机器学习 中文 教程 错误示例 正确示例 交叉验证 pipeline",
+   "result": "返回腾讯云开发者社区《机器学习准备数据时如何避免数据泄漏》、IBM《机器学习中的数据泄漏是什么？》、Data Application Lab 科普、CSDN 博客与若干无关财经新闻。IBM 与 DAL 为概念科普、无对照代码，不采纳；腾讯云一篇有训练-测试/K 折四组对照代码，采纳为 final-zh2。",
+   "by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "B 站站内搜「数据泄漏 交叉验证 pipeline」",
+   "result": "结果几乎全无关（中介效应 stata、log4j2 漏洞、SPSS ROC、网盘解封等），只有「大白话讲解：交叉验证」勉强相关且不讲泄漏；按规则该搜索只作“找到”用，不作“没有”的证据。",
+   "by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "site:bilibili.com 数据泄漏 特征工程 训练集 测试集 划分 错误 正确 对比",
+   "result": "返回 B 站专栏「机器学习数据划分完全解读」、小萌五分钟「数据集的划分(二)」及大量无关内容；这些只讲训练/验证/测试的概念，不讲泄漏成因与避免方法，未采纳。",
+   "by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "机器学习 数据泄漏 交叉验证 课程 教学 大纲（限定 icourse163.org / xuetangx.com / higher.smartedu.cn）",
+   "result": "返回长春理工《机器学习》、浙大《机器学习》、复旦《深度学习及其应用》、东南《交通大数据分析》、浙大《环境数据分析》等普通课程，概述与大纲均未出现“数据泄漏/泄漏”作为独立教学单元；与上一轮结论一致，中文 MOOC 侧确无专门讲泄漏的单元，故改用文档/教程级材料覆盖。",
+   "by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://scikit-learn.cn/stable/common_pitfalls.html（grep 泄漏|泄露）",
+   "result": "读到「12.2. 数据泄露」全文与 12.2.1/12.2.2 小节，含错误示例 0.76、正确示例 0.5、make_pipeline、cross_val_score；确认不是只有术语定义。",
+   "by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://scikit-learn.org/stable/common_pitfalls.html（grep leak）",
+   "result": "读到英文上游同名章节 12.2 Data leakage / 12.2.1 How to avoid / 12.2.2 during pre-processing，确认中文站是同一章节的译本，供比对用，不作英文来源新增。",
+   "by": "review/final-additions/D.3.1.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://cloud.tencent.com/developer/article/1692559（grep 泄漏|K折交叉验证|正确）",
+   "result": "读到四组对照的小节标题与正文步骤（先划分、训练集 fit、两集 transform），以及 84.848%/85.455% 与「泄漏未必让分数更高」的讨论；确认有分步例子与代码，非纯科普。",
+   "by": "review/final-additions/D.3.1.json"
+  }
+ ],
+ "findings": [
+  "原英文 Data 100 notes 是完整的数据科学入门，抽样偏差、泄漏、交叉验证、不确定性都有正文，保留为主资源；仅缺实验记录/复现流程。",
+  "原中文 Datawhale 教程只到“载入-清洗-EDA-建模-评估”，抽样偏差、泄漏、交叉验证、不确定性都没有，不能算完整路线；补了一个中文导论视频，但这些统计方法仍缺。",
+  "未把 Data 100 当作中文缺口的替代：中文仍标 partial 并列出四项缺口。",
+  "[review/pi-additions/D.3.1.json] 未解决 zh「数据泄漏」：中文只找到单集短视频（BV1i4gp6JEV3，约 8 分钟）与博客讲泄漏，没有课程单元级的系统讲解：已查 B 站站内搜索、site 限定检索（icourse163/xuetangx/智慧高教/B 站）、南京大学《探索数据的奥秘》正文与斯坦福 CS329P 中文版日程，均无「数据泄漏」独立章节；CS329P 第 6 讲模型验证是否含 leakage 未能核对（未看视频正文）。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/D.3.1.json@531177ecec",
+  "review/final-additions/D.3.1.json@5d9a8183be"
+ ]
+}

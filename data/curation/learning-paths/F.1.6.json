@@ -78,6 +78,24 @@
     "finding": "打开确认目录逐条列出“2.2 固定参数可解”“2.3 固定参数不可解”“核心化13”“3.1 NT 定理”“3.2 皇冠分解”“3.3 极值归纳技术”“3.5 基于低度点的核心化方法”“3.6 核下界技术（3.6.1 对偶性方法 / 3.6.2 基于复杂性理论假设的方法 / 3.6.3 基于参数化规约）”，以及第 4 章分支搜索法、第 6 章随机参数算法设计技术、第 8 章平面图参数算法设计技术。"
    },
    "added_by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "算法分析进阶：超越最坏情况分析（中文译本）",
+   "url": "https://ebooks.cmpbook.com/detail?id=28145",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "先配《参数计算导论》理解W层级，再读本书2.5.1–2.5.3比较参数困难性、指数时间假设和核化下界。未核到3SUM/APSP中文教学，另保留该项英文补读。",
+   "access": "已核中文版本及公开目录；目录免费，完整教材须购买或合法借阅，本轮未读收费全文。",
+   "publisher": "作者或出版社官方来源",
+   "evidence": {
+    "url": "https://ebooks.cmpbook.com/detail?id=28145",
+    "location": "2.5困难性与最优性",
+    "finding": "机工官方数字馆目录2.5.1为W[1]困难性，2.5.2为ETH和SETH，明确是中文教材章节而非只有论文摘要。"
+   },
+   "added_by": "review/verified-additions/F.1.6.json"
   }
  ],
  "topics": [
@@ -123,6 +141,11 @@
      "source": "r7-zh1",
      "section": "第 2 章 2.3 固定参数不可解；第 3 章 3.6.2 基于复杂性理论假设的方法",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "配《参数计算导论》2.3的W层级；本书2.5.1 W[1]及2.5.2 ETH/SETH",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -132,7 +155,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文有定义与包含链但没有 ETH 下的具体下界证明；英文两讲有归约与证明。；r7-zh1 的 2.3 节讲固定参数不可解（W 层级一侧），但目录层面看不到 ETH 假设下的下界推导；3.6.2 只把“复杂性理论假设”用于核下界。原中文来源（白天博士论文）第 2 章给出 W 层级包含关系与 W[t]-完全例子、绪论只把 ETH/SETH 作背景点名。两者合起来 W 层级可学，ETH 下界的系统讲授仍缺，故本知识点记 partial 并列入 unresolved。"
+   "note": "中文有定义与包含链但没有 ETH 下的具体下界证明；英文两讲有归约与证明。；r7-zh1 的 2.3 节讲固定参数不可解（W 层级一侧），但目录层面看不到 ETH 假设下的下界推导；3.6.2 只把“复杂性理论假设”用于核下界。原中文来源（白天博士论文）第 2 章给出 W 层级包含关系与 W[t]-完全例子、绪论只把 ETH/SETH 作背景点名。两者合起来 W 层级可学，ETH 下界的系统讲授仍缺，故本知识点记 partial 并列入 unresolved。；补充同语言具体教学章节，与既有主课组合学习。"
   },
   {
    "topic": "条件性复杂度界（SETH/3SUM/APSP）与细粒度归约",
@@ -175,10 +198,13 @@
     {
      "source": "r7-zh1",
      "read": "按第 2 章（2.2 固定参数可解、2.3 固定参数不可解）建立定义，再逐节读第 3 章核心化：先跟 NT 定理的匹配版算法，再看皇冠分解与极值归纳如何处理点覆盖/Packing，最后用 3.6 节的三种方法理解“为什么某些问题没有多项式核”；有余力再做第 4 章分支搜索与第 5 章迭代压缩的例题。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "先配《参数计算导论》理解W层级，再读本书2.5.1–2.5.3比较参数困难性、指数时间假设和核化下界。未核到3SUM/APSP中文教学，另保留该项英文补读。"
     }
    ],
    "gaps": [
-    "W 层级与 ETH 下界",
     "条件性复杂度界（SETH/3SUM/APSP）与细粒度归约"
    ]
   },
@@ -255,6 +281,21 @@
    "query_or_url": "vsearch.py bili「参数化算法 固定参数可解 核化 FPT」；tavily site:bilibili.com 参数化算法 核化 固定参数 W[2] ETH 复杂度",
    "result": "B 站两次检索都无相关课程：vsearch 返回编译原理 Thompson 算法、分离常数、方框图化简、化学配平；site:bilibili.com 只返回 Grasshopper 参数化建模、YOLOv5 参数、XGBoost 超参、分数阶模型参数拟合与一个“施温格参数化”物理视频。可确认 B 站没有中文参数化算法/核化课程。",
    "by": "review/pi-additions/F.1.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://ebooks.cmpbook.com/detail?id=28145",
+   "result": "机工官方数字馆目录2.5.1为W[1]困难性，2.5.2为ETH和SETH，明确是中文教材章节而非只有论文摘要。",
+   "by": "review/verified-additions/F.1.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "形式化方法 精化 非干扰 教材 出版社 目录（最终复核）",
+   "result": "《算法分析进阶》第2.5节覆盖ETH/SETH、W[1]和核化下界，未核到3SUM/APSP及细粒度归约系统教学。"
   }
  ],
  "findings": [
@@ -271,31 +312,20 @@
    "lang_missing": "zh",
    "topic": "条件性复杂度界（SETH/3SUM/APSP）与细粒度归约",
    "source": "en1",
-   "reason": "本轮三个渠道都查过：①文字——Tavily 中文检索“细粒度复杂度 SETH 3SUM APSP 中文 讲义 综述 课程”只得到新论文科普与英文课程页，中文教材《参数计算导论》目录只到参数化算法/核化，没有细粒度一章；②视频——B 站 vsearch 与 site:bilibili.com 检索“参数化算法/核化/复杂度”均无相关课程；③付费——中文图书检索只命中《参数计算导论》（无细粒度章）与维基条目。MIT 6.890（en1）含 SETH/3SUM/APSP 与细粒度归约，故中文侧按 fallback 使用 en1。",
+   "reason": "中文文字、视频及付费渠道已检索。《算法分析进阶》第2.5节可补W[1]、ETH/SETH与核化下界，但本轮仍未核到把SETH、3SUM、APSP及细粒度归约一并讲清的中文教学。该组合项继续读MIT 6.890相应讲次；这表示本轮未补齐，不表示中文教学不存在。",
    "searched_channels": [
     "text",
     "video",
     "paid"
    ],
    "confirmed_by": "review/pi-additions/F.1.6.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "W 层级与 ETH 下界",
-   "source": "en1",
-   "reason": "W 层级在中文侧只有王建新、冯启龙《参数计算导论》2.3 节（付费）与一篇学位论文提及；基于指数时间假设（ETH）的下界没有中文讲授，pi 已查文字、B 站与付费教材三个渠道。整条改读英文主资源，中文《参数计算导论》可作 W 层级部分的对照。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/main-additions/F.1.6.json"
   }
  ],
  "name": "参数化与细粒度复杂度",
  "description": "固定参数可解性与核化、W 层级与 ETH 下界、条件性复杂度界（SETH/3SUM/APSP）与细粒度归约。",
  "applied_additions": [
   "review/pi-additions/F.1.6.json@5de5fd15b9",
-  "review/main-additions/F.1.6.json@244668cd47"
+  "review/main-additions/F.1.6.json@244668cd47",
+  "review/verified-additions/F.1.6.json@bd0ef63ee2"
  ]
 }

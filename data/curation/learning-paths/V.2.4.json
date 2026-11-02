@@ -1,0 +1,450 @@
+{
+ "id": "V.2.4",
+ "name": "XR、空间交互与协作系统",
+ "description": "虚实融合、追踪、空间界面、协作、沉浸与交互研究。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Virtual Reality（Steven M. LaValle, Cambridge University Press, 2023；作者主页免费全文 + 配套 NPTEL/IIT Madras MOOC 讲座）",
+   "url": "https://lavalle.pl/vr/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "作者主页原文：geometric modeling、transformations、graphical rendering、optics、human vision/auditory/vestibular systems、tracking systems、interface design、human factors、developer recommendations、technological issues；配套 YouTube 讲座为 NPTEL/IIT Madras 2016 免费 MOOC。多用户协作只在人因/设计章节间接触及。",
+   "access": "全书 PDF 免费下载/打印/分发（作者明确许可，仅保留版权图片的 fair use 提示）；MOOC 讲座在 YouTube 免费。英文。",
+   "publisher": "Steven M. LaValle / Cambridge University Press",
+   "evidence": {
+    "url": "https://lavalle.pl/vr/",
+    "location": "首页书籍说明与 MOOC 说明",
+    "finding": "页面写“This free VR book covers … geometric modeling, transformations, graphical rendering, optics, the human vision, auditory, and vestibular systems, tracking systems, interface design, human factors, developer recommendations, and technological issues”，并说明配套讲座是 NPTEL/IIT Madras 2016 的免费 MOOC。"
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "Unity 官方中文手册 · XR（XR 开发、输入与交互）",
+   "url": "https://docs.unity3d.com/cn/current/Manual/XR.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "XR 工程实践：XR 插件架构、输入系统、AR Foundation/VR 设备接入、渲染与性能设置；讲“怎么在引擎里做”，不讲显示光学、追踪原理、空间界面理论与协作研究。",
+   "access": "官方中文手册免费；随 Unity 版本更新（当前 Unity 6.0）；动手需安装 Unity 与设备 SDK。",
+   "publisher": "Unity Technologies",
+   "evidence": {
+    "url": "https://docs.unity3d.com/cn/current/Manual/XR.html",
+    "location": "手册 XR 章节目录（Version: Unity 6.0）",
+    "finding": "中文手册页显示 XR 章节与版本选择（Unity 6.0 / 旧版），内容为引擎内 XR 配置与输入。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "《虚拟现实技术与应用》（胡小强 编着，北京邮电大学出版社 2021-03，第 1-6 版次；全书 6 章，出版社官方目录逐节可见）",
+   "url": "https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "第1章 VR 技术概论：1.1 定义、1.2 特性（1.2.1 沉浸性、1.2.2 交互性、1.2.3 想象性）、1.3 虚拟现实与增强现实/混合现实；第2章 VR 系统硬件设备：2.1 感知设备（视觉/听觉/触觉/嗅觉）、2.2 基于自然的交互设备（三维控制器、数据手套、体感交互、语音交互、触觉交互）、2.3 三维定位跟踪设备（2.3.1 电磁跟踪、2.3.4 机械跟踪、2.3.5 惯性位置跟踪）、2.4 虚拟世界生成设备；第3章 相关技术：3.1 立体显示技术（彩色眼镜/偏振/串行/裸眼/全息）、3.2 环境建模、3.3 真实感实时绘制、3.4 三维虚拟声音、3.5 自然交互与传感技术（手势、表情、眼动跟踪、触觉反馈、定位跟踪）、3.6 碰撞检测、3.7 数据传输（5G/蓝牙/WiFi）；第4章 建模软件与开发引擎（3ds Max/Maya/C4D/RealityCapture、Unity/Unreal/VRPlatform）；第5章 全景技术；第6章 Unity 3D 开发基础与 VR/AR 应用案例。",
+   "access": "付费教材（北京邮电大学出版社，2021-03-04，版次 1-6；出版社页面未列出定价与 ISBN，需在书店核实）；中文；本轮只读官方目录与内容简介，未购买正文。",
+   "publisher": "北京邮电大学出版社（胡小强 编着）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html",
+    "location": "页面「书 名：虚拟现实技术与应用 / 出版时间：2021-03-04 / 编 着 者：胡小强 / 版 次：1-6」与「目录介绍」逐节：1.2.1 沉浸性、1.3 虚拟现实与增强现实、混合现实、2.2 基于自然的交互设备、2.3 三维定位跟踪设备（电磁/机械/惯性）、3.1 立体显示技术、3.5 自然交互与传感技术（含 3.5.6 定位跟踪技术）",
+    "finding": "在出版社官方目录里确认这本中文教材把显示（立体显示/裸眼/全息）、追踪（电磁/机械/惯性三类 + 定位跟踪一节）、自然交互设备（控制器/手套/体感/语音/触觉）、沉浸性/交互性特性、VR-AR-MR 关系都列为独立小节，可作为中文 XR 的系统主资源；目录中没有多用户协作与沉浸感评估方法。"
+   },
+   "added_by": "review/pi-additions/V.2.4.json"
+  },
+  {
+   "key": "r7-zh2",
+   "lang": "zh",
+   "title": "沉浸式媒体：虚拟现实、增强现实与混合现实（中国科学技术大学，中国大学MOOC USTC-1463111171；配套教材《虚拟/增强现实技术及其应用》张燕翔）",
+   "url": "https://www.icourse163.org/course/USTC-1463111171",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程概述自述「系统深入地讲解沉浸式媒体技术的三大重要方面：虚拟现实、增强现实与混合现实」，理论+前沿+实践（制作技术可上手）并重，落点是「知道采取什么技术路线及手段去实现」；参考教材《虚拟/增强现实技术及其应用》（张燕翔，中国科学技术大学出版社）。",
+   "access": "中国大学MOOC 免费注册学习；中文讲授；页面大纲区未列逐讲标题（只有课程概述与参考教材），字幕未核对。",
+   "publisher": "中国科学技术大学（中国大学MOOC 官方课程，张燕翔团队）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/USTC-1463111171",
+    "location": "「课程简介/课程概述」与「参考资料」：《虚拟/增强现实技术及其应用》，张燕翔，中国科大技术大学出版社",
+    "finding": "确认存在一门中文的、以 VR/AR/MR 三大块为骨架的中科大官方 MOOC（带配套教材），可作为教材之外的视频课补充；但大纲不公开，逐讲内容无法核对。"
+   },
+   "added_by": "review/pi-additions/V.2.4.json"
+  },
+  {
+   "key": "final-zh1",
+   "lang": "zh",
+   "title": "《多用户功能教程》（Microsoft Learn 中文，混合现实 Unity 教程 1–4：简介 / 设置 Photon Unity 网络 / 连接多个用户 / 与多名用户共享对象移动）",
+   "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/develop/unity/tutorials/mr-learning-sharing-01",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "教程 1 简介给出环境与版本前提（Unity 2020 LTS、MRTK 2.7）；教程 2「设置 Photon Unity 网络」逐屏讲导入 PUN 2、创建 Photon 应用（PUN 类型）、把 AppId 填进 PUN 向导；教程 3「连接多个用户」配置 PhotonUser prefab 并部署到 HoloLens，验证「多个用户连接到同一体验并看到彼此移动」；教程 4「与多名用户共享对象移动」把对象运动状态跨设备同步。",
+   "access": "微软官方文档，免费，中文为官方本地化页面（页面有「使用英语阅读」切换）；需 Unity、MRTK 与 Photon 账号（免费额度）才能动手；不含共享空间锚点与社会存在/协作行为研究。",
+   "publisher": "Microsoft（Microsoft Learn，混合现实开发文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/develop/unity/tutorials/mr-learning-sharing-02",
+    "location": "教程 2「创建 PUN 应用程序」「将 Unity 项目连接到 PUN 应用程序」；教程 3 结尾「你已成功配置项目，允许多个用户连接到同一体验并查看彼此的移动。在下一教程中，你将实现功能，以便对象移动也跨多个设备共享」；教程 4 标题「与多名用户共享对象移动」",
+    "finding": "四页逐一打开：标题分别为「多用户功能教程简介」「设置 Photon Unity 网络」「连接多个用户」「与多名用户共享对象移动」，教程 2 正文给出创建 PUN 应用与粘贴 AppId 的步骤，教程 3 正文给出 PhotonUser prefab 配置与部署验证，确认这是一条可跟着做的中文多人 XR 协作实现路线。"
+   },
+   "added_by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "key": "final-zh2",
+   "lang": "zh",
+   "title": "《舒适（Comfort）》（Microsoft Learn 中文，混合现实设计指南）",
+   "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/comfort",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲清晕动与不适的成因与对策：HoloLens 约 2.0 m 的固定光学距离导致 vergence-accommodation 冲突，内容该放在 1.25–5 m、40 cm 内淡出、30 cm 裁剪平面；近距交互的距离风险；IPD 与垂直偏移（VO）不匹配会加重不适；渲染至少 60 FPS、降低延迟（30 FPS 可能多 33.3 ms 延迟）以减少抖动与预测误差；虚拟移动与真实前庭线索冲突会诱发晕动，对策是「始终让用户控制其移动」、避开发方向性、按预计注视时长设「深度预算」并做用户测试。",
+   "access": "微软官方文档，免费；中文页面为机器本地化，标题被译成「安慰」（原文 Comfort），正文可读；面向 Windows Mixed Reality/HoloLens，原理可迁移到其他 HMD。",
+   "publisher": "Microsoft（Microsoft Learn，混合现实设计文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/comfort",
+    "location": "「与用户放置全息影像的最佳距离」「间隙距离和垂直偏移量」「呈现速率」「自运动和用户运动」各节",
+    "finding": "读到「与用户的真实物理运动不匹配的持续虚拟运动通常会诱发晕动病。这一结果是因为来自虚拟世界的自我运动的视觉提示与来自现实世界的自我运动前庭线索相冲突」「始终让用户控制其移动」「以每秒至少 60 帧 (FPS) 渲染」等段落，确认是晕动机制与缓解的中文教学，而不只是名词解释。"
+   },
+   "added_by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "key": "final-zh3",
+   "lang": "zh",
+   "title": "《空间存在：虚拟环境中何以产生身临其境之感?》（《心理科学进展》2018 年第 26 卷第 8 期，中文综述，起始页 1383）",
+   "url": "https://journal.psych.ac.cn/xlkxjz/article/2018/1671-3710/1671-3710-26-8-1383.shtml",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "「4.1 空间存在的实验研究范式」：先用问卷测被试特质（人口学、动机、兴趣、认知卷入）、设预实验熟悉流程；正式实验里个人特质作被试间变量、媒介特质作被试内变量，被试进入虚拟环境完成不同任务；最后用量表测空间存在，部分研究再做深度访谈。「4.2 空间存在的测量」：语义量表（SPES 8 题、两维信度 0.81/0.92；MEC-SPQ 16 题李克特 5 点；ITC-SOPI 等）与对语义量表局限的讨论。",
+   "access": "期刊官网开放阅读（中文），免费；是综述论文而非课程，但实验范式与量表两节是分步讲解；不含晕动量表（SSQ）操作细节。",
+   "publisher": "《心理科学进展》（中国科学院心理研究所）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://journal.psych.ac.cn/xlkxjz/article/2018/1671-3710/1671-3710-26-8-1383.shtml",
+    "location": "第 4 节「空间存在的实证研究」→ 4.1 空间存在的实验研究范式、4.2 空间存在的测量（4.2.1 语义量表）",
+    "finding": "读到「空间存在的实验研究基本程序通常为，首先用问卷测定被试的个性心理特质…并设计预实验…然后进行正式实验，被试的个人特质作为被试间变量；媒介本身的特质作为被试内变量…最后…使用相关空间存在量表/问卷…有的研究中最后进行深度访谈」，以及 SPES/MEC-SPQ/ITC-SOPI 的题目数与信度，确认有可照做的研究流程与测量工具说明。"
+   },
+   "added_by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "key": "final-zh4",
+   "lang": "zh",
+   "title": "《虚拟现实交互研究》（陈京炜 着，中国传媒大学出版社 2020-10，ISBN 978-7-5657-2753-5，「媒体艺术与技术丛书」）",
+   "url": "https://www.cucp.com.cn/Book/Details/290",
+   "tier": "book",
+   "free": false,
+   "role": "reference",
+   "covers": "出版社内容简介：全书六章，包括「数字影像在虚拟现实语境下的发展与特征」「数字影像在虚拟现实语境下的交互品质」「原型设计与评估」「基于交互品质的设计与评估」等；作者为中国传媒大学动画与数字艺术学院副教授，主讲国家级一流本科课程「游戏心理学」。",
+   "access": "正版付费图书，出版社页面有「立即购买」但未标价；本轮只读出版社内容简介与书目信息，未购买正文，章节细节未核对。",
+   "publisher": "中国传媒大学出版社（中国传媒教育知识服务平台）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.cucp.com.cn/Book/Details/290",
+    "location": "书目信息（ISBN 978-7-5657-2753-5、2020-10、中国传媒大学出版社）与「内容简介」段：「本书共六章，包括…原型设计与评估、基于交互品质的设计与评估等内容」",
+    "finding": "确认存在一本中文的 VR 交互研究专着，且把「原型设计与评估」列为章级内容；但简介没有逐章节标题，无法据此判断是否讲存在感/晕动测量，故只作 reference 不当覆盖依据。"
+   },
+   "added_by": "review/final-additions/V.2.4.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "虚实融合",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "XR 章：AR/VR 设备接入与渲染配置",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "1.3 虚拟现实与增强现实、混合现实；1.2 特性（沉浸性/交互性/想象性）；3.1 立体显示技术（彩色眼镜、偏振光、串行式、裸眼立体、全息）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "optics、graphical rendering、human vision（显示与虚实融合的感知基础）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有引擎接入，没有显示光学、透视式 HMD 的标定与虚实对齐原理。；教材先把 VR/AR/MR 的关系讲清，再用一章讲立体显示与全息等显示技术，正是「虚实融合」在显示侧的原理，而不是引擎接入配置；中文侧首次有了教材级依据。"
+  },
+  {
+   "topic": "追踪",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "XR 输入与设备追踪配置（使用 API，不讲原理）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "2.3 三维定位跟踪设备（2.3.1 电磁跟踪系统、2.3.4 机械跟踪系统、2.3.5 惯性位置跟踪系统）＋3.5.6 定位跟踪技术",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "tracking systems（inertial/optical 等）",
+     "extent": "covered"
+    }
+   ],
+   "note": "按电磁/机械/惯性三类跟踪原理分别成节，后面自然交互一章还有定位跟踪与眼动跟踪，覆盖「追踪」这条必学点（原理层面，未涉及具体 SDK 的延迟测量实验）。"
+  },
+  {
+   "topic": "空间界面",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "XR 交互输入（控制器/手势 API）",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "2.2 基于自然的交互设备（三维控制器、数据手套、体感交互、语音交互、触觉交互）＋3.5 自然交互与传感技术（手势识别、面部表情、眼动跟踪、触觉力觉反馈、嗅觉交互）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "interface design 与 human factors",
+     "extent": "covered"
+    }
+   ],
+   "note": "把空间交互的输入设备与识别技术分层讲清（设备层 + 交互技术层），是空间界面的技术基础；但界面设计原则与人因评估仍缺（见 unresolved）。"
+  },
+  {
+   "topic": "协作",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "final-zh1",
+     "section": "多用户功能教程 1–4：简介 → 设置 Photon Unity 网络（PUN 2 / AppId）→ 连接多个用户（PhotonUser prefab、部署验证）→ 与多名用户共享对象移动",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "人因/设计章节间接涉及多人使用（无协作系统专章）",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都没有多用户协作式 XR（共享锚点、网络同步、社交存在）的系统内容；英文仅间接涉及，gran 说明也承认“协作系统证据弱”。；中文侧第一次有可跟着做的多人 XR 协作路线：先用 PUN 建房间并把 Unity 工程接上 AppId，再让多个用户进同一体验、看到彼此头像移动，最后把对象运动状态在设备间同步——这正是协作 XR 的网络同步主干（房间/连接/状态复制）。范围说明：这套教程不含共享空间锚点（Azure Spatial Anchors 教程中文页已下线，跳到 HoloLens 训练路径）与社交存在/协作行为研究，那两块在中文侧仍薄。"
+  },
+  {
+   "topic": "沉浸与交互研究",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "XR 交互与性能设置（工程向）",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh3",
+     "section": "4.1 空间存在的实验研究范式；4.2 空间存在的测量（SPES / MEC-SPQ / ITC-SOPI）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh2",
+     "section": "「自运动和用户运动」（视觉-前庭冲突诱发晕动、让用户控制移动）、「间隙距离和垂直偏移量」（IPD/VO 不适）、「呈现速率」（≥60 FPS 与延迟）、「深度预算」与用户测试建议",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "human factors（晕动、前庭系统）与 developer recommendations",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文缺沉浸感/存在感/晕动的评估与研究设计。；把「沉浸」落成可测量的研究：先讲空间存在（being there）的两维结构，再给出完整实验流程（测特质→预实验→正式实验设被试间/被试内变量→量表测量→可选深访）与具体量表（题数、计分方式、信度），还讨论了语义量表的局限。中文侧此前只有「沉浸性」的概念定义，现在有了研究范式与测量工具。；补上晕动这一半：为什么持续虚拟运动会诱发晕动（视觉自我运动与前庭线索冲突）、哪些显示因素会加重不适（V-A 冲突、IPD/VO 失配、低帧率高延迟）、怎么缓解（用户控制移动、限制近距与深度移动、保证帧率）以及「超出深度预算就要做用户测试」。与 final-zh3 的存在感测量合起来，构成「沉浸感怎么测 + 晕动怎么来怎么防」的中文研究基础。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 XR 手册搭一个可运行的 VR/AR 场景，接入手柄/手势输入，记录追踪丢失与性能问题。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "先读第1章弄清 VR/AR/MR 与沉浸性/交互性，再读第2章硬件（感知设备→自然交互设备→三维定位跟踪）与第3章技术（立体显示→建模→绘制→三维声音→自然交互与传感→碰撞→传输），每节配一个手上设备的实测记录（如头显刷新率、控制器 6DoF 精度）。"
+    },
+    {
+     "source": "r7-zh2",
+     "read": "用中科大 MOOC 串起 VR/AR/MR 三条应用线，跟着做一次沉浸式内容制作（全景或 AR 项目），把教材里的显示/追踪原理对应到你实际用的设备与 SDK 上。"
+    },
+    {
+     "source": "final-zh1",
+     "read": "按教程 1→4 做一遍：建 Photon 应用并把 AppId 接进 Unity 工程，部署到两台设备（或一台设备 + Unity 编辑器）验证能进同一房间、看到彼此头像；再做教程 4 把一个物体的位姿在两个客户端同步，记录延迟与抖动。做完补一页笔记：房间/用户/对象状态分别由谁同步、断线重连怎么处理。"
+    },
+    {
+     "source": "final-zh3",
+     "read": "照 4.1 的实验范式设计一个小研究：定 1 个被试内变量（如两种移动方式）与 1 个被试间变量（如 VR 经验），先做预实验，再让每位被试完成同一任务，用 SPES 或 MEC-SPQ 测空间存在，最后按 4.2 的讨论说明为什么选语义量表、它的局限在哪。"
+    },
+    {
+     "source": "final-zh2",
+     "read": "在你自己的场景里核对晕动风险清单：内容是否落在 1.25–5 m、有无 40 cm 内的近距离内容、IPD/垂直偏移是否校准、是否稳定 ≥60 FPS、虚拟移动是否由用户主动控制；按「深度预算」估算近距离注视占比，超标就给 3–5 位用户做一次舒适度测试并记录不适出现的时间点。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按书的光学/显示章理解透视式 HMD 与虚实对齐，按 tracking 章理解 IMU/光学追踪与延迟。"
+    },
+    {
+     "source": "en1",
+     "read": "读 interface design 与 human factors 章，设计一个空间交互并评估晕动与可用性。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "https://docs.unity3d.com/cn/current/Manual/XR.html ; 中文 VR/AR 课程页检索",
+   "result": "只有引擎手册可核对；未找到中文 XR 系统课的可核对页面。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "中国大学MOOC 虚拟现实/增强现实类课程检索",
+   "result": "检索被限流，未能确认具体课程页，故不登记。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "中文《虚拟现实技术》教材",
+   "result": "未核实到可核对目录的公开页，未购买。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://lavalle.pl/vr/",
+   "result": "采纳：书籍覆盖面与 MOOC 说明核对。"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "虚拟现实技术 课程 大纲 头显 显示 追踪 空间交互 沉浸感 增强现实（限定 icourse163/higher.smartedu/xuetangx）",
+   "result": "命中中科大《沉浸式媒体：VR/AR/MR》、中传《虚拟现实原理与实践》、南大《灵境——虚拟现实技术的应用》、综合《虚拟现实技术》；选中文理兼顾的中科大课为 r7-zh2。",
+   "by": "review/pi-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/USTC-1463111171",
+   "result": "读到课程概述与参考教材（张燕翔《虚拟/增强现实技术及其应用》），大纲区为空，无法逐讲核对。",
+   "by": "review/pi-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "虚拟 增强现实技术及其应用 张燕翔 中国科学技术大学出版社 目录 章节",
+   "result": "只找到电商页与作者主页，没有可读目录；顺带命中北邮社《虚拟现实技术与应用》图书页（含完整目录）→ 打开核对后采纳为 r7-zh1（中文 primary 教材）。",
+   "by": "review/pi-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html",
+   "result": "读到 6 章完整目录：1.2 沉浸性/交互性/想象性、1.3 VR-AR-MR、2.2 自然交互设备、2.3 三维定位跟踪（电磁/机械/惯性）、3.1 立体显示、3.5 自然交互与传感、第5章全景、第6章 Unity 3D 与 VR/AR 案例。",
+   "by": "review/pi-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "虚拟现实 教材 目录 晕动症 沉浸感 存在感 评估 章节",
+   "result": "不合适：返回的全是期刊论文（浙大学报、光电工程、Academax 等）与一篇学位论文，没有教材目录；说明中文「晕动/存在感」材料以论文为主。",
+   "by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "虚拟现实 用户体验 晕动 舒适度 课程 大纲 交互设计 中国大学MOOC",
+   "result": "部分采纳：命中中传《虚拟现实原理与实践》课程页（参考教材含《虚拟现实交互研究》陈京炜）与北理工/国科大课程大纲 PDF（大纲不是教学内容，未采纳）；另确认中科大《沉浸式媒体》学习页大纲区仍为空。",
+   "by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "存在感 沉浸感 测量 问卷 IPQ SSQ 虚拟现实 实验 教学 教程",
+   "result": "不合适：命中知乎/CSDN 的问卷介绍（知乎 403、CSDN 521 且无 archive 快照，打不开）与期刊论文；改用能直接打开的《心理科学进展》中文综述（含实验范式与量表）→ final-zh3。",
+   "by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/develop/unity/tutorials/mr-learning-sharing-01 … -04",
+   "result": "采纳为 final-zh1：四页逐一打开确认标题与步骤（PUN 设置、连接多用户、共享对象移动）。",
+   "by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://learn.microsoft.com/zh-cn/windows/mixed-reality/design/comfort",
+   "result": "采纳为 final-zh2：读到 V-A 冲突、IPD/VO、60 FPS、视觉-前庭冲突与「让用户控制移动」等晕动教学；页面中文是机器本地化（标题译作「安慰」）。",
+   "by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "fetch + tavily",
+   "query_or_url": "https://www.cucp.com.cn/Book/Details/290（出版社页）；https://learn.microsoft.com/zh-cn/windows/mixed-reality/develop/unity/tutorials/mr-learning-asa-01",
+   "result": "出版社页登记《虚拟现实交互研究》为 reference（只有内容简介，六章未逐条）；ASA 共享锚点教程中文页已下线（跳转到 HoloLens 训练路径），故「共享锚点」未纳入覆盖。",
+   "by": "review/final-additions/V.2.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily(research_tool)",
+   "query_or_url": "虚拟现实 用户体验 晕动 舒适度 课程 大纲 交互设计 中国大学MOOC（同第二条）",
+   "result": "未找到可核对的中文 VR 沉浸感/晕动评估课程或视频课；中传/中科大/中传课程页都只到「概述+参考教材」这一层。",
+   "by": "review/final-additions/V.2.4.json"
+  }
+ ],
+ "findings": [
+  "原中文条目 Unity 中文 XR 手册是产品文档，只能覆盖工程接入，不能支撑虚实融合/追踪/空间界面/研究四个主题。",
+  "中文 XR 系统课本轮未找到可核对页面，判 partial 并把四个主题的缺口列出。",
+  "“协作”在英文书里也只是间接涉及，gran 说明已承认证据弱；本轮不把它写成已系统覆盖，建议主代理复核该主题是否应降为 extension 或单列。",
+  "[review/pi-additions/V.2.4.json] 未解决 zh「协作」：中文 XR 材料（北邮社教材、中科大/中传/南大 MOOC）都是单用户视角：教材目录只有硬件、显示、追踪、交互、引擎与全景，没有多用户协作（共享锚点、网络同步、社交存在）章节；本轮查了课程平台与出版社目录两个渠道，仍未找到中文课程级材料。",
+  "[review/pi-additions/V.2.4.json] 未解决 zh「沉浸与交互研究」：中文只有「沉浸性/交互性」的概念定义（教材 1.2 节），没有沉浸感/存在感量表、晕动症评估与研究设计的教学；中科大 MOOC 大纲不公开无法核对，其余中文 MOOC 是项目开发向。三渠道（课程平台、教材目录、通用检索）均未找到课程级的中文沉浸感评估方法。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/V.2.4.json@2c9ffec439",
+  "review/final-additions/V.2.4.json@fd41248210"
+ ]
+}

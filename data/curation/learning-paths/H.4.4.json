@@ -128,6 +128,24 @@
     "finding": "页面把离线运行的条件、消息暂存与本地认证讲清楚，补上英文侧“离线性”。"
    },
    "added_by": "review/pi-additions/H.4.4.json"
+  },
+  {
+   "key": "publication-zh1",
+   "lang": "zh",
+   "title": "边缘计算中的资源调度机制（郑瑞娟等，科学出版社）",
+   "url": "https://www.ecsponline.com/goods.php?id=227024",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "配边缘部署主课读本地计算与通信时间模型、低时延卸载、资源分配和实验比较；定位为时延专题补充，需有概率/优化基础。",
+   "access": "出版社完整中文目录公开，全文需购买或合法借阅；未购买、未读收费全文。",
+   "publisher": "科学出版社",
+   "evidence": {
+    "url": "https://www.ecsponline.com/goods.php?id=227024",
+    "location": "第4章4.2模型与4.4实验；低时延计算卸载专题",
+    "finding": "官方页面有本地计算/通信模型、卸载和实验分析目录，内容介绍明确以计算时延为评估目标。"
+   },
+   "added_by": "review/publication-additions/H.4.4.json"
   }
  ],
  "topics": [
@@ -158,6 +176,11 @@
      "source": "zh1",
      "section": "边缘处理提高响应速度（定性）",
      "extent": "partial"
+    },
+    {
+     "source": "publication-zh1",
+     "section": "第4章本地计算/通信模型与实验；低时延卸载专题",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -172,7 +195,7 @@
      "extent": "covered"
     }
    ],
-   "note": "两侧都只定性讲响应时间，没有时延建模/排队分析。；英文侧把时延从“动机”推进到“调度方案比较中的目标量”，与 en1 的响应时间讨论合起来覆盖“研究时延”。"
+   "note": "两侧都只定性讲响应时间，没有时延建模/排队分析。；英文侧把时延从“动机”推进到“调度方案比较中的目标量”，与 en1 的响应时间讨论合起来覆盖“研究时延”。；中文付费专题已有明确模型与实验，撤销此前只根据旧主课无专节而作的英文回退。"
   },
   {
    "topic": "带宽",
@@ -254,7 +277,7 @@
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -271,11 +294,13 @@
     {
      "source": "r7-zh2",
      "read": "再读面向缓存的迁移决策论文：把它的目标函数（时延+能耗加权）与约束抄下来，尝试把权重调大调小，观察迁移/缓存决策怎么变。"
+    },
+    {
+     "source": "publication-zh1",
+     "read": "先把一项请求拆成本地处理、传输、边缘排队和远端处理时间，再按第4章模型和实验比较本地/边缘卸载；区分模型估计与实际测量。"
     }
    ],
-   "gaps": [
-    "研究时延"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -364,6 +389,14 @@
    "query_or_url": "边缘计算 施巍松 科学出版社 目录 时延 计算卸载",
    "result": "施巍松《边缘计算（第2版）》（科学出版社，ISBN 978-7-03-067647-4）存在，但能打开的只有图书馆目录页（脚本渲染、读不到章节），无法核实是否讲时延分解与测量；没有其他可核的中文付费教材。跨语言补充维持。",
    "by": "review/main-additions/H.4.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://www.ecsponline.com/goods.php?id=227024",
+   "result": "官方页面有本地计算/通信模型、卸载和实验分析目录，内容介绍明确以计算时延为评估目标。",
+   "by": "review/publication-additions/H.4.4.json"
   }
  ],
  "findings": [
@@ -372,24 +405,12 @@
   "调度与资源权衡两侧都缺，故为 partial。",
   "[review/pi-additions/H.4.4.json] 未解决 zh「研究时延」：中文材料只到“降时延是边缘计算动机 + 时延作为优化目标”的层面，没有时延分解/测量的系统讲解；如后续找到中文边缘计算教材（施巍松《边缘计算》目录本轮未核到）可回填。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "研究时延",
-   "source": "r7-en1",
-   "reason": "中文侧只有“就近响应更快”的动机（KubeEdge 中文文档）与把时延当优化目标的论文模型（r7-zh2），没有讲时延如何构成/如何测量分析的中文教学；B 站与文字搜索均未找到中文边缘计算课程。时延的分析框架本轮借用英文调度综述（r7-en1）。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/H.4.4.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "边缘计算",
  "description": "把计算部署到数据源附近，研究时延、带宽、离线性、调度与资源权衡。",
  "applied_additions": [
   "review/pi-additions/H.4.4.json@e56e75dd71",
-  "review/main-additions/H.4.4.json@c42f7c8379"
+  "review/main-additions/H.4.4.json@c42f7c8379",
+  "review/publication-additions/H.4.4.json@cf84afa95a"
  ]
 }

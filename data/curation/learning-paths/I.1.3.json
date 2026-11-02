@@ -57,6 +57,42 @@
     "finding": "打开确认课程简介原文与官方大纲：第五章标题为「业务流程管理」，首两节为「5-1 工作流网（WF_net）」「5-2 工作流管理联盟」；简介并写“Petri 网的应用实例包括：哲学家就餐问题、N 部电梯控制问题、业务流程管理问题和过程挖掘”。页面只渲染到第五章前两节，后续小节未显示，故只按可核节标题判定。"
    },
    "added_by": "review/pi-additions/I.1.3.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "凡得科技流程挖掘课堂：第1讲流程发现",
+   "url": "https://fande.cn/article/80",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "读事件日志、活动关系与Alpha发现过程，再比较启发式和归纳发现；根据一份小日志手画流程模型。",
+   "access": "中文教学正文免费公开。",
+   "publisher": "凡得科技流程挖掘教学专栏",
+   "evidence": {
+    "url": "https://fande.cn/article/80",
+    "location": "事件日志到流程模型；Alpha、启发式与归纳算法",
+    "finding": "原厂商教学专栏给出多种发现算法的步骤和图示，超出产品概述，可补流程发现入门。"
+   },
+   "added_by": "review/verified-additions/I.1.3.json"
+  },
+  {
+   "key": "verified-zh2",
+   "lang": "zh",
+   "title": "信息系统项目管理师教程（第4版）：流程管理专题",
+   "url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "读23.2流程规划、执行、评价及持续改进；用现有Petri网/工作流课程落实自动执行，以指标对照评价改进前后的流程。",
+   "access": "公开书目信息与目录可核对范围；全文需购买或经合法图书馆借阅，本轮未购买、未读收费全文。",
+   "publisher": "清华大学出版社",
+   "evidence": {
+    "url": "https://www.tup.tsinghua.edu.cn/booksCenter/bookcatalog?id=09983002",
+    "location": "23.2流程管理；出版社目录 bookcatalog?id=09983002",
+    "finding": "官方目录23.2包含规划、执行、评价、持续改进各节，配章后练习，作为中文BPM路线的管理基础。"
+   },
+   "added_by": "review/verified-additions/I.1.3.json"
   }
  ],
  "topics": [
@@ -73,6 +109,11 @@
      "source": "r7-zh1",
      "section": "课程简介「过程挖掘」应用实例（第五章之前各章作为 Petri 网方法铺垫）",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "事件关系、Alpha/启发式/归纳发现方法",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -82,7 +123,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文是工具里的流程梳理，没有事件日志、α/inductive miner 等流程挖掘内容。；流程发现（从事件日志挖掘流程模型）在 r7-zh1 里只作为“应用实例”出现，没有单独章节可核到事件日志、α 算法/启发式挖掘/一致性检查等具体内容；第五章讲的是建模与执行而非发现。故本知识点记 partial，并在 unresolved 里说明。"
+   "note": "中文是工具里的流程梳理，没有事件日志、α/inductive miner 等流程挖掘内容。；流程发现（从事件日志挖掘流程模型）在 r7-zh1 里只作为“应用实例”出现，没有单独章节可核到事件日志、α 算法/启发式挖掘/一致性检查等具体内容；第五章讲的是建模与执行而非发现。故本知识点记 partial，并在 unresolved 里说明。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
   },
   {
    "topic": "建模",
@@ -111,6 +152,11 @@
      "source": "zh1",
      "section": "无定性/定量流程分析单元",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh2",
+     "section": "23.2.4流程评价（配当前课程的形式化工作流模型）",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -120,7 +166,7 @@
      "extent": "covered"
     }
    ],
-   "note": ""
+   "note": "同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
   },
   {
    "topic": "执行",
@@ -154,6 +200,11 @@
      "source": "zh1",
      "section": "工具中的优化建议，无监控/改进闭环",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh2",
+     "section": "23.2.3执行与23.2.5持续改进；自动化的工作流网模型配现有中文课程",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -163,12 +214,12 @@
      "extent": "covered"
     }
    ],
-   "note": ""
+   "note": "同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
   }
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -177,13 +228,17 @@
     {
      "source": "r7-zh1",
      "read": "先读第三章 Petri 网层次系统（EN/C-E/P-T、并发与冲突的准确含义），再读第四章同步论/信息流网，最后读第五章 5-1 工作流网与 5-2 工作流管理联盟：把一条业务流程画成 WF_net，标出案例 token 的推进、选择/并行分支与终止条件，并对照 WFMC 参考模型说明“流程定义—引擎—工作流管理系统”各层职责。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "读事件日志、活动关系与Alpha发现过程，再比较启发式和归纳发现；根据一份小日志手画流程模型。"
+    },
+    {
+     "source": "verified-zh2",
+     "read": "读23.2流程规划、执行、评价及持续改进；用现有Petri网/工作流课程落实自动执行，以指标对照评价改进前后的流程。"
     }
    ],
-   "gaps": [
-    "流程发现",
-    "分析",
-    "自动化与持续改进"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -268,6 +323,22 @@
    "query_or_url": "业务流程管理基础 Dumas 中译本 OR 业务流程管理 教材 流程发现 过程挖掘 出版社 目录",
    "result": "没有找到 Dumas 等《业务流程管理基础》中译本或其他可核目录的中文 BPM 教材。",
    "by": "review/main-additions/I.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://fande.cn/article/80",
+   "result": "原厂商教学专栏给出多种发现算法的步骤和图示，超出产品概述，可补流程发现入门。",
+   "by": "review/verified-additions/I.1.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html",
+   "result": "官方目录23.2包含规划、执行、评价、持续改进各节，配章后练习，作为中文BPM路线的管理基础。",
+   "by": "review/verified-additions/I.1.3.json"
   }
  ],
  "findings": [
@@ -277,46 +348,10 @@
   "[review/pi-additions/I.1.3.json] 未解决 zh「主资源」：need_primary 未解决：中文没有一门以 BPM 全生命周期（发现—建模—分析—执行—改进）为主线的课程/教材可核；清华《Petri 网》只把业务流程管理作为一章，BPM CBOK 中文版只有培训商页面，无出版社目录页，不能当主资源。",
   "[review/pi-additions/I.1.3.json] 未解决 zh「流程发现」：过程挖掘在清华课程里只列为应用实例，未核到事件日志、挖掘算法与一致性检查的讲次，记 partial。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "分析",
-   "source": "en1",
-   "reason": "中文检索只得到产品科普页与百科，没有可核的定性/定量流程分析（价值增值分析、流量分析、排队/仿真）教学正文；清华 Petri 网课第五章只讲建模与执行。故按 fallback 用 en1 的分析章。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/I.1.3.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "自动化与持续改进",
-   "source": "en1",
-   "reason": "中文只有产品“优化建议/自动化”宣传页，没有监控指标、流程绩效与改进闭环的教学材料；MOOC 大纲中也没有对应章节。按 fallback 用 en1 的 process monitoring/redesign 章。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/I.1.3.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "流程发现",
-   "source": "en1",
-   "reason": "流程发现（过程挖掘）在中文侧只有 CSDN 博客、厂商介绍和一份字幕仍在翻译中的 Coursera 课程搬运；清华《Petri 网》第五章只讲工作流网建模，不讲从事件日志发现模型；三个渠道均已查。改读英文主资源。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/main-additions/I.1.3.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "applied_additions": [
   "review/pi-additions/I.1.3.json@c59e1f41a1",
-  "review/main-additions/I.1.3.json@42409dd70e"
+  "review/main-additions/I.1.3.json@42409dd70e",
+  "review/verified-additions/I.1.3.json@16c9dd7764"
  ]
 }

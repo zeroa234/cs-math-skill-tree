@@ -52,6 +52,24 @@
     "location": "目录 1–13 章（含 3. 逻辑、9. 群与环、13. 积分和测度论）",
     "finding": "页面目录列出 13 章中文标题，正文可读；书名页标注 Mathematics in Lean 0.1 documentation。"
    }
+  },
+  {
+   "key": "publication-zh1",
+   "lang": "zh",
+   "title": "Lean 中文手册：验证证明与信任边界",
+   "url": "https://www.leanprover.cn/reference-manual/latest/ValidatingProofs/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "通过打印公理、内核重放与外部检查器讲可信计算基及其限制；只补当前组合知识点的TCB部分，精化仍需所列英文教材。",
+   "access": "Lean中文社区翻译的免费教程；对照原官方手册，命令与信任模型取决于Lean版本。",
+   "publisher": "Lean-zh 中文翻译社区（原手册由Lean官方维护）",
+   "evidence": {
+    "url": "https://www.leanprover.cn/reference-manual/latest/ValidatingProofs/",
+    "location": "打印公理、lean4checker、comparator与遗留假设",
+    "finding": "实际中文正文有命令、操作、含义和信任前提的分步解释，不是只有API列表。"
+   },
+   "added_by": "review/publication-additions/F.3.4.json"
   }
  ],
  "topics": [
@@ -106,6 +124,11 @@
      "source": "zh1",
      "section": "只到数学形式化，没有从规格精化到真实程序或 TCB 讨论",
      "extent": "partial"
+    },
+    {
+     "source": "publication-zh1",
+     "section": "打印公理、内核重放、外部检查器与信任前提（TCB部分）",
+     "extent": "partial"
     }
    ],
    "en": [
@@ -115,7 +138,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文侧只能靠“证明内核即 TCB”的隐含理解，没有精化（refinement）到真实 C 程序的中文教材。"
+   "note": "中文侧只能靠“证明内核即 TCB”的隐含理解，没有精化（refinement）到真实 C 程序的中文教材。；中文可学习可信计算基；未核到规格到实现精化的完整同语言路线，保留该组合项英文补读，不将策略refine冒充程序精化。"
   }
  ],
  "routes": {
@@ -125,6 +148,10 @@
     {
      "source": "zh1",
      "read": "第 1–4 章（引言/基础/逻辑/集合与函数）打通 Lean 证明流程→第 5–9 章数论/离散数学/结构体/群环，完成书中的机器检查练习"
+    },
+    {
+     "source": "publication-zh1",
+     "read": "对已有证明执行公理检查，区分定理本身、自动化策略、内核与外部检查器各自被信任的部分；随后按英文补读学习精化。"
     }
    ],
    "gaps": [
@@ -212,6 +239,21 @@
    "query_or_url": "site:icourse163.org 信息安全 可信计算基 安全模型 访问控制 课程 大纲",
    "result": "不合适：中国大学MOOC 上信息安全类课程（信息工程大学、哈工程、信息安全概论等）大纲只列保密/认证/访问控制/计算环境安全，没有“可信计算基”单元，也没有精化。",
    "by": "review/pi-additions/F.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "Lean4 中文 精化 可信计算基 内核 教程",
+   "result": "核到中文TCB验证步骤；refine策略不等于程序精化，未把整项改为covered。",
+   "by": "review/publication-additions/F.3.4.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "形式化方法 精化 非干扰 教材 出版社 目录（最终复核）",
+   "result": "清华出版社CISSP目录有非干扰模型小节，形式化方法导论侧重模型检验；目录范围仍不足以核实当前缺项的形式化推理教学。"
   }
  ],
  "findings": [
@@ -225,7 +267,7 @@
    "lang_missing": "zh",
    "topic": "精化与可信计算基",
    "source": "en1",
-   "reason": "本轮查过三个渠道：①文字——中文检索只找到北大裘宗燕 B 方法课程页的搜索摘要（页面现已 404，无法核正文），中科大华保健《形式化方法：理论及应用》13 章无精化/TCB 章；②视频——中国大学MOOC 信息安全类课程大纲只到访问控制与计算环境安全，没有可信计算基单元；③付费——没有查到可核目录的中文“精化/TCB”教材。故中文侧按 fallback 继续用 en1（Software Foundations 的 Verifiable C/Separation Logic 卷）讲精化与可信计算基。",
+   "reason": "已查中文文字、视频和付费教材。Lean中文参考手册的“验证证明”已补可信计算基与内核边界；程序从形式规格到实现的精化仍未核到合适中文教学，不能用Lean的refine战术替代程序精化。该组合项继续配读Software Foundations；其他主题仍按中文路线学习。",
    "searched_channels": [
     "text",
     "video",
@@ -237,6 +279,7 @@
  "name": "证明助手与形式化数学",
  "description": "命题即类型、机器检查证明、精化与可信计算基。",
  "applied_additions": [
-  "review/pi-additions/F.3.4.json@82cb057ff9"
+  "review/pi-additions/F.3.4.json@82cb057ff9",
+  "review/publication-additions/F.3.4.json@a41b203879"
  ]
 }

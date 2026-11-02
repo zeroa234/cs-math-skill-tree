@@ -96,6 +96,62 @@
     "finding": "打开确认：第3章正文写“移动目标防御的基本思想 ‘动态’＋‘异构’……增加攻击者的攻击成本”“本质:通过增加系统的随机性和不可预测性来防范网络攻击”“移动目标防御的五个层次：通过在网络、平台、环境、软件和数据等多个层次增加随机性和不确定性，增加攻击难度”；拟态防御一节写“‘动态’＋‘异构’＋‘冗余’……使攻击的代价倍增、难以生效”；第7章目录列 W^X(NX,DEP)、ASLR 与 CFI、指针完整性。"
    },
    "added_by": "review/pi-additions/S.5.2.json"
+  },
+  {
+   "key": "closure-zh1",
+   "lang": "zh",
+   "title": "《网络测量学 = Network Measuring》（中文教材，13 章：测量算法、测量工具、开源数据、流量测量方法与分类、加密流量与恶意流量测量、流量仿真、公共数据集）",
+   "url": "https://julac-hkpu.primo.exlibrisgroup.com/discovery/fulldisplay/alma991023017969303411/852JULAC_HKPU:HKPU",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "中文成体系的网络测量教材：全书 13 章，按「测量算法、测量工具、开源数据」三条线组织，内容含网络流量测量方法与分类、加密流量测量（加密协议分析、加密与非加密流量识别）、恶意流量测量、流量仿真、公共数据集等；把测量对象、测量方法、工具与公开数据放在同一框架里讲，正好补中文侧「网络测量」这一半（此前只有一篇 SDN 测量综述）。",
+   "access": "需购买（正版中文教材）。本轮只核到图书馆馆藏记录（香港理工大学 JULAC 联合目录）给出的书名、并列英文名与 13 章内容摘要，未核到出版社目录页、定价与出版年，也未购买或阅读正文；作者一般署为程光等（东南大学网络测量团队），但该馆藏记录未显示责任者字段，本轮未据以断定。",
+   "publisher": "中文教材《网络测量学》，出版社与出版年本轮未核实（馆藏记录未显示）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://julac-hkpu.primo.exlibrisgroup.com/discovery/fulldisplay/alma991023017969303411/852JULAC_HKPU:HKPU",
+    "location": "馆藏记录的内容简介字段：「本书分为13章，从测量算法、测量工具、开源数据等角度，介绍了网络测量领域中涉及的核心技术内容，包括网络流量测量方法与分类、加密流量及恶意流量测量、流量仿真、公共…」",
+    "finding": "实际打开该馆藏记录读到上述 13 章内容摘要（页面被截断于「公共…」，推测为公共数据集）。据此只能确认「存在一本 13 章的中文网络测量教材，且把测量算法/工具/开源数据并列」，不能确认具体章节标题。"
+   },
+   "added_by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "key": "closure-zh2",
+   "lang": "zh",
+   "title": "Vulhub 中文说明（开源漏洞靶场集合：docker compose 一条命令启动固定环境，每个环境目录自带复现步骤与使用说明）",
+   "url": "https://raw.githubusercontent.com/vulhub/vulhub/master/README.zh-cn.md",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "把安全实验的「环境固定 + 步骤脚本化」做成可直接照做的流程：Vulhub 是「开源的、即开即用的漏洞靶场环境集合」，全部环境基于 Docker compose 制作，「只需一条命令即可快速启动用于安全研究、学习或演示的漏洞环境」；给出完整操作链——装 Docker → git clone → cd 到某个 CVE 目录 → docker compose up -d 启动 → 按该目录 README 的复现步骤操作 → docker compose down -v 清理；并提示内存/架构限制与「不要用于生产」。这解决的是复现实验最容易崩的一环：环境与依赖不再靠口口相传，而是容器化的可重建快照。",
+   "access": "免费开源（GitHub，中文 README 与英文 README 并存），无需注册；中文；仓库内含 CVE 目录与每环境 README。注意：仓库面向漏洞复现，不含实验日志规范、随机性控制与 artifact 评审流程；使用需遵守其「仅用于测试与教学」的声明。",
+   "publisher": "Vulhub（vulhub/vulhub，开源项目）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/vulhub/vulhub/master/README.zh-cn.md",
+    "location": "「Vulhub 是一个开源的、即开即用的漏洞靶场环境集合……只需一条命令即可快速启动用于安全研究、学习或演示的漏洞环境」→「快速开始：安装 Docker / 下载并解压 Vulhub（git clone --depth 1）/ 启动一个漏洞环境（cd vulhub/langflow/CVE-2025-3248; docker compose up -d）/ 每个环境目录下都包含详细的 README，请参阅以了解复现步骤和使用说明 / 测试完成后清理环境（docker compose down -v）」→ NOTE 段（≥1GB 内存、your-ip 含义、ARM 支持、仅限测试与教学）",
+    "finding": "实际打开中文 README 读到上述全文（含命令与目录约定），并另开英文 README 确认同一结构（「Each environment directory contains a detailed README with reproduction steps and usage instructions」）。确认它给出的是可照做的环境重建与复现步骤约定，不是零散的工具介绍。"
+   },
+   "added_by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "key": "release-zh-anderson",
+   "lang": "zh",
+   "title": "Ross Anderson《信息安全工程（第2版）》中文译本",
+   "url": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=03008201",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "第7章从信息经济学、博弈论进入安全投入与激励分析；配既有清华流量测量课件，覆盖测量与安全经济学组合项。",
+   "access": "正版中文纸书；出版社公开目录已核对，完整正文需购买。本轮未购买或通读正文。",
+   "publisher": "出版社官方图书页面",
+   "evidence": {
+    "url": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=03008201",
+    "location": "第7章经济学，第7.2–7.5节，尤其7.5安全经济学和可靠性",
+    "finding": "清华大学出版社完整目录明确列出信息不对称、博弈论、最脆弱环节、补丁周期、隐私经济学与DRM经济学。"
+   },
+   "added_by": "review/release-additions/S.5.2.json"
   }
  ],
  "topics": [
@@ -160,6 +216,11 @@
      "source": "zh2",
      "section": "无实验流程内容",
      "extent": "partial"
+    },
+    {
+     "source": "closure-zh2",
+     "section": "「Vulhub 是一个开源的、即开即用的漏洞靶场环境集合」＋「快速开始」全流程（Docker → git clone → cd 到 CVE 目录 → docker compose up -d → 按目录 README 复现 → down -v）＋ NOTE 中的资源与架构限制",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -169,7 +230,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文没有“环境固定→步骤脚本化→结果可复现→artifact 共享”的实验教学。"
+   "note": "中文没有“环境固定→步骤脚本化→结果可复现→artifact 共享”的实验教学。；此前中文这一条只有「无实验流程内容」。Vulhub 正好补上「环境固定」与「步骤脚本化」两环：环境用 Docker compose 固化成可重建快照，一条命令重建，复现步骤写在每个环境目录的 README 里，跑完 down -v 清理保证可重复；配合既有 r7-zh1（清华课程第 12 章的配套测量实验，给出原论文与开源代码、采集→特征→检测→评估的流程与评估口径），中文侧就凑齐了「环境固定 → 步骤脚本化 → 结果可复现 → 代码/数据共享」四环。代价是这一组合横跨两份材料：Vulhub 只管环境与步骤，日志规范与随机性控制仍要靠一般实验纪律。"
   },
   {
    "topic": "网络测量与安全经济学",
@@ -184,6 +245,16 @@
      "source": "r7-zh1",
      "section": "第12章 流量分析三要素/分类法、检测算法（规则 vs 机器学习）、隐私窃取型流量分析与检测；配套测量实验（路由异常检测、流量交互图、网站指纹）",
      "extent": "partial"
+    },
+    {
+     "source": "closure-zh1",
+     "section": "13 章中与测量相关的部分：网络流量测量方法与分类、加密流量及恶意流量测量、流量仿真、公共数据集、测量算法与测量工具",
+     "extent": "partial"
+    },
+    {
+     "source": "release-zh-anderson",
+     "section": "第7章经济学：7.3信息经济学、7.4博弈论、7.5安全经济学和可靠性；网络测量另读本路线清华课件第12章",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -193,12 +264,12 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有网络测量综述（且限于 SDN），没有安全经济学（攻击成本/防御投入/激励）的内容。；只覆盖“网络测量”这一半：把面向安全的测量拆成“流量特征—分析算法—分析目标”三要素，说明特征选择决定系统能力上限，并比较专家规则与机器学习两类检测算法在覆盖面与误报上的差别；配套实验（含原论文与开源代码）给出可复现的测量流程（采集→特征→检测/指纹→评估）。“安全经济学”一半中文无可登记材料，故本知识点整体记 partial。"
+   "note": "中文只有网络测量综述（且限于 SDN），没有安全经济学（攻击成本/防御投入/激励）的内容。；只覆盖“网络测量”这一半：把面向安全的测量拆成“流量特征—分析算法—分析目标”三要素，说明特征选择决定系统能力上限，并比较专家规则与机器学习两类检测算法在覆盖面与误报上的差别；配套实验（含原论文与开源代码）给出可复现的测量流程（采集→特征→检测/指纹→评估）。“安全经济学”一半中文无可登记材料，故本知识点整体记 partial。；「网络测量」这一半中文已有教材级材料：一本 13 章的中文《网络测量学》把测量算法、测量工具、开源数据并列，并覆盖流量测量分类、加密流量识别与恶意流量测量、流量仿真与公共数据集，比此前只有一篇 SDN 测量综述要成体系。但本轮只核到馆藏记录的内容摘要，未核到出版社目录与正文，且该书是否讲到「面向安全的测量如何服务于攻防决策」无法确认，故只记 partial。；本书补安全经济学这一半；测量方法、数据与实验仍用既有r7-zh1第12章。两份中文材料组合覆盖，未把书目目录当作免费正文。"
   }
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh2",
@@ -219,12 +290,21 @@
     {
      "source": "zh2",
      "read": "以中科大《信息安全导论》第 7–8 章（网络与系统攻击及防护）为主线学漏洞成因与防护，再读清华《网络空间安全导论》第 7 章与第 3 章的缓解机制。"
+    },
+    {
+     "source": "closure-zh2",
+     "read": "照 README 走一遍可复现流程：装 Docker → clone Vulhub → 挑一个与你研究相关的 CVE 目录 → docker compose up -d 启动 → 严格按该目录 README 的复现步骤操作并记录每步输出 → docker compose down -v 清理 → 再重建一次，确认第二次能复现同样结果（这一步才验证「环境确实被固定住」）。"
+    },
+    {
+     "source": "closure-zh1",
+     "read": "若买得到该教材，按「测量算法—测量工具—开源数据」三条线读，重点读流量测量方法与分类、加密流量识别、恶意流量测量与公共数据集四部分，并把书中用到的公开数据集记成一张表（数据集名、采集点、标注方式、许可），作为自己测量实验的取数依据。"
+    },
+    {
+     "source": "release-zh-anderson",
+     "read": "完成清华课件第12章测量实验后，读本书第7章；用补丁部署或隐私保护案例，区分技术效果、参与方激励和外部性。"
     }
    ],
-   "gaps": [
-    "可复现实验",
-    "网络测量与安全经济学"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -325,6 +405,62 @@
    "query_or_url": "网络安全经济学 教材 出版社 目录 安全投资 外部性；Ross Anderson 安全工程 中译本 安全经济学",
    "result": "找到 Anderson《信息安全工程（第2版）》中译本线索，但目录页无法打开核实；高教社《网络经济学》不讲安全。",
    "by": "review/main-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "安德森 信息安全工程 第2版 中译本 出版社 目录 机械工业",
+   "result": "读到开卷/论坛贴出的中译本信息（机械工业出版社 2003 年初版、第 2 版），以及文泉书局的书目页；文泉书局页为 JS 渲染，抓取 0 字符，无法读到目录。另用 site:tup.com.cn 检索「信息安全工程 安德森 目录」，命中的是清华社另一本同名自编教材（7 章、ISBN 9787302643494、定价 59 元），不是 Anderson 译本。",
+   "by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily",
+   "query_or_url": "信息安全工程 原书第2版 9787111326243 目录 第7章 经济学 豆瓣",
+   "result": "豆瓣书单条目显示「信息安全工程 / [英]安德森(Anderson, R.) / 清华大学出版社 / 2012-1」，说明中译本由清华社出版；但未打开到该书详情页的目录，无法核实第 7 章「经济学」是否被译出、章节标题为何。",
+   "by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "信息安全经济学 中文 课程 讲义 攻防 激励 外部性 安全投入",
+   "result": "只返回期刊/学位论文（《基于 Gordon-Loeb 模型的信息安全投资博弈研究》、黑客参与下的安全投资与定价研究）、台大 OCW 的经济学原理讲义、以及政策类文章，没有课程或教材式的「安全经济学」入门教学；厂商/政策宣传类未采纳。",
+   "by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "网络测量 中文 教材 课程 测量方法 数据集 公开 复现",
+   "result": "命中东南大学程光的教师主页（本科生课程含《网络测量》）、馆藏记录《网络测量学 = Network Measuring》（13 章，含测量算法/工具/开源数据/流量仿真/公共数据集）、以及《加密流量测量与分析》（东南大学出版社 2018）等专着。采纳馆藏记录给出的《网络测量学》为 closure-zh1（只记 partial，因未核到目录与正文）。",
+   "by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "网络测量学 13章 目录 流量测量 加密流量 开源数据 出版社",
+   "result": "只重复命中馆藏记录与百度百科/微信读书的专着条目，没有出版社目录页；故无法把《网络测量学》的章节标题写成确定结论。",
+   "by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://raw.githubusercontent.com/vulhub/vulhub/master/README.zh-cn.md 与 README.md",
+   "result": "中文 README 读到完整「快速开始」与「每个环境目录下都包含详细的 README，请参阅以了解复现步骤和使用说明」，英文 README 同构；采纳为 closure-zh2 补「环境固定/步骤脚本化」。",
+   "by": "review/closure-additions/S.5.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=03008201",
+   "result": "清华大学出版社完整目录明确列出信息不对称、博弈论、最脆弱环节、补丁周期、隐私经济学与DRM经济学。",
+   "by": "review/release-additions/S.5.2.json"
   }
  ],
  "findings": [
@@ -333,36 +469,14 @@
   "中文缺“研究级”的训练（实验复现、度量设计、经济学分析），判 partial。",
   "[review/pi-additions/S.5.2.json] 未解决 zh「网络测量与安全经济学」：只覆盖了“网络测量”这一半（r7-zh2 第12章 + 配套实验）；“安全经济学”一半未解决：中文检索只得到《网络经济学》教材与计量经济学讲义，没有讲攻击者激励、成本转移、外部性、责任分配等安全经济学内容的中文课程或教材；清华导论第2章的博弈论/最优化只是通用理论工具，不足以充当安全经济学教学。故该知识点整体记 partial（测量已覆盖、经济学未覆盖）。",
   "[review/pi-additions/S.5.2.json] 未解决 zh「可复现实验」：中文只找到通用“论文复现指南”（机器学习方向，讲环境锁定 requirements.txt、一键复现、复现包），没有针对系统安全实验的可复现规范教学（实验环境固定/镜像、攻击脚本与流量回放、artifact 打包与评审流程）。清华导论的实验虽给出论文与代码链接，但未教“如何让别人复现你的实验”，不能算覆盖。",
-  "[review/pi-additions/S.5.2.json] 未解决 zh「主资源」：need_primary 未解决：中文没有以“系统安全研究方法/安全测量”为主线的免费课程或教材可核对到章节目录。已试：清华《网络空间安全导论》（通识课，非研究方法课）、中文期刊综述（既有 zh1 为 SDN 测量综述）、以及两轮 Tavily 检索（可复现/安全经济学）均无结果。可用替代仍是英文 Anderson《Security Engineering》+ MIT 6.858（既有 en1/en2）。"
+  "[review/pi-additions/S.5.2.json] 未解决 zh「主资源」：need_primary 未解决：中文没有以“系统安全研究方法/安全测量”为主线的免费课程或教材可核对到章节目录。已试：清华《网络空间安全导论》（通识课，非研究方法课）、中文期刊综述（既有 zh1 为 SDN 测量综述）、以及两轮 Tavily 检索（可复现/安全经济学）均无结果。可用替代仍是英文 Anderson《Security Engineering》+ MIT 6.858（既有 en1/en2）。",
+  "[review/closure-additions/S.5.2.json] 未解决 zh「网络测量与安全经济学」：安全经济学一半仍未解决（原因见 fallback_confirm）。补充线索给后续轮次：清华大学出版社 2012 年《信息安全工程》（安德森）是最可能的正版中文源，若能拿到实体书或可读的目录页，只需确认第 7 章「经济学」的译名与节标题即可登记；另可查《加密流量测量与分析》（东南大学出版社 2018，ISBN 9787564181956）作为网络测量一半的补充。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "可复现实验",
-   "source": "en2",
-   "reason": "安全研究的可复现实验（实验设计、环境与数据公开、artifact evaluation）在中文侧只找到 CSDN 博客对 artifact evaluation 的介绍，没有课程或教材；B 站站内与付费教材检索均无相关内容。改读英文 MIT 6.858 的实验与论文复现材料。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/main-additions/S.5.2.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "网络测量与安全经济学",
-   "source": "en1",
-   "reason": "网络测量一半中文只有《软件学报》综述（研究型）；安全经济学一半中文只有一般微观经济学课程讲外部性与信息不对称，没有讲它们如何解释安全投入与攻防激励的教学；Anderson《信息安全工程（第2版）》中译本的目录页是脚本渲染，Tavily 提取也失败，无法核实章节。改读英文 Security Engineering 的经济学与测量相关章节。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/main-additions/S.5.2.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "applied_additions": [
   "review/pi-additions/S.5.2.json@08adf8719b",
-  "review/main-additions/S.5.2.json@53be108d56"
+  "review/main-additions/S.5.2.json@53be108d56",
+  "review/closure-additions/S.5.2.json@594a2534c6",
+  "review/release-additions/S.5.2.json@3a5b372ad7"
  ]
 }

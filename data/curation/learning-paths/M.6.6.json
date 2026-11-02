@@ -52,6 +52,24 @@
     "location": "课程目录：Kendall Notation、Little's Law、M/M/1、M/M/m、Queueing Networks（open/closed/product-form）、Mean Value Analysis",
     "finding": "实际打开课程主页，看到逐次课主题与下载／录音连结；排队网络、操作定律与 MVA 都有课次。"
    }
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "计算机系统的性能建模与设计：排队论实战（中文译本）",
+   "url": "https://ebooks.cmpbook.com/detail?id=24622",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "配免费排队论入门录像学习：第6章运筹定律用于瓶颈推断，第17–19章读开放/封闭网络并手算均值分析例题。",
+   "access": "公开书目信息与目录可核对范围；全文需购买或经合法图书馆借阅，本轮未购买、未读收费全文。",
+   "publisher": "机械工业出版社工程科技数字图书馆",
+   "evidence": {
+    "url": "https://ebooks.cmpbook.com/detail?id=24622",
+    "location": "第6、17–19章",
+    "finding": "机械工业出版社数字馆列出运筹定律、Jackson网络、封闭网络和MVA实例及习题。"
+   },
+   "added_by": "review/verified-additions/M.6.6.json"
   }
  ],
  "topics": [
@@ -120,6 +138,11 @@
      "source": "zh1",
      "section": "中文目录没有 Jackson 网络或排队网络章节",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "第17–19章：Jackson、分类与封闭网络",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -129,7 +152,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只有单队列，没有排队网络；此项中文 partial。英文 Jain 有开放／闭合／混合网络与乘积形式解。"
+   "note": "中文只有单队列，没有排队网络；此项中文 partial。英文 Jain 有开放／闭合／混合网络与乘积形式解。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
   },
   {
    "topic": "操作定律与均值分析",
@@ -139,6 +162,11 @@
      "source": "zh1",
      "section": "Little 定律（操作定律的一部分）",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "第6章运筹定律；19.3到达定理与MVA递推示例",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -148,7 +176,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文只覆盖 Little 定律，没有利用率／流量／响应时间／瓶颈的完整操作定律，也没有 MVA；故 partial。英文 Jain 有操作定律与 MVA 课次。"
+   "note": "中文只覆盖 Little 定律，没有利用率／流量／响应时间／瓶颈的完整操作定律，也没有 MVA；故 partial。英文 Jain 有操作定律与 MVA 课次。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
   },
   {
    "topic": "用排队模型预测系统性能",
@@ -172,7 +200,7 @@
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -185,12 +213,13 @@
     {
      "source": "zh2",
      "read": "用 19 页讲义复习排队基础与单队列；排队网络与 MVA 需另读英文 Jain。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "配免费排队论入门录像学习：第6章运筹定律用于瓶颈推断，第17–19章读开放/封闭网络并手算均值分析例题。"
     }
    ],
-   "gaps": [
-    "排队网络",
-    "操作定律与均值分析"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -301,6 +330,14 @@
    "query_or_url": "排队论 教材 目录 排队网络 均值分析 MVA 出版社",
    "result": "只找到华为站《排队论基础》中译本介绍页（目录折叠读不到）、百科条目《排队论及其在现代通信中的应用》（盛友招，人民邮电出版社 2007）与东南大学课程页；没有带目录的出版社页面，未登记付费来源。",
    "by": "review/pi-additions/M.6.6.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web",
+   "query_or_url": "https://ebooks.cmpbook.com/detail?id=24622",
+   "result": "机械工业出版社数字馆列出运筹定律、Jackson网络、封闭网络和MVA实例及习题。",
+   "by": "review/verified-additions/M.6.6.json"
   }
  ],
  "findings": [
@@ -309,35 +346,11 @@
   "中文 19 页讲义只覆盖排队基础与单队列，已在 covers 明说；没有拿它充排队网络。",
   "六项中四项中文 covered，排队网络与 MVA 中文 partial；英文六项 covered（排队网络与 MVA 由 Jain 覆盖）。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "排队网络",
-   "source": "en1",
-   "reason": "本轮查了：文字——北交大排队论讲义只到单队列（M/M/1、M/D/1、M/Ek），华为站的中译《排队论基础》目录折叠读不到，只找到一份学生撰写的《排队论》讲义有 4.5 节串联队列（不算课程）；视频——北邮《通信网理论基础》MOOC 课程概述讲「排队论＋图论」，但大纲需登录，无法确认是否含排队网络，B 站 zh1 是单集 M/M/1 应用；正版付费——林闯《计算机系统性能评价》等中文教材与《排队论基础》中译本都没有可公开核对目录的页面。故用 en1（Raj Jain 小课，含排队网络与 MVA）补。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.6.6.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "操作定律与均值分析",
-   "source": "en1",
-   "reason": "中文课程里，北交大讲义与北邮 MOOC 都停在单队列指标（λ、μ、ρ、L、W），胡伟武《计算机体系结构基础》第 12 章只讲基准测试与性能测量，没有操作定律（利用率定律、强制流定律）与 MVA 的推导；B 站与中文网页检索也没出现系统讲 MVA 的课程或讲义。故用 en1 的 operational laws／mean value analysis 课次补。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.6.6.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "排队论与性能建模",
  "description": "到达与服务过程、Kendall 记号、M/M/1 等单队列模型、排队网络、操作定律与均值分析、用排队模型预测系统性能。",
  "applied_additions": [
-  "review/pi-additions/M.6.6.json@29fe042d3c"
+  "review/pi-additions/M.6.6.json@29fe042d3c",
+  "review/verified-additions/M.6.6.json@6e799dc52d"
  ]
 }

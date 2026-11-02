@@ -1,15 +1,189 @@
 # 中英文独立学习路线复核
 
-2026-11-01。当前复核进行中，不能把旧版“192 个技能各有中英文入口”解释为已验证 192 条完整双语学习路线。
+2026-11-01 开始，2026-11-02 归档。本轮将“有中英文入口”改成逐知识点的双语学习路线核对；技能划分与前置关系沿用 v1.3.0。
 
-## 发现的问题
+## 结果与适用范围
 
-- 程序设计基础把 Python 官方中文教程作为唯一中文入口，但官方明确预期读者了解一般编程概念；旧 covers 还混入本技能不要求的 NumPy/SciPy。
-- 需求工程、测试、维护等不同技能共用同一中文课程和同一段泛化阅读说明，未证明各自必学知识点完整覆盖。
-- 若主资源不全，旧做法常直接让另一语言补读；当前应先为该语言继续找文字、视频和正版付费材料。
+192 个技能全部归档，891 个必学知识项分别对应中文和英文章节。英文 192 条、中文 189 条路线覆盖全部必学项；剩余 3 个中文组合项保留明确的英文补读。此处“覆盖”是入门学习范围判断，包含已核出版社目录的付费教材，不代表全文免费、所有视频逐集播放或教材逐页通读。
 
-## 已落实的验收方式
+当前路线中，66 个“语言×知识项”仍需要付费材料补读；其中某些知识项已有免费材料讲解一部分。访问条件未知保留未知，注册学习与收费证书分开。所有购买均由读者自行决定，本轮没有购买。
 
-每个技能记录简介知识点、中文章节、英文章节、各语言学习顺序和材料访问条件。主资源/补充教程与查阅参考分开。缺口保留并要求查找记录，未核实的字幕或访问条件明确标注。
+## 修正了什么
 
-程序设计基础已先完成六个知识项的独立路线：中文廖雪峰文字教程与原作者 B站视频，英文 CS50P 讲义/课程/练习；官方 Python 中文教程改为参考。全树分组核对完成后，在此报告汇总覆盖数与残余缺口。
+- 程序设计基础原先只给 Python 官方中文教程，但官方预期读者已有一般编程概念。中文改为廖雪峰教程与原作者视频，英文为 Harvard CS50P；官方文档作为查阅参考，删除无关的 NumPy/SciPy 阅读范围。
+- 软件工程的需求、测试、维护等技能改成各自的阅读顺序及知识点章节，避免同一段泛化课程介绍冒充覆盖依据。
+- 多轮复核撤销了多处“中文找不到”的过早结论。例如计算机体系结构改用作者开源的完整中文教材，分布式事务补中文两阶段提交教程，排队网络补中文专著，随机规划和安全经济学补到出版社目录可核的中文教材。
+- 视频和文档按实际用途分类。API 索引、课程简介、标准或研究摘要只作参考；有解释、案例与练习的正文才承担具体知识项的教学。短篇教程可以补一个知识项，不能冒充整门课程。
+- 第三方转载与译本保留身份、官方渠道查找记录及授权未核说明。中文界面、中文配音、人工字幕、自动字幕、机器翻译分别说明；未登录或未逐集播放的字幕继续标未核。
+
+## 怎么验收
+
+`data/curation/learning-paths/<id>.json` 保存每个来源的内容证据、具体章节、学习步骤、查找记录和残余缺口。中文、英文分别计算；另一语言的材料不混入本语言覆盖率。简介中的范围说明不算必学知识项，已经明确的选读延伸另外列出。
+
+结构校验拒绝遗漏知识项、过期简介、错语言引用、只有查阅参考却宣称完整、学习步骤未包含所引用来源，以及没有实际查找记录的跨语言补读。构建要求全树记录齐全。它能验证数据自洽，不能自动证明教材的教学质量；范围判断以所附原始材料和已读章节为依据。付费书尤其要区分“已读目录”和“已读正文”。
+
+页面显示两种语言的覆盖数、学习顺序和逐知识点章节，手机也能展开。普通读者不用阅读内部检索过程；完整核查说明仍在数据记录内。
+
+## 数据汇总
+
+下表由 `scripts/report_learning_paths.py` 按本次归档生成。
+
+- 已归档双语路线：**192/192** 个技能，必学知识点 **891** 个。
+- 跨语言补充：**3** 个知识点（中文 3、英文 0），每条都经过带网页搜索的一轮确认。
+
+| 领域 | 技能 | 中文全部覆盖 | 英文全部覆盖 | 跨语言补充的知识点 |
+|---|---|---|---|---|
+| A | 18 | 18 | 18 | 0 |
+| C | 18 | 18 | 18 | 0 |
+| D | 11 | 11 | 11 | 0 |
+| F | 13 | 11 | 13 | 2 |
+| H | 16 | 16 | 16 | 0 |
+| I | 7 | 7 | 7 | 0 |
+| M | 54 | 54 | 54 | 0 |
+| P | 19 | 19 | 19 | 0 |
+| S | 17 | 16 | 17 | 1 |
+| V | 9 | 9 | 9 | 0 |
+| X | 10 | 10 | 10 | 0 |
+
+### 跨语言补充（逐条）
+
+| 技能 | 缺的语言 | 知识点 | 改读 | 原因 |
+|---|---|---|---|---|
+| F.1.6 参数化与细粒度复杂度 | 中文 | 条件性复杂度界（SETH/3SUM/APSP）与细粒度归约 | [MIT 6.890 Algorithmic Lower Bounds: Fun with Hardness Proofs (Fall 2014, Erik Demaine, MIT OpenCourseWare)](https://ocw.mit.edu/courses/6-890-algorithmic-lower-bounds-fun-with-hardness-proofs-fall-2014/) | 中文文字、视频及付费渠道已检索。《算法分析进阶》第2.5节可补W[1]、ETH/SETH与核化下界，但本轮仍未核到把SETH、3SUM、APSP及细粒度归约一并讲清的中文教学。该组合项继续读MIT 6.890相应讲次；这表示本轮未补齐，不表示中文教学不存在。 |
+| F.3.4 证明助手与形式化数学 | 中文 | 精化与可信计算基 | [Software Foundations（University of Pennsylvania，Benjamin C. Pierce 等，7 卷全免费在线，Rocq/Coq）](https://softwarefoundations.cis.upenn.edu/) | 已查中文文字、视频和付费教材。Lean中文参考手册的“验证证明”已补可信计算基与内核边界；程序从形式规格到实现的精化仍未核到合适中文教学，不能用Lean的refine战术替代程序精化。该组合项继续配读Software Foundations；其他主题仍按中文路线学习。 |
+| S.5.1 协议验证与信息流安全 | 中文 | 非干扰 | [15-316 Software Foundations of Security & Privacy（CMU，Matt Fredrikson，Spring 2026；课程主页 + 日程 + 作业）](https://15316-cmu.github.io/2026/) | 已检索中文文字、视频与付费教材。研究论文及CISSP中文教材有非干扰模型的介绍，但本轮未核到与本技能形式化建模、信息流约束及证明练习相配的中文教学。继续用CMU 15-316的非干扰单元补读；不据此断言中文材料不存在。 |
+
+### 第三方转载（57 个来源，均已查过官方渠道）
+
+| 技能 | 来源 | 查过的官方渠道 |
+|---|---|---|
+| A.1.1 | [B站中文课：人工智能——搜索算法（约束满足问题）（约 105 分钟）](https://www.bilibili.com/video/BV1cz4y197yD/) | （本轮更正）先用 B 站站内页搜“约束满足问题/约束满足 CSP 回溯”得到的是无关内容，改用 site:bilibili.com 检索后发现北京交通大学《AI 问题求解》研讨课合集（含课 8 约束满足优化问题、课 9 回溯搜索、课 10 改进回溯搜索）、北大公开课 CSP 专栏与斯坦福 CS221 转载，说明中文 CSP 课堂录像在 B 站是存在的；其中北交大课的视频简介给出课程主页 https://yishuai.github.io/ai，但该地址本轮打开 404，未找到学校官方账号或官方课程页，故 zh2 仍保留转载标记，并新增 r7-zh1 记录北交大合集。另查了中国大学MOOC/学堂在线的《人工智能原理》（北京大学，中文讲授，12讲）课程页与学堂在线镜像：两处正文只有课程概述与“本课程共有12讲”的表述，未公开列出含约束满足（CSP）的讲次；查了北京大学该课 icourse163 课程页（正文仅概述+参考书）与南京大学郭兰哲《人工智能导论》2025 官方课程主页（14 讲列表：1 绪论/2 盲目搜索/3 知情搜索/4 博弈搜索/5-6 强化学习/7-9 机器学习/10 神经网络/11 CV&NLP/12 逻辑推理/13 推理与规划/14 神经符号，无 CSP 讲次）；B 站按“约束满足问题”“约束满足 CSP 回溯”检索，未见学校或平台官方号发布同一 CSP 讲次。未能确认该视频对应的官方免费版，保留转载标记。 |
+| A.3.2 | [《数字图像处理》（DIP）中文课程视频，63 讲](https://www.bilibili.com/video/BV1tx41147Tx/) | B 站 63 讲页面显示主讲人为温显斌、杨淑莹，二人为天津理工大学《数字图像处理》国家级一流本科课程团队（杨淑莹负责、温显斌与张桦授课）；在中国大学MOOC 检索“数字图像处理”只找到北京工业大学、武汉大学、郑州大学、北京交通大学、上海交大（医学影像）等版本，没有天津理工大学该课的免费课程页；天津理工大学课程资源平台未见公开录像。未能确认官方免费版，保留转载标记。 |
+| A.3.3 | [李宏毅《深度学习与人类语言处理》2020（语音识别、语音合成、语音分离）](https://www.bilibili.com/video/BV1hZ4y1w7j1/) | 查到作者官方课程页 https://speech.ee.ntu.edu.tw/~hylee/dlhlp/2020-spring.php（DLHLP 2020 Spring），逐讲附 slide 与 video（YouTube）链接，且 slides 托管在 speech.ee.ntu.edu.tw 官方域名；B 站 BV1hZ4y1w7j1 为第三方转载。官方版已作为新来源 r7-zh1 登记并把覆盖改记在它名下，zh2 保留 reupload:true 作备选。 |
+| C.1.3 | [《Armv8/armv9 架构入门指南 v1.0》（Arm 官方 Learn the Architecture 指南的中文译本，readthedocs 在线全文）](https://armv8-doc.readthedocs.io/en/latest/) | 查了 Arm 官方中文页 www.arm.com/zh-cn/architecture/learn-the-architecture/a-profile：官方确有“AArch64 异常模型”中文指南条目并写明涵盖 EL0、EL1、EL2、EL3 与同步/异步异常；但正文页 developer.arm.com/documentation/102412/latest 在 fetch 与 tavily_extract 两种方式下均返回 403/抓取失败，无法核对官方中文正文，故保留这份可读的中文译本并标注转载/翻译。 |
+| C.5.2 | [【哈工大-苏统华】CUDA 并行程序设计（B 站 47 分 P 课程录像：Lec1 Hello CUDA、Lec2 GPU 硬件架构、Lec3 CUDA 软件抽象机制、Lec4 GPU 存储与优化、Lec5 CUDA 调试与分析、Lec6 规约与扫描算法）](https://www.bilibili.com/video/BV15E411x7yT/) | 查了中国大学MOOC：以“苏统华”“CUDA 并行程序设计”“哈工大 CUDA”检索与站内浏览，只返回哈工大的《程序设计基础》《计算机网络》《计算机组成原理》《编译原理》等课程，没有这门 CUDA 创新实验课的免费官方版；哈工大课程平台未公开该课录像。官方版找不到，按规则保留转载并标注 reupload。 |
+| C.5.3 | [中国科学技术大学《并行计算》（陈国良，国家级精品资源共享课；B 站 29 分 P 课程录像）](https://www.bilibili.com/video/BV1U7411N78e/) | 官方版在爱课程网（国家级精品资源共享课）：https://www.icourses.cn/sCourse/course_3058.html 。本轮打开被重定向到 shareCourseDetail?courseId=3058，页面由前端渲染、返回 0 字符，未读到官方章节目录与开课状态；学校侧未找到其他免费官方录像，故按规则保留 B 站转载并标注 reupload，official_search 记下官方入口以便主代理复核。 |
+| D.1.1 | [【哈工大】数据库系统 战德臣（全23讲）](https://www.bilibili.com/video/BV1HY4y1b72A/) | （本轮补查）B 站 23 讲转载已找到官方版：①国家高等教育智慧教育平台《数据库系统（上）：模型与语言》course/679420d0225d72705e9d6aa5（第1–10讲，官方页有逐节标题，与转载第1–10讲一致）；②同平台《数据库系统（中）：建模与设计》course/69811b6e95df98bb27c3c012（系列课总第11–16讲，即转载第11–16讲）；③现有 zh2 的中国大学MOOC 课程页（HIT-1001516002）也确认本课是「四部分三门课」系列的上篇，但其大纲靠前端加载、正文只到「预备知识」。覆盖改记在 r7-zh1/r7-zh2 名下，zh1 只作分 P 标题核对用的转载（保留 reupload=true）。 |
+| D.1.2 | [【哈工大】数据库系统 战德臣（全23讲）— 第17–23讲](https://www.bilibili.com/video/BV1HY4y1b72A/) | （本轮补查）哈工大《数据库系统》系列第三门《数据库系统（下）：管理与技术》的官方版在中国大学MOOC：https://www.icourse163.org/learn/HIT-1001578001 （已打开，正文写明「本课程《数据库系统（下）-管理与技术》将包括第四部分内容」，参考资料指定《数据库系统实现》为主教材，属管理系统实现技术）。但该页「课程大纲」只显示预备知识与参考资料，未列第17–23讲讲次；另查国家高等教育智慧教育平台同一系列只检索到「上」与「中」两门的课程页（见 D.1.1 的 r7-zh1/r7-zh2），未检索到「下」的平台页。因此官方版确认存在、但讲次仍只能用本转载核对，保留 reupload=true。 |
+| D.1.2 | [《数据库管理系统——从基本原理到系统构建》清华大学李国良主讲（B站，23 个分P）](https://www.bilibili.com/video/BV16Ra4zGEqA/) | （本轮补查）已找到官方版并改成 alternative：①作者/课题组课程主页 https://dbgroup.cs.tsinghua.edu.cn/ligl/courses_cn.html 列出第01–16讲课件与视频链接（新增 r7-zh1）；②作者页的视频链接全部指向 B 站 BV15u4y1Q71R，该视频 UP 主为 THUDBGroup、标注「自制」，简介首行即课程主页地址（新增 r7-zh2）。本 key（BV16Ra4zGEqA）是他人上传的 23 条同名合集，保留作转载并只用于核对章节标题。 |
+| D.1.3 | [《分布式数据库》计算机杨老师（B站，40 个分P）](https://www.bilibili.com/video/BV17h411f74N/) | （本轮补查）用 bvinfo 读页面元信息：owner=计算机杨老师、copyright=自制，视频简介只有「分布式数据库课程学习」。按 site:bilibili.com 与站内检索查过「分布式数据库 公开课/两阶段提交」，未见同一套 40 讲的学校官方号或 MOOC 官方版；中国大学MOOC/国家智慧高教平台检索「分布式数据库」未得到对应课程页。另读全 40 个分 P 标题后确认此课以 HBase 为主（第2–4 章），与「分布式事务」知识点无关，故不能作为该知识点的覆盖来源，保留转载标记并降为 alternative。 |
+| D.3.1 | [《数据科学导论》中文视频课程（B站，约 13 小时）](https://www.bilibili.com/video/BV1NU4y1A7fJ/) | （本轮补查）读 B 站页面元信息：owner=达芬奇祖父、标注「自制」、简介仅「数据科学导论，南开大学」，48 个分 P（1.1 什么是数据科学 … 5.2 关联规则），上传者为个人账号，未见南开大学官方号或课程页。本轮用 include_domains 限定 icourse163.org / xuetangx.com / higher.smartedu.cn 检索「数据科学导论/数据科学流程」两次，返回的是西京学院、南京大学《探索数据的奥秘》、东华大学《数据科学技术与应用》、浙江大学《大数据解析与应用导论》，未见南开同名官方课；故保留转载标记。另：该 48 讲的正文范围只到关联规则，不含抽样偏差/数据泄漏/交叉验证/实验记录，因此不再用它覆盖这些知识点。 |
+| D.3.2 | [三大聚类算法 kmeans / DBSCAN / 层次聚类（B 站 28 分 P，咕泡 AI 培训课程录像剪辑）](https://www.bilibili.com/video/BV1ST411w7De/) | （本轮补查）用 bvinfo 读页面元信息：owner=神经网络与深度学习、标注自制，简介是咕泡 AI 公众号引流，属培训机构内容；未找到高校或 MOOC 平台的官方免费版（该课疑为咕泡付费课程剪辑）。本轮另用 include_domains 限定 icourse163/xuetangx/智慧高教检索「数据挖掘 关联规则 Apriori 异常检测」，找到北京理工大学《数据仓库与数据挖掘》官方 MOOC（新增 r7-zh1），中文主资源改记在 r7-zh1 名下，本 key 降为 alternative，只作聚类部分的补充。 |
+| H.1.1 | [清华大学《电路原理》于歆杰（90 讲公开课，YouTube 合集）](https://www.youtube.com/watch?v=8IaOzUhCoTo) | 查学堂在线（site:xuetangx.com 电路原理）找到官方慕课 THU08061000294，并核到清华大学新闻网报道该课 2013 年在学堂在线与 edX 上线；官方版免费，故本 YouTube 合集降为 alternative，覆盖记在 r7-zh1 名下。 |
+| H.1.1 | [清华大学《模拟电子技术基础》华成英（全 189P，B 站课程合集）](https://www.bilibili.com/video/BV1Vp411f71S) | 查学堂在线（site:xuetangx.com 模拟电子技术基础 华成英）找到官方慕课基础部分 THU08071000349 与应用部分 THU08071000350，课程简介与 B 站合集简介逐字一致；官方版免费，故本合集降为 alternative，覆盖记在 r7-zh2 名下。 |
+| M.1.7 | [内蒙古大学《泛函分析》国家级精品课（孙炯等，78 讲；B 站公开录像）](https://www.bilibili.com/video/BV15T411o7kW/) | 官方渠道已查到并打开：①爱课程网共享课页面 https://www.icourses.cn/sCourse/course_7021.html（打开后重定向到 shareCourseDetail?courseId=7021，正文 JS 渲染、0 字符，未取到资源清单）；②内蒙古大学数学科学学院“国家级精品资源共享课——《泛函分析》”页（math.imu.edu.cn/info/1081/1851.htm）确认 2014-09-23 上线、118 个基础教学资源、含 2013 年春季起录制的随堂录像，另有“国家精品课——《泛函分析》”页（/info/1079/1852.htm）确认 2008 年获评国家级精品课程、主持人为孙炯。③中国大学MOOC 检索到的同类课是《泛函分析与变分法》（现有 zh2），不是本课。结论：官方版存在（爱课程共享课），B 站 78 讲仍为第三方转载（上传者“欧拉的费米子”自述资源来源于网络），转载保留作逐讲可核的观看入口，并在 r7-zh1 登记官方版。 |
+| M.2.1 | [吉林大学《常微分方程》（伍卓群、李勇教材，50 讲；B 站公开录像）](https://www.bilibili.com/video/BV1St4y1D72T/) | 官方渠道已查：①吉林大学教务处“李勇”介绍页（jwc.jlu.edu.cn/sxxy/zyrwr/ly.htm）确认“2005 国家级精品课程《常微分方程》(第一负责人)”且“课程《常微分方程》入选国家级网络资源共享课”；②爱课程网共享课页 https://www.icourses.cn/sCourse/course_6531.html 打开后重定向到 shareCourseDetail?courseId=6531，正文 JS 渲染 0 字符，检索摘要显示该课“教师 史少云 / 学校 吉林大学 / 课程学时 96.0”；③中国大学MOOC 上检索到的是浙江大学《常微分方程》（ZJU-1206672801）等别的版本，不是吉大这门课。结论：官方版存在（爱课程共享课 courseId=6531），B 站 50 讲仍为第三方转载（上传者 Jonathan__Du，非吉林大学官方账号），转载保留作逐讲可核的观看入口，官方版单列为 r7-zh1。 |
+| M.2.2 | [【偏微分方程】厦门大学 谭忠教授（B 站公开录像，60 讲；UP 主标称“国家精品课”）](https://www.bilibili.com/video/BV14u4y1d7RA/) | 官方渠道已查：①中国大学MOOC 有同名课程 https://www.icourse163.org/course/XMU-1001764006（厦门大学，谭忠，六周；页面标“获得国家精品在线开放课程认定的课程”），已作为 r7-zh1 登记；②厦门大学新闻网 news.xmu.edu.cn/info/1003/9506.htm 写明“我校《偏微分方程》（谭忠教授）等 8 门课程入选”2018 年国家级精品在线开放课程认定；③厦门大学数学科学学院一流课程名单 math.xmu.edu.cn/info/1022/10171.htm 记“偏微分方程 谭忠 国家级 2020 年 线上”；④爱课程网全站检索（限定 icourses.cn）只见厦大在爱课程上线的是谭忠负责的《数学建模》course_3114，没有《偏微分方程》共享课。结论：官方免费版即中国大学MOOC 上的这门课；B 站 60 讲为第三方转载（上传者“学研百宝箱”自述“视频转载于网络，仅供学习…侵权删”），其标题里的“国家精品课”对应的是 2018 年“国家精品在线开放课程”认定，不是“国家级精品资源共享课”。 |
+| M.2.4 | [《最优控制理论》59 讲（学堂在线课程，B 站公开录像）](https://www.bilibili.com/video/BV1oz4y1R7QD/) | 官方渠道已查：①B 站原页简介只写“https://next.xuetangx.com/”，未标课程名/校名/教师，上传者“君临的二丫”非官方账号，分 P 标题是学堂在线下载格式“[1.1.1]--1.1.1最优化问题”；②学堂在线检索（限定 xuetangx.com）到两门相近课程——西北工业大学《最优控制理论》https://www.xuetangx.com/course/nwpu0854001677（检索摘要：变分法基础、应用变分法求解最优控制问题、极小值原理、最小时间控制、燃料最优控制、时间-燃料最优控制、动态规划法、线性二次型最优控制）与北京建筑大学《最优控制》https://www.xuetangx.com/course/buceaP08542024040201（摘要：变分法及其在最优控制中的应用、连续/离散系统极小值原理、时间最优/燃料最优/时间-燃料）；两页只能读到页面标题，正文由 JS 渲染（0 字符），无法核对逐讲目录，也无法判定 B 站这 59 讲究竟对应哪一门；③爱课程网未检索本课。结论：官方版很可能就在学堂在线（同一课程体系），但对应关系未核实，故不新增官方来源，转载保留 reupload:true。 |
+| M.3.2 | [北京理工大学《矩阵分析》（慕课，56 讲；B 站公开录像）](https://www.bilibili.com/video/BV1R341117kg/) | 官方渠道已查：①中国大学MOOC（限定 icourse163.org 检索“矩阵分析 北京理工大学 慕课 课程”）只找到北理工《线性代数》（BIT-32001 / BIT-1462537182）等本科课，没有《矩阵分析》；②学堂在线（限定 xuetangx.com 检索）只找到北航《矩阵理论》（degreecourse.xuetangx.com 工程类专业学位研究生在线课程公共平台）与武汉理工《矩阵论》（中国大学MOOC），没有北理工《矩阵分析》；③北京理工大学官网检索到研究生院“2025 年研究生人工智能赋能课程建设项目”立项名单里有“矩阵分析 / 数学与统计学院 / 张艳霞”（grd.bit.edu.cn 通知附件），属校内研究生课程建设项目，不是公开慕课页面。结论：B 站这套 56 讲“慕课”录像没有找到可核的公开官方上线页（可能只在校内平台或已下线），转载保留 reupload:true；B 站页简介只写“慕课”与课程简介，上传者 mayu326-（3.3 万粉）非学校官方账号。 |
+| M.3.3 | [复旦大学《张量分析》83 讲（中文授课，B 站公开录像）](https://www.bilibili.com/video/BV1Js41187bn/) | 官方渠道已查：①B 站视频简介给出的官方讲稿地址是复旦大学精品课程站 http://jpkc.fudan.edu.cn/s/353/t/778/p/1/c/10845/d/10847/list.htm，本次打开 DNS 解析失败（getaddrinfo 11001），旧域名已下线；②复旦大学航空航天系谢锡麟个人页 aero-mech.fudan.edu.cn/9e/16/c25828a171542/page.htm 可正常打开，写明他建设有“现代连续介质力学理论及实践”教学路径（含张量分析），获 2015 年度复旦大学精品课程立项、2017 年度上海市精品课程“现代张量分析及其在连续介质力学中的应用”（含“张量分析与微分几何基础”“连续介质力学基础”二门递进性课程），页内给出的两个课程站 http://fdjpkc.fudan.edu.cn/d201354/main.htm 与 /d201353/main.htm 也均 DNS 解析失败；③爱课程/中国大学MOOC 未见该课。结论：课程与讲稿确属复旦精品课程体系（校/市级精品课程），但官方线上讲稿站点已全部下线，线上可看的只有 B 站这份转载（上传者 Confidimus，3.4 千粉，非复旦官方账号），转载保留 reupload:true。 |
+| M.3.5 | [吴宇培《代数数论》12 讲（清北学堂课程录像，B 站）](https://www.bilibili.com/video/BV1uv4y1i7t3/) | 官方渠道已查：本轮检索“清北学堂 代数数论 吴宇培 课程 报名”，结果里没有清北学堂官网的该课程页，回到的全是 B 站个人转载——第 1 讲 BV1uv4y1i7t3（上传者“平安__喜乐_”，简介给阿里云盘讲义链接）、第 2 讲 BV1hM411F7GP、合集 BV1qz421m7mE、专题合集 BV1Am4y1N7ys；清北学堂是面向数学竞赛的培训机构（标签“高中数学/数学竞赛/清北学堂/二试”），其官方课程页未公开可核，故转载保留 reupload:true，并注明上传者非机构官方账号。 |
+| M.4.4 | [《Computational Geometry（上）（下）》经典计算几何 295 讲（B 站公开录像）](https://www.bilibili.com/video/BV1rj411673b/) | 官方渠道已查：①清华大学《计算几何》课程站 https://dsa.cs.tsinghua.edu.cn/~deng/cg/ 可正常打开（邓俊辉，课程号 70240183，含 Lecture Notes 与 2001/2003/2004/2006 各学期课程页），已作为 r7-zh1 登记；②该站 Fall 2006 课程页的“重要知识点”清单含 (Planar) range search、(Planar) point location，与 B 站这套 200 讲录像的课程简介所述“范围查找、截窗查询”一致，可确认录像内容是清华这门课；③B 站上传者为 6.8 万粉的营销式账号（简介“关注我,为中国教育点赞！…VX…”），不是清华官方账号，故转载保留 reupload:true，官方版按课程站登记。 |
+| M.5.3 | [北京大学《离散数学概论》陈斌（106 讲，B 站公开录像）](https://www.bilibili.com/video/BV1cW411B7iG/) | 查了中国大学 MOOC（icourse163.org/course/PKU-1002525004，北京大学陈斌，国家精品在线开放课程）与 Coursera 原版（coursera.org/learn/dmathgen，13 模块 106 讲）：官方版存在且免费可学；B 站 106 个分 P 标题与 Coursera 视频清单逐条对应，判为官方课录像的第三方转载。 |
+| M.5.3 | [《2-6 循环不变量》（15 分钟单讲）](https://www.bilibili.com/video/BV1LN411p7K3/) | 查了原视频页（UP 主 shhevvjyf，无简介、无课程名）与 tavily 搜索「循环不变量」相关课程，只得到百科词条、知乎文章与无关的 C 语言课，未定位到该片段所属的学校/平台官方课程，无官方版可替换。 |
+| M.5.4 | [张秀平《组合数学》60 讲（B 站公开录像，约 44 小时）](https://www.bilibili.com/video/BV1aC4y1c7c3/) | 查了北京师范大学数学科学学院教师页（math.bnu.edu.cn，张秀平，主持「组合数学双语示范课程」项目，无公开录像链接）、中国大学 MOOC（有西电《组合数学》官方课 XDU-1206620829，但不是张秀平这门课）与学堂在线（site 搜索无张秀平组合数学），未找到该课堂录像的官方发布版；B 站上传者「欧拉的费米子」自述资源来源于网络，转载保留。北师大出版社 2011 年张秀平《组合数学》为配套教材（付费）。 |
+| M.5.5 | [电子科技大学《图论及其应用》杨春（28 讲，B 站公开录像）](https://www.bilibili.com/video/BV1nv411a7Zv/) | 查到电子科技大学官方课程站 i.study.uestc.edu.cn/GTA（课程思政示范课程，杨春为课程组负责人）：教学视频只有第一至第五次课 9 段，未覆盖全课程；中国大学 MOOC 另有一门《图论及其应用》（cid=1450287327，授课大纲完整：图的基本概念、树与割集、连通度、着色、匹配、平面图、图论算法与网络），但课程页静态 HTML 不显示授课学校与主讲，无法确认是否为杨春这门课，故未登记为官方版。B 站 28 讲为完整课堂录像的第三方转载，保留 primary。 |
+| M.5.5 | [《图谱理论简述》中配＋中字（Steve Butler 2023 课程，29 讲）](https://www.bilibili.com/video/BV11kga6FEez/) | 原课程官方版为 Steve Butler 课程站 stevebutler.org/spectral2023（英文授课，29 讲录影+PDF 讲义，已作为 en3）；B 站版本是中文配音＋中文字幕的翻译转载，上传者「脑袋要有光」非作者/学校账号，未见官方中文版；配音与字幕质量未核。 |
+| M.6.2.1 | [山东大学威海校区《贝叶斯统计》课程录屏（19 讲）](https://www.bilibili.com/video/BV1AW4y1B74t/) | 原视频页写明「山东大学威海校区贝叶斯统计课录屏」，上传者梦寻_ 自述「不是老师」「网课状态会一直录」「PPT 见 P10」；用 tavily 搜山东大学/威海校区与中国大学 MOOC 的贝叶斯统计课程，未出现该课的官方公开录像或课程站，判为修课学生自行录制的转载。已用 yt-dlp 读取全部 19 个分 P 标题：均为 chapter1–chapter6 的 chapterN-x 形式，没有讲题名，仍无法据此核对哪一讲讲层级模型。 |
+| M.6.2.4 | [北京大学张志华《高维概率论》22 讲（中文授课，B 站公开录像）](https://www.bilibili.com/video/BV1HvjK6hEtd/) | 查到北京大学媒体资源服务平台官方版《高维概率论（2024）》（resource.pku.edu.cn id=495，张志华，中文，开放范围全网）；B 站 BV1HvjK6hEtd 为上传者「小尹不吱声」2026-07 发布的「4K 超清重置完整版」转载，非学校/作者账号。官方版分讲目录需 dmss.pku.edu.cn 接口，本机超时未能读取，故讲次仍沿用转载分 P（仅「第一讲…第二十二讲」，无讲题）。 |
+| M.6.2.4 | [张志华《统计机器学习》39 讲（中文授课，B 站公开录像）](https://www.bilibili.com/video/BV1s8mQB6ER3/) | 北大官方版《统计机器学习》（resource.pku.edu.cn id=381，张志华，中文，32 学时，全网开放）内容简介与 B 站 39 讲高度一致；B 站上传者「半途不而废的程序猿」在简介里用公众号引流，属第三方转载，非作者/学校账号。官方视频目录同样动态加载未读取。 |
+| M.6.3 | [《应用随机过程》张波、商豪教材课程录像（65 讲，B 站）](https://www.bilibili.com/video/BV1yy421v76G/) | 原视频页说明（yt-dlp 读到）：上传者「必须很努力」写明「应用随机过程 张波商豪 前七章里面还有一些知识点的缺失…我把北京交通大学的应用随机过程公开课上传上来了」，即这是北交大课堂公开课的第三方转载；查中国大学 MOOC 只有北京科技大学《应用随机过程》（USTB-1471187182，另一门课），查爱课程 icourses.cn 无北交大该课，未找到官方发布版。 |
+| M.6.3.2 | [交通大学 OCW《金融随机分析》吴庆堂（73 讲，中文授课；B 站公开录像）](https://www.bilibili.com/video/BV1v54y1S78c/) | 查到官方原版：阳明交通大学 OCW《财务数学导论（一）》《（二）》（吴庆堂，99 学年度，教材 Shreve Stochastic Calculus for Finance II，免费公开）。B 站 BV1v54y1S78c「金融随机分析」73 讲的分 P 序号与 OCW 单元编号逐条对应（1-1 Probability space … 7-1-2 Stochastic process …），判为 OCW 录像的第三方转载，无官方 B 站版。 |
+| M.7.2 | [《最优化 13 内点法》（151 分钟单讲）](https://www.bilibili.com/video/BV1ST4y1u7Sk/) | 原视频页（yt-dlp 读到）简介写明「这是上海交通大学数学学院研究生课程…2020 春季学期…采用 Boyd and Vandenberghe 的教材」，并给出授课教师许志钦的讲义地址 ins.sjtu.edu.cn/people/xuzhiqin/2020opti/2020优化/。实际打开该地址与 /2020opti/ 均为 404，教师主页 ins.sjtu.edu.cn/people/xuzhiqin/ 的「线上资料」只列深度学习现象课程，没有优化课入口；未找到官方录像或官方讲义，B 站为课堂录播的第三方转载（上传者「天天机器学习」）。 |
+| M.7.4 | [《方差缩减法 Variance reduction methods》单讲（约 33 分钟，中文）](https://www.bilibili.com/video/BV1iw411P7mz/) | 原视频页（yt-dlp 读到）简介写明「YouTube /【方差缩减法 Variance reduction methods】——米歇尔·比尔莱尔（Michel Bierlaire，EPFL 教授）/ @徐芝兰」，即中文翻译/配音版搬运自 YouTube 上 Bierlaire 的英文讲座；未找到原作者或 EPFL 的官方中文版，也没有配套中文讲义。上传者「北美统计人费小雪」为个人账号。 |
+| M.7.5 | [《近似算法》中配＋中字（约 5.9 小时）](https://www.bilibili.com/video/BV1UWJ76EE3S/) | 原视频页（yt-dlp 读到）：标题「近似算法【中配+中字】」，上传者「脑袋要有光」（与《图谱理论简述》中配同一账号），简介只写「2023年10月24日 / 近似算法」，未标注原课程与作者，11 讲依次为顶点覆盖引入、集合覆盖贪心、最短超串、背包 FPTAS、度量 k-中心、Steiner 树与 TSP、多路割、局部比率、LP 舍入/原始-对偶、最大可满足性、原始-对偶 Steiner 森林——是某门英文近似算法课的翻译配音，未找到官方中文版或原作者发布页。另查中国大学 MOOC，有武汉大学《高级算法》官方课讲近似比分析，但不是这门课。 |
+| M.8.2 | [《数值积分：自适应辛普森法》单讲（约 14 分钟）](https://www.bilibili.com/video/BV1qhYQeJErJ/) | 原视频页（yt-dlp 读到）：标题「【数值积分】自适应辛普森法」，上传者 includeCPP，时长 839 秒，无简介、无课程/作者信息；用 tavily 搜中文「自适应辛普森/数值积分 课程」只得到零散讲解与数值分析 MOOC（大纲里没有自适应求积专节），未找到该片的官方课程来源，故保留转载标记。 |
+| M.8.3 | [中国科学院大学《有限元方法》张年梅（25 讲，B 站公开录像）](https://www.bilibili.com/video/BV1424y1k78q/) | 官方课程文档：国科大教务系统《有限元方法》大纲（courseplan/288796，张年梅等，9 章 60 学时，公开）；B 站 BV1424y1k78q 为上传者「清龙学习小组」2022-12 发布的「[高清修复]」转载，简介给出门户 ecourse.ucas.ac.cn（访问时 SSL 证书域名不匹配，无法打开），未见官方公开录像，故转载保留。 |
+| M.8.4 | [《蒙特卡洛（Monte Carlo, MCMC）方法的原理和应用》（231 分钟，中文）](https://www.bilibili.com/video/BV17D4y1o7J2/) | 原视频页（yt-dlp 读到）：上传者 asia1987（个人账号），简介只有「Monte Carlo的历史沿革、原理、以及可能的应用」，6 个分P（蒙特卡洛方法、吉布斯采样、求解定积分、MCMC 一元回归 I/II、2024 MCMC 参数估计），未标注课程/作者；未找到官方版，保留转载标记。 |
+| M.8.4 | [《方差缩减法 Variance reduction methods》单讲（约 33 分钟）](https://www.bilibili.com/video/BV1iw411P7mz/) | 原视频页简介写明「YouTube /【方差缩减法 Variance reduction methods】——米歇尔·比尔莱尔（Michel Bierlaire，EPFL 教授）/ @徐芝兰」，是英文讲座的中文翻译搬运，无官方中文版（同 M.7.4 的 zh3）。 |
+| M.8.4 | [《重要性采样 蒙地卡罗方法 Importance Sampling》双语精校（约 13 分钟）](https://www.bilibili.com/video/BV1ir421n7gX/) | 原视频页（yt-dlp 读到）：简介只有「简洁清晰 / https://www.youtube.com/@Mutual_Information」，说明取自 YouTube 频道 Mutual Information 的英文视频，B 站为双语精校搬运（英语授课＋中文字幕），上传者刘波 Official 为个人账号，未见官方中文版。 |
+| M.8.5 | [《从零手动实现自动微分框架：对偶法与计算图》单讲（约 5 分钟）](https://www.bilibili.com/video/BV1mEnQ6CEPH/) | 原视频页（yt-dlp 读到）：标题「从零手动实现自动微分框架：对偶法与计算图」，上传者「小锅饭Official」，291 秒，无简介、无课程来源说明；无法确认是否转载自某课程，暂保留转载标记。 |
+| P.1.2 | [【浙江大学】Java入门与进阶 翁恺（全 110 讲）（B 站，UP 主“农夫CC”转载）](https://www.bilibili.com/video/BV1wL411L7A3/) | 已打开中国大学MOOC 官方课程页（ZJU-1001542001）确认同名官方课存在，并作为 r7-zh1 登记；官方页课程大纲为 JS 渲染，取不到逐讲标题，故保留该转载版作逐讲证据；B 站检索“翁恺 面向对象程序设计 Java”“Java语言程序设计进阶 浙大”均未见浙大官方账号发布本课程。 |
+| P.2.2 | [【浙江大学】C语言入门与进阶 翁恺（全 129 讲）（B 站，UP 主“哔哩大学教学中心”转载）](https://www.bilibili.com/video/BV1ALSyBREDu/) | 已打开中国大学MOOC 官方课程页 ZJU-9001《C语言程序设计》（浙江大学）确认官方版存在并登记为 r7-zh2，官方大纲为 JS 渲染取不到逐讲标题，故保留该转载版作分 P 证据；B 站检索“翁恺 C语言”“浙江大学 C语言入门与进阶”命中多个个人转载，未见浙大官方账号发布该课。 |
+| S.1.1 | [《信息安全导论》课程课件 13 讲（中国科学技术大学 曾凡平，学生整理上传的课程 PDF）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（有课程编号 011184、第1–16周与 12 章章节表 + 实验安排，但“资源地址”列无任何课件/录像链接，只有返回主页）；②教师主页教学栏（写明主讲“信息安全导论”，仅列教材《网络信息安全》机械工业出版社 2016，无课件下载）；③中国大学MOOC：检索中国科学技术大学课程与“信息安全导论 中国科学技术大学 曾凡平”均未出现该课（只有青岛大学同名课 https://www.icourse163.org/learn/QDU-1454026183 与信息工程大学《信息安全技术》等别校课）；④学堂在线：Tavily 检索无该课结果；⑤中国科学技术大学教务处“国家级精品课程/精品在线开放课程”页 https://www.teach.ustc.edu.cn/category/education/edu-course 列表只有 Linux操作系统分析、文献管理与信息分析、基础微积分I、化学实验安全知识、工程化编程实战，无信息安全导论。结论：官方只公开章节表、无官方课件或录像，学生上传的 13 讲 PDF 属第三方转载，保留并标 reupload:true。 |
+| S.1.2 | [《信息安全导论》第2–3章 密码技术课件（中国科学技术大学 曾凡平，学生整理上传的 PDF）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：课程编号 011184、第1–16周，章节表列出“2 密码技术”“3 身份认证”，但“资源地址”列没有任何课件/录像链接）；②教师主页教学栏（写明主讲“信息安全导论”，只列教材《网络信息安全》机械工业出版社 2016，无课件下载）；③中国大学MOOC：检索未出现中国科大该课（只有青岛大学同名《信息安全导论》 https://www.icourse163.org/learn/QDU-1454026183 等别校课）；④学堂在线：检索无该课；⑤中国科学技术大学教务处“国家级精品课程/精品在线开放课程”页 https://www.teach.ustc.edu.cn/category/education/edu-course 无信息安全导论。结论：密码技术两章只有学生上传的 PDF，无官方课件或录像，保留并标 reupload:true。 |
+| S.2.1 | [《信息安全导论》第4、6、7章课件（中国科学技术大学 曾凡平，学生整理上传的 PDF）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：有课程编号 011184、第1–16周、章节表列出“6 主机系统安全技术”“7 网络与系统攻击技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016，无课件下载）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：第4/6/7 章只有学生上传 PDF，无官方课件或录像，保留 reupload:true。 |
+| S.2.2 | [《信息安全导论》第7、8、10章课件（中国科学技术大学 曾凡平）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：章节表列出“7 网络与系统攻击技术”“8 网络与系统安全防护技术”“10 Internet安全”与实验03/实验04，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：网络与系统攻击/防护三章只有学生上传 PDF，无官方课件或录像，保留 reupload:true。 |
+| S.3.3 | [《信息安全导论》第2、4、9、13章课件（中国科学技术大学 曾凡平）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认：章节表列出“2 密码技术”“4 授权与访问控制技术”“9 安全审计与责任认定技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：相关四章只有学生上传 PDF，无官方课件或录像，保留 reupload:true。 |
+| S.4.2 | [《信息安全导论》第9章 安全审计与责任认定、第10章 数字取证（中国科学技术大学 曾凡平）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“9 安全审计与责任认定技术”“10 Internet安全”，无数字取证专章，且“资源地址”列无课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：审计与取证相关课件只有学生上传 PDF，无官方版本，保留 reupload:true。 |
+| S.4.3 | [《信息安全导论》第11–12章 恶意代码（中国科学技术大学 曾凡平）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“11 恶意代码”“12 内容安全”与实验，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：恶意代码两章只有学生上传 PDF，无官方版本，保留 reupload:true。 |
+| S.4.4 | [《信息安全导论》第8章 安全防护与应急响应（中国科学技术大学 曾凡平）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“8 网络与系统安全防护技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：安全防护与应急响应相关课件只有学生上传 PDF，保留 reupload:true。 |
+| S.4.4 | [ATT&CK 实践入门（MITRE 官方《ATT&CK Practitioner's Guide》中文译本 PDF，含“评估与工程”“对手模拟与红队”两章）](https://wiki.y1ng.org/assets/ATT&CK%E5%AE%9E%E8%B7%B5%E5%85%A5%E9%97%A8.pdf) | 原着为 MITRE 免费英文版《ATT&CK Practitioner's Guide》（medium.com/mitre-attack 与 attack.mitre.org 发布），官方只有英文、无官方中文版；本 PDF 为社区中文译本（托管在个人 wiki），故标 reupload:true。中文侧另查了微软/Google 中文文档作为官方对照（见 r7-zh1）。 |
+| S.5.1 | [《信息安全导论》第10章 协议安全与第6章 可信计算（中国科学技术大学 曾凡平）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“10 Internet安全”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：协议安全与可信计算相关课件只有学生上传 PDF，保留 reupload:true。 |
+| S.5.2 | [《信息安全导论》第7、8章 网络与系统攻击及防护（中国科学技术大学 曾凡平）](https://github.com/HoshiGaOChiru/USTC-Information-Security) | 查了①授课教师官方主页课程页 http://staff.ustc.edu.cn/~billzeng/InfoSecIntro/InfoSecIntro.htm（打开确认章节表列出“7 网络与系统攻击技术”“8 网络与系统安全防护技术”，但“资源地址”列无任何课件/录像链接）；②教师主页教学栏（只列教材《网络信息安全》机械工业出版社 2016）；③中国大学MOOC 检索未出现中国科大该课；④学堂在线检索无该课；⑤中国科大教务处精品课程页无信息安全导论。结论：相关课件只有学生上传 PDF，保留 reupload:true。 |
+| V.1.2 | [《如何用 FFmpeg 编写一个简单播放器——详细步骤介绍》（dranger 教程中文译本，8 个指导；第 29–37 页为指导 5「如何同步视频」与指导 6「同步音频」）](https://github.com/0voice/ffmpeg_develop_doc/blob/main/文档库/ffmpeg的tutorial中文版.pdf) | 2026-11-01 查：①原站 http://dranger.com/ffmpeg/ 已无法解析（fetch 报 DNS getaddrinfo failed），archive.org 上仍有旧快照；②作者与译者都没有发布官方中文版，检索未见任何官方中文页面；③该仓库里只有这一份中文译本 PDF，无译本说明页，故按转载登记。 |
+| X.3.3 | [《基于物理的深度学习》（Physics-Based Deep Learning v0.2 中文译本，全书在线、每章配可执行 Jupyter notebook）](https://www.topcfd.cn/Ebook/PBDL/) | 已查TUM原书 physicsbaseddeeplearning.org（官方英文）与MindSpore/PaddleScience官方中文教程；未核到官方授权中译本，第三方中译仅作可微物理补充。 |
+| X.3.3 | [【中文配音】科学与工程领域的 AI（2024）- 苏黎世联邦理工学院（B站，28 讲，含算子学习 8 讲、PINN 5 讲、神经微分方程与模型发现）](https://www.bilibili.com/video/BV1gJHYeREEj/) | 查到并打开官方英文版：ETH Zürich CAMLab 的课程页（camlab.ethz.ch/teaching/ai-in-the-sciences-and-engineering-2024.html，正文由 JS 渲染只读到页脚）与官方项目页 https://github.com/camlab-ethz/AI_Science_Engineering（readme 写明 Lecturers: Prof. Dr. Siddhartha Mishra, Dr. Ben Moseley，并给出官方 YouTube 播放列表链接）。官方只有英文录像，没有官方中文版或官方中文字幕；B站版是第三方中文配音加工，因此保留转载标记。 |
+
+### 当前路线需要付费材料补读的知识点（66 个）
+
+指该语言当前没有可独立覆盖整个组合项的免费来源；可能已有免费材料讲解其中一部分。不是断言其他免费教学不存在。
+
+| 技能 | 语言 | 知识点 | 付费材料 |
+|---|---|---|---|
+| A.1.2 | 中文 | Bayes网络 | [周志华《机器学习》（西瓜书，清华大学出版社 2016）— 第12章 计算学习理论、第14章 概率图模型](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm) |
+| A.1.2 | 中文 | Markov网络 | [周志华《机器学习》（西瓜书，清华大学出版社 2016）— 第12章 计算学习理论、第14章 概率图模型](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm) |
+| A.2.2 | 中文 | 经验风险 | [周志华《机器学习》（西瓜书，清华大学出版社 2016）— 第12章 计算学习理论、第14章 概率图模型](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm) |
+| A.2.2 | 中文 | PAC/VC | [周志华《机器学习》（西瓜书，清华大学出版社 2016）— 第12章 计算学习理论、第14章 概率图模型](https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm) |
+| A.3.1 | 中文 | 信息抽取 | [《自然语言处理》（刘挺、秦兵、赵军、黄萱菁、车万翔，高等教育出版社，2021，定价 54.00 元）](https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=60b122b1adb85dae6a2f4027) |
+| C.4.3 | 中文 | 可用性与通信复杂度 | [南希·林奇《分布式算法（典藏版）》中译本（机械工业出版社，2023）](http://www.cmpedu.com/books/book/5610331.htm) |
+| D.4.1 | 中文 | 语义约束 | [《知识图谱：算法与实践》（赵军主编，赵军、刘康、何世柱、陈玉博、张元哲编着，高等教育出版社 2022-03）](https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=61df11cd938b7cc2960ee421) |
+| D.4.2 | 中文 | 描述逻辑 | [《知识图谱：算法与实践》（赵军主编，赵军、刘康、何世柱、陈玉博、张元哲编着，高等教育出版社 2022-03；第2章知识表示、第8章知识推理）](https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=61df11cd938b7cc2960ee421) |
+| F.1.6 | 中文 | 固定参数可解性与核化 | [《参数计算导论》（王建新、冯启龙，《信息科学技术学术着作丛书》，科学出版社；中文参数计算专着）](https://weread.qq.com/web/reader/cbc32e20811e5e442g017eab) |
+| F.1.6 | 中文 | W 层级与 ETH 下界 | [算法分析进阶：超越最坏情况分析（中文译本）](https://ebooks.cmpbook.com/detail?id=28145) |
+| F.2.3 | 中文 | 完备性 | [《计算复杂性理论》（傅育熙，清华大学出版社，2023；上海交通大学《计算复杂性》课程指定参考教材，课程站给出前 15 页 PDF）](https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/) |
+| F.2.3 | 中文 | 空间/随机复杂度 | [《计算复杂性理论》（傅育熙，清华大学出版社，2023；上海交通大学《计算复杂性》课程指定参考教材，课程站给出前 15 页 PDF）](https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/) |
+| F.2.3 | 中文 | 线路复杂度与下界 | [《计算复杂性理论》（傅育熙，清华大学出版社，2023；上海交通大学《计算复杂性》课程指定参考教材，课程站给出前 15 页 PDF）](https://basics.sjtu.edu.cn/~yuxi/teaching/complexity/) |
+| F.3.3 | 中文 | 时序逻辑与状态空间 | [模型检验原理（Baier、Katoen，中文译本）](https://www.tup.tsinghua.edu.cn/booksCenter/book_08452701.html) |
+| H.2.2 | 中文 | 受约束随机激励 | [《芯片验证漫游指南——从系统理论到 UVM 的验证全视界》（刘斌，电子工业出版社，2018）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890) |
+| H.2.2 | 中文 | 断言与覆盖率 | [《芯片验证漫游指南——从系统理论到 UVM 的验证全视界》（刘斌，电子工业出版社，2018）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890) |
+| H.2.2 | 中文 | UVM 验证流程 | [《芯片验证漫游指南——从系统理论到 UVM 的验证全视界》（刘斌，电子工业出版社，2018）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=51890) |
+| H.2.2 | 中文 | 形式验证与等价性检查入门 | [形式化验证：现代VLSI设计的必备工具包（原书第2版，中文译本）](https://ebooks.cmpbook.com/detail?id=29267) |
+| H.2.3 | 中文 | 信号完整性 | [《信号完整性与电源完整性分析（第二版）》（Eric Bogatin，李玉山等译，电子工业出版社）](https://phei.com.cn/module/goods/wssd_content.jsp?bookid=49483) |
+| H.3.4 | 中文 | 最坏执行时间 | [嵌入式软件的时间分析（Peter Gliwa，中文译本）](https://www.gliwa.com/media/cn_embeddedsoftwaretiming_gliwa_content.pdf) |
+| H.3.4 | 中文 | 资源共享与时间正确性分析 | [嵌入式软件的时间分析（Peter Gliwa，中文译本）](https://www.gliwa.com/media/cn_embeddedsoftwaretiming_gliwa_content.pdf) |
+| H.4.2 | 中文 | 定位建图 | [《视觉 SLAM 十四讲：从理论到实践（第 2 版）》（高翔等，电子工业出版社，2019）](https://phei.com.cn/module/goods/wssd_content.jsp?bookid=54412) |
+| H.4.4 | 中文 | 研究时延 | [边缘计算中的资源调度机制（郑瑞娟等，科学出版社）](https://www.ecsponline.com/goods.php?id=227024) |
+| I.1.2 | 中文 | IT治理 | [信息系统项目管理师教程（第4版，官方教材）](https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html) |
+| I.1.2 | 中文 | 投资组合 | [信息系统项目管理师教程（第4版，官方教材）](https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html) |
+| I.1.2 | 中文 | 采购 | [信息系统项目管理师教程（第4版，官方教材）](https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html) |
+| I.1.2 | 中文 | 服务与组织变革 | [信息系统项目管理师教程（第4版，官方教材）](https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html) |
+| I.1.3 | 中文 | 分析 | [信息系统项目管理师教程（第4版）：流程管理专题](https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html) |
+| I.1.3 | 中文 | 自动化与持续改进 | [信息系统项目管理师教程（第4版）：流程管理专题](https://www.tup.tsinghua.edu.cn/booksCenter/book_09983002.html) |
+| M.6.2.4 | 中文 | 稀疏性 | [高维统计学：非渐近视角（Wainwright，中文译本）](https://www.cmpedu.com/books/book/5606424.htm) |
+| M.6.2.4 | 中文 | 一致性 | [高维统计学：非渐近视角（Wainwright，中文译本）](https://www.cmpedu.com/books/book/5606424.htm) |
+| M.6.2.4 | 中文 | 风险界与高维估计 | [高维统计学：非渐近视角（Wainwright，中文译本）](https://www.cmpedu.com/books/book/5606424.htm) |
+| M.6.6 | 中文 | 排队网络 | [计算机系统的性能建模与设计：排队论实战（中文译本）](https://ebooks.cmpbook.com/detail?id=24622) |
+| M.6.6 | 中文 | 操作定律与均值分析 | [计算机系统的性能建模与设计：排队论实战（中文译本）](https://ebooks.cmpbook.com/detail?id=24622) |
+| M.7.4 | 中文 | 随机规划与收敛分析 | [庞丽萍、肖现涛《最优化方法》：随机规划模型](https://wz.dutp.cn/index/product/detail.html?id=3887) |
+| M.8.1 | 中文 | 后向稳定性 | [数值线性代数（Trefethen、Bau；陆金甫、关治译）](https://lib2.buct.edu.cn/bookInfo_0100041518.html) |
+| M.8.4 | 中文 | 方差缩减 | [《统计计算（第二版）》李东风（高等教育出版社，2026 年 1 月，正版教材）](https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=67114363e4efbc722ba48548) |
+| M.8.4 | 中文 | 重要性抽样 | [《统计计算（第二版）》李东风（高等教育出版社，2026 年 1 月，正版教材）](https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=67114363e4efbc722ba48548) |
+| M.8.6 | 英文 | Gröbner 基与消元 | [Cox, Little & O'Shea, Ideals, Varieties, and Algorithms (4th ed., Springer 2015) — 出版社页](https://link.springer.com/book/10.1007/978-3-319-16721-3) |
+| P.4.1 | 中文 | 生命周期 | [《软件工程：经典、现代和前沿》（孙艳春、黄罡、邓水光，北京大学出版社 2024，北大《软件工程》MOOC 主教材，ISBN 978-7-301-34801-7）](https://www.icourse163.org/course/PKU-1003177002) |
+| P.4.1 | 中文 | 迭代/敏捷 | [《软件工程：经典、现代和前沿》（孙艳春、黄罡、邓水光，北京大学出版社 2024，北大《软件工程》MOOC 主教材，ISBN 978-7-301-34801-7）](https://www.icourse163.org/course/PKU-1003177002) |
+| P.4.1 | 中文 | 工程原则 | [《软件工程：经典、现代和前沿》（孙艳春、黄罡、邓水光，北京大学出版社 2024，北大《软件工程》MOOC 主教材，ISBN 978-7-301-34801-7）](https://www.icourse163.org/course/PKU-1003177002) |
+| P.4.1 | 中文 | 协作与方法选择 | [《软件工程：经典、现代和前沿》（孙艳春、黄罡、邓水光，北京大学出版社 2024，北大《软件工程》MOOC 主教材，ISBN 978-7-301-34801-7）](https://www.icourse163.org/course/PKU-1003177002) |
+| P.4.2 | 中文 | 需求获取 | [《软件工程：经典、现代和前沿》（孙艳春等，北京大学出版社 2024，ISBN 978-7-301-34801-7）第 3 章 软件需求工程](https://www.icourse163.org/course/PKU-1003177002) |
+| P.4.2 | 中文 | 用例 | [《需求工程——软件建模与分析（第2版）》（骆斌、丁二玉，高等教育出版社）](https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cec6a2ba9eb884cf81eae8) |
+| P.4.2 | 中文 | 约束 | [《需求工程——软件建模与分析（第2版）》（骆斌、丁二玉，高等教育出版社）](https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cec6a2ba9eb884cf81eae8) |
+| P.4.2 | 中文 | 领域模型与可追踪性 | [《需求工程——软件建模与分析（第2版）》（骆斌、丁二玉，高等教育出版社）](https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cec6a2ba9eb884cf81eae8) |
+| P.4.3 | 中文 | UML | [《软件工程与UML（第2版）》（罗炜、刘洁，高等教育出版社，“十三五”职业教育国家规划教材）](https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=6275543d938b7cc2960eea63) |
+| P.4.3 | 中文 | 设计原则 | [《敏捷软件开发（珍藏版）》（Robert C. Martin 着，鄢倩、徐进译，清华大学出版社）](https://www.tup.tsinghua.edu.cn/booksCenter/book_08196801.html) |
+| P.4.5 | 中文 | 单元/集成/系统测试 | [《软件工程：经典、现代和前沿》第 7 章 软件测试（北大 101 计划教材）](https://www.icourse163.org/course/PKU-1003177002) |
+| P.4.6 | 中文 | 可维护性 | [《软件工程：经典、现代和前沿》第 10 章 软件维护和演化（北大 101 计划教材）](https://www.icourse163.org/course/PKU-1003177002) |
+| S.2.5 | 中文 | 设备供应链 | [集成电路硬件安全（电子工业出版社，出版社官网可查完整目录与内容简介）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=69432) |
+| S.3.1 | 中文 | 认证会话 | [白帽子讲Web安全（第2版）（吴翰清、叶敏，电子工业出版社 2023-07，ISBN 9787121459672）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=63034) |
+| S.3.1 | 中文 | 访问控制 | [白帽子讲Web安全（第2版）（吴翰清、叶敏，电子工业出版社 2023-07，ISBN 9787121459672）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=63034) |
+| S.3.1 | 中文 | 服务端/客户端与接口安全 | [白帽子讲Web安全（第2版）（吴翰清、叶敏，电子工业出版社 2023-07，ISBN 9787121459672）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=63034) |
+| S.5.2 | 中文 | 网络测量与安全经济学 | [Ross Anderson《信息安全工程（第2版）》中文译本](https://www.tup.tsinghua.edu.cn/bookscenter/bookcatalog?id=03008201) |
+| V.2.2 | 中文 | 可用性实验 | [《用户体验度量：收集、分析与呈现（纪念版）》（Tom Tullis、Bill Albert 着，周荣刚、秦宪刚 译，电子工业出版社 2020-06）](https://phei.com.cn/module/goods/wssd_content.jsp?bookid=55750) |
+| V.2.4 | 中文 | 虚实融合 | [《虚拟现实技术与应用》（胡小强 编着，北京邮电大学出版社 2021-03，第 1-6 版次；全书 6 章，出版社官方目录逐节可见）](https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html) |
+| V.2.4 | 中文 | 追踪 | [《虚拟现实技术与应用》（胡小强 编着，北京邮电大学出版社 2021-03，第 1-6 版次；全书 6 章，出版社官方目录逐节可见）](https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html) |
+| V.2.4 | 中文 | 空间界面 | [《虚拟现实技术与应用》（胡小强 编着，北京邮电大学出版社 2021-03，第 1-6 版次；全书 6 章，出版社官方目录逐节可见）](https://www.buptpress.com/StaticPage/bookcontent_09CB8F022CF5EB19.html) |
+| V.3.2 | 中文 | 多视图 | [《数据可视化（纪念版）》（陈为 等，电子工业出版社 2023-03，ISBN 9787121450969，756 页，15 章分 4 篇；第 4.3.3 节「多视图协调关联」、第 12 章「可视化中的交互」、第 13 章「可视化效果评测与用户实验」）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=62229) |
+| V.3.2 | 中文 | 人在回路分析与评估 | [《数据可视化（纪念版）》（陈为 等，电子工业出版社 2023-03，ISBN 9787121450969，756 页，15 章分 4 篇；第 4.3.3 节「多视图协调关联」、第 12 章「可视化中的交互」、第 13 章「可视化效果评测与用户实验」）](https://www.phei.com.cn/module/goods/wssd_content.jsp?bookid=62229) |
+| X.2.1 | 中文 | 统计推断和生物数据 | [陈铭主编《生物信息学》第四版：作者官方教材与配套课件](https://bis.zju.edu.cn/binfo/textbook/) |
+| X.2.3 | 中文 | 测量与教学效果评估 | [《心理测量》：经典及现代测验理论](https://www.tup.tsinghua.edu.cn/booksCenter/bookpreface?id=06562301) |
+| X.3.1 | 中文 | 量子算法 | [量子计算和量子信息（一）——量子计算部分（赵千川等译）](https://www.tup.tsinghua.edu.cn/booksCenter/book_00786701.html) |
+| X.3.1 | 中文 | 纠错和量子信息 | [量子计算和量子信息（二）——量子信息部分（郑大钟、赵千川译）](https://www.tup.tsinghua.edu.cn/booksCenter/book_01765301.html) |

@@ -1,0 +1,537 @@
+{
+ "id": "X.3.3",
+ "name": "科学机器学习与可微仿真",
+ "description": "物理约束学习、神经算子、反问题、可微求解与科学验证。",
+ "checkedAt": "2026-11-01",
+ "sources": [
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Parallel Computing and Scientific Machine Learning (SciML) — MIT 18.337J/6.338J online book and course",
+   "url": "https://book.sciml.ai/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "Online book/course: sequential and parallel code, dynamical systems and ODE integrators, stiff ODEs, forward and reverse automatic differentiation, adjoints and δP, inverse problems and differentiable programming, neural ODEs, GPU/MPI, PDE discretization, physics-informed learning (PINNs/neural differential equations), probabilistic programming and uncertainty quantification; course site, homeworks and recordings linked.",
+   "access": "Free online book and course materials; no registration.",
+   "publisher": "MIT (Chris Rackauckas et al.)",
+   "evidence": {
+    "url": "https://book.sciml.ai/",
+    "location": "Book table of contents / course page",
+    "finding": "The book TOC covers ODE integrators, automatic differentiation, adjoints, inverse problems, neural ODEs, GPU/MPI, PDE discretization and physics-informed learning."
+   }
+  },
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "MindSpore Science 官方中文文档（MindSpore Flow / Earth 等组件）",
+   "url": "https://www.mindspore.cn/mindscience/docs/zh-CN/master/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文文档：MindSpore Flow（PINN、FNO 等科学计算模型与案例）、Earth、Chemistry 等组件；可用于跑通 PINN/FNO 求解 PDE 的示例，但不讲反问题、伴随方法与可微求解的系统理论。",
+   "access": "免费阅读；运行示例需安装 MindSpore 与 MindSpore Science。（本条原为 supplement，因该语言没有更完整的课程级材料，改作该语言主线；覆盖范围与缺口见 topics/routes。）（角色复核：按实际内容，本条为分步教程/产品文档，原记 primary。）",
+   "publisher": "昇思 MindSpore 社区",
+   "evidence": {
+    "url": "https://www.mindspore.cn/mindscience/docs/zh-CN/master/index.html",
+    "location": "文档首页组件目录",
+    "finding": "首页列出 MindSpore Chemistry/Earth/Energy/Flow/SPONGE 等组件，Flow 提供 PINN/FNO 等科学计算案例。"
+   }
+  },
+  {
+   "key": "r7-zh1",
+   "lang": "zh",
+   "title": "基于神经网络的偏微分方程求解方法研究综述（查文舒、李道伦、沈路航、张雯、刘旭亮，《力学学报》，EI/Scopus 收录期刊官网免费全文）",
+   "url": "https://lxxb.cstam.org.cn/cn/article/id/e3570f41-6938-4f31-b644-9be812d61cbc",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文系统综述：先讲偏微分方程智能求解的发展历程，再「从反演未知偏微分方程与求解已知偏微分方程两个角度展开」，其中反演部分讲恢复方程与参数反演；求解部分按损失函数构建方式分三类——数据驱动、物理约束（PINN 式，把控制方程加进损失）、物理驱动（纯物理约束、不用标签数据），并横向比较全连接/卷积/循环等网络结构，最后给应用场景与展望（参考文献 102 篇）。",
+   "access": "《力学学报》官网免费阅读摘要与 HTML 全文（本轮读的是摘要与英文摘要）；中文；属同行评议综述，无配套代码与作业。",
+   "publisher": "《力学学报》（中国力学学会/中国科学院力学研究所主办）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://lxxb.cstam.org.cn/cn/article/id/e3570f41-6938-4f31-b644-9be812d61cbc",
+    "location": "摘要正文：「本文首先简要介绍偏微分方程智能求解发展历程, 然后从反演未知偏微分方程与求解已知偏微分方程两个角度展开讨论」「第1类是数据驱动…可以应用于恢复方程、参数反演等；第2类是物理约束…在损失函数中加入控制方程等物理规律」",
+    "finding": "读到中文摘要与英文摘要，确认这篇综述把「反演未知方程/参数反演」（即反问题）作为主线之一系统整理，并给出数据/物理约束/物理驱动三类方法的划分，可作为中文「反问题」的教学级综述（但不是课程）。"
+   },
+   "added_by": "review/pi-additions/X.3.3.json"
+  },
+  {
+   "key": "r7-en1",
+   "lang": "en",
+   "title": "NeuralOperator: Neural Operators in PyTorch（官方文档 v2.0.0，含 Fourier Neural Operator 官方实现与 Quickstart 教程）",
+   "url": "https://neuraloperator.github.io/dev/index.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "神经算子的定义与动机（学习函数空间之间的映射、分辨率无关）、库内包含的算子结构（Fourier Neural Operator 官方实现等）、以及完整 Quickstart 工作流：加载数据 → 构建 neural operator → 训练 → 保存模型，另有 Examples 与安装说明。",
+   "access": "官方文档免费、无注册；英文；含可运行代码示例。",
+   "publisher": "NeuralOperator 项目（PyTorch Ecosystem，FNO 作者团队的官方实现库）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://neuraloperator.github.io/dev/index.html",
+    "location": "首页正文：「NeuralOperator is a comprehensive PyTorch library for learning neural operators, containing the official implementation of Fourier Neural Operators…」「neural operators enable learning mapping between function spaces…resolution invariant」「Quickstart: This guide will walk you through the standard ML workflow of loading data, creating a neural operator, training it…」",
+    "finding": "确认文档先解释神经算子与普通网络的区别（函数空间映射、分辨率无关），再给训练 FNO 的分步流程与示例，可用作「神经算子」这一具体知识点的英文分步教学（产品文档，只补这一点）。"
+   },
+   "added_by": "review/pi-additions/X.3.3.json"
+  },
+  {
+   "key": "final-zh1",
+   "lang": "zh",
+   "title": "《基于物理的深度学习》（Physics-Based Deep Learning v0.2 中文译本，全书在线、每章配可执行 Jupyter notebook）",
+   "url": "https://www.topcfd.cn/Ebook/PBDL/",
+   "tier": "book",
+   "free": true,
+   "role": "supplement",
+   "covers": "成体系的中文主线，按「物理约束 → 可微物理 → 反演 → 不确定性」的整合紧密度递增排列：2 概述、3 监督学习、4 物理损失、5 PINN 优化 Burgers 方程、6 物理损失的讨论；**7 可微分物理介绍（把数值求解器的每个算子做成可微、用反向传播让梯度在模拟器与网络之间流动、雅可比矩阵）、8 用 DP 梯度优化 Burgers、9 讨论、10 可微分流体模拟、11 把 DP 整合进神经网络、12 用深度学习减少数值误差**；13 利用神经网络求解逆问题、14 讨论；15–16 强化学习入门与用 RL 控制 Burgers；17 尺度不变量和反演、18 比较不同优化器、19 尺度不变物理训练、20 用尺度不变更新学习反演热传导、21 半逆梯度、22 耦合振子、23 讨论；24 后验推断简介、25 用贝叶斯神经网络的 RANS 翼型流动；26 其他主题、27 模型简化和时间序列、28 GAN、29 非结构化网格与无网格方法、30 展望。",
+   "access": "第三方转载，授权未核。第三方中文译本，译者与授权未核；译文有机器翻译痕迹。原书公开，可对照英文原文；本链接不是TUM官方中文版本。正文和示例可免费阅读。",
+   "publisher": "原书 Physics-Based Deep Learning（TUM 基于物理的仿真小组，Nils Thuerey 等）；中文译本托管于 topcfd.cn 的《基于物理的深度学习》电子书栏目",
+   "reupload": true,
+   "evidence": {
+    "url": "https://www.topcfd.cn/Ebook/PBDL/",
+    "location": "首页目录「1 预告示例 … 32 符号和缩写」＋「欢迎来到《基于物理的深度学习书籍》（v0.2）」正文：本文档包含与深度学习相关的实用而全面的介绍、所有主题尽可能以 Jupyter 笔记本附带实践代码、将按整合紧密度递增介绍物理损失约束／与可微分模拟更紧密耦合的学习算法／为物理问题量身定制的训练算法／强化学习与不确定性建模",
+    "finding": "实际打开首页读到完整 32 章目录与全书说明，确认它是覆盖「物理损失/PINN（4–6）→ 可微分物理（7–12）→ 反问题与反演（13、17–22）→ 不确定性（24–25）」的成体系教材，且明确以 notebook 为教学载体，符合该语言「主教材」的条件。随后另开第 7 章正文核对（见下条 evidence）。"
+   },
+   "added_by": "review/final-additions/X.3.3.json",
+   "official_search": "已查TUM原书 physicsbaseddeeplearning.org（官方英文）与MindSpore/PaddleScience官方中文教程；未核到官方授权中译本，第三方中译仅作可微物理补充。",
+   "updated_by": [
+    "review/publication-additions/X.3.3.json"
+   ]
+  },
+  {
+   "key": "final-zh2",
+   "lang": "zh",
+   "title": "MindSpore Science 快速开始：FNO 算子求解 Burgers 方程（官方中文教程，含原理、FNO1D 建模、训练与验证 notebook、相对 MSE 误差）",
+   "url": "https://www.mindspore.cn/mindscience/docs/zh-CN/master/quick_start.html",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "神经算子的「原理 + 跑通」最小闭环：概述先点明经典网络只在有限维空间映射、只能学到与特定离散化相关的解，而 FNO 学习无限维函数空间映射、可直接学「任意函数参数 → 解」的映射因而泛化更强（并给出原论文 FNO for Parametric PDEs 的出处）；再给一维 Burgers 方程（含粘性项 ν）与 u0 ↦ u(·,t) 的映射设定；然后逐步：关键接口导入 → 创建数据集 → 构建模型（mindscience.models 的 FNO1D）→ 优化器（warmup + 余弦退火）→ 模型训练（train.py 脚本 / 中英文 Jupyter 逐行跑训练与验证）→ 结果展示（t∈(0,3] 的数值解与各时刻切片）；最后是接口说明表（FNO1D、RelativeRMSELoss 相对 MSE 误差、UnsteadyFlowWithLoss 非稳态流损失）。",
+   "access": "免费中文网页，无需注册；中文；代码可运行需安装 MindSpore 与 MindSpore Science（Ascend/GPU/CPU 环境）。有中文版与英文版 Jupyter Notebook。",
+   "publisher": "昇思 MindSpore 社区（MindSpore Science 官方文档）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.mindspore.cn/mindscience/docs/zh-CN/master/quick_start.html",
+    "location": "概述 → 背景 → 问题描述 → 关键接口导入 → 创建数据集 → 构建模型 → 优化器 → 模型训练（训练方式一：train.py；训练方式二：Jupyter Notebook）→ 结果展示 → 使用接口简介",
+    "finding": "实际打开正文读到原理段：「经典的神经网络是在有限维度的空间进行映射，只能学习与特定离散化相关的解。与经典神经网络不同，傅里叶神经算子（Fourier Neural Operator，FNO）是一种能够学习无限维函数空间映射的新型深度学习架构」；以及 Burgers 方程、u0↦u(·,t)、FNO1D 构建、warmup 余弦退火、「您可以使用中文版和英文版 Jupyter Notebook 逐行运行训练和验证代码」、「下图分别表示在 t∈(0,3] 上的方程数值解以及不同时间下的切片」、接口表中的 RelativeRMSELoss（相对 MSE 误差）。确认是原理配代码的教程，不是 API 索引。"
+   },
+   "added_by": "review/final-additions/X.3.3.json",
+   "updated_by": [
+    "review/publication-additions/X.3.3.json"
+   ]
+  },
+  {
+   "key": "final-zh3",
+   "lang": "zh",
+   "title": "PaddleScience 经典案例：NeuralOperator（TFNO / UNO / SFNO 的模型原理与 Darcy-flow、球面浅水方程训练验证代码）",
+   "url": "https://paddlescience-docs.readthedocs.io/zh-cn/latest/examples/neuraloperator/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "比单案例更完整的神经算子讲解：1 背景简介（PDE 反复求解的代价、经典网络只能学与特定离散化相关的解 → 神经算子学与网格无关的无限维算子，FNO 直接在傅里叶空间参数化积分核，论文在 Burgers/Darcy/Navier-Stokes 上验证，首次做到零样本超分辨、比传统求解器快三个数量级）；2 模型原理（积分算子限制为卷积、在傅里叶域用线性变换实例化、与离散化无关地共享网络参数；训练/推理流程：X[w,h] → Y[w,h] 与真值算 LpLoss 或 H1 损失）；3 TFNO 训练 Darcy-flow（数据集：1000 条 16×16 训练、另给 32×32 测试；SupervisedConstraint 构建、模型、学习率与优化器、评估器、训练评估、模型导出与推理）；4 UNO 同流程；5 SFNO 训练球面浅水方程（SWE）；6 结果展示（TFNO/UNO 的预测 vs 真值、SFNO 的预测 vs 真值）。",
+   "access": "免费中文网页（Read the Docs），无需注册；中文；代码在 PaddleScience 仓库（examples/neuraloperator），需装 PaddlePaddle 与 PaddleScience。原文数据集描述写作「1000 条 16x16 分辨率大小的训练数据；50 条 32x32 和 50 条 32x32 分辨率大小的测试数据」，两个测试分辨率重复，疑为笔误，本轮未核到仓库配置里的真实分辨率。",
+   "publisher": "飞桨 PaddleScience 官方文档（PaddlePaddle / 百度）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://paddlescience-docs.readthedocs.io/zh-cn/latest/examples/neuraloperator/",
+    "location": "1. 背景简介 → 2. 模型原理 → 2.1 模型训练、推理过程 → 3. TFNO 模型训练 darcy-flow 实现（3.1 数据集 / 3.2.1 约束构建 / 3.2.2 模型构建 / 3.2.3 学习率与优化器 / 3.2.4 评估器 / 3.2.5 训练与评估 / 3.3 评估可视化）→ 4. UNO → 5. SFNO（spherical Shallow Water equations）→ 6. 结果展示",
+    "finding": "实际打开正文读到：「经典神经网络是在有限维空间之间进行映射，因此它们只能学习与特定离散化相关的解决方案……这种神经算子通过生成一组用于不同离散化且与网格无关的参数，解决了有限维算子方法中的网格依赖性问题。该研究通过直接在傅里叶空间中参数化积分核，制定了一个新的神经算子」；「傅里叶神经算子作为首个基于机器学习的方法，成功地以零样本超分辨率模拟了湍流，其速度比传统PDE求解器快达三个数量级」；模型原理段「积分算子被限制为卷积，并通过傅里叶域中的线性变换实例化」；以及 SupervisedConstraint 的代码块与「6. 结果展示：TFNO 的预测结果与真值结果」。确认原理与代码都在正文里。"
+   },
+   "added_by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "key": "final-zh4",
+   "lang": "zh",
+   "title": "【中文配音】科学与工程领域的 AI（2024）- 苏黎世联邦理工学院（B站，28 讲，含算子学习 8 讲、PINN 5 讲、神经微分方程与模型发现）",
+   "url": "https://www.bilibili.com/video/BV1gJHYeREEj/",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程级的中文可听材料，讲次按算子学习成体系排列：1 课程介绍、2–3 深度学习简介、4 偏微分方程在科学中的重要性、5 基于物理信息的神经网络介绍、6–7 PINN 限制和扩展 1–2、8–9 PINN 理论 1–2、**10–11 算子学习介绍 1–2、12 卷积神经算子（CNO）、13 傅里叶神经算子（FNO）、14 谱神经算子与 DeepONet、15 时间依赖神经算子、16 大规模神经算子、17 注意力作为神经算子、18 窗口注意力与缩放定律**、19–20 混合工作流 1–2、**21 神经微分方程**、22 扩散模型导论、23 JAX、**24 符号回归与模型发现**、25–26 AI 在化学和生物学中的应用。",
+   "access": "第三方转载，授权未核。B站免费播放，中文配音（标题与简介写明「中文配音」；未说明是人工配音还是合成配音，本轮未播放核对音轨与术语准确性）；上传者账号 Fentwer，页面标注「自制」（copyright=1），但实际是把 ETH Zürich 的英文课程配成中文，属二次加工；字幕情况未核对。",
+   "publisher": "B站个人账号 Fentwer（自制投稿）；课程原始出处为 ETH Zürich「AI in the Sciences and Engineering」（讲师 Siddhartha Mishra、Ben Moseley，见 camlab.ethz.ch 课程页与 camlab-ethz/AI_Science_Engineering 官方项目页）",
+   "reupload": true,
+   "official_search": "查到并打开官方英文版：ETH Zürich CAMLab 的课程页（camlab.ethz.ch/teaching/ai-in-the-sciences-and-engineering-2024.html，正文由 JS 渲染只读到页脚）与官方项目页 https://github.com/camlab-ethz/AI_Science_Engineering（readme 写明 Lecturers: Prof. Dr. Siddhartha Mishra, Dr. Ben Moseley，并给出官方 YouTube 播放列表链接）。官方只有英文录像，没有官方中文版或官方中文字幕；B站版是第三方中文配音加工，因此保留转载标记。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1gJHYeREEj/",
+    "location": "视频元信息与 28 个分 P 标题：10. 算子学习介绍1（Introduction to Operator Learning Part 1）、11. 算子学习介绍2、12.卷积神经算子（Convolutional Neural Operators）、13. 傅里叶神经算子（Fourier Neural Operators）、14. 谱神经算子和深度算子网络(Spectral Neural Operators and Deep Operator Networks)、15.时间依赖神经算子、16.大规模神经算子、17.注意力作为神经算子、21.神经微分方程(Neural Differential Equations)、24.符号回归与模型发现（Symbolic Regression and Model Discovery）",
+    "finding": "用 B 站公开页面元信息读到 owner=Fentwer、copyright=1（自制）、标题《【中文配音】科学与工程领域的 AI （2024）- 苏黎世联邦理工学院》、简介「本课程介绍了这些领域中高度热门的 AI 应用选择。重点放在使用 AI，尤其是深度学习来理解由 PDE 建模的系统，并讨论了关键的科学机器学习概念和主题」，以及 28 个分 P 的完整标题列表——确认它确实按「算子学习 → CNO → FNO → SNO/DeepONet → 时间依赖/大规模/注意力神经算子」排课，并有神经微分方程与模型发现两讲。视频音轨语言与配音质量未核对（见 access）。"
+   },
+   "added_by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "key": "final-zh5",
+   "lang": "zh",
+   "title": "PaddleScience 复现指南（中文）：模型复现流程与验收标准（定性一致 + 定量相对误差 ≤10%）",
+   "url": "https://paddlescience-docs.readthedocs.io/zh-cn/latest/reproduction/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "把「科学验证」写成可执行的验收协议：复现论文指标时要「结合论文中提到的典型 demo，进行关键指标复现，即能够基于飞桨复现论文中的指标，如图表、数据等，其收敛趋势、数值等应基本一致（与作者提供指标的相对误差在 ±10% 以内即可）」；3 验收标准给出交付产物（代码 + 预训练参数 + AIStudio/官网文档）与两类判据——定性分析（模型收敛曲线、最终效果图示与论文保持一致）、定量分析（|复现指标−源代码指标|/源代码指标 ≤ 10%）；并规定复现文档必须包含模型简介、问题定义、问题求解（逐步讲解训练评估与可视化的编写过程）、完整代码、结果展示图，且开头写明论文题目/地址/参考代码链接。",
+   "access": "免费中文网页（Read the Docs），无需注册；中文。内容面向向 PaddleScience 提交复现 PR 的人，但其中「怎么算验证通过」的判据可迁移到任何 SciML 复现实验。",
+   "publisher": "飞桨 PaddleScience 官方文档（PaddlePaddle / 百度）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://paddlescience-docs.readthedocs.io/zh-cn/latest/reproduction/",
+    "location": "「复现论文中指标结果」段 →「3 验收标准」→「3.1 交付产物列表」→「3.2.2 代码规范」中的文档要求",
+    "finding": "实际打开正文读到：「复现论文中指标结果：结合论文中提到的典型 demo，进行关键指标复现……其收敛趋势、数值等应基本一致（与作者提供指标的相对误差在 ±10% 以内即可）」；「定性分析：模型收敛曲线、最终效果图示与论文能够保持一致；定量分析：如果论文包含定量指标，则复现指标与论文指标相对误差需满足 |复现指标-源代码指标|/源代码指标 ≤ 10%」；以及「复现完成后需撰写模型文档，需包含模型简介、问题定义、问题求解（逐步讲解训练评估以及可视化代码的编写过程）、完整代码、结果展示图等章节」。确认是可操作的验证判据，而非泛泛的「要可复现」。"
+   },
+   "added_by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "key": "final-en1",
+   "lang": "en",
+   "title": "AI in the Sciences and Engineering (ETH Zürich, 2024) — official course project page with topics and tutorial notebooks（PINNs, neural operators incl. FNO/CNO/DeepONet + theory, differentiable scientific algorithms, neural differential equations, equation discovery）",
+   "url": "https://github.com/camlab-ethz/AI_Science_Engineering",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "Course-level English treatment that fills the operator-learning gap with theory and hands-on tutorials. Topics listed: key scientific tasks (simulation, inverse problems, equation discovery, design, control) and why classical methods struggle; physics-informed neural networks for forward, inverse and equation-discovery PDE problems; neural operators including Fourier neural operators, convolutional neural operators and DeepONets for surrogate models, and their theoretical foundations; differentiable scientific algorithms, neural differential equations, and hybrid workflows; AI for symbolic regression and equation discovery; GNNs in science; foundation models for scientific discovery. Tutorials: 01 function approximation in PyTorch, 02 cross validation and intro to CNNs, 03 PINN training, 04 PINNs for inverse problems, 05 operator learning — FNO, 06 operator learning — CNO, 07 GNNs, 08 vision transformers for PDEs, 09 DDPM, 10 coding autodiff, 11 JAX/NDEs/diffusion, plus new time-dependent CNO and transfer learning for PDEs; datasets and an Allen-Cahn dataset link provided.",
+   "access": "Free public GitHub project page (course materials), no registration; lecture recordings are on the official CAMLab ETH Zürich YouTube playlist (linked from the page), slides on the official course page camlab.ethz.ch/teaching/ai-in-the-sciences-and-engineering-2024.html (that HTML page is JS-rendered: only the footer was readable). English. Tutorials are Jupyter notebooks.",
+   "publisher": "ETH Zürich, Computational and Applied Mathematics Laboratory (CAMLab) — lecturers Prof. Dr. Siddhartha Mishra and Dr. Ben Moseley; assistants Bogdan Raonic and Victor Armegioiu",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/camlab-ethz/AI_Science_Engineering/main/readme.md",
+    "location": "readme.md: header「This repository is the official project page of the course AI in the Sciences and Engineering, ETH Zurich」＋ Lecturers 行 ＋「Recordings of the lectures can be found at this YouTube link」＋「## Topics」列表 ＋「## Tutorials」01–11 与新教程列表",
+    "finding": "实际打开官方 readme 原文读到：「Neural operators, including Fourier neural operators, Convolutional neural operators and DeepONets, for learning efficient surrogate models, and their theoretical foundations」和「Differentiable scientific algorithms, neural differential equations, and the benefits of hybrid workflows」，以及「Tutorial 04 - PINNs for Inverse Problems」「Tutorial 05 - Operator Learing - Fourier Neural Operator」「Tutorial 06 - Operator Learing - Convolutional Neural Operator」「Tutorial 10 - Coding Autodiff」「Tutorial 11 - Introduction to JAX, NDEs and diffusion models」。并用 GitHub contents API 列出仓库文件，确认上述 notebook 实际存在。注意 readme 里「Operater Learing」是原文拼写错误。"
+   },
+   "added_by": "review/final-additions/X.3.3.json"
+  }
+ ],
+ "topics": [
+  {
+   "topic": "物理约束学习",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "MindSpore Flow 的 PINN 模型与案例",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Physics-Informed Learning（PINNs/neural differential equations）",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "神经算子",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "FNO 求解 Burgers 方程案例",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh2",
+     "section": "「概述/背景」中 FNO 与经典网络的对比与无限维函数空间映射的说明；「问题描述」u0↦u(·,t)；「构建模型」FNO1D；「模型训练」train.py / 中英 Jupyter 跑训练与验证；「结果展示」与「使用接口简介」（RelativeRMSELoss、UnsteadyFlowWithLoss）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh3",
+     "section": "1 背景简介（网格依赖问题与 FNO 在傅里叶空间参数化积分核）；2 模型原理与 2.1 训练/推理过程（LpLoss / H1 损失）；3 TFNO on Darcy-flow（约束→模型→优化器→评估器→训练评估→可视化）；4 UNO；5 SFNO on 球面浅水方程；6 结果展示（预测 vs 真值）",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh4",
+     "section": "第 10–11 讲 算子学习介绍 1–2、12 卷积神经算子、13 傅里叶神经算子、14 谱神经算子与 DeepONet、15 时间依赖神经算子、16 大规模神经算子、17 注意力作为神经算子、18 窗口注意力与缩放定律",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "神经算子只在部分章节/案例中出现，非独立章",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-en1",
+     "section": "首页概念说明（函数空间映射、分辨率无关）＋ Quickstart（数据→建模→训练→保存）＋ Examples",
+     "extent": "covered"
+    },
+    {
+     "source": "final-en1",
+     "section": "readme「Topics」中的 Neural operators（FNO / CNO / DeepONet + theoretical foundations）与「Tutorials」04–06（PINNs for Inverse Problems、Operator Learning FNO、Operator Learning CNO）＋ 新教程 Time Dependent CNO",
+     "extent": "covered"
+    }
+   ],
+   "note": "两边都只有案例级 FNO，没有神经算子（DeepONet/FNO 理论）的系统章节。；英文侧原本只有论文，这本官方文档把神经算子的概念与一次完整训练流程写成分步教程，可补这一具体知识点；仍属产品文档，不是课程，主资源仍是 en1（SciML 书）。；此前中文只有 FNO 案例片段，被记成 partial。这一页是官方中文的「原理 + 跑通」最小闭环：先把「经典网络只在有限维空间映射、只能学与特定离散化相关的解」与「FNO 学无限维函数空间映射」讲清楚，再用一维 Burgers 把 FNO1D 的建模、数据集、优化器、训练/验证 notebook、相对 MSE 误差与结果展示走完——足以支撑这一知识点的入门教学。；补上「为什么与分辨率无关」的原理与更强的实验面：正文说明积分算子被限制为卷积、在傅里叶域用线性变换实例化，因此共享同一套参数而与输入输出的离散化无关；再以 TFNO/UNO 在 Darcy flow（16×16 训练、更高分辨率测试，即零样本超分辨的设定）和 SFNO 在球面浅水方程上给全套代码与预测/真值对照。与 final-zh2 合起来，中文侧既有最小闭环也有原理与多算子对比。；补「课程级」这一档：这是唯一找到的中文可听、按算子学习系统排课的材料（CNO → FNO → SNO/DeepONet → 时间依赖/大规模/注意力神经算子），能把 DeepONet 与谱算子一并讲到，而 final-zh2/final-zh3 只覆盖 FNO 一族。它是 ETH 课程的中文配音加工版（见该来源 reupload/official_search），故只作补充，不作主资源。；英文侧原本只靠 NeuralOperator 库文档（产品文档）补这一点。补上 ETH Zürich 的整门课后，神经算子有了课程级材料：既有 FNO/CNO/DeepONet 的「理论要点」条目，也有三份可直接跑的 notebook（FNO、CNO 各一份），并延伸到时间依赖 CNO。"
+  },
+  {
+   "topic": "反问题",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "未覆盖",
+     "extent": "partial"
+    },
+    {
+     "source": "r7-zh1",
+     "section": "摘要与正文「反演未知偏微分方程」部分：恢复方程、参数反演，及数据驱动/物理约束/物理驱动三类方法的对比",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Inverse problems and differentiable programming；adjoints",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文综述把「从数据反演方程或参数」作为与正问题并列的一条主线，讲了用途与三类方法的取舍，能把反问题在科学机器学习里的位置与常见做法讲清；比此前中文只有零散论文摘要要系统。"
+  },
+  {
+   "topic": "可微求解与科学验证",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "可微求解未覆盖；科学验证只在案例结果中",
+     "extent": "partial"
+    },
+    {
+     "source": "final-zh1",
+     "section": "第 7 章 可微分物理介绍（7.1 可微算子、7.2 雅可比矩阵…）；第 8 章 DP 梯度优化 Burgers；第 10 章 可微分流体模拟；第 11 章 将 DP 整合到神经网络中；第 12 章 使用深度学习减少数值误差",
+     "extent": "covered"
+    },
+    {
+     "source": "final-zh5",
+     "section": "「复现论文中指标结果」（相对误差 ±10% 以内）与「3 验收标准 / 3.1 交付产物列表 / 3.2.2 代码规范中的文档要求」（定性一致 + 定量 ≤10% + 文档必含问题定义/求解/评估/可视化）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Differentiable programming/adjoints；科学验证依赖具体领域，课程只给方法",
+     "extent": "partial"
+    },
+    {
+     "source": "en1",
+     "section": "SciML 书 08 Forward AD、10 Reverse AD、11 δP（differentiable programming）、19 Uncertainty Programming；15 Physics Informed Learning",
+     "extent": "covered"
+    },
+    {
+     "source": "final-en1",
+     "section": "readme「Topics」中的 Differentiable scientific algorithms, neural differential equations, and the benefits of hybrid workflows；「AI for symbolic regression and equation discovery」；Tutorial 10 Coding Autodiff、Tutorial 11 Introduction to JAX, NDEs and diffusion models",
+     "extent": "covered"
+    }
+   ],
+   "note": "组合项：可微求解英文完整；科学验证两边都只到方法层，缺可复现实验与实验数据对比。；SciML 课程笔记用三章讲前向/反向自动微分与可微编程（δP），是把求解器做成可微的正式教学；不确定性编程与物理约束学习两章承担「结果可信度/与物理一致性」那半，故「可微求解与科学验证」在英文侧有课程级材料。；补「可微求解」这一半：第 7 章讲清可微物理的目标——给现有数值求解器每个算子提供对输入的梯度 ∂P_i/∂u，使反向传播能把梯度从模拟器传进网络；第 8/10/11 章把它落到 Burgers 优化、可微流体模拟与「DP + NN」的耦合训练，第 12 章讨论用学习减少数值误差。此前中文这块只有产品文档里一句「可微分求解器」，现在有章级正文 + 可执行 notebook。；补「科学验证」这一半：给了验证到底算不算通过的可操作判据——收敛曲线与最终效果图要定性一致，定量指标与论文/参考代码的相对误差须 ≤10%，并规定复现文档必须写清问题定义、逐步求解（训练评估与可视化）与完整代码。配合 final-zh1 的 notebook 与 final-zh2/final-zh3 的预测-真值对照，中文侧能把「可微求解」和「怎么验证它是对的」连成一条线。；给英文侧的可微求解再加一层课程级支撑：把「可微科学算法 / 神经微分方程 / 混合工作流」作为独立主题，并用 Coding Autodiff 与 JAX+NDEs 两份 notebook 落地；symbolic regression 与 equation discovery 则对应「用观测数据验证/发现方程」那半。与 en1 的 δP/伴随法章节互补，不改原有覆盖判断，只增强。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 MindSpore Flow 的 PINN 与 FNO 案例跑通一个 PDE 求解，记录边界条件与误差。"
+    },
+    {
+     "source": "r7-zh1",
+     "read": "读摘要与「反演未知偏微分方程」一节，写清反问题的未知量（方程形式/系数/边界条件）、可观测量与损失设计，再对照文中数据驱动/物理约束/物理驱动三类方法各举一个例子。"
+    },
+    {
+     "source": "final-zh1",
+     "read": "按第 4→6 章先做一遍 PINN（物理损失 → 用 PINN 优化 Burgers → 讨论物理损失的局限），再读第 7 章可微分物理：把 u(t+Δt)=P_m∘…∘P_1(u(t),ν) 这串算子逐个写出它需要提供 ∂P_i/∂u，并用第 8 章的 DP 梯度优化 Burgers 笔记本跑通；接着看第 10 章可微分流体模拟与第 11 章把 DP 整合进网络的训练循环，最后用第 12 章的例子比较「学出来的」与「数值解」的误差。每章都在浏览器里跑 notebook 并改一个参数重跑。"
+    },
+    {
+     "source": "final-zh2",
+     "read": "读「概述/背景」里 FNO 与经典网络的差别，写下「为什么普通 CNN 学不到分辨率无关的解」；按「构建模型 → 优化器 → 训练」跑通 FNO1D 求 Burgers 的 notebook，记录相对 MSE 损失曲线，再把输入分辨率改一档做推理，观察误差怎么变。"
+    },
+    {
+     "source": "final-zh3",
+     "read": "读 1 背景与 2 模型原理，用自己的话说清「积分算子在傅里叶域被参数化成线性变换」为什么带来网格无关性；然后任选 TFNO（Darcy-flow）跑通 3.1–3.3 的完整流程（约束→模型→优化器→评估器→训练评估→可视化），把预测图与真值图并排看，再换 UNO 或 SFNO 对比同一数据集上的效果差异。"
+    },
+    {
+     "source": "final-zh4",
+     "read": "看第 10–17 讲建立算子学习的谱系：先看 10–11 讲搞清「学算子」与「学函数」的区别，再看 12–14 讲比较 CNO / FNO / SNO / DeepONet 的构造差异，最后用 15–17 讲理解时间依赖、大规模与注意力型算子各自的动机；配套用 final-zh2/final-zh3 的代码各跑一遍。"
+    },
+    {
+     "source": "final-zh5",
+     "read": "照「验收标准」给自己的一次复现写验收单：定性项（收敛曲线与最终效果图是否与参考一致）+ 定量项（关键指标与参考值的相对误差，阈值 ≤10%）+ 文档项（问题定义、求解步骤含训练评估与可视化、完整代码、结果展示图）。把它套到 final-zh2 或 final-zh3 的案例上，报告你复现出来的误差是否过线。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read the ODE/AD/adjoint chapters, then inverse problems and neural ODEs, then PDE discretization and physics-informed learning; do the homework."
+    },
+    {
+     "source": "r7-en1",
+     "read": "按 Quickstart 训练一个 FNO（如一维达西流），把分辨率改一次验证「resolution invariant」，再记录训练损失与推理误差随时间的变化。"
+    },
+    {
+     "source": "final-en1",
+     "read": "Work through the notebooks in order: 03 PINN training → 04 PINNs for inverse problems → 05 FNO → 06 CNO, then 10 coding autodiff and 11 JAX/NDEs. For each, write down which operator is being made differentiable (or which operator is being learned) and what the acceptance check is; finish by watching the operator-learning lectures that back tutorials 05–06 so the notebooks are not just code-copying."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "query_or_url": "打开 MindSpore Science 中文文档",
+   "result": "采纳 zh1；确认只有 Flow/Earth 等组件与 PINN/FNO 案例，无反问题/伴随/可微求解理论。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "query_or_url": "B站搜索「科学机器学习 PINN 神经算子 课程」",
+   "result": "有 PINN 单讲与论文复现，无系统中文 SciML 课程，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "query_or_url": "无",
+   "result": "未核到中文 SciML 教材，不登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "query_or_url": "https://book.sciml.ai/",
+   "result": "采纳 en1；确认 ODE/AD/伴随/反问题/神经 ODE/PDE/PINN 章节。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "神经算子 深度学习 偏微分方程 反问题 科学计算 课程 中文 AI4Science（限定课程平台与 B 站）",
+   "result": "B 站结果全是 PINN 培训引流视频（AI技术星球/苏黎世联邦理工课程搬运）；课程平台只返回普通机器学习课，没有中文的 AI4Science/科学机器学习课程。",
+   "by": "review/pi-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "科学智能 AI for Science 科学机器学习 课程 大纲 神经算子 物理约束 可微（限定 icourse163/higher.smartedu/xuetangx）",
+   "result": "只返回长春理工/浙大/北理工的《机器学习》，无 AI for Science 专题课；中文课程平台这条线确认没有。",
+   "by": "review/pi-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "神经算子 综述 中文 DeepONet Fourier neural operator 算子学习 偏微分方程 期刊 论文",
+   "result": "命中百科、知乎、CSDN、MathWorks 中文文档（抓取 403）、中文期刊综述《基于神经网络的偏微分方程求解方法研究综述》（力学学报）→ 用 tavily_extract 读摘要后采纳为 r7-zh1（覆盖反问题，不含算子学习）。",
+   "by": "review/pi-additions/X.3.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "fetch",
+   "query_or_url": "https://book.sciml.ai/（现有 en1 目录）",
+   "result": "读到 19 章目录：07 ODEs、08 Forward AD、09 Stiff ODEs、10 Reverse AD、11 δP、14 PDEs、15 Physics Informed Learning、17 Global Sensitivity Analysis、19 Uncertainty Programming；确认可微求解有专章，但全书没有神经算子章。",
+   "by": "review/pi-additions/X.3.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://neuraloperator.github.io/dev/index.html",
+   "result": "确认官方文档含神经算子概念说明与 FNO 训练 Quickstart，采纳为 r7-en1（只补「神经算子」这一点）。",
+   "by": "review/pi-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.mindspore.cn/mindscience/docs/zh-CN/master/index.html 与 .../quick_start.html",
+   "result": "先在文档首页确认「快速开始 = FNO 算子求解 Burgers 方程」与「可微分求解器」组件说明，再打开 quick_start 读到原理+代码+训练验证 notebook，采纳为 final-zh2。另试 sciai 路径 https://www.mindspore.cn/sciai/docs/zh-CN/master/index.html 返回 404（SciAI 已并入 mindscience 文档）。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://paddlescience-docs.readthedocs.io/zh-cn/latest/（案例与方法分类表）→ examples/neuraloperator/ → reproduction/",
+   "result": "从案例清单里确认「算子学习 → DeepONet」与 NeuralOperator/FNO 系列案例；打开 examples/neuraloperator 读到背景、模型原理、TFNO/UNO/SFNO 全套代码与结果展示，采纳为 final-zh3；打开 reproduction 读到验收标准（定性一致 + 相对误差 ≤10%），采纳为 final-zh5。另打开 examples/fundiff 后发现它讲的是函数空间生成模型（FunDiff），不属可微求解，未采纳。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可微物理仿真 可微编程 中文 讲解 梯度 仿真器 教程 原理",
+   "result": "命中 topcfd.cn 的《基于物理的深度学习》中文版第 7 章「可微分物理介绍」、Taichi 官方中文「可微编程」文档、GitHub 上的《机器人教程·可微分仿真理论》、CSDN/知乎文章。打开 topcfd 的 PBDL 首页确认是 32 章全本中译 + notebook，采纳为 final-zh1（zh 主资源）；Taichi 页虽为简体中文版但有多段保留英文原文、且只讲 Taichi 的自动微分规则，未采纳；知乎/CSDN 文章不作教学来源。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "科学机器学习 中文 教材 图书 目录 物理信息神经网络 神经算子 出版社",
+   "result": "返回的全是通用深度学习书（《神经网络与深度学习》、Haykin 译本、图机器学习、深度强化学习）与百科词条，没有一本中文的 SciML/神经算子教材，也没有中译本《科学机器学习》。据此确认「中文没有对应教材」不是旧结论，而是本轮复查后的结果。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "AI for Science 公开课 B站 深势科技 科学智能 系列课程 神经算子 微分方程",
+   "result": "命中大量线索：B站「基于大模型的科学研究智能体| AI for Science课程分享」（科普向）、深势科技「4分钟了解什么是 AI for Science」（太短）、飞桨 AI Studio 的 AI4S 流体力学公开课（页面 JS 渲染，抓取 0 字符，未核对）、西湖大学《计算机科学与技术前沿(2026)》（12 个专题里只有 1 讲 AI+科学计算）、以及 ETH Zürich 课程的 B站中文配音版。采纳中文配音版为 final-zh4；其余要么太短、要么不是系统课、要么页面对抓取不可见，均未采纳。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "AI for Science 课程 教学 大纲 神经算子 偏微分方程 科学智能（限定 icourse163.org / xuetangx.com / higher.smartedu.cn）",
+   "result": "返回浙大《人工智能通识基础（理工农医）》、国防科大《常微分方程》、厦大《偏微分方程》、天津大学《高等数学》等，全是通用 AI 或纯数学课，没有一门 AI for Science / 科学机器学习的专题课；与上一轮结论一致，中文 MOOC 侧确实没有。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "NVIDIA Modulus 中文 文档 教程 物理信息神经网络 神经算子",
+   "result": "命中 NVIDIA 中国开发者站 PhysicsNeMo 产品页（developer.nvidia.cn/physicsnemo）、知乎《NVIDIA PhysicsNeMo 全面分析》、Datawhale every-embodied 仓库里的「PhysicsNeMo 物理 AI 求解器导读」README、以及一份 NVIDIA 讲者中文 PPT（SIMNET 21.06）。产品页是功能介绍、Datawhale 那篇是选型导读，都缺分步原理与验证，未采纳；官方文档仍是英文，也没有找到 NVIDIA 官方中文教程页。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "bilibili",
+   "query_or_url": "bvinfo.py BV1gJHYeREEj（读 B 站公开页面元信息：owner、自制/转载、简介、28 个分 P 标题）",
+   "result": "读到 owner=Fentwer、copyright=1（自制）、简介为课程介绍、分 P 含「10. 算子学习介绍1 … 17.注意力作为神经算子 / 21.神经微分方程 / 24.符号回归与模型发现」，据此确认是 ETH AISE 的中文配音版并按规则标 reupload=true、写 official_search。",
+   "by": "review/final-additions/X.3.3.json"
+  },
+  {
+   "lang": "en",
+   "channel": "official",
+   "tool": "tavily",
+   "query_or_url": "ETH Zurich AI in the Sciences and Engineering lecture recordings Mishra course page",
+   "result": "命中官方课程页 camlab.ethz.ch/teaching/ai-in-the-sciences-and-engineering-2024.html 与官方项目页 github.com/camlab-ethz/AI_Science_Engineering，另有 CAMLab ETH Zürich 的 YouTube 频道与讲者 Ben Moseley 的公开帖。课程页 HTML 由 JS 渲染只读到页脚，改读官方 readme 拿到 Topics 与 Tutorials 全文，并用 GitHub contents API 核对 notebook 文件确实存在，采纳为 final-en1。",
+   "by": "review/final-additions/X.3.3.json"
+  }
+ ],
+ "findings": [
+  "原英文 SciML 书覆盖物理约束学习、反问题、可微求解与数值方法，保留；神经算子与科学验证不是独立章。",
+  "原中文 MindSpore Science 是工具文档，能跑 PINN/FNO 案例，但反问题/伴随/可微求解理论缺失；中文 partial。",
+  "没有把工具文档当成 SciML 课程。",
+  "[review/pi-additions/X.3.3.json] 未解决 zh「神经算子」：中文只有百科词条（傅里叶神经算子）、知乎/CSDN 文章、中文字幕的英文讲解视频（BV19e411d7wj 等，属英文授课配字幕）与 MATLAB 中文文档（抓取 403 无法核对）；本轮查了中文课程平台检索、B 站、通用检索三渠道，没有中文课程或教材章节讲算子学习（DeepONet/FNO）。",
+  "[review/pi-additions/X.3.3.json] 未解决 zh「可微求解与科学验证」：中文侧只有零散论文与产品文档（MindSpore Science），没有讲「把求解器做成可微＋用实验/观测数据验证」的课程级材料：本轮查中文课程平台与通用检索均无；力学学报综述也不涉及可微编程与验证协议。",
+  "[review/pi-additions/X.3.3.json] 未解决 zh「主资源」：中文没有成体系的科学机器学习主资源：课程平台（icourse163/智慧高教/学堂在线）无 AI for Science 课程，B 站只有 PINN 培训引流与英文课搬运，教材侧未找到中译本《科学机器学习》类教材；现有 zh1 是 MindSpore Science 产品文档，按规则不能升为 primary。",
+  "[review/final-additions/X.3.3.json] 未解决 zh「主资源」：中文主资源已补到《基于物理的深度学习》中译本（final-zh1，32 章 + notebook），但有两点需主代理复核：①它是 TUM 英文开放书的中译，译文有明显机器翻译痕迹，页面未标译者与授权状态，本轮未核实是否获原作者许可，若正式记录要求「原创中文教材」则不宜作 primary；②该书 v0.2 目录里没有神经算子章，神经算子仍要靠 final-zh2/final-zh3/final-zh4 补。若这两点在审核中不通过，中文侧仍没有「原创中文、覆盖含神经算子的 SciML」单一主资源——本轮已查中文教材（无）、中文 MOOC（无 AI4Science 专题）、B 站（只有英文课的中文配音版）三条线。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": [
+  "review/pi-additions/X.3.3.json@a3ae641f83",
+  "review/final-additions/X.3.3.json@cd8d9e8115",
+  "review/publication-additions/X.3.3.json@1e21185c0e"
+ ]
+}

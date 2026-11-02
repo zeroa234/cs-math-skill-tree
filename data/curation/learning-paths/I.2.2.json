@@ -74,6 +74,42 @@
     "finding": "打开确认简介原文：“并深入探讨会议管理、冲突化解、危机应对与跨文化沟通等关键场景……帮助学习者高效掌握沟通策略，灵活应用于团队协作、项目管理与日常生活”；课程概述第 2 段写“再到组织层面的笔头沟通、会议沟通、上下行沟通、危机沟通与团队冲突管理”，并列出“团队冲突的五类处理方式”。"
    },
    "added_by": "review/pi-additions/I.2.2.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "MDN 中文文档写作规范",
+   "url": "https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "先按读者、完整性、示例、术语和结构检查文档，实际运行示例核对技术事实；依审查记录改写，英语特有拼写规则不套用中文。",
+   "access": "中文教学正文免费公开。",
+   "publisher": "Mozilla MDN 中文文档团队",
+   "evidence": {
+    "url": "https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide",
+    "location": "通用写作准则、示例、读者与页面组织",
+    "finding": "指南解释审稿时如何核对读者需求、表达、例子和边界，提供正反例；有些英语语法要求只适用于英文，中文结构原则可用。"
+   },
+   "added_by": "review/verified-additions/I.2.2.json"
+  },
+  {
+   "key": "verified-zh2",
+   "lang": "zh",
+   "title": "GitHub 中文指南：提交、讨论和处理审阅反馈",
+   "url": "https://docs.github.com/zh/pull-requests/reference/pull-request-reviews",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "把文档修改放入拉取请求，按MDN标准逐项写出可定位反馈；区分批准与请求修改，再核对修改是否落实。",
+   "access": "中文教学正文免费公开。",
+   "publisher": "GitHub 官方中文文档",
+   "evidence": {
+    "url": "https://docs.github.com/zh/pull-requests/reference/pull-request-reviews",
+    "location": "审阅决策、逐行反馈与请求专家审查",
+    "finding": "官方中文教程讲评论、建议修改、批准/请求更改及指定专家的审阅流程；可用于版本管理中的Markdown文档。"
+   },
+   "added_by": "review/verified-additions/I.2.2.json"
   }
  ],
  "topics": [
@@ -104,6 +140,16 @@
      "source": "zh1",
      "section": "文档信息设计原则（无同行评审/审查清单）",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "按读者、示例和边界检查内容与表达",
+     "extent": "covered"
+    },
+    {
+     "source": "verified-zh2",
+     "section": "逐行反馈、讨论、专家审阅与修改后复核流程",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -113,7 +159,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文课讲怎么写，不系统讲怎么审（评审标准、检查清单、给作者的可执行反馈）。"
+   "note": "中文课讲怎么写，不系统讲怎么审（评审标准、检查清单、给作者的可执行反馈）。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。；同语言补充与现有教程组合覆盖本知识点；范围以所列章节为准。"
   },
   {
    "topic": "读者分析",
@@ -180,7 +226,7 @@
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -193,11 +239,17 @@
     {
      "source": "r7-zh1",
      "read": "看组织层部分：先记下会议沟通的角色分工与议程设计，再学上下行沟通的差异；把“团队冲突的五类处理方式”整理成一张表（适用情境、代价、何时用），最后用沟通受众三维分析模型为一次团队汇报做受众分析。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "先按读者、完整性、示例、术语和结构检查文档，实际运行示例核对技术事实；依审查记录改写，英语特有拼写规则不套用中文。"
+    },
+    {
+     "source": "verified-zh2",
+     "read": "把文档修改放入拉取请求，按MDN标准逐项写出可定位反馈；区分批准与请求修改，再核对修改是否落实。"
     }
    ],
-   "gaps": [
-    "文档审查"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -266,6 +318,22 @@
    "query_or_url": "同上（软件文档写作教材）",
    "result": "没有出现可核目录的中文“软件文档写作/评审”教材页，未登记付费来源。",
    "by": "review/pi-additions/I.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide",
+   "result": "指南解释审稿时如何核对读者需求、表达、例子和边界，提供正反例；有些英语语法要求只适用于英文，中文结构原则可用。",
+   "by": "review/verified-additions/I.2.2.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://docs.github.com/zh/pull-requests/reference/pull-request-reviews",
+   "result": "官方中文教程讲评论、建议修改、批准/请求更改及指定专家的审阅流程；可用于版本管理中的Markdown文档。",
+   "by": "review/verified-additions/I.2.2.json"
   }
  ],
  "findings": [
@@ -273,21 +341,9 @@
   "中文仍缺“文档审查（同行评审）”与“团队沟通”两块，判 partial。",
   "东南大学课程是“用中文讲英文技术写作”，授课语言与字幕未核实，已在 access 注明，不当作中文写作实践课。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "文档审查",
-   "source": "en1",
-   "reason": "三渠道查过：①文字——中文只有写作规范/风格指南（阮一峰规范及衍生）与技术文档写作经验文，没有同行评审标准、检查清单与可执行反馈的教学正文；②视频——中国大学MOOC 未见“文档评审”课程（检索只返回写作类与项目管理类）；③付费——没有可核目录的中文软件文档评审教材。故按 fallback 用 en1（Technical Writing Essentials）的评审/编辑章节。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/I.2.2.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "applied_additions": [
-  "review/pi-additions/I.2.2.json@4cf0722e16"
+  "review/pi-additions/I.2.2.json@4cf0722e16",
+  "review/verified-additions/I.2.2.json@312f0e2d82"
  ]
 }

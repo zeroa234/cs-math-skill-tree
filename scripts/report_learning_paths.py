@@ -23,7 +23,10 @@ LANE = {s["id"]: s["domain"] for s in skills.values()}
 def covered_by(rec, topic, lang):
     src = {s["key"]: s for s in rec["sources"]}
     t = next(t for t in rec["topics"] if t["topic"] == topic)
-    return [src[r["source"]] for r in t.get(lang, []) if r["extent"] == "covered" and r["source"] in src]
+    steps = {s["source"] for s in rec["routes"][lang]["steps"]}
+    return [src[r["source"]] for r in t.get(lang, []) if r["extent"] == "covered" and r["source"] in src
+            and src[r["source"]]["lang"] == lang and src[r["source"]]["role"] != "reference"
+            and r["source"] in steps]
 
 
 core_total = sum(sum(t["stage"] == "core" for t in r["topics"]) for r in recs.values())
@@ -38,8 +41,8 @@ for i, r in recs.items():
     d = LANE[i]
     gaps = {f["lang_missing"]: 0 for f in r.get("cross_language_fallbacks", [])}
     by[d][0] += 1
-    by[d][1] += not any(f["lang_missing"] == "zh" for f in r.get("cross_language_fallbacks", []))
-    by[d][2] += not any(f["lang_missing"] == "en" for f in r.get("cross_language_fallbacks", []))
+    by[d][1] += r["routes"]["zh"]["status"] == "complete"
+    by[d][2] += r["routes"]["en"]["status"] == "complete"
     by[d][3] += len(r.get("cross_language_fallbacks", []))
 for d in sorted(by):
     n, zh, en, fb = by[d]
@@ -71,7 +74,9 @@ for i, r in sorted(recs.items()):
             c = covered_by(r, t["topic"], lang)
             if c and all(s["free"] is False for s in c):
                 paid_only.append((i, lang, t["topic"], c[0]))
-print(f"### 只能靠付费材料覆盖的知识点（{len(paid_only)} 个）")
+print(f"### 当前路线需要付费材料补读的知识点（{len(paid_only)} 个）")
+print()
+print("指该语言当前没有可独立覆盖整个组合项的免费来源；可能已有免费材料讲解其中一部分。不是断言其他免费教学不存在。")
 print()
 print("| 技能 | 语言 | 知识点 | 付费材料 |")
 print("|---|---|---|---|")

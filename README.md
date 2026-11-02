@@ -17,7 +17,7 @@
   <a href="#数据从哪来">数据从哪来</a>
 </p>
 
-> An interactive skill tree for a computer-science degree and the math behind it: 192 learning units in 13 areas, with prerequisite explanations backed by university courses and teaching order. Every skill comes with English and Chinese learning links (access and coverage stated), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
+> An interactive skill tree for a computer-science degree and the math behind it: 192 learning units in 13 areas, with prerequisite explanations backed by university courses and teaching order. Each skill has chapter-level English and Chinese learning routes (192 complete English routes, 189 complete Chinese routes; 3 Chinese topics explicitly require English supplementation), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
 
 ## 预览
 
@@ -32,6 +32,8 @@
   </tr>
 </table>
 
+<p align="center"><img src="docs/images/bilingual-path.webp" alt="程序设计基础：中文与英文独立学习顺序，以及六个必学知识项的对应章节" width="520"><br>每个知识点分别列出中文、英文章节；先看学习顺序，再展开逐项核对。</p>
+
 ## 有什么
 
 | | |
@@ -40,7 +42,7 @@
 | 范围 | **121** 个主干、**71** 个选修：对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023，逐个技能看内容是否属于它的核心主题（[判定依据](reports/skill-scope-2026-11-01.md)） |
 | 前置关系 | **260** 条必须前置（没点亮就不能点亮下一个），**400** 条推荐前置（只提示，不挡路） |
 | 前置依据 | **192/192** 个技能有课程依据；整理 **386** 条课程资料，先修表中 **0** 个“前置待核实”。同课顺序和先修链另附原始链接与适用边界 |
-| 学习资源 | 每个技能都有英文和中文资源，标明免费 / 注册 / 付费、学习范围，以及中文资源是否只覆盖部分内容 |
+| 学习路线 | **192/192** 个技能、**891** 个必学知识项逐项对应章节；英文 **192** 条、中文 **189** 条路线覆盖全部必学项，另 **3** 个中文知识项明确列英文补读（[复核报告](reports/bilingual-resources-2026-11-01.md)） |
 | 练习题 | 每个技能 1 道，答案折叠，答案已验算 |
 | 知识导览图 | 每个技能 1 张：**1,833** 个分支、**8,411** 个知识点；**10,291** 条标题逐条与来源核对 |
 
@@ -64,7 +66,7 @@
 - **卡片状态**：已点亮（暖色 + ✓）、现在能学（蓝框 + ⊕）、未解锁（灰 + 锁）。颜色之外都有图标，色弱也能分辨。虚线框是选修：内容不在 CS2023 的核心主题里，详情面板写明理由。
 - **选中一个技能**：高亮它的整条必须前置链（实线）、推荐前置（虚线）和它直接解锁的技能（绿线）。用到其他领域前置的卡片，左上角有那个领域颜色的彩点。
 - **左栏**：“现在能学”按“学完能解锁多少后续技能”排序。选一条路线或“设为目标”后，左栏给出按顺序编号的学习清单。
-- **详情面板**：划分依据与相邻技能边界、必须 / 推荐前置及理由、学什么、知识导览、去哪学（中英文分开，附访问条件和学习范围）、练习题，以及前置依据（课程官方先修原文）。
+- **详情面板**：划分依据与相邻技能边界、必须 / 推荐前置及理由、学什么、知识导览、去哪学（中英文独立学习顺序、逐知识点章节、费用与访问条件）、练习题，以及前置依据（课程官方先修原文）。
 - **知识导览图**：双击技能卡（或选中后按 G）。中心是技能，分支是来源的章（或讲），叶子是节。标“补·B”的橙色分支来自补充来源，补的是主来源没讲到的知识点。标题可以切换中文 / 双语 / 原文。右栏“查漏补缺”列出技能简介里的每个知识点落在哪一章，点一下就在图上定位。
 
 ## 数据从哪来
@@ -76,6 +78,12 @@
 - **必须前置**：至少一门真实大学课程把它列为先修（或在同一门课里先讲它），并且不会它就学不懂本技能入门层的内容。
 - **推荐前置**：课程写成“建议 / 有帮助”、只有部分课程要求、只是数学成熟度门槛，或者只在深入层才用到。
 - 原有 9 个待核实项已处理：7 个补到官方课程证据；P.5.4、C.4.4 分别并入 DevOps 与数据工程的入门内容。不能只把推荐背景改标成必须；核对脚本会拒绝没有完整依据的连线。
+
+**中英文学习路线怎么核对**
+
+每种语言各自按“免费教学正文 → 作者或学校公开视频 → 正版付费教材/课程”查找，并把技能简介里的必学知识项对到具体章节。Python 官方文档等查阅材料和入门教程分开；主课讲不到的内容在同语言路线中补充。
+
+“覆盖”包含已核目录的付费教材，不表示全免费或逐页通读。当前有 66 个“语言×知识项”需要付费材料补读；视频字幕、注册限制、机器翻译和第三方转载均按来源说明。中文仍有 3 项未补齐：F.1.6 的细粒度复杂度界与归约、F.3.4 的程序精化、S.5.1 的非干扰，页面给出英文补读。详见[复核报告](reports/bilingual-resources-2026-11-01.md)。
 
 **技能大小怎么判定**
 
@@ -112,6 +120,7 @@
 ```bash
 npm install
 node scripts/build.mjs              # 重新生成 src/web/data.js、outlines.js 和 output/*.json；前置有环、ID 写错、卡片重叠、导览图来源对不上都会直接报错
+node scripts/check-learning-paths.mjs --require-all  # 全树路线完整性与缺口说明
 node tests/screenshot.mjs           # 用系统自带的 Edge 无头截图检查页面（playwright-core，不下载浏览器）
 node tests/a11y.mjs                 # axe-core 按 WCAG 2.2 AA 审计 15 个界面状态
 python -X utf8 scripts/package_web.py   # 打包离线 zip

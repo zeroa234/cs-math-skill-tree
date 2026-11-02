@@ -76,6 +76,24 @@
     "finding": "PDF 正文确认章节标题为“Distances and Stability”，并逐节给出 bottleneck distance 的匹配式定义（inf over bijections of sup L1 距离）与“它是持久图空间上的度量”的观察，说明稳定性部分有独立成章的教学。"
    },
    "added_by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "key": "verified-zh1",
+   "lang": "zh",
+   "title": "数据的形状：拓扑数据分析入门（自云鹏，山东大学）",
+   "url": "https://faculty.sdu.edu.cn/ziyunpeng/zh_CN/article/1895214/content/9669.htm",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "主课学会持续图后，读第五节，区分函数扰动与点云扰动；用给定误差上界估算持续图变化。此短文补稳定性的陈述、意义和应用，不替代全课，也不承诺完整证明。",
+   "access": "作者官方中文正文免费；定位为专题入门讲解。",
+   "publisher": "作者或出版社官方来源",
+   "evidence": {
+    "url": "https://faculty.sdu.edu.cn/ziyunpeng/zh_CN/article/1895214/content/9669.htm",
+    "location": "第五节：Bottleneck距离、函数与点云的持续图稳定性",
+    "finding": "已读第五节，给出匹配到对角线的距离定义、稳定性不等式、点云扰动界及解释；有适用假设，不只是提到术语。"
+   },
+   "added_by": "review/verified-additions/M.4.5.json"
   }
  ],
  "topics": [
@@ -149,6 +167,11 @@
      "source": "zh1",
      "section": "全书没有 bottleneck／Wasserstein 稳定性定理或 Reeb/Mapper 章节",
      "extent": "partial"
+    },
+    {
+     "source": "verified-zh1",
+     "section": "第五节：瓶颈距离、稳定性定理的假设及扰动界的含义",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -158,12 +181,12 @@
      "extent": "covered"
     }
    ],
-   "note": "中文主讲义明确没有稳定性与 Reeb/Mapper；暑期课只有一讲入门，未见稳定性定理。此项中文标 partial，不假报 covered；英文 ETH 讲义有完整章节。"
+   "note": "中文主讲义明确没有稳定性与 Reeb/Mapper；暑期课只有一讲入门，未见稳定性定理。此项中文标 partial，不假报 covered；英文 ETH 讲义有完整章节。；补充同语言具体教学章节，与既有主课组合学习。"
   }
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -180,11 +203,13 @@
     {
      "source": "zh2",
      "read": "看暑期课第一讲建立直观；稳定性与 Reeb/Mapper 仍无中文材料，需另找。"
+    },
+    {
+     "source": "verified-zh1",
+     "read": "主课学会持续图后，读第五节，区分函数扰动与点云扰动；用给定误差上界估算持续图变化。此短文补稳定性的陈述、意义和应用，不替代全课，也不承诺完整证明。"
     }
    ],
-   "gaps": [
-    "拓扑摘要的稳定性"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -303,6 +328,14 @@
    "query_or_url": "https://ti.inf.ethz.ch/ew/courses/TDA25/Chapter6.pdf",
    "result": "采纳：ETH 课程讲义第 6 章“Distances and Stability”含 bottleneck distance 定义与度量化证明，可作英文侧稳定性的精确章节证据。",
    "by": "review/pi-additions/M.4.5.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "web",
+   "query_or_url": "https://faculty.sdu.edu.cn/ziyunpeng/zh_CN/article/1895214/content/9669.htm",
+   "result": "已读第五节，给出匹配到对角线的距离定义、稳定性不等式、点云扰动界及解释；有适用假设，不只是提到术语。",
+   "by": "review/verified-additions/M.4.5.json"
   }
  ],
  "findings": [
@@ -313,24 +346,12 @@
   "其余三项中英文都有 covered，没有用英文替代中文已覆盖的部分。",
   "[review/pi-additions/M.4.5.json] 未解决 zh「拓扑摘要的稳定性」：中文侧没有找到可核的稳定性（bottleneck/Wasserstein、interleaving）系统教学：讲义、B 站视频、中文检索、出版物四个方向都查过（见 fallback_confirm），只能标为未解决，走英文补。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "拓扑摘要的稳定性",
-   "source": "en1",
-   "reason": "本轮中文侧四个渠道都查过仍无系统教学：文字（齐天博讲义 PDF 全文按“稳定/瓶颈/Wasserstein/interleaving”检索无命中；三轮中文检索只得到知乎单篇系列、CSDN 短文、中文维基与一篇中文综述论文，均不构成章节级教学）、视频（B 站三组关键词检索没有中文 TDA 稳定性讲次，唯一相关的暑期课 4 讲只有“（一）～（四）”无小节标题、无法确认）、官方课程（中国大学MOOC/学堂在线检索无拓扑数据分析或持续同调课程；上海科技大学《拓扑数据分析导论》教学大纲虽存在，但大纲里只有 Persistent homology 与 Mapper，没有稳定性单元，也无公开讲义/录像）、付费/出版物（未出现可核目录的中文《拓扑数据分析》教材页）。因此中文学习者的稳定性部分只能看现有 en1（ETH 讲义）的稳定性章节，本轮另补了更精确的 TDA25 Chapter 6“Distances and Stability”。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/M.4.5.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "name": "拓扑数据分析",
  "description": "单纯复形与同调、持续同调与条形码、点云的多尺度拓扑结构；拓扑摘要的稳定性。",
  "applied_additions": [
   "review/main-additions/M.4.5.json",
-  "review/pi-additions/M.4.5.json"
+  "review/pi-additions/M.4.5.json",
+  "review/verified-additions/M.4.5.json@2b4af5cc30"
  ]
 }

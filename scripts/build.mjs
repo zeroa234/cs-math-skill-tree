@@ -190,6 +190,15 @@ function prereqEntry(id, q, kind) {
 }
 
 const learningPaths = readLearningPaths(rel("data/curation/learning-paths"), new Map(skills.map(s => [s.id, { ...s, descNotes: descNotesOf.get(s.id) || [] }])));
+for (const skill of skills) {
+  const record = learningPaths.get(skill.id);
+  if (!record) fail(`missing bilingual learning path for ${skill.id}`);
+  for (const lang of ["zh", "en"]) for (const topic of record.routes[lang].gaps) {
+    if (!record.crossLanguageFallbacks.some(f => f.lang_missing === lang && f.topic === topic)) {
+      fail(`${skill.id}: unresolved ${lang} learning topic ${topic}`);
+    }
+  }
+}
 
 // Curated learning resources override only learning links, never prerequisite evidence.
 const resourceReview = readJson(rel("data/curation/learning-resources.json"));

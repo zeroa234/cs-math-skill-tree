@@ -93,6 +93,63 @@
     "finding": "两条均给出中文定义、相关术语与参考文献（Campbell & Stanley 1966 等），并列出原稿作者与审阅者。"
    },
    "added_by": "review/main-additions/I.2.3.json"
+  },
+  {
+   "key": "closure-zh1",
+   "lang": "zh",
+   "title": "论文复现指南-CV方向（PaperReadNotes，中文；含 12 步对齐流程、reprod_log 差异日志与验收阈值、常见 bug 汇总）",
+   "url": "https://xu-lin.gitbook.io/paper_read/source/implementation/articlereproduction_cv",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "把「复现」拆成可执行的逐步对齐清单：3.1 模型结构对齐 → 3.2 准备小数据集、验证集数据读取对齐 → 3.3 评估指标对齐 → 3.4 损失函数对齐 → 3.5 优化器对齐 → 3.6 学习率对齐 → 3.7 正则化策略对齐 → 3.8 反向对齐 → 3.9 训练集数据读取对齐 → 3.10 网络初始化对齐 → 3.11 模型训练对齐 → 3.12 规范训练日志 → 3.13 预测程序开发 → 3.14 单机多卡训练；第 4 章逐项给注意事项与 FAQ（4.15 常见 bug 汇总）。方法上要求：先用 fake data 与前向对齐把结构/算子对上，再逐层（指标、loss、反向、初始化、训练）用 reprod_log 把两边结果存成 npy 文件对（forward_/metric_/loss_/bp_align_/train_align_）并跑 check_log_diff 打印 diff 日志，按「check passed: True/False」与 diff 值判定是否对齐，未通过就定位到那一层。",
+   "access": "免费中文网页（GitBook），无需注册；中文；含命令行、日志样例与目录结构示例。内容来自论文复现赛/复现工程的实践文档（reprod_log 工具 + 对齐流程），但站点为个人 GitBook，未标注作者任职与更新时间，属工程实践文档而非教材。",
+   "publisher": "PaperReadNotes（xu-lin.gitbook.io，个人 GitBook 文档站）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://xu-lin.gitbook.io/paper_read/source/implementation/articlereproduction_cv",
+    "location": "目录「3. 论文复现理论知识及实战」3.1–3.14；「4. 论文复现注意事项与FAQ」4.1–4.15；正文 reprod_log 示例段（cd pipeline/reprod_log_demo → write_log.py → check_log_diff.py，输出 mean diff: check passed: True/False，及 forward_paddle.npy / forward_torch.npy、metric_*、loss_*、bp_align_*、train_align_* 的文件对与 *.log）",
+    "finding": "实际打开正文读到完整 12 步对齐流程与 FAQ 分类，以及 reprod_log 的实跑示例（含 passed True 与 value 0.0 / False 与 0.3336 两种判定输出、成对 npy 与 diff log 的目录树）。确认这是「怎么一步步把复现做出来、如何判定对齐」的教学，不是概念介绍。"
+   },
+   "added_by": "review/closure-additions/I.2.3.json"
+  },
+  {
+   "key": "closure-zh2",
+   "lang": "zh",
+   "title": "DI-engine 文档·最佳实践：随机种子（OpenDILab 官方中文文档，讲全局种子、环境种子、dynamic_seed、评估期固定种子与多进程种子继承问题）",
+   "url": "https://raw.githubusercontent.com/opendilab/DI-engine-docs/main/source/04_best_practice/random_seed_zh.rst",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "复现里的随机性控制：为什么「为了复现或者公平比较其他算法的实验结果，我们需要使用相同的随机种子」；入口函数的全局 seed 参数与 set_pkg_seed（random / numpy / torch / torch.cuda 一并设种）；collector/evaluator 的环境种子如何由单一 seed 生成为列表（seed + i），以及 seed(list) 的长度校验；dynamic_seed 在训练时让每个 episode 不同、在评估时关闭以保证「每次评估策略时是在一组相同的随机种子上评估，增加不同训练步数上模型评估结果的可比性」；多进程场景下子进程不继承父进程种子、需要给每个环境重置种子的注意事项。",
+   "access": "免费中文文档（GitHub raw 的 .rst 源文件，无渲染）；中文；代码片段可直接对照。属框架官方文档的一节（最佳实践），只覆盖「种子/评估可比性」这一面，不含数据版本与依赖锁定。",
+   "publisher": "OpenDILab / DI-engine 官方文档（04_best_practice）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://raw.githubusercontent.com/opendilab/DI-engine-docs/main/source/04_best_practice/random_seed_zh.rst",
+    "location": "「随机种子」全文：serial_pipeline(seed: int = 0)、ding/utils/default_helper.py 的 set_pkg_seed、env.seed(seed: Union[List[int], int]) 与 seed=[seed+i ...]、reset() 中 dynamic_seed 的 np_seed=100*np.random.randint(1,1000)、tip「当使用多个进程时，子进程的随机种子不会继承父进程的随机种子，而是保持系统的默认种子」",
+    "finding": "实际打开原文读到上述全部段落与代码，并读到「默认情况下，我们在收集数据时启用 dynamic_seed，在评估时禁用它……在评估时关闭 dynamic_seed 可以保证每次评估策略时，是在一组相同的随机种子上评估的，增加不同训练步数上模型评估结果的可比性」。确认讲的是可复现性的具体做法与坑，不是一句「设置随机种子即可」。"
+   },
+   "added_by": "review/closure-additions/I.2.3.json"
+  },
+  {
+   "key": "closure-zh3",
+   "lang": "zh",
+   "title": "How To Do Ablation Experiments（Yuxin's Blog，中文正文：消融/控制变量、基线该怎么选、recipe 与实现一致性）",
+   "url": "https://ppwwyyxx.com/blog/2022/How-to-do-Ablation-Experiments/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "「基线」到底怎么设、对照怎么做：理想的一组 ablation 应当「所有实验尽量使用一份代码实现，和相同的实验 recipe，这样才算是真的 ablation」，并强调实现的影响（TensorFlow 跑的实验和 PyTorch 跑的实验不能放进同一组 ablation）；举反例说明只有 system-level 结果、没有跟已有结构做 ablation 的新模型说明不了问题（EfficientNet vs Revisiting ResNets、FCOS vs ATSS）；指出「控制变量」并不美好——变量之间存在未知相关性，结论可能只在某个 baseline 下成立；因此「要缓解这个 concern，应当选择常用的、有代表性的实验 recipe（包括 baseline、hyperparameter、evaluation protocol 等）」，并明确「一个好的 baseline 并不需要是 SOTA，但是需要是一个领域内大家公认具有代表性的结果」；还讨论不同变量的效果常常不可叠加（loss 与它的系数可互相替代的例子）。",
+   "access": "免费中文网页，无需注册；正文中文（站点有 English Only / English + 中文 切换）；作者为 FAIR 研究者 Yuxin Wu 的个人博客，属研究者经验文而非教材，无作业与习题。",
+   "publisher": "Yuxin's Blog（ppwwyyxx.com，作者 Yuxin Wu，Facebook AI Research）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ppwwyyxx.com/blog/2022/How-to-do-Ablation-Experiments/",
+    "location": "「Ablation / 控制变量」节与「变量的相关性」节（含 EfficientNet / Revisiting ResNets / FCOS / ATSS 反例，以及「一个好的 baseline 并不需要是 SOTA，但是需要是一个领域内大家公认具有代表性的结果」）",
+    "finding": "实际打开正文读到：「一组理想的 ablation 实验, 应当所有实验尽量使用一份代码实现, 和相同的实验 recipe, 这样才算是真的 ablation」；「一个好的 baseline 并不需要是 SOTA, 但是需要是一个领域内大家公认具有代表性的结果」；「要缓解这个 concern, 应当选择常用的, 有代表性的实验 recipe (包括 baseline, hyperparameter, evaluation protocol 等)。一个常用的 recipe 往往是已经被 well-tuned, well-studied 的」。确认这是对「基线设置」的正面教学（选什么当基线、为什么、怎么保证可比），不是只讲名词。"
+   },
+   "added_by": "review/closure-additions/I.2.3.json"
   }
  ],
  "topics": [
@@ -123,6 +180,11 @@
      "source": "zh1",
      "section": "实验设计部分未单列 baseline/对照",
      "extent": "partial"
+    },
+    {
+     "source": "closure-zh3",
+     "section": "「Ablation / 控制变量」与「变量的相关性」两节：同一份代码与同一 recipe 才构成对照、实现差异会污染对比、baseline 要选领域内公认有代表性的结果（不必是 SOTA）、常用 recipe 已被 well-tuned、变量效果常不可叠加",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -132,7 +194,7 @@
      "extent": "covered"
     }
    ],
-   "note": "中文强调假设与实验设计能力，但没有把“基线/对照怎么选、怎么报告”讲成独立步骤。"
+   "note": "中文强调假设与实验设计能力，但没有把“基线/对照怎么选、怎么报告”讲成独立步骤。；此前中文「基线」被记成 partial 并 fallback 到英文。这篇中文长文正面回答了「基线该怎么选、对照怎么才算公平」：baseline 的判据是「领域内公认有代表性的结果」而不是 SOTA，一组 ablation 必须同一份实现同一 recipe，还要挑已被 well-tuned 的常用 recipe 以免结论只在自家设定下成立；并给出 EfficientNet/Revisiting ResNets、FCOS/ATSS 两组反例说明只报 system-level 结果不算对照。配上既有 zh1（复旦《科学研究方法与论文写作》）的实验设计部分，中文侧对「基线」的教学是完整的。"
   },
   {
    "topic": "实验设计",
@@ -200,6 +262,16 @@
      "source": "zh1",
      "section": "写作与发表模块不涉及可复现研究",
      "extent": "partial"
+    },
+    {
+     "source": "closure-zh1",
+     "section": "「3. 论文复现理论知识及实战」3.1–3.14 的逐层对齐流程（模型结构/数据读取/评估指标/损失/优化器/学习率/正则化/反向/初始化/训练/训练日志/预测程序/多卡）与「4. 论文复现注意事项与FAQ」4.15 常见 bug；正文 reprod_log 的 npy 文件对与 check_log_diff 判定",
+     "extent": "covered"
+    },
+    {
+     "source": "closure-zh2",
+     "section": "「随机种子」全文：全局 seed 与 set_pkg_seed（random/numpy/torch/cuda）、环境种子列表生成、dynamic_seed 训练开/评估关以保证不同训练步数间结果可比、多进程不继承父进程种子需逐环境重置",
+     "extent": "covered"
     }
    ],
    "en": [
@@ -209,7 +281,7 @@
      "extent": "covered"
     }
    ],
-   "note": ""
+   "note": "此前中文「复现」被记成 partial 并 fallback 到 The Turing Way。这份中文指南把复现讲成一条可执行流水线：先用 fake data 与前向对齐锁住结构，再按指标→损失→反向→初始化→训练的顺序逐层对齐，每层用 reprod_log 存成成对 npy 并跑 diff 打印 passed/False 与差值，最后规范训练日志与预测程序；FAQ 还列了常见 bug。这正是「怎么复现出别人的结果」的分步教学。；补上复现里最容易被忽略的随机性控制：不仅要知道「设种子」，还要知道要同时设哪些库的种子、环境种子怎么按 env 数生成、为什么评估时必须关掉 dynamic_seed（否则不同步数的评估不可比）、以及多进程下子进程不继承父进程种子这个坑。与 closure-zh1 的逐层对齐流程合起来，中文侧对「复现」从随机性到结构/数值对齐都有落地的做法。"
   },
   {
    "topic": "数据/代码和学术诚信",
@@ -233,7 +305,7 @@
  ],
  "routes": {
   "zh": {
-   "status": "partial",
+   "status": "complete",
    "steps": [
     {
      "source": "zh1",
@@ -246,12 +318,21 @@
     {
      "source": "main-zh-forrt",
      "read": "读内部效度、外部效度两个条目，为自己的实验各列出一个可能的混杂因素和一个推广限制。"
+    },
+    {
+     "source": "closure-zh1",
+     "read": "按 3.1→3.14 走一遍：先固定随机种子、用 fake data 把模型结构与前向输出对上（存 forward_*.npy 并跑 check_log_diff 直到 passed），再依次对齐验证/测试集读取、评估指标、损失函数、优化器、学习率、正则化、反向梯度、训练集读取、网络初始化，最后对齐训练曲线与训练日志；每步把 diff 值与判定记在复现日志里，没过就回到那一层查 bug（对照 4.15 常见 bug 汇总）。"
+    },
+    {
+     "source": "closure-zh2",
+     "read": "照文档把种子设全：入口 seed → set_pkg_seed(random/numpy/torch/cuda) → 环境种子按 env 数生成列表；训练时开 dynamic_seed 增加数据多样性，评估时关掉 dynamic_seed 以保证同一组种子、不同训练步数的评估可比；最后在你自己写多进程/多环境采集时验证子进程种子确实被重置（否则复现会悄悄失效）。"
+    },
+    {
+     "source": "closure-zh3",
+     "read": "读「Ablation / 控制变量」与「变量的相关性」，给自己的实验写一份基线说明：基线是什么、为什么它在这个领域「有代表性」、用的是哪份实现与哪套 recipe（baseline / 超参 / evaluation protocol）、哪些变量没被控制住因而结论只在当前设定下成立；再照它挑出 2–3 个必须做的最小消融，而不是只报一个 system-level 的最好成绩。"
     }
    ],
-   "gaps": [
-    "基线",
-    "复现"
-   ]
+   "gaps": []
   },
   "en": {
    "status": "complete",
@@ -348,42 +429,67 @@
    "query_or_url": "内部效度 外部效度 效度威胁 研究方法 教材 课程 中文",
    "result": "FORRT 中文术语表有规范定义，采纳；维基百科与博客未用。",
    "by": "review/main-additions/I.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "李宏毅 机器学习 作业 baseline 强基线 boss baseline 说明",
+   "result": "确认李宏毅 ML 作业确实用 simple/medium/strong/boss 四级基线教对照（作业 PDF 里的 Baselines 段被多篇中文博客引用），也找到官方的 HW01.pdf（含「Grading (4/5) – Baseline Score」页）与 environment.pdf；但课件正文是英文（LHY 讲课用中文、讲义用英文），按「中文网页不等于中文授课」未采纳为中文来源，只作线索。",
+   "by": "review/closure-additions/I.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "深度学习 实验 对照 控制变量 只改一个 基线 消融 中文 教学 实验记录 复现",
+   "result": "命中 Yuxin's Blog《How To Do Ablation Experiments》（中文正文）与知乎《一文搞懂什么是 ablation study》。采纳前者为 closure-zh3（研究者本人博客、有明确判据与反例）；知乎文为二手科普，未采纳。",
+   "by": "review/closure-additions/I.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "论文复现 环境 conda 依赖锁定 随机种子 数据版本 中文 教程 深度学习 可复现性",
+   "result": "只返回博客园 Conda 教程（讲 environment.yml/conda-lock，但属工具教程且无复现流程）。未采纳。",
+   "by": "review/closure-additions/I.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "可复现研究 指南 中文 数据管理 代码 环境 记录 计算科学 实践",
+   "result": "命中 PaperReadNotes《论文复现指南-CV方向》(gitbook，有 12 步对齐与 reprod_log)、知乎《论文复现全流程指南》、apxml/趋近智《机器学习中的可复现性》。采纳 gitbook 为 closure-zh1；知乎文为经验帖；apxml 那个站是 AI 生成式课程（「趋近智」），未采纳。",
+   "by": "review/closure-additions/I.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily",
+   "query_or_url": "机器学习 实验 复现 随机种子 环境 版本 中文 教程 可复现",
+   "result": "命中 DI-engine 官方中文文档《随机种子》(GitHub raw)，打开确认是讲全局种子/环境种子/dynamic_seed/多进程的实操文档，采纳为 closure-zh2；另有 Microsoft Learn 中文《MLOps 机器学习模型管理》（可重现管道/可重用环境/世系），属厂商概念页且无逐步操作，未采纳。",
+   "by": "review/closure-additions/I.2.3.json"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily",
+   "query_or_url": "（未单独做 B 站站内检索）",
+   "result": "本轮按聚焦原则只做文字渠道；B 站上「论文复现/消融实验」类视频在检索结果里有（如 BV1DcPpeLEgH《深度学习如何高效确定论文baseline、完成对比试验、消融实验》），但未打开核对讲次与讲解语言，故不登记为来源，也不据此下「有/没有」的结论。",
+   "by": "review/closure-additions/I.2.3.json"
   }
  ],
  "findings": [
   "原中文条目复旦课程经核对覆盖假设、实验设计、论文写作与学术诚信，但没有可复现研究与效度威胁的内容。",
   "英文 Turing Way 覆盖复现、设计、协作与伦理，但统计细节（误差/效度）也有限，两边都需要另配统计教材。",
   "中文判 partial（基线/误差与效度/复现三项缺口），不把“论文写作课”冒充“研究方法全课”。",
-  "[review/pi-additions/I.2.3.json] 未解决 zh「误差与效度」：中文课程只讲到信度/效度（测量稳定性与效度定义、基本检验），没有内部/外部效度与效度威胁（选择、历史、成熟、工具、回归等）的系统讲解，记 partial。"
+  "[review/pi-additions/I.2.3.json] 未解决 zh「误差与效度」：中文课程只讲到信度/效度（测量稳定性与效度定义、基本检验），没有内部/外部效度与效度威胁（选择、历史、成熟、工具、回归等）的系统讲解，记 partial。",
+  "[review/closure-additions/I.2.3.json] 未解决 zh「复现」：已用「逐层对齐流程（closure-zh1）+ 随机种子与评估可比性（closure-zh2）」覆盖，但需主代理注意：closure-zh1 是个人 GitBook 的工程实践文档（未标作者与更新时间），closure-zh2 是框架文档的一节，两者都不含「数据版本控制/依赖锁定/制品归档」的系统教学；这一面本轮只在 Microsoft Learn 中文 MLOps 概念页与博客园 Conda 教程里见到，均不足以当教学，故未登记。若审核要求复现必须含数据版本与依赖锁定，则该项仍属部分覆盖。"
  ],
- "cross_language_fallbacks": [
-  {
-   "lang_missing": "zh",
-   "topic": "复现",
-   "source": "en1",
-   "reason": "中文只有 FORRT 术语词条、期刊论文与 CV 方向的论文复现指南，没有覆盖数据/代码/环境/CI 的可复现实践教学；The Turing Way 只有 README 中译，正文仍为英文。按 fallback 用 en1（The Turing Way）。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/pi-additions/I.2.3.json"
-  },
-  {
-   "lang_missing": "zh",
-   "topic": "基线",
-   "source": "en1",
-   "reason": "沿用 pi 的结论：中文侧没有讲实验基线设置的教学；原记录把来源指向未覆盖该知识点的 en2，改为确实覆盖它的 en1。",
-   "searched_channels": [
-    "text",
-    "video",
-    "paid"
-   ],
-   "confirmed_by": "review/main-additions/I.2.3.json"
-  }
- ],
+ "cross_language_fallbacks": [],
  "applied_additions": [
   "review/pi-additions/I.2.3.json@a550daee15",
-  "review/main-additions/I.2.3.json@7facd39838"
+  "review/main-additions/I.2.3.json@7facd39838",
+  "review/closure-additions/I.2.3.json@bcd6d2b173"
  ]
 }
