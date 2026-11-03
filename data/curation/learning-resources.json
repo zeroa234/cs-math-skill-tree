@@ -2112,6 +2112,17 @@
       "access": "免费公开：课程主页列出每次课主题，点标题即可下载幻灯片、听讲座录音；另有 Homework、Quiz、教材勘误连结。无需注册。",
       "role": "primary",
       "review": "逐知识点核查与独立英文路线见 learning-paths/M.6.6.json。"
+    },
+    "C.3.5": {
+      "tier": "website",
+      "title": "UW CSE 561 Computer Communication and Networks, Autumn 2026 — schedule and paper list",
+      "url": "https://courses.cs.washington.edu/courses/cse561/26au/",
+      "lang": "en",
+      "free": true,
+      "covers": "Oct 7 DC topology and network virtualization（VL2；shallow: fat-tree）；Oct 12 Flat network topologies（RNG、Jellyfish、Xpander）；Oct 14 Optical switching；Oct 19 Collective communication（TACCL；shallow: Demystifying NCCL）；Oct 21 ML networks（RDMA over Ethernet for Distributed AI Training at Meta Scale）；Oct 26 End host stack（Falcon；shallow: Snap）。",
+      "access": "课程站公开课表、slides 与论文链接；部分讲次标有 Video（未逐一核对是否公开可播）；免费，英文。",
+      "role": "primary",
+      "review": "2026-11-03 主代理核对课程站，分项补充见 learning-paths/C.3.5.json；英文6/6免费教学，中文4/6另2项英文补读。"
     }
   },
   "chineseCatalog": {
@@ -5430,6 +5441,16 @@
       "covers": "数据篇按数据类型讲时空数据、地理信息数据、高维非空间数据、层次和网络数据的可视化方法与可视分析入门；基础篇讲人/数据/流程；应用篇讲工具与实例。不含场/体数据与体绘制。",
       "access": "中国大学MOOC 免费注册学习；认证证书为付费电子证书；视频按学期开放，字幕未核对。",
       "role": "primary"
+    },
+    "path-c-3-5": {
+      "tier": "website",
+      "title": "新华三《H3C RoCE 网络开局一本通》（6W103，2026）",
+      "url": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/Technical_Topics/H3C_RoCE-19790-Long/?CHID=1229553",
+      "lang": "zh",
+      "free": true,
+      "covers": "1.1 RDMA 产生背景（内核旁路、零拷贝）；1.2 RDMA 技术分类（IB/iWARP/RoCE）；1.3 为什么 RoCEv2 需要无损网络；1.4.2 链路层流量控制（PFC 原理、逐跳反压、PFC 死锁检测与预防）；1.4.3 网络层拥塞控制（ECN/WRED 门限、CP/NP/RP 角色、CNP 降速与恢复，未点名 DCQCN）；2.2–2.3 智算中心参数网（Spine-Leaf、Core-Spine-Leaf 组网与规模）；2.4–2.6 组网配置举例；4.2 网卡 PFC/ECN 配置；7 ECMP/HASH 负载分担。",
+      "access": "新华三官网免费在线文档，简体中文；含配置命令与参数调整步骤，复现需要 H3C 设备环境。",
+      "role": "primary"
     }
   },
   "chinese": {
@@ -6200,6 +6221,10 @@
     "I.1.3": {
       "source": "path-i-1-3",
       "covers": "读23.2流程规划、执行、评价及持续改进；用现有Petri网/工作流课程落实自动执行，以指标对照评价改进前后的流程。"
+    },
+    "C.3.5": {
+      "source": "path-c-3-5",
+      "covers": "1.1 RDMA 产生背景（内核旁路、零拷贝）；1.2 RDMA 技术分类（IB/iWARP/RoCE）；1.3 为什么 RoCEv2 需要无损网络；1.4.2 链路层流量控制（PFC 原理、逐跳反压、PFC 死锁检测与预防）；1.4.3 网络层拥塞控制（ECN/WRED 门限、CP/NP/RP 角色、CNP 降速与恢复，未点名 DCQCN）；2.2–2.3 智算中心参数网（Spine-Leaf、Core-Spine-Leaf 组网与规模）；2.4–2.6 组网配置举例；4.2 网卡 PFC/ECN 配置；7 ECMP/HASH 负载分担。 配合中文 DPDK/AI System 教程覆盖4/6；RDMA编程与SmartNIC另列英文补读。"
     }
   },
   "chineseGaps": {},
@@ -14356,6 +14381,118 @@
         "free": true,
         "covers": "作者公开教程给可执行任务与记录流程；和ChinaVis的领域评估原则、既有可视分析教材共同用于人在回路的设计/评价。",
         "access": "原作者/教学机构公开中文正文，免费阅读；本轮核对指定章节，未通读所有内容。",
+        "role": "supplement"
+      }
+    ],
+    "C.3.5": [
+      {
+        "tier": "book",
+        "title": "《新型数据中心网络：从云数据中心到智算中心网络》（张娇、潘恬、黄韬、刘韵洁，人民邮电出版社，2025-12，ISBN 9787115682765）",
+        "url": "https://detail.youzan.com/show/goods?alias=3nswmd9jre1whtc&from_source=gbox_seo",
+        "lang": "zh",
+        "free": false,
+        "covers": "第2章 新型数据中心网络架构：Fat-tree、VL2、VxLAN、Leaf-Spine、DCell/FiConn、Aquila，以及智算中心 HPN、TPUv4、基于 NVLink/NVSwitch 的 RDMA 全互联网络；第3章 传输控制：传统 TCP、云数据中心传输控制、智算中心网络传输控制；第4章 负载均衡；第5章 智算中心 RDMA 网络性能隔离；第6章 可编程数据面与硬件加速。",
+        "access": "人民邮电出版社有限公司官方微店，定价 199.80 元、页面售价 149.90 元；仅读官方商品页目录，正文未购未读；简体中文。",
+        "role": "alternative"
+      },
+      {
+        "tier": "website",
+        "title": "DPDK Hands-on：DPDK 入门实战教程（GitHub 用户 haolipeng，中文）",
+        "url": "https://github.com/haolipeng/dpdk-hands-on",
+        "lang": "zh",
+        "free": true,
+        "covers": "作者公开的中文实操课程：Lesson 1 EAL 初始化、Lesson 3 网卡配置与轮询收包、Lesson 5 内存池、Lesson 13 mbuf；配有源代码与构建说明。",
+        "access": "作者 GitHub 仓库免费公开中文教程和示例；本轮核对文档和代码，未在真实网卡上运行。",
+        "role": "supplement"
+      },
+      {
+        "tier": "website",
+        "title": "AI System 课程：分布式通信与 NVLink（含 05 NVLink 原理剖析、06 NV Switch 深度解析）",
+        "url": "https://infrasys-ai.github.io/aisystem-docs/02Hardware04NVIDIA/04BasicNvlink.html",
+        "lang": "zh",
+        "free": true,
+        "covers": "分布式并行（数据并行、模型并行）、AI 框架分布式、通信硬件、集合通信（AllReduce 等多对多规约）、NVLink 与 NVSwitch 发展；同目录 05DeepNvlink 讲 NVLink 原理，06DeepNvswitch 讲 NVSwitch。",
+        "access": "作者公开的免费中文课程网页，页内有“本节视频”入口；未核对视频音轨/字幕语言，正文为中文。",
+        "role": "supplement"
+      },
+      {
+        "tier": "website",
+        "title": "NVIDIA DOCA RDMA-aware Networks Programming Guide (3.5.0)",
+        "url": "https://networking-docs.nvidia.com/doca/archive/3-5-0/rdma-aware-networks-programming-guide",
+        "lang": "en",
+        "free": true,
+        "covers": "3.1 InfiniBand、3.3 RoCE、3.4 Comparison of RDMA Technologies；4.1 Available Communication Operations（Send/Recv/Read/Write/Atomic）、4.2 Transport Modes（RC/UC/UD）、4.3 Key Concepts（SR/RR/CQ/Memory Registration/Memory Window/PD）；5.4 Queue Pair Bringup（RESET→INIT→RTR→RTS）；6 RDMA_CM；9 Programming Examples（Send/Receive/Read/Write）。",
+        "access": "NVIDIA DOCA 官方在线文档，免费，英文；/doca/sdk/… 会重定向到 archive/3-5-0，正文以 3.5.0 为准。",
+        "role": "primary"
+      },
+      {
+        "tier": "website",
+        "title": "DPDK Programmer's Guide (Data Plane Development Kit 26.11.0-rc2)",
+        "url": "https://doc.dpdk.org/guides/prog_guide/",
+        "lang": "en",
+        "free": true,
+        "covers": "2 Overview、3 Source Organization；Memory Management：2 Memory Pool Library、3 Packet (Mbuf) Library；CPU Management：1 Environment Abstraction Layer (EAL)；Device Libraries：3 Ethernet Device Library → 3.1 Poll Mode Driver；Performance Optimization Guidelines。",
+        "access": "DPDK 官方文档，免费，英文；官方没有中文版。",
+        "role": "primary"
+      },
+      {
+        "tier": "material",
+        "title": "Congestion Control for Large-Scale RDMA Deployments (DCQCN, SIGCOMM 2015)",
+        "url": "https://www.microsoft.com/en-us/research/publication/congestion-control-for-large-scale-rdma-deployments/",
+        "lang": "en",
+        "free": true,
+        "covers": "DCQCN 的动机（RoCEv2 依赖 PFC、PFC 的队头阻塞与不公平）、拥塞点 CP 的 ECN 标记、通知点 NP 的 CNP 生成、反应点 RP 的降速与恢复、参数设置与评估。",
+        "access": "Microsoft Research 官方论文页，提供作者版 PDF，免费，英文；SIGCOMM 2015。",
+        "role": "primary"
+      },
+      {
+        "tier": "website",
+        "title": "RFC 5040: A Remote Direct Memory Access Protocol Specification (RDMAP/iWARP)",
+        "url": "https://www.rfc-editor.org/rfc/rfc5040.txt",
+        "lang": "en",
+        "free": true,
+        "covers": "1.2 Protocol Overview、1.3 RDMAP Layering；2.3 Direct Data Placement (DDP)、2.4 RDMA；4 Header Format；5 Data Transfer（RDMA Write/Read、Send、Terminate、Ordering and Completions）；6 RDMAP Stream Management。",
+        "access": "IETF RFC 免费公开，英文；规范文本，不是入门教程。",
+        "role": "supplement"
+      },
+      {
+        "tier": "website",
+        "title": "NVIDIA NCCL User Guide (NCCL 2.32.3)",
+        "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/",
+        "lang": "en",
+        "free": true,
+        "covers": "Collective Operations：AllReduce、Broadcast、Reduce、AllGather、ReduceScatter、AlltoAll；Buffer Registration、GPU Direct RDMA、NVLink Sharp Buffer Registration、IB Sharp Buffer Registration；Communicator 创建与 group 调用。",
+        "access": "NVIDIA NCCL 官方文档，免费，英文。",
+        "role": "primary"
+      },
+      {
+        "tier": "website",
+        "title": "NVIDIA NVLink and NVLink Switch",
+        "url": "https://www.nvidia.com/en-us/data-center/nvlink/",
+        "lang": "en",
+        "free": true,
+        "covers": "NVLink 的 GPU 间 scale-up 互连、NVLink Switch 的机架级 all-to-all 与 SHARP 网络内归约概念。",
+        "access": "NVIDIA 官方产品/技术介绍页，免费，英文；只作概念与规格参考，不是课程。",
+        "role": "reference"
+      },
+      {
+        "tier": "material",
+        "title": "DPDK Mbuf 实战学习手册（作者公开中文教程）",
+        "url": "https://github.com/haolipeng/dpdk-hands-on/blob/master/DPDK-Mbuf-Practical-Guide.md",
+        "lang": "zh",
+        "free": true,
+        "covers": "mbuf 布局、分配与释放、报文头尾操作、间接 mbuf 与克隆、引用计数和零拷贝；每阶段给代码与验收标准。",
+        "access": "作者仓库免费公开中文教学正文；主代理读到示例，未编译运行。",
+        "role": "supplement"
+      },
+      {
+        "tier": "material",
+        "title": "Azure Accelerated Networking: SmartNICs in the Public Cloud（NSDI 2018 作者论文）",
+        "url": "https://www.usenix.org/system/files/conference/nsdi18/nsdi18-firestone.pdf",
+        "lang": "en",
+        "free": true,
+        "covers": "第2章主机网络与 SR-IOV/流表卸载背景，第3章设计目标，第4–5章 ASIC/SoC/FPGA 取舍与 AccelNet 软硬件设计，分析 SmartNIC 卸载边界。",
+        "access": "USENIX 官方免费论文全文；英文，无需注册，不是完整课程录像。",
         "role": "supplement"
       }
     ]

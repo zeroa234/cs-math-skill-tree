@@ -14359,6 +14359,871 @@
   ],
   "omitted": "第 9 章 Access Networks（SD-PON / SD-RAN）与第 10 章 Future of SDN 未收：前者属接入网专题（已在 2.5 出现用例），后者是展望；前言、致谢也不收。"
  },
+ "C.3.5": {
+  "sources": [
+   {
+    "key": "A",
+    "kind": "course",
+    "title": "CSE 561, Autumn 2026: Computer Communication and Networks",
+    "by": "Ratul Mahajan, University of Washington",
+    "year": 2026,
+    "url": "https://courses.cs.washington.edu/courses/cse561/26au/",
+    "toc_urls": [
+     "https://courses.cs.washington.edu/courses/cse561/26au/"
+    ],
+    "why": "节点主来源：UW CSE 561 2026 秋季课程表，逐讲给出具体主题和指定论文。其中 DC topology and network virtualization、Guest lecture: Flat network topologies、ML networks、End host stack、Collective communication 五讲正对数据中心的拓扑、RDMA/InfiniBand、端主机协议栈旁路与集合通信。"
+   },
+   {
+    "key": "B",
+    "kind": "docs",
+    "title": "RDMA-aware Networks Programming Guide",
+    "by": "NVIDIA (DOCA SDK 3.5.0)",
+    "year": 2026,
+    "url": "https://networking-docs.nvidia.com/doca/archive/3-5-0/rdma-aware-networks-programming-guide",
+    "toc_urls": [
+     "https://networking-docs.nvidia.com/doca/archive/3-5-0/rdma-aware-networks-programming-guide"
+    ],
+    "why": "补 RDMA 的章/节级技术目录：InfiniBand、RoCE、iWARP 三种实现的对比，HCA/子网管理器/交换机，以及 SEND/RECV 与 READ/WRITE、RC/UC/UD、QP/CQ/MR 的官方说明。"
+   },
+   {
+    "key": "C",
+    "kind": "docs",
+    "title": "A Remote Direct Memory Access Protocol Specification (RFC 5040)",
+    "by": "R. Recio, B. Metzler, P. Culley, J. Hilland, D. Garcia (IETF)",
+    "year": 2007,
+    "url": "https://www.rfc-editor.org/rfc/rfc5040.txt",
+    "toc_urls": [
+     "https://www.rfc-editor.org/rfc/rfc5040.txt"
+    ],
+    "why": "补 iWARP 的标准原文：RDMAP 直接写入 ULP 缓冲、免中间拷贝与内核旁路，以及 RDMAP/DDP/MPA/TCP 的分层。"
+   },
+   {
+    "key": "D",
+    "kind": "docs",
+    "title": "Programmer's Guide, Data Plane Development Kit 26.11.0-rc2",
+    "by": "DPDK Project",
+    "year": 2026,
+    "url": "https://doc.dpdk.org/guides/prog_guide/index.html",
+    "toc_urls": [
+     "https://doc.dpdk.org/guides/prog_guide/overview.html",
+     "https://doc.dpdk.org/guides/prog_guide/env_abstraction_layer.html"
+    ],
+    "why": "补内核旁路与零拷贝的官方程序员指南目录：轮询模式驱动、核心组件、内存池与 mbuf，以及 EAL 的大页、核绑定和内存段管理。"
+   },
+   {
+    "key": "E",
+    "kind": "docs",
+    "title": "NVIDIA Collective Communication Library (NCCL) Documentation — Collective Operations",
+    "by": "NVIDIA",
+    "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/collectives.html",
+    "toc_urls": [
+     "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/usage/collectives.html"
+    ],
+    "why": "补 NCCL 官方集合操作定义：AllReduce、Broadcast、Reduce、AllGather、ReduceScatter、AlltoAll，是 GPU 集合通信的标准 API 语义。"
+   },
+   {
+    "key": "F",
+    "kind": "docs",
+    "title": "GPUDirect RDMA 13.4 documentation",
+    "by": "NVIDIA",
+    "url": "https://docs.nvidia.com/cuda/gpudirect-rdma/index.html",
+    "toc_urls": [
+     "https://docs.nvidia.com/cuda/gpudirect-rdma/index.html"
+    ],
+    "why": "补 GPU 显存与网卡直连的官方机制：标准 DMA 与 GPUDirect RDMA 传输的差异，以及 PCI BAR、支持的平台和内存序限制。"
+   },
+   {
+    "key": "G",
+    "kind": "docs",
+    "title": "Congestion Control for Large-Scale RDMA Deployments",
+    "by": "Yibo Zhu et al. (SIGCOMM 2015)",
+    "year": 2015,
+    "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/lossless.pdf",
+    "toc_urls": [
+     "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/lossless.pdf"
+    ],
+    "why": "补 RoCEv2 无损以太网的 PFC 缺点与 DCQCN 的完整控制回路：ECN 标记、CNP、速率恢复，以及 ECN/PFC 阈值的缓冲区设置。"
+   },
+   {
+    "key": "H",
+    "kind": "docs",
+    "title": "Azure Accelerated Networking: SmartNICs in the Public Cloud",
+    "by": "Daniel Firestone et al. (NSDI 2018)",
+    "year": 2018,
+    "url": "https://www.usenix.org/system/files/conference/nsdi18/nsdi18-firestone.pdf",
+    "toc_urls": [
+     "https://www.usenix.org/system/files/conference/nsdi18/nsdi18-firestone.pdf"
+    ],
+    "why": "补 SmartNIC 卸载的生产案例：卸载主机 SDN/VFP 的动机、ASIC/SoC/FPGA 硬件选型，以及 AccelNet 的 SmartNIC 系统架构与软件设计。"
+   }
+  ],
+  "outline": [
+   {
+    "src": "A",
+    "ref": "",
+    "title": "DC topology and network virtualization",
+    "zh": "数据中心拓扑与网络虚拟化",
+    "items": [
+     {
+      "ref": "",
+      "title": "VL2: A Scalable and Flexible Data Center Network",
+      "zh": "VL2：可扩展灵活的数据中心网络",
+      "number": "1.1"
+     },
+     {
+      "ref": "",
+      "title": "A Scalable, Commodity Data Center Network Architecture",
+      "zh": "可扩展的商品化数据中心网络架构",
+      "number": "1.2"
+     },
+     {
+      "ref": "",
+      "title": "Network Virtualization in Multi-tenant Datacenters",
+      "zh": "多租户数据中心的网络虚拟化",
+      "number": "1.3"
+     }
+    ],
+    "number": "1"
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Guest lecture: Flat network topologies",
+    "zh": "客座讲座：扁平网络拓扑",
+    "items": [
+     {
+      "ref": "",
+      "title": "RNG: Flat Datacenter Networks at Scale",
+      "zh": "RNG：大规模扁平数据中心网络",
+      "number": "2.1"
+     },
+     {
+      "ref": "",
+      "title": "Jellyfish: Networking Data Centers Randomly",
+      "zh": "Jellyfish：随机连接的数据中心网络",
+      "number": "2.2"
+     },
+     {
+      "ref": "",
+      "title": "Xpander: Towards Optimal-Performance Datacenters",
+      "zh": "Xpander：面向最优性能的数据中心",
+      "number": "2.3"
+     },
+     {
+      "ref": "",
+      "title": "A Throughput-Centric View of the Performance of Datacenter Topologies",
+      "zh": "以吞吐为中心看数据中心拓扑的性能",
+      "number": "2.4"
+     }
+    ],
+    "number": "2"
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "ML networks",
+    "zh": "机器学习网络",
+    "items": [
+     {
+      "ref": "",
+      "title": "RDMA over Ethernet for Distributed AI Training at Meta Scale",
+      "zh": "面向分布式 AI 训练的 Meta 规模以太网 RDMA",
+      "number": "3.1"
+     },
+     {
+      "ref": "",
+      "title": "An Introduction to the InfiniBand Architecture",
+      "zh": "InfiniBand 架构导论",
+      "number": "3.2"
+     },
+     {
+      "ref": "",
+      "title": "InfiniBand Credit-Based Link-Layer Flow-Control",
+      "zh": "InfiniBand 基于信用的链路层流控",
+      "number": "3.3"
+     },
+     {
+      "ref": "",
+      "title": "Credit-Based Flow Control for ATM Networks",
+      "zh": "ATM 网络的基于信用的流控",
+      "number": "3.4"
+     }
+    ],
+    "number": "3"
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "End host stack",
+    "zh": "端主机协议栈",
+    "items": [
+     {
+      "ref": "",
+      "title": "Falcon: A Reliable, Low Latency Hardware Transport",
+      "zh": "Falcon：可靠的低延迟硬件传输",
+      "number": "4.1"
+     },
+     {
+      "ref": "",
+      "title": "Snap: A Microkernel Approach to Host Networking",
+      "zh": "Snap：主机网络的微内核方法",
+      "number": "4.2"
+     }
+    ],
+    "number": "4"
+   },
+   {
+    "src": "A",
+    "ref": "",
+    "title": "Collective communication",
+    "zh": "集合通信",
+    "items": [
+     {
+      "ref": "",
+      "title": "TACCL: Guiding Collective Algorithm Synthesis using Communication Sketches",
+      "zh": "TACCL：用通信草图指导集合算法综合",
+      "number": "5.1"
+     },
+     {
+      "ref": "",
+      "title": "Demystifying NCCL: An In-depth Analysis of GPU Communication Protocols and Algorithms",
+      "zh": "解构 NCCL：GPU 通信协议与算法的深入分析",
+      "number": "5.2"
+     }
+    ],
+    "number": "5"
+   },
+   {
+    "src": "B",
+    "ref": "3",
+    "title": "RDMA Architecture",
+    "zh": "RDMA 架构",
+    "fill": "补 RDMA 三种实现（InfiniBand/RoCE/iWARP）的架构与对比、HCA/子网管理器/交换机组件；CSE561 只列论文标题，没有这些章/节。",
+    "items": [
+     {
+      "ref": "3.1",
+      "title": "InfiniBand",
+      "zh": "InfiniBand",
+      "number": "6.1"
+     },
+     {
+      "ref": "3.2",
+      "title": "Virtual Protocol Interconnect® (VPI)",
+      "zh": "虚拟协议互连（VPI）",
+      "number": "6.2"
+     },
+     {
+      "ref": "3.3",
+      "title": "RDMA over Converged Ethernet (RoCE)",
+      "zh": "融合以太网上的 RDMA（RoCE）",
+      "number": "6.3"
+     },
+     {
+      "ref": "3.4",
+      "title": "Comparison of RDMA Technologies",
+      "zh": "RDMA 技术比较",
+      "number": "6.4"
+     },
+     {
+      "ref": "3.5",
+      "title": "Key Components",
+      "zh": "关键组件",
+      "items": [
+       {
+        "ref": "3.5.1",
+        "title": "Host Channel Adapter",
+        "zh": "主机通道适配器（HCA）",
+        "number": "6.5.1"
+       },
+       {
+        "ref": "3.5.3",
+        "title": "Subnet Manager",
+        "zh": "子网管理器",
+        "number": "6.5.2"
+       },
+       {
+        "ref": "3.5.4",
+        "title": "Switches",
+        "zh": "交换机",
+        "number": "6.5.3"
+       }
+      ],
+      "number": "6.5"
+     }
+    ],
+    "number": "6"
+   },
+   {
+    "src": "B",
+    "ref": "4",
+    "title": "RDMA-Aware Programming",
+    "zh": "RDMA 编程",
+    "fill": "补 RDMA 传输语义：SEND/RECV 的双边语义与 READ/WRITE 的单边语义、RC/UC/UD 传输模式、QP 相关的 SR/RR 与 CQ/MR。",
+    "items": [
+     {
+      "ref": "4.1",
+      "title": "Available Communication Operations",
+      "zh": "可用的通信操作",
+      "items": [
+       {
+        "ref": "4.1.1",
+        "title": "Send/Send With Immediate",
+        "zh": "Send / 带立即数的 Send",
+        "number": "7.1.1"
+       },
+       {
+        "ref": "4.1.2",
+        "title": "Receive",
+        "zh": "Receive",
+        "number": "7.1.2"
+       },
+       {
+        "ref": "4.1.3",
+        "title": "RDMA Read",
+        "zh": "RDMA Read",
+        "number": "7.1.3"
+       },
+       {
+        "ref": "4.1.4",
+        "title": "RDMA Write/RDMA Write With Immediate",
+        "zh": "RDMA Write / 带立即数的 RDMA Write",
+        "number": "7.1.4"
+       },
+       {
+        "ref": "4.1.5",
+        "title": "Atomic Fetch and Add/Atomic Compare and Swap",
+        "zh": "原子 Fetch-and-Add / Compare-and-Swap",
+        "number": "7.1.5"
+       }
+      ],
+      "number": "7.1"
+     },
+     {
+      "ref": "4.2",
+      "title": "Transport Modes",
+      "zh": "传输模式",
+      "items": [
+       {
+        "ref": "4.2.1",
+        "title": "Reliable Connection (RC)",
+        "zh": "可靠连接（RC）",
+        "number": "7.2.1"
+       },
+       {
+        "ref": "4.2.2",
+        "title": "Unreliable Connection (UC)",
+        "zh": "不可靠连接（UC）",
+        "number": "7.2.2"
+       },
+       {
+        "ref": "4.2.3",
+        "title": "Unreliable Datagram (UD)",
+        "zh": "不可靠数据报（UD）",
+        "number": "7.2.3"
+       }
+      ],
+      "number": "7.2"
+     },
+     {
+      "ref": "4.3",
+      "title": "Key Concepts",
+      "zh": "核心概念",
+      "items": [
+       {
+        "ref": "4.3.1",
+        "title": "Send Request (SR)",
+        "zh": "发送请求（SR）",
+        "number": "7.3.1"
+       },
+       {
+        "ref": "4.3.3",
+        "title": "Completion Queue",
+        "zh": "完成队列（CQ）",
+        "number": "7.3.2"
+       },
+       {
+        "ref": "4.3.4",
+        "title": "Memory Registration",
+        "zh": "内存注册（MR）",
+        "number": "7.3.3"
+       }
+      ],
+      "number": "7.3"
+     }
+    ],
+    "number": "7"
+   },
+   {
+    "src": "C",
+    "ref": "1",
+    "title": "Introduction",
+    "zh": "引言",
+    "fill": "补 iWARP 的标准协议分层：RDMAP 直接写入 ULP 缓冲、免中间拷贝，以及 RDMAP 运行在 DDP/MPA/TCP 之上的结构。",
+    "items": [
+     {
+      "ref": "1.1",
+      "title": "Architectural Goals",
+      "zh": "架构目标",
+      "number": "8.1"
+     },
+     {
+      "ref": "1.2",
+      "title": "Protocol Overview",
+      "zh": "协议概述",
+      "number": "8.2"
+     },
+     {
+      "ref": "1.3",
+      "title": "RDMAP Layering",
+      "zh": "RDMAP 分层",
+      "number": "8.3"
+     }
+    ],
+    "number": "8"
+   },
+   {
+    "src": "D",
+    "ref": "2",
+    "title": "Overview",
+    "zh": "概述",
+    "fill": "补 DPDK 的轮询模式驱动与核心组件（内存池、mbuf），即内核旁路和零拷贝的用户态数据面基础。",
+    "items": [
+     {
+      "ref": "2.1",
+      "title": "Development Environment",
+      "zh": "开发环境",
+      "number": "9.1"
+     },
+     {
+      "ref": "2.2",
+      "title": "Environment Abstraction Layer",
+      "zh": "环境抽象层",
+      "number": "9.2"
+     },
+     {
+      "ref": "2.3",
+      "title": "Core Components",
+      "zh": "核心组件",
+      "items": [
+       {
+        "ref": "2.3.2",
+        "title": "Memory Pool Manager (librte_mempool)",
+        "zh": "内存池管理器（librte_mempool）",
+        "number": "9.3.1"
+       },
+       {
+        "ref": "2.3.3",
+        "title": "Network Packet Buffer Management (librte_mbuf)",
+        "zh": "网络报文缓冲管理（librte_mbuf）",
+        "number": "9.3.2"
+       }
+      ],
+      "number": "9.3"
+     },
+     {
+      "ref": "2.4",
+      "title": "Ethernet* Poll Mode Driver Architecture",
+      "zh": "以太网轮询模式驱动架构",
+      "number": "9.4"
+     }
+    ],
+    "number": "9"
+   },
+   {
+    "src": "D",
+    "ref": "1",
+    "title": "Environment Abstraction Layer (EAL) Library",
+    "zh": "环境抽象层（EAL）库",
+    "fill": "补 DPDK 环境抽象层的大页内存、核心绑定、内存段与分配器，对应零拷贝所需的物理内存与无锁数据面环境。",
+    "items": [
+     {
+      "ref": "1.1",
+      "title": "EAL in a Linux-userland Execution Environment",
+      "zh": "Linux 用户态执行环境中的 EAL",
+      "number": "10.1"
+     },
+     {
+      "ref": "1.2",
+      "title": "Memory Segments and Memory Zones (memzone)",
+      "zh": "内存段与内存区（memzone）",
+      "number": "10.2"
+     },
+     {
+      "ref": "1.3",
+      "title": "Multiple pthread",
+      "zh": "多 pthread",
+      "number": "10.3"
+     },
+     {
+      "ref": "1.4",
+      "title": "Malloc",
+      "zh": "Malloc",
+      "number": "10.4"
+     }
+    ],
+    "number": "10"
+   },
+   {
+    "src": "E",
+    "ref": "",
+    "title": "Collective Operations",
+    "zh": "集合操作",
+    "fill": "补 GPU 集合通信的官方 API 语义：全归约、广播、归约、全收集、归约散射、全交换。",
+    "items": [
+     {
+      "ref": "",
+      "title": "AllReduce",
+      "zh": "全归约",
+      "number": "11.1"
+     },
+     {
+      "ref": "",
+      "title": "Broadcast",
+      "zh": "广播",
+      "number": "11.2"
+     },
+     {
+      "ref": "",
+      "title": "Reduce",
+      "zh": "归约",
+      "number": "11.3"
+     },
+     {
+      "ref": "",
+      "title": "AllGather",
+      "zh": "全收集",
+      "number": "11.4"
+     },
+     {
+      "ref": "",
+      "title": "ReduceScatter",
+      "zh": "归约散射",
+      "number": "11.5"
+     },
+     {
+      "ref": "",
+      "title": "AlltoAll",
+      "zh": "全交换",
+      "number": "11.6"
+     }
+    ],
+    "number": "11"
+   },
+   {
+    "src": "F",
+    "ref": "1",
+    "title": "Overview",
+    "zh": "概述",
+    "fill": "补 GPUDirect RDMA 的 GPU 显存与网卡直连机制：PCI BAR 窗口、标准 DMA 的 pinning 流程与 GPU 地址路径的差异。",
+    "items": [
+     {
+      "ref": "1.1",
+      "title": "How GPUDirect RDMA Works",
+      "zh": "GPUDirect RDMA 如何工作",
+      "number": "12.1"
+     },
+     {
+      "ref": "1.2",
+      "title": "Standard DMA Transfer",
+      "zh": "标准 DMA 传输",
+      "number": "12.2"
+     },
+     {
+      "ref": "1.3",
+      "title": "GPUDirect RDMA Transfers",
+      "zh": "GPUDirect RDMA 传输",
+      "number": "12.3"
+     }
+    ],
+    "number": "12"
+   },
+   {
+    "src": "F",
+    "ref": "3",
+    "title": "Design Considerations",
+    "zh": "设计考量",
+    "fill": "补 GPUDirect RDMA 的平台与硬件限制：共享 PCIe 根复合体、BAR 大小、同步与内存序，说明 GPU 直连不是无条件的。",
+    "items": [
+     {
+      "ref": "3.4",
+      "title": "Supported Systems",
+      "zh": "支持的系统",
+      "number": "13.1"
+     },
+     {
+      "ref": "3.5",
+      "title": "PCI BAR sizes",
+      "zh": "PCI BAR 大小",
+      "number": "13.2"
+     },
+     {
+      "ref": "3.7",
+      "title": "Synchronization and Memory Ordering",
+      "zh": "同步与内存序",
+      "number": "13.3"
+     }
+    ],
+    "number": "13"
+   },
+   {
+    "src": "G",
+    "ref": "",
+    "title": "Congestion Control for Large-Scale RDMA Deployments",
+    "zh": "大规模 RDMA 部署的拥塞控制",
+    "fill": "补 RoCEv2 无损网络的 PFC 问题与 DCQCN 的 ECN 拥塞控制闭环，包括 ECN 阈值必须低于 PFC 阈值的缓冲区设置。",
+    "items": [
+     {
+      "ref": "1",
+      "title": "INTRODUCTION",
+      "zh": "引言",
+      "number": "14.1"
+     },
+     {
+      "ref": "2",
+      "title": "THE NEED FOR DCQCN",
+      "zh": "为什么需要 DCQCN",
+      "number": "14.2"
+     },
+     {
+      "ref": "3",
+      "title": "THE DCQCN ALGORITHM",
+      "zh": "DCQCN 算法",
+      "number": "14.3"
+     },
+     {
+      "ref": "4",
+      "title": "BUFFER SETTINGS",
+      "zh": "缓冲区设置",
+      "number": "14.4"
+     },
+     {
+      "ref": "5",
+      "title": "ANALYSIS OF DCQCN",
+      "zh": "DCQCN 分析",
+      "number": "14.5"
+     },
+     {
+      "ref": "6",
+      "title": "RESULTS",
+      "zh": "实验结果",
+      "number": "14.6"
+     }
+    ],
+    "number": "14"
+   },
+   {
+    "src": "H",
+    "ref": "",
+    "title": "Azure Accelerated Networking: SmartNICs in the Public Cloud",
+    "zh": "Azure 加速网络：公有云中的 SmartNIC",
+    "fill": "补 SmartNIC 卸载的生产设计与硬件选型：把主机 SDN（VFP）卸载到 FPGA SmartNIC 的动机、ASIC/SoC/FPGA 取舍与 AccelNet 架构。",
+    "items": [
+     {
+      "ref": "2.1",
+      "title": "Traditional Host Network Processing",
+      "zh": "传统主机网络处理",
+      "number": "15.1"
+     },
+     {
+      "ref": "2.2",
+      "title": "Host SDN",
+      "zh": "主机 SDN",
+      "number": "15.2"
+     },
+     {
+      "ref": "2.3",
+      "title": "SR-IOV",
+      "zh": "SR-IOV",
+      "number": "15.3"
+     },
+     {
+      "ref": "2.4",
+      "title": "Generic Flow Table Offload",
+      "zh": "通用流表卸载",
+      "number": "15.4"
+     },
+     {
+      "ref": "3",
+      "title": "Design Goals and Rationale",
+      "zh": "设计目标与理由",
+      "number": "15.5"
+     },
+     {
+      "ref": "4.1",
+      "title": "Hardware Options",
+      "zh": "硬件选项",
+      "number": "15.6"
+     },
+     {
+      "ref": "4.2",
+      "title": "Evaluating FPGAs as SmartNICs",
+      "zh": "评估 FPGA 作为 SmartNIC",
+      "number": "15.7"
+     },
+     {
+      "ref": "4.3",
+      "title": "SmartNIC System Architecture",
+      "zh": "SmartNIC 系统架构",
+      "number": "15.8"
+     },
+     {
+      "ref": "5.1",
+      "title": "Software Design",
+      "zh": "软件设计",
+      "number": "15.9"
+     },
+     {
+      "ref": "5.2",
+      "title": "FPGA Pipeline Design",
+      "zh": "FPGA 流水线设计",
+      "number": "15.10"
+     }
+    ],
+    "number": "15"
+   }
+  ],
+  "coverage": [
+   {
+    "topic": "数据中心网络拓扑",
+    "refs": [
+     "A:#1",
+     "A:#2"
+    ],
+    "note": "A:#1 收 VL2、胖树（A Scalable, Commodity Data Center Network Architecture）与多租户网络虚拟化；A:#2 收 RNG/Jellyfish/Xpander 等扁平拓扑。",
+    "sections": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "topic": "RDMA（InfiniBand/RoCE/iWARP）",
+    "refs": [
+     "B:3",
+     "B:3.1",
+     "B:3.3",
+     "B:3.4",
+     "B:4.1",
+     "B:4.2",
+     "B:4.3",
+     "C:1",
+     "C:1.3",
+     "A:#3"
+    ],
+    "note": "B:3.4 给出 IB/RoCE/iWARP 三者对比，iWARP 的协议分层由 RFC 5040 的 C:1.3 补足；B:4.1/B:4.2/B:4.3 给出 SEND/RECV、READ/WRITE、RC/UC/UD 与 QP 相关对象。",
+    "sections": [
+     "6",
+     "6.1",
+     "6.3",
+     "6.4",
+     "7.1",
+     "7.2",
+     "7.3",
+     "8",
+     "8.3",
+     "3"
+    ]
+   },
+   {
+    "topic": "无损网络与拥塞控制",
+    "refs": [
+     "A:#3",
+     "B:3.3",
+     "G:1",
+     "G:2",
+     "G:3",
+     "G:4",
+     "G:6"
+    ],
+    "note": "A:#3 的 InfiniBand 信用流控与 ATM 信用流控给链路层无损方案；G:1–G:4/G:6 给 PFC 的队头阻塞与不公平、DCQCN 的 ECN/CNP 闭环和 ECN 阈值低于 PFC 阈值的设置。",
+    "sections": [
+     "3",
+     "6.3",
+     "14.1",
+     "14.2",
+     "14.3",
+     "14.4",
+     "14.6"
+    ]
+   },
+   {
+    "topic": "内核旁路与零拷贝（DPDK）",
+    "refs": [
+     "A:#4",
+     "D:2",
+     "D:2.2",
+     "D:2.4",
+     "D:1",
+     "D:1.1",
+     "D:1.2",
+     "D:2.3.3"
+    ],
+    "note": "A:#4（Falcon/Snap）给端主机旁路的内核/用户态路径；D:2.4 给轮询模式驱动，D:1.1/D:1.2 给大页与内存段，D:2.3.3 给 mbuf 报文缓冲（零拷贝的数据结构基础）。",
+    "sections": [
+     "4",
+     "9",
+     "9.2",
+     "9.4",
+     "10",
+     "10.1",
+     "10.2",
+     "9.3.2"
+    ]
+   },
+   {
+    "topic": "SmartNIC 卸载",
+    "refs": [
+     "H:2.1",
+     "H:2.2",
+     "H:2.3",
+     "H:2.4",
+     "H:3",
+     "H:4.1",
+     "H:4.2",
+     "H:4.3",
+     "H:5.1",
+     "H:5.2"
+    ],
+    "note": "H 是 Azure 的生产案例：2.1–2.4 交代主机网络处理、主机 SDN、SR-IOV 与通用流表卸载；4/5 章给 ASIC/SoC/FPGA 选型与 AccelNet 软硬件设计。",
+    "sections": [
+     "15.1",
+     "15.2",
+     "15.3",
+     "15.4",
+     "15.5",
+     "15.6",
+     "15.7",
+     "15.8",
+     "15.9",
+     "15.10"
+    ]
+   },
+   {
+    "topic": "GPU 互连与集合通信",
+    "refs": [
+     "E:#1",
+     "F:1",
+     "F:1.1",
+     "F:1.3",
+     "F:3",
+     "F:3.4",
+     "A:#5",
+     "A:#3"
+    ],
+    "note": "E:#1 给 NCCL 集合操作；F:1/F:1.3/F:3.4 给 GPU 显存与网卡直连（GPUDirect RDMA）的机制与平台限制；A:#5 给 TACCL/NCCL 的集合算法与协议分析，A:#3 的 Meta 论文给节点内 NVLink、节点间 RoCE 的分层。NVLink/NVSwitch 本身没有单列章节，见 notes 的 gap。",
+    "sections": [
+     "11",
+     "12",
+     "12.1",
+     "12.3",
+     "13",
+     "13.1",
+     "5",
+     "3"
+    ]
+   }
+  ],
+  "omitted": "CSE 561 课程表里的 Optical switching、Guest lecture: Multipath Reliable Connection、Global routing、Traffic engineering、Network management、AI in Physical Networks、DDoS/网络验证等讲次未收：它们属光交换、广域路由或运维专题，与本节点 6 个知识项无关。DOCA 的 5–9 章（VPI Verbs API、RDMA_CM API、RDMA Verbs API、Events、示例）是 API 参考与示例代码，不是概念导览，未收；第 2 章 Glossary 也未收；3.5.2 Range Extenders、3.6 ULP 支持、4.3.2 Receive Request、4.3.5 Memory Window、4.4 Typical Application 同样未收（4.1.2 Receive 与 4.3.3/4.3.4 已覆盖对应概念）。DPDK 的 Memory Pool Library、Packet (Mbuf) Library 独立页面未收，其核心内容已由 Overview 的 2.3.2/2.3.3 覆盖。NCCL 的 Gather/Scatter 未收（与 AllGather/ReduceScatter/AlltoAll 重复度高）；Azure 论文的 4.1.1–4.1.4 硬件子选项、6–10 章（性能、运维、经验、相关工作）未收，4.1 Hardware Options 已概括硬件取舍。"
+ },
  "C.4.1": {
   "sources": [
    {

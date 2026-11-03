@@ -17,7 +17,7 @@
   <a href="#数据从哪来">数据从哪来</a>
 </p>
 
-> An interactive skill tree for a computer-science degree and the math behind it: 192 learning units in 13 areas, with prerequisite explanations backed by university courses and teaching order. Each skill has chapter-level English and Chinese learning routes (192 complete English routes, 189 complete Chinese routes; 3 Chinese topics explicitly require English supplementation), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
+> An interactive skill tree for a computer-science degree and the math behind it: 193 learning units in 13 areas, with prerequisite explanations backed by university courses and teaching order. Each skill has chapter-level English and Chinese learning routes (193 complete English routes, 189 complete Chinese routes; 5 Chinese topics explicitly require English supplementation), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
 
 ## 预览
 
@@ -38,14 +38,14 @@
 
 | | |
 |---|---|
-| 技能 | **192** 个，分 13 个领域（数学拆成三条泳道），按最长的必须前置链排成 **7** 步 |
-| 范围 | **121** 个主干、**71** 个选修：对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023，逐个技能看内容是否属于它的核心主题（[判定依据](reports/skill-scope-2026-11-01.md)） |
-| 前置关系 | **260** 条必须前置（没点亮就不能点亮下一个），**400** 条推荐前置（只提示，不挡路） |
-| 前置依据 | **192/192** 个技能有课程依据；整理 **386** 条课程资料，先修表中 **0** 个“前置待核实”。同课顺序和先修链另附原始链接与适用边界 |
-| 学习路线 | **192/192** 个技能、**891** 个必学知识项逐项对应章节；英文 **192** 条、中文 **189** 条路线覆盖全部必学项，另 **3** 个中文知识项明确列英文补读（[复核报告](reports/bilingual-resources-2026-11-01.md)） |
-| 免费学习 | 英文 **192** 条、中文 **152** 条路线的全部必学项已有免费教学；费用与回放待核、付费补读分别列明 |
+| 技能 | **193** 个，分 13 个领域（数学拆成三条泳道），按最长的必须前置链排成 **7** 步 |
+| 范围 | **122** 个主干、**71** 个选修：对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023，逐个技能看内容是否属于它的核心主题（[判定依据](reports/skill-scope-2026-11-01.md)） |
+| 前置关系 | **262** 条必须前置（没点亮就不能点亮下一个），**403** 条推荐前置（只提示，不挡路） |
+| 前置依据 | **193/193** 个技能有课程依据；整理 **388** 条课程资料，先修表中 **0** 个“前置待核实”。同课顺序和先修链另附原始链接与适用边界 |
+| 学习路线 | **193/193** 个技能、**897** 个必学知识项逐项对应章节；英文 **193** 条、中文 **189** 条路线覆盖全部必学项，另 **5** 个中文知识项明确列英文补读（[新增节点资料](reports/high-performance-networking-2026-11-03.md)、[原复核报告](reports/bilingual-resources-2026-11-01.md)） |
+| 免费学习 | 英文 **193** 条、中文 **152** 条路线的全部必学项已有免费教学；费用与回放待核、付费补读分别列明 |
 | 练习题 | 每个技能 1 道，答案折叠，答案已验算 |
-| 知识导览图 | 每个技能 1 张：**1,833** 个分支、**8,411** 个知识点；**10,291** 条标题逐条与来源核对 |
+| 知识导览图 | 每个技能 1 张：**1,848** 个分支、**8,484** 个知识点；**10,384** 条标题逐条与来源核对 |
 
 其他：
 
@@ -72,7 +72,7 @@
 
 ## 数据从哪来
 
-起点是一张 ChatGPT 生成的“计算机科学与数学知识星图”（原文件只读保存在 `data/source/chatgpt-outputs/`）：259 个节点、317 条关系（228 条前置、89 条相关），但前置不分必须和推荐，也没有给出依据。最初取其中 201 个技能，再对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023 检查划分：拆得过细的合并、几个不相干领域拼成的收窄或删除、缺的游戏开发补上，现为 192 个（改了什么、为什么改见 [技能划分检查](reports/skill-partition-review-2026-11-01.md)）。前置关系按真实课程的先修要求重新判定，学习资源、练习题和导览图都是重新找证据做的。检索和整理借助了 AI 代理，结论都附可以打开核对的原始链接。
+起点是一张 ChatGPT 生成的“计算机科学与数学知识星图”（原文件只读保存在 `data/source/chatgpt-outputs/`）：259 个节点、317 条关系（228 条前置、89 条相关），但前置不分必须和推荐，也没有给出依据。最初取其中 201 个技能，再对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023 检查划分：拆得过细的合并、几个不相干领域拼成的收窄或删除、缺的游戏开发补上，整理为 192 个（见 [技能划分检查](reports/skill-partition-review-2026-11-01.md)）；2026-11-03 再根据读者建议新增 C.3.5「数据中心与高性能网络」，现为 193 个（[课程、范围及资料依据](reports/high-performance-networking-2026-11-03.md)）。前置关系按真实课程的先修要求重新判定，学习资源、练习题和导览图都是重新找证据做的。检索和整理借助了 AI 代理，结论都附可以打开核对的原始链接。
 
 **必须 / 推荐前置怎么判定**
 
@@ -84,11 +84,11 @@
 
 每种语言各自按“免费教学正文 → 作者或学校公开视频 → 正版付费教材/课程”查找，并把技能简介里的必学知识项对到具体章节。Python 官方文档等查阅材料和入门教程分开；主课讲不到的内容在同语言路线中补充。
 
-“覆盖”包含已核目录的付费教材，不表示全免费或逐页通读。免费教学已覆盖英文 192 条、中文 152 条路线的全部必学项；当前仍有 6 个中文知识项暂用付费材料补读，另 87 个中文知识项的费用或回放条件待核。视频字幕、注册限制、机器翻译和第三方转载均按来源说明。中文仍有 3 项未补齐：F.1.6 的细粒度复杂度界与归约、F.3.4 的程序精化、S.5.1 的非干扰，页面给出英文补读。详见[复核报告](reports/bilingual-resources-2026-11-01.md)。
+“覆盖”包含已核目录的付费教材，不表示全免费或逐页通读。免费教学已覆盖英文 193 条、中文 152 条路线的全部必学项；当前仍有 6 个中文知识项暂用付费材料补读，另 87 个中文知识项的费用或回放条件待核。视频字幕、注册限制、机器翻译和第三方转载均按来源说明。中文仍有 5 项未补齐：F.1.6 的细粒度复杂度界与归约、F.3.4 的程序精化、S.5.1 的非干扰，以及 C.3.5 的 RDMA 编程、SmartNIC 卸载，页面给出英文补读。详见[复核报告](reports/bilingual-resources-2026-11-01.md)。
 
 **技能大小怎么判定**
 
-课程、基础模块、进阶模块与教材单元分开标注。全部 192 个技能都记录了划分依据；相邻技能有内容重叠时写出边界。它们不代表相同学分或学习时长，不能按目录标题数比较份量。详见[逐技能判定](reports/skill-partition-review-2026-11-01.md#逐技能判定)。
+课程、基础模块、进阶模块与教材单元分开标注。全部 193 个技能都记录了划分依据；相邻技能有内容重叠时写出边界。它们不代表相同学分或学习时长，不能按目录标题数比较份量。详见[逐技能判定](reports/skill-partition-review-2026-11-01.md#逐技能判定)。
 
 **主干 / 选修怎么判定**
 
@@ -100,10 +100,10 @@
 
 - 每个技能 1 个主来源：优先用“去哪学”里那份材料本身（它有成体系的目录时），否则用标准教材（作者主页、出版社或开放教材官网上的目录），或一流大学课程官方的逐讲课表。
 - 只用作者或出版社官方公开的整书 PDF，课程网站、网盘、镜像站上的商业教材 PDF 不用。
-- 标题照原文抄，再配中文译名。`scripts/check_outlines.py` 把每条标题和实际抓到的来源页面文字逐条比对：10,280 条在标准化匹配中精确命中，11 条因 PDF 抽字差异（如 σ 被抽成 s）判为近似，没有缺失。
+- 标题照原文抄，再配中文译名。`scripts/check_outlines.py` 把每条标题和实际抓到的来源页面文字逐条比对：10,373 条在标准化匹配中精确命中，11 条因 PDF 抽字差异（如 σ 被抽成 s）判为近似，没有缺失。
 - 已知缺口：A.2.3.2、C.3.3、S.2.1 的来源只有讲次一层；有 12 个覆盖项（包括定位与验收说明）在来源里没有专门章节，导览图右栏标“—”并写明原因。
 
-本轮的粒度、资源变更和限制见 [划分检查与处理](reports/skill-partition-review-2026-11-01.md)；最初 201 个技能的历史适用性审核见 [来源审核报告](reports/source-review-2026-11-01.md)，中文资源的增补依据见 [中文资源报告](reports/chinese-resources-expansion-2026-11-01.md)。
+最新的[技能编号与教材关联](reports/guide-numbering-2026-11-03.md)、[高性能网络增补](reports/high-performance-networking-2026-11-03.md)已完成全树构建。此前的粒度、资源变更和限制见 [划分检查与处理](reports/skill-partition-review-2026-11-01.md)；最初 201 个技能的历史适用性审核见 [来源审核报告](reports/source-review-2026-11-01.md)，中文资源的增补依据见 [中文资源报告](reports/chinese-resources-expansion-2026-11-01.md)。
 
 ## 数据文件
 

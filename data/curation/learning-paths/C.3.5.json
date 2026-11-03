@@ -1,0 +1,541 @@
+{
+ "id": "C.3.5",
+ "checkedAt": "2026-11-03",
+ "name": "数据中心与高性能网络",
+ "description": "数据中心网络拓扑、RDMA（InfiniBand/RoCE/iWARP）、无损网络与拥塞控制、内核旁路与零拷贝（DPDK）、SmartNIC 卸载、GPU 互连与集合通信。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "新华三《H3C RoCE 网络开局一本通》（6W103，2026）",
+   "url": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/Technical_Topics/H3C_RoCE-19790-Long/?CHID=1229553",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "1.1 RDMA 产生背景（内核旁路、零拷贝）；1.2 RDMA 技术分类（IB/iWARP/RoCE）；1.3 为什么 RoCEv2 需要无损网络；1.4.2 链路层流量控制（PFC 原理、逐跳反压、PFC 死锁检测与预防）；1.4.3 网络层拥塞控制（ECN/WRED 门限、CP/NP/RP 角色、CNP 降速与恢复，未点名 DCQCN）；2.2–2.3 智算中心参数网（Spine-Leaf、Core-Spine-Leaf 组网与规模）；2.4–2.6 组网配置举例；4.2 网卡 PFC/ECN 配置；7 ECMP/HASH 负载分担。",
+   "access": "新华三官网免费在线文档，简体中文；含配置命令与参数调整步骤，复现需要 H3C 设备环境。",
+   "publisher": "新华三技术有限公司（H3C）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/Technical_Topics/H3C_RoCE-19790-Long/?CHID=1229553",
+    "location": "目录 1.1–1.4.3、2.2–2.3、4.2、7；正文 1.4.2 “PFC 工作原理/PFC 死锁检测”、1.4.3 “ECN/WRED/CNP”",
+    "finding": "正文确认讲 RDMA 三类承载、RoCEv2 无损需求、PFC 与 ECN 的完整工作机制、Spine-Leaf/Core-Spine-Leaf 组网与 PFC/ECN 配置；没有 verbs 编程章节，也没有点名 DCQCN 或 SmartNIC。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "《新型数据中心网络：从云数据中心到智算中心网络》（张娇、潘恬、黄韬、刘韵洁，人民邮电出版社，2025-12，ISBN 9787115682765）",
+   "url": "https://detail.youzan.com/show/goods?alias=3nswmd9jre1whtc&from_source=gbox_seo",
+   "tier": "book",
+   "free": false,
+   "role": "alternative",
+   "covers": "第2章 新型数据中心网络架构：Fat-tree、VL2、VxLAN、Leaf-Spine、DCell/FiConn、Aquila，以及智算中心 HPN、TPUv4、基于 NVLink/NVSwitch 的 RDMA 全互联网络；第3章 传输控制：传统 TCP、云数据中心传输控制、智算中心网络传输控制；第4章 负载均衡；第5章 智算中心 RDMA 网络性能隔离；第6章 可编程数据面与硬件加速。",
+   "access": "人民邮电出版社有限公司官方微店，定价 199.80 元、页面售价 149.90 元；仅读官方商品页目录，正文未购未读；简体中文。",
+   "publisher": "人民邮电出版社有限公司（官方微店，微信认证）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://detail.youzan.com/show/goods?alias=3nswmd9jre1whtc&from_source=gbox_seo",
+    "location": "商品详情·目录：第2章 2.1.1 Fat-tree、2.1.2 VL2、2.1.4 Leaf-Spine、2.4.3 英伟达基于 NVLink、NVSwitch 的 RDMA 全互联网络；第3章 3.2.3 智算中心网络传输控制；第6章 6.2.3 硬件加速技术",
+    "finding": "出版社官方微店页面逐节列出拓扑、传输控制、负载均衡、RDMA 性能隔离与可编程数据面；可据此判断范围，但正文未读，不能把目录当成已核对的正文教学。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "DPDK Hands-on：DPDK 入门实战教程（GitHub 用户 haolipeng，中文）",
+   "url": "https://github.com/haolipeng/dpdk-hands-on",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "作者公开的中文实操课程：Lesson 1 EAL 初始化、Lesson 3 网卡配置与轮询收包、Lesson 5 内存池、Lesson 13 mbuf；配有源代码与构建说明。",
+   "access": "作者 GitHub 仓库免费公开中文教程和示例；本轮核对文档和代码，未在真实网卡上运行。",
+   "publisher": "GitHub 用户 haolipeng（个人开源中文教程，仓库 dpdk-hands-on）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://github.com/haolipeng/dpdk-hands-on/blob/master/docs/lessons/lesson3-capture-packet.md",
+    "location": "一、EAL环境初始化；二、创建mbuf内存池；三、端口配置和初始化；六、运行数据包接收",
+    "finding": "主代理通过网页重新读取作者原文，示例用 rte_eth_rx_burst 循环轮询接收队列、操作用户态 mbuf；仓库 README 链接 Lesson 1/3/5/13。不是只根据教学站首页推断。"
+   }
+  },
+  {
+   "key": "zh4",
+   "lang": "zh",
+   "title": "AI System 课程：分布式通信与 NVLink（含 05 NVLink 原理剖析、06 NV Switch 深度解析）",
+   "url": "https://infrasys-ai.github.io/aisystem-docs/02Hardware04NVIDIA/04BasicNvlink.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "分布式并行（数据并行、模型并行）、AI 框架分布式、通信硬件、集合通信（AllReduce 等多对多规约）、NVLink 与 NVSwitch 发展；同目录 05DeepNvlink 讲 NVLink 原理，06DeepNvswitch 讲 NVSwitch。",
+   "access": "作者公开的免费中文课程网页，页内有“本节视频”入口；未核对视频音轨/字幕语言，正文为中文。",
+   "publisher": "Infrasys-AI（AI System 课程作者团队）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://infrasys-ai.github.io/aisystem-docs/02Hardware04NVIDIA/04BasicNvlink.html",
+    "location": "章节目录：分布式并行、数据并行、模型并行、AI 框架分布式、通信硬件、集合通信、NVLink 与 NVSwitch 发展；正文 AllReduce 定义",
+    "finding": "页面把 GPU 通信硬件、集合通信与 NVLink/NVSwitch 放在同一章逐节讲，并有 05/06 两页专讲 NVLink 与 NVSwitch，能承担中文第 6 项。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "UW CSE 561 Computer Communication and Networks, Autumn 2026 — schedule and paper list",
+   "url": "https://courses.cs.washington.edu/courses/cse561/26au/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Oct 7 DC topology and network virtualization（VL2；shallow: fat-tree）；Oct 12 Flat network topologies（RNG、Jellyfish、Xpander）；Oct 14 Optical switching；Oct 19 Collective communication（TACCL；shallow: Demystifying NCCL）；Oct 21 ML networks（RDMA over Ethernet for Distributed AI Training at Meta Scale）；Oct 26 End host stack（Falcon；shallow: Snap）。",
+   "access": "课程站公开课表、slides 与论文链接；部分讲次标有 Video（未逐一核对是否公开可播）；免费，英文。",
+   "publisher": "University of Washington, Ratul Mahajan",
+   "reupload": false,
+   "evidence": {
+    "url": "https://courses.cs.washington.edu/courses/cse561/26au/",
+    "location": "Schedule: Oct 7 / Oct 12 / Oct 14 / Oct 19 / Oct 21 / Oct 26 的讲次标题与 deep/shallow reads",
+    "finding": "课表逐讲列出数据中心拓扑、集合通信、ML 网络/RDMA 与端主机栈，并给出论文；这是研究生论文研讨课，不是零基础教材。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "NVIDIA DOCA RDMA-aware Networks Programming Guide (3.5.0)",
+   "url": "https://networking-docs.nvidia.com/doca/archive/3-5-0/rdma-aware-networks-programming-guide",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "3.1 InfiniBand、3.3 RoCE、3.4 Comparison of RDMA Technologies；4.1 Available Communication Operations（Send/Recv/Read/Write/Atomic）、4.2 Transport Modes（RC/UC/UD）、4.3 Key Concepts（SR/RR/CQ/Memory Registration/Memory Window/PD）；5.4 Queue Pair Bringup（RESET→INIT→RTR→RTS）；6 RDMA_CM；9 Programming Examples（Send/Receive/Read/Write）。",
+   "access": "NVIDIA DOCA 官方在线文档，免费，英文；/doca/sdk/… 会重定向到 archive/3-5-0，正文以 3.5.0 为准。",
+   "publisher": "NVIDIA",
+   "reupload": false,
+   "evidence": {
+    "url": "https://networking-docs.nvidia.com/doca/archive/3-5-0/rdma-aware-networks-programming-guide",
+    "location": "目录 3.1/3.3/3.4、4.1–4.3、5.4、6、9；正文 4.1–4.3 与 9.1–9.2",
+    "finding": "官方编程指南逐节讲 verbs 操作、QP/CQ/MR、传输模式与 QP 状态迁移，并给出可编译示例；是编程教学，不只是术语表。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "DPDK Programmer's Guide (Data Plane Development Kit 26.11.0-rc2)",
+   "url": "https://doc.dpdk.org/guides/prog_guide/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "2 Overview、3 Source Organization；Memory Management：2 Memory Pool Library、3 Packet (Mbuf) Library；CPU Management：1 Environment Abstraction Layer (EAL)；Device Libraries：3 Ethernet Device Library → 3.1 Poll Mode Driver；Performance Optimization Guidelines。",
+   "access": "DPDK 官方文档，免费，英文；官方没有中文版。",
+   "publisher": "DPDK Project",
+   "reupload": false,
+   "evidence": {
+    "url": "https://doc.dpdk.org/guides/prog_guide/",
+    "location": "目录：Memory Management 2–3、CPU Management 1 EAL、Device Libraries 3 Ethernet Device Library（3.1 Poll Mode Driver）",
+    "finding": "程序指南把大页/内存池、mbuf、EAL、PMD 分成独立章节，并给构建与示例说明；PMD 章明确是轮询模式驱动。"
+   }
+  },
+  {
+   "key": "en4",
+   "lang": "en",
+   "title": "Congestion Control for Large-Scale RDMA Deployments (DCQCN, SIGCOMM 2015)",
+   "url": "https://www.microsoft.com/en-us/research/publication/congestion-control-for-large-scale-rdma-deployments/",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "DCQCN 的动机（RoCEv2 依赖 PFC、PFC 的队头阻塞与不公平）、拥塞点 CP 的 ECN 标记、通知点 NP 的 CNP 生成、反应点 RP 的降速与恢复、参数设置与评估。",
+   "access": "Microsoft Research 官方论文页，提供作者版 PDF，免费，英文；SIGCOMM 2015。",
+   "publisher": "Yibo Zhu, Haggai Eran, Jitu Padhye, et al. (ACM SIGCOMM 2015)",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.microsoft.com/en-us/research/publication/congestion-control-for-large-scale-rdma-deployments/",
+    "location": "标题/作者/SIGCOMM 2015；摘要；DCQCN 设计（CP/NP/RP）、参数设置与评估章节",
+    "finding": "官方论文页确认是 DCQCN 原始论文并提供作者版 PDF；正文给出三角色反馈环路与 PFC 副作用，是英文拥塞控制主材料。"
+   }
+  },
+  {
+   "key": "en5",
+   "lang": "en",
+   "title": "RFC 5040: A Remote Direct Memory Access Protocol Specification (RDMAP/iWARP)",
+   "url": "https://www.rfc-editor.org/rfc/rfc5040.txt",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "1.2 Protocol Overview、1.3 RDMAP Layering；2.3 Direct Data Placement (DDP)、2.4 RDMA；4 Header Format；5 Data Transfer（RDMA Write/Read、Send、Terminate、Ordering and Completions）；6 RDMAP Stream Management。",
+   "access": "IETF RFC 免费公开，英文；规范文本，不是入门教程。",
+   "publisher": "IETF",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.rfc-editor.org/rfc/rfc5040.txt",
+    "location": "Section 1.2–1.3、2.3–2.4、5.1–5.5、6",
+    "finding": "RFC 正文确认 RDMAP 分层、DDP 直接放置、Write/Read/Send 消息格式与流管理；可补 iWARP 这一承载的协议细节。"
+   }
+  },
+  {
+   "key": "en6",
+   "lang": "en",
+   "title": "NVIDIA NCCL User Guide (NCCL 2.32.3)",
+   "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "Collective Operations：AllReduce、Broadcast、Reduce、AllGather、ReduceScatter、AlltoAll；Buffer Registration、GPU Direct RDMA、NVLink Sharp Buffer Registration、IB Sharp Buffer Registration；Communicator 创建与 group 调用。",
+   "access": "NVIDIA NCCL 官方文档，免费，英文。",
+   "publisher": "NVIDIA",
+   "reupload": false,
+   "evidence": {
+    "url": "https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/",
+    "location": "目录 Collective Operations（AllReduce/AllGather/ReduceScatter 等）；Buffer Registration、GPU Direct RDMA、NVLink Sharp Buffer Registration",
+    "finding": "官方用户指南逐项定义集合通信语义，并讲 GPU 缓冲注册、GPUDirect RDMA 与 NVLink SHARP；可承担 GPU 集合通信的动手部分。"
+   }
+  },
+  {
+   "key": "en7",
+   "lang": "en",
+   "title": "NVIDIA NVLink and NVLink Switch",
+   "url": "https://www.nvidia.com/en-us/data-center/nvlink/",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "NVLink 的 GPU 间 scale-up 互连、NVLink Switch 的机架级 all-to-all 与 SHARP 网络内归约概念。",
+   "access": "NVIDIA 官方产品/技术介绍页，免费，英文；只作概念与规格参考，不是课程。",
+   "publisher": "NVIDIA",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.nvidia.com/en-us/data-center/nvlink/",
+    "location": "NVLink 与 NVLink Switch 概述、带宽/拓扑说明",
+    "finding": "页面给出 NVLink/NVLink Switch 的定位与规格；厂商介绍页不承担系统教学，故只作 reference。"
+   }
+  },
+  {
+   "key": "zh5",
+   "lang": "zh",
+   "role": "supplement",
+   "tier": "material",
+   "free": true,
+   "title": "DPDK Mbuf 实战学习手册（作者公开中文教程）",
+   "url": "https://github.com/haolipeng/dpdk-hands-on/blob/master/DPDK-Mbuf-Practical-Guide.md",
+   "publisher": "haolipeng/dpdk-hands-on 项目作者",
+   "covers": "mbuf 布局、分配与释放、报文头尾操作、间接 mbuf 与克隆、引用计数和零拷贝；每阶段给代码与验收标准。",
+   "access": "作者仓库免费公开中文教学正文；主代理读到示例，未编译运行。",
+   "evidence": {
+    "url": "https://github.com/haolipeng/dpdk-hands-on/blob/master/DPDK-Mbuf-Practical-Guide.md",
+    "location": "阶段1 Mbuf基础概念与第一个程序；阶段3 Mbuf克隆与零拷贝",
+    "finding": "正文明确列学习目标、代码和验收标准，并用间接 mbuf/克隆及引用计数讲共享数据缓冲。"
+   }
+  },
+  {
+   "key": "en8",
+   "lang": "en",
+   "role": "supplement",
+   "tier": "material",
+   "free": true,
+   "title": "Azure Accelerated Networking: SmartNICs in the Public Cloud（NSDI 2018 作者论文）",
+   "url": "https://www.usenix.org/system/files/conference/nsdi18/nsdi18-firestone.pdf",
+   "publisher": "Firestone et al.; USENIX NSDI 2018",
+   "covers": "第2章主机网络与 SR-IOV/流表卸载背景，第3章设计目标，第4–5章 ASIC/SoC/FPGA 取舍与 AccelNet 软硬件设计，分析 SmartNIC 卸载边界。",
+   "access": "USENIX 官方免费论文全文；英文，无需注册，不是完整课程录像。",
+   "evidence": {
+    "url": "https://www.usenix.org/system/files/conference/nsdi18/nsdi18-firestone.pdf",
+    "location": "2.1–2.4、3、4.1–4.3、5.1–5.2",
+    "finding": "作者论文以生产网络案例讲主机网络开销、SR-IOV、通用流表卸载和 SmartNIC 硬件/软件设计；同一来源的章标题已通过导览原文核对。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "数据中心网络拓扑",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "2.2 智算中心总体架构、2.3 参数网（2.3.2 二层 Spine+leaf、2.3.3 三层 Core-Spine-Leaf）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第2章 2.1.1 Fat-tree、2.1.2 VL2、2.1.4 Leaf-Spine、2.4 智算中心网络架构",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Oct 7 DC topology and network virtualization（VL2、fat-tree）；Oct 12 Flat network topologies（RNG/Jellyfish/Xpander）；Oct 14 Optical switching",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文先用 H3C 的 Spine-Leaf/Core-Spine-Leaf 工程组网建立整体，再用付费教材第2章补 fat-tree/VL2 等学术模型；英文按 UW 讲次读论文。"
+  },
+  {
+   "topic": "RDMA（InfiniBand/RoCE/iWARP）",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "1.1 RDMA 产生背景、1.2 RDMA 技术分类（IB/iWARP/RoCE）、1.3 为什么 RoCEv2 需要无损网络",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "3.1 InfiniBand、3.3 RoCE、3.4 Comparison of RDMA Technologies；4.1–4.3 操作/传输模式/QP-CQ-MR；5.4 QP Bringup；9.1–9.2 示例",
+     "extent": "covered"
+    },
+    {
+     "source": "en5",
+     "section": "1.2 Protocol Overview、1.3 RDMAP Layering、2.3 DDP、5.1–5.3 RDMA Write/Read/Send",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 H3C 只讲三类承载与 RoCEv2 无损需求，没有 verbs/QP/CQ/MR 编程，故中文为 partial；英文 DOCA 指南补编程模型，RFC 5040 补 iWARP 协议。"
+  },
+  {
+   "topic": "无损网络与拥塞控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "1.3 RoCEv2 与无损网络；1.4.2 PFC 原理/逐跳反压/死锁检测与预防；1.4.3 ECN/WRED 门限、CP/NP/RP、CNP 降速与恢复；4.2 网卡 PFC/ECN 配置",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第3章 3.2 数据中心网络传输控制、3.2.3 智算中心网络传输控制；第4章 负载均衡",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en4",
+     "section": "DCQCN 全文：动机与 PFC 副作用、CP/NP/RP 三角色、ECN/CNP、参数设置与评估",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Oct 21 ML networks：RDMA over Ethernet for Distributed AI Training at Meta Scale",
+     "extent": "covered"
+    }
+   ],
+   "note": "H3C 把 PFC 死锁、ECN/WRED 与 CNP 降速讲成可配置的工程流程，但未点名 DCQCN；DCQCN 的算法、参数与评估由英文论文承担，中文路线不把 H3C 当成 DCQCN 论文教学。"
+  },
+  {
+   "topic": "内核旁路与零拷贝（DPDK）",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "1.1 RDMA 产生背景：内核旁路与零拷贝为什么能降时延",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "Lesson 1 EAL、大页配置；Lesson 3 网卡初始化与轮询收包；Lesson 5 内存池；Lesson 13 mbuf",
+     "extent": "covered"
+    },
+    {
+     "source": "zh5",
+     "section": "阶段1 mbuf结构与内存池；阶段3 克隆与零拷贝，结合 Lesson 3 理解旁路收包路径",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en3",
+     "section": "2 Overview、3 Source Organization；Memory Pool Library、Packet (Mbuf) Library；EAL；3.1 Poll Mode Driver；Performance Optimization Guidelines",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用 H3C 1.1 建立“绕开内核、少一次拷贝”的概念，再用 DPDK Hands-on 逐课写用户态收包程序；该教程是个人开源项目，权威性低于官方文档，故列为 supplement。"
+  },
+  {
+   "topic": "SmartNIC 卸载",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Oct 26 End host stack：Falcon（hardware transport）deep read；Snap（microkernel host networking）shallow read",
+     "extent": "covered"
+    },
+    {
+     "source": "en8",
+     "section": "2.1–2.4 主机网络和流表卸载；3 设计目标；4.1–4.3 硬件取舍；5.1–5.2 AccelNet设计",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只找到 NVIDIA 中文博客的定义/选型介绍（reference）与厂商产品页，没有可核对的系统教学；本项中文留缺口，英文由 UW 10/26 的 Falcon/Snap 讲硬件传输与端主机栈卸载。"
+  },
+  {
+   "topic": "GPU 互连与集合通信",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh4",
+     "section": "“分布式通信与 NVLink”章：通信硬件、集合通信（AllReduce）、NVLink 与 NVSwitch 发展；同目录 05DeepNvlink、06DeepNvswitch",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第2章 2.4.3 英伟达基于 NVLink、NVSwitch 的 RDMA 全互联网络",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en6",
+     "section": "Collective Operations（AllReduce/AllGather/ReduceScatter 等）；Buffer Registration、GPU Direct RDMA、NVLink Sharp Buffer Registration",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Oct 19 Collective communication：TACCL；Demystifying NCCL（shallow）",
+     "extent": "covered"
+    },
+    {
+     "source": "en7",
+     "section": "NVLink 与 NVLink Switch 概述",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文用 Infrasys 作者课程把通信硬件、AllReduce、NVLink/NVSwitch 串起来，付费教材 2.4.3 补 RDMA 全互联；英文用 NCCL 指南的集合通信语义与 NVLink SHARP 注册，加上 UW 10/19 的 TACCL/NCCL 论文。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先读 1.1–1.3：RDMA 背景、IB/iWARP/RoCE 三类承载、RoCEv2 为什么需要无损；再读 1.4.2–1.4.3 的 PFC 死锁与 ECN/WRED/CNP 流程，以及 2.2–2.3 的 Spine-Leaf/Core-Spine-Leaf 组网；有条件时跟 4.2 做网卡 PFC/ECN 配置。"
+    },
+    {
+     "source": "zh3",
+     "read": "按作者仓库 README 的 Lesson 1→3→5→13 学 EAL、大页、网卡配置与轮询收包、内存池和 mbuf；跟文档编译示例。需要支持的 Linux/网卡环境，不能把内核旁路与无数据复制混为一谈。"
+    },
+    {
+     "source": "zh5",
+     "read": "完成 mbuf 手册阶段1–3：画出缓冲布局，分配/释放和修改报文，再比较复制与 clone/引用计数的数据共享；结合 Lesson 3 解释内核旁路和零拷贝的区别。"
+    },
+    {
+     "source": "zh4",
+     "read": "读“分布式通信与 NVLink”整章：通信硬件→集合通信（AllReduce 的定义与用途）→NVLink/NVSwitch 发展；再读 05DeepNvlink、06DeepNvswitch 两页。"
+    }
+   ],
+   "gaps": [
+    "RDMA（InfiniBand/RoCE/iWARP）",
+    "SmartNIC 卸载"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Oct 7 DC topology/network virtualization with VL2 and the fat-tree paper, Oct 12 flat topologies, Oct 14 optical switching; then Oct 19 collective communication (TACCL, Demystifying NCCL), Oct 21 ML networks (Meta RoCE), Oct 26 end host stack (Falcon, Snap)."
+    },
+    {
+     "source": "en2",
+     "read": "Read 1–4.3 for RDMA architecture, operations, transport modes and QP/CQ/MR; then 5.4 QP bring-up, 6 RDMA_CM, and run the 9.1–9.2 Send/Recv/Read/Write examples."
+    },
+    {
+     "source": "en5",
+     "read": "Read 1.2–1.3 and 5.1–5.3 for RDMAP layering and RDMA Write/Read/Send semantics over DDP/MPA/TCP (iWARP)."
+    },
+    {
+     "source": "en4",
+     "read": "Read the DCQCN paper end to end: why PFC alone is not enough, CP ECN marking, NP CNP generation, RP rate reduction/recovery, parameter settings and evaluation."
+    },
+    {
+     "source": "en3",
+     "read": "Read 2 Overview, Memory Pool and Mbuf, EAL, and 3.1 Poll Mode Driver; build and run testpmd or l2fwd to see user-space polling and hugepage-backed mbufs."
+    },
+    {
+     "source": "en8",
+     "read": "Read Sections 2–5 for host networking costs, SR-IOV/flow offload, design goals and the ASIC/SoC/FPGA trade-offs; explain the offload boundary and fallback path in the Azure case study."
+    },
+    {
+     "source": "en6",
+     "read": "Read Collective Operations (AllReduce/AllGather/ReduceScatter), Buffer Registration/GPU Direct RDMA and NVLink Sharp Buffer Registration; run an all_reduce example across GPUs."
+    },
+    {
+     "source": "en7",
+     "read": "Use the NVLink/NVLink Switch page for hardware topology and bandwidth vocabulary; it is a reference, not a course."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "duckduckgo-html + fetch",
+   "query_or_url": "DuckDuckGo: RDMA 编程 教程 中文 verbs QP；并直读 H3C 一本通 1.1–1.3",
+   "result": "返回 CSDN、知乎、博客园、GitHub 个人教程（如 RDMA-Tutorial、rdma-basic-tutorial）和零散代码示例，没有大学/官方机构的系统课程；H3C 正文只讲三类承载与 RoCEv2 无损需求，未教 verbs/QP/CQ/MR。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "duckduckgo-html",
+   "query_or_url": "DuckDuckGo: site:bilibili.com RDMA verbs 编程 教程",
+   "result": "找到「串门的小马驹」的 1.1/1.4/2.1 片段（BV1q1421t7pa、BV1sF2XY2ECk）、英伟达官方课程合集（BV1xg95BnExF，需另核音轨/字幕语言）和 B 站课堂付费课（ss168534885）。中文原创内容只是零散讲次，未构成可核对的完整免费课程；英文来源课程不能算中文教学。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://book.douban.com/isbn/9787115609649/（《Linux高性能网络详解：从DPDK、RDMA到XDP》目录）",
+   "result": "目录确认第13–22章讲 RDMA（IB/RoCE/iWARP、QP/CQ/WR/MR、传输服务、RoCEv2 GID、perftest），但出版社官方页面未取得、正文未购未读，不能据此算作已核对的中文教学，故未写入路线来源。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "duckduckgo-html + fetch",
+   "query_or_url": "DuckDuckGo: 智能网卡 SmartNIC 卸载 课程 教材 中文；并直读 NVIDIA 中文博客、华为超融合百科、H3C 一本通",
+   "result": "NVIDIA 中文博客只给 SmartNIC 的定义与 ASIC/FPGA/SoC 选型比较（reference）；华为页面讲超融合数据中心网络与 iLossless，属方案介绍；H3C 只讲 RoCE 无损，没有 SmartNIC 卸载章节；未找到可核对的系统教学。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "duckduckgo-html",
+   "query_or_url": "DuckDuckGo: site:bilibili.com 智能网卡 DPU SmartNIC 卸载",
+   "result": "返回华为 SP560 智能网卡产品发布（BV1JYQSBvEBx）、英文 DPU 科普转载（BV1rA411m7LT）、国产 DPU 图文和大量“卸载网卡驱动”无关结果；没有中文系统课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "人民邮电出版社微店《新型数据中心网络》目录；豆瓣《Linux高性能网络详解》目录",
+   "result": "《新型数据中心网络》第6章只有 6.2.3“硬件加速技术”小节，未单列 SmartNIC 卸载；《Linux高性能网络详解》有 Corundum 100G FPGA 网卡与 DPDK 驱动章节，但没有“SmartNIC 卸载边界”的专章，且两书正文均未读，不能确认覆盖。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "web search / main review",
+   "query_or_url": "https://www.bilibili.com/cheese/play/ep1588280",
+   "result": "主代理找到并读到原作者“RDMA通信verbs编程IB GDA RoCE”23课时的付费目录（含QP/MR、Send/Recv/Read/Write与IBGDA）。未购买或观看正文；目录未包含完整 iWARP 比较，暂作候选，不宣称中文完整覆盖。"
+  }
+ ],
+ "findings": [
+  "英文 6/6 有可核对的免费教学：UW CSE 561 课表/论文、DOCA RDMA 指南、DPDK 指南、DCQCN 论文、RFC 5040、NCCL 指南；其中 DOCA/DPDK/NCCL 有操作步骤与示例，按教学材料计 primary，NVLink 产品页只作 reference。",
+  "中文 4/6 有教学：H3C 一本通覆盖拓扑与无损/ECN，DPDK Hands-on 覆盖 DPDK 实操，Infrasys 作者课程覆盖 NVLink/NVSwitch 与集合通信；付费教材补 fat-tree/VL2 与智算传输控制，但只核到官方目录。",
+  "中文 RDMA 只有概念与三类承载，缺 verbs 编程，按 partial 留缺口；SmartNIC 没有中文系统教学，留缺口；两项均用英文源做 cross_language_fallbacks。",
+  "H3C 讲 PFC/ECN/CNP 但没有点名 DCQCN，中文路线不把 H3C 当作 DCQCN 论文教学；DCQCN 的算法与参数由英文论文承担。",
+  "《新型数据中心网络》只核到人民邮电出版社官方微店目录，正文未读；覆盖范围按目录判断，未把目录当成已读正文。",
+  "本轮没有可用的 Tavily key，中文视频/付费检索用 DuckDuckGo HTML 站内查询加直读候选页完成；结论是“本轮未找到可核对材料”，不等于“中文不存在”。",
+  "主代理补读作者 GitHub Lesson 1/3 与 Mbuf 实战手册，修正教学站首页无法证明 Lesson 15/16 的引用；采用实际可访问的仓库链接。付费材料移为可选替代，中文4项免费教学与2项英文补读分开。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "RDMA（InfiniBand/RoCE/iWARP）",
+   "source": "en2",
+   "reason": "中文 H3C 一本通 1.1–1.3 只讲 RDMA 背景、IB/iWARP/RoCE 分类与 RoCEv2 无损需求，没有 verbs/QP/CQ/MR 编程；中文视频只找到零散讲次、付费课和英伟达英文课程合集，未核到可完整教学的免费中文课程；付费书有 RDMA 章节但出版社官方页未取得、正文未读。故本项中文留缺口，用 DOCA 官方编程指南补读。",
+   "confirmed_by": "2026-11-03 pi 草稿与主代理联网复核；见 reports/high-performance-networking-2026-11-03.md"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "SmartNIC 卸载",
+   "source": "en8",
+   "reason": "中文只有 NVIDIA 中文博客的定义/选型介绍（reference）和华为产品发布内容，没有可核对的系统教学；B 站检索到的是产品发布、英文 DPU 科普转载和驱动卸载无关内容；付费教材只有“硬件加速技术”小节，未确认覆盖卸载边界。故本项中文留缺口，用 Azure Accelerated Networking 作者论文第2–5章 补读。",
+   "confirmed_by": "2026-11-03 pi 草稿与主代理联网复核；见 reports/high-performance-networking-2026-11-03.md"
+  }
+ ]
+}

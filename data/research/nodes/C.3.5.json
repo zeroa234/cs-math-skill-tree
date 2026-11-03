@@ -1,0 +1,48 @@
+{
+ "id": "C.3.5",
+ "resource": {
+  "tier": "website",
+  "title": "UW CSE 561 Autumn 2026：数据中心网络、集合通信与端主机栈",
+  "url": "https://courses.cs.washington.edu/courses/cse561/26au/",
+  "lang": "en",
+  "free": true,
+  "covers": "公开课表与论文阅读路线：DC topology and network virtualization、Collective communication、ML networks、End host stack。具体 RDMA/DPDK 编程、iWARP 与 GPU 互连另配官方教学资料。",
+  "access": "公开课表及论文链接；本页不是完整课程录像，Canvas 和课程讨论需要校内权限。",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "KTH Royal Institute of Technology",
+   "course": "FIK3221 Networked Systems for Machine Learning（7.5 credits，博士课程，课纲 Spring 2025–）",
+   "url": "https://www.kth.se/student/kurser/kurs/FIK3221?l=en",
+   "prereq_text": "Knowledge in advanced Internet technique, 7.5 higher education credits, equivalent completed course IK2215. Knowledge and skills in programming in C++, Java or Python, 6 higher education credits, equivalent completed course DD1310-DD1319/DD1331/DD1337/DD100N/ID1018.",
+   "prereq_kind": "required",
+   "mapped_ids": ["C.3.2"]
+  },
+  {
+   "school": "University of Washington",
+   "course": "CSE 561 Computer Communication and Networks（2026 秋内容，课程目录先修）",
+   "url": "https://courses.cs.washington.edu/courses/cse561/",
+   "prereq_text": "Prerequisites: CSE or E E major and CSE 451 or equivalent.",
+   "prereq_kind": "required",
+   "mapped_ids": ["C.2.1"]
+  }
+ ],
+ "required_evidence": [
+  {
+   "id": "C.3.2",
+   "basis": "course",
+   "sources": [{"url": "https://www.kth.se/student/kurser/kurs/FIK3221?l=en", "quote": "Knowledge in advanced Internet technique, 7.5 higher education credits, equivalent completed course IK2215."}, {"url": "https://www.kth.se/student/kurser/kurs/IK2215?l=en", "quote": "IK2215 Advanced Internetworking 7.5 credits"}],
+   "reason": "KTH 明确要求高级互联网技术；路由、传输、拥塞控制是高性能网络入门的前置基础。",
+   "limits": "IK2215 比基础网络更深入，映射的是 tree 当前网络协议单元；不声称它已经包含本节点所有 RDMA/旁路专题。程序设计已在该单元的必须前置链中。"
+  },
+  {
+   "id": "C.2.1",
+   "basis": "course",
+   "sources": [{"url": "https://courses.cs.washington.edu/courses/cse561/", "quote": "Prerequisites: CSE or E E major and CSE 451 or equivalent."}, {"url": "https://courses.cs.washington.edu/courses/cse451/", "quote": "CSE451: Introduction to Operating Systems"}],
+   "reason": "内核旁路、注册内存与用户态 I/O 路径需要操作系统的内存和设备概念，UW 课程目录也明确要求 OS。",
+   "limits": "KTH 的对应课程未单独要求 OS；本技能采用 UW 的入门口径，不据此声称各校统一要求。"
+  }
+ ],
+ "notes": "依据相邻 game 新增 C.3.5 的线索重新核对官方课程，保留当前 tree 的结构。KTH FIK3221 点名 RDMA、DPDK、SmartNIC、GPU 网络；UW 2026 秋的 10/7、10/19、10/21、10/26 分别覆盖数据中心拓扑、集合通信、ML 网络和端主机栈。iWARP、DCQCN 与 NVLink 的工程细节不冒充同一门课程的逐讲内容，由官方规范、论文和编程指南补读。NVLink 是 GPU 互连，不是 RDMA 的以太网承载。推荐的 GPU 体系结构、分布式系统、SDN 背景未被两门课共同列为必须先修。"
+}

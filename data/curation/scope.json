@@ -2,6 +2,14 @@
  "_source": "ACM/IEEE-CS/AAAI CS2023 Body of Knowledge (https://csed.acm.org/final-report/, 3.1-Body-of-Knowledge); tier definitions from 1.3-Introduction-to-Knowledge-Model.",
  "_rule": "主干 = (1) 简介里至少一半的知识点在 CS Core / KA Core 主题里有原文对应；或 (2) 它是树里讲某个 CS Core 主题的技能；或 (3) 它是 (1)(2) 技能的必须前置。其余为选修。",
  "skills": {
+  "C.3.5": {
+   "matched": {
+    "数据中心网络拓扑": [["NC-SingleHop", "KA Core", "Local Area Network Topologies (e.g., data center"]],
+    "RDMA（InfiniBand/RoCE/iWARP）": [["PDC-Communication", "KA Core", "Remote Direct Memory Access (RDMA)"]],
+    "无损网络与拥塞控制": [["NC-Reliability", "KA Core", "Congestion control (e.g., implicit and explicit congestion notification)"]]
+   },
+   "note": "按 tree 的 50% 规则，6 项中 3 项有 CS2023 KA Core 原文：数据中心 LAN 拓扑、RDMA、拥塞控制/ECN。因此为主干，区别于 game 未逐项核对时的选修标签。此匹配只证明核心概念对应，不表示 CS2023 要求掌握所有 InfiniBand/RoCE/iWARP、DPDK、SmartNIC 或 NVLink 工程细节。"
+  },
   "M.1.1": {
    "matched": {
     "数列与函数极限": [
