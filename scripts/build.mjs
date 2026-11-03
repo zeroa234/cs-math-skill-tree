@@ -23,6 +23,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import ELK from "elkjs/lib/elk.bundled.js";
 import { readLearningPaths } from "./learning-paths.mjs";
+import { numberOutline } from "./outline-sections.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rel = (...p) => path.join(ROOT, ...p);
@@ -258,7 +259,7 @@ if (fs.existsSync(outlineDir)) {
     };
     for (const br of o.outline) if (!keys.includes(br.src)) fail(`outline ${o.id}: branch ${br.title} has unknown source ${br.src}`);
     walk(o.outline);
-    outlines.set(o.id, o);
+    outlines.set(o.id, { ...o, ...numberOutline(o) });
   }
 }
 const leafCount = (items) => items.reduce((n, it) => n + (it.items?.length ? leafCount(it.items) : 1), 0);

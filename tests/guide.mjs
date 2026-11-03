@@ -16,6 +16,7 @@ const wanted = args.filter((a, i) => !a.startsWith("--") && (shotsAt < 0 || i !=
 fs.mkdirSync(out, { recursive: true });
 
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "output/skilltree.json"), "utf8"));
+const outlines = JSON.parse(fs.readFileSync(path.join(ROOT, "output/outlines.json"), "utf8"));
 const ids = wanted.length ? wanted : data.skills.filter((s) => s.guide).map((s) => s.id);
 const url = pathToFileURL(path.join(ROOT, "src/web/index.html")).href;
 const browser = await chromium.launch({ executablePath: "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", headless: true });
@@ -38,9 +39,22 @@ async function check(page, id, shots) {
       coverage: d.querySelectorAll(".g-coverage li").length,
       hash: location.hash,
       overflowX: document.documentElement.scrollWidth > window.innerWidth,
+      numbers: [...d.querySelectorAll(".g-svg [data-section]")].map(e => e.dataset.section),
+      mapping: [...d.querySelectorAll(".g-mapping tbody tr")].map(e => e.dataset.section),
+      refs: [...d.querySelectorAll(".g-coverage .g-ref")].map(e => e.dataset.section),
+      sourceHints: [...d.querySelectorAll(".g-svg [data-section]")].every(e => e.title.includes("《")),
     };
   });
-  const outline = JSON.parse(fs.readFileSync(path.join(ROOT, "output/outlines.json"), "utf8"))[id].outline;
+  const outline = outlines[id].outline;
+  const numbers = items => items.flatMap(it => [it.number, ...numbers(it.items || [])]);
+  const same = (actual, expected, what) => {
+    if (JSON.stringify(actual) !== JSON.stringify(expected)) failures.push(`${id}: wrong ${what}`);
+  };
+  const sorted = ns => [...ns].sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
+  same(sorted(r.numbers), sorted(numbers(outline)), "map chapter numbers");
+  same(r.mapping, numbers(outline), "source mapping rows");
+  same(r.refs, outlines[id].coverage.flatMap(c => c.sections), "coverage chapter numbers");
+  if (!r.sourceHints) failures.push(`${id}: map entries lack source hints`);
   if (!r.title.includes(s.name)) failures.push(`${id}: wrong title ${r.title}`);
   if (r.nodes !== leaves(outline) + 1) failures.push(`${id}: drew ${r.nodes} nodes, outline has ${leaves(outline) + 1}`);
   if (!r.coverage) failures.push(`${id}: no coverage list`);
@@ -57,6 +71,14 @@ async function check(page, id, shots) {
     await page.click('[data-lang="both"]');
     await page.waitForTimeout(800);
     await page.screenshot({ path: path.join(out, `guide-${id}-${shots}-both.png`) });
+    await page.click(".g-mapping summary");
+    await page.waitForTimeout(150);
+    const mapping = await page.locator(".g-mapping").evaluate(e => ({ width: e.scrollWidth, client: e.clientWidth }));
+    if (mapping.width > mapping.client + 1) failures.push(`${id}: source mapping overflows`);
+    await page.screenshot({ path: path.join(out, `guide-${id}-${shots}-sources.png`) });
+    await page.click(".g-mapping .g-section-link >> nth=-1");
+    await page.waitForSelector(".g-svg .markmap-highlight rect");
+    await page.click(".g-mapping summary");
     await page.click('[data-lang="zh"]');
     await page.waitForTimeout(300);
   }

@@ -65,7 +65,7 @@ window.SkillTreeGuide = (() => {
   // ── dialog ────────────────────────────────────────────────────────
   let dlg = null;
   let ui = {};
-  let cur = null; // { s, o, index: Map(ref -> entry), main }
+  let cur = null; // { s, o, index: Map(skill number -> entry), origins: Map(entry -> source path), main }
   let mm = null;
 
   function build() {
@@ -77,6 +77,7 @@ window.SkillTreeGuide = (() => {
       svg: document.createElementNS("http://www.w3.org/2000/svg", "svg"),
       status: el("p", { class: "g-status", role: "status" }),
       sources: el("ul", { class: "g-sources" }),
+      mapping: el("tbody"),
       coverage: el("ul", { class: "g-coverage" }),
       omitted: el("p", { class: "g-omitted" }),
     };
@@ -94,7 +95,13 @@ window.SkillTreeGuide = (() => {
             el("button", { class: "icon-btn", "aria-label": "缩小", onclick: () => mm?.rescale(0.8) }, "−"),
             el("button", { class: "icon-btn", "aria-label": "看全图", title: "看全图", onclick: () => mm?.fit() }, "⤢"))),
         el("aside", { class: "g-side", "aria-label": "来源与覆盖" },
+          el("p", { class: "g-numbering" }, "章节按本技能从 1 开始编号；教材原章号见下方对照表。"),
           el("section", {}, el("h3", {}, "目录来源"), ui.sources),
+          el("details", { class: "g-mapping" },
+            el("summary", {}, "章节与教材对照"),
+            el("table", {}, el("caption", { class: "sr-only" }, "技能章节与教材原位置的对应关系"),
+              el("thead", {}, el("tr", {}, el("th", { scope: "col" }, "技能章节"), el("th", { scope: "col" }, "教材原位置"))),
+              ui.mapping)),
           el("section", {}, el("h3", {}, "查漏补缺", el("span", { class: "h-note" }, "简介里的每个知识点在哪一章，点一下在图上定位")), ui.coverage),
           ui.omitted)));
     dlg.addEventListener("close", () => {
@@ -116,6 +123,7 @@ window.SkillTreeGuide = (() => {
     ui.status.textContent = "正在加载导览图…";
     ui.status.hidden = false;
     ui.sources.replaceChildren();
+    ui.mapping.replaceChildren();
     ui.coverage.replaceChildren();
     ui.omitted.textContent = "";
     if (!dlg.open) dlg.showModal();
@@ -123,13 +131,17 @@ window.SkillTreeGuide = (() => {
     try { await load(); } catch (e) { ui.status.textContent = `${e.message}。请确认 outlines.js 和 vendor/ 与 index.html 在同一个文件夹。`; return; }
     const o = window.SKILLTREE_OUTLINES[id];
     const index = new Map();
-    for (const src of new Set(o.outline.map((b) => b.src))) {
-      o.outline.filter((b) => b.src === src).forEach((b, i) => {
-        index.set(`${src}:#${i + 1}`, b);
-        (function walk(it) { if (it.ref) index.set(`${src}:${it.ref}`, it); (it.items || []).forEach(walk); })(b);
-      });
+    const origins = new Map();
+    for (const br of o.outline) {
+      const source = o.sources.find(s => s.key === br.src);
+      (function walk(it, parents = []) {
+        const path = [...parents, it];
+        index.set(it.number, it);
+        origins.set(it, { source, path });
+        (it.items || []).forEach(child => walk(child, path));
+      })(br);
     }
-    cur = { s, o, index, main: o.sources[0].key };
+    cur = { s, o, index, origins, main: o.sources[0].key };
     ui.status.hidden = true;
     renderSide();
     draw();
@@ -143,7 +155,12 @@ window.SkillTreeGuide = (() => {
     if (pref.lang === "zh") return zh;
     return `${zh}<span class="gm-orig" lang="en">${orig}</span>`;
   }
-  const refHtml = (it) => (it.ref ? `<span class="gm-ref">${esc(it.ref)}</span>` : "");
+  const refHtml = (it) => `<span class="gm-ref">${esc(it.number)}</span>`;
+  function originText(it) {
+    const { source, path } = cur.origins.get(it);
+    return `${source.key}《${source.title}》：` + path.map(p =>
+      `${p.ref ? `${p.ref} ` : ""}${p.title}${p.ref ? "" : "（原文未编号）"}`).join(" › ");
+  }
   const fillTag = (br) => (br.src !== cur.main ? `<span class="gm-fill">补·${esc(br.src)}</span>` : "");
 
   // ── mind map: everything expanded and fitted to the window; zoom and pan from there ──
@@ -152,7 +169,7 @@ window.SkillTreeGuide = (() => {
     for (const b of dlg.querySelectorAll("[data-lang]")) b.setAttribute("aria-pressed", String(b.dataset.lang === pref.lang));
     const color = api.color(cur.s.id);
     const node = (it, br) => ({
-      content: `${it === br ? fillTag(br) : ""}${refHtml(it)}${label(it)}`,
+      content: `<span title="${esc(originText(it))}" data-section="${esc(it.number)}">${it === br ? fillTag(br) : ""}${refHtml(it)}${label(it)}</span>`,
       payload: { entry: it, color: br.src === cur.main ? null : FILL_COLOR },
       children: (it.items || []).map((c) => node(c, br)),
     });
@@ -168,7 +185,7 @@ window.SkillTreeGuide = (() => {
       color: (n) => n.payload?.color || color,
     };
     if (!mm) mm = new window.markmap.Markmap(ui.svg, opts);
-    else mm.setOptions(opts);
+    else { mm.setOptions(opts); await mm.setHighlight(); }
     await mm.setData(data);
     await mm.fit();
   }
@@ -186,13 +203,20 @@ window.SkillTreeGuide = (() => {
           ? el("div", { class: "g-toc" }, "目录出处：", (s.toc_urls || []).filter((u) => u !== s.url).map((u, i) =>
             el("a", { href: u, target: "_blank", rel: "noopener noreferrer" }, `链接${i + 1}`)))
           : null))));
+    ui.mapping.replaceChildren(...[...cur.index.values()].map(it => {
+      const { source } = cur.origins.get(it);
+      return el("tr", { "data-section": it.number },
+        el("td", {}, el("button", { class: "g-section-link", onclick: () => reveal(it) }, `${it.number} ${it.zh || it.title}`)),
+        el("td", {}, el("a", { href: source.url, target: "_blank", rel: "noopener noreferrer" }, originText(it))));
+    }));
     ui.coverage.replaceChildren(...o.coverage.map((c) => {
-      const hits = (c.refs || []).map((r) => [r, cur.index.get(r)]).filter(([, it]) => it);
+      const hits = (c.sections || []).map(number => cur.index.get(number)).filter(Boolean);
       return el("li", { class: hits.length ? "" : "gap" },
         el("span", { class: "g-topic" }, hits.length ? "✓ " : "— ", c.topic),
-        hits.length ? el("span", { class: "g-refs" }, hits.map(([r, it]) => el("button", {
-          class: `g-ref${r.startsWith(cur.main + ":") ? "" : " fill"}`, title: it.title, onclick: () => reveal(it),
-        }, `${r.split(":")[0]} ${it.ref || ""} ${it.zh || it.title}`.replace(/\s+/g, " ")))) : null,
+        hits.length ? el("span", { class: "g-refs" }, hits.map(it => el("button", {
+          class: `g-ref${cur.origins.get(it).source.key === cur.main ? "" : " fill"}`, title: originText(it),
+          "data-section": it.number, onclick: () => reveal(it),
+        }, `${it.number} ${it.zh || it.title}`))) : null,
         c.note ? el("span", { class: "g-note" }, c.note) : null);
     }));
     ui.omitted.textContent = o.omitted ? `未收入：${o.omitted}` : "";

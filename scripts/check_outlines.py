@@ -100,17 +100,25 @@ def check(o, skill):
             if depth > 3:
                 problems.append(f"too deep: {t!r}")
     # coverage refs: "A:5.2" (by ref) or "A:#3" (3rd branch of source A)
-    refs = {}
+    refs, aliases = {}, {}
+    def add_refs(items, src, parents=()):
+        for it in items:
+            source_path = (*parents, it.get("ref")) if it.get("ref") else parents
+            if it.get("ref"):
+                for key in {f"{src}:{it['ref']}", f"{src}:{'/'.join(source_path)}"}:
+                    refs.setdefault(key, set()).add(id(it))
+            add_refs(it.get("items") or [], src, source_path)
     for br in outline:
         same = [b for b in outline if b.get("src") == br.get("src")]
-        refs[f"{br.get('src')}:#{same.index(br) + 1}"] = br
-        for it, _ in walk([br]):
-            if it.get("ref"):
-                refs[f"{br.get('src')}:{it['ref']}"] = it
+        aliases[f"{br.get('src')}:#{same.index(br) + 1}"] = {id(br)}
+        add_refs([br], br.get("src"))
     for c in o.get("coverage") or []:
         for r in c.get("refs") or []:
-            if r not in refs:
+            matches = refs.get(r, aliases.get(r, set()))
+            if not matches:
                 problems.append(f"coverage {c.get('topic')!r}: unknown ref {r}")
+            elif len(matches) > 1:
+                problems.append(f"coverage {c.get('topic')!r}: ambiguous ref {r}")
         if not c.get("refs") and not c.get("note"):
             problems.append(f"coverage {c.get('topic')!r}: no refs and no note")
     if not o.get("coverage"):
