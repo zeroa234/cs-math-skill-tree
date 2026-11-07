@@ -148,3 +148,9 @@ python -X utf8 scripts/package_web.py   # 打包离线 zip
 - 代码和本仓库整理的数据：[MIT](LICENSE)。
 - `src/web/vendor/` 里的第三方库沿用各自的许可证。
 - 课程先修原文、教材和课程目录的标题引自各自的来源，只用于引用和核对，版权归原作者；每条都附原始链接。
+
+<!-- cleanup-2026-11-08 -->
+## 2026-11-08 产物清理
+
+`src/promo/node_modules/`、根 `node_modules/` 与 `temp/` 已清理；`src/`（含 `promo/` 源码）、`output/`、`data/`、`docs/`、`reports/` 未动。
+依赖用 `npm install` 重建。完整清单见 `reports/cleanup-index-2026-11-08.md`（相对仓库根）。
