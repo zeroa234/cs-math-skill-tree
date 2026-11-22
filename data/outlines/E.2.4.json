@@ -1,0 +1,397 @@
+{
+ "id": "E.2.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Fundamentals of Wireless Communication",
+   "by": "David Tse, Pramod Viswanath",
+   "year": 2005,
+   "url": "https://web.stanford.edu/~dntse/wireless_book.html",
+   "toc_urls": [
+    "https://web.stanford.edu/~dntse/Chapters_PDF/Fundamentals_Wireless_Communication_chapter1.pdf"
+   ],
+   "why": "节点现有的英文学习资源本身：作者（Stanford 的 Tse）主页上按章公开的官方在线版，第 1 章 PDF 开头就是全书带小节的详细目录；内容是无线信道的物理建模、时频相干、分集、OFDM、多址与蜂窝频率复用、MIMO 全系列，正好覆盖节点简介前七项知识点"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "5G Physical Layer: Principles, Models and Technology Components",
+   "by": "Ali Zaidi, Fredrik Athley, Jonas Medbo, Ulf Gustavsson, Giuseppe Durisi, Xiaoming Chen",
+   "year": 2018,
+   "url": "https://shop.elsevier.com/books/5g-physical-layer/zaidi/978-0-12-814578-4",
+   "toc_urls": [
+    "https://shop.elsevier.com/books/5g-physical-layer/zaidi/978-0-12-814578-4"
+   ],
+   "why": "补 4G/5G 物理层概述：主来源 2005 年出版，只讲到 3G（1.2 Wireless systems），没有 LTE/NR；这本是 Elsevier 官方书页给出的 NR 物理层专著章目录"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "绪论",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Book objective",
+     "zh": "本书目标"
+    },
+    {
+     "ref": "1.2",
+     "title": "Wireless systems",
+     "zh": "无线系统"
+    },
+    {
+     "ref": "1.3",
+     "title": "Book outline",
+     "zh": "全书结构"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "The wireless channel",
+   "zh": "无线信道",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Physical modeling for wireless channels",
+     "zh": "无线信道的物理建模"
+    },
+    {
+     "ref": "2.2",
+     "title": "Input /output model of the wireless channel",
+     "zh": "无线信道的输入输出模型"
+    },
+    {
+     "ref": "2.3",
+     "title": "Time and frequency coherence",
+     "zh": "时间与频率相干性"
+    },
+    {
+     "ref": "2.4",
+     "title": "Statistical channel models",
+     "zh": "统计信道模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Point-to-point communication: detection, diversity and channel uncertainity",
+   "zh": "点对点通信：检测、分集与信道不确定性",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Detection in a Rayleigh fading channel",
+     "zh": "瑞利衰落信道中的检测"
+    },
+    {
+     "ref": "3.2",
+     "title": "Time diversity",
+     "zh": "时间分集"
+    },
+    {
+     "ref": "3.3",
+     "title": "Antenna diversity",
+     "zh": "天线分集"
+    },
+    {
+     "ref": "3.4",
+     "title": "Frequency diversity",
+     "zh": "频率分集"
+    },
+    {
+     "ref": "3.5",
+     "title": "Impact of channel uncertainty",
+     "zh": "信道不确定性的影响"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Cellular systems: multiple access and interference management",
+   "zh": "蜂窝系统：多址接入与干扰管理",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Introduction",
+     "zh": "导论"
+    },
+    {
+     "ref": "4.2",
+     "title": "Narrowband cellular systems",
+     "zh": "窄带蜂窝系统"
+    },
+    {
+     "ref": "4.3",
+     "title": "Wideband systems: CDMA",
+     "zh": "宽带系统：CDMA"
+    },
+    {
+     "ref": "4.4",
+     "title": "Wideband systems: OFDM",
+     "zh": "宽带系统：OFDM"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Capacity of wireless channels",
+   "zh": "无线信道的容量",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "AWGN channel capacity",
+     "zh": "AWGN 信道容量"
+    },
+    {
+     "ref": "5.3",
+     "title": "Linear time-invariant Gaussian channels",
+     "zh": "线性时不变高斯信道"
+    },
+    {
+     "ref": "5.4",
+     "title": "Capacity of fading channels",
+     "zh": "衰落信道容量"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Multiuser capacity and opportunistic communication",
+   "zh": "多用户容量与机会通信",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Uplink AWGN channel",
+     "zh": "上行 AWGN 信道"
+    },
+    {
+     "ref": "6.2",
+     "title": "Downlink AWGN channel",
+     "zh": "下行 AWGN 信道"
+    },
+    {
+     "ref": "6.6",
+     "title": "Multiuser diversity",
+     "zh": "多用户分集"
+    },
+    {
+     "ref": "6.7",
+     "title": "Multiuser diversity: system aspects",
+     "zh": "多用户分集的系统层面"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "MIMO I: spatial multiplexing and channel modeling",
+   "zh": "MIMO I：空间复用与信道建模",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Multiplexing capability of deterministic MIMO channels",
+     "zh": "确定性 MIMO 信道的复用能力"
+    },
+    {
+     "ref": "7.2",
+     "title": "Physical modeling of MIMO channels",
+     "zh": "MIMO 信道的物理建模"
+    },
+    {
+     "ref": "7.3",
+     "title": "Modeling of MIMO fading channels",
+     "zh": "MIMO 衰落信道建模"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "MIMO II: capacity and multiplexing architectures",
+   "zh": "MIMO II：容量与复用架构",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "The V-BLAST architecture",
+     "zh": "V-BLAST 架构"
+    },
+    {
+     "ref": "8.2",
+     "title": "Fast fading MIMO channel",
+     "zh": "快衰落 MIMO 信道"
+    },
+    {
+     "ref": "8.3",
+     "title": "Receiver architectures",
+     "zh": "接收机架构"
+    },
+    {
+     "ref": "8.5",
+     "title": "D-BLAST: an outage-optimal architecture",
+     "zh": "D-BLAST：中断最优架构"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "MIMO III: diversity–multiplexing tradeoff and universal space-time codes",
+   "zh": "MIMO III：分集-复用折中与通用空时码",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Diversity–multiplexing tradeoff",
+     "zh": "分集-复用折中"
+    },
+    {
+     "ref": "9.2",
+     "title": "Universal code design for optimal diversity–multiplexing tradeoff",
+     "zh": "达到最优分集-复用折中的通用码设计"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "MIMO IV: multiuser communication",
+   "zh": "MIMO IV：多用户通信",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Uplink with multiple receive antennas",
+     "zh": "多接收天线的上行"
+    },
+    {
+     "ref": "10.3",
+     "title": "Downlink with multiple transmit antennas",
+     "zh": "多发射天线的下行"
+    },
+    {
+     "ref": "10.5",
+     "title": "Multiple antennas in cellular networks: a system view",
+     "zh": "蜂窝网中的多天线：系统视角"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "1",
+   "title": "5G Radio Access",
+   "zh": "5G 无线接入",
+   "fill": "4G/5G 物理层概述：主来源只讲到 3G 系统",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "2",
+   "title": "NR Physical Layer: Overview",
+   "zh": "NR 物理层概述",
+   "fill": "4G/5G 物理层概述：LTE/NR 物理层结构的整体框架",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "NR Waveform",
+   "zh": "NR 波形",
+   "fill": "OFDM 在 5G NR 中的具体形态（CP-OFDM、DFT 扩展 OFDM）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "7",
+   "title": "Multi-antenna Techniques",
+   "zh": "多天线技术",
+   "fill": "MIMO 在 5G NR 中的工程实现（大规模天线、波束赋形）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "无线信道与路径损耗",
+   "refs": [
+    "A:2.1",
+    "A:2.2"
+   ]
+  },
+  {
+   "topic": "多径衰落与多普勒",
+   "refs": [
+    "A:2.3",
+    "A:2.4",
+    "A:2.1"
+   ]
+  },
+  {
+   "topic": "分集技术",
+   "refs": [
+    "A:3.1",
+    "A:3.2",
+    "A:3.3",
+    "A:3.4",
+    "A:5.4"
+   ]
+  },
+  {
+   "topic": "OFDM",
+   "refs": [
+    "A:3.4",
+    "A:4.4",
+    "B:6"
+   ]
+  },
+  {
+   "topic": "MIMO",
+   "refs": [
+    "A:7",
+    "A:8",
+    "A:9",
+    "A:10",
+    "B:7"
+   ]
+  },
+  {
+   "topic": "多址接入",
+   "refs": [
+    "A:4.2",
+    "A:4.3",
+    "A:6.1",
+    "A:6.2",
+    "A:10.1"
+   ]
+  },
+  {
+   "topic": "蜂窝系统与频率复用",
+   "refs": [
+    "A:4.1",
+    "A:4.2",
+    "A:10.5"
+   ]
+  },
+  {
+   "topic": "4G/5G物理层概述",
+   "refs": [
+    "B:1",
+    "B:2"
+   ],
+   "note": "主来源 2005 年出版，1.2 只讲到 3G；4G/5G 的物理层由 B（Elsevier 官方书页的章目录）补"
+  }
+ ],
+ "omitted": "A 的第 5 章只收了 5.1/5.3/5.4（5.2 是 AWGN 信道资源，偏信息论基础）；各章的 Bibliographical notes、Exercises 与附录 A（Detection and estimation in additive Gaussian noise）、附录 B（Information theory from first principles）按规则未收；B 的第 3、4、5、8、9 章（传播与信道建模、硬件损伤建模、多载波波形、信道编码、仿真器）与节点简介无关，未收。",
+ "notes": "A 的目录从作者主页的 chapter1 PDF 前 7 页（全书 Contents）抄出，章标题第 3 章的 “uncertainity” 是书上的原拼写，照抄。B 的 TOC 来自 Elsevier shop 的官方书页，只到章一级。原先想用 3GPP TS 38.211/38.300 补 5G 物理层，但 3GPP 只提供 docx/zip、ETSI 的对应 PDF 地址猜不中（404），research_tool 也读不了 docx，故改用出版社书页。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 49,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,608 @@
+{
+ "id": "E.3.1",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Principles of Power Electronics, Second Edition",
+   "by": "John G. Kassakian, David J. Perreault, George C. Verghese, Martin F. Schlecht",
+   "year": 2023,
+   "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/",
+   "toc_urls": [
+    "https://assets.cambridge.org/97813165/19516/frontmatter/9781316519516_frontmatter.pdf"
+   ],
+   "why": "节点现有的英文资源 MIT 6.622 的指定教材（Syllabus 里写明使用 KPVS 2nd ed 预印本），也是电力电子最经典的教材之一；Cambridge 官方资产管理服务器上的 frontmatter PDF 给出完整章节目录，整流器、相控变换器、PWM DC/DC、逆变器、谐振与软开关、动态模型与控制、器件、磁性元件设计全部有专章，正好覆盖节点简介的八项知识点"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "绪论",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Power Electronic Circuits",
+     "zh": "电力电子电路"
+    },
+    {
+     "ref": "1.2",
+     "title": "Power Semiconductor Switches",
+     "zh": "功率半导体开关"
+    },
+    {
+     "ref": "1.3",
+     "title": "Transformers",
+     "zh": "变压器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Form and Function: An Overview",
+   "zh": "形式与功能概述",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Functions of a Power Circuit",
+     "zh": "功率电路的功能"
+    },
+    {
+     "ref": "2.2",
+     "title": "AC/DC Converters",
+     "zh": "AC/DC 变换器"
+    },
+    {
+     "ref": "2.3",
+     "title": "DC/DC Converters",
+     "zh": "DC/DC 变换器"
+    },
+    {
+     "ref": "2.4",
+     "title": "AC/AC Converters",
+     "zh": "AC/AC 变换器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Introduction to Rectifiers",
+   "zh": "整流器导论",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Power in Electrical Networks",
+     "zh": "电网中的功率"
+    },
+    {
+     "ref": "3.3",
+     "title": "AC-Side Reactance and Current Commutation",
+     "zh": "交流侧电抗与电流换相"
+    },
+    {
+     "ref": "3.4",
+     "title": "Measures and Effects of Distortion",
+     "zh": "畸变的度量与影响"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Phase-Controlled Converters",
+   "zh": "相控变换器",
+   "items": [
+    {
+     "ref": "4.2",
+     "title": "Phase Control with AC-Side Reactance",
+     "zh": "计及交流侧电抗的相控"
+    },
+    {
+     "ref": "4.3",
+     "title": "Inversion Limits",
+     "zh": "逆变极限"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Pulse-Width-Modulated DC/DC Converters",
+   "zh": "脉宽调制 DC/DC 变换器",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "The DC/DC Converter Topology",
+     "zh": "DC/DC 变换器拓扑"
+    },
+    {
+     "ref": "5.2",
+     "title": "The Canonical Switching Cell",
+     "zh": "规范开关单元"
+    },
+    {
+     "ref": "5.3",
+     "title": "Direct Converter",
+     "zh": "直接变换器"
+    },
+    {
+     "ref": "5.4",
+     "title": "Indirect Converter",
+     "zh": "间接变换器"
+    },
+    {
+     "ref": "5.5",
+     "title": "Other PWM DC/DC Converters",
+     "zh": "其他 PWM DC/DC 变换器"
+    },
+    {
+     "ref": "5.9",
+     "title": "Converter Operation with Discontinuous Conduction",
+     "zh": "断续导通模式下的变换器运行"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Isolated Pulse-Width-Modulated DC/DC Converters",
+   "zh": "隔离型脉宽调制 DC/DC 变换器",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Single-Ended Isolated Forward Converter",
+     "zh": "单端正激隔离变换器"
+    },
+    {
+     "ref": "7.4",
+     "title": "Flyback Converter",
+     "zh": "反激变换器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Single-Phase Switched-Mode DC/AC Converters",
+   "zh": "单相开关型 DC/AC 变换器",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Basic Variable-Frequency Bridge Converter",
+     "zh": "基本变频桥式变换器"
+    },
+    {
+     "ref": "8.2",
+     "title": "Harmonic Reduction",
+     "zh": "谐波抑制"
+    },
+    {
+     "ref": "8.3",
+     "title": "Pulse-Width-Modulated DC/AC Converters",
+     "zh": "脉宽调制 DC/AC 变换器"
+    },
+    {
+     "ref": "8.4",
+     "title": "Current Control of Inverters",
+     "zh": "逆变器的电流控制"
+    },
+    {
+     "ref": "8.5",
+     "title": "Multi-level Converters",
+     "zh": "多电平变换器"
+    },
+    {
+     "ref": "8.8",
+     "title": "Power Balance in Single-Phase DC/AC Converters",
+     "zh": "单相 DC/AC 变换器的功率平衡"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Polyphase Sources and Converters",
+   "zh": "多相电源与变换器",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Polyphase Sources",
+     "zh": "多相电源"
+    },
+    {
+     "ref": "9.4",
+     "title": "Phase-Controlled Three-Phase Converters",
+     "zh": "相控三相变换器"
+    },
+    {
+     "ref": "9.6",
+     "title": "Three-Phase Inverters",
+     "zh": "三相逆变器"
+    },
+    {
+     "ref": "9.7",
+     "title": "Space-Vector Representation and Modulation for Three-Phase Systems",
+     "zh": "三相系统的空间矢量表示与调制"
+    },
+    {
+     "ref": "9.8",
+     "title": "Multi-Level Inverters",
+     "zh": "多电平逆变器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Resonant Converters",
+   "zh": "谐振变换器",
+   "items": [
+    {
+     "ref": "10.3",
+     "title": "Resonant Converter Analysis",
+     "zh": "谐振变换器分析"
+    },
+    {
+     "ref": "10.4",
+     "title": "Soft Switching of Resonant Converters",
+     "zh": "谐振变换器的软开关"
+    },
+    {
+     "ref": "10.5",
+     "title": "Resonant DC/DC Converters",
+     "zh": "谐振 DC/DC 变换器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Dynamic Models and Control: An Overview",
+   "zh": "动态模型与控制概述",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Dynamic Behavior of Power Converters",
+     "zh": "功率变换器的动态行为"
+    },
+    {
+     "ref": "12.2",
+     "title": "Dynamic Models",
+     "zh": "动态模型"
+    },
+    {
+     "ref": "12.3",
+     "title": "Averaged-Circuit Models",
+     "zh": "平均电路模型"
+    },
+    {
+     "ref": "12.4",
+     "title": "Linearized Models",
+     "zh": "线性化模型"
+    },
+    {
+     "ref": "12.5",
+     "title": "Feedback Control",
+     "zh": "反馈控制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Averaged-Circuit and State-Space Models",
+   "zh": "平均电路与状态空间模型",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Averaged-Circuit Models",
+     "zh": "平均电路模型"
+    },
+    {
+     "ref": "13.3",
+     "title": "Continuous-Time State-Space Models",
+     "zh": "连续时间状态空间模型"
+    },
+    {
+     "ref": "13.4",
+     "title": "Discrete-Time or Sampled-Data Models",
+     "zh": "离散时间（采样数据）模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "14",
+   "title": "Linear Models and Feedback Control",
+   "zh": "线性模型与反馈控制",
+   "items": [
+    {
+     "ref": "14.1",
+     "title": "Linearization",
+     "zh": "线性化"
+    },
+    {
+     "ref": "14.4",
+     "title": "Analysis of Continuous-Time LTI Models",
+     "zh": "连续时间 LTI 模型分析"
+    },
+    {
+     "ref": "14.8",
+     "title": "Feedback Control Design",
+     "zh": "反馈控制设计"
+    },
+    {
+     "ref": "14.9",
+     "title": "Multi-Loop Control",
+     "zh": "多环控制"
+    },
+    {
+     "ref": "14.11",
+     "title": "Digital Control",
+     "zh": "数字控制"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "16",
+   "title": "Review of Semiconductor Devices",
+   "zh": "半导体器件复习",
+   "items": [
+    {
+     "ref": "16.2",
+     "title": "Simple Analysis of a Diode",
+     "zh": "二极管的简化分析"
+    },
+    {
+     "ref": "16.4",
+     "title": "MOSFET",
+     "zh": "MOSFET"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Power Semiconductor Devices",
+   "zh": "功率半导体器件",
+   "items": [
+    {
+     "ref": "17.1",
+     "title": "Bipolar Diode",
+     "zh": "双极型二极管"
+    },
+    {
+     "ref": "17.5",
+     "title": "Power MOSFET",
+     "zh": "功率 MOSFET"
+    },
+    {
+     "ref": "17.6",
+     "title": "Superjunction MOSFET",
+     "zh": "超结 MOSFET"
+    },
+    {
+     "ref": "17.7",
+     "title": "IGBT",
+     "zh": "IGBT"
+    },
+    {
+     "ref": "17.8",
+     "title": "Silicon Carbide and Gallium Nitride Devices",
+     "zh": "碳化硅与氮化镓器件"
+    },
+    {
+     "ref": "17.9",
+     "title": "Thyristor",
+     "zh": "晶闸管"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "18",
+   "title": "Introduction to Magnetics",
+   "zh": "磁学导论",
+   "items": [
+    {
+     "ref": "18.1",
+     "title": "Inductor",
+     "zh": "电感"
+    },
+    {
+     "ref": "18.2",
+     "title": "Saturation, Hysteresis, and Residual Flux",
+     "zh": "饱和、磁滞与剩磁"
+    },
+    {
+     "ref": "18.3",
+     "title": "Losses In Magnetic Components",
+     "zh": "磁性元件的损耗"
+    },
+    {
+     "ref": "18.4",
+     "title": "Transformers",
+     "zh": "变压器"
+    },
+    {
+     "ref": "18.5",
+     "title": "Magnetic Material Properties",
+     "zh": "磁性材料特性"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "20",
+   "title": "Introduction to Magnetics Design",
+   "zh": "磁性元件设计导论",
+   "items": [
+    {
+     "ref": "20.1",
+     "title": "Filter Inductor Design and Core Factor",
+     "zh": "滤波电感设计与磁芯系数"
+    },
+    {
+     "ref": "20.2",
+     "title": "Thermal Constraints in Magnetics Design",
+     "zh": "磁性设计的散热约束"
+    },
+    {
+     "ref": "20.3",
+     "title": "Inductor Energy Storage Limits",
+     "zh": "电感储能极限"
+    },
+    {
+     "ref": "20.4",
+     "title": "AC Magnetics Sizing and Core Area Product",
+     "zh": "交流磁性元件选型与磁芯面积积"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "21",
+   "title": "Magnetics Loss Analysis and Design",
+   "zh": "磁性元件损耗分析与设计",
+   "items": [
+    {
+     "ref": "21.2",
+     "title": "Winding Loss Calculation",
+     "zh": "绕组损耗计算"
+    },
+    {
+     "ref": "21.3",
+     "title": "Core Loss",
+     "zh": "磁芯损耗"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "24",
+   "title": "Snubber Circuits, Clamps, and Soft Switching",
+   "zh": "缓冲电路、钳位与软开关",
+   "items": [
+    {
+     "ref": "24.1",
+     "title": "Turn-Off Snubber",
+     "zh": "关断缓冲电路"
+    },
+    {
+     "ref": "24.2",
+     "title": "Turn-On Snubber",
+     "zh": "开通缓冲电路"
+    },
+    {
+     "ref": "24.3",
+     "title": "Combined Turn-On/Turn-Off Snubber",
+     "zh": "开通/关断复合缓冲电路"
+    },
+    {
+     "ref": "24.6",
+     "title": "Soft Switching",
+     "zh": "软开关"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "功率半导体器件",
+   "refs": [
+    "A:16",
+    "A:17",
+    "A:17.1",
+    "A:17.5",
+    "A:17.7",
+    "A:17.8",
+    "A:17.9"
+   ]
+  },
+  {
+   "topic": "整流电路",
+   "refs": [
+    "A:3",
+    "A:3.1",
+    "A:3.3",
+    "A:4",
+    "A:9.4"
+   ]
+  },
+  {
+   "topic": "DC-DC变换器",
+   "refs": [
+    "A:5",
+    "A:5.1",
+    "A:5.2",
+    "A:5.3",
+    "A:5.4",
+    "A:7"
+   ]
+  },
+  {
+   "topic": "逆变器",
+   "refs": [
+    "A:8",
+    "A:8.1",
+    "A:9.6",
+    "A:9.8"
+   ]
+  },
+  {
+   "topic": "PWM控制",
+   "refs": [
+    "A:5",
+    "A:8.3",
+    "A:9.7",
+    "A:14.8"
+   ]
+  },
+  {
+   "topic": "软开关",
+   "refs": [
+    "A:10.4",
+    "A:24.6",
+    "A:24.3"
+   ]
+  },
+  {
+   "topic": "变换器建模与控制",
+   "refs": [
+    "A:12",
+    "A:12.3",
+    "A:13",
+    "A:13.1",
+    "A:13.3",
+    "A:14",
+    "A:14.4",
+    "A:14.11"
+   ]
+  },
+  {
+   "topic": "磁性元件设计",
+   "refs": [
+    "A:18",
+    "A:18.1",
+    "A:18.4",
+    "A:20",
+    "A:20.1",
+    "A:20.4",
+    "A:21",
+    "A:21.3"
+   ]
+  }
+ ],
+ "omitted": "A 的第 6 章（Switched-Capacitor and Related Converters）、第 11 章（AC/AC Converters）、第 15 章（Components and Devices: An Overview，与第 16、17、18 章重复的概述）、第 19 章（Magnetic Component Modeling）、第 22、23 章（门极驱动的概述与专章）、第 25 章（Thermal Modeling and Heat Sinking）、第 26 章（Electromagnetic Interference and Filtering）与节点简介的八项知识点无关或与其他章重复，未收。另：PDF 文本提取把若干小节的字母抽坏（如 “Rectioer”“Conoguration”“Innuence”），这些小节（3.2、3.5、4.1、2.5、8.6、8.7、8.9、9.3、9.5、17.2、17.4、19.3、19.5、19.6）无法与原文逐字核对，按规则未收，改用同章中可核对的小节。",
+ "notes": "节点现有英文资源是 MIT 6.622（Spring 2023），其 Syllabus 指定教材即 KPVS 2nd ed（2023），所以导览图与“去哪学”是同一份材料。目录来自 Cambridge 官方 assets 服务器上该书 frontmatter PDF 的 Contents（第 6–12 页），已按页逐段抄录；PDF 里的 “A veraged”“T opology” 之类断词已按正确拼写合并。Erickson & Maksimović《Fundamentals of Power Electronics》3rd ed 的 Springer front matter 也打开核对过（http://link.springer.com/content/pdf/bfm:978-3-030-43881-4/1），但它没有独立的整流器/逆变器专章（整流只有第 21 章 PWM 整流器，逆变器只散在第 22 章），不如 KPVS 贴合节点简介。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 88,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

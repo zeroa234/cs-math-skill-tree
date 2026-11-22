@@ -477,6 +477,9 @@
         el("span", { class: "chip", title: D.depths[s.entry]?.goal }, `入门层 D${s.entry} ${D.depths[s.entry]?.name || ""}`),
         el("span", { class: "chip" }, `深度 ${s.levels.map((l) => "D" + l).join(" ")}`),
         s.optional ? el("span", { class: "chip", title: s.scope }, "选修") : null,
+        // Which curriculum standards count it as core: CS2023 (CS), CE2016 (CE), the Chinese national standard (EE).
+        ...(s.optional ? [] : (s.standards?.length ? s.standards : [""]).map((std) =>
+          el("span", { class: "chip", title: s.scope }, { CS2023: "CS 主干", CE2016: "CE 主干", "国标": "EE 主干" }[std] || "主干"))),
         s.prereqStatus === "verified"
           ? el("span", { class: "chip ok", title: "必须/推荐前置已用真实课程的先修要求核实" }, "前置已核实")
           : el("span", { class: "chip warn", title: "按常见课程体系起草，还在找真实课程证据" }, "前置待核实")),

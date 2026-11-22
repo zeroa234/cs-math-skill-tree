@@ -1,0 +1,229 @@
+{
+ "id": "E.1.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Electromagnetics and Applications (Chapter 12: Optical Communications)",
+   "by": "David H. Staelin (MIT 6.013)",
+   "year": 2011,
+   "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/mit6_013_s09_coursetextbook.pdf"
+   ],
+   "why": "MIT 开放教材的光通信章，是能找到的唯一把“光波导—光纤—激光器—探测器/复用器”写成章→节→小节三层、且与节点逐条对得上的权威来源（节点现有课程只有逐讲主题）。"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "Fundamentals of Photonics: Quantum Electronics (6.974), Spring 2006",
+   "by": "Franz Kärtner, MIT OpenCourseWare",
+   "year": 2006,
+   "url": "https://ocw.mit.edu/courses/6-974-fundamentals-of-photonics-quantum-electronics-spring-2006/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-974-fundamentals-of-photonics-quantum-electronics-spring-2006/pages/lecture-notes/"
+   ],
+   "why": "节点现有英文资源；补光纤中的色散/损耗、光放大器与激光器增益、电光与声光调制这三块 A 章里没有的内容。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Optical Communications",
+   "zh": "光通信",
+   "items": [
+    {
+     "ref": "12.1",
+     "title": "Introduction to optical communication links",
+     "zh": "光通信链路导论",
+     "items": [
+      {
+       "ref": "12.1.1",
+       "title": "Introduction to optical communications and photonics",
+       "zh": "光通信与光子学导论"
+      },
+      {
+       "ref": "12.1.2",
+       "title": "Applications of photonics",
+       "zh": "光子学的应用"
+      },
+      {
+       "ref": "12.1.3",
+       "title": "Link equations",
+       "zh": "链路方程"
+      },
+      {
+       "ref": "12.1.4",
+       "title": "Examples of optical communications systems",
+       "zh": "光通信系统实例"
+      }
+     ]
+    },
+    {
+     "ref": "12.2",
+     "title": "Optical waveguides",
+     "zh": "光波导",
+     "items": [
+      {
+       "ref": "12.2.1",
+       "title": "Dielectric slab waveguides",
+       "zh": "介质平板波导"
+      },
+      {
+       "ref": "12.2.2",
+       "title": "Optical fibers",
+       "zh": "光纤"
+      }
+     ]
+    },
+    {
+     "ref": "12.3",
+     "title": "Lasers",
+     "zh": "激光器",
+     "items": [
+      {
+       "ref": "12.3.1",
+       "title": "Physical principles of stimulated emission and laser amplification",
+       "zh": "受激辐射与激光放大的物理原理"
+      },
+      {
+       "ref": "12.3.2",
+       "title": "Laser oscillators",
+       "zh": "激光振荡器"
+      }
+     ]
+    },
+    {
+     "ref": "12.4",
+     "title": "Optical detectors, multiplexers, interferometers, and switches",
+     "zh": "光探测器、复用器、干涉仪与光开关",
+     "items": [
+      {
+       "ref": "12.4.1",
+       "title": "Phototubes",
+       "zh": "光电管"
+      },
+      {
+       "ref": "12.4.2",
+       "title": "Photodiodes",
+       "zh": "光电二极管"
+      },
+      {
+       "ref": "12.4.3",
+       "title": "Frequency-multiplexing devices and filters",
+       "zh": "频率复用器件与滤波器"
+      },
+      {
+       "ref": "12.4.4",
+       "title": "Interferometers",
+       "zh": "干涉仪"
+      },
+      {
+       "ref": "12.4.5",
+       "title": "Optical switches",
+       "zh": "光开关"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "2-12",
+   "title": "Optical Fibers",
+   "zh": "光纤",
+   "fill": "光纤中的色散与损耗（A 章只给光纤的结构与模式）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "20-22",
+   "title": "Rate Equations, Dispersion, Absorption and Gain",
+   "zh": "速率方程、色散、吸收与增益",
+   "fill": "色散、吸收与增益的物理机制（激光介质层面）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "23-26",
+   "title": "Optical Amplifiers and Lasers",
+   "zh": "光放大器与激光器",
+   "fill": "光放大器（掺铒光纤放大器一类）与激光器动力学",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "23-26",
+   "title": "Electro- and Acousto-Optic Modulation",
+   "zh": "电光与声光调制",
+   "fill": "光调制器（电光/声光调制）",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "光波导与光纤模式",
+   "refs": [
+    "A:12.2",
+    "A:12.2.1",
+    "A:12.2.2",
+    "B:2-12"
+   ]
+  },
+  {
+   "topic": "色散与损耗",
+   "refs": [
+    "B:2-12",
+    "B:20-22"
+   ],
+   "note": "6.013 第 12 章只讲光纤结构与链路，没有单列色散/损耗小节；6.974 的 Optical Fibers 与 Rate Equations, Dispersion, Absorption and Gain 两讲覆盖光纤损耗、色散与增益介质，但课程页只有讲次标题、没有讲内小节。"
+  },
+  {
+   "topic": "半导体激光器与LED",
+   "refs": [
+    "A:12.3.1",
+    "A:12.3.2",
+    "B:#3"
+   ],
+   "note": "两个来源都只到激光器/受激辐射原理层面，没有半导体激光器与 LED 的器件结构与材料章节。"
+  },
+  {
+   "topic": "光电探测器",
+   "refs": [
+    "A:12.4.1",
+    "A:12.4.2"
+   ]
+  },
+  {
+   "topic": "光调制器",
+   "refs": [
+    "B:#4",
+    "A:12.4.5"
+   ]
+  },
+  {
+   "topic": "光放大器",
+   "refs": [
+    "A:12.3.1",
+    "B:#3"
+   ]
+  },
+  {
+   "topic": "光纤通信系统与波分复用",
+   "refs": [
+    "A:12.1",
+    "A:12.1.4",
+    "A:12.4.3"
+   ]
+  }
+ ],
+ "omitted": "A 只收第 12 章；同书的静场、传输线、天线等章与本节点无关，第 9 章（电磁波与波导）留给 E.1.1。B 只收与节点相关的四讲；量子力学、Rabi 振荡、锁模、光孤子等讲次不在节点范围内。",
+ "notes": "两次尝试用 Agrawal《Fiber-Optic Communication Systems》作主来源都失败：Wiley 产品页的目录在页面里是转义后的 JS 字符串（research_tool 的文本抽取读不到），官方样章 PDF 是扫描图（无文字层），Wiley Online Library 直接 403；6.974 的章 PDF 里小节是量子理论（二能级原子、Bloch 方程），对器件/系统层面没用。因此主来源改用 6.013 教材第 12 章，6.974 作补充。半导体激光器/LED 与光纤色散/损耗两块只有原理级覆盖，已在 coverage 里注明。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 22,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

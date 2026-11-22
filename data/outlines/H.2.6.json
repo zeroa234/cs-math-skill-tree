@@ -1,0 +1,216 @@
+{
+ "id": "H.2.6",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Design of Analog CMOS Integrated Circuits, 2nd Edition",
+   "by": "Behzad Razavi",
+   "year": 2017,
+   "url": "https://www.mheducation.ca/design-of-analog-cmos-integrated-circuits-9780072524932-can",
+   "toc_urls": [
+    "https://www.mheducation.ca/design-of-analog-cmos-integrated-circuits-9780072524932-can"
+   ],
+   "why": "McGraw Hill 官方产品页给出的完整章目录：MOS 器件物理 → 单级/差分放大器 → 电流镜与偏置 → 频率响应 → 噪声 → 反馈 → 运放 → 稳定性与频率补偿 → 带隙基准 → 开关电容电路 → 非线性与失配 → 振荡器，正好覆盖节点简介的九项知识点，是模拟集成电路设计课最通用的研究生教材"
+  },
+  {
+   "key": "B",
+   "kind": "notes",
+   "title": "Analysis and Design of Analog Integrated Circuits（CppSim 公开讲义系列）",
+   "by": "CppSim / circuit_lectures",
+   "year": 0,
+   "url": "https://www.cppsim.com/circuit_lectures.html",
+   "toc_urls": [
+    "https://www.cppsim.com/circuit_lectures.html"
+   ],
+   "why": "补数据转换器概述：主来源没有 ADC/DAC 章，该讲义系列有 Sampling、Digital to Analog Conversion、Analog to Digital Conversion 三讲（也是节点现有的英文学习资源）"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction to Analog Design",
+   "zh": "模拟设计导论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Basic MOS Device Physics",
+   "zh": "MOS 器件物理基础",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Single-Stage Amplifiers",
+   "zh": "单级放大器",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Differential Amplifiers",
+   "zh": "差分放大器",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Current Mirrors and Biasing Techniques",
+   "zh": "电流镜与偏置技术",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Frequency Response of Amplifiers",
+   "zh": "放大器的频率响应",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Noise",
+   "zh": "噪声",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Feedback",
+   "zh": "反馈",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Operational Amplifiers",
+   "zh": "运算放大器",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Stability and Frequency Compensation",
+   "zh": "稳定性与频率补偿",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "12",
+   "title": "Bandgap References",
+   "zh": "带隙基准",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Introduction to Switched-Capacitor Circuits",
+   "zh": "开关电容电路导论",
+   "items": []
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Short-Channel Effects and Device Models",
+   "zh": "短沟道效应与器件模型",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Sampling",
+   "title": "Sampling",
+   "zh": "采样",
+   "fill": "开关电容电路的采样基础，主来源只在第 13 章导论里涉及",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Digital to Analog Conversion",
+   "title": "Digital to Analog Conversion",
+   "zh": "数模转换",
+   "fill": "数据转换器概述：主来源没有 DAC 章",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "Analog to Digital Conversion",
+   "title": "Analog to Digital Conversion",
+   "zh": "模数转换",
+   "fill": "数据转换器概述：主来源没有 ADC 章",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "MOS 器件模型与小信号分析",
+   "refs": [
+    "A:2",
+    "A:17"
+   ]
+  },
+  {
+   "topic": "单级与差分放大器",
+   "refs": [
+    "A:3",
+    "A:4"
+   ]
+  },
+  {
+   "topic": "电流镜与偏置",
+   "refs": [
+    "A:5"
+   ]
+  },
+  {
+   "topic": "频率响应与稳定性",
+   "refs": [
+    "A:6",
+    "A:10"
+   ]
+  },
+  {
+   "topic": "运算放大器设计与补偿",
+   "refs": [
+    "A:9",
+    "A:10"
+   ]
+  },
+  {
+   "topic": "噪声分析",
+   "refs": [
+    "A:7"
+   ]
+  },
+  {
+   "topic": "带隙基准",
+   "refs": [
+    "A:12"
+   ]
+  },
+  {
+   "topic": "开关电容",
+   "refs": [
+    "A:13",
+    "B:Sampling"
+   ]
+  },
+  {
+   "topic": "数据转换器概述",
+   "refs": [
+    "B:Digital to Analog Conversion",
+    "B:Analog to Digital Conversion"
+   ]
+  }
+ ],
+ "omitted": "A 的第 11 章（Nanometer Design Studies）、第 14 章（Nonlinearity and Mismatch）、第 15 章（Oscillators）、第 16 章（Phase-Locked Loops）、第 18 章（CMOS Processing Technology）、第 19 章（Layout and Packaging）与节点简介的九项知识点不对应，未收。",
+ "notes": "上一版用了托管在行业杂志站（img.electronicdesign.com）的 Wiley 前置页目录 PDF，不合格，已删除；Wiley 的该书产品页（5th/6th Edition 各种 slug）要么 404，要么目录标签是 JS 渲染、HTML 里也没有 TOC 数据（media.wiley.com 上的 excerpt 只有索引页），LOC catdir 没有这本书的目录页，故改用 McGraw Hill 官方产品页的 Razavi《Design of Analog CMOS Integrated Circuits》2nd ed 作为主来源。代价是 McGraw Hill 上架页只列到章（19 章）、没有节级目录，所以本节点 12 个主分支都是章级（0 叶）；第二轮若需要节级，可去 Springer 的 Sansen《Analog Design Essentials》各章页，或按 Razavi 各章首页的小节标题补。节点简介里的“数据转换器”由 B（CppSim 讲义）补，“开关电容”主来源第 13 章加 B 的 Sampling 讲。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 16,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,516 @@
+{
+ "id": "E.2.5",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Adaptive Filter Theory, Fifth Edition",
+   "by": "Simon Haykin",
+   "year": 2014,
+   "url": "https://www.pearson.com/en-us/subject-catalog/p/adaptive-filter-theory/P200000003258/9780132671453",
+   "toc_urls": [
+    "https://www.pearson.de/media/muster/toc/toc_9780273775720.pdf"
+   ],
+   "why": "自适应滤波的标准教材（Pearson 官方公开的第 5 版国际版目录 PDF，列到节）；维纳滤波与正交原理、最速下降、LMS 与收敛性、归一化 LMS、RLS、格型/最小二乘格型、系统辨识与回声消除逐条对应，深度符合 D3/D4。"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Wiener Filters",
+   "zh": "维纳滤波器",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Linear Optimum Filtering: Statement of the Problem",
+     "zh": "线性最优滤波：问题的提法"
+    },
+    {
+     "ref": "2.2",
+     "title": "Principle of Orthogonality",
+     "zh": "正交原理"
+    },
+    {
+     "ref": "2.3",
+     "title": "Minimum Mean-Square Error",
+     "zh": "最小均方误差"
+    },
+    {
+     "ref": "2.4",
+     "title": "Wiener-Hopf Equations",
+     "zh": "维纳—霍普夫方程"
+    },
+    {
+     "ref": "2.5",
+     "title": "Error-Performance Surface",
+     "zh": "误差性能曲面"
+    },
+    {
+     "ref": "2.6",
+     "title": "Multiple Linear Regression Model",
+     "zh": "多元线性回归模型"
+    },
+    {
+     "ref": "2.7",
+     "title": "Example",
+     "zh": "示例"
+    },
+    {
+     "ref": "2.8",
+     "title": "Linearly Constrained Minimum-Variance Filter",
+     "zh": "线性约束最小方差滤波器"
+    },
+    {
+     "ref": "2.9",
+     "title": "Generalized Sidelobe Cancellers",
+     "zh": "广义旁瓣相消器"
+    },
+    {
+     "ref": "2.10",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Linear Prediction",
+   "zh": "线性预测",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Forward Linear Prediction",
+     "zh": "前向线性预测"
+    },
+    {
+     "ref": "3.2",
+     "title": "Backward Linear Prediction",
+     "zh": "后向线性预测"
+    },
+    {
+     "ref": "3.3",
+     "title": "Levinson-Durbin Algorithm",
+     "zh": "Levinson-Durbin 算法"
+    },
+    {
+     "ref": "3.4",
+     "title": "Properties of Prediction-Error Filters",
+     "zh": "预测误差滤波器的性质"
+    },
+    {
+     "ref": "3.5",
+     "title": "Schur-Cohn Test",
+     "zh": "Schur-Cohn 判据"
+    },
+    {
+     "ref": "3.6",
+     "title": "Autoregressive Modeling of a Stationary Stochastic Process",
+     "zh": "平稳随机过程的自回归建模"
+    },
+    {
+     "ref": "3.7",
+     "title": "Cholesky Factorization",
+     "zh": "Cholesky 分解"
+    },
+    {
+     "ref": "3.8",
+     "title": "Lattice Predictors",
+     "zh": "格型预测器"
+    },
+    {
+     "ref": "3.9",
+     "title": "All-Pole, All-Pass Lattice Filter",
+     "zh": "全极点、全通格型滤波器"
+    },
+    {
+     "ref": "3.10",
+     "title": "Joint-Process Estimation",
+     "zh": "联合过程估计"
+    },
+    {
+     "ref": "3.11",
+     "title": "Predictive Modeling of Speech",
+     "zh": "语音的预测建模"
+    },
+    {
+     "ref": "3.12",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Method of Steepest Descent",
+   "zh": "最速下降法",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Basic Idea of the Steepest-Descent Algorithm",
+     "zh": "最速下降算法的基本思想"
+    },
+    {
+     "ref": "4.2",
+     "title": "The Steepest-Descent Algorithm Applied to the Wiener Filter",
+     "zh": "最速下降算法用于维纳滤波器"
+    },
+    {
+     "ref": "4.3",
+     "title": "Stability of the Steepest-Descent Algorithm",
+     "zh": "最速下降算法的稳定性"
+    },
+    {
+     "ref": "4.4",
+     "title": "Example",
+     "zh": "示例"
+    },
+    {
+     "ref": "4.5",
+     "title": "The Steepest-Descent Algorithm Viewed as a Deterministic Search Method",
+     "zh": "最速下降算法作为确定性搜索方法"
+    },
+    {
+     "ref": "4.6",
+     "title": "Virtue and Limitation of the Steepest-Descent Algorithm",
+     "zh": "最速下降算法的优点与局限"
+    },
+    {
+     "ref": "4.7",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Method of Stochastic Gradient Descent",
+   "zh": "随机梯度下降法",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Principles of Stochastic Gradient Descent",
+     "zh": "随机梯度下降的原理"
+    },
+    {
+     "ref": "5.2",
+     "title": "Application 1: Least-Mean-Square (LMS) Algorithm",
+     "zh": "应用一：最小均方（LMS）算法"
+    },
+    {
+     "ref": "5.3",
+     "title": "Application 2: Gradient-Adaptive Lattice Filtering Algorithm",
+     "zh": "应用二：梯度自适应格型滤波算法"
+    },
+    {
+     "ref": "5.4",
+     "title": "Other Applications of Stochastic Gradient Descent",
+     "zh": "随机梯度下降的其他应用"
+    },
+    {
+     "ref": "5.5",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "The Least-Mean-Square (LMS) Algorithm",
+   "zh": "最小均方（LMS）算法",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Signal-Flow Graph",
+     "zh": "信号流图"
+    },
+    {
+     "ref": "6.2",
+     "title": "Optimality Considerations",
+     "zh": "最优性考虑"
+    },
+    {
+     "ref": "6.3",
+     "title": "Applications",
+     "zh": "应用"
+    },
+    {
+     "ref": "6.4",
+     "title": "Statistical Learning Theory",
+     "zh": "统计学习理论"
+    },
+    {
+     "ref": "6.5",
+     "title": "Transient Behavior and Convergence Considerations",
+     "zh": "瞬态行为与收敛性"
+    },
+    {
+     "ref": "6.6",
+     "title": "Efficiency",
+     "zh": "效率"
+    },
+    {
+     "ref": "6.7",
+     "title": "Computer Experiment on Adaptive Prediction",
+     "zh": "自适应预测的计算机实验"
+    },
+    {
+     "ref": "6.8",
+     "title": "Computer Experiment on Adaptive Equalization",
+     "zh": "自适应均衡的计算机实验"
+    },
+    {
+     "ref": "6.9",
+     "title": "Computer Experiment on a Minimum-Variance Distortionless-Response Beamformer",
+     "zh": "最小方差无失真响应波束形成器的计算机实验"
+    },
+    {
+     "ref": "6.10",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Normalized Least-Mean-Square (LMS) Algorithm and Its Generalization",
+   "zh": "归一化最小均方（LMS）算法及其推广",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Normalized LMS Algorithm: The Solution to a Constrained Optimization Problem",
+     "zh": "归一化 LMS 算法：约束优化问题的解"
+    },
+    {
+     "ref": "7.2",
+     "title": "Stability of the Normalized LMS Algorithm",
+     "zh": "归一化 LMS 算法的稳定性"
+    },
+    {
+     "ref": "7.3",
+     "title": "Step-Size Control for Acoustic Echo Cancellation",
+     "zh": "声学回声消除中的步长控制"
+    },
+    {
+     "ref": "7.4",
+     "title": "Geometric Considerations Pertaining to the Convergence Process for Real-Valued Data",
+     "zh": "实数据收敛过程的几何解释"
+    },
+    {
+     "ref": "7.5",
+     "title": "Affine Projection Adaptive Filters",
+     "zh": "仿射投影自适应滤波器"
+    },
+    {
+     "ref": "7.6",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "The Recursive Least-Squares (RLS) Algorithm",
+   "zh": "递推最小二乘（RLS）算法",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "Some Preliminaries",
+     "zh": "预备知识"
+    },
+    {
+     "ref": "10.2",
+     "title": "The Matrix Inversion Lemma",
+     "zh": "矩阵求逆引理"
+    },
+    {
+     "ref": "10.3",
+     "title": "The Exponentially Weighted RLS Algorithm",
+     "zh": "指数加权 RLS 算法"
+    },
+    {
+     "ref": "10.4",
+     "title": "Selection of the Regularization Parameter",
+     "zh": "正则化参数的选择"
+    },
+    {
+     "ref": "10.5",
+     "title": "Updated Recursion for the Sum of Weighted Error Squares",
+     "zh": "加权误差平方和递推更新"
+    },
+    {
+     "ref": "10.6",
+     "title": "Example: Single-Weight Adaptive Noise Canceller",
+     "zh": "示例：单权自适应噪声抵消器"
+    },
+    {
+     "ref": "10.7",
+     "title": "Statistical Learning Theory",
+     "zh": "统计学习理论"
+    },
+    {
+     "ref": "10.8",
+     "title": "Efficiency",
+     "zh": "效率"
+    },
+    {
+     "ref": "10.9",
+     "title": "Computer Experiment on Adaptive Equalization",
+     "zh": "自适应均衡的计算机实验"
+    },
+    {
+     "ref": "10.10",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "13",
+   "title": "Adaptation in Nonstationary Environments",
+   "zh": "非平稳环境下的自适应",
+   "items": [
+    {
+     "ref": "13.1",
+     "title": "Causes and Consequences of Nonstationarity",
+     "zh": "非平稳性的成因与后果"
+    },
+    {
+     "ref": "13.2",
+     "title": "The System Identification Problem",
+     "zh": "系统辨识问题"
+    },
+    {
+     "ref": "13.3",
+     "title": "Degree of Nonstationarity",
+     "zh": "非平稳程度"
+    },
+    {
+     "ref": "13.4",
+     "title": "Criteria for Tracking Assessment",
+     "zh": "跟踪性能的评价准则"
+    },
+    {
+     "ref": "13.5",
+     "title": "Tracking Performance of the LMS Algorithm",
+     "zh": "LMS 算法的跟踪性能"
+    },
+    {
+     "ref": "13.6",
+     "title": "Tracking Performance of the RLS Algorithm",
+     "zh": "RLS 算法的跟踪性能"
+    },
+    {
+     "ref": "13.7",
+     "title": "Comparison of the Tracking Performance of LMS and RLS Algorithms",
+     "zh": "LMS 与 RLS 跟踪性能的比较"
+    },
+    {
+     "ref": "13.8",
+     "title": "Tuning of Adaptation Parameters",
+     "zh": "自适应参数整定"
+    },
+    {
+     "ref": "13.9",
+     "title": "Incremental Delta-Bar-Delta (IDBD) Algorithm",
+     "zh": "增量 delta-bar-delta（IDBD）算法"
+    },
+    {
+     "ref": "13.10",
+     "title": "Autostep Method",
+     "zh": "Autostep 方法"
+    },
+    {
+     "ref": "13.11",
+     "title": "Computer Experiment: Mixture of Stationary and Nonstationary Environmental Data",
+     "zh": "计算机实验：平稳与非平稳环境数据的混合"
+    },
+    {
+     "ref": "13.12",
+     "title": "Summary and Discussion",
+     "zh": "小结与讨论"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "维纳滤波与正交原理",
+   "refs": [
+    "A:2",
+    "A:2.1",
+    "A:2.2",
+    "A:2.4"
+   ]
+  },
+  {
+   "topic": "最速下降法",
+   "refs": [
+    "A:4",
+    "A:4.1",
+    "A:4.3"
+   ]
+  },
+  {
+   "topic": "LMS算法及其收敛性",
+   "refs": [
+    "A:5.2",
+    "A:6",
+    "A:6.5"
+   ]
+  },
+  {
+   "topic": "归一化LMS",
+   "refs": [
+    "A:7",
+    "A:7.1",
+    "A:7.2"
+   ]
+  },
+  {
+   "topic": "RLS算法",
+   "refs": [
+    "A:10",
+    "A:10.3"
+   ]
+  },
+  {
+   "topic": "格型滤波器",
+   "refs": [
+    "A:3.8",
+    "A:3.9",
+    "A:5.3"
+   ]
+  },
+  {
+   "topic": "自适应噪声对消与均衡",
+   "refs": [
+    "A:6.3",
+    "A:6.8",
+    "A:10.6"
+   ]
+  },
+  {
+   "topic": "系统辨识与回声消除",
+   "refs": [
+    "A:13.2",
+    "A:7.3"
+   ]
+  }
+ ],
+ "omitted": "未收第 1 章（随机过程与模型，属先修）、第 8 章（块自适应与频域自适应）、第 9 章（最小二乘方法本身的推导）、第 11 章（鲁棒性）、第 12 章（有限字长效应）、第 14 章（卡尔曼滤波，属另一节点）、第 15–17 章（平方根算法、阶递推/最小二乘格型深入、盲反卷积），以及各章 Problems 与附录 A–H。",
+ "notes": "目录取自 Pearson 官方公开的第 5 版国际版目录 PDF（pearson.de/media/muster/toc，页 3–9，逐节）。PDF 里个别词被连写（LevinsonDurbin、WienerHopf、SchurCohn）已按正确拼写录入。节点现有英文资源 NPTEL《Introduction to Adaptive Signal Processing》课程页是 JS 渲染、只有课程标题，没有可抄的讲次主题；先修证据里 UCAS 两门课的中文大纲第五章—第十四章虽覆盖 LMS/RLS/格型，但属课程大纲而非教材目录，故未用。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 80,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

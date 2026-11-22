@@ -1,0 +1,518 @@
+{
+ "id": "H.2.8",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "VLSI Physical Design: From Graph Partitioning to Timing Closure",
+   "by": "Andrew B. Kahng, Jens Lienig, Igor L. Markov, Jin Hu",
+   "year": 2022,
+   "url": "https://www.ifte.de/books/eda/index.html",
+   "toc_urls": [
+    "https://www.ifte.de/books/eda/index.html"
+   ],
+   "why": "Springer 出版、作者之一 Jens Lienig（德累斯顿工业大学）在个人主页公开的完整章节目录：EDA 术语与设计流程 → 电路划分 → 芯片规划 → 布局 → 全局/详细布线 → 专用布线 → 时序收敛，章→节两层齐全，正好是节点“物理设计类算法”的主干"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Electronic Design Automation: Synthesis, Verification, and Test",
+   "by": "Laung-Terng Wang, Yao-Wen Chang, Kwang-Ting Cheng (eds.)",
+   "year": 2009,
+   "url": "https://shop.elsevier.com/books/electronic-design-automation/wang/978-0-12-374364-0",
+   "toc_urls": [
+    "https://shop.elsevier.com/books/electronic-design-automation/wang/978-0-12-374364-0"
+   ],
+   "why": "补主来源不讲的逻辑综合与布尔优化（第 6 章 Logic Synthesis in a Nutshell，含技术映射）、电路仿真算法（第 8 章 Logic and Circuit Simulation）与功能验证（第 9 章）；Morgan Kaufmann 的 EDA 标准手册，编者是 SynTest / 台大 / 伯克利的 EDA 教授"
+  },
+  {
+   "key": "C",
+   "kind": "docs",
+   "title": "KLayout User Manual（DRC / LVS 章节）",
+   "by": "KLayout Project（Matthias Köfferlein）",
+   "year": 2024,
+   "url": "https://www.klayout.de/doc.html",
+   "toc_urls": [
+    "https://www.klayout.de/doc/manual/drc.html",
+    "https://www.klayout.de/doc/manual/lvs.html"
+   ],
+   "why": "补物理验证（DRC/LVS）：主来源与 B 都只把物理验证限制在版图设计规则层面，KLayout 是开源版图工具，其官方手册的 DRC 与 LVS 章节目录给出设计规则检查与版图-原理图一致性比对的实际流程"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction",
+   "zh": "绪论",
+   "items": [
+    {
+     "ref": "1.1",
+     "title": "Electronic Design Automation",
+     "zh": "电子设计自动化"
+    },
+    {
+     "ref": "1.2",
+     "title": "VLSI Design Flow",
+     "zh": "VLSI 设计流程"
+    },
+    {
+     "ref": "1.3",
+     "title": "VLSI Design Style",
+     "zh": "VLSI 设计方式"
+    },
+    {
+     "ref": "1.4",
+     "title": "Layout Layers and Design Rules",
+     "zh": "版图层与设计规则"
+    },
+    {
+     "ref": "1.5",
+     "title": "Physical Design Optimization",
+     "zh": "物理设计优化"
+    },
+    {
+     "ref": "1.6",
+     "title": "Algorithms and Complexity",
+     "zh": "算法与复杂度"
+    },
+    {
+     "ref": "1.7",
+     "title": "Graph Theory Terminology",
+     "zh": "图论术语"
+    },
+    {
+     "ref": "1.8",
+     "title": "Common EDA Terminology",
+     "zh": "常用 EDA 术语"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Netlist and System Partitioning",
+   "zh": "网表与系统划分",
+   "items": [
+    {
+     "ref": "2.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "2.2",
+     "title": "Terminology",
+     "zh": "术语"
+    },
+    {
+     "ref": "2.3",
+     "title": "Optimization Goals",
+     "zh": "优化目标"
+    },
+    {
+     "ref": "2.4",
+     "title": "Partitioning Algorithms",
+     "zh": "划分算法"
+    },
+    {
+     "ref": "2.5",
+     "title": "A Framework for Multilevel Partitioning",
+     "zh": "多级划分框架"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Chip Planning",
+   "zh": "芯片规划",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Introduction to Floorplanning",
+     "zh": "布图规划简介"
+    },
+    {
+     "ref": "3.2",
+     "title": "Optimization Goals in Floorplanning",
+     "zh": "布图规划的优化目标"
+    },
+    {
+     "ref": "3.3",
+     "title": "Terminology",
+     "zh": "术语"
+    },
+    {
+     "ref": "3.4",
+     "title": "Floorplan Representations",
+     "zh": "布图表示方法"
+    },
+    {
+     "ref": "3.5",
+     "title": "Floorplanning Algorithms",
+     "zh": "布图规划算法"
+    },
+    {
+     "ref": "3.6",
+     "title": "Pin Assignment",
+     "zh": "引脚分配"
+    },
+    {
+     "ref": "3.7",
+     "title": "Power and Ground Routing",
+     "zh": "电源与地线布线"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Global and Detailed Placement",
+   "zh": "全局布局与详细布局",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "4.2",
+     "title": "Optimization Objectives",
+     "zh": "优化目标"
+    },
+    {
+     "ref": "4.3",
+     "title": "Global Placement",
+     "zh": "全局布局"
+    },
+    {
+     "ref": "4.4",
+     "title": "Legalization and Detailed Placement",
+     "zh": "合法化与详细布局"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Global Routing",
+   "zh": "全局布线",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "5.2",
+     "title": "Terminology and Definitions",
+     "zh": "术语与定义"
+    },
+    {
+     "ref": "5.3",
+     "title": "Optimization Goals",
+     "zh": "优化目标"
+    },
+    {
+     "ref": "5.4",
+     "title": "Representations of Routing Regions",
+     "zh": "布线区域的表示"
+    },
+    {
+     "ref": "5.5",
+     "title": "The Global Routing Flow",
+     "zh": "全局布线流程"
+    },
+    {
+     "ref": "5.6",
+     "title": "Single-Net Routing",
+     "zh": "单线网布线"
+    },
+    {
+     "ref": "5.7",
+     "title": "Full-Netlist Routing",
+     "zh": "全网表布线"
+    },
+    {
+     "ref": "5.8",
+     "title": "Modern Global Routing",
+     "zh": "现代全局布线"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Detailed Routing",
+   "zh": "详细布线",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Terminology",
+     "zh": "术语"
+    },
+    {
+     "ref": "6.2",
+     "title": "Horizontal and Vertical Constraint Graphs",
+     "zh": "水平与垂直约束图"
+    },
+    {
+     "ref": "6.3",
+     "title": "Channel Routing Algorithms",
+     "zh": "通道布线算法"
+    },
+    {
+     "ref": "6.4",
+     "title": "Switchbox Routing",
+     "zh": "开关盒布线"
+    },
+    {
+     "ref": "6.5",
+     "title": "Over-the-Cell and Gcell Routing Algorithms",
+     "zh": "跨单元与 Gcell 布线算法"
+    },
+    {
+     "ref": "6.6",
+     "title": "Modern Challenges in Detailed Routing",
+     "zh": "详细布线的现代挑战"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Specialized Routing",
+   "zh": "专用布线",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Area Routing",
+     "zh": "区域布线"
+    },
+    {
+     "ref": "7.2",
+     "title": "Non-Manhattan Routing",
+     "zh": "非曼哈顿布线"
+    },
+    {
+     "ref": "7.3",
+     "title": "Clock Routing",
+     "zh": "时钟布线"
+    },
+    {
+     "ref": "7.4",
+     "title": "Modern Clock Tree Synthesis",
+     "zh": "现代时钟树综合"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Timing Closure",
+   "zh": "时序收敛",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "Introduction",
+     "zh": "引言"
+    },
+    {
+     "ref": "8.2",
+     "title": "Timing Analysis and Performance Constraints",
+     "zh": "时序分析与性能约束"
+    },
+    {
+     "ref": "8.3",
+     "title": "Timing-Driven Placement",
+     "zh": "时序驱动布局"
+    },
+    {
+     "ref": "8.4",
+     "title": "Timing-Driven Routing",
+     "zh": "时序驱动布线"
+    },
+    {
+     "ref": "8.5",
+     "title": "Physical Synthesis",
+     "zh": "物理综合"
+    },
+    {
+     "ref": "8.6",
+     "title": "Performance-Driven Design Flow",
+     "zh": "性能驱动设计流程"
+    },
+    {
+     "ref": "8.7",
+     "title": "Conclusions",
+     "zh": "结论"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "Logic Synthesis in a Nutshell",
+   "zh": "逻辑综合精要",
+   "fill": "逻辑综合与布尔优化、技术映射：主来源只讲物理设计，不讲综合",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "8",
+   "title": "Logic and Circuit Simulation",
+   "zh": "逻辑仿真与电路仿真",
+   "fill": "电路仿真算法：主来源完全没有仿真算法的章节",
+   "items": []
+  },
+  {
+   "src": "C",
+   "ref": "Design Rule Check (DRC)",
+   "title": "Design Rule Check (DRC)",
+   "zh": "设计规则检查（DRC）",
+   "fill": "物理验证中的 DRC：两个教材来源都没有专门的规则检查流程章节",
+   "items": [
+    {
+     "ref": "",
+     "title": "Design Rule Checks (DRC) Basics",
+     "zh": "DRC 基础"
+    },
+    {
+     "ref": "",
+     "title": "DRC Runsets",
+     "zh": "DRC 脚本集（runsets）"
+    }
+   ]
+  },
+  {
+   "src": "C",
+   "ref": "Layout vs. Schematic (LVS)",
+   "title": "Layout vs. Schematic (LVS)",
+   "zh": "版图与原理图一致性比对（LVS）",
+   "fill": "物理验证中的 LVS：两个教材来源都没有网表提取与比对流程的章节",
+   "items": [
+    {
+     "ref": "",
+     "title": "Layout vs. Schematic (LVS) Overview",
+     "zh": "LVS 概述"
+    },
+    {
+     "ref": "",
+     "title": "LVS Introduction",
+     "zh": "LVS 导论"
+    },
+    {
+     "ref": "",
+     "title": "LVS Devices",
+     "zh": "LVS 器件"
+    },
+    {
+     "ref": "",
+     "title": "LVS Device Classes",
+     "zh": "LVS 器件类"
+    },
+    {
+     "ref": "",
+     "title": "LVS Device Extractors",
+     "zh": "LVS 器件提取器"
+    },
+    {
+     "ref": "",
+     "title": "LVS Input/Output",
+     "zh": "LVS 输入输出"
+    },
+    {
+     "ref": "",
+     "title": "LVS Connectivity",
+     "zh": "LVS 连接关系"
+    },
+    {
+     "ref": "",
+     "title": "LVS Compare",
+     "zh": "LVS 比对"
+    },
+    {
+     "ref": "",
+     "title": "LVS Netlist Tweaks",
+     "zh": "LVS 网表调整"
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "逻辑综合与布尔优化",
+   "refs": [
+    "B:6"
+   ],
+   "note": "在 B 的第 6 章 Logic Synthesis in a Nutshell 内（含两级/多级优化、BDD、SAT）；该章在上架页只列章名，没有节级目录"
+  },
+  {
+   "topic": "技术映射",
+   "refs": [
+    "B:6"
+   ],
+   "note": "技术映射是 B 第 6 章的组成内容，同样只有章级标题可抄"
+  },
+  {
+   "topic": "电路划分",
+   "refs": [
+    "A:2",
+    "A:2.4",
+    "A:2.5"
+   ]
+  },
+  {
+   "topic": "布局",
+   "refs": [
+    "A:3",
+    "A:3.5",
+    "A:4",
+    "A:4.3",
+    "A:4.4"
+   ]
+  },
+  {
+   "topic": "布线",
+   "refs": [
+    "A:5",
+    "A:6",
+    "A:7",
+    "A:5.5",
+    "A:6.3"
+   ]
+  },
+  {
+   "topic": "静态时序分析",
+   "refs": [
+    "A:8.2",
+    "A:8"
+   ],
+   "note": "本书 8.2 Timing Analysis and Performance Constraints 讲静态时序分析与性能约束，第 8 章其余节讲时序驱动的布局/布线与物理综合"
+  },
+  {
+   "topic": "电路仿真算法",
+   "refs": [
+    "B:8"
+   ]
+  },
+  {
+   "topic": "物理验证",
+   "refs": [
+    "A:1.4",
+    "A:6.6",
+    "C:Design Rule Check (DRC)",
+    "C:Layout vs. Schematic (LVS)"
+   ],
+   "note": "教材来源只在设计规则层面涉及（A 的 1.4 版图层与设计规则、6.6 现代详细布线要满足的制造规则）；DRC/LVS 的实际检查与比对流程由 C（KLayout 官方手册）补"
+  }
+ ],
+ "omitted": "主来源 A 第 9 章是附录（机器学习在物理设计中的应用、习题解答、CMOS 单元版图示例），不是正文章节，未收；B 除逻辑综合与仿真两章外的章节（CMOS 设计基础、可测性设计、算法基础、高层次综合、测试综合、功能验证、布图规划、布局、布线、时钟与电源网络、故障仿真与测试生成）与主来源重复或超出节点简介，未收。",
+ "notes": "现有英文资源（上海科技大学 Pingqiang Zhou 的 VLSI Design Automation 课程站）只有按周排的课表，多数周次只有“Computational Boolean Algebra”这类零散标题、没有节级结构，达不到章→节要求，故改用教材。主来源的目录页是作者主页（ifte.de）上按 2nd edition 2022 全文排的 Contents，包含每章摘要句与 x.y 节标题；书本身的 SpringerLink 页（DOI 10.1007/978-3-030-96415-3）未逐个章节点开，若主代理需要更细的小节可去 SpringerLink 抓各章 front matter。节点简介里的“技术映射”“电路仿真算法”“物理验证”在物理设计教材里天然缺失，由 B（Morgan Kaufmann EDA 手册）补前两项，物理验证只在设计规则层面有对应。本轮补了物理验证：新增来源 C（KLayout 官方手册的 DRC / LVS 章节目录，属开源 EDA 工具的官方文档），把 DRC 与 LVS 的实际检查/比对流程补上；技术映射与逻辑综合仍只有 B 的章级标题，电路仿真算法只有 B 第 8 章。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 72,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

@@ -1,0 +1,610 @@
+{
+ "id": "H.1.4",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Microelectronic Circuits, Sixth Edition",
+   "by": "Adel S. Sedra, Kenneth C. Smith",
+   "year": 2010,
+   "url": "https://catdir.loc.gov/catdir/enhancements/fy1006/2009042633-t.html",
+   "toc_urls": [
+    "https://catdir.loc.gov/catdir/enhancements/fy1006/2009042633-t.html"
+   ],
+   "why": "美国国会图书馆编目页（目录数据由出版社 Oxford University Press 提供）上的完整三级目录：二极管 → MOSFET/BJT 与放大电路 → 集成电路放大器单元（电流源/电流镜/有源负载）→ 差分与多级放大 → 频率响应 → 反馈 → 输出级与功率放大 → 信号发生器与波形整形（振荡器），与节点简介逐条对应"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "“模拟电子技术”课程教学大纲（北京工业大学 2020 版本科课程教学大纲）",
+   "by": "北京工业大学 信息学部",
+   "year": 2020,
+   "url": "https://undergrad.bjut.edu.cn/__local/3/22/0C/A7E8DCAC980BD7E28F429708FA0_04E5543F_36DAFD.pdf",
+   "toc_urls": [
+    "https://undergrad.bjut.edu.cn/__local/3/22/0C/A7E8DCAC980BD7E28F429708FA0_04E5543F_36DAFD.pdf"
+   ],
+   "why": "补稳压电源：主来源只在二极管章讲齐纳稳压，没有整章的稳压电源；北工大模电大纲第九章把整流、滤波、并联稳压、串联稳压、开关稳压列全，是国内模电课的标准切分"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Diodes",
+   "zh": "二极管",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "The Ideal Diode",
+     "zh": "理想二极管"
+    },
+    {
+     "ref": "4.2",
+     "title": "Terminal Characteristics of Junction Diodes",
+     "zh": "结型二极管的端特性"
+    },
+    {
+     "ref": "4.3",
+     "title": "Modeling the Diode Forward Characteristic",
+     "zh": "二极管正向特性的建模"
+    },
+    {
+     "ref": "4.4",
+     "title": "Operation in the Reverse Breakdown Region-Zener Diodes",
+     "zh": "反向击穿区工作——稳压二极管"
+    },
+    {
+     "ref": "4.5",
+     "title": "Rectifier Circuits",
+     "zh": "整流电路"
+    },
+    {
+     "ref": "4.6",
+     "title": "Limiting and Clamping Circuits",
+     "zh": "限幅与钳位电路"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "MOS Field-Effect Transistors (MOSFETs)",
+   "zh": "MOS 场效应晶体管（MOSFET）",
+   "items": [
+    {
+     "ref": "5.1",
+     "title": "Device Structure and Physical Operation",
+     "zh": "器件结构与物理工作原理"
+    },
+    {
+     "ref": "5.2",
+     "title": "Current-Voltage Characteristics",
+     "zh": "电流-电压特性"
+    },
+    {
+     "ref": "5.3",
+     "title": "MOSFET Circuits at DC",
+     "zh": "MOSFET 直流电路"
+    },
+    {
+     "ref": "5.4",
+     "title": "Applying the MOSFET in Amplifier Design",
+     "zh": "MOSFET 在放大器设计中的应用"
+    },
+    {
+     "ref": "5.5",
+     "title": "Small-Signal Operation and Models",
+     "zh": "小信号工作与模型"
+    },
+    {
+     "ref": "5.6",
+     "title": "Basic MOSFET Amplifier Configurations",
+     "zh": "基本 MOSFET 放大组态"
+    },
+    {
+     "ref": "5.7",
+     "title": "Biasing in MOS Amplifier Circuits",
+     "zh": "MOS 放大电路的偏置"
+    },
+    {
+     "ref": "5.8",
+     "title": "Discrete-Circuit MOS Amplifiers",
+     "zh": "分立 MOS 放大器"
+    },
+    {
+     "ref": "5.9",
+     "title": "The Body Effect and Other Topics",
+     "zh": "体效应及其他专题"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Bipolar Junction Transistors (BJTs)",
+   "zh": "双极型晶体管（BJT）",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Device Structure and Physical Operation",
+     "zh": "器件结构与物理工作原理"
+    },
+    {
+     "ref": "6.2",
+     "title": "Current-Voltage Characteristics",
+     "zh": "电流-电压特性"
+    },
+    {
+     "ref": "6.3",
+     "title": "BJT Circuits at DC",
+     "zh": "BJT 直流电路"
+    },
+    {
+     "ref": "6.4",
+     "title": "Applying the BJT in Amplifier Design",
+     "zh": "BJT 在放大器设计中的应用"
+    },
+    {
+     "ref": "6.5",
+     "title": "Small-Signal Operation and Models",
+     "zh": "小信号工作与模型"
+    },
+    {
+     "ref": "6.6",
+     "title": "Basic BJT Amplifier Configurations",
+     "zh": "基本 BJT 放大组态"
+    },
+    {
+     "ref": "6.7",
+     "title": "Biasing in BJT Amplifier Circuits",
+     "zh": "BJT 放大电路的偏置"
+    },
+    {
+     "ref": "6.8",
+     "title": "Discrete-Circuit BJT Amplifier",
+     "zh": "分立 BJT 放大器"
+    },
+    {
+     "ref": "6.9",
+     "title": "Transistor Breakdown and Temperature Effects",
+     "zh": "晶体管击穿与温度效应"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Building Blocks of Integrated-Circuit Amplifiers",
+   "zh": "集成电路放大器的基本单元",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "IC Design Philosophy",
+     "zh": "集成电路设计思想"
+    },
+    {
+     "ref": "7.2",
+     "title": "The Basic Gain Cell",
+     "zh": "基本增益单元"
+    },
+    {
+     "ref": "7.3",
+     "title": "The Cascode Amplifier",
+     "zh": "共源共栅放大器"
+    },
+    {
+     "ref": "7.4",
+     "title": "IC Biasing-Current Sources, Current Mirrors, and Current-Steering Circuits",
+     "zh": "集成偏置——电流源、电流镜与电流引导电路"
+    },
+    {
+     "ref": "7.5",
+     "title": "Current-Mirror Circuits with Improved Performance",
+     "zh": "改进性能的电流镜电路"
+    },
+    {
+     "ref": "7.6",
+     "title": "Some Useful Transistor Pairings",
+     "zh": "几种有用的晶体管组合"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "Differential and Multistage Amplifiers",
+   "zh": "差分放大器与多级放大器",
+   "items": [
+    {
+     "ref": "8.1",
+     "title": "The MOS Differential Pair",
+     "zh": "MOS 差分对"
+    },
+    {
+     "ref": "8.2",
+     "title": "Small-Signal Operation of the MOS Differential Pair",
+     "zh": "MOS 差分对的小信号工作"
+    },
+    {
+     "ref": "8.3",
+     "title": "The BJT Differential Pair",
+     "zh": "BJT 差分对"
+    },
+    {
+     "ref": "8.4",
+     "title": "Other Nonideal Characteristics of the Differential Amplifier",
+     "zh": "差分放大器的其他非理想特性"
+    },
+    {
+     "ref": "8.5",
+     "title": "The Differential Amplifier with Active Load",
+     "zh": "有源负载差分放大器"
+    },
+    {
+     "ref": "8.6",
+     "title": "Multistage Amplifiers",
+     "zh": "多级放大器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "Frequency Response",
+   "zh": "频率响应",
+   "items": [
+    {
+     "ref": "9.1",
+     "title": "Low-Frequency Response of the CS and CE Amplifiers",
+     "zh": "共源与共射放大器的低频响应"
+    },
+    {
+     "ref": "9.2",
+     "title": "Internal Capacitive Effects and the High-Frequency Model of the MOSFET and the BJT",
+     "zh": "内部电容效应与 MOSFET、BJT 的高频模型"
+    },
+    {
+     "ref": "9.3",
+     "title": "High-Frequency Response of the CS and CE Amplifiers",
+     "zh": "共源与共射放大器的高频响应"
+    },
+    {
+     "ref": "9.4",
+     "title": "Useful Tools for the Analysis of the High-Frequency Response of Amplifiers",
+     "zh": "放大器高频响应分析的有用工具"
+    },
+    {
+     "ref": "9.5",
+     "title": "A Closer Look at the High-Frequency Response of the CS and CE Amplifiers",
+     "zh": "共源与共射放大器高频响应的深入分析"
+    },
+    {
+     "ref": "9.6",
+     "title": "High-Frequency Response of the CG and Cascode Amplifiers",
+     "zh": "共栅与共源共栅放大器的高频响应"
+    },
+    {
+     "ref": "9.7",
+     "title": "High-Frequency Response of the Source and Emitter Followers",
+     "zh": "源极跟随器与射极跟随器的高频响应"
+    },
+    {
+     "ref": "9.8",
+     "title": "High-Frequency Response of Differential Amplifiers",
+     "zh": "差分放大器的高频响应"
+    },
+    {
+     "ref": "9.9",
+     "title": "Other Wideband Amplifier Configurations",
+     "zh": "其他宽带放大器组态"
+    },
+    {
+     "ref": "9.10",
+     "title": "High-Frequency Response of Multistage Amplifiers",
+     "zh": "多级放大器的高频响应"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Feedback",
+   "zh": "反馈",
+   "items": [
+    {
+     "ref": "10.1",
+     "title": "The General Feedback Structure",
+     "zh": "一般反馈结构"
+    },
+    {
+     "ref": "10.2",
+     "title": "Some Properties of Negative Feedback",
+     "zh": "负反馈的若干性质"
+    },
+    {
+     "ref": "10.3",
+     "title": "The Four Basic Feedback Topologies",
+     "zh": "四种基本反馈组态"
+    },
+    {
+     "ref": "10.4",
+     "title": "The Feedback Voltage-Amplifier (Series-Shunt)",
+     "zh": "反馈电压放大器（串联-并联）"
+    },
+    {
+     "ref": "10.5",
+     "title": "The Feedback Transconductance-Amplifier (Series-Series)",
+     "zh": "反馈跨导放大器（串联-串联）"
+    },
+    {
+     "ref": "10.6",
+     "title": "The Feedback Transresistance-Amplifier (Shunt-Shunt)",
+     "zh": "反馈跨阻放大器（并联-并联）"
+    },
+    {
+     "ref": "10.7",
+     "title": "The Feedback Current-Amplifier (Shunt-Series)",
+     "zh": "反馈电流放大器（并联-串联）"
+    },
+    {
+     "ref": "10.8",
+     "title": "Summary of the Feedback Analysis Method",
+     "zh": "反馈分析方法小结"
+    },
+    {
+     "ref": "10.9",
+     "title": "Determining the Loop Gain",
+     "zh": "环路增益的确定"
+    },
+    {
+     "ref": "10.10",
+     "title": "The Stability Problem",
+     "zh": "稳定性问题"
+    },
+    {
+     "ref": "10.11",
+     "title": "Effect of Feedback on the Amplifier Poles",
+     "zh": "反馈对放大器极点的影响"
+    },
+    {
+     "ref": "10.12",
+     "title": "Stability Study Using Bode Plots",
+     "zh": "用伯德图研究稳定性"
+    },
+    {
+     "ref": "10.13",
+     "title": "Frequency Compensation",
+     "zh": "频率补偿"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Output Stages and Power Amplifiers",
+   "zh": "输出级与功率放大器",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Classification of Output Stages",
+     "zh": "输出级的分类"
+    },
+    {
+     "ref": "11.2",
+     "title": "Class A Output Stage",
+     "zh": "甲类输出级"
+    },
+    {
+     "ref": "11.3",
+     "title": "Class B Output Stage",
+     "zh": "乙类输出级"
+    },
+    {
+     "ref": "11.4",
+     "title": "Class AB Output Stage",
+     "zh": "甲乙类输出级"
+    },
+    {
+     "ref": "11.5",
+     "title": "Biasing the Class AB Circuit",
+     "zh": "甲乙类电路的偏置"
+    },
+    {
+     "ref": "11.6",
+     "title": "CMOS Class AB Output Stages",
+     "zh": "CMOS 甲乙类输出级"
+    },
+    {
+     "ref": "11.7",
+     "title": "Power BJTs",
+     "zh": "功率双极晶体管"
+    },
+    {
+     "ref": "11.8",
+     "title": "Variations on the Class AB Configuration",
+     "zh": "甲乙类组态的变体"
+    },
+    {
+     "ref": "11.9",
+     "title": "IC Power Amplifiers",
+     "zh": "集成电路功率放大器"
+    },
+    {
+     "ref": "11.10",
+     "title": "MOS Power Transistors",
+     "zh": "MOS 功率晶体管"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "17",
+   "title": "Signal Generators and Waveform-Shaping Circuits",
+   "zh": "信号发生器与波形整形电路",
+   "items": [
+    {
+     "ref": "17.1",
+     "title": "Basic Principles of Sinusoidal Oscillators",
+     "zh": "正弦振荡器的基本原理"
+    },
+    {
+     "ref": "17.2",
+     "title": "Op-Amp-RC Oscillator Circuits",
+     "zh": "运放-RC 振荡电路"
+    },
+    {
+     "ref": "17.3",
+     "title": "LC and Crystal Oscillators",
+     "zh": "LC 振荡器与晶体振荡器"
+    },
+    {
+     "ref": "17.4",
+     "title": "Bistable Multivibrators",
+     "zh": "双稳态多谐振荡器"
+    },
+    {
+     "ref": "17.5",
+     "title": "Generation of Square and Triangular Waveforms Using Astable Multivibrators",
+     "zh": "用无稳态多谐振荡器产生方波与三角波"
+    },
+    {
+     "ref": "17.6",
+     "title": "Generation of a Standardized Pulse-The Monostable Multivibrator",
+     "zh": "标准脉冲的产生：单稳态多谐振荡器"
+    },
+    {
+     "ref": "17.7",
+     "title": "Integrated-Circuit Timers",
+     "zh": "集成电路定时器"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "第九章",
+   "title": "直流稳压电源",
+   "zh": "",
+   "fill": "稳压电源：主来源只讲齐纳二极管稳压，没有整流-滤波-串联/开关稳压的完整章节",
+   "items": [
+    {
+     "ref": "",
+     "title": "整流电路",
+     "zh": ""
+    },
+    {
+     "ref": "",
+     "title": "滤波电路",
+     "zh": ""
+    },
+    {
+     "ref": "",
+     "title": "并联稳压电路",
+     "zh": ""
+    },
+    {
+     "ref": "",
+     "title": "串联稳压电路",
+     "zh": ""
+    },
+    {
+     "ref": "",
+     "title": "开关稳压电路",
+     "zh": ""
+    }
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "二极管电路",
+   "refs": [
+    "A:4",
+    "A:4.1",
+    "A:4.3",
+    "A:4.5",
+    "A:4.6"
+   ]
+  },
+  {
+   "topic": "BJT 与 MOSFET 放大电路",
+   "refs": [
+    "A:5",
+    "A:6",
+    "A:5.6",
+    "A:6.6"
+   ]
+  },
+  {
+   "topic": "差分放大器",
+   "refs": [
+    "A:8",
+    "A:8.1",
+    "A:8.3",
+    "A:8.5"
+   ]
+  },
+  {
+   "topic": "电流源与有源负载",
+   "refs": [
+    "A:7.4",
+    "A:7.5",
+    "A:7.2",
+    "A:7.3"
+   ]
+  },
+  {
+   "topic": "频率响应",
+   "refs": [
+    "A:9",
+    "A:9.2",
+    "A:9.4",
+    "A:9.5"
+   ]
+  },
+  {
+   "topic": "负反馈",
+   "refs": [
+    "A:10",
+    "A:10.1",
+    "A:10.2",
+    "A:10.3",
+    "A:10.11"
+   ]
+  },
+  {
+   "topic": "功率放大器",
+   "refs": [
+    "A:11",
+    "A:11.2",
+    "A:11.3",
+    "A:11.4",
+    "A:11.9"
+   ]
+  },
+  {
+   "topic": "振荡器",
+   "refs": [
+    "A:17",
+    "A:17.1",
+    "A:17.2",
+    "A:17.3"
+   ]
+  },
+  {
+   "topic": "稳压电源",
+   "refs": [
+    "B:第九章",
+    "A:4.4"
+   ],
+   "note": "主来源里稳压只见于二极管章（4.3.8 用二极管正向压降稳压、4.4.2 齐纳管作并联稳压器），整流与滤波在 4.5；完整的整流-滤波-并联稳压-串联稳压-开关稳压序列由补充分支 B（北工大模电大纲第九章）给出"
+  }
+ ],
+ "omitted": "A 第 1 章（Signals and Amplifiers）、第 2 章（Operational Amplifiers）是放大器与理想运放的前置内容，第 3 章（Semiconductors）是半导体物理，第 12 章（Operational Amplifier Circuits）讲运放内部电路，第 13-15 章是数字集成电路与存储器，第 16 章（Filters and Tuned Amplifiers）是滤波器，与节点简介的九项知识点不对应，未收；4.7 Special Diode Types（肖特基、变容管、光电二极管、LED）也略去；各章习题、附录、索引未收。",
+ "notes": "上一版用了 OUP 前置页目录 PDF、但它托管在行业杂志站（img.electronicdesign.com），按要求换成美国国会图书馆编目页 catdir.loc.gov（页面自述“目录数据由出版社提供”），条目是第 6 版（LCCN 2009042633），章号与第 7 版不同（如第 7 版把 BJT 放大电路单列为第 7 章，第 6 版仍在第 6.4-6.8 节内）。目录页没有页码，故不存在去页码问题；原页有实体符号（如 vDS、iD）显示成问号，这些都在小节号之后的标题里不涉及。补齐稳压电源用 B：北工大《模拟电子技术》教学大纲第九章，五个小节原文无编号，ref 留空。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 90,
+  "fuzzy": 1,
+  "dropped": []
+ }
+}
