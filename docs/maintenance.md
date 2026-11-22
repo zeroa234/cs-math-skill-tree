@@ -8,7 +8,8 @@
 data/source/chatgpt-outputs/knowledge-map-data.json   ChatGPT 原图（只读）：节点、简介、相关关系、路线
 data/curation/partition.json                           在原图上合并、删除、新增技能，改名称和简介
 data/curation/granularity.json                         逐技能的单元规模、范围依据与相邻技能边界
-data/curation/scope.json                               对照 CS2023 的主干 / 选修判定依据（知识点 → 知识单元、层级、原文片段）
+data/curation/scope.json                               主干 / 选修判定依据：CS2023（matched/hosts）、CE2016（ce）、国标（cn）
+data/curation/standards-cn.json                        国标条文（扫描件逐字核对过）：哪些知识领域是专业类必修
 data/curation/prereqs.txt                              必须 / 推荐前置（主代理维护）
 data/curation/prereq-notes.json                        每条前置的理由 + 证据摘要
 data/curation/names-en.tsv                             英文名
@@ -43,7 +44,8 @@ src/web/outlines.js     同上，页面第一次打开导览图时才加载
 | `node tests/guide.mjs [id…]` | 用深链打开每张知识导览图，核对画出的节点数、查漏补缺列表、Esc 关闭和地址，桌面和手机各截图一组 |
 | `scripts/research_tool.py fetch <url>` | 打开网页并缓存（免费，PDF 用 pypdf 抽文字）；`extract` 走 Tavily（花额度）读 JS 渲染页面，同样缓存 |
 | `scripts/research_digest.py <id前缀>` | 把 pi 的检索结果压成几行摘要，供主代理判定前置 |
-| `python -X utf8 -I scripts/check_scope.py [--markdown]` | 核对 `scope.json`：每段原文片段都在 CS2023 所引单元的所引层级里，每个被引的知识点都在技能简介里；`--markdown` 输出判定报告里的逐技能表（先 build） |
+| `python -X utf8 -I scripts/check_scope.py [--markdown]` | 核对 `scope.json`：每段 CS2023 片段在所引单元的所引层级里，每段 CE2016 片段在有核心学时的知识单元的核心学习成果里，国标引用的领域在 `standards-cn.json` 的条文里，每个被引的知识点都在技能简介里；`--markdown` 输出判定报告里的逐技能表（先 build） |
+| `TREE_DRAFT=1 node scripts/build.mjs` | 草稿构建：新技能还没有双语路线、资源审核或粒度判定时，这些缺口只警告不报错，产物标 `meta.draft`，供导览图分批、路线校验等中间工具读取。**草稿产物不能发布**，正式构建（不带变量）必须零错误 |
 | `scripts/set_prereqs.py <decisions.json>` | 把一批判定写回 `prereqs.txt` 和 `prereq-notes.json` |
 | `python -X utf8 scripts/merge_skills.py merge/drop/move-source/drop-source …` | 改技能划分时搬数据：前置、理由、课程证据、练习题、导览图来源、学习资源、英文名一起改，见下面“改技能划分” |
 | `scripts/archive_research.py` | 把审核过的检索结果从 `temp/research/nodes/` 归档到 `data/research/nodes/` |
@@ -113,17 +115,22 @@ node scripts/archive-learning-paths.mjs --archive --reviewed <ids>  # 写入 dat
 
 地图上的虚线框（`optional`）和详情里的理由（`scope`）由 `scripts/build.mjs` 按 `data/curation/scope.json` 计算，规则和依据见 `reports/skill-scope-2026-11-01.md`：
 
+树从 2026-11-22 起同时覆盖计算机科学（CS）、计算机工程（CE）和电子电气（EE），所以主干按三份标准判，任一份算核心就是主干（详情面板的“CS 主干 / CE 主干 / EE 主干”标签来自输出的 `standards`）：
+
 - 简介里至少一半的知识点有 CS2023 CS Core / KA Core 原文对应，算主干；
 - `hosts` 标明的技能讲授某个 CS Core 主题，算主干；
+- 简介里至少一半的知识点在 ACM/IEEE CE2016 有核心学时的知识单元里有原文对应（`ce`，只认核心学习成果，不认同一单元里的选修学习成果），算主干；
+- 国标《普通高等学校本科专业类教学质量国家标准》把它的知识领域列为该专业类每个学生都要覆盖的内容（`cn`，条文在 `standards-cn.json`），算主干。只收写明“须涵盖”“包括”的清单；电气类工程/专业基础类课程原文是“有所侧重、取舍”，各专业的专业基础知识是“至少 4 个”，都不算；
 - 主干技能的必须前置也算主干。
 - 其余为选修。领域块只有在全部技能都是选修时才标“选修”。
 
 维护时注意：
 
 - 改了技能简介，`scope.json` 里引用的知识点对不上，构建会直接报错。按新简介重新比对后，跑 `check_scope.py`。
-- 新增技能要加一条判定；没有原文对应的，写 `note` 说明 CS2023 里没有或只在 Non-core。
-- 改了必须前置，主干集合会跟着变，build 输出的 `scope (CS2023)` 一行可以看到数量。
-- CS2023 原文 PDF 通过 `research_tool` 的缓存读取，第一次运行会自动抓取。
+- 新增技能要加一条判定；三份标准都没有原文对应的，写 `note` 说明（例如“国标列在至少 4 个的专业基础知识里，不是全专业类必修”）。
+- 改了必须前置，主干集合会跟着变，build 输出的 `scope (CS2023 / CE2016 / 国标)` 一行可以看到数量。
+- CS2023 和 CE2016 的原文 PDF 通过 `research_tool` 的缓存读取，第一次运行会自动抓取。CE2016 的 KU 以 “Minimum core coverage time” 判核心、以 “Elective Learning Outcome(s)/Objectives” 截断。
+- 国标只有纸质书和高校托管的扫描件（无文字层），`check_scope.py` 只能核对引用结构；改 `standards-cn.json` 的条文前要重新打开扫描页逐字核对（文件里记着扫描件地址和页码）。
 
 ## 改技能划分
 
@@ -131,7 +138,7 @@ node scripts/archive-learning-paths.mjs --archive --reviewed <ids>  # 写入 dat
 
 - `merged`：`{"被并入的 id": "保留的 id"}`。原图里指向被并入技能的前置、相关关系和路线都改指保留的技能。
 - `dropped`：`{"id": "理由"}`。指向它的关系和路线一并去掉。
-- `nodes`：`{"id": {...}}`。对原图节点是覆盖（常用 `name`、`desc`）；新增节点要写全 `parent`、`domain`、`name`、`desc`、`levels`。
+- `nodes`：`{"id": {...}}`。对原图节点是覆盖（常用 `name`、`desc`）；新增节点要写全 `parent`、`domain`、`name`、`desc`、`levels`。新增的领域（`parent: "ROOT"`、`kind: "领域"`）和分支（`kind: "分支"`）也写在这里，例如 2026-11-22 加的 N 物理基础、E 电子信息与电气工程；新领域还要在 `scripts/build.mjs` 的 `DOMAIN_COLORS`、`SHORT`、`DOMAIN_ORDER` 里各加一项。
 
 步骤：
 
