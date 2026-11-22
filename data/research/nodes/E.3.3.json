@@ -1,0 +1,62 @@
+{
+ "id": "E.3.3",
+ "resource": {
+  "tier": "website",
+  "title": "Introduction to Electric Power Systems (MIT 6.061, Spring 2011) — MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册；提供完整讲义（含 Open Textbook：Kirtley《Electric Power Principles》课程开放教材）、11 次作业、2 次测验；纸本 Wiley 版教材需购买",
+  "covers": "课程日历逐讲列出：网络理论/功率、变流器、输电线（telegrapher's equations）、多相系统、变压器与标幺制（'Transformers and per-unit systems'）、对称分量与故障（'Unbalanced circuits: symmetrical components'、'faults, protection'）、HVDC、潮流（'Protection, load flow'）、电机与逆变器。对应简介的标幺值与元件模型、线路参数、潮流计算、对称与不对称故障、频率/电压调整的基本概念；不覆盖：稳定性分析的正式方法、经济调度、新能源并网（这三块需另找资源）",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "UC Berkeley (EECS)",
+   "course": "EE 137A Introduction to Electric Power Systems",
+   "url": "https://www2.eecs.berkeley.edu/Courses/EE137A",
+   "prereq_text": "Prerequisites: Introduction to electric power and renewable energy (ELENG 108).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "E.3.2"
+   ],
+   "scope_text": "Catalog Description: Overview of conventional electric power conversion and delivery, emphasizing a systemic understanding of the electric grid with primary focus at the transmission level ... Topics include aspects of a.c. system design, electric generators, components of transmission and distribution systems, power flow analysis, system planning and operation, performance measures, and limitations of legacy technologies. Course Objectives: ... Demonstrate a basic understanding of methodology and approximations for power flow analysis ... address real and reactive power balance, stability, security, and reliability at the transmission level.",
+   "hours_text": "Units: 4 — Fall/Spring: 3 hours of lecture and 1 hour of discussion per week",
+   "share": "约一半"
+  },
+  {
+   "school": "MIT",
+   "course": "6.2200 Electric Energy Systems",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.2000",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1"
+   ],
+   "scope_text": "Analysis and design of modern power and energy systems. Provides a holistic overview of how electricity is produced, delivered, and managed, including power electronics, machines and supply technologies, grid optimization and control, grid planning, markets, and regulation. Students apply the material covered to consider critical challenges associated with global energy systems, including electrification, decarbonization, resilience, and load growth.",
+   "hours_text": "4-0-8 units",
+   "share": "约一半"
+  },
+  {
+   "school": "华北电力大学（中国大学MOOC）",
+   "course": "电力系统分析基础",
+   "url": "https://www.icourse163.org/course/NCEPU-1472547171",
+   "prereq_text": "预备知识：本门课程需要先修的课程：高等数学，线性代数，电路，电磁场，电机学",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2",
+    "M.1.3",
+    "M.3.1",
+    "H.1.1",
+    "E.1.1",
+    "E.3.2"
+   ],
+   "scope_text": "《电力系统分析》是华北电力大学电气工程及其自动化专业的核心课程。主要研究输电线路、变压器等电网元件的参数和数学模型，潮流计算、调频与调压、短路的基本概念，潮流计算、调频与调压、短路计算的基本原理和方法等。（授课目标：理解电力系统潮流计算的基本概念…掌握调频、调压的基本原理…掌握短路计算的基本方法）",
+   "hours_text": null,
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断：M.3.1（线性代数）由华北电力大学 MOOC 先修明列“线性代数”支持，Berkeley 侧亦有 MATH 54（EE 108 的先修）→ supported。H.1.1 由 MIT 6.2200 'Prereq: 6.2000'（电路课）与华电 MOOC“电路”支持 → supported。E.3.2（电机与电力拖动）在候选里是“推荐前置”，但华电 MOOC 把“电机学”写进必修先修原文，证据强于推荐 → 记 supported（比清单里的建议更强）。M.8.1（误差、稳定性与数值线性代数）三门课先修里均未出现；潮流计算正文里会用 Newton 法等数值方法，但不是先修课 → not_mentioned。另核对到北京交通大学《电力系统分析》MOOC（https://www.icourse163.org/course/NJTU-1003359009，内容原文 '电力系统基本概念、潮流计算、有功平衡与频率调整、无功平衡与电压调整、短路计算、静态及暂态稳定性分析'，覆盖稳定性与经济调度之外的频率/电压调整），其先修栏在我抓到的页面里为空，因此没有用它作先修证据；CU Boulder ECEN 5417 Power System Analysis（内容含 'the per unit system ... both AC and DC powerflow formulations'，但只有 'Recommended: Corequisite ECEN 5407'）与 ECEN 5447 Power System Dynamics with Renewable Energy 可作研究生层参考，均未列入 courses。Berkeley EE 137A 的 mapped_ids 里 H.1.1/H.1.3/M.3.1/M.2.1/N.1.2 来自其先修 EE 108 的先修原文（同一批打开过 EE 108 页面）。"
+}

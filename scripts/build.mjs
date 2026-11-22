@@ -38,12 +38,16 @@ const LANE_PAD_Y = 16;
 const DOMAIN_COLORS = {
   M: "#2f7fd1", F: "#7a5bd6", P: "#1f9d74", C: "#d1792f", D: "#b8952a", A: "#c2499a",
   S: "#d0463b", H: "#5f7f22", V: "#1c97ad", I: "#7b7f8c", X: "#9a6b4f",
+  N: "#5a6fa8", E: "#2f8a4e", // physics and EE, added 2026-11-22
 };
+// Domains added in partition.json come after the original ones in the source; this puts them next to the domain they build on.
+const DOMAIN_ORDER = ["M", "N", "F", "P", "C", "D", "A", "S", "H", "E", "V", "I", "X"];
 
 // Short names for compact labels (overview roads, "先学" hints).
 const SHORT = {
   M1: "数学·分析", M2: "数学·代数离散", M3: "数学·概率优化", F: "理论", P: "程序设计", C: "系统与网络", D: "数据",
   A: "人工智能", S: "安全", H: "硬件与嵌入式", V: "图形与交互", I: "信息系统", X: "交叉前沿",
+  N: "物理", E: "电子信息与电气",
 };
 
 // Lanes = domains, except mathematics (57 skills), which is split by branch so each lane stays readable.
@@ -58,6 +62,12 @@ function fail(msg) {
   console.error("BUILD ERROR:", msg);
   process.exit(1);
 }
+// TREE_DRAFT=1: while new skills are being researched, a missing learning path or resource review is a warning, so
+// the intermediate tools (outline batches, learning-path archiving, scope check) can read a fresh output. The output
+// is marked meta.draft; never publish a draft build.
+const DRAFT = process.env.TREE_DRAFT === "1";
+const drafts = [];
+const incomplete = (msg) => (DRAFT ? drafts.push(msg) : fail(msg));
 
 // ── load ─────────────────────────────────────────────────────────────
 const src = readJson(rel("data/source/chatgpt-outputs/knowledge-map-data.json"));
@@ -72,7 +82,8 @@ for (const [a, k] of Object.entries(partition.merged)) if (removed.has(k) || !sr
 const added = Object.entries(partition.nodes).filter(([id]) => !srcIds.has(id));
 for (const [id, n] of added) {
   for (const f of ["parent", "domain", "name", "desc", "levels"]) if (!n[f]) fail(`partition: new node ${id} lacks ${f}`);
-  if (!srcIds.has(n.parent)) fail(`partition: new node ${id} has unknown parent ${n.parent}`);
+  // a new node may hang under an original node, under another new node (new domains and branches), or at the root
+  if (n.parent !== "ROOT" && !srcIds.has(n.parent) && !(n.parent in partition.nodes)) fail(`partition: new node ${id} has unknown parent ${n.parent}`);
 }
 const srcNodes = [
   ...src.nodes.filter((n) => !removed.has(n.id)).map((n) => ({ ...n, ...(partition.nodes[n.id] || {}) })),
@@ -193,7 +204,7 @@ function prereqEntry(id, q, kind) {
 const learningPaths = readLearningPaths(rel("data/curation/learning-paths"), new Map(skills.map(s => [s.id, { ...s, descNotes: descNotesOf.get(s.id) || [] }])));
 for (const skill of skills) {
   const record = learningPaths.get(skill.id);
-  if (!record) fail(`missing bilingual learning path for ${skill.id}`);
+  if (!record) { incomplete(`missing bilingual learning path for ${skill.id}`); continue; }
   for (const lang of ["zh", "en"]) for (const topic of record.routes[lang].gaps) {
     if (!record.crossLanguageFallbacks.some(f => f.lang_missing === lang && f.topic === topic)) {
       fail(`${skill.id}: unresolved ${lang} learning topic ${topic}`);
@@ -217,8 +228,8 @@ for (const id of Object.keys(resourceReview.chineseGaps)) {
   if (!skillIds.has(id)) fail(`unknown Chinese resource gap ${id}`);
 }
 for (const id of skillIds) {
-  if (!resourceReview.english[id]?.review) fail(`missing English resource review for ${id}`);
-  if (!!resourceReview.chinese[id] === !!resourceReview.chineseGaps[id]) fail(`specify one Chinese resource or gap for ${id}`);
+  if (!resourceReview.english[id]?.review) incomplete(`missing English resource review for ${id}`);
+  if (!!resourceReview.chinese[id] === !!resourceReview.chineseGaps[id]) incomplete(`specify one Chinese resource or gap for ${id}`);
 }
 function resourceOf(resource) {
   if (!resource?.url) return null;
@@ -292,22 +303,38 @@ function downstream(id, seen = new Set()) {
   return seen;
 }
 
-// Scope against CS2023 (data/curation/scope.json; every cited fragment is checked by scripts/check_scope.py).
-// Main tree = (1) at least half of the description items are CS Core / KA Core topics, or (2) the skill is where a
-// CS Core topic is taught, or (3) a required prerequisite of such a skill. Everything else is optional.
+// Scope against three curriculum standards (data/curation/scope.json; scripts/check_scope.py checks every citation):
+// CS2023 for computer science, CE2016 for computer engineering, the Chinese national standard for electronic and
+// electrical engineering (data/curation/standards-cn.json, 2026-11-22). Main tree = (1) at least half of the
+// description items are CS2023 CS Core / KA Core topics, or (2) the skill is where a CS Core topic is taught, or
+// (3) at least half of the items are in CE2016 units with core hours, or (4) the national standard lists the skill's
+// field among what every student of that 专业类 must cover, or (5) a required prerequisite of such a skill.
+// Everything else is optional. `standards` names the standards under which a skill is core in its own right.
 const scopeData = readJson(rel("data/curation/scope.json")).skills;
 for (const id of Object.keys(scopeData)) if (!skillIds.has(id)) fail(`scope entry for unknown skill ${id}`);
+const cnSections = readJson(rel("data/curation/standards-cn.json")).sections;
 const descItems = (desc) => desc.split(/[、，,；;。]/).map((x) => x.trim()).filter(Boolean);
 const mainWhy = new Map();
+const coreIn = new Map();
 for (const n of skills) {
   const e = scopeData[n.id];
   if (!e) fail(`no scope entry for ${n.id}`);
   const items = descItems(n.desc);
   const matched = Object.keys(e.matched || {});
-  for (const it of [...matched, ...(e.meta || [])]) if (!items.includes(it)) fail(`scope item of ${n.id} not in its description: ${it}`);
+  const ceMatched = Object.keys(e.ce || {});
+  for (const it of [...matched, ...ceMatched, ...(e.meta || [])]) if (!items.includes(it)) fail(`scope item of ${n.id} not in its description: ${it}`);
   const counted = items.length - (e.meta || []).length;
-  if (matched.length * 2 >= counted) mainWhy.set(n.id, `简介 ${counted} 个知识点中 ${matched.length} 个在 CS2023 的核心主题里`);
-  else if (e.hosts) mainWhy.set(n.id, `CS2023 的 CS Core 主题由它讲（${e.hosts[0]}）`);
+  const why = [], std = [];
+  if (matched.length * 2 >= counted) { why.push(`简介 ${counted} 个知识点中 ${matched.length} 个在 CS2023 的核心主题里`); std.push("CS2023"); }
+  else if (e.hosts) { why.push(`CS2023 的 CS Core 主题由它讲（${e.hosts[0]}）`); std.push("CS2023"); }
+  if (ceMatched.length * 2 >= counted) { why.push(`简介 ${counted} 个知识点中 ${ceMatched.length} 个在 CE2016 有核心学时的知识单元里`); std.push("CE2016"); }
+  for (const [sec, field] of e.cn || []) {
+    const c = cnSections[sec];
+    if (!c || !c.fields.includes(field)) fail(`${n.id}: national-standard citation ${sec} ${field} not in standards-cn.json`);
+    why.push(`国标${c.std}要求覆盖「${field}」（书 p.${c.page}）`);
+    if (!std.includes("国标")) std.push("国标");
+  }
+  if (why.length) { mainWhy.set(n.id, why.join("；")); coreIn.set(n.id, std); }
 }
 const ownCore = mainWhy.size;
 const skillName = new Map(skills.map((n) => [n.id, n.name]));
@@ -317,13 +344,14 @@ for (const queue = [...mainWhy.keys()]; queue.length;) {
     if (!mainWhy.has(q)) { mainWhy.set(q, `「${skillName.get(id)}」的必须前置`); queue.push(q); }
   }
 }
-const scopeOf = (id) => mainWhy.get(id) || `选修：${scopeData[id].note || "CS2023 的核心主题里没有它"}`;
+const scopeOf = (id) => mainWhy.get(id) || `选修：${scopeData[id].note || "CS2023、CE2016 和国标的必修内容里都没有它"}`;
 
 const granularity = readJson(rel("data/curation/granularity.json")).skills;
 for (const id of Object.keys(granularity)) if (!skillIds.has(id)) fail(`granularity for unknown skill ${id}`);
 for (const n of skills) {
   const g = granularity[n.id];
-  if (!g || g.description !== n.desc || g.name !== n.name) fail(`missing or stale granularity decision for ${n.id}`);
+  if (!g) { incomplete(`missing granularity decision for ${n.id}`); continue; }
+  if (g.description !== n.desc || g.name !== n.name) fail(`stale granularity decision for ${n.id}`);
   if (!["课程单元", "基础模块", "进阶模块", "教材单元"].includes(g.unit) || !g.source_title || !g.url || !g.evidence) fail(`incomplete granularity evidence for ${n.id}`);
 }
 
@@ -347,6 +375,7 @@ const out = skills.map((n) => {
     milestones: n.milestones || null,
     optional: !mainWhy.has(n.id),
     scope: scopeOf(n.id),
+    standards: coreIn.get(n.id) || [],
     required: p.required.map((q) => prereqEntry(n.id, q, "required")),
     recommended: p.recommended.map((q) => prereqEntry(n.id, q, "recommended")),
     prereqStatus: p.status,
@@ -375,6 +404,7 @@ if (suspicious.length) console.warn("WARN entry>=D2 but no required prerequisite
 
 // ── layout ───────────────────────────────────────────────────────────
 const laneOrder = srcNodes.filter((n) => n.parent === "ROOT")
+  .sort((a, b) => DOMAIN_ORDER.indexOf(a.id) - DOMAIN_ORDER.indexOf(b.id))
   .flatMap((n) => (LANES.some((l) => l.domain === n.id) ? LANES.filter((l) => l.domain === n.id).map((l) => l.id) : [n.id]));
 const elk = new ELK();
 const lanes = [];
@@ -498,6 +528,7 @@ const verifiedPrereqs = out.filter((s) => s.prereqStatus === "verified").length;
 const data = {
   meta: {
     built: new Date().toISOString().slice(0, 10),
+    ...(DRAFT ? { draft: drafts.length } : {}),
     skills: out.length,
     steps,
     requiredEdges: out.reduce((a, s) => a + s.required.length, 0),
@@ -538,8 +569,9 @@ fs.writeFileSync(rel("src/web/data.js"), `// Generated by scripts/build.mjs — 
 fs.writeFileSync(rel("src/web/outlines.js"), `// Generated by scripts/build.mjs — do not edit. Loaded on first use by guide.js.\nwindow.SKILLTREE_OUTLINES = ${JSON.stringify(outlineData)};\n`);
 
 const m = data.meta;
+if (DRAFT) console.warn(`DRAFT build: ${drafts.length} gaps would fail a normal build (first: ${drafts[0] || "none"}). Do not publish.`);
 console.log(`skills ${m.skills} · steps ${m.steps} · required ${m.requiredEdges} · recommended ${m.recommendedEdges}`);
-console.log(`scope (CS2023) main ${m.mainSkills} (${ownCore} core in their own right, ${m.mainSkills - ownCore} as required prerequisites) · optional ${m.skills - m.mainSkills}`);
+console.log(`scope (CS2023 / CE2016 / 国标) main ${m.mainSkills} (${ownCore} core in their own right, ${m.mainSkills - ownCore} as required prerequisites) · optional ${m.skills - m.mainSkills}`);
 console.log(`prereqs verified ${m.verifiedPrereqs}/${m.skills} · resources ${m.withResource} · Chinese ${m.withChineseResource} · exercises ${m.withExercise} · knowledge maps ${m.withGuide}`);
 console.log("first-step skills (no required):", out.filter((s) => !s.required.length).map((s) => `${s.id} ${s.name}`).join("、"));
 for (const l of lanes) console.log(`lane ${l.id} ${l.name}: ${l.count} skills, height ${l.height}`);

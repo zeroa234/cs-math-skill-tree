@@ -1,0 +1,62 @@
+{
+ "id": "E.1.4",
+ "resource": {
+  "tier": "website",
+  "title": "Fundamentals of Photonics: Quantum Electronics (MIT 6.974, Spring 2006) — MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-974-fundamentals-of-photonics-quantum-electronics-spring-2006/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册；提供完整课程讲义（含分章 PDF，第 2 章含 '2.7 Waveguides and Integrated Optics'，讲述光纤低损耗、掺铒光纤放大器、光子晶体光纤等）、作业与考试",
+  "covers": "按课程描述原文覆盖：Maxwell 电磁波、谐振腔与光束、经典光线光学与光学系统、光的量子理论、噪声、激光器与激光动力学、连续波与短脉冲产生、光调制，并 'examples from integrated optics and semiconductor optoelectronics and nonlinear optics'；讲义含光波导、光纤与光纤放大器。不覆盖：光纤通信系统与 WDM 网络（需配中文《光通信原理》）、光电探测器的器件级细节（讲义偏激光/调制）",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.2320 Silicon Photonics",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.2300 or 8.07",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "E.1.1",
+    "N.1.3"
+   ],
+   "scope_text": "Introduces students to the field of silicon photonics with topics spanning silicon-photonics-based devices, circuits, systems, platforms, and applications. Covers the foundational concepts behind silicon photonics based in electromagnetics, optics, and device physics; the design of silicon-photonics-based devices (including waveguides, couplers, splitters, resonators, antennas, modulators, detectors, and lasers) using both theoretical analysis and numerical simulation tools; the engineering of silicon-photonics-based circuits and systems ... and the characterization of these silicon-photonics-based devices and systems through hands-on laboratory activities.",
+   "hours_text": "3-0-9 units",
+   "share": "约一半"
+  },
+  {
+   "school": "MIT",
+   "course": "6.6310 Optics and Photonics",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.2300 or 8.03",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "E.1.1",
+    "N.1.3"
+   ],
+   "scope_text": "Introduction to fundamental concepts and techniques of optics, photonics, and fiber optics, aimed at developing skills for independent research. Topics include: Review of Maxwell's equations, light propagation, reflection and transmission, dielectric mirrors and filters. Scattering matrices, interferometers, and interferometric measurement. Fresnel and Fraunhoffer diffraction theory. Lenses, optical imaging systems, and software design tools. Gaussian beams, propagation and resonator design. Optical waveguides, optical fibers and photonic devices for encoding and detection.",
+   "hours_text": "3-0-9 units",
+   "share": "约一半"
+  },
+  {
+   "school": "UC Berkeley (EECS)",
+   "course": "EE 118 Introduction to Optical Engineering",
+   "url": "https://www2.eecs.berkeley.edu/Courses/EE118",
+   "prereq_text": "Prerequisites: MATH 53; ELENG 64 and ELENG 66, or MATH 54.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1",
+    "M.1.4.4",
+    "H.1.1",
+    "H.1.3"
+   ],
+   "scope_text": "Catalog Description: Fundamental principles of optical systems. Geometrical optics and aberration theory. Stops and apertures, prisms, and mirrors. Diffraction and interference. Optical materials and coatings. Radiometry and photometry. Basic optical devices and the human eye. The design of optical systems. Lasers, fiber optics, and holography.",
+   "hours_text": "Units: 4 — Spring/Fall: 3.0 hours of lecture and 1.0 hours of discussion per week",
+   "share": "不足一半"
+  }
+ ],
+ "notes": "候选判断：E.1.1 由 MIT 6.2320 'Prereq: 6.2300 or 8.07' 与 6.6310 'Prereq: 6.2300 or 8.03' 支持（6.2300 即 E.1.1 层的电磁波课；8.07 是 Electromagnetism II，MIT 8 系目录原文 'Prereq: 8.03 and 18.03'）→ supported。N.1.3（振动、波动与光学）由 6.6310 的二选一先修 8.03 Physics III 支持（MIT 物理系目录 8.03 标题即 'Physics III'，即振动与波）→ supported。N.2.2（固体与半导体物理）三门课先修里都没有出现器件物理课，6.2320 只把 'device physics' 作为课程内容而非先修 → not_mentioned。E.2.3（通信原理）也没有 → not_mentioned。Berkeley EE 118 的内容偏几何/物理光学与光学系统设计（含 lasers, fiber optics, holography 一章级内容），故 share 记“不足一半”。另核对到 CU Boulder ECEN 4606 Undergraduate Optics Laboratory（'Introduced ... light sources such as lasers and Leds, interferometers, fiber-optic communications, photodetection, spectrometers, and holography'，先修 ECEN 3400），以及东南大学《光电子物理基础》（中国大学MOOC，https://www.icourse163.org/course/SEU-1472623169，内容原文含 '气体、固体及半导体中的光发射原理；自发发射、受激发射及受激吸收的概念；激光产生的条件、速率方程理论，激光振荡的产生过程'、'常用的气体、固体、半导体和光纤激光器件'、'介绍光纤传输基础理论和传输特性，集成光学平面光波导的基础理论'）——它正好补上半导体光源/激光器机理与光波导，本轮每技能限 3 门课、且只留一条中文入口（选了覆盖系统的《光通信原理》），故未写入 courses。"
+}

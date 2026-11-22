@@ -1,12 +1,30 @@
 {
  "_source": "ACM/IEEE-CS/AAAI CS2023 Body of Knowledge (https://csed.acm.org/final-report/, 3.1-Body-of-Knowledge); tier definitions from 1.3-Introduction-to-Knowledge-Model.",
- "_rule": "主干 = (1) 简介里至少一半的知识点在 CS Core / KA Core 主题里有原文对应；或 (2) 它是树里讲某个 CS Core 主题的技能；或 (3) 它是 (1)(2) 技能的必须前置。其余为选修。",
+ "_rule": "主干 = (1) 简介里至少一半的知识点在 CS2023 的 CS Core / KA Core 主题里有原文对应；或 (2) 它是树里讲某个 CS Core 主题的技能；或 (3) 至少一半的知识点在 CE2016 有核心学时的知识单元里有原文对应（ce）；或 (4) 国标把它的知识领域列为该专业类每个学生都要覆盖的内容（cn，条文见 standards-cn.json）；或 (5) 它是以上技能的必须前置。其余为选修。",
  "skills": {
   "C.3.5": {
    "matched": {
-    "数据中心网络拓扑": [["NC-SingleHop", "KA Core", "Local Area Network Topologies (e.g., data center"]],
-    "RDMA（InfiniBand/RoCE/iWARP）": [["PDC-Communication", "KA Core", "Remote Direct Memory Access (RDMA)"]],
-    "无损网络与拥塞控制": [["NC-Reliability", "KA Core", "Congestion control (e.g., implicit and explicit congestion notification)"]]
+    "数据中心网络拓扑": [
+     [
+      "NC-SingleHop",
+      "KA Core",
+      "Local Area Network Topologies (e.g., data center"
+     ]
+    ],
+    "RDMA（InfiniBand/RoCE/iWARP）": [
+     [
+      "PDC-Communication",
+      "KA Core",
+      "Remote Direct Memory Access (RDMA)"
+     ]
+    ],
+    "无损网络与拥塞控制": [
+     [
+      "NC-Reliability",
+      "KA Core",
+      "Congestion control (e.g., implicit and explicit congestion notification)"
+     ]
+    ]
    },
    "note": "按 tree 的 50% 规则，6 项中 3 项有 CS2023 KA Core 原文：数据中心 LAN 拓扑、RDMA、拥塞控制/ECN。因此为主干，区别于 game 未逐项核对时的选修标签。此匹配只证明核心概念对应，不表示 CS2023 要求掌握所有 InfiniBand/RoCE/iWARP、DPDK、SmartNIC 或 NVLink 工程细节。"
   },
@@ -1806,6 +1824,42 @@
       "I/O fundamentals"
      ]
     ]
+   },
+   "ce": {
+    "数据表示": [
+     [
+      "CE-CAO-5",
+      "commonly used number systems"
+     ]
+    ],
+    "运算器": [
+     [
+      "CE-CAO-5",
+      "basic arithmetic algorithms"
+     ]
+    ],
+    "数据通路": [
+     [
+      "CE-CAO-6",
+      "Design a datapath"
+     ]
+    ],
+    "控制器": [
+     [
+      "CE-CAO-6",
+      "hard-wired control unit"
+     ]
+    ],
+    "存储和I/O组织": [
+     [
+      "CE-CAO-7",
+      "memory hierarchy"
+     ],
+     [
+      "CE-CAO-8",
+      "input/output (I/O) devices"
+     ]
+    ]
    }
   },
   "C.1.2": {
@@ -1843,6 +1897,42 @@
       "AR-Performance-Energy",
       "KA Core",
       "Branch prediction"
+     ]
+    ]
+   },
+   "ce": {
+    "指令集": [
+     [
+      "CE-CAO-3",
+      "addressing modes"
+     ]
+    ],
+    "流水线": [
+     [
+      "CE-CAO-6",
+      "pipelining"
+     ]
+    ],
+    "缓存": [
+     [
+      "CE-CAO-7",
+      "cache memory organizations"
+     ]
+    ],
+    "多核一致性": [
+     [
+      "CE-CAO-7",
+      "cache coherence"
+     ]
+    ],
+    "分支预测和性能模型": [
+     [
+      "CE-CAO-6",
+      "pipeline hazards caused by branches"
+     ],
+     [
+      "CE-CAO-4",
+      "Amdahl's law"
      ]
     ]
    }
@@ -1900,6 +1990,20 @@
       "AR-Heterogeneity",
       "KA Core",
       "Domain-Specific Architectures (DSAs)"
+     ]
+    ]
+   },
+   "ce": {
+    "存储层次": [
+     [
+      "CE-CAO-7",
+      "memory hierarchy"
+     ]
+    ],
+    "专用加速器和异构调度": [
+     [
+      "CE-CAO-10",
+      "heterogeneous multi/many-core architectures"
      ]
     ]
    }
@@ -3388,7 +3492,51 @@
    }
   },
   "H.1.1": {
-   "note": "CS2023 没有电路与模拟电子（只在物理计算单元的学习成果里让学生接一个简单电路）。"
+   "note": "CS2023 没有电路与模拟电子（只在物理计算单元的学习成果里让学生接一个简单电路）。",
+   "ce": {
+    "电路定律": [
+     [
+      "CE-CAE-4",
+      "Kirchoff's laws"
+     ]
+    ],
+    "RC/RL": [
+     [
+      "CE-CAE-4",
+      "time constants, transient and steady-state responses"
+     ]
+    ],
+    "放大器": [
+     [
+      "CE-CAE-1",
+      "Describe the use of the transistor as an amplifier and as a switch"
+     ]
+    ],
+    "运放": [
+     [
+      "CE-CAE-9",
+      "Interpret the properties of an ideal operational amplifier"
+     ]
+    ],
+    "滤波": [
+     [
+      "CE-CAE-9",
+      "integrators, and low-pass filters"
+     ]
+    ],
+    "噪声与ADC/DAC接口": [
+     [
+      "CE-CAE-10",
+      "analog-to-digital (A/D) converters"
+     ]
+    ]
+   },
+   "cn": [
+    [
+     "0807-1.1.2",
+     "电路与电子技术"
+    ]
+   ]
   },
   "H.1.2": {
    "matched": {
@@ -3427,7 +3575,49 @@
       "Gate delays"
      ]
     ]
-   }
+   },
+   "ce": {
+    "布尔代数": [
+     [
+      "CE-DIG-4",
+      "Enumerate Boolean algebra laws and theorems"
+     ]
+    ],
+    "组合/时序逻辑": [
+     [
+      "CE-DIG-6",
+      "Modular design of combinational circuits"
+     ],
+     [
+      "CE-DIG-7",
+      "Modular design of sequential circuits"
+     ]
+    ],
+    "状态机": [
+     [
+      "CE-DIG-8",
+      "Finite State Machines"
+     ]
+    ],
+    "时钟": [
+     [
+      "CE-DIG-7",
+      "Define a clock signal using period, frequency, and duty-cycle parameters"
+     ]
+    ],
+    "时序与逻辑实现": [
+     [
+      "CE-DIG-7",
+      "setup time, and hold time"
+     ]
+    ]
+   },
+   "cn": [
+    [
+     "0807-1.1.2",
+     "电路与电子技术"
+    ]
+   ]
   },
   "H.1.3": {
    "matched": {
@@ -3459,7 +3649,51 @@
       "Blur (e.g., Gaussian)"
      ]
     ]
-   }
+   },
+   "ce": {
+    "连续与离散信号": [
+     [
+      "CE-SGP-1",
+      "Contrast analog and digital signals"
+     ]
+    ],
+    "LTI": [
+     [
+      "CE-SGP-2",
+      "Prove whether a system is linear, time-invariant, causal, and/or stable"
+     ]
+    ],
+    "采样": [
+     [
+      "CE-SGP-6",
+      "State the sampling theorem"
+     ]
+    ],
+    "卷积": [
+     [
+      "CE-SGP-3",
+      "Derive the linear convolution summation"
+     ]
+    ],
+    "频域": [
+     [
+      "CE-SGP-5",
+      "Interpret the frequency response of an LTI system"
+     ]
+    ],
+    "数字滤波基本模型": [
+     [
+      "CE-SGP-8",
+      "Design finite and infinite impulse response (FIR and IIR) filters"
+     ]
+    ]
+   },
+   "cn": [
+    [
+     "0807-1.1.2",
+     "信号与系统"
+    ]
+   ]
   },
   "H.2.1": {
    "matched": {
@@ -3491,6 +3725,38 @@
       "field programmable gate arrays (FPGAs)"
      ]
     ]
+   },
+   "ce": {
+    "RTL": [
+     [
+      "CE-DIG-8",
+      "Design an RTL model of a control+datapath using a HDL"
+     ]
+    ],
+    "仿真": [
+     [
+      "CE-DIG-6",
+      "generate/verify using appropriate design tools"
+     ]
+    ],
+    "综合": [
+     [
+      "CE-DIG-10",
+      "logic synthesis timing constraints"
+     ]
+    ],
+    "约束": [
+     [
+      "CE-DIG-10",
+      "Use constraints of clock-cycle latency and clock-cycle throughput"
+     ]
+    ],
+    "时序收敛与可编程逻辑": [
+     [
+      "CE-DIG-9",
+      "Field Programmable Gate Arrays (FPGAs)"
+     ]
+    ]
    }
   },
   "H.2.2": {
@@ -3512,7 +3778,21 @@
    "note": "CMOS 标准单元与芯片物理设计的深入课程超出 CS2023 核心硬件概览。"
   },
   "H.2.5": {
-   "note": "CS2023 没有半导体器件。"
+   "note": "CS2023 没有半导体器件。",
+   "ce": {
+    "晶体管模型": [
+     [
+      "CE-CAE-6",
+      "equivalent circuit models and their limitations"
+     ]
+    ],
+    "器件物理": [
+     [
+      "CE-CAE-5",
+      "drift and diffusion currents, mobility, and diffusivity"
+     ]
+    ]
+   }
   },
   "H.3.1": {
    "matched": {
@@ -3551,6 +3831,44 @@
       "Programming under platform constraints"
      ]
     ]
+   },
+   "ce": {
+    "GPIO": [
+     [
+      "CE-ESY-5",
+      "general purpose I/O (GPIO)"
+     ]
+    ],
+    "定时器": [
+     [
+      "CE-ESY-7",
+      "typical hardware timers"
+     ]
+    ],
+    "中断": [
+     [
+      "CE-ESY-5",
+      "Describe how interrupts are supported on the target embedded system(s)"
+     ]
+    ],
+    "外设": [
+     [
+      "CE-ESY-3",
+      "peripheral subsystems"
+     ]
+    ],
+    "裸机程序": [
+     [
+      "CE-ESY-4",
+      "loop-forever structure of an embedded program"
+     ]
+    ],
+    "调试与资源限制": [
+     [
+      "CE-ESY-2",
+      "debug a program"
+     ]
+    ]
    }
   },
   "H.3.2": {
@@ -3583,6 +3901,32 @@
       "Real-time resource management"
      ]
     ]
+   },
+   "ce": {
+    "启动链": [
+     [
+      "CE-ESY-4",
+      "after system reset but before user application execution"
+     ]
+    ],
+    "驱动": [
+     [
+      "CE-CAO-8",
+      "I/O drivers"
+     ]
+    ],
+    "实时调度": [
+     [
+      "CE-ESY-9",
+      "preemptive versus cooperative scheduling"
+     ]
+    ],
+    "中断": [
+     [
+      "CE-CAO-8",
+      "vectored and prioritized interrupts"
+     ]
+    ]
    }
   },
   "H.3.3": {
@@ -3606,6 +3950,32 @@
       "SPD-Embedded",
       "KA Core",
       "Sensors and actuators"
+     ]
+    ]
+   },
+   "ce": {
+    "测量": [
+     [
+      "CE-ESY-8",
+      "numerical conversion from a physical quantity"
+     ]
+    ],
+    "总线": [
+     [
+      "CE-ESY-6",
+      "synchronous serial interface such as SPI or I2C"
+     ]
+    ],
+    "采集": [
+     [
+      "CE-ESY-8",
+      "Data acquisition, control, sensors, actuators"
+     ]
+    ],
+    "执行器和软硬件接口": [
+     [
+      "CE-ESY-8",
+      "actuators"
      ]
     ]
    }
@@ -3677,7 +4047,27 @@
      ]
     ]
    },
-   "note": "物联网平台、设备管理与功耗不在 CS2023 的核心主题里。"
+   "note": "物联网平台、设备管理与功耗不在 CS2023 的核心主题里。",
+   "ce": {
+    "设备": [
+     [
+      "CE-ESY-11",
+      "Describe the role of embedded systems in the"
+     ]
+    ],
+    "连接": [
+     [
+      "CE-ESY-11",
+      "short-range wireless connectivity"
+     ]
+    ],
+    "功耗与端到端集成": [
+     [
+      "CE-ESY-10",
+      "power saving approaches"
+     ]
+    ]
+   }
   },
   "H.4.4": {
    "matched": {
@@ -4249,6 +4639,258 @@
   },
   "X.3.3": {
    "note": "CS2023 没有科学机器学习。"
+  },
+  "N.1.1": {
+   "cn": [
+    [
+     "0806-1.1.1",
+     "牛顿力学"
+    ],
+    [
+     "0806-1.1.1",
+     "热学"
+    ]
+   ]
+  },
+  "N.1.2": {
+   "cn": [
+    [
+     "0806-1.1.1",
+     "电磁学"
+    ]
+   ]
+  },
+  "N.1.3": {
+   "cn": [
+    [
+     "0806-1.1.1",
+     "光学"
+    ]
+   ]
+  },
+  "N.2.1": {
+   "note": "CS2023、CE2016 都没有量子力学；国标通识类只要求“近代物理”的基本内容，一整门量子力学超出它。"
+  },
+  "N.2.2": {
+   "note": "CE2016 的 CE-CAE-5 只要求掺杂、漂移与扩散这类材料性质（归到 H.2.5）；国标把固体物理、半导体物理列在电子科学与技术、微电子专业“至少 4 个”的专业基础知识里，不是全专业类必修。"
+  },
+  "H.1.4": {
+   "ce": {
+    "二极管电路": [
+     [
+      "CE-CAE-5",
+      "Illustrate the operation and properties of diodes"
+     ]
+    ],
+    "BJT与MOSFET放大电路": [
+     [
+      "CE-CAE-5",
+      "Explain the properties of bipolar transistors when used as amplifiers and as switches"
+     ],
+     [
+      "CE-CAE-6",
+      "Apply nMOS and pMOS transistor biasing for logic and amplifier applications"
+     ]
+    ]
+   },
+   "cn": [
+    [
+     "0807-1.1.2",
+     "电路与电子技术"
+    ]
+   ]
+  },
+  "H.1.5": {
+   "note": "CE2016 只在 CE-ESY-2 要求会选用测量仪器；国标把电子测量技术列为电子信息工程的专业知识，不是学科基础。"
+  },
+  "H.2.6": {
+   "note": "CE2016 只讲到运放和混合信号电路概述（CE-CAE-9、CE-CAE-10）；国标把集成电路列在电子科学与技术、微电子专业“至少 4 个”的专业基础知识里。"
+  },
+  "H.2.7": {
+   "note": "CS2023、CE2016 都没有集成电路制造；国标把微电子工艺列在微电子专业“至少 4 个”的专业基础知识里。"
+  },
+  "H.2.8": {
+   "note": "CE2016 只要求会用综合与设计工具（CE-DIG-2、CE-DIG-10），不讲工具内部的算法；国标把电子设计自动化列在微电子专业的专业知识里。"
+  },
+  "H.4.5": {
+   "note": "CS2023、CE2016 都没有 PLC；国标电气类示例三有“电器控制与可编程控制器”，但示例不是必修清单。"
+  },
+  "E.1.1": {
+   "cn": [
+    [
+     "0807-1.1.2",
+     "电磁场与波"
+    ]
+   ]
+  },
+  "E.1.2": {
+   "note": "CE2016 只在 CE-CAE-8 提到传输线反射；国标把微波工程列在电子科学与技术“至少 4 个”的专业基础知识里，天线技术列为专业知识。"
+  },
+  "E.1.3": {
+   "note": "国标把“通信电路与系统”列在电子信息工程、通信工程、信息工程“至少 4 个”的专业基础知识里；CS2023、CE2016 都没有。"
+  },
+  "E.1.4": {
+   "note": "国标把光电子学列在电子科学与技术、光电信息科学与工程“至少 4 个”的专业基础知识里；CS2023、CE2016 都没有。"
+  },
+  "E.2.1": {
+   "ce": {
+    "离散时间信号与系统": [
+     [
+      "CE-SGP-2",
+      "Prove whether a system is linear, time-invariant, causal, and/or stable"
+     ]
+    ],
+    "z变换": [
+     [
+      "CE-SGP-4",
+      "State, prove, and apply properties of the z-transform and its inverse"
+     ]
+    ],
+    "DTFT与DFT": [
+     [
+      "CE-SGP-4",
+      "State, prove, and apply properties of discrete Fourier transform (DFT) and its inverse"
+     ]
+    ],
+    "快速傅里叶变换": [
+     [
+      "CE-SGP-4",
+      "FFTs (fast Fourier transforms)"
+     ]
+    ],
+    "采样与重建": [
+     [
+      "CE-SGP-6",
+      "State the sampling theorem"
+     ],
+     [
+      "CE-SGP-7",
+      "Design interpolation and reconstruction filters"
+     ]
+    ],
+    "FIR滤波器设计": [
+     [
+      "CE-SGP-8",
+      "State the condition for linear phase in an FIR filter"
+     ]
+    ],
+    "IIR滤波器设计": [
+     [
+      "CE-SGP-8",
+      "Explain why one or more IIR filter design methods work"
+     ]
+    ],
+    "谱分析与窗函数": [
+     [
+      "CE-SGP-7",
+      "Calculate a spectrogram"
+     ]
+    ]
+   }
+  },
+  "E.2.2": {
+   "note": "CE2016 和 CS2023 都没有估计与检测；国标信息工程专业知识列有“统计信号处理”，不是全专业类必修。"
+  },
+  "E.2.3": {
+   "note": "国标把通信原理列在电子信息工程、通信工程、信息工程“至少 4 个”的专业基础知识里，不是全专业类必修；CE2016 的 CE-NWK-9 数据通信没有核心学时。"
+  },
+  "E.2.4": {
+   "note": "国标把移动通信、无线通信列为电子信息工程、通信工程的专业知识；CE2016 的 CE-NWK-5 只讲无线网络协议层，不讲物理层。"
+  },
+  "E.3.1": {
+   "note": "国标电气类把电力电子技术列为专业基础类课程，原文是“在下列核心知识内容中有所侧重、取舍”，不是每个学生必修；CS2023、CE2016 都没有。"
+  },
+  "E.3.2": {
+   "note": "国标电气类把电机学列为专业基础类课程，原文是“有所侧重、取舍”；CS2023、CE2016 都没有。"
+  },
+  "E.3.3": {
+   "note": "国标电气类把电力系统基础列为专业基础类课程，原文是“有所侧重、取舍”；CS2023、CE2016 都没有。"
+  },
+  "I.1.5": {
+   "ce": {
+    "成本估算": [
+     [
+      "CE-PPP-10",
+      "Assess the total job cost of a project"
+     ]
+    ]
+   },
+   "note": "CE2016 的 CE-PPP-10 只要求估算项目成本、运用工程经济原理（“Apply engineering economic principles”），一个知识单元 3 学时，不到本技能的一半。"
+  },
+  "E.1.5": {
+   "note": "CE2016 只讲到混合信号电路概述（CE-CAE-10）；国标把射频集成电路列为微电子科学与工程的专业知识。"
+  },
+  "E.1.6": {
+   "ce": {
+    "传输线反射与端接": [
+     [
+      "CE-CAE-8",
+      "transmission line characteristics, reflections, and options for bus termination"
+     ]
+    ],
+    "高速信号的时序与眼图": [
+     [
+      "CE-ESY-12",
+      "eye-diagrams"
+     ]
+    ]
+   },
+   "note": "CE2016 的 CE-CAE-8、CE-ESY-12 讲到传输线端接和眼图，8 个知识点里对上 2 个；电磁干扰、屏蔽和 EMC 测试不在核心学时里。"
+  },
+  "E.1.7": {
+   "note": "国标把雷达技术列为电子信息工程、信息工程的专业知识，不是学科基础；CS2023、CE2016 都没有。"
+  },
+  "E.1.8": {
+   "note": "国标把导航定位列为电子信息工程的专业知识，不是学科基础；CS2023、CE2016 都没有。"
+  },
+  "E.1.9": {
+   "note": "国标把激光原理列在电子科学与技术、光电信息科学与工程“至少 4 个”的专业基础知识里；CS2023、CE2016 都没有。"
+  },
+  "E.2.5": {
+   "note": "CS2023、CE2016 都没有自适应滤波；属于信号处理方向的研究生入门课。"
+  },
+  "E.3.4": {
+   "note": "国标电气类把高电压技术列为专业基础类课程，原文是“有所侧重、取舍”；CS2023、CE2016 都没有。"
+  },
+  "E.3.5": {
+   "note": "国标电气类核心课程示例里有“电力系统继电保护”，示例不是必修清单；CS2023、CE2016 都没有。"
+  },
+  "E.3.6": {
+   "note": "CS2023、CE2016 和国标的必修内容里都没有新能源发电与储能；它是电气工程的专业方向课。"
+  },
+  "H.2.9": {
+   "ce": {
+    "处理器与加速器集成": [
+     [
+      "CE-ESY-3",
+      "heterogeneous SOCs (CPUs/accelerators)"
+     ]
+    ],
+    "片上网络": [
+     [
+      "CE-CAO-10",
+      "on-chip interconnect networks"
+     ]
+    ],
+    "存储子系统与DMA": [
+     [
+      "CE-CAO-8",
+      "direct memory access (DMA)"
+     ]
+    ],
+    "软硬件协同设计": [
+     [
+      "CE-SPE-10",
+      "Concurrent hardware and software design"
+     ]
+    ]
+   }
+  },
+  "H.2.10": {
+   "note": "国标把微电子机械系统列为电子科学与技术、微电子科学与工程的专业知识；CS2023、CE2016 都没有。"
+  },
+  "H.4.6": {
+   "note": "CS2023、CE2016 都没有过程控制；国内自动化专业普遍开设，但本树只采用逐字核对过的国标条文（电子信息类、电气类），自动化类的条文没有核对扫描件。"
   }
  }
 }

@@ -1,0 +1,58 @@
+{
+ "id": "H.2.6",
+ "resource": {
+  "tier": "material",
+  "title": "Analysis and Design of Analog Integrated Circuits（讲义/讲座系列，cppsim.com）",
+  "url": "https://www.cppsim.com/circuit_lectures.html",
+  "lang": "en",
+  "free": true,
+  "access": "免费公开的讲义与讲座页面（链接列出每讲主题，部分讲次附计算细节），无需注册",
+  "covers": "原文自述覆盖：单级与差分放大器、电流镜、运算放大器、采样器、开关电容网络、热噪声与 1/f 噪声、失调与失配及其抑制、ADC/DAC 等高层模块基础；讲座目录含二端口模型与频率响应、CMOS 大信号/小信号建模、单级放大器。未覆盖简介里的带隙基准与偏置电路（该页关键词检索不到 bandgap），也没有系统讲运放补偿的稳定性分析细节。",
+  "publisher": "cppsim.com（CppSim 教程与课程讲义站点）",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "同济大学（Tongji University）",
+   "course": "模拟集成电路分析与设计（课程编号 100446，Design and Analysis of Analog Integrated Circuits）",
+   "url": "https://est.tongji.edu.cn/_upload/article/files/df/24/19dc8d1b4529a2eafdd62fa3c471/10ba27b4-8292-4403-a007-b7fefe64108a.pdf",
+   "prereq_text": "先修课程：半导体器件原理，模拟电子技术基础",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.2.5",
+    "H.1.4"
+   ],
+   "scope_text": "第四章 模拟 CMOS 子电路 主要知识点：1. MOS 开关 2. 有源电阻 3. 电流漏和电流源 4. 电流镜 5. 基准电流和电压 6. 带隙基准源；第三章 CMOS 器件模型 主要知识点：1.MOS 管输出特性 2.MOS 管大信号模型与参数分析 3.MOS 管小信号模型与参数分析 4.MOS 管 SPICE 仿真",
+   "hours_text": "授课语言：双语 学 分：3 课内学时：51 课程性质：专业必修",
+   "share": "整门课"
+  },
+  {
+   "school": "MIT",
+   "course": "6.2090 Solid-State Circuits",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.2040, 6.2080, or permission of instructor",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.4"
+   ],
+   "scope_text": "Fosters deep understanding and intuition that is crucial in innovating analog circuits and optimizing the whole system in bipolar junction transistor (BJT) and metal oxide semiconductor (MOS) technologies. Covers both theory and real-world applications of basic amplifier structures, operational amplifiers, temperature sensors, bandgap references. Covers topics such as noise, linearity and stability. Homework and labs give students access to CAD/EDA tools to design and analyze analog circuits.",
+   "hours_text": "3-2-7 units",
+   "share": "整门课"
+  },
+  {
+   "school": "UC Berkeley",
+   "course": "EE 140 Linear Integrated Circuits",
+   "url": "https://www2.eecs.berkeley.edu/Courses/EE140",
+   "prereq_text": "Prerequisites: EL ENG 105",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.4"
+   ],
+   "scope_text": "Single and multiple stage transistor amplifiers. Operational amplifiers. Feedback amplifiers, 2-port formulation, source, load, and feedback network loading. Frequency response of cascaded amplifiers, gain-bandwidth exchange, compensation, dominant pole techniques, root locus. Supply and temperature independent biasing and references. Selected applications of analog circuits such as analog-to-digital converters, switched capacitor filters, and comparators. Hardware laboratory and design project.",
+   "hours_text": "Units: 4; Spring/Fall: 3 hours of lecture, 1 hour of discussion, and 3 hours of laboratory per week",
+   "share": "整门课"
+  }
+ ],
+ "notes": "同济大学大纲的先修“半导体器件原理”是清单里候选必须前置 H.2.5 的唯一直接课程证据；MIT 6.2090 与 Berkeley EE 140 的先修都只到 H.1.4（MIT 6.2040/6.2080 与 Berkeley EE 105 本身含器件内容），Stanford EE 114 的先修也只写 EE 101B。另核到 MIT OCW 6.301 Solid-State Circuits（https://ocw.mit.edu/courses/6-301-solid-state-circuits-fall-2010/pages/syllabus/）：原文“6.301 uses the semiconductor physics and transistor circuit models developed in 6.012 for the analysis and design of transistor circuits. Thus 6.012 is the official prerequisite.”（即要求 H.1.4，且明确把器件物理放在 6.012 里而非单独器件课）；其讲义不在 OCW 上，故未选作英文资源。MIT 6.6000 CMOS Analog and Mixed-Signal Circuit Design 先修写 6.2090，内容含运放设计、开关电容滤波器、A/D、D/A 与 delta-sigma，可作本技能的进阶课。"
+}

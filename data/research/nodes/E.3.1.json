@@ -1,0 +1,61 @@
+{
+ "id": "E.3.1",
+ "resource": {
+  "tier": "website",
+  "title": "Power Electronics (MIT 6.622, Spring 2023) — MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-622-power-electronics-spring-2023/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册；提供讲义（Typed/Handwritten Lecture Notes）、完整讲座视频、作业与解答、考试、设计项目；指定教材 KPVS《Principles of Power Electronics》(Cambridge, 2023) 需自行购买",
+  "covers": "课程概述原文 'covers modeling, analysis, design, control, and application of circuits for energy conversion and control'，对应本技能的功率半导体器件、整流/逆变/DC-DC 变换、变换器建模与控制、PWM 控制与磁性元件（教材 KPVS 主题）；软开关是否讲授未核对（OCW 讲义页只列出 Typed/Handwritten 讲义表，未逐讲标题；目录里的进阶课是 6.6230 Advanced Topics in Power Electronics）",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "MIT",
+   "course": "6.6220 Power Electronics (catalog entry)",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.2040, 6.2080, 6.2220, or 6.2500[J]",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.4"
+   ],
+   "scope_text": "The application of electronics to energy conversion and control. Modeling, analysis, and control techniques. Design of power circuits including inverters, rectifiers, and dc-dc converters. Analysis and design of magnetic components and filters. Characteristics of power semiconductor devices. Numerous application examples, such as motion control systems, power supplies, and radio-frequency power amplifiers.",
+   "hours_text": "3-0-9 units",
+   "share": "整门课"
+  },
+  {
+   "school": "University of Colorado Boulder",
+   "course": "ECEN 4797 Introduction to Power Electronics",
+   "url": "https://catalog.colorado.edu/courses-a-z/ecen/",
+   "prereq_text": "Requisites: Requires prerequisite course of ECEN 3250 (minimum grade C-). Restricted to College of Engineering majors only.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.4",
+    "H.1.1"
+   ],
+   "scope_text": "An introduction to switched-mode converters. Includes steady-state converter modeling and analysis, switch realization, discontinuous conduction mode and transformer-isolated converters. Ac modeling of converters using averaged methods, small-signal transfer functions, feedback loop design and transformer design.",
+   "hours_text": "ECEN 4797 (3) Introduction to Power Electronics — 3 credit hours",
+   "share": "约一半"
+  },
+  {
+   "school": "西南交通大学（中国大学MOOC）",
+   "course": "电力电子技术",
+   "url": "https://www.icourse163.org/course/SWJTU-1002526018",
+   "prereq_text": "预备知识：电路分析基础：掌握基本电路定律、交流电路、暂态分析及频域分析等知识。模拟电子技术：了解二极管、晶体管、运算放大器等基本电子器件及电路。数字电子技术：了解基本数字逻辑电路及控制信号的基本概念。自动控制原理：了解反馈控制、传递函数及基本控制方法，有助于理解电力电子变换器的闭环控制。",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1",
+    "H.1.4",
+    "H.1.2",
+    "H.4.1"
+   ],
+   "scope_text": "课程围绕“器件-变换电路-控制方法-系统应用”展开，系统讲授电力电子器件的工作特性、整流电路、直流变换电路、逆变电路、交流变换电路及PWM控制、软开关等内容 ... 围绕电力电子器件、整流、直流变换、逆变、交流变换及PWM控制等内容，建立器件-变换电路-控制方法-系统应用知识体系。通过理论分析、仿真与实验 ...",
+   "hours_text": null,
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断：H.1.1 由西南交大 MOOC 预备知识“电路分析基础”直接支持 → supported。H.1.4 有三条证据：MIT 6.6220 把 6.2040 Analog Electronics Laboratory / 6.2080 Semiconductor Electronic Circuits 列为可选先修、CU ECEN 4797 要求 ECEN 3250 Microelectronics（目录原文 'Develops a basic understanding of active semiconductor devices. Focuses on building an understanding of BJT and CMOS devices...'）、西南交大 MOOC 明列“模拟电子技术” → supported。H.4.1（控制理论）只有 MOOC 把“自动控制原理”写在预备知识并注明“有助于理解…闭环控制”，属建议而非必修 → recommended。H.1.3（信号与系统）三门课都没出现（ECEN 4797 只用传递函数，属课程内容）→ not_mentioned。另核对到 Stanford EE 153 Power Electronics（https://bulletin.stanford.edu/courses/ee-153，3–4 units，'Should have completed ... EE 101B Circuits II 4 Units; EE 101A Circuits I 4 Units'，内容 'the circuits used to efficiently convert ac power to dc power, dc power from one voltage level to another, and dc power to dc power'），同样支持 H.1.1，因每技能限 3 门未列入。CU ECEN 5817 Resonant and Soft-Switching Techniques in Power Electronics（先修 ECEN 5797，内容 'resonant converters and inverters, and soft switching ... zero-voltage switching techniques'）可用来说明“软开关”在真实课程中是独立一门，未列入 courses。"
+}

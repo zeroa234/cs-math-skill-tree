@@ -1,0 +1,62 @@
+{
+ "id": "E.3.2",
+ "resource": {
+  "tier": "website",
+  "title": "Electric Machines (MIT 6.685, Fall 2013) — MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册；提供 Course Notes（讲义）、作业、考试与 Instructor Insights",
+  "covers": "按大纲原文覆盖变压器、机电换能器、旋转与直线电机、集总参数机电耦合、直流/感应/同步三大机类的特性（能量密度、效率）与系统特性（调压、稳定性、可控性、响应），并有风力双馈感应电机、牵引感应电机等案例；即简介的磁路与变压器、直流电机、感应电机、同步电机、电力拖动稳态特性。不覆盖：永磁与步进等微特电机的系统讲解、变频调速与矢量控制（属电力电子/驱动课）。课程自述按 MIT 研究生层级讲授（'at the level of MIT graduate students'），对 D2 入门偏深，可作为深入参考",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "University of Colorado Boulder",
+   "course": "ECEN 3170 Electromagnetic Energy Conversion 1",
+   "url": "https://catalog.colorado.edu/courses-a-z/ecen/",
+   "prereq_text": "Requisites: Requires prerequisite courses of ECEN 2260 and PHYS 1120 (minimum grade C-). Restricted to College of Engineering majors only.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.3",
+    "H.1.1",
+    "N.1.2"
+   ],
+   "scope_text": "Real and reactive power in single phase circuits, power triangle, balanced three-phase circuits, wye and delta connections, introduction to electromagnetic machines, transformers (single and three-phase) and their equivalent circuits, AC-machinery fundamentals, synchronous generator from a magnetic field point of view, synchronous motors and condensers, three-phase induction motors, DC machinery fundamentals, DC motors, single phase motors. Matlab/Simulink will be used.",
+   "hours_text": "ECEN 3170 (3) Electromagnetic Energy Conversion 1 — 3 credit hours",
+   "share": "约一半"
+  },
+  {
+   "school": "MIT (MIT OpenCourseWare, Fall 2013)",
+   "course": "6.685 Electric Machines",
+   "url": "https://ocw.mit.edu/courses/6-685-electric-machines-fall-2013/pages/syllabus/",
+   "prereq_text": "Prerequisites: 6.061/6.690 Introduction to Electric Power Systems; or permission of the instructor",
+   "prereq_kind": "required",
+   "mapped_ids": [],
+   "scope_text": "Topics covered include: Treatment of transformers, electromechanical transducers, rotating and linear electric machines; Lumped parameter electromechanics of interaction; Consideration of the basic machine types: DC, induction, synchronous; Development of device characteristics: energy conversion density, efficiency; Development of system interaction characteristics, regulation, stability, controllability, and response",
+   "hours_text": "Lectures: 2 sessions / week, 1.5 hours / session",
+   "share": "约一半"
+  },
+  {
+   "school": "浙江大学（中国大学MOOC）",
+   "course": "电机与拖动",
+   "url": "https://www.icourse163.org/course/ZJU-1206622841",
+   "prereq_text": "预备知识：微积分、大学物理、电路原理、工程电磁场",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2",
+    "M.1.3",
+    "N.1.1",
+    "N.1.2",
+    "H.1.1",
+    "E.1.1"
+   ],
+   "scope_text": "本课程结合了电机学、电力拖动和《微特电机》等课程的有机结合，课程基于三大基本电磁定律，主要讲述电机与电力拖动的稳态性能，包括各种常见直流电机、感应电机和变压器的基本结构、工作原理、等效电路、工作特性、机械特性以电机拖动系统起动、制动与调速等运行状态 ... 掌握基于等效电路的分析方法和机械特性",
+   "hours_text": null,
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断：N.1.2（大学物理电磁学）由 CU ECEN 3170 先修 'PHYS 1120' 与浙大 MOOC 预备知识“大学物理”支持 → supported。H.1.1 由浙大 MOOC“电路原理”直接支持，CU 侧经 ECEN 2260→ECEN 2250 隔一层 → supported。H.4.1（控制理论与状态估计）三门课都没有列为先修（6.685 只把 'controllability' 作为课程内容）→ not_mentioned。E.3.1（电力电子技术）也没有出现在三门课的先修里：浙大 MOOC 的预备知识是老四门（微积分/大物/电路/工程电磁场），没有电力电子 → not_mentioned；要在“变频调速”上真正落地，电力电子仍是内容上的前置，但课程证据不支持写成必修。另核对到 MIT 6.6280 Electric Machines（https://catalog.mit.edu/subjects/6/，3-0-9 units，'Prereq: 6.2200, 6.690, or permission of instructor'，其中 6.690 已不在现行目录编号内；内容原文 'Treatment of electromechanical transducers, rotating and linear electric machines ... Use of electric machines in drive systems'），其先修 6.2200 Electric Energy Systems（'Prereq: 6.2000'，内容含 'power electronics, machines and supply technologies, grid optimization and control'）同时指向 H.1.1 与 E.3.3，因每技能限 3 门未列入 courses。"
+}

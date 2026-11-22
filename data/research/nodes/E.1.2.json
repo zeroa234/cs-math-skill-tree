@@ -1,0 +1,64 @@
+{
+ "id": "E.1.2",
+ "resource": {
+  "tier": "book",
+  "title": "Microwave and RF Design (5-volume open textbook series), Michael Steer, NC State University",
+  "url": "https://www.lib.ncsu.edu/projects/microwave-and-rf-design-open-textbook",
+  "lang": "en",
+  "free": true,
+  "access": "NC State University Libraries 开放获取：'The open access textbooks are freely available from the NC State University Libraries'，PDF 免费下载（按卷开放，另有 UNC Press 低价按需印刷版）。单卷摘要本《Fundamentals of Microwave and RF Design》在 Open Textbook Library 以 CC BY-NC 提供 PDF",
+  "covers": "按 NCSU 页面原文为 'a series of five volumes'，按卷分讲传输线（含史密斯圆图与阻抗匹配）、微波网络（S 参数）、微波模块与放大器/振荡器，是现代 systems-first 的微波工程教材；Open Textbook Library 书评指出该系列的摘要本 Fundamentals 缺功率分配/合成器与滤波器（书评原文：'at least the power combiner, splitter, filter should be added'），这些在分卷中，具体分卷章节未逐本核对；天线部分只作为一部分出现，天线参数/线天线/阵列/链路预算的覆盖程度未核对",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "University of Colorado Boulder",
+   "course": "ECEN 3410 Electromagnetic Waves and Transmission",
+   "url": "https://catalog.colorado.edu/courses-a-z/ecen/",
+   "prereq_text": "Requisites: Requires prerequisite course ECEN 3400 (minimum grade C-). Restricted to College of Engineering majors or Electrical Engineering minors.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "E.1.1"
+   ],
+   "scope_text": "Covers reflected and transmitted plane waves in layered media, Poynting's theorem of electromagnetic power, two-conductor transmission line theory and practice, Smith chart usage and impedance matching, waveguides, and elements of antenna theory.",
+   "hours_text": "ECEN 3410 (3) Electromagnetic Waves and Transmission — 3 credit hours",
+   "share": "约一半"
+  },
+  {
+   "school": "University of Colorado Boulder",
+   "course": "ECEN 5104 Passive Microwave Circuits",
+   "url": "https://catalog.colorado.edu/courses-a-z/ecen/",
+   "prereq_text": "Building on fundamentals taught in a class such as ECEN 3410 (Electromagnetic Waves) ...（该课程页没有 Requisites 先修栏，先修仅出现在简介首句）",
+   "prereq_kind": "unspecified",
+   "mapped_ids": [
+    "E.1.1"
+   ],
+   "scope_text": "Building on fundamentals taught in a class such as ECEN 3410 (Electromagnetic Waves), this course teaches fundamentals of microwave passive circuit analysis using scattering parameters. Design of impedance matching networks, impedance transformers, couplers, filters, dividers/combiners and other typical circuits used at microwave frequencies are covered. Using an industry-standard CAD tool, design of microstrip circuits is emphasized. Assignments include theoretical and CAD approaches to analysis and design of passive microwave transmission-line circuits.",
+   "hours_text": "ECEN 5104 (3) Passive Microwave Circuits — 3 credit hours",
+   "share": "约一半"
+  },
+  {
+   "school": "西安电子科技大学（中国大学MOOC）",
+   "course": "微波技术与天线",
+   "url": "https://www.icourse163.org/course/XDU-1206399806",
+   "prereq_text": "本课程的先修课程是：高等数学、普通物理、电路分析、工程数学、电磁场与电磁波等。（“预备知识”栏：高等数学，电路分析、工程数学（场论与复变函数）、电磁场与电磁波等。）",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2",
+    "M.1.3",
+    "M.1.4.1",
+    "N.1.1",
+    "N.1.2",
+    "H.1.1",
+    "M.1.8",
+    "E.1.1"
+   ],
+   "scope_text": "本课程的目标和任务是，使学生通过该课程的学习，掌握微波电路的“场”与“路”的分析方法与基本理论，对微波无源电路（从传输线到各种微波无源元件的构成与机理）、微波系统的组成、天线辐射接收电磁波的工作原理和设计思想有一个系统充分的认识 ... 帮助学生了解微波技术与天线设计应用软件（Microwave office,HFSS）",
+   "hours_text": null,
+   "share": "不确定"
+  }
+ ],
+ "notes": "候选判断：E.1.1 由 CU ECEN 3410 的必修先修 ECEN 3400（Electromagnetic Fields and Waves）与西电 MOOC 的“电磁场与电磁波”共同支持 → supported。H.1.1 由西电 MOOC 先修明列“电路分析”支持（课程内容本身就是电路续课），CU 侧的 ECEN 2250 是 ECEN 3400 的先修、属隔一层，故以 MOOC 原文为主证据 → supported。H.1.3 三门课的先修原文都没有出现信号与系统类课程 → not_mentioned；旁证：MIT 6.6300 Electromagnetics（https://catalog.mit.edu/subjects/6/，4-0-8 units，'Prereq: Physics II (GIR) and 6.3000'）把 6.3000 Signal Processing 列为必修先修，若把该课计入则 H.1.3 可算 supported，因每技能限 3 门未列入 courses。其内容原文 'quasistatic and dynamic solutions to Maxwell's equations; waves, radiation, and diffraction; coupling to media and structures; guided and unguided waves; modal expansions; resonance; acoustic analogs; and forces, power, and energy' 偏 E.1.1 而非微波电路，故没有用它来证明 E.1.2 的内容范围。另核对到 CU ECEN 4634/5634 Microwave and RF Laboratory（先修 ECEN 3410，内容为 VNA 校准、天线特性、RADAR 与超外差链路）与 ECEN 5134 Electromagnetic Radiation and Antennas（'an understanding of Maxwell's equations and electromagnetic waves (such as covered in ECEN 3400 and ECEN 3410) is assumed'，含天线参数、偶极/单极/环、八木、微带、喇叭、反射面、阵列与波束赋形），可用于 future 天线部分的粒度证据。Berkeley EE 117B Microwave and Wireless Measurements 页面没有 Prerequisites 栏（0 匹配），故未采用。英文资源选了开放教材而非课程网站：MIT OCW 6.013 覆盖传输线/波导但不含 S 参数、功分器、滤波器；MIT OCW 6.661 Receivers, Antennas, and Signals（https://ocw.mit.edu/courses/6-661-receivers-antennas-and-signals-spring-2003/，有 Lecture Notes）偏接收机与天线，二者都不足以覆盖微波电路主干。"
+}

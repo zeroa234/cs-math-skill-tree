@@ -1,0 +1,68 @@
+{
+ "id": "E.2.3",
+ "resource": {
+  "tier": "website",
+  "title": "Introduction to EECS II: Digital Communication Systems (MIT 6.02, Fall 2012) — MIT OpenCourseWare",
+  "url": "https://ocw.mit.edu/courses/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册；提供 Open Textbook、讲义幻灯片、完整讲座视频、习题与考试",
+  "covers": "Syllabus 原文逐条点名：'Additive Gaussian noise and the relationship between noise variance and bit errors, linear-time invariant channel models, frequency-domain (Fourier) analysis, spectral content of signals and filtering, modulation and demodulation'（信道与噪声、基带/频带传输、误码率）；'binary representation, compression (source coding), and error correction (channel coding)…Huffman coding…linear block codes and convolutional codes (Viterbi decoding)'（信道编码初步、信源编码）；其余为网络层（TDMA、路由、可靠传输），超出本技能。未覆盖：模拟调制（AM/FM）不在其主题清单内，奈奎斯特准则/码间干扰与同步也未点名（未核对逐讲）",
+  "publisher": "MIT OpenCourseWare（Instructors: Prof. Hari Balakrishnan, Prof. George Verghese）",
+  "subtitles": "未核对",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "UC Berkeley",
+   "course": "EE 121 Introduction to Digital Communications",
+   "url": "https://www2.eecs.berkeley.edu/Courses/EE121",
+   "prereq_text": "Prerequisites: ELENG 64, ELENG 66, and COMPSCI 70. EE 120 is strongly recommended.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1",
+    "H.1.3",
+    "M.6.1"
+   ],
+   "scope_text": "Catalog Description: Introduction to the fundamental principles underlying the analysis, design and optimization of analog and digital communication systems. Topics include Analog and Digital baseband and passband modulation techniques, receiver design, source coding, error-correcting codes. Examples will be taken from existing communication systems such as : broadcast Radio, cell-phones, RFID, Wi…（页面原文在此处截断）· Student Learning Outcomes 原文：'Modulate and decode Analog modulation signals with AM and FM'；'Modulate and decode Digital modulation signals with PAM, PSK, QAM and FM'；'Design optimal receivers for digital modulation'",
+   "hours_text": "Units: 4",
+   "share": "整门课"
+  },
+  {
+   "school": "北京邮电大学（中国大学MOOC）",
+   "course": "通信原理（与北邮校内《通信原理I》一致）",
+   "url": "https://www.icourse163.org/course/BUPT-1002543002",
+   "prereq_text": "预备知识：'建议学习者在信号与系统、概率论方面有一定的基础。如若这方面有欠缺，学习本课可能较为吃力，此情形下建议同时学习中国大学MOOC上的相关课程。此外，电子电路、数字逻辑电路、通信电子电路、电磁场与微波技术方面的知识对理解学习本课知识有帮助。'（另一学期版本写作：'预备知识 《信号与系统》《概率论》'）",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "H.1.3",
+    "M.6.1",
+    "H.1.1"
+   ],
+   "scope_text": "课程概述：'本课学习的具体内容包括：确定信号分析、随机信号分析、模拟正弦调制、数字基带传输、数字频带传输、模拟信号的数字化等。'",
+   "hours_text": null,
+   "share": "整门课"
+  },
+  {
+   "school": "哈尔滨工业大学（中国大学MOOC）",
+   "course": "现代数字通信",
+   "url": "https://www.icourse163.org/course/HIT-1470408188",
+   "prereq_text": "预备知识：'微积分；线性代数；概率论和随机过程；最优化理论；信号与系统；通信原理；信号处理；信息论'；课程概述另写：'需要多门先修课程如信号与系统，随机过程分析，数字信号处理等。'",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2",
+    "M.3.1",
+    "M.6.1",
+    "M.6.3",
+    "H.1.3",
+    "M.6.5",
+    "E.2.1",
+    "M.7.1"
+   ],
+   "scope_text": "课程概述：'课程主要内容包括：数字通信的基本结构、调制原理、高斯信道下的最佳接收机、通过带限信道的数字通信、均衡、多信道与多载波系统、衰落信道特性、多天线通信系统等。'",
+   "hours_text": null,
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断：H.1.3 三门课全线支持（Berkeley EE 121 先修含 ELENG 66 与'EE 120 is strongly recommended'；北邮'信号与系统'；哈工大'信号与系统'）。M.6.1 由 CS 70（Berkeley）、'概率论'（北邮）、'概率论和随机过程'（哈工大）支持。M.6.3、M.6.5、E.2.1 三条只在哈工大《现代数字通信》里出现（原文分别写作'随机过程分析'、'信息论'、'信号处理'/正文'数字信号处理'），因此打 supported；但要注意这门课本身是本科《通信原理》之后的深化课（它的先修里就写着'通信原理'），所以它证明的是这三门课在真实培养序列里位于通信原理前后，而不是通信原理入门课的先修。C.3.1（数据通信与信号基础）三门课都没提 → not_mentioned（其内容与课程正文重叠，但没写进先修）。另核对到的课程（未列入，因每技能限 3 门）：MIT 6.7410 Principles of Digital Communication，https://catalog.mit.edu/subjects/6/ 原文 'Prereq: (6.3000 or 6.3102) and (6.3700, 6.3800, or 18.05)'——同样支持 H.1.3 + M.6.1，且是 E.2.4 的先修（6.7440 Principles of Wireless Communication 'Prereq: 6.7410'）；Georgia Tech ECE 4601 Communication Systems（catalog.gatech.edu/courses-undergrad/ece/ 原文描述 '…fundamentals of modern digital communication systems and evaluate their performance with realistic channel models.'）——GT 目录不印先修，故未采用。"
+}

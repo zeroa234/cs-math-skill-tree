@@ -1,0 +1,57 @@
+{
+ "id": "N.1.1",
+ "resource": {
+  "tier": "video",
+  "title": "Fundamentals of Physics I (PHYS 200), Open Yale Courses",
+  "url": "https://oyc.yale.edu/physics/phys-200",
+  "lang": "en",
+  "free": true,
+  "access": "Open Yale Courses 免费公开：课程页提供授课视频、课程大纲与习题，无需注册",
+  "covers": "课程页原文 'This course covers Newtonian mechanics, special relativity, gravitation, thermodynamics, and waves'：牛顿力学（运动学、牛顿定律、动量与能量、转动、振荡）与热力学（thermodynamics）两大块都覆盖，正好对应本技能的力学+热学；刚体转动与气体动理论是否单列未逐讲核对；光学、电磁学不在本技能范围",
+  "publisher": "耶鲁大学 Open Yale Courses（站点为耶鲁官方公开课平台，课程页标注 Fall 2006 课堂录制、授课教师 Ramamurti Shankar）",
+  "subtitles": "未核对",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "8.01 Physics I",
+   "url": "https://catalog.mit.edu/subjects/8/",
+   "prereq_text": "Prereq: None",
+   "prereq_kind": "unspecified",
+   "mapped_ids": [],
+   "scope_text": "Introduces classical mechanics. Space and time: straight-line kinematics; motion in a plane; forces and static equilibrium; particle dynamics, with force and conservation of momentum; relative inertial frames and non-inertial force; work, potential energy and conservation of energy; kinetic theory and the ideal gas; rigid bodies and rotational dynamics; vibrational motion; conservation of angular momentum; central force motions; fluid mechanics.",
+   "hours_text": "3-2-7 units. PHYSICS I",
+   "share": "约一半"
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "PHYS 4A Physics for Physics Majors–Mechanics",
+   "url": "https://catalog.ucsd.edu/courses/PHYS.html",
+   "prereq_text": "Prerequisites: MATH 20A. Recommended preparation: prior or concurrent enrollment in MATH 20B and a knowledge of vectors.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2"
+   ],
+   "scope_text": "The first quarter of a five-quarter calculus-based physics sequence for physics majors and students with a serious interest in physics. The topics covered are vectors, particle kinematics and dynamics, work and energy, conservation of energy, conservation of momentum, collisions, rotational kinematics and dynamics, equilibrium of rigid bodies, small oscillations, gravitation, and central force motion.",
+   "hours_text": "PHYS 4A. Physics for Physics Majors–Mechanics (4)",
+   "share": "约一半"
+  },
+  {
+   "school": "University of California, San Diego",
+   "course": "PHYS 4B Physics for Physics Majors—Fluids, Waves, Statistical and Thermal Physics",
+   "url": "https://catalog.ucsd.edu/courses/PHYS.html",
+   "prereq_text": "Prerequisites: PHYS 4A and MATH 20A-B.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "N.1.1",
+    "M.1.2",
+    "M.1.3"
+   ],
+   "scope_text": "Continuation of PHYS 4A covering forced and damped oscillations, fluid statics and dynamics, waves in elastic media, sound waves, heat and the first law of thermodynamics, kinetic theory of gases, Brownian motion, Maxwell-Boltzmann distribution, second law of thermodynamics.",
+   "hours_text": "PHYS 4B. Physics for Physics Majors—Fluids, Waves, Statistical and Thermal Physics (4)",
+   "share": "不足一半"
+  }
+ ],
+ "notes": "映射依据（UCSD 数学课目录原文）：MATH 20A = 一元微积分（Calculus for Science and Engineering，含导数与积分入门）→ M.1.2；MATH 20B = 一元积分学 → M.1.3；MATH 20C = 'Vector geometry, vector functions and their derivatives. Partial differentiation…'（向量与多元）→ M.1.4.1/M.4.1；MATH 20D = 常微分方程 → M.2.1；MATH 20E = 向量分析（Green/Stokes/Gauss）→ M.1.4.4；MATH 18 = Linear Algebra → M.3.1。候选判断：M.1.2 由 UCSD PHYS 4A 'Prerequisites: MATH 20A' 明确要求；M.1.3 由 PHYS 4B 'Prerequisites: PHYS 4A and MATH 20A-B' 明确要求（PHYS 4A 只写 'Recommended preparation… MATH 20B'）；M.4.1 只出现在 PHYS 4A 的 'Recommended preparation: … and a knowledge of vectors'，故记 recommended，没有课程把向量代数列为强制先修。热学部分的证据较弱：MIT 8.01 只到 'kinetic theory and the ideal gas'，没有热力学定律；热力学第一/第二定律与气体动理论的原文出现在 UCSD PHYS 4B（其原文同时含 waves，故 share 记不足一半）。MIT 8.01 的 'Prereq: None' 说明该校不要求先修微积分。另：MIT 8.012（同名更高阶课）写 'concurrent registration in a math subject more advanced than 18.01 is recommended'，可作 M.1.3 的旁证但未列入课程。英文资源为什么选视频：免费正文 OpenStax《University Physics》分三卷（第一卷力学、第二卷热力学+电磁学），一门技能要跨两卷才凑齐，Yale PHYS 200 一门课同时覆盖力学与热学，所以选了视频；中文侧的北理工 MOOC 也是覆盖两半的单一课程，可作为正文型的替代入口。矢量（M.4.1）的中文旁证：北京理工大学《大学物理—力学与热学》课程页“常见问题”原文写『要重点培养应用高等数学解决物理问题的能力，例如：利用微积分、矢量分析等解题』，但这是课内用到的数学，不是先修要求。"
+}

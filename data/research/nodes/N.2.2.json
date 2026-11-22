@@ -1,0 +1,58 @@
+{
+ "id": "N.2.2",
+ "resource": {
+  "tier": "book",
+  "title": "Principles of Semiconductor Devices (2nd ed.), B. Van Zeghbroeck",
+  "url": "https://truenano.com/PSD20/contents/table%20of%20contents.pdf",
+  "lang": "en",
+  "free": true,
+  "access": "作者（科罗拉多大学 Boulder 教授 Bart Van Zeghbroeck）个人站点 truenano.com 提供免费网页版与 PDF；本文档为全书前置页+目录（含 Preface、逐节目录）。注意：本机直连该站点两次超时，正文经 Tavily 抓取核对，用户端可达性未验证",
+  "covers": "目录原文覆盖 Chapter 1 Review of Modern Physics（量子力学、泡利不相容、统计热力学）与 Chapter 2 Semiconductor fundamentals：2.2 Crystals and crystal structures（Bravais lattices、Miller indices）、2.3 Energy bands（free electron model、Kronig-Penney、能带图、掺杂对带隙的影响）、2.3.6 'The effective mass concept'、2.4 Density of states、2.5 Carrier distribution functions（Fermi-Dirac）、2.6 Carrier densities（2.6.3 intrinsic / 2.6.4 doped）、2.7 Carrier Transport（2.7.1 carrier drift、2.7.4 carrier diffusion）、2.8 Carrier recombination and generation；Preface 原文写 'Chapter three and four are dedicated to two-terminal devices, metal-semiconductor junctions and p-n junctions'。未覆盖：倒格子/布里渊区的系统讲述（整份抓取到的书内文字里 'reciprocal'、'Brillouin' 均 0 命中），晶体结构只到 Bravais 点阵、Miller 指数与常见半导体结构",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "University of California, San Diego",
+   "course": "PHYS 152A Condensed Matter Physics",
+   "url": "https://catalog.ucsd.edu/courses/PHYS.html",
+   "prereq_text": "Prerequisites: PHYS 130A or CHEM 130. Corequisites: PHYS 140A.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "N.2.1"
+   ],
+   "scope_text": "Physics of the solid-state. Binding mechanisms, crystal structures and symmetries, diffraction, reciprocal space, phonons, free and nearly free electron models, energy bands, solid-state thermodynamics, kinetic theory and transport, semiconductors.",
+   "hours_text": "PHYS 152A. Condensed Matter Physics (4)",
+   "share": "整门课"
+  },
+  {
+   "school": "Stanford University",
+   "course": "EE 116 Semiconductor Devices for Energy and Electronics",
+   "url": "https://bulletin.stanford.edu/courses/ee-116",
+   "prereq_text": "Corequisite: Should currently be enrolled in or have completed the following course(s): EE 65 Modern Physics for Engineers 4 Units. EE 65 or equivalent recommended co-requisite.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "N.2.1"
+   ],
+   "scope_text": "The underpinnings of modern technology are the transistor (circuits), the capacitor (memory), and the solar cell (energy). EE 116 introduces the physics of their operation, their historical origins (including Nobel prize breakthroughs), and how they can be optimized for future applications. The class covers physical principles of semiconductors, including silicon and new material discoveries, quantum effects, band theory, operating principles, and device equations.",
+   "hours_text": "Units: 3",
+   "share": "约一半"
+  },
+  {
+   "school": "University of California, Berkeley",
+   "course": "EE 130 Integrated-Circuit Devices",
+   "url": "https://www2.eecs.berkeley.edu/Courses/EE130",
+   "prereq_text": "Prerequisites: ELENG 64 and ELENG 66",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1",
+    "H.1.3"
+   ],
+   "scope_text": "Overview of electronic properties of semiconductor. Metal-semiconductor contacts, pn junctions, bipolar transistors, and MOS field-effect transistors. Properties that are significant to device operation for integrated circuits. Silicon device fabrication technology.",
+   "hours_text": "Units: 4",
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断：N.2.1 由 UCSD PHYS 152A 明确要求（'Prerequisites: PHYS 130A or CHEM 130'，PHYS 130A = Quantum Physics I，目录原文 'Development of quantum mechanics. Wave mechanics…Piece-wise constant potentials, simple harmonic oscillator, central field and the hydrogen atom'），Stanford EE 116 则用同修课 EE 65（Modern Physics for Engineers，描述含量子力学与能带）作为 recommended co-requisite，两条合起来记 supported。N.1.2（候选推荐）与 M.6.1（候选推荐）三门课都没有写：EE 130 的先修是电路课 ELENG 64/66 而不是电磁学；PHYS 152A 的同修 PHYS 140A（Statistical and Thermal Physics I）属统计物理而非概率论课，因此都没有映射。share：PHYS 152A 整门课就是固体物理（含半导体），记整门课；EE 116 是“半导体物理+器件方程”，EE 130 是“半导体电学性质+pn 结/BJT/MOS+工艺”，都只有一半左右是能带论+载流子物理，故记约一半。英文资源另有两个可直接访问的 OCW 备选（本机 fetch 均 200）：MIT 6.730 Physics for Solid-State Applications（描述原文含 'crystal lattices, electronic energy band structures, phonon dispersion relatons, effective mass theorem, semiclassical equations of motion, and impurity states in semiconductors'，覆盖固体半）与 MIT 6.012 Microelectronic Devices and Circuits（'physical electronics of semiconductor junction and metal-on-silicon (MOS) devices'，覆盖器件半）；Van Zeghbroeck 那本书是唯一一本书里同时含载流子统计、漂移扩散、产生复合与 pn 结的免费正文。"
+}
