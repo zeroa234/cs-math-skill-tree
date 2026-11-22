@@ -1,0 +1,57 @@
+{
+ "id": "E.1.8",
+ "resource": {
+  "tier": "website",
+  "title": "Principles of the Global Positioning System (MIT 12.540, MIT OpenCourseWare, Spring 2012)",
+  "url": "https://ocw.mit.edu/courses/12-540-principles-of-the-global-positioning-system-spring-2012/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册：Syllabus、Lecture Notes（21 讲 PDF，含配套 .m/.f 代码与数据文件）、Assignments 与习题解答",
+  "covers": "讲义目录（21 讲）覆盖：坐标系与时间系统（Lec 2、4）、GPS 卫星轨道（5）、GPS 观测量与载波相位（6、9）、GPS 信号结构与码（7）、伪距测量（8）、最小二乘/统计估计与 Kalman 滤波（10–13）、钟差与对流层/电离层延迟等误差源（14–16）、天线（17）、数学模型与差分/模糊度（18–19）、处理软件与 IGS 数据（20–21）。不覆盖：精度因子 DOP 未单列；接收机的信号捕获与跟踪（acquisition/tracking）没有单独讲义；惯性导航与 GNSS/INS 组合导航不在目录里",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "12.540 Principles of Global Positioning System",
+   "url": "https://catalog.mit.edu/subjects/12/",
+   "prereq_text": "Prereq: Calculus II (GIR), Physics I (GIR), and 18.06",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.4.1",
+    "N.1.1",
+    "M.3.1"
+   ],
+   "scope_text": "The principles and applications of the Global Positioning System (US), GLONASS (Russia), Galileo (EU) and Beidou (China), known as Global Navigation Satellite Systems (GNSS), along with other space geodetic systems, including very-long-baseline interferometry (VLBI), satellite laser ranging (SLR), and Interferometric Synthetics Aperture Radar (InSAR). Topics covered include CDMA and FDMA encoding used by these systems to allow measurements of pseudo-range and carrier phase which allow millimeter accuracy positioning, models and analysis methods required for millimeter accuracy positioning. Other topics include: satellite orbit modeling, atmospheric refraction modeling, estimation techniques (including Kalman filtering), statistical and spectral analysis of data. Application areas include tectonic studies of Earth deformation, meteorology, space weather, and millimeter accuracy tracking of moving objects.",
+   "hours_text": "3-0-9 units",
+   "share": "整门课"
+  },
+  {
+   "school": "Stanford University",
+   "course": "AA 272 Global Positioning Systems",
+   "url": "https://bulletin.stanford.edu/courses/aa-272",
+   "prereq_text": "Prerequisites: familiarity with matrix algebra and MatLab (or another mathematical programming language).（Bulletin 正文原句，印在课程描述末尾）",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.3.1"
+   ],
+   "scope_text": "The principles of satellite navigation using Global Positioning Systems (GPS). Positioning techniques using code tracking, single and dual frequency, carrier aiding, and use of differential and assisted GPS/GNSS for improved accuracy and integrity. Students will learn the building blocks to go from raw received satellite time in nanoseconds all the way to a sophisticated position solution. Using provided Android smartphones, students will collect data and implement an open-ended course project where the goal is to get creative and solve an interesting problem using the tools developed in this course. Prerequisites: familiarity with matrix algebra and MatLab (or another mathematical programming language).",
+   "hours_text": "Units: 3",
+   "share": "整门课"
+  },
+  {
+   "school": "University of Colorado Boulder",
+   "course": "ASEN 5090 Introduction to Global Navigation Satellite Systems",
+   "url": "https://catalog.colorado.edu/courses-a-z/asen/",
+   "prereq_text": "Requisites: Restricted to College of Engineering (ENGR) graduate students, Aerospace Engineering Concurrent Degree (C-ASEN and C-ASENP) majors, and Aerospace graduate certificate students.（另正文写 'Programming experience is required.'；目录没有印课程先修）",
+   "prereq_kind": "unspecified",
+   "mapped_ids": [],
+   "scope_text": "Global Navigation Satellite Systems (GNSS) are important tools for navigation, science, and engineering. Introduces GNSS hardware, signal structure, algorithms, error sources, and modeling techniques. Programming experience is required.",
+   "hours_text": "ASEN 5090 (3)",
+   "share": "整门课"
+  }
+ ],
+ "notes": "候选判断依据：M.3.1（线性代数）MIT 12.540 把 18.06 Linear Algebra 列为必修先修，Stanford AA 272 先修写 'familiarity with matrix algebra' → supported。E.2.3（通信原理）、E.2.2（统计信号处理）、H.4.1（控制理论与状态估计）、M.6.1（概率论）三门课的先修段都没有提 → not_mentioned；注意 MIT 12.540 的**课程内容**含 Kalman filtering 与估计，但先修只列到 18.06，故 E.2.2/H.4.1 记 not_mentioned 而非 supported。CU Boulder ASEN 5090 目录只印研究生选课限制，没有课程先修，故 prereq_kind 记 unspecified。东南大学 MOOC 的预备知识原文为『1、电工电子基础 2、计算机程序设计』，与 E.1.8 的候选前置都不直接对应，未计入 mapped_ids。另查到 CU Boulder 有 'Astrodynamics and Satellite Navigation Systems - Graduate Certificate' 与 ASEN 3700 Orbital Mechanics/Attitude Dynamics and Control（先修 ASEN 2703/2704 与 APPM 2350 或 MATH 2400），属轨道力学课而非 GNSS 定位课，未收入。"
+}

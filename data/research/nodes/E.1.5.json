@@ -1,0 +1,58 @@
+{
+ "id": "E.1.5",
+ "resource": {
+  "tier": "video",
+  "title": "RF Integrated Circuits（NPTEL 视频课程，IIT Delhi，Dr. Shouribrata Chatterjee）",
+  "url": "https://nptel.ac.in/courses/117102012",
+  "lang": "en",
+  "free": true,
+  "access": "NPTEL/SWAYAM 免费在线学习（视频在 NPTEL 站与 NPTEL 官方 YouTube 频道，大纲 PDF 免费下载；要证书/学分才需注册并考试）",
+  "covers": "15 个 Module、40 讲逐条对应简介：Module 1 射频系统基本架构与收发机（Lec 1–3）、Module 2 无源 RLC/匹配（pi match、T match）、Module 3 片上无源器件（互连与集肤效应、电阻/电容/电感）、Module 5 分布系统（传输线、反射系数、损耗线、Smith 圆图）、Module 6 高频放大器设计、Module 7 噪声（热噪声/闪烁噪声、噪声系数）、Module 8 LNA（MOS 噪声参数、功率匹配 vs 噪声匹配）、Module 9 混频器、Module 10 射频功率放大器（Class A–F）、Module 11 VCO（谐振器、负阻振荡器）、Module 12 PLL（线性化模型、鉴相器/电荷泵、环路滤波器）、Module 13 频率综合（整数 N/小数 N）、Module 14 相位噪声、Module 15 GSM/CDMA/UMTS 无线架构。不覆盖：非线性与线性度指标（P1dB/IIP3/交调）没有单列模块，只在 LNA Module 8 的 'Large signal performance' 一讲内涉及",
+  "publisher": "NPTEL（IISc/IIT 联合、印度教育部资助的国家级课程平台）；课程页标注 'RF Integrated Circuits, IIT Delhi, Dr. Shouribrata Chatterjee'，大纲 PDF 页脚 'A joint venture by IISc and IITs, funded by MHRD, Govt of India'",
+  "subtitles": "未核对",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "Massachusetts Institute of Technology",
+   "course": "6.6020 High-Frequency Integrated Circuits",
+   "url": "https://catalog.mit.edu/subjects/6/",
+   "prereq_text": "Prereq: 6.2080",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.4"
+   ],
+   "scope_text": "Principles and techniques of high-speed integrated circuits used in wireless/wireline data links and remote sensing. On-chip passive component design of inductors, capacitors, and antennas. Analysis of distributed effects, such as transmission line modeling, S-parameters, and Smith chart. Transceiver architectures and circuit blocks, which include low-noise amplifiers, mixers, voltage-controlled oscillators, power amplifiers, and frequency dividers. Involves IC/EM simulation and laboratory projects.",
+   "hours_text": "3-3-6 units",
+   "share": "整门课"
+  },
+  {
+   "school": "UC Berkeley (EECS)",
+   "course": "EE 242A Integrated Circuits for Communications",
+   "url": "https://www2.eecs.berkeley.edu/Courses/EE242A/",
+   "prereq_text": "Prerequisites: EL ENG 140/240A or equivalent",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.2.6"
+   ],
+   "scope_text": "Catalog Description: Analysis and design of electronic circuits for communication systems, with an emphasis on integrated circuits for wireless communication systems. Analysis of noise and distortion in amplifiers with application to radio receiver design. Power amplifier design with application to wireless radio transmitters. Radio-frequency mixers, oscillators, phase-locked loops, modulators, and demodulators.",
+   "hours_text": "Units: 4",
+   "share": "整门课"
+  },
+  {
+   "school": "电子科技大学（中国大学MOOC）",
+   "course": "微波固态电路",
+   "url": "https://www.icourse163.org/course/UESTC-491001",
+   "prereq_text": "预备知识：电磁场理论或电磁场与波 / 微波技术基础（页面分两行列示）",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "E.1.1",
+    "E.1.2"
+   ],
+   "scope_text": "本课程内容包括：第一章引言，第二章微波集成电路基础，第三章微波晶体管放大器，第四章微波混频器和检波器，第五章微波倍频器，第六章微波振荡器，第七章微波控制电路。……掌握微波固态电路的基本原理、主要性能指标、应用领域和设计方法与准则",
+   "hours_text": "课程页未印学时/学分（页面只列章节与参考书）",
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断依据：H.2.6（模拟集成电路设计）Berkeley EE 242A 先修原文 'Prerequisites: EL ENG 140/240A or equivalent'，EE 140 在该系课程页原文为 'EE 140. Linear Integrated Circuits … Single and multiple stage transistor amplifiers. Operational amplifiers. Feedback amplifiers … Supply and temperature independent biasing and references … analog-to-digital converters, switched capacitor filters' → 与 H.2.6 一致，supported；NPTEL《RF Integrated Circuits》大纲的 Pre-requisites 也写 'Analog integrated circuits.'（旁证）。E.1.2（微波工程与天线）由电子科技大学 MOOC《微波固态电路》预备知识『微波技术基础』支持 → supported；这条证据的课程层级是微波固态/微波集成电路而非 CMOS RFIC，故只作 must 的一条而非全部。E.1.3（射频与高频电路）与 H.1.3（信号与系统）三门课都没有作为先修列出 → not_mentioned；实际上若把 Stanford EE 133（'Prerequisite: EE 101B Circuits II and (EE 114 or EE 214A) Fundamentals of Analog Integrated Circuit Design'，Units 3–4，内容是 AM/FM/SDR 射频电路实验）和 Berkeley EE 142（'Prerequisites: ELENG 64, ELENG 66, and EL ENG 105'）算进来，H.1.1 与 H.1.3 都能拿到 required 级证据（EE 142 的 ELENG 66 是信号与系统），只是每技能限 3 门，这里优先保留能支撑两个 must 的组合；西电《射频电路基础》的预备知识原文『本课程需要在电路分析基础、信号与系统、模拟电路与集成设计等课程学过以后开设』同样支持 H.1.1/H.1.3/H.1.4（该课作为 zh 资源，未重复计入 courses）。MIT 6.6020 覆盖相位噪声吗？其目录描述只写 'voltage-controlled oscillators' 没有单列 phase noise，故本技能『相位噪声/锁相环频率综合器』的英文主覆盖来自 NPTEL 课程（Module 12–14），不是 MIT 6.6020。"
+}

@@ -1,0 +1,46 @@
+{
+ "id": "E.3.5",
+ "resource": {
+  "tier": "website",
+  "title": "6.061 Introduction to Electric Power Systems（MIT OpenCourseWare, Spring 2011, Prof. James L. Kirtley Jr.）",
+  "url": "https://ocw.mit.edu/courses/6-061-introduction-to-electric-power-systems-spring-2011/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册；提供 Syllabus、Calendar、Readings、Open Textbook、Assignments、Quizzes 与考试解答",
+  "covers": "只在 Calendar 里覆盖继电保护的一小块：“Symmetrical components, transformers, faults, protection”“Protection, load flow”两次课，即对称分量与故障分析、保护与潮流。对应简介里的故障分析与保护的基本概念；不覆盖：电流保护整定、距离保护、纵联保护、变压器/发电机/母线保护、自动重合闸、微机保护、互感器与保护装置（这本是一门电力系统导论课，不是继电保护课）。",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "山东科技大学（济南校区）电气工程系",
+   "course": "电力系统继电保护原理（课程代码 230021011004）",
+   "url": "https://jnxq.sdust.edu.cn/__local/8/23/A5/998B75538B52E7E45E8E3A5DFD1_A22577FB_6484C.pdf",
+   "prereq_text": "先修课程 电路、电机学、Power System I、电力系统分析",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1",
+    "E.3.2",
+    "E.3.3"
+   ],
+   "scope_text": "课程目标原文：“使学生了解电力系统继电保护的作用、继电保护的基本原理和继电保护的基本要求。掌握输电线路阶段式电流保护的基本原理、动作电流整定、灵敏度校验、动作时间整定与配合及阶段式电流保护的接线方式；掌握电网距离保护的原理和阻抗继电器的动作特性及接线方式，掌握距离保护的整定计算以及过渡电阻、振荡等影响距离保护正确工作的因素分析及防止方法；掌握输电线路纵联保护的基本原理及特点，熟悉方向比较式纵联保护的基本概念与构成原理；掌握变压器差动保护构成原理、变压器差动保护的整定计算原则……了解变压器常用后备保护工作原理。”课程英文简介另有“the basic structure, working principle, design and calculation method, operation theory of electric primary system of power plant and substation, as well as the principle and technology of partial electric secondary system”",
+   "hours_text": "学分 3.5；总学时 56；理论学时 50；实践学时 6",
+   "share": "约一半"
+  },
+  {
+   "school": "武汉大学（中国大学MOOC）",
+   "course": "电力系统继电保护",
+   "url": "https://www.icourse163.org/course/WHU-1466004162",
+   "prereq_text": "预备知识：“本课程的前导课程：《电气工程基础》、《电力系统分析》”",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "E.3.3"
+   ],
+   "scope_text": "课程概述原文：“本课程的主要知识模块包括：电流保护、电网的距离保护、输电线纵联保护、自动重合闸、电力变压器保护、发电机保护等。”授课目标原文还写明本课程面向“电气工程及其自动化专业的专业核心课程”“面向大三本科学生”，并配套《1000kV特高压变电站继电保护设计虚拟仿真实验》与《电力系统继电保护与自动化综合实验》",
+   "hours_text": null,
+   "share": "整门课"
+  }
+ ],
+ "notes": "英文侧没找到能核实的“电力系统继电保护”英文课程页：检索只返回社区学院/教务通用页面，本技能额度内不再搜，因此英文入口用 MIT OCW 6.061（免费、稳定），并在 covers 里写清它只覆盖故障/保护两次课，属不足一半的替代。另核到国家高等教育智慧教育平台收录的兰州交通大学《电力系统继电保护》MOOC（https://higher.smartedu.cn/course/67b7bbe2225d72705e48e7a4，课程大纲含“第0章 绪论 0.1 电力系统的三种状态…0.3 对继电保护的基本要求”）可作补充，但页面没有先修栏，未用作先修证据。候选判断：E.3.3（电力系统分析）由山东科技大学“先修课程……电力系统分析”与武汉大学“前导课程……《电力系统分析》”双支持 → supported；E.3.2（电机与电力拖动）由山东科技大学“先修课程 电路、电机学……”支持（该课是“电机学”，映射 E.3.2）→ supported；H.1.1（电路）两门课都写了，属候选清单外的必修先修 → 记入 extra_prereqs。山东科技大学大纲的 share 记“约一半”，依据是它的课程目标只写到电流保护、距离保护、纵联保护和变压器差动/后备保护，没有发电机-变压器组、母线保护与微机保护的独立目标（而技能简介含这些）。"
+}

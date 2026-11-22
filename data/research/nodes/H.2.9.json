@@ -1,0 +1,51 @@
+{
+ "id": "H.2.9",
+ "resource": {
+  "tier": "website",
+  "title": "COE838 / EE8221 Systems on Chip Design（Toronto Metropolitan University，Gul N. Khan）",
+  "url": "https://www.ecb.torontomu.ca/~courses/coe838/",
+  "lang": "en",
+  "free": true,
+  "access": "多伦多都会大学课程站公开访问（Winter 2026 版），Lecture Notes / Labs-Projects / Problem Sets / 样卷均可下载，无需登录",
+  "covers": "课程目标原文：“This course will cover the basics of system-on-chip (SoC) design, hardware-software co-specification, co-synthesis, network-on-chip (NoC) systems and system-on-programmable-chip technologies……multi-core architectures and embedded systems on a chip……Various SoC soft processor cores such as Nios-II, ARM Cortex A9, and other CPU IPs will be explored……Interconnection structures suitable for SoC design will be studied. On-chip busses (e.g. AMBA, Avalon, IBM Core-connect, etc.) and network-on-chip techniques will be covered in detail.” 对应简介的 SoC 架构与 IP 复用、处理器集成、片上总线（AMBA/Avalon）、片上网络 NoC、软硬件协同设计、SoC 验证（站点另有 lecture 'SoC Verification'）。不覆盖：存储子系统与 DMA、时钟与电源域的专门章节、安全联锁之类不在其中（页面未列）。",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "北京工业大学 信息学部（微电子科学与工程专业）",
+   "course": "片上系统集成（双语）／System on a Chip（课程编码 0010129）",
+   "url": "https://undergrad.bjut.edu.cn/__local/8/72/38/C8619685285B0538671D97BA033_663D4706_3210FC.pdf",
+   "prereq_text": "先修课程：半导体器件原理/微电子器件、微电子工艺/集成电路制造技术、集成电路分析与设计/集成电路原理与设计、电路分析基础、模拟电子技术、数字电子技术",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.2.5",
+    "H.2.7",
+    "H.2.4",
+    "H.1.1",
+    "H.1.4",
+    "H.1.2"
+   ],
+   "scope_text": "课程目标原文：“课程目标 2：掌握集成电路领域内复杂系统设计的相关知识，包括：片上系统的设计理念、设计方法、设计流程、可复用 IP 核设计、片上互联、IP 核系统集成、可测性设计。”教学章节原文：第一章 绪论（片上系统 SOC 概念、设计方法和流程）；第二章 设计流程（“SOC 设计流程，软硬件协同设计的核心思想，标准单元设计”）；第三章 片上系统设计与 EDA 工具（片上系统设计及验证、EDA 概念）；第四章 结构设计（“系统结构设计、嵌入式处理器、片上总线、多核 SOC”，正文含“系统结构设计、嵌入式处理器、片上总线、多核 SOC”与 ESL 虚拟平台）；第五章 IP 复用的设计方法（IP 的基本概念与分类、IP 的设计与验证、IP 核的选择、基于平台的 SOC 设计方法）；第六章 功能验证（功能验证策略、仿真验证自动化、形式验证、基于断言的验证方法）；第七章 可测性设计（集成电路测试、可测性设计、故障建模、扫描测试、内建自测试）",
+   "hours_text": "学分 2.0；学时 32（教学环节学时分配表合计 32：讲授 23、实验/讨论 9）",
+   "share": "整门课"
+  },
+  {
+   "school": "中国科学院大学（UCAS）",
+   "course": "集成电路与SOC设计基础（课程编码 085400M05008T）",
+   "url": "https://jwba.ucas.ac.cn/sc/course/courseplan/227150",
+   "prereq_text": "预修课程  电路基础、数字电路、数据结构",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.1.1",
+    "H.1.2",
+    "F.1.1"
+   ],
+   "scope_text": "教学目的要求原文：“旨在让修课的学生了解CMOS原理及工艺、数字集成电路前端设计、数字集成电路物理设计、数字集成电路测试及封装，了解集成电路设计流程以及各个环节的设计方法。”大纲内容原文：第三章 数字集成电路前端设计 14学时（数字逻辑与数字逻辑单元；SoC 逻辑设计；验证方法）；第四章 数字集成电路物理设计 12学时（逻辑综合；时序分析；floorplan；布局布线；时钟树与电源网络；芯片 signoff 验证）；第五章 数字集成电路测试及封装 6学时（可测性设计与测试；芯片封装）",
+   "hours_text": "Course Hours：40  Course Credit：2.00",
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断：H.2.4（VLSI与芯片设计）由北京工业大学“集成电路分析与设计/集成电路原理与设计”先修原文支持 → supported；C.1.2（计算机体系结构）与 H.2.1（FPGA与Verilog）在两门课的先修原文里都没有出现 → not_mentioned；H.2.2（硬件设计验证）虽然两门课的“课程内容”都有功能验证章节，但没有一门课把它写成先修课，所以按先修判断仍记 not_mentioned（内容覆盖不等于先修，这一点容易混淆，特意记下）。北京工业大学大纲的先修还包含半导体器件原理、微电子工艺、集成电路分析与设计，分别映射 H.2.5、H.2.7、H.2.4 写进课程 mapped_ids，其中 H.2.5/H.2.7 不在候选清单，另记入 extra_prereqs。另核到多伦多都会大学课程站有 'Introduction to SoC' 讲义 PDF（https://www.ecb.torontomu.ca/~courses/coe838/lectures/Intro-SoC.pdf），含 NoC（Network on Chip）与 bus-based interconnection 两节，可作为 NoC/AXI 的补充材料。"
+}

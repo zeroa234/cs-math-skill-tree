@@ -1,0 +1,59 @@
+{
+ "id": "H.4.6",
+ "resource": {
+  "tier": "website",
+  "title": "10.450 Process Dynamics, Operations, and Control（MIT OpenCourseWare, Spring 2006, Dr. Barry S. Johnston）",
+  "url": "https://ocw.mit.edu/courses/10-450-process-dynamics-operations-and-control-spring-2006/",
+  "lang": "en",
+  "free": true,
+  "access": "MIT OpenCourseWare 免费开放，无需注册；提供 Syllabus、Lecture Notes、Assignments",
+  "covers": "Syllabus 的 Course Objectives 原文覆盖：过程动态建模（微分方程与传递函数框图）、单回路反馈控制的术语与方法、单回路控制器整定、串级/前馈/基于模型的结构改进反馈、传感器/阀门/变送器/控制器等硬件概述、频域响应与稳定性估计。对应简介的过程建模、PID 控制与参数整定、串级控制、前馈控制、控制阀与过程检测仪表。不覆盖：比值控制、解耦与多回路控制、时滞补偿（Smith 预估等）、DCS 与控制系统结构、阶跃响应辨识的工程流程在 syllabus 里没有单列。",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "北京工业大学（自动化专业）",
+   "course": "过程控制系统 I／Process Control Systems I（课程编码 0001998）",
+   "url": "https://undergrad.bjut.edu.cn/__local/8/13/6D/5756A6BEEB6D13AD7455DC08DB8_663F9011_261222.pdf",
+   "prereq_text": "先修课程：自动控制原理，智能检测与网联技术",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.4.1",
+    "H.3.3"
+   ],
+   "scope_text": "课程简介原文：“本课程介绍过程控制系统的组成、特点及发展状况；对工业生产过程被控对象的数学模型讨论了建模方法；介绍了PID 控制器的设计、选型与参数整定方法；论述了调节阀的流量特性、设计及选型；讨论了常用的复杂控制系统，如串级控制、补偿控制、比值控制、均匀控制、分程控制、选择性控制和解耦控制等系统的结构、分析、设计方法等；介绍了几种典型的先进控制方法；论述了计算机过程控制系统的组成与类型；最后介绍了过程控制的几个应用实例。”",
+   "hours_text": "学分 3.0；学时 48",
+   "share": "整门课"
+  },
+  {
+   "school": "长江大学（自动化专业）",
+   "course": "过程控制系统及装置／Process Control System And Instrumentation（课程编码 151021）",
+   "url": "https://sfzx.yangtzeu.edu.cn/__local/9/52/27/EA178CDE6988E094397659ACBF5_19A4FEC9_196CD.pdf",
+   "prereq_text": "先修课程：《自动控制理论》《自动检测技术》",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "H.4.1",
+    "H.3.3"
+   ],
+   "scope_text": "课程性质与任务原文：“该课程全面讲述了过程控制的基本理论及分析方法，系统介绍了过程控制的数学模型、测控仪表、调节规律，在此基础上详细介绍了基本过程控制系统、复杂过程控制系统和计算机控制的设计方法及特点。通过本课程的学习，学生应掌握过程控制的理论及工程设计”",
+   "hours_text": "学分 4；总学时 64 学时，理论学时 54 学时，实验学时 10 学时",
+   "share": "整门课"
+  },
+  {
+   "school": "MIT（Chemical Engineering）",
+   "course": "10.450 Process Dynamics, Operations, and Control",
+   "url": "https://ocw.mit.edu/courses/10-450-process-dynamics-operations-and-control-spring-2006/pages/syllabus/",
+   "prereq_text": "The prerequisites for this course include Differential Equations (18.03) and Transport Processes (10.302).",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.2.1"
+   ],
+   "scope_text": "Course Objectives 原文：“Single-loop feedback control of processes - concepts, terminology, methods, and performance；Some ways to enhance feedback control；Some of the hardware used in a control system…… How to represent dynamic systems by equations and by transfer functions in block diagrams…… How to tune a single-loop controller for better response；How to enhance feedback control with cascade, feedforward, and model-based structures；An overview of sensors, valves, transducers, controllers - both hardware and performance considerations”",
+   "hours_text": "Lectures: 3 sessions / week, 1 hour / session",
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断：H.4.1（控制理论与状态估计）由北京工业大学“先修课程：自动控制原理……”与长江大学“先修课程：《自动控制理论》……”双支持 → supported；H.3.3（传感器与接口）由北京工业大学“智能检测与网联技术”与长江大学“《自动检测技术》”支持 → supported；H.4.5（PLC与工业自动化）在两门课的先修原文里都没有出现 → not_mentioned。MIT 10.450 的 share 记“约一半”，因为它是化工过程控制课，缺少比值/解耦/DCS 这些内容；另两门中国课的先修与内容都对得上，share 记“整门课”。extra_prereqs 里只加了 M.2.1（MIT 10.450 的 18.03），10.302 Transport Processes（化工传递过程）在节点表里没有对应 id，未记。"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "E.1.6",
+ "resource": {
+  "tier": "website",
+  "title": "LearnEMC — EMC Resources（分级的电磁兼容教程站点）",
+  "url": "https://learnemc.com/",
+  "lang": "en",
+  "free": true,
+  "access": "免费浏览，无需注册。注意：站内《Electromagnetic Compatibility Course Notes》一书现在改为 Lulu/站内下单的付费印刷书（页面原文 'Available Now!'、'there are currently two options available for ordering this book'），免费的是站上的分级教程与资源页；部分 Level 页自述『still under construction』",
+  "covers": "首页分级目录对应简介：电磁干扰三要素与四种耦合机制、发射与抗扰度测试布置与要求、寄生参数（互容/对地电容/互感/自感/线阻）、辐射机理、时域与频域波形、传播时延与信号完整性、串扰（电缆与板内）、共模/差模与模式转换、接地（安全地/电路地/EMC 地）、滤波、屏蔽、PCB 布局与叠层、系统级（机箱、线缆、连接器）。不覆盖：EMC 标准条文与限值的逐项解读只到测试布置层面；电源分配网络 PDN 与眼图/时序预算没有单列章节",
+  "publisher": "",
+  "subtitles": "",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "Penn State University",
+   "course": "EE 434 Introduction to Signal Integrity for Interconnects",
+   "url": "https://bulletins.psu.edu/university-course-descriptions/undergraduate/ee/",
+   "prereq_text": "Enforced Prerequisite at Enrollment: EE 330 and (EE 350 or EE 352)",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "E.1.1",
+    "H.1.3"
+   ],
+   "scope_text": "This course provides a solid foundation in signal integrity for interconnects, the performance of which becomes the key factor in ensuring reliable system operation as the speed of new digital systems is pushed higher into the gigabit range. This course introduces parasitic elements that can impair the signal, such as coupling capacitances, ground capacitances, mutual inductances, self-inductances, and wire resistances. These parasitic elements can produce data losses, crosstalk, jitter, and time delays that can significantly degrade system performance and reliability. Students will also learn how the characteristics of materials and interconnect layout affect system performance and will develop models that can be simulated to verify that performance before production. This course will also cover necessary supporting ideas such as transmission line theory, impedance mismatch and reflection, lossy transmission lines, rise time degradation, material properties, crosstalk, and jitter. Students will be taught to make and interpret measurements in both the time and frequency domains.",
+   "hours_text": "EE 434: Introduction to Signal Integrity for Interconnects — 4 Credits",
+   "share": "整门课"
+  },
+  {
+   "school": "University of Colorado Boulder",
+   "course": "ECEN 5444 Electromagnetic Compatibility (EMC) for High-Speed Digital Engineering",
+   "url": "https://catalog.colorado.edu/courses-a-z/ecen/",
+   "prereq_text": "Recommended: Prerequisite students are expected to have completed an electromagnetics course during their undergraduate curriculum; in the CU curriculum it would be ECEN3400.",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "E.1.1"
+   ],
+   "scope_text": "Understanding and applying the theoretical principles of electromagnetics to high speed digital engineering with respect to electromagnetic compatibility (EMC). Faster data rates and shorter rise times make signal integrity in high-speed digital engineering (HSDE) increasingly difficult. Signal distortion has adverse effects on EMC. This course covers understanding the radiation mechanisms and susceptibility of PCB circuits in HSDE.",
+   "hours_text": "ECEN 5444 (3)",
+   "share": "整门课"
+  },
+  {
+   "school": "北京交通大学（中国大学MOOC）",
+   "course": "电磁场与电磁兼容",
+   "url": "https://www.icourse163.org/course/NJTU-1003246001",
+   "prereq_text": "预备知识　先修课程：高等数学，大学物理，电路分析基础",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.1.2",
+    "M.1.3",
+    "N.1.1",
+    "N.1.2",
+    "H.1.1"
+   ],
+   "scope_text": "本课程主要介绍电磁场理论和电磁兼容技术，具体内容包括矢量分析、时变电磁场、电磁场定理、平面电磁波、天线基础、传输线理论、电磁兼容基本概念、电磁干扰的传输与耦合、电磁干扰的抑制措施和电磁兼容测量技术。",
+   "hours_text": "课程页未印学时/学分（页面只标『国家精品在线开放课程认定』『一流课程』）",
+   "share": "约一半"
+  }
+ ],
+ "notes": "候选判断依据：E.1.1（电磁场与电磁波）三条证据——Penn State EE 434 把 EE 330 Engineering Electromagnetics 列为 enforced prerequisite（required）；CU Boulder ECEN 5444 与 ECEN 5414 都把 ECEN 3400 电磁学课列为 recommended prerequisite；北京交大 MOOC 先把『电磁场』写在课程内容里 → supported。H.1.1（电路与模拟电子基础）由北京交大 MOOC 预备知识明列『电路分析基础』支持 → supported；注意 Penn State EE 434 的直接先修只有 EE 330 与 EE 350/352，电路是 EE 330 的先修（EE 330 原文 'Enforced Prerequisite at Enrollment: (C or better in EE 210 or C or better in EE 315) and (MATH 230 or MATH 232)'），属传递关系。H.2.3（PCB 设计与板级工程）与 E.1.2（微波工程与天线）三门课都没作为先修列出 → not_mentioned，尽管 CU ECEN 5414 的**课程内容**含 'PDN design and EMC'、LearnEMC 有 PCB 布局与叠层章节。北京交大 MOOC 的 share 记『约一半』的依据：课程概述原文列出 10 项内容，其中电磁兼容直接相关 4 项（基本概念、干扰的传输与耦合、干扰的抑制措施、兼容测量技术）＋传输线理论 1 项 ≈ 一半，其余矢量分析/时变电磁场/电磁场定理/平面电磁波/天线基础属 E.1.1。另核对到 CU Boulder ECEN 5414 Essential Principles of Signal Integrity（3 学分，'Recommended: Prerequisite … ECEN3400'，内容 'transmission lines, reflections, inductance, ground bounce, differential pairs, losses, terminations, routing, discontinuities, impedance, PDN design and EMC'）与 ECEN 5424/5434/5534（均要求 ECEN 5414 为必修先修），因每技能限 3 门未收入 courses。UIUC ECE 498 YS3『Engineering Electromagnetic Compatibility (EMC)』本科/研究生课（内容含辐射与传导发射、耦合机制、美国与国际 EMC 标准）页面未印先修，仅作旁证。"
+}

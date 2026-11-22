@@ -1,0 +1,47 @@
+{
+ "id": "E.1.7",
+ "resource": {
+  "tier": "video",
+  "title": "Radar: Introduction to Radar Systems (MIT Lincoln Laboratory web-based course, 10 lectures)",
+  "url": "https://www.ll.mit.edu/outreach/web-based-course-radar-introduction-radar-systems",
+  "lang": "en",
+  "free": true,
+  "access": "免费在线观看＋下载讲稿（页面原文：'This set of 10 lectures, about 11+ hours in duration'；每讲给出分段视频时长与 'View/Download Lecture N Viewgraphs (pdf)' 链接，无需注册）",
+  "covers": "讲义目录逐讲对应：雷达方程（Lecture 2）、传播效应（3）、目标雷达截面积（4）、噪声中检测与脉冲压缩（5，含匹配滤波/脉冲压缩）、雷达天线（6）、杂波与箔条（7）、MTI 与脉冲多普勒（8）、跟踪与参数估计（9）、发射机与接收机（10）。不覆盖：相控阵与合成孔径雷达专题（10 讲目录里没有这两讲），相位噪声/射频前端指标也不讲",
+  "publisher": "MIT Lincoln Laboratory（MIT 林肯实验室官方 outreach 站点；页面自述该系列摘自实验室三日课程，'presented by Robert M. O'Donnell, a former researcher at MIT Lincoln Laboratory'）",
+  "subtitles": "未核对",
+  "verified": true
+ },
+ "courses": [
+  {
+   "school": "Johns Hopkins University (Engineering for Professionals)",
+   "course": "EN.525.648 Introduction to Radar Systems",
+   "url": "https://ep.jhu.edu/courses/525648-introduction-to-radar-systems",
+   "prereq_text": "Course Prerequisite(s): EN.525.614 Probability and Stochastic Processes for Engineers, EN.525.627 Digital Signal Processing, a working knowledge of electromagnetics, and familiarity with MATLAB.",
+   "prereq_kind": "required",
+   "mapped_ids": [
+    "M.6.1",
+    "E.2.1",
+    "E.1.1"
+   ],
+   "scope_text": "This class introduces the student to the fundamentals of radar system engineering. The radar range equation in its many forms is developed and applied to different situations. Radar transmitters, antennas, and receivers are covered. The concepts of matched filtering, pulse compression, and the radar ambiguity function are introduced, and the fundamentals of radar target detection in a noise background are discussed. Target radar cross-section models are addressed, as well as the effects of the operating environment, including propagation and clutter. MTI and pulsed Doppler processing and performance are addressed. Range, angle, and Doppler resolution/accuracy, as well as fundamental tracking concepts, will also be discussed.",
+   "hours_text": "页面未印学时/学分（JHU EP 课程页只列 Course Prerequisite(s)、Course Offerings 与样卷大纲链接）",
+   "share": "整门课"
+  },
+  {
+   "school": "North Carolina State University (ECE)",
+   "course": "ECE 492/592 Intro to Radar Systems",
+   "url": "https://research.ece.ncsu.edu/ci4r/ece-492-592-intro-to-radar-systems/",
+   "prereq_text": "Recommended Pre-Requisites: ECE 211/ECE 331 Circuit Analysis and ECE 301 Linear Systems (or equivalents)",
+   "prereq_kind": "recommended",
+   "mapped_ids": [
+    "H.1.1",
+    "H.1.3"
+   ],
+   "scope_text": "Introduction to basic principles of radar; radar range equation, phenomenology (target reflectivity models, clutter, stealth and scattering), radar measurements of range and velocity, basic radar waveforms, pulse compression, coherency. Radar system design with low-cost, low-power radio frequency (RF) sensors for applications such as health monitoring, human-computer interaction, and cyber-physical human systems. Hands-on experience will be gained through lab experiments/projects conducted using software-defined CW/FMCW radars.",
+   "hours_text": "页面未印学时/学分（课程主页只列 Recommended Pre-Requisites、Textbooks、Topics）",
+   "share": "整门课"
+  }
+ ],
+ "notes": "候选判断依据：E.2.1（数字信号处理）JHU 525.648 先修明列 'EN.525.627 Digital Signal Processing' → supported；E.1.1（电磁场与电磁波）同一先修原文写 'a working knowledge of electromagnetics' → supported；M.6.1（概率论）由 'EN.525.614 Probability and Stochastic Processes for Engineers' 支持 → supported。E.2.2（统计信号处理）与 E.1.2（微波工程与天线）两门课都没作为先修列出 → not_mentioned（525.614 是概率与随机过程课，映射 M.6.1，不等于检测与估计课）。另：NCSU 课程主页把电路分析（H.1.1）与线性系统（H.1.3）列为『推荐先修』，故记 recommended。JHU 课程页 fetch 返回 403，正文用 tavily_extract 抓到（先修段与课程描述均来自该页正文）。据 temp/ee-expansion/cn.md §3.2（他人整理，本轮未重开电子科大培养方案 PDF），电子科技大学电子信息工程把 G0100630 雷达原理与系统（3 学分/48 学时，第 6 学期）列为专业核心必修，但该校培养方案不印逐课先修，故未收入 courses。"
+}
