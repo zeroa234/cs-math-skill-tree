@@ -1,0 +1,427 @@
+{
+ "id": "H.2.8",
+ "checkedAt": "2026-11-22",
+ "name": "电子设计自动化（EDA）算法",
+ "description": "逻辑综合与布尔优化、技术映射、电路划分、布局、布线、静态时序分析、电路仿真算法、物理验证。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "数字集成电路设计（三江学院 赵俊霞，爱课程/中国大学MOOC，11 周）",
+   "url": "https://higher.smartedu.cn/course/6ad00326b44e493c76aaa09a",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "十章大纲：第1章 集成电路物理设计方法（1.2 数字集成电路设计流程、1.3 设计收敛、1.4 设计数据库）；第2章 物理设计建库与验证（2.1 集成电路工艺与版图、2.2 设计规则检查、2.3 电路规则检查、2.4 版图寄生参数提取与设计仿真、2.5 逻辑单元库的建立、2.6 DC 设计与工艺库实训、2.7 Innovus 设计与工艺库实训）；第3章 布图规划和布局（3.1 布图规划和布局、3.2 电源规划、3.3 布局、3.4 扫描链重组、3.6 DC 逻辑综合&时序约束&布图规划实训、3.7 Innovus 布图规划和布局实训）；第4章 时钟树综合；第5章 布线（5.1 全局布线、5.2 详细布线、5.3 其他特殊布线、5.4 布线算法、5.5 ICC-布线、5.6 Innovus 布线）；第6章 静态时序分析（6.1 延迟计算与布线参数提取、6.2 寄生参数与延迟格式文件、6.3 静态时序分析、6.4 时序优化、6.5 ICC-lab、6.6 Innovus、6.7 PT）；第7章 功耗分析；第8章 信号完整性分析；第9章 低功耗设计技术与物理实施；第10章 芯片设计的最终验证与签核（10.1 时序验证、10.2 物理验证与芯片组装、10.3 逻辑等效验证与 ECO）。没有技术映射、电路划分（分割）与电路仿真算法章节。",
+   "access": "国家高等教育智慧教育平台上的爱课程（中国大学MOOC）课程页，课程大纲逐章逐节可读；学习需在开课平台注册（11 周，2026/10/19–2026/12/29 开课中），平台注册与证书收费本轮未逐项核对（free 记 null）。",
+   "publisher": "三江学院（爱课程/中国大学MOOC；开课教师 赵俊霞）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/6ad00326b44e493c76aaa09a",
+    "location": "课程大纲：第1章 集成电路物理设计方法 … 第10章 芯片设计的最终验证与签核（含 2.2 设计规则检查、2.3 电路规则检查、3.1 布图规划和布局、3.3 布局、5.1 全局布线、5.2 详细布线、5.4 布线算法、6.3 静态时序分析、10.2 物理验证与芯片组装）",
+    "finding": "页面把十章大纲逐节列出（如“2.2设计规则检查”“2.3电路规则检查”“5.4布线算法”“6.3静态时序分析”“10.2 物理验证与芯片组装”），课程简介写“熟悉布局布线，时钟树综合，时序分析，物理验证，功耗分析等物理设计流程”，可作章节依据。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "设计自动化一（国立清华大学开放式课程，李炯霆教授）",
+   "url": "https://ocw.nthu.edu.tw/courses/366",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "中文（繁体）OCW 录像课：课程大纲要求先修逻辑设计与资料结构；指定用书 S. H. Gerez《Algorithms for VLSI Design Automation》(Wiley 1999) 与 Wang/Chang/Cheng《Electronic Design Automation: Synthesis, Verification, and Test》(2009)；课程目标与评分（4 个程序作业含一个 global router、midterm quiz）。本页未渲染出逐讲列表，讲次名无法逐条核对。",
+   "access": "免费公开（清大开放式课程，影片在 OCW 与 YouTube 频道 NTHUOCW 同步）；本页只渲染课程大纲/评分，讲次列表需页面脚本加载，本轮未取到。",
+   "publisher": "国立清华大学 开放式课程（授课教师 李炯霆）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.nthu.edu.tw/courses/366",
+    "location": "课程大纲、指定用书、课程目标、评分标准（页面主体）",
+    "finding": "页面写明先修“逻辑设计与资料结构”、指定用书 Gerez《Algorithms for VLSI Design Automation》与 Wang/Chang/Cheng《Electronic Design Automation》、评分含“Likely 4 programs, including a global router”，可确认为一门 EDA 演算法课；但“Chapters on OCW”一栏未渲染出讲次名。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "芯片设计自动化与智能优化（北京大学 林亦波）课程页与教学大纲 —— 仅作参考",
+   "url": "https://yibolin.com/courses/VLSICAD",
+   "tier": "website",
+   "free": true,
+   "role": "reference",
+   "covers": "课程材料列表（逻辑综合/逻辑优化/工艺映射、布局含分割与布图规划、布线、时序分析含 STA 与 CPPR、新兴技术含 ML 辅助 EDA 与可制造性）与大纲学时（逻辑综合 8、布局 4、布线 8、时序 8）。页面没有公开课件（slides）链接，按新规则只作参考，不计覆盖。",
+   "access": "免费公开课程页与大纲 PDF；无课件下载，不是可用于自学的教学材料。",
+   "publisher": "林亦波（北京大学集成电路学院）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://yibolin.com/courses/VLSICAD",
+    "location": "Course Material（Tentative）列表与 Schedule/Syllabus 链接（Fall 2025 / Fall 2023 / Spring 2022 / Spring 2021）",
+    "finding": "页面只有课程材料标题列表与大纲 PDF 链接，正文中没有任何 slides/课件下载链接（对比上海科技大学课程页有“[slides]”），因此只能当章节安排参考。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "VLSI Physical Design: From Graph Partitioning to Timing Closure（Kahng, Lienig, Markov, Hu；作者主页章节课件与全书目录）",
+   "url": "https://www.ifte.de/books/eda/index.html",
+   "tier": "material",
+   "free": true,
+   "role": "primary",
+   "covers": "Ch.2 Netlist and System Partitioning（2.4 划分算法、2.5 多级划分）、Ch.3 Chip Planning（3.4 布图表示、3.5 布图规划算法、3.6 引脚分配、3.7 电源地布线）、Ch.4 Global and Detailed Placement（4.3 全局布局、4.4 合法化与详细布局）、Ch.5 Global Routing、Ch.6 Detailed Routing（6.3 通道布线、6.4 开关盒、6.5 OTC/gcell）、Ch.7 Specialized Routing（7.3 时钟布线、7.4 时钟树综合）、Ch.8 Timing Closure（8.2 时序分析与性能约束、8.3 时序驱动布局、8.4 时序驱动布线、8.5 物理综合）。",
+   "access": "作者主页免费提供每章 PDF/PPT 课件与全书目录（Springer 2022 第 2 版，正版书付费、有中文版）。",
+   "publisher": "Andrew B. Kahng, Jens Lienig, Igor L. Markov, Jin Hu / Springer",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.ifte.de/books/eda/index.html",
+    "location": "Chapter Slides 表与各章小节目录：Chapter 2（2.1–2.5）、Chapter 3（3.1–3.7）、Chapter 4（4.1–4.4）、Chapter 6（6.1–6.6）、Chapter 7（7.1–7.4）、Chapter 8（8.1–8.6）",
+    "finding": "页面逐章列出小节与课件（PDF/PPT）下载链接，例如 2.4 Partitioning Algorithms、3.5 Floorplanning Algorithms、4.3 Global Placement、5 Global Routing、6.3 Channel Routing Algorithms、7.3 Clock Routing、8.2 Timing Analysis and Performance Constraints。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "VLSI Design Automation（ShanghaiTech SIST，Pingqiang Zhou，Spring 2016 课程站，讲义 PDF）",
+   "url": "https://faculty.sist.shanghaitech.edu.cn/faculty/zhoupq/Teaching/Spr16/eda.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程描述与进度表：computational Boolean algebra（BDD、SAT）、two-level and multi-level logic synthesis、technology mapping、physical design（partitioning、floorplanning、placement、routing）、timing analysis、大规模优化启发式（simulated annealing）；进度表第 3 周 Computational Boolean Algebra、第 7 周 Technology Mapping、第 8 周 Placement、第 13 周 Routing、第 15 周 Static Timing Analysis，每块挂 [slides] 讲义链接。",
+   "access": "免费公开课程页（2016 春季学期存档），讲义为英文 PDF 直链；有作业与项目说明。",
+   "publisher": "ShanghaiTech SIST / Pingqiang Zhou",
+   "reupload": false,
+   "evidence": {
+    "url": "https://faculty.sist.shanghaitech.edu.cn/faculty/zhoupq/Teaching/Spr16/eda.html",
+    "location": "Course Description 与 Course Schedule：Week 3 Computational Boolean Algebra [slides]、Week 7 Technology Mapping [slides]、Week 8 Placement [slides]、Week 13 Routing [slides]、Week 15 Static Timing Analysis [slides]",
+    "finding": "课程描述写“computational Boolean algebra such as binary decision diagram and satisfiability; Two-level and multi-level logic synthesis; Technology Mapping; Physical design including partitioning, floorplanning, placement, and routing; Timing analysis”，进度表把每块对到周次并给出讲义链接。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "KLayout User Manual：Design Rule Checks (DRC) Basics 与 LVS Introduction",
+   "url": "https://www.klayout.de/doc/manual/drc_basic.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "DRC Basics（最小宽度/间距检查、图层布尔与 sizing、overlap/enclosure/inside/outside 检查、DRC waiving、独立 DRC 引擎）与 LVS Introduction（LVS 脚本剖析、以两管反相器为例从版图提取网表并与原理图比对）。",
+   "access": "免费在线文档（KLayout 官方手册，随软件发布的服务端副本）。",
+   "publisher": "KLayout Project（Matthias Köfferlein）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.klayout.de/doc/manual/lvs_intro.html",
+    "location": "KLayout User Manual » Design Rule Check (DRC) » DRC Basics；KLayout User Manual » Layout vs. Schematic (LVS) » LVS Introduction",
+    "finding": "DRC 页写“Basic DRC checks such as checks for minimum width and space… Extended geometrical checks such as overlap, enclosure and inside and outside checks”；LVS 页写“Sample LVS script、Anatomy of the LVS script、Inverter with tie-down diodes”。"
+   }
+  },
+  {
+   "key": "en4",
+   "lang": "en",
+   "title": "Electronic Design Automation: Synthesis, Verification, and Test（Wang, Chang, Cheng 编，Morgan Kaufmann 2009）",
+   "url": "https://shop.elsevier.com/books/electronic-design-automation/wang/978-0-12-374364-0",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "Ch.6 Logic Synthesis in a Nutshell（逻辑综合：两级/多级优化、BDD、SAT、技术映射）、Ch.8 Logic and Circuit Simulation（逻辑仿真与电路仿真，含 SPICE 类数值方法）、Ch.4 Fundamentals of Algorithms、Ch.10 Floorplanning、Ch.11 Placement。",
+   "access": "付费教材（Elsevier/Morgan Kaufmann）；此处只核到出版社销售页的完整章目录，正文未读。",
+   "publisher": "Laung-Terng Wang, Yao-Wen Chang, Kwang-Ting Cheng (eds.) / Morgan Kaufmann",
+   "reupload": false,
+   "evidence": {
+    "url": "https://shop.elsevier.com/books/electronic-design-automation/wang/978-0-12-374364-0",
+    "location": "Table of contents：Chapter 4 Fundamentals of Algorithms、Chapter 6 Logic Synthesis in a Nutshell、Chapter 8 Logic and Circuit Simulation、Chapter 10 Floorplanning、Chapter 11 Placement",
+    "finding": "销售页目录逐章列出章名，第 6 章逻辑综合、第 8 章逻辑与电路仿真，可覆盖中文侧缺的技术映射与电路仿真算法。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "逻辑综合与布尔优化",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第3章 3.6 DC 逻辑综合&时序约束&布图规划（实训）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Week 3 Computational Boolean Algebra（BDD、SAT）与 course description 的“Two-level and multi-level logic synthesis”",
+     "extent": "covered"
+    },
+    {
+     "source": "en4",
+     "section": "Chapter 6 Logic Synthesis in a Nutshell",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文这门课只在实训里用 DC 做逻辑综合（3.6），没有布尔优化的算法内容，记 partial。"
+  },
+  {
+   "topic": "技术映射",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Week 7 Technology Mapping [slides]",
+     "extent": "covered"
+    },
+    {
+     "source": "en4",
+     "section": "Chapter 6 Logic Synthesis in a Nutshell（技术映射一节）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文十章里没有技术映射（工艺映射）章节，记缺口。"
+  },
+  {
+   "topic": "电路划分",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 2 Netlist and System Partitioning（2.3 Optimization Goals、2.4 Partitioning Algorithms、2.5 多级划分框架）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Course description“Physical design including partitioning, floorplanning, placement, and routing”",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文这门课的第3章只有布图规划与布局，没有 hypergraph 划分（分割）内容，记缺口。"
+  },
+  {
+   "topic": "布局",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第3章 布图规划和布局（3.1 布图规划和布局、3.2 电源规划、3.3 布局、3.4 扫描链重组、3.7 Innovus 布图规划和布局实训）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 3 Chip Planning（3.4 布图表示、3.5 布图规划算法、3.6 引脚分配）、Chapter 4 Global and Detailed Placement（4.3 全局布局、4.4 合法化与详细布局）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Week 8 Placement [slides]",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "布线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第5章 布线（5.1 全局布线、5.2 详细布线、5.3 其他特殊布线、5.4 布线算法、5.5 ICC 布线、5.6 Innovus 布线）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 5 Global Routing、Chapter 6 Detailed Routing（6.3 通道布线、6.4 开关盒、6.5 OTC 与 gcell）、Chapter 7 Specialized Routing（7.3 时钟布线、7.4 时钟树综合）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Week 13 Routing [slides]",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "静态时序分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第6章 静态时序分析（6.1 延迟计算与布线参数提取、6.2 寄生参数与延迟格式文件、6.3 静态时序分析、6.4 时序优化、6.7 PT）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 8 Timing Closure（8.2 Timing Analysis and Performance Constraints、8.3 时序驱动布局、8.4 时序驱动布线）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Week 15 Static Timing Analysis [slides]",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "电路仿真算法",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en4",
+     "section": "Chapter 8 Logic and Circuit Simulation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文这门课从头到尾是物理设计工具流程，没有电路仿真（SPICE/数值积分/牛顿迭代）章节，记缺口。"
+  },
+  {
+   "topic": "物理验证",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第2章 2.2 设计规则检查、2.3 电路规则检查、2.4 版图寄生参数提取与设计仿真；第10章 10.2 物理验证与芯片组装",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en3",
+     "section": "DRC Basics（最小宽度/间距、布尔与 sizing 图层生成、overlap/enclosure 检查、DRC waiving）与 LVS Introduction（LVS 脚本剖析、反相器版图对原理图）",
+     "extent": "covered"
+    }
+   ]
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按十章顺序学并跟着做工具练习：第1章 物理设计方法与设计流程 → 第2章 建库与验证（2.2 DRC、2.3 LVS、2.4 寄生参数提取）→ 第3章 布图规划与布局（3.1 布图规划、3.3 布局、3.6 DC 逻辑综合与时序约束实训）→ 第4章 时钟树综合 → 第5章 布线（5.1 全局、5.2 详细、5.4 布线算法）→ 第6章 静态时序分析（6.1 延迟计算、6.3 STA、6.4 时序优化）→ 第10章 10.2 物理验证与芯片组装（DRC/LVS/ECO）。"
+    },
+    {
+     "source": "zh2",
+     "read": "有余力再跟清大 OCW 的《设计自动化一》录像（李炯霆）：先补逻辑设计与数据结构，再按指定用书 Gerez《Algorithms for VLSI Design Automation》与 Wang/Chang/Cheng 的 EDA 书读算法；该页未渲染出逐讲列表，讲次只能边看边上，不能当章节依据。"
+    }
+   ],
+   "gaps": [
+    "逻辑综合与布尔优化",
+    "技术映射",
+    "电路划分",
+    "电路仿真算法"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en2",
+     "read": "先按免费课程进度学方法与手算：Week 3 Computational Boolean Algebra（BDD/SAT）→ Week 7 Technology Mapping → Week 8 Placement（含 partitioning、floorplanning）→ Week 13 Routing → Week 15 Static Timing Analysis，并完成讲义里的算法练习。"
+    },
+    {
+     "source": "en1",
+     "read": "再按 Kahng 等的章节课件补物理设计算法：Ch.2 划分（2.4 算法、2.5 多级）→ Ch.3 布图规划（3.4 表示、3.5 算法）→ Ch.4 全局与详细布局 → Ch.5–6 全局与详细布线 → Ch.7 专用布线（时钟树）→ Ch.8 时序收敛（8.2 时序分析）。"
+    },
+    {
+     "source": "en4",
+     "read": "读 Ch.6 Logic Synthesis in a Nutshell 把两级/多级优化、BDD、SAT 与技术映射串起来，再读 Ch.8 Logic and Circuit Simulation 学 SPICE 类仿真算法（改进节点法、数值积分、牛顿迭代）。"
+    },
+    {
+     "source": "en3",
+     "read": "按 DRC Basics 与 LVS Introduction 各写一段脚本：先用 DRC 检查最小宽度/间距与包围，再用 LVS 提取网表与原理图比对，完成一次物理验证。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "site:higher.smartedu.cn 集成电路设计自动化 EDA 布局布线 静态时序分析 课程大纲",
+   "result": "没有命中“EDA 算法”本身，返回的是模电/逻辑代数的 smartedu 课程页；说明智慧教育平台上没有以 EDA 算法为名的课，改查与物理设计相邻的课。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "icourse163 course detail.htm cid 集成电路设计自动化 布局布线 时序分析 逻辑综合 课程大纲 章节",
+   "result": "命中 https://higher.smartedu.cn/course/6ad00326b44e493c76aaa09a《数字集成电路设计》（三江学院，爱课程），页面把十章大纲逐节渲染出来（含 2.2 DRC、2.3 LVS、5.4 布线算法、6.3 STA、10.2 物理验证），核对后采纳为 zh1。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily_search",
+   "query_or_url": "VLSI 設計自動化 開放式課程 講次 佈局 繞線 時序分析 中文 ocw",
+   "result": "找到清大开放式课程《设计自动化一/二》（李炯霆，ocw.nthu.edu.tw/courses/366、372）；课程页只渲染大纲与指定用书、讲次列表取不到（fetch 只拿到导航、extract 也只到 Syllabus 段），采作 zh2 补充。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://yibolin.com/courses/VLSICAD 与 https://yibolin.com/courses/VLSICAD-syllabus-fall2023.pdf",
+   "result": "课程页与大纲只有课程材料标题列表与学时分配，没有任何 slides/课件链接（grep“slides/pdf/课件”只命中 Schedule 一行），按新规则降为 reference。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://bbs.eetop.cn/thread-969948-1-1.html（《超大规模集成电路物理设计：从图分割到时序收敛（原书第 2 版）》）",
+   "result": "论坛帖 403 取不到目录；中文版教材目录没核到，未列为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.ifte.de/books/eda/index.html 与 https://faculty.sist.shanghaitech.edu.cn/faculty/zhoupq/Teaching/Spr16/eda.html",
+   "result": "前者是作者主页的章节课件与逐节目录（Ch.2–Ch.8），后者是上海科技大学课程页（第 3/7/8/13/15 周讲义直链），均采纳。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "circuit simulation algorithms lecture notes pdf modified nodal analysis numerical integration Newton-Raphson SPICE transient analysis university",
+   "result": "IISc E8-262 讲义 PDF 打开是 403、俄勒冈州立 ECE521 的 Lectures.pdf 无文字层；最终用 Elsevier《Electronic Design Automation》第 8 章 Logic and Circuit Simulation（章级目录已核）覆盖电路仿真算法。"
+  }
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "逻辑综合与布尔优化",
+   "source": "en2",
+   "reason": "中文这门课只在 3.6 实训里用 DC 做逻辑综合，没有布尔优化的算法内容；中文侧也没有以 EDA 算法为名的可核课程（林亦波课程页无课件、清大 OCW 讲次取不到）。上海科技大学课程页第 3 周的 Computational Boolean Algebra 讲义有 BDD/SAT 与两级/多级逻辑综合。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "技术映射",
+   "source": "en2",
+   "reason": "中文十章里没有技术映射章节；英文课程第 7 周的 Technology Mapping 讲义与 Elsevier 第 6 章都有。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "电路划分",
+   "source": "en1",
+   "reason": "中文这门课第 3 章只有布图规划与布局，没有 hypergraph 划分；Kahng 等第 2 章 Chapter 2 Netlist and System Partitioning 有 2.4 划分算法与 2.5 多级划分。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "电路仿真算法",
+   "source": "en4",
+   "reason": "中文这门课全程是物理设计工具流程，没有电路仿真；Elsevier《Electronic Design Automation》第 8 章 Logic and Circuit Simulation 讲逻辑与电路仿真（含 SPICE 类数值方法）。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "findings": [
+  "按新规则：林亦波课程页没有公开课件，降为 reference（只作章节安排参考）；中文教学来源换成智慧教育平台上能读到大纲的 MOOC《数字集成电路设计》（三江学院 赵俊霞）。",
+  "这门中文 MOOC 是数字后端流程课：DRC/LVS（2.2、2.3、10.2）、布图规划与布局（第 3 章）、布线含 5.4 布线算法（第 5 章）、静态时序分析（第 6 章）都有章次级依据，占四项知识点；逻辑综合只有 DC 实训、技术映射/分割/电路仿真没有，记四个中文缺口。",
+  "清大 OCW《设计自动化一》（李炯霆）是中文录像的算法课，但页面只渲染课程大纲与指定用书、讲次名取不到，只能当补充与进阶，不能作章节依据。",
+  "英文侧 Kahng 等作者主页章节课件（Ch.2–8）+ 上海科技大学课程页讲义（第 3/7/8/13/15 周）+ Elsevier 第 6/8 章 + KLayout DRC/LVS 文档，覆盖八项。"
+ ],
+ "applied_additions": []
+}

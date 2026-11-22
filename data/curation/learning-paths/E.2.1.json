@@ -1,0 +1,317 @@
+{
+ "id": "E.2.1",
+ "checkedAt": "2026-11-22",
+ "name": "数字信号处理",
+ "description": "离散时间信号与系统、z变换、DTFT与DFT、快速傅里叶变换、采样与重建、FIR滤波器设计、IIR滤波器设计、多速率信号处理、谱分析与窗函数。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "数字信号处理（北京航空航天大学，学堂在线 / 国家高等教育智慧教育平台课程页）",
+   "url": "https://higher.smartedu.cn/course/6a5ea321b44e493c768fa2a9",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "课程大纲逐讲列出 CH1 绪论、CH2 离散时间信号与系统（离散时间序列、离散系统分类与 LTI 卷积表示、卷积性质、差分方程）、CH3 三大变换（DTFT、DFS、Z 变换）、CH4 离散系统变换域分析（特征函数、频域表示、全通与最小相位、广义线性相位）、CH5 信号的采样与重建、CH6 DFT（定义与变换关系、频域采样、性质、线性卷积）、CH7 FFT（时域抽取、频域抽取、IFFT 与实现）、CH8 数字滤波器设计（模拟滤波器设计、冲激响应不变法、双线性变换法、窗函数设计、频率采样法）、CH9 数字滤波器实现（IIR/FIR 流图、有限字长效应）、CH10 信号的频域分析（时域加窗、DFT 运算、频域分析应用、采样率转换）。简介 9 项均有对应讲次，其中“多速率信号处理”只落在 CH10-4“采样率转换”一讲。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为学堂在线（需注册登录）。课程 25 周，2026/07/23–2027/01/12 开课中，5000+ 人选课。中文授课；平台不显示字幕信息，字幕未核对。同一门北航《数字信号处理》在中国大学MOOC 另有版本（BUAA-1001807014，页面标“获得国家精品在线开放课程认定”），大纲栏为空。",
+   "publisher": "北京航空航天大学（王俊、雷鹏、张玉玺、肖振宇）；平台：国家高等教育智慧教育平台 / 学堂在线",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/6a5ea321b44e493c768fa2a9",
+    "location": "课程页“课程大纲”栏：CH1 绪论；CH2-1 离散时间序列、CH2-2&3 离散系统分类与LTI卷积表示、CH2-4 LTI系统卷积性质、CH2-5 差分方程；CH3-1-1&2 DTFT的定义与存在条件、CH3-1-3 DTFT的性质和定理、CH3-2-1 DFS的定义、CH3-3-1&2 Z变换的定义与收敛域、CH3-3-4 Z的反变换；CH4-4-2&3 全通系统与全通分解、CH4-5-1 广义线性相位系统特点；CH5-1&2 数字处理与理想采样、CH5-3&4 理想重建与余弦信号采样；CH6-1-1&2 DFT的定义与变换的关系、CH6-2-1 DFT的性质和定理、CH6-3 DFT完成线性卷积；CH7-1 按时间抽取FFT、CH7-2 按频率抽取FFT；CH8-1 模拟滤波器设计、CH8-2 冲激响应不变法、CH8-3 双线性变换法、CH8-4 窗函数设计滤波器原理、CH8-5 窗函数法设计滤波器、CH8-6 频率采样法设计滤波器；CH9-1-1 IIR滤波器流图表示（直接型）、CH9-2 FIR滤波器流图表示、CH9-3 数字滤波器的有限字长效应；CH10-1 信号截短（时域加窗）、CH10-2 DFT运算（频域采样）、CH10-3 频域分析应用、CH10-4 采样率转换",
+    "finding": "平台把该课逐讲目录渲染成文本：z 变换在 CH3-3、DTFT 在 CH3-1、DFT 在 CH6、FFT 在 CH7、采样与重建整章 CH5、FIR 设计在 CH8-4/5/6（窗函数与频率采样）、IIR 设计在 CH8-1/2/3（模拟滤波器→冲激响应不变/双线性变换）、谱分析与窗函数在 CH10-1/2/3，多速率只有 CH10-4 一讲“采样率转换”。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Discrete-Time Signal Processing, Third Edition（Oppenheim & Schafer；MIT OpenCourseWare 以开放教材形式公开的整本 PDF）",
+   "url": "https://ocw.mit.edu/courses/res-6-dtsp-discrete-time-signal-processing/",
+   "tier": "book",
+   "free": true,
+   "role": "primary",
+   "covers": "第 2 章 Discrete-Time Signals and Systems（2.1 Discrete-Time Signals、2.2 Discrete-Time Systems、2.3 LTI Systems、2.4 Properties of LTI Systems、2.5 Linear Constant-Coefficient Difference Equations、2.6–2.9 频域表示与傅里叶变换）；第 3 章 The z-Transform（3.1–3.6）；第 4 章 Sampling of Continuous-Time Signals（4.1 Periodic Sampling、4.2 采样的频域表示、4.3 由样本重建带限信号、4.6 Changing the Sampling Rate、4.7 Multirate Signal Processing：4.7.1 滤波与抽取/内插互换、4.7.2 多级抽取与内插、4.7.3–4.7.5 多相分解与多相实现）；第 5 章 变换域分析（5.5 All-Pass Systems、5.6 Minimum-Phase Systems、5.7 广义线性相位）；第 7 章 Filter Design Techniques（7.2 由连续时间滤波器设计 IIR、7.3 Butterworth/Chebyshev/Elliptic、7.4 频率变换、7.5 Design of FIR Filters by Windowing、7.6 Kaiser 窗、7.7 Optimum Approximations of FIR Filters）；第 8 章 The Discrete Fourier Transform（8.1–8.7）；第 9 章 Computation of the DFT（9.2 Decimation-in-Time FFT、9.3 Decimation-in-Frequency FFT、9.4 实际考虑）；第 10 章 用 DFT 作傅里叶分析（10.1–10.6，含 10.5 周期图）。",
+   "access": "MIT OpenCourseWare 免费开放，无需注册；该页将第三版教材整本 PDF 作为 Open Textbook 提供下载（mitres_6-dtsp_s26_thirdedition.pdf），无讲课录像；纸质书需另行购买。英文。",
+   "publisher": "MIT OpenCourseWare（作者 Alan V. Oppenheim、Ronald W. Schafer，MIT EECS）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/res-6-dtsp-discrete-time-signal-processing/mitres_6-dtsp_s26_thirdedition.pdf",
+    "location": "PDF 第 4–6 页 Contents：3 The z-Transform 99（3.1 z-Transform、3.2 Properties of the ROC、3.3 The Inverse z-Transform、3.4 z-Transform Properties、3.5 z-Transforms and LTI Systems、3.6 The Unilateral z-Transform）；4.6.4 Changing the Sampling Rate by a Noninteger Factor、4.7 Multirate Signal Processing 194（4.7.1 Interchange of Filtering with Compressor/Expander、4.7.2 Multistage Decimation and Interpolation、4.7.3 Polyphase Decompositions、4.7.4 Polyphase Implementation of Decimation Filters、4.7.5 Polyphase Implementation of Interpolation Filters）",
+    "finding": "在开放教材目录里逐条看到 z 变换整章、4.6/4.7 多速率（抽取、内插、多相分解），其余章（2 离散时间信号与系统、5 变换域分析、7 滤波器设计、8 DFT、9 FFT、10 用 DFT 作傅里叶分析）与节点简介的九项一一对应；教材由 OCW 作为 Open Textbook 整本公开。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "离散时间信号与系统",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH2-1 离散时间序列、CH2-2&3 离散系统分类与LTI卷积表示、CH2-4 LTI系统卷积性质、CH2-5 差分方程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 2 Discrete-Time Signals and Systems: 2.1 Discrete-Time Signals、2.2 Discrete-Time Systems、2.3 LTI Systems、2.4 Properties of LTI Systems、2.5 Linear Constant-Coefficient Difference Equations",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都从序列与 LTI 卷积开始，再进差分方程。"
+  },
+  {
+   "topic": "z变换",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH3-3-1&2 Z变换的定义与收敛域、CH3-3-3 Z变换的性质和定理、CH3-3-4 Z的反变换",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 3 The z-Transform: 3.1 z-Transform、3.2 Properties of the ROC、3.3 The Inverse z-Transform、3.4 z-Transform Properties、3.5 z-Transforms and LTI Systems",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文把 z 变换放在“三大变换”章的 CH3-3，收敛域、性质、反变换齐全。"
+  },
+  {
+   "topic": "DTFT与DFT",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH3-1-1&2 DTFT的定义与存在条件、CH3-1-3 DTFT的性质和定理、CH3-2-1 DFS的定义、CH6-1-1&2 DFT的定义与变换的关系、CH6-1-3 频域采样与重建、CH6-2-1 DFT的性质和定理、CH6-3 DFT完成线性卷积",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "2.6 Frequency-Domain Representation of Discrete-Time Signals and Systems、2.7 Representation of Sequences by Fourier Transforms、2.8 Symmetry Properties、2.9 Fourier Transform Theorems；Chapter 8 The Discrete Fourier Transform: 8.1 离散傅里叶级数、8.4 Sampling the Fourier Transform、8.5 有限长序列的傅里叶表示、8.6 Properties of the DFT、8.7 Linear Convolution Using the DFT",
+     "extent": "covered"
+    }
+   ],
+   "note": "DTFT 与 DFT 分属两处（中文 CH3-1/CH3-2 与 CH6，英文 2.6–2.9 与第 8 章），学习时按同一条线索串起来：DTFT 的定义与性质 → DFS → DFT 与频域采样。"
+  },
+  {
+   "topic": "快速傅里叶变换",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH7-1 按时间抽取FFT、CH7-2 按频率抽取FFT、CH7-3 IFFT、FFT实现及应用",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 9 Computation of the Discrete Fourier Transform: 9.1 Direct Computation of the DFT、9.2 Decimation-in-Time FFT Algorithms、9.3 Decimation-in-Frequency FFT Algorithms、9.4 Practical Considerations",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "采样与重建",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH5-1&2 数字处理与理想采样、CH5-3&4 理想重建与余弦信号采样、CH5-5 采样和重建的实际问题",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Chapter 4 Sampling of Continuous-Time Signals: 4.1 Periodic Sampling、4.2 Frequency-Domain Representation of Sampling、4.3 Reconstruction of a Bandlimited Signal from Its Samples、4.8 Digital Processing of Analog Signals",
+     "extent": "covered"
+    }
+   ],
+   "note": ""
+  },
+  {
+   "topic": "FIR滤波器设计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH8-4 窗函数设计滤波器原理、CH8-5 窗函数法设计滤波器、CH8-6 频率采样法设计滤波器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "7.5 Design of FIR Filters by Windowing、7.6 Examples of FIR Filter Design by the Kaiser Window Method、7.7 Optimum Approximations of FIR Filters；5.7 Linear Systems with Generalized Linear Phase",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文讲窗函数法与频率采样法，英文除窗函数（含 Kaiser 窗）外还讲等波纹最优逼近，可用来补 FIR 设计的另一半。"
+  },
+  {
+   "topic": "IIR滤波器设计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH8-1 模拟滤波器设计、CH8-2 冲激响应不变法、CH8-3 双线性变换法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "7.2 Design of Discrete-Time IIR Filters from Continuous-Time Filters、7.3 Discrete-Time Butterworth, Chebyshev and Elliptic Filters、7.4 Frequency Transformations of Lowpass IIR Filters",
+     "extent": "covered"
+    }
+   ],
+   "note": "两侧都是“先设计模拟原型，再做冲激响应不变/双线性变换”的路线。"
+  },
+  {
+   "topic": "多速率信号处理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH10-4 采样率转换",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "4.6 Changing the Sampling Rate Using Discrete-Time Processing（含 4.6.4 非整数倍采样率转换）、4.7 Multirate Signal Processing：4.7.1–4.7.5（多级抽取/内插、多相分解与多相实现）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只有 CH10-4 一讲“采样率转换”，覆盖抽取/内插与采样率转换的基本做法；多相分解、多级抽取这类内容要读英文 4.7.1–4.7.5。这是本技能中文学时最少的一块，属于深度差异，不是内容缺口。"
+  },
+  {
+   "topic": "谱分析与窗函数",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "CH10-1 信号截短（时域加窗）、CH10-2 DFT运算（频域采样）、CH10-3 频域分析应用；CH8-4 窗函数设计滤波器原理",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "10.1 Fourier Analysis of Signals Using the DFT、10.2 DFT Analysis of Sinusoidal Signals、10.3 The Time-Dependent Fourier Transform、10.5 Fourier Analysis of Stationary Random Signals: the Periodogram、10.6 Spectrum Analysis of Random Signals；7.5 窗函数",
+     "extent": "covered"
+    }
+   ],
+   "note": "“窗函数”两侧都在滤波器设计章讲；“谱分析”两侧都在最后一章（中文 CH10 信号的频域分析方法、英文第 10 章）。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 CH2（2-1→2-5）把离散时间序列、LTI 卷积与差分方程打牢，边看边用 Matlab 复现卷积与差分方程解。"
+    },
+    {
+     "source": "zh1",
+     "read": "接着学 CH3：先 CH3-1 DTFT（定义、性质、对称性），再 CH3-2 DFS，最后 CH3-3 Z 变换（定义与收敛域、性质、反变换）；每学完一个变换，回头对比“时域采样/频域采样”的对应关系。"
+    },
+    {
+     "source": "zh1",
+     "read": "CH5 信号的采样与重建整章（理想采样、理想重建、采样与重建的实际问题），再进 CH6 DFT（定义与变换关系、频域采样与重建、性质、用 DFT 做线性卷积）。"
+    },
+    {
+     "source": "zh1",
+     "read": "CH7 FFT 三讲：按时间抽取、按频率抽取、IFFT 与实现，手推一次 8 点基-2 蝶形流图。"
+    },
+    {
+     "source": "zh1",
+     "read": "CH8 数字滤波器设计：先 CH8-1 模拟滤波器设计，再 CH8-2 冲激响应不变法、CH8-3 双线性变换法（IIR），然后 CH8-4/5 窗函数法与 CH8-6 频率采样法（FIR）；配套 CH9 的 IIR/FIR 流图与有限字长效应了解实现代价。"
+    },
+    {
+     "source": "zh1",
+     "read": "CH10 信号的频域分析：CH10-1 时域加窗、CH10-2 DFT 运算（频域采样）、CH10-3 频域分析应用、CH10-4 采样率转换；做完课程的音频频谱分析与滤波器设计实验。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Read Chapter 2 (2.1–2.5) for DT signals/systems, LTI convolution and difference equations; do the chapter problems."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 3 The z-Transform in full (3.1–3.6), then 2.6–2.9 for the DTFT and its theorems."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 4: 4.1–4.3 for sampling and reconstruction, 4.6–4.7 for changing the sampling rate and multirate processing (including polyphase in 4.7.3–4.7.5)."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 8 (8.1–8.7) for the DFS/DFT and its properties, then Chapter 9 (9.1–9.4) for FFT algorithms."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 7 for filter design: 7.2–7.4 for IIR (analog prototype, impulse invariance, bilinear transformation, frequency transformations), 7.5–7.7 for FIR (windowing, Kaiser, optimum equiripple); pair with 5.5–5.7 on all-pass, minimum-phase and generalized linear phase."
+    },
+    {
+     "source": "en1",
+     "read": "Read Chapter 10 (10.1–10.6) for spectrum analysis with the DFT, windowing and the periodogram; then do a short project: design an FIR low-pass by windowing, apply it, and read the periodogram of the result."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "higher.smartedu.cn 数字信号处理 北京航空航天大学 课程",
+   "result": "命中北航《数字信号处理》在国家高等教育智慧教育平台的两门镜像（course/6a5ea321b44e493c768fa2a9 学堂在线版、course/65d921fcbb5c5a80252da4c2），课程页渲染出 CH1–CH10 完整大纲，采纳为 zh1。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "higher.smartedu.cn 数字信号处理 课程大纲 多速率信号处理 抽取 内插",
+   "result": "未找到带独立“多速率/多抽样率”章的课程；命中若干校级教学大纲 PDF（沈阳工程学院等，属教学大纲不能作教学材料）与武汉大学余磊 DSP 讲义站（8 章，无多速率）。故中文多速率按北航 CH10-4 采样率转换记，深度差异写入 note。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/api/v1/courses?keyword=数字信号处理",
+   "result": "平台检索接口返回 45 门数字信号处理课程（电子科技大学、西安电子科技大学、北京交通大学、南京邮电大学等）；README 式页面不可读，改由单课页读大纲。用于确认候选课范围。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.mit.edu/courses/res-6-dtsp-discrete-time-signal-processing/ 与 mitres_6-dtsp_s26_thirdedition.pdf",
+   "result": "OCW 该页把第三版教材列为 Open Textbook 供整本下载；PDF 目录核实 4.7 Multirate Signal Processing（4.7.1–4.7.5 多相分解）等章节，采纳为 en1。"
+  }
+ ],
+ "cross_language_fallbacks": [],
+ "findings": [
+  "中文主课是北航《数字信号处理》（学堂在线版，25 周），CH1–CH10 大纲逐讲可核，9 个知识点全部有对应讲次。",
+  "英文主教材是 MIT OCW 作为 Open Textbook 整本公开的 Oppenheim & Schafer 第三版，目录到节一级，9 个知识点全覆盖，多速率一节（4.7）比中文的 CH10-4 更深。",
+  "中英文都不缺知识点；中文的“多速率信号处理”只有一讲采样率转换，多相分解要借英文 4.7.1–4.7.5，这是深度差异而非缺口。",
+  "北航这门课在中国大学MOOC 另有同名版本（BUAA-1001807014），课程大纲栏为空，故中文路线采用能读到逐讲目录的学堂在线版。"
+ ],
+ "applied_additions": []
+}

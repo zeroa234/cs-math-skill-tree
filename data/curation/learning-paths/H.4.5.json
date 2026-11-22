@@ -1,0 +1,396 @@
+{
+ "id": "H.4.5",
+ "checkedAt": "2026-11-22",
+ "name": "PLC与工业自动化",
+ "description": "PLC硬件结构与扫描周期、梯形图与IEC 61131-3语言、定时器与计数器、顺序控制、传感器与执行器接线、工业现场总线、HMI与SCADA、安全联锁。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "可编程控制器应用技术（江苏开放大学，爱课程/中国大学MOOC；国家高等教育智慧教育平台课程页，18 周）",
+   "url": "https://higher.smartedu.cn/course/6a483c1c40d86e7f37643d3e",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "八讲逐节可读：第一讲 继电接触器控制技术（1.1 电动机点动控制、1.2 连续运转控制、1.3 正反向运动控制）；第二讲 基本逻辑指令应用（2.1 正反转、2.2 Y/△ 减压起动、2.3 病房呼叫系统）；第三讲 常用功能指令应用（3.1 彩灯、3.2 交通信号灯、3.3 密码锁）；第四讲 顺序控制应用（4.1 送料小车、4.2–4.3 机械手及其程序设计）；第五讲 模拟量控制应用（5.1 PLC 和变频器的模拟量控制、5.2 模拟量控制的电动机开环调速）；第六讲 PLC 通信与网络应用（6.1 通信与网络应用、6.2 技术应用实现）；第七讲 人机界面的设计与应用（7.1 人机界面组态的实现、7.2 PLC 与触摸屏联机应用）；第八讲 S7-1200 PLC 应用技术（8.1 基础应用实例、8.2 进阶应用实例含伺服定位、步进驱动双轴定位、8.3 函数块的编程和应用）。覆盖梯形图与基本/功能指令、顺序控制、HMI（触摸屏组态与联机）三项；课程简介写“硬件系统、指令系统、编程方法、程序通信及人机界面设计”，但大纲没有硬件结构与扫描周期的独立讲次，也没有 IEC 61131-3 语言清单（只教梯形图/指令）、现场总线协议与安全联锁。",
+   "access": "国家高等教育智慧教育平台课程页免费看简介与逐章大纲；课程在爱课程（中国大学MOOC）开课（2026/08/24–2026/12/27，18 周），看视频需注册，是否收费本轮未核对（free 记 null）；中文字幕未核对。以西门子 S7-1200 为平台，含 5 个实验。",
+   "publisher": "江苏开放大学（开课高校）；主讲 侯宁、黄震宇、邬玉晶 等",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/6a483c1c40d86e7f37643d3e",
+    "location": "课程大纲：第二讲 基本逻辑指令应用 2.1–2.3；第三讲 常用功能指令应用 3.1–3.3；第四讲 顺序控制应用 4.1–4.3；第五讲 模拟量控制应用 5.1–5.2；第六讲 PLC 通信与网络应用；第七讲 人机界面的设计与应用 7.1–7.2；第八讲 S7-1200 应用技术 8.1–8.3",
+    "finding": "页面把八讲与各讲小节逐条渲染出来（含 4.1 送料小车控制系统、7.1 人机界面组态的实现、8.3 函数块的编程和应用），可确认它到梯形图/功能指令、顺序控制、模拟量、通信与触摸屏为止，没有硬件扫描原理、IEC 61131-3 语言清单与安全联锁。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "工业控制网络与现场总线（北京信息职业技术学院，爱课程/中国大学MOOC；国家高等教育智慧教育平台课程页，24 周）",
+   "url": "https://higher.smartedu.cn/course/69c4548295df98bb27239176",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "补现场总线与监控：第一讲 工业控制网络简介（工业自动化发展、现场总线技术、西门子全集成自动化）；第二讲 S7-300 基础知识与 STEP7 软件应用（S7-300 系列 PLC 基础知识、STEP7 组态）；第三讲 S7-300 编程概述（位逻辑指令、定时器指令、计数器指令、比较指令）；第四至六讲 Profibus DP 通信网络的认识与应用；第七至九讲 Profinet 通信网络的认识与应用；第十至十二讲 WinCC Flexible 基本应用、高级应用、与现场总线综合应用。覆盖工业现场总线（Profibus DP / Profinet 的连接、组态与程序控制）与 HMI/SCADA（WinCC 监控系统设计）；另补定时器/计数器指令。课程面向高职，不含 IEC 61131-3 语言清单与功能安全。",
+   "access": "智慧教育平台课程页免费看简介与章节名；课程在爱课程（中国大学MOOC）开课（2026/03/30–2026/09/08，24 周，已结课），看视频需注册，是否收费本轮未核对（free 记 null）；中文字幕未核对。以西门子 S7-300 + STEP7 + WinCC Flexible 为平台。",
+   "publisher": "北京信息职业技术学院（开课高校）；主讲 葛大卫、李琪",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/69c4548295df98bb27239176",
+    "location": "课程大纲：第一讲 工业控制网络简介（现场总线技术）；第三讲 S7-300 编程概述（位逻辑指令、定时器指令、计数器指令、比较指令）；第四至九讲 Profibus DP / Profinet 通信网络应用；第十至十二讲 WinCC Flexible 基本应用、高级应用、与现场总线综合应用",
+    "finding": "页面逐讲列出章节名与测验项，Profibus DP 与 Profinet 各有三讲应用，WinCC Flexible 有三讲（含与现场总线综合应用）；课程简介原文“探讨了 PROFIBUS-DP 与 PROFINET 网络的连接、组态与程序控制，以及 WinCC 监控系统的设计”。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "可编程控制器技术应用（常州工程职业技术学院，爱课程/中国大学MOOC；国家高等教育智慧教育平台课程页，17 周，三菱 FX3U）",
+   "url": "https://higher.smartedu.cn/course/67ccc5e4225d72705eae97c2",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "补硬件结构与扫描原理、I/O 与顺序控制：模块一 PLC 基础知识（1.4 PLC 的基本组成、1.5 PLC 的循环扫描原理、1.6 与继电—接触器控制电路的区别、1.7 FX3U 面板、1.8 PLC 的输入/输出继电器）；模块二 基本指令（2.1 基本指令、2.2–2.3 应用实例）；模块三 硬件设计（3.1 盾构机管片抓取系统的整体设计与硬件设计、3.2 本地控制系统设计、3.3 云控系统设计）；模块四（4.1 定时器、4.6 步进顺控指令、4.7 单流程程序设计、4.8 剪板机控制）；模块五（5.7 计数器程序设计、5.6 循环程序设计）；模块六（6.3 选择性分支、6.4 并行结构、6.7 传送类指令、6.8 移位指令）；模块七（7.4 程序流程控制指令、7.8 顺序功能图 SFC 程序设计）。覆盖 PLC 硬件结构与循环扫描原理、定时器与计数器、顺序控制（步进顺控/选择性分支/并行结构/SFC）；I/O 继电器与硬件设计只能算接线的一半，不含传感器信号类型与执行器接线规范。",
+   "access": "智慧教育平台课程页免费看简介与章节名；课程在爱课程（中国大学MOOC）开课（2025/03/10–2025/07/06，17 周，已结课），看视频需注册，是否收费本轮未核对（free 记 null）；中文字幕未核对。选用“十四五”规划教材《三菱 FX3U PLC 应用实例教程（第2版）》（电子工业出版社）。",
+   "publisher": "常州工程职业技术学院（开课高校）；主讲 刘书凯",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/67ccc5e4225d72705eae97c2",
+    "location": "课程大纲：模块一 1.4 PLC 的基本组成、1.5 PLC 的循环扫描原理、1.8 PLC 的输入/输出继电器；模块三 3.1 整体设计与硬件设计；模块四 4.1 基础知识：定时器、4.6 步进顺控指令、4.7 单流程的程序设计；模块五 5.7 计数器程序设计；模块六 6.3 选择性分支、6.4 并行结构；模块七 7.8 顺序功能图 (SFC) 程序设计",
+    "finding": "页面把七个模块的节名逐条列出，“1.5 PLC 的循环扫描原理”“1.8 PLC 的输入/输出继电器”“4.6 步进顺控指令”“7.8 顺序功能图 (SFC) 程序设计”都能定位到，正好补 zh1 缺的扫描原理与顺序控制细节。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Programmable Logic Controllers, 6th Edition（W. Bolton；Newnes/Elsevier 2015，出版社目录页）",
+   "url": "https://shop.elsevier.com/books/programmable-logic-controllers/bolton/978-0-12-802929-9",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "出版社 Table of contents 逐章逐节：Ch.1 Programmable Logic Controllers（1.1 Controllers、1.2 Hardware、1.3 PLC Architecture、1.4 PLC Systems、1.5 Programs）；Ch.2 Input/Output Devices（2.1 Input Devices、2.2 Output Devices、2.3 Examples of Applications）；Ch.4 I/O Processing（4.1 Input/Output Units、4.2 Signal Conditioning、4.3 Remote Connections、4.4 Networks、4.6 Processing Inputs、4.7 I/O Addresses）；Ch.5 Ladder and Functional Block Programming（5.1 Ladder Diagrams、5.6 Function Blocks）；Ch.6 IL, SFC, and ST Programming Methods（6.1 Instruction Lists、6.2 Sequential Function Charts、6.3 Structured Text）；Ch.7 Internal Relays；Ch.9 Timers（9.1–9.6）；Ch.10 Counters（10.1–10.5 Sequencer）；Ch.11 Shift Registers；Ch.12 Data Handling（12.4 Closed Loop Control）；Ch.13 Designing Systems（13.1 Program Development、13.2 Safe Systems、13.3 Commissioning、13.4 Fault Finding）；Ch.14 Programs。覆盖简介全部八项：硬件与架构（Ch.1）、梯形图与 IEC 1131-3 的 IL/SFC/ST（Ch.5、Ch.6）、定时器与计数器（Ch.9、Ch.10）、顺序控制（Ch.6.2 SFC + Ch.10.5 Sequencer）、I/O 设备与接线（Ch.2、Ch.4）、网络（Ch.4.3/4.4）、安全（Ch.13.2 Safe Systems）；现场总线协议本身只有 Ch.4.4 Networks 一节，细节靠 en2。",
+   "access": "Elsevier（Newnes）在售纸本/电子版（价格本轮未核），不绑定任何厂商；只核到目录，正文未读。",
+   "publisher": "Newnes / Elsevier（W. Bolton）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://shop.elsevier.com/books/programmable-logic-controllers/bolton/978-0-12-802929-9",
+    "location": "Table of contents：Chapter 1 1.2 Hardware / 1.3 PLC Architecture；Chapter 2 2.1 Input Devices / 2.2 Output Devices；Chapter 4 4.2 Signal Conditioning / 4.3 Remote Connections / 4.4 Networks；Chapter 5 5.1 Ladder Diagrams / 5.6 Function Blocks；Chapter 6 6.1 Instruction Lists / 6.2 Sequential Function Charts / 6.3 Structured Text；Chapter 9 Timers；Chapter 10 Counters（10.5 Sequencer）；Chapter 13 13.1 Program Development / 13.2 Safe Systems",
+    "finding": "产品页把 14 章的节名逐条列出（含 6.3 Structured Text、13.2 Safe Systems），并写明第 6 版新增“a comparison of relay-controlled systems, microprocessor-controlled systems, and the programmable logic controller, a discussion of PLC hardware and architecture … and coverage of security, the IEC programming standard”，与简介逐项对得上。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Lessons In Industrial Automation — Chapter 4: Basics of Programmable Logic Controllers (PLCs) 与 Chapter: Digital Data Acquisition and Networks（control.com 开放教材，Creative Commons BY 4.0）",
+   "url": "https://control.com/textbook/programmable-logic-controllers/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "PLC 章页面清单：Overview、Examples of PLC Systems、Input/Output (I/O) Capabilities of PLCs、Logic Programming in PLCs、Memory Maps and I/O Addressing、Ladder Diagram (LD) Programming Contacts and Coils、Ladder Diagram (LD) Structure Commands、Human-Machine Interfaces (HMIs)、How to Teach Yourself PLC Programming；Overview 正文写“input devices (sensors), controllers, and output devices (actuators)”三段结构。另章 Digital Data Acquisition and Networks 正文列 fieldbus 家族并解释 DCS/SCADA：HART、Modbus、FOUNDATION Fieldbus、Profibus PA/DP/FMS、EtherNet/IP，以及 RTU/MTU 的 SCADA 结构与遥测区别。补传感器/执行器与 I/O 接线（输入设备含 4-20 mA 变送器、热电偶、应变片，输出设备含电磁阀、电机接触器、调节阀、变频器）、HMI、现场总线与 SCADA；定时器/计数器没有独立页面（只在 LD Structure Commands 里涉及），硬件扫描周期也没有专页。",
+   "access": "control.com 网站免费在线阅读（标注 Creative Commons Attribution 4.0 International Public License），无需注册；英文。",
+   "publisher": "control.com（Lessons In Industrial Automation，Tony R. Kuphaldt 体系）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://control.com/textbook/digital-data-acquisition-and-networks/",
+    "location": "正文：fieldbus 列表（HART / Modbus / FOUNDATION Fieldbus / Profibus PA / Profibus DP / Profibus FMS / EtherNet/IP）、“fieldbus-aware host systems … typically a Distributed Control System (DCS)”、“SCADA（Supervisory Control And Data Acquisition）… RTU … MTU”；PLC 章的 Pages 列表（Input/Output (I/O) Capabilities of PLCs、Memory Maps and I/O Addressing、Ladder Diagram (LD) Structure Commands、Human-Machine Interfaces (HMIs)）",
+    "finding": "两章页面都实际打开核对：数据采集章正文逐条列出主流现场总线并解释 DCS 与 SCADA/遥测的区别；PLC 章的 Pages 列表里有 I/O 能力、I/O 地址与 HMI 页，Overview 正文给出输入设备/控制器/输出设备三段结构。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "PLC硬件结构与扫描周期",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "模块一 1.4 PLC 的基本组成、1.5 PLC 的循环扫描原理、1.6 与继电—接触器控制电路的区别、1.7 FX3U 系列 PLC 的面板、1.8 PLC 的输入/输出继电器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.1 Programmable Logic Controllers（1.1 Controllers、1.2 Hardware、1.3 PLC Architecture、1.4 PLC Systems、1.5 Programs）；Ch.4 4.6 Processing Inputs",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 4 Pages：Overview、Input/Output (I/O) Capabilities of PLCs、Memory Maps and I/O Addressing",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文靠高职那门三菱课（1.5 循环扫描原理、1.4 基本组成）；英文教材第 1 章把控制器、硬件、架构、系统、程序分开讲，control.com 免费章只有 I/O 能力与地址。"
+  },
+  {
+   "topic": "梯形图与IEC 61131-3语言",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第二讲 基本逻辑指令应用 2.1–2.3；第三讲 常用功能指令应用 3.1–3.3；第八讲 8.3 函数块的编程和应用",
+     "extent": "partial"
+    },
+    {
+     "source": "zh3",
+     "section": "4.6 步进顺控指令、7.8 顺序功能图 (SFC) 程序设计（只到 LD 与 SFC 两种语言）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.5 Ladder and Functional Block Programming（5.1 Ladder Diagrams、5.6 Function Blocks）；Ch.6 IL, SFC, and ST Programming Methods（6.1 Instruction Lists、6.2 Sequential Function Charts、6.3 Structured Text）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 4 Pages：Logic Programming in PLCs、Ladder Diagram (LD) Programming Contacts and Coils、Ladder Diagram (LD) Structure Commands",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文两门课只教梯形图/指令表与顺序功能图（LD + SFC），没有 IEC 61131-3 的语言清单与结构化文本（ST）、功能块图（FBD）系统讲解；英文教材第 5、6 章把 LD/FBD/IL/SFC/ST 五种都讲一遍。"
+  },
+  {
+   "topic": "定时器与计数器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "4.1 基础知识：定时器；5.7 计数器程序设计；6.1 跳转程序设计等模块四、五的实例",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第三讲 S7-300 编程概述：定时器指令、计数器指令",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.9 Timers（9.1 Types of Timers、9.2 On-Delay、9.3 Off-Delay、9.4 Pulse、9.5 Retentive、9.6 Programming Examples）；Ch.10 Counters（10.1 Forms of Counter、10.2 Programming、10.3 Up- and Down-Counting、10.4 Timers with Counters）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文按机型讲（FX3U 的定时器/计数器、S7-300 的定时器/计数器指令），英文把定时器四类型与计数器（含加减计数、定时器与计数器组合）各成一章。"
+  },
+  {
+   "topic": "顺序控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第四讲 顺序控制应用（4.1 送料小车 PLC 控制系统、4.2 机械手 PLC 控制系统、4.3 机械手的 PLC 程序设计）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "4.6 步进顺控指令、4.7 单流程的程序设计、6.3 选择性分支、6.4 并行结构、7.8 顺序功能图 (SFC) 程序设计",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.6 6.2 Sequential Function Charts；Ch.10 10.5 Sequencer；Ch.14 14.2 Valve Sequencing",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有“顺序功能图/步进顺控 + 选择性分支/并行结构”的完整学法与小车、机械手实例；英文教材的 SFC 与 sequencer 两处加上阀门顺序案例。"
+  },
+  {
+   "topic": "传感器与执行器接线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "1.8 PLC 的输入/输出继电器；3.1 盾构机管片抓取系统的整体设计与硬件设计",
+     "extent": "partial"
+    },
+    {
+     "source": "zh1",
+     "section": "第五讲 模拟量控制应用（5.1 PLC 和变频器的模拟量控制应用、5.2 模拟量控制的电动机开环调速）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.2 Input/Output Devices（2.1 Input Devices、2.2 Output Devices、2.3 Examples of Applications）；Ch.4 I/O Processing（4.1 Input/Output Units、4.2 Signal Conditioning、4.7 I/O Addresses）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 4 Overview（输入设备/控制器/输出设备三段结构，4-20 mA 变送器、热电偶、应变片；电磁阀、电机接触器、调节阀、变频器）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有 I/O 继电器编号与硬件设计、模拟量与变频器接线，但没有输入信号类型（干接点/NPN/PNP/4-20 mA）与执行器（电磁阀、接触器、变频器）接线的系统讲法；英文第 2 章与第 4 章专讲输入/输出设备与信号调理。"
+  },
+  {
+   "topic": "工业现场总线",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第一讲 现场总线技术；第四至六讲 Profibus DP 通信网络应用；第七至九讲 Profinet 通信网络应用",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Chapter Digital Data Acquisition and Networks：fieldbus 家族（HART、Modbus、FOUNDATION Fieldbus、Profibus PA/DP/FMS、EtherNet/IP）与 fieldbus-aware host (DCS)",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Ch.4 4.3 Remote Connections、4.4 Networks（只到网络概念一层）",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文那门课有 Profibus DP 与 Profinet 各三讲的连接/组态/程序控制，但只限西门子两种总线；英文免费章把 HART/Modbus/FF/Profibus 家族与 DCS 主机讲成体系。"
+  },
+  {
+   "topic": "HMI与SCADA",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第十讲 WinCC Flexible 基本应用、第十一讲 高级应用、第十二讲 与现场总线综合应用（课程简介写“WinCC 监控系统的设计”）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "第七讲 人机界面的设计与应用（7.1 人机界面组态的实现、7.2 PLC 与触摸屏联机应用的设计实现）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Chapter 4 Page：Human-Machine Interfaces (HMIs)；Chapter Digital Data Acquisition and Networks：SCADA（RTU/MTU、遥测与 SCADA 的区别）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文是 WinCC Flexible 组态实训（HMI）+ 监控系统设计，SCADA 概念偏弱；英文免费章把 HMI 与 SCADA/遥测的架构讲清。"
+  },
+  {
+   "topic": "安全联锁",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.13 Designing Systems：13.1 Program Development、13.2 Safe Systems、13.3 Commissioning、13.4 Fault Finding",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文三门课的大纲都没有安全/联锁内容（继电接触器讲互锁但不讲功能安全与安全系统设计）；英文教材 13.2 Safe Systems 成节，并配 commissioning 与故障查找。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh3",
+     "read": "先打硬件与指令基础：模块一（1.4 基本组成、1.5 循环扫描原理、1.7 面板、1.8 输入/输出继电器）→ 模块二 基本指令与应用实例 → 模块四（4.1 定时器、4.6 步进顺控、4.7 单流程）→ 模块五（5.7 计数器）→ 模块六（6.3 选择性分支、6.4 并行结构）→ 模块七 7.8 顺序功能图；每个模块把小车、剪板机、交通灯之类的题目自己写一遍。"
+    },
+    {
+     "source": "zh1",
+     "read": "换到西门子 S7-1200：第一讲 继电接触器控制（正反转、Y/△）→ 第二讲 基本逻辑指令 → 第三讲 常用功能指令（彩灯、交通灯、密码锁）→ 第四讲 顺序控制（送料小车、机械手）→ 第五讲 模拟量与变频器 → 第六讲 通信与网络 → 第七讲 人机界面组态与触摸屏联机 → 第八讲 S7-1200 进阶（伺服/步进定位、函数块）。"
+    },
+    {
+     "source": "zh2",
+     "read": "补现场总线与监控：第一讲 现场总线技术 → 第二、三讲 S7-300 与 STEP7（位逻辑/定时器/计数器指令）→ 第四至六讲 Profibus DP 组态与应用 → 第七至九讲 Profinet → 第十至十二讲 WinCC Flexible（基本、高级、与现场总线综合）。IEC 61131-3 的 ST/FBD、传感器与执行器接线的规范、安全联锁三项中文没有教学，按本记录缺口走英文。"
+    }
+   ],
+   "gaps": [
+    "梯形图与IEC 61131-3语言",
+    "传感器与执行器接线",
+    "安全联锁"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Bolton 第 6 版顺序：Ch.1 控制器/硬件/架构/系统/程序（把扫描周期与 I/O 刷新讲清）→ Ch.2 输入/输出设备 → Ch.3 数字系统与数据 → Ch.4 I/O 处理（I/O 单元、信号调理、远程连接、网络、I/O 地址）→ Ch.5 梯形图与功能块 → Ch.6 指令表、顺序功能图与结构化文本（IEC 1131-3 五种语言补齐）→ Ch.7 内部继电器 → Ch.9 定时器 → Ch.10 计数器（含 sequencer）→ Ch.11–12 移位寄存器与数据处理 → Ch.13 系统设计（含 13.2 Safe Systems、调试与故障查找）→ Ch.14 综合程序案例。"
+    },
+    {
+     "source": "en2",
+     "read": "用 control.com 免费章补现场总线与监控：PLC 章的 Overview/I/O Capabilities/Memory Maps and I/O Addressing 对照实际接线与地址分配，HMI 页看组态要点；再读 Digital Data Acquisition and Networks 章，把 HART/Modbus/FOUNDATION Fieldbus/Profibus 家族与 DCS/SCADA（RTU/MTU）的结构过一遍。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/api/v1/courses?keyword=…（国家高等教育智慧教育平台检索接口，逐个试 PLC / 可编程控制器 / 电气控制 / 工业自动化 / 现场总线）",
+   "result": "“PLC”“电气控制”“工业自动化”返回 0 门；“可编程控制器”6 门（可编程控制器、可编程控制器技术×2、可编程控制器技术应用、可编程控制器应用技术、电器控制与可编程控制器）；“现场总线”1 门（工业控制网络与现场总线）。逐门看大纲后采纳江苏开放大学、北京信息职业技术学院、常州工程职业技术学院三门。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://search.bilibili.com/all?keyword=PLC 安全联锁 课程（不带 cookie）",
+   "result": "返回工控培训班的“汇川 Easy 系列 PLC 中级课”“AB 罗克韦尔 Logix5000 编程”“西门子博途非标设备项目实战”等商业培训机构内容与个人 UP 视频，没有高校/教师本人的安全联锁或 IEC 61131-3 课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily_search",
+   "query_or_url": "可编程控制器 原理及应用 教材 目录 IEC 61131-3 结构化文本 安全联锁 现场总线 出版社 目录；另试 https://xuanshu.hep.com.cn/front/h5Mobile/bookDetails?bookId=5efe18b2b0b2bda7c523cc7d（高教社《可编程控制器原理及应用（第4版）》）与 https://tr.beckhoff.com.cn/…/IEC 61131-3编程语言及应用基础.pdf（倍福虚拟学院）",
+   "result": "高教社选书页是前端渲染，fetch 返回空；倍福虚拟学院的 IEC 61131-3 书 PDF 需要登录（跳到 login/index.php）；其余命中是京东/百科/标准原文，按规则不用。中文付费教材本轮没有可核目录，未登记。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://shop.elsevier.com/books/programmable-logic-controllers/bolton/978-0-12-802929-9 与 https://control.com/textbook/programmable-logic-controllers/ 、https://control.com/textbook/digital-data-acquisition-and-networks/",
+   "result": "采纳：Elsevier 产品页 14 章逐节可读（含 6.3 Structured Text、13.2 Safe Systems）；control.com 两章的 Pages 列表与正文确认 I/O 能力/HMI 页与 fieldbus 家族、SCADA/RTU/MTU 的讲法。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://shop.elsevier.com/books/programmable-logic-controllers/bolton/978-0-12-802929-9",
+   "result": "出版社在售书（价格未核、正文未读），只核到目录；登记为 free:false 的英文主来源。另核过美国国会图书馆编目页的 Petruzella 目录（catdir.loc.gov，15 章，第 14 章 Process Control and Data Acquisition Systems），本轮未采用。"
+  }
+ ],
+ "findings": [
+  "中文侧三门课分工清楚：常州工程职业技术学院那门补硬件/扫描原理与步进顺控，江苏开放大学那门补梯形图指令体系与 HMI 组态，北京信息职业技术学院那门补 Profibus/Profinet 与 WinCC 监控。",
+  "中文缺三块：IEC 61131-3 的 ST/FBD 语言清单（只教梯形图与 SFC）、传感器/执行器接线的信号类型规范（只有 I/O 继电器编号与模拟量）、安全联锁（完全没有），都用英文教材 Bolton 第 5/6/2/13 章补。",
+  "英文侧 Bolton 第 6 版目录到节级覆盖八项中的七项，现场总线只有 4.4 Networks 一节；control.com 的 Digital Data Acquisition and Networks 章补 HART/Modbus/FF/Profibus 与 SCADA，两本刚好互补。",
+  "中文付费教材（高教社《可编程控制器原理及应用》、倍福的 IEC 61131-3 书）本轮因页面前端渲染或需登录，读不到目录，未登记。"
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "梯形图与IEC 61131-3语言",
+   "source": "en1",
+   "reason": "中文三门课只教梯形图/指令表与顺序功能图（LD 与 SFC），没有 IEC 61131-3 的五种语言清单与结构化文本（ST）、功能块图（FBD）；B 站只有工控培训班的梯形图速成，倍福的 IEC 61131-3 书要登录。英文 Bolton 第 5 章（梯形图与功能块）与第 6 章（IL、SFC、ST）正好补齐。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "传感器与执行器接线",
+   "source": "en2",
+   "reason": "中文只有 PLC 输入/输出继电器编号、硬件设计与模拟量+变频器接线，没有按信号类型（干接点、NPN/PNP、4-20 mA 变送器、热电偶、应变片）与执行器（电磁阀、接触器、调节阀、变频器）讲接线规范。control.com 的 PLC 章 Overview 与 Digit",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "安全联锁",
+   "source": "en1",
+   "reason": "中文三门课的逐讲大纲都没有安全系统/联锁内容（继电接触器只讲互锁电路）；平台检索“PLC/电气控制/工业自动化”都没有安全相关课程，B 站只有培训机构课。英文教材第 13 章 Designing Systems 有 13.2 Safe Systems，并配 commissioning 与故障查找。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "applied_additions": []
+}

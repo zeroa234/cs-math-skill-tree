@@ -1,0 +1,465 @@
+{
+ "id": "E.2.2",
+ "checkedAt": "2026-11-22",
+ "name": "统计信号处理",
+ "description": "随机信号的相关与功率谱、线性系统对随机信号的响应、参数估计与克拉美-罗界、最大似然与最小二乘估计、维纳滤波、卡尔曼滤波、假设检验与信号检测、匹配滤波。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "随机信号分析（西安电子科技大学，爱课程·中国大学MOOC / 国家高等教育智慧教育平台课程页）",
+   "url": "https://higher.smartedu.cn/course/6a8f5463b44e493c76401c4b",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "课程大纲逐节列出：第1章 随机过程（基本概念及统计特性、连续时间随机过程的微分与积分、平稳随机过程及其遍历性、联合平稳、正态随机过程、马尔可夫链、泊松分布）；第2章 平稳随机过程的谱分析（第1节 随机过程的谱分析、第2节 联合平稳随机过程的互功率谱密度、第3节 离散时间随机过程的功率谱密度、第4节 噪声）；第3章 随机信号通过线性系统分析（第1节 线性系统基本理论、第2节 随机信号通过连续时间系统的分析、第3节 随机信号通过离散时间系统的分析、第4节 3dB带宽/等效噪声带宽/白噪声通过理想线性系统、第5–7节 希尔伯特变换与解析过程、窄带随机过程）；第4章 随机信号通过非线性系统的分析；第5章 离散随机信号特征的估计（基本概念、一维/二维数字特征估计、功率谱密度估计、概率密度函数估计）。覆盖简介的“随机信号的相关与功率谱”“线性系统对随机信号的响应”；第5章只到“数字特征/功率谱/概率密度”的估计，不含克拉美-罗界与最大似然/最小二乘的经典估计理论。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为爱课程（中国大学MOOC），需注册登录。课程 18 周，2026/08/31–2026/12/31 开课中，3 万+ 人选课，页面标“一流课程 / 获得国家精品在线开放课程认定”。中文授课；平台不显示字幕信息，字幕未核对。",
+   "publisher": "西安电子科技大学（李兵兵）；平台：国家高等教育智慧教育平台 / 爱课程（中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/6a8f5463b44e493c76401c4b",
+    "location": "课程页“课程大纲”栏：第2章 平稳随机过程的谱分析 第1节 随机过程的谱分析、第2节 联合平稳随机过程的互功率谱密度、第3节 离散时间随机过程的功率谱密度、第4节 噪声；第3章 随机信号通过线性系统分析 第1节 线性系统基本理论、第2节 随机信号通过连续时间系统的分析、第3节 随机信号通过离散时间系统的分析、第4节 3dB带宽、等效噪声带宽和白噪声通过理想线性系统分析；第5章 离散随机信号特征的估计 第1节 基本概念、第2节 一维数字特征以及二维数字特征的估计、第3节 功率谱密度估计",
+    "finding": "平台渲染出的逐节目录里，“相关与功率谱”落在第2章（谱分析、互功率谱、离散时间功率谱），“线性系统对随机信号的响应”落在第3章（连续时间与离散时间系统两条路径、等效噪声带宽、白噪声通过理想线性系统）；第5章只讲数字特征/功率谱/概率密度的估计，没有克拉美-罗界、最大似然与最小二乘。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "通信原理（北京邮电大学，学堂在线版 / 国家高等教育智慧教育平台课程页）：第2–3章随机信号部分",
+   "url": "https://higher.smartedu.cn/course/62354c739906eace048c2e7c",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "只取第2–3章的随机信号与匹配滤波部分：2.6 能量信号的相关函数、2.7 能量谱密度、2.8 功率信号的相关函数、2.9 功率谱密度、2.11 线性时不变系统；3.1 随机过程、3.2 随机过程的功率谱密度、3.5 平稳过程通过线性系统；3.14 匹配滤波器。课程其余章节属 E.2.3（通信原理）主线，不作为本技能必读。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为学堂在线，需注册登录。5 万+ 人选课，页面标“一流课程”（国家级一流线下/线上课程）。中文授课；字幕未核对。",
+   "publisher": "北京邮电大学（杨鸿文、桑林、林家儒、郭一珺、牛凯、张志龙）；平台：国家高等教育智慧教育平台 / 学堂在线",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/62354c739906eace048c2e7c",
+    "location": "课程大纲 第2章 确定信号分析：2.6 能量信号的相关函数、2.8 功率信号的相关函数、2.9 功率谱密度、2.11 线性时不变系统；第3章 随机信号分析：3.2 随机过程的功率谱密度、3.5 平稳过程通过线性系统、3.14 匹配滤波器",
+    "finding": "北邮《通信原理》把随机信号的“相关函数—功率谱密度”与“平稳过程通过线性系统”作为第2–3章逐节讲，并在 3.14 单列一讲“匹配滤波器”，正好补西电《随机信号分析》大纲里没有的匹配滤波，也提供功率谱的第二处讲次。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "KalmanFilter.NET 中文教程《通过示例讲解卡尔曼滤波》（免费在线教程）",
+   "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "只作“卡尔曼滤波”的中文材料：单页总览（卡尔曼滤波的核心思想与基本方程）与免费的分步在线教程（数值示例建立直觉、逐步推导卡尔曼滤波方程）；站内另售的书籍含扩展/无迹卡尔曼与传感器融合，属付费，未计覆盖。",
+   "access": "网站免费阅读中文正文，无需注册；付费书籍（含 EKF/UKF、传感器融合）需另行购买。中文（简体）页面；无字幕问题（图文教程）。",
+   "publisher": "KalmanFilter.NET（Alex Becker 等作者维护的教程站，中文版由站方提供）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://kalmanfilter.net/CN/default_cn.aspx",
+    "location": "首页“卡尔曼滤波学习路径”：单页总览（精炼介绍核心思想与基本方程）、免费基于示例的网页教程（“逐步的在线教程，通过数值示例构建直觉；介绍必要的背景知识，并带领完成卡尔曼滤波方程的推导”）、《从零开始的卡尔曼滤波》书籍（14 个数值示例，含 EKF/UKF 与传感器融合）",
+    "finding": "免费部分是一套从一维示例推到卡尔曼滤波方程的图文教程，够支撑“卡尔曼滤波”这一知识点的中文自学；EKF/UKF 在付费书里，本技能不需要。"
+   }
+  },
+  {
+   "key": "zh4",
+   "lang": "zh",
+   "title": "信号检测与估值（西北工业大学，中国大学MOOC，国家一流本科课程）",
+   "url": "https://www.icourse163.org/course/NWPU-1207128808",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程概述逐条列出：信号的统计检测理论（各种判决准则、匹配滤波器的设计和性质、确知信号和随机参量信号接收机的设计和性能）、参数估计理论（估计量的性质、贝叶斯估计方法、最大似然估计方法、线性最小均方估计方法及最小二乘估计方法）。因平台“课程大纲”栏为空，只能按概述记，故相关知识点一律记 partial：概述点名了判决准则、匹配滤波、估计量性质、最大似然与最小二乘，但没有讲次/章节名可核。",
+   "access": "中国大学MOOC 免费学习（需注册登录；电子版认证证书付费申请）。页面标“国家级一流本科课程”。课程大纲栏为空，章节未公开。中文授课；字幕未核对。",
+   "publisher": "西北工业大学（中国大学MOOC 课程页标注的开课学校）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/NWPU-1207128808",
+    "location": "课程概述原文：“本课程的内容主要包括两大部分：信号的统计检测理论，包括各种判决准则、匹配滤波器的设计和性质、确知信号和随机参量信号接收机的设计和性能；参数估计理论，包括估计量的性质、贝叶斯估计方法、最大似然估计方法、线性最小均方估计方法及最小二乘估计方法。”；页面“课程大纲”标题下无任何条目",
+    "finding": "概述明确点名判决准则、匹配滤波、估计量性质、最大似然与最小二乘，但课程大纲栏是空的，读不到讲次，按规则只能记 partial；它证明中文确有这门课，但不能作为“covered”的章节证据。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Stochastic Processes, Detection, and Estimation（MIT 6.432, Spring 2004）— MIT OpenCourseWare",
+   "url": "https://ocw.mit.edu/courses/6-432-stochastic-processes-detection-and-estimation-spring-2004/pages/calendar/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "按 Calendar 逐讲（L=讲课，R=复习课）：L3–L5 贝叶斯/二元/M 元假设检验与 ROC；L6–L8 贝叶斯估计、最小二乘、MAP、向量空间；L9 非随机参数估计与 CRB；L10 最大似然估计；L12–L14 随机过程、二阶描述、功率谱密度；L15–L16 白化与成形滤波、K-L 展开、频域表示；L17–L19 白噪声与有色噪声中的检测与估计；L21 维纳滤波；L22–L24 新息与状态模型、卡尔曼滤波；R12 离散时间维纳滤波（预测与平滑）、R13 状态空间模型与卡尔曼滤波。",
+   "access": "MIT OpenCourseWare 免费开放，无需注册；课程页提供 Syllabus、Calendar、Readings、Recitations、Assignments，其中 Recitations 页 R1–R14 每讲都有 PDF 讲义可下载（如 R4 Binary Hypothesis Tests: ROC; Geometry of M-ary Hypothesis Tests、R6 Nonrandom Parameter Estimation、R8 Examples of Stochastic Processes; Second Order Statistics、R10 Binary Detection in White Gaussian Noise、R12 Discrete-Time Wiener Filtering; Prediction and Smoothing、R13 State Space Models and Kalman Filtering），另有 11 份习题（PS 1–11）与两次测验/期末。OCW 没有公开讲课录像或完整讲义（/pages/lecture-notes/ 返回 404），所以正文深度由复习课讲义 + 教材（Kay）承担。英文。",
+   "publisher": "MIT OpenCourseWare（Instructors: Prof. Gregory Wornell, Prof. Alan S. Willsky）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-432-stochastic-processes-detection-and-estimation-spring-2004/pages/recitations/",
+    "location": "Recitations 页：R4 Binary Hypothesis Tests: Receiver Operating Characteristic (ROC); Geometry of M-ary Hypothesis Tests (PDF)、R6 Nonrandom Parameter Estimation (PDF)、R8 Examples of Stochastic Processes; Second Order Statistics and Stochastic Processes (PDF)、R10 Binary Detection in White Gaussian Noise; Detection and Estimation in Colored Gaussian Noise (PDF)、R12 Discrete–Time Wiener Filtering; Prediction and Smoothing (PDF)、R13 State Space Models and Kalman Filtering (PDF)；Calendar 页 L9 Nonrandom Parameter Estimation CRB、L10 ML Estimation、L12–L14、L15/L16、L21 Wiener Filtering、L23 Kalman Filtering",
+    "finding": "复习课 14 讲每讲都有 PDF 讲义，正好覆盖矩阵/假设检验与 ROC、非随机参数估计（CRB）、随机过程与二阶统计、白噪声/有色噪声检测、离散时间维纳滤波、状态空间与卡尔曼滤波；加上 Calendar 的逐讲主题，课程不是只有一份大纲，而是有可读讲义的课程材料，但没有完整讲课录像。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Fundamentals of Statistical Signal Processing, Vol. I Estimation Theory / Vol. II Detection Theory（Steven M. Kay，Prentice Hall；作者主页公开全书目录）",
+   "url": "https://www.ele.uri.edu/faculty/kay/New%20web/Table%20of%20Contents.htm",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "作者主页目录（卷 I）：2 Minimum Variance Unbiased Estimation、3 Cramer-Rao Lower Bound、4 Linear Models、6 Best Linear Unbiased Estimators、7 Maximum Likelihood Estimation、8 Least Squares、9 Method of Moments、11 General Bayesian Estimators、12 Linear Bayesian Estimators、13 Kalman Filters；（卷 II）3 Statistical Decision Theory I、4 Deterministic Signals、5 Random Signals、6 Statistical Decision Theory II、7 Deterministic Signals with Unknown Parameters。用于“匹配滤波”（卷 II 第 4 章确定性信号检测）与 CRB/ML/最小二乘/卡尔曼的教材级依据。",
+   "access": "作者主页只免费提供目录与前言；正文需购买纸质书（Prentice Hall，卷 I ISBN 0-13-345711-7，卷 II ISBN 0-13-504135-X）。正版中文译本《统计信号处理基础——估计与检测理论》（罗鹏飞等译，电子工业出版社）可作中文对照。英文正文，目录未读正文。",
+   "publisher": "Steven M. Kay（University of Rhode Island）作者主页；Prentice Hall 出版",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.ele.uri.edu/faculty/kay/New%20web/Table%20of%20Contents.htm",
+    "location": "页面 II. Fundamentals of Statistical Signal Processing, Estimation Theory 章目录：3.) Cramer-Rao Lower Bound、7.) Maximum Likelihood Estimation、8.) Least Squares、13.) Kalman Filters；页面 III. Vol. II - Detection Theory 章目录：3.) Statistical Decision Theory I、4.) Deterministic Signals、5.) Random Signals、6.) Statistical Decision Theory II",
+    "finding": "作者本人维护的目录页逐章列出 CRB（卷 I 第 3 章）、MLE（第 7 章）、最小二乘（第 8 章）、卡尔曼（第 13 章），检测卷的确定性信号检测章（卷 II 第 4 章）即匹配滤波的标准出处；正文未读，只能按目录判断范围。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "随机信号的相关与功率谱",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第2章 平稳随机过程的谱分析：第1节 随机过程的谱分析、第2节 联合平稳随机过程的互功率谱密度、第3节 离散时间随机过程的功率谱密度、第4节 噪声",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第2章 2.6 能量信号的相关函数、2.8 功率信号的相关函数、2.9 功率谱密度；第3章 3.2 随机过程的功率谱密度",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L12 Stochastic Processes、L13 Second-Order Descriptions、L14 PSD’s（配套 R8 Examples of Stochastic Processes; Second Order Statistics）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用西电第2章整章讲谱分析，北邮第2–3章的相关函数与功率谱作第二处；英文在 6.432 的 L12–L14。"
+  },
+  {
+   "topic": "线性系统对随机信号的响应",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第3章 随机信号通过线性系统分析：第1节 线性系统基本理论、第2节 随机信号通过连续时间系统的分析、第3节 随机信号通过离散时间系统的分析、第4节 3dB带宽、等效噪声带宽和白噪声通过理想线性系统分析",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第3章 3.5 平稳过程通过线性系统",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L15 Whitening, Shaping; K-L、L16 K-L; Freq, Domain Representation、R9 Discrete Time Processes and Linear Systems",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文有专门一章（西电第3章，连连续/离散时间两条路径与等效噪声带宽都讲）；英文 6.432 用“白化与成形滤波 + 频域表示”来讲随机过程经线性系统的变换，口径偏滤波设计。"
+  },
+  {
+   "topic": "参数估计与克拉美-罗界",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh4",
+     "section": "课程概述“参数估计理论，包括估计量的性质……”（课程大纲栏为空，无讲次可核）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L9 Nonrandom Parameter Estimation CRB、R6 Nonrandom Parameter Estimation；L2 Covariance Matrices 中的估计量性质",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "卷 I 第 3 章 Cramer-Rao Lower Bound、第 2 章 Minimum Variance Unbiased Estimation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文只在西工大《信号检测与估值》的课程概述里点到“估计量的性质”，平台课程大纲栏为空，读不到讲次，故记 partial；中文缺口由英文 6.432 的 L9 与 Kay 卷 I 第 3 章补。"
+  },
+  {
+   "topic": "最大似然与最小二乘估计",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh4",
+     "section": "课程概述“最大似然估计方法、线性最小均方估计方法及最小二乘估计方法”（无讲次可核）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L10 ML Estimation、L6 Bayesian Estimation; LS; MAP、L7 Bayes and Linear LS、L8 Vector Spaces、R5 Bayes’ Least Squares Estimation; Vector Spaces and Linear Least Squares",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "卷 I 第 7 章 Maximum Likelihood Estimation、第 8 章 Least Squares",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文同样只有概述级证据；英文 6.432 的 L6–L10 与 Kay 卷 I 第 7–8 章都成体系。"
+  },
+  {
+   "topic": "维纳滤波",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L21 Wiener Filtering、R12 Discrete–Time Wiener Filtering; Prediction and Smoothing；L22 Innovations, State Models（维纳滤波到状态模型的过渡）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文三种材料都没有维纳滤波：西电《随机信号分析》大纲第2–5章无此节，北邮《通信原理》没有，西工大《信号检测与估值》概述也未点名；B 站只有零散单集与图像复原演示，没有大学课程，故按缺口记并写跨语言补读。"
+  },
+  {
+   "topic": "卡尔曼滤波",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "免费网页教程：数值示例逐步推导卡尔曼滤波方程（一维/多维），单页总览给出核心方程",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L23 Kalman Filtering、L24 KF; Estimation of Statistics、R13 State Space Models and Kalman Filtering",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "卷 I 第 13 章 Kalman Filters",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文用 KalmanFilter.NET 中文教程（免费图文，从示例推到方程）；西电《随机信号分析》与北邮《通信原理》都不讲卡尔曼，中文没有 MOOC 级课程（见 searches）。"
+  },
+  {
+   "topic": "假设检验与信号检测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh4",
+     "section": "课程概述“统计检测理论，包括各种判决准则……确知信号和随机参量信号接收机的设计和性能”（无讲次可核）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L3 Gaussian Vectors; Bayesian Hypothesis Testing、L4 Binary Hypothesis Testing; ROCs、L5 ROCs; M-ary Hypothesis Testing、L17 Detection and Estimation in White Noise、R4 Geometry of M-ary Hypothesis Tests",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "卷 II 第 3 章 Statistical Decision Theory I、第 5 章 Random Signals、第 6 章 Statistical Decision Theory II",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文本该由西工大《信号检测与估值》承担，但该课在平台上没有公开大纲，只能记 partial；缺口用英文 6.432 的 L3–L5/L17 与 Kay 检测卷补。"
+  },
+  {
+   "topic": "匹配滤波",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第3章 3.14 匹配滤波器",
+     "extent": "covered"
+    },
+    {
+     "source": "zh4",
+     "section": "课程概述“匹配滤波器的设计和性质”（无讲次可核）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "卷 II 第 4 章 Deterministic Signals（匹配滤波器与广义匹配滤波器）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "L17 Detection and Estimation in White Noise",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文靠北邮《通信原理》3.14 一讲（讲次名可核），西工大概述里也有但没有章节；英文以 Kay 检测卷第 4 章为准。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先按西电《随机信号分析》第1章把随机过程、平稳性与遍历性、联合平稳、正态过程打底，再读第2章整章的谱分析（第1–4节），把“相关函数 ↔ 功率谱密度”和噪声的谱特征练熟。"
+    },
+    {
+     "source": "zh1",
+     "read": "读第3章随机信号通过线性系统分析（第1–4节）：连续与离散时间系统两条路径、等效噪声带宽、白噪声通过理想线性系统；用第4节算一次输出功率谱 S_Y = |H|²S_X。"
+    },
+    {
+     "source": "zh2",
+     "read": "用北邮《通信原理》第2–3章的 2.6/2.8/2.9（相关函数与功率谱密度）与 3.5（平稳过程通过线性系统）做第二遍对照，然后学 3.14“匹配滤波器”，能推出白噪声下的匹配滤波器冲激响应与输出信噪比。"
+    },
+    {
+     "source": "zh3",
+     "read": "按 KalmanFilter.NET 中文教程的顺序：先读单页总览掌握预测/更新两式，再跟免费在线教程的数值示例把卡尔曼增益一步步推一遍，自己用 Python 复现一维示例。"
+    },
+    {
+     "source": "zh4",
+     "read": "最后看西工大《信号检测与估值》的课程概述与课程视频，按它列的“各种判决准则 → 接收机设计与性能 → 估计量的性质 → 贝叶斯/最大似然/线性最小均方/最小二乘”的顺序自学；该课没有公开章节表，遇到需要讲次的地方改读英文（见 gaps）。"
+    }
+   ],
+   "gaps": [
+    "参数估计与克拉美-罗界",
+    "最大似然与最小二乘估计",
+    "维纳滤波",
+    "假设检验与信号检测"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "Work through 6.432 in calendar order: L1–L5 (random vectors, covariance, Bayesian/binary/M-ary hypothesis testing, ROCs), doing PS 1–2."
+    },
+    {
+     "source": "en1",
+     "read": "L6–L10 for Bayesian estimation, least squares, vector spaces, the Cramer-Rao bound and ML estimation; pair each lecture with the matching chapter of Kay (Vol. I ch. 2, 3, 7, 8) for the full derivations."
+    },
+    {
+     "source": "en1",
+     "read": "L12–L16 for stochastic processes, second-order descriptions, PSDs, whitening/shaping filters and the frequency-domain representation; do R9's discrete-time treatment to see a random process through an LTI system."
+    },
+    {
+     "source": "en1",
+     "read": "L17–L19 for detection and estimation in white and colored noise; read Kay Vol. II ch. 4 (Deterministic Signals) to get the matched filter and its properties."
+    },
+    {
+     "source": "en1",
+     "read": "L21–L24 for Wiener filtering and Kalman filtering (with R12/R13), then Kay Vol. I ch. 13 for the Kalman recursions in full."
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "higher.smartedu.cn 信号检测与估值 西北工业大学",
+   "result": "只命中中国大学MOOC 原课页（课程大纲栏为空）与无关结果；平台内没有该课的可读大纲页。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "国家高等教育智慧教育平台 统计信号处理 课程 维纳滤波 卡尔曼滤波 匹配滤波 课程大纲",
+   "result": "未命中平台内的“统计信号处理/信号检测与估值”课程；命中东南大学研究生课程介绍页（教学大纲文本，按新规则不算教学材料，只能作参考）与若干博客。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "higher.smartedu.cn 信号检测与估计 课程大纲 匹配滤波器 克拉美罗界",
+   "result": "命中北京理工大学 isip.bit.edu.cn 的《信号检测与估计》课件 PDF——只有 5 章课程概览幻灯片（概述/匹配滤波器/检测理论/参数估计/噪声中检测），不是可学正文；其余为文库转载教案。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/api/v1/courses?keyword=信号检测 / 统计信号处理 / 估值 / 卡尔曼滤波 / 滤波 / 现代信号处理 / 自适应（平台检索接口）",
+   "result": "“信号检测”“信号检测与估值”“统计信号处理”“估值”“卡尔曼滤波”“滤波”“现代信号处理”“自适应”全部 0 条；平台只有随机信号分析（西电/北理工/哈工程）、通信原理、数字信号处理、移动通信等，确认平台层面没有统计信号处理类 MOOC。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/NWPU-1207128808 与 https://www.icourse163.org/course/XDU-1002199010",
+   "result": "西工大《信号检测与估值》与西电《随机信号分析》的 icourse163 页面“课程大纲”栏都为空，只能读课程概述/授课目标；两课都没有可核的讲次表（西电的平台镜像可读大纲，已改用 6a8f5463）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily_search",
+   "query_or_url": "site:bilibili.com 统计信号处理 维纳滤波 卡尔曼滤波 克拉美罗界 课程",
+   "result": "B 站只有零散单集：卡尔曼滤波“一张图片 6 分钟弄懂”之类个人 up 主视频、维纳滤波的 Matlab 图像复原演示、维纳经典论文解读；没有大学/教师发布的统计信号处理系统课程，也没有讲克拉美-罗界的课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily_search",
+   "query_or_url": "统计信号处理基础 估计与检测理论 罗鹏飞 译 电子工业出版社 目录 克拉美-罗界",
+   "result": "只有京东与图书馆 OPAC 条目（南开、中国计量、南京晓庄等 OPAC 页均为 JS 渲染，fetch 读不到目次），没取到出版社目次页；按规则网店页面不作证据，故中文付费书未列为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.mit.edu/courses/6-432-stochastic-processes-detection-and-estimation-spring-2004/pages/calendar/ 与 https://www.ele.uri.edu/faculty/kay/New%20web/Table%20of%20Contents.htm",
+   "result": "6.432 Calendar 逐讲核实 L9/L10/L12–L17/L21/L23/L24 主题；Kay 作者主页目录核实卷 I 第 3/7/8/13 章与卷 II 第 3–6 章，采纳为 en1/en2。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.mit.edu/courses/6-432-stochastic-processes-detection-and-estimation-spring-2004/pages/recitations/",
+   "result": "Recitations 页核实 R1–R14 全部带 PDF 讲义（R6 Nonrandom Parameter Estimation、R12 Discrete-Time Wiener Filtering、R13 State Space Models and Kalman Filtering 等），据此确认 6.432 是有可读讲义的课程而非仅一份大纲。"
+  }
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "参数估计与克拉美-罗界",
+   "source": "en1",
+   "reason": "中文没有可核章节的材料：平台无统计信号处理/信号检测类 MOOC（检索接口关键词全为 0），西工大《信号检测与估值》在平台上课程大纲栏为空，北理工课件 PDF 只有 5 章概览，中文付费书（Kay 中译本）只查到 JS 渲染的 OPAC 条目无法读到目次。英文 6.432 的 L9 与 Kay 卷 I 第 3 章成体系。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "最大似然与最小二乘估计",
+   "source": "en1",
+   "reason": "同上：中文只有西工大课程概述一句“最大似然估计方法、线性最小均方估计方法及最小二乘估计方法”，无讲次可核；英文 6.432 的 L6–L10 与 Kay 卷 I 第 7–8 章直接讲。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "维纳滤波",
+   "source": "en1",
+   "reason": "三种中文材料都没有维纳滤波：西电《随机信号分析》第2–5章无此节、北邮《通信原理》无、西工大概述未点名；B 站只有零散单集与图像复原演示，无大学课程。英文 6.432 的 L21 与复习课 R12 专门讲维纳滤波（含预测与平滑）。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "假设检验与信号检测",
+   "source": "en1",
+   "reason": "中文最贴的课（西工大《信号检测与估值》，国家一流本科课程）在平台没有公开大纲，只能记 partial；其余中文材料不涉及判决准则。英文 6.432 的 L3–L5/L17 与 Kay 检测卷第 3/5/6 章可完整替代。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "findings": [
+  "中文路线只能做到 partial：西电《随机信号分析》（platform 大纲可核）覆盖“相关与功率谱”“线性系统对随机信号的响应”，北邮《通信原理》3.14 补“匹配滤波”，KalmanFilter.NET 中文教程补“卡尔曼滤波”。",
+  "中文缺克拉美-罗界、最大似然/最小二乘、维纳滤波、假设检验与信号检测四项：国家高等教育智慧教育平台检索接口对“信号检测/统计信号处理/估值/卡尔曼滤波”等关键词全部 0 条，西工大那门国家一流课程在平台上课程大纲栏为空（只剩概述），北理工公开课件只有 5 章概览。",
+  "英文用 MIT 6.432（逐讲 calendar 点名 CRB、ML、LS、PSD、白化/成形、检测、维纳、卡尔曼）作主课，Kay 的估计/检测两卷（作者主页目录）作教材级依据，8 项全覆盖。",
+  "MIT 6.432 在 OCW 上没有讲课录像或完整讲义（lecture-notes 页 404），但 Recitations 的 R1–R14 每讲都有 PDF 讲义（R6 非随机参数估计、R12 离散时间维纳滤波、R13 状态空间与卡尔曼滤波等），另有 11 份习题；这一点写进 access，材料按“复习课讲义 + 教材”理解，没有把它当成有完整正文的免费教材。"
+ ],
+ "applied_additions": []
+}

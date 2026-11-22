@@ -1,0 +1,396 @@
+{
+ "id": "H.2.6",
+ "checkedAt": "2026-11-22",
+ "name": "模拟集成电路设计",
+ "description": "MOS器件模型与小信号分析、单级与差分放大器、电流镜与偏置、频率响应与稳定性、运算放大器设计与补偿、噪声分析、带隙基准、开关电容与数据转换器概述。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "CMOS 模拟集成电路设计（东南大学 吴金，B 站 48 讲【高清再制版】）",
+   "url": "https://www.bilibili.com/video/BV1Tr4y1k7vJ",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "48 讲按讲次序：第01–02讲 模拟 IC 概论与学习方法、第03讲 无源器件、第04讲 二极管、第05–10讲 双极结型晶体管与场效应晶体管（器件与模型）、第11–13讲 偏置电路、第14–15讲 Cascode 电路、第16–20讲 基准电路（带隙基准）、第21–23讲 共源极放大电路（页面只渲染到第23讲，后续讲次的内容页面未渲染出）。",
+   "access": "第三方转载，授权未核。B 站免费播放，分 P 标题即讲次；上传的是“高清再制版”，未见东南大学官方发布的公开版本；字幕未核对。",
+   "publisher": "东南大学 吴金（课程）；B 站转载账号上传",
+   "reupload": true,
+   "official_search": "查官方渠道：中国大学MOOC 有东南大学《模拟集成电路》（SEU-1471944162，见 temp/research/ee/H.2.6.json 的既有核查），但课程页只到概述级、逐讲目录需登录，且不是吴金这门课；东南大学无锡校区 2021 年网课有学生上传版（BV118411q79V，上传者称经导师授权），也未找到校方官方发布页。故用这门课的 B 站转载录像作教学来源，并保留“第三方转载，授权未核”的提示。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1Tr4y1k7vJ",
+    "location": "视频选集（1/48）：第03讲 无源器件、第04讲 二极管、第05讲 双极结型晶体管 & 场效应晶体管、第06–10讲 场效应晶体管、第11–13讲 偏置电路、第14–15讲 Cascode 电路、第16–20讲 基准电路、第21–23讲 共源极放大电路",
+    "finding": "页面逐讲列出标题与时长（第01讲 模拟IC概论 44:56、第11讲 偏置电路 01:06:21、第16讲 基准电路 51:17 …），可作讲次级依据。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "集成电路设计 模拟 CMOS（西安交通大学 张鸿，B 站 28 讲，对应 Razavi 第 1–10 章）",
+   "url": "https://www.bilibili.com/video/BV1SK4y1N7wN",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "分 P 标题标到章：第1讲【第一章】模拟 CMOS 简介、第2–3讲【第二章】MOS 器件物理/MOS 小信号模型、第4–7讲【第三章】单端 Amp（CS/SF/CG&Cascode）、第8–10讲【第四章】差动 Amp（大信号/小信号/吉尔伯特单元）、第11–13讲【第五章】电流镜（基本&CASCODE）/低压 CASCODE 与五管单元/CMRR&BIAS、第13–15讲【第六章】Amp 的频率响应（概述/CS 分析与密勒定理/CS 频率响应）、第26–27讲 运放补偿与“稳定性与频率补偿（一级&二级 amp 的补偿）”。页面只渲染到第15讲与第26–27讲，第16–25讲（Razavi 第 7–9 章）未渲染出。",
+   "access": "第三方转载，授权未核。B 站免费播放；上传者为个人账号，注明“PPT 不方便上传、笔记放网盘”，未标注字幕。",
+   "publisher": "西安交通大学 张鸿（课程）；B 站转载账号上传",
+   "reupload": true,
+   "official_search": "查官方渠道：张鸿的主页（gr.xjtu.edu.cn/en/web/hongzhang）只在转载页的说明里被引用，未见西安交通大学公开的课程录像页；中国大学MOOC 站内未检索到该课；故采用 B 站转载版，并在 access 里标注。",
+   "evidence": {
+    "url": "https://www.bilibili.com/video/BV1SK4y1N7wN",
+    "location": "视频选集（1/28）：1【第一章】模拟CMOS简介、2–3【第二章】2.1 MOS器件物理/2.2 MOS小信号模型、4–7【第三章】单端Amp（CS/SF/CG&CASCODE）、8–10【第四章】差动Amp、11–13【第五章】电流镜/CMRR&BIAS、13–15【第六章】Amp的频率响应、27 稳定性与频率补偿（一级&二级amp的补偿）",
+    "finding": "标题逐讲标出 Razavi 章号与中文章名（例如“13：【第六章】6.1 Amp的频率响应（概述）”“27：稳定性与频率补偿（一级&二级amp的补偿）”），可对到频率响应、稳定性与补偿。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "《模拟集成电路分析与设计》课程教学大纲（同济大学，课程编号 100446）—— 仅作参考",
+   "url": "https://est.tongji.edu.cn/_upload/article/files/df/24/19dc8d1b4529a2eafdd62fa3c471/10ba27b4-8292-4403-a007-b7fefe64108a.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "reference",
+   "covers": "八章目录（CMOS 技术、器件模型、模拟 CMOS 子电路含带隙基准、CMOS 放大器、CMOS 运放与补偿、比较器、ADC/DAC）。按新规则只作参考，不计覆盖。",
+   "access": "免费公开 PDF；课程教学大纲不是教学材料，只用来核对“这门课该讲哪些章、各章有多少学时”。",
+   "publisher": "同济大学（大纲执笔人 韩志刚）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://est.tongji.edu.cn/_upload/article/files/df/24/19dc8d1b4529a2eafdd62fa3c471/10ba27b4-8292-4403-a007-b7fefe64108a.pdf",
+    "location": "三、课程内容、教学要求、学时分配和教学手段：第一章 绪论（2 学时）…第八章 模数转换和数模转换（2 学时）",
+    "finding": "逐章给出主要知识点与教学要求（如第四章“5. 基准电流和电压 6. 带隙基准源”、第六章“3. CMOS 运算放大器的补偿”），可用来对照两个录像缺了哪几块。"
+   }
+  },
+  {
+   "key": "zh4",
+   "lang": "zh",
+   "title": "《模拟集成电路 II》课程手册（上海科技大学 EE212）—— 仅作参考",
+   "url": "https://oaa.shanghaitech.edu.cn/_upload/article/files/e4/64/2bb10b644881877b5ab9b1ada678/b3aec1b0-f2d2-4d56-bc4a-4d61efe48790.pdf",
+   "tier": "material",
+   "free": true,
+   "role": "reference",
+   "covers": "周次表：第 2 周 CMOS 工艺与器件模型、第 3 周 噪声分析、第 4 周 放大器与电流镜、第 5 周 运算放大器、第 6 周 反馈与频率补偿、第 7 周 比较器与带隙基准、第 8 周 开关电容电路、第 12 周 数模/模数转换器。按新规则只作参考，不计覆盖。",
+   "access": "免费公开 PDF；课程手册不是教学材料，只用来核对知识点顺序与缺口（噪声、开关电容、数据转换器在哪一周）。",
+   "publisher": "上海科技大学 信息科学与技术学院（课程代码 EE212）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://oaa.shanghaitech.edu.cn/_upload/article/files/e4/64/2bb10b644881877b5ab9b1ada678/b3aec1b0-f2d2-4d56-bc4a-4d61efe48790.pdf",
+    "location": "《模拟集成电路 II》三、教学内容、教学方式和学时安排（第 95 页周次表）",
+    "finding": "周次表逐周写授课内容（第 3 周 噪声分析、第 8 周 开关电容电路、第 12 周 数模/模数转换器），正是两个中文录像缺的两块。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Design of Analog CMOS Integrated Circuits, 2nd Edition（Behzad Razavi, McGraw-Hill）",
+   "url": "https://www.mheducation.ca/product/design-of-analog-cmos-integrated-circuits-9780072524932-can",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "Ch.2 Basic MOS Device Physics、Ch.3 Single-Stage Amplifiers、Ch.4 Differential Amplifiers、Ch.5 Current Mirrors and Biasing、Ch.6 Frequency Response of Amplifiers、Ch.7 Noise、Ch.9 Operational Amplifiers、Ch.10 Stability and Frequency Compensation、Ch.12 Bandgap References、Ch.13 Introduction to Switched-Capacitor Circuits、Ch.14 Nonlinearity and Mismatch、Ch.17 Short-Channel Effects。",
+   "access": "付费教材（McGraw-Hill 第 2 版销售页）；此处只核到出版社销售页的章目录，正文未读。",
+   "publisher": "Behzad Razavi / McGraw-Hill Education",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.mheducation.ca/product/design-of-analog-cmos-integrated-circuits-9780072524932-can",
+    "location": "Table of contents：1 Introduction to Analog Design、2 Basic MOS Device Physics、3 Single-Stage Amplifiers、4 Differential Amplifiers、5 Current Mirrors and Biasing、6 Frequency Response of Amplifiers、7 Noise、8 Feedback、9 Operational Amplifiers、10 Stability and Frequency Compensation、12 Bandgap References、13 Introduction to Switched-Capacitor Circuits",
+    "finding": "销售页目录逐条列出第 1–14 章章名，噪声/稳定性与补偿/带隙基准/开关电容各有专章。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Analysis and Design of Analog Integrated Circuits（CppSim 公开讲座系列，含讲义与计算细节）",
+   "url": "https://www.cppsim.com/circuit_lectures.html",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲座目录：Two-Port Models, Frequency Response；Large/Small Signal Modeling of CMOS Transistors；Single Stage Amplifiers；Current Mirrors；Differential Amplifiers；Cascode Techniques；Open Circuit Time Constant Technique；Frequency Response of Amplifiers；Feedback；Basics of Noise；Noise Spectral Analysis for Circuit Elements；Mismatch and Nonlinearity；Subthreshold Operation and gm/Id；Basic Two Stage CMOS Opamp；Key Opamp Specifications；Advanced Opamp Topologies I/II；Sampling；Digital to Analog Conversion；Analog to Digital Conversion。无带隙基准讲座。",
+   "access": "免费公开网页，每讲配讲义与“Lecture Calculation Details”，无需注册。",
+   "publisher": "CppSim（Prof. Michael H. Perrott）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.cppsim.com/circuit_lectures.html",
+    "location": "Analysis and Design of Analog Integrated Circuits 讲座列表：Large/Small Signal Modeling of CMOS Transistors、Single Stage Amplifiers、Current Mirrors、Differential Amplifiers、Frequency Response of Amplifiers、Basics of Noise、Noise Spectral Analysis for Circuit Elements、Basic Two Stage CMOS Opamp、Sampling、Digital to Analog Conversion、Analog to Digital Conversion",
+    "finding": "页面课程描述写“single and differential amplifiers, current mirrors, operational amplifiers, samplers, and switched-capacitor networks… thermal and 1/f noise… analog-to-digital and digital-to-analog converters”，讲座列表逐条对应；没有 bandgap 讲次。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "MOS器件模型与小信号分析",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第03讲 无源器件、第04讲 二极管、第05讲 双极结型晶体管 & 场效应晶体管、第06–10讲 场效应晶体管",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第2讲【第二章】2.1 MOS 器件物理、第3讲【第二章】2.2 MOS 小信号模型",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.2 Basic MOS Device Physics、Ch.17 Short-Channel Effects and Device Models",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Large Signal Modeling of CMOS Transistors、Small Signal Modeling of CMOS Transistors、Two-Port Models, Frequency Response",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "单级与差分放大器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第21–23讲 共源极放大电路",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第4–7讲【第三章】单端 Amp（CS/SF/CG&CASCODE）、第8–10讲【第四章】差动 Amp（大信号/小信号/吉尔伯特单元）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.3 Single-Stage Amplifiers、Ch.4 Differential Amplifiers",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Single Stage Amplifiers、Differential Amplifiers、Cascode Techniques",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "电流镜与偏置",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第11–13讲 偏置电路、第14–15讲 Cascode 电路",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第11–13讲【第五章】5.1 电流镜（基本&CASCODE）、5.2 低压 CASCODE 电流镜&五管单元、5.3 CMRR&BIAS",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.5 Current Mirrors and Biasing Techniques",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Current Mirrors、Subthreshold Operation and gm/Id Design",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "频率响应与稳定性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第13–15讲【第六章】6.1 Amp 的频率响应（概述）、6.2 CS 分析与密勒定理、6.3 Amp 的频率响应（CS）；第27讲 稳定性与频率补偿（一级&二级 amp 的补偿）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.6 Frequency Response of Amplifiers、Ch.10 Stability and Frequency Compensation",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Open Circuit Time Constant Technique、Frequency Response of Amplifiers",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "运算放大器设计与补偿",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第26–27讲 运放补偿、“稳定性与频率补偿（一级&二级 amp 的补偿）”（课程标到 Razavi 第 9–10 章）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.9 Operational Amplifiers、Ch.10 Stability and Frequency Compensation",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Basic Two Stage CMOS Opamp、Key Opamp Specifications、Advanced Opamp Topologies（Part I/II）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文侧核到的是补偿两讲（第 26–27 讲）；第 16–25 讲（Razavi 第 7–9 章，含运放设计）页面未渲染出，具体讲次名未逐条核到。"
+  },
+  {
+   "topic": "噪声分析",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.7 Noise",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Basics of Noise、Noise Spectral Analysis for Circuit Elements",
+     "extent": "covered"
+    }
+   ],
+   "note": "两个中文录像的可见讲次里没有噪声专题（zh2 对应 Razavi 第 7 章的那几讲页面没渲染出来），中文按缺口处理。"
+  },
+  {
+   "topic": "带隙基准",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第16–20讲 基准电路（共 5 讲）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.12 Bandgap References",
+     "extent": "covered"
+    }
+   ],
+   "note": "免费英文讲座（en2）没有 bandgap 讲次，英文侧只靠 Razavi 第 12 章。"
+  },
+  {
+   "topic": "开关电容与数据转换器概述",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Sampling、Digital to Analog Conversion、Analog to Digital Conversion",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Ch.13 Introduction to Switched-Capacitor Circuits",
+     "extent": "covered"
+    }
+   ],
+   "note": "两个中文录像只到 Razavi 第 1–10 章范围（zh1 可见讲次也止于共源极放大器），中文侧没有开关电容与 ADC/DAC；上科大 EE212 手册把它们排在第 8、12 周，但手册不是教学材料。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先按吴金的讲次打基础：第03–04讲 无源器件与二极管 → 第05–10讲 BJT/FET 器件与模型 → 第11–15讲 偏置电路与 Cascode → 第16–20讲 基准电路（带隙）→ 第21–23讲 共源极放大器，每讲手算一遍 g_m、r_o 与增益。"
+    },
+    {
+     "source": "zh2",
+     "read": "再用张鸿（对应 Razavi 第 1–10 章）补齐放大器与频率响应：第2–3讲 MOS 器件物理/小信号模型 → 第4–7讲 单端 Amp → 第8–10讲 差动 Amp → 第11–13讲 电流镜与 CMRR → 第13–15讲 频率响应与密勒定理 → 第26–27讲 运放补偿与稳定性。"
+    },
+    {
+     "source": "zh3",
+     "read": "拿同济大纲当清单核对：第三、四、五、六章的“主要知识点”里，只有带隙基准、电流源/电流镜、放大器、运放补偿在中文录像里找到，噪声与开关电容/ADC 两章没有中文教学，按跨语言补读学。"
+    }
+   ],
+   "gaps": [
+    "噪声分析",
+    "开关电容与数据转换器概述"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en2",
+     "read": "先看免费讲座建立直觉与手算流程：MOS 大/小信号建模 → Single Stage Amplifiers → Current Mirrors → Differential Amplifiers → Open Circuit Time Constant + Frequency Response → Basics of Noise + Noise Spectral Analysis → 两级运放与 Key Opamp Specifications → Sampling + DAC + ADC。"
+    },
+    {
+     "source": "en1",
+     "read": "再按 Razavi 第 2 版补体系与推导：Ch.2 → Ch.3–4 → Ch.5 → Ch.6 → Ch.7 噪声 → Ch.9 运放 → Ch.10 稳定性与频率补偿 → Ch.12 带隙基准 → Ch.13 开关电容；每章末习题至少做一半。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://oaa.shanghaitech.edu.cn/…（上海科技大学课程手册）与 https://est.tongji.edu.cn/…（同济教学大纲）",
+   "result": "两份文件都只是课程手册/教学大纲，按新规则降为 reference，不作教学来源；它们给出的周次与章节用来确认两个中文录像缺噪声、开关电容与 ADC。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily_search",
+   "query_or_url": "site:bilibili.com 吴金 模拟集成电路 东南大学 第一讲 运放 噪声 基准（两次站内检索）",
+   "result": "找到东南大学吴金的三个版本（BV1Tr4y1k7vJ 48 讲【高清再制版】、BV1fJ411V7Lq 42 条、BV1NJ411x7gW【公开课】42 条、BV118411q79V 2021 新版 32 课时），选分 P 标题最全的 BV1Tr4y1k7vJ；逐讲核对到第 23 讲。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily_search",
+   "query_or_url": "site:bilibili.com EDA / 模拟集成电路课程（命中【西安交通大学】集成电路设计 模拟 CMOS XJTU_张鸿教授，对应 Razavi 1-10 章）",
+   "result": "采纳 BV1SK4y1N7wN 作补充：分 P 标题带 Razavi 章号，覆盖单端/差动/电流镜/频率响应/运放补偿；第 16–25 讲未渲染出。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily_search",
+   "query_or_url": "模拟集成电路设计 教材 目录 \"噪声\" \"开关电容\" 运算放大器 频率补偿 电子工业出版社 目录页",
+   "result": "百度百科《CMOS模拟集成电路分析与设计（第 2 版）》条目写全书 17 章含噪声与开关电容，但页面 403 取不到目录；中文版 Razavi 的章目只见于第三方知识库，不能作出版社来源。付费渠道的中文教材目录本轮没核到。"
+  }
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "噪声分析",
+   "source": "en2",
+   "reason": "两个中文录像里能核到的讲次没有噪声专题（张鸿课第 16–25 讲页面上没渲染、吴金课只渲染到第 23 讲），中文教材目录也拿不到；CppSim 免费讲座有 Basics of Noise 与 Noise Spectral Analysis for Circuit Elements 两讲，可补中文缺口。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "开关电容与数据转换器概述",
+   "source": "en2",
+   "reason": "中文两个录像都落在 Razavi 第 1–10 章范围，没有开关电容与 ADC/DAC；上科大 EE212 手册把这两块排在第 8、12 周，但课程手册不是教学材料。CppSim 的 Sampling / Digital to Analog Conversion / Analog to Digital Conversion 三讲可直接补。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "findings": [
+  "按新规则把同济教学大纲与上科大课程手册降为 reference（只作章节对照），中文教学来源换成两门真录像：东南大学吴金 48 讲（器件/偏置/Cascode/基准/共源极）与西安交大张鸿 28 讲（对应 Razavi 1–10 章，含单端/差动/电流镜/频率响应/运放补偿）。",
+  "两个录像都是 B 站个人账号转载，已按转载标注并写 official_search；官方版（东南大学中国大学MOOC《模拟集成电路》）只到概述级、且不是同一门课。",
+  "B 站视频页只渲染部分分 P 列表（吴金到第 23 讲、张鸿到第 15 讲与第 26–27 讲），所以只有能看到的讲次才写 covered；噪声、开关电容/ADC 两块如实记为中文缺口。",
+  "英文侧 CppSim 免费讲座覆盖七项（缺带隙基准），Razavi 第 2 版目录里带隙基准（Ch.12）、稳定性与补偿（Ch.10）、开关电容（Ch.13）各有专章。"
+ ],
+ "applied_additions": []
+}

@@ -1,0 +1,381 @@
+{
+ "id": "H.4.6",
+ "checkedAt": "2026-11-22",
+ "name": "过程控制",
+ "description": "过程建模与阶跃响应辨识、PID控制与参数整定、串级控制、前馈与比值控制、时滞补偿、多回路控制与解耦、DCS与控制系统结构、控制阀与过程检测仪表。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "工业过程控制（哈尔滨工程大学 彭秀艳等，爱课程/中国大学MOOC；国家高等教育智慧教育平台课程页，一流课程，82 周）",
+   "url": "https://higher.smartedu.cn/course/635b08f996788f54b76766f5",
+   "tier": "video",
+   "free": null,
+   "role": "primary",
+   "covers": "九章逐节大纲可读：第1章 绪论（1.1 组成/特点/任务、1.2 分类/指标/现状）；第2章 被控过程的数学模型（2.1 作用与要求、2.2 机理法建模、2.3–2.4 试验法建立被控过程数学模型）；第3章 过程参数检测仪表及变送器（3.1 测量误差与仪表基本技术指标、3.2 温度检测及变送、3.3 压力、3.4 流量、3.5 物位）；第4章 执行器（4.1 执行器概述与气动调节阀结构与类型、4.2 调节阀结构特性和流量特性、4.3 调节阀的选择、4.4 电/气转换器与电动调节阀）；第5章 控制器（5.1 比例积分微分 PID 控制、5.2 DDZ-III 控制器、5.3 数字控制器、5.4 KMM 可编程调节器）；第6章 单回路控制系统设计（6.1 被控参数与控制参数选择、6.2 检测变送环节/调节阀/调节器的选择、6.3 调节器参数整定）；第7章 复杂控制系统设计（7.1 串级控制系统分析、7.2 串级系统设计及调节器参数整定、7.3 前馈控制系统、7.4 大滞后过程控制系统、7.5 非线性增益补偿）；第8章 实现特殊需求的过程控制系统（8.1 比值控制系统、8.2 均匀与分程、8.3 选择性、8.4 多变量系统的耦合及相对增益、8.5 解耦控制系统设计）；第9章 应用实例（船舶燃油粘度控制系统）。覆盖建模与试验法辨识、PID 与整定、串级、前馈与比值、时滞（大滞后）、多回路与解耦（8.4/8.5）、控制阀与检测仪表七项；没有 DCS 专章（第5章只到数字控制器与 KMM 可编程调节器）。",
+   "access": "国家高等教育智慧教育平台课程页免费看简介与逐章大纲；课程在爱课程（中国大学MOOC）开课（2022/10/30–2024/05/22，页面显示已结课），看视频需注册，是否收费本轮未核对（free 记 null）；中文字幕未核对。课程页另提供各章 PPT、双容水箱实验与知识点总结视频，并写明有 2019 年高教社同步教材。",
+   "publisher": "哈尔滨工程大学（开课高校）；主讲 彭秀艳、梁洪、韩云涛、高峰",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/635b08f996788f54b76766f5",
+    "location": "课程大纲：第2章 2.3/2.4 试验法建立被控过程数学模型；第3章 过程参数检测仪表及变送器 3.1–3.5；第4章 执行器 4.1–4.4；第5章 5.1 PID 控制；第6章 6.3 调节器参数整定；第7章 7.1–7.2 串级、7.3 前馈、7.4 大滞后；第8章 8.1 比值、8.4 多变量系统的耦合及相对增益、8.5 解耦控制系统设计",
+    "finding": "页面把九章的节名与各章 PPT/实验逐条渲染出来（含“7.4 大滞后过程控制系统”“8.4 多变量系统的耦合及相对增益”“8.5 解耦控制系统设计”“4.3 调节阀的选择”），七项知识点都能定位到具体小节；全课没有以 DCS 为名的章。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "过程控制系统及仪表（青岛大学 刘华波等，智慧树；国家高等教育智慧教育平台课程页，27 周）",
+   "url": "https://higher.smartedu.cn/course/69e7e6b16c1cfb58c38c68d9",
+   "tier": "video",
+   "free": null,
+   "role": "supplement",
+   "covers": "补 DCS 与控制系统结构、并把整定与复杂控制再讲一遍：第一章 绪论（1.1 过程控制的特点、1.3 系统分类及其性能指标）；第二章 检测仪表（温度、压力、流量、物位、成分检测及仪表）；第三章 控制仪表（3.1 基本控制规律及特点、3.2 模拟式控制器、3.3 数字式控制器、3.4 可编程序控制器）；第四章 执行器及安全栅（4.1 气动调节阀/其他调节阀、4.2 安全栅）；第五章 被控过程的数学模型（5.1–5.2 建模作用与方法、5.3 机理法建模之单容/多容过程）；第六章 简单控制系统的设计和参数整定（6.3–6.4 被控变量与控制变量选择、6.7 比例/积分/微分控制与调节规律选择、6.8 参数工程整定：稳定边界法、衰减曲线法、响应曲线法、经验法）；第七章 复杂控制系统（7.1 串级、7.2 前馈、7.3 大滞后过程控制——史密斯预估补偿控制器、7.4 比值）；第八章 先进控制技术（自适应、预测、专家、模糊、神经网络等）；第九章 计算机控制系统（9.1 概述、9.2 直接数字控制系统 DDC、9.3 集散控制系统 DCS、9.4 现场总线技术与现场总线控制系统）。DCS 与控制系统结构由第九章承担；课程简介还提到均匀、分程、选择、解耦，但逐节目录只到串级/前馈/大滞后/比值，解耦的成节教学仍在 zh1。",
+   "access": "智慧教育平台课程页免费看简介与逐章大纲；课程在智慧树开课（2026/07/21–2027/01/20，27 周，开课中），看视频需注册，是否收费本轮未核对（free 记 null）；中文字幕未核对。",
+   "publisher": "青岛大学（开课高校）；主讲 刘华波、张震、徐世许、吴贺荣",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/69e7e6b16c1cfb58c38c68d9",
+    "location": "课程大纲：第三章 控制仪表 3.1–3.4；第四章 执行器及安全栅 4.1–4.2；第五章 被控过程的数学模型 5.1–5.3；第六章 6.7 调节规律的选择、6.8 调节器参数的工程整定（6.8.1 稳定边界法、6.8.2 衰减曲线法、6.8.3 响应曲线法、6.8.4 经验法）；第七章 7.1 串级、7.2 前馈、7.3 大滞后（7.3.2 史密斯预估补偿控制器）、7.4 比值；第九章 9.2 直接数字控制系统、9.3 集散控制系统（上/下）、9.4 现场总线技术与现场总线控制系统",
+    "finding": "页面把九章逐节渲染成文本（含“6.8.3 响应曲线法”“7.3.2 史密斯预估补偿控制器”“9.3.3 集散控制系统”），确认 DCS 与整定四法、史密斯预估都有独立小节；解耦没有出现在第七章的节目录里。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Process Dynamics and Control, 4th Edition（Dale E. Seborg, Thomas F. Edgar, Duncan A. Mellichamp, Francis J. Doyle III；Wiley 2016，出版社目录 PDF）",
+   "url": "https://www.wiley.com/en-ie/Process+Dynamics+and+Control%2C+4th+Edition-p-9781119285953",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "出版社 Contents PDF 逐章逐节可读：2 Theoretical Models of Chemical Processes；4 Transfer Function Models；7 Development of Empirical Models from Process Data（7.2 Fitting First- and Second-Order Models Using Step Tests、7.5 Identifying Discrete-Time Models from Experimental Data）；8 Feedback Controllers（8.2 Basic Control Modes、8.3 Features of PID Controllers、8.4 Digital Versions of PID Controllers）；9 Control System Instrumentation（9.1 Sensors, Transmitters, and Transducers、9.2 Final Control Elements、9.3 Accuracy in Instrumentation）；12 PID Controller Design, Tuning, and Troubleshooting（12.2 Model-Based Design Methods、12.3 Controller Tuning Relations、12.5 On-Line Controller Tuning、12.7 Troubleshooting Control Loops）；13 Control Strategies at the Process Unit Level；15 Feedforward and Ratio Control（15.1–15.7）；16 Enhanced Single-Loop Control Strategies（16.1 Cascade Control、16.2 Time-Delay Compensation、16.4 Selective Control/Override）；18 Multiloop and Multivariable Control（18.1 Process Interactions、18.2 Pairing of Controlled and Manipulated Variables、18.4 Tuning of Multiloop PID Control Systems、18.5 Decoupling and Multivariable Control Strategies）；Appendix A.1 Distributed Digital Control Systems。覆盖简介全部八项，DCS 在附录 A.1（正文里没有 DCS 专章）。",
+   "access": "Wiley 在售纸本/电子书（价格本轮未核）；Contents PDF 由 Wiley 公开，只核到目录，正文未读。",
+   "publisher": "Wiley（Seborg/Edgar/Mellichamp/Doyle）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://media.wiley.com/product_data/excerpt/17/11192859/1119285917-27.pdf",
+    "location": "Contents：7.2 Fitting First- and Second-Order Models Using Step Tests 109；8 Feedback Controllers 123（8.3 Features of PID Controllers 130）；9 Control System Instrumentation 140（9.1 Sensors/Transmitters/Transducers、9.2 Final Control Elements 148）；12 PID Controller Design, Tuning, and Troubleshooting 199（12.3 Controller Tuning Relations 206、12.5 On-Line Controller Tuning 214）；15 Feedforward and Ratio Control 262（15.2 Ratio Control 264）；16 Enhanced Single-Loop Control Strategies 279（16.1 Cascade Control 279、16.2 Time-Delay Compensation 284）；18 Multiloop and Multivariable Control 326（18.4 Tuning of Multiloop PID Control Systems 341、18.5 Decoupling and Multivariable Control Strategies 342）；A.1 Distributed Digital Control Systems 465",
+    "finding": "逐页读到目录的章、节、小节与页码：阶跃测试辨识（7.2）、PID 与整定（8、12）、串级（16.1）、前馈与比值（15）、时滞补偿（16.2）、多回路与解耦（18.4/18.5）、仪表与执行器（9.1/9.2）、DCS（附录 A.1）都能定位。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "10.450 Process Dynamics, Operations, and Control（MIT OpenCourseWare, Spring 2006, Dr. Barry S. Johnston）",
+   "url": "https://ocw.mit.edu/courses/10-450-process-dynamics-operations-and-control-spring-2006/pages/syllabus/",
+   "tier": "material",
+   "free": true,
+   "role": "supplement",
+   "covers": "Syllabus 的 Course Objectives 原文：“How to represent dynamic systems by equations and by transfer functions in block diagrams；How to tune a single-loop controller for better response；How to enhance feedback control with cascade, feedforward, and model-based structures；An overview of sensors, valves, transducers, controllers - both hardware and performance considerations”；讲次里有 Cascade and Feed Forward Control Schemes（两讲）。补建模（微分方程/传递函数）、单回路整定、串级与前馈、传感器与阀门硬件概览；不覆盖比值控制、解耦与多回路、DCS（site 无这些讲次）。",
+   "access": "MIT OpenCourseWare 免费开放，无需注册；提供 Syllabus、Lecture Notes、Assignments（2006 春季，英文字幕未核对，材料以讲义为主）。",
+   "publisher": "MIT OpenCourseWare（MIT Chemical Engineering）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/10-450-process-dynamics-operations-and-control-spring-2006/pages/syllabus/",
+    "location": "Syllabus 的 Course Objectives 与 Prerequisites（“Differential Equations (18.03) and Transport Processes (10.302)”）；讲次列表 “Cascade and Feed Forward Control Schemes” 与 “Cascade and Feed Forward Control Schemes (cont.)”",
+    "finding": "Syllabus 页逐条列出课程目标（传递函数框图、单回路整定、串级/前馈/model-based 结构改进反馈、传感器阀门变送器控制器硬件概览），并确认两讲专门讲串级与前馈。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "过程建模与阶跃响应辨识",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第2章 被控过程的数学模型 2.1 作用与要求、2.2 机理法建模、2.3–2.4 试验法建立被控过程数学模型",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第五章 被控过程的数学模型（5.3 机理法建模之单容/多容过程建模）；第六章 6.8.3 响应曲线法",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "2 Theoretical Models of Chemical Processes；4 Transfer Function Models；7 Development of Empirical Models from Process Data（7.2 Fitting First- and Second-Order Models Using Step Tests、7.5 Identifying Discrete-Time Models from Experimental Data）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Syllabus Course Objectives：“represent dynamic systems by equations and by transfer functions in block diagrams”",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文按“机理法（单容/多容）+ 试验法”两条线讲，阶跃响应辨识落在试验法（响应曲线法）里；英文教材把它单独成章（7.2 用阶跃测试拟合一阶/二阶模型）。"
+  },
+  {
+   "topic": "PID控制与参数整定",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第5章 控制器 5.1 比例积分微分（PID）控制、5.3 数字控制器；第6章 6.3 调节器参数整定",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第三章 3.1 基本控制规律及特点；第六章 6.7 比例控制/积分控制/微分控制与调节规律的选择、6.8 调节器参数的工程整定（稳定边界法、衰减曲线法、响应曲线法、经验法）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "8 Feedback Controllers（8.2 Basic Control Modes、8.3 Features of PID Controllers、8.4 Digital Versions、8.6 On–Off Controllers）；12 PID Controller Design, Tuning, and Troubleshooting（12.2 Model-Based Design Methods、12.3 Controller Tuning Relations、12.5 On-Line Controller Tuning、12.7 Troubleshooting）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Syllabus：“How to tune a single-loop controller for better response”",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文的工程整定四法（稳定边界法、衰减曲线法、响应曲线法、经验法）与英文教材的 tuning relations/在线整定是一一对应的两条表述。"
+  },
+  {
+   "topic": "串级控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第7章 7.1 串级控制系统分析、7.2 串级控制系统设计及调节器参数整定",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第七章 7.1 串级控制系统（7.1.1 为何要使用、7.1.2–7.1.3 构成、7.1.4–7.1.5 特点）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "16.1 Cascade Control",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Lecture：Cascade and Feed Forward Control Schemes（两讲）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文把串级拆成“为何用—构成—特点—设计整定”四步；英文在 16.1 与 MIT 的两讲里。"
+  },
+  {
+   "topic": "前馈与比值控制",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第7章 7.3 前馈控制系统；第8章 8.1 比值控制系统",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第七章 7.2 前馈控制系统（7.2.1 原理、7.2.2 设计）、7.4 比值控制系统（特点、设计与比值系数）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "15 Feedforward and Ratio Control（15.1–15.7）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Lecture：Cascade and Feed Forward Control Schemes",
+     "extent": "covered"
+    }
+   ],
+   "note": "比值控制两侧都与前馈放在一起讲（比值本质是前馈的一种应用）。"
+  },
+  {
+   "topic": "时滞补偿",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第7章 7.4 大滞后过程控制系统",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第七章 7.3 大滞后过程控制系统（7.3.1 大滞后控制的难点、7.3.2 史密斯预估补偿控制器）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "16.2 Time-Delay Compensation",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文那门青岛大学的课把史密斯预估补偿控制器单列一小节，是中文侧最具体的时滞补偿讲法。"
+  },
+  {
+   "topic": "多回路控制与解耦",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第8章 8.4 多变量系统的耦合及相对增益、8.5 解耦控制系统设计；第8章 8.2 均匀与分程、8.3 选择性控制系统",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第七章 7.1 串级控制系统（多回路的一种）、7.2 前馈（课程简介还提到解耦，但节目录只到串级/前馈/大滞后/比值）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "18 Multiloop and Multivariable Control（18.1 Process Interactions and Control Loop Interactions、18.2 Pairing of Controlled and Manipulated Variables、18.3 Singular Value Analysis、18.4 Tuning of Multiloop PID Control Systems、18.5 Decoupling and Multivariable Control Strategies、18.6 Strategies for Reducing Control Loop Interactions）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文的相对增益与解耦设计在哈工程那门第 8 章成节；青岛大学那门只在简介提到解耦、节目录里没有。英文教材整章讲多回路（含变量配对与解耦策略）。"
+  },
+  {
+   "topic": "DCS与控制系统结构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "第九章 计算机控制系统 9.1 概述、9.2 直接数字控制系统、9.3 集散控制系统（上/下）、9.4 现场总线技术与现场总线控制系统",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "第5章 5.3 数字控制器、5.4 KMM 可编程调节器（只到控制装置层）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Appendix A.1 Distributed Digital Control Systems（另 13 Control Strategies at the Process Unit Level 讲分级控制结构）",
+     "extent": "covered"
+    }
+   ],
+   "note": "中文 DCS 由青岛大学那门第九章承担（DDC → DCS → 现场总线控制系统）；英文教材把 DCS 放附录 A.1，正文没有专章。"
+  },
+  {
+   "topic": "控制阀与过程检测仪表",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第3章 过程参数检测仪表及变送器（3.1 测量误差与基本技术指标、3.2 温度、3.3 压力、3.4 流量、3.5 物位）；第4章 执行器（4.1 气动调节阀结构与类型、4.2 结构特性与流量特性、4.3 调节阀的选择、4.4 电/气转换器与电动调节阀）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "第二章 检测仪表（温度/压力/流量/物位/成分检测及仪表）；第四章 执行器及安全栅（4.1 气动调节阀与其他调节阀、4.2 安全栅）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "9 Control System Instrumentation（9.1 Sensors, Transmitters, and Transducers、9.2 Final Control Elements、9.3 Accuracy in Instrumentation）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Syllabus：“An overview of sensors, valves, transducers, controllers - both hardware and performance considerations”",
+     "extent": "partial"
+    }
+   ],
+   "note": "中文两门课都把检测仪表与执行器（气动调节阀、流量特性、选型）分章讲；英文第 9 章把传感器/变送器与最终控制元件放在同一章。"
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "主线按九章走：第1章绪论（组成/分类/指标）→ 第2章被控过程数学模型（2.2 机理法建单容/多容模型，2.3–2.4 试验法做阶跃响应辨识）→ 第3章检测仪表与变送器 → 第4章执行器（4.2 调节阀流量特性、4.3 选型）→ 第5章 PID 与数字控制器 → 第6章单回路设计（6.1 变量选择、6.3 参数整定）→ 第7章复杂控制（7.1–7.2 串级、7.3 前馈、7.4 大滞后、7.5 非线性补偿）→ 第8章特殊需求（8.1 比值、8.2 均匀/分程、8.3 选择性、8.4 相对增益、8.5 解耦设计）→ 第9章船舶燃油粘度控制实例；配合双容水箱建模与串级实验。"
+    },
+    {
+     "source": "zh2",
+     "read": "补 DCS 与整定细节：第九章 计算机控制系统（9.2 DDC → 9.3 集散控制系统 → 9.4 现场总线控制系统）搞清控制系统结构；第三章 3.1 基本控制规律、第六章 6.7 调节规律选择与 6.8 四种工程整定方法（稳定边界、衰减曲线、响应曲线、经验）当作 zh1 第 6 章的对照练习；第五章单容/多容建模与 7.3.2 史密斯预估补偿可补时滞部分。"
+    }
+   ],
+   "gaps": []
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按教材顺序：Ch.2 理论模型与 Ch.4 传递函数模型打底 → Ch.7 由过程数据建经验模型（7.2 用阶跃测试拟合一阶/二阶模型）→ Ch.8 反馈控制器（PID 各模式与数字化）→ Ch.9 控制系统仪表（9.1 传感器/变送器、9.2 最终控制元件）→ Ch.11–12 闭环稳定性、PID 设计与整定（12.2 基于模型的设计、12.3 整定关系、12.5 在线整定）→ Ch.13 过程单元级控制策略（变量自由度选择）→ Ch.15 前馈与比值 → Ch.16 增强型单回路（16.1 串级、16.2 时滞补偿、16.4 选择性/超驰）→ Ch.18 多回路与多变量（18.1 回路耦合、18.2 变量配对、18.4 多回路整定、18.5 解耦）→ 附录 A.1 集散数字控制系统。"
+    },
+    {
+     "source": "en2",
+     "read": "用 MIT 10.450 的讲义把建模与整定落到工程口径：Syllabus 的目标清单（框图/传递函数、单回路整定、串级/前馈/基于模型的结构、传感器与阀门硬件）作为复习提纲，重点看 Cascade and Feed Forward Control Schemes 两讲的讲义与作业。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/api/v1/courses?keyword=…（国家高等教育智慧教育平台检索接口，逐个试 过程控制 / 过程控制系统 / 仪表 / 控制工程 / 过程）",
+   "result": "“过程控制”“过程控制系统”返回 0 门（接口对这类关键词索引稀疏）；“仪表”给出 8 门（过程检测技术及仪表、制药过程检测与控制、测量仪表与自动化×2、化工仪表及自动化、过程控制系统及仪表、检测技术与控制仪表、热工测量仪表）；“控制工程”与“过程”给出《过程控制工程》×2、《工业过程控制》《过程控制》×2 等。逐页核对后采纳哈尔滨工程大学《工业过程控制》与青岛大学《过程控制系统及仪表》。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/635b08f996788f54b76766f5 、/course/69e7e6b16c1cfb58c38c68d9 、/course/6a862b78b44e493c760c8d16 、https://www.icourse163.org/course/ECUST-1449321162",
+   "result": "哈工程那门九章逐节可读（含 8.4 相对增益、8.5 解耦设计、7.4 大滞后）；青岛大学那门九章逐节可读（含 9.3 集散控制系统、6.8 四种整定法、7.3.2 史密斯预估）；化工仪表及自动化七章可读（复杂控制系统含均匀/分程/选择）；华东理工《过程控制工程》的 icourse163 课程页“课程大纲”栏为空，未采纳。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://search.bilibili.com/all?keyword=过程控制 解耦控制 课程 与 keyword=大滞后 史密斯预估 过程控制（不带 cookie）",
+   "result": "返回控制考研冲刺课、MATLAB 解耦仿真单讲、“Das 2.0 药代动力学”“劳斯判据”等无关或考研向内容；没有高校开设的过程控制课程视频。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily_search",
+   "query_or_url": "过程控制工程 教材 目录 解耦控制 多变量 相对增益 史密斯预估 出版社",
+   "result": "命中《过程控制工程（第二版）》的百度百科条目（第7章 多回路控制系统分析与设计、7.1 相对增益、7.3 多回路系统的解耦设计）、ResearchGate 论文、微信读书与京东页面；百科/网店/微信读书都不是出版社页或图书馆编目，按规则未登记为付费来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://media.wiley.com/product_data/excerpt/17/11192859/1119285917-27.pdf 与 https://ocw.mit.edu/courses/10-450-process-dynamics-operations-and-control-spring-2006/pages/syllabus/",
+   "result": "采纳：Wiley Contents PDF 给出 Seborg 第 4 版的章/节/小节与页码（7.2 阶跃测试建模、16.1 串级、16.2 时滞补偿、18.4/18.5 多回路与解耦、A.1 DCS、9.1/9.2 仪表与最终控制元件）；MIT OCW 10.450 的 Syllabus 给出课程目标与串级/前馈两讲。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://www.wiley.com/en-ie/Process+Dynamics+and+Control%2C+4th+Edition-p-9781119285953",
+   "result": "出版社在售书（价格未核、正文未读），只核到目录；登记为 free:false 的英文主来源。"
+  }
+ ],
+ "findings": [
+  "中文侧罕见地能一门课打到 7/8：哈尔滨工程大学《工业过程控制》从被控对象建模、检测仪表、执行器、PID 与整定，一路讲到串级/前馈/大滞后/比值/相对增益与解耦设计。",
+  "中文唯一的结构缺口是 DCS：哈工程那门停在第 9 章船舶实例，青岛大学《过程控制系统及仪表》第九章（DDC → DCS → 现场总线控制系统）正好补上，两门合起来中文 8/8 完整。",
+  "英文侧 Seborg 第 4 版到节级覆盖全部八项（DCS 在附录 A.1），MIT OCW 10.450 的串级/前馈两讲与课程目标清单可作免费复习提纲。",
+  "中文付费教材《过程控制工程》的解耦章节只找到百科条目与网店页面，按规则没有登记；中文路线不依赖付费来源即可完整。"
+ ],
+ "cross_language_fallbacks": [],
+ "applied_additions": []
+}
