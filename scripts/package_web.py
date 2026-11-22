@@ -15,7 +15,7 @@ FILES = ["index.html", "style.css", "app.js", "overview.js", "guide.js", "data.j
          "vendor/panzoom-4.6.2.min.js", "vendor/d3-7.9.0.min.js", "vendor/markmap-view-0.18.12.js"]
 # 第三方许可证：src/web/vendor/ 里和库文件放在一起的副本（从 node_modules 复制）
 LICENSES = ["vendor/panzoom-MIT-License.txt", "vendor/d3-LICENSE.txt", "vendor/markmap-view-LICENSE.txt"]
-README = """CS × 数学技能树
+README = """CS × CE × EE 技能树（计算机与电子电气技能树）
 
 打开：解压后双击 index.html，用 Chrome / Edge / Firefox / Safari 都可以。不用安装，也不用联网；
       只有点“去哪学”里的学习资源链接时才需要联网。
@@ -25,7 +25,7 @@ README = """CS × 数学技能树
 - 点一个领域进入它的技能地图；点一个技能看它的必须 / 推荐前置、知识导览、学习资源和练习题（答案折叠）。
 - “知识导览”里点“打开导览图”：按权威教材或课程的目录画出这个技能的知识点，滚轮缩放、拖动平移。
 - 学会后点“点亮”，必须前置都点亮的技能才会解锁。右上角“?”有完整说明。
-- 虚线框的技能是选修：内容不在 ACM/IEEE 课程标准 CS2023 的核心主题里，详情里写明理由。
+- 虚线框的技能是选修：CS2023、CE2016 和国标（本科专业类教学质量国家标准）的必修内容里都没有它，详情里写明理由。
 
 进度：只保存在你自己的浏览器里，换电脑或清缓存会丢。用右上角“进度 → 导出”备份。
 

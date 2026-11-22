@@ -1,4 +1,4 @@
-// CS × 数学技能树 — knowledge map ("知识导览") of one skill: the table of contents of an authoritative book, course or
+// CS × CE × EE 技能树 — knowledge map ("知识导览") of one skill: the table of contents of an authoritative book, course or
 // official doc (data/outlines/, checked against the source pages), plus branches from other sources that fill gaps in
 // the skill's description. Drawn as a mind map with markmap (vendor/, MIT) or as a plain outline. The outlines, d3
 // and markmap load on first use so the main page stays light. app.js calls init() once, section(skill) for the

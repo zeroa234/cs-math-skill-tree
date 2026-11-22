@@ -1,4 +1,4 @@
-// CS × 数学技能树 — overview ("world map"): one tile per lane, roads = required prerequisites between lanes.
+// CS × CE × EE 技能树 — overview ("world map"): one tile per lane, roads = required prerequisites between lanes.
 // Tile positions come from scripts/build.mjs (ELK layered on the lane graph). app.js owns the state and calls
 // init() once and render() after every change.
 window.SkillTreeOverview = (() => {

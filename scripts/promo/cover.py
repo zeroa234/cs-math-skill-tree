@@ -28,7 +28,7 @@ SIZES = {"16x9": (1920, 1080), "4x3": (1440, 1080), "3x4": (1080, 1440), "9x16":
 BG0 = (6, 9, 15)
 INK, INK2, ACCENT, LIT = (238, 241, 246), (188, 196, 210), (122, 167, 247), (245, 196, 106)   # 同 src/promo/src/lib/core.ts
 TITLE = ("我把计算机专业", "做成了一棵技能树")
-LABEL = "CS × 数学技能树"
+LABEL = "CS × CE × EE 技能树"
 # 树的亮度重心放在内容区的哪儿（x 按画面宽、y 按内容区高的比例），以及缩放（1 = 背景帧的高度等于内容区高度）
 # 横版：树在文字后面、人物左边，树根露在字下面；竖版：字在上，树在字下面偏左，人物在右下
 TREE = {"landscape": (0.42, 0.47, 1.05), "portrait": (0.42, 0.6, 0.8)}
@@ -50,7 +50,7 @@ def font(size, weight=900):
 def stats_line():
     t = json.loads((ROOT / "output/skilltree.json").read_text(encoding="utf-8"))
     m = t["meta"]
-    return f"{m['skills']} 个技能 · {len(t['lanes'])} 个领域 · {m['steps']} 步 · {m['requiredEdges']} 条必须前置"
+    return f"{m['skills']} 个技能 · {len({l['domain'] for l in t['lanes']})} 个领域 · {m['steps']} 步 · {m['requiredEdges']} 条必须前置"
 
 
 def background(w, h, portrait, safe_top, safe_h):

@@ -2,10 +2,11 @@
   <a href="https://www.bilibili.com/video/BV1FTx46CEN8/"><img src="docs/images/cover.webp" alt="宣传片封面：我把计算机专业做成了一棵技能树（点击在哔哩哔哩观看）" width="100%"></a>
 </p>
 
-<h1 align="center">CS × 数学技能树</h1>
+<h1 align="center">CS × CE × EE 技能树</h1>
+<p align="center"><b>计算机与电子电气技能树</b></p>
 
 <p align="center">
-  把计算机专业要学的东西，做成一棵<b>能一步步点亮的技能树</b>。<br>
+  把计算机科学、计算机工程和电子电气专业要学的东西（连同数学、物理基础），做成一棵<b>能一步步点亮的技能树</b>。<br>
   每条“必须先学”的连线，都附课程证据与入门需要的理由。
 </p>
 
