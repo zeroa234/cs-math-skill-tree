@@ -1,0 +1,451 @@
+{
+ "id": "E.3.6",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Renewable and Efficient Electric Power Systems, 3rd Edition",
+   "by": "Gilbert M. Masters, Kevin F. Hsu",
+   "year": 2023,
+   "url": "https://www.wiley.com/en-us/shop/general-energy/renewable-and-efficient-electric-power-systems-3rd-edition-p-9781119847120",
+   "toc_urls": [
+    "https://media.wiley.com/product_data/excerpt/09/11198471/1119847109-3.pdf"
+   ],
+   "why": "Wiley-IEEE Press 出版、斯坦福大学 Masters 教材第 3 版；出版社公开的目录 PDF 给出章→节→小节三层，光伏材料与 I-V 特性、MPPT（Buck-Boost 与 MPPT 控制器）、光伏系统、风电（转子/发电机/功率曲线/Betz 极限）、电力电子变换、电池储能、微电网各成一章，正好覆盖节点简介"
+  },
+  {
+   "key": "B",
+   "kind": "book",
+   "title": "Battery Management Systems, Volume II: Equivalent-Circuit Methods",
+   "by": "Gregory L. Plett",
+   "year": 2015,
+   "url": "https://us.artechhouse.com/Battery-Management-Systems-Volume-II-Equivalent-Circuit-Methods-P2192.aspx",
+   "toc_urls": [
+    "https://us.artechhouse.com/Battery-Management-Systems-Volume-II-Equivalent-Circuit-Methods-P2192.aspx"
+   ],
+   "why": "补“电池管理系统”：主来源 A 只讲电池化学、容量与系统应用，没有 BMS 的荷电状态/健康状态估计与均衡；Plett（科罗拉多大学科罗拉多斯普林斯分校）这三卷本是 BMS 的标准参考书，出版社页面列出需求、电池组仿真、状态估计、健康估计、均衡等章"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Photovoltaic Materials and Electrical Characteristics",
+   "zh": "光伏材料与电特性",
+   "items": [
+    {
+     "ref": "5.4",
+     "title": "Equivalent Circuits for PV Cells",
+     "zh": "光伏电池的等效电路",
+     "items": [
+      {
+       "ref": "5.4.1",
+       "title": "The Simplest Equivalent Circuit",
+       "zh": "最简等效电路"
+      },
+      {
+       "ref": "5.4.2",
+       "title": "A More Accurate Equivalent Circuit for a PV Cell",
+       "zh": "更精确的光伏电池等效电路"
+      }
+     ]
+    },
+    {
+     "ref": "5.5",
+     "title": "From Cells to Modules to Arrays",
+     "zh": "从电池片到组件到阵列",
+     "items": [
+      {
+       "ref": "5.5.1",
+       "title": "From Cells to a Module",
+       "zh": "从电池片到组件"
+      },
+      {
+       "ref": "5.5.2",
+       "title": "From Modules to Arrays",
+       "zh": "从组件到阵列"
+      }
+     ]
+    },
+    {
+     "ref": "5.6",
+     "title": "The PV I–V Curve Under Standard Test Conditions",
+     "zh": "标准测试条件下的光伏 I–V 曲线"
+    },
+    {
+     "ref": "5.7",
+     "title": "Impacts of Temperature and Insolation on I–V Curves",
+     "zh": "温度与辐照度对 I–V 曲线的影响"
+    },
+    {
+     "ref": "5.9",
+     "title": "Maximum Power Point Trackers",
+     "zh": "最大功率点跟踪器",
+     "items": [
+      {
+       "ref": "5.9.1",
+       "title": "The Buck–Boost Converter",
+       "zh": "升降压变换器"
+      },
+      {
+       "ref": "5.9.2",
+       "title": "MPPT Controllers",
+       "zh": "MPPT 控制器"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Photovoltaic Systems",
+   "zh": "光伏系统",
+   "items": [
+    {
+     "ref": "6.2",
+     "title": "Physical Components in a Behind-the-Meter, Grid-Connected System",
+     "zh": "表后并网光伏系统的物理组成",
+     "items": [
+      {
+       "ref": "6.2.1",
+       "title": "Microinverters",
+       "zh": "微型逆变器"
+      }
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Predicting Performance",
+     "zh": "发电性能预测"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Wind Power Systems",
+   "zh": "风力发电系统",
+   "items": [
+    {
+     "ref": "7.2",
+     "title": "Wind Turbine Technology: Rotors",
+     "zh": "风电机组技术：风轮"
+    },
+    {
+     "ref": "7.3",
+     "title": "Wind Turbine Technology: Generators",
+     "zh": "风电机组技术：发电机",
+     "items": [
+      {
+       "ref": "7.3.1",
+       "title": "Fixed-Speed Synchronous Generators",
+       "zh": "定速同步发电机"
+      },
+      {
+       "ref": "7.3.2",
+       "title": "The Squirrel-Cage Induction Generator",
+       "zh": "笼型感应发电机"
+      },
+      {
+       "ref": "7.3.3",
+       "title": "The Doubly-Fed Induction Generator",
+       "zh": "双馈感应发电机"
+      },
+      {
+       "ref": "7.3.4",
+       "title": "Variable-Speed Synchronous Generators",
+       "zh": "变速同步发电机"
+      }
+     ]
+    },
+    {
+     "ref": "7.4",
+     "title": "Power in the Wind",
+     "zh": "风中的功率",
+     "items": [
+      {
+       "ref": "7.4.1",
+       "title": "Temperature and Altitude Correction for Air Density",
+       "zh": "空气密度的温度与海拔修正"
+      }
+     ]
+    },
+    {
+     "ref": "7.5",
+     "title": "Wind Turbine Power Curves",
+     "zh": "风电机组功率曲线",
+     "items": [
+      {
+       "ref": "7.5.1",
+       "title": "The Betz Limit",
+       "zh": "贝兹极限"
+      },
+      {
+       "ref": "7.5.2",
+       "title": "Idealized Wind Turbine Power Curve",
+       "zh": "理想化风电功率曲线"
+      },
+      {
+       "ref": "7.5.3",
+       "title": "Real Power Curves",
+       "zh": "实际功率曲线"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Fundamentals of Electric Power",
+   "zh": "电力基础",
+   "items": [
+    {
+     "ref": "3.9",
+     "title": "Power Electronics",
+     "zh": "电力电子",
+     "items": [
+      {
+       "ref": "3.9.1",
+       "title": "AC-to-DC Conversion",
+       "zh": "交-直变换"
+      },
+      {
+       "ref": "3.9.2",
+       "title": "DC-to-DC Conversions",
+       "zh": "直-直变换"
+      },
+      {
+       "ref": "3.9.3",
+       "title": "DC-to-AC Inverters",
+       "zh": "直-交逆变器"
+      }
+     ]
+    },
+    {
+     "ref": "3.10",
+     "title": "Back-To-Back Voltage-Source Converter",
+     "zh": "背靠背电压源换流器"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "10",
+   "title": "Energy Storage: Batteries, Fuel Cells, and Hydrogen",
+   "zh": "储能：电池、燃料电池与氢",
+   "items": [
+    {
+     "ref": "10.2",
+     "title": "The Need for Energy Storage",
+     "zh": "储能的必要性"
+    },
+    {
+     "ref": "10.3",
+     "title": "Battery Basics",
+     "zh": "电池基础"
+    },
+    {
+     "ref": "10.4",
+     "title": "Lithium-Ion Batteries",
+     "zh": "锂离子电池"
+    },
+    {
+     "ref": "10.6",
+     "title": "Beyond the Cell: Producing Battery Modules and Packs",
+     "zh": "从单体到电池模组与电池包",
+     "items": [
+      {
+       "ref": "10.6.1",
+       "title": "Thermal Safety",
+       "zh": "热安全"
+      }
+     ]
+    },
+    {
+     "ref": "10.9",
+     "title": "Battery Storage Capacity",
+     "zh": "电池储能容量"
+    },
+    {
+     "ref": "10.10",
+     "title": "Coulombic Efficiency Instead of Energy Efficiency",
+     "zh": "以库仑效率代替能量效率"
+    },
+    {
+     "ref": "10.13",
+     "title": "Utility-Scale Batteries",
+     "zh": "电网级电池储能"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "Microgrids",
+   "zh": "微电网",
+   "items": [
+    {
+     "ref": "11.1",
+     "title": "Introduction",
+     "zh": "概述"
+    },
+    {
+     "ref": "11.2",
+     "title": "Microgrids for Local Resilience",
+     "zh": "面向本地韧性的微电网"
+    },
+    {
+     "ref": "11.4",
+     "title": "Off-Grid Solar PV with Battery Systems",
+     "zh": "离网光伏与电池系统",
+     "items": [
+      {
+       "ref": "11.4.1",
+       "title": "Stand-Alone System Components",
+       "zh": "独立系统组成"
+      },
+      {
+       "ref": "11.4.3",
+       "title": "Estimating the Load",
+       "zh": "负荷估算"
+      },
+      {
+       "ref": "11.4.5",
+       "title": "Battery Sizing for Stand-Alone Systems",
+       "zh": "独立系统的电池容量选型"
+      }
+     ]
+    },
+    {
+     "ref": "11.6",
+     "title": "Distributed Energy Resources",
+     "zh": "分布式能源资源"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Battery-Management-System Requirements",
+   "zh": "电池管理系统的需求",
+   "fill": "补“电池管理系统”：BMS 的功能与指标要求",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Battery State Estimation",
+   "zh": "电池状态估计",
+   "fill": "补“电池管理系统”：荷电状态（SOC）与功率状态估计",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Battery Health Estimation",
+   "zh": "电池健康状态估计",
+   "fill": "补“电池管理系统”：健康状态（SOH）估计",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "",
+   "title": "Cell Balancing",
+   "zh": "单体均衡",
+   "fill": "补“电池管理系统”：串联单体的均衡管理",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "光伏电池与光伏系统",
+   "refs": [
+    "A:5",
+    "A:5.4",
+    "A:5.5",
+    "A:5.6",
+    "A:5.7",
+    "A:6",
+    "A:6.2",
+    "A:6.3"
+   ]
+  },
+  {
+   "topic": "风力机与风电机组",
+   "refs": [
+    "A:7",
+    "A:7.2",
+    "A:7.3",
+    "A:7.3.1",
+    "A:7.3.2",
+    "A:7.3.3",
+    "A:7.3.4",
+    "A:7.4",
+    "A:7.5",
+    "A:7.5.1"
+   ]
+  },
+  {
+   "topic": "并网变流器",
+   "refs": [
+    "A:3.9",
+    "A:3.9.1",
+    "A:3.9.2",
+    "A:3.9.3",
+    "A:3.10",
+    "A:6.2.1"
+   ]
+  },
+  {
+   "topic": "储能技术与电池模型",
+   "refs": [
+    "A:10",
+    "A:10.2",
+    "A:10.3",
+    "A:10.4",
+    "A:10.6",
+    "A:10.9",
+    "A:10.10",
+    "A:10.13"
+   ]
+  },
+  {
+   "topic": "电池管理系统",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#3",
+    "B:#4"
+   ]
+  },
+  {
+   "topic": "微电网与能量管理",
+   "refs": [
+    "A:11",
+    "A:11.1",
+    "A:11.2",
+    "A:11.4",
+    "A:11.6"
+   ],
+   "note": "微电网架构、离网系统选型与分布式能源有专章；“能量管理（EMS）”本身没有单列章节，A 只在 11.6 分布式能源资源与 11.2 本地韧性里涉及调度，未找到更专门的权威目录，故不单列"
+  },
+  {
+   "topic": "最大功率点跟踪",
+   "refs": [
+    "A:5.9",
+    "A:5.9.1",
+    "A:5.9.2"
+   ]
+  }
+ ],
+ "omitted": "A 只收了与节点相关的章：第 5、6 章（光伏材料与系统）、第 7 章（风电）、第 3 章的 3.9/3.10（电力电子与并网换流器）、第 10 章（电池储能）、第 11 章（微电网）；第 1 章美国电力工业与监管、第 2 章电路基础、第 3 章其余节（交流电路、功率因数、三相、输配电）、第 4 章太阳能资源、第 8 章光热/波浪/潮汐/水电/生物质/地热、第 9 章能效与需求侧管理、附录 A 能源经济均未收；各章 Problems/References 未收。B 只收了 BMS 的四章。",
+ "notes": "A 的目录来自 Wiley 出版社的 Contents PDF（媒体服务器 media.wiley.com，页面“Table of Contents (PDF)”链接），PDF 提取时单词被粘连（“Electromagnetism:TheTechnologyBehindElectricPower”），已按正确拼写抄写；check_outlines 的规范化比对可对上。A 是 2023 年第 3 版，新增第 10 章电池储能与第 11 章微电网，正好补上光伏课程缺的储能与微电网部分。B 的出版社页面只给章名（分号分隔），没有节，故补充分支只到章。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 56,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

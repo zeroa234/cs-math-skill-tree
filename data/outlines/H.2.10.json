@@ -1,0 +1,694 @@
+{
+ "id": "H.2.10",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "MEMS and Microsystems: Design, Manufacture, and Nanoscale Engineering, 2nd Edition",
+   "by": "Tai-Ran Hsu",
+   "year": 2008,
+   "url": "https://www.wiley.com/en-us/MEMS+and+Microsystems%3A+Design%2C+Manufacture%2C+and+Nanoscale+Engineering%2C+2nd+Edition-p-9780470083017",
+   "toc_urls": [
+    "https://media.wiley.com/product_data/excerpt/18/04700830/0470083018-1.pdf"
+   ],
+   "why": "Wiley 出版、圣何塞州立大学 Hsu 的 MEMS 教材第 2 版；出版社公开的目录 PDF 是章→节→小节三层，缩放规律、MEMS 材料、微加工工艺、体硅/表面微加工与 LIGA、微系统力学、传感器与执行器工作原理、封装与信号检测逐章对应节点简介"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "6.777J Design and Fabrication of Microelectromechanical Devices（MIT OpenCourseWare, Spring 2007）",
+   "by": "Prof. Carol Livermore, Prof. Joel Voldman",
+   "year": 2007,
+   "url": "https://ocw.mit.edu/courses/6-777j-design-and-fabrication-of-microelectromechanical-devices-spring-2007/",
+   "toc_urls": [
+    "https://ocw.mit.edu/courses/6-777j-design-and-fabrication-of-microelectromechanical-devices-spring-2007/pages/lecture-notes/"
+   ],
+   "why": "补主来源没有的读出电路电子学与集中参数建模：课程讲次目录里有 Lumped-element modeling、Feedback、Noise 三讲，正好补传感器读出电路的反馈与噪声分析；这也是节点“现有英文学习资源”本人的 MIT OCW 课程"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "SCALING LAWS IN MINIATURIZATION",
+   "zh": "微型化中的缩放规律",
+   "items": [
+    {
+     "ref": "6.1",
+     "title": "Introduction to Scaling",
+     "zh": "缩放引论"
+    },
+    {
+     "ref": "6.2",
+     "title": "Scaling in Geometry",
+     "zh": "几何尺寸的缩放"
+    },
+    {
+     "ref": "6.3",
+     "title": "Scaling in Rigid-Body Dynamics",
+     "zh": "刚体动力学的缩放",
+     "items": [
+      {
+       "ref": "6.3.1",
+       "title": "Scaling in Dynamic Forces",
+       "zh": "动力力的缩放"
+      },
+      {
+       "ref": "6.3.2",
+       "title": "Trimmer Force Scaling Vector",
+       "zh": "Trimmer 力缩放矢量"
+      }
+     ]
+    },
+    {
+     "ref": "6.4",
+     "title": "Scaling in Electrostatic Forces",
+     "zh": "静电力的缩放"
+    },
+    {
+     "ref": "6.5",
+     "title": "Scaling of Electromagnetic Forces",
+     "zh": "电磁力的缩放"
+    },
+    {
+     "ref": "6.6",
+     "title": "Scaling in Electricity",
+     "zh": "电学的缩放"
+    },
+    {
+     "ref": "6.7",
+     "title": "Scaling in Fluid Mechanics",
+     "zh": "流体力学的缩放"
+    },
+    {
+     "ref": "6.8",
+     "title": "Scaling in Heat Transfer",
+     "zh": "传热的缩放",
+     "items": [
+      {
+       "ref": "6.8.1",
+       "title": "Scaling in Heat Conduction",
+       "zh": "热传导的缩放"
+      },
+      {
+       "ref": "6.8.2",
+       "title": "Scaling in Heat Convection",
+       "zh": "热对流的缩放"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "MATERIALS FOR MEMS AND MICROSYSTEMS",
+   "zh": "MEMS 与微系统材料",
+   "items": [
+    {
+     "ref": "7.2",
+     "title": "Substrates and Wafers",
+     "zh": "衬底与晶圆"
+    },
+    {
+     "ref": "7.4",
+     "title": "Silicon as Substrate Material",
+     "zh": "作为衬底材料的硅",
+     "items": [
+      {
+       "ref": "7.4.3",
+       "title": "Crystal Structure",
+       "zh": "晶体结构"
+      },
+      {
+       "ref": "7.4.4",
+       "title": "Miller Indices",
+       "zh": "米勒指数"
+      },
+      {
+       "ref": "7.4.5",
+       "title": "Mechanical Properties of Silicon",
+       "zh": "硅的力学性能"
+      }
+     ]
+    },
+    {
+     "ref": "7.5",
+     "title": "Silicon Compounds",
+     "zh": "硅化合物",
+     "items": [
+      {
+       "ref": "7.5.1",
+       "title": "Silicon Dioxide",
+       "zh": "二氧化硅"
+      },
+      {
+       "ref": "7.5.2",
+       "title": "Silicon Carbide",
+       "zh": "碳化硅"
+      },
+      {
+       "ref": "7.5.3",
+       "title": "Silicon Nitride",
+       "zh": "氮化硅"
+      },
+      {
+       "ref": "7.5.4",
+       "title": "Polycrystalline Silicon",
+       "zh": "多晶硅"
+      }
+     ]
+    },
+    {
+     "ref": "7.6",
+     "title": "Silicon Piezoresistors",
+     "zh": "硅压敏电阻"
+    },
+    {
+     "ref": "7.9",
+     "title": "Piezoelectric Crystals",
+     "zh": "压电晶体"
+    },
+    {
+     "ref": "7.10",
+     "title": "Polymers",
+     "zh": "聚合物",
+     "items": [
+      {
+       "ref": "7.10.2",
+       "title": "Polymers for MEMS and Microsystems",
+       "zh": "用于 MEMS 与微系统的聚合物"
+      },
+      {
+       "ref": "7.10.5",
+       "title": "SU-8 Photoresists",
+       "zh": "SU-8 光刻胶"
+      }
+     ]
+    },
+    {
+     "ref": "7.11",
+     "title": "Packaging Materials",
+     "zh": "封装材料"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "8",
+   "title": "MICROSYSTEMS FABRICATION PROCESSES",
+   "zh": "微系统制造工艺",
+   "items": [
+    {
+     "ref": "8.2",
+     "title": "Photolithography",
+     "zh": "光刻",
+     "items": [
+      {
+       "ref": "8.2.2",
+       "title": "Photoresists and Application",
+       "zh": "光刻胶及其涂覆"
+      },
+      {
+       "ref": "8.2.3",
+       "title": "Light Sources",
+       "zh": "光源"
+      },
+      {
+       "ref": "8.2.4",
+       "title": "Photoresist Development",
+       "zh": "光刻胶显影"
+      }
+     ]
+    },
+    {
+     "ref": "8.3",
+     "title": "Ion Implantation",
+     "zh": "离子注入"
+    },
+    {
+     "ref": "8.4",
+     "title": "Diffusion",
+     "zh": "扩散"
+    },
+    {
+     "ref": "8.5",
+     "title": "Oxidation",
+     "zh": "氧化"
+    },
+    {
+     "ref": "8.6",
+     "title": "Chemical Vapor Deposition",
+     "zh": "化学气相沉积",
+     "items": [
+      {
+       "ref": "8.6.1",
+       "title": "Working Principle of CVD",
+       "zh": "CVD 工作原理"
+      },
+      {
+       "ref": "8.6.4",
+       "title": "Enhanced CVD",
+       "zh": "增强型 CVD"
+      }
+     ]
+    },
+    {
+     "ref": "8.7",
+     "title": "Physical Vapor Deposition: Sputtering",
+     "zh": "物理气相沉积：溅射"
+    },
+    {
+     "ref": "8.9",
+     "title": "Etching",
+     "zh": "刻蚀",
+     "items": [
+      {
+       "ref": "8.9.1",
+       "title": "Chemical Etching",
+       "zh": "化学刻蚀"
+      },
+      {
+       "ref": "8.9.2",
+       "title": "Plasma Etching",
+       "zh": "等离子体刻蚀"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "9",
+   "title": "OVERVIEW OF MICROMANUFACTURING",
+   "zh": "微机械制造概述",
+   "items": [
+    {
+     "ref": "9.2",
+     "title": "Bulk Micromanufacturing",
+     "zh": "体硅微加工",
+     "items": [
+      {
+       "ref": "9.2.1",
+       "title": "Overview of Etching",
+       "zh": "刻蚀概述"
+      },
+      {
+       "ref": "9.2.2",
+       "title": "Isotropic and Anisotropic Etching",
+       "zh": "各向同性与各向异性刻蚀"
+      },
+      {
+       "ref": "9.2.3",
+       "title": "Wet Etchants",
+       "zh": "湿法刻蚀剂"
+      },
+      {
+       "ref": "9.2.4",
+       "title": "Etch Stop",
+       "zh": "刻蚀自停止"
+      },
+      {
+       "ref": "9.2.5",
+       "title": "Dry Etching",
+       "zh": "干法刻蚀"
+      }
+     ]
+    },
+    {
+     "ref": "9.3",
+     "title": "Surface Micromachining",
+     "zh": "表面微加工",
+     "items": [
+      {
+       "ref": "9.3.1",
+       "title": "Description",
+       "zh": "工艺描述"
+      },
+      {
+       "ref": "9.3.2",
+       "title": "Process",
+       "zh": "工艺流程"
+      },
+      {
+       "ref": "9.3.3",
+       "title": "Mechanical Problems Associated with Surface Micromachining",
+       "zh": "表面微加工的力学问题"
+      }
+     ]
+    },
+    {
+     "ref": "9.4",
+     "title": "LIGA Process",
+     "zh": "LIGA 工艺",
+     "items": [
+      {
+       "ref": "9.4.1",
+       "title": "Description",
+       "zh": "工艺描述"
+      },
+      {
+       "ref": "9.4.3",
+       "title": "Electroplating",
+       "zh": "电镀"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "ENGINEERING MECHANICS FOR MICROSYSTEMS DESIGN",
+   "zh": "微系统设计的工程力学",
+   "items": [
+    {
+     "ref": "4.2",
+     "title": "Static Bending of Thin Plates",
+     "zh": "薄板的静态弯曲",
+     "items": [
+      {
+       "ref": "4.2.1",
+       "title": "Bending of Circular Plates with Edge Fixed",
+       "zh": "边缘固支圆板的弯曲"
+      },
+      {
+       "ref": "4.2.2",
+       "title": "Bending of Rectangular Plates with All Edges Fixed",
+       "zh": "四边固支矩形板的弯曲"
+      }
+     ]
+    },
+    {
+     "ref": "4.3",
+     "title": "Mechanical Vibration",
+     "zh": "机械振动",
+     "items": [
+      {
+       "ref": "4.3.2",
+       "title": "Resonant Vibration",
+       "zh": "共振振动"
+      },
+      {
+       "ref": "4.3.4",
+       "title": "Design Theory of Accelerometers",
+       "zh": "加速度计设计理论"
+      },
+      {
+       "ref": "4.3.5",
+       "title": "Damping Coefficients",
+       "zh": "阻尼系数"
+      }
+     ]
+    },
+    {
+     "ref": "4.6",
+     "title": "Thin-Film Mechanics",
+     "zh": "薄膜力学"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "WORKING PRINCIPLES OF MICROSYSTEMS",
+   "zh": "微系统的工作原理",
+   "items": [
+    {
+     "ref": "2.2",
+     "title": "Microsensors",
+     "zh": "微传感器",
+     "items": [
+      {
+       "ref": "2.2.4",
+       "title": "Optical Sensors",
+       "zh": "光学传感器"
+      },
+      {
+       "ref": "2.2.5",
+       "title": "Pressure Sensors",
+       "zh": "压力传感器"
+      },
+      {
+       "ref": "2.2.6",
+       "title": "Thermal Sensors",
+       "zh": "热传感器"
+      }
+     ]
+    },
+    {
+     "ref": "2.3",
+     "title": "Microactuation",
+     "zh": "微驱动",
+     "items": [
+      {
+       "ref": "2.3.1",
+       "title": "Actuation Using Thermal Forces",
+       "zh": "热力驱动"
+      },
+      {
+       "ref": "2.3.3",
+       "title": "Actuation Using Piezoelectric Effect",
+       "zh": "压电效应驱动"
+      },
+      {
+       "ref": "2.3.4",
+       "title": "Actuation Using Electrostatic Forces",
+       "zh": "静电力驱动"
+      }
+     ]
+    },
+    {
+     "ref": "2.4",
+     "title": "MEMS with Microactuators",
+     "zh": "带微执行器的 MEMS",
+     "items": [
+      {
+       "ref": "2.4.2",
+       "title": "Miniature Microphones",
+       "zh": "微型麦克风"
+      }
+     ]
+    },
+    {
+     "ref": "2.5",
+     "title": "Microactuators with Mechanical Inertia",
+     "zh": "带机械惯性的微执行器",
+     "items": [
+      {
+       "ref": "2.5.1",
+       "title": "Microaccelerometers",
+       "zh": "微加速度计"
+      },
+      {
+       "ref": "2.5.2",
+       "title": "Microgyroscopes",
+       "zh": "微陀螺仪"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "11",
+   "title": "ASSEMBLY, PACKAGING, AND TESTING OF MICROSYSTEMS",
+   "zh": "微系统的装配、封装与测试",
+   "items": [
+    {
+     "ref": "11.8",
+     "title": "Overview of Microsystems Packaging",
+     "zh": "微系统封装概述"
+    },
+    {
+     "ref": "11.9",
+     "title": "General Considerations in Packaging Design",
+     "zh": "封装设计的一般考虑"
+    },
+    {
+     "ref": "11.10",
+     "title": "Three Levels of Microsystems Packaging",
+     "zh": "微系统封装的三个层次",
+     "items": [
+      {
+       "ref": "11.10.1",
+       "title": "Die-Level Packaging",
+       "zh": "芯片级封装"
+      },
+      {
+       "ref": "11.10.2",
+       "title": "Device-Level Packaging",
+       "zh": "器件级封装"
+      },
+      {
+       "ref": "11.10.3",
+       "title": "System-Level Packaging",
+       "zh": "系统级封装"
+      }
+     ]
+    },
+    {
+     "ref": "11.12",
+     "title": "Essential Packaging Technologies",
+     "zh": "基本封装技术"
+    },
+    {
+     "ref": "11.15",
+     "title": "Wire Bonding",
+     "zh": "引线键合"
+    },
+    {
+     "ref": "11.19",
+     "title": "Signal Mapping and Transduction",
+     "zh": "信号映射与换能",
+     "items": [
+      {
+       "ref": "11.19.1",
+       "title": "Typical Electrical Signals in Microsystems",
+       "zh": "微系统中的典型电信号"
+      },
+      {
+       "ref": "11.19.2",
+       "title": "Measurement of Resistance",
+       "zh": "电阻测量"
+      },
+      {
+       "ref": "11.19.4",
+       "title": "Capacitance Measurements",
+       "zh": "电容测量"
+      }
+     ]
+    },
+    {
+     "ref": "11.21",
+     "title": "Reliability in MEMS Packaging",
+     "zh": "MEMS 封装可靠性"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "8",
+   "title": "Lumped-element modeling",
+   "zh": "集中参数建模",
+   "fill": "补“微机械结构力学”的集中参数建模方法（弹簧-质量-阻尼等效）",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "17",
+   "title": "Feedback",
+   "zh": "反馈",
+   "fill": "补“读出电路”：传感器接口电路的反馈控制",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "18",
+   "title": "Noise",
+   "zh": "噪声",
+   "fill": "补“读出电路”：传感器读出链的噪声分析",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "微尺度效应与缩放规律",
+   "refs": [
+    "A:6",
+    "A:6.1",
+    "A:6.2",
+    "A:6.3",
+    "A:6.4",
+    "A:6.7",
+    "A:6.8"
+   ]
+  },
+  {
+   "topic": "体硅与表面微加工",
+   "refs": [
+    "A:9",
+    "A:9.2",
+    "A:9.2.2",
+    "A:9.2.4",
+    "A:9.3",
+    "A:9.3.2",
+    "A:8"
+   ]
+  },
+  {
+   "topic": "MEMS材料",
+   "refs": [
+    "A:7",
+    "A:7.2",
+    "A:7.4",
+    "A:7.4.3",
+    "A:7.4.4",
+    "A:7.5",
+    "A:7.6",
+    "A:7.9",
+    "A:7.10"
+   ]
+  },
+  {
+   "topic": "静电与压阻与电容换能",
+   "refs": [
+    "A:2.3.4",
+    "A:7.6",
+    "A:2.5.1",
+    "A:11.19",
+    "A:11.19.4"
+   ]
+  },
+  {
+   "topic": "微机械结构力学",
+   "refs": [
+    "A:4",
+    "A:4.2",
+    "A:4.2.1",
+    "A:4.3",
+    "A:4.3.2",
+    "A:4.6",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "加速度计与陀螺仪",
+   "refs": [
+    "A:2.5",
+    "A:2.5.1",
+    "A:2.5.2",
+    "A:4.3.4"
+   ]
+  },
+  {
+   "topic": "压力与麦克风传感器",
+   "refs": [
+    "A:2.2.5",
+    "A:2.4.2"
+   ]
+  },
+  {
+   "topic": "封装与读出电路",
+   "refs": [
+    "A:11",
+    "A:11.8",
+    "A:11.10",
+    "A:11.12",
+    "A:11.19",
+    "A:11.19.2",
+    "A:11.19.4",
+    "B:#2",
+    "B:#3"
+   ]
+  }
+ ],
+ "omitted": "A 只收了与节点相关的 2、4、6、7、8、9、11 章；第 1 章 MEMS 产业与应用概览、第 3 章原子结构与等离子体物理、第 5 章热流体工程、第 10 章微系统设计流程（流程与有限元部分）、第 12 章纳米工程，以及各章 Problems 未收。7.10 只收了两小节，8.2-8.9 只收光刻与沉积/刻蚀相关节，9.4 只收了描述与电镀。B 只收了补缺的三讲。",
+ "notes": "A 的目录来自 Wiley 出版社 Contents PDF（media.wiley.com product_data/excerpt），PDF 里 “Control V olumes”“rareﬁed”等拆词/连字已按正确拼写处理。B 是课程讲次页，一个讲次一个主题，没有讲内小节，所以补充分支只到讲次层级。节点简介的“读出电路”在 A 里只有 11.19 信号映射与换能（电阻/电容测量），接口电路的反馈与噪声由 B 的 Feedback、Noise 两讲补。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 99,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}

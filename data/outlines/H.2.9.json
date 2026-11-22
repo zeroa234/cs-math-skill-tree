@@ -1,0 +1,486 @@
+{
+ "id": "H.2.9",
+ "sources": [
+  {
+   "key": "A",
+   "kind": "book",
+   "title": "Computer System Design: System-on-Chip",
+   "by": "Michael J. Flynn, Wayne Luk",
+   "year": 2011,
+   "url": "https://www.wiley.com/en-us/Computer+System+Design%3A+System+on+Chip-p-9780470643365",
+   "toc_urls": [
+    "https://media.wiley.com/product_data/excerpt/66/04706433/0470643366-91.pdf"
+   ],
+   "why": "Wiley 出版（斯坦福 Flynn 与帝国理工 Luk），也是多伦多都会大学 COE838 课程列的第一本教材；出版社公开的目录 PDF 有章→节→小节三层，按系统架构、处理器、存储、互连（含 AMBA 与 NoC）、定制与可重构、应用研究组织，正好对应节点的架构/IP 复用、处理器集成、片上总线、NoC、存储子系统"
+  },
+  {
+   "key": "B",
+   "kind": "course",
+   "title": "COE838 / EE8221 Systems on Chip Design（Toronto Metropolitan University，Winter 2026）",
+   "by": "Gul N. Khan",
+   "year": 2026,
+   "url": "http://www.ecb.torontomu.ca/~courses/coe838/",
+   "toc_urls": [
+    "http://www.ecb.torontomu.ca/~courses/coe838/lecture-notes.html"
+   ],
+   "why": "补主来源没有的 SoC 验证、UVM 方法与 FPGA 原型：课程讲次目录里第 13 讲是 SoC Verification 与 UVM Basics，第 6 讲是 SoC-Platforms and DE1-SoC Design Methods；这是节点“现有英文学习资源”本人的课程站，公开可访问"
+  }
+ ],
+ "outline": [
+  {
+   "src": "A",
+   "ref": "1",
+   "title": "Introduction to the Systems Approach",
+   "zh": "系统方法导论",
+   "items": [
+    {
+     "ref": "1.3",
+     "title": "Hardware and Software: Programmability Versus Performance",
+     "zh": "硬件与软件：可编程性与性能的权衡"
+    },
+    {
+     "ref": "1.6",
+     "title": "System-Level Interconnection",
+     "zh": "系统级互连",
+     "items": [
+      {
+       "ref": "1.6.1",
+       "title": "Bus-Based Approach",
+       "zh": "总线方式"
+      },
+      {
+       "ref": "1.6.2",
+       "title": "Network-on-Chip Approach",
+       "zh": "片上网络方式"
+      }
+     ]
+    },
+    {
+     "ref": "1.7",
+     "title": "An Approach for SOC Design",
+     "zh": "一种 SoC 设计方法",
+     "items": [
+      {
+       "ref": "1.7.1",
+       "title": "Requirements and Specifications",
+       "zh": "需求与规格"
+      },
+      {
+       "ref": "1.7.2",
+       "title": "Design Iteration",
+       "zh": "设计迭代"
+      }
+     ]
+    },
+    {
+     "ref": "1.10",
+     "title": "Dealing with Design Complexity",
+     "zh": "应对设计复杂性",
+     "items": [
+      {
+       "ref": "1.10.1",
+       "title": "Buying IP",
+       "zh": "购买 IP"
+      },
+      {
+       "ref": "1.10.2",
+       "title": "Reconfiguration",
+       "zh": "重构"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "2",
+   "title": "Chip Basics: Time, Area, Power, Reliability, and Configurability",
+   "zh": "芯片基础：时间、面积、功耗、可靠性与可配置性",
+   "items": [
+    {
+     "ref": "2.5",
+     "title": "Power",
+     "zh": "功耗"
+    },
+    {
+     "ref": "2.6",
+     "title": "Area–Time–Power Trade-Offs in Processor Design",
+     "zh": "处理器设计中的面积-时间-功耗折中"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "3",
+   "title": "Processors",
+   "zh": "处理器",
+   "items": [
+    {
+     "ref": "3.1",
+     "title": "Introduction",
+     "zh": "概述"
+    },
+    {
+     "ref": "3.2",
+     "title": "Processor Selection for SOC",
+     "zh": "SoC 的处理器选型",
+     "items": [
+      {
+       "ref": "3.2.2",
+       "title": "Example: Soft Processors",
+       "zh": "示例：软核处理器"
+      }
+     ]
+    },
+    {
+     "ref": "3.12",
+     "title": "Processor Evolution and Two Examples",
+     "zh": "处理器演进与两个实例",
+     "items": [
+      {
+       "ref": "3.12.1",
+       "title": "Soft and Firm Processor Designs: The Processor as IP",
+       "zh": "软核与固核处理器：作为 IP 的处理器"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "4",
+   "title": "Memory Design: System-on-Chip and Board-Based Systems",
+   "zh": "存储设计：片上系统与板级系统",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Introduction",
+     "zh": "概述"
+    },
+    {
+     "ref": "4.3",
+     "title": "Scratchpads and Cache Memory",
+     "zh": "暂存器与缓存"
+    },
+    {
+     "ref": "4.13",
+     "title": "SOC (On-Die) Memory Systems",
+     "zh": "SoC（片上）存储系统"
+    },
+    {
+     "ref": "4.14",
+     "title": "Board-based (Off-Die) Memory Systems",
+     "zh": "板级（片外）存储系统"
+    },
+    {
+     "ref": "4.16",
+     "title": "Models of Simple Processor–Memory Interaction",
+     "zh": "简单处理器-存储器交互模型"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "5",
+   "title": "Interconnect",
+   "zh": "互连",
+   "items": [
+    {
+     "ref": "5.3",
+     "title": "Bus: Basic Architecture",
+     "zh": "总线：基本架构",
+     "items": [
+      {
+       "ref": "5.3.1",
+       "title": "Arbitration and Protocols",
+       "zh": "仲裁与协议"
+      },
+      {
+       "ref": "5.3.2",
+       "title": "Bus Bridge",
+       "zh": "总线桥"
+      }
+     ]
+    },
+    {
+     "ref": "5.4",
+     "title": "SOC Standard Buses",
+     "zh": "SoC 标准总线",
+     "items": [
+      {
+       "ref": "5.4.1",
+       "title": "AMBA",
+       "zh": "AMBA 总线"
+      },
+      {
+       "ref": "5.4.2",
+       "title": "CoreConnect",
+       "zh": "CoreConnect 总线"
+      },
+      {
+       "ref": "5.4.3",
+       "title": "Bus Interface Units: Bus Sockets and Bus Wrappers",
+       "zh": "总线接口单元：总线插座与总线封装"
+      }
+     ]
+    },
+    {
+     "ref": "5.6",
+     "title": "Beyond the Bus: NOC with Switch Interconnects",
+     "zh": "超越总线：基于交换的片上网络互连",
+     "items": [
+      {
+       "ref": "5.6.1",
+       "title": "Static Networks",
+       "zh": "静态网络"
+      },
+      {
+       "ref": "5.6.2",
+       "title": "Dynamic Networks",
+       "zh": "动态网络"
+      }
+     ]
+    },
+    {
+     "ref": "5.7",
+     "title": "Some NOC Switch Examples",
+     "zh": "片上网络交换实例",
+     "items": [
+      {
+       "ref": "5.7.1",
+       "title": "A 2-D Grid Example of Direct Networks",
+       "zh": "直接网络的二维网格实例"
+      },
+      {
+       "ref": "5.7.2",
+       "title": "Asynchronous Crossbar Interconnect for Synchronous SOC (Dynamic Network)",
+       "zh": "同步 SoC 的异步交叉开关互连（动态网络）"
+      }
+     ]
+    },
+    {
+     "ref": "5.8",
+     "title": "Layered Architecture and Network Interface Unit",
+     "zh": "分层架构与网络接口单元",
+     "items": [
+      {
+       "ref": "5.8.1",
+       "title": "NOC Layered Architecture",
+       "zh": "片上网络分层架构"
+      },
+      {
+       "ref": "5.8.2",
+       "title": "NOC and NIU Example",
+       "zh": "片上网络与网络接口单元实例"
+      },
+      {
+       "ref": "5.8.3",
+       "title": "Bus versus NOC",
+       "zh": "总线与片上网络对比"
+      }
+     ]
+    },
+    {
+     "ref": "5.9",
+     "title": "Evaluating Interconnect Networks",
+     "zh": "互连网络评估"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "6",
+   "title": "Customization and Configurability",
+   "zh": "定制与可配置性",
+   "items": [
+    {
+     "ref": "6.3",
+     "title": "SOC Customization: An Overview",
+     "zh": "SoC 定制概述"
+    },
+    {
+     "ref": "6.4",
+     "title": "Customizing Instruction Processors",
+     "zh": "指令处理器定制",
+     "items": [
+      {
+       "ref": "6.4.1",
+       "title": "Processor Customization Approaches",
+       "zh": "处理器定制方法"
+      }
+     ]
+    },
+    {
+     "ref": "6.5",
+     "title": "Reconfigurable Technologies",
+     "zh": "可重构技术",
+     "items": [
+      {
+       "ref": "6.5.1",
+       "title": "Reconfigurable Functional Units (FUs)",
+       "zh": "可重构功能单元"
+      },
+      {
+       "ref": "6.5.2",
+       "title": "Reconfigurable Interconnects",
+       "zh": "可重构互连"
+      },
+      {
+       "ref": "6.5.3",
+       "title": "Software Configurable Processors",
+       "zh": "软件可配置处理器"
+      }
+     ]
+    },
+    {
+     "ref": "6.8",
+     "title": "Customizable Soft Processor: An Example",
+     "zh": "可定制软核处理器实例"
+    }
+   ]
+  },
+  {
+   "src": "A",
+   "ref": "7",
+   "title": "Application Studies",
+   "zh": "应用研究",
+   "items": [
+    {
+     "ref": "7.1",
+     "title": "Introduction",
+     "zh": "概述"
+    },
+    {
+     "ref": "7.2",
+     "title": "SOC Design Approach",
+     "zh": "SoC 设计方法"
+    },
+    {
+     "ref": "7.3",
+     "title": "Application Study: AES",
+     "zh": "应用研究：AES 加密"
+    }
+   ]
+  },
+  {
+   "src": "B",
+   "ref": "13",
+   "title": "SoC Verification",
+   "zh": "SoC 验证",
+   "fill": "补“SoC 验证与原型”：主来源 A 没有验证章，这一讲给出 SoC 验证流程",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "13",
+   "title": "UVM (Universal Verification Methodology) Basics",
+   "zh": "UVM（通用验证方法学）基础",
+   "fill": "补“SoC 验证与原型”：验证方法学与 testbench 组织",
+   "items": []
+  },
+  {
+   "src": "B",
+   "ref": "6",
+   "title": "SoC-Platforms and DE1-SoC Design Methods for SoC Project and Labs",
+   "zh": "SoC 平台与 DE1-SoC 设计方法（课程项目与实验）",
+   "fill": "补“SoC 验证与原型”：FPGA 原型平台与 SoC 项目实践方法",
+   "items": []
+  }
+ ],
+ "coverage": [
+  {
+   "topic": "片上系统架构与IP复用",
+   "refs": [
+    "A:1",
+    "A:1.7",
+    "A:1.7.1",
+    "A:1.10",
+    "A:1.10.1",
+    "A:7.2"
+   ]
+  },
+  {
+   "topic": "处理器与加速器集成",
+   "refs": [
+    "A:3",
+    "A:3.2",
+    "A:3.2.2",
+    "A:3.12.1",
+    "A:6",
+    "A:6.4",
+    "A:6.4.1",
+    "A:6.8"
+   ]
+  },
+  {
+   "topic": "片上总线与AXI协议",
+   "refs": [
+    "A:5.3",
+    "A:5.3.1",
+    "A:5.4",
+    "A:5.4.1",
+    "A:5.4.3"
+   ],
+   "note": "A 的 AMBA 一节覆盖 AHB/ASB 等标准总线，目录里没有单独列 AXI；AXI 是该节所属 AMBA 家族内的协议，具体到 AXI 的时序细节需要看 B 课程第 10 讲 On-Chip Bus-Interconnection Structures 的讲义"
+  },
+  {
+   "topic": "片上网络",
+   "refs": [
+    "A:1.6.2",
+    "A:5.6",
+    "A:5.6.1",
+    "A:5.6.2",
+    "A:5.7",
+    "A:5.7.1",
+    "A:5.8",
+    "A:5.8.1",
+    "A:5.8.3",
+    "A:5.9"
+   ]
+  },
+  {
+   "topic": "存储子系统与DMA",
+   "refs": [
+    "A:4",
+    "A:4.3",
+    "A:4.13",
+    "A:4.14",
+    "A:4.16"
+   ],
+   "note": "A 第 4 章讲片上/片外存储子系统、cache 与处理器-存储交互，DMA 没有单独小节，只在 5.3.1 总线仲裁与协议里涉及主设备直接访存"
+  },
+  {
+   "topic": "时钟与电源域",
+   "refs": [
+    "A:2.5",
+    "A:2.6"
+   ],
+   "note": "A 有功耗专节（2.5 Power）与面积-时间-功耗折中，但没有“时钟域/电源域（clock/power domain）”的独立章节；该主题在 B 课程里也没有独立讲次"
+  },
+  {
+   "topic": "软硬件协同设计",
+   "refs": [
+    "A:1.3",
+    "A:1.7.2",
+    "A:7.2",
+    "B:#1"
+   ]
+  },
+  {
+   "topic": "SoC验证与原型",
+   "refs": [
+    "B:#1",
+    "B:#2",
+    "B:#3"
+   ]
+  }
+ ],
+ "omitted": "A 只收了与节点相关的 1、2（仅 2.5/2.6）、3、4、5、6、7 章；第 1 章的历史与产品经济学（1.9）、第 2 章的周期时间/面积/缩放/可靠性各节、第 3 章的微架构细节（指令译码、分支预测、超标量）、第 4 章的 cache 组织与 DRAM 细节、第 6 章的实例细节、第 8 章 Autonomous SoC（自主系统）以及各章 Problem Set 未收。B 只收了补缺的三讲。",
+ "notes": "A 的目录来自 Wiley 出版社的 Contents PDF（media.wiley.com 上 product_data/excerpt 链接），PDF 中的连字（Conﬁ gurability、Speciﬁ cations）与换行已按正确拼写抄写。B 的讲次页只有 13 条讲次、没有讲内小节，所以补充分支只到讲次。",
+ "checked": {
+  "date": "2026-11-22",
+  "exact": 61,
+  "fuzzy": 0,
+  "dropped": []
+ }
+}
