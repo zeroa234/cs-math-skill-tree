@@ -36,7 +36,7 @@ for(const {id,record,result} of prepared){
  if(zh){
   const key='path-'+id.toLowerCase().replaceAll('.','-');review.chineseCatalog[key]=resource(zh);review.chinese[id]={source:key,covers:zh.covers};delete review.chineseGaps[id];
  }else{
-  delete review.chinese[id];review.chineseGaps[id]='本轮未找到可组成独立中文路线的教学，逐知识点缺口与查找记录见双语路线。';
+  delete review.chinese[id];review.chineseGaps[id]='暂未找到可组成独立中文路线的教学，逐知识点缺口与查找记录见双语路线。';
  }
  const primaryURLs=new Set([en?.url,zh?.url].filter(Boolean));
  const seen=new Set(primaryURLs);

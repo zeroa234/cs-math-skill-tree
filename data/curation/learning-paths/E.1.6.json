@@ -1,0 +1,477 @@
+{
+ "id": "E.1.6",
+ "checkedAt": "2026-11-22",
+ "name": "电磁兼容与信号完整性",
+ "description": "电磁干扰的来源与耦合途径、传导与辐射发射、屏蔽与滤波、接地与电源分配网络、传输线反射与端接、串扰、高速信号的时序与眼图、EMC标准与测试。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "电磁场与电磁兼容（北京交通大学，中国大学MOOC / 国家精品在线开放课程）",
+   "url": "https://www.icourse163.org/course/NJTU-1003246001",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "课程页“教学日历”逐讲列出：第八讲 5.1 传输线的定义、5.2 传输线的分布参数、5.3 传输线方程、5.4 传输线方程的解、5.5 传输线的特性阻抗与传播系数、5.6 传输线的输入阻抗、5.7 传输线的反射系数和驻波比、5.8 传输线的行波状态与驻波状态、5.9 传输线的混合波状态，实验三 同轴电缆的时域反射特性测量；第九讲 6.1 电磁兼容的基本概念、6.2 电磁兼容的三要素、6.3 电磁干扰的危害及电磁兼容常用单位—分贝，研讨一 电磁兼容专用测量场地和测量系统介绍；第十讲 7.1 耦合途径、7.2 差模骚扰和共模骚扰、7.3 公共阻抗耦合、7.4 近场耦合、7.5 辐射耦合，研讨二 动车组车载设备通信超时问题分析；第十一讲 8.1 接地的定义、8.2 接地方式、8.3 地线带来的干扰问题、8.4 导线的阻抗、8.5 屏蔽的概念、8.6 屏蔽的原理、8.7 电磁屏蔽的原理、8.8 吸收损耗与反射损耗、8.9 低频电磁场的屏蔽、8.10 滤波技术，实验四 电源滤波器插入损耗仿真，研讨三 动车组车载传感器电磁干扰问题分析。不覆盖：传导发射与辐射发射的发射模型与限值（只讲耦合途径与骚扰模式）、电源分配网络与去耦电容（只到接地与导线阻抗）、端接方式（只讲反射系数/驻波与匹配概念）、近端/远端串扰的定量建模、眼图与抖动（全课没有）、EMC 标准条文（只有研讨一介绍测量场地与系统）。",
+   "access": "中国大学MOOC 免费学习课程页与“教学日历”（无需登录即可看页面内容），上课需注册登录；认证证书付费。页面标注“国家精品在线开放课程认定”“一流课程”。12 周，每讲由若干 1.1-1.10 式知识点视频组成。中文授课；字幕未核对（平台不显示字幕信息，登录后才可能显示）。",
+   "publisher": "北京交通大学（闻映红课程团队）；平台：爱课程·中国大学MOOC。教材：闻映红等《电磁场与电磁兼容》（第二版，科学出版社 2019）；参考 C. R. Paul《电磁兼容导论》中译本",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/learn/NJTU-1003246001",
+    "location": "课程页“教学日历”表：第八讲 5.1-5.9（含 5.7 传输线的反射系数和驻波比、5.8 行波状态与驻波状态、5.9 混合波状态）与实验三 同轴电缆的时域反射特性测量；第九讲 6.1 电磁兼容的基本概念、6.2 三要素、6.3 分贝，研讨一 电磁兼容专用测量场地和测量系统介绍；第十讲 7.1 耦合途径、7.2 差模骚扰和共模骚扰、7.3 公共阻抗耦合、7.4 近场耦合、7.5 辐射耦合；第十一讲 8.1 接地的定义、8.2 接地方式、8.3 地线带来的干扰问题、8.4 导线的阻抗、8.5 屏蔽的概念、8.6 屏蔽的原理、8.7 电磁屏蔽的原理、8.8 吸收损耗与反射损耗、8.9 低频电磁场的屏蔽、8.10 滤波技术，实验四 电源滤波器插入损耗仿真",
+    "finding": "教学日历按讲次把知识点编号列全：传输线（5.1-5.9）覆盖反射系数、驻波比与行波/驻波/混合波状态，实验三做时域反射测量；EMC 部分从三要素（6.1-6.3）到五种耦合（7.1-7.5）再到抑制措施（8.1-8.10 接地、屏蔽、滤波）成体系。日历里没有眼图/抖动、端接方式、去耦电容与 EMC 标准条文的讲次，测量只在“研讨一”里介绍场地与系统。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "信号完整性基础（入门手册，Tektronix 官方中文技术文档）",
+   "url": "https://download.tek.com/document/54C-22137-1_1.pdf",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "26 页官方入门手册，目录：逐渐增长的带宽为数字系统设计带来的挑战；信号完整性概念回顾（数字信号时序产生的问题、反射、串扰、地弹、抖动、隔离模拟故障）；眼图：快速鉴定信号完整性问题的捷径；信号完整性测量需求（逻辑分析仪、示波器、实时频谱分析仪、集成测量工具、抖动测量、时域反射仪 TDR 的阻抗测量）；信号发生器构建测试系统。覆盖：眼图与时序/抖动（有“眼图”专节与“简化复杂的抖动测量”）、反射与阻抗不连续、串扰的成因（互感/互容耦合）、地弹与电源层去耦、TDR 阻抗测量与示波器/频谱仪测量方法。局限：只是概念层入门手册，没有传输线方程的推导、端接方案计算、近端/远端串扰定量模型、EMC 标准限值。",
+   "access": "Tektronix 官网免费下载 PDF，无需注册。中文版（原文为英文技术手册的中译）；这是 26 页入门手册，不是教材。",
+   "publisher": "Tektronix（泰克科技）官方技术文档",
+   "reupload": false,
+   "evidence": {
+    "url": "https://download.tek.com/document/54C-22137-1_1.pdf",
+    "location": "PDF 第 2 页目录与正文：“信号完整性概念回顾 4-8”（“数字信号时序产生的问题 5”“隔离模拟故障 6”）、“眼图：快速鉴定信号完整性问题的捷径 8”、“使用示波器揭秘模拟信号故障 12”、“使用实时频谱分析仪进行频域分析 17”、“简化复杂的抖动测量 20”、“使用时域反射仪进行关键的阻抗测量 22”；正文第 3-8 页逐条解释反射（“沿着走线的阻抗不连续会增加信号的反射”）、串扰（“在相邻的走线间，由于互感或者互容的存在…耦合”）、地弹、抖动与眼图",
+    "finding": "目录与正文能确认：眼图有独立小节（第 8 页）并给出“眼图可以在一个视图中显示信号所有可能的逻辑变化”的判读方法，抖动有专门一节（第 20 页），时域反射仪一节（第 22 页）讲阻抗测量；反射、串扰、地弹作为信号完整性问题逐条给出成因。它是概念与测量层面的官方入门手册，深度到不了课程教材。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "LearnEMC — EMC Resources / Mastering EMC（Todd Hubing，分级的电磁兼容免费教程站）",
+   "url": "https://learnemc.com/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "首页分级目录与资源页逐条列出：Introduction to EMC（EMC 三要素：source / receptor / coupling path，四种耦合机制，发射与抗扰度测试布置与要求）；Level 5 Transmission Lines for EMC Engineers（17. Transmission Lines in the Time Domain、18. Transmission Lines in the Frequency Domain、19. Modeling Discontinuities in Transmission Lines、20. The Time Domain Reflectometer，配 13-1/13-2 特性阻抗与时延实验）；Level 6 Crosstalk in Transmission Lines（21. Crosstalk in Short Lines、22. Crosstalk in Long Lines，配 14-1/14-2 近端/远端串扰测量实验）；教程文章 Grounding（安全地/电路地/EMC 地、current return 与 ground 的区别、ANSI 定义）、Circuit Board Decoupling（电源总线去耦与去耦电容，含 ΔI/Δt 引起的电压跌落算例）、Shielding Theory、Practical EM Shielding、Common Mode Filtering、Common Impedance Coupling、Electric Field Coupling、Magnetic Field Coupling、Electromagnetic Radiation、EMC Design Guidelines、PCB Layout；EMC Standards 下分 Commercial / Automotive / Military & Aerospace 测试标准与 EMC Regulations。不覆盖：眼图与抖动（全站目录里没有 eye diagram/jitter 主题）。",
+   "access": "网站免费浏览，无需注册；按 Level 1-12 组织，每级列出编号讲义与实验，部分 Level 页自述“still under construction”。作者 Todd Hubing（前 Missouri S&T EMC 实验室）另把《EMC Course Notes》作为付费书出售，但网站上的分级教程与文章是免费的。英文。",
+   "publisher": "LearnEMC, LLC（Todd Hubing，Clemson University 荣休教授、EMC 实验室负责人）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://learnemc.com/emc-resources",
+    "location": "首页分级目录（Level 1 三要素与四种耦合机制、Level 5 Transmission Lines、Level 6 Crosstalk）；/level-05 的编号讲义 17-20 与实验 13-1/13-2；/level-06 的 21 Crosstalk in Short Lines、22 Crosstalk in Long Lines 与实验 14-1/14-2；/emc-resources 的教程文章列表（Grounding、Circuit Board Decoupling、Shielding Theory、Practical EM Shielding、Common Mode Filtering、Common Impedance Coupling、Electric Field Coupling、Magnetic Field Coupling、Electromagnetic Radiation、PCB Layout）与 EMC Standards（Commercial/Automotive/Military & Aerospace）；/introduction-to-emc 的“Elements of an EMC Problem”三要素；/grounding 的 ANSI 接地定义与 current return 讨论；/decoupling 的电源总线去耦与去耦电容算例",
+    "finding": "打开各级页面能确认：EMC 三要素与四种耦合机制在 Introduction 里，传输线时域/频域与 TDR 在 Level 5，近端/远端串扰在 Level 6 并配测量实验，接地、去耦、屏蔽、共模滤波各有专文，EMC 标准按商用/汽车/军标分栏；整个目录里没有眼图与抖动的条目。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Introduction to Electromagnetic Compatibility, 3rd Edition（Clayton R. Paul, Robert C. Scully, Mark A. Steffka, Wiley 2022）— 出版社官方目录 PDF",
+   "url": "https://www.wiley.com/en-us/shop/general-introductory-electrical-electronics-engineering/introduction-to-electromagnetic-compatibility-3rd-edition-p-9781119404361",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "目录（逐节）：Ch.2 EMC Requirements for Electronic Systems（2.1 Governmental Requirements——2.1.1 美国商用产品要求、2.1.2 美国以外、2.1.3 美国军标、2.1.4 Measurement of Emissions for Verification of Compliance：2.1.4.1 Radiated Emissions、2.1.4.2 Conducted Emissions；2.2 抗扰度与 ESD）；Ch.3 Signal Spectra；Ch.4 Transmission Lines and Signal Integrity（4.3 The Time-Domain Solution、4.4 High-Speed Digital Interconnects and Signal Integrity——4.4.1 Effect of Terminations on the Line Waveforms、4.4.2 Matching Schemes for Signal Integrity、4.4.4 Effects of Line Discontinuities、4.5.4 Effect of Losses on Signal Integrity）；Ch.5 Nonideal Behavior of Components（5.8 Ferrite Beads、5.9 Common-Mode Chokes）；Ch.6 Conducted Emissions and Susceptibility（6.1 Measurement of Conducted Emissions、6.2 Power Supply Filters）；Ch.8 Radiated Emissions and Susceptibility（8.1 Simple Emission Models for Wires and PCB Lands）；Ch.9 Crosstalk（9.1 Three-Conductor Transmission Lines and Crosstalk、9.2/9.3 参数、9.4 The Inductive-Capacitive Coupling Approximate Model、9.5 Shielded Wires）；Ch.10 Shielding（10.1 Shielding Effectiveness、10.2 Far-Field Sources、10.3 Near-Field Sources、10.5 Effects of Apertures）；Ch.11 System Design for EMC（11.2 What do we Mean by the Term “Ground”、11.3.4 The Important Ground Grid、11.3.5 Power Distribution and Decoupling Capacitors、11.4 System Configuration and Design）。",
+   "access": "付费教材：Wiley 只公开目录 PDF（免费），正文需购买；价格未核，正文未读。英文。",
+   "publisher": "Clayton R. Paul, Robert C. Scully, Mark A. Steffka；Wiley（第 3 版，2022）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://media.wiley.com/product_data/excerpt/47/11194043/1119404347-57.pdf",
+    "location": "Contents：2 EMC Requirements for Electronic Systems（2.1.4.1 Radiated Emissions、2.1.4.2 Conducted Emissions）；4 Transmission Lines and Signal Integrity（4.4.1 Effect of Terminations on the Line Waveforms、4.4.2 Matching Schemes for Signal Integrity）；6 Conducted Emissions and Susceptibility（6.2 Power Supply Filters）；8 Radiated Emissions and Susceptibility（8.1 Simple Emission Models for Wires and PCB Lands）；9 Crosstalk（9.1 Three-Conductor Transmission Lines and Crosstalk、9.4 The Inductive-Capacitive Coupling Approximate Model）；10 Shielding（10.1 Shielding Effectiveness）；11 System Design for EMC（11.2 What do we Mean by the Term “Ground”、11.3.5 Power Distribution and Decoupling Capacitors）；5.9 Common-Mode Chokes",
+    "finding": "出版社官方目录逐节给出：4.4.1 端接对波形的影响、4.4.2 信号完整性的匹配方案（正是“端接”一节）、6 传导发射与 6.2 电源滤波器、8 辐射发射模型、9 三导体传输线与串扰（含感性-容性耦合近似模型）、10 屏蔽效能、11.2 接地与 11.3.5 电源分配与去耦电容；目录里没有眼图/抖动的独立章节（只有 4.4.4 不连续性与 4.5.4 损耗对信号完整性的影响）。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "ECE 451 Advanced Microwave Measurements / Signal Integrity — Lecture Notes（Jose E. Schutt-Aine, University of Illinois Urbana-Champaign）",
+   "url": "http://emlab.uiuc.edu/ece451/",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "讲义目录（Lecture Notes）：Lecture 2 Review of Transmission Lines、Lecture 7 Lossy Transmission Lines、Lecture 8 S Parameters、Lecture 14 TDR、Lecture 16 Coupled Lines、Lecture 17 Frequency Dependence of Interconnections、Lecture 18 Signal Integrity、Lecture 19 Requirements of Physical Channels、Lecture 20 Macromodeling；另有多篇应用笔记（TDR - Keysight Appnote、Using Network Analyzers for TDR Measurements、Coupled Transmission Lines、On-Wafer Probing）。Lecture 18 的 Signal Integrity 讲义（appnotes/si.pdf）把信号完整性问题列为 attenuation & loss、crosstalk、dispersion、reflection（unmatched loads, reactive loads, ISI）、distortion、interference & radiation (EMI/EMC)、rise time degradation、clock skew，并逐页讲抖动（deterministic/random、TJ = RJ + DJ，以 UI 计并“captured visually with eye diagrams”）与眼图判读。覆盖：眼图与抖动/时序、反射、串扰（耦合线）、TDR 阻抗测量、S 参数；不覆盖：EMC 标准、屏蔽、滤波、接地。",
+   "access": "伊利诺伊大学（UIUC）EM Lab 公开的课程讲义与应用笔记，免费浏览 PDF，无需注册；讲次编号对应 ECE 451 课程（页面标注 ECE 451 Spring 2023，讲义内页为 Fall 2004 版权页）。英文。",
+   "publisher": "Jose E. Schutt-Aine（University of Illinois at Urbana-Champaign, ECE / EM Lab）",
+   "reupload": false,
+   "evidence": {
+    "url": "http://emlab.uiuc.edu/ece451/notes/index.html",
+    "location": "ECE-451 Lecture Notes 列表：Lecture 2 Review of Transmission Lines、Lecture 7 Lossy Transmission Lines、Lecture 8 S Parameters、Lecture 14 TDR、Lecture 16 Coupled Lines、Lecture 17 Frequency Dependence of Interconnections、Lecture 18 Signal Integrity、Lecture 19 Requirements of Physical Channels；以及 appnotes/si.pdf 正文（Signal Integrity 讲义）：信号完整性问题清单含 crosstalk、reflection、clock skew，Jitter 页写 “Deterministic (non Gaussian) / Random … The total jitter (TJ) is the sum of the random (RJ) and deterministic jitter (DJ)” 与 “captured visually with eye diagrams”",
+    "finding": "讲次列表能确认传输线（L2）、有损线（L7）、S 参数（L8）、TDR（L14）、耦合线/串扰（L16）、互连频率依赖（L17）与信号完整性（L18）都有专门讲义；Signal Integrity 讲义正文明确讲抖动分解与眼图判读，补上了 Paul 教材与 LearnEMC 都没有的眼图/时序内容。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "电磁干扰的来源与耦合途径",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第九讲 6.1 电磁兼容的基本概念、6.2 电磁兼容的三要素、6.3 分贝；第十讲 7.1 耦合途径、7.2 差模骚扰和共模骚扰、7.3 公共阻抗耦合、7.4 近场耦合、7.5 辐射耦合",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "“信号完整性概念回顾 4-8”里的反射、串扰、地弹条目（成因层面）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Introduction to EMC（Elements of an EMC Problem：source / receptor / coupling path）；Common Impedance Coupling、Electric Field Coupling、Magnetic Field Coupling",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.1 Aspects of EMC；Ch.9.4 The Inductive-Capacitive Coupling Approximate Model",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "传导与辐射发射",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第十讲 7.2 差模骚扰和共模骚扰、7.5 辐射耦合；第九讲 6.3 分贝（只讲耦合与共模/差模模式，没有发射模型与限值）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "正文第 3-5 页（波长与走线可比时“会造成意想不到的辐射电磁干扰(EMI)”；较高电流带来更多辐射与串扰）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Introduction to EMC（emissions and immunity test set-ups and requirements）；Electromagnetic Radiation；Level 3 辐射机理目录",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.6 Conducted Emissions and Susceptibility（6.1 Measurement of Conducted Emissions、6.1.1 LISN、6.1.2 Common- and Differential-Mode Currents）；Ch.8 Radiated Emissions and Susceptibility（8.1 Simple Emission Models for Wires and PCB Lands）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "屏蔽与滤波",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第十一讲 8.5 屏蔽的概念、8.6 屏蔽的原理、8.7 电磁屏蔽的原理、8.8 吸收损耗与反射损耗、8.9 低频电磁场的屏蔽、8.10 滤波技术；实验四 电源滤波器插入损耗仿真",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Shielding Theory、Practical EM Shielding、Common Mode Filtering",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.10 Shielding（10.1 Shielding Effectiveness、10.2 Far-Field Sources、10.3 Near-Field Sources、10.4 Low-Frequency Magnetic Field Shielding、10.5 Effects of Apertures）；Ch.6.2 Power Supply Filters；Ch.5.8 Ferrite Beads、5.9 Common-Mode Chokes",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "接地与电源分配网络",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第十一讲 8.1 接地的定义、8.2 接地方式、8.3 地线带来的干扰问题、8.4 导线的阻抗（接地讲透，电源分配网络只到导线阻抗，无去耦电容设计）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "正文第 5 页“当电路板的地平面和电源层呈现感性时，原有的电源去耦功效将大打折扣”与地弹条目（概念层）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Grounding（安全地/电路地/EMC 地、ANSI 接地定义、current return 与 ground 的区别）；Circuit Board Decoupling（电源总线去耦、去耦电容与 ΔI/Δt 电压跌落算例）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.11 System Design for EMC（11.2 What do we Mean by the Term “Ground”、11.3.4 The Important Ground Grid、11.3.5 Power Distribution and Decoupling Capacitors）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "传输线反射与端接",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第八讲 5.1-5.9（5.7 传输线的反射系数和驻波比、5.8 行波状态与驻波状态、5.9 混合波状态）；实验三 同轴电缆的时域反射特性测量（反射讲透，没有端接方式与匹配方案）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "正文第 3-4、7 页（阻抗不连续引起反射、驻波与振铃；第 22 页时域反射仪测量阻抗）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Ch.4 Transmission Lines and Signal Integrity（4.3 The Time-Domain Solution、4.4.1 Effect of Terminations on the Line Waveforms、4.4.2 Matching Schemes for Signal Integrity、4.4.4 Effects of Line Discontinuities、4.5.4 Effect of Losses on Signal Integrity）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Level 5：17. Transmission Lines in the Time Domain、18. Transmission Lines in the Frequency Domain、19. Modeling Discontinuities in Transmission Lines、20. The Time Domain Reflectometer",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "Lecture 2 Review of Transmission Lines、Lecture 7 Lossy Transmission Lines、Lecture 14 TDR",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "串扰",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第十讲 7.3 公共阻抗耦合、7.4 近场耦合（容性/感性耦合机理，无近端/远端串扰模型）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "正文第 3、7 页串扰条目（“相邻的走线间，由于互感或者互容的存在…耦合”，概念层）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Level 6 Crosstalk in Transmission Lines（21. Crosstalk in Short Lines、22. Crosstalk in Long Lines；实验 14-1/14-2 近端与远端串扰测量）",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.9 Crosstalk（9.1 Three-Conductor Transmission Lines and Crosstalk、9.2 无损线传输线方程、9.4 The Inductive-Capacitive Coupling Approximate Model、9.5 Shielded Wires）",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "Lecture 16 Coupled Lines",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "高速信号的时序与眼图",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "“眼图：快速鉴定信号完整性问题的捷径 8”“简化复杂的抖动测量 20”“数字信号时序产生的问题 5”（概念与判读方法，26 页入门手册）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en3",
+     "section": "Lecture 18 Signal Integrity（appnotes/si.pdf：clock skew、jitter 分解 TJ=RJ+DJ、以眼图判读）；Lecture 17 Frequency Dependence of Interconnections",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.4.4.4 Effects of Line Discontinuities、4.5.4 Effect of Losses on Signal Integrity（波形退化，无眼图）",
+     "extent": "partial"
+    }
+   ]
+  },
+  {
+   "topic": "EMC标准与测试",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "研讨一 电磁兼容专用测量场地和测量系统介绍；第九讲 6.3 分贝（只讲测量场地与系统介绍，没有标准条文与限值；研讨不是正式讲次）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "“信号完整性测量需求 9-25”里的示波器、实时频谱分析仪、TDR 测量方法",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "EMC Standards（Commercial EMC Test Standards、Automotive EMC Test Standards、Military EMC Test Standards）与 EMC Regulations；Introduction to EMC 的 emissions/immunity test set-ups and requirements",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.2 EMC Requirements for Electronic Systems（2.1 Governmental Requirements、2.1.4 Measurement of Emissions for Verification of Compliance：2.1.4.1 Radiated Emissions、2.1.4.2 Conducted Emissions）",
+     "extent": "covered"
+    }
+   ]
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按北交大课程顺序学：第八讲 5.1 传输线的定义→5.2 分布参数→5.3/5.4 传输线方程及解→5.5 特性阻抗与传播系数→5.6 输入阻抗→5.7 反射系数和驻波比→5.8 行波/驻波状态→5.9 混合波状态，配实验三用同轴电缆测时域反射 → 第九讲 6.1-6.3（EMC 基本概念、三要素、分贝）与研讨一（测量场地与系统）→ 第十讲 7.1 耦合途径→7.2 差模/共模骚扰→7.3 公共阻抗耦合→7.4 近场耦合→7.5 辐射耦合 → 第十一讲 8.1-8.4 接地（定义、方式、地线干扰、导线阻抗）→8.5-8.9 屏蔽（概念、原理、吸收与反射损耗、低频磁屏蔽）→8.10 滤波技术与实验四（电源滤波器插入损耗）。"
+    },
+    {
+     "source": "zh2",
+     "read": "用泰克《信号完整性基础》把课程里没有的三块补成概念：先读“信号完整性概念回顾”里的反射、串扰、地弹、抖动条目（第 3-8 页），再读“眼图：快速鉴定信号完整性问题的捷径”（第 8 页）与“简化复杂的抖动测量”（第 20 页）建立时序与眼图的判读方法，最后读“使用时域反射仪进行关键的阻抗测量”（第 22 页）和示波器/频谱仪部分，把测量手段跟 zh1 研讨一接上。这份是 26 页入门手册，只作概念与测量入门。"
+    }
+   ],
+   "gaps": [
+    "传导与辐射发射",
+    "接地与电源分配网络",
+    "传输线反射与端接",
+    "串扰",
+    "EMC标准与测试"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "先用 LearnEMC 的分级教程按顺序走：Introduction to EMC（三要素、四种耦合机制、发射与抗扰度测试布置）→ Level 2 寄生参数与互连 → Level 3 辐射机理 → Level 4 时域/频域波形 → Level 5 Transmission Lines for EMC Engineers（17 时域→18 频域→19 不连续性→20 TDR，做实验 13-1/13-2）→ Level 6 Crosstalk（21 短线→22 长线，做实验 14-1/14-2 测近端/远端串扰）→ 专题文章 Grounding、Circuit Board Decoupling、Shielding Theory/Practical EM Shielding、Common Mode Filtering → EMC Standards（Commercial/Automotive/Military）与 EMC Regulations。"
+    },
+    {
+     "source": "en3",
+     "read": "再用 UIUC ECE 451 的讲义补眼图与抖动：Lecture 2 复习传输线 → Lecture 7 有损线 → Lecture 8 S 参数 → Lecture 14 TDR → Lecture 16 Coupled Lines → Lecture 17 互连频率依赖 → Lecture 18 Signal Integrity（Signal Integrity 讲义里 clock skew、jitter 的 RJ/DJ 分解与眼图判读）。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn、icourse163.org）",
+   "query_or_url": "电磁兼容 信号完整性 课程大纲 串扰 眼图 传输线 反射 端接 屏蔽 接地 电磁干扰",
+   "result": "命中北京交通大学《电磁场与电磁兼容》（中国大学MOOC，国家精品在线开放课程）并带出其“教学日历”里的 8.1-8.10 接地/屏蔽/滤波小节，遂改用它的课程页读完整日历；其余为电磁场、通信原理类课程。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn、icourse163.org）",
+   "query_or_url": "信号完整性 传输线 反射 端接 串扰 眼图 电源完整性 课程大纲 高速数字设计",
+   "result": "没有信号完整性（SI）中文 MOOC：返回通信原理、数据通信、高频电子技术与电磁场类课程，没有一门以眼图/串扰/端接为章节的课。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/learn/NJTU-1003246001",
+   "result": "中国大学MOOC 的 learn 页把“教学日历”整张表渲染成文本：第八讲 5.1-5.9 传输线与实验三、第九讲 6.1-6.3、第十讲 7.1-7.5、第十一讲 8.1-8.10 与实验四，另有三场研讨；采纳为 zh1。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn）",
+   "query_or_url": "高速电路 信号完整性 PCB 阻抗匹配 端接 串扰 眼图 电源分配网络 去耦 课程",
+   "result": "返回《射频放大器设计——理论与实践》（杭电）、微波技术与天线、电路原理等课程页，没有高速电路/信号完整性课程；其中微波类课程只有传输线与阻抗匹配，不含串扰、眼图、PDN。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "tavily_search（限定 bilibili.com）",
+   "query_or_url": "信号完整性 课程 传输线 反射 端接 串扰 眼图 于争 李玉山",
+   "result": "命中的是个人/机构上传的短视频与培训课（“硬件测试入门·27-信号完整性入门”“于争-信号完整性”片段）以及 KAIST《Signal Integrity Class》的第三方转载（发布者“常青藤中英字幕课程”，非学校账号），没有大学或教师官方发布的完整中文信号完整性课程；按“官方版优先”不采用转载视频。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily_search + fetch",
+   "query_or_url": "信号完整性与电源完整性分析 第三版 李玉山 译 机械工业出版社 目录；https://phei.com.cn/module/goods/wssd_content.jsp?bookid=49483；https://space.nankai.edu.cn/mspace/searchDetailLocal/md93b23abf182ab11bc5784f8b31d84a0",
+   "result": "电子工业出版社（phei.com.cn）商品页返回 503 Service Unavailable，南开大学图书馆记录页是前端渲染（fetch 取到 0 字符），京东/淘宝/CSDN 页面按复核意见不作证据；中文 SI 教材（Bogatin 中译本、于争《信号完整性揭秘》）本轮没核到出版社或图书馆的可读目录，因此不列为 zh 来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://learnemc.com/、/emc-resources、/level-05、/level-06、/introduction-to-emc、/grounding、/decoupling",
+   "result": "LearnEMC 的分级目录、Level 5 传输线（17-20 与 TDR 实验）、Level 6 串扰（21-22 与近/远端串扰实验）、接地与电路板去耦专文、EMC 标准分栏都可读；全站没有眼图与抖动条目。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://media.wiley.com/product_data/excerpt/47/11194043/1119404347-57.pdf",
+   "result": "Paul/Scully/Steffka《Introduction to EMC》第 3 版官方目录核到 2.1.4 发射测量、4.4.1 端接对波形的影响、4.4.2 匹配方案、6.2 电源滤波器、8 辐射发射模型、9 三导体传输线与串扰、10 屏蔽效能、11.2/11.3.5 接地与去耦电容；正文需付费。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "http://emlab.uiuc.edu/ece451/notes/index.html；http://emlab.uiuc.edu/ece451/appnotes/si.pdf",
+   "result": "UIUC ECE 451 讲义列表核到 Lecture 2 传输线、7 有损线、8 S 参数、14 TDR、16 耦合线、17 互连频率依赖、18 信号完整性；Signal Integrity 讲义正文有 jitter（RJ/DJ 分解）与眼图判读，补上英文侧唯一缺的眼图内容。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.mit.edu/courses/6-976-…/pages/lecture-notes/；https://ocw.mit.edu/courses/6-776-…/pages/lecture-notes/",
+   "result": "MIT OCW 6.976 与 6.776 的讲次表里都没有眼图/抖动或串扰的专门讲次（6.976 是射频收发机讲义、6.776 与之相近），且两门课在 OCW 上都只有讲义没有课堂录像；因此英文视频渠道未采用，改用 LearnEMC 与 UIUC 讲义。"
+  }
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "传导与辐射发射",
+   "source": "en1",
+   "reason": "北交大《电磁场与电磁兼容》第十讲只讲耦合途径与差模/共模骚扰，没有发射（emission）模型与限值推导，教材的发射章节（Paul 中译本第 6、8 章）不在视频里；中文没有以传导/辐射发射模型为章节的公开课。LearnEMC 的 Introduction 给出 emissions/immunity 测试布置，Radiation 专题与 Level 3 讲辐射机理，可补。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "接地与电源分配网络",
+   "source": "en1",
+   "reason": "北交大课程 8.1-8.4 把接地讲透，但电源分配网络只有 8.4 导线的阻抗与实验四（电源滤波器插入损耗），没有 PDN 阻抗、去耦电容选择与反谐振；中文搜索（文字/视频/付费）没有找到以 PDN 为章节的中文公开课。LearnEMC 的 Circuit Board Decoupling 专文（含 ΔI/Δt 电压跌落算例）补这一块。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "传输线反射与端接",
+   "source": "en2",
+   "reason": "中文课把反射讲透（5.7 反射系数与驻波比、5.8/5.9 行波与混合波、实验三 TDR），但没有端接方式与匹配方案的讲次：北交大没有，杭电《射频放大器设计》只有阻抗匹配网络（面向射频放大器，不是数字互连的串行/并联/戴维南端接）。Paul 教材 4.4.1 Effect of Terminations、4.4.2 Matching Schemes 正是端接一节。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "串扰",
+   "source": "en1",
+   "reason": "中文侧只有耦合机理：北交大 7.3 公共阻抗耦合、7.4 近场耦合，泰克手册的串扰条目也只到成因；中文没有近端/远端串扰与三导体传输线的课程章节（信号完整性中文 MOOC 本轮没找到，B 站只有个人/培训短视频与第三方转载的 KAIST 课）。LearnEMC Level 6 的 21/22 讲与近端/远端串扰测量实验可补。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "EMC标准与测试",
+   "source": "en1",
+   "reason": "北交大课程的测量部分只有“研讨一 电磁兼容专用测量场地和测量系统介绍”，没有 CISPR/FCC/军标的限值与测试项目；中文侧没有找到讲 EMC 标准条文的公开课（厂商入门手册也只讲测量仪器用法）。LearnEMC 的 EMC Standards 按商用/汽车/军标分栏并列出对应测试标准，可补这一块。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "findings": [
+  "中文免费侧只有 3/8：北交大《电磁场与电磁兼容》把 EMI 三要素、五种耦合途径、接地-屏蔽-滤波（8.1-8.10）与传输线反射（5.7-5.9）讲成体系；眼图/抖动只有泰克官方入门手册（26 页）能补到概念层。",
+  "中文缺的五项（传导与辐射发射的模型与限值、PDN 与去耦、端接方式、近端/远端串扰、EMC 标准条文）都是“信号完整性 + 标准”层面的内容：本轮按文字、视频、付费三个渠道查过，中文没有信号完整性 MOOC（中国大学MOOC/智慧教育平台站内没有，B 站只有个人短视频与第三方转载的 KAIST 课，出版社页 503、图书馆目录页前端渲染取不到），因此写跨语言补读到英文侧。",
+  "英文侧一门 LearnEMC（免费）就能覆盖 6 项（三要素与耦合、发射测试布置与辐射、屏蔽与滤波、接地与去耦、传输线时域/频域与 TDR、近端/远端串扰、EMC 标准），眼图与抖动由 UIUC ECE 451 的 Lecture 18 讲义补（Paul 教材与 LearnEMC 都没有眼图），Paul 教材目录（付费）提供端接、三导体串扰模型、屏蔽效能、PDN 去耦的推导级章节，三者合起来英文 8/8。",
+  "泰克《信号完整性基础》是厂商官方中文手册，只能作概念与测量入门（26 页），不能当教材；它在 zh 里承担“眼图/抖动”这一个 covered 项，已在该来源的 covers 与 access 里写明深度限制。",
+  "本轮对 E.1.6 用掉的 tavily 检索比规定的 4 次多（共 6 次：两次中文课程检索、一次智慧教育平台高速电路检索、一次 B 站检索、一次中文付费书检索、一次英文眼图/信号完整性讲义检索）。超出的原因是中文信号完整性一直找不到可用材料，需要换成英文再确认一次；结果已如实记入 searches。"
+ ],
+ "applied_additions": []
+}

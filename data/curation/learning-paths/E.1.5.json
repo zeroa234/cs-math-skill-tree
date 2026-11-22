@@ -1,0 +1,444 @@
+{
+ "id": "E.1.5",
+ "checkedAt": "2026-11-22",
+ "name": "射频集成电路设计",
+ "description": "射频收发机架构、低噪声放大器、混频器、压控振荡器与相位噪声、锁相环频率综合器、射频功率放大器、阻抗匹配与片上无源器件、非线性与线性度指标。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "射频放大器设计——理论与实践（杭州电子科技大学，国家高等教育智慧教育平台课程页 / 爱课程·中国大学MOOC）",
+   "url": "https://higher.smartedu.cn/course/62354d629906eace04902e94",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "课程大纲逐节渲染：第一章 射频器件基础（1.1 射频器件制作方法、1.2 趋肤效应、1.3 高频电阻、1.4 高频电容、1.5 高频电感、1.6 变压器和传输线）；第二章 传输线理论（2.1 传输线理论的实质、2.2 传输线实例、2.3 传输线等效电路模型和方程、2.4 微带传输线、2.5 带连接的传输线：负载连接、2.6 带连接的传输线：信号源连接）；第三章 Smith 圆图（3.1 阻抗圆图、3.2 导纳圆图与阻抗变换、3.3 元件的串联和并联）；第四章 网络参数（4.1 网络参数、4.2 网络互联、4.3 网络换算、4.4 散射参数）；第五章 阻抗匹配（5.1 分立元件匹配网络、5.2 匹配禁区/频率响应和品质因数、5.3 T 形和 π 形匹配结构、5.4 混合参数元件匹配网络、5.5 分布参数元件匹配网络）；第六章 射频放大器（6.1 稳定性圆和稳定性判定、6.2 放大器稳定措施、6.3 放大器的功率关系、6.4 放大器的单向化设计、6.5 放大器的双共轭匹配设计、6.6 宽带放大器设计、6.7 功率放大器的非线性参数、6.8 多级放大器的特性及设计、6.9 放大器的工作状态和偏置网络）。不覆盖：噪声系数与 LNA 噪声匹配（第六章只讲稳定性、增益与匹配，没有噪声一节）、压控振荡器与相位噪声、锁相环、混频器；第六章的放大器设计是板级/分立器件与 S 参数层面，不是 CMOS 片上实现。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为爱课程（中国大学MOOC），需注册登录。48 周，2021/12/01-2022/10/31 已结课，1000+ 人选课。中文授课；字幕未核对（平台不显示字幕信息）。",
+   "publisher": "杭州电子科技大学（文进才）；平台：国家高等教育智慧教育平台 / 爱课程（中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/62354d629906eace04902e94",
+    "location": "课程页“课程大纲”栏的章与节：射频器件基础 1.1-1.6；传输线理论 2.1-2.6；Smith 圆图 3.1-3.3；网络参数 4.1-4.4（4.4 散射参数）；阻抗匹配 5.1-5.5；射频放大器 6.1 稳定性圆和稳定性判定、6.2 放大器稳定措施、6.3 放大器的功率关系、6.4 放大器的单向化设计、6.5 放大器的双共轭匹配设计、6.6 宽带放大器设计、6.7 功率放大器的非线性参数、6.8 多级放大器的特性及设计、6.9 放大器的工作状态和偏置网络",
+    "finding": "大纲把射频无源器件（趋肤效应、高频电阻/电容/电感、变压器与传输线）、传输线与微带线、Smith 圆图、网络参数与散射参数、五种匹配网络、射频放大器设计流程（稳定性—增益—单向化/双共轭匹配—宽带—偏置）以及“功率放大器的非线性参数”逐节列出，正好对上简介里的“阻抗匹配与片上无源器件”“射频功率放大器”“非线性与线性度指标”三项，并给出射频放大器设计的完整方法；第六章没有噪声系数与 LNA 噪声匹配的节，也没有振荡器与锁相环。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "高频电子线路（通信电子线路）（北华大学，国家高等教育智慧教育平台课程页 / 学银在线）",
+   "url": "https://higher.smartedu.cn/course/67996233225d72705eb6cec7",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "只取与射频集成电路相关的单元：绪论 1.3 无线通信的基本要求、无线通信系统的组成、无线电波的传播与频段划分（系统组成层面）；第四章 高频功率放大器 4.1 丙类高频功率放大器工作原理、4.2 集电极余弦电流脉冲分解、4.3 丙类功率放大器的功率和效率、4.4 丙类功率放大器的动态特性、4.5 丙类功率放大器的负载特性（覆盖“射频功率放大器”的丙类工作状态、功率与效率、负载特性）；第五章 正弦波振荡器 5.1 反馈型 LC 振荡器原理、5.2 互感耦合振荡器、5.3 LC 三点式反馈振荡器、5.4 电容三点式反馈振荡器的分析与计算、5.5 高稳定度电容三点式反馈振荡器（固定频率振荡，不涉及压控与相位噪声）；第八章 变频电路 8.1 概述、8.2 混频电路、8.3 变频电路的失真与干扰（覆盖“混频器”）；第九章 9.3 自动相位控制（锁相环）、9.4 锁相环的应用（覆盖“锁相环频率综合器”的原理与应用层）。不覆盖：噪声系数与 LNA 噪声匹配、压控振荡器与相位噪声、片上无源器件、收发机架构（只在 1.3 讲系统组成）。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为学银在线，需注册登录（22 周，2026/02/28-2026/07/30 已结课）。中文授课；字幕未核对（平台不显示字幕信息）。",
+   "publisher": "北华大学（张玉欣、宋勇、吴洁）；平台：国家高等教育智慧教育平台 / 学银在线",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/67996233225d72705eb6cec7",
+    "location": "课程页“课程大纲”栏：绪论 1.3 无线通信的基本要求、无线通信系统的组成、无线电波的传播与频段划分；高频功率放大器 4.1-4.5；正弦波振荡器 5.1-5.5；变频电路 8.1 概述、8.2 混频电路、8.3 变频电路的失真与干扰；反馈控制电路与频率合成 9.3 自动相位控制（锁相环）、9.4 锁相环的应用",
+    "finding": "大纲里“4.1 丙类高频功率放大器工作原理到 4.5 负载特性”是完整的丙类功放分析链，“8.2 混频电路”是混频器的专门讲次，“9.3 自动相位控制（锁相环）、9.4 锁相环的应用”把锁相环与频率合成讲到应用层；正弦波振荡器一章只列反馈型 LC 与三点式（5.1-5.5），没有压控振荡器、也没有相位噪声的讲次。"
+   }
+  },
+  {
+   "key": "zh3",
+   "lang": "zh",
+   "title": "高频电子技术（四川信息职业技术学院，国家高等教育智慧教育平台课程页 / 爱课程·中国大学MOOC）",
+   "url": "https://higher.smartedu.cn/course/6584c11b0238d5a466ef6c8e",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "只取两组单元：项目一 1.2.1 发射机组成、1.2.2 接收机组成（覆盖“射频收发机架构”的组成框图层：把振荡器、功放、混频、调制解调按发射机/接收机串起来，但不推导超外差、零中频、镜像抑制等架构）；项目五 5.1.1 锁相环路基本工作原理、5.1.2 锁相环路基本特性、5.1.3 锁相环路技术的应用、5.2.1 频率合成器技术指标、5.2.2 锁相环频率合成器常用技术方案、5.2.3 直接数字频率合成器（把“锁相环频率综合器”补到方案级）。其余项目与 zh1/zh2 重复。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为中国大学MOOC，需注册登录（9 周，2024/03/03-2024/05/05 已结课，1 万+ 人选课）。职业教育电子信息类课程（面向高职电子信息专业群，第三学期专业基础核心课），层次低于本科。中文授课；字幕未核对（平台不显示字幕信息）。",
+   "publisher": "四川信息职业技术学院（刘雪亭、程远东、杨波等）；平台：国家高等教育智慧教育平台 / 爱课程（中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/6584c11b0238d5a466ef6c8e",
+    "location": "课程页“课程大纲”栏：项目一 1.2.1发射机组成、1.2.2接收机组成；项目五 5.1.1锁相环路基本工作原理、5.1.2锁相环路基本特性、5.1.3锁相环路技术的应用、5.2.1频率合成器技术指标、5.2.2锁相环频率合成器常用技术方案、5.2.3直接数字频率合成器",
+    "finding": "大纲项目一明确有“1.2.1 发射机组成”“1.2.2 接收机组成”两讲，是本轮能找到的唯一专门讲发射机/接收机组成的中文课程单元；项目五把锁相环（原理/特性/应用）与频率合成（技术指标、锁相环方案、DDS）拆成六讲，比 zh2 的 9.3/9.4 两讲更细。课程定位为高职专业基础课，收发机部分只到组成框图。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "High Speed Communication Circuits and Systems (MIT 6.976, Spring 2003) — Lecture Notes, MIT OpenCourseWare",
+   "url": "https://ocw.mit.edu/courses/6-976-high-speed-communication-circuits-and-systems-spring-2003/pages/lecture-notes/",
+   "tier": "website",
+   "free": true,
+   "role": "primary",
+   "covers": "讲义讲次表：L2 Transmission Line Theory；L3 S-parameters and Impedance Transformers；L4 Generalized Reflection Coefficient, Smith Chart, Passives；L5 High Speed Broadband Amplifiers；L6 Enhancement of Broadband Amplifiers, Narrowband Amplifiers；L7 Noise Modeling in Amplifiers；L8 Noise Figure, Impact of Amplifier Nonlinearities；L9 Low Noise Amplifiers；L10 Mixers；L11 Voltage Controlled Oscillators；L12 Noise in Voltage Controlled Oscillators；L14 High Speed Frequency Dividers；L15 Integer-N Frequency Synthesizers；L16 Noise in Integer-N Frequency Synthesizers；L17 Advanced Frequency Synthesizers；L18 Design and Simulation of Synthesizers；L19 Basics of Wireless Communication；L20 Performance Measures of Wireless Communication；L24 Guest Lecture by Analog Devices: RF Power Amplifiers。覆盖除“射频收发机架构”以外的 7 项（收发机架构只在 L1 Overview of Course、L19-L20 系统指标里带过，需 en2 第 4 章补）。",
+   "access": "MIT OpenCourseWare 免费开放，无需注册；19 讲 Lecture Notes PDF（第 23、25 讲无讲义）、习题、考试与两个设计项目。英文；OCW 上没有该课的讲课录像，只有讲义。",
+   "publisher": "MIT OpenCourseWare（课程教师 Michael Perrott，MIT EECS；L22/L24/L26 为客座讲，其中 L24 为 Analog Devices）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ocw.mit.edu/courses/6-976-high-speed-communication-circuits-and-systems-spring-2003/pages/lecture-notes/",
+    "location": "Lecture Notes 表的 LEC # 与 TOPICS：2 Transmission Line Theory；3 S-parameters and Impedance Transformers；4 Generalized Reflection Coefficient, Smith Chart, Passives；6 Enhancement of Broadband Amplifiers, Narrowband Amplifiers；7 Noise Modeling in Amplifiers；8 Noise Figure, Impact of Amplifier Nonlinearities；9 Low Noise Amplifiers；10 Mixers；11 Voltage Controlled Oscillators；12 Noise in Voltage Controlled Oscillators；15 Integer-N Frequency Synthesizers；16 Noise in Integer-N Frequency Synthesizers；17 Advanced Frequency Synthesizers；18 Design and Simulation of Synthesizers；24 Guest Lecture by Analog Devices: RF Power Amplifiers",
+    "finding": "讲次表把无源器件与阻抗变换（L3-L4）、放大器与噪声（L6-L9）、混频（L10）、压控振荡器与相位噪声（L11-L12）、整数 N/高级频率综合器（L15-L18）、RF 功放客座讲（L24）逐讲列出，其中 L7-L9 正是中文侧缺的噪声建模、噪声系数与 LNA；没有专门讲收发机架构的讲次（L1 是课程总览，L19-L20 讲无线通信基础与性能指标）。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "RF Microelectronics (2nd ed., Behzad Razavi, Pearson 2012) — 出版社官方样章 PDF（含完整目录）",
+   "url": "https://ptgmedia.pearsoncmg.com/images/9780137134731/samplepages/0137134738.pdf",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "目录（逐节）：Ch.2 Basic Concepts in RF Design（2.2 Effects of Nonlinearity——2.2.1 Harmonic Distortion、2.2.2 Gain Compression、2.2.4 Intermodulation、2.2.5 Cascaded Nonlinear Stages；2.3 Noise；2.5 Passive Impedance Transformation；2.6 Scattering Parameters）；Ch.4 Transceiver Architectures（4.1 General Considerations、4.2 Receiver Architectures——4.2.1 Basic Heterodyne、4.2.3 Direct-Conversion、4.2.4 Image-Reject、4.3 Transmitter Architectures）；Ch.5 Low-Noise Amplifiers（5.1 General Considerations、5.2 Problem of Input Matching、5.3 LNA Topologies、5.6 High-IP2 LNAs、5.7 Nonlinearity Calculations）；Ch.6 Mixers（6.1-6.5）；Ch.7 Passive Devices（7.1-7.6，含 7.2 Inductors、7.3 Transformers、7.5 Varactors、7.6 Constant Capacitors）；Ch.8 Oscillators（8.1 Performance Parameters、8.2 Basic Principles、8.5 Voltage-Controlled Oscillators、8.7 Phase Noise、8.8 Design Procedure）；Ch.9 Phase-Locked Loops（9.1-9.7，含 9.3 Type-II PLLs、9.5 Phase Noise in PLLs）；Ch.10 Integer-N Frequency Synthesizers（10.1-10.6）；Ch.12 Power Amplifiers（12.1 General Considerations、12.2 Classification of Power Amplifiers、12.3 High-Efficiency Power Amplifiers、12.5 Large-Signal Impedance Matching、12.6 Basic Linearization Techniques）。",
+   "access": "付费教材：Pearson 只公开样章与完整目录 PDF（免费），正文需购买；价格未核，正文未读。英文。",
+   "publisher": "Behzad Razavi（University of California, Los Angeles），Pearson",
+   "reupload": false,
+   "evidence": {
+    "url": "https://ptgmedia.pearsoncmg.com/images/9780137134731/samplepages/0137134738.pdf",
+    "location": "样章 PDF 的 CONTENTS（页 7-14）：CHAPTER 2 的 2.2 Effects of Nonlinearity（2.2.2 Gain Compression、2.2.4 Intermodulation）、2.5 Passive Impedance Transformation、2.6 Scattering Parameters；CHAPTER 4 TRANSCEIVER ARCHITECTURES（4.2 Receiver Architectures 含 4.2.1 Basic Heterodyne Receivers、4.2.3 Direct-Conversion Receivers、4.2.4 Image-Reject Receivers；4.3 Transmitter Architectures）；CHAPTER 5 LOW-NOISE AMPLIFIERS（5.2 Problem of Input Matching、5.3 LNA Topologies、5.6 High-IP2 LNAs、5.7 Nonlinearity Calculations）；CHAPTER 6 MIXERS 的 6.1-6.5；CHAPTER 7 PASSIVE DEVICES（7.2 Inductors、7.3 Transformers、7.5 Varactors、7.6 Constant Capacitors）；CHAPTER 8 OSCILLATORS（8.5 Voltage-Controlled Oscillators、8.7 Phase Noise）；CHAPTER 9 PHASE-LOCKED LOOPS（9.3 Type-II PLLs、9.5 Phase Noise in PLLs）；CHAPTER 10 INTEGER-N FREQUENCY SYNTHESIZERS（10.1-10.6）；CHAPTER 12 POWER AMPLIFIERS（12.2 Classification of Power Amplifiers、12.3 High-Efficiency Power Amplifiers、12.5 Large-Signal Impedance Matching）",
+    "finding": "出版社样章目录逐节给出收发机架构（接收机含超外差/零中频/镜像抑制，发射机含直接变换）、LNA（输入匹配、拓扑、高 IIP2、非线性计算）、混频器、片上无源器件（电感/变压器/变容管/电容）、压控振荡器与相位噪声、锁相环、整数 N 频率综合器、功率放大器分类与高效功放，正好补齐 MIT 6.976 缺的收发机架构与片上无源器件两块的系统性，并给 LNA/VCO 提供教材级推导。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "射频收发机架构",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh3",
+     "section": "项目一 1.2.1 发射机组成、1.2.2 接收机组成（组成框图层面，高职课）",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "绪论 1.3 无线通信的基本要求、无线通信系统的组成、无线电波的传播与频段划分（只到系统组成，无收发机架构推导）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Ch.4 Transceiver Architectures（4.1 General Considerations、4.2 Receiver Architectures——4.2.1 Basic Heterodyne Receivers、4.2.3 Direct-Conversion Receivers、4.2.4 Image-Reject Receivers、4.3 Transmitter Architectures）",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "L1 Overview of Course；L19 Basics of Wireless Communication、L20 Performance Measures of Wireless Communication（系统层面，非架构）",
+     "extent": "partial"
+    }
+   ]
+  },
+  {
+   "topic": "低噪声放大器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第六章 射频放大器 6.1 稳定性圆和稳定性判定、6.2 放大器稳定措施、6.3 放大器的功率关系、6.4 放大器的单向化设计、6.5 放大器的双共轭匹配设计（放大器设计流程；无噪声系数与 LNA 噪声匹配）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L7 Noise Modeling in Amplifiers、L8 Noise Figure, Impact of Amplifier Nonlinearities、L9 Low Noise Amplifiers",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.5 Low-Noise Amplifiers（5.1 General Considerations、5.2 Problem of Input Matching、5.3 LNA Topologies）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "混频器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "变频电路 8.1 概述、8.2 混频电路、8.3 变频电路的失真与干扰",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L10 Mixers",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.6 Mixers（6.1 General Considerations、6.2 Passive Downconversion Mixers、6.3 Active Downconversion Mixers、6.4 Improved Mixer Topologies）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "压控振荡器与相位噪声",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "正弦波振荡器 5.1 反馈型 LC 振荡器原理、5.2 互感耦合振荡器、5.3 LC 三点式反馈振荡器、5.4 电容三点式反馈振荡器的分析与计算、5.5 高稳定度电容三点式反馈振荡器（固定频率振荡器，无压控与相位噪声）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L11 Voltage Controlled Oscillators、L12 Noise in Voltage Controlled Oscillators",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.8 Oscillators（8.5 Voltage-Controlled Oscillators、8.7 Phase Noise、8.10 Mathematical Model of VCOs）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "锁相环频率综合器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "反馈控制电路与频率合成 9.3 自动相位控制（锁相环）、9.4 锁相环的应用",
+     "extent": "covered"
+    },
+    {
+     "source": "zh3",
+     "section": "项目五 5.1.1 锁相环路基本工作原理、5.1.2 锁相环路基本特性、5.1.3 锁相环路技术的应用、5.2.1 频率合成器技术指标、5.2.2 锁相环频率合成器常用技术方案、5.2.3 直接数字频率合成器",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L15 Integer-N Frequency Synthesizers、L16 Noise in Integer-N Frequency Synthesizers、L17 Advanced Frequency Synthesizers、L18 Design and Simulation of Synthesizers",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.9 Phase-Locked Loops（9.1-9.7，含 9.3 Type-II PLLs、9.5 Phase Noise in PLLs）、Ch.10 Integer-N Frequency Synthesizers（10.1-10.6）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "射频功率放大器",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "高频功率放大器 4.1 丙类高频功率放大器工作原理、4.2 集电极余弦电流脉冲分解、4.3 丙类功率放大器的功率和效率、4.4 丙类功率放大器的动态特性、4.5 丙类功率放大器的负载特性",
+     "extent": "covered"
+    },
+    {
+     "source": "zh1",
+     "section": "6.7 功率放大器的非线性参数、6.9 放大器的工作状态和偏置网络（偏置与非线性参数，无 A-F 类功放与负载线设计）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L24 Guest Lecture by Analog Devices: RF Power Amplifiers",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.12 Power Amplifiers（12.2 Classification of Power Amplifiers、12.3 High-Efficiency Power Amplifiers、12.5 Large-Signal Impedance Matching）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "阻抗匹配与片上无源器件",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第一章 射频器件基础 1.1 射频器件制作方法、1.2 趋肤效应、1.3 高频电阻、1.4 高频电容、1.5 高频电感、1.6 变压器和传输线；第四章 4.4 散射参数；第五章 阻抗匹配 5.1 分立元件匹配网络、5.2 匹配禁区/频率响应和品质因数、5.3 T 形和 π 形匹配结构、5.4 混合参数元件匹配网络、5.5 分布参数元件匹配网络（板级/分立器件与微带层面，不含片上电感建模与 Q 值优化）",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L2 Transmission Line Theory、L3 S-parameters and Impedance Transformers、L4 Generalized Reflection Coefficient, Smith Chart, Passives",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.2 的 2.5 Passive Impedance Transformation、2.6 Scattering Parameters；Ch.7 Passive Devices（7.2 Inductors、7.3 Transformers、7.5 Varactors、7.6 Constant Capacitors）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "非线性与线性度指标",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "6.7 功率放大器的非线性参数",
+     "extent": "covered"
+    },
+    {
+     "source": "zh2",
+     "section": "8.3 变频电路的失真与干扰（混频器的失真与干扰，只覆盖变频环节）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "L8 Noise Figure, Impact of Amplifier Nonlinearities",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Ch.2 的 2.2 Effects of Nonlinearity（2.2.2 Gain Compression、2.2.3 Cross Modulation、2.2.4 Intermodulation、2.2.5 Cascaded Nonlinear Stages）；Ch.5 的 5.7 Nonlinearity Calculations",
+     "extent": "covered"
+    }
+   ]
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "先按杭电课程顺序打射频无源与匹配的地基：第一章 射频器件基础（1.1 射频器件制作方法→1.2 趋肤效应→1.3/1.4/1.5 高频电阻、电容、电感→1.6 变压器和传输线）→ 第二章 传输线理论（2.1-2.6，含 2.4 微带传输线）→ 第三章 Smith 圆图（3.1 阻抗圆图→3.2 导纳圆图与阻抗变换→3.3 元件串并联）→ 第四章 网络参数（4.1-4.3，4.4 散射参数）→ 第五章 阻抗匹配（5.1 分立元件匹配网络→5.2 匹配禁区与品质因数→5.3 T 形和 π 形→5.4 混合参数元件→5.5 分布参数元件）→ 第六章 射频放大器（6.1 稳定性圆→6.2 稳定措施→6.3 功率关系→6.4 单向化设计→6.5 双共轭匹配设计→6.6 宽带放大器→6.7 功率放大器的非线性参数→6.8 多级放大器→6.9 工作状态和偏置网络）。课件与习题按 S 参数走，适合先把 matching 与放大器设计练熟。"
+    },
+    {
+     "source": "zh2",
+     "read": "再用北华 MOOC 补射频前端的单元电路：绪论 1.3（无线通信系统的组成与频段划分）→ 第四章 高频功率放大器 4.1 丙类工作原理→4.2 余弦电流脉冲分解→4.3 功率和效率→4.4 动态特性→4.5 负载特性 → 第五章 正弦波振荡器 5.1 反馈型 LC 振荡原理→5.2 互感耦合→5.3 LC 三点式→5.4 电容三点式计算→5.5 高稳定度电路 → 第八章 变频电路 8.1 概述→8.2 混频电路→8.3 失真与干扰 → 第九章 9.3 自动相位控制（锁相环）→9.4 锁相环的应用。调幅/调角、软件无线电与本章外内容可跳过。注意第五章是固定频率振荡器，学不到压控与相位噪声，这部分转英文 en1 L11-L12。"
+    },
+    {
+     "source": "zh3",
+     "read": "最后补两组：项目一 1.2.1 发射机组成、1.2.2 接收机组成，把前面学过的振荡器、功放、混频按发射机/接收机框图串起来（这是中文侧唯一讲收发机组成的单元，只到框图层面）；项目五 5.1.1-5.1.3 锁相环路原理/特性/应用与 5.2.1-5.2.3 频率合成器技术指标、锁相环频率合成方案、DDS，把 zh2 的 9.3/9.4 两讲补到方案级。若需要超外差/零中频/镜像抑制的架构推导与 CMOS 片上实现，中文本轮没有对应材料，转英文 en2 第 4 章。"
+    }
+   ],
+   "gaps": [
+    "低噪声放大器",
+    "压控振荡器与相位噪声"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 MIT 6.976 讲义顺序：L2 传输线理论 → L3 S 参数与阻抗变换器 → L4 反射系数、Smith 圆图、无源元件 → L5 高速宽带放大器 → L6 宽带放大器增强与窄带放大器 → L7 放大器噪声建模 → L8 噪声系数与放大器非线性的影响 → L9 低噪声放大器 → L10 混频器 → L11 压控振荡器 → L12 压控振荡器中的噪声 → L14 高速分频器 → L15 整数 N 频率综合器 → L16 其中的噪声 → L17 高级频率综合器 → L18 综合器设计与仿真 → L19/L20 无线通信基础与性能指标 → L24 Analog Devices 客座讲 RF 功率放大器。讲义是全套 PDF，先读讲义再回头做 OCW 上的习题与设计项目。"
+    },
+    {
+     "source": "en2",
+     "read": "用 Razavi 教材补系统架构与片上实现（只核到目录，正文需购买）：Ch.2.2 非线性的影响（2.2.2 增益压缩、2.2.4 互调）→ Ch.2.5 无源阻抗变换、2.6 散射参数 → Ch.4 收发机架构（4.2 接收机架构：基本超外差、直接变换、镜像抑制；4.3 发射机架构）→ Ch.5 LNA（5.2 输入匹配问题、5.3 LNA 拓扑）→ Ch.6 混频器 → Ch.7 无源器件（7.2 电感、7.3 变压器、7.5 变容管、7.6 固定电容）→ Ch.8 振荡器（8.5 压控振荡器、8.7 相位噪声）→ Ch.9 锁相环 → Ch.10 整数 N 频率综合器 → Ch.12 功率放大器（12.2 分类、12.3 高效功放、12.5 大信号匹配）。先读 6.976 讲义建立计算能力，再按本章顺序做片上设计。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn、icourse163.org）",
+   "query_or_url": "射频集成电路设计 课程大纲 低噪声放大器 混频器 压控振荡器 锁相环 功率放大器 片上无源器件",
+   "result": "命中北华《高频电子线路》、西电《工程高频通信电路基础》《高频电子电路分析基础》《射频电路基础》、《射频放大器设计——理论与实践》（杭电）等，没有射频集成电路（RFIC）中文系统课；由此定位到杭电课程在智慧教育平台的页面（course/62354d629906eace04902e94）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn）",
+   "query_or_url": "射频集成电路 设计 课程 低噪声放大器 混频器 振荡器 锁相环 功率放大器",
+   "result": "返回模电、高频电子技术、射频放大器设计、微波固态电路等课程页，无 RFIC 课程；其中 course/6584c11b0238d5a466ef6c8e 即四川信息职业技术学院《高频电子技术》。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 icourse163.org）",
+   "query_or_url": "射频集成电路设计 慕课 集成电路 射频 芯片 设计 课程",
+   "result": "命中南京理工大学《射频与微波电路》、西电《射频电路基础》、《射频通信电路》（四川大学 SPOC）、杭电《射频放大器设计——理论与实践》、青岛科技大学《集成电路设计》与版图/ASIC 课；没有 RFIC 系统课。西电《射频电路基础》与青科大《集成电路设计》的“课程大纲”栏在该平台为空，读不到章节。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "射频集成电路 课程大纲 相位噪声 频率综合器 片上电感 低噪声放大器 混频器 功率放大器 中国大学MOOC 智慧教育平台",
+   "result": "返回百度百科“低噪声放大器”词条、元器件选型站与高校学位论文名单，没有可用课程页；证明中文侧没有把压控振荡器/相位噪声单列成章的中文 MOOC。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://www.icourse163.org/course/HDU-1464035188",
+   "result": "中国大学MOOC 课程页的“课程大纲”栏为空（只有标题），只有课程概述与参考书；同课改到智慧教育平台同名页面（course/62354d629906eace04902e94）后大纲逐节渲染，采纳为 zh1。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/67996233225d72705eb6cec7",
+   "result": "北华《高频电子线路》大纲逐节可读，采纳为 zh2：丙类功放 4.1-4.5、正弦波振荡器 5.1-5.5、变频电路 8.1-8.3、锁相环 9.3/9.4；振荡器章没有压控与相位噪声。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/6584c11b0238d5a466ef6c8e",
+   "result": "四川信息职业技术学院《高频电子技术》大纲：项目一 1.2.1 发射机组成、1.2.2 接收机组成；项目五 5.1.1-5.2.3 锁相环与频率合成六讲。采纳为 zh3。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "http://opac.nlc.cn/F?func=find-b&find_code=WTI&request=射频集成电路与系统（国家图书馆 OPAC 正题名检索）；另试 https://opac.gxu.edu.cn 题名检索",
+   "result": "国家图书馆 OPAC 检索到 5 条同名/近名记录（含博士论文），记录页的“网摘目次”是 JS（shiftfmt）调用，没有可读目录正文；广西大学 OPAC 的检索表单按 GBK 提交后仍返回 0 条，取不到书目。中文 RFIC 教材（李智群、王志功《射频集成电路与系统》科学出版社 2018；廖怀林《硅基射频集成电路与系统》科学出版社 2020）本轮没核到出版社或图书馆的可读目录，故不列为来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.mit.edu/courses/6-976-high-speed-communication-circuits-and-systems-spring-2003/pages/lecture-notes/",
+   "result": "MIT 6.976 讲义讲次表核到 L2/L3/L4、L5-L9（含 L7 噪声建模、L8 噪声系数与非线性、L9 LNA）、L10 混频、L11-L12 VCO 与噪声、L14-L18 分频与频率综合、L19/L20 无线通信、L24 RF 功放；没有收发机架构讲次。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://ptgmedia.pearsoncmg.com/images/9780137134731/samplepages/0137134738.pdf",
+   "result": "Razavi《RF Microelectronics》第 2 版出版社样章目录核到 Ch.2.2 非线性、Ch.2.5/2.6 无源阻抗变换与 S 参数、Ch.4 收发机架构、Ch.5 LNA、Ch.6 混频器、Ch.7 无源器件、Ch.8 振荡器（8.5 VCO、8.7 相位噪声）、Ch.9 锁相环、Ch.10 整数 N 综合器、Ch.12 功放；正文需付费。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "tool": "fetch + extract",
+   "query_or_url": "https://nptel.ac.in/courses/117102012（NPTEL RF Integrated Circuits, IIT Delhi）",
+   "result": "NPTEL 课程页是前端渲染，fetch 与 extract 都只返回“Loading about course data...”，大纲与讲次读不到；起点文件 temp/research/ee/E.1.5.json 里记录的 15 个 Module 本轮无法亲自核对，故不作为来源。"
+  }
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "低噪声放大器",
+   "source": "en1",
+   "reason": "中文免费课里最接近的是杭电《射频放大器设计——理论与实践》，第六章只讲稳定性、增益关系、单向化与双共轭匹配，没有噪声系数与 LNA 噪声匹配；北华《高频电子线路》第 3.1 讲的是单调谐小信号放大器、3.2 只把“放大电路的噪声”作为一节带过，够不上 LNA 设计。RFIC 级的 LNA（噪声匹配、噪声系数与输入匹配的折中）中文公开课没有，用 MIT 6.976 的 L7-L9 补读。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "压控振荡器与相位噪声",
+   "source": "en1",
+   "reason": "北华《高频电子线路》第五章是固定频率的反馈型 LC 与三点式振荡器（5.1-5.5），四川高职课的项目三同样只有三点式、考毕兹、哈特莱与石英晶体，两门课都没有压控振荡器、变容管调谐与相位噪声的内容；中文公开课里没有把 VCO 与相位噪声单列成章的课程，用 MIT 6.976 的 L11-L12 补读。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "findings": [
+  "中文免费侧凑到 6/8：杭电《射频放大器设计——理论与实践》（48 周）覆盖射频无源器件、传输线、Smith 圆图、S 参数、五种匹配网络与射频放大器设计流程（含 6.7 功率放大器的非线性参数）；北华《高频电子线路》补丙类功放 4.1-4.5、混频 8.2、振荡器 5.1-5.5、锁相环与频率合成 9.3/9.4；四川信息职业技术学院《高频电子技术》补 1.2.1/1.2.2 发射机与接收机组成和 5.1/5.2 六讲频率合成。",
+  "中文缺口是“低噪声放大器”和“压控振荡器与相位噪声”：前者中文课只到放大器稳定性与匹配、噪声只作为一节带过，后者中文课只有固定频率 LC/三点式振荡器，没有压控与相位噪声；两项都用 MIT 6.976（L7-L9、L11-L12）跨语言补读，并各按文字、视频、付费三个渠道查过中文材料（见 searches）。",
+  "英文侧 MIT 6.976 讲义一门覆盖 7/8（无源与匹配、放大器与噪声、LNA、混频、VCO 与相位噪声、频率综合、RF 功放），收发机架构由 Razavi 第 4 章补；Razavi 只核到出版社样章的完整目录，正文未读，已写进 access。",
+  "NPTEL《RF Integrated Circuits》课程页改成前端渲染，fetch 与 extract 都取不到大纲，起点文件里记的 15 个 Module 本轮没能亲自核对，因此没有把它写进 sources（宁缺勿编）。",
+  "中文 RFIC 教材（李智群《射频集成电路与系统》、廖怀林《硅基射频集成电路与系统》）本轮没核到出版社页或图书馆编目的可读目录，不列为来源；将来若能拿到目录，可把“低噪声放大器”“压控振荡器与相位噪声”补成中文 covered。"
+ ],
+ "applied_additions": []
+}

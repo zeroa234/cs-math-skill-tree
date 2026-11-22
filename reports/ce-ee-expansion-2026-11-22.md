@@ -92,15 +92,10 @@ X.3.1 的简介原来写“外部前置为量子力学基础”，现在量子�
 
 游戏从这棵树导入技能。新技能显示为“开发中”（还没有互动课）；新增 5 条远征，全部是 `dev` 状态，课写好后再开放：通信工程、集成电路设计、电气工程、电气控制与自动化、计算机工程。选法见游戏的 `docs/recommended-routes.md` 第 4 节。
 
-## 8. 存档时的进度（2026-11-22，额度用尽前）
+## 8. 收尾（2026-11-22）
 
-已完成并提交：35 个新技能的划分、前置与课程证据、粒度、主干判定、练习题、全部 228 张导览图、29 条双语路线；游戏的 5 条 `dev` 远征和背景占位（未构建验证）。
-
-还没做：
-
-1. E.1.5–E.1.9、E.2.5 的双语路线：pi 批次 `paths-ee6` 存档时还在跑，结果写在 `temp/research/bilingual-coverage/<id>.json`。接手时先看这 6 个文件，按 `temp/ee-expansion/brief-paths.md` 末尾的规则审来源（大纲不算教学材料、网店目录不算证据），再
-   `python -X utf8 scripts/learning_path_merge.py <ids>` 和 `node scripts/archive-learning-paths.mjs --reviewed --archive <ids>`。
-2. 正式构建 `node scripts/build.mjs`（不带 TREE_DRAFT）必须零错误；再跑 `check_prereqs.py`、`check_scope.py`、`check_outlines.py`、`node --test tests/learning-paths.mjs`、`node tests/resources.mjs`、`node tests/a11y.mjs`。
-3. 用正式构建的结果填 README 的数字、重截 README 预览图。
-4. 游戏：`npm run build` 和 `npm test`，看 5 条新远征的站数，写 `docs/recommended-routes.md` 第 4 节（选法和对应表见本报告第 7 节和 `data/routes.yaml` 注释），更新 README 和 development.md 的统计。
-5. 工作文件都在 `temp/ee-expansion/`（调研报告、各批判定 JSON、脚本、国标扫描页图片）。
+- 最后 6 条双语路线（E.1.5–E.1.9、E.2.5）按 `temp/ee-expansion/brief-paths.md` 的规则审过后归档，全部 228 个技能都有路线。中文覆盖：E.1.5 6/8、E.1.6 3/8、E.1.7 4/8、E.1.8 5/7、E.1.9 5/8、E.2.5 0/8；英文除 E.1.9 的“激光调制与偏转”（用西南科技大学《光电子技术》第四章补读）外全部覆盖。
+- E.2.5 自适应信号处理：pi 查了中文的正文、视频、付费三个渠道，主代理又补搜两轮，都只找到《生物医学信号处理》里一两学时的自适应滤波和个人博客，没有大学或教师发布的中文自适应滤波课程或讲义，中文教材也没核到出版社或图书馆的可读目录。整条中文路线记为缺口，逐项用 Haykin《Adaptive Filter Theory》补读。它是第一个完全没有中文来源的技能，页面提示语改成与其他技能一致的“暂未找到…”（`scripts/archive-learning-paths.mjs`）。
+- 正式构建（不带 TREE_DRAFT）零错误：228 个技能、7 步、319 条必须前置、504 条推荐前置，主干 132（129 个本身是核心，3 个是主干的必须前置）、选修 96。`check_prereqs`、`check_scope`、`check_outlines` 都是 0 问题，`tests/` 下的 node 和 Python 测试全部通过。
+- 全树统计：1,176 个必学知识项；英文 226 条、中文 206 条路线完整；中文 63 个、英文 2 个知识项列另一语言补读；免费教学覆盖英文 207 条、中文 166 条路线。README 的数字和五张预览图按这次构建更新；页面图例里“选修”的说明改成三份标准的说法。
+- 游戏端的构建、测试和远征文档见游戏仓库的提交。

@@ -1,0 +1,411 @@
+{
+ "id": "E.1.7",
+ "checkedAt": "2026-11-22",
+ "name": "雷达原理",
+ "description": "雷达方程、目标截面积与杂波、脉冲雷达与连续波雷达、距离与多普勒测量、脉冲压缩、匹配滤波与检测、动目标显示与脉冲多普勒、相控阵与合成孔径雷达概述。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "雷达原理（学堂在线 / 国家高等教育智慧教育平台，一流课程）",
+   "url": "https://higher.smartedu.cn/course/687eb89b16c43a09c0e58ee1",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "课程大纲三模块逐条列出：模块一 雷达的设备组成（雷达的基本组成、发射机种类和工作原理、脉冲调制器、接收机简介、接收机的噪声系数、接收机的灵敏度、动态范围、典型显示画面）；模块二 雷达的探测理论（雷达回波中的可用信息、雷达的工作频率及应用、雷达战技指标、基本雷达方程、二次雷达方程、雷达散射截面积、最小可检测信号、脉冲积累、直视距离、雷达的探测盲区及其解决办法）；模块三 雷达的测量方法（脉冲法测距原理、距离分辨力、脉冲压缩、雷达测距范围、人工距离跟踪、自动距离跟踪、数字式自动距离跟踪、天线方向图和测角性能、相位法测角、振幅法测角、天线波束扫描方法、相位扫描法、相控阵雷达、三坐标雷达数据率、多波束三坐标雷达、多普勒效应、盲速和频闪、杂波相消、脉冲多普勒雷达、旁瓣对消、旁瓣消隐、干扰方程、有效干扰空间），另有“期末考试”与“部分新体制雷达资料”。不覆盖：连续波/FMCW 雷达（只有脉冲法测距与脉冲压缩）、杂波本身的统计特性与杂波建模（只有“杂波相消”）、匹配滤波（只在脉冲压缩的实现里隐含，没有单列）、合成孔径雷达（只在结尾“部分新体制雷达资料”里带过）。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为学堂在线。25 周（2026/07/23-2027/01/12，开课中），3 万+ 人选课，页面标注“一流课程”。中文授课；字幕未核对（平台不显示字幕信息）。",
+   "publisher": "国家高等教育智慧教育平台 / 学堂在线；课程团队 冯存前、郭艺夺、胡晓伟、宫健、刘小龙、耿林、彭鹏、黄大荣（平台“开课高校”一栏为“-”，课程简介自述为雷达工程专业课程、2021 年评为陕西省一流线下本科课程、2015 年视频公开课《揭开雷达的面纱》获批国家精品视频公开课）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/687eb89b16c43a09c0e58ee1",
+    "location": "课程页“课程大纲”栏：模块一 雷达的设备组成（雷达的基本组成…典型显示画面）；模块二 雷达的探测理论（基本雷达方程、二次雷达方程、雷达散射截面积、最小可检测信号、脉冲积累、直视距离、雷达的探测盲区及其解决办法）；模块三 雷达的测量方法（脉冲法测距原理、距离分辨力、脉冲压缩、雷达测距范围、…天线波束扫描方法、相位扫描法、相控阵雷达、…多普勒效应、盲速和频闪、杂波相消、脉冲多普勒雷达、旁瓣对消、旁瓣消隐、干扰方程、有效干扰空间）；末尾“期末考试”“部分新体制雷达资料”",
+    "finding": "大纲逐条列出：雷达方程在模块二有“基本雷达方程”“二次雷达方程”“雷达战技指标”“最小可检测信号”“脉冲积累”；RCS 有“雷达散射截面积”；测量方法模块有“脉冲法测距原理”“距离分辨力”“脉冲压缩”“多普勒效应”“盲速和频闪”；MTI/脉冲多普勒有“杂波相消”“盲速和频闪”“脉冲多普勒雷达”三讲；相控阵有“天线波束扫描方法”“相位扫描法”“相控阵雷达”。大纲里没有连续波雷达、没有杂波建模、没有“匹配滤波”单列讲次，合成孔径雷达只在“部分新体制雷达资料”里。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Radar: Introduction to Radar Systems（MIT Lincoln Laboratory 网络公开课，10 讲，约 11 小时）",
+   "url": "https://www.ll.mit.edu/outreach/web-based-course-radar-introduction-radar-systems",
+   "tier": "video",
+   "free": true,
+   "role": "primary",
+   "covers": "讲次表：Lecture 1 Introduction；Lecture 2 Radar Equation；Lecture 3 Propagation Effects；Lecture 4 Target Radar Cross Section；Lecture 5 Detection of Signals in Noise and Pulse Compression；Lecture 6 Radar Antennas；Lecture 7 Radar Clutter and Chaff；Lecture 8 Signal Processing - MTI and Pulse Doppler Techniques；Lecture 9 Tracking and Parameter Estimation；Lecture 10 Transmitters and Receivers。覆盖雷达方程、RCS、杂波与箔条、噪声中检测与脉冲压缩、MTI 与脉冲多普勒、跟踪与参数估计（距离/多普勒）。不覆盖：连续波/FMCW 雷达专题、相控阵与合成孔径雷达专题（10 讲里没有这两讲）。",
+   "access": "MIT 林肯实验室 outreach 站点免费在线观看，无需注册；每讲分 2-3 段给出时长，并可“View/Download Lecture N Viewgraphs (pdf)”下载讲稿。英文；字幕未核对（页面未标注字幕）。",
+   "publisher": "MIT Lincoln Laboratory（Outreach 在线 STEM 课程；讲授者 Robert M. O'Donnell，前林肯实验室研究员）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.ll.mit.edu/outreach/web-based-course-radar-introduction-radar-systems",
+    "location": "页面“List of Lectures”：Lecture 1 – Introduction；Lecture 2 – Radar Equation；Lecture 3 – Propagation Effects；Lecture 4 – Target Radar Cross Section；Lecture 5 – Detection of Signals in Noise and Pulse Compression；Lecture 6 – Radar Antennas；Lecture 7 – Radar Clutter and Chaff；Lecture 8 – Signal Processing - MTI and Pulse Doppler Techniques；Lecture 9 – Tracking and Parameter Estimation；Lecture 10 – Transmitters and Receivers；每讲下有 Part 1-3 时长与 Viewgraphs PDF 链接；页面开头写 “This set of 10 lectures, about 11+ hours in duration”",
+    "finding": "讲次标题逐条对上简介：雷达方程（L2）、RCS（L4）、杂波（L7）、噪声中检测与脉冲压缩（L5）、MTI 与脉冲多普勒（L8）、距离与多普勒测量/参数估计（L9）；没有连续波雷达、相控阵与 SAR 的讲次。"
+   }
+  },
+  {
+   "key": "en2",
+   "lang": "en",
+   "title": "Radar Handbook, Third Edition（Merrill I. Skolnik 主编，McGraw-Hill）— 出版社官方章节表",
+   "url": "https://www.mheducation.com/highered/mhp/product/radar-handbook-third-edition.html",
+   "tier": "book",
+   "free": false,
+   "role": "supplement",
+   "covers": "出版社页“Table of Contents”列到章：Chapter 1 An Introduction and Overview of Radar；2 MTI Radar；3 Airborne MTI；4 Pulse Doppler Radar；5 Multifunctional Radar Systems for Fighter Aircraft；6 Radar Receivers；7 Automatic Detection, Tracking, and Sensor Integration；8 Pulse Compression（页面原文把 8、9 两章挤成 “Chapter 8 Pulse Compression Adrenals>Chapter 9 Tracking Radar”）；9 Tracking Radar；10 The Radar Transmitter；11 Solid-State Transmitters；12 Reflector Antennas；13 Phased Array Radar Antennas；14 Radar Cross Section；15 Sea Clutter；16 Ground Echo；17 Synthetic Aperture Radar；18 Space-Based Remote Sensing Radars；19 气象雷达（页面抓成 “MetMeteorologicaldar”）；20 HF Over-the-Horizon Radar；21 Ground Penetrating Radar；22 Civil Marine Radar；23 Bistatic Radar；24 Electronic Counter-Countermeasures；25 Radar Digital Signal Processing；26 The Propagation Factor Fpf in the Radar Equation。",
+   "access": "付费教材（McGraw-Hill，第 3 版）：出版社页只公开章节表与简介，正文需购买或订阅；价格未核，正文未读。英文。目录只到章一层，没有节。",
+   "publisher": "Merrill I. Skolnik（主编，30 位作者）；McGraw-Hill Education",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.mheducation.com/highered/mhp/product/radar-handbook-third-edition.html",
+    "location": "产品页 Table of Contents：Chapter 8 Pulse Compression、Chapter 13 Phased Array Radar Antennas、Chapter 14 Radar Cross Section、Chapter 15 Sea Clutter、Chapter 16 Ground Echo、Chapter 17 Synthetic Aperture Radar、Chapter 2 MTI Radar、Chapter 4 Pulse Doppler Radar、Chapter 7 Automatic Detection, Tracking, and Sensor Integration、Chapter 25 Radar Digital Signal Processing",
+    "finding": "章表能确认：第 13 章“Phased Array Radar Antennas”与第 17 章“Synthetic Aperture Radar”是相控阵与 SAR 的专章（MIT 林肯实验室 10 讲里没有这两块）；另有第 2/3/4 章 MTI 与脉冲多普勒、第 8 章脉冲压缩、第 14-16 章 RCS/海杂波/地物回波、第 25 章雷达数字信号处理。只有章名，无节。"
+   }
+  },
+  {
+   "key": "en3",
+   "lang": "en",
+   "title": "Radartutorial（Christian Wolff 维护的免费雷达教程站，英文版）",
+   "url": "https://www.radartutorial.eu/index.en.html",
+   "tier": "website",
+   "free": true,
+   "role": "supplement",
+   "covers": "站点分 22 个部分，逐章可查：01.basics（rb13 The Radar Equation、rb14 The radar equation in practice、rb18 Range Resolution、rb56 Radar Cross-Section (RCS)、rb51 Probability of Detection、rb52 False Alarm Rate, Probability of False Alarms、rb07 Distance-determination、rb71 Blind Zone）；02.basics（rp06 Pulsed Radar、rp07 Continuous Wave Radar (CW-Radar)、rp08 Frequency Modulated Continuous Wave Radar (FMCW-Radar)、rp09 FMiCW Radar、rp10 MFCW and S-MFCW radar）；06.antennas（an29 Phased Array Antenna、an31 Phase Shifter、an33 Digital Beamforming）；09.receivers；10.processing（sp50 Matched Filter/Matched Receiver、sp51 Pulse Integration、sp56 Ambiguity-Function、sp15 Fast Fourier Transformation）；11.coherent（co04 Clutter、co05 The Concept of Coherence、co06 Doppler-Effect、co13 Blind Speeds）；20.airborne（ab05 Doppler Beam Sharpening、ab06 Side Looking Airborne Radar (SLAR)、ab07 Synthethic Aperture Radar (SAR)、ab08 SAR-Modes）。",
+   "access": "网站免费浏览，无需注册；作者自述“no commercial goals…created entirely for educational purposes”，面向雷达操作与维护人员的培训，部分章节提供打印版 PDF；英文（另有中、德、法、俄等 17 种语言版本）。",
+   "publisher": "Christian Wolff（radartutorial.eu，作者自建的非商业教学站）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.radartutorial.eu/02.basics/en/rp03.en.html",
+    "location": "02.basics 站点地图：rp06.en.html Pulsed Radar、rp07.en.html Continuous Wave Radar (CW-Radar)、rp08.en.html Frequency Modulated Continuous Wave Radar (FMCW-Radar)、rp09.en.html FMiCW Radar、rp10.en.html MFCW and S-MFCW radar；另查 01.basics/en/rb03.en.html（rb13 The Radar Equation、rb18 Range Resolution、rb56 Radar Cross-Section (RCS)、rb51 Probability of Detection、rb52 False Alarm Rate）、10.processing/en/sp03.en.html（sp50 Matched Filter/Matched Receiver、sp51 Pulse Integration、sp56 Ambiguity-Function）、11.coherent/en/co03.en.html（co04 Clutter、co06 Doppler-Effect、co13 Blind Speeds）、06.antennas/en/an03.en.html（an29 Phased Array Antenna、an33 Digital Beamforming）、20.airborne/en/ab03.en.html（ab06 SLAR、ab07 Synthethic Aperture Radar (SAR)、ab08 SAR-Modes）",
+    "finding": "各分站点的站点地图把章节名列全：连续波雷达与 FMCW 在 02.basics 的 rp07/rp08（中文课程与 MIT 10 讲都没有）、匹配滤波在 10.processing 的 sp50、杂波在 11.coherent 的 co04、盲速在 co13、相控阵在 06.antennas 的 an29、SAR 在 20.airborne 的 ab07/ab08；雷达方程、RCS 与检测概率/虚警率在 01.basics。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "雷达方程",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块二 雷达的探测理论：基本雷达方程、二次雷达方程、雷达战技指标、最小可检测信号、脉冲积累、直视距离",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 2 Radar Equation",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 1 An Introduction and Overview of Radar；Chapter 26 The Propagation Factor Fpf in the Radar Equation",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "01.basics：rb13 The Radar Equation、rb14 The radar equation in practice、rb53 Average Power, Pulse Power, Duty Cycle",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "目标截面积与杂波",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块二 雷达散射截面积（RCS 有专讲）；模块三 杂波相消（只有抑制手段，没有杂波统计特性与建模）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 4 Target Radar Cross Section；Lecture 7 Radar Clutter and Chaff",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 14 Radar Cross Section、Chapter 15 Sea Clutter、Chapter 16 Ground Echo",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "01.basics：rb56 Radar Cross-Section (RCS)、rb70 Scattering Mechanisms；11.coherent：co04 Clutter",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "脉冲雷达与连续波雷达",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块三 脉冲法测距原理、距离分辨力、雷达测距范围（只有脉冲雷达，没有连续波/FMCW 雷达）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en3",
+     "section": "02.basics：rp06 Pulsed Radar、rp07 Continuous Wave Radar (CW-Radar)、rp08 Frequency Modulated Continuous Wave Radar (FMCW-Radar)、rp09 FMiCW Radar、rp10 MFCW and S-MFCW radar",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Lecture 5 Detection of Signals in Noise and Pulse Compression（波形设计部分）；Lecture 1 Introduction",
+     "extent": "partial"
+    }
+   ]
+  },
+  {
+   "topic": "距离与多普勒测量",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块三 脉冲法测距原理、雷达测距范围、多普勒效应、盲速和频闪；模块三 三坐标雷达数据率",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 9 Tracking and Parameter Estimation；Lecture 8 Signal Processing - MTI and Pulse Doppler Techniques",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "01.basics：rb07 Distance-determination、rb09 Maximum Unambiguous Range；11.coherent：co06 Doppler-Effect、co52 Radial Speed",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "脉冲压缩",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块三 脉冲压缩、距离分辨力",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 5 Detection of Signals in Noise and Pulse Compression",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 8 Pulse Compression",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "匹配滤波与检测",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块二 最小可检测信号、脉冲积累（检测部分）；模块三 脉冲压缩（匹配滤波以压缩实现出现，没有单列讲次）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 5 Detection of Signals in Noise and Pulse Compression",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "10.processing：sp50 Matched Filter/Matched Receiver、sp51 Pulse Integration、sp56 Ambiguity-Function；01.basics：rb51 Probability of Detection、rb52 False Alarm Rate, Probability of False Alarms",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 7 Automatic Detection, Tracking, and Sensor Integration；Chapter 25 Radar Digital Signal Processing",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "动目标显示与脉冲多普勒",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块三 杂波相消、盲速和频闪、脉冲多普勒雷达",
+     "extent": "covered"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Lecture 8 Signal Processing - MTI and Pulse Doppler Techniques",
+     "extent": "covered"
+    },
+    {
+     "source": "en2",
+     "section": "Chapter 2 MTI Radar、Chapter 3 Airborne MTI、Chapter 4 Pulse Doppler Radar",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "11.coherent：co07 Pulse-Pair Processing、co08 Doppler Filter Bank、co13 Blind Speeds",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "相控阵与合成孔径雷达概述",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "模块三 天线方向图和测角性能、天线波束扫描方法、相位扫描法、相控阵雷达（相控阵讲全；合成孔径雷达只在课程末尾“部分新体制雷达资料”里，没有正式讲次）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en2",
+     "section": "Chapter 13 Phased Array Radar Antennas；Chapter 17 Synthetic Aperture Radar",
+     "extent": "covered"
+    },
+    {
+     "source": "en3",
+     "section": "06.antennas：an29 Phased Array Antenna、an31 Phase Shifter、an33 Digital Beamforming；20.airborne：ab05 Doppler Beam Sharpening、ab06 Side Looking Airborne Radar (SLAR)、ab07 Synthethic Aperture Radar (SAR)、ab08 SAR-Modes",
+     "extent": "covered"
+    },
+    {
+     "source": "en1",
+     "section": "Lecture 6 Radar Antennas（只讲天线，不讲相控阵与 SAR）",
+     "extent": "partial"
+    }
+   ]
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "partial",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "按 25 周的模块顺序学：模块一 雷达的设备组成（雷达的基本组成→发射机种类和工作原理→脉冲调制器→接收机简介→接收机的噪声系数→接收机的灵敏度→动态范围→典型显示画面）建立整机概念 → 模块二 雷达的探测理论（雷达回波中的可用信息→雷达的工作频率及应用→雷达战技指标→基本雷达方程→二次雷达方程→雷达散射截面积→最小可检测信号→脉冲积累→直视距离→雷达的探测盲区及其解决办法）→ 模块三 雷达的测量方法（脉冲法测距原理→距离分辨力→脉冲压缩→雷达测距范围→人工/自动/数字式自动距离跟踪→天线方向图和测角性能→相位法测角→振幅法测角→天线波束扫描方法→相位扫描法→相控阵雷达→三坐标雷达数据率→多波束三坐标雷达→多普勒效应→盲速和频闪→杂波相消→脉冲多普勒雷达→旁瓣对消/旁瓣消隐→干扰方程→有效干扰空间）。连续波雷达、杂波建模、匹配滤波与 SAR 四处中文材料缺，按下面的跨语言补读处理。"
+    }
+   ],
+   "gaps": [
+    "目标截面积与杂波",
+    "脉冲雷达与连续波雷达",
+    "匹配滤波与检测",
+    "相控阵与合成孔径雷达概述"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "先用 MIT 林肯实验室 10 讲建立整机与信号处理概念：Lecture 1 Introduction → Lecture 2 Radar Equation → Lecture 3 Propagation Effects → Lecture 4 Target Radar Cross Section → Lecture 5 Detection of Signals in Noise and Pulse Compression → Lecture 6 Radar Antennas → Lecture 7 Radar Clutter and Chaff → Lecture 8 Signal Processing - MTI and Pulse Doppler Techniques → Lecture 9 Tracking and Parameter Estimation → Lecture 10 Transmitters and Receivers。每讲讲稿（Viewgraphs PDF）可下载，边看边做雷达方程与检测概率的算例。"
+    },
+    {
+     "source": "en3",
+     "read": "用 Radartutorial 补 10 讲没有的三块：① 02.basics 的 rp06 Pulsed Radar→rp07 Continuous Wave Radar (CW-Radar)→rp08 FMCW-Radar（连续波与调频连续波，中英文课程都缺）；② 10.processing 的 sp50 Matched Filter/Matched Receiver→sp51 Pulse Integration 与 01.basics 的 rb51 Probability of Detection、rb52 False Alarm Rate（匹配滤波与检测）；③ 06.antennas 的 an29 Phased Array Antenna、an31 Phase Shifter、an33 Digital Beamforming 与 20.airborne 的 ab05 Doppler Beam Sharpening→ab06 SLAR→ab07 Synthethic Aperture Radar (SAR)→ab08 SAR-Modes（相控阵与 SAR 概述）。另用 01.basics 的 rb13/rb14 雷达方程、rb18 距离分辨力、11.coherent 的 co04 Clutter、co06 Doppler-Effect、co13 Blind Speeds 作为对照。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn、icourse163.org）",
+   "query_or_url": "雷达原理 课程大纲 雷达方程 脉冲压缩 动目标显示 脉冲多普勒 相控阵 合成孔径",
+   "result": "命中学堂在线的《雷达原理》（higher.smartedu.cn/course/687eb89b16c43a09c0e58ee1，3 万+ 人选课、一流课程），其课程大纲按“设备组成/探测理论/测量方法”三模块逐条渲染；中国大学MOOC 侧只有《雷达气象学》《雷达气象》等气象雷达课，不教通用雷达原理。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn、icourse163.org）",
+   "query_or_url": "合成孔径雷达 成像 原理 授课 章 课程 雷达 干扰 探测 雷达系统",
+   "result": "再搜仍是同一门《雷达原理》与气象雷达、阵列信号处理、统计信号处理、数字信号处理课，没有合成孔径雷达成像的中文 MOOC；中文侧的 SAR 只能落在《雷达原理》末尾“部分新体制雷达资料”上，故记为 partial。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/687eb89b16c43a09c0e58ee1",
+   "result": "课程页把三模块大纲逐条渲染成文本（模块一 8 条、模块二 10 条、模块三 24 条 + 期末考试 + 部分新体制雷达资料），据此确认 23 个知识点与简介的对应；采纳为 zh1。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "tavily_search + fetch",
+   "query_or_url": "雷达原理 丁鹭飞 耿富录 西安电子科技大学出版社 目录 第五版；http://opac.nlc.cn（国家图书馆 OPAC）",
+   "result": "只找到百度百科、megbook 网上书店、EETOP 论坛附件、淘宝与亚马逊页面（按复核意见网店与论坛不算证据），以及南京理工大学在线课程的一份扫描版 PDF（无文字层，取不到章目）；电子工业出版社站点本轮不可用、国家图书馆 OPAC 两次超时，中文雷达教材（丁鹭飞《雷达原理》第 5 版，电子工业出版社）没有核到出版社或图书馆的可读目录，因此不列为 zh 来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.ll.mit.edu/outreach/web-based-course-radar-introduction-radar-systems",
+   "result": "MIT 林肯实验室 10 讲列表核到 L2 雷达方程、L4 RCS、L5 噪声中检测与脉冲压缩、L7 杂波与箔条、L8 MTI 与脉冲多普勒、L9 跟踪与参数估计；没有连续波、相控阵、SAR 讲次。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://www.mheducation.com/highered/mhp/product/radar-handbook-third-edition.html",
+   "result": "Skolnik《Radar Handbook》第 3 版出版社页给出第 1-26 章的章名（含 Ch.13 Phased Array Radar Antennas、Ch.17 Synthetic Aperture Radar、Ch.8 Pulse Compression、Ch.2/3/4 MTI 与脉冲多普勒、Ch.14/15/16 RCS 与杂波）；只有章一层，正文需付费。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://www.radartutorial.eu/html/sm03.en.html 及 01.basics / 02.basics / 06.antennas / 10.processing / 11.coherent / 20.airborne 各分站点的站点地图",
+   "result": "Radartutorial 的 22 个分站点章节名全部可读：rp06 脉冲雷达、rp07 连续波雷达、rp08 FMCW、sp50 匹配滤波、co04 杂波、co13 盲速、an29 相控阵天线、ab07 SAR；据此补上中文与 MIT 10 讲都缺的连续波、匹配滤波、相控阵与 SAR 概述。"
+  }
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "目标截面积与杂波",
+   "source": "en1",
+   "reason": "中文《雷达原理》只有“雷达散射截面积”一讲与“杂波相消”一讲，没有杂波的统计特性、杂波建模与海/地杂波差异；中文搜索（文字/视频/付费）没有找到讲杂波建模的公开课，气象雷达课只讲降水回波。MIT 林肯实验室 L7 Radar Clutter and Chaff 与 L4 Target Radar Cross Section 补这一块。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "脉冲雷达与连续波雷达",
+   "source": "en3",
+   "reason": "中文《雷达原理》的测量方法模块只讲脉冲法测距与脉冲压缩，全课没有连续波/FMCW 雷达的讲次；中文站内也没有以 FMCW 雷达为章节的公开课（命中的是毫米波雷达工程类培训视频，非大学/官方课程）。Radartutorial 的 rp06 Pulsed Radar、rp07 CW-Radar、rp08 FMCW-Radar 三页正好补上连续波这一类。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "匹配滤波与检测",
+   "source": "en1",
+   "reason": "中文《雷达原理》里匹配滤波没有单列讲次，只以“脉冲压缩”的实现出现，检测部分也只有“最小可检测信号”“脉冲积累”；中文没有以匹配滤波/最佳接收为雷达语境的公开课（通信原理课讲匹配滤波但不是雷达语境，未采用）。MIT 林肯实验室 L5 Detection of Signals in Noise and Pulse Compression 把匹配滤波与噪声中检测讲在一起。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "相控阵与合成孔径雷达概述",
+   "source": "en3",
+   "reason": "中文课把相控阵讲全（相位扫描法、相控阵雷达、波束扫描方法），但合成孔径雷达只在课程末尾“部分新体制雷达资料”里，不是正式讲次；中文搜索两轮（文字+视频渠道）都没有找到 SAR 成像的中文 MOOC。Radartutorial 的 an29 Phased Array Antenna 与 ab05-ab08（多普勒波束锐化、SLAR、SAR、SAR-Modes）补 SAR 概述。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "findings": [
+  "中文侧 4/8：学堂在线《雷达原理》（3 万+ 人选课、一流课程）一门就覆盖雷达方程（含二次雷达方程、战技指标、最小可检测信号、脉冲积累）、RCS、脉冲法测距与多普勒（盲速和频闪）、脉冲压缩、MTI 与脉冲多普勒（杂波相消、脉冲多普勒雷达）、相控阵（相位扫描法、波束扫描、相控阵雷达）六大块。",
+  "中文缺四项：杂波建模（只有杂波相消）、连续波/FMCW 雷达（只有脉冲法）、匹配滤波（只在脉冲压缩里隐含）、SAR（只在“部分新体制雷达资料”），四项都按文字/视频/付费三个渠道查过中文材料后写跨语言补读。",
+  "英文侧 8/8：MIT 林肯实验室 10 讲（免费视频+讲稿）覆盖雷达方程、RCS、杂波、检测与脉冲压缩、MTI/脉冲多普勒、参数估计；连续波与 FMCW、匹配滤波、相控阵、SAR 由 Radartutorial 的分章页面补；Skolnik《Radar Handbook》章表提供相控阵（Ch.13）与 SAR（Ch.17）专章与推导入口（付费，正文未读）。",
+  "Radartutorial 是作者自建的非商业教学站（面向雷达操作与维护人员培训），层次低于大学教材，只作为补充来源；连续波/匹配滤波/SAR 三项的 covered 都落在它身上，已在 covers 里写明来源性质。",
+  "《雷达原理》课程的“开课高校”一栏在平台上是“-”，无法直接确认学校；publisher 里写的是课程简介自述的荣誉（陕西省一流线下本科课程、雷达工程专业）与课程团队姓名，没有替它补学校名。"
+ ],
+ "applied_additions": []
+}

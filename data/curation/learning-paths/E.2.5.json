@@ -1,0 +1,349 @@
+{
+ "id": "E.2.5",
+ "checkedAt": "2026-11-22",
+ "name": "自适应信号处理",
+ "description": "维纳滤波与正交原理、最速下降法、LMS算法及其收敛性、归一化LMS、RLS算法、格型滤波器、自适应噪声对消与均衡、系统辨识与回声消除应用。",
+ "sources": [
+  {
+   "key": "zh1",
+   "lang": "zh",
+   "title": "生物医学信号处理（北京工业大学，国家高等教育智慧教育平台课程页 / 爱课程·中国大学MOOC）",
+   "url": "https://higher.smartedu.cn/course/62354d799906eace0490afa9",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程大纲逐节带学时：第六章 自适应滤波器原理与应用（6.1 自适应滤波器结构与特点 0.5 学时、6.2 自适应滤波器原理 0.5 学时、6.3 自适应滤波器的应用 0.5 学时、6.4 自适应滤波器的应用实验 0.5 学时）。覆盖：自适应滤波器的结构与特点、基本原理、应用与实验（全部只有 2 学时）。不覆盖：维纳滤波与正交原理（本课没有维纳滤波章）、最速下降法、LMS 的收敛性分析、归一化 LMS、RLS、格型滤波器、均衡与回声消除（6.3“应用”没有细分是哪类应用）。",
+   "access": "国家高等教育智慧教育平台免费查看课程页与完整大纲，无需登录；学习入口为中国大学MOOC，需注册登录（页面开课时间写作 2026/10/15，课程周期显示异常为“155135 周”，仍在更新）。1000+ 人选课。中文授课；字幕未核对。",
+   "publisher": "北京工业大学（吴水才）；平台：国家高等教育智慧教育平台 / 爱课程（中国大学MOOC）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://higher.smartedu.cn/course/62354d799906eace0490afa9",
+    "location": "课程页“课程大纲”栏第六章：自适应滤波器原理与应用 6.1 自适应滤波器结构与特点 0.5学时、6.2 自适应滤波器原理 0.5学时、6.3 自适应滤波器的应用 0.5学时、6.4 自适应滤波器的应用实验 0.5学时；其余章节为数字信号处理基础、生物医学信号特点、FIR/IIR/整数型滤波器、信号平均、谱分析、压缩、小波、神经网络",
+    "finding": "整份大纲里与自适应滤波有关的只有第六章四小节共 2 学时：结构特点、原理、应用、实验；没有维纳滤波章，也没有最速下降、NLMS、RLS、格型滤波器与均衡/回声消除的任何小节。这能证明中文侧有自适应滤波的入门教学，但深度只到原理介绍。"
+   }
+  },
+  {
+   "key": "zh2",
+   "lang": "zh",
+   "title": "生物医学信号处理（电子科技大学，中国大学MOOC）",
+   "url": "https://www.icourse163.org/course/UESTC-1463114162",
+   "tier": "video",
+   "free": true,
+   "role": "supplement",
+   "covers": "课程概述（教学内容）列出：绪论、数字信号处理基础、随机信号基础、数字相关和数字卷积、维纳滤波器的设计和应用、参数建模及其应用、自适应滤波器设计和应用，约 30 个知识点。覆盖：维纳滤波器的设计与应用（一章）与自适应滤波器的设计与应用（一章）在课程内容里出现。局限：课程页“课程大纲”栏为空，只读到这份教学内容清单，没有章节目录与小节，因此只是课程内容级证据（本记录据此把“维纳滤波与正交原理”“自适应噪声对消与均衡”记为 partial）。",
+   "access": "中国大学MOOC 免费学习（需注册登录；认证证书付费）。页面标注“智慧慕课”。中文授课；字幕未核对。",
+   "publisher": "电子科技大学（课程页标注开课学校；教材/参考书：李凌《医学信号处理及 Matlab 应用》电子科技大学出版社 2025、饶妮妮与李凌《生物医学信号处理》、杨福生《生物医学信号处理》高教社等）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.icourse163.org/course/UESTC-1463114162",
+    "location": "课程页“课程概述”：“教学内容包括绪论、数字信号处理基础、随机信号基础、数字相关和数字卷积、维纳滤波器的设计和应用、参数建模及其应用、自适应滤波器设计和应用。课程设计了约30个知识点”",
+    "finding": "教学内容清单里确有“维纳滤波器的设计和应用”与“自适应滤波器设计和应用”两块，但没有章节表与小节标题，无法确认是否讲正交原理、LMS/RLS 的推导与收敛性，也不能确认应用是否包含噪声对消、均衡、回声消除。"
+   }
+  },
+  {
+   "key": "en1",
+   "lang": "en",
+   "title": "Adaptive Filter Theory, Fifth Edition（Simon Haykin, Pearson 2014）— 出版社官方目录 PDF",
+   "url": "https://www.pearson.com/en-us/subject-catalog/p/adaptive-filter-theory/P200000003258/9780132671453",
+   "tier": "book",
+   "free": false,
+   "role": "primary",
+   "covers": "目录（逐节）：Ch.2 Wiener Filters（2.1 Linear Optimum Filtering: Statement of the Problem、2.2 Principle of Orthogonality、2.3 Minimum Mean-Square Error、2.4 Wiener-Hopf Equations、2.5 Error-Performance Surface、2.8 Linearly Constrained Minimum-Variance Filter）；Ch.3 Linear Prediction（3.3 Levinson-Durbin Algorithm、3.6 Autoregressive Modeling、3.8 Lattice Predictors、3.9 All-Pole, All-Pass Lattice Filter）；Ch.4 Method of Steepest Descent（4.1 Basic Idea of the Steepest-Descent Algorithm、4.2 Applied to the Wiener Filter、4.3 Stability、4.5 Viewed as a Deterministic Search Method、4.6 Virtue and Limitation）；Ch.5 Method of Stochastic Gradient Descent（5.1 Principles、5.2 Application 1: Least-Mean-Square (LMS) Algorithm、5.3 Gradient-Adaptive Lattice Filtering Algorithm）；Ch.6 The Least-Mean-Square (LMS) Algorithm（6.1 Signal-Flow Graph、6.3 Applications、6.5 Transient Behavior and Convergence Considerations、6.7 Computer Experiment on Adaptive Prediction、6.8 Computer Experiment on Adaptive Equalization）；Ch.7 Normalized Least-Mean-Square (LMS) Algorithm and Its Generalization（7.1 NLMS as a Constrained Optimization Problem、7.2 Stability of the NLMS Algorithm、7.3 Step-Size Control for Acoustic Echo Cancellation、7.4 Geometric Considerations、7.5 Affine Projection Adaptive Filters）；Ch.10 The Recursive Least-Squares (RLS) Algorithm（10.1 Preliminaries、10.2 Matrix Inversion Lemma、10.3 Exponentially Weighted RLS、10.5 Updated Recursion、10.6 Example: Single-Weight Adaptive Noise Canceller）；Ch.13 Adaptation in Nonstationary Environments（13.2 The System Identification Problem、13.5 Tracking Performance of LMS、13.6 Tracking Performance of RLS）。八项知识点都有专章/专节。",
+   "access": "付费教材：Pearson 只公开目录 PDF（免费），正文需购买或订阅；价格未核，正文未读。英文。",
+   "publisher": "Simon Haykin（McMaster University, Communications Research Laboratory），Pearson 第 5 版（国际版 ISBN 9780273775720）",
+   "reupload": false,
+   "evidence": {
+    "url": "https://www.pearson.de/media/muster/toc/toc_9780273775720.pdf",
+    "location": "官方目录 PDF（Table of Contents）：Chapter 2 Wiener Filters（2.1、2.2 Principle of Orthogonality、2.3 Minimum Mean-Square Error、2.4 Wiener-Hopf Equations）；Chapter 3 Linear Prediction（3.3 Levinson-Durbin Algorithm、3.8 Lattice Predictors、3.9 All-Pole, All-Pass Lattice Filter）；Chapter 4 Method of Steepest Descent（4.1-4.6）；Chapter 5 Method of Stochastic Gradient Descent（5.2 Application 1: Least-Mean-Square (LMS) Algorithm）；Chapter 6 The Least-Mean-Square (LMS) Algorithm（6.3 Applications、6.5 Transient Behavior and Convergence Considerations、6.8 Computer Experiment on Adaptive Equalization）；Chapter 7 Normalized Least-Mean-Square (LMS) Algorithm and Its Generalization（7.1、7.2 Stability、7.3 Step-Size Control for Acoustic Echo Cancellation）；Chapter 10 The Recursive Least-Squares (RLS) Algorithm（10.2 Matrix Inversion Lemma、10.3 Exponentially Weighted RLS、10.6 Example: Single-Weight Adaptive Noise Canceller）；Chapter 13 Adaptation in Nonstationary Environments（13.2 The System Identification Problem）",
+    "finding": "目录逐节对上简介的八项：正交原理（2.2）与维纳-霍夫方程（2.4）、最速下降法（第 4 章 4.1-4.6）、LMS 及其收敛性（5.2、6.5）、归一化 LMS（第 7 章 7.1/7.2）、RLS（第 10 章）、格型滤波器（3.8/3.9 与 5.3 梯度自适应格型）、噪声对消与均衡（6.3 应用、6.8 自适应均衡实验、10.6 自适应噪声抵消器）、系统辨识与回声消除（13.2 系统辨识问题、7.3 用于回声消除的步长控制）。"
+   }
+  }
+ ],
+ "topics": [
+  {
+   "topic": "维纳滤波与正交原理",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh2",
+     "section": "课程概述教学内容里的“维纳滤波器的设计和应用”（只有内容清单，无章节与正交原理条目）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.2 Wiener Filters（2.1 Linear Optimum Filtering: Statement of the Problem、2.2 Principle of Orthogonality、2.3 Minimum Mean-Square Error、2.4 Wiener-Hopf Equations、2.5 Error-Performance Surface、2.8 Linearly Constrained Minimum-Variance Filter）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "最速下降法",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.4 Method of Steepest Descent（4.1 Basic Idea、4.2 Applied to the Wiener Filter、4.3 Stability of the Steepest-Descent Algorithm、4.4 Example、4.5 Viewed as a Deterministic Search Method、4.6 Virtue and Limitation）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "LMS算法及其收敛性",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第六章 6.2 自适应滤波器原理 0.5 学时（只到原理介绍，没有收敛性分析）",
+     "extent": "partial"
+    },
+    {
+     "source": "zh2",
+     "section": "课程概述教学内容里的“自适应滤波器设计和应用”（无章节）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.5 Method of Stochastic Gradient Descent（5.1 Principles、5.2 Application 1: Least-Mean-Square (LMS) Algorithm）；Ch.6 The Least-Mean-Square (LMS) Algorithm（6.1 Signal-Flow Graph、6.2 Optimality Considerations、6.5 Transient Behavior and Convergence Considerations、6.6 Efficiency）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "归一化LMS",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.7 Normalized Least-Mean-Square (LMS) Algorithm and Its Generalization（7.1 NLMS as the Solution to a Constrained Optimization Problem、7.2 Stability of the NLMS Algorithm、7.4 Geometric Considerations、7.5 Affine Projection Adaptive Filters）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "RLS算法",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.10 The Recursive Least-Squares (RLS) Algorithm（10.1 Some Preliminaries、10.2 The Matrix Inversion Lemma、10.3 The Exponentially Weighted RLS Algorithm、10.5 Updated Recursion for the Sum of Weighted Error Squares、10.7 Statistical Learning Theory、10.8 Efficiency）",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "格型滤波器",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.3 Linear Prediction（3.8 Lattice Predictors、3.9 All-Pole, All-Pass Lattice Filter）；Ch.5 的 5.3 Application 2: Gradient-Adaptive Lattice Filtering Algorithm",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "自适应噪声对消与均衡",
+   "stage": "core",
+   "zh": [
+    {
+     "source": "zh1",
+     "section": "第六章 6.3 自适应滤波器的应用 0.5 学时、6.4 自适应滤波器的应用实验 0.5 学时（没有说明是哪类应用，未涉及均衡）",
+     "extent": "partial"
+    }
+   ],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.6 的 6.3 Applications、6.8 Computer Experiment on Adaptive Equalization；Ch.10 的 10.6 Example: Single-Weight Adaptive Noise Canceller",
+     "extent": "covered"
+    }
+   ]
+  },
+  {
+   "topic": "系统辨识与回声消除应用",
+   "stage": "core",
+   "zh": [],
+   "en": [
+    {
+     "source": "en1",
+     "section": "Ch.13 的 13.2 The System Identification Problem（含 13.5/13.6 LMS 与 RLS 的跟踪性能）；Ch.7 的 7.3 Step-Size Control for Acoustic Echo Cancellation",
+     "extent": "covered"
+    }
+   ]
+  }
+ ],
+ "routes": {
+  "zh": {
+   "status": "gap",
+   "steps": [
+    {
+     "source": "zh1",
+     "read": "中文侧能拿到的教学只有这一门里的两学时：第六章 自适应滤波器原理与应用——6.1 自适应滤波器结构与特点→6.2 自适应滤波器原理→6.3 自适应滤波器的应用→6.4 自适应滤波器的应用实验。它适合先建立“自适应滤波器＝系数随误差调整的 FIR”这一直观概念，但讲不到维纳滤波、最速下降、RLS、格型滤波器与收敛性分析。"
+    },
+    {
+     "source": "zh2",
+     "read": "作为对照看电子科技大学《生物医学信号处理》的教学内容清单（维纳滤波器的设计和应用、自适应滤波器设计和应用两章），用来确认中文侧的边界：有维纳滤波与自适应滤波的应用章，但没有可读的章节表，讲不到正交原理、NLMS 与 RLS 的推导。真正的算法与收敛性分析要按下面的跨语言补读转到英文。"
+    }
+   ],
+   "gaps": [
+    "维纳滤波与正交原理",
+    "最速下降法",
+    "LMS算法及其收敛性",
+    "归一化LMS",
+    "RLS算法",
+    "格型滤波器",
+    "自适应噪声对消与均衡",
+    "系统辨识与回声消除应用"
+   ]
+  },
+  "en": {
+   "status": "complete",
+   "steps": [
+    {
+     "source": "en1",
+     "read": "按 Haykin 第 5 版的顺序学（只核到目录，正文需购买）：Ch.2 Wiener Filters（2.1 问题陈述→2.2 正交原理→2.3 最小均方误差→2.4 Wiener-Hopf 方程→2.5 误差性能曲面）→ Ch.3 Linear Prediction（3.3 Levinson-Durbin→3.8 格型预测器→3.9 全极点/全通格型滤波器）→ Ch.4 Method of Steepest Descent（4.1 基本思想→4.2 用于维纳滤波→4.3 稳定性→4.5 作为确定性搜索方法→4.6 优缺点）→ Ch.5 Stochastic Gradient Descent（5.1 原理→5.2 LMS→5.3 梯度自适应格型）→ Ch.6 LMS（6.1 信号流图→6.3 应用→6.5 瞬态行为与收敛性→6.7/6.8 自适应预测与均衡实验）→ Ch.7 NLMS（7.1 约束优化推导→7.2 稳定性→7.3 回声消除的步长控制→7.5 仿射投影）→ Ch.10 RLS（10.1 预备→10.2 矩阵求逆引理→10.3 指数加权 RLS→10.6 单权自适应噪声抵消器）→ Ch.13 非平稳环境（13.2 系统辨识问题→13.5/13.6 LMS 与 RLS 的跟踪性能）。"
+    }
+   ],
+   "gaps": []
+  }
+ },
+ "searches": [
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn、icourse163.org）",
+   "query_or_url": "自适应信号处理 课程大纲 维纳滤波 LMS RLS 格型滤波器 自适应噪声抵消 均衡",
+   "result": "没有任何一门“自适应信号处理/自适应滤波”的中文 MOOC：命中的是电子科技大学与北京工业大学的《生物医学信号处理》（各有 1-2 学时或一章自适应滤波）、国防科技大学《阵列信号处理》（自适应波束形成，不是自适应滤波器）、东南大学《统计信号处理》SPOC（概述里提到自适应信号处理）、中国矿业大学与北京交通大学的《数字信号处理》。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn）",
+   "query_or_url": "现代信号处理 自适应滤波 维纳滤波 LMS RLS 格型 课程 章节",
+   "result": "只返回《生物医学信号处理》与多门《数字信号处理》课程页；智慧教育平台上没有以自适应滤波器为章节的研究生 MOOC。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search（限定 higher.smartedu.cn、icourse163.org）",
+   "query_or_url": "现代信号处理技术 中国科学院大学 课程 自适应滤波器 维纳滤波 LMS RLS 章节",
+   "result": "返回电子科大《现代阵列并行信号处理技术》SPOC（只把自适应滤波作为前沿技术之一列出）与几门数字信号处理课；国科大《现代信号处理技术》在 jwba.ucas.ac.cn 上只有教务系统的大纲页（教学大纲不是教学材料，未采用）。"
+  },
+  {
+   "lang": "zh",
+   "channel": "text",
+   "tool": "tavily_search",
+   "query_or_url": "自适应信号处理 讲义 维纳滤波 最速下降 LMS 归一化 递推最小二乘 格型滤波器 pdf 课程",
+   "result": "命中期刊论文 PDF、博客园/CSDN/知乎的个人笔记、百度百科与维基、EETOP 论坛的电子书帖，以及南京理工大学研究生院《自适应信号处理》课程内容简介（培养方案页，不是教学材料）；没有大学或教师官方发布的完整中文讲义。"
+  },
+  {
+   "lang": "zh",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://higher.smartedu.cn/course/62354d799906eace0490afa9；https://www.icourse163.org/learn/UESTC-1463114162",
+   "result": "北京工业大学《生物医学信号处理》的课程页把大纲逐节带学时任出来（第六章 6.1-6.4 共 2 学时），采纳为 zh1；电子科技大学《生物医学信号处理》在 icourse163 的“课程大纲”栏为空，只读到教学内容清单，记作 zh2。"
+  },
+  {
+   "lang": "zh",
+   "channel": "paid",
+   "tool": "fetch（国家图书馆 OPAC）",
+   "query_or_url": "http://opac.nlc.cn/F?func=find-b&find_code=WTI&request=自适应信号处理",
+   "result": "检索到《自适应信号处理》等书目记录（含北京理工大学出版社 2016 年的一种）与一批学位论文，但记录页只有出版信息、馆藏与作者，没有可读目录（网摘目次是 JS 调用）；电子工业出版社站点此前已 503，中文教材（龚耀寰《自适应信号处理》、Haykin《自适应滤波器原理》中译本）本轮没核到出版社或图书馆的可读目录，故不列 zh 付费来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "paid",
+   "tool": "fetch",
+   "query_or_url": "https://www.pearson.de/media/muster/toc/toc_9780273775720.pdf",
+   "result": "Haykin《Adaptive Filter Theory》第 5 版出版社官方目录逐节读完：正交原理 2.2、Wiener-Hopf 2.4、格型预测器 3.8/3.9、最速下降第 4 章、LMS 5.2/第 6 章（6.5 收敛性）、NLMS 第 7 章、RLS 第 10 章、噪声抵消 10.6、均衡 6.8、系统辨识 13.2、回声消除 7.3；正文需付费。"
+  },
+  {
+   "lang": "en",
+   "channel": "video",
+   "tool": "fetch",
+   "query_or_url": "https://nptel.ac.in/courses/108105191（NOC: Introduction to Adaptive Signal Processing, IIT Kharagpur）",
+   "result": "NPTEL 课程页是前端渲染，只返回“Loading about course data...”，讲次表与大纲读不到；又试 archive.nptel.ac.in 的旧路径均 404，故没有把 NPTEL 列为英文来源。"
+  },
+  {
+   "lang": "en",
+   "channel": "text",
+   "tool": "fetch",
+   "query_or_url": "https://ocw.mit.edu/search/?q=adaptive%20filtering",
+   "result": "MIT OCW 的站内搜索是前端渲染，只返回页面框架与外部链接提示，拿不到结果列表；本轮没有找到可核对大纲的免费英文自适应滤波课程，英文路线因此只有 Haykin 这本付费教材。"
+  }
+ ],
+ "cross_language_fallbacks": [
+  {
+   "lang_missing": "zh",
+   "topic": "维纳滤波与正交原理",
+   "source": "en1",
+   "reason": "中文只有电子科技大学《生物医学信号处理》教学内容里的一章“维纳滤波器的设计和应用”，没有章节表、也没有正交原理这一条；北京工业大学那门课的第六章直接从自适应滤波器讲起。中文站内四轮检索没有找到讲正交原理与 Wiener-Hopf 方程的公开课，用 Haykin 第 2 章补。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "最速下降法",
+   "source": "en1",
+   "reason": "中文免费课程里最接近的只有“自适应滤波器原理”一讲（0.5 学时），没有把最速下降法作为独立一节；检索未命中任何讲最速下降法与误差性能曲面关系的中文课程。Haykin 第 4 章 4.1-4.6 是标准的推导材料。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "LMS算法及其收敛性",
+   "source": "en1",
+   "reason": "中文课只到“自适应滤波器原理”入门，不讲 LMS 的收敛性（步长与特征值的关系、失调量）；中文侧的波束形成课程（国防科技大学《阵列信号处理》）讲的是自适应波束形成，不是 LMS 收敛性分析。Haykin 5.2 与 6.5（瞬态行为与收敛性）补这块。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "归一化LMS",
+   "source": "en1",
+   "reason": "中文检索（三个渠道）都没有出现“归一化 LMS/NLMS”作为课程章节的材料，只有博客与期刊论文提到 NLMS。Haykin 第 7 章把它作为约束优化问题推导并给出稳定性分析。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "RLS算法",
+   "source": "en1",
+   "reason": "中文课与中文教材目录（图书馆 OPAC 只有书目、没有目录）都没有可核的 RLS 章节；中文侧讲 RLS 的公开材料只有期刊论文与笔记。Haykin 第 10 章（矩阵求逆引理、指数加权 RLS、更新递推）是推导级材料。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "格型滤波器",
+   "source": "en1",
+   "reason": "中文免费课程里没有格型滤波器；北京工业大学那门课只有“结构特点”一讲，未涉及格型结构。Haykin 3.8/3.9（格型预测器、全极点/全通格型滤波器）与 5.3（梯度自适应格型）补这一项。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "自适应噪声对消与均衡",
+   "source": "en1",
+   "reason": "中文课的应用一讲没有说明是哪类应用（更没讲均衡），中文侧也找不到以噪声对消/均衡为章节的公开课；检索命中的都是论文里的应用举例。Haykin 6.3 应用、6.8 自适应均衡实验与 10.6 自适应噪声抵消器示例补这一项。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  },
+  {
+   "lang_missing": "zh",
+   "topic": "系统辨识与回声消除应用",
+   "source": "en1",
+   "reason": "中文侧没有任何课程把系统辨识或回声消除列成章节（检索只到论文与博客）。Haykin 13.2 系统辨识问题与 7.3 用于回声消除的步长控制是直接对应的小节。",
+   "confirmed_by": "2026-11-22 pi 联网检索"
+  }
+ ],
+ "findings": [
+  "中文侧是这一批里最薄的一项：免费课程里只有北京工业大学《生物医学信号处理》的第六章给自适应滤波器 2 学时（结构特点/原理/应用/实验），电子科技大学《生物医学信号处理》只有“维纳滤波器的设计和应用”“自适应滤波器设计和应用”两块教学内容清单（无章节表）。",
+  "八项知识点在中文侧都没有可核的 covered 教学：维纳滤波与正交原理、LMS 及其收敛性、噪声对消与均衡只有 partial；最速下降法、归一化 LMS、RLS、格型滤波器、系统辨识与回声消除在中文免费课程与可核的教材目录里都找不到，因此按文字/视频/付费三个渠道查过后全部写跨语言补读。",
+  "中文真正缺的是“研究生层次的自适应滤波课”：国科大《现代信号处理技术》的大纲（第二章自适应滤波器 12 学时，含维纳、LMS、RLS、FTF）只在教务系统里有教学大纲页，按规则教学大纲不能当教学来源，也没有公开的讲义或录像。",
+  "英文侧 8/8 全部落在 Haykin《Adaptive Filter Theory》第 5 版的章节目录上（正交原理 2.2、最速下降第 4 章、LMS 5.2/6.5、NLMS 第 7 章、RLS 第 10 章、格型 3.8/3.9、噪声抵消 10.6、均衡 6.8、系统辨识 13.2、回声消除 7.3），但这本教材是付费的，正文未读；NPTEL《Introduction to Adaptive Signal Processing》与 MIT OCW 的搜索都因前端渲染取不到大纲，没能补上免费的英文来源。",
+  "本记录是双语路线里少见的“中文整门缺口”：合并时中文路线会走跨语言补读，报告里应把 E.2.5 标成中文资料缺口项，而不只是覆盖率偏低。"
+ ],
+ "applied_additions": []
+}

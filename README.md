@@ -17,13 +17,13 @@
   <a href="#数据从哪来">数据从哪来</a>
 </p>
 
-> An interactive skill tree for a computer-science degree and the math behind it: 193 learning units in 13 areas, with prerequisite explanations backed by university courses and teaching order. Each skill has chapter-level English and Chinese learning routes (193 complete English routes, 189 complete Chinese routes; 5 Chinese topics explicitly require English supplementation), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
+> An interactive skill tree for computer science, computer engineering and electrical engineering, and the math and physics behind them: 228 learning units in 15 lanes, with prerequisite explanations backed by university courses and teaching order. Each skill has chapter-level English and Chinese learning routes (226 complete English routes, 206 complete Chinese routes; topics a language cannot cover are listed with a reading in the other language), one worked exercise, and a knowledge map built from an authoritative textbook's or course's table of contents. A static page that works offline. The interface is in Chinese; every skill also has its English name.
 
 ## 预览
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/images/overview.webp" alt="领域总览"><br><b>领域总览</b>：13 个领域按依赖排成列，线越粗、跨领域的必须前置越多</td>
+    <td width="50%"><img src="docs/images/overview.webp" alt="领域总览"><br><b>领域总览</b>：15 条泳道按依赖排成列，线越粗、跨领域的必须前置越多</td>
     <td width="50%"><img src="docs/images/skill-map.webp" alt="技能地图与详情面板"><br><b>技能地图</b>：选中“操作系统”，高亮它的整条前置链和直接解锁的技能</td>
   </tr>
   <tr>
@@ -38,14 +38,14 @@
 
 | | |
 |---|---|
-| 技能 | **193** 个，分 13 个领域（数学拆成三条泳道），按最长的必须前置链排成 **7** 步 |
-| 范围 | **122** 个主干、**71** 个选修：对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023，逐个技能看内容是否属于它的核心主题（[判定依据](reports/skill-scope-2026-11-01.md)） |
-| 前置关系 | **262** 条必须前置（没点亮就不能点亮下一个），**403** 条推荐前置（只提示，不挡路） |
-| 前置依据 | **193/193** 个技能有课程依据；整理 **388** 条课程资料，先修表中 **0** 个“前置待核实”。同课顺序和先修链另附原始链接与适用边界 |
-| 学习路线 | **193/193** 个技能、**897** 个必学知识项逐项对应章节；英文 **193** 条、中文 **189** 条路线覆盖全部必学项，另 **5** 个中文知识项明确列英文补读（[新增节点资料](reports/high-performance-networking-2026-11-03.md)、[原复核报告](reports/bilingual-resources-2026-11-01.md)） |
-| 免费学习 | 英文 **193** 条、中文 **152** 条路线的全部必学项已有免费教学；费用与回放待核、付费补读分别列明 |
+| 技能 | **228** 个，覆盖计算机科学（CS）、计算机工程（CE）、电子电气（EE）及其数学、物理基础；分 13 个领域、15 条泳道（数学拆成三条），按最长的必须前置链排成 **7** 步 |
+| 范围 | **132** 个主干、**96** 个选修：对照 CS2023、CE2016 和《普通高等学校本科专业类教学质量国家标准》，任一份把它算作核心或必修内容就是主干（[判定依据](reports/skill-scope-2026-11-01.md)、[CE/EE 扩充](reports/ce-ee-expansion-2026-11-22.md)） |
+| 前置关系 | **319** 条必须前置（没点亮就不能点亮下一个），**504** 条推荐前置（只提示，不挡路） |
+| 前置依据 | **228/228** 个技能有课程依据；整理 **487** 条课程资料，先修表中 **0** 个“前置待核实”。同课顺序和先修链另附原始链接与适用边界 |
+| 学习路线 | **228/228** 个技能、**1,176** 个必学知识项逐项对应章节；英文 **226** 条、中文 **206** 条路线覆盖全部必学项，另 **63** 个中文知识项、**2** 个英文知识项明确列另一种语言补读（[CE/EE 扩充](reports/ce-ee-expansion-2026-11-22.md)、[新增节点资料](reports/high-performance-networking-2026-11-03.md)、[原复核报告](reports/bilingual-resources-2026-11-01.md)） |
+| 免费学习 | 英文 **207** 条、中文 **166** 条路线的全部必学项已有免费教学；费用与回放待核、付费补读分别列明 |
 | 练习题 | 每个技能 1 道，答案折叠，答案已验算 |
-| 知识导览图 | 每个技能 1 张：**1,848** 个分支、**8,484** 个知识点；**10,384** 条标题逐条与来源核对 |
+| 知识导览图 | 每个技能 1 张：**2,238** 个分支、**10,061** 个知识点；**12,275** 条标题逐条与来源核对 |
 
 其他：
 
@@ -70,7 +70,7 @@
 
 - **领域总览（首页）**：每块是一个领域，块里的小方块是它的技能，和技能地图一样按步骤从左到右排列。连线表示右边领域的技能用到了左边领域的必须前置，线越粗，条数越多。第 1 列可以直接开始。每块上写着进度、状态、“下一步”（这个领域现在最值得学的技能）或“先学：…”。点一块进入它的技能地图。
 - **技能地图**：每条横向泳道是一个领域。横轴“第 N 步”的意思是：前面最长有 N−1 层必须前置。第 1 步的技能没有必须前置，是起点。
-- **卡片状态**：已点亮（暖色 + ✓）、现在能学（蓝框 + ⊕）、未解锁（灰 + 锁）。颜色之外都有图标，色弱也能分辨。虚线框是选修：内容不在 CS2023 的核心主题里，详情面板写明理由。
+- **卡片状态**：已点亮（暖色 + ✓）、现在能学（蓝框 + ⊕）、未解锁（灰 + 锁）。颜色之外都有图标，色弱也能分辨。虚线框是选修：CS2023、CE2016 和国标的必修内容里都没有它，详情面板写明理由；主干技能的详情面板标出它是哪份标准的主干（CS / CE / EE 主干）。
 - **选中一个技能**：高亮它的整条必须前置链（实线）、推荐前置（虚线）和它直接解锁的技能（绿线）。用到其他领域前置的卡片，左上角有那个领域颜色的彩点。
 - **左栏**：“现在能学”按“学完能解锁多少后续技能”排序。选一条路线或“设为目标”后，左栏给出按顺序编号的学习清单。
 - **详情面板**：划分依据与相邻技能边界、必须 / 推荐前置及理由、学什么、知识导览、去哪学（中英文独立学习顺序、逐知识点章节、费用与访问条件）、练习题，以及前置依据（课程官方先修原文）。
@@ -78,7 +78,7 @@
 
 ## 数据从哪来
 
-起点是一张 ChatGPT 生成的“计算机科学与数学知识星图”（原文件只读保存在 `data/source/chatgpt-outputs/`）：259 个节点、317 条关系（228 条前置、89 条相关），但前置不分必须和推荐，也没有给出依据。最初取其中 201 个技能，再对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023 检查划分：拆得过细的合并、几个不相干领域拼成的收窄或删除、缺的游戏开发补上，整理为 192 个（见 [技能划分检查](reports/skill-partition-review-2026-11-01.md)）；2026-11-03 再根据读者建议新增 C.3.5「数据中心与高性能网络」，现为 193 个（[课程、范围及资料依据](reports/high-performance-networking-2026-11-03.md)）。前置关系按真实课程的先修要求重新判定，学习资源、练习题和导览图都是重新找证据做的。检索和整理借助了 AI 代理，结论都附可以打开核对的原始链接。
+起点是一张 ChatGPT 生成的“计算机科学与数学知识星图”（原文件只读保存在 `data/source/chatgpt-outputs/`）：259 个节点、317 条关系（228 条前置、89 条相关），但前置不分必须和推荐，也没有给出依据。最初取其中 201 个技能，再对照 ACM/IEEE-CS/AAAI 的课程标准 CS2023 检查划分：拆得过细的合并、几个不相干领域拼成的收窄或删除、缺的游戏开发补上，整理为 192 个（见 [技能划分检查](reports/skill-partition-review-2026-11-01.md)）；2026-11-03 再根据读者建议新增 C.3.5「数据中心与高性能网络」（[课程、范围及资料依据](reports/high-performance-networking-2026-11-03.md)）。2026-11-22 把范围从计算机科学扩到计算机工程和电子电气：对照 CE2016 和国标新增“物理基础”“电子信息与电气工程”两个领域及硬件、管理方向的技能，共 35 个，现为 228 个（[CE/EE 扩充报告](reports/ce-ee-expansion-2026-11-22.md)）。前置关系按真实课程的先修要求重新判定，学习资源、练习题和导览图都是重新找证据做的。检索和整理借助了 AI 代理，结论都附可以打开核对的原始链接。
 
 **必须 / 推荐前置怎么判定**
 
@@ -90,26 +90,26 @@
 
 每种语言各自按“免费教学正文 → 作者或学校公开视频 → 正版付费教材/课程”查找，并把技能简介里的必学知识项对到具体章节。Python 官方文档等查阅材料和入门教程分开；主课讲不到的内容在同语言路线中补充。
 
-“覆盖”包含已核目录的付费教材，不表示全免费或逐页通读。免费教学已覆盖英文 193 条、中文 152 条路线的全部必学项；当前仍有 6 个中文知识项暂用付费材料补读，另 87 个中文知识项的费用或回放条件待核。视频字幕、注册限制、机器翻译和第三方转载均按来源说明。中文仍有 5 项未补齐：F.1.6 的细粒度复杂度界与归约、F.3.4 的程序精化、S.5.1 的非干扰，以及 C.3.5 的 RDMA 编程、SmartNIC 卸载，页面给出英文补读。详见[复核报告](reports/bilingual-resources-2026-11-01.md)。
+“覆盖”包含已核目录的付费教材，不表示全免费或逐页通读。免费教学已覆盖英文 207 条、中文 166 条路线的全部必学项；当前仍有 7 个中文知识项暂用付费材料补读，另 138 个中文知识项的费用或回放条件待核。视频字幕、注册限制、机器翻译和第三方转载均按来源说明。中文仍有 63 项未补齐，页面给出英文补读：原有的 5 项（F.1.6 的细粒度复杂度界与归约、F.3.4 的程序精化、S.5.1 的非干扰，以及 C.3.5 的 RDMA 编程、SmartNIC 卸载），其余 58 项都在新增的 CE/EE 技能里，较多的是自适应信号处理（8）、SoC（7）、电子测量（5）、电磁兼容与信号完整性（5）、雷达（4）、EDA 算法（4）、统计信号处理（4）（E.2.5 自适应信号处理没有中文公开课或讲义，整条中文路线靠英文补读）。英文有 2 项用中文材料补读（E.1.9 的激光调制与偏转、E.3.3 的新能源并网概述）。详见[复核报告](reports/bilingual-resources-2026-11-01.md)和 [CE/EE 扩充报告](reports/ce-ee-expansion-2026-11-22.md)。
 
 **技能大小怎么判定**
 
-课程、基础模块、进阶模块与教材单元分开标注。全部 193 个技能都记录了划分依据；相邻技能有内容重叠时写出边界。它们不代表相同学分或学习时长，不能按目录标题数比较份量。详见[逐技能判定](reports/skill-partition-review-2026-11-01.md#逐技能判定)。
+课程、基础模块、进阶模块与教材单元分开标注。全部 228 个技能都记录了划分依据；相邻技能有内容重叠时写出边界。它们不代表相同学分或学习时长，不能按目录标题数比较份量。详见[逐技能判定](reports/skill-partition-review-2026-11-01.md#逐技能判定)。
 
 **主干 / 选修怎么判定**
 
-- 依据是 CS2023 的知识体系：它把每个主题分成 CS Core（每个计算机专业毕业生都必须掌握）、KA Core（建议深入学习）和 Non-core（选修）。
-- 技能简介里至少一半的知识点能在 CS Core 或 KA Core 主题里找到原文，就算主干；讲授 CS Core 主题的技能、主干技能的必须前置，也算主干。其余是选修。
-- 每条判定都记了 CS2023 的知识单元、层级和原文片段，由 `scripts/check_scope.py` 逐条核对。这套 50% 阈值是项目自己的规则，并非 CS2023 对这些技能的官方认证；阈值敏感性和局限见[判定报告](reports/skill-scope-2026-11-01.md)。
+- 依据三份标准：计算机科学看 CS2023（它把每个主题分成 CS Core、KA Core 和 Non-core）；计算机工程看 ACM/IEEE CE2016（知识单元有核心学时的算核心）；电子电气看教育部 2018 年《普通高等学校本科专业类教学质量国家标准》里电子信息类、电气类的必修知识领域。
+- 满足任一条就算主干：技能简介里至少一半的知识点能在 CS2023 的 CS Core 或 KA Core 主题里找到原文；至少一半能在 CE2016 核心知识单元的学习目标里找到原文；所属知识领域被国标列为必修。主干技能的必须前置也算主干。其余是选修。
+- 每条判定都记了对应标准的知识单元或条文和原文片段，由 `scripts/check_scope.py` 逐条核对。这套 50% 阈值是项目自己的规则，并非 CS2023 对这些技能的官方认证；阈值敏感性和局限见[判定报告](reports/skill-scope-2026-11-01.md)。
 
 **知识导览图怎么来**
 
 - 每个技能 1 个主来源：优先用“去哪学”里那份材料本身（它有成体系的目录时），否则用标准教材（作者主页、出版社或开放教材官网上的目录），或一流大学课程官方的逐讲课表。
 - 只用作者或出版社官方公开的整书 PDF，课程网站、网盘、镜像站上的商业教材 PDF 不用。
-- 标题照原文抄，再配中文译名。`scripts/check_outlines.py` 把每条标题和实际抓到的来源页面文字逐条比对：10,373 条在标准化匹配中精确命中，11 条因 PDF 抽字差异（如 σ 被抽成 s）判为近似，没有缺失。
+- 标题照原文抄，再配中文译名。`scripts/check_outlines.py` 把每条标题和实际抓到的来源页面文字逐条比对：12,262 条在标准化匹配中精确命中，13 条因 PDF 抽字差异（如 σ 被抽成 s）判为近似，没有缺失。
 - 已知缺口：A.2.3.2、C.3.3、S.2.1 的来源只有讲次一层；有 12 个覆盖项（包括定位与验收说明）在来源里没有专门章节，导览图右栏标“—”并写明原因。
 
-最新的[技能编号与教材关联](reports/guide-numbering-2026-11-03.md)、[高性能网络增补](reports/high-performance-networking-2026-11-03.md)已完成全树构建。此前的粒度、资源变更和限制见 [划分检查与处理](reports/skill-partition-review-2026-11-01.md)；最初 201 个技能的历史适用性审核见 [来源审核报告](reports/source-review-2026-11-01.md)，中文资源的增补依据见 [中文资源报告](reports/chinese-resources-expansion-2026-11-01.md)。
+最新的 [CE/EE 扩充](reports/ce-ee-expansion-2026-11-22.md)已完成全树构建；此前的[技能编号与教材关联](reports/guide-numbering-2026-11-03.md)、[高性能网络增补](reports/high-performance-networking-2026-11-03.md)见各自报告。此前的粒度、资源变更和限制见 [划分检查与处理](reports/skill-partition-review-2026-11-01.md)；最初 201 个技能的历史适用性审核见 [来源审核报告](reports/source-review-2026-11-01.md)，中文资源的增补依据见 [中文资源报告](reports/chinese-resources-expansion-2026-11-01.md)。
 
 ## 数据文件
 
